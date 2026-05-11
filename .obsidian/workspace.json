@@ -11,10 +11,14 @@
             "id": "77ee3e96636031b5",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Nueva pestaña"
+              "type": "split-diff-view",
+              "state": {
+                "aFile": ".obsidian/workspace.json",
+                "bFile": ".obsidian/workspace.json",
+                "aRef": ""
+              },
+              "icon": "diff",
+              "title": "Diff: workspace.json  (Working Tree)"
             }
           }
         ]
@@ -188,13 +192,13 @@
       "obsidian-excalidraw-plugin:Nuevo Bosquejo": false
     }
   },
-  "active": "535b7e765423c6b3",
+  "active": "77ee3e96636031b5",
   "lastOpenFiles": [
+    "esto es una pruieba.md",
     "Excalidraw/Drawing 2026-05-11 12.20.50.excalidraw.md",
     "Excalidraw/Drawing 2026-05-11 12.20.48.excalidraw.md",
     "Excalidraw",
     "config/obs_claude.md",
-    "esto es una pruieba.md",
     "config",
     "3.Semester/ETN302/Z-302",
     "3.Semester/ETN302/9.302/9.302.add",
