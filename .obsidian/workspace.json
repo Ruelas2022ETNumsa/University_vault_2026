@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "7796d1ecffce20a6",
+        "id": "16a7dcca7500609b",
         "type": "tabs",
         "children": [
           {
-            "id": "4575a16ff14bdfc1",
+            "id": "9dc2830ec1af8895",
             "type": "leaf",
             "state": {
               "type": "tags-routes",
@@ -191,10 +191,11 @@
       "tags-routes:Open tags routes": false
     }
   },
-  "active": "4575a16ff14bdfc1",
+  "active": "9dc2830ec1af8895",
   "lastOpenFiles": [
-    "_app/TagsRoutes/graph-screenshot/graph-screenshot-2026-05-11-18-49-41.png",
     "_app/TagsRoutes/logMessage.md",
+    "_app/TagsRoutes/graph-screenshot/graph-screenshot-2026-05-11-18-57-35.png",
+    "_app/TagsRoutes/graph-screenshot/graph-screenshot-2026-05-11-18-49-41.png",
     "esto es una prueba.md",
     "_app/TagsRoutes/graph-screenshot/graph-screenshot-2026-05-11-18-35-58.png",
     "_app/TagsRoutes/graph-screenshot",
@@ -228,7 +229,6 @@
     "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.6.302-1.png",
     "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.6.302-1.md",
     "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.6.302-05.png",
-    "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.6.302-03.png",
     "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.523.302-1.md",
     "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.522.302-1.md",
     "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.521.302-1.md",

@@ -15,5 +15,12 @@ pause
 
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%~dp0patch-obsidian.ps1"
 
-echo.
-pause
+if %ERRORLEVEL% EQU 0 (
+    echo.
+    echo  Todo salio bien. Cerrando en 3 segundos...
+    timeout /t 3 /nobreak >nul
+) else (
+    echo.
+    echo  Hubo un error. Revisa los mensajes anteriores.
+    pause
+)
