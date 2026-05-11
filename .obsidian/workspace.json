@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "fa97be1e43f3bced",
+        "id": "ba9a7b014b636a77",
         "type": "tabs",
         "children": [
           {
-            "id": "7de8f2b57979a488",
+            "id": "82dbbec3cd21a3bd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "esto es una prueba.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
@@ -178,7 +178,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 388.5
+    "width": 323.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -190,16 +190,23 @@
       "command-palette:Abrir paleta de comandos": false,
       "bases:Crear nueva base": false,
       "obsidian-git:Open Git source control": false,
-      "obsidian-excalidraw-plugin:Nuevo Bosquejo": false
+      "obsidian-excalidraw-plugin:Nuevo Bosquejo": false,
+      "remotely-save:Remotely Save": false,
+      "tags-routes:Open tags routes": false
     }
   },
-  "active": "7de8f2b57979a488",
+  "active": "82dbbec3cd21a3bd",
   "lastOpenFiles": [
+    "TagsRoutes/logMessage.md",
+    "TagsRoutes/logs",
+    "TagsRoutes",
+    "Sin título.base",
+    "3.Semester/ETN302/2.302/T2.302.md",
+    "config/obs_claude.md",
     "esto es una prueba.md",
     "Excalidraw/Drawing 2026-05-11 12.20.50.excalidraw.md",
     "Excalidraw/Drawing 2026-05-11 12.20.48.excalidraw.md",
     "Excalidraw",
-    "config/obs_claude.md",
     "config",
     "3.Semester/ETN302/Z-302",
     "3.Semester/ETN302/9.302/9.302.add",
@@ -209,10 +216,7 @@
     "3.Semester/ETN302/8.302/8.302.add",
     "3.Semester/ETN302/8.302",
     "3.Semester/ETN302/7.302/T7.302.md",
-    "3.Semester/ETN302/7.302/7.302.add",
-    "3.Semester/ETN302/7.302",
     "3.Semester/ETN302/6.302/T6.302.md",
-    "3.Semester/ETN302/6.302/6.302.add",
     "3.Semester/ETN302/5.302/T5.302.md",
     "3.Semester/ETN302/4.302/T4.302.md",
     "3.Semester/ETN302/3.302/3.302.add/vie.-09-diciembre-22_5-51-56.md",
@@ -238,8 +242,6 @@
     "3.Semester/ETN302/3.302/3.302.add/TE3.513.302-1.md",
     "3.Semester/ETN302/3.302/3.302.add/TE3.512.302-1.md",
     "3.Semester/ETN302/3.302/3.302.add/TE3.511.302-1.md",
-    "3.Semester/ETN302/3.302/3.302.add/TE3.4.302-1.md",
-    "3.Semester/ETN302/3.302/3.302.add/TE3.3.302-2.md",
-    "3.Semester/ETN302/3.302/3.302.add/TE3.3.302-1.md"
+    "3.Semester/ETN302/3.302/3.302.add/TE3.4.302-1.md"
   ]
 }
