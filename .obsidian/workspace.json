@@ -4,49 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "16a7dcca7500609b",
+        "id": "91e8af7fb1c33f59",
         "type": "tabs",
         "children": [
           {
-            "id": "9dc2830ec1af8895",
-            "type": "leaf",
-            "state": {
-              "type": "tags-routes",
-              "state": {},
-              "icon": "waypoints",
-              "title": "Tags routes"
-            }
-          },
-          {
-            "id": "c15f7ebebd0d71be",
+            "id": "f0d351f49f85412e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Semestres/3.Semester/ETN302/1.302/T1.302.md",
+                "file": "_app/TagsRoutes/logMessage.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "T1.302"
-            }
-          },
-          {
-            "id": "3e42f83d9358de64",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "config/convencion-notas.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "convencion-notas"
+              "title": "logMessage"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -78,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#ETN-302",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -103,12 +78,28 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 231.50260543823242
   },
   "right": {
     "id": "3809ea2d0d62c2a5",
     "type": "split",
     "children": [
+      {
+        "id": "a8facb2dc7898d4e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fe40b68c81080178",
+            "type": "leaf",
+            "state": {
+              "type": "tags-routes",
+              "state": {},
+              "icon": "waypoints",
+              "title": "Tags routes"
+            }
+          }
+        ]
+      },
       {
         "id": "44f78ae490b58a22",
         "type": "tabs",
@@ -164,12 +155,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "Semestres/3.Semester/ETN302/0.ETN-302.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Esquema"
+              "title": "Esquema de 0.ETN-302"
             }
           },
           {
@@ -198,37 +190,41 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 323.5,
-    "collapsed": true
+    "width": 323.5
   },
   "left-ribbon": {
     "hiddenItems": {
       "switcher:Abrir selector rápido": false,
       "graph:Abrir vista gráfica": false,
       "canvas:Crear nuevo lienzo": false,
-      "daily-notes:Abrir la nota de hoy": false,
       "templates:Insertar plantilla": false,
       "command-palette:Abrir paleta de comandos": false,
-      "bases:Crear nueva base": false,
       "obsidian-git:Open Git source control": false,
       "obsidian-excalidraw-plugin:Nuevo Bosquejo": false,
       "remotely-save:Remotely Save": false,
       "tags-routes:Open tags routes": false
     }
   },
-  "active": "3e42f83d9358de64",
+  "active": "5c9982bb44437a88",
   "lastOpenFiles": [
+    "Semestres/3.Semester/ETN302/0.ETN-302.md",
+    "Semestres/3.Semester/ETN302/3.302/E3.302.md",
+    "Semestres/3.Semester/ETN302/2.302/D2.302.md",
+    "_app/TagsRoutes/logMessage.md",
     "Semestres/3.Semester/ETN302/1.302/T1.302.md",
+    "_app/Canvas/Sin título.canvas",
     "config/convencion-notas.md",
+    "_app/Canvas",
+    "_app/Nueva carpeta",
+    "Sin título.canvas",
     "Semestres/3.Semester/ETN302/1.302/E1.302.md",
     "config/claude.md",
     "config/TagsRoute.md",
     "Sin título.base",
-    "_app/TagsRoutes/logMessage.md",
     "_app/TagsRoutes/graph-screenshot/graph-screenshot-2026-05-11-18-57-35.png",
     "_app/TagsRoutes/graph-screenshot/graph-screenshot-2026-05-11-18-49-41.png",
     "esto es una prueba.md",
@@ -241,9 +237,7 @@
     "_app/scripts",
     "scripts",
     "Nueva carpeta",
-    "_app/tags-routes/screenshots",
     "_app/Excalidraw/Drawing 2026-05-11 16.56.55.excalidraw.md",
-    "_app/tags-routes",
     "TagsRoutes/logMessage.md",
     "App/Excalidraw/Drawing 2026-05-11 16.56.55.excalidraw.md",
     "app/Excalidraw/Drawing 2026-05-11 12.20.48.excalidraw.md",
@@ -264,9 +258,6 @@
     "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.6.302-05.png",
     "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.523.302-1.md",
     "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.522.302-1.md",
-    "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.521.302-1.md",
-    "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.513.302-1.md",
-    "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.512.302-1.md",
-    "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.511.302-1.md"
+    "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.521.302-1.md"
   ]
 }

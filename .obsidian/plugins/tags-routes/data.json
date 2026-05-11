@@ -29,20 +29,20 @@
       "toggle_global_map": true,
       "toggle_label_display": false,
       "toggle_highlight_track_mode": false,
-      "toggle_selection_box": false,
-      "colorMapSource": "'Obsidian' - dark ",
+      "toggle_selection_box": true,
+      "colorMapSource": "Default dark",
       "colorMap": {
         "markdown": {
-          "name": "theme",
-          "value": "#b3b3b3"
+          "name": "default",
+          "value": "#00ff00"
         },
         "attachment": {
-          "name": "theme",
-          "value": "#e0de71"
+          "name": "default",
+          "value": "#ffff00"
         },
         "broken": {
-          "name": "theme",
-          "value": "#666666"
+          "name": "default",
+          "value": "#ff0000"
         },
         "excalidraw": {
           "name": "default",
@@ -53,8 +53,8 @@
           "value": "#0000ff"
         },
         "tag": {
-          "name": "theme",
-          "value": "#44cf6e"
+          "name": "default",
+          "value": "#ff00ff"
         },
         "frontmatter_tag": {
           "name": "default",
@@ -65,20 +65,20 @@
           "value": "#7f00ff"
         },
         "nodeHighlightColor": {
-          "name": "theme",
-          "value": "#8a5cf5"
+          "name": "default",
+          "value": "#3333ff"
         },
         "nodeFocusColor": {
-          "name": "theme",
-          "value": "#a68af9"
+          "name": "default",
+          "value": "#ff3333"
         },
         "linkHighlightColor": {
-          "name": "theme",
-          "value": "#8a5cf5"
+          "name": "default",
+          "value": "#ffffff"
         },
         "linkNormalColor": {
-          "name": "theme",
-          "value": "#3f3f3f"
+          "name": "default",
+          "value": "#ffffff"
         },
         "linkParticleColor": {
           "name": "default",
