@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "db6ed083c30daecb",
+        "id": "cc2cc2aa45d4d5e2",
         "type": "tabs",
         "children": [
           {
-            "id": "3f686147bf19720e",
+            "id": "77ee3e96636031b5",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
-              "state": {
-                "aFile": ".obsidian/community-plugins.json",
-                "bFile": ".obsidian/community-plugins.json",
-                "aRef": ""
-              },
-              "icon": "diff",
-              "title": "Diff: community-plugins.json  (Working Tree)"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nueva pestaña"
             }
           }
         ]
@@ -192,7 +188,7 @@
       "obsidian-excalidraw-plugin:Nuevo Bosquejo": false
     }
   },
-  "active": "3f686147bf19720e",
+  "active": "535b7e765423c6b3",
   "lastOpenFiles": [
     "Excalidraw/Drawing 2026-05-11 12.20.50.excalidraw.md",
     "Excalidraw/Drawing 2026-05-11 12.20.48.excalidraw.md",
