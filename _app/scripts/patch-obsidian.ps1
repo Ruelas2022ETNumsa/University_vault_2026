@@ -15,11 +15,11 @@ $patchLogPath  = "$newDir\patch-log.txt"
 $oldPattern    = 'var programDirectory = "TagsRoutes";'
 $newPattern    = 'var programDirectory = "_app/TagsRoutes";'
 
-$oldSnapshot   = 'snapshotDirectory: "graph-screenshot"'
-$newSnapshot   = 'snapshotDirectory: "_app/TagsRoutes/graph-screenshot"'
+$oldSnapshot   = 'snapShotFolder: "graph-screenshot"'
+$newSnapshot   = 'snapShotFolder: "_app/TagsRoutes/graph-screenshot"'
 
 $dataJsonPath  = "$vaultRoot\.obsidian\plugins\tags-routes\data.json"
-$dataJsonSnapshotNew = "_app/TagsRoutes/screenshots"
+$dataJsonSnapshotNew = "_app/TagsRoutes/graph-screenshot"
 
 # Colores para output
 function Write-Ok    { param($msg) Write-Host "[OK]    $msg" -ForegroundColor Green }

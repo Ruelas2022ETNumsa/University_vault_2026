@@ -69317,7 +69317,7 @@ var DEFAULT_SETTINGS = {
   enableTagsReaction: true,
   enableAutoFocus: true,
   enableParagraphLinker: true,
-  snapShotFolder: "graph-screenshot",
+  snapShotFolder: "_app/TagsRoutes/graph-screenshot",
   currentTheme: "dark",
   customSlot: null,
   showingFilter: PathFilter.encode("*"),
