@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "761ccc1ba74a28ae",
+        "id": "df461e5678d73560",
         "type": "tabs",
         "children": [
           {
-            "id": "5b8425f3d56c8962",
+            "id": "571cf3455cf20871",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "config/TagsRoute.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "TagsRoute"
+              "type": "tags-routes",
+              "state": {},
+              "icon": "waypoints",
+              "title": "Tags routes"
             }
           }
         ]
@@ -78,8 +74,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "3809ea2d0d62c2a5",
@@ -192,11 +187,16 @@
       "bases:Crear nueva base": false,
       "obsidian-git:Open Git source control": false,
       "obsidian-excalidraw-plugin:Nuevo Bosquejo": false,
-      "remotely-save:Remotely Save": false
+      "remotely-save:Remotely Save": false,
+      "tags-routes:Open tags routes": false
     }
   },
-  "active": "5b8425f3d56c8962",
+  "active": "571cf3455cf20871",
   "lastOpenFiles": [
+    "graph-screenshot/graph-screenshot-2026-05-11-18-25-31.png",
+    "graph-screenshot",
+    "_app/TagsRoutes/logMessage.md",
+    "config/TagsRoute.md",
     "_app/scripts/patch-obsidian.ps1",
     "_app/scripts/patch-obsidian.bat",
     "_app/scripts",
@@ -207,9 +207,6 @@
     "_app/tags-routes",
     "_app/Excalidraw",
     "_app",
-    "config/TagsRoute.md",
-    "config/Nuevo documento de texto.txt",
-    "config/Nueva carpeta",
     "TagsRoutes/logMessage.md",
     "App/Excalidraw/Drawing 2026-05-11 16.56.55.excalidraw.md",
     "app/Excalidraw/Drawing 2026-05-11 12.20.48.excalidraw.md",
@@ -241,7 +238,6 @@
     "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.4.302-1.md",
     "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.3.302-2.md",
     "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.3.302-1.md",
-    "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.2.302-1.md",
-    "Semestres/3.Semester/ETN302/3.302/3.302.add/TD3.2.302.md"
+    "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.2.302-1.md"
   ]
 }
