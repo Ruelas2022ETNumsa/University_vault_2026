@@ -69209,13 +69209,13 @@ var globalProgramControl = {
   allowDuplicated: false,
   aimBeforeLink: true,
   useTrackHighlight: true,
-  snapshotDirectory: "_app/TagsRoutes/graph-screenshot",
+  snapshotDirectory: "graph-screenshot",
   generateLinker: true
 };
 var currentVersion = "1.2.3";
 var currentSaveSpecVer = 10203;
 var minSaveSpecVer = 10101;
-var programDirectory = "_app/TagsRoutes";
+var programDirectory = "TagsRoutes";
 var logDirectory = `${programDirectory}/logs`;
 var reportDirectory = `${programDirectory}/reports`;
 var logFilePath = `${programDirectory}/logMessage.md`;
@@ -69317,7 +69317,7 @@ var DEFAULT_SETTINGS = {
   enableTagsReaction: true,
   enableAutoFocus: true,
   enableParagraphLinker: true,
-  snapShotFolder: "_app/TagsRoutes/graph-screenshot",
+  snapShotFolder: "graph-screenshot",
   currentTheme: "dark",
   customSlot: null,
   showingFilter: PathFilter.encode("*"),
