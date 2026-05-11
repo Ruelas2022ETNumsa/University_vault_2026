@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "cc2cc2aa45d4d5e2",
+        "id": "fa97be1e43f3bced",
         "type": "tabs",
         "children": [
           {
-            "id": "77ee3e96636031b5",
+            "id": "7de8f2b57979a488",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": ".obsidian/workspace.json",
-                "bFile": ".obsidian/workspace.json",
-                "aRef": ""
+                "file": "esto es una prueba.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: workspace.json  (Working Tree)"
+              "icon": "lucide-file",
+              "title": "esto es una prueba"
             }
           }
         ]
@@ -154,12 +154,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "esto es una prueba.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Esquema"
+              "title": "Esquema de esto es una prueba"
             }
           },
           {
@@ -177,7 +178,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 472.5
+    "width": 388.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -192,9 +193,9 @@
       "obsidian-excalidraw-plugin:Nuevo Bosquejo": false
     }
   },
-  "active": "77ee3e96636031b5",
+  "active": "7de8f2b57979a488",
   "lastOpenFiles": [
-    "esto es una pruieba.md",
+    "esto es una prueba.md",
     "Excalidraw/Drawing 2026-05-11 12.20.50.excalidraw.md",
     "Excalidraw/Drawing 2026-05-11 12.20.48.excalidraw.md",
     "Excalidraw",
