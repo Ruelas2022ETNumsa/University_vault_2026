@@ -13,7 +13,7 @@ E:\University_vault_2026/TagsRoutes/
 hacia:
 
 ```text
-E:\University_vault_2026/app/TagsRoutes/
+E:\University_vault_2026/_app/TagsRoutes/
 ```
 
 2. Mueva/copíe automáticamente todo el contenido generado por el plugin:
@@ -31,7 +31,7 @@ E:\University_vault_2026/app/TagsRoutes/
 para que el plugin use permanentemente la nueva ruta:
 
 ```js
-var programDirectory = "app/TagsRoutes";
+var programDirectory = "_app/TagsRoutes";
 ```
 
 en lugar de:
@@ -71,7 +71,7 @@ Se usará un script externo:
 - ejecutado desde un `.bat`
 O se busca otra solucion con obsidian de ser posible.
 
-No se usará:
+se reviso lo siguientes puntos pero se concideran malos (reevaluar):
 - CSS Snippets,
 - monkey patching runtime,
 - plugins JS externos,
@@ -96,7 +96,7 @@ TagsRoutes/
 Crear si no existe:
 
 ```text
-app/TagsRoutes/
+_app/TagsRoutes/
 ```
 
 ---
@@ -118,7 +118,7 @@ TagsRoutes/
 hacia:
 
 ```text
-app/TagsRoutes/
+_app/TagsRoutes/
 ```
 
 ---
@@ -144,7 +144,7 @@ var programDirectory = "TagsRoutes";
 y reemplazar por:
 
 ```js
-var programDirectory = "app/TagsRoutes";
+var programDirectory = "_app/TagsRoutes";
 ```
 
 ---
@@ -152,11 +152,12 @@ var programDirectory = "app/TagsRoutes";
 # Uso previsto
 
 ## Workflow
+conciderar el 3. y 5. ya que hay casos en los que obsidian solo requiere una actualizacion y reconoce los cambios (evaluar esto)
 
 ```text
 1. Abrir Obsidian
 2. Actualizar plugins manualmente
-3. Cerrar Obsidian
+3. Cerrar Obsidian (de ser necesario)
 4. Ejecutar patcher
 5. Abrir Obsidian nuevamente
 ```
