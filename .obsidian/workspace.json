@@ -1,0 +1,230 @@
+{
+  "main": {
+    "id": "5f8c9a6c501fddfa",
+    "type": "split",
+    "children": [
+      {
+        "id": "a57166fe384c66aa",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f550352f9880a1aa",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nueva pestaña"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "5014c06489afa7c6",
+    "type": "split",
+    "children": [
+      {
+        "id": "1e6779d9729df106",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5c9982bb44437a88",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de archivos"
+            }
+          },
+          {
+            "id": "478a90870161e6ca",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Buscar"
+            }
+          },
+          {
+            "id": "dba8f5f063a91d95",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "3809ea2d0d62c2a5",
+    "type": "split",
+    "children": [
+      {
+        "id": "44f78ae490b58a22",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b5e3eb4bd8eb6b5a",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Enlaces entrantes"
+            }
+          },
+          {
+            "id": "c1366faee90493b3",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Enlaces salientes"
+            }
+          },
+          {
+            "id": "7ba325a9c42933bc",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etiquetas"
+            }
+          },
+          {
+            "id": "d969b23fb115afb1",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Todas las propiedades"
+            }
+          },
+          {
+            "id": "0f4568b59658e3f9",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Esquema"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": false,
+      "canvas:Crear nuevo lienzo": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Crear nueva base": false,
+      "obsidian-git:Open Git source control": false,
+      "obsidian-excalidraw-plugin:Nuevo Bosquejo": false
+    }
+  },
+  "active": "f550352f9880a1aa",
+  "lastOpenFiles": [
+    "3.Semester/ETN302/Z-302",
+    "3.Semester/ETN302/9.302/9.302.add",
+    "3.Semester/ETN302/9.302/T9.302.md",
+    "3.Semester/ETN302/9.302",
+    "3.Semester/ETN302/8.302/T8.302.md",
+    "3.Semester/ETN302/8.302/8.302.add",
+    "3.Semester/ETN302/8.302",
+    "3.Semester/ETN302/7.302/T7.302.md",
+    "3.Semester/ETN302/7.302/7.302.add",
+    "3.Semester/ETN302/7.302",
+    "3.Semester/ETN302/6.302/T6.302.md",
+    "3.Semester/ETN302/6.302/6.302.add",
+    "3.Semester/ETN302/6.302",
+    "3.Semester/ETN302/5.302/T5.302.md",
+    "3.Semester/ETN302/5.302/5.302.add",
+    "3.Semester/ETN302/5.302",
+    "3.Semester/ETN302/4.302/T4.302.md",
+    "3.Semester/ETN302/3.302/3.302.add/vie.-09-diciembre-22_5-51-56.md",
+    "3.Semester/ETN302/3.302/3.302.add/Thu-15-September-22_10-15-13.md",
+    "3.Semester/ETN302/3.302/3.302.add/TE3.6.302-5.png",
+    "3.Semester/ETN302/3.302/3.302.add/TE3.6.302-5.md",
+    "3.Semester/ETN302/3.302/3.302.add/TE3.6.302-4.png",
+    "3.Semester/ETN302/3.302/3.302.add/TE3.6.302-4.md",
+    "3.Semester/ETN302/3.302/3.302.add/TE3.6.302-3.png",
+    "3.Semester/ETN302/3.302/3.302.add/TE3.6.302-3.md",
+    "3.Semester/ETN302/3.302/3.302.add/TE3.6.302-2.png",
+    "3.Semester/ETN302/3.302/3.302.add/TE3.6.302-2.md",
+    "3.Semester/ETN302/3.302/3.302.add/TE3.6.302-1.png",
+    "3.Semester/ETN302/3.302/3.302.add/TE3.6.302-1.md",
+    "3.Semester/ETN302/3.302/3.302.add/TE3.6.302-05.png",
+    "3.Semester/ETN302/3.302/3.302.add/TE3.6.302-03.png",
+    "3.Semester/ETN302/3.302/3.302.add/TE3.6.302-01.png",
+    "3.Semester/ETN302/3.302/3.302.add/TE3.523.302-1.png",
+    "3.Semester/ETN302/3.302/3.302.add/TE3.523.302-1.md",
+    "3.Semester/ETN302/3.302/3.302.add/TE3.522.302-1.png",
+    "3.Semester/ETN302/3.302/3.302.add/TE3.522.302-1.md",
+    "3.Semester/ETN302/3.302/3.302.add/TE3.521.302-1.md",
+    "3.Semester/ETN302/3.302/3.302.add/TE3.513.302-1.md",
+    "3.Semester/ETN302/3.302/3.302.add/TE3.512.302-1.md",
+    "3.Semester/ETN302/3.302/3.302.add/TE3.511.302-1.md",
+    "3.Semester/ETN302/3.302/3.302.add/TE3.4.302-1.md",
+    "3.Semester/ETN302/3.302/3.302.add/TE3.3.302-2.md",
+    "3.Semester/ETN302/3.302/3.302.add/TE3.3.302-1.md",
+    "3.Semester/ETN302/3.302/3.302.add/TE3.2.302-1.md",
+    "3.Semester/ETN302/3.302/3.302.add/TD3.2.302.md",
+    "3.Semester/ETN302/3.302/3.302.add/T3.6.302-5.md"
+  ]
+}
