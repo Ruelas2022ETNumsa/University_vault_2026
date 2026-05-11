@@ -11,10 +11,14 @@
             "id": "f550352f9880a1aa",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "esto es una pruieba.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nueva pestaña"
+              "title": "esto es una pruieba"
             }
           }
         ]
@@ -90,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "esto es una pruieba.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Enlaces entrantes"
+              "title": "Enlaces entrantes de esto es una pruieba"
             }
           },
           {
@@ -108,11 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "esto es una pruieba.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Enlaces salientes"
+              "title": "Enlaces salientes de esto es una pruieba"
             }
           },
           {
@@ -150,12 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "esto es una pruieba.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Esquema"
+              "title": "Esquema de esto es una pruieba"
             }
           }
         ]
@@ -180,6 +187,7 @@
   },
   "active": "f550352f9880a1aa",
   "lastOpenFiles": [
+    "esto es una pruieba.md",
     "3.Semester/ETN302/Z-302",
     "3.Semester/ETN302/9.302/9.302.add",
     "3.Semester/ETN302/9.302/T9.302.md",
@@ -195,7 +203,6 @@
     "3.Semester/ETN302/6.302",
     "3.Semester/ETN302/5.302/T5.302.md",
     "3.Semester/ETN302/5.302/5.302.add",
-    "3.Semester/ETN302/5.302",
     "3.Semester/ETN302/4.302/T4.302.md",
     "3.Semester/ETN302/3.302/3.302.add/vie.-09-diciembre-22_5-51-56.md",
     "3.Semester/ETN302/3.302/3.302.add/Thu-15-September-22_10-15-13.md",
