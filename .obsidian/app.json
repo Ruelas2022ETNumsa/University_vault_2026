@@ -1,3 +1,5 @@
 {
-  "defaultViewMode": "preview"
+  "defaultViewMode": "preview",
+  "showUnsupportedFiles": true,
+  "showInlineTitle": true
 }
