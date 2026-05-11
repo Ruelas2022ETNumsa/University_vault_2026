@@ -7,16 +7,20 @@ El vault local en PC se sincroniza automáticamente con GitHub mediante el plugi
 
 ---
 
-## Flujo deseado
+## Flujo actual
 
 ```
 Claude (edita/crea notas)
         ↕
 GitHub → https://github.com/Ruelas2022ETNumsa/University_vault_2026
         ↕
-Obsidian Git (sincroniza automáticamente)
+Obsidian Git (auto-sync cada 5 min)
         ↕
 PC Local → E:\University_vault_2026
+        ↕
+Remotely Save (sync con OneDrive)
+        ↕
+Móvil (Obsidian + Remotely Save)
 ```
 
 ---
@@ -28,32 +32,30 @@ PC Local → E:\University_vault_2026
 - [x] Git instalado en la PC
 - [x] Repositorio local vinculado a GitHub (`git remote` configurado)
 - [x] Primer push realizado — archivos visibles en GitHub
-- [x] Plugin **Obsidian Git** instalado en Obsidian
+- [x] Plugin **Obsidian Git** instalado y activado en Obsidian
+- [x] **Obsidian Git configurado** (auto-commit, auto-push, auto-pull cada 5 min + pull al arrancar)
 - [x] Conector Filesystem de Claude apuntando a `E:\University_vault_2026`
+- [x] Plugin **Remotely Save** instalado en PC y conectado a **OneDrive**
+- [x] Plugin **Remotely Save** instalado en **móvil** y conectado al mismo OneDrive
+- [x] Vault sincronizado y accesible desde el móvil
 
 ---
 
 ## Lo que falta ⏳
 
-- [ ] **Activar Obsidian Git** en Obsidian
-  - Ir a `Settings → Community Plugins → Obsidian Git → activar toggle`
-  - Esto genera el archivo `data.json` con la configuración del plugin
-- [ ] **Configurar Obsidian Git** (Claude lo hará editando `data.json`)
-  - Auto-pull cada 5 minutos
-  - Auto-push cada 5 minutos
-  - Mensaje de commit automático
 - [ ] **Conectar GitHub a Claude** (conector GitHub en Claude.ai)
-  - Esto permitirá a Claude editar archivos directamente en la nube
+  - Permitirá a Claude editar archivos directamente en la nube
   - Sin depender de que la PC esté encendida
+- [ ] **Conectar Microsoft 365 a Claude** (conector disponible en Claude.ai)
+  - Permitirá a Claude leer/escribir notas directamente desde OneDrive
+  - Complementa el acceso móvil
 
 ---
 
 ## Pendiente inmediato
 
-1. Abrir Obsidian con el vault `University_vault_2026`
-2. Ir a `Settings → Community Plugins` y activar **Obsidian Git**
-3. Cerrar Obsidian
-4. Avisar a Claude para que configure el `data.json` automáticamente
+1. Conectar conector **GitHub** en Claude.ai → Settings → Connectors
+2. Opcionalmente conectar **Microsoft 365** para acceso vía OneDrive
 
 ---
 
