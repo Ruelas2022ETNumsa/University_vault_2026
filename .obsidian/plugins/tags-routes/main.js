@@ -69215,7 +69215,7 @@ var globalProgramControl = {
 var currentVersion = "1.2.3";
 var currentSaveSpecVer = 10203;
 var minSaveSpecVer = 10101;
-var programDirectory = "TagsRoutes";
+var programDirectory = "_app/TagsRoutes";
 var logDirectory = `${programDirectory}/logs`;
 var reportDirectory = `${programDirectory}/reports`;
 var logFilePath = `${programDirectory}/logMessage.md`;
@@ -69317,7 +69317,7 @@ var DEFAULT_SETTINGS = {
   enableTagsReaction: true,
   enableAutoFocus: true,
   enableParagraphLinker: true,
-  snapShotFolder: "graph-screenshot",
+  snapShotFolder: "_app/TagsRoutes/graph-screenshot",
   currentTheme: "dark",
   customSlot: null,
   showingFilter: PathFilter.encode("*"),
