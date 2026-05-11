@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "8bde0ffbe2279439",
+        "id": "761ccc1ba74a28ae",
         "type": "tabs",
         "children": [
           {
-            "id": "d74e2844bdf2a6cd",
+            "id": "5b8425f3d56c8962",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "config/TagsRoute.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nueva pestaña"
+              "title": "TagsRoute"
             }
           }
         ]
@@ -169,7 +173,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -187,56 +191,57 @@
       "bases:Crear nueva base": false,
       "obsidian-git:Open Git source control": false,
       "obsidian-excalidraw-plugin:Nuevo Bosquejo": false,
-      "remotely-save:Remotely Save": false
+      "remotely-save:Remotely Save": false,
+      "tags-routes:Open tags routes": false
     }
   },
-  "active": "d74e2844bdf2a6cd",
+  "active": "5b8425f3d56c8962",
   "lastOpenFiles": [
-    "config/obs_claude.md",
-    "esto es una prueba.md",
+    "config/TagsRoute.md",
+    "config/Nuevo documento de texto.txt",
+    "config/Nueva carpeta",
+    "Nueva carpeta",
+    "app/tags-routes/screenshots",
+    "app/tags-routes/Nueva carpeta",
+    "app/tags-routes",
+    "app/Nueva carpeta",
     "TagsRoutes/logMessage.md",
-    "TagsRoutes/logs",
-    "TagsRoutes",
-    "Sin título.base",
-    "3.Semester/ETN302/2.302/T2.302.md",
-    "Excalidraw/Drawing 2026-05-11 12.20.50.excalidraw.md",
-    "Excalidraw/Drawing 2026-05-11 12.20.48.excalidraw.md",
-    "Excalidraw",
-    "config",
-    "3.Semester/ETN302/Z-302",
-    "3.Semester/ETN302/9.302/9.302.add",
-    "3.Semester/ETN302/9.302/T9.302.md",
-    "3.Semester/ETN302/9.302",
-    "3.Semester/ETN302/8.302/T8.302.md",
-    "3.Semester/ETN302/8.302/8.302.add",
-    "3.Semester/ETN302/8.302",
-    "3.Semester/ETN302/7.302/T7.302.md",
-    "3.Semester/ETN302/6.302/T6.302.md",
-    "3.Semester/ETN302/5.302/T5.302.md",
-    "3.Semester/ETN302/4.302/T4.302.md",
-    "3.Semester/ETN302/3.302/3.302.add/vie.-09-diciembre-22_5-51-56.md",
-    "3.Semester/ETN302/3.302/3.302.add/Thu-15-September-22_10-15-13.md",
-    "3.Semester/ETN302/3.302/3.302.add/TE3.6.302-5.png",
-    "3.Semester/ETN302/3.302/3.302.add/TE3.6.302-5.md",
-    "3.Semester/ETN302/3.302/3.302.add/TE3.6.302-4.png",
-    "3.Semester/ETN302/3.302/3.302.add/TE3.6.302-4.md",
-    "3.Semester/ETN302/3.302/3.302.add/TE3.6.302-3.png",
-    "3.Semester/ETN302/3.302/3.302.add/TE3.6.302-3.md",
-    "3.Semester/ETN302/3.302/3.302.add/TE3.6.302-2.png",
-    "3.Semester/ETN302/3.302/3.302.add/TE3.6.302-2.md",
-    "3.Semester/ETN302/3.302/3.302.add/TE3.6.302-1.png",
-    "3.Semester/ETN302/3.302/3.302.add/TE3.6.302-1.md",
-    "3.Semester/ETN302/3.302/3.302.add/TE3.6.302-05.png",
-    "3.Semester/ETN302/3.302/3.302.add/TE3.6.302-03.png",
-    "3.Semester/ETN302/3.302/3.302.add/TE3.6.302-01.png",
-    "3.Semester/ETN302/3.302/3.302.add/TE3.523.302-1.png",
-    "3.Semester/ETN302/3.302/3.302.add/TE3.523.302-1.md",
-    "3.Semester/ETN302/3.302/3.302.add/TE3.522.302-1.png",
-    "3.Semester/ETN302/3.302/3.302.add/TE3.522.302-1.md",
-    "3.Semester/ETN302/3.302/3.302.add/TE3.521.302-1.md",
-    "3.Semester/ETN302/3.302/3.302.add/TE3.513.302-1.md",
-    "3.Semester/ETN302/3.302/3.302.add/TE3.512.302-1.md",
-    "3.Semester/ETN302/3.302/3.302.add/TE3.511.302-1.md",
-    "3.Semester/ETN302/3.302/3.302.add/TE3.4.302-1.md"
+    "App/Excalidraw/Drawing 2026-05-11 16.56.55.excalidraw.md",
+    "app/Excalidraw/Drawing 2026-05-11 12.20.48.excalidraw.md",
+    "app/Excalidraw/Drawing 2026-05-11 16.56.55.excalidraw.md",
+    "App/Excalidraw",
+    "app/Excalidraw/Drawing 2026-05-11 12.20.50.excalidraw.md",
+    "app/Excalidraw",
+    "app",
+    "Semestres/3.Semester/ETN302/3.302/3.302.add/vie.-09-diciembre-22_5-51-56.md",
+    "Semestres/3.Semester/ETN302/3.302/3.302.add/Thu-15-September-22_10-15-13.md",
+    "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.6.302-5.png",
+    "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.6.302-5.md",
+    "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.6.302-4.png",
+    "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.6.302-4.md",
+    "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.6.302-3.png",
+    "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.6.302-3.md",
+    "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.6.302-2.png",
+    "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.6.302-2.md",
+    "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.6.302-1.png",
+    "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.6.302-1.md",
+    "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.6.302-05.png",
+    "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.6.302-03.png",
+    "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.6.302-01.png",
+    "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.523.302-1.png",
+    "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.523.302-1.md",
+    "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.522.302-1.png",
+    "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.522.302-1.md",
+    "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.521.302-1.md",
+    "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.513.302-1.md",
+    "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.512.302-1.md",
+    "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.511.302-1.md",
+    "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.4.302-1.md",
+    "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.3.302-2.md",
+    "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.3.302-1.md",
+    "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.2.302-1.md",
+    "Semestres/3.Semester/ETN302/3.302/3.302.add/TD3.2.302.md",
+    "Semestres/3.Semester/ETN302/3.302/3.302.add/T3.6.302-5.md",
+    "Semestres/3.Semester/ETN302/3.302/3.302.add/T3.6.302-4.md"
   ]
 }

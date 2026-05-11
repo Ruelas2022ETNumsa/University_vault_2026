@@ -3,7 +3,7 @@
   "copyFrameLinkByName": false,
   "disableDoubleClickTextEditing": false,
   "phoneFooterSafeAreaPadding": false,
-  "folder": "Excalidraw",
+  "folder": "App/Excalidraw",
   "cropFolder": "",
   "annotateFolder": "",
   "embedUseExcalidrawFolder": false,
