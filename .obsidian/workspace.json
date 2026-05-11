@@ -192,12 +192,16 @@
       "bases:Crear nueva base": false,
       "obsidian-git:Open Git source control": false,
       "obsidian-excalidraw-plugin:Nuevo Bosquejo": false,
-      "remotely-save:Remotely Save": false,
-      "tags-routes:Open tags routes": false
+      "remotely-save:Remotely Save": false
     }
   },
   "active": "5b8425f3d56c8962",
   "lastOpenFiles": [
+    "_app/scripts/patch-obsidian.ps1",
+    "_app/scripts/patch-obsidian.bat",
+    "_app/scripts",
+    "scripts",
+    "Nueva carpeta",
     "_app/tags-routes/screenshots",
     "_app/Excalidraw/Drawing 2026-05-11 16.56.55.excalidraw.md",
     "_app/tags-routes",
@@ -206,11 +210,6 @@
     "config/TagsRoute.md",
     "config/Nuevo documento de texto.txt",
     "config/Nueva carpeta",
-    "Nueva carpeta",
-    "app/tags-routes/screenshots",
-    "app/tags-routes/Nueva carpeta",
-    "app/tags-routes",
-    "app/Nueva carpeta",
     "TagsRoutes/logMessage.md",
     "App/Excalidraw/Drawing 2026-05-11 16.56.55.excalidraw.md",
     "app/Excalidraw/Drawing 2026-05-11 12.20.48.excalidraw.md",
