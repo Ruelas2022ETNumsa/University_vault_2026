@@ -11,10 +11,30 @@
             "id": "79165b0eeabd595a",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "_app/TagsRoutes/logMessage.md",
+                "mode": "preview",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nueva pestaña"
+              "title": "logMessage"
+            }
+          }
+        ]
+      },
+      {
+        "id": "52dc2ca6789411bc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "aaa9a04aafe63394",
+            "type": "leaf",
+            "state": {
+              "type": "tags-routes",
+              "state": {},
+              "icon": "waypoints",
+              "title": "Tags routes"
             }
           }
         ]
@@ -185,7 +205,8 @@
       "command-palette:Abrir paleta de comandos": false,
       "obsidian-git:Open Git source control": false,
       "obsidian-excalidraw-plugin:Nuevo Bosquejo": false,
-      "remotely-save:Remotely Save": false
+      "remotely-save:Remotely Save": false,
+      "tags-routes:Open tags routes": false
     }
   },
   "active": "79165b0eeabd595a",
