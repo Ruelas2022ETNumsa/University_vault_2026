@@ -4,35 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "ad1b99b3efa473cf",
+        "id": "d9177d299315eb23",
         "type": "tabs",
         "children": [
           {
-            "id": "da7540134cc194f8",
+            "id": "79165b0eeabd595a",
             "type": "leaf",
             "state": {
-              "type": "tags-routes",
+              "type": "empty",
               "state": {},
-              "icon": "lucide-ghost",
-              "title": "tags-routes"
-            }
-          },
-          {
-            "id": "b320ec4b2d695fc2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_appX/tags_notes.md",
-                "mode": "preview",
-                "source": false
-              },
               "icon": "lucide-file",
-              "title": "tags_notes"
+              "title": "Nueva pestaña"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -189,8 +174,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 323.5,
-    "collapsed": true
+    "width": 323.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -204,11 +188,11 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "b320ec4b2d695fc2",
+  "active": "79165b0eeabd595a",
   "lastOpenFiles": [
+    "_appX/tags_notes.md",
     "_appX/tags-routes_backup.rar",
     "_app/TagsRoutes/logMessage.md",
-    "_appX/tags_notes.md",
     "_appX/tags-routes_backup/styles.css",
     "_appX/tags-routes_backup/manifest.json",
     "_appX/tags-routes_backup/main.js.1.2.3.bak",
@@ -218,7 +202,6 @@
     "_appX/tags-routes/styles.css",
     "_appX/tags-routes/manifest.json",
     "_appX/tags-routes/main.js.1.2.3.bak",
-    "_appX/tags-routes/main.js",
     "Semestres/3.Semester/ETN302/3.302.md",
     "Sin título.md",
     "Semestres/3.Semester/ETN302/0.ETN-302.md",
