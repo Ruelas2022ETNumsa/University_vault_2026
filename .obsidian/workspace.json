@@ -13,8 +13,8 @@
             "state": {
               "type": "tags-routes",
               "state": {},
-              "icon": "waypoints",
-              "title": "Tags routes"
+              "icon": "lucide-ghost",
+              "title": "tags-routes"
             }
           },
           {
