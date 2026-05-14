@@ -1,235 +1,187 @@
-# Tags Routes — Guía de Modularización
+# Tags Routes — Guía de mantenimiento del plugin
 
-> Archivo de referencia para el proceso de refactorización del plugin `tags-routes`.  
-> El `main.js` original tiene **~69,820 líneas / 2.5MB**, generado por esbuild desde TypeScript.
+> Archivo de referencia para entender, navegar y modificar el plugin `tags-routes`.
+> El `main.js` tiene **~69,820 líneas / 2.5MB**, generado por esbuild desde TypeScript.
+> Todo el código vive en un único archivo — no es posible separarlo en múltiples archivos.
 
 ---
 
-## Estado actual del archivo
+## Por qué no se puede modularizar en archivos separados
 
-| Rango de líneas | Contenido | Tamaño estimado |
+Obsidian carga cada plugin como un único archivo `main.js` usando un loader interno de Electron. En ese contexto:
+
+- `require()` **solo** acepta `"obsidian"` y módulos nativos de Node (`"path"`, `"fs"`, etc.)
+- `require('./src/vendors.js')` falla con `Cannot find module` porque el loader no resuelve paths locales
+- `__dirname` apunta a `C:\Program Files\Obsidian\resources\electron.asar\renderer` — incorrecto
+- `module.filename` es `undefined` — no está expuesto en el contexto del plugin
+
+**Se intentó en tres variantes y las tres fallaron:**
+
+| Intento | Path usado | Error |
 |---|---|---|
-| 1 – 2,061 | Dependencias externas (ngraph) | ~2k líneas |
-| 2,062 – 24,447 | Three.js r169 completo (bundleado) | ~22k líneas |
-| 24,448 – 65,877 | `util.ts` + todas sus dependencias D3/Three extras | ~41k líneas |
-| 65,878 – 66,521 | `settings.ts` — UI del panel lateral | ~644 líneas |
-| 66,522 – 68,852 | `TagsRoutes.ts` — núcleo visual | ~2,330 líneas |
-| 68,853 – 69,203 | `CodeBlockProcessor.ts` — bloques de código | ~350 líneas |
-| 69,204 – 69,820 | `main.ts` — punto de entrada del plugin | ~617 líneas |
+| v1 | `require('./src/vendors.js')` | `Cannot find module './src/vendors.js'` |
+| v2 | `require(path.join(__dirname, 'src', 'vendors.js'))` | Resuelve a `C:\Program Files\Obsidian\...` |
+| v3 | `require(path.join(path.dirname(module.filename), ...))` | `TypeError: "path" must be string. Received undefined` |
+
+**Conclusión:** el `main.js` debe ser siempre un único archivo. La organización es lógica, no física.
 
 ---
 
-## Zonas clasificadas por riesgo de modificación
+## Estrategia adoptada — organización interna del main.js
 
-### 🔴 NO TOCAR — Librerías de terceros bundleadas
-Estas secciones son código de terceros comprimido. Modificarlas rompe el plugin.
+Dado que no podemos separar archivos, el objetivo es hacer el código **navegable y mantenible** dentro del único `main.js` mediante:
 
-- **Three.js r169** (líneas ~2,085 – 24,447)  
-  Motor 3D completo. Renderizado WebGL, geometrías, materiales, cámara.
+1. **Marcadores de sección estandarizados** al inicio de cada bloque de código
+2. **Tabla de contenidos comentada** al inicio del archivo (después de las librerías)
+3. **Comentarios de método** en las funciones del código propio
+4. **Etiquetas de riesgo** junto a las secciones delicadas
 
-- **ngraph** (líneas 1 – 2,061)  
-  Motor de simulación de fuerzas alternativo.
-
-- **d3-force-3d / d3-binarytree / d3-quadtree / d3-octree** (dentro de util.ts)  
-  Simulación de física del grafo en 3D.
-
-- **three-forcegraph / three-render-objects / 3d-force-graph** (dentro de util.ts)  
-  Capa de alto nivel que une Three.js con D3.
-
-- **EffectComposer / UnrealBloomPass / RenderPass** (dentro de util.ts)  
-  Pipeline de postprocesado — el efecto glow/bloom.
-
-- **TrackballControls / OrbitControls / FlyControls** (dentro de util.ts)  
-  Los tres modos de cámara 3D.
-
-- **tinycolor2 / polished / d3-scale / d3-scale-chromatic** (dentro de util.ts)  
-  Manejo de colores y escalas.
-
-- **@tweenjs/tween.js** (dentro de util.ts)  
-  Animaciones suaves con interpolación.
-
-- **three-spritetext** (dentro de util.ts)  
-  Texto flotante en 3D sobre los nodos.
-
-- **lodash-es / kapsule / accessor-fn / data-joint** (dentro de util.ts)  
-  Utilidades generales del grafo.
-
-- **three.webgpu.js** (dentro de util.ts)  
-  Versión WebGPU de Three.js.
-
-- **DragControls** (dentro de util.ts)  
-  Permite arrastrar objetos 3D.
+Esto permite usar `Ctrl+F` o la búsqueda del editor para navegar directamente a cualquier sección sin perderse en 70k líneas.
 
 ---
 
-### 🟡 REVISAR CON CUIDADO — Lógica central del plugin
+## Mapa del archivo main.js
 
-Código propio que interactúa directamente con Obsidian y con las librerías 3D. Cambios posibles pero requieren pruebas.
+### Bloque 1 — Librerías externas (NO TOCAR)
+Líneas 1 – 66,521 · 2.4 MB · generado automáticamente por esbuild
 
-#### `TagRoutesView` — Clase principal (líneas ~66,522 – 68,852)
+| Rango | Librería | Qué hace |
+|---|---|---|
+| 1 – 36 | Boilerplate esbuild | Helpers `__export`, `__commonJS`, `__toESM`, etc. |
+| 37 – 2,084 | ngraph | Motor de física de grafos alternativo |
+| 2,085 – 24,447 | Three.js r169 | Motor 3D completo (WebGL) |
+| 24,448 – 26,555 | DragControls | Arrastrar objetos 3D |
+| 26,556 – 29,850 | three-forcegraph | Une Three.js con D3-force |
+| 29,851 – 60,938 | three.webgpu.js | Motor 3D alternativo (WebGPU) |
+| 60,939 – 62,699 | TrackballControls / OrbitControls / FlyControls | Modos de cámara 3D |
+| 62,700 – 65,566 | EffectComposer + pipeline | Postprocesado de imagen |
+| 65,567 – 66,091 | UnrealBloomPass | Efecto glow/bloom |
+| 66,092 – 66,521 | three-spritetext | Texto flotante sobre nodos |
+
+### Bloque 2 — Código propio del plugin (EDITABLE)
+Líneas 66,522 – 69,820 · ~136 KB · esto es lo que mantenemos
+
+| Rango | Sección | Descripción |
+|---|---|---|
+| 66,522 – 68,852 | `TagsRoutes.ts` | Vista principal del grafo 3D |
+| 65,878 – 66,521 | `settings.ts` | UI del panel lateral (controles) |
+| 68,853 – 69,203 | `CodeBlockProcessor.ts` | Procesador de bloques \`\`\`tagsroutes\`\`\` |
+| 69,204 – 69,820 | `main.ts` | Punto de entrada del plugin |
+
+> **Nota:** Las funciones de utilidad (`DebugMsg`, `getTags`, `getFileType`, `PathFilter`, etc.) están mezcladas dentro del bloque de librerías entre las líneas 24,148 – 65,877 junto a las dependencias D3 y Three extras. Son código propio pero no conviene moverlas.
+
+---
+
+## Zonas por riesgo de modificación
+
+### 🔴 NO TOCAR — Librerías bundleadas (líneas 1 – 66,521)
+
+Cualquier cambio aquí rompe el plugin. Si una actualización del plugin sobreescribe `main.js`, este bloque se regenera automáticamente.
+
+Librerías incluidas: `ngraph`, `Three.js r169`, `three.webgpu.js`, `DragControls`, `three-forcegraph`, `three-render-objects`, `3d-force-graph`, `d3-force-3d`, `d3-binarytree/quadtree/octree`, `EffectComposer`, `UnrealBloomPass`, `TrackballControls`, `OrbitControls`, `FlyControls`, `tinycolor2`, `polished`, `d3-scale`, `@tweenjs/tween.js`, `three-spritetext`, `lodash-es`, `kapsule`, `accessor-fn`.
+
+---
+
+### 🟡 REVISAR CON CUIDADO — Núcleo visual (líneas 66,522 – 68,852)
+
+Clase `TagRoutesView` — interactúa con Three.js y con la API de Obsidian.
 
 | Método | Qué hace | Riesgo |
 |---|---|---|
-| `buildGdata()` | Lee vault, extrae enlaces y tags, construye nodos/conexiones | Medio — lógica compleja |
-| `createGraph(container)` | Inicializa Three.js + física + eventos de mouse | Alto — toca muchas librerías |
+| `buildGdata()` | Lee el vault, extrae enlaces y tags, construye nodos | Medio |
+| `createGraph(container)` | Inicializa Three.js + física + eventos de ratón | Alto |
 | `getNodeColorByType(node)` | Color según tipo de nodo | Bajo |
 | `animate()` | Añade nodos progresivamente (time-lapse) | Medio |
 | `captureAndSaveScreenshot()` | Captura canvas WebGL → PNG | Bajo |
 | `handleNodeClick(node)` | Click en nodo → abre archivo | Bajo |
 | `handleTagClick(node)` | Click en tag → genera reporte | Bajo |
-| `switchTheme(visual)` | Cambia dark/light, reconstruye efectos | Medio |
+| `switchTheme(visual)` | Cambia dark/light, reconstruye efectos bloom | Medio |
 | `onSettingsSave()` | Aplica cambios de configuración en vivo | Medio |
 | `focusGraphNodeById()` | Mueve cámara suavemente a un nodo | Bajo |
 | `applyThemeColor()` | Lee colores CSS de Obsidian y los aplica | Bajo |
 
-#### `darkStyle` / `lightStyle`
-Aplican el tema al grafo y activan `UnrealBloomPass`. Modificables con cuidado.
-
 ---
 
-### 🟢 MODIFICAR LIBREMENTE — Código seguro
+### 🟢 MODIFICAR LIBREMENTE — Lógica de negocio (líneas 68,853 – 69,820)
 
-Código propio sin dependencias críticas. Se puede editar, extraer y reorganizar.
+#### `CodeBlockProcessor.ts` (líneas 68,853 – 69,203)
+Procesa bloques ` ```tagsroutes``` ` en las notas. Sin dependencias de Three.js.
 
-#### `util.ts` — Funciones propias (líneas ~24,148 – 24,447 aprox.)
-```
-DebugMsg(level, ...args)       → logging con niveles (ERROR/WARN/INFO/DEBUG)
-setViewType()                  → cambia modo de vista Obsidian
-createFolderIfNotExists()      → crea carpetas en el vault
-getTags(cache)                 → extrae tags del metadata cache
-getFileType(filePath)          → detecta tipo de archivo
-shouldRemove(path, filterList) → aplica filtros de rutas
-showFile(filePath)             → abre archivo en Obsidian
-getLineTime(line)              → extrae timestamp de línea de texto
-PathFilter (clase)             → maneja filtros glob (base64, validación)
-namedColor (mapa)              → nombres CSS → hex
-```
-
-#### `settings.ts` (líneas ~65,878 – 66,521)
-Clase `settingGroup` — construye dinámicamente sliders, botones, dropdowns, toggles.  
-Patrón builder encadenado. **Completamente extraíble.**
-
-#### `CodeBlockProcessor.ts` (líneas ~68,853 – 69,203)
 ```
 tagProcessor(query)             → busca tags en contenido de archivos
 frontmatterTagProcessor(query)  → busca tags en frontmatter YAML
-codeBlockProcessor()            → registrador principal para bloques ```tagsroutes```
+timeDurationProcessor(query)    → filtra por rango de fechas
+codeBlockProcessor()            → registrador principal del bloque
 performanceCount                → mide duración de operaciones
 ```
-**Completamente extraíble.**
 
-#### `main.ts` — Punto de entrada (líneas ~69,204 – 69,820)
+#### `main.ts` (líneas 69,204 – 69,820)
+Punto de entrada. Configuración y arranque del plugin.
+
 ```
-globalProgramControl            → flags de debugging global
-currentSaveSpecVer: 10203       → versión del formato data.json
-defaultColorMapDark/Light       → paletas de color por defecto
-TagsRoutes3 (clase Plugin)      → onload, initializePlugin, loadSettings, saveSettings, mergeDeep
-colorPickerGroup                → widget color picker (texto + selector)
-TagsroutesSettingsTab           → página de configuración global del plugin
+globalProgramControl            → flags de debugging y comportamiento global
+defaultolorMapDark/Light        → paletas de color por defecto
+DEFAULT_DISPLAY_SETTINGS        → configuración de pantalla por defecto
+TagsRoutes3 (clase Plugin)      → onload, initializePlugin, loadSettings, saveSettings
+colorPickerGroup                → widget color picker (texto + selector de color)
+TagsroutesSettingsTab           → página Settings → Tags Routes
 ```
-**Completamente extraíble y reorganizable.**
+
+#### `settings.ts` (líneas 65,878 – 66,521)
+Clase `settingGroup` — construye la UI del panel lateral con sliders, toggles, botones y dropdowns mediante un patrón builder encadenado (`.addSlider().addToggle().addButton()`).
 
 ---
 
-## Plan de modularización propuesto
+## Plan de trabajo — organización interna
 
-### Paso 1 — Separar librerías (sin tocar nada)
-Identificar exactamente los rangos de líneas de cada librería y documentarlos.  
-**Objetivo:** saber qué NO mover.
+En lugar de separar archivos, el objetivo ahora es **añadir marcadores y comentarios** al código propio para que sea navegable.
 
-### Paso 2 — Extraer `CodeBlockProcessor.ts`
-Es el módulo más pequeño (~350 líneas) y sin dependencias hacia los otros módulos propios.  
-Ideal para empezar y probar el flujo de trabajo.
+### Paso A — Añadir tabla de contenidos al inicio del bloque propio
+Insertar justo en la línea 66,522 un bloque de comentario con el índice de secciones y números de línea.
 
-### Paso 3 — Extraer `settings.ts`
-~644 líneas, clase autocontenida. Solo depende de la API de Obsidian.
+### Paso B — Etiquetar métodos de TagRoutesView
+Añadir comentarios estandarizados encima de cada método indicando: qué hace, qué parámetros recibe, nivel de riesgo.
 
-### Paso 4 — Extraer funciones de `util.ts`
-Las funciones propias (ver lista 🟢 arriba) separadas de las librerías bundleadas.
+### Paso C — Marcar secciones de CodeBlockProcessor
+El bloque ya tiene buena estructura. Solo añadir marcadores de inicio/fin de sección.
 
-### Paso 5 — Limpiar `main.ts`
-Dejar solo el punto de entrada mínimo: `onload()` y registro de componentes.
+### Paso D — Documentar globalProgramControl
+Los flags de `globalProgramControl` no tienen documentación. Aclarar qué activa cada uno.
 
-### Paso 6 — Revisar `TagRoutesView`
-Última fase. Separar `buildGdata()` de `createGraph()` si es posible.
+### Paso E — Marcar explícitamente las funciones de util mezcladas con vendors
+Las funciones `DebugMsg`, `getTags`, `getFileType`, `PathFilter`, `namedColor`, etc. están enterradas en el bloque de librerías. Añadir un marcador `// ▶ INICIO FUNCIONES PROPIAS` y `// ◀ FIN FUNCIONES PROPIAS` para localizarlas fácilmente.
 
 ---
 
 ## Notas importantes
 
-- El `main.js` fue generado por **esbuild** desde TypeScript. El código fuente original (`src/`) es mucho más limpio y corto.
-- Si tienes acceso al repo fuente (`src/`), es preferible trabajar desde ahí y recompilar, en lugar de editar `main.js` directamente.
-- Cualquier cambio en `main.js` se **sobreescribirá** si el plugin se actualiza. Considerar hacer un fork del repositorio.
-- Repositorio original: https://github.com/kctekn/obsidian-TagsRoutes
+- El `main.js` es generado por **esbuild** desde TypeScript. Si el plugin recibe una actualización, `main.js` se sobreescribirá y se perderán todos los cambios.
+- **Recomendación:** antes de cualquier modificación, hacer copia manual en `_appX/backups/` con fecha.
+- Para modificaciones permanentes, la vía correcta es hacer un fork del repositorio original y recompilar: https://github.com/kctekn/obsidian-TagsRoutes
+- El backup automático del plugin está en: `main.js.1.2.3.bak` (raíz del plugin)
 
 ---
 
-## Próximos pasos acordados
+## Historial de cambios
 
-- [x] Revisar si existe la carpeta `src/` en el directorio del plugin — **existe pero estaba vacía**
-- [x] Decidir: ¿editar `main.js` directamente o trabajar desde el código fuente TypeScript? — **se trabaja sobre `main.js` directamente**
-- [x] Comenzar con extracción de `CodeBlockProcessor` (Paso 2) — **completado**
-- [ ] Probar el plugin después de cada cambio antes de continuar
+### Sesión 1 — Análisis inicial
+Mapeo completo de la estructura del `main.js`. Identificación de bloques, rangos de líneas y clasificación por riesgo.
 
----
+### Sesión 2 — Intento: separación de vendors (FALLIDO)
+**Objetivo:** Extraer las 66,521 líneas de librerías a `src/vendors.js` y cargarlas desde `main.js` con `require()`.
 
-## Cambios realizados
+**Resultado:** Fallo. Obsidian no resuelve `require()` de paths locales. El loader interno de Electron solo acepta módulos de Node y `"obsidian"`. Tres variantes probadas, las tres con errores diferentes (ver tabla al inicio del documento).
 
-### Sesión 2 — Separación de vendors (2026-05-14)
+**Restauración:** Se recuperó el `main.js` original desde el backup `main.js.1.2.3.bak`.
 
-**Objetivo:** Extraer todas las librerías externas a un archivo separado para que `main.js` sea editable y legible.
+### Sesión 3 — Intento: extracción de CodeBlockProcessor (FALLIDO por la misma causa)
+**Objetivo:** Extraer las ~350 líneas de `CodeBlockProcessor` a `src/CodeBlockProcessor.js`.
 
-**Archivos generados:**
+**Resultado:** Fallo por la misma razón que la sesión 2. El `require()` local no funciona en el entorno de Obsidian independientemente del path usado.
 
-| Archivo | Ruta | Líneas | Tamaño |
-|---|---|---|---|
-| `vendors.js` | `src/vendors.js` | 66,553 | 2.4 MB |
-| `main.js` (nuevo) | `main.js` | 3,368 | 133 KB |
-
-**Qué se hizo:**
-- Se identificaron con precisión los rangos de líneas de cada librería usando los comentarios de sección de esbuild (`// node_modules/...`)
-- Se extrajo todo el bloque de librerías (líneas 1–66,521 del original) a `src/vendors.js`
-- Al final de `vendors.js` se añadió un bloque `module.exports` con las variables que el código propio necesita:
-  - Three.js: `AdditiveBlending`, `BoxGeometry`, `Camera`, `Color`, `DirectionalLight`, `EdgesGeometry`, `Group`, `LineBasicMaterial`, `LineSegments`, `Mesh`, `MeshBasicMaterial`, `MeshLambertMaterial`, `MeshStandardMaterial`, `SphereGeometry`, `Vector3`
-  - Postprocesado: `UnrealBloomPass`
-  - Grafo 3D: `_3dForceGraph`
-  - D3 Force: `link_default`
-  - Spritetext: `_default14`
-- El nuevo `main.js` arranca con el boilerplate de esbuild (líneas 1–36) + un `require('./src/vendors.js')` con destructuring de todas las vars, seguido del código propio (líneas 66,522–69,820 del original)
-
-**Backup existente:** `main.js.1.2.3.bak` en la raíz del plugin (creado automáticamente por Obsidian).
-
-**Pendiente de verificación:**
-- [ ] Recargar Obsidian y confirmar que el plugin funciona correctamente con la nueva estructura
-- [ ] Si falla: restaurar `main.js.1.2.3.bak` → `main.js` y revisar los exports de `vendors.js`
-
-### Sesión 3 — Extracción de CodeBlockProcessor (2026-05-14)
-
-**Objetivo:** Separar el procesador de bloques ` ```tagsroutes``` ` a su propio archivo.
-
-**Archivos generados:**
-
-| Archivo | Ruta | Líneas | Tamaño |
-|---|---|---|---|
-| `CodeBlockProcessor.js` | `src/CodeBlockProcessor.js` | 370 | 16 KB |
-| `main.js` (v2) | `main.js` | 3,024 | 120 KB |
-
-**Qué se hizo:**
-- Se extrajo el bloque `// src/util/CodeBlockProcessor.ts` (líneas 2401–2751 del main anterior) a `src/CodeBlockProcessor.js`
-- El archivo exporta: `module.exports = { codeBlockProcessor }`
-- En `main.js` el bloque fue reemplazado por: `const { codeBlockProcessor } = require('./src/CodeBlockProcessor.js')`
-- `main.js` pasó de 3,368 → 3,024 líneas
-
-**Dependencias del módulo** (aún resueltas desde el scope global de `main.js`):
-- `DebugMsg` — viene de `util.ts` (pendiente extracción en Paso 4)
-- `getLineTime` — viene de `util.ts` (pendiente extracción en Paso 4)
-- `globalProgramControl` — viene de `src/main.ts` (al final del mismo `main.js`)
-
-**Pendiente de verificación:**
-- [ ] Colocar `CodeBlockProcessor.js` en `src/` y `main_v2.js` como `main.js`
-- [ ] Recargar Obsidian y probar que los bloques ` ```tagsroutes``` ` siguen funcionando
-- [ ] Si falla: revisar que `globalProgramControl` esté definido ANTES del `require` en `main.js`
+### Sesión 4 — Replanteo de estrategia (actual)
+Conclusión: la modularización en archivos separados no es viable. La organización debe hacerse dentro del propio `main.js` mediante marcadores de sección, comentarios de métodos y una tabla de contenidos interna. Ver **Plan de trabajo** arriba.
 
 ---
 
-*Última actualización: sesión 3 — CodeBlockProcessor extraído, pendiente instalación y prueba.*
+*Última actualización: sesión 4 — estrategia replaneada, pendiente inicio de organización interna del main.js.*
