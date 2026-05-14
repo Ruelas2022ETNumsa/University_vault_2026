@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "5974dd9f3479f883",
+        "id": "ad1b99b3efa473cf",
         "type": "tabs",
         "children": [
           {
-            "id": "5db81072b614a06e",
+            "id": "da7540134cc194f8",
             "type": "leaf",
             "state": {
               "type": "tags-routes",
               "state": {},
-              "icon": "waypoints",
-              "title": "Tags routes"
+              "icon": "lucide-ghost",
+              "title": "tags-routes"
             }
           },
           {
-            "id": "355817dffa84fdb9",
+            "id": "b320ec4b2d695fc2",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -201,12 +201,13 @@
       "command-palette:Abrir paleta de comandos": false,
       "obsidian-git:Open Git source control": false,
       "obsidian-excalidraw-plugin:Nuevo Bosquejo": false,
-      "remotely-save:Remotely Save": false,
-      "tags-routes:Open tags routes": false
+      "remotely-save:Remotely Save": false
     }
   },
-  "active": "355817dffa84fdb9",
+  "active": "b320ec4b2d695fc2",
   "lastOpenFiles": [
+    "_app/TagsRoutes/logMessage.md",
+    "_appX/tags_notes.md",
     "_appX/tags-routes_backup/styles.css",
     "_appX/tags-routes_backup/manifest.json",
     "_appX/tags-routes_backup/main.js.1.2.3.bak",
@@ -217,10 +218,7 @@
     "_appX/tags-routes/manifest.json",
     "_appX/tags-routes/main.js.1.2.3.bak",
     "_appX/tags-routes/main.js",
-    "_appX/tags-routes/data.json",
     "Semestres/3.Semester/ETN302/3.302.md",
-    "_appX/tags_notes.md",
-    "_app/TagsRoutes/logMessage.md",
     "Sin título.md",
     "Semestres/3.Semester/ETN302/0.ETN-302.md",
     "Semestres/3.Semester/ETN302/3.302/E3.302.md",
