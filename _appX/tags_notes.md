@@ -182,6 +182,19 @@ Mapeo completo de la estructura del `main.js`. Identificación de bloques, rango
 ### Sesión 4 — Replanteo de estrategia (actual)
 Conclusión: la modularización en archivos separados no es viable. La organización debe hacerse dentro del propio `main.js` mediante marcadores de sección, comentarios de métodos y una tabla de contenidos interna. Ver **Plan de trabajo** arriba.
 
+**Método de trabajo acordado para las próximas sesiones:**
+Como el bloque editable tiene ~3,300 líneas, se trabajará por partes de 500–800 líneas que coincidan con los límites naturales de cada sección. El flujo es:
+1. Se pega un bloque en el chat
+2. Claude devuelve el mismo bloque con marcadores, comentarios de métodos y etiquetas de riesgo añadidos
+3. Se revisa y se pega de vuelta en `main.js` en el rango correspondiente
+4. Se pasa al siguiente bloque
+
+**Orden de trabajo acordado** (de menor a mayor riesgo):
+1. `settings.ts` (líneas 65,878 – 66,521) — ~644 líneas, sin dependencias de Three.js, ideal para establecer el estilo de comentarios
+2. `CodeBlockProcessor.ts` (líneas 68,853 – 69,203) — ~350 líneas, lógica de negocio pura
+3. `main.ts` (líneas 69,204 – 69,820) — ~617 líneas, punto de entrada y configuración
+4. `TagRoutesView` (líneas 66,522 – 68,852) — ~2,330 líneas, núcleo visual, se divide en sub-bloques por método
+
 ---
 
-*Última actualización: sesión 4 — estrategia replaneada, pendiente inicio de organización interna del main.js.*
+*Última actualización: sesión 4 — estrategia replaneada, método de trabajo por partes acordado.*
