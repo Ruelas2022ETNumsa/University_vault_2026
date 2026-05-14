@@ -166,11 +166,70 @@ Dejar solo el punto de entrada mínimo: `onload()` y registro de componentes.
 
 ## Próximos pasos acordados
 
-- [ ] Revisar si existe la carpeta `src/` en el directorio del plugin
-- [ ] Decidir: ¿editar `main.js` directamente o trabajar desde el código fuente TypeScript?
-- [ ] Comenzar con extracción de `CodeBlockProcessor` (Paso 2)
+- [x] Revisar si existe la carpeta `src/` en el directorio del plugin — **existe pero estaba vacía**
+- [x] Decidir: ¿editar `main.js` directamente o trabajar desde el código fuente TypeScript? — **se trabaja sobre `main.js` directamente**
+- [x] Comenzar con extracción de `CodeBlockProcessor` (Paso 2) — **completado**
 - [ ] Probar el plugin después de cada cambio antes de continuar
 
 ---
 
-*Última actualización: sesión de análisis inicial — estructura mapeada, pendiente inicio de refactorización.*
+## Cambios realizados
+
+### Sesión 2 — Separación de vendors (2026-05-14)
+
+**Objetivo:** Extraer todas las librerías externas a un archivo separado para que `main.js` sea editable y legible.
+
+**Archivos generados:**
+
+| Archivo | Ruta | Líneas | Tamaño |
+|---|---|---|---|
+| `vendors.js` | `src/vendors.js` | 66,553 | 2.4 MB |
+| `main.js` (nuevo) | `main.js` | 3,368 | 133 KB |
+
+**Qué se hizo:**
+- Se identificaron con precisión los rangos de líneas de cada librería usando los comentarios de sección de esbuild (`// node_modules/...`)
+- Se extrajo todo el bloque de librerías (líneas 1–66,521 del original) a `src/vendors.js`
+- Al final de `vendors.js` se añadió un bloque `module.exports` con las variables que el código propio necesita:
+  - Three.js: `AdditiveBlending`, `BoxGeometry`, `Camera`, `Color`, `DirectionalLight`, `EdgesGeometry`, `Group`, `LineBasicMaterial`, `LineSegments`, `Mesh`, `MeshBasicMaterial`, `MeshLambertMaterial`, `MeshStandardMaterial`, `SphereGeometry`, `Vector3`
+  - Postprocesado: `UnrealBloomPass`
+  - Grafo 3D: `_3dForceGraph`
+  - D3 Force: `link_default`
+  - Spritetext: `_default14`
+- El nuevo `main.js` arranca con el boilerplate de esbuild (líneas 1–36) + un `require('./src/vendors.js')` con destructuring de todas las vars, seguido del código propio (líneas 66,522–69,820 del original)
+
+**Backup existente:** `main.js.1.2.3.bak` en la raíz del plugin (creado automáticamente por Obsidian).
+
+**Pendiente de verificación:**
+- [ ] Recargar Obsidian y confirmar que el plugin funciona correctamente con la nueva estructura
+- [ ] Si falla: restaurar `main.js.1.2.3.bak` → `main.js` y revisar los exports de `vendors.js`
+
+### Sesión 3 — Extracción de CodeBlockProcessor (2026-05-14)
+
+**Objetivo:** Separar el procesador de bloques ` ```tagsroutes``` ` a su propio archivo.
+
+**Archivos generados:**
+
+| Archivo | Ruta | Líneas | Tamaño |
+|---|---|---|---|
+| `CodeBlockProcessor.js` | `src/CodeBlockProcessor.js` | 370 | 16 KB |
+| `main.js` (v2) | `main.js` | 3,024 | 120 KB |
+
+**Qué se hizo:**
+- Se extrajo el bloque `// src/util/CodeBlockProcessor.ts` (líneas 2401–2751 del main anterior) a `src/CodeBlockProcessor.js`
+- El archivo exporta: `module.exports = { codeBlockProcessor }`
+- En `main.js` el bloque fue reemplazado por: `const { codeBlockProcessor } = require('./src/CodeBlockProcessor.js')`
+- `main.js` pasó de 3,368 → 3,024 líneas
+
+**Dependencias del módulo** (aún resueltas desde el scope global de `main.js`):
+- `DebugMsg` — viene de `util.ts` (pendiente extracción en Paso 4)
+- `getLineTime` — viene de `util.ts` (pendiente extracción en Paso 4)
+- `globalProgramControl` — viene de `src/main.ts` (al final del mismo `main.js`)
+
+**Pendiente de verificación:**
+- [ ] Colocar `CodeBlockProcessor.js` en `src/` y `main_v2.js` como `main.js`
+- [ ] Recargar Obsidian y probar que los bloques ` ```tagsroutes``` ` siguen funcionando
+- [ ] Si falla: revisar que `globalProgramControl` esté definido ANTES del `require` en `main.js`
+
+---
+
+*Última actualización: sesión 3 — CodeBlockProcessor extraído, pendiente instalación y prueba.*
