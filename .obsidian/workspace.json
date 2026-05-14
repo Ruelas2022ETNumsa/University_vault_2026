@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "9121c5969b140d6b",
+        "id": "d9d6076f50633508",
         "type": "tabs",
         "children": [
           {
-            "id": "7169d58b863da879",
+            "id": "186f2d013f4369d7",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -174,7 +174,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 323.5
+    "width": 323.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -187,8 +188,9 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "7169d58b863da879",
+  "active": "186f2d013f4369d7",
   "lastOpenFiles": [
+    "Sin título.md",
     "_app/TagsRoutes/logMessage.md",
     "_appX/tags_notes.md",
     "_appX/tags-routes_backup.rar",
@@ -202,7 +204,6 @@
     "_appX/tags-routes/manifest.json",
     "_appX/tags-routes/main.js.1.2.3.bak",
     "Semestres/3.Semester/ETN302/3.302.md",
-    "Sin título.md",
     "Semestres/3.Semester/ETN302/0.ETN-302.md",
     "Semestres/3.Semester/ETN302/3.302/E3.302.md",
     "Semestres/3.Semester/ETN302/2.302/D2.302.md",
