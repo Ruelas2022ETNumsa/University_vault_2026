@@ -65,7 +65,7 @@ const {
   link_default,
   // Three Spritetext — texto flotante en nodos
   _default14,
-} = require(require("path").join(__dirname, "src", "vendors.js"));
+} = require(require("path").join(require("path").dirname(module.filename), "src", "vendors.js"));
 
 // src/views/TagsRoutes.ts
 var VIEW_TYPE_TAGS_ROUTES = "tags-routes";
