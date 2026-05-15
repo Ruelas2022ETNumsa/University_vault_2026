@@ -68966,14 +68966,28 @@ var performanceCount = class {
     return retStr;
   }
 };
+// ── CLASE: codeBlockProcessor ─────────────────────────────────────────────────
+// Registra y ejecuta el procesador de bloques ```tagsroutes```.
+// Flujo principal: codeBlockProcessor() → extractQueryKey() →
+//   [tagProcessor | frontmatterTagProcessor | timeDurationProcessor] →
+//   getMarkdownContent() → writeMarkdownWrap()
 var codeBlockProcessor = class {
+// constructor(plugin) → guarda referencia al plugin y vincula this en codeBlockProcessor
   constructor(plugin) {
     this.plugin = plugin;
     this.codeBlockProcessor = this.codeBlockProcessor.bind(this);
   }
+  // ── UTILIDAD ──────────────────────────────────────────────────────────────
+  // getTimeDiffHour(start, end) → diferencia en horas entre dos strings de fecha
+  // Usado por timeDurationProcessor para filtrar por rango de días
   getTimeDiffHour(start, end) {
     return (new Date(end).getTime() - new Date(start).getTime()) / (1e3 * 60 * 60);
   }
+  // ── PROCESADORES DE QUERY ─────────────────────────────────────────────────
+  // frontmatterTagProcessor(query) → busca el tag en el frontmatter YAML de cada archivo
+  // Excluye archivos que ya tengan el tag "tag-report" (son reportes generados)
+  // Retorna: array con un string Markdown listando los archivos que coinciden
+  // Riesgo: 🟢 BAJO
   async frontmatterTagProcessor(query) {
     const tag = query.value;
     const files = this.plugin.app.vault.getMarkdownFiles().filter((f) => this.plugin.view.testPathFilter(f.path));
@@ -68998,6 +69012,14 @@ ${result.map((v) => "- [[" + v.replace(/.md$/, "") + "]]").join("\n")}
 `;
     return [writeContent];
   }
+  // tagProcessor(query) → busca el tag en el contenido (body) de cada archivo
+  // Para cada párrafo que contenga el tag:
+  //   - Extrae el timestamp del párrafo o usa la fecha de creación del archivo
+  //   - Si enableParagraphLinker está activo, genera/reutiliza un block-ID (^tr-xxxxxxx)
+  //     y modifica el archivo para añadirlo si no existía
+  //   - Construye un string Markdown con el párrafo + metadatos (tags, tiempo, enlace)
+  // Retorna: array de Promises (se resuelve con Promise.all en el llamador)
+  // Riesgo: 🟡 MEDIO — puede modificar archivos del vault (vault.modify)  
   async tagProcessor(query) {
     const term = query.value;
     const files = this.plugin.app.vault.getMarkdownFiles().filter((f) => this.plugin.view.testPathFilter(f.path));
@@ -69017,6 +69039,7 @@ ${result.map((v) => "- [[" + v.replace(/.md$/, "") + "]]").join("\n")}
           let isUpdated = false;
           const retArr = paragraphs.map(
             (paragraph) => {
+              // Strip HTML tags, code blocks y duraciones (#Nday) para no confundir el regex
               const stripedParagraph = paragraph.replace(/<.*>/gm, "").replace(/```.*```/gm, "").replace(/#\d+day/gm, "");
               if (paragraph.length != stripedParagraph.length) {
               }
@@ -69027,6 +69050,7 @@ ${result.map((v) => "- [[" + v.replace(/.md$/, "") + "]]").join("\n")}
               } else {
                 mmtime = " Created Time: " + (0, import_obsidian5.moment)(file.stat.ctime).format("YYYY-MM-DD HH:mm:ss");
               }
+			  // Genera o reutiliza block-ID para enlace directo al párrafo
               let randomLinker = "";
               if (this.plugin.settings.enableParagraphLinker) {
                 const tagMatch = paragraph.trimEnd().match(tagRegEx);
