@@ -69354,7 +69354,6 @@ tags:
 //              y TagsroutesSettingsTab (página de ajustes de Obsidian).
 // Riesgo: 🟢 BAJO en constantes / 🟡 MEDIO en TagsRoutes3 (lifecycle del plugin)
 // ─────────────────────────────────────────────────────────────────────────────
-
 // ── CONTROL GLOBAL DEL PROGRAMA ───────────────────────────────────────────────
 // globalProgramControl → flags de comportamiento y debug accesibles globalmente.
 // Todos los módulos del plugin leen estos valores en tiempo de ejecución.
@@ -69369,8 +69368,6 @@ tags:
 //   snapshotDirectory  → subcarpeta dentro de snapShotFolder para las capturas
 //   generateLinker     → habilita generación de block-IDs (^tr-xxxxxxx)
 var globalProgramControl = {
-
-var globalProgramControl = {
   useDiv: false,
   debugLevel: 3 /* INFO */,
   useGroup: true,
@@ -69380,6 +69377,12 @@ var globalProgramControl = {
   snapshotDirectory: "graph-screenshot",
   generateLinker: true
 };
+// ── VERSIÓN Y DIRECTORIOS ─────────────────────────────────────────────────────
+// currentVersion     → versión visible del plugin (string)
+// currentSaveSpecVer → versión interna del formato de guardado (int, ej. 10203 = 1.2.3)
+// minSaveSpecVer     → versión mínima compatible para merge de settings guardados
+// programDirectory   → raíz de archivos del plugin dentro del vault
+// globalDirectory    → objeto con todos los paths usados por el plugin
 var currentVersion = "1.2.3";
 var currentSaveSpecVer = 10203;
 var minSaveSpecVer = 10101;
@@ -69393,41 +69396,48 @@ var globalDirectory = {
   reportDirectory,
   logFilePath
 };
+// ── PALETAS DE COLOR POR DEFECTO ──────────────────────────────────────────────
+// Cada entrada tiene { name, value } donde:
+//   name  → nombre CSS (ej. "blue") o "default" si no tiene nombre asignado
+//   value → color hex que se aplica al grafo
+// defaultolorMapDark  → paleta para tema oscuro (fondo casi negro)
+// defaultolorMapLight → paleta para tema claro (fondo blanco, selectionBox amarillo)
+// defaltColorMap2     → mapa indexado por "dark" | "light" para acceso unificado
 var defaultolorMapDark = {
-  markdown: { name: "default", value: "#00ff00" },
-  attachment: { name: "default", value: "#ffff00" },
-  broken: { name: "default", value: "#ff0000" },
-  excalidraw: { name: "default", value: "#00ffff" },
-  pdf: { name: "default", value: "#0000ff" },
-  tag: { name: "default", value: "#ff00ff" },
-  frontmatter_tag: { name: "default", value: "#fa8072" },
-  screenshot: { name: "default", value: "#7f00ff" },
-  nodeHighlightColor: { name: "default", value: "#3333ff" },
-  nodeFocusColor: { name: "default", value: "#ff3333" },
-  linkHighlightColor: { name: "default", value: "#ffffff" },
-  linkNormalColor: { name: "default", value: "#ffffff" },
-  linkParticleColor: { name: "default", value: "#ffffff" },
+  markdown:                   { name: "default", value: "#00ff00" },
+  attachment:                 { name: "default", value: "#ffff00" },
+  broken:                     { name: "default", value: "#ff0000" },
+  excalidraw:                 { name: "default", value: "#00ffff" },
+  pdf:                        { name: "default", value: "#0000ff" },
+  tag:                        { name: "default", value: "#ff00ff" },
+  frontmatter_tag:            { name: "default", value: "#fa8072" },
+  screenshot:                 { name: "default", value: "#7f00ff" },
+  nodeHighlightColor:         { name: "default", value: "#3333ff" },
+  nodeFocusColor:             { name: "default", value: "#ff3333" },
+  linkHighlightColor:         { name: "default", value: "#ffffff" },
+  linkNormalColor:            { name: "default", value: "#ffffff" },
+  linkParticleColor:          { name: "default", value: "#ffffff" },
   linkParticleHighlightColor: { name: "default", value: "#ff00ff" },
-  selectionBoxColor: { name: "default", value: "#ffff00" },
-  backgroundColor: { name: "default", value: "#000003" }
+  selectionBoxColor:          { name: "default", value: "#ffff00" },
+  backgroundColor:            { name: "default", value: "#000003" }
 };
 var defaultolorMapLight = {
-  markdown: { name: "default", value: "#00ff00" },
-  attachment: { name: "default", value: "#ffff00" },
-  broken: { name: "default", value: "#ff0000" },
-  excalidraw: { name: "default", value: "#00ffff" },
-  pdf: { name: "default", value: "#0000ff" },
-  tag: { name: "default", value: "#ff00ff" },
-  frontmatter_tag: { name: "default", value: "#fa8072" },
-  screenshot: { name: "default", value: "#7f00ff" },
-  nodeHighlightColor: { name: "default", value: "#3333ff" },
-  nodeFocusColor: { name: "default", value: "#ff3333" },
-  linkHighlightColor: { name: "default", value: "#ffffff" },
-  linkNormalColor: { name: "default", value: "#ffffff" },
-  linkParticleColor: { name: "default", value: "#ffffff" },
+  markdown:                   { name: "default", value: "#00ff00" },
+  attachment:                 { name: "default", value: "#ffff00" },
+  broken:                     { name: "default", value: "#ff0000" },
+  excalidraw:                 { name: "default", value: "#00ffff" },
+  pdf:                        { name: "default", value: "#0000ff" },
+  tag:                        { name: "default", value: "#ff00ff" },
+  frontmatter_tag:            { name: "default", value: "#fa8072" },
+  screenshot:                 { name: "default", value: "#7f00ff" },
+  nodeHighlightColor:         { name: "default", value: "#3333ff" },
+  nodeFocusColor:             { name: "default", value: "#ff3333" },
+  linkHighlightColor:         { name: "default", value: "#ffffff" },
+  linkNormalColor:            { name: "default", value: "#ffffff" },
+  linkParticleColor:          { name: "default", value: "#ffffff" },
   linkParticleHighlightColor: { name: "default", value: "#ff00ff" },
-  selectionBoxColor: { name: "default", value: "#e0ac00" },
-  backgroundColor: { name: "default", value: "#ffffff" }
+  selectionBoxColor:          { name: "default", value: "#e0ac00" }, // diferencia vs dark
+  backgroundColor:            { name: "default", value: "#ffffff" }
 };
 var defaltColorMap2 = {
   dark: defaultolorMapDark,
