@@ -65984,9 +65984,9 @@ var settingGroup = class {
     }
     return this;
   }
-  
-  //    it add a htmlelement , or a settinggroup's root container
-  //    to current hold container
+  // ── MÉTODOS BUILDER (encadenables, todos retornan this) ────────────────────
+  // add({ arg }) → Agrega un HTMLElement o un settingGroup al holdContainer
+  // Riesgo: 🟢 BAJO
   add({ arg = null } = {}) {
     if (arg instanceof HTMLElement) {
       this.holdContainer.appendChild(arg);
@@ -65995,10 +65995,15 @@ var settingGroup = class {
     }
     return this;
   }
+	// hide() → Oculta el holdContainer (display: none)
+	// Riesgo: 🟢 BAJO 
   hide() {
     this.holdContainer.style.display = "none";
     return this;
   }
+  // hideAll() → Oculta todos los sub-grupos colapsables dentro del rootContainer
+  // Afecta también al _baseContainer (añade is-close y quita padding)
+  // Riesgo: 🟢 BAJO  
   hideAll() {
     const subholders = Array.from(this.rootContainer.getElementsByClassName("tree-item-children"));
     subholders.forEach((element2) => {
@@ -66009,24 +66014,38 @@ var settingGroup = class {
     this._baseContainer.addClass("is-close");
     this._baseContainer.style.padding = "0px";
   }
+  // show() → Muestra el holdContainer (display: block)
+  // Riesgo: 🟢 BAJO  
   show() {
     this.holdContainer.style.display = "block";
     return this;
   }
+  // addExButton(icon, tooltip, callback) → Botón icono pequeño (ExtraButtonComponent)
+  // Se añade como div con clase "group-link-button"
+  // Riesgo: 🟢 BAJO 
   addExButton(buttonIcon, buttonDesc, buttonCallback) {
     new import_obsidian2.ExtraButtonComponent(this.holdContainer.createEl("div", { cls: "group-link-button" })).setIcon(buttonIcon).setTooltip(buttonDesc).onClick(buttonCallback);
     return this;
   }
+  // addButton(text, class, callback) → Botón estándar con clase mod-cta
+  // Riesgo: 🟢 BAJO  
   addButton(buttonText, buttonClass, buttonCallback) {
     const button = this.holdContainer.createEl("div").createEl("button", { text: buttonText, cls: buttonClass });
     button.addClass("mod-cta");
     button.addEventListener("click", buttonCallback);
     return this;
   }
+  // getLastElement(ref) → Escribe en ref.value el último hijo del holdContainer
+  // Útil para obtener una referencia al elemento recién añadido
+  // Riesgo: 🟢 BAJO  
   getLastElement(ref) {
     ref.value = this.holdContainer.lastChild;
     return this;
   }
+  // addDropdown(name, options, defaultValue, cb, cls) → Selector desplegable
+  // Registra el control en plugin.view._controls con id = name
+  // Nota: defaultValue no se usa actualmente; el valor inicial es siempre "broken"
+  // Riesgo: 🟢 BAJO  
   addDropdown(name, options, defaultValue, cb, cls = ".setting-item-inline") {
     let _dropdwon;
     const dropdwon = new import_obsidian2.Setting(this.holdContainer).setName(name).addDropdown(
