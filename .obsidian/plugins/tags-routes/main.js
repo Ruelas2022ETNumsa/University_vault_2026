@@ -69072,6 +69072,7 @@ ${result.map((v) => "- [[" + v.replace(/.md$/, "") + "]]").join("\n")}
                 }
                 randomLinker = `#^${randomLinker}`;
               }
+			  // Construye el string de resultado con tags extraídos + metadatos
               const regexp_local = new RegExp(regex_TagsWithTimeStamp.source, regex_TagsWithTimeStamp.flags);
               let matched_Tags_Timestamp_Group;
               let contentTimeString = mmtime;
@@ -69079,12 +69080,18 @@ ${result.map((v) => "- [[" + v.replace(/.md$/, "") + "]]").join("\n")}
               while ((matched_Tags_Timestamp_Group = regexp_local.exec(stripedParagraph)) !== null) {
                 let matched_Tags = matched_Tags_Timestamp_Group[1];
                 const regexB = new RegExp(`${pattern_tags_char}+`, "gm");
+				
+				
                 const matches = matched_Tags.match(regexB);
-                retParagraph = paragraph.trimEnd() + "\n\n----\n [ *Tags:* " + (matches == null ? void 0 : matches.join(" ")) + " ]\n[ *" + contentTimeString + "* ]\n" + (this.plugin.settings.enableParagraphLinker ? `[ *From:* [[${file.path}${randomLinker}|${file.name.split(".")[0]}]] ]
-` : `[ *From:* [[${file.path}|${file.name.split(".")[0]}]] ]
-`);
+                retParagraph = paragraph.trimEnd() + "\n\n----\n [ *Tags:* " + (matches == null ? void 0 : matches.join(" ")) + " ]\n[ *" + contentTimeString + "* ]\n" + (this.plugin.settings.enableParagraphLinker ? `[ *From:* [[${file.path}${randomLinker}|${file.name.split(".")[0]}]] ]\n` : `[ *From:* [[${file.path}|${file.name.split(".")[0]}]] ]\n`);
               }
-              return retParagraph;
+              return retParagraph;				
+				
+				
+//                const matches = matched_Tags.match(regexB);
+//                retParagraph = paragraph.trimEnd() + "\n\n----\n [ *Tags:* " + (matches == null ? void 0 : matches.join(" ")) + " ]\n[ *" + contentTimeString + "* ]\n" + (this.plugin.settings.enableParagraphLinker ? `[ *From:* [[${file.path}${randomLinker}|${file.name.split(".")[0]}]] ]  ` : `[ *From:* [[${file.path}|${file.name.split(".")[0]}]] ]  `);
+//              }
+//              return retParagraph;
             }
           );
           if (isUpdated) {
