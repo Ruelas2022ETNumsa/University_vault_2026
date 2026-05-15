@@ -66142,33 +66142,7 @@ var settingGroup = class {
   }
 };
 //[linea 65,567 – 66144(66,091)]{UnrealBloomPass/settings.ts}-------------------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//[linea 66,092 – 66,521]{three-spritetext}-------------------------------------------------------------------
+//[linea 66145(66,092) – 66574(66,521)]{three-spritetext}-------------------------------------------------------------------
 // node_modules/three-spritetext/dist/three-spritetext.mjs
 function _arrayLikeToArray7(r, a2) {
   (null == a2 || a2 > r.length) && (a2 = r.length);
@@ -66597,8 +66571,8 @@ var _default14 = /* @__PURE__ */ function(_three$Sprite) {
     }
   }]);
 }(three4.Sprite);
-//[linea 66,092 – 66,521]{three-spritetext/settings.ts}-------------------------------------------------------------------
-//[linea 66,522 – 68,852]{TagsRoutes.ts}-------------------------------------------------------------------
+//[linea 66145(66,092) – 66574(66,521)]{three-spritetext/settings.ts}-------------------------------------------------------------------
+//[linea 66575(66,522) – 68905(68,852)]{TagsRoutes.ts}-------------------------------------------------------------------
 // src/views/TagsRoutes.ts
 var VIEW_TYPE_TAGS_ROUTES = "tags-routes";
 var filesDataMap = /* @__PURE__ */ new Map();
@@ -68928,9 +68902,18 @@ tags:
       clearInterval(this.interval2);
   }
 };
-//[linea 66,522 – 68,852]{TagsRoutes.ts}-------------------------------------------------------------------
+//[linea 66575(66,522) – 68905(68,852)]{TagsRoutes.ts}-------------------------------------------------------------------
 //[linea 68,853 – 69,203]{CodeBlockProcessor.ts}-------------------------------------------------------------------
 // src/util/CodeBlockProcessor.ts
+// ─────────────────────────────────────────────────────────────────────────────
+// SECCIÓN: CodeBlockProcessor.ts
+// Descripción: Procesa bloques ```tagsroutes``` en las notas de Obsidian.
+//              Lee tags del vault, filtra por criterios y genera reportes
+//              en Markdown que se renderizan en la nota.
+// Riesgo: 🟢 BAJO — sin dependencias de Three.js, lógica de negocio pura
+// Dependencias: import_obsidian5 (moment, getFrontMatterInfo, MarkdownRenderer,
+//               MarkdownView, TFile), DebugMsg, globalProgramControl, getLineTime
+// ─────────────────────────────────────────────────────────────────────────────
 var import_obsidian5 = require("obsidian");
 var pattern_tags_char = "#[0-9a-zA-Z\\u4e00-\\u9fa5/_-]";
 var pattern_timeStamp = "\\d{4}-\\d{2}-\\d{2} *\\d{2}:\\d{2}:\\d{2}";
@@ -69280,6 +69263,39 @@ ${noteArr[noteArr.length - 1 - i]}`);
   }
 };
 //[linea 68,853 – 69,203]{CodeBlockProcessor.ts}-------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //[linea 69,204 – 69,820]{main.ts}-------------------------------------------------------------------
 // src/main.ts
 var globalProgramControl = {
