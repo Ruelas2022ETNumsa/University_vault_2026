@@ -69627,6 +69627,7 @@ var TagsRoutes3 = class extends import_obsidian6.Plugin {
           }
           return;
         }
+		// Detecta click en pills de frontmatter (propiedad "tags")
         if (target && target.closest(".multi-select-pill-content")) {
           const parent = target.closest('[data-property-key="tags"]');
           if (parent) {
@@ -69642,8 +69643,18 @@ var TagsRoutes3 = class extends import_obsidian6.Plugin {
       }
     });
   }
+ // onunload() → hook de Obsidian al desactivar el plugin (actualmente vacío)
   onunload() {
   }
+  // ── UTILIDADES DE SETTINGS ────────────────────────────────────────────────
+  // mergeDeep(target, ...sources) → merge recursivo de objetos planos y arrays
+  // Reglas:
+  //   - Objetos → recursivo
+  //   - Primitivos del mismo tipo → sobreescribe target con source
+  //   - Arrays de objetos → merge elemento a elemento por índice
+  //   - No añade claves nuevas que no existan en target (merge conservador)
+  // Usado en loadSettings() para combinar DEFAULT_SETTINGS con datos guardados
+  // Riesgo: 🟢 BAJO
   mergeDeep(target, ...sources) {
     if (!sources.length)
       return target;
@@ -69667,10 +69678,17 @@ var TagsRoutes3 = class extends import_obsidian6.Plugin {
     }
     return this.mergeDeep(target, ...sources);
   }
-  // 辅助函数：检查是否为对象
+  // isObject(item) → true si item es un objeto plano (no array, no null)
   isObject(item) {
     return item && typeof item === "object" && !Array.isArray(item);
   }
+  // loadSettings() → carga settings desde disco y los fusiona con DEFAULT_SETTINGS
+  // Lógica de compatibilidad de versiones:
+  //   saveSpecVer >= minSaveSpecVer → merge conservador (preserva estructura nueva)
+  //   saveSpecVer < minSaveSpecVer  → descarta datos guardados, usa defaults
+  //   sin saveSpecVer               → instalación nueva
+  // Tras el merge, reconstruye customSlot y slot[0] para el tema activo
+  // Riesgo: 🟡 MEDIO — modifica this.settings que es el estado central del plugin
   async loadSettings() {
     this.settings = structuredClone(DEFAULT_SETTINGS);
     const loadedSettings = await this.loadData();
@@ -69688,6 +69706,7 @@ var TagsRoutes3 = class extends import_obsidian6.Plugin {
         DebugMsg(3 /* INFO */, `New installation: Using default settings.`);
       }
     }
+    // Reconstruye customSlot y slot[0] para el tema activo
     this.settings.customSlot = this.settings[this.settings.currentTheme];
     this.settings.currentSlotNum = this.settings.themeSlotNum[this.settings.currentTheme];
     this.settings.customSlot[0] = structuredClone(
@@ -69695,6 +69714,10 @@ var TagsRoutes3 = class extends import_obsidian6.Plugin {
     );
     this.settings.saveSpecVer = DEFAULT_SETTINGS.saveSpecVer;
   }
+  // saveSettings() → persiste settings en disco
+  // Pone customSlot a null antes de guardar para evitar referencia circular
+  // skipSave bloquea el guardado durante la inicialización
+  // Riesgo: 🟢 BAJO
   async saveSettings() {
     if (this.skipSave)
       return;
@@ -69703,6 +69726,10 @@ var TagsRoutes3 = class extends import_obsidian6.Plugin {
     this.saveData(this.settings);
     this.settings.customSlot = this.settings[this.settings.currentTheme];
   }
+  // activateView() → abre o revela la vista del grafo
+  // Si ya existe una hoja con la vista, la revela; si no, crea una nueva
+  // openInCurrentTab → true: reemplaza la pestaña actual / false: split
+  // Riesgo: 🟢 BAJO  
   async activateView() {
     const { workspace } = this.app;
     let leaf = null;
@@ -69725,7 +69752,20 @@ var TagsRoutes3 = class extends import_obsidian6.Plugin {
     }
   }
 };
+// ── CLASE: colorPickerGroup ───────────────────────────────────────────────────
+// Widget compuesto: campo de texto (nombre CSS) + color picker (hex)
+// Ambos controles están sincronizados:
+//   texto → valida con namedColor.get(), actualiza picker si el nombre es válido
+//   picker → actualiza el texto descriptivo y guarda en customSlot[0].colorMap
+// isProgrammaticChange → flag para evitar bucles onChange al sincronizar los dos controles
+// skipSave → flag temporal para suprimir onSettingsSave() durante resetColor()
+// Riesgo: 🟢 BAJO
 var colorPickerGroup = class {
+  // constructor(plugin, container, name, keyname)
+  //   plugin    → instancia del plugin (acceso a settings y view)
+  //   container → elemento HTML donde se monta el widget
+  //   name      → etiqueta visible del control
+  //   keyname   → clave dentro de colorMap (ej. "markdown", "tag", "backgroundColor")
   constructor(plugin, container, name, keyname) {
     this.isProgrammaticChange = false;
     this.skipSave = false;
