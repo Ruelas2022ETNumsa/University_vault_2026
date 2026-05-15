@@ -64,9 +64,9 @@ Líneas 66,522 – 69,820 · ~136 KB · esto es lo que mantenemos
 | Rango | Sección | Estado |
 |---|---|---|
 | 65,878 – 66,521 | `settings.ts` | ✅ Comentado (sesión 5) |
-| 66,522 – 68,852 | `TagsRoutes.ts` | ⏳ Pendiente (sesión 6+) |
+| 66,522 – 68,852 | `TagsRoutes.ts` | ⏳ Pendiente (sesión 7+) |
 | 68,853 – 69,203 | `CodeBlockProcessor.ts` | ✅ Comentado (sesión 5) |
-| 69,204 – 69,820 | `main.ts` | ✅ Comentado (sesión 5) |
+| 69,204 – 69,820 | `main.ts` | ✅ Comentado (sesión 5) · ✅ Paleta galaxy (sesión 6) |
 
 > **Nota:** Las funciones de utilidad (`DebugMsg`, `getTags`, `getFileType`, `PathFilter`, etc.) están mezcladas dentro del bloque de librerías entre las líneas 24,148 – 65,877 junto a las dependencias D3 y Three extras. Son código propio pero no conviene moverlas.
 
@@ -132,17 +132,46 @@ Clase `settingGroup` — construye la UI del panel lateral con sliders, toggles,
 
 ---
 
+## Paleta de colores actual — defaultolorMapDark
+
+Inspirada en fotografía real de galaxia espiral (núcleo dorado-naranja, brazos azul eléctrico, fondo negro profundo).
+
+| Clave | Name | Value | Grupo temático |
+|---|---|---|---|
+| `markdown` | Spiral Arm | `#4FC3F7` | Brazos espirales (azul frío) |
+| `attachment` | Star Cluster | `#81D4FA` | Brazos espirales (azul frío) |
+| `excalidraw` | Ice Nebula | `#00B4D8` | Brazos espirales (azul frío) |
+| `pdf` | Deep Blue | `#1565C0` | Brazos espirales (azul frío) |
+| `tag` | Galactic Core | `#FFB347` | Núcleo galáctico (dorado) |
+| `frontmatter_tag` | Solar Burst | `#FF8C42` | Núcleo galáctico (naranja) |
+| `screenshot` | Amber Glow | `#FFC857` | Núcleo galáctico (ámbar) |
+| `broken` | Red Dwarf | `#FF4444` | Errores |
+| `nodeFocusColor` | Nova Flash | `#FFD166` | Estado de nodo |
+| `nodeHighlightColor` | Arc Light | `#00E5FF` | Interacción |
+| `linkHighlightColor` | Starlight | `#E3F2FD` | Interacción |
+| `linkNormalColor` | Cosmic Dust | `#5B8FB9` | Links |
+| `linkParticleColor` | Photon | `#B3E5FC` | Partículas |
+| `linkParticleHighlightColor` | Flare | `#FFB347` | Partículas highlight |
+| `selectionBoxColor` | Gold Ring | `#FFC857` | Selección |
+| `backgroundColor` | Galaxy Black | `#080808` | Fondo |
+
+**Nota:** `defaultolorMapLight` no se modificó, conserva los valores originales.
+
+---
+
 ## Plan de trabajo — organización interna
 
 ### ✅ Completado
 
 - [x] `settings.ts` — sesión 5
 - [x] `CodeBlockProcessor.ts` — sesión 5
-- [x] `main.ts` — sesión 5
+- [x] `main.ts` comentado — sesión 5
+- [x] `main.ts` paleta galaxy — sesión 6
 
 ### ⏳ Pendiente
 
 - [ ] `TagRoutesView` (líneas 66,522 – 68,852) — ~2,330 líneas, se divide en sub-bloques por método
+- [ ] Paso E — marcar funciones de util mezcladas con vendors (`DebugMsg`, `PathFilter`, etc.)
 
 ### Paso A — Añadir tabla de contenidos al inicio del bloque propio
 Insertar justo en la línea 66,522 un bloque de comentario con el índice de secciones y números de línea.
@@ -151,13 +180,13 @@ Insertar justo en la línea 66,522 un bloque de comentario con el índice de sec
 Añadir comentarios estandarizados encima de cada método indicando: qué hace, qué parámetros recibe, nivel de riesgo.
 
 ### Paso C — Marcar secciones de CodeBlockProcessor ✅
-Completado en sesión 5. Ver detalle en historial.
+Completado en sesión 5.
 
 ### Paso D — Documentar globalProgramControl ✅
-Completado en sesión 5. Ver detalle en historial.
+Completado en sesión 5.
 
-### Paso E — Marcar explícitamente las funciones de util mezcladas con vendors
-Las funciones `DebugMsg`, `getTags`, `getFileType`, `PathFilter`, `namedColor`, etc. están enterradas en el bloque de librerías. Añadir un marcador `// ▶ INICIO FUNCIONES PROPIAS` y `// ◀ FIN FUNCIONES PROPIAS` para localizarlas fácilmente.
+### Paso E — Marcar funciones de util mezcladas con vendors ⏳
+Las funciones `DebugMsg`, `getTags`, `getFileType`, `PathFilter`, `namedColor`, etc. están enterradas en el bloque de librerías. Añadir marcadores `// ▶ INICIO FUNCIONES PROPIAS` y `// ◀ FIN FUNCIONES PROPIAS` para localizarlas fácilmente.
 
 ---
 
@@ -238,7 +267,7 @@ Se procesaron los tres bloques de menor riesgo en orden. A continuación el deta
 
 **Procesadores de query:** los tres métodos tienen lógica similar pero diferente criterio de filtrado. Se documentó qué los diferencia:
 - `frontmatterTagProcessor` busca en YAML y no toca el contenido de los archivos
-- `tagProcessor` busca en el body y puede modificar archivos para añadir block-IDs (`vault.modify`) — esto se marcó con 🟡
+- `tagProcessor` busca en el body y puede modificar archivos para añadir block-IDs (`vault.modify`) — marcado 🟡
 - `timeDurationProcessor` hace lo mismo que `tagProcessor` pero descarta párrafos fuera del rango de días; el filtro usa `getTimeDiffHour()` comparando contra `24 * queryDuration`
 
 **Lógica de block-IDs:** documentada en detalle dentro de los dos procesadores que la usan. Se aclaró que primero busca si ya existe un `^tr-` al final del párrafo (`tagRegEx`) y solo genera uno nuevo si no lo encuentra, evitando duplicados.
@@ -260,13 +289,13 @@ Se procesaron los tres bloques de menor riesgo en orden. A continuación el deta
 - `aimBeforeLink` y `useTrackHighlight` afectan comportamiento del grafo
 - `snapshotDirectory` y `generateLinker` son configuración de características específicas
 
-**Paletas de color:** se alinearon visualmente las entradas del objeto para que sean comparables de un vistazo, y se señaló la única diferencia entre dark y light: `selectionBoxColor` (#ffff00 vs #e0ac00) y `backgroundColor`. ^tr-kszkhsctp
+**Paletas de color:** se alinearon visualmente las entradas del objeto para que sean comparables de un vistazo, y se señaló la única diferencia entre dark y light: `selectionBoxColor` y `backgroundColor`.
 
 **`DEFAULT_DISPLAY_SETTINGS`:** se documentó que `link_distance` difiere entre temas (17 dark, 5 light) y se explicó el sistema de slots: `slot[0]` es siempre el slot de trabajo activo (clon de `slot[currentSlotNum]`), los slots 1–5 son los que persiste el usuario.
 
 **`DEFAULT_SETTINGS`:** se aclaró el comportamiento de `customSlot` — es una referencia al array `dark[]` o `light[]` del tema activo, y se pone a `null` antes de guardar para evitar serializar una referencia circular.
 
-**Clase `TagsRoutes3`:** se documentó el rol de `skipSave` (bloquea guardados durante la inicialización) y el flujo completo de `initializePlugin()` en 7 pasos. Se marcó el listener global de DOM en `initializePlugin()` con 🟡 porque captura todos los clicks del documento. Se explicó que `mergeDeep()` es un merge conservador: solo actualiza claves que ya existen en `target`, nunca añade claves nuevas.
+**Clase `TagsRoutes3`:** se documentó el rol de `skipSave` (bloquea guardados durante la inicialización) y el flujo completo de `initializePlugin()` en 7 pasos. Se marcó el listener global de DOM con 🟡 porque captura todos los clicks del documento. Se explicó que `mergeDeep()` es un merge conservador: solo actualiza claves que ya existen en `target`, nunca añade claves nuevas.
 
 **`loadSettings()`:** se documentó la lógica de compatibilidad de versiones con tres casos: merge normal, override por versión incompatible, e instalación nueva.
 
@@ -276,4 +305,31 @@ Se procesaron los tres bloques de menor riesgo en orden. A continuación el deta
 
 ---
 
-*Última actualización: sesión 5 — comentado de settings.ts, CodeBlockProcessor.ts y main.ts completado.*
+### Sesión 6 — Rediseño de paleta `defaultolorMapDark` ✅
+
+**Objetivo:** reemplazar los colores por defecto del tema oscuro por una paleta inspirada en fotografía real de galaxia espiral (núcleo dorado-naranja, brazos en azul eléctrico, fondo azul marino profundo). Referencia visual: imagen de galaxia espiral tipo Andrómeda.
+
+**Iteraciones realizadas:**
+
+Primera propuesta: colores de nebulosa con verdes saturados (`#00FFC6`), magentas (`#FF0099`) y violetas (`#6A00FF`). Descartada porque no correspondía a la imagen de referencia.
+
+Segunda propuesta (aceptada con ajuste): paleta extraída directamente de la imagen — azules fríos para nodos de archivo, dorados y naranjas para tags, azul marino para fondo. El `backgroundColor` se ajustó posteriormente de `#060D1F` a `#080808` ("Galaxy Black") por preferencia de un negro más puro pero sin el efecto plano del `#000000` absoluto.
+
+**Qué cambió en `defaultolorMapDark`:**
+
+- Nodos de archivo (`markdown`, `attachment`, `excalidraw`, `pdf`): de verdes/cianes saturados a azules fotorrealistas que representan los brazos espirales fríos.
+- Tags (`tag`, `frontmatter_tag`, `screenshot`): de magentas/violetas a dorados y naranjas del núcleo galáctico caliente.
+- Links normales (`linkNormalColor`): de verde saturado a `#5B8FB9`, azul polvo cósmico de densidad media.
+- Partículas highlight (`linkParticleHighlightColor`): a `#FFB347` naranja, simulando destellos del núcleo al activar nodos.
+- Fondo (`backgroundColor`): `#080808` "Galaxy Black".
+- Se añadieron comentarios de grupo inline en el código para agrupar visualmente las entradas por rol.
+
+**`defaultolorMapLight`:** no se modificó.
+
+**Nota sobre activación:** en instalaciones existentes los colores se cargan desde `data.json`. Para aplicar la nueva paleta: Settings → Tags Routes → Color → botón reset ↺, o borrar `data.json`.
+
+**Posibilidad futura — fondo dinámico:** se evaluó si `backgroundColor` podría animarse con el tiempo. No es posible de forma nativa (valor estático). Para lograrlo habría que modificar `applyThemeColor()` o `onSettingsSave()` en `TagRoutesView` usando `tween.js` (ya bundleado) o HSL con tiempo del sistema. Queda anotado como mejora futura para cuando se trabaje `TagRoutesView` (🟡).
+
+---
+
+*Última actualización: sesión 6 — paleta galaxy aplicada a defaultolorMapDark.*

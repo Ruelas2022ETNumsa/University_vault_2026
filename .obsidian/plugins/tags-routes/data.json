@@ -34,59 +34,59 @@
       "colorMap": {
         "markdown": {
           "name": "Spiral Arm",
-          "value": "#4FC3F7"
+          "value": "#4fc3f7"
         },
         "attachment": {
           "name": "Star Cluster",
-          "value": "#81D4FA"
+          "value": "#81d4fa"
         },
         "excalidraw": {
           "name": "Ice Nebula",
-          "value": "#00B4D8"
+          "value": "#00b4d8"
         },
         "pdf": {
           "name": "Deep Blue",
-          "value": "#1565C0"
+          "value": "#1565c0"
         },
         "tag": {
           "name": "Galactic Core",
-          "value": "#FFB347"
+          "value": "#ffb347"
         },
         "frontmatter_tag": {
           "name": "Solar Burst",
-          "value": "#FF8C42"
+          "value": "#ff8c42"
         },
         "screenshot": {
           "name": "Amber Glow",
-          "value": "#FFC857"
+          "value": "#ffc857"
         },
         "broken": {
           "name": "Red Dwarf",
-          "value": "#FF4444"
+          "value": "#ff4444"
         },
         "nodeFocusColor": {
           "name": "Nova Flash",
-          "value": "#FFD166"
+          "value": "#ffd166"
         },
         "nodeHighlightColor": {
           "name": "Arc Light",
-          "value": "#00E5FF"
+          "value": "#00e5ff"
         },
         "linkHighlightColor": {
           "name": "Starlight",
-          "value": "#E3F2FD"
+          "value": "#e3f2fd"
         },
         "linkNormalColor": {
           "name": "Cosmic Dust",
-          "value": "#5B8FB9"
+          "value": "#5b8fb9"
         },
         "linkParticleColor": {
           "name": "Photon",
-          "value": "#B3E5FC"
+          "value": "#b3e5fc"
         },
         "linkParticleHighlightColor": {
           "name": "Flare",
-          "value": "#FFB347"
+          "value": "#ffb347"
         },
         "selectionBoxColor": {
           "name": "Gold Ring",
@@ -97,7 +97,7 @@
           "value": "#080808"
         }
       },
-      "cameraDistance": 0
+      "cameraDistance": 1741.7852531620065
     },
     {
       "node_size": 5,
