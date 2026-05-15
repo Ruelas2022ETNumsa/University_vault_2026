@@ -68903,6 +68903,26 @@ tags:
   }
 };
 //[linea 66575(66,522) – 68905(68,852)]{TagsRoutes.ts}-------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //[linea 68,853 – 69,203]{CodeBlockProcessor.ts}-------------------------------------------------------------------
 // src/util/CodeBlockProcessor.ts
 // ─────────────────────────────────────────────────────────────────────────────
@@ -68915,11 +68935,23 @@ tags:
 //               MarkdownView, TFile), DebugMsg, globalProgramControl, getLineTime
 // ─────────────────────────────────────────────────────────────────────────────
 var import_obsidian5 = require("obsidian");
+// ── CONSTANTES Y REGEX ────────────────────────────────────────────────────────
+// Patrón base para caracteres válidos en un tag (ASCII + CJK + separadores)
 var pattern_tags_char = "#[0-9a-zA-Z\\u4e00-\\u9fa5/_-]";
+// Patrón para timestamps embebidos en párrafos: "YYYY-MM-DD HH:MM:SS"
 var pattern_timeStamp = "\\d{4}-\\d{2}-\\d{2} *\\d{2}:\\d{2}:\\d{2}";
+// Regex para detectar block-IDs generados por el plugin: ^tr-xxxxxxxxx (al final de línea)
 var tagRegEx = /\^tr-[a-z0-9]+$/;
+// Regex combinada: captura grupos de tags seguidos opcionalmente de un timestamp
+// Grupo 1 → tags, Grupo 2 → timestamp (puede ser undefined)
 var regex_TagsWithTimeStamp = new RegExp(`(?:(?<=\\s)|(?<=^))((?:${pattern_tags_char}+ *)+)(${pattern_timeStamp})?`, "gm");
+// Regex para detectar queries de duración temporal: #Nday (ej. #7day, #30day)
 var timeDurationRegex = /#\d+day/;
+// ── CLASE: performanceCount ───────────────────────────────────────────────────
+// Mide el tiempo de ejecución de una operación.
+// Uso: const perf = new performanceCount(); ... perf.getTimeCost()
+// getTimeCost() → devuelve string con inicio, fin y duración en ms,
+//                 y reinicia el contador para poder encadenar mediciones
 var performanceCount = class {
   constructor() {
     this.start = performance.now();
