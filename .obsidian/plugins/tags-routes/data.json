@@ -30,15 +30,15 @@
       "toggle_label_display": false,
       "toggle_highlight_track_mode": false,
       "toggle_selection_box": true,
-      "colorMapSource": "Default dark",
+      "colorMapSource": "'Obsidian' - dark ",
       "colorMap": {
         "markdown": {
-          "name": "Spiral Arm",
-          "value": "#4fc3f7"
+          "name": "theme",
+          "value": "#b3b3b3"
         },
         "attachment": {
-          "name": "Star Cluster",
-          "value": "#81d4fa"
+          "name": "theme",
+          "value": "#e0de71"
         },
         "excalidraw": {
           "name": "Ice Nebula",
@@ -49,8 +49,8 @@
           "value": "#1565c0"
         },
         "tag": {
-          "name": "Galactic Core",
-          "value": "#ffb347"
+          "name": "theme",
+          "value": "#44cf6e"
         },
         "frontmatter_tag": {
           "name": "Solar Burst",
@@ -61,24 +61,24 @@
           "value": "#ffc857"
         },
         "broken": {
-          "name": "Red Dwarf",
-          "value": "#ff4444"
+          "name": "theme",
+          "value": "#666666"
         },
         "nodeFocusColor": {
-          "name": "Nova Flash",
-          "value": "#ffd166"
+          "name": "theme",
+          "value": "#a68af9"
         },
         "nodeHighlightColor": {
-          "name": "Arc Light",
-          "value": "#00e5ff"
+          "name": "theme",
+          "value": "#8a5cf5"
         },
         "linkHighlightColor": {
-          "name": "Starlight",
-          "value": "#e3f2fd"
+          "name": "theme",
+          "value": "#8a5cf5"
         },
         "linkNormalColor": {
-          "name": "Cosmic Dust",
-          "value": "#5b8fb9"
+          "name": "theme",
+          "value": "#3f3f3f"
         },
         "linkParticleColor": {
           "name": "Photon",

@@ -260,7 +260,7 @@ Se procesaron los tres bloques de menor riesgo en orden. A continuación el deta
 - `aimBeforeLink` y `useTrackHighlight` afectan comportamiento del grafo
 - `snapshotDirectory` y `generateLinker` son configuración de características específicas
 
-**Paletas de color:** se alinearon visualmente las entradas del objeto para que sean comparables de un vistazo, y se señaló la única diferencia entre dark y light: `selectionBoxColor` (#ffff00 vs #e0ac00) y `backgroundColor`.
+**Paletas de color:** se alinearon visualmente las entradas del objeto para que sean comparables de un vistazo, y se señaló la única diferencia entre dark y light: `selectionBoxColor` (#ffff00 vs #e0ac00) y `backgroundColor`. ^tr-kszkhsctp
 
 **`DEFAULT_DISPLAY_SETTINGS`:** se documentó que `link_distance` difiere entre temas (17 dark, 5 light) y se explicó el sistema de slots: `slot[0]` es siempre el slot de trabajo activo (clon de `slot[currentSlotNum]`), los slots 1–5 son los que persiste el usuario.
 

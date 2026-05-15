@@ -69451,7 +69451,7 @@ var defaultolorMapDark = {
 
   // Selección y fondo
   selectionBoxColor:          { name: "Gold Ring",     value: "#FFC857" },
-  backgroundColor:            { name: "Deep Space",   value: "#060D1F" }
+  backgroundColor:            { name: "Deep Space",   value: "#080808" }//"#060D1F" }
 };
 
 var defaultolorMapLight = {

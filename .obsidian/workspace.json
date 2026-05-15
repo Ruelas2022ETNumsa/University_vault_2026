@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_app/TagsRoutes/reports/TagReport_frontmatter_tag_Leaves.md",
+                "file": "_app/TagsRoutes/logMessage.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "TagReport_frontmatter_tag_Leaves"
+              "title": "logMessage"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 231.50260543823242
+    "width": 226.50260543823242
   },
   "right": {
     "id": "3809ea2d0d62c2a5",
@@ -204,7 +204,10 @@
   },
   "active": "5c9982bb44437a88",
   "lastOpenFiles": [
+    "_appX/tags_notes.md",
+    "_app/TagsRoutes/reports/TagReport_frontmatter_tag_Leaves.md",
     "_app/TagsRoutes/reports/TagReport_frontmatter_tag_ETN-302.md",
+    "_app/TagsRoutes/reports/TagReport_#e0ac00.md",
     "_app/TagsRoutes/graph-screenshot/graph-screenshot-2026-05-14-23-30-50.png",
     "_app/TagsRoutes/graph-screenshot/graph-screenshot-2026-05-14-23-30-57.png",
     "_app/TagsRoutes/graph-screenshot/graph-screenshot-2026-05-14-23-31-02.png",
@@ -214,7 +217,6 @@
     "Semestres/3.Semester/ETN302/0.ETN-302.md",
     "Semestres/3.Semester/ETN302/3.302/E3.302.md",
     "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.521.302-1.md",
-    "_app/TagsRoutes/reports/TagReport_frontmatter_tag_Leaves.md",
     "Semestres/3.Semester/ETN302/2.302/T2.302.md",
     "Semestres/3.Semester/ETN302/2.302/AA2.302.md",
     "Semestres/3.Semester/ETN302/3.302.md",
@@ -225,7 +227,6 @@
     "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.6.302-5.png",
     "Semestres/3.Semester/ETN302/2.302/D2.302.md",
     "_app/TagsRoutes/logMessage.md",
-    "_appX/tags_notes.md",
     "_app/TagsRoutes/reports",
     "Sin título.md",
     "_appX/tags-routes_backup.rar",
