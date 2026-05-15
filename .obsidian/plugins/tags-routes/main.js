@@ -69336,8 +69336,40 @@ tags:
   }
 };
 //[linea 68906(68,853) – 69338(69,203)]{CodeBlockProcessor.ts}-------------------------------------------------------------------
+
+
+
+
+
+
+
+
 //[linea 69339(69,204) – (69,820)]{main.ts}-------------------------------------------------------------------
 // src/main.ts
+// ─────────────────────────────────────────────────────────────────────────────
+// SECCIÓN: main.ts
+// Descripción: Punto de entrada del plugin. Define constantes globales,
+//              paletas de color por defecto, configuración inicial, y las
+//              clases principales: TagsRoutes3 (Plugin), colorPickerGroup
+//              y TagsroutesSettingsTab (página de ajustes de Obsidian).
+// Riesgo: 🟢 BAJO en constantes / 🟡 MEDIO en TagsRoutes3 (lifecycle del plugin)
+// ─────────────────────────────────────────────────────────────────────────────
+
+// ── CONTROL GLOBAL DEL PROGRAMA ───────────────────────────────────────────────
+// globalProgramControl → flags de comportamiento y debug accesibles globalmente.
+// Todos los módulos del plugin leen estos valores en tiempo de ejecución.
+//
+//   useDiv             → true: renderiza reportes inline con MarkdownRenderer
+//                        false: sobreescribe el archivo fuente con el reporte
+//   debugLevel         → nivel de log: 3=INFO, 4=DEBUG (ver DebugMsg)
+//   useGroup           → true: agrupa resultados por tag en getMarkdownContent
+//   allowDuplicated    → true: un párrafo puede aparecer en varios grupos de tags
+//   aimBeforeLink      → comportamiento de foco antes de seguir un enlace
+//   useTrackHighlight  → activa el modo de resaltado de nodo activo en el grafo
+//   snapshotDirectory  → subcarpeta dentro de snapShotFolder para las capturas
+//   generateLinker     → habilita generación de block-IDs (^tr-xxxxxxx)
+var globalProgramControl = {
+
 var globalProgramControl = {
   useDiv: false,
   debugLevel: 3 /* INFO */,
