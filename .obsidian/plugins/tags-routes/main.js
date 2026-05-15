@@ -66519,6 +66519,7 @@ var _default14 = /* @__PURE__ */ function(_three$Sprite) {
   }]);
 }(three4.Sprite);
 //[linea 66,092 – 66,521]{three-spritetext}-------------------------------------------------------------------
+//[linea 66,522 – 68,852]{TagsRoutes.ts}-------------------------------------------------------------------
 // src/views/TagsRoutes.ts
 var VIEW_TYPE_TAGS_ROUTES = "tags-routes";
 var filesDataMap = /* @__PURE__ */ new Map();
@@ -66837,9 +66838,8 @@ var TagRoutesView = class extends import_obsidian4.ItemView {
       }
     }
   }
-  /*
-      Make sure the customSlot has been swtiched to wanted theme before call this
-  */
+  
+  //    Make sure the customSlot has been swtiched to wanted theme before call this
   async switchTheme(visual) {
     var _a;
     if (this.currentVisualString !== visual) {
@@ -68849,7 +68849,8 @@ tags:
       clearInterval(this.interval2);
   }
 };
-
+//[linea 66,522 – 68,852]{TagsRoutes.ts}-------------------------------------------------------------------
+//[linea 68,853 – 69,203]{CodeBlockProcessor.ts}-------------------------------------------------------------------
 // src/util/CodeBlockProcessor.ts
 var import_obsidian5 = require("obsidian");
 var pattern_tags_char = "#[0-9a-zA-Z\\u4e00-\\u9fa5/_-]";
@@ -68980,9 +68981,8 @@ ${result.map((v) => "- [[" + v.replace(/.md$/, "") + "]]").join("\n")}
     );
     return arr;
   }
-  /***
-   * the all tag content within a time period
-   */
+  //---
+   //- the all tag content within a time period
   async timeDurationProcessor(query) {
     const queryDuration = Number(query.value.replace("#", "").replace("day", ""));
     const files = this.plugin.app.vault.getMarkdownFiles().filter((f) => this.plugin.view.testPathFilter(f.path));
@@ -69200,7 +69200,8 @@ ${noteArr[noteArr.length - 1 - i]}`);
     return;
   }
 };
-
+//[linea 68,853 – 69,203]{CodeBlockProcessor.ts}-------------------------------------------------------------------
+//[linea 69,204 – 69,820]{main.ts}-------------------------------------------------------------------
 // src/main.ts
 var globalProgramControl = {
   useDiv: false,
@@ -69802,14 +69803,12 @@ var TagsroutesSettingsTab = class extends import_obsidian6.PluginSettingTab {
   }
 };
 /*! Bundled license information:
-
 three/build/three.module.js:
   (**
    * @license
    * Copyright 2010-2024 Three.js Authors
    * SPDX-License-Identifier: MIT
    *)
-
 three/build/three.webgpu.js:
   (**
    * @license
@@ -69817,5 +69816,5 @@ three/build/three.webgpu.js:
    * SPDX-License-Identifier: MIT
    *)
 */
-
 /* nosourcemap */
+//[linea 69,204 – 69,820]{main.ts}-------------------------------------------------------------------
