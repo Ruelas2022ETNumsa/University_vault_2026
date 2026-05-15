@@ -4,11 +4,31 @@
     "type": "split",
     "children": [
       {
-        "id": "6267e5f8f6015817",
+        "id": "907c6f74047c0f18",
         "type": "tabs",
         "children": [
           {
-            "id": "57b77b38978d5308",
+            "id": "fc39320f390a7cec",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_app/TagsRoutes/logMessage.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "logMessage"
+            }
+          }
+        ]
+      },
+      {
+        "id": "39fe30f67d68cb9d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6e144d897054ab5a",
             "type": "leaf",
             "state": {
               "type": "tags-routes",
@@ -16,23 +36,8 @@
               "icon": "waypoints",
               "title": "Tags routes"
             }
-          },
-          {
-            "id": "7a3f1b5f67d5394b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_appX/tags_notes.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "tags_notes"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -205,12 +210,12 @@
       "tags-routes:Open tags routes": false
     }
   },
-  "active": "7a3f1b5f67d5394b",
+  "active": "fc39320f390a7cec",
   "lastOpenFiles": [
+    "_appX/tags_notes.md",
     "_app/TagsRoutes/logMessage.md",
     "_app/TagsRoutes/reports/TagReport_frontmatter_tag_Leaves.md",
     "_app/TagsRoutes/reports",
-    "_appX/tags_notes.md",
     "Sin título.md",
     "_appX/tags-routes_backup.rar",
     "_appX/tags-routes_backup/styles.css",

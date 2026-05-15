@@ -69086,12 +69086,6 @@ ${result.map((v) => "- [[" + v.replace(/.md$/, "") + "]]").join("\n")}
                 retParagraph = paragraph.trimEnd() + "\n\n----\n [ *Tags:* " + (matches == null ? void 0 : matches.join(" ")) + " ]\n[ *" + contentTimeString + "* ]\n" + (this.plugin.settings.enableParagraphLinker ? `[ *From:* [[${file.path}${randomLinker}|${file.name.split(".")[0]}]] ]\n` : `[ *From:* [[${file.path}|${file.name.split(".")[0]}]] ]\n`);
               }
               return retParagraph;				
-				
-				
-//                const matches = matched_Tags.match(regexB);
-//                retParagraph = paragraph.trimEnd() + "\n\n----\n [ *Tags:* " + (matches == null ? void 0 : matches.join(" ")) + " ]\n[ *" + contentTimeString + "* ]\n" + (this.plugin.settings.enableParagraphLinker ? `[ *From:* [[${file.path}${randomLinker}|${file.name.split(".")[0]}]] ]  ` : `[ *From:* [[${file.path}|${file.name.split(".")[0]}]] ]  `);
-//              }
-//              return retParagraph;
             }
           );
           if (isUpdated) {
@@ -69106,8 +69100,12 @@ ${result.map((v) => "- [[" + v.replace(/.md$/, "") + "]]").join("\n")}
     );
     return arr;
   }
-  //---
-   //- the all tag content within a time period
+  // timeDurationProcessor(query) → igual que tagProcessor pero filtra por rango de tiempo
+  // query.value tiene forma "#Nday" → devuelve solo párrafos cuyo timestamp
+  // esté dentro de los últimos N días. Si no hay timestamp usa fecha de creación.
+  // También genera block-IDs si enableParagraphLinker está activo.
+  // Retorna: array de Promises
+  // Riesgo: 🟡 MEDIO — puede modificar archivos del vault (vault.modify)
   async timeDurationProcessor(query) {
     const queryDuration = Number(query.value.replace("#", "").replace("day", ""));
     const files = this.plugin.app.vault.getMarkdownFiles().filter((f) => this.plugin.view.testPathFilter(f.path));
@@ -69123,7 +69121,7 @@ ${result.map((v) => "- [[" + v.replace(/.md$/, "") + "]]").join("\n")}
           let updatedContent = content;
           let isUpdated = false;
           const retArr = paragraphs.map(
-            //return the paragraph with information: "tags, tag/create time, from" appended.
+			// Retorna el párrafo con metadatos appended, o "" si está fuera del rango
             (paragraph) => {
               const stripedParagraph = paragraph.replace(/<.*>/gm, "").replace(/```.*```/gm, "").replace(/#\d+day/gm, "");
               if (paragraph.length != stripedParagraph.length) {
@@ -69143,10 +69141,12 @@ ${result.map((v) => "- [[" + v.replace(/.md$/, "") + "]]").join("\n")}
                   lineTime = (0, import_obsidian5.moment)(file.stat.ctime).format("YYYY-MM-DD HH:mm:ss");
                   contentTimeString = " Created Time: " + lineTime;
                 }
+				// Filtro temporal: descarta si supera el umbral de días
                 let duration = this.getTimeDiffHour(lineTime, (0, import_obsidian5.moment)(new Date()).format("YYYY-MM-DD HH:mm:ss"));
                 if (duration > 24 * queryDuration) {
                   continue;
                 }
+				// Genera o reutiliza block-ID (misma lógica que tagProcessor)
                 let randomLinker = "";
                 if (this.plugin.settings.enableParagraphLinker) {
                   const tagMatch = paragraph.trimEnd().match(tagRegEx);
@@ -69156,13 +69156,16 @@ ${result.map((v) => "- [[" + v.replace(/.md$/, "") + "]]").join("\n")}
                     randomLinker = "tr-" + Math.random().toString(36).substr(2, 9);
                     let updatedLine = "";
                     if (paragraph.trimEnd().match(/\`\`\`/)) {
-                      updatedLine = paragraph.trimEnd() + `
-^${randomLinker}
-`;
+						
+						
+                      updatedLine = paragraph.trimEnd() + `\n^${randomLinker}\n`;
                     } else {
-                      updatedLine = paragraph.trimEnd() + ` ^${randomLinker}
-`;
+                      updatedLine = paragraph.trimEnd() + ` ^${randomLinker}\n`;
                     }
+					
+					
+					
+					
                     updatedContent = updatedContent.replace(paragraph, updatedLine.trimEnd());
                     isUpdated = true;
                   }
