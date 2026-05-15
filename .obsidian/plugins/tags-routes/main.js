@@ -66065,6 +66065,9 @@ var settingGroup = class {
     }
     return this;
   }
+  // addSlider(name, min, max, step, defaultNum, cb, cls) → Slider con tooltip dinámico
+  // Registra el control en plugin.view._controls con id = name
+  // Riesgo: 🟢 BAJO  
   addSlider(name, min2, max2, step2, defaultNum, cb, cls = "setting-item-block") {
     let _slider;
     const slider = new import_obsidian2.Setting(this.holdContainer).setName(name).addSlider((slider2) => _slider = slider2.setLimits(min2, max2, step2).setValue(defaultNum).setDynamicTooltip().onChange(async (value) => {
@@ -66077,6 +66080,9 @@ var settingGroup = class {
     }
     return this;
   }
+  // addColorPicker(name, defaultColor, cb) → Selector de color con desc que muestra el hex actual
+  // Registra el control en plugin.view._controls con id = name
+  // Riesgo: 🟢 BAJO  
   addColorPicker(name, defaultColor, cb) {
     const colorpicker = new import_obsidian2.Setting(this.holdContainer).setName(name).setDesc(defaultColor || "#000000").addColorPicker((picker) => {
       picker.onChange(async (value) => {
@@ -66088,6 +66094,10 @@ var settingGroup = class {
     colorpicker.setClass("setting-item-inline");
     return this;
   }
+  // addToggle(name, defaultState, cb, needSave) → Toggle on/off
+  // needSave: parámetro reservado, actualmente no se usa en la lógica interna
+  // Registra el control en plugin.view._controls con id = name
+  // Riesgo: 🟢 BAJO  
   addToggle(name, defaultState, cb, needSave = true) {
     const toggler = new import_obsidian2.Setting(this.holdContainer).setName(name).addToggle(
       (toggle) => {
@@ -66109,6 +66119,8 @@ var settingGroup = class {
     toggler.setClass("setting-item-inline");
     return this;
   }
+  // addText(name, cb) → Campo de texto con placeholder "file path"
+  // Riesgo: 🟢 BAJO  
   addText(name, cb) {
     const texter = new import_obsidian2.Setting(this.holdContainer).setName(name).addText(
       (picker) => picker.setPlaceholder("file path").onChange(async (value) => {
@@ -66118,6 +66130,10 @@ var settingGroup = class {
     texter.setClass("setting-item-block");
     return this;
   }
+  // attachEl(container) → Monta el rootContainer dentro del container dado
+  // También guarda la referencia en _baseContainer y resetea su opacidad
+  // Debe llamarse al final del chain, después de construir todos los sub-grupos
+  // Riesgo: 🟢 BAJO  
   attachEl(container) {
     container.append(this.rootContainer);
     this._baseContainer = container;
@@ -66125,7 +66141,33 @@ var settingGroup = class {
     return this;
   }
 };
-//[linea 65,567 – 66,091]{UnrealBloomPass}-------------------------------------------------------------------
+//[linea 65,567 – 66,091]{UnrealBloomPass/settings.ts}-------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //[linea 66,092 – 66,521]{three-spritetext}-------------------------------------------------------------------
 // node_modules/three-spritetext/dist/three-spritetext.mjs
 function _arrayLikeToArray7(r, a2) {
