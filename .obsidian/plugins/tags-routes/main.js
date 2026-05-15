@@ -24444,7 +24444,7 @@ var namedColor = /* @__PURE__ */ new Map([
   ["yellow", "#ffff00"],
   ["yellowgreen", "#9acd32"]
 ]);
-
+//[linea 2085-24447]{Three.js r169}-------------------------------------------------------------------
 //[linea 24448-26555]{DragControls}-------------------------------------------------------------------
 // node_modules/three/examples/jsm/controls/DragControls.js
 var _plane = new Plane();
@@ -29848,6 +29848,7 @@ var three = window.THREE ? window.THREE : {
 };
 var threeForcegraph = fromKapsule(ForceGraph, three.Group, true);
 //[linea 26556-29850]{three-forcegraph}-------------------------------------------------------------------
+//[linea 29,851 – 60,938]{three.webgpu.js}-------------------------------------------------------------------
 // node_modules/three/build/three.webgpu.js
 var REVISION2 = "169";
 var CullFaceNone2 = 0;
@@ -39907,8 +39908,7 @@ var PointLightShadow = class extends LightShadow2 {
     this._frameExtents = new Vector22(4, 2);
     this._viewportCount = 6;
     this._viewports = [
-      // These viewports map a cube-map onto a 2D texture with the
-      // following orientation:
+      // These viewports map a cube-map onto a 2D texture with the following orientation:
       //
       //  xzXZ
       //   y Y
@@ -60935,7 +60935,7 @@ if (typeof window !== "undefined") {
     window.__THREE__ = REVISION2;
   }
 }
-
+//[linea 29,851 – 60,938]{three.webgpu.js}-------------------------------------------------------------------
 //[linea 60,939 – 62,699]{TrackballControls / OrbitControls / FlyControls}-------------------------------------------------------------------
 // node_modules/three/examples/jsm/controls/TrackballControls.js
 var _changeEvent = { type: "change" };
