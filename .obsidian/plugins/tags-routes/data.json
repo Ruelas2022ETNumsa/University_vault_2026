@@ -26,7 +26,7 @@
       "link_particle_number": 2,
       "text_color_angle": 0,
       "bloom_strength": 2,
-      "toggle_global_map": true,
+      "toggle_global_map": false,
       "toggle_label_display": false,
       "toggle_highlight_track_mode": false,
       "toggle_selection_box": true,

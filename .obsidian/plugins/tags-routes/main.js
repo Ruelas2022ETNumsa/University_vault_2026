@@ -69260,6 +69260,13 @@ tags:
     }
     return queryKey;
   }
+  // getMarkdownContent(query) → convierte query.result en texto Markdown final
+  // Modos controlados por globalProgramControl:
+  //   useGroup = true  → agrupa resultados por tag con encabezados y callouts
+  //   useGroup = false → lista plana ordenada por tiempo
+  //   allowDuplicated  → si true, un párrafo puede aparecer en varios grupos de tags
+  // Ordena por getLineTime() (función de util en el bloque de vendors)
+  // Riesgo: 🟢 BAJO
   getMarkdownContent(query) {
     if (query.type == "frontmatter_tag:")
       return query.result;
@@ -69293,21 +69300,19 @@ tags:
         for (let i = 0; i < content.length; i++) {
           content[content.length - 1 - i] = content[content.length - 1 - i].replace(/^#/g, "###").replace(/\n#/g, "\n###");
           content[content.length - 1 - i] = "> [!info]+ " + (i + 1) + "\n> " + content[content.length - 1 - i].replace(/\n/g, "\n> ");
-          markdownText.push("## " + (i + 1) + `
-${content[content.length - 1 - i]}`);
+		  markdownText.push("## " + (i + 1) + `\n${content[content.length - 1 - i]}`);
         }
       });
-    } else {
+    } else {		
       noteArr.sort((a2, b) => getLineTime(a2) - getLineTime(b));
       markdownText.push("# Tag [" + term + "] total: `" + noteArr.length + "` records.");
       for (let i = 0; i < noteArr.length; i++) {
         noteArr[noteArr.length - 1 - i] = noteArr[noteArr.length - 1 - i].replace(/^#/g, "###").replace(/\n#/g, "\n###");
         noteArr[noteArr.length - 1 - i] = "> [!info]+ " + (i + 1) + "\n> " + noteArr[noteArr.length - 1 - i].replace(/\n/g, "\n> ");
-        markdownText.push("## " + (i + 1) + `
-${noteArr[noteArr.length - 1 - i]}`);
+        markdownText.push("## " + (i + 1) + `\n${noteArr[noteArr.length - 1 - i]}`);
       }
     }
-    return markdownText;
+    return markdownText;	
   }
   async codeBlockProcessor(source, el, ctx) {
     if (ctx.frontmatter.tags !== void 0) {
