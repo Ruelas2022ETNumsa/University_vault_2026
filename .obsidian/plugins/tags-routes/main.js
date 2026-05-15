@@ -2082,6 +2082,7 @@ var import_obsidian6 = require("obsidian");
 var import_obsidian3 = require("obsidian");
 var import_obsidian4 = require("obsidian");
 //[linea 37-2084]{ngraph}-------------------------------------------------------------------
+//[linea 2085-24447]{Three.js r169}-------------------------------------------------------------------
 // node_modules/three/build/three.module.js
 var REVISION = "169";
 var MOUSE = { LEFT: 0, MIDDLE: 1, RIGHT: 2, ROTATE: 0, DOLLY: 1, PAN: 2 };
@@ -24444,6 +24445,7 @@ var namedColor = /* @__PURE__ */ new Map([
   ["yellowgreen", "#9acd32"]
 ]);
 
+//[linea 24448-26555]{DragControls}-------------------------------------------------------------------
 // node_modules/three/examples/jsm/controls/DragControls.js
 var _plane = new Plane();
 var _pointer = new Vector2();
@@ -24668,7 +24670,6 @@ function findGroup(obj, group = null) {
     return group;
   return findGroup(obj.parent, group);
 }
-
 // node_modules/d3-force-3d/src/center.js
 function center_default(x2, y2, z2) {
   var nodes, strength = 1;
@@ -26551,11 +26552,11 @@ function z_default2(z2) {
   };
   return force;
 }
-
+//[linea 24448-26555]{DragControls}-------------------------------------------------------------------
+//[linea 26556-29850]{three-forcegraph}-------------------------------------------------------------------
 // node_modules/three-forcegraph/dist/three-forcegraph.mjs
 var import_ngraph = __toESM(require_ngraph2(), 1);
 var import_ngraph2 = __toESM(require_ngraph5(), 1);
-
 // node_modules/lodash-es/isObject.js
 function isObject(value) {
   var type = typeof value;
@@ -29846,7 +29847,7 @@ var three = window.THREE ? window.THREE : {
   Group
 };
 var threeForcegraph = fromKapsule(ForceGraph, three.Group, true);
-
+//[linea 26556-29850]{three-forcegraph}-------------------------------------------------------------------
 // node_modules/three/build/three.webgpu.js
 var REVISION2 = "169";
 var CullFaceNone2 = 0;
@@ -65563,6 +65564,7 @@ function getGraphObj(object) {
   return obj;
 }
 
+//[linea 65,567 – 66,091]{UnrealBloomPass}-------------------------------------------------------------------
 // node_modules/three/examples/jsm/shaders/LuminosityHighPassShader.js
 var LuminosityHighPassShader = {
   name: "LuminosityHighPassShader",
@@ -65615,7 +65617,6 @@ var LuminosityHighPassShader = {
 		}`
   )
 };
-
 // node_modules/three/examples/jsm/postprocessing/UnrealBloomPass.js
 var UnrealBloomPass = class extends Pass {
   constructor(resolution, strength, radius, threshold) {
@@ -66088,6 +66089,7 @@ var settingGroup = class {
   }
 };
 
+//[linea 66,092 – 66,521]{three-spritetext}-------------------------------------------------------------------
 // node_modules/three-spritetext/dist/three-spritetext.mjs
 function _arrayLikeToArray7(r, a2) {
   (null == a2 || a2 > r.length) && (a2 = r.length);
@@ -66517,7 +66519,6 @@ var _default14 = /* @__PURE__ */ function(_three$Sprite) {
     }
   }]);
 }(three4.Sprite);
-
 // src/views/TagsRoutes.ts
 var VIEW_TYPE_TAGS_ROUTES = "tags-routes";
 var filesDataMap = /* @__PURE__ */ new Map();
