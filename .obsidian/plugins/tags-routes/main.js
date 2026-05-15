@@ -69487,15 +69487,20 @@ var DEFAULT_DISPLAY_SETTINGS = {
   dark: DEFAULT_DISPLAY_SETTINGS_DARK,
   light: DEFAULT_DISPLAY_SETTINGS_LIGHT
 };
+// ── CONFIGURACIÓN GENERAL POR DEFECTO ────────────────────────────────────────
+// DEFAULT_SETTINGS → objeto completo que se clona al instalar o al resetear.
+// Estructura de slots: dark[0..5] y light[0..5]
+//   slot 0  → slot de trabajo activo (siempre clon del slot currentSlotNum)
+//   slots 1-5 → slots persistidos por el usuario
+// customSlot   → referencia al array dark[] o light[] según currentTheme
+//   (se pone a null antes de guardar para no serializar la referencia circular)
+// showingFilter / hidingFilter → filtros de paths codificados con PathFilter.encode()
 var DEFAULT_SETTINGS = {
   saveSpecVer: currentSaveSpecVer,
   enableSave: true,
   enableShow: true,
   currentSlotNum: 1,
-  themeSlotNum: {
-    dark: 1,
-    light: 1
-  },
+  themeSlotNum: {dark: 1, light: 1},
   openInCurrentTab: false,
   enableTagsReaction: true,
   enableAutoFocus: true,
@@ -69522,11 +69527,20 @@ var DEFAULT_SETTINGS = {
     structuredClone(DEFAULT_DISPLAY_SETTINGS_LIGHT)
   ]
 };
+// ── CLASE: TagsRoutes3 (Plugin principal) ─────────────────────────────────────
+// Extiende Plugin de Obsidian. Gestiona el ciclo de vida completo:
+//   onload → initializePlugin → registra vista, codeBlock, eventos y ribbon
+// skipSave → flag que bloquea saveSettings() durante la inicialización
+//            para evitar guardar un estado incompleto
+// Riesgo: 🟡 MEDIO — orquesta todos los subsistemas, cambios aquí afectan todo
 var TagsRoutes3 = class extends import_obsidian6.Plugin {
   constructor() {
     super(...arguments);
     this.skipSave = true;
   }
+  // onFileClick(filePath) → mueve la cámara del grafo al nodo del archivo dado
+  // Se llama al abrir un archivo en Obsidian (evento "file-open")
+  // Riesgo: 🟢 BAJO
   onFileClick(filePath) {
     for (let leaf of this.app.workspace.getLeavesOfType(VIEW_TYPE_TAGS_ROUTES)) {
       if (leaf.view instanceof TagRoutesView) {
@@ -69534,6 +69548,9 @@ var TagsRoutes3 = class extends import_obsidian6.Plugin {
       }
     }
   }
+  // onDoubleWait() → inicializa el plugin esperando a que metadataCache esté listo
+  // Si resolvedLinks ya existe, inicializa inmediatamente; si no, espera el evento "resolved"
+  // Riesgo: 🟢 BAJO
   async onDoubleWait() {
     if (this.app.metadataCache.resolvedLinks !== void 0) {
       await this.initializePlugin();
@@ -69543,12 +69560,17 @@ var TagsRoutes3 = class extends import_obsidian6.Plugin {
       });
     }
   }
+  // onload() → hook de Obsidian, punto de entrada real del plugin
+  // Espera a que el layout esté listo antes de inicializar
+  // Riesgo: 🟢 BAJO
   async onload() {
     this.app.workspace.onLayoutReady(() => {
       DebugMsg(3 /* INFO */, "Loading Tags Routes v", currentVersion);
       this.initializePlugin();
     });
   }
+  // onLayoutReady() → Promise que resuelve cuando el layout de Obsidian está listo
+  // Riesgo: 🟢 BAJO
   async onLayoutReady() {
     return new Promise((resolve) => {
       if (this.app.workspace.layoutReady) {
@@ -69558,6 +69580,16 @@ var TagsRoutes3 = class extends import_obsidian6.Plugin {
       }
     });
   }
+  // initializePlugin() → registra todos los componentes del plugin:
+  //   1. Carga settings con loadSettings()
+  //   2. Registra la vista TagRoutesView con registerView()
+  //   3. Registra el procesador de bloques ```tagsroutes```
+  //   4. Registra evento "file-open" para auto-foco en el grafo
+  //   5. Añade icono "waypoints" al ribbon
+  //   6. Añade pestaña de settings
+  //   7. Registra evento de click global para detectar clicks en tags (#hashtag
+  //      y pills de frontmatter) y enfocar el nodo correspondiente en el grafo
+  // Riesgo: 🟡 MEDIO — registra listeners globales de DOM
   async initializePlugin() {
     await this.loadSettings();
     this.registerView(
@@ -69576,6 +69608,7 @@ var TagsRoutes3 = class extends import_obsidian6.Plugin {
       this.activateView();
     });
     this.addSettingTab(new TagsroutesSettingsTab(this.app, this));
+	// Listener global de click: detecta tags en el editor y en pills de frontmatter
     this.registerDomEvent(document, "click", (e) => {
       const target = e.target;
       if (target) {
