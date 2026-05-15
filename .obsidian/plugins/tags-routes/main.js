@@ -60936,6 +60936,7 @@ if (typeof window !== "undefined") {
   }
 }
 
+//[linea 60,939 – 62,699]{TrackballControls / OrbitControls / FlyControls}-------------------------------------------------------------------
 // node_modules/three/examples/jsm/controls/TrackballControls.js
 var _changeEvent = { type: "change" };
 var _startEvent = { type: "start" };
@@ -61435,7 +61436,6 @@ function onTouchEnd(event) {
   }
   this.dispatchEvent(_endEvent);
 }
-
 // node_modules/three/examples/jsm/controls/OrbitControls.js
 var _changeEvent2 = { type: "change" };
 var _startEvent2 = { type: "start" };
@@ -62696,7 +62696,8 @@ var ClearMaskPass = class extends Pass {
     renderer3.state.buffers.stencil.setTest(false);
   }
 };
-
+//[linea 60,939 – 62,699]{TrackballControls / OrbitControls / FlyControls}-------------------------------------------------------------------
+//[linea 62,700 – 65,566]{EffectComposer + pipeline}-------------------------------------------------------------------
 // node_modules/three/examples/jsm/postprocessing/EffectComposer.js
 var EffectComposer = class {
   constructor(renderer3, renderTarget) {
@@ -62819,7 +62820,6 @@ var EffectComposer = class {
     this.copyPass.dispose();
   }
 };
-
 // node_modules/three/examples/jsm/postprocessing/RenderPass.js
 var RenderPass = class extends Pass {
   constructor(scene3, camera3, overrideMaterial = null, clearColor = null, clearAlpha = null) {
@@ -65563,7 +65563,7 @@ function getGraphObj(object) {
   }
   return obj;
 }
-
+//[linea 62,700 – 65,566]{EffectComposer + pipeline}-------------------------------------------------------------------
 //[linea 65,567 – 66,091]{UnrealBloomPass}-------------------------------------------------------------------
 // node_modules/three/examples/jsm/shaders/LuminosityHighPassShader.js
 var LuminosityHighPassShader = {
