@@ -65875,6 +65875,7 @@ var UnrealBloomPass = class extends Pass {
 UnrealBloomPass.BlurDirectionX = new Vector2(1, 0);
 UnrealBloomPass.BlurDirectionY = new Vector2(0, 1);
 
+//[linea 65,878 – 66,521]{settings.ts}-------------------------------------------------------------------
 // src/views/settings.ts
 var import_obsidian2 = require("obsidian");
 var settingGroup = class {
@@ -65965,10 +65966,9 @@ var settingGroup = class {
     }
     return this;
   }
-  /*
-      it add a htmlelement , or a settinggroup's root container
-      to current hold container
-  */
+  
+  //    it add a htmlelement , or a settinggroup's root container
+  //    to current hold container
   add({ arg = null } = {}) {
     if (arg instanceof HTMLElement) {
       this.holdContainer.appendChild(arg);
@@ -66518,7 +66518,7 @@ var _default14 = /* @__PURE__ */ function(_three$Sprite) {
     }
   }]);
 }(three4.Sprite);
-//[linea 66,092 – 66,521]{three-spritetext}-------------------------------------------------------------------
+//[linea 66,092 – 66,521]{three-spritetext/settings.ts}-------------------------------------------------------------------
 //[linea 66,522 – 68,852]{TagsRoutes.ts}-------------------------------------------------------------------
 // src/views/TagsRoutes.ts
 var VIEW_TYPE_TAGS_ROUTES = "tags-routes";
