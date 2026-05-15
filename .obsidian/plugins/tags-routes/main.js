@@ -69411,7 +69411,7 @@ var defaultolorMapDark = {
   linkParticleColor:          { name: "default", value: "#ffffff" },
   linkParticleHighlightColor: { name: "default", value: "#ff00ff" },
   selectionBoxColor:          { name: "default", value: "#ffff00" },
-  backgroundColor:            { name: "default", value: "#000003" }
+  backgroundColor:            { name: "default", value: "#05010A"}//"#000003" }
 };
 var defaultolorMapLight = {
   markdown:                   { name: "default", value: "#00ff00" },
