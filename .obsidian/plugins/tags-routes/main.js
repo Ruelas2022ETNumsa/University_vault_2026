@@ -69773,6 +69773,8 @@ var colorPickerGroup = class {
     this.plugin = plugin;
     this.keyname = keyname;
     const holder = container.createEl("div", "inline-settings");
+    // Campo de texto: acepta nombres CSS (ej. "blue", "lightcoral")
+    // Si el nombre es válido en namedColor, actualiza el picker programáticamente
     this.text = new import_obsidian6.Setting(holder.createEl("span")).addText(
       (text) => {
         this.textC = text.setValue("").onChange((v) => {
@@ -69791,6 +69793,7 @@ var colorPickerGroup = class {
         });
       }
     ).setName(name).setDesc(((_a = this.plugin.settings.customSlot) == null ? void 0 : _a[0].colorMap[keyname].name) || ((_b = this.plugin.settings.customSlot) == null ? void 0 : _b[0].colorMap[keyname].value) || "");
+    // Color picker: actualiza colorMap y llama a onSettingsSave() + updateColor()
     this.colorPicker = new import_obsidian6.Setting(holder.createEl("span")).addColorPicker(
       (c2) => {
         var _a2;
@@ -69814,6 +69817,8 @@ var colorPickerGroup = class {
     );
     return this;
   }
+  // namedColorToHex(color) → busca el nombre en el mapa namedColor (definido en vendors)
+  // Retorna el hex si existe, "N/A" si no
   namedColorToHex(color2) {
     const ret = namedColor.get(color2);
     if (ret) {
@@ -69821,6 +69826,8 @@ var colorPickerGroup = class {
     }
     return "N/A";
   }
+  // resetColor(skipSave) → restaura el picker y el texto al valor actual de customSlot[0]
+  // skipSave=true → suprime el guardado (usado al cambiar de tema o slot)
   resetColor(skipSave) {
     if (!this.plugin.settings.customSlot)
       return;
@@ -69832,6 +69839,13 @@ var colorPickerGroup = class {
     this.isProgrammaticChange = false;
   }
 };
+// ── CLASE: TagsroutesSettingsTab ──────────────────────────────────────────────
+// Página de configuración de Obsidian (Settings → Tags Routes).
+// Construye toda la UI de ajustes: toggles generales, selección de tema,
+// color pickers por tipo de nodo/enlace, y filtros de paths.
+// skipSave se activa al inicio de display() y se desactiva al final para
+// evitar guardados parciales mientras se construye la UI.
+// Riesgo: 🟢 BAJO — solo construye UI, no modifica el vault
 var TagsroutesSettingsTab = class extends import_obsidian6.PluginSettingTab {
   constructor(app, plugin) {
     super(app, plugin);
@@ -69839,14 +69853,19 @@ var TagsroutesSettingsTab = class extends import_obsidian6.PluginSettingTab {
     this.plugin = plugin;
     this.loadColor = this.loadColor.bind(this);
   }
+  // loadColor(value) → callback genérico para refrescar colores en el grafo
   loadColor(value) {
     this.plugin.view.updateColor();
   }
+  // display() → construye toda la UI de la pestaña de settings
+  // Secciones: General / Theme / Color / Filter
+  // Riesgo: 🟢 BAJO
   display() {
     var _a, _b;
     this.plugin.skipSave = true;
     const { containerEl } = this;
     containerEl.empty();
+    // ── General ──────────────────────────────────────────────────────────────
     containerEl.createEl("h1", { text: "General" });
     new import_obsidian6.Setting(containerEl).setName("Log node/link count").setDesc("Enable or disable logging the number of nodes and links when the graph loads.").addToggle(
       (toggle) => {
