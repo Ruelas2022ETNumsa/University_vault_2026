@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "386310b0a1a821e9",
+        "id": "9d7eb2982cd1ccea",
         "type": "tabs",
         "children": [
           {
-            "id": "12c6a82c2eb3842b",
+            "id": "4cc4f91ee11c6152",
             "type": "leaf",
             "state": {
               "type": "tags-routes",
@@ -74,7 +74,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 231.50260543823242
+    "width": 231.50260543823242,
+    "collapsed": true
   },
   "right": {
     "id": "3809ea2d0d62c2a5",
@@ -189,7 +190,7 @@
       "tags-routes:Open tags routes": false
     }
   },
-  "active": "12c6a82c2eb3842b",
+  "active": "4cc4f91ee11c6152",
   "lastOpenFiles": [
     "_app/TagsRoutes/logMessage.md",
     "_appX/tags_notes.md",

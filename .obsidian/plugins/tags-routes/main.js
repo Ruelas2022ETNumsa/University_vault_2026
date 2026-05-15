@@ -69397,7 +69397,7 @@ var globalDirectory = {
 // defaltColorMap2     → mapa indexado por "dark" | "light" para acceso unificado
 
 
-var defaultolorMapDark = {
+/* var defaultolorMapDark = {
   // Notas y archivos: Verdes y cianes de nebulosa
   markdown:                   { name: "Nebula Green", value: "#00FFC6" },
   attachment:                 { name: "Star Dust",    value: "#5BFF62" },
@@ -69423,7 +69423,37 @@ var defaultolorMapDark = {
   // Selección y fondo: El vacío del espacio
   selectionBoxColor:          { name: "Gold Orbit",   value: "#FFD166" },
   backgroundColor:            { name: "Deep Void",    value: "#0B1026" }
+}; */
+
+
+var defaultolorMapDark = {
+  // Notas y archivos: Azules fríos de los brazos espirales
+  markdown:                   { name: "Spiral Arm",   value: "#4FC3F7" },
+  attachment:                 { name: "Star Cluster",  value: "#81D4FA" },
+  excalidraw:                 { name: "Ice Nebula",    value: "#00B4D8" },
+  pdf:                        { name: "Deep Blue",     value: "#1565C0" },
+
+  // Etiquetas y capturas: Cálidos del núcleo galáctico
+  tag:                        { name: "Galactic Core", value: "#FFB347" },
+  frontmatter_tag:            { name: "Solar Burst",   value: "#FF8C42" },
+  screenshot:                 { name: "Amber Glow",    value: "#FFC857" },
+
+  // Estado y errores
+  broken:                     { name: "Red Dwarf",     value: "#FF4444" },
+  nodeFocusColor:             { name: "Nova Flash",    value: "#FFD166" },
+
+  // Interacción y nodos: Cian de los filamentos externos
+  nodeHighlightColor:         { name: "Arc Light",     value: "#00E5FF" },
+  linkHighlightColor:         { name: "Starlight",     value: "#E3F2FD" },
+  linkNormalColor:            { name: "Cosmic Dust",   value: "#5B8FB9" },
+  linkParticleColor:          { name: "Photon",        value: "#B3E5FC" },
+  linkParticleHighlightColor: { name: "Flare",         value: "#FFB347" },
+
+  // Selección y fondo
+  selectionBoxColor:          { name: "Gold Ring",     value: "#FFC857" },
+  backgroundColor:            { name: "Deep Space",   value: "#060D1F" }
 };
+
 var defaultolorMapLight = {
   // Notas y archivos
   markdown:                   { name: "default", value: "#00ff00" },
