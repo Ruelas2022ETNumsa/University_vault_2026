@@ -69336,15 +69336,7 @@ tags:
   }
 };
 //[linea 68906(68,853) – 69338(69,203)]{CodeBlockProcessor.ts}-------------------------------------------------------------------
-
-
-
-
-
-
-
-
-//[linea 69339(69,204) – (69,820)]{main.ts}-------------------------------------------------------------------
+//[linea 69339(69,204) – 70101(69,820)]{main.ts}-------------------------------------------------------------------
 // src/main.ts
 // ─────────────────────────────────────────────────────────────────────────────
 // SECCIÓN: main.ts
@@ -69929,6 +69921,9 @@ var TagsroutesSettingsTab = class extends import_obsidian6.PluginSettingTab {
         await this.plugin.saveSettings();
       });
     });
+    // ── Theme ─────────────────────────────────────────────────────────────────
+    // Toggle dark/light: al cambiar reconstruye customSlot, slot[0] y llama
+    // a switchTheme() en la vista, luego resetea todos los colorPickerGroups
     const themeTitle = containerEl.createEl("div", { cls: "tags-routes-settings-title" });
     themeTitle.createEl("h1", { text: "Theme" });
     new import_obsidian6.Setting(containerEl).setName("Theme selection").setDesc("Toggel to use light or dark theme, the default and recommended is dark.").addToggle(
@@ -69968,6 +69963,9 @@ var TagsroutesSettingsTab = class extends import_obsidian6.PluginSettingTab {
         }).setValue(this.plugin.settings.currentTheme === "dark" ? false : true);
       }
     );
+    // ── Color ─────────────────────────────────────────────────────────────────
+    // Botón reset → restaura colorMap del slot actual a los valores por defecto
+    // y llama a onSettingsSave() + updateColor() + resetColor() en todos los pickers	
     const colorTitle = containerEl.createEl("div", { cls: "tags-routes-settings-title" });
     colorTitle.createEl("h1", { text: "Color" });
     new import_obsidian6.ExtraButtonComponent(colorTitle.createEl("span", { cls: "group-bar-button" })).setIcon("reset").setTooltip("Reset color of current slot ").onClick(() => {
@@ -69987,9 +69985,13 @@ var TagsroutesSettingsTab = class extends import_obsidian6.PluginSettingTab {
     desc.createEl("a", { href: "https://www.w3.org/wiki/CSS/Properties/color/keywords", text: "Css color keywords" });
     desc.createEl("br");
     desc.createEl("br");
+	
+    // colorMapSourceElement → span que muestra el nombre de la paleta activa
+    // Tiene clase "tags-routes-need-save" para indicar visualmente cambios pendientes	
     this.colorMapSourceElement = desc.createEl("div").createEl("span", { text: "Current color map source: " }).createEl("span", { text: ((_b = (_a = this.plugin.settings.customSlot) == null ? void 0 : _a[0]) == null ? void 0 : _b.colorMapSource) || "Defalt" });
     this.colorMapSourceElement.addClass("tags-routes-need-save");
     desc.addClass("setting-item-description");
+	// Grupos de color por tipo de nodo, estado de nodo, enlace y partícula
     const colorSettingsGroup = containerEl.createEl("div", { cls: "tags-routes" });
     new import_obsidian6.Setting(colorSettingsGroup).setName("Node type").setHeading().settingEl.addClass("tg-settingtab-heading");
     this.colors.push(new colorPickerGroup(this.plugin, colorSettingsGroup, "Markdown", "markdown"));
@@ -70009,6 +70011,11 @@ var TagsroutesSettingsTab = class extends import_obsidian6.PluginSettingTab {
     new import_obsidian6.Setting(colorSettingsGroup).setName("Particle state").setHeading().settingEl.addClass("tg-settingtab-heading");
     this.colors.push(new colorPickerGroup(this.plugin, colorSettingsGroup, "Normal", "linkParticleColor"));
     this.colors.push(new colorPickerGroup(this.plugin, colorSettingsGroup, "Highlight", "linkParticleHighlightColor"));
+    // ── Filter ────────────────────────────────────────────────────────────────
+    // Positive filter (showingFilter) → solo muestra paths que coincidan
+    // Negative filter (hidingFilter)  → oculta paths que coincidan
+    // Ambos usan PathFilter.encode/decode y PathFilter.validatePattern()
+    // Botón "Apply Filter" → llama a onResetGraph(false) para aplicar sin reconstruir
     const colorTitle1 = containerEl.createEl("div", { cls: "tags-routes-settings-title" });
     colorTitle1.createEl("h1", { text: "Filter" });
     const button = colorTitle1.createEl("div").createEl("button", {
@@ -70073,7 +70080,7 @@ var TagsroutesSettingsTab = class extends import_obsidian6.PluginSettingTab {
     textAreaTmp.descEl.appendText('3. "#hide-tag" : Hides tags with the name: "#hide-tag".');
     textAreaTmp.descEl.createEl("br");
     textAreaTmp.descEl.appendText('4. "#hide-tag/" : Hides all sub-tags of the root tag: "#hide-tag/", but not for root tag itself.');
-    this.plugin.skipSave = false;
+    this.plugin.skipSave = false; // desbloquea guardado al terminar de construir la UI
   }
 };
 /*! Bundled license information:
@@ -70091,4 +70098,4 @@ three/build/three.webgpu.js:
    *)
 */
 /* nosourcemap */
-//[linea 69,204 – 69,820]{main.ts}-------------------------------------------------------------------
+//[linea 69339(69,204) – 70101(69,820)]{main.ts}-------------------------------------------------------------------
