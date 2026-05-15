@@ -66088,7 +66088,7 @@ var settingGroup = class {
     return this;
   }
 };
-
+//[linea 65,567 – 66,091]{UnrealBloomPass}-------------------------------------------------------------------
 //[linea 66,092 – 66,521]{three-spritetext}-------------------------------------------------------------------
 // node_modules/three-spritetext/dist/three-spritetext.mjs
 function _arrayLikeToArray7(r, a2) {
@@ -66181,8 +66181,7 @@ function _iterableToArrayLimit6(r, l) {
       } finally {
         if (o)
           throw n;
-      }
-    }
+    }}
     return a2;
   }
 }
@@ -66519,6 +66518,7 @@ var _default14 = /* @__PURE__ */ function(_three$Sprite) {
     }
   }]);
 }(three4.Sprite);
+//[linea 66,092 – 66,521]{three-spritetext}-------------------------------------------------------------------
 // src/views/TagsRoutes.ts
 var VIEW_TYPE_TAGS_ROUTES = "tags-routes";
 var filesDataMap = /* @__PURE__ */ new Map();
