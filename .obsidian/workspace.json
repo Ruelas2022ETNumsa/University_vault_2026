@@ -6,7 +6,6 @@
       {
         "id": "4f4e8c93cc9ff79f",
         "type": "tabs",
-        "dimension": 19.92248062015504,
         "children": [
           {
             "id": "a9638833e1c073ef",
@@ -25,12 +24,11 @@
         ]
       },
       {
-        "id": "1fc15fdc7aa12648",
+        "id": "e1cf3cb85cc4bfb3",
         "type": "tabs",
-        "dimension": 80.07751937984496,
         "children": [
           {
-            "id": "f669b22e51f44df2",
+            "id": "ddbc5c0804639143",
             "type": "leaf",
             "state": {
               "type": "tags-routes",

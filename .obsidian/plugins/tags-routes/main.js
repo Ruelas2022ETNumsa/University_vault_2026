@@ -69395,7 +69395,7 @@ var globalDirectory = {
 // defaultolorMapDark  → paleta para tema oscuro (fondo casi negro)
 // defaultolorMapLight → paleta para tema claro (fondo blanco, selectionBox amarillo)
 // defaltColorMap2     → mapa indexado por "dark" | "light" para acceso unificado
-var defaultolorMapDark = {
+/*var defaultolorMapDark = {
   markdown:                   { name: "default", value: "#00ff00" },
   attachment:                 { name: "default", value: "#ffff00" },
   broken:                     { name: "default", value: "#ff0000" },
@@ -69412,7 +69412,37 @@ var defaultolorMapDark = {
   linkParticleHighlightColor: { name: "default", value: "#ff00ff" },
   selectionBoxColor:          { name: "default", value: "#ffff00" },
   backgroundColor:            { name: "default", value: "#05010A"}//"#000003" }
+};*/
+
+var defaultolorMapDark = {
+  // Notas y archivos: Verdes y cianes de nebulosa
+  markdown:                   { name: "default", value: "#00FFC6" },
+  attachment:                 { name: "default",    value: "#5BFF62" },
+  excalidraw:                 { name: "default",    value: "#00F5FF" },
+  pdf:                        { name: "default",   value: "#1B2CC1" },
+  
+  // Etiquetas y capturas: Tonos magenta/violeta de supernovas
+  tag:                        { name: "default",    value: "#FF0099" },
+  frontmatter_tag:            { name: "default",  value: "#6A00FF" },
+  screenshot:                 { name: "default",  value: "#7f00ff" },
+  
+  // Estado y errores: Rojos de gigante roja
+  broken:                     { name: "default",    value: "#FF3131" },
+  nodeFocusColor:             { name: "default",       value: "#FFD166" },
+  
+  // Interacción y Nodos: Brillo estelar
+  nodeHighlightColor:         { name: "default",  value: "#00FFC6" },
+  linkHighlightColor:         { name: "default",    value: "#FFFFFF" },
+  linkNormalColor:            { name: "default",        value: "#5BFF62" },
+  linkParticleColor:          { name: "default",       value: "#FFFFFF" },
+  linkParticleHighlightColor: { name: "default",    value: "#00F5FF" },
+  
+  // Selección y Fondo: El vacío del espacio
+  selectionBoxColor:          { name: "default",   value: "#FFD166" },
+  backgroundColor:            { name: "default",    value: "#0B1026" } 
 };
+
+
 var defaultolorMapLight = {
   markdown:                   { name: "default", value: "#00ff00" },
   attachment:                 { name: "default", value: "#ffff00" },
