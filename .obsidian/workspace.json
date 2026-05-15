@@ -4,31 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "4f4e8c93cc9ff79f",
+        "id": "386310b0a1a821e9",
         "type": "tabs",
         "children": [
           {
-            "id": "a9638833e1c073ef",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_app/TagsRoutes/logMessage.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "logMessage"
-            }
-          }
-        ]
-      },
-      {
-        "id": "e1cf3cb85cc4bfb3",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "ddbc5c0804639143",
+            "id": "12c6a82c2eb3842b",
             "type": "leaf",
             "state": {
               "type": "tags-routes",
@@ -94,8 +74,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 231.50260543823242,
-    "collapsed": true
+    "width": 231.50260543823242
   },
   "right": {
     "id": "3809ea2d0d62c2a5",
@@ -210,10 +189,10 @@
       "tags-routes:Open tags routes": false
     }
   },
-  "active": "a9638833e1c073ef",
+  "active": "12c6a82c2eb3842b",
   "lastOpenFiles": [
-    "_appX/tags_notes.md",
     "_app/TagsRoutes/logMessage.md",
+    "_appX/tags_notes.md",
     "Semestres/3.Semester/ETN302/3.302/E3.302.md",
     "_app/TagsRoutes/reports/TagReport_frontmatter_tag_Leaves.md",
     "_app/TagsRoutes/reports",

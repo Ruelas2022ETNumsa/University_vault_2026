@@ -69395,6 +69395,57 @@ var globalDirectory = {
 // defaultolorMapDark  → paleta para tema oscuro (fondo casi negro)
 // defaultolorMapLight → paleta para tema claro (fondo blanco, selectionBox amarillo)
 // defaltColorMap2     → mapa indexado por "dark" | "light" para acceso unificado
+
+
+var defaultolorMapDark = {
+  // Notas y archivos: Verdes y cianes de nebulosa
+  markdown:                   { name: "Nebula Green", value: "#00FFC6" },
+  attachment:                 { name: "Star Dust",    value: "#5BFF62" },
+  excalidraw:                 { name: "Cyan Star",    value: "#00F5FF" },
+  pdf:                        { name: "Deep Space",   value: "#1B2CC1" },
+
+  // Etiquetas y capturas: Tonos magenta/violeta de supernovas
+  tag:                        { name: "Supernova",    value: "#FF0099" },
+  frontmatter_tag:            { name: "Cosmic Rose",  value: "#6A00FF" },
+  screenshot:                 { name: "Ultraviolet",  value: "#7f00ff" },
+
+  // Estado y errores: Rojos de gigante roja
+  broken:                     { name: "Red Giant",    value: "#FF3131" },
+  nodeFocusColor:             { name: "Pulsar",       value: "#FFD166" },
+
+  // Interacción y nodos: Brillo estelar
+  nodeHighlightColor:         { name: "Ionized Gas",  value: "#00FFC6" },
+  linkHighlightColor:         { name: "Starlight",    value: "#FFFFFF" },
+  linkNormalColor:            { name: "Ether",        value: "#5BFF62" },
+  linkParticleColor:          { name: "Photon",       value: "#FFFFFF" },
+  linkParticleHighlightColor: { name: "Gamma Ray",    value: "#00F5FF" },
+
+  // Selección y fondo: El vacío del espacio
+  selectionBoxColor:          { name: "Gold Orbit",   value: "#FFD166" },
+  backgroundColor:            { name: "Deep Void",    value: "#0B1026" }
+};
+var defaultolorMapLight = {
+  // Notas y archivos
+  markdown:                   { name: "default", value: "#00ff00" },
+  attachment:                 { name: "default", value: "#ffff00" },
+  broken:                     { name: "default", value: "#ff0000" },
+  excalidraw:                 { name: "default", value: "#00ffff" },
+  pdf:                        { name: "default", value: "#0000ff" },
+  tag:                        { name: "default", value: "#ff00ff" },
+  frontmatter_tag:            { name: "default", value: "#fa8072" },
+  screenshot:                 { name: "default", value: "#7f00ff" },
+  nodeHighlightColor:         { name: "default", value: "#3333ff" },
+  nodeFocusColor:             { name: "default", value: "#ff3333" },
+  linkHighlightColor:         { name: "default", value: "#ffffff" },
+  linkNormalColor:            { name: "default", value: "#ffffff" },
+  linkParticleColor:          { name: "default", value: "#ffffff" },
+  linkParticleHighlightColor: { name: "default", value: "#ff00ff" },
+  selectionBoxColor:          { name: "default", value: "#e0ac00" },
+  backgroundColor:            { name: "default", value: "#ffffff" }
+};
+
+
+
 /*var defaultolorMapDark = {
   markdown:                   { name: "default", value: "#00ff00" },
   attachment:                 { name: "default", value: "#ffff00" },
@@ -69414,7 +69465,7 @@ var globalDirectory = {
   backgroundColor:            { name: "default", value: "#05010A"}//"#000003" }
 };*/
 
-var defaultolorMapDark = {
+/* var defaultolorMapDark = {
   // Notas y archivos: Verdes y cianes de nebulosa
   markdown:                   { name: "default", value: "#00FFC6" },
   attachment:                 { name: "default",    value: "#5BFF62" },
@@ -69460,7 +69511,7 @@ var defaultolorMapLight = {
   linkParticleHighlightColor: { name: "default", value: "#ff00ff" },
   selectionBoxColor:          { name: "default", value: "#e0ac00" }, // diferencia vs dark
   backgroundColor:            { name: "default", value: "#ffffff" }
-};
+}; */
 var defaltColorMap2 = {
   dark: defaultolorMapDark,
   light: defaultolorMapLight
