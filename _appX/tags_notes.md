@@ -61,12 +61,12 @@ Líneas 1 – 66,521 · 2.4 MB · generado automáticamente por esbuild
 ### Bloque 2 — Código propio del plugin (EDITABLE)
 Líneas 66,522 – 69,820 · ~136 KB · esto es lo que mantenemos
 
-| Rango | Sección | Descripción |
+| Rango | Sección | Estado |
 |---|---|---|
-| 66,522 – 68,852 | `TagsRoutes.ts` | Vista principal del grafo 3D |
-| 65,878 – 66,521 | `settings.ts` | UI del panel lateral (controles) |
-| 68,853 – 69,203 | `CodeBlockProcessor.ts` | Procesador de bloques \`\`\`tagsroutes\`\`\` |
-| 69,204 – 69,820 | `main.ts` | Punto de entrada del plugin |
+| 65,878 – 66,521 | `settings.ts` | ✅ Comentado (sesión 5) |
+| 66,522 – 68,852 | `TagsRoutes.ts` | ⏳ Pendiente (sesión 6+) |
+| 68,853 – 69,203 | `CodeBlockProcessor.ts` | ✅ Comentado (sesión 5) |
+| 69,204 – 69,820 | `main.ts` | ✅ Comentado (sesión 5) |
 
 > **Nota:** Las funciones de utilidad (`DebugMsg`, `getTags`, `getFileType`, `PathFilter`, etc.) están mezcladas dentro del bloque de librerías entre las líneas 24,148 – 65,877 junto a las dependencias D3 y Three extras. Son código propio pero no conviene moverlas.
 
@@ -134,19 +134,27 @@ Clase `settingGroup` — construye la UI del panel lateral con sliders, toggles,
 
 ## Plan de trabajo — organización interna
 
-En lugar de separar archivos, el objetivo ahora es **añadir marcadores y comentarios** al código propio para que sea navegable.
+### ✅ Completado
+
+- [x] `settings.ts` — sesión 5
+- [x] `CodeBlockProcessor.ts` — sesión 5
+- [x] `main.ts` — sesión 5
+
+### ⏳ Pendiente
+
+- [ ] `TagRoutesView` (líneas 66,522 – 68,852) — ~2,330 líneas, se divide en sub-bloques por método
 
 ### Paso A — Añadir tabla de contenidos al inicio del bloque propio
 Insertar justo en la línea 66,522 un bloque de comentario con el índice de secciones y números de línea.
 
-### Paso B — Etiquetar métodos de TagRoutesView
+### Paso B — Etiquetar métodos de TagRoutesView ⏳
 Añadir comentarios estandarizados encima de cada método indicando: qué hace, qué parámetros recibe, nivel de riesgo.
 
-### Paso C — Marcar secciones de CodeBlockProcessor
-El bloque ya tiene buena estructura. Solo añadir marcadores de inicio/fin de sección.
+### Paso C — Marcar secciones de CodeBlockProcessor ✅
+Completado en sesión 5. Ver detalle en historial.
 
-### Paso D — Documentar globalProgramControl
-Los flags de `globalProgramControl` no tienen documentación. Aclarar qué activa cada uno.
+### Paso D — Documentar globalProgramControl ✅
+Completado en sesión 5. Ver detalle en historial.
 
 ### Paso E — Marcar explícitamente las funciones de util mezcladas con vendors
 Las funciones `DebugMsg`, `getTags`, `getFileType`, `PathFilter`, `namedColor`, etc. están enterradas en el bloque de librerías. Añadir un marcador `// ▶ INICIO FUNCIONES PROPIAS` y `// ◀ FIN FUNCIONES PROPIAS` para localizarlas fácilmente.
@@ -179,22 +187,93 @@ Mapeo completo de la estructura del `main.js`. Identificación de bloques, rango
 
 **Resultado:** Fallo por la misma razón que la sesión 2. El `require()` local no funciona en el entorno de Obsidian independientemente del path usado.
 
-### Sesión 4 — Replanteo de estrategia (actual)
-Conclusión: la modularización en archivos separados no es viable. La organización debe hacerse dentro del propio `main.js` mediante marcadores de sección, comentarios de métodos y una tabla de contenidos interna. Ver **Plan de trabajo** arriba.
+### Sesión 4 — Replanteo de estrategia
+Conclusión: la modularización en archivos separados no es viable. La organización debe hacerse dentro del propio `main.js` mediante marcadores de sección, comentarios de métodos y una tabla de contenidos interna.
 
-**Método de trabajo acordado para las próximas sesiones:**
-Como el bloque editable tiene ~3,300 líneas, se trabajará por partes de 500–800 líneas que coincidan con los límites naturales de cada sección. El flujo es:
+**Método de trabajo acordado:**
 1. Se pega un bloque en el chat
 2. Claude devuelve el mismo bloque con marcadores, comentarios de métodos y etiquetas de riesgo añadidos
 3. Se revisa y se pega de vuelta en `main.js` en el rango correspondiente
 4. Se pasa al siguiente bloque
 
 **Orden de trabajo acordado** (de menor a mayor riesgo):
-1. `settings.ts` (líneas 65,878 – 66,521) — ~644 líneas, sin dependencias de Three.js, ideal para establecer el estilo de comentarios
-2. `CodeBlockProcessor.ts` (líneas 68,853 – 69,203) — ~350 líneas, lógica de negocio pura
-3. `main.ts` (líneas 69,204 – 69,820) — ~617 líneas, punto de entrada y configuración
-4. `TagRoutesView` (líneas 66,522 – 68,852) — ~2,330 líneas, núcleo visual, se divide en sub-bloques por método
+1. `settings.ts` — ~644 líneas
+2. `CodeBlockProcessor.ts` — ~350 líneas
+3. `main.ts` — ~617 líneas
+4. `TagRoutesView` — ~2,330 líneas, dividida en sub-bloques
 
 ---
 
-*Última actualización: sesión 4 — estrategia replaneada, método de trabajo por partes acordado.*
+### Sesión 5 — Comentado de settings.ts, CodeBlockProcessor.ts y main.ts ✅
+
+Se procesaron los tres bloques de menor riesgo en orden. A continuación el detalle de qué se documentó en cada uno.
+
+---
+
+#### settings.ts (líneas 65,878 – 66,521) — clase `settingGroup`
+
+**Cabecera de sección:** se añadió un bloque de descripción general indicando el propósito de la clase, el patrón builder que usa, y la etiqueta de riesgo 🟢.
+
+**Constructor:** se documentaron los cuatro tipos de contenedor (`"group"`, `"root"`, `"flex-box"`, `"normal-box"`) y qué estructura HTML crea cada uno. Se aclaró el comportamiento de los tres estados del tipo `"root"` (panel abierto / panel cerrado / botón oculto) que estaban implícitos en la lógica de `_goAction` y `opacity`, ya que sin comentario era difícil seguir el flujo.
+
+**Métodos builder:** se comentó cada uno con su firma, efecto y nivel de riesgo. Los puntos clave que se aclararon:
+- `add()` acepta tanto `HTMLElement` como otra instancia de `settingGroup`
+- `hideAll()` afecta también al `_baseContainer` (añade `is-close` y quita padding), no solo a los hijos
+- `addDropdown()` tiene el parámetro `defaultValue` que actualmente no se usa; el valor inicial siempre es `"broken"`
+- `addToggle()` tiene el parámetro `needSave` que está reservado pero sin lógica activa
+- `attachEl()` debe llamarse al final del chain porque es quien establece `_baseContainer`
+
+---
+
+#### CodeBlockProcessor.ts (líneas 68,853 – 69,203) — clase `codeBlockProcessor`
+
+**Cabecera de sección:** descripción del flujo completo del procesador y lista de dependencias externas (`DebugMsg`, `globalProgramControl`, `getLineTime`, `PathFilter`).
+
+**Constantes y regex:** se documentaron las cuatro variables globales del bloque, que antes no tenían explicación:
+- `pattern_tags_char` y `pattern_timeStamp` son los bloques base que se combinan en otras regex
+- `tagRegEx` detecta block-IDs generados por el plugin (`^tr-xxxxxxxxx`) al final de línea
+- `regex_TagsWithTimeStamp` es la regex principal del sistema: captura grupos de tags (grupo 1) y timestamp opcional (grupo 2), y se reutiliza en todos los procesadores
+
+**Clase `performanceCount`:** se explicó que `getTimeCost()` no solo devuelve el tiempo sino que reinicia el contador, lo que permite encadenar mediciones.
+
+**Procesadores de query:** los tres métodos tienen lógica similar pero diferente criterio de filtrado. Se documentó qué los diferencia:
+- `frontmatterTagProcessor` busca en YAML y no toca el contenido de los archivos
+- `tagProcessor` busca en el body y puede modificar archivos para añadir block-IDs (`vault.modify`) — esto se marcó con 🟡
+- `timeDurationProcessor` hace lo mismo que `tagProcessor` pero descarta párrafos fuera del rango de días; el filtro usa `getTimeDiffHour()` comparando contra `24 * queryDuration`
+
+**Lógica de block-IDs:** documentada en detalle dentro de los dos procesadores que la usan. Se aclaró que primero busca si ya existe un `^tr-` al final del párrafo (`tagRegEx`) y solo genera uno nuevo si no lo encuentra, evitando duplicados.
+
+**`getMarkdownContent()`:** se explicaron los dos modos controlados por `globalProgramControl`:
+- `useGroup=true` agrupa resultados por tag usando un `Map`; el `throw "pushed"` dentro del `forEach` es intencional para salir al primer tag cuando `allowDuplicated=false`
+- `useGroup=false` produce una lista plana ordenada por tiempo
+
+**`codeBlockProcessor()` (entry point):** se documentó el flujo de los 6 pasos y se aclaró que muestra "PROCESSING..." antes de ejecutar la query y luego sobreescribe ese mensaje con el resultado final.
+
+---
+
+#### main.ts (líneas 69,204 – 69,820) — constantes globales y clases `TagsRoutes3`, `colorPickerGroup`, `TagsroutesSettingsTab`
+
+**`globalProgramControl`:** se documentó cada flag individualmente, que antes no tenían ningún comentario:
+- `useDiv` controla si el reporte se renderiza inline o sobreescribe el archivo fuente
+- `debugLevel` es el umbral para `DebugMsg` (3=INFO, 4=DEBUG)
+- `useGroup` y `allowDuplicated` controlan el modo de agrupación en `getMarkdownContent()`
+- `aimBeforeLink` y `useTrackHighlight` afectan comportamiento del grafo
+- `snapshotDirectory` y `generateLinker` son configuración de características específicas
+
+**Paletas de color:** se alinearon visualmente las entradas del objeto para que sean comparables de un vistazo, y se señaló la única diferencia entre dark y light: `selectionBoxColor` (#ffff00 vs #e0ac00) y `backgroundColor`.
+
+**`DEFAULT_DISPLAY_SETTINGS`:** se documentó que `link_distance` difiere entre temas (17 dark, 5 light) y se explicó el sistema de slots: `slot[0]` es siempre el slot de trabajo activo (clon de `slot[currentSlotNum]`), los slots 1–5 son los que persiste el usuario.
+
+**`DEFAULT_SETTINGS`:** se aclaró el comportamiento de `customSlot` — es una referencia al array `dark[]` o `light[]` del tema activo, y se pone a `null` antes de guardar para evitar serializar una referencia circular.
+
+**Clase `TagsRoutes3`:** se documentó el rol de `skipSave` (bloquea guardados durante la inicialización) y el flujo completo de `initializePlugin()` en 7 pasos. Se marcó el listener global de DOM en `initializePlugin()` con 🟡 porque captura todos los clicks del documento. Se explicó que `mergeDeep()` es un merge conservador: solo actualiza claves que ya existen en `target`, nunca añade claves nuevas.
+
+**`loadSettings()`:** se documentó la lógica de compatibilidad de versiones con tres casos: merge normal, override por versión incompatible, e instalación nueva.
+
+**Clase `colorPickerGroup`:** se explicó el flag `isProgrammaticChange` que evita bucles de `onChange` al sincronizar el campo de texto y el color picker entre sí.
+
+**Clase `TagsroutesSettingsTab`:** se documentó que `skipSave=true` al inicio de `display()` y `skipSave=false` al final es un patrón deliberado para evitar guardados parciales mientras se construye la UI. Se marcó `colorMapSourceElement` con su clase CSS `tags-routes-need-save` que indica visualmente cambios pendientes.
+
+---
+
+*Última actualización: sesión 5 — comentado de settings.ts, CodeBlockProcessor.ts y main.ts completado.*

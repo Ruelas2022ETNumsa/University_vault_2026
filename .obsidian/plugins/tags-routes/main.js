@@ -69443,6 +69443,11 @@ var defaltColorMap2 = {
   dark: defaultolorMapDark,
   light: defaultolorMapLight
 };
+// ── CONFIGURACIÓN DE DISPLAY POR DEFECTO ──────────────────────────────────────
+// DEFAULT_DISPLAY_SETTINGS_DARK / LIGHT → valores iniciales de los sliders y
+//   toggles del panel lateral para cada tema.
+// DEFAULT_DISPLAY_SETTINGS → mapa indexado por "dark" | "light"
+// Nota: link_distance difiere entre temas (17 dark, 5 light)
 var DEFAULT_DISPLAY_SETTINGS_DARK = {
   node_size: 5,
   node_repulsion: 0,
@@ -69464,7 +69469,7 @@ var DEFAULT_DISPLAY_SETTINGS_DARK = {
 var DEFAULT_DISPLAY_SETTINGS_LIGHT = {
   node_size: 5,
   node_repulsion: 0,
-  link_distance: 5,
+  link_distance: 5,// más corto que dark
   link_width: 1,
   link_particle_size: 2,
   link_particle_number: 2,
