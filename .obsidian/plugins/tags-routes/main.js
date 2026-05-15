@@ -65877,15 +65877,28 @@ UnrealBloomPass.BlurDirectionY = new Vector2(0, 1);
 
 //[linea 65,878 – 66,521]{settings.ts}-------------------------------------------------------------------
 // src/views/settings.ts
+// ─────────────────────────────────────────────────────────────────────────────
+// SECCIÓN: settings.ts
+// Clase: settingGroup
+// Descripción: Constructor de UI para el panel lateral del grafo 3D.
+//              Usa un patrón builder encadenado para crear grupos colapsables
+//              con sliders, toggles, dropdowns, botones y color pickers.
+// Riesgo: 🟢 BAJO — sin dependencias de Three.js, solo API de Obsidian
+// ─────────────────────────────────────────────────────────────────────────────
 var import_obsidian2 = require("obsidian");
 var settingGroup = class {
-  /*
-     This constructor will create:
-      - a root container:
-      - with a head container
-      - and a hold container ready to add sub components
-      - with in the given comtainer
-  */
+  // ── CONSTRUCTOR ────────────────────────────────────────────────────────────
+  // Crea el contenedor raíz con su cabecera (head) y su área de contenido (hold).
+  // Tipos soportados:
+  //   "group"      → ítem colapsable del árbol de controles (el más común)
+  //   "root"       → contenedor raíz con botón de engranaje para mostrar/ocultar todo
+  //   "flex-box"   → contenedor sin cabecera, layout horizontal
+  //   "normal-box" → contenedor sin cabecera, layout normal
+  // Parámetros:
+  //   plugin  → instancia del plugin (acceso a settings y view._controls)
+  //   id2     → id HTML del elemento raíz
+  //   name    → texto visible en la cabecera del grupo
+  //   type    → tipo de contenedor (default: "group")  
   constructor(plugin, id2, name, type = "group") {
     this._goAction = true;
     this.plugin = plugin;
@@ -65924,6 +65937,11 @@ var settingGroup = class {
       this.headContainer.addClass("mod-collapsible");
       this.holdContainer.addClass("tree-item-children");
     } else if (type === "root") {
+      // Botón engranaje flotante que alterna visibilidad del panel completo.
+      // Tiene tres estados internos controlados por _goAction y opacity:
+      //   1. Panel abierto  → icono "x", tooltip "Close"
+      //   2. Panel cerrado  → icono "settings", tooltip "Open"
+      //   3. Botón oculto   → opacity 0, tooltip "Show settings button"		
       this.handleButton = new import_obsidian2.ExtraButtonComponent(this.headContainer).setTooltip("Open " + name).onClick(() => {
         if (!this._goAction && this.holdContainer.style.display == "none" && this._baseContainer.style.opacity == "100") {
           this._baseContainer.style.opacity = "0";
