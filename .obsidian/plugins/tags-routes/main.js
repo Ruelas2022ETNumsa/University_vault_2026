@@ -69156,16 +69156,10 @@ ${result.map((v) => "- [[" + v.replace(/.md$/, "") + "]]").join("\n")}
                     randomLinker = "tr-" + Math.random().toString(36).substr(2, 9);
                     let updatedLine = "";
                     if (paragraph.trimEnd().match(/\`\`\`/)) {
-						
-						
                       updatedLine = paragraph.trimEnd() + `\n^${randomLinker}\n`;
                     } else {
                       updatedLine = paragraph.trimEnd() + ` ^${randomLinker}\n`;
                     }
-					
-					
-					
-					
                     updatedContent = updatedContent.replace(paragraph, updatedLine.trimEnd());
                     isUpdated = true;
                   }
@@ -69173,9 +69167,8 @@ ${result.map((v) => "- [[" + v.replace(/.md$/, "") + "]]").join("\n")}
                 }
                 const regexB = new RegExp(`${pattern_tags_char}+`, "gm");
                 const matches = matched_Tags.match(regexB);
-                retParagraph = paragraph.trimEnd() + "\n\n----\n [ *Tags:* " + (matches == null ? void 0 : matches.join(" ")) + " ]\n[ *" + contentTimeString + "* ]\n" + (this.plugin.settings.enableParagraphLinker ? `[ *From:* [[${file.path}${randomLinker}|${file.name.split(".")[0]}]] ]
-` : `[ *From:* [[${file.path}|${file.name.split(".")[0]}]] ]
-`);
+				
+				retParagraph = paragraph.trimEnd() + "\n\n----\n [ *Tags:* " + (matches == null ? void 0 : matches.join(" ")) + " ]\n[ *" + contentTimeString + "* ]\n" + (this.plugin.settings.enableParagraphLinker ? `[ *From:* [[${file.path}${randomLinker}|${file.name.split(".")[0]}]] ]\n` : `[ *From:* [[${file.path}|${file.name.split(".")[0]}]] ]\n`);
               }
               return retParagraph;
             }
@@ -69192,6 +69185,10 @@ ${result.map((v) => "- [[" + v.replace(/.md$/, "") + "]]").join("\n")}
     );
     return arr;
   }
+  // ── ESCRITURA DE RESULTADO ────────────────────────────────────────────────
+  // writeMarkdownWrap(query, source, el, ctx) → wrapper que decide el prefijo
+  // según el tipo de query antes de llamar a writeMarkdown
+  // Riesgo: 🟢 BAJO  
   writeMarkdownWrap(query, source, el, ctx) {
     if (query.type == "frontmatter_tag:") {
       this.writeMarkdown(query.type + query.value, source, el, ctx);
@@ -69199,6 +69196,11 @@ ${result.map((v) => "- [[" + v.replace(/.md$/, "") + "]]").join("\n")}
       this.writeMarkdown(query.value, source, el, ctx);
     }
   }
+  // writeMarkdown(term, source, el, ctx) → renderiza el Markdown resultado
+  // Modo globalProgramControl.useDiv = true  → renderiza inline en el bloque (MarkdownRenderer)
+  // Modo globalProgramControl.useDiv = false → sobreescribe el archivo fuente completo
+  //   con el reporte como contenido (genera un "tag-report" file persistente)
+  // Riesgo: 🟡 MEDIO — en modo !useDiv modifica el archivo de la nota activa
   async writeMarkdown(term, source, el, ctx) {
     const markDownSource = source;
     if (globalProgramControl.useDiv) {
@@ -69228,6 +69230,14 @@ tags:
       }
     }
   }
+  // ── PARSEO DE QUERY ───────────────────────────────────────────────────────
+  // extractQueryKey(source) → parsea el texto del bloque ```tagsroutes``` y
+  // determina el tipo de query:
+  //   "frontmatter_tag:" → búsqueda en frontmatter YAML
+  //   "time_duration:"   → filtro por rango de días (#Nday)
+  //   "tag:"             → búsqueda por tag en el cuerpo del texto
+  // Retorna: { type, value, result: [] }
+  // Riesgo: 🟢 BAJO
   extractQueryKey(source) {
     let queryKey = { type: "", value: "", result: [] };
     if (source.contains("frontmatter_tag:")) {
