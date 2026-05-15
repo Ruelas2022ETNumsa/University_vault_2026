@@ -65875,7 +65875,7 @@ var UnrealBloomPass = class extends Pass {
 UnrealBloomPass.BlurDirectionX = new Vector2(1, 0);
 UnrealBloomPass.BlurDirectionY = new Vector2(0, 1);
 
-//[linea 65,878 – 66,521]{settings.ts}-------------------------------------------------------------------
+//[linea 65,878 – 66144(66,521)]{settings.ts}-------------------------------------------------------------------
 // src/views/settings.ts
 // ─────────────────────────────────────────────────────────────────────────────
 // SECCIÓN: settings.ts
@@ -66141,7 +66141,7 @@ var settingGroup = class {
     return this;
   }
 };
-//[linea 65,567 – 66,091]{UnrealBloomPass/settings.ts}-------------------------------------------------------------------
+//[linea 65,567 – 66144(66,091)]{UnrealBloomPass/settings.ts}-------------------------------------------------------------------
 
 
 
