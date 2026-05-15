@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "a5369e30b83b7645",
+        "id": "41508a9314aa1b15",
         "type": "tabs",
         "children": [
           {
-            "id": "a6d4cac7d3c0a969",
+            "id": "f96f9bb1e9cec698",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_app/TagsRoutes/logMessage.md",
-                "mode": "preview",
+                "file": "_appX/tags_notes.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "logMessage"
+              "title": "tags_notes"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#ETN-302",
+                "query": "tag:#Leaves",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -94,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "_appX/tags_notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Enlaces entrantes"
+              "title": "Enlaces entrantes de tags_notes"
             }
           },
           {
@@ -112,11 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "_appX/tags_notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Enlaces salientes"
+              "title": "Enlaces salientes de tags_notes"
             }
           },
           {
@@ -134,28 +136,18 @@
             }
           },
           {
-            "id": "5ac864c79176a78e",
-            "type": "leaf",
-            "state": {
-              "type": "tags-routes",
-              "state": {},
-              "icon": "waypoints",
-              "title": "Tags routes"
-            }
-          },
-          {
             "id": "0f4568b59658e3f9",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Semestres/3.Semester/ETN302/0.ETN-302.md",
+                "file": "_appX/tags_notes.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Esquema de 0.ETN-302"
+              "title": "Esquema de tags_notes"
             }
           },
           {
@@ -183,12 +175,27 @@
               "title": "Etiquetas"
             }
           }
-        ],
-        "currentTab": 3
+        ]
+      },
+      {
+        "id": "0eb52cdaf7535df3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "37bec4c6c33b11c3",
+            "type": "leaf",
+            "state": {
+              "type": "tags-routes",
+              "state": {},
+              "icon": "waypoints",
+              "title": "Tags routes"
+            }
+          }
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 323.5
+    "width": 284.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -202,11 +209,19 @@
       "tags-routes:Open tags routes": false
     }
   },
-  "active": "5c9982bb44437a88",
+  "active": "f96f9bb1e9cec698",
   "lastOpenFiles": [
+    "_appX/tags_notes 1.md",
     "_appX/tags_notes.md",
-    "_app/TagsRoutes/reports/TagReport_frontmatter_tag_Leaves.md",
+    "Semestres/3.Semester/ETN302/2.302.md",
+    "Semestres/3.Semester/ETN302/3.302.md",
+    "Semestres/3.Semester/ETN302/3.302/T3.302.md",
+    "Semestres/3.Semester/ETN302/3.302/3.302.add/T3.2.302.md",
+    "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.2.302-1.png",
+    "Semestres/3.Semester/ETN302/0.ETN-302.md",
+    "_app/TagsRoutes/logMessage.md",
     "_app/TagsRoutes/reports/TagReport_frontmatter_tag_ETN-302.md",
+    "_app/TagsRoutes/reports/TagReport_frontmatter_tag_Leaves.md",
     "_app/TagsRoutes/reports/TagReport_#e0ac00.md",
     "_app/TagsRoutes/graph-screenshot/graph-screenshot-2026-05-14-23-30-50.png",
     "_app/TagsRoutes/graph-screenshot/graph-screenshot-2026-05-14-23-30-57.png",
@@ -214,19 +229,16 @@
     "Semestres/3.Semester/ETN302/2.302/A2.302.md",
     "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.6.302-03.png",
     "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.6.302-2.png",
-    "Semestres/3.Semester/ETN302/0.ETN-302.md",
     "Semestres/3.Semester/ETN302/3.302/E3.302.md",
     "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.521.302-1.md",
     "Semestres/3.Semester/ETN302/2.302/T2.302.md",
     "Semestres/3.Semester/ETN302/2.302/AA2.302.md",
-    "Semestres/3.Semester/ETN302/3.302.md",
     "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.6.302-01.png",
     "Semestres/3.Semester/ETN302/3.302/3.302.add/T3.6.302-1.md",
     "Semestres/3.Semester/ETN302/3.302/TT3.302.md",
     "Semestres/3.Semester/ETN302/3.302/3.302.add/T3.6.302-5.md",
     "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.6.302-5.png",
     "Semestres/3.Semester/ETN302/2.302/D2.302.md",
-    "_app/TagsRoutes/logMessage.md",
     "_app/TagsRoutes/reports",
     "Sin título.md",
     "_appX/tags-routes_backup.rar",
@@ -246,11 +258,6 @@
     "config/claude.md",
     "config/TagsRoute.md",
     "_app/TagsRoutes/graph-screenshot/graph-screenshot-2026-05-11-18-57-35.png",
-    "_app/TagsRoutes/graph-screenshot/graph-screenshot-2026-05-11-18-49-41.png",
-    "esto es una prueba.md",
-    "_app/TagsRoutes/graph-screenshot/graph-screenshot-2026-05-11-18-35-58.png",
-    "_app/Excalidraw/Drawing 2026-05-11 16.56.55.excalidraw.md",
-    "TagsRoutes/logMessage.md",
-    "App/Excalidraw/Drawing 2026-05-11 16.56.55.excalidraw.md"
+    "_app/TagsRoutes/graph-screenshot/graph-screenshot-2026-05-11-18-49-41.png"
   ]
 }
