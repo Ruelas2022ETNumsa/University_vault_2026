@@ -68903,27 +68903,7 @@ tags:
   }
 };
 //[linea 66575(66,522) – 68905(68,852)]{TagsRoutes.ts}-------------------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//[linea 68,853 – 69,203]{CodeBlockProcessor.ts}-------------------------------------------------------------------
+//[linea 68906(68,853) – 69338(69,203)]{CodeBlockProcessor.ts}-------------------------------------------------------------------
 // src/util/CodeBlockProcessor.ts
 // ─────────────────────────────────────────────────────────────────────────────
 // SECCIÓN: CodeBlockProcessor.ts
@@ -69314,6 +69294,17 @@ tags:
     }
     return markdownText;	
   }
+  // ── ENTRY POINT ───────────────────────────────────────────────────────────
+  // codeBlockProcessor(source, el, ctx) → función principal registrada en Obsidian
+  // Se llama automáticamente cada vez que Obsidian renderiza un bloque ```tagsroutes```
+  // Flujo:
+  //   1. Salir si el archivo ya es un tag-report (frontmatter.tags definido)
+  //   2. Parsear la query con extractQueryKey()
+  //   3. Mostrar "PROCESSING..." mientras se ejecuta
+  //   4. Llamar al procesador correspondiente según query.type
+  //   5. Formatear el resultado con getMarkdownContent()
+  //   6. Renderizar el Markdown final con writeMarkdownWrap()
+  // Riesgo: 🟡 MEDIO — orquesta operaciones async que pueden modificar el vault  
   async codeBlockProcessor(source, el, ctx) {
     if (ctx.frontmatter.tags !== void 0) {
       return;
@@ -69332,6 +69323,7 @@ tags:
         query.result = (await Promise.all(await this.tagProcessor(query))).flat().filter((v) => v != "");
         break;
     }
+	// Muestra tiempo de ejecución en modo DEBUG, o timestamp simple en producción
     let executionTimeString;
     if (globalProgramControl.debugLevel == 4 /* DEBUG */) {
       executionTimeString = perf.getTimeCost();
@@ -69343,41 +69335,8 @@ tags:
     return;
   }
 };
-//[linea 68,853 – 69,203]{CodeBlockProcessor.ts}-------------------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//[linea 69,204 – 69,820]{main.ts}-------------------------------------------------------------------
+//[linea 68906(68,853) – 69338(69,203)]{CodeBlockProcessor.ts}-------------------------------------------------------------------
+//[linea 69339(69,204) – (69,820)]{main.ts}-------------------------------------------------------------------
 // src/main.ts
 var globalProgramControl = {
   useDiv: false,
