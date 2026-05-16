@@ -11,3 +11,4 @@
   - snapShotFolder (data.json): ya parcheado
   - Migracion: no requerida
 
+[2026-05-16 19:45:26] Parche aplicado | Plugin version: 1.2.3 | main.js: E:\University_vault_2026\.obsidian\plugins\tags-routes\main.js
