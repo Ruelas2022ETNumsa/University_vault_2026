@@ -167,6 +167,7 @@ Inspirada en fotografía real de galaxia espiral (núcleo dorado-naranja, brazos
 - [x] `CodeBlockProcessor.ts` — sesión 5
 - [x] `main.ts` comentado — sesión 5
 - [x] `main.ts` paleta galaxy — sesión 6
+- [x] Parche drag-and-drop (sesión 7) — diagnóstico y solución completa documentada abajo
 
 ### ⏳ Pendiente
 
@@ -258,7 +259,7 @@ Se procesaron los tres bloques de menor riesgo en orden. A continuación el deta
 
 **Cabecera de sección:** descripción del flujo completo del procesador y lista de dependencias externas (`DebugMsg`, `globalProgramControl`, `getLineTime`, `PathFilter`).
 
-**Constantes y regex:** se documentaron las cuatro variables globales del bloque, que antes no tenían explicación:
+**Constantes y regex:** se documentaron las cuatro variables globales del bloque, que antes no tenían ningún comentario:
 - `pattern_tags_char` y `pattern_timeStamp` son los bloques base que se combinan en otras regex
 - `tagRegEx` detecta block-IDs generados por el plugin (`^tr-xxxxxxxxx`) al final de línea
 - `regex_TagsWithTimeStamp` es la regex principal del sistema: captura grupos de tags (grupo 1) y timestamp opcional (grupo 2), y se reutiliza en todos los procesadores
@@ -332,4 +333,155 @@ Segunda propuesta (aceptada con ajuste): paleta extraída directamente de la ima
 
 ---
 
-*Última actualización: sesión 6 — paleta galaxy aplicada a defaultolorMapDark.*
+### Sesión 7 — Parche drag-and-drop de nodos ⚠️ EN PROGRESO
+
+**Objetivo:** permitir arrastrar y reubicar nodos individualmente haciendo click y arrastrando sobre ellos.
+
+---
+
+#### Estado del parche — versión actual (PARCIALMENTE FUNCIONAL)
+
+El parche está en `onNodeDrag` / `onNodeDragEnd` / `onNodeClick` dentro de `createGraph()` (~línea 68,638).
+
+**Cambio 1 — `onNodeDrag`** (activo en el código):
+```javascript
+}).onNodeDrag((node) => {
+  this._isDragging = true;
+  this.Graph.cooldownTicks(0);
+```
+
+**Cambio 2 — `onNodeDragEnd`** (activo en el código):
+```javascript
+}).onNodeDragEnd((node) => {
+  node.fx = node.x;
+  node.fy = node.y;
+  node.fz = node.z;
+  this.Graph.cooldownTicks(Infinity);
+  setTimeout(() => { this._isDragging = false; }, 150);
+```
+
+**Cambio 3 — `onNodeClick`** (activo en el código):
+```javascript
+}).onNodeClick((node) => {
+  if (this._isDragging) return;
+  // ... resto del handler
+```
+
+**Síntoma observado:** el nodo parece querer moverse por un instante pero regresa inmediatamente a su posición original. Las combinaciones de "Lock node positions" y "Lock scene" no cambian el comportamiento.
+
+---
+
+#### Diagnóstico de la causa raíz — CONFIRMADO
+
+El problema no está en nuestro parche sino en el mecanismo interno de la librería `three-forcegraph` (~línea 65,459):
+
+```javascript
+// En el event listener "drag" interno de DragControls (línea ~65,459):
+[\"x\", \"y\", \"z\"].forEach(function(c2) {
+  return node[\"f\".concat(c2)] = node[c2] = newPos[c2];  // ← ya fija fx/fy/fz en cada frame
+});
+state.forceGraph.d3AlphaTarget(0.3).resetCountdown();  // ← PROBLEMA: reactiva física cada frame
+node.__dragged = true;
+state.onNodeDrag(node, translate);  // ← aquí se llama nuestro handler
+```
+
+**Lo que hace la librería en cada frame de drag:**
+1. Actualiza `fx/fy/fz` y `x/y/z` del nodo a la nueva posición — ✅ correcto
+2. Llama `d3AlphaTarget(0.3).resetCountdown()` — ❌ esto reactiva la simulación de física D3 con energía 0.3, haciendo que en el siguiente tick la física recalcule posiciones y jale el nodo de vuelta
+
+**Lo que hace la librería en dragend (~línea 65,489):**
+```javascript
+// Restaura initFixedPos (que era undefined antes del drag) → borra fx/fy/fz
+[\"x\", \"y\", \"z\"].forEach(function(c2) {
+  var fc = \"f\".concat(c2);
+  if (initFixedPos[fc] === void 0) {
+    delete node[fc];  // ← borra fx/fy/fz si el nodo no estaba fijo antes
+  }
+});
+// Luego llama nuestro onNodeDragEnd — donde nosotros volvemos a poner fx/fy/fz
+state.onNodeDragEnd(node, translate);
+state.forceGraph.d3AlphaTarget(0).resetCountdown();
+```
+
+**Por qué `cooldownTicks(0)` no funciona:**
+- `cooldownTicks` y `d3AlphaTarget` son dos mecanismos de control de la simulación independientes
+- `cooldownTicks(0)` detiene el renderizado después de 0 ticks, pero `d3AlphaTarget(0.3)` en cada frame de drag hace que el motor D3 recalcule física activamente
+- D3 gana la batalla porque opera a un nivel más bajo que el control de ticks de la librería
+
+---
+
+#### Solución propuesta — PENDIENTE DE APLICAR
+
+La solución correcta es fijar `fx/fy/fz` en nuestro `onNodeDrag` **además** de lo que ya hace la librería internamente. Aunque la librería ya los fija en cada frame, al llamar `d3AlphaTarget(0.3)` la física intenta mover los nodos vecinos y arrastra al nodo en cuestión.
+
+La solución real requiere **interceptar o neutralizar el `d3AlphaTarget(0.3)`** que la librería dispara en cada frame de drag. Hay dos enfoques:
+
+**Opción A — Sobrescribir `d3AlphaTarget` temporalmente durante el drag** (más limpia):
+```javascript
+}).onNodeDrag((node) => {
+  this._isDragging = true;
+  // Guardar el método original y reemplazarlo con un no-op durante el drag
+  if (!this._origAlphaTarget) {
+    this._origAlphaTarget = this.Graph.d3AlphaTarget.bind(this.Graph);
+    this.Graph.d3AlphaTarget = () => this.Graph; // no-op que devuelve this para el chaining
+  }
+  node.fx = node.x;
+  node.fy = node.y;
+  node.fz = node.z;
+```
+
+```javascript
+}).onNodeDragEnd((node) => {
+  // Restaurar d3AlphaTarget original
+  if (this._origAlphaTarget) {
+    this.Graph.d3AlphaTarget = this._origAlphaTarget;
+    this._origAlphaTarget = null;
+  }
+  node.fx = node.x;
+  node.fy = node.y;
+  node.fz = node.z;
+  this.Graph.cooldownTicks(Infinity);
+  setTimeout(() => { this._isDragging = false; }, 150);
+```
+
+**Opción B — Fijar todos los nodos durante el drag** (más segura, sin monkey-patching):
+Durante el drag, fijar temporalmente todos los nodos con su posición actual. Al terminar, liberar todos excepto el nodo arrastrado.
+
+```javascript
+}).onNodeDrag((node) => {
+  this._isDragging = true;
+  // Fijar el nodo arrastrado para que la física no lo mueva
+  node.fx = node.x;
+  node.fy = node.y;
+  node.fz = node.z;
+  // Reducir alpha de D3 para minimizar el tirón sobre vecinos
+  this.Graph.d3AlphaTarget(0);
+```
+
+```javascript
+}).onNodeDragEnd((node) => {
+  node.fx = node.x;
+  node.fy = node.y;
+  node.fz = node.z;
+  this.Graph.d3AlphaTarget(0).resetCountdown();
+  this.Graph.cooldownTicks(Infinity);
+  setTimeout(() => { this._isDragging = false; }, 150);
+```
+
+> **Nota crítica:** La Opción B llama `d3AlphaTarget(0)` en `onNodeDrag`, pero la librería lo sobreescribe con `d3AlphaTarget(0.3)` en el mismo frame después de llamar nuestro handler. El orden de ejecución en el frame de drag es: librería fija fx/fy/fz → librería llama `d3AlphaTarget(0.3)` → librería llama `onNodeDrag` (nuestro handler). Por lo tanto nuestra llamada a `d3AlphaTarget(0)` ocurre DESPUÉS del 0.3 de la librería — esto podría funcionar si D3 aplica el último valor recibido en el frame.
+
+**Opción recomendada para probar primero:** Opción B por ser menos invasiva. Si no funciona, escalar a Opción A.
+
+---
+
+#### Relación con "Lock node positions" y "Lock scene"
+
+- **Lock node positions** (`onToggleFreezeNodePosition`): cuando está activo, fija todos los nodos con `fx/fy/fz` y llama `this.Graph.enableNodeDrag(false)` — esto deshabilita el `DragControls` interno de la librería, por lo que el drag no funciona en absoluto. Cuando está inactivo, borra todos los `fx/fy/fz` y reactiva el drag.
+
+- **Lock scene** (`onToggleLockScene`): solo afecta `this.isLockScene`, que bloquea el movimiento de cámara en `onNodeClick` y `onNodeRightClick`. No afecta al drag de nodos.
+
+**Conclusión:** ninguna combinación de estas opciones resuelve el problema del parche porque el problema es estructural en cómo la librería gestiona `d3AlphaTarget` durante el drag. Para que el drag funcione, "Lock node positions" debe estar **desactivado** (para que `enableNodeDrag` sea true).
+
+---
+
+*Última actualización: sesión 7 — diagnóstico completo del parche drag-and-drop.*
