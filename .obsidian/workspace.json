@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "0b48d65434627889",
+        "id": "34375b3f917f9564",
         "type": "tabs",
         "children": [
           {
-            "id": "d24c5768603b7014",
+            "id": "2c9e5c54ea234278",
             "type": "leaf",
             "state": {
-              "type": "tags-routes",
+              "type": "empty",
               "state": {},
-              "icon": "waypoints",
-              "title": "Tags routes"
+              "icon": "lucide-file",
+              "title": "Nueva pestaña"
             }
           }
         ]
@@ -190,7 +190,7 @@
       "tags-routes:Open tags routes": false
     }
   },
-  "active": "5c9982bb44437a88",
+  "active": "2c9e5c54ea234278",
   "lastOpenFiles": [
     "_appX/tags_notes.md",
     "_app/TagsRoutes/logMessage.md",
