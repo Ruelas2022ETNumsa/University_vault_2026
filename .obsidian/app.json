@@ -1,5 +1,8 @@
 {
   "defaultViewMode": "preview",
   "showUnsupportedFiles": true,
-  "showInlineTitle": true
+  "showInlineTitle": true,
+  "propertiesInDocument": "visible",
+  "rightToLeft": false,
+  "deleteUnlinkedAttachments": "always"
 }
