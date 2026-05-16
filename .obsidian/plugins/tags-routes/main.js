@@ -68637,6 +68637,8 @@ var TagRoutesView = class extends import_obsidian4.ItemView {
       return this.highlightLinks.has(link) ? ((_a2 = this.plugin.settings.customSlot) == null ? void 0 : _a2[0].colorMap["linkParticleHighlightColor"].value) || "#ffffff" : ((_b = this.plugin.settings.customSlot) == null ? void 0 : _b[0].colorMap["linkParticleColor"].value) || "#ffffff";
     }).nodeThreeObject(this.createNodeThreeObject).onNodeClick((node) => {
       var _a2, _b, _c, _d, _e, _f, _g, _h, _i;
+      // ── Si venimos de un drag, no mover cámara ni abrir archivo ──
+      if (this._isDragging) return;
       if (!this.isLockScene) {
         const distance2 = this.getCameraDistance(node);
         const distRatio = 1 + distance2 / Math.hypot((_a2 = node.x) != null ? _a2 : 0, (_b = node.y) != null ? _b : 0, (_c = node.z) != null ? _c : 0);
