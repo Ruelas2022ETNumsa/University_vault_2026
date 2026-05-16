@@ -68703,7 +68703,7 @@ var TagRoutesView = class extends import_obsidian4.ItemView {
     }).onNodeDrag((node) => {
       // ── DRAG: marca estado dragging y congela la física ──
       this._isDragging = true;
-      this.Graph.cooldownTicks(1);
+      this.Graph.cooldownTicks(0);
     }).onNodeHover((node) => this.highlightOnNodeHover(node)).onLinkHover((link) => this.onLinkHover(link)).cooldownTicks(1e4);
     if ((_a = this.plugin.settings.customSlot) == null ? void 0 : _a[0].toggle_selection_box) {
       this.createHighlightBox();

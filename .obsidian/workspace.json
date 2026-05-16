@@ -4,37 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "75943fe0305e5dcd",
+        "id": "90e209637f2ed7d7",
         "type": "tabs",
         "children": [
           {
-            "id": "6c6d597e71e7cc48",
+            "id": "e11720c62796553f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_app/TagsRoutes/logMessage.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "logMessage"
-            }
-          }
-        ]
-      },
-      {
-        "id": "ce195d913d6f9fa3",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "3a243bb4086e6e02",
-            "type": "leaf",
-            "state": {
-              "type": "tags-routes",
+              "type": "empty",
               "state": {},
-              "icon": "waypoints",
-              "title": "Tags routes"
+              "icon": "lucide-file",
+              "title": "Nueva pestaña"
             }
           }
         ]
@@ -210,10 +190,10 @@
       "tags-routes:Open tags routes": false
     }
   },
-  "active": "5c9982bb44437a88",
+  "active": "e11720c62796553f",
   "lastOpenFiles": [
-    "_appX/tags_notes.md",
     "_app/TagsRoutes/logMessage.md",
+    "_appX/tags_notes.md",
     "_appX/tags_notes 1.md",
     "_appX/main.js",
     "_app/TagsRoutes/reports/TagReport_frontmatter_tag_Parte_II.md",
