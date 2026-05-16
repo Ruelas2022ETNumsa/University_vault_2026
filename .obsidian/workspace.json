@@ -11,10 +11,30 @@
             "id": "e11720c62796553f",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "_app/TagsRoutes/logMessage.md",
+                "mode": "preview",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nueva pestaña"
+              "title": "logMessage"
+            }
+          }
+        ]
+      },
+      {
+        "id": "04a2283f1a5507d4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b61020244f58c59d",
+            "type": "leaf",
+            "state": {
+              "type": "tags-routes",
+              "state": {},
+              "icon": "waypoints",
+              "title": "Tags routes"
             }
           }
         ]
@@ -190,7 +210,7 @@
       "tags-routes:Open tags routes": false
     }
   },
-  "active": "e11720c62796553f",
+  "active": "5c9982bb44437a88",
   "lastOpenFiles": [
     "_app/TagsRoutes/logMessage.md",
     "_appX/tags_notes.md",

@@ -657,3 +657,13 @@
 |[2026-05-16 18:07:01] |After filtered pathes=>|| filtered nodes: |9|  links:| 185|
 |[2026-05-16 18:07:01] |Tags parse completed=>||  tag nodes: |15| tag links:| 51|
 |[2026-05-16 18:07:01] |tags num:| 15| broken files: |0| tag links:| 51|
+
+
+
+||||||||
+|-:|-:|-:|-:|-:|-:|-:|
+|[2026-05-16 18:16:49] |File parse completed=>|| markdown and linked files nodes:| 151| total file links:| 177|
+|[2026-05-16 18:16:49] |add tags and other files=>||  total nodes: |166|  total links:| 228|
+|[2026-05-16 18:16:49] |After filtered pathes=>|| filtered nodes: |9|  links:| 185|
+|[2026-05-16 18:16:49] |Tags parse completed=>||  tag nodes: |15| tag links:| 51|
+|[2026-05-16 18:16:49] |tags num:| 15| broken files: |0| tag links:| 51|
