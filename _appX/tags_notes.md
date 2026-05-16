@@ -563,4 +563,51 @@ Se realizará **backup a versión anterior** desde `_appX/backups/` antes de con
 
 ---
 
-*Última actualización: sesión 7 — Opción A funciona para drag pero vecinos no siguen al nodo. Pendiente Opción C.*
+*Última actualización: sesión 7 — Opción A: drag funciona pero vecinos no siguen. Opción C: mismos síntomas + navegación 3D bloqueada. Pendiente nueva estrategia.*
+
+---
+
+### Sesión 7 (continuación 2) — Opción C aplicada: FALLIDA ⚠️
+
+**Resultado:** igual que Opción A — el nodo se arrastra y queda fijo, pero los vecinos no lo siguen. ❌
+
+**Problema adicional introducido:** la navegación 3D con click sobre espacio vacío quedó bloqueada. Antes se podía hacer click en el vacío y rotar/mover toda la escena; ahora eso dejó de funcionar. ❌
+
+---
+
+#### Por qué siguen sin moverse los vecinos
+
+La hipótesis de la Opción C era que sobreescribiendo `__initialFixedPos` con valores reales, la librería no borraría `fx/fy/fz` en `dragend` y D3 respetaría el nodo como ancla mientras la física jalaba a los vecinos. No funcionó.
+
+Posible causa: `__initialFixedPos` lo lee la librería en su propio `dragend` handler **antes** de que nuestro `onNodeDrag` haya podido sobreescribirlo, porque `dragstart` ocurre antes que el primer `drag`. Es decir, el orden real es:
+
+```
+dragstart (librería) → guarda __initialFixedPos = {fx:undef, fy:undef, fz:undef}
+   ↓
+drag frame 1 (librería) → llama onNodeDrag (nuestro handler) → sobreescribimos __initialFixedPos
+   ↓
+... frames siguientes ...
+   ↓
+dragend (librería) → lee __initialFixedPos → ya tiene valores reales → NO borra fx/fy/fz ✅
+   ↓
+onNodeDragEnd (nuestro handler) → re-pone fx/fy/fz ✅
+```
+
+Si el orden es ese, __initialFixedPos debería funcionar. Pero los vecinos igual no se mueven, lo que sugiere que el problema no es `fx/fy/fz` siendo borrados — es que **D3 no aplica fuerzas de enlace sobre nodos con `fx/fy/fz` fijos durante el drag** de la forma esperada, o que la velocidad del drag es mayor que la velocidad de respuesta de la simulación.
+
+#### Por qué se bloqueó la navegación 3D
+
+`_isDragging` se pone en `true` en `onNodeDrag` pero solo vuelve a `false` después de 150ms via `setTimeout` en `onNodeDragEnd`. Si el usuario hace click sobre el espacio vacío (que internamente puede disparar un `onNodeClick` con `node=null` u otro evento), el flag `_isDragging` podría interferir con los controles de cámara. Además, `enableNavigationControls` en la librería se deshabilita durante el drag (`controls3.enabled = false` en `dragstart`) y se reactiva en `dragend` — si algo interrumpe ese ciclo, los controles quedan deshabilitados.
+
+---
+
+#### Pendiente — nueva dirección
+
+Ambas opciones fallan en el mismo punto: los vecinos no siguen al nodo durante el drag. El mecanismo de `fx/fy/fz` de D3 ancla el nodo arrastrado pero no actúa como "imán" para los vecinos durante el movimiento activo — solo lo hace cuando la simulación converge en reposo.
+
+Posibles causas reales a investigar:
+- La fuerza de enlace de D3 actúa sobre velocidades, no sobre posiciones absolutas. Durante un drag rápido, la fuerza no alcanza a mover los vecinos lo suficiente antes del siguiente frame.
+- `enableNavigationControls` / `controls3.enabled` puede estar interfiriendo con el comportamiento esperado.
+- El drag de vecinos puede requerir manipulación directa de sus posiciones Three.js, no solo confiar en D3.
+
+**Antes de continuar:** revisar cómo implementa el drag con vecinos el plugin original de Obsidian (el grafo nativo), ya que tiene exactamente este comportamiento funcionando.

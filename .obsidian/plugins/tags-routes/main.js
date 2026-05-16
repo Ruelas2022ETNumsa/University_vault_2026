@@ -68637,8 +68637,6 @@ var TagRoutesView = class extends import_obsidian4.ItemView {
       return this.highlightLinks.has(link) ? ((_a2 = this.plugin.settings.customSlot) == null ? void 0 : _a2[0].colorMap["linkParticleHighlightColor"].value) || "#ffffff" : ((_b = this.plugin.settings.customSlot) == null ? void 0 : _b[0].colorMap["linkParticleColor"].value) || "#ffffff";
     }).nodeThreeObject(this.createNodeThreeObject).onNodeClick((node) => {
       var _a2, _b, _c, _d, _e, _f, _g, _h, _i;
-      // ── Si venimos de un drag, no mover cámara ni abrir archivo ──
-      if (this._isDragging) return;
       if (!this.isLockScene) {
         const distance2 = this.getCameraDistance(node);
         const distRatio = 1 + distance2 / Math.hypot((_a2 = node.x) != null ? _a2 : 0, (_b = node.y) != null ? _b : 0, (_c = node.z) != null ? _c : 0);
@@ -68691,30 +68689,9 @@ var TagRoutesView = class extends import_obsidian4.ItemView {
         this.Graph.graphData(this.gData);
       }
     }).onNodeDragEnd((node) => {
-      // ── DRAG END (Opción C): re-ancla el nodo tras el delete que hace la librería ──
-      // La librería borra fx/fy/fz justo antes de llamar aquí cuando el nodo no estaba
-      // fijo antes del drag. Los reponemos de inmediato para que D3 lo respete como ancla.
       node.fx = node.x;
       node.fy = node.y;
       node.fz = node.z;
-      // Reactivar física para que fuerzas de enlace traigan a los vecinos hacia el nodo
-      this.Graph.d3AlphaTarget(0.3).resetCountdown();
-      // Bajar alpha después de 1.5s para que vecinos paren de moverse
-      setTimeout(() => { this.Graph.d3AlphaTarget(0).resetCountdown(); }, 1500);
-      this.Graph.cooldownTicks(Infinity);
-      // Delay para que onNodeClick que se dispara al soltar no lo confunda con drag
-      setTimeout(() => { this._isDragging = false; }, 150);
-    }).onNodeDrag((node) => {
-      // ── DRAG (Opción C): ancla el nodo y engaña a la librería para preservar fx/fy/fz ──
-      // La librería en dragstart guarda __initialFixedPos = {fx:undefined, fy:undefined, fz:undefined}
-      // cuando el nodo no estaba fijo. En dragend hace delete node[fc] si initFixedPos[fc] === undefined.
-      // Solución: sobreescribir __initialFixedPos con valores reales -> la librería NO borrará fx/fy/fz.
-      this._isDragging = true;
-      node.__initialFixedPos = { fx: node.x, fy: node.y, fz: node.z };
-      node.fx = node.x;
-      node.fy = node.y;
-      node.fz = node.z;
-      // NO bloqueamos d3AlphaTarget -> física activa -> vecinos se arrastran con el nodo
     }).onNodeHover((node) => this.highlightOnNodeHover(node)).onLinkHover((link) => this.onLinkHover(link)).cooldownTicks(1e4);
     if ((_a = this.plugin.settings.customSlot) == null ? void 0 : _a[0].toggle_selection_box) {
       this.createHighlightBox();
