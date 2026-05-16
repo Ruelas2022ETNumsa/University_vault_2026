@@ -527,3 +527,43 @@
 |[2026-05-15 21:34:05] |After filtered pathes=>|| filtered nodes: |9|  links:| 185|
 |[2026-05-15 21:34:05] |Tags parse completed=>||  tag nodes: |14| tag links:| 51|
 |[2026-05-15 21:34:05] |tags num:| 14| broken files: |0| tag links:| 51|
+
+
+
+||||||||
+|-:|-:|-:|-:|-:|-:|-:|
+|[2026-05-15 22:15:28] |File parse completed=>|| markdown and linked files nodes:| 151| total file links:| 177|
+|[2026-05-15 22:15:28] |add tags and other files=>||  total nodes: |166|  total links:| 228|
+|[2026-05-15 22:15:28] |After filtered pathes=>|| filtered nodes: |9|  links:| 185|
+|[2026-05-15 22:15:28] |Tags parse completed=>||  tag nodes: |15| tag links:| 51|
+|[2026-05-15 22:15:28] |tags num:| 15| broken files: |0| tag links:| 51|
+
+
+
+||||||||
+|-:|-:|-:|-:|-:|-:|-:|
+|[2026-05-15 22:15:33] |File parse completed=>|| markdown and linked files nodes:| 151| total file links:| 177|
+|[2026-05-15 22:15:33] |add tags and other files=>||  total nodes: |166|  total links:| 228|
+|[2026-05-15 22:15:33] |After filtered pathes=>|| filtered nodes: |9|  links:| 185|
+|[2026-05-15 22:15:33] |Tags parse completed=>||  tag nodes: |15| tag links:| 51|
+|[2026-05-15 22:15:33] |tags num:| 15| broken files: |0| tag links:| 51|
+
+
+
+||||||||
+|-:|-:|-:|-:|-:|-:|-:|
+|[2026-05-15 22:16:53] |File parse completed=>|| markdown and linked files nodes:| 151| total file links:| 177|
+|[2026-05-15 22:16:53] |add tags and other files=>||  total nodes: |166|  total links:| 228|
+|[2026-05-15 22:16:53] |After filtered pathes=>|| filtered nodes: |9|  links:| 185|
+|[2026-05-15 22:16:53] |Tags parse completed=>||  tag nodes: |15| tag links:| 51|
+|[2026-05-15 22:16:53] |tags num:| 15| broken files: |0| tag links:| 51|
+
+
+
+||||||||
+|-:|-:|-:|-:|-:|-:|-:|
+|[2026-05-15 22:18:53] |File parse completed=>|| markdown and linked files nodes:| 151| total file links:| 177|
+|[2026-05-15 22:18:53] |add tags and other files=>||  total nodes: |166|  total links:| 228|
+|[2026-05-15 22:18:53] |After filtered pathes=>|| filtered nodes: |9|  links:| 185|
+|[2026-05-15 22:18:53] |Tags parse completed=>||  tag nodes: |15| tag links:| 51|
+|[2026-05-15 22:18:53] |tags num:| 15| broken files: |0| tag links:| 51|

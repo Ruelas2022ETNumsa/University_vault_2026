@@ -68689,9 +68689,16 @@ var TagRoutesView = class extends import_obsidian4.ItemView {
         this.Graph.graphData(this.gData);
       }
     }).onNodeDragEnd((node) => {
+      // ── DRAG: nodo queda fijo donde se suelta, nodos conectados le siguen ──
+      // fx/fy/fz → coordenadas fijas que la física de D3-force respeta
+      // cooldownTicks(Infinity) → reactiva la simulación para que los vecinos se reajusten
       node.fx = node.x;
       node.fy = node.y;
       node.fz = node.z;
+      this.Graph.cooldownTicks(Infinity);
+    }).onNodeDrag((node) => {
+      // ── DRAG: congela la física mientras se arrastra para evitar rebotes ──
+      this.Graph.cooldownTicks(0);
     }).onNodeHover((node) => this.highlightOnNodeHover(node)).onLinkHover((link) => this.onLinkHover(link)).cooldownTicks(1e4);
     if ((_a = this.plugin.settings.customSlot) == null ? void 0 : _a[0].toggle_selection_box) {
       this.createHighlightBox();
