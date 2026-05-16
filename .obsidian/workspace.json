@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "a60036dc6239e31d",
+        "id": "f7b1725d317020bf",
         "type": "tabs",
         "children": [
           {
-            "id": "b1fcc74dea39f008",
+            "id": "348ab42ce3fb052b",
             "type": "leaf",
             "state": {
-              "type": "empty",
+              "type": "tags-routes",
               "state": {},
-              "icon": "lucide-file",
-              "title": "Nueva pestaña"
+              "icon": "waypoints",
+              "title": "Tags routes"
             }
           }
         ]
@@ -187,13 +187,14 @@
       "templates:Insertar plantilla": false,
       "command-palette:Abrir paleta de comandos": false,
       "obsidian-git:Open Git source control": false,
-      "remotely-save:Remotely Save": false
+      "remotely-save:Remotely Save": false,
+      "tags-routes:Open tags routes": false
     }
   },
-  "active": "b1fcc74dea39f008",
+  "active": "348ab42ce3fb052b",
   "lastOpenFiles": [
-    "_appX/tags_notes.md",
     "_app/TagsRoutes/logMessage.md",
+    "_appX/tags_notes.md",
     "Semestres/3.Semester/ETN302/0.ETN-302.md",
     "_appX/tags_notes.md.b9d345bf8f6a917a6c2372efdb078fb7.tmp",
     "_appX/tags_notes 1.md",
