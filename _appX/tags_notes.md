@@ -484,4 +484,83 @@ Durante el drag, fijar temporalmente todos los nodos con su posición actual. Al
 
 ---
 
-*Última actualización: sesión 7 — diagnóstico completo del parche drag-and-drop.*
+---
+
+### Sesión 7 (continuación) — Opción A aplicada: PARCIALMENTE FUNCIONAL ⚠️
+
+**Resultado:** el nodo se arrastra correctamente y queda fijo donde se suelta. ✅
+
+**Problema pendiente:** los nodos conectados al nodo arrastrado **no lo siguen** — quedan en sus posiciones originales mientras el nodo se mueve, y al soltar no se reajustan hacia él. ❌
+
+---
+
+#### Por qué fallan los vecinos
+
+El comportamiento esperado es que al arrastrar un nodo, la física D3 mantenga las distancias de enlace y jale suavemente a los nodos conectados. Eso requiere que la simulación **esté activa** durante el drag con alpha suficiente para que las fuerzas de enlace actúen.
+
+Lo que hace la Opción A: neutraliza completamente `d3AlphaTarget` durante el drag (no-op). Esto resuelve el problema de que el nodo regrese a su lugar, pero como efecto secundario también desactiva las fuerzas que mueven a los vecinos — la física queda totalmente congelada para todos los nodos.
+
+**El dilema:** necesitamos que la física esté activa (para mover vecinos) pero que no jale el nodo arrastrado de vuelta (para que el drag funcione). Son dos requisitos contradictorios con el mecanismo actual.
+
+---
+
+#### Causa raíz del problema de vecinos
+
+La física D3 mueve vecinos a través del mecanismo de fuerzas de enlace (`d3Force("link")`). Para que eso ocurra necesita:
+1. `d3AlphaTarget` > 0 → simulación activa
+2. El nodo arrastrado con `fx/fy/fz` fijos → D3 lo respeta como ancla y mueve los vecinos hacia él
+
+La Opción A bloquea el punto 1 con el no-op, por eso los vecinos no se mueven.
+
+La solución correcta es: **mantener la física activa** (no bloquear `d3AlphaTarget`) pero hacer que la posición del nodo arrastrado sea inmune a las fuerzas. Eso ya lo hacemos con `fx/fy/fz` — la librería ya los fija en cada frame. El problema es que después de fijar `fx/fy/fz`, la librería llama `d3AlphaTarget(0.3)` que hace que D3 recalcule y mueva el nodo de vuelta **ignorando `fx/fy/fz`** en ese tick.
+
+---
+
+#### Hipótesis: ¿por qué D3 ignora fx/fy/fz con alpha 0.3?
+
+En D3-force, `fx/fy/fz` son coordenadas fijas que el simulador **debe respetar** — el nodo no debería moverse aunque la simulación esté activa. Si el nodo igual regresa, hay dos posibilidades:
+
+1. **La librería borra `fx/fy/fz` en algún punto del ciclo** antes de que D3 aplique las fuerzas — confirmado: en `dragend` la librería hace `delete node[fc]` si `initFixedPos[fc] === void 0`
+2. **El objeto Three.js del nodo se actualiza por separado** desde la posición 3D del mesh, independientemente de `fx/fy/fz` de D3
+
+---
+
+#### Próxima dirección a explorar — Opción C
+
+No bloquear `d3AlphaTarget`. En cambio, dejar que la física corra normalmente durante el drag y confiar en que `fx/fy/fz` anclen el nodo arrastrado mientras las fuerzas de enlace mueven a los vecinos. El problema original (nodo que regresa) se resolvería asegurando que `fx/fy/fz` **no sean borrados** en ningún punto del ciclo.
+
+Para esto hay que interceptar el `delete node[fc]` que la librería hace en `dragend` (~línea 65,481). El bloque en la librería es:
+
+```javascript
+// dragend interno de la librería (~línea 65,478):
+if (initFixedPos) {
+  ["x", "y", "z"].forEach(function(c2) {
+    var fc = "f".concat(c2);
+    if (initFixedPos[fc] === void 0) {
+      delete node[fc];  // ← aquí borra fx/fy/fz si el nodo no estaba fijo antes
+    }
+  });
+  delete node.__initialFixedPos;
+  delete node.__initialPos;
+  if (node.__dragged) {
+    delete node.__dragged;
+    state.onNodeDragEnd(node, translate);  // ← recién aquí llama nuestro handler
+  }
+}
+```
+
+**Estrategia Opción C:** en `onNodeDrag` (primer frame), marcar el nodo como si ya tuviera `fx/fy/fz` antes del drag usando `__initialFixedPos`. Si `__initialFixedPos` tiene valores en `fx/fy/fz`, la librería no los borra en `dragend`. Esto se puede lograr forzando `node.__initialFixedPos = { fx: node.x, fy: node.y, fz: node.z }` al inicio del drag — pero hay que hacerlo **antes** de que la librería establezca `__initialFixedPos` en `dragstart`.
+
+Alternativa más simple de Opción C: en `onNodeDragEnd` (que se llama justo antes del `delete`... en realidad justo **después**), re-poner `fx/fy/fz` inmediatamente — que ya lo hacemos. El problema es el instante entre el `delete` y nuestro `onNodeDragEnd` donde el nodo queda libre.
+
+**Conclusión:** revertir a backup anterior y diseñar Opción C antes de aplicar.
+
+---
+
+#### Estado del main.js
+
+Se realizará **backup a versión anterior** desde `_appX/backups/` antes de continuar con Opción C.
+
+---
+
+*Última actualización: sesión 7 — Opción A funciona para drag pero vecinos no siguen al nodo. Pendiente Opción C.*

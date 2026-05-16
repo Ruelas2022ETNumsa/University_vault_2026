@@ -4,11 +4,31 @@
     "type": "split",
     "children": [
       {
-        "id": "19f1affd4e06ca30",
+        "id": "4c165d021b2a02c0",
         "type": "tabs",
         "children": [
           {
-            "id": "4c3456ed34edef8b",
+            "id": "6eeb58333f6f1339",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_app/TagsRoutes/logMessage.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "logMessage"
+            }
+          }
+        ]
+      },
+      {
+        "id": "ae4a67c0bfb67740",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a8ea6abeff60e300",
             "type": "leaf",
             "state": {
               "type": "tags-routes",
@@ -191,8 +211,9 @@
       "tags-routes:Open tags routes": false
     }
   },
-  "active": "4c3456ed34edef8b",
+  "active": "6eeb58333f6f1339",
   "lastOpenFiles": [
+    "Semestres/3.Semester/ETN302/0.ETN-302.md",
     "_app/TagsRoutes/logMessage.md",
     "_appX/tags_notes.md.b9d345bf8f6a917a6c2372efdb078fb7.tmp",
     "_appX/tags_notes.md",
@@ -207,7 +228,6 @@
     "Semestres/3.Semester/ETN302/3.302/3.302.add/Mon-28-November-22_5-15-2.md",
     "Semestres/3.Semester/ETN302/3.302/E3.302.md",
     "_app/TagsRoutes/reports/TagReport_frontmatter_tag_ETN-302.md",
-    "Semestres/3.Semester/ETN302/0.ETN-302.md",
     "Semestres/3.Semester/ETN302/2.302.md",
     "Semestres/3.Semester/ETN302/3.302.md",
     "Semestres/3.Semester/ETN302/3.302/T3.302.md",
