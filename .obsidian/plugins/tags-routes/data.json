@@ -18,75 +18,75 @@
   "hidingFilter": "",
   "dark": [
     {
-      "node_size": 6,
+      "node_size": 5,
       "node_repulsion": 0,
-      "link_distance": 1,
+      "link_distance": 17,
       "link_width": 1,
-      "link_particle_size": 4,
-      "link_particle_number": 1,
+      "link_particle_size": 2,
+      "link_particle_number": 2,
       "text_color_angle": 0,
-      "bloom_strength": 1,
+      "bloom_strength": 2,
       "toggle_global_map": true,
       "toggle_label_display": false,
       "toggle_highlight_track_mode": false,
-      "toggle_selection_box": false,
+      "toggle_selection_box": true,
       "colorMapSource": "Default dark",
       "colorMap": {
         "markdown": {
           "name": "Spiral Arm",
-          "value": "#4fc3f7"
+          "value": "#4FC3F7"
         },
         "attachment": {
           "name": "Star Cluster",
-          "value": "#81d4fa"
+          "value": "#81D4FA"
         },
         "excalidraw": {
           "name": "Ice Nebula",
-          "value": "#00b4d8"
+          "value": "#00B4D8"
         },
         "pdf": {
           "name": "Deep Blue",
-          "value": "#1565c0"
+          "value": "#1565C0"
         },
         "tag": {
           "name": "Galactic Core",
-          "value": "#ffb347"
+          "value": "#FFB347"
         },
         "frontmatter_tag": {
           "name": "Solar Burst",
-          "value": "#ff8c42"
+          "value": "#FF8C42"
         },
         "screenshot": {
           "name": "Amber Glow",
-          "value": "#ffc857"
+          "value": "#FFC857"
         },
         "broken": {
           "name": "Red Dwarf",
-          "value": "#ff4444"
+          "value": "#FF4444"
         },
         "nodeFocusColor": {
           "name": "Nova Flash",
-          "value": "#ffd166"
+          "value": "#FFD166"
         },
         "nodeHighlightColor": {
           "name": "Arc Light",
-          "value": "#00e5ff"
+          "value": "#00E5FF"
         },
         "linkHighlightColor": {
           "name": "Starlight",
-          "value": "#e3f2fd"
+          "value": "#E3F2FD"
         },
         "linkNormalColor": {
           "name": "Cosmic Dust",
-          "value": "#5b8fb9"
+          "value": "#5B8FB9"
         },
         "linkParticleColor": {
           "name": "Photon",
-          "value": "#b3e5fc"
+          "value": "#B3E5FC"
         },
         "linkParticleHighlightColor": {
           "name": "Flare",
-          "value": "#ffb347"
+          "value": "#FFB347"
         },
         "selectionBoxColor": {
           "name": "Gold Ring",
@@ -97,7 +97,7 @@
           "value": "#080808"
         }
       },
-      "cameraDistance": 1493.4474746936673
+      "cameraDistance": 0
     },
     {
       "node_size": 5,

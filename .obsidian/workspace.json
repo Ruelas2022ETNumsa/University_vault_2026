@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "f6377706900167e6",
+        "id": "616fc428355a46dc",
         "type": "tabs",
         "children": [
           {
-            "id": "453dd4c5afd61b3e",
+            "id": "521acf7a0250a2f2",
             "type": "leaf",
             "state": {
               "type": "tags-routes",
@@ -74,7 +74,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 308.5026054382324
+    "width": 308.5026054382324,
+    "collapsed": true
   },
   "right": {
     "id": "3809ea2d0d62c2a5",
@@ -190,11 +191,11 @@
       "tags-routes:Open tags routes": false
     }
   },
-  "active": "453dd4c5afd61b3e",
+  "active": "521acf7a0250a2f2",
   "lastOpenFiles": [
     "_app/TagsRoutes/logMessage.md",
-    "_appX/main.js",
     "_appX/tags_notes 1.md",
+    "_appX/main.js",
     "_appX/tags_notes.md",
     "_app/TagsRoutes/reports/TagReport_frontmatter_tag_Parte_II.md",
     "_app/TagsRoutes/reports/TagReport_frontmatter_tag_Leaves.md",
