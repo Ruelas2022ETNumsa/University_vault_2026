@@ -65489,7 +65489,7 @@ var _3dForceGraph = index2({
               state.onNodeDragEnd(node, translate);
             }
           }
-          state.forceGraph.d3AlphaTarget(0).resetCountdown();
+          state.forceGraph.d3AlphaTarget(0.3).resetCountdown();
           if (state.enableNavigationControls) {
             controls3.enabled = true;
             controls3.domElement && controls3.domElement.ownerDocument && controls3.domElement.ownerDocument.dispatchEvent(
@@ -68691,19 +68691,35 @@ var TagRoutesView = class extends import_obsidian4.ItemView {
         this.Graph.graphData(this.gData);
       }
     }).onNodeDragEnd((node) => {
-      // ── DRAG END: nodo queda fijo donde se suelta, nodos conectados le siguen ──
-      // fx/fy/fz → coordenadas fijas que la física de D3-force respeta
-      // cooldownTicks(Infinity) → reactiva la simulación para que los vecinos se reajusten
+      // ── DRAG END (Opción A): restaura d3AlphaTarget original, fija nodo en su nueva posición ──
+      // 1. Restaurar d3AlphaTarget original que fue reemplazado en onNodeDrag
+      if (this._origAlphaTarget) {
+        this.Graph.d3AlphaTarget = this._origAlphaTarget;
+        this._origAlphaTarget = null;
+      }
+      // 2. Fijar la posición final del nodo para que la física no lo regrese
       node.fx = node.x;
       node.fy = node.y;
       node.fz = node.z;
+      // 3. Bajar el alpha a 0 y reactivar ticks para que vecinos se reajusten suavemente
+      this.Graph.d3AlphaTarget(0).resetCountdown();
       this.Graph.cooldownTicks(Infinity);
-      // Delay para que onNodeClick que se dispara al soltar no lo confunda con drag
+      // 4. Delay para que onNodeClick que se dispara al soltar no lo confunda con drag
       setTimeout(() => { this._isDragging = false; }, 150);
     }).onNodeDrag((node) => {
-      // ── DRAG: marca estado dragging y congela la física ──
+      // ── DRAG (Opción A): intercepta d3AlphaTarget para que la física no interfiera ──
       this._isDragging = true;
-      this.Graph.cooldownTicks(0.3);
+      // Monkey-patch: reemplaza d3AlphaTarget con no-op mientras dure el drag.
+      // La librería llama d3AlphaTarget(0.3) en cada frame de drag; esto lo neutraliza.
+      // El no-op devuelve this.Graph para mantener el encadenamiento (.resetCountdown()).
+      if (!this._origAlphaTarget) {
+        this._origAlphaTarget = this.Graph.d3AlphaTarget.bind(this.Graph);
+        this.Graph.d3AlphaTarget = () => this.Graph;
+      }
+      // Fijar posición actual del nodo para que D3 no lo jale
+      node.fx = node.x;
+      node.fy = node.y;
+      node.fz = node.z;
     }).onNodeHover((node) => this.highlightOnNodeHover(node)).onLinkHover((link) => this.onLinkHover(link)).cooldownTicks(1e4);
     if ((_a = this.plugin.settings.customSlot) == null ? void 0 : _a[0].toggle_selection_box) {
       this.createHighlightBox();
