@@ -13,9 +13,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Semestres/3.Semester/ETN302/1.302.md",
+                "file": "Semestres/3.Semester/ETN302/0.ETN-302.md",
                 "mode": "source",
-                "source": true,
+                "source": false,
                 "backlinks": true,
                 "backlinkOpts": {
                   "collapseAll": false,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "1.302"
+              "title": "0.ETN-302"
             }
           }
         ]
@@ -207,6 +207,9 @@
   },
   "active": "e63484d2eb8b1e08",
   "lastOpenFiles": [
+    "Semestres/3.Semester/ETN302/1.302.md",
+    "Semestres/3.Semester/ETN302/1.302/1.302.add/T1.2.302.md",
+    "Semestres/3.Semester/ETN302/1.302/T1.302.md",
     "Semestres/3.Semester/ETN302/0.ETN-302.md",
     "_app/TagsRoutes/logMessage.md",
     "_app/TagsRoutes/reports/TagReport_frontmatter_tag_Parte_II.md",
@@ -242,10 +245,7 @@
     "Semestres/3.Semester/ETN302/2.302/AA2.302.md",
     "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.6.302-01.png",
     "Semestres/3.Semester/ETN302/3.302/3.302.add/T3.6.302-1.md",
-    "Semestres/3.Semester/ETN302/3.302/TT3.302.md",
-    "Semestres/3.Semester/ETN302/3.302/3.302.add/T3.6.302-5.md",
     "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.6.302-5.png",
-    "Semestres/3.Semester/ETN302/2.302/D2.302.md",
     "_app/TagsRoutes/reports",
     "_appX/tags-routes_backup.rar",
     "_appX/tags-routes_backup/styles.css",
