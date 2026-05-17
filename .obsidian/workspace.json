@@ -4,22 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "e86fbebf8d9da75a",
+        "id": "59d6cdf9376e92dd",
         "type": "tabs",
         "children": [
           {
-            "id": "e63484d2eb8b1e08",
+            "id": "6fa54a9d28ecc171",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Semestres/3.Semester/ETN302/12.302.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "12.302"
+              "title": "Nueva pestaña"
             }
           }
         ]
@@ -163,8 +158,10 @@
       "tags-routes:Open tags routes": false
     }
   },
-  "active": "e63484d2eb8b1e08",
+  "active": "6fa54a9d28ecc171",
   "lastOpenFiles": [
+    "Semestres/3.Semester/ETN302/11.302.md",
+    "Semestres/3.Semester/ETN302/12.302.md",
     "Semestres/3.Semester/ETN302/Programa.md",
     "Semestres/3.Semester/ETN302/0.ETN-302.md",
     "Semestres/3.Semester/ETN302/1.302.md",
@@ -200,8 +197,6 @@
     "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.6.302-03.png",
     "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.6.302-2.png",
     "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.521.302-1.md",
-    "Semestres/3.Semester/ETN302/2.302/T2.302.md",
-    "Semestres/3.Semester/ETN302/2.302/AA2.302.md",
     "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.6.302-01.png",
     "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.6.302-5.png",
     "_app/TagsRoutes/reports",
