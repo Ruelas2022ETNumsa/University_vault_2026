@@ -13,22 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Semestres/3.Semester/ETN302/0.ETN-302.md",
+                "file": "Semestres/3.Semester/ETN302/12.302.md",
                 "mode": "source",
                 "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
+                "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "0.ETN-302"
+              "title": "12.302"
             }
           }
         ]
@@ -99,39 +90,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "b5e3eb4bd8eb6b5a",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "_appX/tags_notes 1.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              },
-              "icon": "links-coming-in",
-              "title": "Enlaces entrantes de tags_notes 1"
-            }
-          },
-          {
-            "id": "c1366faee90493b3",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "_appX/tags_notes 1.md",
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              },
-              "icon": "links-going-out",
-              "title": "Enlaces salientes de tags_notes 1"
-            }
-          },
-          {
             "id": "d969b23fb115afb1",
             "type": "leaf",
             "state": {
@@ -186,7 +144,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -207,10 +165,11 @@
   },
   "active": "e63484d2eb8b1e08",
   "lastOpenFiles": [
+    "Semestres/3.Semester/ETN302/Programa.md",
+    "Semestres/3.Semester/ETN302/0.ETN-302.md",
     "Semestres/3.Semester/ETN302/1.302.md",
     "Semestres/3.Semester/ETN302/1.302/1.302.add/T1.2.302.md",
     "Semestres/3.Semester/ETN302/1.302/T1.302.md",
-    "Semestres/3.Semester/ETN302/0.ETN-302.md",
     "_app/TagsRoutes/logMessage.md",
     "_app/TagsRoutes/reports/TagReport_frontmatter_tag_Parte_II.md",
     "_app/TagsRoutes/reports/TagReport_frontmatter_tag_Leaves.md",
@@ -244,7 +203,6 @@
     "Semestres/3.Semester/ETN302/2.302/T2.302.md",
     "Semestres/3.Semester/ETN302/2.302/AA2.302.md",
     "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.6.302-01.png",
-    "Semestres/3.Semester/ETN302/3.302/3.302.add/T3.6.302-1.md",
     "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.6.302-5.png",
     "_app/TagsRoutes/reports",
     "_appX/tags-routes_backup.rar",
