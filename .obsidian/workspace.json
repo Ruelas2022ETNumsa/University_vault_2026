@@ -154,8 +154,7 @@
       "templates:Insertar plantilla": false,
       "command-palette:Abrir paleta de comandos": false,
       "obsidian-git:Open Git source control": false,
-      "remotely-save:Remotely Save": false,
-      "tags-routes:Open tags routes": false
+      "remotely-save:Remotely Save": false
     }
   },
   "active": "6fa54a9d28ecc171",
