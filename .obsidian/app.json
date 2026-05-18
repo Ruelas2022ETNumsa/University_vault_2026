@@ -4,5 +4,6 @@
   "showInlineTitle": true,
   "propertiesInDocument": "visible",
   "rightToLeft": false,
-  "deleteUnlinkedAttachments": "always"
+  "deleteUnlinkedAttachments": "always",
+  "promptDelete": false
 }
