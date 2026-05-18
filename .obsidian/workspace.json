@@ -8,14 +8,14 @@
         "type": "tabs",
         "children": [
           {
-            "id": "67c67b1328f1d18c",
+            "id": "9ef558053644afc7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "rere.md",
                 "mode": "source",
-                "source": false,
+                "source": true,
                 "backlinks": false
               },
               "icon": "lucide-file",
@@ -79,7 +79,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 308.5026054382324
+    "width": 308.5026054382324,
+    "collapsed": true
   },
   "right": {
     "id": "3809ea2d0d62c2a5",
@@ -162,10 +163,10 @@
       "tags-routes:Open tags routes": false
     }
   },
-  "active": "535b7e765423c6b3",
+  "active": "9ef558053644afc7",
   "lastOpenFiles": [
-    "rere.md",
     "conflict-files-obsidian-git.md",
+    "rere.md",
     "Semestres/3.Semester/ETN302/11.302.md",
     "Semestres/3.Semester/ETN302/12.302.md",
     "Semestres/3.Semester/ETN302/Programa.md",
