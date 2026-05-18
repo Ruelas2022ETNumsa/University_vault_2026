@@ -11,10 +11,15 @@
             "id": "95caeaa4dd15335c",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "rere.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
               "icon": "lucide-file",
-              "title": "Nueva pestaña"
+              "title": "rere"
             }
           }
         ]
@@ -157,7 +162,7 @@
       "tags-routes:Open tags routes": false
     }
   },
-  "active": "535b7e765423c6b3",
+  "active": "95caeaa4dd15335c",
   "lastOpenFiles": [
     "rere.md",
     "Semestres/3.Semester/ETN302/11.302.md",
