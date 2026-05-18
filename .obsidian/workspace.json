@@ -8,16 +8,37 @@
         "type": "tabs",
         "children": [
           {
-            "id": "b510d722810f2615",
+            "id": "67c67b1328f1d18c",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "rere.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
               "icon": "lucide-file",
-              "title": "Nueva pestaña"
+              "title": "rere"
+            }
+          },
+          {
+            "id": "7bc3a46028dffbec",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "conflict-files-obsidian-git.md",
+                "mode": "preview",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "conflict-files-obsidian-git"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -157,9 +178,10 @@
       "tags-routes:Open tags routes": false
     }
   },
-  "active": "b510d722810f2615",
+  "active": "7bc3a46028dffbec",
   "lastOpenFiles": [
     "rere.md",
+    "conflict-files-obsidian-git.md",
     "Semestres/3.Semester/ETN302/11.302.md",
     "Semestres/3.Semester/ETN302/12.302.md",
     "Semestres/3.Semester/ETN302/Programa.md",
@@ -193,7 +215,6 @@
     "_app/TagsRoutes/graph-screenshot/graph-screenshot-2026-05-14-23-30-50.png",
     "_app/TagsRoutes/graph-screenshot/graph-screenshot-2026-05-14-23-30-57.png",
     "_app/TagsRoutes/graph-screenshot/graph-screenshot-2026-05-14-23-31-02.png",
-    "Semestres/3.Semester/ETN302/2.302/A2.302.md",
     "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.6.302-03.png",
     "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.6.302-2.png",
     "Semestres/3.Semester/ETN302/3.302/3.302.add/TE3.6.302-01.png",
