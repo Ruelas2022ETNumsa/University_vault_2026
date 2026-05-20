@@ -56,7 +56,7 @@ $linea = preg_replace('/[^a-zA-Z0-9.\-]/', '', $linea);
 
 > *"El siguiente archivo del núcleo es `ping_helper.php`, y acá hay una decisión de diseño importante que viene de la especificación misma del proyecto."*
 
-> *"La consigna exigía esta cadena exacta:"*
+> *"se exigía esta cadena exacta:"*
 
 ```
 Navegador → PHP → .bat → ping
@@ -64,7 +64,7 @@ Navegador → PHP → .bat → ping
 
 > *"No era opcional. PHP no puede ejecutar el ping directamente. Tiene que llamar a un archivo `.bat`, y ese `.bat` llama al ping de Windows. Dos archivos para una sola tarea, pero así lo pide la arquitectura."*
 
-**Sanitización antes de tocar el sistema operativo:**
+**filtración antes de tocar el sistema operativo:**
 ```php
 $destino_limpio = preg_replace('/[^a-zA-Z0-9.\-]/', '', $destino);
 ```
