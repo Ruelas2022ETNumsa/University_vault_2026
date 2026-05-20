@@ -91,7 +91,7 @@ preg_match_all('/(?:tiempo|time)\s*[=<]\s*(\d+(?:[.,]\d+)?)\s*ms/i', $salida, $m
 set "DESTINO=%~1"
 ping -n 3 -w 5000 %DESTINO%
 ```
-> *"Recibe el dominio como argumento `%~1` y ejecuta ping con 3 paquetes y 5 segundos de timeout. Nada más. Toda la lógica de parseo la hace el PHP, porque manejar texto en un .bat es mucho más frágil."*
+> *"Recibe el dominio como argumento `%~1` y ejecuta ping con 3 paquetes y 5 segundos de timeout. Nada más. "Toda la lectura y procesamiento de la salida la hace PHP, porque manejar texto en un .bat es mucho más frágil."*
 
 ---
 
