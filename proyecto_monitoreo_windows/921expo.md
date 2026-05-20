@@ -40,7 +40,7 @@ if ($linea === '' || $linea[0] === '#') continue;
 ```
 > *"Cualquier línea que empiece con `#` se ignora. Así el archivo de texto puede tener comentarios explicativos sin romper nada."*
 
-**Sanitizar la entrada:**
+**Filtrar la entrada:**
 ```php
 $linea = preg_replace('/[^a-zA-Z0-9.\-]/', '', $linea);
 ```
