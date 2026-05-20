@@ -10,3 +10,15 @@ function obtener_enlaces_numerados() {
 }
 ```
 
+
+### ping_online.php
+
+```php
+$equipo = isset($_GET['Equipo']) ? (int)$_GET['Equipo'] : 0;
+if (!array_key_exists($equipo, $enlaces)) {
+    header("Location: index.php"); exit;
+}
+$ping = hacer_ping($enlaces[$equipo]);
+```
+
+#
