@@ -6,17 +6,15 @@
 
 ## Entrada
 
-> *"Gracias [nombre]. Entonces ya sabemos cómo el sistema recolecta datos y los guarda. Ahora viene mi parte: cómo el usuario accede a toda esa información desde el navegador, y cómo el código lo hace posible."*
+ *"Gracias [nombre]. Entonces ya sabemos cómo el sistema recolecta datos y los guarda. Ahora viene mi parte: cómo el usuario accede a toda esa información desde el navegador, y cómo el código lo hace posible."*
 
-> *"La carpeta `web\` está organizada en tres bloques:"*
->
-> - **Núcleo común** — código que todos los demás archivos comparten. Nadie lee `enlaces.txt` directamente ni ejecuta el ping por su cuenta: lo hacen a través de acá. Si mañana cambia la lista de dominios o la forma de hacer ping, solo se toca este bloque.
->
-> - **Componente 2 (GET)** — la parte interactiva en tiempo real. El usuario hace clic en un botón, el navegador manda `?Equipo=1` en la URL, y el servidor responde con el resultado del ping al instante. Todo viaja en la URL, sin formularios.
->
-> - **Componente 3 (POST)** — los reportes históricos. El usuario elige un enlace, una fecha y un rango horario, envía el formulario, y el servidor consulta la base de datos y devuelve estadísticas y un gráfico. Los datos viajan en el cuerpo de la petición, no en la URL, porque son más complejos.
->
-> *"Archivos por bloque:"*
+ *"La carpeta `web\` está organizada en tres bloques:"*
+ 
+ - **Núcleo común** — funciones y estilos compartidos por toda la web. Sin lógica propia, solo utilidades.
+ - **Componente 2 (GET)** — ping en tiempo real desde el navegador.
+ - **Componente 3 (POST)** — reportes gráficos históricos consultando la base de datos.
+
+*"Archivos por bloque:"*
 > - **Núcleo común**: `enlaces.php`, `ping_helper.php`, `ping_web.bat`, `estilos.css`
 > - **Componente 2 (GET)**: `index.php`, `ping_online.php`, `ping_manual.php`, `estado_enlaces.php`, `gestionar_enlaces.php`
 > - **Componente 3 (POST)**: `reporte.php`, `comparar.php`
