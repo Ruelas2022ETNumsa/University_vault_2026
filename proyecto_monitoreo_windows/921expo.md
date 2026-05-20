@@ -357,3 +357,7 @@ $borders = array_map(function($c) {
 > *"Los problemas reales que resolvimos — la incompatibilidad de autenticación entre MySQL 8 y PHP 7.1, el parseo bilingüe del ping, los permisos de IIS, las funciones de PHP 8 que tuvimos que bajar a 7.1 — son exactamente lo que aparece cuando montás un sistema así en Windows en producción, no en un entorno de prueba limpio."*
 
 > *"Eso es todo de mi parte. ¿Preguntas?"*
+
+
+ARREGLOS:
+CAMBIAR LA PALABRA SANITIZA POR FLITRAR
