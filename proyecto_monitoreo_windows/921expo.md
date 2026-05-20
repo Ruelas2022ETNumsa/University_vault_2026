@@ -78,7 +78,7 @@ $salida = shell_exec($cmd);
 ```
 > *"`shell_exec()` invoca un comando del sistema operativo y captura su salida como string. `escapeshellarg()` agrega comillas alrededor del argumento para que los espacios no rompan el comando."*
 
-**Parseo bilingüe del resultado:**
+**Procesamiento de resultados en español e inglés:**
 ```php
 preg_match_all('/(?:tiempo|time)\s*[=<]\s*(\d+(?:[.,]\d+)?)\s*ms/i', $salida, $matches)
 ```
