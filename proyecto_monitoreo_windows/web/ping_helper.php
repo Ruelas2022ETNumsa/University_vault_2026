@@ -16,7 +16,6 @@ function hacer_ping($destino) {
         return ['salida' => 'ERROR: No se encontro ping_web.bat en ' . __DIR__,
                 'rtt_max' => -1];
     }
-
 	// Ejecuta el ping desde PHP
     $cmd = '"' . $bat . '" ' . escapeshellarg($destino_limpio) . ' 2>&1';
     $salida = shell_exec($cmd);
@@ -27,7 +26,6 @@ function hacer_ping($destino) {
                             'Revisa permisos de ' . $bat,
                 'rtt_max' => -1];
     }
-
     // Extrae tiempos de respuesta del ping
     $rtt_max = -1;
     if (preg_match_all('/(?:tiempo|time)\s*[=<]\s*(\d+(?:[.,]\d+)?)\s*ms/i', $salida, $matches)) {
@@ -43,3 +41,8 @@ function hacer_ping($destino) {
 	// Retorna salida y tiempo máximo
     return ['salida' => $salida, 'rtt_max' => $rtt_max];
 }
+
+
+
+
+
