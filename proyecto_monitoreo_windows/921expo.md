@@ -7,7 +7,6 @@
 ## Entrada
 
  *"Gracias [nombre]. Entonces ya sabemos cómo el sistema recolecta datos y los guarda. Ahora viene mi parte: cómo el usuario accede a toda esa información desde el navegador, y cómo el código lo hace posible."*
-
  *"La carpeta `web\` está organizada en tres bloques:"*
  
  - **Núcleo común** — funciones y estilos compartidos por toda la web. Sin lógica propia, solo utilidades.
