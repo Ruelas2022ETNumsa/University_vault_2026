@@ -1,0 +1,309 @@
+/* ============================================================
+   estilos.css — Sistema de Monitoreo TCP/IP — ETN921
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Exo+2:wght@300;500;700&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+    --fondo:      #0a0f1a;
+    --superficie: #111827;
+    --borde:      #1e3a5f;
+    --acento:     #00e5ff;
+    --acento2:    #7c3aed;
+    --texto:      #d1d5db;
+    --texto-dim:  #6b7280;
+    --ok:         #10b981;
+    --warn:       #f59e0b;
+    --error:      #ef4444;
+    --mono:       'Share Tech Mono', monospace;
+    --sans:       'Exo 2', sans-serif;
+}
+
+body {
+    font-family: var(--sans);
+    background: var(--fondo);
+    color: var(--texto);
+    min-height: 100vh;
+    background-image:
+        radial-gradient(ellipse at 20% 0%, rgba(0,229,255,0.05) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 100%, rgba(124,58,237,0.05) 0%, transparent 60%);
+}
+
+/* ── Header ── */
+header {
+    border-bottom: 1px solid var(--borde);
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(8px);
+    padding: 1.5rem 2rem;
+}
+.header-inner { max-width: 1100px; margin: 0 auto; }
+header h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--acento);
+    letter-spacing: 2px;
+    font-family: var(--mono);
+}
+.subtitulo { color: var(--texto-dim); font-size: 0.85rem; margin-top: 0.2rem; }
+
+/* ── Main ── */
+main {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* ── Tarjetas ── */
+.tarjeta {
+    background: var(--superficie);
+    border: 1px solid var(--borde);
+    border-radius: 12px;
+    padding: 1.8rem 2rem;
+}
+.tarjeta h2 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--acento);
+    border-left: 3px solid var(--acento);
+    padding-left: 0.7rem;
+    margin-bottom: 1rem;
+    font-family: var(--mono);
+}
+.tarjeta p { color: var(--texto-dim); font-size: 0.9rem; margin-bottom: 1rem; }
+.resaltado { color: var(--acento); }
+
+/* ── Botones de enlace (grid) ── */
+.grid-enlaces {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 0.6rem;
+    margin-bottom: 1.2rem;
+}
+.btn-enlace {
+    display: block;
+    background: rgba(0,229,255,0.07);
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    padding: 0.6rem 0.8rem;
+    color: var(--acento);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-family: var(--mono);
+    text-align: center;
+    transition: background 0.2s, border-color 0.2s;
+}
+.btn-enlace:hover {
+    background: rgba(0,229,255,0.18);
+    border-color: var(--acento);
+}
+
+/* ── Formularios ── */
+.form-inline {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+.form-inline input {
+    flex: 1;
+    min-width: 220px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    color: var(--texto);
+    padding: 0.55rem 0.9rem;
+    font-family: var(--mono);
+    font-size: 0.85rem;
+}
+.form-inline input:focus { outline: none; border-color: var(--acento); }
+
+.form-reporte { display: flex; flex-wrap: wrap; gap: 0.8rem 1.5rem; align-items: flex-end; }
+.fila-form { display: flex; flex-direction: column; gap: 0.3rem; }
+.fila-form label { color: var(--texto-dim); font-size: 0.8rem; }
+.fila-form select,
+.fila-form input {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    color: var(--texto);
+    padding: 0.5rem 0.8rem;
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    min-width: 160px;
+}
+.fila-form select:focus,
+.fila-form input:focus { outline: none; border-color: var(--acento); }
+.fila-form select option { background: var(--superficie); }
+
+button, .btn-reporte {
+    background: var(--acento);
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    padding: 0.55rem 1.4rem;
+    font-weight: 700;
+    font-family: var(--sans);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+button:hover, .btn-reporte:hover { opacity: 0.85; }
+
+.btn-volver {
+    display: inline-block;
+    margin-top: 1.2rem;
+    color: var(--texto-dim);
+    text-decoration: none;
+    font-size: 0.85rem;
+    border: 1px solid var(--borde);
+    padding: 0.4rem 1rem;
+    border-radius: 6px;
+    transition: border-color 0.2s;
+}
+.btn-volver:hover { border-color: var(--acento); color: var(--acento); }
+
+/* ── Resultado ping ── */
+.resultado-ping {
+    background: #050a12;
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    padding: 1rem 1.2rem;
+    margin: 0.8rem 0;
+}
+.resultado-ping pre {
+    font-family: var(--mono);
+    font-size: 0.82rem;
+    color: #7dd3fc;
+    white-space: pre-wrap;
+    line-height: 1.6;
+}
+.rtt-badge {
+    display: inline-block;
+    background: rgba(0,229,255,0.12);
+    color: var(--acento);
+    border: 1px solid var(--acento);
+    border-radius: 20px;
+    padding: 0.25rem 1rem;
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    margin-bottom: 0.8rem;
+}
+
+/* ── Tabla de estado ── */
+.tabla-estado {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+}
+.tabla-estado th {
+    background: rgba(0,229,255,0.07);
+    color: var(--acento);
+    padding: 0.6rem 0.8rem;
+    text-align: left;
+    font-weight: 500;
+    border-bottom: 1px solid var(--borde);
+    font-family: var(--mono);
+}
+.tabla-estado td {
+    padding: 0.55rem 0.8rem;
+    border-bottom: 1px solid rgba(30,58,95,0.5);
+    color: var(--texto);
+}
+.tabla-estado tr:hover td { background: rgba(0,229,255,0.03); }
+.tabla-estado a { color: var(--acento); text-decoration: none; font-family: var(--mono); font-size: 0.82rem; }
+.tabla-estado a:hover { text-decoration: underline; }
+
+.estado-ok    { color: var(--ok);    font-weight: 500; }
+.estado-warn  { color: var(--warn);  font-weight: 500; }
+.estado-error { color: var(--error); font-weight: 500; }
+
+/* ── Estadísticas del reporte ── */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 0.8rem;
+    margin: 1rem 0;
+}
+.stat {
+    background: rgba(0,229,255,0.05);
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    padding: 0.8rem 1rem;
+    text-align: center;
+}
+.stat-num { display: block; font-size: 1.4rem; color: var(--acento); font-family: var(--mono); }
+.stat-lbl { display: block; font-size: 0.75rem; color: var(--texto-dim); margin-top: 0.2rem; }
+
+/* ── Botones de descarga ── */
+.botones-descarga {
+    display: flex;
+    gap: 0.7rem;
+    flex-wrap: wrap;
+    margin: 0.8rem 0 1.2rem;
+}
+.btn-dl {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 1.2rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-family: var(--mono);
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.2s;
+    border: 1px solid;
+}
+.btn-dl:hover { opacity: 0.8; }
+.btn-txt {
+    background: rgba(16,185,129,0.12);
+    color: var(--ok);
+    border-color: var(--ok);
+}
+.btn-excel {
+    background: rgba(245,158,11,0.12);
+    color: var(--warn);
+    border-color: var(--warn);
+}
+
+/* ── Gráfico ── */
+.grafico-contenedor {
+    background: #050a12;
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 0.5rem;
+}
+
+/* ── Mensajes ── */
+.sin-datos {
+    background: rgba(245,158,11,0.08);
+    border: 1px solid rgba(245,158,11,0.3);
+    border-radius: 8px;
+    color: var(--warn);
+    padding: 1rem;
+    font-size: 0.88rem;
+    margin-top: 0.5rem;
+}
+.aviso { color: var(--warn); font-size: 0.88rem; }
+
+/* ── Footer ── */
+footer {
+    text-align: center;
+    color: var(--texto-dim);
+    font-size: 0.78rem;
+    padding: 2rem;
+    border-top: 1px solid var(--borde);
+    margin-top: 2rem;
+}
+
+@media (max-width: 600px) {
+    header h1 { font-size: 1.2rem; }
+    .tarjeta  { padding: 1.2rem; }
+    .grid-enlaces { grid-template-columns: repeat(2, 1fr); }
+}

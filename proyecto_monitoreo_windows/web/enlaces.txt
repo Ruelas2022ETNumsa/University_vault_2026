@@ -1,0 +1,30 @@
+# ============================================================
+#  enlaces.txt - Lista de enlaces a monitorear
+# ============================================================
+#
+#  Reglas:
+#   - Un dominio (o IP) por linea
+#   - Las lineas que empiezan con # son comentarios (se ignoran)
+#   - Las lineas vacias se ignoran
+#   - Puedes editar este archivo directamente o usar la Opcion 8
+#     del menu (que ofrece una interfaz amigable)
+#
+#  Despues de editar, los cambios aplican automaticamente:
+#   - tomar_muestra.bat lo lee en cada ejecucion
+#   - Los archivos web (PHP) tambien lo leen en cada peticion
+#
+#  Si la web ya esta instalada en IIS, cuando edites con la
+#  Opcion 8 del menu se sincroniza automaticamente la copia
+#  en C:\inetpub\wwwroot\monitoreo\enlaces.txt
+# ============================================================
+
+www.google.com
+www.youtube.com
+www.facebook.com
+www.wikipedia.org
+www.rfi.fr
+www.bbc.com
+www.amazon.com
+www.microsoft.com
+www.cloudflare.com
+www.github.com

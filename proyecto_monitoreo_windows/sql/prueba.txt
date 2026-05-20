@@ -1,0 +1,44 @@
+# Archivo de prueba — Sistema de Monitoreo ETN921
+# Formato: FECHA|HORA|ENLACE|RTT_MAX
+# RTT_MAX en milisegundos. Usa -1 si el enlace no respondió.
+# Las líneas que empiezan con # son comentarios y se ignoran.
+2025-04-07|08:00:00|www.google.com|12.345
+2025-04-07|08:00:00|www.youtube.com|25.678
+2025-04-07|08:00:00|www.facebook.com|18.901
+2025-04-07|08:00:00|www.wikipedia.org|45.123
+2025-04-07|08:00:00|www.rfi.fr|110.456
+2025-04-07|08:00:00|www.bbc.com|98.234
+2025-04-07|08:00:00|www.amazon.com|67.890
+2025-04-07|08:00:00|www.microsoft.com|33.445
+2025-04-07|08:00:00|www.cloudflare.com|8.901
+2025-04-07|08:00:00|www.github.com|55.678
+2025-04-07|08:05:00|www.google.com|11.222
+2025-04-07|08:05:00|www.youtube.com|28.999
+2025-04-07|08:05:00|www.facebook.com|-1
+2025-04-07|08:05:00|www.wikipedia.org|41.001
+2025-04-07|08:05:00|www.rfi.fr|115.333
+2025-04-07|08:05:00|www.bbc.com|95.111
+2025-04-07|08:05:00|www.amazon.com|70.222
+2025-04-07|08:05:00|www.microsoft.com|30.555
+2025-04-07|08:05:00|www.cloudflare.com|9.123
+2025-04-07|08:05:00|www.github.com|52.444
+2025-04-07|08:10:00|www.google.com|13.001
+2025-04-07|08:10:00|www.youtube.com|22.333
+2025-04-07|08:10:00|www.facebook.com|19.777
+2025-04-07|08:10:00|www.wikipedia.org|48.990
+2025-04-07|08:10:00|www.rfi.fr|108.001
+2025-04-07|08:10:00|www.bbc.com|102.888
+2025-04-07|08:10:00|www.amazon.com|65.321
+2025-04-07|08:10:00|www.microsoft.com|29.876
+2025-04-07|08:10:00|www.cloudflare.com|7.654
+2025-04-07|08:10:00|www.github.com|50.123
+2025-04-07|08:15:00|www.google.com|10.999
+2025-04-07|08:15:00|www.youtube.com|31.456
+2025-04-07|08:15:00|www.facebook.com|21.234
+2025-04-07|08:15:00|www.wikipedia.org|39.876
+2025-04-07|08:15:00|www.rfi.fr|-1
+2025-04-07|08:15:00|www.bbc.com|88.765
+2025-04-07|08:15:00|www.amazon.com|72.345
+2025-04-07|08:15:00|www.microsoft.com|35.678
+2025-04-07|08:15:00|www.cloudflare.com|8.222
+2025-04-07|08:15:00|www.github.com|49.001
