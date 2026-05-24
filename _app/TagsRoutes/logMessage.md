@@ -49,3 +49,13 @@
 |[2026-05-24 16:49:56] |After filtered pathes=>|| filtered nodes: |9|  links:| 185|
 |[2026-05-24 16:49:56] |Tags parse completed=>||  tag nodes: |16| tag links:| 51|
 |[2026-05-24 16:49:56] |tags num:| 16| broken files: |0| tag links:| 51|
+
+
+
+||||||||
+|-:|-:|-:|-:|-:|-:|-:|
+|[2026-05-24 16:51:22] |File parse completed=>|| markdown and linked files nodes:| 156| total file links:| 177|
+|[2026-05-24 16:51:22] |add tags and other files=>||  total nodes: |172|  total links:| 228|
+|[2026-05-24 16:51:22] |After filtered pathes=>|| filtered nodes: |9|  links:| 185|
+|[2026-05-24 16:51:22] |Tags parse completed=>||  tag nodes: |16| tag links:| 51|
+|[2026-05-24 16:51:22] |tags num:| 16| broken files: |0| tag links:| 51|
