@@ -1,0 +1,319 @@
+{
+  "nodes": [
+    {
+      "id": "etl1oryn0gi",
+      "type": "text",
+      "x": -125,
+      "y": -29,
+      "width": 250,
+      "height": 58,
+      "text": "Planta Interna (Telefonía)"
+    },
+    {
+      "id": "23rax7cdk6y",
+      "type": "text",
+      "x": 275,
+      "y": -477,
+      "width": 250,
+      "height": 40,
+      "text": "Definición"
+    },
+    {
+      "id": "o96v0bu99q",
+      "type": "text",
+      "x": 675,
+      "y": -521,
+      "width": 250,
+      "height": 58,
+      "text": "Equipos dentro de edificios de la empresa"
+    },
+    {
+      "id": "c9xwua6ll5s",
+      "type": "text",
+      "x": 675,
+      "y": -433,
+      "width": 250,
+      "height": 40,
+      "text": "Centrales y servidores"
+    },
+    {
+      "id": "dsb3f0g5qe5",
+      "type": "text",
+      "x": 275,
+      "y": -319,
+      "width": 250,
+      "height": 58,
+      "text": "Punto de Conexión (Frontera)"
+    },
+    {
+      "id": "k6a3he27yf",
+      "type": "text",
+      "x": 675,
+      "y": -363,
+      "width": 250,
+      "height": 58,
+      "text": "MDF (Main Distribution Frame)"
+    },
+    {
+      "id": "wyzcjocp258",
+      "type": "text",
+      "x": 675,
+      "y": -275,
+      "width": 250,
+      "height": 58,
+      "text": "Rack de conectores entre planta interna y externa"
+    },
+    {
+      "id": "o14t7lzcwq8",
+      "type": "text",
+      "x": 275,
+      "y": 138,
+      "width": 250,
+      "height": 58,
+      "text": "Los 4 Subsistemas Principales"
+    },
+    {
+      "id": "uxmkp45126l",
+      "type": "text",
+      "x": 675,
+      "y": -90,
+      "width": 250,
+      "height": 40,
+      "text": "Aplicación"
+    },
+    {
+      "id": "iaxdli70ou",
+      "type": "text",
+      "x": 1075,
+      "y": -187,
+      "width": 250,
+      "height": 58,
+      "text": "Abonados analógicos y digitales"
+    },
+    {
+      "id": "6n779fprwky",
+      "type": "text",
+      "x": 1075,
+      "y": -99,
+      "width": 250,
+      "height": 58,
+      "text": "Troncales analógicos y digitales"
+    },
+    {
+      "id": "49wlmw1z0xq",
+      "type": "text",
+      "x": 1075,
+      "y": -11,
+      "width": 250,
+      "height": 58,
+      "text": "Unidades de conmutación remota"
+    },
+    {
+      "id": "b6gtz3pz3mv",
+      "type": "text",
+      "x": 675,
+      "y": 165,
+      "width": 250,
+      "height": 40,
+      "text": "Conmutación"
+    },
+    {
+      "id": "b8n59lso30u",
+      "type": "text",
+      "x": 1075,
+      "y": 77,
+      "width": 250,
+      "height": 58,
+      "text": "Conexión física y lógica de llamadas"
+    },
+    {
+      "id": "v2hv14poi2j",
+      "type": "text",
+      "x": 1075,
+      "y": 165,
+      "width": 250,
+      "height": 40,
+      "text": "Centrales fijas y móviles"
+    },
+    {
+      "id": "z35fc5wacd8",
+      "type": "text",
+      "x": 1075,
+      "y": 235,
+      "width": 250,
+      "height": 58,
+      "text": "Controladores de vías de conversación"
+    },
+    {
+      "id": "ayp2v8a4px",
+      "type": "text",
+      "x": 675,
+      "y": 367,
+      "width": 250,
+      "height": 40,
+      "text": "Procesamiento"
+    },
+    {
+      "id": "199bneb5uh7",
+      "type": "text",
+      "x": 1075,
+      "y": 323,
+      "width": 250,
+      "height": 40,
+      "text": "Procesador de llamadas"
+    },
+    {
+      "id": "0bu5mcvt6n",
+      "type": "text",
+      "x": 1075,
+      "y": 393,
+      "width": 250,
+      "height": 58,
+      "text": "Procesador de operación y mantenimiento"
+    },
+    {
+      "id": "arz9wmbw3n",
+      "type": "text",
+      "x": 675,
+      "y": 481,
+      "width": 250,
+      "height": 40,
+      "text": "Operación y Mantenimiento"
+    }
+  ],
+  "edges": [
+    {
+      "id": "lctg6veyr3m",
+      "fromNode": "etl1oryn0gi",
+      "fromSide": "right",
+      "toNode": "23rax7cdk6y",
+      "toSide": "left"
+    },
+    {
+      "id": "t3o6sx9vnrp",
+      "fromNode": "23rax7cdk6y",
+      "fromSide": "right",
+      "toNode": "o96v0bu99q",
+      "toSide": "left"
+    },
+    {
+      "id": "jfwihf68nm",
+      "fromNode": "23rax7cdk6y",
+      "fromSide": "right",
+      "toNode": "c9xwua6ll5s",
+      "toSide": "left"
+    },
+    {
+      "id": "nlx8f33ri1",
+      "fromNode": "etl1oryn0gi",
+      "fromSide": "right",
+      "toNode": "dsb3f0g5qe5",
+      "toSide": "left"
+    },
+    {
+      "id": "w6e2eu9he3",
+      "fromNode": "dsb3f0g5qe5",
+      "fromSide": "right",
+      "toNode": "k6a3he27yf",
+      "toSide": "left"
+    },
+    {
+      "id": "cp6xyhqq9ij",
+      "fromNode": "dsb3f0g5qe5",
+      "fromSide": "right",
+      "toNode": "wyzcjocp258",
+      "toSide": "left"
+    },
+    {
+      "id": "2sxgpj25y2d",
+      "fromNode": "etl1oryn0gi",
+      "fromSide": "right",
+      "toNode": "o14t7lzcwq8",
+      "toSide": "left"
+    },
+    {
+      "id": "9uv9mrlnirv",
+      "fromNode": "o14t7lzcwq8",
+      "fromSide": "right",
+      "toNode": "uxmkp45126l",
+      "toSide": "left"
+    },
+    {
+      "id": "px31tag4jsn",
+      "fromNode": "uxmkp45126l",
+      "fromSide": "right",
+      "toNode": "iaxdli70ou",
+      "toSide": "left"
+    },
+    {
+      "id": "emezgrc7mke",
+      "fromNode": "uxmkp45126l",
+      "fromSide": "right",
+      "toNode": "6n779fprwky",
+      "toSide": "left"
+    },
+    {
+      "id": "77o5ts0uv9",
+      "fromNode": "uxmkp45126l",
+      "fromSide": "right",
+      "toNode": "49wlmw1z0xq",
+      "toSide": "left"
+    },
+    {
+      "id": "xw4q0dw4dgb",
+      "fromNode": "o14t7lzcwq8",
+      "fromSide": "right",
+      "toNode": "b6gtz3pz3mv",
+      "toSide": "left"
+    },
+    {
+      "id": "x1z537d6les",
+      "fromNode": "b6gtz3pz3mv",
+      "fromSide": "right",
+      "toNode": "b8n59lso30u",
+      "toSide": "left"
+    },
+    {
+      "id": "vkz74coomz",
+      "fromNode": "b6gtz3pz3mv",
+      "fromSide": "right",
+      "toNode": "v2hv14poi2j",
+      "toSide": "left"
+    },
+    {
+      "id": "2ax7tfxqmm9",
+      "fromNode": "b6gtz3pz3mv",
+      "fromSide": "right",
+      "toNode": "z35fc5wacd8",
+      "toSide": "left"
+    },
+    {
+      "id": "757ov31f2o4",
+      "fromNode": "o14t7lzcwq8",
+      "fromSide": "right",
+      "toNode": "ayp2v8a4px",
+      "toSide": "left"
+    },
+    {
+      "id": "lyfobxvzpq",
+      "fromNode": "ayp2v8a4px",
+      "fromSide": "right",
+      "toNode": "199bneb5uh7",
+      "toSide": "left"
+    },
+    {
+      "id": "mtgce118t",
+      "fromNode": "ayp2v8a4px",
+      "fromSide": "right",
+      "toNode": "0bu5mcvt6n",
+      "toSide": "left"
+    },
+    {
+      "id": "6utcr0sd3b",
+      "fromNode": "o14t7lzcwq8",
+      "fromSide": "right",
+      "toNode": "arz9wmbw3n",
+      "toSide": "left"
+    }
+  ]
+}
