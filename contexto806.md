@@ -98,7 +98,12 @@ Claude NUNCA borra ni modifica el texto original del ejercicio. Solo agrega call
 ### Problema frecuente
 
 NotebookLM tiende a generar todas las gráficas del ejercicio en un solo bloque `desmos-graph` al final del archivo, mezclando ecuaciones de distintos incisos.
->NOTA IMPORTANTE.- para este documento se cambiara la generacion del bloque de codigo de desmos de desmos-graph a desmos-graphx simplem
+
+>**NOTA — Bloques de código Desmos en este documento:** En este archivo `contexto806.md` los bloques de código Desmos se escriben como ` ```desmos-graphx ` (con x al final) únicamente para evitar que Obsidian los renderice y poder leer el texto plano del ejemplo.
+>
+>**Al corregir o generar bloques en los ejercicios** (`E1.md`, `E2.md`, etc.) Claude debe usar siempre ` ```desmos-graph ` **sin la x**, para que el plugin renderice la gráfica correctamente.
+>
+>Regla: `desmos-graphx` = solo en este documento de contexto. `desmos-graph` = en todos los ejercicios.
 
 ### Lo que Claude debe hacer
 
@@ -113,17 +118,14 @@ Cuando encuentre gráficas mal ubicadas (todas juntas al final), debe:
 
 Cada gráfica debe ir dentro de su inciso con una etiqueta clara:
 
-```
 #### Gráfica — inciso [letra]
 
-```desmos-graph
+```desmos-graphx
 left=; right=; bottom=; top=;
 width=500; height=500;
 ---
 [ecuaciones del inciso]
 ```
-
-
 
 ### Reglas para generar/corregir bloques Desmos
 
@@ -186,7 +188,7 @@ El formulario `Formulario_806_ii.md` cubre los siguientes temas. Claude debe ver
 #### Gráfica — inciso a)
 
 ```
-```desmos-graph
+```desmos-graphx
 left=; right=; bottom=; top=;
 width=500; height=500;
 ---
