@@ -1,0 +1,10 @@
+{
+    "id": "notebook-mindmap-to-canvas",
+    "name": "NotebookLM Mindmap to Canvas",
+    "version": "1.0.0",
+    "minAppVersion": "0.15.0",
+    "description": "Convert NotebookLM mindmaps to Canvas with one click. Requires NotebookLM Ultra Exporter Chrome extension.",
+    "author": "ayv4zyan",
+    "authorUrl": "https://github.com/ayv4zyan",
+    "isDesktopOnly": false
+}
