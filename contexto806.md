@@ -6,7 +6,8 @@ Cuando el usuario comparta este archivo, Claude debe hacer lo siguiente **antes 
 
 1. Leer el archivo `E:\University_vault_2026\Formulario_806_ii.md` completo.
 2. Leer el archivo `E:\University_vault_2026\_app\_appnotes\desmos_intro.md` para las graficas.
-3. Confirmar al usuario con un mensaje breve: *"Contexto cargado. Formulario leído. Listo para revisar ejercicios."*
+3. leer el
+4. Confirmar al usuario con un mensaje breve: *"Contexto cargado. Formulario leído. Listo para revisar ejercicios."*
 
 No esperar a que el usuario pida revisar un ejercicio. La lectura del formulario es el primer paso obligatorio al iniciar la conversación con este contexto.
 
@@ -213,7 +214,7 @@ width=500; height=500;
 
 ---
 
-## ANÁLISIS TEMÁTICO — PRÁCTICA Nº2 Y EJERCICIO E1 RESUELTO
+## ANÁLISIS TEMÁTICO — PRÁCTICA Nº2 Y Resuelto 1
 
 > Este análisis fue generado a partir de los PDFs de diapositivas del curso (P1_SP, P2_SP, ejercicio_variable_multiple_continua) y los enunciados de la Práctica Nº2. Sirve como mapa de contenido para que Claude identifique qué fórmulas y procedimientos aplicar en cada ejercicio.
 
