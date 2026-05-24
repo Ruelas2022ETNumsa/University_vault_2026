@@ -3,5 +3,6 @@
   "showRibbon": true,
   "accentColor": "",
   "nativeMenus": false,
-  "baseFontSize": 20
+  "baseFontSize": 14,
+  "baseFontSizeAction": true
 }
