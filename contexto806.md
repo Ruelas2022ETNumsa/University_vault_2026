@@ -219,7 +219,7 @@ width=500; height=500;
 
 ---
 
-### EJERCICIO E1 RESUELTO — Densidad conjunta con región triangular
+### EJERCICIO Resuelto 1 — Densidad conjunta con región triangular
 
 **Función:** $f_{X,Y}(x,y) = kx$ para $0 \le x \le 1,\; x \le y \le 2-x$
 

@@ -1,6 +1,6 @@
 Para resolver este ejercicio paso a paso, utilizaremos las fórmulas de variables aleatorias continuas múltiples detalladas en el **Formulario 806 II**.
 
-### **Enunciado del Ejercicio E1**
+### **Enunciado del Ejercicio**
 
 Sean las variables aleatorias $X, Y$ con densidad de distribución conjunta: $$f_{X,Y}(x,y) = \begin{cases} kx & \text{si } 0 \le x \le 1; x \le y \le 2-x \\ 0 & \text{en otro caso} \end{cases}$$
 
