@@ -5,7 +5,8 @@
 Cuando el usuario comparta este archivo, Claude debe hacer lo siguiente **antes de responder cualquier otra cosa**:
 
 1. Leer el archivo `E:\University_vault_2026\Formulario_806_ii.md` completo.
-2. Confirmar al usuario con un mensaje breve: *"Contexto cargado. Formulario leído. Listo para revisar ejercicios."*
+2. Leer el archivo `E:\University_vault_2026\_app\_appnotes\desmos_intro.md` para las graficas.
+3. Confirmar al usuario con un mensaje breve: *"Contexto cargado. Formulario leído. Listo para revisar ejercicios."*
 
 No esperar a que el usuario pida revisar un ejercicio. La lectura del formulario es el primer paso obligatorio al iniciar la conversación con este contexto.
 
@@ -97,6 +98,7 @@ Claude NUNCA borra ni modifica el texto original del ejercicio. Solo agrega call
 ### Problema frecuente
 
 NotebookLM tiende a generar todas las gráficas del ejercicio en un solo bloque `desmos-graph` al final del archivo, mezclando ecuaciones de distintos incisos.
+>NOTA IMPORTANTE.- para este documento se cambiara la generacion del bloque de codigo de desmos de desmos-graph a desmos-graphx simplem
 
 ### Lo que Claude debe hacer
 
