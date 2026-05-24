@@ -24,8 +24,10 @@ Este documento describe el flujo de trabajo completo para resolver, revisar y gr
 | Nota | Ubicación | Rol |
 |------|-----------|-----|
 | `Formulario_806_ii.md` | `E:\University_vault_2026\` | Fuente de verdad matemática. Contiene todas las fórmulas, definiciones y procedimientos válidos para el curso. |
-| `desmoslm.md` | `E:\University_vault_2026\_app\_appnotes\` | Instrucciones para generar bloques `desmos-graph` compatibles con Obsidian. |
-| `E1.md`, `E2.md`, `E3.md`, ... | `E:\University_vault_2026\` | Ejercicios resueltos por NotebookLM. Cada archivo contiene un enunciado y su resolución por incisos. Claude los revisa y corrige. |
+| `desmos_intro.md` | `E:\University_vault_2026\_app\_appnotes\` | Guía completa de sintaxis Desmos para Claude: colores, restricciones, áreas sombreadas, puntos, ejemplos. Usar al generar o corregir bloques `desmos-graph`. |
+| `desmoslm.md` | `E:\University_vault_2026\_app\_appnotes\` | Versión resumida de la guía Desmos entregada a NotebookLM como fuente. Referencia secundaria. |
+| `Resuelto 1.md` | `E:\University_vault_2026\` | Ejercicio resuelto por el docente. Sirve como guía de referencia de nivel y formato esperado. NO se corrige ni modifica. |
+| `E1.md`, `E2.md`, `E3.md`, ... | `E:\University_vault_2026\` | Ejercicios de la Práctica Nº2 generados por NotebookLM. Cada archivo contiene enunciado y resolución por incisos. Claude los revisa y corrige. |
 
 ---
 
@@ -172,7 +174,7 @@ El formulario `Formulario_806_ii.md` cubre los siguientes temas. Claude debe ver
 
 ## EJEMPLO DE ESTRUCTURA ESPERADA EN UN EJERCICIO EN.md
 
-```markdown
+~~~markdown
 # Ejercicio N — [título o descripción breve]
 
 ## Enunciado
@@ -188,13 +190,11 @@ El formulario `Formulario_806_ii.md` cubre los siguientes temas. Claude debe ver
 
 #### Gráfica — inciso a)
 
-```
-```desmos-graphx
+```desmos-graph
 left=; right=; bottom=; top=;
 width=500; height=500;
 ---
 [ecuaciones del inciso a]
-```
 ```
 
 ## Inciso b)
@@ -204,7 +204,7 @@ width=500; height=500;
 > Procedimiento y resultado verificados con el formulario.
 
 ---
-```
+~~~
 
 ## NOTAS FINALES
 
@@ -214,13 +214,15 @@ width=500; height=500;
 
 ---
 
-## ANÁLISIS TEMÁTICO — PRÁCTICA Nº2 Y Resuelto 1
+## ANÁLISIS TEMÁTICO — PRÁCTICA Nº2 Y RESUELTO 1
 
 > Este análisis fue generado a partir de los PDFs de diapositivas del curso (P1_SP, P2_SP, ejercicio_variable_multiple_continua) y los enunciados de la Práctica Nº2. Sirve como mapa de contenido para que Claude identifique qué fórmulas y procedimientos aplicar en cada ejercicio.
+>
+> **Resuelto 1** (`Resuelto 1.md`) es el ejercicio resuelto por el docente — funciona como referencia de nivel y formato. Los ejercicios `E1.md`, `E2.md`, etc. son los de la Práctica Nº2 generados por NotebookLM para que Claude los revise.
 
 ---
 
-### EJERCICIO Resuelto 1 — Densidad conjunta con región triangular
+### RESUELTO 1 — Densidad conjunta con región triangular (ejercicio del docente)
 
 **Función:** $f_{X,Y}(x,y) = kx$ para $0 \le x \le 1,\; x \le y \le 2-x$
 
@@ -353,7 +355,7 @@ width=500; height=500;
 | **P2-E5** | PDF de 4 variables + probabilidad conjunta + marginal | Factorización integral cuádruple, densidad marginal múltiple | $P=\prod_i P_i$ si independientes; $f_W=\int\int\int f\,dx\,dy\,dz$ |
 | **P2-E6** | Región con valor absoluto + marginal + $E[X]$ | Descomposición por signo, $f_X(x)=|x|$, función impar | $f_X(x)=\int_0^{|x|}f_{X,Y}\,dy$; $E[X]=\int x f_X\,dx=0$ |
 | **P2-E7** | Densidad condicional dado evento $A$ | PDF exponencial bivariada, $P[A]$ en triángulo, normalización | $f_{X,Y|A}=f_{X,Y}/P[A]$ para $(x,y)\in A$ |
-| **E1 resuelto** | Densidad conjunta triangular — ejercicio completo | Normalización, marginales partidas, independencia, $P$ con curva, complemento, condicional de evento, $E[X]$, $VAR[X]$ | Todas las fórmulas del formulario aplicadas |
+| **Resuelto 1** | Densidad conjunta triangular — ejercicio completo | Normalización, marginales partidas, independencia, $P$ con curva, complemento, condicional de evento, $E[X]$, $VAR[X]$ | Todas las fórmulas del formulario aplicadas |
 
 ---
 
