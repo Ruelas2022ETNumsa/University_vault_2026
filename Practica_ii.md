@@ -1,41 +1,46 @@
+Basándose en el documento **"Práctica 2 de Variables Aleatorias Continuas Múltiples"**, a continuación se presenta el enunciado oficial del **Ejercicio 1** y su resolución siguiendo los pasos metodológicos del formulario de la materia.
 
-A continuación se presenta el enunciado y la resolución del **Ejercicio 1** basándose en el documento que contiene la resolución detallada en tus fuentes (**ejercicio_var.pdf**), el cual está etiquetado explícitamente como "E1".
+### Enunciado del Ejercicio 1 (Fuente: Práctica Nº2)
 
-Cabe notar que en el documento oficial de la **Práctica Nº2** (**PRACTICA_02 ESTOCASTICOS.pdf**), el Ejercicio 1 plantea una función distinta ($k/(1+x+y)^4$). Sin embargo, dado que solicitas la resolución y la gráfica, se procede con el ejercicio resuelto en tus fuentes.
+Encontrar el valor de $k$ en la siguiente función $f_{X,Y}(x,y)$ y también la función de distribución marginal de $X$: $$f_{X,Y}(x,y) = \begin{cases} \frac{k}{(1+x+y)^4} & \text{si } 0 \le x \le \infty; 0 \le y \le \infty \ 0 & \text{en otro caso} \end{cases}$$
 
-### Enunciado del Ejercicio 1 (Fuente: ejercicio_var.pdf)
-
-Sean las variables aleatorias $X, Y$ cuya densidad de distribución conjunta es: $$f_{X,Y}(x,y) = \begin{cases} kx & \text{si } 0 \le x \le 1; x \le y \le 2-x \ 0 & \text{en otro caso} \end{cases}$$
+---
 
 ### Resolución
 
-1. **Determinar el valor de k:** Para que sea una función de densidad válida, la integral doble sobre el rango debe ser igual a 1: $$\int_{0}^{1} \int_{x}^{2-x} kx , dy dx = 1$$ Al integrar respecto a $y$: $kx(2-x - x) = kx(2-2x) = 2kx - 2kx^2$. Luego, integrando respecto a $x$: $[kx^2 - \frac{2kx^3}{3}]_0^1 = k - \frac{2k}{3} = \frac{k}{3}$. Igualando a 1: $\frac{k}{3} = 1 \implies \mathbf{k = 3}$.
+Para resolver este ejercicio, aplicamos las propiedades de las funciones de densidad conjunta y marginal detalladas en las fuentes.
+
+#### 1. Determinar el valor de $k$
+
+Para que $f_{X,Y}(x,y)$ sea una función de densidad válida, la integral doble sobre todo su rango debe ser igual a 1: $$\int_{0}^{\infty} \int_{0}^{\infty} \frac{k}{(1+x+y)^4} , dy , dx = 1$$
+
+- **Integración respecto a $y$:** Mantenemos $x$ constante e integramos: $$\int_{0}^{\infty} k(1+x+y)^{-4} , dy = \left[ \frac{k(1+x+y)^{-3}}{-3} \right]_{0}^{\infty}$$ Evaluando en los límites: $0 - \left( -\frac{k}{3(1+x)^3} \right) = \frac{k}{3(1+x)^3}$.
     
-2. **Funciones de densidad marginales:**
+- **Integración respecto a $x$:** Ahora integramos el resultado anterior: $$\int_{0}^{\infty} \frac{k}{3}(1+x)^{-3} , dx = \left[ \frac{k}{3} \cdot \frac{(1+x)^{-2}}{-2} \right]_{0}^{\infty} = \left[ -\frac{k}{6(1+x)^2} \right]_{0}^{\infty}$$ Evaluando: $0 - \left( -\frac{k}{6(1)^2} \right) = \frac{k}{6}$.
     
-    - **Marginal de $X$:** Se integra la función conjunta respecto a $y$ en su rango: $$f_X(x) = \int_{x}^{2-x} 3x , dy = 3x(2-2x) = 6x - 6x^2, \text{ para } 0 \le x \le 1$$
-    - **Marginal de $Y$:** Debido a la forma de la región (un triángulo con vértices en $(0,0), (1,1)$ y $(0,2)$), la marginal de $Y$ se divide en dos tramos: $$f_Y(y) = \begin{cases} \frac{3}{2}y^2 & 0 \le y \le 1 \ \frac{3}{2}(2-y)^2 & 1 \le y \le 2 \ 0 & \text{en otro caso} \end{cases}$$
-3. **Independencia:** Se verifica si $f_{X,Y}(x,y) = f_X(x) \cdot f_Y(y)$. Al realizar el producto de las marginales, se observa que no es igual a la función conjunta ($3x$), por lo tanto, **$X$ e $Y$ no son independientes**.
+- **Cálculo final de $k$:** Igualamos a 1 para normalizar la probabilidad: $$\frac{k}{6} = 1 \implies \mathbf{k = 6}$$
     
+
+#### 2. Función de densidad marginal de $X$ ($f_X(x)$)
+
+La densidad marginal de $X$ se obtiene integrando la función conjunta respecto a $y$ sobre todo su rango: $$f_X(x) = \int_{0}^{\infty} \frac{6}{(1+x+y)^4} , dy$$ Utilizando el resultado de la integral interna anterior con $k=6$: $$f_X(x) = \frac{6}{3(1+x)^3} = \mathbf{\frac{2}{(1+x)^3}, \quad \text{para } x \ge 0}$$
+
+---
 
 ### Gráfica en Desmos
 
-La región de probabilidad es un triángulo delimitado por el eje $y$ (implícito en $x \ge 0$), la recta $y=x$ y la recta $y=2-x$.
+La región de probabilidad es el **primer cuadrante** ($x \ge 0, y \ge 0$). Se incluye también la curva de la densidad marginal $f_X(x)$.
 
 ```
 width=500; height=500;
 ---
-y<=2-x|y>=x|x>=0|#a5d8ff
-y=x|RED|0<=x<=1
-y=2-x|GREEN|0<=x<=1
+x>=0|y>=0|#a5d8ff
+f(x)=2/(1+x)^3|RED|0<=x<=5
 (0,0)|label:(0,0)|BLACK
-(1,1)|label:(1,1)|BLACK
-(0,2)|label:(0,2)|BLACK
 ```
 
 **Explicación de la gráfica:**
 
-- **Área sombreada (#a5d8ff):** Representa la región donde la densidad de probabilidad es distinta de cero ($x \le y \le 2-x$).
-- **Línea Roja ($y=x$):** Límite inferior de la región para $y$.
-- **Línea Verde ($y=2-x$):** Límite superior de la región para $y$.
-- **Puntos etiquetados:** Marcan los vértices del área triangular de interés.
+- **Área sombreada (#a5d8ff):** Representa el dominio del primer cuadrante donde la función de densidad es distinta de cero ($0 \le x \le \infty$ y $0 \le y \le \infty$).
+- **Línea Roja ($f(x)$):** Representa la función de densidad marginal calculada, $f_X(x) = \frac{2}{(1+x)^3}$, que muestra cómo decae la probabilidad a medida que $x$ aumenta.
+- **Punto (0,0):** Indica el origen de la región de soporte de las variables aleatorias.
