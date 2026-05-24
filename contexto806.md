@@ -120,7 +120,8 @@ width=500; height=500;
 ---
 [ecuaciones del inciso]
 ```
-```
+
+
 
 ### Reglas para generar/corregir bloques Desmos
 
@@ -181,11 +182,14 @@ El formulario `Formulario_806_ii.md` cubre los siguientes temas. Claude debe ver
 > **Resultado correcto:** ...
 
 #### Gráfica — inciso a)
+
+```
 ```desmos-graph
 left=; right=; bottom=; top=;
 width=500; height=500;
 ---
 [ecuaciones del inciso a]
+```
 ```
 
 ## Inciso b)
@@ -195,6 +199,7 @@ width=500; height=500;
 > Procedimiento y resultado verificados con el formulario.
 
 ---
+```
 
 ## NOTAS FINALES
 
