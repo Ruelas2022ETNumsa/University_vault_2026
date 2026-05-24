@@ -3,6 +3,7 @@
   "renderer": true,
   "cache": {
     "enabled": true,
-    "location": "Filesystem"
+    "location": "Filesystem",
+    "directory": ".cache/desmos"
   }
 }
