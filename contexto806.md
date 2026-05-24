@@ -214,6 +214,20 @@ width=500; height=500;
 
 ---
 
+## INSTRUCCIONES DE FLUJO CON EL USUARIO
+
+1. **Editar siempre directamente** en el `.md` del vault usando el Filesystem. Si el conector no lo permite, avisar y esperar. El usuario intentará solucionarlo. Si no puede, recién entonces: copiar el archivo al entorno de Claude, editar ahí, y mostrar el resultado **en formato código** para que el usuario copie y pegue.
+
+2. **Correcciones Desmos:** no mostrar el bloque corregido por el chat. Solo editar el `.md`. El usuario verá la gráfica directamente en Obsidian.
+
+3. **Resumen por chat:** para cada inciso solo mostrar una línea del estilo:
+   - `Inciso 1 — correcto`
+   - `Inciso 2 — corregido` (sin detalles, todo el detalle va en el callout del `.md`)
+
+4. **Mantener el chat al mínimo.** Todo el contenido de corrección va en el archivo.
+
+---
+
 ## ANÁLISIS TEMÁTICO — PRÁCTICA Nº2 Y RESUELTO 1
 
 > Este análisis fue generado a partir de los PDFs de diapositivas del curso (P1_SP, P2_SP, ejercicio_variable_multiple_continua) y los enunciados de la Práctica Nº2. Sirve como mapa de contenido para que Claude identifique qué fórmulas y procedimientos aplicar en cada ejercicio.
@@ -319,12 +333,12 @@ width=500; height=500;
 
 **Función:** $f_{X,Y}(x,y) = 1$ para $-1\le x\le 1,\; 0\le y\le 1,\; |x|\ge y$
 
-| Inciso | Tema específico | Procedimiento | Fórmula clave |
-|--------|----------------|--------------|---------------|
-| a) | Identificación y dibujo de región con valor absoluto | Descomponer $|x|\ge y$ en $x\ge y$ (para $x>0$) y $-x\ge y$ (para $x<0$); dos triángulos simétricos | Región: $\{(x,y): -1\le x\le 1,\; 0\le y\le|x|\}$ |
-| b) | Densidad marginal de $X$ con límite superior $|x|$ | Integrar en $y$ de $0$ a $|x|$ para cada signo de $x$ | $f_X(x)=\int_0^{|x|}1\,dy=|x|$ para $-1\le x\le 1$ |
-| c) | Probabilidad $P(X>0)$ desde densidad marginal | Integrar $f_X(x)$ en $[0,1]$ | $P(X>0)=\int_0^1|x|\,dx=\frac{1}{2}$ |
-| d) | Esperanza $E[X]$ con densidad marginal simétrica | Verificar si $x\cdot f_X(x)=x\cdot|x|$ es función impar → $E[X]=0$ por simetría | $E[X]=\int_{-1}^1 x\cdot|x|\,dx=0$ |
+| Inciso | Tema específico                                      | Procedimiento                      | Fórmula clave    |                                                                                     |                                             |                          |                  |     |         |     |                       |
+| ------ | ---------------------------------------------------- | ---------------------------------- | ---------------- | ----------------------------------------------------------------------------------- | ------------------------------------------- | ------------------------ | ---------------- | --- | ------- | --- | --------------------- |
+| a)     | Identificación y dibujo de región con valor absoluto | Descomponer $                      | x                | \ge y$ en $x\ge y$ (para $x>0$) y $-x\ge y$ (para $x<0$); dos triángulos simétricos | Región: $\{(x,y): -1\le x\le 1,\; 0\le y\le | x                        | \}$              |     |         |     |                       |
+| b)     | Densidad marginal de $X$ con límite superior $       | x                                  | $                | Integrar en $y$ de $0$ a $                                                          | x                                           | $ para cada signo de $x$ | $f_X(x)=\int_0^{ | x   | }1\,dy= | x   | $ para $-1\le x\le 1$ |
+| c)     | Probabilidad $P(X>0)$ desde densidad marginal        | Integrar $f_X(x)$ en $[0,1]$       | $P(X>0)=\int_0^1 | x                                                                                   | \,dx=\frac{1}{2}$                           |                          |                  |     |         |     |                       |
+| d)     | Esperanza $E[X]$ con densidad marginal simétrica     | Verificar si $x\cdot f_X(x)=x\cdot | x                | $ es función impar → $E[X]=0$ por simetría                                          | $E[X]=\int_{-1}^1 x\cdot                    | x                        | \,dx=0$          |     |         |     |                       |
 
 **Temas:** región definida por valor absoluto, descomposición de dominio por signo, densidad marginal con límite $|x|$, probabilidad unilateral, esperanza con función impar.
 
