@@ -45,3 +45,25 @@ f(x)=\frac{2}{(1+x)^3}|RED|0<=x<=5
 - **Área sombreada (#a5d8ff):** Representa el dominio del primer cuadrante donde la función de densidad es distinta de cero ($0 \le x \le \infty$ y $0 \le y \le \infty$).
 - **Línea Roja ($f(x)$):** Representa la función de densidad marginal calculada, $f_X(x) = \frac{2}{(1+x)^3}$, que muestra cómo decae la probabilidad a medida que $x$ aumenta.
 - **Punto (0,0):** Indica el origen de la región de soporte de las variables aleatorias.
+
+
+
+```desmos-graph
+left=-0.5; right=5; bottom=-0.5; top=5;
+width=500; height=500;
+---
+y>0|x>0|#a5d8ff
+f(x)=\frac{2}{(1+x)^3}|RED|0<=x<=5
+(0,0)|label:(0,0)|BLACK
+```
+
+
+```desmos-graph
+left=-0.5; right=5;
+bottom=-0.1; top=2.2;
+width=500; height=400;
+---
+y>0|x>0|#a5d8ff
+f(x)=\frac{2}{(1+x)^3}|RED|0<=x<=5
+(0,0)|label:(0,0)|BLACK
+```
