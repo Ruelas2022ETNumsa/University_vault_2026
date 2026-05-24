@@ -1,9 +1,7 @@
 {
 	"nodes":[
 		{"id":"etl1oryn0gi","type":"text","text":"Planta Interna (Telefonía)","x":-125,"y":-29,"width":250,"height":58},
-		{"id":"o96v0bu99q","type":"text","text":"Equipos dentro de edificios de la empresa","x":675,"y":-521,"width":250,"height":58},
 		{"id":"c9xwua6ll5s","type":"text","text":"Centrales y servidores","x":675,"y":-433,"width":250,"height":40},
-		{"id":"dsb3f0g5qe5","type":"text","text":"Punto de Conexión (Frontera)","x":275,"y":-319,"width":250,"height":58},
 		{"id":"k6a3he27yf","type":"text","text":"MDF (Main Distribution Frame)","x":675,"y":-363,"width":250,"height":58},
 		{"id":"wyzcjocp258","type":"text","text":"Rack de conectores entre planta interna y externa","x":675,"y":-275,"width":250,"height":58},
 		{"id":"uxmkp45126l","type":"text","text":"Aplicación","x":675,"y":-90,"width":250,"height":40},
@@ -16,10 +14,12 @@
 		{"id":"z35fc5wacd8","type":"text","text":"Controladores de vías de conversación","x":1075,"y":235,"width":250,"height":58},
 		{"id":"ayp2v8a4px","type":"text","text":"Procesamiento","x":675,"y":367,"width":250,"height":40},
 		{"id":"199bneb5uh7","type":"text","text":"Procesador de llamadas","x":1075,"y":323,"width":250,"height":40},
-		{"id":"0bu5mcvt6n","type":"text","text":"Procesador de operación y mantenimiento","x":1075,"y":393,"width":250,"height":58},
 		{"id":"arz9wmbw3n","type":"text","text":"Operación y Mantenimiento","x":675,"y":481,"width":250,"height":40},
 		{"id":"o14t7lzcwq8","type":"text","text":"Los 4 Subsistemas Principales","x":275,"y":147,"width":250,"height":58},
-		{"id":"23rax7cdk6y","type":"text","text":"Definición","x":275,"y":-483,"width":250,"height":40}
+		{"id":"dsb3f0g5qe5","type":"text","text":"Punto de Conexión (Frontera)","x":275,"y":-334,"width":250,"height":58},
+		{"id":"23rax7cdk6y","type":"text","text":"Definición","x":219,"y":-485,"width":250,"height":40},
+		{"id":"0bu5mcvt6n","type":"text","text":"Procesador de operación y mantenimiento","x":1080,"y":410,"width":245,"height":68},
+		{"id":"o96v0bu99q","type":"text","text":"Equipos dentro de edificios de la empresa","x":675,"y":-514,"width":250,"height":58}
 	],
 	"edges":[
 		{"id":"lctg6veyr3m","fromNode":"etl1oryn0gi","fromSide":"right","toNode":"23rax7cdk6y","toSide":"left"},
@@ -40,6 +40,7 @@
 		{"id":"757ov31f2o4","fromNode":"o14t7lzcwq8","fromSide":"right","toNode":"ayp2v8a4px","toSide":"left"},
 		{"id":"lyfobxvzpq","fromNode":"ayp2v8a4px","fromSide":"right","toNode":"199bneb5uh7","toSide":"left"},
 		{"id":"mtgce118t","fromNode":"ayp2v8a4px","fromSide":"right","toNode":"0bu5mcvt6n","toSide":"left"},
-		{"id":"6utcr0sd3b","fromNode":"o14t7lzcwq8","fromSide":"right","toNode":"arz9wmbw3n","toSide":"left"}
+		{"id":"6utcr0sd3b","fromNode":"o14t7lzcwq8","fromSide":"right","toNode":"arz9wmbw3n","toSide":"left"},
+		{"id":"4b52da2c6b621b18","fromNode":"dsb3f0g5qe5","fromSide":"top","toNode":"23rax7cdk6y","toSide":"bottom"}
 	]
 }
