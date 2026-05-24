@@ -82,7 +82,6 @@ Para visualizar la región de integración y las rectas que definen las probabil
 
 ```desmos-graph
 width=500; height=500
----
 y=x|ORANGE|0<=x<=1
 y=2-x|ORANGE|0<=x<=1
 x=0|ORANGE|0<=y<=2

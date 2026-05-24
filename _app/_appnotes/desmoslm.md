@@ -6,32 +6,65 @@ Este documento le enseña a NotebookLM cómo generar bloques de código Desmos c
 
 ---
 
-## REGLA PRINCIPAL
+## REGLA CRÍTICA NÚMERO 1 — EL SEPARADOR `---` ES OBLIGATORIO SIEMPRE
 
-Cuando el usuario pida una gráfica, siempre responde con un bloque de código en este formato exacto:
+**El separador `---` es OBLIGATORIO en absolutamente todos los bloques, sin excepción.**
+No importa si hay configuración o no. No importa si el bloque es simple o complejo.
+**Sin `---` el plugin no renderiza la gráfica.**
+
+### INCORRECTO — bloque sin `---` (NUNCA hacer esto):
 
 ```
 ```desmos-graph
-[configuración]
----
-[ecuaciones]
+width=500; height=500
+y=x^2|BLUE
 ```
 ```
 
-El bloque SIEMPRE comienza con ` ```desmos-graph ` y termina con ` ``` `.
+### CORRECTO — separador `---` siempre presente:
+
+```
+```desmos-graph
+width=500; height=500;
+---
+y=x^2|BLUE
+```
+```
+
+### CORRECTO — incluso sin configuración, el `---` va igual:
+
+```
+```desmos-graph
+---
+y=x^2|BLUE
+```
+```
+
+**Regla absoluta: la línea `---` siempre está presente, separa configuración de ecuaciones.**
 
 ---
 
-## ESTRUCTURA DEL BLOQUE
+## ESTRUCTURA OBLIGATORIA DEL BLOQUE
 
-Un bloque Desmos tiene dos secciones separadas por `---`:
+```
+```desmos-graph
+[parámetros de configuración terminados en ;]
+---
+[ecuaciones, una por línea]
+```
+```
 
-**Sección 1 (antes del `---`): Configuración del plano**
-**Sección 2 (después del `---`): Ecuaciones, curvas, puntos**
+- **Línea 1:** ` ```desmos-graph `
+- **Sección de configuración:** parámetros como `left=`, `right=`, `width=`, etc., cada uno terminado en `;`
+- **Línea separadora:** `---` (SIEMPRE, sin excepción)
+- **Sección de ecuaciones:** una ecuación por línea, con sus modificadores
+- **Última línea:** ` ``` `
 
-Si no se necesita configuración, se puede omitir el `---` y poner solo ecuaciones.
+---
 
-### Parámetros de configuración disponibles
+## PARÁMETROS DE CONFIGURACIÓN
+
+Van **antes** del `---`, separados por `;` o saltos de línea. Cada parámetro termina en `;`.
 
 | Parámetro | Qué hace | Valor típico |
 |-----------|----------|--------------|
@@ -44,13 +77,11 @@ Si no se necesita configuración, se puede omitir el `---` y poner solo ecuacion
 | `grid` | Mostrar cuadrícula | `true` o `false` |
 | `degreeMode` | Modo ángulos | `degrees` o `radians` |
 
-Los parámetros se separan con `;` o saltos de línea.
-
 ---
 
 ## SINTAXIS DE ECUACIONES
 
-Las ecuaciones usan formato LaTeX matemático estándar.
+Las ecuaciones usan formato LaTeX matemático estándar. Van **después** del `---`.
 
 ### Ecuaciones básicas
 
@@ -69,8 +100,6 @@ Las ecuaciones usan formato LaTeX matemático estándar.
 
 ### Funciones definidas por el usuario
 
-Se puede definir una función y luego usarla:
-
 ```
 f(x)=2x+1
 g(x)=x^2-3
@@ -88,7 +117,7 @@ El modificador `|hidden` oculta la curva base pero la mantiene disponible para u
 
 ## MODIFICADORES — COLOR, ESTILO Y RESTRICCIONES
 
-Después de cada ecuación se agregan modificadores separados por `|`. El orden no importa.
+Después de cada ecuación se agregan modificadores separados por `|`.
 
 ### Colores disponibles
 
@@ -122,8 +151,6 @@ Colores claros recomendados para rellenos de área:
 
 ### Restricción de dominio
 
-Para graficar solo en un rango de x o y:
-
 ```
 y=x^2|0<=x<=3            → Parábola solo entre x=0 y x=3
 y=\sqrt{x}|x>=0          → Raíz solo donde está definida
@@ -142,7 +169,7 @@ y=x^2|RED|DASHED|0<=x<=3
 
 ## ÁREAS SOMBREADAS (INECUACIONES)
 
-Para sombrear una región, usar una inecuación en lugar de ecuación. Para sombrear la **intersección** de varias condiciones, ponerlas todas en una sola línea separadas por `|`:
+Para sombrear una región, usar una inecuación. Para la intersección de varias condiciones, ponerlas todas en una sola línea separadas por `|`:
 
 ```
 y<x^2                         → Debajo de la parábola
@@ -151,7 +178,7 @@ x^2+y^2<4                     → Interior del círculo radio 2
 y<2-x|y>x|x>=0|x<=1|#a5d8ff  → Intersección con color
 ```
 
-**Nota importante:** Para rellenos usar siempre colores hexadecimales claros (`#a5d8ff`, `#b2f2bb`, `#ffd8a8`, `#d0bfff`) porque los colores con nombre salen demasiado saturados en áreas.
+**Nota:** Para rellenos usar siempre colores hexadecimales claros. Los colores con nombre (RED, BLUE, etc.) salen demasiado saturados en áreas sombreadas.
 
 ---
 
@@ -167,7 +194,9 @@ y<2-x|y>x|x>=0|x<=1|#a5d8ff  → Intersección con color
 
 ---
 
-## EJEMPLOS COMPLETOS LISTOS PARA COPIAR
+## EJEMPLOS COMPLETOS
+
+Todos los ejemplos incluyen el `---` obligatorio.
 
 ### Ejemplo 1: Función cuadrática simple
 
@@ -243,27 +272,24 @@ x=0.5|0<=y<=1.5|GREEN|DASHED
 
 ## CÓMO RESPONDER CUANDO EL USUARIO PIDE UNA GRÁFICA
 
-Cuando el usuario presente un ejercicio y pida graficarlo, NotebookLM debe:
-
 1. **Identificar** qué curvas, regiones o puntos hay que representar.
-2. **Calcular** los límites adecuados del plano (que todas las curvas queden visibles con un poco de margen).
-3. **Asignar** colores distintos a cada curva para que se diferencien claramente.
-4. **Generar** el bloque `desmos-graph` completo.
-5. **Explicar brevemente** qué representa cada línea del bloque (opcional pero útil).
+2. **Calcular** los límites adecuados del plano (que todas las curvas queden visibles con margen).
+3. **Asignar** colores distintos a cada curva.
+4. **Generar** el bloque `desmos-graph` completo con el `---` en su lugar.
+5. **Explicar brevemente** qué representa cada línea del bloque.
 
-### Reglas de buenas prácticas al generar código
+### Reglas de buenas prácticas
 
-- Usar `width=500; height=400` para funciones regulares y `width=500; height=500` para regiones en plano cuadrado (x e y con misma escala).
-- Usar restricciones de dominio siempre que la función tenga un dominio natural limitado.
-- Usar colores hexadecimales claros para rellenos de área, nunca colores con nombre para inecuaciones.
-- Etiquetar los puntos clave (intersecciones, vértices, extremos) con `|label:`.
-- Si hay más de una curva, usar colores distintos y mencionar qué color corresponde a qué función.
+- El separador `---` es SIEMPRE obligatorio, incluso si la sección de configuración está vacía.
+- Todos los parámetros de configuración terminan en `;`.
+- Usar `width=500; height=400` para funciones regulares y `width=500; height=500` para plano cuadrado.
+- Usar restricciones de dominio cuando la función tenga dominio natural limitado.
+- Usar colores hexadecimales claros para rellenos de área.
+- Etiquetar los puntos clave con `|label:`.
 
 ---
 
 ## PLANTILLA UNIVERSAL
-
-Cuando no se sabe qué tamaño usar, esta plantilla sirve como punto de partida:
 
 ```
 ```desmos-graph
@@ -276,11 +302,13 @@ width=500; height=500;
 
 ---
 
-## RESUMEN DE TODA LA SINTAXIS EN UNA LÍNEA
+## RESUMEN DE SINTAXIS
 
 ```
-y=ecuacion|COLOR|ESTILO|restriccion    → curva con todo
-y<ecuacion|y>otra|0<=x<=1|#hexcolor    → área sombreada con restricción
-(x,y)|OPEN|label:texto|COLOR           → punto con estilo y etiqueta
-f(x)=ecuacion|hidden                   → función oculta reutilizable
+[configuracion;]        ← parámetros antes del separador
+---                     ← OBLIGATORIO SIEMPRE
+y=ec|COLOR|ESTILO|rest  ← curva con modificadores
+y<ec|y>otra|#hexcolor   ← área sombreada
+(x,y)|OPEN|label:texto  ← punto etiquetado
+f(x)=ec|hidden          ← función oculta reutilizable
 ```
