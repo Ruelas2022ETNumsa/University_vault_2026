@@ -193,7 +193,6 @@ width=500; height=500;
 
 > [!check] Correcto
 > Procedimiento y resultado verificados con el formulario.
-```
 
 ---
 
