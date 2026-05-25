@@ -82,26 +82,3 @@ Dada la simetría perfecta de la función conjunta y los límites de integració
 $$VAR[X+Y] = \frac{1}{18} + \frac{1}{18} = \frac{2}{18} = \mathbf{\frac{1}{9}}$$ En decimales, el resultado es aproximadamente **0.1111**.
 
 ---
-
-### 📊 Gráfica en Desmos
-
-A continuación, se presenta el código para visualizar el soporte de la función y las densidades marginales.
-
-```desmos-graph
-left=-0.2; right=1.5;
-bottom=-0.2; top=2.5;
-width=500; height=500;
----
-y<=1|y>=0|x>=0|x<=1|#a5d8ff
-f(x)=2x|0<=x<=1|RED
-x=1|0<=y<=1|BLUE|DASHED
-y=1|0<=x<=1|BLUE|DASHED
-(0,0)|label:(0,0)|BLACK
-(1,1)|label:(1,1)|BLACK
-```
-
-**Explicación de la gráfica:**
-
-- **Área sombreada azul (#a5d8ff):** Representa la región de soporte definida por $0 \le x \le 1$ y $0 \le y \le 1$, que es un cuadrado unitario.
-- **Línea Roja ($f(x)$):** Representa la función de densidad marginal $f_X(x) = 2x$. Se observa que la probabilidad aumenta linealmente a medida que $x$ crece hacia 1.
-- **Líneas Azules punteadas:** Delimitan los bordes superiores del dominio de existencia de las variables.
