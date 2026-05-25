@@ -71,3 +71,15 @@ y>0|x>0|#a5d8ff
 f(x)=\frac{2}{(1+x)^3}|RED|0<=x<=5
 (0,0)|label:(0,0)|BLACK
 ```
+
+
+
+```desmos-graph
+left=-1; right=5; bottom=-1; top=4;
+width=500; height=500;
+---
+x>=0|y>=0|#a5d8ff
+f(x)=\frac{2}{(1+x)^3}|0<=x<=5|RED|SOLID
+(0,2)|label:f_X(0) = 2|RED
+(0,0)|label:(0,0)|BLACK
+```
