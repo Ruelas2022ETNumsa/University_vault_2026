@@ -24,7 +24,7 @@ variables aleatorias continuas múltiples:
 *   **E5.** Dada la función de densidad de distribución de probabilidad 
     conjunta como se indica a continuación:
     $$f_{W,X,Y,Z}(w,x,y,z) = \begin{cases} 16wxyz & \text{si } 0 \le w \le 1, 0 \le x \le 1, 0 \le y \le 1, 0 \le z \le 1 \\ 0 & \text{en otro caso} \end{cases}$$
-    **a)** Hallar la probabilidad de $W \le \frac{1}{2}$ y que $Y \le \frac{3}{4}$.
+    **a)** Hallar la probabilidad de $W \le 3$ y que $Y \le \frac{1}{2}$.
     **b)** Encontrar la función de densidad marginal de $W$.
 
 *   **E6.** Las variables aleatorias $X, Y$ tiene la función de densidad de 
