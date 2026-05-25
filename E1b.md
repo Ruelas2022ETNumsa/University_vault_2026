@@ -77,6 +77,30 @@ Como $0.375 \neq 0.5625$, se concluye que **$X$ e $Y$ son estadísticamente depe
 
 ---
 
+> [!check] c) Alternativo — Verificación algebraica (Formulario)
+>
+> El formulario establece que $X$ e $Y$ son independientes si y solo si $f_{X,Y}(x,y) = f_X(x) \cdot f_Y(y)$ para **todo** $(x,y)$ en el soporte.
+>
+> **Paso 1 — Expresiones obtenidas en el inciso b):**
+>
+> $f_X(x) = \frac{3}{4}x(2-x), \quad 0 \le x \le 2$
+>
+> $f_Y(y) = \begin{cases} \dfrac{3}{16}y^2 & 0 \le y \le 2 \\ \dfrac{3}{16}(4-y)^2 & 2 \le y \le 4 \end{cases}$
+>
+> **Paso 2 — Calcular el producto $f_X(x) \cdot f_Y(y)$ en la región $0 \le y \le 2$:**
+>
+> $f_X(x) \cdot f_Y(y) = \frac{3}{4}x(2-x) \cdot \frac{3}{16}y^2 = \frac{9}{64}x(2-x)y^2$
+>
+> **Paso 3 — Comparar con la PDF conjunta:**
+>
+> $f_{X,Y}(x,y) = \frac{3}{8}x$
+>
+> El producto depende de $(2-x)$ e $y^2$, mientras que la conjunta solo depende de $x$. Son expresiones distintas para cualquier punto general del soporte.
+>
+> **Conclusión:** $f_{X,Y}(x,y) \neq f_X(x) \cdot f_Y(y)$ — $X$ e $Y$ son **estadísticamente dependientes**.
+
+---
+
 ### 🟠 d) Probabilidad $P(Y \le \sqrt{x})$
 
 #### 1. Análisis de límites e intersección
@@ -106,18 +130,18 @@ $$P(Y \le \sqrt{x}) = \int_{0}^{1} \int_{x}^{\sqrt{x}} \frac{3}{8}x , dy , dx$$
 
 Utiliza el siguiente bloque de código para visualizar la región de soporte y el área de integración del inciso d).
 
-```
+```desmos-graph
 left=-0.5; right=4.5;
 bottom=-0.5; top=4.5;
 ---
-y >= x | {x >= 0} | {y <= 4-x} | #a5d8ff | label: Soporte Total
-y <= sqrt(x) | {y >= x} | #ff7b7b | label: Región P(Y <= sqrt(x))
-y = x | BLUE | DASHED
-y = 4-x | BLUE | DASHED
-y = sqrt(x) | PURPLE | label: y = sqrt(x)
-(0,0) | label: (0,0)
-(2,2) | label: (2,2)
-(0,4) | label: (0,4)
+y>=x|x>=0|y<=4-x|#a5d8ff
+y<=\sqrt{x}|y>=x|x>=0|x<=1|#ff7b7b
+y=x|0<=x<=2|BLUE|DASHED
+y=4-x|0<=x<=2|BLUE|DASHED
+y=\sqrt{x}|0<=x<=1|PURPLE
+(0,0)|label:(0,0)|BLACK
+(2,2)|label:(2,2)|RED
+(0,4)|label:(0,4)|BLUE
 ```
 
 **Explicación de la gráfica:**
