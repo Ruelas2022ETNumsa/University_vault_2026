@@ -53,9 +53,11 @@ La región de soporte es un cuadrado unitario en el primer cuadrante. Se grafica
 left=-0.2; right=1.3; bottom=-0.2; top=1.3;
 width=500; height=500;
 ---
-y<=1|y>=0|#a5d8ff
-x>=0|x<=1|#a5d8ff
+x>=0|x<=1|y>=0|y<=1|#a5d8ff
+
 f(x)=2x|RED|0<=x<=1
+g(x)=2x|GREEN|0<=x<=1
+
 (0,0)|label:(0,0)|BLACK
 (1,0)|label:(1,0)|BLACK
 (0,1)|label:(0,1)|BLACK
@@ -75,29 +77,3 @@ f(x)=2x|RED|0<=x<=1
 - **Líneas Azules:** Límites de la región de probabilidad definida en el enunciado.
 
 
-
-```desmos-graph
-left=-0.2; right=1.5; bottom=-0.2; top=2.3;
-width=500; height=500;
----
-x<=y|0<=x<=1|#a5d8ff
-y<=2-x|0<=x<=1|#a5d8ff
-y=x|0<=x<=1|RED|SOLID
-y=2-x|0<=x<=1|BLUE|SOLID
-f(x)=6x(1-x)|0<=x<=1|GREEN|SOLID
-(0,0)|label:(0,0)|BLACK
-(1,1)|label:(1,1)|RED
-(0,2)|label:(0,2)|BLUE
-```
-
-
-
-
-```desmos-graph
-left=-0.2; right=1.5; bottom=-0.2; top=2.5;
-width=500; height=500;
----
-
-y<2|x>=0|y>0|x<=1|#a5d8ff
-
-```
