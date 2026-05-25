@@ -89,14 +89,18 @@ Para que las marginales sean válidas, su integral sobre todo su dominio debe se
 
 He generado el código para visualizar la región de soporte conjunta y las dos funciones marginales calculadas.
 
-```
+```desmos-graph
 left=-1.5; right=1.5;
 bottom=-0.5; top=1.5;
+width=500; height=500;
 ---
-x^2+y^2<=1|y>=0|#a5d8ff  // Región de soporte (Semicírculo)
-f(x)= (2*sqrt(1-x^2))/pi |RED| -1<=x<=1 // Marginal f_X(x)
-g(x)= (4*sqrt(1-x^2))/pi |GREEN| 0<=x<=1 // Marginal f_Y(y) (graficada en eje x para ver forma)
-(0,0)|label:Origen
+x^2+y^2<=1|y>=0|#a5d8ff
+f(x)=\frac{2\sqrt{1-x^2}}{\pi}|-1<=x<=1|RED
+g(y)=\frac{4\sqrt{1-y^2}}{\pi}|0<=y<=1|GREEN
+(0,0)|label:(0,0)|BLACK
+(-1,0)|label:(-1,0)|BLACK
+(1,0)|label:(1,0)|BLACK
+(0,1)|label:(0,1)|BLACK
 ```
 
 **Explicación de la gráfica:**
