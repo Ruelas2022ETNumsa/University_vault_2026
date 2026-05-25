@@ -1,85 +1,409 @@
-Basándose en el documento **"Práctica 2 de Variables Aleatorias Continuas Múltiples"**, a continuación se presenta el enunciado oficial del **Ejercicio 1** y su resolución siguiendo los pasos metodológicos del formulario de la materia.
+La resolución está bien encaminada, pero está demasiado “compactada”.  
+Para una entrega académica conviene separar más los pasos algebraicos y justificar cada integral.  
+Además hay una pequeña parte que puede explicarse mucho mejor para que no parezca magia algebraica.
 
-### Enunciado del Ejercicio 1 (Fuente: Práctica Nº2)
-
-Encontrar el valor de $k$ en la siguiente función $f_{X,Y}(x,y)$ y también la función de distribución marginal de $X$: $$f_{X,Y}(x,y) = \begin{cases} \frac{k}{(1+x+y)^4} & \text{si } 0 \le x \le \infty; 0 \le y \le \infty \ 0 & \text{en otro caso} \end{cases}$$
+Esta sería una versión verdaderamente paso a paso:
 
 ---
 
-### Resolución
+# Resolución paso a paso
 
-Para resolver este ejercicio, aplicamos las propiedades de las funciones de densidad conjunta y marginal detalladas en las fuentes.
+Dada la función:
 
-#### 1. Determinar el valor de $k$
+[  
+f_{X,Y}(x,y)=  
+\begin{cases}  
+\dfrac{k(1+x+y)}{(1+x)^4(1+y)^4}, & x\ge0,; y\ge0 \  
+0, & \text{en otro caso}  
+\end{cases}  
+]
 
-Para que $f_{X,Y}(x,y)$ sea una función de densidad válida, la integral doble sobre todo su rango debe ser igual a 1: $$\int_{0}^{\infty} \int_{0}^{\infty} \frac{k}{(1+x+y)^4} , dy , dx = 1$$
+Se pide:
 
-- **Integración respecto a $y$:** Mantenemos $x$ constante e integramos: $$\int_{0}^{\infty} k(1+x+y)^{-4} , dy = \left[ \frac{k(1+x+y)^{-3}}{-3} \right]_{0}^{\infty}$$ Evaluando en los límites: $0 - \left( -\frac{k}{3(1+x)^3} \right) = \frac{k}{3(1+x)^3}$.
+1. Encontrar (k)
     
-- **Integración respecto a $x$:** Ahora integramos el resultado anterior: $$\int_{0}^{\infty} \frac{k}{3}(1+x)^{-3} , dx = \left[ \frac{k}{3} \cdot \frac{(1+x)^{-2}}{-2} \right]_{0}^{\infty} = \left[ -\frac{k}{6(1+x)^2} \right]_{0}^{\infty}$$ Evaluando: $0 - \left( -\frac{k}{6(1)^2} \right) = \frac{k}{6}$.
-    
-- **Cálculo final de $k$:** Igualamos a 1 para normalizar la probabilidad: $$\frac{k}{6} = 1 \implies \mathbf{k = 6}$$
+2. Hallar la marginal (f_X(x))
     
 
-#### 2. Función de densidad marginal de $X$ ($f_X(x)$)
+---
 
-La densidad marginal de $X$ se obtiene integrando la función conjunta respecto a $y$ sobre todo su rango: $$f_X(x) = \int_{0}^{\infty} \frac{6}{(1+x+y)^4} , dy$$ Utilizando el resultado de la integral interna anterior con $k=6$: $$f_X(x) = \frac{6}{3(1+x)^3} = \mathbf{\frac{2}{(1+x)^3}, \quad \text{para } x \ge 0}$$
+# 1. Determinación de (k)
+
+Para que una función sea densidad conjunta válida debe cumplirse:
+
+[  
+\int_0^\infty \int_0^\infty f_{X,Y}(x,y),dy,dx =1  
+]
+
+Sustituyendo la función:
+
+[  
+\int_0^\infty \int_0^\infty  
+\dfrac{k(1+x+y)}{(1+x)^4(1+y)^4}  
+,dy,dx  
+=1  
+]
+
+Sacamos (k) fuera de la integral:
+
+[  
+k  
+\int_0^\infty  
+\int_0^\infty  
+\dfrac{1+x+y}{(1+x)^4(1+y)^4}  
+,dy,dx  
+=1  
+]
 
 ---
 
-### Gráfica en Desmos
+## Paso 1 — Separar el numerador
 
-La región de probabilidad es el **primer cuadrante** ($x \ge 0, y \ge 0$). Se incluye también la curva de la densidad marginal $f_X(x)$.
+Observamos que:
 
-```desmos-graph
-left=-0.5; right=5; bottom=-0.5; top=5;
-width=500; height=500;
+[  
+1+x+y=(1+x)+y  
+]
+
+Entonces:
+
+# [  
+\dfrac{1+x+y}{(1+x)^4(1+y)^4}
+
+\dfrac{1+x}{(1+x)^4(1+y)^4}  
++  
+\dfrac{y}{(1+x)^4(1+y)^4}  
+]
+
+Simplificando el primer término:
+
+# [
+
+\dfrac{1}{(1+x)^3(1+y)^4}  
++  
+\dfrac{y}{(1+x)^4(1+y)^4}  
+]
+
+Entonces la integral queda:
+
+[  
+k\int_0^\infty  
+\left[  
+\int_0^\infty  
+\dfrac{1}{(1+x)^3(1+y)^4},dy  
++  
+\int_0^\infty  
+\dfrac{y}{(1+x)^4(1+y)^4},dy  
+\right]dx  
+]
+
+Factorizamos respecto a (x):
+
+[  
+k\int_0^\infty  
+\left[  
+\dfrac{1}{(1+x)^3}  
+\int_0^\infty (1+y)^{-4}dy  
++  
+\dfrac{1}{(1+x)^4}  
+\int_0^\infty y(1+y)^{-4}dy  
+\right]dx  
+]
+
 ---
-x>=0|y>=0|#a5d8ff
-f(x)=\frac{2}{(1+x)^3}|RED|0<=x<=5
-(0,0)|label:(0,0)|BLACK
-```
 
-**Explicación de la gráfica:**
+# Paso 2 — Resolver las integrales respecto a (y)
 
-- **Área sombreada (#a5d8ff):** Representa el dominio del primer cuadrante donde la función de densidad es distinta de cero ($0 \le x \le \infty$ y $0 \le y \le \infty$).
-- **Línea Roja ($f(x)$):** Representa la función de densidad marginal calculada, $f_X(x) = \frac{2}{(1+x)^3}$, que muestra cómo decae la probabilidad a medida que $x$ aumenta.
-- **Punto (0,0):** Indica el origen de la región de soporte de las variables aleatorias.
+## Primera integral
 
+[  
+\int_0^\infty (1+y)^{-4}dy  
+]
 
+Integramos:
 
-```desmos-graph
-left=-0.5; right=5; bottom=-0.5; top=5;
-width=500; height=500;
+# [
+
+\left[  
+\dfrac{(1+y)^{-3}}{-3}  
+\right]_0^\infty  
+]
+
+Evaluando:
+
+# [
+
+0-\left(-\dfrac13\right)  
+=\dfrac13  
+]
+
 ---
-y>0|x>0|#a5d8ff
-f(x)=2/(1+x)^3|RED|0<=x<=5
-(0,0)|label:(0,0)|BLACK
-```
 
+## Segunda integral
 
+[  
+\int_0^\infty y(1+y)^{-4}dy  
+]
 
+Usamos el cambio:
 
+[  
+u=1+y  
+]
 
+Entonces:
 
-```desmos-graph
-left=-0.5; right=5;
-bottom=-0.1; top=2.2;
-width=500; height=400;
+[  
+du=dy  
+]
+
+y:
+
+[  
+y=u-1  
+]
+
+Cuando:
+
+- (y=0 \Rightarrow u=1)
+    
+- (y\to\infty \Rightarrow u\to\infty)
+    
+
+La integral queda:
+
+[  
+\int_1^\infty (u-1)u^{-4}du  
+]
+
+Distribuyendo:
+
+# [
+
+\int_1^\infty  
+(u^{-3}-u^{-4})du  
+]
+
+Integramos término a término:
+
+# [
+
+\left[  
+-\dfrac1{2u^2}  
++\dfrac1{3u^3}  
+\right]_1^\infty  
+]
+
+Evaluando:
+
+# [
+
+0-  
+\left(  
+-\dfrac12+\dfrac13  
+\right)  
+]
+
+# [
+
+\dfrac12-\dfrac13  
+=\dfrac16  
+]
+
 ---
-y>0|x>0|#a5d8ff
-f(x)=\frac{2}{(1+x)^3}|RED|0<=x<=5
-(0,0)|label:(0,0)|BLACK
-```
 
+# Paso 3 — Sustituir resultados
 
+Reemplazamos:
 
-```desmos-graph
-left=-1; right=5; bottom=-1; top=4;
-width=500; height=500;
+[  
+k\int_0^\infty  
+\left[  
+\dfrac1{(1+x)^3}\left(\dfrac13\right)  
++  
+\dfrac1{(1+x)^4}\left(\dfrac16\right)  
+\right]dx  
+=1  
+]
+
+Sacamos factor común (\frac16):
+
+[  
+k\int_0^\infty  
+\dfrac{2(1+x)+1}{6(1+x)^4}  
+dx  
+=1  
+]
+
+Simplificando:
+
+# [
+
+\dfrac{k}{6}  
+\int_0^\infty  
+\dfrac{2x+3}{(1+x)^4}  
+dx  
+]
+
 ---
-x>=0|y>=0|#a5d8ff
-f(x)=\frac{2}{(1+x)^3}|0<=x<=5|RED|SOLID
-(0,2)|label:f_X(0) = 2|RED
-(0,0)|label:(0,0)|BLACK
-```
+
+# Paso 4 — Resolver la integral respecto a (x)
+
+Escribimos:
+
+[  
+2x+3=2(1+x)+1  
+]
+
+Entonces:
+
+[  
+\dfrac{k}{6}  
+\int_0^\infty  
+\left[  
+2(1+x)^{-3}  
++(1+x)^{-4}  
+\right]dx  
+]
+
+Separando:
+
+# [
+
+\dfrac{k}{6}  
+\left[  
+2\int_0^\infty (1+x)^{-3}dx  
++  
+\int_0^\infty (1+x)^{-4}dx  
+\right]  
+]
+
+---
+
+## Resolver cada integral
+
+### Primera:
+
+# [  
+\int_0^\infty (1+x)^{-3}dx
+
+# \left[  
+\dfrac{(1+x)^{-2}}{-2}  
+\right]_0^\infty
+
+\dfrac12  
+]
+
+### Segunda:
+
+# [  
+\int_0^\infty (1+x)^{-4}dx
+
+# \left[  
+\dfrac{(1+x)^{-3}}{-3}  
+\right]_0^\infty
+
+\dfrac13  
+]
+
+---
+
+# Paso 5 — Hallar (k)
+
+Sustituyendo:
+
+[  
+\dfrac{k}{6}  
+\left[  
+2\left(\dfrac12\right)  
++\dfrac13  
+\right]  
+=1  
+]
+
+[  
+\dfrac{k}{6}  
+\left[  
+1+\dfrac13  
+\right]  
+=1  
+]
+
+[  
+\dfrac{k}{6}\left(\dfrac43\right)=1  
+]
+
+[  
+\dfrac{2k}{9}=1  
+]
+
+Finalmente:
+
+[  
+\boxed{k=\dfrac92}  
+]
+
+---
+
+# 2. Función marginal de (X)
+
+La marginal se obtiene integrando respecto a (y):
+
+[  
+f_X(x)=  
+\int_0^\infty  
+f_{X,Y}(x,y),dy  
+]
+
+Sustituyendo (k=\frac92):
+
+[  
+f_X(x)=  
+\int_0^\infty  
+\dfrac{\frac92(1+x+y)}  
+{(1+x)^4(1+y)^4}  
+dy  
+]
+
+Usando el resultado ya calculado:
+
+# [  
+\int_0^\infty  
+\dfrac{1+x+y}{(1+y)^4}  
+dy
+
+\dfrac{2x+3}{6}  
+]
+
+Entonces:
+
+[  
+f_X(x)=  
+\dfrac{\frac92}{(1+x)^4}  
+\cdot  
+\dfrac{2x+3}{6}  
+]
+
+Simplificando:
+
+[  
+f_X(x)=  
+\dfrac{3(2x+3)}  
+{4(1+x)^4}  
+]
+
+para:
+
+[  
+x\ge0  
+]
+
+Respuesta final:
+
+[  
+\boxed{  
+f_X(x)=  
+\dfrac{3(2x+3)}  
+{4(1+x)^4}  
+}  
+]
