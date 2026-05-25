@@ -408,10 +408,15 @@ y<ecuacion|y>otra|COLOR_HEX        ← área sombreada
 f(x)=ecuacion|hidden               ← función oculta
 ```
 ```
+```
 
 ---
 
 ## 12. RECURSOS PARA SEGUIR PRACTICANDO
+
+
+
+
 
 | Recurso | URL | Para qué sirve |
 |---------|-----|----------------|

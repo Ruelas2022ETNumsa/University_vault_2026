@@ -80,11 +80,14 @@ f(x)=2x|RED|0<=x<=1
 left=-0.2; right=1.5; bottom=-0.2; top=2.3;
 width=500; height=500;
 ---
-y >= x {y <= 2-x} {x >= 0} | #a5d8ff
-y = x | 0 <= x <= 1 | RED | SOLID
-y = 2-x | 0 <= x <= 1 | BLUE | SOLID
-f(x) = 6x(1-x) | 0 <= x <= 1 | GREEN | SOLID
-(0,0) | label: (0,0) | BLACK
-(1,1) | label: (1,1) | RED
-(0,2) | label: (0,2) | BLUE
+C_1 = y >= x
+C_2 = y <= 2-x
+C_3 = x >= 0
+C_1 {C_2} {C_3} | #a5d8ff
+y=x|0<=x<=1|RED|SOLID
+y=2-x|0<=x<=1|BLUE|SOLID
+f(x)=6x(1-x)|0<=x<=1|GREEN|SOLID
+(0,0)|label:(0,0)|BLACK
+(1,1)|label:(1,1)|RED
+(0,2)|label:(0,2)|BLUE
 ```
