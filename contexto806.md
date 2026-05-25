@@ -5,7 +5,7 @@
 Cuando el usuario comparta este archivo, Claude debe hacer lo siguiente **antes de responder cualquier otra cosa**:
 
 1. Leer el archivo `E:\University_vault_2026\ETN806-Formulario-2doP-Variables-Aleatorias-Multiples.md` completo.
-2. Leer el archivo `E:\University_vault_2026\_app\_appnotes\desmos_intro.md` para las gráficas.
+2. Leer el archivo `E:\University_vault_2026\_app\_appnotes\desmos_guide.md` (sección Claude) para las gráficas.
 3. Confirmar al usuario con un mensaje breve: *"Contexto cargado. Formulario leído. Listo para revisar ejercicios."*
 
 > Si en el futuro existe un `Formulario_iii` u otro formulario indicado por el usuario, leerlo en lugar del anterior o además de él según se indique.
