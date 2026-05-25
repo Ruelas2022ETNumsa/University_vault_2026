@@ -1,15 +1,17 @@
-**Enunciado:** Las variables aleatorias X,Y tienen la función de densidad de distribución de probabilidad conjunta que se indica:
+A continuación, se presenta el enunciado del **Ejercicio 3** extraído de la fuente **SEGUNDO PARCIAL.pdf**:
 
-fX,Y​(x,y)={π2​0​si x2+y2≤1,0≤y≤1en otro caso​
+### 📝 Enunciado del Ejercicio 3
 
-**Instrucción adicional:** Analice solo en los dos primeros cuadrantes.
+**3.- (20%)** Las variables aleatorias $X, Y$ tienen la función de densidad de distribución de probabilidad conjunta que se indica:
+
+$$f_{X,Y}(x,y) = \begin{cases} \frac{2}{\pi} & \text{si } x^2 + y^2 \le 1; \quad 0 \le y \le 1 \ 0 & \text{en otro caso} \end{cases}$$
+
+Analice solo en los dos primeros cuadrantes.
 
 **Se pide:**
 
-- **a)** Encontrar la distribución marginal de X (fX​(x)).
-- **b)** Encontrar la distribución marginal de Y (fY​(y)).
-
-
+- **a)** Encontrar la distribución marginal de $X$.
+- **b)** Encontrar la distribución marginal de $Y$.
 
 A continuación, se presenta la resolución detallada y pedagógica del ejercicio 3 del segundo parcial, siguiendo estrictamente el procedimiento técnico para el análisis de variables aleatorias continuas conjuntas.
 
