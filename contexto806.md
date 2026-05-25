@@ -1,397 +1,278 @@
-# CONTEXTO DE TRABAJO — PROCESOS ESTOCÁSTICOS 806
+# CONTEXTO DE TRABAJO — PROCESOS ESTOCÁSTICOS ETN806
 
 ## INSTRUCCIÓN INMEDIATA — LEER AL CARGAR ESTE ARCHIVO
 
 Cuando el usuario comparta este archivo, Claude debe hacer lo siguiente **antes de responder cualquier otra cosa**:
 
-1. Leer el archivo `E:\University_vault_2026\Formulario_806_ii.md` completo.
-2. Leer el archivo `E:\University_vault_2026\_app\_appnotes\desmos_intro.md` para las graficas.
-3. leer el archivo `E:\University_vault_2026\Resuelto 1.md` completo.
-4. Confirmar al usuario con un mensaje breve: *"Contexto cargado. Formulario leído. Listo para revisar ejercicios."*
+1. Leer el archivo `E:\University_vault_2026\ETN806-Formulario-2doP-Variables-Aleatorias-Multiples.md` completo.
+2. Leer el archivo `E:\University_vault_2026\_app\_appnotes\desmos_intro.md` para las gráficas.
+3. Confirmar al usuario con un mensaje breve: *"Contexto cargado. Formulario leído. Listo para revisar ejercicios."*
 
-No esperar a que el usuario pida revisar un ejercicio. La lectura del formulario es el primer paso obligatorio al iniciar la conversación con este contexto.
+> Si en el futuro existe un `Formulario_iii` u otro formulario indicado por el usuario, leerlo en lugar del anterior o además de él según se indique.
 
 ---
 
 ## PROPÓSITO DE ESTE DOCUMENTO
 
-Este documento describe el flujo de trabajo completo para resolver, revisar y graficar ejercicios de **Variables Aleatorias Continuas Múltiples** (Procesos Estocásticos 806). Define qué notas existen, qué rol cumple cada una, y cómo debe actuar Claude en cada etapa.
+Describe el flujo de trabajo para **resolver, revisar y graficar** ejercicios de Variables Aleatorias Continuas Múltiples de ETN806. Es independiente del parcial o del conjunto de ejercicios activo — aplica a cualquier ejercicio nuevo que el usuario traiga.
 
 ---
 
-## NOTAS DEL SISTEMA
+## ARCHIVOS DEL SISTEMA
 
-| Nota | Ubicación | Rol |
-|------|-----------|-----|
-| `Formulario_806_ii.md` | `E:\University_vault_2026\` | Fuente de verdad matemática. Contiene todas las fórmulas, definiciones y procedimientos válidos para el curso. |
-| `desmos_intro.md` | `E:\University_vault_2026\_app\_appnotes\` | Guía completa de sintaxis Desmos para Claude: colores, restricciones, áreas sombreadas, puntos, ejemplos. Usar al generar o corregir bloques `desmos-graph`. |
-| `desmoslm.md` | `E:\University_vault_2026\_app\_appnotes\` | Versión resumida de la guía Desmos entregada a NotebookLM como fuente. Referencia secundaria. |
-| `Resuelto 1.md` | `E:\University_vault_2026\` | Ejercicio resuelto por el docente. Sirve como guía de referencia de nivel y formato esperado. NO se corrige ni modifica. |
-| `E1.md`, `E2.md`, `E3.md`, ... | `E:\University_vault_2026\` | Ejercicios de la Práctica Nº2 generados por NotebookLM. Cada archivo contiene enunciado y resolución por incisos. Claude los revisa y corrige. |
+| Archivo | Ubicación | Rol |
+|---------|-----------|-----|
+| `ETN806-Formulario-2doP-Variables-Aleatorias-Multiples.md` | `E:\University_vault_2026\` | **Fuente de verdad matemática.** Todas las fórmulas, definiciones y procedimientos válidos del curso. |
+| `ETN806-Practica2-Enunciados-Variables-Aleatorias-Multiples.md` | `E:\University_vault_2026\` | Enunciados de la Práctica 2. Referencia de enunciados originales. |
+| `ETN806-Resuelto-Referencia-Densidad-Conjunta-Triangular.md` | `E:\University_vault_2026\` | Ejercicio resuelto por el docente. Referencia de nivel y formato. NO se modifica. |
+| `desmos_intro.md` | `E:\University_vault_2026\_app\_appnotes\` | Guía completa de sintaxis Desmos para Obsidian. Usar siempre al generar o corregir gráficas. |
+| `ETN806-P2-E*.md` | `E:\University_vault_2026\` | Ejercicios resueltos de la Práctica 2 (serie a). |
+| `ETN806-2P-E*.md` | `E:\University_vault_2026\` | Ejercicios resueltos del 2do Parcial (serie b). |
 
 ---
 
 ## FLUJO DE TRABAJO
 
 ```
-1. El usuario pide a NotebookLM resolver un ejercicio
+1. El usuario trae un ejercicio (archivo .md o texto directo)
          ↓
-2. NotebookLM genera la respuesta (enunciado + resolución por incisos)
+2. Claude lee el enunciado e identifica qué piden los incisos
          ↓
-3. El usuario guarda esa respuesta en Obsidian como E1.md, E2.md, etc.
+3. Claude verifica la resolución contra el formulario, inciso por inciso
          ↓
-4. El usuario le pide a Claude que revise el archivo
+4. Si el método usado no coincide con el formulario → agrega resolución alternativa
+   Si hay errores → agrega callout de corrección
+   Si está correcto → agrega callout de verificación
          ↓
-5. Claude lee el ejercicio y lo verifica contra el Formulario_806_ii.md
+5. Claude revisa las gráficas Desmos: corrige sintaxis y elimina las que no aportan
          ↓
-6. Claude agrega correcciones debajo de cada inciso usando callouts
-         ↓
-7. Si hay gráficas mal ubicadas, Claude las separa por inciso y las reubica
+6. Claude edita el archivo directamente en el vault usando Filesystem
 ```
 
 ---
 
-## ROL DE CLAUDE EN LA REVISIÓN
+## ROL DE CLAUDE AL REVISAR UN EJERCICIO
 
-Cuando el usuario pida revisar un ejercicio `E1.md`, `E2.md`, etc., Claude debe:
+### 1. Leer el enunciado completo antes de revisar
 
-### 1. Verificar contra el formulario
+Identificar:
+- La función conjunta $f_{X,Y}(x,y)$ y su región de soporte.
+- Qué pide cada inciso (normalización, marginal, independencia, probabilidad, esperanza, varianza, covarianza, densidad condicional).
+- El tipo de dominio (rectangular, triangular, circular, infinito, con valor absoluto).
 
-El formulario ya fue leído al iniciar la sesión. Usarlo como única fuente de verdad matemática para verificar procedimientos, fórmulas y resultados.
+### 2. Verificar inciso por inciso contra el formulario
 
-### 2. Revisar inciso por inciso
+Para cada inciso revisar:
+- Que la **fórmula aplicada** corresponda al formulario.
+- Que los **límites de integración** sean correctos según la región del enunciado.
+- Que el **desarrollo algebraico** sea correcto paso a paso.
+- Que el **resultado final** sea correcto.
 
-Recorrer el ejercicio inciso por inciso (a, b, c, ...) y en cada uno verificar:
+### 3. Actuar según el resultado de la verificación
 
-- Que el planteamiento de la integral sea correcto (límites, orden de integración, región).
-- Que la fórmula aplicada corresponda al formulario.
-- Que el desarrollo algebraico sea correcto paso a paso.
-- Que el resultado final sea correcto.
-- Que los límites de integración sean consistentes con la región del problema.
+**Si el método usado no corresponde al formulario** → agregar resolución alternativa debajo usando el método del formulario, sin borrar la original:
 
-### 3. Agregar correcciones con callout
+```
+> [!check] Alternativo — [nombre del método] (Formulario)
+> [desarrollo completo con el método del formulario]
+```
 
-Si un inciso tiene errores, agregar **debajo del inciso** (sin borrar ni modificar el contenido original) un bloque callout en este formato:
+**Si hay errores** → agregar callout de corrección debajo del inciso:
 
 ```
 > [!correction] Corrección
-> **Error identificado:** [descripción del error]
+> **Error identificado:** [descripción]
 >
 > **Corrección:**
 > [desarrollo correcto paso a paso]
 >
-> **Resultado correcto:** [resultado final]
+> **Resultado correcto:** [resultado]
 ```
 
-Si el inciso está correcto, agregar:
+**Si está correcto y usa el método del formulario** → agregar:
 
 ```
 > [!check] Correcto
 > Procedimiento y resultado verificados con el formulario.
 ```
 
-### 4. No sobreescribir el contenido original
+### 4. Regla absoluta — no borrar contenido original
 
-Claude NUNCA borra ni modifica el texto original del ejercicio. Solo agrega callouts debajo de cada inciso. El usuario debe poder ver el original y la corrección en paralelo.
-
----
-
-## MANEJO DE GRÁFICAS DESMOS EN LOS EJERCICIOS
-
-### Problema frecuente
-
-NotebookLM tiende a generar todas las gráficas del ejercicio en un solo bloque `desmos-graph` al final del archivo, mezclando ecuaciones de distintos incisos.
-
->**NOTA — Bloques de código Desmos en este documento:** En este archivo `contexto806.md` los bloques de código Desmos se escriben como ` ```desmos-graphx ` (con x al final) únicamente para evitar que Obsidian los renderice y poder leer el texto plano del ejemplo.
->
->**Al corregir o generar bloques en los ejercicios** (`E1.md`, `E2.md`, etc.) Claude debe usar siempre ` ```desmos-graph ` **sin la x**, para que el plugin renderice la gráfica correctamente.
->
->Regla: `desmos-graphx` = solo en este documento de contexto. `desmos-graph` = en todos los ejercicios.
-
-### Lo que Claude debe hacer
-
-Cuando encuentre gráficas mal ubicadas (todas juntas al final), debe:
-
-1. **Identificar** a qué inciso pertenece cada ecuación o región graficada.
-2. **Separar** el bloque original en bloques individuales, uno por inciso.
-3. **Reubicar** cada bloque dentro del inciso correspondiente, inmediatamente después del desarrollo matemático de ese inciso.
-4. **Eliminar** el bloque original acumulado al final.
-
-### Formato correcto para cada gráfica
-
-Cada gráfica debe ir dentro de su inciso con una etiqueta clara:
-
-#### Gráfica — inciso [letra]
-
-```desmos-graphx
-left=; right=; bottom=; top=;
-width=500; height=500;
----
-[ecuaciones del inciso]
-```
-
-### Reglas para generar/corregir bloques Desmos
-
-- El separador `---` es SIEMPRE obligatorio.
-- Cada inciso tiene su propio bloque independiente.
-- Ajustar `left`, `right`, `bottom`, `top` para que la región del inciso quede bien visible.
-- Usar colores hexadecimales claros para rellenos: `#a5d8ff`, `#b2f2bb`, `#ffd8a8`, `#d0bfff`.
-- Etiquetar los puntos clave (vértices, intersecciones, medias) con `|label:`.
-- Solo generar gráfica si aporta claridad visual al resultado. No todos los incisos la necesitan.
+Claude **nunca** borra ni modifica el texto original del ejercicio. Solo agrega bloques debajo de cada inciso.
 
 ---
 
-## TEMAS CUBIERTOS POR EL FORMULARIO
+## CÓMO APLICAR EL FORMULARIO — GUÍA GENERAL
 
-El formulario `Formulario_806_ii.md` cubre los siguientes temas. Claude debe verificar que los ejercicios usen correctamente:
+Esta sección describe cómo usar las fórmulas del formulario ante cualquier ejercicio nuevo. No depende de ejercicios específicos previos.
 
-1. **Función de densidad de probabilidad** — propiedades, normalización, $P(a \leq X \leq b)$
-2. **Esperanza matemática** — $E[X]$, $E[g(X,Y)]$, linealidad
-3. **Varianza** — $VAR[X] = E[X^2] - \mu_X^2$, desviación estándar
-4. **Densidad conjunta** — propiedades, normalización doble, probabilidad en región $R$
-5. **Función de distribución acumulativa conjunta** — $F_{X,Y}(x,y)$ y sus propiedades marginales
-6. **Densidades marginales** — $f_X(x)$, $f_Y(y)$ por integración
-7. **Independencia estadística** — verificación por $f_{X,Y} = f_X \cdot f_Y$
-8. **Valor esperado de dos variables** — $E[W]$ con $W = g(X,Y)$
-9. **Varianza de la suma y covarianza** — $VAR[X+Y]$, $COV[X,Y] = E[XY] - \mu_X\mu_Y$
-10. **Coeficiente de correlación** — $\rho_{X,Y}$, rango $[-1, 1]$
-11. **Densidad condicional** — dado evento $B$ y dado otra variable
+### Paso 0 — Identificar el dominio
+
+El dominio determina todo lo demás. Antes de plantear cualquier integral:
+
+| Tipo de dominio | Ejemplo | Implicación |
+|----------------|---------|-------------|
+| **Rectangular** | $0\le x\le a,\; 0\le y\le b$ | Límites de marginales constantes. Independencia posible si $f$ factoriza. |
+| **Triangular** | $x+y\le 1,\; x,y\ge 0$ | Límites de marginales **variables**. Independencia generalmente imposible. |
+| **Con curva** | $x\le y\le\sqrt{x}$ | Identificar intersecciones para acotar $x$. |
+| **Circular/semicircular** | $x^2+y^2\le 1$ | Despejar una variable en función de la otra para los límites. |
+| **Con valor absoluto** | $\|x\|\ge y$ | Descomponer en $x\ge 0$ y $x<0$ por separado. |
+| **Infinito** | $x,y\ge 0$ sin cota superior | Usar integrales impropias con límite $\infty$. |
+
+---
+
+### Paso 1 — Hallar la constante $k$ (si se pide)
+
+**Fórmula del formulario:** $\displaystyle\iint f_{X,Y}(x,y)\,dx\,dy = 1$
+
+**Procedimiento:**
+1. Plantear la integral doble con los límites correctos del dominio.
+2. Integrar primero respecto a la variable con límites más simples.
+3. Despejar $k$.
+
+**Alerta:** el orden de integración importa — elegir el que simplifique más los límites.
+
+---
+
+### Paso 2 — Densidades marginales
+
+**Fórmulas del formulario:**
+$$f_X(x) = \int_{y_{min}(x)}^{y_{max}(x)} f_{X,Y}(x,y)\,dy \qquad f_Y(y) = \int_{x_{min}(y)}^{x_{max}(y)} f_{X,Y}(x,y)\,dx$$
+
+**Procedimiento:**
+1. Para $f_X(x)$: fijar $x$ e integrar en $y$ con los límites que dependen de $x$.
+2. Para $f_Y(y)$: fijar $y$ e integrar en $x$ con los límites que dependen de $y$.
+3. Si el dominio cambia de forma al variar la variable de integración → **partir en tramos**.
+
+**Cuándo partir en tramos:** cuando la frontera del dominio tiene un quiebre o vértice intermedio. Ejemplo: dominio triangular con vértice en $y=2$ divide $f_Y(y)$ en $[0,2]$ y $[2,4]$.
+
+---
+
+### Paso 3 — Independencia estadística
+
+**Fórmula del formulario:** $f_{X,Y}(x,y) = f_X(x)\cdot f_Y(y)$ para **todo** $(x,y)$ en el soporte.
+
+**Procedimiento:**
+1. Calcular $f_X(x)$ y $f_Y(y)$ (Paso 2).
+2. Calcular el producto $f_X(x)\cdot f_Y(y)$ algebraicamente.
+3. Comparar con $f_{X,Y}(x,y)$.
+4. **Solo si son algebraicamente iguales Y el dominio es rectangular** → independientes.
+
+**Alerta crítica:** un dominio triangular o cualquier dominio no rectangular implica dependencia aunque la función factorize algebraicamente, porque el dominio conjunto NO es producto cartesiano de los dominios individuales.
+
+---
+
+### Paso 4 — Probabilidad en una región
+
+**Fórmula del formulario:** $P\big((X,Y)\in R\big) = \displaystyle\iint_R f_{X,Y}(x,y)\,dx\,dy$
+
+**Procedimiento:**
+1. Identificar la región $R$ como intersección del soporte y la condición del evento.
+2. Encontrar las intersecciones de las fronteras para acotar los límites.
+3. Plantear la integral doble con los límites correctos.
+4. Integrar de adentro hacia afuera.
+
+**Complemento:** si $R$ es difícil de integrar directamente, usar $P(R) = 1 - P(R^c)$ si $R^c$ es más simple.
+
+---
+
+### Paso 5 — Esperanza y varianza
+
+**Fórmulas del formulario:**
+$$E[X] = \int x\,f_X(x)\,dx \qquad E[X^2] = \int x^2\,f_X(x)\,dx \qquad VAR[X] = E[X^2] - (E[X])^2$$
+
+**Procedimiento desde la marginal:**
+1. Obtener $f_X(x)$ del Paso 2.
+2. Calcular $E[X]$, luego $E[X^2]$, luego $VAR[X] = E[X^2] - \mu_X^2$.
+3. Repetir para $Y$.
+
+---
+
+### Paso 6 — Varianza de la suma $VAR[X+Y]$
+
+**Fórmula del formulario:**
+$$VAR[X+Y] = VAR[X] + VAR[Y] + 2\,COV[X,Y]$$
+$$COV[X,Y] = E[XY] - \mu_X\mu_Y \qquad E[XY] = \iint xy\,f_{X,Y}(x,y)\,dy\,dx$$
+
+**Procedimiento:**
+1. Calcular $VAR[X]$ y $VAR[Y]$ (Paso 5).
+2. Calcular $E[XY]$ por integral doble sobre el dominio completo.
+3. Calcular $COV[X,Y] = E[XY] - \mu_X\mu_Y$.
+4. Si $X,Y$ son independientes → $COV=0$ y la fórmula se reduce a $VAR[X]+VAR[Y]$.
+
+---
+
+### Paso 7 — Densidad condicional dado evento $B$
+
+**Fórmula del formulario:**
+$$f_{X,Y|B}(x,y) = \frac{f_{X,Y}(x,y)}{P[B]} \quad \text{para } (x,y)\in B, \qquad 0 \text{ en otro caso}$$
+
+**Procedimiento:**
+1. Calcular $P[B] = \displaystyle\iint_B f_{X,Y}(x,y)\,dx\,dy$.
+2. Dividir $f_{X,Y}$ entre $P[B]$ dentro de la región $B$.
+3. Verificar que $\displaystyle\iint_B f_{X,Y|B}\,dx\,dy = 1$ (opcional pero recomendable).
 
 ---
 
 ## ERRORES COMUNES A VIGILAR
 
-- **Límites de integración incorrectos** — región mal interpretada del enunciado (el error más común).
-- **Orden de integración invertido** — integrar primero en $x$ cuando corresponde en $y$ o viceversa.
-- **Constante $k$ mal calculada** — error al despejar $k$ de la condición de normalización.
-- **Marginal con límites fijos en vez de variables** — usar números donde deberían ir expresiones en $x$ o $y$.
-- **Independencia mal verificada** — concluir independencia sin hacer el producto $f_X \cdot f_Y$ explícitamente.
-- **Covarianza mal calculada** — confundir $E[XY]$ con $E[X] \cdot E[Y]$.
-- **Densidad condicional sin normalizar** — olvidar dividir por $P[B]$.
-- **Gráficas de todos los incisos mezcladas en un solo bloque** — separar siempre por inciso.
+- **Límites de integración incorrectos** — mal interpretada la región del enunciado. El error más frecuente.
+- **Marginal con límites fijos** — usar constantes donde deberían ir expresiones en $x$ o $y$.
+- **Independencia en dominio triangular** — declarar independencia solo porque la función factoriza, sin revisar el dominio.
+- **$E[XY]$ confundido con $E[X]\cdot E[Y]$** — solo son iguales si hay independencia.
+- **Densidad condicional sin dividir por $P[B]$** — olvidar la normalización.
+- **Gráficas con sintaxis inválida** — llaves `{}`, espacios alrededor de `|`, `sqrt(x)` sin `\`, comentarios `//`. Ver reglas Desmos abajo.
 
 ---
 
-## EJEMPLO DE ESTRUCTURA ESPERADA EN UN EJERCICIO EN.md
+## MANEJO DE GRÁFICAS DESMOS
 
-~~~markdown
-# Ejercicio N — [título o descripción breve]
+### Cuándo incluir gráfica
 
-## Enunciado
-[texto del enunciado]
+Solo incluir gráfica si aporta claridad que el texto no puede dar:
+- Regiones de soporte con geometría no obvia (triángulos, semicírculos, valor absoluto).
+- Regiones de integración para probabilidades con fronteras curvas o partidas.
+- Densidades marginales con forma visual relevante.
 
-## Inciso a)
-[desarrollo de NotebookLM]
+**No incluir** gráfica para: resultados numéricos simples, varianzas, covarianzas, incisos de independencia donde la conclusión es algebraica.
 
-> [!correction] Corrección
-> **Error identificado:** ...
-> **Corrección:** ...
-> **Resultado correcto:** ...
+### Reglas de sintaxis Desmos (plugin Obsidian)
 
-#### Gráfica — inciso a)
-
-```desmos-graph
+```desmos-graphx
 left=; right=; bottom=; top=;
 width=500; height=500;
 ---
-[ecuaciones del inciso a]
+y>=x|x>=0|y<=4-x|#a5d8ff
+y=\sqrt{x}|0<=x<=1|GREEN
+(0,0)|label:(0,0)|BLACK
 ```
 
-## Inciso b)
-[desarrollo de NotebookLM]
+Reglas obligatorias:
+- El separador `---` es siempre obligatorio.
+- Sin espacios alrededor de `|`. Sin llaves `{}`. Sin comentarios `//`.
+- Raíces con `\sqrt{x}`, fracciones con `\frac{a}{b}`, pi con `\pi`.
+- Restricciones de dominio dentro de la misma línea: `y=x|0<=x<=2|BLUE`.
+- Colores de relleno hexadecimales: `#a5d8ff` (azul), `#b2f2bb` (verde), `#ffd8a8` (naranja), `#ff7b7b` (rojo), `#d0bfff` (morado).
+- Áreas sombreadas: una inecuación con todas las condiciones en una línea separadas por `|`.
+- Líneas con restricción de dominio para no desbordarse: `y=1-x|0<=x<=1|BLUE`.
 
-> [!check] Correcto
-> Procedimiento y resultado verificados con el formulario.
-
----
-~~~
-
-## NOTAS FINALES
-
-- Si una fórmula del ejercicio no aparece en el formulario, señalarlo explícitamente.
-- Si el enunciado es ambiguo (región no especificada, función incompleta), indicarlo antes de corregir.
-- Los ejercicios `E1.md`, `E2.md`, etc. pueden tener cualquier combinación de temas. No asumir estructura fija.
+> **Nota sobre este archivo:** los bloques de código Desmos aquí usan ` ```desmos-graphx ` (con x) para que Obsidian no los renderice. En los archivos de ejercicios usar siempre ` ```desmos-graph ` sin la x.
 
 ---
 
 ## INSTRUCCIONES DE FLUJO CON EL USUARIO
 
-1. **Editar siempre directamente** en el `.md` del vault usando el Filesystem. Si el conector no lo permite, avisar y esperar. El usuario intentará solucionarlo. Si no puede, recién entonces: copiar el archivo al entorno de Claude, editar ahí, y mostrar el resultado **en formato código** para que el usuario copie y pegue.
+1. **Editar siempre directamente** en el `.md` del vault usando Filesystem. Si no es posible, avisar al usuario.
 
-2. **Correcciones Desmos:** no mostrar el bloque corregido por el chat. Solo editar el `.md`. El usuario verá la gráfica directamente en Obsidian.
+2. **Correcciones Desmos:** no mostrar el bloque corregido en el chat. Solo editar el `.md`.
 
-3. **Resumen por chat:** para cada inciso solo mostrar una línea del estilo:
-   - `Inciso 1 — correcto`
-   - `Inciso 2 — corregido` (sin detalles, todo el detalle va en el callout del `.md`)
+3. **Resumen por chat:** una línea por inciso:
+   - `Inciso a) — correcto`
+   - `Inciso b) — corregido`
+   - `Inciso c) — alternativo agregado`
 
-4. **Mantener el chat al mínimo.** Todo el contenido de corrección va en el archivo.
+   Sin detalles matemáticos en el chat — todo va en el archivo.
 
----
+4. **Gráficas:** si hay que borrar una gráfica innecesaria, hacerlo sin preguntar. Si hay que corregir sintaxis, hacerlo directamente.
 
-## ANÁLISIS TEMÁTICO — PRÁCTICA Nº2 Y RESUELTO 1
-
-> Este análisis fue generado a partir de los PDFs de diapositivas del curso (P1_SP, P2_SP, ejercicio_variable_multiple_continua) y los enunciados de la Práctica Nº2. Sirve como mapa de contenido para que Claude identifique qué fórmulas y procedimientos aplicar en cada ejercicio.
->
-> **Resuelto 1** (`Resuelto 1.md`) es el ejercicio resuelto por el docente — funciona como referencia de nivel y formato. Los ejercicios `E1.md`, `E2.md`, etc. son los de la Práctica Nº2 generados por NotebookLM para que Claude los revise.
-
----
-
-### RESUELTO 1 — Densidad conjunta con región triangular (ejercicio del docente)
-
-**Función:** $f_{X,Y}(x,y) = kx$ para $0 \le x \le 1,\; x \le y \le 2-x$
-
-| Inciso | Tema específico | Procedimiento aplicado | Fórmula clave |
-|--------|----------------|----------------------|---------------|
-| a) | Normalización de densidad conjunta — hallar constante $k$ | Integral doble igualada a 1; integrar primero en $y$ (límites variables $x$ a $2-x$), luego en $x$ | $\int_0^1\int_x^{2-x} kx\,dy\,dx = 1$ |
-| b) | Densidades marginales — región triangular con partición | Marginal de $X$: integrar en $y$ con límites variables. Marginal de $Y$: partir en dos tramos $[0,1]$ y $[1,2]$ por cambio de frontera | $f_X(x)=\int_x^{2-x}3x\,dy$; $f_Y(y)$ por tramos |
-| c) | Independencia estadística — verificación por producto de marginales | Evaluar en un punto $(0.5, 0.5)$ y comparar $f_{X,Y}$ con $f_X \cdot f_Y$ | $f_{X,Y}(x,y) \stackrel{?}{=} f_X(x)\cdot f_Y(y)$ |
-| d) | Probabilidad en región acotada por curva — intersección con dominio | Integral doble con límite superior curvo $y=\sqrt{x}$; límite inferior $y=x$ dentro del dominio | $P = \int_0^1\int_x^{\sqrt{x}} 3x\,dy\,dx$ |
-| e) | Probabilidad por complemento — región lineal dentro del dominio | Hallar $P(Y>2x)$ integrando hasta el cruce $x=2/3$ de $y=2x$ con $y=2-x$; restar de 1 | $P(Y\le 2x) = 1 - \int_0^{2/3}\int_{2x}^{2-x}3x\,dy\,dx$ |
-| f) | Probabilidad condicional de evento sobre rectas — partición del dominio | Aplicar $P(A\|B) = P(A\cap B)/P(B)$; región $2x\le y\le 3x$ se parte en $[0,1/2]$ y $[1/2,2/3]$ | $P(A\|B) = \frac{P(2x\le Y\le 3x)}{P(Y\ge 2x)} = \frac{7/36}{4/9}$ |
-| g) | Esperanza matemática y varianza desde densidad marginal | Usar $f_X(x)=6x(1-x)$; calcular $E[X]$, $E[X^2]$, luego $VAR[X]=E[X^2]-(E[X])^2$ | $E[X]=\int_0^1 x\cdot f_X(x)\,dx$; $VAR[X]=E[X^2]-\mu_X^2$ |
-
----
-
-### PRÁCTICA Nº2 — Análisis por ejercicio
-
-#### E1 — Normalización + Densidad marginal de $X$ (dominio infinito)
-
-**Función:** $f_{X,Y}(x,y) = \frac{k}{(1+x+y)^4}$ para $x\ge 0,\; y\ge 0$
-
-| Tema específico | Procedimiento | Fórmula clave |
-|-----------------|--------------|---------------|
-| Normalización de densidad conjunta en dominio no acotado | Integral impropia doble en $[0,\infty)\times[0,\infty)$; resolver con sustitución o integración sucesiva | $\int_0^\infty\int_0^\infty \frac{k}{(1+x+y)^4}\,dy\,dx = 1$ |
-| Densidad marginal de $X$ — dominio semi-infinito | Integrar en $y$ de $0$ a $\infty$; resultado es función solo de $x$ | $f_X(x)=\int_0^\infty \frac{k}{(1+x+y)^4}\,dy$ |
-
-**Temas:** normalización con dominio infinito, integral impropia, densidad marginal con límite $\infty$.
-
----
-
-#### E2 — Independencia estadística en región triangular $u+v\le 1$
-
-**Función:** $f_{U,V}(u,v) = 24uv$ para $u\ge 0,\; v\ge 0,\; u+v\le 1$
-
-| Tema específico | Procedimiento | Fórmula clave |
-|-----------------|--------------|---------------|
-| Densidad marginal de $U$ con límite superior variable | Integrar en $v$ de $0$ a $1-u$ | $f_U(u)=\int_0^{1-u}24uv\,dv$ |
-| Densidad marginal de $V$ con límite superior variable | Integrar en $u$ de $0$ a $1-v$ | $f_V(v)=\int_0^{1-v}24uv\,du$ |
-| Independencia estadística — verificación por producto | Comparar $f_{U,V}$ con $f_U(u)\cdot f_V(v)$ en región válida | $f_{U,V}\stackrel{?}{=}f_U\cdot f_V$ solo si factoriza Y los dominios coinciden |
-
-**Alerta clave:** en región triangular ($u+v\le 1$) la condición de independencia es más estricta — el dominio conjunto NO es producto cartesiano de los dominios individuales, por lo tanto $U$ y $V$ **no son independientes** incluso si la función factoriza algebraicamente.
-
-**Temas:** densidades marginales con límite variable, independencia estadística, dominio triangular.
-
----
-
-#### E3 — Independencia + Varianza de suma $X+Y$ en región cuadrada
-
-**Función:** $f_{X,Y}(x,y) = 4xy$ para $0\le x\le 1,\; 0\le y\le 1$
-
-| Tema específico | Procedimiento | Fórmula clave |
-|-----------------|--------------|---------------|
-| Independencia estadística — región rectangular (caso favorable) | Factorizar $f_{X,Y}=4xy=(2x)(2y)$; verificar que $f_X(x)=2x$ y $f_Y(y)=2y$ | $f_{X,Y}=f_X(x)\cdot f_Y(y)$ ✓ |
-| Esperanza $E[X]$ y $E[Y]$ desde marginales | Calcular con $f_X(x)=2x$ y $f_Y(y)=2y$ | $E[X]=\int_0^1 x\cdot 2x\,dx$ |
-| Segundo momento $E[X^2]$, $E[Y^2]$ | Necesario para varianzas individuales | $E[X^2]=\int_0^1 x^2\cdot 2x\,dx$ |
-| Covarianza $COV[X,Y]$ — variables independientes | Si son independientes, $COV=0$ | $COV[X,Y]=E[XY]-\mu_X\mu_Y=0$ si independientes |
-| Varianza de la suma $VAR[X+Y]$ | Aplicar fórmula con covarianza nula | $VAR[X+Y]=VAR[X]+VAR[Y]+2COV[X,Y]$ |
-
-**Temas:** independencia en región rectangular, densidades marginales simples, varianza de suma, covarianza entre variables independientes.
-
----
-
-#### E4 — Varianza de $W=X+Y$ con densidad uniforme en triángulo
-
-**Función:** $f_{X,Y}(x,y) = 2$ para $x\ge 0,\; y\ge 0,\; x+y\le 1$
-
-| Tema específico | Procedimiento | Fórmula clave |
-|-----------------|--------------|---------------|
-| Densidad marginal de $X$ con dominio triangular | Integrar en $y$ de $0$ a $1-x$ | $f_X(x)=\int_0^{1-x}2\,dy=2(1-x)$ |
-| Densidad marginal de $Y$ con dominio triangular | Integrar en $x$ de $0$ a $1-y$ | $f_Y(y)=\int_0^{1-y}2\,dx=2(1-y)$ |
-| $E[X]$, $E[Y]$, $E[X^2]$, $E[Y^2]$ desde marginales | Integrar con las densidades marginales obtenidas | $E[X]=\int_0^1 x\cdot 2(1-x)\,dx$ |
-| $E[XY]$ desde densidad conjunta | Integral doble sobre región triangular | $E[XY]=\int_0^1\int_0^{1-x}xy\cdot 2\,dy\,dx$ |
-| Covarianza $COV[X,Y]$ — variables NO independientes | Calcular explícitamente porque dominio triangular implica dependencia | $COV[X,Y]=E[XY]-\mu_X\mu_Y$ |
-| Varianza de $W=X+Y$ con covarianza no nula | Aplicar fórmula completa | $VAR[X+Y]=VAR[X]+VAR[Y]+2COV[X,Y]$ |
-
-**Temas:** densidad uniforme en triángulo, densidades marginales con límite variable, $E[XY]$ integral doble, covarianza no nula, varianza de suma.
-
----
-
-#### E5 — PDF conjunta de 4 variables + probabilidad + marginal
-
-**Función:** $f_{W,X,Y,Z}(w,x,y,z) = 16wxyz$ para $0\le w,x,y,z\le 1$
-
-| Inciso | Tema específico | Procedimiento | Fórmula clave |
-|--------|----------------|--------------|---------------|
-| a) | Probabilidad en región producto con 4 variables | Factorizar la integral cuádruple porque el dominio es rectangular y la función factoriza | $P=\int_0^{1/2}4w\,dw\cdot\int_0^{3/4}4y\,dy$ (factorización) |
-| b) | Densidad marginal de $W$ con 3 variables integradas | Integrar en $x$, $y$, $z$ sobre sus dominios $[0,1]$ | $f_W(w)=\int_0^1\int_0^1\int_0^1 16wxyz\,dx\,dy\,dz$ |
-
-**Temas:** PDF conjunta de 4 variables, factorización de integral múltiple, densidad marginal por integración múltiple, independencia implícita en región rectangular.
-
----
-
-#### E6 — Región con valor absoluto + marginal + probabilidad + esperanza
-
-**Función:** $f_{X,Y}(x,y) = 1$ para $-1\le x\le 1,\; 0\le y\le 1,\; |x|\ge y$
-
-| Inciso | Tema específico                                      | Procedimiento                      | Fórmula clave    |                                                                                     |                                             |                          |                  |     |         |     |                       |
-| ------ | ---------------------------------------------------- | ---------------------------------- | ---------------- | ----------------------------------------------------------------------------------- | ------------------------------------------- | ------------------------ | ---------------- | --- | ------- | --- | --------------------- |
-| a)     | Identificación y dibujo de región con valor absoluto | Descomponer $                      | x                | \ge y$ en $x\ge y$ (para $x>0$) y $-x\ge y$ (para $x<0$); dos triángulos simétricos | Región: $\{(x,y): -1\le x\le 1,\; 0\le y\le | x                        | \}$              |     |         |     |                       |
-| b)     | Densidad marginal de $X$ con límite superior $       | x                                  | $                | Integrar en $y$ de $0$ a $                                                          | x                                           | $ para cada signo de $x$ | $f_X(x)=\int_0^{ | x   | }1\,dy= | x   | $ para $-1\le x\le 1$ |
-| c)     | Probabilidad $P(X>0)$ desde densidad marginal        | Integrar $f_X(x)$ en $[0,1]$       | $P(X>0)=\int_0^1 | x                                                                                   | \,dx=\frac{1}{2}$                           |                          |                  |     |         |     |                       |
-| d)     | Esperanza $E[X]$ con densidad marginal simétrica     | Verificar si $x\cdot f_X(x)=x\cdot | x                | $ es función impar → $E[X]=0$ por simetría                                          | $E[X]=\int_{-1}^1 x\cdot                    | x                        | \,dx=0$          |     |         |     |                       |
-
-**Temas:** región definida por valor absoluto, descomposición de dominio por signo, densidad marginal con límite $|x|$, probabilidad unilateral, esperanza con función impar.
-
----
-
-#### E7 — Densidad condicional dado evento $A: x+y\le 1$
-
-**Función:** $f_{X,Y}(x,y) = 6e^{-(2x+3y)}$ para $x\ge 0,\; y\ge 0$
-
-| Tema específico | Procedimiento | Fórmula clave |
-|-----------------|--------------|---------------|
-| Probabilidad del evento $A: x+y\le 1$ | Integral doble sobre región triangular cortada por $x+y\le 1$ | $P[A]=\int_0^1\int_0^{1-x}6e^{-(2x+3y)}\,dy\,dx$ |
-| Densidad condicional dado evento $B$ con $P[B]>0$ | Dividir $f_{X,Y}$ entre $P[A]$ dentro de la región; 0 fuera | $f_{X,Y|A}(x,y)=\frac{f_{X,Y}(x,y)}{P[A]}$ para $(x,y)\in A$ |
-| Verificación de normalización de densidad condicional | La integral de $f_{X,Y|A}$ sobre $A$ debe ser 1 | $\iint_A f_{X,Y|A}\,dx\,dy=1$ ✓ |
-
-**Temas:** densidad exponencial bivariada, probabilidad de evento en región triangular, densidad condicional dado evento $B$, normalización de densidad condicional.
-
----
-
-### TABLA RESUMEN GENERAL — PRÁCTICA Nº2
-
-| Ejercicio | Tema principal | Temas secundarios | Fórmulas clave |
-|-----------|---------------|-------------------|----------------|
-| **P2-E1** | Normalización con dominio infinito | Integral impropia, densidad marginal semi-infinita | $\int_0^\infty\int_0^\infty f\,dy\,dx=1$; $f_X(x)=\int_0^\infty f_{X,Y}\,dy$ |
-| **P2-E2** | Independencia estadística en triángulo | Densidades marginales con límite $1-u$, dominio no rectangular | $f_U\cdot f_V \ne f_{U,V}$ por dominio triangular |
-| **P2-E3** | Independencia en región rectangular + varianza de suma | Factorización de PDF, covarianza nula, $VAR[X+Y]$ | $VAR[X+Y]=VAR[X]+VAR[Y]$ (independientes) |
-| **P2-E4** | Varianza de $W=X+Y$ con covarianza no nula | Densidad uniforme triangular, $E[XY]$, $COV[X,Y]$ | $VAR[X+Y]=VAR[X]+VAR[Y]+2COV[X,Y]$ |
-| **P2-E5** | PDF de 4 variables + probabilidad conjunta + marginal | Factorización integral cuádruple, densidad marginal múltiple | $P=\prod_i P_i$ si independientes; $f_W=\int\int\int f\,dx\,dy\,dz$ |
-| **P2-E6** | Región con valor absoluto + marginal + $E[X]$ | Descomposición por signo, $f_X(x)=|x|$, función impar | $f_X(x)=\int_0^{|x|}f_{X,Y}\,dy$; $E[X]=\int x f_X\,dx=0$ |
-| **P2-E7** | Densidad condicional dado evento $A$ | PDF exponencial bivariada, $P[A]$ en triángulo, normalización | $f_{X,Y|A}=f_{X,Y}/P[A]$ para $(x,y)\in A$ |
-| **Resuelto 1** | Densidad conjunta triangular — ejercicio completo | Normalización, marginales partidas, independencia, $P$ con curva, complemento, condicional de evento, $E[X]$, $VAR[X]$ | Todas las fórmulas del formulario aplicadas |
-
----
-
-### PATRONES Y ALERTAS PARA RESOLVER EJERCICIOS
-
-> Claude debe tener estos puntos en mente al revisar o resolver cualquier ejercicio de la práctica:
-
-**Sobre la región de integración:**
-- Dominio **rectangular** ($a\le x\le b$, $c\le y\le d$): límites de marginales constantes, independencia posible.
-- Dominio **triangular** ($x+y\le 1$ o similar): límites de marginales **variables**, independencia generalmente **no se cumple**.
-- Dominio con **valor absoluto** ($|x|\ge y$): descomponer en dos subregiones según signo de $x$.
-- Dominio **infinito** ($x\ge 0$, $y\ge 0$ sin cota): usar integrales impropias.
-
-**Sobre independencia:**
-- Verificar SIEMPRE con el dominio conjunto, no solo con la forma algebraica.
-- Dominio triangular: NO hay independencia aunque $f_{X,Y}$ factorize algebraicamente.
-- Dominio rectangular: puede haber independencia si $f_{X,Y}=g(x)\cdot h(y)$.
-
-**Sobre varianza de suma:**
-- $X,Y$ independientes → $COV=0$ → $VAR[X+Y]=VAR[X]+VAR[Y]$.
-- $X,Y$ dependientes → calcular $E[XY]$ por integral doble → $COV=E[XY]-\mu_X\mu_Y$.
-
-**Sobre densidad condicional:**
-- Dado evento $B$: dividir $f_{X,Y}$ entre $P[B]$ dentro de la región, 0 fuera.
-- Calcular $P[B]$ como integral doble de $f_{X,Y}$ sobre la región $B$.
+5. **Mantener el chat mínimo.** Todo el contenido matemático va en el archivo.
