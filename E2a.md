@@ -43,7 +43,7 @@ Claramente, **el producto de las marginales no es igual a la función conjunta**
 La gráfica representa la región triangular de soporte y las curvas de las densidades marginales calculadas.
 
 ```desmos-graph
-left=-0.2; right=1.3; bottom=-0.2; top=1.3;
+left=-0.2; right=1.3; bottom=-0.2; top=2;
 width=500; height=500;
 ---
 x+y<=1|x>=0|y>=0|#a5d8ff
