@@ -53,9 +53,13 @@ left=-0.5; right=5; bottom=-0.5; top=5;
 width=500; height=500;
 ---
 y>0|x>0|#a5d8ff
-f(x)=\frac{2}{(1+x)^3}|RED|0<=x<=5
+f(x)=2/(1+x)^3|RED|0<=x<=5
 (0,0)|label:(0,0)|BLACK
 ```
+
+
+
+
 
 
 ```desmos-graph
