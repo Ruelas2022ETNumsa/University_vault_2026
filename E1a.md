@@ -26,6 +26,21 @@ Podemos separar el numerador como $(1+x) + y$ para facilitar la integración res
 > [!check] Correcto
 > Procedimiento y resultado verificados con el formulario. La separación del numerador $(1+x+y) = (1+x) + y$, las dos integrales impropias internas y la integración externa son correctas. $k = 9/2$.
 
+
+
+```desmos-graph
+left=-0.5; right=6; bottom=-0.1; top=1.2;
+width=500; height=500;
+---
+x>=0|y>=0|#a5d8ff
+f(x)=3(2x+3)/(4(1+x)^4)|RED|0<=x<=5
+\frac{4.5(1+x+y)}{(1+x)^4(1+y)^4}=0.5|PURPLE|x>=0|y>=0
+\frac{4.5(1+x+y)}{(1+x)^4(1+y)^4}=0.1|ORANGE|x>=0|y>=0
+(0,0)|label:(0,0)|BLACK
+```
+
+
+
 ---
 
 ### 2. Función de densidad marginal de $X$
