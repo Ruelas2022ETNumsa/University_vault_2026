@@ -1,3 +1,16 @@
+---
+title: "ETN806 — Práctica 2 — E4: VAR(W=X+Y) con densidad uniforme en triángulo"
+aliases: [E4a, P2-E4]
+tags: [ETN806, practica2, variables-aleatorias-multiples, varianza, covarianza, dominio-triangular, densidad-uniforme]
+materia: Procesos Estocásticos (ETN806)
+parcial: 2do Parcial
+tipo: ejercicio-practica
+fuente: Práctica 2
+fecha: 2026-05-25
+estado: revisado
+temas: [varianza-suma, covarianza, densidad-uniforme, dominio-triangular, esperanza]
+---
+
 *   **E4.** Las funciones aleatorias $X, Y$ tiene la función de densidad de
     distribución conjunta que se indica calcular la varianza de $W = X+Y$:
     $$f_{X,Y}(x,y) = \begin{cases} 2 & \text{si } x \ge 0, y \ge 0, x+y \le 1 \\ 0 & \text{en otro caso} \end{cases}$$

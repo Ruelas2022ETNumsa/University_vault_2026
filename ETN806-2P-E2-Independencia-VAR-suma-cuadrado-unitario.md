@@ -1,3 +1,16 @@
+---
+title: "ETN806 — 2do Parcial — E2: Independencia Estadística y VAR(X+Y) en cuadrado unitario"
+aliases: [E2b, 2P-E2]
+tags: [ETN806, 2do-parcial, examen, variables-aleatorias-multiples, independencia-estadistica, varianza, cuadrado-unitario]
+materia: Procesos Estocásticos (ETN806)
+parcial: 2do Parcial
+tipo: ejercicio-examen
+fuente: 2do Parcial
+fecha: 2026-05-25
+estado: revisado
+temas: [independencia-estadistica, varianza-suma, densidad-marginal, dominio-rectangular]
+---
+
 A continuación se presenta el enunciado del **Ejercicio 2** extraído de la fuente **SEGUNDO PARCIAL.pdf**:
 
 ### 📝 Enunciado del Ejercicio 2

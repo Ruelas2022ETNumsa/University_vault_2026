@@ -1,3 +1,15 @@
+---
+title: "ETN806 — Práctica 2 — Enunciados Variables Aleatorias Continuas Múltiples"
+aliases: [Practica2, practica-ii]
+tags: [ETN806, practica2, enunciados, variables-aleatorias-multiples, 2do-parcial]
+materia: Procesos Estocásticos (ETN806)
+parcial: 2do Parcial
+tipo: enunciados
+fecha: 2026-05-25
+estado: activo
+temas: [normalizacion, independencia, varianza, marginal, densidad-condicional, pdf-multivariable]
+---
+
 Aquí tienes los enunciados completos de los ejercicios que conforman la 
 **PRACTICA Nº2** de **PROCESOS ESTOCASTICOS**, la cual se enfoca en 
 variables aleatorias continuas múltiples:

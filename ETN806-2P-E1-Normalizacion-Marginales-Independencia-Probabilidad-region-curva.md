@@ -1,5 +1,16 @@
 
 ---
+title: "ETN806 — 2do Parcial — E1: Normalización, Marginales, Independencia y P(Y≤√x)"
+aliases: [E1b, 2P-E1]
+tags: [ETN806, 2do-parcial, examen, variables-aleatorias-multiples, normalizacion, marginal, independencia-estadistica, probabilidad, region-triangular]
+materia: Procesos Estocásticos (ETN806)
+parcial: 2do Parcial
+tipo: ejercicio-examen
+fuente: 2do Parcial
+fecha: 2026-05-25
+estado: revisado
+temas: [normalizacion-k, densidad-marginal, independencia-estadistica, probabilidad-region-curva]
+---
 
 ### 📝 Enunciado del Ejercicio 1
 

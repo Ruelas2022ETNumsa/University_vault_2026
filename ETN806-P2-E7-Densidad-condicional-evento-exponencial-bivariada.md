@@ -1,3 +1,16 @@
+---
+title: "ETN806 — Práctica 2 — E7: Densidad condicional dado evento A — exponencial bivariada"
+aliases: [E7a, P2-E7]
+tags: [ETN806, practica2, variables-aleatorias-multiples, densidad-condicional, exponencial-bivariada, evento]
+materia: Procesos Estocásticos (ETN806)
+parcial: 2do Parcial
+tipo: ejercicio-practica
+fuente: Práctica 2
+fecha: 2026-05-25
+estado: revisado
+temas: [densidad-condicional, probabilidad-evento, region-triangular, exponencial-bivariada]
+---
+
 *   **E7.** Las variables aleatorias $X, Y$ tienen la función de densidad 
     de distribución de probabilidad conjunta que se indica:
     $$f_{X,Y}(x,y) = \begin{cases} 6e^{-(2x+3y)} & \text{si } x \ge 0, y \ge 0 \\ 0 & \text{en otro caso} \end{cases}$$

@@ -1,3 +1,15 @@
+---
+title: "ETN806 — Ejercicio Resuelto de Referencia — Densidad Conjunta en Región Triangular"
+aliases: [Resuelto1, resuelto-referencia]
+tags: [ETN806, resuelto, referencia, variables-aleatorias-multiples, 2do-parcial, region-triangular]
+materia: Procesos Estocásticos (ETN806)
+parcial: 2do Parcial
+tipo: ejercicio-resuelto-docente
+fecha: 2026-05-25
+estado: referencia
+temas: [normalizacion-k, densidad-marginal, independencia-estadistica, probabilidad-region-curva, probabilidad-complemento, densidad-condicional, esperanza, varianza]
+---
+
 Para resolver este ejercicio paso a paso, utilizaremos las fórmulas de variables aleatorias continuas múltiples detalladas en el **Formulario 806 II**.
 
 ### **Enunciado del Ejercicio**

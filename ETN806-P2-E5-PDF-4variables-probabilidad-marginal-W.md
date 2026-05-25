@@ -1,3 +1,16 @@
+---
+title: "ETN806 — Práctica 2 — E5: PDF conjunta 4 variables, probabilidad y marginal de W"
+aliases: [E5a, P2-E5]
+tags: [ETN806, practica2, variables-aleatorias-multiples, pdf-4-variables, probabilidad, marginal, factorizacion]
+materia: Procesos Estocásticos (ETN806)
+parcial: 2do Parcial
+tipo: ejercicio-practica
+fuente: Práctica 2
+fecha: 2026-05-25
+estado: revisado
+temas: [pdf-multivariable, probabilidad-conjunta, densidad-marginal, factorizacion-integral]
+---
+
 *   **E5.** Dada la función de densidad de distribución de probabilidad 
     conjunta como se indica a continuación:
     $$f_{W,X,Y,Z}(w,x,y,z) = \begin{cases} 16wxyz & \text{si } 0 \le w \le 1, 0 \le x \le 1, 0 \le y \le 1, 0 \le z \le 1 \\ 0 & \text{en otro caso} \end{cases}$$

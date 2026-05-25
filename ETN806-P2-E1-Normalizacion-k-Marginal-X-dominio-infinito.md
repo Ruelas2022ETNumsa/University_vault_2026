@@ -1,3 +1,16 @@
+---
+title: "ETN806 — Práctica 2 — E1: Normalización k y Marginal de X (dominio infinito)"
+aliases: [E1a, P2-E1]
+tags: [ETN806, practica2, variables-aleatorias-multiples, normalizacion, marginal, dominio-infinito, integral-impropia]
+materia: Procesos Estocásticos (ETN806)
+parcial: 2do Parcial
+tipo: ejercicio-practica
+fuente: Práctica 2
+fecha: 2026-05-25
+estado: revisado
+temas: [normalización-k, densidad-marginal, integral-impropia, dominio-no-acotado]
+---
+
  **E1.** Encontrar el valor de $k$ en la siguiente función 
     $f_{X,Y}(x,y)$ y también la función de distribución marginal de $X$:
     $$f_{X,Y}(x,y) = \begin{cases} \frac{k(1+x+y)}{(1+x)^4 (1+y)^4} & \text{si } 0 \le x \le \infty; 0 \le y \le \infty \\ 0 & \text{en otro caso} \end{cases}$$

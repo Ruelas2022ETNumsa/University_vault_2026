@@ -1,3 +1,15 @@
+---
+title: "ETN806 — Formulario 2do Parcial — Variables Aleatorias Continuas Múltiples"
+aliases: [Formulario806, formulario-2p]
+tags: [ETN806, formulario, referencia, variables-aleatorias-multiples, 2do-parcial]
+materia: Procesos Estocásticos (ETN806)
+parcial: 2do Parcial
+tipo: formulario
+fecha: 2026-05-25
+estado: activo
+temas: [normalizacion, marginal, independencia, esperanza, varianza, covarianza, correlacion, densidad-condicional]
+---
+
 # 📋 FORMULARIO — PROCESOS ESTOCÁSTICOS
 
 ## Variables Aleatorias Continuas Múltiples

@@ -1,3 +1,16 @@
+---
+title: "ETN806 — Práctica 2 — E2: Independencia Estadística U,V en dominio triangular"
+aliases: [E2a, P2-E2]
+tags: [ETN806, practica2, variables-aleatorias-multiples, independencia-estadistica, dominio-triangular, marginal]
+materia: Procesos Estocásticos (ETN806)
+parcial: 2do Parcial
+tipo: ejercicio-practica
+fuente: Práctica 2
+fecha: 2026-05-25
+estado: revisado
+temas: [independencia-estadistica, densidad-marginal, dominio-triangular]
+---
+
  **E2.** Determinar si las variables aleatorias $U$ y $V$ son 
     estadísticamente independientes sabiendo que su función de densidad 
 	de distribución conjunta está dada por:

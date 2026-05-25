@@ -1,3 +1,16 @@
+---
+title: "ETN806 — Práctica 2 — E3: Independencia y VAR(X+Y) en cuadrado unitario"
+aliases: [E3a, P2-E3]
+tags: [ETN806, practica2, variables-aleatorias-multiples, independencia-estadistica, varianza, covarianza, cuadrado-unitario]
+materia: Procesos Estocásticos (ETN806)
+parcial: 2do Parcial
+tipo: ejercicio-practica
+fuente: Práctica 2
+fecha: 2026-05-25
+estado: revisado
+temas: [independencia-estadistica, varianza-suma, covarianza, densidad-marginal, dominio-rectangular]
+---
+
 *   **E3.** Determinar si las variables aleatorias $X, Y$ cuya densidad 
     de distribución conjunta:
     $$f_{X,Y}(x,y) = \begin{cases} 4xy & \text{si } 0 \le x \le 1; 0 \le y \le 1 \\ 0 & \text{en otro caso} \end{cases}$$

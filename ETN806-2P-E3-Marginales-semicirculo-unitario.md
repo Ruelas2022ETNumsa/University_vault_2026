@@ -1,3 +1,16 @@
+---
+title: "ETN806 — 2do Parcial — E3: Densidades Marginales en semicírculo unitario"
+aliases: [E3b, 2P-E3]
+tags: [ETN806, 2do-parcial, examen, variables-aleatorias-multiples, marginal, semicirculo, dominio-circular]
+materia: Procesos Estocásticos (ETN806)
+parcial: 2do Parcial
+tipo: ejercicio-examen
+fuente: 2do Parcial
+fecha: 2026-05-25
+estado: revisado
+temas: [densidad-marginal, region-semicircular, limites-variables, distribucion-uniforme]
+---
+
 A continuación, se presenta el enunciado del **Ejercicio 3** extraído de la fuente **SEGUNDO PARCIAL.pdf**:
 
 ### 📝 Enunciado del Ejercicio 3

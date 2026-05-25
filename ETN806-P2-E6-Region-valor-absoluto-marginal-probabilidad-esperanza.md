@@ -1,3 +1,16 @@
+---
+title: "ETN806 — Práctica 2 — E6: Región con valor absoluto, marginal, P(X>0) y E[X]"
+aliases: [E6a, P2-E6]
+tags: [ETN806, practica2, variables-aleatorias-multiples, valor-absoluto, marginal, probabilidad, esperanza]
+materia: Procesos Estocásticos (ETN806)
+parcial: 2do Parcial
+tipo: ejercicio-practica
+fuente: Práctica 2
+fecha: 2026-05-25
+estado: revisado
+temas: [region-valor-absoluto, densidad-marginal, probabilidad-unilateral, esperanza-matematica]
+---
+
 *   **E6.** Las variables aleatorias $X, Y$ tiene la función de densidad de 
     distribución de probabilidad que se indica:
     $f_{X,Y}(x,y) = \begin{cases} \frac{1}{2} & \text{si } -1 \le x \le 1 \\ 0 & \text{en otro caso} \end{cases}$
