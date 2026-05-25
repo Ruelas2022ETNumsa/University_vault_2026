@@ -36,6 +36,47 @@ Aplicamos la fórmula de la varianza $VAR[W] = E[W^2] - (E[W])^2$: $$VAR[W] = \f
 
 ---
 
+## Resolución alternativa — Método del Formulario ($VAR[X+Y]$ desde la conjunta)
+
+Este método aplica directamente las fórmulas del formulario: calcular las marginales, los momentos de cada variable, la covarianza y finalmente $VAR[X+Y]=VAR[X]+VAR[Y]+2\,COV[X,Y]$.
+
+### Paso A: Densidades marginales
+
+**Marginal de $X$:** integrar en $y$ de $0$ a $1-x$:
+$f_X(x) = \int_0^{1-x} 2\,dy = 2(1-x), \quad 0 \le x \le 1$
+
+**Marginal de $Y$:** por simetría:
+$f_Y(y) = 2(1-y), \quad 0 \le y \le 1$
+
+### Paso B: Momentos de $X$ (por simetría, los de $Y$ son idénticos)
+
+$E[X] = \int_0^1 x\cdot 2(1-x)\,dx = 2\int_0^1(x-x^2)\,dx = 2\left[\frac{1}{2}-\frac{1}{3}\right] = \frac{1}{3}$
+
+$E[X^2] = \int_0^1 x^2\cdot 2(1-x)\,dx = 2\int_0^1(x^2-x^3)\,dx = 2\left[\frac{1}{3}-\frac{1}{4}\right] = \frac{1}{6}$
+
+$VAR[X] = E[X^2]-(E[X])^2 = \frac{1}{6}-\frac{1}{9} = \frac{3-2}{18} = \frac{1}{18}$
+
+Por simetría: $E[Y]=\dfrac{1}{3}$, $VAR[Y]=\dfrac{1}{18}$.
+
+### Paso C: Covarianza $COV[X,Y]$
+
+$E[XY] = \int_0^1\int_0^{1-x} 2xy\,dy\,dx = \int_0^1 2x\left[\frac{y^2}{2}\right]_0^{1-x}dx = \int_0^1 x(1-x)^2\,dx$
+
+$= \int_0^1(x - 2x^2 + x^3)\,dx = \frac{1}{2}-\frac{2}{3}+\frac{1}{4} = \frac{6-8+3}{12} = \frac{1}{12}$
+
+$COV[X,Y] = E[XY]-\mu_X\mu_Y = \frac{1}{12}-\frac{1}{3}\cdot\frac{1}{3} = \frac{1}{12}-\frac{1}{9} = \frac{3-4}{36} = -\frac{1}{36}$
+
+> La covarianza negativa confirma que $X$ e $Y$ son dependientes (dominio triangular: si $X$ es grande, $Y$ debe ser pequeño).
+
+### Paso D: Varianza de la suma
+
+$VAR[X+Y] = VAR[X]+VAR[Y]+2\,COV[X,Y] = \frac{1}{18}+\frac{1}{18}+2\left(-\frac{1}{36}\right) = \frac{2}{18}-\frac{2}{36} = \frac{4}{36}-\frac{2}{36} = \mathbf{\frac{1}{18}}$
+
+> [!check] Ambos métodos coinciden
+> Método de convolución: $VAR[W]=1/18$. Método del formulario: $VAR[X+Y]=1/18$. Resultado consistente ✓.
+
+---
+
 ### Gráfica en Desmos
 
 La gráfica muestra la región triangular de soporte de la densidad conjunta y la función de densidad resultante para $W$ (proyectada en el eje para visualización).
