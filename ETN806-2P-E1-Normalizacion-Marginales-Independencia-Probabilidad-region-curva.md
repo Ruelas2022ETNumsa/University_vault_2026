@@ -1,4 +1,3 @@
-
 ---
 title: "ETN806 — 2do Parcial — E1: Normalización, Marginales, Independencia y P(Y≤√x)"
 aliases: [E1b, 2P-E1]
@@ -11,6 +10,11 @@ fecha: 2026-05-25
 estado: revisado
 temas: [normalizacion-k, densidad-marginal, independencia-estadistica, probabilidad-region-curva]
 ---
+
+
+
+
+
 
 ### 📝 Enunciado del Ejercicio 1
 
