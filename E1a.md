@@ -23,13 +23,19 @@ Podemos separar el numerador como $(1+x) + y$ para facilitar la integración res
 - **Cálculo de $k$:** Igualamos a 1: $\frac{2k}{9} = 1 \implies \mathbf{k = \frac{9}{2} = 4.5}$.
     
 
+> [!check] Correcto
+> Procedimiento y resultado verificados con el formulario. La separación del numerador $(1+x+y) = (1+x) + y$, las dos integrales impropias internas y la integración externa son correctas. $k = 9/2$.
+
 ---
 
 ### 2. Función de densidad marginal de $X$
 
 La densidad marginal $f_X(x)$ se obtiene integrando la función conjunta respecto a $y$ sobre todo su rango. Aprovechando el cálculo de la integral interna realizado anteriormente con $k = 4.5$:
 
-$$f_X(x) = \frac{4.5}{(1+x)^4} \cdot \left( \frac{2x+3}{6} \right)$$ Simplificando la expresión: $$\mathbf{f_X(x) = \frac{3(2x+3)}{4(1+x)^4}, \quad \text{para } x \ge 0}$$
+$$f_X(x) = \frac{4.5}{(1+x)^4} \cdot \left( \frac{2x+3}{6} \right)$$ Simplificando la expresión: $\mathbf{f_X(x) = \frac{3(2x+3)}{4(1+x)^4}, \quad \text{para } x \ge 0}$
+
+> [!check] Correcto
+> Procedimiento y resultado verificados con el formulario. La integral interna $\frac{2x+3}{6}$ reutilizada del inciso anterior es correcta, y la simplificación $\frac{9/2}{(1+x)^4}\cdot\frac{2x+3}{6} = \frac{3(2x+3)}{4(1+x)^4}$ es correcta.
 
 ---
 
@@ -38,12 +44,18 @@ $$f_X(x) = \frac{4.5}{(1+x)^4} \cdot \left( \frac{2x+3}{6} \right)$$ Simplifican
 La región de probabilidad es el primer cuadrante ($x \ge 0, y \ge 0$). Se grafica el dominio y la curva de la densidad marginal de $X$ calculada.
 
 ```desmos-graph
+left=-0.5; right=6; bottom=-0.1; top=1.2;
 width=500; height=500;
 ---
 x>=0|y>=0|#a5d8ff
 f(x)=3(2x+3)/(4(1+x)^4)|RED|0<=x<=5
 (0,0)|label:(0,0)|BLACK
 ```
+
+> [!correction] Corrección — Gráfica
+> **Error identificado:** Al bloque `desmos-graph` le faltaban los parámetros de ventana (`left`, `right`, `bottom`, `top`) antes del separador `---`. Sin ellos Desmos usa zoom automático que puede no mostrar bien la curva.
+>
+> **Corrección:** Se agregaron `left=-0.5; right=6; bottom=-0.1; top=1.2;` para que la curva de $f_X(x)$ (que cae rápido desde $x=0$) quede bien visible en el primer cuadrante.
 
 **Explicación de la gráfica:**
 
