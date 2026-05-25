@@ -16,7 +16,7 @@ Para que $X$ e $Y$ sean independientes, debe cumplirse que $f_{X,Y}(x,y) = f_X(x
 
 1. **Hallar la densidad marginal de $X$ ($f_X(x)$):** Integramos la función conjunta respecto a $y$ en su rango $$: $$$$f_X(x) = \int_{0}^{1} 4xy , dy = 4x \left[ \frac{y^2}{2} \right]_0^1 = 4x \left( \frac{1}{2} \right) = \mathbf{2x, \quad \text{para } 0 \le x \le 1}$$
     
-2. **Hallar la densidad marginal de $Y$ ($f_Y(y)$):** Integramos la función conjunta respecto a $x$ en su rango $$: $$f_Y(y) = \int_{0}^{1} 4xy , dx = 4y \left[ \frac{x^2}{2} \right]_0^1 = 4y \left( \frac{1}{2} \right) = \mathbf{2y, \quad \text{para } 0 \le y \le 1}$$
+2. **Hallar la densidad marginal de $Y$ ($f_Y(y)$):** Integramos la función conjunta respecto a $x$ en su rango $$:f_Y(y) = \int_{0}^{1} 4xy , dx = 4y \left[ \frac{x^2}{2} \right]_0^1 = 4y \left( \frac{1}{2} \right) = \mathbf{2y, \quad \text{para } 0 \le y \le 1}$$
     
 3. **Verificar la condición de independencia:** Multiplicamos las marginales: $f_X(x) \cdot f_Y(y) = (2x) \cdot (2y) = 4xy$. Como el producto es igual a la función conjunta ($4xy = 4xy$), **las variables aleatorias $X$ e $Y$ son estadísticamente independientes**.
 
