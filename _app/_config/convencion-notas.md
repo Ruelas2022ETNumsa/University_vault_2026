@@ -1,102 +1,123 @@
-# Note Convention — University Vault
+# Convención de Notas — University Vault
 
-> Full system: [[galaxy-system]]
-> ETN302 = legacy system (unchanged). All new subjects = Galaxy System.
-
----
-
-## LEGACY — ETN302 only
-
-```
-T   → Theory         W   → Whorled (properties)    A  → Auxiliary session
-AA  → Aux exercise   D   → Diagram index            TD → Theory diagram
-WD  → Whorled diag   AD  → Aux diagram              TT → Homework theory
-```
-
-Numbering: `T2.21.302-1` → type | topic.subtopic | subject | part
+> Sistema completo: [[galaxy-system]]
+> ETN302 = sistema legacy (sin cambios). Todas las materias nuevas = Sistema Galaxy.
 
 ---
 
-## GALAXY SYSTEM — New subjects
-
-### Folder path encodes location
+## LEGACY — Solo ETN302
 
 ```
-Semesters/Sem_NN/ETNXXX/Partial_N/Topic_NN_name/[notes]
+T   → Teoría           W   → Whorled (propiedades)    A  → Sesión de auxiliatura
+AA  → Ejercicio aux.   D   → Índice de diagramas       TD → Diagrama de teoría
+WD  → Diagrama Whorled AD  → Diagrama de aux.          TT → Teoría de tarea
 ```
 
-Semester and partial are **not** repeated in the file name.
+Numeración: `T2.21.302-1` → tipo | tema.subtema | materia | parte
 
 ---
 
-### File name pattern
+## SISTEMA GALAXY — Materias nuevas
+
+### La ruta de carpeta codifica la ubicación
 
 ```
-ETNXXX-TNN-descriptive-name.md
+Semesters/Sem_NN/ETNXXX/Partial_N/Topic_NN_nombre/[notas]
 ```
 
-| Field | Example |
+Semestre y parcial **no se repiten** en el nombre del archivo.
+
+---
+
+### Patrón de nombre de archivo
+
+```
+ETNXXX-TNN-nombre-descriptivo.md
+```
+
+| Campo | Ejemplo |
 |-------|---------|
-| Subject code | `ETN806` |
-| Topic number (zero-padded) | `T01`, `T03` |
-| Descriptive slug (English, hyphenated) | `joint-pdf-definition` |
+| Sigla de la materia | `ETN806` |
+| Número de tema (con cero) | `T01`, `T03` |
+| Slug descriptivo en inglés, con guiones | `joint-pdf-definition` |
 
-Use `T00` for partial-wide notes (formularios, practice sheets, references).
+Usar `T00` para notas de parcial completo (formularios, enunciados, referencias generales).
+Para notas Bridge entre dos materias: `ETN806-ETN302-nombre-del-puente.md`
 
-**Examples:**
+**Ejemplos:**
 ```
 ETN806-T01-joint-pdf-definition.md
 ETN806-T01-marginal-density-formula.md
 ETN806-T01-normalization-k-solved.md
 ETN806-T00-formulario-partial2.md
-ETN806-ETN302-laplace-vs-probability.md   ← Bridge note
+ETN806-ETN302-laplace-vs-probability.md
 ```
 
 ---
 
-### Galaxy body types (in YAML)
+### Tipos de cuerpo galaxy (en el YAML)
 
-| `galaxy_body` | Symbol | Role |
-|---------------|--------|------|
-| `star` | ☀️ | Topic MOC — links all orbiting notes |
-| `planet` | 🪐 | Core theory — one concept per note |
-| `moon` | 🌙 | Property or formula — orbits a planet |
-| `comet` | ☄️ | Solved exercise — references concepts used |
-| `nebula` | 🌫️ | Session grouper — links comets from one session |
-| `dwarf` | ⬛ | Summary — condensed topic or partial review |
-| `asteroid` | 🪨 | External reference — book, PDF, paper |
-| `photon` | 💡 | Visual — Desmos, Excalidraw, image |
-| `bridge` | 🌉 | Cross-subject connection |
+| `galaxy_body` | Símbolo | Rol |
+|---------------|---------|-----|
+| `star` | ☀️ | MOC del tema — enlaza todas las notas en órbita |
+| `planet` | 🪐 | Teoría central — un concepto por nota |
+| `moon` | 🌙 | Propiedad o fórmula — orbita un planet |
+| `comet` | ☄️ | Ejercicio resuelto — referencia los conceptos usados |
+| `nebula` | 🌫️ | Agrupador de sesión — enlaza comets de una clase |
+| `dwarf` | ⬛ | Resumen — revisión condensada de tema o parcial |
+| `asteroid` | 🪨 | Referencia externa — libro, PDF, paper |
+| `photon` | 💡 | Visual — Desmos, Excalidraw, imagen |
+| `bridge` | 🌉 | Conexión entre materias |
 
-Minimum required YAML for any Galaxy note:
+YAML mínimo requerido para cualquier nota Galaxy:
 
 ```yaml
 ---
-galaxy_body: [type]
+galaxy_body: [tipo]
 subject: ETNXXX
 semester: N
 partial: N
 topic: N
-tags: [ETNXXX, galaxy-[type], PN, TNN]
+tags: [ETNXXX, galaxy-[tipo], PN, TNN]
 ---
 ```
 
-See [[galaxy-system]] for full YAML templates and wikilink rules.
+Ver [[galaxy-system]] para plantillas YAML completas por tipo.
 
 ---
 
-## Vault Folders
+### Conexiones: dos capas
 
-| Folder | Purpose |
-|--------|---------|
-| `Semesters/` | All academic content |
-| `MOC/` | Subject-level index notes linking all Stars |
-| `_app/_config/` | System config: convention, galaxy system, tag routes |
-| `_app/_appnotes/` | Tool guides: Desmos, tags, etc. |
-| `_app/Canvas/` | Obsidian Canvas visual maps |
-| `_app/Excalidraw/` | Raw Excalidraw source files |
-| `_app/scripts/` | Vault automation scripts |
-| `_app/solve/` | Known issues and solutions (git, sync, etc.) |
-| `_assets/` | Exported images: .png, .svg, .jpeg |
-| `_templates/` | Note templates — one per galaxy body type |
-| `borrar/` | Staging area for files pending deletion |
+| Capa | Herramienta | Propósito |
+|------|-------------|-----------|
+| Metadatos | YAML (`orbiting`, `orbits`, `concepts_used`...) | Búsquedas, filtros, DataView |
+| Grafo visual | `%%wikilinks comentados%%` al final de la nota | Visualización en modo grafo de Obsidian |
+
+El YAML **no genera conexiones** en el grafo nativo de Obsidian. Los `[[wikilinks]]` dentro de bloques `%%` sí lo hacen y son invisibles en modo lectura. Ambas capas deben estar sincronizadas.
+
+```markdown
+%%
+galaxy-links
+[[ETN806-T01-star]]
+[[ETN806-T01-marginal-density-formula]]
+%%
+```
+
+---
+
+## Carpetas del baúl
+
+| Carpeta | Función |
+|---------|---------|
+| `Semesters/` | Todo el contenido académico |
+| `MOC/` | Notas de índice por materia, enlazan todas sus stars |
+| `_app/_config/` | Configuración del sistema: convención, galaxy system, tags |
+| `_app/_appnotes/` | Guías de herramientas: Desmos, tags, etc. |
+| `_app/Canvas/` | Mapas visuales en Canvas de Obsidian |
+| `_app/Excalidraw/` | Archivos fuente de Excalidraw |
+| `_app/scripts/` | Scripts de automatización del baúl |
+| `_app/solve/` | Problemas conocidos y soluciones (git, sync, etc.) |
+| `_app/TagsRoutes/` | Archivos de configuración de rutas de tags |
+| `_assets/` | Imágenes exportadas: .png, .svg, .jpeg |
+| `_templates/` | Plantillas de notas — una por tipo de cuerpo galaxy |
+| `borrar/` | Zona de espera antes de eliminar archivos permanentemente |

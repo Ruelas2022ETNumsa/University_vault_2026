@@ -1,93 +1,97 @@
-# Galaxy System — University Vault
+# Sistema Galaxy — University Vault
 
-> This vault is a **digital brain for engineering**. Every note has a precise location, a clean name, and YAML that defines its role and connections.
-> Full convention summary: [[convencion-notas]]
-
----
-
-## Core Idea
-
-The vault is organized as a **universe of galaxies**. Each subject is a galaxy. Knowledge inside each galaxy is structured in orbital layers — from the central index (Star) outward to theory, properties, exercises, references, and visuals.
-
-The galaxy metaphor lives **entirely in the YAML** of each note, not in folder names or file names. Folders give physical location. File names give identity. YAML gives role, orbit, and connections. Obsidian `[[wikilinks]]` are the gravitational threads.
-
-> **ETN302 is legacy.** It stays unchanged. Galaxy System applies to all new subjects.
+> Resumen de convención: [[convencion-notas]]
+> Este baúl es un **cerebro digital para ingeniería**. Cada nota tiene una ubicación precisa, un nombre limpio y un YAML que define su rol y sus conexiones.
 
 ---
 
-## Vault Folder Map
+## Idea central
+
+El baúl está organizado como un **universo de galaxias**. Cada materia es una galaxia. El conocimiento dentro de cada galaxia se estructura en capas orbitales — desde el índice central (star) hacia afuera: teoría, propiedades, ejercicios, referencias y visuales.
+
+La metáfora de la galaxia vive **únicamente en el YAML** de cada nota — no en los nombres de carpetas ni en los nombres de archivo. Las carpetas dan ubicación física. El nombre del archivo da identidad. El YAML da rol, órbita y conexiones. Los `[[wikilinks]]` de Obsidian son los hilos gravitacionales, y los bloques `%%comentados%%` los hacen visibles en el grafo sin aparecer en el modo de lectura.
+
+> **ETN302 es legacy.** Se queda como está. El Sistema Galaxy aplica a todas las materias nuevas.
+
+---
+
+## Mapa de carpetas del baúl
 
 ```
 University_Vault_2026/
 │
-├── Semesters/                  ← all academic content lives here
-│   └── Sem_NN/                 ← one folder per semester (Sem_03, Sem_08...)
-│       └── ETNXXX/             ← one folder per subject
-│           ├── Partial_1/      ← one folder per partial exam period
-│           │   └── Topic_NN_descriptive-name/   ← one folder per topic
-│           │       └── [notes]
+├── Semesters/                  ← todo el contenido académico vive aquí
+│   └── Sem_NN/                 ← una carpeta por semestre (Sem_03, Sem_08...)
+│       └── ETNXXX/             ← una carpeta por materia
+│           ├── Partial_1/      ← una carpeta por parcial
+│           │   └── Topic_NN_nombre-descriptivo/   ← una carpeta por tema
+│           │       └── [notas]
 │           ├── Partial_2/
 │           └── Partial_3/
 │
-├── MOC/                        ← Map of Content notes — universe-level index
-│                                  one MOC per subject, links all its Stars
+├── MOC/                        ← notas de índice a nivel de materia
+│                                  una MOC por materia, enlaza todas sus Stars
 │
-├── _app/                       ← vault infrastructure (not academic content)
-│   ├── _config/                ← system config files
-│   │   ├── galaxy-system.md    ← this file
-│   │   ├── convencion-notas.md ← naming convention summary
-│   │   ├── TagsRoute.md        ← tag routing reference
-│   │   ├── claude.md           ← Claude behavior config
-│   │   ├── patch-obsidian.bat  ← obsidian patch scripts
+├── _app/                       ← infraestructura del baúl (no es contenido académico)
+│   ├── _config/                ← archivos de configuración del sistema
+│   │   ├── galaxy-system.md    ← este archivo
+│   │   ├── convencion-notas.md ← resumen de convención de nombres
+│   │   ├── TagsRoute.md        ← referencia del sistema de tags
+│   │   ├── claude.md           ← configuración de comportamiento de Claude
+│   │   ├── patch-obsidian.bat  ← scripts de parche para Obsidian
 │   │   └── patch-obsidian.ps1
 │   │
-│   ├── _appnotes/              ← guides for tools used inside the vault
-│   │   ├── desmos_guide.md     ← unified Desmos guide (User + NotebookLM + Claude)
-│   │   ├── tags_notes.md       ← tag system documentation
+│   ├── _appnotes/              ← guías de herramientas usadas dentro del baúl
+│   │   ├── desmos_guide.md     ← guía unificada Desmos (Usuario + NotebookLM + Claude)
+│   │   ├── tags_notes.md       ← documentación del sistema de tags
 │   │   └── ...
 │   │
-│   ├── Canvas/                 ← Obsidian Canvas files (.canvas)
-│   │                              visual maps of subject structure
-│   ├── Excalidraw/             ← Excalidraw source files (.excalidraw)
-│   │                              raw drawing files before export
-│   ├── scripts/                ← automation scripts for vault maintenance
+│   ├── Canvas/                 ← archivos Canvas de Obsidian (.canvas)
+│   │                              mapas visuales de la estructura de cada materia
+│   ├── Excalidraw/             ← archivos fuente de Excalidraw (.excalidraw)
+│   │                              dibujos en bruto antes de exportar
+│   ├── scripts/                ← scripts de automatización para mantenimiento del baúl
 │   │   └── tag_routs_scripts/
 │   │
-│   ├── solve/                  ← known issues and solutions
-│   │   └── git_solve.md        ← git conflict and sync solutions
+│   ├── solve/                  ← problemas conocidos y sus soluciones
+│   │   └── git_solve.md        ← soluciones a conflictos de git y sincronización
 │   │
-│   └── TagsRoutes/             ← tag routing configuration files
+│   └── TagsRoutes/             ← archivos de configuración de rutas de tags
 │
-├── _assets/                    ← all exported visual files
-│                                  .png, .svg, .jpeg exported from Desmos,
-│                                  Excalidraw, or inserted images.
-│                                  Named to match their source note.
+├── _assets/                    ← todos los archivos visuales exportados
+│                                  .png, .svg, .jpeg exportados desde Desmos,
+│                                  Excalidraw, o imágenes insertadas.
+│                                  Se nombran igual que la nota fuente.
 │
-├── _templates/                 ← Obsidian note templates
-│                                  one template per galaxy body type.
-│                                  contextogen.md lives here too.
+├── _templates/                 ← plantillas de notas de Obsidian
+│                                  una plantilla por tipo de cuerpo galaxy.
+│                                  contextogen.md vive aquí también.
 │
-└── borrar/                     ← staging folder for files pending deletion
-                                   review before permanent removal
+└── borrar/                     ← carpeta de espera antes de eliminar archivos
+                                   revisar antes de borrar permanentemente
 ```
 
 ---
 
-## Note Naming Convention
+## Convención de nombres de notas
 
-### Pattern
+### Patrón
 
 ```
-ETNXXX-TNN-descriptive-name.md
+ETNXXX-TNN-nombre-descriptivo.md
 ```
 
-| Field | Description | Example |
+| Campo | Descripción | Ejemplo |
 |-------|-------------|---------|
-| `ETNXXX` | Subject code | `ETN806` |
-| `TNN` | Topic number, zero-padded | `T01`, `T03` |
-| `descriptive-name` | Short English slug, hyphenated | `joint-pdf-definition` |
+| `ETNXXX` | Sigla de la materia | `ETN806` |
+| `TNN` | Número de tema con cero al frente | `T01`, `T03` |
+| `nombre-descriptivo` | Slug corto en inglés, con guiones | `joint-pdf-definition` |
 
-### Examples
+Usar `T00` para notas que pertenecen al parcial completo y no a un tema específico (formularios, enunciados de práctica, referencias generales).
+
+Para notas Bridge que conectan dos materias: `ETN806-ETN302-nombre-del-puente.md`
+
+### Ejemplos
 
 ```
 ETN806-T01-joint-pdf-definition.md
@@ -96,40 +100,65 @@ ETN806-T01-normalization-k-solved.md
 ETN806-T01-support-region-triangle.md
 ETN806-T02-independence-statistical-test.md
 ETN806-T02-variance-sum-covariance.md
-ETN806-T00-formulario-partial2.md          ← T00 for partial-wide reference notes
+ETN806-T00-formulario-partial2.md
 ETN806-T00-practica2-enunciados.md
+ETN806-ETN302-laplace-vs-probability.md
 ```
 
-> Semester and partial are **not** in the file name — they are already encoded in the folder path and in the YAML. No redundancy.
-
-> For Bridge notes connecting two subjects: `ETN806-ETN302-laplace-vs-probability.md`
+> El semestre y el parcial **no van en el nombre** — ya están codificados en la ruta de carpeta y en el YAML. Sin redundancia.
 
 ---
 
-## Galaxy Body Types
+## Tipos de cuerpo galaxy
 
-The `galaxy_body` YAML field defines the note's role. Nine types:
+El campo `galaxy_body` en el YAML define el rol de la nota. Nueve tipos:
 
-| `galaxy_body` | Symbol | Role |
-|---------------|--------|------|
-| `star` | ☀️ | MOC for one topic. Links all orbiting notes. One per topic folder. |
-| `planet` | 🪐 | Core theory note. One concept per note. |
-| `moon` | 🌙 | Property, formula, or key result. Always orbits a Planet. |
-| `comet` | ☄️ | Solved exercise. References the concepts it used. |
-| `nebula` | 🌫️ | Session grouper. Links Comets from one class or auxiliary session. |
-| `dwarf` | ⬛ | Summary. Condensed review of a topic or partial. |
-| `asteroid` | 🪨 | External reference. Book excerpt, PDF note, paper. |
-| `photon` | 💡 | Visual asset. Desmos graph, Excalidraw, image. Attached to one note. |
-| `bridge` | 🌉 | Cross-subject connection. Links concepts from two different subjects. |
+| `galaxy_body` | Símbolo | Rol |
+|---------------|---------|-----|
+| `star` | ☀️ | MOC de un tema. Enlaza todas las notas en órbita. Una por carpeta de tema. |
+| `planet` | 🪐 | Nota de teoría central. Un concepto por nota. |
+| `moon` | 🌙 | Propiedad, fórmula o resultado clave. Siempre orbita un planet. |
+| `comet` | ☄️ | Ejercicio resuelto. Referencia los conceptos que usó. |
+| `nebula` | 🌫️ | Agrupador de sesión. Enlaza comets de una clase o auxiliatura. |
+| `dwarf` | ⬛ | Resumen. Revisión condensada de un tema o parcial. |
+| `asteroid` | 🪨 | Referencia externa. Extracto de libro, nota de PDF, paper. |
+| `photon` | 💡 | Recurso visual. Gráfica Desmos, Excalidraw, imagen. Siempre adjunto a otra nota. |
+| `bridge` | 🌉 | Conexión entre materias. Enlaza conceptos de dos galaxias distintas. |
 
 ---
 
-## YAML Templates
+## El grafo de Obsidian y los wikilinks
+
+El grafo nativo de Obsidian **solo detecta `[[wikilinks]]` escritos en el cuerpo de la nota** — el YAML no genera conexiones visibles en el grafo. Para construir el grafo sin ensuciar el modo de lectura se usan **bloques de comentario `%%`**:
+
+```markdown
+%%
+galaxy-links
+[[ETN806-T01-joint-pdf-definition]]
+[[ETN806-T01-marginal-density-formula]]
+[[ETN806-T01-normalization-k-solved]]
+%%
+```
+
+Los bloques `%%...%%` son **invisibles en modo lectura y preview**, pero el motor del grafo los detecta y dibuja las conexiones. Cada nota debe tener su bloque `%%` al final con todos sus enlaces galaxy.
+
+### Regla: dos capas de conexión
+
+| Capa | Herramienta | Propósito |
+|------|------------|-----------|
+| Metadatos | YAML (`orbiting`, `orbits`, `concepts_used`...) | Búsquedas, filtros, DataView |
+| Grafo visual | `%%wikilinks comentados%%` | Visualización en modo grafo de Obsidian |
+
+Ambas capas deben estar sincronizadas — si un enlace está en el YAML también debe estar en el bloque `%%`.
+
+---
+
+## Plantillas YAML por tipo de cuerpo
 
 ### star
 ```yaml
 ---
-title: "ETN806 — P2 — T01: Joint Probability Density"
+title: "ETN806 — P2 — T01: Densidad de probabilidad conjunta"
 galaxy_body: star
 subject: ETN806
 semester: 8
@@ -142,14 +171,26 @@ orbiting:
   - "[[ETN806-T01-normalization-k-solved]]"
 tags: [ETN806, galaxy-star, P2, T01]
 date_created: YYYY-MM-DD
-status: active
+status: activo
 ---
 ```
+
+Cuerpo de la nota — al final:
+```markdown
+%%
+galaxy-links
+[[ETN806-T01-joint-pdf-definition]]
+[[ETN806-T01-marginal-density-formula]]
+[[ETN806-T01-normalization-k-solved]]
+%%
+```
+
+---
 
 ### planet
 ```yaml
 ---
-title: "Joint PDF — Definition and Support Region"
+title: "PDF Conjunta — Definición y región de soporte"
 galaxy_body: planet
 subject: ETN806
 semester: 8
@@ -162,14 +203,25 @@ comets:
   - "[[ETN806-T01-normalization-k-solved]]"
 tags: [ETN806, galaxy-planet, P2, T01, joint-pdf]
 date_created: YYYY-MM-DD
-status: complete
+status: completo
 ---
 ```
+
+```markdown
+%%
+galaxy-links
+[[ETN806-T01-star]]
+[[ETN806-T01-marginal-density-formula]]
+[[ETN806-T01-normalization-k-solved]]
+%%
+```
+
+---
 
 ### moon
 ```yaml
 ---
-title: "Marginal Density — Formula"
+title: "Densidad marginal — Fórmula"
 galaxy_body: moon
 subject: ETN806
 semester: 8
@@ -181,29 +233,48 @@ date_created: YYYY-MM-DD
 ---
 ```
 
+```markdown
+%%
+galaxy-links
+[[ETN806-T01-joint-pdf-definition]]
+%%
+```
+
+---
+
 ### comet
 ```yaml
 ---
-title: "ETN806 — P2 — Normalization k: Solved"
+title: "ETN806 — P2 — Normalización k: Resuelto"
 galaxy_body: comet
 subject: ETN806
 semester: 8
 partial: 2
 topic: 1
-source: "exam"
+source: "examen"
 concepts_used:
   - "[[ETN806-T01-joint-pdf-definition]]"
   - "[[ETN806-T01-marginal-density-formula]]"
-status: reviewed
-tags: [ETN806, galaxy-comet, P2, T01, exercise]
+status: revisado
+tags: [ETN806, galaxy-comet, P2, T01, ejercicio]
 date_created: YYYY-MM-DD
 ---
 ```
 
+```markdown
+%%
+galaxy-links
+[[ETN806-T01-joint-pdf-definition]]
+[[ETN806-T01-marginal-density-formula]]
+%%
+```
+
+---
+
 ### nebula
 ```yaml
 ---
-title: "ETN806 — Auxiliary Session 2026-05-20"
+title: "ETN806 — Sesión de auxiliatura 2026-05-20"
 galaxy_body: nebula
 subject: ETN806
 semester: 8
@@ -212,14 +283,24 @@ session_date: 2026-05-20
 comets:
   - "[[ETN806-T01-normalization-k-solved]]"
   - "[[ETN806-T02-independence-statistical-test]]"
-tags: [ETN806, galaxy-nebula, P2, session]
+tags: [ETN806, galaxy-nebula, P2, sesion]
 ---
 ```
+
+```markdown
+%%
+galaxy-links
+[[ETN806-T01-normalization-k-solved]]
+[[ETN806-T02-independence-statistical-test]]
+%%
+```
+
+---
 
 ### dwarf
 ```yaml
 ---
-title: "ETN806 — P2 Summary"
+title: "ETN806 — Resumen P2"
 galaxy_body: dwarf
 subject: ETN806
 semester: 8
@@ -227,33 +308,52 @@ partial: 2
 covers:
   - "[[ETN806-T01-star]]"
   - "[[ETN806-T02-star]]"
-tags: [ETN806, galaxy-dwarf, P2, summary]
+tags: [ETN806, galaxy-dwarf, P2, resumen]
 date_created: YYYY-MM-DD
 ---
 ```
 
+```markdown
+%%
+galaxy-links
+[[ETN806-T01-star]]
+[[ETN806-T02-star]]
+%%
+```
+
+---
+
 ### asteroid
 ```yaml
 ---
-title: "Papoulis — Ch6: Random Variables"
+title: "Papoulis — Cap. 6: Variables aleatorias"
 galaxy_body: asteroid
 subject: ETN806
 semester: 8
 partial: 2
-source_type: book
+source_type: libro
 source_title: "Probability, Random Variables and Stochastic Processes"
 source_author: "Papoulis"
 source_chapter: "6"
 related_planets:
   - "[[ETN806-T01-joint-pdf-definition]]"
-tags: [ETN806, galaxy-asteroid, reference]
+tags: [ETN806, galaxy-asteroid, referencia]
 ---
 ```
+
+```markdown
+%%
+galaxy-links
+[[ETN806-T01-joint-pdf-definition]]
+%%
+```
+
+---
 
 ### photon
 ```yaml
 ---
-title: "Support Region — Triangular Domain"
+title: "Región de soporte — Dominio triangular"
 galaxy_body: photon
 photon_type: desmos
 attached_to: "[[ETN806-T01-normalization-k-solved]]"
@@ -262,10 +362,19 @@ tags: [ETN806, galaxy-photon, visual, desmos]
 ---
 ```
 
+```markdown
+%%
+galaxy-links
+[[ETN806-T01-normalization-k-solved]]
+%%
+```
+
+---
+
 ### bridge
 ```yaml
 ---
-title: "Bridge: Laplace Transform (ETN302) ↔ Probability Generating Functions (ETN806)"
+title: "Bridge: Transformada de Laplace (ETN302) ↔ Funciones generadoras de probabilidad (ETN806)"
 galaxy_body: bridge
 subjects: [ETN806, ETN302]
 semesters: [8, 3]
@@ -276,70 +385,70 @@ tags: [galaxy-bridge, ETN806, ETN302]
 ---
 ```
 
----
-
-## Wikilink Rules
-
-- Every **Star** lists all orbiting notes in YAML (`orbiting: [...]`) and links them inline in its body.
-- Every **Planet** links back to its Star and lists its Moons in YAML.
-- Every **Moon** declares which Planet it orbits (`orbits: [[...]]`).
-- Every **Comet** lists all Planets and Moons it used (`concepts_used: [...]`).
-- Every **Nebula** lists all Comets from that session.
-- Every **Photon** attaches to exactly one other note (`attached_to: [[...]]`).
-- Every **Bridge** links to exactly one note per subject.
+```markdown
+%%
+galaxy-links
+[[ETN806-T03-generating-functions]]
+[[ETN302-T05-laplace-transform]]
+%%
+```
 
 ---
 
-## TODO List
+## Lista de tareas
 
-### Phase 0 — Foundation ✅
-- [x] Define Galaxy System concept and body types
-- [x] Define folder structure and naming convention
-- [x] Define YAML templates per body type
-- [x] Write galaxy-system.md
-- [x] Update convencion-notas.md
-- [ ] Create note templates in `_templates/` for each body type (9 templates)
+### Fase 0 — Fundación ✅
+- [x] Definir concepto del Sistema Galaxy y tipos de cuerpo
+- [x] Definir estructura de carpetas y convención de nombres
+- [x] Definir plantillas YAML por tipo de cuerpo
+- [x] Definir regla de wikilinks comentados `%%` para el grafo
+- [x] Escribir galaxy-system.md
+- [x] Actualizar convencion-notas.md
+- [ ] Crear plantillas de notas en `_templates/` — una por tipo de cuerpo (9 plantillas)
 
-### Phase 1 — ETN806 organization
-- [ ] Create folder structure: `Semesters/Sem_08/ETN806/Partial_2/Topic_NN.../`
-- [ ] Move existing ETN806 files into correct topic folders
-- [ ] Add Galaxy YAML to existing `ETN806-2P-E*.md` files → galaxy_body: comet
-- [ ] Add Galaxy YAML to Formulario → galaxy_body: moon (cluster)
-- [ ] Add Galaxy YAML to Practica enunciados → galaxy_body: asteroid
-- [ ] Add Galaxy YAML to Resuelto Referencia → galaxy_body: comet
-- [ ] Create STAR note for each Partial 2 topic
-- [ ] Create PLN notes for core concepts
-- [ ] Create subject MOC in `MOC/` folder
+### Fase 1 — Organización ETN806
+- [ ] Crear estructura de carpetas: `Semesters/Sem_08/ETN806/Partial_2/Topic_NN.../`
+- [ ] Mover archivos ETN806 existentes a las carpetas de tema correctas
+- [ ] Agregar YAML galaxy a los archivos `ETN806-2P-E*.md` existentes → `galaxy_body: comet`
+- [ ] Agregar YAML galaxy al Formulario → `galaxy_body: moon`
+- [ ] Agregar YAML galaxy a Práctica enunciados → `galaxy_body: asteroid`
+- [ ] Agregar YAML galaxy a Resuelto Referencia → `galaxy_body: comet`
+- [ ] Crear notas star para cada tema del Parcial 2
+- [ ] Crear notas planet para los conceptos centrales
+- [ ] Crear MOC de la materia en la carpeta `MOC/`
+- [ ] Agregar bloques `%%` a todas las notas
 
-### Phase 2 — New subjects
-- [ ] Apply Galaxy System from day one to any new subject
-- [ ] Use `_templates/` note templates for each body type
-- [ ] Update `contextogen.md` to include galaxy_body field in generated contexts
+### Fase 2 — Materias nuevas
+- [ ] Aplicar el Sistema Galaxy desde el primer día a cualquier materia nueva
+- [ ] Usar plantillas de `_templates/` para cada tipo de cuerpo
+- [ ] Actualizar `contextogen.md` para incluir el campo `galaxy_body` en los contextos generados
 
-### Phase 3 — Cross-galaxy
-- [ ] Identify shared concepts between subjects
-- [ ] Create Bridge notes
-- [ ] Create universe-level MOC in `MOC/` linking all subject Stars
+### Fase 3 — Conexiones entre galaxias
+- [ ] Identificar conceptos compartidos entre materias
+- [ ] Crear notas bridge
+- [ ] Crear MOC a nivel universo en `MOC/` que enlace todas las Stars de todas las materias
 
-### Phase 4 — DataView (optional)
-- [ ] Install DataView plugin
-- [ ] Query: all Comets by subject and partial
-- [ ] Query: all pending reviews
-- [ ] Query: all Bridge notes
-- [ ] Dashboard note per subject
+### Fase 4 — DataView (opcional)
+- [ ] Instalar plugin DataView
+- [ ] Consulta: todos los comets por materia y parcial
+- [ ] Consulta: todas las notas pendientes de revisión
+- [ ] Consulta: todos los bridges
+- [ ] Nota de dashboard por materia usando DataView
 
 ---
 
-## Design Decisions
+## Registro de decisiones de diseño
 
-| Decision | Reason |
-|----------|--------|
-| Galaxy in YAML, not in file name | File names stay clean and short. YAML carries all semantic data. |
-| No semester/partial in file name | Already encoded in folder path. No redundancy. |
-| Descriptive English slugs | Readable in search without memorizing codes. Avoids accent encoding issues. |
-| T00 for partial-wide notes | Formularios and practice sheets belong to a partial, not a specific topic. |
-| ETN302 stays legacy | Renaming would break hundreds of internal wikilinks. |
-| Zero-padded topic numbers | File explorer sorts correctly: `T01` before `T10`. |
-| Photons always attached | A visual has no meaning without the note it illustrates. |
-| Bridge as explicit note | Cross-subject insight is itself valuable knowledge worth capturing. |
-| `borrar/` staging folder | Safer than permanent deletion — review before removing. |
+| Decisión | Razón |
+|----------|-------|
+| La galaxia vive en el YAML, no en el nombre del archivo | Los nombres se mantienen limpios y cortos. El YAML lleva todos los datos semánticos. |
+| Semestre y parcial no van en el nombre del archivo | Ya están codificados en la ruta de carpeta. Sin redundancia. |
+| Slugs descriptivos en inglés | Legibles en búsqueda sin memorizar códigos. Evita problemas de codificación con tildes. |
+| T00 para notas de parcial completo | Formularios y enunciados pertenecen al parcial, no a un tema específico. |
+| ETN302 se queda como legacy | Renombrar rompería cientos de wikilinks internos. |
+| Números de tema con cero al frente | El explorador de archivos ordena correctamente: `T01` antes que `T10`. |
+| Los photons siempre adjuntos | Un visual no tiene significado sin la nota que ilustra. |
+| Bridge como nota explícita | La conexión entre materias es conocimiento valioso en sí mismo. |
+| Wikilinks en bloque `%%` | Invisibles en lectura, visibles en el grafo. Grafo limpio sin ensuciar el contenido. |
+| Dos capas de conexión (YAML + `%%`) | YAML para búsquedas y DataView. `%%` para visualización en el grafo. Cada una con su propósito. |
+| `borrar/` como carpeta de espera | Más seguro que borrar directamente — revisar antes de eliminar permanentemente. |
