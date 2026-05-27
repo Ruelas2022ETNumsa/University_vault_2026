@@ -27,7 +27,7 @@
   "copyCommands": [
     {
       "name": "Quote",
-      "template": "> ({{linkWithDisplay}})\n> {{text}}\n"
+      "template": "> [!PDF] {{linkWithDisplay}}\n> {{text}}\n"
     },
     {
       "name": "Link",
