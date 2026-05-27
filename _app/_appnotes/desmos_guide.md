@@ -1,3 +1,14 @@
+---
+title: "Desmos — Guía unificada para Obsidian"
+galaxy_body: beacon
+scope: vault
+tool: desmos-plugin
+audience: [usuario, notebooklm, claude]
+tags: [beacon, desmos, infraestructura]
+date_created: 2026-01-01
+status: activo
+---
+
 # 📈 GUÍA UNIFICADA DE DESMOS PARA OBSIDIAN
 
 > Plugin: `obsidian-desmos` — renderiza gráficas de [desmos.com](https://www.desmos.com/calculator) directamente en tus notas.
@@ -479,3 +490,9 @@ Ajustar `right` y `top` según el tamaño del soporte más un margen de ~20%.
 | Curva de evento | `PURPLE` |
 | Líneas auxiliares | `BLACK|DASHED` |
 | Puntos clave | `BLACK` o el color de la curva asociada |
+
+%%
+galaxy-links
+[[_galaxy-system]]
+[[convencion-notas]]
+%%
