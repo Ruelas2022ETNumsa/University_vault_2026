@@ -117,7 +117,7 @@ ETN806-ETN302-laplace-vs-probability.md
 
 ## Tipos de cuerpo galaxy
 
-El campo `galaxy_body` en el YAML define el rol de la nota. Nueve tipos:
+El campo `galaxy_body` en el YAML define el rol de la nota. Diez tipos:
 
 | `galaxy_body` | Símbolo | Rol |
 |---------------|---------|-----|
@@ -130,6 +130,7 @@ El campo `galaxy_body` en el YAML define el rol de la nota. Nueve tipos:
 | `asteroid` | 🪨 | Referencia externa. Extracto de libro, nota de PDF, paper. |
 | `photon` | 💡 | Recurso visual. Gráfica Desmos, Excalidraw, imagen. Siempre adjunto a otra nota. |
 | `bridge` | 🌉 | Conexión entre materias. Enlaza conceptos de dos galaxias distintas. |
+| `beacon` | 📡 | Guía de infraestructura del vault. Herramientas, procesos, soluciones. Vive en `_app/`. |
 
 ---
 
@@ -461,6 +462,7 @@ galaxy-links
 | Slugs descriptivos en inglés | Legibles en búsqueda sin memorizar códigos. Evita problemas de codificación con tildes. |
 | T00 para notas de parcial completo | Formularios y enunciados pertenecen al parcial, no a un tema específico. |
 | ETN302 se queda como legacy | Renombrar rompería cientos de wikilinks internos. |
+| `beacon` como décimo tipo | Las notas de infraestructura (`_app/`) no son contenido académico — necesitan un tipo visual propio que las distinga en el grafo sin contaminar los tipos galaxy del contenido real. El nombre refleja su rol: señales de orientación del vault. |
 | Números de tema con cero al frente | El explorador de archivos ordena correctamente: `T01` antes que `T10`. |
 | Los photons siempre adjuntos | Un visual no tiene significado sin la nota que ilustra. |
 | Bridge como nota explícita | La conexión entre materias es conocimiento valioso en sí mismo. |

@@ -1,3 +1,13 @@
+---
+title: "Git — Resolución de conflictos en Obsidian"
+galaxy_body: beacon
+scope: vault
+tool: obsidian-git
+tags: [beacon, git, infraestructura, solve]
+date_created: 2026-01-01
+status: activo
+---
+
 # Resolver Conflictos de Git en Obsidian
 
 ## ¿Qué es un conflicto de Git?
@@ -70,3 +80,8 @@ Abrir Obsidian → Git: Pull → Editar notas → Git: Commit all changes → Gi
 ```
 
 Siguiendo este orden en **ambas máquinas** se evitan la mayoría de los conflictos.
+
+%%
+galaxy-links
+[[_galaxy-system]]
+%%
