@@ -1,6 +1,7 @@
 # Sistema Galaxy — University Vault
 
 > Resumen de convención: [[convencion-notas]]
+> Sistema PDF: [[_pdf-system]]
 > Este baúl es un **cerebro digital para ingeniería**. Cada nota tiene una ubicación precisa, un nombre limpio y un YAML que define su rol y sus conexiones.
 
 ---
@@ -34,12 +35,12 @@ University_Vault_2026/
 │
 ├── _app/                       ← infraestructura del baúl (no es contenido académico)
 │   ├── _config/                ← archivos de configuración del sistema
-│   │   ├── galaxy-system.md    ← este archivo
+│   │   ├── _galaxy-system.md   ← este archivo
+│   │   ├── _pdf-system.md      ← sistema de integración de PDFs
 │   │   ├── convencion-notas.md ← resumen de convención de nombres
 │   │   ├── TagsRoute.md        ← referencia del sistema de tags
-│   │   ├── claude.md           ← configuración de comportamiento de Claude
-│   │   ├── patch-obsidian.bat  ← scripts de parche para Obsidian
-│   │   └── patch-obsidian.ps1
+│   │   ├── _claude-sync.md     ← configuración de comportamiento de Claude
+│   │   └── tagroute_parche/
 │   │
 │   ├── _appnotes/              ← guías de herramientas usadas dentro del baúl
 │   │   ├── desmos_guide.md     ← guía unificada Desmos (Usuario + NotebookLM + Claude)
@@ -62,6 +63,11 @@ University_Vault_2026/
 │                                  .png, .svg, .jpeg exportados desde Desmos,
 │                                  Excalidraw, o imágenes insertadas.
 │                                  Se nombran igual que la nota fuente.
+│
+├── _pdf/                       ← archivos PDF físicos — ver [[_pdf-system]]
+│   ├── ETN806/                    una carpeta por materia, sin sub-carpetas
+│   ├── ETN302/                    la organización semántica la llevan los nombres
+│   └── ETNXXX/                    y las notas asteroid en Semesters/
 │
 ├── _templates/                 ← plantillas de notas de Obsidian
 │                                  una plantilla por tipo de cuerpo galaxy.
@@ -324,6 +330,9 @@ galaxy-links
 ---
 
 ### asteroid
+
+El `asteroid` con PDF tiene YAML extendido — ver [[_pdf-system]] para el detalle completo.
+
 ```yaml
 ---
 title: "Papoulis — Cap. 6: Variables aleatorias"
@@ -331,13 +340,17 @@ galaxy_body: asteroid
 subject: ETN806
 semester: 8
 partial: 2
-source_type: libro
+topic: 1
+source_type: pdf-libro
 source_title: "Probability, Random Variables and Stochastic Processes"
 source_author: "Papoulis"
 source_chapter: "6"
+pdf_file: "[[ETN806-T00-libro-papoulis-cap6.pdf]]"
 related_planets:
   - "[[ETN806-T01-joint-pdf-definition]]"
-tags: [ETN806, galaxy-asteroid, referencia]
+tags: [ETN806, galaxy-asteroid, referencia, pdf, T01, P2]
+date_created: YYYY-MM-DD
+status: en-proceso
 ---
 ```
 
@@ -402,8 +415,10 @@ galaxy-links
 - [x] Definir estructura de carpetas y convención de nombres
 - [x] Definir plantillas YAML por tipo de cuerpo
 - [x] Definir regla de wikilinks comentados `%%` para el grafo
-- [x] Escribir galaxy-system.md
+- [x] Escribir _galaxy-system.md
 - [x] Actualizar convencion-notas.md
+- [x] Crear `_pdf/` y definir sistema PDF en `_pdf-system.md`
+- [x] Configurar plugins PDF++ · Annotator · OmniSearch · Text Extractor
 - [ ] Crear plantillas de notas en `_templates/` — una por tipo de cuerpo (9 plantillas)
 
 ### Fase 1 — Organización ETN806
@@ -452,3 +467,5 @@ galaxy-links
 | Wikilinks en bloque `%%` | Invisibles en lectura, visibles en el grafo. Grafo limpio sin ensuciar el contenido. |
 | Dos capas de conexión (YAML + `%%`) | YAML para búsquedas y DataView. `%%` para visualización en el grafo. Cada una con su propósito. |
 | `borrar/` como carpeta de espera | Más seguro que borrar directamente — revisar antes de eliminar permanentemente. |
+| `_pdf/` como almacén separado de `Semesters/` | Los PDFs son fuentes, no conocimiento procesado. El `asteroid` es el puente al grafo. |
+| PDF++ para texto, Annotator para EPUBs/escaneados | Cada plugin tiene su dominio sin solaparse. OmniSearch + Text Extractor cubren la búsqueda. |
