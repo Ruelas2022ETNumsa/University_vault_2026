@@ -43,7 +43,7 @@ Móvil (Obsidian + Remotely Save)
 
 ## Lo que falta ⏳
 
-- [ ] **Conectar GitHub a Claude** (conector GitHub en Claude.ai)
+- [x] **Conectar GitHub a Claude** (conector GitHub en Claude.ai)
   - Permitirá a Claude editar archivos directamente en la nube
   - Sin depender de que la PC esté encendida
 - [ ] **Conectar Microsoft 365 a Claude** (conector disponible en Claude.ai)
