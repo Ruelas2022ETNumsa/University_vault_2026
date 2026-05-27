@@ -10,6 +10,6 @@
   "displayMetadata": false,
   "debug": false,
   "isTimestamp": false,
-  "enabledCss": false,
+  "enabledCss": true,
   "concurrency": "5"
 }
