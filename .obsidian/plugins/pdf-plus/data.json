@@ -298,7 +298,7 @@
   "citationIdPatterns": "^cite.\n^bib\\d+$",
   "copyAsSingleLine": true,
   "removeWhitespaceBetweenCJChars": true,
-  "dummyFileFolderPath": "Dummy PDFs",
+  "dummyFileFolderPath": "_pdf",
   "externalURIPatterns": [
     ".*\\.pdf$",
     "https://arxiv.org/pdf/.*"
