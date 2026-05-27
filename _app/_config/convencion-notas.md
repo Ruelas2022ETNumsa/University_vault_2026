@@ -1,6 +1,6 @@
 # Convención de Notas — University Vault
 
-> Sistema completo: [[galaxy-system]]
+> Sistema completo: [[_galaxy-system]]
 > ETN302 = sistema legacy (sin cambios). Todas las materias nuevas = Sistema Galaxy.
 
 ---
@@ -82,7 +82,7 @@ tags: [ETNXXX, galaxy-[tipo], PN, TNN]
 ---
 ```
 
-Ver [[galaxy-system]] para plantillas YAML completas por tipo.
+Ver [[_galaxy-system]] para plantillas YAML completas por tipo.
 
 ---
 

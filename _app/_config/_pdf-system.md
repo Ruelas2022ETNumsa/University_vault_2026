@@ -1,6 +1,6 @@
 # Sistema PDF — University Vault
 
-> Sistema base: [[galaxy-system]]
+> Sistema base: [[_galaxy-system]]
 > Convención de notas: [[convencion-notas]]
 > Este sistema extiende el cerebro digital Galaxy para integrar PDFs académicos de forma ordenada, sin carpetas regadas y con conexión directa al grafo de conocimiento.
 
@@ -29,7 +29,7 @@ University_Vault_2026/
 ├── MOC/                        ← índices por materia
 ├── _app/                       ← infraestructura del vault
 │   └── _config/
-│       ├── galaxy-system.md
+│       ├── _galaxy-system.md
 │       ├── _pdf-system.md      ← este archivo
 │       └── ...
 ├── _assets/                    ← imágenes exportadas (.png, .svg, .jpeg)
@@ -89,7 +89,7 @@ subject: ETN806
 semester: 8
 partial: 2
 topic: 1
-source_type: pdf
+source_type: pdf-libro
 source_title: "Probability, Random Variables and Stochastic Processes"
 source_author: "Papoulis"
 source_chapter: "6"
@@ -148,9 +148,13 @@ Cada callout `[!PDF]` es un link a la página exacta del PDF. Doble click sobre 
 
 ---
 
-## Configuración de plugins para este sistema
+## Plugins del sistema PDF
 
-### PDF++ — ajustes aplicados
+### PDF++
+
+Lector y anotador principal. Las citas se copian como callouts `[!PDF]` con link a página exacta. Doble click en el highlight del PDF abre la nota `asteroid` correspondiente.
+
+**Ajustes aplicados:**
 
 | Ajuste | Valor | Dónde |
 |--------|-------|-------|
@@ -158,19 +162,48 @@ Cada callout `[!PDF]` es un link a la página exacta del PDF. Doble click sobre 
 | Dummy file folder path | `_pdf` | PDF++ Settings → Dummy PDF for external files |
 | Copy format "Quote" | `> [!PDF] {{linkWithDisplay}}`<br>`> {{text}}` | PDF++ Settings → Copying → Copy formats |
 
-### OmniSearch
+**Cuándo usarlo:** PDFs con texto seleccionable — apuntes, slides, prácticas, libros digitales. Es el 90% del flujo diario.
 
-Activar **"Index PDFs"** en sus ajustes. Indexa automáticamente todo el vault incluida `_pdf/`. Permite buscar texto dentro de cualquier PDF desde el buscador de Obsidian.
+---
 
 ### Annotator
 
-No requiere configuración global. Se activa nota por nota poniendo en el YAML:
+Lector de anotaciones estilo Hypothesis. No tiene configuración global — se activa nota por nota con un campo en el YAML:
 
 ```yaml
 annotation-target: _pdf/ETN806/ETN806-T01-apuntes-pdf-conjunta.pdf
 ```
 
-Útil si prefieres anotar con estilo Hypothesis en lugar de callouts. Para EPUBs es la única opción.
+**Ajuste aplicado:**
+
+| Ajuste | Valor | Dónde |
+|--------|-------|-------|
+| Custom default path | `_pdf` | Annotator Settings → Custom default path |
+
+**Cuándo usarlo:**
+- EPUBs — Annotator es la única opción para libros `.epub`
+- PDFs escaneados sin texto seleccionable
+- Si se prefiere anotar con comentarios largos en estilo Hypothesis
+
+---
+
+### OmniSearch + Text Extractor
+
+OmniSearch indexa todo el vault incluyendo PDFs. **Requiere el plugin compañero "Text Extractor"** instalado y activo para poder leer el contenido de PDFs e imágenes.
+
+**Ajustes aplicados:**
+
+| Ajuste | Valor | Dónde |
+|--------|-------|-------|
+| PDF content indexing | ✅ Activado | OmniSearch Settings |
+| Images OCR indexing | ✅ Activado | OmniSearch Settings |
+| Document content indexing | ❌ Desactivado | No se usan archivos Office |
+| Images AI indexing | ❌ Desactivado | Requiere plugin extra innecesario |
+| Index paths of unsupported files | ✅ Activado | Encuentra Canvas y Excalidraw por nombre |
+| Simpler search | ❌ Desactivado | Mantiene el algoritmo BM25 con pesos configurados |
+| Downranked folders | `_app`, `_templates`, `_assets` | Empuja infraestructura al fondo de resultados |
+
+**Plugins requeridos:** Text Extractor (Community Plugins — mismo autor que OmniSearch).
 
 ---
 
@@ -209,3 +242,5 @@ Un `comet` puede tener `pdf_file` si el ejercicio resuelto viene de un PDF ofici
 | Callout `[!PDF]` para citas | Visible, identificable, con link a página exacta. Consistente con el sistema de callouts de Obsidian. |
 | Mismo patrón de nombres que Galaxy | Sin excepciones al sistema. Un archivo en `_pdf/` y su nota en `Semesters/` tienen el mismo nombre base — solo cambia la extensión. |
 | `source_type` como campo YAML | Permite filtrar con DataView: todos los libros, todas las prácticas, todos los papers de una materia. |
+| PDF++ para texto, Annotator para EPUBs | Cada plugin tiene su dominio. PDF++ es nativo a Obsidian. Annotator cubre lo que PDF++ no soporta. |
+| Text Extractor como dependencia de OmniSearch | Sin él OmniSearch solo busca en notas markdown. Con él el cerebro busca en todas las fuentes. |

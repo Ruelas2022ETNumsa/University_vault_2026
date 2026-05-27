@@ -6,5 +6,6 @@
   "rightToLeft": false,
   "deleteUnlinkedAttachments": "always",
   "promptDelete": false,
-  "attachmentFolderPath": "_PDF"
+  "attachmentFolderPath": "_PDF",
+  "alwaysUpdateLinks": true
 }

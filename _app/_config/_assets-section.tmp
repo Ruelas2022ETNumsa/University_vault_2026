@@ -1,0 +1,17 @@
+├── _assets/                    ← todos los archivos visuales exportados
+│                                  .png, .svg, .jpeg exportados desde Desmos,
+│                                  Excalidraw, o imágenes insertadas.
+│                                  Se nombran igual que la nota fuente.
+│
+├── _pdf/                       ← archivos PDF físicos — ver [[_pdf-system]]
+│   ├── ETN806/                    una carpeta por materia, sin sub-carpetas
+│   ├── ETN302/                    la organización semántica la llevan los nombres
+│   └── ETNXXX/                    y las notas asteroid en Semesters/
+│
+├── _templates/                 ← plantillas de notas de Obsidian
+│                                  una plantilla por tipo de cuerpo galaxy.
+│                                  contextogen.md vive aquí también.
+│
+└── borrar/                     ← carpeta de espera antes de eliminar archivos
+                                   revisar antes de borrar permanentemente
+```

@@ -12,7 +12,7 @@
   "officeIndexing": false,
   "imagesIndexing": true,
   "aiImageIndexing": false,
-  "unsupportedFilesIndexing": "default",
+  "unsupportedFilesIndexing": "yes",
   "splitCamelCase": false,
   "openInNewPane": false,
   "vimLikeNavigationShortcut": false,
