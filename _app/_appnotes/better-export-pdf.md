@@ -78,7 +78,7 @@ Produce un único PDF con todas las notas de la carpeta en orden. Ideal para man
 
 **Lo que NO renderiza o tiene limitaciones:**
 - Fórmulas LaTeX dentro de celdas de tabla → comportamiento inconsistente, verificar caso a caso.
-- Bloques `desmos-graph` → **no se renderizan como gráfica**. El plugin Desmos requiere JavaScript/WebGL en tiempo real y no alcanza a ejecutarse durante la captura de Electron. Quedan como bloque de código plano. Para incluir la gráfica en el PDF: hacer screenshot desde Obsidian → guardar en `_assets/` → referenciar con `![[imagen.png]]` en la nota. Para NotebookLM no es necesario — lee el código LaTeX del bloque y lo entiende igual.
+- Bloques `desmos-graph` → **se renderizan correctamente si la nota está abierta** en el editor al momento de exportar. Better Export PDF captura lo que Obsidian ya tiene renderizado en pantalla — no renderiza por su cuenta. Si la gráfica es visible antes de exportar, aparece en el PDF como imagen. Posible excepción: exportación en batch de carpeta completa, donde las notas no se abren visualmente y Desmos puede no tener tiempo de ejecutar.
 - Bloques `%%...%%` (galaxy-links) → invisibles en el PDF, igual que en modo lectura. ✅
 
 ---
