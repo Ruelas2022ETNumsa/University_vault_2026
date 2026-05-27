@@ -1,0 +1,15 @@
+{
+  "showTitle": true,
+  "maxLevel": "6",
+  "displayHeader": true,
+  "displayFooter": true,
+  "headerTemplate": "",
+  "footerTemplate": "",
+  "printBackground": false,
+  "generateTaggedPDF": false,
+  "displayMetadata": false,
+  "debug": false,
+  "isTimestamp": false,
+  "enabledCss": false,
+  "concurrency": "5"
+}
