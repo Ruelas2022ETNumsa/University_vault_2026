@@ -78,7 +78,7 @@ Produce un único PDF con todas las notas de la carpeta en orden. Ideal para man
 
 **Lo que NO renderiza o tiene limitaciones:**
 - Fórmulas LaTeX dentro de celdas de tabla → comportamiento inconsistente, verificar caso a caso.
-- Bloques `desmos-graph` → quedan como bloque de código plano en el PDF. NotebookLM los lee como texto LaTeX, lo cual es suficiente.
+- Bloques `desmos-graph` → **no se renderizan como gráfica**. El plugin Desmos requiere JavaScript/WebGL en tiempo real y no alcanza a ejecutarse durante la captura de Electron. Quedan como bloque de código plano. Para incluir la gráfica en el PDF: hacer screenshot desde Obsidian → guardar en `_assets/` → referenciar con `![[imagen.png]]` en la nota. Para NotebookLM no es necesario — lee el código LaTeX del bloque y lo entiende igual.
 - Bloques `%%...%%` (galaxy-links) → invisibles en el PDF, igual que en modo lectura. ✅
 
 ---
