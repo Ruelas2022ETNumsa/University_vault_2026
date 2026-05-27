@@ -1,97 +1,102 @@
 # Note Convention — University Vault
 
-> Full system documented in: [[galaxy-system]]
-> ETN302 uses the legacy prefix system (below). All new subjects use the Galaxy System.
+> Full system: [[galaxy-system]]
+> ETN302 = legacy system (unchanged). All new subjects = Galaxy System.
 
 ---
 
-## LEGACY SYSTEM — ETN302 only
-
-Prefixes for ETN302 files (do not apply to new subjects):
+## LEGACY — ETN302 only
 
 ```
-T     → Teoría principal de un subtema
-W     → Whorled: propiedades/ventanas/resultados importantes
-A     → Auxiliatura: archivo agrupador de una sesión
-AA    → Auxiliatura Adicional: ejercicios individuales de aux.
-E     → Ejercicio: imagen o ejercicio de clase
-D     → Diagrama: índice de SVGs/imágenes del tema
-TD    → Teoría-Diagrama: SVG que acompaña una nota T
-WD    → Whorled-Diagrama: SVG de una propiedad W
-AD    → Auxiliatura-Diagrama: SVG de ejercicio de aux.
-TT    → Teoría de Tarea: ejercicios del libro/tarea
+T   → Theory         W   → Whorled (properties)    A  → Auxiliary session
+AA  → Aux exercise   D   → Diagram index            TD → Theory diagram
+WD  → Whorled diag   AD  → Aux diagram              TT → Homework theory
 ```
 
-Numbering:
+Numbering: `T2.21.302-1` → type | topic.subtopic | subject | part
+
+---
+
+## GALAXY SYSTEM — New subjects
+
+### Folder path encodes location
+
 ```
-T2.21.302-1
-│ │  │    └─ part number within subtopic
-│ │  └────── subject code
-│ └────────── subtopic (2.1 = topic 2, subtopic 1)
-└──────────── type prefix
+Semesters/Sem_NN/ETNXXX/Partial_N/Topic_NN_name/[notes]
+```
+
+Semester and partial are **not** repeated in the file name.
+
+---
+
+### File name pattern
+
+```
+ETNXXX-TNN-descriptive-name.md
+```
+
+| Field | Example |
+|-------|---------|
+| Subject code | `ETN806` |
+| Topic number (zero-padded) | `T01`, `T03` |
+| Descriptive slug (English, hyphenated) | `joint-pdf-definition` |
+
+Use `T00` for partial-wide notes (formularios, practice sheets, references).
+
+**Examples:**
+```
+ETN806-T01-joint-pdf-definition.md
+ETN806-T01-marginal-density-formula.md
+ETN806-T01-normalization-k-solved.md
+ETN806-T00-formulario-partial2.md
+ETN806-ETN302-laplace-vs-probability.md   ← Bridge note
 ```
 
 ---
 
-## GALAXY SYSTEM — All new subjects
+### Galaxy body types (in YAML)
 
-### Folder structure
+| `galaxy_body` | Symbol | Role |
+|---------------|--------|------|
+| `star` | ☀️ | Topic MOC — links all orbiting notes |
+| `planet` | 🪐 | Core theory — one concept per note |
+| `moon` | 🌙 | Property or formula — orbits a planet |
+| `comet` | ☄️ | Solved exercise — references concepts used |
+| `nebula` | 🌫️ | Session grouper — links comets from one session |
+| `dwarf` | ⬛ | Summary — condensed topic or partial review |
+| `asteroid` | 🪨 | External reference — book, PDF, paper |
+| `photon` | 💡 | Visual — Desmos, Excalidraw, image |
+| `bridge` | 🌉 | Cross-subject connection |
 
-```
-Semesters/
-└── Sem_NN/
-    └── ETNXXX/
-        └── Partial_N/
-            └── Topic_NN_descriptive-name/
-                └── [notes]
-```
-
-### Body types and prefixes
-
-| Prefix | Body        | Role                                                  |
-| ------ | ----------- | ----------------------------------------------------- |
-| `STAR` | ☀️ Star     | MOC — topic index, links all orbiting notes           |
-| `PLN`  | 🪐 Planet   | Core theory — one concept per note                    |
-| `MON`  | 🌙 Moon     | Property, formula, key result — orbits a Planet       |
-| `CMT`  | ☄️ Comet    | Solved exercise — references multiple concepts        |
-| `NBL`  | 🌫️ Nebula  | Session grouper — links Comets from one class session |
-| `DWF`  | ⬛ Dwarf     | Summary — condensed review of a topic or partial      |
-| `AST`  | 🪨 Asteroid | Reference material — book, PDF, external source       |
-| `PHT`  | 💡 Photon   | Visual asset — Desmos graph, Excalidraw, image        |
-| `BRG`  | 🌉 Bridge   | Cross-subject connection — links two galaxies         |
-
-### Note naming pattern
-
-```
-[PREFIX]-[SUBJECT]-S[NN]-P[N]-T[NN]-[descriptive-name]-[part].md
-```
-
-Examples:
-```
-STAR-ETN806-S08-P2-T01-joint-probability-density.md
-PLN-ETN806-S08-P2-T01-joint-pdf-definition.md
-MON-ETN806-S08-P2-T01-marginal-density-formula.md
-CMT-ETN806-S08-P2-T01-normalization-k-solved.md
-AST-ETN806-S08-P2-T01-papoulis-ch6-excerpt.md
-PHT-ETN806-S08-P2-T01-support-region-triangle.md
-BRG-ETN806-ETN302-laplace-vs-probability.md
-```
-
-### Required YAML field per body
-
-Every Galaxy note must include `galaxy_body` in its YAML:
+Minimum required YAML for any Galaxy note:
 
 ```yaml
-galaxy_body: star | planet | moon | comet | nebula | dwarf | asteroid | photon | bridge
+---
+galaxy_body: [type]
+subject: ETNXXX
+semester: N
+partial: N
+topic: N
+tags: [ETNXXX, galaxy-[type], PN, TNN]
+---
 ```
 
-See [[galaxy-system]] for full YAML templates per body type.
+See [[galaxy-system]] for full YAML templates and wikilink rules.
 
-### Wikilink rules
+---
 
-- `STAR` lists all orbiting notes in YAML (`orbiting: [...]`)
-- `PLN` links to its `STAR` and lists its `MON` notes
-- `MON` links to the `PLN` it orbits (`orbits: [[PLN-...]]`)
-- `CMT` lists all `PLN` and `MON` it uses (`concepts_used: [...]`)
-- `PHT` always attaches to exactly one other note (`attached_to: [[...]]`)
-- `BRG` links to one note in each of the two subjects it connects
+## Vault Folders
+
+| Folder | Purpose |
+|--------|---------|
+| `Semesters/` | All academic content |
+| `MOC/` | Subject-level index notes linking all Stars |
+| `_app/_config/` | System config: convention, galaxy system, tag routes |
+| `_app/_appnotes/` | Tool guides: Desmos, tags, etc. |
+| `_app/Canvas/` | Obsidian Canvas visual maps |
+| `_app/Excalidraw/` | Raw Excalidraw source files |
+| `_app/scripts/` | Vault automation scripts |
+| `_app/solve/` | Known issues and solutions (git, sync, etc.) |
+| `_assets/` | Exported images: .png, .svg, .jpeg |
+| `_templates/` | Note templates — one per galaxy body type |
+| `borrar/` | Staging area for files pending deletion |
