@@ -4,5 +4,8 @@
   "accentColor": "",
   "nativeMenus": false,
   "baseFontSize": 11,
-  "baseFontSizeAction": true
+  "baseFontSizeAction": true,
+  "enabledCssSnippets": [
+    "print"
+  ]
 }

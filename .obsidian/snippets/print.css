@@ -1,0 +1,111 @@
+/* ============================================================
+   print.css — Better Export PDF · University_vault_2026
+   Vault : E:\University_vault_2026
+   Plugin: Better Export PDF (A4 · margen Small · escala 100)
+
+   CÓMO FUNCIONA:
+   - getAllStyles() en render.ts recoge TODOS los <style> activos
+     del DOM de Obsidian (tema + snippets habilitados).
+   - getPrintStyle() desenvuelve los bloques @media print {}
+     e inyecta las reglas directamente en el webview antes de
+     llamar a Electron printToPDF().
+   - Por eso todo el CSS de este archivo va dentro de @media print:
+     no afecta la vista normal del vault, pero el plugin lo
+     recoge y aplica en cada exportación.
+
+   NOTA: el plugin ya incluye internamente:
+       table  { break-inside: auto; }
+       tr     { break-inside: avoid; }
+   Las reglas de tabla aquí SOBREESCRIBEN ese parche interno.
+   ============================================================ */
+
+@media print {
+
+  /* ----------------------------------------------------------
+     1. FÓRMULAS DISPLAY (KaTeX / MathJax)
+     Selectores: cubre KaTeX (.katex-display, .math-block) y
+     MathJax v3 (mjx-container) según renderizador activo.
+  ---------------------------------------------------------- */
+
+  .math-block,
+  .katex-display,
+  mjx-container[display="true"],
+  .MathJax_Display {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+
+  /* ----------------------------------------------------------
+     2. TABLAS
+     El parche interno del plugin hace break-inside:auto en table
+     y avoid en tr. Aquí optamos por proteger tablas pequeñas/
+     medianas completas. Si una tabla no cabe en una página el
+     navegador la cortará igualmente; en ese caso elimina la
+     regla de table y deja solo la de tr.
+  ---------------------------------------------------------- */
+
+  table {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    /* Repite el encabezado en cada página si la tabla se parte */
+    display: table-header-group;
+  }
+
+  tr {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+
+  /* ----------------------------------------------------------
+     3. BLOQUES DE CÓDIGO
+  ---------------------------------------------------------- */
+
+  pre,
+  pre code {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+
+  /* ----------------------------------------------------------
+     4. HEADINGS — evitar huérfanos
+     break-after:avoid impide que un heading quede solo al pie
+     de página con el contenido en la página siguiente.
+  ---------------------------------------------------------- */
+
+  h1, h2, h3, h4 {
+    break-after: avoid;
+    page-break-after: avoid;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+
+  /* ----------------------------------------------------------
+     5. CALLOUTS / ADMONITIONS de Obsidian
+  ---------------------------------------------------------- */
+
+  .callout {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+
+  /* ----------------------------------------------------------
+     6. SALTO DE PÁGINA MANUAL
+     Uso en el markdown: añade un div con clase break-page
+     donde quieras forzar un salto:
+       <div class="break-page"></div>
+  ---------------------------------------------------------- */
+
+  .break-page {
+    break-before: page;
+    page-break-before: always;
+  }
+
+} /* fin @media print */
