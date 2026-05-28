@@ -55,9 +55,40 @@ Cada tipo de cuerpo galaxy tiene su plantilla en `_templates/`. Al crear un arch
 | `_app/Excalidraw/Constellations` | `_templates/tpl-constellation` |
 | `_app/Excalidraw/Observatory` | `_templates/tpl-observatory` |
 
+> Importante: la ruta de la plantilla en Folder Templates se escribe **sin extensión `.md`**. Usar el selector de archivo de Templater, no escribir la ruta a mano.
+
 ### Carpetas ignoradas en file creation
 
 `_templates`, `_app/_config`, `_app/_appnotes`, `borrar`
+
+---
+
+## Configuración de Commander
+
+### Botón en Ribbon
+
+| Botón | Comando | Notas |
+|-------|---------|-------|
+| Crear nota desde plantilla | `Templater: Create new note from template` | Abre selector — el usuario elige la plantilla |
+
+> Se usa un solo botón en el ribbon que abre el selector de Templater. El usuario elige `tpl-constellation`, `tpl-observatory` u otra según el caso. Esto evita saturar el ribbon con un botón por tipo.
+
+---
+
+## Comportamiento de las plantillas tpl-constellation y tpl-observatory
+
+Estas dos plantillas tienen lógica Templater en el encabezado que:
+1. Abre un cuadro pidiendo el nombre del archivo
+2. Mueve el archivo automáticamente a su carpeta destino (`Constellations/` u `Observatory/`)
+
+```
+<%*
+const title = await tp.system.prompt("Nombre del archivo (sin extensión)");
+await tp.file.move("_app/Excalidraw/Constellations/" + title);
+%>
+```
+
+> El bloque `<%* ... %>` puede aparecer visible al inicio de la nota si Templater no lo limpia del cuerpo — es cosmético y no afecta el funcionamiento.
 
 ---
 
