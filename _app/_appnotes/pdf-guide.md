@@ -1,441 +1,497 @@
 # Guía de Plugins PDF — University Vault 2026
 
-> Sistema base: [[_galaxy-system]]
-> Configuración del sistema: [[_pdf-system]]
-> Última actualización: 2026-05-27
-
-Esta guía es el manual de uso de los tres plugins que forman el sistema PDF del vault. Está escrita para alguien que nunca los ha usado. Sigue el orden: primero entiende qué hace cada plugin, luego el flujo integrado al final.
-
----
-
-## Índice
-
-1. [[#Plugin 1 — PDF++]]
-2. [[#Plugin 2 — Annotator]]
-3. [[#Plugin 3 — OmniSearch + Text Extractor]]
-4. [[#Flujo de trabajo integrado]]
-5. [[#Referencia rápida de atajos]]
-6. [[#Errores comunes]]
+> **Sistema base:** [[_pdf-system]]
+> **Nivel:** Principiante — Tutorial paso a paso
+> **Plugins cubiertos:** PDF++, Annotator, OmniSearch + Text Extractor
+> **Última actualización:** 2026-05-27
 
 ---
 
-## Plugin 1 — PDF++
+## ¿Qué hace cada plugin y cuándo usarlo?
 
-### ¿Qué hace?
+Antes de empezar a usar los plugins, es importante entender su rol dentro del sistema PDF del vault. No son intercambiables — cada uno tiene un dominio específico.
 
-PDF++ reemplaza el lector de PDF nativo de Obsidian. Su función principal no es solo leer, sino **copiar citas con link a la página exacta** para pegarlas en tus notas `asteroid`. Es el plugin más importante del sistema PDF.
+| Plugin | Rol principal | Cuándo usarlo |
+|--------|--------------|---------------|
+| **PDF++** | Lector y citador nativo | PDFs con texto seleccionable (slides, apuntes, libros digitales) |
+| **Annotator** | Lector estilo Hypothesis | EPUBs y PDFs escaneados sin texto seleccionable |
+| **OmniSearch** | Motor de búsqueda del vault | Encontrar cualquier contenido: notas, PDFs, ejercicios |
 
-Cuando seleccionas texto en un PDF y copias con PDF++, obtienes esto en tu nota:
-
-```markdown
-> [!PDF] [[ETN806-T00-libro-papoulis-cap6.pdf#page=142&selection=...|(Papoulis, p.142)]]
-> La densidad conjunta f(x,y) queda definida sobre la región de soporte donde la integral doble normaliza a 1.
-```
-
-Ese bloque es un callout `[!PDF]` con un link que apunta a la página 142 del PDF. Si haces doble click sobre el subrayado en el PDF, Obsidian te lleva a la nota donde pegaste la cita.
+> **Regla de oro:** El 90% del tiempo usarás PDF++. Annotator es el plan B para archivos que PDF++ no puede leer. OmniSearch es la forma de encontrar todo.
 
 ---
 
-### Paso a paso: abrir un PDF con PDF++
+## Parte 1 — PDF++
 
-1. En el panel izquierdo de Obsidian, navega a `_pdf/ETNXXX/`
-2. Haz click sobre el archivo `.pdf` — PDF++ lo abre automáticamente
-3. El PDF se muestra en el panel derecho o central según tu layout
-4. Para dividir la pantalla: arrastra el tab del PDF hacia la derecha para tener nota + PDF lado a lado
+### ¿Qué es PDF++?
 
-> **Consejo:** El layout ideal es nota `asteroid` a la izquierda y el PDF a la derecha. Así copias y pegas sin cambiar de ventana.
+PDF++ reemplaza el lector de PDFs nativo de Obsidian. Cuando abres un `.pdf` dentro del vault, PDF++ lo muestra con su propio visor mejorado. Su superpoder es el sistema de citas: seleccionas texto en el PDF, presionas un atajo, y obtienes un bloque de cita ya formateado con el link exacto a esa página — listo para pegar en tu nota `asteroid`.
 
 ---
 
-### Paso a paso: copiar una cita
+### Paso 1 — Abrir un PDF con PDF++
 
-1. Abre el PDF con PDF++ (ver arriba)
-2. Selecciona el texto que quieres citar con el cursor
-3. Aparece un menú flotante — haz click en el ícono de copia o presiona el atajo configurado
-4. Ve a tu nota `asteroid` y pega con `Ctrl + V`
-5. El callout `[!PDF]` aparece con el link a la página exacta
+1. En el panel lateral izquierdo de Obsidian, navega hasta la carpeta `_PDF/`.
+2. Haz clic en cualquier archivo `.pdf`.
+3. El PDF se abre en el panel principal con el visor de PDF++.
+4. Verás el PDF a la izquierda y un panel de miniaturas opcional a la derecha.
 
-**¿No aparece el menú flotante?** Verifica que estés usando PDF++ y no el lector nativo. El tab del PDF debe mostrar el ícono de PDF++ en la esquina.
-
----
-
-### Paso a paso: resaltar texto en el PDF
-
-1. Selecciona el texto
-2. En el menú flotante elige el color del resaltado (amarillo, verde, azul, rojo)
-3. El resaltado queda guardado en el PDF
-4. Para ver todos los resaltados: panel lateral derecho → ícono de anotaciones
-
-**Colores sugeridos para ingeniería:**
-- 🟡 Amarillo → definiciones y conceptos clave
-- 🟢 Verde → fórmulas y ecuaciones
-- 🔵 Azul → ejemplos resueltos
-- 🔴 Rojo → advertencias o errores comunes
+> **Tip:** También puedes abrir el PDF desde el link `pdf_file` en el YAML de tu nota `asteroid`. Haz clic sosteniendo `Ctrl` (Windows) sobre el link `[[ETN806-T01-apuntes-pdf-conjunta.pdf]]` y se abre directamente en PDF++.
 
 ---
 
-### Paso a paso: navegar el PDF
+### Paso 2 — Navegar dentro del PDF
 
 | Acción | Cómo hacerlo |
 |--------|--------------|
-| Ir a una página específica | Click en el número de página en la barra superior → escribe el número |
-| Zoom | `Ctrl + Scroll` o los botones `+` / `-` en la barra |
-| Buscar texto dentro del PDF | `Ctrl + F` con el PDF enfocado |
-| Ver índice/bookmarks | Panel lateral → ícono de lista (si el PDF tiene bookmarks) |
-| Ir a la página desde un link | Click sobre cualquier callout `[!PDF]` en tus notas |
+| Ir a una página específica | Escribe el número en el cuadro de página (parte superior) |
+| Zoom | `Ctrl + Scroll` con el mouse |
+| Buscar texto dentro del PDF | `Ctrl + F` — abre una barra de búsqueda interna |
+| Ir a la siguiente página | `Flecha derecha` o `Page Down` |
 
 ---
 
-### Cuándo usar PDF++ (y cuándo NO)
+### Paso 3 — Seleccionar texto y copiar una cita
 
-**Usar PDF++:**
-- PDFs con texto seleccionable: slides del profesor, apuntes digitales, libros en PDF, prácticas
-- Cualquier PDF que puedas subrayar con el cursor — si puedes seleccionar el texto, PDF++ funciona
+Este es el flujo principal de PDF++. Cuando encuentras un fragmento importante:
 
-**NO usar PDF++ — usar Annotator en su lugar:**
-- PDFs escaneados (imágenes de hojas escritas a mano)
-- Archivos `.epub` (libros en formato EPUB)
+1. **Selecciona el texto** con el mouse (clic y arrastra), igual que en cualquier documento.
+2. Aparece un pequeño menú flotante sobre la selección.
+3. Haz clic en el botón **"Copy as quote"** (o usa el atajo configurado).
+4. PDF++ copia automáticamente al portapapeles un bloque con este formato:
 
----
+```markdown
+> [!PDF] [[ETN806-T01-apuntes-pdf-conjunta.pdf#page=12&selection=...|(ETN806-T01-apuntes-pdf-conjunta, p.12)]]
+> El texto que seleccionaste aparece aquí tal como estaba en el PDF.
+```
 
-## Plugin 2 — Annotator
+5. **Ve a tu nota `asteroid`** correspondiente y pega (`Ctrl + V`).
 
-### ¿Qué hace?
-
-Annotator convierte una nota Obsidian en un lector de PDF o EPUB estilo Hypothesis. A diferencia de PDF++, **Annotator se activa por nota** — no es un lector global. Cada vez que quieras usar Annotator con un PDF, debes agregar un campo especial en el YAML de la nota.
-
-Su ventaja principal: funciona con EPUBs y con PDFs escaneados donde PDF++ no puede seleccionar texto.
+> **¿Qué es ese bloque?** Es un callout `[!PDF]` — un bloque de cita especial de Obsidian. El link dentro lleva exactamente a la página del PDF donde está el fragmento. Si alguien hace clic en ese link, el PDF se abre justo en esa página.
 
 ---
 
-### Paso a paso: activar Annotator en una nota
+### Paso 4 — Crear un highlight (marcado permanente)
 
-1. Abre (o crea) la nota `asteroid` correspondiente al PDF
-2. En el YAML de la nota, agrega el campo `annotation-target`:
+PDF++ puede guardar highlights directamente en el PDF:
+
+1. Selecciona el texto que quieres marcar.
+2. En el menú flotante, elige un color de highlight (amarillo, verde, azul, etc.).
+3. El texto queda marcado en el PDF de forma permanente.
+4. **Doble clic sobre el highlight** en el PDF → abre directamente la nota `asteroid` que contiene la cita de ese fragmento.
+
+> **Importante:** Los highlights solo funcionan en PDFs con texto seleccionable. En PDFs escaneados (imágenes), PDF++ no puede marcar — para eso usarás Annotator.
+
+---
+
+### Paso 5 — Flujo completo de ejemplo con PDF++
+
+**Situación:** Tienes el PDF `ETN806-T01-apuntes-pdf-conjunta.pdf` en `_PDF/ETN806/` y quieres extraer la definición de densidad conjunta.
+
+```
+1. Abres el PDF desde la carpeta _PDF/ETN806/
+        ↓
+2. Navegas a la página 8 donde está la definición
+        ↓
+3. Seleccionas el texto de la definición
+        ↓
+4. Clic en "Copy as quote" en el menú flotante
+        ↓
+5. Abres tu nota asteroid: ETN806-T01-apuntes-pdf-conjunta.md
+        ↓
+6. En la sección "## Notas del capítulo", pegas el bloque copiado:
+
+> [!PDF] [[ETN806-T01-apuntes-pdf-conjunta.pdf#page=8&selection=...|(ETN806-T01, p.8)]]
+> La densidad conjunta f(x,y) se define como la función tal que su integral
+> doble sobre cualquier región R da la probabilidad de que (X,Y) caiga en R.
+
+        ↓
+7. Debajo del callout, escribes tu propia explicación:
+   - Conectas con [[ETN806-T01-joint-pdf-definition]] (wikilink al planet)
+   - Agregas tu interpretación en español
+```
+
+---
+
+### Referencia rápida PDF++
+
+```
+Abrir PDF               → Clic en el archivo .pdf en el panel lateral
+Seleccionar texto        → Clic y arrastra con el mouse
+Copiar como cita         → Menú flotante → "Copy as quote"
+Crear highlight          → Menú flotante → elige color
+Buscar en el PDF         → Ctrl + F
+Ir a página              → Cuadro de número de página (arriba)
+Desde highlight → nota   → Doble clic en el highlight
+```
+
+---
+
+## Parte 2 — Annotator
+
+### ¿Qué es Annotator?
+
+Annotator convierte una nota markdown en un lector de PDF o EPUB con sistema de anotaciones estilo Hypothesis (la plataforma de anotación web académica). En lugar de abrir el PDF directamente, abres la nota `asteroid` que lo referencia — y Annotator muestra el PDF con un panel lateral de comentarios.
+
+**Úsalo cuando:**
+- El PDF está escaneado (son imágenes, no texto) y PDF++ no puede seleccionar nada.
+- Trabajas con archivos `.epub` (libros digitales) — Annotator es el único plugin que los lee.
+- Prefieres escribir comentarios largos junto al fragmento en lugar de solo copiar texto.
+
+---
+
+### Paso 1 — Activar Annotator en una nota
+
+Annotator se activa nota por nota con un campo especial en el YAML:
+
+1. Abre (o crea) la nota `asteroid` del PDF que quieres anotar.
+2. En el bloque YAML (entre los `---`), agrega el campo:
 
 ```yaml
 ---
-title: "Papoulis — Cap. 6"
+title: "Apuntes ETN806 — PDF Conjunta"
 galaxy_body: asteroid
 subject: ETN806
-annotation-target: _pdf/ETN806/ETN806-T00-libro-papoulis-cap6.pdf
+annotation-target: _PDF/ETN806/ETN806-T01-apuntes-pdf-conjunta.pdf
 ---
 ```
 
-3. Guarda la nota con `Ctrl + S`
-4. En la esquina superior derecha del panel de la nota aparece un botón **"Annotate"** — haz click
-5. La nota se transforma en el lector Annotator con el PDF cargado
+3. **Guarda la nota** (`Ctrl + S`).
+4. En la esquina superior derecha del panel de la nota, aparece un ícono de Annotator (una hoja con marcas).
+5. Haz clic en ese ícono — la nota cambia a modo lector y muestra el PDF con el panel de anotaciones.
 
-> **Importante:** La ruta en `annotation-target` es relativa a la raíz del vault. Siempre empieza con `_pdf/ETNXXX/nombre-del-archivo.pdf` sin barras iniciales.
-
----
-
-### Paso a paso: anotar en Annotator
-
-1. Con Annotator activo, selecciona texto en el PDF
-2. Aparece un menú con tres opciones:
-   - **Highlight** → resaltado sin comentario
-   - **Annotate** → resaltado con comentario de texto
-   - **Comment** → comentario sin selección de texto
-3. Escribe tu comentario y confirma
-4. La anotación queda guardada **dentro de la nota** como bloques de markdown al final
-
-**Ejemplo de anotación guardada automáticamente:**
-
-```markdown
-*[Annotation](https://via.hypothesis.is/...)*
-**Highlight** — página 142
-> La densidad conjunta f(x,y)...
-
-Tu comentario: Esto es lo que usa el ejercicio 3 de la práctica 2.
-```
+> **Para EPUBs:** Mismo proceso, solo cambia la extensión:
+> `annotation-target: _PDF/ETN806/ETN806-T00-libro-papoulis.epub`
 
 ---
 
-### Paso a paso: alternar entre vista Annotator y vista normal
+### Paso 2 — Crear una anotación
 
-- Para volver a la nota markdown normal: botón **"More options" (···)** → **"Open as markdown"**
-- Para volver a la vista Annotator: botón **"Annotate"** en la esquina superior derecha
-- Obsidian recuerda la última vista usada por nota
+Con el PDF visible en modo Annotator:
 
----
-
-### Cuándo usar Annotator
-
-| Situación | ¿Usar Annotator? |
-|-----------|-----------------|
-| PDF con texto seleccionable | ❌ Usa PDF++ — más integrado con el grafo |
-| PDF escaneado (imagen) | ✅ Sí — Annotator puede anotar sobre imágenes |
-| Archivo EPUB | ✅ Sí — es la única opción del vault |
-| Quiero comentarios largos tipo nota | ✅ Sí — Annotator tiene mejor UX para comentarios extensos |
+1. **Selecciona texto** en el PDF (igual que en un documento normal).
+2. Aparece un pequeño menú con opciones.
+3. Elige **"Annotate"** para crear un comentario, o **"Highlight"** para solo marcar.
+4. Se abre un cuadro donde puedes:
+   - Escribir un comentario largo sobre ese fragmento.
+   - Agregar etiquetas.
+5. Haz clic en **"Save"** — la anotación queda guardada y aparece en el panel lateral.
 
 ---
 
-## Plugin 3 — OmniSearch + Text Extractor
+### Paso 3 — Ver todas las anotaciones de un PDF
 
-### ¿Qué hace?
-
-OmniSearch es el motor de búsqueda del vault. Busca en **todo**: notas markdown, PDFs, y con Text Extractor activo, también en el contenido textual de los PDFs. Sin OmniSearch solo puedes buscar en los nombres de archivos. Con OmniSearch buscas dentro de un libro de 400 páginas.
-
-Text Extractor es el plugin compañero que extrae el texto de los PDFs para que OmniSearch lo pueda indexar. Ambos deben estar activos.
+En el panel lateral derecho (cuando estás en modo Annotator) verás una lista de todas las anotaciones del documento, ordenadas por página. Puedes hacer clic en cualquiera para saltar directamente a esa parte del PDF.
 
 ---
 
-### Paso a paso: hacer una búsqueda básica
+### Paso 4 — Volver al modo nota normal
 
-1. Presiona `Ctrl + U` — se abre el panel de OmniSearch
-2. Escribe tu consulta: puede ser una palabra, frase, o concepto
-3. Los resultados aparecen ordenados por relevancia
-4. Click sobre un resultado → Obsidian abre la nota o PDF en la página correspondiente
+Para salir del modo Annotator y volver a editar el markdown:
 
-**Ejemplos de búsquedas útiles para ingeniería:**
+- Haz clic en el mismo ícono de Annotator en la esquina superior derecha.
+- La nota vuelve a mostrarse como markdown editable.
+- Las anotaciones que hiciste en Annotator quedan guardadas y aparecen en el cuerpo de la nota como bloques especiales.
+
+---
+
+### Flujo de ejemplo con Annotator
+
+**Situación:** Tienes un PDF escaneado de apuntes escritos a mano del profesor (`ETN302-T05-laplace-apuntes.pdf`). PDF++ no puede seleccionar texto porque son imágenes.
 
 ```
-densidad conjunta          → encuentra todas las notas y PDFs donde aparece ese término
-transformada de Laplace     → busca en apuntes Y en los libros en _pdf/
-ETN302 T05                 → filtra por materia y tema
-fórmula de Bayes           → encuentra la definición y todos los ejercicios donde aparece
+1. Creas la nota asteroid: ETN302-T05-laplace-apuntes.md
+
+   YAML de la nota:
+   ---
+   title: "Apuntes Laplace — Manuscritos Profesor"
+   galaxy_body: asteroid
+   subject: ETN302
+   annotation-target: _PDF/ETN302/ETN302-T05-laplace-apuntes.pdf
+   ---
+
+        ↓
+2. Guardas la nota y haces clic en el ícono de Annotator
+        ↓
+3. El PDF se muestra en modo lector
+        ↓
+4. Seleccionas una región del PDF (aunque sea imagen)
+        ↓
+5. Escribes tu comentario: "El profe usa convención de signo positivo en el
+   denominador — diferente al libro Papoulis, ver [[ETN302-T05-laplace-def]]"
+        ↓
+6. Guardas la anotación
+        ↓
+7. Vuelves al modo nota para agregar wikilinks adicionales
 ```
 
 ---
 
-### Paso a paso: búsqueda avanzada con filtros
+### Referencia rápida Annotator
 
-OmniSearch soporta algunos operadores de búsqueda:
+```
+Activar en una nota    → Agregar "annotation-target: ruta/archivo.pdf" en YAML
+Entrar modo lector     → Ícono Annotator (esquina superior derecha de la nota)
+Crear anotación        → Seleccionar texto → "Annotate" → escribir → Save
+Solo highlight         → Seleccionar texto → "Highlight"
+Ver todas anotaciones  → Panel lateral derecho en modo Annotator
+Salir modo lector      → Mismo ícono Annotator
+```
+
+---
+
+## Parte 3 — OmniSearch + Text Extractor
+
+### ¿Qué es OmniSearch?
+
+OmniSearch es el motor de búsqueda del vault. La búsqueda nativa de Obsidian (`Ctrl + Shift + F`) solo encuentra texto en notas markdown. OmniSearch va más lejos: busca dentro del contenido de PDFs, imágenes (con OCR), y cualquier archivo del vault.
+
+**Text Extractor** es el plugin compañero que hace posible la búsqueda dentro de PDFs. Sin él, OmniSearch solo encontraría el nombre del archivo, no su contenido. Ambos deben estar instalados y activos.
+
+---
+
+### Paso 1 — Abrir OmniSearch
+
+| Método | Atajo / Acción |
+|--------|---------------|
+| Atajo de teclado | `Ctrl + Shift + O` (configurable) |
+| Paleta de comandos | `Ctrl + P` → escribir "OmniSearch" → Enter |
+| Panel lateral | Si está anclado, clic en el ícono de lupa |
+
+Se abre una barra de búsqueda flotante sobre el vault.
+
+---
+
+### Paso 2 — Hacer una búsqueda básica
+
+1. Escribe el término que buscas — por ejemplo: `densidad conjunta`.
+2. OmniSearch muestra resultados en tiempo real mientras escribes.
+3. Los resultados incluyen:
+   - Notas markdown que contienen ese texto.
+   - PDFs cuyo contenido contiene ese texto (gracias a Text Extractor).
+   - El fragmento de contexto donde aparece el término.
+4. Haz clic en un resultado para abrir la nota o el PDF directamente.
+
+> **Nota sobre velocidad:** La primera vez que indexa el vault puede tardar unos minutos. Una vez completado el índice, las búsquedas son instantáneas.
+
+---
+
+### Paso 3 — Búsquedas avanzadas
+
+OmniSearch soporta algunos operadores útiles:
 
 | Operador | Ejemplo | Resultado |
 |----------|---------|-----------|
-| Comillas para frase exacta | `"función de densidad"` | Solo resultados con esa frase exacta |
-| Nombre de archivo | `file:ETN806` | Solo archivos cuyo nombre contiene ETN806 |
-| Excluir término | `-ejercicio` | Resultados que NO contienen "ejercicio" |
-
-> **Nota:** Las carpetas `_app`, `_templates` y `_assets` están configuradas como "downranked" — aparecen al fondo de los resultados para no contaminar las búsquedas académicas.
+| Comillas (frase exacta) | `"transformada de Laplace"` | Solo resultados con esa frase exacta |
+| Múltiples términos | `laplace ETN302` | Resultados que contienen ambos términos |
+| Nombre de archivo | `ETN806-T01` | Encuentra archivos que empiecen con ese código |
 
 ---
 
-### Paso a paso: forzar re-indexación de PDFs
+### Paso 4 — Interpretar los resultados
 
-Cuando agregas un nuevo PDF a `_pdf/`, OmniSearch lo indexa automáticamente en segundo plano. Si un PDF nuevo no aparece en búsquedas:
+Los resultados de OmniSearch muestran:
+- **Nombre del archivo** — con su ruta en el vault.
+- **Fragmento de contexto** — el párrafo donde aparece el término buscado.
+- **Relevancia** — los resultados más relevantes aparecen primero.
 
-1. Abre la paleta de comandos: `Ctrl + P`
-2. Escribe `OmniSearch` → selecciona **"OmniSearch: Clear cache and re-index"**
-3. Espera unos segundos (el tiempo depende del tamaño del vault)
-4. Busca de nuevo
-
----
-
-### Cuándo OmniSearch no encuentra el contenido de un PDF
-
-Si buscas texto que sabes que está en un PDF pero OmniSearch no lo encuentra, verifica:
-
-1. **¿Está Text Extractor activo?** → `Configuración → Community plugins → Text Extractor` debe estar en ON
-2. **¿El PDF tiene texto seleccionable?** → Abre el PDF con PDF++ e intenta seleccionar texto. Si no puedes, el PDF es una imagen escaneada y OmniSearch no puede indexar su contenido (solo indexa el nombre del archivo)
-3. **¿Necesitas re-indexar?** → Usa el comando de clear cache descrito arriba
+Las carpetas `_app`, `_templates` y `_assets` están configuradas como "downranked" — aparecen al final de los resultados para no contaminar las búsquedas con infraestructura del vault.
 
 ---
 
-## Flujo de trabajo integrado
+### Flujo de ejemplo con OmniSearch
 
-Este es el flujo completo para pasar de tener un PDF a tenerlo activo en el grafo del vault. Usa los tres plugins en secuencia.
+**Situación:** Estudiando para parcial de ETN806, quieres encontrar todo lo relacionado con "marginal" en el vault — notas, PDFs, ejercicios.
+
+```
+1. Presionas Ctrl + Shift + O para abrir OmniSearch
+        ↓
+2. Escribes: marginal ETN806
+        ↓
+3. Aparecen resultados:
+   - ETN806-T01-marginal-density-formula.md (tu nota planet)
+   - ETN806-T01-apuntes-pdf-conjunta.pdf (el PDF con la sección de marginales)
+   - ETN806-T02-ejercicio-marginal-gaussiana.md (un comet con ejercicio)
+        ↓
+4. Haces clic en el PDF → se abre en PDF++ en la sección donde aparece "marginal"
+        ↓
+5. Encuentras el fragmento exacto y lo citas en tu nota de repaso
+```
 
 ---
 
-### Escenario: recibes los apuntes del profesor en PDF
+### Referencia rápida OmniSearch
 
-**Situación:** Tienes `apuntes-transformada-laplace.pdf` en tu carpeta de Descargas y quieres integrarlo al vault de ETN302, Tema 5.
+```
+Abrir búsqueda         → Ctrl + Shift + O
+Frase exacta           → "escribe entre comillas"
+Múltiples términos     → término1 término2
+Abrir resultado        → Clic en el resultado
+Buscar en PDF          → Funciona automáticamente (requiere Text Extractor activo)
+```
 
 ---
 
-#### Fase 1 — Ingreso al vault
+## Parte 4 — Flujo de Trabajo Integrado
 
-**Paso 1: Renombrar el PDF con la convención Galaxy**
+Este es el flujo completo que une los tres plugins. Úsalo como referencia cuando incorpores un nuevo PDF al vault.
 
-Antes de mover el archivo, renómbralo:
+---
+
+### Flujo completo: de PDF nuevo a nodo del cerebro
+
 ```
-ETN302-T05-apuntes-laplace.pdf
+┌─────────────────────────────────────────────────────────┐
+│  INICIO: Consigues un PDF (apunte, libro, práctica)     │
+└─────────────────────┬───────────────────────────────────┘
+                      ↓
+┌─────────────────────────────────────────────────────────┐
+│  PASO 1 — Renombrar con convención Galaxy               │
+│  ETN806-T01-apuntes-pdf-conjunta.pdf                    │
+│  (SIGLA-TNN-nombre-descriptivo.pdf)                     │
+└─────────────────────┬───────────────────────────────────┘
+                      ↓
+┌─────────────────────────────────────────────────────────┐
+│  PASO 2 — Mover el PDF a _PDF/ETN806/                   │
+│  OmniSearch lo indexará automáticamente                 │
+└─────────────────────┬───────────────────────────────────┘
+                      ↓
+┌─────────────────────────────────────────────────────────┐
+│  PASO 3 — Crear la nota asteroid en Semesters/          │
+│  Con el YAML completo incluyendo pdf_file               │
+└─────────────────────┬───────────────────────────────────┘
+                      ↓
+┌─────────────────────────────────────────────────────────┐
+│  PASO 4 — ¿El PDF tiene texto seleccionable?            │
+│                                                         │
+│  SÍ (apuntes digitales, slides, libro digital)          │
+│  → Usar PDF++ para extraer citas                        │
+│                                                         │
+│  NO (escaneado, manuscrito) o es EPUB                   │
+│  → Usar Annotator (agregar annotation-target al YAML)   │
+└─────────────────────┬───────────────────────────────────┘
+                      ↓
+┌─────────────────────────────────────────────────────────┐
+│  PASO 5 — Extraer el contenido importante               │
+│                                                         │
+│  Con PDF++:                                             │
+│  Seleccionar → Copy as quote → Pegar en nota asteroid   │
+│                                                         │
+│  Con Annotator:                                         │
+│  Activar modo lector → Seleccionar → Annotate → Save    │
+└─────────────────────┬───────────────────────────────────┘
+                      ↓
+┌─────────────────────────────────────────────────────────┐
+│  PASO 6 — Conectar al grafo Galaxy                      │
+│  Agregar wikilinks a planets y stars relacionados       │
+│  en el bloque %% de la nota asteroid                    │
+└─────────────────────┬───────────────────────────────────┘
+                      ↓
+┌─────────────────────────────────────────────────────────┐
+│  RESULTADO: El PDF es un nodo activo del cerebro        │
+│  Buscable con OmniSearch, citado con PDF++,             │
+│  conectado al grafo Galaxy                              │
+└─────────────────────────────────────────────────────────┘
 ```
 
-**Paso 2: Mover a la carpeta correcta**
+---
 
-Copia el archivo a:
-```
-E:\University_vault_2026\_pdf\ETN302\ETN302-T05-apuntes-laplace.pdf
-```
+### Escenario de ejemplo — Parcial ETN806
 
-**Paso 3: Crear la nota `asteroid`**
+**Situación:** Tienes 3 días para el parcial de ETN806. Quieres revisar todos los PDFs del tema de densidad conjunta y crear notas de repaso.
 
-En Obsidian, navega a la carpeta del tema:
+**Paso 1 — Encontrar todo el material disponible con OmniSearch**
+
 ```
-Semesters/Sem_XX/ETN302/Partial_X/Topic_05_.../
+Ctrl + Shift + O → escribir: densidad conjunta ETN806
 ```
 
-Crea una nueva nota con el mismo nombre base:
-```
-ETN302-T05-apuntes-laplace.md
-```
+Aparecen resultados: tus notas asteroid, los PDFs en `_PDF/ETN806/`, y cualquier ejercicio (comet) que mencione el tema. En 10 segundos tienes una vista completa de todo lo que hay en el vault sobre ese tema.
 
-**Paso 4: Completar el YAML de la nota**
+**Paso 2 — Revisar el PDF de slides con PDF++**
 
+Haces clic en `ETN806-T01-apuntes-pdf-conjunta.pdf` desde los resultados de OmniSearch. Se abre en PDF++. Navegas por las páginas y seleccionas los conceptos clave que no tienes bien claros, copiando citas con "Copy as quote".
+
+**Paso 3 — Revisar el apunte manuscrito con Annotator**
+
+En la nota `asteroid` del apunte escaneado del profesor, activas Annotator. Anotas las partes que son diferentes al libro y agregas comentarios comparativos.
+
+**Paso 4 — Crear nota de repaso del parcial**
+
+Creas una nueva nota (o usas un `comet` de repaso) y pegas las citas de PDF++, con los wikilinks a los conceptos clave. OmniSearch encontrará también esta nota nueva inmediatamente.
+
+---
+
+## Parte 5 — Problemas Comunes
+
+### OmniSearch no encuentra contenido dentro de PDFs
+
+**Causa probable:** Text Extractor no está instalado o no está activo.
+
+**Solución:**
+1. Ve a `Configuración → Community Plugins`.
+2. Busca "Text Extractor" en la lista de plugins instalados.
+3. Activa el toggle si está desactivado.
+4. Espera unos minutos para que reindexe el vault.
+
+---
+
+### PDF++ no puede seleccionar texto
+
+**Causa probable:** El PDF está escaneado — las páginas son imágenes, no texto.
+
+**Solución:** Usa Annotator en su lugar. Agrega `annotation-target` al YAML de la nota asteroid y trabaja desde el modo lector de Annotator.
+
+---
+
+### Annotator no aparece el ícono en la nota
+
+**Causa probable:** Falta el campo `annotation-target` en el YAML, o el path es incorrecto.
+
+**Verificación:**
 ```yaml
----
-title: "Apuntes Transformada de Laplace — ETN302"
-galaxy_body: asteroid
-subject: ETN302
-semester: X
-partial: X
-topic: 5
-source_type: pdf-apuntes
-source_title: "Apuntes de clase — Transformada de Laplace"
-source_author: "Profesor ETN302"
-pdf_file: "[[ETN302-T05-apuntes-laplace.pdf]]"
-related_planets: []
-tags: [ETN302, galaxy-asteroid, pdf, T05]
-date_created: 2026-05-27
-status: en-proceso
----
+# Asegúrate de que el path sea relativo a la raíz del vault:
+annotation-target: _PDF/ETN806/ETN806-T01-apuntes-pdf-conjunta.pdf
+
+# NO uses rutas absolutas como:
+annotation-target: E:/University_vault_2026/_PDF/ETN806/...
 ```
 
 ---
 
-#### Fase 2 — Lectura y extracción con PDF++
+### Los highlights de PDF++ desaparecieron
 
-**Paso 5: Abrir el PDF en layout dividido**
+**Causa probable:** El PDF original fue reemplazado por una versión nueva descargada.
 
-1. En el panel de archivos, navega a `_pdf/ETN302/`
-2. Click sobre `ETN302-T05-apuntes-laplace.pdf` — se abre en un tab
-3. Arrastra el tab del PDF a la mitad derecha de la pantalla
-4. La nota `asteroid` queda a la izquierda, el PDF a la derecha
+**Prevención:** Una vez que agregas un PDF al vault, no lo reemplaces. Si hay una versión actualizada, nómbrala diferente (agrega `-v2` al nombre) y crea una nueva nota asteroid para ella.
 
-**Paso 6: Leer y subrayar**
+---
 
-1. Lee el PDF con PDF++
-2. Selecciona las definiciones clave → resalta en amarillo
-3. Selecciona las fórmulas → resalta en verde
-4. Selecciona ejemplos → resalta en azul
+## Resumen — Tabla de decisión rápida
 
-**Paso 7: Copiar citas a la nota**
+| Tienes este archivo... | Haz esto primero | Luego usa... |
+|------------------------|-----------------|--------------|
+| PDF con texto (slides, apuntes digitales) | OmniSearch para encontrarlo | PDF++ para citar |
+| PDF escaneado (manuscrito, fotos) | Crear nota asteroid con annotation-target | Annotator para anotar |
+| EPUB (libro digital) | Crear nota asteroid con annotation-target | Annotator para anotar |
+| No recuerdas dónde guardaste algo | OmniSearch directamente | — |
+| Quieres ver todos los PDFs de una materia | OmniSearch → escribir el código: `ETN806` | — |
 
-1. Selecciona el texto de una definición importante
-2. Click en el botón de copia del menú flotante de PDF++
-3. En la nota `asteroid`, bajo el YAML, pega con `Ctrl + V`
-4. Repite para cada cita relevante
+---
 
-La nota empieza a tomar esta forma:
+## Convención de nombres — Recordatorio rápido
 
-```markdown
-## Definiciones clave
-
-> [!PDF] [[ETN302-T05-apuntes-laplace.pdf#page=3&selection=...|(Apuntes ETN302, p.3)]]
-> La Transformada de Laplace de f(t) se define como la integral de f(t)·e^(-st) desde 0 hasta infinito.
-
-## Fórmulas
-
-> [!PDF] [[ETN302-T05-apuntes-laplace.pdf#page=7&selection=...|(Apuntes ETN302, p.7)]]
-> Propiedad de desplazamiento en frecuencia: L{e^(at)·f(t)} = F(s-a)
 ```
+SIGLA  - TNN - nombre-descriptivo          .pdf
+ETN806 - T01 - apuntes-pdf-conjunta        .pdf
+ETN806 - T00 - libro-papoulis-cap6         .pdf
+ETN302 - T05 - laplace-apuntes             .pdf
 
-**Paso 8: Agregar wikilinks al grafo**
-
-Debajo de las citas, agrega conexiones con los planets y stars relevantes:
-
-```markdown
-## Conexiones al grafo
-
-- Concepto central → [[ETN302-T05-definicion-laplace]]
-- Propiedad usada en ejercicio → [[ETN302-T05-desplazamiento-frecuencia]]
-- Ver también → [[ETN302-T03-serie-fourier]] (antecedente)
+T00 = material general de la materia (libros, formularios)
+T01, T02... = temas específicos
 ```
 
 ---
 
-#### Fase 3 — Búsqueda posterior con OmniSearch
-
-Una vez indexado el PDF, OmniSearch lo convierte en parte del cerebro.
-
-**Paso 9: Usar OmniSearch para recuperar conocimiento**
-
-Días después, cuando estés resolviendo un ejercicio y no recuerdes dónde está algo:
-
-1. `Ctrl + U` → escribe `"transformada inversa"`
-2. OmniSearch muestra la nota `asteroid` Y el PDF con el fragmento exacto
-3. Click → vas directo a la página donde está el concepto
-
-**Paso 10: Conectar búsqueda con nueva nota**
-
-Si OmniSearch te lleva a un PDF y encuentras algo útil para una nueva nota:
-
-1. Selecciona el texto en PDF++ (el PDF ya está abierto desde OmniSearch)
-2. Copia la cita con PDF++
-3. Pégala en la nueva nota
-
----
-
-### Diagrama del flujo completo
-
-```
-PDF físico en Descargas
-        ↓
-Renombrar: ETN302-T05-apuntes-laplace.pdf
-        ↓
-Mover a: _pdf/ETN302/
-        ↓
-Crear nota asteroid con YAML + pdf_file
-        ↓
-        ├── PDF con texto seleccionable
-        │       ↓
-        │   Abrir con PDF++ en layout dividido
-        │   Subrayar → Copiar citas → Pegar en asteroid
-        │
-        └── PDF escaneado o EPUB
-                ↓
-            Agregar annotation-target al YAML
-            Abrir con Annotator → Anotar con comentarios
-        ↓
-Agregar wikilinks al grafo en la nota asteroid
-        ↓
-OmniSearch indexa el PDF automáticamente
-        ↓
-PDF activo en el cerebro — buscable y conectado al grafo
-```
-
----
-
-## Referencia rápida de atajos
-
-| Acción | Atajo |
-|--------|-------|
-| Abrir OmniSearch | `Ctrl + U` |
-| Copiar cita PDF++ | Seleccionar texto → menú flotante → botón copia |
-| Buscar texto dentro de un PDF | `Ctrl + F` (con el PDF enfocado) |
-| Paleta de comandos (para re-indexar) | `Ctrl + P` |
-| Ir a una página desde un callout `[!PDF]` | Click sobre el link del callout |
-| Alternar Annotator ↔ Markdown | Botón "Annotate" / "Open as markdown" en la esquina |
-| Dividir panel (nota + PDF) | Arrastrar tab del PDF a la mitad derecha |
-
----
-
-## Errores comunes
-
-### "No puedo seleccionar texto en el PDF"
-
-El PDF está escaneado — es una imagen, no texto. Usa Annotator en lugar de PDF++. Agrega `annotation-target` al YAML de la nota `asteroid`.
-
-### "OmniSearch no encuentra el contenido del PDF"
-
-Verifica que Text Extractor esté activo. Si lo está, fuerza re-indexación: `Ctrl + P` → "OmniSearch: Clear cache and re-index". Si el PDF es escaneado, OmniSearch no puede leer su contenido — solo indexa el nombre del archivo.
-
-### "Annotator no aparece, solo veo el YAML"
-
-El campo `annotation-target` debe estar en el YAML (entre los `---`), no en el cuerpo de la nota. La ruta debe ser relativa al vault sin barra inicial: `_pdf/ETN302/archivo.pdf`, no `/_pdf/ETN302/archivo.pdf`.
-
-### "El callout [!PDF] no tiene link clickeable"
-
-Verifica que PDF++ esté activo (no el lector nativo de Obsidian). El formato del callout debe ser exactamente `[!PDF]` con mayúsculas.
-
-### "Abrí el PDF desde OmniSearch pero no veo PDF++"
-
-OmniSearch abre el archivo — PDF++ se encarga de mostrarlo. Si ves el lector nativo, puede que PDF++ esté desactivado. Verifica en `Configuración → Community plugins`.
-
----
-
-> **Siguiente paso:** Lee [[_pdf-system]] para entender la estructura completa del sistema y la convención de nombres antes de agregar tu primer PDF al vault.
+*Guía generada para University Vault 2026 — Sistema PDF Galaxy*
+*Ver también: [[_pdf-system]] · [[_galaxy-system]] · [[convencion-notas]]*
