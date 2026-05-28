@@ -7,7 +7,7 @@
   "leftRibbon": [
     {
       "id": "templater-obsidian:create-new-note-from-template",
-      "icon": "lucide-a-large-small",
+      "icon": "lucide-file-plus",
       "name": "create",
       "mode": "any"
     }
