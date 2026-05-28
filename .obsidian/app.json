@@ -7,5 +7,7 @@
   "deleteUnlinkedAttachments": "always",
   "promptDelete": false,
   "attachmentFolderPath": "_PDF",
-  "alwaysUpdateLinks": true
+  "alwaysUpdateLinks": true,
+  "readableLineLength": true,
+  "showLineNumber": false
 }
