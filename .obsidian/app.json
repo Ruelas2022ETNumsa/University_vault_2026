@@ -2,7 +2,7 @@
   "defaultViewMode": "preview",
   "showUnsupportedFiles": true,
   "showInlineTitle": true,
-  "propertiesInDocument": "hidden",
+  "propertiesInDocument": "source",
   "rightToLeft": false,
   "deleteUnlinkedAttachments": "always",
   "promptDelete": false,
