@@ -127,6 +127,48 @@ Desde highlight → nota   → Doble clic en el highlight
 
 ---
 
+### Configuración de PDF++ relevante para el sistema
+
+#### Formato de copia activo — Quote
+
+El sistema Galaxy usa un único formato de copia. Los demás existen pero no se usan en el flujo diario.
+
+| Formato | Cuándo usarlo |
+|---------|--------------|
+| **Quote** ← activo | Extraer citas a la nota `asteroid` — uso principal |
+| Link | Referenciar una página dentro de una oración |
+| Embed | Ver el PDF renderizado dentro de la nota — no recomendado en `asteroid` |
+| Callout / Quote in callout | Solo si usas colores de highlight con significado semántico |
+
+El formato Quote produce exactamente esto al copiar:
+
+```markdown
+> [!PDF] [[ETN806-T01-apuntes-pdf-conjunta.pdf#page=8|(ETN806-T01-apuntes-pdf-conjunta, p.8)]]
+> El texto seleccionado aparece aquí.
+```
+
+#### Display text — Title & page
+
+Controla el texto que aparece después del `|` en el wikilink. La opción activa **Title & page** produce `ETN806-T01-apuntes-pdf-conjunta, p.8` — identifica archivo y página de un vistazo. No es necesario cambiarlo.
+
+#### Toggles del ribbon (menú izquierdo)
+
+Tres botones que se activan y desactivan según el momento de trabajo:
+
+| Toggle | Qué hace | Cuándo activarlo |
+|--------|----------|-----------------|
+| **Auto-copy** | Copia el link automáticamente al seleccionar texto | Sesión de extracción rápida |
+| **Auto-paste** | Pega automáticamente en la nota activa | En combinación con auto-copy |
+| **Auto-focus** | Salta el cursor a la nota en cuanto copias | Cuando tienes PDF y nota en paneles lado a lado |
+
+Para el flujo normal (PDF a la izquierda, nota `asteroid` a la derecha), activar **auto-focus** elimina el clic extra entre cada cita. Los tres están desactivados por defecto — úsalos en sesiones intensivas de extracción y desactívalos después.
+
+#### PDF editing — mantener desactivado
+
+La opción `Enable PDF editing` permite modificar el archivo `.pdf` en disco. **No activar** para el flujo Galaxy: las citas y highlights viven en las notas `asteroid`, no en el PDF físico. Activarla solo si en algún momento necesitas dividir un PDF y que los links del vault se actualicen automáticamente — y solo con backup previo de `_PDF/`.
+
+---
+
 ## Parte 2 — Annotator
 
 ### ¿Qué es Annotator?
