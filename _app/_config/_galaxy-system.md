@@ -2,6 +2,7 @@
 
 > Resumen de convención: [[convencion-notas]]
 > Sistema PDF: [[_pdf-system]]
+> Sistema Mindmap: [[_mindmap-system]]
 > Este baúl es un **cerebro digital para ingeniería**. Cada nota tiene una ubicación precisa, un nombre limpio y un YAML que define su rol y sus conexiones.
 
 ---
@@ -37,6 +38,7 @@ University_Vault_2026/
 │   ├── _config/                ← archivos de configuración del sistema
 │   │   ├── _galaxy-system.md   ← este archivo
 │   │   ├── _pdf-system.md      ← sistema de integración de PDFs
+│   │   ├── _mindmap-system.md  ← sistema Excalidraw + Mindmap Builder
 │   │   ├── convencion-notas.md ← resumen de convención de nombres
 │   │   ├── TagsRoute.md        ← referencia del sistema de tags
 │   │   ├── _claude-sync.md     ← configuración de comportamiento de Claude
@@ -47,10 +49,11 @@ University_Vault_2026/
 │   │   ├── tags_notes.md       ← documentación del sistema de tags
 │   │   └── ...
 │   │
-│   ├── Canvas/                 ← archivos Canvas de Obsidian (.canvas)
-│   │                              mapas visuales de la estructura de cada materia
 │   ├── Excalidraw/             ← archivos fuente de Excalidraw (.excalidraw)
-│   │                              dibujos en bruto antes de exportar
+│   │   ├── Constellations/     ← mapas mentales galaxy (Excalidraw + Mindmap Builder)
+│   │   │                          galaxy_body: constellation — uno por parcial o tema
+│   │   └── Observatory/        ← dibujos técnicos libres sin Mindmap Builder
+│   │                              galaxy_body: observatory
 │   ├── scripts/                ← scripts de automatización para mantenimiento del baúl
 │   │   └── tag_routs_scripts/
 │   │
@@ -128,7 +131,9 @@ El campo `galaxy_body` en el YAML define el rol de la nota. Diez tipos:
 | `nebula` | 🌫️ | Agrupador de sesión. Enlaza comets de una clase o auxiliatura. |
 | `dwarf` | ⬛ | Resumen. Revisión condensada de un tema o parcial. |
 | `asteroid` | 🪨 | Referencia externa. Extracto de libro, nota de PDF, paper. |
-| `photon` | 💡 | Recurso visual. Gráfica Desmos, Excalidraw, imagen. Siempre adjunto a otra nota. |
+| `photon` | 💡 | Recurso visual. Gráfica Desmos o imagen exportada. Siempre adjunto a otra nota. |
+| `constellation` | 🌌 | Mapa mental galaxy. Excalidraw + Mindmap Builder. Uno por parcial o tema. Vive en `_app/Excalidraw/Constellations/`. |
+| `observatory` | 🔭 | Dibujo técnico libre en Excalidraw sin Mindmap Builder. Vive en `_app/Excalidraw/Observatory/`. |
 | `bridge` | 🌉 | Conexión entre materias. Enlaza conceptos de dos galaxias distintas. |
 | `beacon` | 📡 | Guía de infraestructura del vault. Herramientas, procesos, soluciones. Vive en `_app/`. |
 
@@ -383,6 +388,59 @@ galaxy-links
 %%
 ```
 
+> `photon` ya no incluye Excalidraw. Para Excalidraw usar `constellation` o `observatory`. Ver [[_mindmap-system]].
+
+---
+
+### constellation
+```yaml
+---
+title: "ETN806 — P2: Mapa galaxy Parcial 2"
+galaxy_body: constellation
+subject: ETN806
+semester: 8
+partial: 2
+topic:                        # dejar vacío si cubre el parcial completo; llenar si es un tema específico
+scope: partial                # partial | topic
+tools: [excalidraw, mindmap-builder]
+tags: [ETN806, galaxy-constellation, P2]
+date_created: YYYY-MM-DD
+status: activo
+---
+```
+
+```markdown
+%%
+galaxy-links
+[[ETN806-T01-star]]
+[[ETN806-T02-star]]
+%%
+```
+
+---
+
+### observatory
+```yaml
+---
+title: "Diagrama: Región de integración doble"
+galaxy_body: observatory
+subject: ETN806
+semester: 8
+partial: 2
+topic: 1
+attached_to: "[[ETN806-T01-joint-pdf-definition]]"
+tags: [ETN806, galaxy-observatory, visual, diagrama]
+date_created: YYYY-MM-DD
+---
+```
+
+```markdown
+%%
+galaxy-links
+[[ETN806-T01-joint-pdf-definition]]
+%%
+```
+
 ---
 
 ### bridge
@@ -420,7 +478,12 @@ galaxy-links
 - [x] Actualizar convencion-notas.md
 - [x] Crear `_pdf/` y definir sistema PDF en `_pdf-system.md`
 - [x] Configurar plugins PDF++ · Annotator · OmniSearch · Text Extractor
-- [ ] Crear plantillas de notas en `_templates/` — una por tipo de cuerpo (9 plantillas)
+- [x] Definir tipos `constellation` y `observatory` para Excalidraw
+- [x] Desactivar Canvas — reemplazado por Excalidraw + Mindmap Builder
+- [x] Crear carpetas `_app/Excalidraw/Constellations/` y `_app/Excalidraw/Observatory/`
+- [x] Documentar sistema Excalidraw en `_mindmap-system.md`
+- [ ] Instalar y configurar Templater + Commander para creación rápida de archivos
+- [ ] Crear plantillas de notas en `_templates/` — una por tipo de cuerpo (11 plantillas: 9 originales + constellation + observatory)
 
 ### Fase 1 — Organización ETN806
 - [ ] Crear estructura de carpetas: `Semesters/Sem_08/ETN806/Partial_2/Topic_NN.../`
@@ -457,6 +520,9 @@ galaxy-links
 
 | Decisión | Razón |
 |----------|-------|
+| `constellation` y `observatory` como tipos separados | Excalidraw tiene dos modos de uso distintos: mapa mental estructural (con Mindmap Builder) y dibujo técnico libre. Separarlos en tipos galaxy permite filtrarlos con DataView y distinguirlos en el grafo. |
+| `photon` ya no incluye Excalidraw | Con `constellation` y `observatory` dedicados, `photon` queda limpio para Desmos e imágenes exportadas únicamente. |
+| Canvas desactivado — reemplazado por Excalidraw + Mindmap Builder | Canvas es rígido y no integra con el grafo de Obsidian de forma útil. Excalidraw con Mindmap Builder ofrece auto-layout, atajos de teclado y los archivos `.excalidraw` participan del grafo como notas `.md`. |
 | La galaxia vive en el YAML, no en el nombre del archivo | Los nombres se mantienen limpios y cortos. El YAML lleva todos los datos semánticos. |
 | Semestre y parcial no van en el nombre del archivo | Ya están codificados en la ruta de carpeta. Sin redundancia. |
 | Slugs descriptivos en inglés | Legibles en búsqueda sin memorizar códigos. Evita problemas de codificación con tildes. |

@@ -9,5 +9,6 @@
   "pdf-plus",
   "text-extractor",
   "better-export-pdf",
-  "obsidian-excalidraw-plugin"
+  "obsidian-excalidraw-plugin",
+  "templater-obsidian"
 ]
