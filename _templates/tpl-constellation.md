@@ -1,4 +1,7 @@
----
+<%*
+const title = await tp.system.prompt("Nombre del archivo (sin extensión)");
+await tp.file.move("_app/Excalidraw/Constellations/" + title);
+%>---
 title: "<% tp.file.title %>"
 galaxy_body: constellation
 subject: 

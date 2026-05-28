@@ -6,9 +6,9 @@
   "fileMenu": [],
   "leftRibbon": [
     {
-      "id": "templater-obsidian:create-_templates/tpl-observatory.md",
+      "id": "templater-obsidian:create-new-note-from-template",
       "icon": "templater-icon",
-      "name": "Templater: Create tpl-observatory",
+      "name": "create",
       "mode": "any"
     }
   ],
