@@ -9,3 +9,7 @@ P: ¿Qué formato prefieres para la guía? R: Tutorial paso a paso con ejemplos
 P: ¿Quieres que lea el archivo _pdf-system.md para adaptar la guía a tu sistema existente? R: Sí, leer el archivo primero
 
 P: ¿Quieres que la guía incluya un flujo de trabajo integrado entre los 3 plugins? (ej: buscar PDF con Omnisearch → anotar con Annotator → citar con PDF++) R: Sí, incluir flujo completo integrado
+
+
+
+REM --- INGRESA A LA CARPETA DE TRABAJO --- rem CD wO REM === REM Compilar, enlazar y depurar programas MASM en DOSBox REM === REM * Analizar el nombre * REM Si no se pasa argumento, usar "programa” como nombre por defecto if "%1"--"" set name-programa if not "¥1"=="" set name-%1 REM * Borrar archivos temporales previos * del *.obj >nul del *.crf >nul del *.1st >nul del *.map >nul del *.bak >nul del *.err >nul del *.exe >nul

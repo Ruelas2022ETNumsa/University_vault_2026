@@ -18,3 +18,25 @@ annotation-target: ETN806-2P-E1-Normalizacion-Marginales-Independencia-Probabili
 >%%TAGS%%
 >
 ^rfzfvnwgjtp
+
+
+>%%
+>```annotation-json
+>{"created":"2026-05-28T03:04:14.799Z","text":"esto es una nota page ee\neee\neee\ne\ne\nee\n\nee\n$$\\frac{1}{2}$$","updated":"2026-05-28T03:04:14.799Z","document":{"title":"ETN806 — 2do Parcial — E1: Normalización, Marginales, Independencia y P(Y≤√x)","link":[{"href":"urn:x-pdf:8a5ebd71fccc0d23471baeeb5b089bca"},{"href":"vault:/ETN806-2P-E1-Normalizacion-Marginales-Independencia-Probabilidad-region-curva.pdf"}],"documentFingerprint":"8a5ebd71fccc0d23471baeeb5b089bca"},"uri":"vault:/ETN806-2P-E1-Normalizacion-Marginales-Independencia-Probabilidad-region-curva.pdf"}
+>```
+>%%
+>*%%PREFIX%%%%HIGHLIGHT%% ==== %%POSTFIX%%*
+>%%LINK%%[[#^42z2vklice9|show annotation]]
+>%%COMMENT%%
+>esto es una nota page ee
+>eee
+>eee
+>e
+>e
+>ee
+>
+>ee
+>$$\frac{1}{2}$$
+>%%TAGS%%
+>
+^42z2vklice9
