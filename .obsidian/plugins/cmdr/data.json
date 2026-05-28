@@ -10,6 +10,12 @@
       "icon": "templater-icon",
       "name": "Templater: Create tpl-observatory",
       "mode": "any"
+    },
+    {
+      "id": "templater-obsidian:create-_templates/tpl-constellation.md",
+      "icon": "templater-icon",
+      "name": "Templater: Create tpl-constellation",
+      "mode": "any"
     }
   ],
   "rightRibbon": [],
