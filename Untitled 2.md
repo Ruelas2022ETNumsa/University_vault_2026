@@ -54,3 +54,33 @@ annotation-target: ETN806-2P-E1-Normalizacion-Marginales-Independencia-Probabili
 >%%TAGS%%
 >
 ^xoeattc7zl
+
+
+>%%
+>```annotation-json
+>{"created":"2026-05-28T03:21:42.364Z","text":"esto es una prueba $$\\frac{1}{5}$$\n\n$$\\frac{1}{5}$$","updated":"2026-05-28T03:21:42.364Z","document":{"title":"ETN806 — 2do Parcial — E1: Normalización, Marginales, Independencia y P(Y≤√x)","link":[{"href":"urn:x-pdf:8a5ebd71fccc0d23471baeeb5b089bca"},{"href":"vault:/ETN806-2P-E1-Normalizacion-Marginales-Independencia-Probabilidad-region-curva.pdf"}],"documentFingerprint":"8a5ebd71fccc0d23471baeeb5b089bca"},"uri":"vault:/ETN806-2P-E1-Normalizacion-Marginales-Independencia-Probabilidad-region-curva.pdf","target":[{"source":"vault:/ETN806-2P-E1-Normalizacion-Marginales-Independencia-Probabilidad-region-curva.pdf","selector":[{"type":"TextPositionSelector","start":1532,"end":1745},{"type":"TextQuoteSelector","exact":"nstante de normalización k.b) Obtener las funciones de densidad marginales fX(x) y fY (y).c) Verificar si existe independencia estadística entre X e Y .d) Calcular la probabilidad de que se cumpla el evento Y ≤√x.","prefix":"analíticamente el valor de la co","suffix":"Loading annotations... More Info"}]}]}
+>```
+>%%
+>*%%PREFIX%%analíticamente el valor de la co%%HIGHLIGHT%% ==nstante de normalización k.b) Obtener las funciones de densidad marginales fX(x) y fY (y).c) Verificar si existe independencia estadística entre X e Y .d) Calcular la probabilidad de que se cumpla el evento Y ≤√x.== %%POSTFIX%%Loading annotations... More Info*
+>%%LINK%%[[#^o62dq04avhc|show annotation]]
+>%%COMMENT%%
+>esto es una prueba $$\frac{1}{5}$$
+>
+>$$\frac{1}{5}$$
+>%%TAGS%%
+>
+^o62dq04avhc
+
+
+>%%
+>```annotation-json
+>{"created":"2026-05-28T03:23:28.675Z","text":"imagen","updated":"2026-05-28T03:23:28.675Z","document":{"title":"ETN806 — 2do Parcial — E1: Normalización, Marginales, Independencia y P(Y≤√x)","link":[{"href":"urn:x-pdf:8a5ebd71fccc0d23471baeeb5b089bca"},{"href":"vault:/ETN806-2P-E1-Normalizacion-Marginales-Independencia-Probabilidad-region-curva.pdf"}],"documentFingerprint":"8a5ebd71fccc0d23471baeeb5b089bca"},"uri":"vault:/ETN806-2P-E1-Normalizacion-Marginales-Independencia-Probabilidad-region-curva.pdf","target":[{"source":"vault:/ETN806-2P-E1-Normalizacion-Marginales-Independencia-Probabilidad-region-curva.pdf","selector":[{"type":"TextPositionSelector","start":4715,"end":4718},{"type":"TextQuoteSelector","exact":"0,4","prefix":"223344(0,0)(0,0)(2,2)(2,2)(0,4)(","suffix":")Explicación de la gráfica:Área "}]}]}
+>```
+>%%
+>*%%PREFIX%%223344(0,0)(0,0)(2,2)(2,2)(0,4)(%%HIGHLIGHT%% ==0,4== %%POSTFIX%%)Explicación de la gráfica:Área*
+>%%LINK%%[[#^x5dn21z4hkf|show annotation]]
+>%%COMMENT%%
+>imagen
+>%%TAGS%%
+>
+^x5dn21z4hkf
