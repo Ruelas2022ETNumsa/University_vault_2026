@@ -4,7 +4,20 @@
   "debug": false,
   "editorMenu": [],
   "fileMenu": [],
-  "leftRibbon": [],
+  "leftRibbon": [
+    {
+      "id": "templater-obsidian:create-new-note-from-template",
+      "icon": "templater-icon",
+      "name": "Templater: Create new note from template",
+      "mode": "any"
+    },
+    {
+      "id": "templater-obsidian:create-new-note-from-template",
+      "icon": "templater-icon",
+      "name": "Templater: Create new note from template",
+      "mode": "any"
+    }
+  ],
   "rightRibbon": [],
   "titleBar": [],
   "statusBar": [],
