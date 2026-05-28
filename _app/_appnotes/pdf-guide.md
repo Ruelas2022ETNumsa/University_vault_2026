@@ -214,10 +214,14 @@ Con el PDF visible en modo Annotator:
 1. **Selecciona texto** en el PDF (igual que en un documento normal).
 2. Aparece un pequeño menú con opciones.
 3. Elige **"Annotate"** para crear un comentario, o **"Highlight"** para solo marcar.
-4. Se abre un cuadro donde puedes:
-   - Escribir un comentario largo sobre ese fragmento.
-   - Agregar etiquetas.
-5. Haz clic en **"Save"** — la anotación queda guardada y aparece en el panel lateral.
+4. Se abre un cuadro con dos pestañas:
+
+| Pestaña | Qué hace | Cuándo usarla |
+|---------|----------|---------------|
+| **Annotations** | El comentario queda anclado al fragmento de texto seleccionado | Cuando el comentario aplica a un párrafo o frase específica |
+| **Page Notes** | El comentario queda anclado a la página completa, sin texto específico | Cuando quieres resumir toda una página o conectarla con un wikilink (`ver [[ETN806-T02-bayes]]`) |
+
+5. Escribe tu comentario y haz clic en **"Save"** — aparece en el panel lateral.
 
 ---
 
@@ -259,8 +263,13 @@ Para salir del modo Annotator y volver a editar el markdown:
         ↓
 4. Seleccionas una región del PDF (aunque sea imagen)
         ↓
-5. Escribes tu comentario: "El profe usa convención de signo positivo en el
+5. Escribes tu comentario en Annotations:
+   "El profe usa convención de signo positivo en el
    denominador — diferente al libro Papoulis, ver [[ETN302-T05-laplace-def]]"
+        ↓
+   O usas Page Notes para resumir toda la página:
+   "Páginas 3-4: desarrollo completo de la transformada unilateral,
+   ver [[ETN302-T05-laplace-unilateral]]"
         ↓
 6. Guardas la anotación
         ↓
@@ -274,7 +283,8 @@ Para salir del modo Annotator y volver a editar el markdown:
 ```
 Activar en una nota    → Agregar "annotation-target: ruta/archivo.pdf" en YAML
 Entrar modo lector     → Ícono Annotator (esquina superior derecha de la nota)
-Crear anotación        → Seleccionar texto → "Annotate" → escribir → Save
+Crear anotación        → Seleccionar texto → "Annotate" → pestaña Annotations → Save
+Page Note              → Seleccionar texto → "Annotate" → pestaña Page Notes → Save
 Solo highlight         → Seleccionar texto → "Highlight"
 Ver todas anotaciones  → Panel lateral derecho en modo Annotator
 Salir modo lector      → Mismo ícono Annotator
@@ -421,6 +431,7 @@ Este es el flujo completo que une los tres plugins. Úsalo como referencia cuand
 │                                                         │
 │  Con Annotator:                                         │
 │  Activar modo lector → Seleccionar → Annotate → Save    │
+│  (Annotations para fragmentos, Page Notes para páginas) │
 └─────────────────────┬───────────────────────────────────┘
                       ↓
 ┌─────────────────────────────────────────────────────────┐
