@@ -29,20 +29,37 @@ Cada tipo de cuerpo galaxy tiene su plantilla en `_templates/`. Al crear un arch
 
 | Archivo | `galaxy_body` | Carpeta destino | Creación |
 |---------|--------------|-----------------|----------|
-| `tpl-star.md` | `star` | `Semesters/.../Topic_NN.../` | Manual |
-| `tpl-planet.md` | `planet` | `Semesters/.../Topic_NN.../` | Manual |
-| `tpl-moon.md` | `moon` | `Semesters/.../Topic_NN.../` | Manual |
-| `tpl-comet.md` | `comet` | `Semesters/.../Topic_NN.../` | Manual |
-| `tpl-nebula.md` | `nebula` | `Semesters/.../Topic_NN.../` | Manual |
-| `tpl-dwarf.md` | `dwarf` | `Semesters/.../Topic_NN.../` | Manual |
-| `tpl-asteroid.md` | `asteroid` | `Semesters/.../Topic_NN.../` | Manual |
-| `tpl-photon.md` | `photon` | `Semesters/.../Topic_NN.../` | Manual |
-| `tpl-bridge.md` | `bridge` | `Semesters/.../` | Manual |
+| `tpl-star.md` | `star` | `MOC/` | Automático |
+| `tpl-planet.md` | `planet` | `Semesters/.../Topic_NN.../` | Manual (Opción A) |
+| `tpl-moon.md` | `moon` | `Semesters/.../Topic_NN.../` | Manual (Opción A) |
+| `tpl-comet.md` | `comet` | `Semesters/.../Topic_NN.../` | Manual (Opción A) |
+| `tpl-nebula.md` | `nebula` | `Semesters/.../Topic_NN.../` | Manual (Opción A) |
+| `tpl-dwarf.md` | `dwarf` | `Semesters/.../Topic_NN.../` | Manual (Opción A) |
+| `tpl-asteroid.md` | `asteroid` | `Semesters/.../Topic_NN.../` | Manual (Opción A) |
+| `tpl-photon.md` | `photon` | `Semesters/.../Topic_NN.../` | Manual (Opción A) |
+| `tpl-bridge.md` | `bridge` | `Semesters/.../` | Manual (Opción A) |
 | `tpl-constellation.md` | `constellation` | `_app/Excalidraw/Constellations/` | Automático |
 | `tpl-observatory.md` | `observatory` | `_app/Excalidraw/Observatory/` | Automático |
 
-**Automático** = Templater aplica la plantilla al crear un archivo en esa carpeta (Folder Templates).
-**Manual** = el usuario selecciona la plantilla desde la paleta de comandos o Commander.
+**Automático** = Templater aplica la plantilla al crear un archivo en esa carpeta (Folder Templates) o via `tp.file.move` en la plantilla.
+**Manual (Opción A)** = el usuario navega a la carpeta correcta en el explorador, crea el archivo ahí y selecciona la plantilla desde el selector de Templater. Sin lógica de movimiento en la plantilla.
+
+### Alternativa Opción B
+
+En `_templates/alt-B/` existen versiones alternativas con ruta dinámica. Al usarlas, Templater pregunta materia, semestre, parcial, tema y nombre, y mueve el archivo a la ruta correcta automáticamente.
+
+| Archivo | Preguntas al crear |
+|---------|-------------------|
+| `tpl-planet-B.md` | Materia, semestre, parcial, tema, nombre |
+| `tpl-moon-B.md` | Materia, semestre, parcial, tema, nombre |
+| `tpl-comet-B.md` | Materia, semestre, parcial, tema, nombre |
+| `tpl-nebula-B.md` | Materia, semestre, parcial, tema, nombre |
+| `tpl-dwarf-B.md` | Materia, semestre, parcial, nombre |
+| `tpl-asteroid-B.md` | Materia, semestre, parcial, tema, nombre |
+| `tpl-photon-B.md` | Materia, semestre, parcial, tema, nombre |
+| `tpl-bridge-B.md` | Materia 1, materia 2, nombre |
+
+> Las plantillas Opción B están en prueba en `_templates/alt-B/`. Una vez elegida la opción definitiva, las alternativas descartadas se moverán a `borrar/`.
 
 ---
 
