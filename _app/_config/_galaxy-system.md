@@ -3,6 +3,7 @@
 > Resumen de convención: [[convencion-notas]]
 > Sistema PDF: [[_pdf-system]]
 > Sistema Mindmap: [[_mindmap-system]]
+> Sistema de Plantillas: [[_template-system]]
 > Este baúl es un **cerebro digital para ingeniería**. Cada nota tiene una ubicación precisa, un nombre limpio y un YAML que define su rol y sus conexiones.
 
 ---
@@ -39,6 +40,7 @@ University_Vault_2026/
 │   │   ├── _galaxy-system.md   ← este archivo
 │   │   ├── _pdf-system.md      ← sistema de integración de PDFs
 │   │   ├── _mindmap-system.md  ← sistema Excalidraw + Mindmap Builder
+│   │   ├── _template-system.md ← sistema de plantillas Templater
 │   │   ├── convencion-notas.md ← resumen de convención de nombres
 │   │   ├── TagsRoute.md        ← referencia del sistema de tags
 │   │   ├── _claude-sync.md     ← configuración de comportamiento de Claude
@@ -72,9 +74,19 @@ University_Vault_2026/
 │   ├── ETN302/                    la organización semántica la llevan los nombres
 │   └── ETNXXX/                    y las notas asteroid en Semesters/
 │
-├── _templates/                 ← plantillas de notas de Obsidian
-│                                  una plantilla por tipo de cuerpo galaxy.
-│                                  contextogen.md vive aquí también.
+├── _templates/                 ← plantillas de notas de Obsidian — ver [[_template-system]]
+│   ├── tpl-star.md             ←  una plantilla por tipo de cuerpo galaxy
+│   ├── tpl-planet.md
+│   ├── tpl-moon.md
+│   ├── tpl-comet.md
+│   ├── tpl-nebula.md
+│   ├── tpl-dwarf.md
+│   ├── tpl-asteroid.md
+│   ├── tpl-photon.md
+│   ├── tpl-bridge.md
+│   ├── tpl-constellation.md    ← Excalidraw + Mindmap Builder
+│   ├── tpl-observatory.md      ← Excalidraw dibujo libre
+│   └── contextogen.md          ← generador de contexto para Claude
 │
 └── borrar/                     ← carpeta de espera antes de eliminar archivos
                                    revisar antes de borrar permanentemente
@@ -166,6 +178,9 @@ Ambas capas deben estar sincronizadas — si un enlace está en el YAML también
 ---
 
 ## Plantillas YAML por tipo de cuerpo
+
+> Documentación completa de cada plantilla: [[_template-system]]
+> Archivos físicos en `_templates/` — nombrados `tpl-[tipo].md`
 
 ### star
 ```yaml
@@ -482,8 +497,10 @@ galaxy-links
 - [x] Desactivar Canvas — reemplazado por Excalidraw + Mindmap Builder
 - [x] Crear carpetas `_app/Excalidraw/Constellations/` y `_app/Excalidraw/Observatory/`
 - [x] Documentar sistema Excalidraw en `_mindmap-system.md`
+- [x] Crear `_template-system.md` con documentación completa de plantillas
+- [x] Crear plantillas `tpl-constellation.md` y `tpl-observatory.md` en `_templates/`
+- [ ] Crear plantillas restantes en `_templates/` — 9 tipos: star, planet, moon, comet, nebula, dwarf, asteroid, photon, bridge
 - [ ] Instalar y configurar Templater + Commander para creación rápida de archivos
-- [ ] Crear plantillas de notas en `_templates/` — una por tipo de cuerpo (11 plantillas: 9 originales + constellation + observatory)
 
 ### Fase 1 — Organización ETN806
 - [ ] Crear estructura de carpetas: `Semesters/Sem_08/ETN806/Partial_2/Topic_NN.../`

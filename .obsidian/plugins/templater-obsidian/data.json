@@ -16,11 +16,11 @@
   "folder_templates": [
     {
       "folder": "_app/Excalidraw/Constellations",
-      "template": "_templates/tpl-constellation"
+      "template": "_templates/tpl-constellation.md"
     },
     {
       "folder": "_app/Excalidraw/Observatory",
-      "template": "_templates/tpl-observatory"
+      "template": "_templates/tpl-observatory.md"
     }
   ],
   "enable_file_templates": false,
