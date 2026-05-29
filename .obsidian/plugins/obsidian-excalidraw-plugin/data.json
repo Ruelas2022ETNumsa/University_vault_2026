@@ -161,6 +161,22 @@
           "MANUAL_JITTER_RANGE": 300
         },
         "hidden": true
+      },
+      "Is Undocked": {
+        "value": false,
+        "hidden": false
+      },
+      "Branch Scale Style": {
+        "value": "Hierarchical",
+        "hidden": false
+      },
+      "Multicolor Mode": {
+        "value": true,
+        "hidden": false
+      },
+      "Font Sizes": {
+        "value": "Normal Scale",
+        "hidden": false
       }
     }
   },
