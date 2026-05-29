@@ -1,0 +1,213 @@
+---
+title: "Sistema Excalidraw — Configuración del plugin"
+galaxy_body: beacon
+scope: vault
+tool: excalidraw
+audience: [usuario, claude]
+tags: [beacon, excalidraw, configuracion, infraestructura]
+date_created: 2026-05-28
+status: activo
+---
+
+# Sistema Excalidraw — Configuración del plugin
+
+> Sistema Galaxy: [[_galaxy-system]]
+> Sistema Mindmap: [[_mindmap-system]]
+> Sistema de Plantillas: [[_template-system]]
+
+Este documento registra la configuración aplicada al plugin `obsidian-excalidraw-plugin` (archivo `data.json`) para alinearla con el Sistema Galaxy. Es la referencia canónica para restaurar o migrar la configuración.
+
+---
+
+## Versión del plugin
+
+```
+obsidian-excalidraw-plugin v2.23.7
+Archivo de configuración: .obsidian/plugins/obsidian-excalidraw-plugin/data.json
+```
+
+---
+
+## Rutas configuradas
+
+| Campo en data.json | Valor | Razón |
+|--------------------|-------|-------|
+| `folder` | `_app/Excalidraw` | Carpeta raíz donde viven Constellations/ y Observatory/ |
+| `templateFilePath` | `_app/Excalidraw/Template.excalidraw` | Plantilla base para nuevos lienzos creados desde el botón de Excalidraw |
+| `scriptFolderPath` | `_app/Excalidraw/Scripts` | Carpeta donde el Script Store instala Mindmap Builder y otros scripts |
+
+> `fontAssetsPath` se deja en su valor por defecto — no se usan fuentes CJK en este vault.
+
+---
+
+## Nombres de archivo por defecto
+
+Estos valores aplican solo si se crea un lienzo desde el botón de Excalidraw **sin usar Templater**. En el flujo normal del Sistema Galaxy los archivos se crean desde Templater y nunca llegan a usar estos prefijos.
+
+| Campo | Valor | Razón |
+|-------|-------|-------|
+| `drawingFilenamePrefix` | `RENOMBRAR-` | Señal visual de que el archivo necesita ser renombrado según la convención `ETNXXX-PN-nombre` |
+| `drawingFilenameDateTime` | `DD-MM-YYYY HH.mm.ss` | Formato de fecha preferido del vault |
+
+---
+
+## Compresión y lectura en modo Markdown
+
+| Campo | Valor | Razón |
+|-------|-------|-------|
+| `compress` | `true` | Requerido para que las plantillas de Templater generen el bloque `compressed-json` correctamente |
+| `decompressForMDView` | `true` | Permite leer el cuerpo del archivo como texto en modo Markdown y que Claude lo pueda procesar |
+
+> **Importante:** `compress: true` y `decompressForMDView: true` no son contradictorios. El archivo se guarda comprimido en disco pero se descomprime automáticamente al abrirlo en modo texto/lectura.
+
+---
+
+## Tema y apariencia
+
+| Campo | Valor | Razón |
+|-------|-------|-------|
+| `matchTheme` | `true` | El lienzo sigue el tema claro/oscuro de Obsidian |
+| `matchThemeAlways` | `true` | El tema se aplica siempre, no solo al abrir |
+| `dynamicStyling` | `colorful` | Estilo visual por defecto para los elementos del lienzo |
+| `previewMatchObsidianTheme` | `false` | Las previsualizaciones embebidas mantienen su propio color |
+
+---
+
+## Previsualizaciones embebidas
+
+Cuando un `constellation` u `observatory` se embebe en una nota `.md` con `![[nombre.excalidraw]]`, estos valores controlan cómo se renderiza:
+
+| Campo | Valor | Razón |
+|-------|-------|-------|
+| `displaySVGInPreview` | `true` | Muestra el lienzo como SVG en modo lectura de la nota que lo embebe |
+| `previewImageType` | `SVG` | Formato de la imagen de preview — SVG es vectorial y se escala sin pérdida |
+| `width` | `400` | Ancho por defecto del embed en píxeles |
+| `displayExportedImageIfAvailable` | `false` | Siempre renderiza desde el archivo fuente, no desde un PNG exportado |
+
+---
+
+## Exportación
+
+| Campo | Valor | Razón |
+|-------|-------|-------|
+| `pngExportScale` | `2` | Resolución 2× para exports a `_assets/` — legible en documentos e impresión |
+| `exportWithTheme` | `true` | El PNG exportado respeta el tema activo |
+| `exportWithBackground` | `true` | Incluye el fondo en el PNG exportado |
+| `exportPaddingSVG` | `10` | Margen de 10px en exports SVG |
+| `autoexportSVG` | `false` | No exporta SVG automáticamente al guardar — se hace manualmente cuando se necesita |
+| `autoexportPNG` | `false` | Igual — export manual según necesidad |
+
+> Los exports se guardan en `_assets/` con el mismo nombre que el archivo fuente. Convención: `ETN806-P2-joint-density.png`.
+
+---
+
+## Comportamiento de apertura y navegación
+
+| Campo | Valor | Razón |
+|-------|-------|-------|
+| `zoomToFitOnOpen` | `true` | Al abrir un mapa encaja todo el contenido en pantalla automáticamente |
+| `zoomToFitOnResize` | `false` | No re-encaja al redimensionar la ventana — evita saltos molestos |
+| `openInAdjacentPane` | `true` | Abre el lienzo en un panel lateral, permite ver la nota fuente al mismo tiempo |
+| `defaultMode` | `normal` | Modo de inicio: selección normal, no modo pluma |
+
+---
+
+## Autosave
+
+| Campo | Valor |
+|-------|-------|
+| `autosave` | `true` |
+| `autosaveIntervalDesktop` | `60000` (60 segundos) |
+| `autosaveIntervalMobile` | `30000` (30 segundos) |
+
+---
+
+## Configuración YAML requerida en archivos Excalidraw
+
+Todo archivo `.excalidraw.md` en este vault **debe** comenzar con `excalidraw-plugin: parsed` como primer campo del YAML. Sin este campo el plugin abre el archivo como nota de texto en lugar de como lienzo.
+
+### constellation
+```yaml
+---
+excalidraw-plugin: parsed
+tags: [excalidraw, galaxy-constellation]
+galaxy_body: constellation
+title: "ETN806 — P2: Mapa galaxy Parcial 2"
+subject: ETN806
+semester: 8
+partial: 2
+topic:
+scope: partial
+tools: [excalidraw, mindmap-builder]
+date_created: YYYY-MM-DD
+status: activo
+---
+```
+
+### observatory
+```yaml
+---
+excalidraw-plugin: parsed
+tags: [excalidraw, galaxy-observatory]
+galaxy_body: observatory
+title: "Diagrama: Región de integración doble"
+subject: ETN806
+semester: 8
+partial: 2
+topic: 1
+attached_to: "[[ETN806-T01-joint-pdf-definition]]"
+date_created: YYYY-MM-DD
+---
+```
+
+> El campo `excalidraw-plugin: parsed` debe ir **siempre primero** en el YAML. El plugin lo requiere para reconocer el archivo como lienzo.
+
+---
+
+## Estructura de carpetas Excalidraw en el vault
+
+```
+_app/
+└── Excalidraw/
+    ├── Template.excalidraw       ← plantilla base para nuevos lienzos
+    ├── Scripts/                  ← scripts instalados desde el Script Store
+    │   └── Mindmap Builder.md    ← script principal para constellations
+    ├── Constellations/           ← galaxy_body: constellation
+    │   └── ETNXXX-PN-nombre-descriptivo.excalidraw.md
+    └── Observatory/              ← galaxy_body: observatory
+        └── ETNXXX-PN-nombre-descriptivo.excalidraw.md
+```
+
+---
+
+## Cambios aplicados en esta sesión (2026-05-28)
+
+Los siguientes valores fueron modificados respecto al estado inicial del plugin:
+
+| Campo | Valor anterior | Valor nuevo | Quién |
+|-------|---------------|-------------|-------|
+| `templateFilePath` | `Excalidraw/Template.excalidraw` | `_app/Excalidraw/Template.excalidraw` | usuario |
+| `scriptFolderPath` | `Excalidraw/Scripts` | `_app/Excalidraw/Scripts` | usuario |
+| `drawingFilenamePrefix` | `Drawing ` | `RENOMBRAR-` | usuario |
+| `drawingFilenameDateTime` | `YYYY-MM-DD HH.mm.ss` | `DD-MM-YYYY HH.mm.ss` | usuario |
+| `decompressForMDView` | `false` | `true` | claude |
+| `displaySVGInPreview` | `false` | `true` | claude |
+| `matchTheme` | `false` | `true` | claude |
+| `matchThemeAlways` | `false` | `true` | claude |
+| `pngExportScale` | `1` | `2` | claude |
+
+---
+
+## Pendientes
+
+- [ ] Crear `_app/Excalidraw/Template.excalidraw` — plantilla base con lienzo vacío y YAML mínimo
+- [ ] Instalar Mindmap Builder desde el Script Store de Excalidraw
+- [ ] Verificar que las plantillas `tpl-constellation.md` y `tpl-observatory.md` generan el bloque `compressed-json` correctamente al ejecutarse con Templater
+- [ ] Crear primer `constellation` de prueba para ETN806-P2
+
+%%
+galaxy-links
+[[_galaxy-system]]
+[[_mindmap-system]]
+[[_template-system]]
+%%
