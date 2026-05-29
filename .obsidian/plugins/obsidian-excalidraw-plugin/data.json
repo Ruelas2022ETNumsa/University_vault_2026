@@ -163,7 +163,7 @@
         "hidden": true
       },
       "Is Undocked": {
-        "value": true,
+        "value": false,
         "hidden": false
       },
       "Branch Scale Style": {
@@ -175,7 +175,7 @@
         "hidden": false
       },
       "Font Sizes": {
-        "value": "Normal Scale",
+        "value": "Fibonacci Scale",
         "valueset": [
           "Use scene fontsize",
           "Fibonacci Scale",
@@ -187,7 +187,7 @@
         "hidden": false
       },
       "Growth Mode": {
-        "value": "Right-Left",
+        "value": "Radial",
         "valueset": [
           "Radial",
           "Right-facing",
@@ -200,6 +200,34 @@
       },
       "Arrow Type": {
         "value": "curved",
+        "hidden": false
+      },
+      "Fill Sweep": {
+        "value": false,
+        "hidden": false
+      },
+      "Group Branches": {
+        "value": false,
+        "hidden": false
+      },
+      "Box Children": {
+        "value": false,
+        "hidden": false
+      },
+      "Rounded Corners": {
+        "value": false,
+        "hidden": false
+      },
+      "Arrow Stroke Style": {
+        "value": true,
+        "hidden": false
+      },
+      "Base Stroke Width": {
+        "value": 6.5,
+        "hidden": false
+      },
+      "Max Text Width": {
+        "value": 200,
         "hidden": false
       }
     }
