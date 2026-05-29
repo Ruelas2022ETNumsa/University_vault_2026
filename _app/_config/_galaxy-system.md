@@ -75,7 +75,7 @@ University_Vault_2026/
 │   └── ETNXXX/                    y las notas asteroid en Semesters/
 │
 ├── _templates/                 ← plantillas de notas de Obsidian — ver [[_template-system]]
-│   ├── tpl-star.md             ←  una plantilla por tipo de cuerpo galaxy
+│   ├── tpl-star.md             ← una plantilla por tipo de cuerpo galaxy
 │   ├── tpl-planet.md
 │   ├── tpl-moon.md
 │   ├── tpl-comet.md
@@ -86,7 +86,9 @@ University_Vault_2026/
 │   ├── tpl-bridge.md
 │   ├── tpl-constellation.md    ← Excalidraw + Mindmap Builder
 │   ├── tpl-observatory.md      ← Excalidraw dibujo libre
-│   └── contextogen.md          ← generador de contexto para Claude
+│   ├── contextogen.md          ← generador de contexto para Claude
+│   └── alt-B/                  ← respaldo
+│       └── plantillas-A-respaldo.md  ← plantillas Opción A consolidadas (sin ruta dinámica)
 │
 └── borrar/                     ← carpeta de espera antes de eliminar archivos
                                    revisar antes de borrar permanentemente
@@ -132,7 +134,7 @@ ETN806-ETN302-laplace-vs-probability.md
 
 ## Tipos de cuerpo galaxy
 
-El campo `galaxy_body` en el YAML define el rol de la nota. Diez tipos:
+El campo `galaxy_body` en el YAML define el rol de la nota. Once tipos:
 
 | `galaxy_body` | Símbolo | Rol |
 |---------------|---------|-----|
@@ -181,6 +183,7 @@ Ambas capas deben estar sincronizadas — si un enlace está en el YAML también
 
 > Documentación completa de cada plantilla: [[_template-system]]
 > Archivos físicos en `_templates/` — nombrados `tpl-[tipo].md`
+> Las plantillas de `Semesters/` usan **Opción B**: Templater pregunta materia, semestre, parcial, tema y nombre, y mueve el archivo automáticamente a la ruta correcta.
 
 ### star
 ```yaml
@@ -228,9 +231,9 @@ moons:
   - "[[ETN806-T01-marginal-density-formula]]"
 comets:
   - "[[ETN806-T01-normalization-k-solved]]"
-tags: [ETN806, galaxy-planet, P2, T01, joint-pdf]
+tags: [ETN806, galaxy-planet, P2, T01]
 date_created: YYYY-MM-DD
-status: completo
+status: activo
 ---
 ```
 
@@ -242,6 +245,8 @@ galaxy-links
 [[ETN806-T01-normalization-k-solved]]
 %%
 ```
+
+> Al crear con `tpl-planet.md`, Templater precarga `subject`, `semester`, `partial` y los tags automáticamente.
 
 ---
 
@@ -255,7 +260,7 @@ semester: 8
 partial: 2
 topic: 1
 orbits: "[[ETN806-T01-joint-pdf-definition]]"
-tags: [ETN806, galaxy-moon, P2, T01, marginal]
+tags: [ETN806, galaxy-moon, P2, T01]
 date_created: YYYY-MM-DD
 ---
 ```
@@ -282,8 +287,8 @@ source: "examen"
 concepts_used:
   - "[[ETN806-T01-joint-pdf-definition]]"
   - "[[ETN806-T01-marginal-density-formula]]"
-status: revisado
-tags: [ETN806, galaxy-comet, P2, T01, ejercicio]
+status: pendiente
+tags: [ETN806, galaxy-comet, P2, T01]
 date_created: YYYY-MM-DD
 ---
 ```
@@ -310,7 +315,7 @@ session_date: 2026-05-20
 comets:
   - "[[ETN806-T01-normalization-k-solved]]"
   - "[[ETN806-T02-independence-statistical-test]]"
-tags: [ETN806, galaxy-nebula, P2, sesion]
+tags: [ETN806, galaxy-nebula, P2]
 ---
 ```
 
@@ -335,7 +340,7 @@ partial: 2
 covers:
   - "[[ETN806-T01-star]]"
   - "[[ETN806-T02-star]]"
-tags: [ETN806, galaxy-dwarf, P2, resumen]
+tags: [ETN806, galaxy-dwarf, P2]
 date_created: YYYY-MM-DD
 ---
 ```
@@ -369,7 +374,7 @@ source_chapter: "6"
 pdf_file: "[[ETN806-T00-libro-papoulis-cap6.pdf]]"
 related_planets:
   - "[[ETN806-T01-joint-pdf-definition]]"
-tags: [ETN806, galaxy-asteroid, referencia, pdf, T01, P2]
+tags: [ETN806, galaxy-asteroid, P2, T01]
 date_created: YYYY-MM-DD
 status: en-proceso
 ---
@@ -392,7 +397,8 @@ galaxy_body: photon
 photon_type: desmos
 attached_to: "[[ETN806-T01-normalization-k-solved]]"
 subject: ETN806
-tags: [ETN806, galaxy-photon, visual, desmos]
+tags: [ETN806, galaxy-photon, P2, T01]
+date_created: YYYY-MM-DD
 ---
 ```
 
@@ -403,7 +409,7 @@ galaxy-links
 %%
 ```
 
-> `photon` ya no incluye Excalidraw. Para Excalidraw usar `constellation` o `observatory`. Ver [[_mindmap-system]].
+> `photon` no incluye Excalidraw. Para Excalidraw usar `constellation` o `observatory`. Ver [[_mindmap-system]].
 
 ---
 
@@ -444,7 +450,7 @@ semester: 8
 partial: 2
 topic: 1
 attached_to: "[[ETN806-T01-joint-pdf-definition]]"
-tags: [ETN806, galaxy-observatory, visual, diagrama]
+tags: [ETN806, galaxy-observatory, P2, T01]
 date_created: YYYY-MM-DD
 ---
 ```
@@ -469,6 +475,7 @@ connects:
   - "[[ETN806-T03-generating-functions]]"
   - "[[ETN302-T05-laplace-transform]]"
 tags: [galaxy-bridge, ETN806, ETN302]
+date_created: YYYY-MM-DD
 ---
 ```
 
@@ -489,8 +496,8 @@ galaxy-links
 - [x] Definir estructura de carpetas y convención de nombres
 - [x] Definir plantillas YAML por tipo de cuerpo
 - [x] Definir regla de wikilinks comentados `%%` para el grafo
-- [x] Escribir _galaxy-system.md
-- [x] Actualizar convencion-notas.md
+- [x] Escribir `_galaxy-system.md`
+- [x] Actualizar `convencion-notas.md`
 - [x] Crear `_pdf/` y definir sistema PDF en `_pdf-system.md`
 - [x] Configurar plugins PDF++ · Annotator · OmniSearch · Text Extractor
 - [x] Definir tipos `constellation` y `observatory` para Excalidraw
@@ -499,8 +506,9 @@ galaxy-links
 - [x] Documentar sistema Excalidraw en `_mindmap-system.md`
 - [x] Crear `_template-system.md` con documentación completa de plantillas
 - [x] Crear plantillas `tpl-constellation.md` y `tpl-observatory.md` en `_templates/`
-- [ ] Crear plantillas restantes en `_templates/` — 9 tipos: star, planet, moon, comet, nebula, dwarf, asteroid, photon, bridge
-- [ ] Instalar y configurar Templater + Commander para creación rápida de archivos
+- [x] Crear plantillas restantes en `_templates/` — star, planet, moon, comet, nebula, dwarf, asteroid, photon, bridge
+- [x] Instalar y configurar Templater + Commander para creación rápida de archivos
+- [x] Elegir Opción B como sistema oficial para `Semesters/` — plantillas con ruta dinámica
 
 ### Fase 1 — Organización ETN806
 - [ ] Crear estructura de carpetas: `Semesters/Sem_08/ETN806/Partial_2/Topic_NN.../`
@@ -545,7 +553,7 @@ galaxy-links
 | Slugs descriptivos en inglés | Legibles en búsqueda sin memorizar códigos. Evita problemas de codificación con tildes. |
 | T00 para notas de parcial completo | Formularios y enunciados pertenecen al parcial, no a un tema específico. |
 | ETN302 se queda como legacy | Renombrar rompería cientos de wikilinks internos. |
-| `beacon` como décimo tipo | Las notas de infraestructura (`_app/`) no son contenido académico — necesitan un tipo visual propio que las distinga en el grafo sin contaminar los tipos galaxy del contenido real. El nombre refleja su rol: señales de orientación del vault. |
+| `beacon` como tipo de infraestructura | Las notas de `_app/` no son contenido académico — necesitan un tipo visual propio que las distinga en el grafo sin contaminar los tipos galaxy del contenido real. El nombre refleja su rol: señales de orientación del vault. |
 | Números de tema con cero al frente | El explorador de archivos ordena correctamente: `T01` antes que `T10`. |
 | Los photons siempre adjuntos | Un visual no tiene significado sin la nota que ilustra. |
 | Bridge como nota explícita | La conexión entre materias es conocimiento valioso en sí mismo. |
@@ -554,3 +562,12 @@ galaxy-links
 | `borrar/` como carpeta de espera | Más seguro que borrar directamente — revisar antes de eliminar permanentemente. |
 | `_pdf/` como almacén separado de `Semesters/` | Los PDFs son fuentes, no conocimiento procesado. El `asteroid` es el puente al grafo. |
 | PDF++ para texto, Annotator para EPUBs/escaneados | Cada plugin tiene su dominio sin solaparse. OmniSearch + Text Extractor cubren la búsqueda. |
+| Opción B como sistema oficial para Semesters/ (2026-05-28) | Las plantillas B preguntan materia, semestre, parcial, tema y nombre, y mueven el archivo automáticamente. Elimina la necesidad de navegar manualmente a la carpeta destino. Las plantillas A quedan en `_templates/alt-B/plantillas-A-respaldo.md`. |
+
+%%
+galaxy-links
+[[_template-system]]
+[[_pdf-system]]
+[[_mindmap-system]]
+[[convencion-notas]]
+%%
