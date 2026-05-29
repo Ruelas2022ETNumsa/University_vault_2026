@@ -163,7 +163,7 @@
         "hidden": true
       },
       "Is Undocked": {
-        "value": false,
+        "value": true,
         "hidden": false
       },
       "Branch Scale Style": {
@@ -216,7 +216,9 @@
   "pinnedScripts": [
     "_app/Excalidraw/Scripts/Downloaded/Mindmap Builder.md"
   ],
-  "sidepanelTabs": [],
+  "sidepanelTabs": [
+    "{\"script\":\"Downloaded/Mindmap Builder\",\"title\":\"Mind Map Builder\"}"
+  ],
   "customPens": [
     {
       "type": "default",
