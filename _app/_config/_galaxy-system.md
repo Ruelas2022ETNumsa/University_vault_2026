@@ -416,15 +416,16 @@ galaxy-links
 ### constellation
 ```yaml
 ---
-title: "ETN806 — P2: Mapa galaxy Parcial 2"
+excalidraw-plugin: parsed
+tags: [excalidraw, galaxy-constellation]
 galaxy_body: constellation
+title: "ETN806 — P2: Mapa galaxy Parcial 2"
 subject: ETN806
 semester: 8
 partial: 2
-topic:                        # dejar vacío si cubre el parcial completo; llenar si es un tema específico
-scope: partial                # partial | topic
+topic:
+scope: partial
 tools: [excalidraw, mindmap-builder]
-tags: [ETN806, galaxy-constellation, P2]
 date_created: YYYY-MM-DD
 status: activo
 ---
@@ -438,19 +439,23 @@ galaxy-links
 %%
 ```
 
+> `excalidraw-plugin: parsed` debe ir primero en el YAML — el plugin lo requiere para abrir el archivo como lienzo.
+> `scope`: `partial` si cubre el parcial completo | `topic` si cubre un solo tema.
+
 ---
 
 ### observatory
 ```yaml
 ---
-title: "Diagrama: Región de integración doble"
+excalidraw-plugin: parsed
+tags: [excalidraw, galaxy-observatory]
 galaxy_body: observatory
+title: "Diagrama: Región de integración doble"
 subject: ETN806
 semester: 8
 partial: 2
 topic: 1
 attached_to: "[[ETN806-T01-joint-pdf-definition]]"
-tags: [ETN806, galaxy-observatory, P2, T01]
 date_created: YYYY-MM-DD
 ---
 ```
@@ -461,6 +466,8 @@ galaxy-links
 [[ETN806-T01-joint-pdf-definition]]
 %%
 ```
+
+> `excalidraw-plugin: parsed` debe ir primero en el YAML — el plugin lo requiere para abrir el archivo como lienzo.
 
 ---
 
@@ -509,6 +516,8 @@ galaxy-links
 - [x] Crear plantillas restantes en `_templates/` — star, planet, moon, comet, nebula, dwarf, asteroid, photon, bridge
 - [x] Instalar y configurar Templater + Commander para creación rápida de archivos
 - [x] Elegir Opción B como sistema oficial para `Semesters/` — plantillas con ruta dinámica
+- [x] Corregir `tpl-constellation` y `tpl-observatory` para generar lienzos Excalidraw (YAML híbrido + bloque compressed-json)
+- [ ] Configurar Excalidraw — ajustes del plugin pendientes (próxima sesión)
 
 ### Fase 1 — Organización ETN806
 - [ ] Crear estructura de carpetas: `Semesters/Sem_08/ETN806/Partial_2/Topic_NN.../`
@@ -563,6 +572,8 @@ galaxy-links
 | `_pdf/` como almacén separado de `Semesters/` | Los PDFs son fuentes, no conocimiento procesado. El `asteroid` es el puente al grafo. |
 | PDF++ para texto, Annotator para EPUBs/escaneados | Cada plugin tiene su dominio sin solaparse. OmniSearch + Text Extractor cubren la búsqueda. |
 | Opción B como sistema oficial para Semesters/ (2026-05-28) | Las plantillas B preguntan materia, semestre, parcial, tema y nombre, y mueven el archivo automáticamente. Elimina la necesidad de navegar manualmente a la carpeta destino. Las plantillas A quedan en `_templates/alt-B/plantillas-A-respaldo.md`. |
+| YAML híbrido en constellation y observatory (2026-05-28) | El plugin de Excalidraw requiere `excalidraw-plugin: parsed` en el frontmatter para abrir el archivo como lienzo. Se unifica con los campos galaxy en un solo bloque YAML. Sin este campo el archivo se abre como nota de texto. |
+| Extensión `.excalidraw.md` en lugar de `.excalidraw` | Mantener `.md` preserva compatibilidad con YAML, DataView y el grafo de Obsidian. Para usar en excalidraw.com se exporta con el comando del plugin. |
 
 %%
 galaxy-links
