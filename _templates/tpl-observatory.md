@@ -3,7 +3,7 @@ const title = await tp.system.prompt("Nombre del archivo (sin extensión)");
 await tp.file.move("_app/Excalidraw/Observatory/" + title);
 %>---
 excalidraw-plugin: parsed
-tags: [excalidraw]
+tags: [excalidraw, galaxy-observatory]
 galaxy_body: observatory
 title: "<% tp.file.title %>"
 subject: 

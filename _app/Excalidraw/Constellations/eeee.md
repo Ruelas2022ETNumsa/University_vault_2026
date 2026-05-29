@@ -1,7 +1,6 @@
 ---
-
 excalidraw-plugin: parsed
-tags: [excalidraw]
+tags: [excalidraw, galaxy-constellation]
 galaxy_body: constellation
 title: "Untitled"
 subject: 
@@ -12,7 +11,6 @@ scope: partial
 tools: [excalidraw, mindmap-builder]
 date_created: 2026-05-28
 status: activo
-
 ---
 ==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the command palette: 'Decompress current Excalidraw file'. For more info check in plugin settings under 'Saving'
 

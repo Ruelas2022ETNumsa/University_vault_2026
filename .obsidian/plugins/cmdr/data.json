@@ -20,7 +20,9 @@
   "explorer": [],
   "hide": {
     "statusbar": [],
-    "leftRibbon": []
+    "leftRibbon": [
+      "Templater"
+    ]
   },
   "spacing": 8,
   "advancedToolbar": {

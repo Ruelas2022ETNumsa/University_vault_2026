@@ -42,7 +42,7 @@ Cada tipo de cuerpo galaxy tiene su plantilla en `_templates/`. Al crear una not
 | `tpl-observatory.md` | `observatory` | `_app/Excalidraw/Observatory/` | Automático |
 
 **Automático (Opción B)** = Templater pregunta materia, semestre, parcial, tema y nombre. Mueve el archivo a la ruta correcta automáticamente.
-**Automático** = Templater aplica la plantilla al crear un archivo en esa carpeta (Folder Templates) o via `tp.file.move` en la plantilla.
+**Automático** = Templater pide solo el nombre y mueve el archivo a la carpeta fija correspondiente.
 
 ### Preguntas por plantilla
 
@@ -56,6 +56,8 @@ Cada tipo de cuerpo galaxy tiene su plantilla en `_templates/`. Al crear una not
 | `tpl-asteroid.md` | Materia, semestre, parcial, tema, nombre |
 | `tpl-photon.md` | Materia, semestre, parcial, tema, nombre |
 | `tpl-bridge.md` | Materia 1, materia 2, nombre |
+| `tpl-constellation.md` | Nombre |
+| `tpl-observatory.md` | Nombre |
 
 ### Respaldo Opción A
 
@@ -94,16 +96,37 @@ Las plantillas originales (sin lógica de movimiento) están consolidadas en `_t
 
 ## Comportamiento de las plantillas tpl-constellation y tpl-observatory
 
-Estas dos plantillas tienen lógica Templater en el encabezado que:
-1. Abre un cuadro pidiendo el nombre del archivo
-2. Mueve el archivo automáticamente a su carpeta destino (`Constellations/` u `Observatory/`)
+Estas dos plantillas son especiales: generan archivos que Obsidian abre como lienzos de Excalidraw, no como notas de texto. Para lograrlo combinan tres partes:
+
+1. **Lógica Templater** — pide el nombre del archivo y lo mueve a su carpeta destino
+2. **YAML híbrido** — incluye `excalidraw-plugin: parsed` (requerido por el plugin) junto con los campos galaxy
+3. **Cuerpo comprimido** — bloque `compressed-json` con el lienzo vacío inicial
 
 ```
 <%*
 const title = await tp.system.prompt("Nombre del archivo (sin extensión)");
 await tp.file.move("_app/Excalidraw/Constellations/" + title);
-%>
+%>---
+excalidraw-plugin: parsed
+tags: [excalidraw, galaxy-constellation]
+galaxy_body: constellation
+...
+---
+==⚠  Switch to EXCALIDRAW VIEW...==
+
+## Drawing
+```compressed-json
+N4IgLg...
 ```
+%%
+galaxy-links
+
+%%
+```
+
+> El campo `excalidraw-plugin: parsed` debe ser el primero del YAML — el plugin lo busca al abrir el archivo. Sin él, Obsidian abre el archivo como nota de texto normal.
+
+> Los archivos se guardan como `.excalidraw.md` dentro del vault. Esto mantiene compatibilidad con YAML, DataView y el grafo de Obsidian. Para usar un archivo en excalidraw.com, exportar desde el plugin con el comando "Export as .excalidraw".
 
 > El bloque `<%* ... %>` puede aparecer visible al inicio de la nota si Templater no lo limpia del cuerpo — es cosmético y no afecta el funcionamiento.
 
@@ -309,22 +332,24 @@ date_created: <% tp.date.now("YYYY-MM-DD") %>
 
 ```yaml
 ---
-title: "<% tp.file.title %>"
+excalidraw-plugin: parsed
+tags: [excalidraw, galaxy-constellation]
 galaxy_body: constellation
+title: "<% tp.file.title %>"
 subject: 
 semester: 
 partial: 
 topic: 
 scope: partial
 tools: [excalidraw, mindmap-builder]
-tags: []
 date_created: <% tp.date.now("YYYY-MM-DD") %>
 status: activo
 ---
 ```
 
+> `excalidraw-plugin: parsed` debe ir primero — el plugin lo requiere para abrir el archivo como lienzo.
 > `scope`: `partial` si cubre el parcial completo | `topic` si cubre un solo tema.
-> Carpeta destino: `_app/Excalidraw/Constellations/` — Templater aplica esta plantilla automáticamente.
+> Carpeta destino: `_app/Excalidraw/Constellations/` — movimiento automático por Templater.
 > Ver [[_mindmap-system]] para convención de nombres y flujo de uso.
 
 ---
@@ -333,19 +358,21 @@ status: activo
 
 ```yaml
 ---
-title: "<% tp.file.title %>"
+excalidraw-plugin: parsed
+tags: [excalidraw, galaxy-observatory]
 galaxy_body: observatory
+title: "<% tp.file.title %>"
 subject: 
 semester: 
 partial: 
 topic: 
 attached_to: ""
-tags: []
 date_created: <% tp.date.now("YYYY-MM-DD") %>
 ---
 ```
 
-> Carpeta destino: `_app/Excalidraw/Observatory/` — Templater aplica esta plantilla automáticamente.
+> `excalidraw-plugin: parsed` debe ir primero — el plugin lo requiere para abrir el archivo como lienzo.
+> Carpeta destino: `_app/Excalidraw/Observatory/` — movimiento automático por Templater.
 > Ver [[_mindmap-system]] para convención de nombres y flujo de uso.
 
 ---
@@ -359,6 +386,8 @@ date_created: <% tp.date.now("YYYY-MM-DD") %>
 | `tp.file.cursor()` en todas las plantillas | El cursor cae siempre en el cuerpo, listo para escribir sin tener que hacer clic. |
 | Folder Templates solo para Constellations y Observatory | Son las únicas carpetas donde el tipo de nota es 100% predecible por carpeta. En `Semesters/` el tipo varía por nota, no por carpeta. |
 | Opción B como sistema oficial para Semesters/ (2026-05-28) | Las plantillas B preguntan materia, semestre, parcial, tema y nombre, y mueven el archivo automáticamente. Elimina la necesidad de navegar manualmente a la carpeta destino. Las plantillas A originales quedan consolidadas como respaldo en `_templates/alt-B/plantillas-A-respaldo.md`. |
+| YAML híbrido en constellation y observatory (2026-05-28) | El plugin de Excalidraw requiere `excalidraw-plugin: parsed` en el frontmatter para abrir el archivo como lienzo. Se unifica con los campos galaxy en un solo bloque YAML. Sin este campo el archivo se abre como nota de texto. |
+| Extensión `.excalidraw.md` en lugar de `.excalidraw` | Mantener `.md` preserva compatibilidad con YAML, DataView y el grafo de Obsidian. Para usar en excalidraw.com se exporta con el comando del plugin. |
 | `contextogen.md` vive en `_templates/` pero no es una plantilla galaxy | Es una herramienta de infraestructura para generar contexto para Claude. Se mantiene ahí por conveniencia. |
 
 %%
