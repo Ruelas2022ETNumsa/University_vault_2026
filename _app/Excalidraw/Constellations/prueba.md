@@ -1,0 +1,38 @@
+---
+excalidraw-plugin: parsed
+tags: [excalidraw, galaxy-constellation]
+galaxy_body: constellation
+title: "Untitled"
+subject: 
+semester: 
+partial: 
+topic: 
+scope: partial
+tools: [excalidraw, mindmap-builder]
+date_created: 2026-05-28
+status: activo
+---
+==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the command palette: 'Decompress current Excalidraw file'. For more info check in plugin settings under 'Saving'
+
+
+# Excalidraw Data
+
+## Text Elements
+%%
+## Drawing
+```compressed-json
+N4KAkARALgngDgUwgLgAQQQDwMYEMA2AlgCYBOuA7hADTgQBuCpAzoQPYB2KqATLZMzYBXUtiRoIACyhQ4zZAHoFAc0JRJQgEYA6bGwC2CgF7N6hbEcK4OCtptbErHALRY8RMpWdx8Q1TdIEfARcZgRmBShcZR5tHgBmbQB2GjoghH0EDihmbgBtcDBQMBKIEm4IAE4ANg5ieIARAEU4VJLIWEQKwOwojmVgttLMbh4ADiTtMfiAFgBWOYAGGbGE
+
++Pjq/lKYbmdKue05lZnKpKSARmWzufityAoSdW4xme1qxeqk+LHT8/Gfu5SBCEZTSbhnbSVHhJcafOZJao/GqA6wDcSoRaA5hQUhsADWCAAwmx8GxSBUAMTnBDU6lDSCaXDYPHKXFCOrE0nkiQ46zMOC4QLZekQABmhHw+AAyrBBhJBB4RdjcQSAOqPSSjLE4/EIGUwOXoBXlQFs0EccK5NDnQFsAXYNQ7a2LTGFSCs4RwACSxCtqDyAF1AaLyJk
+
+fdwOEJJYDCHUsBVcIsRWy6hbmH7iu1oPB0fE3QBfLEIBDEUbnc7xRanaqzQGMFjsLjWzZuhhMVicABynDE3Dmn3G8UuLazhGYDXSUBL3FFBDCgM0wjqAFFgplsn7I9HW0I4MRcFPS9akmMXTxzkl+9UK4CiBw8RGo/hb2xmdO0LP8GFCvnwEG6LgcBwDKB7opm0CSBk6IQPupAPlsDCEAgFAAEJMiyKbEJyZKUqKeH4UMEDYCIQpQF6U76DKKpEi
+
+SOESFSNKMYRxGkKR5EZGhzIeuyWG0dy6C8hw/KClkUDMSRonsfoABiErSrK0HGqWCEsWxFFUbq6rEE8aB8IURESdkUkaQS+qGhASniaxkkUQASsI5qWtwNr6apNkZAA8vajrOS6KmGWRFHSZwUDSbg+gSk6qBzP51lGUFIVSoQRjojwrqlG58UZAAKlgUAAIJEMoTboMEopibFakZCBpAFaxbAUJBuBHqgW7Pq5AVScudT5fVjUhC1ECCriVCVe5
+
++i9SN2U5t0S7KR1cWBRk0mhgg9mGm1CHMNguKSgAGs5UKQisSSVOcYw3OMlSVFtO0kvgACa3BDgcvxDgi17XbMMX6UYbAGNwmaQPQBBCOi5zaH84wzDwP5jVl+j2TxaZ+hAmGEayJBJSlozpe6pBY1OrRoD9pSY8QACybDEAg3W4JowQtZ+876eT2H8UDEAoSSg2kMojIABTnkk1C8BeovC6LiyHAAlCKtkIMoUaCt0/O4ELlYS5rvDa9Lcxy3DC
+
+2kSZCBeVAjabk+CEhuFa1ZDTBP9IDrZZPTjPcDiYOAtgRDE6gnsIICHC2x7pBe62whQHe6IB4C+iCgSpCdiHaCx628dwUwdMM++/thwghulHYABWCC9MwUrB3AVM09n7sfnOgf6Uy5uMNl/34M7WadIp6S9I2IrEdiBjTV0aCba2pJvkzjfBrilF9+bnAzrPk+hAV/dtx3j6SoXkCOMwbs0dkeUU1kQgr1+TelJosaOP0AAKgSikwWS9hIrs5/Np
+
+Rjihd+xsoOuuc04/2YBTEgcA2CxigJXQCcAAFAJaiAhkbBMBSkXo2Gu0E9DZFwLGCA4BCx0HFMEDMv58xAA=
+```
+%%
