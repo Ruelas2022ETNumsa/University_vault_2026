@@ -177,6 +177,18 @@
       "Font Sizes": {
         "value": "Normal Scale",
         "hidden": false
+      },
+      "Preferred Zoom Level": {
+        "value": "Low",
+        "hidden": false
+      },
+      "Growth Mode": {
+        "value": "Right-Left",
+        "hidden": false
+      },
+      "Arrow Type": {
+        "value": "curved",
+        "hidden": false
       }
     }
   },
