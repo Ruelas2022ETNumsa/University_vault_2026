@@ -163,7 +163,7 @@
         "hidden": true
       },
       "Is Undocked": {
-        "value": false,
+        "value": true,
         "hidden": false
       },
       "Branch Scale Style": {
