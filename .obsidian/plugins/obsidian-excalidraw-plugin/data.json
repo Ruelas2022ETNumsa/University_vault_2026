@@ -176,7 +176,11 @@
       },
       "Font Sizes": {
         "value": "Normal Scale",
-        "hidden": false
+        "valueset": [
+          "Use scene fontsize",
+          "Fibonacci Scale",
+          "Normal Scale"
+        ]
       },
       "Preferred Zoom Level": {
         "value": "Low",
@@ -184,7 +188,15 @@
       },
       "Growth Mode": {
         "value": "Right-Left",
-        "hidden": false
+        "valueset": [
+          "Radial",
+          "Right-facing",
+          "Left-facing",
+          "Right-Left",
+          "Up-facing",
+          "Down-facing",
+          "Up-Down"
+        ]
       },
       "Arrow Type": {
         "value": "curved",
@@ -204,9 +216,7 @@
   "pinnedScripts": [
     "_app/Excalidraw/Scripts/Downloaded/Mindmap Builder.md"
   ],
-  "sidepanelTabs": [
-    "{\"script\":\"Downloaded/Mindmap Builder\",\"title\":\"Mind Map Builder\"}"
-  ],
+  "sidepanelTabs": [],
   "customPens": [
     {
       "type": "default",
