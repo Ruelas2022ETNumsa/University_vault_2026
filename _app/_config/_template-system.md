@@ -21,7 +21,7 @@ Este documento define el sistema de plantillas del vault. Todas las plantillas u
 
 ## Idea central
 
-Cada tipo de cuerpo galaxy tiene su plantilla en `_templates/`. Al crear un archivo nuevo en la carpeta correcta, Templater aplica automáticamente la plantilla correspondiente con el YAML precargado, la fecha del día y el cursor posicionado en el cuerpo.
+Cada tipo de cuerpo galaxy tiene su plantilla en `_templates/`. Al crear una nota nueva, el usuario usa el botón del ribbon para abrir el selector de Templater, elige la plantilla correspondiente, y responde las preguntas de ruta. Templater completa el YAML, inserta la fecha del día, mueve el archivo a la carpeta correcta y posiciona el cursor en el cuerpo.
 
 ---
 
@@ -30,36 +30,36 @@ Cada tipo de cuerpo galaxy tiene su plantilla en `_templates/`. Al crear un arch
 | Archivo | `galaxy_body` | Carpeta destino | Creación |
 |---------|--------------|-----------------|----------|
 | `tpl-star.md` | `star` | `MOC/` | Automático |
-| `tpl-planet.md` | `planet` | `Semesters/.../Topic_NN.../` | Manual (Opción A) |
-| `tpl-moon.md` | `moon` | `Semesters/.../Topic_NN.../` | Manual (Opción A) |
-| `tpl-comet.md` | `comet` | `Semesters/.../Topic_NN.../` | Manual (Opción A) |
-| `tpl-nebula.md` | `nebula` | `Semesters/.../Topic_NN.../` | Manual (Opción A) |
-| `tpl-dwarf.md` | `dwarf` | `Semesters/.../Topic_NN.../` | Manual (Opción A) |
-| `tpl-asteroid.md` | `asteroid` | `Semesters/.../Topic_NN.../` | Manual (Opción A) |
-| `tpl-photon.md` | `photon` | `Semesters/.../Topic_NN.../` | Manual (Opción A) |
-| `tpl-bridge.md` | `bridge` | `Semesters/.../` | Manual (Opción A) |
+| `tpl-planet.md` | `planet` | `Semesters/.../Topic_NN.../` | Automático (Opción B) |
+| `tpl-moon.md` | `moon` | `Semesters/.../Topic_NN.../` | Automático (Opción B) |
+| `tpl-comet.md` | `comet` | `Semesters/.../Topic_NN.../` | Automático (Opción B) |
+| `tpl-nebula.md` | `nebula` | `Semesters/.../Topic_NN.../` | Automático (Opción B) |
+| `tpl-dwarf.md` | `dwarf` | `Semesters/.../Partial_N/` | Automático (Opción B) |
+| `tpl-asteroid.md` | `asteroid` | `Semesters/.../Topic_NN.../` | Automático (Opción B) |
+| `tpl-photon.md` | `photon` | `Semesters/.../Topic_NN.../` | Automático (Opción B) |
+| `tpl-bridge.md` | `bridge` | `Semesters/Materia1-Materia2/` | Automático (Opción B) |
 | `tpl-constellation.md` | `constellation` | `_app/Excalidraw/Constellations/` | Automático |
 | `tpl-observatory.md` | `observatory` | `_app/Excalidraw/Observatory/` | Automático |
 
+**Automático (Opción B)** = Templater pregunta materia, semestre, parcial, tema y nombre. Mueve el archivo a la ruta correcta automáticamente.
 **Automático** = Templater aplica la plantilla al crear un archivo en esa carpeta (Folder Templates) o via `tp.file.move` en la plantilla.
-**Manual (Opción A)** = el usuario navega a la carpeta correcta en el explorador, crea el archivo ahí y selecciona la plantilla desde el selector de Templater. Sin lógica de movimiento en la plantilla.
 
-### Alternativa Opción B
-
-En `_templates/alt-B/` existen versiones alternativas con ruta dinámica. Al usarlas, Templater pregunta materia, semestre, parcial, tema y nombre, y mueve el archivo a la ruta correcta automáticamente.
+### Preguntas por plantilla
 
 | Archivo | Preguntas al crear |
 |---------|-------------------|
-| `tpl-planet-B.md` | Materia, semestre, parcial, tema, nombre |
-| `tpl-moon-B.md` | Materia, semestre, parcial, tema, nombre |
-| `tpl-comet-B.md` | Materia, semestre, parcial, tema, nombre |
-| `tpl-nebula-B.md` | Materia, semestre, parcial, tema, nombre |
-| `tpl-dwarf-B.md` | Materia, semestre, parcial, nombre |
-| `tpl-asteroid-B.md` | Materia, semestre, parcial, tema, nombre |
-| `tpl-photon-B.md` | Materia, semestre, parcial, tema, nombre |
-| `tpl-bridge-B.md` | Materia 1, materia 2, nombre |
+| `tpl-planet.md` | Materia, semestre, parcial, tema, nombre |
+| `tpl-moon.md` | Materia, semestre, parcial, tema, nombre |
+| `tpl-comet.md` | Materia, semestre, parcial, tema, nombre |
+| `tpl-nebula.md` | Materia, semestre, parcial, tema, nombre |
+| `tpl-dwarf.md` | Materia, semestre, parcial, nombre |
+| `tpl-asteroid.md` | Materia, semestre, parcial, tema, nombre |
+| `tpl-photon.md` | Materia, semestre, parcial, tema, nombre |
+| `tpl-bridge.md` | Materia 1, materia 2, nombre |
 
-> Las plantillas Opción B están en prueba en `_templates/alt-B/`. Una vez elegida la opción definitiva, las alternativas descartadas se moverán a `borrar/`.
+### Respaldo Opción A
+
+Las plantillas originales (sin lógica de movimiento) están consolidadas en `_templates/alt-B/plantillas-A-respaldo.md` como referencia.
 
 ---
 
@@ -88,7 +88,7 @@ En `_templates/alt-B/` existen versiones alternativas con ruta dinámica. Al usa
 |-------|---------|-------|
 | Crear nota desde plantilla | `Templater: Create new note from template` | Abre selector — el usuario elige la plantilla |
 
-> Se usa un solo botón en el ribbon que abre el selector de Templater. El usuario elige `tpl-constellation`, `tpl-observatory` u otra según el caso. Esto evita saturar el ribbon con un botón por tipo.
+> Se usa un solo botón en el ribbon que abre el selector de Templater. El usuario elige la plantilla correcta. Esto evita saturar el ribbon con un botón por tipo.
 
 ---
 
@@ -116,6 +116,8 @@ await tp.file.move("_app/Excalidraw/Constellations/" + title);
 | `<% tp.file.title %>` | Inserta el nombre del archivo como título |
 | `<% tp.date.now("YYYY-MM-DD") %>` | Inserta la fecha de creación |
 | `<%* tp.file.cursor() %>` | Posiciona el cursor al abrir la nota |
+| `<%* tp.system.prompt("...") %>` | Abre cuadro de texto para capturar input del usuario |
+| `<%* tp.file.move(path) %>` | Mueve el archivo a la ruta construida dinámicamente |
 
 ---
 
@@ -156,26 +158,17 @@ galaxy-links
 ---
 title: "<% tp.file.title %>"
 galaxy_body: planet
-subject: 
-semester: 
-partial: 
+subject: <% subject %>
+semester: <% sem %>
+partial: <% partial %>
 topic: 
 star: ""
 moons: []
 comets: []
-tags: []
+tags: [<% subject %>, galaxy-planet, P<% partial %>]
 date_created: <% tp.date.now("YYYY-MM-DD") %>
 status: activo
 ---
-```
-
-```
-<%* tp.file.cursor() %>
-
-%%
-galaxy-links
-
-%%
 ```
 
 ---
@@ -186,23 +179,14 @@ galaxy-links
 ---
 title: "<% tp.file.title %>"
 galaxy_body: moon
-subject: 
-semester: 
-partial: 
+subject: <% subject %>
+semester: <% sem %>
+partial: <% partial %>
 topic: 
 orbits: ""
-tags: []
+tags: [<% subject %>, galaxy-moon, P<% partial %>]
 date_created: <% tp.date.now("YYYY-MM-DD") %>
 ---
-```
-
-```
-<%* tp.file.cursor() %>
-
-%%
-galaxy-links
-
-%%
 ```
 
 ---
@@ -213,25 +197,16 @@ galaxy-links
 ---
 title: "<% tp.file.title %>"
 galaxy_body: comet
-subject: 
-semester: 
-partial: 
+subject: <% subject %>
+semester: <% sem %>
+partial: <% partial %>
 topic: 
 source: ""
 concepts_used: []
 status: pendiente
-tags: []
+tags: [<% subject %>, galaxy-comet, P<% partial %>]
 date_created: <% tp.date.now("YYYY-MM-DD") %>
 ---
-```
-
-```
-<%* tp.file.cursor() %>
-
-%%
-galaxy-links
-
-%%
 ```
 
 ---
@@ -242,22 +217,13 @@ galaxy-links
 ---
 title: "<% tp.file.title %>"
 galaxy_body: nebula
-subject: 
-semester: 
-partial: 
+subject: <% subject %>
+semester: <% sem %>
+partial: <% partial %>
 session_date: <% tp.date.now("YYYY-MM-DD") %>
 comets: []
-tags: []
+tags: [<% subject %>, galaxy-nebula, P<% partial %>]
 ---
-```
-
-```
-<%* tp.file.cursor() %>
-
-%%
-galaxy-links
-
-%%
 ```
 
 ---
@@ -268,22 +234,13 @@ galaxy-links
 ---
 title: "<% tp.file.title %>"
 galaxy_body: dwarf
-subject: 
-semester: 
-partial: 
+subject: <% subject %>
+semester: <% sem %>
+partial: <% partial %>
 covers: []
-tags: []
+tags: [<% subject %>, galaxy-dwarf, P<% partial %>]
 date_created: <% tp.date.now("YYYY-MM-DD") %>
 ---
-```
-
-```
-<%* tp.file.cursor() %>
-
-%%
-galaxy-links
-
-%%
 ```
 
 ---
@@ -294,9 +251,9 @@ galaxy-links
 ---
 title: "<% tp.file.title %>"
 galaxy_body: asteroid
-subject: 
-semester: 
-partial: 
+subject: <% subject %>
+semester: <% sem %>
+partial: <% partial %>
 topic: 
 source_type: 
 source_title: ""
@@ -304,22 +261,13 @@ source_author: ""
 source_chapter: ""
 pdf_file: ""
 related_planets: []
-tags: []
+tags: [<% subject %>, galaxy-asteroid, P<% partial %>]
 date_created: <% tp.date.now("YYYY-MM-DD") %>
 status: en-proceso
 ---
 ```
 
 > Para YAML extendido de asteroid con PDF ver [[_pdf-system]].
-
-```
-<%* tp.file.cursor() %>
-
-%%
-galaxy-links
-
-%%
-```
 
 ---
 
@@ -331,22 +279,13 @@ title: "<% tp.file.title %>"
 galaxy_body: photon
 photon_type: desmos
 attached_to: ""
-subject: 
-tags: []
+subject: <% subject %>
+tags: [<% subject %>, galaxy-photon, P<% partial %>]
 date_created: <% tp.date.now("YYYY-MM-DD") %>
 ---
 ```
 
 > `photon_type` puede ser: `desmos` | `image`. No incluye Excalidraw — para eso usar `tpl-constellation` o `tpl-observatory`.
-
-```
-<%* tp.file.cursor() %>
-
-%%
-galaxy-links
-
-%%
-```
 
 ---
 
@@ -356,21 +295,12 @@ galaxy-links
 ---
 title: "<% tp.file.title %>"
 galaxy_body: bridge
-subjects: []
+subjects: [<% subject1 %>, <% subject2 %>]
 semesters: []
 connects: []
-tags: []
+tags: [galaxy-bridge, <% subject1 %>, <% subject2 %>]
 date_created: <% tp.date.now("YYYY-MM-DD") %>
 ---
-```
-
-```
-<%* tp.file.cursor() %>
-
-%%
-galaxy-links
-
-%%
 ```
 
 ---
@@ -397,15 +327,6 @@ status: activo
 > Carpeta destino: `_app/Excalidraw/Constellations/` — Templater aplica esta plantilla automáticamente.
 > Ver [[_mindmap-system]] para convención de nombres y flujo de uso.
 
-```
-<%* tp.file.cursor() %>
-
-%%
-galaxy-links
-
-%%
-```
-
 ---
 
 ### tpl-observatory
@@ -427,15 +348,6 @@ date_created: <% tp.date.now("YYYY-MM-DD") %>
 > Carpeta destino: `_app/Excalidraw/Observatory/` — Templater aplica esta plantilla automáticamente.
 > Ver [[_mindmap-system]] para convención de nombres y flujo de uso.
 
-```
-<%* tp.file.cursor() %>
-
-%%
-galaxy-links
-
-%%
-```
-
 ---
 
 ## Registro de decisiones de diseño
@@ -446,6 +358,7 @@ galaxy-links
 | Prefijo `tpl-` en todos los nombres | Distingue visualmente las plantillas del resto de notas en `_templates/`. |
 | `tp.file.cursor()` en todas las plantillas | El cursor cae siempre en el cuerpo, listo para escribir sin tener que hacer clic. |
 | Folder Templates solo para Constellations y Observatory | Son las únicas carpetas donde el tipo de nota es 100% predecible por carpeta. En `Semesters/` el tipo varía por nota, no por carpeta. |
+| Opción B como sistema oficial para Semesters/ (2026-05-28) | Las plantillas B preguntan materia, semestre, parcial, tema y nombre, y mueven el archivo automáticamente. Elimina la necesidad de navegar manualmente a la carpeta destino. Las plantillas A originales quedan consolidadas como respaldo en `_templates/alt-B/plantillas-A-respaldo.md`. |
 | `contextogen.md` vive en `_templates/` pero no es una plantilla galaxy | Es una herramienta de infraestructura para generar contexto para Claude. Se mantiene ahí por conveniencia. |
 
 %%
