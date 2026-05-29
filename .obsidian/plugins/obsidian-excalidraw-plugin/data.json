@@ -173,7 +173,9 @@
   "latexPreambleLocation": "preamble.sty",
   "taskboneEnabled": false,
   "taskboneAPIkey": "",
-  "pinnedScripts": [],
+  "pinnedScripts": [
+    "_app/Excalidraw/Scripts/Downloaded/Mindmap Builder.md"
+  ],
   "sidepanelTabs": [
     "{\"script\":\"Downloaded/Mindmap Builder\",\"title\":\"Mind Map Builder\"}"
   ],
