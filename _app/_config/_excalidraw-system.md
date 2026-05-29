@@ -33,7 +33,7 @@ Archivo de configuración: .obsidian/plugins/obsidian-excalidraw-plugin/data.jso
 | Campo en data.json | Valor | Razón |
 |--------------------|-------|-------|
 | `folder` | `_app/Excalidraw` | Carpeta raíz donde viven Constellations/ y Observatory/ |
-| `templateFilePath` | `_app/Excalidraw/Template.excalidraw` | Plantilla base para nuevos lienzos creados desde el botón de Excalidraw |
+| `templateFilePath` | `_app/Excalidraw/Template.excalidraw.md` | Plantilla base para nuevos lienzos creados desde el botón de Excalidraw |
 | `scriptFolderPath` | `_app/Excalidraw/Scripts` | Carpeta donde el Script Store instala Mindmap Builder y otros scripts |
 
 > `fontAssetsPath` se deja en su valor por defecto — no se usan fuentes CJK en este vault.
@@ -122,6 +122,31 @@ Cuando un `constellation` u `observatory` se embebe en una nota `.md` con `![[no
 
 ---
 
+## Template base — `_app/Excalidraw/Template.excalidraw.md`
+
+El plugin usa este archivo como punto de partida cuando se crea un lienzo **desde el botón de Excalidraw** (no desde Templater). Contiene el YAML mínimo del Sistema Galaxy con campos vacíos para completar manualmente, más el bloque `compressed-json` de lienzo vacío.
+
+```yaml
+---
+excalidraw-plugin: parsed
+tags: [excalidraw]
+galaxy_body: 
+title: ""
+subject: 
+semester: 
+partial: 
+topic: 
+date_created: 
+status: activo
+---
+```
+
+> Los campos `galaxy_body`, `subject`, `semester`, `partial` y `topic` se completan a mano según si el lienzo será `constellation` o `observatory`. Luego se debe mover el archivo a `Constellations/` u `Observatory/` manualmente, y agregar el bloque `%%` con los wikilinks galaxy.
+>
+> **Flujo preferido:** siempre usar Templater (`tpl-constellation` o `tpl-observatory`) — mueve el archivo automáticamente y precarga todos los campos.
+
+---
+
 ## Configuración YAML requerida en archivos Excalidraw
 
 Todo archivo `.excalidraw.md` en este vault **debe** comenzar con `excalidraw-plugin: parsed` como primer campo del YAML. Sin este campo el plugin abre el archivo como nota de texto en lugar de como lienzo.
@@ -169,9 +194,9 @@ date_created: YYYY-MM-DD
 ```
 _app/
 └── Excalidraw/
-    ├── Template.excalidraw       ← plantilla base para nuevos lienzos
+    ├── Template.excalidraw.md    ← plantilla base para lienzos creados fuera de Templater
     ├── Scripts/                  ← scripts instalados desde el Script Store
-    │   └── Mindmap Builder.md    ← script principal para constellations
+    │   └── Mindmap Builder.md    ← script principal para constellations (instalar manualmente)
     ├── Constellations/           ← galaxy_body: constellation
     │   └── ETNXXX-PN-nombre-descriptivo.excalidraw.md
     └── Observatory/              ← galaxy_body: observatory
@@ -186,7 +211,7 @@ Los siguientes valores fueron modificados respecto al estado inicial del plugin:
 
 | Campo | Valor anterior | Valor nuevo | Quién |
 |-------|---------------|-------------|-------|
-| `templateFilePath` | `Excalidraw/Template.excalidraw` | `_app/Excalidraw/Template.excalidraw` | usuario |
+| `templateFilePath` | `Excalidraw/Template.excalidraw` | `_app/Excalidraw/Template.excalidraw.md` | usuario + claude |
 | `scriptFolderPath` | `Excalidraw/Scripts` | `_app/Excalidraw/Scripts` | usuario |
 | `drawingFilenamePrefix` | `Drawing ` | `RENOMBRAR-` | usuario |
 | `drawingFilenameDateTime` | `YYYY-MM-DD HH.mm.ss` | `DD-MM-YYYY HH.mm.ss` | usuario |
@@ -196,13 +221,22 @@ Los siguientes valores fueron modificados respecto al estado inicial del plugin:
 | `matchThemeAlways` | `false` | `true` | claude |
 | `pngExportScale` | `1` | `2` | claude |
 
+### Archivos y carpetas creados
+
+| Acción | Ruta |
+|--------|------|
+| Carpeta creada | `_app/Excalidraw/Scripts/` |
+| Archivo creado | `_app/Excalidraw/Template.excalidraw.md` |
+| Archivo creado | `_app/_config/_excalidraw-system.md` |
+
 ---
 
 ## Pendientes
 
-- [ ] Crear `_app/Excalidraw/Template.excalidraw` — plantilla base con lienzo vacío y YAML mínimo
-- [ ] Instalar Mindmap Builder desde el Script Store de Excalidraw
-- [ ] Verificar que las plantillas `tpl-constellation.md` y `tpl-observatory.md` generan el bloque `compressed-json` correctamente al ejecutarse con Templater
+- [x] Crear `_app/Excalidraw/Template.excalidraw.md` — plantilla base con lienzo vacío y YAML mínimo
+- [x] Crear carpeta `_app/Excalidraw/Scripts/`
+- [ ] Instalar Mindmap Builder desde el Script Store de Excalidraw — hacerlo manualmente dentro de Obsidian
+- [ ] Verificar que `tpl-constellation.md` y `tpl-observatory.md` abren correctamente como lienzo al ejecutarse con Templater
 - [ ] Crear primer `constellation` de prueba para ETN806-P2
 
 %%
