@@ -12,6 +12,7 @@ status: activo
 # Sistema Mindmap — University Vault
 
 > Sistema Galaxy: [[_galaxy-system]]
+> Sistema de Plantillas: [[_template-system]]
 > Convención de notas: [[convencion-notas]]
 
 Este documento define cómo se usa Excalidraw dentro del Sistema Galaxy. Excalidraw reemplaza completamente a Canvas de Obsidian.
@@ -46,6 +47,8 @@ _app/
         └── ETNXXX-PN-nombre-descriptivo.excalidraw
 ```
 
+Templater crea las carpetas automáticamente si no existen al momento de crear el archivo.
+
 ---
 
 ## Convención de nombres
@@ -76,8 +79,6 @@ ETN806-P2-integration-region.excalidraw      ← observatory, dibujo técnico
 
 ## Granularidad de los mapas
 
-Un mapa puede cubrir distintos niveles según la complejidad del contenido:
-
 | Nivel | Cuándo usarlo | Ejemplo de nombre |
 |-------|--------------|-------------------|
 | Parcial completo | Temas cortos o relacionados que caben en un mapa | `ETN806-P2-galaxy-map` |
@@ -93,7 +94,7 @@ No hay regla fija — la decisión se toma según la cantidad de nodos. Si el ma
 
 ```yaml
 ---
-title: "ETN806 — P2: Mapa galaxy Parcial 2"
+title: "<% tp.file.title %>"
 galaxy_body: constellation
 subject: ETN806
 semester: 8
@@ -107,7 +108,9 @@ status: activo
 ---
 ```
 
-Bloque de wikilinks al final (invisible en lectura, visible en grafo):
+> Al crear con `tpl-constellation.md`, Templater pide el nombre del archivo y mueve el archivo a `_app/Excalidraw/Constellations/` automáticamente. Los campos de materia, semestre y parcial se completan a mano después de la creación.
+
+Bloque de wikilinks al final:
 
 ```markdown
 %%
@@ -124,17 +127,19 @@ galaxy-links
 
 ```yaml
 ---
-title: "Diagrama: Región de integración — Dominio triangular"
+title: "<% tp.file.title %>"
 galaxy_body: observatory
 subject: ETN806
 semester: 8
 partial: 2
 topic: 1
 attached_to: "[[ETN806-T01-normalization-k-solved]]"
-tags: [ETN806, galaxy-observatory, visual, diagrama, P2, T01]
+tags: [ETN806, galaxy-observatory, P2, T01]
 date_created: YYYY-MM-DD
 ---
 ```
+
+> Al crear con `tpl-observatory.md`, Templater pide el nombre del archivo y mueve el archivo a `_app/Excalidraw/Observatory/` automáticamente.
 
 ```markdown
 %%
@@ -195,33 +200,39 @@ Un `constellation` de ETN806 que enlaza sus stars aparecerá en el grafo como un
 
 ---
 
-## Plugins necesarios
+## Plugins instalados y configurados
 
 | Plugin | Tipo | Función | Estado |
 |--------|------|---------|--------|
-| Excalidraw | Community | Motor principal de dibujo y mapas | Instalar |
-| Templater | Community | Crear archivos en carpeta correcta con YAML preconfigurado | Instalar |
-| Commander | Community | Botones en la interfaz para crear constellation/observatory con un clic | Instalar |
+| Excalidraw | Community | Motor principal de dibujo y mapas | ✅ Instalado |
+| Templater | Community | Creación dinámica de archivos con YAML preconfigurado y movimiento automático a carpeta correcta | ✅ Instalado y configurado |
+| Commander | Community | Botón en ribbon para abrir el selector de plantillas | ✅ Instalado y configurado |
 
 > Canvas de Obsidian: **desactivado** — reemplazado por este sistema.
 
 ---
 
-## Flujo de creación de un mapa (cuando Templater + Commander estén configurados)
+## Flujo de creación de un mapa
 
 ```
-Clic en ícono "Nueva Constellation"
+Clic en el botón del ribbon (selector de plantillas)
         ↓
-Templater crea ETNXXX-PN-nombre.excalidraw en Constellations/
-con YAML constellation precargado
+Elegir tpl-constellation o tpl-observatory
         ↓
-Se abre Excalidraw automáticamente
+Templater pide: nombre del archivo
         ↓
-Activar Mindmap Builder desde paleta (Ctrl+P)
+Templater crea el archivo con YAML precargado
+y lo mueve automáticamente a Constellations/ u Observatory/
+(crea la carpeta si no existe)
+        ↓
+Se abre el archivo en Excalidraw
+        ↓
+Activar Mindmap Builder desde paleta (Ctrl+P) — solo para constellation
         ↓
 Construir el mapa: star al centro → planets → moons/comets
         ↓
-Al terminar: agregar wikilinks en bloque %% al final del archivo
+Al terminar: completar campos YAML (subject, semester, partial, topic)
+y agregar wikilinks en bloque %% al final del archivo
 ```
 
 ---
@@ -232,11 +243,14 @@ Al terminar: agregar wikilinks en bloque %% al final del archivo
 |----------|-------|
 | Excalidraw reemplaza Canvas | Canvas es rígido, no integra con el grafo y tiene pocas opciones de personalización. Excalidraw con Mindmap Builder ofrece auto-layout, atajos de teclado, y sus archivos participan del grafo como notas `.md`. |
 | Dos carpetas separadas (Constellations / Observatory) | Uso distinto, frecuencia distinta. Constellations es el 80% del uso — tenerla como carpeta por defecto reduce fricción. Observatory es para casos específicos de dibujo técnico. |
+| Un solo botón en ribbon para todas las plantillas | Abre el selector de Templater con todas las plantillas disponibles. Evita saturar el ribbon con un botón por tipo de cuerpo galaxy. |
+| constellation y observatory usan ruta fija, no dinámica | A diferencia de las plantillas de Semesters/ (Opción B), estas dos plantillas siempre van a la misma carpeta. Templater mueve el archivo automáticamente sin necesidad de preguntar materia ni semestre. |
 | Nombre sin número de tema por defecto | Un mapa cubre normalmente un parcial completo. El tema se agrega al nombre solo cuando el mapa es específico de un tema extenso. |
 | `photon` no incluye Excalidraw | Con `constellation` y `observatory` dedicados, `photon` queda exclusivamente para Desmos e imágenes exportadas. |
 
 %%
 galaxy-links
 [[_galaxy-system]]
+[[_template-system]]
 [[convencion-notas]]
 %%
