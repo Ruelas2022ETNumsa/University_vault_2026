@@ -68,6 +68,7 @@ tulos
 tama
 tipograf
 tuvieran
+trigger
 ToDo
 Templater
 Text
@@ -143,6 +144,7 @@ Selecciona
 Situaci
 Salta
 Soluci
+Shortcuts
 Plugins
 Pendientes
 Plugin
@@ -307,6 +309,9 @@ descrito
 dibujar
 dependen
 directo
+delay
+desactivar
+documentados
 Vault
 Verificar
 Variables
@@ -405,6 +410,8 @@ busque
 backlink
 bidireccional
 bidireccionalidad
+backslash
+brackets
 scope
 status
 selector
@@ -516,6 +523,8 @@ seleccionan
 seleccionando
 selection
 situaci
+salto
+shorthands
 vault
 vil
 ver
@@ -562,6 +571,7 @@ vez
 vista
 vuelta
 variante
+vs
 audience
 activo
 auto
@@ -691,6 +701,7 @@ area
 ampl
 abierta
 adas
+align
 related
 recomendados
 ribbon
@@ -1085,6 +1096,10 @@ cadena
 cite
 caso
 cticamente
+cierre
+car
+cter
+close
 updated
 un
 universo
@@ -1610,6 +1625,7 @@ manuscrito
 mbrala
 metro
 moverlos
+matrix
 YAML
 Ya
 You
@@ -1899,6 +1915,8 @@ lejos
 lupa
 llama
 llegas
+llaves
+list
 incluyendo
 im
 instalar
@@ -1972,6 +1990,7 @@ integraci
 inter
 inferior
 imposible
+individuales
 Dependencia
 Dropbox
 Dataview
@@ -2123,6 +2142,9 @@ fin
 fuerza
 figura
 figuras
+fracciones
+fraction
+frecuentes
 haya
 hace
 hacer
@@ -2150,6 +2172,7 @@ queries
 qu
 quieres
 quote
+quiere
 University
 Usar
 Un
@@ -2233,6 +2256,7 @@ wikilink
 with
 webgpu
 web
+word
 xima
 xeles
 Wikilinks
