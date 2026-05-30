@@ -1,6 +1,26 @@
+---
+title: "Convención de Notas — University Vault"
+galaxy_body: beacon
+scope: vault
+audience: [usuario, claude]
+related_notes:
+  - "[[_galaxy-system]]"
+  - "[[_template-system]]"
+  - "[[_mindmap-system]]"
+  - "[[_pdf-system]]"
+tags: [beacon, convencion, infraestructura]
+date_created: 2026-05-28
+date_updated: 2026-05-29
+status: activo
+---
+
 # Convención de Notas — University Vault
 
-> Sistema completo: [[_galaxy-system]]
+> Sistema Galaxy: [[_galaxy-system]]
+> Sistema de Plantillas: [[_template-system]]
+> Sistema Mindmap: [[_mindmap-system]]
+> Sistema PDF: [[_pdf-system]]
+
 > ETN302 = sistema legacy (sin cambios). Todas las materias nuevas = Sistema Galaxy.
 
 ---
@@ -67,6 +87,9 @@ ETN806-ETN302-laplace-vs-probability.md
 | `dwarf` | ⬛ | Resumen — revisión condensada de tema o parcial |
 | `asteroid` | 🪨 | Referencia externa — libro, PDF, paper |
 | `photon` | 💡 | Visual — Desmos, Excalidraw, imagen |
+| `constellation` | 🌌 | Mapa mental galaxy — Excalidraw + Mindmap Builder |
+| `observatory` | 🔭 | Dibujo técnico libre en Excalidraw |
+| `beacon` | 📡 | Guía de infraestructura del vault — vive en `_app/` |
 | `bridge` | 🌉 | Conexión entre materias |
 
 YAML mínimo requerido para cualquier nota Galaxy:
@@ -113,11 +136,19 @@ galaxy-links
 | `MOC/` | Notas de índice por materia, enlazan todas sus stars |
 | `_app/_config/` | Configuración del sistema: convención, galaxy system, tags |
 | `_app/_appnotes/` | Guías de herramientas: Desmos, tags, etc. |
-| `_app/Canvas/` | Mapas visuales en Canvas de Obsidian |
-| `_app/Excalidraw/` | Archivos fuente de Excalidraw |
+| `_app/Excalidraw/` | Archivos fuente de Excalidraw — `Constellations/` y `Observatory/` |
 | `_app/scripts/` | Scripts de automatización del baúl |
 | `_app/solve/` | Problemas conocidos y soluciones (git, sync, etc.) |
 | `_app/TagsRoutes/` | Archivos de configuración de rutas de tags |
 | `_assets/` | Imágenes exportadas: .png, .svg, .jpeg |
 | `_templates/` | Plantillas de notas — una por tipo de cuerpo galaxy |
+| `_pdf/` | Archivos PDF físicos — una carpeta por materia |
 | `borrar/` | Zona de espera antes de eliminar archivos permanentemente |
+
+%%
+galaxy-links
+[[_galaxy-system]]
+[[_template-system]]
+[[_mindmap-system]]
+[[_pdf-system]]
+%%

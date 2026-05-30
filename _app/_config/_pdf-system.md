@@ -1,8 +1,25 @@
+---
+title: "Sistema PDF — University Vault"
+galaxy_body: beacon
+scope: vault
+audience: [usuario, claude]
+related_notes:
+  - "[[_galaxy-system]]"
+  - "[[_note-system]]"
+  - "[[_mindmap-system]]"
+  - "[[_template-system]]"
+tags: [beacon, pdf, infraestructura]
+date_created: 2026-05-28
+date_updated: 2026-05-29
+status: activo
+---
+
 # Sistema PDF — University Vault
 
 > Sistema base: [[_galaxy-system]]
 > Convención de notas: [[_note-system]]
-> Este sistema extiende el cerebro digital Galaxy para integrar PDFs académicos de forma ordenada, sin carpetas regadas y con conexión directa al grafo de conocimiento.
+> Sistema Mindmap: [[_mindmap-system]]
+> Sistema de Plantillas: [[_template-system]]
 
 ---
 
@@ -244,3 +261,12 @@ Un `comet` puede tener `pdf_file` si el ejercicio resuelto viene de un PDF ofici
 | `source_type` como campo YAML | Permite filtrar con DataView: todos los libros, todas las prácticas, todos los papers de una materia. |
 | PDF++ para texto, Annotator para EPUBs | Cada plugin tiene su dominio. PDF++ es nativo a Obsidian. Annotator cubre lo que PDF++ no soporta. |
 | Text Extractor como dependencia de OmniSearch | Sin él OmniSearch solo busca en notas markdown. Con él el cerebro busca en todas las fuentes. |
+| Recortes de región PDF++ → `_assets/` | Las imágenes generadas al recortar una región de un PDF van al destino global de attachments (`_assets/`), no a `_pdf/`. Son visuals, no fuentes. Se tratan como `photon` con `photon_type: pdf-crop`. |
+
+%%
+galaxy-links
+[[_galaxy-system]]
+[[_note-system]]
+[[_mindmap-system]]
+[[_template-system]]
+%%

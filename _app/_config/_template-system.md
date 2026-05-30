@@ -4,8 +4,14 @@ galaxy_body: beacon
 scope: vault
 tool: templater
 audience: [usuario, claude]
+related_notes:
+  - "[[_galaxy-system]]"
+  - "[[_mindmap-system]]"
+  - "[[_note-system]]"
+  - "[[_pdf-system]]"
 tags: [beacon, templater, plantillas, infraestructura]
 date_created: 2026-05-28
+date_updated: 2026-05-29
 status: activo
 ---
 
@@ -13,6 +19,8 @@ status: activo
 
 > Sistema Galaxy: [[_galaxy-system]]
 > Sistema Mindmap: [[_mindmap-system]]
+> Convención de notas: [[_note-system]]
+> Sistema PDF: [[_pdf-system]]
 > Archivos físicos: `_templates/`
 
 Este documento define el sistema de plantillas del vault. Todas las plantillas usan **Templater** y siguen la convención del Sistema Galaxy.
@@ -308,7 +316,7 @@ date_created: <% tp.date.now("YYYY-MM-DD") %>
 ---
 ```
 
-> `photon_type` puede ser: `desmos` | `image`. No incluye Excalidraw — para eso usar `tpl-constellation` o `tpl-observatory`.
+> `photon_type` puede ser: `desmos` | `image` | `pdf-crop`. No incluye Excalidraw — para eso usar `tpl-constellation` o `tpl-observatory`.
 
 ---
 
@@ -394,4 +402,6 @@ date_created: <% tp.date.now("YYYY-MM-DD") %>
 galaxy-links
 [[_galaxy-system]]
 [[_mindmap-system]]
+[[_note-system]]
+[[_pdf-system]]
 %%
