@@ -9,7 +9,7 @@ related_notes:
   - "[[_sync-system]]"
 tags: [beacon, todo, plugins, infraestructura]
 date_created: 2026-05-29
-date_updated: 2026-05-29
+date_updated: 2026-05-30
 status: activo
 ---
 
@@ -21,7 +21,7 @@ status: activo
 
 ---
 
-## Plugins recomendados
+## Plugins
 
 ### Instalados ✅
 
@@ -37,25 +37,37 @@ status: activo
 | Text Extractor | Dependencia de OmniSearch — extrae texto de PDFs e imágenes | ✅ Instalado |
 | Remotely Save | Sync del vault con Dropbox | ✅ Instalado en PC — pendiente configurar en móvil |
 | File Hider | Ocultar archivos por extensión (.tmp, .bat, .ps1) | ✅ Instalado y configurado |
-| Completr | Autocompletado de LaTeX, tags y propiedades YAML | ✅ Instalado |
+| Completr | Autocompletado de LaTeX, tags y propiedades YAML | ✅ Instalado — pendiente configurar |
 
 ---
 
-### Pendientes de instalar ⏳
+### Pendientes de instalar y configurar ⏳
 
-| Plugin | Prioridad | Función | Razón para instalarlo |
-|--------|-----------|---------|----------------------|
-| **Dataview** | 🔴 Alta — Fase 4 del sistema | Consultas sobre el YAML de las notas directamente en Obsidian | Hace útil todo el YAML del Sistema Galaxy: filtrar comets pendientes, listar asteroids por parcial, ver todas las stars de ETN806, etc. |
-| **Linter** | 🟡 Media | Revisa y corrige automáticamente YAML y formato al guardar | Mantiene consistencia del Sistema Galaxy sin revisión manual — detecta campos faltantes, tags mal escritos, fechas incorrectas |
-| **DB Folder** | 🟢 Baja — depende de Dataview | Muestra carpetas como tabla tipo base de datos con campos YAML editables | Útil para ver todos los ejercicios de un parcial como filas y editarlos directamente. Requiere Dataview instalado primero |
+| Plugin | Prioridad | Función |
+|--------|-----------|---------|-----|
+| **Dataview** | 🔴 Alta — Fase 4 del sistema | Consultas sobre el YAML de las notas — filtra comets, asteroids, stars, notas pendientes por materia y parcial |
+| **Linter** | 🟡 Media | Revisa y corrige automáticamente YAML y formato al guardar — detecta campos faltantes, tags mal escritos |
+| **DB Folder** | 🟢 Baja — requiere Dataview | Vista de carpeta como tabla editable con campos YAML — instalar después de Dataview |
 
 ---
 
 ## Pendientes del sistema
 
+### Plugins — configuración pendiente
+- [ ] **Completr** — revisar y ajustar configuración (LaTeX, snippets, YAML)
+- [ ] **Dataview** — instalar y configurar (ver Fase 4)
+- [ ] **Linter** — instalar y configurar reglas para el Sistema Galaxy
+- [ ] **DB Folder** — instalar después de Dataview
+
 ### Sincronización móvil
 - [ ] Instalar Remotely Save en Android y conectar al mismo Dropbox — ver [[_sync-system]]
-- [ ] (Opcional, cuando haya tiempo) Configurar Git en Android con MGit — ver [[_sync-system]]
+- [ ] (Opcional) Configurar Git en Android con MGit — ver [[_sync-system]]
+
+### Excalidraw
+- [ ] Verificar que `tpl-constellation.md` y `tpl-observatory.md` abren correctamente como lienzo con Templater
+- [ ] Crear primer `constellation` de prueba para ETN806-P2
+- [ ] Instalar Mindmap Builder desde el Script Store de Excalidraw (si no está instalado)
+- [ ] Ajustar configuración pendiente del plugin Excalidraw — ver [[_excalidraw-system]]
 
 ### Fase 1 — ETN806
 - [ ] Crear estructura de carpetas: `Semesters/Sem_08/ETN806/Partial_2/Topic_NN.../`
@@ -68,10 +80,6 @@ status: activo
 - [ ] Crear notas planet para los conceptos centrales
 - [ ] Crear MOC de ETN806 en `MOC/`
 - [ ] Agregar bloques `%%` a todas las notas de ETN806
-
-### Excalidraw
-- [x] Verificar que `tpl-constellation.md` y `tpl-observatory.md` abren correctamente como lienzo con Templater
-- [x] Crear primer `constellation` de prueba para ETN806-P2
 
 ### Fase 2 — Materias nuevas
 - [ ] Aplicar Sistema Galaxy desde el primer día a cualquier materia nueva
@@ -95,4 +103,5 @@ galaxy-links
 [[_galaxy-system]]
 [[_note-system]]
 [[_sync-system]]
+[[_excalidraw-system]]
 %%
