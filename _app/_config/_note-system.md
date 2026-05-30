@@ -88,11 +88,14 @@ ETN806-ETN302-laplace-vs-probability.md
 | `nebula` | 🌫️ | Agrupador de sesión — enlaza comets de una clase |
 | `dwarf` | ⬛ | Resumen — revisión condensada de tema o parcial |
 | `asteroid` | 🪨 | Referencia externa — libro, PDF, paper |
-| `photon` | 💡 | Visual — Desmos, Excalidraw, imagen |
+| `photon` | 💡 | Imagen estática pura — .png, .jpg arrastrado o recorte de PDF++ |
+| `neutrino` | ⚛️ | Código que genera imagen — bloque Desmos o TikZJax, embebido en planet/comet. Sin nota propia. |
 | `constellation` | 🌌 | Mapa mental galaxy — Excalidraw + Mindmap Builder |
 | `observatory` | 🔭 | Dibujo técnico libre en Excalidraw |
 | `beacon` | 📡 | Guía de infraestructura del vault — vive en `_app/` |
 | `bridge` | 🌉 | Conexión entre materias |
+
+> `neutrino` no tiene nota propia ni YAML. La nota host (planet/comet) lo contiene.
 
 YAML mínimo requerido para cualquier nota Galaxy:
 
@@ -142,6 +145,7 @@ galaxy-links
 | `_app/scripts/` | Scripts de automatización del baúl |
 | `_app/solve/` | Problemas conocidos y soluciones (git, sync, etc.) |
 | `_app/TagsRoutes/` | Archivos de configuración de rutas de tags |
+| `.cache/desmos/` | Caché SVG de Desmos — generado automáticamente por el plugin |
 | `_assets/` | Imágenes exportadas: .png, .svg, .jpeg |
 | `_templates/` | Plantillas de notas — una por tipo de cuerpo galaxy |
 | `_pdf/` | Archivos PDF físicos — una carpeta por materia |
@@ -153,5 +157,6 @@ galaxy-links
 [[_template-system]]
 [[_mindmap-system]]
 [[_pdf-system]]
+[[_graph-system]]
 [[_ToDo-system]]
 %%

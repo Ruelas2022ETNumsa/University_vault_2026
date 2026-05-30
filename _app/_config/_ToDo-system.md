@@ -46,8 +46,8 @@ status: activo
 
 | Plugin | Prioridad | Función |
 |--------|-----------|---------|-----|
+| TikZJax | Community | Renderizado de diagramas TikZ y circuitos electrónicos (circuitikz) dentro de notas | ⏳ Pendiente instalar |
 | **Dataview** | 🔴 Alta — Fase 4 del sistema | Consultas sobre el YAML de las notas — filtra comets, asteroids, stars, notas pendientes por materia y parcial |
-| **Linter** | 🟡 Media | Revisa y corrige automáticamente YAML y formato al guardar — detecta campos faltantes, tags mal escritos |
 | **DB Folder** | 🟢 Baja — requiere Dataview | Vista de carpeta como tabla editable con campos YAML — instalar después de Dataview |
 
 ---

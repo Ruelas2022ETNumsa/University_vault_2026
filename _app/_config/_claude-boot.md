@@ -110,7 +110,8 @@ ETNXXX-TNN-nombre-descriptivo.md
 | `nebula` | 🌫️ | Agrupador de sesión |
 | `dwarf` | ⬛ | Resumen de tema o parcial |
 | `asteroid` | 🪨 | Referencia externa (libro, PDF, paper) |
-| `photon` | 💡 | Visual — Desmos, imagen exportada |
+| `photon` | 💡 | Imagen estática pura (.png, .jpg arrastrado, recorte PDF++) |
+| `neutrino` | ⚛️ | Código que genera imagen (Desmos, TikZJax) — embebido en planet/comet, sin nota propia |
 | `constellation` | 🌌 | Mapa mental — Excalidraw + Mindmap Builder |
 | `observatory` | 🔭 | Dibujo técnico libre en Excalidraw |
 | `bridge` | 🌉 | Conexión entre dos materias |
@@ -240,6 +241,7 @@ galaxy-links
 [[_template-system]]
 [[_pdf-system]]
 [[_mindmap-system]]
+[[_graph-system]]
 [[_sync-system]]
 [[_ToDo-system]]
 %%

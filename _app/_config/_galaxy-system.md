@@ -8,6 +8,7 @@ related_notes:
   - "[[_pdf-system]]"
   - "[[_mindmap-system]]"
   - "[[_template-system]]"
+  - "[[_graph-system]]"
   - "[[_ToDo-system]]"
 tags: [beacon, galaxy, infraestructura]
 date_created: 2026-05-28
@@ -153,7 +154,7 @@ ETN806-ETN302-laplace-vs-probability.md
 
 ## Tipos de cuerpo galaxy
 
-El campo `galaxy_body` en el YAML define el rol de la nota. Once tipos:
+El campo `galaxy_body` en el YAML define el rol de la nota. Trece tipos:
 
 | `galaxy_body` | Símbolo | Rol |
 |---------------|---------|-----|
@@ -164,7 +165,8 @@ El campo `galaxy_body` en el YAML define el rol de la nota. Once tipos:
 | `nebula` | 🌫️ | Agrupador de sesión. Enlaza comets de una clase o auxiliatura. |
 | `dwarf` | ⬛ | Resumen. Revisión condensada de un tema o parcial. |
 | `asteroid` | 🪨 | Referencia externa. Extracto de libro, nota de PDF, paper. |
-| `photon` | 💡 | Recurso visual. Gráfica Desmos o imagen exportada. Siempre adjunto a otra nota. |
+| `photon` | 💡 | Imagen estática pura. Archivo visual (.png, .jpg, .svg) pegado o arrastrado. Siempre adjunto a otra nota. |
+| `neutrino` | ⚛️ | Código que genera una imagen. Bloque Desmos o TikZJax embebido en un planet o comet. No es nota separada — vive dentro de la nota host. Ver [[_graph-system]]. |
 | `constellation` | 🌌 | Mapa mental galaxy. Excalidraw + Mindmap Builder. Uno por parcial o tema. Vive en `_app/Excalidraw/Constellations/`. |
 | `observatory` | 🔭 | Dibujo técnico libre en Excalidraw sin Mindmap Builder. Vive en `_app/Excalidraw/Observatory/`. |
 | `bridge` | 🌉 | Conexión entre materias. Enlaza conceptos de dos galaxias distintas. |
@@ -409,11 +411,14 @@ galaxy-links
 ---
 
 ### photon
+
+`photon` es una imagen estática pura — archivo visual (.png, .jpg, .svg) pegado o arrastrado. Sin código, sin lógica.
+
 ```yaml
 ---
-title: "Región de soporte — Dominio triangular"
+title: "Región de soporte — captura"
 galaxy_body: photon
-photon_type: desmos
+photon_type: image
 attached_to: "[[ETN806-T01-normalization-k-solved]]"
 subject: ETN806
 tags: [ETN806, galaxy-photon, P2, T01]
@@ -428,7 +433,55 @@ galaxy-links
 %%
 ```
 
-> `photon` no incluye Excalidraw. Para Excalidraw usar `constellation` o `observatory`. Ver [[_mindmap-system]].
+`photon_type` válidos: `image` (png/jpg arrastrado) | `pdf-crop` (recorte de PDF++).
+
+> Para código que genera imagen (Desmos, TikZJax) → `neutrino`. Ver [[_graph-system]].
+> Para Excalidraw → `constellation` o `observatory`. Ver [[_mindmap-system]].
+
+---
+
+### neutrino
+
+`neutrino` es código que genera una imagen. **No existe como nota separada** — vive embebido dentro de un `planet` o `comet` como bloque de código. El código es la fuente de verdad; la imagen es su output.
+
+Herramientas soportadas:
+
+| `neutrino_type` | Bloque de código | Caché |
+|----------------|-----------------|-------|
+| `desmos` | ` ```desmos-graph ` | `.cache/desmos/` — SVGs en disco, dentro del vault |
+| `tikz` | ` ```tikz ` | IndexedDB de Electron — interno, no accesible como archivo |
+
+Como `neutrino` no es nota separada, **no tiene YAML propio ni bloque `%%`**. La nota host (planet o comet) lleva el YAML y los wikilinks.
+
+Ejemplo — bloque Desmos dentro de un planet:
+```markdown
+## Región de soporte
+
+```desmos-graph
+left=-0.2; right=1.5; bottom=-0.2; top=2.5;
+width=500; height=500;
+---
+y=x|0<=x<=1|RED
+y=2-x|0<=x<=1|BLUE
+y<2-x|y>x|x>=0|x<=1|#a5d8ff
+```
+```
+
+Ejemplo — bloque TikZJax dentro de un comet:
+```markdown
+## Circuito equivalente
+
+```tikz
+\usepackage{circuitikz}
+\begin{document}
+\begin{circuitikz}[american]
+  \draw (0,0) to[R, l=$R_1$] (3,0);
+\end{circuitikz}
+\end{document}
+```
+```
+
+> Documentación completa de cada herramienta: [[_graph-system]]
 
 ---
 
@@ -524,7 +577,10 @@ galaxy-links
 | Decisión | Razón |
 |----------|-------|
 | `constellation` y `observatory` como tipos separados | Excalidraw tiene dos modos de uso distintos: mapa mental estructural (con Mindmap Builder) y dibujo técnico libre. Separarlos en tipos galaxy permite filtrarlos con DataView y distinguirlos en el grafo. |
-| `photon` ya no incluye Excalidraw | Con `constellation` y `observatory` dedicados, `photon` queda limpio para Desmos e imágenes exportadas únicamente. |
+| `photon` = imagen estática únicamente (2026-05-30) | Un archivo visual puro (.png, .jpg arrastrado o recorte PDF++) no tiene la misma naturaleza que código que genera una imagen. Mezclarlos en un solo tipo era un error conceptual. |
+| `neutrino` como tipo separado (2026-05-30) | Desmos y TikZJax son código — tienen sintaxis, se editan, se versionan con Git. La imagen es solo su output. Un `neutrino` no es nota separada sino bloque embebido en la nota host. El nombre refleja su naturaleza: no se ve directamente pero genera un efecto visible. |
+| `neutrino` vive embebido, no como nota propia | Casi nunca justifica nota separada. Su contexto siempre es la teoría o el ejercicio que ilustra. |
+| `photon` ya no incluye Excalidraw ni código generador | Con `constellation`, `observatory` y `neutrino` dedicados, `photon` queda exclusivamente para imágenes estáticas puras. |
 | Canvas desactivado — reemplazado por Excalidraw + Mindmap Builder | Canvas es rígido y no integra con el grafo de Obsidian de forma útil. Excalidraw con Mindmap Builder ofrece auto-layout, atajos de teclado y los archivos `.excalidraw` participan del grafo como notas `.md`. |
 | La galaxia vive en el YAML, no en el nombre del archivo | Los nombres se mantienen limpios y cortos. El YAML lleva todos los datos semánticos. |
 | Semestre y parcial no van en el nombre del archivo | Ya están codificados en la ruta de carpeta. Sin redundancia. |
@@ -550,5 +606,6 @@ galaxy-links
 [[_pdf-system]]
 [[_mindmap-system]]
 [[_note-system]]
+[[_graph-system]]
 [[_ToDo-system]]
 %%
