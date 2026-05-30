@@ -547,4 +547,4 @@ T01, T02... = temas específicos
 ---
 
 *Guía generada para University Vault 2026 — Sistema PDF Galaxy*
-*Ver también: [[_pdf-system]] · [[_galaxy-system]] · [[convencion-notas]]*
+*Ver también: [[_pdf-system]] · [[_galaxy-system]] · [[_note-system]]*

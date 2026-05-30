@@ -1,6 +1,6 @@
 # Sistema Galaxy — University Vault
 
-> Resumen de convención: [[convencion-notas]]
+> Resumen de convención: [[_note-system]]
 > Sistema PDF: [[_pdf-system]]
 > Sistema Mindmap: [[_mindmap-system]]
 > Sistema de Plantillas: [[_template-system]]
@@ -580,5 +580,5 @@ galaxy-links
 [[_template-system]]
 [[_pdf-system]]
 [[_mindmap-system]]
-[[convencion-notas]]
+[[_note-system]]
 %%

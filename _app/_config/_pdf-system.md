@@ -1,7 +1,7 @@
 # Sistema PDF — University Vault
 
 > Sistema base: [[_galaxy-system]]
-> Convención de notas: [[convencion-notas]]
+> Convención de notas: [[_note-system]]
 > Este sistema extiende el cerebro digital Galaxy para integrar PDFs académicos de forma ordenada, sin carpetas regadas y con conexión directa al grafo de conocimiento.
 
 ---

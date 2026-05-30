@@ -494,5 +494,5 @@ Ajustar `right` y `top` según el tamaño del soporte más un margen de ~20%.
 %%
 galaxy-links
 [[_galaxy-system]]
-[[convencion-notas]]
+[[_note-system]]
 %%

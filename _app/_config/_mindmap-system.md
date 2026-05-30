@@ -13,7 +13,7 @@ status: activo
 
 > Sistema Galaxy: [[_galaxy-system]]
 > Sistema de Plantillas: [[_template-system]]
-> Convención de notas: [[convencion-notas]]
+> Convención de notas: [[_note-system]]
 
 Este documento define cómo se usa Excalidraw dentro del Sistema Galaxy. Excalidraw reemplaza completamente a Canvas de Obsidian.
 
@@ -252,5 +252,5 @@ y agregar wikilinks en bloque %% al final del archivo
 galaxy-links
 [[_galaxy-system]]
 [[_template-system]]
-[[convencion-notas]]
+[[_note-system]]
 %%
