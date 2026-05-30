@@ -75,22 +75,22 @@ Todo bloque TikZJax se escribe así:
 
 ### Componentes más comunes
 
-| Componente | Código `to[...]` | Símbolo |
-|------------|-----------------|---------|
-| Resistencia | `R` | —▭— |
-| Capacitor | `C` | —||— |
-| Inductor | `L` | —⌇⌇⌇— |
-| Fuente de voltaje DC | `battery1` | —⊣|— |
-| Fuente de voltaje AC | `sV` | —○— |
-| Fuente de corriente | `isource` | —◯→— |
-| Fuente de voltaje controlada | `cV` | —◇— |
-| Fuente de corriente controlada | `cI` | —◇→— |
-| Tierra (ground) | `ground` | ⏚ |
-| Cortocircuito/cable | `short` | ——— |
-| Diodo | `D` | —▷|— |
-| LED | `led` | —▷|— |
-| Transistor NPN | `npn` | transistor NPN |
-| Op-amp | `op amp` | amplificador |
+| Componente                     | Código `to[...]` | Símbolo        |     |     |
+| ------------------------------ | ---------------- | -------------- | --- | --- |
+| Resistencia                    | `R`              | —▭—            |     |     |
+| Capacitor                      | `C`              | —              |     | —   |
+| Inductor                       | `L`              | —⌇⌇⌇—          |     |     |
+| Fuente de voltaje DC           | `battery1`       | —⊣             | —   |     |
+| Fuente de voltaje AC           | `sV`             | —○—            |     |     |
+| Fuente de corriente            | `isource`        | —◯→—           |     |     |
+| Fuente de voltaje controlada   | `cV`             | —◇—            |     |     |
+| Fuente de corriente controlada | `cI`             | —◇→—           |     |     |
+| Tierra (ground)                | `ground`         | ⏚              |     |     |
+| Cortocircuito/cable            | `short`          | ———            |     |     |
+| Diodo                          | `D`              | —▷             | —   |     |
+| LED                            | `led`            | —▷             | —   |     |
+| Transistor NPN                 | `npn`            | transistor NPN |     |     |
+| Op-amp                         | `op amp`         | amplificador   |     |     |
 
 ### Etiquetas en componentes
 
