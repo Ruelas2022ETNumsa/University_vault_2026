@@ -70,8 +70,8 @@ status: activo
 - [ ] Agregar bloques `%%` a todas las notas de ETN806
 
 ### Excalidraw
-- [ ] Verificar que `tpl-constellation.md` y `tpl-observatory.md` abren correctamente como lienzo con Templater
-- [ ] Crear primer `constellation` de prueba para ETN806-P2
+- [x] Verificar que `tpl-constellation.md` y `tpl-observatory.md` abren correctamente como lienzo con Templater
+- [x] Crear primer `constellation` de prueba para ETN806-P2
 
 ### Fase 2 — Materias nuevas
 - [ ] Aplicar Sistema Galaxy desde el primer día a cualquier materia nueva
