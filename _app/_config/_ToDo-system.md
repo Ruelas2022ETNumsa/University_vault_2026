@@ -93,7 +93,7 @@ status: activo
 - [ ] Crear MOC a nivel universo en `MOC/`
 
 ### LaTeX
-- [ ] Crear `latex_guide.md` en `_app/_appnotes/` — referencia de comandos frecuentes para ETN806, snippets de Completr y atajos de Quick LaTeX documentados
+- [x] Crear `latex_guide.md` en `_app/_appnotes/` — referencia de comandos frecuentes para ETN806, snippets de Completr y atajos de Quick LaTeX documentados
 
 ### Fase 4 — DataView
 - [ ] Instalar Dataview
