@@ -38,6 +38,7 @@ status: activo
 | Remotely Save | Sync del vault con Dropbox | ✅ Instalado en PC — pendiente configurar en móvil |
 | File Hider | Ocultar archivos por extensión (.tmp, .bat, .ps1) | ✅ Instalado y configurado |
 | Completr | Autocompletado de LaTeX, tags y propiedades YAML | ✅ Instalado — pendiente configurar |
+| Quick LaTeX | Shortcuts de escritura LaTeX: fracciones automáticas, cierre de llaves, salto entre bloques, shorthands personalizados | ✅ Instalado — pendiente configurar |
 
 ---
 
@@ -54,7 +55,8 @@ status: activo
 ## Pendientes del sistema
 
 ### Plugins — configuración pendiente
-- [ ] **Completr** — revisar y ajustar configuración (LaTeX, snippets, YAML)
+- [ ] **Completr** — revisar y ajustar configuración: activar sugerencias LaTeX, modo de trigger (backslash vs cualquier carácter), delay de sugerencias, y si se quiere word list del vault
+- [ ] **Quick LaTeX** — revisar configuración: activar/desactivar funciones individuales (auto-fraction, auto-close brackets, align block, matrix block, shorthands personalizados); todas están en Settings → Quick LaTeX
 - [ ] **Dataview** — instalar y configurar (ver Fase 4)
 - [ ] **Linter** — instalar y configurar reglas para el Sistema Galaxy
 - [ ] **DB Folder** — instalar después de Dataview
@@ -89,6 +91,9 @@ status: activo
 - [ ] Identificar conceptos compartidos entre ETN806 y ETN302
 - [ ] Crear notas bridge
 - [ ] Crear MOC a nivel universo en `MOC/`
+
+### LaTeX
+- [ ] Crear `latex_guide.md` en `_app/_appnotes/` — referencia de comandos frecuentes para ETN806, snippets de Completr y atajos de Quick LaTeX documentados
 
 ### Fase 4 — DataView
 - [ ] Instalar Dataview
