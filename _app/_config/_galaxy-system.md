@@ -1,10 +1,27 @@
+---
+title: "Sistema Galaxy — University Vault"
+galaxy_body: beacon
+scope: vault
+audience: [usuario, claude]
+related_notes:
+  - "[[_note-system]]"
+  - "[[_pdf-system]]"
+  - "[[_mindmap-system]]"
+  - "[[_template-system]]"
+tags: [beacon, galaxy, infraestructura]
+date_created: 2026-05-28
+date_updated: 2026-05-29
+status: activo
+---
+
 # Sistema Galaxy — University Vault
 
-> Resumen de convención: [[_note-system]]
+> Convención de notas: [[_note-system]]
 > Sistema PDF: [[_pdf-system]]
 > Sistema Mindmap: [[_mindmap-system]]
 > Sistema de Plantillas: [[_template-system]]
-> Este baúl es un **cerebro digital para ingeniería**. Cada nota tiene una ubicación precisa, un nombre limpio y un YAML que define su rol y sus conexiones.
+
+Este baúl es un **cerebro digital para ingeniería**. Cada nota tiene una ubicación precisa, un nombre limpio y un YAML que define su rol y sus conexiones.
 
 ---
 

@@ -4,8 +4,14 @@ galaxy_body: beacon
 scope: vault
 tool: excalidraw
 audience: [usuario, claude]
+related_notes:
+  - "[[_galaxy-system]]"
+  - "[[_template-system]]"
+  - "[[_note-system]]"
+  - "[[_pdf-system]]"
 tags: [beacon, excalidraw, mindmap, infraestructura]
 date_created: 2026-05-28
+date_updated: 2026-05-29
 status: activo
 ---
 
@@ -14,6 +20,7 @@ status: activo
 > Sistema Galaxy: [[_galaxy-system]]
 > Sistema de Plantillas: [[_template-system]]
 > Convención de notas: [[_note-system]]
+> Sistema PDF: [[_pdf-system]]
 
 Este documento define cómo se usa Excalidraw dentro del Sistema Galaxy. Excalidraw reemplaza completamente a Canvas de Obsidian.
 
@@ -207,8 +214,45 @@ Un `constellation` de ETN806 que enlaza sus stars aparecerá en el grafo como un
 | Excalidraw | Community | Motor principal de dibujo y mapas | ✅ Instalado |
 | Templater | Community | Creación dinámica de archivos con YAML preconfigurado y movimiento automático a carpeta correcta | ✅ Instalado y configurado |
 | Commander | Community | Botón en ribbon para abrir el selector de plantillas | ✅ Instalado y configurado |
+| PDF++ | Community | Extracción de regiones de PDF como imagen — ver sección PDF++ abajo | ✅ Instalado |
 
 > Canvas de Obsidian: **desactivado** — reemplazado por este sistema.
+
+---
+
+## Configuración de carpetas en Excalidraw
+
+Excalidraw tiene su propia configuración de destino, independiente de la configuración global de Obsidian.
+
+| Ajuste (Settings → Excalidraw → Saving) | Valor configurado | Razón |
+|---|---|---|
+| Excalidraw folder | `_app/Excalidraw` | Punto de aterrizaje para todos los archivos nuevos |
+| Use Excalidraw folder when embedding | `ON` | Los dibujos embebidos desde el command palette caen en `_app/Excalidraw`, no en `_assets` |
+| Crop file folder | `_app/Excalidraw/Observatory` | Las imágenes recortadas son dibujos técnicos puntuales → `observatory` |
+| Image annotation file folder | `_app/Excalidraw/Observatory` | Anotar una imagen es un dibujo libre → `observatory` |
+
+> La carpeta global de attachments de Obsidian (Settings → Files & Links) está configurada en `_assets`. Esto afecta imágenes arrastradas desde fuera del vault y recortes generados por PDF++.
+
+---
+
+## PDF++ como fuente de imágenes
+
+Cuando en PDF++ seleccionas una región de un PDF y la copias como imagen, se genera un archivo `.png`. Este archivo va a `_assets/` (destino global de attachments de Obsidian).
+
+Ese `.png` es semánticamente un `photon` — un visual adjunto a una nota. El flujo correcto es:
+
+```
+PDF++ → seleccionar región → copiar como imagen
+        ↓
+.png generado → cae en _assets/
+        ↓
+Insertar en la nota con ![[nombre.png]]
+        ↓
+(opcional) Crear nota photon con photon_type: pdf-crop
+que referencia la imagen y la nota fuente
+```
+
+> Para uso diario no es obligatorio crear el `photon` explícito. Con que el `.png` esté en `_assets/` y embebido en la nota correcta (`asteroid`, `planet`, `comet`) ya cumple la función.
 
 ---
 
@@ -246,7 +290,9 @@ y agregar wikilinks en bloque %% al final del archivo
 | Un solo botón en ribbon para todas las plantillas | Abre el selector de Templater con todas las plantillas disponibles. Evita saturar el ribbon con un botón por tipo de cuerpo galaxy. |
 | constellation y observatory usan ruta fija, no dinámica | A diferencia de las plantillas de Semesters/ (Opción B), estas dos plantillas siempre van a la misma carpeta. Templater mueve el archivo automáticamente sin necesidad de preguntar materia ni semestre. |
 | Nombre sin número de tema por defecto | Un mapa cubre normalmente un parcial completo. El tema se agrega al nombre solo cuando el mapa es específico de un tema extenso. |
-| `photon` no incluye Excalidraw | Con `constellation` y `observatory` dedicados, `photon` queda exclusivamente para Desmos e imágenes exportadas. |
+| `photon` no incluye Excalidraw | Con `constellation` y `observatory` dedicados, `photon` queda exclusivamente para Desmos e imágenes exportadas y recortes de PDF++. |
+| Crop y annotation folder → Observatory | Las imágenes recortadas o anotadas desde Excalidraw son dibujos técnicos puntuales — encajan como `observatory`, no como `constellation`. |
+| Attachments globales → `_assets` | Imágenes arrastradas desde fuera del vault y recortes de PDF++ van a `_assets/`. Excalidraw tiene su propio destino independiente. |
 
 %%
 galaxy-links
