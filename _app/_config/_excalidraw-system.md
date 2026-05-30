@@ -10,9 +10,10 @@ related_notes:
   - "[[_template-system]]"
   - "[[_note-system]]"
   - "[[_pdf-system]]"
+  - "[[_ToDo-system]]"
 tags: [beacon, excalidraw, configuracion, infraestructura]
 date_created: 2026-05-28
-date_updated: 2026-05-29
+date_updated: 2026-05-30
 status: activo
 ---
 
@@ -23,6 +24,7 @@ status: activo
 > Sistema de Plantillas: [[_template-system]]
 > Convención de notas: [[_note-system]]
 > Sistema PDF: [[_pdf-system]]
+> Pendientes: [[_ToDo-system]]
 
 Este documento registra la configuración aplicada al plugin `obsidian-excalidraw-plugin` (archivo `data.json`) para alinearla con el Sistema Galaxy. Es la referencia canónica para restaurar o migrar la configuración.
 
@@ -255,18 +257,6 @@ Los siguientes valores fueron modificados respecto al estado inicial del plugin:
 
 ---
 
-## Pendientes
-
-
-
-- [x] Crear `_app/Excalidraw/Template.excalidraw.md` — plantilla base con lienzo vacío y YAML mínimo
-- [x] Crear carpeta `_app/Excalidraw/Scripts/`
-- [x] Instalar Mindmap Builder desde el Script Store de Excalidraw
-- [ ] Verificar que `tpl-constellation.md` y `tpl-observatory.md` abren correctamente como lienzo al ejecutarse con Templater
-- [ ] Crear primer `constellation` de prueba para ETN806-P2
-^bab436
-
-
 %%
 galaxy-links
 [[_galaxy-system]]
@@ -274,4 +264,5 @@ galaxy-links
 [[_template-system]]
 [[_note-system]]
 [[_pdf-system]]
+[[_ToDo-system]]
 %%

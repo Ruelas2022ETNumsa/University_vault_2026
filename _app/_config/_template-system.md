@@ -9,9 +9,10 @@ related_notes:
   - "[[_mindmap-system]]"
   - "[[_note-system]]"
   - "[[_pdf-system]]"
+  - "[[_ToDo-system]]"
 tags: [beacon, templater, plantillas, infraestructura]
 date_created: 2026-05-28
-date_updated: 2026-05-29
+date_updated: 2026-05-30
 status: activo
 ---
 
@@ -21,6 +22,7 @@ status: activo
 > Sistema Mindmap: [[_mindmap-system]]
 > Convención de notas: [[_note-system]]
 > Sistema PDF: [[_pdf-system]]
+> Pendientes: [[_ToDo-system]]
 > Archivos físicos: `_templates/`
 
 Este documento define el sistema de plantillas del vault. Todas las plantillas usan **Templater** y siguen la convención del Sistema Galaxy.
@@ -404,4 +406,5 @@ galaxy-links
 [[_mindmap-system]]
 [[_note-system]]
 [[_pdf-system]]
+[[_ToDo-system]]
 %%

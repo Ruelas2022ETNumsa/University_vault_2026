@@ -8,9 +8,10 @@ related_notes:
   - "[[_pdf-system]]"
   - "[[_mindmap-system]]"
   - "[[_template-system]]"
+  - "[[_ToDo-system]]"
 tags: [beacon, galaxy, infraestructura]
 date_created: 2026-05-28
-date_updated: 2026-05-29
+date_updated: 2026-05-30
 status: activo
 ---
 
@@ -20,6 +21,7 @@ status: activo
 > Sistema PDF: [[_pdf-system]]
 > Sistema Mindmap: [[_mindmap-system]]
 > Sistema de Plantillas: [[_template-system]]
+> Pendientes: [[_ToDo-system]]
 
 Este baúl es un **cerebro digital para ingeniería**. Cada nota tiene una ubicación precisa, un nombre limpio y un YAML que define su rol y sus conexiones.
 
@@ -513,57 +515,7 @@ galaxy-links
 
 ---
 
-## Lista de tareas
-
-### Fase 0 — Fundación ✅
-- [x] Definir concepto del Sistema Galaxy y tipos de cuerpo
-- [x] Definir estructura de carpetas y convención de nombres
-- [x] Definir plantillas YAML por tipo de cuerpo
-- [x] Definir regla de wikilinks comentados `%%` para el grafo
-- [x] Escribir `_galaxy-system.md`
-- [x] Actualizar `convencion-notas.md`
-- [x] Crear `_pdf/` y definir sistema PDF en `_pdf-system.md`
-- [x] Configurar plugins PDF++ · Annotator · OmniSearch · Text Extractor
-- [x] Definir tipos `constellation` y `observatory` para Excalidraw
-- [x] Desactivar Canvas — reemplazado por Excalidraw + Mindmap Builder
-- [x] Crear carpetas `_app/Excalidraw/Constellations/` y `_app/Excalidraw/Observatory/`
-- [x] Documentar sistema Excalidraw en `_mindmap-system.md`
-- [x] Crear `_template-system.md` con documentación completa de plantillas
-- [x] Crear plantillas `tpl-constellation.md` y `tpl-observatory.md` en `_templates/`
-- [x] Crear plantillas restantes en `_templates/` — star, planet, moon, comet, nebula, dwarf, asteroid, photon, bridge
-- [x] Instalar y configurar Templater + Commander para creación rápida de archivos
-- [x] Elegir Opción B como sistema oficial para `Semesters/` — plantillas con ruta dinámica
-- [x] Corregir `tpl-constellation` y `tpl-observatory` para generar lienzos Excalidraw (YAML híbrido + bloque compressed-json)
-- [ ] Configurar Excalidraw — ajustes del plugin pendientes (próxima sesión)
-
-### Fase 1 — Organización ETN806
-- [ ] Crear estructura de carpetas: `Semesters/Sem_08/ETN806/Partial_2/Topic_NN.../`
-- [ ] Mover archivos ETN806 existentes a las carpetas de tema correctas
-- [ ] Agregar YAML galaxy a los archivos `ETN806-2P-E*.md` existentes → `galaxy_body: comet`
-- [ ] Agregar YAML galaxy al Formulario → `galaxy_body: moon`
-- [ ] Agregar YAML galaxy a Práctica enunciados → `galaxy_body: asteroid`
-- [ ] Agregar YAML galaxy a Resuelto Referencia → `galaxy_body: comet`
-- [ ] Crear notas star para cada tema del Parcial 2
-- [ ] Crear notas planet para los conceptos centrales
-- [ ] Crear MOC de la materia en la carpeta `MOC/`
-- [ ] Agregar bloques `%%` a todas las notas
-
-### Fase 2 — Materias nuevas
-- [ ] Aplicar el Sistema Galaxy desde el primer día a cualquier materia nueva
-- [ ] Usar plantillas de `_templates/` para cada tipo de cuerpo
-- [ ] Actualizar `contextogen.md` para incluir el campo `galaxy_body` en los contextos generados
-
-### Fase 3 — Conexiones entre galaxias
-- [ ] Identificar conceptos compartidos entre materias
-- [ ] Crear notas bridge
-- [ ] Crear MOC a nivel universo en `MOC/` que enlace todas las Stars de todas las materias
-
-### Fase 4 — DataView (opcional)
-- [ ] Instalar plugin DataView
-- [ ] Consulta: todos los comets por materia y parcial
-- [ ] Consulta: todas las notas pendientes de revisión
-- [ ] Consulta: todos los bridges
-- [ ] Nota de dashboard por materia usando DataView
+> Tareas y pendientes: [[_ToDo-system]]
 
 ---
 
@@ -598,4 +550,5 @@ galaxy-links
 [[_pdf-system]]
 [[_mindmap-system]]
 [[_note-system]]
+[[_ToDo-system]]
 %%

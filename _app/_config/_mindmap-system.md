@@ -9,9 +9,10 @@ related_notes:
   - "[[_template-system]]"
   - "[[_note-system]]"
   - "[[_pdf-system]]"
+  - "[[_ToDo-system]]"
 tags: [beacon, excalidraw, mindmap, infraestructura]
 date_created: 2026-05-28
-date_updated: 2026-05-29
+date_updated: 2026-05-30
 status: activo
 ---
 
@@ -21,6 +22,7 @@ status: activo
 > Sistema de Plantillas: [[_template-system]]
 > Convención de notas: [[_note-system]]
 > Sistema PDF: [[_pdf-system]]
+> Pendientes: [[_ToDo-system]]
 
 Este documento define cómo se usa Excalidraw dentro del Sistema Galaxy. Excalidraw reemplaza completamente a Canvas de Obsidian.
 
@@ -299,4 +301,5 @@ galaxy-links
 [[_galaxy-system]]
 [[_template-system]]
 [[_note-system]]
+[[_ToDo-system]]
 %%

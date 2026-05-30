@@ -8,9 +8,10 @@ related_notes:
   - "[[_template-system]]"
   - "[[_mindmap-system]]"
   - "[[_pdf-system]]"
+  - "[[_ToDo-system]]"
 tags: [beacon, convencion, infraestructura]
 date_created: 2026-05-28
-date_updated: 2026-05-29
+date_updated: 2026-05-30
 status: activo
 ---
 
@@ -20,6 +21,7 @@ status: activo
 > Sistema de Plantillas: [[_template-system]]
 > Sistema Mindmap: [[_mindmap-system]]
 > Sistema PDF: [[_pdf-system]]
+> Pendientes: [[_ToDo-system]]
 
 > ETN302 = sistema legacy (sin cambios). Todas las materias nuevas = Sistema Galaxy.
 
@@ -151,4 +153,5 @@ galaxy-links
 [[_template-system]]
 [[_mindmap-system]]
 [[_pdf-system]]
+[[_ToDo-system]]
 %%

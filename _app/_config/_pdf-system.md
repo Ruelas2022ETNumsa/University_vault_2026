@@ -8,9 +8,10 @@ related_notes:
   - "[[_note-system]]"
   - "[[_mindmap-system]]"
   - "[[_template-system]]"
+  - "[[_ToDo-system]]"
 tags: [beacon, pdf, infraestructura]
 date_created: 2026-05-28
-date_updated: 2026-05-29
+date_updated: 2026-05-30
 status: activo
 ---
 
@@ -20,6 +21,7 @@ status: activo
 > Convención de notas: [[_note-system]]
 > Sistema Mindmap: [[_mindmap-system]]
 > Sistema de Plantillas: [[_template-system]]
+> Pendientes: [[_ToDo-system]]
 
 ---
 
@@ -269,4 +271,5 @@ galaxy-links
 [[_note-system]]
 [[_mindmap-system]]
 [[_template-system]]
+[[_ToDo-system]]
 %%

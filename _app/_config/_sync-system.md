@@ -5,15 +5,17 @@ scope: vault
 audience: [usuario, claude]
 related_notes:
   - "[[_galaxy-system]]"
+  - "[[_ToDo-system]]"
 tags: [beacon, sync, github, infraestructura]
 date_created: 2026-05-28
-date_updated: 2026-05-29
+date_updated: 2026-05-30
 status: activo
 ---
 
 # Sistema Sync — Vault y Acceso Claude
 
 > Sistema Galaxy: [[_galaxy-system]]
+> Pendientes: [[_ToDo-system]]
 
 ## Objetivo
 
@@ -55,15 +57,9 @@ Móvil Android (Obsidian + Remotely Save + Dropbox) ← pendiente configurar
 - [x] Plugin **Remotely Save** instalado en PC y conectado a **Dropbox** ✅
 - [x] Vault sincronizándose correctamente con Dropbox desde PC
 
+> Tareas y pendientes: [[_ToDo-system]]
+
 > **Nota:** OneDrive fue descartado — la página de autorización fallaba al intentar la integración con Remotely Save. Se migró a Dropbox sin problemas.
-
----
-
-## Lo que falta ⏳
-
-- [ ] **Remotely Save en móvil Android** — instalar el plugin y conectar al mismo Dropbox (sincronización oficial)
-- [ ] **Git en Android** — sincronización alterna (ver sección abajo)
-- [ ] ~~**Microsoft 365**~~ — descartado, servicio de pago
 
 ---
 
@@ -130,4 +126,5 @@ Pasos para completar la configuración en Android:
 %%
 galaxy-links
 [[_galaxy-system]]
+[[_ToDo-system]]
 %%
