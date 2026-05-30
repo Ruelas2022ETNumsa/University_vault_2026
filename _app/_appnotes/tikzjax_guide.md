@@ -7,6 +7,7 @@ audience: [usuario, notebooklm, claude]
 tags: [beacon, tikzjax, circuitikz, infraestructura]
 date_created: 2026-05-30
 date_updated: 2026-05-30
+
 status: activo
 ---
 
@@ -215,6 +216,126 @@ Todo bloque TikZJax se escribe así:
 
 % Tamaño fijo con pgfplots
 \begin{axis}[width=10cm, height=7cm]
+```
+
+---
+
+## U8. EJEMPLOS PRÁCTICOS — SE RENDERIZAN EN OBSIDIAN
+
+> Estos bloques usan ` ```tikz ` real — copiarlos en cualquier nota y se ven directamente.
+
+---
+
+### Ejemplo 1 — Funciones matemáticas con grilla
+
+```tikz
+\begin{document}
+  \begin{tikzpicture}[domain=0:4]
+    \draw[very thin,color=gray] (-0.1,-1.1) grid (3.9,3.9);
+    \draw[->] (-0.2,0) -- (4.2,0) node[right] {$x$};
+    \draw[->] (0,-1.2) -- (0,4.2) node[above] {$f(x)$};
+    \draw[color=red]    plot (\x,\x)             node[right] {$f(x) = x$};
+    \draw[color=blue]   plot (\x,{sin(\x r)})    node[right] {$f(x) = \sin x$};
+    \draw[color=orange] plot (\x,{0.05*exp(\x)}) node[right] {$f(x) = \frac{1}{20} \mathrm{e}^x$};
+  \end{tikzpicture}
+\end{document}
+```
+
+---
+
+### Ejemplo 2 — Circuito con fuente de corriente y resistencias en paralelo
+
+```tikz
+\usepackage{circuitikz}
+\begin{document}
+\begin{circuitikz}[american, voltage shift=0.5]
+\draw (0,0)
+  to[isource, l=$I_0$, v=$V_0$] (0,3)
+  to[short, -*, i=$I_0$] (2,3)
+  to[R=$R_1$, i>_=$i_1$] (2,0) -- (0,0);
+\draw (2,3) -- (4,3)
+  to[R=$R_2$, i>_=$i_2$]
+  (4,0) to[short, -*] (2,0);
+\end{circuitikz}
+\end{document}
+```
+
+---
+
+### Ejemplo 3 — Superficie 3D con pgfplots
+
+```tikz
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.16}
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[colormap/viridis]
+\addplot3[
+  surf,
+  samples=18,
+  domain=-3:3
+]
+{exp(-x^2-y^2)*x};
+\end{axis}
+\end{tikzpicture}
+\end{document}
+```
+
+---
+
+### Ejemplo 4 — Diagrama conmutativo con tikz-cd
+
+```tikz
+\usepackage{tikz-cd}
+\begin{document}
+\begin{tikzcd}
+    T
+    \arrow[drr, bend left, "x"]
+    \arrow[ddr, bend right, "y"]
+    \arrow[dr, dotted, "{(x,y)}" description] & & \\\\
+    K & X \times_Z Y \arrow[r, "p"] \arrow[d, "q"]
+    & X \arrow[d, "f"] \\\\
+    & Y \arrow[r, "g"]
+    & Z
+\end{tikzcd}
+\end{document}
+```
+
+---
+
+### Ejemplo 5 — Molécula con chemfig (aminoácido)
+
+```tikz
+\usepackage{chemfig}
+\begin{document}
+\chemfig{[:-90]HN(-[::-45](-[::-45]R)=[::+45]O)>[::+45]*4(-(=O)-N*5(-(<:(=[::-60]O)-[::+60]OH)-(<[::+0])(<:[::-108])-S>)--)}
+\end{document}
+```
+
+---
+
+### Ejemplo 6 — Estructura molecular cíclica con chemfig
+
+```tikz
+\usepackage{chemfig}
+\begin{document}
+\definesubmol\fragment1{
+    (-[:#1,0.85,,,draw=none]
+    -[::126]-[::-54](=_#(2pt,2pt)[::180])
+    -[::-70](-[::-56.2,1.07]=^#(2pt,2pt)[::180,1.07])
+    -[::110,0.6](-[::-148,0.60](=^[::180,0.35])-[::-18,1.1])
+    -[::50,1.1](-[::18,0.60]=_[::180,0.35])
+    -[::50,0.6]
+    -[::110])
+    }
+\chemfig{
+!\fragment{18}
+!\fragment{90}
+!\fragment{162}
+!\fragment{234}
+!\fragment{306}
+}
+\end{document}
 ```
 
 ---

@@ -96,6 +96,12 @@ tan
 tikzjax
 transistores
 trico
+tikzcd
+times
+tierra
+tensi
+tensiones
+tikzx
 ToDo
 Templater
 Text
@@ -217,6 +223,8 @@ SVGs
 Separado
 SICO
 SELECCI
+SE
+SIMPLE
 Plugins
 Pendientes
 Plugin
@@ -290,6 +298,7 @@ PAQUETES
 Paquete
 PRIMER
 PAQUETE
+PR
 del
 date
 de
@@ -446,6 +455,8 @@ documenta
 deber
 dibujan
 documentclass
+definesubmol
+diodo
 Vault
 Verificar
 Variables
@@ -525,6 +536,7 @@ gratuito
 generador
 ground
 geom
+grid
 body
 beacon
 bat
@@ -577,6 +589,7 @@ blica
 beacons
 breve
 begin
+battery
 scope
 status
 selector
@@ -735,6 +748,9 @@ sombreada
 separador
 superficies
 standalone
+sV
+short
+salvo
 vault
 vil
 ver
@@ -970,6 +986,11 @@ abstracta
 amp
 amplificador
 abierto
+axis
+addplot
+arrow
+algebraico
+agreg
 related
 recomendados
 ribbon
@@ -1116,6 +1137,8 @@ reconstruir
 resistencias
 ramas
 renderice
+resistencia
+recordar
 notes
 notas
 nuevas
@@ -1504,6 +1527,13 @@ cm
 cables
 componente
 cierra
+compat
+cd
+chemfig
+capacitor
+cerrado
+contraria
+corrientes
 updated
 un
 universo
@@ -1676,6 +1706,9 @@ Circuito
 Cerrar
 COMPLETO
 COMPONENTE
+CTICOS
+CONVENCI
+CIRCUITO
 Instalados
 Instalado
 Instalar
@@ -1840,6 +1873,9 @@ ELECTR
 ESCALA
 ENTORNO
 EJEMPLO
+ESTILO
+Escalar
+Editar
 Obsidian
 OmniSearch
 Ocultar
@@ -1869,6 +1905,9 @@ OPERATIVO
 OPERAR
 Overleaf
 Op
+OH
+Omitirlo
+Omitir
 Auto
 Annotator
 Autocompletado
@@ -2117,6 +2156,9 @@ publicaci
 pasa
 perspectiva
 pgfplots
+plot
+pgfplotsset
+pt
 min
 mica
 movimiento
@@ -2238,6 +2280,7 @@ mensaje
 memoria
 modifique
 moleculares
+medidas
 YAML
 Ya
 You
@@ -2471,6 +2514,10 @@ exploraci
 especializados
 esquem
 existente
+exp
+etiqueta
+exactas
+etiquetados
 Motor
 Media
 Mantiene
@@ -2726,6 +2773,10 @@ interactividad
 incluso
 image
 inseparable
+inductor
+isource
+instrucci
+intento
 Dependencia
 Dropbox
 Dataview
@@ -2781,6 +2832,7 @@ Diodo
 DIBUJO
 Diagrama
 DIVISOR
+DIAGRAMA
 Remotely
 Raz
 Revisa
@@ -2854,6 +2906,8 @@ Respuestas
 Resistencia
 RENDER
 Reabrir
+RENDERIZAN
+Reemplazar
 Hider
 Hace
 Herramientas
@@ -2868,6 +2922,7 @@ Haces
 Habilita
 Header
 Headings
+HN
 filtrar
 formato
 faltantes
@@ -2950,6 +3005,7 @@ fase
 foco
 fundamentalmente
 formas
+fragment
 haya
 hace
 hacer
