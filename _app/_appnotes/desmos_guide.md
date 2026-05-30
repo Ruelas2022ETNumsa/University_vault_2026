@@ -164,6 +164,8 @@ f(x)=ec|hidden                   ← función oculta
 | Plugin GitHub | https://github.com/nigecat/obsidian-desmos |
 | Learn Desmos | https://learn.desmos.com |
 
+**Caché del plugin:** los SVGs generados se almacenan en `.cache/desmos/` dentro del vault (ruta configurada manualmente). Esta carpeta es ignorada por File Hider y no es contenido académico — no crear notas ahí.
+
 ---
 
 ---
