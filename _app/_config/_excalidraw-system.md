@@ -257,13 +257,15 @@ Los siguientes valores fueron modificados respecto al estado inicial del plugin:
 
 ## Pendientes
 
-^bab436
+
 
 - [x] Crear `_app/Excalidraw/Template.excalidraw.md` — plantilla base con lienzo vacío y YAML mínimo
 - [x] Crear carpeta `_app/Excalidraw/Scripts/`
 - [x] Instalar Mindmap Builder desde el Script Store de Excalidraw
 - [ ] Verificar que `tpl-constellation.md` y `tpl-observatory.md` abren correctamente como lienzo al ejecutarse con Templater
 - [ ] Crear primer `constellation` de prueba para ETN806-P2
+^bab436
+
 
 %%
 galaxy-links
