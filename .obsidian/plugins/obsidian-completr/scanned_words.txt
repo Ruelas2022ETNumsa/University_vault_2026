@@ -463,6 +463,7 @@ acceder
 acceso
 avanzados
 ado
+aWDWCmK
 related
 recomendados
 ribbon
@@ -867,6 +868,7 @@ Footnotes
 Footnote
 Filesystem
 For
+Flower
 Estado
 Excalidraw
 EPUBs
@@ -903,6 +905,8 @@ Exponente
 Estados
 Esta
 EXCALIDRAW
+Elements
+EMZIr
 Obsidian
 OmniSearch
 Ocultar
@@ -1264,6 +1268,7 @@ Lo
 Lenguajes
 Lee
 LIST
+Leaves
 links
 las
 listar
@@ -1383,6 +1388,7 @@ Diferencia
 Dataviewjs
 Drawing
 Decompress
+Data
 Remotely
 Raz
 Revisa
@@ -1483,6 +1489,7 @@ Una
 Uno
 Use
 Uso
+UE
 Nombre
 Notas
 No

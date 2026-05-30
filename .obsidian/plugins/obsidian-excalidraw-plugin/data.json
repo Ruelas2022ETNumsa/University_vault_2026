@@ -242,7 +242,8 @@
   "taskboneEnabled": false,
   "taskboneAPIkey": "",
   "pinnedScripts": [
-    "_app/Excalidraw/Scripts/Downloaded/Mindmap Builder.md"
+    "_app/Excalidraw/Scripts/Downloaded/Mindmap Builder.md",
+    "_app/Excalidraw/Scripts/Downloaded/Slideshow.md"
   ],
   "sidepanelTabs": [
     "{\"script\":\"Downloaded/Mindmap Builder\",\"title\":\"Mind Map Builder\"}"
