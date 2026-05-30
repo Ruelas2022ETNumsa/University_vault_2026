@@ -1,5 +1,5 @@
 ---
-title: "Configuración Claude — Sync y Acceso al Vault"
+title: "Sistema Sync — Vault y Acceso Claude"
 galaxy_body: beacon
 scope: vault
 audience: [usuario, claude]
@@ -11,7 +11,7 @@ date_updated: 2026-05-29
 status: activo
 ---
 
-# Configuración Claude — Sync y Acceso al Vault
+# Sistema Sync — Vault y Acceso Claude
 
 > Sistema Galaxy: [[_galaxy-system]]
 
@@ -46,7 +46,10 @@ Móvil Android (Obsidian + Remotely Save + Dropbox) ← pendiente configurar
 - [x] Git instalado en la PC
 - [x] Repositorio local vinculado a GitHub (`git remote` configurado)
 - [x] Primer push realizado — archivos visibles en GitHub
-- [x] Plugin **Obsidian Git** instalado, activado y configurado en PC (auto-commit, auto-push, auto-pull cada 5 min + pull al arrancar)
+- [x] Plugin **Obsidian Git** instalado, activado y configurado en PC
+  - Auto-commit, auto-push y auto-pull cada **5 minutos** de forma automática
+  - Pull adicional al arrancar Obsidian
+  - El usuario no necesita ejecutar git manualmente — todo es automático
 - [x] Conector **Filesystem** de Claude apuntando a `E:\University_vault_2026`
 - [x] Conector **GitHub** conectado en Claude.ai — `https://api.githubcopilot.com/mcp`
 - [x] Plugin **Remotely Save** instalado en PC y conectado a **Dropbox** ✅
