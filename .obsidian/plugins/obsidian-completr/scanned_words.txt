@@ -86,6 +86,9 @@ template
 tipografiadas
 token
 terminal
+trabajar
+trabajamos
+termine
 ToDo
 Templater
 Text
@@ -129,6 +132,7 @@ TICA
 Tiene
 TRABAJO
 Tokens
+Teor
 Sistema
 Sync
 Save
@@ -191,6 +195,8 @@ Scale
 Subir
 Salto
 Service
+SISTEMA
+SEG
 Plugins
 Pendientes
 Plugin
@@ -258,6 +264,7 @@ Primer
 Pull
 Pasos
 Personal
+PEDIDO
 del
 date
 de
@@ -427,6 +434,8 @@ Verificaci
 Vmatrix
 Valores
 Ventaja
+VAULT
+Visual
 galaxy
 gina
 genes
@@ -527,6 +536,8 @@ better
 batch
 borde
 blica
+beacons
+breve
 scope
 status
 selector
@@ -892,6 +903,10 @@ ai
 autorizaci
 autorizar
 adicionales
+apagada
+ayuda
+avisarle
+asumir
 related
 recomendados
 ribbon
@@ -1024,6 +1039,9 @@ realizado
 recomendada
 remoto
 repo
+rutas
+registrar
+rica
 notes
 notas
 nuevas
@@ -1371,6 +1389,15 @@ cerrar
 canal
 clone
 clonado
+conversaci
+completos
+comparta
+cargado
+construcci
+considera
+creadas
+comience
+concisas
 updated
 un
 universo
@@ -1404,6 +1431,7 @@ usados
 unificada
 ubicarlo
 usada
+universitaria
 Galaxy
 Git
 Gr
@@ -1420,6 +1448,8 @@ Group
 GU
 GREEN
 GR
+GALAXY
+Guardar
 Convenci
 Creaci
 Commander
@@ -1514,6 +1544,12 @@ Clic
 Conector
 Community
 Clone
+Conectores
+Confirmar
+CENTRAL
+CONECTORES
+Completar
+COMPORTAMIENTO
 Instalados
 Instalado
 Instalar
@@ -1552,6 +1588,8 @@ Incluir
 INCISO
 Ideal
 Ingresar
+INSTRUCCI
+IDEA
 Funci
 File
 Fase
@@ -1687,6 +1725,8 @@ Open
 Orientation
 Orden
 OneDrive
+OPERATIVO
+OPERAR
 Auto
 Annotator
 Autocompletado
@@ -1752,6 +1792,13 @@ Auth
 APK
 Access
 Activo
+Arranque
+ARRANQUE
+ACCEDE
+AL
+ACTIVAS
+Activas
+Avisar
 push
 pull
 para
@@ -1914,6 +1961,7 @@ preferencia
 paralelos
 permisos
 pago
+pedido
 min
 mica
 movimiento
@@ -2030,6 +2078,10 @@ monoespaciado
 migr
 manuales
 maneja
+mayor
+mensaje
+memoria
+modifique
 YAML
 Ya
 You
@@ -2059,6 +2111,8 @@ Better
 BETTER
 Bajar
 Browse
+Boot
+Beacon
 en
 exacta
 escaneados
@@ -2248,6 +2302,8 @@ estilos
 entra
 entera
 encendida
+enlaza
+encender
 Motor
 Media
 Mantiene
@@ -2286,6 +2342,9 @@ MODIFICADORES
 Margin
 Migrado
 Microsoft
+MO
+MCP
+MATERIAS
 Lectura
 LaTeX
 Linter
@@ -2313,6 +2372,8 @@ Letras
 Learn
 Limit
 Limitaciones
+Leerlo
+Leer
 links
 las
 listar
@@ -2385,6 +2446,8 @@ label
 limitaciones
 llamar
 larga
+lugares
+llegar
 incluyendo
 im
 instalar
@@ -2527,6 +2590,8 @@ DOM
 Documentado
 Droid
 Developer
+Determinar
+DEL
 Remotely
 Raz
 Revisa
@@ -2593,6 +2658,10 @@ Repositorio
 Remote
 Run
 Requisitos
+RESUMEN
+Responder
+Respetar
+Respuestas
 Hider
 Hace
 Herramientas
@@ -2685,6 +2754,8 @@ fronteras
 footers
 forzar
 fallaba
+fase
+foco
 haya
 hace
 hacer
@@ -2715,6 +2786,7 @@ habilitado
 habilitar
 hu
 heading
+hechos
 que
 quedan
 queda
@@ -2767,6 +2839,7 @@ NGULOS
 Nunca
 NDO
 NOTA
+Ninguna
 originales
 observatory
 oficial
@@ -2809,6 +2882,8 @@ operador
 omite
 obvia
 orden
+operar
+obsoleta
 junto
 json
 jer
