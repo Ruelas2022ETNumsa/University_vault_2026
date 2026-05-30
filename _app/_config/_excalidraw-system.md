@@ -26,7 +26,7 @@ status: activo
 > Sistema PDF: [[_pdf-system]]
 > Pendientes: [[_ToDo-system]]
 
-Este documento registra la configuración aplicada al plugin `obsidian-excalidraw-plugin` (archivo `data.json`) para alinearla con el Sistema Galaxy. Es la referencia canónica para restaurar o migrar la configuración.
+Este documento registra la configuración aplicada al plugin `obsidian-excalidraw-plugin` (archivo `data.json`) para alinearla con el Sistema Galaxy. Es la referencia canónica para restaurar o migrar la configuración. 
 
 ---
 
