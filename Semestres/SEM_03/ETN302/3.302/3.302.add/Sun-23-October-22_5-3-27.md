@@ -11,88 +11,24 @@ tags: [Leaves, excalidraw]
 
 ==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠==
 
-# Text Elements
+# Excalidraw Data
+
+## Text Elements
 %%
-# Drawing
-```json
-{
-	"type": "excalidraw",
-	"version": 2,
-	"source": "https://excalidraw.com",
-	"elements": [],
-	"appState": {
-		"theme": "dark",
-		"viewBackgroundColor": "#ffffff",
-		"currentItemStrokeColor": "#001219",
-		"currentItemBackgroundColor": "#0a9396",
-		"currentItemFillStyle": "solid",
-		"currentItemStrokeWidth": 4,
-		"currentItemStrokeStyle": "solid",
-		"currentItemRoughness": 1,
-		"currentItemOpacity": 100,
-		"currentItemFontFamily": 1,
-		"currentItemFontSize": 20,
-		"currentItemTextAlign": "left",
-		"currentItemStrokeSharpness": "sharp",
-		"currentItemStartArrowhead": null,
-		"currentItemEndArrowhead": "arrow",
-		"currentItemLinearStrokeSharpness": "round",
-		"gridSize": null,
-		"colorPalette": {
-			"elementStroke": [
-				"#001219",
-				"#023e8a",
-				"#005f73",
-				"#0a9396",
-				"#94d2bd",
-				"#e9d8a6",
-				"#ee9b00",
-				"#ca6702",
-				"#bb3e03",
-				"#ae2012",
-				"#d00000",
-				"#a44200",
-				"#5c940d",
-				"#403d39",
-				"#000000"
-			],
-			"elementBackground": [
-				"transparent",
-				"#868e96",
-				"#82c91e",
-				"#156d1b",
-				"#bb4d00",
-				"#fa5252",
-				"#d00000",
-				"#bf0603",
-				"#f9c74f",
-				"#E9D8A6",
-				"#00509d",
-				"#15aabf",
-				"#0a9396",
-				"#fab005",
-				"#fd7e14"
-			],
-			"canvasBackground": [
-				"#ffffff",
-				"#f8f9fa",
-				"#f1f3f5",
-				"#fff5f5",
-				"#fff0f6",
-				"#f8f0fc",
-				"#f3f0ff",
-				"#edf2ff",
-				"#e7f5ff",
-				"#e3fafc",
-				"#e6fcf5",
-				"#ebfbee",
-				"#f4fce3",
-				"#fff9db",
-				"#fff4e6"
-			]
-		}
-	},
-	"files": {}
-}
+## Drawing
+```compressed-json
+N4KAkARALgngDgUwgLgAQQQDwMYEMA2AlgCYBOuA7hADTgQBuCpAzoQPYB2KqATLZMzYBXUtiRoIACyhQ4zZAHoFAc0JRJQgEYA6bGwC2CgF7N6hbEcK4OCtptbErHALRY8RMpWdx8Q1TdIEfARcZgRmBShcZR5tHgBmbQB2GjoghH0EDihmbgBtAF1+CFw4OABlKKhxVFAwSHUMmohiXFIAa1T6hkIECgAhXGx25VJhDmIAYTZ8NlJuCABiADNV
+
+ta7IbBFA7IBJav1KsfaEadn5iUWABiuARh5bgE4NiC3SHah9jMHh0fGpmZzBbXXCPeKPABsLzeHy++gAYoR8PhKjBggtBB5odssp8Dkc2CcAOokdTcAAs/E2OL2+KgxwQqPREkxJGx71xcIASsJlJIOOFcmhblTXjS8RkAPJwIZqGDcW43UUwzkHeGcKDw3D6JHy4XK8Vw9XZcqEIw1HhXA0c2kZAAqWCgAEEiMouBJgssoOzYXS2s73mwKJIQsR
+
+uBwhMjrb6MgBRCZOwPB0MLNpjKjR1UZRPpu3wZpjIQTH1ZhHkTI85moCNR8ACbBjZEADQVjwAHNoAKy3TsQnid0XMBszfAATW48R45O0bfiVyStzbj0e5Nu5KuENFRjYBm4dW69AIQhqtzrAF9M7b9Dyi8QBcwhehC8XRaMSKbzeHI/hX6R39U4G4Ac6wgN9iAAWTYYgEHjXBNGCMM0GWAgwl/EgziBNB90gfoZkQp9lE0XAAAoHiSaheFucjKOo
+
+q4uwASg2SAuQQZRIzaBZSEIkiEitXg5wo3iKLoztGPPZVAVIAAFAgEBkGpsIwYJMhNelCRqPI626a47geZ4qW0q4EgQNtcCYyAdM7ZYknicyliuUFwShAyLJXYgeE0MMXKWBBHmIUznK0iyEF8zQbjsxY8AhJIjIizRNHiBArls7zFlwBBLXuCLiBuXKItwclyUtK4Is7bAVyuLygqWdd4mIcEItyvKtKKLSlKabIfhGZ98M0+punpaxmBlD4Irb
+
+CE218wL+ostseHK24kFSnsIWIW5NDizRyRykrUuQzt+x4bKmt26rFk0ZYN2SiLlkebAknJZYItjR4ABE2ydab+vsq5OyuPyIp7XA4Ke1KHLBSEbrgm5Oxu4gkgQNcIBagzXmsQ9mC6v5b3yM61nWPa21u5CbtuZZ4mWWG9tWKyqbx1YrmWL7tOWInGewG6KcZ0GzoQYhlh4VYIoQJJKaF1KEAp3Blg5iWIRlynhYuzQQpux6xBS+nbuIDbqeWckE
+
+ChFrxJAlVVIZaUoHYDhHxrH8QOWcsEBYiYmEIDhlD3NqsjghDuHpY9UewIhALQAOEFRjhtRqcPUeEKAiAFf3SEDtr9DaE5SAAOWj5PU++9OOiYWD4L5vOEBN7o7AAKwQbAcnKKO4Eg6CS79pCUIjkChitxg7R3fAve+2BEAxdJ6+tpixWYKADDzUe0Dt1HZmGMuO/wVC2sdgxynHq3OG4ZCN67778FCZ0J77gev2RSvIEcZhfdODVHXArIhEPzvR
+
+U0d3HA9qTAjLCYFkMQCwfalyqt0QgmNf7u2UG3NeqBY4gWgeBEgcA2DuygI3UocA4EIPwsg7omg2CYF3sECenAW7ND0NkXA7tkZgAvHQZYSJwh7jPCAM8QA=
 ```
 %%

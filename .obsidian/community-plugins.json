@@ -11,5 +11,7 @@
   "better-export-pdf",
   "obsidian-excalidraw-plugin",
   "templater-obsidian",
-  "cmdr"
+  "cmdr",
+  "OA-file-hider",
+  "obsidian-hider"
 ]
