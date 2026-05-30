@@ -10,5 +10,8 @@
   "alwaysUpdateLinks": true,
   "readableLineLength": true,
   "showLineNumber": false,
-  "vimMode": false
+  "vimMode": false,
+  "userIgnoreFilters": [
+    ".tmp"
+  ]
 }
