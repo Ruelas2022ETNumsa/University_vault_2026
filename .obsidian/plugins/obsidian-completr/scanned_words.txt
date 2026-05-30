@@ -84,6 +84,8 @@ temas
 timestamp
 template
 tipografiadas
+token
+terminal
 ToDo
 Templater
 Text
@@ -126,6 +128,7 @@ TAMA
 TICA
 Tiene
 TRABAJO
+Tokens
 Sistema
 Sync
 Save
@@ -187,6 +190,7 @@ Small
 Scale
 Subir
 Salto
+Service
 Plugins
 Pendientes
 Plugin
@@ -250,6 +254,10 @@ Puntos
 Portrait
 Produce
 Posible
+Primer
+Pull
+Pasos
+Personal
 del
 date
 de
@@ -394,6 +402,10 @@ dejando
 dejar
 div
 directa
+depender
+descartado
+disponga
+definitivamente
 Vault
 Verificar
 Variables
@@ -414,6 +426,7 @@ Volver
 Verificaci
 Vmatrix
 Valores
+Ventaja
 galaxy
 gina
 genes
@@ -463,6 +476,8 @@ geometr
 graphx
 gusto
 globalmente
+git
+gratuito
 body
 beacon
 bat
@@ -655,6 +670,11 @@ salen
 snippet
 seleccionados
 sobreescriben
+sincroniza
+sincroniz
+sync
+servicios
+servicio
 vault
 vil
 ver
@@ -710,6 +730,7 @@ verdes
 verificar
 viole
 varianza
+vinculado
 audience
 activo
 auto
@@ -863,6 +884,14 @@ after
 afecte
 apila
 alta
+accede
+activado
+arrancar
+apuntando
+ai
+autorizaci
+autorizar
+adicionales
 related
 recomendados
 ribbon
@@ -991,6 +1020,10 @@ recorre
 recoge
 repite
 rfanos
+realizado
+recomendada
+remoto
+repo
 notes
 notas
 nuevas
@@ -1064,6 +1097,8 @@ naranjas
 ngulos
 normalizaci
 navegador
+ndose
+nube
 created
 commit
 cada
@@ -1329,6 +1364,13 @@ corta
 cabe
 cortan
 conocidas
+conectado
+click
+coincide
+cerrar
+canal
+clone
+clonado
 updated
 un
 universo
@@ -1469,6 +1511,9 @@ CORRECCI
 Curva
 Caso
 Clic
+Conector
+Community
+Clone
 Instalados
 Instalado
 Instalar
@@ -1506,6 +1551,7 @@ INCLUIR
 Incluir
 INCISO
 Ideal
+Ingresar
 Funci
 File
 Fase
@@ -1615,6 +1661,7 @@ EXISTENTE
 EXPORT
 Enable
 Estilos
+Esperar
 Obsidian
 OmniSearch
 Ocultar
@@ -1639,6 +1686,7 @@ OFF
 Open
 Orientation
 Orden
+OneDrive
 Auto
 Annotator
 Autocompletado
@@ -1699,6 +1747,11 @@ Add
 Alternativa
 Apariencia
 As
+Acceso
+Auth
+APK
+Access
+Activo
 push
 pull
 para
@@ -1857,6 +1910,10 @@ pod
 parche
 partido
 pierde
+preferencia
+paralelos
+permisos
+pago
 min
 mica
 movimiento
@@ -1970,6 +2027,9 @@ modal
 mandar
 mantenerse
 monoespaciado
+migr
+manuales
+maneja
 YAML
 Ya
 You
@@ -1998,6 +2058,7 @@ BASE
 Better
 BETTER
 Bajar
+Browse
 en
 exacta
 escaneados
@@ -2186,6 +2247,7 @@ esas
 estilos
 entra
 entera
+encendida
 Motor
 Media
 Mantiene
@@ -2222,6 +2284,8 @@ METROS
 Matem
 MODIFICADORES
 Margin
+Migrado
+Microsoft
 Lectura
 LaTeX
 Linter
@@ -2414,6 +2478,10 @@ inyecta
 intenta
 internamente
 insertar
+intentar
+implementar
+ingresar
+intervalo
 Dependencia
 Dropbox
 Dataview
@@ -2456,6 +2524,9 @@ DOMINIO
 DASHED
 Debug
 DOM
+Documentado
+Droid
+Developer
 Remotely
 Raz
 Revisa
@@ -2518,6 +2589,10 @@ RECT
 REGIONES
 RECOMENDADA
 ROL
+Repositorio
+Remote
+Run
+Requisitos
 Hider
 Hace
 Herramientas
@@ -2609,6 +2684,7 @@ ff
 fronteras
 footers
 forzar
+fallaba
 haya
 hace
 hacer
@@ -2651,6 +2727,7 @@ quick
 qui
 quitar
 quiera
+quedar
 University
 Usar
 Un
@@ -2744,6 +2821,7 @@ Qui
 Quick
 Quote
 Quieres
+Que
 ya
 yaml
 wikilinks
@@ -2759,6 +2837,7 @@ webview
 xima
 xeles
 xy
+ximo
 Wikilinks
 WHERE
 WebGL
