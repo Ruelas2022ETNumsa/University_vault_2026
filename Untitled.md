@@ -1,6 +1,3 @@
-```dataview
-TABLE subject, galaxy_body, title
-```
 
 
 
@@ -12,7 +9,7 @@ TABLE subject, galaxy_body, title
 
 ```dataview
 TABLE title, topic, status
-FROM "Semesters"
+FROM "semestres"
 WHERE galaxy_body = "comet" AND subject = "ETN806" AND status = "pendiente"
 SORT topic ASC
 ```
@@ -26,7 +23,7 @@ SORT topic ASC
 
 ```dataview
 TABLE galaxy_body, title
-FROM "Semesters"
+FROM "semestres"
 WHERE subject = "ETN806" AND partial = 2
 SORT galaxy_body ASC
 ```
@@ -34,7 +31,7 @@ SORT galaxy_body ASC
 
 ```dataview
 TABLE subject, galaxy_body, title
-FROM "Semesters"
+FROM "semestres"
 WHERE status = "pendiente" OR status = "en-proceso"
 SORT subject ASC
 ```
