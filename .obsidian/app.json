@@ -6,7 +6,7 @@
   "rightToLeft": false,
   "deleteUnlinkedAttachments": "always",
   "promptDelete": false,
-  "attachmentFolderPath": "_PDF",
+  "attachmentFolderPath": "_assets",
   "alwaysUpdateLinks": true,
   "readableLineLength": true,
   "showLineNumber": false,
