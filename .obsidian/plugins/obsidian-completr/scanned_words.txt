@@ -45,6 +45,9 @@ tarea
 tag
 tanto
 tratan
+to
+the
+this
 ToDo
 Templater
 Text
@@ -89,6 +92,7 @@ Sirve
 Snippets
 SORT
 Solo
+Switch
 Plugins
 Pendientes
 Plugin
@@ -192,6 +196,8 @@ decisi
 duplicaci
 degenerados
 documentadas
+document
+decompress
 Vault
 Verificar
 Variables
@@ -205,6 +211,7 @@ Valor
 Variantes
 Variante
 Verde
+VIEW
 galaxy
 gina
 genes
@@ -336,6 +343,8 @@ sort
 subcarpetas
 subcarpeta
 sepa
+semester
+settings
 vault
 vil
 ver
@@ -747,6 +756,8 @@ correspondientes
 conociendo
 ciertos
 conector
+current
+check
 updated
 un
 universo
@@ -768,6 +779,7 @@ usas
 usarse
 use
 usulas
+under
 Galaxy
 Git
 Gr
@@ -854,6 +866,7 @@ FROM
 Footnotes
 Footnote
 Filesystem
+For
 Estado
 Excalidraw
 EPUBs
@@ -889,6 +902,7 @@ Errores
 Exponente
 Estados
 Esta
+EXCALIDRAW
 Obsidian
 OmniSearch
 Ocultar
@@ -897,6 +911,7 @@ Opci
 Observatory
 Once
 Organizaci
+OPTIONS
 Auto
 Annotator
 Autocompletado
@@ -1026,6 +1041,7 @@ padre
 patr
 partial
 principales
+parsed
 min
 mica
 movimiento
@@ -1088,8 +1104,11 @@ map
 mermaid
 mejora
 micos
+menu
+more
 YAML
 Ya
+You
 Bot
 Baja
 Builder
@@ -1230,6 +1249,7 @@ Margen
 Modo
 Morado
 MathJax
+MORE
 Lectura
 LaTeX
 Linter
@@ -1339,6 +1359,7 @@ indicando
 identificador
 interrumpir
 id
+info
 Dependencia
 Dropbox
 Dataview
@@ -1360,6 +1381,8 @@ Dudas
 Display
 Diferencia
 Dataviewjs
+Drawing
+Decompress
 Remotely
 Raz
 Revisa
@@ -1489,6 +1512,7 @@ obsidian
 ocasional
 ol
 otras
+of
 junto
 json
 jer
@@ -1502,6 +1526,7 @@ wikilinks
 when
 where
 wikilink
+with
 xima
 xeles
 Wikilinks
