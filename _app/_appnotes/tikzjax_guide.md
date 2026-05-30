@@ -222,11 +222,11 @@ Todo bloque TikZJax se escribe así:
 
 ## U8. EJEMPLOS PRÁCTICOS — SE RENDERIZAN EN OBSIDIAN
 
-> Estos bloques usan ` ```tikz ` real — copiarlos en cualquier nota y se ven directamente.
+> Estos bloques tienen ` ```tikz ` — al abrir la nota en Obsidian el plugin los convierte en SVG automáticamente.
 
 ---
 
-### Ejemplo 1 — Funciones matemáticas con grilla
+### E1 — Tres funciones con grilla (tikzpicture)
 
 ```tikz
 \begin{document}
@@ -236,33 +236,91 @@ Todo bloque TikZJax se escribe así:
     \draw[->] (0,-1.2) -- (0,4.2) node[above] {$f(x)$};
     \draw[color=red]    plot (\x,\x)             node[right] {$f(x) = x$};
     \draw[color=blue]   plot (\x,{sin(\x r)})    node[right] {$f(x) = \sin x$};
-    \draw[color=orange] plot (\x,{0.05*exp(\x)}) node[right] {$f(x) = \frac{1}{20} \mathrm{e}^x$};
+    \draw[color=orange] plot (\x,{0.05*exp(\x)}) node[right] {$f(x) = \frac{1}{20} e^x$};
   \end{tikzpicture}
 \end{document}
 ```
 
 ---
 
-### Ejemplo 2 — Circuito con fuente de corriente y resistencias en paralelo
+### E2 — Circuito: fuente de corriente con dos resistencias en paralelo
 
 ```tikz
 \usepackage{circuitikz}
 \begin{document}
 \begin{circuitikz}[american, voltage shift=0.5]
-\draw (0,0)
-  to[isource, l=$I_0$, v=$V_0$] (0,3)
-  to[short, -*, i=$I_0$] (2,3)
-  to[R=$R_1$, i>_=$i_1$] (2,0) -- (0,0);
-\draw (2,3) -- (4,3)
-  to[R=$R_2$, i>_=$i_2$]
-  (4,0) to[short, -*] (2,0);
+  \draw (0,0)
+    to[isource, l=$I_0$, v=$V_0$] (0,3)
+    to[short, -*, i=$I_0$] (2,3)
+    to[R=$R_1$, i>_=$i_1$] (2,0) -- (0,0);
+  \draw (2,3) -- (4,3)
+    to[R=$R_2$, i>_=$i_2$]
+    (4,0) to[short, -*] (2,0);
 \end{circuitikz}
 \end{document}
 ```
 
 ---
 
-### Ejemplo 3 — Superficie 3D con pgfplots
+### E3 — Circuito: divisor de voltaje con etiquetas de tensión
+
+```tikz
+\usepackage{circuitikz}
+\begin{document}
+\begin{circuitikz}[american]
+  \draw (0,0)
+    to[battery1, l=$V_s$]   (0,4)
+    to[short]               (3,4)
+    to[R, l=$R_1$, v=$V_1$] (3,2)
+    to[R, l=$R_2$, v=$V_2$] (3,0)
+    to[short]               (0,0);
+  \draw (3,2) node[right] {$V_x$};
+\end{circuitikz}
+\end{document}
+```
+
+---
+
+### E4 — Circuito RLC serie con fuente AC
+
+```tikz
+\usepackage{circuitikz}
+\begin{document}
+\begin{circuitikz}[american, scale=1.1]
+  \draw (0,0)
+    to[sV, l=$v_s$]         (0,3)
+    to[R, l=$R$, v=$v_R$]   (2,3)
+    to[L, l=$L$, v=$v_L$]   (4,3)
+    to[C, l=$C$, v=$v_C$]   (4,0)
+    to[short]               (0,0);
+\end{circuitikz}
+\end{document}
+```
+
+---
+
+### E5 — Circuito: amplificador operacional inversor
+
+```tikz
+\usepackage{circuitikz}
+\begin{document}
+\begin{circuitikz}[american, scale=1.1]
+  \draw (0,2) node[left] {$v_{in}$}
+    to[R, l=$R_1$] (2,2)
+    to[short] (2,2) node[op amp, anchor=+] (opamp) {};
+  \draw (opamp.-) to[short] (2,3.2)
+    to[R, l=$R_f$] (5,3.2)
+    to[short] (5,2) -- (opamp.out);
+  \draw (opamp.-) node[left] {};
+  \draw (opamp.+) to[short] (2,1) node[ground] {};
+  \draw (opamp.out) to[short] (6,2) node[right] {$v_{out}$};
+\end{circuitikz}
+\end{document}
+```
+
+---
+
+### E6 — Superficie 3D con pgfplots (colormap viridis)
 
 ```tikz
 \usepackage{pgfplots}
@@ -283,58 +341,92 @@ Todo bloque TikZJax se escribe así:
 
 ---
 
-### Ejemplo 4 — Diagrama conmutativo con tikz-cd
+### E7 — Gráfica 2D: parábola y recta con pgfplots
 
 ```tikz
-\usepackage{tikz-cd}
+\usepackage{pgfplots}
 \begin{document}
-\begin{tikzcd}
-    T
-    \arrow[drr, bend left, "x"]
-    \arrow[ddr, bend right, "y"]
-    \arrow[dr, dotted, "{(x,y)}" description] & & \\\\
-    K & X \times_Z Y \arrow[r, "p"] \arrow[d, "q"]
-    & X \arrow[d, "f"] \\\\
-    & Y \arrow[r, "g"]
-    & Z
-\end{tikzcd}
+\begin{tikzpicture}
+\begin{axis}[
+  xlabel={$x$}, ylabel={$y$},
+  xmin=-3, xmax=3, ymin=-1, ymax=9,
+  grid=major, width=8cm, height=6cm,
+  legend pos=north west
+]
+  \addplot[blue, thick, domain=-3:3, samples=80] {x^2} node[right,pos=0.9] {};
+  \addplot[red,  thick, domain=-3:3, samples=80] {2*x+1};
+  \legend{$y=x^2$, $y=2x+1$}
+\end{axis}
+\end{tikzpicture}
 \end{document}
 ```
 
 ---
 
-### Ejemplo 5 — Molécula con chemfig (aminoácido)
+### E8 — Diagrama de bloques de sistema de control
 
 ```tikz
-\usepackage{chemfig}
 \begin{document}
-\chemfig{[:-90]HN(-[::-45](-[::-45]R)=[::+45]O)>[::+45]*4(-(=O)-N*5(-(<:(=[::-60]O)-[::+60]OH)-(<[::+0])(<:[::-108])-S>)--)}
+\begin{tikzpicture}[auto, node distance=2.2cm,
+  block/.style={rectangle, draw, fill=blue!10, text width=2cm, text centered, minimum height=1cm},
+  sum/.style={circle, draw, fill=white, minimum size=0.6cm},
+  arrow/.style={->, thick}]
+
+  \node [sum] (suma) {$\Sigma$};
+  \node [block, right of=suma] (controlador) {Controlador\\$C(s)$};
+  \node [block, right of=controlador, node distance=3cm] (planta) {Planta\\$G(s)$};
+  \node [coordinate, right of=planta, node distance=2cm] (salida) {};
+  \node [block, below of=controlador] (sensor) {Sensor\\$H(s)$};
+
+  \draw [arrow] (suma) -- node {$E(s)$} (controlador);
+  \draw [arrow] (controlador) -- node {$U(s)$} (planta);
+  \draw [arrow] (planta) -- node [name=y] {$Y(s)$} (salida);
+  \draw [arrow] (y) |- (sensor);
+  \draw [arrow] (sensor) -| node [near end] {$-$} (suma);
+  \draw [arrow] ($(suma)+(-1.5,0)$) -- node {$R(s)$} (suma);
+\end{tikzpicture}
 \end{document}
 ```
 
 ---
 
-### Ejemplo 6 — Estructura molecular cíclica con chemfig
+### E9 — Triángulo rectángulo con ángulos y lados etiquetados
 
 ```tikz
-\usepackage{chemfig}
 \begin{document}
-\definesubmol\fragment1{
-    (-[:#1,0.85,,,draw=none]
-    -[::126]-[::-54](=_#(2pt,2pt)[::180])
-    -[::-70](-[::-56.2,1.07]=^#(2pt,2pt)[::180,1.07])
-    -[::110,0.6](-[::-148,0.60](=^[::180,0.35])-[::-18,1.1])
-    -[::50,1.1](-[::18,0.60]=_[::180,0.35])
-    -[::50,0.6]
-    -[::110])
-    }
-\chemfig{
-!\fragment{18}
-!\fragment{90}
-!\fragment{162}
-!\fragment{234}
-!\fragment{306}
-}
+\begin{tikzpicture}[scale=1.4]
+  \draw[thick] (0,0) -- (3,0) -- (3,2) -- cycle;
+  \draw (2.75,0) -- (2.75,0.25) -- (3,0.25);
+  \node[below] at (1.5,0) {$b$};
+  \node[right] at (3,1)   {$a$};
+  \node[above left] at (1.5,1.1) {$c$};
+  \node[above right] at (0.35,0) {$\alpha$};
+  \node[below left]  at (3,1.8)  {$\beta$};
+\end{tikzpicture}
+\end{document}
+```
+
+---
+
+### E10 — Diagrama vectorial (fasor) en ejes coordenados
+
+```tikz
+\begin{document}
+\begin{tikzpicture}[scale=1.2]
+  % Ejes
+  \draw[->] (-0.3,0) -- (3.5,0) node[right] {Re};
+  \draw[->] (0,-0.3) -- (0,2.5) node[above] {Im};
+  % Fasor V
+  \draw[->, very thick, blue] (0,0) -- (2.5,1.8) node[right] {$\vec{V}$};
+  % Componentes punteadas
+  \draw[dashed, gray] (2.5,0) -- (2.5,1.8);
+  \draw[dashed, gray] (0,1.8) -- (2.5,1.8);
+  % Etiquetas
+  \node[below] at (1.25,0) {$V\cos\theta$};
+  \node[left]  at (0,0.9)  {$V\sin\theta$};
+  % Ángulo
+  \draw[->] (0.7,0) arc (0:35.8:0.7) node[midway, right] {$\theta$};
+\end{tikzpicture}
 \end{document}
 ```
 
@@ -513,7 +605,7 @@ Incluir solo si aporta precisión técnica que Desmos o texto no pueden dar:
 
 ## C5. PLANTILLA BASE PARA CIRCUITO SIMPLE
 
-```tikz
+```
 \usepackage{circuitikz}
 \begin{document}
 \begin{circuitikz}[american, scale=1.2]
@@ -530,11 +622,18 @@ Reemplazar `FUENTE` y `COMPONENTE` según el circuito del enunciado.
 
 ---
 
-## C6. NOTA SOBRE ESTE ARCHIVO
+## C6. CONVENCIÓN DE BLOQUES EN ESTA GUÍA
 
-Los bloques de código TikZJax en **este documento** usan ` ```tikzx ` (con x al final) o se muestran como texto plano para que Obsidian no los renderice y se pueda leer el ejemplo.
+En esta guía hay dos tipos de bloques de código:
 
-En los archivos de ejercicios (`ETN806-*.md`, etc.) usar siempre ` ```tikz ` **sin la x**.
+| Tipo | Identificador | Comportamiento en Obsidian |
+|------|--------------|---------------------------|
+| **Ejemplo renderizable** | ` ```tikz ` | Obsidian lo procesa y muestra el diagrama SVG |
+| **Referencia / snippet** | ` ``` ` (sin identificador) | Obsidian lo muestra como texto plano — no renderiza nada |
+
+**Regla del usuario:** cuando un bloque de esta guía no debe renderizar (es solo para leer el código), se elimina `tikz` del identificador dejando solo ` ``` `.
+
+En los archivos de notas del vault (`ETN806-*.md`, etc.) usar siempre ` ```tikz ` para que Obsidian renderice el diagrama.
 
 %%
 galaxy-links

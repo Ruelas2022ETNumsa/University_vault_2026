@@ -225,6 +225,7 @@ SICO
 SELECCI
 SE
 SIMPLE
+Sensor
 Plugins
 Pendientes
 Plugin
@@ -299,6 +300,7 @@ Paquete
 PRIMER
 PAQUETE
 PR
+Planta
 del
 date
 de
@@ -751,6 +753,9 @@ standalone
 sV
 short
 salvo
+suma
+salida
+sensor
 vault
 vil
 ver
@@ -991,6 +996,8 @@ addplot
 arrow
 algebraico
 agreg
+at
+arc
 related
 recomendados
 ribbon
@@ -1139,6 +1146,7 @@ ramas
 renderice
 resistencia
 recordar
+renderizable
 notes
 notas
 nuevas
@@ -1534,6 +1542,8 @@ capacitor
 cerrado
 contraria
 corrientes
+controlador
+cycle
 updated
 un
 universo
@@ -1709,6 +1719,7 @@ COMPONENTE
 CTICOS
 CONVENCI
 CIRCUITO
+Controlador
 Instalados
 Instalado
 Instalar
@@ -1793,6 +1804,7 @@ Footer
 Fuente
 FICAS
 FUENTE
+Fasor
 Estado
 Excalidraw
 EPUBs
@@ -1876,6 +1888,8 @@ EJEMPLO
 ESTILO
 Escalar
 Editar
+Ejes
+ESTA
 Obsidian
 OmniSearch
 Ocultar
@@ -2159,6 +2173,8 @@ pgfplots
 plot
 pgfplotsset
 pt
+planta
+punteadas
 min
 mica
 movimiento
@@ -2312,6 +2328,7 @@ Bajar
 Browse
 Boot
 Beacon
+BLOQUES
 en
 exacta
 escaneados
@@ -2669,6 +2686,7 @@ larga
 lugares
 llegar
 ltimo
+legend
 incluyendo
 im
 instalar
@@ -2908,6 +2926,7 @@ RENDER
 Reabrir
 RENDERIZAN
 Reemplazar
+Re
 Hider
 Hace
 Herramientas
@@ -3146,6 +3165,8 @@ online
 otro
 obligatorios
 ocurre
+opamp
+out
 junto
 json
 jer
