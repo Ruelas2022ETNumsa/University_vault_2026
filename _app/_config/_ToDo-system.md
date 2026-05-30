@@ -105,3 +105,5 @@ galaxy-links
 [[_sync-system]]
 [[_excalidraw-system]]
 %%
+
+![[_excalidraw-system#^bab436]]
