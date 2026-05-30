@@ -11,9 +11,5 @@
   "readableLineLength": true,
   "showLineNumber": false,
   "vimMode": false,
-  "userIgnoreFilters": [
-    "**/*.tmp",
-    "**/*.bat",
-    "**/*.ps1"
-  ]
+  "userIgnoreFilters": null
 }
