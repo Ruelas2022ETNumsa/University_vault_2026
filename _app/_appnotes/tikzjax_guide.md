@@ -66,7 +66,7 @@ Todo bloque TikZJax se escribe así:
 
 ### Estilos de norma
 
-```tikz
+```
 % Estilo americano (IEEE)
 \begin{circuitikz}[american]
 
@@ -95,7 +95,7 @@ Todo bloque TikZJax se escribe así:
 
 ### Etiquetas en componentes
 
-```tikz
+```
 \draw (0,0) to[R, l=$R_1$, v=$V_R$] (3,0);
 %              ↑ nombre    ↑ tensión (flecha)
 
@@ -140,7 +140,7 @@ Todo bloque TikZJax se escribe así:
 
 ### Nodos y conexiones
 
-```tikz
+```
 % Punto de conexión visible
 \draw (2,2) node[circ] {};
 
@@ -207,7 +207,7 @@ Todo bloque TikZJax se escribe así:
 
 ## U6. ESCALA Y TAMAÑO
 
-```tikz
+```
 % Escalar el dibujo completo
 \begin{circuitikz}[scale=1.5, american]
 
