@@ -37,6 +37,8 @@ Guía de referencia para sintaxis avanzada de Obsidian: Markdown avanzado, sinta
 12. [Aliases y display text](#12-aliases-y-display-text)
 13. [Tags](#13-tags)
 14. [Dataview queries](#14-dataview-queries)
+15. [Excalidraw — embeds en notas](#15-excalidraw--embeds-en-notas)
+16. [PDF++ — citas y embeds desde PDF](#16-pdf--citas-y-embeds-desde-pdf)
 
 ---
 
@@ -896,6 +898,226 @@ dv.table(
 
 > [!tip] ¿Claude puede verlo?
 > **Parcialmente.** Claude ve la sintaxis del bloque `dataview` como texto plano y puede escribir queries correctas conociendo la estructura del YAML. Claude **no ejecuta** las queries — no ve los resultados dinámicos que genera Dataview en Obsidian. Para que Claude sepa qué notas existen con ciertos campos, hay que pedirle que liste los archivos del vault directamente con el conector Filesystem.
+
+---
+
+## 15. Excalidraw — embeds en notas
+
+### Sintaxis básica — archivo completo
+
+```
+![[nombre.excalidraw.md]]
+```
+
+Embebe el lienzo completo como imagen SVG dentro de la nota. Obsidian lo renderiza en modo lectura gracias a la configuración `displaySVGInPreview: true` del plugin. Ver `_excalidraw-system` para detalles de configuración.
+
+**Ejemplo:**
+```
+![[ETN806-P2-region-integracion.excalidraw.md]]
+```
+
+### Variantes — segmentos del lienzo
+
+El plugin de Excalidraw permite apuntar a partes específicas de un lienzo usando prefijos especiales después de `#^`. Todas las variantes de embed (con `!`) muestran el segmento como imagen en modo lectura. Las variantes de link (sin `!`) abren el archivo en el lienzo y seleccionan o enfocan el elemento.
+
+#### Frame
+
+```
+![[nombre.excalidraw.md#^frame=NombreDelFrame]]
+```
+
+Muestra solo el contenido del frame con ese nombre, recortado y encuadrado. El frame actúa como una ventana con nombre dentro del lienzo.
+
+**Ejemplo real del vault:**
+```
+![[RENOMBRAR-30-05-2026 13.12.12.excalidraw#^frame=01]]
+```
+
+El nombre del frame es el texto que le diste al frame dentro de Excalidraw. Si el frame se llama `Región de integración`, la sintaxis es `#^frame=Región de integración`.
+
+#### Group — grupo de elementos
+
+```
+![[nombre.excalidraw.md#^group=elementID]]
+```
+
+Muestra todos los elementos que pertenecen al mismo grupo que el elemento referenciado por `elementID`. El `elementID` es el block reference (`^id`) del elemento de texto dentro del grupo.
+
+**Cómo obtener el ID:** En Excalidraw, clic derecho sobre un elemento de texto del grupo → Copy link. El link resultante contiene el ID.
+
+**Ejemplo:**
+```
+![[ETN806-P2-constellation.excalidraw.md#^group=abc123]]
+```
+
+#### Area — recorte libre alrededor de un elemento
+
+```
+![[nombre.excalidraw.md#^area=elementID]]
+```
+
+Inserta un recorte de imagen alrededor del elemento referenciado. A diferencia de `group=`, incluye el espacio visual alrededor del elemento, no solo los elementos del grupo. Útil para aislar un diagrama concreto sin usar frames.
+
+> [!warning] `area=` no funciona cuando el archivo se embebe como PNG (solo funciona con SVG). Asegurarse de que `previewImageType: SVG` esté activo en `_excalidraw-system`.
+
+#### El= — elemento de texto como transclusión de texto
+
+```
+[[nombre.excalidraw.md#^elementID]]
+```
+
+Sin prefijo y sin `!`, si el elemento referenciado es un **texto**, Obsidian transcluye el contenido de ese texto directamente en la nota como texto plano (no como imagen). Útil para reutilizar etiquetas o títulos del lienzo en notas de texto.
+
+> [!warning] Solo funciona con elementos de tipo texto. Referenciar un elemento no-texto (rectángulo, flecha, etc.) sin prefijo genera un error de Obsidian.
+
+### Variante de tamaño
+
+```
+![[nombre.excalidraw.md#^frame=01|600]]
+```
+
+El número después de `|` controla el ancho en píxeles del embed, igual que con imágenes normales. Aplica a todas las variantes: archivo completo, frame, group y area.
+
+### Links (sin embed) — solo navegación
+
+```
+[[nombre.excalidraw.md#^frame=NombreDelFrame]]
+[[nombre.excalidraw.md#^group=elementID]]
+[[nombre.excalidraw.md#^area=elementID]]
+```
+
+Sin `!`, estas sintaxis crean links que al hacer clic abren el lienzo de Excalidraw y enfocan o seleccionan el elemento o frame referenciado. No muestran ninguna imagen en la nota.
+
+**Edge cases:**
+- Los nombres de frame son sensibles a mayúsculas y espacios — `#^frame=01` y `#^frame= 01` son distintos.
+- Si el frame se renombra dentro de Excalidraw, el link se rompe — los frames con nombres cortos y estables (como `01`, `02`) son más robustos.
+- `group=` y `area=` requieren el ID interno del elemento, que Excalidraw genera automáticamente y no es legible. Los frames son más convenientes porque usan el nombre visible que tú defines.
+- Para `group=` y `area=`, el ID se obtiene desde el menú contextual del elemento en Excalidraw (clic derecho → Copy link). No es editable manualmente.
+- `area=` no soporta PNG como formato de embed — requiere SVG.
+- Un frame vacío (sin elementos dentro) se embebe como imagen en blanco, sin error.
+- Estos prefijos (`frame=`, `group=`, `area=`) son sintaxis **dependiente del plugin** — si el plugin de Excalidraw se desactiva, los links siguen funcionando como navegación a la página del lienzo, pero el embed deja de mostrar el recorte correcto.
+
+> [!info] Dónde y para qué usarlo en el vault
+> Embeber `![[constellation.excalidraw.md#^frame=01]]` en una nota `star` para mostrar la sección del mapa mental correspondiente a ese tema sin abrir el lienzo completo. Embeber un frame con el diagrama de una región de integración directamente en el `comet` donde se resuelve el ejercicio. En notas `planet` para mostrar un esquema visual adjunto sin crear un `observatory` separado si el diagrama ya existe en un `constellation`.
+
+> [!example] ¿Sirve en el Sistema Galaxy?
+> **Sí — es la forma preferida de mostrar visuals de Excalidraw en notas de texto.** Los frames son la herramienta más estable y conveniente: tienen nombre visible, se recortan exactamente al contenido del frame, y el nombre lo defines tú. Recomendado: nombrar los frames de `constellation` con números (`01`, `02`...) para poder referenciarlos fácilmente desde notas `star` y `comet`.
+
+> [!tip] ¿Claude puede verlo?
+> **Parcialmente.** Claude ve la sintaxis `![[archivo.excalidraw.md#^frame=01]]` como texto plano y puede escribirla correctamente. Claude no renderiza el lienzo ni ve su contenido visual. Para que Claude sepa qué frames existen en un archivo, hay que decírselo explícitamente o pedirle que abra el archivo `.excalidraw.md` y busque los nombres de frame en el JSON (con `decompressForMDView: true` activo, el contenido es legible en modo texto).
+
+---
+
+## 16. PDF++ — citas y embeds desde PDF
+
+> [!note] PDF++ y los callouts `[!PDF]`
+> PDF++ también usa el formato de callout descrito en la sección 6 de esta guía. El tipo `[!PDF]` es un callout personalizado que el plugin reconoce y estiliza. Ver sección 6 para la sintaxis general de callouts.
+
+### Sintaxis básica — link a página
+
+```
+[[archivo.pdf#page=N|Texto visible]]
+```
+
+Crea un link que al hacer clic abre el PDF en la página `N`. Es la sintaxis nativa de Obsidian (desde v1.3.6) — funciona sin PDF++ activo, pero PDF++ la amplía con backlink highlighting: el texto de esa página queda resaltado visualmente en el visor de PDF si tiene backlinks.
+
+**Ejemplo:**
+```
+[[ETN806-T00-papoulis.pdf#page=142|Papoulis, p.142]]
+```
+
+### Variante — embed de página completa
+
+```
+![[archivo.pdf#page=N]]
+```
+
+Embebe la página completa del PDF como imagen dentro de la nota. Obsidian la renderiza directamente sin necesidad de PDF++.
+
+**Ejemplo:**
+```
+![[ETN806-T00-papoulis.pdf#page=142]]
+```
+
+### Tipo 1 — Selección de texto (highlight de línea)
+
+Este es el tipo más común. Se genera seleccionando texto en el visor de PDF de Obsidian y copiando el link.
+
+**Cómo generarlo:** Abrir el PDF → seleccionar texto → clic derecho → "Copy link to selection" → pegar en la nota.
+
+**Sintaxis generada (link):**
+```
+[[archivo.pdf#page=N&selection=x1,y1,x2,y2|Archivo, página N]]
+```
+
+**Sintaxis generada (embed — muestra el fragmento de texto resaltado):**
+```
+![[archivo.pdf#page=N&selection=x1,y1,x2,y2|Archivo, página N]]
+```
+
+**Ejemplo real:**
+```
+[[ETN806-T00-papoulis.pdf#page=1&selection=4,0,4,11|Papoulis, página 1]]
+```
+
+El parámetro `selection=` contiene cuatro números: coordenadas del inicio y fin de la selección de texto en la página. Estos valores los genera Obsidian automáticamente — no es necesario escribirlos a mano.
+
+Con PDF++ activo, el texto seleccionado queda **resaltado en el visor de PDF** cada vez que la nota que contiene el link está abierta. El color del highlight lo controla la paleta de colores de PDF++ (Settings → PDF++ → Color palette).
+
+**Variante con color explícito:**
+```
+[[archivo.pdf#page=N&selection=x1,y1,x2,y2&color=yellow|Texto visible]]
+```
+
+El parámetro `&color=` es opcional y específico de PDF++ — fuerza el color del highlight independientemente de la paleta activa.
+
+### Tipo 2 — Selección rectangular (recorte de imagen)
+
+Permite seleccionar un área rectangular del PDF (una ecuación, una figura, una tabla) y embeberla como imagen en la nota.
+
+**Cómo generarlo:** En el visor de PDF, activar el modo de selección rectangular (botón en la barra de herramientas de PDF++ o desde el menú contextual). Dibujar el rectángulo sobre la zona de interés → copiar link → pegar en la nota con `!` al inicio.
+
+**Sintaxis (embed — muestra el recorte como imagen):**
+```
+![[archivo.pdf#page=N&rect=x1,y1,x2,y2]]
+```
+
+**Sintaxis (link — solo navega a la página):**
+```
+[[archivo.pdf#page=N&rect=x1,y1,x2,y2|Texto visible]]
+```
+
+**Ejemplo real:**
+```
+![[ETN806-T00-papoulis.pdf#page=142&rect=38,152,576,809]]
+```
+
+Los cuatro valores de `rect=` son las coordenadas del rectángulo en el sistema de coordenadas del PDF: `x1,y1` es la esquina inferior izquierda y `x2,y2` es la esquina superior derecha. PDF++ los genera automáticamente al dibujar la selección.
+
+**Variante con ancho:**
+```
+![[archivo.pdf#page=N&rect=x1,y1,x2,y2&width=400]]
+```
+
+El parámetro `width` controla el ancho del embed en píxeles. Es diferente a la sintaxis `|400` de imágenes normales — aquí se usa `&width=` porque forma parte de la cadena de parámetros del link.
+
+**Edge cases:**
+- `selection=` y `rect=` son los dos tipos de anotación posicional de PDF++. `selection` identifica texto; `rect` identifica un área de imagen.
+- El parámetro `&color=` en `selection=` es opcional y dependiente del plugin. Sin PDF++ activo, el link sigue funcionando para navegar pero sin highlight visual.
+- `rect=` es también dependiente del plugin. Sin PDF++ el link navega a la página correcta pero no muestra el recorte — solo la página completa.
+- Si el PDF se mueve fuera del vault, todos estos links se rompen. Los PDFs del vault viven en `_pdf/ETNXXX/` — no moverlos.
+- Los embeds `![[pdf#page=N]]` (página completa) son nativos de Obsidian y no dependen de PDF++.
+- La barra de herramientas de PDF++ se puede ocultar en embeds de página si `Style Settings` está instalado — ver `_pdf-system` para configuración.
+- Los links de selección generados por la paleta de colores de PDF++ incluyen el formato de callout `[!PDF]` automáticamente si está configurado así. Ver sección 6 de esta guía.
+
+> [!info] Dónde y para qué usarlo en el vault
+> En notas `asteroid` para citar secciones específicas de un libro o apunte con link directo a la página exacta. En notas `comet` para referenciar la fuente de un ejercicio con `[[pdf#page=N]]`. En notas `planet` para embeber con `![[pdf#page=N&rect=...]]` una figura o fórmula del libro directamente en la nota de teoría. La selección rectangular es especialmente útil para figuras, tablas y ecuaciones tipografíadas que no se pueden copiar como texto.
+
+> [!example] ¿Sirve en el Sistema Galaxy?
+> **Sí — es el sistema central de integración con libros y apuntes.** La combinación de `asteroid` (nota de referencia) + links `selection=` para texto y `rect=` para imágenes crea una capa de anotación bidireccional: desde la nota llegas al PDF, y desde el PDF (con PDF++ activo) llegas de vuelta a la nota. Esta bidireccionalidad es el valor principal del plugin sobre un simple link a página.
+
+> [!tip] ¿Claude puede verlo?
+> **Parcialmente.** Claude ve la sintaxis `[[pdf#page=N&selection=...]]` y `![[pdf#page=N&rect=...]]` como texto plano y puede escribirla correctamente si se le da el nombre del archivo y el número de página. Claude no puede generar las coordenadas de `selection=` ni de `rect=` — esos valores los produce Obsidian/PDF++ al hacer la selección manualmente. Para que Claude cite un PDF, hay que darle el nombre del archivo y la página; él puede escribir el link `[[archivo.pdf#page=N|texto]]` con eso.
 
 ---
 

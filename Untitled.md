@@ -46,4 +46,4 @@ SORT subject ASC
 
 
 
-![[_app/Excalidraw/RENOMBRAR-30-05-2026 13.12.12.excalidraw.md#^BlXLPDwz|hhhh]]
+![[_app/Excalidraw/RENOMBRAR-30-05-2026 13.12.12.excalidraw.md#^frame=01]]
