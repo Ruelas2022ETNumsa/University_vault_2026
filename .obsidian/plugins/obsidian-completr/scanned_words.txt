@@ -67,6 +67,7 @@ transcluye
 tulos
 tama
 tipograf
+tuvieran
 ToDo
 Templater
 Text
@@ -514,6 +515,7 @@ segmento
 seleccionan
 seleccionando
 selection
+situaci
 vault
 vil
 ver
@@ -559,6 +561,7 @@ velocidad
 vez
 vista
 vuelta
+variante
 audience
 activo
 auto
@@ -800,6 +803,7 @@ referenciarlos
 rectangular
 rea
 rompen
+reservada
 notes
 notas
 nuevas
@@ -1079,6 +1083,8 @@ cuatro
 coordenadas
 cadena
 cite
+caso
+cticamente
 updated
 un
 universo
@@ -1107,6 +1113,7 @@ util
 usarla
 unos
 une
+unicidad
 Galaxy
 Git
 Gr
@@ -1302,6 +1309,7 @@ Encuentra
 Estudiando
 Escenario
 Espera
+Existe
 Obsidian
 OmniSearch
 Ocultar
@@ -1782,6 +1790,7 @@ ecuaci
 embeberla
 ecuaciones
 esos
+excepcional
 Motor
 Media
 Mantiene
@@ -1962,6 +1971,7 @@ inmediatamente
 integraci
 inter
 inferior
+imposible
 Dependencia
 Dropbox
 Dataview
