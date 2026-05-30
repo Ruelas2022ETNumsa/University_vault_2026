@@ -4,8 +4,15 @@ galaxy_body: beacon
 scope: vault
 tool: excalidraw
 audience: [usuario, claude]
+related_notes:
+  - "[[_galaxy-system]]"
+  - "[[_mindmap-system]]"
+  - "[[_template-system]]"
+  - "[[_note-system]]"
+  - "[[_pdf-system]]"
 tags: [beacon, excalidraw, configuracion, infraestructura]
 date_created: 2026-05-28
+date_updated: 2026-05-29
 status: activo
 ---
 
@@ -14,6 +21,8 @@ status: activo
 > Sistema Galaxy: [[_galaxy-system]]
 > Sistema Mindmap: [[_mindmap-system]]
 > Sistema de Plantillas: [[_template-system]]
+> Convención de notas: [[_note-system]]
+> Sistema PDF: [[_pdf-system]]
 
 Este documento registra la configuración aplicada al plugin `obsidian-excalidraw-plugin` (archivo `data.json`) para alinearla con el Sistema Galaxy. Es la referencia canónica para restaurar o migrar la configuración.
 
@@ -37,6 +46,21 @@ Archivo de configuración: .obsidian/plugins/obsidian-excalidraw-plugin/data.jso
 | `scriptFolderPath` | `_app/Excalidraw/Scripts` | Carpeta donde el Script Store instala Mindmap Builder y otros scripts |
 
 > `fontAssetsPath` se deja en su valor por defecto — no se usan fuentes CJK en este vault.
+
+---
+
+## Configuración de carpetas (Settings → Excalidraw → Saving)
+
+Excalidraw tiene su propia configuración de destino, independiente de la configuración global de Obsidian (Settings → Files & Links → `_assets`).
+
+| Ajuste | Valor configurado | Razón |
+|--------|-------------------|-------|
+| Excalidraw folder | `_app/Excalidraw` | Punto de aterrizaje para todos los archivos nuevos |
+| Use Excalidraw folder when embedding | `ON` | Los dibujos embebidos desde el command palette caen en `_app/Excalidraw`, no en `_assets` |
+| Crop file folder | `_app/Excalidraw/Observatory` | Las imágenes recortadas son dibujos técnicos puntuales → `observatory` |
+| Image annotation file folder | `_app/Excalidraw/Observatory` | Anotar una imagen es un dibujo libre → `observatory` |
+
+> La carpeta global de attachments de Obsidian está configurada en `_assets`. Esto afecta imágenes arrastradas desde fuera del vault. Los recortes de PDF++ también van a `_assets/` — ver [[_pdf-system]].
 
 ---
 
@@ -235,7 +259,7 @@ Los siguientes valores fueron modificados respecto al estado inicial del plugin:
 
 - [x] Crear `_app/Excalidraw/Template.excalidraw.md` — plantilla base con lienzo vacío y YAML mínimo
 - [x] Crear carpeta `_app/Excalidraw/Scripts/`
-- [ ] Instalar Mindmap Builder desde el Script Store de Excalidraw — hacerlo manualmente dentro de Obsidian
+- [x] Instalar Mindmap Builder desde el Script Store de Excalidraw
 - [ ] Verificar que `tpl-constellation.md` y `tpl-observatory.md` abren correctamente como lienzo al ejecutarse con Templater
 - [ ] Crear primer `constellation` de prueba para ETN806-P2
 
@@ -244,4 +268,6 @@ galaxy-links
 [[_galaxy-system]]
 [[_mindmap-system]]
 [[_template-system]]
+[[_note-system]]
+[[_pdf-system]]
 %%
