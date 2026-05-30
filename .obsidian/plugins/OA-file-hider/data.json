@@ -1,0 +1,8 @@
+{
+  "hidden": true,
+  "hiddenList": [
+    "_app/_config/tagroute_parche/patch-obsidian.ps1",
+    "_app/_config/tagroute_parche/patch-obsidian.bat",
+    "_app/_config/_assets-section.tmp"
+  ]
+}
