@@ -13,7 +13,7 @@
     },
     {
       "id": "app:reload",
-      "icon": "lucide-rotate-ccw",
+      "icon": "lucide-folder-clock",
       "name": "Reload app without saving",
       "mode": "any"
     }
