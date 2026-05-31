@@ -61,3 +61,35 @@ $x: a, b, c, d, x \in \mathbb{R}$
 
 1.lkhj
 1) 
+
+$$
+\begin{aligned}
+\|\mathbf{x}\times\mathbf{y}\|^2
+&=
+(x_2y_3-x_3y_2)^2
++(x_3y_1-x_1y_3)^2
++(x_1y_2-x_2y_1)^2 \\
+&=
+x_2^2y_3^2
+-2x_2x_3y_2y_3
++x_3^2y_2^2
++x_3^2y_1^2
+-2x_1x_3y_1y_3 \\
+&\qquad
++x_1^2y_3^2
++x_1^2y_2^2
+-2x_1x_2y_1y_2
++x_2^2y_1^2 \\
+&=
+(x_1^2+x_2^2+x_3^2)
+(y_1^2+y_2^2+y_3^2)
+-(x_1y_1+x_2y_2+x_3y_3)^2 \\
+&=
+\|\mathbf{x}\|^2\|\mathbf{y}\|^2
+-(\mathbf{x}\cdot\mathbf{y})^2 \\
+&=
+\|\mathbf{x}\|^2\|\mathbf{y}\|^2
+-\|\mathbf{x}\|^2\|\mathbf{y}\|^2\cos^2\theta \\
+&=
+\|\mathbf{x}\|^2\|\mathbf{y}\|^2\sin^2\theta.
+\end{aligned}$$
