@@ -1,18 +1,20 @@
 # Números reales y desigualdades
 ## Axiomas de cuerpo de la de los números reales
 Si a, b, c ∈ $\mathbb{R}$
-A1) Clausura
+* A1) Clausura
 	- a+b ∈  $\mathbb{R}$
 	- a, b ∈ $\mathbb{R}$
-	A2) Commutatividad i a+b = b+a
-ii a·b = b·a
-	A3) Associatividad i) (a+b)+c = a+(b+c)
-ii (a·b)·c = a(b·c)
-A4) J de meuntres
-i) ∃O ∈ IR a+0 = a
-→ O meuntro para "+" +
-ii) ∃I ∈ IR a·1 = a
-→ I meuntro para "×"
+* A2) Conmutatividad 
+	* a+b = b+a
+	* a·b = b·a
+* A3) Asociatividad
+	* (a+b)+c = a+(b+c)
+	- (a·b)·c = a·(b·c)
+* A4) ∃ de neutros
+	- ∃ 0∈ $\mathbb{R}$  $\rightsquigarrow$ a+0 = a
+		→ O meuntro para "+" +
+	* ∃I ∈ IR a·1 = a
+		→ I meuntro para "×"
 A5) J de megativos
 ∀a ∈ IR ∃-a ∈ IR ∃a+(-a)=0
 - a = megativo de a

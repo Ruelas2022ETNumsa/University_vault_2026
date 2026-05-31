@@ -1738,6 +1738,7 @@ CIRCUITO
 Controlador
 Clausura
 Commutatividad
+Conmutatividad
 Instalados
 Instalado
 Instalar
@@ -2018,6 +2019,7 @@ AC
 ADVERTENCIA
 Axiomas
 Associatividad
+Asociatividad
 push
 pull
 para
