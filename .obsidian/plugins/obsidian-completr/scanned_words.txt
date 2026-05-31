@@ -103,6 +103,12 @@ tensi
 tensiones
 tikzx
 tal
+transformar
+tems
+teoremas
+tab
+textual
+teorema
 ToDo
 Templater
 Text
@@ -159,6 +165,9 @@ Transmisi
 Theorem
 Transitividad
 Teoremas
+TULOS
+TEOREMAS
+TABLAS
 Sistema
 Sync
 Save
@@ -234,6 +243,10 @@ Sensor
 Sean
 Simetr
 Suma
+SEPARADORES
+SECCIONES
+SALIDA
+Salida
 Plugins
 Pendientes
 Plugin
@@ -309,6 +322,8 @@ PRIMER
 PAQUETE
 PR
 Planta
+PROPIEDADES
+PIE
 del
 date
 de
@@ -472,6 +487,7 @@ desigualdades
 divisi
 denomina
 denominador
+debes
 Vault
 Verificar
 Variables
@@ -773,6 +789,8 @@ sensor
 simetr
 siguidad
 scale
+subsecciones
+suelto
 vault
 vil
 ver
@@ -1021,6 +1039,11 @@ ac
 aditivos
 aditivo
 aditivas
+apartarse
+axiomas
+adem
+atributos
+axioma
 related
 recomendados
 ribbon
@@ -1172,6 +1195,10 @@ recordar
 renderizable
 reales
 resta
+reciba
+reservan
+rrafos
+recibas
 notes
 notas
 nuevas
@@ -1261,6 +1288,8 @@ nulo
 negativo
 negativos
 numeros
+numerada
+numerado
 created
 commit
 cada
@@ -1579,6 +1608,9 @@ calc
 closedcycle
 cs
 ci
+corrido
+comprimida
+comparaci
 updated
 un
 universo
@@ -1616,6 +1648,7 @@ universitaria
 usepackage
 unificador
 usetikzlibrary
+unicode
 Galaxy
 Git
 Gr
@@ -1636,6 +1669,7 @@ GALAXY
 Guardar
 Graph
 GEOM
+Guide
 Convenci
 Creaci
 Commander
@@ -1759,6 +1793,11 @@ Controlador
 Clausura
 Commutatividad
 Conmutatividad
+Class
+CABECERA
+ChatGPT
+Colocar
+Convertir
 Instalados
 Instalado
 Instalar
@@ -1807,6 +1846,8 @@ Identificador
 IR
 Igualdad
 Identidad
+IA
+INSTRUCCIONES
 Funci
 File
 Fase
@@ -1847,6 +1888,7 @@ Fuente
 FICAS
 FUENTE
 Fasor
+FORMATO
 Estado
 Excalidraw
 EPUBs
@@ -1934,6 +1976,8 @@ Ejes
 ESTA
 Existencia
 Ecuaci
+ESPERADA
+Entrada
 Obsidian
 OmniSearch
 Ocultar
@@ -2046,6 +2090,8 @@ ADVERTENCIA
 Axiomas
 Associatividad
 Asociatividad
+Apuntes
+AXIOMAS
 push
 pull
 para
@@ -2226,6 +2272,7 @@ pt
 planta
 punteadas
 producto
+propiedad
 min
 mica
 movimiento
@@ -2357,6 +2404,9 @@ multiplicativos
 multiplicativo
 multiplicativas
 moons
+manuscritos
+merecen
+marcarlo
 YAML
 Ya
 You
@@ -2599,6 +2649,8 @@ etiquetados
 especiados
 evidente
 equaci
+ellas
+explicaci
 Motor
 Media
 Mantiene
@@ -2677,6 +2729,8 @@ LEGACY
 Lienzo
 Lenguaje
 LED
+LISTAS
+LINKS
 links
 las
 listar
@@ -2869,6 +2923,8 @@ immero
 igualdad
 inversos
 inverso
+inventar
+ilegible
 Dependencia
 Dropbox
 Dataview
@@ -3011,6 +3067,7 @@ Resta
 Recala
 Reales
 Reflexividad
+RMULAS
 Hider
 Hace
 Herramientas
@@ -3173,6 +3230,7 @@ USUARIO
 URL
 UNA
 UN
+USAR
 Nombre
 Notas
 No
@@ -3293,6 +3351,7 @@ Windows
 WebAssembly
 JavaScript
 JSON
+JERARQU
 KB
 Kirchhoff
 Zonas
