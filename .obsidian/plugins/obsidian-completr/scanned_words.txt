@@ -497,6 +497,7 @@ VAULT
 Visual
 Versionado
 VOLTAJE
+Verdadera
 galaxy
 gina
 genes
@@ -1259,6 +1260,7 @@ neutro
 nulo
 negativo
 negativos
+numeros
 created
 commit
 cada
@@ -2354,6 +2356,7 @@ mas
 multiplicativos
 multiplicativo
 multiplicativas
+moons
 YAML
 Ya
 You
@@ -2640,6 +2643,7 @@ MATERIAS
 Mezclarlos
 MATEM
 Mo
+MAT
 Lectura
 LaTeX
 Linter
