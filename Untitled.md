@@ -298,3 +298,79 @@ arc(100:65:1 and 1.2);
 
 \end{document}
 ```
+
+
+```tikz
+\begin{document}
+
+\begin{tikzpicture}[
+    scale=1.2,
+    every node/.style={
+        black,
+        text height=1.5ex,
+        text depth=0.25ex
+    }
+]
+
+\footnotesize
+
+% Ejes
+\draw[-stealth] (-0.4,0) -- (5.2,0) node[right] {$x$};
+\draw[-stealth] (0,-0.4) -- (0,3) node[above] {$y$};
+
+% Curva izquierda
+\draw[blue,thick,densely dashed]
+(0.4,1.5)
+node[above right,yshift=3.5mm] {$f$}
+parabola[bend at end] (2,2.7);
+
+\draw[blue,semithick,densely dashed]
+(0.4,1.5) -- (0.4,0)
+node[below] {$a$};
+
+\draw[blue,semithick,densely dashed]
+(1,2.23) --
+node[right=-0.5mm] {$f(x-c)$}
+(1,0)
+node[below] {$x-c$};
+
+\draw[blue,semithick,densely dashed]
+(2,2.7) -- (2,0)
+node[below] {$b$};
+
+% Curva derecha trasladada
+\begin{scope}[xshift=2.3cm]
+
+\draw[blue,thick]
+(0.4,1.5)
+node[above right,yshift=3.5mm] {$g$}
+parabola[bend at end] (2,2.7);
+
+\draw[blue,semithick]
+(0.4,1.5) -- (0.4,0)
+node[below] {$a+c$};
+
+\draw[blue,semithick]
+(1,2.23) --
+node[right=-0.5mm] {$g(x)$}
+(1,0)
+node[below] {$x$};
+
+\draw[blue,semithick]
+(2,2.7) -- (2,0)
+node[below] {$b+c$};
+
+\end{scope}
+
+% Flecha de traslación
+\draw[-latex]
+(1.4,-0.4)
+to[bend right=20]
+(3,-0.4);
+
+\node[below left] at (0,0) {$O$};
+
+\end{tikzpicture}
+
+\end{document}
+```
