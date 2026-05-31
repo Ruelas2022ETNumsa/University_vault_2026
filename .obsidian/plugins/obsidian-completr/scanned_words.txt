@@ -459,6 +459,7 @@ dibujan
 documentclass
 definesubmol
 diodo
+dplot
 Vault
 Verificar
 Variables
@@ -1544,6 +1545,9 @@ contraria
 corrientes
 controlador
 cycle
+calc
+closedcycle
+cs
 updated
 un
 universo
@@ -1580,6 +1584,7 @@ usada
 universitaria
 usepackage
 unificador
+usetikzlibrary
 Galaxy
 Git
 Gr
@@ -2329,6 +2334,7 @@ Browse
 Boot
 Beacon
 BLOQUES
+Borrar
 en
 exacta
 escaneados
@@ -3025,6 +3031,7 @@ foco
 fundamentalmente
 formas
 fragment
+fillbetween
 haya
 hace
 hacer
@@ -3195,6 +3202,7 @@ web
 word
 width
 webview
+white
 xima
 xeles
 xy

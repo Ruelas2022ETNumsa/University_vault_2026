@@ -623,6 +623,67 @@ Reemplazar `FUENTE` y `COMPONENTE` según el circuito del enunciado.
 
 ---
 
+## C7. LIBRERÍAS NO SOPORTADAS EN TIKZJAX
+
+La build de TikZJax incluida en `obsidian-tikzjax` **no incluye todas las librerías** de pgfplots/TikZ. Si un bloque falla sin error visible, probar eliminar librerías una por una.
+
+| Librería | Estado | Alternativa |
+|----------|--------|-------------|
+| `pgfplots` base | ✅ Funciona | — |
+| `circuitikz` | ✅ Funciona | — |
+| `tikz-cd` | ✅ Funciona | — |
+| `tikz-3dplot` | ✅ Funciona | — |
+| `pgfplots fillbetween` | ❌ No soportada | Ver patrón de relleno manual abajo |
+| `chemfig` | ⚠️ Inestable | Evitar |
+
+### Patrón: simular área entre dos curvas sin fillbetween
+
+Cuando se necesita rellenar el área entre $f(x)$ y $g(x)$ en $[a,b]$ donde $f > g$:
+
+1. Rellenar bajo $f(x)$ con el color deseado (`\closedcycle`)
+2. Rellenar bajo $g(x)$ con blanco (`\closedcycle`) — borra el exceso
+3. Dibujar las curvas encima para que queden limpias
+
+**El orden importa** — el relleno blanco debe ir antes que las curvas.
+
+```tikz
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.16}
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[
+    axis lines=middle,
+    xlabel={$x$}, ylabel={$y$},
+    xmin=0, xmax=5.5, ymin=0, ymax=24
+]
+
+% 1. Relleno bajo f(x) = x^2
+\addplot[teal!30, fill=teal!30, domain=2:4, samples=100]
+    {x^2} \closedcycle;
+% 2. Borrar con blanco lo que queda bajo g(x) = x
+\addplot[white, fill=white, domain=2:4, samples=100]
+    {x} \closedcycle;
+
+% 3. Curvas encima
+\addplot[domain=0:4.5, samples=100, -latex] {x^2}
+    node[very near end, right] {$y=x^2$};
+\addplot[domain=0:4.5, -latex] {x}
+    node[pos=1, above] {$y=x$};
+
+\draw[dashed, teal] (axis cs:2,2) -- (axis cs:2,4);
+\draw[dashed, teal] (axis cs:4,4) -- (axis cs:4,16);
+\draw[dashed] (axis cs:2,0) -- (axis cs:2,2);
+\draw[dashed] (axis cs:4,0) -- (axis cs:4,4);
+
+\end{axis}
+\end{tikzpicture}
+\end{document}
+```
+
+> ⚠️ Este patrón asume fondo blanco. Si el tema de Obsidian es oscuro, reemplazar `white` por el color de fondo del tema.
+
+---
+
 ## C6. CONVENCIÓN DE BLOQUES EN ESTA GUÍA
 
 En esta guía hay dos tipos de bloques de código:
