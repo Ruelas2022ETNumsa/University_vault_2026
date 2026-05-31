@@ -1,76 +1,54 @@
+# Números reales y desigualdades
+## Axiomas de cuerpo de la de los números reales
+- Si a, b, c $\perp$ IR
+A1) Clausura i a+b ∈ IR ii a, b ∈ IR
+A2) Commutatividad i a+b = b+a
+ii a·b = b·a
+A3) Associatividad i) (a+b)+c = a+(b+c)
+ii (a·b)·c = a(b·c)
+A4) J de meuntres
+i) ∃O ∈ IR a+0 = a
+→ O meuntro para "+" +
+ii) ∃I ∈ IR a·1 = a
+→ I meuntro para "×"
+A5) J de megativos
+∀a ∈ IR ∃-a ∈ IR ∃a+(-a)=0
+- a = megativo de a
+A6) J de immeros
+∀a ∈ IR - {0} ∃a ∈ IR ∃a·a=1
+a^{-1} = $\frac{1}{a}$ immero de a
+A7) Distribución
+a (b+c) = ab+ac
+Ocio mas de igualdad.
+- ci a, b, c ∈ IR
+A1) Reflexión a = a
+A2) simetría a = b => b = a
 
 
-```tikz
-\begin{document}
-  \begin{tikzpicture}[domain=0:4]
-    \draw[very thin,color=gray] (-0.1,-1.1) grid (3.9,3.9);
-    \draw[->] (-0.2,0) -- (4.2,0) node[right] {$x$};
-    \draw[->] (0,-1.2) -- (0,4.2) node[above] {$f(x)$};
-    \draw[color=red]    plot (\x,\x)             node[right] {$f(x) =x$};
-    \draw[color=blue]   plot (\x,{sin(\x r)})    node[right] {$f(x) = \sin x$};
-    \draw[color=orange] plot (\x,{0.05*exp(\x)}) node[right] {$f(x) = \frac{1}{20} \mathrm e^x$};
-  \end{tikzpicture}
-\end{document}
-```
+A3) Transmisión
+$(a = b \wedge b = c) \Rightarrow a = c$
 
+Mód. Resta y división con sólo casos
+especiados de "x" y "y"
 
+- Recala $a - b = a + (-b)$
+- División $\frac{a}{b} = a - \frac{1}{b} = a - b^{-1}, b \neq 0$
+- Mo configuración
+$2^8 = 8$ siguidad → verdad evidente
+$x^4 - 4 = 0 \Rightarrow$ equación → verdad para
+algunos $x$
+$x^2 - 4 = (x - 2)(x + 2)$ identidad →
+verdad para todo $x \in \mathbb{R}$
 
-```tikz
-\usepackage{pgfplots}
-\pgfplotsset{compat=1.16}
-\begin{document}
-\begin{tikzpicture}
-\begin{axis}[axis lines=middle]
-\end{axis}
-\end{tikzpicture}
-\end{document}
-```
-
-
-
-```tikz
-\usepackage{pgfplots}
-\pgfplotsset{compat=1.16}
-\begin{document}
-\begin{tikzpicture}
-\begin{axis}[axis lines=middle]
-\addplot[domain=0:4, samples=50] {x^2};
-\addplot[domain=0:4, samples=50] {x/2};
-\end{axis}
-\end{tikzpicture}
-\end{document}
-```
-
-
-```tikz
-\usepackage{pgfplots}
-\pgfplotsset{compat=1.16}
-\begin{document}
-\begin{tikzpicture}
-\begin{axis}[
-    axis lines=middle,
-    xlabel={$x$},
-    ylabel={$y$},
-    xmin=0, xmax=5.5,
-    ymin=0, ymax=24
-]
-
-\addplot[teal!30, fill=teal!30, domain=2:4, samples=100]
-    {x^2} \closedcycle;
-\addplot[white, fill=white, domain=2:4, samples=100]
-    {x} \closedcycle;
-
-\addplot[domain=0:4.5, samples=100, -latex] {x^2}
-    node[very near end, right] {$y=x^2$};
-\addplot[domain=0:4.5, -latex] {x}
-    node[pos=1, above] {$y=x$};
-
-\draw[dashed, teal] (axis cs:2,2) -- (axis cs:2,4);
-\draw[dashed, teal] (axis cs:4,4) -- (axis cs:4,16);
-\draw[dashed] (axis cs:2,0) -- (axis cs:2,2);
-\draw[dashed] (axis cs:4,0) -- (axis cs:4,4);
-
-\end{axis}
-\end{tikzpicture}
-\end{document}
-```
+Theorem sobre $n \div x$ scale
+$x: a, b, c, d, x \in \mathbb{R}$
+1) $a + b = a + c \Rightarrow b - c$
+2) $(a + b = a \cdot c) \wedge a \neq 0 \Rightarrow b = c$
+3) $a + x = b \rightarrow x = b - a$
+4) $(a \cdot x = b \wedge a \neq 0) \Rightarrow x = b/a$
+5) $a \cdot 0 = 0$
+6) $a \cdot b = 0 \Rightarrow (a = 0 \vee b = 0)$
+7) $a = b \Rightarrow -a > -b$
+8) $a (-b) = -a b$
+9) $(-a)(-b) = ab$
+10) $\frac{a}{b} + \frac{c}{b} = \frac{a + c}{b}$
