@@ -1,10 +1,12 @@
 # Números reales y desigualdades
 ## Axiomas de cuerpo de la de los números reales
-- Si a, b, c $\perp$ IR
-A1) Clausura i a+b ∈ IR ii a, b ∈ IR
-A2) Commutatividad i a+b = b+a
+Si a, b, c ∈ $\mathbb{R}$
+A1) Clausura
+	- a+b ∈  $\mathbb{R}$
+	- a, b ∈ $\mathbb{R}$
+	A2) Commutatividad i a+b = b+a
 ii a·b = b·a
-A3) Associatividad i) (a+b)+c = a+(b+c)
+	A3) Associatividad i) (a+b)+c = a+(b+c)
 ii (a·b)·c = a(b·c)
 A4) J de meuntres
 i) ∃O ∈ IR a+0 = a

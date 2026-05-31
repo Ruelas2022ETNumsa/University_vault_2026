@@ -154,6 +154,8 @@ Tierra
 Transistor
 TICAS
 TRICO
+Transmisi
+Theorem
 Sistema
 Sync
 Save
@@ -460,6 +462,8 @@ documentclass
 definesubmol
 diodo
 dplot
+desigualdades
+divisi
 Vault
 Verificar
 Variables
@@ -757,6 +761,9 @@ salvo
 suma
 salida
 sensor
+simetr
+siguidad
+scale
 vault
 vil
 ver
@@ -999,6 +1006,8 @@ algebraico
 agreg
 at
 arc
+ab
+ac
 related
 recomendados
 ribbon
@@ -1148,6 +1157,7 @@ renderice
 resistencia
 recordar
 renderizable
+reales
 notes
 notas
 nuevas
@@ -1548,6 +1558,7 @@ cycle
 calc
 closedcycle
 cs
+ci
 updated
 un
 universo
@@ -1725,6 +1736,8 @@ CTICOS
 CONVENCI
 CIRCUITO
 Controlador
+Clausura
+Commutatividad
 Instalados
 Instalado
 Instalar
@@ -1770,6 +1783,7 @@ IndexedDB
 Im
 Inductor
 Identificador
+IR
 Funci
 File
 Fase
@@ -1927,6 +1941,7 @@ Op
 OH
 Omitirlo
 Omitir
+Ocio
 Auto
 Annotator
 Autocompletado
@@ -2001,6 +2016,8 @@ Activas
 Avisar
 AC
 ADVERTENCIA
+Axiomas
+Associatividad
 push
 pull
 para
@@ -2302,6 +2319,11 @@ memoria
 modifique
 moleculares
 medidas
+meuntres
+meuntro
+megativos
+megativo
+mas
 YAML
 Ya
 You
@@ -2541,6 +2563,9 @@ exp
 etiqueta
 exactas
 etiquetados
+especiados
+evidente
+equaci
 Motor
 Media
 Mantiene
@@ -2584,6 +2609,7 @@ MCP
 MATERIAS
 Mezclarlos
 MATEM
+Mo
 Lectura
 LaTeX
 Linter
@@ -2801,6 +2827,10 @@ inductor
 isource
 instrucci
 intento
+ii
+immeros
+immero
+igualdad
 Dependencia
 Dropbox
 Dataview
@@ -2857,6 +2887,8 @@ DIBUJO
 Diagrama
 DIVISOR
 DIAGRAMA
+Distribuci
+Divisi
 Remotely
 Raz
 Revisa
@@ -2933,6 +2965,9 @@ Reabrir
 RENDERIZAN
 Reemplazar
 Re
+Reflexi
+Resta
+Recala
 Hider
 Hace
 Herramientas
