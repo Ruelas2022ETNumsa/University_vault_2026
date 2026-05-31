@@ -16,11 +16,11 @@ Si a, b, c ∈ $\mathbb{R}$
 		→ 0 neutro para "+"
 	* ∃ 1 ∈ $\mathbb{R}$ $\rightsquigarrow$ a·1 = a
 		→ I neutro para "×"
-A5) J de megativos
-∀a ∈ IR ∃-a ∈ IR ∃a+(-a)=0
-- a = megativo de a
-A6) J de immeros
-∀a ∈ IR - {0} ∃a ∈ IR ∃a·a=1
+5. ∃ de negativos
+∀a ∈ $\mathbb{R}$ ∃-a ∈ $\mathbb{R}$  $\rightsquigarrow$ a+(-a)=0
+ -a = negativo de a
+A6) ∃ de inversos
+∀a ∈ $\mathbb{R}$ - {0} ∃ $a^{-1}$ ∈ $\mathbb{R}$ $a \cdot a^{-1}=1$
 a^{-1} = $\frac{1}{a}$ immero de a
 A7) Distribución
 a (b+c) = ab+ac
