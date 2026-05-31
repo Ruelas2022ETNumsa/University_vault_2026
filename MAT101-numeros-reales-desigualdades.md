@@ -52,26 +52,31 @@ Sean $a, b, c \in \mathbb{R}$
 
 Sean $a, b, c \in \mathbb{R}$
 
-1. **Reflexividad** — $a=a$
-2. **Simetría** — $a=b \Rightarrow b=a$
-3. **Transitividad** — $(a=b \wedge b=c) \Rightarrow a=c$
+1. **Reflexividad** 
+	$a=a$
+2. **Simetría** 
+	$a=b \Rightarrow b=a$
+3. **Transitividad**
+	$(a=b \wedge b=c) \Rightarrow a=c$
 
 ---
 
 ## Definiciones
 
-- **Resta** — $a-b=a+(-b)$
-- **División** — $\dfrac{a}{b}=a \cdot \dfrac{1}{b}=a \cdot b^{-1},\quad b \neq 0$
+- **Resta** 
+	$a-b=a+(-b)$
+- **División**
+	$\dfrac{a}{b}=a \cdot \dfrac{1}{b}=a \cdot b^{-1},\quad b \neq 0$
 
 ---
 
 ## Observaciones sobre tipos de igualdad
 
-| Tipo | Ejemplo | Descripción |
-|------|---------|-------------|
-| Igualdad numérica | $2^3=8$ | Siempre verdadera |
-| Ecuación | $x^2-4=0$ | Verdadera solo para algunos $x$ |
-| Identidad | $x^2-4=(x-2)(x+2)$ | Verdadera para todo $x \in \mathbb{R}$ |
+| Tipo              | Ejemplo            | Descripción                            |
+| ----------------- | ------------------ | -------------------------------------- |
+| Igualdad numérica | $2^3=8$            | Siempre verdadera                      |
+| Ecuación          | $x^2-4=0$          | Verdadera solo para algunos $x$        |
+| Identidad         | $x^2-4=(x-2)(x+2)$ | Verdadera para todo $x \in \mathbb{R}$ |
 
 ---
 
