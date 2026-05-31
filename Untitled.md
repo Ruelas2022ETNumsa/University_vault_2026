@@ -1,16 +1,17 @@
 # Números reales y desigualdades
 ## Axiomas de cuerpo de la de los números reales
 Si a, b, c ∈ $\mathbb{R}$
-* A1) Clausura
-	- a+b ∈  $\mathbb{R}$
-	- a, b ∈ $\mathbb{R}$
-* A2) Conmutatividad 
-	* a+b = b+a
-	* a·b = b·a
-* A3) Asociatividad
-	* (a+b)+c = a+(b+c)
-	- (a·b)·c = a·(b·c)
-* A4) ∃ de neutros
+
+1. Clausura
+	- $a+b \in \mathbb{R}$
+	- $a \cdot b \in \mathbb{R}$
+2. Conmutatividad 
+	- $a+b=b+a$
+	- $a\cdot b=b\cdot a$
+3. Asociatividad
+	- $(a+b)+c=a+(b+c)$
+	- $(a\cdot b)\cdot c=a\cdot(b\cdot c)$
+4. ∃ de neutros
 	- ∃ 0∈ $\mathbb{R}$  $\rightsquigarrow$ a+0 = a
 		→ 0 neutro para "+"
 	* ∃ 1 ∈ $\mathbb{R}$ $\rightsquigarrow$ a·1 = a
@@ -56,3 +57,7 @@ $x: a, b, c, d, x \in \mathbb{R}$
 8) $a (-b) = -a b$
 9) $(-a)(-b) = ab$
 10) $\frac{a}{b} + \frac{c}{b} = \frac{a + c}{b}$
+
+
+1.lkhj
+1) 
