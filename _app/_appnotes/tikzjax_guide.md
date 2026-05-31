@@ -366,6 +366,7 @@ Todo bloque TikZJax se escribe así:
 ### E8 — Diagrama de bloques de sistema de control
 
 ```tikz
+\usetikzlibrary{calc}
 \begin{document}
 \begin{tikzpicture}[auto, node distance=2.2cm,
   block/.style={rectangle, draw, fill=blue!10, text width=2cm, text centered, minimum height=1cm},
