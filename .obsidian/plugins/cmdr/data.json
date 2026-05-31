@@ -10,6 +10,12 @@
       "icon": "lucide-file-plus",
       "name": "create",
       "mode": "any"
+    },
+    {
+      "id": "app:reload",
+      "icon": "lucide-rotate-ccw",
+      "name": "Reload app without saving",
+      "mode": "any"
     }
   ],
   "rightRibbon": [],
