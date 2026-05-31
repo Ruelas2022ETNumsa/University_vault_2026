@@ -463,7 +463,7 @@ Instrucciones para que NotebookLM genere bloques TikZJax correctos listos para c
   \end{ENTORNO}
 \end{document}
 ```
-```
+
 
 **Sin `\begin{document}` el plugin no renderiza nada.**
 **Sin `\end{document}` el bloque queda abierto y falla.**
