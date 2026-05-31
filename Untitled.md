@@ -93,3 +93,208 @@ x_2^2y_3^2
 &=
 \|\mathbf{x}\|^2\|\mathbf{y}\|^2\sin^2\theta.
 \end{aligned}$$
+
+
+```tikz
+\begin{document}
+\begin{tikzpicture}
+
+% Ejes
+\draw[->] (-2,0) -- (2.5,0) node[right] {$y$};
+\draw[->] (0,-2) -- (0,2.5) node[above] {$z$};
+
+% Cilindro
+\draw (-1,1) arc(180:360:1 and 0.4);
+\draw (-1,-1) arc(180:360:1 and 0.4);
+
+\draw (-1,1) -- (-1,-1);
+\draw (1,1) -- (1,-1);
+
+\draw[dashed] (-1,-1) arc(180:360:1 and 0.4);
+\draw (1,1) arc(0:180:1 and 0.4);
+
+\node at (0.5,1.3) {$r_0$};
+
+\end{tikzpicture}
+\end{document}
+```
+
+
+
+```tikz
+\usepackage{tikz-3dplot}
+
+\begin{document}
+
+\tdplotsetmaincoords{70}{120}
+
+\begin{tikzpicture}[tdplot_main_coords,scale=0.7]
+
+\filldraw[fill=red!20]
+(-4,-4,4) --
+(4,-4,4) --
+(4,5,4) --
+(-4,5,4) -- cycle;
+
+\filldraw[fill=blue!20]
+(0,0,4) --
+(5.2,6,4) --
+(5.2,6,0) --
+(0,0,0) -- cycle;
+
+\draw[->] (0,0,0) -- (6,0,0) node[right] {$x$};
+\draw[->] (0,0,0) -- (0,6,0) node[left] {$y$};
+\draw[->] (0,0,0) -- (0,0,6) node[above] {$z$};
+
+\draw (0,0,0) circle (3);
+\draw (0,0,4) circle (3);
+
+\draw (1.9,-2.35,0) -- (1.9,-2.35,4);
+\draw (-1.9,2.35,0) -- (-1.9,2.35,4);
+
+\fill (2,2.25,4) circle (2pt);
+
+\node at (2.5,1,4.3)
+{$P_1(r_1,\phi_1,z_1)$};
+
+\draw[->] (2,2.25,4) -- (3,3.45,4)
+node[right] {$\hat r$};
+
+\draw[->] (2,2.25,4) -- (1,2.5,4)
+node[left] {$\hat\phi$};
+
+\draw[->] (2,2.25,4) -- (2,2.25,4.75)
+node[right] {$\hat k$};
+
+\draw[->] (4,0,0) arc (0:45:4);
+
+\node at (3.6,2,0) {$\phi_1$};
+
+\draw[->] (0,0,0) -- (2,2.35,0);
+\node at (1,1,0) {$r_1$};
+
+\draw (2,2.25,4) -- (2,2.25,0);
+
+\node at (-3.5,5.5,4) {$z=z_1$};
+
+\node at (5.5,6,0) {$\phi=\phi_1$};
+
+\end{tikzpicture}
+
+\end{document}
+```
+
+
+```tikz
+\usepackage{tikz-3dplot}
+
+\begin{document}
+
+\tdplotsetmaincoords{70}{120}
+
+\begin{tikzpicture}[tdplot_main_coords]
+
+\draw[->] (0,0,0) -- (3,0,0) node[right] {$x$};
+\draw[->] (0,0,0) -- (0,3,0) node[left] {$y$};
+\draw[->] (0,0,0) -- (0,0,3) node[above] {$z$};
+
+\end{tikzpicture}
+
+\end{document}
+```
+```tikz
+\usepackage{tikz-3dplot}
+
+\begin{document}
+
+\tdplotsetmaincoords{70}{120}
+
+\begin{tikzpicture}[tdplot_main_coords]
+
+\shade[ball color=cyan!40] (0,0) circle (1.5);
+
+\draw[->] (0,0,0) -- (2,0,0);
+\draw[->] (0,0,0) -- (0,2,0);
+\draw[->] (0,0,0) -- (0,0,4);
+
+\node[right] at (2,0,0) {$y$};
+\node[left] at (0,2,0) {$z$};
+\node[above] at (0,0,4) {$x$};
+
+\draw (-1.5,0) arc (180:360:1.5 and 0.4);
+\draw[dashed] (1.5,0) arc (0:180:1.5 and 0.4);
+
+\draw[dashed,->] (0,0) -- (1.06,1.06);
+
+\node at (0.6,0.8) {$\rho_0$};
+
+\end{tikzpicture}
+
+\end{document}
+```
+
+```tikz
+\begin{document}
+
+\begin{tikzpicture}
+
+\fill[red!30]
+(0,-0.5) --
+(1,-1.5) --
+(1,0.5) --
+(0,1.5) -- cycle;
+
+\draw[->] (0,0) -- (2,0) node[right] {$y$};
+\draw[->] (0,-0.5) -- (0,2) node[above] {$z$};
+\draw[->] (0,0) -- (-1,-1) node[left] {$x$};
+
+\draw[dashed] (0,0) -- (1,-1);
+
+\draw[->]
+(-0.7,-0.7)
+arc(225:315:1 and 0.7);
+
+\node at (-0.4,-0.9) {$\theta_0$};
+
+\end{tikzpicture}
+
+\end{document}
+```
+
+```tikz
+\begin{document}
+
+\begin{tikzpicture}
+
+\fill[blue!20]
+(-1,2.2)
+arc(180:360:1 and 0.3)
+-- (0,0)
+-- cycle;
+
+\draw
+(-1,2.2)
+arc(180:360:1 and 0.3);
+
+\draw
+(-1,2.2)
+arc(180:360:1 and 0.3)
+-- (0,0)
+-- cycle;
+
+\draw[->] (0,0) -- (2,0) node[right] {$y$};
+\draw[->] (0,-0.5) -- (0,3) node[above] {$z$};
+\draw[->] (0,0) -- (-1,-1) node[left] {$x$};
+
+\draw[dashed] (-1,2.2) -- (1,2.2);
+
+\draw[->]
+(0,1.4)
+arc(100:65:1 and 1.2);
+
+\node at (0.4,1) {$\phi_0$};
+
+\end{tikzpicture}
+
+\end{document}
+```
