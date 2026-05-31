@@ -102,6 +102,7 @@ tierra
 tensi
 tensiones
 tikzx
+tal
 ToDo
 Templater
 Text
@@ -156,6 +157,8 @@ TICAS
 TRICO
 Transmisi
 Theorem
+Transitividad
+Teoremas
 Sistema
 Sync
 Save
@@ -228,6 +231,9 @@ SELECCI
 SE
 SIMPLE
 Sensor
+Sean
+Simetr
+Suma
 Plugins
 Pendientes
 Plugin
@@ -464,6 +470,8 @@ diodo
 dplot
 desigualdades
 divisi
+denomina
+denominador
 Vault
 Verificar
 Variables
@@ -822,6 +830,7 @@ varianza
 vinculado
 versionan
 verse
+verdadera
 audience
 activo
 auto
@@ -1008,6 +1017,9 @@ at
 arc
 ab
 ac
+aditivos
+aditivo
+aditivas
 related
 recomendados
 ribbon
@@ -1158,6 +1170,7 @@ resistencia
 recordar
 renderizable
 reales
+resta
 notes
 notas
 nuevas
@@ -1241,6 +1254,11 @@ necesarios
 natural
 nadie
 node
+neutros
+neutro
+nulo
+negativo
+negativos
 created
 commit
 cada
@@ -1785,6 +1803,8 @@ Im
 Inductor
 Identificador
 IR
+Igualdad
+Identidad
 Funci
 File
 Fase
@@ -1910,6 +1930,8 @@ Escalar
 Editar
 Ejes
 ESTA
+Existencia
+Ecuaci
 Obsidian
 OmniSearch
 Ocultar
@@ -1943,6 +1965,8 @@ OH
 Omitirlo
 Omitir
 Ocio
+Observaciones
+Opuesto
 Auto
 Annotator
 Autocompletado
@@ -2199,6 +2223,7 @@ pgfplotsset
 pt
 planta
 punteadas
+producto
 min
 mica
 movimiento
@@ -2326,6 +2351,9 @@ meuntro
 megativos
 megativo
 mas
+multiplicativos
+multiplicativo
+multiplicativas
 YAML
 Ya
 You
@@ -2721,6 +2749,7 @@ lugares
 llegar
 ltimo
 legend
+lineales
 incluyendo
 im
 instalar
@@ -2833,6 +2862,8 @@ ii
 immeros
 immero
 igualdad
+inversos
+inverso
 Dependencia
 Dropbox
 Dataview
@@ -2891,6 +2922,9 @@ DIVISOR
 DIAGRAMA
 Distribuci
 Divisi
+Desigualdades
+Distributividad
+Definiciones
 Remotely
 Raz
 Revisa
@@ -2970,6 +3004,8 @@ Re
 Reflexi
 Resta
 Recala
+Reales
+Reflexividad
 Hider
 Hace
 Herramientas

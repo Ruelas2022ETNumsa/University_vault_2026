@@ -12,9 +12,9 @@ Si a, b, c ∈ $\mathbb{R}$
 	- (a·b)·c = a·(b·c)
 * A4) ∃ de neutros
 	- ∃ 0∈ $\mathbb{R}$  $\rightsquigarrow$ a+0 = a
-		→ O meuntro para "+" +
-	* ∃I ∈ IR a·1 = a
-		→ I meuntro para "×"
+		→ 0 neutro para "+"
+	* ∃ 1 ∈ $\mathbb{R}$ $\rightsquigarrow$ a·1 = a
+		→ I neutro para "×"
 A5) J de megativos
 ∀a ∈ IR ∃-a ∈ IR ∃a+(-a)=0
 - a = megativo de a
