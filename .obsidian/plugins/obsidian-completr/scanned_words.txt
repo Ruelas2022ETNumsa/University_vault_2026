@@ -171,6 +171,8 @@ TEOREMAS
 TABLAS
 Transcendentals
 Tom
+Tu
+Tus
 Sistema
 Sync
 Save
@@ -809,6 +811,7 @@ scale
 subsecciones
 suelto
 series
+start
 vault
 vil
 ver
@@ -1310,6 +1313,7 @@ negativos
 numeros
 numerada
 numerado
+number
 created
 commit
 cada
@@ -1631,6 +1635,8 @@ ci
 corrido
 comprimida
 comparaci
+column
+columns
 updated
 un
 universo
@@ -1825,6 +1831,7 @@ Cochran
 Collection
 Complemento
 Course
+Columna
 Instalados
 Instalado
 Instalar
@@ -1875,6 +1882,7 @@ Igualdad
 Identidad
 IA
 INSTRUCCIONES
+Ideas
 Funci
 File
 Fase
@@ -2445,6 +2453,7 @@ moons
 manuscritos
 merecen
 marcarlo
+multi
 YAML
 Ya
 You
