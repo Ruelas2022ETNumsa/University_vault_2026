@@ -46,7 +46,15 @@ Sean $a, b, c \in \mathbb{R}$
 | 7 | **Inverso multiplicativo** | $a \cdot a^{-1}=1,\quad a \neq 0$<br>$a^{-1}=\dfrac{1}{a}$ | Todo real no nulo tiene un recíproco que anula el producto |
 
 
-
+|  N  | Axioma                     | Notación                                                    | Concepto                                                                                                |
+| :-: | -------------------------- | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+|  1  | **Clausura**               | $a+b \in \mathbb{R}$<br>$a \cdot b \in \mathbb{R}$          | $\forall\, a,b \in \mathbb{R} \Rightarrow a+b \in \mathbb{R}\ \wedge\ a \cdot b \in \mathbb{R}$         |
+|  2  | **Conmutatividad**         | $a+b=b+a$<br>$a \cdot b=b \cdot a$                          | $\forall\, a,b \in \mathbb{R}: a+b=b+a\ \wedge\ a \cdot b=b \cdot a$                                    |
+|  3  | **Asociatividad**          | $(a+b)+c=a+(b+c)$<br>$(a \cdot b)\cdot c=a\cdot(b \cdot c)$ | $\forall\, a,b,c \in \mathbb{R}: (a+b)+c=a+(b+c)\ \wedge\ (a \cdot b)\cdot c=a\cdot(b \cdot c)$         |
+|  4  | **Distributividad**        | $a(b+c)=ab+ac$                                              | $\forall\, a,b,c \in \mathbb{R}: a(b+c)=ab+ac$                                                          |
+|  5  | **Elemento neutro**        | $a+0=a$<br>$a \cdot 1=a$                                    | $\exists\, 0 \in \mathbb{R}: a+0=a\ \wedge\ \exists\, 1 \in \mathbb{R}: a \cdot 1=a$                    |
+|  6  | **Inverso aditivo**        | $a+(-a)=0$                                                  | $\forall\, a \in \mathbb{R},\ \exists\, {-a} \in \mathbb{R}$ tal que $a+(-a)=0$                         |
+|  7  | **Inverso multiplicativo** | $a \cdot a^{-1}=1$<br>$a^{-1}=\dfrac{1}{a}$                 | $\forall\, a \in \mathbb{R}\setminus\{0\},\ \exists\, a^{-1} \in \mathbb{R}$ tal que $a \cdot a^{-1}=1$ |
 
 
 
