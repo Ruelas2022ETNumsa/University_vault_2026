@@ -108,6 +108,25 @@ Los **teoremas básicos de los números reales** no son reglas arbitrarias, sino
 
 Sean $a, b, c, x \in \mathbb{R}$
 
+### 1. Teoremas Algebraicos (Derivados de los Axiomas de Cuerpo)
+Estos aseguran la consistencia de las operaciones básicas:
+
+
+
+| **Teorema**                 |     |
+| --------------------------- | --- |
+| **Leyes de simplificación** |     |
+|                             |     |
+
+
+- **Leyes de simplificación:** Si $a + c = b + c$, entonces $a = b$. En la multiplicación, si $ac = bc$ y $c \neq 0$, entonces $a = b$.
+- **Unicidad de elementos:** El elemento neutro ($0$ y $1$) y los elementos inversos (opuesto $-a$ y recíproco $1/a$) son únicos para cada número.
+- **Regla del producto nulo:** El producto de cualquier número por cero es cero ($a \cdot 0 = 0$). Además, si $ab = 0$, entonces $a = 0$ o $b = 0$.
+- **Leyes de los signos:** Por ejemplo, $(-a)(-b) = ab$ y $-(a-b) = b-a$.
+
+
+
+
 1. $a+b=a+c \Rightarrow b=c$
 2. $(a \cdot b=a \cdot c) \wedge a \neq 0 \Rightarrow b=c$
 3. $a+x=b \Rightarrow x=b-a$
@@ -123,3 +142,70 @@ Sean $a, b, c, x \in \mathbb{R}$
 galaxy-links
 
 %%
+
+
+
+
+---
+# borrar
+
+── MODO 1 · EXPLICACIÓN DE CONCEPTO ──
+
+Los **teoremas básicos de los números reales** no son reglas arbitrarias, sino consecuencias lógicas que se derivan de los axiomas de cuerpo, orden y completitud. Mientras que los axiomas se aceptan sin demostración, los teoremas son "leyes establecidas" que garantizan que el álgebra y el cálculo funcionen siempre igual.
+
+De acuerdo con el texto de **Apostol** y la teoría general, podemos agrupar estos teoremas en cuatro categorías fundamentales:
+
+### 1. Teoremas Algebraicos (Derivados de los Axiomas de Cuerpo)
+
+Estos aseguran la consistencia de las operaciones básicas:
+
+- **Leyes de simplificación:** Si $a + c = b + c$, entonces $a = b$. En la multiplicación, si $ac = bc$ y $c \neq 0$, entonces $a = b$.
+- **Unicidad de elementos:** El elemento neutro ($0$ y $1$) y los elementos inversos (opuesto $-a$ y recíproco $1/a$) son únicos para cada número.
+- **Regla del producto nulo:** El producto de cualquier número por cero es cero ($a \cdot 0 = 0$). Además, si $ab = 0$, entonces $a = 0$ o $b = 0$.
+- **Leyes de los signos:** Por ejemplo, $(-a)(-b) = ab$ y $-(a-b) = b-a$.
+
+### 2. Teoremas de Desigualdad (Derivados de los Axiomas de Orden)
+
+Establecen cómo se comporta la recta numérica:
+
+- **Transitividad:** Si $a < b$ y $b < c$, entonces $a < c$.
+- **Tricotomía:** Para cualquier par de números, solo puede ocurrir una de tres: $a < b$, $a > b$ o $a = b$.
+- **Monotonía:** Sumar un número a ambos lados mantiene la desigualdad. Multiplicar por un **positivo** la mantiene, pero multiplicar por un **negativo** la invierte ($a < b \implies -a > -b$).
+- **Cuadrados no negativos:** Para cualquier $a \neq 0$, se cumple que $a^2 > 0$.
+
+### 3. Teoremas de Valor Absoluto
+
+El valor absoluto $|x|$ mide la distancia al origen. Su teorema más famoso es:
+
+- **Desigualdad Triangular:** $|x + y| \leq |x| + |y|$. La distancia de una suma no puede ser mayor que la suma de las distancias individuales.
+
+### 4. Teoremas de Estructura y Continuidad
+
+Son los que distinguen a los reales de otros sistemas como los racionales:
+
+- **Propiedad Arquimediana:** Los números reales no tienen un "techo". Para cualquier número $x$, siempre existe un entero $n$ tal que $n > x$.
+- **Densidad:** Entre dos números reales, por más cerca que estén, siempre existen infinitos números racionales e irracionales.
+- **Axioma del Supremo:** Todo conjunto de números reales que esté acotado superiormente tiene un "extremo superior" o supremo dentro de los mismos reales.
+
+```
+left=-2; right=8; bottom=-1; top=2;
+width=500; height=150;
+---
+y=0|BLACK
+(1,0)|label:a|BLUE
+(3,0)|label:b|BLUE
+(6,0)|label:c|BLUE
+{1<x<3: 0.2}|BLUE
+{3<x<6: 0.2}|BLUE
+{1<x<6: 0.5}|label:Si a < b y b < c entonces a < c|RED
+```
+
+_En el gráfico: La **transitividad** asegura que si el segmento (a,b) y el (b,c) existen, el camino directo (a,c) es coherente con el orden._
+
+**Preguntas de comprensión:**
+
+1. ¿Qué teorema básico de los reales justifica que podamos "cancelar" términos a ambos lados de una igualdad?
+2. ¿Por qué el teorema de los cuadrados ($a^2 > 0$) impide que existan raíces cuadradas de números negativos dentro de los reales?
+3. ¿Cómo usarías la **Propiedad Arquimediana** para demostrar que siempre podés encontrar un número de la forma $1/n$ tan pequeño como quieras?
+
+[^1]: 
