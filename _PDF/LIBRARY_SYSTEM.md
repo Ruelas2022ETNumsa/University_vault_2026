@@ -1,3 +1,16 @@
+---
+title: "Library System — Book Search Protocol"
+galaxy_body: beacon
+scope: vault
+audience: [claude]
+related_notes:
+  - "[[_pdf-system]]"
+  - "[[_galaxy-system]]"
+tags: [beacon, libros, notebooklm, bibliografía]
+date_created: 2026-01-01
+date_updated: 2026-05-30
+status: activo
+---
 # 📚 LIBRARY SYSTEM — Book Search Protocol
 
 ## Propósito
@@ -136,5 +149,8 @@ Cuando el usuario inicie una búsqueda de libros, usar este orden:
 
 ---
 
-*Archivo generado como parte del sistema de gestión bibliográfica universitaria.*
-*Última actualización: 2026*
+%%
+galaxy-links
+[[_pdf-system]]
+[[_galaxy-system]]
+%%
