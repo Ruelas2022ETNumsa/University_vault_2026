@@ -41,16 +41,16 @@ Todo bloque Desmos se escribe así:
 
 ## U2. CONFIGURACIÓN — LÍMITES Y TAMAÑO
 
-| Parámetro | Descripción | Ejemplo |
-|-----------|-------------|---------|
-| `left` | Límite izquierdo del eje x | `left=-5` |
-| `right` | Límite derecho del eje x | `right=5` |
-| `bottom` | Límite inferior del eje y | `bottom=-3` |
-| `top` | Límite superior del eje y | `top=3` |
-| `width` | Ancho en píxeles | `width=500` |
-| `height` | Alto en píxeles | `height=400` |
-| `grid` | Mostrar/ocultar cuadrícula | `grid=false` |
-| `degreeMode` | Modo de ángulos | `degreeMode=degrees` |
+| Parámetro    | Descripción                | Ejemplo              |
+| ------------ | -------------------------- | -------------------- |
+| `left`       | Límite izquierdo del eje x | `left=-5`            |
+| `right`      | Límite derecho del eje x   | `right=5`            |
+| `bottom`     | Límite inferior del eje y  | `bottom=-3`          |
+| `top`        | Límite superior del eje y  | `top=3`              |
+| `width`      | Ancho en píxeles           | `width=500`          |
+| `height`     | Alto en píxeles            | `height=400`         |
+| `grid`       | Mostrar/ocultar cuadrícula | `grid=false`         |
+| `degreeMode` | Modo de ángulos            | `degreeMode=degrees` |
 
 > 💡 Para gráficas de estudio usa `width=500; height=400`. Para plano xy cuadrado usa `width=500; height=500`.
 
@@ -58,17 +58,17 @@ Todo bloque Desmos se escribe así:
 
 ## U3. ECUACIONES — SINTAXIS LaTeX
 
-| Lo que quieres | Código |
-|----------------|--------|
-| $y = x^2$ | `y=x^2` |
-| $y = \sqrt{x}$ | `y=\sqrt{x}` |
-| $y = \frac{1}{x}$ | `y=\frac{1}{x}` |
-| $y = e^x$ | `y=e^x` |
-| $y = \sin(x)$ | `y=\sin(x)` |
-| $y = \ln(x)$ | `y=\ln(x)` |
-| $x^2 + y^2 = 1$ | `x^2+y^2=1` |
-| $x = 2$ (vertical) | `x=2` |
-| $y = 3$ (horizontal) | `y=3` |
+| Lo que quieres       | Código          |
+| -------------------- | --------------- |
+| $y = x^2$            | `y=x^2`         |
+| $y = \sqrt{x}$       | `y=\sqrt{x}`    |
+| $y = \frac{1}{x}$    | `y=\frac{1}{x}` |
+| $y = e^x$            | `y=e^x`         |
+| $y = \sin(x)$        | `y=\sin(x)`     |
+| $y = \ln(x)$         | `y=\ln(x)`      |
+| $x^2 + y^2 = 1$      | `x^2+y^2=1`     |
+| $x = 2$ (vertical)   | `x=2`           |
+| $y = 3$ (horizontal) | `y=3`           |
 
 ---
 
@@ -84,26 +84,26 @@ El plugin acepta dos formatos:
 
 ### Paleta recomendada — curvas y líneas
 
-| Hex | Visual | Uso recomendado |
-|-----|--------|-----------------|
-| `#c74440` | Rojo medio | Curva principal / frontera importante |
-| `#2d70b3` | Azul medio | Curva secundaria |
-| `#388c46` | Verde medio | Curva terciaria |
-| `#fa7e19` | Naranja | Curva de destaque |
-| `#6042a6` | Morado | Curva de evento / probabilidad |
-| `#000000` | Negro | Ejes, bordes, líneas auxiliares |
+| Hex       | Visual      | Uso recomendado                       |
+| --------- | ----------- | ------------------------------------- |
+| `#c74440` | Rojo medio  | Curva principal / frontera importante |
+| `#2d70b3` | Azul medio  | Curva secundaria                      |
+| `#388c46` | Verde medio | Curva terciaria                       |
+| `#fa7e19` | Naranja     | Curva de destaque                     |
+| `#6042a6` | Morado      | Curva de evento / probabilidad        |
+| `#000000` | Negro       | Ejes, bordes, líneas auxiliares       |
 
 > Estos son los hex exactos que usa Desmos web internamente — reconocibles pero no saturados.
 
 ### Paleta recomendada — rellenos (áreas)
 
-| Hex | Visual | Uso recomendado |
-|-----|--------|-----------------|
-| `#a5d8ff` | Azul claro | Soporte / región principal |
-| `#b2f2bb` | Verde claro | Región secundaria |
-| `#ffd8a8` | Naranja claro | Región de advertencia |
-| `#ff7b7b` | Rojo claro | Región de evento / probabilidad |
-| `#d0bfff` | Morado claro | Región auxiliar |
+| Hex       | Visual        | Uso recomendado                 |
+| --------- | ------------- | ------------------------------- |
+| `#a5d8ff` | Azul claro    | Soporte / región principal      |
+| `#b2f2bb` | Verde claro   | Región secundaria               |
+| `#ffd8a8` | Naranja claro | Región de advertencia           |
+| `#ff7b7b` | Rojo claro    | Región de evento / probabilidad |
+| `#d0bfff` | Morado claro  | Región auxiliar                 |
 
 ### Estilos de línea
 
@@ -179,11 +179,11 @@ f(x)=ec|hidden                   ← función oculta
 
 ## U10. RECURSOS
 
-| Recurso | URL |
-|---------|-----|
-| Desmos Calculator | https://www.desmos.com/calculator |
-| Plugin GitHub | https://github.com/nigecat/obsidian-desmos |
-| Learn Desmos | https://learn.desmos.com |
+| Recurso           | URL                                        |
+| ----------------- | ------------------------------------------ |
+| Desmos Calculator | https://www.desmos.com/calculator          |
+| Plugin GitHub     | https://github.com/nigecat/obsidian-desmos |
+| Learn Desmos      | https://learn.desmos.com                   |
 
 **Caché del plugin:** los SVGs generados se almacenan en `.cache/desmos/` dentro del vault (ruta configurada manualmente). Esta carpeta es ignorada por File Hider y no es contenido académico — no crear notas ahí.
 
@@ -239,14 +239,14 @@ y=x^2|BLUE
 
 ## N3. PARÁMETROS DE CONFIGURACIÓN
 
-| Parámetro | Qué hace | Valor típico |
-|-----------|----------|--------------|
-| `left` | Límite izquierdo x | `-5` |
-| `right` | Límite derecho x | `5` |
-| `bottom` | Límite inferior y | `-3` |
-| `top` | Límite superior y | `3` |
-| `width` | Ancho en px | `500` |
-| `height` | Alto en px | `400` |
+| Parámetro | Qué hace           | Valor típico |
+| --------- | ------------------ | ------------ |
+| `left`    | Límite izquierdo x | `-5`         |
+| `right`   | Límite derecho x   | `5`          |
+| `bottom`  | Límite inferior y  | `-3`         |
+| `top`     | Límite superior y  | `3`          |
+| `width`   | Ancho en px        | `500`        |
+| `height`  | Alto en px         | `400`        |
 
 Usar `width=500; height=500` para plano cuadrado (probabilidad, geometría).
 
@@ -254,18 +254,20 @@ Usar `width=500; height=500` para plano cuadrado (probabilidad, geometría).
 
 ## N4. SINTAXIS DE ECUACIONES
 
-| Matemática | Código |
-|------------|--------|
-| y = x² | `y=x^2` |
-| y = √x | `y=\sqrt{x}` |
-| y = 1/x | `y=\frac{1}{x}` |
-| y = eˣ | `y=e^x` |
-| y = sin(x) | `y=\sin(x)` |
-| x² + y² = r² | `x^2+y^2=r^2` |
+| Matemática   | Código          |
+| ------------ | --------------- |
+| y = x²       | `y=x^2`         |
+| y = √x       | `y=\sqrt{x}`    |
+| y = 1/x      | `y=\frac{1}{x}` |
+| y = eˣ       | `y=e^x`         |
+| y = sin(x)   | `y=\sin(x)`     |
+| x² + y² = r² | `x^2+y^2=r^2`   |
 
 ---
 
 ## N5. MODIFICADORES Y COLORES
+
+```desmos-graph
 
 |#hex                                            → color (SIEMPRE usar hex)
 |SOLID, |DASHED, |DOTTED                         → estilo de línea
@@ -279,7 +281,7 @@ El plugin acepta nombres (`RED`, `BLUE`, etc.) pero producen colores saturados y
 
 ### Paleta para curvas y líneas
 
-```
+```desmos-graph
 #c74440   → rojo medio      (curva principal / frontera)
 #2d70b3   → azul medio      (curva secundaria)
 #388c46   → verde medio     (curva terciaria)
@@ -290,7 +292,7 @@ El plugin acepta nombres (`RED`, `BLUE`, etc.) pero producen colores saturados y
 
 ### Paleta para rellenos (áreas sombreadas)
 
-```
+```desmos-graph
 #a5d8ff   → azul claro      (región / soporte principal)
 #b2f2bb   → verde claro     (región secundaria)
 #ffd8a8   → naranja claro   (región de advertencia)
@@ -306,7 +308,7 @@ El plugin acepta nombres (`RED`, `BLUE`, etc.) pero producen colores saturados y
 
 Usar inecuaciones con todas las condiciones en **una sola línea**:
 
-```
+```desmos-graph
 y<2-x|y>x|x>=0|x<=1|#a5d8ff
 ```
 
@@ -314,7 +316,7 @@ y<2-x|y>x|x>=0|x<=1|#a5d8ff
 
 Para sombrear una región rectangular incluir SIEMPRE las cuatro restricciones en una sola línea:
 
-```
+```desmos-graph
 x>=0|x<=1|y>=0|y<=1|#a5d8ff
 ```
 
@@ -324,7 +326,7 @@ No usar `y<=1|y>=0` sin las restricciones de x — Desmos extenderá el relleno 
 
 ## N7. PUNTOS
 
-```
+```desmos-graph
 (1,2)|label:(1,2)|BLACK
 (1,2)|OPEN|label:(1,2)|BLACK
 ```
@@ -334,17 +336,17 @@ No usar `y<=1|y>=0` sin las restricciones de x — Desmos extenderá el relleno 
 ## N8. EJEMPLOS COMPLETOS
 
 ### Función simple
-```
+
 ```desmos-graph
 left=-4; right=4; bottom=-2; top=6;
 width=500; height=400;
 ---
 y=x^2|BLUE
 ```
-```
+
 
 ### Región triangular (probabilidad)
-```
+
 ```desmos-graph
 left=-0.2; right=1.5; bottom=-0.2; top=2.5;
 width=500; height=500;
@@ -357,10 +359,10 @@ y<2-x|y>x|x>=0|x<=1|#a5d8ff
 (1,1)|label:(1,1)|RED
 (0,2)|label:(0,2)|BLUE
 ```
-```
+
 
 ### Rectángulo sombreado (soporte cuadrado)
-```
+
 ```desmos-graph
 left=-0.2; right=1.3; bottom=-0.2; top=1.3;
 width=500; height=500;
@@ -371,10 +373,10 @@ y=1|0<=x<=1|BLUE|DASHED
 (0,0)|label:(0,0)|BLACK
 (1,1)|label:(1,1)|BLACK
 ```
-```
+
 
 ### Región entre curva y recta
-```
+
 ```desmos-graph
 left=-0.1; right=1.3; bottom=-0.1; top=1.3;
 width=500; height=500;
@@ -385,7 +387,7 @@ y<\sqrt{x}|y>x|0<=x<=1|#b2f2bb
 (0,0)|label:(0,0)|BLACK
 (1,1)|label:(1,1)|BLACK
 ```
-```
+
 
 ---
 
@@ -407,7 +409,6 @@ Las llaves `\{...\}` actúan como restricción de dominio sobre la línea `y=val
 
 Este bloque renderiza correctamente:
 
-```
 ```desmos-graph
 left=-1; right=7; bottom=-0.5; top=0.6;
 width=600; height=180;
@@ -426,11 +427,11 @@ y=0.10 \{a<x<b\}|BLUE
 y=0.20 \{b<x<c\}|BLUE
 y=0.35 \{a<x<c\}|RED
 ```
-```
+
 
 Este bloque **no renderiza** (sintaxis web):
 
-```
+
 ```desmos-graph
 left=-2; right=8; bottom=-1; top=1;
 width=500; height=100;
@@ -446,7 +447,7 @@ c=6
 {b<x<c: 0.1}|BLUE
 {a<x<c: 0.3}|label:Transitividad|RED
 ```
-```
+
 
 ### Patrón general
 
@@ -494,17 +495,17 @@ Reglas y patrones que Claude debe aplicar al generar o corregir bloques Desmos e
 
 Estas reglas no tienen excepciones. Cualquier bloque que las viole debe corregirse:
 
-| Regla | Correcto | Incorrecto |
-|-------|----------|------------|
-| Separador `---` siempre presente | `width=500;\n---\ny=x` | `width=500;\ny=x` |
-| Sin espacios alrededor de `\|` | `y=x\|RED` | `y = x \| RED` |
-| Sin llaves `{}` en restricciones | `y=x\|0<=x<=1` | `y=x\|{0<=x<=1}` |
-| Sin comentarios `//` | — | `y=x^2 // parábola` |
-| Raíces con `\sqrt{x}` | `y=\sqrt{x}` | `y=sqrt(x)` |
-| Fracciones con `\frac{a}{b}` | `y=\frac{3}{8}x` | `y=(3/8)x` |
-| Pi con `\pi` | `y=\frac{1}{\pi}` | `y=1/pi` |
-| Restricciones de líneas con dominio | `y=x\|0<=x<=2\|BLUE` | `y=x\|BLUE` (se desborda) |
-| Rellenos con hex, no nombre | `\|#a5d8ff` | `\|BLUE` (saturado) |
+| Regla                                        | Correcto                 | Incorrecto                                                |
+| -------------------------------------------- | ------------------------ | --------------------------------------------------------- |
+| Separador `---` siempre presente             | `width=500;\n---\ny=x`   | `width=500;\ny=x`                                         |
+| Sin espacios alrededor de `\|`               | `y=x\|RED`               | `y = x \| RED`                                            |
+| Sin llaves `{}` en restricciones             | `y=x\|0<=x<=1`           | `y=x\|{0<=x<=1}`                                          |
+| Sin comentarios `//`                         | —                        | `y=x^2 // parábola`                                       |
+| Raíces con `\sqrt{x}`                        | `y=\sqrt{x}`             | `y=sqrt(x)`                                               |
+| Fracciones con `\frac{a}{b}`                 | `y=\frac{3}{8}x`         | `y=(3/8)x`                                                |
+| Pi con `\pi`                                 | `y=\frac{1}{\pi}`        | `y=1/pi`                                                  |
+| Restricciones de líneas con dominio          | `y=x\|0<=x<=2\|BLUE`     | `y=x\|BLUE` (se desborda)                                 |
+| Rellenos con hex, no nombre                  | `\|#a5d8ff`              | `\|BLUE` (saturado)                                       |
 | Funciones por tramos / valores en intervalos | `y=0.10 \{a<x<b\}\|BLUE` | `{a<x<b: 0.10}` (sintaxis web — no funciona en el plugin) |
 
 ---
@@ -513,19 +514,19 @@ Estas reglas no tienen excepciones. Cualquier bloque que las viole debe corregir
 
 Para sombrear una región rectangular usar las **cuatro condiciones en una sola línea**:
 
-```
+```desmos-graph
 x>=a|x<=b|y>=c|y<=d|#a5d8ff
 ```
 
 **Ejemplo — soporte cuadrado [0,1]×[0,1]:**
-```
+```desmos-graph
 x>=0|x<=1|y>=0|y<=1|#a5d8ff
 ```
 
 **Nunca** usar solo `y<=1|y>=0|#a5d8ff` — Desmos extiende el relleno fuera del rectángulo porque no conoce los límites en x.
 
 Para agregar los bordes del rectángulo como líneas encima del relleno:
-```
+```desmos-graph
 x>=0|x<=1|y>=0|y<=1|#a5d8ff
 x=1|0<=y<=1|BLUE|DASHED
 y=1|0<=x<=1|BLUE|DASHED
@@ -583,7 +584,7 @@ Cuando Claude encuentra un bloque Desmos con errores:
 
 ## C7. PLANTILLA BASE PARA REGIONES DE PROBABILIDAD
 
-```desmos-graphx
+```desmos-graph
 left=-0.2; right=X; bottom=-0.2; top=Y;
 width=500; height=500;
 ---
@@ -600,16 +601,16 @@ Ajustar `right` y `top` según el tamaño del soporte más un margen de ~20%.
 
 **Regla:** usar siempre hex. Los nombres en mayúsculas (`RED`, `BLUE`…) son saturados — evitarlos salvo en borradores rápidos.
 
-| Rol visual | Hex | Visual |
-|------------|-----|--------|
-| Soporte / región principal | `#a5d8ff` | azul claro |
-| Región de evento / probabilidad | `#ff7b7b` | rojo claro |
-| Región secundaria | `#b2f2bb` | verde claro |
-| Frontera superior del dominio | `#2d70b3` | azul medio |
-| Frontera inferior / diagonal | `#c74440` | rojo medio |
-| Curva de evento | `#6042a6` | morado |
-| Líneas auxiliares | `#000000\|DASHED` | negro discontinuo |
-| Puntos clave | `#000000` o el hex de la curva asociada | |
+| Rol visual                      | Hex                                     | Visual            |
+| ------------------------------- | --------------------------------------- | ----------------- |
+| Soporte / región principal      | `#a5d8ff`                               | azul claro        |
+| Región de evento / probabilidad | `#ff7b7b`                               | rojo claro        |
+| Región secundaria               | `#b2f2bb`                               | verde claro       |
+| Frontera superior del dominio   | `#2d70b3`                               | azul medio        |
+| Frontera inferior / diagonal    | `#c74440`                               | rojo medio        |
+| Curva de evento                 | `#6042a6`                               | morado            |
+| Líneas auxiliares               | `#000000\|DASHED`                       | negro discontinuo |
+| Puntos clave                    | `#000000` o el hex de la curva asociada |                   |
 
 %%
 galaxy-links
