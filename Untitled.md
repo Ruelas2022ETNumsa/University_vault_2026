@@ -374,3 +374,33 @@ to[bend right=20]
 
 \end{document}
 ```
+
+
+> [!note]
+> Columna izquierda
+
+> [!tip]
+> Columna derecha
+
+
+
+::: column
+
+### Columna 1
+
+- Punto A
+- Punto B
+
+:::
+
+::: column
+
+### Columna 2
+
+- Punto C
+- Punto D
+
+:::
+
+
+
