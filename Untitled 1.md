@@ -31,6 +31,57 @@ Sean $a, b, c \in \mathbb{R}$
 
 ---
 
+| Tipo | Ejemplo | Descripción |
+|---|---|---|
+| **Clausura** | $a+b \in \mathbb{R}$, $\;a \cdot b \in \mathbb{R}$ | Operar dos elementos del conjunto siempre da un resultado dentro del mismo conjunto |
+| Ecuación | $x^2-4=0$ | Verdadera solo para ciertos valores de $x$ |
+| Identidad | $x^2-4=(x-2)(x+2)$ | Verdadera para todo $x \in \mathbb{R}$ |
+
+---
+
+--- start-multi-column: alg-tipos-001
+```column-settings
+number of columns: 2
+column size: [60%, 40%]
+border: off
+```
+
+**Clausura** — $a+b \in \mathbb{R}$, $\;a \cdot b \in \mathbb{R}$
+Operar dos elementos del conjunto siempre produce un resultado dentro del mismo conjunto.
+
+**Ecuación** — $x^2-4=0$
+Proposición verdadera solo para ciertos valores de $x$. No es universal.
+
+**Identidad** — $x^2-4=(x-2)(x+2)$
+Verdadera para todo $x \in \mathbb{R}$. Ambos lados son equivalentes siempre.
+
+--- end-column ---
+
+**Clausura**
+→ El conjunto es "cerrado" bajo esa operación.
+
+**Ecuación**
+→ Buscar los $x$ que la satisfacen.
+
+**Identidad**
+→ Herramienta de simplificación algebraica.
+
+--- end-multi-column
+
+> **Clave:** clausura = propiedad del conjunto · ecuación = condición · identidad = equivalencia universal
+
+
+
+
+
+
+
+
+---
+
+
+
+
 
 --- start-multi-column: cornell-001
 ```column-settings
