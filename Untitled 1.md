@@ -22,13 +22,29 @@ Sean $a, b, c \in \mathbb{R}$
 
 ---
 
-| Tipo              | Ejemplo            | Descripción                            |
-| ----------------- | ------------------ | -------------------------------------- |
-| **Clausura** | Si tomás dos números reales y los sumás o los multiplicás, el resultado será, sin ninguna duda, otro número real.|$a+b \in \mathbb{R}$ $a \cdot b=b \cdot a$|
-| Ecuación          | $x^2-4=0$          | Verdadera solo para algunos $x$        |
-| Identidad         | $x^2-4=(x-2)(x+2)$ | Verdadera para todo $x \in \mathbb{R}$ |
+| Tipo               | Ejemplo                                                                                                           | Descripción                                |
+| ------------------ | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
+| **Clausura**       | Si tomás dos números reales y los sumás o los multiplicás, el resultado será, sin ninguna duda, otro número real. | $a+b \in \mathbb{R}$ $a \cdot b=b \cdot a$ |
+| **Conmutatividad** |                                                                                                                   |                                            |
+| **Asociatividad**  |                                                                                                                   |                                            |
+| **Distributividad**                   |                                                                                                                   |                                            |
 
-
+1. **Clausura**
+    
+2. **Conmutatividad**
+    
+3. **Asociatividad**
+    
+4. **Existencia de neutros**
+    -  tal que  — neutro para 
+    -  tal que  — neutro para 
+5. **Existencia de inversos aditivos**
+    -  tal que 
+    -  se denomina inverso aditivo de 
+6. **Existencia de inversos multiplicativos**
+    - ,  tal que 
+    -  es el inverso multiplicativo de 
+7. **Distributividad**
 ---
 
 | Tipo | Ejemplo | Descripción |
@@ -45,7 +61,7 @@ number of columns: 2
 column size: [60%, 40%]
 border: off
 ```
-
+ff
 **Clausura** — $a+b \in \mathbb{R}$, $\;a \cdot b \in \mathbb{R}$
 Operar dos elementos del conjunto siempre produce un resultado dentro del mismo conjunto.
 
@@ -54,9 +70,11 @@ Proposición verdadera solo para ciertos valores de $x$. No es universal.
 
 **Identidad** — $x^2-4=(x-2)(x+2)$
 Verdadera para todo $x \in \mathbb{R}$. Ambos lados son equivalentes siempre.
+ff
 
 --- end-column ---
 
+ee
 **Clausura**
 → El conjunto es "cerrado" bajo esa operación.
 
@@ -65,7 +83,7 @@ Verdadera para todo $x \in \mathbb{R}$. Ambos lados son equivalentes siempre.
 
 **Identidad**
 → Herramienta de simplificación algebraica.
-
+ee
 --- end-multi-column
 
 > **Clave:** clausura = propiedad del conjunto · ecuación = condición · identidad = equivalencia universal

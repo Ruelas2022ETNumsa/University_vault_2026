@@ -114,6 +114,7 @@ tp
 templates
 tocar
 titluasd
+tom
 ToDo
 Templater
 Text
@@ -344,6 +345,7 @@ Problems
 Physics
 Piskunov
 Palabra
+Proposici
 del
 date
 de
@@ -512,6 +514,7 @@ docente
 dfdsf
 dsfds
 definen
+duda
 Vault
 Verificar
 Variables
@@ -824,6 +827,8 @@ start
 sdf
 sadsadasdadasdas
 sadsadsa
+sum
+satisfacen
 vault
 vil
 ver
@@ -1661,6 +1666,7 @@ columns
 capturen
 cornell
 conjunto
+clausura
 updated
 un
 universo
@@ -1699,6 +1705,7 @@ usepackage
 unificador
 usetikzlibrary
 unicode
+universal
 Galaxy
 Git
 Gr
@@ -2080,6 +2087,7 @@ Observaciones
 Opuesto
 Outline
 One
+Operar
 Auto
 Annotator
 Autocompletado
@@ -2481,6 +2489,7 @@ merecen
 marcarlo
 multi
 multiplicaci
+multiplic
 YAML
 Ya
 You
@@ -2730,6 +2739,8 @@ equaci
 ellas
 explicaci
 ed
+ee
+equivalencia
 Motor
 Media
 Mantiene
@@ -2896,6 +2907,7 @@ ltimo
 legend
 lineales
 lkhj
+lados
 incluyendo
 im
 instalar
@@ -3079,6 +3091,7 @@ Definiciones
 Diferencial
 Demidovich
 Differential
+Definici
 Remotely
 Raz
 Revisa
@@ -3412,6 +3425,7 @@ out
 on
 oraciones
 operan
+operaci
 junto
 json
 jer
