@@ -14,7 +14,7 @@ status: activo
 ---
 
 # Números reales y desigualdades
-
+---
 ## Axiomas de cuerpo de los números reales
 Los axiomas de cuerpo son el conjunto de reglas fundamentales que definen cómo operan la adición y la multiplicación en el sistema de los números reales.
 
@@ -31,7 +31,6 @@ Sean $a, b, c \in \mathbb{R}$
 |  7  | **Inverso multiplicativo** | Todo real no nulo tiene un<br>recíproco que anula el producto | $a \cdot a^{-1}=1,\quad a \neq 0$<br>$a^{-1}=\dfrac{1}{a}$ | $\forall\, a \in \mathbb{R}\setminus\{0\},\ \exists\, a^{-1} \in \mathbb{R}:$<br>$a\cdot a^{-1}=1$ |
 
 ---
-
 ## Propiedades de igualdad
 La igualdad es una relación fundamental en los números reales y permite establecer cuándo dos expresiones representan el mismo valor. Para operar correctamente con ella, se consideran las siguientes propiedades:
 
@@ -43,9 +42,9 @@ Sean $a, b, c \in \mathbb{R}$
 |  2  | **Simetría**      | Si un número es igual a otro, el segundo es igual al primero                                     | $a=b \Rightarrow b=a$              |          |
 |  3  | **Transitividad** | Si un número es igual a un segundo, y este es igual a un tercero, el primero es igual al tercero | $(a=b \wedge b=c) \Rightarrow a=c$ |          |
 
-
-
+---
 ## Definiciones
+L
 
 - **Resta** 
 	$a-b=a+(-b)$
@@ -53,7 +52,6 @@ Sean $a, b, c \in \mathbb{R}$
 	$\dfrac{a}{b}=a \cdot \dfrac{1}{b}=a \cdot b^{-1},\quad b \neq 0$
 
 ---
-
 ## Observaciones sobre tipos de igualdad
 
 | Tipo              | Ejemplo            | Descripción                            |
@@ -61,9 +59,9 @@ Sean $a, b, c \in \mathbb{R}$
 | Igualdad numérica | $2^3=8$            | Siempre verdadera                      |
 | Ecuación          | $x^2-4=0$          | Verdadera solo para algunos $x$        |
 | Identidad         | $x^2-4=(x-2)(x+2)$ | Verdadera para todo $x \in \mathbb{R}$ |
+**Principio de Sustitución:** Si dos números son iguales, uno puede ser reemplazado por el otro en cualquier expresión matemática sin alterar su valor de verdad.
 
 ---
-
 ## Teoremas básicos
 
 Sean $a, b, c, x \in \mathbb{R}$
