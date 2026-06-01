@@ -116,6 +116,7 @@ tocar
 titluasd
 tom
 tutor
+tendr
 ToDo
 Templater
 Text
@@ -181,6 +182,7 @@ Tu
 Tus
 Ten
 Termin
+Thomas
 Sistema
 Sync
 Save
@@ -349,6 +351,7 @@ Physics
 Piskunov
 Palabra
 Proposici
+Pens
 del
 date
 de
@@ -525,6 +528,8 @@ destacado
 diga
 dictame
 distribuye
+designa
+desmo
 Vault
 Verificar
 Variables
@@ -609,6 +614,7 @@ ground
 geom
 grid
 guide
+garant
 body
 beacon
 bat
@@ -665,6 +671,7 @@ battery
 buena
 break
 br
+bibliograf
 scope
 status
 selector
@@ -843,6 +850,9 @@ sum
 satisfacen
 setminus
 similar
+simples
+significa
+sumar
 vault
 vil
 ver
@@ -903,6 +913,8 @@ versionan
 verse
 verdadera
 vee
+vocamente
+vas
 audience
 activo
 auto
@@ -1109,6 +1121,11 @@ agrupamos
 agregues
 agrupamiento
 anula
+autosuficiente
+algebraicas
+aritm
+asegura
+asegurar
 related
 recomendados
 ribbon
@@ -1271,6 +1288,9 @@ rec
 resulta
 representaci
 regiones
+realiz
+refuerza
+restar
 notes
 notas
 nuevas
@@ -1365,6 +1385,7 @@ numerado
 number
 necesit
 neq
+naturales
 created
 commit
 cada
@@ -1697,6 +1718,8 @@ corresponda
 comprensi
 copies
 corregilo
+cerradura
+cuentas
 updated
 un
 universo
@@ -1736,6 +1759,7 @@ unificador
 usetikzlibrary
 unicode
 universal
+usuales
 Galaxy
 Git
 Gr
@@ -1900,6 +1924,7 @@ CONCEPTO
 Conect
 Concepto
 Consult
+Conectando
 Instalados
 Instalado
 Instalar
@@ -2093,6 +2118,7 @@ Explic
 EJERCICIO
 Enunciado
 Elemento
+Espacios
 Obsidian
 OmniSearch
 Ocultar
@@ -2402,6 +2428,9 @@ proco
 propias
 palabras
 podr
+permanencia
+primeros
+producir
 min
 mica
 movimiento
@@ -2542,6 +2571,7 @@ multiplic
 mathbb
 multiplicarse
 mi
+multiplicar
 YAML
 Ya
 You
@@ -2796,6 +2826,10 @@ equivalencia
 exists
 entregarlo
 especifica
+establece
+estructuras
+escalar
+excepto
 Motor
 Media
 Mantiene
@@ -2885,6 +2919,7 @@ LINKS
 Longley
 Larson
 Lyle
+Lineales
 links
 las
 listar
@@ -3087,6 +3122,8 @@ inclu
 introducci
 incompleto
 inferilo
+intentamos
+ingeniero
 Dependencia
 Dropbox
 Dataview
@@ -3345,6 +3382,7 @@ fdsf
 fundamentales
 factor
 forall
+fundamental
 haya
 hace
 hacer
@@ -3498,6 +3536,7 @@ operan
 operaci
 operandos
 opuesto
+operaciones
 junto
 json
 jer
