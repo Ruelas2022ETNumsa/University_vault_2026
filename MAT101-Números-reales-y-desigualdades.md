@@ -17,6 +17,7 @@ status: activo
 
 ## Axiomas de cuerpo de los números reales
 Los axiomas de cuerpo son el conjunto de reglas fundamentales que definen cómo operan la adición y la multiplicación en el sistema de los números reales.
+
 Sean $a, b, c \in \mathbb{R}$
 
 |  N  | Axioma                     | Descripción                                                   | Notación                                                   | Concepto                                                                                           |
@@ -31,27 +32,18 @@ Sean $a, b, c \in \mathbb{R}$
 
 ---
 
-## Axiomas de igualdad
-Para operar con los números reales, se asume que la igualdad cumple con cuatro propiedades esenciales
+## Propiedades de igualdad
+La igualdad es una relación fundamental en los números reales y permite establecer cuándo dos expresiones representan el mismo valor. Para operar correctamente con ella, se consideran las siguientes propiedades:
+
 Sean $a, b, c \in \mathbb{R}$
 
-|  N  | Axioma            | Descripción | Notación | Concepto |
-| :-: | ----------------- | ----------- | -------- | -------- |
-|  1  | **Reflexividad**  |             |          |          |
-|  2  | **Simetría**      |             |          |          |
-|  3  | **Transitividad** |             |          |          |
+|  N  | Axioma            | Descripción                                                                                      | Notación                           | Concepto |
+| :-: | ----------------- | ------------------------------------------------------------------------------------------------ | ---------------------------------- | -------- |
+|  1  | **Reflexividad**  | Todo número es igual a sí mismo                                                                  | $a=a$                              |          |
+|  2  | **Simetría**      | Si un número es igual a otro, el segundo es igual al primero                                     | $a=b \Rightarrow b=a$              |          |
+|  3  | **Transitividad** | Si un número es igual a un segundo, y este es igual a un tercero, el primero es igual al tercero | $(a=b \wedge b=c) \Rightarrow a=c$ |          |
 
 
-
-
-1. **Reflexividad** 
-	$a=a$
-2. **Simetría** 
-	$a=b \Rightarrow b=a$
-3. **Transitividad**
-	$(a=b \wedge b=c) \Rightarrow a=c$
-
----
 
 ## Definiciones
 
