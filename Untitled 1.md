@@ -30,3 +30,26 @@ fdsf
 
 
 > **Resumen:** Una o dos oraciones que capturen la idea central de esta sección.
+
+
+---
+
+
+
+=== start-multi-column
+[columnSettings]
+number of columns: 2
+===
+
+**Apuntes / Ideas**
+Tu contenido principal aquí...
+
+=== end-column ===
+
+**Notas / Resumen**
+Tus notas al margen aquí...
+
+=== end-multi-column
+
+>ptratrat
+

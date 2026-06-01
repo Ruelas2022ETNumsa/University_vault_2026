@@ -110,6 +110,9 @@ tab
 textual
 teorema
 ta
+tp
+templates
+tocar
 ToDo
 Templater
 Text
@@ -339,6 +342,7 @@ Protter
 Problems
 Physics
 Piskunov
+Palabra
 del
 date
 de
@@ -504,6 +508,8 @@ denomina
 denominador
 debes
 docente
+dfdsf
+dsfds
 Vault
 Verificar
 Variables
@@ -641,6 +647,7 @@ breve
 begin
 battery
 buena
+break
 scope
 status
 selector
@@ -812,6 +819,7 @@ subsecciones
 suelto
 series
 start
+sdf
 vault
 vil
 ver
@@ -1222,6 +1230,7 @@ rrafos
 recibas
 resueltos
 ruso
+relaciona
 notes
 notas
 nuevas
@@ -1314,6 +1323,7 @@ numeros
 numerada
 numerado
 number
+necesit
 created
 commit
 cada
@@ -1637,6 +1647,8 @@ comprimida
 comparaci
 column
 columns
+capturen
+cornell
 updated
 un
 universo
@@ -1832,6 +1844,7 @@ Collection
 Complemento
 Course
 Columna
+Claves
 Instalados
 Instalado
 Instalar
@@ -2138,6 +2151,7 @@ Analytic
 Analysis
 Apostol
 Ayres
+Ac
 push
 pull
 para
@@ -2985,6 +2999,9 @@ inversos
 inverso
 inventar
 ilegible
+implica
+idea
+insertes
 Dependencia
 Dropbox
 Dataview
@@ -3231,6 +3248,8 @@ fundamentalmente
 formas
 fragment
 fillbetween
+fds
+fdsf
 haya
 hace
 hacer
@@ -3376,6 +3395,7 @@ ocurre
 opamp
 out
 on
+oraciones
 junto
 json
 jer
