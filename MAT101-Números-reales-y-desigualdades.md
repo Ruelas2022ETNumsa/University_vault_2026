@@ -42,6 +42,24 @@ Sean $a, b, c \in \mathbb{R}$
 |  2  | **Simetría**      | Si un número es igual a otro, el segundo es igual al primero                                     | $a=b \Rightarrow b=a$              |          |
 |  3  | **Transitividad** | Si un número es igual a un segundo, y este es igual a un tercero, el primero es igual al tercero | $(a=b \wedge b=c) \Rightarrow a=c$ |          |
 
+## Propiedades de igualdad
+
+Las propiedades de la igualdad (reflexiva, simétrica y transitiva) constituyen una relación de equivalencia en el conjunto de los números reales. Aunque no se listan como axiomas de cuerpo, son premisas lógicas necesarias para asegurar que operaciones como la suma y el producto estén unívocamente determinadas. Esto permite que cada número real corresponda exactamente a un único punto en la recta numérica.
+
+| N   | Axioma            | Descripción                                                                                       | Notación      | Concepto    |
+| --- | ----------------- | ------------------------------------------------------------------------------------------------- | ------------- | ----------- |
+| 1   | **Reflexividad**  | Todo número es igual a sí mismo.                                                                  | a=a           | ∀a∈R:a=a    |
+| 2   | **Simetría**      | Si un número es igual a otro, el segundo es igual al primero.                                     | a=b⇒b=a       | a=b⟺b=a     |
+| 3   | **Transitividad** | Si un número es igual a un segundo, y este es igual a un tercero, el primero es igual al tercero. | (a=b∧b=c)⇒a=c | a=b∧b=c⟹a=c |
+
+
+
+> **La igualdad es una relación de equivalencia que garantiza la unicidad de los elementos y la consistencia del cálculo en $\mathbb{R}$.**
+
+
+
+
+
 ---
 ## Definiciones
 L
