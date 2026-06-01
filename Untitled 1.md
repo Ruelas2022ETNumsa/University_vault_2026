@@ -19,13 +19,26 @@ status: activo
 Los axiomas de cuerpo son el conjunto de reglas fundamentales que definen cómo operan la adición y la multiplicación en el sistema de los números reales.
 Sean $a, b, c \in \mathbb{R}$
 
+
+---
+
+| Tipo              | Ejemplo            | Descripción                            |
+| ----------------- | ------------------ | -------------------------------------- |
+| **Clausura** | Si tomás dos números reales y los sumás o los multiplicás, el resultado será, sin ninguna duda, otro número real.|$a+b \in \mathbb{R}$ $a \cdot b=b \cdot a$|
+| Ecuación          | $x^2-4=0$          | Verdadera solo para algunos $x$        |
+| Identidad         | $x^2-4=(x-2)(x+2)$ | Verdadera para todo $x \in \mathbb{R}$ |
+
+
+---
+
+
 --- start-multi-column: cornell-001
 ```column-settings
 number of columns: 2
 column size: [45%, 45%]
 border: off
 ```
-## 📝 Definición formal
+%%## 📝 Definición formal%%
 
 1. **Clausura**
 Si tomás dos números reales y los sumás o los multiplicás, el resultado será, sin ninguna duda, otro número real.
@@ -49,7 +62,7 @@ Si tomás dos números reales y los sumás o los multiplicás, el resultado ser�
 
 --- end-column ---
 
-##  Fórmulas clave
+%%##  Fórmulas clave%%
 
 1. 
 	- $a+b \in \mathbb{R}$
