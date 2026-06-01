@@ -256,30 +256,28 @@ galaxy-links
 %%
 
 
-
-
 ── MODO 1 · EXPLICACIÓN DE CONCEPTO ──
 
-En geometría analítica, tanto la **circunferencia** como la **elipse** son curvas denominadas secciones cónicas.
+Un concepto fundamental en Cálculo 1 es el **área entre dos curvas**. Cuando tenés dos funciones, digamos $f(x)$ y $g(x)$, y querés hallar el espacio que encierran en un intervalo $[a, b]$, la integral definida nos da la solución exacta.
 
-1. **La Circunferencia:** Se define como el conjunto de puntos que están a una distancia fija $r$ (radio) de un punto central $(h, k)$. Su ecuación estándar es $(x-h)^2 + (y-b)^2 = r^2$. En el ejemplo visual, usamos una centrada en el origen con radio 2 ($x^2 + y^2 = 4$).
-2. **La Elipse:** Es el lugar geométrico donde la suma de las distancias a dos puntos fijos (focos) es constante. Podés verla como una circunferencia que ha sido estirada horizontal o verticalmente. Su ecuación canónica es $\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$, donde $a$ y $b$ representan las longitudes de los semiejes.
+Si en ese intervalo se cumple que $g(x) \geq f(x)$, el área $A$ se define como: $$A = \int_{a}^{b} [g(x) - f(x)] , dx$$ Esto significa que restamos la función "techo" menos la función "piso" para obtener la altura de los rectángulos infinitesimales que sumamos.
 
-La circunferencia es, de hecho, un caso especial de elipse donde los dos semiejes tienen la misma longitud ($a = b = r$).
+A continuación, visualizamos la región encerrada por las funciones $y = \sqrt{x}$ (en azul) y $y = x^2$ (en rojo) en el intervalo $$.
 
-```
-left=-7; right=7; bottom=-5; top=5;
+```desmos
+left=-0.2; right=1.5; bottom=-0.2; top=1.2;
 width=500; height=400;
 ---
-x^2+y^2=4|#2d70b3
-\frac{x^2}{25}+\frac{y^2}{9}=1|#c74440
-(0,0)|label:Centro (0,0)|#000000
+y=\sqrt{x}|0<=x<=1|#2d70b3
+y=x^2|0<=x<=1|#c74440
+y<=\sqrt{x}|y>=x^2|x>=0|x<=1|#a5d8ff
+(1,1)|label:(1,1)|#000000
 ```
 
-_En el gráfico: La curva azul es una circunferencia de radio 2. La curva roja es una elipse con semieje mayor $a=5$ y semieje menor $b=3$._
+_En el gráfico: La zona sombreada en celeste (#a5d8ff) representa el área que se calcularía mediante la integral $\int_{0}^{1} (\sqrt{x} - x^2) , dx$._
 
 **Preguntas de comprensión:**
 
-1. Si en la ecuación de la elipse cambiamos el denominador de $y^2$ por 25 (igual que el de $x^2$), ¿en qué figura se transforma?
-2. Dada la circunferencia $x^2 + y^2 = 4$, ¿cuál es el valor de su diámetro?
-3. ¿Qué pasaría con la forma de la elipse roja si el valor de $a$ (el denominador bajo $x^2$) se hiciera mucho más grande que el de $b$?
+1. Según el gráfico, ¿cuál de las dos funciones actúa como el "techo" ($g(x)$) en el intervalo $$?
+2. Si quisiéramos hallar el área total y las curvas se cruzaran (una pasara a estar arriba de la otra), ¿por qué no bastaría con una sola integral simple de la diferencia?
+3. ¿Qué valor tendría el área si las funciones fueran idénticas en todo el intervalo?
