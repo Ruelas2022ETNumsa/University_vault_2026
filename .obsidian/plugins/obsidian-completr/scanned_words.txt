@@ -135,6 +135,7 @@ tengas
 tramos
 tramo
 terciaria
+tambien
 ToDo
 Templater
 Text
@@ -601,6 +602,10 @@ destaque
 discontinua
 duros
 discontinuo
+distinci
+detectar
+dejo
+duplicado
 Vault
 Verificar
 Variables
@@ -633,6 +638,8 @@ Visto
 Version
 Visible
 VALORES
+Voy
+Veo
 galaxy
 gina
 genes
@@ -695,6 +702,7 @@ generadas
 garantizan
 gnitas
 gicas
+guardarlo
 body
 beacon
 bat
@@ -1035,6 +1043,8 @@ viceversa
 vale
 variables
 versiones
+vere
+ves
 audience
 activo
 auto
@@ -1279,6 +1289,10 @@ axiom
 agradables
 advertencia
 auxiliar
+ahi
+asi
+aun
+ahora
 related
 recomendados
 ribbon
@@ -1467,6 +1481,14 @@ relaciones
 revisado
 reconocibles
 reas
+revisa
+reformate
+realine
+renderizando
+renderizarse
+reviso
+renumerado
+realidad
 notes
 notas
 nuevas
@@ -1571,6 +1593,8 @@ negatividad
 negar
 numeradores
 nos
+notebook
+noto
 created
 commit
 cada
@@ -1949,6 +1973,16 @@ consistente
 construyen
 convierten
 continua
+cambie
+compatible
+cometa
+codigo
+creo
+confundirlo
+convirti
+cambiar
+consecutivos
+corrijo
 updated
 un
 universo
@@ -2401,6 +2435,8 @@ Enunciados
 Establecen
 Entre
 Exclusi
+Esos
+Escribo
 Obsidian
 OmniSearch
 Ocultar
@@ -2539,6 +2575,7 @@ Adem
 Absoluto
 Arquimediana
 Adici
+Ahora
 push
 pull
 para
@@ -2757,6 +2794,9 @@ positiva
 poner
 producen
 pastel
+prefiero
+proteger
+placeholders
 min
 mica
 movimiento
@@ -2910,6 +2950,7 @@ multiplica
 me
 manipular
 multiplicamos
+menciona
 YAML
 Ya
 You
@@ -2949,6 +2990,7 @@ Briggs
 Bitsadze
 Book
 BM
+Buen
 en
 exacta
 escaneados
@@ -3197,6 +3239,9 @@ escalonada
 etiquetar
 exactos
 evitarlos
+ejecutaron
+efectivamente
+eliminaci
 Motor
 Media
 Mantiene
@@ -3546,6 +3591,8 @@ irracional
 igualarse
 igualdades
 intervalos
+irelevante
+identificadores
 Dependencia
 Dropbox
 Dataview
@@ -3718,6 +3765,7 @@ Renderizado
 Recomendar
 Recortes
 Restar
+Read
 Hider
 Hace
 Herramientas
@@ -3896,6 +3944,7 @@ quedar
 quad
 quedarse
 quieras
+qued
 University
 Usar
 Un
@@ -4017,6 +4066,7 @@ origen
 operativos
 opuestos
 ordenado
+optimo
 junto
 json
 jer
@@ -4036,6 +4086,7 @@ Quieres
 Que
 ya
 yaml
+yo
 wikilinks
 when
 where

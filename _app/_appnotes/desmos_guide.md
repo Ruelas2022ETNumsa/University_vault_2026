@@ -27,7 +27,7 @@ Referencia rápida para escribir bloques Desmos a mano en Obsidian.
 
 Todo bloque Desmos se escribe así:
 
-```text
+```desmos-graph
 [configuración opcional]
 ---
 [ecuaciones]
@@ -113,7 +113,7 @@ El plugin acepta dos formatos:
 
 ## U5. RESTRICCIONES DE DOMINIO
 
-```text
+```desmos-graph
 y=x^2|0<=x<=3
 y=\sqrt{x}|x>=0
 x=2|0<=y<=5
@@ -125,7 +125,7 @@ x=2|0<=y<=5
 
 Usar inecuaciones. Para intersección de condiciones, todo en **una sola línea** separado por `|`:
 
-```text
+```desmos-graph
 y<2-x|y>x|x>=0|x<=1|#a5d8ff
 ```
 
@@ -133,7 +133,7 @@ y<2-x|y>x|x>=0|x<=1|#a5d8ff
 
 Para sombrear un rectángulo **no usar** `y<=cte|y>=cte` solo — hay que incluir también las restricciones en x. Sintaxis correcta:
 
-```text
+```desmos-graph
 x>=0|x<=1|y>=0|y<=1|#a5d8ff
 ```
 
@@ -143,7 +143,7 @@ Esto es equivalente a decir: "la región donde x está entre 0 y 1, e y está en
 
 ## U7. PUNTOS Y ETIQUETAS
 
-```text
+```desmos-graph
 (1,2)                   → Punto sólido
 (1,2)|OPEN              → Punto hueco
 (1,2)|label:texto|BLACK → Punto con etiqueta
@@ -153,7 +153,7 @@ Esto es equivalente a decir: "la región donde x está entre 0 y 1, e y está en
 
 ## U8. FUNCIONES OCULTAS
 
-```text
+```desmos-graph
 f(x)=x^2|hidden
 f'(x)|BLUE
 ```
