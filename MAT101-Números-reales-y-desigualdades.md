@@ -45,6 +45,25 @@ Sean $a, b, c \in \mathbb{R}$
 
 > **La igualdad es una relación de equivalencia que garantiza la unicidad de los elementos y la consistencia del cálculo en $\mathbb{R}$.**
 
+### Principio de Sustitución
+
+Si $a = b$, entonces $a$ puede ser reemplazado por $b$ en cualquier expresión o proposición matemática sin alterar su valor de verdad. Este principio es la base de la resolución de sistemas de ecuaciones y de la simplificación de expresiones según el texto de **Thomas**.
+
+```desmos-graph
+left=-5; right=5; bottom=-5; top=5;
+width=400; height=200;
+---
+y=x^2-4|BLUE
+y=0|DASHED|BLACK
+(2,0)|label:x=2|BLACK
+(-2,0)|label:x=-2|BLACK
+y=(x-2)(x+2)|RED|DOTTED
+```
+
+_En el gráfico: La curva azul ($x^2-4$) interseca al eje negro en los puntos solución de la **ecuación** ($x=\pm 2$), mientras que la curva roja punteada coincide en cada punto con la azul, ilustrando la **identidad**._
+
+> **La ecuación busca hallar incógnitas; la identidad establece una equivalencia estructural permanente.**
+
 ---
 ## Definiciones
 La resta y la división no se definen como operaciones primarias o independientes, sino como **operaciones derivadas** de la adición y la multiplicación
@@ -67,6 +86,23 @@ Esto implica que "restar" es simplemente una forma abreviada de sumar un negativ
 	$\dfrac{a}{b}=a \cdot \dfrac{1}{b}=a \cdot b^{-1},\quad b \neq 0$
 
 ---
+
+## Tipos de igualdad en los números reales
+
+En el análisis matemático, es crucial distinguir entre una igualdad que simplemente compara valores, una que impone una condición y una que expresa una equivalencia estructural.
+
+Sean $a, b \in \mathbb{R}$ y $P(x), Q(x)$ expresiones algebraicas.
+
+| Tipo                  | Ejemplo                | Descripción                                                          | Alcance                                       |
+| :-------------------- | :--------------------- | :------------------------------------------------------------------- | :-------------------------------------------- |
+| **Igualdad numérica** | $2^3 = 8$              | Proposición lógica sin variables.                                    | Siempre verdadera (o falsa).                  |
+| **Ecuación**          | $x^2 - 4 = 0$          | Condición que se cumple para valores específicos de la variable.     | Verdadera solo para su **conjunto solución**. |
+| **Identidad**         | $x^2 - 4 = (x-2)(x+2)$ | Equivalencia algebraica basada en leyes de cuerpo (distributividad). | Verdadera para todo $x$ en el dominio.        |
+
+
+
+
+
 ## Observaciones sobre tipos de igualdad
 
 | Tipo              | Ejemplo            | Descripción                            |
