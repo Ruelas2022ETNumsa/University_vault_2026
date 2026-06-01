@@ -21,7 +21,7 @@ Los axiomas de cuerpo son el conjunto de reglas fundamentales que definen cómo 
 --- start-multi-column: cornell-001
 ```column-settings
 number of columns: 2
-column size: [30%, 30%]
+column size: [45%, 45%]
 border: off
 ```
 
@@ -55,12 +55,17 @@ sadsadasdadasdas
 asdsad
 asdasd
 sadsadsa
-dsa
-d
-asd
-asd
+5. **Existencia de inversos aditivos**
+	- $\forall a \in \mathbb{R},\ \exists\, {-a} \in \mathbb{R}$ tal que $a+(-a)=0$
+	- $-a$ se denomina inverso aditivo de $a$
+6. **Existencia de inversos multiplicativos**
+	- $\forall a \in \mathbb{R}\setminus\{0\}$, $\exists\, a^{-1} \in \mathbb{R}$ tal que $a \cdot a^{-1}=1$
+	- $a^{-1}=\dfrac{1}{a}$ es el inverso multiplicativo de $a$
+7. **Distributividad**
+	- $a(b+c)=ab+ac$
 asd
 a
+
 --- end-multi-column
 
 > **Resumen:**
