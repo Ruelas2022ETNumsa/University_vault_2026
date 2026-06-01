@@ -115,6 +115,7 @@ templates
 tocar
 titluasd
 tom
+tutor
 ToDo
 Templater
 Text
@@ -178,6 +179,8 @@ Transcendentals
 Tom
 Tu
 Tus
+Ten
+Termin
 Sistema
 Sync
 Save
@@ -517,6 +520,10 @@ definen
 duda
 distribuir
 dfrac
+dice
+destacado
+diga
+dictame
 Vault
 Verificar
 Variables
@@ -600,6 +607,7 @@ generador
 ground
 geom
 grid
+guide
 body
 beacon
 bat
@@ -833,6 +841,7 @@ sadsadsa
 sum
 satisfacen
 setminus
+similar
 vault
 vil
 ver
@@ -1096,6 +1105,7 @@ asdsad
 asdasd
 altera
 agrupamos
+agregues
 related
 recomendados
 ribbon
@@ -1254,6 +1264,10 @@ recibas
 resueltos
 ruso
 relaciona
+rec
+resulta
+representaci
+regiones
 notes
 notas
 nuevas
@@ -1676,6 +1690,10 @@ cornell
 conjunto
 clausura
 cdot
+corresponda
+comprensi
+copies
+corregilo
 updated
 un
 universo
@@ -1738,6 +1756,7 @@ GEOM
 Guide
 Geometry
 Granville
+GENERALES
 Convenci
 Creaci
 Commander
@@ -1874,6 +1893,10 @@ Course
 Columna
 Claves
 Conecta
+CONCEPTO
+Conect
+Concepto
+Consult
 Instalados
 Instalado
 Instalar
@@ -2060,6 +2083,11 @@ Edwards
 Early
 Elliott
 Equations
+Eres
+EXPLICACI
+Explic
+EJERCICIO
+Enunciado
 Obsidian
 OmniSearch
 Ocultar
@@ -2364,6 +2392,10 @@ punteadas
 producto
 propiedad
 permitiendo
+proco
+propias
+palabras
+podr
 min
 mica
 movimiento
@@ -2502,6 +2534,8 @@ multi
 multiplicaci
 multiplic
 mathbb
+multiplicarse
+mi
 YAML
 Ya
 You
@@ -2754,6 +2788,8 @@ ed
 ee
 equivalencia
 exists
+entregarlo
+especifica
 Motor
 Media
 Mantiene
@@ -2804,6 +2840,7 @@ Mathematical
 Michael
 Mendelson
 Maron
+MODO
 Lectura
 LaTeX
 Linter
@@ -3040,6 +3077,10 @@ ilegible
 implica
 idea
 insertes
+inclu
+introducci
+incompleto
+inferilo
 Dependencia
 Dropbox
 Dataview
@@ -3105,6 +3146,8 @@ Diferencial
 Demidovich
 Differential
 Definici
+Desarrollo
+DICTADO
 Remotely
 Raz
 Revisa
@@ -3189,6 +3232,9 @@ Reflexividad
 RMULAS
 Ron
 Rightarrow
+Respond
+RESUELTO
+Reformul
 Hider
 Hace
 Herramientas
@@ -3386,6 +3432,7 @@ NICOS
 NPN
 Nodos
 Nikolsky
+NICAMENTE
 originales
 observatory
 oficial
@@ -3453,6 +3500,7 @@ juntas
 jpg
 justifica
 jpeg
+justificaci
 Qu
 Qui
 Quick
