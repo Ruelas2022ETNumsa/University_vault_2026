@@ -1,6 +1,6 @@
 {
   "collapse-filter": false,
-  "search": "",
+  "search": "mat101",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": false,
@@ -17,6 +17,6 @@
   "repelStrength": 11.0735075131989,
   "linkStrength": 1,
   "linkDistance": 30,
-  "scale": 0.13168723643322378,
-  "close": true
+  "scale": 0.5087618773822206,
+  "close": false
 }

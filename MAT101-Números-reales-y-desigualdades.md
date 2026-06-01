@@ -187,11 +187,11 @@ Tabla de referencia rápida con los teoremas más operativos: los que aparecen a
 
 Los **axiomas de orden** son las reglas que nos permiten comparar dos números reales y establecer una jerarquía entre ellos. Gracias a estos axiomas, podemos afirmar que los números reales se disponen en una **recta numérica** con una dirección definida.
 
+
+
+### Axiomas de Orden de los números reales
+Son las reglas que nos permiten comparar dos números reales y establecer una jerarquía entre ellos. Gracias a estos axiomas, podemos afirmar que los números reales se disponen en una **recta numérica** con una dirección definida.
 Formalmente, el sistema de los números reales se basa en la existencia de un subconjunto especial llamado **números positivos** ($\mathbb{R}^+$). A partir de este concepto primitivo, se construyen las relaciones "mayor que" ($>$) y "menor que" ($<$).
-
-### Axiomas de Orden (Definición Formal)
-
-De acuerdo con el desarrollo de **Apostol**, estos axiomas definen el comportamiento del conjunto de los positivos ($\mathbb{R}^+$):
 
 Sean $a, b \in \mathbb{R}$
 
@@ -252,32 +252,4 @@ y=0.35 \{a<x<c\}|RED
 
 %%
 galaxy-links
-
 %%
-
-
-── MODO 1 · EXPLICACIÓN DE CONCEPTO ──
-
-Un concepto fundamental en Cálculo 1 es el **área entre dos curvas**. Cuando tenés dos funciones, digamos $f(x)$ y $g(x)$, y querés hallar el espacio que encierran en un intervalo $[a, b]$, la integral definida nos da la solución exacta.
-
-Si en ese intervalo se cumple que $g(x) \geq f(x)$, el área $A$ se define como: $$A = \int_{a}^{b} [g(x) - f(x)] , dx$$ Esto significa que restamos la función "techo" menos la función "piso" para obtener la altura de los rectángulos infinitesimales que sumamos.
-
-A continuación, visualizamos la región encerrada por las funciones $y = \sqrt{x}$ (en azul) y $y = x^2$ (en rojo) en el intervalo $$.
-
-```desmos
-left=-0.2; right=1.5; bottom=-0.2; top=1.2;
-width=500; height=400;
----
-y=\sqrt{x}|0<=x<=1|#2d70b3
-y=x^2|0<=x<=1|#c74440
-y<=\sqrt{x}|y>=x^2|x>=0|x<=1|#a5d8ff
-(1,1)|label:(1,1)|#000000
-```
-
-_En el gráfico: La zona sombreada en celeste (#a5d8ff) representa el área que se calcularía mediante la integral $\int_{0}^{1} (\sqrt{x} - x^2) , dx$._
-
-**Preguntas de comprensión:**
-
-1. Según el gráfico, ¿cuál de las dos funciones actúa como el "techo" ($g(x)$) en el intervalo $$?
-2. Si quisiéramos hallar el área total y las curvas se cruzaran (una pasara a estar arriba de la otra), ¿por qué no bastaría con una sola integral simple de la diferencia?
-3. ¿Qué valor tendría el área si las funciones fueran idénticas en todo el intervalo?
