@@ -1,5 +1,5 @@
 ---
-title: "MAT101-numeros-reales-desigualdades"
+title: "MAT101-Números-reales-y-desigualdades"
 galaxy_body: planet
 subject: MAT-101
 semester: 1
@@ -29,14 +29,11 @@ Sean $a, b, c \in \mathbb{R}$
 |  6  | **Inverso aditivo**        | Todo real tiene un opuesto<br>que anula la suma               | $a+(-a)=0$                                                 | $\forall\, a \in \mathbb{R},\ \exists\,{-a} \in \mathbb{R}:$<br>$a+(-a)=0$                         |
 |  7  | **Inverso multiplicativo** | Todo real no nulo tiene un<br>recíproco que anula el producto | $a \cdot a^{-1}=1,\quad a \neq 0$<br>$a^{-1}=\dfrac{1}{a}$ | $\forall\, a \in \mathbb{R}\setminus\{0\},\ \exists\, a^{-1} \in \mathbb{R}:$<br>$a\cdot a^{-1}=1$ |
 
-
-
 ---
 
 ## Axiomas de igualdad
-
+Para operar con los números reales, se asume que la igualdad cumple con cuatro propiedades esenciales
 Sean $a, b, c \in \mathbb{R}$
-
 
 |  N  | Axioma            | Descripción | Notación | Concepto |
 | :-: | ----------------- | ----------- | -------- | -------- |
