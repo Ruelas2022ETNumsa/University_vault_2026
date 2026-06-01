@@ -228,6 +228,26 @@ c=6
 {a<x<c: 0.3}|label:Transitividad a < b y b < c implica a < c|RED
 ```
 
+
+```desmos-graph
+left=-1; right=7; bottom=-0.5; top=0.6;
+width=600; height=180;
+---
+y=0
+
+a=1
+b=4
+c=6
+
+(a,0)|label:a
+(b,0)|label:b
+(c,0)|label:c
+
+y=0.10 \{a<x<b\}|BLUE
+y=0.20 \{b<x<c\}|BLUE
+y=0.35 \{a<x<c\}|RED
+```
+
 > **Los axiomas de orden convierten a $\mathbb{R}$ en un campo ordenado, permitiendo el uso de desigualdades y la representación en la recta real.**
 
 **Preguntas de comprensión:**
