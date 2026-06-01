@@ -35,11 +35,11 @@ Si alguno de estos tres puntos falta, pedirlo antes de continuar.
 
 El stack final debe cubrir exactamente estos tres roles. No más, no menos:
 
-| Rol | Cantidad ideal | Descripción |
-|---|---|---|
-| **Teoría + Ejemplos** | 1 libro principal + 1 riguroso | Cubre todo el temario con explicaciones y ejemplos resueltos |
-| **Problemas resueltos** | 1-2 libros | Solo ejercicios con soluciones paso a paso, sin teoría necesariamente |
-| **Complemento opcional** | 1 libro máximo | Solo si existe un hueco real que los anteriores no cubren |
+| Rol                      | Cantidad ideal                 | Descripción                                                           |
+| ------------------------ | ------------------------------ | --------------------------------------------------------------------- |
+| **Teoría + Ejemplos**    | 1 libro principal + 1 riguroso | Cubre todo el temario con explicaciones y ejemplos resueltos          |
+| **Problemas resueltos**  | 1-2 libros                     | Solo ejercicios con soluciones paso a paso, sin teoría necesariamente |
+| **Complemento opcional** | 2 o 3 libros máximo            | Solo si existe un hueco real que los anteriores no cubren             |
 
 ---
 

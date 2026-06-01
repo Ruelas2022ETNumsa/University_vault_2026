@@ -37,6 +37,16 @@ Sean $a, b, c \in \mathbb{R}$
 
 Sean $a, b, c \in \mathbb{R}$
 
+
+|  N  | Axioma            | Descripción | Notación | Concepto |
+| :-: | ----------------- | ----------- | -------- | -------- |
+|  1  | **Reflexividad**  |             |          |          |
+|  2  | **Simetría**      |             |          |          |
+|  3  | **Transitividad** |             |          |          |
+
+
+
+
 1. **Reflexividad** 
 	$a=a$
 2. **Simetría** 
