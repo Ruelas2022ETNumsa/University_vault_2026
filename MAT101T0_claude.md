@@ -14,7 +14,7 @@ status: activo
 ---
 
 # Números reales y desigualdades
----
+
 ## Axiomas de cuerpo de los números reales
 Los axiomas de cuerpo son el conjunto de reglas fundamentales que definen cómo operan la adición y la multiplicación en el sistema de los números reales.
 
@@ -38,11 +38,11 @@ La igualdad es una relación fundamental en los números reales y permite establ
 
 Sean $a, b, c \in \mathbb{R}$
 
-| N   | **Axioma**        | **Descripción**                                                                                             | **Notación**  | **Concepto** |
-| --- | ----------------- | ----------------------------------------------------------------------------------------------------------- | ------------- | ------------ |
-| 1   | **Reflexividad**  | Todo número es igual a sí mismo.                                                                            | $a=a$           | $\forall\,a\in\mathbb{R}:a=a$     |
-| 2   | **Simetría**      | Si un número es igual a otro, el segundo <br>es igual al primero.                                           | $a=b\Rightarrow b=a$       | $a=b\Longleftrightarrow b=a$      |
-| 3   | **Transitividad** | Si un número es igual a un segundo, y <br> este es igual a un tercero, el primero es <br> igual al tercero. | $(a=b\wedge b=c)\Rightarrow a=c$ | $a=b\wedge b=c\Longrightarrow a=c$  |
+| N   | **Propiedad**     | **Enunciado**                                                                                               | **Notación**                             |
+| --- | ----------------- | ----------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
+| 1   | **Reflexividad**  | Todo número es igual a sí mismo.                                                                            | $a=a$                                    |
+| 2   | **Simetría**      | Si $a=b$, entonces $b=a$.                                                                                   | $a=b \Longleftrightarrow b=a$            |
+| 3   | **Transitividad** | Si $a=b$ y $b=c$, entonces $a=c$.                                                                           | $a=b \wedge b=c \Longrightarrow a=c$    |
 
 > **La igualdad es una relación de equivalencia que garantiza la unicidad de los elementos y la consistencia del cálculo en $\mathbb{R}$.**
 
@@ -76,15 +76,8 @@ La resta y la división no se definen como operaciones primarias o independiente
 
 ### Conexión con los Axiomas
 
-- **La resta** es posible porque el axioma de **existencia de negativos** asegura que para todo real $a$ existe un $-a$ tal que la suma es cero.
-- **La división** es posible porque el axioma de **existencia del recíproco** asegura que para todo real $a \neq 0$ existe un $a^{-1}$ tal que el producto es uno.
-
-Esto implica que "restar" es simplemente una forma abreviada de sumar un negativo, y "dividir" es una forma abreviada de multiplicar por un recíproco.
-
-- **Resta** 
-	$a-b=a+(-b)$
-- **División**
-	$\dfrac{a}{b}=a \cdot \dfrac{1}{b}=a \cdot b^{-1},\quad b \neq 0$
+- **La resta** es posible porque el axioma del **inverso aditivo** asegura que para todo $a$ existe $-a$. Restar es sumar el opuesto: $a-b=a+(-b)$.
+- **La división** es posible porque el axioma del **inverso multiplicativo** asegura que para todo $a\neq 0$ existe $a^{-1}$. Dividir es multiplicar por el recíproco: $\dfrac{a}{b}=a\cdot b^{-1},\quad b\neq 0$.
 
 ---
 
@@ -107,21 +100,19 @@ Los **teoremas básicos de los números reales** no son reglas arbitrarias, sino
 Sean $a, b, c, x \in \mathbb{R}$
 
 ### 1. Teoremas Algebraicos (Derivados de los Axiomas de Cuerpo)
-Estos aseguran la consistencia de las operaciones básicas:
+Estos aseguran la consistencia de las operaciones básicas. Sean $a, b, c \in \mathbb{R}$:
 
-| **Teorema**                      | **Adición**                                                        | **Multiplicación**                                                            |
-| -------------------------------- | ------------------------------------------------------------------ | ----------------------------------------------------------------------------- |
-| **Ley de simplificación**        | $a+b=a+c \Rightarrow b=c$                                          | $(a \cdot b=a \cdot c)\ \wedge\ a \neq 0 \Rightarrow b=c$                    |
-| **Unicidad del neutro**          | $\exists!\, 0: a+0=a$                                              | $\exists!\, 1: a \cdot 1=a$                                                   |
-| **Unicidad del inverso**         | $a+x=0 \Rightarrow x=b-a$                                          | $(a \cdot x=b)\ \wedge\ a \neq 0 \Rightarrow x=\dfrac{b}{a}$                 |
-| **Producto por cero**            | —                                                                  | $a \cdot 0=0$                                                                 |
-| **Regla del producto nulo**      | —                                                                  | $a \cdot b=0 \Rightarrow (a=0\ \vee\ b=0)$                                   |
-| **Ley de los signos (negación)** | $a=b \Rightarrow -a=-b$                                            | $a(-b)=-(ab)$                                                                 |
-| **Ley de los signos (doble)**    | $-(-a)=a$                                                          | $(-a)(-b)=ab$                                                                 |
-| **Ley de signos (diferencia)**   | $-(a-b)=b-a$                                                       | —                                                                             |
-| **Fracciones (suma)**            | —                                                                  | $\dfrac{a}{b}+\dfrac{c}{b}=\dfrac{a+c}{b},\quad b \neq 0$                    |
+| **Teorema**                    | **Enunciado**                                                                                                           | **Notación**                                                                                          |
+| ------------------------------ | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| **Leyes de simplificación**    | Si a dos expresiones iguales se les suma (o multiplica por) el mismo valor, los términos restantes son iguales.         | $a+c=b+c \Rightarrow a=b$<br>$ac=bc\ \wedge\ c\neq 0 \Rightarrow a=b$                            |
+| **Unicidad de elementos**      | El neutro aditivo $0$, el neutro multiplicativo $1$, el opuesto $-a$ y el recíproco $a^{-1}$ son únicos para cada $a$. | $\exists!\,0: a+0=a$<br>$\exists!\,1: a\cdot 1=a$                                                  |
+| **Solución única de ecuación** | Toda ecuación lineal $a+x=b$ o $ax=b$ tiene exactamente una solución real.                                              | $a+x=b \Rightarrow x=b-a$<br>$ax=b\ \wedge\ a\neq 0 \Rightarrow x=\dfrac{b}{a}$                 |
+| **Producto por cero**          | Multiplicar cualquier número por cero produce cero.                                                                     | $a\cdot 0=0$                                                                                         |
+| **Regla del producto nulo**    | Si un producto es cero, al menos uno de los factores es cero; y viceversa.                                              | $a\cdot b=0 \Rightarrow (a=0\ \vee\ b=0)$                                                          |
+| **Leyes de los signos**        | El producto de dos negativos es positivo; negar una diferencia invierte el orden.                                       | $(-a)(-b)=ab$<br>$a(-b)=-(ab)$<br>$-(-a)=a$<br>$-(a-b)=b-a$                                         |
+| **Suma de fracciones**         | Fracciones con igual denominador se suman combinando los numeradores.                                                   | $\dfrac{a}{b}+\dfrac{c}{b}=\dfrac{a+c}{b},\quad b\neq 0$                                          |
 
-Las leyes de simplificación permiten cancelar el mismo sumando o factor a ambos lados. La unicidad garantiza que el $0$, el $1$, el opuesto $-a$ y el recíproco $a^{-1}$ son únicos para cada número. La regla del producto nulo es el fundamento de la factorización para resolver ecuaciones: si $ab=0$, necesariamente $a=0$ o $b=0$.
+La **regla del producto nulo** es especialmente importante en la práctica: es el fundamento de resolver ecuaciones por factorización. Si se logra escribir una expresión como un producto igual a cero, cada factor puede igualarse a cero por separado.
 
 ---
 
