@@ -319,44 +319,44 @@ arc(100:65:1 and 1.2);
 \draw[-stealth] (0,-0.4) -- (0,3) node[above] {$y$};
 
 % Curva izquierda
-\draw[blue,thick,densely dashed]
+\draw[Blue,thick,densely dashed]
 (0.4,1.5)
 node[above right,yshift=3.5mm] {$f$}
 parabola[bend at end] (2,2.7);
 
-\draw[blue,semithick,densely dashed]
+\draw[Blue,semithick,densely dashed]
 (0.4,1.5) -- (0.4,0)
 node[below] {$a$};
 
-\draw[blue,semithick,densely dashed]
+\draw[Blue,semithick,densely dashed]
 (1,2.23) --
 node[right=-0.5mm] {$f(x-c)$}
 (1,0)
 node[below] {$x-c$};
 
-\draw[blue,semithick,densely dashed]
+\draw[Blue,semithick,densely dashed]
 (2,2.7) -- (2,0)
 node[below] {$b$};
 
 % Curva derecha trasladada
 \begin{scope}[xshift=2.3cm]
 
-\draw[blue,thick]
+\draw[Blue,thick]
 (0.4,1.5)
 node[above right,yshift=3.5mm] {$g$}
 parabola[bend at end] (2,2.7);
 
-\draw[blue,semithick]
+\draw[Blue,semithick]
 (0.4,1.5) -- (0.4,0)
 node[below] {$a+c$};
 
-\draw[blue,semithick]
+\draw[Blue,semithick]
 (1,2.23) --
 node[right=-0.5mm] {$g(x)$}
 (1,0)
 node[below] {$x$};
 
-\draw[blue,semithick]
+\draw[Blue,semithick]
 (2,2.7) -- (2,0)
 node[below] {$b+c$};
 
