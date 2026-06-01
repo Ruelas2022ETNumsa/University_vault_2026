@@ -49,11 +49,6 @@ Sean $a, b, c \in \mathbb{R}$
 ## Definiciones
 La resta y la división no se definen como operaciones primarias o independientes, sino como **operaciones derivadas** de la adición y la multiplicación
 
-- **Resta** 
-	$a-b=a+(-b)$
-- **División**
-	$\dfrac{a}{b}=a \cdot \dfrac{1}{b}=a \cdot b^{-1},\quad b \neq 0$
-
 | Operación               | Definición formal                                         | Notación              | Concepto                                                             |
 | :---------------------- | :-------------------------------------------------------- | :-------------------- | :------------------------------------------------------------------- |
 | **Resta** (Sustracción) | Es el número único $x$ tal que $a + x = b$.               | $b - a$               | Es la suma de $b$ con el **opuesto** de $a$: $b + (-a)$.             |
@@ -66,30 +61,10 @@ La resta y la división no se definen como operaciones primarias o independiente
 
 Esto implica que "restar" es simplemente una forma abreviada de sumar un negativo, y "dividir" es una forma abreviada de multiplicar por un recíproco.
 
-```
-left=-5; right=5; bottom=-1; top=1;
-width=500; height=100;
----
-y=0|BLACK
-a=2|BLUE
-b=5|GREEN
-(a,0)|label:a|BLUE
-(b,0)|label:b|GREEN
-(b-a,0)|label:b - a (distancia)|RED
-(0,0)|BLACK
-```
-
-**Preguntas de comprensión:**
-
-1. ¿Por qué el número $0$ no puede ser el divisor ($a$) en la definición de división de los números reales?
-2. Según la definición de resta de Apostol, ¿cómo se demuestra que $0 - a$ es igual a $-a$?
-3. Si la resta se define a través de la suma, ¿qué propiedad de la igualdad garantiza que el resultado $x$ sea único?
-
-
-
-
-
-
+- **Resta** 
+	$a-b=a+(-b)$
+- **División**
+	$\dfrac{a}{b}=a \cdot \dfrac{1}{b}=a \cdot b^{-1},\quad b \neq 0$
 
 ---
 ## Observaciones sobre tipos de igualdad
