@@ -179,3 +179,90 @@ Tabla de referencia rápida con los teoremas más operativos: los que aparecen a
 galaxy-links
 
 %%
+
+
+
+
+
+── MODO 1 · EXPLICACIÓN DE CONCEPTO ──
+
+El **Principio de Sustitución** es una regla lógica fundamental que establece que si dos números o expresiones son iguales ($a = b$), entonces uno puede ser reemplazado por el otro en cualquier expresión matemática sin que el valor de verdad o el resultado de la operación cambie. Aunque no siempre se enumera como un axioma de cuerpo en los textos de ingeniería, es la base que permite manipular ecuaciones y simplificar expresiones complejas.
+
+Conectando con la bibliografía:
+
+- **Apostol** utiliza este principio de forma implícita al definir que la suma $x+y$ y el producto $xy$ están **unívocamente determinados**; esto significa que si cambiamos $x$ por un valor equivalente, el resultado debe seguir siendo el mismo.
+- **Thomas** lo aplica formalmente en el desarrollo del cálculo, especialmente en la resolución de límites por "sustitución directa" y en el método de cambio de variable para integrales.
+- En esencia, este principio garantiza la consistencia del lenguaje matemático: los nombres (o expresiones) de un objeto pueden cambiar, pero el objeto (el valor) sigue siendo el mismo.
+
+### Ejemplo práctico: Evaluación de una función
+
+Imaginá que tenés una función que define la posición de un objeto: $$f(x) = 2x^2 + 5x + 1$$
+
+Si queremos saber la posición cuando el tiempo es $x = a + h$, aplicamos el Principio de Sustitución reemplazando cada aparición de "$x$" por la expresión "$a + h$":
+
+1. Tomamos la estructura original: $2(\dots)^2 + 5(\dots) + 1$.
+2. Sustituimos la "pieza" $x$ por su igual $a + h$: $$f(a + h) = 2(a + h)^2 + 5(a + h) + 1$$.
+3. Gracias a este principio, podemos ahora desarrollar algebraicamente la nueva expresión sabiendo que representa el mismo valor funcional.
+
+```desmos-graph
+left=-5; right=5; bottom=-2; top=15;
+width=500; height=300;
+---
+f(x)=2x^2+5x+1|BLUE
+a=1
+h=0.5
+(a,f(a))|label:f(a)|BLACK
+(a+h,f(a+h))|label:f(a+h)|RED
+```
+
+_En el gráfico: El punto rojo representa el resultado de haber **sustituido** la variable por el nuevo valor $(a+h)$, moviéndonos de forma precisa sobre la curva de la función._
+
+**Preguntas de comprensión:**
+
+1. ¿Por qué es necesario que una función esté "unívocamente determinada" para que el Principio de Sustitución funcione correctamente?
+2. En una identidad como $(x+1)^2 = x^2+2x+1$, ¿qué sucede si sustituimos $x$ por cualquier número real?
+3. Al resolver un sistema de ecuaciones por el método de sustitución, ¿qué propiedad de la igualdad estamos explotando realmente?
+
+
+
+---
+
+### Principio de Sustitución
+
+Si dos números o expresiones son iguales, uno puede reemplazarse por el otro en cualquier expresión matemática sin alterar el resultado.
+
+En símbolos, si
+
+$$  
+a=b,  
+$$
+
+entonces cualquier aparición de (a) puede sustituirse por (b), y viceversa.
+
+**Ejemplos**
+
+Si
+
+$$  
+a=3,  
+$$
+
+entonces
+
+$$  
+2a+5=2(3)+5=11.  
+$$
+
+Si
+
+$$  
+x+y=10,  
+$$
+
+entonces
+
+$$  
+(x+y)^2=10^2=100.  
+$$
+
+Esta propiedad permite manipular ecuaciones, simplificar expresiones y evaluar funciones de forma consistente.
