@@ -162,3 +162,72 @@ El **Axioma del Supremo** (o axioma de completitud) es lo que hace que $\mathbb{
 galaxy-links
 
 %%
+
+
+
+## Teoremas básicos
+
+Los **teoremas básicos de los números reales** no son reglas arbitrarias, sino consecuencias lógicas que se derivan de los axiomas de cuerpo, orden y completitud. Son "leyes establecidas" que garantizan que el álgebra y el cálculo funcionen siempre igual.
+
+Sean $a, b, c \in \mathbb{R}$
+
+---
+
+### 1. Teoremas Algebraicos (Derivados de los Axiomas de Cuerpo)
+
+Estos aseguran la consistencia de las operaciones básicas:
+
+| **Teorema**                 | **Enunciado**                                                                                                                          | **Notación**                                                                                    |
+| --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| **Leyes de simplificación** | Si a dos igualdades se les suma o multiplica el mismo valor, los términos restantes son iguales.                                       | $a+c=b+c \Rightarrow a=b$<br>$ac=bc\ \wedge\ c\neq 0 \Rightarrow a=b$                          |
+| **Unicidad de elementos**   | El neutro aditivo $0$, el neutro multiplicativo $1$, el opuesto $-a$ y el recíproco $\frac{1}{a}$ son únicos para cada número.         | $\exists!\,0: a+0=a$<br>$\exists!\,1: a\cdot 1=a$<br>$\exists!\,{-a}: a+(-a)=0$<br>$\exists!\,a^{-1}: a\cdot a^{-1}=1$ |
+| **Regla del producto nulo** | El producto de cualquier número por cero es cero. Además, si un producto es cero, al menos uno de los factores debe serlo.             | $a\cdot 0=0$<br>$ab=0 \Rightarrow (a=0\ \vee\ b=0)$                                            |
+| **Leyes de los signos**     | El producto de dos negativos es positivo. Negar una diferencia invierte el orden de los términos.                                      | $(-a)(-b)=ab$<br>$-(a-b)=b-a$                                                                  |
+
+La **regla del producto nulo** es el fundamento de resolver ecuaciones por factorización: si se logra escribir una expresión como un producto igual a cero, cada factor puede igualarse a cero por separado.
+
+---
+
+### 2. Teoremas de Desigualdad (Derivados de los Axiomas de Orden)
+
+Establecen cómo se comporta el orden en la recta numérica:
+
+| **Teorema**                  | **Enunciado**                                                                                                                   | **Notación**                                                                                              |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| **Transitividad**            | Si $a<b$ y $b<c$, entonces $a<c$.                                                                                               | $a<b\ \wedge\ b<c \Rightarrow a<c$                                                                        |
+| **Tricotomía**               | Entre dos reales, exactamente una de tres relaciones es verdadera: menor, mayor o igual.                                        | $a<b\ \vee\ a=b\ \vee\ a>b$                                                                               |
+| **Monotonía**                | Sumar el mismo número a ambos lados conserva la desigualdad. Multiplicar por un positivo la conserva; por un negativo, la invierte. | $a<b \Rightarrow a+c<b+c$<br>$a<b\ \wedge\ c>0 \Rightarrow ac<bc$<br>$a<b \Rightarrow {-a}>-b$           |
+| **Cuadrados no negativos**   | Para todo real no nulo, su cuadrado es estrictamente positivo.                                                                  | $a\neq 0 \Rightarrow a^2>0$                                                                               |
+
+La **monotonía con negativos** explica por qué al multiplicar o dividir ambos lados de una desigualdad por un número negativo se debe invertir el signo.
+
+---
+
+### 3. Teoremas de Valor Absoluto
+
+El valor absoluto $|x|$ mide la distancia del número $x$ al origen en la recta real:
+
+| **Teorema**                | **Enunciado**                                                                              | **Notación**                      |
+| -------------------------- | ------------------------------------------------------------------------------------------ | --------------------------------- |
+| **Desigualdad triangular** | La distancia de una suma no puede ser mayor que la suma de las distancias individuales.    | $|x+y| \leq |x|+|y|$             |
+
+Su nombre viene de la geometría: en un triángulo, la longitud de un lado nunca supera la suma de los otros dos. Es el resultado más importante de esta sección y reaparece constantemente en cálculo y análisis.
+
+---
+
+### 4. Teoremas de Estructura y Continuidad
+
+Son los que distinguen a $\mathbb{R}$ de otros sistemas como $\mathbb{Q}$:
+
+| **Teorema**                  | **Enunciado**                                                                                                              | **Notación**                                                        |
+| ---------------------------- | -------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| **Propiedad Arquimediana**   | Los reales no tienen "techo". Para cualquier $x$, siempre existe un entero $n$ mayor que él.                               | $\forall\,x\in\mathbb{R},\ \exists\,n\in\mathbb{Z}: n>x$            |
+| **Densidad**                 | Entre dos reales distintos, por más cerca que estén, siempre existen infinitos racionales e irracionales.                  | $a<b \Rightarrow \exists\,r\in\mathbb{Q}: a<r<b$                    |
+| **Axioma del Supremo**       | Todo conjunto de reales acotado superiormente tiene un extremo superior (supremo) dentro de $\mathbb{R}$.                  | $\exists\,\sup S \in \mathbb{R}$                                    |
+
+El **Axioma del Supremo** es lo que hace que $\mathbb{R}$ no tenga "huecos". Los racionales $\mathbb{Q}$ no lo cumplen: el conjunto $\{x\in\mathbb{Q}: x^2<2\}$ no tiene supremo en $\mathbb{Q}$, lo que significa que $\sqrt{2}$ no existe dentro de los racionales.
+
+
+---
+
+Esto es solo la sección de teoremas, nada más. Cuando lo tengas revisado me dices y lo escribo directamente en el archivo.

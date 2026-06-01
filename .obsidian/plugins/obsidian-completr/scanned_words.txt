@@ -131,6 +131,7 @@ transitividad
 tricotom
 total
 tenga
+tengas
 ToDo
 Templater
 Text
@@ -587,6 +588,7 @@ distancia
 distancias
 distinguen
 demostrar
+dices
 Vault
 Verificar
 Variables
@@ -1424,6 +1426,8 @@ racionales
 reaparece
 ricos
 racional
+relaciones
+revisado
 notes
 notas
 nuevas
@@ -1897,6 +1901,7 @@ comportan
 comparables
 cumplen
 combinando
+constantemente
 updated
 un
 universo
@@ -2838,6 +2843,7 @@ multiplicado
 multiplicativa
 monoton
 multiplica
+me
 YAML
 Ya
 You
@@ -3117,6 +3123,7 @@ entero
 extremo
 existan
 explica
+escribo
 Motor
 Media
 Mantiene
@@ -3461,6 +3468,7 @@ invertir
 iguales
 irracional
 igualarse
+igualdades
 Dependencia
 Dropbox
 Dataview
@@ -3855,6 +3863,7 @@ Nodos
 Nikolsky
 NICAMENTE
 Nueva
+Negar
 originales
 observatory
 oficial
