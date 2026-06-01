@@ -165,21 +165,80 @@ El **Axioma del Supremo** es lo que hace que $\mathbb{R}$ no tenga "huecos". Los
 
 Tabla de referencia rápida con los teoremas más operativos: los que aparecen al resolver ejercicios, simplificar expresiones y trabajar con fracciones. Sean $a, b, c, d \in \mathbb{R}$.
 
-| **#** | **Nombre**                        | **Notación**                                                       |
-| :---: | --------------------------------- | ------------------------------------------------------------------ |
-| 1     | Cancelación aditiva               | $a+c=b+c \Rightarrow a=b$                                          |
-| 2     | Cancelación multiplicativa        | $ac=bc\ \wedge\ c\neq 0 \Rightarrow a=b$                           |
-| 3     | Solución única aditiva            | $a+x=b \Rightarrow x=b-a$                                          |
-| 4     | Solución única multiplicativa     | $ax=b\ \wedge\ a\neq 0 \Rightarrow x=\dfrac{b}{a}$                 |
-| 5     | Producto por cero                 | $a\cdot 0=0$                                                       |
-| 6     | Regla del producto nulo           | $ab=0 \Rightarrow (a=0\ \vee\ b=0)$                                |
-| 7     | Igualdad de opuestos              | $a=b \Rightarrow -a=-b$                                            |
-| 8     | Signo en el producto              | $a(-b)=-(ab)$                                                      |
-| 9     | Doble negativo                    | $(-a)(-b)=ab$                                                      |
-| 10    | Fracciones — igual denominador    | $\dfrac{a}{b}+\dfrac{c}{b}=\dfrac{a+c}{b},\quad b\neq 0$          |
-| 11    | Fracciones — distinto denominador | $\dfrac{a}{b}+\dfrac{c}{d}=\dfrac{ad+cb}{bd},\quad b,d\neq 0$     |
-| 12    | Producto de fracciones            | $\dfrac{a}{b}\cdot\dfrac{c}{d}=\dfrac{ac}{bd},\quad b,d\neq 0$    |
+| **#** | **Nombre**                        | **Notación**                                                   |
+| :---: | --------------------------------- | -------------------------------------------------------------- |
+|   1   | Cancelación aditiva               | $a+c=b+c \Rightarrow a=b$                                      |
+|   2   | Cancelación multiplicativa        | $ac=bc\ \wedge\ c\neq 0 \Rightarrow a=b$                       |
+|   3   | Solución única aditiva            | $a+x=b \Rightarrow x=b-a$                                      |
+|   4   | Solución única multiplicativa     | $ax=b\ \wedge\ a\neq 0 \Rightarrow x=\dfrac{b}{a}$             |
+|   5   | Producto por cero                 | $a\cdot 0=0$                                                   |
+|   6   | Regla del producto nulo           | $ab=0 \Rightarrow (a=0\ \vee\ b=0)$                            |
+|   7   | Igualdad de opuestos              | $a=b \Rightarrow -a=-b$                                        |
+|   8   | Signo en el producto              | $a(-b)=-(ab)$                                                  |
+|   9   | Doble negativo                    | $(-a)(-b)=ab$                                                  |
+|  10   | Fracciones — igual denominador    | $\dfrac{a}{b}+\dfrac{c}{b}=\dfrac{a+c}{b},\quad b\neq 0$       |
+|  11   | Fracciones — distinto denominador | $\dfrac{a}{b}+\dfrac{c}{d}=\dfrac{ad+cb}{bd},\quad b,d\neq 0$  |
+|  12   | Producto de fracciones            | $\dfrac{a}{b}\cdot\dfrac{c}{d}=\dfrac{ac}{bd},\quad b,d\neq 0$ |
 | 13    | División de fracciones            | $\dfrac{a/b}{c/d}=\dfrac{ad}{cb},\quad b,c,d\neq 0$               |
+
+---
+
+── MODO 1 · EXPLICACIÓN DE CONCEPTO ──
+
+Los **axiomas de orden** son las reglas que nos permiten comparar dos números reales y establecer una jerarquía entre ellos. Gracias a estos axiomas, podemos afirmar que los números reales se disponen en una **recta numérica** con una dirección definida.
+
+Formalmente, el sistema de los números reales se basa en la existencia de un subconjunto especial llamado **números positivos** ($\mathbb{R}^+$). A partir de este concepto primitivo, se construyen las relaciones "mayor que" ($>$) y "menor que" ($<$).
+
+### Axiomas de Orden (Definición Formal)
+
+De acuerdo con el desarrollo de **Apostol**, estos axiomas definen el comportamiento del conjunto de los positivos ($\mathbb{R}^+$):
+
+Sean $a, b \in \mathbb{R}$
+
+| N | Axioma | Descripción | Notación | Concepto (Símbolos) | | :-: | :--- | :--- | :--- | :--- | | 1 | **Clausura de la suma** | La suma de dos positivos es positiva. | $a, b \in \mathbb{R}^+ \Rightarrow a+b \in \mathbb{R}^+$ | $\forall a,b \in \mathbb{R}^+ : (a+b) \in \mathbb{R}^+$ | | 2 | **Clausura del producto** | El producto de dos positivos es positivo. | $a, b \in \mathbb{R}^+ \Rightarrow ab \in \mathbb{R}^+$ | $\forall a,b \in \mathbb{R}^+ : (ab) \in \mathbb{R}^+$ | | 3 | **Tricotomía de positivos** | Para cualquier real no nulo, o él es positivo o su opuesto lo es. | $a \neq 0 \Rightarrow a \in \mathbb{R}^+ \underline{\vee} -a \in \mathbb{R}^+$ | $\forall a \in \mathbb{R}, a \neq 0 : a \in \mathbb{R}^+ \oplus -a \in \mathbb{R}^+$ | | 4 | **Exclusión del cero** | El cero no es un número positivo. | $0 \notin \mathbb{R}^+$ | $0 \notin \mathbb{R}^+$ |
+
+### Definición de la relación de orden
+
+Una vez aceptados estos axiomas, definimos formalmente los símbolos de desigualdad:
+
+- **Menor que:** $a < b \iff b - a \in \mathbb{R}^+$
+- **Mayor que:** $a > b \iff a - b \in \mathbb{R}^+$
+
+### Propiedades fundamentales derivadas
+
+De los axiomas anteriores se derivan los teoremas que usamos habitualmente en ingeniería:
+
+1. **Transitividad:** Si $a < b$ y $b < c$, entonces $a < c$.
+2. **Monotonía de la suma:** Si $a < b$, entonces $a + c < b + c$.
+3. **Monotonía del producto:** Si $a < b$ y $c > 0$, entonces $ac < bc$. (Si $c < 0$, la desigualdad se invierte: $ac > bc$).
+
+```desmos-graph
+left=-2; right=8; bottom=-1; top=1;
+width=500; height=100;
+---
+y=0|BLACK
+a=1
+b=4
+c=6
+(a,0)|label:a|BLUE
+(b,0)|label:b|BLUE
+(c,0)|label:c|BLUE
+{a<x<b: 0.1}|BLUE
+{b<x<c: 0.1}|BLUE
+{a<x<c: 0.3}|label:Transitividad a < b y b < c implica a < c|RED
+```
+
+> **Los axiomas de orden convierten a $\mathbb{R}$ en un campo ordenado, permitiendo el uso de desigualdades y la representación en la recta real.**
+
+**Preguntas de comprensión:**
+
+1. ¿Por qué el axioma de tricotomía impide que un número sea positivo y negativo al mismo tiempo?
+2. Si multiplicamos la desigualdad $x < 5$ por $-2$, ¿cuál es el fundamento axiomático para invertir el símbolo?
+3. ¿Cómo usarías la definición formal ($b - a \in \mathbb{R}^+$) para demostrar que si $a < b$, entonces $-b < -a$?
+
+
+
+
 
 %%
 galaxy-links

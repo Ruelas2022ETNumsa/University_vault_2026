@@ -591,6 +591,8 @@ distinguen
 demostrar
 dices
 dc
+disponen
+definimos
 Vault
 Verificar
 Variables
@@ -751,6 +753,7 @@ baax
 bd
 bdad
 bdac
+basa
 scope
 status
 selector
@@ -1255,6 +1258,9 @@ ax
 ad
 acbd
 adcb
+afirmar
+aceptados
+axiom
 related
 recomendados
 ribbon
@@ -1544,6 +1550,7 @@ negaci
 negatividad
 negar
 numeradores
+nos
 created
 commit
 cada
@@ -1919,6 +1926,8 @@ cb
 cbbd
 cbad
 consistente
+construyen
+convierten
 updated
 un
 universo
@@ -1962,6 +1971,7 @@ usuales
 unidades
 ubicada
 unsupported
+usamos
 Galaxy
 Git
 Gr
@@ -1988,6 +1998,7 @@ Granville
 GENERALES
 George
 Gobiernan
+Gracias
 Convenci
 Creaci
 Commander
@@ -2249,6 +2260,8 @@ Funciona
 Fix
 Functions
 Finney
+Formalmente
+Formal
 Estado
 Excalidraw
 EPUBs
@@ -2362,6 +2375,7 @@ Empuja
 Enunciados
 Establecen
 Entre
+Exclusi
 Obsidian
 OmniSearch
 Ocultar
@@ -2711,6 +2725,10 @@ punteada
 primarias
 positivo
 podamos
+positivos
+partir
+primitivo
+positiva
 min
 mica
 movimiento
@@ -2863,6 +2881,7 @@ monoton
 multiplica
 me
 manipular
+multiplicamos
 YAML
 Ya
 You
@@ -3144,6 +3163,7 @@ existan
 explica
 escribo
 evaluar
+ellos
 Motor
 Media
 Mantiene
@@ -3203,6 +3223,8 @@ Mientras
 Monoton
 Multiplicar
 Multiplicaci
+Menor
+Mayor
 Lectura
 LaTeX
 Linter
@@ -3340,6 +3362,7 @@ location
 leyes
 longitud
 logra
+llamado
 incluyendo
 im
 instalar
@@ -3781,6 +3804,7 @@ famoso
 factores
 fundamento
 factorizaci
+formalmente
 haya
 hace
 hacer
@@ -3817,6 +3841,7 @@ hjlkjklkjlkjljklkjlkjlkjlkjljklkjlkjlkjlkjlkjlkjlkjlkjlkjljkl
 hueco
 huecos
 hallar
+habitualmente
 que
 quedan
 queda
@@ -3950,6 +3975,7 @@ ocurrir
 origen
 operativos
 opuestos
+ordenado
 junto
 json
 jer
