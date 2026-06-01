@@ -84,3 +84,15 @@ Sean $a, b, c, x \in \mathbb{R}$
 galaxy-links
 
 %%
+
+
+
+```desmos-graph
+left=-1; right=8; bottom=-1; top=1;
+width=600; height=180;
+---
+y=0|-1<=x<=7|BLACK
+(2,0)|label:a|BLUE
+(3,0)|label:b|GREEN
+(5,0)|label:a+b|RED
+```
