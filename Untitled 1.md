@@ -1,28 +1,4 @@
-
-
----
-
-
-
-=== start-multi-column
-[columnSettings]
-number of columns: 2
-===
-
-**Apuntes / Ideas**
-Tu contenido principal aquí...
-
-=== end-column ===
-
-**Notas / Resumen**
-Tus notas al margen aquí...
-
-=== end-multi-column
-
->ptratrat
-
----
-
+# titluasd
 
 --- start-multi-column: cornell-001
 ```column-settings
