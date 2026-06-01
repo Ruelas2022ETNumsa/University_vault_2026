@@ -162,7 +162,7 @@ f'(x)|BLUE
 
 ## U9. CHEATSHEET RÁPIDO
 
-```text
+```desmos-graph
 left=; right=; bottom=; top=;   ← ventana del plano
 width=; height=;                 ← tamaño en px
 ---
@@ -203,7 +203,7 @@ Instrucciones para que NotebookLM genere bloques Desmos correctos listos para co
 
 ❌ Incorrecto:
 
-```text
+```desmos-graph
 width=500; height=500;
 y=x^2|BLUE
 ```
@@ -227,7 +227,7 @@ y=x^2|BLUE
 
 ## N2. ESTRUCTURA OBLIGATORIA
 
-```text
+```desmos-graph
 [parámetros terminados en ;]
 ---
 [ecuaciones con modificadores]
@@ -265,7 +265,7 @@ Usar `width=500; height=500` para plano cuadrado (probabilidad, geometría).
 
 ## N5. MODIFICADORES Y COLORES
 
-```text
+```desmos-graph
 |#hex                                            → color (SIEMPRE usar hex)
 |SOLID, |DASHED, |DOTTED                         → estilo de línea
 |0<=x<=1                                         → restricción de dominio
@@ -278,7 +278,7 @@ El plugin acepta nombres (`RED`, `BLUE`, etc.) pero producen colores saturados y
 
 ### Paleta para curvas y líneas
 
-```text
+```desmos-graph
 #c74440   → rojo medio      (curva principal / frontera)
 #2d70b3   → azul medio      (curva secundaria)
 #388c46   → verde medio     (curva terciaria)
@@ -289,7 +289,7 @@ El plugin acepta nombres (`RED`, `BLUE`, etc.) pero producen colores saturados y
 
 ### Paleta para rellenos (áreas sombreadas)
 
-```text
+```desmos-graph
 #a5d8ff   → azul claro      (región / soporte principal)
 #b2f2bb   → verde claro     (región secundaria)
 #ffd8a8   → naranja claro   (región de advertencia)
@@ -305,7 +305,7 @@ El plugin acepta nombres (`RED`, `BLUE`, etc.) pero producen colores saturados y
 
 Usar inecuaciones con todas las condiciones en **una sola línea**:
 
-```text
+```desmos-graph
 y<2-x|y>x|x>=0|x<=1|#a5d8ff
 ```
 
@@ -313,7 +313,7 @@ y<2-x|y>x|x>=0|x<=1|#a5d8ff
 
 Para sombrear una región rectangular incluir SIEMPRE las cuatro restricciones en una sola línea:
 
-```text
+```desmos-graph
 x>=0|x<=1|y>=0|y<=1|#a5d8ff
 ```
 
@@ -323,7 +323,7 @@ No usar `y<=1|y>=0` sin las restricciones de x — Desmos extenderá el relleno 
 
 ## N7. PUNTOS
 
-```text
+```desmos-graph
 (1,2)|label:(1,2)|BLACK
 (1,2)|OPEN|label:(1,2)|BLACK
 ```
@@ -384,6 +384,21 @@ y<\sqrt{x}|y>x|0<=x<=1|#b2f2bb
 
 ---
 
+## N9. CHECKLIST ANTES DE RESPONDER
+
+Antes de entregar un bloque Desmos verificar:
+- [ ] ¿Tiene `---`?
+- [ ] ¿Todos los parámetros terminan en `;`?
+- [ ] ¿Sin espacios alrededor de `|`?
+- [ ] ¿Sin llaves `{}` en restricciones?
+- [ ] ¿Sin comentarios `//`?
+- [ ] ¿Rectángulos sombreados con las 4 condiciones `x>=|x<=|y>=|y<=`?
+- [ ] ¿Colores de curvas en hex (`#c74440`, `#2d70b3`, etc.) y NO nombres en mayúsculas?
+- [ ] ¿Rellenos con hex pastel (`#a5d8ff`, `#ff7b7b`, etc.)?
+- [ ] ¿Funciones por tramos usan `y=k \{a<x<b\}` y NO `{a<x<b: k}`?
+
+---
+
 ## N10. FUNCIONES POR TRAMOS Y VALORES EN INTERVALOS
 
 ### ⚠️ Sintaxis web `{intervalo: valor}` NO funciona en el plugin
@@ -392,7 +407,7 @@ Desmos web acepta `{a<x<b: 0.2}` para definir una función que vale 0.2 en ese i
 
 **Sintaxis correcta para el plugin:** usar `y=valor \{condición\}` con las llaves escapadas:
 
-```text
+```desmos-graph
 y=0.10 \{a<x<b\}|#2d70b3
 ```
 
@@ -423,7 +438,7 @@ y=0.35 \{a<x<c\}|#c74440
 
 Este bloque **no renderiza** (sintaxis web):
 
-```text
+```desmos-graph
 left=-2; right=8; bottom=-1; top=1;
 width=500; height=100;
 ---
@@ -441,35 +456,20 @@ c=6
 
 ### Patrón general
 
-| Intención | Sintaxis plugin (✅) | Sintaxis web (❌) |
-|-----------|---------------------|------------------|
-| Valor fijo en intervalo | `y=k \{a<x<b\}\|#hex` | `{a<x<b: k}` |
-| Función en intervalo | `y=f(x) \{a<x<b\}\|#hex` | `{a<x<b: f(x)}` |
-| Variable definida, valor en intervalo | `y=k \{a<x<b\}\|#hex` con `a=1` etc. arriba | igual — no funciona |
+| Intención                              | Sintaxis plugin (✅)                        | Sintaxis web (❌)   |
+| -------------------------------------- | ------------------------------------------ | ------------------ |
+| Valor fijo en intervalo                | `y=k \{a<x<b\}\|#hex`                      | `{a<x<b: k}`       |
+| Función en intervalo                   | `y=f(x) \{a<x<b\}\|#hex`                   | `{a<x<b: f(x)}`    |
+| Variable definida, valor en intervalo  | `y=k \{a<x<b\}\|#hex` con `a=1` etc. arriba | igual — no funciona |
 
 ### Nota sobre etiquetas en funciones por tramos
 
 `label:` **no se puede poner en una línea de función** — solo funciona en puntos. Para etiquetar un tramo, agregar un punto con label en el centro del intervalo:
 
-```text
+```desmos-graph
 y=0.10 \{a<x<b\}|#2d70b3
 (2.5, 0.10)|label:P(A)|#2d70b3
 ```
-
----
-
-## N9. CHECKLIST ANTES DE RESPONDER
-
-Antes de entregar un bloque Desmos verificar:
-- [ ] ¿Tiene `---`?
-- [ ] ¿Todos los parámetros terminan en `;`?
-- [ ] ¿Sin espacios alrededor de `|`?
-- [ ] ¿Sin llaves `{}`en restricciones?
-- [ ] ¿Sin comentarios `//`?
-- [ ] ¿Rectángulos sombreados con las 4 condiciones `x>=|x<=|y>=|y<=`?
-- [ ] ¿Colores de curvas en hex (`#c74440`, `#2d70b3`, etc.) y NO nombres en mayúsculas?
-- [ ] ¿Rellenos con hex pastel (`#a5d8ff`, `#ff7b7b`, etc.)?
-- [ ] ¿Funciones por tramos usan `y=k \{a<x<b\}` y NO `{a<x<b: k}`?
 
 ---
 
@@ -504,19 +504,21 @@ Estas reglas no tienen excepciones. Cualquier bloque que las viole debe corregir
 
 Para sombrear una región rectangular usar las **cuatro condiciones en una sola línea**:
 
-```text
+```desmos-graph
 x>=a|x<=b|y>=c|y<=d|#a5d8ff
 ```
 
 **Ejemplo — soporte cuadrado [0,1]×[0,1]:**
-```text
+
+```desmos-graph
 x>=0|x<=1|y>=0|y<=1|#a5d8ff
 ```
 
 **Nunca** usar solo `y<=1|y>=0|#a5d8ff` — Desmos extiende el relleno fuera del rectángulo porque no conoce los límites en x.
 
 Para agregar los bordes del rectángulo como líneas encima del relleno:
-```text
+
+```desmos-graph
 x>=0|x<=1|y>=0|y<=1|#a5d8ff
 x=1|0<=y<=1|#2d70b3|DASHED
 y=1|0<=x<=1|#2d70b3|DASHED
@@ -553,7 +555,7 @@ Si el archivo tiene todas las gráficas juntas al final:
 
 ---
 
-## C6. FLUJO DE CORRECCIÓN DE UN BLOQUE EXISTENTE
+## C5. FLUJO DE CORRECCIÓN DE UN BLOQUE EXISTENTE
 
 Cuando Claude encuentra un bloque Desmos con errores:
 
@@ -564,9 +566,9 @@ Cuando Claude encuentra un bloque Desmos con errores:
 
 ---
 
-## C7. PLANTILLA BASE PARA REGIONES DE PROBABILIDAD
+## C6. PLANTILLA BASE PARA REGIONES DE PROBABILIDAD
 
-```text
+```desmos-graph
 left=-0.2; right=X; bottom=-0.2; top=Y;
 width=500; height=500;
 ---
@@ -579,7 +581,7 @@ Ajustar `right` y `top` según el tamaño del soporte más un margen de ~20%.
 
 ---
 
-## C8. PALETA DE COLORES RECOMENDADA POR ROL
+## C7. PALETA DE COLORES RECOMENDADA POR ROL
 
 **Regla:** usar siempre hex. Los nombres en mayúsculas (`RED`, `BLUE`…) son saturados — nunca usarlos.
 
