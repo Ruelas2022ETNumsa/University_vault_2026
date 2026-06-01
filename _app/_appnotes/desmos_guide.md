@@ -27,13 +27,11 @@ Referencia rápida para escribir bloques Desmos a mano en Obsidian.
 
 Todo bloque Desmos se escribe así:
 
-````
 ```desmos-graph
 [configuración opcional]
 ---
 [ecuaciones]
 ```
-````
 
 - La sección antes del `---` es **configuración** (límites, tamaño).
 - La sección después del `---` son las **ecuaciones y curvas**.
@@ -78,22 +76,44 @@ Todo bloque Desmos se escribe así:
 
 Agregar `|COLOR` después de la ecuación.
 
-| Nombre | Uso recomendado |
-|--------|-----------------|
-| `RED`, `BLUE`, `GREEN`, `ORANGE`, `PURPLE` | Curvas y líneas |
-| `BLACK` | Bordes, ejes, puntos de referencia |
-| `DASHED`, `DOTTED` | Líneas auxiliares |
-| `#a5d8ff` | Relleno azul claro |
-| `#b2f2bb` | Relleno verde claro |
-| `#ffd8a8` | Relleno naranja claro |
-| `#ff7b7b` | Relleno rojo claro |
-| `#d0bfff` | Relleno morado claro |
+El plugin acepta dos formatos:
+- **Nombres en mayúsculas** (7 colores fijos): `RED` `BLUE` `GREEN` `ORANGE` `PURPLE` `BLACK` `WHITE`
+- **Hex** `#rrggbb`: cualquier color válido — preferido para mejor resultado visual
+
+> 💡 Los nombres en mayúsculas usan los colores saturados por defecto de Desmos. Usar hex da resultados más agradables.
+
+### Paleta recomendada — curvas y líneas
+
+| Hex | Visual | Uso recomendado |
+|-----|--------|-----------------|
+| `#c74440` | Rojo medio | Curva principal / frontera importante |
+| `#2d70b3` | Azul medio | Curva secundaria |
+| `#388c46` | Verde medio | Curva terciaria |
+| `#fa7e19` | Naranja | Curva de destaque |
+| `#6042a6` | Morado | Curva de evento / probabilidad |
+| `#000000` | Negro | Ejes, bordes, líneas auxiliares |
+
+> Estos son los hex exactos que usa Desmos web internamente — reconocibles pero no saturados.
+
+### Paleta recomendada — rellenos (áreas)
+
+| Hex | Visual | Uso recomendado |
+|-----|--------|-----------------|
+| `#a5d8ff` | Azul claro | Soporte / región principal |
+| `#b2f2bb` | Verde claro | Región secundaria |
+| `#ffd8a8` | Naranja claro | Región de advertencia |
+| `#ff7b7b` | Rojo claro | Región de evento / probabilidad |
+| `#d0bfff` | Morado claro | Región auxiliar |
+
+### Estilos de línea
+
+`DASHED` — discontinua | `DOTTED` — punteada | `SOLID` — continua (defecto)
 
 ---
 
 ## U5. RESTRICCIONES DE DOMINIO
 
-```
+```desmos-graph
 y=x^2|0<=x<=3
 y=\sqrt{x}|x>=0
 x=2|0<=y<=5
@@ -105,7 +125,7 @@ x=2|0<=y<=5
 
 Usar inecuaciones. Para intersección de condiciones, todo en **una sola línea** separado por `|`:
 
-```
+```desmos-graph
 y<2-x|y>x|x>=0|x<=1|#a5d8ff
 ```
 
@@ -113,7 +133,7 @@ y<2-x|y>x|x>=0|x<=1|#a5d8ff
 
 Para sombrear un rectángulo **no usar** `y<=cte|y>=cte` solo — hay que incluir también las restricciones en x. Sintaxis correcta:
 
-```
+```desmos-graph
 x>=0|x<=1|y>=0|y<=1|#a5d8ff
 ```
 
@@ -123,7 +143,7 @@ Esto es equivalente a decir: "la región donde x está entre 0 y 1, e y está en
 
 ## U7. PUNTOS Y ETIQUETAS
 
-```
+```desmos-graph
 (1,2)                   → Punto sólido
 (1,2)|OPEN              → Punto hueco
 (1,2)|label:texto|BLACK → Punto con etiqueta
@@ -133,7 +153,7 @@ Esto es equivalente a decir: "la región donde x está entre 0 y 1, e y está en
 
 ## U8. FUNCIONES OCULTAS
 
-```
+```desmos-graph
 f(x)=x^2|hidden
 f'(x)|BLUE
 ```
@@ -142,7 +162,7 @@ f'(x)|BLUE
 
 ## U9. CHEATSHEET RÁPIDO
 
-```
+```desmos-graph
 left=; right=; bottom=; top=;   ← ventana del plano
 width=; height=;                 ← tamaño en px
 ---
@@ -182,40 +202,37 @@ Instrucciones para que NotebookLM genere bloques Desmos correctos listos para co
 **Sin `---` el plugin no renderiza nada.** No importa si hay configuración o no.
 
 ❌ Incorrecto:
-```
+
 ```desmos-graph
 width=500; height=500;
 y=x^2|BLUE
-```
 ```
 
 ✅ Correcto:
-```
+
 ```desmos-graph
 width=500; height=500;
 ---
 y=x^2|BLUE
 ```
-```
+
 
 ✅ Sin configuración, el `---` igual va:
-```
+
 ```desmos-graph
 ---
 y=x^2|BLUE
-```
 ```
 
 ---
 
 ## N2. ESTRUCTURA OBLIGATORIA
 
-```
+
 ```desmos-graph
 [parámetros terminados en ;]
 ---
 [ecuaciones con modificadores]
-```
 ```
 
 ---
@@ -248,23 +265,40 @@ Usar `width=500; height=500` para plano cuadrado (probabilidad, geometría).
 
 ---
 
-## N5. MODIFICADORES
+## N5. MODIFICADORES Y COLORES
 
-```
-|RED, |BLUE, |GREEN, |ORANGE, |PURPLE, |BLACK   → color de curva
+|#hex                                            → color (SIEMPRE usar hex)
 |SOLID, |DASHED, |DOTTED                         → estilo de línea
 |0<=x<=1                                         → restricción de dominio
 |hidden                                          → ocultar curva
 ```
 
-Colores para rellenos (usar hexadecimal, no nombre):
+### ⚠️ Regla de color: SIEMPRE hex, NUNCA nombres en mayúsculas
+
+El plugin acepta nombres (`RED`, `BLUE`, etc.) pero producen colores saturados y duros. Usar siempre hex.
+
+### Paleta para curvas y líneas
+
 ```
-#a5d8ff → azul claro
-#b2f2bb → verde claro
-#ffd8a8 → naranja claro
-#ff7b7b → rojo claro
-#d0bfff → morado claro
+#c74440   → rojo medio      (curva principal / frontera)
+#2d70b3   → azul medio      (curva secundaria)
+#388c46   → verde medio     (curva terciaria)
+#fa7e19   → naranja         (destaque)
+#6042a6   → morado          (evento / probabilidad)
+#000000   → negro           (ejes, bordes, auxiliares)
 ```
+
+### Paleta para rellenos (áreas sombreadas)
+
+```
+#a5d8ff   → azul claro      (región / soporte principal)
+#b2f2bb   → verde claro     (región secundaria)
+#ffd8a8   → naranja claro   (región de advertencia)
+#ff7b7b   → rojo claro      (región de evento)
+#d0bfff   → morado claro    (región auxiliar)
+```
+
+> Los hex de curvas son los colores internos de Desmos web. Los de rellenos son sus versiones pastel.
 
 ---
 
@@ -442,7 +476,8 @@ Antes de entregar un bloque Desmos verificar:
 - [ ] ¿Sin llaves `{}`en restricciones?
 - [ ] ¿Sin comentarios `//`?
 - [ ] ¿Rectángulos sombreados con las 4 condiciones `x>=|x<=|y>=|y<=`?
-- [ ] ¿Rellenos con color hexadecimal, no con nombre?
+- [ ] ¿Colores de curvas en hex (`#c74440`, `#2d70b3`, etc.) y NO nombres en mayúsculas?
+- [ ] ¿Rellenos con hex pastel (`#a5d8ff`, `#ff7b7b`, etc.)?
 - [ ] ¿Funciones por tramos usan `y=k \{a<x<b\}` y NO `{a<x<b: k}`?
 
 ---
@@ -563,16 +598,18 @@ Ajustar `right` y `top` según el tamaño del soporte más un margen de ~20%.
 
 ## C8. PALETA DE COLORES RECOMENDADA POR ROL
 
-| Rol visual | Color |
-|------------|-------|
-| Soporte / región principal | `#a5d8ff` (azul claro) |
-| Región de evento / probabilidad | `#ff7b7b` (rojo claro) |
-| Región secundaria | `#b2f2bb` (verde claro) |
-| Frontera superior del dominio | `BLUE` |
-| Frontera inferior / diagonal | `RED` |
-| Curva de evento | `PURPLE` |
-| Líneas auxiliares | `BLACK|DASHED` |
-| Puntos clave | `BLACK` o el color de la curva asociada |
+**Regla:** usar siempre hex. Los nombres en mayúsculas (`RED`, `BLUE`…) son saturados — evitarlos salvo en borradores rápidos.
+
+| Rol visual | Hex | Visual |
+|------------|-----|--------|
+| Soporte / región principal | `#a5d8ff` | azul claro |
+| Región de evento / probabilidad | `#ff7b7b` | rojo claro |
+| Región secundaria | `#b2f2bb` | verde claro |
+| Frontera superior del dominio | `#2d70b3` | azul medio |
+| Frontera inferior / diagonal | `#c74440` | rojo medio |
+| Curva de evento | `#6042a6` | morado |
+| Líneas auxiliares | `#000000\|DASHED` | negro discontinuo |
+| Puntos clave | `#000000` o el hex de la curva asociada | |
 
 %%
 galaxy-links
