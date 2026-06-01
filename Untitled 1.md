@@ -19,41 +19,15 @@ status: activo
 Los axiomas de cuerpo son el conjunto de reglas fundamentales que definen cómo operan la adición y la multiplicación en el sistema de los números reales.
 Sean $a, b, c \in \mathbb{R}$
 
-
----
-
-
-|  N  | Axioma                     | Notación                                                    | Descripción                                                |
-| :-: | -------------------------- | ----------------------------------------------------------- | ---------------------------------------------------------- |
-|  1  | **Clausura**               | $a+b \in \mathbb{R}$<br>$a \cdot b \in \mathbb{R}$          | Operar dos reales siempre produce un real                  |
-|  2  | **Conmutatividad**         | $a+b=b+a$<br>$a \cdot b=b \cdot a$                          | El orden de los operandos no altera el resultado           |
-|  3  | **Asociatividad**          | $(a+b)+c=a+(b+c)$<br>$(a \cdot b)\cdot c=a\cdot(b \cdot c)$ | El agrupamiento de los términos no altera el resultado     |
-|  4  | **Distributividad**        | $a(b+c)=ab+ac$                                              | La multiplicación se distribuye sobre la suma              |
-|  5  | **Elemento neutro**        | $a+0=a$<br>$a \cdot 1=a$                                    | El 0 es neutro aditivo; el 1 es neutro multiplicativo      |
-|  6  | **Inverso aditivo**        | $a+(-a)=0$                                                  | Todo real tiene un opuesto que anula la suma               |
-|  7  | **Inverso multiplicativo** | $a \cdot a^{-1}=1,\quad a \neq 0$<br>$a^{-1}=\dfrac{1}{a}$  | Todo real no nulo tiene un recíproco que anula el producto |
-
-
-|  N  | Axioma                     | Notación                                                    | Concepto                                                                                                |
-| :-: | -------------------------- | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-|  1  | **Clausura**               | $a+b \in \mathbb{R}$<br>$a \cdot b \in \mathbb{R}$          | $\forall\, a,b \in \mathbb{R} \Rightarrow a+b \in \mathbb{R}\ \wedge\ a \cdot b \in \mathbb{R}$         |
-|  2  | **Conmutatividad**         | $a+b=b+a$<br>$a \cdot b=b \cdot a$                          | $\forall\, a,b \in \mathbb{R}: a+b=b+a\ \wedge\ a \cdot b=b \cdot a$                                    |
-|  3  | **Asociatividad**          | $(a+b)+c=a+(b+c)$<br>$(a \cdot b)\cdot c=a\cdot(b \cdot c)$ | $\forall\, a,b,c \in \mathbb{R}: (a+b)+c=a+(b+c)\ \wedge\ (a \cdot b)\cdot c=a\cdot(b \cdot c)$         |
-|  4  | **Distributividad**        | $a(b+c)=ab+ac$                                              | $\forall\, a,b,c \in \mathbb{R}: a(b+c)=ab+ac$                                                          |
-|  5  | **Elemento neutro**        | $a+0=a$<br>$a \cdot 1=a$                                    | $\exists\, 0 \in \mathbb{R}: a+0=a\ \wedge\ \exists\, 1 \in \mathbb{R}: a \cdot 1=a$                    |
-|  6  | **Inverso aditivo**        | $a+(-a)=0$                                                  | $\forall\, a \in \mathbb{R},\ \exists\, {-a} \in \mathbb{R}$ tal que $a+(-a)=0$                         |
-|  7  | **Inverso multiplicativo** | $a \cdot a^{-1}=1$<br>$a^{-1}=\dfrac{1}{a}$                 | $\forall\, a \in \mathbb{R}\setminus\{0\},\ \exists\, a^{-1} \in \mathbb{R}$ tal que $a \cdot a^{-1}=1$ |
-
-
-| Axioma                     | Descripción                                                | Notación                                           | Concepto                                                                                           |
-| -------------------------- | ---------------------------------------------------------- | -------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| **Clausura**               | Operar dos reales siempre produce un real                  | $a+b \in \mathbb{R}$<br>$a \cdot b \in \mathbb{R}$ | $\forall\, a,b \in \mathbb{R}:$<br>$a+b \in \mathbb{R}\ \wedge\ a \cdot b \in \mathbb{R}$          |
-| **Conmutatividad**         | El orden de los operandos no altera el resultado           | $a+b=b+a$<br>$a \cdot b=b \cdot a$                 | $\forall\, a,b \in \mathbb{R}:$<br>$a+b=b+a\ \wedge\ a \cdot b=b \cdot a$                          |
-| **Asociatividad**          | El agrupamiento no altera el resultado                     | $(a+b)+c=a+(b+c)$<br>$(ab)\,c=a\,(bc)$             | $\forall\, a,b,c \in \mathbb{R}:$<br>$(a+b)+c=a+(b+c)$<br>$\wedge\ (ab)c=a(bc)$                    |
-| **Distributividad**        | La multiplicación se distribuye sobre la suma              | $a(b+c)=ab+ac$                                     | $\forall\, a,b,c \in \mathbb{R}:$<br>$a(b+c)=ab+ac$                                                |
-| **Elemento neutro**        | El 0 es neutro aditivo;<br>el 1 es neutro multiplicativo   | $a+0=a$<br>$a\cdot 1=a$                            | $\exists!\, 0 \in \mathbb{R}: a+0=a$<br>$\wedge\ \exists!\, 1 \in \mathbb{R}: a\cdot 1=a$          |
-| **Inverso aditivo**        | Todo real tiene un opuesto que anula la suma               | $a+(-a)=0$                                         | $\forall\, a \in \mathbb{R},\ \exists\,{-a} \in \mathbb{R}:$<br>$a+(-a)=0$                         |
-| **Inverso multiplicativo** | Todo real no nulo tiene un recíproco que anula el producto | $a\cdot a^{-1}=1$<br>$a^{-1}=\dfrac{1}{a}$         | $\forall\, a \in \mathbb{R}\setminus\{0\},\ \exists\, a^{-1} \in \mathbb{R}:$<br>$a\cdot a^{-1}=1$ |
+|  N  | Axioma                     | Descripción                                                   | Notación                                                   | Concepto                                                                                           |
+| :-: | -------------------------- | ------------------------------------------------------------- | ---------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+|  1  | **Clausura**               | Operar dos reales siempre<br>produce un real                  | $a+b \in \mathbb{R}$<br>$a \cdot b \in \mathbb{R}$         | $\forall\, a,b \in \mathbb{R}:$<br>$a+b \in \mathbb{R}\ \wedge\ a \cdot b \in \mathbb{R}$          |
+|  2  | **Conmutatividad**         | El orden de los operandos<br>no altera el resultado           | $a+b=b+a$<br>$a \cdot b=b \cdot a$                         | $\forall\, a,b \in \mathbb{R}:$<br>$a+b=b+a\ \wedge\ a \cdot b=b \cdot a$                          |
+|  3  | **Asociatividad**          | El agrupamiento no altera<br>el resultado                     | $(a+b)+c=a+(b+c)$<br>$(ab)\,c=a\,(bc)$                     | $\forall\, a,b,c \in \mathbb{R}:$<br>$(a+b)+c=a+(b+c)$<br>$\wedge\ (ab)c=a(bc)$                    |
+|  4  | **Distributividad**        | La multiplicación se <br>distribuye sobre la suma             | $a(b+c)=ab+ac$                                             | $\forall\, a,b,c \in \mathbb{R}:$<br>$a(b+c)=ab+ac$                                                |
+|  5  | **Elemento neutro**        | El 0 es neutro aditivo;<br>el 1 es neutro multiplicativo      | $a+0=a$<br>$a\cdot 1=a$                                    | $\exists!\, 0 \in \mathbb{R}: a+0=a$<br>$\wedge\ \exists!\, 1 \in \mathbb{R}: a\cdot 1=a$          |
+|  6  | **Inverso aditivo**        | Todo real tiene un opuesto<br>que anula la suma               | $a+(-a)=0$                                                 | $\forall\, a \in \mathbb{R},\ \exists\,{-a} \in \mathbb{R}:$<br>$a+(-a)=0$                         |
+|  7  | **Inverso multiplicativo** | Todo real no nulo tiene un<br>recíproco que anula el producto | $a \cdot a^{-1}=1,\quad a \neq 0$<br>$a^{-1}=\dfrac{1}{a}$ | $\forall\, a \in \mathbb{R}\setminus\{0\},\ \exists\, a^{-1} \in \mathbb{R}:$<br>$a\cdot a^{-1}=1$ |
 
 
 
