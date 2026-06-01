@@ -21,20 +21,46 @@ Los axiomas de cuerpo son el conjunto de reglas fundamentales que definen cómo 
 --- start-multi-column: cornell-001
 ```column-settings
 number of columns: 2
-column size: [50%, 45%]
+column size: [30%, 30%]
 border: off
 ```
 
 ## 📝 Apuntes
-
-
+Sean $a, b, c \in \mathbb{R}$
+1. **Clausura**
+	- $a+b \in \mathbb{R}$
+	- $a \cdot b \in \mathbb{R}$
+2. **Conmutatividad**
+	- $a+b=b+a$
+	- $a \cdot b=b \cdot a$
+3. **Asociatividad**
+	- $(a+b)+c=a+(b+c)$
+	- $(a \cdot b) \cdot c=a \cdot(b \cdot c)$
+4. **Existencia de neutros**
+	- $\exists\, 0 \in \mathbb{R}$ tal que $a+0=a$ — neutro para $+$
+	- $\exists\, 1 \in \mathbb{R}$ tal que $a \cdot 1=a$ — neutro para $\times$
+5. **Existencia de inversos aditivos**
+	- $\forall a \in \mathbb{R},\ \exists\, {-a} \in \mathbb{R}$ tal que $a+(-a)=0$
+	- $-a$ se denomina inverso aditivo de $a$
+6. **Existencia de inversos multiplicativos**
+	- $\forall a \in \mathbb{R}\setminus\{0\}$, $\exists\, a^{-1} \in \mathbb{R}$ tal que $a \cdot a^{-1}=1$
+	- $a^{-1}=\dfrac{1}{a}$ es el inverso multiplicativo de $a$
+7. **Distributividad**
+	- $a(b+c)=ab+ac$
 
 --- end-column ---
 
 ## ❓ Preguntas
-
-
-
+sadsadasdadasdas
+asdsad
+asdasd
+sadsadsa
+dsa
+d
+asd
+asd
+asd
+a
 --- end-multi-column
 
 > **Resumen:**

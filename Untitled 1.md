@@ -9,14 +9,18 @@ border: off
 
 ## 📝 Apuntes
 
-
-
+asdasdasd
+asdasdsadsadsadsadsaddadsadsadsadsadsdsadsad
+- asd
+- asd
 --- end-column ---
 
 ## ❓ Preguntas
-
-
-
+asdasdsa
+hjlkjklkjlkjljklkjlkjlkjlkjljklkjlkjlkjlkjlkjlkjlkjlkjlkjljkl
+- asd
+- asd
+- 
 --- end-multi-column
 
 > **Resumen:**
