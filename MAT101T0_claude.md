@@ -48,7 +48,13 @@ Sean $a, b, c \in \mathbb{R}$
 
 ### Principio de Sustitución
 
-Si $a = b$, entonces $a$ puede ser reemplazado por $b$ en cualquier expresión o proposición matemática sin alterar su valor de verdad. Este principio es la base de la resolución de sistemas de ecuaciones y de la simplificación de expresiones según el texto de **Thomas**.
+Si $a = b$, entonces $a$ puede ser reemplazado por $b$ en cualquier expresión o proposición matemática sin alterar su valor de verdad. 
+**Ejemplos**
+
+Si $a=3$, entonces $2a+5=2(3)+5=11$.
+Si $x+y=10$ , entonces $(x+y)^2=10^2=100$.
+
+Esta propiedad permite manipular ecuaciones, simplificar expresiones y evaluar funciones de forma consistente.
 
 ```desmos-graph
 left=-5; right=5; bottom=-5; top=5;
@@ -106,13 +112,12 @@ Sean $a, b, c \in \mathbb{R}$
 
 Estos aseguran la consistencia de las operaciones básicas:
 
-| **Teorema**                 | **Enunciado**                                                                                                              | **Notación**                                                                                                                        |
-| --------------------------- | -------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| **Leyes de simplificación** | Si a dos igualdades se les suma o multiplica el mismo valor, los términos restantes son iguales.                           | $a+c=b+c \Rightarrow a=b$<br>$ac=bc\ \wedge\ c\neq 0 \Rightarrow a=b$                                                              |
-| **Unicidad de elementos**   | El neutro $0$, el neutro $1$, el opuesto $-a$ y el recíproco $a^{-1}$ son únicos para cada número.                        | $\exists!\,0: a+0=a$<br>$\exists!\,1: a\cdot 1=a$<br>$\exists!\,{-a}: a+(-a)=0$<br>$\exists!\,a^{-1}: a\cdot a^{-1}=1$             |
-| **Regla del producto nulo** | El producto de cualquier número por cero es cero. Si un producto es cero, al menos uno de los factores debe serlo.        | $a\cdot 0=0$<br>$ab=0 \Rightarrow (a=0\ \vee\ b=0)$                                                                                |
-| **Leyes de los signos**     | El producto de dos negativos es positivo. Negar una diferencia invierte el orden de los términos.                          | $(-a)(-b)=ab$<br>$a(-b)=-(ab)$<br>$-(-a)=a$<br>$-(a-b)=b-a$                                                                       |
-
+| **Teorema**                 | **Enunciado**                                                                                                      | **Notación**                                                                                                           |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
+| **Leyes de simplificación** | Si a dos igualdades se les suma o multiplica el mismo valor, los términos restantes son iguales.                   | $a+c=b+c \Rightarrow a=b$<br>$ac=bc\ \wedge\ c\neq 0 \Rightarrow a=b$                                                  |
+| **Unicidad de elementos**   | El neutro $0$, el neutro $1$, el opuesto $-a$ y el recíproco $a^{-1}$ son únicos para cada número.                 | $\exists!\,0: a+0=a$<br>$\exists!\,1: a\cdot 1=a$<br>$\exists!\,{-a}: a+(-a)=0$<br>$\exists!\,a^{-1}: a\cdot a^{-1}=1$ |
+| **Regla del producto nulo** | El producto de cualquier número por cero es cero. Si un producto es cero, al menos uno de los factores debe serlo. | $a\cdot 0=0$<br>$ab=0 \Rightarrow (a=0\ \vee\ b=0)$                                                                    |
+| **Leyes de los signos**     | El producto de dos negativos es positivo. Negar una diferencia invierte el orden de los términos.                  | $(-a)(-b)=ab$<br>$a(-b)=-(ab)$<br>$-(-a)=a$<br>$-(a-b)=b-a$                                                            |
 La **regla del producto nulo** es el fundamento de resolver ecuaciones por factorización: si se logra escribir una expresión como un producto igual a cero, cada factor puede igualarse a cero por separado.
 
 ---
@@ -121,13 +126,12 @@ La **regla del producto nulo** es el fundamento de resolver ecuaciones por facto
 
 Establecen cómo se comporta el orden en la recta numérica:
 
-| **Teorema**                | **Enunciado**                                                                                                                      | **Notación**                                                                                               |
-| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| **Transitividad**          | Si $a<b$ y $b<c$, entonces $a<c$.                                                                                                  | $a<b\ \wedge\ b<c \Rightarrow a<c$                                                                         |
-| **Tricotomía**             | Entre dos reales, exactamente una de tres relaciones es verdadera: menor, mayor o igual.                                           | $a<b\ \vee\ a=b\ \vee\ a>b$                                                                                |
-| **Monotonía**              | Sumar el mismo número a ambos lados conserva la desigualdad. Multiplicar por un positivo la conserva; por un negativo, la invierte. | $a<b \Rightarrow a+c<b+c$<br>$a<b\ \wedge\ c>0 \Rightarrow ac<bc$<br>$a<b \Rightarrow {-a}>-b$            |
-| **Cuadrados no negativos** | Para todo real no nulo, su cuadrado es estrictamente positivo.                                                                     | $a\neq 0 \Rightarrow a^2>0$                                                                                |
-
+| **Teorema**                | **Enunciado**                                                                                                                       | **Notación**                                                                                   |
+| -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| **Transitividad**          | Si $a<b$ y $b<c$, entonces $a<c$.                                                                                                   | $a<b\ \wedge\ b<c \Rightarrow a<c$                                                             |
+| **Tricotomía**             | Entre dos reales, exactamente una de tres relaciones es verdadera: menor, mayor o igual.                                            | $a<b\ \vee\ a=b\ \vee\ a>b$                                                                    |
+| **Monotonía**              | Sumar el mismo número a ambos lados conserva la desigualdad. Multiplicar por un positivo la conserva; por un negativo, la invierte. | $a<b \Rightarrow a+c<b+c$<br>$a<b\ \wedge\ c>0 \Rightarrow ac<bc$<br>$a<b \Rightarrow {-a}>-b$ |
+| **Cuadrados no negativos** | Para todo real no nulo, su cuadrado es estrictamente positivo.                                                                      | $a\neq 0 \Rightarrow a^2>0$                                                                    |
 La **monotonía con negativos** explica por qué al multiplicar o dividir ambos lados de una desigualdad por un número negativo se debe invertir el signo.
 
 ---
@@ -136,10 +140,9 @@ La **monotonía con negativos** explica por qué al multiplicar o dividir ambos 
 
 El valor absoluto $|x|$ mide la distancia del número $x$ al origen en la recta real:
 
-| **Teorema**                | **Enunciado**                                                                           | **Notación**          |
-| -------------------------- | --------------------------------------------------------------------------------------- | --------------------- |
-| **Desigualdad triangular** | La distancia de una suma no puede ser mayor que la suma de las distancias individuales. | $|x+y| \leq |x|+|y|$ |
-
+| **Teorema**                | **Enunciado**                                                                           | **Notación**                 |
+| -------------------------- | --------------------------------------------------------------------------------------- | ---------------------------- |
+| **Desigualdad triangular** | La distancia de una suma no puede ser mayor que la suma de las distancias individuales. | $\|x+y\| \leq \|x\| + \|y\|$ |
 Su nombre viene de la geometría: en un triángulo, la longitud de un lado nunca supera la suma de los otros dos. Es el resultado más importante de esta sección y reaparece constantemente en cálculo y análisis.
 
 ---
@@ -182,3 +185,5 @@ Tabla de referencia rápida con los teoremas más operativos: los que aparecen a
 galaxy-links
 
 %%
+
+

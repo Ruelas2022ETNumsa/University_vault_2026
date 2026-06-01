@@ -1918,6 +1918,7 @@ constantemente
 cb
 cbbd
 cbad
+consistente
 updated
 un
 universo
@@ -2861,6 +2862,7 @@ multiplicativa
 monoton
 multiplica
 me
+manipular
 YAML
 Ya
 You
@@ -3141,6 +3143,7 @@ extremo
 existan
 explica
 escribo
+evaluar
 Motor
 Media
 Mantiene
