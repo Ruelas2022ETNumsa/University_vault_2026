@@ -1,0 +1,133 @@
+---
+title: "MAT101-Números-reales-y-desigualdades"
+galaxy_body: planet
+subject: MAT-101
+semester: 1
+partial: 1
+topic: T01_numeros-reales
+star: ""
+moons: []
+comets: []
+tags: [MAT-101, galaxy-planet, P1]
+date_created: 2026-05-30
+status: activo
+---
+
+# Números reales y desigualdades
+---
+## Axiomas de cuerpo de los números reales
+Los axiomas de cuerpo son el conjunto de reglas fundamentales que definen cómo operan la adición y la multiplicación en el sistema de los números reales.
+
+Sean $a, b, c \in \mathbb{R}$
+
+|  N  | **Axioma**                 | **Descripción**                                              | **Notación**                                               | **Concepto**                                                                                       |
+| :-: | -------------------------- | ------------------------------------------------------------ | ---------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+|  1  | **Clausura**               | Operar dos reales siempre<br>produce un real                 | $a+b \in \mathbb{R}$<br>$a \cdot b \in \mathbb{R}$         | $\forall\, a,b \in \mathbb{R}:$<br>$a+b \in \mathbb{R}\ \wedge\ a \cdot b \in \mathbb{R}$          |
+|  2  | **Conmutatividad**         | El orden de los operandos<br>no altera el resultado          | $a+b=b+a$<br>$a \cdot b=b \cdot a$                         | $\forall\, a,b \in \mathbb{R}:$<br>$a+b=b+a\ \wedge\ a \cdot b=b \cdot a$                          |
+|  3  | **Asociatividad**          | El agrupamiento no altera<br>el resultado                    | $(a+b)+c=a+(b+c)$<br>$(ab)\,c=a\,(bc)$                     | $\forall\, a,b,c \in \mathbb{R}:$<br>$(a+b)+c=a+(b+c)$<br>$\wedge\ (ab)c=a(bc)$                    |
+|  4  | **Distributividad**        | La multiplicación se <br>distribuye sobre la suma            | $a(b+c)=ab+ac$                                             | $\forall\, a,b,c \in \mathbb{R}:$<br>$a(b+c)=ab+ac$                                                |
+|  5  | **Elemento neutro**        | El 0 es neutro aditivo;<br>el 1 es neutro multiplicativo     | $a+0=a$<br>$a\cdot 1=a$                                    | $\exists!\, 0 \in \mathbb{R}: a+0=a$<br>$\wedge\ \exists!\, 1 \in \mathbb{R}: a\cdot 1=a$          |
+|  6  | **Inverso aditivo**        | Todo real tiene un opuesto<br>que produce el neutro 0        | $a+(-a)=0$                                                 | $\forall\, a \in \mathbb{R},\ \exists\,{-a} \in \mathbb{R}:$<br>$a+(-a)=0$                         |
+|  7  | **Inverso multiplicativo** | Todo real no nulo tiene un recíproco que produce el neutro 1 | $a \cdot a^{-1}=1,\quad a \neq 0$<br>$a^{-1}=\dfrac{1}{a}$ | $\forall\, a \in \mathbb{R}\setminus\{0\},\ \exists\, a^{-1} \in \mathbb{R}:$<br>$a\cdot a^{-1}=1$ |
+
+**Los axiomas de cuerpo garantizan la consistencia aritmética y permiten la existencia unívoca de las operaciones de sustracción y división en** $\mathbb{R}$.
+
+---
+## Propiedades de igualdad
+La igualdad es una relación fundamental en los números reales y permite establecer cuándo dos expresiones representan el mismo valor. Para operar correctamente con ella, se consideran las siguientes propiedades:
+
+Sean $a, b, c \in \mathbb{R}$
+
+| N   | **Axioma**        | **Descripción**                                                                                             | **Notación**  | **Concepto** |
+| --- | ----------------- | ----------------------------------------------------------------------------------------------------------- | ------------- | ------------ |
+| 1   | **Reflexividad**  | Todo número es igual a sí mismo.                                                                            | $a=a$           | $\forall\,a\in\mathbb{R}:a=a$     |
+| 2   | **Simetría**      | Si un número es igual a otro, el segundo <br>es igual al primero.                                           | $a=b\Rightarrow b=a$       | $a=b\Longleftrightarrow b=a$      |
+| 3   | **Transitividad** | Si un número es igual a un segundo, y <br> este es igual a un tercero, el primero es <br> igual al tercero. | $(a=b\wedge b=c)\Rightarrow a=c$ | $a=b\wedge b=c\Longrightarrow a=c$  |
+
+> **La igualdad es una relación de equivalencia que garantiza la unicidad de los elementos y la consistencia del cálculo en $\mathbb{R}$.**
+
+### Principio de Sustitución
+
+Si $a = b$, entonces $a$ puede ser reemplazado por $b$ en cualquier expresión o proposición matemática sin alterar su valor de verdad. Este principio es la base de la resolución de sistemas de ecuaciones y de la simplificación de expresiones según el texto de **Thomas**.
+
+```desmos-graph
+left=-5; right=5; bottom=-5; top=5;
+width=400; height=200;
+---
+y=x^2-4|BLUE
+y=0|DASHED|BLACK
+(2,0)|label:x=2|BLACK
+(-2,0)|label:x=-2|BLACK
+y=(x-2)(x+2)|RED|DOTTED
+```
+
+_En el gráfico: La curva azul ($x^2-4$) interseca al eje negro en los puntos solución de la **ecuación** ($x=\pm 2$), mientras que la curva roja punteada coincide en cada punto con la azul, ilustrando la **identidad**._
+
+> **La ecuación busca hallar incógnitas; la identidad establece una equivalencia estructural permanente.**
+
+---
+## Definiciones
+La resta y la división no se definen como operaciones primarias o independientes, sino como **operaciones derivadas** de la adición y la multiplicación
+
+| Operación               | Definición formal                                         | Notación              | Concepto                                                             |
+| :---------------------- | :-------------------------------------------------------- | :-------------------- | :------------------------------------------------------------------- |
+| **Resta** (Sustracción) | Es el número único $x$ tal que $a + x = b$.               | $b - a$               | Es la suma de $b$ con el **opuesto** de $a$: $b + (-a)$.             |
+| **División**            | Es el número único $x$ tal que $ax = b$, para $a \neq 0$. | $b/a$ o $\frac{b}{a}$ | Es el producto de $b$ por el **recíproco** de $a$: $b \cdot a^{-1}$. |
+
+### Conexión con los Axiomas
+
+- **La resta** es posible porque el axioma de **existencia de negativos** asegura que para todo real $a$ existe un $-a$ tal que la suma es cero.
+- **La división** es posible porque el axioma de **existencia del recíproco** asegura que para todo real $a \neq 0$ existe un $a^{-1}$ tal que el producto es uno.
+
+Esto implica que "restar" es simplemente una forma abreviada de sumar un negativo, y "dividir" es una forma abreviada de multiplicar por un recíproco.
+
+- **Resta** 
+	$a-b=a+(-b)$
+- **División**
+	$\dfrac{a}{b}=a \cdot \dfrac{1}{b}=a \cdot b^{-1},\quad b \neq 0$
+
+---
+
+## Observaciones sobre tipos de igualdad en los números reales
+
+En el análisis matemático, es crucial distinguir entre una igualdad que simplemente compara valores, una que impone una condición y una que expresa una equivalencia estructural.
+
+Sean $a, b \in \mathbb{R}$ y $P(x), Q(x)$ expresiones algebraicas.
+
+| Tipo                  | Ejemplo                | Descripción                            | Alcance                                       |
+| :-------------------- | :--------------------- | -------------------------------------- | :-------------------------------------------- |
+| **Igualdad numérica** | $2^3 = 8$              | Siempre verdadera                      | Siempre verdadera (o falsa).                  |
+| **Ecuación**          | $x^2 - 4 = 0$          | Verdadera solo para algunos $x$        | Verdadera solo para su **conjunto solución**. |
+| **Identidad**         | $x^2 - 4 = (x-2)(x+2)$ | Verdadera para todo $x \in \mathbb{R}$ | Verdadera para todo $x$ en el dominio.        |
+
+---
+## Teoremas básicos
+Los **teoremas básicos de los números reales** no son reglas arbitrarias, sino consecuencias lógicas que se derivan de los axiomas de cuerpo, orden y completitud; Son "leyes establecidas" que garantizan que el álgebra y el cálculo funcionen siempre igual.
+
+Sean $a, b, c, x \in \mathbb{R}$
+
+### 1. Teoremas Algebraicos (Derivados de los Axiomas de Cuerpo)
+Estos aseguran la consistencia de las operaciones básicas:
+
+| **Teorema**                      | **Adición**                                                                 | **Multiplicación**                                                                    |
+| -------------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| **Ley de simplificación**        | $a+b=a+c \Rightarrow b=c$                                                   | $(a \cdot b=a \cdot c)\ \wedge\ a \neq 0 \Rightarrow b=c$                            |
+| **Unicidad del neutro**          | $\exists!\, 0: a+0=a$                                                       | $\exists!\, 1: a \cdot 1=a$                                                           |
+| **Unicidad del inverso**         | $a+x=0 \Rightarrow x=b-a$                                                   | $(a \cdot x=b)\ \wedge\ a \neq 0 \Rightarrow x=\dfrac{b}{a}$                         |
+| **Producto por cero**            | —                                                                           | $a \cdot 0=0$                                                                         |
+| **Regla del producto nulo**      | —                                                                           | $a \cdot b=0 \Rightarrow (a=0\ \vee\ b=0)$                                           |
+| **Ley de los signos (negación)** | $a=b \Rightarrow -a=-b$                                                     | $a(-b)=-(ab)$                                                                         |
+| **Ley de los signos (doble)**    | $-(-a)=a$                                                                   | $(-a)(-b)=ab$                                                                         |
+| **Ley de signos (diferencia)**   | $-(a-b)=b-a$                                                                | —                                                                                     |
+| **Fracciones (suma)**            | —                                                                           | $\dfrac{a}{b}+\dfrac{c}{b}=\dfrac{a+c}{b},\quad b \neq 0$                            |
+
+- **Ley de simplificación:** Permite "cancelar" el mismo sumando o factor a ambos lados de una igualdad.
+- **Unicidad del neutro e inverso:** El $0$, el $1$, el opuesto $-a$ y el recíproco $a^{-1}$ son únicos para cada número.
+- **Producto por cero:** Cualquier número multiplicado por cero es cero.
+- **Regla del producto nulo:** Si un producto es cero, al menos uno de los factores debe serlo; fundamento de la factorización para resolver ecuaciones.
+- **Leyes de los signos:** Gobiernan cómo se comportan los negativos bajo suma y multiplicación.
+
+%%
+galaxy-links
+
+%%
