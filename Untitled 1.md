@@ -49,11 +49,11 @@ Sean $a, b, c \in \mathbb{R}$
 | -------------------------- | ---------------------------------------------------------- | -------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
 | **Clausura**               | Operar dos reales siempre produce un real                  | $a+b \in \mathbb{R}$<br>$a \cdot b \in \mathbb{R}$ | $\forall\, a,b \in \mathbb{R}:$<br>$a+b \in \mathbb{R}\ \wedge\ a \cdot b \in \mathbb{R}$          |
 | **Conmutatividad**         | El orden de los operandos no altera el resultado           | $a+b=b+a$<br>$a \cdot b=b \cdot a$                 | $\forall\, a,b \in \mathbb{R}:$<br>$a+b=b+a\ \wedge\ a \cdot b=b \cdot a$                          |
-| **Asociatividad**          | El agrupamiento no altera el resultado                     | $(a+b)+c=a+(b+c)$<br>$$(ab)\,c=a\,(bc)$$           | $\forall\, a,b,c \in \mathbb{R}:$<br>$(a+b)+c=a+(b+c)$<br>$\wedge\ (ab)c=a(bc)$                    |
-| **Distributividad**        | La multiplicación se distribuye sobre la suma              | $$a(b+c)=ab+ac$$                                   | $\forall\, a,b,c \in \mathbb{R}:$<br>$a(b+c)=ab+ac$                                                |
-| **Elemento neutro**        | El 0 es neutro aditivo;<br>el 1 es neutro multiplicativo   | $$a+0=a$$<br>$$a\cdot 1=a$$                        | $\exists!\, 0 \in \mathbb{R}: a+0=a$<br>$\wedge\ \exists!\, 1 \in \mathbb{R}: a\cdot 1=a$          |
-| **Inverso aditivo**        | Todo real tiene un opuesto que anula la suma               | $$a+(-a)=0$$                                       | $\forall\, a \in \mathbb{R},\ \exists\,{-a} \in \mathbb{R}:$<br>$a+(-a)=0$                         |
-| **Inverso multiplicativo** | Todo real no nulo tiene un recíproco que anula el producto | $$a\cdot a^{-1}=1$$<br>$$a^{-1}=\dfrac{1}{a}$$     | $\forall\, a \in \mathbb{R}\setminus\{0\},\ \exists\, a^{-1} \in \mathbb{R}:$<br>$a\cdot a^{-1}=1$ |
+| **Asociatividad**          | El agrupamiento no altera el resultado                     | $(a+b)+c=a+(b+c)$<br>$(ab)\,c=a\,(bc)$             | $\forall\, a,b,c \in \mathbb{R}:$<br>$(a+b)+c=a+(b+c)$<br>$\wedge\ (ab)c=a(bc)$                    |
+| **Distributividad**        | La multiplicación se distribuye sobre la suma              | $a(b+c)=ab+ac$                                     | $\forall\, a,b,c \in \mathbb{R}:$<br>$a(b+c)=ab+ac$                                                |
+| **Elemento neutro**        | El 0 es neutro aditivo;<br>el 1 es neutro multiplicativo   | $a+0=a$<br>$a\cdot 1=a$                            | $\exists!\, 0 \in \mathbb{R}: a+0=a$<br>$\wedge\ \exists!\, 1 \in \mathbb{R}: a\cdot 1=a$          |
+| **Inverso aditivo**        | Todo real tiene un opuesto que anula la suma               | $a+(-a)=0$                                         | $\forall\, a \in \mathbb{R},\ \exists\,{-a} \in \mathbb{R}:$<br>$a+(-a)=0$                         |
+| **Inverso multiplicativo** | Todo real no nulo tiene un recíproco que anula el producto | $a\cdot a^{-1}=1$<br>$a^{-1}=\dfrac{1}{a}$         | $\forall\, a \in \mathbb{R}\setminus\{0\},\ \exists\, a^{-1} \in \mathbb{R}:$<br>$a\cdot a^{-1}=1$ |
 
 
 
