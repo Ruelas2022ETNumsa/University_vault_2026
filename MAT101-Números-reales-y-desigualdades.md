@@ -159,15 +159,21 @@ El **Axioma del Supremo** es lo que hace que $\mathbb{R}$ no tenga "huecos". Los
 
 
 
-1. $(a \cdot b=a \cdot c) \wedge a \neq 0 \Rightarrow b=c$
-2. $a+x=b \Rightarrow x=b-a$
-3. $(a \cdot x=b) \wedge a \neq 0 \Rightarrow x=\dfrac{b}{a}$
-4. $a \cdot 0=0$
-5. $a \cdot b=0 \Rightarrow (a=0 \vee b=0)$
-6. $a=b \Rightarrow -a=-b$
-7. $a(-b)=-(ab)$
-8. $(-a)(-b)=ab$
-9. $\dfrac{a}{b}+\dfrac{c}{b}=\dfrac{a+c}{b},\quad b \neq 0$
+Teoremas sobre numeros reales
+1. $a+b=a+c \rightarrow b=c$
+2. $(a \cdot b=a \cdot c) \wedge a \neq 0 \Rightarrow b=c$
+3. $a+x=b \Rightarrow x=b-a$
+4. $(a \cdot x=b) \wedge a \neq 0 \Rightarrow x=\dfrac{b}{a}$
+5. $a \cdot 0=0$
+6. $a \cdot b=0 \Rightarrow (a=0 \vee b=0)$
+7. $a=b \Rightarrow -a=-b$
+8. $a(-b)=-(ab)$
+9. $(-a)(-b)=ab$
+10. $\dfrac{a}{b}+\dfrac{c}{b}=\dfrac{a+c}{b},\quad b \neq 0$
+11. $\dfrac{a}{b}+\dfrac{c}{d}=\dfrac{ad+cb}{bd}$
+12. $\dfrac{a}{b}·\dfrac{c}{d}=\dfrac{ad·cb}{bd}$
+13. $\dfrac{a/b}{c/d}=\dfrac{ad}{cb}$
+
 
 
 
