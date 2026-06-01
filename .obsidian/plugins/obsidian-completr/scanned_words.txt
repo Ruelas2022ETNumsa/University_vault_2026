@@ -109,6 +109,7 @@ teoremas
 tab
 textual
 teorema
+ta
 ToDo
 Templater
 Text
@@ -168,6 +169,8 @@ Teoremas
 TULOS
 TEOREMAS
 TABLAS
+Transcendentals
+Tom
 Sistema
 Sync
 Save
@@ -247,6 +250,11 @@ SEPARADORES
 SECCIONES
 SALIDA
 Salida
+Smith
+Stewart
+Spivak
+Schaum
+Solved
 Plugins
 Pendientes
 Plugin
@@ -324,6 +332,11 @@ PR
 Planta
 PROPIEDADES
 PIE
+Penney
+Protter
+Problems
+Physics
+Piskunov
 del
 date
 de
@@ -488,6 +501,7 @@ divisi
 denomina
 denominador
 debes
+docente
 Vault
 Verificar
 Variables
@@ -514,6 +528,8 @@ Visual
 Versionado
 VOLTAJE
 Verdadera
+Vol
+Vladimir
 galaxy
 gina
 genes
@@ -622,6 +638,7 @@ beacons
 breve
 begin
 battery
+buena
 scope
 status
 selector
@@ -791,6 +808,7 @@ siguidad
 scale
 subsecciones
 suelto
+series
 vault
 vil
 ver
@@ -1199,6 +1217,8 @@ reciba
 reservan
 rrafos
 recibas
+resueltos
+ruso
 notes
 notas
 nuevas
@@ -1670,6 +1690,8 @@ Guardar
 Graph
 GEOM
 Guide
+Geometry
+Granville
 Convenci
 Creaci
 Commander
@@ -1798,6 +1820,11 @@ CABECERA
 ChatGPT
 Colocar
 Convertir
+Calculus
+Cochran
+Collection
+Complemento
+Course
 Instalados
 Instalado
 Instalar
@@ -1889,6 +1916,7 @@ FICAS
 FUENTE
 Fasor
 FORMATO
+Frank
 Estado
 Excalidraw
 EPUBs
@@ -1978,6 +2006,10 @@ Existencia
 Ecuaci
 ESPERADA
 Entrada
+Edwards
+Early
+Elliott
+Equations
 Obsidian
 OmniSearch
 Ocultar
@@ -2013,6 +2045,8 @@ Omitir
 Ocio
 Observaciones
 Opuesto
+Outline
+One
 Auto
 Annotator
 Autocompletado
@@ -2092,6 +2126,10 @@ Associatividad
 Asociatividad
 Apuntes
 AXIOMAS
+Analytic
+Analysis
+Apostol
+Ayres
 push
 pull
 para
@@ -2440,6 +2478,10 @@ Boot
 Beacon
 BLOQUES
 Borrar
+Bibliograf
+Bruce
+Briggs
+Bitsadze
 en
 exacta
 escaneados
@@ -2651,6 +2693,7 @@ evidente
 equaci
 ellas
 explicaci
+ed
 Motor
 Media
 Mantiene
@@ -2696,6 +2739,11 @@ Mezclarlos
 MATEM
 Mo
 MAT
+Morrey
+Mathematical
+Michael
+Mendelson
+Maron
 Lectura
 LaTeX
 Linter
@@ -2731,6 +2779,9 @@ Lenguaje
 LED
 LISTAS
 LINKS
+Longley
+Larson
+Lyle
 links
 las
 listar
@@ -2986,6 +3037,9 @@ Divisi
 Desigualdades
 Distributividad
 Definiciones
+Diferencial
+Demidovich
+Differential
 Remotely
 Raz
 Revisa
@@ -3068,6 +3122,7 @@ Recala
 Reales
 Reflexividad
 RMULAS
+Ron
 Hider
 Hace
 Herramientas
@@ -3257,6 +3312,7 @@ Numeraci
 NICOS
 NPN
 Nodos
+Nikolsky
 originales
 observatory
 oficial
@@ -3310,6 +3366,7 @@ obligatorios
 ocurre
 opamp
 out
+on
 junto
 json
 jer
@@ -3349,12 +3406,15 @@ WebGL
 WebGPU
 Windows
 WebAssembly
+William
 JavaScript
 JSON
 JERARQU
+James
 KB
 Kirchhoff
 Zonas
 Zoom
 Zona
+Zorich
 zona
