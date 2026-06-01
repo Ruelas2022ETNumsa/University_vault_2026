@@ -128,6 +128,9 @@ traduce
 tercero
 techo
 transitividad
+tricotom
+total
+tenga
 ToDo
 Templater
 Text
@@ -934,6 +937,10 @@ superiormente
 supremo
 sumando
 serlo
+sean
+signo
+supera
+subconjunto
 vault
 vil
 ver
@@ -1229,6 +1236,8 @@ aseguran
 acuerdo
 agrupar
 acotado
+aditiva
+absolutos
 related
 recomendados
 ribbon
@@ -1410,6 +1419,9 @@ representan
 resoluci
 roja
 racionales
+reaparece
+ricos
+racional
 notes
 notas
 nuevas
@@ -1510,6 +1522,7 @@ necesariamente
 na
 new
 negaci
+negatividad
 created
 commit
 cada
@@ -1877,6 +1890,8 @@ cancelar
 cuadrados
 cuadradas
 comportan
+comparables
+cumplen
 updated
 un
 universo
@@ -2101,6 +2116,7 @@ Cap
 Consistente
 Cuadrados
 Continuidad
+Completitud
 Instalados
 Instalado
 Instalar
@@ -2814,6 +2830,8 @@ mudo
 mide
 mismos
 multiplicado
+multiplicativa
+monoton
 YAML
 Ya
 You
@@ -3092,6 +3110,7 @@ establecidas
 entero
 extremo
 existan
+explica
 Motor
 Media
 Mantiene
@@ -3286,6 +3305,7 @@ llenar
 llevan
 location
 leyes
+longitud
 incluyendo
 im
 instalar
@@ -3430,6 +3450,9 @@ invierte
 infinitos
 irracionales
 impide
+invertir
+iguales
+irracional
 Dependencia
 Dropbox
 Dataview

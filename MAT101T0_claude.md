@@ -109,23 +109,63 @@ Sean $a, b, c, x \in \mathbb{R}$
 ### 1. Teoremas Algebraicos (Derivados de los Axiomas de Cuerpo)
 Estos aseguran la consistencia de las operaciones básicas:
 
-| **Teorema**                      | **Adición**                                                                 | **Multiplicación**                                                                    |
-| -------------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| **Ley de simplificación**        | $a+b=a+c \Rightarrow b=c$                                                   | $(a \cdot b=a \cdot c)\ \wedge\ a \neq 0 \Rightarrow b=c$                            |
-| **Unicidad del neutro**          | $\exists!\, 0: a+0=a$                                                       | $\exists!\, 1: a \cdot 1=a$                                                           |
-| **Unicidad del inverso**         | $a+x=0 \Rightarrow x=b-a$                                                   | $(a \cdot x=b)\ \wedge\ a \neq 0 \Rightarrow x=\dfrac{b}{a}$                         |
-| **Producto por cero**            | —                                                                           | $a \cdot 0=0$                                                                         |
-| **Regla del producto nulo**      | —                                                                           | $a \cdot b=0 \Rightarrow (a=0\ \vee\ b=0)$                                           |
-| **Ley de los signos (negación)** | $a=b \Rightarrow -a=-b$                                                     | $a(-b)=-(ab)$                                                                         |
-| **Ley de los signos (doble)**    | $-(-a)=a$                                                                   | $(-a)(-b)=ab$                                                                         |
-| **Ley de signos (diferencia)**   | $-(a-b)=b-a$                                                                | —                                                                                     |
-| **Fracciones (suma)**            | —                                                                           | $\dfrac{a}{b}+\dfrac{c}{b}=\dfrac{a+c}{b},\quad b \neq 0$                            |
+| **Teorema**                      | **Adición**                                                        | **Multiplicación**                                                            |
+| -------------------------------- | ------------------------------------------------------------------ | ----------------------------------------------------------------------------- |
+| **Ley de simplificación**        | $a+b=a+c \Rightarrow b=c$                                          | $(a \cdot b=a \cdot c)\ \wedge\ a \neq 0 \Rightarrow b=c$                    |
+| **Unicidad del neutro**          | $\exists!\, 0: a+0=a$                                              | $\exists!\, 1: a \cdot 1=a$                                                   |
+| **Unicidad del inverso**         | $a+x=0 \Rightarrow x=b-a$                                          | $(a \cdot x=b)\ \wedge\ a \neq 0 \Rightarrow x=\dfrac{b}{a}$                 |
+| **Producto por cero**            | —                                                                  | $a \cdot 0=0$                                                                 |
+| **Regla del producto nulo**      | —                                                                  | $a \cdot b=0 \Rightarrow (a=0\ \vee\ b=0)$                                   |
+| **Ley de los signos (negación)** | $a=b \Rightarrow -a=-b$                                            | $a(-b)=-(ab)$                                                                 |
+| **Ley de los signos (doble)**    | $-(-a)=a$                                                          | $(-a)(-b)=ab$                                                                 |
+| **Ley de signos (diferencia)**   | $-(a-b)=b-a$                                                       | —                                                                             |
+| **Fracciones (suma)**            | —                                                                  | $\dfrac{a}{b}+\dfrac{c}{b}=\dfrac{a+c}{b},\quad b \neq 0$                    |
 
-- **Ley de simplificación:** Permite "cancelar" el mismo sumando o factor a ambos lados de una igualdad.
-- **Unicidad del neutro e inverso:** El $0$, el $1$, el opuesto $-a$ y el recíproco $a^{-1}$ son únicos para cada número.
-- **Producto por cero:** Cualquier número multiplicado por cero es cero.
-- **Regla del producto nulo:** Si un producto es cero, al menos uno de los factores debe serlo; fundamento de la factorización para resolver ecuaciones.
-- **Leyes de los signos:** Gobiernan cómo se comportan los negativos bajo suma y multiplicación.
+Las leyes de simplificación permiten cancelar el mismo sumando o factor a ambos lados. La unicidad garantiza que el $0$, el $1$, el opuesto $-a$ y el recíproco $a^{-1}$ son únicos para cada número. La regla del producto nulo es el fundamento de la factorización para resolver ecuaciones: si $ab=0$, necesariamente $a=0$ o $b=0$.
+
+---
+
+### 2. Teoremas de Desigualdad (Derivados de los Axiomas de Orden)
+Establecen cómo se comporta el orden en la recta numérica:
+
+| **Teorema**                  | **Enunciado**                                                                                         | **Notación**                                                         |
+| ---------------------------- | ----------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| **Transitividad**            | Si $a < b$ y $b < c$, entonces $a < c$                                                                | $a<b\ \wedge\ b<c \Rightarrow a<c$                                   |
+| **Tricotomía**               | Entre dos reales, exactamente una de tres es verdadera                                                | $a<b\ \vee\ a=b\ \vee\ a>b$                                          |
+| **Monotonía aditiva**        | Sumar el mismo número a ambos lados conserva la desigualdad                                           | $a<b \Rightarrow a+c < b+c$                                          |
+| **Monotonía multiplicativa** | Multiplicar por un positivo conserva; multiplicar por un negativo invierte                            | $a<b\ \wedge\ c>0 \Rightarrow ac<bc$<br>$a<b\ \wedge\ c<0 \Rightarrow ac>bc$ |
+| **Cuadrados no negativos**   | Para todo real no nulo, su cuadrado es positivo                                                       | $a \neq 0 \Rightarrow a^2>0$                                         |
+
+La tricotomía es lo que hace que la recta real sea un **orden total**: no existen dos reales que no sean comparables. La monotonía multiplicativa con negativos explica por qué al multiplicar o dividir por un número negativo en una desigualdad se debe invertir el signo.
+
+---
+
+### 3. Teoremas de Valor Absoluto
+El valor absoluto $|x|$ mide la distancia del número $x$ al origen en la recta real:
+
+| **Teorema**                    | **Enunciado**                                                                 | **Notación**                                    |
+| ------------------------------ | ----------------------------------------------------------------------------- | ----------------------------------------------- |
+| **No negatividad**             | El valor absoluto nunca es negativo                                           | $|a| \geq 0$                                    |
+| **Definición por casos**       | Es el propio número si es positivo; su opuesto si es negativo                 | $|a|=a$ si $a\geq 0$; $|a|=-a$ si $a<0$         |
+| **Simetría**                   | El valor absoluto de un número y su opuesto son iguales                       | $|-a|=|a|$                                      |
+| **Producto**                   | El valor absoluto de un producto es el producto de los valores absolutos       | $|ab|=|a|\cdot|b|$                              |
+| **Desigualdad triangular**     | La distancia de una suma no supera la suma de las distancias individuales      | $|a+b| \leq |a|+|b|$                            |
+
+La **desigualdad triangular** es el resultado más importante de esta sección y reaparece en cálculo, análisis y geometría. Su nombre viene de que en un triángulo, la longitud de un lado nunca supera la suma de los otros dos.
+
+---
+
+### 4. Teoremas de Estructura y Completitud
+Son los que distinguen a $\mathbb{R}$ de otros sistemas numéricos como $\mathbb{Q}$:
+
+| **Teorema**                   | **Enunciado**                                                                                     | **Notación**                                              |
+| ----------------------------- | ------------------------------------------------------------------------------------------------- | --------------------------------------------------------- |
+| **Propiedad Arquimediana**    | Para cualquier real $x$, existe un entero $n$ mayor que él                                        | $\forall\, x \in \mathbb{R},\ \exists\, n \in \mathbb{Z}: n>x$ |
+| **Densidad de $\mathbb{Q}$**  | Entre dos reales distintos siempre existe un racional                                             | $a<b \Rightarrow \exists\, r \in \mathbb{Q}: a<r<b$        |
+| **Densidad de irracionales**  | Entre dos reales distintos siempre existe un irracional                                           | $a<b \Rightarrow \exists\, x \notin \mathbb{Q}: a<x<b$    |
+| **Axioma del Supremo**        | Todo subconjunto no vacío de $\mathbb{R}$ acotado superiormente tiene supremo en $\mathbb{R}$     | $\exists\, \sup S \in \mathbb{R}$                          |
+
+El **Axioma del Supremo** (o axioma de completitud) es lo que hace que $\mathbb{R}$ no tenga "huecos". Los racionales $\mathbb{Q}$ no lo cumplen: el conjunto $\{x \in \mathbb{Q} : x^2 < 2\}$ no tiene supremo en $\mathbb{Q}$, lo que significa que $\sqrt{2}$ no existe dentro de los racionales.
 
 %%
 galaxy-links
