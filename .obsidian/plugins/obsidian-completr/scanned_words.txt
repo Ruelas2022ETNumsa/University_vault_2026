@@ -117,6 +117,10 @@ titluasd
 tom
 tutor
 tendr
+tables
+transversales
+toolbar
+tabular
 ToDo
 Templater
 Text
@@ -183,6 +187,7 @@ Tus
 Ten
 Termin
 Thomas
+Tables
 Sistema
 Sync
 Save
@@ -267,6 +272,9 @@ Stewart
 Spivak
 Schaum
 Solved
+Sugiere
+Scan
+Syntax
 Plugins
 Pendientes
 Plugin
@@ -352,6 +360,7 @@ Piskunov
 Palabra
 Proposici
 Pens
+Preview
 del
 date
 de
@@ -672,6 +681,7 @@ buena
 break
 br
 bibliograf
+bas
 scope
 status
 selector
@@ -853,6 +863,7 @@ similar
 simples
 significa
 sumar
+sugerir
 vault
 vil
 ver
@@ -1126,6 +1137,9 @@ algebraicas
 aritm
 asegura
 asegurar
+advanced
+archivar
+alinear
 related
 recomendados
 ribbon
@@ -1291,6 +1305,9 @@ regiones
 realiz
 refuerza
 restar
+reescribir
+repetitivos
+reiniciar
 notes
 notas
 nuevas
@@ -1386,6 +1403,7 @@ number
 necesit
 neq
 naturales
+normalmente
 created
 commit
 cada
@@ -1925,6 +1943,10 @@ Conect
 Concepto
 Consult
 Conectando
+Column
+Columnas
+Cornell
+Current
 Instalados
 Instalado
 Instalar
@@ -2019,6 +2041,9 @@ FUENTE
 Fasor
 FORMATO
 Frank
+Facilita
+Funciona
+Fix
 Estado
 Excalidraw
 EPUBs
@@ -2119,6 +2144,8 @@ EJERCICIO
 Enunciado
 Elemento
 Espacios
+Escrib
+Edici
 Obsidian
 OmniSearch
 Ocultar
@@ -2242,6 +2269,9 @@ Apostol
 Ayres
 Ac
 Axioma
+Advanced
+Avanzar
+Alinear
 push
 pull
 para
@@ -2431,6 +2461,9 @@ podr
 permanencia
 primeros
 producir
+palabra
+primeras
+posicionarse
 min
 mica
 movimiento
@@ -2830,6 +2863,8 @@ establece
 estructuras
 escalar
 excepto
+escrib
+escanea
 Motor
 Media
 Mantiene
@@ -2881,6 +2916,7 @@ Michael
 Mendelson
 Maron
 MODO
+Multi
 Lectura
 LaTeX
 Linter
@@ -2920,6 +2956,9 @@ Longley
 Larson
 Lyle
 Lineales
+List
+Live
+Layout
 links
 las
 listar
@@ -2999,6 +3038,8 @@ legend
 lineales
 lkhj
 lados
+lists
+letras
 incluyendo
 im
 instalar
@@ -3124,6 +3165,8 @@ incompleto
 inferilo
 intentamos
 ingeniero
+ignorar
+interfiere
 Dependencia
 Dropbox
 Dataview
@@ -3278,6 +3321,8 @@ Rightarrow
 Respond
 RESUELTO
 Reformul
+Reload
+Retroceder
 Hider
 Hace
 Herramientas
@@ -3383,6 +3428,8 @@ fundamentales
 factor
 forall
 fundamental
+facilita
+formatea
 haya
 hace
 hacer
@@ -3449,6 +3496,7 @@ URL
 UNA
 UN
 USAR
+Usado
 Nombre
 Notas
 No
@@ -3477,6 +3525,7 @@ NPN
 Nodos
 Nikolsky
 NICAMENTE
+Nueva
 originales
 observatory
 oficial
@@ -3579,6 +3628,7 @@ WebGPU
 Windows
 WebAssembly
 William
+Word
 JavaScript
 JSON
 JERARQU
