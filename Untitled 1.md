@@ -1,35 +1,3 @@
---- start-multi-column: cornell-001
-```column-settings
-number of columns: 2
-column size: [50%, 50%]
-border: on
-shadow: on
-```
-
-## 📝 Apuntes
-
-Acá va el contenido principal — definiciones,
-desarrollo del tema, fórmulas, etc.
-dfdsf
-sdf
-dsfds
-fds
-fds
-fdsf
-
---- end-column ---
-
-## ❓ Preguntas / Claves
-
-- ¿Qué implica X?
-- ¿Cómo se relaciona con Y?
-- Palabra clave: **Z**
-
---- end-multi-column
-
-
-
-> **Resumen:** Una o dos oraciones que capturen la idea central de esta sección.
 
 
 ---
@@ -53,3 +21,26 @@ Tus notas al margen aquí...
 
 >ptratrat
 
+---
+
+
+--- start-multi-column: cornell-001
+```column-settings
+number of columns: 2
+column size: [50%, 45%]
+border: off
+```
+
+## 📝 Apuntes
+
+
+
+--- end-column ---
+
+## ❓ Preguntas
+
+
+
+--- end-multi-column
+
+> **Resumen:**
