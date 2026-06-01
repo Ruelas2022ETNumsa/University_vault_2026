@@ -217,7 +217,58 @@ De los axiomas anteriores se derivan los teoremas que usamos habitualmente en in
 
 ---
 
+## Teoremas de desigualdades e inecuaciones
 
+En el sistema de los números reales, las desigualdades no son solo comparaciones, sino que forman una estructura matemática regida por los **axiomas de orden**. A partir de estos axiomas se derivan los teoremas que permiten resolver inecuaciones y realizar estimaciones en cálculo.
+
+Podemos agrupar estos teoremas en tres categorías fundamentales, si $a,b,c,x :
+
+### 1. Teoremas de Orden (Reglas Operativas)
+
+Estas son las leyes que dictan cómo manipular una inecuación sin alterar su validez:
+
+- **Propiedad de Tricotomía:** Para cualquier par de números reales $a$ y $b$, se cumple una y solo una de estas relaciones: $a < b$, $b < a$ o $a = b$.
+- **Transitividad:** Si un número es menor que un segundo, y este es menor que un tercero, el primero es menor que el tercero ($a < b \wedge b < c \implies a < c$).
+- **Monotonía de la Suma:** Si sumamos el mismo número $c$ a ambos lados de una desigualdad, el sentido de la misma se mantiene ($a < b \implies a + c < b + c$).
+- **Monotonía del Producto:**
+    - Si multiplicamos por un **positivo** ($c > 0$), el sentido se mantiene ($ac < bc$).
+    - Si multiplicamos por un **negativo** ($c < 0$), el sentido de la desigualdad **se invierte** ($ac > bc$).
+- **Inversos Multiplicativos:** Si $a$ y $b$ son ambos positivos (o ambos negativos), entonces al tomar recíprocos el orden se invierte: $a < b \implies 1/b < 1/a$.
+
+### 2. Teoremas de Valor Absoluto
+
+El valor absoluto $|x|$ mide la distancia al origen y es vital para definir límites y continuidad.
+
+- **Propiedad Fundamental:** $|x| \leq a$ es equivalente a $-a \leq x \leq a$ (siempre que $a \geq 0$).
+- **Desigualdad Triangular:** El valor absoluto de una suma no supera la suma de los valores absolutos: $$|a + b| \leq |a| + |b|$$
+- **Variante de la Resta:** $|a - b| \geq ||a| - |b||$.
+
+### 3. Desigualdades "Notables"
+
+Utilizadas frecuentemente para demostraciones avanzadas y optimización:
+
+- **Cuadrados No Negativos:** Para cualquier número real $a \neq 0$, se cumple que $a^2 > 0$.
+- **Desigualdad de Bernoulli:** Para $x > -1$ y $n$ entero positivo: $(1+x)^n \geq 1 + nx$.
+- **Desigualdad de Cauchy-Schwarz:** En términos vectoriales, $|A \cdot B| \leq ||A|| , ||B||$.
+- **Medias Aritmética y Geométrica:** La media geométrica de números positivos nunca excede a su media aritmética: $\sqrt{ab} \leq \frac{a+b}{2}$.
+
+```
+left=-2; right=6; bottom=-1; top=4;
+width=500; height=300;
+---
+y=x|#2d70b3
+y=x^2|#c74440
+y=x^2|y<=x|x>=0|x<=1|#b2f2bb
+(1,1)|label:x=1|#000000
+```
+
+_En el gráfico: Se observa que en el intervalo $(0,1)$, la inecuación $x^2 < x$ es verdadera (área verde), pero para $x > 1$ la relación se invierte ($x^2 > x$), ilustrando cómo cambian las desigualdades según el dominio._
+
+**Preguntas de comprensión:**
+
+1. ¿Cuál es el fundamento axiomático que justifica cambiar el sentido de una inecuación al multiplicar por $-1$?.
+2. Según la desigualdad de Bernoulli, si $x=0.1$ y $n=2$, ¿qué relación numérica se establece?.
+3. ¿Por qué la propiedad de transitividad es indispensable para representar los números reales en una recta numérica?.
 
 
 
