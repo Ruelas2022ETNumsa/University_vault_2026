@@ -1308,6 +1308,7 @@ restar
 reescribir
 repetitivos
 reiniciar
+requerir
 notes
 notas
 nuevas
@@ -3323,6 +3324,7 @@ RESUELTO
 Reformul
 Reload
 Retroceder
+Renderizado
 Hider
 Hace
 Herramientas

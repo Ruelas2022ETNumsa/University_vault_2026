@@ -16,7 +16,7 @@ status: activo
 # Plugin Guide — Plugins simples del vault
 
 > Plugins que no requieren archivo propio pero sí documentación de configuración y uso.
-> Para plugins con sistema completo ver: [[desmos_guide]], [[tikzjax_guide]], [[obsidian_guide]], [[_pdf-system]], [[_excalidraw-system]].
+> Para plugins con sistema completo ver: [[desmos_guide]], [[tikzjax_guide]], [[obsidian_guide]], [[_pdf-system]], [[_excalidraw-system]], [[better-export-pdf]].
 
 ---
 
@@ -25,6 +25,8 @@ status: activo
 1. [Completr — Autocompletado de palabras y LaTeX](#1-completr--autocompletado-de-palabras-y-latex)
 2. [Advanced Tables — Edición de tablas](#2-advanced-tables--edición-de-tablas)
 3. [Multi-Column Markdown — Columnas en notas](#3-multi-column-markdown--columnas-en-notas)
+4. [Commander — Botones personalizados en el ribbon](#4-commander--botones-personalizados-en-el-ribbon)
+5. [File Hider — Ocultar archivos del explorador](#5-file-hider--ocultar-archivos-del-explorador)
 
 ---
 
@@ -106,11 +108,11 @@ valor absoluto
 
 ```
 --- start-multi-column: ID-unico
-` ``column-settings
+```column-settings
 number of columns: 2
 column size: [60%, 40%]
 border: off
-` ``
+```
 
 Contenido columna izquierda
 
@@ -127,11 +129,11 @@ Contenido columna derecha
 
 ```
 --- start-multi-column: cornell-001
-` ``column-settings
+```column-settings
 number of columns: 2
 column size: [60%, 40%]
 border: off
-` ``
+```
 
 ## 📝 Desarrollo
 
@@ -155,11 +157,11 @@ definiciones, fórmulas, desarrollo.
 
 ```
 --- start-multi-column: cornell-001
-` ``column-settings
+```column-settings
 number of columns: 2
 column size: [60%, 40%]
 border: off
-` ``
+```
 
 ## 📋 Desarrollo
 
@@ -184,11 +186,58 @@ Paso a paso del ejercicio.
 - En modo edición (Live Preview) las columnas se renderizan correctamente. En modo lectura también.
 - Si el bloque no renderiza: `Ctrl+P` → **"Fix Multi-Column Syntax in Current File"**.
 
+---
+
+## 4. Commander — Botones personalizados en el ribbon
+
+**Propósito:** Agrega comandos de Obsidian como botones en el ribbon (barra lateral izquierda), el menú de archivo, o el menú contextual. Evita abrir el Command Palette para acciones frecuentes.
+
+### Botones configurados en el vault
+
+| Botón | Comando | Uso |
+|-------|---------|-----|
+| Crear nota desde plantilla | `Templater: Create new note from template` | Abre el selector de plantillas galaxy para crear cualquier tipo de nota |
+| Recargar Obsidian | `Reload app without saving` | Fuerza el re-render de bloques TikZJax que no renderizan en el primer arranque |
+
+### Cómo agregar un botón nuevo
+
+1. Settings → Commander → sección **Ribbon**
+2. Clic en **+** → buscar el comando por nombre
+3. Elegir ícono y nombre visible → confirmar
+4. El botón aparece en el ribbon inmediatamente
+
+### Nota sobre "Reload app without saving"
+
+Este botón existe exclusivamente como workaround para el bug de TikZJax: los bloques `tikz` a veces no renderizan al primer arranque del vault. Recargar Obsidian sin guardar fuerza el re-render sin perder cambios no guardados (Obsidian guarda automáticamente). Ver [[tikzjax_guide]] sección U7.
+
+---
+
+## 5. File Hider — Ocultar archivos del explorador
+
+**Propósito:** Oculta archivos y extensiones del explorador de Obsidian sin eliminarlos del disco. Mantiene el explorador limpio mostrando solo archivos relevantes para el trabajo en el vault.
+
+### Archivos ocultos en el vault
+
+| Patrón | Tipo | Razón |
+|--------|------|-------|
+| `*.tmp` | Extensión | Archivos temporales generados por plugins |
+| `*.bat` | Extensión | Scripts de sistema — no son notas del vault |
+| `*.ps1` | Extensión | Scripts PowerShell — no son notas del vault |
+
+### Cómo agregar un patrón
+
+Settings → File Hider → agregar el patrón (nombre exacto, extensión con `*`, o carpeta).
+
+### Bug conocido
+
+File Hider no aplica los patrones de ocultamiento al arrancar Obsidian — los archivos ocultos vuelven a ser visibles hasta que se abre la configuración del plugin y se reinicia la app. No hay workaround conocido por el momento; es un bug del plugin.
+
 %%
 galaxy-links
 [[_galaxy-system]]
 [[obsidian_guide]]
 [[desmos_guide]]
 [[tikzjax_guide]]
+[[better-export-pdf]]
 [[_ToDo-system]]
 %%
