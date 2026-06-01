@@ -27,7 +27,7 @@ Referencia rápida para escribir bloques Desmos a mano en Obsidian.
 
 Todo bloque Desmos se escribe así:
 
-```desmos-graph
+```text
 [configuración opcional]
 ---
 [ecuaciones]
@@ -113,7 +113,7 @@ El plugin acepta dos formatos:
 
 ## U5. RESTRICCIONES DE DOMINIO
 
-```desmos-graph
+```text
 y=x^2|0<=x<=3
 y=\sqrt{x}|x>=0
 x=2|0<=y<=5
@@ -125,7 +125,7 @@ x=2|0<=y<=5
 
 Usar inecuaciones. Para intersección de condiciones, todo en **una sola línea** separado por `|`:
 
-```desmos-graph
+```text
 y<2-x|y>x|x>=0|x<=1|#a5d8ff
 ```
 
@@ -133,7 +133,7 @@ y<2-x|y>x|x>=0|x<=1|#a5d8ff
 
 Para sombrear un rectángulo **no usar** `y<=cte|y>=cte` solo — hay que incluir también las restricciones en x. Sintaxis correcta:
 
-```desmos-graph
+```text
 x>=0|x<=1|y>=0|y<=1|#a5d8ff
 ```
 
@@ -143,7 +143,7 @@ Esto es equivalente a decir: "la región donde x está entre 0 y 1, e y está en
 
 ## U7. PUNTOS Y ETIQUETAS
 
-```desmos-graph
+```text
 (1,2)                   → Punto sólido
 (1,2)|OPEN              → Punto hueco
 (1,2)|label:texto|BLACK → Punto con etiqueta
@@ -153,7 +153,7 @@ Esto es equivalente a decir: "la región donde x está entre 0 y 1, e y está en
 
 ## U8. FUNCIONES OCULTAS
 
-```desmos-graph
+```text
 f(x)=x^2|hidden
 f'(x)|BLUE
 ```
@@ -162,7 +162,7 @@ f'(x)|BLUE
 
 ## U9. CHEATSHEET RÁPIDO
 
-```desmos-graph
+```text
 left=; right=; bottom=; top=;   ← ventana del plano
 width=; height=;                 ← tamaño en px
 ---
@@ -203,7 +203,7 @@ Instrucciones para que NotebookLM genere bloques Desmos correctos listos para co
 
 ❌ Incorrecto:
 
-```desmos-graph
+```text
 width=500; height=500;
 y=x^2|BLUE
 ```
@@ -216,7 +216,6 @@ width=500; height=500;
 y=x^2|BLUE
 ```
 
-
 ✅ Sin configuración, el `---` igual va:
 
 ```desmos-graph
@@ -228,8 +227,7 @@ y=x^2|BLUE
 
 ## N2. ESTRUCTURA OBLIGATORIA
 
-
-```desmos-graph
+```text
 [parámetros terminados en ;]
 ---
 [ecuaciones con modificadores]
@@ -267,8 +265,7 @@ Usar `width=500; height=500` para plano cuadrado (probabilidad, geometría).
 
 ## N5. MODIFICADORES Y COLORES
 
-```desmos-graph
-
+```text
 |#hex                                            → color (SIEMPRE usar hex)
 |SOLID, |DASHED, |DOTTED                         → estilo de línea
 |0<=x<=1                                         → restricción de dominio
@@ -281,7 +278,7 @@ El plugin acepta nombres (`RED`, `BLUE`, etc.) pero producen colores saturados y
 
 ### Paleta para curvas y líneas
 
-```desmos-graph
+```text
 #c74440   → rojo medio      (curva principal / frontera)
 #2d70b3   → azul medio      (curva secundaria)
 #388c46   → verde medio     (curva terciaria)
@@ -292,7 +289,7 @@ El plugin acepta nombres (`RED`, `BLUE`, etc.) pero producen colores saturados y
 
 ### Paleta para rellenos (áreas sombreadas)
 
-```desmos-graph
+```text
 #a5d8ff   → azul claro      (región / soporte principal)
 #b2f2bb   → verde claro     (región secundaria)
 #ffd8a8   → naranja claro   (región de advertencia)
@@ -308,7 +305,7 @@ El plugin acepta nombres (`RED`, `BLUE`, etc.) pero producen colores saturados y
 
 Usar inecuaciones con todas las condiciones en **una sola línea**:
 
-```desmos-graph
+```text
 y<2-x|y>x|x>=0|x<=1|#a5d8ff
 ```
 
@@ -316,7 +313,7 @@ y<2-x|y>x|x>=0|x<=1|#a5d8ff
 
 Para sombrear una región rectangular incluir SIEMPRE las cuatro restricciones en una sola línea:
 
-```desmos-graph
+```text
 x>=0|x<=1|y>=0|y<=1|#a5d8ff
 ```
 
@@ -326,7 +323,7 @@ No usar `y<=1|y>=0` sin las restricciones de x — Desmos extenderá el relleno 
 
 ## N7. PUNTOS
 
-```desmos-graph
+```text
 (1,2)|label:(1,2)|BLACK
 (1,2)|OPEN|label:(1,2)|BLACK
 ```
@@ -341,9 +338,8 @@ No usar `y<=1|y>=0` sin las restricciones de x — Desmos extenderá el relleno 
 left=-4; right=4; bottom=-2; top=6;
 width=500; height=400;
 ---
-y=x^2|BLUE
+y=x^2|#2d70b3
 ```
-
 
 ### Región triangular (probabilidad)
 
@@ -351,15 +347,14 @@ y=x^2|BLUE
 left=-0.2; right=1.5; bottom=-0.2; top=2.5;
 width=500; height=500;
 ---
-y=x|0<=x<=1|RED|SOLID
-y=2-x|0<=x<=1|BLUE|SOLID
-x=0|0<=y<=2|BLACK|DASHED
+y=x|0<=x<=1|#c74440|SOLID
+y=2-x|0<=x<=1|#2d70b3|SOLID
+x=0|0<=y<=2|#000000|DASHED
 y<2-x|y>x|x>=0|x<=1|#a5d8ff
-(0,0)|label:(0,0)|BLACK
-(1,1)|label:(1,1)|RED
-(0,2)|label:(0,2)|BLUE
+(0,0)|label:(0,0)|#000000
+(1,1)|label:(1,1)|#c74440
+(0,2)|label:(0,2)|#2d70b3
 ```
-
 
 ### Rectángulo sombreado (soporte cuadrado)
 
@@ -368,12 +363,11 @@ left=-0.2; right=1.3; bottom=-0.2; top=1.3;
 width=500; height=500;
 ---
 x>=0|x<=1|y>=0|y<=1|#a5d8ff
-x=1|0<=y<=1|BLUE|DASHED
-y=1|0<=x<=1|BLUE|DASHED
-(0,0)|label:(0,0)|BLACK
-(1,1)|label:(1,1)|BLACK
+x=1|0<=y<=1|#2d70b3|DASHED
+y=1|0<=x<=1|#2d70b3|DASHED
+(0,0)|label:(0,0)|#000000
+(1,1)|label:(1,1)|#000000
 ```
-
 
 ### Región entre curva y recta
 
@@ -381,13 +375,12 @@ y=1|0<=x<=1|BLUE|DASHED
 left=-0.1; right=1.3; bottom=-0.1; top=1.3;
 width=500; height=500;
 ---
-y=x|0<=x<=1|RED|SOLID
-y=\sqrt{x}|0<=x<=1|GREEN|SOLID
+y=x|0<=x<=1|#c74440|SOLID
+y=\sqrt{x}|0<=x<=1|#388c46|SOLID
 y<\sqrt{x}|y>x|0<=x<=1|#b2f2bb
-(0,0)|label:(0,0)|BLACK
-(1,1)|label:(1,1)|BLACK
+(0,0)|label:(0,0)|#000000
+(1,1)|label:(1,1)|#000000
 ```
-
 
 ---
 
@@ -399,8 +392,8 @@ Desmos web acepta `{a<x<b: 0.2}` para definir una función que vale 0.2 en ese i
 
 **Sintaxis correcta para el plugin:** usar `y=valor \{condición\}` con las llaves escapadas:
 
-```
-y=0.10 \{a<x<b\}|BLUE
+```text
+y=0.10 \{a<x<b\}|#2d70b3
 ```
 
 Las llaves `\{...\}` actúan como restricción de dominio sobre la línea `y=valor`.
@@ -423,47 +416,44 @@ c=6
 (b,0)|label:b
 (c,0)|label:c
 
-y=0.10 \{a<x<b\}|BLUE
-y=0.20 \{b<x<c\}|BLUE
-y=0.35 \{a<x<c\}|RED
+y=0.10 \{a<x<b\}|#2d70b3
+y=0.20 \{b<x<c\}|#2d70b3
+y=0.35 \{a<x<c\}|#c74440
 ```
-
 
 Este bloque **no renderiza** (sintaxis web):
 
-
-```desmos-graph
+```text
 left=-2; right=8; bottom=-1; top=1;
 width=500; height=100;
 ---
-y=0|BLACK
+y=0|#000000
 a=1
 b=4
 c=6
-(a,0)|label:a|BLUE
-(b,0)|label:b|BLUE
-(c,0)|label:c|BLUE
-{a<x<b: 0.1}|BLUE
-{b<x<c: 0.1}|BLUE
-{a<x<c: 0.3}|label:Transitividad|RED
+(a,0)|label:a|#2d70b3
+(b,0)|label:b|#2d70b3
+(c,0)|label:c|#2d70b3
+{a<x<b: 0.1}|#2d70b3
+{b<x<c: 0.1}|#2d70b3
+{a<x<c: 0.3}|label:Transitividad|#c74440
 ```
-
 
 ### Patrón general
 
 | Intención | Sintaxis plugin (✅) | Sintaxis web (❌) |
 |-----------|---------------------|------------------|
-| Valor fijo en intervalo | `y=k \{a<x<b\}\|COLOR` | `{a<x<b: k}` |
-| Función en intervalo | `y=f(x) \{a<x<b\}\|COLOR` | `{a<x<b: f(x)}` |
-| Variable definida, valor en intervalo | `y=k \{a<x<b\}\|COLOR` con `a=1` etc. arriba | igual — no funciona |
+| Valor fijo en intervalo | `y=k \{a<x<b\}\|#hex` | `{a<x<b: k}` |
+| Función en intervalo | `y=f(x) \{a<x<b\}\|#hex` | `{a<x<b: f(x)}` |
+| Variable definida, valor en intervalo | `y=k \{a<x<b\}\|#hex` con `a=1` etc. arriba | igual — no funciona |
 
 ### Nota sobre etiquetas en funciones por tramos
 
 `label:` **no se puede poner en una línea de función** — solo funciona en puntos. Para etiquetar un tramo, agregar un punto con label en el centro del intervalo:
 
-```
-y=0.10 \{a<x<b\}|BLUE
-(2.5, 0.10)|label:P(A)|BLUE
+```text
+y=0.10 \{a<x<b\}|#2d70b3
+(2.5, 0.10)|label:P(A)|#2d70b3
 ```
 
 ---
@@ -495,18 +485,18 @@ Reglas y patrones que Claude debe aplicar al generar o corregir bloques Desmos e
 
 Estas reglas no tienen excepciones. Cualquier bloque que las viole debe corregirse:
 
-| Regla                                        | Correcto                 | Incorrecto                                                |
-| -------------------------------------------- | ------------------------ | --------------------------------------------------------- |
-| Separador `---` siempre presente             | `width=500;\n---\ny=x`   | `width=500;\ny=x`                                         |
-| Sin espacios alrededor de `\|`               | `y=x\|RED`               | `y = x \| RED`                                            |
-| Sin llaves `{}` en restricciones             | `y=x\|0<=x<=1`           | `y=x\|{0<=x<=1}`                                          |
-| Sin comentarios `//`                         | —                        | `y=x^2 // parábola`                                       |
-| Raíces con `\sqrt{x}`                        | `y=\sqrt{x}`             | `y=sqrt(x)`                                               |
-| Fracciones con `\frac{a}{b}`                 | `y=\frac{3}{8}x`         | `y=(3/8)x`                                                |
-| Pi con `\pi`                                 | `y=\frac{1}{\pi}`        | `y=1/pi`                                                  |
-| Restricciones de líneas con dominio          | `y=x\|0<=x<=2\|BLUE`     | `y=x\|BLUE` (se desborda)                                 |
-| Rellenos con hex, no nombre                  | `\|#a5d8ff`              | `\|BLUE` (saturado)                                       |
-| Funciones por tramos / valores en intervalos | `y=0.10 \{a<x<b\}\|BLUE` | `{a<x<b: 0.10}` (sintaxis web — no funciona en el plugin) |
+| Regla                                        | Correcto                  | Incorrecto                                                |
+| -------------------------------------------- | ------------------------- | --------------------------------------------------------- |
+| Separador `---` siempre presente             | `width=500;\n---\ny=x`    | `width=500;\ny=x`                                         |
+| Sin espacios alrededor de `\|`               | `y=x\|#c74440`            | `y = x \| RED`                                            |
+| Sin llaves `{}` en restricciones             | `y=x\|0<=x<=1`            | `y=x\|{0<=x<=1}`                                          |
+| Sin comentarios `//`                         | —                         | `y=x^2 // parábola`                                       |
+| Raíces con `\sqrt{x}`                        | `y=\sqrt{x}`              | `y=sqrt(x)`                                               |
+| Fracciones con `\frac{a}{b}`                 | `y=\frac{3}{8}x`          | `y=(3/8)x`                                                |
+| Pi con `\pi`                                 | `y=\frac{1}{\pi}`         | `y=1/pi`                                                  |
+| Restricciones de líneas con dominio          | `y=x\|0<=x<=2\|#2d70b3`   | `y=x\|#2d70b3` (se desborda)                              |
+| Colores siempre en hex                       | `\|#c74440`               | `\|RED` (saturado)                                        |
+| Funciones por tramos / valores en intervalos | `y=0.10 \{a<x<b\}\|#hex`  | `{a<x<b: 0.10}` (sintaxis web — no funciona en el plugin) |
 
 ---
 
@@ -514,22 +504,22 @@ Estas reglas no tienen excepciones. Cualquier bloque que las viole debe corregir
 
 Para sombrear una región rectangular usar las **cuatro condiciones en una sola línea**:
 
-```desmos-graph
+```text
 x>=a|x<=b|y>=c|y<=d|#a5d8ff
 ```
 
 **Ejemplo — soporte cuadrado [0,1]×[0,1]:**
-```desmos-graph
+```text
 x>=0|x<=1|y>=0|y<=1|#a5d8ff
 ```
 
 **Nunca** usar solo `y<=1|y>=0|#a5d8ff` — Desmos extiende el relleno fuera del rectángulo porque no conoce los límites en x.
 
 Para agregar los bordes del rectángulo como líneas encima del relleno:
-```desmos-graph
+```text
 x>=0|x<=1|y>=0|y<=1|#a5d8ff
-x=1|0<=y<=1|BLUE|DASHED
-y=1|0<=x<=1|BLUE|DASHED
+x=1|0<=y<=1|#2d70b3|DASHED
+y=1|0<=x<=1|#2d70b3|DASHED
 ```
 
 ---
@@ -563,14 +553,6 @@ Si el archivo tiene todas las gráficas juntas al final:
 
 ---
 
-## C5. NOTA SOBRE ESTE ARCHIVO
-
-Los bloques de código Desmos en **este documento** usan ` ```desmos-graphx ` (con x al final) o se muestran como texto plano para que Obsidian no los renderice y se pueda leer el ejemplo.
-
-En los archivos de ejercicios (`ETN806-*.md`, etc.) usar siempre ` ```desmos-graph ` **sin la x**.
-
----
-
 ## C6. FLUJO DE CORRECCIÓN DE UN BLOQUE EXISTENTE
 
 Cuando Claude encuentra un bloque Desmos con errores:
@@ -584,11 +566,11 @@ Cuando Claude encuentra un bloque Desmos con errores:
 
 ## C7. PLANTILLA BASE PARA REGIONES DE PROBABILIDAD
 
-```desmos-graph
+```text
 left=-0.2; right=X; bottom=-0.2; top=Y;
 width=500; height=500;
 ---
-[fronteras del dominio con restricciones de dominio y colores]
+[fronteras del dominio con restricciones de dominio y colores hex]
 [región sombreada como inecuación con todas las condiciones en una línea]
 [puntos clave con label]
 ```
@@ -599,7 +581,7 @@ Ajustar `right` y `top` según el tamaño del soporte más un margen de ~20%.
 
 ## C8. PALETA DE COLORES RECOMENDADA POR ROL
 
-**Regla:** usar siempre hex. Los nombres en mayúsculas (`RED`, `BLUE`…) son saturados — evitarlos salvo en borradores rápidos.
+**Regla:** usar siempre hex. Los nombres en mayúsculas (`RED`, `BLUE`…) son saturados — nunca usarlos.
 
 | Rol visual                      | Hex                                     | Visual            |
 | ------------------------------- | --------------------------------------- | ----------------- |

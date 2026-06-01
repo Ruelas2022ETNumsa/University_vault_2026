@@ -21,14 +21,14 @@ Los axiomas de cuerpo son el conjunto de reglas fundamentales que definen cómo 
 Sean $a, b, c \in \mathbb{R}$
 
 |  N  | **Axioma**                 | **Descripción**                                              | **Notación**                                               | **Concepto**                                                                                       |
-| :-: | -------------------------- | ------------------------------------------------------------ | ---------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+|:---:| -------------------------- | ------------------------------------------------------------ | ---------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
 |  1  | **Clausura**               | Operar dos reales siempre<br>produce un real                 | $a+b \in \mathbb{R}$<br>$a \cdot b \in \mathbb{R}$         | $\forall\, a,b \in \mathbb{R}:$<br>$a+b \in \mathbb{R}\ \wedge\ a \cdot b \in \mathbb{R}$          |
 |  2  | **Conmutatividad**         | El orden de los operandos<br>no altera el resultado          | $a+b=b+a$<br>$a \cdot b=b \cdot a$                         | $\forall\, a,b \in \mathbb{R}:$<br>$a+b=b+a\ \wedge\ a \cdot b=b \cdot a$                          |
 |  3  | **Asociatividad**          | El agrupamiento no altera<br>el resultado                    | $(a+b)+c=a+(b+c)$<br>$(ab)\,c=a\,(bc)$                     | $\forall\, a,b,c \in \mathbb{R}:$<br>$(a+b)+c=a+(b+c)$<br>$\wedge\ (ab)c=a(bc)$                    |
-|  4  | **Distributividad**        | La multiplicación se<br>distribuye sobre la suma            | $a(b+c)=ab+ac$                                             | $\forall\, a,b,c \in \mathbb{R}:$<br>$a(b+c)=ab+ac$                                                |
+|  4  | **Distributividad**        | La multiplicación se<br>distribuye sobre la suma             | $a(b+c)=ab+ac$                                             | $\forall\, a,b,c \in \mathbb{R}:$<br>$a(b+c)=ab+ac$                                                |
 |  5  | **Elemento neutro**        | El 0 es neutro aditivo;<br>el 1 es neutro multiplicativo     | $a+0=a$<br>$a\cdot 1=a$                                    | $\exists!\, 0 \in \mathbb{R}: a+0=a$<br>$\wedge\ \exists!\, 1 \in \mathbb{R}: a\cdot 1=a$          |
 |  6  | **Inverso aditivo**        | Todo real tiene un opuesto<br>que produce el neutro 0        | $a+(-a)=0$                                                 | $\forall\, a \in \mathbb{R},\ \exists\,{-a} \in \mathbb{R}:$<br>$a+(-a)=0$                         |
-|  7  | **Inverso multiplicativo** | Todo real no nulo tiene un recíproco que produce el neutro 1 | $a \cdot a^{-1}=1,\quad a \neq 0$<br>$a^{-1}=\dfrac{1}{a}$ | $\forall\, a \in \mathbb{R}\setminus\{0\},\ \exists\, a^{-1} \in \mathbb{R}:$<br>$a\cdot a^{-1}=1$ |
+|  7  | **Inverso multiplicativo** | Todo real no nulo tiene un<br>recíproco que produce el neutro 1 | $a \cdot a^{-1}=1,\quad a \neq 0$<br>$a^{-1}=\dfrac{1}{a}$ | $\forall\, a \in \mathbb{R}\setminus\{0\},\ \exists\, a^{-1} \in \mathbb{R}:$<br>$a\cdot a^{-1}=1$ |
 
 **Los axiomas de cuerpo garantizan la consistencia aritmética y permiten la existencia unívoca de las operaciones de sustracción y división en** $\mathbb{R}$.
 
@@ -195,7 +195,12 @@ De acuerdo con el desarrollo de **Apostol**, estos axiomas definen el comportami
 
 Sean $a, b \in \mathbb{R}$
 
-| N | Axioma | Descripción | Notación | Concepto (Símbolos) | | :-: | :--- | :--- | :--- | :--- | | 1 | **Clausura de la suma** | La suma de dos positivos es positiva. | $a, b \in \mathbb{R}^+ \Rightarrow a+b \in \mathbb{R}^+$ | $\forall a,b \in \mathbb{R}^+ : (a+b) \in \mathbb{R}^+$ | | 2 | **Clausura del producto** | El producto de dos positivos es positivo. | $a, b \in \mathbb{R}^+ \Rightarrow ab \in \mathbb{R}^+$ | $\forall a,b \in \mathbb{R}^+ : (ab) \in \mathbb{R}^+$ | | 3 | **Tricotomía de positivos** | Para cualquier real no nulo, o él es positivo o su opuesto lo es. | $a \neq 0 \Rightarrow a \in \mathbb{R}^+ \underline{\vee} -a \in \mathbb{R}^+$ | $\forall a \in \mathbb{R}, a \neq 0 : a \in \mathbb{R}^+ \oplus -a \in \mathbb{R}^+$ | | 4 | **Exclusión del cero** | El cero no es un número positivo. | $0 \notin \mathbb{R}^+$ | $0 \notin \mathbb{R}^+$ |
+|  N  | Axioma                      | Descripción                                                       | Notación                                                                       | Concepto (Símbolos)                                                                  |
+|:---:|:--------------------------- |:----------------------------------------------------------------- |:------------------------------------------------------------------------------ |:------------------------------------------------------------------------------------ |
+|  1  | **Clausura de la suma**     | La suma de dos positivos es positiva.                             | $a, b \in \mathbb{R}^+ \Rightarrow a+b \in \mathbb{R}^+$                       | $\forall a,b \in \mathbb{R}^+ : (a+b) \in \mathbb{R}^+$                              |
+|  2  | **Clausura del producto**   | El producto de dos positivos es positivo.                         | $a, b \in \mathbb{R}^+ \Rightarrow ab \in \mathbb{R}^+$                        | $\forall a,b \in \mathbb{R}^+ : (ab) \in \mathbb{R}^+$                               |
+|  3  | **Tricotomía de positivos** | Para cualquier real no nulo, o él es positivo o su opuesto lo es. | $a \neq 0 \Rightarrow a \in \mathbb{R}^+ \underline{\vee} -a \in \mathbb{R}^+$ | $\forall a \in \mathbb{R}, a \neq 0 : a \in \mathbb{R}^+ \oplus -a \in \mathbb{R}^+$ |
+|  4  | **Exclusión del cero**      | El cero no es un número positivo.                                 | $0 \notin \mathbb{R}^+$                                                        | $0 \notin \mathbb{R}^+$                                                              |
 
 ### Definición de la relación de orden
 
