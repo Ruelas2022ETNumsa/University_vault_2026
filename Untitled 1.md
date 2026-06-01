@@ -45,27 +45,15 @@ Sean $a, b, c \in \mathbb{R}$
 |  7  | **Inverso multiplicativo** | $a \cdot a^{-1}=1$<br>$a^{-1}=\dfrac{1}{a}$                 | $\forall\, a \in \mathbb{R}\setminus\{0\},\ \exists\, a^{-1} \in \mathbb{R}$ tal que $a \cdot a^{-1}=1$ |
 
 
-| Axioma                     | Notación                                                    | Concepto                                                                                                | Descripción                                                |
-| -------------------------- | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
-| **Clausura**               | $a+b \in \mathbb{R}$<br>$a \cdot b \in \mathbb{R}$          | $\forall\, a,b \in \mathbb{R} \Rightarrow a+b \in \mathbb{R}\ \wedge\ a \cdot b \in \mathbb{R}$         | Operar dos reales siempre produce un real                  |
-| **Conmutatividad**         | $a+b=b+a$<br>$a \cdot b=b \cdot a$                          | $\forall\, a,b \in \mathbb{R}: a+b=b+a\ \wedge\ a \cdot b=b \cdot a$                                    | El orden de los operandos no altera el resultado           |
-| **Asociatividad**          | $(a+b)+c=a+(b+c)$<br>$(a \cdot b)\cdot c=a\cdot(b \cdot c)$ | $\forall\, a,b,c \in \mathbb{R}: (a+b)+c=a+(b+c)\ \wedge\ (a \cdot b)\cdot c=a\cdot(b \cdot c)$         | El agrupamiento de los términos no altera el resultado     |
-| **Distributividad**        | $a(b+c)=ab+ac$                                              | $\forall\, a,b,c \in \mathbb{R}: a(b+c)=ab+ac$                                                          | La multiplicación se distribuye sobre la suma              |
-| **Elemento neutro**        | $a+0=a$<br>$a \cdot 1=a$                                    | $\exists\, 0 \in \mathbb{R}: a+0=a\ \wedge\ \exists\, 1 \in \mathbb{R}: a \cdot 1=a$                    | El 0 es neutro aditivo; el 1 es neutro multiplicativo      |
-| **Inverso aditivo**        | $a+(-a)=0$                                                  | $\forall\, a \in \mathbb{R},\ \exists\, {-a} \in \mathbb{R}$ tal que $a+(-a)=0$                         | Todo real tiene un opuesto que anula la suma               |
-| **Inverso multiplicativo** | $a \cdot a^{-1}=1$<br>$a^{-1}=\dfrac{1}{a}$                 | $\forall\, a \in \mathbb{R}\setminus\{0\},\ \exists\, a^{-1} \in \mathbb{R}$ tal que $a \cdot a^{-1}=1$ | Todo real no nulo tiene un recíproco que anula el producto |
-
-
-
-| Axioma | Notación | Concepto | Descripción |
-|---|---|---|---|
-| **Clausura** | $a+b \in \mathbb{R}$<br>$a \cdot b \in \mathbb{R}$ | $\forall\, a,b \in \mathbb{R}:\quad a+b \in \mathbb{R}\ \wedge\ a \cdot b \in \mathbb{R}$ | Operar dos reales siempre produce un real |
-| **Conmutatividad** | $a+b=b+a$<br>$a \cdot b=b \cdot a$ | $\forall\, a,b \in \mathbb{R}:\quad a+b=b+a\ \wedge\ a \cdot b=b \cdot a$ | El orden de los operandos no altera el resultado |
-| **Asociatividad** | $(a+b)+c=a+(b+c)$<br>$(ab)\,c=a\,(bc)$ | $\forall\, a,b,c \in \mathbb{R}:\quad (a+b)+c=a+(b+c)\ \wedge\ (ab)c=a(bc)$ | El agrupamiento no altera el resultado |
-| **Distributividad** | $a(b+c)=ab+ac$ | $\forall\, a,b,c \in \mathbb{R}:\quad a(b+c)=ab+ac$ | La multiplicación se distribuye sobre la suma |
-| **Elemento neutro** | $a+0=a$<br>$a\cdot 1=a$ | $\exists!\, 0 \in \mathbb{R}: a+0=a \quad\wedge\quad \exists!\, 1 \in \mathbb{R}: a\cdot 1=a$ | El 0 es neutro aditivo; el 1 es neutro multiplicativo |
-| **Inverso aditivo** | $a+(-a)=0$ | $\forall\, a \in \mathbb{R},\ \exists\,{-a} \in \mathbb{R}:\quad a+(-a)=0$ | Todo real tiene un opuesto que anula la suma |
-| **Inverso multiplicativo** | $a\cdot a^{-1}=1$<br>$a^{-1}=\dfrac{1}{a}$ | $\forall\, a \in \mathbb{R}\setminus\{0\},\ \exists\, a^{-1} \in \mathbb{R}:\quad a\cdot a^{-1}=1$ | Todo real no nulo tiene un recíproco que anula el producto |
+| Axioma                     | Descripción                                                | Notación                                           | Concepto                                                                                           |
+| -------------------------- | ---------------------------------------------------------- | -------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| **Clausura**               | Operar dos reales siempre produce un real                  | $a+b \in \mathbb{R}$<br>$a \cdot b \in \mathbb{R}$ | $\forall\, a,b \in \mathbb{R}:$<br>$a+b \in \mathbb{R}\ \wedge\ a \cdot b \in \mathbb{R}$          |
+| **Conmutatividad**         | El orden de los operandos no altera el resultado           | $a+b=b+a$<br>$a \cdot b=b \cdot a$                 | $\forall\, a,b \in \mathbb{R}:$<br>$a+b=b+a\ \wedge\ a \cdot b=b \cdot a$                          |
+| **Asociatividad**          | El agrupamiento no altera el resultado                     | $(a+b)+c=a+(b+c)$<br>$$(ab)\,c=a\,(bc)$$           | $\forall\, a,b,c \in \mathbb{R}:$<br>$(a+b)+c=a+(b+c)$<br>$\wedge\ (ab)c=a(bc)$                    |
+| **Distributividad**        | La multiplicación se distribuye sobre la suma              | $$a(b+c)=ab+ac$$                                   | $\forall\, a,b,c \in \mathbb{R}:$<br>$a(b+c)=ab+ac$                                                |
+| **Elemento neutro**        | El 0 es neutro aditivo;<br>el 1 es neutro multiplicativo   | $$a+0=a$$<br>$$a\cdot 1=a$$                        | $\exists!\, 0 \in \mathbb{R}: a+0=a$<br>$\wedge\ \exists!\, 1 \in \mathbb{R}: a\cdot 1=a$          |
+| **Inverso aditivo**        | Todo real tiene un opuesto que anula la suma               | $$a+(-a)=0$$                                       | $\forall\, a \in \mathbb{R},\ \exists\,{-a} \in \mathbb{R}:$<br>$a+(-a)=0$                         |
+| **Inverso multiplicativo** | Todo real no nulo tiene un recíproco que anula el producto | $$a\cdot a^{-1}=1$$<br>$$a^{-1}=\dfrac{1}{a}$$     | $\forall\, a \in \mathbb{R}\setminus\{0\},\ \exists\, a^{-1} \in \mathbb{R}:$<br>$a\cdot a^{-1}=1$ |
 
 
 
