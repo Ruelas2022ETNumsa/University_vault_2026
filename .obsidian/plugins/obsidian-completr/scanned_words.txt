@@ -941,6 +941,7 @@ sean
 signo
 supera
 subconjunto
+suman
 vault
 vil
 ver
@@ -1005,6 +1006,7 @@ vocamente
 vas
 viene
 voca
+viceversa
 audience
 activo
 auto
@@ -1523,6 +1525,8 @@ na
 new
 negaci
 negatividad
+negar
+numeradores
 created
 commit
 cada
@@ -1892,6 +1896,7 @@ cuadradas
 comportan
 comparables
 cumplen
+combinando
 updated
 un
 universo
@@ -2832,6 +2837,7 @@ mismos
 multiplicado
 multiplicativa
 monoton
+multiplica
 YAML
 Ya
 You
@@ -3306,6 +3312,7 @@ llevan
 location
 leyes
 longitud
+logra
 incluyendo
 im
 instalar
@@ -3453,6 +3460,7 @@ impide
 invertir
 iguales
 irracional
+igualarse
 Dependencia
 Dropbox
 Dataview
@@ -3531,6 +3539,7 @@ Derivados
 De
 Desigualdad
 Densidad
+Dividir
 Remotely
 Raz
 Revisa
@@ -3623,6 +3632,7 @@ Retroceder
 Renderizado
 Recomendar
 Recortes
+Restar
 Hider
 Hace
 Herramientas
