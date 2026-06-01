@@ -123,6 +123,8 @@ toolbar
 tabular
 temario
 th
+trav
+traduce
 ToDo
 Templater
 Text
@@ -283,6 +285,9 @@ SYSTEM
 Search
 Stack
 Sheet
+Simpler
+Slides
+System
 Plugins
 Pendientes
 Plugin
@@ -373,6 +378,9 @@ Protocol
 Protocolo
 Priorizar
 Presentar
+Pero
+Papoulis
+Paper
 del
 date
 de
@@ -555,6 +563,9 @@ dividido
 datelo
 descartar
 desactualizado
+do
+diapositivas
+dependencia
 Vault
 Verificar
 Variables
@@ -585,6 +596,7 @@ Vol
 Vladimir
 Visto
 Version
+Visible
 galaxy
 gina
 genes
@@ -643,6 +655,7 @@ grid
 guide
 garant
 gesti
+generadas
 body
 beacon
 bat
@@ -703,6 +716,7 @@ bibliograf
 bas
 bueno
 bibliogr
+below
 scope
 status
 selector
@@ -889,6 +903,8 @@ stack
 sirve
 sovi
 stacks
+specified
+search
 vault
 vil
 ver
@@ -951,6 +967,7 @@ verdadera
 vee
 vocamente
 vas
+viene
 audience
 activo
 auto
@@ -1171,6 +1188,10 @@ alguno
 anteriores
 acumulaci
 aprendizaje
+anotado
+anotador
+aplicado
+algoritmo
 related
 recomendados
 ribbon
@@ -1345,6 +1366,9 @@ roles
 riguroso
 redundante
 reducida
+respuesta
+requeridos
+recortar
 notes
 notas
 nuevas
@@ -1443,6 +1467,7 @@ naturales
 normalmente
 necesariamente
 na
+new
 created
 commit
 cada
@@ -1788,6 +1813,15 @@ calidad
 consolidado
 consiga
 construidos
+capturan
+cticas
+concreta
+copiadas
+copian
+content
+culo
+cap
+conecta
 updated
 un
 universo
@@ -1829,6 +1863,8 @@ unicode
 universal
 usuales
 unidades
+ubicada
+unsupported
 Galaxy
 Git
 Gr
@@ -2004,6 +2040,9 @@ Cantidad
 Condicionado
 Christopher
 Cheat
+Copying
+Cap
+Consistente
 Instalados
 Instalado
 Instalar
@@ -2058,6 +2097,9 @@ Ideas
 Inverso
 Input
 Ingenier
+In
+Images
+Index
 Funci
 File
 Fase
@@ -2213,6 +2255,9 @@ Edition
 ET
 Essential
 ETF
+Esas
+Empuja
+Enunciados
 Obsidian
 OmniSearch
 Ocultar
@@ -2251,6 +2296,7 @@ Opuesto
 Outline
 One
 Operar
+Office
 Auto
 Annotator
 Autocompletado
@@ -2339,6 +2385,10 @@ Axioma
 Advanced
 Avanzar
 Alinear
+Ajustes
+Activado
+AI
+Art
 push
 pull
 para
@@ -2540,6 +2590,11 @@ pedirlo
 presentaci
 presentarse
 posteriormente
+papers
+piezas
+prefiere
+pesos
+principio
 min
 mica
 movimiento
@@ -2683,6 +2738,7 @@ mi
 multiplicar
 mente
 mejor
+mudo
 YAML
 Ya
 You
@@ -2721,6 +2777,7 @@ Bruce
 Briggs
 Bitsadze
 Book
+BM
 en
 exacta
 escaneados
@@ -2948,6 +3005,8 @@ evaluarlos
 explicaciones
 explicar
 editorial
+external
+examen
 Motor
 Media
 Mantiene
@@ -3046,6 +3105,9 @@ List
 Live
 Layout
 LIBRARY
+Lugar
+Libro
+Library
 links
 las
 listar
@@ -3132,6 +3194,8 @@ licenciatura
 listarlos
 les
 llenar
+llevan
+location
 incluyendo
 im
 instalar
@@ -3264,6 +3328,9 @@ innecesaria
 idioma
 indicar
 inicie
+indexing
+innecesario
+identificable
 Dependencia
 Dropbox
 Dataview
@@ -3333,6 +3400,11 @@ Desarrollo
 DICTADO
 Descartado
 Descartados
+Default
+Dummy
+Document
+Desactivado
+Downranked
 Remotely
 Raz
 Revisa
@@ -3424,6 +3496,7 @@ Reload
 Retroceder
 Renderizado
 Recomendar
+Recortes
 Hider
 Hace
 Herramientas
@@ -3534,6 +3607,11 @@ forall
 fundamental
 facilita
 formatea
+for
+files
+format
+formats
+folders
 haya
 hace
 hacer
@@ -3693,6 +3771,8 @@ operaci
 operandos
 opuesto
 operaciones
+oficiales
+ordenados
 junto
 json
 jer
