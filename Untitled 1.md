@@ -22,28 +22,16 @@ Sean $a, b, c \in \mathbb{R}$
 
 ---
 
-|  N  | Tipo                                | Ejemplo                                                                                                                     | Descripción                                                                                                                                                             |
-|:---:| ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|  1  | **Clausura**                        | Si tomás dos números reales y los sumás o los multiplicás, el resultado será, sin ninguna duda, otro número real.           | $a+b \in \mathbb{R}$ <br>$a \cdot b \in \mathbb{R}$                                                                                                                     |
-|  2  | **Conmutatividad**                  | El orden de los números no altera el resultado, tanto en la suma como en el producto                                        | $a+b=b+a$<br> $a \cdot b=b \cdot a$                                                                                                                                     |
-|  3  | **Asociatividad**                   | La forma en que agrupamos los términos al operar con tres o más números no cambia el resultado final                        | $(a+b)+c=a+(b+c)$<br>$(a \cdot b) \cdot c=a \cdot(b \cdot c)$                                                                                                           |
-|  4  | **Distributividad**                 | Conecta la multiplicación con la suma, permitiendo "distribuir" un factor sobre los términos de una suma                    | $a(b+c)=ab+ac$                                                                                                                                                          |
-|  5  | **Existencia de neutros**           | El sistema cuenta con dos números distintos, el **0** y el **1**. El 0 no altera la suma y el 1 no altera la multiplicación | $\exists\, 0 \in \mathbb{R}$ tal que $a+0=a$ — neutro para $+$<br>$\exists\, 1 \in \mathbb{R}$ tal que $a \cdot 1=a$ — neutro para $\times$<br>                         |
-|  6  | **Existencia de inversos aditivos** | Todo número real x tiene un "compañero" tal que su suma es cero (x+y=0).                                                    | $\forall a \in \mathbb{R},\ \exists\, {-a} \in \mathbb{R}$ tal que $a+(-a)=0$<br>$-a$ se denomina inverso aditivo de $a$                                                |
-|  7  | **Existencia del recíproco**        | Todo número real diferente de cero tiene un valor que, al multiplicarse con él, resulta en uno                              | $\forall a \in \mathbb{R}\setminus\{0\}$, $\exists\, a^{-1} \in \mathbb{R}$ tal que $a \cdot a^{-1}=1$<br>$a^{-1}=\dfrac{1}{a}$ es el inverso multiplicativo de $a$<br> |
 
-
-
-
-|  N  | Axioma | Notación | Descripción |
-|:---:| --- | --- | --- |
-| 1 | **Clausura** | $a+b \in \mathbb{R}$<br>$a \cdot b \in \mathbb{R}$ | Operar dos reales siempre produce un real |
-| 2 | **Conmutatividad** | $a+b=b+a$<br>$a \cdot b=b \cdot a$ | El orden de los operandos no altera el resultado |
-| 3 | **Asociatividad** | $(a+b)+c=a+(b+c)$<br>$(a \cdot b)\cdot c=a\cdot(b \cdot c)$ | El agrupamiento de los términos no altera el resultado |
-| 4 | **Distributividad** | $a(b+c)=ab+ac$ | La multiplicación se distribuye sobre la suma |
-| 5 | **Elemento neutro** | $a+0=a$<br>$a \cdot 1=a$ | El 0 es neutro aditivo; el 1 es neutro multiplicativo |
-| 6 | **Inverso aditivo** | $a+(-a)=0$ | Todo real tiene un opuesto que anula la suma |
-| 7 | **Inverso multiplicativo** | $a \cdot a^{-1}=1,\quad a \neq 0$<br>$a^{-1}=\dfrac{1}{a}$ | Todo real no nulo tiene un recíproco que anula el producto |
+|  N  | Axioma                     | Notación                                                    | Descripción                                                |
+| :-: | -------------------------- | ----------------------------------------------------------- | ---------------------------------------------------------- |
+|  1  | **Clausura**               | $a+b \in \mathbb{R}$<br>$a \cdot b \in \mathbb{R}$          | Operar dos reales siempre produce un real                  |
+|  2  | **Conmutatividad**         | $a+b=b+a$<br>$a \cdot b=b \cdot a$                          | El orden de los operandos no altera el resultado           |
+|  3  | **Asociatividad**          | $(a+b)+c=a+(b+c)$<br>$(a \cdot b)\cdot c=a\cdot(b \cdot c)$ | El agrupamiento de los términos no altera el resultado     |
+|  4  | **Distributividad**        | $a(b+c)=ab+ac$                                              | La multiplicación se distribuye sobre la suma              |
+|  5  | **Elemento neutro**        | $a+0=a$<br>$a \cdot 1=a$                                    | El 0 es neutro aditivo; el 1 es neutro multiplicativo      |
+|  6  | **Inverso aditivo**        | $a+(-a)=0$                                                  | Todo real tiene un opuesto que anula la suma               |
+|  7  | **Inverso multiplicativo** | $a \cdot a^{-1}=1,\quad a \neq 0$<br>$a^{-1}=\dfrac{1}{a}$  | Todo real no nulo tiene un recíproco que anula el producto |
 
 
 |  N  | Axioma                     | Notación                                                    | Concepto                                                                                                |
@@ -55,6 +43,29 @@ Sean $a, b, c \in \mathbb{R}$
 |  5  | **Elemento neutro**        | $a+0=a$<br>$a \cdot 1=a$                                    | $\exists\, 0 \in \mathbb{R}: a+0=a\ \wedge\ \exists\, 1 \in \mathbb{R}: a \cdot 1=a$                    |
 |  6  | **Inverso aditivo**        | $a+(-a)=0$                                                  | $\forall\, a \in \mathbb{R},\ \exists\, {-a} \in \mathbb{R}$ tal que $a+(-a)=0$                         |
 |  7  | **Inverso multiplicativo** | $a \cdot a^{-1}=1$<br>$a^{-1}=\dfrac{1}{a}$                 | $\forall\, a \in \mathbb{R}\setminus\{0\},\ \exists\, a^{-1} \in \mathbb{R}$ tal que $a \cdot a^{-1}=1$ |
+
+
+| Axioma                     | Notación                                                    | Concepto                                                                                                | Descripción                                                |
+| -------------------------- | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
+| **Clausura**               | $a+b \in \mathbb{R}$<br>$a \cdot b \in \mathbb{R}$          | $\forall\, a,b \in \mathbb{R} \Rightarrow a+b \in \mathbb{R}\ \wedge\ a \cdot b \in \mathbb{R}$         | Operar dos reales siempre produce un real                  |
+| **Conmutatividad**         | $a+b=b+a$<br>$a \cdot b=b \cdot a$                          | $\forall\, a,b \in \mathbb{R}: a+b=b+a\ \wedge\ a \cdot b=b \cdot a$                                    | El orden de los operandos no altera el resultado           |
+| **Asociatividad**          | $(a+b)+c=a+(b+c)$<br>$(a \cdot b)\cdot c=a\cdot(b \cdot c)$ | $\forall\, a,b,c \in \mathbb{R}: (a+b)+c=a+(b+c)\ \wedge\ (a \cdot b)\cdot c=a\cdot(b \cdot c)$         | El agrupamiento de los términos no altera el resultado     |
+| **Distributividad**        | $a(b+c)=ab+ac$                                              | $\forall\, a,b,c \in \mathbb{R}: a(b+c)=ab+ac$                                                          | La multiplicación se distribuye sobre la suma              |
+| **Elemento neutro**        | $a+0=a$<br>$a \cdot 1=a$                                    | $\exists\, 0 \in \mathbb{R}: a+0=a\ \wedge\ \exists\, 1 \in \mathbb{R}: a \cdot 1=a$                    | El 0 es neutro aditivo; el 1 es neutro multiplicativo      |
+| **Inverso aditivo**        | $a+(-a)=0$                                                  | $\forall\, a \in \mathbb{R},\ \exists\, {-a} \in \mathbb{R}$ tal que $a+(-a)=0$                         | Todo real tiene un opuesto que anula la suma               |
+| **Inverso multiplicativo** | $a \cdot a^{-1}=1$<br>$a^{-1}=\dfrac{1}{a}$                 | $\forall\, a \in \mathbb{R}\setminus\{0\},\ \exists\, a^{-1} \in \mathbb{R}$ tal que $a \cdot a^{-1}=1$ | Todo real no nulo tiene un recíproco que anula el producto |
+
+
+
+| Axioma | Notación | Concepto | Descripción |
+|---|---|---|---|
+| **Clausura** | $a+b \in \mathbb{R}$<br>$a \cdot b \in \mathbb{R}$ | $\forall\, a,b \in \mathbb{R}:\quad a+b \in \mathbb{R}\ \wedge\ a \cdot b \in \mathbb{R}$ | Operar dos reales siempre produce un real |
+| **Conmutatividad** | $a+b=b+a$<br>$a \cdot b=b \cdot a$ | $\forall\, a,b \in \mathbb{R}:\quad a+b=b+a\ \wedge\ a \cdot b=b \cdot a$ | El orden de los operandos no altera el resultado |
+| **Asociatividad** | $(a+b)+c=a+(b+c)$<br>$(ab)\,c=a\,(bc)$ | $\forall\, a,b,c \in \mathbb{R}:\quad (a+b)+c=a+(b+c)\ \wedge\ (ab)c=a(bc)$ | El agrupamiento no altera el resultado |
+| **Distributividad** | $a(b+c)=ab+ac$ | $\forall\, a,b,c \in \mathbb{R}:\quad a(b+c)=ab+ac$ | La multiplicación se distribuye sobre la suma |
+| **Elemento neutro** | $a+0=a$<br>$a\cdot 1=a$ | $\exists!\, 0 \in \mathbb{R}: a+0=a \quad\wedge\quad \exists!\, 1 \in \mathbb{R}: a\cdot 1=a$ | El 0 es neutro aditivo; el 1 es neutro multiplicativo |
+| **Inverso aditivo** | $a+(-a)=0$ | $\forall\, a \in \mathbb{R},\ \exists\,{-a} \in \mathbb{R}:\quad a+(-a)=0$ | Todo real tiene un opuesto que anula la suma |
+| **Inverso multiplicativo** | $a\cdot a^{-1}=1$<br>$a^{-1}=\dfrac{1}{a}$ | $\forall\, a \in \mathbb{R}\setminus\{0\},\ \exists\, a^{-1} \in \mathbb{R}:\quad a\cdot a^{-1}=1$ | Todo real no nulo tiene un recíproco que anula el producto |
 
 
 
