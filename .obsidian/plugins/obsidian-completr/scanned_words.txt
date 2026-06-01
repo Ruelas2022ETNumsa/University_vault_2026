@@ -515,6 +515,8 @@ dfdsf
 dsfds
 definen
 duda
+distribuir
+dfrac
 Vault
 Verificar
 Variables
@@ -653,6 +655,7 @@ begin
 battery
 buena
 break
+br
 scope
 status
 selector
@@ -829,6 +832,7 @@ sadsadasdadasdas
 sadsadsa
 sum
 satisfacen
+setminus
 vault
 vil
 ver
@@ -888,6 +892,7 @@ vinculado
 versionan
 verse
 verdadera
+vee
 audience
 activo
 auto
@@ -1089,6 +1094,8 @@ asd
 asdasdsa
 asdsad
 asdasd
+altera
+agrupamos
 related
 recomendados
 ribbon
@@ -1340,6 +1347,7 @@ numerada
 numerado
 number
 necesit
+neq
 created
 commit
 cada
@@ -1667,6 +1675,7 @@ capturen
 cornell
 conjunto
 clausura
+cdot
 updated
 un
 universo
@@ -1864,6 +1873,7 @@ Complemento
 Course
 Columna
 Claves
+Conecta
 Instalados
 Instalado
 Instalar
@@ -2353,6 +2363,7 @@ planta
 punteadas
 producto
 propiedad
+permitiendo
 min
 mica
 movimiento
@@ -2490,6 +2501,7 @@ marcarlo
 multi
 multiplicaci
 multiplic
+mathbb
 YAML
 Ya
 You
@@ -2741,6 +2753,7 @@ explicaci
 ed
 ee
 equivalencia
+exists
 Motor
 Media
 Mantiene
@@ -3175,6 +3188,7 @@ Reales
 Reflexividad
 RMULAS
 Ron
+Rightarrow
 Hider
 Hace
 Herramientas
@@ -3277,6 +3291,8 @@ fillbetween
 fds
 fdsf
 fundamentales
+factor
+forall
 haya
 hace
 hacer
@@ -3323,6 +3339,7 @@ qui
 quitar
 quiera
 quedar
+quad
 University
 Usar
 Un
@@ -3455,6 +3472,7 @@ word
 width
 webview
 white
+wedge
 xima
 xeles
 xy

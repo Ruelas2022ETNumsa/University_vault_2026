@@ -22,12 +22,15 @@ Sean $a, b, c \in \mathbb{R}$
 
 ---
 
-| Tipo               | Ejemplo                                                                                                           | Descripción                                |
-| ------------------ | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
-| **Clausura**       | Si tomás dos números reales y los sumás o los multiplicás, el resultado será, sin ninguna duda, otro número real. | $a+b \in \mathbb{R}$ $a \cdot b=b \cdot a$ |
-| **Conmutatividad** |                                                                                                                   |                                            |
-| **Asociatividad**  |                                                                                                                   |                                            |
-| **Distributividad**                   |                                                                                                                   |                                            |
+| Tipo                      | Ejemplo                                                                                                                     | Descripción                                                   |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| **Clausura**              | Si tomás dos números reales y los sumás o los multiplicás, el resultado será, sin ninguna duda, otro número real.           | $a+b \in \mathbb{R}$ $a \cdot b=b \cdot a$                    |
+| **Conmutatividad**        | El orden de los números no altera el resultado, tanto en la suma como en el producto                                        | $a+b=b+a$<br> $a \cdot b=b \cdot a$                           |
+| **Asociatividad**         | La forma en que agrupamos los términos al operar con tres o más números no cambia el resultado final                        | $(a+b)+c=a+(b+c)$<br>$(a \cdot b) \cdot c=a \cdot(b \cdot c)$ |
+| **Distributividad**       | Conecta la multiplicación con la suma, permitiendo "distribuir" un factor sobre los términos de una suma                    | $a(b+c)=ab+ac$                                                |
+| **Existencia de neutros** | El sistema cuenta con dos números distintos, el **0** y el **1**. El 0 no altera la suma y el 1 no altera la multiplicación |                                                               |
+
+
 
 1. **Clausura**
     
