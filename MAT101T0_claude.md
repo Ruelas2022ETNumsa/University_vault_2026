@@ -157,7 +157,25 @@ El **Axioma del Supremo** es lo que hace que $\mathbb{R}$ no tenga "huecos". Los
 
 
 
+#### Resumen de Teoremas Útiles
 
+Una tabla de referencia rápida con los teoremas más operativos: los que aparecen al resolver ejercicios, simplificar expresiones y trabajar con fracciones.
+
+|**#**|**Nombre**|**Notación**|
+|---|---|---|
+|1|Cancelación aditiva|a+c=b+c⇒a=ba+c=b+c \Rightarrow a=b a+c=b+c⇒a=b|
+|2|Cancelación multiplicativa|ac=bc ∧ c≠0⇒a=bac=bc\ \wedge\ c\neq 0 \Rightarrow a=b ac=bc ∧ c=0⇒a=b|
+|3|Solución única aditiva|a+x=b⇒x=b−aa+x=b \Rightarrow x=b-a a+x=b⇒x=b−a|
+|4|Solución única multiplicativa|ax=b ∧ a≠0⇒x=baax=b\ \wedge\ a\neq 0 \Rightarrow x=\dfrac{b}{a} ax=b ∧ a=0⇒x=ab​|
+|5|Producto por cero|a⋅0=0a\cdot 0=0 a⋅0=0|
+|6|Regla del producto nulo|ab=0⇒(a=0 ∨ b=0)ab=0 \Rightarrow (a=0\ \vee\ b=0) ab=0⇒(a=0 ∨ b=0)|
+|7|Igualdad de opuestos|a=b⇒−a=−ba=b \Rightarrow -a=-b a=b⇒−a=−b|
+|8|Signo en el producto|a(−b)=−(ab)a(-b)=-(ab) a(−b)=−(ab)|
+|9|Doble negativo|(−a)(−b)=ab(-a)(-b)=ab (−a)(−b)=ab|
+|10|Fracciones — igual denominador|ab+cb=a+cb\dfrac{a}{b}+\dfrac{c}{b}=\dfrac{a+c}{b} ba​+bc​=ba+c​|
+|11|Fracciones — distinto denominador|ab+cd=ad+cbbd\dfrac{a}{b}+\dfrac{c}{d}=\dfrac{ad+cb}{bd} ba​+dc​=bdad+cb​|
+|12|Producto de fracciones|ab⋅cd=acbd\dfrac{a}{b}\cdot\dfrac{c}{d}=\dfrac{ac}{bd} ba​⋅dc​=bdac​|
+|13|División de fracciones|a/bc/d=adcb\dfrac{a/b}{c/d}=\dfrac{ad}{cb} c/da/b​=cbad​|
 
 %%
 galaxy-links
