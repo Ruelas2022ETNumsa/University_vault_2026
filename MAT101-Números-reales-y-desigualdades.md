@@ -30,7 +30,7 @@ Sean $a, b, c \in \mathbb{R}$
 |  6  | **Inverso aditivo**        | Todo real tiene un opuesto<br>que produce el neutro 0        | $a+(-a)=0$                                                 | $\forall\, a \in \mathbb{R},\ \exists\,{-a} \in \mathbb{R}:$<br>$a+(-a)=0$                         |
 |  7  | **Inverso multiplicativo** | Todo real no nulo tiene un<br>recíproco que produce el neutro 1 | $a \cdot a^{-1}=1,\quad a \neq 0$<br>$a^{-1}=\dfrac{1}{a}$ | $\forall\, a \in \mathbb{R}\setminus\{0\},\ \exists\, a^{-1} \in \mathbb{R}:$<br>$a\cdot a^{-1}=1$ |
 
-**Los axiomas de cuerpo garantizan la consistencia aritmética y permiten la existencia unívoca de las operaciones de sustracción y división en** $\mathbb{R}$.
+>**Los axiomas de cuerpo garantizan la consistencia aritmética y permiten la existencia unívoca de las operaciones de sustracción y división en** $\mathbb{R}$.
 
 ---
 ## Propiedades de igualdad
@@ -118,7 +118,7 @@ Estos aseguran la consistencia de las operaciones básicas:
 | **Unicidad de elementos**   | El neutro $0$, el neutro $1$, el opuesto $-a$ y el recíproco $a^{-1}$ son únicos para cada número.                 | $\exists!\,0: a+0=a$<br>$\exists!\,1: a\cdot 1=a$<br>$\exists!\,{-a}: a+(-a)=0$<br>$\exists!\,a^{-1}: a\cdot a^{-1}=1$ |
 | **Regla del producto nulo** | El producto de cualquier número por cero es cero. Si un producto es cero, al menos uno de los factores debe serlo. | $a\cdot 0=0$<br>$ab=0 \Rightarrow (a=0\ \vee\ b=0)$                                                                    |
 | **Leyes de los signos**     | El producto de dos negativos es positivo. Negar una diferencia invierte el orden de los términos.                  | $(-a)(-b)=ab$<br>$a(-b)=-(ab)$<br>$-(-a)=a$<br>$-(a-b)=b-a$                                                            |
-La **regla del producto nulo** es el fundamento de resolver ecuaciones por factorización: si se logra escribir una expresión como un producto igual a cero, cada factor puede igualarse a cero por separado.
+>La **regla del producto nulo** es el fundamento de resolver ecuaciones por factorización: si se logra escribir una expresión como un producto igual a cero, cada factor puede igualarse a cero por separado.
 
 ---
 
@@ -183,14 +183,10 @@ Tabla de referencia rápida con los teoremas más operativos: los que aparecen a
 
 ---
 
-── MODO 1 · EXPLICACIÓN DE CONCEPTO ──
+## Axiomas de Orden de los números reales
 
-Los **axiomas de orden** son las reglas que nos permiten comparar dos números reales y establecer una jerarquía entre ellos. Gracias a estos axiomas, podemos afirmar que los números reales se disponen en una **recta numérica** con una dirección definida.
-
-
-
-### Axiomas de Orden de los números reales
 Son las reglas que nos permiten comparar dos números reales y establecer una jerarquía entre ellos. Gracias a estos axiomas, podemos afirmar que los números reales se disponen en una **recta numérica** con una dirección definida.
+
 Formalmente, el sistema de los números reales se basa en la existencia de un subconjunto especial llamado **números positivos** ($\mathbb{R}^+$). A partir de este concepto primitivo, se construyen las relaciones "mayor que" ($>$) y "menor que" ($<$).
 
 Sean $a, b \in \mathbb{R}$
@@ -216,8 +212,6 @@ De los axiomas anteriores se derivan los teoremas que usamos habitualmente en in
 1. **Transitividad:** Si $a < b$ y $b < c$, entonces $a < c$.
 2. **Monotonía de la suma:** Si $a < b$, entonces $a + c < b + c$.
 3. **Monotonía del producto:** Si $a < b$ y $c > 0$, entonces $ac < bc$. (Si $c < 0$, la desigualdad se invierte: $ac > bc$).
-
-
 
 ```desmos-graph
 left=-1; right=7; bottom=-0.5; top=0.6;
