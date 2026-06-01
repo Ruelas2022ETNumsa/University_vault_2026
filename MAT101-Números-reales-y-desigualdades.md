@@ -132,7 +132,7 @@ Establecen cómo se comporta el orden en la recta numérica:
 | **Tricotomía**             | Entre dos reales, exactamente una de tres relaciones es verdadera: menor, mayor o igual.                                            | $a<b\ \vee\ a=b\ \vee\ a>b$                                                                    |
 | **Monotonía**              | Sumar el mismo número a ambos lados conserva la desigualdad. Multiplicar por un positivo la conserva; por un negativo, la invierte. | $a<b \Rightarrow a+c<b+c$<br>$a<b\ \wedge\ c>0 \Rightarrow ac<bc$<br>$a<b \Rightarrow {-a}>-b$ |
 | **Cuadrados no negativos** | Para todo real no nulo, su cuadrado es estrictamente positivo.                                                                      | $a\neq 0 \Rightarrow a^2>0$                                                                    |
-La **monotonía con negativos** explica por qué al multiplicar o dividir ambos lados de una desigualdad por un número negativo se debe invertir el signo.
+>La **monotonía con negativos** explica por qué al multiplicar o dividir ambos lados de una desigualdad por un número negativo se debe invertir el signo.
 
 ---
 
@@ -143,7 +143,7 @@ El valor absoluto $|x|$ mide la distancia del número $x$ al origen en la recta 
 | **Teorema**                | **Enunciado**                                                                           | **Notación**                 |
 | -------------------------- | --------------------------------------------------------------------------------------- | ---------------------------- |
 | **Desigualdad triangular** | La distancia de una suma no puede ser mayor que la suma de las distancias individuales. | $\|x+y\| \leq \|x\| + \|y\|$ |
-Su nombre viene de la geometría: en un triángulo, la longitud de un lado nunca supera la suma de los otros dos. Es el resultado más importante de esta sección y reaparece constantemente en cálculo y análisis.
+>Su nombre viene de la geometría: en un triángulo, la longitud de un lado nunca supera la suma de los otros dos. Es el resultado más importante de esta sección y reaparece constantemente en cálculo y análisis.
 
 ---
 
@@ -157,7 +157,7 @@ Son los que distinguen a $\mathbb{R}$ de otros sistemas como $\mathbb{Q}$:
 | **Densidad**               | Entre dos reales distintos, por más cerca que estén, siempre existen infinitos racionales e irracionales.              | $a<b \Rightarrow \exists\,r\in\mathbb{Q}: a<r<b$          |
 | **Axioma del Supremo**     | Todo conjunto de reales acotado superiormente tiene un extremo superior (supremo) dentro de $\mathbb{R}$.              | $\exists\,\sup S \in \mathbb{R}$                          |
 
-El **Axioma del Supremo** es lo que hace que $\mathbb{R}$ no tenga "huecos". Los racionales $\mathbb{Q}$ no lo cumplen: el conjunto $\{x\in\mathbb{Q}: x^2<2\}$ no tiene supremo en $\mathbb{Q}$, lo que significa que $\sqrt{2}$ no existe dentro de los racionales.
+>El **Axioma del Supremo** es lo que hace que $\mathbb{R}$ no tenga "huecos". Los racionales $\mathbb{Q}$ no lo cumplen: el conjunto $\{x\in\mathbb{Q}: x^2<2\}$ no tiene supremo en $\mathbb{Q}$, lo que significa que $\sqrt{2}$ no existe dentro de los racionales.
 
 ---
 
@@ -213,32 +213,17 @@ De los axiomas anteriores se derivan los teoremas que usamos habitualmente en in
 2. **Monotonía de la suma:** Si $a < b$, entonces $a + c < b + c$.
 3. **Monotonía del producto:** Si $a < b$ y $c > 0$, entonces $ac < bc$. (Si $c < 0$, la desigualdad se invierte: $ac > bc$).
 
-```desmos-graph
-left=-1; right=7; bottom=-0.5; top=0.6;
-width=600; height=180;
----
-y=0
-
-a=1
-b=4
-c=6
-
-(a,0)|label:a
-(b,0)|label:b
-(c,0)|label:c
-
-y=0.10 \{a<x<b\}|BLUE
-y=0.20 \{b<x<c\}|BLUE
-y=0.35 \{a<x<c\}|RED
-```
-
 > **Los axiomas de orden convierten a $\mathbb{R}$ en un campo ordenado, permitiendo el uso de desigualdades y la representación en la recta real.**
 
-**Preguntas de comprensión:**
+---
 
-1. ¿Por qué el axioma de tricotomía impide que un número sea positivo y negativo al mismo tiempo?
-2. Si multiplicamos la desigualdad $x < 5$ por $-2$, ¿cuál es el fundamento axiomático para invertir el símbolo?
-3. ¿Cómo usarías la definición formal ($b - a \in \mathbb{R}^+$) para demostrar que si $a < b$, entonces $-b < -a$?
+
+
+
+
+
+
+
 
 
 
