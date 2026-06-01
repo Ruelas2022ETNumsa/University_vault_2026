@@ -22,74 +22,17 @@ Sean $a, b, c \in \mathbb{R}$
 
 ---
 
-| Tipo                      | Ejemplo                                                                                                                     | Descripción                                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| **Clausura**              | Si tomás dos números reales y los sumás o los multiplicás, el resultado será, sin ninguna duda, otro número real.           | $a+b \in \mathbb{R}$ $a \cdot b=b \cdot a$                    |
-| **Conmutatividad**        | El orden de los números no altera el resultado, tanto en la suma como en el producto                                        | $a+b=b+a$<br> $a \cdot b=b \cdot a$                           |
-| **Asociatividad**         | La forma en que agrupamos los términos al operar con tres o más números no cambia el resultado final                        | $(a+b)+c=a+(b+c)$<br>$(a \cdot b) \cdot c=a \cdot(b \cdot c)$ |
-| **Distributividad**       | Conecta la multiplicación con la suma, permitiendo "distribuir" un factor sobre los términos de una suma                    | $a(b+c)=ab+ac$                                                |
-| **Existencia de neutros** | El sistema cuenta con dos números distintos, el **0** y el **1**. El 0 no altera la suma y el 1 no altera la multiplicación |                                                               |
+| Tipo                                | Ejemplo                                                                                                                     | Descripción                                                                                                                                     |
+| ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Clausura**                        | Si tomás dos números reales y los sumás o los multiplicás, el resultado será, sin ninguna duda, otro número real.           | $a+b \in \mathbb{R}$ <br>$a \cdot b \in \mathbb{R}$                                                                                             |
+| **Conmutatividad**                  | El orden de los números no altera el resultado, tanto en la suma como en el producto                                        | $a+b=b+a$<br> $a \cdot b=b \cdot a$                                                                                                             |
+| **Asociatividad**                   | La forma en que agrupamos los términos al operar con tres o más números no cambia el resultado final                        | $(a+b)+c=a+(b+c)$<br>$(a \cdot b) \cdot c=a \cdot(b \cdot c)$                                                                                   |
+| **Distributividad**                 | Conecta la multiplicación con la suma, permitiendo "distribuir" un factor sobre los términos de una suma                    | $a(b+c)=ab+ac$                                                                                                                                  |
+| **Existencia de neutros**           | El sistema cuenta con dos números distintos, el **0** y el **1**. El 0 no altera la suma y el 1 no altera la multiplicación | $\exists\, 0 \in \mathbb{R}$ tal que $a+0=a$ — neutro para $+$<br>$\exists\, 1 \in \mathbb{R}$ tal que $a \cdot 1=a$ — neutro para $\times$<br> |
+| **Existencia de inversos aditivos** | Todo número real x tiene un "compañero" tal que su suma es cero (x+y=0).                                                    | $\forall a \in \mathbb{R},\ \exists\, {-a} \in \mathbb{R}$ tal que $a+(-a)=0$<br>$-a$ se denomina inverso aditivo de $a$                        |
+| **Existencia del recíproco**        |                                                                                                                             |                                                                                                                                                 |
 
 
-
-1. **Clausura**
-    
-2. **Conmutatividad**
-    
-3. **Asociatividad**
-    
-4. **Existencia de neutros**
-    -  tal que  — neutro para 
-    -  tal que  — neutro para 
-5. **Existencia de inversos aditivos**
-    -  tal que 
-    -  se denomina inverso aditivo de 
-6. **Existencia de inversos multiplicativos**
-    - ,  tal que 
-    -  es el inverso multiplicativo de 
-7. **Distributividad**
----
-
-| Tipo | Ejemplo | Descripción |
-|---|---|---|
-| **Clausura** | $a+b \in \mathbb{R}$, $\;a \cdot b \in \mathbb{R}$ | Operar dos elementos del conjunto siempre da un resultado dentro del mismo conjunto |
-| Ecuación | $x^2-4=0$ | Verdadera solo para ciertos valores de $x$ |
-| Identidad | $x^2-4=(x-2)(x+2)$ | Verdadera para todo $x \in \mathbb{R}$ |
-
----
-
---- start-multi-column: alg-tipos-001
-```column-settings
-number of columns: 2
-column size: [60%, 40%]
-border: off
-```
-ff
-**Clausura** — $a+b \in \mathbb{R}$, $\;a \cdot b \in \mathbb{R}$
-Operar dos elementos del conjunto siempre produce un resultado dentro del mismo conjunto.
-
-**Ecuación** — $x^2-4=0$
-Proposición verdadera solo para ciertos valores de $x$. No es universal.
-
-**Identidad** — $x^2-4=(x-2)(x+2)$
-Verdadera para todo $x \in \mathbb{R}$. Ambos lados son equivalentes siempre.
-ff
-
---- end-column ---
-
-ee
-**Clausura**
-→ El conjunto es "cerrado" bajo esa operación.
-
-**Ecuación**
-→ Buscar los $x$ que la satisfacen.
-
-**Identidad**
-→ Herramienta de simplificación algebraica.
-ee
---- end-multi-column
-
-> **Clave:** clausura = propiedad del conjunto · ecuación = condición · identidad = equivalencia universal
 
 
 
@@ -103,63 +46,6 @@ ee
 
 
 
-
---- start-multi-column: cornell-001
-```column-settings
-number of columns: 2
-column size: [45%, 45%]
-border: off
-```
-%%## 📝 Definición formal%%
-
-1. **Clausura**
-Si tomás dos números reales y los sumás o los multiplicás, el resultado será, sin ninguna duda, otro número real.
-2. **Conmutatividad**
-	- $a+b=b+a$
-	- $a \cdot b=b \cdot a$
-3. **Asociatividad**
-	- $(a+b)+c=a+(b+c)$
-	- $(a \cdot b) \cdot c=a \cdot(b \cdot c)$
-4. **Existencia de neutros**
-	- $\exists\, 0 \in \mathbb{R}$ tal que $a+0=a$ — neutro para $+$
-	- $\exists\, 1 \in \mathbb{R}$ tal que $a \cdot 1=a$ — neutro para $\times$
-5. **Existencia de inversos aditivos**
-	- $\forall a \in \mathbb{R},\ \exists\, {-a} \in \mathbb{R}$ tal que $a+(-a)=0$
-	- $-a$ se denomina inverso aditivo de $a$
-6. **Existencia de inversos multiplicativos**
-	- $\forall a \in \mathbb{R}\setminus\{0\}$, $\exists\, a^{-1} \in \mathbb{R}$ tal que $a \cdot a^{-1}=1$
-	- $a^{-1}=\dfrac{1}{a}$ es el inverso multiplicativo de $a$
-7. **Distributividad**
-	- $a(b+c)=ab+ac$
-
---- end-column ---
-
-%%##  Fórmulas clave%%
-
-1. 
-	- $a+b \in \mathbb{R}$
-	- $a \cdot b \in \mathbb{R}$
-
-
-2. **Conmutatividad**
-	- $a+b=b+a$
-	- $a \cdot b=b \cdot a$
-3. **Asociatividad**
-	- $(a+b)+c=a+(b+c)$
-	- $(a \cdot b) \cdot c=a \cdot(b \cdot c)$
-4. **Existencia de inversos aditivos**
-	- $\forall a \in \mathbb{R},\ \exists\, {-a} \in \mathbb{R}$ tal que $a+(-a)=0$
-	- $-a$ se denomina inverso aditivo de $a$
-5. **Existencia de inversos multiplicativos**
-	- $\forall a \in \mathbb{R}\setminus\{0\}$, $\exists\, a^{-1} \in \mathbb{R}$ tal que $a \cdot a^{-1}=1$
-	- $a^{-1}=\dfrac{1}{a}$ es el inverso multiplicativo de $a$
-6. **Distributividad**
-	- $a(b+c)=ab+ac$
-
-
---- end-multi-column
-
-> **Resumen:**
 
 
 Sean $a, b, c \in \mathbb{R}$
