@@ -87,33 +87,24 @@ Esto implica que "restar" es simplemente una forma abreviada de sumar un negativ
 
 ---
 
-## Tipos de igualdad en los números reales
+## Observaciones sobre tipos de igualdad en los números reales
 
 En el análisis matemático, es crucial distinguir entre una igualdad que simplemente compara valores, una que impone una condición y una que expresa una equivalencia estructural.
 
 Sean $a, b \in \mathbb{R}$ y $P(x), Q(x)$ expresiones algebraicas.
 
-| Tipo                  | Ejemplo                | Descripción                                                          | Alcance                                       |
-| :-------------------- | :--------------------- | :------------------------------------------------------------------- | :-------------------------------------------- |
-| **Igualdad numérica** | $2^3 = 8$              | Proposición lógica sin variables.                                    | Siempre verdadera (o falsa).                  |
-| **Ecuación**          | $x^2 - 4 = 0$          | Condición que se cumple para valores específicos de la variable.     | Verdadera solo para su **conjunto solución**. |
-| **Identidad**         | $x^2 - 4 = (x-2)(x+2)$ | Equivalencia algebraica basada en leyes de cuerpo (distributividad). | Verdadera para todo $x$ en el dominio.        |
+| Tipo                  | Ejemplo                | Descripción                            | Alcance                                       |
+| :-------------------- | :--------------------- | -------------------------------------- | :-------------------------------------------- |
+| **Igualdad numérica** | $2^3 = 8$              | Siempre verdadera                      | Siempre verdadera (o falsa).                  |
+| **Ecuación**          | $x^2 - 4 = 0$          | Verdadera solo para algunos $x$        | Verdadera solo para su **conjunto solución**. |
+| **Identidad**         | $x^2 - 4 = (x-2)(x+2)$ | Verdadera para todo $x \in \mathbb{R}$ | Verdadera para todo $x$ en el dominio.        |
 
 
 
-
-
-## Observaciones sobre tipos de igualdad
-
-| Tipo              | Ejemplo            | Descripción                            |
-| ----------------- | ------------------ | -------------------------------------- |
-| Igualdad numérica | $2^3=8$            | Siempre verdadera                      |
-| Ecuación          | $x^2-4=0$          | Verdadera solo para algunos $x$        |
-| Identidad         | $x^2-4=(x-2)(x+2)$ | Verdadera para todo $x \in \mathbb{R}$ |
-**Principio de Sustitución:** Si dos números son iguales, uno puede ser reemplazado por el otro en cualquier expresión matemática sin alterar su valor de verdad.
 
 ---
 ## Teoremas básicos
+Los **teoremas básicos de los números reales** no son reglas arbitrarias, sino consecuencias lógicas que se derivan de los axiomas de cuerpo, orden y completitud; Son "leyes establecidas" que garantizan que el álgebra y el cálculo funcionen siempre igual.
 
 Sean $a, b, c, x \in \mathbb{R}$
 
