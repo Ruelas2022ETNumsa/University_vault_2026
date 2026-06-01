@@ -129,3 +129,15 @@ b=3.2
 1. ¿Por qué el conjunto de los números naturales **no** tiene clausura bajo la resta? (Pensá en el resultado de $2 - 5$).
 2. Si intentamos dividir un número real por $0$, ¿por qué esto no se considera una falla de la "clausura", sino una operación no definida?
 3. ¿Cómo ayuda la propiedad de clausura a un ingeniero al momento de asegurar que un sistema de ecuaciones reales tendrá soluciones dentro del mismo campo?
+
+
+desmo-graph
+```desmos-graph
+```
+
+
+
+
+
+
+``
