@@ -132,6 +132,8 @@ tricotom
 total
 tenga
 tengas
+tramos
+tramo
 ToDo
 Templater
 Text
@@ -204,6 +206,7 @@ Transcendental
 Teorema
 Tricotom
 Triangular
+TRAMOS
 Sistema
 Sync
 Save
@@ -624,6 +627,7 @@ Vladimir
 Visto
 Version
 Visible
+VALORES
 galaxy
 gina
 genes
@@ -1020,6 +1024,8 @@ vas
 viene
 voca
 viceversa
+vale
+variables
 audience
 activo
 auto
@@ -2213,6 +2219,8 @@ Ingenier
 In
 Images
 Index
+INTERVALOS
+Intenci
 Funci
 File
 Fase
@@ -2262,6 +2270,7 @@ Functions
 Finney
 Formalmente
 Formal
+Funciones
 Estado
 Excalidraw
 EPUBs
@@ -2729,6 +2738,7 @@ positivos
 partir
 primitivo
 positiva
+poner
 min
 mica
 movimiento
@@ -3164,6 +3174,9 @@ explica
 escribo
 evaluar
 ellos
+escapadas
+escalonada
+etiquetar
 Motor
 Media
 Mantiene
@@ -3512,6 +3525,7 @@ iguales
 irracional
 igualarse
 igualdades
+intervalos
 Dependencia
 Dropbox
 Dataview

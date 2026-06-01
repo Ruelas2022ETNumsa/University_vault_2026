@@ -6,6 +6,7 @@ tool: desmos-plugin
 audience: [usuario, notebooklm, claude]
 tags: [beacon, desmos, infraestructura]
 date_created: 2026-01-01
+date_updated: 2026-06-01
 status: activo
 ---
 
@@ -354,6 +355,84 @@ y<\sqrt{x}|y>x|0<=x<=1|#b2f2bb
 
 ---
 
+## N10. FUNCIONES POR TRAMOS Y VALORES EN INTERVALOS
+
+### ⚠️ Sintaxis web `{intervalo: valor}` NO funciona en el plugin
+
+Desmos web acepta `{a<x<b: 0.2}` para definir una función que vale 0.2 en ese intervalo. **El plugin de Obsidian no soporta esta sintaxis** — el bloque se renderiza vacío o no renderiza.
+
+**Sintaxis correcta para el plugin:** usar `y=valor \{condición\}` con las llaves escapadas:
+
+```
+y=0.10 \{a<x<b\}|BLUE
+```
+
+Las llaves `\{...\}` actúan como restricción de dominio sobre la línea `y=valor`.
+
+### Ejemplo completo — función escalonada con variables
+
+Este bloque renderiza correctamente:
+
+```
+```desmos-graph
+left=-1; right=7; bottom=-0.5; top=0.6;
+width=600; height=180;
+---
+y=0
+
+a=1
+b=4
+c=6
+
+(a,0)|label:a
+(b,0)|label:b
+(c,0)|label:c
+
+y=0.10 \{a<x<b\}|BLUE
+y=0.20 \{b<x<c\}|BLUE
+y=0.35 \{a<x<c\}|RED
+```
+```
+
+Este bloque **no renderiza** (sintaxis web):
+
+```
+```desmos-graph
+left=-2; right=8; bottom=-1; top=1;
+width=500; height=100;
+---
+y=0|BLACK
+a=1
+b=4
+c=6
+(a,0)|label:a|BLUE
+(b,0)|label:b|BLUE
+(c,0)|label:c|BLUE
+{a<x<b: 0.1}|BLUE
+{b<x<c: 0.1}|BLUE
+{a<x<c: 0.3}|label:Transitividad|RED
+```
+```
+
+### Patrón general
+
+| Intención | Sintaxis plugin (✅) | Sintaxis web (❌) |
+|-----------|---------------------|------------------|
+| Valor fijo en intervalo | `y=k \{a<x<b\}\|COLOR` | `{a<x<b: k}` |
+| Función en intervalo | `y=f(x) \{a<x<b\}\|COLOR` | `{a<x<b: f(x)}` |
+| Variable definida, valor en intervalo | `y=k \{a<x<b\}\|COLOR` con `a=1` etc. arriba | igual — no funciona |
+
+### Nota sobre etiquetas en funciones por tramos
+
+`label:` **no se puede poner en una línea de función** — solo funciona en puntos. Para etiquetar un tramo, agregar un punto con label en el centro del intervalo:
+
+```
+y=0.10 \{a<x<b\}|BLUE
+(2.5, 0.10)|label:P(A)|BLUE
+```
+
+---
+
 ## N9. CHECKLIST ANTES DE RESPONDER
 
 Antes de entregar un bloque Desmos verificar:
@@ -364,6 +443,7 @@ Antes de entregar un bloque Desmos verificar:
 - [ ] ¿Sin comentarios `//`?
 - [ ] ¿Rectángulos sombreados con las 4 condiciones `x>=|x<=|y>=|y<=`?
 - [ ] ¿Rellenos con color hexadecimal, no con nombre?
+- [ ] ¿Funciones por tramos usan `y=k \{a<x<b\}` y NO `{a<x<b: k}`?
 
 ---
 
@@ -390,6 +470,7 @@ Estas reglas no tienen excepciones. Cualquier bloque que las viole debe corregir
 | Pi con `\pi` | `y=\frac{1}{\pi}` | `y=1/pi` |
 | Restricciones de líneas con dominio | `y=x\|0<=x<=2\|BLUE` | `y=x\|BLUE` (se desborda) |
 | Rellenos con hex, no nombre | `\|#a5d8ff` | `\|BLUE` (saturado) |
+| Funciones por tramos / valores en intervalos | `y=0.10 \{a<x<b\}\|BLUE` | `{a<x<b: 0.10}` (sintaxis web — no funciona en el plugin) |
 
 ---
 
