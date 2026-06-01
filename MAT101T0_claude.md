@@ -14,7 +14,7 @@ status: activo
 ---
 
 # Números reales y desigualdades
-
+---
 ## Axiomas de cuerpo de los números reales
 Los axiomas de cuerpo son el conjunto de reglas fundamentales que definen cómo operan la adición y la multiplicación en el sistema de los números reales.
 
@@ -29,7 +29,6 @@ Sean $a, b, c \in \mathbb{R}$
 |  5  | **Elemento neutro**        | El 0 es neutro aditivo;<br>el 1 es neutro multiplicativo     | $a+0=a$<br>$a\cdot 1=a$                                    | $\exists!\, 0 \in \mathbb{R}: a+0=a$<br>$\wedge\ \exists!\, 1 \in \mathbb{R}: a\cdot 1=a$          |
 |  6  | **Inverso aditivo**        | Todo real tiene un opuesto<br>que produce el neutro 0        | $a+(-a)=0$                                                 | $\forall\, a \in \mathbb{R},\ \exists\,{-a} \in \mathbb{R}:$<br>$a+(-a)=0$                         |
 |  7  | **Inverso multiplicativo** | Todo real no nulo tiene un recíproco que produce el neutro 1 | $a \cdot a^{-1}=1,\quad a \neq 0$<br>$a^{-1}=\dfrac{1}{a}$ | $\forall\, a \in \mathbb{R}\setminus\{0\},\ \exists\, a^{-1} \in \mathbb{R}:$<br>$a\cdot a^{-1}=1$ |
-
 **Los axiomas de cuerpo garantizan la consistencia aritmética y permiten la existencia unívoca de las operaciones de sustracción y división en** $\mathbb{R}$.
 
 ---
@@ -73,11 +72,11 @@ La resta y la división no se definen como operaciones primarias o independiente
 | :---------------------- | :-------------------------------------------------------- | :-------------------- | :------------------------------------------------------------------- |
 | **Resta** (Sustracción) | Es el número único $x$ tal que $a + x = b$.               | $b - a$               | Es la suma de $b$ con el **opuesto** de $a$: $b + (-a)$.             |
 | **División**            | Es el número único $x$ tal que $ax = b$, para $a \neq 0$. | $b/a$ o $\frac{b}{a}$ | Es el producto de $b$ por el **recíproco** de $a$: $b \cdot a^{-1}$. |
-
 ### Conexión con los Axiomas
 
-- **La resta** es posible porque el axioma del **inverso aditivo** asegura que para todo $a$ existe $-a$. Restar es sumar el opuesto: $a-b=a+(-b)$.
+- **La resta** es posible porque el axioma del **inverso aditivo** asegura que para todo $a$ existe $-a$. Restar es sumar el opuesto: $a+(-a)=0$.
 - **La división** es posible porque el axioma del **inverso multiplicativo** asegura que para todo $a\neq 0$ existe $a^{-1}$. Dividir es multiplicar por el recíproco: $\dfrac{a}{b}=a\cdot b^{-1},\quad b\neq 0$.
+
 
 ---
 
@@ -94,77 +93,6 @@ Sean $a, b \in \mathbb{R}$ y $P(x), Q(x)$ expresiones algebraicas.
 | **Identidad**         | $x^2 - 4 = (x-2)(x+2)$ | Verdadera para todo $x \in \mathbb{R}$ | Verdadera para todo $x$ en el dominio.        |
 
 ---
-## Teoremas básicos
-Los **teoremas básicos de los números reales** no son reglas arbitrarias, sino consecuencias lógicas que se derivan de los axiomas de cuerpo, orden y completitud; Son "leyes establecidas" que garantizan que el álgebra y el cálculo funcionen siempre igual.
-
-Sean $a, b, c, x \in \mathbb{R}$
-
-### 1. Teoremas Algebraicos (Derivados de los Axiomas de Cuerpo)
-Estos aseguran la consistencia de las operaciones básicas. Sean $a, b, c \in \mathbb{R}$:
-
-| **Teorema**                    | **Enunciado**                                                                                                           | **Notación**                                                                                          |
-| ------------------------------ | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| **Leyes de simplificación**    | Si a dos expresiones iguales se les suma (o multiplica por) el mismo valor, los términos restantes son iguales.         | $a+c=b+c \Rightarrow a=b$<br>$ac=bc\ \wedge\ c\neq 0 \Rightarrow a=b$                            |
-| **Unicidad de elementos**      | El neutro aditivo $0$, el neutro multiplicativo $1$, el opuesto $-a$ y el recíproco $a^{-1}$ son únicos para cada $a$. | $\exists!\,0: a+0=a$<br>$\exists!\,1: a\cdot 1=a$                                                  |
-| **Solución única de ecuación** | Toda ecuación lineal $a+x=b$ o $ax=b$ tiene exactamente una solución real.                                              | $a+x=b \Rightarrow x=b-a$<br>$ax=b\ \wedge\ a\neq 0 \Rightarrow x=\dfrac{b}{a}$                 |
-| **Producto por cero**          | Multiplicar cualquier número por cero produce cero.                                                                     | $a\cdot 0=0$                                                                                         |
-| **Regla del producto nulo**    | Si un producto es cero, al menos uno de los factores es cero; y viceversa.                                              | $a\cdot b=0 \Rightarrow (a=0\ \vee\ b=0)$                                                          |
-| **Leyes de los signos**        | El producto de dos negativos es positivo; negar una diferencia invierte el orden.                                       | $(-a)(-b)=ab$<br>$a(-b)=-(ab)$<br>$-(-a)=a$<br>$-(a-b)=b-a$                                         |
-| **Suma de fracciones**         | Fracciones con igual denominador se suman combinando los numeradores.                                                   | $\dfrac{a}{b}+\dfrac{c}{b}=\dfrac{a+c}{b},\quad b\neq 0$                                          |
-
-La **regla del producto nulo** es especialmente importante en la práctica: es el fundamento de resolver ecuaciones por factorización. Si se logra escribir una expresión como un producto igual a cero, cada factor puede igualarse a cero por separado.
-
----
-
-### 2. Teoremas de Desigualdad (Derivados de los Axiomas de Orden)
-Establecen cómo se comporta el orden en la recta numérica:
-
-| **Teorema**                  | **Enunciado**                                                                                         | **Notación**                                                         |
-| ---------------------------- | ----------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| **Transitividad**            | Si $a < b$ y $b < c$, entonces $a < c$                                                                | $a<b\ \wedge\ b<c \Rightarrow a<c$                                   |
-| **Tricotomía**               | Entre dos reales, exactamente una de tres es verdadera                                                | $a<b\ \vee\ a=b\ \vee\ a>b$                                          |
-| **Monotonía aditiva**        | Sumar el mismo número a ambos lados conserva la desigualdad                                           | $a<b \Rightarrow a+c < b+c$                                          |
-| **Monotonía multiplicativa** | Multiplicar por un positivo conserva; multiplicar por un negativo invierte                            | $a<b\ \wedge\ c>0 \Rightarrow ac<bc$<br>$a<b\ \wedge\ c<0 \Rightarrow ac>bc$ |
-| **Cuadrados no negativos**   | Para todo real no nulo, su cuadrado es positivo                                                       | $a \neq 0 \Rightarrow a^2>0$                                         |
-
-La tricotomía es lo que hace que la recta real sea un **orden total**: no existen dos reales que no sean comparables. La monotonía multiplicativa con negativos explica por qué al multiplicar o dividir por un número negativo en una desigualdad se debe invertir el signo.
-
----
-
-### 3. Teoremas de Valor Absoluto
-El valor absoluto $|x|$ mide la distancia del número $x$ al origen en la recta real:
-
-| **Teorema**                    | **Enunciado**                                                                 | **Notación**                                    |
-| ------------------------------ | ----------------------------------------------------------------------------- | ----------------------------------------------- |
-| **No negatividad**             | El valor absoluto nunca es negativo                                           | $|a| \geq 0$                                    |
-| **Definición por casos**       | Es el propio número si es positivo; su opuesto si es negativo                 | $|a|=a$ si $a\geq 0$; $|a|=-a$ si $a<0$         |
-| **Simetría**                   | El valor absoluto de un número y su opuesto son iguales                       | $|-a|=|a|$                                      |
-| **Producto**                   | El valor absoluto de un producto es el producto de los valores absolutos       | $|ab|=|a|\cdot|b|$                              |
-| **Desigualdad triangular**     | La distancia de una suma no supera la suma de las distancias individuales      | $|a+b| \leq |a|+|b|$                            |
-
-La **desigualdad triangular** es el resultado más importante de esta sección y reaparece en cálculo, análisis y geometría. Su nombre viene de que en un triángulo, la longitud de un lado nunca supera la suma de los otros dos.
-
----
-
-### 4. Teoremas de Estructura y Completitud
-Son los que distinguen a $\mathbb{R}$ de otros sistemas numéricos como $\mathbb{Q}$:
-
-| **Teorema**                   | **Enunciado**                                                                                     | **Notación**                                              |
-| ----------------------------- | ------------------------------------------------------------------------------------------------- | --------------------------------------------------------- |
-| **Propiedad Arquimediana**    | Para cualquier real $x$, existe un entero $n$ mayor que él                                        | $\forall\, x \in \mathbb{R},\ \exists\, n \in \mathbb{Z}: n>x$ |
-| **Densidad de $\mathbb{Q}$**  | Entre dos reales distintos siempre existe un racional                                             | $a<b \Rightarrow \exists\, r \in \mathbb{Q}: a<r<b$        |
-| **Densidad de irracionales**  | Entre dos reales distintos siempre existe un irracional                                           | $a<b \Rightarrow \exists\, x \notin \mathbb{Q}: a<x<b$    |
-| **Axioma del Supremo**        | Todo subconjunto no vacío de $\mathbb{R}$ acotado superiormente tiene supremo en $\mathbb{R}$     | $\exists\, \sup S \in \mathbb{R}$                          |
-
-El **Axioma del Supremo** (o axioma de completitud) es lo que hace que $\mathbb{R}$ no tenga "huecos". Los racionales $\mathbb{Q}$ no lo cumplen: el conjunto $\{x \in \mathbb{Q} : x^2 < 2\}$ no tiene supremo en $\mathbb{Q}$, lo que significa que $\sqrt{2}$ no existe dentro de los racionales.
-
-%%
-galaxy-links
-
-%%
-
-
-
 ## Teoremas básicos
 
 Los **teoremas básicos de los números reales** no son reglas arbitrarias, sino consecuencias lógicas que se derivan de los axiomas de cuerpo, orden y completitud. Son "leyes establecidas" que garantizan que el álgebra y el cálculo funcionen siempre igual.
@@ -228,6 +156,26 @@ Son los que distinguen a $\mathbb{R}$ de otros sistemas como $\mathbb{Q}$:
 El **Axioma del Supremo** es lo que hace que $\mathbb{R}$ no tenga "huecos". Los racionales $\mathbb{Q}$ no lo cumplen: el conjunto $\{x\in\mathbb{Q}: x^2<2\}$ no tiene supremo en $\mathbb{Q}$, lo que significa que $\sqrt{2}$ no existe dentro de los racionales.
 
 
----
 
-Esto es solo la sección de teoremas, nada más. Cuando lo tengas revisado me dices y lo escribo directamente en el archivo.
+Teoremas sobre numeros reales
+1. $a+b=a+c \rightarrow b=c$
+2. $(a \cdot b=a \cdot c) \wedge a \neq 0 \Rightarrow b=c$
+3. $a+x=b \Rightarrow x=b-a$
+4. $(a \cdot x=b) \wedge a \neq 0 \Rightarrow x=\dfrac{b}{a}$
+5. $a \cdot 0=0$
+6. $a \cdot b=0 \Rightarrow (a=0 \vee b=0)$
+7. $a=b \Rightarrow -a=-b$
+8. $a(-b)=-(ab)$
+9. $(-a)(-b)=ab$
+10. $\dfrac{a}{b}+\dfrac{c}{b}=\dfrac{a+c}{b},\quad b \neq 0$
+
+
+
+
+
+%%
+galaxy-links
+
+%%
+
+
