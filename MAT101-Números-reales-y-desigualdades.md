@@ -111,22 +111,23 @@ Sean $a, b, c, x \in \mathbb{R}$
 ### 1. Teoremas Algebraicos (Derivados de los Axiomas de Cuerpo)
 Estos aseguran la consistencia de las operaciones básicas:
 
-| **Teorema**                 |                                 |                                                               |
-| --------------------------- | ------------------------------- | ------------------------------------------------------------- |
-| **Leyes de simplificación** | $a+b=a+c$ <br>$\Rightarrow b=c$ | $(a \cdot b=a \cdot c) \wedge a \neq 0$ <br>$\Rightarrow b=c$ |
-| **Unicidad de elementos**   | $a-b=a+(-b)$                    |                                                               |
-| **Regla del producto nulo** |                                 |                                                               |
-| **Leyes de los signos**     |                                 |                                                               |
-
-- **Resta** 
-	$a-b=a+(-b)$
-- **División**
-	$\dfrac{a}{b}=a \cdot \dfrac{1}{b}=a \cdot b^{-1},\quad b \neq 0$
+| **Teorema**                 |                                          |                                                                     |
+| --------------------------- | ---------------------------------------- | ------------------------------------------------------------------- |
+| **Leyes de simplificación** | $a+b=a+c$ <br>$\Rightarrow b=c$          | $(a \cdot b=a \cdot c) \wedge a \neq 0$ <br>$\Rightarrow b=c$       |
+| **Unicidad de elementos**   | $a-a=0$                                  | $\dfrac{a}{a}=1 \cdot \dfrac{1}{a}=a \cdot a^{-1}=1,\quad a \neq 0$ |
+| **Regla del producto nulo** | $a \cdot b=0 \Rightarrow (a=0 \vee b=0)$ | .$a \cdot 0=0$                                                      |
+| **Leyes de los signos**     | $(-a)(-b)=ab$                            | $-(a-b)=b-a$                                                        |
 
 - **Leyes de simplificación:** Si $a + c = b + c$, entonces $a = b$. En la multiplicación, si $ac = bc$ y $c \neq 0$, entonces $a = b$.
 - **Unicidad de elementos:** El elemento neutro ($0$ y $1$) y los elementos inversos (opuesto $-a$ y recíproco $1/a$) son únicos para cada número.
 - **Regla del producto nulo:** El producto de cualquier número por cero es cero ($a \cdot 0 = 0$). Además, si $ab = 0$, entonces $a = 0$ o $b = 0$.
 - **Leyes de los signos:** Por ejemplo, $(-a)(-b) = ab$ y $-(a-b) = b-a$.
+
+
+
+
+
+
 
 
 
