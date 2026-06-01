@@ -25,7 +25,7 @@ Sean $a, b, c \in \mathbb{R}$
 |  1  | **Clausura**               | Operar dos reales siempre<br>produce un real                 | $a+b \in \mathbb{R}$<br>$a \cdot b \in \mathbb{R}$         | $\forall\, a,b \in \mathbb{R}:$<br>$a+b \in \mathbb{R}\ \wedge\ a \cdot b \in \mathbb{R}$          |
 |  2  | **Conmutatividad**         | El orden de los operandos<br>no altera el resultado          | $a+b=b+a$<br>$a \cdot b=b \cdot a$                         | $\forall\, a,b \in \mathbb{R}:$<br>$a+b=b+a\ \wedge\ a \cdot b=b \cdot a$                          |
 |  3  | **Asociatividad**          | El agrupamiento no altera<br>el resultado                    | $(a+b)+c=a+(b+c)$<br>$(ab)\,c=a\,(bc)$                     | $\forall\, a,b,c \in \mathbb{R}:$<br>$(a+b)+c=a+(b+c)$<br>$\wedge\ (ab)c=a(bc)$                    |
-|  4  | **Distributividad**        | La multiplicación se <br>distribuye sobre la suma            | $a(b+c)=ab+ac$                                             | $\forall\, a,b,c \in \mathbb{R}:$<br>$a(b+c)=ab+ac$                                                |
+|  4  | **Distributividad**        | La multiplicación se<br>distribuye sobre la suma            | $a(b+c)=ab+ac$                                             | $\forall\, a,b,c \in \mathbb{R}:$<br>$a(b+c)=ab+ac$                                                |
 |  5  | **Elemento neutro**        | El 0 es neutro aditivo;<br>el 1 es neutro multiplicativo     | $a+0=a$<br>$a\cdot 1=a$                                    | $\exists!\, 0 \in \mathbb{R}: a+0=a$<br>$\wedge\ \exists!\, 1 \in \mathbb{R}: a\cdot 1=a$          |
 |  6  | **Inverso aditivo**        | Todo real tiene un opuesto<br>que produce el neutro 0        | $a+(-a)=0$                                                 | $\forall\, a \in \mathbb{R},\ \exists\,{-a} \in \mathbb{R}:$<br>$a+(-a)=0$                         |
 |  7  | **Inverso multiplicativo** | Todo real no nulo tiene un recíproco que produce el neutro 1 | $a \cdot a^{-1}=1,\quad a \neq 0$<br>$a^{-1}=\dfrac{1}{a}$ | $\forall\, a \in \mathbb{R}\setminus\{0\},\ \exists\, a^{-1} \in \mathbb{R}:$<br>$a\cdot a^{-1}=1$ |
@@ -166,7 +166,7 @@ El **Axioma del Supremo** es lo que hace que $\mathbb{R}$ no tenga "huecos". Los
 Tabla de referencia rápida con los teoremas más operativos: los que aparecen al resolver ejercicios, simplificar expresiones y trabajar con fracciones. Sean $a, b, c, d \in \mathbb{R}$.
 
 | **#** | **Nombre**                        | **Notación**                                                   |
-| :---: | --------------------------------- | -------------------------------------------------------------- |
+|:-----:| --------------------------------- | -------------------------------------------------------------- |
 |   1   | Cancelación aditiva               | $a+c=b+c \Rightarrow a=b$                                      |
 |   2   | Cancelación multiplicativa        | $ac=bc\ \wedge\ c\neq 0 \Rightarrow a=b$                       |
 |   3   | Solución única aditiva            | $a+x=b \Rightarrow x=b-a$                                      |
@@ -179,7 +179,7 @@ Tabla de referencia rápida con los teoremas más operativos: los que aparecen a
 |  10   | Fracciones — igual denominador    | $\dfrac{a}{b}+\dfrac{c}{b}=\dfrac{a+c}{b},\quad b\neq 0$       |
 |  11   | Fracciones — distinto denominador | $\dfrac{a}{b}+\dfrac{c}{d}=\dfrac{ad+cb}{bd},\quad b,d\neq 0$  |
 |  12   | Producto de fracciones            | $\dfrac{a}{b}\cdot\dfrac{c}{d}=\dfrac{ac}{bd},\quad b,d\neq 0$ |
-| 13    | División de fracciones            | $\dfrac{a/b}{c/d}=\dfrac{ad}{cb},\quad b,c,d\neq 0$               |
+|  13   | División de fracciones            | $\dfrac{a/b}{c/d}=\dfrac{ad}{cb},\quad b,c,d\neq 0$            |
 
 ---
 
@@ -212,21 +212,6 @@ De los axiomas anteriores se derivan los teoremas que usamos habitualmente en in
 2. **Monotonía de la suma:** Si $a < b$, entonces $a + c < b + c$.
 3. **Monotonía del producto:** Si $a < b$ y $c > 0$, entonces $ac < bc$. (Si $c < 0$, la desigualdad se invierte: $ac > bc$).
 
-```desmos-graph
-left=-2; right=8; bottom=-1; top=1;
-width=500; height=100;
----
-y=0|BLACK
-a=1
-b=4
-c=6
-(a,0)|label:a|BLUE
-(b,0)|label:b|BLUE
-(c,0)|label:c|BLUE
-{a<x<b: 0.1}|BLUE
-{b<x<c: 0.1}|BLUE
-{a<x<c: 0.3}|label:Transitividad a < b y b < c implica a < c|RED
-```
 
 
 ```desmos-graph
