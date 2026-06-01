@@ -16,6 +16,29 @@ status: activo
 # Números reales y desigualdades
 
 ## Axiomas de cuerpo de los números reales
+Los axiomas de cuerpo son el conjunto de reglas fundamentales que definen cómo operan la adición y la multiplicación en el sistema de los números reales.
+
+--- start-multi-column: cornell-001
+```column-settings
+number of columns: 2
+column size: [50%, 45%]
+border: off
+```
+
+## 📝 Apuntes
+
+
+
+--- end-column ---
+
+## ❓ Preguntas
+
+
+
+--- end-multi-column
+
+> **Resumen:**
+
 
 Sean $a, b, c \in \mathbb{R}$
 
