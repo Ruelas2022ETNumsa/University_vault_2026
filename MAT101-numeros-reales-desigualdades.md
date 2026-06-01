@@ -25,7 +25,7 @@ column size: [45%, 45%]
 border: off
 ```
 
-## 📝 Apuntes
+## 📝 Definición formal
 Sean $a, b, c \in \mathbb{R}$
 1. **Clausura**
 	- $a+b \in \mathbb{R}$
@@ -50,7 +50,7 @@ Sean $a, b, c \in \mathbb{R}$
 
 --- end-column ---
 
-## ❓ Preguntas
+##  Fórmulas clave
 sadsadasdadasdas
 asdsad
 asdasd
