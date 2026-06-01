@@ -301,6 +301,7 @@ System
 Sustracci
 Sumar
 Supremo
+Signo
 Plugins
 Pendientes
 Plugin
@@ -589,6 +590,7 @@ distancias
 distinguen
 demostrar
 dices
+dc
 Vault
 Verificar
 Variables
@@ -743,6 +745,12 @@ bas
 bueno
 bibliogr
 below
+bc
+bac
+baax
+bd
+bdad
+bdac
 scope
 status
 selector
@@ -1242,6 +1250,11 @@ agrupar
 acotado
 aditiva
 absolutos
+aa
+ax
+ad
+acbd
+adcb
 related
 recomendados
 ribbon
@@ -1902,6 +1915,9 @@ comparables
 cumplen
 combinando
 constantemente
+cb
+cbbd
+cbad
 updated
 un
 universo
@@ -2127,6 +2143,7 @@ Consistente
 Cuadrados
 Continuidad
 Completitud
+Cancelaci
 Instalados
 Instalado
 Instalar
@@ -3928,6 +3945,8 @@ oficiales
 ordenados
 ocurrir
 origen
+operativos
+opuestos
 junto
 json
 jer
