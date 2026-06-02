@@ -136,6 +136,9 @@ tramos
 tramo
 terciaria
 tambien
+tomar
+tras
+transitiva
 ToDo
 Templater
 Text
@@ -209,6 +212,7 @@ Teorema
 Tricotom
 Triangular
 TRAMOS
+Transitiva
 Sistema
 Sync
 Save
@@ -307,6 +311,8 @@ Sustracci
 Sumar
 Supremo
 Signo
+Schwarz
+Seg
 Plugins
 Pendientes
 Plugin
@@ -402,6 +408,8 @@ Papoulis
 Paper
 Propiedades
 Principio
+Podemos
+Positivo
 del
 date
 de
@@ -606,6 +614,8 @@ distinci
 detectar
 dejo
 duplicado
+dictan
+demostraciones
 Vault
 Verificar
 Variables
@@ -975,6 +985,11 @@ subconjunto
 suman
 saturados
 sombreadas
+sumamos
+sentido
+segura
+sigan
+sabemos
 vault
 vil
 ver
@@ -1045,6 +1060,9 @@ variables
 versiones
 vere
 ves
+validez
+vital
+vectoriales
 audience
 activo
 auto
@@ -1293,6 +1311,7 @@ ahi
 asi
 aun
 ahora
+asegurando
 related
 recomendados
 ribbon
@@ -1489,6 +1508,10 @@ renderizarse
 reviso
 renumerado
 realidad
+regida
+realizar
+resultando
+representar
 notes
 notas
 nuevas
@@ -1595,6 +1618,7 @@ numeradores
 nos
 notebook
 noto
+noci
 created
 commit
 cada
@@ -1983,6 +2007,9 @@ convirti
 cambiar
 consecutivos
 corrijo
+comparaciones
+concluir
+continuidad
 updated
 un
 universo
@@ -2055,6 +2082,7 @@ GENERALES
 George
 Gobiernan
 Gracias
+Geom
 Convenci
 Creaci
 Commander
@@ -2212,6 +2240,7 @@ Cuadrados
 Continuidad
 Completitud
 Cancelaci
+Cauchy
 Instalados
 Instalado
 Instalar
@@ -2271,6 +2300,7 @@ Images
 Index
 INTERVALOS
 Intenci
+Inversos
 Funci
 File
 Fase
@@ -2321,6 +2351,7 @@ Finney
 Formalmente
 Formal
 Funciones
+Fundamental
 Estado
 Excalidraw
 EPUBs
@@ -2477,6 +2508,7 @@ One
 Operar
 Office
 Operaci
+Operativas
 Auto
 Annotator
 Autocompletado
@@ -2576,6 +2608,7 @@ Absoluto
 Arquimediana
 Adici
 Ahora
+Aritm
 push
 pull
 para
@@ -2797,6 +2830,8 @@ pastel
 prefiero
 proteger
 placeholders
+procos
+posiciones
 min
 mica
 movimiento
@@ -2951,6 +2986,8 @@ me
 manipular
 multiplicamos
 menciona
+magnitud
+media
 YAML
 Ya
 You
@@ -2991,6 +3028,7 @@ Bitsadze
 Book
 BM
 Buen
+Bernoulli
 en
 exacta
 escaneados
@@ -3242,6 +3280,9 @@ evitarlos
 ejecutaron
 efectivamente
 eliminaci
+estimaciones
+elevado
+excede
 Motor
 Media
 Mantiene
@@ -3303,6 +3344,8 @@ Multiplicar
 Multiplicaci
 Menor
 Mayor
+Multiplicativos
+Medias
 Lectura
 LaTeX
 Linter
@@ -3441,6 +3484,7 @@ leyes
 longitud
 logra
 llamado
+lidas
 incluyendo
 im
 instalar
@@ -3593,6 +3637,9 @@ igualdades
 intervalos
 irelevante
 identificadores
+inecuaci
+invierten
+indispensable
 Dependencia
 Dropbox
 Dataview
@@ -3891,6 +3938,8 @@ formalmente
 formatos
 fijos
 frontera
+fundamentan
+frecuentemente
 haya
 hace
 hacer
@@ -3966,6 +4015,7 @@ UN
 USAR
 Usado
 Unicidad
+Utilizadas
 Nombre
 Notas
 No
@@ -3999,6 +4049,9 @@ Negar
 Naranja
 Negro
 NUNCA
+Negativo
+Notables
+Negativos
 originales
 observatory
 oficial
@@ -4067,6 +4120,8 @@ operativos
 opuestos
 ordenado
 optimo
+observa
+optimizaci
 junto
 json
 jer

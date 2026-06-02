@@ -225,20 +225,6 @@ Podemos agrupar estos teoremas en tres categorías fundamentales, si $a,b,c,x \i
 
 ### 1. Teoremas de Orden (Reglas Operativas)
 
-Estas son las leyes que dictan cómo manipular una inecuación sin alterar su validez:
-
-- **Propiedad de Tricotomía:** Para cualquier par de números reales $a$ y $b$, se cumple una y solo una de estas relaciones: $a < b$, $b < a$ o $a = b$.
-- **Transitividad:** Si un número es menor que un segundo, y este es menor que un tercero, el primero es menor que el tercero ($a < b \wedge b < c \implies a < c$).
-- **Monotonía de la Suma:** Si sumamos el mismo número $c$ a ambos lados de una desigualdad, el sentido de la misma se mantiene ($a < b \implies a + c < b + c$).
-- **Monotonía del Producto:**
-    - Si multiplicamos por un **positivo** ($c > 0$), el sentido se mantiene ($ac < bc$).
-    - Si multiplicamos por un **negativo** ($c < 0$), el sentido de la desigualdad **se invierte** ($ac > bc$).
-- **Inversos Multiplicativos:** Si $a$ y $b$ son ambos positivos (o ambos negativos), entonces al tomar recíprocos el orden se invierte: $a < b \implies 1/b < 1/a$.
-
-
-
-## Teoremas de Orden (Reglas Operativas)
-
 Los teoremas de orden son consecuencias lógicas de los axiomas de orden de los números reales. Estas reglas permiten manipular desigualdades de forma segura en el álgebra y el cálculo, asegurando que las comparaciones de magnitud entre números sigan siendo válidas tras realizar operaciones.
 
 Sean $a, b, c, x \in \mathbb{R}$:
@@ -253,14 +239,9 @@ Sean $a, b, c, x \in \mathbb{R}$:
 |  6  | **Teorema de Cuadrados**     | El cuadrado de cualquier número real no<br>nulo es siempre positivo.                       | $a \neq 0 \Rightarrow a^2 > 0$                    | $\forall a \in \mathbb{R}, a \neq 0 : a^2 > 0$                |
 |  7  | **Inversos Multiplicativos** | Si dos números tienen el mismo signo, sus<br>recíprocos invierten el orden.                | $0 < a < b \Rightarrow \frac{1}{b} < \frac{1}{a}$ | $0 < a < b \implies a^{-1} > b^{-1}$                          |
   
-
-
-
-
-
 ```desmos-graph
-left=-5; right=5; bottom=-2; top=6;
-width=500; height=300;
+left=-3; right=3; bottom=-1; top=3;
+width=350; height=150;
 ---
 y=x^2|#2d70b3
 y=0|#000000
@@ -270,8 +251,8 @@ b=2.5
 c=-1
 (a,a^2)|#c74440
 (b,b^2)|#c74440
-{a<x<b: 0}|#fa7e19
-{c*b<x<c*a: 0}|#388c46
+\{a<x<b: 0\}|#fa7e19
+\{c*b<x<c*a: 0\}|#388c46
 (a,0)|label:a|#000000
 (b,0)|label:b|#000000
 (c*a,0)|label:ca|#388c46
@@ -281,15 +262,6 @@ c=-1
 _En el gráfico: La curva azul ($y=x^2$) ilustra que cualquier número real elevado al cuadrado resulta en un valor no negativo. En el eje $x$, se observa cómo si $a < b$, al multiplicar por $c = -1$, las posiciones se invierten resultando en $cb < ca$._
 
 > **Los teoremas de orden permiten la resolución de inecuaciones y fundamentan la noción de distancia en la recta real.**
-
-**Preguntas de comprensión:**
-
-1. ¿Por qué el teorema del producto por negativo es crucial al resolver una inecuación como $-2x < 10$?
-2. ¿Cómo garantiza la propiedad transitiva que podamos organizar a todos los números reales en una sola línea recta?
-3. Si sabemos que $x^2 > 0$ para todo $x \neq 0$, ¿qué podemos concluir sobre la existencia de raíces reales para números negativos?
-
-
-
 
 ### 2. Teoremas de Valor Absoluto
 
