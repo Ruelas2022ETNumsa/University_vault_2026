@@ -139,6 +139,56 @@ $0+b=0+c$ //existe el negativo $a+(-a)=0$:
 
 $b=c$ //Por existencia del neutro aditivo
 
+---
+
+## Axiomas de orden de los números reales
+
+Sea $a,b \in \mathbb{R}$.
+
+1. **Clausura de los positivos**
+	Si $a,b \in \mathbb{R}^{+}$, entonces:
+	- $a+b \in \mathbb{R}^{+}$
+	- $ab \in \mathbb{R}^{+}$
+2. **Tricotomía**
+	Para todo $a\neq0$:
+	- $a\in\mathbb{R}^{+}$ ó $-a\in\mathbb{R}^{+}$
+3. **Exclusión del cero**
+	- $0\notin\mathbb{R}^{+}$
+
+> [!note]
+> Estos axiomas garantizan que el conjunto de los números reales pueda ordenarse sobre una recta numérica.
+>
+> Ejemplos:
+>
+> $4>2>1>0>-3$
+>
+> $-4<-1<1<10$
+### Notación
+- Reales positivos:
+	- $\mathbb{R}^{+}=\{x\in\mathbb{R}:x>0\}$
+- Reales negativos:
+	- $\mathbb{R}^{-}=\{x\in\mathbb{R}:x<0\}$
+
+---
+
+### Definiciones
+1. **Relación de orden**
+	- Permite comparar dos números reales y determinar cuál es mayor o menor.
+2. **Mayor que**
+	- $a>b \iff a-b\in\mathbb{R}^{+}$
+3. **Menor que**
+	- $a<b \iff b-a\in\mathbb{R}^{+}$
+4. **Mayor o igual que**
+	- $a\ge b \iff (a>b)\lor(a=b)$
+5. **Menor o igual que**
+	- $a\le b \iff (a<b)\lor(a=b)$
+6. **Positivos y negativos**
+	- $a>0 \Rightarrow a$ es positivo.
+	- $a<0 \Rightarrow a$ es negativo.
+
+
+
+
 
 ---
 ---
@@ -179,13 +229,6 @@ $b=c$ //Por existencia del neutro aditivo
 #### Regla del producto nulo
 #### Propiedades de signos
 #### Operaciones con fracciones
-
-
-
-
-
-
-
 ### Axiomas de orden de los números reales
 #### Clausura de los positivos
 #### Tricotomía
@@ -196,6 +239,14 @@ $b=c$ //Por existencia del neutro aditivo
 ##### Mayor o igual que
 ##### Menor o igual que
 ##### Positivos y negativos
+
+
+
+
+
+
+
+
 
 ### Teoremas de desigualdades e inecuaciones
 #### Tricotomía
