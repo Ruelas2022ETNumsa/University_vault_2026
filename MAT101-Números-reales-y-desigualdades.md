@@ -529,12 +529,12 @@ _En el gráfico: Se observa que en el intervalo $(0,1)$, la inecuación $x^2 < x
 
 
 
-
-
+![[MAT101-Números-reales-y-desigualdades-2026-06-02-12-47-39.png]]
+![[screenshot_03.png]]
 
 ![[screenshot_06.png]]
 
-
+![[MAT101-Números-reales-y-desigualdades-20260602124701.png]]
 
 %%
 galaxy-links

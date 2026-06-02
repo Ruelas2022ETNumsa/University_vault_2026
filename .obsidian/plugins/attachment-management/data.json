@@ -1,17 +1,22 @@
 {
   "attachPath": {
-    "attachmentRoot": "",
+    "attachmentRoot": "_assets",
     "saveAttE": "inFolderBelow",
     "attachmentPath": "_assets",
     "attachFormat": "${notename}-${date}",
     "type": "GLOBAL"
   },
-  "dateFormat": "YYYYMMDDHHmmss",
-  "excludeExtensionPattern": "",
+  "dateFormat": "dddd, MMMM Do YYYY, h:mm:ss",
+  "excludeExtensionPattern": "pdf|docx?|xlsx?|zip|rar",
   "autoRenameAttachment": true,
-  "excludedPaths": "",
-  "excludePathsArray": [],
-  "excludeSubpaths": false,
+  "excludedPaths": "_app;_pdf;_templates;borrar",
+  "excludePathsArray": [
+    "_app",
+    "_pdf",
+    "_templates",
+    "borrar"
+  ],
+  "excludeSubpaths": true,
   "originalNameStorage": [],
   "overridePath": {},
   "disableNotification": false
