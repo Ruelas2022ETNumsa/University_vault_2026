@@ -213,6 +213,7 @@ Tricotom
 Triangular
 TRAMOS
 Transitiva
+Tampoco
 Sistema
 Sync
 Save
@@ -313,6 +314,7 @@ Supremo
 Signo
 Schwarz
 Seg
+Sombrear
 Plugins
 Pendientes
 Plugin
@@ -618,6 +620,7 @@ dictan
 demostraciones
 dulo
 divisor
+definirla
 Vault
 Verificar
 Variables
@@ -652,6 +655,7 @@ Visible
 VALORES
 Voy
 Veo
+VALOR
 galaxy
 gina
 genes
@@ -715,6 +719,7 @@ garantizan
 gnitas
 gicas
 guardarlo
+graficar
 body
 beacon
 bat
@@ -1318,6 +1323,8 @@ ahora
 asegurando
 acotaciones
 aplicamos
+altura
+abs
 related
 recomendados
 ribbon
@@ -1519,6 +1526,7 @@ realizar
 resultando
 representar
 reflejan
+ricas
 notes
 notas
 nuevas
@@ -2019,6 +2027,9 @@ concluir
 continuidad
 cociente
 cuadrada
+concretas
+concretos
+cotas
 updated
 un
 universo
@@ -2092,6 +2103,7 @@ George
 Gobiernan
 Gracias
 Geom
+Graficar
 Convenci
 Creaci
 Commander
@@ -2362,6 +2374,7 @@ Formalmente
 Formal
 Funciones
 Fundamental
+Forma
 Estado
 Excalidraw
 EPUBs
@@ -2620,6 +2633,7 @@ Arquimediana
 Adici
 Ahora
 Aritm
+ABSOLUTO
 push
 pull
 para
@@ -4007,6 +4021,7 @@ quad
 quedarse
 quieras
 qued
+quer
 University
 Usar
 Un

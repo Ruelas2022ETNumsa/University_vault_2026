@@ -437,6 +437,20 @@ y=x^{1/2}|#2d70b3
 
 
 
+```desmos-graph
+left=-0.5; right=5; bottom=-0.5; top=4;
+width=500; height=300;
+---
+y=\sqrt{x}|x>=0|#2d70b3
+y=(x+1)/2|x>=0|#c74440
+y<=(x+1)/2|x>=0|#b2f2bb
+y>=\sqrt{x}|x>=0|#b2f2bb
+(0,0)|label:(0,0)|#000000
+(1,1)|label:(1,1) igualdad|#000000
+```
+
+
+
 
 ---
 
