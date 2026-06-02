@@ -616,6 +616,8 @@ dejo
 duplicado
 dictan
 demostraciones
+dulo
+divisor
 Vault
 Verificar
 Variables
@@ -990,6 +992,8 @@ sentido
 segura
 sigan
 sabemos
+sim
+semieje
 vault
 vil
 ver
@@ -1312,6 +1316,8 @@ asi
 aun
 ahora
 asegurando
+acotaciones
+aplicamos
 related
 recomendados
 ribbon
@@ -1512,6 +1518,7 @@ regida
 realizar
 resultando
 representar
+reflejan
 notes
 notas
 nuevas
@@ -2010,6 +2017,8 @@ corrijo
 comparaciones
 concluir
 continuidad
+cociente
+cuadrada
 updated
 un
 universo
@@ -2301,6 +2310,7 @@ Index
 INTERVALOS
 Intenci
 Inversos
+Intervalos
 Funci
 File
 Fase
@@ -2468,6 +2478,7 @@ Entre
 Exclusi
 Esos
 Escribo
+Estar
 Obsidian
 OmniSearch
 Ocultar
@@ -3283,6 +3294,7 @@ eliminaci
 estimaciones
 elevado
 excede
+equivale
 Motor
 Media
 Mantiene
@@ -3813,6 +3825,7 @@ Recomendar
 Recortes
 Restar
 Read
+Relaci
 Hider
 Hace
 Herramientas
