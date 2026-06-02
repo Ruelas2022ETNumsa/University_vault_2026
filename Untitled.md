@@ -102,43 +102,42 @@ Sea $a,b,c,d,x \in \mathbb{R}$.
 
 1. **Ley de cancelación aditiva**
 	- $a+b=a+c \Rightarrow b=c$
-
 2. **Ley de cancelación multiplicativa**
 	- $(a\cdot b=a\cdot c)\land a\neq0 \Rightarrow b=c$
-
 3. **Solución de ecuaciones aditivas**
 	- $a+x=b \Rightarrow x=b-a$
-
 4. **Solución de ecuaciones multiplicativas**
 	- $(a\cdot x=b)\land a\neq0 \Rightarrow x=\dfrac{b}{a}$
-
 5. **Producto por cero**
 	- $a\cdot0=0$
-
 6. **Regla del producto nulo**
 	- $a\cdot b=0 \Rightarrow (a=0 \lor b=0)$
-
 7. **Igualdad de opuestos**
 	- $a=b \Rightarrow -a=-b$
-
 8. **Producto por un negativo**
 	- $a(-b)=-(ab)$
-
 9. **Producto de negativos**
 	- $(-a)(-b)=ab$
-
 10. **Suma de fracciones con igual denominador**
 	- $\dfrac{a}{b}+\dfrac{c}{b}=\dfrac{a+c}{b}$
-
 11. **Suma de fracciones con distinto denominador**
 	- $\dfrac{a}{b}+\dfrac{c}{d}=\dfrac{ad+cb}{bd}$
-
 12. **Producto de fracciones**
 	- $\left(\dfrac{a}{b}\right)\left(\dfrac{c}{d}\right)=\dfrac{ac}{bd}$
-
 13. **División de fracciones**
 	- $\dfrac{\frac{a}{b}}{\frac{c}{d}}=\dfrac{ad}{cb}$
 
+### Demostración de la ley de cancelación aditiva
+
+Hipótesis: $a+b=a+c$
+
+$a+b+(-a)=a+c+(-a)$ //Sumando $(-a)$ a ambos lados:
+
+$(a+(-a))+b=(a+(-a))+c$ //Por asociatividad:
+
+$0+b=0+c$ //existe el negativo $a+(-a)=0$:
+
+$b=c$ //Por existencia del neutro aditivo
 
 
 
