@@ -173,11 +173,46 @@ y<ec|y>otra|#hexcolor            ← área sombreada entre curvas
 x>=a|x<=b|y>=c|y<=d|#hexcolor   ← rectángulo sombreado
 (x,y)|label:texto|COLOR          ← punto etiquetado
 f(x)=ec|hidden                   ← función oculta
+y=x \{x>=0\}|#hex               ← valor absoluto tramo positivo
+y=-x \{x<=0\}|#hex              ← valor absoluto tramo negativo
 ```
 
 ---
 
-## U10. RECURSOS
+## U10. VALOR ABSOLUTO
+
+El plugin **no soporta** `y=|x|` ni `y=abs(x)`. La única forma correcta es separar en dos tramos con `\{...\}`:
+
+```desmos-graph
+left=-5; right=5; bottom=-1; top=5;
+width=500; height=300;
+---
+y=x \{x>=0\}|#2d70b3
+y=-x \{x<=0\}|#2d70b3
+```
+
+Para sombrear la región bajo $y=|x|$ hasta una altura $a$, usar inecuaciones concretas en x e y — **no** usar `|x|` ni `abs(x)` dentro de las condiciones de relleno:
+
+```desmos-graph
+left=-5; right=5; bottom=-1; top=5;
+width=500; height=300;
+---
+y=x \{x>=0\}|#2d70b3
+y=-x \{x<=0\}|#2d70b3
+y=2|#000000|DASHED
+-2<=x<=2|y<=2|y>=0|#a5d8ff
+(-2,2)|label:(-a,a)|#c74440
+(2,2)|label:(a,a)|#c74440
+```
+
+| Lo que querés graficar   | Sintaxis plugin (✅)                          | No funciona (❌)                        |
+| ------------------------ | -------------------------------------------- | --------------------------------------- |
+| Curva $y = \|x\|$        | dos tramos `y=x \{x>=0\}` y `y=-x \{x<=0\}` | `y=\|x\|` · `y=abs(x)`                 |
+| Región bajo $y = \|x\|$  | inecuaciones concretas `a<=x<=b\|y<=cte`     | `-\|y\|<=x<=\|y\|` · `y<=abs(x)`       |
+
+---
+
+## U11. RECURSOS
 
 | Recurso           | URL                                        |
 | ----------------- | ------------------------------------------ |
@@ -330,7 +365,50 @@ No usar `y<=1|y>=0` sin las restricciones de x — Desmos extenderá el relleno 
 
 ---
 
-## N8. EJEMPLOS COMPLETOS
+## N8. VALOR ABSOLUTO — REGLA CRÍTICA
+
+El plugin **no soporta** `y=|x|` ni `y=abs(x)`. Tampoco funcionan `|x|` ni `abs(x)` dentro de condiciones de relleno.
+
+### ⚠️ Nunca generar estas formas:
+
+```desmos-graph
+y=|x|
+y=abs(x)
+-|y|<=x<=|y|
+y<=abs(x)
+```
+
+### Forma correcta — curva por tramos:
+
+```desmos-graph
+y=x \{x>=0\}|#2d70b3
+y=-x \{x<=0\}|#2d70b3
+```
+
+### Forma correcta — región bajo y=|x| hasta altura a:
+
+```desmos-graph
+left=-5; right=5; bottom=-1; top=5;
+width=500; height=300;
+---
+y=x \{x>=0\}|#2d70b3
+y=-x \{x<=0\}|#2d70b3
+y=2|#000000|DASHED
+-2<=x<=2|y<=2|y>=0|#a5d8ff
+(-2,2)|label:(-a,a)|#c74440
+(2,2)|label:(a,a)|#c74440
+```
+
+La región sombreada usa límites concretos en x e y — no referencias a `|x|`.
+
+| Intención                       | Correcto (✅)                                  | Incorrecto (❌)              |
+| ------------------------------- | --------------------------------------------- | --------------------------- |
+| Graficar y = abs(x)             | `y=x \{x>=0\}` + `y=-x \{x<=0\}`             | `y=abs(x)` · `y=\|x\|`     |
+| Sombrear región bajo y = abs(x) | inecuaciones con valores numéricos en x e y   | `-\|y\|<=x<=\|y\|`         |
+
+---
+
+## N9. EJEMPLOS COMPLETOS
 
 ### Función simple
 
@@ -382,9 +460,23 @@ y<\sqrt{x}|y>x|0<=x<=1|#b2f2bb
 (1,1)|label:(1,1)|#000000
 ```
 
+### Valor absoluto con región sombreada
+
+```desmos-graph
+left=-5; right=5; bottom=-1; top=5;
+width=500; height=300;
+---
+y=x \{x>=0\}|#2d70b3
+y=-x \{x<=0\}|#2d70b3
+y=2|#000000|DASHED
+-2<=x<=2|y<=2|y>=0|#a5d8ff
+(-2,2)|label:(-a,a)|#c74440
+(2,2)|label:(a,a)|#c74440
+```
+
 ---
 
-## N9. CHECKLIST ANTES DE RESPONDER
+## N10. CHECKLIST ANTES DE RESPONDER
 
 Antes de entregar un bloque Desmos verificar:
 - [ ] ¿Tiene `---`?
@@ -396,10 +488,11 @@ Antes de entregar un bloque Desmos verificar:
 - [ ] ¿Colores de curvas en hex (`#c74440`, `#2d70b3`, etc.) y NO nombres en mayúsculas?
 - [ ] ¿Rellenos con hex pastel (`#a5d8ff`, `#ff7b7b`, etc.)?
 - [ ] ¿Funciones por tramos usan `y=k \{a<x<b\}` y NO `{a<x<b: k}`?
+- [ ] ¿Sin `y=|x|`, `y=abs(x)` ni `|x|` en condiciones de relleno?
 
 ---
 
-## N10. FUNCIONES POR TRAMOS Y VALORES EN INTERVALOS
+## N11. FUNCIONES POR TRAMOS Y VALORES EN INTERVALOS
 
 ### ⚠️ Sintaxis web `{intervalo: valor}` NO funciona en el plugin
 
@@ -456,11 +549,11 @@ c=6
 
 ### Patrón general
 
-| Intención                              | Sintaxis plugin (✅)                        | Sintaxis web (❌)   |
-| -------------------------------------- | ------------------------------------------ | ------------------ |
-| Valor fijo en intervalo                | `y=k \{a<x<b\}\|#hex`                      | `{a<x<b: k}`       |
-| Función en intervalo                   | `y=f(x) \{a<x<b\}\|#hex`                   | `{a<x<b: f(x)}`    |
-| Variable definida, valor en intervalo  | `y=k \{a<x<b\}\|#hex` con `a=1` etc. arriba | igual — no funciona |
+| Intención                             | Sintaxis plugin (✅)                         | Sintaxis web (❌)    |
+| ------------------------------------- | ------------------------------------------- | ------------------- |
+| Valor fijo en intervalo               | `y=k \{a<x<b\}\|#hex`                       | `{a<x<b: k}`        |
+| Función en intervalo                  | `y=f(x) \{a<x<b\}\|#hex`                    | `{a<x<b: f(x)}`     |
+| Variable definida, valor en intervalo | `y=k \{a<x<b\}\|#hex` con `a=1` etc. arriba | igual — no funciona |
 
 ### Nota sobre etiquetas en funciones por tramos
 
@@ -485,18 +578,20 @@ Reglas y patrones que Claude debe aplicar al generar o corregir bloques Desmos e
 
 Estas reglas no tienen excepciones. Cualquier bloque que las viole debe corregirse:
 
-| Regla                                        | Correcto                  | Incorrecto                                                |
-| -------------------------------------------- | ------------------------- | --------------------------------------------------------- |
-| Separador `---` siempre presente             | `width=500;\n---\ny=x`    | `width=500;\ny=x`                                         |
-| Sin espacios alrededor de `\|`               | `y=x\|#c74440`            | `y = x \| RED`                                            |
-| Sin llaves `{}` en restricciones             | `y=x\|0<=x<=1`            | `y=x\|{0<=x<=1}`                                          |
-| Sin comentarios `//`                         | —                         | `y=x^2 // parábola`                                       |
-| Raíces con `\sqrt{x}`                        | `y=\sqrt{x}`              | `y=sqrt(x)`                                               |
-| Fracciones con `\frac{a}{b}`                 | `y=\frac{3}{8}x`          | `y=(3/8)x`                                                |
-| Pi con `\pi`                                 | `y=\frac{1}{\pi}`         | `y=1/pi`                                                  |
-| Restricciones de líneas con dominio          | `y=x\|0<=x<=2\|#2d70b3`   | `y=x\|#2d70b3` (se desborda)                              |
-| Colores siempre en hex                       | `\|#c74440`               | `\|RED` (saturado)                                        |
-| Funciones por tramos / valores en intervalos | `y=0.10 \{a<x<b\}\|#hex`  | `{a<x<b: 0.10}` (sintaxis web — no funciona en el plugin) |
+| Regla                                        | Correcto                              | Incorrecto                                                |
+| -------------------------------------------- | ------------------------------------- | --------------------------------------------------------- |
+| Separador `---` siempre presente             | `width=500;\n---\ny=x`               | `width=500;\ny=x`                                         |
+| Sin espacios alrededor de `\|`               | `y=x\|#c74440`                       | `y = x \| RED`                                            |
+| Sin llaves `{}` en restricciones             | `y=x\|0<=x<=1`                       | `y=x\|{0<=x<=1}`                                          |
+| Sin comentarios `//`                         | —                                    | `y=x^2 // parábola`                                       |
+| Raíces con `\sqrt{x}`                        | `y=\sqrt{x}`                         | `y=sqrt(x)`                                               |
+| Fracciones con `\frac{a}{b}`                 | `y=\frac{3}{8}x`                     | `y=(3/8)x`                                                |
+| Pi con `\pi`                                 | `y=\frac{1}{\pi}`                    | `y=1/pi`                                                  |
+| Restricciones de líneas con dominio          | `y=x\|0<=x<=2\|#2d70b3`             | `y=x\|#2d70b3` (se desborda)                              |
+| Colores siempre en hex                       | `\|#c74440`                          | `\|RED` (saturado)                                        |
+| Funciones por tramos / valores en intervalos | `y=0.10 \{a<x<b\}\|#hex`            | `{a<x<b: 0.10}` (sintaxis web — no funciona en el plugin) |
+| Valor absoluto siempre por tramos            | `y=x \{x>=0\}` + `y=-x \{x<=0\}`   | `y=\|x\|` · `y=abs(x)`                                   |
+| Sin `\|x\|` ni `abs(x)` en rellenos         | inecuaciones con valores numéricos   | `-\|y\|<=x<=\|y\|` · `y<=abs(x)`                         |
 
 ---
 
@@ -526,7 +621,45 @@ y=1|0<=x<=1|#2d70b3|DASHED
 
 ---
 
-## C3. CUÁNDO INCLUIR GRÁFICA
+## C3. VALOR ABSOLUTO
+
+El plugin no renderiza `y=|x|` ni `y=abs(x)`. Tampoco acepta `|x|` ni `abs(x)` en condiciones de relleno.
+
+**Patrón correcto — curva:**
+
+```desmos-graph
+y=x \{x>=0\}|#2d70b3
+y=-x \{x<=0\}|#2d70b3
+```
+
+**Patrón correcto — región sombreada bajo y=|x|:**
+
+```desmos-graph
+y=x \{x>=0\}|#2d70b3
+y=-x \{x<=0\}|#2d70b3
+y=2|#000000|DASHED
+-2<=x<=2|y<=2|y>=0|#a5d8ff
+(-2,2)|label:(-a,a)|#c74440
+(2,2)|label:(a,a)|#c74440
+```
+
+La clave: el relleno usa cotas numéricas concretas (`-2<=x<=2|y<=2|y>=0`), nunca expresiones con `|x|`.
+
+Si el problema usa una variable `a` en lugar de valor numérico, definirla primero y usar el número en la ventana:
+
+```desmos-graph
+a=2
+y=x \{x>=0\}|#2d70b3
+y=-x \{x<=0\}|#2d70b3
+y=a|#000000|DASHED
+-2<=x<=2|y<=2|y>=0|#a5d8ff
+(-a,a)|label:(-a,a)|#c74440
+(a,a)|label:(a,a)|#c74440
+```
+
+---
+
+## C4. CUÁNDO INCLUIR GRÁFICA
 
 Incluir gráfica solo si aporta claridad visual que el texto no puede dar:
 
@@ -544,7 +677,7 @@ Incluir gráfica solo si aporta claridad visual que el texto no puede dar:
 
 ---
 
-## C4. UNA GRÁFICA POR INCISO
+## C5. UNA GRÁFICA POR INCISO
 
 Cada inciso tiene su propio bloque `desmos-graph` independiente. Nunca mezclar ecuaciones de distintos incisos en un solo bloque.
 
@@ -555,18 +688,18 @@ Si el archivo tiene todas las gráficas juntas al final:
 
 ---
 
-## C5. FLUJO DE CORRECCIÓN DE UN BLOQUE EXISTENTE
+## C6. FLUJO DE CORRECCIÓN DE UN BLOQUE EXISTENTE
 
 Cuando Claude encuentra un bloque Desmos con errores:
 
 1. Identificar todos los errores (ver C1).
 2. Corregir directamente en el archivo con Filesystem — no mostrar el bloque corregido en el chat.
 3. Si el bloque usa ` ``` ` genérico en lugar de ` ```desmos-graph `, corregir el tipo también.
-4. Si la gráfica no aporta al inciso, eliminarla (ver C3).
+4. Si la gráfica no aporta al inciso, eliminarla (ver C4).
 
 ---
 
-## C6. PLANTILLA BASE PARA REGIONES DE PROBABILIDAD
+## C7. PLANTILLA BASE PARA REGIONES DE PROBABILIDAD
 
 ```desmos-graph
 left=-0.2; right=X; bottom=-0.2; top=Y;
@@ -581,7 +714,7 @@ Ajustar `right` y `top` según el tamaño del soporte más un margen de ~20%.
 
 ---
 
-## C7. PALETA DE COLORES RECOMENDADA POR ROL
+## C8. PALETA DE COLORES RECOMENDADA POR ROL
 
 **Regla:** usar siempre hex. Los nombres en mayúsculas (`RED`, `BLUE`…) son saturados — nunca usarlos.
 
