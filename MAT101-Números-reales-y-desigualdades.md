@@ -400,6 +400,7 @@ Sean $a, b, c, x \in \mathbb{R}$:
 |  4  | **Cauchy-Schwarz**                 | El cuadrado del producto escalar de dos vectores es menor o igual al producto de sus normas. | $(\sum a_k b_k)^2 \leq (\sum a_k^2)(\sum b_k^2)$ | $\forall A,B\in V_n:\ \vert A\cdot B\vert \leq \vert A\vert\,\vert B\vert$ |
 |  5  | **Desigualdad Triangular**         | La distancia de una suma no puede superar la suma de las distancias individuales.            | $\vert a+b\vert \leq \vert a\vert+\vert b\vert$  | $\forall a,b\in\mathbb{R}:\ \vert a+b\vert \leq \vert a\vert+\vert b\vert$ |
 
+
 ```desmos-graph
 left=-2; right=5; bottom=-1; top=4;
 width=500; height=300;
@@ -411,38 +412,8 @@ y<=(x+1)/2|y>=\sqrt{x}|x>=0|#b2f2bb
 ```
 _En el gráfico: Se visualiza la **Desigualdad de las Medias (N°3)** tomando $b=1$. La recta roja ($\frac{x+1}{2}$) siempre está por encima o toca a la curva azul ($\sqrt{x}$), demostrando que la media aritmética es siempre superior o igual a la geométrica._
 
-> **Estas desigualdades son el pilar fundamental para las demostraciones de convergencia y la definición formal de normas en espacios vectoriales.**
 
-**Preguntas de comprensión:**
-
-1. ¿Bajo qué condición específica la Desigualdad de las Medias deja de ser una desigualdad y se convierte en una igualdad exacta?
-2. ¿Por qué la Desigualdad de Bernoulli (N°2) requiere que $x$ sea estrictamente mayor a -1 para ser válida?
-3. ¿Cómo podrías usar el Teorema de los Cuadrados (N°1) para demostrar que la expresión $a^2 + b^2 \geq 2ab$ es siempre cierta?
-
-
-
-
-
-
-
-
-
-
-
-
-bb
----
-
-
-
-Utilizadas frecuentemente para demostraciones avanzadas y optimización:
-
-- **Cuadrados No Negativos:** Para cualquier número real $a \neq 0$, se cumple que $a^2 > 0$.
-- **Desigualdad de Bernoulli:** Para $x > -1$ y $n$ entero positivo: $(1+x)^n \geq 1 + nx$.
-- **Desigualdad de Cauchy-Schwarz:** En términos vectoriales, $|A \cdot B| \leq ||A|| , ||B||$.
-- **Medias Aritmética y Geométrica:** La media geométrica de números positivos nunca excede a su media aritmética: $\sqrt{ab} \leq \frac{a+b}{2}$.
-
-```
+```desmos-graph
 left=-2; right=6; bottom=-1; top=4;
 width=500; height=300;
 ---
@@ -454,12 +425,19 @@ y=x^2|y<=x|x>=0|x<=1|#b2f2bb
 
 _En el gráfico: Se observa que en el intervalo $(0,1)$, la inecuación $x^2 < x$ es verdadera (área verde), pero para $x > 1$ la relación se invierte ($x^2 > x$), ilustrando cómo cambian las desigualdades según el dominio._
 
+> **Estas desigualdades son el pilar fundamental para las demostraciones de convergencia y la definición formal de normas en espacios vectoriales.**
+
 **Preguntas de comprensión:**
 
 1. ¿Cuál es el fundamento axiomático que justifica cambiar el sentido de una inecuación al multiplicar por $-1$?.
 2. Según la desigualdad de Bernoulli, si $x=0.1$ y $n=2$, ¿qué relación numérica se establece?.
 3. ¿Por qué la propiedad de transitividad es indispensable para representar los números reales en una recta numérica?.
 
+**Preguntas de comprensión:**
+
+1. ¿Bajo qué condición específica la Desigualdad de las Medias deja de ser una desigualdad y se convierte en una igualdad exacta?
+2. ¿Por qué la Desigualdad de Bernoulli (N°2) requiere que $x$ sea estrictamente mayor a -1 para ser válida?
+3. ¿Cómo podrías usar el Teorema de los Cuadrados (N°1) para demostrar que la expresión $a^2 + b^2 \geq 2ab$ es siempre cierta?
 
 
 
