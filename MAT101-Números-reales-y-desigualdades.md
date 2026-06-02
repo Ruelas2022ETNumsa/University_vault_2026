@@ -281,40 +281,16 @@ El valor absoluto de un número real $x$, denotado como $|x|$, representa su mag
 
 Sean $a, b, c, x \in \mathbb{R}$:
 
-|  N  | Teorema o propiedad         | Descripción                                                                         | Notación      | Concepto (Símbolos)                   |                               |                                          |       |                            |     |                                               |             |                               |     |       |     |     |     |     |     |     |
-|:---:|:--------------------------- |:----------------------------------------------------------------------------------- |:------------- |:------------------------------------- | ----------------------------- | ---------------------------------------- | ----- | -------------------------- | --- | --------------------------------------------- | ----------- | ----------------------------- | --- | ----- | --- | --- | --- | --- | --- | --- |
-|  1  | **No negatividad**          | El valor absoluto de cualquier real es siempre cero o positivo.                     | $x \geq 0$    | $\forall x \in \mathbb{R} : x \geq 0$ |                               |                                          |       |                            |     |                                               |             |                               |     |       |     |     |     |     |     |     |
-|  2  | **Propiedad del producto**  | El módulo de un producto es el producto de los módulos de los factores.             | $ab = a \cdot b$   | $\forall a,b \in \mathbb{R} : ab = a \cdot | b   | $   |     |     |     |     |
-|  3  | **Propiedad del cociente**  | El módulo de una división es el cociente de los módulos (si el divisor no es nulo). | $             | \frac{a}{b}                           | = \frac{                      | a                                        | }{    | b                          | }$  | $\forall a \in \mathbb{R}, \forall b \neq 0 : | \frac{a}{b} | = \frac{                      | a   | }{    | b   | }$  |     |     |     |     |
-|  4  | **Relación con la raíz**    | La raíz cuadrada del cuadrado de un número es igual a su valor absoluto.            | $\sqrt{x^2} = | x                                     | $                             | $\forall x \in \mathbb{R} : \sqrt{x^2} = | x     | $                          |     |                                               |             |                               |     |       |     |     |     |     |     |     |
-|  5  | **Propiedad de Intervalos** | Estar acotado por un módulo equivale a estar contenido en un intervalo simétrico.   | $             | x                                     | \leq a \iff -a \leq x \leq a$ | $a \geq 0 \land                          | x     | \leq a \iff x \in [-a, a]$ |     |                                               |             |                               |     |       |     |     |     |     |     |     |
-|  6  | **Desigualdad Triangular**  | El módulo de una suma no supera la suma de los módulos individuales.                | $             | a + b                                 | \leq                          | a                                        | +     | b                          | $   | $\forall a,b \in \mathbb{R} :                 | a+b         | \leq                          | a   | +     | b   | $   |     |     |     |     |
-|  7  | **Variante de la resta**    | La diferencia de módulos es menor o igual al módulo de la diferencia.               | $             | a - b                                 | \geq                          |                                          | a     | -                          | b   |                                               | $           | $\forall a,b \in \mathbb{R} : | a-b | \geq  |     | a   | -   | b   |     | $   |
+|  N  | Teorema o propiedad         | Descripción                                                                         | Notación                         | Concepto (Símbolos)                                                    |
+| :-: | :-------------------------- | :---------------------------------------------------------------------------------- | :------------------------------- | :--------------------------------------------------------------------- |
+|  1  | **No negatividad**          | El valor absoluto de cualquier real es siempre cero o positivo.                     | $x \geq 0$                       | $\forall x \in \mathbb{R} : x \geq 0$                                  |
+|  2  | **Propiedad del producto**  | El módulo de un producto es el producto de los módulos de los factores.             | $ab = a \cdot b$                 | $\forall a,b \in \mathbb{R} : ab = a \cdot b$                          |
+|  3  | **Propiedad del cociente**  | El módulo de una división es el cociente de los módulos (si el divisor no es nulo). | $\frac{a}{b} = \frac{a}{b}$      | $\forall a \in \mathbb{R}, \forall b \neq 0 : \frac{a}{b} \frac{a}{b}$ |
+|  4  | **Relación con la raíz**    | La raíz cuadrada del cuadrado de un número es igual a su valor absoluto.            | $\sqrt{x^{2}} =x$                | $\forall x \in \mathbb{R} : \sqrt{x^2} = x$                            |
+|  5  | **Propiedad de Intervalos** | Estar acotado por un módulo equivale a estar contenido en un intervalo simétrico.   | $x \leq a \iff -a \leq x \leq a$ | $a \geq 0 \land x \leq a \iff x \in [-a, a]$                           |
+|  6  | **Desigualdad Triangular**  | El módulo de una suma no supera la suma de los módulos individuales.                | $a + b \leq a + b$               | $\forall a,b \in \mathbb{R} : a+b \leq a + b$                          |
+|  7  | **Variante de la resta**    | La diferencia de módulos es menor o igual al módulo de la diferencia.               | $a - b \geq a - b$               | $\forall a,b \in \mathbb{R} : a-b \geq a - b$                          |
    
-
-
-
-
-
-Sean a,b,c,x∈R:
-
-| N   | Teorema o propiedad         | Descripción                                                                         | Notación      | Concepto (Símbolos) |
-| --- | --------------------------- | ----------------------------------------------------------------------------------- | ------------- | ------------------- |
-| 1   | **No negatividad**          | El valor absoluto de cualquier real es siempre cero o positivo.                     | $             | x                   |
-| 2   | **Propiedad del producto**  | El módulo de un producto es el producto de los módulos de los factores.             | $             | ab                  |
-| 3   | **Propiedad del cociente**  | El módulo de una división es el cociente de los módulos (si el divisor no es nulo). | $             | \frac{a}{b}         |
-| 4   | **Relación con la raíz**    | La raíz cuadrada del cuadrado de un número es igual a su valor absoluto.            | $\sqrt{x^2} = | x                   |
-| 5   | **Propiedad de Intervalos** | Estar acotado por un módulo equivale a estar contenido en un intervalo simétrico.   | $             | x                   |
-| 6   | **Desigualdad Triangular**  | El módulo de una suma no supera la suma de los módulos individuales.                | $             | a + b               |
-| 7   | **Variante de la resta**    | La diferencia de módulos es menor o igual al módulo de la diferencia.               | $             | a - b               |
-
-```
-left=-5; right=5; bottom=-1; top=5;
-```
-
-
-
-
 
 
 
