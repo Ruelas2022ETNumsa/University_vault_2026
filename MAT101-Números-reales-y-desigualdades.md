@@ -395,87 +395,10 @@ Sean $a, b, c, x \in \mathbb{R}$:
 |  N  | Teorema o propiedad                | Descripción                                                                                  | Notación                                         | Concepto (Símbolos)                                                        |
 | :-: | ---------------------------------- | -------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------------------------------------------------------------- |
 |  1  | **Cuadrados no negativos**         | El cuadrado de cualquier número real nunca es negativo.                                      | $a^2 \geq 0$                                     | $\forall a \in \mathbb{R}: a^2 \geq 0$                                     |
-|  2  | **Desigualdad de Bernoulli**       | Establece una cota inferior lineal para una potencia con base mayor a $-1$.                  | $(1+x)^n \geq 1+nx$                              | $x>-1,\; n\in\mathbb{Z}^{+} \implies (1+x)^n \geq 1+nx$                    |
-|  3  | **Medias Aritmética y Geométrica** | La media geométrica de números no negativos nunca excede a su media aritmética.              | $\sqrt{ab} \leq \dfrac{a+b}{2}$                  | $a,b\geq0 \implies \sqrt{ab}\leq\frac{a+b}{2}$                             |
+|  2  | **Desigualdad de Bernoulli**       | Establece una cota inferior lineal para una potencia con base mayor a $-1$.                  | $(1+x)^n \geq 1+nx$                              | $x>-1,\; n\in\mathbb{Z}^{+}$ $\implies (1+x)^n \geq 1+nx$                    |
+|  3  | **Medias Aritmética y Geométrica** | La media geométrica de números no negativos nunca excede a su media aritmética.              | $\sqrt{ab} \leq \dfrac{a+b}{2}$                  | $a,b\geq0$ $\implies \sqrt{ab}\leq\frac{a+b}{2}$                             |
 |  4  | **Cauchy-Schwarz**                 | El cuadrado del producto escalar de dos vectores es menor o igual al producto de sus normas. | $(\sum a_k b_k)^2 \leq (\sum a_k^2)(\sum b_k^2)$ | $\forall A,B\in V_n:\ \vert A\cdot B\vert \leq \vert A\vert\,\vert B\vert$ |
 |  5  | **Desigualdad Triangular**         | La distancia de una suma no puede superar la suma de las distancias individuales.            | $\vert a+b\vert \leq \vert a\vert+\vert b\vert$  | $\forall a,b\in\mathbb{R}:\ \vert a+b\vert \leq \vert a\vert+\vert b\vert$ |
-
-
-
-
-
-1
-```desmos-graph
-left=-4; right=4; bottom=-1; top=4;
-width=350; height=150;
----
-y=\sqrt{x}|#2d70b3
-```
-2'
-
-```desmos-graph
-left=-4; right=4; bottom=-1; top=4;
-width=350; height=150;
----
-y^2=x
-y>=0
-```
-
-3'
-
-```desmos-graph
-left=-4; right=4; bottom=-1; top=4;
-width=350; height=150;
----
-y=x^{1/2}|#2d70b3
-```
-
-
-
-
-
-
-
-
-
-
-```desmos-graph
-left=-0.5; right=5; bottom=-0.5; top=4;
-width=500; height=300;
----
-y=\sqrt{x}|x>=0|#2d70b3
-
-y=(x+1)/2|x>=0|#c74440
-
-y<=(x+1)/2|x>=0|#b2f2bb
-
-y>=\sqrt{x}|x>=0|#b2f2bb
-
-(0,0)|label:(0,0)|#000000
-(1,1)|label:(1,1) igualdad|#000000
-```
-
-
-
-
-```desmos-graph
-left=-0.1; right=1.3; bottom=-0.1; top=1.3;
-width=500; height=500;
----
-y=x|0<=x<=1|#c74440|SOLID
-y=\sqrt{x}|0<=x<=1|#388c46|SOLID
-y<\sqrt{x}|y>x|0<=x<=1|#b2f2bb
-(0,0)|label:(0,0)|#000000
-(1,1)|label:(1,1)|#000000
-```
-
-
-
----
-
-
-
-aaa
 
 ```desmos-graph
 left=-2; right=5; bottom=-1; top=4;

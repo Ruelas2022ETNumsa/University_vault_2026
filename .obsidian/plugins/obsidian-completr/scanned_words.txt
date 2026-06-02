@@ -143,6 +143,7 @@ tomamos
 triviales
 tomando
 toca
+tocan
 ToDo
 Templater
 Text
@@ -218,6 +219,8 @@ Triangular
 TRAMOS
 Transitiva
 Tampoco
+TRES
+Tercera
 Sistema
 Sync
 Save
@@ -319,6 +322,7 @@ Signo
 Schwarz
 Seg
 Sombrear
+Segunda
 Plugins
 Pendientes
 Plugin
@@ -416,6 +420,8 @@ Propiedades
 Principio
 Podemos
 Positivo
+Potencia
+Primera
 del
 date
 de
@@ -729,6 +735,8 @@ gnitas
 gicas
 guardarlo
 graficar
+grafican
+grafica
 body
 beacon
 bat
@@ -798,6 +806,7 @@ bdad
 bdac
 basa
 borradores
+bola
 scope
 status
 selector
@@ -1087,6 +1096,7 @@ validez
 vital
 vectoriales
 visualiza
+vert
 audience
 activo
 auto
@@ -1342,6 +1352,7 @@ altura
 abs
 anal
 aaa
+ambas
 related
 recomendados
 ribbon
@@ -1547,6 +1558,7 @@ ricas
 relacionan
 ramos
 realmente
+robusta
 notes
 notas
 nuevas
@@ -2058,6 +2070,8 @@ considerarla
 cota
 convergencia
 cierta
+complejos
+compleja
 updated
 un
 universo
@@ -2290,6 +2304,7 @@ Continuidad
 Completitud
 Cancelaci
 Cauchy
+CUADRADA
 Instalados
 Instalado
 Instalar
@@ -2403,6 +2418,8 @@ Formal
 Funciones
 Fundamental
 Forma
+FORMAS
+Formas
 Estado
 Excalidraw
 EPUBs
@@ -3048,6 +3065,8 @@ multiplicamos
 menciona
 magnitud
 media
+medias
+mostrando
 YAML
 Ya
 You
@@ -3412,6 +3431,7 @@ Menor
 Mayor
 Multiplicativos
 Medias
+Matices
 Lectura
 LaTeX
 Linter
@@ -3458,6 +3478,7 @@ LIBRARY
 Lugar
 Libro
 Library
+LIDAS
 links
 las
 listar
@@ -3710,6 +3731,10 @@ indispensable
 invalidada
 indefinidos
 imaginario
+impl
+iguala
+inesperados
+incluirla
 Dependencia
 Dropbox
 Dataview
@@ -3884,6 +3909,7 @@ Recortes
 Restar
 Read
 Relaci
+RA
 Hider
 Hace
 Herramientas
@@ -4011,6 +4037,8 @@ fijos
 frontera
 fundamentan
 frecuentemente
+fraccional
+fallan
 haya
 hace
 hacer

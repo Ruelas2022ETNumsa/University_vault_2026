@@ -175,6 +175,9 @@ x>=a|x<=b|y>=c|y<=d|#hexcolor   ← rectángulo sombreado
 f(x)=ec|hidden                   ← función oculta
 y=x \{x>=0\}|#hex               ← valor absoluto tramo positivo
 y=-x \{x<=0\}|#hex              ← valor absoluto tramo negativo
+y=\sqrt{x}|x>=0|#hex            ← raíz cuadrada (rama positiva)
+x=y^2                            ← raíz cuadrada como relación implícita
+y>=0                             ← restricción para rama positiva
 ```
 
 ---
@@ -191,7 +194,7 @@ y=x \{x>=0\}|#2d70b3
 y=-x \{x<=0\}|#2d70b3
 ```
 
-Para sombrear la región bajo $y=|x|$ hasta una altura $a$, usar inecuaciones concretas en x e y — **no** usar `|x|` ni `abs(x)` dentro de las condiciones de relleno:
+Para sombrear la región bajo $y=\vert x\vert$ hasta una altura $a$, usar inecuaciones concretas en x e y — **no** usar `|x|` ni `abs(x)` dentro de las condiciones de relleno:
 
 ```desmos-graph
 left=-5; right=5; bottom=-1; top=5;
@@ -205,14 +208,74 @@ y=2|#000000|DASHED
 (2,2)|label:(a,a)|#c74440
 ```
 
-| Lo que querés graficar   | Sintaxis plugin (✅)                          | No funciona (❌)                        |
-| ------------------------ | -------------------------------------------- | --------------------------------------- |
-| Curva $y = \|x\|$        | dos tramos `y=x \{x>=0\}` y `y=-x \{x<=0\}` | `y=\|x\|` · `y=abs(x)`                 |
-| Región bajo $y = \|x\|$  | inecuaciones concretas `a<=x<=b\|y<=cte`     | `-\|y\|<=x<=\|y\|` · `y<=abs(x)`       |
+| Lo que querés graficar              | Sintaxis plugin (✅)                          | No funciona (❌)                  |
+| ----------------------------------- | -------------------------------------------- | --------------------------------- |
+| Curva $y = \vert x\vert$            | dos tramos `y=x \{x>=0\}` y `y=-x \{x<=0\}` | `y=\|x\|` · `y=abs(x)`           |
+| Región bajo $y = \vert x\vert$      | inecuaciones concretas `a<=x<=b\|y<=cte`     | `-\|y\|<=x<=\|y\|` · `y<=abs(x)` |
 
 ---
 
-## U11. RECURSOS
+## U11. RAÍZ CUADRADA
+
+El plugin soporta tres formas para graficar $y = \sqrt{x}$, cada una con un comportamiento distinto:
+
+| Forma | Código | Resultado |
+| ----- | ------ | --------- |
+| A — LaTeX con llaves | `y=\sqrt{x}` | Solo rama positiva ($y \geq 0$) ✅ |
+| B — Potencia fraccional | `y=x^{1/2}` | Solo rama positiva ($y \geq 0$) ✅ |
+| C — Relación implícita | `x=y^2` + `y>=0` | Solo rama positiva, requiere línea extra ✅ |
+
+> ⚠️ `y=sqrt(x)` sin llaves y `y=\sqrt(x)` con paréntesis **no funcionan**.
+
+### Forma A — recomendada para curva simple
+
+```desmos-graph
+left=-0.5; right=5; bottom=-0.5; top=4;
+width=500; height=300;
+---
+y=\sqrt{x}|x>=0|#2d70b3
+```
+
+### Forma B — potencia fraccional (equivalente a A)
+
+```desmos-graph
+left=-0.5; right=5; bottom=-0.5; top=4;
+width=500; height=300;
+---
+y=x^{1/2}|x>=0|#2d70b3
+```
+
+### Forma C — relación implícita (cuando A y B fallan en contexto)
+
+```desmos-graph
+left=-0.5; right=5; bottom=-0.5; top=4;
+width=500; height=300;
+---
+x=y^2
+y>=0
+```
+
+> 💡 La forma C es la más robusta cuando la raíz aparece dentro de regiones sombreadas complejas o cuando las otras formas no renderizan correctamente en un bloque específico.
+
+### Ejemplo completo — desigualdad de medias con raíz
+
+Región entre $\sqrt{x}$ y $\frac{x+1}{2}$, mostrando que la media aritmética siempre supera o iguala a la geométrica (con $b=1$):
+
+```desmos-graph
+left=-2; right=5; bottom=-1; top=4;
+width=500; height=300;
+---
+y=\sqrt{x}|x>=0|#2d70b3
+y=(x+1)/2|#c74440
+y<=(x+1)/2|y>=\sqrt{x}|x>=0|#b2f2bb
+(1,1)|label:Igualdad si a=b|#000000
+```
+
+Las curvas se tocan en $(0,0)$ y $(1,1)$ — los únicos puntos donde $\sqrt{x} = \frac{x+1}{2}$.
+
+---
+
+## U12. RECURSOS
 
 | Recurso           | URL                                        |
 | ----------------- | ------------------------------------------ |
@@ -385,7 +448,7 @@ y=x \{x>=0\}|#2d70b3
 y=-x \{x<=0\}|#2d70b3
 ```
 
-### Forma correcta — región bajo y=|x| hasta altura a:
+### Forma correcta — región bajo y=\vert x\vert hasta altura a:
 
 ```desmos-graph
 left=-5; right=5; bottom=-1; top=5;
@@ -401,14 +464,62 @@ y=2|#000000|DASHED
 
 La región sombreada usa límites concretos en x e y — no referencias a `|x|`.
 
-| Intención                       | Correcto (✅)                                  | Incorrecto (❌)              |
-| ------------------------------- | --------------------------------------------- | --------------------------- |
-| Graficar y = abs(x)             | `y=x \{x>=0\}` + `y=-x \{x<=0\}`             | `y=abs(x)` · `y=\|x\|`     |
-| Sombrear región bajo y = abs(x) | inecuaciones con valores numéricos en x e y   | `-\|y\|<=x<=\|y\|`         |
+| Intención                              | Correcto (✅)                                 | Incorrecto (❌)          |
+| -------------------------------------- | --------------------------------------------- | ------------------------ |
+| Graficar y = \vert x\vert              | `y=x \{x>=0\}` + `y=-x \{x<=0\}`             | `y=abs(x)` · `y=\|x\|`  |
+| Sombrear región bajo y = \vert x\vert  | inecuaciones con valores numéricos en x e y   | `-\|y\|<=x<=\|y\|`      |
 
 ---
 
-## N9. EJEMPLOS COMPLETOS
+## N9. RAÍZ CUADRADA — TRES FORMAS VÁLIDAS
+
+El plugin soporta tres formas para $y = \sqrt{x}$. Usar en orden de preferencia:
+
+**Forma A — primera opción:**
+```desmos-graph
+y=\sqrt{x}|x>=0|#2d70b3
+```
+
+**Forma B — alternativa equivalente:**
+```desmos-graph
+y=x^{1/2}|x>=0|#2d70b3
+```
+
+**Forma C — relación implícita (más robusta en contextos complejos):**
+```desmos-graph
+x=y^2
+y>=0
+```
+
+### ⚠️ Formas que NO funcionan — nunca usar:
+
+```desmos-graph
+y=sqrt(x)
+y=\sqrt(x)
+y=sqrt{x}
+```
+
+### Matices importantes
+
+- Las formas A y B grafican solo la rama positiva ($y \geq 0$) — correcto para $\sqrt{x}$ como función.
+- La forma C también grafica solo la rama positiva si se incluye `y>=0` en línea separada. Sin esa línea grafica ambas ramas (la parábola completa $x = y^2$).
+- En contexto matemático (Cálculo, desigualdades, probabilidad) usar siempre la rama positiva.
+
+### Ejemplo — desigualdad de medias
+
+```desmos-graph
+left=-2; right=5; bottom=-1; top=4;
+width=500; height=300;
+---
+y=\sqrt{x}|x>=0|#2d70b3
+y=(x+1)/2|#c74440
+y<=(x+1)/2|y>=\sqrt{x}|x>=0|#b2f2bb
+(1,1)|label:Igualdad si a=b|#000000
+```
+
+---
+
+## N10. EJEMPLOS COMPLETOS
 
 ### Función simple
 
@@ -476,7 +587,7 @@ y=2|#000000|DASHED
 
 ---
 
-## N10. CHECKLIST ANTES DE RESPONDER
+## N11. CHECKLIST ANTES DE RESPONDER
 
 Antes de entregar un bloque Desmos verificar:
 - [ ] ¿Tiene `---`?
@@ -489,10 +600,11 @@ Antes de entregar un bloque Desmos verificar:
 - [ ] ¿Rellenos con hex pastel (`#a5d8ff`, `#ff7b7b`, etc.)?
 - [ ] ¿Funciones por tramos usan `y=k \{a<x<b\}` y NO `{a<x<b: k}`?
 - [ ] ¿Sin `y=|x|`, `y=abs(x)` ni `|x|` en condiciones de relleno?
+- [ ] ¿Raíz cuadrada usa `y=\sqrt{x}` o `y=x^{1/2}` — NO `y=sqrt(x)` ni `y=\sqrt(x)`?
 
 ---
 
-## N11. FUNCIONES POR TRAMOS Y VALORES EN INTERVALOS
+## N12. FUNCIONES POR TRAMOS Y VALORES EN INTERVALOS
 
 ### ⚠️ Sintaxis web `{intervalo: valor}` NO funciona en el plugin
 
@@ -578,20 +690,20 @@ Reglas y patrones que Claude debe aplicar al generar o corregir bloques Desmos e
 
 Estas reglas no tienen excepciones. Cualquier bloque que las viole debe corregirse:
 
-| Regla                                        | Correcto                              | Incorrecto                                                |
-| -------------------------------------------- | ------------------------------------- | --------------------------------------------------------- |
-| Separador `---` siempre presente             | `width=500;\n---\ny=x`               | `width=500;\ny=x`                                         |
-| Sin espacios alrededor de `\|`               | `y=x\|#c74440`                       | `y = x \| RED`                                            |
-| Sin llaves `{}` en restricciones             | `y=x\|0<=x<=1`                       | `y=x\|{0<=x<=1}`                                          |
-| Sin comentarios `//`                         | —                                    | `y=x^2 // parábola`                                       |
-| Raíces con `\sqrt{x}`                        | `y=\sqrt{x}`                         | `y=sqrt(x)`                                               |
-| Fracciones con `\frac{a}{b}`                 | `y=\frac{3}{8}x`                     | `y=(3/8)x`                                                |
-| Pi con `\pi`                                 | `y=\frac{1}{\pi}`                    | `y=1/pi`                                                  |
-| Restricciones de líneas con dominio          | `y=x\|0<=x<=2\|#2d70b3`             | `y=x\|#2d70b3` (se desborda)                              |
-| Colores siempre en hex                       | `\|#c74440`                          | `\|RED` (saturado)                                        |
-| Funciones por tramos / valores en intervalos | `y=0.10 \{a<x<b\}\|#hex`            | `{a<x<b: 0.10}` (sintaxis web — no funciona en el plugin) |
-| Valor absoluto siempre por tramos            | `y=x \{x>=0\}` + `y=-x \{x<=0\}`   | `y=\|x\|` · `y=abs(x)`                                   |
-| Sin `\|x\|` ni `abs(x)` en rellenos         | inecuaciones con valores numéricos   | `-\|y\|<=x<=\|y\|` · `y<=abs(x)`                         |
+| Regla                                        | Correcto                                      | Incorrecto                                                |
+| -------------------------------------------- | --------------------------------------------- | --------------------------------------------------------- |
+| Separador `---` siempre presente             | `width=500;\n---\ny=x`                        | `width=500;\ny=x`                                         |
+| Sin espacios alrededor de `\|`               | `y=x\|#c74440`                                | `y = x \| RED`                                            |
+| Sin llaves `{}` en restricciones             | `y=x\|0<=x<=1`                                | `y=x\|{0<=x<=1}`                                          |
+| Sin comentarios `//`                         | —                                             | `y=x^2 // parábola`                                       |
+| Raíces con `\sqrt{x}` (llaves obligatorias)  | `y=\sqrt{x}`                                  | `y=sqrt(x)` · `y=\sqrt(x)`                                |
+| Fracciones con `\frac{a}{b}`                 | `y=\frac{3}{8}x`                              | `y=(3/8)x`                                                |
+| Pi con `\pi`                                 | `y=\frac{1}{\pi}`                             | `y=1/pi`                                                  |
+| Restricciones de líneas con dominio          | `y=x\|0<=x<=2\|#2d70b3`                       | `y=x\|#2d70b3` (se desborda)                              |
+| Colores siempre en hex                       | `\|#c74440`                                   | `\|RED` (saturado)                                        |
+| Funciones por tramos / valores en intervalos | `y=0.10 \{a<x<b\}\|#hex`                      | `{a<x<b: 0.10}` (sintaxis web — no funciona en el plugin) |
+| Valor absoluto siempre por tramos            | `y=x \{x>=0\}` + `y=-x \{x<=0\}`             | `y=\|x\|` · `y=abs(x)`                                   |
+| Sin `\|x\|` ni `abs(x)` en rellenos         | inecuaciones con valores numéricos            | `-\|y\|<=x<=\|y\|` · `y<=abs(x)`                         |
 
 ---
 
@@ -632,7 +744,7 @@ y=x \{x>=0\}|#2d70b3
 y=-x \{x<=0\}|#2d70b3
 ```
 
-**Patrón correcto — región sombreada bajo y=|x|:**
+**Patrón correcto — región sombreada bajo y=\vert x\vert:**
 
 ```desmos-graph
 y=x \{x>=0\}|#2d70b3
@@ -645,21 +757,47 @@ y=2|#000000|DASHED
 
 La clave: el relleno usa cotas numéricas concretas (`-2<=x<=2|y<=2|y>=0`), nunca expresiones con `|x|`.
 
-Si el problema usa una variable `a` en lugar de valor numérico, definirla primero y usar el número en la ventana:
+---
+
+## C4. RAÍZ CUADRADA
+
+Tres formas válidas, en orden de preferencia:
+
+**Primera opción — LaTeX con llaves:**
+```desmos-graph
+y=\sqrt{x}|x>=0|#2d70b3
+```
+
+**Segunda opción — potencia fraccional:**
+```desmos-graph
+y=x^{1/2}|x>=0|#2d70b3
+```
+
+**Tercera opción — relación implícita (la más robusta si las anteriores fallan):**
+```desmos-graph
+x=y^2
+y>=0
+```
+
+Nunca usar `y=sqrt(x)`, `y=\sqrt(x)` ni `y=sqrt{x}` — no renderizan.
+
+La forma C (`x=y^2` + `y>=0`) es especialmente útil cuando la raíz aparece en una región sombreada compleja o dentro de inecuaciones donde las formas A y B producen resultados inesperados. Sin la línea `y>=0` la forma C grafica ambas ramas de la parábola — siempre incluirla.
+
+**Ejemplo real — desigualdad de medias:**
 
 ```desmos-graph
-a=2
-y=x \{x>=0\}|#2d70b3
-y=-x \{x<=0\}|#2d70b3
-y=a|#000000|DASHED
--2<=x<=2|y<=2|y>=0|#a5d8ff
-(-a,a)|label:(-a,a)|#c74440
-(a,a)|label:(a,a)|#c74440
+left=-2; right=5; bottom=-1; top=4;
+width=500; height=300;
+---
+y=\sqrt{x}|x>=0|#2d70b3
+y=(x+1)/2|#c74440
+y<=(x+1)/2|y>=\sqrt{x}|x>=0|#b2f2bb
+(1,1)|label:Igualdad si a=b|#000000
 ```
 
 ---
 
-## C4. CUÁNDO INCLUIR GRÁFICA
+## C5. CUÁNDO INCLUIR GRÁFICA
 
 Incluir gráfica solo si aporta claridad visual que el texto no puede dar:
 
@@ -677,7 +815,7 @@ Incluir gráfica solo si aporta claridad visual que el texto no puede dar:
 
 ---
 
-## C5. UNA GRÁFICA POR INCISO
+## C6. UNA GRÁFICA POR INCISO
 
 Cada inciso tiene su propio bloque `desmos-graph` independiente. Nunca mezclar ecuaciones de distintos incisos en un solo bloque.
 
@@ -688,18 +826,18 @@ Si el archivo tiene todas las gráficas juntas al final:
 
 ---
 
-## C6. FLUJO DE CORRECCIÓN DE UN BLOQUE EXISTENTE
+## C7. FLUJO DE CORRECCIÓN DE UN BLOQUE EXISTENTE
 
 Cuando Claude encuentra un bloque Desmos con errores:
 
 1. Identificar todos los errores (ver C1).
 2. Corregir directamente en el archivo con Filesystem — no mostrar el bloque corregido en el chat.
 3. Si el bloque usa ` ``` ` genérico en lugar de ` ```desmos-graph `, corregir el tipo también.
-4. Si la gráfica no aporta al inciso, eliminarla (ver C4).
+4. Si la gráfica no aporta al inciso, eliminarla (ver C5).
 
 ---
 
-## C7. PLANTILLA BASE PARA REGIONES DE PROBABILIDAD
+## C8. PLANTILLA BASE PARA REGIONES DE PROBABILIDAD
 
 ```desmos-graph
 left=-0.2; right=X; bottom=-0.2; top=Y;
@@ -714,7 +852,7 @@ Ajustar `right` y `top` según el tamaño del soporte más un margen de ~20%.
 
 ---
 
-## C8. PALETA DE COLORES RECOMENDADA POR ROL
+## C9. PALETA DE COLORES RECOMENDADA POR ROL
 
 **Regla:** usar siempre hex. Los nombres en mayúsculas (`RED`, `BLUE`…) son saturados — nunca usarlos.
 
