@@ -258,7 +258,7 @@ Sean $a, b, c, x \in \mathbb{R}$:
 
 
 
-```
+```desmos-graph
 left=-5; right=5; bottom=-2; top=6;
 width=500; height=300;
 ---
