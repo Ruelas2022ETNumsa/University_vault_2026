@@ -7,41 +7,21 @@ Sea $a,b,c \in \mathbb{R}$.
 1. **Clausura**
 - $a+b \in \mathbb{R}$
 - $a\cdot b \in \mathbb{R}$
-
 Es decir, la suma y el producto de dos números reales siguen siendo números reales.
 
 2. **Conmutatividad**
-- Suma
-$a+b=b+a$
+	- Suma: $a+b=b+a$
+	- Producto: $a\cdot b=b\cdot a$
+	El orden de los operandos no altera el resultado.
 
+2. **Asociatividad**
+	- Suma: $(a+b)+c=a+(b+c)$
+	- Producto: $(a\cdot b)\cdot c=a\cdot(b\cdot c)$
+	La forma de agrupar los términos no modifica el resultado.
 
-#### Producto
+3. Existencia de neutros
 
-$$
-a\cdot b=b\cdot a
-$$
-
-El orden de los operandos no altera el resultado.
-
-### 3. Asociatividad
-
-#### Suma
-
-$$
-(a+b)+c=a+(b+c)
-$$
-
-#### Producto
-
-$$
-(a\cdot b)\cdot c=a\cdot(b\cdot c)
-$$
-
-La forma de agrupar los términos no modifica el resultado.
-
-### 4. Existencia de neutros
-
-#### Neutro aditivo
+- Neutro aditivo
 
 Existe un número real $0$ tal que:
 
