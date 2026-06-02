@@ -528,7 +528,6 @@ _En el gráfico: Se observa que en el intervalo $(0,1)$, la inecuación $x^2 < x
 3. ¿Cómo podrías usar el Teorema de los Cuadrados (N°1) para demostrar que la expresión $a^2 + b^2 \geq 2ab$ es siempre cierta?
 
  
- 
 
 
 

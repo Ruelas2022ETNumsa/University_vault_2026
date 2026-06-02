@@ -1,6 +1,6 @@
 {
   "attachPath": {
-    "attachmentRoot": "_assets",
+    "attachmentRoot": "",
     "saveAttE": "inFolderBelow",
     "attachmentPath": "_assets",
     "attachFormat": "${notename}-${date}",
