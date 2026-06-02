@@ -341,7 +341,7 @@ El plugin acepta nombres (`RED`, `BLUE`, etc.) pero producen colores saturados y
 Usar inecuaciones con todas las condiciones en **una sola línea**:
 
 ```desmos-graph
-y<2-x|y>x|x>=0|x<=1|#a5d8ff
+y<3-x|y>x-3|x>=-4|x<=2|#a5d8ff
 ```
 
 ### ⚠️ Rectángulos sombreados

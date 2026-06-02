@@ -402,6 +402,8 @@ Sean $a, b, c, x \in \mathbb{R}$:
 
 
 
+
+
 1
 ```desmos-graph
 left=-4; right=4; bottom=-1; top=4;
@@ -442,13 +444,30 @@ left=-0.5; right=5; bottom=-0.5; top=4;
 width=500; height=300;
 ---
 y=\sqrt{x}|x>=0|#2d70b3
+
 y=(x+1)/2|x>=0|#c74440
+
 y<=(x+1)/2|x>=0|#b2f2bb
+
 y>=\sqrt{x}|x>=0|#b2f2bb
+
 (0,0)|label:(0,0)|#000000
 (1,1)|label:(1,1) igualdad|#000000
 ```
 
+
+
+
+```desmos-graph
+left=-0.1; right=1.3; bottom=-0.1; top=1.3;
+width=500; height=500;
+---
+y=x|0<=x<=1|#c74440|SOLID
+y=\sqrt{x}|0<=x<=1|#388c46|SOLID
+y<\sqrt{x}|y>x|0<=x<=1|#b2f2bb
+(0,0)|label:(0,0)|#000000
+(1,1)|label:(1,1)|#000000
+```
 
 
 
