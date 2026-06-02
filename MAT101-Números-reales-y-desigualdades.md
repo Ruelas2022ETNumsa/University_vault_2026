@@ -531,6 +531,45 @@ _En el gráfico: Se observa que en el intervalo $(0,1)$, la inecuación $x^2 < x
  
 ![[MAT101-Números-reales-y-desigualdades-Tuesday-2026-06-02_12-53-53.png]]
 
+![[MAT101-Números-reales-y-desigualdades-June 2nd -2026-06-02_12-54-45.png]]
+
+
+
+![[screenshot_15.png]]
+
+
+
+![[MAT101-Números-reales-y-desigualdades-2-June 2nd -2026-06-02_12-59-07.png]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
