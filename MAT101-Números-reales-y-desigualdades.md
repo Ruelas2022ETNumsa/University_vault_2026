@@ -395,14 +395,14 @@ Sean $a, b, c, x \in \mathbb{R}$:
 
 
 
-|  N  | Teorema o propiedad | Descripción | Notación | Concepto (Símbolos) |     |
-| :-: | :------------------ | :---------- | :------- | :------------------ | --- |
-|     |                     |             |          |                     |     |
- | 1 | **Cuadrados no negativos** | El cuadrado de cualquier número real nunca es negativo. | $a^2 \geq 0$ | $\forall a \in \mathbb{R} : a^2 \geq 0$ |
-  | 2 | **Desigualdad de Bernoulli** | Establece una cota inferior lineal para una potencia con base mayor a -1. | $(1+x)^n \geq 1 + nx$ | $x > -1, n \in \mathbb{Z}^+ \implies (1+x)^n \geq 1 + nx$ |
-   | 3 | **Medias Aritmética y Geométrica** | La media geométrica de números no negativos nunca excede a su media aritmética. | $\sqrt{ab} \leq \frac{a+b}{2}$ | $a,b \geq 0 \implies \sqrt{ab} \leq \frac{a+b}{2}$ |
-    | 4 | **Cauchy-Schwarz (Generalizada)** | El cuadrado del producto escalar de dos vectores es menor o igual al producto de sus normas. | $(\sum a_k b_k)^2 \leq (\sum a_k^2)(\sum b_k^2)$ | $\forall A, B \in V_n : |A \cdot B| \leq ||A|| , ||B||$ | 
-    | 5 | **Desigualdad Triangular** | La distancia de una suma no puede superar la suma de las distancias individuales. | $|a+b| \leq |a|+|b|$ | $\forall a,b \in \mathbb{R} : |a+b| \leq |a|+|b|$ |
+|  N  | Teorema o propiedad                | Descripción                                                                                  | Notación                                         | Concepto (Símbolos)                                       |           |      |     |     |     |                               |     |      |     |     |     |     |
+|:---:|:---------------------------------- |:-------------------------------------------------------------------------------------------- |:------------------------------------------------ |:--------------------------------------------------------- | --------- | ---- | --- | --- | --- | ----------------------------- | --- | ---- | --- | --- | --- | --- |
+|  1  | **Cuadrados no negativos**         | El cuadrado de cualquier número real nunca es negativo.                                      | $a^2 \geq 0$                                     | $\forall a \in \mathbb{R} : a^2 \geq 0$                   |           |      |     |     |     |                               |     |      |     |     |     |     |
+|  2  | **Desigualdad de Bernoulli**       | Establece una cota inferior lineal para una potencia con base mayor a -1.                    | $(1+x)^n \geq 1 + nx$                            | $x > -1, n \in \mathbb{Z}^+ \implies (1+x)^n \geq 1 + nx$ |           |      |     |     |     |                               |     |      |     |     |     |     |
+|  3  | **Medias Aritmética y Geométrica** | La media geométrica de números no negativos nunca excede a su media aritmética.              | $\sqrt{ab} \leq \frac{a+b}{2}$                   | $a,b \geq 0 \implies \sqrt{ab} \leq \frac{a+b}{2}$        |           |      |     |     |     |                               |     |      |     |     |     |     |
+|  4  | **Cauchy-Schwarz (Generalizada)**  | El cuadrado del producto escalar de dos vectores es menor o igual al producto de sus normas. | $(\sum a_k b_k)^2 \leq (\sum a_k^2)(\sum b_k^2)$ | $\forall A, B \in V_n :                                   | A \cdot B | \leq |     | A   |     | ,                             |     | B    |     | $   |     |     |
+|  5  | **Desigualdad Triangular**         | La distancia de una suma no puede superar la suma de las distancias individuales.            | $\vert a+b\vert\leq \vert a\\vert+\vertb\\vert$  | $\forall a,b \in \mathbb{R}:|a+b| \leq |a|+|b|$ |
+
 
 
 
