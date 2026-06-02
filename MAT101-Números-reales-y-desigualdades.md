@@ -321,6 +321,14 @@ _En el gráfico: La curva azul ($y=x^2$) ilustra que cualquier número real elev
 
 > **Los teoremas de orden permiten la resolución de inecuaciones y fundamentan la noción de distancia en la recta real.**
 
+**Preguntas de comprensión:**
+
+1. ¿Por qué el teorema del producto por negativo es crucial al resolver una inecuación como $−2x<10$?
+2. ¿Cómo garantiza la propiedad transitiva que podamos organizar a todos los números reales en una sola línea recta?
+3. Si sabemos que $x^{2}>0$ para todo $x\neq 0$, ¿qué podemos concluir sobre la existencia de raíces reales para números negativos?
+
+
+
 ### 2. Teoremas de Valor Absoluto
 
 El valor absoluto $|x|$ mide la distancia al origen y es vital para definir límites y continuidad.
@@ -370,6 +378,74 @@ _En el gráfico: La función azul $|x|$ muestra cómo los valores negativos se r
 3. Si aplicamos el Teorema 5 a una inecuación del tipo $|x| > a$, ¿cómo se traduce esto a intervalos en la recta real?
 
 ### 3. Desigualdades "Notables"
+
+
+---
+bb
+
+
+
+## Desigualdades "Notables"
+
+Las desigualdades notables son herramientas analíticas avanzadas que permiten establecer cotas y límites superiores en diversas ramas del cálculo y el análisis vectorial. A diferencia de las reglas de orden básicas, estas propiedades relacionan potencias, raíces y productos de formas no triviales.
+
+Sean $a, b, c, x \in \mathbb{R}$:
+
+
+
+
+
+|  N  | Teorema o propiedad | Descripción | Notación | Concepto (Símbolos) |     |
+| :-: | :------------------ | :---------- | :------- | :------------------ | --- |
+|     |                     |             |          |                     |     |
+ | 1 | **Cuadrados no negativos** | El cuadrado de cualquier número real nunca es negativo. | $a^2 \geq 0$ | $\forall a \in \mathbb{R} : a^2 \geq 0$ |
+  | 2 | **Desigualdad de Bernoulli** | Establece una cota inferior lineal para una potencia con base mayor a -1. | $(1+x)^n \geq 1 + nx$ | $x > -1, n \in \mathbb{Z}^+ \implies (1+x)^n \geq 1 + nx$ |
+   | 3 | **Medias Aritmética y Geométrica** | La media geométrica de números no negativos nunca excede a su media aritmética. | $\sqrt{ab} \leq \frac{a+b}{2}$ | $a,b \geq 0 \implies \sqrt{ab} \leq \frac{a+b}{2}$ |
+    | 4 | **Cauchy-Schwarz (Generalizada)** | El cuadrado del producto escalar de dos vectores es menor o igual al producto de sus normas. | $(\sum a_k b_k)^2 \leq (\sum a_k^2)(\sum b_k^2)$ | $\forall A, B \in V_n : |A \cdot B| \leq ||A|| , ||B||$ | 
+    | 5 | **Desigualdad Triangular** | La distancia de una suma no puede superar la suma de las distancias individuales. | $|a+b| \leq |a|+|b|$ | $\forall a,b \in \mathbb{R} : |a+b| \leq |a|+|b|$ |
+
+
+
+
+
+
+
+
+| N | Teorema o propiedad | Descripción | Notación | Concepto (Símbolos) | 
+| :-: | :--- | :--- | :--- | :--- |
+ | 1 | **Cuadrados no negativos** | El cuadrado de cualquier número real nunca es negativo. | $a^2 \geq 0$ | $\forall a \in \mathbb{R} : a^2 \geq 0$ |
+  | 2 | **Desigualdad de Bernoulli** | Establece una cota inferior lineal para una potencia con base mayor a -1. | $(1+x)^n \geq 1 + nx$ | $x > -1, n \in \mathbb{Z}^+ \implies (1+x)^n \geq 1 + nx$ |
+   | 3 | **Medias Aritmética y Geométrica** | La media geométrica de números no negativos nunca excede a su media aritmética. | $\sqrt{ab} \leq \frac{a+b}{2}$ | $a,b \geq 0 \implies \sqrt{ab} \leq \frac{a+b}{2}$ |
+    | 4 | **Cauchy-Schwarz (Generalizada)** | El cuadrado del producto escalar de dos vectores es menor o igual al producto de sus normas. | $(\sum a_k b_k)^2 \leq (\sum a_k^2)(\sum b_k^2)$ | $\forall A, B \in V_n : |A \cdot B| \leq ||A|| , ||B||$ | 
+    | 5 | **Desigualdad Triangular** | La distancia de una suma no puede superar la suma de las distancias individuales. | $|a+b| \leq |a|+|b|$ | $\forall a,b \in \mathbb{R} : |a+b| \leq |a|+|b|$ |
+
+```
+left=-2; right=5; bottom=-1; top=4;
+width=500; height=300;
+---
+y=\sqrt{x}|x>=0|#2d70b3
+y=(x+1)/2|#c74440
+y<=(x+1)/2|y>=\sqrt{x}|x>=0|#b2f2bb
+(1,1)|label:Igualdad si a=b|#000000
+```
+
+_En el gráfico: Se visualiza la **Desigualdad de las Medias (N°3)** tomando $b=1$. La recta roja ($\frac{x+1}{2}$) siempre está por encima o toca a la curva azul ($\sqrt{x}$), demostrando que la media aritmética es siempre superior o igual a la geométrica._
+
+> **Estas desigualdades son el pilar fundamental para las demostraciones de convergencia y la definición formal de normas en espacios vectoriales.**
+
+**Preguntas de comprensión:**
+
+1. ¿Bajo qué condición específica la Desigualdad de las Medias deja de ser una desigualdad y se convierte en una igualdad exacta?
+2. ¿Por qué la Desigualdad de Bernoulli (N°2) requiere que $x$ sea estrictamente mayor a -1 para ser válida?
+3. ¿Cómo podrías usar el Teorema de los Cuadrados (N°1) para demostrar que la expresión $a^2 + b^2 \geq 2ab$ es siempre cierta?
+
+
+
+
+bb
+---
+
+
 
 Utilizadas frecuentemente para demostraciones avanzadas y optimización:
 
