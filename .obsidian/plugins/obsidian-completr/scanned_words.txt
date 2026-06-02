@@ -139,6 +139,10 @@ tambien
 tomar
 tras
 transitiva
+tomamos
+triviales
+tomando
+toca
 ToDo
 Templater
 Text
@@ -621,6 +625,11 @@ demostraciones
 dulo
 divisor
 definirla
+decimos
+determinada
+demuestra
+diversas
+demostrando
 Vault
 Verificar
 Variables
@@ -999,6 +1008,11 @@ sigan
 sabemos
 sim
 semieje
+sucede
+sustituimos
+sustituci
+superiores
+superar
 vault
 vil
 ver
@@ -1072,6 +1086,7 @@ ves
 validez
 vital
 vectoriales
+visualiza
 audience
 activo
 auto
@@ -1325,6 +1340,8 @@ acotaciones
 aplicamos
 altura
 abs
+anal
+aaa
 related
 recomendados
 ribbon
@@ -1527,6 +1544,9 @@ resultando
 representar
 reflejan
 ricas
+relacionan
+ramos
+realmente
 notes
 notas
 nuevas
@@ -1634,6 +1654,8 @@ nos
 notebook
 noto
 noci
+necesaria
+notables
 created
 commit
 cada
@@ -2030,6 +2052,12 @@ cuadrada
 concretas
 concretos
 cotas
+calcular
+cumplido
+considerarla
+cota
+convergencia
+cierta
 updated
 un
 universo
@@ -2492,6 +2520,7 @@ Exclusi
 Esos
 Escribo
 Estar
+Establece
 Obsidian
 OmniSearch
 Ocultar
@@ -2857,6 +2886,12 @@ proteger
 placeholders
 procos
 posiciones
+posibilidad
+pasar
+programar
+potencias
+productos
+pilar
 min
 mica
 movimiento
@@ -3309,6 +3344,11 @@ estimaciones
 elevado
 excede
 equivale
+especificar
+existiera
+enteros
+estamos
+explotando
 Motor
 Media
 Mantiene
@@ -3511,6 +3551,7 @@ longitud
 logra
 llamado
 lidas
+lida
 incluyendo
 im
 instalar
@@ -3666,6 +3707,9 @@ identificadores
 inecuaci
 invierten
 indispensable
+invalidada
+indefinidos
+imaginario
 Dependencia
 Dropbox
 Dataview
@@ -4004,6 +4048,7 @@ hueco
 huecos
 hallar
 habitualmente
+habr
 que
 quedan
 queda
@@ -4022,6 +4067,8 @@ quedarse
 quieras
 qued
 quer
+quisi
+queden
 University
 Usar
 Un
