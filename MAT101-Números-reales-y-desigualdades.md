@@ -383,25 +383,6 @@ A continuación, presento la tabla con la formalización solicitada:
 | 2 | **Intervalo Abierto** | Estar acotado superiormente por un módulo define un intervalo simétrico entre $-a$ y $a$. | $\vert x \vert < a \iff -a < x < a$ | $a > 0 \implies x \in (-a, a)$ |
 | 3 | **Intervalos Exteriores** | Superar un módulo implica que el número está fuera de la zona central, hacia los extremos. | $\vert x \vert > a \iff x > a \lor x < -a$ | $a > 0 \implies x \in (-\infty, -a) \cup (a, \infty)$ |
 
-```desmos-graph
-left=-8; right=8; bottom=-1; top=7;
-width=500; height=300;
----
-y=x \{x>=0\}|#2d70b3
-y=-x \{x<=0\}|#2d70b3
-y=3|#000000|DASHED
--3<x<3|y<=3|y>=0|#a5d8ff
-x<-3|y<=5|y>=0|#ff7b7b
-x>3|y<=5|y>=0|#ff7b7b
-(0,4)|label:abs(x) > a (Rojo)|#c74440
-(0,1.5)|label:abs(x) < a (Azul)|#2d70b3
-```
-
-_En el gráfico: La zona azul  representa la propiedad $\vert x \vert < 3$, donde los valores están "atrapados" cerca del centro. Las zonas rojas representan $\vert x \vert > 3$, donde los valores escapan hacia el infinito._
-
-
-
-
 
 ```desmos-graph
 left=-8; right=8; bottom=-1; top=7;
@@ -417,6 +398,12 @@ x>=3|y<=x|y>=0|#ff7b7b
 (0,1.5)|label:abs(x) < a (Azul)|#2d70b3
 ```
 
+_En el gráfico: La zona azul  representa la propiedad $\vert x \vert < 3$, donde los valores están "atrapados" cerca del centro. Las zonas rojas representan $\vert x \vert > 3$, donde los valores escapan hacia el infinito._
+
+
+
+x<=-3 \mid y \leq -x \mid y \geq 0 \mid \texttt{\#ff7b7b}
+x>=3  \mid y \leq x  \mid y \geq 0 \mid \texttt{\#ff7b7b}
 
 ---
 ---
