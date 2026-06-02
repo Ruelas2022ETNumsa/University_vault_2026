@@ -190,24 +190,24 @@ Sea $a,b \in \mathbb{R}$.
 
 ## Teoremas de desigualdades e inecuaciones
 
-Sea $a,b,c \in \mathbb{R}$.
+Sea $a,b,c,x \in \mathbb{R}$.
 
-1. **Tricotomía**11111111
+1. **Tricotomía**
 	- $a<b \;\lor\; a=b \;\lor\; a>b$
-2. **Transitividad**22222
+2. **Transitividad**
 	- $a<b \land b<c \Rightarrow a<c$
-3. **Monotonía** 
-	- $a<b \Rightarrow a+c<b+c$
-4. **Multiplicación por positivos**
-	- $a<b \land c>0 \Rightarrow ac<bc$
-5. **Multiplicación por negativos**
-	- $a<b \land c<0 \Rightarrow ac>bc$
-6. **Cuadrados no negativos**7777777
+3. **Monotonía**
+	- $a<b \Rightarrow -a>-b$
+4. **Despeje aditivo**
+	- $a+x<b \Rightarrow x<b-a$
+5. **División por un número positivo**
+	- $(ab<ac)\land a>0 \Rightarrow b<c$
+6. **División por un número negativo**
+	- $(ab<ac)\land a<0 \Rightarrow b>c$
+7. **Cuadrados no negativos**
 	- $a^2\ge0$
-7. **Cuadrados positivos**xxxxxxxx
-	- $a\neq0 \Rightarrow a^2>0$
-8. **Inversos multiplicativos y orden**888888
-	- $0<a<b \Rightarrow \dfrac{1}{b}<\dfrac{1}{a}$
+8. **Inversos multiplicativos y orden**
+	- $a>0 \iff \dfrac{1}{a}>0$
 
 
 ---
