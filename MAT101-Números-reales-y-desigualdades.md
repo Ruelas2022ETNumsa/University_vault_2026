@@ -267,6 +267,12 @@ De los axiomas anteriores se derivan los teoremas que usamos habitualmente en in
 
 > **Los axiomas de orden convierten a $\mathbb{R}$ en un campo ordenado, permitiendo el uso de desigualdades y la representación en la recta real.**
 
+**Preguntas de comprensión:**
+
+1. ¿Por qué el axioma de tricotomía impide que un número sea positivo y negativo al mismo tiempo?
+2. Si multiplicamos la desigualdad $x<5$ por $−2$, ¿cuál es el fundamento axiomático para invertir el símbolo?
+3. ¿Cómo usarías la definición formal $(b−a \in \mathbb{R}^{+})$ para demostrar que si $a<b$, entonces $−b<−a$?
+
 ---
 
 ## Teoremas de desigualdades e inecuaciones
@@ -321,7 +327,7 @@ El valor absoluto $|x|$ mide la distancia al origen y es vital para definir lím
 
 - **Propiedad Fundamental:** $|x| \leq a$ es equivalente a $-a \leq x \leq a$ (siempre que $a \geq 0$).
 - **Desigualdad Triangular:** El valor absoluto de una suma no supera la suma de los valores absolutos: $|a + b| \leq |a| + |b|$
-- **Variante de la Resta:** $|a - b| \geq ||a| - |b||$.
+- **Variante de la Resta:** $|a - b| \geq | ( |a| - |b| ) |$.
 
 A partir de su definición, se derivan teoremas fundamentales que permiten resolver ecuaciones e inecuaciones con módulos y establecer acotaciones en el cálculo.
 
@@ -362,11 +368,6 @@ _En el gráfico: La función azul $|x|$ muestra cómo los valores negativos se r
 1. ¿Por qué el Teorema 4 ($\sqrt{x^2} = |x|$) es una identidad y no simplemente $\sqrt{x^2} = x$?
 2. En la Desigualdad Triangular (Teorema 6), ¿en qué caso específico se cumple la igualdad exacta ($|a+b| = |a|+|b|$)?
 3. Si aplicamos el Teorema 5 a una inecuación del tipo $|x| > a$, ¿cómo se traduce esto a intervalos en la recta real?
-
-
-
-
-
 
 ### 3. Desigualdades "Notables"
 
