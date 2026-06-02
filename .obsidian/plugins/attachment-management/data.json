@@ -6,7 +6,7 @@
     "attachFormat": "${notename}-${date}",
     "type": "GLOBAL"
   },
-  "dateFormat": "dddd, MMMM Do YYYY, h:mm:ss",
+  "dateFormat": "MMMM Do -YYYY-MM-DD_HH-mm-ss",
   "excludeExtensionPattern": "pdf|docx?|xlsx?|zip|rar",
   "autoRenameAttachment": true,
   "excludedPaths": "_app;_pdf;_templates;borrar",

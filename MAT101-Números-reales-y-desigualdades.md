@@ -527,14 +527,12 @@ _En el gráfico: Se observa que en el intervalo $(0,1)$, la inecuación $x^2 < x
 2. ¿Por qué la Desigualdad de Bernoulli (N°2) requiere que $x$ sea estrictamente mayor a -1 para ser válida?
 3. ¿Cómo podrías usar el Teorema de los Cuadrados (N°1) para demostrar que la expresión $a^2 + b^2 \geq 2ab$ es siempre cierta?
 
+ 
+ 
+![[MAT101-Números-reales-y-desigualdades-Tuesday-2026-06-02_12-53-53.png]]
 
 
-![[MAT101-Números-reales-y-desigualdades-2026-06-02-12-47-39.png]]
-![[screenshot_03.png]]
 
-![[screenshot_06.png]]
-
-![[MAT101-Números-reales-y-desigualdades-20260602124701.png]]
 
 %%
 galaxy-links
