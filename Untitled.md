@@ -200,9 +200,9 @@ Sea $a,b,c,x \in \mathbb{R}$.
 	- $a<b \Rightarrow -a>-b$
 4. **Despeje aditivo**
 	- $a+x<b \Rightarrow x<b-a$
-5. **División por un número positivo**
+5. **Multiplicación por positivos**
 	- $(ab<ac)\land a>0 \Rightarrow b<c$
-6. **División por un número negativo**
+6. **Multiplicación por negativos**
 	- $(ab<ac)\land a<0 \Rightarrow b>c$
 7. **Cuadrados no negativos**
 	- $a^2\ge0$
