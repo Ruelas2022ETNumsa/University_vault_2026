@@ -384,7 +384,7 @@ A continuación, presento la tabla con la formalización solicitada:
 | 3 | **Intervalos Exteriores** | Superar un módulo implica que el número está fuera de la zona central, hacia los extremos. | $\vert x \vert > a \iff x > a \lor x < -a$ | $a > 0 \implies x \in (-\infty, -a) \cup (a, \infty)$ |
 
 ```desmos-graph
-left=-6; right=6; bottom=-1; top=5;
+left=-8; right=8; bottom=-1; top=7;
 width=500; height=300;
 ---
 y=x \{x>=0\}|#2d70b3
