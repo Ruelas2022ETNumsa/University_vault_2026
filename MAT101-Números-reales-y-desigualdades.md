@@ -104,8 +104,11 @@ _En el gráfico: La curva azul ($x^2-4$) interseca al eje negro en los puntos so
 2. Si definimos una relación que no es simétrica (como "es mayor que"), ¿por qué no podemos considerarla una forma de igualdad?
 3. ¿Cómo se relaciona el hecho de que la suma esté "unívocamente determinada" con la posibilidad de sumar lo mismo a ambos lados de una ecuación?
 
+**Preguntas de comprensión:**
 
-
+1. ¿Por qué es necesario que una función esté "unívocamente determinada" para que el Principio de Sustitución funcione correctamente?
+2. En una identidad como $(x+1)^{2}=x{2}+2x+1$, ¿qué sucede si sustituimos $x$ por cualquier número real?
+3. Al resolver un sistema de ecuaciones por el método de sustitución, ¿qué propiedad de la igualdad estamos explotando realmente?
 
 ---
 ## Definiciones
@@ -120,6 +123,12 @@ La resta y la división no se definen como operaciones primarias o independiente
 
 - **La resta** es posible porque el axioma del **inverso aditivo** asegura que para todo $a$ existe $-a$. Restar es sumar el opuesto: $a-b=a+(-b)$.
 - **La división** es posible porque el axioma del **inverso multiplicativo** asegura que para todo $a\neq 0$ existe $a^{-1}$. Dividir es multiplicar por el recíproco: $\dfrac{a}{b}=a\cdot b^{-1},\quad b\neq 0$.
+
+**Preguntas de comprensión:**
+
+1. ¿Por qué el número $0$ no puede ser el divisor $(a)$ en la definición de división de los números reales?
+2. Según la definición de resta de Apostol, ¿cómo se demuestra que $0−a$ es igual a $−a$?
+3. Si la resta se define a través de la suma, ¿qué propiedad de la igualdad garantiza que el resultado x sea único?
 
 ---
 
@@ -216,6 +225,13 @@ Tabla de referencia rápida con los teoremas más operativos: los que aparecen a
 |  11   | Fracciones — distinto denominador | $\dfrac{a}{b}+\dfrac{c}{d}=\dfrac{ad+cb}{bd},\quad b,d\neq 0$  |
 |  12   | Producto de fracciones            | $\dfrac{a}{b}\cdot\dfrac{c}{d}=\dfrac{ac}{bd},\quad b,d\neq 0$ |
 |  13   | División de fracciones            | $\dfrac{a/b}{c/d}=\dfrac{ad}{cb},\quad b,c,d\neq 0$            |
+
+
+**Preguntas de comprensión:**
+
+1. ¿Qué teorema básico de los reales justifica que podamos "cancelar" términos a ambos lados de una igualdad?
+2. ¿Por qué el teorema de los cuadrados $(a^{2} > 0)$ impide que existan raíces cuadradas de números negativos dentro de los reales?
+3. ¿Cómo usarías la **Propiedad Arquimediana** para demostrar que siempre podés encontrar un número de la forma $1/n$ tan pequeño como quieras?
 
 ---
 
