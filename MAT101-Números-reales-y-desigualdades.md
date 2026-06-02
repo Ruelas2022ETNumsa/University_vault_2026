@@ -408,28 +408,30 @@ width=350; height=150;
 x=y^2
 y>=0
 ```
-
+1
+```desmos-graph
+left=-4; right=4; bottom=-1; top=4;
+width=350; height=150;
+---
+y=\sqrt{x}|#2d70b3
+```
+2'
 
 ```desmos-graph
 left=-4; right=4; bottom=-1; top=4;
 width=350; height=150;
 ---
-y=sqrt(x){x>=0}
+y^2=x
+y>=0
 ```
 
+3'
 
 ```desmos-graph
 left=-4; right=4; bottom=-1; top=4;
 width=350; height=150;
 ---
-y=sqrt(x)
-```
-
-```desmos-graph
-left=-4; right=4; bottom=-1; top=4;
-width=350; height=150;
----
-y=\sqrt(x)|#2d70b3
+y=x^{1/2}|#2d70b3
 ```
 
 
@@ -437,13 +439,13 @@ y=\sqrt(x)|#2d70b3
 
 
 
-
+aaa
 
 ```desmos-graph
 left=-2; right=5; bottom=-1; top=4;
 width=500; height=300;
 ---
-y=\sqrt\{x\}|x>=0|#2d70b3
+y=\sqrt{x}|x>=0|#2d70b3
 y=(x+1)/2|#c74440
 y<=(x+1)/2|y>=\sqrt{x}|x>=0|#b2f2bb
 (1,1)|label:Igualdad si a=b|#000000
