@@ -341,16 +341,87 @@ A partir de su definición, se derivan teoremas fundamentales que permiten resol
 
 Sean $a, b, c, x \in \mathbb{R}$:
 
-|  N  | Teorema o propiedad         | Descripción                                                                         | Notación                                               | Concepto (Símbolos)                                                                                 |
-| :-: | :-------------------------- | :---------------------------------------------------------------------------------- | :----------------------------------------------------- | :-------------------------------------------------------------------------------------------------- |
-|  1  | **No negatividad**          | El valor absoluto de cualquier real es siempre cero o positivo.                     | $\|x\| \geq 0$                                         | $\forall \|x\| \in \mathbb{R} : x \geq 0$                                                           |
-|  2  | **Propiedad del producto**  | El módulo de un producto es el producto de los módulos de los factores.             | $\|ab\| = \|a\| \cdot \|b\|$                           | $\forall a,b \in \mathbb{R} : \|ab\| = \|a\| \cdot \|b\|$                                           |
-|  3  | **Propiedad del cociente**  | El módulo de una división es el cociente de los módulos (si el divisor no es nulo). | $\dfrac{\|a\|}{\|b\|} = \bigg \| \dfrac{a}{b}\bigg \|$ | $\forall a \in \mathbb{R}, \forall b \neq 0 : \dfrac{\|a\|}{\|b\|} = \bigg \| \dfrac{a}{b}\bigg \|$ |
-|  4  | **Relación con la raíz**    | La raíz cuadrada del cuadrado de un número es igual a su valor absoluto.            | $\sqrt{x^{2}} =\|x\|$                                  | $\forall x \in \mathbb{R} : \sqrt{x^2} = \|x\|$                                                     |
-|  5  | **Propiedad de Intervalos** | Estar acotado por un módulo equivale a estar contenido en un intervalo simétrico.   | $x \leq \|a\| \iff -a \leq x \leq a$                   | $a \geq 0 \land x \leq a \iff x \in [-a, a]$                                                        |
-|  6  | **Desigualdad Triangular**  | El módulo de una suma no supera la suma de los módulos individuales.                | $\|a + b\| \leq \|a\| + \|b\|$                         | $\forall a,b \in \mathbb{R} : \|a + b\| \leq \|a\| + \|b\|$                                         |
-|  7  | **Variante de la resta**    | La diferencia de módulos es menor o igual al módulo de la diferencia.               | $\|a - b\| \geq \|a\| - \|b\|$                         | $\forall a,b \in \mathbb{R} : \|a - b\| \geq \|a\| - \|b\|$                                         |
-   
+|  N  | Teorema o propiedad         | Descripción                                                                                | Notación                                               | Concepto (Símbolos)                                                                                 |
+|:---:|:--------------------------- |:------------------------------------------------------------------------------------------ |:------------------------------------------------------ |:--------------------------------------------------------------------------------------------------- |
+|  1  | **No negatividad**          | El valor absoluto de cualquier real es siempre cero o positivo.                            | $\|x\| \geq 0$                                         | $\forall \|x\| \in \mathbb{R} : x \geq 0$                                                           |
+|  2  | **Propiedad del producto**  | El módulo de un producto es el producto de los módulos de los factores.                    | $\|ab\| = \|a\| \cdot \|b\|$                           | $\forall a,b \in \mathbb{R} : \|ab\| = \|a\| \cdot \|b\|$                                           |
+|  3  | **Propiedad del cociente**  | El módulo de una división es el cociente de los módulos (si el divisor no es nulo).        | $\dfrac{\|a\|}{\|b\|} = \bigg \| \dfrac{a}{b}\bigg \|$ | $\forall a \in \mathbb{R}, \forall b \neq 0 : \dfrac{\|a\|}{\|b\|} = \bigg \| \dfrac{a}{b}\bigg \|$ |
+|  4  | **Relación con la raíz**    | La raíz cuadrada del cuadrado de un número es igual a su valor absoluto.                   | $\sqrt{x^{2}} =\|x\|$                                  | $\forall x \in \mathbb{R} : \sqrt{x^2} = \|x\|$                                                     |
+|  5  | **Propiedad de Intervalos** | Estar acotado por un módulo equivale a estar contenido en un intervalo simétrico.          | $x \leq \|a\| \iff -a \leq x \leq a$                   | $a \geq 0 \land x \leq a \iff x \in [-a, a]$                                                        |
+|  6  | **Desigualdad Triangular**  | El módulo de una suma no supera la suma de los módulos individuales.                       | $\|a + b\| \leq \|a\| + \|b\|$                         | $\forall a,b \in \mathbb{R} : \|a + b\| \leq \|a\| + \|b\|$                                         |
+|  7  | **Variante de la resta**    | La diferencia de módulos es menor o igual al módulo de la diferencia.                      | $\|a - b\| \geq \|a\| - \|b\|$                         | $\forall a,b \in \mathbb{R} : \|a - b\| \geq \|a\| - \|b\|$                                         |
+|  8  | **Intervalo Abierto**       | Estar acotado superiormente por un módulo define un intervalo simétrico entre $-a$ y $a$.  | $\vert x \vert < a$ $\iff -a < x < a$                    | $a > 0 \implies x \in (-a, a)$                                                                      |
+|  9  | **Intervalos Exteriores**   | Superar un módulo implica que el número está fuera de la zona central, hacia los extremos. | $\vert x \vert > a$ $\iff x > a \lor x < -a$             | $a > 0 \implies x \in (-\infty, -a) \cup (a, \infty)$                                               |
+
+- Cuando decimos $\vert x \vert < a$, estamos buscando todos los números cuya distancia al centro es "corta", lo que genera un **intervalo acotado** (un entorno).
+- Cuando decimos $\vert x \vert > a$, buscamos números que están "lejos" del origen, lo que genera dos **semirrectas infinitas**.
+
+----
+---
+---
+
+── MODO 1 · EXPLICACIÓN DE CONCEPTO ──
+
+En el sistema de los números reales, tanto la **Desigualdad de Cauchy-Schwarz** como las propiedades de los intervalos con valor absoluto son herramientas analíticas fundamentales. La primera permite relacionar productos y sumas (o vectores y normas), mientras que las segundas definen la noción de cercanía o distancia en la recta real.
+
+### 1. Desigualdad de Cauchy-Schwarz
+
+Esta desigualdad establece que el valor absoluto del producto de dos conjuntos de números (o el producto escalar de dos vectores) nunca supera al producto de sus magnitudes individuales. Es la base para demostrar la desigualdad triangular y para definir el ángulo entre vectores.
+
+### 2. Valor Absoluto e Intervalos
+
+El valor absoluto $\vert x \vert$ representa la **distancia** de un número al origen.
+
+- Cuando decimos $\vert x \vert < a$, estamos buscando todos los números cuya distancia al centro es "corta", lo que genera un **intervalo acotado** (un entorno).
+- Cuando decimos $\vert x \vert > a$, buscamos números que están "lejos" del origen, lo que genera dos **semirrectas infinitas**.
+
+A continuación, presento la tabla con la formalización solicitada:
+
+| N | Teorema o Propiedad | Descripción | Notación | Concepto (Símbolos) |
+| :-: | :--- | :--- | :--- | :--- |
+| 1 | **Cauchy-Schwarz** | El cuadrado de una suma de productos es menor o igual al producto de las sumas de los cuadrados. | $(\sum a_k b_k)^2 \leq (\sum a_k^2)(\sum b_k^2)$ | $\forall A, B \in V_n : \vert A \cdot B \vert \leq \Vert A \Vert \Vert B \Vert$ |
+| 2 | **Intervalo Abierto** | Estar acotado superiormente por un módulo define un intervalo simétrico entre $-a$ y $a$. | $\vert x \vert < a \iff -a < x < a$ | $a > 0 \implies x \in (-a, a)$ |
+| 3 | **Intervalos Exteriores** | Superar un módulo implica que el número está fuera de la zona central, hacia los extremos. | $\vert x \vert > a \iff x > a \lor x < -a$ | $a > 0 \implies x \in (-\infty, -a) \cup (a, \infty)$ |
+
+```desmos-graph
+left=-6; right=6; bottom=-1; top=5;
+width=500; height=300;
+---
+y=x \{x>=0\}|#2d70b3
+y=-x \{x<=0\}|#2d70b3
+y=3|#000000|DASHED
+-3<x<3|y<=3|y>=0|#a5d8ff
+x<-3|y<=5|y>=0|#ff7b7b
+x>3|y<=5|y>=0|#ff7b7b
+(0,4)|label:abs(x) > a (Rojo)|#c74440
+(0,1.5)|label:ablx \vert < a (Azul)|#2d70b3
+```
+
+_En el gráfico: La zona azul (#a5d8ff) representa la propiedad $\vert x \vert < 3$, donde los valores están "atrapados" cerca del centro. Las zonas rojas (#ff7b7b) representan $\vert x \vert > 3$, donde los valores escapan hacia el infinito._
+
+
+
+
+
+---
+---
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ```desmos-graph
 left=-4; right=4; bottom=-1; top=4;
@@ -376,6 +447,12 @@ _En el gráfico: La función azul $|x|$ muestra cómo los valores negativos se r
 1. ¿Por qué el Teorema 4 ($\sqrt{x^2} = |x|$) es una identidad y no simplemente $\sqrt{x^2} = x$?
 2. En la Desigualdad Triangular (Teorema 6), ¿en qué caso específico se cumple la igualdad exacta ($|a+b| = |a|+|b|$)?
 3. Si aplicamos el Teorema 5 a una inecuación del tipo $|x| > a$, ¿cómo se traduce esto a intervalos en la recta real?
+
+**Preguntas de comprensión:**
+
+1. En la desigualdad de Cauchy-Schwarz, ¿qué debe ocurrir entre los vectores (o secuencias de números) para que se cumpla la igualdad exacta?
+2. ¿Por qué si $a < 0$, la propiedad $\vert x \vert < a$ no tiene ninguna solución en el conjunto de los números reales?
+3. Si cambiamos $\vert x \vert < a$ por $\vert x - c \vert < \delta$, ¿cómo se desplaza el centro del intervalo en la recta numérica?
 
 ### 3. Desigualdades "Notables"
 
