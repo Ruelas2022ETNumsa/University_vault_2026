@@ -409,9 +409,30 @@ x>=3  \mid y \leq x  \mid y \geq 0 \mid \texttt{\#ff7b7b}
 ---
 ---
 
+$x<=-3 \mid y \leq -x \mid y \geq 0 \mid \texttt{\#ff7b7b}$
+$x>=3  \mid y \leq x  \mid y \geq 0 \mid \texttt{\#ff7b7b}$
 
 
+```desmos-graph
+left=-8; right=8; bottom=-2; top=2;
+width=700; height=180;
+---
+a=3
 
+y=0
+y=1
+
+(-a,0)|label:-a
+(a,0)|label:a
+
+(-a,1)|label:-a
+(a,1)|label:a
+
+y=0 \{-a<x<a\}
+
+y=1 \{x<-a\}
+y=1 \{x>a\}
+```
 
 
 
