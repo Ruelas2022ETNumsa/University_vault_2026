@@ -140,10 +140,6 @@ $0+b=0+c$ //existe el negativo $a+(-a)=0$:
 $b=c$ //Por existencia del neutro aditivo
 
 
-
-
-
-
 ---
 ---
 ---
