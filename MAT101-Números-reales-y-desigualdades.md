@@ -285,16 +285,30 @@ Sean $a, b, c, x \in \mathbb{R}$:
 |  6  | **Desigualdad Triangular**  | El módulo de una suma no supera la suma de los módulos individuales.                | $\|a + b\| \leq \|a\| + \|b\|$                         | $\forall a,b \in \mathbb{R} : \|a + b\| \leq \|a\| + \|b\|$                                         |
 |  7  | **Variante de la resta**    | La diferencia de módulos es menor o igual al módulo de la diferencia.               | $\|a - b\| \geq \|a\| - \|b\|$                         | $\forall a,b \in \mathbb{R} : \|a - b\| \geq \|a\| - \|b\|$                                         |
    
+```desmos-graph
+left=-5; right=5; bottom=-1; top=5;
+width=500; height=300;
+---
+a=2
+
+y=x \{x>=0\}
+y=-x \{x<=0\}
+
+y=a
+
+(-a,a)|label:(-a,a)
+(a,a)|label:(a,a)
+```
 
 
-
+``
 
 
 ```desmos-graph
 left=-5; right=5; bottom=-1; top=5;
 width=500; height=300;
 ---
-y=abs(x)|#2d70b3
+%%y=abs(x)|#2d70b3
 y=2|#000000|DASHED
 -2<=x<=2|y<=2|y>=0|#a5d8ff
 (-2,2)|label:(-a, a)|#c74440
@@ -338,8 +352,34 @@ y=a
 ```
 
 
+```desmos-graph
+left=-5; right=5; bottom=-1; top=5;
+width=500; height=300;
+---
+a=2
+
+y=abs(x)
+y=a
+
+y<=a {y>=abs(x)}
+
+(-a,a)|label:(-a,a)
+(a,a)|label:(a,a)
+```
 
 
+```desmos-graph
+left=-5; right=5; bottom=-1; top=5;
+width=500; height=300;
+---
+a=2
+
+y=abs(x)
+y=a
+
+(-a,a)|label:(-a,a)
+(a,a)|label:(a,a)
+```
 
 
 _En el gráfico: La función azul $|x|$ muestra cómo los valores negativos se reflejan al semieje positivo. La región sombreada ilustra el **Teorema 5**, donde $|x| \leq 2$ define el intervalo entre $-2$ y $2$._
