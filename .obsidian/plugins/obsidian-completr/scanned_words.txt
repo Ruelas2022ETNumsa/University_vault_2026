@@ -338,6 +338,7 @@ SG
 SW
 SK
 Sj
+Sea
 Plugins
 Pendientes
 Plugin
@@ -3053,6 +3054,7 @@ pegadas
 pegada
 peg
 pasos
+primitivas
 min
 mica
 movimiento
@@ -3221,6 +3223,7 @@ mk
 mE
 management
 milisegundos
+modifica
 YAML
 Ya
 You
@@ -3538,6 +3541,7 @@ extensiones
 eliminarlos
 extension
 exclusi
+equivalentemente
 Motor
 Media
 Mantiene
@@ -3914,6 +3918,7 @@ infinito
 iN
 intervenci
 innecesarios
+invertirse
 Dependencia
 Dropbox
 Dataview
@@ -4365,6 +4370,7 @@ NUNCA
 Negativo
 Notables
 Negativos
+Neutro
 originales
 observatory
 oficial
