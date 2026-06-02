@@ -532,7 +532,7 @@ _En el gráfico: Se observa que en el intervalo $(0,1)$, la inecuación $x^2 < x
 
 
 
-
+![[screenshot_06.png]]
 
 
 
