@@ -385,54 +385,56 @@ A continuación, presento la tabla con la formalización solicitada:
 
 
 ```desmos-graph
-left=-8; right=8; bottom=-1; top=7;
-width=500; height=300;
+left=-8; right=8; bottom=9; top=13;
+width=500; height=200;
 ---
-y=x \{x>=0\}|#2d70b3
-y=-x \{x<=0\}|#2d70b3
-y=3|#000000|DASHED
--3<=x<=3|y<=3|y>=0|#a5d8ff
-x<=-3|y<=-x|y>=0|#ff7b7b
-x>=3|y<=x|y>=0|#ff7b7b
-(0,4)|label:abs(x) > a (Rojo)|#c74440
-(0,1.5)|label:abs(x) < a (Azul)|#2d70b3
+a=3
+
+y=10 \{-a<=x<=a\}|#2d70b3
+y=11 \{x<-a\}|#ff7b7b
+y=11 \{x>a\}|#ff7b7b
+
+(-a,10)|label:-a|#2d70b3
+(a,10)|label:a|#2d70b3
+(-a,11)|label:-a|#ff7b7b
+(a,11)|label:a|#ff7b7b
+
+(0,10)|label:abs(x) menor a (Azul)|#2d70b3
+(0,12)|label:abs(x) mayor a (Rojo)|#c74440
 ```
+
 
 _En el gráfico: La zona azul  representa la propiedad $\vert x \vert < 3$, donde los valores están "atrapados" cerca del centro. Las zonas rojas representan $\vert x \vert > 3$, donde los valores escapan hacia el infinito._
 
 
 
-x<=-3 \mid y \leq -x \mid y \geq 0 \mid \texttt{\#ff7b7b}
-x>=3  \mid y \leq x  \mid y \geq 0 \mid \texttt{\#ff7b7b}
-
----
----
----
-
-$x<=-3 \mid y \leq -x \mid y \geq 0 \mid \texttt{\#ff7b7b}$
-$x>=3  \mid y \leq x  \mid y \geq 0 \mid \texttt{\#ff7b7b}$
-
-
 ```desmos-graph
-left=-8; right=8; bottom=-2; top=2;
-width=700; height=180;
+left=-20; right=20; bottom=9; top=13;
+width=500; height=200;
 ---
 a=3
 
-y=0
-y=1
+y=10 \{-a<=x<=a\}|#2d70b3
+y=11 \{x<-a\}|#ff7b7b
+y=11 \{x>a\}|#ff7b7b
 
-(-a,0)|label:-a
-(a,0)|label:a
+y=11 \{x<-a\}|#ff7b7b|DASHED
+y=11 \{x>a\}|#ff7b7b|DASHED
 
-(-a,1)|label:-a
-(a,1)|label:a
+(-a,10)|label:-a|#2d70b3
+(a,10)|label:a|#2d70b3
+(-a,11)|OPEN|label:-a|#ff7b7b
+(a,11)|OPEN|label:a|#ff7b7b
 
-y=0 \{-a<x<a\}
-
-y=1 \{x<-a\}
-y=1 \{x>a\}
+(0,10)|label:abs(x) menor o igual a (Azul)|#2d70b3
+(0,12)|label:abs(x) mayor a (Rojo)|#c74440
 ```
+
+
+
+
+
+
 
 
 
