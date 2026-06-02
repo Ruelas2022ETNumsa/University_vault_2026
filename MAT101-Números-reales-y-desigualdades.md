@@ -394,10 +394,10 @@ y=3|#000000|DASHED
 x<-3|y<=5|y>=0|#ff7b7b
 x>3|y<=5|y>=0|#ff7b7b
 (0,4)|label:abs(x) > a (Rojo)|#c74440
-(0,1.5)|label:ablx \vert < a (Azul)|#2d70b3
+(0,1.5)|label:abs(x) < a (Azul)|#2d70b3
 ```
 
-_En el gráfico: La zona azul (#a5d8ff) representa la propiedad $\vert x \vert < 3$, donde los valores están "atrapados" cerca del centro. Las zonas rojas (#ff7b7b) representan $\vert x \vert > 3$, donde los valores escapan hacia el infinito._
+_En el gráfico: La zona azul  representa la propiedad $\vert x \vert < 3$, donde los valores están "atrapados" cerca del centro. Las zonas rojas representan $\vert x \vert > 3$, donde los valores escapan hacia el infinito._
 
 
 
