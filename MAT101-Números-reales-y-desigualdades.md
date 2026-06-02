@@ -385,41 +385,18 @@ A continuación, presento la tabla con la formalización solicitada:
 
 
 ```desmos-graph
-left=-8; right=8; bottom=9; top=13;
-width=500; height=200;
+left=-5.5; right=5.5; bottom=9; top=13;
+width=350; height=200;
 ---
 a=3
 
 y=10 \{-a<=x<=a\}|#2d70b3
-y=11 \{x<-a\}|#ff7b7b
-y=11 \{x>a\}|#ff7b7b
 
-(-a,10)|label:-a|#2d70b3
-(a,10)|label:a|#2d70b3
-(-a,11)|label:-a|#ff7b7b
-(a,11)|label:a|#ff7b7b
+y=11 \{-5<x<-a\}|#ff7b7b
+y=11 \{5>x>a\}|#ff7b7b
 
-(0,10)|label:abs(x) menor a (Azul)|#2d70b3
-(0,12)|label:abs(x) mayor a (Rojo)|#c74440
-```
-
-
-_En el gráfico: La zona azul  representa la propiedad $\vert x \vert < 3$, donde los valores están "atrapados" cerca del centro. Las zonas rojas representan $\vert x \vert > 3$, donde los valores escapan hacia el infinito._
-
-
-
-```desmos-graph
-left=-20; right=20; bottom=9; top=13;
-width=500; height=200;
----
-a=3
-
-y=10 \{-a<=x<=a\}|#2d70b3
-y=11 \{x<-a\}|#ff7b7b
-y=11 \{x>a\}|#ff7b7b
-
-y=11 \{x<-a\}|#ff7b7b|DASHED
-y=11 \{x>a\}|#ff7b7b|DASHED
+y=11 \{x<-5\}|#ff7b7b|DOTTED
+y=11 \{x>5\}|#ff7b7b|DOTTED
 
 (-a,10)|label:-a|#2d70b3
 (a,10)|label:a|#2d70b3
@@ -429,6 +406,12 @@ y=11 \{x>a\}|#ff7b7b|DASHED
 (0,10)|label:abs(x) menor o igual a (Azul)|#2d70b3
 (0,12)|label:abs(x) mayor a (Rojo)|#c74440
 ```
+
+
+_En el gráfico: La zona azul  representa la propiedad $\vert x \vert < 3$, donde los valores están "atrapados" cerca del centro. Las zonas rojas representan $\vert x \vert > 3$, donde los valores escapan hacia el infinito._
+
+
+
 
 
 

@@ -323,6 +323,7 @@ Schwarz
 Seg
 Sombrear
 Segunda
+Superar
 Plugins
 Pendientes
 Plugin
@@ -636,6 +637,7 @@ determinada
 demuestra
 diversas
 demostrando
+desplaza
 Vault
 Verificar
 Variables
@@ -807,6 +809,8 @@ bdac
 basa
 borradores
 bola
+buscando
+buscamos
 scope
 status
 selector
@@ -1022,6 +1026,11 @@ sustituimos
 sustituci
 superiores
 superar
+semirrectas
+sumas
+segundas
+solicitada
+secuencias
 vault
 vil
 ver
@@ -1353,6 +1362,7 @@ abs
 anal
 aaa
 ambas
+atrapados
 related
 recomendados
 ribbon
@@ -1559,6 +1569,9 @@ relacionan
 ramos
 realmente
 robusta
+relacionar
+representa
+rojas
 notes
 notas
 nuevas
@@ -2072,6 +2085,12 @@ convergencia
 cierta
 complejos
 compleja
+cuya
+cercan
+conjuntos
+continuaci
+cumpla
+cambiamos
 updated
 un
 universo
@@ -2366,6 +2385,7 @@ INTERVALOS
 Intenci
 Inversos
 Intervalos
+Intervalo
 Funci
 File
 Fase
@@ -2538,6 +2558,7 @@ Esos
 Escribo
 Estar
 Establece
+Exteriores
 Obsidian
 OmniSearch
 Ocultar
@@ -2680,6 +2701,7 @@ Adici
 Ahora
 Aritm
 ABSOLUTO
+Abierto
 push
 pull
 para
@@ -2909,6 +2931,7 @@ programar
 potencias
 productos
 pilar
+presento
 min
 mica
 movimiento
@@ -3067,6 +3090,7 @@ magnitud
 media
 medias
 mostrando
+magnitudes
 YAML
 Ya
 You
@@ -3368,6 +3392,8 @@ existiera
 enteros
 estamos
 explotando
+extremos
+escapan
 Motor
 Media
 Mantiene
@@ -3735,6 +3761,8 @@ impl
 iguala
 inesperados
 incluirla
+infinitas
+infinito
 Dependencia
 Dropbox
 Dataview
@@ -4039,6 +4067,7 @@ fundamentan
 frecuentemente
 fraccional
 fallan
+formalizaci
 haya
 hace
 hacer
@@ -4282,3 +4311,4 @@ Zoom
 Zona
 Zorich
 zona
+zonas
