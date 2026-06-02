@@ -9,7 +9,7 @@ related_notes:
   - "[[_ToDo-system]]"
 tags: [beacon, obsidian, plugins, infraestructura]
 date_created: 2026-06-01
-date_updated: 2026-06-01
+date_updated: 2026-06-02
 status: activo
 ---
 
@@ -27,6 +27,7 @@ status: activo
 3. [Multi-Column Markdown — Columnas en notas](#3-multi-column-markdown--columnas-en-notas)
 4. [Commander — Botones personalizados en el ribbon](#4-commander--botones-personalizados-en-el-ribbon)
 5. [File Hider — Ocultar archivos del explorador](#5-file-hider--ocultar-archivos-del-explorador)
+6. [Attachment Management — Renombrar y organizar imágenes pegadas](#6-attachment-management--renombrar-y-organizar-imágenes-pegadas)
 
 ---
 
@@ -231,6 +232,66 @@ Settings → File Hider → agregar el patrón (nombre exacto, extensión con `*
 ### Bug conocido
 
 File Hider no aplica los patrones de ocultamiento al arrancar Obsidian — los archivos ocultos vuelven a ser visibles hasta que se abre la configuración del plugin y se reinicia la app. No hay workaround conocido por el momento; es un bug del plugin.
+
+---
+
+## 6. Attachment Management — Renombrar y organizar imágenes pegadas
+
+**Propósito:** Renombra automáticamente cualquier imagen pegada o arrastrada a una nota, heredando el nombre de la nota host y guardándola en `_assets/`. Elimina los nombres genéricos tipo `Pasted image 20260602.png` y mantiene la convención Galaxy sin intervención manual.
+
+### Por qué existe en el vault
+
+Cuando pegás una imagen en una nota `comet` o `planet`, Obsidian la guarda con un nombre genérico en la carpeta por defecto. Eso rompe dos reglas del sistema Galaxy: el nombre no sigue el patrón `ETNXXX-TNN-nombre-descriptivo` y el archivo no va a `_assets/`. Este plugin corrige ambas cosas automáticamente al momento de pegar.
+
+### Configuración aplicada
+
+| Campo | Valor | Por qué |
+|---|---|---|
+| Root path | *(vacío)* | Raíz del vault — dejar vacío para que `_assets` se resuelva desde la raíz |
+| Attachment path | `_assets` | Carpeta destino única para todas las imágenes del vault |
+| Attachment format | `${notename}-${date}` | Hereda el nombre Galaxy de la nota host + timestamp para evitar colisiones |
+| Date format | `YYYYMMDDHHmmss` | Fecha + hora hasta segundos — suficiente para unicidad, sin milisegundos innecesarios |
+| Automatically rename | `ON` | Renombrado automático al pegar — sin intervención manual |
+| Extension override | *(vacío)* | No se fuerza ninguna extensión — se conserva la original |
+| Exclude extension | `pdf\|docx?\|xlsx?\|zip\|rar` | PDFs y documentos los maneja PDF++ con su propio sistema en `_pdf/` |
+| Exclude paths | `_app;_pdf;_templates;borrar` | Protege toda la infraestructura del vault de renombrados accidentales |
+| Exclude subpaths | `ON` | La exclusión aplica también a todas las subcarpetas de las rutas listadas |
+
+> **Nota sobre Root path vacío:** dejar el campo vacío (no elegir ninguna de las tres opciones del dropdown) es lo que hace que `_assets` en Attachment path se resuelva correctamente desde la raíz del vault. Si se elige `In folder specified below` y se escribe `_assets` en ese campo, el plugin crea una carpeta anidada `_assets/_assets/`.
+
+### Resultado en el vault
+
+Al pegar una imagen en `ETN806-T01-joint-pdf-definition.md`:
+
+```
+Antes:   Pasted image 20260602143000.png  →  carpeta aleatoria
+Después: ETN806-T01-joint-pdf-definition-20260602143000.png  →  _assets/
+```
+
+### Lo que el plugin NO hace
+
+El plugin solo renombra y reubica el archivo de imagen. El tipo `photon` del sistema Galaxy requiere además:
+
+1. Crear la nota `photon` con su YAML y el campo `attached_to` apuntando a la nota host.
+2. Agregar el wikilink en el bloque `%%` de la nota host.
+
+Esos dos pasos siguen siendo manuales o via plantilla `tpl-photon.md`. Ver [[_galaxy-system]] sección `photon`.
+
+### Flujo de trabajo completo con el plugin
+
+```
+1. Abrís la nota host (ej. ETN806-T01-joint-pdf-definition.md)
+        ↓
+2. Pegás la imagen (Ctrl+V) o la arrastrás al editor
+        ↓
+3. Attachment Management la renombra y mueve a _assets/ automáticamente
+   → ETN806-T01-joint-pdf-definition-20260602143000.png
+        ↓
+4. (Manual) Creás la nota photon con tpl-photon.md
+   → YAML con attached_to: "[[ETN806-T01-joint-pdf-definition]]"
+        ↓
+5. (Manual) Agregás el wikilink en el bloque %% de la nota host
+```
 
 %%
 galaxy-links
