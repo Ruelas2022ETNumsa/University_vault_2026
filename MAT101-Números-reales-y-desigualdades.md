@@ -386,7 +386,7 @@ A continuación, presento la tabla con la formalización solicitada:
 
 ```desmos-graph
 left=-5.5; right=5.5; bottom=9; top=13;
-width=350; height=200;
+width=350; height=150;
 ---
 a=3
 
@@ -397,6 +397,9 @@ y=11 \{5>x>a\}|#ff7b7b
 
 y=11 \{x<-5\}|#ff7b7b|DOTTED
 y=11 \{x>5\}|#ff7b7b|DOTTED
+
+(1,11)|OPEN|label:(1,11)|BLACK
+
 
 (-a,10)|label:-a|#2d70b3
 (a,10)|label:a|#2d70b3
