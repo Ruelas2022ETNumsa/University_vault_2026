@@ -392,34 +392,16 @@ Las desigualdades notables son herramientas analíticas avanzadas que permiten e
 Sean $a, b, c, x \in \mathbb{R}$:
 
 
+|  N  | Teorema o propiedad                | Descripción                                                                                  | Notación                                         | Concepto (Símbolos)                                                        |
+| :-: | ---------------------------------- | -------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------------------------------------------------------------- |
+|  1  | **Cuadrados no negativos**         | El cuadrado de cualquier número real nunca es negativo.                                      | $a^2 \geq 0$                                     | $\forall a \in \mathbb{R}: a^2 \geq 0$                                     |
+|  2  | **Desigualdad de Bernoulli**       | Establece una cota inferior lineal para una potencia con base mayor a $-1$.                  | $(1+x)^n \geq 1+nx$                              | $x>-1,\; n\in\mathbb{Z}^{+} \implies (1+x)^n \geq 1+nx$                    |
+|  3  | **Medias Aritmética y Geométrica** | La media geométrica de números no negativos nunca excede a su media aritmética.              | $\sqrt{ab} \leq \dfrac{a+b}{2}$                  | $a,b\geq0 \implies \sqrt{ab}\leq\frac{a+b}{2}$                             |
+|  4  | **Cauchy-Schwarz**                 | El cuadrado del producto escalar de dos vectores es menor o igual al producto de sus normas. | $(\sum a_k b_k)^2 \leq (\sum a_k^2)(\sum b_k^2)$ | $\forall A,B\in V_n:\ \vert A\cdot B\vert \leq \vert A\vert\,\vert B\vert$ |
+|  5  | **Desigualdad Triangular**         | La distancia de una suma no puede superar la suma de las distancias individuales.            | $\vert a+b\vert \leq \vert a\vert+\vert b\vert$  | $\forall a,b\in\mathbb{R}:\ \vert a+b\vert \leq \vert a\vert+\vert b\vert$ |
 
 
-
-|  N  | Teorema o propiedad                | Descripción                                                                                  | Notación                                         | Concepto (Símbolos)                                       |           |      |     |     |     |                               |     |      |     |     |     |     |
-|:---:|:---------------------------------- |:-------------------------------------------------------------------------------------------- |:------------------------------------------------ |:--------------------------------------------------------- | --------- | ---- | --- | --- | --- | ----------------------------- | --- | ---- | --- | --- | --- | --- |
-|  1  | **Cuadrados no negativos**         | El cuadrado de cualquier número real nunca es negativo.                                      | $a^2 \geq 0$                                     | $\forall a \in \mathbb{R} : a^2 \geq 0$                   |           |      |     |     |     |                               |     |      |     |     |     |     |
-|  2  | **Desigualdad de Bernoulli**       | Establece una cota inferior lineal para una potencia con base mayor a -1.                    | $(1+x)^n \geq 1 + nx$                            | $x > -1, n \in \mathbb{Z}^+ \implies (1+x)^n \geq 1 + nx$ |           |      |     |     |     |                               |     |      |     |     |     |     |
-|  3  | **Medias Aritmética y Geométrica** | La media geométrica de números no negativos nunca excede a su media aritmética.              | $\sqrt{ab} \leq \frac{a+b}{2}$                   | $a,b \geq 0 \implies \sqrt{ab} \leq \frac{a+b}{2}$        |           |      |     |     |     |                               |     |      |     |     |     |     |
-|  4  | **Cauchy-Schwarz (Generalizada)**  | El cuadrado del producto escalar de dos vectores es menor o igual al producto de sus normas. | $(\sum a_k b_k)^2 \leq (\sum a_k^2)(\sum b_k^2)$ | $\forall A, B \in V_n :                                   | A \cdot B | \leq |     | A   |     | ,                             |     | B    |     | $   |     |     |
-|  5  | **Desigualdad Triangular**         | La distancia de una suma no puede superar la suma de las distancias individuales.            | $\vert a+b\vert\leq \vert a\\vert+\vertb\\vert$  | $\forall a,b \in \mathbb{R}:|a+b| \leq |a|+|b|$ |
-
-
-
-
-
-
-
-
-
-| N | Teorema o propiedad | Descripción | Notación | Concepto (Símbolos) | 
-| :-: | :--- | :--- | :--- | :--- |
- | 1 | **Cuadrados no negativos** | El cuadrado de cualquier número real nunca es negativo. | $a^2 \geq 0$ | $\forall a \in \mathbb{R} : a^2 \geq 0$ |
-  | 2 | **Desigualdad de Bernoulli** | Establece una cota inferior lineal para una potencia con base mayor a -1. | $(1+x)^n \geq 1 + nx$ | $x > -1, n \in \mathbb{Z}^+ \implies (1+x)^n \geq 1 + nx$ |
-   | 3 | **Medias Aritmética y Geométrica** | La media geométrica de números no negativos nunca excede a su media aritmética. | $\sqrt{ab} \leq \frac{a+b}{2}$ | $a,b \geq 0 \implies \sqrt{ab} \leq \frac{a+b}{2}$ |
-    | 4 | **Cauchy-Schwarz (Generalizada)** | El cuadrado del producto escalar de dos vectores es menor o igual al producto de sus normas. | $(\sum a_k b_k)^2 \leq (\sum a_k^2)(\sum b_k^2)$ | $\forall A, B \in V_n : |A \cdot B| \leq ||A|| , ||B||$ | 
-    | 5 | **Desigualdad Triangular** | La distancia de una suma no puede superar la suma de las distancias individuales. | $|a+b| \leq |a|+|b|$ | $\forall a,b \in \mathbb{R} : |a+b| \leq |a|+|b|$ |
-
-```
+```desmos-graph
 left=-2; right=5; bottom=-1; top=4;
 width=500; height=300;
 ---
@@ -428,6 +410,41 @@ y=(x+1)/2|#c74440
 y<=(x+1)/2|y>=\sqrt{x}|x>=0|#b2f2bb
 (1,1)|label:Igualdad si a=b|#000000
 ```
+
+
+
+
+
+```desmos-graph
+left=-2; right=5; bottom=-1; top=4;
+width=500; height=300;
+---
+y=sqrt(x)
+y=(x+1)/2
+
+(1,1)|label:(1,1)
+```
+
+
+```desmos-graph
+left=-2; right=5; bottom=-1; top=4;
+width=500; height=300;
+---
+y=sqrt(x)\{x>=0\}
+y=(x+1)/2
+
+(1,1)|label:Igualdad
+```
+
+
+
+
+
+
+
+
+
+
 
 _En el gráfico: Se visualiza la **Desigualdad de las Medias (N°3)** tomando $b=1$. La recta roja ($\frac{x+1}{2}$) siempre está por encima o toca a la curva azul ($\sqrt{x}$), demostrando que la media aritmética es siempre superior o igual a la geométrica._
 
@@ -438,6 +455,14 @@ _En el gráfico: Se visualiza la **Desigualdad de las Medias (N°3)** tomando $b
 1. ¿Bajo qué condición específica la Desigualdad de las Medias deja de ser una desigualdad y se convierte en una igualdad exacta?
 2. ¿Por qué la Desigualdad de Bernoulli (N°2) requiere que $x$ sea estrictamente mayor a -1 para ser válida?
 3. ¿Cómo podrías usar el Teorema de los Cuadrados (N°1) para demostrar que la expresión $a^2 + b^2 \geq 2ab$ es siempre cierta?
+
+
+
+
+
+
+
+
 
 
 
