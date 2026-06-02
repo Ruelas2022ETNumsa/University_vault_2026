@@ -268,16 +268,10 @@ _En el gráfico: La curva azul ($y=x^2$) ilustra que cualquier número real elev
 El valor absoluto $|x|$ mide la distancia al origen y es vital para definir límites y continuidad.
 
 - **Propiedad Fundamental:** $|x| \leq a$ es equivalente a $-a \leq x \leq a$ (siempre que $a \geq 0$).
-- **Desigualdad Triangular:** El valor absoluto de una suma no supera la suma de los valores absolutos: $$|a + b| \leq |a| + |b|$$
+- **Desigualdad Triangular:** El valor absoluto de una suma no supera la suma de los valores absolutos: $|a + b| \leq |a| + |b|$
 - **Variante de la Resta:** $|a - b| \geq ||a| - |b||$.
 
-
-
-
-
-## Teoremas de Valor Absoluto
-
-El valor absoluto de un número real $x$, denotado como $|x|$, representa su magnitud numérica sin tener en cuenta su signo, lo que geométricamente equivale a su distancia respecto al origen en la recta real. A partir de su definición, se derivan teoremas fundamentales que permiten resolver ecuaciones e inecuaciones con módulos y establecer acotaciones en el cálculo.
+A partir de su definición, se derivan teoremas fundamentales que permiten resolver ecuaciones e inecuaciones con módulos y establecer acotaciones en el cálculo.
 
 Sean $a, b, c, x \in \mathbb{R}$:
 
