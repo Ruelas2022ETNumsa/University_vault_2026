@@ -147,6 +147,7 @@ tocan
 tVy
 tM
 temporales
+tesis
 ToDo
 Templater
 Text
@@ -339,6 +340,8 @@ SW
 SK
 Sj
 Sea
+Sumando
+Semirrectas
 Plugins
 Pendientes
 Plugin
@@ -442,6 +445,10 @@ PW
 Palette
 PowerShell
 Protege
+Puede
+Positivos
+Potencias
+Prueba
 del
 date
 de
@@ -658,6 +665,7 @@ diversas
 demostrando
 desplaza
 dA
+determinar
 Vault
 Verificar
 Variables
@@ -765,6 +773,7 @@ gAMA
 gRK
 guardados
 guard
+grado
 body
 beacon
 bat
@@ -1070,6 +1079,7 @@ sS
 sw
 saving
 subpaths
+semiabiertos
 vault
 vil
 ver
@@ -1153,6 +1163,7 @@ vz
 veces
 vuelven
 via
+verifica
 audience
 activo
 auto
@@ -1417,6 +1428,8 @@ attachment
 arrastrada
 accidentales
 anidada
+asociatividad
+abiertos
 related
 recomendados
 ribbon
@@ -2173,6 +2186,9 @@ confirmar
 conocido
 cosas
 colisiones
+cerrados
+correspondencia
+conjuntista
 updated
 un
 universo
@@ -2416,6 +2432,11 @@ Cancelaci
 Cauchy
 CUADRADA
 Command
+Conjunto
+Correspondencia
+Cociente
+Comparar
+Codominio
 Instalados
 Instalado
 Instalar
@@ -2480,6 +2501,8 @@ Intervalos
 Intervalo
 IHDR
 IDATx
+Interpretaci
+Inecuaciones
 Funci
 File
 Fase
@@ -2537,6 +2560,7 @@ Formas
 Fb
 Fuerza
 Fecha
+Factorizar
 Estado
 Excalidraw
 EPUBs
@@ -2666,6 +2690,7 @@ Eb
 Eso
 Extension
 Exclude
+Equivalencia
 Obsidian
 OmniSearch
 Ocultar
@@ -2814,6 +2839,7 @@ Aritm
 ABSOLUTO
 Abierto
 Attachment
+Afirmaci
 push
 pull
 para
@@ -3751,6 +3777,7 @@ lidas
 lida
 lR
 listadas
+ley
 incluyendo
 im
 instalar
@@ -3999,6 +4026,9 @@ Desigualdad
 Densidad
 Dividir
 Date
+Demostraci
+Despeje
+Dominio
 Remotely
 Raz
 Revisa
@@ -4104,6 +4134,9 @@ Recargar
 Renombra
 Root
 Renombrado
+Recta
+Representar
+Repetici
 Hider
 Hace
 Herramientas
@@ -4127,6 +4160,7 @@ Hs
 HsN
 Hc
 Hereda
+Hip
 filtrar
 formato
 faltantes
@@ -4239,6 +4273,7 @@ fraccional
 fallan
 formalizaci
 fb
+funcional
 haya
 hace
 hacer
@@ -4334,6 +4369,7 @@ Utilizadas
 UW
 UY
 UL
+Uni
 Nombre
 Notas
 No
@@ -4451,6 +4487,7 @@ off
 ocultos
 ocultamiento
 override
+ordenarse
 junto
 json
 jer

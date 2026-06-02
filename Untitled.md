@@ -288,3 +288,20 @@ Sea $a,b,c,x \in \mathbb{R}$.
 ### Notación conjuntista
 
 ### Ejemplos de funciones
+
+
+
+
+7. **Cuadrados no negativos**
+	- $a^2\ge0$
+
+8. **Cuadrados no negativos**
+
+	- Enunciado:
+	  $a^2\ge0$
+
+
+$$   \begin{array}{rcl}
+      f(n) & = & (n+1)^3 \\
+           & = & n^3 + 3n^2 +3n + 1 
+   \end{array}$$
