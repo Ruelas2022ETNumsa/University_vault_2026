@@ -33,20 +33,31 @@ Sean $a, b, c \in \mathbb{R}$
 >**Los axiomas de cuerpo garantizan la consistencia aritmética y permiten la existencia unívoca de las operaciones de sustracción y división en** $\mathbb{R}$.
 
 **Preguntas de comprensión:**
-
 1. ¿Por qué es necesario especificar en los axiomas que el 0 y el 1 deben ser números distintos?
 2. ¿Qué operación matemática quedaría invalidada si no existiera el axioma del recíproco para números distintos de cero?
 3. ¿Cómo se relacionan estos axiomas con la posibilidad de definir la resta y la división en los números reales?
 
 **Preguntas de comprensión:**
-
 1. ¿Qué pasaría con la operación de división si quisiéramos incluir el número 0 en un "axioma de clausura para la división"?
-2. ¿Por qué el conjunto de los números irracionales, por sí solo, no cumple con el axioma de clausura bajo la suma? (Pensá en 2![](data:image/svg+xml;utf8,<svg%20xmlns="http://www.w3.org/2000/svg"%20width="400em"%20height="1.08em"%20viewBox="0%200%20400000%201080"%20preserveAspectRatio="xMinYMin%20slice"><path%20d="M95,702%0Ac-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14%0Ac0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54%0Ac44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10%0As173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429%0Ac69,-144,104.5,-217.7,106.5,-221%0Al0%20-0%0Ac5.3,-9.3,12,-14,20,-14%0AH400000v40H845.2724%0As-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7%0Ac-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z%0AM834%2080h400000v40h-400000z"></path></svg>)​+(−2![](data:image/svg+xml;utf8,<svg%20xmlns="http://www.w3.org/2000/svg"%20width="400em"%20height="1.08em"%20viewBox="0%200%20400000%201080"%20preserveAspectRatio="xMinYMin%20slice"><path%20d="M95,702%0Ac-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14%0Ac0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54%0Ac44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10%0As173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429%0Ac69,-144,104.5,-217.7,106.5,-221%0Al0%20-0%0Ac5.3,-9.3,12,-14,20,-14%0AH400000v40H845.2724%0As-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7%0Ac-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z%0AM834%2080h400000v40h-400000z"></path></svg>)​)).
+2. ¿Por qué el conjunto de los números irracionales, por sí solo, no cumple con el axioma de clausura bajo la suma? (Pensá en $\sqrt{2}+(-\sqrt{2})$).
 3. ¿Cómo ayuda la propiedad de clausura a que podamos definir funciones reales de variable real sin que los resultados sean valores "indefinidos"?
 
+**Preguntas de comprensión:**
+1. Si tomamos el conjunto de los números enteros, ¿se cumple la clausura bajo la operación de división?
+2. ¿Qué sucede con la clausura en los números reales cuando intentamos calcular la raíz cuadrada de un número negativo?
+3. ¿Por qué la clausura es necesaria para poder definir funciones de variable real sin que los resultados queden indefinidos?
 
+**Preguntas de comprensión:**
 
+1. ¿Por qué decimos que los números naturales **no** tienen clausura bajo la resta? (Pensá en 3−5).
+2. Si el resultado de una operación fuera un número imaginario (como $\sqrt{-1}$​), ¿se habría cumplido el axioma de clausura en los números reales?
+3. ¿Cómo ayuda la clausura a un ingeniero al programar un algoritmo de cálculo numérico?
 
+**Preguntas de comprensión:**
+
+1. ¿Por qué el conjunto de los números naturales **no** tiene clausura bajo la resta? (Pensá en el resultado de 2−5).
+2. Si intentamos dividir un número real por 0, ¿por qué esto no se considera una falla de la "clausura", sino una operación no definida?
+3. ¿Cómo ayuda la propiedad de clausura a un ingeniero al momento de asegurar que un sistema de ecuaciones reales tendrá soluciones dentro del mismo campo?
 
 ---
 ## Propiedades de igualdad
@@ -86,6 +97,15 @@ y=(x-2)(x+2)|RED|DOTTED
 _En el gráfico: La curva azul ($x^2-4$) interseca al eje negro en los puntos solución de la **ecuación** ($x=\pm 2$), mientras que la curva roja punteada coincide en cada punto con la azul, ilustrando la **identidad**._
 
 > **La ecuación busca hallar incógnitas; la identidad establece una equivalencia estructural permanente.**
+
+**Preguntas de comprensión:**
+
+1. ¿Por qué es fundamental la propiedad transitiva para poder resolver una cadena de igualdades en un problema de ingeniería?
+2. Si definimos una relación que no es simétrica (como "es mayor que"), ¿por qué no podemos considerarla una forma de igualdad?
+3. ¿Cómo se relaciona el hecho de que la suma esté "unívocamente determinada" con la posibilidad de sumar lo mismo a ambos lados de una ecuación?
+
+
+
 
 ---
 ## Definiciones
