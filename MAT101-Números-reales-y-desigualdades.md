@@ -401,13 +401,7 @@ Sean $a, b, c, x \in \mathbb{R}$:
 |  5  | **Desigualdad Triangular**         | La distancia de una suma no puede superar la suma de las distancias individuales.            | $\vert a+b\vert \leq \vert a\vert+\vert b\vert$  | $\forall a,b\in\mathbb{R}:\ \vert a+b\vert \leq \vert a\vert+\vert b\vert$ |
 
 
-```desmos-graph
-left=-4; right=4; bottom=-1; top=4;
-width=350; height=150;
----
-x=y^2
-y>=0
-```
+
 1
 ```desmos-graph
 left=-4; right=4; bottom=-1; top=4;
@@ -435,6 +429,15 @@ y=x^{1/2}|#2d70b3
 ```
 
 
+
+
+
+
+
+
+
+
+
 ---
 
 
@@ -450,42 +453,6 @@ y=(x+1)/2|#c74440
 y<=(x+1)/2|y>=\sqrt{x}|x>=0|#b2f2bb
 (1,1)|label:Igualdad si a=b|#000000
 ```
-
-
-
-
-
-```desmos-graph
-left=-2; right=5; bottom=-1; top=4;
-width=500; height=300;
----
-y=sqrt(x)
-y=(x+1)/2
-
-(1,1)|label:(1,1)
-```
-
-
-```desmos-graph
-left=-2; right=5; bottom=-1; top=4;
-width=500; height=300;
----
-y=sqrt(x)\{x>=0\}
-y=(x+1)/2
-
-(1,1)|label:Igualdad
-```
-
-
-
-
-
-
-
-
-
-
-
 _En el gráfico: Se visualiza la **Desigualdad de las Medias (N°3)** tomando $b=1$. La recta roja ($\frac{x+1}{2}$) siempre está por encima o toca a la curva azul ($\sqrt{x}$), demostrando que la media aritmética es siempre superior o igual a la geométrica._
 
 > **Estas desigualdades son el pilar fundamental para las demostraciones de convergencia y la definición formal de normas en espacios vectoriales.**
