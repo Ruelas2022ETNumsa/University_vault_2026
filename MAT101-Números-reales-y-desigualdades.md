@@ -403,6 +403,29 @@ _En el gráfico: La zona azul  representa la propiedad $\vert x \vert < 3$, dond
 
 
 
+```desmos-graph
+left=-8; right=8; bottom=-2; top=2;
+width=700; height=180;
+---
+
+a=3
+
+y=0
+y=1
+
+(-a,0)|label:-a
+(a,0)|label:a
+
+(-a,1)|label:-a
+(a,1)|label:a
+
+y=0 {-a<x<a}
+
+y=1 {x<-a}
+y=1 {x>a}
+```
+
+
 ---
 ---
 ---
