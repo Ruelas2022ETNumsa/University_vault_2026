@@ -186,8 +186,28 @@ Sea $a,b \in \mathbb{R}$.
 	- $a>0 \Rightarrow a$ es positivo.
 	- $a<0 \Rightarrow a$ es negativo.
 
+---
 
+## Teoremas de desigualdades e inecuaciones
 
+Sea $a,b,c \in \mathbb{R}$.
+
+1. **Tricotomía**
+	- $a<b \;\lor\; a=b \;\lor\; a>b$
+2. **Transitividad**
+	- $a<b \land b<c \Rightarrow a<c$
+3. **Monotonía** mmmmmmmmmmmmm
+	- $a<b \Rightarrow a+c<b+c$
+4. **Multiplicación por positivos**
+	- $a<b \land c>0 \Rightarrow ac<bc$
+5. **Multiplicación por negativos**
+	- $a<b \land c<0 \Rightarrow ac>bc$
+6. **Cuadrados no negativos**
+	- $a^2\ge0$
+7. **Cuadrados positivos**
+	- $a\neq0 \Rightarrow a^2>0$
+8. **Inversos multiplicativos y orden**
+	- $0<a<b \Rightarrow \dfrac{1}{b}<\dfrac{1}{a}$
 
 
 ---
@@ -195,50 +215,6 @@ Sea $a,b \in \mathbb{R}$.
 ---
 
 
-# Capítulo 0
-
-## Números reales y desigualdades
-
-### Axiomas de cuerpo de los números reales
-#### Clausura
-#### Conmutatividad
-#### Asociatividad
-#### Existencia de neutros
-#### Existencia de negativos
-#### Existencia de inversos
-#### Distributividad
-
-### Axiomas de igualdad
-#### Reflexividad
-#### Simetría
-#### Transitividad
-
-### Definiciones
-#### Resta
-#### División
-
-### Observaciones sobre tipos de igualdad
-#### Igualdad
-#### Ecuación
-#### Identidad
-
-### Teoremas sobre números reales
-#### Leyes de cancelación
-#### Solución de ecuaciones lineales
-#### Producto por cero
-#### Regla del producto nulo
-#### Propiedades de signos
-#### Operaciones con fracciones
-### Axiomas de orden de los números reales
-#### Clausura de los positivos
-#### Tricotomía
-#### Exclusión del cero
-#### Relación de orden
-##### Mayor que
-##### Menor que
-##### Mayor o igual que
-##### Menor o igual que
-##### Positivos y negativos
 
 
 
@@ -248,14 +224,6 @@ Sea $a,b \in \mathbb{R}$.
 
 
 
-### Teoremas de desigualdades e inecuaciones
-#### Tricotomía
-#### Transitividad
-#### Monotonía
-#### Multiplicación por positivos
-#### Multiplicación por negativos
-#### Cuadrados no negativos
-#### Inversos multiplicativos y orden
 
 ### Recta real e intervalos
 #### Correspondencia entre ℝ y la recta real
