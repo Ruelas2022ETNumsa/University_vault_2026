@@ -271,6 +271,81 @@ El valor absoluto $|x|$ mide la distancia al origen y es vital para definir lím
 - **Desigualdad Triangular:** El valor absoluto de una suma no supera la suma de los valores absolutos: $$|a + b| \leq |a| + |b|$$
 - **Variante de la Resta:** $|a - b| \geq ||a| - |b||$.
 
+
+
+
+
+## Teoremas de Valor Absoluto
+
+El valor absoluto de un número real $x$, denotado como $|x|$, representa su magnitud numérica sin tener en cuenta su signo, lo que geométricamente equivale a su distancia respecto al origen en la recta real. A partir de su definición, se derivan teoremas fundamentales que permiten resolver ecuaciones e inecuaciones con módulos y establecer acotaciones en el cálculo.
+
+Sean $a, b, c, x \in \mathbb{R}$:
+
+|  N  | Teorema o propiedad         | Descripción                                                                         | Notación      | Concepto (Símbolos)                   |                               |                                          |       |                            |     |                                               |             |                               |     |       |     |     |     |     |     |     |
+|:---:|:--------------------------- |:----------------------------------------------------------------------------------- |:------------- |:------------------------------------- | ----------------------------- | ---------------------------------------- | ----- | -------------------------- | --- | --------------------------------------------- | ----------- | ----------------------------- | --- | ----- | --- | --- | --- | --- | --- | --- |
+|  1  | **No negatividad**          | El valor absoluto de cualquier real es siempre cero o positivo.                     | $x \geq 0$    | $\forall x \in \mathbb{R} : x \geq 0$ |                               |                                          |       |                            |     |                                               |             |                               |     |       |     |     |     |     |     |     |
+|  2  | **Propiedad del producto**  | El módulo de un producto es el producto de los módulos de los factores.             | $ab = a \cdot b$   | $\forall a,b \in \mathbb{R} : ab = a \cdot | b   | $   |     |     |     |     |
+|  3  | **Propiedad del cociente**  | El módulo de una división es el cociente de los módulos (si el divisor no es nulo). | $             | \frac{a}{b}                           | = \frac{                      | a                                        | }{    | b                          | }$  | $\forall a \in \mathbb{R}, \forall b \neq 0 : | \frac{a}{b} | = \frac{                      | a   | }{    | b   | }$  |     |     |     |     |
+|  4  | **Relación con la raíz**    | La raíz cuadrada del cuadrado de un número es igual a su valor absoluto.            | $\sqrt{x^2} = | x                                     | $                             | $\forall x \in \mathbb{R} : \sqrt{x^2} = | x     | $                          |     |                                               |             |                               |     |       |     |     |     |     |     |     |
+|  5  | **Propiedad de Intervalos** | Estar acotado por un módulo equivale a estar contenido en un intervalo simétrico.   | $             | x                                     | \leq a \iff -a \leq x \leq a$ | $a \geq 0 \land                          | x     | \leq a \iff x \in [-a, a]$ |     |                                               |             |                               |     |       |     |     |     |     |     |     |
+|  6  | **Desigualdad Triangular**  | El módulo de una suma no supera la suma de los módulos individuales.                | $             | a + b                                 | \leq                          | a                                        | +     | b                          | $   | $\forall a,b \in \mathbb{R} :                 | a+b         | \leq                          | a   | +     | b   | $   |     |     |     |     |
+|  7  | **Variante de la resta**    | La diferencia de módulos es menor o igual al módulo de la diferencia.               | $             | a - b                                 | \geq                          |                                          | a     | -                          | b   |                                               | $           | $\forall a,b \in \mathbb{R} : | a-b | \geq  |     | a   | -   | b   |     | $   |
+   
+
+
+
+
+
+Sean a,b,c,x∈R:
+
+| N   | Teorema o propiedad         | Descripción                                                                         | Notación      | Concepto (Símbolos) |
+| --- | --------------------------- | ----------------------------------------------------------------------------------- | ------------- | ------------------- |
+| 1   | **No negatividad**          | El valor absoluto de cualquier real es siempre cero o positivo.                     | $             | x                   |
+| 2   | **Propiedad del producto**  | El módulo de un producto es el producto de los módulos de los factores.             | $             | ab                  |
+| 3   | **Propiedad del cociente**  | El módulo de una división es el cociente de los módulos (si el divisor no es nulo). | $             | \frac{a}{b}         |
+| 4   | **Relación con la raíz**    | La raíz cuadrada del cuadrado de un número es igual a su valor absoluto.            | $\sqrt{x^2} = | x                   |
+| 5   | **Propiedad de Intervalos** | Estar acotado por un módulo equivale a estar contenido en un intervalo simétrico.   | $             | x                   |
+| 6   | **Desigualdad Triangular**  | El módulo de una suma no supera la suma de los módulos individuales.                | $             | a + b               |
+| 7   | **Variante de la resta**    | La diferencia de módulos es menor o igual al módulo de la diferencia.               | $             | a - b               |
+
+```
+left=-5; right=5; bottom=-1; top=5;
+```
+
+
+
+
+
+
+
+
+
+```
+left=-5; right=5; bottom=-1; top=5;
+width=500; height=300;
+---
+y=abs(x)|#2d70b3
+y=2|#000000|DASHED
+-2<=x<=2|y<=2|y>=0|#a5d8ff
+(-2,2)|label:(-a, a)|#c74440
+(2,2)|label:(a, a)|#c74440
+```
+
+_En el gráfico: La función azul $|x|$ muestra cómo los valores negativos se reflejan al semieje positivo. La región sombreada ilustra el **Teorema 5**, donde $|x| \leq 2$ define el intervalo entre $-2$ y $2$._
+
+> **El valor absoluto define la métrica (distancia) en $\mathbb{R}$ y es la herramienta base para el concepto de límite mediante entornos.**
+
+**Preguntas de comprensión:**
+
+1. ¿Por qué el Teorema 4 ($\sqrt{x^2} = |x|$) es una identidad y no simplemente $\sqrt{x^2} = x$?
+2. En la Desigualdad Triangular (Teorema 6), ¿en qué caso específico se cumple la igualdad exacta ($|a+b| = |a|+|b|$)?
+3. Si aplicamos el Teorema 5 a una inecuación del tipo $|x| > a$, ¿cómo se traduce esto a intervalos en la recta real?
+
+
+
+
+
+
 ### 3. Desigualdades "Notables"
 
 Utilizadas frecuentemente para demostraciones avanzadas y optimización:
