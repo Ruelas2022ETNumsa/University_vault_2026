@@ -218,25 +218,24 @@ Existe correspondencia biunívoca (uno a uno) entre el conjunto $\mathbb{R}$ y u
 > [!note]  
 > Un intervalo es un subconjunto de la recta real.
 
-1. **Intervalo cerrado**
-    
-    - $[a,b]={x\mid a\le x\le b}$
+1. **Intervalo cerrado**: $[a,b]={x\mid a\le x\le b}$
+
+```desmos-graph
+left=2; right=5; bottom=-1; top=1;
+width=350; height=120;
+---
+y=0 \{3<=x<=4\}
+
+(3,0)|label:a
+(4,0)|label:b
+```
+2. **Intervalo semiabierto por la izquierda**: $]a,b]={x\mid a<x\le b}$
         
-2. **Intervalo semiabierto por la izquierda**
-    
-    - $]a,b]={x\mid a<x\le b}$
+3. **Intervalo semiabierto por la derecha**: $[a,b[={x\mid a\le x<b}$
         
-3. **Intervalo semiabierto por la derecha**
-    
-    - $[a,b[={x\mid a\le x<b}$
+4. **Semirrecta hacia $+\infty$**: $]a,+\infty[={x\mid x>a}$
         
-4. **Semirrecta hacia $+\infty$**
-    
-    - $]a,+\infty[={x\mid x>a}$
-        
-5. **Semirrecta desde $-\infty$**
-    
-    - $]-\infty,b[={x\mid x<b}$
+5. **Semirrecta desde $-\infty$**: $]-\infty,b[={x\mid x<b}$
 
 
 
