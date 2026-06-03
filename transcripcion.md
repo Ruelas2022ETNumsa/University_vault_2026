@@ -583,15 +583,14 @@ $$
 	
 	$(+)(-)(-)\ge 0\implies (+)\ge 0 \quad \text{verdadero}$
 	<BR>
-
 - Tabla de signos:
 
 | Intervalo      | Signo | Prueba    |
 | -------------- | ----- | --------- |
 | $]-\infty,-3[$ | (+)   | verdadero |
 | $]-3,0[$       | (-)   | falso     |
-| $]0,3[$        | (-)   |           |
-| $]3,+\infty[$  | (+)   |           |
+| $]0,3[$        | (-)   | falso     |
+| $]3,+\infty[$  | (+)   | verdadero |
 
 - Gráfica
 
@@ -617,8 +616,6 @@ y=0 \{3<=x<6\}|#ff7b7b
 (0.5,-0.5)|label:I_3|#2d70b3|hidden
 (4,-0.5)|label:I_4|#2d70b3|hidden
 ````
-
-
 
 
 - Prueba de extremos
@@ -716,27 +713,19 @@ $$
 (x-1)(x+3)(3x-1)  
 $$
 
-Puntos críticos:
+- Puntos críticos:
+	$$x=-3,\qquad x=\frac13,\qquad x=1$$
 
-$$  
-x=-3,\qquad x=\frac13,\qquad x=1  
-$$
-
-Además (evitar division entre 0):
-
-$$  
-x\ne -3,\quad x\ne \frac13,\quad x\ne 1  
-$$
-
+- Además (evitar division entre 0):
+	$$x\ne -3,\quad x\ne \frac13,\quad x\ne 1$$
 Tabla de signos:
-
-  
-| Intervalo | Signo |  
-| ---------- | ---------- |  
-| $]-\infty,-3[$ | $-$ |  
-| $]-3,\frac13[$ | $+$ |  
-| $]\frac13,1[$ | $-$ |  
-| $]1,+\infty[$ | $+$ |
+ 
+| Intervalo      | Signo | Prueba    |
+| -------------- | ----- | --------- |
+| $]-\infty,-3[$ | $(-)$ | verdadero |
+| $]-3,\frac13[$ | $(+)$ | falso     |
+| $]\frac13,1[$  | $(-)$ | verdadero |
+| $]1,+\infty[$  | $(+)$ | falso     |
 
 
 Por tanto:
