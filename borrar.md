@@ -81,12 +81,13 @@ $$
 
 Factorizando denominadores:
 
-$$  
-\begin{array}{rcl}  
-x^2+2x-3 &=& (x+3)(x-1) \[4pt]  
-3x^2+8x-3 &=& (3x-1)(x+3) \[4pt]  
-3x^2-4x+1 &=& (3x-1)(x-1)  
-\end{array}  
+
+$$
+\begin{array}{rcl}
+x^2+2x-3 &=& (x+3)(x-1) \\[4pt]
+3x^2+8x-3 &=& (3x-1)(x+3) \\[4pt]
+3x^2-4x+1 &=& (3x-1)(x-1)
+\end{array}
 $$
 
 Llevando todo al primer miembro:
@@ -170,3 +171,163 @@ $$
 
 Para este inciso b) la simplificación algebraica intermedia es extensa; si en tu apunte aparece desarrollada paso a paso, puedo reproducirla con el mismo formato `array rcl` que has estado usando.
 ```
+
+
+
+
+---
+---
+---
+
+
+Sí. Hay varios errores de sintaxis LaTeX y además el resultado final parece algebraicamente sospechoso.
+
+### Correcciones de sintaxis
+
+En los entornos `array` debes usar `\\[4pt]` y no `\[4pt]`.
+
+Correcto:
+
+```latex
+$$
+\begin{array}{rcl}
+x^2+2x-3 &=& (x+3)(x-1) \\[4pt]
+3x^2+8x-3 &=& (3x-1)(x+3) \\[4pt]
+3x^2-4x+1 &=& (3x-1)(x-1)
+\end{array}
+$$
+```
+
+La expresión original también puede escribirse más limpia:
+
+```latex
+$$
+\frac{2x}{x^2+2x-3}
++
+\frac{2x+1}{3x^2+8x-3}
+\le
+-\frac{1}{3x^2-4x+1}
+$$
+```
+
+Y después de factorizar:
+
+```latex
+$$
+\frac{2x}{(x+3)(x-1)}
++
+\frac{2x+1}{(3x-1)(x+3)}
++
+\frac{1}{(3x-1)(x-1)}
+\le 0
+$$
+```
+
+---
+
+### Problema con la reducción al mismo denominador
+
+Voy a verificar el numerador.
+
+Con denominador común
+
+[  
+(x+3)(x-1)(3x-1)  
+]
+
+el numerador es
+
+[  
+2x(3x-1)+(2x+1)(x-1)+(x+3).  
+]
+
+Desarrollando:
+
+[  
+6x^2-2x+2x^2-x-1+x+3  
+]
+
+[  
+8x^2-2x+2.  
+]
+
+Por tanto,
+
+```latex
+$$
+\frac{8x^2-2x+2}
+{(x+3)(x-1)(3x-1)}
+\le 0
+$$
+```
+
+o factorizando un 2:
+
+```latex
+$$
+\frac{2(4x^2-x+1)}
+{(x+3)(x-1)(3x-1)}
+\le 0
+$$
+```
+
+---
+
+### El paso final que escribiste
+
+```latex
+$$
+\frac{
+2(x-1)(x+3)(3x-1)(4x^2-x+1)
+}{
+(x-1)^2(x+3)^2(3x-1)^2
+}
+\le 0
+$$
+```
+
+no es equivalente al paso anterior. Parece que alguien multiplicó numerador y denominador por el denominador común para obtener un denominador cuadrado, pero no lo indicó.
+
+Si deseas usar el método de "denominador positivo", debe escribirse explícitamente:
+
+```latex
+$$
+\frac{2(4x^2-x+1)}
+{(x+3)(x-1)(3x-1)}
+\cdot
+\frac{(x+3)(x-1)(3x-1)}
+{(x+3)(x-1)(3x-1)}
+\le 0
+$$
+```
+
+y entonces
+
+```latex
+$$
+\frac{
+2(x+3)(x-1)(3x-1)(4x^2-x+1)
+}{
+(x+3)^2(x-1)^2(3x-1)^2
+}
+\le 0
+$$
+```
+
+Este último sí es algebraicamente correcto. Además,
+
+[  
+4x^2-x+1  
+]
+
+tiene discriminante
+
+[  
+\Delta=(-1)^2-4(4)(1)=-15<0,  
+]
+
+por lo que es siempre positivo y puede ignorarse en la tabla de signos. La inecuación se reduce a estudiar el signo de
+
+[  
+(x+3)(x-1)(3x-1).  
+]
