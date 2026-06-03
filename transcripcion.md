@@ -722,7 +722,7 @@ $$
 x=-3,\qquad x=\frac13,\qquad x=1  
 $$
 
-Además:
+Además (evitar division entre 0):
 
 $$  
 x\ne -3,\quad x\ne \frac13,\quad x\ne 1  
@@ -730,9 +730,35 @@ $$
 
 Tabla de signos:
 
+  
+| Intervalo | Signo |  
+| ---------- | ---------- |  
+| $]-\infty,-3[$ | $-$ |  
+| $]-3,\frac13[$ | $+$ |  
+| $]\frac13,1[$ | $-$ |  
+| $]1,+\infty[$ | $+$ |
 
 
+Por tanto:
 
+```desmos-graph
+left=-6; right=4; bottom=-1; top=1;
+width=500; height=120;
+---
+y=0 \{-6<x<-3\}|#ff7b7b
+y=0 \{0.333333<x<1\}|#ff7b7b
+
+(-3,0)|OPEN|label:-3|#ff7b7b
+(0.333333,0)|OPEN|label:1/3|#ff7b7b
+(1,0)|OPEN|label:1|#ff7b7b
+```
+
+$$  
+C_s=  
+]-\infty,-3[  
+\cup  
+]\tfrac13,1[  
+$$
 
 
 

@@ -697,6 +697,7 @@ definidos
 denominadores
 deseas
 discriminante
+division
 Vault
 Verificar
 Variables
