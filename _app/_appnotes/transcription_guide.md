@@ -174,6 +174,15 @@ y=11 \{x>5\}|#ff7b7b|DOTTED
 (3+1,11)|label:4|#ff7b7b
 ```
 
+
+```desmos-graph 
+left=-6.5; right=6.5; bottom=9; top=13; width=350; height=150;
+ --- 
+ p=3 
+ y=10 \{-p<=x<p\}|#2d70b3 y=11 \{x<-p\}|#ff7b7b|DOTTED y=11 \{-6.5<x<-p\}|#ff7b7b y=11 \{p+1<=x\}|#ff7b7b y=11 \{p+1<=x<6.5\}|#ff7b7b y=11 \{x>6.5\}|#ff7b7b|DOTTED (-p,10)|label:-3|#2d70b3 (p,10)|OPEN|label:3|#2d70b3 (-p,11)|OPEN|label:-3|#ff7b7b (p+1,11)|label:4|#ff7b7b
+```
+
+
 ---
 
 SALTOS DE LÍNEA:
