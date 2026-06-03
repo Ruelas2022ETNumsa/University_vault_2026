@@ -809,14 +809,17 @@ $$
 	$$x\ne -3,\quad x\ne \frac13,\quad x\ne 1$$
 Tabla de signos:
 
-$\dfrac{  (4x^{2}-x+1)}{  (x-1)^{2}(x+3)^2(3x-1)^{2  }\le}$
+$$\dfrac
+{  (4x^{2}-x+1)}
+{  (x-1)^{2}(x+3)^{2}(3x-1)^{2}  }
+\le 0$$
 
 | Intervalo      | Prueba x | Signo                 | Resultado |
 | -------------- | -------- | --------------------- | --------- |
 | $]-\infty,-3[$ | $-10$    | $\frac{(+)}{(+)}=(+)$ | verdadero |
-| $]-3,\frac13[$ |          | $\frac{()}{()}$       | falso     |
-| $]\frac13,1[$  |          | $\frac{()}{()}$       | verdadero |
-| $]1,+\infty[$  |          | $\frac{()}{()}$       | falso     |
+| $]-3,\frac13[$ | 0        | $\frac{(+)}{(+)}=(+)$ | falso     |
+| $]\frac13,1[$  | 0.5      | $\frac{(+)}{(+)}$     | verdadero |
+| $]1,+\infty[$  | 10       | $\frac{(+)}{(+)}=(+)$ | falso     |
 
 Por tanto:
 
