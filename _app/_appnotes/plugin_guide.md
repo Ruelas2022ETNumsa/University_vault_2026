@@ -122,6 +122,11 @@ Contenido columna izquierda
 Contenido columna derecha
 
 --- end-multi-column
+
+
+
+
+
 ```
 
 > El ID debe ser único dentro del mismo archivo. Si hay dos bloques en la misma nota usar `cornell-001`, `cornell-002`, etc.
