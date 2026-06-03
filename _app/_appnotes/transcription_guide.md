@@ -157,12 +157,12 @@ Cuando el gráfico no es reproducible en Desmos (diagrama de conjuntos, figura g
 Nunca inventar gráficos que no existan en el manuscrito.
 Para el caso de recta numerica con intervalos tomas como base este ejemplo
 ```desmos-graph
-left=-5.5; right=5.5; bottom=9; top=13;
-width=550; height=350;
+left=-10.5; right=10.5; bottom=9; top=13;
+width=650; height=150;
 ---
 a=3
-
-y=10 \{-a<=x<=a\}|#2d70b3
+b=2.9
+y=10 \{-b<=x<=b\}|#2d70b3
 
 y=11 \{-5<x<-a\}|#ff7b7b
 y=11 \{5>x>a\}|#ff7b7b
@@ -170,15 +170,20 @@ y=11 \{5>x>a\}|#ff7b7b
 y=11 \{x<-5\}|#ff7b7b|DOTTED
 y=11 \{x>5\}|#ff7b7b|DOTTED
 
-(1,11)|OPEN|label:(1,11)|BLACK
 
+
+
+(3,10)|OPEN|label:(1,11)|BLACK
+
+```
+(2,11)|OPEN|label:(1,11)|BLACK
+
+(a,11)|OPEN|label:(1,11)|BLACK
 
 (-a,10)|label:-a|#2d70b3
 (a,10)|label:a|#2d70b3
 (-a,11)|OPEN|label:-a|#ff7b7b
 (a,11)|OPEN|label:a|#ff7b7b
-
-```
 
 ---
 
