@@ -996,10 +996,10 @@ Tabla
 | Intervalo      | Prueba x | Signo i         | $R$ |
 | -------------- | -------- | --------------- | --- |
 | $]-\infty,-4[$ | $-10$    | $(-)(-)(-)=(-)$ | F   |
-| $]-4,0[$       | $-1$     | $(-)(-)(+)=(+)$ | F   |
-| $]0,4[$        | $1$      | $(+)(-)(+)=(-)$ | F   |
 | $-4$           | $-4$     | $0=0$           | V   |
+| $]-4,0[$       | $-1$     | $(-)(-)(+)=(+)$ | F   |
 | $0$            | $0$      | $0=0$           | V   |
+| $]0,4[$        | $1$      | $(+)(-)(+)=(-)$ | F   |
 | $4$            | $4$      | $0=0$           | V   |
 
 
@@ -1015,3 +1015,106 @@ width=500; height=120;
 $$
 C_{s}= \{-4,0,4\}
 $$
+
+>Observación: en el inciso **d)** la solución es un conjunto discreto de puntos, porque un valor absoluto solo puede ser menor o igual que cero cuando vale exactamente cero.
+
+---
+
+#### e)
+
+$$
+\left|
+\frac{4x+1}{x-2}
+\right|
+\ge 3
+$$
+
+Aplicando la propiedad:
+
+$$
+|A|\ge k
+\iff
+A\le -k
+\;\vee\;
+A\ge k
+\qquad (k>0)
+$$
+
+se obtiene:
+
+$$
+\frac{4x+1}{x-2}\le -3
+\qquad\vee\qquad
+\frac{4x+1}{x-2}\ge 3
+$$
+
+con:
+
+$$
+x\neq 2
+$$
+
+Primer caso:
+
+$$
+\begin{array}{rcl}
+\dfrac{4x+1}{x-2} & \le & -3 \\[6pt]
+\dfrac{4x+1+3(x-2)}{x-2} & \le & 0 \\[6pt]
+\dfrac{7x-5}{x-2} & \le & 0
+\end{array}
+$$
+
+Puntos críticos:
+
+$$
+x=\frac57,
+\qquad
+x=2
+$$
+
+
+saadasdasdsadsdsadsadasdsa
+asdasdasdsadasdas
+dasdasasdasdasadsd
+
+Luego:
+
+$$
+S_1=
+\left[\frac57,2\right[
+$$
+
+Segundo caso:
+
+$$
+\begin{array}{rcl}
+\dfrac{4x+1}{x-2} & \ge & 3 \\[6pt]
+\dfrac{4x+1-3(x-2)}{x-2} & \ge & 0 \\[6pt]
+\dfrac{x+7}{x-2} & \ge & 0
+\end{array}
+$$
+
+Puntos críticos:
+
+$$
+x=-7,
+\qquad
+x=2
+$$
+
+Luego:
+
+$$
+S_2=
+]-\infty,-7]
+\cup
+]2,+\infty[
+$$
+
+
+
+
+
+---
+---
+
