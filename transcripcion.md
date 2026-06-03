@@ -131,13 +131,17 @@ Sea $a,b,c,d,x \in \mathbb{R}$.
 
 Hipótesis: $a+b=a+c$
 
-$a+b+(-a)=a+c+(-a)$ //Sumando $(-a)$ a ambos lados:
+$a+b+(-a)=a+c+(-a)$ *Sumando $(-a)$ a ambos lados:*
 
-$(a+(-a))+b=(a+(-a))+c$ //Por asociatividad:
+$(a+(-a))+b=(a+(-a))+c$  *Por asociatividad:*
 
-$0+b=0+c$ //existe el negativo $a+(-a)=0$:
+$0+b=0+c$  *existe el negativo $a+(-a)=0$:*
 
-$b=c$ //Por existencia del neutro aditivo
+$b=c$  *Por existencia del neutro aditivo*
+
+
+
+
 
 ---
 
@@ -534,9 +538,7 @@ y=0 \{8<x<10\}|#ff7b7b
 (3,-0.5)|label:I_2|#2d70b3|hidden
 (6,-0.5)|label:I_3|#2d70b3|hidden
 (9,-0.5)|label:I_4|#2d70b3|hidden
-
-
-````
+```
 
 Intervalos:
 
@@ -564,7 +566,8 @@ $$
 
 ### Ejemplos resueltos
 
-#### a) $x^4 \ge 9x^2$
+#### a)
+$$x^4 \ge 9x^2$$
 
 $$
 \begin{array}{rcl}
@@ -615,7 +618,7 @@ y=0 \{3<=x<6\}|#ff7b7b
 (-0.5,-0.5)|label:I_2|#2d70b3|hidden
 (0.5,-0.5)|label:I_3|#2d70b3|hidden
 (4,-0.5)|label:I_4|#2d70b3|hidden
-````
+```
 
 
 - Prueba de extremos
@@ -631,7 +634,7 @@ y=0 \{3<=x<6\}|#ff7b7b
 (-3,0)|label:-3|#ff7b7b
 (0,0)|label:0|#ff7b7b
 (3,0)|label:3|#ff7b7b
-````
+```
 
 
 $$
