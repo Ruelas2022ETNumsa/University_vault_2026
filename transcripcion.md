@@ -315,15 +315,13 @@ Si $x$ y $y$ pertenecen a $\mathbb{R}$:
 5. **Ecuación de valor absoluto**: $(|x|=a \land a\ge0)\Rightarrow$ $(x=a \lor x=-a)$ $\quad$ $(x=\pm a)$
 6. **Valor absoluto de una potencia par**: $|x^2|=|x|^2=x^2$
 7. **Raíz cuadrada principal**: $\sqrt{x^2}=|x|$
-8. **Desigualdad de valor absoluto**
+8. **Desigualdad de valor absoluto.**
 	- **(caso menor que)**: $(|x|<a \land a>0)$ $\Rightarrow -a<x<a$
 	- **(caso mayor que)**: $(|x|>a \land a>0)$ $\Rightarrow (x>a \lor x<-a)$    
 9.  **Desigualdad triangular**: $|x+y|\le |x|+|y|$
-10. 
-        
-10. **Desigualdad de Schwarz**: $|x\cdot y|\ge x\cdot y$
-    
-    - Desigualdad de Schwarz.
+10. **Desigualdad triangular inversa**: $\bigl||x|-|y|\bigr| \le |x-y|$
+11. **Desigualdad de Schwarz**: $|x\cdot y|\le |x||y|$
+ 
 
 ---
 ---
