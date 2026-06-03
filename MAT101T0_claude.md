@@ -1188,6 +1188,15 @@ x^2+x-6 & < & 0 \\
 (x+3)(x-2) & < & 0
 \end{array}
 $$
+Puntos 
+$$x=-3\quad ,\quad x=2$$
+Tabla de signos:
+
+| Intervalo      | Prueba x | Signo                       | Resultado |
+| -------------- | -------- | --------------------------- | --------- |
+| $]-\infty,-3[$ | $-10$    | $$                          | verdadero |
+| $]-3,2[$       | $0$      | $\frac{(+)}{(-)(+)(-)}=(+)$ | falso     |
+| $]2,+\infty[$  | $10$     | $\frac{(+)}{(+)(+)(+)}=(+)$ | falso     |
 
 Por tanto:
 
