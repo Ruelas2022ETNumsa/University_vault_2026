@@ -126,20 +126,9 @@ Contenido columna derecha
 
 > El ID debe ser único dentro del mismo archivo. Si hay dos bloques en la misma nota usar `cornell-001`, `cornell-002`, etc.
 
-
----
----
----
-
-
-
-
-
 ### Layout Cornell para `planet` (teoría)
 
-9
-
---- start-multi-column: cornell-001
+--- start-multi-column: cornell-0010
 ```column-settings
 number of columns: 2
 column size: [60%, 40%]
@@ -161,17 +150,10 @@ definiciones, fórmulas, desarrollo.
 
 --- end-multi-column
 
-
-
-
-
 > **Resumen:** Idea central del subtítulo en una línea.
 
 ### Layout Cornell para `comet` (ejercicio)
 
-
-
-```
 --- start-multi-column: cornell-001
 ```column-settings
 number of columns: 2

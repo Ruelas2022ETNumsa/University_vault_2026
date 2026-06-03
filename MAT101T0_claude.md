@@ -41,14 +41,6 @@ Sea $a,b,c \in \mathbb{R}$.
 - Resta y división **no** son axiomas — se derivan
 
 --- end-multi-column
-
-
-
-
-
-
-
-
 > **Resumen:** Los 7 axiomas de cuerpo garantizan que $\mathbb{R}$ tiene operaciones de suma y producto bien definidas, con neutros, inversos y distributividad.
 
 ---
