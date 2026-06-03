@@ -1086,6 +1086,9 @@ Tabla
 
 $i)\quad \dfrac{x+7}{x-2}  \ge  0\qquad\vee\qquad   ii)\quad \dfrac{7x-5}{x-2} \le 0$
 
+
+
+
 | Intervalo           | Prueba x      | Signo i               | $R_{i}$ | Signo ii              | $R_{ii}$ | $\cup$    |
 | ------------------- | ------------- | --------------------- | ------- | --------------------- | -------- | --------- |
 | $]-\infty,-7[$      | $-10$         | $\frac{(-)}{(-)}=(+)$ | V       | $\frac{(-)}{(-)}=(+)$ | F        | verdadero |
@@ -1097,6 +1100,29 @@ $i)\quad \dfrac{x+7}{x-2}  \ge  0\qquad\vee\qquad   ii)\quad \dfrac{7x-5}{x-2} \
 | $]2,+\infty[$       | $10$          | $\frac{(+)}{(+)}=(+)$ | V       | $\frac{(+)}{(+)}=(+)$ | F        | verdadero |
 
 
+Finalmente:
+
+```desmos-graph
+left=-10; right=6; bottom=-1; top=1;
+width=500; height=120;
+---
+y=0 \{-10<x<=-7\}|#ff7b7b
+y=0 \{0.714286<=x<2\}|#ff7b7b
+y=0 \{2<x<6\}|#ff7b7b
+
+(-7,0)|label:-7|#ff7b7b
+(0.714286,0)|label:5/7|#ff7b7b
+(2,0)|OPEN|label:2|#ff7b7b
+```
+
+$$
+C_s=
+]-\infty,-7]
+\cup
+\left[\frac57,2\right[
+\cup
+]2,+\infty[
+$$
 
 
 
