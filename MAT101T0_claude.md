@@ -1064,6 +1064,20 @@ $$
 \end{array}
 $$
 
+Puntos críticos:
+$$
+x=\frac57=0.71427,\quad x=2
+$$
+
+Tabla 
+
+| Intervalo           | Prueba x      | Signo i               | $R_{i}$ |
+| ------------------- | ------------- | --------------------- | ------- |
+| $]-\infty,\frac57[$ | $0$           | $\frac{(+)}{(-)}=(-)$ | F       |
+| $\frac{5}{7}$       | $\frac{5}{7}$ | $\frac{(+)}{(-)}=(-)$ | F       |
+| $]\frac57,2[$       | $1$           | $\frac{(+)}{(-)}=(-)$ | F       |
+| $]2,+\infty[$       | $10$          | $\frac{(+)}{(+)}=(+)$ | V       |
+
 Segundo caso:
 
 $$
@@ -1077,27 +1091,16 @@ $$
 Puntos críticos:
 
 $$
-i)\quad
 x=-7,\quad x=2 \qquad
-ii)\quad 
-x=\frac57=0.71427,\quad x=2
 $$
 Tabla 
 
-$i)\quad \dfrac{x+7}{x-2}  \ge  0\qquad\vee\qquad   ii)\quad \dfrac{7x-5}{x-2} \le 0$
-
-
-
-
-| Intervalo           | Prueba x      | Signo i               | $R_{i}$ | Signo ii              | $R_{ii}$ | $\cup$    |
-| ------------------- | ------------- | --------------------- | ------- | --------------------- | -------- | --------- |
-| $]-\infty,-7[$      | $-10$         | $\frac{(-)}{(-)}=(+)$ | V       | $\frac{(-)}{(-)}=(+)$ | F        | verdadero |
-| $-7$                | $-7$          | $0$                   | V       | $\frac{(-)}{(-)}=(+)$ | F        | verdadero |
-| $]-7,2[$            | $0$           | $\frac{(+)}{(-)}=(-)$ | F       | $\frac{(-)}{(-)}=(+)$ | F        | falso     |
-| $]-\infty,\frac57[$ | $0$           | $\frac{(+)}{(-)}=(-)$ | F       | $\frac{(-)}{(-)}=(+)$ | F        | falso     |
-| $\frac{5}{7}$       | $\frac{5}{7}$ | $\frac{(+)}{(-)}=(-)$ | F       | $0$                   | V        | verdadero |
-| $]\frac57,2[$       | $1$           | $\frac{(+)}{(-)}=(-)$ | F       | $\frac{(+)}{(-)}=(-)$ | V        | verdadero |
-| $]2,+\infty[$       | $10$          | $\frac{(+)}{(+)}=(+)$ | V       | $\frac{(+)}{(+)}=(+)$ | F        | verdadero |
+| Intervalo      | Prueba x | Signo i               | $R_{i}$ | Signo ii              | $R_{ii}$ | $\cup$    |
+| -------------- | -------- | --------------------- | ------- | --------------------- | -------- | --------- |
+| $]-\infty,-7[$ | $-10$    | $\frac{(-)}{(-)}=(+)$ | V       | $\frac{(-)}{(-)}=(+)$ | F        | verdadero |
+| $-7$           | $-7$     | $0$                   | V       | $\frac{(-)}{(-)}=(+)$ | F        | verdadero |
+| $]-7,2[$       | $0$      | $\frac{(+)}{(-)}=(-)$ | F       | $\frac{(-)}{(-)}=(+)$ | F        | falso     |
+| $]2,+\infty[$  | $10$     | $\frac{(+)}{(+)}=(+)$ | V       | $\frac{(+)}{(+)}=(+)$ | F        | verdadero |
 
 
 Finalmente:
