@@ -914,19 +914,31 @@ x=-\frac23,
 x=-\frac38
 $$
 
+Tabla 
+
+| Intervalo      | Prueba x | Signo                       | Resultado |
+| -------------- | -------- | --------------------------- | --------- |
+| $]-\infty,-3[$ | $-10$    | $\frac{(+)}{(-)(-)(-)}=(-)$ | verdadero |
+| $]-3,\frac13[$ | 0        | $\frac{(+)}{(-)(+)(-)}=(+)$ | falso     |
+| $]\frac13,1[$  | 0.5      | $\frac{(+)}{(-)(+)(+)}=(-)$ | verdadero |
+| $]1,+\infty[$  | 10       | $\frac{(+)}{(+)(+)(+)}=(+)$ | falso     |
+
+
 
 Analizando signos:
 
 ```desmos-graph
-left=-3; right=2; bottom=-1; top=1;
+left=-3; right=2; bottom=-0.5; top=2;
 width=500; height=120;
 ---
-y=0 \{-1.25<x<-0.666667\}|#2d70b3
 
+(-1.25,0)|OPEN|label:-5/4|BLACK
+(-0.666667,0)|OPEN|label:-2/3|BLACK
+(-0.375,0)|OPEN|label:-3/8|BLACK
 
 
 y=0.5 \{-1.25<x<-0.666667\}|#c74440
-
+y=1 \{-1.25<x<-0.666667\}|#2d70b3
 
 
 
