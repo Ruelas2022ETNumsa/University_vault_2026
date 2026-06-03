@@ -575,18 +575,15 @@ x^2(x-3)(x+3) & \ge & 0
 \end{array}
 $$
 
-Puntos críticos:
-
-$$
-x_1=-3,\quad x_{2,3}=0,\quad x_4=3
-$$
-Prueba
-$I_{1}:$ $x=-10$
-
-$(+)(-)(-)\ge 0\implies (+)\ge 0 \quad \text{verdadero}$
-
-
-Gráfica
+- Puntos críticos:
+	$$x_1=-3,\quad x_{2,3}=0,\quad x_4=3$$
+	
+- Prueba
+	$I_{1}:$ $x=-10$
+	
+	$(+)(-)(-)\ge 0\implies (+)\ge 0 \quad \text{verdadero}$
+	<BR>
+- Gráfica
 
 ```desmos-graph
 left=-6; right=6; bottom=-1; top=1;
@@ -601,9 +598,9 @@ width=350; height=120;
 y=0 \{-6<x<=-3\}|#ff7b7b
 y=0 \{3<=x<6\}|#ff7b7b
 
-(-3,0)|label:-3|#ff7b7b
-(0,0)|label:0|#ff7b7b
-(3,0)|label:3|#ff7b7b
+(-3,0)|label:-3|OPEN|#ff7b7b
+(0,0)|label:0|OPEN|#ff7b7b
+(3,0)|label:3|OPEN|#ff7b7b
 
 (-4,-0.5)|label:I_1|#2d70b3|hidden
 (-0.5,-0.5)|label:I_2|#2d70b3|hidden
@@ -611,17 +608,10 @@ y=0 \{3<=x<6\}|#ff7b7b
 (4,-0.5)|label:I_4|#2d70b3|hidden
 ````
 
-Prueba de extremos
-reemplazando los valores de $x=-3, 0, 3$  se cumple $0\ge 0 \qua$
-
-
-
-
-
-
-
-
-Tabla de signos:
+- Prueba de extremos
+	reemplazando los valores de $x=-3, 0, 3$  se cumple $0 = 0 \quad \text{verdadero}$ entonces $-3,0,3 \in C_{s}$
+	<BR>
+- Tabla de signos:
 
 | Intervalo      | Signo |
 | -------------- | ----- |
