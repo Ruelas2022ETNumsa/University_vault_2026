@@ -376,6 +376,64 @@ $$
 \end{array}
 $$
 
+---
+
+## Solución de inecuaciones en variable real
+
+### Inecuaciones de primer grado
+
+Forma:
+
+$$
+ax+b
+\begin{cases}
+>\\
+<\\
+\ge\\
+\le
+\end{cases}
+cx+d
+$$
+
+donde:
+
+$$
+a,b,c,d \in \mathbb{R}
+$$
+
+Se recomienda despejar \(x\) con propiedades:
+
+$$
+\begin{array}{rcl}
+ax-cx & > & d-b \\[4pt]
+(a-c)x & > & d-b
+\end{array}
+$$
+
+Si:
+
+$$
+a-c>0
+$$
+
+entonces:
+
+$$
+x>\dfrac{d-b}{a-c}
+$$
+
+**\($C_s$\): conjunto solución de la inecuación**
+
+```desmos-graph
+left=2; right=7; bottom=-1; top=1;
+width=500; height=120;
+---
+y=0 \{x>3\}|#ff7b7b
+(3,0)|OPEN|label:\frac{d-b}{a-c}|#ff7b7b
+```
+
+
+
 
 
 
