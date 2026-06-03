@@ -1,6 +1,4 @@
-
 ---
-
 title: "transcription-guide"
 galaxy_body: beacon
 scope: vault
@@ -12,7 +10,6 @@ tags: [beacon, chatgpt, transcripcion, infraestructura]
 date_created: 2026-06-02
 date_updated: 2026-06-02
 status: activo
-
 ---
 
 TAREA:

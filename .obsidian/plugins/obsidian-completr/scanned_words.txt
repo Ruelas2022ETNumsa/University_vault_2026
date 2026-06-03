@@ -152,6 +152,7 @@ transcribir
 tercer
 transcripci
 tomas
+transcription
 ToDo
 Templater
 Text
@@ -462,6 +463,7 @@ Potencias
 Prueba
 Pasar
 Preguntar
+Primero
 del
 date
 de
@@ -1683,6 +1685,7 @@ realiza
 rengl
 reproducible
 rango
+reproducirla
 notes
 notas
 nuevas
@@ -2230,6 +2233,7 @@ certeza
 convertir
 compacto
 contra
+corchete
 updated
 un
 universo
@@ -2316,6 +2320,7 @@ GsaH
 Gc
 GZ
 Generar
+GRAFICA
 Convenci
 Creaci
 Commander
@@ -2743,6 +2748,7 @@ Excepci
 ENTIENDE
 Evitar
 Explicaci
+Extremo
 Obsidian
 OmniSearch
 Ocultar
@@ -2791,6 +2797,7 @@ Oculta
 ORDEN
 OBSERVACIONES
 OBJETIVO
+OPEN
 Auto
 Annotator
 Autocompletado
@@ -4021,6 +4028,7 @@ indique
 informarla
 innecesarias
 interpretaciones
+incluido
 Dependencia
 Dropbox
 Dataview
@@ -4218,6 +4226,8 @@ Representar
 Repetici
 Reportar
 Reproducirlo
+RECTA
+RICA
 Hider
 Hace
 Herramientas
@@ -4402,6 +4412,7 @@ hU
 hider
 heredando
 hora
+horizontales
 que
 quedan
 queda
@@ -4494,6 +4505,8 @@ Negativos
 Neutro
 NOTAS
 NEA
+NUM
+NOTACI
 originales
 observatory
 oficial

@@ -232,9 +232,17 @@ Sea $a,b,c,x \in \mathbb{R}$.
 #### Intervalos abiertos
 #### Semirrectas
 
+
+
+
 ### Valor absoluto
 #### Definición
 #### Interpretación geométrica
+
+
+
+
+
 #### Propiedades del valor absoluto
 ##### No negatividad
 ##### Producto
