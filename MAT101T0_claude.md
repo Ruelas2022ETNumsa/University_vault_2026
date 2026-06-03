@@ -1064,12 +1064,39 @@ $$
 \end{array}
 $$
 
+Segundo caso:
+
+$$
+\begin{array}{rcl}
+\dfrac{4x+1}{x-2} & \ge & 3 \\[6pt]
+\dfrac{4x+1-3(x-2)}{x-2} & \ge & 0 \\[6pt]
+\dfrac{x+7}{x-2} & \ge & 0
+\end{array}
+$$
+
 Puntos críticos:
 
 $$
-x=\frac57,
-\qquad
-x=2
+i)\quad
+x=-7,\quad x=2 \qquad
+ii)\quad 
+x=\frac57=0.71427,\quad x=2
+$$
+Tabla 
+
+| Intervalo             | Prueba x | Signo i               | $R_{i}$ | Signo ii              | $R_{ii}$ | $\cap$    |
+| --------------------- | -------- | --------------------- | ------- | --------------------- | -------- | --------- |
+| $]-\infty,-\frac54[$  | $-10$    | $\frac{(-)}{(-)}=(+)$ | V       | $\frac{(-)}{(-)}=(+)$ | V        | verdadero |
+| $]-\frac54,-\frac23[$ | $-1$     | $\frac{(-)}{(-)}=(+)$ | V       | $\frac{(+)}{(-)}=(-)$ | F        | falso     |
+| $]-\frac23,-\frac38[$ | $-0.5$   | $\frac{(-)}{(+)}=(-)$ | F       | $\frac{(+)}{(+)}=(+)$ | V        | falso     |
+| $]-\frac38,+\infty[$  | $10$     | $\frac{(+)}{(+)}=(+)$ | V       | $\frac{(+)}{(+)}=(+)$ | V        | verdadero |
+
+
+
+Puntos críticos:
+
+$$
+
 $$
 
 
@@ -1084,24 +1111,6 @@ S_1=
 \left[\frac57,2\right[
 $$
 
-Segundo caso:
-
-$$
-\begin{array}{rcl}
-\dfrac{4x+1}{x-2} & \ge & 3 \\[6pt]
-\dfrac{4x+1-3(x-2)}{x-2} & \ge & 0 \\[6pt]
-\dfrac{x+7}{x-2} & \ge & 0
-\end{array}
-$$
-
-Puntos críticos:
-
-$$
-x=-7,
-\qquad
-x=2
-$$
-
 Luego:
 
 $$
@@ -1110,9 +1119,6 @@ S_2=
 \cup
 ]2,+\infty[
 $$
-
-
-
 
 
 ---
