@@ -583,6 +583,16 @@ $$
 	
 	$(+)(-)(-)\ge 0\implies (+)\ge 0 \quad \text{verdadero}$
 	<BR>
+
+- Tabla de signos:
+
+| Intervalo      | Signo |
+| -------------- | ----- |
+| $]-\infty,-3[$ | (+)   |
+| $]-3,0[$       | (-)   |
+| $]0,3[$        | (-)   |
+| $]3,+\infty[$  | (+)   |
+
 - Gráfica
 
 ```desmos-graph
@@ -608,20 +618,11 @@ y=0 \{3<=x<6\}|#ff7b7b
 (4,-0.5)|label:I_4|#2d70b3|hidden
 ````
 
+
+
+
 - Prueba de extremos
-	reemplazando los valores de $x=-3, 0, 3$  se cumple $0 = 0 \quad \text{verdadero}$ entonces $-3,0,3 \in C_{s}$
-	<BR>
-- Tabla de signos:
-
-| Intervalo      | Signo |
-| -------------- | ----- |
-| $]-\infty,-3[$ | (+)   |
-| $]-3,0[$       | (-)   |
-| $]0,3[$        | (-)   |
-| $]3,+\infty[$  | (+)   |
-
-
-Como la inecuación es $\ge 0$, se incluyen los puntos donde la expresión se anula:
+	$x=-3, 0, 3$  se cumple $0 = 0 \quad \text{verdadero}$ entonces $-3,0,3 \in C_{s}$
 
 ```desmos-graph
 left=-6; right=6; bottom=-1; top=1;
@@ -644,6 +645,8 @@ C_s=
 \cup
 [3,+\infty[
 $$
+
+
 
 
 
