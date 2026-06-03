@@ -229,13 +229,44 @@ y=0 \{3<=x<=4\}
 (3,0)|label:a
 (4,0)|label:b
 ```
+
 2. **Intervalo semiabierto por la izquierda**: $]a,b]={x\mid a<x\le b}$
-        
-3. **Intervalo semiabierto por la derecha**: $[a,b[={x\mid a\le x<b}$
-        
+
+```desmos-graph
+left=2; right=5; bottom=-1; top=1;
+width=350; height=120;
+---
+y=0 \{3<x<=4\}
+
+(3,0)|OPEN|label:a
+(4,0)|label:b
+```
+
+3. **Intervalo semiabierto por la derecha**: $]a,b[={x\mid a< x<b}$
+
+```desmos-graph
+left=2; right=5; bottom=-1; top=1;
+width=350; height=120;
+---
+y=0 \{3<x<4\}
+
+(3,0)|OPEN|label:a
+(4,0)|OPEN|label:b
+```
+
 4. **Semirrecta hacia $+\infty$**: $]a,+\infty[={x\mid x>a}$
-        
-5. **Semirrecta desde $-\infty$**: $]-\infty,b[={x\mid x<b}$
+
+```desmos-graph
+left=0; right=8; bottom=-1; top=1;
+width=350; height=120;
+---
+y=0 \{3<x<7\}
+y=0 \{x>7\}|DOTTED
+
+(3,0)|OPEN|label:a
+```
+
+4. **Semirrecta desde $-\infty$**: $]-\infty,b[={x\mid x<b}$
 
 
 
