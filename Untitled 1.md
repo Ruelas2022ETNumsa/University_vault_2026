@@ -28,12 +28,9 @@ y continúa en la derecha de forma evidente, leerlo como unidad continua.
 DETECCIÓN DE TÍTULOS:
 Los títulos están escritos en rojo.
 El nivel jerárquico se determina por tamaño relativo dentro de la página:
-* Titulo principal → #
 - Texto rojo grande → ## (sección principal)
 - Texto rojo mediano → ### (subsección)
-Reportar los niveles al mostrar la estructura general.
-Evitar niveles más profundos salvo necesidad real.
-
+Reportar ambos niveles al mostrar la estructura general.
 ---
 
 ESTILO DE TRANSCRIPCIÓN:
