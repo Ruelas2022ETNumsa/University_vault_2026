@@ -322,6 +322,45 @@ Si $x$ y $y$ pertenecen a $\mathbb{R}$:
 10. **Desigualdad triangular inversa**: $\bigl||x|-|y|\bigr| \le |x-y|$
 11. **Desigualdad de Schwarz**: $|x\cdot y|\le |x||y|$
  
+#### Ejemplo
+Analizar la V o F de:
+
+$-6=-6$
+$4-10=9-15$
+$$2^2-2\cdot5\left(\dfrac{3}{2}\right)+\left(\dfrac{5}{2}\right)^2  
+    =  
+    3^2-3\cdot5\left(\dfrac{2}{2}\right)+\left(\dfrac{5}{2}\right)^2$$
+$$  
+\left(2-\frac{5}{2}\right)^2
+
+\left(3-\frac{5}{2}\right)^2  
+$$
+$$  
+\sqrt{\left(2-\frac{5}{2}\right)^2}
+
+\sqrt{\left(3-\frac{5}{2}\right)^2}  
+$$
+
+$$  
+\left|2-\frac{5}{2}\right|
+
+\left|3-\frac{5}{2}\right|  
+$$
+
+$$  
+\left|-\frac{1}{2}\right|
+
+\left|\frac{1}{2}\right|  
+$$
+
+$$  
+\frac{1}{2}
+
+\frac{1}{2}  
+\qquad \checkmark  
+$$
+
+
 
 ---
 ---
