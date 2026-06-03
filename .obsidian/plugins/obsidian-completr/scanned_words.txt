@@ -468,6 +468,7 @@ Prueba
 Pasar
 Preguntar
 Primero
+Parece
 del
 date
 de
@@ -693,6 +694,9 @@ describiendo
 denotado
 despejar
 definidos
+denominadores
+deseas
+discriminante
 Vault
 Verificar
 Variables
@@ -1469,6 +1473,7 @@ abiertos
 analizar
 algebraicos
 analizado
+algebraicamente
 related
 recomendados
 ribbon
@@ -1702,6 +1707,7 @@ recomienda
 radicales
 recomiendan
 rcl
+reduce
 notes
 notas
 nuevas
@@ -1819,6 +1825,7 @@ niveles
 numerica
 nuevamente
 ne
+numerador
 created
 commit
 cada
@@ -2635,6 +2642,7 @@ Fecha
 Factorizar
 FICOS
 Formar
+Factorizando
 Estado
 Excalidraw
 EPUBs
@@ -3345,6 +3353,7 @@ milisegundos
 modifica
 mitades
 mediano
+miembro
 YAML
 Ya
 You
@@ -3395,6 +3404,7 @@ Bl
 Bk
 Botones
 Bug
+BR
 en
 exacta
 escaneados
@@ -3665,6 +3675,9 @@ exclusi
 equivalentemente
 evidentes
 expandir
+escribiste
+escribirse
+estudiar
 Motor
 Media
 Mantiene
@@ -3782,6 +3795,7 @@ Libro
 Library
 LIDAS
 LECTURA
+Llevando
 links
 las
 listar
@@ -4057,6 +4071,8 @@ innecesarias
 interpretaciones
 incluido
 infty
+indic
+ignorarse
 Dependencia
 Dropbox
 Dataview
@@ -4144,6 +4160,7 @@ DETECCI
 Detenerse
 DEFINICIONES
 Dentro
+Desarrollando
 Remotely
 Raz
 Revisa
@@ -4258,6 +4275,7 @@ RECTA
 RICA
 Resultan
 Repetir
+Reduciendo
 Hider
 Hace
 Herramientas
@@ -4401,6 +4419,7 @@ forzarlo
 ficos
 fiel
 frac
+factorizando
 haya
 hace
 hacer

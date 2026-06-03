@@ -646,6 +646,50 @@ C_s=
 [3,+\infty[
 $$
 
+---
+
+#### b)
+
+$$  
+\frac{2x}{x^2+2x-3}  
++  
+\frac{2x+1}{3x^2+8x-3}  
+\le  
+-\frac{1}{3x^2-4x+1}  
+$$
+
+Factorizando denominadores:
+
+
+$$
+\begin{array}{rcl}
+x^2+2x-3 &=& (x+3)(x-1) \\[4pt]
+3x^2+8x-3 &=& (3x-1)(x+3) \\[4pt]
+3x^2-4x+1 &=& (3x-1)(x-1)
+\end{array}
+$$
+
+Llevando todo al primer miembro:
+
+$$  
+\frac{2x}{(x+3)(x-1)}  
++  
+\frac{2x+1}{(3x-1)(x+3)}  
++  
+\frac{1}{(3x-1)(x-1)}  
+\le 0  
+$$
+
+Reduciendo el numerador
+$$
+\begin{array}{rcl}
+2x(3x-1)+(2x+1)(x-1)+(x+3)
+&=&
+6x^{2}-2x+2x^{2}-x-1+x+3 \\[4pt]
+&=&
+8x^{2}-2x+2 
+\end{array}
+$$
 
 
 
