@@ -682,12 +682,12 @@ $$
 	
 - Tabla de signos:
 
-| Intervalo      | Signo | Prueba    |
-| -------------- | ----- | --------- |
-| $]-\infty,-3[$ | (+)   | verdadero |
-| $]-3,0[$       | (-)   | falso     |
-| $]0,3[$        | (-)   | falso     |
-| $]3,+\infty[$  | (+)   | verdadero |
+| Intervalo      | Prueba      | Signo | Prueba    |
+| -------------- | ----------- | ----- | --------- |
+| $]-\infty,-3[$ | $I_{1}=-10$ | (+)   | verdadero |
+| $]-3,0[$       | $I_{1}=-10$ | (-)   | falso     |
+| $]0,3[$        | $I_{1}=-10$ | (-)   | falso     |
+| $]3,+\infty[$  | verdadero   | (+)   | verdadero |
 
 - Gráfica
 
@@ -741,3 +741,108 @@ C_s=
 $$
 
 ---
+
+#### b)
+
+$$  
+\frac{2x}{x^2+2x-3}  
++  
+\frac{2x+1}{3x^2+8x-3}  
+\le  
+-\frac{1}{3x^2-4x+1}  
+$$
+
+Factorizando denominadores:
+
+
+$$
+\begin{array}{rcl}
+x^2+2x-3 &=& (x+3)(x-1) \\[4pt]
+3x^2+8x-3 &=& (3x-1)(x+3) \\[4pt]
+3x^2-4x+1 &=& (3x-1)(x-1)
+\end{array}
+$$
+
+Llevando todo al primer miembro:
+
+$$  
+\frac{2x}{(x+3)(x-1)}  
++  
+\frac{2x+1}{(3x-1)(x+3)}  
++  
+\frac{1}{(3x-1)(x-1)}  
+\le 0  
+$$
+
+Reduciendo el numerador
+$$
+\begin{array}{rcl}
+2x(3x-1)+(2x+1)(x-1)+(x+3)
+&=&
+6x^{2}-2x+2x^{2}-x-1+x+3 \\[4pt]
+&=&
+8x^{2}-2x+2 \qquad (\div2)\\
+&=&
+4x^{2}-x+1
+\end{array}
+$$
+Reduciendo a un solo cociente:
+
+$$  
+\frac{  
+(4x^{2}-x+1)
+}{  
+(x-1)^2(x+3)^2(3x-1)^2  
+}  
+\le 0  
+$$
+
+Como
+
+$$  
+4x^2-x+1>0  
+\qquad \forall x\in\mathbb{R}  
+$$
+
+y los factores cuadrados del denominador son positivos en su dominio, el signo depende de
+
+$$  
+(x-1)(x+3)(3x-1)  
+$$
+
+- Puntos críticos:
+	$$x=-3,\qquad x=\frac13,\qquad x=1$$
+
+- Además (evitar division entre 0):
+	$$x\ne -3,\quad x\ne \frac13,\quad x\ne 1$$
+Tabla de signos:
+ 
+| Intervalo      | Signo | Prueba    |
+| -------------- | ----- | --------- |
+| $]-\infty,-3[$ | $(-)$ | verdadero |
+| $]-3,\frac13[$ | $(+)$ | falso     |
+| $]\frac13,1[$  | $(-)$ | verdadero |
+| $]1,+\infty[$  | $(+)$ | falso     |
+
+
+Por tanto:
+
+```desmos-graph
+left=-6; right=4; bottom=-1; top=1;
+width=350; height=120;
+---
+y=0 \{-6<x<-3\}|#ff7b7b
+y=0 \{0.333333<x<1\}|#ff7b7b
+
+(-3,0)|OPEN|label:-3|#ff7b7b
+(0.333333,0)|OPEN|label:1/3|#ff7b7b
+(1,0)|OPEN|label:1|#ff7b7b
+```
+
+$$  
+C_s=  
+]-\infty,-3[  
+\cup  
+]\tfrac13,1[  
+$$
+

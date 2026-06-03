@@ -9,7 +9,7 @@
   "attachmentFolderPath": "_assets",
   "alwaysUpdateLinks": true,
   "readableLineLength": true,
-  "showLineNumber": false,
+  "showLineNumber": true,
   "vimMode": false,
   "userIgnoreFilters": null
 }
