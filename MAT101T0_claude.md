@@ -816,10 +816,10 @@ $$\dfrac
 
 | Intervalo      | Prueba x | Signo                       | Resultado |
 | -------------- | -------- | --------------------------- | --------- |
-| $]-\infty,-3[$ | $-10$    | $\frac{(+)}{(-)(-)(-)}=(-)$ |           |
-| $]-3,\frac13[$ | 0        | $\frac{(+)}{(-)(+)(-)}=(+)$ |           |
-| $]\frac13,1[$  | 0.5      | $\frac{(+)}{(-)(+)(-)}=(+)$ | verdadero |
-| $]1,+\infty[$  | 10       | $\frac{(+)}{(-)(+)(-)}=(+)$ | falso     |
+| $]-\infty,-3[$ | $-10$    | $\frac{(+)}{(-)(-)(-)}=(-)$ | verdadero |
+| $]-3,\frac13[$ | 0        | $\frac{(+)}{(-)(+)(-)}=(+)$ | falso     |
+| $]\frac13,1[$  | 0.5      | $\frac{(+)}{(-)(+)(+)}=(-)$ | verdadero |
+| $]1,+\infty[$  | 10       | $\frac{(+)}{(+)(+)(+)}=(+)$ | falso     |
 
 Por tanto:
 
@@ -841,4 +841,38 @@ C_s=
 \cup  
 ]\tfrac13,1[  
 $$
+---
+
+#### c)
+
+$$
+\left|
+\frac{2x-1}{3x+2}
+\right|
+<2
+$$
+
+Aplicando la propiedad:
+
+$$
+|A|<k
+\iff
+-k<A<k
+\qquad (k>0)
+$$
+
+se obtiene:
+
+$$
+-2<
+\frac{2x-1}{3x+2}
+<2
+$$
+
+con:
+
+$$
+x\neq -\frac23
+$$
+
 
