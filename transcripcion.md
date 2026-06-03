@@ -433,13 +433,40 @@ y=0 \{x>3\}|#ff7b7b
 ```
 
 $$
-C_s=
+C_s:
 \left] \frac{d-b}{a-c}, +\infty \right[
 =
 \left\{ x\in\mathbb{R} \;\middle|\; x>\frac{d-b}{a-c} \right\}
 $$
 
+**Ejemplo:** Hallar el $C_s$
 
+$$
+\begin{array}{rcl}
+(4x-3)^2 & \le & (4x+1)^2 \\[4pt]
+16x^2-24x+9 & \le & 16x^2+8x+1 \\[4pt]
+-24x+9 & \le & 8x+1 \\[4pt]
+-32x+9 & \le & 1 \\[4pt]
+-32x & \le & -8 \\[4pt]
+x & \ge & \dfrac{1}{4}
+\end{array}
+$$
+
+
+```desmos-graph
+left=-1; right=6; bottom=-1; top=1;
+width=500; height=120;
+---
+y=0 \{x>=0.25\}|#ff7b7b
+(0.25,0)|label:1/4|#ff7b7b
+```
+
+$$
+C_s:
+\left[ \frac{1}{4}, +\infty \right[
+=
+\left\{ x\in\mathbb{R} \;\middle|\; x\ge\frac{1}{4} \right\}
+$$
 
 
 ---

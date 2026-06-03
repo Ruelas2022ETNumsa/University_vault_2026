@@ -39,7 +39,7 @@ y=0 \{x>=0.25\}|#ff7b7b
 (0.25,0)|label:\frac{1}{4}|#ff7b7b
 ```
 
-# $$  
+$$  
 C_s=  
 \left[\dfrac{1}{4},+\infty\right[
 
