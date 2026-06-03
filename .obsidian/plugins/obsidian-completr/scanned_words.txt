@@ -358,6 +358,7 @@ Semirrectas
 Subsecci
 SALTOS
 Semirrecta
+Segundo
 Plugins
 Pendientes
 Plugin
@@ -701,6 +702,7 @@ division
 definidas
 distributividad
 displayed
+discreto
 Vault
 Verificar
 Variables
@@ -2332,6 +2334,7 @@ universitarios
 unidad
 uni
 unico
+utiliza
 Galaxy
 Git
 Gr
@@ -2601,6 +2604,7 @@ IHDR
 IDATx
 Interpretaci
 Inecuaciones
+Interceptando
 Funci
 File
 Fase
@@ -2662,6 +2666,7 @@ Factorizar
 FICOS
 Formar
 Factorizando
+Finalmente
 Estado
 Excalidraw
 EPUBs
@@ -2798,6 +2803,7 @@ Evitar
 Explicaci
 Extremo
 ExampleRegion
+Entonces
 Obsidian
 OmniSearch
 Ocultar
@@ -2847,6 +2853,7 @@ ORDEN
 OBSERVACIONES
 OBJETIVO
 OPEN
+Observaci
 Auto
 Annotator
 Autocompletado
@@ -3377,6 +3384,7 @@ modifica
 mitades
 mediano
 miembro
+miembros
 YAML
 Ya
 You
@@ -3701,6 +3709,7 @@ expandir
 escribiste
 escribirse
 estudiar
+elevan
 Motor
 Media
 Mantiene

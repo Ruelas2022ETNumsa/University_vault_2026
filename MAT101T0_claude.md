@@ -1221,22 +1221,16 @@ Tabla de signos:
 | $-1$           | -1       | $0$          | verdadero |
 | $]-1,0[$       | $-0.5$   | $(-)(+)=(-)$ | falso     |
 | $0$            | $0$      | $0$          | verdadero |
-| $]0,+\infty[$  |          |              |           |
-
-
-
-
+| $]0,+\infty[$  | $10$     | $(+)(+)=(+)$ | verdadero |
 
 cuyo conjunto solución es:
-
 $$
 ]-\infty,-1]
 \cup
 [0,+\infty[
 $$
 
-Intersectando ambos resultados:
-
+Interceptando ambos resultados:
 $$
 ]-3,2[
 ;\cap;
