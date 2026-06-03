@@ -305,6 +305,15 @@ border: off
 
 ## Teoremas de desigualdades e inecuaciones
 
+--- start-multi-column: cornell-006
+```column-settings
+number of columns: 2
+column size: [60%, 40%]
+border: off
+```
+
+📝 **Desarrollo**
+
 Sea $a,b,c,x \in \mathbb{R}$.
 
 1. **Tricotomía**
@@ -323,6 +332,36 @@ Sea $a,b,c,x \in \mathbb{R}$.
 	- $a^2\ge0$
 8. **Inversos multiplicativos y orden**
 	- $a>0 \iff \dfrac{1}{a}>0$
+
+--- end-column ---
+
+🔑 **Claves**
+
+- Tricotomía: exactamente **una** de las 3 relaciones es verdadera
+- Monotonía: negar **invierte** la desigualdad
+- Multiplicar por negativo **invierte** la desigualdad — error frecuente
+- $a^2\ge0$ siempre — clave para demostrar desigualdades
+- $a>0 \iff a^{-1}>0$: el inverso conserva el signo
+
+--- end-multi-column
+
+> **Resumen:** Sumar a ambos lados conserva la desigualdad; multiplicar por negativo la invierte.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ---
 
@@ -419,34 +458,73 @@ Ejemplos:
 
 ---
 
+
+
 ### Propiedades
+
+--- start-multi-column: cornell-007
+```column-settings
+number of columns: 2
+column size: [60%, 40%]
+border: off
+```
+
+📝 **Desarrollo**
 
 Si $x$ y $y$ pertenecen a $\mathbb{R}$:
 
-1. **Simetría**
-	- $|-x|=|x|$
-2. **No negatividad**
-	- $|x|\ge 0$
-3. **Producto**
-	- $|x\cdot y|=|x||y|$
-4. **Cociente**
-	- $\left|\dfrac{x}{y}\right|=\dfrac{|x|}{|y|}$, $\quad$ $y\neq0$
-5. **Ecuación de valor absoluto**
-	- $(|x|=a \land a\ge0)\Rightarrow$ $(x=a \lor x=-a)$ $\quad$ $(x=\pm a)$
-6. **Valor absoluto de una potencia par**
-	- $|x^2|=|x|^2=x^2$
-7. **Raíz cuadrada principal**
-	- $\sqrt{x^2}=|x|$
-8. **Desigualdad de valor absoluto.**
-	- **(caso menor que)**: $(|x|<a \land a>0)$ $\Rightarrow -a<x<a$
-	- **(caso mayor que)**: $(|x|>a \land a>0)$ $\Rightarrow (x>a \lor x<-a)$    
-9.  **Desigualdad triangular**
-	- $|x+y|\le |x|+|y|$
-10. **Desigualdad triangular inversa**
-	- $\bigl||x|-|y|\bigr| \le |x-y|$
-11. **Desigualdad de Cauchy-Schwarz**
-	- $|x\cdot y|\le |x||y|$
- 
+1. **Simetría** — $|-x|=|x|$
+2. **No negatividad** — $|x|\ge 0$
+3. **Producto** — $|x\cdot y|=|x||y|$
+4. **Cociente** — $\left|\dfrac{x}{y}\right|=\dfrac{|x|}{|y|}$, $\quad y\neq0$
+5. **Ecuación de valor absoluto** — $(|x|=a \land a\ge0)\Rightarrow (x=\pm a)$
+6. **Valor absoluto de potencia par** — $|x^2|=|x|^2=x^2$
+7. **Raíz cuadrada principal** — $\sqrt{x^2}=|x|$
+8. **Desigualdad de valor absoluto**
+	- **(caso $<$)**: $(|x|<a \land a>0) \Rightarrow -a<x<a$
+	- **(caso $>$)**: $(|x|>a \land a>0) \Rightarrow (x>a \lor x<-a)$
+9. **Desigualdad triangular** — $|x+y|\le |x|+|y|$
+10. **Desigualdad triangular inversa** — $\bigl||x|-|y|\bigr| \le |x-y|$
+11. **Desigualdad de Cauchy-Schwarz** — $|x\cdot y|\le |x||y|$
+
+--- end-column ---
+
+🔑 **Claves**
+
+- $|x|\ge0$ siempre — el VA nunca es negativo
+- $|x\cdot y|=|x||y|$ — VA distribuye en el producto
+- $\sqrt{x^2}=|x|$, **no** $x$ — error frecuente
+- $|x|<a \iff -a<x<a$ — inecuación de VA tipo $<$
+- $|x|>a \iff x>a$ ó $x<-a$ — inecuación de VA tipo $>$
+- Triangular: $|x+y|\le|x|+|y|$ — clave en análisis
+
+--- end-multi-column
+
+> **Resumen:** El valor absoluto mide distancia al origen; distribuye en productos y satisface la desigualdad triangular.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #### Ejemplo
 Analizar la V o F de:
 

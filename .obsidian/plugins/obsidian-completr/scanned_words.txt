@@ -737,6 +737,7 @@ Veo
 VALOR
 Vw
 VB
+VA
 galaxy
 gina
 genes
@@ -1122,6 +1123,7 @@ simb
 semiabierto
 sustituyendo
 slash
+satisface
 vault
 vil
 ver
@@ -4434,6 +4436,7 @@ frac
 factorizando
 fraccionales
 falso
+frecuente
 haya
 hace
 hacer
