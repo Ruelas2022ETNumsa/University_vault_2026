@@ -1206,6 +1206,19 @@ es decir,
 $$
 x(x+1)\ge0
 $$
+$$x=-1\quad , \quad x=0$$
+Tabla de signos:
+
+| Intervalo      | Prueba x | Signo                       | Resultado |
+| -------------- | -------- | --------------------------- | --------- |
+| $]-\infty,-3[$ | $-10$    | $\frac{(+)}{(-)(-)(-)}=(-)$ | verdadero |
+| $]-3,\frac13[$ | $0$      | $\frac{(+)}{(-)(+)(-)}=(+)$ | falso     |
+| $]\frac13,1[$  | $0.5$    | $\frac{(+)}{(-)(+)(+)}=(-)$ | verdadero |
+| $]1,+\infty[$  | $10$     | $\frac{(+)}{(+)(+)(+)}=(+)$ | falso     |
+
+
+
+
 
 cuyo conjunto solución es:
 
