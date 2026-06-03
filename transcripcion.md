@@ -308,19 +308,29 @@ Ejemplos:
 
 Si $x$ y $y$ pertenecen a $\mathbb{R}$:
 
-1. **Simetría**: $|-x|=|x|$
-2. **No negatividad**: $|x|\ge 0$
-3. **Producto**: $|x\cdot y|=|x||y|$
-4. **Cociente**: $\left|\dfrac{x}{y}\right|=\dfrac{|x|}{|y|}$, $\quad$ $y\neq0$
-5. **Ecuación de valor absoluto**: $(|x|=a \land a\ge0)\Rightarrow$ $(x=a \lor x=-a)$ $\quad$ $(x=\pm a)$
-6. **Valor absoluto de una potencia par**: $|x^2|=|x|^2=x^2$
-7. **Raíz cuadrada principal**: $\sqrt{x^2}=|x|$
+1. **Simetría**
+	- $|-x|=|x|$
+2. **No negatividad**
+	- $|x|\ge 0$
+3. **Producto**
+	- $|x\cdot y|=|x||y|$
+4. **Cociente**
+	- $\left|\dfrac{x}{y}\right|=\dfrac{|x|}{|y|}$, $\quad$ $y\neq0$
+5. **Ecuación de valor absoluto**
+	- $(|x|=a \land a\ge0)\Rightarrow$ $(x=a \lor x=-a)$ $\quad$ $(x=\pm a)$
+6. **Valor absoluto de una potencia par**
+	- $|x^2|=|x|^2=x^2$
+7. **Raíz cuadrada principal**
+	- $\sqrt{x^2}=|x|$
 8. **Desigualdad de valor absoluto.**
 	- **(caso menor que)**: $(|x|<a \land a>0)$ $\Rightarrow -a<x<a$
 	- **(caso mayor que)**: $(|x|>a \land a>0)$ $\Rightarrow (x>a \lor x<-a)$    
-9.  **Desigualdad triangular**: $|x+y|\le |x|+|y|$
-10. **Desigualdad triangular inversa**: $\bigl||x|-|y|\bigr| \le |x-y|$
-11. **Desigualdad de Schwarz**: $|x\cdot y|\le |x||y|$
+9.  **Desigualdad triangular**
+	- $|x+y|\le |x|+|y|$
+10. **Desigualdad triangular inversa**
+	- $\bigl||x|-|y|\bigr| \le |x-y|$
+11. **Desigualdad de Schwarz**
+	- $|x\cdot y|\le |x||y|$
  
 #### Ejemplo
 Analizar la V o F de:
@@ -379,9 +389,25 @@ $$
 ---
 
 
+## Solución de inecuaciones en variable real
+
+### Inecuaciones de primer grado
+
+### Método de signos para resolver inecuaciones
+
+### Ejemplos resueltos
+
+- Inecuaciones polinómicas
+- Inecuaciones racionales
+- Inecuaciones con valor absoluto
+- Inecuaciones con radicales
 
 
 
+
+---
+---
+---
 
 
 
