@@ -224,10 +224,10 @@ Existe correspondencia biunívoca (uno a uno) entre el conjunto $\mathbb{R}$ y u
 left=2; right=5; bottom=-1; top=1;
 width=350; height=120;
 ---
-y=0 \{3<=x<=4\}
+y=0 \{3<=x<=4\}|#ff7b7b
 
-(3,0)|label:a
-(4,0)|label:b
+(3,0)|label:a|#ff7b7b
+(4,0)|label:b|#ff7b7b
 ```
 
 2. **Intervalo semiabierto por la izquierda**: $]a,b]={x\mid a<x\le b}$
@@ -236,10 +236,10 @@ y=0 \{3<=x<=4\}
 left=2; right=5; bottom=-1; top=1;
 width=350; height=120;
 ---
-y=0 \{3<x<=4\}
+y=0 \{3<x<=4\}|#ff7b7b
 
-(3,0)|OPEN|label:a
-(4,0)|label:b
+(3,0)|OPEN|label:a|#ff7b7b
+(4,0)|label:b|#ff7b7b
 ```
 
 3. **Intervalo semiabierto por la derecha**: $]a,b[={x\mid a< x<b}$
@@ -248,10 +248,10 @@ y=0 \{3<x<=4\}
 left=2; right=5; bottom=-1; top=1;
 width=350; height=120;
 ---
-y=0 \{3<x<4\}
+y=0 \{3<x<4\}|#ff7b7b
 
-(3,0)|OPEN|label:a
-(4,0)|OPEN|label:b
+(3,0)|OPEN|label:a|#ff7b7b
+(4,0)|OPEN|label:b|#ff7b7b
 ```
 
 4. **Semirrecta hacia $+\infty$**: $]a,+\infty[={x\mid x>a}$
@@ -260,13 +260,47 @@ y=0 \{3<x<4\}
 left=0; right=8; bottom=-1; top=1;
 width=350; height=120;
 ---
-y=0 \{3<x<7\}
-y=0 \{x>7\}|DOTTED
+y=0 \{3<x<7\}|#ff7b7b
+y=0 \{x>7\}|DOTTED|#ff7b7b
 
-(3,0)|OPEN|label:a
+(3,0)|OPEN|label:a|#ff7b7b
 ```
 
-4. **Semirrecta desde $-\infty$**: $]-\infty,b[={x\mid x<b}$
+5. **Semirrecta desde $-\infty$**: $]-\infty,b[={x\mid x<b}$
+
+```desmos-graph
+left=-8; right=0; bottom=-1; top=1;
+width=350; height=120;
+---
+y=0 \{x<-7\}|DOTTED|#ff7b7b
+y=0 \{-7<x<-3\}|#ff7b7b
+
+(-3,0)|OPEN|label:b|#ff7b7b
+```
+
+---
+
+## Valor absoluto (definición)
+
+Sea $a\in\mathbb{R}$.
+El **valor absoluto** de un número real $a$, denotado por $|a|$, se define como:
+
+$$  
+|a|=  
+\begin{cases}  
+a, & \text{si } a\ge0\  
+-a, & \text{si } a<0  
+\end{cases}  
+$$
+
+> [!note]  
+> El valor absoluto representa la distancia de un número al origen en la recta real.  
+> Por esta razón, el valor absoluto nunca es negativo.
+
+Ejemplos:
+- $|3|=3$
+- $|-3|=3$
+- $|1.5|=1.5$
 
 
 

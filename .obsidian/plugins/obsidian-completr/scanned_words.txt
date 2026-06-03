@@ -354,6 +354,7 @@ Sumando
 Semirrectas
 Subsecci
 SALTOS
+Semirrecta
 Plugins
 Pendientes
 Plugin
@@ -870,6 +871,7 @@ bÜ
 border
 bug
 brevemente
+biun
 scope
 status
 selector
@@ -1104,6 +1106,7 @@ semiabiertos
 subt
 subsecci
 simb
+semiabierto
 vault
 vil
 ver
@@ -3856,6 +3859,7 @@ ley
 leerlo
 leerse
 licamente
+llamada
 incluyendo
 im
 instalar
@@ -4648,6 +4652,7 @@ xnEv
 xL
 xrO
 xA
+xxx
 Wikilinks
 WHERE
 WebGL
