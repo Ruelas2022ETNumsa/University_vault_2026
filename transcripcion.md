@@ -560,14 +560,92 @@ $$
     $$  C_s=\bigcup I_i  $$
 	donde la unión se realiza únicamente sobre los intervalos válidos.
 
-
-
-
-
-
-
-
 ---
+
+### Ejemplos resueltos
+
+#### a) $x^4 \ge 9x^2$
+
+$$
+\begin{array}{rcl}
+x^4 & \ge & 9x^2 \\[4pt]
+x^4-9x^2 & \ge & 0 \\[4pt]
+x^2(x^2-9) & \ge & 0 \\[4pt]
+x^2(x-3)(x+3) & \ge & 0
+\end{array}
+$$
+
+Puntos críticos:
+
+$$
+x=-3,\quad x=0,\quad x=3
+$$
+
+grafica
+```desmos-graph
+left=-6; right=6; bottom=-1; top=1;
+width=500; height=120;
+---
+y=0 \{-6<x<=-3\}|#ff7b7b
+y=0 \{3<=x<6\}|#ff7b7b
+
+(-3,0)|label:-3|#ff7b7b
+(0,0)|label:0|#ff7b7b
+(3,0)|label:3|#ff7b7b
+````
+
+
+
+
+
+
+
+Tabla de signos:
+
+| Intervalo      | Signo |
+| -------------- | ----- |
+| $]-\infty,-3[$ | (+)   |
+| $]-3,0[$       | (-)   |
+| $]0,3[$        | (-)   |
+| $]3,+\infty[$  | (+)   |
+
+
+Como la inecuación es $\ge 0$, se incluyen los puntos donde la expresión se anula:
+
+```desmos-graph
+left=-6; right=6; bottom=-1; top=1;
+width=350; height=120;
+---
+y=0 \{-6<x<=-3\}|#ff7b7b
+y=0 \{3<=x<6\}|#ff7b7b
+
+(-3,0)|label:-3|#ff7b7b
+(0,0)|label:0|#ff7b7b
+(3,0)|label:3|#ff7b7b
+````
+
+
+$$
+C_s=
+]-\infty,-3]
+\cup
+\{0\}
+\cup
+[3,+\infty[
+$$
+
+
+
+
+
+
+
+
+
+
+
+
+
 ---
 ---
 

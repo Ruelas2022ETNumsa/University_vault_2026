@@ -155,6 +155,7 @@ tomas
 transcription
 totalmente
 toma
+tfrac
 ToDo
 Templater
 Text
@@ -1700,6 +1701,7 @@ reproducirla
 recomienda
 radicales
 recomiendan
+rcl
 notes
 notas
 nuevas
@@ -1816,6 +1818,7 @@ ndola
 niveles
 numerica
 nuevamente
+ne
 created
 commit
 cada
@@ -2248,6 +2251,7 @@ convertir
 compacto
 contra
 corchete
+cup
 updated
 un
 universo
@@ -4052,6 +4056,7 @@ informarla
 innecesarias
 interpretaciones
 incluido
+infty
 Dependencia
 Dropbox
 Dataview
@@ -4395,6 +4400,7 @@ funcional
 forzarlo
 ficos
 fiel
+frac
 haya
 hace
 hacer
@@ -4467,6 +4473,7 @@ qh
 qU
 qYW
 quedando
+qquad
 University
 Usar
 Un
