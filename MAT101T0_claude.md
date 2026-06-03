@@ -1192,20 +1192,17 @@ Puntos
 $$x=-3\quad ,\quad x=2$$
 Tabla de signos:
 
-| Intervalo      | Prueba x | Signo                       | Resultado |
-| -------------- | -------- | --------------------------- | --------- |
-| $]-\infty,-3[$ | $-10$    | $$                          | verdadero |
-| $]-3,2[$       | $0$      | $\frac{(+)}{(-)(+)(-)}=(+)$ | falso     |
-| $]2,+\infty[$  | $10$     | $\frac{(+)}{(+)(+)(+)}=(+)$ | falso     |
-
+| Intervalo      | Prueba x | Signo        | Resultado |
+| -------------- | -------- | ------------ | --------- |
+| $]-\infty,-3[$ | $-10$    | $(-)(-)=(+)$ | falso     |
+| $]-3,2[$       | $0$      | $(+)(-)=(-)$ | verdadero |
+| $]2,+\infty[$  | $10$     | $(+)(+)=(+)$ | falso     |
 Por tanto:
-
 $$
 -3<x<2
 $$
 
 Ahora se impone la condición de existencia:
-
 $$
 x^2+x\ge0
 $$
@@ -1218,12 +1215,13 @@ $$
 $$x=-1\quad , \quad x=0$$
 Tabla de signos:
 
-| Intervalo      | Prueba x | Signo                       | Resultado |
-| -------------- | -------- | --------------------------- | --------- |
-| $]-\infty,-3[$ | $-10$    | $\frac{(+)}{(-)(-)(-)}=(-)$ | verdadero |
-| $]-3,\frac13[$ | $0$      | $\frac{(+)}{(-)(+)(-)}=(+)$ | falso     |
-| $]\frac13,1[$  | $0.5$    | $\frac{(+)}{(-)(+)(+)}=(-)$ | verdadero |
-| $]1,+\infty[$  | $10$     | $\frac{(+)}{(+)(+)(+)}=(+)$ | falso     |
+| Intervalo      | Prueba x | Signo        | Resultado |
+| -------------- | -------- | ------------ | --------- |
+| $]-\infty,-1[$ | $-10$    | $(-)(-)=(+)$ | verdadero |
+| $-1$           | -1       | $0$          | verdadero |
+| $]-1,0[$       | $-0.5$   | $(-)(+)=(-)$ | falso     |
+| $0$            | $0$      | $0$          | verdadero |
+| $]0,+\infty[$  |          |              |           |
 
 
 
