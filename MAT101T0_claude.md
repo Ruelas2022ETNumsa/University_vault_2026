@@ -680,14 +680,14 @@ $$
 	
 	$(+)(-)(-)\ge 0\implies (+)\ge 0 \quad \text{verdadero}$
 	
-- Tabla de signos:
+- Tabla de signos: $x^2(x-3)(x+3) \ge 0$
 
 | Intervalo      | Prueba      | Signo | Prueba    |
 | -------------- | ----------- | ----- | --------- |
-| $]-\infty,-3[$ | $I_{1}=-10$ | (+)   | verdadero |
-| $]-3,0[$       | $I_{1}=-10$ | (-)   | falso     |
-| $]0,3[$        | $I_{1}=-10$ | (-)   | falso     |
-| $]3,+\infty[$  | verdadero   | (+)   | verdadero |
+| $]-\infty,-3[$ | $I_{1}=-10$ | $(+)$ | verdadero |
+| $]-3,0[$       | $I_{2}=-2$  | $(-)$ | falso     |
+| $]0,3[$        | $I_{3}=2$   | $(-)$ | falso     |
+| $]3,+\infty[$  | $I_{4}=10$  | $(+)$ | verdadero |
 
 - Gráfica
 
@@ -714,8 +714,7 @@ y=0 \{3<=x<6\}|#ff7b7b
 (4,-0.5)|label:I_4|#2d70b3|hidden
 ```
 
-
-- Prueba de extremos
+- Prueba de extremos  $x^2(x-3)(x+3) \ge 0$
 	$x=-3, 0, 3$  se cumple $0 = 0 \quad \text{verdadero}$ entonces $-3,0,3 \in C_{s}$
 
 ```desmos-graph
@@ -729,7 +728,6 @@ y=0 \{3<=x<6\}|#ff7b7b
 (0,0)|label:0|#ff7b7b
 (3,0)|label:3|#ff7b7b
 ```
-
 
 $$
 C_s=
@@ -823,6 +821,15 @@ Tabla de signos:
 | $]-3,\frac13[$ | $(+)$ | falso     |
 | $]\frac13,1[$  | $(-)$ | verdadero |
 | $]1,+\infty[$  | $(+)$ | falso     |
+
+
+| Intervalo      | Prueba      | Signo | Prueba    |
+| -------------- | ----------- | ----- | --------- |
+| $]-\infty,-3[$ | $I_{1}=-10$ | $(+)$ | verdadero |
+| $]-3,0[$       | $I_{2}=-2$  | $(-)$ | falso     |
+| $]0,3[$        | $I_{3}=2$   | $(-)$ | falso     |
+| $]3,+\infty[$  | $I_{4}=10$  | $(+)$ | verdadero |
+
 
 
 Por tanto:
