@@ -45,3 +45,11 @@ Sea $a,b,c \in \mathbb{R}$.
 
 
 
+
+
+
+
+> **Resumen:** Los 7 axiomas de cuerpo garantizan que $\mathbb{R}$ tiene operaciones de suma y producto bien definidas, con neutros, inversos y distributividad.
+
+---
+

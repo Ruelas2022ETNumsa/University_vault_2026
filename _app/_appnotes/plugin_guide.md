@@ -107,7 +107,7 @@ valor absoluto
 
 ### Sintaxis actual (0.9.x)
 
-```
+
 --- start-multi-column: ID-unico
 ```column-settings
 number of columns: 2
@@ -122,12 +122,6 @@ Contenido columna izquierda
 Contenido columna derecha
 
 --- end-multi-column
-
-
-
-
-
-```
 
 > El ID debe ser único dentro del mismo archivo. Si hay dos bloques en la misma nota usar `cornell-001`, `cornell-002`, etc.
 
@@ -156,10 +150,15 @@ definiciones, fórmulas, desarrollo.
 
 --- end-multi-column
 
+
+
+
+
 > **Resumen:** Idea central del subtítulo en una línea.
-```
 
 ### Layout Cornell para `comet` (ejercicio)
+
+
 
 ```
 --- start-multi-column: cornell-001
@@ -183,7 +182,8 @@ Paso a paso del ejercicio.
 --- end-multi-column
 
 > **Patrón:** Tipo de ejercicio y estrategia de resolución.
-```
+
+
 
 ### Reglas
 
