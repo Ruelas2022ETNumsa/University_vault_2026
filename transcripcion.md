@@ -332,54 +332,64 @@ $$
 \end{array}
 $$
 
-
-
-
-$$2^2-2\cdot5\left(\dfrac{3}{2}\right)+\left(\dfrac{5}{2}\right)^2  
-    =  
-    3^2-3\cdot5\left(\dfrac{2}{2}\right)+\left(\dfrac{5}{2}\right)^2$$
-$$  
-\left(2-\frac{5}{2}\right)^2
-=
-\left(3-\frac{5}{2}\right)^2  
 $$
-$$  
-\sqrt{\left(2-\frac{5}{2}\right)^2}
-=
-\sqrt{\left(3-\frac{5}{2}\right)^2}  
+\begin{array}{rcl}
+2^2-2\cdot5\left(\dfrac{3}{2}\right)+\left(\dfrac{5}{2}\right)^2
+& = &
+3^2-3\cdot5\left(\dfrac{2}{2}\right)+\left(\dfrac{5}{2}\right)^2 \\[6pt]
+\left(2-\dfrac{5}{2}\right)^2
+& = &
+\left(3-\dfrac{5}{2}\right)^2
+\end{array}
 $$
 
-$$  
-\left|2-\frac{5}{2}\right|
-=
-\left|3-\frac{5}{2}\right|  
+$$
+\begin{array}{rcl}
+\sqrt{\left(2-\dfrac{5}{2}\right)^2}
+& = &
+\sqrt{\left(3-\dfrac{5}{2}\right)^2} \\[6pt]
+\left|2-\dfrac{5}{2}\right|
+& = &
+\left|3-\dfrac{5}{2}\right|
+\end{array}
 $$
 
-$$  
-\left|-\frac{1}{2}\right|
-=
-\left|\frac{1}{2}\right|  
+$$
+\begin{array}{rcl}
+\left|-\dfrac{1}{2}\right|
+& = &
+\left|\dfrac{1}{2}\right| \\[6pt]
+\dfrac{1}{2}
+& = &
+\dfrac{1}{2}
+\qquad \checkmark
+\end{array}
 $$
 
-$$  
-\frac{1}{2}
-=
-\frac{1}{2}  
-\qquad \checkmark  
-$$
+
+
+
+
+
 
 
 
 ---
 ---
 ---
+
+
+
+
+
+
 
 
 ### Propiedades
 
 ---
 
-## Solución de inecuaciones en variable xxx
+## Solución de inecuaciones en variable x
 
 ### Inecuaciones de primer grado
 
