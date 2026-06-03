@@ -907,11 +907,11 @@ $$
 Puntos críticos:
 
 $$
-x=-\frac54,
+x=-\frac54=-1.25,
 \qquad
-x=-\frac23,
+x=-\frac23=-0.66667,
 \qquad
-x=-\frac38
+x=-\frac38=0.375
 $$
 
 Tabla 
@@ -936,12 +936,8 @@ width=500; height=120;
 (-0.666667,0)|OPEN|label:-2/3|BLACK
 (-0.375,0)|OPEN|label:-3/8|BLACK
 
-
 y=0.5 \{-1.25<x<-0.666667\}|#c74440
 y=1 \{-1.25<x<-0.666667\}|#2d70b3
-
-
-
 ````
 
 (-1.25,0)|OPEN|label:-\frac{5}{4}|#ff7b7b
