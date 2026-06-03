@@ -817,9 +817,9 @@ $$\dfrac
 | Intervalo      | Prueba x | Signo                       | Resultado |
 | -------------- | -------- | --------------------------- | --------- |
 | $]-\infty,-3[$ | $-10$    | $\frac{(+)}{(-)(-)(-)}=(-)$ | verdadero |
-| $]-3,\frac13[$ | 0        | $\frac{(+)}{(-)(+)(-)}=(+)$ | falso     |
-| $]\frac13,1[$  | 0.5      | $\frac{(+)}{(-)(+)(+)}=(-)$ | verdadero |
-| $]1,+\infty[$  | 10       | $\frac{(+)}{(+)(+)(+)}=(+)$ | falso     |
+| $]-3,\frac13[$ | $0$      | $\frac{(+)}{(-)(+)(-)}=(+)$ | falso     |
+| $]\frac13,1[$  | $0.5$    | $\frac{(+)}{(-)(+)(+)}=(-)$ | verdadero |
+| $]1,+\infty[$  | $10$     | $\frac{(+)}{(+)(+)(+)}=(+)$ | falso     |
 
 Por tanto:
 
@@ -911,32 +911,34 @@ x=-\frac54=-1.25,
 \qquad
 x=-\frac23=-0.66667,
 \qquad
-x=-\frac38=0.375
+x=-\frac38=-0.375
 $$
 
 Tabla 
 
-| Intervalo      | Prueba x | Signo                       | Resultado |
-| -------------- | -------- | --------------------------- | --------- |
-| $]-\infty,-3[$ | $-10$    | $\frac{(+)}{(-)(-)(-)}=(-)$ | verdadero |
-| $]-3,\frac13[$ | 0        | $\frac{(+)}{(-)(+)(-)}=(+)$ | falso     |
-| $]\frac13,1[$  | 0.5      | $\frac{(+)}{(-)(+)(+)}=(-)$ | verdadero |
-| $]1,+\infty[$  | 10       | $\frac{(+)}{(+)(+)(+)}=(+)$ | falso     |
+| Intervalo             | Prueba x | Signo              | Resultado |
+| --------------------- | -------- | ------------------ | --------- |
+| $]-\infty,-\frac54[$  | $-10$    | $\frac{(-)}{(-)}=(+)$ | Verda          |
+| $]-\frac54,-\frac23[$ | 0        | $\frac{()}{()}=()$ |           |
+| $]-\frac23,-\frac38[$ | 0.5      | $\frac{()}{()}=()$ |           |
+| $]-\frac38,+\infty[$  | 0.5      | $\frac{()}{()}=()$ |           |
 
-
+verdadero
+falso
 
 Analizando signos:
 
 ```desmos-graph
-left=-3; right=2; bottom=-0.5; top=2;
+left=-1.5; right=0; bottom=-0.5; top=2;
 width=500; height=120;
 ---
-
 (-1.25,0)|OPEN|label:-5/4|BLACK
 (-0.666667,0)|OPEN|label:-2/3|BLACK
 (-0.375,0)|OPEN|label:-3/8|BLACK
 
 y=0.5 \{-1.25<x<-0.666667\}|#c74440
+
+
 y=1 \{-1.25<x<-0.666667\}|#2d70b3
 ````
 
