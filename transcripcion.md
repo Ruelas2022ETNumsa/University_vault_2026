@@ -308,20 +308,14 @@ Ejemplos:
 
 Si $x$ y $y$ pertenecen a $\mathbb{R}$:
 
-1. $|-x|=|x|$
+1. **Simetría**: $|-x|=|x|$
+2. **No negatividad**: $|x|\ge 0$
+3. **Producto**: $|x\cdot y|=|x||y|$
+4. **Cociente**: $\left|\dfrac{x}{y}\right|=\dfrac{|x|}{|y|}$, $\quad$ $y\neq0$
     
-2. $|x|\ge 0$
-    
-3. $|x\cdot y|=|x||y|$
-    
-4. $\left|\dfrac{x}{y}\right|=\dfrac{|x|}{|y|}$, $\quad$ $y\neq0$
-    
-5. $(|x|=a \land a\ge0)\Rightarrow$
-    $(x=a \lor x=-a)$ $\quad$ $(x=\pm a)$
-    
-6. $|x^2|=|x|^2=x^2$
-    
-7. $\sqrt{x^2}=|x|$
+5.**Ecuación de valor absoluto**: $(|x|=a \land a\ge0)\Rightarrow$ $(x=a \lor x=-a)$ $\quad$ $(x=\pm a)$
+6. **Valor absoluto de una potencia par**: $|x^2|=|x|^2=x^2$
+7. **Raíz cuadrada principal**: $\sqrt{x^2}=|x|$
     
 8. $(|x|<a \land a>0)\Rightarrow$
     
