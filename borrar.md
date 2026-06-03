@@ -1,116 +1,172 @@
 
 
+### Ejemplos resueltos
 
-1. Formar una comparación con cero:
-
-$$
-\frac{P(x)}{Q(x)} > 0
-$$
-
-(o la desigualdad correspondiente).
-
-2. Factorizar totalmente \(P\) y \(Q\):
+#### a) $x^4 \ge 9x^2$
 
 $$
-\frac{
-(x-a_1)(x-a_2)\cdots(x-a_k)
-}{
-(x-b_1)(x-b_2)\cdots(x-b_j)
-}
->0
+\begin{array}{rcl}
+x^4 & \ge & 9x^2 \\[4pt]
+x^4-9x^2 & \ge & 0 \\[4pt]
+x^2(x^2-9) & \ge & 0 \\[4pt]
+x^2(x-3)(x+3) & \ge & 0
+\end{array}
 $$
 
-3. Representar en la recta real los valores
+Puntos críticos:
 
 $$
-a_1,\;a_2,\;\ldots,\;a_k,\;b_1,\;b_2,\;\ldots,\;b_j
+x=-3,\quad x=0,\quad x=3
 $$
 
-quedando definidos \(n\) intervalos:
+Tabla de signos:
+
+| Intervalo        | Signo de \(x^2(x-3)(x+3)\) |
+| ---------------- | -------------------------- |
+| \(]-\infty,-3[\) | \(+\)                      |
+| \(]-3,0[\)       | \(-\)                      |
+| \(]0,3[\)        | \(-\)                      |
+| \(]3,+\infty[\)  | \(+\)                      |
+
+Como la inecuación es \(\ge 0\), se incluyen además los ceros.
 
 ```desmos-graph
-left=-1; right=11; bottom=-1; top=1;
+left=-6; right=6; bottom=-1; top=1;
 width=500; height=120;
 ---
-y=0 \{0<x<2\}|#ff7b7b
-y=0 \{2<x<5\}|#ff7b7b
-y=0 \{5<x<8\}|#ff7b7b
-y=0 \{8<x<10\}|#ff7b7b
+y=0 \{-6<x<=-3\}|#ff7b7b
+y=0 \{3<=x<6\}|#ff7b7b
 
-(2,0)|OPEN|label:a_1|#ff7b7b
-(5,0)|OPEN|label:a_2|#ff7b7b
-(8,0)|OPEN|label:b_1|#ff7b7b
-(10,0)|OPEN|label:b_2|#ff7b7b
+(-3,0)|label:-3|#ff7b7b
+(0,0)|label:0|#ff7b7b
+(3,0)|label:3|#ff7b7b
 ````
 
-Intervalos:
+$$  
+C_s=  
+]-\infty,-3]  
+\cup  
+{0}  
+\cup  
+[3,+\infty[  
+$$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
+#### b)
 
 $$  
-I_1,;I_2,;I_3,;\ldots,;I_k  
+\frac{2x}{x^2+2x-3}  
++  
+\frac{2x+1}{3x^2+8x-3}  
+\le  
+-\frac{1}{3x^2-4x+1}  
 $$
 
-4. **Prueba de signos**
-    
-
-De (I_1) se toma un valor cualquiera (no extremo) y se prueban los signos sustituyendo en cada factor.
-
-Ejemplo:
-
- $$  
-\frac{(+)(-)(+)}{(-)(+)(+)}
-
-(+)  
-$$
-
-o
+Factorizando denominadores:
 
 $$  
-\frac{(+)(-)(+)}{(-)(+)(+)}
-
-(-)  
+\begin{array}{rcl}  
+x^2+2x-3 &=& (x+3)(x-1) \[4pt]  
+3x^2+8x-3 &=& (3x-1)(x+3) \[4pt]  
+3x^2-4x+1 &=& (3x-1)(x-1)  
+\end{array}  
 $$
 
-5. Resultan dos posibilidades:
-    
-
-- Si la desigualdad es verdadera en el intervalo analizado, entonces:
-    
+Llevando todo al primer miembro:
 
 $$  
-I_i \subset C_s  
+\frac{2x}{(x+3)(x-1)}  
++  
+\frac{2x+1}{(3x-1)(x+3)}  
++  
+\frac{1}{(3x-1)(x-1)}  
+\le 0  
 $$
 
-- Si la desigualdad es falsa en el intervalo analizado, entonces:
-    
+Reduciendo a un solo cociente:
 
 $$  
-I_i \not\subset C_s  
+\frac{  
+2(x-1)(x+3)(3x-1)(4x^2-x+1)  
+}{  
+(x-1)^2(x+3)^2(3x-1)^2  
+}  
+\le 0  
 $$
 
-6. Repetir el procedimiento para los demás intervalos:
-    
+Como
 
 $$  
-I_2,;I_3,;\ldots  
+4x^2-x+1>0  
+\qquad \forall x\in\mathbb{R}  
 $$
 
-7. El conjunto solución buscado se obtiene mediante la unión de todos los intervalos que verifican la inecuación:
-    
+y los factores cuadrados del denominador son positivos en su dominio, el signo depende de
 
 $$  
-C_s=\bigcup I_i  
+(x-1)(x+3)(3x-1)  
 $$
 
-donde la unión se realiza únicamente sobre los intervalos válidos.
+Puntos críticos:
 
+$$  
+x=-3,\qquad x=\frac13,\qquad x=1  
+$$
 
+Además:
 
+$$  
+x\ne -3,\quad x\ne \frac13,\quad x\ne 1  
+$$
 
+Tabla de signos:
 
+|Intervalo|Signo|
+|---|---|
+|(]-\infty,-3[)|(-)|
+|(]-3,\frac13[)|(+)|
+|(]\frac13,1[)|(-)|
+|(]1,+\infty[)|(+)|
 
+Por tanto:
 
+```desmos-graph
+left=-6; right=4; bottom=-1; top=1;
+width=500; height=120;
+---
+y=0 \{-6<x<-3\}|#ff7b7b
+y=0 \{0.333333<x<1\}|#ff7b7b
+
+(-3,0)|OPEN|label:-3|#ff7b7b
+(0.333333,0)|OPEN|label:\frac{1}{3}|#ff7b7b
+(1,0)|OPEN|label:1|#ff7b7b
+```
+
+$$  
+C_s=  
+]-\infty,-3[  
+\cup  
+]\tfrac13,1[  
+$$
 
 ```
 
-Hay una parte de los signos de ejemplo que en la fotografía no se distingue con total nitidez. La estructura y los pasos sí son legibles, pero si quieres una transcripción 100% fiel puedo continuar con los ejemplos de la página siguiente, donde el método se aplica completamente.
+Para este inciso b) la simplificación algebraica intermedia es extensa; si en tu apunte aparece desarrollada paso a paso, puedo reproducirla con el mismo formato `array rcl` que has estado usando.
 ```
