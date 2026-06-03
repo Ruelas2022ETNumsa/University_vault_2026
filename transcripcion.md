@@ -580,6 +580,11 @@ Puntos críticos:
 $$
 x_1=-3,\quad x_{2,3}=0,\quad x_4=3
 $$
+Prueba
+$I_{1}:$ $x=-10$
+
+$(+)(-)(-)\ge 0\implies (+)\ge 0 \quad \text{verdadero}$
+
 
 Gráfica
 
@@ -587,6 +592,8 @@ Gráfica
 left=-6; right=6; bottom=-1; top=1;
 width=350; height=120;
 ---
+(-4,0.5)|label:I_1|#2d70b3|hidden
+
 y=0 \{-6<x<=-3\}|#ff7b7b
 y=0 \{3<=x<6\}|#ff7b7b
 
@@ -600,8 +607,7 @@ y=0 \{3<=x<6\}|#ff7b7b
 (4,-0.5)|label:I_4|#2d70b3|hidden
 ````
 
-Prueba
-$I_{1}:$ $x=-10$
+
 
 
 
