@@ -938,7 +938,79 @@ y=0 \{-0.375<x\}|#c74440
 
 $$
 C_s=
-\left] 
--\infty,-\frac54,[\cup]-\frac23, +\infty
-\right[
+\left]-\infty,-\frac54\right[
+\;\cup\;
+\left]-\frac38,+\infty\right[
+$$
+
+---
+
+#### d)
+
+$$
+|x^{3}-16x|\le 0
+$$
+
+Se utiliza la propiedad:
+
+$$
+|A|\ge 0
+\qquad \forall A\in\mathbb{R}
+$$
+
+Por tanto:
+
+$$
+|A|\le 0
+\iff
+A=0
+$$
+
+Luego:
+
+$$
+x^3-16x=0
+$$
+
+Factorizando:
+
+$$
+\begin{array}{rcl}
+x^3-16x & = & 0 \\
+x(x^2-16) & = & 0 \\
+x(x-4)(x+4) & = & 0
+\end{array}
+$$
+
+Entonces:
+
+$$
+x=-4,
+\qquad
+x=0,
+\qquad
+x=4
+$$
+Tabla 
+
+| Intervalo             | Prueba x | Signo i               | $R_{i}$ | Signo ii              | $R_{ii}$ | $\cap$    |
+| --------------------- | -------- | --------------------- | ------- | --------------------- | -------- | --------- |
+| $]-\infty,-\frac54[$  | $-10$    | $\frac{(-)}{(-)}=(+)$ | V       | $\frac{(-)}{(-)}=(+)$ | V        | verdadero |
+| $]-\frac54,-\frac23[$ | $-1$     | $\frac{(-)}{(-)}=(+)$ | V       | $\frac{(+)}{(-)}=(-)$ | F        | falso     |
+| $]-\frac23,-\frac38[$ | $-0.5$   | $\frac{(-)}{(+)}=(-)$ | F       | $\frac{(+)}{(+)}=(+)$ | V        | falso     |
+| $]-\frac38,+\infty[$  | $10$     | $\frac{(+)}{(+)}=(+)$ | V       | $\frac{(+)}{(+)}=(+)$ | V        | verdadero |
+
+
+```desmos-graph
+left=-6; right=6; bottom=-1; top=1;
+width=500; height=120;
+---
+(-4,0)|label:-4|#ff7b7b
+(0,0)|label:0|#ff7b7b
+(4,0)|label:4|#ff7b7b
+```
+
+$$
+C_s=
+{-4,0,4}
 $$
