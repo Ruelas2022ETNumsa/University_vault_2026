@@ -1077,7 +1077,13 @@ Tabla
 | $\frac{5}{7}$       | $\frac{5}{7}$ | $0$                   | V       |
 | $]\frac57,2[$       | $1$           | $\frac{(+)}{(-)}=(-)$ | V       |
 | $]2,+\infty[$       | $10$          | $\frac{(+)}{(+)}=(+)$ | F       |
-$$S_1=\left[\frac57,2\right[$$
+
+Luego:
+
+$$
+S_1=
+\left[\frac57,2\right[
+$$
 
 Segundo caso:
 
@@ -1102,11 +1108,23 @@ Tabla
 | $-7$           | $-7$     | $0$                   | V        |
 | $]-7,2[$       | $0$      | $\frac{(+)}{(-)}=(-)$ | F        |
 | $]2,+\infty[$  | $10$     | $\frac{(+)}{(+)}=(+)$ | V        |
+Luego:
+
 $$
 S_2=
 ]-\infty,-7]
+\cup
+]2,+\infty[
 $$
 
+Los segmentos son:
+$$
+S_2=
+]-\infty,-7]
+\cup
+]2,+\infty[
+\qquad\lor\qquad
+S_1=\left[\frac57,2\right[$$
 Finalmente:
 
 ```desmos-graph
@@ -1125,14 +1143,6 @@ y=0 \{2<x<6\}|#ff7b7b
 Luego:
 
 $$
-S_2=
-]-\infty,-7]
-\cup
-]2,+\infty[
-\qquad\lor\qquad
-S_1=\left[\frac57,2\right[$$
-
-$$
 C_s=S_{1}+S_{2}=
 ]-\infty,-7]
 \cup
@@ -1140,7 +1150,6 @@ C_s=S_{1}+S_{2}=
 \cup
 ]2,+\infty[
 $$
-
 
 ---
 
@@ -1164,7 +1173,7 @@ $$
 \begin{array}{rcl}
 \left(\sqrt{x^2+x}\right)^2
 & < &
-\left(\sqrt6\right)^2 [6pt]
+\left(\sqrt6\right)^2 \\
 x^2+x
 & < &
 6
@@ -1175,7 +1184,7 @@ Resolviendo:
 
 $$
 \begin{array}{rcl}
-x^2+x-6 & < & 0 [6pt]
+x^2+x-6 & < & 0 \\
 (x+3)(x-2) & < & 0
 \end{array}
 $$
@@ -1239,6 +1248,4 @@ C_s=
 \cup
 [0,2[
 $$
-
-
 
