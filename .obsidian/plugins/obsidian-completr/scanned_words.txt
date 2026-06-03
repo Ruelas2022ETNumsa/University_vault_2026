@@ -1125,6 +1125,7 @@ semiabierto
 sustituyendo
 slash
 satisface
+simult
 vault
 vil
 ver
@@ -1840,6 +1841,7 @@ numerica
 nuevamente
 ne
 numerador
+neamente
 created
 commit
 cada
@@ -2274,6 +2276,7 @@ contra
 corchete
 cup
 cadenas
+cumplirse
 updated
 un
 universo
@@ -2950,6 +2953,8 @@ Attachment
 Afirmaci
 ALGO
 Analizar
+Aplicando
+Analizando
 push
 pull
 para
@@ -4294,6 +4299,7 @@ RICA
 Resultan
 Repetir
 Reduciendo
+Resolviendo
 Hider
 Hace
 Herramientas

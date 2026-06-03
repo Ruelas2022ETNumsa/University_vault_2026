@@ -899,9 +899,9 @@ $$
 Por tanto deben cumplirse simultáneamente:
 
 $$
-\frac{8x+3}{3x+2}>0
+i)\quad \frac{8x+3}{3x+2}>0
 \qquad\text{y}\qquad
-\frac{4x+5}{3x+2}>0
+ii)\quad\frac{4x+5}{3x+2}>0
 $$
 
 Puntos críticos:
@@ -914,26 +914,34 @@ x=-\frac23,
 x=-\frac38
 $$
 
+
 Analizando signos:
 
 ```desmos-graph
 left=-3; right=2; bottom=-1; top=1;
 width=500; height=120;
 ---
-y=0 \{-1.25<x<-0.666667\}|#ff7b7b
+y=0 \{-1.25<x<-0.666667\}|#2d70b3
 
-(-1.25,0)|OPEN|label:-\frac{5}{4}|#ff7b7b
-(-0.666667,0)|OPEN|label:-\frac{2}{3}|#ff7b7b
-(-0.375,0)|OPEN|label:-\frac{3}{8}|#ff7b7b
 
-y=0.5 \{-1.25<x<-0.666667\}|#ff7b7b
 
-(-1.25,0)|OPEN|label:-\frac{5}{4}|#ff7b7b
-(-0.666667,0)|OPEN|label:-\frac{2}{3}|#ff7b7b
-(-0.375,0)|OPEN|label:-\frac{3}{8}|#ff7b7b
+y=0.5 \{-1.25<x<-0.666667\}|#c74440
+
+
 
 
 ````
+
+(-1.25,0)|OPEN|label:-\frac{5}{4}|#ff7b7b
+(-0.666667,0)|OPEN|label:-\frac{2}{3}|#ff7b7b
+(-0.375,0)|OPEN|label:-\frac{3}{8}|#ff7b7b
+
+(-1.25,0)|OPEN|label:-\frac{5}{4}|#ff7b7b
+(-0.666667,0)|OPEN|label:-\frac{2}{3}|#ff7b7b
+(-0.375,0)|OPEN|label:-\frac{3}{8}|#ff7b7b
+
+
+
 
 $$
 C_s=
