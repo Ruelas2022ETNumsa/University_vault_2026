@@ -586,12 +586,12 @@ $$
 
 - Tabla de signos:
 
-| Intervalo      | Signo |
-| -------------- | ----- |
-| $]-\infty,-3[$ | (+)   |
-| $]-3,0[$       | (-)   |
-| $]0,3[$        | (-)   |
-| $]3,+\infty[$  | (+)   |
+| Intervalo      | Signo | Prueba    |
+| -------------- | ----- | --------- |
+| $]-\infty,-3[$ | (+)   | verdadero |
+| $]-3,0[$       | (-)   | falso     |
+| $]0,3[$        | (-)   |           |
+| $]3,+\infty[$  | (+)   |           |
 
 - Gráfica
 
@@ -743,7 +743,7 @@ Por tanto:
 
 ```desmos-graph
 left=-6; right=4; bottom=-1; top=1;
-width=500; height=120;
+width=350; height=120;
 ---
 y=0 \{-6<x<-3\}|#ff7b7b
 y=0 \{0.333333<x<1\}|#ff7b7b
@@ -759,60 +759,3 @@ C_s=
 \cup  
 ]\tfrac13,1[  
 $$
-
-
-
-
-
-
-
-
-
-
-
----
----
-
-
-### Método de signos para resolver inecuaciones
-
-### Ejemplos resueltos
-
-- Inecuaciones polinómicas
-- Inecuaciones racionales
-- Inecuaciones con valor absoluto
-- Inecuaciones con radicales
-
-
-
-
----
----
----
-
-
-
-### Propiedades
-
----
-
-## Solución de inecuaciones en variable x
-
-### Inecuaciones de primer grado
-
-### Método de signos para solución de inecuaciones
-
-#### Forma general
-
-#### Pasos para resolver por método de signos
-
-### Ejemplos de resolución de inecuaciones
-
-- a)
-- b)
-- c)
-- d)
-- e)
-- f)
-
-(Estas letras aparecen como ejercicios/ejemplos, no como subtítulos formales.)
