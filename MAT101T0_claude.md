@@ -926,39 +926,19 @@ Tabla
 Analizando signos:
 
 ```desmos-graph
-left=-1.5; right=0; bottom=-0.5; top=2;
-width=500; height=120;
+left=-1.5; right=0; bottom=-0.5; top=0.5;
+width=350; height=120;
 ---
 y=0 \{-1.25>x\}|#c74440
 y=0 \{-0.375<x\}|#c74440
 
-(-1.25,0)|OPEN|label:-5/4|BLACK
-(-0.375,0)|OPEN|label:-3/8|BLACK
-
+(-1.25,0)|OPEN|label:-5/4|#c74440
+(-0.375,0)|OPEN|label:-3/8|#c74440
 ````
-
-
-
-
-
-
-
-
-(-1.25,0)|OPEN|label:-\frac{5}{4}|#ff7b7b
-(-0.666667,0)|OPEN|label:-\frac{2}{3}|#ff7b7b
-(-0.375,0)|OPEN|label:-\frac{3}{8}|#ff7b7b
-
-(-1.25,0)|OPEN|label:-\frac{5}{4}|#ff7b7b
-(-0.666667,0)|OPEN|label:-\frac{2}{3}|#ff7b7b
-(-0.375,0)|OPEN|label:-\frac{3}{8}|#ff7b7b
-
-
-
 
 $$
 C_s=
-\left]
--\frac54,
--\frac23
+\left] 
+-\infty,-\frac54,[\cup]-\frac23, +\infty
 \right[
 $$
