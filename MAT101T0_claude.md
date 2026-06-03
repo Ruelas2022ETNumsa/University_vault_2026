@@ -419,3 +419,325 @@ Ejemplos:
 - $|1.5|=1.5$
 
 ---
+
+### Propiedades
+
+--- start-multi-column: cornell-007
+```column-settings
+number of columns: 2
+column size: [60%, 40%]
+border: off
+```
+
+📝 **Desarrollo**
+
+Si $x$ y $y$ pertenecen a $\mathbb{R}$:
+
+1. **Simetría** — $|-x|=|x|$
+2. **No negatividad** — $|x|\ge 0$
+3. **Producto** — $|x\cdot y|=|x||y|$
+4. **Cociente** — $\left|\dfrac{x}{y}\right|=\dfrac{|x|}{|y|}$, $\quad y\neq0$
+5. **Ecuación de valor absoluto** — $(|x|=a \land a\ge0)\Rightarrow (x=\pm a)$
+6. **Valor absoluto de potencia par** — $|x^2|=|x|^2=x^2$
+7. **Raíz cuadrada principal** — $\sqrt{x^2}=|x|$
+8. **Desigualdad de valor absoluto**
+	- **(caso $<$)**: $(|x|<a \land a>0) \Rightarrow -a<x<a$
+	- **(caso $>$)**: $(|x|>a \land a>0) \Rightarrow (x>a \lor x<-a)$
+9. **Desigualdad triangular** — $|x+y|\le |x|+|y|$
+10. **Desigualdad triangular inversa** — $\bigl||x|-|y|\bigr| \le |x-y|$
+11. **Desigualdad de Cauchy-Schwarz** — $|x\cdot y|\le |x||y|$
+
+--- end-column ---
+
+🔑 **Claves**
+
+- $|x|\ge0$ siempre — el VA nunca es negativo
+- $|x\cdot y|=|x||y|$ — VA distribuye en el producto
+- $\sqrt{x^2}=|x|$, **no** $x$ — error frecuente
+- $|x|<a \iff -a<x<a$ — inecuación de VA tipo $<$
+- $|x|>a \iff x>a$ ó $x<-a$ — inecuación de VA tipo $>$
+- Triangular: $|x+y|\le|x|+|y|$ — clave en análisis
+
+--- end-multi-column
+
+> **Resumen:** El valor absoluto mide distancia al origen; distribuye en productos y satisface la desigualdad triangular.
+
+
+
+#### Ejemplo
+Analizar la V o F de:
+
+$$
+\begin{array}{rcl}
+-6 & = & -6 \\
+4 - 10 & = & 9 - 15
+\end{array}
+$$
+
+$$
+\begin{array}{rcl}
+2^2-2\cdot5\left(\dfrac{3}{2}\right)+\left(\dfrac{5}{2}\right)^2
+& = &
+3^2-3\cdot5\left(\dfrac{2}{2}\right)+\left(\dfrac{5}{2}\right)^2 \\[6pt]
+\left(2-\dfrac{5}{2}\right)^2
+& = &
+\left(3-\dfrac{5}{2}\right)^2
+\end{array}
+$$
+
+$$
+\begin{array}{rcl}
+\sqrt{\left(2-\dfrac{5}{2}\right)^2}
+& = &
+\sqrt{\left(3-\dfrac{5}{2}\right)^2} \\[6pt]
+\left|2-\dfrac{5}{2}\right|
+& = &
+\left|3-\dfrac{5}{2}\right|
+\end{array}
+$$
+
+$$
+\begin{array}{rcl}
+\left|-\dfrac{1}{2}\right|
+& = &
+\left|\dfrac{1}{2}\right| \\[6pt]
+\dfrac{1}{2}
+& = &
+\dfrac{1}{2}
+\qquad \checkmark
+\end{array}
+$$
+
+---
+
+## Solución de inecuaciones en variable real
+
+### Inecuaciones de primer grado
+
+Forma:
+
+$$ax+b
+\begin{cases}>\\<\\\ge\\\le\end{cases}
+cx+d$$
+
+donde : $a,b,c,d \in \mathbb{R}$
+Se recomienda despejar $x$ con propiedades:
+
+$$
+\begin{array}{rcl}
+ax-cx & > & d-b \\[4pt]
+(a-c)x & > & d-b
+\end{array}
+$$
+
+Si : $$a-c>0$$
+
+entonces : $$x>\dfrac{d-b}{a-c}$$
+
+**$C_s$: conjunto solución de la inecuación**
+
+```desmos-graph
+left=2; right=7; bottom=-1; top=1;
+width=500; height=120;
+---
+y=0 \{x>3\}|#ff7b7b
+(3,0)|OPEN|label:(d-b)/(a-c)|#ff7b7b
+```
+
+$$
+C_s:
+\left] \frac{d-b}{a-c}, +\infty \right[
+=
+\left\{ x\in\mathbb{R} \;\middle|\; x>\frac{d-b}{a-c} \right\}
+$$
+
+**Ejemplo:** Hallar el $C_s$
+
+$$
+\begin{array}{rcl}
+(4x-3)^2 & \le & (4x+1)^2 \\[4pt]
+16x^2-24x+9 & \le & 16x^2+8x+1 \\[4pt]
+-24x+9 & \le & 8x+1 \\[4pt]
+-32x+9 & \le & 1 \\[4pt]
+-32x & \le & -8 \\[4pt]
+x & \ge & \dfrac{1}{4}
+\end{array}
+$$
+
+
+```desmos-graph
+left=-1; right=6; bottom=-1; top=1;
+width=500; height=120;
+---
+y=0 \{x>=0.25\}|#ff7b7b
+(0.25,0)|label:1/4|#ff7b7b
+```
+
+$$
+C_s:
+\left[ \frac{1}{4}, +\infty \right[
+=
+\left\{ x\in\mathbb{R} \;\middle|\; x\ge\frac{1}{4} \right\}
+$$
+
+
+---
+
+### Método de signos para resolver inecuaciones
+
+Generalizando:
+
+**Método de signos para solución de inecuaciones**
+
+Forma general:
+
+$$M(x)
+\begin{cases}>\\<\\\ge\\\le\end{cases}
+N(x)$$
+
+Para resolver se recomiendan los siguientes pasos:
+
+1. Formar una comparación con cero : $$\frac{P(x)}{Q(x)} > 0$$
+(o la desigualdad correspondiente).
+
+2. Factorizar totalmente $P$ y $Q$:
+$$
+\frac{
+(x-a_1)(x-a_2)\cdots(x-a_k)
+}{
+(x-b_1)(x-b_2)\cdots(x-b_j)
+}>0
+$$
+
+3. Representar en la recta real los valores
+
+$$
+a_1,\;a_2,\;\ldots,\;a_k,\;b_1,\;b_2,\;\ldots,\;b_j
+$$
+
+quedando definidos $n$ intervalos:
+
+```desmos-graph
+left=-1; right=11; bottom=-1; top=1;
+width=350; height=120;
+---
+y=0 \{0<x<2\}|#ff7b7b
+y=0 \{2<x<5\}|#ff7b7b
+y=0 \{5<x<8\}|#ff7b7b
+y=0 \{8<x<10\}|#ff7b7b
+
+(2,0)|OPEN|label:a_1|#ff7b7b
+(5,0)|OPEN|label:a_2|#ff7b7b
+(8,0)|OPEN|label:b_1|#ff7b7b
+(10,0)|OPEN|label:b_2|#ff7b7b
+
+(1,-0.5)|label:I_1|#2d70b3|hidden
+(3,-0.5)|label:I_2|#2d70b3|hidden
+(6,-0.5)|label:I_3|#2d70b3|hidden
+(9,-0.5)|label:I_4|#2d70b3|hidden
+```
+
+Intervalos:
+
+$$I_1,\;I_2,\;I_3,\;\ldots,\;I_k$$
+
+4. **Prueba de signos**
+	De $I_1$ se toma un valor cualquiera (no extremo) y se prueban los signos sustituyendo en cada factor.
+	
+	Ejemplo:
+	 $$\dfrac{(+)(-)(+)}{(-)(+)(+)}=(+) \quad \text{O}\quad \dfrac{(+)(-)(+)}{(-)(+)(-)}=(-)$$
+	 
+	Resultan dos posibilidades:
+	- Si la desigualdad es verdadera en el intervalo analizado, entonces: $I_i \subset C_s$
+	- Si la desigualdad es falsa en el intervalo analizado, entonces: $I_i \not\subset C_s$
+
+5. Repetir el procedimiento para los demás intervalos: $I_2,\;I_3,\;\ldots$
+6. El conjunto solución buscado se obtiene mediante la unión de todos los intervalos que verifican la inecuación:
+    $$  C_s=\bigcup I_i  $$
+	donde la unión se realiza únicamente sobre los intervalos válidos.
+
+---
+
+### Ejemplos resueltos
+
+#### a)
+$$x^4 \ge 9x^2$$
+
+$$
+\begin{array}{rcl}
+x^4 & \ge & 9x^2 \\[4pt]
+x^4-9x^2 & \ge & 0 \\[4pt]
+x^2(x^2-9) & \ge & 0 \\[4pt]
+x^2(x-3)(x+3) & \ge & 0
+\end{array}
+$$
+
+- Puntos críticos:
+	$$x_1=-3,\quad x_{2,3}=0,\quad x_4=3$$
+	
+- Prueba
+	$I_{1}:$ $x=-10$
+	
+	$(+)(-)(-)\ge 0\implies (+)\ge 0 \quad \text{verdadero}$
+	
+- Tabla de signos:
+
+| Intervalo      | Signo | Prueba    |
+| -------------- | ----- | --------- |
+| $]-\infty,-3[$ | (+)   | verdadero |
+| $]-3,0[$       | (-)   | falso     |
+| $]0,3[$        | (-)   | falso     |
+| $]3,+\infty[$  | (+)   | verdadero |
+
+- Gráfica
+
+```desmos-graph
+left=-6; right=6; bottom=-1; top=1;
+width=350; height=120;
+---
+(-4,0.5)|label:V|#2d70b3|hidden
+(-2,0.5)|label:F|#2d70b3|hidden
+(0,0.5)|label:V|#2d70b3|hidden
+(2,0.5)|label:F|#2d70b3|hidden
+(4,0.5)|label:V|#2d70b3|hidden
+
+y=0 \{-6<x<=-3\}|#ff7b7b
+y=0 \{3<=x<6\}|#ff7b7b
+
+(-3,0)|label:-3|OPEN|#ff7b7b
+(0,0)|label:0|OPEN|#ff7b7b
+(3,0)|label:3|OPEN|#ff7b7b
+
+(-4,-0.5)|label:I_1|#2d70b3|hidden
+(-0.5,-0.5)|label:I_2|#2d70b3|hidden
+(0.5,-0.5)|label:I_3|#2d70b3|hidden
+(4,-0.5)|label:I_4|#2d70b3|hidden
+```
+
+
+- Prueba de extremos
+	$x=-3, 0, 3$  se cumple $0 = 0 \quad \text{verdadero}$ entonces $-3,0,3 \in C_{s}$
+
+```desmos-graph
+left=-6; right=6; bottom=-1; top=1;
+width=350; height=120;
+---
+y=0 \{-6<x<=-3\}|#ff7b7b
+y=0 \{3<=x<6\}|#ff7b7b
+
+(-3,0)|label:-3|#ff7b7b
+(0,0)|label:0|#ff7b7b
+(3,0)|label:3|#ff7b7b
+```
+
+
+$$
+C_s=
+]-\infty,-3]
+\cup
+\{0\}
+\cup
+[3,+\infty[
+$$
+
+---
