@@ -578,13 +578,14 @@ $$
 Puntos críticos:
 
 $$
-x=-3,\quad x=0,\quad x=3
+x_1=-3,\quad x_{2,3}=0,\quad x_4=3
 $$
 
-grafica
+Gráfica
+
 ```desmos-graph
 left=-6; right=6; bottom=-1; top=1;
-width=500; height=120;
+width=350; height=120;
 ---
 y=0 \{-6<x<=-3\}|#ff7b7b
 y=0 \{3<=x<6\}|#ff7b7b
@@ -592,7 +593,15 @@ y=0 \{3<=x<6\}|#ff7b7b
 (-3,0)|label:-3|#ff7b7b
 (0,0)|label:0|#ff7b7b
 (3,0)|label:3|#ff7b7b
+
+(-4,-0.5)|label:I_1|#2d70b3|hidden
+(-0.5,-0.5)|label:I_2|#2d70b3|hidden
+(0.5,-0.5)|label:I_3|#2d70b3|hidden
+(4,-0.5)|label:I_4|#2d70b3|hidden
 ````
+
+Prueba
+$I_{1}:$ $x=-10$
 
 
 
