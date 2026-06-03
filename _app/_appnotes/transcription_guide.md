@@ -155,7 +155,50 @@ Cuando el gráfico no es reproducible en Desmos (diagrama de conjuntos, figura g
   > Descripción textual: tipo de gráfico, elementos visibles, etiquetas.
 
 Nunca inventar gráficos que no existan en el manuscrito.
-Para el caso de recta numerica con intervalos tomas como base este ejemplo
+
+GRAFICA DE RECTA NUMÉRICA E INTERVALOS:
+Cuando el manuscrito muestra una recta numérica con intervalos,
+reproducirla con desmos-graph siguiendo estas reglas.
+
+NOTACIÓN DE INTERVALOS (usada en el manuscrito):
+- [a,b]   → cerrado en ambos extremos (incluye a y b)
+- ]a,b]   → abierto en a, cerrado en b
+- [a,b[   → cerrado en a, abierto en b
+- ]a,b[   → abierto en ambos extremos
+- ]a,+∞[  → desde a sin incluirlo hasta infinito positivo
+- ]-∞,b[  → desde menos infinito hasta b sin incluirlo
+- [a,+∞[  → desde a incluido hasta infinito positivo
+- ]-∞,b]  → desde menos infinito hasta b incluido
+
+ORDEN DE DIBUJO EN DESMOS:
+1. Primero todas las líneas horizontales (los intervalos).
+2. Luego todos los puntos (extremos cerrados sin OPEN, abiertos con OPEN).
+
+PUNTOS:
+- Extremo incluido (corchete cerrado [ o ]) → punto sin OPEN
+- Extremo no incluido (corchete abierto ] o [) → punto con OPEN
+
+INTERVALOS HACIA EL INFINITO:
+Extender la línea hasta el borde de la ventana visible y continuar
+con DOTTED más allá para simular el infinito.
+Los valores de corte (ej: -5, 5) son límites visuales solamente,
+no son extremos matemáticos del intervalo.
+
+MÚLTIPLES INTERVALOS EN LA MISMA RECTA:
+Usar niveles verticales distintos para separarlos visualmente:
+- Primer intervalo → y=0
+- Segundo intervalo → y=1
+- Tercer intervalo → y=2 (si fuera necesario)
+
+OPERACIONES EN LOS VALORES:
+Se pueden usar expresiones aritméticas directamente en el código.
+Ejemplo: p+1 como extremo de un intervalo es válido en Desmos
+y útil para relacionar extremos entre sí.
+
+EJEMPLO — dos intervalos en la misma recta:
+Azul: [-3, 3[
+Rojo: ]-∞, -3[ ∪ [4, +∞[
+
 ```desmos-graph
 left=-6.5; right=6.5; bottom=-1; top=3;
 width=350; height=150;
@@ -164,35 +207,14 @@ y=0 \{-3<=x<3\}|#2d70b3
 (-3,0)|label:-3|#2d70b3
 (3,0)|OPEN|label:3|#2d70b3
 
-y=1 \{x<=-5\}|#ff7b7b|DOTTED
+y=1 \{x<-5\}|#ff7b7b|DOTTED
 y=1 \{-5<x<-3\}|#ff7b7b
 (-3,1)|OPEN|label:-3|#ff7b7b
 
-y=1 \{5>=x>=4\}|#ff7b7b
+y=1 \{4<=x<5\}|#ff7b7b
 y=1 \{x>5\}|#ff7b7b|DOTTED
 (4,1)|label:4|#ff7b7b
 ```
-
-
-
-
-```desmos-graph 
-left=-6.5; right=6.5; bottom=9; top=13;
- width=350; height=150;
- --- 
- p=3 
- y=10 \{-p<=x<p\}|#2d70b3 
- y=11 \{x<-p\}|#ff7b7b|DOTTED 
- y=11 \{-6.5<x<-p\}|#ff7b7b 
- y=11 \{p+1<=x\}|#ff7b7b 
- y=11 \{p+1<=x<6.5\}|#ff7b7b 
- y=11 \{x>6.5\}|#ff7b7b|DOTTED 
- (-p,10)|label:-3|#2d70b3 
- (p,10)|OPEN|label:3|#2d70b3 
- (-p,11)|OPEN|label:-3|#ff7b7b 
- (p+1,11)|label:4|#ff7b7b
-```
-
 
 ---
 
