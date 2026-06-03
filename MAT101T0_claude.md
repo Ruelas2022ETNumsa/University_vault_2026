@@ -682,7 +682,7 @@ $$
 	
 - Tabla de signos: $x^2(x-3)(x+3) \ge 0$
 
-| Intervalo      | Prueba      | Signo | Prueba    |
+| Intervalo      | Prueba x    | Signo | Resultado |
 | -------------- | ----------- | ----- | --------- |
 | $]-\infty,-3[$ | $I_{1}=-10$ | $(+)$ | verdadero |
 | $]-3,0[$       | $I_{2}=-2$  | $(-)$ | falso     |
@@ -809,15 +809,15 @@ $$
 	$$x\ne -3,\quad x\ne \frac13,\quad x\ne 1$$
 Tabla de signos:
  
-| Intervalo      | Signo | Prueba    |
-| -------------- | ----- | --------- |
-| $]-\infty,-3[$ | $(-)$ | verdadero |
-| $]-3,\frac13[$ | $(+)$ | falso     |
-| $]\frac13,1[$  | $(-)$ | verdadero |
-| $]1,+\infty[$  | $(+)$ | falso     |
+| Intervalo      | Prueba x | Signo | Resultado |
+| -------------- | -------- | ----- | --------- |
+| $]-\infty,-3[$ |          | $(-)$ | verdadero |
+| $]-3,\frac13[$ |          | $(+)$ | falso     |
+| $]\frac13,1[$  |          | $(-)$ | verdadero |
+| $]1,+\infty[$  |          | $(+)$ | falso     |
 
 
-| Intervalo      | Prueba      | Signo | Prueba    |
+| Intervalo      | Prueba x    | Signo | Resultado |
 | -------------- | ----------- | ----- | --------- |
 | $]-\infty,-3[$ | $I_{1}=-10$ | $(+)$ | verdadero |
 | $]-3,0[$       | $I_{2}=-2$  | $(-)$ | falso     |
