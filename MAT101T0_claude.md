@@ -1115,42 +1115,6 @@ y=0 \{2<x<6\}|#ff7b7b
 (2,0)|OPEN|label:2|#ff7b7b
 ```
 
-$$
-C_s=
-]-\infty,-7]
-\cup
-\left[\frac57,2\right[
-\cup
-]2,+\infty[
-$$
-
-
-
-
-
-
-
-
-
-
-Puntos críticos:
-
-$$
-
-$$
-
-
-saadasdasdsadsdsadsadasdsa
-asdasdasdsadasdas
-dasdasasdasdasadsd
-
-Luego:
-
-$$
-S_1=
-\left[\frac57,2\right[
-$$
-
 Luego:
 
 $$
@@ -1158,9 +1122,116 @@ S_2=
 ]-\infty,-7]
 \cup
 ]2,+\infty[
+\qquad\lor\qquad
+S_1=\left[\frac57,2\right[$$
+
+$$
+C_s=S_{1}+S_{2}=
+]-\infty,-7]
+\cup
+\left[\tfrac57,2\right[
+\cup
+]2,+\infty[
 $$
 
 
 ---
+
+#### f)
+
+$$
+\sqrt{x^2+x}
+<
+\sqrt{6}
+$$
+
+Condición de existencia:
+
+$$
+x^2+x\ge 0
+$$
+
+Como ambos miembros son no negativos, se elevan al cuadrado:
+
+$$
+\begin{array}{rcl}
+\left(\sqrt{x^2+x}\right)^2
+& < &
+\left(\sqrt6\right)^2 [6pt]
+x^2+x
+& < &
+6
+\end{array}
+$$
+
+Resolviendo:
+
+$$
+\begin{array}{rcl}
+x^2+x-6 & < & 0 [6pt]
+(x+3)(x-2) & < & 0
+\end{array}
+$$
+
+Por tanto:
+
+$$
+-3<x<2
+$$
+
+Ahora se impone la condición de existencia:
+
+$$
+x^2+x\ge0
+$$
+
+es decir,
+
+$$
+x(x+1)\ge0
+$$
+
+cuyo conjunto solución es:
+
+$$
+]-\infty,-1]
+\cup
+[0,+\infty[
+$$
+
+Intersectando ambos resultados:
+
+$$
+]-3,2[
+;\cap;
+\left(
+]-\infty,-1]
+\cup
+[0,+\infty[
+\right)
+$$
+
+se obtiene:
+
+```desmos-graph
+left=-5; right=4; bottom=-1; top=1;
+width=500; height=120;
 ---
+y=0 \{-3<x<=-1\}|#ff7b7b
+y=0 \{0<=x<2\}|#ff7b7b
+
+(-3,0)|OPEN|label:-3|#ff7b7b
+(-1,0)|label:-1|#ff7b7b
+(0,0)|label:0|#ff7b7b
+(2,0)|OPEN|label:2|#ff7b7b
+```
+
+$$
+C_s=
+]-3,-1]
+\cup
+[0,2[
+$$
+
+
 
