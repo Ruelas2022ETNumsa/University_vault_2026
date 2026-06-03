@@ -10,6 +10,7 @@ border: off
 ```
 
 📝 **Desarrollo**
+
 Sea $a,b,c \in \mathbb{R}$.
 1. **Clausura**
 	- $a+b \in \mathbb{R}$
@@ -41,7 +42,107 @@ Sea $a,b,c \in \mathbb{R}$.
 - Resta y división **no** son axiomas — se derivan
 
 --- end-multi-column
+
 > **Resumen:** Los 7 axiomas de cuerpo garantizan que $\mathbb{R}$ tiene operaciones de suma y producto bien definidas, con neutros, inversos y distributividad.
 
 ---
 
+## Axiomas de igualdad
+
+--- start-multi-column: cornell-002
+```column-settings
+number of columns: 2
+column size: [60%, 40%]
+border: off
+```
+
+📝 **Desarrollo**
+
+Sea $a,b,c\in\mathbb{R}$.
+1. **Reflexividad**
+	- $a=a$
+2. **Simetría**
+	- $a=b \implies b=a$
+3. **Transitividad**
+	- $a=b \land b=c \implies a=c$
+
+--- end-column ---
+
+🔑 **Claves**
+
+- Reflexividad: todo elemento es igual a sí mismo
+- Simetría: la igualdad no tiene dirección
+- Transitividad: base de las cadenas de igualdades en demostraciones
+- Estos 3 axiomas definen una **relación de equivalencia**
+
+--- end-multi-column
+
+> **Resumen:** La igualdad en $\mathbb{R}$ es reflexiva, simétrica y transitiva — una relación de equivalencia sobre los reales.
+
+---
+
+## Definiciones
+
+--- start-multi-column: cornell-003
+```column-settings
+number of columns: 2
+column size: [60%, 40%]
+border: off
+```
+
+📝 **Desarrollo**
+
+1. **Resta**
+	- $b-a=b+(-a)$
+2. **División**
+	- $\dfrac{b}{a}=b\cdot a^{-1}$, con $a\neq0$
+
+--- end-column ---
+
+🔑 **Claves**
+
+- Restar $a$ ≡ sumar $(-a)$
+- Dividir por $a$ ≡ multiplicar por $a^{-1}$
+- $a\neq0$ es **condición obligatoria** para la división
+- Son operaciones **derivadas**, no primitivas
+
+--- end-multi-column
+
+> [!note]
+> La resta y la división no son operaciones fundamentales.
+> - La resta se define a partir de la suma y del opuesto aditivo.
+> - La división se define a partir de la multiplicación y del inverso multiplicativo.
+
+> **Resumen:** Resta y división son abreviaciones de suma con opuesto y producto con inverso, respectivamente.
+
+---
+
+## Observaciones
+
+Es importante distinguir entre una igualdad, una ecuación y una identidad.
+
+| Tipo                  | Ejemplo            | Descripción                                   | Alcance                                                                    |
+|:--------------------- |:------------------ |:--------------------------------------------- |:-------------------------------------------------------------------------- |
+| **Igualdad numérica** | $2^3=8$            | Afirmación entre valores numéricos concretos. | Puede ser verdadera o falsa.                                               |
+| **Ecuación**          | $x^2-4=0$          | Contiene incógnitas.                          | Verdadera únicamente para los valores que pertenecen al conjunto solución. |
+| **Identidad**         | $x^2-4=(x-2)(x+2)$ | Equivalencia algebraica.                      | Verdadera para todo valor del dominio.                                     |
+
+### Ejemplos
+
+- **Igualdad numérica :**   $2^3=8$
+
+- **Ecuación**
+
+	$x^2-4=0$
+
+	Conjunto solución:
+
+	$x=\pm2$
+
+- **Identidad**
+
+	$x^2-4=(x-2)(x+2)$
+
+	Se verifica para todo $x\in\mathbb{R}$.
+
+---
