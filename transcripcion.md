@@ -325,37 +325,45 @@ Si $x$ y $y$ pertenecen a $\mathbb{R}$:
 #### Ejemplo
 Analizar la V o F de:
 
-$-6=-6$
-$4-10=9-15$
+$$
+\begin{array}{rcl}
+-6 & = & -6 \\
+4 - 10 & = & 9 - 15
+\end{array}
+$$
+
+
+
+
 $$2^2-2\cdot5\left(\dfrac{3}{2}\right)+\left(\dfrac{5}{2}\right)^2  
     =  
     3^2-3\cdot5\left(\dfrac{2}{2}\right)+\left(\dfrac{5}{2}\right)^2$$
 $$  
 \left(2-\frac{5}{2}\right)^2
-
+=
 \left(3-\frac{5}{2}\right)^2  
 $$
 $$  
 \sqrt{\left(2-\frac{5}{2}\right)^2}
-
+=
 \sqrt{\left(3-\frac{5}{2}\right)^2}  
 $$
 
 $$  
 \left|2-\frac{5}{2}\right|
-
+=
 \left|3-\frac{5}{2}\right|  
 $$
 
 $$  
 \left|-\frac{1}{2}\right|
-
+=
 \left|\frac{1}{2}\right|  
 $$
 
 $$  
 \frac{1}{2}
-
+=
 \frac{1}{2}  
 \qquad \checkmark  
 $$
