@@ -687,9 +687,49 @@ $$
 &=&
 6x^{2}-2x+2x^{2}-x-1+x+3 \\[4pt]
 &=&
-8x^{2}-2x+2 
+8x^{2}-2x+2 \qquad (\div2)\\
+&=&
+4x^{2}-x+1
 \end{array}
 $$
+Reduciendo a un solo cociente:
+
+$$  
+\frac{  
+(4x^{2}-x+1)
+}{  
+(x-1)^2(x+3)^2(3x-1)^2  
+}  
+\le 0  
+$$
+
+Como
+
+$$  
+4x^2-x+1>0  
+\qquad \forall x\in\mathbb{R}  
+$$
+
+y los factores cuadrados del denominador son positivos en su dominio, el signo depende de
+
+$$  
+(x-1)(x+3)(3x-1)  
+$$
+
+Puntos críticos:
+
+$$  
+x=-3,\qquad x=\frac13,\qquad x=1  
+$$
+
+Además:
+
+$$  
+x\ne -3,\quad x\ne \frac13,\quad x\ne 1  
+$$
+
+Tabla de signos:
+
 
 
 
