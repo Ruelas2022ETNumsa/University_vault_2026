@@ -752,7 +752,6 @@ $$
 
 Factorizando denominadores:
 
-
 $$
 \begin{array}{rcl}
 x^2+2x-3 &=& (x+3)(x-1) \\[4pt]
@@ -795,12 +794,7 @@ $$
 \le 0  
 $$
 
-Como
-
-$$  
-4x^2-x+1>0  
-\qquad \forall x\in\mathbb{R}  
-$$
+Como $4x^2-x+1>0  \quad \forall x\in\mathbb{R}$
 
 y los factores cuadrados del denominador son positivos en su dominio, el signo depende de
 
