@@ -1,4 +1,21 @@
+---
+title: "MAT101-Números-reales-y-desigualdades"
+galaxy_body: planet
+subject: MAT-101
+semester: 1
+partial: 1
+topic: T01_numeros-reales
+star: ""
+moons: []
+comets: []
+tags: [MAT-101, galaxy-planet, P1]
+date_created: 2026-05-30
+status: activo
+---
+
+
 # Números reales y desigualdades
+---
 
 ## Axiomas de cuerpo de los números reales
 

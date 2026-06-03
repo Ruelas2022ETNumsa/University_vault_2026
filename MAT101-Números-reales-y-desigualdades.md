@@ -13,545 +13,1271 @@ date_created: 2026-05-30
 status: activo
 ---
 
+
 # Números reales y desigualdades
 ---
+
 ## Axiomas de cuerpo de los números reales
-Los axiomas de cuerpo son el conjunto de reglas fundamentales que definen cómo operan la adición y la multiplicación en el sistema de los números reales.
 
-Sean $a, b, c \in \mathbb{R}$
-
-|  N  | **Axioma**                 | **Descripción**                                                 | **Notación**                                               | **Concepto**                                                                                       |
-| :-: | -------------------------- | --------------------------------------------------------------- | ---------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-|  1  | **Clausura**               | Operar dos reales siempre<br>produce un real                    | $a+b \in \mathbb{R}$<br>$a \cdot b \in \mathbb{R}$         | $\forall\, a,b \in \mathbb{R}:$<br>$a+b \in \mathbb{R}\ \wedge\ a \cdot b \in \mathbb{R}$          |
-|  2  | **Conmutatividad**         | El orden de los operandos<br>no altera el resultado             | $a+b=b+a$<br>$a \cdot b=b \cdot a$                         | $\forall\, a,b \in \mathbb{R}:$<br>$a+b=b+a\ \wedge\ a \cdot b=b \cdot a$                          |
-|  3  | **Asociatividad**          | El agrupamiento no altera<br>el resultado                       | $(a+b)+c=a+(b+c)$<br>$(ab)\,c=a\,(bc)$                     | $\forall\, a,b,c \in \mathbb{R}:$<br>$(a+b)+c=a+(b+c)$<br>$\wedge\ (ab)c=a(bc)$                    |
-|  4  | **Distributividad**        | La multiplicación se<br>distribuye sobre la suma                | $a(b+c)=ab+ac$                                             | $\forall\, a,b,c \in \mathbb{R}:$<br>$a(b+c)=ab+ac$                                                |
-|  5  | **Elemento neutro**        | El 0 es neutro aditivo;<br>el 1 es neutro multiplicativo        | $a+0=a$<br>$a\cdot 1=a$                                    | $\exists!\, 0 \in \mathbb{R}: a+0=a$<br>$\wedge\ \exists!\, 1 \in \mathbb{R}: a\cdot 1=a$          |
-|  6  | **Inverso aditivo**        | Todo real tiene un opuesto<br>que produce el neutro 0           | $a+(-a)=0$                                                 | $\forall\, a \in \mathbb{R},\ \exists\,{-a} \in \mathbb{R}:$<br>$a+(-a)=0$                         |
-|  7  | **Inverso multiplicativo** | Todo real no nulo tiene un<br>recíproco que produce el neutro 1 | $a \cdot a^{-1}=1,\quad a \neq 0$<br>$a^{-1}=\dfrac{1}{a}$ | $\forall\, a \in \mathbb{R}\setminus\{0\},\ \exists\, a^{-1} \in \mathbb{R}:$<br>$a\cdot a^{-1}=1$ |
-
->**Los axiomas de cuerpo garantizan la consistencia aritmética y permiten la existencia unívoca de las operaciones de sustracción y división en** $\mathbb{R}$.
-
-**Preguntas de comprensión:**
-1. ¿Por qué es necesario especificar en los axiomas que el 0 y el 1 deben ser números distintos?
-2. ¿Qué operación matemática quedaría invalidada si no existiera el axioma del recíproco para números distintos de cero?
-3. ¿Cómo se relacionan estos axiomas con la posibilidad de definir la resta y la división en los números reales?
-
-**Preguntas de comprensión:**
-1. ¿Qué pasaría con la operación de división si quisiéramos incluir el número 0 en un "axioma de clausura para la división"?
-2. ¿Por qué el conjunto de los números irracionales, por sí solo, no cumple con el axioma de clausura bajo la suma? (Pensá en $\sqrt{2}+(-\sqrt{2})$).
-3. ¿Cómo ayuda la propiedad de clausura a que podamos definir funciones reales de variable real sin que los resultados sean valores "indefinidos"?
-
-**Preguntas de comprensión:**
-1. Si tomamos el conjunto de los números enteros, ¿se cumple la clausura bajo la operación de división?
-2. ¿Qué sucede con la clausura en los números reales cuando intentamos calcular la raíz cuadrada de un número negativo?
-3. ¿Por qué la clausura es necesaria para poder definir funciones de variable real sin que los resultados queden indefinidos?
-
-**Preguntas de comprensión:**
-
-1. ¿Por qué decimos que los números naturales **no** tienen clausura bajo la resta? (Pensá en 3−5).
-2. Si el resultado de una operación fuera un número imaginario (como $\sqrt{-1}$​), ¿se habría cumplido el axioma de clausura en los números reales?
-3. ¿Cómo ayuda la clausura a un ingeniero al programar un algoritmo de cálculo numérico?
-
-**Preguntas de comprensión:**
-
-1. ¿Por qué el conjunto de los números naturales **no** tiene clausura bajo la resta? (Pensá en el resultado de 2−5).
-2. Si intentamos dividir un número real por 0, ¿por qué esto no se considera una falla de la "clausura", sino una operación no definida?
-3. ¿Cómo ayuda la propiedad de clausura a un ingeniero al momento de asegurar que un sistema de ecuaciones reales tendrá soluciones dentro del mismo campo?
-
----
-## Propiedades de igualdad
-La igualdad es una relación fundamental en los números reales y permite establecer cuándo dos expresiones representan el mismo valor. Para operar correctamente con ella, se consideran las siguientes propiedades:
-
-Sean $a, b, c \in \mathbb{R}$
-
-| N   | **Propiedad**     | **Enunciado**                                     | **Notación**                          |
-| --- | ----------------- | ------------------------------------------------- | ------------------------------------- |
-| 1   | **Reflexividad**  | Todo número es igual a sí mismo.                  | $a=a$                                 |
-| 2   | **Simetría**      | Si $a=b$, entonces $b=a$.                         | $a=b \Longleftrightarrow b=a$         |
-| 3   | **Transitividad** | Si $a=b$ y $b=c$, entonces $a=c$.                 | $a=b \wedge b=c \Longrightarrow a=c$  |
-
-> **La igualdad es una relación de equivalencia que garantiza la unicidad de los elementos y la consistencia del cálculo en $\mathbb{R}$.**
-
-### Principio de Sustitución
-
-Si $a = b$, entonces $a$ puede ser reemplazado por $b$ en cualquier expresión o proposición matemática sin alterar su valor de verdad. 
-**Ejemplos**
-
-Si $a=3$, entonces $2a+5=2(3)+5=11$.
-Si $x+y=10$ , entonces $(x+y)^2=10^2=100$.
-
-Esta propiedad permite manipular ecuaciones, simplificar expresiones y evaluar funciones de forma consistente.
-
-```desmos-graph
-left=-5; right=5; bottom=-5; top=5;
-width=400; height=200;
----
-y=x^2-4|BLUE
-y=0|DASHED|BLACK
-(2,0)|label:x=2|BLACK
-(-2,0)|label:x=-2|BLACK
-y=(x-2)(x+2)|RED|DOTTED
+--- start-multi-column: cornell-001
+```column-settings
+number of columns: 2
+column size: [60%, 40%]
+border: off
 ```
 
-_En el gráfico: La curva azul ($x^2-4$) interseca al eje negro en los puntos solución de la **ecuación** ($x=\pm 2$), mientras que la curva roja punteada coincide en cada punto con la azul, ilustrando la **identidad**._
+📝 **Desarrollo**
 
-> **La ecuación busca hallar incógnitas; la identidad establece una equivalencia estructural permanente.**
+Sea $a,b,c \in \mathbb{R}$.
 
-**Preguntas de comprensión:**
+1. **Clausura**
+	- $a+b \in \mathbb{R}$
+	- $a\cdot b \in \mathbb{R}$
+2. **Conmutatividad**
+	- Suma: $a+b=b+a$
+	- Producto: $a\cdot b=b\cdot a$
+3. **Asociatividad**
+	- Suma: $(a+b)+c=a+(b+c)$
+	- Producto: $(a\cdot b)\cdot c=a\cdot(b\cdot c)$
+4. **Existencia de neutros**
+	- Neutro aditivo: $\exists\,0\in\mathbb{R}: a+0=a$
+	- Neutro multiplicativo: $\exists\,1\in\mathbb{R}: a\cdot1=a$
+5. **Existencia de negativos**
+	- $\forall\,a\in\mathbb{R},\ \exists\,(-a)\in\mathbb{R}: a+(-a)=0$
+6. **Existencia de inversos**
+	- $\forall\,a\in\mathbb{R},\ a\neq0,\ \exists\,a^{-1}\in\mathbb{R}: a\cdot a^{-1}=1$
+7. **Distributividad**
+	- $a(b+c)=ab+ac$
 
-1. ¿Por qué es fundamental la propiedad transitiva para poder resolver una cadena de igualdades en un problema de ingeniería?
-2. Si definimos una relación que no es simétrica (como "es mayor que"), ¿por qué no podemos considerarla una forma de igualdad?
-3. ¿Cómo se relaciona el hecho de que la suma esté "unívocamente determinada" con la posibilidad de sumar lo mismo a ambos lados de una ecuación?
+--- end-column ---
 
-**Preguntas de comprensión:**
+🔑 **Claves**
 
-1. ¿Por qué es necesario que una función esté "unívocamente determinada" para que el Principio de Sustitución funcione correctamente?
-2. En una identidad como $(x+1)^{2}=x{2}+2x+1$, ¿qué sucede si sustituimos $x$ por cualquier número real?
-3. Al resolver un sistema de ecuaciones por el método de sustitución, ¿qué propiedad de la igualdad estamos explotando realmente?
+- $\mathbb{R}$ es un **cuerpo** — cerrado bajo suma y producto
+- Neutros: $0$ para suma, $1$ para producto
+- Todo real tiene opuesto $(-a)$; todo real no nulo tiene inverso $a^{-1}$
+- Distributividad conecta suma y producto
+- Resta y división **no** son axiomas — se derivan
+
+--- end-multi-column
+
+> **Resumen:** Los 7 axiomas de cuerpo garantizan que $\mathbb{R}$ tiene operaciones de suma y producto bien definidas, con neutros, inversos y distributividad.
 
 ---
+
+## Axiomas de igualdad
+
+--- start-multi-column: cornell-002
+```column-settings
+number of columns: 2
+column size: [60%, 40%]
+border: off
+```
+
+📝 **Desarrollo**
+
+Sea $a,b,c\in\mathbb{R}$.
+1. **Reflexividad**
+	- $a=a$
+2. **Simetría**
+	- $a=b \implies b=a$
+3. **Transitividad**
+	- $a=b \land b=c \implies a=c$
+
+--- end-column ---
+
+🔑 **Claves**
+
+- Reflexividad: todo elemento es igual a sí mismo
+- Simetría: la igualdad no tiene dirección
+- Transitividad: base de las cadenas de igualdades en demostraciones
+- Estos 3 axiomas definen una **relación de equivalencia**
+
+--- end-multi-column
+
+> **Resumen:** La igualdad en $\mathbb{R}$ es reflexiva, simétrica y transitiva — una relación de equivalencia sobre los reales.
+
+---
+
 ## Definiciones
-La resta y la división no se definen como operaciones primarias o independientes, sino como **operaciones derivadas** de la adición y la multiplicación.
 
-| Operación               | Definición formal                                         | Notación              | Concepto                                                              |
-| :---------------------- | :-------------------------------------------------------- | :-------------------- | :-------------------------------------------------------------------- |
-| **Resta** (Sustracción) | Es el número único $x$ tal que $a + x = b$.               | $b - a$               | Es la suma de $b$ con el **opuesto** de $a$: $b + (-a)$.              |
-| **División**            | Es el número único $x$ tal que $ax = b$, para $a \neq 0$. | $b/a$ o $\frac{b}{a}$ | Es el producto de $b$ por el **recíproco** de $a$: $b \cdot a^{-1}$. |
+--- start-multi-column: cornell-003
+```column-settings
+number of columns: 2
+column size: [60%, 40%]
+border: off
+```
 
-### Conexión con los Axiomas
+📝 **Desarrollo**
 
-- **La resta** es posible porque el axioma del **inverso aditivo** asegura que para todo $a$ existe $-a$. Restar es sumar el opuesto: $a-b=a+(-b)$.
-- **La división** es posible porque el axioma del **inverso multiplicativo** asegura que para todo $a\neq 0$ existe $a^{-1}$. Dividir es multiplicar por el recíproco: $\dfrac{a}{b}=a\cdot b^{-1},\quad b\neq 0$.
+1. **Resta**
+	- $b-a=b+(-a)$
+2. **División**
+	- $\dfrac{b}{a}=b\cdot a^{-1}$, con $a\neq0$
 
-**Preguntas de comprensión:**
+--- end-column ---
 
-1. ¿Por qué el número $0$ no puede ser el divisor $(a)$ en la definición de división de los números reales?
-2. Según la definición de resta de Apostol, ¿cómo se demuestra que $0−a$ es igual a $−a$?
-3. Si la resta se define a través de la suma, ¿qué propiedad de la igualdad garantiza que el resultado x sea único?
+🔑 **Claves**
 
----
+- Restar $a$ ≡ sumar $(-a)$
+- Dividir por $a$ ≡ multiplicar por $a^{-1}$
+- $a\neq0$ es **condición obligatoria** para la división
+- Son operaciones **derivadas**, no primitivas
 
-## Observaciones sobre tipos de igualdad en los números reales
+--- end-multi-column
 
-En el análisis matemático, es crucial distinguir entre una igualdad que simplemente compara valores, una que impone una condición y una que expresa una equivalencia estructural.
+> [!note]
+> La resta y la división no son operaciones fundamentales.
+> - La resta se define a partir de la suma y del opuesto aditivo.
+> - La división se define a partir de la multiplicación y del inverso multiplicativo.
 
-Sean $a, b \in \mathbb{R}$ y $P(x), Q(x)$ expresiones algebraicas.
-
-| Tipo                  | Ejemplo                 | Descripción                            | Alcance                                       |
-| :-------------------- | :---------------------- | -------------------------------------- | :-------------------------------------------- |
-| **Igualdad numérica** | $2^3 = 8$               | Siempre verdadera                      | Siempre verdadera (o falsa).                  |
-| **Ecuación**          | $x^2 - 4 = 0$           | Verdadera solo para algunos $x$        | Verdadera solo para su **conjunto solución**. |
-| **Identidad**         | $x^2 - 4 = (x-2)(x+2)$ | Verdadera para todo $x \in \mathbb{R}$ | Verdadera para todo $x$ en el dominio.        |
-
----
-## Teoremas básicos
-
-Los **teoremas básicos de los números reales** no son reglas arbitrarias, sino consecuencias lógicas que se derivan de los axiomas de cuerpo, orden y completitud. Son "leyes establecidas" que garantizan que el álgebra y el cálculo funcionen siempre igual.
-
-Sean $a, b, c \in \mathbb{R}$
+> **Resumen:** Resta y división son abreviaciones de suma con opuesto y producto con inverso, respectivamente.
 
 ---
 
-### 1. Teoremas Algebraicos (Derivados de los Axiomas de Cuerpo)
+## Observaciones
 
-Estos aseguran la consistencia de las operaciones básicas:
+Es importante distinguir entre una igualdad, una ecuación y una identidad.
 
-| **Teorema**                 | **Enunciado**                                                                                                      | **Notación**                                                                                                           |
-| --------------------------- | ------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
-| **Leyes de simplificación** | Si a dos igualdades se les suma o multiplica el mismo valor, los términos restantes son iguales.                   | $a+c=b+c \Rightarrow a=b$<br>$ac=bc\ \wedge\ c\neq 0 \Rightarrow a=b$                                                  |
-| **Unicidad de elementos**   | El neutro $0$, el neutro $1$, el opuesto $-a$ y el recíproco $a^{-1}$ son únicos para cada número.                 | $\exists!\,0: a+0=a$<br>$\exists!\,1: a\cdot 1=a$<br>$\exists!\,{-a}: a+(-a)=0$<br>$\exists!\,a^{-1}: a\cdot a^{-1}=1$ |
-| **Regla del producto nulo** | El producto de cualquier número por cero es cero. Si un producto es cero, al menos uno de los factores debe serlo. | $a\cdot 0=0$<br>$ab=0 \Rightarrow (a=0\ \vee\ b=0)$                                                                    |
-| **Leyes de los signos**     | El producto de dos negativos es positivo. Negar una diferencia invierte el orden de los términos.                  | $(-a)(-b)=ab$<br>$a(-b)=-(ab)$<br>$-(-a)=a$<br>$-(a-b)=b-a$                                                            |
->La **regla del producto nulo** es el fundamento de resolver ecuaciones por factorización: si se logra escribir una expresión como un producto igual a cero, cada factor puede igualarse a cero por separado.
+| Tipo                  | Ejemplo            | Descripción                                   | Alcance                                                                    |
+|:--------------------- |:------------------ |:--------------------------------------------- |:-------------------------------------------------------------------------- |
+| **Igualdad numérica** | $2^3=8$            | Afirmación entre valores numéricos concretos. | Puede ser verdadera o falsa.                                               |
+| **Ecuación**          | $x^2-4=0$          | Contiene incógnitas.                          | Verdadera únicamente para los valores que pertenecen al conjunto solución. |
+| **Identidad**         | $x^2-4=(x-2)(x+2)$ | Equivalencia algebraica.                      | Verdadera para todo valor del dominio.                                     |
+
+### Ejemplos
+
+- **Igualdad numérica :**  $2^3=8$
+
+- **Ecuación :** $x^2-4=0$
+	Conjunto solución:  $x=\pm2$
+
+- **Identidad :** $x^2-4=(x-2)(x+2)$
+	Se verifica para todo $x\in\mathbb{R}$.
+
+---
+## Teoremas sobre números reales
+
+Sea $a,b,c,d,x \in \mathbb{R}$.
+
+1. **Ley de cancelación aditiva**
+	- $a+b=a+c \Rightarrow b=c$
+2. **Ley de cancelación multiplicativa**
+	- $(a\cdot b=a\cdot c)\land a\neq0 \Rightarrow b=c$
+3. **Solución de ecuaciones aditivas**
+	- $a+x=b \Rightarrow x=b-a$
+4. **Solución de ecuaciones multiplicativas**
+	- $(a\cdot x=b)\land a\neq0 \Rightarrow x=\dfrac{b}{a}$
+5. **Producto por cero**
+	- $a\cdot0=0$
+6. **Regla del producto nulo**
+	- $a\cdot b=0 \Rightarrow (a=0 \lor b=0)$
+7. **Igualdad de opuestos**
+	- $a=b \Rightarrow -a=-b$
+8. **Producto por un negativo**
+	- $a(-b)=-(ab)$
+9. **Producto de negativos**
+	- $(-a)(-b)=ab$
+10. **Suma de fracciones con igual denominador**
+	- $\dfrac{a}{b}+\dfrac{c}{b}=\dfrac{a+c}{b}$
+11. **Suma de fracciones con distinto denominador**
+	- $\dfrac{a}{b}+\dfrac{c}{d}=\dfrac{ad+cb}{bd}$
+12. **Producto de fracciones**
+	- $\left(\dfrac{a}{b}\right)\left(\dfrac{c}{d}\right)=\dfrac{ac}{bd}$
+13. **División de fracciones**
+	- $\dfrac{\frac{a}{b}}{\frac{c}{d}}=\dfrac{ad}{cb}$
+
+### Demostración de la ley de cancelación aditiva
+
+Hipótesis: $a+b=a+c$
+
+$a+b+(-a)=a+c+(-a)$ *Sumando $(-a)$ a ambos lados:*
+
+$(a+(-a))+b=(a+(-a))+c$  *Por asociatividad:*
+
+$0+b=0+c$  *existe el negativo $a+(-a)=0$:*
+
+$b=c$  *Por existencia del neutro aditivo*
 
 ---
 
-### 2. Teoremas de Desigualdad (Derivados de los Axiomas de Orden)
+## Axiomas de orden de los números reales
 
-Establecen cómo se comporta el orden en la recta numérica:
+--- start-multi-column: cornell-004
+```column-settings
+number of columns: 2
+column size: [60%, 40%]
+border: off
+```
 
-| **Teorema**                | **Enunciado**                                                                                                                       | **Notación**                                                                                   |
-| -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| **Transitividad**          | Si $a<b$ y $b<c$, entonces $a<c$.                                                                                                   | $a<b\ \wedge\ b<c \Rightarrow a<c$                                                             |
-| **Tricotomía**             | Entre dos reales, exactamente una de tres relaciones es verdadera: menor, mayor o igual.                                            | $a<b\ \vee\ a=b\ \vee\ a>b$                                                                    |
-| **Monotonía**              | Sumar el mismo número a ambos lados conserva la desigualdad. Multiplicar por un positivo la conserva; por un negativo, la invierte. | $a<b \Rightarrow a+c<b+c$<br>$a<b\ \wedge\ c>0 \Rightarrow ac<bc$<br>$a<b \Rightarrow {-a}>-b$ |
-| **Cuadrados no negativos** | Para todo real no nulo, su cuadrado es estrictamente positivo.                                                                      | $a\neq 0 \Rightarrow a^2>0$                                                                    |
->La **monotonía con negativos** explica por qué al multiplicar o dividir ambos lados de una desigualdad por un número negativo se debe invertir el signo.
+📝 **Desarrollo**
 
----
+Sea $a,b \in \mathbb{R}$.
+1. **Clausura de los positivos**
+	Si $a,b \in \mathbb{R}^{+}$, entonces:
+	- $a+b \in \mathbb{R}^{+}$
+	- $ab \in \mathbb{R}^{+}$
+2. **Tricotomía**
+	Para todo $a\neq0$:
+	- $a\in\mathbb{R}^{+}$ ó $-a\in\mathbb{R}^{+}$
+3. **Exclusión del cero**
+	- $0\notin\mathbb{R}^{+}$
 
-### 3. Teoremas de Valor Absoluto
+> [!note]
+> Estos axiomas garantizan que el conjunto de los números reales pueda ordenarse sobre una recta numérica.
+>
+> Ejemplos:
+>
+> $4>2>1>0>-3$
+>
+> $-4<-1<1<10$
 
-El valor absoluto $|x|$ mide la distancia del número $x$ al origen en la recta real:
+### Notación
+- Reales positivos:
+	- $\mathbb{R}^{+}=\{x\in\mathbb{R}:x>0\}$
+- Reales negativos:
+	- $\mathbb{R}^{-}=\{x\in\mathbb{R}:x<0\}$
 
-| **Teorema**                | **Enunciado**                                                                           | **Notación**                 |
-| -------------------------- | --------------------------------------------------------------------------------------- | ---------------------------- |
-| **Desigualdad triangular** | La distancia de una suma no puede ser mayor que la suma de las distancias individuales. | $\|x+y\| \leq \|x\| + \|y\|$ |
->Su nombre viene de la geometría: en un triángulo, la longitud de un lado nunca supera la suma de los otros dos. Es el resultado más importante de esta sección y reaparece constantemente en cálculo y análisis.
+--- end-column ---
 
----
+🔑 **Claves**
 
-### 4. Teoremas de Estructura y Continuidad
+- $\mathbb{R}^{+}$ es el conjunto **primitivo** del orden
+- Tricotomía: para $a\neq0$, exactamente uno de $a$ o $-a$ es positivo
+- El cero **no** es positivo ni negativo
+- Clausura: suma y producto de positivos es positivo
+- El orden $<$ y $>$ se **definen** a partir de $\mathbb{R}^{+}$, no se asumen
 
-Son los que distinguen a $\mathbb{R}$ de otros sistemas como $\mathbb{Q}$:
+--- end-multi-column
 
-| **Teorema**                | **Enunciado**                                                                                                          | **Notación**                                              |
-| -------------------------- | ---------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- |
-| **Propiedad Arquimediana** | Los reales no tienen "techo". Para cualquier $x$, siempre existe un entero $n$ mayor que él.                           | $\forall\,x\in\mathbb{R},\ \exists\,n\in\mathbb{Z}: n>x$ |
-| **Densidad**               | Entre dos reales distintos, por más cerca que estén, siempre existen infinitos racionales e irracionales.              | $a<b \Rightarrow \exists\,r\in\mathbb{Q}: a<r<b$          |
-| **Axioma del Supremo**     | Todo conjunto de reales acotado superiormente tiene un extremo superior (supremo) dentro de $\mathbb{R}$.              | $\exists\,\sup S \in \mathbb{R}$                          |
-
->El **Axioma del Supremo** es lo que hace que $\mathbb{R}$ no tenga "huecos". Los racionales $\mathbb{Q}$ no lo cumplen: el conjunto $\{x\in\mathbb{Q}: x^2<2\}$ no tiene supremo en $\mathbb{Q}$, lo que significa que $\sqrt{2}$ no existe dentro de los racionales.
-
----
-
-### Resumen de Teoremas Útiles
-
-Tabla de referencia rápida con los teoremas más operativos: los que aparecen al resolver ejercicios, simplificar expresiones y trabajar con fracciones. Sean $a, b, c, d \in \mathbb{R}$.
-
-| **#** | **Nombre**                        | **Notación**                                                   |
-|:-----:| --------------------------------- | -------------------------------------------------------------- |
-|   1   | Cancelación aditiva               | $a+c=b+c \Rightarrow a=b$                                      |
-|   2   | Cancelación multiplicativa        | $ac=bc\ \wedge\ c\neq 0 \Rightarrow a=b$                       |
-|   3   | Solución única aditiva            | $a+x=b \Rightarrow x=b-a$                                      |
-|   4   | Solución única multiplicativa     | $ax=b\ \wedge\ a\neq 0 \Rightarrow x=\dfrac{b}{a}$             |
-|   5   | Producto por cero                 | $a\cdot 0=0$                                                   |
-|   6   | Regla del producto nulo           | $ab=0 \Rightarrow (a=0\ \vee\ b=0)$                            |
-|   7   | Igualdad de opuestos              | $a=b \Rightarrow -a=-b$                                        |
-|   8   | Signo en el producto              | $a(-b)=-(ab)$                                                  |
-|   9   | Doble negativo                    | $(-a)(-b)=ab$                                                  |
-|  10   | Fracciones — igual denominador    | $\dfrac{a}{b}+\dfrac{c}{b}=\dfrac{a+c}{b},\quad b\neq 0$       |
-|  11   | Fracciones — distinto denominador | $\dfrac{a}{b}+\dfrac{c}{d}=\dfrac{ad+cb}{bd},\quad b,d\neq 0$  |
-|  12   | Producto de fracciones            | $\dfrac{a}{b}\cdot\dfrac{c}{d}=\dfrac{ac}{bd},\quad b,d\neq 0$ |
-|  13   | División de fracciones            | $\dfrac{a/b}{c/d}=\dfrac{ad}{cb},\quad b,c,d\neq 0$            |
-
-
-**Preguntas de comprensión:**
-
-1. ¿Qué teorema básico de los reales justifica que podamos "cancelar" términos a ambos lados de una igualdad?
-2. ¿Por qué el teorema de los cuadrados $(a^{2} > 0)$ impide que existan raíces cuadradas de números negativos dentro de los reales?
-3. ¿Cómo usarías la **Propiedad Arquimediana** para demostrar que siempre podés encontrar un número de la forma $1/n$ tan pequeño como quieras?
+> **Resumen:** El orden en $\mathbb{R}$ se construye desde $\mathbb{R}^{+}$: un real es positivo, negativo, o cero — nunca dos a la vez.
 
 ---
 
-## Axiomas de Orden de los números reales
+### Definiciones
 
-Son las reglas que nos permiten comparar dos números reales y establecer una jerarquía entre ellos. Gracias a estos axiomas, podemos afirmar que los números reales se disponen en una **recta numérica** con una dirección definida.
+--- start-multi-column: cornell-005
+```column-settings
+number of columns: 2
+column size: [60%, 40%]
+border: off
+```
 
-Formalmente, el sistema de los números reales se basa en la existencia de un subconjunto especial llamado **números positivos** ($\mathbb{R}^+$). A partir de este concepto primitivo, se construyen las relaciones "mayor que" ($>$) y "menor que" ($<$).
+📝 **Desarrollo**
 
-Sean $a, b \in \mathbb{R}$
+1. **Relación de orden**
+	- Permite comparar dos números reales y determinar cuál es mayor o menor.
+2. **Mayor que**
+	- $a>b \iff a-b\in\mathbb{R}^{+}$
+3. **Menor que**
+	- $a<b \iff b-a\in\mathbb{R}^{+}$
+4. **Mayor o igual que**
+	- $a\ge b \iff (a>b)\lor(a=b)$
+5. **Menor o igual que**
+	- $a\le b \iff (a<b)\lor(a=b)$
+6. **Positivos y negativos**
+	- $a>0 \Rightarrow a$ es positivo.
+	- $a<0 \Rightarrow a$ es negativo.
 
-|  N  | Axioma                      | Descripción                                                       | Notación                                                                       | Concepto (Símbolos)                                                                  |
-|:---:|:--------------------------- |:----------------------------------------------------------------- |:------------------------------------------------------------------------------ |:------------------------------------------------------------------------------------ |
-|  1  | **Clausura de la suma**     | La suma de dos positivos es positiva.                             | $a, b \in \mathbb{R}^+ \Rightarrow a+b \in \mathbb{R}^+$                       | $\forall a,b \in \mathbb{R}^+ : (a+b) \in \mathbb{R}^+$                              |
-|  2  | **Clausura del producto**   | El producto de dos positivos es positivo.                         | $a, b \in \mathbb{R}^+ \Rightarrow ab \in \mathbb{R}^+$                        | $\forall a,b \in \mathbb{R}^+ : (ab) \in \mathbb{R}^+$                               |
-|  3  | **Tricotomía de positivos** | Para cualquier real no nulo, o él es positivo o su opuesto lo es. | $a \neq 0 \Rightarrow a \in \mathbb{R}^+ \underline{\vee} -a \in \mathbb{R}^+$ | $\forall a \in \mathbb{R}, a \neq 0 : a \in \mathbb{R}^+ \oplus -a \in \mathbb{R}^+$ |
-|  4  | **Exclusión del cero**      | El cero no es un número positivo.                                 | $0 \notin \mathbb{R}^+$                                                        | $0 \notin \mathbb{R}^+$                                                              |
+--- end-column ---
 
-### Definición de la relación de orden
+🔑 **Claves**
 
-Una vez aceptados estos axiomas, definimos formalmente los símbolos de desigualdad:
+- $a>b$ ≡ $a-b$ es positivo
+- $a<b$ ≡ $b-a$ es positivo
+- $\ge$ y $\le$ incluyen la igualdad
+- Positivo $\iff$ mayor que cero; negativo $\iff$ menor que cero
+- Las 4 relaciones se derivan de $\mathbb{R}^{+}$
 
-- **Menor que:** $a < b \iff b - a \in \mathbb{R}^+$
-- **Mayor que:** $a > b \iff a - b \in \mathbb{R}^+$
+--- end-multi-column
 
-### Propiedades fundamentales derivadas
+> **Resumen:** Las relaciones de orden $<$, $>$, $\le$, $\ge$ se definen formalmente mediante restas y pertenencia a $\mathbb{R}^{+}$.
 
-De los axiomas anteriores se derivan los teoremas que usamos habitualmente en ingeniería:
-
-1. **Transitividad:** Si $a < b$ y $b < c$, entonces $a < c$.
-2. **Monotonía de la suma:** Si $a < b$, entonces $a + c < b + c$.
-3. **Monotonía del producto:** Si $a < b$ y $c > 0$, entonces $ac < bc$. (Si $c < 0$, la desigualdad se invierte: $ac > bc$).
-
-> **Los axiomas de orden convierten a $\mathbb{R}$ en un campo ordenado, permitiendo el uso de desigualdades y la representación en la recta real.**
-
-**Preguntas de comprensión:**
-
-1. ¿Por qué el axioma de tricotomía impide que un número sea positivo y negativo al mismo tiempo?
-2. Si multiplicamos la desigualdad $x<5$ por $−2$, ¿cuál es el fundamento axiomático para invertir el símbolo?
-3. ¿Cómo usarías la definición formal $(b−a \in \mathbb{R}^{+})$ para demostrar que si $a<b$, entonces $−b<−a$?
 
 ---
 
 ## Teoremas de desigualdades e inecuaciones
 
-En el sistema de los números reales, las desigualdades no son solo comparaciones, sino que forman una estructura matemática regida por los **axiomas de orden**. A partir de estos axiomas se derivan los teoremas que permiten resolver inecuaciones y realizar estimaciones en cálculo.
-
-Podemos agrupar estos teoremas en tres categorías fundamentales, si $a,b,c,x \in \mathbb{R}$:
-
-### 1. Teoremas de Orden (Reglas Operativas)
-
-Los teoremas de orden son consecuencias lógicas de los axiomas de orden de los números reales. Estas reglas permiten manipular desigualdades de forma segura en el álgebra y el cálculo, asegurando que las comparaciones de magnitud entre números sigan siendo válidas tras realizar operaciones.
-
-Sean $a, b, c, x \in \mathbb{R}$:
-
-|  N  | Teorema o propiedad          | Descripción                                                                                | Notación                                          | Concepto (Símbolos)                                           |
-| :-: | :--------------------------- | :----------------------------------------------------------------------------------------- | :------------------------------------------------ | :------------------------------------------------------------ |
-|  1  | **Propiedad de Tricotomía**  | Para cualquier par de reales, solo una de<br>tres relaciones es posible.                   | $a < b \lor a = b \lor a > b$                     | $\forall a,b \in \mathbb{R}: (a<b) \oplus (a=b) \oplus (b<a)$ |
-|  2  | **Propiedad Transitiva**     | Si un número es menor a un segundo y este<br>a un tercero, el primero es menor al tercero. | $a < b \land b < c \Rightarrow a < c$             | $a < b \land b < c \implies a < c$                            |
-|  3  | **Monotonía de la Suma**     | Sumar o restar el mismo número a ambos<br>lados mantiene la desigualdad.                   | $a < b \Rightarrow a + c < b + c$                 | $a < b \implies a + c < b + c$                                |
-|  4  | **Producto por Positivo**    | Multiplicar por un número mayor a cero<br>mantiene el sentido de la desigualdad.           | $a < b \land c > 0 \Rightarrow ac < bc$           | $a < b \land c > 0 \implies ac < bc$                          |
-|  5  | **Producto por Negativo**    | Multiplicar por un número menor a cero<br>**invierte** el sentido de la desigualdad.       | $a < b \land c < 0 \Rightarrow ac > bc$           | $a < b \land c < 0 \implies ac > bc$                          |
-|  6  | **Teorema de Cuadrados**     | El cuadrado de cualquier número real no<br>nulo es siempre positivo.                       | $a \neq 0 \Rightarrow a^2 > 0$                    | $\forall a \in \mathbb{R}, a \neq 0 : a^2 > 0$                |
-|  7  | **Inversos Multiplicativos** | Si dos números tienen el mismo signo, sus<br>recíprocos invierten el orden.                | $0 < a < b \Rightarrow \frac{1}{b} < \frac{1}{a}$ | $0 < a < b \implies a^{-1} > b^{-1}$                          |
-  
-```desmos-graph
-left=-3; right=3; bottom=-1; top=3;
-width=350; height=150;
----
-y=x^2|#2d70b3
-y=0|#000000
-(0,0)|label:El cuadrado siempre es >= 0|#000000
-a=1.5
-b=2.5
-c=-1
-(a,a^2)|#c74440
-(b,b^2)|#c74440
-\{a<x<b: 0\}|#fa7e19
-\{c*b<x<c*a: 0\}|#388c46
-(a,0)|label:a|#000000
-(b,0)|label:b|#000000
-(c*a,0)|label:ca|#388c46
-(c*b,0)|label:cb|#388c46
+--- start-multi-column: cornell-006
+```column-settings
+number of columns: 2
+column size: [60%, 40%]
+border: off
 ```
 
-_En el gráfico: La curva azul ($y=x^2$) ilustra que cualquier número real elevado al cuadrado resulta en un valor no negativo. En el eje $x$, se observa cómo si $a < b$, al multiplicar por $c = -1$, las posiciones se invierten resultando en $cb < ca$._
+📝 **Desarrollo**
 
-> **Los teoremas de orden permiten la resolución de inecuaciones y fundamentan la noción de distancia en la recta real.**
+Sea $a,b,c,x \in \mathbb{R}$.
 
-**Preguntas de comprensión:**
+1. **Tricotomía**
+	- $a<b \;\lor\; a=b \;\lor\; a>b$
+2. **Transitividad**
+	- $a<b \land b<c \Rightarrow a<c$
+3. **Monotonía**
+	- $a<b \Rightarrow -a>-b$
+4. **Despeje aditivo**
+	- $a+x<b \Rightarrow x<b-a$
+5. **Multiplicación por positivos**
+	- $(ab<ac)\land a>0 \Rightarrow b<c$
+6. **Multiplicación por negativos**
+	- $(ab<ac)\land a<0 \Rightarrow b>c$
+7. **Cuadrados no negativos**
+	- $a^2\ge0$
+8. **Inversos multiplicativos y orden**
+	- $a>0 \iff \dfrac{1}{a}>0$
 
-1. ¿Por qué el teorema del producto por negativo es crucial al resolver una inecuación como $−2x<10$?
-2. ¿Cómo garantiza la propiedad transitiva que podamos organizar a todos los números reales en una sola línea recta?
-3. Si sabemos que $x^{2}>0$ para todo $x\neq 0$, ¿qué podemos concluir sobre la existencia de raíces reales para números negativos?
+--- end-column ---
+
+🔑 **Claves**
+
+- Tricotomía: exactamente **una** de las 3 relaciones es verdadera
+- Monotonía: negar **invierte** la desigualdad
+- Multiplicar por negativo **invierte** la desigualdad — error frecuente
+- $a^2\ge0$ siempre — clave para demostrar desigualdades
+- $a>0 \iff a^{-1}>0$: el inverso conserva el signo
+
+--- end-multi-column
+
+> **Resumen:** Sumar a ambos lados conserva la desigualdad; multiplicar por negativo la invierte.
 
 
 
-### 2. Teoremas de Valor Absoluto
 
-El valor absoluto $|x|$ mide la distancia al origen y es vital para definir límites y continuidad.
-
-- **Propiedad Fundamental:** $|x| \leq a$ es equivalente a $-a \leq x \leq a$ (siempre que $a \geq 0$).
-- **Desigualdad Triangular:** El valor absoluto de una suma no supera la suma de los valores absolutos: $|a + b| \leq |a| + |b|$
-- **Variante de la Resta:** $|a - b| \geq | ( |a| - |b| ) |$.
-
-A partir de su definición, se derivan teoremas fundamentales que permiten resolver ecuaciones e inecuaciones con módulos y establecer acotaciones en el cálculo.
-
-Sean $a, b, c, x \in \mathbb{R}$:
-
-|  N  | Teorema o propiedad         | Descripción                                                                                | Notación                                               | Concepto (Símbolos)                                                                                 |
-| :-: | :-------------------------- | :----------------------------------------------------------------------------------------- | :----------------------------------------------------- | :-------------------------------------------------------------------------------------------------- |
-|  1  | **No negatividad**          | El valor absoluto de cualquier real es siempre cero o positivo.                            | $\|x\| \geq 0$                                         | $\forall \|x\| \in \mathbb{R} : x \geq 0$                                                           |
-|  2  | **Propiedad del producto**  | El módulo de un producto es el producto de los módulos de los factores.                    | $\|ab\| = \|a\| \cdot \|b\|$                           | $\forall a,b \in \mathbb{R} : \|ab\| = \|a\| \cdot \|b\|$                                           |
-|  3  | **Propiedad del cociente**  | El módulo de una división es el cociente de los módulos (si el divisor no es nulo).        | $\dfrac{\|a\|}{\|b\|} = \bigg \| \dfrac{a}{b}\bigg \|$ | $\forall a \in \mathbb{R}, \forall b \neq 0 : \dfrac{\|a\|}{\|b\|} = \bigg \| \dfrac{a}{b}\bigg \|$ |
-|  4  | **Relación con la raíz**    | La raíz cuadrada del cuadrado de un número es igual a su valor absoluto.                   | $\sqrt{x^{2}} =\|x\|$                                  | $\forall x \in \mathbb{R} : \sqrt{x^2} = \|x\|$                                                     |
-|  5  | **Propiedad de Intervalos** | Estar acotado por un módulo equivale a estar contenido en un intervalo simétrico.          | $x \leq \|a\| \iff -a \leq x \leq a$                   | $a \geq 0 \land x \leq a \iff x \in [-a, a]$                                                        |
-|  6  | **Desigualdad Triangular**  | El módulo de una suma no supera la suma de los módulos individuales.                       | $\|a + b\| \leq \|a\| + \|b\|$                         | $\forall a,b \in \mathbb{R} : \|a + b\| \leq \|a\| + \|b\|$                                         |
-|  7  | **Variante de la resta**    | La diferencia de módulos es menor o igual al módulo de la diferencia.                      | $\|a - b\| \geq \|a\| - \|b\|$                         | $\forall a,b \in \mathbb{R} : \|a - b\| \geq \|a\| - \|b\|$                                         |
-|  8  | **Intervalo Abierto**       | Estar acotado superiormente por un módulo define un intervalo simétrico entre $-a$ y $a$.  | $\vert x \vert < a$ $\iff -a < x < a$                  | $a > 0 \implies x \in (-a, a)$                                                                      |
-|  9  | **Intervalos Exteriores**   | Superar un módulo implica que el número está fuera de la zona central, hacia los extremos. | $\vert x \vert > a$ $\iff x > a \lor x < -a$           | $a > 0 \implies x \in (-\infty, -a) \cup (a, \infty)$                                               |
-
-- Cuando decimos $\vert x \vert < a$, estamos buscando todos los números cuya distancia al centro es "corta", lo que genera un **intervalo acotado** (un entorno).
-- Cuando decimos $\vert x \vert > a$, buscamos números que están "lejos" del origen, lo que genera dos **semirrectas infinitas**.
-
-----
----
 ---
 
-── MODO 1 · EXPLICACIÓN DE CONCEPTO ──
+## La recta real e intervalos
 
-En el sistema de los números reales, tanto la **Desigualdad de Cauchy-Schwarz** como las propiedades de los intervalos con valor absoluto son herramientas analíticas fundamentales. La primera permite relacionar productos y sumas (o vectores y normas), mientras que las segundas definen la noción de cercanía o distancia en la recta real.
+Existe correspondencia biunívoca (uno a uno) entre el conjunto $\mathbb{R}$ y una recta a escala llamada **la recta real**.
 
-### 1. Desigualdad de Cauchy-Schwarz
+> [!note]  
+> Un intervalo es un subconjunto de la recta real.
 
-Esta desigualdad establece que el valor absoluto del producto de dos conjuntos de números (o el producto escalar de dos vectores) nunca supera al producto de sus magnitudes individuales. Es la base para demostrar la desigualdad triangular y para definir el ángulo entre vectores.
+1. **Intervalo cerrado**: $[a,b]=\{x\mid a\le x\le b\}$
 
-### 2. Valor Absoluto e Intervalos
+```desmos-graph
+left=2; right=5; bottom=-1; top=1;
+width=350; height=120;
+---
+y=0 \{3<=x<=4\}|#ff7b7b
 
-El valor absoluto $\vert x \vert$ representa la **distancia** de un número al origen.
+(3,0)|label:a|#ff7b7b
+(4,0)|label:b|#ff7b7b
+```
 
-- Cuando decimos $\vert x \vert < a$, estamos buscando todos los números cuya distancia al centro es "corta", lo que genera un **intervalo acotado** (un entorno).
-- Cuando decimos $\vert x \vert > a$, buscamos números que están "lejos" del origen, lo que genera dos **semirrectas infinitas**.
+2. **Intervalo semiabierto por la izquierda**: $]a,b]=\{x\mid a<x\le b\}$
 
-A continuación, presento la tabla con la formalización solicitada:
+```desmos-graph
+left=2; right=5; bottom=-1; top=1;
+width=350; height=120;
+---
+y=0 \{3<x<=4\}|#ff7b7b
 
-|  N  | Teorema o Propiedad       | Descripción                                                                                      | Notación                                         | Concepto (Símbolos)                                                             |
-| :-: | :------------------------ | :----------------------------------------------------------------------------------------------- | :----------------------------------------------- | :------------------------------------------------------------------------------ |
-|  1  | **Cauchy-Schwarz**        | El cuadrado de una suma de productos es menor o igual al producto de las sumas de los cuadrados. | $(\sum a_k b_k)^2 \leq (\sum a_k^2)(\sum b_k^2)$ | $\forall A, B \in V_n : \vert A \cdot B \vert \leq \Vert A \Vert \Vert B \Vert$ |
-|  2  | **Intervalo Abierto**     | Estar acotado superiormente por un módulo define un intervalo simétrico entre $-a$ y $a$.        | $\vert x \vert < a \iff -a < x < a$              | $a > 0 \implies x \in (-a, a)$                                                  |
-|  3  | **Intervalos Exteriores** | Superar un módulo implica que el número está fuera de la zona central, hacia los extremos.       | $\vert x \vert > a \iff x > a \lor x < -a$       | $a > 0 \implies x \in (-\infty, -a) \cup (a, \infty)$                           |
+(3,0)|OPEN|label:a|#ff7b7b
+(4,0)|label:b|#ff7b7b
+```
+
+3. **Intervalo abierto**: $]a,b[=\{x\mid a<x<b\}$
+
+```desmos-graph
+left=2; right=5; bottom=-1; top=1;
+width=350; height=120;
+---
+y=0 \{3<x<4\}|#ff7b7b
+
+(3,0)|OPEN|label:a|#ff7b7b
+(4,0)|OPEN|label:b|#ff7b7b
+```
+
+4. **Semirrecta hacia $+\infty$**: $]a,+\infty[=\{x\mid x>a\}$
+
+```desmos-graph
+left=0; right=8; bottom=-1; top=1;
+width=350; height=120;
+---
+y=0 \{3<x<7\}|#ff7b7b
+y=0 \{x>7\}|DOTTED|#ff7b7b
+
+(3,0)|OPEN|label:a|#ff7b7b
+```
+
+5. **Semirrecta desde $-\infty$**: $]-\infty,b[=\{x\mid x<b\}$
+
+```desmos-graph
+left=-8; right=0; bottom=-1; top=1;
+width=350; height=120;
+---
+y=0 \{x<-7\}|DOTTED|#ff7b7b
+y=0 \{-7<x<-3\}|#ff7b7b
+
+(-3,0)|OPEN|label:b|#ff7b7b
+```
+
+---
+
+## Valor absoluto (definición)
+
+Sea $a\in\mathbb{R}$.
+El **valor absoluto** de un número real $a$, denotado por $|a|$, se define como:
+
+$$  
+|a|=  
+\begin{cases}  
+a, & \text{si } a\ge0\  \\
+-a, & \text{si } a<0  
+\end{cases}  
+$$
+
+> [!note]  
+> El valor absoluto representa la distancia de un número al origen en la recta real.  
+> Por esta razón, el valor absoluto nunca es negativo.
+
+Ejemplos:
+- $|3|=3$
+- $|-3|=3$
+- $|1.5|=1.5$
+
+---
+
+### Propiedades
+
+--- start-multi-column: cornell-007
+```column-settings
+number of columns: 2
+column size: [60%, 40%]
+border: off
+```
+
+📝 **Desarrollo**
+
+Si $x$ y $y$ pertenecen a $\mathbb{R}$:
+
+1. **Simetría** — $|-x|=|x|$
+2. **No negatividad** — $|x|\ge 0$
+3. **Producto** — $|x\cdot y|=|x||y|$
+4. **Cociente** — $\left|\dfrac{x}{y}\right|=\dfrac{|x|}{|y|}$, $\quad y\neq0$
+5. **Ecuación de valor absoluto** — $(|x|=a \land a\ge0)\Rightarrow (x=\pm a)$
+6. **Valor absoluto de potencia par** — $|x^2|=|x|^2=x^2$
+7. **Raíz cuadrada principal** — $\sqrt{x^2}=|x|$
+8. **Desigualdad de valor absoluto**
+	- **(caso $<$)**: $(|x|<a \land a>0) \Rightarrow -a<x<a$
+	- **(caso $>$)**: $(|x|>a \land a>0) \Rightarrow (x>a \lor x<-a)$
+9. **Desigualdad triangular** — $|x+y|\le |x|+|y|$
+10. **Desigualdad triangular inversa** — $\bigl||x|-|y|\bigr| \le |x-y|$
+11. **Desigualdad de Cauchy-Schwarz** — $|x\cdot y|\le |x||y|$
+
+--- end-column ---
+
+🔑 **Claves**
+
+- $|x|\ge0$ siempre — el VA nunca es negativo
+- $|x\cdot y|=|x||y|$ — VA distribuye en el producto
+- $\sqrt{x^2}=|x|$, **no** $x$ — error frecuente
+- $|x|<a \iff -a<x<a$ — inecuación de VA tipo $<$
+- $|x|>a \iff x>a$ ó $x<-a$ — inecuación de VA tipo $>$
+- Triangular: $|x+y|\le|x|+|y|$ — clave en análisis
+
+--- end-multi-column
+
+> **Resumen:** El valor absoluto mide distancia al origen; distribuye en productos y satisface la desigualdad triangular.
+
+
+
+#### Ejemplo
+Analizar la V o F de:
+
+$$
+\begin{array}{rcl}
+-6 & = & -6 \\
+4 - 10 & = & 9 - 15
+\end{array}
+$$
+
+$$
+\begin{array}{rcl}
+2^2-2\cdot5\left(\dfrac{3}{2}\right)+\left(\dfrac{5}{2}\right)^2
+& = &
+3^2-3\cdot5\left(\dfrac{2}{2}\right)+\left(\dfrac{5}{2}\right)^2 \\[6pt]
+\left(2-\dfrac{5}{2}\right)^2
+& = &
+\left(3-\dfrac{5}{2}\right)^2
+\end{array}
+$$
+
+$$
+\begin{array}{rcl}
+\sqrt{\left(2-\dfrac{5}{2}\right)^2}
+& = &
+\sqrt{\left(3-\dfrac{5}{2}\right)^2} \\[6pt]
+\left|2-\dfrac{5}{2}\right|
+& = &
+\left|3-\dfrac{5}{2}\right|
+\end{array}
+$$
+
+$$
+\begin{array}{rcl}
+\left|-\dfrac{1}{2}\right|
+& = &
+\left|\dfrac{1}{2}\right| \\[6pt]
+\dfrac{1}{2}
+& = &
+\dfrac{1}{2}
+\qquad \checkmark
+\end{array}
+$$
+
+---
+
+## Solución de inecuaciones en variable real
+
+### Inecuaciones de primer grado
+
+Forma:
+
+$$ax+b
+\begin{cases}>\\<\\\ge\\\le\end{cases}
+cx+d$$
+
+donde : $a,b,c,d \in \mathbb{R}$
+Se recomienda despejar $x$ con propiedades:
+
+$$
+\begin{array}{rcl}
+ax-cx & > & d-b \\[4pt]
+(a-c)x & > & d-b
+\end{array}
+$$
+
+Si : $$a-c>0$$
+
+entonces : $$x>\dfrac{d-b}{a-c}$$
+
+**$C_s$: conjunto solución de la inecuación**
+
+```desmos-graph
+left=2; right=7; bottom=-1; top=1;
+width=500; height=120;
+---
+y=0 \{x>3\}|#ff7b7b
+(3,0)|OPEN|label:(d-b)/(a-c)|#ff7b7b
+```
+
+$$
+C_s:
+\left] \frac{d-b}{a-c}, +\infty \right[
+=
+\left\{ x\in\mathbb{R} \;\middle|\; x>\frac{d-b}{a-c} \right\}
+$$
+
+**Ejemplo:** Hallar el $C_s$
+
+$$
+\begin{array}{rcl}
+(4x-3)^2 & \le & (4x+1)^2 \\[4pt]
+16x^2-24x+9 & \le & 16x^2+8x+1 \\[4pt]
+-24x+9 & \le & 8x+1 \\[4pt]
+-32x+9 & \le & 1 \\[4pt]
+-32x & \le & -8 \\[4pt]
+x & \ge & \dfrac{1}{4}
+\end{array}
+$$
 
 
 ```desmos-graph
-left=-5.5; right=5.5; bottom=9; top=13;
-width=350; height=150;
+left=-1; right=6; bottom=-1; top=1;
+width=500; height=120;
 ---
-a=3
-
-y=10 \{-a<=x<=a\}|#2d70b3
-
-y=11 \{-5<x<-a\}|#ff7b7b
-y=11 \{5>x>a\}|#ff7b7b
-
-y=11 \{x<-5\}|#ff7b7b|DOTTED
-y=11 \{x>5\}|#ff7b7b|DOTTED
-
-(1,11)|OPEN|label:(1,11)|BLACK
-
-
-(-a,10)|label:-a|#2d70b3
-(a,10)|label:a|#2d70b3
-(-a,11)|OPEN|label:-a|#ff7b7b
-(a,11)|OPEN|label:a|#ff7b7b
-
-(0,10)|label:abs(x) menor o igual a (Azul)|#2d70b3
-(0,12)|label:abs(x) mayor a (Rojo)|#c74440
+y=0 \{x>=0.25\}|#ff7b7b
+(0.25,0)|label:1/4|#ff7b7b
 ```
 
-
-_En el gráfico: La zona azul  representa la propiedad $\vert x \vert < 3$, donde los valores están "atrapados" cerca del centro. Las zonas rojas representan $\vert x \vert > 3$, donde los valores escapan hacia el infinito._
-
-
-
-
-
-
+$$
+C_s:
+\left[ \frac{1}{4}, +\infty \right[
+=
+\left\{ x\in\mathbb{R} \;\middle|\; x\ge\frac{1}{4} \right\}
+$$
 
 
+---
 
+### Método de signos para resolver inecuaciones
 
+Generalizando:
 
+**Método de signos para solución de inecuaciones**
 
+Forma general:
 
+$$M(x)
+\begin{cases}>\\<\\\ge\\\le\end{cases}
+N(x)$$
 
+Para resolver se recomiendan los siguientes pasos:
 
+1. Formar una comparación con cero : $$\frac{P(x)}{Q(x)} > 0$$
+(o la desigualdad correspondiente).
 
+2. Factorizar totalmente $P$ y $Q$:
+$$
+\frac{
+(x-a_1)(x-a_2)\cdots(x-a_k)
+}{
+(x-b_1)(x-b_2)\cdots(x-b_j)
+}>0
+$$
 
+3. Representar en la recta real los valores
 
+$$
+a_1,\;a_2,\;\ldots,\;a_k,\;b_1,\;b_2,\;\ldots,\;b_j
+$$
 
+quedando definidos $n$ intervalos:
 
+```desmos-graph
+left=-1; right=11; bottom=-1; top=1;
+width=350; height=120;
+---
+y=0 \{0<x<2\}|#ff7b7b
+y=0 \{2<x<5\}|#ff7b7b
+y=0 \{5<x<8\}|#ff7b7b
+y=0 \{8<x<10\}|#ff7b7b
+
+(2,0)|OPEN|label:a_1|#ff7b7b
+(5,0)|OPEN|label:a_2|#ff7b7b
+(8,0)|OPEN|label:b_1|#ff7b7b
+(10,0)|OPEN|label:b_2|#ff7b7b
+
+(1,-0.5)|label:I_1|#2d70b3|hidden
+(3,-0.5)|label:I_2|#2d70b3|hidden
+(6,-0.5)|label:I_3|#2d70b3|hidden
+(9,-0.5)|label:I_4|#2d70b3|hidden
+```
+
+Intervalos:
+
+$$I_1,\;I_2,\;I_3,\;\ldots,\;I_k$$
+
+4. **Prueba de signos**
+	De $I_1$ se toma un valor cualquiera (no extremo) y se prueban los signos sustituyendo en cada factor.
+	
+	Ejemplo:
+	 $$\dfrac{(+)(-)(+)}{(-)(+)(+)}=(+) \quad \text{O}\quad \dfrac{(+)(-)(+)}{(-)(+)(-)}=(-)$$
+	 
+	Resultan dos posibilidades:
+	- Si la desigualdad es verdadera en el intervalo analizado, entonces: $I_i \subset C_s$
+	- Si la desigualdad es falsa en el intervalo analizado, entonces: $I_i \not\subset C_s$
+
+5. Repetir el procedimiento para los demás intervalos: $I_2,\;I_3,\;\ldots$
+6. El conjunto solución buscado se obtiene mediante la unión de todos los intervalos que verifican la inecuación:
+    $$  C_s=\bigcup I_i  $$
+	donde la unión se realiza únicamente sobre los intervalos válidos.
+
+---
+
+### Ejemplos resueltos
+
+#### a)
+$$x^4 \ge 9x^2$$
+
+$$
+\begin{array}{rcl}
+x^4 & \ge & 9x^2 \\[4pt]
+x^4-9x^2 & \ge & 0 \\[4pt]
+x^2(x^2-9) & \ge & 0 \\[4pt]
+x^2(x-3)(x+3) & \ge & 0
+\end{array}
+$$
+
+- Puntos críticos:
+	$$x_1=-3,\quad x_{2,3}=0,\quad x_4=3$$
+	
+- Prueba
+	$I_{1}:$ $x=-10$
+	
+	$(+)(-)(-)\ge 0\implies (+)\ge 0 \quad \text{verdadero}$
+	
+- Tabla de signos: $x^2(x-3)(x+3) \ge 0$
+
+| Intervalo      | Prueba x    | Signo | Resultado |
+| -------------- | ----------- | ----- | --------- |
+| $]-\infty,-3[$ | $I_{1}=-10$ | $(+)$ | verdadero |
+| $]-3,0[$       | $I_{2}=-2$  | $(-)$ | falso     |
+| $]0,3[$        | $I_{3}=2$   | $(-)$ | falso     |
+| $]3,+\infty[$  | $I_{4}=10$  | $(+)$ | verdadero |
+
+- Gráfica
+
+```desmos-graph
+left=-6; right=6; bottom=-1; top=1;
+width=350; height=120;
+---
+(-4,0.5)|label:V|#2d70b3|hidden
+(-2,0.5)|label:F|#2d70b3|hidden
+(0,0.5)|label:V|#2d70b3|hidden
+(2,0.5)|label:F|#2d70b3|hidden
+(4,0.5)|label:V|#2d70b3|hidden
+
+y=0 \{-6<x<=-3\}|#ff7b7b
+y=0 \{3<=x<6\}|#ff7b7b
+
+(-3,0)|label:-3|OPEN|#ff7b7b
+(0,0)|label:0|OPEN|#ff7b7b
+(3,0)|label:3|OPEN|#ff7b7b
+
+(-4,-0.5)|label:I_1|#2d70b3|hidden
+(-0.5,-0.5)|label:I_2|#2d70b3|hidden
+(0.5,-0.5)|label:I_3|#2d70b3|hidden
+(4,-0.5)|label:I_4|#2d70b3|hidden
+```
+
+- Prueba de extremos  $x^2(x-3)(x+3) \ge 0$
+	$x=-3, 0, 3$  se cumple $0 = 0 \quad \text{verdadero}$ entonces $-3,0,3 \in C_{s}$
+
+```desmos-graph
+left=-6; right=6; bottom=-1; top=1;
+width=350; height=120;
+---
+y=0 \{-6<x<=-3\}|#ff7b7b
+y=0 \{3<=x<6\}|#ff7b7b
+
+(-3,0)|label:-3|#ff7b7b
+(0,0)|label:0|#ff7b7b
+(3,0)|label:3|#ff7b7b
+```
+
+$$
+C_s=
+]-\infty,-3]
+\cup
+\{0\}
+\cup
+[3,+\infty[
+$$
+
+---
+
+#### b)
+
+$$  
+\frac{2x}{x^2+2x-3}  
++  
+\frac{2x+1}{3x^2+8x-3}  
+\le  
+-\frac{1}{3x^2-4x+1}  
+$$
+
+Factorizando denominadores:
+
+$$
+\begin{array}{rcl}
+x^2+2x-3 &=& (x+3)(x-1) \\[4pt]
+3x^2+8x-3 &=& (3x-1)(x+3) \\[4pt]
+3x^2-4x+1 &=& (3x-1)(x-1)
+\end{array}
+$$
+
+Llevando todo al primer miembro:
+
+$$  
+\frac{2x}{(x+3)(x-1)}  
++  
+\frac{2x+1}{(3x-1)(x+3)}  
++  
+\frac{1}{(3x-1)(x-1)}  
+\le 0  
+$$
+
+Reduciendo el numerador
+$$
+\begin{array}{rcl}
+2x(3x-1)+(2x+1)(x-1)+(x+3)
+&=&
+6x^{2}-2x+2x^{2}-x-1+x+3 \\[4pt]
+&=&
+8x^{2}-2x+2 \qquad (\div2)\\
+&=&
+4x^{2}-x+1
+\end{array}
+$$
+Reduciendo a un solo cociente:
+
+$$  
+\frac{  
+(4x^{2}-x+1)
+}{  
+(x-1)(x+3)(3x-1)
+}  
+\le 0  
+$$
+
+Como $4x^2-x+1>0  \quad \forall x\in\mathbb{R}$
+
+y los factores cuadrados del denominador son positivos en su dominio, el signo depende de
+
+$$  
+(x-1)(x+3)(3x-1)  
+$$
+
+- Puntos críticos:
+	$$x=-3,\qquad x=\frac13,\qquad x=1$$
+
+- Además (evitar division entre 0):
+	$$x\ne -3,\quad x\ne \frac13,\quad x\ne 1$$
+Tabla de signos:
+
+$$\dfrac
+{  (4x^{2}-x+1)}
+{  (x-1)(x+3)(3x-1)  }
+\le 0$$
+
+| Intervalo      | Prueba x | Signo                       | Resultado |
+| -------------- | -------- | --------------------------- | --------- |
+| $]-\infty,-3[$ | $-10$    | $\frac{(+)}{(-)(-)(-)}=(-)$ | verdadero |
+| $]-3,\frac13[$ | $0$      | $\frac{(+)}{(-)(+)(-)}=(+)$ | falso     |
+| $]\frac13,1[$  | $0.5$    | $\frac{(+)}{(-)(+)(+)}=(-)$ | verdadero |
+| $]1,+\infty[$  | $10$     | $\frac{(+)}{(+)(+)(+)}=(+)$ | falso     |
+
+Por tanto:
+
+```desmos-graph
+left=-6; right=4; bottom=-1; top=1;
+width=350; height=120;
+---
+y=0 \{-6<x<-3\}|#ff7b7b
+y=0 \{0.333333<x<1\}|#ff7b7b
+
+(-3,0)|OPEN|label:-3|#ff7b7b
+(0.333333,0)|OPEN|label:1/3|#ff7b7b
+(1,0)|OPEN|label:1|#ff7b7b
+```
+
+$$  
+C_s=  
+]-\infty,-3[  
+\cup  
+]\tfrac13,1[  
+$$
+---
+
+#### c)
+
+$$
+\left|
+\frac{2x-1}{3x+2}
+\right|
+<2
+$$
+
+Aplicando la propiedad:
+
+$$
+|A|<k
+\iff
+-k<A<k
+\qquad (k>0)
+$$
+
+se obtiene:
+
+$$
+-2<
+\frac{2x-1}{3x+2}
+<2
+$$
+
+con:
+
+$$
+x\neq -\frac23
+$$
+
+Resolviendo la desigualdad izquierda:
+
+$$
+\begin{array}{rcl}
+-2 & < & \dfrac{2x-1}{3x+2} \\[6pt]
+0 & < & \dfrac{2x-1+2(3x+2)}{3x+2} \\[6pt]
+0 & < & \dfrac{8x+3}{3x+2}
+\end{array}
+$$
+
+Resolviendo la desigualdad derecha:
+
+$$
+\begin{array}{rcl}
+\dfrac{2x-1}{3x+2} & < & 2 \\[6pt]
+\dfrac{2x-1-2(3x+2)}{3x+2} & < & 0 \\[6pt]
+\dfrac{-4x-5}{3x+2} & < & 0 \\[6pt]
+\dfrac{4x+5}{3x+2} & > & 0
+\end{array}
+$$
+
+Por tanto deben cumplirse simultáneamente:
+
+$$
+i)\quad \frac{8x+3}{3x+2}>0
+\qquad\text{y}\qquad
+ii)\quad\frac{4x+5}{3x+2}>0
+$$
+
+Puntos críticos:
+
+$$
+x=-\frac54=-1.25,
+\qquad
+x=-\frac23=-0.66667,
+\qquad
+x=-\frac38=-0.375
+$$
+
+Tabla 
+
+| Intervalo             | Prueba x | Signo i               | $R_{i}$ | Signo ii              | $R_{ii}$ | $\cap$    |
+| --------------------- | -------- | --------------------- | ------- | --------------------- | -------- | --------- |
+| $]-\infty,-\frac54[$  | $-10$    | $\frac{(-)}{(-)}=(+)$ | V       | $\frac{(-)}{(-)}=(+)$ | V        | verdadero |
+| $]-\frac54,-\frac23[$ | $-1$     | $\frac{(-)}{(-)}=(+)$ | V       | $\frac{(+)}{(-)}=(-)$ | F        | falso     |
+| $]-\frac23,-\frac38[$ | $-0.5$   | $\frac{(-)}{(+)}=(-)$ | F       | $\frac{(+)}{(+)}=(+)$ | V        | falso     |
+| $]-\frac38,+\infty[$  | $10$     | $\frac{(+)}{(+)}=(+)$ | V       | $\frac{(+)}{(+)}=(+)$ | V        | verdadero |
+
+Analizando signos:
+
+```desmos-graph
+left=-1.5; right=0; bottom=-0.5; top=0.5;
+width=350; height=120;
+---
+y=0 \{-1.25>x\}|#c74440
+y=0 \{-0.375<x\}|#c74440
+
+(-1.25,0)|OPEN|label:-5/4|#c74440
+(-0.375,0)|OPEN|label:-3/8|#c74440
+````
+
+$$
+C_s=
+\left]-\infty,-\frac54\right[
+\;\cup\;
+\left]-\frac38,+\infty\right[
+$$
+
+---
+
+#### d)
+
+$$
+|x^{3}-16x|\le 0
+$$
+
+Se utiliza la propiedad:
+
+$$
+|A|\ge 0
+\qquad \forall A\in\mathbb{R}
+$$
+
+Por tanto:
+
+$$
+|A|\le 0
+\iff
+A=0
+$$
+
+Luego:
+
+$$
+x^3-16x=0
+$$
+
+Factorizando:
+
+$$
+\begin{array}{rcl}
+x^3-16x & = & 0 \\
+x(x^2-16) & = & 0 \\
+x(x-4)(x+4) & = & 0
+\end{array}
+$$
+
+Entonces:
+
+$$
+x=-4,
+\qquad
+x=0,
+\qquad
+x=4
+$$
+Tabla 
+
+| Intervalo      | Prueba x | Signo i         | $R$ |
+| -------------- | -------- | --------------- | --- |
+| $]-\infty,-4[$ | $-10$    | $(-)(-)(-)=(-)$ | F   |
+| $-4$           | $-4$     | $0=0$           | V   |
+| $]-4,0[$       | $-1$     | $(-)(-)(+)=(+)$ | F   |
+| $0$            | $0$      | $0=0$           | V   |
+| $]0,4[$        | $1$      | $(+)(-)(+)=(-)$ | F   |
+| $4$            | $4$      | $0=0$           | V   |
 
 
 ```desmos-graph
-left=-4; right=4; bottom=-1; top=4;
-width=350; height=150;
+left=-6; right=6; bottom=-1; top=1;
+width=500; height=120;
 ---
-y=x \{x>=0\}|#2d70b3
-y=-x \{x<=0\}|#2d70b3
-
-
-y=2|#000000|DASHED
--2<=x<=2|y<=2|y>=0|#a5d8ff
-(-2,2)|label:(-a, a)|#c74440
-(2,2)|label:(a, a)|#c74440
+(-4,0)|label:-4|#ff7b7b
+(0,0)|label:0|#ff7b7b
+(4,0)|label:4|#ff7b7b
 ```
 
+$$
+C_{s}= \{-4,0,4\}
+$$
 
-_En el gráfico: La función azul $|x|$ muestra cómo los valores negativos se reflejan al semieje positivo. La región sombreada ilustra el **Teorema 5**, donde $|x| \leq 2$ define el intervalo entre $-2$ y $2$._
-
-> **El valor absoluto define la métrica (distancia) en $\mathbb{R}$ y es la herramienta base para el concepto de límite mediante entornos.**
-
-**Preguntas de comprensión:**
-
-1. ¿Por qué el Teorema 4 ($\sqrt{x^2} = |x|$) es una identidad y no simplemente $\sqrt{x^2} = x$?
-2. En la Desigualdad Triangular (Teorema 6), ¿en qué caso específico se cumple la igualdad exacta ($|a+b| = |a|+|b|$)?
-3. Si aplicamos el Teorema 5 a una inecuación del tipo $|x| > a$, ¿cómo se traduce esto a intervalos en la recta real?
-
-**Preguntas de comprensión:**
-
-1. En la desigualdad de Cauchy-Schwarz, ¿qué debe ocurrir entre los vectores (o secuencias de números) para que se cumpla la igualdad exacta?
-2. ¿Por qué si $a < 0$, la propiedad $\vert x \vert < a$ no tiene ninguna solución en el conjunto de los números reales?
-3. Si cambiamos $\vert x \vert < a$ por $\vert x - c \vert < \delta$, ¿cómo se desplaza el centro del intervalo en la recta numérica?
-
-### 3. Desigualdades "Notables"
-
+>Observación: en el inciso **d)** la solución es un conjunto discreto de puntos, porque un valor absoluto solo puede ser menor o igual que cero cuando vale exactamente cero.
 
 ---
-bb
 
+#### e)
 
+$$
+\left|
+\frac{4x+1}{x-2}
+\right|
+\ge 3
+$$
 
-## Desigualdades "Notables"
+Aplicando la propiedad:
 
-Las desigualdades notables son herramientas analíticas avanzadas que permiten establecer cotas y límites superiores en diversas ramas del cálculo y el análisis vectorial. A diferencia de las reglas de orden básicas, estas propiedades relacionan potencias, raíces y productos de formas no triviales.
+$$
+|A|\ge k
+\iff
+A\le -k
+\;\vee\;
+A\ge k
+\qquad (k>0)
+$$
 
-Sean $a, b, c, x \in \mathbb{R}$:
+se obtiene:
 
+$$
+\frac{4x+1}{x-2}\le -3
+\qquad\vee\qquad
+\frac{4x+1}{x-2}\ge 3
+$$
 
-|  N  | Teorema o propiedad                | Descripción                                                                                  | Notación                                         | Concepto (Símbolos)                                                        |
-| :-: | ---------------------------------- | -------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------------------------------------------------------------- |
-|  1  | **Cuadrados no negativos**         | El cuadrado de cualquier número real nunca es negativo.                                      | $a^2 \geq 0$                                     | $\forall a \in \mathbb{R}: a^2 \geq 0$                                     |
-|  2  | **Desigualdad de Bernoulli**       | Establece una cota inferior lineal para una potencia con base mayor a $-1$.                  | $(1+x)^n \geq 1+nx$                              | $x>-1,\; n\in\mathbb{Z}^{+}$ $\implies (1+x)^n \geq 1+nx$                  |
-|  3  | **Medias Aritmética y Geométrica** | La media geométrica de números no negativos nunca excede a su media aritmética.              | $\sqrt{ab} \leq \dfrac{a+b}{2}$                  | $a,b\geq0$ $\implies \sqrt{ab}\leq\frac{a+b}{2}$                           |
-|  4  | **Cauchy-Schwarz**                 | El cuadrado del producto escalar de dos vectores es menor o igual al producto de sus normas. | $(\sum a_k b_k)^2 \leq (\sum a_k^2)(\sum b_k^2)$ | $\forall A,B\in V_n:\ \vert A\cdot B\vert \leq \vert A\vert\,\vert B\vert$ |
-|  5  | **Desigualdad Triangular**         | La distancia de una suma no puede superar la suma de las distancias individuales.            | $\vert a+b\vert \leq \vert a\vert+\vert b\vert$  | $\forall a,b\in\mathbb{R}:\ \vert a+b\vert \leq \vert a\vert+\vert b\vert$ |
+con:
 
+$$
+x\neq 2
+$$
+
+Primer caso:
+
+$$
+\begin{array}{rcl}
+\dfrac{4x+1}{x-2} & \le & -3 \\[6pt]
+\dfrac{4x+1+3(x-2)}{x-2} & \le & 0 \\[6pt]
+\dfrac{7x-5}{x-2} & \le & 0
+\end{array}
+$$
+
+Puntos críticos:
+$$
+x=\frac57=0.71427,\quad x=2
+$$
+
+Tabla 
+
+| Intervalo           | Prueba x      | Signo i               | $R_{i}$ |
+| ------------------- | ------------- | --------------------- | ------- |
+| $]-\infty,\frac57[$ | $0$           | $\frac{(-)}{(-)}=(+)$ | F       |
+| $\frac{5}{7}$       | $\frac{5}{7}$ | $0$                   | V       |
+| $]\frac57,2[$       | $1$           | $\frac{(+)}{(-)}=(-)$ | V       |
+| $]2,+\infty[$       | $10$          | $\frac{(+)}{(+)}=(+)$ | F       |
+
+Luego:
+
+$$
+S_1=
+\left[\frac57,2\right[
+$$
+
+Segundo caso:
+
+$$
+\begin{array}{rcl}
+\dfrac{4x+1}{x-2} & \ge & 3 \\[6pt]
+\dfrac{4x+1-3(x-2)}{x-2} & \ge & 0 \\[6pt]
+\dfrac{x+7}{x-2} & \ge & 0
+\end{array}
+$$
+
+Puntos críticos:
+
+$$
+x=-7,\quad x=2 \qquad
+$$
+Tabla 
+
+| Intervalo      | Prueba x | Signo ii              | $R_{ii}$ |
+| -------------- | -------- | --------------------- | -------- |
+| $]-\infty,-7[$ | $-10$    | $\frac{(-)}{(-)}=(+)$ | V        |
+| $-7$           | $-7$     | $0$                   | V        |
+| $]-7,2[$       | $0$      | $\frac{(+)}{(-)}=(-)$ | F        |
+| $]2,+\infty[$  | $10$     | $\frac{(+)}{(+)}=(+)$ | V        |
+Luego:
+
+$$
+S_2=
+]-\infty,-7]
+\cup
+]2,+\infty[
+$$
+
+Los segmentos son:
+$$
+S_2=
+]-\infty,-7]
+\cup
+]2,+\infty[
+\qquad\lor\qquad
+S_1=\left[\frac57,2\right[$$
+Finalmente:
 
 ```desmos-graph
-left=-2; right=5; bottom=-1; top=4;
-width=500; height=300;
+left=-10; right=6; bottom=-1; top=1;
+width=500; height=120;
 ---
-y=\sqrt{x}|x>=0|#2d70b3
-y=(x+1)/2|#c74440
-y<=(x+1)/2|y>=\sqrt{x}|x>=0|#b2f2bb
-(1,1)|label:Igualdad si a=b|#000000
-```
-_En el gráfico: Se visualiza la **Desigualdad de las Medias (N°3)** tomando $b=1$. La recta roja ($\frac{x+1}{2}$) siempre está por encima o toca a la curva azul ($\sqrt{x}$), demostrando que la media aritmética es siempre superior o igual a la geométrica._
+y=0 \{-10<x<=-7\}|#ff7b7b
+y=0 \{0.714286<=x<2\}|#ff7b7b
+y=0 \{2<x<6\}|#ff7b7b
 
+(-7,0)|label:-7|#ff7b7b
+(0.714286,0)|label:5/7|#ff7b7b
+(2,0)|OPEN|label:2|#ff7b7b
+```
+
+Luego:
+
+$$
+C_s=S_{1}+S_{2}=
+]-\infty,-7]
+\cup
+\left[\tfrac57,2\right[
+\cup
+]2,+\infty[
+$$
+
+---
+
+#### f)
+
+$$
+\sqrt{x^2+x}
+<
+\sqrt{6}
+$$
+
+Condición de existencia:
+
+$$
+x^2+x\ge 0
+$$
+
+Como ambos miembros son no negativos, se elevan al cuadrado:
+
+$$
+\begin{array}{rcl}
+\left(\sqrt{x^2+x}\right)^2
+& < &
+\left(\sqrt6\right)^2 \\
+x^2+x
+& < &
+6
+\end{array}
+$$
+
+Resolviendo:
+
+$$
+\begin{array}{rcl}
+x^2+x-6 & < & 0 \\
+(x+3)(x-2) & < & 0
+\end{array}
+$$
+Puntos 
+$$x=-3\quad ,\quad x=2$$
+Tabla de signos:
+
+| Intervalo      | Prueba x | Signo        | Resultado |
+| -------------- | -------- | ------------ | --------- |
+| $]-\infty,-3[$ | $-10$    | $(-)(-)=(+)$ | falso     |
+| $]-3,2[$       | $0$      | $(+)(-)=(-)$ | verdadero |
+| $]2,+\infty[$  | $10$     | $(+)(+)=(+)$ | falso     |
+Por tanto:
+$$
+-3<x<2
+$$
+
+Ahora se impone la condición de existencia:
+$$
+x^2+x\ge0
+$$
+
+es decir,
+
+$$
+x(x+1)\ge0
+$$
+$$x=-1\quad , \quad x=0$$
+Tabla de signos:
+
+| Intervalo      | Prueba x | Signo        | Resultado |
+| -------------- | -------- | ------------ | --------- |
+| $]-\infty,-1[$ | $-10$    | $(-)(-)=(+)$ | verdadero |
+| $-1$           | -1       | $0$          | verdadero |
+| $]-1,0[$       | $-0.5$   | $(-)(+)=(-)$ | falso     |
+| $0$            | $0$      | $0$          | verdadero |
+| $]0,+\infty[$  | $10$     | $(+)(+)=(+)$ | verdadero |
+
+cuyo conjunto solución es:
+$$
+]-\infty,-1]
+\cup
+[0,+\infty[
+$$
+
+Interceptando ambos resultados:
+$$
+]-3,2[
+;\cap;
+\left(
+]-\infty,-1]
+\cup
+[0,+\infty[
+\right)
+$$
+
+se obtiene:
 
 ```desmos-graph
-left=-2; right=6; bottom=-1; top=4;
-width=500; height=300;
+left=-5; right=4; bottom=-1; top=1;
+width=500; height=120;
 ---
-y=x|#2d70b3
-y=x^2|#c74440
-y=x^2|y<=x|x>=0|x<=1|#b2f2bb
-(1,1)|label:x=1|#000000
+y=0 \{-3<x<=-1\}|#ff7b7b
+y=0 \{0<=x<2\}|#ff7b7b
+
+(-3,0)|OPEN|label:-3|#ff7b7b
+(-1,0)|label:-1|#ff7b7b
+(0,0)|label:0|#ff7b7b
+(2,0)|OPEN|label:2|#ff7b7b
 ```
 
-_En el gráfico: Se observa que en el intervalo $(0,1)$, la inecuación $x^2 < x$ es verdadera (área verde), pero para $x > 1$ la relación se invierte ($x^2 > x$), ilustrando cómo cambian las desigualdades según el dominio._
+$$
+C_s=
+]-3,-1]
+\cup
+[0,2[
+$$
 
-> **Estas desigualdades son el pilar fundamental para las demostraciones de convergencia y la definición formal de normas en espacios vectoriales.**
-
-**Preguntas de comprensión:**
-
-1. ¿Cuál es el fundamento axiomático que justifica cambiar el sentido de una inecuación al multiplicar por $-1$?.
-2. Según la desigualdad de Bernoulli, si $x=0.1$ y $n=2$, ¿qué relación numérica se establece?.
-3. ¿Por qué la propiedad de transitividad es indispensable para representar los números reales en una recta numérica?.
-
-**Preguntas de comprensión:**
-
-1. ¿Bajo qué condición específica la Desigualdad de las Medias deja de ser una desigualdad y se convierte en una igualdad exacta?
-2. ¿Por qué la Desigualdad de Bernoulli (N°2) requiere que $x$ sea estrictamente mayor a -1 para ser válida?
-3. ¿Cómo podrías usar el Teorema de los Cuadrados (N°1) para demostrar que la expresión $a^2 + b^2 \geq 2ab$ es siempre cierta?
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-%%
-galaxy-links
-%%
