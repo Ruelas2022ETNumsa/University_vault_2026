@@ -149,6 +149,20 @@ Esto es equivalente a decir: "la región donde x está entre 0 y 1, e y está en
 (1,2)|label:texto|BLACK → Punto con etiqueta
 ```
 
+### Fracciones en etiquetas
+
+`\frac{}{}` y potencias fraccionales **no renderizan** dentro de `label:` — el texto literal aparece sin procesar.
+La única forma que funciona es slash:
+
+```desmos-graph
+(3,0)|OPEN|label:(d-b)/(a-c)|#ff7b7b
+```
+
+| Intención         | Correcto (✅)        | Incorrecto (❌)          |
+| ----------------- | ------------------- | ------------------------ |
+| Fracción en label | `label:(a-b)/(c-d)` | `label:\frac{a-b}{c-d}` |
+| Potencia en label | `label:a^(1/2)`     | `label:x^{1/2}`          |
+
 ---
 
 ## U8. FUNCIONES OCULTAS
@@ -426,6 +440,13 @@ No usar `y<=1|y>=0` sin las restricciones de x — Desmos extenderá el relleno 
 (1,2)|OPEN|label:(1,2)|BLACK
 ```
 
+### ⚠️ Fracciones en etiquetas — solo slash
+
+`\frac{}{}` no renderiza en `label:` — aparece el texto literal. Usar siempre slash:
+
+✅ `(3,0)|OPEN|label:(d-b)/(a-c)|#ff7b7b`
+❌ `(3,0)|OPEN|label:\frac{d-b}{a-c}|#ff7b7b`
+
 ---
 
 ## N8. VALOR ABSOLUTO — REGLA CRÍTICA
@@ -698,6 +719,7 @@ Estas reglas no tienen excepciones. Cualquier bloque que las viole debe corregir
 | Sin comentarios `//`                         | —                                             | `y=x^2 // parábola`                                       |
 | Raíces con `\sqrt{x}` (llaves obligatorias)  | `y=\sqrt{x}`                                  | `y=sqrt(x)` · `y=\sqrt(x)`                                |
 | Fracciones con `\frac{a}{b}`                 | `y=\frac{3}{8}x`                              | `y=(3/8)x`                                                |
+| Fracciones en `label:` siempre con slash      | `label:(a-b)/(c-d)`                           | `label:\frac{a-b}{c-d}` · `label:x^{1/2}` (no renderiza) |
 | Pi con `\pi`                                 | `y=\frac{1}{\pi}`                             | `y=1/pi`                                                  |
 | Restricciones de líneas con dominio          | `y=x\|0<=x<=2\|#2d70b3`                       | `y=x\|#2d70b3` (se desborda)                              |
 | Colores siempre en hex                       | `\|#c74440`                                   | `\|RED` (saturado)                                        |
