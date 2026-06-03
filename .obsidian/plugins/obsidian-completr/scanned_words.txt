@@ -148,6 +148,10 @@ tVy
 tM
 temporales
 tesis
+transcribir
+tercer
+transcripci
+tomas
 ToDo
 Templater
 Text
@@ -232,6 +236,11 @@ Tk
 Tw
 TCfMQ
 TM
+TAREA
+Transcribir
+TRANSCRIPCI
+TICO
+Transcripci
 Sistema
 Sync
 Save
@@ -342,6 +351,8 @@ Sj
 Sea
 Sumando
 Semirrectas
+Subsecci
+SALTOS
 Plugins
 Pendientes
 Plugin
@@ -449,6 +460,8 @@ Puede
 Positivos
 Potencias
 Prueba
+Pasar
+Preguntar
 del
 date
 de
@@ -666,6 +679,11 @@ demostrando
 desplaza
 dA
 determinar
+detectada
+dividida
+desarrollos
+debajo
+describiendo
 Vault
 Verificar
 Variables
@@ -849,6 +867,7 @@ buscamos
 bÜ
 border
 bug
+brevemente
 scope
 status
 selector
@@ -1080,6 +1099,9 @@ sw
 saving
 subpaths
 semiabiertos
+subt
+subsecci
+simb
 vault
 vil
 ver
@@ -1164,6 +1186,7 @@ veces
 vuelven
 via
 verifica
+verticales
 audience
 activo
 auto
@@ -1430,6 +1453,8 @@ accidentales
 anidada
 asociatividad
 abiertos
+analizar
+algebraicos
 related
 recomendados
 ribbon
@@ -1652,6 +1677,12 @@ resuelva
 rename
 renombrados
 reubica
+rquico
+relativo
+realiza
+rengl
+reproducible
+rango
 notes
 notas
 nuevas
@@ -1765,6 +1796,9 @@ nD
 nK
 nO
 ndola
+niveles
+numerica
+nuevamente
 created
 commit
 cada
@@ -2189,6 +2223,13 @@ colisiones
 cerrados
 correspondencia
 conjuntista
+comienza
+contin
+correcci
+certeza
+convertir
+compacto
+contra
 updated
 un
 universo
@@ -2240,6 +2281,8 @@ uEc
 um
 ub
 ue
+universitarios
+unidad
 Galaxy
 Git
 Gr
@@ -2272,6 +2315,7 @@ Graficar
 GsaH
 Gc
 GZ
+Generar
 Convenci
 Creaci
 Commander
@@ -2437,6 +2481,9 @@ Correspondencia
 Cociente
 Comparar
 Codominio
+CUANDO
+Conservar
+CORRECCIONES
 Instalados
 Instalado
 Instalar
@@ -2561,6 +2608,7 @@ Fb
 Fuerza
 Fecha
 Factorizar
+FICOS
 Estado
 Excalidraw
 EPUBs
@@ -2691,6 +2739,10 @@ Eso
 Extension
 Exclude
 Equivalencia
+Excepci
+ENTIENDE
+Evitar
+Explicaci
 Obsidian
 OmniSearch
 Ocultar
@@ -2736,6 +2788,9 @@ OZ
 Ov
 Oe
 Oculta
+ORDEN
+OBSERVACIONES
+OBJETIVO
 Auto
 Annotator
 Autocompletado
@@ -2840,6 +2895,7 @@ ABSOLUTO
 Abierto
 Attachment
 Afirmaci
+ALGO
 push
 pull
 para
@@ -3081,6 +3137,10 @@ pegada
 peg
 pasos
 primitivas
+proporcionar
+profundos
+presenta
+previas
 min
 mica
 movimiento
@@ -3250,6 +3310,8 @@ mE
 management
 milisegundos
 modifica
+mitades
+mediano
 YAML
 Ya
 You
@@ -3568,6 +3630,8 @@ eliminarlos
 extension
 exclusi
 equivalentemente
+evidentes
+expandir
 Motor
 Media
 Mantiene
@@ -3634,6 +3698,9 @@ Medias
 Matices
 Msv
 Management
+Mitad
+MARKDOWN
+MANUSCRITO
 Lectura
 LaTeX
 Linter
@@ -3681,6 +3748,7 @@ Lugar
 Libro
 Library
 LIDAS
+LECTURA
 links
 las
 listar
@@ -3778,6 +3846,9 @@ lida
 lR
 listadas
 ley
+leerlo
+leerse
+licamente
 incluyendo
 im
 instalar
@@ -3946,6 +4017,10 @@ iN
 intervenci
 innecesarios
 invertirse
+indique
+informarla
+innecesarias
+interpretaciones
 Dependencia
 Dropbox
 Dataview
@@ -4029,6 +4104,10 @@ Date
 Demostraci
 Despeje
 Dominio
+DETECCI
+Detenerse
+DEFINICIONES
+Dentro
 Remotely
 Raz
 Revisa
@@ -4137,6 +4216,8 @@ Renombrado
 Recta
 Representar
 Repetici
+Reportar
+Reproducirlo
 Hider
 Hace
 Herramientas
@@ -4161,6 +4242,7 @@ HsN
 Hc
 Hereda
 Hip
+Hay
 filtrar
 formato
 faltantes
@@ -4274,6 +4356,9 @@ fallan
 formalizaci
 fb
 funcional
+forzarlo
+ficos
+fiel
 haya
 hace
 hacer
@@ -4407,6 +4492,8 @@ Negativo
 Notables
 Negativos
 Neutro
+NOTAS
+NEA
 originales
 observatory
 oficial
@@ -4488,6 +4575,8 @@ ocultos
 ocultamiento
 override
 ordenarse
+ortograf
+observaci
 junto
 json
 jer

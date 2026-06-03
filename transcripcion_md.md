@@ -130,14 +130,39 @@ Cuando el gráfico es reproducible en Desmos (funciones, curvas, puntos):
 - Ajustar la ventana (left, right, bottom, top) al rango visible en el manuscrito.
 - Agregar una línea en cursiva debajo describiendo qué ilustra el gráfico.
 
-Cuando el gráfico no es reproducible en Desmos (recta numérica con intervalos,
-diagrama de conjuntos, figura geométrica libre):
+Cuando el gráfico no es reproducible en Desmos (diagrama de conjuntos, figura geométrica libre):
 - No forzarlo en Desmos.
 - Escribir en su lugar:
   > [!note] Gráfico manuscrito
   > Descripción textual: tipo de gráfico, elementos visibles, etiquetas.
 
 Nunca inventar gráficos que no existan en el manuscrito.
+Para el caso de recta numerica con intervalos tomas como base este ejemplo
+```desmos-graph
+left=-5.5; right=5.5; bottom=9; top=13;
+width=350; height=150;
+---
+a=3
+
+y=10 \{-a<=x<=a\}|#2d70b3
+
+y=11 \{-5<x<-a\}|#ff7b7b
+y=11 \{5>x>a\}|#ff7b7b
+
+y=11 \{x<-5\}|#ff7b7b|DOTTED
+y=11 \{x>5\}|#ff7b7b|DOTTED
+
+(1,11)|OPEN|label:(1,11)|BLACK
+
+
+(-a,10)|label:-a|#2d70b3
+(a,10)|label:a|#2d70b3
+(-a,11)|OPEN|label:-a|#ff7b7b
+(a,11)|OPEN|label:a|#ff7b7b
+
+(0,10)|label:abs(x) menor o igual a (Azul)|#2d70b3
+(0,12)|label:abs(x) mayor a (Rojo)|#c74440
+```
 
 ---
 
@@ -146,7 +171,17 @@ Mantener el texto compacto.
 Evitar líneas vacías innecesarias.
 
 ---
+ESTRUCTURA DE RESPUESTA:  
+Cuando se reciba un PDF:  
+1. Analizar.  
+2. Mostrar:  
+- títulos,  
+- subtítulos,  
+- resumen general del contenido.  
+3. Esperar instrucciones.  
+4. Transcribir únicamente la sección solicitada.
 
+---
 CORRECCIONES DEL USUARIO:
 Si el usuario corrige una transcripción:
 1. Revisar nuevamente el PDF en esa sección.
