@@ -209,7 +209,71 @@ Sea $a,b,c,x \in \mathbb{R}$.
 8. **Inversos multiplicativos y orden**
 	- $a>0 \iff \dfrac{1}{a}>0$
 
+---
+
+## La recta real e intervalos
+
+Existe correspondencia biunívoca (uno a uno) entre el conjunto $\mathbb{R}$ y una recta a escala llamada **la recta real**.
+
+> [!note]  
+> Un intervalo es un subconjunto de la recta real.
+
+1. **Intervalo cerrado**
+    
+    - $[a,b]={x\mid a\le x\le b}$
+        
+2. **Intervalo semiabierto por la izquierda**
+    
+    - $]a,b]={x\mid a<x\le b}$
+        
+3. **Intervalo semiabierto por la derecha**
+    
+    - $[a,b[={x\mid a\le x<b}$
+        
+4. **Semirrecta hacia $+\infty$**
+    
+    - $]a,+\infty[={x\mid x>a}$
+        
+5. **Semirrecta desde $-\infty$**
+    
+    - $]-\infty,b[={x\mid x<b}$
+
+
+
+
+
+
 
 ---
 ---
 ---
+## La recta real e intervalos
+
+## Valor absoluto
+
+### Definición
+
+### Propiedades
+
+---
+
+## Solución de inecuaciones en variable xxx
+
+### Inecuaciones de primer grado
+
+### Método de signos para solución de inecuaciones
+
+#### Forma general
+
+#### Pasos para resolver por método de signos
+
+### Ejemplos de resolución de inecuaciones
+
+- a)
+- b)
+- c)
+- d)
+- e)
+- f)
+
+(Estas letras aparecen como ejercicios/ejemplos, no como subtítulos formales.)
