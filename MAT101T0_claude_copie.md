@@ -2,15 +2,6 @@
 
 ## Axiomas de cuerpo de los números reales
 
---- start-multi-column: cornell-001
-```column-settings
-number of columns: 2
-column size: [60%, 40%]
-border: off
-```
-
-📝 **Desarrollo**
-
 Sea $a,b,c \in \mathbb{R}$.
 
 1. **Clausura**
@@ -26,44 +17,25 @@ Sea $a,b,c \in \mathbb{R}$.
 	- Producto: $(a\cdot b)\cdot c=a\cdot(b\cdot c)$
 
 4. **Existencia de neutros**
-	- Neutro aditivo: $\exists\,0\in\mathbb{R}: a+0=a$
-	- Neutro multiplicativo: $\exists\,1\in\mathbb{R}: a\cdot1=a$
+	- Neutro aditivo:
+	  $\exists\,0\in\mathbb{R}: a+0=a$
+	- Neutro multiplicativo:
+	  $\exists\,1\in\mathbb{R}: a\cdot1=a$
 
 5. **Existencia de negativos**
-	- $\forall\,a\in\mathbb{R},\ \exists\,(-a)\in\mathbb{R}: a+(-a)=0$
+	- $\forall\,a\in\mathbb{R},\ \exists\,(-a)\in\mathbb{R}:$
+	  $a+(-a)=0$
 
 6. **Existencia de inversos**
-	- $\forall\,a\in\mathbb{R},\ a\neq0,\ \exists\,a^{-1}\in\mathbb{R}: a\cdot a^{-1}=1$
+	- $\forall\,a\in\mathbb{R},\ a\neq0,\ \exists\,a^{-1}\in\mathbb{R}:$
+	  $a\cdot a^{-1}=1$
 
 7. **Distributividad**
 	- $a(b+c)=ab+ac$
 
---- end-column ---
-
-🔑 **Claves**
-
-- $\mathbb{R}$ es un **cuerpo** — cerrado bajo suma y producto
-- Neutros: $0$ para suma, $1$ para producto
-- Todo real tiene opuesto $(-a)$; todo real no nulo tiene inverso $a^{-1}$
-- Distributividad conecta suma y producto
-- Resta y división **no** son axiomas — se derivan
-
---- end-multi-column
-
-> **Resumen:** Los 7 axiomas de cuerpo garantizan que $\mathbb{R}$ tiene operaciones de suma y producto bien definidas, con neutros, inversos y distributividad.
-
 ---
 
 ## Axiomas de igualdad
-
---- start-multi-column: cornell-002
-```column-settings
-number of columns: 2
-column size: [60%, 40%]
-border: off
-```
-
-📝 **Desarrollo**
 
 Sea $a,b,c\in\mathbb{R}$.
 
@@ -76,31 +48,9 @@ Sea $a,b,c\in\mathbb{R}$.
 3. **Transitividad**
 	- $a=b \land b=c \implies a=c$
 
---- end-column ---
-
-🔑 **Claves**
-
-- Reflexividad: todo elemento es igual a sí mismo
-- Simetría: la igualdad no tiene dirección
-- Transitividad: base de las cadenas de igualdades en demostraciones
-- Estos 3 axiomas definen una **relación de equivalencia**
-
---- end-multi-column
-
-> **Resumen:** La igualdad en $\mathbb{R}$ es reflexiva, simétrica y transitiva — una relación de equivalencia sobre los reales.
-
 ---
 
 ## Definiciones
-
---- start-multi-column: cornell-003
-```column-settings
-number of columns: 2
-column size: [60%, 40%]
-border: off
-```
-
-📝 **Desarrollo**
 
 1. **Resta**
 	- $b-a=b+(-a)$
@@ -112,19 +62,6 @@ border: off
 > La resta y la división no son operaciones fundamentales.
 > - La resta se define a partir de la suma y del opuesto aditivo.
 > - La división se define a partir de la multiplicación y del inverso multiplicativo.
-
---- end-column ---
-
-🔑 **Claves**
-
-- Restar $a$ ≡ sumar $(-a)$
-- Dividir por $a$ ≡ multiplicar por $a^{-1}$
-- $a\neq0$ es **condición obligatoria** para la división
-- Son operaciones **derivadas**, no primitivas
-
---- end-multi-column
-
-> **Resumen:** Resta y división son abreviaciones de suma con opuesto y producto con inverso, respectivamente.
 
 ---
 
@@ -210,15 +147,6 @@ $b=c$  *Por existencia del neutro aditivo*
 
 ## Axiomas de orden de los números reales
 
---- start-multi-column: cornell-004
-```column-settings
-number of columns: 2
-column size: [60%, 40%]
-border: off
-```
-
-📝 **Desarrollo**
-
 Sea $a,b \in \mathbb{R}$.
 
 1. **Clausura de los positivos**
@@ -239,40 +167,15 @@ Sea $a,b \in \mathbb{R}$.
 > $4>2>1>0>-3$
 >
 > $-4<-1<1<10$
-
 ### Notación
 - Reales positivos:
 	- $\mathbb{R}^{+}=\{x\in\mathbb{R}:x>0\}$
 - Reales negativos:
 	- $\mathbb{R}^{-}=\{x\in\mathbb{R}:x<0\}$
 
---- end-column ---
-
-🔑 **Claves**
-
-- $\mathbb{R}^{+}$ es el conjunto **primitivo** del orden
-- Tricotomía: para $a\neq0$, exactamente uno de $a$ o $-a$ es positivo
-- El cero **no** es positivo ni negativo
-- Clausura: suma y producto de positivos es positivo
-- El orden $<$ y $>$ se **definen** a partir de $\mathbb{R}^{+}$, no se asumen
-
---- end-multi-column
-
-> **Resumen:** El orden en $\mathbb{R}$ se construye desde $\mathbb{R}^{+}$: un real es positivo, negativo, o cero — nunca dos a la vez.
-
 ---
 
 ### Definiciones
-
---- start-multi-column: cornell-005
-```column-settings
-number of columns: 2
-column size: [60%, 40%]
-border: off
-```
-
-📝 **Desarrollo**
-
 1. **Relación de orden**
 	- Permite comparar dos números reales y determinar cuál es mayor o menor.
 2. **Mayor que**
@@ -286,20 +189,6 @@ border: off
 6. **Positivos y negativos**
 	- $a>0 \Rightarrow a$ es positivo.
 	- $a<0 \Rightarrow a$ es negativo.
-
---- end-column ---
-
-🔑 **Claves**
-
-- $a>b$ ≡ $a-b$ es positivo
-- $a<b$ ≡ $b-a$ es positivo
-- $\ge$ y $\le$ incluyen la igualdad
-- Positivo $\iff$ mayor que cero; negativo $\iff$ menor que cero
-- Las 4 relaciones se derivan de $\mathbb{R}^{+}$
-
---- end-multi-column
-
-> **Resumen:** Las relaciones de orden $<$, $>$, $\le$, $\ge$ se definen formalmente mediante restas y pertenencia a $\mathbb{R}^{+}$.
 
 ---
 

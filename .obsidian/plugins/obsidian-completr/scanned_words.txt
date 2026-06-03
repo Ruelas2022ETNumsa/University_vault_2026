@@ -698,6 +698,8 @@ denominadores
 deseas
 discriminante
 division
+definidas
+distributividad
 Vault
 Verificar
 Variables
@@ -1477,6 +1479,8 @@ analizar
 algebraicos
 analizado
 algebraicamente
+abreviaciones
+asumen
 related
 recomendados
 ribbon
@@ -1711,6 +1715,9 @@ radicales
 recomiendan
 rcl
 reduce
+reflexiva
+respectivamente
+restas
 notes
 notas
 nuevas
@@ -2262,6 +2269,7 @@ compacto
 contra
 corchete
 cup
+cadenas
 updated
 un
 universo
@@ -3185,6 +3193,7 @@ polin
 prueban
 posibilidades
 procedimiento
+pertenencia
 min
 mica
 movimiento
@@ -4565,6 +4574,7 @@ NOTAS
 NEA
 NUM
 NOTACI
+Neutros
 originales
 observatory
 oficial
