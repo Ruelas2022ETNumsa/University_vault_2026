@@ -1,3 +1,20 @@
+
+---
+
+title: "transcription-guide"
+galaxy_body: beacon
+scope: vault
+audience: [usuario, chatgpt]
+related_notes:
+  - "[[class-notes-guide]]"
+  - "[[_note-system]]"
+tags: [beacon, chatgpt, transcripcion, infraestructura]
+date_created: 2026-06-02
+date_updated: 2026-06-02
+status: activo
+
+---
+
 TAREA:
 Transcribir apuntes manuscritos universitarios de Cálculo I a formato Markdown.
 
@@ -31,6 +48,7 @@ El nivel jerárquico se determina por tamaño relativo dentro de la página:
 - Texto rojo grande → ## (sección principal)
 - Texto rojo mediano → ### (subsección)
 Reportar ambos niveles al mostrar la estructura general.
+
 ---
 
 ESTILO DE TRANSCRIPCIÓN:
@@ -140,7 +158,7 @@ Nunca inventar gráficos que no existan en el manuscrito.
 Para el caso de recta numerica con intervalos tomas como base este ejemplo
 ```desmos-graph
 left=-5.5; right=5.5; bottom=9; top=13;
-width=350; height=150;
+width=550; height=350;
 ---
 a=3
 
@@ -160,8 +178,6 @@ y=11 \{x>5\}|#ff7b7b|DOTTED
 (-a,11)|OPEN|label:-a|#ff7b7b
 (a,11)|OPEN|label:a|#ff7b7b
 
-(0,10)|label:abs(x) menor o igual a (Azul)|#2d70b3
-(0,12)|label:abs(x) mayor a (Rojo)|#c74440
 ```
 
 ---
@@ -169,17 +185,6 @@ y=11 \{x>5\}|#ff7b7b|DOTTED
 SALTOS DE LÍNEA:
 Mantener el texto compacto.
 Evitar líneas vacías innecesarias.
-
----
-ESTRUCTURA DE RESPUESTA:  
-Cuando se reciba un PDF:  
-1. Analizar.  
-2. Mostrar:  
-- títulos,  
-- subtítulos,  
-- resumen general del contenido.  
-3. Esperar instrucciones.  
-4. Transcribir únicamente la sección solicitada.
 
 ---
 CORRECCIONES DEL USUARIO:
