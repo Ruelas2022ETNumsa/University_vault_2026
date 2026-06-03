@@ -153,6 +153,8 @@ tercer
 transcripci
 tomas
 transcription
+totalmente
+toma
 ToDo
 Templater
 Text
@@ -689,6 +691,7 @@ debajo
 describiendo
 denotado
 despejar
+definidos
 Vault
 Verificar
 Variables
@@ -1109,6 +1112,7 @@ subt
 subsecci
 simb
 semiabierto
+sustituyendo
 vault
 vil
 ver
@@ -1194,6 +1198,7 @@ vuelven
 via
 verifica
 verticales
+verifican
 audience
 activo
 auto
@@ -1462,6 +1467,7 @@ asociatividad
 abiertos
 analizar
 algebraicos
+analizado
 related
 recomendados
 ribbon
@@ -1693,6 +1699,7 @@ rango
 reproducirla
 recomienda
 radicales
+recomiendan
 notes
 notas
 nuevas
@@ -2294,6 +2301,7 @@ ub
 ue
 universitarios
 unidad
+uni
 Galaxy
 Git
 Gr
@@ -2328,6 +2336,7 @@ Gc
 GZ
 Generar
 GRAFICA
+Generalizando
 Convenci
 Creaci
 Commander
@@ -2621,6 +2630,7 @@ Fuerza
 Fecha
 Factorizar
 FICOS
+Formar
 Estado
 Excalidraw
 EPUBs
@@ -3157,6 +3167,9 @@ profundos
 presenta
 previas
 polin
+prueban
+posibilidades
+procedimiento
 min
 mica
 movimiento
@@ -4238,6 +4251,8 @@ Reportar
 Reproducirlo
 RECTA
 RICA
+Resultan
+Repetir
 Hider
 Hace
 Herramientas
@@ -4451,6 +4466,7 @@ qC
 qh
 qU
 qYW
+quedando
 University
 Usar
 Un

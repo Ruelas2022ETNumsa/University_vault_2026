@@ -471,16 +471,50 @@ $$
 
 ---
 
+### Método de signos para resolver inecuaciones
 
-----
+Generalizando:
+
+**Método de signos para solución de inecuaciones**
+
+Forma general:
+
+$$
+M(x)
+\begin{cases}
+>\\
+<\\
+\ge\\
+\le
+\end{cases}
+N(x)
+$$
+
+Para resolver se recomiendan los siguientes pasos:
+
+1. Formar una comparación con cero:
+$$
+\frac{P(x)}{Q(x)} > 0
+$$
+
+(o la desigualdad correspondiente).
+
+2. Factorizar totalmente \(P\) y \(Q\):
+
+$$
+\frac{
+(x-a_1)(x-a_2)\cdots(x-a_k)
+}{
+(x-b_1)(x-b_2)\cdots(x-b_j)
+}
+>0
+$$
 
 
---
--
--
--
--
--
+
+
+
+
 
 
 
@@ -491,10 +525,6 @@ $$
 ---
 ---
 
-
-## Solución de inecuaciones en variable real
-
-### Inecuaciones de primer grado
 
 ### Método de signos para resolver inecuaciones
 
