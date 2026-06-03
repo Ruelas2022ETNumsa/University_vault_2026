@@ -552,13 +552,10 @@ $$
 	 $\dfrac{(+)(-)(+)}{(-)(+)(+)}=(+) \quad$   o   $\quad \dfrac{(+)(-)(+)}{(-)(+)(-)}=(-)$
 	 
 	Resultan dos posibilidades:
-	- Si la desigualdad es verdadera en el intervalo analizado, entonces:
-I_i \subset C_s$
-	- Si la desigualdad es falsa en el intervalo analizado, entonces:
-	$$  I_i \not\subset C_s  $$
+	- Si la desigualdad es verdadera en el intervalo analizado, entonces: $I_i \subset C_s$
+	- Si la desigualdad es falsa en el intervalo analizado, entonces: $I_i \not\subset C_s$
 
-5. Repetir el procedimiento para los demás intervalos:
-    $$  I_2,;I_3,;\ldots  $$
+5. Repetir el procedimiento para los demás intervalos: $I_2,;I_3,;\ldots$ 
 6. El conjunto solución buscado se obtiene mediante la unión de todos los intervalos que verifican la inecuación:
     $$  C_s=\bigcup I_i  $$
 	donde la unión se realiza únicamente sobre los intervalos válidos.
