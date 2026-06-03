@@ -107,6 +107,7 @@ valor absoluto
 
 ### Sintaxis actual (0.9.x)
 
+Text displayed above.
 
 --- start-multi-column: ID-unico
 ```column-settings
@@ -115,7 +116,7 @@ column size: [60%, 40%]
 border: off
 ```
 
-Contenido columna izquierda
+Contenido columna izquierda 
 
 --- end-column ---
 
@@ -125,9 +126,19 @@ Contenido columna derecha
 
 > El ID debe ser único dentro del mismo archivo. Si hay dos bloques en la misma nota usar `cornell-001`, `cornell-002`, etc.
 
+
+---
+---
+---
+
+
+
+
+
 ### Layout Cornell para `planet` (teoría)
 
-```
+9
+
 --- start-multi-column: cornell-001
 ```column-settings
 number of columns: 2
