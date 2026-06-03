@@ -317,10 +317,11 @@ Si $x$ y $y$ pertenecen a $\mathbb{R}$:
 6. **Valor absoluto de una potencia par**: $|x^2|=|x|^2=x^2$
 7. **Raíz cuadrada principal**: $\sqrt{x^2}=|x|$
     
-8. $(|x|<a \land a>0)\Rightarrow$
-    
-    $(x<a \land x>-a)\Rightarrow -a<x<a$
-    
+8. **Desigualdad de valor absoluto (caso menor que)**: $(|x|>a \land a>0)$ $\Rightarrow (x>a \lor x<-a)$
+
+$(|x|<a \land a>0)$ $\Rightarrow -a<x<a$
+
+
 9. $|x|>a \Rightarrow (x>a \lor x<-a)$
     
 10. $|x+y|\le |x|+|y|$

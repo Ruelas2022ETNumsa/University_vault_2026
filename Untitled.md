@@ -68,11 +68,9 @@ Si $x,y\in\mathbb{R}$:
 
 9. **Desigualdad de valor absoluto (caso mayor que)**
    
-   $$
-   (|x|>a \land a>0)
-   \Rightarrow
-   (x>a \lor x<-a)
-   $$
+   
+   $(|x|>a \land a>0)$ $\Rightarrow (x>a \lor x<-a)$
+   
 
 10. **Desigualdad triangular**
     
