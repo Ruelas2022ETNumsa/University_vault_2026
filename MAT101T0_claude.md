@@ -12,6 +12,7 @@ border: off
 📝 **Desarrollo**
 
 Sea $a,b,c \in \mathbb{R}$.
+
 1. **Clausura**
 	- $a+b \in \mathbb{R}$
 	- $a\cdot b \in \mathbb{R}$
