@@ -530,10 +530,10 @@ y=0 \{8<x<10\}|#ff7b7b
 (8,0)|OPEN|label:b_1|#ff7b7b
 (10,0)|OPEN|label:b_2|#ff7b7b
 
-(2,-0.5)|label:a_1|#ff7b7b|hidden
-(5,-0.5)|label:a_2|#ff7b7b|hidden
-(8,-0.5)|label:b_1|#ff7b7b|hidden
-(10,-0.5)|label:b_2|#ff7b7b|hidden
+(1,-0.5)|label:I_1|#2d70b3|hidden
+(3,-0.5)|label:I_2|#2d70b3|hidden
+(6,-0.5)|label:I_3|#2d70b3|hidden
+(9,-0.5)|label:I_4|#2d70b3|hidden
 
 
 ````
@@ -544,6 +544,12 @@ $$
 I_1,;I_2,;I_3,;\ldots,;I_k  
 $$
 
+4. **Prueba de signos**
+	De $I_1$ se toma un valor cualquiera (no extremo) y se prueban los signos sustituyendo en cada factor.
+
+Ejemplo:
+
+ $\dfrac{(+)(-)(+)}{(-)(+)(+)}=(+) \quadd$   o   $\frac{(+)(-)(+)}{(-)(+)(-)}=(-)$
 
 
 

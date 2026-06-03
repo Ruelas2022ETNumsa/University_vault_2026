@@ -56,7 +56,7 @@ De (I_1) se toma un valor cualquiera (no extremo) y se prueban los signos sustit
 
 Ejemplo:
 
-# $$  
+ $$  
 \frac{(+)(-)(+)}{(-)(+)(+)}
 
 (+)  
@@ -64,7 +64,7 @@ $$
 
 o
 
-# $$  
+$$  
 \frac{(+)(-)(+)}{(-)(+)(+)}
 
 (-)  
