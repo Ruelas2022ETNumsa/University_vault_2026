@@ -875,4 +875,70 @@ $$
 x\neq -\frac23
 $$
 
+Resolviendo la desigualdad izquierda:
 
+$$
+\begin{array}{rcl}
+-2 & < & \dfrac{2x-1}{3x+2} \\[6pt]
+0 & < & \dfrac{2x-1+2(3x+2)}{3x+2} \\[6pt]
+0 & < & \dfrac{8x+3}{3x+2}
+\end{array}
+$$
+
+Resolviendo la desigualdad derecha:
+
+$$
+\begin{array}{rcl}
+\dfrac{2x-1}{3x+2} & < & 2 \\[6pt]
+\dfrac{2x-1-2(3x+2)}{3x+2} & < & 0 \\[6pt]
+\dfrac{-4x-5}{3x+2} & < & 0 \\[6pt]
+\dfrac{4x+5}{3x+2} & > & 0
+\end{array}
+$$
+
+Por tanto deben cumplirse simultáneamente:
+
+$$
+\frac{8x+3}{3x+2}>0
+\qquad\text{y}\qquad
+\frac{4x+5}{3x+2}>0
+$$
+
+Puntos críticos:
+
+$$
+x=-\frac54,
+\qquad
+x=-\frac23,
+\qquad
+x=-\frac38
+$$
+
+Analizando signos:
+
+```desmos-graph
+left=-3; right=2; bottom=-1; top=1;
+width=500; height=120;
+---
+y=0 \{-1.25<x<-0.666667\}|#ff7b7b
+
+(-1.25,0)|OPEN|label:-\frac{5}{4}|#ff7b7b
+(-0.666667,0)|OPEN|label:-\frac{2}{3}|#ff7b7b
+(-0.375,0)|OPEN|label:-\frac{3}{8}|#ff7b7b
+
+y=0.5 \{-1.25<x<-0.666667\}|#ff7b7b
+
+(-1.25,0)|OPEN|label:-\frac{5}{4}|#ff7b7b
+(-0.666667,0)|OPEN|label:-\frac{2}{3}|#ff7b7b
+(-0.375,0)|OPEN|label:-\frac{3}{8}|#ff7b7b
+
+
+````
+
+$$
+C_s=
+\left]
+-\frac54,
+-\frac23
+\right[
+$$
