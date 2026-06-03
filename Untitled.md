@@ -87,9 +87,7 @@ Si $x,y\in\mathbb{R}$:
     para todo $x\in\mathbb{R}$.
 
 12. **Desigualdad triangular inversa**
-    
-    $$
-    \bigl||x|-|y|\bigr|
-    \le
-    |x-y|
-    $$
+
+
+
+$\bigl||x|-|y|\bigr| \le |x-y|$

@@ -312,23 +312,16 @@ Si $x$ y $y$ pertenecen a $\mathbb{R}$:
 2. **No negatividad**: $|x|\ge 0$
 3. **Producto**: $|x\cdot y|=|x||y|$
 4. **Cociente**: $\left|\dfrac{x}{y}\right|=\dfrac{|x|}{|y|}$, $\quad$ $y\neq0$
-    
-5.**Ecuación de valor absoluto**: $(|x|=a \land a\ge0)\Rightarrow$ $(x=a \lor x=-a)$ $\quad$ $(x=\pm a)$
+5. **Ecuación de valor absoluto**: $(|x|=a \land a\ge0)\Rightarrow$ $(x=a \lor x=-a)$ $\quad$ $(x=\pm a)$
 6. **Valor absoluto de una potencia par**: $|x^2|=|x|^2=x^2$
 7. **Raíz cuadrada principal**: $\sqrt{x^2}=|x|$
-    
-8. **Desigualdad de valor absoluto (caso menor que)**: $(|x|>a \land a>0)$ $\Rightarrow (x>a \lor x<-a)$
-
-$(|x|<a \land a>0)$ $\Rightarrow -a<x<a$
-
-
-9. $|x|>a \Rightarrow (x>a \lor x<-a)$
-    
-10. $|x+y|\le |x|+|y|$
-    
-    - Desigualdad triangular.
+8. **Desigualdad de valor absoluto**
+	- **(caso menor que)**: $(|x|<a \land a>0)$ $\Rightarrow -a<x<a$
+	- **(caso mayor que)**: $(|x|>a \land a>0)$ $\Rightarrow (x>a \lor x<-a)$    
+9.  **Desigualdad triangular**: $|x+y|\le |x|+|y|$
+10. 
         
-11. $|x\cdot y|\ge x\cdot y$
+10. **Desigualdad de Schwarz**: $|x\cdot y|\ge x\cdot y$
     
     - Desigualdad de Schwarz.
 
