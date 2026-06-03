@@ -160,20 +160,17 @@ Para el caso de recta numerica con intervalos tomas como base este ejemplo
 left=-6.5; right=6.5; bottom=-1; top=3;
 width=350; height=150;
 ---
-p=3
-y=0 \{-p<=x<=p\}|#2d70b3
-(-p,0)|label:-3|#2d70b3
-(p,0)|OPEN|label:3|#2d70b3
+y=0 \{-3<=x<3\}|#2d70b3
+(-3,0)|label:-3|#2d70b3
+(3,0)|OPEN|label:3|#2d70b3
 
+y=1 \{x<=-5\}|#ff7b7b|DOTTED
+y=1 \{-5<x<-3\}|#ff7b7b
+(-3,1)|OPEN|label:-3|#ff7b7b
 
-
-y=1 \{x<-5\}|#ff7b7b|DOTTED
-y=1 \{-5<x<-p\}|#ff7b7b
-(-p,1)|OPEN|label:-3|#ff7b7b
-
-y=1 \{5>x>p+1\}|#ff7b7b
+y=1 \{5>=x>=4\}|#ff7b7b
 y=1 \{x>5\}|#ff7b7b|DOTTED
-(p+1,1)|label:4|#ff7b7b
+(4,1)|label:4|#ff7b7b
 ```
 
 
