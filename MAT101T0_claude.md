@@ -246,7 +246,7 @@ y=0 \{3<x<=4\}|#ff7b7b
 (4,0)|label:b|#ff7b7b
 ```
 
-3. **Intervalo abierto**: $]a,b[={x\mid a< x<b}$
+3. **Intervalo abierto**: $]a,b[=\{x\mid a<x<b\}$
 
 ```desmos-graph
 left=2; right=5; bottom=-1; top=1;
@@ -258,7 +258,7 @@ y=0 \{3<x<4\}|#ff7b7b
 (4,0)|OPEN|label:b|#ff7b7b
 ```
 
-4. **Semirrecta hacia $+\infty$**: $]a,+\infty[={x\mid x>a}$
+4. **Semirrecta hacia $+\infty$**: $]a,+\infty[=\{x\mid x>a\}$
 
 ```desmos-graph
 left=0; right=8; bottom=-1; top=1;
@@ -270,7 +270,7 @@ y=0 \{x>7\}|DOTTED|#ff7b7b
 (3,0)|OPEN|label:a|#ff7b7b
 ```
 
-5. **Semirrecta desde $-\infty$**: $]-\infty,b[={x\mid x<b}$
+5. **Semirrecta desde $-\infty$**: $]-\infty,b[=\{x\mid x<b\}$
 
 ```desmos-graph
 left=-8; right=0; bottom=-1; top=1;
@@ -333,7 +333,7 @@ Si $x$ y $y$ pertenecen a $\mathbb{R}$:
 	- $|x+y|\le |x|+|y|$
 10. **Desigualdad triangular inversa**
 	- $\bigl||x|-|y|\bigr| \le |x-y|$
-11. **Desigualdad de Schwarz**
+11. **Desigualdad de Cauchy-Schwarz**
 	- $|x\cdot y|\le |x||y|$
  
 #### Ejemplo
@@ -405,7 +405,7 @@ $$
 a,b,c,d \in \mathbb{R}
 $$
 
-Se recomienda despejar \(x\) con propiedades:
+Se recomienda despejar $x$ con propiedades:
 
 $$
 \begin{array}{rcl}
@@ -426,7 +426,7 @@ $$
 x>\dfrac{d-b}{a-c}
 $$
 
-**\($C_s$\): conjunto solución de la inecuación**
+**$C_s$: conjunto solución de la inecuación**
 
 ```desmos-graph
 left=2; right=7; bottom=-1; top=1;
@@ -502,7 +502,7 @@ $$
 $$
 (o la desigualdad correspondiente).
 
-2. Factorizar totalmente \(P\) y \(Q\):
+2. Factorizar totalmente $P$ y $Q$:
 $$
 \frac{
 (x-a_1)(x-a_2)\cdots(x-a_k)
@@ -518,7 +518,7 @@ $$
 a_1,\;a_2,\;\ldots,\;a_k,\;b_1,\;b_2,\;\ldots,\;b_j
 $$
 
-quedando definidos \(n\) intervalos:
+quedando definidos $n$ intervalos:
 
 ```desmos-graph
 left=-1; right=11; bottom=-1; top=1;
@@ -542,9 +542,7 @@ y=0 \{8<x<10\}|#ff7b7b
 
 Intervalos:
 
-$$  
-I_1,;I_2,;I_3,;\ldots,;I_k  
-$$
+$$I_1,\;I_2,\;I_3,\;\ldots,\;I_k$$
 
 4. **Prueba de signos**
 	De $I_1$ se toma un valor cualquiera (no extremo) y se prueban los signos sustituyendo en cada factor.
@@ -557,7 +555,7 @@ $$
 	- Si la desigualdad es verdadera en el intervalo analizado, entonces: $I_i \subset C_s$
 	- Si la desigualdad es falsa en el intervalo analizado, entonces: $I_i \not\subset C_s$
 
-5. Repetir el procedimiento para los demás intervalos: $I_2,;I_3,;\ldots$ 
+5. Repetir el procedimiento para los demás intervalos: $I_2,\;I_3,\;\ldots$
 6. El conjunto solución buscado se obtiene mediante la unión de todos los intervalos que verifican la inecuación:
     $$  C_s=\bigcup I_i  $$
 	donde la unión se realiza únicamente sobre los intervalos válidos.
