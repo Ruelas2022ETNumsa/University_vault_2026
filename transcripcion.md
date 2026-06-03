@@ -288,7 +288,7 @@ El **valor absoluto** de un número real $a$, denotado por $|a|$, se define como
 $$  
 |a|=  
 \begin{cases}  
-a, & \text{si } a\ge0\  
+a, & \text{si } a\ge0\  \\
 -a, & \text{si } a<0  
 \end{cases}  
 $$
