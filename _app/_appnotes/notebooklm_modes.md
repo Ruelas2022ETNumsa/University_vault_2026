@@ -93,7 +93,7 @@ y al final dame un ejercicio similar más difícil.
 
 ---
 
-### MODO 2.5 · Ejercicio rápido
+### MODO 3 · Ejercicio rápido
 
 **Para qué sirve:** resolver sin explicación adicional ni ejercicio extra al final. Solo los 4 pasos esenciales: enunciado, desarrollo, visualización si aplica, resultado.
 
@@ -119,7 +119,7 @@ Solo resolvé: encontrá los valores de x para los que
 
 ---
 
-### MODO 3 · Dictado para Obsidian
+### MODO 4 · Dictado para Obsidian
 
 **Para qué sirve:** generar contenido listo para pegar directamente en una nota de Obsidian. Responde en texto plano sin introducción ni cierre — solo el bloque de contenido con título, desarrollo, código si aplica y resumen.
 
@@ -150,7 +150,7 @@ Sin texto antes ni después del bloque — directo al contenido.
 
 ---
 
-### MODO 4 · Revisión de nota
+### MODO 5 · Revisión de nota
 
 **Para qué sirve:** revisar si el contenido matemático de una nota es correcto. NotebookLM identifica errores matemáticos (definición incorrecta, notación mal usada, paso inválido, omisión importante), señala imprecisiones de notación y sugiere qué agregar indicando de qué libro lo tomaría. Aplica a cualquier nota, no solo MAT101.
 
