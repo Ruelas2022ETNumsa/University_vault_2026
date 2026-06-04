@@ -11,9 +11,10 @@ related_notes:
   - "[[_mindmap-system]]"
   - "[[_sync-system]]"
   - "[[_ToDo-system]]"
+  - "[[claude_solve]]"
 tags: [beacon, claude, arranque, infraestructura]
 date_created: 2026-05-30
-date_updated: 2026-05-30
+date_updated: 2026-06-03
 status: activo
 ---
 
@@ -245,4 +246,5 @@ galaxy-links
 [[_graph-system]]
 [[_sync-system]]
 [[_ToDo-system]]
+[[claude_solve]]
 %%
