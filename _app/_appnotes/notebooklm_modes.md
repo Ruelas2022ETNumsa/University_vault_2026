@@ -101,7 +101,7 @@ y al final dame un ejercicio similar más difícil.
 ```
 "Solo resolvé [ejercicio]"
 "Ejercicio rápido: [problema]"
-"Modo 2.5 — [ejercicio]"
+"Modo 3 — [ejercicio]"
 "Resolvé sin extras: [problema]"
 ```
 
@@ -127,7 +127,7 @@ Solo resolvé: encontrá los valores de x para los que
 ```
 "Completá mi nota sobre [tema]"
 "Dictame [concepto] para Obsidian"
-"Modo 3 — [tema]"
+"Modo 4 — [tema]"
 "Dame el contenido para pegar en mi nota de [tema]"
 ```
 
@@ -156,7 +156,7 @@ Sin texto antes ni después del bloque — directo al contenido.
 
 **Triggers:**
 ```
-"Modo 4 — revisá la sección [nombre] de mi nota [nombre]"
+"Modo 5 — revisá la sección [nombre] de mi nota [nombre]"
 "Revisá si esto es correcto: [pega la sección]"
 "¿Hay errores en esta sección? [pega el contenido]"
 "Corregí y mejorá: [pega el contenido]"
@@ -164,7 +164,7 @@ Sin texto antes ni después del bloque — directo al contenido.
 
 **Ejemplo de trigger completo:**
 ```
-Modo 4 — revisá la sección "Axiomas de orden"
+Modo 5 — revisá la sección "Axiomas de orden"
 de mi nota MAT101. La tenés como fuente en el notebook.
 ```
 
