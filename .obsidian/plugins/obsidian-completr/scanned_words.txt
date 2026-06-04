@@ -156,6 +156,7 @@ transcription
 totalmente
 toma
 tfrac
+triggers
 ToDo
 Templater
 Text
@@ -245,6 +246,7 @@ Transcribir
 TRANSCRIPCI
 TICO
 Transcripci
+Triggers
 Sistema
 Sync
 Save
@@ -359,6 +361,7 @@ Subsecci
 SALTOS
 Semirrecta
 Segundo
+Sugerencias
 Plugins
 Pendientes
 Plugin
@@ -470,6 +473,7 @@ Pasar
 Preguntar
 Primero
 Parece
+Profundizar
 del
 date
 de
@@ -703,6 +707,8 @@ definidas
 distributividad
 displayed
 discreto
+dificultad
+directos
 Vault
 Verificar
 Variables
@@ -812,6 +818,7 @@ gRK
 guardados
 guard
 grado
+graficable
 body
 beacon
 bat
@@ -1128,6 +1135,7 @@ sustituyendo
 slash
 satisface
 simult
+separadores
 vault
 vil
 ver
@@ -1215,6 +1223,7 @@ verifica
 verticales
 verifican
 verdadero
+variedad
 audience
 activo
 auto
@@ -1488,6 +1497,11 @@ algebraicamente
 abreviaciones
 asumen
 above
+alumno
+ala
+aladas
+aplicaci
+anclada
 related
 recomendados
 ribbon
@@ -1725,6 +1739,8 @@ reduce
 reflexiva
 respectivamente
 restas
+rigor
+reformulada
 notes
 notas
 nuevas
@@ -2279,6 +2295,14 @@ corchete
 cup
 cadenas
 cumplirse
+cl
+creciente
+corresponde
+copiada
+confirmaci
+corregida
+complementario
+claves
 updated
 un
 universo
@@ -2538,6 +2562,7 @@ Codominio
 CUANDO
 Conservar
 CORRECCIONES
+Cruza
 Instalados
 Instalado
 Instalar
@@ -2605,6 +2630,7 @@ IDATx
 Interpretaci
 Inecuaciones
 Interceptando
+Imprecisiones
 Funci
 File
 Fase
@@ -2804,6 +2830,8 @@ Explicaci
 Extremo
 ExampleRegion
 Entonces
+Explicaciones
+Ejercicios
 Obsidian
 OmniSearch
 Ocultar
@@ -3212,6 +3240,11 @@ prueban
 posibilidades
 procedimiento
 pertenencia
+prompt
+precisas
+progresivos
+pedidos
+prioriza
 min
 mica
 movimiento
@@ -3385,6 +3418,7 @@ mitades
 mediano
 miembro
 miembros
+mejorada
 YAML
 Ya
 You
@@ -3436,6 +3470,7 @@ Bk
 Botones
 Bug
 BR
+Base
 en
 exacta
 escaneados
@@ -3710,6 +3745,10 @@ escribiste
 escribirse
 estudiar
 elevan
+esperar
+esenciales
+encontrados
+enriquecida
 Motor
 Media
 Mantiene
@@ -3779,6 +3818,7 @@ Management
 Mitad
 MARKDOWN
 MANUSCRITO
+Mejorar
 Lectura
 LaTeX
 Linter
@@ -4105,6 +4145,12 @@ incluido
 infty
 indic
 ignorarse
+intuitiva
+incorrecta
+inv
+imprecisiones
+indicado
+ignora
 Dependencia
 Dropbox
 Dataview
@@ -4193,6 +4239,8 @@ Detenerse
 DEFINICIONES
 Dentro
 Desarrollando
+Describe
+Dictado
 Remotely
 Raz
 Revisa
@@ -4309,6 +4357,8 @@ Resultan
 Repetir
 Reduciendo
 Resolviendo
+Rigor
+Responde
 Hider
 Hace
 Herramientas
@@ -4680,6 +4730,8 @@ override
 ordenarse
 ortograf
 observaci
+omisi
+omitir
 junto
 json
 jer
@@ -4694,6 +4746,7 @@ justificaci
 jL
 jg
 jKru
+justificando
 Qu
 Qui
 Quick
