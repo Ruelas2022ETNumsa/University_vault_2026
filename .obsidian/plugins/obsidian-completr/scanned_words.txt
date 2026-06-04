@@ -372,6 +372,7 @@ Suposici
 Supongamos
 Simplificaci
 Sumamos
+Sup
 Plugins
 Pendientes
 Plugin
@@ -727,6 +728,8 @@ distingue
 dictado
 devuelve
 demuestre
+demostracion
+decorativa
 Vault
 Verificar
 Variables
@@ -840,6 +843,7 @@ grado
 graficable
 gran
 graficando
+gico
 body
 beacon
 bat
@@ -1254,6 +1258,7 @@ verdadero
 variedad
 visualizaciones
 vemos
+visto
 audience
 activo
 auto
@@ -2365,6 +2370,9 @@ carrera
 contradicci
 cumpliera
 conmutatividad
+colapsa
+conductor
+cierren
 updated
 un
 universo
@@ -2627,6 +2635,8 @@ CORRECCIONES
 Cruza
 Conflictos
 Combinar
+Cualquiera
+Contradicci
 Instalados
 Instalado
 Instalar
@@ -2699,6 +2709,8 @@ Interpretado
 Ignorado
 Imagin
 Identifique
+Indefinido
+Indeterminado
 Funci
 File
 Fase
@@ -3068,6 +3080,7 @@ Aspecto
 Aditivo
 Aplicaci
 Aplicamos
+Ambigüedad
 push
 pull
 para
@@ -3329,6 +3342,7 @@ primitiva
 proca
 probar
 pues
+prdian
 min
 mica
 movimiento
@@ -3511,6 +3525,7 @@ marcador
 method
 moslos
 medida
+mucho
 YAML
 Ya
 You
@@ -3850,6 +3865,7 @@ elegimos
 explota
 excluido
 existir
+exisitir
 Motor
 Media
 Mantiene
@@ -4267,6 +4283,7 @@ imaginar
 igualamos
 insalvable
 imposibilidad
+indeterminaci
 Dependencia
 Dropbox
 Dataview
@@ -4632,6 +4649,7 @@ falso
 frecuente
 futuro
 ficamente
+funcionar
 haya
 hace
 hacer
@@ -4677,6 +4695,7 @@ heredando
 hora
 horizontales
 haciendo
+hilo
 que
 quedan
 queda
@@ -4864,6 +4883,7 @@ observaci
 omisi
 omitir
 obtenemos
+ocurren
 junto
 json
 jer
@@ -4972,6 +4992,7 @@ zm
 zG
 kEG
 kE
+kg
 Xe
 Xm
 Xu
