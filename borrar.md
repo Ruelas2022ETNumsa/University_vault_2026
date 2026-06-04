@@ -10,12 +10,4 @@ y=x
 
 
 
-<iframe src="https://www.geogebra.org/3d/g6nefqmt"
-        width="100%"
-        height="500"
-        style="border:none; border-radius:8px;"
-        allowfullscreen>
-</iframe>
-
-
-https://www.geogebra.org/3d/g6nefqmt
+<iframe src="https://www.geogebra.org/calculator/jrmezjnm?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>

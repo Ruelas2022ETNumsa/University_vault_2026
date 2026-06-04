@@ -1168,6 +1168,8 @@ sabe
 saber
 significar
 satisfaga
+src
+style
 vault
 vil
 ver
@@ -1543,6 +1545,7 @@ ambiguos
 abreviaci
 amos
 acerca
+allowfullscreen
 related
 recomendados
 ribbon
@@ -1787,6 +1790,7 @@ respuestas
 resubir
 remota
 refuerzo
+radius
 notes
 notas
 nuevas
@@ -1910,6 +1914,7 @@ ndolas
 naturalmente
 ntotas
 ntota
+none
 created
 commit
 cada
@@ -4284,6 +4289,7 @@ igualamos
 insalvable
 imposibilidad
 indeterminaci
+iframe
 Dependencia
 Dropbox
 Dataview
