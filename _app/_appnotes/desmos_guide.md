@@ -423,6 +423,18 @@ Usar inecuaciones con todas las condiciones en **una sola línea**:
 y<3-x|y>x-3|x>=-4|x<=2|#a5d8ff
 ```
 
+
+```desmos-graph
+left=-0.5; right=5.5;
+bottom=-1; top=24;
+---
+x<y<=x^2 \{2<=x<=4\}
+
+y=x^2
+y=x
+```
+
+
 ### ⚠️ Rectángulos sombreados
 
 Para sombrear una región rectangular incluir SIEMPRE las cuatro restricciones en una sola línea:
