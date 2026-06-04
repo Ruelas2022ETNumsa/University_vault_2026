@@ -475,6 +475,7 @@ Primero
 Parece
 Profundizar
 Prompt
+Programa
 del
 date
 de
@@ -710,6 +711,8 @@ displayed
 discreto
 dificultad
 directos
+distingue
+dictado
 Vault
 Verificar
 Variables
@@ -1138,6 +1141,7 @@ slash
 satisface
 simult
 separadores
+significativamente
 vault
 vil
 ver
@@ -1506,6 +1510,7 @@ aladas
 aplicaci
 anclada
 asignado
+actualizar
 related
 recomendados
 ribbon
@@ -1745,6 +1750,9 @@ respectivamente
 restas
 rigor
 reformulada
+ruido
+respuestas
+resubir
 notes
 notas
 nuevas
@@ -1864,6 +1872,8 @@ nuevamente
 ne
 numerador
 neamente
+ndolas
+naturalmente
 created
 commit
 cada
@@ -2307,6 +2317,11 @@ confirmaci
 corregida
 complementario
 claves
+cruz
+continuo
+confunde
+consulta
+confirma
 updated
 un
 universo
@@ -2635,6 +2650,8 @@ Interpretaci
 Inecuaciones
 Interceptando
 Imprecisiones
+Interpretado
+Ignorado
 Funci
 File
 Fase
@@ -2995,6 +3012,7 @@ ALGO
 Analizar
 Aplicando
 Analizando
+Aspecto
 push
 pull
 para
@@ -3426,6 +3444,8 @@ mediano
 miembro
 miembros
 mejorada
+mapeo
+modelo
 YAML
 Ya
 You
@@ -3756,6 +3776,7 @@ esperar
 esenciales
 encontrados
 enriquecida
+enriquece
 Motor
 Media
 Mantiene
@@ -3826,6 +3847,7 @@ Mitad
 MARKDOWN
 MANUSCRITO
 Mejorar
+MCM
 Lectura
 LaTeX
 Linter
@@ -4158,6 +4180,8 @@ inv
 imprecisiones
 indicado
 ignora
+imprimir
+interpretaci
 Dependencia
 Dropbox
 Dataview
@@ -4366,6 +4390,9 @@ Reduciendo
 Resolviendo
 Rigor
 Responde
+Recibe
+Restricci
+Resubida
 Hider
 Hace
 Herramientas
