@@ -32,6 +32,7 @@ Cuando el usuario comparta este archivo, Claude debe:
 3. Determinar si el usuario quiere trabajar con una **materia específica** o con la **infraestructura del vault**.
 4. Si hay materia específica → leer su contexto según las rutas de la sección Materias.
 5. Confirmar con un mensaje breve: _"Contexto cargado. ¿En qué trabajamos?"_
+6. Para editar archivos existentes: siempre edit_file, nunca write_file. (Ver [[claude_solve]] para errores conocidos.)
 
 ---
 

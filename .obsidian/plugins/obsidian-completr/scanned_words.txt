@@ -157,6 +157,8 @@ totalmente
 toma
 tfrac
 triggers
+te
+traer
 ToDo
 Templater
 Text
@@ -362,6 +364,8 @@ SALTOS
 Semirrecta
 Segundo
 Sugerencias
+Source
+Siguiendo
 Plugins
 Pendientes
 Plugin
@@ -476,6 +480,7 @@ Parece
 Profundizar
 Prompt
 Programa
+Prevenir
 del
 date
 de
@@ -901,6 +906,7 @@ border
 bug
 brevemente
 biun
+before
 scope
 status
 selector
@@ -1142,6 +1148,7 @@ satisface
 simult
 separadores
 significativamente
+sabe
 vault
 vil
 ver
@@ -1753,6 +1760,7 @@ reformulada
 ruido
 respuestas
 resubir
+remota
 notes
 notas
 nuevas
@@ -2322,6 +2330,10 @@ continuo
 confunde
 consulta
 confirma
+conflictos
+conflicto
+conflictivo
+conservar
 updated
 un
 universo
@@ -2582,6 +2594,8 @@ CUANDO
 Conservar
 CORRECCIONES
 Cruza
+Conflictos
+Combinar
 Instalados
 Instalado
 Instalar
@@ -2854,6 +2868,8 @@ ExampleRegion
 Entonces
 Explicaciones
 Ejercicios
+Edita
+Ejecuta
 Obsidian
 OmniSearch
 Ocultar
@@ -2904,6 +2920,7 @@ OBSERVACIONES
 OBJETIVO
 OPEN
 Observaci
+Ocurre
 Auto
 Annotator
 Autocompletado
@@ -3446,6 +3463,10 @@ miembros
 mejorada
 mapeo
 modelo
+modificaron
+mezclando
+marcador
+method
 YAML
 Ya
 You
@@ -3498,6 +3519,7 @@ Botones
 Bug
 BR
 Base
+Borra
 en
 exacta
 escaneados
@@ -3777,6 +3799,7 @@ esenciales
 encontrados
 enriquecida
 enriquece
+evitan
 Motor
 Media
 Mantiene
@@ -3848,6 +3871,7 @@ MARKDOWN
 MANUSCRITO
 Mejorar
 MCM
+Mode
 Lectura
 LaTeX
 Linter
@@ -3998,6 +4022,7 @@ leerlo
 leerse
 licamente
 llamada
+ltimos
 incluyendo
 im
 instalar
@@ -4182,6 +4207,7 @@ indicado
 ignora
 imprimir
 interpretaci
+interval
 Dependencia
 Dropbox
 Dataview
@@ -4393,6 +4419,8 @@ Responde
 Recibe
 Restricci
 Resubida
+Resolver
+Rebase
 Hider
 Hace
 Herramientas
@@ -4540,6 +4568,7 @@ factorizando
 fraccionales
 falso
 frecuente
+futuro
 haya
 hace
 hacer
@@ -4613,6 +4642,8 @@ qU
 qYW
 quedando
 qquad
+quinas
+quina
 University
 Usar
 Un
@@ -4639,6 +4670,7 @@ UW
 UY
 UL
 Uni
+Ubicar
 Nombre
 Notas
 No
@@ -4793,6 +4825,7 @@ QE
 Qf
 QS
 QW
+Quedarte
 ya
 yaml
 yo
