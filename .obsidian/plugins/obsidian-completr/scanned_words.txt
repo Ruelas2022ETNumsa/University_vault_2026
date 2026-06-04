@@ -159,6 +159,8 @@ tfrac
 triggers
 te
 traer
+tenemos
+trivial
 ToDo
 Templater
 Text
@@ -366,6 +368,10 @@ Segundo
 Sugerencias
 Source
 Siguiendo
+Suposici
+Supongamos
+Simplificaci
+Sumamos
 Plugins
 Pendientes
 Plugin
@@ -481,6 +487,7 @@ Profundizar
 Prompt
 Programa
 Prevenir
+Partimos
 del
 date
 de
@@ -718,6 +725,8 @@ dificultad
 directos
 distingue
 dictado
+devuelve
+demuestre
 Vault
 Verificar
 Variables
@@ -829,6 +838,8 @@ guardados
 guard
 grado
 graficable
+gran
+graficando
 body
 beacon
 bat
@@ -907,6 +918,7 @@ bug
 brevemente
 biun
 before
+basta
 scope
 status
 selector
@@ -1149,6 +1161,9 @@ simult
 separadores
 significativamente
 sabe
+saber
+significar
+satisfaga
 vault
 vil
 ver
@@ -1238,6 +1253,7 @@ verifican
 verdadero
 variedad
 visualizaciones
+vemos
 audience
 activo
 auto
@@ -1518,6 +1534,10 @@ aplicaci
 anclada
 asignado
 actualizar
+ambiguos
+abreviaci
+amos
+acerca
 related
 recomendados
 ribbon
@@ -1761,6 +1781,7 @@ ruido
 respuestas
 resubir
 remota
+refuerzo
 notes
 notas
 nuevas
@@ -1882,6 +1903,8 @@ numerador
 neamente
 ndolas
 naturalmente
+ntotas
+ntota
 created
 commit
 cada
@@ -2335,6 +2358,13 @@ conflicto
 conflictivo
 conservar
 cerrada
+ceros
+colapsar
+conmutativa
+carrera
+contradicci
+cumpliera
+conmutatividad
 updated
 un
 universo
@@ -2667,6 +2697,8 @@ Interceptando
 Imprecisiones
 Interpretado
 Ignorado
+Imagin
+Identifique
 Funci
 File
 Fase
@@ -2872,6 +2904,7 @@ Ejercicios
 Edita
 Ejecuta
 Existen
+Examen
 Obsidian
 OmniSearch
 Ocultar
@@ -3032,6 +3065,9 @@ Analizar
 Aplicando
 Analizando
 Aspecto
+Aditivo
+Aplicaci
+Aplicamos
 push
 pull
 para
@@ -3289,6 +3325,10 @@ pedidos
 prioriza
 programa
 prioritario
+primitiva
+proca
+probar
+pues
 min
 mica
 movimiento
@@ -3469,6 +3509,8 @@ modificaron
 mezclando
 marcador
 method
+moslos
+medida
 YAML
 Ya
 You
@@ -3803,6 +3845,11 @@ enriquecida
 enriquece
 evitan
 edit
+existieran
+elegimos
+explota
+excluido
+existir
 Motor
 Media
 Mantiene
@@ -3875,6 +3922,9 @@ MANUSCRITO
 Mejorar
 MCM
 Mode
+Multiplicativo
+Multiplicamos
+Multiplicando
 Lectura
 LaTeX
 Linter
@@ -4026,6 +4076,7 @@ leerse
 licamente
 llamada
 ltimos
+llam
 incluyendo
 im
 instalar
@@ -4211,6 +4262,11 @@ ignora
 imprimir
 interpretaci
 interval
+intentemos
+imaginar
+igualamos
+insalvable
+imposibilidad
 Dependencia
 Dropbox
 Dataview
@@ -4301,6 +4357,8 @@ Dentro
 Desarrollando
 Describe
 Dictado
+Demuestre
+Determine
 Remotely
 Raz
 Revisa
@@ -4424,6 +4482,7 @@ Restricci
 Resubida
 Resolver
 Rebase
+Representaci
 Hider
 Hace
 Herramientas
@@ -4572,6 +4631,7 @@ fraccionales
 falso
 frecuente
 futuro
+ficamente
 haya
 hace
 hacer
@@ -4616,6 +4676,7 @@ hider
 heredando
 hora
 horizontales
+haciendo
 que
 quedan
 queda
@@ -4674,6 +4735,7 @@ UY
 UL
 Uni
 Ubicar
+Utilizando
 Nombre
 Notas
 No
@@ -4801,6 +4863,7 @@ ortograf
 observaci
 omisi
 omitir
+obtenemos
 junto
 json
 jer
