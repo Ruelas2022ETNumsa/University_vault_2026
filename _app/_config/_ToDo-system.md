@@ -9,7 +9,7 @@ related_notes:
   - "[[_sync-system]]"
 tags: [beacon, todo, plugins, infraestructura]
 date_created: 2026-05-29
-date_updated: 2026-05-30
+date_updated: 2026-06-03
 status: activo
 ---
 
@@ -97,6 +97,9 @@ status: activo
 
 ### LaTeX
 - [x] Crear `latex_guide.md` en `_app/_appnotes/` — referencia de comandos frecuentes para ETN806, snippets de Completr y atajos de Quick LaTeX documentados
+
+### NotebookLM — prompts por materia
+- [ ] Crear prompt de configuración para cada materia nueva siguiendo el modelo de Cálculo 1 (`_notebooklm-prompt.md`) — definir modos, stack de libros, programa y mapeo tema → libro prioritario. Ver [[notebooklm_modes]] para referencia de estructura.
 
 ### Fase 4 — DataView
 - [ ] Instalar Dataview

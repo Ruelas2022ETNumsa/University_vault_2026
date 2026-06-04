@@ -12,6 +12,23 @@ date_created: 2026-06-03
 status: activo
 ---
 
+## Descripción general
+
+Prompt de configuración para el notebook de Cálculo 1 en NotebookLM.
+Define el comportamiento del tutor, los modos de respuesta disponibles,
+las reglas de sintaxis para visualizaciones y la prioridad de fuentes
+según el programa de la materia.
+
+**Modos disponibles:** Explicación de concepto · Ejercicio resuelto ·
+Ejercicio rápido · Dictado para Obsidian · Revisión de nota.
+
+**Visualizaciones:** Desmos como primera opción, TikZJax para casos
+que Desmos no puede representar.
+
+**Fuentes:** 7 libros de Cálculo 1 + guías técnicas de Desmos y TikZJax.
+Cada tema del programa tiene libro prioritario asignado.
+
+> Ver triggers y ejemplos de uso: [[notebooklm_modes]]
 
 
 ```prompt
