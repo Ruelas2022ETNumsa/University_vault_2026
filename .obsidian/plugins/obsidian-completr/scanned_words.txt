@@ -161,6 +161,7 @@ te
 traer
 tenemos
 trivial
+tengan
 ToDo
 Templater
 Text
@@ -844,6 +845,7 @@ graficable
 gran
 graficando
 gico
+gente
 body
 beacon
 bat
@@ -1170,6 +1172,9 @@ significar
 satisfaga
 src
 style
+solid
+simplifica
+simplificada
 vault
 vil
 ver
@@ -1546,6 +1551,9 @@ abreviaci
 amos
 acerca
 allowfullscreen
+aplique
+aclarar
+agujero
 related
 recomendados
 ribbon
@@ -1791,6 +1799,10 @@ resubir
 remota
 refuerzo
 radius
+reagrupar
+reescribe
+removible
+razones
 notes
 notas
 nuevas
@@ -2922,6 +2934,7 @@ Edita
 Ejecuta
 Existen
 Examen
+Expresi
 Obsidian
 OmniSearch
 Ocultar
@@ -3348,6 +3361,7 @@ proca
 probar
 pues
 prdian
+parece
 min
 mica
 movimiento
@@ -3531,6 +3545,7 @@ method
 moslos
 medida
 mucho
+mezcla
 YAML
 Ya
 You
@@ -3871,6 +3886,9 @@ explota
 excluido
 existir
 exisitir
+elegante
+ex
+excluyen
 Motor
 Media
 Mantiene
@@ -3946,6 +3964,7 @@ Mode
 Multiplicativo
 Multiplicamos
 Multiplicando
+Mucha
 Lectura
 LaTeX
 Linter
@@ -4098,6 +4117,9 @@ licamente
 llamada
 ltimos
 llam
+luego
+limpiamente
+llegues
 incluyendo
 im
 instalar
@@ -4382,6 +4404,7 @@ Describe
 Dictado
 Demuestre
 Determine
+Denominador
 Remotely
 Raz
 Revisa
@@ -4532,6 +4555,7 @@ Hereda
 Hip
 Hay
 Hallar
+Hac
 filtrar
 formato
 faltantes
@@ -4656,6 +4680,7 @@ frecuente
 futuro
 ficamente
 funcionar
+frameborder
 haya
 hace
 hacer
@@ -4803,6 +4828,7 @@ NEA
 NUM
 NOTACI
 Neutros
+Numerador
 originales
 observatory
 oficial
@@ -4918,6 +4944,7 @@ Qf
 QS
 QW
 Quedarte
+Queremos
 ya
 yaml
 yo
