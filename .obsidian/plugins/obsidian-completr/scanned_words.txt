@@ -474,6 +474,7 @@ Preguntar
 Primero
 Parece
 Profundizar
+Prompt
 del
 date
 de
@@ -747,6 +748,7 @@ VALOR
 Vw
 VB
 VA
+Visualizaciones
 galaxy
 gina
 genes
@@ -1224,6 +1226,7 @@ verticales
 verifican
 verdadero
 variedad
+visualizaciones
 audience
 activo
 auto
@@ -1502,6 +1505,7 @@ ala
 aladas
 aplicaci
 anclada
+asignado
 related
 recomendados
 ribbon
@@ -2693,6 +2697,7 @@ FICOS
 Formar
 Factorizando
 Finalmente
+Fuentes
 Estado
 Excalidraw
 EPUBs
@@ -3245,6 +3250,8 @@ precisas
 progresivos
 pedidos
 prioriza
+programa
+prioritario
 min
 mica
 movimiento
