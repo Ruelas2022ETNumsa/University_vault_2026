@@ -1,41 +1,51 @@
---- start-multi-column: cornell-001
-```column-settings
-number of columns: 2
-column size: [60%, 40%]
-border: off
+
+```desmos-graph
+left=-0.5; right=5.5;
+bottom=-1; top=24;
+---
+
+y=x^2
+y=x
+
+y>=x
+y<=x^2
+x>=2
+x<=4
+
+x=2
+x=4
 ```
 
-📝 **Desarrollo**
 
-Sea $a,b,c \in \mathbb{R}$.
+```desmos-graph
+left=-0.5; right=5.5;
+bottom=-1; top=24;
+---
 
-1. **Clausura**
-	- $a+b \in \mathbb{R}$
-	- $a\cdot b \in \mathbb{R}$
-2. **Conmutatividad**
-	- Suma: $a+b=b+a$
-	- Producto: $a\cdot b=b\cdot a$
-3. **Asociatividad**
-	- Suma: $(a+b)+c=a+(b+c)$
-	- Producto: $(a\cdot b)\cdot c=a\cdot(b\cdot c)$
-4. **Existencia de neutros**
-	- Neutro aditivo: $\exists\,0\in\mathbb{R}: a+0=a$
-	- Neutro multiplicativo: $\exists\,1\in\mathbb{R}: a\cdot1=a$
-5. **Existencia de negativos**
-	- $\forall\,a\in\mathbb{R},\ \exists\,(-a)\in\mathbb{R}: a+(-a)=0$
-6. **Existencia de inversos**
-	- $\forall\,a\in\mathbb{R},\ a\neq0,\ \exists\,a^{-1}\in\mathbb{R}: a\cdot a^{-1}=1$
-7. **Distributividad**
-	- $a(b+c)=ab+ac$
+y=x^2
+y=x
 
---- end-column ---
+y>=x
+y<=x^2
+x>=2
+x<=4
 
-🔑 **Claves**
+x=2
+x=4
 
-- $\mathbb{R}$ es un **cuerpo** — cerrado bajo suma y producto
-- Neutros: $0$ para suma, $1$ para producto
-- Todo real tiene opuesto $(-a)$; todo real no nulo tiene inverso $a^{-1}$
-- Distributividad conecta suma y producto
-- Resta y división **no** son axiomas — se derivan
+x=2 \{2<=y<=4\}
+x=4 \{4<=y<=16\}
+```
 
---- end-multi-column
+
+```desmos-graph
+left=-0.5; right=5.5;
+bottom=-1; top=24;
+---
+
+y=x^2
+y=x
+
+x<=4 \{y>=x , y<=x^2\}
+x>=2 \{y>=x , y<=x^2\}
+```
