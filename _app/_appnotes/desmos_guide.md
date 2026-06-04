@@ -279,9 +279,9 @@ Región entre $\sqrt{x}$ y $\frac{x+1}{2}$, mostrando que la media aritmética s
 left=-2; right=5; bottom=-1; top=4;
 width=500; height=300;
 ---
-y=\sqrt{x}|x>=0|#2d70b3
+y=x^(0.5)|x>=0|#2d70b3
 y=(x+1)/2|#c74440
-y<=(x+1)/2|y>=\sqrt{x}|x>=0|#b2f2bb
+y<=(x+1)/2|y>=x^(0.5)|x>=0|#b2f2bb
 (1,1)|label:Igualdad si a=b|#000000
 ```
 
