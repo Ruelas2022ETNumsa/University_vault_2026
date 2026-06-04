@@ -2334,6 +2334,7 @@ conflictos
 conflicto
 conflictivo
 conservar
+cerrada
 updated
 un
 universo
