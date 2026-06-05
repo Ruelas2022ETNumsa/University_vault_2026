@@ -163,6 +163,9 @@ tenemos
 trivial
 tengan
 tempranas
+tenerla
+tomado
+tricas
 ToDo
 Templater
 Text
@@ -254,6 +257,7 @@ TICO
 Transcripci
 Triggers
 Trascendentes
+Temas
 Sistema
 Sync
 Save
@@ -376,6 +380,8 @@ Supongamos
 Simplificaci
 Sumamos
 Sup
+Soportan
+Sigue
 Plugins
 Pendientes
 Plugin
@@ -737,6 +743,9 @@ decorativa
 destruye
 desafiantes
 divididos
+descarga
+desanclar
+distinta
 Vault
 Verificar
 Variables
@@ -776,6 +785,8 @@ Vw
 VB
 VA
 Visualizaciones
+Viczian
+Verifica
 galaxy
 gina
 genes
@@ -852,6 +863,7 @@ gran
 graficando
 gico
 gente
+globales
 body
 beacon
 bat
@@ -1181,6 +1193,8 @@ style
 solid
 simplifica
 simplificada
+script
+secundario
 vault
 vil
 ver
@@ -1561,6 +1575,9 @@ aplique
 aclarar
 agujero
 append
+anotadas
+adecuado
+aporte
 related
 recomendados
 ribbon
@@ -1813,6 +1830,12 @@ razones
 reemplazo
 rigurosa
 reservado
+relacionados
+reorganizan
+recursiva
+resolv
+respetarse
+reformula
 notes
 notas
 nuevas
@@ -1938,6 +1961,7 @@ ntotas
 ntota
 none
 ntegro
+nticamente
 created
 commit
 cada
@@ -2402,6 +2426,13 @@ colapsa
 conductor
 cierren
 ciles
+caben
+cantidad
+comunidad
+crecer
+configura
+cinco
+claramente
 updated
 un
 universo
@@ -2458,6 +2489,7 @@ unidad
 uni
 unico
 utiliza
+universitario
 Galaxy
 Git
 Gr
@@ -2493,6 +2525,8 @@ GZ
 Generar
 GRAFICA
 Generalizando
+Granularidad
+Genera
 Convenci
 Creaci
 Commander
@@ -2666,6 +2700,8 @@ Conflictos
 Combinar
 Cualquiera
 Contradicci
+Coloreo
+Compatible
 Instalados
 Instalado
 Instalar
@@ -2740,6 +2776,8 @@ Imagin
 Identifique
 Indefinido
 Indeterminado
+Instalaci
+Identifica
 Funci
 File
 Fase
@@ -2803,6 +2841,7 @@ Formar
 Factorizando
 Finalmente
 Fuentes
+Forzar
 Estado
 Excalidraw
 EPUBs
@@ -2949,6 +2988,10 @@ Examen
 Expresi
 Ediciones
 Ed
+Ejecutar
+Expandir
+Extracci
+Ese
 Obsidian
 OmniSearch
 Ocultar
@@ -3113,6 +3156,9 @@ Aditivo
 Aplicaci
 Aplicamos
 Ambigüedad
+Atajos
+Agrupaci
+Attachments
 push
 pull
 para
@@ -3377,6 +3423,14 @@ pues
 prdian
 parece
 pas
+persistente
+pergamino
+preconfigurado
+pocas
+personalizaci
+preguntar
+pedag
+prompts
 min
 mica
 movimiento
@@ -3562,6 +3616,8 @@ medida
 mucho
 mezcla
 merge
+ma
+mapeado
 YAML
 Ya
 You
@@ -3905,6 +3961,11 @@ exisitir
 elegante
 ex
 excluyen
+extensos
+extenso
+encajan
+especifique
+ense
 Motor
 Media
 Mantiene
@@ -3981,6 +4042,7 @@ Multiplicativo
 Multiplicamos
 Multiplicando
 Mucha
+Misma
 Lectura
 LaTeX
 Linter
@@ -4137,6 +4199,7 @@ luego
 limpiamente
 llegues
 lingü
+libremente
 incluyendo
 im
 instalar
@@ -4330,6 +4393,11 @@ imposibilidad
 indeterminaci
 iframe
 indicadas
+interfaz
+indicador
+infiere
+interpretar
+intuitivo
 Dependencia
 Dropbox
 Dataview
@@ -4700,6 +4768,9 @@ futuro
 ficamente
 funcionar
 frameborder
+frecuencia
+fricci
+frases
 haya
 hace
 hacer
@@ -4746,6 +4817,8 @@ hora
 horizontales
 haciendo
 hilo
+hijo
+hermano
 que
 quedan
 queda
@@ -4848,6 +4921,7 @@ NUM
 NOTACI
 Neutros
 Numerador
+Nuevo
 originales
 observatory
 oficial
@@ -4952,6 +5026,7 @@ jg
 jKru
 justificando
 junio
+justificado
 Qu
 Qui
 Quick
@@ -5037,6 +5112,7 @@ Zoom
 Zona
 Zorich
 ZzPef
+Zsolt
 zona
 zonas
 zT
