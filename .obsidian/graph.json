@@ -1,13 +1,13 @@
 {
-  "collapse-filter": false,
-  "search": "mat101",
-  "showTags": false,
-  "showAttachments": false,
+  "collapse-filter": true,
+  "search": "",
+  "showTags": true,
+  "showAttachments": true,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": false,
+  "collapse-color-groups": true,
   "colorGroups": [],
-  "collapse-display": true,
+  "collapse-display": false,
   "showArrow": false,
   "textFadeMultiplier": 0,
   "nodeSizeMultiplier": 1.34838229321782,
@@ -17,6 +17,6 @@
   "repelStrength": 11.0735075131989,
   "linkStrength": 1,
   "linkDistance": 30,
-  "scale": 0.5087618773822206,
+  "scale": 0.13168723643322375,
   "close": false
 }
