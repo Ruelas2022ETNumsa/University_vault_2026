@@ -20,7 +20,14 @@
   ],
   "rightRibbon": [],
   "titleBar": [],
-  "statusBar": [],
+  "statusBar": [
+    {
+      "id": "obsidian-style-settings:style-settings-class-toggle-desmos-editor-hide-desmos-editor",
+      "icon": "lucide-eye-off",
+      "name": "Style Settings: Toggle Ocultar Desmos en modo edición",
+      "mode": "any"
+    }
+  ],
   "pageHeader": [],
   "macros": [],
   "explorer": [],
