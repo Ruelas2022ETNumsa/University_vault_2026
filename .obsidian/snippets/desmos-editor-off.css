@@ -30,14 +30,8 @@
 
 .markdown-reading-view .block-language-desmos-graph::before {
     display: none !important;
-}
+}*/
 
-
-/* === DESMOS: ocultar en modo edición === */
-.markdown-source-view .block-language-desmos-graph svg {
-    display: none !important;
-    transition: display 0s;
-}
 
 .markdown-source-view .block-language-desmos-graph {
     background-color: rgba(255, 170, 0, 0.08) !important;
@@ -47,25 +41,26 @@
 }
 
 .markdown-source-view .block-language-desmos-graph::before {
-    content: "📈 gráfico desmos — mantén cursor 2s para previsualizar";
+    content: "📈 desmos oculto — pausa el cursor 2s para ver";
     display: block !important;
     color: orange !important;
     font-size: 12px !important;
     font-family: monospace !important;
 }
 
-/* Hover con delay de 2 segundos — anti-accidente */
+.markdown-source-view .block-language-desmos-graph svg {
+    max-height: 0 !important;
+    overflow: hidden !important;
+    opacity: 0 !important;
+    transition: opacity 0.3s ease 2s, max-height 0s ease 2s !important;
+}
+
 .markdown-source-view .block-language-desmos-graph:hover svg {
-    display: block !important;
-    animation: desmosReveal 0s 2s forwards;
+    max-height: 600px !important;
+    opacity: 1 !important;
+    transition: opacity 0.3s ease 2s, max-height 0s ease 2s !important;
 }
 
-@keyframes desmosReveal {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Lectura: normal */
 .markdown-reading-view .block-language-desmos-graph {
     background-color: unset !important;
     border-left: unset !important;
@@ -74,3 +69,4 @@
 .markdown-reading-view .block-language-desmos-graph::before {
     display: none !important;
 }
+
