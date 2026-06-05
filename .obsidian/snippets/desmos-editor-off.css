@@ -1,28 +1,33 @@
 /* Ocultar el SVG de desmos en modo edición */
-/* .markdown-source-view .block-language-desmos-graph svg {
+ .markdown-source-view .block-language-desmos-graph svg {
     display: none !important;
 }
- */
+ 
 /* Mostrar el bloque de código crudo debajo */
-/* .markdown-source-view .block-language-desmos-graph::before {
+ .markdown-source-view .block-language-desmos-graph::before {
     content: "⚠ desmos oculto — edita el código arriba";
     display: block;
     color: orange;
     font-size: 12px;
     padding: 4px;
-} */
+} 
+
+
+
+
+
 
 /* En modo edición, colapsar desmos a una tira pequeña */
-.markdown-source-view .block-language-desmos-graph {
+/*.markdown-source-view .block-language-desmos-graph {
     max-height: 40px !important;
     overflow: hidden !important;
     opacity: 0.3 !important;
     cursor: pointer;
-}
+}*/
 
 /* Al pasar el mouse, mostrar completo */
-.markdown-source-view .block-language-desmos-graph:hover {
+/*.markdown-source-view .block-language-desmos-graph:hover {
     max-height: 600px !important;
     overflow: visible !important;
     opacity: 1 !important;
-}
+}*/
