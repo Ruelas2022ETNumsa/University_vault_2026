@@ -1,0 +1,18 @@
+/* Centrar el gráfico */
+.desmos-graph {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Sombra sutil para que el gráfico no flote suelto en la página */
+/*.markdown-reading-view .desmos-graph {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+}
+
+/* Espaciado vertical para que no quede pegado al texto */
+/*.block-language-desmos-graph {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
