@@ -1,16 +1,52 @@
+/* === DESMOS: ocultar en modo edición === */
+
+/* Ocultar el SVG completamente */
+.markdown-source-view .block-language-desmos-graph svg {
+    display: none !important;
+}
+
+/* Mostrar etiqueta en su lugar */
+.markdown-source-view .block-language-desmos-graph {
+    background-color: rgba(255, 170, 0, 0.08) !important;
+    border-left: 3px solid orange !important;
+    padding: 6px 10px !important;
+    border-radius: 4px !important;
+}
+
+.markdown-source-view .block-language-desmos-graph::before {
+    content: "📈 gráfico desmos — modo lectura para ver";
+    display: block !important;
+    color: orange !important;
+    font-size: 12px !important;
+    font-family: monospace !important;
+}
+
+/* En modo lectura: mostrar normal sin decoración */
+.markdown-reading-view .block-language-desmos-graph {
+    background-color: unset !important;
+    border-left: unset !important;
+    padding: unset !important;
+}
+
+.markdown-reading-view .block-language-desmos-graph::before {
+    display: none !important;
+}
+
+
+
 /* Ocultar el SVG de desmos en modo edición */
- .markdown-source-view .block-language-desmos-graph svg {
+ /*.markdown-source-view .block-language-desmos-graph svg {
     display: none !important;
 }
  
 /* Mostrar el bloque de código crudo debajo */
- .markdown-source-view .block-language-desmos-graph::before {
+ /*.markdown-source-view .block-language-desmos-graph::before {
     content: "⚠ desmos oculto — edita el código arriba";
     display: block;
     color: orange;
     font-size: 12px;
     padding: 4px;
-} 
+}
 
 
 
@@ -23,11 +59,11 @@
     overflow: hidden !important;
     opacity: 0.3 !important;
     cursor: pointer;
-}*/
+}
 
 /* Al pasar el mouse, mostrar completo */
 /*.markdown-source-view .block-language-desmos-graph:hover {
     max-height: 600px !important;
     overflow: visible !important;
     opacity: 1 !important;
-}*/
+}
