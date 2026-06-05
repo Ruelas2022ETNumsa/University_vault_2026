@@ -8,8 +8,9 @@
   "promptDelete": false,
   "attachmentFolderPath": "_assets",
   "alwaysUpdateLinks": true,
-  "readableLineLength": true,
+  "readableLineLength": false,
   "showLineNumber": true,
   "vimMode": false,
-  "userIgnoreFilters": null
+  "userIgnoreFilters": null,
+  "strictLineBreaks": false
 }
