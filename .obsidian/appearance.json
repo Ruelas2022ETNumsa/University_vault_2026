@@ -1,5 +1,5 @@
 {
-  "showViewHeader": true,
+  "showViewHeader": false,
   "showRibbon": true,
   "accentColor": "",
   "nativeMenus": false,
@@ -8,5 +8,6 @@
   "enabledCssSnippets": [
     "print",
     "desmos-editor-off"
-  ]
+  ],
+  "cssTheme": "Minimal"
 }
