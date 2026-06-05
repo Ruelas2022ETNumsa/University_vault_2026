@@ -25,7 +25,10 @@
   "macros": [],
   "explorer": [],
   "hide": {
-    "statusbar": [],
+    "statusbar": [
+      "remotely-save",
+      "mysnippets-plugin"
+    ],
     "leftRibbon": [
       "Templater"
     ]

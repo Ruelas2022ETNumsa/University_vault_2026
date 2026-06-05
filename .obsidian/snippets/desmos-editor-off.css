@@ -1,3 +1,59 @@
+/* @settings
+
+name: Desmos Editor
+id: desmos-editor
+settings:
+    -
+        id: hide-desmos-editor
+        title: Ocultar Desmos en modo edición
+        description: Muestra solo la etiqueta naranja mientras editas
+        type: class-toggle
+        default: true
+        addCommand: true
+
+*/
+
+/* El CSS que ya tienes, pero condicionado a la clase */
+.hide-desmos-editor .markdown-source-view .block-language-desmos-graph {
+    background-color: rgba(255, 170, 0, 0.08) !important;
+    border-left: 3px solid orange !important;
+    padding: 6px 10px !important;
+    border-radius: 4px !important;
+}
+
+.hide-desmos-editor .markdown-source-view .block-language-desmos-graph::before {
+    content: "📈 desmos oculto — pausa el cursor 2s para ver";
+    display: block !important;
+    color: orange !important;
+    font-size: 12px !important;
+    font-family: monospace !important;
+}
+
+.hide-desmos-editor .markdown-source-view .block-language-desmos-graph svg {
+    max-height: 0 !important;
+    overflow: hidden !important;
+    opacity: 0 !important;
+    transition: opacity 0.3s ease 2s, max-height 0s ease 2s !important;
+}
+
+.hide-desmos-editor .markdown-source-view .block-language-desmos-graph:hover svg {
+    max-height: 600px !important;
+    opacity: 1 !important;
+    transition: opacity 0.3s ease 2s, max-height 0s ease 2s !important;
+}
+
+.markdown-reading-view .block-language-desmos-graph {
+    background-color: unset !important;
+    border-left: unset !important;
+    padding: unset !important;
+}
+.markdown-reading-view .block-language-desmos-graph::before {
+    display: none !important;
+}
+
+
+/*---------------version 1 -------------*/
+
 /* === DESMOS: ocultar en modo edición === */
 
 /* Ocultar el SVG completamente */
@@ -30,8 +86,15 @@
 
 .markdown-reading-view .block-language-desmos-graph::before {
     display: none !important;
-}*/
+}
 
+/*---------------version 1 -------------*/
+
+
+
+
+
+/*---------------version 2 -------------
 
 .markdown-source-view .block-language-desmos-graph {
     background-color: rgba(255, 170, 0, 0.08) !important;
@@ -70,3 +133,4 @@
     display: none !important;
 }
 
+---------------version 2 -------------*/
