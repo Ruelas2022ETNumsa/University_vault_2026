@@ -162,6 +162,7 @@ traer
 tenemos
 trivial
 tengan
+tempranas
 ToDo
 Templater
 Text
@@ -252,6 +253,7 @@ TRANSCRIPCI
 TICO
 Transcripci
 Triggers
+Trascendentes
 Sistema
 Sync
 Save
@@ -490,6 +492,7 @@ Prompt
 Programa
 Prevenir
 Partimos
+Puente
 del
 date
 de
@@ -731,6 +734,9 @@ devuelve
 demuestre
 demostracion
 decorativa
+destruye
+desafiantes
+divididos
 Vault
 Verificar
 Variables
@@ -1554,6 +1560,7 @@ allowfullscreen
 aplique
 aclarar
 agujero
+append
 related
 recomendados
 ribbon
@@ -1803,6 +1810,9 @@ reagrupar
 reescribe
 removible
 razones
+reemplazo
+rigurosa
+reservado
 notes
 notas
 nuevas
@@ -1927,6 +1937,7 @@ naturalmente
 ntotas
 ntota
 none
+ntegro
 created
 commit
 cada
@@ -2390,6 +2401,7 @@ conmutatividad
 colapsa
 conductor
 cierren
+ciles
 updated
 un
 universo
@@ -2935,6 +2947,8 @@ Ejecuta
 Existen
 Examen
 Expresi
+Ediciones
+Ed
 Obsidian
 OmniSearch
 Ocultar
@@ -3362,6 +3376,7 @@ probar
 pues
 prdian
 parece
+pas
 min
 mica
 movimiento
@@ -3546,6 +3561,7 @@ moslos
 medida
 mucho
 mezcla
+merge
 YAML
 Ya
 You
@@ -4120,6 +4136,7 @@ llam
 luego
 limpiamente
 llegues
+lingü
 incluyendo
 im
 instalar
@@ -4312,6 +4329,7 @@ insalvable
 imposibilidad
 indeterminaci
 iframe
+indicadas
 Dependencia
 Dropbox
 Dataview
@@ -4529,6 +4547,7 @@ Resubida
 Resolver
 Rebase
 Representaci
+Reservado
 Hider
 Hace
 Herramientas
@@ -4916,6 +4935,7 @@ omisi
 omitir
 obtenemos
 ocurren
+opini
 junto
 json
 jer
@@ -4931,6 +4951,7 @@ jL
 jg
 jKru
 justificando
+junio
 Qu
 Qui
 Quick
