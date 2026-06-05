@@ -1,7 +1,6 @@
 [
   "obsidian-git",
   "remotely-save",
-  "tags-routes",
   "obsidian-desmos",
   "obsidian-annotator",
   "omnisearch",
@@ -12,7 +11,6 @@
   "obsidian-excalidraw-plugin",
   "templater-obsidian",
   "cmdr",
-  "OA-file-hider",
   "obsidian-completr",
   "quick-latex",
   "dataview",
@@ -20,6 +18,5 @@
   "multi-column-markdown",
   "table-editor-obsidian",
   "attachment-management",
-  "mysnippets-plugin",
   "obsidian-style-settings"
 ]

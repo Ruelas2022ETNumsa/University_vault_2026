@@ -1,5 +1,5 @@
 {
-  "hidden": true,
+  "hidden": false,
   "hiddenList": [
     "_app/_config/tagroute_parche/patch-obsidian.ps1",
     "_app/_config/tagroute_parche/patch-obsidian.bat",
