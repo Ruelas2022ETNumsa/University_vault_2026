@@ -1,0 +1,9 @@
+/* Solo ocultar desmos en modo edición / live preview */
+.markdown-source-view.mod-cm6 .desmos-graph {
+    display: none !important;
+}
+
+/* En modo lectura sí mostrar */
+.markdown-reading-view .desmos-graph {
+    display: block;
+}
