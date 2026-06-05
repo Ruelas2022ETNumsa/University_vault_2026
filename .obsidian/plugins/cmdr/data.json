@@ -32,6 +32,24 @@
       "icon": "lucide-layers",
       "name": "Toggle stacked tabs",
       "mode": "any"
+    },
+    {
+      "id": "workspace:copy-full-path",
+      "icon": "lucide-hard-drive",
+      "name": "Copy current file path from system root",
+      "mode": "any"
+    },
+    {
+      "id": "editor:toggle-source",
+      "icon": "lucide-code-2",
+      "name": "Toggle Live Preview/Source mode",
+      "mode": "any"
+    },
+    {
+      "id": "workspace:split-vertical",
+      "icon": "lucide-separator-vertical",
+      "name": "Split right",
+      "mode": "any"
     }
   ],
   "pageHeader": [],
