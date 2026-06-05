@@ -1,16 +1,3 @@
----
-title: "Library System — Book Search Protocol"
-galaxy_body: beacon
-scope: vault
-audience: [claude]
-related_notes:
-  - "[[_pdf-system]]"
-  - "[[_galaxy-system]]"
-tags: [beacon, libros, notebooklm, bibliografía]
-date_created: 2026-01-01
-date_updated: 2026-05-30
-status: activo
----
 # 📚 LIBRARY SYSTEM — Book Search Protocol
 
 ## Propósito
@@ -35,11 +22,11 @@ Si alguno de estos tres puntos falta, pedirlo antes de continuar.
 
 El stack final debe cubrir exactamente estos tres roles. No más, no menos:
 
-| Rol                      | Cantidad ideal                 | Descripción                                                           |
-| ------------------------ | ------------------------------ | --------------------------------------------------------------------- |
-| **Teoría + Ejemplos**    | 1 libro principal + 1 riguroso | Cubre todo el temario con explicaciones y ejemplos resueltos          |
-| **Problemas resueltos**  | 1-2 libros                     | Solo ejercicios con soluciones paso a paso, sin teoría necesariamente |
-| **Complemento opcional** | 2 o 3 libros máximo            | Solo si existe un hueco real que los anteriores no cubren             |
+| Rol | Cantidad ideal | Descripción |
+|---|---|---|
+| **Teoría + Ejemplos** | 1 libro principal + 1 riguroso | Cubre todo el temario con explicaciones y ejemplos resueltos |
+| **Problemas resueltos** | 1-2 libros | Solo ejercicios con soluciones paso a paso, sin teoría necesariamente |
+| **Complemento opcional** | 1 libro máximo | Solo si existe un hueco real que los anteriores no cubren |
 
 ---
 
@@ -99,10 +86,10 @@ Complemento        → [Libro] (solo si hay hueco real)
 Y un flujo de uso:
 
 ```
-Tema nuevo        → [libro de teoría principal]
+Tema nuevo           → [libro de teoría principal]
 No entiendo el fondo → [libro riguroso]
-A practicar       → [libro de problemas estándar]
-Quiero más reto   → [libro de problemas difíciles]
+A practicar          → [libro de problemas estándar]
+Quiero más reto      → [libro de problemas difíciles]
 ```
 
 ---
@@ -125,32 +112,86 @@ Cuando el usuario inicie una búsqueda de libros, usar este orden:
 ### Cálculo 1 — Ingeniería (2026)
 
 **Stack NotebookLM:**
-- Calculus: Early Transcendentals, 9th Edition, Metric Version — James Stewart — 9na ed.
-- Cálculo — Tom M. Apostol — Vol. 1, 2da ed.
-- Differential and Integral Calculus — N. Piskunov — Vol. 1, 2da ed.
-- Schaum's 3,000 Solved Problems in Calculus — Elliott Mendelson — 1ra ed.
-- Problems in Calculus of One Variable — I.A. Maron — cualquier edición
-- A Course of Mathematical Analysis (Problems) — B.P. Demidovich — cualquier edición
-- Thomas' Calculus — George B. Thomas, Joel Hass, Christopher Heil, Maurice Weir — 14va ed.
+
+| Archivo en disco | Rol |
+|---|---|
+| Stewart, James - Calculus Early Transcendentals 9th Ed Metric (único archivo) | Teoría principal (inglés) |
+| Stewart, James 7ed-Cálculo en una variable. Trascendentes tempranas-1to4 | Puente lingüístico español (temas 1-4) |
+| Stewart, James 7ed-Cálculo en una variable. Trascendentes tempranas-5to8 | Puente lingüístico español (temas 5-8) |
+| Stewart, James 7ed-Cálculo en una variable. Trascendentes tempranas-9to11 | Puente lingüístico español (temas 9-11) |
+| Apostol-Calculus Vol.1 2ed-1to7 | Teoría rigurosa (temas 1-7) |
+| Apostol-Calculus Vol.1 2ed-8to16 | Teoría rigurosa (temas 8-16) |
+| Thomas 14th ed-Calculus-1to6 | Segunda opinión (temas 1-6) |
+| Thomas 14th ed-Calculus-7to12 | Segunda opinión (temas 7-12) |
+| Thomas 14th ed-Calculus-13to17 | Reservado para Cálculo 2/3 |
+| Piskunov-Differential and Integral Calculus Vol.1 2ed | Teoría rigurosa soviética |
+| Mendelson-Schaum's 3000 Solved Problems in Calculus 1ed | Problemas estándar |
+| Maron-Problems in Calculus of One Variable | Problemas difíciles |
+| Demidovich-Problems in Mathematical Analysis | Problemas desafiantes / series |
 
 **Referencia rápida (fuera de NotebookLM):**
 - Larson Calculus Cheat Sheet
 
+**Mapa de archivos divididos:**
+```
+Apostol Vol.1 2ed   → 1to7  | 8to16
+Thomas 14th ed      → 1to6  | 7to12 | 13to17
+Stewart 7ma español → 1to4  | 5to8  | 9to11
+```
+
+**Prompt de NotebookLM — tabla de fuentes por tema:**
+```
+── PROGRAMA Y LIBROS POR TEMA ──
+Priorizá estos libros según el tema consultado. Para ejercicios,
+siempre Schaum's, Maron y Demidovich son válidos en cualquier tema.
+El Stewart 7ma en español actúa como puente lingüístico — usarlo
+para confirmar terminología en español o cuando se prefiera
+explicación en ese idioma.
+
+── MAPA DE ARCHIVOS ──
+Apostol Vol.1 2ed     → 1to7 | 8to16
+Thomas 14th ed        → 1to6 | 7to12 | 13to17
+Stewart 7ma español   → 1to4 | 5to8  | 9to11
+Stewart 9na ET        → archivo único
+Piskunov Vol.1        → archivo único
+Schaum's 3000         → archivo único
+Maron                 → archivo único
+Demidovich            → archivo único
+
+── LIBROS POR TEMA ──
+| Tema                        | Parcial | Primera fuente          | Segunda fuente       | Respaldo español      |
+|-----------------------------|---------|-------------------------|----------------------|-----------------------|
+| Funciones reales            | 1P      | Stewart 9na             | Thomas (1to6)        | Stewart 7ma (1to4)    |
+| Límites y continuidad       | 1P      | Stewart 9na             | Apostol (1to7)       | Stewart 7ma (1to4)    |
+| Derivación                  | 2P      | Stewart 9na             | Piskunov             | Stewart 7ma (1to4)    |
+| Aplicaciones de derivación  | 2P      | Thomas (1to6)           | Stewart 9na          | Stewart 7ma (5to8)    |
+| Integración                 | 3P      | Stewart 9na             | Piskunov             | Stewart 7ma (5to8)    |
+| Aplicaciones de integración | 3P      | Thomas (7to12)          | Stewart 9na          | Stewart 7ma (5to8)    |
+| Series reales               | extra   | Apostol (8to16)         | Piskunov             | Stewart 7ma (9to11)   |
+
+Apostol como primera fuente solo cuando el usuario pida rigor
+formal o demostración. Para series, Apostol es siempre primera
+opción.
+
+── NOTA SOBRE ARCHIVOS DIVIDIDOS ──
+Cuando un libro está dividido en partes, consultá el rango
+correspondiente al tema. Si el tema cae entre dos rangos,
+consultá ambos archivos.
+```
+
 **Descartados y razón:**
 - Larson 11va ed. → redundante con Stewart
 - Larson Early Transcendental Functions 7va ed. → redundante con Stewart ET
+- Larson Hostetler Edwards "Essential Calculus ETF" → versión reducida, inferior a Stewart
 - Edwards & Penney 4ta ed. → redundante con Stewart
 - Briggs & Cochran 3ra ed. → redundante con Stewart
 - Spivak 4ta ed. → reemplazado por Apostol para ingeniería
 - Granville → desactualizado
 - Thomas, Finney 9na ed. → reemplazado por Thomas 14va
-- Larson Hostetler Edwards "Essential Calculus ETF" → versión reducida, inferior a Stewart
 - Bitsadze → física matemática, fuera del scope de Cálculo 1
+- Thomas 14va (13to17) → temas de Cálculo 2/3, reservado para esas materias
 
 ---
 
-%%
-galaxy-links
-[[_pdf-system]]
-[[_galaxy-system]]
-%%
+*Archivo generado como parte del sistema de gestión bibliográfica universitaria.*
+*Última actualización: junio 2026*
