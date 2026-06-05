@@ -1,5 +1,5 @@
 {
-  "confirmDeletion": true,
+  "confirmDeletion": false,
   "showAddCommand": true,
   "debug": false,
   "editorMenu": [],
@@ -25,12 +25,6 @@
       "id": "obsidian-style-settings:style-settings-class-toggle-desmos-editor-hide-desmos-editor",
       "icon": "lucide-eye-off",
       "name": "Style Settings: Toggle Ocultar Desmos en modo edición",
-      "mode": "any"
-    },
-    {
-      "id": "workspace:toggle-stacked-tabs",
-      "icon": "lucide-layers",
-      "name": "Toggle stacked tabs",
       "mode": "any"
     },
     {
