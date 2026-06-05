@@ -1,6 +1,5 @@
 [
   "obsidian-git",
-  "remotely-save",
   "obsidian-desmos",
   "obsidian-annotator",
   "omnisearch",
@@ -13,7 +12,6 @@
   "cmdr",
   "obsidian-completr",
   "quick-latex",
-  "dataview",
   "obsidian-tikzjax",
   "multi-column-markdown",
   "table-editor-obsidian",
