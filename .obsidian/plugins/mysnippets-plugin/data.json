@@ -1,7 +1,7 @@
 {
   "aestheticStyle": false,
   "snippetViewPosition": "left",
-  "openSnippetFile": true,
+  "openSnippetFile": false,
   "stylingTemplate": "",
-  "snippetEnabledStatus": false
+  "snippetEnabledStatus": true
 }
