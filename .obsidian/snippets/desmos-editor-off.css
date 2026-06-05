@@ -22,7 +22,7 @@ settings:
 }
 
 .hide-desmos-editor .markdown-source-view .block-language-desmos-graph::before {
-    content: "📈 desmos oculto — pausa el cursor 2s para ver";
+    content: "📈 Hover 1.5s to reveal";
     display: block !important;
     color: orange !important;
     font-size: 12px !important;
@@ -33,13 +33,15 @@ settings:
     max-height: 0 !important;
     overflow: hidden !important;
     opacity: 0 !important;
-    transition: opacity 0.3s ease 2s, max-height 0s ease 2s !important;
+    transition: opacity 0.3s ease 0.5s, max-height 0s ease 0.5s !important;
+	/*transition: opacity 0.3s ease 2s, max-height 0s ease 2s !important;*/
 }
 
 .hide-desmos-editor .markdown-source-view .block-language-desmos-graph:hover svg {
     max-height: 600px !important;
     opacity: 1 !important;
-    transition: opacity 0.3s ease 2s, max-height 0s ease 2s !important;
+	transition: opacity 0.3s ease 1.5s, max-height 0s ease 1.5s !important;
+/*    transition: opacity 0.3s ease 2s, max-height 0s ease 2s !important;*/
 }
 
 .markdown-reading-view .block-language-desmos-graph {
