@@ -90,20 +90,6 @@
 
 3.
 
-```tikz
-\begin{tikzpicture}[scale=1.2]
-\draw[->] (-0.5,0) -- (3,0) node[right] {$x$};
-\draw[->] (0,-0.5) -- (0,3) node[above] {$y$};
-
-\draw[dashed, gray] (-0.3,-0.3) -- (2.8,2.8) node[right] {$y=x$};
-
-\draw[thick, blue, domain=0.1:2.7, samples=100]
-  plot (\x, {ln(\x)+1.5}) node[right] {$y=f(x)$};
-
-\draw[thick, red, domain=0.1:2.7, samples=100]
-  plot ({ln(\x)+1.5}, \x) node[below] {$y=f^{-1}(x)$};
-\end{tikzpicture}
-```
 
 
 ```tikz
@@ -140,22 +126,6 @@ plot ({exp(\x-1.5)},\x);
 ---
 
 4.
-
-```tikz
-\begin{tikzpicture}[scale=1]
-\draw[->] (-3,0) -- (3,0) node[right] {$x$};
-\draw[->] (0,-2) -- (0,3) node[above] {$y$};
-
-\draw[thick, blue, domain=-2.5:0, samples=50]
-  plot (\x, {-\x});
-\draw[thick, blue, domain=0:2.5, samples=50]
-  plot (\x, {\x});
-
-\fill (0,0) circle(2pt);
-\node[below left] at (0,0) {$0$};
-\node[above right] at (1.5,1.5) {$y=|x|$};
-\end{tikzpicture}
-```
 
 
 
