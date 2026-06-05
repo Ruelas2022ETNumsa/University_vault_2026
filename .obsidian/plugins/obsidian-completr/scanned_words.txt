@@ -3054,6 +3054,7 @@ Extracci
 Ese
 Elementos
 Etiqueta
+Equivalente
 Obsidian
 OmniSearch
 Ocultar
@@ -3496,6 +3497,7 @@ preguntar
 pedag
 prompts
 pegue
+preferir
 min
 mica
 movimiento
@@ -4699,6 +4701,7 @@ Reservado
 Rama
 RLC
 Rellenar
+Recomendada
 Hider
 Hace
 Herramientas
@@ -4860,6 +4863,7 @@ fill
 filesystem
 fasor
 fragmentos
+fallar
 haya
 hace
 hacer
