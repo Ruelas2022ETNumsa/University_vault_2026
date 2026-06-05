@@ -22,7 +22,7 @@ settings:
 }
 
 .hide-desmos-editor .markdown-source-view .block-language-desmos-graph::before {
-    content: "📈 Hover 1.5s to reveal";
+    content: "📈 DESMOS: Hover 1.5s to reveal";
     display: block !important;
     color: orange !important;
     font-size: 12px !important;
