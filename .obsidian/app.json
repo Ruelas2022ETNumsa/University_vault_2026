@@ -1,14 +1,14 @@
 {
   "defaultViewMode": "preview",
   "showUnsupportedFiles": true,
-  "showInlineTitle": true,
+  "showInlineTitle": false,
   "propertiesInDocument": "source",
   "rightToLeft": false,
   "deleteUnlinkedAttachments": "always",
   "promptDelete": false,
   "attachmentFolderPath": "_assets",
   "alwaysUpdateLinks": true,
-  "readableLineLength": true,
+  "readableLineLength": false,
   "showLineNumber": true,
   "vimMode": false,
   "userIgnoreFilters": null
