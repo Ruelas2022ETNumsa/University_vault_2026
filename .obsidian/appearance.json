@@ -6,7 +6,6 @@
   "baseFontSize": 10,
   "baseFontSizeAction": true,
   "enabledCssSnippets": [
-    "print",
-    "desmos-editor-off"
+    "print"
   ]
 }
