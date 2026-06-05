@@ -166,6 +166,8 @@ tempranas
 tenerla
 tomado
 tricas
+tiny
+theta
 ToDo
 Templater
 Text
@@ -258,6 +260,9 @@ Transcripci
 Triggers
 Trascendentes
 Temas
+Tangente
+Tama
+Tri
 Sistema
 Sync
 Save
@@ -382,6 +387,10 @@ Sumamos
 Sup
 Soportan
 Sigue
+Segmento
+Superficie
+SOPORTADAS
+Sigma
 Plugins
 Pendientes
 Plugin
@@ -499,6 +508,8 @@ Programa
 Prevenir
 Partimos
 Puente
+Proyecci
+PQ
 del
 date
 de
@@ -746,6 +757,8 @@ divididos
 descarga
 desanclar
 distinta
+dibujada
+deseado
 Vault
 Verificar
 Variables
@@ -864,6 +877,9 @@ graficando
 gico
 gente
 globales
+gx
+generaci
+grilla
 body
 beacon
 bat
@@ -943,6 +959,9 @@ brevemente
 biun
 before
 basta
+baja
+build
+beta
 scope
 status
 selector
@@ -1195,6 +1214,9 @@ simplifica
 simplificada
 script
 secundario
+sube
+soportada
+simular
 vault
 vil
 ver
@@ -1286,6 +1308,8 @@ variedad
 visualizaciones
 vemos
 visto
+viridis
+vec
 audience
 activo
 auto
@@ -1579,6 +1603,11 @@ anotadas
 adecuado
 aporte
 asdsd
+amsmath
+amssymb
+americano
+asume
+alpha
 related
 recomendados
 ribbon
@@ -1837,6 +1866,11 @@ recursiva
 resolv
 respetarse
 reformula
+respetar
+rectangle
+rellena
+rellenar
+reemplazar
 notes
 notas
 nuevas
@@ -1963,6 +1997,8 @@ ntota
 none
 ntegro
 nticamente
+nima
+npn
 created
 commit
 cada
@@ -2434,6 +2470,18 @@ crecer
 configura
 cinco
 claramente
+controls
+circle
+coordinate
+circunferencia
+cV
+cI
+colormap
+coordenados
+composici
+copie
+cos
+circ
 updated
 un
 universo
@@ -2528,6 +2576,8 @@ GRAFICA
 Generalizando
 Granularidad
 Genera
+GRAFICADO
+GENERACI
 Convenci
 Creaci
 Commander
@@ -2703,6 +2753,10 @@ Cualquiera
 Contradicci
 Coloreo
 Compatible
+Conjuntos
+Composici
+Circunferencia
+CHATGPT
 Instalados
 Instalado
 Instalar
@@ -2779,6 +2833,10 @@ Indefinido
 Indeterminado
 Instalaci
 Identifica
+IAs
+IEEE
+IEC
+Inestable
 Funci
 File
 Fase
@@ -2843,6 +2901,7 @@ Factorizando
 Finalmente
 Fuentes
 Forzar
+Flechas
 Estado
 Excalidraw
 EPUBs
@@ -2993,6 +3052,8 @@ Ejecutar
 Expandir
 Extracci
 Ese
+Elementos
+Etiqueta
 Obsidian
 OmniSearch
 Ocultar
@@ -3044,6 +3105,7 @@ OBJETIVO
 OPEN
 Observaci
 Ocurre
+Omega
 Auto
 Annotator
 Autocompletado
@@ -3160,6 +3222,7 @@ Ambigüedad
 Atajos
 Agrupaci
 Attachments
+AS
 push
 pull
 para
@@ -3432,6 +3495,7 @@ personalizaci
 preguntar
 pedag
 prompts
+pegue
 min
 mica
 movimiento
@@ -3619,6 +3683,7 @@ mezcla
 merge
 ma
 mapeado
+mismas
 YAML
 Ya
 You
@@ -3967,6 +4032,11 @@ extenso
 encajan
 especifique
 ense
+ellipse
+espejo
+europeo
+etiquetado
+exceso
 Motor
 Media
 Mantiene
@@ -4044,6 +4114,7 @@ Multiplicamos
 Multiplicando
 Mucha
 Misma
+Malla
 Lectura
 LaTeX
 Linter
@@ -4093,6 +4164,7 @@ Library
 LIDAS
 LECTURA
 Llevando
+LIBRER
 links
 las
 listar
@@ -4201,6 +4273,10 @@ limpiamente
 llegues
 lingü
 libremente
+ln
+led
+limpias
+lar
 incluyendo
 im
 instalar
@@ -4399,6 +4475,9 @@ indicador
 infiere
 interpretar
 intuitivo
+intermedio
+inversor
+incluida
 Dependencia
 Dropbox
 Dataview
@@ -4617,6 +4696,9 @@ Resolver
 Rebase
 Representaci
 Reservado
+Rama
+RLC
+Rellenar
 Hider
 Hace
 Herramientas
@@ -4644,6 +4726,7 @@ Hip
 Hay
 Hallar
 Hac
+HERRAMIENTA
 filtrar
 formato
 faltantes
@@ -4772,6 +4855,11 @@ frameborder
 frecuencia
 fricci
 frases
+fgx
+fill
+filesystem
+fasor
+fragmentos
 haya
 hace
 hacer
@@ -4820,6 +4908,7 @@ haciendo
 hilo
 hijo
 hermano
+horario
 que
 quedan
 queda
@@ -4923,6 +5012,7 @@ NOTACI
 Neutros
 Numerador
 Nuevo
+Nodo
 originales
 observatory
 oficial
@@ -5011,6 +5101,8 @@ omitir
 obtenemos
 ocurren
 opini
+op
+operacional
 junto
 json
 jer
