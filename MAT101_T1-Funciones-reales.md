@@ -729,10 +729,143 @@ $$
 
 - otros
 
-$$f(x)=\cos ()$$
+$$f(x)=\cos (x) \quad,\quad p=2\pi$$
+$$f(x)=\tan (x) \quad,\quad p=\pi$$
 
 
 ---
+
+## 7. Función inversa
+
+- Sea la función biyectiva $f : X \to Y$
+$$
+f=\{(x,y)\mid y=f(x)\}
+$$
+- Se define
+$$
+f^{-1}=\text{función inversa de }f
+$$
+$$
+f^{-1}=\{(x^{*},y^{*})\mid y^{*}=f^{-1}(x^{*})\}
+$$
+
+Si se usan las variables originales:
+$$
+x=f^{-1}(y)
+$$
+
+> [!note]
+> $$f^{-1}(x)\neq \dfrac{1}{f(x)}$$
+
+> [!important]
+> Ojo:
+>
+> $$a^{-1}=\dfrac{1}{a}$, si $a\neq 0 \quad y \quad\in\mathbb{R}.$$
+
+- Operativamente, para calcular
+
+$$
+y=f^{-1}(x)
+$$
+
+a partir de
+
+$$
+y=f(x)
+$$
+
+- Se recomienda:
+
+	- Intercambiar variables
+	$$x \text{ por } y \;;\; y \text{ por } x$$$$x=f(y)$$
+	- Por álgebra despejar la nueva $y$
+	$$
+	y=g(x)
+	$$
+- El resultado es lo pedido
+$$
+y=f^{-1}(x)
+$$
+**Ej.** Hallar $f^{-1}(x)$ para
+
+$$
+f(x)=\frac{2x^3-7}{3x^3+4}
+$$
+$$
+y=\frac{2x^3-7}{3x^3+4}
+\;\Rightarrow\;
+x=\frac{2y^3-7}{3y^3+4}
+$$
+$$
+\begin{array}{rcl}
+(3y^3+4)x &=& 2y^3-7\\
+4x+7 &=& y^3(2-3x)
+\end{array}
+$$
+$$
+\sqrt[3]{\frac{4x+7}{2-3x}}=y
+$$
+Por tanto,
+$$
+f^{-1}(x)=\sqrt[3]{\frac{4x+7}{2-3x}}
+$$
+
+## 8. Composición de funciones
+
+**Def.** Sean las funciones
+$$f:B\to C$$
+$$g:A\to B$$
+donde
+$$y=f(x)$$
+- Se define
+$$(f\circ g)(x)$$
+
+("f compuesta con g en x")
+$$(f\circ g)(x)=f\bigl(g(x)\bigr)$$
+$$D_{f\circ g}=
+\{\,x\in D_g \;:\; g(x)\in D_f\,\}
+$$
+
+
+
+```tikz
+\begin{document}
+\begin{tikzpicture}
+
+% Conjuntos
+\draw (-3.5,0) ellipse (1 and 1.5);
+\draw (0,0) ellipse (1 and 1.5);
+\draw (3.5,0) ellipse (1 and 1.5);
+
+% Nombres de conjuntos (debajo)
+\node at (-3.5,-2.1) {$A$};
+\node at (0,-2.1) {$B$};
+\node at (3.5,-2.1) {$C$};
+
+% Elementos
+\node (x) at (-3.5,0) {$x$};
+\node (gx) at (0,0) {$g(x)$};
+\node (fgx) at (3.5,0) {$f(g(x))$};
+
+% Flecha g
+\draw[->, thick]
+(x) .. controls (-2.0,0.8) and (-1.2,0.8) .. (gx);
+
+\node at (-1.75,1.05) {$g$};
+
+% Flecha f
+\draw[->, thick]
+(gx) .. controls (1.2,0.8) and (2.0,0.8) .. (fgx);
+
+\node at (1.75,1.05) {$f$};
+
+\end{tikzpicture}
+\end{document}
+```
+
+
+
+
 ---
 
 
