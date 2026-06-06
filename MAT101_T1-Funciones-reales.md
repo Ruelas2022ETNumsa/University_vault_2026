@@ -539,7 +539,100 @@ La gráfica de $y=f(x)$ es simétrica respecto al eje $y$.
 \end{document}
 ```
 
+---
 
+## 5. Función impar
+
+$y=f(x)$ es impar si cumple:
+
+$$
+f(-x)=-f(x)
+$$
+
+La gráfica de $y=f(x)$ impar es simétrica respecto al origen $(0,0)$.
+
+
+
+```tikz
+\usepackage{amsmath}
+\begin{document}
+\begin{tikzpicture}[scale=1.2]
+
+% Ejes
+\draw[->] (-1.8,0) -- (1.8,0) node[right] {$x$};
+\draw[->] (0,-1.2) -- (0,1.2) node[above] {$y$};
+
+% Curva
+\draw[thick, teal, domain=-1.5:1.5, samples=200]
+  plot (\x,{(\x)^3-(\x)});
+
+% Segmento que muestra la simetría respecto al origen
+\draw[dashed] (-1,0) -- (1,0);
+
+% Puntos simétricos
+\fill (-0.5,0.375) circle (0.05);
+\fill (0.5,-0.375) circle (0.05);
+
+% Etiquetas de puntos
+\node[above left] at (-0.5,0.375) {$(-0.5,\;0.375)$};
+\node[below right] at (0.5,-0.375) {$(0.5,\;-0.375)$};
+
+% Marcas en eje x
+\node[below] at (-0.5,0) {$-0.5$};
+\node[below] at (0.5,0) {$0.5$};
+
+% Etiqueta de función
+\node[right] at (0.8,0.9) {$y=x^3-x$};
+
+% Centro de simetría
+\fill (0,0) circle (0.05);
+\node[below left] at (0,0) {$O(0,0)$};
+
+\end{tikzpicture}
+\end{document}
+```
+
+
+> [!note]
+> Gráfica: función impar (simetría respecto al origen).
+
+**Ej.**
+
+$$
+f(x)=2x^5+6x^3-8x
+$$
+
+es impar porque:
+
+$$
+\begin{array}{rcl}
+f(-x) & = & 2(-x)^5+6(-x)^3-8(-x) \\
+      & = & -2x^5-6x^3+8x \\
+      & = & -(2x^5+6x^3-8x) \\
+      & = & -f(x)
+\end{array}
+$$
+
+Por tanto,
+
+$$
+f(-x)=-f(x)
+$$
+
+**Otro**
+
+$\text{sen}\,x$ es impar porque
+
+$$
+f(-x)=\text{sen}(-x)=-(\text{sen}(x))=-f(x)
+$$
+
+> [!note]
+> Ejemplo que no es función impar:
+>
+> $f(x)=2x^5+6x^3-8x+4$
+>
+> No es impar porque no cumple $f(-x)=-f(x)$.
 
 ---
 

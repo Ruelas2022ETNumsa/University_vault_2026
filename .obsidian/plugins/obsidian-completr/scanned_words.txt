@@ -404,6 +404,7 @@ Segmento
 Superficie
 SOPORTADAS
 Sigma
+Seguro
 Plugins
 Pendientes
 Plugin
@@ -780,6 +781,8 @@ destacados
 duplica
 duplicando
 disciplina
+darkgray
+definecolor
 Vault
 Verificar
 Variables
@@ -903,6 +906,9 @@ generaci
 grilla
 generamos
 green
+gray
+grey
+greenyellow
 body
 beacon
 bat
@@ -985,6 +991,10 @@ basta
 baja
 build
 beta
+blue
+black
+brown
+bluered
 scope
 status
 selector
@@ -1342,6 +1352,7 @@ viridis
 vec
 verdaderos
 verificaci
+violet
 audience
 activo
 auto
@@ -1913,6 +1924,7 @@ rectas
 repetirse
 recomendaci
 revisando
+red
 notes
 notas
 nuevas
@@ -2537,6 +2549,8 @@ cortado
 checklist
 conocida
 cf
+cyan
+cool
 updated
 un
 universo
@@ -2960,6 +2974,7 @@ Finalmente
 Fuentes
 Forzar
 Flechas
+FF
 Estado
 Excalidraw
 EPUBs
@@ -3568,6 +3583,8 @@ peri
 puedo
 preventiva
 puedan
+pink
+purple
 min
 mica
 movimiento
@@ -3757,6 +3774,8 @@ ma
 mapeado
 mismas
 match
+magenta
+micolor
 YAML
 Ya
 You
@@ -4369,6 +4388,8 @@ log
 logaritmo
 lanza
 literalmente
+lightgray
+lime
 incluyendo
 im
 instalar
@@ -4800,6 +4821,7 @@ Rectas
 Reemplazando
 Revisando
 Roaming
+RGB
 Hider
 Hace
 Herramientas
@@ -4828,6 +4850,7 @@ Hay
 Hallar
 Hac
 HERRAMIENTA
+HTML
 filtrar
 formato
 faltantes
@@ -5015,6 +5038,7 @@ hermano
 horario
 hispanohablante
 hago
+hot
 que
 quedan
 queda
@@ -5211,6 +5235,8 @@ opini
 op
 operacional
 oldText
+olive
+orange
 junto
 json
 jer
@@ -5228,6 +5254,7 @@ jKru
 justificando
 junio
 justificado
+jet
 Qu
 Qui
 Quick
@@ -5245,6 +5272,7 @@ Queremos
 ya
 yaml
 yo
+yellow
 wikilinks
 when
 where
