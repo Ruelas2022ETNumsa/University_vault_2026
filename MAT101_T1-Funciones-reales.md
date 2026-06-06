@@ -254,28 +254,138 @@ $$
 
 se reconoce como el subconjunto de la recta real $\mathbb{R}$ que cumple las restricciones:
 
-1. Si $f(x)=\frac{P(x)}{Q(x)}$ entonces $$Q(x)\neq 0$$
+1. Si $f(x)=\frac{P(x)}{Q(x)}$ entonces : $$Q(x)\neq 0$$
 
-2. Si $f(x)=\sqrt[n]{P(x)}$ con $n$ par, entonces $$P(x)\ge 0$$
-3. Si $f(x)=\log_a(P(x))$ con $a>0$, entonces $$P(x)>0$$
-4. Si $f(x)=a^{P(x)}$ entonces $$a>0\qu,\quad a\neq 1$$
-5. Si
+2. Si $f(x)=\sqrt[n]{P(x)}$ con $n$ par, entonces : $$P(x)\ge 0$$
+3. Si $f(x)=\log_a(P(x))$ con $a>0$, entonces : $$P(x)>0$$
+4. Si $f(x)=a^{P(x)}$ entonces : $$a>0\quad y\quad a\neq 1$$
+5. Si $f(x)=\arcsin (P(x))\quad$ o $\quad f(x)=\arccos(P(x))$ entonces : $$-1\le P(x)\le 1$$
 
-$$
-f(x)=\arcsen(P(x))
-$$
+---
 
-o
+### **Ej.** Hallar el dominio de
 
 $$
-f(x)=\arccos(P(x))
+f(x)=\sqrt{\frac{x^3-4x}{1-x^2}}
++\log\left(\frac{x^3-x^2-2x}{x+4}\right)
+$$
+Analizamos por separado.
+
+1. Sea $\sqrt{\frac{x^3-4x}{1-x^2}}$ entonces :
+$$
+\frac{x^3-4x}{1-x^2}\ge 0
+$$
+Factorizando:
+
+$$
+\frac{x(x^2-4)}{(1+x)(1-x)}\ge 0
+$$
+$$
+\frac{x(x-2)(x+2)}{(1+x)(1-x)}\ge 0
 $$
 
-entonces
+Puntos críticos:
 
 $$
--1\le P(x)\le 1
+x=-2,\,-1,\,0,\,1,\,2
 $$
+### Gráfico de intervalos (Cs₁)
+
+```desmos-graph
+left=-5.5; right=5.5; bottom=-1; top=1;
+width=500; height=120;
+---
+y=0 \{x<-5\}|#7e57c2|DOTTED
+y=0 \{-5<x<=-2\}|#7e57c2
+
+(-2,0)|label:-2|#7e57c2
+
+y=0 \{-1<x<=0\}|#7e57c2
+(-1,0)|OPEN|label:-1|#7e57c2
+(0,0)|label:0|#7e57c2
+
+y=0 \{1<=x<=2\}|#7e57c2
+(1,0)|label:1|#7e57c2
+(2,0)|label:2|#7e57c2
+```
+
+Por tanto,
+
+$$  
+Cs_1=  
+]-\infty,-2]  
+\cup  
+]-1,0]  
+\cup  
+[1,2]  
+$$
+
+---
+
+2. Sea $\log\left(\frac{x^3-x^2-2x}{x+4}\right)$ entonces :
+$$
+\frac{x^3-x^2-2x}{x+4}>0
+$$
+
+Factorizando:
+
+$$
+\frac{x(x-2)(x+1)}{x+4}>0
+$$
+Puntos críticos:
+
+$$
+x=-4,\,-1,\,0,\,2
+$$
+### Gráfico de intervalos (Cs₂)
+
+```desmos-graph
+left=-6.5; right=5.5; bottom=-1; top=1;
+width=500; height=120;
+---
+y=0 \{x<-6\}|#26a69a|DOTTED
+y=0 \{-6<x<-4\}|#26a69a
+(-4,0)|OPEN|label:-4|#26a69a
+
+y=0 \{-1<x<0\}|#26a69a
+(-1,0)|OPEN|label:-1|#26a69a
+(0,0)|OPEN|label:0|#26a69a
+
+y=0 \{2<x<5\}|#26a69a
+y=0 \{x>5\}|#26a69a|DOTTED
+(2,0)|OPEN|label:2|#26a69a
+```
+
+Por tanto,
+
+$$  
+Cs_2=  
+]-\infty,-4[  
+\cup  
+]-1,0[  
+\cup  
+]2,+\infty[  
+$$
+
+---
+
+Y aquí nos detenemos, tal como indicaste. El siguiente paso en el apunte sería construir la tercera recta numérica con:
+
+$$  
+D_f=Cs_1\cap Cs_2  
+$$
+
+pero esa gráfica todavía no la generamos.
+
+
+
+
+
+
+
+
+
+
 
 
 

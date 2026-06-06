@@ -1625,6 +1625,7 @@ asume
 alpha
 anglosajona
 asigna
+analiza
 related
 recomendados
 ribbon
@@ -1889,6 +1890,8 @@ rellena
 rellenar
 reemplazar
 rectas
+repetirse
+recomendaci
 notes
 notas
 nuevas
@@ -2018,6 +2021,8 @@ nticamente
 nima
 npn
 notebooklm
+necesito
+necesitar
 created
 commit
 cada
@@ -3524,6 +3529,7 @@ prompts
 pegue
 preferir
 peri
+puedo
 min
 mica
 movimiento
@@ -4069,6 +4075,7 @@ estructuradas
 exponencial
 escal
 exponenciales
+env
 Motor
 Media
 Mantiene
@@ -4147,6 +4154,7 @@ Multiplicando
 Mucha
 Misma
 Malla
+Mi
 Lectura
 LaTeX
 Linter
@@ -4310,6 +4318,8 @@ led
 limpias
 lar
 logar
+log
+logaritmo
 incluyendo
 im
 instalar
@@ -4899,6 +4909,8 @@ filesystem
 fasor
 fragmentos
 fallar
+factoriza
+foto
 haya
 hace
 hacer
@@ -4949,6 +4961,7 @@ hijo
 hermano
 horario
 hispanohablante
+hago
 que
 quedan
 queda
