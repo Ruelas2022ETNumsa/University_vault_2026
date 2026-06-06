@@ -769,6 +769,9 @@ dibujada
 deseado
 dica
 detenemos
+dominios
+dashed
+destacados
 Vault
 Verificar
 Variables
@@ -1327,6 +1330,7 @@ vemos
 visto
 viridis
 vec
+verdaderos
 audience
 activo
 auto
@@ -1628,6 +1632,8 @@ alpha
 anglosajona
 asigna
 analiza
+atractivas
+asignar
 related
 recomendados
 ribbon
@@ -2569,6 +2575,7 @@ uni
 unico
 utiliza
 universitario
+usen
 Galaxy
 Git
 Gr
@@ -3140,6 +3147,7 @@ OPEN
 Observaci
 Ocurre
 Omega
+Otro
 Auto
 Annotator
 Autocompletado
@@ -3258,6 +3266,8 @@ Agrupaci
 Attachments
 AS
 Analizamos
+APRENDIDA
+ADICIONALES
 push
 pull
 para
@@ -4080,6 +4090,7 @@ exponencial
 escal
 exponenciales
 env
+estooooo
 Motor
 Media
 Mantiene
@@ -4159,6 +4170,7 @@ Mucha
 Misma
 Malla
 Mi
+Mezclas
 Lectura
 LaTeX
 Linter
@@ -4209,6 +4221,7 @@ LIDAS
 LECTURA
 Llevando
 LIBRER
+LECCI
 links
 las
 listar
@@ -5227,6 +5240,7 @@ xrO
 xA
 xxx
 xxxxxxxxxx
+xcolor
 Wikilinks
 WHERE
 WebGL

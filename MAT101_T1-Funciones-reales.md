@@ -501,107 +501,72 @@ $$
 
 La gráfica de $y=f(x)$ es simétrica respecto al eje $y$.
 
-
 ```tikz
+\usepackage{amsmath}
 \begin{document}
-\begin{tikzpicture}[scale=1.3]
+\begin{tikzpicture}[scale=1.5]
 
 % Ejes
 \draw[->] (-2.2,0) -- (2.2,0) node[right] {$x$};
-\draw[->] (0,0) -- (0,2.5) node[above] {$y$};
+\draw[->] (0,-0.2) -- (0,1.8) node[above] {$y$};
 
 % Curva
-\draw[thick, blue, domain=-1.8:1.8, samples=120]
-plot (\x,{(\x)^4-(\x)^2+1});
+\draw[thick, teal, domain=-1.35:1.35, samples=120]
+  plot (\x,{(\x)^4-(\x)^2+0.5});
 
-% Segmentos de simetría
-\draw[dashed] (-1,1) -- (1,1);
+% Segmento de simetría
+\draw[dashed] (-1,0.5) -- (1,0.5);
 
 % Puntos
-\fill (-1,1) circle (0.05);
-\fill (1,1) circle (0.05);
+\fill (-1,0.5) circle (0.05);
+\fill (1,0.5) circle (0.05);
 
-\node[above] at (-1,1) {$(-1,1)$};
-\node[above] at (1,1) {$(1,1)$};
+% Etiquetas de puntos
+\node[above] at (-1,0.5) {$(-1, 0.5)$};
+\node[above] at (1,0.5) {$(1, 0.5)$};
 
-\node at (0,-0.4) {Eje de simetría};
-
-\end{tikzpicture}
-\end{document}
-```
-
-
-
-
-
-
-```tikz
-\begin{document}
-\begin{tikzpicture}[scale=1.2]
-
-% Ejes
-\draw[->] (-2.2,0) -- (2.2,0) node[right] {$x$};
-\draw[->] (0,0) -- (0,2.5) node[above] {$y$};
-
-% Curva
-\draw[thick, blue, domain=-1.8:1.8, samples=120]
-plot (\x,{(\x)^4-(\x)^2+1});
-
-% Puntos simétricos
-\fill (-1,1) circle (0.05);
-\fill (1,1) circle (0.05);
-
-% Etiquetas
+% Marcas en eje x
 \node[below] at (-1,0) {$-1$};
 \node[below] at (1,0) {$1$};
 
-% Texto
-\node at (1.4,2.1) {$y=x^4-x^2+1$};
+% Etiqueta de función
+\node[right] at (1.1,1.55) {$y=x^4-x^2+0.5$};
+
+% Eje de simetría
+\node at (0,-0.35) {Eje de sim\'etria};
 
 \end{tikzpicture}
 \end{document}
 ```
-
 
 
 
 ---
-
-
-
-
-
 
 **Ej.**
 
 $$
 f(x)=\frac{x^8-4x^6}{x^2+1}
 $$
-
 es par, ya que
-
 $$
 f(-x)=\frac{x^8-4x^6}{x^2+1}
 $$
 
 por tanto
-
 $$
 f(-x)=f(x)
 $$
 
-**Otro**
 
+**Otro**
 $$
 f(x)=\cos x
 $$
-
 es par porque
-
 $$
 f(-x)=\cos(-x)=\cos(x)
 $$
-
 $$
 f(-x)=f(x)
 $$
@@ -609,37 +574,20 @@ $$
 
 
 
-\begin{tikzpicture}[xscale=1.3,yscale=0.8]
 
 
 
-estooooo
 
 
-```tikz
-\begin{document}
-\begin{tikzpicture}[xscale=1.3,yscale=0.1]
 
 
-% Conjuntos
-\draw (-3,0) ellipse (1 and 1.5);
-\draw (3,0) ellipse (1 and 1.5);
 
-% Nombres
-\node at (-3,2) {$D$};
-\node at (3,2) {$R$};
 
-% Elementos
-\node (x) at (-3,0) {$x$};
-\node (y) at (3,0) {$y=f(x)$};
 
-% Correspondencia
-\draw[->, thick] (x) -- (y);
-\node at (0,0.4) {$f$};
 
-\end{tikzpicture}
-\end{document}
-```
+
+
+
 
 
 ```tikz
