@@ -173,6 +173,7 @@ tmica
 tangente
 tg
 tgh
+tmicas
 ToDo
 Templater
 Text
@@ -766,6 +767,7 @@ desanclar
 distinta
 dibujada
 deseado
+dica
 Vault
 Verificar
 Variables
@@ -1622,6 +1624,7 @@ americano
 asume
 alpha
 anglosajona
+asigna
 related
 recomendados
 ribbon
@@ -3076,6 +3079,7 @@ Elementos
 Etiqueta
 Equivalente
 ESPECIALES
+Ej
 Obsidian
 OmniSearch
 Ocultar
@@ -3519,6 +3523,7 @@ pedag
 prompts
 pegue
 preferir
+peri
 min
 mica
 movimiento
@@ -4063,6 +4068,7 @@ exceso
 estructuradas
 exponencial
 escal
+exponenciales
 Motor
 Media
 Mantiene
@@ -4505,6 +4511,8 @@ intuitivo
 intermedio
 inversor
 incluida
+impar
+inversas
 Dependencia
 Dropbox
 Dataview
@@ -4728,6 +4736,7 @@ RLC
 Rellenar
 Recomendada
 Rectas
+Reemplazando
 Hider
 Hace
 Herramientas
