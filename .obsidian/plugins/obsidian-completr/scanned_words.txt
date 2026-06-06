@@ -768,6 +768,7 @@ distinta
 dibujada
 deseado
 dica
+detenemos
 Vault
 Verificar
 Variables
@@ -889,6 +890,7 @@ globales
 gx
 generaci
 grilla
+generamos
 body
 beacon
 bat
@@ -2785,6 +2787,7 @@ Conjuntos
 Composici
 Circunferencia
 CHATGPT
+Cs
 Instalados
 Instalado
 Instalar
@@ -3254,6 +3257,7 @@ Atajos
 Agrupaci
 Attachments
 AS
+Analizamos
 push
 pull
 para
@@ -4523,6 +4527,7 @@ inversor
 incluida
 impar
 inversas
+indicaste
 Dependencia
 Dropbox
 Dataview
