@@ -331,7 +331,7 @@ y=0 \{1<=x<=2\}|#7e57c2
 
 son **verdaderos** los intervalos donde el signo es positivo o cero:
 
-$$Cs1=]−∞,−2]∪]−1,0]∪]1,2]Cs_1$$
+$$Cs_{1}=]−∞,−2]∪]−1,0]∪]1,2]$$
 ---
 
 2. Sea $\log\left(\frac{x^3-x^2-2x}{x+4}\right)$ entonces :
@@ -364,24 +364,13 @@ $$
 | -------------- | -------- | --------------------------- | ----- |
 | $]-\infty,-4[$ | $-10$    | $\frac{(-)(-)(-)}{(-)}=(+)$ | V     |
 | $-4$           | $-4$     | No existe                   | F     |
-| $]-4,-1[$      | $-2$     | $\frac{(-)(-)(-)}{(+)}=(+)$ | V     |
+| $]-4,-1[$      | $-2$     | $\frac{(-)(-)(-)}{(+)}=(-)$ | F     |
 | $-1$           | $-1$     | $0$                         | F     |
-| $]-1,0[$       | $-0.5$   | $\frac{(-)(-)(+)}{(+)}=(-)$ | F     |
+| $]-1,0[$       | $-0.5$   | $\frac{(-)(-)(+)}{(+)}=(+)$ | V     |
 | $0$            | $0$      | $0$                         | F     |
 | $]0,2[$        | $1$      | $\frac{(+)(-)(+)}{(+)}=(-)$ | F     |
 | $2$            | $2$      | $0$                         | F     |
 | $]2,+\infty[$  | $10$     | $\frac{(+)(+)(+)}{(+)}=(+)$ | V     |
-
-Por tanto,
-
-$$
-Cs_2=
-]-4,-1[
-\cup
-]2,+\infty[
-$$
-
-
 
 ### Gráfico de intervalos (Cs₂)
 
@@ -415,24 +404,90 @@ $$
 
 ---
 
-Y aquí nos detenemos, tal como indicaste. El siguiente paso en el apunte sería construir la tercera recta numérica con:
+Finalmente:
 
 $$  
 D_f=Cs_1\cap Cs_2  
 $$
 
-pero esa gráfica todavía no la generamos.
+```desmos-graph
+left=-5.5; right=5.5; bottom=-1; top=3;
+width=500; height=120;
+---
+y=2 \{x<-5\}|#7e57c2|DOTTED
+y=2 \{-5<x<=-2\}|#7e57c2
+
+(-2,2)|label:-2|#7e57c2
+
+y=2 \{-1<x<=0\}|#7e57c2
+(-1,2)|OPEN|label:-1|#7e57c2
+(0,2)|label:0|#7e57c2
+
+y=2 \{1<=x<=2\}|#7e57c2
+(1,2)|OPEN|label:1|#7e57c2
+(2,2)|label:2|#7e57c2
+
+y=1 \{x<-6\}|#26a69a|DOTTED
+y=1 \{-6<x<-4\}|#26a69a
+(-4,1)|OPEN|label:-4|#26a69a
+
+y=1 \{-1<x<0\}|#26a69a
+(-1,1)|OPEN|label:-1|#26a69a
+(0,1)|OPEN|label:0|#26a69a
+
+y=1 \{2<x<5\}|#26a69a
+y=1 \{x>5\}|#26a69a|DOTTED
+(2,1)|OPEN|label:2|#26a69a
 
 
+y=0 \{x<-5\}|#8d6e63|DOTTED
+y=0 \{-5<x<-4\}|#8d6e63
+(-4,0)|OPEN|label:-4|#8d6e63
 
+y=0 \{-1<x<0\}|#8d6e63
+(-1,0)|OPEN|label:-1|#8d6e63
+(0,0)|OPEN|label:0|#8d6e63
 
+```
 
+$$
+D_f=
+]-\infty,-4[
+\cup
+]-1,0[
+$$
 
+---
 
+## Álgebra de funciones
 
+Sean $y=f(x) \quad,\quad y=g(x)$ funciones reales con dominios $D_f$ y $D_g$ respectivamente.
 
+1. **Suma**
+$$
+(f\pm g)(x)=f(x)\pm g(x)
+$$
+$$
+D_{f\pm g}=D_f\cap D_g
+$$
 
+2. **Producto**
+$$
+(f\cdot g)(x)=f(x)\,g(x)
+$$
+$$
+D_{f\cdot g}=D_f\cap D_g
+$$
 
+3. **Cociente**
+$$
+\left(\frac{f}{g}\right)(x)=\frac{f(x)}{g(x)}
+$$
+$$
+D_{f}{g}=D_{f}\cap D_{g}\quad y
+\quad
+g(x)\neq 0
+$$
 
 
 
