@@ -175,6 +175,9 @@ tg
 tgh
 tmicas
 teal
+truncado
+terminaba
+truncados
 ToDo
 Templater
 Text
@@ -272,6 +275,7 @@ Tama
 Tri
 TIPOS
 Tarea
+Tenerlo
 Sistema
 Sync
 Save
@@ -773,6 +777,9 @@ detenemos
 dominios
 dashed
 destacados
+duplica
+duplicando
+disciplina
 Vault
 Verificar
 Variables
@@ -1334,6 +1341,7 @@ visto
 viridis
 vec
 verdaderos
+verificaci
 audience
 activo
 auto
@@ -1637,6 +1645,7 @@ asigna
 analiza
 atractivas
 asignar
+ancla
 related
 recomendados
 ribbon
@@ -2522,6 +2531,11 @@ coseno
 convertirla
 cosh
 cosec
+corruptos
+copiado
+cortado
+checklist
+conocida
 updated
 un
 universo
@@ -2799,6 +2813,7 @@ Composici
 Circunferencia
 CHATGPT
 Cs
+Copiar
 Instalados
 Instalado
 Instalar
@@ -3549,6 +3564,8 @@ pegue
 preferir
 peri
 puedo
+preventiva
+puedan
 min
 mica
 movimiento
@@ -3737,6 +3754,7 @@ merge
 ma
 mapeado
 mismas
+match
 YAML
 Ya
 You
@@ -4097,6 +4115,9 @@ exponenciales
 env
 estooooo
 etria
+encoding
+espaciado
+ediciones
 Motor
 Media
 Mantiene
@@ -4344,6 +4365,8 @@ lar
 logar
 log
 logaritmo
+lanza
+literalmente
 incluyendo
 im
 instalar
@@ -5183,6 +5206,7 @@ ocurren
 opini
 op
 operacional
+oldText
 junto
 json
 jer

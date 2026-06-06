@@ -30,6 +30,33 @@ creación/reemplazo total. No hace merge ni append.
 
 **Regla:** `write_file` solo para archivos nuevos. Ediciones siempre con `edit_file`.
 
+---
+
+## edit_file duplica contenido cuando oldText no hace match exacto
+
+**Error:** al usar `Filesystem:edit_file` con un `oldText` que no coincide
+exactamente con el contenido del archivo (por caracteres corruptos, encoding
+roto, texto truncado o espaciado diferente), la herramienta no lanza error
+claro — en su lugar puede insertar el `newText` sin eliminar el `oldText`,
+duplicando bloques enteros o incluso secciones completas del archivo.
+
+**Causa:** el match de `edit_file` es exacto carácter a carácter. Si el
+`oldText` fue copiado de un contexto con encoding dañado o texto cortado
+(como un checklist que terminaba en `$...---` en lugar del texto completo),
+el match falla silenciosamente y el contenido se inserta de todas formas.
+
+**Solución conocida:** antes de cualquier `edit_file`, verificar el fragmento
+exacto con `read_text_file` usando `view_range` apuntando a las líneas
+específicas que se van a reemplazar. Copiar el `oldText` literalmente desde
+esa lectura, no desde memoria ni desde contexto previo de la conversación.
+
+**Solución preventiva:** para ediciones al final del archivo, usar siempre
+el bloque `%%` o algún marcador único y estable como ancla del `oldText` —
+no fragmentos de contenido que puedan estar corruptos o truncados.
+
+**Estado:** sin solución automática en la herramienta — requiere disciplina
+de verificación previa. Tenerlo en cuenta en cada edición.
+
 %%
 galaxy-links
 [[_claude-boot]]
