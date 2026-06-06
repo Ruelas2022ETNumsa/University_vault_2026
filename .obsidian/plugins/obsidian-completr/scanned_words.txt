@@ -2536,6 +2536,7 @@ copiado
 cortado
 checklist
 conocida
+cf
 updated
 un
 universo
@@ -3288,6 +3289,7 @@ AS
 Analizamos
 APRENDIDA
 ADICIONALES
+AppData
 push
 pull
 para
@@ -4797,6 +4799,7 @@ Recomendada
 Rectas
 Reemplazando
 Revisando
+Roaming
 Hider
 Hace
 Herramientas
@@ -5071,6 +5074,7 @@ UL
 Uni
 Ubicar
 Utilizando
+Users
 Nombre
 Notas
 No

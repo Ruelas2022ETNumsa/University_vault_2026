@@ -25,3 +25,8 @@ Tabla
 C:\Users
 
 C:\Users\USUARIO\AppData\Roaming\Claude
+
+
+
+codigo de error
+0x80073cf1
