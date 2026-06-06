@@ -189,9 +189,9 @@ x>=a|x<=b|y>=c|y<=d|#hexcolor   ← rectángulo sombreado
 f(x)=ec|hidden                   ← función oculta
 y=x \{x>=0\}|#hex               ← valor absoluto tramo positivo
 y=-x \{x<=0\}|#hex              ← valor absoluto tramo negativo
-y=\sqrt{x}|x>=0|#hex            ← raíz cuadrada (rama positiva)
-x=y^2                            ← raíz cuadrada como relación implícita
+x=y^2                            ← raíz cuadrada — forma recomendada (rama positiva)
 y>=0                             ← restricción para rama positiva
+y=\sqrt{x}|x>=0|#hex            ← raíz cuadrada alternativa (puede fallar en contextos complejos)
 ```
 
 ---
@@ -514,17 +514,17 @@ La región sombreada usa límites concretos en x e y — no referencias a `|x|`.
 
 El plugin soporta tres formas para $y = \sqrt{x}$. Usar en orden de preferencia:
 
-**Forma A — primera opción:**
+**Forma C — primera opción (relación implícita, más robusta):**
 ```desmos-graph
 y=\sqrt{x}|x>=0|#2d70b3
 ```
 
-**Forma B — alternativa equivalente:**
+**Forma A — segunda opción (puede fallar en contextos complejos):**
 ```desmos-graph
 y=x^{1/2}|x>=0|#2d70b3
 ```
 
-**Forma C — relación implícita (más robusta en contextos complejos):**
+**Forma B — tercera opción (equivalente a la forma A):**
 ```desmos-graph
 x=y^2
 y>=0
@@ -540,8 +540,9 @@ y=sqrt{x}
 
 ### Matices importantes
 
-- Las formas A y B grafican solo la rama positiva ($y \geq 0$) — correcto para $\sqrt{x}$ como función.
-- La forma C también grafica solo la rama positiva si se incluye `y>=0` en línea separada. Sin esa línea grafica ambas ramas (la parábola completa $x = y^2$).
+- La forma C (`x=y^2` + `y>=0`) es la más robusta — preferir siempre.
+- Sin la línea `y>=0` la forma C grafica ambas ramas (la parábola completa `x=y^2`) — siempre incluirla.
+- Las formas A y B pueden fallar en contextos complejos (inecuaciones, regiones sombreadas).
 - En contexto matemático (Cálculo, desigualdades, probabilidad) usar siempre la rama positiva.
 
 ### Ejemplo — desigualdad de medias
@@ -639,7 +640,7 @@ Antes de entregar un bloque Desmos verificar:
 - [ ] ¿Rellenos con hex pastel (`#a5d8ff`, `#ff7b7b`, etc.)?
 - [ ] ¿Funciones por tramos usan `y=k \{a<x<b\}` y NO `{a<x<b: k}`?
 - [ ] ¿Sin `y=|x|`, `y=abs(x)` ni `|x|` en condiciones de relleno?
-- [ ] ¿Raíz cuadrada usa `y=\sqrt{x}` o `y=x^{1/2}` — NO `y=sqrt(x)` ni `y=\sqrt(x)`?
+- [ ] ¿Raíz cuadrada usa `x=y^2` + `y>=0` como primera opción — NO `y=sqrt(x)` ni `y=\sqrt(x)`?
 
 ---
 
@@ -735,8 +736,8 @@ Estas reglas no tienen excepciones. Cualquier bloque que las viole debe corregir
 | Sin espacios alrededor de `\|`               | `y=x\|#c74440`                                | `y = x \| RED`                                            |
 | Sin llaves `{}` en restricciones             | `y=x\|0<=x<=1`                                | `y=x\|{0<=x<=1}`                                          |
 | Sin comentarios `//`                         | —                                             | `y=x^2 // parábola`                                       |
-| Raíces con `\sqrt{x}` (llaves obligatorias)  | `y=\sqrt{x}`                                  | `y=sqrt(x)` · `y=\sqrt(x)`                                |
-| Fracciones con `\frac{a}{b}`                 | `y=\frac{3}{8}x`                              | `y=(3/8)x`                                                |
+| Raíz cuadrada — preferir relación implícita    | `x=y^2` + `y>=0`                              | `y=sqrt(x)` · `y=\sqrt(x)` · `y=\sqrt{x}` (puede fallar) |
+| Fracciones en ecuaciones — usar slash          | `y=(3)/(8)`                                   | `y=\frac{3}{8}` (puede fallar)                              |
 | Fracciones en `label:` siempre con slash      | `label:(a-b)/(c-d)`                           | `label:\frac{a-b}{c-d}` · `label:x^{1/2}` (no renderiza) |
 | Pi con `\pi`                                 | `y=\frac{1}{\pi}`                             | `y=1/pi`                                                  |
 | Restricciones de líneas con dominio          | `y=x\|0<=x<=2\|#2d70b3`                       | `y=x\|#2d70b3` (se desborda)                              |
@@ -803,17 +804,17 @@ La clave: el relleno usa cotas numéricas concretas (`-2<=x<=2|y<=2|y>=0`), nunc
 
 Tres formas válidas, en orden de preferencia:
 
-**Primera opción — LaTeX con llaves:**
+**Primera opción — relación implícita (más robusta):**
 ```desmos-graph
 y=\sqrt{x}|x>=0|#2d70b3
 ```
 
-**Segunda opción — potencia fraccional:**
+**Segunda opción — LaTeX con llaves (puede fallar en contextos complejos):**
 ```desmos-graph
 y=x^{1/2}|x>=0|#2d70b3
 ```
 
-**Tercera opción — relación implícita (la más robusta si las anteriores fallan):**
+**Tercera opción — potencia fraccional (equivalente a la segunda):**
 ```desmos-graph
 x=y^2
 y>=0
@@ -821,7 +822,7 @@ y>=0
 
 Nunca usar `y=sqrt(x)`, `y=\sqrt(x)` ni `y=sqrt{x}` — no renderizan.
 
-La forma C (`x=y^2` + `y>=0`) es especialmente útil cuando la raíz aparece en una región sombreada compleja o dentro de inecuaciones donde las formas A y B producen resultados inesperados. Sin la línea `y>=0` la forma C grafica ambas ramas de la parábola — siempre incluirla.
+La forma implícita (`x=y^2` + `y>=0`) es la más robusta — usar siempre como primera opción. Sin la línea `y>=0` grafica ambas ramas de la parábola — siempre incluirla.
 
 **Ejemplo real — desigualdad de medias:**
 
