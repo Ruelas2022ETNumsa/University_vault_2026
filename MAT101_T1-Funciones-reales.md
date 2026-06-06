@@ -108,9 +108,13 @@ f\!\left(\frac{2}{x^3}\right)
 +1
 \end{array}
 $$
+
+---
+
 ### Ejercicio 2
 
 Analizar si $f$ es o no función.
+#### a)
 
 ```tikz
 \begin{document}
@@ -154,8 +158,9 @@ $$R_f=\{4,5,6\}=rango,\ recorrido,\ codominio ,\text{ conjunto de imágenes}$$
 - $\forall x$ del $D$ debe tener imagen.
 - El $D$ debe ser único y no debe repetirse.
     
+---
 
-b)
+#### b)
 
 ```tikz
 \begin{document}
@@ -166,6 +171,7 @@ b)
 
 \node at (-4,2.6) {$D$};
 \node at (4,2.6) {$R$};
+\node at (0,2.8) {$f$};
 
 \node (a1) at (-4,1) {$1$};
 \node (a2) at (-4,0) {$2$};
@@ -175,20 +181,27 @@ b)
 \node (b5) at (4,0) {$5$};
 \node (b6) at (4,-1) {$6$};
 
-\draw[->, thick, red]
+\draw[->, thick, purple]
 (a1) .. controls (-1,1.2) and (1,0.6) .. (b5);
 
-\draw[->, thick, blue]
+\draw[->, thick, teal]
 (a2) -- (b5);
 
-\draw[->, thick, green]
+\draw[->, thick, orange]
 (a3) .. controls (-1,-1.2) and (1,-0.6) .. (b5);
 
 \end{tikzpicture}
 \end{document}
 ```
 
-c)
+La relación **sí** es función porque:
+$$D_f=\{1,2,3\}$$  $$R=\{4,5,6\} = codominio$$
+$$R_{f={5}}= \text{imagen o rango}$$
+Todas las flechas llegan a 5.
+
+---
+
+#### c)
 
 ```tikz
 \begin{document}
@@ -199,6 +212,7 @@ c)
 
 \node at (-4,2.6) {$D$};
 \node at (4,2.6) {$R$};
+\node at (0,2.8) {$f$};
 
 \node (a1) at (-4,1) {$1$};
 \node (a2) at (-4,0) {$2$};
@@ -209,15 +223,11 @@ c)
 \node (b6) at (4,-1) {$6$};
 
 % 1 -> 4
-\draw[->, thick, red]
+\draw[->, thick, violet]
 (a1) .. controls (-1,2) and (1,2) .. (b4);
 
-% 1 -> 5
-\draw[->, thick, blue]
-(a1) .. controls (-1,0.8) and (1,0.4) .. (b5);
-
 % 3 -> 5
-\draw[->, thick, green]
+\draw[->, thick, teal]
 (a3) .. controls (-1,-0.4) and (1,-0.2) .. (b5);
 
 % 3 -> 6
@@ -227,6 +237,48 @@ c)
 \end{tikzpicture}
 \end{document}
 ```
+
+$f$ no es función.
+
+- $2\in D$ no tiene imagen $\nexists, y\in R$.
+- $3\in D$ tiene doble imagen $\nexists !, y\in R$.
+
+---
+
+## Álgebra de funciones
+
+El dominio $D_f$ de la función
+$$
+y=f(x)
+$$
+
+se reconoce como el subconjunto de la recta real $\mathbb{R}$ que cumple las restricciones:
+
+1. Si $f(x)=\frac{P(x)}{Q(x)}$ entonces $$Q(x)\neq 0$$
+
+2. Si $f(x)=\sqrt[n]{P(x)}$ con $n$ par, entonces $$P(x)\ge 0$$
+3. Si $f(x)=\log_a(P(x))$ con $a>0$, entonces $$P(x)>0$$
+4. Si $f(x)=a^{P(x)}$ entonces $$a>0\qu,\quad a\neq 1$$
+5. Si
+
+$$
+f(x)=\arcsen(P(x))
+$$
+
+o
+
+$$
+f(x)=\arccos(P(x))
+$$
+
+entonces
+
+$$
+-1\le P(x)\le 1
+$$
+
+
+
 
 
 
@@ -295,8 +347,6 @@ c)
 ---
 ---
 ---
-
-`red`rojo`green`verde`blue`azul`cyan`cian`magenta`magenta`yellow`amarillo`black`negro`white`blanco`gray` / `grey`gris`darkgray`gris oscuro`lightgray`gris claro`brown`marrón`lime`lima`olive`oliva`orange`naranja`pink`rosa`purple`púrpura`teal`turquesa`violet`violeta
 
 
 ---
