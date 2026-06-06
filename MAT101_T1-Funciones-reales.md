@@ -116,63 +116,118 @@ Analizar si $f$ es o no función.
 \begin{document}
 \begin{tikzpicture}
 
-% Conjuntos
 \draw (-4,0) ellipse (1 and 2);
 \draw (4,0) ellipse (1 and 2);
 
-% Nombres de conjuntos
 \node at (-4,2.6) {$D$};
 \node at (4,2.6) {$R$};
-
-% Etiqueta de la función
 \node at (0,2.8) {$f$};
 
-% Elementos del dominio
 \node (a1) at (-4,1) {$1$};
 \node (a2) at (-4,0) {$2$};
 \node (a3) at (-4,-1) {$3$};
 
-% Elementos del recorrido
 \node (b4) at (4,1) {$4$};
 \node (b5) at (4,0) {$5$};
 \node (b6) at (4,-1) {$6$};
 
-% Flechas
-\draw[->, thick] (a1) -- (b6);
-\draw[->, thick] (a2) -- (b5);
-\draw[->, thick] (a3) -- (b4);
+\draw[->, thick, orange]
+(a1) .. controls (-1,1.5) and (1,-1.5) .. (b6);
+
+\draw[->, thick, blue!70!green]%teal]
+(a2) -- (b5);
+
+\draw[->, thick, color=olive]%green]
+(a3) .. controls (-1,-1.5) and (1,1.5) .. (b4);
 
 \end{tikzpicture}
 \end{document}
-````
+```
+
 
 $f$ sí es función.
 
-$$  
-D_f=\{1,2,3\}  
-$$
-$$  
-R_f=\{4,5,6\}
-$$
-
-$rango,\ recorrido,\ codominio$  
-$$  
-=\text{ conjunto de imágenes}  
-$$
-
-$$  
-f={(1,6),(2,5),(3,4)}  
-$$
+$$  D_f=\{1,2,3\}  $$
+$$R_f=\{4,5,6\}=rango,\ recorrido,\ codominio ,\text{ conjunto de imágenes}$$
+  $$f={(1,6),(2,5),(3,4)}$$
 
 - $\forall x$ del $D$ debe tener imagen.
-    
-- El $D$ no debe repetirse.
+- El $D$ debe ser único y no debe repetirse.
     
 
+b)
+
+```tikz
+\begin{document}
+\begin{tikzpicture}
+
+\draw (-4,0) ellipse (1 and 2);
+\draw (4,0) ellipse (1 and 2);
+
+\node at (-4,2.6) {$D$};
+\node at (4,2.6) {$R$};
+
+\node (a1) at (-4,1) {$1$};
+\node (a2) at (-4,0) {$2$};
+\node (a3) at (-4,-1) {$3$};
+
+\node (b4) at (4,1) {$4$};
+\node (b5) at (4,0) {$5$};
+\node (b6) at (4,-1) {$6$};
+
+\draw[->, thick, red]
+(a1) .. controls (-1,1.2) and (1,0.6) .. (b5);
+
+\draw[->, thick, blue]
+(a2) -- (b5);
+
+\draw[->, thick, green]
+(a3) .. controls (-1,-1.2) and (1,-0.6) .. (b5);
+
+\end{tikzpicture}
+\end{document}
 ```
 
-Este formato respeta la transcripción en Markdown, las expresiones en LaTeX y el diagrama como bloque `tikz` para Obsidian/TikZJax.
+c)
+
+```tikz
+\begin{document}
+\begin{tikzpicture}
+
+\draw (-4,0) ellipse (1 and 2);
+\draw (4,0) ellipse (1 and 2);
+
+\node at (-4,2.6) {$D$};
+\node at (4,2.6) {$R$};
+
+\node (a1) at (-4,1) {$1$};
+\node (a2) at (-4,0) {$2$};
+\node (a3) at (-4,-1) {$3$};
+
+\node (b4) at (4,1) {$4$};
+\node (b5) at (4,0) {$5$};
+\node (b6) at (4,-1) {$6$};
+
+% 1 -> 4
+\draw[->, thick, red]
+(a1) .. controls (-1,2) and (1,2) .. (b4);
+
+% 1 -> 5
+\draw[->, thick, blue]
+(a1) .. controls (-1,0.8) and (1,0.4) .. (b5);
+
+% 3 -> 5
+\draw[->, thick, green]
+(a3) .. controls (-1,-0.4) and (1,-0.2) .. (b5);
+
+% 3 -> 6
+\draw[->, thick, orange]
+(a3) .. controls (-1,-2) and (1,-2) .. (b6);
+
+\end{tikzpicture}
+\end{document}
 ```
+
 
 
 
@@ -240,6 +295,10 @@ Este formato respeta la transcripción en Markdown, las expresiones en LaTeX y e
 ---
 ---
 ---
+
+`red`rojo`green`verde`blue`azul`cyan`cian`magenta`magenta`yellow`amarillo`black`negro`white`blanco`gray` / `grey`gris`darkgray`gris oscuro`lightgray`gris claro`brown`marrón`lime`lima`olive`oliva`orange`naranja`pink`rosa`purple`púrpura`teal`turquesa`violet`violeta
+
+
 ---
 ---
 
