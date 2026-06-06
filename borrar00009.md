@@ -22,3 +22,6 @@ Tabla
 | $]1,2[$        | $1.5$    | $\frac{()()()}{()()}=()$       |         |
 | $]2,+\infty[$  | $10$     | $\frac{()()()}{()()}=()$       |         |
 | 2              | 2        | 0                              | V       |
+C:\Users
+
+C:\Users\USUARIO\AppData\Roaming\Claude
