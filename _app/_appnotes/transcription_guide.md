@@ -8,9 +8,9 @@ related_notes:
   - "[[_note-system]]"
   - "[[desmos_guide]]"
   - "[[tikzjax_guide]]"
-tags: [beacon, chatgpt, transcripcion, infraestructura]
+tags: [beacon, chatgpt, claude, transcripcion, infraestructura]
 date_created: 2026-06-02
-date_updated: 2026-06-02
+date_updated: 2026-06-05
 status: activo
 ---
 
@@ -164,6 +164,8 @@ TIPOS DE GRÁFICOS EN ESTE PDF (Cap. I — Funciones reales):
 - Rectas numéricas con intervalos → Desmos (ver reglas específicas abajo)
 - Gráficas de seno, coseno, tangente → Desmos
 - Función valor absoluto, escalón, distancia, signo → Desmos por tramos
+
+---
 
 GRAFICA DE RECTA NUMÉRICA E INTERVALOS:
 Cuando el manuscrito muestra una recta numérica con intervalos,
