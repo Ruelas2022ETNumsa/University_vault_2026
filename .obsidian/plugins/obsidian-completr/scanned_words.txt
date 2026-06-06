@@ -1237,6 +1237,7 @@ sen
 senh
 sech
 sustituir
+subtemas
 vault
 vil
 ver
@@ -1900,6 +1901,7 @@ reemplazar
 rectas
 repetirse
 recomendaci
+revisando
 notes
 notas
 nuevas
@@ -4541,6 +4543,7 @@ incluida
 impar
 inversas
 indicaste
+indicaci
 Dependencia
 Dropbox
 Dataview
@@ -4765,6 +4768,7 @@ Rellenar
 Recomendada
 Rectas
 Reemplazando
+Revisando
 Hider
 Hace
 Herramientas

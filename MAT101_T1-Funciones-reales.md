@@ -575,65 +575,22 @@ $$
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-```tikz
-\begin{document}
-\begin{tikzpicture}
-
-\draw (-4,0) ellipse (1 and 1.5);
-\draw (0,0) ellipse (1 and 1.5);
-\draw (4,0) ellipse (1 and 1.5);
-
-\node at (-4,2) {$A$};
-\node at (0,2) {$B$};
-\node at (4,2) {$C$};
-
-\node (x) at (-4,0) {$x$};
-\node (gx) at (0,0) {$g(x)$};
-\node (fgx) at (4,0) {$f(g(x))$};
-
-\draw[->, thick] (x) -- (gx);
-\node at (-2,0.4) {$g$};
-
-\draw[->, thick] (gx) -- (fgx);
-\node at (2,0.4) {$f$};
-
-\draw[->, thick]
-(-4,0.8) .. controls (0,2.5) .. (4,0.8);
-
-\node at (0,2.9) {$f\circ g$};
-
-\end{tikzpicture}
-\end{document}
-```
-
-
 ---
 ---
 ---
 
 
----
----
 
 
+Siguiendo tu indicación, el **Cap. I – Funciones reales** comienza en la mitad derecha de la página 1. Revisando las primeras páginas del capítulo, los títulos y subtítulos que se distinguen son:
 
-
-
+- Cap. I
+    
+    - Funciones reales
+        
+        - Definición de función
+            
+        - Notación
             
         - Álgebra de funciones
             
@@ -645,6 +602,8 @@ $$
             
         - Función inversa
             
+
+Además, dentro de **Álgebra de funciones** aparecen los subtemas:
 
 - Álgebra de funciones
     
@@ -666,3 +625,5 @@ $$
             
         - Funciones trigonométricas inversas
             
+
+Si quieres, puedo continuar revisando las páginas restantes del PDF y extraer la **estructura completa del capítulo** en formato jerárquico antes de hacer cualquier transcripción.
