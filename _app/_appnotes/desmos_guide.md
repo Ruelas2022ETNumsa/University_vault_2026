@@ -1,12 +1,18 @@
 ---
-title: "Desmos — Guía unificada para Obsidian"
+title: Desmos — Guía unificada para Obsidian
 galaxy_body: beacon
 scope: vault
 tool: desmos-plugin
-audience: [usuario, notebooklm, claude]
-tags: [beacon, desmos, infraestructura]
+audience:
+  - usuario
+  - notebooklm
+  - claude
+tags:
+  - beacon
+  - desmos
+  - infraestructura
 date_created: 2026-01-01
-date_updated: 2026-06-01
+date_updated: 2026-06-05
 status: activo
 ---
 
@@ -720,7 +726,7 @@ y=0.10 \{a<x<b\}|#2d70b3
 
 ---
 
-# 🧠 SECCIÓN CLAUDE
+# 🧠 SECCIÓN IA — Claude y ChatGPT
 
 Reglas y patrones que Claude debe aplicar al generar o corregir bloques Desmos en archivos `.md` del vault. Esta sección es la referencia de trabajo activa para Claude.
 
