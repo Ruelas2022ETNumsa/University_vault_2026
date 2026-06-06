@@ -538,6 +538,36 @@ La gráfica de $y=f(x)$ es simétrica respecto al eje $y$.
 \end{tikzpicture}
 \end{document}
 ```
+> [!note]
+> Gráfica: espejo.
+
+**Ej.**
+
+$$
+f(x)=\frac{x^8-4x^6}{x^2+1}
+$$
+es par, ya que
+$$
+f(-x)=\frac{x^8-4x^6}{x^2+1}
+$$
+
+por tanto
+$$
+f(-x)=f(x)
+$$
+
+
+**Otro**
+$$
+f(x)=\cos x
+$$
+es par porque
+$$
+f(-x)=\cos(-x)=\cos(x)
+$$
+$$
+f(-x)=f(x)
+$$
 
 ---
 
@@ -577,9 +607,7 @@ La gráfica de $y=f(x)$ impar es simétrica respecto al origen $(0,0)$.
 \node[above left] at (-0.5,0.375) {$(-0.5,\;0.375)$};
 \node[below right] at (0.5,-0.375) {$(0.5,\;-0.375)$};
 
-% Marcas en eje x
-\node[below] at (-0.5,0) {$-0.5$};
-\node[below] at (0.5,0) {$0.5$};
+
 
 % Etiqueta de función
 \node[right] at (0.8,0.9) {$y=x^3-x$};
@@ -594,7 +622,7 @@ La gráfica de $y=f(x)$ impar es simétrica respecto al origen $(0,0)$.
 
 
 > [!note]
-> Gráfica: función impar (simetría respecto al origen).
+> Gráfica: doble espejo.
 
 **Ej.**
 
@@ -629,46 +657,81 @@ $$
 
 > [!note]
 > Ejemplo que no es función impar:
->
-> $f(x)=2x^5+6x^3-8x+4$
->
-> No es impar porque no cumple $f(-x)=-f(x)$.
+> $$f(x)=2x^5+6x^3-8x+4$$
+> No es impar porque no cumple $f(-x)=-f(x)$. El 4 añadido impide la condición
 
 ---
 
-**Ej.**
+## 6. Función periódica
+
+$y=f(x)$ es periódica con período $p$ si cumple
 
 $$
-f(x)=\frac{x^8-4x^6}{x^2+1}
-$$
-es par, ya que
-$$
-f(-x)=\frac{x^8-4x^6}{x^2+1}
+f(x+p)=f(x)
 $$
 
-por tanto
+```tikz
+\begin{document}
+\begin{tikzpicture}[scale=1.5]
+
+% Ejes
+\draw[->] (-0.5,0) -- (7.2,0) node[right] {$x$};
+\draw[->] (0,-0.2) -- (0,1.4) node[above] {$y$};
+
+% Curva y = sen²(x)
+\draw[thick, teal, domain=0:6.283, samples=200]
+  plot (\x,{sin(\x r)*sin(\x r)});
+
+% Marcas
+\node[below] at (0,0) {$0$};
+\node[below] at (1.57,0) {$\frac{\pi}{2}$};
+\node[below] at (3.14,0) {$\pi$};
+\node[below] at (4.71,0) {$\frac{3\pi}{2}$};
+\node[below] at (6.28,0) {$2\pi$};
+
+% Máximos
+\fill (1.57,1) circle (0.04);
+\fill (4.71,1) circle (0.04);
+
+% Etiqueta
+\node[right] at (6.3,0.5) {$y=\sin^2 x$};
+
+% Periodo
+\draw[dashed] (0,1) -- (6.28,1);
+\node[above] at (1.57,1.2) {$p=\pi$};
+
+\end{tikzpicture}
+\end{document}
+```
+
+- La gráfica en $p$ unidades se repite indefinidamente.
+
+- **Ej.**
+
+$f(x)=\text{sen}\,x$ es periódica con $p=2\pi$
+
 $$
-f(-x)=f(x)
+\begin{array}{rcl}
+f(x+2\pi) & = & \text{sen}(x+2\pi) \\
+          & = & \text{sen}\,x \\
+          & = & f(x)
+\end{array}
 $$
 
+Por tanto,
 
-**Otro**
 $$
-f(x)=\cos x
-$$
-es par porque
-$$
-f(-x)=\cos(-x)=\cos(x)
-$$
-$$
-f(-x)=f(x)
+f(x+2\pi)=f(x)
 $$
 
+> [!note]
+> Gráfica: función periódica ($y=\text{sen}\,x$).
+
+- otros
+
+$$f(x)=\cos ()$$
 
 
-
-
----
 ---
 ---
 
