@@ -2,10 +2,12 @@
 title: "transcription-guide"
 galaxy_body: beacon
 scope: vault
-audience: [usuario, chatgpt]
+audience: [usuario, chatgpt, claude]
 related_notes:
   - "[[class-notes-guide]]"
   - "[[_note-system]]"
+  - "[[desmos_guide]]"
+  - "[[tikzjax_guide]]"
 tags: [beacon, chatgpt, transcripcion, infraestructura]
 date_created: 2026-06-02
 date_updated: 2026-06-02
@@ -138,20 +140,30 @@ Usar callouts de Obsidian:
 ---
 
 GRÁFICOS:
-Generar bloque desmos-graph solo cuando existe un gráfico en el manuscrito.
+Antes de generar cualquier gráfico, determinar la herramienta según este orden:
 
-Cuando el gráfico es reproducible en Desmos (funciones, curvas, puntos):
-- Reproducirlo usando sintaxis compatible con Obsidian.
-- Ajustar la ventana (left, right, bottom, top) al rango visible en el manuscrito.
-- Agregar una línea en cursiva debajo describiendo qué ilustra el gráfico.
+1. Funciones, curvas, rectas numéricas, intervalos, gráficas trigonométricas → Desmos
+   Ver desmos_guide.md para sintaxis completa.
 
-Cuando el gráfico no es reproducible en Desmos (diagrama de conjuntos, figura geométrica libre):
-- No forzarlo en Desmos.
-- Escribir en su lugar:
-  > [!note] Gráfico manuscrito
-  > Descripción textual: tipo de gráfico, elementos visibles, etiquetas.
+2. Diagramas de conjuntos con flechas, circunferencia trigonométrica,
+   función inversa con espejo y=x, figuras geométricas estructuradas → TikZJax
+   Ver tikzjax_guide.md para sintaxis completa.
+
+3. No reproducible (sketch libre, diagrama conceptual sin estructura fija) →
+   > [!note] Gráfico manuscrito
+   > Descripción textual: tipo de gráfico, elementos visibles, etiquetas.
 
 Nunca inventar gráficos que no existan en el manuscrito.
+Nunca forzar en Desmos lo que corresponde a TikZJax ni viceversa.
+
+TIPOS DE GRÁFICOS EN ESTE PDF (Cap. I — Funciones reales):
+- Gráficas de funciones (parábola, exponencial, logarítmica, trigonométricas) → Desmos
+- Diagrama de composición de funciones (óvalos con flechas A→B→C) → TikZJax
+- Circunferencia trigonométrica con puntos etiquetados → TikZJax
+- Función inversa con espejo y=x → TikZJax
+- Rectas numéricas con intervalos → Desmos (ver reglas específicas abajo)
+- Gráficas de seno, coseno, tangente → Desmos
+- Función valor absoluto, escalón, distancia, signo → Desmos por tramos
 
 GRAFICA DE RECTA NUMÉRICA E INTERVALOS:
 Cuando el manuscrito muestra una recta numérica con intervalos,
@@ -212,6 +224,35 @@ y=1 \{4<=x<5\}|#ff7b7b
 y=1 \{x>5\}|#ff7b7b|DOTTED
 (4,1)|label:4|#ff7b7b
 ```
+
+---
+
+EJEMPLOS RESUELTOS:
+Cuando el manuscrito presenta un ejercicio con desarrollo algebraico:
+- Encabezar con **Ej.** seguido del enunciado en la misma línea.
+- El desarrollo va en bloque display si es multilínea.
+- Si el ejemplo tiene partes (a), b), c)...) conservar esa numeración.
+- No agregar pasos intermedios que no estén en el manuscrito.
+
+---
+
+NOTAS AL MARGEN:
+El manuscrito tiene anotaciones fuera del cuerpo principal. Tratarlas así:
+- Notas aclaratorias relevantes → > [!note] con el texto de la anotación.
+- Notas como "No para examen", "Tarea", advertencias → > [!important]
+- El separador visual ∼o∼ que aparece entre temas → ignorar, no transcribir.
+- Flechas o marcas de énfasis (★, ✶) sin texto propio → ignorar.
+
+---
+
+NOTACIÓN DE FUNCIONES ESPECIALES:
+Usar siempre la notación del manuscrito sin convertirla:
+- Si el manuscrito escribe sen x → transcribir $\text{sen}\, x$ (no $\sin x$)
+- Si escribe tg x → transcribir $\text{tg}\, x$ (no $\tan x$)
+- arc sen, arc cos, arc tg → $\text{arc sen}$, $\text{arc cos}$, $\text{arc tg}$
+- senh, cosh, tgh → $\text{senh}\, x$, $\cosh x$, $\text{tgh}\, x$
+- sech, cosec → $\text{sech}\, x$, $\text{cosec}\, x$
+Nunca sustituir notación hispanohablante por notación anglosajona.
 
 ---
 

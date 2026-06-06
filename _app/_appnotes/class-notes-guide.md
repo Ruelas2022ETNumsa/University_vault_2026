@@ -22,7 +22,7 @@ status: activo
 ```
 Apunte manuscrito
       ↓
-   OCR + LaTeX  (Mathpix / SimpleTex / Pix2Tex)
+   OCR + LaTeX  (ChatGPT)
       ↓
    Texto crudo con fórmulas en $...$ o $$...$$
       ↓

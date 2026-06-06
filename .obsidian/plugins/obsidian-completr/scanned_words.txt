@@ -169,6 +169,10 @@ tricas
 tiny
 theta
 tercera
+tmica
+tangente
+tg
+tgh
 ToDo
 Templater
 Text
@@ -264,6 +268,8 @@ Temas
 Tangente
 Tama
 Tri
+TIPOS
+Tarea
 Sistema
 Sync
 Save
@@ -1218,6 +1224,12 @@ secundario
 sube
 soportada
 simular
+sketch
+seno
+sen
+senh
+sech
+sustituir
 vault
 vil
 ver
@@ -1609,6 +1621,7 @@ amssymb
 americano
 asume
 alpha
+anglosajona
 related
 recomendados
 ribbon
@@ -1872,6 +1885,7 @@ rectangle
 rellena
 rellenar
 reemplazar
+rectas
 notes
 notas
 nuevas
@@ -2484,6 +2498,10 @@ composici
 copie
 cos
 circ
+coseno
+convertirla
+cosh
+cosec
 updated
 un
 universo
@@ -3057,6 +3075,7 @@ Ese
 Elementos
 Etiqueta
 Equivalente
+ESPECIALES
 Obsidian
 OmniSearch
 Ocultar
@@ -4041,6 +4060,9 @@ espejo
 europeo
 etiquetado
 exceso
+estructuradas
+exponencial
+escal
 Motor
 Media
 Mantiene
@@ -4281,6 +4303,7 @@ ln
 led
 limpias
 lar
+logar
 incluyendo
 im
 instalar
@@ -4704,6 +4727,7 @@ Rama
 RLC
 Rellenar
 Recomendada
+Rectas
 Hider
 Hace
 Herramientas
@@ -4915,6 +4939,7 @@ hilo
 hijo
 hermano
 horario
+hispanohablante
 que
 quedan
 queda
