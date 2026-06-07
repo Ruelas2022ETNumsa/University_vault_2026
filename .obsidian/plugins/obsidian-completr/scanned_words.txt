@@ -178,6 +178,7 @@ teal
 truncado
 terminaba
 truncados
+tx
 ToDo
 Templater
 Text
@@ -995,6 +996,9 @@ blue
 black
 brown
 bluered
+biyectiva
+bigl
+bigr
 scope
 status
 selector
@@ -1257,6 +1261,7 @@ senh
 sech
 sustituir
 subtemas
+subseteq
 vault
 vil
 ver
@@ -1657,6 +1662,7 @@ analiza
 atractivas
 asignar
 ancla
+adido
 related
 recomendados
 ribbon
@@ -2551,6 +2557,7 @@ conocida
 cf
 cyan
 cool
+cdots
 updated
 un
 universo
@@ -2609,6 +2616,7 @@ unico
 utiliza
 universitario
 usen
+underbrace
 Galaxy
 Git
 Gr
@@ -2909,6 +2917,8 @@ IAs
 IEEE
 IEC
 Inestable
+Intercambiar
+Id
 Funci
 File
 Fase
@@ -3184,6 +3194,8 @@ Observaci
 Ocurre
 Omega
 Otro
+Ojo
+Operativamente
 Auto
 Annotator
 Autocompletado
@@ -3585,6 +3597,7 @@ preventiva
 puedan
 pink
 purple
+per
 min
 mica
 movimiento
@@ -4595,6 +4608,7 @@ impar
 inversas
 indicaste
 indicaci
+indefinidamente
 Dependencia
 Dropbox
 Dataview
@@ -4688,6 +4702,7 @@ Dictado
 Demuestre
 Determine
 Denominador
+Dom
 Remotely
 Raz
 Revisa
@@ -5237,6 +5252,7 @@ operacional
 oldText
 olive
 orange
+odo
 junto
 json
 jer
@@ -5306,6 +5322,7 @@ xA
 xxx
 xxxxxxxxxx
 xcolor
+xg
 Wikilinks
 WHERE
 WebGL

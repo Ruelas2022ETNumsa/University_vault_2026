@@ -40,9 +40,21 @@
       "mode": "any"
     },
     {
+      "id": "app:toggle-ribbon",
+      "icon": "lucide-ribbon",
+      "name": "Toggle ribbon",
+      "mode": "any"
+    },
+    {
       "id": "workspace:split-vertical",
       "icon": "lucide-separator-vertical",
       "name": "Split right",
+      "mode": "any"
+    },
+    {
+      "id": "app:reload",
+      "icon": "lucide-rotate-ccw",
+      "name": "Reload app without saving",
       "mode": "any"
     }
   ],
