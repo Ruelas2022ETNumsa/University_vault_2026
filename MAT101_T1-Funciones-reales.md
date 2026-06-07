@@ -963,6 +963,7 @@ e^{-\frac{4x}{x-1}}$$
 $$(g\circ f)(x)=
 \sqrt[1-x]{e^{4x}}$$
 
+---
 
 **Ejercicio 2.** Si
 $$f(x)=\frac{3x}{2}-1$$
@@ -1010,50 +1011,324 @@ $$
 ---
 
 
+**Ej.** Se conocen
+$$f(x)=\frac{2x^3-7}{3x^3+4}$$
+y
+$$f^{-1}(x)=\sqrt[3]{\frac{7+4x}{2-3x}}$$
+Hallar
+$$(f\circ f^{-1})(x)$$
+
+**Sol.**
+
+Por definición de composición,
+$$(f\circ f^{-1})(x)=
+f\!\left(f^{-1}(x)\right)
+$$
+
+Sustituyendo:
+$$(f\circ f^{-1})(x)=
+\frac{
+2\left(\sqrt[3]{\frac{7+4x}{2-3x}}\right)^3-7
+}{
+3\left(\sqrt[3]{\frac{7+4x}{2-3x}}\right)^3+4
+}
+$$
+
+Como
+$$\left(\sqrt[3]{\frac{7+4x}{2-3x}}\right)^3=
+\frac{7+4x}{2-3x}
+$$
+
+resulta
+$$(f\circ f^{-1})(x)=
+\frac{
+2\left(\frac{7+4x}{2-3x}\right)-7
+}{
+3\left(\frac{7+4x}{2-3x}\right)+4
+}$$
+
+$$=\frac{
+\frac{14+8x-14+21x}{2-3x}
+}{
+\frac{21+12x+8-12x}{2-3x}
+}$$
+
+$$=
+\frac{
+\frac{29x}{2-3x}
+}{
+\frac{29}{2-3x}
+}$$
+
+$$=x$$
+
+Por tanto,
+$$(f\circ f^{-1})(x)=x$$
 
 
-Siguiendo tu indicación, el **Cap. I – Funciones reales** comienza en la mitad derecha de la página 1. Revisando las primeras páginas del capítulo, los títulos y subtítulos que se distinguen son:
+> [!note]  
+> Se verifica la propiedad de la función inversa:
+> 
+> $$  
+> f\circ f^{-1}=I  
+> $$
+> 
+> donde $I(x)=x$ es la función identidad.
 
-- Cap. I
-    
-    - Funciones reales
-        
-        - Definición de función
-            
-        - Notación
-            
-        - Álgebra de funciones
-            
-        - Función par
-            
-        - Función impar
-            
-        - Función periódica
-            
-        - Función inversa
-            
 
-Además, dentro de **Álgebra de funciones** aparecen los subtemas:
+---
 
-- Álgebra de funciones
-    
-    - Suma de funciones
-        
-    - Producto de funciones
-        
-    - Cociente de funciones
-        
-    - Dominio de una función
-        
-        - Funciones racionales
-            
-        - Funciones radicales
-            
-        - Funciones logarítmicas
-            
-        - Funciones exponenciales
-            
-        - Funciones trigonométricas inversas
-            
+**Ej.** Si
+$$f(x)=\frac{2x+1}{x}$$
+y
+$$(f\circ g)(x)=\frac{x}{x-1}$$
 
-Si quieres, puedo continuar revisando las páginas restantes del PDF y extraer la **estructura completa del capítulo** en formato jerárquico antes de hacer cualquier transcripción.
+hallar $g(x)$.
+
+**Sol.**
+
+Por definición de composición,
+
+$$(f\circ g)(x)=f(g(x))$$
+
+Sustituyendo $g(x)$ en la función $f$:
+$$\frac{2g(x)+1}{g(x)}=
+\frac{x}{x-1}
+$$
+
+Multiplicando en cruz:
+$$(2g(x)+1)(x-1)=x\,g(x)$$
+
+$$2xg(x)-2g(x)+x-1=xg(x)$$
+
+Agrupando términos con $g(x)$:
+$$xg(x)-2g(x)=1-x$$
+
+$$g(x)(x-2)=1-x$$
+
+Despejando:
+$$g(x)=\frac{1-x}{x-2}$$
+
+o equivalentemente,
+$$g(x)=\frac{x-1}{2-x}$$
+
+Por tanto,
+$$g(x)=\frac{1-x}{x-2}$$
+
+>[!note]  
+>También puede resolverse utilizando
+>$$g=f^{−1}∘(f∘g)$$
+>pero el despeje directo suele ser el procedimiento más corto.
+
+---
+
+**Ej.** Si
+$$f(x)=\frac{x-1}{x}$$
+
+hallar
+$$\underbrace{(f\circ f\circ f\circ\cdots\circ f)}_{50\text{ veces}}(x)$$
+
+**Sol.**
+
+Calculamos las primeras composiciones:
+$$f(x)=\frac{x-1}{x}$$
+
+$$f(f(x))=
+\frac{\frac{x-1}{x}-1}{\frac{x-1}{x}}
+$$
+
+$$=\frac{-1/x}{(x-1)/x}$$
+
+$$=-\frac{1}{x-1}$$
+
+Entonces,
+$$f^2(x)=-\frac{1}{x-1}$$
+
+Ahora,
+$$f^3(x)=
+f\!\left(-\frac{1}{x-1}\right)
+$$
+
+$$=\frac{-\frac{1}{x-1}-1}{-\frac{1}{x-1}}$$
+
+$$=x$$
+
+Por tanto,
+$$f^3(x)=x$$
+
+Luego la composición es periódica de período $3$:
+$$f^1(x)=f(x)$$
+
+$$f^2(x)=-\frac{1}{x-1}$$
+
+$$f^3(x)=x$$
+
+$$f^4(x)=f(x)$$
+
+$$f^5(x)=f^2(x)$$
+
+$$f^6(x)=x$$
+
+y así sucesivamente.
+
+Como
+$$50=3\cdot16+2$$
+
+se tiene
+$$f^{50}(x)=f^2(x)$$
+
+Por consiguiente,
+$$\underbrace{(f\circ f\circ f\circ\cdots\circ f)}_{50\text{ veces}}(x)=
+-\frac{1}{x-1}
+$$
+
+> [!note]  
+> Se utilizó que la función cumple
+> 
+> $$  
+> f^3(x)=x  
+> $$
+> 
+> por lo que las composiciones se repiten cada tres aplicaciones.
+
+---
+
+**Ej.** Para
+$$f\!\left(\frac{x-2}{x}\right)=\frac{x-1}{x+1}$$
+
+y
+$$g^{-1}\!\left(\frac{2}{x}\right)=\frac{x}{x+2}$$
+
+hallar
+$$(f^{-1}\circ g\circ f)\left(\frac{1}{x^3}\right)$$
+
+**Sol.**
+
+Primero determinamos $f$.
+Sea
+$$t=\frac{x-2}{x}$$
+
+entonces
+$$tx=x-2$$
+
+$$x(t-1)=-2$$
+
+$$x=\frac{2}{1-t}$$
+
+Sustituyendo en
+$$f(t)=\frac{x-1}{x+1}$$
+
+obtenemos
+$$f(t)=
+\frac{\frac{2}{1-t}-1}
+     {\frac{2}{1-t}+1}
+$$
+
+$$=\frac{1+t}{3-t}$$
+
+Por tanto,
+$$f(x)=\frac{x+1}{3-x}$$
+
+Ahora hallamos $f^{-1}$:
+
+$$y=\frac{x+1}{3-x}$$
+
+$$y(3-x)=x+1$$
+
+$$3y-1=x(1+y)$$
+
+$$x=\frac{3y-1}{y+1}$$
+
+Luego,
+$$f^{-1}(x)=\frac{3x-1}{x+1}$$
+
+---
+
+Determinamos ahora $g$.
+
+Sea
+$$t=\frac{2}{x}$$
+
+entonces
+$$x=\frac{2}{t}$$
+
+y
+$$g^{-1}(t)=
+\frac{\frac{2}{t}}
+     {\frac{2}{t}+2}
+=
+\frac{1}{t+1}
+$$
+
+Así,
+$$g^{-1}(x)=\frac{1}{x+1}$$
+
+Hallando la inversa:
+$$y=\frac{1}{x+1}$$
+
+$$x+1=\frac{1}{y}$$
+
+$$x=\frac{1-y}{y}$$
+
+Por tanto,
+$$g(x)=\frac{1-x}{x}$$
+
+---
+
+Ahora calculamos
+$$(f^{-1}\circ g\circ f)\left(\frac{1}{x^3}\right)$$
+
+Sea
+$$u=\frac{1}{x^3}$$
+
+Entonces
+$$f(u)=
+\frac{u+1}{3-u}
+$$
+
+$$=\frac{\frac1{x^3}+1}
+     {3-\frac1{x^3}}
+$$
+
+$$=\frac{x^3+1}{3x^3-1}$$
+
+Aplicando $g$:
+$$g(f(u))=
+\frac{1-\frac{x^3+1}{3x^3-1}}
+     {\frac{x^3+1}{3x^3-1}}
+$$
+
+$$=\frac{2x^3-2}{x^3+1}$$
+
+$$=\frac{2(x^3-1)}{x^3+1}$$
+
+Aplicando $f^{-1}$:
+$$f^{-1}(g(f(u)))=
+\frac{3\left(\frac{2(x^3-1)}{x^3+1}\right)-1}
+     {\left(\frac{2(x^3-1)}{x^3+1}\right)+1}
+$$
+
+$$=\frac{\frac{6(x^3-1)-(x^3+1)}{x^3+1}}
+     {\frac{2(x^3-1)+(x^3+1)}{x^3+1}}
+$$
+
+$$=\frac{5x^3-7}{3x^3-1}$$
+
+Por consiguiente,
+$$(f^{-1}\circ g\circ f)\left(\frac{1}{x^3}\right)=
+\frac{5x^3-7}{3x^3-1}
+$$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
