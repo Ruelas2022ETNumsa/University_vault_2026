@@ -784,6 +784,7 @@ duplicando
 disciplina
 darkgray
 definecolor
+dots
 Vault
 Verificar
 Variables
@@ -999,6 +1000,7 @@ bluered
 biyectiva
 bigl
 bigr
+bx
 scope
 status
 selector
@@ -1663,6 +1665,7 @@ atractivas
 asignar
 ancla
 adido
+alfa
 related
 recomendados
 ribbon
@@ -2062,6 +2065,7 @@ npn
 notebooklm
 necesito
 necesitar
+nepper
 created
 commit
 cada
@@ -2558,6 +2562,7 @@ cf
 cyan
 cool
 cdots
+coeficientes
 updated
 un
 universo
@@ -3789,6 +3794,7 @@ mismas
 match
 magenta
 micolor
+mathrm
 YAML
 Ya
 You
@@ -4403,6 +4409,7 @@ lanza
 literalmente
 lightgray
 lime
+ldots
 incluyendo
 im
 instalar

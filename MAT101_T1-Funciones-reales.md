@@ -196,7 +196,7 @@ $$R_f=\{4,5,6\}=rango,\ recorrido,\ codominio ,\text{ conjunto de imágenes}$$
 
 La relación **sí** es función porque:
 $$D_f=\{1,2,3\}$$  $$R=\{4,5,6\} = codominio$$
-$$R_{f={5}}= \text{imagen o rango}$$
+$$R_{f}=\{5\}= \text{imagen o rango}$$
 Todas las flechas llegan a 5.
 
 ---
@@ -462,7 +462,7 @@ $$
 
 ---
 
-## Álgebra de funciones
+## Aritmética de funciones
 
 Sean $y=f(x) \quad,\quad y=g(x)$ funciones reales con dominios $D_f$ y $D_g$ respectivamente.
 
@@ -661,7 +661,7 @@ $$
 > [!note]
 > Ejemplo que no es función impar:
 > $$f(x)=2x^5+6x^3-8x+4$$
-> No es impar porque no cumple $f(-x)=-f(x)$. El 4 añadido impide la condición
+> No es impar ni par, porque no cumple $f(-x)=-f(x)$. El 4 añadido impide la condición
 
 ---
 
@@ -2044,23 +2044,45 @@ $$a= e = 2,718281\dots \quad = \text{número de nepper}$$
 \node[gray, font=\small] at (4.2,5.0) {$\frac{\pi}{4}$};
 % Punto (0,1)
 \fill[black] (0,1) circle (0.07);
-\node[below right, font=\small] at (0,1) {$(0,1)$};
+\node[below right, font=\small] at (-1,1.7) {$(0,1)$};
 % Leyenda
 \draw[very thick, teal] (-4.8,4.8) -- (-3.8,4.8)
     node[right, font=\small] {$f(x)=e^x$};
 
 
 \fill[black] (0,1) circle (0.07);
-\node[below right, font=\small] at (0,2) {$(45^{\circ})$};
+\node[below right, font=\small] at (-0.5,0.7) {$\alpha = 45^{\circ}$};
 
 % Ángulo alfa
 \draw (-0.5,0) arc[start angle=0,end angle=37,radius=0.6];
-\node at (-0.7,0.25) {$\alpha$};
     
 \end{tikzpicture}
 \end{document}
 ```
 
+----
+
+### Propiedades de las potencias
+1. **Producto de potencias de igual base**
+	- $a^m \cdot a^n = a^{m+n}$
+2. **Cociente de potencias de igual base**
+	- $\dfrac{a^m}{a^n}=a^{m-n}$
+3. **Igualdad de potencias de igual base**
+	- Si $a^b=a^c$, entonces $b=c$
+4. **Potencia de una potencia**
+	- $(a^b)^c=a^{bc}$
+5. **Potencia de una potencia**
+	- $a^{(b^c)}=a^{b^c}$
+6. **Potencia de un producto**
+	- $(ab)^n=a^n b^n$
+7. **Potencia de un cociente**
+	- $\left(\dfrac{a}{b}\right)^n=\dfrac{a^n}{b^n}$
+8. **Exponente cero**
+	- $a^0=1\quad, \quad a\neq0$
+9. **Exponente negativo**
+	- $a^{-n}=\dfrac{1}{a^n}$
+10. **Exponente uno**
+	- $a^1=a$
 
 
 
