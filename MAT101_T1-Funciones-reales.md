@@ -1617,10 +1617,157 @@ $$D_{f}=\mathbb{R} \, ; \, R_{f}=\mathbb{R}$$
 \end{document}
 ```
 
+>Función identidad
+
+---
+
+### Función de 2do grado (parabólica)
+
+$$y=f(x)=ax^{2}+bx+c \quad ; \quad a,b,c\in\mathbb{R}$$
+
+$$D_f=\mathbb{R}$$
+
+$$R_f=\text{según coeficientes } a,b,c$$
+
+
+
+- para $a>0$
+
+
+```tikz
+\begin{document}
+\begin{tikzpicture}[scale=1.2]
+
+% Ejes
+\draw[->] (-0.5,0) -- (5,0) node[right] {$x$};
+\draw[->] (0,-0.5) -- (0,3.5) node[above] {$y$};
+
+% Parábola: y = a(x-h)² + k  con h=2, k=1, a=0.5
+\draw[very thick, teal, smooth, samples=100, domain=-0.2:4.2]
+    plot ({\x}, {0.5*(\x-2)^2 + 1});
+
+% Vértice
+\fill[teal] (2,1) circle (0.06);
+\node[below right, font=\small] at (2,1) {$V(2,1)$};
+
+% Líneas guía punteadas
+\draw[dashed, gray] (2,0) -- (2,1);
+\draw[dashed, gray] (0,1) -- (2,1);
+
+% Etiquetas ejes
+\node[below] at (2,0) {$2$};
+\node[left]  at (0,1) {$1$};
+
+% Etiquetas
+\node[teal, right, font=\small] at (3.2,2.6) {$y=a(x-2)^2+1$};
+\node[right, font=\small] at (0.3,0.3) {$a>0$};
+
+\end{tikzpicture}
+\end{document}
+```
+
+- para $a$
+
+```tikz
+\begin{document}
+\begin{tikzpicture}[scale=1.2]
+
+% Ejes
+\draw[->] (-0.5,0) -- (5,0) node[right] {$x$};
+\draw[->] (0,-0.5) -- (0,4) node[above] {$y$};
+
+% Parábola: y = a(x-h)² + k  con h=2, k=2.5, a=-0.5
+\draw[very thick, teal, smooth, samples=100, domain=-0.5:4.5]
+    plot ({\x}, {-0.5*(\x-2)^2 + 2.5});
+
+% Vértice
+\fill[teal] (2,2.5) circle (0.06);
+\node[above right, font=\small] at (2,2.5) {$V(2,\,2.5)$};
+
+% Líneas guía punteadas
+\draw[dashed, gray] (2,0) -- (2,2.5);
+\draw[dashed, gray] (0,2.5) -- (2,2.5);
+
+% Etiquetas ejes
+\node[below] at (2,0) {$2$};
+\node[left]  at (0,2.5) {$2.5$};
+
+% Etiquetas
+\node[teal, right, font=\small] at (3.0,0.5) {$y=a(x-2)^2+2.5$};
+\node[right, font=\small] at (0.3,3.5) {$a<0$};
+
+\end{tikzpicture}
+\end{document}
+```
+
+
+
+
+
+--
+
+
+
+---
 
 
 
 
 
 
+
+
+
+
+También se observa:
+
+- Parábola con (a>0) (abre hacia arriba).
+    
+- Parábola con (a<0) (abre hacia abajo).
+    
+- Vértice (V=(h,k)).
+    
+- Eje de simetría:
+    
+
+$$  
+x=h  
+$$
+
+- Transformación:
+    
+
+$$  
+y=ax^2+bx+c  
+$$
+
+en
+
+$$  
+y-k=a(x-h)^2  
+$$
+
+(con el proceso de completar cuadrados).
+
+Y el ejemplo parece ser:
+
+```markdown
+**Ej. Gráfica**
+
+$$
+f(x)=1+6x-2x^2
+$$
+```
+
+pero para el desarrollo completo y los recorridos que aparecen en las gráficas prefiero no inventar nada.
+
+¿Podrías subir un recorte más cercano de la mitad izquierda de la página (solo la sección de la parábola)? Con un zoom de aproximadamente el doble podré transcribirla completa, incluyendo:
+
+- el ejemplo de completar cuadrados,
+    
+- el vértice,
+    
+- el recorrido,
+    
+- y reproducir las dos parábolas con código Desmos/TikZ según corresponda.
 
