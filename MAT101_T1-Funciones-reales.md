@@ -899,9 +899,7 @@ La composición **es asociativa**, siempre que las composiciones involucradas es
 
 > **Condición:** Se requiere que $\text{Im}(h) \subseteq \text{Dom}(g)$ y $\text{Im}(g) \subseteq \text{Dom}(f)$.
 
----
-
-### Propiedad 5 — Composición con la función inversa
+5. Propiedad 5 — Composición con la función inversa
 
 Si $f$ es biyectiva (inyectiva y sobreyectiva), entonces existe $f^{-1}$ y se cumple:
 
@@ -911,91 +909,102 @@ donde $\text{Id}$ es la **función identidad**. Es decir, componer una función 
 
 > **Condición:** $f$ debe ser biyectiva para que $f^{-1}$ exista.
 
----
 
-### Propiedad 6 — Dominio e imagen de la composición ⚠️ _Corrección_
-
+6. Propiedad 6 — Dominio e imagen de la composición ⚠️ _Corrección_
 Si $f: A \to B$ y $g: B \to C$, entonces:
-
 $$g \circ f : A \to C$$
 
-> **Nota:** En tus apuntes aparecía $f \circ g : A \to C$, lo cual es incorrecto. La notación $g \circ f$ significa "primero $f$, luego $g$": se aplica $f$ que lleva de $A$ a $B$, y luego $g$ que lleva de $B$ a $C$. Por eso el resultado va de $A$ a $C$.
-> 
 > **Condición:** El codominio de $f$ debe coincidir con el dominio de $g$ (es decir, $\text{Im}(f) \subseteq \text{Dom}(g) = B$).
 
----
-
-### Propiedad 7 — Composición con la función identidad
-
+7. Propiedad 7 — Composición con la función identidad
 Sea $\text{Id}$ la función identidad, definida como $\text{Id}(x) = x$. Entonces:
-
 $$f \circ \text{Id} = \text{Id} \circ f = f$$
 
 La identidad actúa como **elemento neutro** de la composición.
 
-> **Nota:** En tus apuntes faltaban los signos de igualdad entre los términos.
-
 ---
 
-## Resumen
+**Ejercicio 1.** Para
+$$f(x)=\sqrt{\frac{x}{x-1}}$$
+$$g(x)=e^{-4x^2}$$
 
-|Propiedad|¿Se cumple?|
-|---|---|
-|Conmutativa: $f \circ g = g \circ f$|✗ No (en general)|
-|Distributiva por la derecha: $(f+g)\circ h = f\circ h + g\circ h$|✓ Sí|
-|Distributiva por la izquierda: $f\circ(g+h) = f\circ g + f\circ h$|✗ No (en general)|
-|Asociativa: $f\circ(g\circ h)=(f\circ g)\circ h$|✓ Sí|
-|Elemento neutro (identidad): $f\circ \text{Id} = \text{Id}\circ f = f$|✓ Sí|
-|Inversa: $f\circ f^{-1} = f^{-1}\circ f = \text{Id}$|✓ Sí (si $f$ es biyectiva)|
+Hallar $(f\circ g)(x)$ y $(g\circ f)(x)$.
 
----
+**Sol.**
 
+a) Composición $f\circ g$
+$$(f\circ g)(x)=f(g(x))$$
 
+Sustituyendo $g(x)$ en $f$:
+$$(f\circ g)(x)=
+\sqrt{
+\frac{e^{-4x^2}}
+     {e^{-4x^2}-1}
+}$$
 
-
-### Propiedades
-- Si $f,\, g,\, h\,$ son funciones reales.
-
-1. **Propiedad 1**
-    En general,
-    $$f\circ g \neq  g\circ f  $$
-    (No es conmutativa)
-    
-2. **Propiedad 2**
-	$$(f+g)\circ h= f\circ h+g\circ h$$
-	
-3. **Propiedad 3**
-	$$f\circ (g+h) \neq f\circ g+f\circ h$$
-	
-4. **Propiedad 4 (Asociativa)**
-    Si las composiciones están definidas,
-	$$f\circ (g\circ h) =   (f\circ g)\circ h$$
-	
-5. **Propiedad 5**
-$$(f\circ f^{-1})(x)=(f^{-1}\circ f)(x)=x=\text{funcion identidad}$$
+simplificando
+$$(f\circ g)(x)=
+\sqrt{
+\frac{1}
+     {1-e^{4x^2}}
+}$$
 
 
-6. **Propiedad 6**
-    
-    Si $f:A\to B$ y $g:B\to C$, entonces
-    
-    $$  
-    f\circ g:A\to C  
-    $$
-    
-6. **Propiedad 7**
-    
-    $$  
-    (f\circ g)(x)=f(g(x))  
-    $$
-       
-6. **Propiedad 8**
-    
-    Si $I$ es la función identidad,
-    
-$$  f\circ I
-I\circ f    
-    f$$
+b) Composición $g\circ f$
+$$(g\circ f)(x)=g(f(x))$$
+
+Sustituyendo $f(x)$ en $g$:
+$$(g\circ f)(x)=
+e^{-4\left(\sqrt{\frac{x}{x-1}}\right)^2}$$
+
+$$(g\circ f)(x)=
+e^{-\frac{4x}{x-1}}$$
+
+$$(g\circ f)(x)=
+\sqrt[1-x]{e^{4x}}$$
+
+
+**Ejercicio 2.** Si
+$$f(x)=\frac{3x}{2}-1$$
+
+hallar
+$$(f\circ f\circ f)\left(\frac{3x}{2}+1\right)$$
+
+**Sol.**
+
+Sea
+$$u=\frac{3x}{2}+1$$
+
+Primera composición:
+$$f(u)=
+\frac{3}{2}\left(\frac{3x}{2}+1\right)-1
+$$
+
+$$f(u)=
+\frac{9x}{4}+\frac{1}{2}
+$$
+
+Segunda composición:
+$$f(f(u))=
+\frac{3}{2}\left(\frac{9x}{4}+\frac{1}{2}\right)-1
+$$
+
+$$f(f(u))=
+\frac{27x}{8}-\frac{1}{4}
+$$
+
+Tercera composición:
+$$f(f(f(u)))=
+\frac{3}{2}\left(\frac{27x}{8}-\frac{1}{4}\right)-1
+$$
+
+$$f(f(f(u)))=\frac{81x}{16}-\frac{11}{8}
+$$
+
+Por tanto,
+$$(f\circ f\circ f)\left(\frac{3x}{2}+1\right)=
+\frac{81x}{16}-\frac{11}{8}
+$$
 
 
 ---
