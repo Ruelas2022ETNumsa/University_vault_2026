@@ -848,13 +848,13 @@ $$
 \node (fgx) at (3.5,0) {$f(g(x))$};
 
 % Flecha g
-\draw[->, thick]
+\draw[->, thick, teal]
 (x) .. controls (-2.0,0.8) and (-1.2,0.8) .. (gx);
 
 \node at (-1.75,1.05) {$g$};
 
 % Flecha f
-\draw[->, thick]
+\draw[->, thick, orange]
 (gx) .. controls (1.2,0.8) and (2.0,0.8) .. (fgx);
 
 \node at (1.75,1.05) {$f$};
@@ -863,7 +863,56 @@ $$
 \end{document}
 ```
 
+### Propiedades
+- Si $f,\, g,\, h\,$ son funciones reales.
 
+1. **Propiedad 1**
+    
+    Si $f:A\to B$ y $g:B\to C$, entonces
+    
+    $$  
+    f\circ g:A\to C  
+    $$
+    
+2. **Propiedad 2**
+    
+    $$  
+    (f\circ g)(x)=f(g(x))  
+    $$
+    
+3. **Propiedad 3 (Asociativa)**
+    
+    Si las composiciones están definidas,
+    
+    # $$  
+    (f\circ g)\circ h
+    
+    f\circ(g\circ h)  
+    $$
+    
+4. **Propiedad 4**
+    
+    En general,
+    
+    $$  
+    f\circ g  
+    \neq  
+    g\circ f  
+    $$
+    
+    (No es conmutativa).
+    
+5. **Propiedad 5**
+    
+    Si $I$ es la función identidad,
+    
+    # $$  
+    f\circ I
+    
+    # I\circ f
+    
+    f  
+    $$
 
 
 ---
