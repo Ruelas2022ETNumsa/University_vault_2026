@@ -308,7 +308,8 @@ Para $\frac{x(x-2)(x+2)}{(1+x)(1-x)}\ge 0$
 | $]1,2[$        | $1.5$    | $\frac{(+)(-)(+)}{(+)(-)}=(+)$ | V     |
 | $2$            | $2$      | $0$                            | V     |
 | $]2,+\infty[$  | $10$     | $\frac{(+)(+)(+)}{(+)(-)}=(-)$ | F     |
-### Gráfico de intervalos (Cs₁)
+
+Gráfico de intervalos (Cs₁)
 
 ```desmos-graph
 left=-5.5; right=5.5; bottom=-1; top=1;
@@ -332,6 +333,8 @@ y=0 \{1<=x<=2\}|#7e57c2
 son **verdaderos** los intervalos donde el signo es positivo o cero:
 
 $$Cs_{1}=]−∞,−2]∪]−1,0]∪]1,2]$$
+
+
 ---
 
 2. Sea $\log\left(\frac{x^3-x^2-2x}{x+4}\right)$ entonces :
@@ -372,7 +375,7 @@ $$
 | $2$            | $2$      | $0$                         | F     |
 | $]2,+\infty[$  | $10$     | $\frac{(+)(+)(+)}{(+)}=(+)$ | V     |
 
-### Gráfico de intervalos (Cs₂)
+Gráfico de intervalos (Cs₂)
 
 ```desmos-graph
 left=-6.5; right=5.5; bottom=-1; top=1;
@@ -491,7 +494,7 @@ $$
 
 ---
 
-## Función par
+## 4. Función par
 
 $y=f(x)$ es par si verifica
 
@@ -924,7 +927,8 @@ La identidad actúa como **elemento neutro** de la composición.
 
 ---
 
-**Ejercicio 1.** Para
+#### **Ejercicio a.**
+Para
 $$f(x)=\sqrt{\frac{x}{x-1}}$$
 $$g(x)=e^{-4x^2}$$
 
@@ -965,7 +969,8 @@ $$(g\circ f)(x)=
 
 ---
 
-**Ejercicio 2.** Si
+#### **Ejercicio b**
+Si
 $$f(x)=\frac{3x}{2}-1$$
 
 hallar
@@ -1011,8 +1016,9 @@ $$
 ---
 
 
-**Ej.** Se conocen
-$$f(x)=\frac{2x^3-7}{3x^3+4}$$
+#### **Ejercicio c**
+Se conocen
+$$f(x)=\frac{2x^{3}-7}{3x^3+4}$$
 y
 $$f^{-1}(x)=\sqrt[3]{\frac{7+4x}{2-3x}}$$
 Hallar
@@ -1078,7 +1084,8 @@ $$(f\circ f^{-1})(x)=x$$
 
 ---
 
-**Ej.** Si
+#### **Ejercicio d**
+Si
 $$f(x)=\frac{2x+1}{x}$$
 y
 $$(f\circ g)(x)=\frac{x}{x-1}$$
@@ -1121,8 +1128,8 @@ $$g(x)=\frac{1-x}{x-2}$$
 >pero el despeje directo suele ser el procedimiento más corto.
 
 ---
-
-**Ej.** Si
+#### **Ejercicio e**
+Si
 $$f(x)=\frac{x-1}{x}$$
 
 hallar
@@ -1193,7 +1200,8 @@ $$
 
 ---
 
-**Ej.** Para
+#### **Ejercicio f**
+Para
 $$f\!\left(\frac{x-2}{x}\right)=\frac{x-1}{x+1}$$
 
 y
