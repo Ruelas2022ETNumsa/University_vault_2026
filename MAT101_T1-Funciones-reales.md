@@ -2062,7 +2062,7 @@ $$a= e = 2,718281\dots \quad = \text{número de nepper}$$
 
 ----
 
-### Propiedades de las potencias
+#### Propiedades de las potencias
 1. **Producto de potencias de igual base**
 	- $a^m \cdot a^n = a^{m+n}$
 2. **Cociente de potencias de igual base**
@@ -2084,12 +2084,136 @@ $$a= e = 2,718281\dots \quad = \text{número de nepper}$$
 10. **Exponente uno**
 	- $a^1=a$
 
+---
+
+### Funciones logarítmicas 
+
+- Se define "$\log$" segun:
+$$\log_{b}{a} = c\quad \Rightarrow \quad b^{c}=a$$
+
+- Como fúncion
+$$y=f(x)=\log_{a}{x} \quad ; \quad a>0 , \quad y\neq 0$$
+
+$$D_{f}=\mathbb{R}^{+} \quad ; \quad R_{f}=\mathbb{R}$$
+
+- $a>1$
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[scale=0.9]
+
+% Ejes
+\draw[->] (-1.3,0) -- (5.3,0) node[right] {$x$};
+\draw[->] (0,-3.3) -- (0,5.3) node[above] {$y$};
+
+% Ticks eje x
+\foreach \x in {1,2,3,4,5}
+    \draw (\x,0.07) -- (\x,-0.07) node[below, font=\tiny] {\x};
+\draw (-1,0.07) -- (-1,-0.07) node[below, font=\tiny] {$-1$};
+
+% Ticks eje y
+\foreach \y in {-3,-2,-1,1,2,3,4,5}
+    \draw (0.07,\y) -- (-0.07,\y) node[left, font=\tiny] {\y};
+
+% f(x) = log_2(x)
+\draw[very thick, teal, smooth, samples=200, domain=0.03:5]
+    plot ({\x}, {ln(\x)/ln(2)});
+
+% Asíntota vertical x=0 (referencia punteada)
+\draw[dotted, gray!60] (0,-3.2) -- (0,5.2);
+
+% Tangente en (1,0): derivada de log_2(x) es 1/(x*ln2), en x=1 es 1/ln(2)≈1.4427
+% y - 0 = (1/ln2)(x - 1)  →  y = (x-1)/ln(2)
+\draw[dashed, gray, thick, domain=-0.5:3.6]
+    plot ({\x}, {(\x - 1)/ln(2)});
+
+% Punto (1,0)
+\fill[black] (1,0) circle (0.07);
+\node[above right, font=\small] at (1,0) {$(1,0)$};
+
+% Ángulo alfa en el origen de la tangente
+\draw (1.55,0) arc[start angle=0,end angle=55,radius=0.55];
+\node[font=\scriptsize] at (1.8,0.3) {$\alpha$};
+
+% Etiqueta ángulo en grados aproximado
+\node[below right, font=\small] at (2.5,0.4) {$\approx 55.3^\circ$};
+
+% Leyenda
+\draw[very thick, teal] (-0.8,4.8) -- (0.2,4.8)
+    node[right, font=\small] {$f(x)=\log_2 x$};
+
+% Asíntota label
+\node[gray, font=\tiny] at (-0.45,-2.5) {$x=0$};
+
+\end{tikzpicture}
+\end{document}
+```
+
+- $0>a>1$
 
 
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[scale=0.9]
 
+% Ejes
+\draw[->] (-1.3,0) -- (5.3,0) node[right] {$x$};
+\draw[->] (0,-3.3) -- (0,5.3) node[above] {$y$};
 
+% Ticks eje x
+\foreach \x in {1,2,3,4,5}
+    \draw (\x,0.07) -- (\x,-0.07) node[below, font=\tiny] {\x};
+\draw (-1,0.07) -- (-1,-0.07) node[below, font=\tiny] {$-1$};
 
+% Ticks eje y
+\foreach \y in {-3,-2,-1,1,2,3,4,5}
+    \draw (0.07,\y) -- (-0.07,\y) node[left, font=\tiny] {\y};
 
+% f(x) = log_{1/2}(x) = -log_2(x) = -ln(x)/ln(2)
+\draw[very thick, coral!80!red, smooth, samples=200, domain=0.03:5]
+    plot ({\x}, {-ln(\x)/ln(2)});
+
+% Asíntota vertical x=0 (referencia punteada)
+\draw[dotted, gray!60] (0,-3.2) -- (0,5.2);
+
+% Tangente en (1,0): derivada de log_{1/2}(x) es -1/(x*ln2)
+% en x=1 la pendiente es -1/ln(2) ≈ -1.4427
+% y = -1/ln(2) * (x - 1)
+\draw[dashed, gray, thick, domain=-0.2:3.8]
+    plot ({\x}, {-(\x - 1)/ln(2)});
+
+% Punto (1,0)
+\fill[black] (1,0) circle (0.07);
+\node[above right, font=\small] at (1,0) {$(1,0)$};
+
+% Ángulo obtuso alfa (la tangente baja hacia la derecha)
+% El ángulo con el eje x positivo es 180° - 55.3° = 124.7°
+% Dibujamos el arco desde 0° hasta 124.7° (en sentido antihorario)
+\draw (1.55,0) arc[start angle=0,end angle=124.7,radius=0.55];
+\node[font=\scriptsize] at (0.7,0.45) {$\alpha$};
+
+% Etiqueta ángulo
+\node[above left, font=\small] at (0.2,0.6) {$\approx 124.7^\circ$};
+
+% Puntos de referencia adicionales
+\fill[black] (2,-1) circle (0.05);
+\node[right, font=\tiny] at (2,-1) {$(2,-1)$};
+
+\fill[black] (4,-2) circle (0.05);
+\node[right, font=\tiny] at (4,-2) {$(4,-2)$};
+
+% Leyenda
+\draw[very thick, coral!80!red] (-0.8,4.8) -- (0.2,4.8)
+    node[right, font=\small] {$f(x)=\log_{1/2} x$};
+
+% Asíntota label
+\node[gray, font=\tiny] at (-0.45,2.5) {$x=0$};
+
+\end{tikzpicture}
+\end{document}
+```
 
 
 
