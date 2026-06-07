@@ -1890,6 +1890,7 @@ $$
 R_f=\mathbb{R}^{+}
 $$
 
+- a>0
 
 ```tikz
 \usepackage{tikz}
@@ -1938,6 +1939,9 @@ $$
 \fill[black] (0,1) circle (0.07);
 \node[below right, font=\small] at (0,1) {$(0,1)$};
 
+
+
+
 % Leyenda
 \draw[very thick, teal]         (-4.8, 4.8) -- (-3.8, 4.8) node[right, font=\small] {$y=2^x$};
 \draw[very thick, orange]       (-4.8, 4.1) -- (-3.8, 4.1) node[right, font=\small] {$y=3^x$};
@@ -1950,4 +1954,126 @@ $$
 \end{tikzpicture}
 \end{document}
 ```
+
+
+- 0<a<1
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[scale=0.9]
+
+% Ejes
+\draw[->] (-3,0) -- (5.3,0) node[right] {$x$};
+\draw[->] (0,-1.3) -- (0,5.3) node[above] {$y$};
+
+% Ticks eje x
+\foreach \x in {1,2,3,4,5}
+    \draw (\x,0.07) -- (\x,-0.07) node[below, font=\tiny] {\x};
+
+% Ticks eje y
+\foreach \y in {1,2,3,4,5}
+    \draw (0.07,\y) -- (-0.07,\y) node[left, font=\tiny] {\y};
+
+% Asíntota horizontal y=0
+\draw[dashed, gray!60, thin] (-3,0) -- (5.3,0);
+
+% a=1/2  y=(1/2)^x
+% y=5 → x=log_{1/2}(5)=-log2(5)≈-2.322
+\draw[very thick, teal, smooth, samples=150, domain=-2.322:5]
+    plot ({\x}, {(0.5)^\x});
+
+% a=1/3  y=(1/3)^x
+% y=5 → x=-log3(5)≈-1.465
+\draw[very thick, orange, smooth, samples=150, domain=-1.465:5]
+    plot ({\x}, {(0.333)^\x});
+
+% a=1/5  y=(1/5)^x
+% y=5 → x=-1
+\draw[very thick, violet, smooth, samples=150, domain=-1:5]
+    plot ({\x}, {(0.2)^\x});
+
+% a=1/10  y=(1/10)^x
+% y=5 → x=-log10(5)≈-0.699
+\draw[very thick, red!70!black, smooth, samples=150, domain=-0.699:5]
+    plot ({\x}, {(0.1)^\x});
+
+% Punto común (0,1)
+\fill[black] (0,1) circle (0.07);
+\node[below left, font=\small] at (0,1) {$(0,1)$};
+
+% Leyenda
+\draw[very thick, teal]         (2.5, 4.8) -- (3.5, 4.8) node[right, font=\small] {$y=\left(\frac{1}{2}\right)^x$};
+\draw[very thick, orange]       (2.5, 4.1) -- (3.5, 4.1) node[right, font=\small] {$y=\left(\frac{1}{3}\right)^x$};
+\draw[very thick, violet]       (2.5, 3.4) -- (3.5, 3.4) node[right, font=\small] {$y=\left(\frac{1}{5}\right)^x$};
+\draw[very thick, red!70!black] (2.5, 2.7) -- (3.5, 2.7) node[right, font=\small] {$y=\left(\frac{1}{10}\right)^x$};
+
+% Etiqueta asíntota
+\node[gray, font=\small] at (-1.5,-0.6) {asíntota $y=0$};
+
+\end{tikzpicture}
+\end{document}
+```
+
+en general  $$a=\dfrac{1}{b}$$
+
+
+$$f(x)=a^{x} = \left( \frac{1}{b}\right)^{x}= b^{-x} \quad ;\quad b>1$$
+
+- Caso particular
+$$a= e = 2,718281\dots \quad = \text{número de nepper}$$
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[scale=0.9]
+% Ejes
+\draw[->] (-5.3,0) -- (5.3,0) node[right] {$x$};
+\draw[->] (0,-1.3) -- (0,5.3) node[above] {$y$};
+% Ticks eje x
+\foreach \x in {-5,-4,-3,-2,-1,1,2,3,4,5}
+    \draw (\x,0.07) -- (\x,-0.07) node[below, font=\tiny] {\x};
+% Ticks eje y
+\foreach \y in {1,2,3,4,5}
+    \draw (0.07,\y) -- (-0.07,\y) node[left, font=\tiny] {\y};
+% f(x)=e^x
+\draw[very thick, teal, smooth, samples=150, domain=-5:1.609]
+    plot ({\x}, {exp(\x)});
+% Tangente en (0,1): y = x + 1  →  pasa por (0,1) con pendiente 1
+\draw[dashed, gray, thick] (-2.3,-1.3) -- (4,5);
+\node[gray, font=\small] at (4.2,5.0) {$\frac{\pi}{4}$};
+% Punto (0,1)
+\fill[black] (0,1) circle (0.07);
+\node[below right, font=\small] at (0,1) {$(0,1)$};
+% Leyenda
+\draw[very thick, teal] (-4.8,4.8) -- (-3.8,4.8)
+    node[right, font=\small] {$f(x)=e^x$};
+
+
+\fill[black] (0,1) circle (0.07);
+\node[below right, font=\small] at (0,2) {$(45^{\circ})$};
+
+% Ángulo alfa
+\draw (-0.5,0) arc[start angle=0,end angle=37,radius=0.6];
+\node at (-0.7,0.25) {$\alpha$};
+    
+\end{tikzpicture}
+\end{document}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
