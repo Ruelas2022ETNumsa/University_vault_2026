@@ -1327,14 +1327,188 @@ $$(f^{-1}\circ g\circ f)\left(\frac{1}{x^3}\right)=
 \frac{5x^3-7}{3x^3-1}
 $$
 
+---
+
+## Características generales de las principales funciones reales
+
+### Función de 1er grado (recta)
+
+La función de primer grado tiene la forma:
+
+$$f(x)=ax+b$$
+
+donde:
+- $D_{f}=\mathbb{R} \, , \, R_{f}=\mathbb{R}$
+
+ademas:
+
+- $a=\text{tg}(\alpha)$ es la pendiente de la recta.
+- $b$ es la ordenada en el origen.
+
+```tikz
+\begin{document}
+\begin{tikzpicture}[scale=1.3]
+
+% Ejes
+\draw[->] (-0.5,0) -- (4.5,0) node[right] {$x$};
+\draw[->] (0,-0.5) -- (0,4) node[above] {$y$};
+
+% Recta f(x)=ax+b con b=1
+\draw[very thick,color=teal] (0,1) -- (4,4);
+
+% Marca de b
+\draw (-0.08,1) -- (0.08,1);
+\node[left] at (0,1) {$b$};
+
+% Triángulo para la pendiente
+\draw[dashed] (1,1.75) -- (2,1.75);
+\draw[dashed] (2,1.75) -- (2,2.5);
+
+\node[below] at (1.5,1.75) {$1$};
+\node[right] at (2,2.1) {$a$};
+
+% Ángulo alfa
+\draw (1.7,1.8) arc[start angle=0,end angle=37,radius=0.5];
+\node at (1.4,1.9) {$\alpha$};
+
+% Etiquetas
+\node[color=teal] at (3.2,2.5) {$f(x)=ax+b$};
+\node at (3.2,1.5) {$\mathrm{tg}(\alpha)=a$};
+
+\end{tikzpicture}
+\end{document}
+```
+
+#### Función constante
+
+Cuando:
+$$a=0$$
+
+la función queda:
+$$f(x)=b$$
+
+```tikz
+\begin{document}
+\begin{tikzpicture}[scale=1.2]
+
+\draw[->] (-0.5,0) -- (4,0) node[right] {$x$};
+\draw[->] (0,-0.5) -- (0,3) node[above] {$y$};
+
+\draw[very thick,color=teal] (-0.2,2) -- (3.5,2);
+
+\node[left] at (0,2) {$b$};
+\node[above right] at (2.5,2) {$f(x)=b$};
+
+\end{tikzpicture}
+\end{document}
+```
+
+#### Recta vertical
+
+La ecuación:
+
+$$x=c$$
+
+representa una recta vertical.
+
+```tikz
+\begin{document}
+\begin{tikzpicture}[scale=1.3]
+
+% Ejes
+\draw[->] (-1,0) -- (3.5,0);
+\draw[->] (0,-1) -- (0,3.5);
+
+% Recta vertical x=c
+\draw[very thick,color=orange] (2,-0.8) -- (2,3);
+
+% Etiquetas
+\node at (2,-0.3) {$c$};
+\node at (2.7,2.5) {$x=c$};
+
+\end{tikzpicture}
+\end{document}
+```
+
+La recta vertical no representa una función.
+
+
+#### Función lineal 
+
+$$y=f(x)=ax \, ; \, a\in \mathbb{R}$$
+$$D_{f}=\mathbb{R} \, ; \, R_{f}=\mathbb{R}$$
+
+
+```tikz
+\begin{document}
+\begin{tikzpicture}[scale=1.3]
+
+% Ejes
+\draw[->] (-0.5,0) -- (4.5,0) node[right] {$x$};
+\draw[->] (0,-0.5) -- (0,3.5) node[above] {$y$};
+
+% Recta
+\draw[very thick,color=teal] (0,0) -- (4,3);
 
 
 
+% Etiquetas
+\node[right] at (2,1.15) {$a$};
 
+% Ángulo alfa
+\draw (0.6,0) arc[start angle=0,end angle=37,radius=0.6];
+\node at (0.95,0.25) {$\alpha$};
 
+% Fórmula
+\node[below right] at (2.6,1.9) {recta en el origen};
 
+\end{tikzpicture}
+\end{document}
+```
 
+- además, ideas graficas
 
+```tikz
+\usepackage{pgfplots}
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[
+    axis lines=middle,
+    xmin=-0.5, xmax=13,
+    ymin=-1.5, ymax=1.5,
+    width=12cm,
+    height=6cm,
+    xlabel={$x$},
+    ylabel={$y$},
+    xtick=\empty,
+    ytick={-1,0,1}
+]
+
+% Curva senoidal
+\addplot[
+    very thick,
+    teal,
+    domain=0:12.56,
+    samples=200
+]
+{sin(deg(x))};
+
+% Rectas verticales
+\draw[dashed,gray] (axis cs:1, -1.3) -- (axis cs:1, 1.3);
+\draw[dashed,gray] (axis cs:4, -1.3) -- (axis cs:4, 1.3);
+\draw[dashed,gray] (axis cs:7, -1.3) -- (axis cs:7, 1.3);
+\draw[dashed,gray] (axis cs:10, -1.3) -- (axis cs:10, 1.3);
+
+% Puntos de intersección
+\fill[orange] (axis cs:1,{sin(deg(1))}) circle (2pt);
+\fill[orange] (axis cs:4,{sin(deg(4))}) circle (2pt);
+\fill[orange] (axis cs:7,{sin(deg(7))}) circle (2pt);
+\fill[orange] (axis cs:10,{sin(deg(10))}) circle (2pt);
+
+\end{axis}
+\end{tikzpicture}
+\end{document}
+```
 
 
 
