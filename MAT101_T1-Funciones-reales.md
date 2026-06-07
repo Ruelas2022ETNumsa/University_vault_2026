@@ -2162,64 +2162,148 @@ $$D_{f}=\mathbb{R}^{+} \quad ; \quad R_{f}=\mathbb{R}$$
 \draw[->] (-1.3,0) -- (5.3,0) node[right] {$x$};
 \draw[->] (0,-3.3) -- (0,5.3) node[above] {$y$};
 
-% Ticks eje x
-\foreach \x in {1,2,3,4,5}
-    \draw (\x,0.07) -- (\x,-0.07) node[below, font=\tiny] {\x};
-\draw (-1,0.07) -- (-1,-0.07) node[below, font=\tiny] {$-1$};
+% Ticks eje x manualmente
+\draw (1,0.07) -- (1,-0.07) node[below, font=\tiny] {$1$};
+\draw (2,0.07) -- (2,-0.07) node[below, font=\tiny] {$2$};
+\draw (3,0.07) -- (3,-0.07) node[below, font=\tiny] {$3$};
+\draw (4,0.07) -- (4,-0.07) node[below, font=\tiny] {$4$};
+\draw (5,0.07) -- (5,-0.07) node[below, font=\tiny] {$5$};
 
-% Ticks eje y
-\foreach \y in {-3,-2,-1,1,2,3,4,5}
-    \draw (0.07,\y) -- (-0.07,\y) node[left, font=\tiny] {\y};
+% Ticks eje y manualmente
+\draw (0.07,1) -- (-0.07,1) node[left, font=\tiny] {$1$};
+\draw (0.07,2) -- (-0.07,2) node[left, font=\tiny] {$2$};
+\draw (0.07,3) -- (-0.07,3) node[left, font=\tiny] {$3$};
+\draw (0.07,-1) -- (-0.07,-1) node[left, font=\tiny] {$-1$};
+\draw (0.07,-2) -- (-0.07,-2) node[left, font=\tiny] {$-2$};
+\draw (0.07,-3) -- (-0.07,-3) node[left, font=\tiny] {$-3$};
 
-% f(x) = log_{1/2}(x) = -log_2(x) = -ln(x)/ln(2)
-\draw[very thick, coral!80!red, smooth, samples=200, domain=0.03:5]
-    plot ({\x}, {-ln(\x)/ln(2)});
+% f(x) = log_{1/2}(x) aproximada con puntos clave unidos
+% log_{1/2}(x) = -log_2(x)
+% Valores: (0.125, 3), (0.25, 2), (0.5, 1), (1, 0), (2,-1), (4,-2)
+\draw[very thick, teal, smooth]
+    (0.06,4.06) ..controls (0.1,3.5) and (0.2,2.5)..
+    (0.25,2) ..controls (0.35,1.4) and (0.45,0.8)..
+    (0.5,1) ..controls (0.7,0.4) and (0.85,0.1)..
+    (1,0) ..controls (1.5,-0.6) and (1.8,-0.9)..
+    (2,-1) ..controls (2.8,-1.4) and (3.5,-1.8)..
+    (4,-2) ..controls (4.5,-2.2) and (4.9,-2.4)..
+    (5,-2.32);
 
-% Asíntota vertical x=0 (referencia punteada)
-\draw[dotted, gray!60] (0,-3.2) -- (0,5.2);
+% Asintota vertical punteada
+\draw[dotted, gray] (0,-3.2) -- (0,5.2);
 
-% Tangente en (1,0): derivada de log_{1/2}(x) es -1/(x*ln2)
-% en x=1 la pendiente es -1/ln(2) ≈ -1.4427
-% y = -1/ln(2) * (x - 1)
-\draw[dashed, gray, thick, domain=-0.2:3.8]
-    plot ({\x}, {-(\x - 1)/ln(2)});
+% Tangente en (1,0): pendiente = -1/ln(2) ≈ -1.4427
+% y = -1.4427*(x-1)
+% en x=0: y=1.4427, en x=3: y=-2.885 (fuera), usamos x in [0, 2.8]
+\draw[dashed, gray, thick] (0, 1.44) -- (2.8, -2.6);
 
 % Punto (1,0)
 \fill[black] (1,0) circle (0.07);
 \node[above right, font=\small] at (1,0) {$(1,0)$};
 
-% Ángulo obtuso alfa (la tangente baja hacia la derecha)
-% El ángulo con el eje x positivo es 180° - 55.3° = 124.7°
-% Dibujamos el arco desde 0° hasta 124.7° (en sentido antihorario)
-\draw (1.55,0) arc[start angle=0,end angle=124.7,radius=0.55];
-\node[font=\scriptsize] at (0.7,0.45) {$\alpha$};
-
-% Etiqueta ángulo
-\node[above left, font=\small] at (0.2,0.6) {$\approx 124.7^\circ$};
-
-% Puntos de referencia adicionales
+% Puntos de referencia
 \fill[black] (2,-1) circle (0.05);
-\node[right, font=\tiny] at (2,-1) {$(2,-1)$};
-
+\node[right, font=\tiny] at (2.05,-1) {$(2,-1)$};
 \fill[black] (4,-2) circle (0.05);
-\node[right, font=\tiny] at (4,-2) {$(4,-2)$};
+\node[right, font=\tiny] at (4.05,-2) {$(4,-2)$};
+\fill[black] (0.5,1) circle (0.05);
+\node[right, font=\tiny] at (0.55,1) {$(1/2,1)$};
+
+% Angulo en (1,0)
+\draw (1.45,0) arc[start angle=0, end angle=125, radius=0.45];
+\node[font=\scriptsize] at (0.75,0.38) {$\alpha$};
 
 % Leyenda
-\draw[very thick, coral!80!red] (-0.8,4.8) -- (0.2,4.8)
-    node[right, font=\small] {$f(x)=\log_{1/2} x$};
-
-% Asíntota label
-\node[gray, font=\tiny] at (-0.45,2.5) {$x=0$};
+\draw[very thick, teal] (0.2,4.8) -- (1.0,4.8);
+\node[right, font=\small] at (1.05,4.8) {$f(x)=\log_{1/2} x$};
 
 \end{tikzpicture}
 \end{document}
 ```
 
+- Casos especiales
+
+$$a=10 \Rightarrow f(x)=\log_{10}{x}= \log x = \text{logatirmo decimal}$$
+
+$$a=e \Rightarrow f(x)=\log_{e}{x}= \ln x = \text{logaritmo  natural , neperiano}$$
+
+#### Propiedades de los logaritmos
+
+1. **Logaritmo de un producto**
+   * $\log_a(mn) = \log_a m + \log_a n$
+
+2. **Logaritmo de un cociente**
+   * $\log_a\left(\dfrac{m}{n}\right) = \log_a m - \log_a n$
+
+3. **Logaritmo de una potencia**
+   * $\log_a(m^n) = n\log_a m$
+
+4. **Logaritmo de una raíz**
+   * $\log_a\left(\sqrt[n]{m}\right) = \dfrac{\log_a m}{n}$
+
+5. **Logaritmo de la base**
+   * $\log_a a = 1$
+
+6. **Logaritmo de la unidad**
+   * $\log_a 1 = 0 \quad,\quad a \neq 1,\ a > 0$
+
+7. **Igualdad de logaritmos**
+   * Si $\log_a m = \log_a n$, entonces $m = n$
+
+8. **Cambio de base**
+   * $\log_a m = \dfrac{\log_b m}{\log_b a}$
+
+9. **Logaritmo recíproco**
+   * $\log_a b = \dfrac{1}{\log_b a}$
+
+10. **Potenciación logarítmica**
+    * $a^{\log_a m} = m$
+
+11. **Logaritmo natural y decimal**
+    * $\ln m = \log_e m \qquad \log m = \log_{10} m$
+
+---
+
+#### Ejercicio 1
+Evaluación de $f(x) = \ln(x)$
+
+**$x = 1$**
+$$f(1) = \ln(1) = 0$$
+
+**$x = e$**
+$$f(e) = \ln(e) = 1$$
+
+**$x \to +\infty$**
+$$\lim_{x \to +\infty} \ln(x) = +\infty$$
+
+>A medida que $x$ crece, necesitamos exponentes $n$ cada vez más grandes
+
+**$x \to 0^+$**
+$$\lim_{x \to 0^+} \ln(x) = -\infty$$
+
+> $x = 0$ no pertenece al dominio de $\ln(x)$, ya que el logaritmo solo está definido para $x > 0$.  
+> Por eso se analiza el límite cuando $x$ se acerca a $0$ por la derecha.
 
 
 
+#### Ejercicio 2
+Inversa de $f(x) = \ln x$
 
+$$y = \ln x$$
+$$x = \ln y^{-1} \implies e^x = y$$
 
+$$\boxed{f^{-1}(x) = e^x}$$
 
+---
+
+#### Ejercicio 3
+
+Composición $f(x) = \ln x$ y $f^{-1}(x) = e^x$
+
+$$(f \circ f^{-1})(x) = f(f^{-1}(x)) = \ln(e^x) = x$$
+
+$$\boxed{(f \circ f^{-1})(x) = x}$$
+
+---
 
 
