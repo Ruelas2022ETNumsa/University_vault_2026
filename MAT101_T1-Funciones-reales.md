@@ -866,30 +866,6 @@ $$
 ### Propiedades
 - Si $f,\, g,\, h\,$ son funciones reales.
 
-1. **Propiedad 1**
-    
-    Si $f:A\to B$ y $g:B\to C$, entonces
-    
-    $$  
-    f\circ g:A\to C  
-    $$
-    
-2. **Propiedad 2**
-    
-    $$  
-    (f\circ g)(x)=f(g(x))  
-    $$
-    
-3. **Propiedad 3 (Asociativa)**
-    
-    Si las composiciones están definidas,
-    
-    # $$  
-    (f\circ g)\circ h
-    
-    f\circ(g\circ h)  
-    $$
-    
 4. **Propiedad 4**
     
     En general,
@@ -902,7 +878,33 @@ $$
     
     (No es conmutativa).
     
-5. **Propiedad 5**
+
+5. **Propiedad 1**
+    
+    Si $f:A\to B$ y $g:B\to C$, entonces
+    
+    $$  
+    f\circ g:A\to C  
+    $$
+    
+6. **Propiedad 2**
+    
+    $$  
+    (f\circ g)(x)=f(g(x))  
+    $$
+    
+7. **Propiedad 3 (Asociativa)**
+    
+    Si las composiciones están definidas,
+    
+    # $$  
+    (f\circ g)\circ h
+    
+    f\circ(g\circ h)  
+    $$
+    
+
+8. **Propiedad 5**
     
     Si $I$ es la función identidad,
     
