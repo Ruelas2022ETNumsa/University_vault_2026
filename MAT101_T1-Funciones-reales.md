@@ -1666,7 +1666,7 @@ $$R_f=\text{según coeficientes } a,b,c$$
 \end{document}
 ```
 
-- para $a$
+- para $a<0$
 
 ```tikz
 \begin{document}
@@ -1700,74 +1700,107 @@ $$R_f=\text{según coeficientes } a,b,c$$
 \end{document}
 ```
 
+Se reconoce las graficas identificando
 
-
-
-
---
-
-
-
----
-
-
-
-
-
-
-
-
-
+- Vértice $$V=(h,k)$$.
+    
+- Eje de simetría: $$x=h$$
 
 También se observa:
 
 - Parábola con (a>0) (abre hacia arriba).
-    
 - Parábola con (a<0) (abre hacia abajo).
-    
-- Vértice (V=(h,k)).
-    
-- Eje de simetría:
-    
-
-$$  
-x=h  
-$$
-
 - Transformación:
-    
+	$$y=ax^2+bx+c$$
+	en
+	$$y-k=a(x-h)^2$$
+	(con el proceso de completar cuadrados).
 
-$$  
-y=ax^2+bx+c  
+---
+
+#### Ejemplo
+$$f(x)=1+6x-2x^2$$
+
+Reordenando:
+$$y=-2x^2+6x+1$$
+
+Factorizando:
+$$y=-2(x^2-3x)+1$$
+
+Completando cuadrados:
+$$y=-2\left(x^2-3x+\left(\frac32\right)^2\right)+1+2\left(\frac32\right)^2  
 $$
 
-en
+$$y-\frac{11}{2}=-2\left(x-\frac32\right)^{2}$$
 
-$$  
-y-k=a(x-h)^2  
-$$
+Forma de vértice:
+$$y-k=a(x-h)^{2}$$
 
-(con el proceso de completar cuadrados).
+Por comparación:
+$$a=-2,\qquad h=\frac32,\qquad k=\frac{11}{2}$$
 
-Y el ejemplo parece ser:
+Vértice:
+$$V(h,k)=\left(\frac32,\frac{11}{2}\right)$$
 
-```markdown
-**Ej. Gráfica**
+Eje de simetría:
+$$x=\frac32$$
 
-$$
-f(x)=1+6x-2x^2
-$$
+Como (a<0), la parábola abre hacia abajo.
+
+```tikz
+\begin{document}
+\begin{tikzpicture}[scale=0.6]
+
+% Ejes
+\draw[->] (-1,0) -- (4,0) node[right] {$x$};
+\draw[->] (0,-1) -- (0,7) node[above] {$y$};
+
+% Ticks eje x
+\foreach \x in {-1,1,2,3}
+    \draw (\x,0.05) -- (\x,-0.05) node[below, font=\small] {\x};
+
+% Ticks eje y
+\foreach \y in {1,2,3,4,5,6}
+    \draw (0.05,\y) -- (-0.05,\y) node[left, font=\small] {\y};
+
+% Parábola: y = -2(x - 3/2)² + 11/2
+\draw[very thick, teal, smooth, samples=150, domain=-0.45:3.45]
+    plot ({\x}, {-2*(\x - 1.5)^2 + 5.5});
+
+% Vértice V(3/2, 11/2)
+\fill[teal] (1.5, 5.5) circle (0.07);
+\node[above right, font=\small] at (1.5, 5.5) {$V\!\left(\frac{3}{2},\frac{11}{2}\right)$};
+
+% Líneas guía punteadas al vértice
+\draw[dashed, gray] (1.5, 0) -- (1.5, 5.5);
+\draw[dashed, gray] (0, 5.5) -- (1.5, 5.5);
+
+% Tick vértice eje x y y
+\node[below, font=\small] at (1.5,-0.05) {$\frac{3}{2}$};
+\node[left,  font=\small] at (-0.3, 5.5) {$\frac{11}{2}$};
+
+% Raíces: x = 3/2 ± √(11/4) = 3/2 ± √11/2
+% x₁ ≈ -0.158   x₂ ≈ 3.158
+\fill[orange] (-0.158, 0) circle (0.07);
+\fill[orange] ( 3.158, 0) circle (0.07);
+\node[below right, orange, font=\small] at (-2, 1) {$\frac{3-\sqrt{11}}{2}$};
+\node[below left,  orange, font=\small] at ( 5.158, 0) {$\frac{3+\sqrt{11}}{2}$};
+
+% Intersección eje y: x=0 → y = -2(9/4)+11/2 = 7/2
+\fill[purple] (0, 3.5) circle (0.07);
+\node[right, purple, font=\small] at (-0.1, 3.5) {$\frac{7}{2}$};
+
+% Etiqueta ecuación
+\node[teal, font=\small] at (3.3, 1.5) {$y-\frac{11}{2}=-2\!\left(x-\frac{3}{2}\right)^{\!2}$};
+
+\end{tikzpicture}
+\end{document}
 ```
 
-pero para el desarrollo completo y los recorridos que aparecen en las gráficas prefiero no inventar nada.
 
-¿Podrías subir un recorte más cercano de la mitad izquierda de la página (solo la sección de la parábola)? Con un zoom de aproximadamente el doble podré transcribirla completa, incluyendo:
+$$D_{f}=\mathbb{R}\quad ; \quad 
+\lef]
+R_{f}=
+-\infty,\frac{11}{2}\right]
 
-- el ejemplo de completar cuadrados,
-    
-- el vértice,
-    
-- el recorrido,
-    
-- y reproducir las dos parábolas con código Desmos/TikZ según corresponda.
-
+$$
