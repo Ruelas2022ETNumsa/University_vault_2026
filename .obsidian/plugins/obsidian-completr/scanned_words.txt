@@ -406,6 +406,7 @@ Superficie
 SOPORTADAS
 Sigma
 Seguro
+SQLite
 Plugins
 Pendientes
 Plugin
@@ -525,6 +526,7 @@ Partimos
 Puente
 Proyecci
 PQ
+Problema
 del
 date
 de
@@ -785,6 +787,8 @@ disciplina
 darkgray
 definecolor
 dots
+descargado
+durante
 Vault
 Verificar
 Variables
@@ -1001,6 +1005,9 @@ biyectiva
 bigl
 bigr
 bx
+basic
+bad
+bloquea
 scope
 status
 selector
@@ -1264,6 +1271,9 @@ sech
 sustituir
 subtemas
 subseteq
+servidor
+software
+servidores
 vault
 vil
 ver
@@ -1666,6 +1676,8 @@ asignar
 ancla
 adido
 alfa
+args
+antivirus
 related
 recomendados
 ribbon
@@ -1934,6 +1946,8 @@ repetirse
 recomendaci
 revisando
 red
+recientemente
+rendimiento
 notes
 notas
 nuevas
@@ -2066,6 +2080,7 @@ notebooklm
 necesito
 necesitar
 nepper
+ndole
 created
 commit
 cada
@@ -2563,6 +2578,10 @@ cyan
 cool
 cdots
 coeficientes
+cambi
+character
+crece
+consideradas
 updated
 un
 universo
@@ -2622,6 +2641,9 @@ utiliza
 universitario
 usen
 underbrace
+uv
+uvx
+usaba
 Galaxy
 Git
 Gr
@@ -2842,6 +2864,9 @@ Circunferencia
 CHATGPT
 Cs
 Copiar
+Config
+Cambiar
+Copilot
 Instalados
 Instalado
 Instalar
@@ -2990,6 +3015,7 @@ Fuentes
 Forzar
 Flechas
 FF
+Failed
 Estado
 Excalidraw
 EPUBs
@@ -3146,6 +3172,7 @@ Equivalente
 ESPECIALES
 Ej
 Eje
+Escalabilidad
 Obsidian
 OmniSearch
 Ocultar
@@ -3322,6 +3349,8 @@ Analizamos
 APRENDIDA
 ADICIONALES
 AppData
+Antivirus
+Alternativas
 push
 pull
 para
@@ -3603,6 +3632,8 @@ puedan
 pink
 purple
 per
+permalink
+publicados
 min
 mica
 movimiento
@@ -3795,6 +3826,9 @@ match
 magenta
 micolor
 mathrm
+memory
+ms
+modelos
 YAML
 Ya
 You
@@ -3848,6 +3882,9 @@ Bug
 BR
 Base
 Borra
+Basic
+Barras
+ButlerBrain
 en
 exacta
 escaneados
@@ -4158,6 +4195,11 @@ etria
 encoding
 espaciado
 ediciones
+escaped
+embeddings
+eficiente
+eligi
+externos
 Motor
 Media
 Mantiene
@@ -4239,6 +4281,10 @@ Malla
 Mi
 Mezclas
 Marcas
+Memory
+Modifica
+Memoria
+Manipular
 Lectura
 LaTeX
 Linter
@@ -4410,6 +4456,7 @@ literalmente
 lightgray
 lime
 ldots
+localmente
 incluyendo
 im
 instalar
@@ -4616,6 +4663,11 @@ inversas
 indicaste
 indicaci
 indefinidamente
+inteligente
+instalada
+indexado
+instaladas
+instalaci
 Dependencia
 Dropbox
 Dataview
@@ -4710,6 +4762,9 @@ Demuestre
 Determine
 Denominador
 Dom
+Desktop
+Dependencias
+Dar
 Remotely
 Raz
 Revisa
@@ -4844,6 +4899,7 @@ Reemplazando
 Revisando
 Roaming
 RGB
+RAM
 Hider
 Hace
 Herramientas
@@ -5009,6 +5065,7 @@ fragmentos
 fallar
 factoriza
 foto
+fastmcp
 haya
 hace
 hacer
@@ -5260,6 +5317,7 @@ oldText
 olive
 orange
 odo
+org
 junto
 json
 jer
@@ -5377,6 +5435,7 @@ zG
 kEG
 kE
 kg
+key
 Xe
 Xm
 Xu
