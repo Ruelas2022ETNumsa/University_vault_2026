@@ -1510,6 +1510,116 @@ $$D_{f}=\mathbb{R} \, ; \, R_{f}=\mathbb{R}$$
 \end{document}
 ```
 
+>Si toda vertical corta en un punto la grafica es **funcion**
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[scale=1.0]
+
+% Ejes
+\draw[->] (-2,0) -- (6,0) node[right] {$x$};
+\draw[->] (0,-3) -- (0,3) node[above] {$y$};
+
+% Ticks eje x
+\foreach \x in {-1,1,2,3,4,5}
+    \draw (\x,0.05) -- (\x,-0.05) node[below, font=\small] {\x};
+
+% Ticks eje y
+\foreach \y in {-2,-1,1,2}
+    \draw (0.05,\y) -- (-0.05,\y) node[left, font=\small] {\y};
+
+% Parábola y²=x+1 → x=y²-1, graficada con y como parámetro
+\draw[very thick, teal, smooth, samples=100, domain=-2.7:2.7]
+    plot ({(\x)^2 - 1}, {\x});
+
+% Recta vertical x=2
+\draw[dashed, gray, thick] (2,-2.7) -- (2,2.7);
+
+% Puntos de intersección
+\fill[orange] (2, 1.732) circle (0.07);
+\fill[orange] (2,-1.732) circle (0.07);
+
+% Etiquetas curva y recta
+\node[teal] at (4.8, 2) {$y^2=x+1$};
+\node[gray]  at (2.6, 2.4) {$x=2$};
+
+
+
+% Vértice
+\fill[teal!70] (-1,0) circle (0.07);
+\node[teal, above left, font=\small] at (-1,0) {$(-1,0)$};
+
+\end{tikzpicture}
+\end{document}
+```
+
+>Si una vertical corta en mas de un punto es una grafica **no es función**, es solo relacion.
+
+
+```tikz
+\usepackage{pgfplots}
+\begin{document}
+
+\begin{tikzpicture}
+\begin{axis}[
+    axis lines=middle,
+    xmin=-5, xmax=5,
+    ymin=-5, ymax=5,
+    width=12cm,
+    height=9cm,
+    xlabel={$x$},
+    ylabel={$y$},
+    xtick={-5,-4,...,5},
+    ytick={-5,-4,...,5},
+    clip=true
+]
+
+% Recta y=x
+\addplot[
+    domain=-5:5,
+    dashed,
+    gray,
+    thick
+]
+{x};
+
+% y=f^{-1}(x)=x^3+1
+\addplot[
+    domain=-1.8:1.6,
+    samples=200,
+    very thick,
+    teal
+]
+{x^3+1};
+
+% y=f(x)=\sqrt[3]{x-1}
+\addplot[
+    domain=-1.8:1.6,
+    samples=200,
+    very thick,
+    orange
+]
+({x^3+1},{x});
+
+\node[teal] at (axis cs:-2.2,1.2)
+{$y=f^{-1}(x)$};
+
+\node[orange] at (axis cs:2,-1.8)
+{$y=f(x)$};
+
+\node[gray] at (axis cs:4,3.2)
+{$y=x$};
+
+\end{axis}
+\end{tikzpicture}
+
+\end{document}
+```
+
+
+
+
 
 
 
