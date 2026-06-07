@@ -1798,9 +1798,156 @@ Como (a<0), la parábola abre hacia abajo.
 ```
 
 
-$$D_{f}=\mathbb{R}\quad ; \quad 
-\lef]
-R_{f}=
--\infty,\frac{11}{2}\right]
+$$D_{f}=\mathbb{R}\quad ; \quad  R_{f}=\left]-\infty,\frac{11}{2}\right]$$
+
+---
+
+### Función potencial generalizada
+
+$$y=f(x)=x^{n} \quad ; \quad n=2,3,4,5,\ldots$$
+
+donde 
+$$D_f=\mathbb{R}$$
 
 $$
+R_f=
+\begin{cases}
+\mathbb{R}^{+}\cup\{0\}, & \text{si } n \text{ es par} \\
+\mathbb{R}, & \text{si } n \text{ es impar}
+\end{cases}
+$$
+
+Ejemplo
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[scale=0.8]
+
+% Cuadrícula
+%\draw[gray!25, thin, step=1] (-5,-5) grid (5,5);
+
+% Ejes
+\draw[->] (-5.3,0) -- (5.3,0) node[right] {$x$};
+\draw[->] (0,-5.3) -- (0,5.3) node[above] {$y$};
+
+% Ticks eje x
+\foreach \x in {-5,-4,-3,-2,-1,1,2,3,4,5}
+   \draw (\x,0.07) -- (\x,-0.07) node[below, font=\tiny] {\x};
+
+% Ticks eje y
+%\foreach \y in {-5,-4,-3,-2,-1,1,2,3,4,5}
+%   \draw (0.07,\y) -- (-0.07,\y) node[left, font=\tiny] {\y};
+
+% n=2  y=x^2   dominio recortado para no salir de y=5 → |x|≤√5≈2.236
+\draw[very thick, teal, smooth, samples=120, domain=-2.236:2.236]
+    plot ({\x}, {\x*\x});
+
+% n=3  y=x^3   |x|≤∛5≈1.71
+\draw[very thick, orange, smooth, samples=120, domain=-1.71:1.71]
+    plot ({\x}, {\x*\x*\x});
+
+% n=4  y=x^4   |x|≤5^(1/4)≈1.495
+\draw[very thick, violet, smooth, samples=120, domain=-1.495:1.495]
+    plot ({\x}, {\x*\x*\x*\x});
+
+% n=5  y=x^5   |x|≤5^(1/5)≈1.38
+\draw[very thick, red!70!black, smooth, samples=120, domain=-1.38:1.38]
+    plot ({\x}, {\x*\x*\x*\x*\x});
+
+% Leyenda
+\draw[very thick, teal]          (1.8, 4.8) -- (2.8, 4.8) node[right, font=\small] {$f(x)=x^2$};
+\draw[very thick, orange]        (1.8, 4.1) -- (2.8, 4.1) node[right, font=\small] {$f(x)=x^3$};
+\draw[very thick, violet]        (1.8, 3.4) -- (2.8, 3.4) node[right, font=\small] {$f(x)=x^4$};
+\draw[very thick, red!70!black]  (1.8, 2.7) -- (2.8, 2.7) node[right, font=\small] {$f(x)=x^5$};
+
+% Origen
+\fill[black] (0,0) circle (0.07);
+
+\end{tikzpicture}
+\end{document}
+```
+
+---
+
+### Función exponencial
+
+$$
+y=f(x)=a^x
+$$
+
+con:
+
+$$
+a>0,\qquad a\neq 1
+$$
+
+$$
+D_f=\mathbb{R}
+$$
+
+$$
+R_f=\mathbb{R}^{+}
+$$
+
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[scale=0.9]
+
+% Cuadrícula
+%\draw[gray!25, thin, step=1] (-5,-1) grid (5,5);
+
+% Ejes
+\draw[->] (-5.3,0) -- (3,0) node[right] {$x$};
+\draw[->] (0,-1.3) -- (0,5.3) node[above] {$y$};
+
+% Ticks eje x
+\foreach \x in {-5,-4,-3,-2,-1}
+    \draw (\x,0.07) -- (\x,-0.07) node[below, font=\tiny] {\x};
+
+% Ticks eje y
+\foreach \y in {1,2,3,4,5}
+    \draw (0.07,\y) -- (-0.07,\y) node[left, font=\tiny] {\y};
+
+% Asíntota horizontal y=0
+\draw[dashed, gray!60, thin] (-5.3,0) -- (5.3,0);
+
+% a=2  y=2^x
+% y=5 → x=log2(5)≈2.322   y=-1 → x=log2(-1) no existe, x→-∞ asíntota
+\draw[very thick, teal, smooth, samples=150, domain=-5:2.322]
+    plot ({\x}, {2^\x});
+
+% a=3  y=3^x
+% y=5 → x=log3(5)≈1.465
+\draw[very thick, orange, smooth, samples=150, domain=-5:1.465]
+    plot ({\x}, {3^\x});
+
+% a=5  y=5^x
+% y=5 → x=1
+\draw[very thick, violet, smooth, samples=150, domain=-5:1]
+    plot ({\x}, {5^\x});
+
+% a=10  y=10^x
+% y=5 → x=log10(5)≈0.699
+\draw[very thick, red!70!black, smooth, samples=150, domain=-5:0.699]
+    plot ({\x}, {10^\x});
+
+% Punto común (0,1) para todas
+\fill[black] (0,1) circle (0.07);
+\node[below right, font=\small] at (0,1) {$(0,1)$};
+
+% Leyenda
+\draw[very thick, teal]         (-4.8, 4.8) -- (-3.8, 4.8) node[right, font=\small] {$y=2^x$};
+\draw[very thick, orange]       (-4.8, 4.1) -- (-3.8, 4.1) node[right, font=\small] {$y=3^x$};
+\draw[very thick, violet]       (-4.8, 3.4) -- (-3.8, 3.4) node[right, font=\small] {$y=5^x$};
+\draw[very thick, red!70!black] (-4.8, 2.7) -- (-3.8, 2.7) node[right, font=\small] {$y=10^x$};
+
+% Etiqueta asíntota
+\node[gray, font=\small] at (3.5,-0.6) {asíntota $y=0$};
+
+\end{tikzpicture}
+\end{document}
+```
+
