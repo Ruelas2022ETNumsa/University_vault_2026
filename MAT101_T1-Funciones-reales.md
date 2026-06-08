@@ -2400,8 +2400,35 @@ Donde:
 >Solo se miden ángulos redianes
 >$$1^{\circ}=\frac{\pi}{180^{\circ}}[rad]$$
 
+Por ejemplo
 
-$$30^{\circ}=\frac{\pi}{180^{\circ}}\=$$
+$$30^{\circ}=\frac{\pi}{180^{\circ}}\times 30^{\circ}=\frac{\pi}{6}$$
+
+$$45^{\circ}=\frac{\pi}{180^{\circ}}\times 45^{\circ}=\frac{\pi}{4}$$
+
+$$90^{\circ}=\frac{\pi}{180^{\circ}}\times 90^{\circ}=\frac{\pi}{2}$$
+
+$$120^{\circ}=\frac{\pi}{180^{\circ}}\times 120^{\circ}=\frac{2\pi}{3}$$
+
+$$\vdots$$
+
+Además
+
+$$\sin\frac{\pi}{6} = \frac{1}{2}\quad ; \quad \cos \frac{\pi}{6}=\frac{\sqrt{3}}{2} \quad ; \quad \sin\frac{\pi}{4} = \frac{\sqrt{2}}{2}=\frac{1}{\sqrt{2}}$$
+$$\vdots$$
+
+
+### Función seno
+
+$$y=f(x)=\sin{x}$$
+
+$$D_{f}=\mathbb{R} \quad ; \quad R_{f}=[-1,1]$$
+
+
+
+
+
+
 
 
 
