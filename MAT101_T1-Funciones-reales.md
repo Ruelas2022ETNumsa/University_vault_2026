@@ -2417,6 +2417,7 @@ Además
 $$\sin\frac{\pi}{6} = \frac{1}{2}\quad ; \quad \cos \frac{\pi}{6}=\frac{\sqrt{3}}{2} \quad ; \quad \sin\frac{\pi}{4} = \frac{\sqrt{2}}{2}=\frac{1}{\sqrt{2}}$$
 $$\vdots$$
 
+---
 
 ### Función seno
 
@@ -2469,6 +2470,8 @@ Grafica :
 
 >$f(x)=\sin x$ es periódico con $p=2\pi$ y es impar $\sin{-x}=-\sin{x}$
 
+---
+
 ### Función coseno
 
 $$y=f(x)=\cos{x}$$
@@ -2520,6 +2523,8 @@ Grafica :
 
 >$f(x)=\cos x$ es periódico con $p=2\pi$ y es par $\cos{-x}=\cos{x}$
 
+---
+
 ### Función tangente
 
 $$y=f(x)=\tan{x}=\dfrac{\sin x}{\cos x}$$
@@ -2529,6 +2534,7 @@ $$D_{f}=\mathbb{R} \quad \rightarrow \{ \; x / x = (2k+1)\frac{\pi}{2}\quad,\qua
 $$R_{f}=\mathbb{R}$$
 
 >$f(x)=\tan x$ es periódico con $p=2\pi$ y es impar $\tan{-x}=-\tan{x}$
+
 Grafica :
 
 ```tikz
@@ -2575,4 +2581,105 @@ Grafica :
 \end{tikzpicture}
 \end{document}
 ```
+
+
+
+- además
+
+$$f(x)=\cot{x}=\frac{1}{\tan x} = \frac{\cos x}{\sin x}$$
+
+$$f(x)=\sec{x}=\frac{1}{\cos x} $$
+
+$$f(x)=\csc{x}=\frac{1}{\sin x} $$
+
+>- también  $$\sin^{2}{x}+\cos^{2}{x}=1\quad ; \quad \forall x\in \mathbb{R}$$
+>Identidad fundamental
+
+---
+
+### Funciones trigonométricas inversas 
+
+
+Se definen los elementos inversos según:
+$$\arcsin{u}=v \quad \Rightarrow \quad u=\sin{v}$$
+$$\arccos{u}=v \quad \Rightarrow \quad u=\cos{v}$$
+$$\arctan{u}=v \quad \Rightarrow \quad u=\tan{v}$$
+$$\text{arcotg }{u}=v \quad \Rightarrow \quad u=\cot v$$
+$$\text{arcsec }{u}=v \quad \Rightarrow \quad u=\sec{v}$$
+$$\text{arcosec }{u}=v \quad \Rightarrow \quad u=\csc v$$
+
+- por ejemplo:
+
+$$\arcsin{1}=\frac{\pi}{2}$$
+$$\arctan{1}=\frac{\pi}{4}$$
+$$\arccos{0}=\frac{\pi}{2}$$
+$$\arcsin{\frac{\sqrt{3}}{2}}=\frac{\pi}{3}$$
+$$\arctan \infty =\frac{\pi}{2}$$
+$$\vdots$$
+
+
+#### Funcion $\arcsin$
+
+$$y=f(x)=\arcsin{x}$$
+
+$$D_{f}=[-1,1] \quad ; \quad R_{f}=\Big [-\frac{\pi}{2},\frac{\pi}{2}\Big ]$$
+
+Grafica :
+
+
+
+
+```tikz
+\usepackage{pgfplots}
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[
+    axis lines=middle,
+    xmin=-4, xmax=4,
+    ymin=-4, ymax=4,
+    %width=12cm,
+    %height=6cm,
+    xlabel={$x$},
+    ylabel={$y$},
+    xtick=\empty,
+    ytick={-1,0,1}
+]
+
+% Funcion
+\addplot[
+dashed,
+    very thick,
+    teal,
+    domain=-4:12.56,
+    samples=200
+]
+{sin(deg(x))};
+
+% Asintotas verticales - gruesas para tapar la linea falsa
+\draw[dashed, gray, line width=1pt] (axis cs:-3, 1) -- (axis cs:13, 1);
+
+% Puntos donde tan(x)=0
+\fill[orange] (axis cs:0, 0) circle (2pt)node[above right] {$0$};
+\fill[orange] (axis cs:3.14, 0) circle (2pt)node[above right] {$\pi$};
+\fill[orange] (axis cs:6.28, 0) circle (2pt)node[above right] {$2\pi$};
+\fill[orange] (axis cs:9.42, 0) circle (2pt)node[above right] {$3\pi$};
+
+
+\end{axis}
+\end{tikzpicture}
+\end{document}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
 
