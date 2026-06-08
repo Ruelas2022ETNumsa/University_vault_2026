@@ -2695,61 +2695,7 @@ Grafica :
 \begin{tikzpicture}
 \begin{axis}[
     axis lines=middle,
-    xmin=-2, xmax=2,
-    ymin=-1, ymax=4,
-    xlabel={$x$},
-    ylabel={$y$},
-    xtick={-1,0,1},
-    ytick={-1,0,1,2,3}
-]
-
-% Funcion seno
-\addplot[
-    dashed,
-    very thick,
-    teal,
-    domain=-4:4,
-    samples=200
-]{cos(deg(x))};
-
-% Linea espejo y=x
-\draw[dashed, gray, line width=1pt] (axis cs:-4, -4) -- (axis cs:4, 4);
-
-% Funcion arcoseno
-\addplot[
-    very thick,
-    orange,
-    domain=-1:1,
-    samples=200
-]{acos(x)/180*pi};
-
-% Puntos clave arcoseno
-\fill[orange] (axis cs:-1, -1.5708) circle (2pt) node[left] {$(-1,-\frac{\pi}{2})$};
-\fill[orange] (axis cs:0, 0)        circle (2pt) node[above right] {$(0,0)$};
-\fill[orange] (axis cs:1,  1.5708)  circle (2pt) node[right] {$(1,\frac{\pi}{2})$};
-%asintotas
-%||
-\draw[dashed, gray, line width=1pt] (axis cs:1, -2) -- (axis cs:1, 3);
-\draw[dashed, gray, line width=1pt] (axis cs:-1, -2) -- (axis cs:-1, 3);
-%--
-\draw[dashed, gray, line width=1pt] (axis cs:-2, -3.14) -- (axis cs:2, -3.14);
-\draw[dashed, gray, line width=1pt] (axis cs:-2, 3.14) -- (axis cs:2, 3.14);
-
-\end{axis}
-\end{tikzpicture}
-\end{document}
-```
-
-
-
-
-```tikz
-\usepackage{pgfplots}
-\begin{document}
-\begin{tikzpicture}
-\begin{axis}[
-    axis lines=middle,
-    xmin=-2, xmax=4,
+    xmin=-2.5, xmax=3,
     ymin=-2, ymax=4,
     xlabel={$x$},
     ylabel={$y$},
@@ -2793,6 +2739,78 @@ Grafica :
 \end{tikzpicture}
 \end{document}
 ```
+
+
+
+---
+
+
+#### Funcion $\arctan$
+
+$$y=f(x)=\arctan{x}$$
+
+$$D_{f}=\mathbb{R} \quad ; \quad R_{f}= \Big [ -\frac{\pi}{2},\frac{\pi}{2} \Big ]$$
+
+Grafica :
+
+```tikz
+\usepackage{pgfplots}
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[
+    axis lines=middle,
+    xmin=-4, xmax=4,
+    ymin=-4, ymax=4,
+    xlabel={$x$},
+    ylabel={$y$},
+    xtick={-1,0,1},
+    ytick={-1,0,1}
+]
+
+% Tangente rama principal (-pi/2, pi/2)
+\addplot[
+    dashed,
+    very thick,
+    teal,
+    domain=-1.47:1.47,
+    samples=100
+]{tan(deg(x))};
+
+% Linea espejo y=x
+\draw[dashed, gray, line width=1pt] (axis cs:-4, -4) -- (axis cs:4, 4);
+
+% Arcotangente domain todos los reales
+\addplot[
+    very thick,
+    orange,
+    domain=-4:4,
+    samples=200
+]{atan(x)/180*pi};
+
+% Puntos clave arctan
+\fill[orange] (axis cs:-1, -0.7854) circle (2pt) node[below left] {$(-1,-\frac{\pi}{4})$};
+\fill[orange] (axis cs:0, 0)        circle (2pt) node[above right] {$(0,0)$};
+\fill[orange] (axis cs:1, 0.7854)   circle (2pt) node[above left] {$(1,\frac{\pi}{4})$};
+
+% Asintotas horizontales de arctan en y=+-pi/2
+\draw[dashed, gray, line width=1pt] (axis cs:-4,  1.5708) -- (axis cs:4,  1.5708);
+\draw[dashed, gray, line width=1pt] (axis cs:-4, -1.5708) -- (axis cs:4, -1.5708);
+
+% Asintotas verticales de tan en x=+-pi/2
+\draw[dashed, gray, line width=1pt] (axis cs: 1.5708, -4) -- (axis cs: 1.5708, 4);
+\draw[dashed, gray, line width=1pt] (axis cs:-1.5708, -4) -- (axis cs:-1.5708, 4);
+
+\end{axis}
+\end{tikzpicture}
+\end{document}
+```
+
+--
+
+### Funciones Hiperbólicas
+
+Se definen en términos de $e^{x}$ según:
+
 
 
 
