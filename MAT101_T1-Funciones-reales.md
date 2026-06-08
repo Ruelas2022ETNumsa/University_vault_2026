@@ -2311,28 +2311,34 @@ $$\boxed{(f \circ f^{-1})(x) = x}$$
 Se definen en la circunferencia trigonométrica.
 
 
+
+
+
+
+
+
 ```tikz
 \usepackage{tikz}
 \begin{document}
 \begin{tikzpicture}[scale=2]
 
 % Ejes
-\draw[->] (-0.2,0) -- (2.1,0) node[right] {$x$};
+\draw[->] (-1.2,0) -- (2.1,0) node[right] {$x$};
 \draw[->] (0,-0.2) -- (0,1.4) node[above] {$y$};
 
 % Semicircunferencia superior punteada
-\draw[thick, dashed] (1,0) arc (0:180:1);
+\draw[thick, dashed,teal] (1,0) arc (0:180:1);
 
 % Recta L desde el origen (angulo 30 grados)
 % pasa por P=(cos30,sin30), R=(1, tan30), M=(cot30, 1)
 % tan(30)=1/sqrt(3) ~ 0.5774, cot(30)=sqrt(3) ~ 1.7321
-\draw[thick] (0,0) -- (1.85,1.069);
+\draw[thick, orange ] (0,0) -- (1.85,1.069);
 
 % Recta tangente horizontal en N=(0,1)
-\draw[thick] (-0.1,1) -- (1.85,1);
+\draw[thick,dashed] (-1.1,1) -- (1.85,1);
 
 % Recta tangente vertical en T=(1,0)
-\draw[thick] (1,0) -- (1,1.15);
+\draw[thick,dashed] (1,-0.5) -- (1,1.3);
 
 % Punto P = (cos30, sin30) = (0.866, 0.5)
 \fill (0.866,0.5) circle (0.03);
@@ -2340,7 +2346,7 @@ Se definen en la circunferencia trigonométrica.
 
 % Punto N = (0,1)
 \fill (0,1) circle (0.03);
-\node[left, font=\small] at (0,1) {$N$};
+\node[left, font=\small] at (0.3,1.1) {$N$};
 
 % Punto M = (sqrt(3), 1) ~ (1.7321, 1)
 \fill (1.7321,1) circle (0.03);
@@ -2348,7 +2354,7 @@ Se definen en la circunferencia trigonométrica.
 
 % Punto T = (1,0)
 \fill (1,0) circle (0.03);
-\node[below, font=\small] at (1,0) {$T$};
+\node[below, font=\small] at (0.85,0) {$T$};
 
 % Punto R = (1, tan30) = (1, 0.5774)
 \fill (1,0.5774) circle (0.03);
@@ -2359,11 +2365,11 @@ Se definen en la circunferencia trigonométrica.
 
 % Angulo 30 grados en el origen
 \draw (0.25,0) arc (0:30:0.25);
-\node[font=\tiny] at (0.32,0.08) {$30^\circ$};
+\node[font=\small] at (0.36,0.08) {$x$};
 
 % Labels de tangentes
-\node[above, font=\small] at (0.9,1) {Tangente en $N$};
-\node[right, font=\small] at (1,0.95) {Tangente en $T$};
+\node[above, font=\small] at (-0.9,1) {Tangente en $N$};
+\node[right, font=\small] at (1.1,-0.4) {Tangente en $T$};
 
 % Labels lado derecho (+) 0 y (-) 360
 \node[right, font=\small] at (1.05,0.05) {$(+)\ 0^\circ$};
@@ -2385,151 +2391,24 @@ Se definen en la circunferencia trigonométrica.
 
 
 
+Donde:
+
+| $\sin{x}=\overline{PQ}$ | $\tan{x}=\overline{RT}$ | $\sec{x}=\overline{OR}$ |
+| ----------------------- | ----------------------- | ----------------------- |
+| $\cos{x}=\overline{OQ}$ | $\cot{x}=\overline{MN}$ | $\csc{x}=\overline{OM}$ |
+
+>Solo se miden ángulos redianes
+>$$1^{\circ}=\frac{\pi}{180^{\circ}}[rad]$$
+
+
+$$30^{\circ}=\frac{\pi}{180^{\circ}}\=$$
 
 
 
-```tikz
-\begin{tikzpicture}[scale=1]
-
-% Constantes
-\def\tanA{0.57735}
-\def\cotA{1.73205}
-\def\cosA{0.86603}
-\def\sinA{0.5}
-
-% Ejes
-\draw[->] (-0.2,0) -- (2.1,0) node[right] {$x$};
-\draw[->] (0,-0.2) -- (0,1.4) node[above] {$y$};
-
-% Semicircunferencia superior (radio 1, centro O)
-\draw[thick,dashed] (1,0) arc[start angle=0,end angle=180,radius=1];
-
-% Recta L (30°)
-\draw[thick] (0,0) -- (1.85,1.07);
-
-% Tangente horizontal en N
-\draw[thick] (-0.1,1) -- (1.85,1);
-
-% Tangente vertical en T
-\draw[thick] (1,0) -- (1,1.15);
-
-% Punto P
-\fill (\cosA,\sinA) circle (0.02);
-\node[above left,font=\small] at (\cosA,\sinA) {$P$};
-
-% Punto N
-\fill (0,1) circle (0.02);
-\node[left,font=\small] at (0,1) {$N$};
-
-% Punto M
-\fill (\cotA,1) circle (0.02);
-\node[above,font=\small] at (\cotA,1) {$M$};
-
-% Punto T
-\fill (1,0) circle (0.02);
-\node[below,font=\small] at (1,0) {$T$};
-
-% Punto R
-\fill (1,\tanA) circle (0.02);
-\node[right,font=\small] at (1,\tanA) {$R$};
-
-% Origen
-\node[below left,font=\small] at (0,0) {$O$};
-
-% Ángulo de 30°
-\draw (0.25,0) arc[start angle=0,end angle=30,radius=0.25];
-\node[font=\tiny] at (0.33,0.10) {$30^\circ$};
-
-% Etiquetas de tangentes
-\node[above,font=\scriptsize] at (0.9,1.03) {Tangente en $N$};
-\node[right,font=\scriptsize] at (1.02,0.92) {Tangente en $T$};
-
-% Sentido positivo y negativo
-\node[right,font=\small] at (1.05,0.05) {$(+)\,0^\circ$};
-\node[right,font=\small] at (1.05,-0.12) {$(-)\,360^\circ$};
-
-% Líneas auxiliares
-\draw[dotted] (\cosA,0) -- (\cosA,\sinA);
-\draw[dotted] (0,\sinA) -- (\cosA,\sinA);
-
-% Marca x=1
-\draw (1,0.04) -- (1,-0.04);
-\node[below,font=\tiny] at (1,-0.04) {$1$};
-
-% Marca y=1
-\draw (0.04,1) -- (-0.04,1);
-
-\end{tikzpicture}
-```
 
 
-```tikz
-\begin{document}
-\begin{tikzpicture}[scale=2]
 
-% Ejes
-\draw[->] (-0.2,0) -- (2.0,0) node[right] {$x$};
-\draw[->] (0,-0.2) -- (0,1.4) node[above] {$y$};
 
-% Semicircunferencia superior punteada
-\draw[dashed, thick] (1,0) arc (0:180:1);
 
-% Recta L desde el origen a 30 grados
-\draw[thick] (0,0) -- (1.85,1.07);
 
-% Tangente horizontal en N=(0,1)
-\draw[thick] (-0.1,1) -- (1.85,1);
 
-% Tangente vertical en T=(1,0)
-\draw[thick] (1,0) -- (1,1.15);
-
-% Punto P=(0.87, 0.5)
-\fill (0.87,0.5) circle (0.025);
-\node[above left] at (0.87,0.5) {$P$};
-
-% Punto N=(0,1)
-\fill (0,1) circle (0.025);
-\node[left] at (0,1) {$N$};
-
-% Punto M=(1.73, 1)
-\fill (1.73,1) circle (0.025);
-\node[above] at (1.73,1) {$M$};
-
-% Punto T=(1,0)
-\fill (1,0) circle (0.025);
-\node[below] at (1,0) {$T$};
-
-% Punto R=(1, 0.58)
-\fill (1,0.58) circle (0.025);
-\node[right] at (1,0.58) {$R$};
-
-% Origen
-\node[below left] at (0,0) {$O$};
-
-% Angulo en el origen
-\draw (0.22,0) arc (0:30:0.22);
-\node at (0.28,0.07) {$30$};
-
-% Label tangente horizontal
-\node[above] at (0.7,1) {Tangente en $N$};
-
-% Label tangente vertical
-\node[right] at (1,0.9) {Tangente en $T$};
-
-% Labels lado derecho
-\node[right] at (1.05,0.07) {$(+)\ 0$};
-\node[right] at (1.05,-0.13) {$(-)\ 360$};
-
-% Proyecciones punteadas desde P
-\draw[dotted] (0.87,0) -- (0.87,0.5);
-\draw[dotted] (0,0.5) -- (0.87,0.5);
-
-% Tick x=1
-\draw (1,0.03) -- (1,-0.03) node[below] {$1$};
-
-% Tick y=1
-\draw (0.03,1) -- (-0.03,1);
-
-\end{tikzpicture}
-\end{document}
-```

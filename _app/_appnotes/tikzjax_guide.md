@@ -964,27 +964,27 @@ El plugin genera SVGs a partir de TikZ y soporta **todos los colores estándar d
 
 ### Colores nombrados disponibles (sin paquetes extra)
 
-| Color | Nombre |
-|---|---|
-| `red` | rojo |
-| `green` | verde |
-| `blue` | azul |
-| `cyan` | cian |
-| `magenta` | magenta |
-| `yellow` | amarillo |
-| `black` | negro |
-| `white` | blanco |
-| `gray` / `grey` | gris |
-| `darkgray` | gris oscuro |
-| `lightgray` | gris claro |
-| `brown` | marrón |
-| `lime` | lima |
-| `olive` | oliva |
-| `orange` | naranja |
-| `pink` | rosa |
-| `purple` | púrpura |
-| `teal` | turquesa |
-| `violet` | violeta |
+| Color           | Nombre      |
+| --------------- | ----------- |
+| `red`           | rojo        |
+| `green`         | verde       |
+| `blue`          | azul        |
+| `cyan`          | cian        |
+| `magenta`       | magenta     |
+| `yellow`        | amarillo    |
+| `black`         | negro       |
+| `white`         | blanco      |
+| `gray` / `grey` | gris        |
+| `darkgray`      | gris oscuro |
+| `lightgray`     | gris claro  |
+| `brown`         | marrón      |
+| `lime`          | lima        |
+| `olive`         | oliva       |
+| `orange`        | naranja     |
+| `pink`          | rosa        |
+| `purple`        | púrpura     |
+| `teal`          | turquesa    |
+| `violet`        | violeta     |
 
 ### Mezclas y variantes
 
