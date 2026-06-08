@@ -124,65 +124,6 @@ Apuntes manuscritos (foto/PDF)
 | Filesystem solo | Sin búsqueda semántica ni memoria entre sesiones |
 | Plugin Obsidian Copilot | Requiere API key de pago para modelos avanzados |
 
----
-
-## Corrección: Basic Memory con múltiples cuentas de Claude (2026-06-08)
-
-### Síntoma
-Basic Memory aparecía como `Could not attach to MCP server basic-memory` en Claude Desktop al cambiar de cuenta, aunque el servidor arrancaba correctamente (log mostraba `Server started and connected successfully`).
-
-### Causa
-En `claude_desktop_config.json`, la sección `bypassPermissionsGateByAccount` tenía ambas cuentas en `false`, lo que impedía que Claude Desktop otorgara permisos completos a Basic Memory para cuentas distintas a la que lo configuró originalmente.
-
-### Archivo a modificar
-```
-C:\Users\USUARIO\AppData\Local\Packages\Claude_pzs8sxrjxfjjc\LocalCache\Roaming\Claude\claude_desktop_config.json
-```
-
-### Líneas a configurar
-Dentro de `preferences`, cambiar ambos valores de `false` a `true`:
-
-```json
-"bypassPermissionsGateByAccount": {
-  "ed077a3b-e81f-4c06-b9d4-f40a4971ed86": true,
-  "2b2f257f-ea5a-41f0-8b6c-fbdf7475f4d6": true
-}
-```
-
-> **Nota:** Los UUIDs corresponden a las dos cuentas de Claude que usan este equipo. Si se agrega una tercera cuenta, deberá añadirse su UUID con valor `true` también.
-
-### codigo en PowerShell
-
-#### 1ro 
->luego colocar para iniciar el mcp
->```PowerShell
->& "C:\Users\USUARIO\AppData\Local\Programs\Python\Python311\Scripts\uvx.exe" basic-memory mcp
->```
-
-#### 2do
-
-```PowerShell
-$path = "$env:LOCALAPPDATA\Packages\Claude_pzs8sxrjxfjjc\LocalCache\Roaming\Claude\claude_desktop_config.json"
-$json = Get-Content $path -Raw | ConvertFrom-Json
-$json.preferences.bypassPermissionsGateByAccount.PSObject.Properties | ForEach-Object { $_.Value = $true }
-$json | ConvertTo-Json -Depth 10 | Set-Content $path
-```
-
-Lo que hace línea por línea:
-
-1. Guarda la ruta del archivo en una variable
-2. Lee el JSON y lo convierte a objeto de PowerShell
-3. Recorre todos los UUIDs y les pone `true` sin importar cuántos haya
-4. Guarda el archivo de vuelta
-
-
-
-### Pasos aplicados
-1. Abrir el archivo con bloc de notas o editor de texto
-2. Localizar `bypassPermissionsGateByAccount`
-3. Cambiar ambos `false` a `true`
-4. Guardar y reiniciar Claude Desktop
-
 %%
 galaxy-links
 [[_galaxy-system]]

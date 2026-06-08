@@ -179,6 +179,7 @@ truncado
 terminaba
 truncados
 tx
+ten
 ToDo
 Templater
 Text
@@ -1011,6 +1012,7 @@ basic
 bad
 bloquea
 boxed
+bloc
 scope
 status
 selector
@@ -1684,6 +1686,9 @@ alfa
 args
 antivirus
 approx
+aparec
+arrancaba
+adirse
 related
 recomendados
 ribbon
@@ -2088,6 +2093,7 @@ necesitar
 nepper
 ndole
 neperiano
+ntoma
 created
 commit
 cada
@@ -2591,6 +2597,8 @@ crece
 consideradas
 cot
 csc
+configur
+corresponden
 updated
 un
 universo
@@ -2876,6 +2884,7 @@ Copiar
 Config
 Cambiar
 Copilot
+Correcci
 Instalados
 Instalado
 Instalar
@@ -3842,6 +3851,7 @@ memory
 ms
 modelos
 mn
+mostraba
 YAML
 Ya
 You
@@ -4213,6 +4223,7 @@ embeddings
 eficiente
 eligi
 externos
+equipo
 Motor
 Media
 Mantiene
@@ -4351,6 +4362,7 @@ LECTURA
 Llevando
 LIBRER
 LECCI
+Localizar
 links
 las
 listar
@@ -4686,6 +4698,7 @@ indexado
 instaladas
 instalaci
 implies
+imped
 Dependencia
 Dropbox
 Dataview
@@ -5197,6 +5210,8 @@ Uni
 Ubicar
 Utilizando
 Users
+UUIDs
+UUID
 Nombre
 Notas
 No
@@ -5338,6 +5353,8 @@ orange
 odo
 org
 overline
+otorgara
+originalmente
 junto
 json
 jer
