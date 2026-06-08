@@ -1959,6 +1959,7 @@ revisando
 red
 recientemente
 rendimiento
+ro
 notes
 notas
 nuevas
@@ -2094,6 +2095,7 @@ nepper
 ndole
 neperiano
 ntoma
+ntos
 created
 commit
 cada
@@ -2599,6 +2601,7 @@ cot
 csc
 configur
 corresponden
+colocar
 updated
 un
 universo
@@ -3655,6 +3658,7 @@ purple
 per
 permalink
 publicados
+pone
 min
 mica
 movimiento
@@ -3852,6 +3856,7 @@ ms
 modelos
 mn
 mostraba
+mcp
 YAML
 Ya
 You
@@ -4699,6 +4704,8 @@ instaladas
 instalaci
 implies
 imped
+iniciar
+importar
 Dependencia
 Dropbox
 Dataview
@@ -4932,6 +4939,7 @@ Roaming
 RGB
 RAM
 RT
+Recorre
 Hider
 Hace
 Herramientas
@@ -5355,6 +5363,7 @@ org
 overline
 otorgara
 originalmente
+objeto
 junto
 json
 jer
