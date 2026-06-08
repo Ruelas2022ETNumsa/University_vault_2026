@@ -2424,8 +2424,112 @@ $$y=f(x)=\sin{x}$$
 
 $$D_{f}=\mathbb{R} \quad ; \quad R_{f}=[-1,1]$$
 
+Grafica :
+
+```tikz
+\usepackage{pgfplots}
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[
+    axis lines=middle,
+    xmin=-3, xmax=13,
+    ymin=-1.2, ymax=1.2,
+    width=12cm,
+    height=6cm,
+    xlabel={$x$},
+    ylabel={$y$},
+    xtick=\empty,
+    ytick={-1,0,1}
+]
+
+% Funcion
+\addplot[
+    very thick,
+    teal,
+    domain=-4:12.56,
+    samples=200
+]
+{sin(deg(x))};
+
+% Asintotas verticales - gruesas para tapar la linea falsa
+\draw[dashed, gray, line width=1pt] (axis cs:-3, 1) -- (axis cs:13, 1);
+\draw[dashed, gray, line width=1pt] (axis cs:-3, -1) -- (axis cs:13, -1);
+
+% Puntos donde tan(x)=0
+\fill[orange] (axis cs:0, 0) circle (2pt)node[above right] {$0$};
+\fill[orange] (axis cs:3.14, 0) circle (2pt)node[above right] {$\pi$};
+\fill[orange] (axis cs:6.28, 0) circle (2pt)node[above right] {$2\pi$};
+\fill[orange] (axis cs:9.42, 0) circle (2pt)node[above right] {$3\pi$};
 
 
+\end{axis}
+\end{tikzpicture}
+\end{document}
+```
+
+>$f(x)=\sin x$ es periódico con $p=2\pi$ y es impar $\sin{-x}=-\sin{x}$
+
+### Función coseno
+
+$$y=f(x)=\cos{x}$$
+
+$$D_{f}=\mathbb{R} \quad ; \quad R_{f}=[-1,1]$$
+
+Grafica :
+
+```tikz
+\usepackage{pgfplots}
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[
+    axis lines=middle,
+    xmin=-3, xmax=13,
+    ymin=-1.2, ymax=1.2,
+    width=12cm,
+    height=6cm,
+    xlabel={$x$},
+    ylabel={$y$},
+    xtick=\empty,
+    ytick={-1,0,1}
+]
+
+% Funcion
+\addplot[
+    very thick,
+    teal,
+    domain=-4:12.56,
+    samples=200
+]
+{cos(deg(x))};
+
+% Asintotas verticales - gruesas para tapar la linea falsa
+\draw[dashed, gray, line width=1pt] (axis cs:-3, 1) -- (axis cs:13, 1);
+\draw[dashed, gray, line width=1pt] (axis cs:-3, -1) -- (axis cs:13, -1);
+
+% Puntos donde tan(x)=0
+\fill[orange] (axis cs:1.57, 0) circle (2pt)node[above right] {$\frac{\pi}{2}$};
+\fill[orange] (axis cs:4.71, 0) circle (2pt)node[above right] {$\frac{3\pi}{2}$};
+\fill[orange] (axis cs:7.85, 0) circle (2pt)node[above right] {$\frac{5\pi}{2}$};
+\fill[orange] (axis cs:10.99, 0) circle (2pt)node[above right] {$\frac{7\pi}{2}$};
+
+
+\end{axis}
+\end{tikzpicture}
+\end{document}
+```
+
+>$f(x)=\cos x$ es periódico con $p=2\pi$ y es par $\cos{-x}=\cos{x}$
+
+### Función tangente
+
+$$y=f(x)=\tan{x}=\dfrac{\sin x}{\cos x}$$
+
+$$D_{f}=\mathbb{R} \quad \rightarrow \{ \; x / x = (2k+1)\frac{\pi}{2}\quad,\quad k\in \mathbb{Z} \; \}$$
+
+$$R_{f}=\mathbb{R}$$
+
+>$f(x)=\tan x$ es periódico con $p=2\pi$ y es impar $\tan{-x}=-\tan{x}$
+Grafica :
 
 ```tikz
 \usepackage{pgfplots}
@@ -2453,18 +2557,22 @@ $$D_{f}=\mathbb{R} \quad ; \quad R_{f}=[-1,1]$$
 {tan(deg(x))};
 
 % Asintotas verticales - gruesas para tapar la linea falsa
+\draw[dashed, gray, line width=3pt] (axis cs:-1.57, -4) -- (axis cs:-1.57, 4);
+
 \draw[dashed, gray, line width=3pt] (axis cs:1.57, -4) -- (axis cs:1.57, 4);
 \draw[dashed, gray, line width=3pt] (axis cs:4.71, -4) -- (axis cs:4.71, 4);
 \draw[dashed, gray, line width=3pt] (axis cs:7.85, -4) -- (axis cs:7.85, 4);
 \draw[dashed, gray, line width=3pt] (axis cs:10.99, -4) -- (axis cs:10.99, 4);
 
 % Puntos donde tan(x)=0
-\fill[orange] (axis cs:0, 0) circle (2pt);
-\fill[orange] (axis cs:3.14, 0) circle (2pt);
-\fill[orange] (axis cs:6.28, 0) circle (2pt);
-\fill[orange] (axis cs:9.42, 0) circle (2pt);
+\fill[orange] (axis cs:0, 0) circle (2pt)node[above right] {$0$};
+\fill[orange] (axis cs:3.14, 0) circle (2pt)node[above right] {$\pi$};
+\fill[orange] (axis cs:6.28, 0) circle (2pt)node[above right] {$2\pi$};
+\fill[orange] (axis cs:9.42, 0) circle (2pt)node[above right] {$3\pi$};
+
 
 \end{axis}
 \end{tikzpicture}
 \end{document}
 ```
+
