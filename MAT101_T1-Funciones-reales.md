@@ -2425,6 +2425,8 @@ $$y=f(x)=\sin{x}$$
 $$D_{f}=\mathbb{R} \quad ; \quad R_{f}=[-1,1]$$
 
 
+
+
 ```tikz
 \usepackage{pgfplots}
 \begin{document}
@@ -2441,9 +2443,7 @@ $$D_{f}=\mathbb{R} \quad ; \quad R_{f}=[-1,1]$$
     ytick={-1,0,1}
 ]
 
-
-
-% Curva senoidal
+% Curva tangente
 \addplot[
     very thick,
     teal,
@@ -2452,75 +2452,19 @@ $$D_{f}=\mathbb{R} \quad ; \quad R_{f}=[-1,1]$$
 ]
 {tan(deg(x))};
 
-% Rectas verticales
-\draw[dashed,gray] (axis cs:1, -1.3) -- (axis cs:1, 1.3);
-\draw[dashed,gray] (axis cs:4, -1.3) -- (axis cs:4, 1.3);
-\draw[dashed,gray] (axis cs:7, -1.3) -- (axis cs:7, 1.3);
-\draw[dashed,gray] (axis cs:10, -1.3) -- (axis cs:10, 1.3);
+% Asintotas verticales - gruesas para tapar la linea falsa
+\draw[dashed, gray, line width=3pt] (axis cs:1.57, -4) -- (axis cs:1.57, 4);
+\draw[dashed, gray, line width=3pt] (axis cs:4.71, -4) -- (axis cs:4.71, 4);
+\draw[dashed, gray, line width=3pt] (axis cs:7.85, -4) -- (axis cs:7.85, 4);
+\draw[dashed, gray, line width=3pt] (axis cs:10.99, -4) -- (axis cs:10.99, 4);
 
-% Puntos de intersección
-\fill[orange] (axis cs:1,{sin(deg(1))}) circle (2pt);
-\fill[orange] (axis cs:4,{sin(deg(4))}) circle (2pt);
-\fill[orange] (axis cs:7,{sin(deg(7))}) circle (2pt);
-\fill[orange] (axis cs:10,{sin(deg(10))}) circle (2pt);
-
+% Puntos donde tan(x)=0
+\fill[orange] (axis cs:0, 0) circle (2pt);
+\fill[orange] (axis cs:3.14, 0) circle (2pt);
+\fill[orange] (axis cs:6.28, 0) circle (2pt);
+\fill[orange] (axis cs:9.42, 0) circle (2pt);
 
 \end{axis}
 \end{tikzpicture}
 \end{document}
-```
-
-
-
-
-
-
-
-```tikz
-\begin{tikzpicture}[scale=0.9]
-
-% Ejes
-\draw[->] (-3.5,0)--(13.5,0) node[right] {$x$};
-\draw[->] (0,-4.5)--(0,4.5) node[above] {$y$};
-
-% Tangente
-\draw[very thick, teal]
-plot[domain=-3:1.50,samples=200]
-(\x,{tan(\x r)});
-
-\draw[very thick, teal]
-plot[domain=1.64:4.65,samples=200]
-(\x,{tan(\x r)});
-
-\draw[very thick, teal]
-plot[domain=4.78:7.80,samples=200]
-(\x,{tan(\x r)});
-
-\draw[very thick, teal]
-plot[domain=7.92:10.93,samples=200]
-(\x,{tan(\x r)});
-
-\draw[very thick, teal]
-plot[domain=11.06:13,samples=200]
-(\x,{tan(\x r)});
-
-% Asíntotas
-\draw[densely dashed, gray] (1.571,-4.5)--(1.571,4.5);
-\draw[densely dashed, gray] (4.712,-4.5)--(4.712,4.5);
-\draw[densely dashed, gray] (7.854,-4.5)--(7.854,4.5);
-\draw[densely dashed, gray] (10.996,-4.5)--(10.996,4.5);
-
-% Líneas de referencia
-\draw[dashed,gray] (1,0)--(1,{tan(1 r)});
-\draw[dashed,gray] (4,0)--(4,{tan(4 r)});
-\draw[dashed,gray] (7,0)--(7,{tan(7 r)});
-\draw[dashed,gray] (10,0)--(10,{tan(10 r)});
-
-% Puntos
-\fill[orange] (1,{tan(1 r)}) circle (2pt);
-\fill[orange] (4,{tan(4 r)}) circle (2pt);
-\fill[orange] (7,{tan(7 r)}) circle (2pt);
-\fill[orange] (10,{tan(10 r)}) circle (2pt);
-
-\end{tikzpicture}
 ```

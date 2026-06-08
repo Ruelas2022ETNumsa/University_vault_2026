@@ -792,6 +792,7 @@ dots
 descargado
 durante
 decimal
+deg
 Vault
 Verificar
 Variables
@@ -3375,6 +3376,7 @@ ADICIONALES
 AppData
 Antivirus
 Alternativas
+Asintotas
 push
 pull
 para
@@ -4229,6 +4231,7 @@ eficiente
 eligi
 externos
 equipo
+empty
 Motor
 Media
 Mantiene
@@ -5158,6 +5161,7 @@ horario
 hispanohablante
 hago
 hot
+hardcodeado
 que
 quedan
 queda
@@ -5400,6 +5404,7 @@ ya
 yaml
 yo
 yellow
+ytick
 wikilinks
 when
 where
@@ -5434,6 +5439,7 @@ xxx
 xxxxxxxxxx
 xcolor
 xg
+xtick
 Wikilinks
 WHERE
 WebGL
