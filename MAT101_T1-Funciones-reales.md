@@ -2425,7 +2425,47 @@ $$y=f(x)=\sin{x}$$
 $$D_{f}=\mathbb{R} \quad ; \quad R_{f}=[-1,1]$$
 
 
+```tikz
+\usepackage{pgfplots}
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[
+    axis lines=middle,
+    xmin=-0.5, xmax=13,
+    ymin=-1.5, ymax=1.5,
+    width=12cm,
+    height=6cm,
+    xlabel={$x$},
+    ylabel={$y$},
+    xtick=\empty,
+    ytick={-1,0,1}
+]
 
+% Curva senoidal
+\addplot[
+    very thick,
+    teal,
+    domain=0:12.56,
+    samples=200
+]
+{tan(deg(x/2))};
+
+% Rectas verticales
+\draw[dashed,gray] (axis cs:1, -1.3) -- (axis cs:1, 1.3);
+\draw[dashed,gray] (axis cs:4, -1.3) -- (axis cs:4, 1.3);
+\draw[dashed,gray] (axis cs:7, -1.3) -- (axis cs:7, 1.3);
+\draw[dashed,gray] (axis cs:10, -1.3) -- (axis cs:10, 1.3);
+
+% Puntos de intersección
+\fill[orange] (axis cs:1,{sin(deg(1))}) circle (2pt);
+\fill[orange] (axis cs:4,{sin(deg(4))}) circle (2pt);
+\fill[orange] (axis cs:7,{sin(deg(7))}) circle (2pt);
+\fill[orange] (axis cs:10,{sin(deg(10))}) circle (2pt);
+
+\end{axis}
+\end{tikzpicture}
+\end{document}
+```
 
 
 
