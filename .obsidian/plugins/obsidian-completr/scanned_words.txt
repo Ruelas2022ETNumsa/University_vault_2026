@@ -1690,6 +1690,13 @@ approx
 aparec
 arrancaba
 adirse
+arcsin
+arccos
+arctan
+arcotg
+arcsec
+arcosec
+asintotas
 related
 recomendados
 ribbon
@@ -1961,6 +1968,7 @@ red
 recientemente
 rendimiento
 ro
+rightarrow
 notes
 notas
 nuevas
@@ -3915,6 +3923,7 @@ Borra
 Basic
 Barras
 ButlerBrain
+Big
 en
 exacta
 escaneados

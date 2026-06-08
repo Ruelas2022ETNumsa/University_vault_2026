@@ -2626,8 +2626,68 @@ $$D_{f}=[-1,1] \quad ; \quad R_{f}=\Big [-\frac{\pi}{2},\frac{\pi}{2}\Big ]$$
 
 Grafica :
 
+```tikz
+\usepackage{pgfplots}
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[
+    axis lines=middle,
+    xmin=-2, xmax=2,
+    ymin=-2, ymax=2,
+    xlabel={$x$},
+    ylabel={$y$},
+    xtick={-1,0,1},
+    ytick={-1,0,1}
+]
+
+% Funcion seno
+\addplot[
+    dashed,
+    very thick,
+    teal,
+    domain=-4:4,
+    samples=200
+]{sin(deg(x))};
+
+% Linea espejo y=x
+\draw[dashed, gray, line width=1pt] (axis cs:-4, -4) -- (axis cs:4, 4);
+
+% Funcion arcoseno
+\addplot[
+    very thick,
+    orange,
+    domain=-1:1,
+    samples=200
+]{asin(x)/180*pi};
+
+% Puntos clave arcoseno
+\fill[orange] (axis cs:-1, -1.5708) circle (2pt) node[left] {$(-1,-\frac{\pi}{2})$};
+\fill[orange] (axis cs:0, 0)        circle (2pt) node[above right] {$(0,0)$};
+\fill[orange] (axis cs:1,  1.5708)  circle (2pt) node[right] {$(1,\frac{\pi}{2})$};
+%asintotas
+%||
+\draw[dashed, gray, line width=1pt] (axis cs:1, -2) -- (axis cs:1, 2);
+\draw[dashed, gray, line width=1pt] (axis cs:-1, -2) -- (axis cs:-1, 2);
+%--
+\draw[dashed, gray, line width=1pt] (axis cs:-2, -1.57) -- (axis cs:2, -1.57);
+\draw[dashed, gray, line width=1pt] (axis cs:-2, 1.57) -- (axis cs:2, 1.57);
+
+\end{axis}
+\end{tikzpicture}
+\end{document}
+```
 
 
+---
+
+
+#### Funcion $\arccos$
+
+$$y=f(x)=\arccos{x}$$
+
+$$D_{f}=[-1,1] \quad ; \quad R_{f}= [0 ,\pi ]$$
+
+Grafica :
 
 ```tikz
 \usepackage{pgfplots}
@@ -2635,35 +2695,45 @@ Grafica :
 \begin{tikzpicture}
 \begin{axis}[
     axis lines=middle,
-    xmin=-4, xmax=4,
-    ymin=-4, ymax=4,
-    %width=12cm,
-    %height=6cm,
+    xmin=-2, xmax=2,
+    ymin=-1, ymax=4,
     xlabel={$x$},
     ylabel={$y$},
-    xtick=\empty,
-    ytick={-1,0,1}
+    xtick={-1,0,1},
+    ytick={-1,0,1,2,3}
 ]
 
-% Funcion
+% Funcion seno
 \addplot[
-dashed,
+    dashed,
     very thick,
     teal,
-    domain=-4:12.56,
+    domain=-4:4,
     samples=200
-]
-{sin(deg(x))};
+]{cos(deg(x))};
 
-% Asintotas verticales - gruesas para tapar la linea falsa
-\draw[dashed, gray, line width=1pt] (axis cs:-3, 1) -- (axis cs:13, 1);
+% Linea espejo y=x
+\draw[dashed, gray, line width=1pt] (axis cs:-4, -4) -- (axis cs:4, 4);
 
-% Puntos donde tan(x)=0
-\fill[orange] (axis cs:0, 0) circle (2pt)node[above right] {$0$};
-\fill[orange] (axis cs:3.14, 0) circle (2pt)node[above right] {$\pi$};
-\fill[orange] (axis cs:6.28, 0) circle (2pt)node[above right] {$2\pi$};
-\fill[orange] (axis cs:9.42, 0) circle (2pt)node[above right] {$3\pi$};
+% Funcion arcoseno
+\addplot[
+    very thick,
+    orange,
+    domain=-1:1,
+    samples=200
+]{acos(x)/180*pi};
 
+% Puntos clave arcoseno
+\fill[orange] (axis cs:-1, -1.5708) circle (2pt) node[left] {$(-1,-\frac{\pi}{2})$};
+\fill[orange] (axis cs:0, 0)        circle (2pt) node[above right] {$(0,0)$};
+\fill[orange] (axis cs:1,  1.5708)  circle (2pt) node[right] {$(1,\frac{\pi}{2})$};
+%asintotas
+%||
+\draw[dashed, gray, line width=1pt] (axis cs:1, -2) -- (axis cs:1, 3);
+\draw[dashed, gray, line width=1pt] (axis cs:-1, -2) -- (axis cs:-1, 3);
+%--
+\draw[dashed, gray, line width=1pt] (axis cs:-2, -3.14) -- (axis cs:2, -3.14);
+\draw[dashed, gray, line width=1pt] (axis cs:-2, 3.14) -- (axis cs:2, 3.14);
 
 \end{axis}
 \end{tikzpicture}
@@ -2673,12 +2743,56 @@ dashed,
 
 
 
+```tikz
+\usepackage{pgfplots}
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[
+    axis lines=middle,
+    xmin=-2, xmax=4,
+    ymin=-2, ymax=4,
+    xlabel={$x$},
+    ylabel={$y$},
+    xtick={-1,0,1},
+    ytick={0,1,2,3}
+]
 
+% Funcion coseno rama principal [0,pi]
+\addplot[
+    dashed,
+    very thick,
+    teal,
+    domain=0:3.14,
+    samples=100
+]{cos(deg(x))};
 
+% Linea espejo y=x
+\draw[dashed, gray, line width=1pt] (axis cs:-2, -2) -- (axis cs:4, 4);
 
+% Funcion arcocoseno
+\addplot[
+    very thick,
+    orange,
+    domain=-1:1,
+    samples=200
+]{acos(x)/180*pi};
 
+% Puntos clave arcocoseno
+\fill[orange] (axis cs:-1, 3.1416) circle (2pt) node[left] {$(-1,\pi)$};
+\fill[orange] (axis cs:0, 1.5708)  circle (2pt) node[above right] {$(0,\frac{\pi}{2})$};
+\fill[orange] (axis cs:1, 0)       circle (2pt) node[below right] {$(1,0)$};
 
+% Lineas de referencia ||
+\draw[dashed, gray, line width=1pt] (axis cs:1, -2) -- (axis cs:1, 4);
+\draw[dashed, gray, line width=1pt] (axis cs:-1, -2) -- (axis cs:-1, 4);
+% Lineas de referencia --
+\draw[dashed, gray, line width=1pt] (axis cs:-2, 3.14) -- (axis cs:4, 3.14);
+\draw[dashed, gray, line width=1pt] (axis cs:-2, 0) -- (axis cs:4, 0);
 
+\end{axis}
+\end{tikzpicture}
+\end{document}
+```
 
 
 
