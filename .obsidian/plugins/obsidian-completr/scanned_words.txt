@@ -1277,6 +1277,7 @@ subseteq
 servidor
 software
 servidores
+sec
 vault
 vil
 ver
@@ -1373,6 +1374,7 @@ vec
 verdaderos
 verificaci
 violet
+vdots
 audience
 activo
 auto
@@ -2587,6 +2589,8 @@ cambi
 character
 crece
 consideradas
+cot
+csc
 updated
 un
 universo
@@ -3233,6 +3237,9 @@ Omega
 Otro
 Ojo
 Operativamente
+OR
+OQ
+OM
 Auto
 Annotator
 Autocompletado
@@ -4292,6 +4299,7 @@ Modifica
 Memoria
 Manipular
 Marca
+MN
 Lectura
 LaTeX
 Linter
@@ -4910,6 +4918,7 @@ Revisando
 Roaming
 RGB
 RAM
+RT
 Hider
 Hace
 Herramientas
@@ -5328,6 +5337,7 @@ olive
 orange
 odo
 org
+overline
 junto
 json
 jer
