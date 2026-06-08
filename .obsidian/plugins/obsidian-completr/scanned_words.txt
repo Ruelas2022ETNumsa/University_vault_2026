@@ -789,6 +789,7 @@ definecolor
 dots
 descargado
 durante
+decimal
 Vault
 Verificar
 Variables
@@ -1008,6 +1009,7 @@ bx
 basic
 bad
 bloquea
+boxed
 scope
 status
 selector
@@ -1678,6 +1680,7 @@ adido
 alfa
 args
 antivirus
+approx
 related
 recomendados
 ribbon
@@ -2081,6 +2084,7 @@ necesito
 necesitar
 nepper
 ndole
+neperiano
 created
 commit
 cada
@@ -3829,6 +3833,7 @@ mathrm
 memory
 ms
 modelos
+mn
 YAML
 Ya
 You
@@ -4285,6 +4290,7 @@ Memory
 Modifica
 Memoria
 Manipular
+Marca
 Lectura
 LaTeX
 Linter
@@ -4457,6 +4463,8 @@ lightgray
 lime
 ldots
 localmente
+logatirmo
+lim
 incluyendo
 im
 instalar
@@ -4668,6 +4676,7 @@ instalada
 indexado
 instaladas
 instalaci
+implies
 Dependencia
 Dropbox
 Dataview
