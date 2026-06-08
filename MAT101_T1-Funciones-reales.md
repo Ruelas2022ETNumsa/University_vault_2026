@@ -2431,8 +2431,8 @@ $$D_{f}=\mathbb{R} \quad ; \quad R_{f}=[-1,1]$$
 \begin{tikzpicture}
 \begin{axis}[
     axis lines=middle,
-    xmin=-0.5, xmax=13,
-    ymin=-1.5, ymax=1.5,
+    xmin=-3, xmax=13,
+    ymin=-4, ymax=4,
     width=12cm,
     height=6cm,
     xlabel={$x$},
@@ -2441,14 +2441,16 @@ $$D_{f}=\mathbb{R} \quad ; \quad R_{f}=[-1,1]$$
     ytick={-1,0,1}
 ]
 
+
+
 % Curva senoidal
 \addplot[
     very thick,
     teal,
-    domain=0:12.56,
+    domain=-4:12.56,
     samples=200
 ]
-{tan(deg(x/2))};
+{tan(deg(x))};
 
 % Rectas verticales
 \draw[dashed,gray] (axis cs:1, -1.3) -- (axis cs:1, 1.3);
@@ -2462,6 +2464,7 @@ $$D_{f}=\mathbb{R} \quad ; \quad R_{f}=[-1,1]$$
 \fill[orange] (axis cs:7,{sin(deg(7))}) circle (2pt);
 \fill[orange] (axis cs:10,{sin(deg(10))}) circle (2pt);
 
+
 \end{axis}
 \end{tikzpicture}
 \end{document}
@@ -2473,9 +2476,51 @@ $$D_{f}=\mathbb{R} \quad ; \quad R_{f}=[-1,1]$$
 
 
 
+```tikz
+\begin{tikzpicture}[scale=0.9]
 
+% Ejes
+\draw[->] (-3.5,0)--(13.5,0) node[right] {$x$};
+\draw[->] (0,-4.5)--(0,4.5) node[above] {$y$};
 
+% Tangente
+\draw[very thick, teal]
+plot[domain=-3:1.50,samples=200]
+(\x,{tan(\x r)});
 
+\draw[very thick, teal]
+plot[domain=1.64:4.65,samples=200]
+(\x,{tan(\x r)});
 
+\draw[very thick, teal]
+plot[domain=4.78:7.80,samples=200]
+(\x,{tan(\x r)});
 
+\draw[very thick, teal]
+plot[domain=7.92:10.93,samples=200]
+(\x,{tan(\x r)});
 
+\draw[very thick, teal]
+plot[domain=11.06:13,samples=200]
+(\x,{tan(\x r)});
+
+% Asíntotas
+\draw[densely dashed, gray] (1.571,-4.5)--(1.571,4.5);
+\draw[densely dashed, gray] (4.712,-4.5)--(4.712,4.5);
+\draw[densely dashed, gray] (7.854,-4.5)--(7.854,4.5);
+\draw[densely dashed, gray] (10.996,-4.5)--(10.996,4.5);
+
+% Líneas de referencia
+\draw[dashed,gray] (1,0)--(1,{tan(1 r)});
+\draw[dashed,gray] (4,0)--(4,{tan(4 r)});
+\draw[dashed,gray] (7,0)--(7,{tan(7 r)});
+\draw[dashed,gray] (10,0)--(10,{tan(10 r)});
+
+% Puntos
+\fill[orange] (1,{tan(1 r)}) circle (2pt);
+\fill[orange] (4,{tan(4 r)}) circle (2pt);
+\fill[orange] (7,{tan(7 r)}) circle (2pt);
+\fill[orange] (10,{tan(10 r)}) circle (2pt);
+
+\end{tikzpicture}
+```
