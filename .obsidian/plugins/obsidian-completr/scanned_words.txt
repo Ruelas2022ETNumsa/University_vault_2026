@@ -180,6 +180,8 @@ terminaba
 truncados
 tx
 ten
+tr
+tarjeta
 ToDo
 Templater
 Text
@@ -279,6 +281,7 @@ TIPOS
 Tarea
 Tenerlo
 Tick
+Tomando
 Sistema
 Sync
 Save
@@ -409,6 +412,9 @@ SOPORTADAS
 Sigma
 Seguro
 SQLite
+SNMP
+Servidor
+Seminario
 Plugins
 Pendientes
 Plugin
@@ -529,6 +535,8 @@ Puente
 Proyecci
 PQ
 Problema
+Proyecto
+PHP
 del
 date
 de
@@ -793,6 +801,8 @@ descargado
 durante
 decimal
 deg
+desarrollarse
+desarrollados
 Vault
 Verificar
 Variables
@@ -834,6 +844,7 @@ VA
 Visualizaciones
 Viczian
 Verifica
+VirtualBox
 galaxy
 gina
 genes
@@ -919,6 +930,8 @@ green
 gray
 grey
 greenyellow
+gestionar
+gmail
 body
 beacon
 bat
@@ -1378,6 +1391,7 @@ verdaderos
 verificaci
 violet
 vdots
+virtual
 audience
 activo
 auto
@@ -1697,6 +1711,9 @@ arcotg
 arcsec
 arcosec
 asintotas
+agente
+aprender
+anteriormente
 related
 recomendados
 ribbon
@@ -1969,6 +1986,8 @@ recientemente
 rendimiento
 ro
 rightarrow
+realizada
+rcoles
 notes
 notas
 nuevas
@@ -2611,6 +2630,9 @@ csc
 configur
 corresponden
 colocar
+computaci
+computadora
+clases
 updated
 un
 universo
@@ -2673,6 +2695,9 @@ underbrace
 uv
 uvx
 usaba
+utilizando
+utilizar
+utilizada
 Galaxy
 Git
 Gr
@@ -2712,6 +2737,7 @@ Granularidad
 Genera
 GRAFICADO
 GENERACI
+GNU
 Convenci
 Creaci
 Commander
@@ -2897,6 +2923,7 @@ Config
 Cambiar
 Copilot
 Correcci
+Correo
 Instalados
 Instalado
 Instalar
@@ -2979,6 +3006,8 @@ IEC
 Inestable
 Intercambiar
 Id
+Investigaci
+Investigar
 Funci
 File
 Fase
@@ -3046,6 +3075,8 @@ Forzar
 Flechas
 FF
 Failed
+Firewall
+Final
 Estado
 Excalidraw
 EPUBs
@@ -3261,6 +3292,7 @@ Operativamente
 OR
 OQ
 OM
+Operativos
 Auto
 Annotator
 Autocompletado
@@ -3385,6 +3417,7 @@ AppData
 Antivirus
 Alternativas
 Asintotas
+Agente
 push
 pull
 para
@@ -3669,6 +3702,11 @@ per
 permalink
 publicados
 pone
+permita
+puertos
+permitir
+profundizar
+previamente
 min
 mica
 movimiento
@@ -3867,6 +3905,8 @@ modelos
 mn
 mostraba
 mcp
+medir
+metodolog
 YAML
 Ya
 You
@@ -4241,6 +4281,9 @@ eligi
 externos
 equipo
 empty
+estudiante
+esperado
+entrega
 Motor
 Media
 Mantiene
@@ -4328,6 +4371,7 @@ Memoria
 Manipular
 Marca
 MN
+Mint
 Lectura
 LaTeX
 Linter
@@ -4380,6 +4424,7 @@ Llevando
 LIBRER
 LECCI
 Localizar
+Linux
 links
 las
 listar
@@ -4503,6 +4548,7 @@ ldots
 localmente
 logatirmo
 lim
+logre
 incluyendo
 im
 instalar
@@ -4718,6 +4764,7 @@ implies
 imped
 iniciar
 importar
+investigar
 Dependencia
 Dropbox
 Dataview
@@ -4815,6 +4862,7 @@ Dom
 Desktop
 Dependencias
 Dar
+Desarrollar
 Remotely
 Raz
 Revisa
@@ -4952,6 +5000,7 @@ RGB
 RAM
 RT
 Recorre
+RFC
 Hider
 Hace
 Herramientas
@@ -4981,6 +5030,7 @@ Hallar
 Hac
 HERRAMIENTA
 HTML
+Hasta
 filtrar
 formato
 faltantes
@@ -5118,6 +5168,7 @@ fallar
 factoriza
 foto
 fastmcp
+firewall
 haya
 hace
 hacer
@@ -5171,6 +5222,7 @@ hispanohablante
 hago
 hot
 hardcodeado
+habilitaci
 que
 quedan
 queda
@@ -5233,6 +5285,7 @@ Utilizando
 Users
 UUIDs
 UUID
+UDP
 Nombre
 Notas
 No
@@ -5377,6 +5430,7 @@ overline
 otorgara
 originalmente
 objeto
+operativo
 junto
 json
 jer
@@ -5395,6 +5449,7 @@ justificando
 junio
 justificado
 jet
+javisanabria
 Qu
 Qui
 Quick
