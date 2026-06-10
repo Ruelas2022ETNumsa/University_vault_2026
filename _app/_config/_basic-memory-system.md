@@ -7,7 +7,7 @@ related_notes:
   - "[[_galaxy-system]]"
 tags: [beacon, infraestructura, mcp, basic-memory, configuracion]
 date_created: 2026-06-07
-date_updated: 2026-06-07
+date_updated: 2026-06-09
 status: activo
 ---
 
@@ -57,22 +57,23 @@ Ambos conviven — Filesystem para operaciones de archivo, Basic Memory para bú
 **Entrada en el config:**
 ```json
 "basic-memory": {
-  "command": "C:\\Users\\USUARIO\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\uvx.exe",
-  "args": ["basic-memory", "mcp"],
+  "command": "C:\\Users\\USUARIO\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\basic-memory.exe",
+  "args": ["mcp"],
   "env": {
     "BASIC_MEMORY_PROJECT_PATH": "E:\\University_vault_2026"
   }
 }
 ```
 
+> **Nota:** La configuración anterior usaba `uvx.exe` de Python 3.11 para lanzar basic-memory. Fue reemplazada el 2026-06-09 por una instalación directa — ver sección de bug resuelto más abajo.
+
 **Dependencias instaladas:**
 
 | Herramienta | Versión | Instalación |
 |-------------|---------|-------------|
-| Python | 3.11.8 | python.org |
-| uv / uvx | 0.11.19 | `pip install uv` |
-| basic-memory | 3.3.1 | descargado por `uvx` automáticamente |
-| fastmcp | 3.3.1 | dependencia de basic-memory |
+| Python | 3.13.3 | python.org (reemplaza a 3.11.8 para este propósito) |
+| basic-memory | 0.21.6 | `py -3.13 -m pip install basic-memory` |
+| uv / uvx | 0.11.19 | instalado previamente, ya no usado para basic-memory |
 
 > **Nota:** Claude Desktop se instala desde `claude.ai/download` pero Windows lo ejecuta desde la ruta de Microsoft Store (`Packages\Claude_pzs8sxrjxfjjc`). El config JSON debe estar en esa ruta — no en `AppData\Roaming\Claude`.
 
@@ -126,62 +127,53 @@ Apuntes manuscritos (foto/PDF)
 
 ---
 
-## Corrección: Basic Memory con múltiples cuentas de Claude (2026-06-08)
+## Nota: múltiples cuentas de Claude (2026-06-08)
+
+Si Basic Memory aparece como `Could not attach` al cambiar de cuenta, verificar que en `claude_desktop_config.json` todos los UUIDs de `bypassPermissionsGateByAccount` estén en `true`. Con la instalación actual (Python 3.13 + ejecutable directo) esto se configura una sola vez y no requiere pasos adicionales.
+
+---
+
+## Bug resuelto: Basic Memory no iniciaba automáticamente al arranque (2026-06-09)
 
 ### Síntoma
-Basic Memory aparecía como `Could not attach to MCP server basic-memory` en Claude Desktop al cambiar de cuenta, aunque el servidor arrancaba correctamente (log mostraba `Server started and connected successfully`).
-
-### Causa
-En `claude_desktop_config.json`, la sección `bypassPermissionsGateByAccount` tenía ambas cuentas en `false`, lo que impedía que Claude Desktop otorgara permisos completos a Basic Memory para cuentas distintas a la que lo configuró originalmente.
-
-### Archivo a modificar
+Al reiniciar la PC y abrir Claude Desktop, Basic Memory fallaba al iniciar. El workaround era correr manualmente en PowerShell:
+```powershell
+& "C:\Users\USUARIO\AppData\Local\Programs\Python\Python311\Scripts\uvx.exe" basic-memory mcp
 ```
-C:\Users\USUARIO\AppData\Local\Packages\Claude_pzs8sxrjxfjjc\LocalCache\Roaming\Claude\claude_desktop_config.json
+Luego reiniciar Claude Desktop para que conectara.
+
+### Causa raíz
+`uvx` gestiona su propio Python internamente (tenía Python 3.12 interno aunque el sistema tenía 3.11). Al arranque en frío, Claude Desktop invocaba `uvx` antes de que su entorno interno estuviera inicializado → falla silenciosa. Es una condición de carrera entre Claude Desktop y el caché de `uvx`.
+
+**Detalle importante:** basic-memory requiere Python 3.12+. El sistema solo tenía 3.11.8 y 3.6 instalados oficialmente. `uvx` funcionaba porque descargó y gestionaba su propio Python 3.12 internamente — pero ese mecanismo era frágil al arranque.
+
+### Lo que se intentó sin éxito
+- Tarea programada en Windows para precalentar `uvx` al inicio de sesión — la tarea se creaba correctamente pero `basic-memory mcp --help` no terminaba limpiamente (código de error 267014, timeout).
+
+### Solución aplicada
+Instalar Python 3.13.3 oficialmente y `basic-memory` directamente con `pip`, eliminando `uvx` del flujo:
+
+```powershell
+# 1. Instalar Python 3.13.3 desde python.org (marcar "Add to PATH")
+# 2. Instalar basic-memory
+py -3.13 -m pip install basic-memory
 ```
 
-### Líneas a configurar
-Dentro de `preferences`, cambiar ambos valores de `false` a `true`:
-
+Actualizar `claude_desktop_config.json` para apuntar al ejecutable directo:
 ```json
-"bypassPermissionsGateByAccount": {
-  "ed077a3b-e81f-4c06-b9d4-f40a4971ed86": true,
-  "2b2f257f-ea5a-41f0-8b6c-fbdf7475f4d6": true
+"basic-memory": {
+  "command": "C:\\Users\\USUARIO\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\basic-memory.exe",
+  "args": ["mcp"],
+  "env": {
+    "BASIC_MEMORY_PROJECT_PATH": "E:\\University_vault_2026"
+  }
 }
 ```
 
-> **Nota:** Los UUIDs corresponden a las dos cuentas de Claude que usan este equipo. Si se agrega una tercera cuenta, deberá añadirse su UUID con valor `true` también.
+Sin `uvx`, sin caché interno, sin condición de carrera. Claude Desktop invoca el ejecutable directamente y arranca sin intervención manual.
 
-### codigo en PowerShell
-
-#### 1ro 
->luego colocar para iniciar el mcp
->```PowerShell
->& "C:\Users\USUARIO\AppData\Local\Programs\Python\Python311\Scripts\uvx.exe" basic-memory mcp
->```
-
-#### 2do
-
-```PowerShell
-$path = "$env:LOCALAPPDATA\Packages\Claude_pzs8sxrjxfjjc\LocalCache\Roaming\Claude\claude_desktop_config.json"
-$json = Get-Content $path -Raw | ConvertFrom-Json
-$json.preferences.bypassPermissionsGateByAccount.PSObject.Properties | ForEach-Object { $_.Value = $true }
-$json | ConvertTo-Json -Depth 10 | Set-Content $path
-```
-
-Lo que hace línea por línea:
-
-1. Guarda la ruta del archivo en una variable
-2. Lee el JSON y lo convierte a objeto de PowerShell
-3. Recorre todos los UUIDs y les pone `true` sin importar cuántos haya
-4. Guarda el archivo de vuelta
-
-
-
-### Pasos aplicados
-1. Abrir el archivo con bloc de notas o editor de texto
-2. Localizar `bypassPermissionsGateByAccount`
-3. Cambiar ambos `false` a `true`
-4. Guardar y reiniciar Claude Desktop
+### Estado
+Resuelto. Basic Memory inicia automáticamente al abrir Claude Desktop tras reinicio de PC.
 
 %%
 galaxy-links
