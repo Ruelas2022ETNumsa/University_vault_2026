@@ -3,7 +3,7 @@
 
 
 
-> [!PDF|red] [[BORRADOR OK OK ETN 825 2022.pdf#page=1&selection=7,0,8,68&color=red|BORRADOR OK OK ETN 825 2022, p.1]]
+> [!PDF|important] [[BORRADOR OK OK ETN 825 2022.pdf#page=1&selection=7,0,8,68&color=important|BORRADOR OK OK ETN 825 2022, p.1]]
 > > La inteligencia de algunos sistemas digitales (ej.: unidad de cinta) es tan rudimentaria que pueden funcionar adecuadamente solo en comunicación con otro sistema
 > 
 > > [!PDF] [[BORRADOR OK OK ETN 825 2022.pdf#page=1&annotation=512R|BORRADOR OK OK ETN 825 2022, p.1]]
