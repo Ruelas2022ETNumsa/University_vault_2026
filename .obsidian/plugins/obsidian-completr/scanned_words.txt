@@ -12906,6 +12906,7 @@ TKBQ
 TNloa
 TlqP
 Tcos
+TagsRoutes
 Sistema
 Sync
 Save
@@ -25153,6 +25154,9 @@ PeDH
 PxzUg
 Pbgy
 Peiu
+Patch
+Parchear
+Persistencia
 del
 date
 de
@@ -36248,6 +36252,7 @@ VrnIt
 Vgnq
 VaFK
 VUAiw
+Ventajas
 galaxy
 gina
 genes
@@ -54211,6 +54216,7 @@ siSs
 shZ
 sWvL
 snD
+solucion
 vault
 vil
 ver
@@ -60684,6 +60690,7 @@ vwMA
 vfn
 vkKf
 vkWXe
+vieja
 audience
 activo
 auto
@@ -66415,6 +66422,7 @@ asSS
 auhl
 aoUC
 aoxt
+actualizacion
 related
 recomendados
 ribbon
@@ -72668,6 +72676,10 @@ rytmVZ
 rHhiD
 rnrh
 reayj
+reports
+reevaluar
+runtime
+reportes
 notes
 notas
 nuevas
@@ -85211,6 +85223,10 @@ cJc
 cBco
 cSdT
 cCh
+cop
+centralizada
+concideran
+conciderar
 updated
 un
 universo
@@ -92174,6 +92190,7 @@ usGS
 uqqQg
 uqrH
 uBJi
+updates
 Galaxy
 Git
 Gr
@@ -123267,6 +123284,8 @@ EKWZV
 EysKmCs
 EAMy
 Eapz
+Ejecutarse
+Escalable
 Obsidian
 OmniSearch
 Ocultar
@@ -140188,6 +140207,9 @@ pddPS
 pom
 pHy
 pKssT
+programDirectory
+patching
+previsto
 min
 mica
 movimiento
@@ -147356,6 +147378,9 @@ mIVyLu
 mopM
 mLvP
 mCNU
+migre
+malos
+monkey
 YAML
 Ya
 You
@@ -165239,6 +165264,10 @@ eEAiT
 ekkX
 eorU
 eWMK
+encontr
+elegida
+ejecutado
+ejecute
 Motor
 Media
 Mantiene
@@ -172678,6 +172707,10 @@ MhEx
 Mmgs
 MKhW
 MaLXc
+Mueva
+Modifique
+Migrar
+Modificar
 Lectura
 LaTeX
 Linter
@@ -184102,6 +184135,9 @@ lqor
 lxev
 lKOY
 lrMj
+linea
+logMessage
+logs
 incluyendo
 im
 instalar
@@ -191591,6 +191627,7 @@ iwnj
 isgt
 ijZm
 ipPxLiY
+involucrados
 Dependencia
 Dropbox
 Dataview
@@ -197572,6 +197609,9 @@ DRVjR
 DhY
 Dlus
 DHV
+Detecte
+Detectar
+Despu
 Remotely
 Raz
 Revisa
@@ -220531,6 +220571,8 @@ hZxY
 hOzi
 hkw
 hatj
+hardcodeada
+hacks
 que
 quedan
 queda
@@ -287264,6 +287306,7 @@ WmHG
 WdkS
 Wgqf
 WINU
+Workflow
 JavaScript
 JSON
 JERARQU
