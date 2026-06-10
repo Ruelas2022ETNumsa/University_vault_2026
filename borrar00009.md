@@ -26,9 +26,22 @@ C:\Users
 
 C:\Users\USUARIO\AppData\Roaming\Claude
 
+amarriloo
+![[Notes_260609_234853.pdf#page=1&rect=34,669,243,817|Notes_260609_234853, p.1]]
+
+
+rojo
+
+![[Notes_260609_234853.pdf#page=1&rect=143,612,349,763&color=red|Notes_260609_234853, p.1]]
+
+azul
+
+
+![[Notes_260609_234853.pdf#page=1&rect=198,576,390,729&color=note|Notes_260609_234853, p.1]]
 
 
 
+![[Notes_260609_234853.pdf#page=1&rect=336,611,565,756&color=important|Notes_260609_234853, p.1]]
 
 
 
