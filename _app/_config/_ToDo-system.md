@@ -9,7 +9,7 @@ related_notes:
   - "[[_sync-system]]"
 tags: [beacon, todo, plugins, infraestructura]
 date_created: 2026-05-29
-date_updated: 2026-06-03
+date_updated: 2026-06-09
 status: activo
 ---
 
@@ -35,7 +35,7 @@ status: activo
 | Annotator | Lectura de EPUBs y PDFs escaneados | ✅ Instalado |
 | OmniSearch | Búsqueda en todo el vault incluyendo PDFs | ✅ Instalado |
 | Text Extractor | Dependencia de OmniSearch — extrae texto de PDFs e imágenes | ✅ Instalado |
-| Remotely Save | Sync del vault con Dropbox | ✅ Instalado en PC — pendiente configurar en móvil |
+| Remotely Save | ~~Sync del vault con Dropbox~~ — descartado para tablet | ⚠️ Instalado en PC — en desuso |
 | File Hider | Ocultar archivos por extensión (.tmp, .bat, .ps1) | ✅ Instalado y configurado |
 | Desmos | Renderizado de gráficas matemáticas interactivas en notas | ✅ Instalado y configurado |
 | Completr | Autocompletado de LaTeX, tags y propiedades YAML | ✅ Instalado — pendiente configurar |
@@ -56,6 +56,14 @@ status: activo
 
 ## Pendientes del sistema
 
+### Sincronización tablet — Google Drive
+- [x] Decidir flujo tablet: Samsung Notes → PDF → Google Drive → vault ✅
+- [x] Carpeta `_pdf/TAB_nexus/` creada en el vault ✅
+- [ ] Crear carpeta `TAB_nexus` en Google Drive
+- [ ] Apuntar Google Drive Desktop a sincronizar `_pdf/TAB_nexus/` en PC
+- [ ] Verificar que la tablet puede exportar PDFs directamente a `TAB_nexus` en Drive
+- [ ] Confirmar que la carpeta aparece sincronizada en PC tras exportar desde tablet
+
 ### Plugins — configuración pendiente
 - [ ] **TikZJax** — instalar y verificar que `circuitikz` renderiza correctamente (puede requerir reabrir Obsidian al primer render)
 - [ ] **Completr** — revisar y ajustar configuración: activar sugerencias LaTeX, modo de trigger (backslash vs cualquier carácter), delay de sugerencias, y si se quiere word list del vault
@@ -63,10 +71,6 @@ status: activo
 - [ ] **Dataview** — instalar y configurar (ver Fase 4)
 - [ ] **Linter** — instalar y configurar reglas para el Sistema Galaxy
 - [ ] **DB Folder** — instalar después de Dataview
-
-### Sincronización móvil
-- [ ] Instalar Remotely Save en Android y conectar al mismo Dropbox — ver [[_sync-system]]
-- [ ] (Opcional) Configurar Git en Android con MGit — ver [[_sync-system]]
 
 ### Excalidraw
 - [ ] Verificar que `tpl-constellation.md` y `tpl-observatory.md` abren correctamente como lienzo con Templater
