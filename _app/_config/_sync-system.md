@@ -8,7 +8,7 @@ related_notes:
   - "[[_ToDo-system]]"
 tags: [beacon, sync, github, infraestructura]
 date_created: 2026-05-28
-date_updated: 2026-05-30
+date_updated: 2026-06-09
 status: activo
 ---
 
@@ -19,7 +19,7 @@ status: activo
 
 ## Objetivo
 
-Que Claude pueda leer, crear y editar notas `.md` del vault de Obsidian directamente desde GitHub, sin depender de que la PC esté encendida. El vault local en PC se sincroniza automáticamente con GitHub mediante Obsidian Git. El móvil accede al vault mediante Remotely Save + Dropbox.
+Que Claude pueda leer, crear y editar notas `.md` del vault de Obsidian directamente desde GitHub, sin depender de que la PC esté encendida. El vault local en PC se sincroniza automáticamente con GitHub mediante Obsidian Git. La tablet Samsung S6 Lite exporta apuntes como PDF a una carpeta de Google Drive que vive dentro del vault.
 
 ---
 
@@ -34,9 +34,28 @@ Obsidian Git (auto-sync cada 5 min)
         ⇕
 PC Local → E:\University_vault_2026
         ⇕
-Remotely Save (sync con Dropbox) ← OFICIAL
+Google Drive Desktop (sync carpeta TAB_nexus)
         ⇕
-Móvil Android (Obsidian + Remotely Save + Dropbox) ← pendiente configurar
+Tablet Samsung S6 Lite
+(Samsung Notes → exportar PDF → Google Drive/_pdf/TAB_nexus/)
+```
+
+### Flujo de apuntes desde tablet
+
+```
+Samsung Notes (apunte a mano)
+        ↓
+Exportar como PDF
+        ↓
+Carpeta Google Drive → _pdf/TAB_nexus/
+        ↓
+PC y Laptop ven la carpeta sincronizada por Google Drive Desktop
+        ↓
+PDF++ anota/mejora el PDF en Obsidian
+        ↓
+IA transcribe PDF → .md
+        ↓
+GitHub (via Obsidian Git)
 ```
 
 ---
@@ -54,8 +73,8 @@ Móvil Android (Obsidian + Remotely Save + Dropbox) ← pendiente configurar
   - El usuario no necesita ejecutar git manualmente — todo es automático
 - [x] Conector **Filesystem** de Claude apuntando a `E:\University_vault_2026`
 - [x] Conector **GitHub** conectado en Claude.ai — `https://api.githubcopilot.com/mcp`
-- [x] Plugin **Remotely Save** instalado en PC y conectado a **Dropbox** ✅
-- [x] Vault sincronizándose correctamente con Dropbox desde PC
+- [x] Carpeta `_pdf/TAB_nexus/` creada en el vault ✅
+- [x] Google Drive Desktop sincroniza `_pdf/TAB_nexus/` entre PC, Laptop y Tablet
 
 > Tareas y pendientes: [[_ToDo-system]]
 
@@ -63,18 +82,18 @@ Móvil Android (Obsidian + Remotely Save + Dropbox) ← pendiente configurar
 
 ---
 
-## Sincronización móvil oficial — Remotely Save + Dropbox
+## Sincronización tablet — Google Drive
 
-Pasos para completar la configuración en Android:
+La tablet **no usa Obsidian ni Remotely Save**. Solo exporta PDFs a Google Drive.
 
-1. Instalar **Obsidian** en Android si no está instalado
-2. Abrir el vault o crear uno con el mismo nombre (`University_vault_2026`)
-3. Ir a **Settings → Community Plugins → Browse** → buscar **Remotely Save** → instalar y activar
-4. En Remotely Save Settings → **Remote Service** → seleccionar **Dropbox**
-5. Hacer click en **Auth** → autorizar la misma cuenta Dropbox que usa la PC
-6. Verificar que la carpeta de destino coincide con la configuración de PC
-7. Hacer **Run Once** para forzar el primer sync y verificar que los archivos llegan
-8. Configurar sync automático según preferencia (al abrir, al cerrar, cada N minutos)
+Pasos para exportar desde Samsung Notes:
+
+1. Abrir la nota en Samsung Notes
+2. Menú → **Exportar** → **Guardar como PDF**
+3. Elegir destino: carpeta `TAB_nexus` en Google Drive
+4. El PDF aparece automáticamente en `_pdf/TAB_nexus/` en la PC (via Google Drive Desktop)
+
+> Remotely Save fue descartado para la tablet. La tablet no sincroniza el vault completo — solo aporta PDFs de apuntes a mano.
 
 ---
 

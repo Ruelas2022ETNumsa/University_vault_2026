@@ -416,6 +416,7 @@ SQLite
 SNMP
 Servidor
 Seminario
+Sube
 Plugins
 Pendientes
 Plugin
@@ -847,6 +848,7 @@ Visualizaciones
 Viczian
 Verifica
 VirtualBox
+Via
 galaxy
 gina
 genes
@@ -1299,6 +1301,8 @@ software
 servidores
 sec
 silenciosa
+sincronizados
+sencillo
 vault
 vil
 ver
@@ -1720,6 +1724,8 @@ agente
 aprender
 anteriormente
 arranca
+adjuntar
+apaga
 related
 recomendados
 ribbon
@@ -2644,6 +2650,13 @@ clases
 correr
 conectara
 creaba
+capacidades
+copiarlos
+commits
+corriendo
+ciclo
+combinadas
+corra
 updated
 un
 universo
@@ -2749,6 +2762,7 @@ Genera
 GRAFICADO
 GENERACI
 GNU
+General
 Convenci
 Creaci
 Commander
@@ -2935,6 +2949,8 @@ Cambiar
 Copilot
 Correcci
 Correo
+Capacidad
+Comparativa
 Instalados
 Instalado
 Instalar
@@ -3019,6 +3035,9 @@ Intercambiar
 Id
 Investigaci
 Investigar
+Integraci
+Inmediata
+Importantes
 Funci
 File
 Fase
@@ -3305,6 +3324,8 @@ OR
 OQ
 OM
 Operativos
+Opera
+Operaciones
 Auto
 Annotator
 Autocompletado
@@ -3430,6 +3451,7 @@ Antivirus
 Alternativas
 Asintotas
 Agente
+Accede
 push
 pull
 para
@@ -3721,6 +3743,7 @@ profundizar
 previamente
 programada
 precalentar
+pidas
 min
 mica
 movimiento
@@ -4302,6 +4325,8 @@ entrega
 estuviera
 eliminando
 ejecutable
+esencialmente
+explorar
 Motor
 Media
 Mantiene
@@ -4443,6 +4468,7 @@ LIBRER
 LECCI
 Localizar
 Linux
+Latencia
 links
 las
 listar
@@ -4568,6 +4594,7 @@ logatirmo
 lim
 logre
 lanzar
+limitado
 incluyendo
 im
 instalar
@@ -4789,6 +4816,8 @@ invocaba
 inicializado
 invoca
 inicia
+interactuar
+intermediarios
 Dependencia
 Dropbox
 Dataview
@@ -4888,6 +4917,7 @@ Dependencias
 Dar
 Desarrollar
 Detalle
+Disponible
 Remotely
 Raz
 Revisa
@@ -5458,6 +5488,7 @@ originalmente
 objeto
 operativo
 oficialmente
+opera
 junto
 json
 jer
