@@ -1,60 +1,39 @@
-
-$$
-\frac{x(x-2)(x+2)}{(1+x)(1-x)}\ge 0
-$$
-Puntos críticos:
-
-$$
-x=-2,\,-1,\,0,\,1,\,2
-$$
-Tabla 
-
-| Intervalo      | Prueba x | Signo i                        | $R_{i}$ |
-| -------------- | -------- | ------------------------------ | ------- |
-| $]-\infty,-2[$ | $-10$    | $\frac{(-)(-)(-)}{(-)(-)}=(+)$ | V       |
-| -2             | -2       | 0                              | V       |
-| $]-2,-1[$      | $-1.5$   | $\frac{()()()}{()()}=()$       |         |
-| -1             | -1       |                                |         |
-| $]-1,0[$       | $-0.5$   | $\frac{()()()}{()()}=()$       |         |
-| 0              | 0        | 0                              | V       |
-| $]0,1[$        | $0.5$    | $\frac{()()()}{()()}=()$       |         |
-| 1              | 1        |                                |         |
-| $]1,2[$        | $1.5$    | $\frac{()()()}{()()}=()$       |         |
-| $]2,+\infty[$  | $10$     | $\frac{()()()}{()()}=()$       |         |
-| 2              | 2        | 0                              | V       |
-C:\Users
-
-C:\Users\USUARIO\AppData\Roaming\Claude
-
-amarriloo
-![[Notes_260609_234853.pdf#page=1&rect=34,669,243,817|Notes_260609_234853, p.1]]
-
-
-rojo
-
-![[Notes_260609_234853.pdf#page=1&rect=143,612,349,763&color=red|Notes_260609_234853, p.1]]
-
-azul
-
-
-![[Notes_260609_234853.pdf#page=1&rect=198,576,390,729&color=note|Notes_260609_234853, p.1]]
+> [!PDF|note] [[BORRADOR OK OK ETN 825 2022.pdf#page=1&selection=12,0,15,35&color=note|BORRADOR OK OK ETN 825 2022, p.1]]
+> > La interface permite la interconexión de 2 sistemas posibilitando su comunicación. Comprende los siguientes aspectos:
 
 
 
-![[Notes_260609_234853.pdf#page=1&rect=336,611,565,756&color=important|Notes_260609_234853, p.1]]
+> [!PDF|red] [[BORRADOR OK OK ETN 825 2022.pdf#page=1&selection=7,0,8,68&color=red|BORRADOR OK OK ETN 825 2022, p.1]]
+> > La inteligencia de algunos sistemas digitales (ej.: unidad de cinta) es tan rudimentaria que pueden funcionar adecuadamente solo en comunicación con otro sistema
+> 
+> > [!PDF] [[BORRADOR OK OK ETN 825 2022.pdf#page=1&annotation=512R|BORRADOR OK OK ETN 825 2022, p.1]]
+> Comunicación de sistemas
+
+[[BORRADOR OK OK ETN 825 2022.pdf#page=1&annotation=515R|BORRADOR OK OK ETN 825 2022, p.1]]
+
+![BORRADOR OK OK ETN 825 2022.pdf#page=1&annotation=518R]]
 
 
-> [!PDF] [[BORRADOR OK OK ETN 825 2022.pdf#page=1&selection=5,0,5,28&color=yellow|BORRADOR OK OK ETN 825 2022, p.1]]
-> COMUNICACIÓN ENTRE SISTEMAS
+> [!PDF|187, 97, 229] [[BORRADOR OK OK ETN 825 2022.pdf#page=1&annotation=521R|BORRADOR OK OK ETN 825 2022, p.1]]
+>  INTERFACE ES EL D
 
 
-La interface permite la interconexión de 2 sistemas posibilitando su comunicación.  
-Comprende los siguientes aspectos:
-> [!PDF] [[BORRADOR OK OK ETN 825 2022.pdf#page=1&selection=9,1,10,12&color=yellow|omputadora, usualmente la CPU coordina la actividad de los sistemas digitales individuales]]
-> omputadora, usualmente la CPU coordina la actividad de los sistemas digitales individuales
+> [!PDF|234, 82, 82] [[BORRADOR OK OK ETN 825 2022.pdf#page=2&annotation=524R|BORRADOR OK OK ETN 825 2022, p.2]]
+> > OPERACIONES EN PARALEL
 
 
-> [!PDF] [[BORRADOR OK OK ETN 825 2022.pdf#page=1&annotation=498R|La interface permite la interconexión de 2 sistemas posibilitando su comunicación. Comprende los siguientes aspectos:]]
-> La interface permite la interconexión de 2 sistemas posibilitando su comunicación. Comprende los siguientes aspectos:
+> [!PDF] [[BORRADOR OK OK ETN 825 2022.pdf#page=2&annotation=527R]]
+>  limitado por operaciones cuyos a
+
+![BORRADOR OK OK ETN 825 2022.pdf#page=2&annotation=530R]]
+
+
+
+> [!PDF|187, 97, 229] [[BORRADOR OK OK ETN 825 2022.pdf#page=1&annotation=533R|BORRADOR OK OK ETN 825 2022, p.1]]
+> Circuitos Secuenciales - Sincronización (si no se cumple que todos los sistemas tienen el mismo clock o que están a distancias cortas se genera este probl
+
+
+> [!PDF] [[BORRADOR OK OK ETN 825 2022.pdf#page=1&annotation=536R|BORRADOR OK OK ETN 825 2022, p.1]]
+> Diseño de circuitos -Conversión de niveles –Acoplamiento de impedancias
 
 

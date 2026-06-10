@@ -62,6 +62,12 @@
       "icon": "lucide-book-up",
       "name": "PDF++: Enable PDF edit",
       "mode": "any"
+    },
+    {
+      "id": "pdf-plus:edit-page-labels",
+      "icon": "lucide-a-arrow-down",
+      "name": "PDF++: Edit page labels",
+      "mode": "any"
     }
   ],
   "pageHeader": [],
