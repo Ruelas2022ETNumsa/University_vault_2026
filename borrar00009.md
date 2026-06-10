@@ -30,3 +30,19 @@ C:\Users\USUARIO\AppData\Roaming\Claude
 
 codigo de error
 0x80073cf1
+
+![[Notes_260609_234853.pdf#page=1&rect=56,705,181,749&color=important|Notes_260609_234853, p.1]]
+
+
+![[ETN903 TEOcap1_260311_083759.pdf#page=1&rect=44,646,528,807|ETN903 TEOcap1_260311_083759, p.1]]
+
+
+
+
+
+
+> [!PDF|red] [[BORRADOR OK OK ETN 825 2022.pdf#page=1&selection=5,0,5,26&color=red|BORRADOR OK OK ETN 825 2022, p.1]]
+> > COMUNICACIÓN ENTRE SISTEMA
+
+
+
