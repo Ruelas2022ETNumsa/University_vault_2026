@@ -90,6 +90,7 @@ GitHub (via Obsidian Git)
 - [x] Autosync instalado y configurado en tablet (bidireccional, cada 1h, solo WiFi) ✅
 - [x] Par sincronizado: `/Documentos/Pdf/` ↔ `Mi unidad/TAB_nexus` ✅
 - [x] Flujo completo verificado: PDF de tablet llega al vault en PC ✅
+- [x] Flujo bidireccional verificado: anotaciones de PDF++ llegan a la tablet ✅
 
 > Tareas y pendientes: [[_ToDo-system]]
 

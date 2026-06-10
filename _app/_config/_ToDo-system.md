@@ -60,9 +60,18 @@ status: activo
 - [x] Decidir flujo tablet: Samsung Notes → PDF → Google Drive → vault ✅
 - [x] Carpeta `_pdf/TAB_nexus/` creada en el vault ✅
 - [x] Crear carpeta `TAB_nexus` en Google Drive ✅
-- [x] Apuntar Google Drive File Stream a sincronizar `_pdf/TAB_nexus/` en PC ✅
-- [x] Verificar que la tablet puede exportar PDFs directamente a `TAB_nexus` en Drive ✅
-- [x] Confirmar que los PDFs llegan físicamente al vault en PC sin depender de internet ✅
+- [x] Google Drive File Stream configurado (replicar archivos) ✅
+- [x] Symlink `_pdf/TAB_nexus` → `Mi unidad/TAB_nexus` creado en PC ✅
+- [x] Autosync instalado y configurado en tablet (bidireccional, 1h, WiFi) ✅
+- [x] Flujo tablet → vault verificado ✅
+- [x] Flujo vault → tablet verificado (anotaciones PDF++) ✅
+
+### PDF++ — pendientes
+- [ ] Crear guía `_pdf-plus-guide.md` en `_app/_appnotes/` — cómo anotar, subrayar, quemar anotaciones (flatten), y flujo completo con TAB_nexus
+
+### Autosync — pendientes
+- [ ] Configurar widget de sincronización en pantalla de inicio de la tablet
+- [ ] Revisar si hay app o widget en PC para monitorear estado de Drive File Stream
 
 ### Plugins — configuración pendiente
 - [ ] **TikZJax** — instalar y verificar que `circuitikz` renderiza correctamente (puede requerir reabrir Obsidian al primer render)
