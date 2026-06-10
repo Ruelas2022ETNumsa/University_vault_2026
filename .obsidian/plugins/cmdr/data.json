@@ -56,6 +56,12 @@
       "icon": "lucide-rotate-ccw",
       "name": "Reload app without saving",
       "mode": "any"
+    },
+    {
+      "id": "pdf-plus:enable-pdf-edit",
+      "icon": "lucide-book-up",
+      "name": "PDF++: Enable PDF edit",
+      "mode": "any"
     }
   ],
   "pageHeader": [],
