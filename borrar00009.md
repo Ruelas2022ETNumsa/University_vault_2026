@@ -44,4 +44,17 @@ azul
 ![[Notes_260609_234853.pdf#page=1&rect=336,611,565,756&color=important|Notes_260609_234853, p.1]]
 
 
+> [!PDF] [[BORRADOR OK OK ETN 825 2022.pdf#page=1&selection=5,0,5,28&color=yellow|BORRADOR OK OK ETN 825 2022, p.1]]
+> COMUNICACIÓN ENTRE SISTEMAS
+
+
+La interface permite la interconexión de 2 sistemas posibilitando su comunicación.  
+Comprende los siguientes aspectos:
+> [!PDF] [[BORRADOR OK OK ETN 825 2022.pdf#page=1&selection=9,1,10,12&color=yellow|omputadora, usualmente la CPU coordina la actividad de los sistemas digitales individuales]]
+> omputadora, usualmente la CPU coordina la actividad de los sistemas digitales individuales
+
+
+> [!PDF] [[BORRADOR OK OK ETN 825 2022.pdf#page=1&annotation=498R|La interface permite la interconexión de 2 sistemas posibilitando su comunicación. Comprende los siguientes aspectos:]]
+> La interface permite la interconexión de 2 sistemas posibilitando su comunicación. Comprende los siguientes aspectos:
+
 
