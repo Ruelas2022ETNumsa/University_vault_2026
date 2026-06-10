@@ -59,10 +59,10 @@ status: activo
 ### Sincronización tablet — Google Drive
 - [x] Decidir flujo tablet: Samsung Notes → PDF → Google Drive → vault ✅
 - [x] Carpeta `_pdf/TAB_nexus/` creada en el vault ✅
-- [ ] Crear carpeta `TAB_nexus` en Google Drive
-- [ ] Apuntar Google Drive Desktop a sincronizar `_pdf/TAB_nexus/` en PC
-- [ ] Verificar que la tablet puede exportar PDFs directamente a `TAB_nexus` en Drive
-- [ ] Confirmar que la carpeta aparece sincronizada en PC tras exportar desde tablet
+- [x] Crear carpeta `TAB_nexus` en Google Drive ✅
+- [x] Apuntar Google Drive File Stream a sincronizar `_pdf/TAB_nexus/` en PC ✅
+- [x] Verificar que la tablet puede exportar PDFs directamente a `TAB_nexus` en Drive ✅
+- [x] Confirmar que los PDFs llegan físicamente al vault en PC sin depender de internet ✅
 
 ### Plugins — configuración pendiente
 - [ ] **TikZJax** — instalar y verificar que `circuitikz` renderiza correctamente (puede requerir reabrir Obsidian al primer render)
