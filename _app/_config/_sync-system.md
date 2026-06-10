@@ -19,7 +19,7 @@ status: activo
 
 ## Objetivo
 
-Que Claude pueda leer, crear y editar notas `.md` del vault de Obsidian directamente desde GitHub, sin depender de que la PC esté encendida. El vault local en PC se sincroniza automáticamente con GitHub mediante Obsidian Git. La tablet Samsung S6 Lite exporta apuntes como PDF a una carpeta de Google Drive que vive dentro del vault.
+Que Claude pueda leer, crear y editar notas `.md` del vault de Obsidian directamente desde GitHub, sin depender de que la PC esté encendida. El vault local en PC se sincroniza automáticamente con GitHub mediante Obsidian Git. La tablet Samsung S6 Lite sincroniza PDFs de apuntes con el vault via Google Drive File Stream + Autosync (bidireccional).
 
 ---
 
@@ -34,10 +34,17 @@ Obsidian Git (auto-sync cada 5 min)
         ⇕
 PC Local → E:\University_vault_2026
         ⇕
-Google Drive Desktop (sync carpeta TAB_nexus)
+Symlink: E:\University_vault_2026\_pdf\TAB_nexus
         ⇕
-Tablet Samsung S6 Lite
-(Samsung Notes → exportar PDF → Google Drive/_pdf/TAB_nexus/)
+C:\Users\USUARIO\Mi unidad (kraaajooo123@gmail.com)\TAB_nexus
+        ⇕
+Google Drive File Stream (Mi unidad — replicar archivos)
+        ⇕
+Drive nube → Mi unidad/TAB_nexus
+        ⇕
+Autosync (tablet) — bidireccional, cada 1h, solo WiFi
+        ⇕
+Tablet Samsung S6 Lite → /storage/emulated/0/Documentos/Pdf/
 ```
 
 ### Flujo de apuntes desde tablet
@@ -45,13 +52,17 @@ Tablet Samsung S6 Lite
 ```
 Samsung Notes (apunte a mano)
         ↓
-Exportar como PDF
+Exportar como PDF → /Documentos/Pdf/ en tablet
         ↓
-Carpeta Google Drive → _pdf/TAB_nexus/
+Autosync detecta archivo nuevo → sube a Mi unidad/TAB_nexus en Drive
         ↓
-PC y Laptop ven la carpeta sincronizada por Google Drive Desktop
+File Stream replica → C:\Users\USUARIO\Mi unidad\TAB_nexus\
+        ↓
+Symlink → E:\University_vault_2026\_pdf\TAB_nexus\ (vault)
         ↓
 PDF++ anota/mejora el PDF en Obsidian
+        ↓
+Autosync bidireccional → versión anotada baja a tablet también
         ↓
 IA transcribe PDF → .md
         ↓
@@ -73,27 +84,57 @@ GitHub (via Obsidian Git)
   - El usuario no necesita ejecutar git manualmente — todo es automático
 - [x] Conector **Filesystem** de Claude apuntando a `E:\University_vault_2026`
 - [x] Conector **GitHub** conectado en Claude.ai — `https://api.githubcopilot.com/mcp`
-- [x] Carpeta `_pdf/TAB_nexus/` creada en el vault ✅
-- [x] Google Drive Desktop sincroniza `_pdf/TAB_nexus/` entre PC, Laptop y Tablet
+- [x] Carpeta `_pdf/TAB_nexus/` creada en el vault como symlink ✅
+- [x] Google Drive File Stream configurado en modo **replicar archivos** ✅
+- [x] Symlink creado: `E:\University_vault_2026\_pdf\TAB_nexus` → `C:\Users\USUARIO\Mi unidad\TAB_nexus` ✅
+- [x] Autosync instalado y configurado en tablet (bidireccional, cada 1h, solo WiFi) ✅
+- [x] Par sincronizado: `/Documentos/Pdf/` ↔ `Mi unidad/TAB_nexus` ✅
+- [x] Flujo completo verificado: PDF de tablet llega al vault en PC ✅
 
 > Tareas y pendientes: [[_ToDo-system]]
 
-> **Nota:** OneDrive fue descartado — la página de autorización fallaba al intentar la integración con Remotely Save. Se migró a Dropbox sin problemas.
-
 ---
 
-## Sincronización tablet — Google Drive
+## Sincronización tablet — Google Drive + Autosync
 
-La tablet **no usa Obsidian ni Remotely Save**. Solo exporta PDFs a Google Drive.
+La tablet **no usa Obsidian**. Sincroniza PDFs via Autosync + Google Drive File Stream.
 
-Pasos para exportar desde Samsung Notes:
+### Componentes
 
-1. Abrir la nota en Samsung Notes
-2. Menú → **Exportar** → **Guardar como PDF**
-3. Elegir destino: carpeta `TAB_nexus` en Google Drive
-4. El PDF aparece automáticamente en `_pdf/TAB_nexus/` en la PC (via Google Drive Desktop)
+| Componente | Ubicación | Función |
+|---|---|---|
+| Autosync for Google Drive | Tablet | Sincroniza `/Documentos/Pdf/` ↔ `Mi unidad/TAB_nexus` bidireccional |
+| Google Drive File Stream | PC | Replica `Mi unidad` a `C:\Users\USUARIO\Mi unidad\` |
+| Symlink Windows | PC | Conecta `E:\University_vault_2026\_pdf\TAB_nexus` con la carpeta de Drive |
 
-> Remotely Save fue descartado para la tablet. La tablet no sincroniza el vault completo — solo aporta PDFs de apuntes a mano.
+### Configuración Autosync (tablet)
+
+- Par: `TAB_PDF>TAB_nexus`
+- Carpeta izquierda: `/storage/emulated/0/Documentos/Pdf/`
+- Carpeta derecha: `Mi unidad/TAB_nexus` en Google Drive
+- Dirección: **bidireccional**
+- Intervalo: cada **1 hora**
+- Conexión: **solo WiFi**
+
+### Configuración File Stream (PC)
+
+- Modo Mi unidad: **Replicar archivos**
+- Ruta local: `C:\Users\USUARIO\Mi unidad (kraaajooo123@gmail.com)\`
+
+### Symlink (PC)
+
+Creado con:
+```
+mklink /D "E:\University_vault_2026\_pdf\TAB_nexus" "C:\Users\USUARIO\Mi unidad (kraaajooo123@gmail.com)\TAB_nexus"
+```
+
+### Flujo de trabajo
+
+**Tablet → vault:** Samsung Notes exporta PDF a `/Documentos/Pdf/` → Autosync lo sube a Drive → File Stream lo replica en PC → symlink lo hace visible en el vault.
+
+**Vault → tablet:** PDF++ anota el PDF en el vault → File Stream lo sube a Drive → Autosync bidireccional lo baja a la tablet.
+
+> Remotely Save fue descartado. La tablet no sincroniza el vault completo — solo la carpeta de PDFs.
 
 ---
 
