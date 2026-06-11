@@ -19859,6 +19859,7 @@ Sugerencia
 Secuencias
 Separadas
 Selection
+Seleccionarla
 Plugins
 Pendientes
 Plugin
@@ -25169,6 +25170,7 @@ Parchear
 Persistencia
 Paralel
 Paralelsdsdsd
+Preferencias
 del
 date
 de
@@ -30223,6 +30225,8 @@ definas
 decides
 deseadas
 desactivada
+debido
+detect
 Vault
 Verificar
 Variables
@@ -54253,6 +54257,7 @@ subrayas
 subrayado
 subraya
 sicamente
+streaming
 vault
 vil
 ver
@@ -66478,6 +66483,7 @@ antiguos
 author
 aquella
 anotan
+afectado
 related
 recomendados
 ribbon
@@ -72738,6 +72744,9 @@ reportes
 registro
 recuadro
 resaltada
+registrada
+retoma
+replicados
 notes
 notas
 nuevas
@@ -85295,6 +85304,7 @@ casi
 consolidarlas
 cumplir
 combina
+cargue
 updated
 un
 universo
@@ -140310,6 +140320,9 @@ periodo
 probada
 principalmente
 puntero
+podido
+pedir
+post
 min
 mica
 movimiento
@@ -191759,6 +191772,7 @@ irreversible
 impedancias
 iPSW
 iTTe
+intentos
 Dependencia
 Dropbox
 Dataview
@@ -214961,6 +214975,7 @@ fFHO
 fQEQ
 familiar
 flatten
+fallidos
 haya
 hace
 hacer

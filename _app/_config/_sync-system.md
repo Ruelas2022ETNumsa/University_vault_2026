@@ -8,7 +8,7 @@ related_notes:
   - "[[_ToDo-system]]"
 tags: [beacon, sync, github, infraestructura]
 date_created: 2026-05-28
-date_updated: 2026-06-09
+date_updated: 2026-06-10
 status: activo
 ---
 
