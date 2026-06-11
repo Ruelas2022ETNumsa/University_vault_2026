@@ -77,10 +77,10 @@
   "highlightOnHoverBacklinkPane": true,
   "backlinkHoverColor": "",
   "colors": {
-    "Yellow": "#ffd000",
-    "Red": "#ea5252",
-    "Note": "#086ddd",
-    "Important": "#bb61e5"
+    "Yellow": "#ee9b00",
+    "Red": "#bb3e03",
+    "Note": "#94d2bd",
+    "Important": "#7678ed"
   },
   "defaultColor": "",
   "defaultColorPaletteItemIndex": 0,
@@ -98,7 +98,7 @@
   "singleMDLeafInSidebar": true,
   "alwaysUseSidebar": true,
   "ignoreExistingMarkdownTabIn": [],
-  "defaultColorPaletteActionIndex": 4,
+  "defaultColorPaletteActionIndex": 0,
   "syncColorPaletteAction": true,
   "syncDefaultColorPaletteAction": false,
   "proxyMDProperty": "PDF",
@@ -112,7 +112,7 @@
   "renderMarkdownInStickyNote": false,
   "enablePDFEdit": true,
   "author": "Alex",
-  "writeHighlightToFileOpacity": 0.2,
+  "writeHighlightToFileOpacity": 0.39,
   "defaultWriteFileToggle": false,
   "syncWriteFileToggle": true,
   "syncDefaultWriteFileToggle": false,
