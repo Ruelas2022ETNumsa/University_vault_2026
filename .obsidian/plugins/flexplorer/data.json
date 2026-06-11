@@ -2448,11 +2448,13 @@
       "isHidden": false
     },
     "_app/_appnotes/PDF_PP-guide.md": {
-      "isPinned": false,
+      "isPinned": true,
       "isHidden": false
     }
   },
-  "pinnedFiles": [],
+  "pinnedFiles": [
+    "_app/_appnotes/PDF_PP-guide.md"
+  ],
   "showHidden": false,
   "newItemPlacement": "top",
   "persistOrderOnCreateDelete": false,

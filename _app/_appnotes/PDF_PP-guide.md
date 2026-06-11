@@ -21,6 +21,29 @@ status: activo
 
 ---
 
+## Resumen rápido — flujo de uso veloz
+
+Para trabajar rápido sin pasar por el menú contextual cada vez, combina dos toggles:
+
+1. **Ribbon de Obsidian → Toggle auto-copy** — si está activado, simplemente seleccionar texto con el puntero ejecuta automáticamente "Copy link to selection" (genera `&selection=...`, copia al portapapeles).
+
+2. **Barra del visor PDF → botón "Add highlight to file"** — si este botón está activo **junto con** el auto-copy del ribbon, cada selección además queda resaltada y guardada físicamente en el PDF (`&annotation=...`). Se recomienda mantenerlo activo para que el subrayado sea visible también en la tablet (TAB_nexus).
+
+### Tabla resumen — qué genera cada combinación
+
+|                                                 | Botón izquierda (Ribbon)                            | botón tope pdf                                                     |
+| ----------------------------------------------- | --------------------------------------------------- | ------------------------------------------------------------------ |
+|                                                 | `&selection=...` (Copy link to selection)           | `&annotation=...` (Add highlight to file)                          |
+| **¿Se guarda en el PDF físico?**                | No                                                  | Sí — visible en cualquier lector y en la tablet                    |
+| **Ctrl + hover sobre el link en el PDF**        | Abre vista previa mostrando dónde está lo subrayado | No abre vista previa                                               |
+| **Al pasar el cursor sobre el link en la nota** | Muestra lo subrayado de forma simple                | Muestra lo subrayado de forma llamativa (en recuadro, se nota más) |
+| **Copia al portapapeles**                       | Sí                                                  | Sí                                                                 |
+| **Recomendado para**                            | Referencias rápidas dentro de Obsidian              | Apuntes de TAB_nexus que se anotan y vuelven a la tablet           |
+
+> Configuración recomendada para sesiones de vaciado: activar **Toggle auto-copy** (ribbon) + **Add highlight to file** (visor PDF) juntos — cada selección queda resaltada en el PDF y lista para pegar en la nota.
+
+---
+
 ## El menú contextual — visión general
 
 Cuando seleccionas texto en un PDF con PDF++, aparece un menú con dos grupos de opciones:
