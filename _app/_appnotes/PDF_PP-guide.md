@@ -186,7 +186,7 @@ Después de elegir el formato de copia, aparece el tercer submenú que controla 
 
 Estos dos toggles viven en el ribbon (barra lateral izquierda de Obsidian) y cambian el comportamiento de PDF++ durante una sesión de trabajo.
 
-### PDF++: Toggle auto-copy
+### PDF++: Toggle auto-copy (se guarda en el pdf)
 
 **Desactivado (normal):** Seleccionas texto → aparece el menú → eliges la opción → copia al portapapeles.
 

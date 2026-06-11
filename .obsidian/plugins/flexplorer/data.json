@@ -1358,6 +1358,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "PDF_PP-guide.md",
         "better-export-pdf.md",
         "class-notes-guide.md",
         "desmos_guide.md",
@@ -2443,6 +2444,10 @@
       "isHidden": false
     },
     "_templates/tpl-star.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_appnotes/PDF_PP-guide.md": {
       "isPinned": false,
       "isHidden": false
     }

@@ -173,17 +173,14 @@
   ],
   "selectionProductMenuConfig": [
     "color",
-    "copy-format",
-    "display"
+    "copy-format"
   ],
   "writeFileProductMenuConfig": [
     "color",
-    "copy-format",
-    "display"
+    "copy-format"
   ],
   "annotationProductMenuConfig": [
-    "copy-format",
-    "display"
+    "copy-format"
   ],
   "updateColorPaletteStateFromContextMenu": true,
   "mobileCopyAction": "pdf-plus",
@@ -221,7 +218,7 @@
   "clearSelectionAfterAutoPaste": true,
   "respectCursorPositionWhenAutoPaste": true,
   "blankLineAboveAppendedContent": true,
-  "autoCopy": false,
+  "autoCopy": true,
   "autoFocus": false,
   "autoPaste": false,
   "autoFocusTarget": "last-active-and-open-then-last-paste",
