@@ -1402,7 +1402,7 @@
     },
     "_app/_appnotes/tagroute_parche": {
       "isPinned": false,
-      "isHidden": false,
+      "isHidden": true,
       "sortOrder": "custom",
       "customOrder": [
         "patch-obsidian.bat",
