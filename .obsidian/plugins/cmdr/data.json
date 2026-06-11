@@ -46,12 +46,6 @@
       "mode": "any"
     },
     {
-      "id": "workspace:split-vertical",
-      "icon": "lucide-separator-vertical",
-      "name": "Split right",
-      "mode": "any"
-    },
-    {
       "id": "app:reload",
       "icon": "lucide-rotate-ccw",
       "name": "Reload app without saving",
@@ -67,6 +61,12 @@
       "id": "pdf-plus:edit-page-labels",
       "icon": "lucide-a-arrow-down",
       "name": "PDF++: Edit page labels",
+      "mode": "any"
+    },
+    {
+      "id": "workspace:split-vertical",
+      "icon": "lucide-a-large-small",
+      "name": "Split right",
       "mode": "any"
     }
   ],
