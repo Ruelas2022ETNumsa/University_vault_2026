@@ -45,8 +45,10 @@ Al elegir **Copy link to selection** o **Add highlight to file**, se abre un seg
 
 ### Copy link to selection → [color]
 
+>Resaltado directamente en obsidian no se guarda en el pdf (no se ve en la tablet)
+
 Hace dos cosas a la vez:
-1. Agrega un highlight del color elegido al PDF físico
+1. Agrega un highlight del color elegido al PDF (obsidian)
 2. Copia al portapapeles el link/cita en el formato configurado
 
 **Cómo lo usaríamos nosotros:** esta es la opción que usarás constantemente al construir notas `comet` (ejercicios resueltos) y `planet` (teoría) a partir de un `asteroid` (PDF de referencia). Seleccionas la definición o el paso de un ejercicio en el PDF, eliges el color, y pegas el resultado directo en la nota que estés construyendo en `Semesters/Sem_NN/ETNXXX/Partial_N/Topic_NN_nombre/`.
@@ -63,7 +65,9 @@ Hace dos cosas a la vez:
 
 ### Add highlight to file → [color]
 
-Agrega el highlight al PDF **sin copiar nada al portapapeles**. Solo marca visualmente el fragmento.
+>Resaltado directamente en el pdf se guarda en el (se ve en la tablet y obsidian) 
+
+Agrega el highlight al PDF. Marca visualmente el fragmento y lo guarda en el pdf. Además también se lleva al portapapeles.
 
 **Cómo lo usaríamos nosotros:** en una primera pasada de lectura del PDF (antes de empezar a crear notas galaxy), usas esto para marcar todo lo importante con el sistema de colores de arriba. Después, en una segunda pasada, usas "Copy link to selection" sobre lo ya marcado para ir creando las notas `planet`, `moon` y `comet` correspondientes.
 
@@ -116,6 +120,8 @@ Produce esto al pegar en tu nota:
 
 **Cómo lo usaríamos nosotros:** este es el formato estándar para construir el cuerpo de notas `comet` y `planet`. La cita queda como evidencia/origen, y debajo de cada bloque Quote escribes tu propia explicación o desarrollo. Esto también alimenta la conexión `orbiting` hacia el `asteroid` (el PDF) en el YAML de la nota.
 
+nota.- similar a callout , diferencia es mas simple respeta el color seleccionado
+
 ---
 
 ### Link — para referencias inline
@@ -143,6 +149,9 @@ Produce esto:
 ![[archivo.pdf#page=8&selection=...]]
 ```
 
+> ojo ... pdf no genera bien el embed basta con agregar un **"["** al inicio
+
+
 **Cómo lo usaríamos nosotros:** uso ocasional — por ejemplo si una figura o diagrama del PDF es difícil de transcribir como texto y prefieres mostrarlo directo. Para uso frecuente, mejor recortar la imagen y guardarla como nota `photon` en `_assets/`, así la nota `planet` no queda pesada.
 
 ---
@@ -152,6 +161,8 @@ Produce esto:
 Versiones con color semántico, vinculadas al sistema de colores que definas.
 
 **Cómo lo usaríamos nosotros:** si decides que el color del callout debe ser visible también en la nota (no solo en el PDF), por ejemplo para distinguir visualmente "definiciones" (amarillo) de "ejemplos" (azul) dentro de una misma nota `planet` larga.
+
+nota.- Callout sirve mojor si no se especifica el color ya que se agrega un
 
 ---
 
