@@ -162,7 +162,7 @@ Versiones con color semántico, vinculadas al sistema de colores que definas.
 
 **Cómo lo usaríamos nosotros:** si decides que el color del callout debe ser visible también en la nota (no solo en el PDF), por ejemplo para distinguir visualmente "definiciones" (amarillo) de "ejemplos" (azul) dentro de una misma nota `planet` larga.
 
-nota.- Callout sirve mojor si no se especifica el color ya que se agrega un
+nota.- Callout sirve mejor si no se especifica el color ya que se agrega un apartedo (`note`, `tip`, `warning`, `important`, etc. — los tipos nativos de Obsidian) y se copia el color de estos callouts.
 
 ---
 
@@ -278,6 +278,24 @@ En la tablet ves el PDF con los subrayados de PDF++
 ```
 
 > Configuración completa del flujo de sincronización en [[_sync-system]]
+
+---
+
+## Selection vs Annotation — comportamiento verificado
+
+Aclaración práctica probada por el usuario sobre la diferencia real entre **Copy link to selection** y **Add highlight to file**:
+
+**Copy link to selection** → genera `&selection=...`
+- En el PDF: con `Ctrl` + hover sobre el link, se abre una vista previa mostrando dónde está lo subrayado
+- En la nota: al pasar el cursor sobre el link, muestra lo subrayado de forma simple
+- Ambos copian al portapapeles, pero el resaltado es principalmente visible/útil **dentro de Obsidian**
+
+**Add highlight to file** → genera `&annotation=...`
+- En el PDF: `Ctrl` + hover **no** abre vista previa
+- En la nota: al pasar el cursor sobre el link, muestra lo subrayado de forma más llamativa (lo encierra en un recuadro, se nota más)
+- Ambos copian al portapapeles, pero la diferencia clave es que **Add highlight to file subraya físicamente el PDF** — y por eso es lo que se ve también en la tablet vía TAB_nexus
+
+> En resumen: si quieres que el subrayado viaje al PDF (y por tanto a la tablet), usa **Add highlight to file**. Si solo quieres una referencia visual dentro de Obsidian, **Copy link to selection** es suficiente.
 
 ---
 
