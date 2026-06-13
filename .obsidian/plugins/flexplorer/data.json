@@ -5,6 +5,7 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
+        "README.md",
         "921_enunciado.md",
         "borrar00009.md",
         "borrarrr2.md",
@@ -1438,6 +1439,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "_sync-system 1.md",
         "_assets-section.tmp",
         "_basic-memory-system.md",
         "_claude-boot.md",
@@ -1520,8 +1522,6 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "University_vault_2026 (2).lnk",
-        "University_vault_2026.lnk",
         "Structured Assembler Language For IBM Microcomputers.pdf",
         "Notes_260609_234853.pdf",
         "ETN903 TEOcap1_260311_083759.pdf",
@@ -1623,7 +1623,6 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "_PDF.lnk",
         "comfor numbss - copia.png",
         "comfor numbss.png"
       ]
@@ -2457,10 +2456,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "MOC/_PDF.lnk": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "P3A.asm": {
       "isPinned": false,
       "isHidden": false
@@ -2560,11 +2555,11 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_PDF/University_vault_2026 (2).lnk": {
+    "_app/_config/_sync-system 1.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_PDF/University_vault_2026.lnk": {
+    "README.md": {
       "isPinned": false,
       "isHidden": false
     }
