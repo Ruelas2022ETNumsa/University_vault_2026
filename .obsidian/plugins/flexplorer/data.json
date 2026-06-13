@@ -7,14 +7,26 @@
       "customOrder": [
         "921_enunciado.md",
         "borrar00009.md",
-        "MAT101-Números-reales-y-desigualdades.md",
         "borrarrr2.md",
+        "Rubbish",
+        "mega.md",
+        "zborrar111das111.md",
+        "zborrar903 3 arquietxtura.md",
+        "P3A.asm",
+        "zborrar903_3gemino.md",
+        "zborrar903_3 otro.md",
+        "zborrar1111111111111.md",
+        "zborrar903 3.md",
+        "zborrar903 2.md",
+        "zborrar903.md",
+        "MOC",
+        "zborrar921_enunciado.md",
+        "MAT101-Números-reales-y-desigualdades.md",
         "MAT101-NúmerosT0connotebook.md",
         "MAT101T0_transcripcion.md",
         "MAT101_T0_0conclaude.md",
         "MAT101_T0_1enriquezido.md",
         "MAT101_T1-Funciones-reales.md",
-        "MOC",
         "Semesters",
         "Semestres",
         "_app",
@@ -22,19 +34,7 @@
         "_templates"
       ]
     },
-    "921_enunciado.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "borrar00009.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "MAT101-Números-reales-y-desigualdades.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "borrarrr2.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -57,12 +57,6 @@
     "MAT101_T1-Funciones-reales.md": {
       "isPinned": false,
       "isHidden": false
-    },
-    "MOC": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": []
     },
     "Semesters": {
       "isPinned": false,
@@ -1526,846 +1520,19 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "TAB_nexus"
-      ]
-    },
-    "_PDF/TAB_nexus": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "601",
-        "903",
-        "921",
-        "BORRADOR OK OK ETN 825 2022.pdf",
-        "Electrónica analógica",
-        "Micro",
-        "ETN903 TEOcap1_260311_083759.pdf",
+        "University_vault_2026 (2).lnk",
+        "University_vault_2026.lnk",
+        "Structured Assembler Language For IBM Microcomputers.pdf",
         "Notes_260609_234853.pdf",
-        "telefonia",
-        "Structured Assembler Language For IBM Microcomputers.pdf"
+        "ETN903 TEOcap1_260311_083759.pdf",
+        "BORRADOR OK OK ETN 825 2022.pdf",
+        "PDF-telefonia",
+        "PDF-Microprocesadores",
+        "PDF-Electrónica analógica",
+        "PDF-921",
+        "PDF-903",
+        "PDF-601"
       ]
-    },
-    "_PDF/TAB_nexus/601": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Manuales",
-        "Gpt",
-        "Memorias de catedra",
-        "Thomas L. Floyd - Digital fundamentals, 11th ed.pdf",
-        "Thomas L. Floyd - Fundamentos de Sistemas Digitales, 9na ed.pdf",
-        "Tocci, Widmer, Moss - Sistemas digitales, 10ma Ed.pdf",
-        "Tocci, Widmer, Mossi - Didital systems, 12th Ed - 2018.pdf"
-      ]
-    },
-    "_PDF/TAB_nexus/601/Manuales": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "MANUAL_TTL_esp.pdf",
-        "On HighSpeed CMOS Data 2000.pdf",
-        "Tarjetas",
-        "Texas instrument AHC.pdf"
-      ]
-    },
-    "_PDF/TAB_nexus/601/Manuales/MANUAL_TTL_esp.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/601/Manuales/On HighSpeed CMOS Data 2000.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/601/Manuales/Tarjetas": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Manual de Usuario ATMEL – WinCUPL.pdf",
-        "Manual de Usuario CycloneII.pdf",
-        "Manual de Usuario Spartan3AN.pdf"
-      ]
-    },
-    "_PDF/TAB_nexus/601/Manuales/Tarjetas/Manual de Usuario ATMEL – WinCUPL.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/601/Manuales/Tarjetas/Manual de Usuario CycloneII.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/601/Manuales/Tarjetas/Manual de Usuario Spartan3AN.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/601/Manuales/Texas instrument AHC.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/601/Gpt": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Scherz, Monk Practica electronics for invertors 4th edl.pdf",
-        "Anil k. Maini - Digital electronic.pdf"
-      ]
-    },
-    "_PDF/TAB_nexus/601/Gpt/Scherz, Monk Practica electronics for invertors 4th edl.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/601/Gpt/Anil k. Maini - Digital electronic.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/601/Memorias de catedra": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Cap-1 Logica de proposiciones.pdf",
-        "Cap-2 Sistemas de numeracion y codigos.pdf",
-        "Cap-3 Simplificaion de funciones logicas.pdf",
-        "Cap-4 Modulos funcionales de logica combinacional.pdf",
-        "Cap-5 Circuitos aritmeticos.pdf",
-        "Cap-6 Logica secuencial.pdf",
-        "Cap-7 Modulos funcionales de logica secuencial.pdf",
-        "Cap-8 Dispositivos logicos programables.pdf",
-        "Cap-9 Conversor analogo y analogo digital.pdf",
-        "Cap-10 Aplicaciones de logica comb y sec.pdf"
-      ]
-    },
-    "_PDF/TAB_nexus/601/Memorias de catedra/Cap-1 Logica de proposiciones.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/601/Memorias de catedra/Cap-2 Sistemas de numeracion y codigos.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/601/Memorias de catedra/Cap-3 Simplificaion de funciones logicas.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/601/Memorias de catedra/Cap-4 Modulos funcionales de logica combinacional.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/601/Memorias de catedra/Cap-5 Circuitos aritmeticos.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/601/Memorias de catedra/Cap-6 Logica secuencial.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/601/Memorias de catedra/Cap-7 Modulos funcionales de logica secuencial.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/601/Memorias de catedra/Cap-8 Dispositivos logicos programables.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/601/Memorias de catedra/Cap-9 Conversor analogo y analogo digital.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/601/Memorias de catedra/Cap-10 Aplicaciones de logica comb y sec.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/601/Thomas L. Floyd - Digital fundamentals, 11th ed.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/601/Thomas L. Floyd - Fundamentos de Sistemas Digitales, 9na ed.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/601/Tocci, Widmer, Moss - Sistemas digitales, 10ma Ed.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/601/Tocci, Widmer, Mossi - Didital systems, 12th Ed - 2018.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "903_LIBRO_ING",
-        "Andrew S. Tanenbaum, Todd Austin -6e- Structured Computer Organization.pdf",
-        "Francisco Charte Ojeda-2ed-Lenguaje Ensamblador.pdf",
-        "img903",
-        "ING_PDF",
-        "intel",
-        "Kip R. Irvine -6ed- Assembly Language for x86 Processors.pdf",
-        "kip R. irvine -5ed- LENGUAJE ENSAMBLADOR PARA COMPUTADORAS BASADAS EN INTEL.pdf",
-        "Kip R. Irvine -7ed-Assembly Language for x86 Processors.pdf",
-        "Randall Hyde - The Art of Assembly Language. (2nd Edition).pdf"
-      ]
-    },
-    "_PDF/TAB_nexus/903/903_LIBRO_ING": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Cap1-uProcesador.pdf",
-        "Cap8-Instrucciones8086.pdf"
-      ]
-    },
-    "_PDF/TAB_nexus/903/903_LIBRO_ING/Cap1-uProcesador.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/903_LIBRO_ING/Cap8-Instrucciones8086.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/Andrew S. Tanenbaum, Todd Austin -6e- Structured Computer Organization.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/Francisco Charte Ojeda-2ed-Lenguaje Ensamblador.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/img903": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Cap1"
-      ]
-    },
-    "_PDF/TAB_nexus/903/img903/Cap1": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Ca01a.png",
-        "Ca01b.png",
-        "Ca01c.png",
-        "Ca01d.png",
-        "Ca01e.png",
-        "Ca01f.png",
-        "Ca01g.png",
-        "Ca01h.png",
-        "Ca01hError.png",
-        "Ca01i.png",
-        "Ca01j.png",
-        "Ca01k.png",
-        "Ca01m.png",
-        "Ca01n.png",
-        "Ca01q.png",
-        "Ca01p.png",
-        "Ca01r.png",
-        "Ca01s.png",
-        "Ca01t.png",
-        "Ca01l.png",
-        "Ca01u.png",
-        "Ca01v.png",
-        "Ca01x.png",
-        "Ca01o.png",
-        "Ca01w.png",
-        "Ca01y.png",
-        "Ca01z.png",
-        "Ca01zb.png",
-        "Ca01za.png",
-        "Ca01zc.png",
-        "Ca01zd.png",
-        "Ca01ze.png",
-        "Ca01zg.png",
-        "Ca01zf.png",
-        "fonts0.asm",
-        "fonts1.asm",
-        "fonts2.asm",
-        "fonts3.asm",
-        "menu.asm",
-        "menu01.asm",
-        "menu02.asm",
-        "menu03.asm",
-        "mod04h0.asm",
-        "mod13h0.asm",
-        "mod13h1.asm",
-        "mod13h3.asm",
-        "pila0.asm",
-        "mod13h2.asm",
-        "unchar.asm"
-      ]
-    },
-    "_PDF/TAB_nexus/903/img903/Cap1/Ca01a.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/img903/Cap1/Ca01b.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/img903/Cap1/Ca01c.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/img903/Cap1/Ca01d.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/img903/Cap1/Ca01e.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/img903/Cap1/Ca01f.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/img903/Cap1/Ca01g.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/img903/Cap1/Ca01h.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/img903/Cap1/Ca01hError.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/img903/Cap1/Ca01i.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/img903/Cap1/Ca01j.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/img903/Cap1/Ca01k.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/img903/Cap1/Ca01m.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/img903/Cap1/Ca01n.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/img903/Cap1/Ca01q.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/img903/Cap1/Ca01p.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/img903/Cap1/Ca01r.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/img903/Cap1/Ca01s.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/img903/Cap1/Ca01t.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/img903/Cap1/Ca01l.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/img903/Cap1/Ca01u.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/img903/Cap1/Ca01v.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/img903/Cap1/Ca01x.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/img903/Cap1/Ca01o.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/img903/Cap1/Ca01w.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/img903/Cap1/Ca01y.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/img903/Cap1/Ca01z.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/img903/Cap1/Ca01zb.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/img903/Cap1/Ca01za.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/img903/Cap1/Ca01zc.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/img903/Cap1/Ca01zd.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/img903/Cap1/Ca01ze.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/img903/Cap1/Ca01zg.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/img903/Cap1/Ca01zf.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/img903/Cap1/fonts0.asm": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/img903/Cap1/fonts1.asm": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/img903/Cap1/fonts2.asm": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/img903/Cap1/fonts3.asm": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/img903/Cap1/menu.asm": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/img903/Cap1/menu01.asm": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/img903/Cap1/menu02.asm": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/img903/Cap1/menu03.asm": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/img903/Cap1/mod04h0.asm": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/img903/Cap1/mod13h0.asm": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/img903/Cap1/mod13h1.asm": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/img903/Cap1/mod13h3.asm": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/img903/Cap1/pila0.asm": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/img903/Cap1/mod13h2.asm": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/img903/Cap1/unchar.asm": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/ING_PDF": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "8086Instrucciones.pdf",
-        "Barry B. Brey -7ed- uProcesadores intel.pdf",
-        "Barry Brey -8ed- The Intel Microprocessors.pdf",
-        "instrucciones.pdf",
-        "Peter Abel(esp)-3e-Lenguaje ensamblador y programacion.pdf",
-        "Mazidi M.A. - 80x86 IBM PC and Compatible Computers (Volumes I and II). Assembly Language, Design, and Interfacing - 1995.pdf",
-        "Peter Abel-4e-IBM PC Assembly languaje and programming.pdf"
-      ]
-    },
-    "_PDF/TAB_nexus/903/ING_PDF/8086Instrucciones.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/ING_PDF/Barry B. Brey -7ed- uProcesadores intel.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/ING_PDF/Barry Brey -8ed- The Intel Microprocessors.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/ING_PDF/instrucciones.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/ING_PDF/Peter Abel(esp)-3e-Lenguaje ensamblador y programacion.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/ING_PDF/Mazidi M.A. - 80x86 IBM PC and Compatible Computers (Volumes I and II). Assembly Language, Design, and Interfacing - 1995.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/ING_PDF/Peter Abel-4e-IBM PC Assembly languaje and programming.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/intel": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Intel Corp - ASM86 Language Reference Manual.pdf",
-        "Intel Corp - ASM86_Macro Assembler Operating Instructions.pdf",
-        "Intel Corp-The 8086 Family Users Manual.pdf",
-        "Microsoft_Macro_Assembler_5.0_Reference_1987.pdf"
-      ]
-    },
-    "_PDF/TAB_nexus/903/intel/Intel Corp - ASM86 Language Reference Manual.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/intel/Intel Corp - ASM86_Macro Assembler Operating Instructions.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/intel/Intel Corp-The 8086 Family Users Manual.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/intel/Microsoft_Macro_Assembler_5.0_Reference_1987.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/Kip R. Irvine -6ed- Assembly Language for x86 Processors.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/kip R. irvine -5ed- LENGUAJE ENSAMBLADOR PARA COMPUTADORAS BASADAS EN INTEL.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/Kip R. Irvine -7ed-Assembly Language for x86 Processors.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/903/Randall Hyde - The Art of Assembly Language. (2nd Edition).pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/921": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Andrew S. Tanenbaum -3ed-Operating Systems. Design and Implementation.pdf",
-        "Andrew S. Tanenbaum - Operating Systems Design and Implementation-Prentice-Hall (1987).pdf",
-        "Andrew S. Tanenbaum -4ed- Modern Operating Systems.pdf",
-        "Andrew S. Tanenbaum-3ed-Sistemas operativos modernos.pdf",
-        "Robert Love -1th- Linux System Programming.pdf",
-        "Remzi H.&Andera C. Arcapac-iOperating Systems (Three Easy Pieces).pdf",
-        "Robrt Love-3ed-Linux Kernel Development.pdf",
-        "Tanenbaum meulenbroeks - minix 15 reference manual 1991.pdf",
-        "Daniel P. Bovet Marco Cesati-3ed-Understanding the LINUX KERNEL.pdf"
-      ]
-    },
-    "_PDF/TAB_nexus/921/Andrew S. Tanenbaum -3ed-Operating Systems. Design and Implementation.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/921/Andrew S. Tanenbaum - Operating Systems Design and Implementation-Prentice-Hall (1987).pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/921/Andrew S. Tanenbaum -4ed- Modern Operating Systems.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/921/Andrew S. Tanenbaum-3ed-Sistemas operativos modernos.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/921/Robert Love -1th- Linux System Programming.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/921/Remzi H.&Andera C. Arcapac-iOperating Systems (Three Easy Pieces).pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/921/Robrt Love-3ed-Linux Kernel Development.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/921/Tanenbaum meulenbroeks - minix 15 reference manual 1991.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/921/Daniel P. Bovet Marco Cesati-3ed-Understanding the LINUX KERNEL.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/BORRADOR OK OK ETN 825 2022.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/Electrónica analógica": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Floyd - Dispositivos electronicos, 8va ed.pdf",
-        "K. Alexander, N.O. Sadiku - Fundamentos de circuitos eléctricos, 5ta. Ed.pdf",
-        "L. Boylestad, Nashelsky - Electrónica Teoría de Circuitos y Dispositivos Electrónicos, 10ma ed.pdf"
-      ]
-    },
-    "_PDF/TAB_nexus/Electrónica analógica/Floyd - Dispositivos electronicos, 8va ed.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/Electrónica analógica/K. Alexander, N.O. Sadiku - Fundamentos de circuitos eléctricos, 5ta. Ed.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/Electrónica analógica/L. Boylestad, Nashelsky - Electrónica Teoría de Circuitos y Dispositivos Electrónicos, 10ma ed.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/Micro": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "00Cap 9 - Tablas de Instrucciones Microsex (BN).pdf",
-        "00Cap 9 - Tablas de Instrucciones Microsex.pdf",
-        "Cap 9 - Tablas de Instrucciones Microsex (BN).pdf",
-        "Capítulo 9 - Programación y Algoritmos (1).pdf",
-        "Capítulo 9 - Programación y Algoritmos.pdf",
-        "lobrossss",
-        "Temas",
-        "Microsex - Manual de uso del emulador.pdf",
-        "Microsex 10 2025 - Diseño de Algoritmos - Sesión 2.pdf"
-      ]
-    },
-    "_PDF/TAB_nexus/Micro/00Cap 9 - Tablas de Instrucciones Microsex (BN).pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/Micro/00Cap 9 - Tablas de Instrucciones Microsex.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/Micro/Cap 9 - Tablas de Instrucciones Microsex (BN).pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/Micro/Capítulo 9 - Programación y Algoritmos (1).pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/Micro/Capítulo 9 - Programación y Algoritmos.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/Micro/lobrossss": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Andrew S. Tanenbaum - Structured Computer Organization.pdf",
-        "Brown, Vranesic - Fundamentals of Digital logic(3th ed).pdf",
-        "Brown, Vranesic - Fundamentos de logica digital VHDL.pdf",
-        "David A. Patterson & John L. Hennessy - Computer Architecture A Quantitative Approach (5th edition).pdf",
-        "David A. Patterson & John L. Hennessy - Computer Organization and Design (4th edition).pdf",
-        "Harris, L.Harris - Digital Design and Computer Architecture, 2nd Ed.pdf",
-        "Jonathan Bartlett-Programming from the Ground Up.pdf",
-        "Randal E. Bryant & David R. O’Hallaron - Computer Systems A Programmer’s Perspective.pdf"
-      ]
-    },
-    "_PDF/TAB_nexus/Micro/lobrossss/Andrew S. Tanenbaum - Structured Computer Organization.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/Micro/lobrossss/Brown, Vranesic - Fundamentals of Digital logic(3th ed).pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/Micro/lobrossss/Brown, Vranesic - Fundamentos de logica digital VHDL.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/Micro/lobrossss/David A. Patterson & John L. Hennessy - Computer Architecture A Quantitative Approach (5th edition).pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/Micro/lobrossss/David A. Patterson & John L. Hennessy - Computer Organization and Design (4th edition).pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/Micro/lobrossss/Harris, L.Harris - Digital Design and Computer Architecture, 2nd Ed.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/Micro/lobrossss/Jonathan Bartlett-Programming from the Ground Up.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/Micro/lobrossss/Randal E. Bryant & David R. O’Hallaron - Computer Systems A Programmer’s Perspective.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/Micro/Temas": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "C1 - UBC - Diapositivas BN.pdf",
-        "C2 - ALU - Diapositivas BN.pdf",
-        "C3 - USC - Diapositivas BN.pdf",
-        "Capítulo 1 - Unidad Básica de Cálculo.pdf",
-        "Capítulo 2 - Unidad aritmética y lógica.pdf",
-        "Capítulo 3 - Unidad Secuencial de Cálculo.pdf",
-        "Capítulo 4 - Arquitectura de un computador simple.pdf",
-        "Capítulo 5 - Expansión de la Unidad Secuencial de Cálculo.pdf",
-        "Capítulo 6 - Arquitectura de un computador completo.pdf"
-      ]
-    },
-    "_PDF/TAB_nexus/Micro/Temas/C1 - UBC - Diapositivas BN.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/Micro/Temas/C2 - ALU - Diapositivas BN.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/Micro/Temas/C3 - USC - Diapositivas BN.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/Micro/Temas/Capítulo 1 - Unidad Básica de Cálculo.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/Micro/Temas/Capítulo 2 - Unidad aritmética y lógica.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/Micro/Temas/Capítulo 3 - Unidad Secuencial de Cálculo.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/Micro/Temas/Capítulo 4 - Arquitectura de un computador simple.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/Micro/Temas/Capítulo 5 - Expansión de la Unidad Secuencial de Cálculo.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/Micro/Temas/Capítulo 6 - Arquitectura de un computador completo.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/Micro/Microsex - Manual de uso del emulador.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/Micro/Microsex 10 2025 - Diseño de Algoritmos - Sesión 2.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/ETN903 TEOcap1_260311_083759.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/Notes_260609_234853.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/telefonia": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "1.- ttCONCEPTO DE REDES PARA TELEFONIA.pdf",
-        "1.-hhING. DE TRAFICO AVANZADO_3.pdf",
-        "2.-hhING. DE TRAFICO AVANZADO_4.pdf",
-        "2.-tt PLANTA INTERNA Y EXTERNA.pdf",
-        "3.- hhINGENIERIA DE TRAFICO BASICO PARA TELEFONIA.pdf",
-        "4.- ING_DE TRAFICO AVANZADO GRAF_EQUIVALENTE.pdf",
-        "5.- hhING. DE TRAFICO AVANZADO_1.pdf",
-        "5.2hh FORMULAS DE ING.TRAFICO.pdf",
-        "TABLAS DE INGENIERIA DE TRAFICO.pdf"
-      ]
-    },
-    "_PDF/TAB_nexus/telefonia/1.- ttCONCEPTO DE REDES PARA TELEFONIA.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/telefonia/1.-hhING. DE TRAFICO AVANZADO_3.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/telefonia/2.-hhING. DE TRAFICO AVANZADO_4.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/telefonia/2.-tt PLANTA INTERNA Y EXTERNA.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/telefonia/3.- hhINGENIERIA DE TRAFICO BASICO PARA TELEFONIA.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/telefonia/4.- ING_DE TRAFICO AVANZADO GRAF_EQUIVALENTE.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/telefonia/5.- hhING. DE TRAFICO AVANZADO_1.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/telefonia/5.2hh FORMULAS DE ING.TRAFICO.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/telefonia/TABLAS DE INGENIERIA DE TRAFICO.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/TAB_nexus/Structured Assembler Language For IBM Microcomputers.pdf": {
-      "isPinned": false,
-      "isHidden": false
     },
     "_templates": {
       "isPinned": false,
@@ -2449,6 +1616,956 @@
     },
     "_app/_appnotes/PDF_PP-guide.md": {
       "isPinned": true,
+      "isHidden": false
+    },
+    "MOC": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_PDF.lnk",
+        "comfor numbss - copia.png",
+        "comfor numbss.png"
+      ]
+    },
+    "MOC/comfor numbss.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "MOC/comfor numbss - copia.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-601": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Memorias de catedra",
+        "Manuales",
+        "Gpt",
+        "Tocci, Widmer, Mossi - Didital systems, 12th Ed - 2018.pdf",
+        "Tocci, Widmer, Moss - Sistemas digitales, 10ma Ed.pdf",
+        "Thomas L. Floyd - Fundamentos de Sistemas Digitales, 9na ed.pdf",
+        "Thomas L. Floyd - Digital fundamentals, 11th ed.pdf"
+      ]
+    },
+    "_PDF/PDF-601/Thomas L. Floyd - Digital fundamentals, 11th ed.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-601/Thomas L. Floyd - Fundamentos de Sistemas Digitales, 9na ed.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-601/Tocci, Widmer, Moss - Sistemas digitales, 10ma Ed.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-601/Tocci, Widmer, Mossi - Didital systems, 12th Ed - 2018.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-601/Gpt": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Scherz, Monk Practica electronics for invertors 4th edl.pdf",
+        "Anil k. Maini - Digital electronic.pdf"
+      ]
+    },
+    "_PDF/PDF-601/Gpt/Anil k. Maini - Digital electronic.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-601/Gpt/Scherz, Monk Practica electronics for invertors 4th edl.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-601/Manuales": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Tarjetas",
+        "Texas instrument AHC.pdf",
+        "On HighSpeed CMOS Data 2000.pdf",
+        "MANUAL_TTL_esp.pdf"
+      ]
+    },
+    "_PDF/PDF-601/Manuales/MANUAL_TTL_esp.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-601/Manuales/On HighSpeed CMOS Data 2000.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-601/Manuales/Texas instrument AHC.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-601/Manuales/Tarjetas": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Manual de Usuario Spartan3AN.pdf",
+        "Manual de Usuario CycloneII.pdf",
+        "Manual de Usuario ATMEL – WinCUPL.pdf"
+      ]
+    },
+    "_PDF/PDF-601/Manuales/Tarjetas/Manual de Usuario ATMEL – WinCUPL.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-601/Manuales/Tarjetas/Manual de Usuario CycloneII.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-601/Manuales/Tarjetas/Manual de Usuario Spartan3AN.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-601/Memorias de catedra": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Cap-9 Conversor analogo y analogo digital.pdf",
+        "Cap-8 Dispositivos logicos programables.pdf",
+        "Cap-7 Modulos funcionales de logica secuencial.pdf",
+        "Cap-6 Logica secuencial.pdf",
+        "Cap-5 Circuitos aritmeticos.pdf",
+        "Cap-4 Modulos funcionales de logica combinacional.pdf",
+        "Cap-3 Simplificaion de funciones logicas.pdf",
+        "Cap-2 Sistemas de numeracion y codigos.pdf",
+        "Cap-10 Aplicaciones de logica comb y sec.pdf",
+        "Cap-1 Logica de proposiciones.pdf"
+      ]
+    },
+    "_PDF/PDF-601/Memorias de catedra/Cap-1 Logica de proposiciones.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-601/Memorias de catedra/Cap-10 Aplicaciones de logica comb y sec.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-601/Memorias de catedra/Cap-2 Sistemas de numeracion y codigos.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-601/Memorias de catedra/Cap-3 Simplificaion de funciones logicas.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-601/Memorias de catedra/Cap-4 Modulos funcionales de logica combinacional.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-601/Memorias de catedra/Cap-5 Circuitos aritmeticos.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-601/Memorias de catedra/Cap-6 Logica secuencial.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-601/Memorias de catedra/Cap-7 Modulos funcionales de logica secuencial.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-601/Memorias de catedra/Cap-8 Dispositivos logicos programables.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-601/Memorias de catedra/Cap-9 Conversor analogo y analogo digital.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "intel",
+        "ING_PDF",
+        "img903",
+        "903_LIBRO_ING",
+        "Randall Hyde - The Art of Assembly Language. (2nd Edition).pdf",
+        "Kip R. Irvine -7ed-Assembly Language for x86 Processors.pdf",
+        "Kip R. Irvine -6ed- Assembly Language for x86 Processors.pdf",
+        "kip R. irvine -5ed- LENGUAJE ENSAMBLADOR PARA COMPUTADORAS BASADAS EN INTEL.pdf",
+        "Francisco Charte Ojeda-2ed-Lenguaje Ensamblador.pdf",
+        "Andrew S. Tanenbaum, Todd Austin -6e- Structured Computer Organization.pdf"
+      ]
+    },
+    "_PDF/PDF-903/Andrew S. Tanenbaum, Todd Austin -6e- Structured Computer Organization.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/Francisco Charte Ojeda-2ed-Lenguaje Ensamblador.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/kip R. irvine -5ed- LENGUAJE ENSAMBLADOR PARA COMPUTADORAS BASADAS EN INTEL.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/Kip R. Irvine -6ed- Assembly Language for x86 Processors.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/Kip R. Irvine -7ed-Assembly Language for x86 Processors.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/Randall Hyde - The Art of Assembly Language. (2nd Edition).pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/903_LIBRO_ING": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Cap8-Instrucciones8086.pdf",
+        "Cap1-uProcesador.pdf"
+      ]
+    },
+    "_PDF/PDF-903/903_LIBRO_ING/Cap1-uProcesador.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/903_LIBRO_ING/Cap8-Instrucciones8086.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/img903": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Cap1"
+      ]
+    },
+    "_PDF/PDF-903/img903/Cap1": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "unchar.asm",
+        "pila0.asm",
+        "mod13h3.asm",
+        "mod13h2.asm",
+        "mod13h1.asm",
+        "mod13h0.asm",
+        "mod04h0.asm",
+        "menu03.asm",
+        "menu02.asm",
+        "menu01.asm",
+        "menu.asm",
+        "fonts3.asm",
+        "fonts2.asm",
+        "fonts1.asm",
+        "fonts0.asm",
+        "Ca01zg.png",
+        "Ca01zf.png",
+        "Ca01ze.png",
+        "Ca01zd.png",
+        "Ca01zc.png",
+        "Ca01zb.png",
+        "Ca01za.png",
+        "Ca01z.png",
+        "Ca01y.png",
+        "Ca01x.png",
+        "Ca01w.png",
+        "Ca01v.png",
+        "Ca01u.png",
+        "Ca01t.png",
+        "Ca01s.png",
+        "Ca01r.png",
+        "Ca01q.png",
+        "Ca01p.png",
+        "Ca01o.png",
+        "Ca01n.png",
+        "Ca01m.png",
+        "Ca01l.png",
+        "Ca01k.png",
+        "Ca01j.png",
+        "Ca01i.png",
+        "Ca01hError.png",
+        "Ca01h.png",
+        "Ca01g.png",
+        "Ca01f.png",
+        "Ca01e.png",
+        "Ca01d.png",
+        "Ca01c.png",
+        "Ca01b.png",
+        "Ca01a.png"
+      ]
+    },
+    "_PDF/PDF-903/img903/Cap1/Ca01a.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/img903/Cap1/Ca01b.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/img903/Cap1/Ca01c.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/img903/Cap1/Ca01d.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/img903/Cap1/Ca01e.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/img903/Cap1/Ca01f.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/img903/Cap1/Ca01g.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/img903/Cap1/Ca01h.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/img903/Cap1/Ca01hError.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/img903/Cap1/Ca01i.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/img903/Cap1/Ca01j.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/img903/Cap1/Ca01k.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/img903/Cap1/Ca01l.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/img903/Cap1/Ca01m.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/img903/Cap1/Ca01n.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/img903/Cap1/Ca01o.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/img903/Cap1/Ca01p.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/img903/Cap1/Ca01q.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/img903/Cap1/Ca01r.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/img903/Cap1/Ca01s.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/img903/Cap1/Ca01t.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/img903/Cap1/Ca01u.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/img903/Cap1/Ca01v.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/img903/Cap1/Ca01w.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/img903/Cap1/Ca01x.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/img903/Cap1/Ca01y.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/img903/Cap1/Ca01z.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/img903/Cap1/Ca01za.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/img903/Cap1/Ca01zb.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/img903/Cap1/Ca01zc.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/img903/Cap1/Ca01zd.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/img903/Cap1/Ca01ze.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/img903/Cap1/Ca01zf.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/img903/Cap1/Ca01zg.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/img903/Cap1/fonts0.asm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/img903/Cap1/fonts1.asm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/img903/Cap1/fonts2.asm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/img903/Cap1/fonts3.asm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/img903/Cap1/menu.asm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/img903/Cap1/menu01.asm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/img903/Cap1/menu02.asm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/img903/Cap1/menu03.asm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/img903/Cap1/mod04h0.asm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/img903/Cap1/mod13h0.asm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/img903/Cap1/mod13h1.asm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/img903/Cap1/mod13h2.asm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/img903/Cap1/mod13h3.asm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/img903/Cap1/pila0.asm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/img903/Cap1/unchar.asm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/ING_PDF": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Peter Abel-4e-IBM PC Assembly languaje and programming.pdf",
+        "Peter Abel(esp)-3e-Lenguaje ensamblador y programacion.pdf",
+        "Mazidi M.A. - 80x86 IBM PC and Compatible Computers (Volumes I and II). Assembly Language, Design, and Interfacing - 1995.pdf",
+        "instrucciones.pdf",
+        "Barry Brey -8ed- The Intel Microprocessors.pdf",
+        "Barry B. Brey -7ed- uProcesadores intel.pdf",
+        "8086Instrucciones.pdf"
+      ]
+    },
+    "_PDF/PDF-903/ING_PDF/8086Instrucciones.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/ING_PDF/Barry B. Brey -7ed- uProcesadores intel.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/ING_PDF/Barry Brey -8ed- The Intel Microprocessors.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/ING_PDF/instrucciones.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/ING_PDF/Mazidi M.A. - 80x86 IBM PC and Compatible Computers (Volumes I and II). Assembly Language, Design, and Interfacing - 1995.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/ING_PDF/Peter Abel(esp)-3e-Lenguaje ensamblador y programacion.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/ING_PDF/Peter Abel-4e-IBM PC Assembly languaje and programming.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/intel": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Microsoft_Macro_Assembler_5.0_Reference_1987.pdf",
+        "Intel Corp-The 8086 Family Users Manual.pdf",
+        "Intel Corp - ASM86_Macro Assembler Operating Instructions.pdf",
+        "Intel Corp - ASM86 Language Reference Manual.pdf"
+      ]
+    },
+    "_PDF/PDF-903/intel/Intel Corp - ASM86 Language Reference Manual.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/intel/Intel Corp - ASM86_Macro Assembler Operating Instructions.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/intel/Intel Corp-The 8086 Family Users Manual.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-903/intel/Microsoft_Macro_Assembler_5.0_Reference_1987.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-921": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Tanenbaum meulenbroeks - minix 15 reference manual 1991.pdf",
+        "Robrt Love-3ed-Linux Kernel Development.pdf",
+        "Robert Love -1th- Linux System Programming.pdf",
+        "Remzi H.&Andera C. Arcapac-iOperating Systems (Three Easy Pieces).pdf",
+        "Daniel P. Bovet Marco Cesati-3ed-Understanding the LINUX KERNEL.pdf",
+        "Andrew S. Tanenbaum-3ed-Sistemas operativos modernos.pdf",
+        "Andrew S. Tanenbaum -4ed- Modern Operating Systems.pdf",
+        "Andrew S. Tanenbaum -3ed-Operating Systems. Design and Implementation.pdf",
+        "Andrew S. Tanenbaum - Operating Systems Design and Implementation-Prentice-Hall (1987).pdf"
+      ]
+    },
+    "_PDF/PDF-921/Andrew S. Tanenbaum - Operating Systems Design and Implementation-Prentice-Hall (1987).pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-921/Andrew S. Tanenbaum -3ed-Operating Systems. Design and Implementation.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-921/Andrew S. Tanenbaum -4ed- Modern Operating Systems.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-921/Andrew S. Tanenbaum-3ed-Sistemas operativos modernos.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-921/Daniel P. Bovet Marco Cesati-3ed-Understanding the LINUX KERNEL.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-921/Remzi H.&Andera C. Arcapac-iOperating Systems (Three Easy Pieces).pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-921/Robert Love -1th- Linux System Programming.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-921/Robrt Love-3ed-Linux Kernel Development.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-921/Tanenbaum meulenbroeks - minix 15 reference manual 1991.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-Electrónica analógica": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "L. Boylestad, Nashelsky - Electrónica Teoría de Circuitos y Dispositivos Electrónicos, 10ma ed.pdf",
+        "K. Alexander, N.O. Sadiku - Fundamentos de circuitos eléctricos, 5ta. Ed.pdf",
+        "Floyd - Dispositivos electronicos, 8va ed.pdf"
+      ]
+    },
+    "_PDF/PDF-Electrónica analógica/Floyd - Dispositivos electronicos, 8va ed.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-Electrónica analógica/K. Alexander, N.O. Sadiku - Fundamentos de circuitos eléctricos, 5ta. Ed.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-Electrónica analógica/L. Boylestad, Nashelsky - Electrónica Teoría de Circuitos y Dispositivos Electrónicos, 10ma ed.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-Microprocesadores": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Temas",
+        "lobrossss",
+        "Microsex 10 2025 - Diseño de Algoritmos - Sesión 2.pdf",
+        "Microsex - Manual de uso del emulador.pdf",
+        "Capítulo 9 - Programación y Algoritmos.pdf",
+        "Capítulo 9 - Programación y Algoritmos (1).pdf",
+        "Cap 9 - Tablas de Instrucciones Microsex (BN).pdf",
+        "00Cap 9 - Tablas de Instrucciones Microsex.pdf",
+        "00Cap 9 - Tablas de Instrucciones Microsex (BN).pdf"
+      ]
+    },
+    "_PDF/PDF-Microprocesadores/00Cap 9 - Tablas de Instrucciones Microsex (BN).pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-Microprocesadores/00Cap 9 - Tablas de Instrucciones Microsex.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-Microprocesadores/Cap 9 - Tablas de Instrucciones Microsex (BN).pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-Microprocesadores/Capítulo 9 - Programación y Algoritmos (1).pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-Microprocesadores/Capítulo 9 - Programación y Algoritmos.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-Microprocesadores/Microsex - Manual de uso del emulador.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-Microprocesadores/Microsex 10 2025 - Diseño de Algoritmos - Sesión 2.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-Microprocesadores/lobrossss": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Randal E. Bryant & David R. O’Hallaron - Computer Systems A Programmer’s Perspective.pdf",
+        "Jonathan Bartlett-Programming from the Ground Up.pdf",
+        "Harris, L.Harris - Digital Design and Computer Architecture, 2nd Ed.pdf",
+        "David A. Patterson & John L. Hennessy - Computer Organization and Design (4th edition).pdf",
+        "David A. Patterson & John L. Hennessy - Computer Architecture A Quantitative Approach (5th edition).pdf",
+        "Brown, Vranesic - Fundamentos de logica digital VHDL.pdf",
+        "Brown, Vranesic - Fundamentals of Digital logic(3th ed).pdf",
+        "Andrew S. Tanenbaum - Structured Computer Organization.pdf"
+      ]
+    },
+    "_PDF/PDF-Microprocesadores/lobrossss/Andrew S. Tanenbaum - Structured Computer Organization.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-Microprocesadores/lobrossss/Brown, Vranesic - Fundamentals of Digital logic(3th ed).pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-Microprocesadores/lobrossss/Brown, Vranesic - Fundamentos de logica digital VHDL.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-Microprocesadores/lobrossss/David A. Patterson & John L. Hennessy - Computer Architecture A Quantitative Approach (5th edition).pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-Microprocesadores/lobrossss/David A. Patterson & John L. Hennessy - Computer Organization and Design (4th edition).pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-Microprocesadores/lobrossss/Harris, L.Harris - Digital Design and Computer Architecture, 2nd Ed.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-Microprocesadores/lobrossss/Jonathan Bartlett-Programming from the Ground Up.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-Microprocesadores/lobrossss/Randal E. Bryant & David R. O’Hallaron - Computer Systems A Programmer’s Perspective.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-Microprocesadores/Temas": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Capítulo 6 - Arquitectura de un computador completo.pdf",
+        "Capítulo 5 - Expansión de la Unidad Secuencial de Cálculo.pdf",
+        "Capítulo 4 - Arquitectura de un computador simple.pdf",
+        "Capítulo 3 - Unidad Secuencial de Cálculo.pdf",
+        "Capítulo 2 - Unidad aritmética y lógica.pdf",
+        "Capítulo 1 - Unidad Básica de Cálculo.pdf",
+        "C3 - USC - Diapositivas BN.pdf",
+        "C2 - ALU - Diapositivas BN.pdf",
+        "C1 - UBC - Diapositivas BN.pdf"
+      ]
+    },
+    "_PDF/PDF-Microprocesadores/Temas/C1 - UBC - Diapositivas BN.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-Microprocesadores/Temas/C2 - ALU - Diapositivas BN.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-Microprocesadores/Temas/C3 - USC - Diapositivas BN.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-Microprocesadores/Temas/Capítulo 1 - Unidad Básica de Cálculo.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-Microprocesadores/Temas/Capítulo 2 - Unidad aritmética y lógica.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-Microprocesadores/Temas/Capítulo 3 - Unidad Secuencial de Cálculo.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-Microprocesadores/Temas/Capítulo 4 - Arquitectura de un computador simple.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-Microprocesadores/Temas/Capítulo 5 - Expansión de la Unidad Secuencial de Cálculo.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-Microprocesadores/Temas/Capítulo 6 - Arquitectura de un computador completo.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-telefonia": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "TABLAS DE INGENIERIA DE TRAFICO.pdf",
+        "5.2hh FORMULAS DE ING.TRAFICO.pdf",
+        "5.- hhING. DE TRAFICO AVANZADO_1.pdf",
+        "4.- ING_DE TRAFICO AVANZADO GRAF_EQUIVALENTE.pdf",
+        "3.- hhINGENIERIA DE TRAFICO BASICO PARA TELEFONIA.pdf",
+        "2.-tt PLANTA INTERNA Y EXTERNA.pdf",
+        "2.-hhING. DE TRAFICO AVANZADO_4.pdf",
+        "1.-hhING. DE TRAFICO AVANZADO_3.pdf",
+        "1.- ttCONCEPTO DE REDES PARA TELEFONIA.pdf"
+      ]
+    },
+    "_PDF/PDF-telefonia/1.- ttCONCEPTO DE REDES PARA TELEFONIA.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-telefonia/1.-hhING. DE TRAFICO AVANZADO_3.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-telefonia/2.-hhING. DE TRAFICO AVANZADO_4.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-telefonia/2.-tt PLANTA INTERNA Y EXTERNA.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-telefonia/3.- hhINGENIERIA DE TRAFICO BASICO PARA TELEFONIA.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-telefonia/4.- ING_DE TRAFICO AVANZADO GRAF_EQUIVALENTE.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-telefonia/5.- hhING. DE TRAFICO AVANZADO_1.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-telefonia/5.2hh FORMULAS DE ING.TRAFICO.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-telefonia/TABLAS DE INGENIERIA DE TRAFICO.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/BORRADOR OK OK ETN 825 2022.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/ETN903 TEOcap1_260311_083759.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/Notes_260609_234853.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/Structured Assembler Language For IBM Microcomputers.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "MOC/_PDF.lnk": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "P3A.asm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "zborrar921_enunciado.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "zborrar903.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "zborrar903_3gemino.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "zborrar1111111111111.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "zborrar903_3 otro.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "zborrar111das111.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "zborrar903 2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "zborrar903 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "zborrar903 3 arquietxtura.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "mega.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "921_enunciado.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "borrar00009.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "borrarrr2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "2026-06-12",
+        "tmp"
+      ]
+    },
+    "Rubbish/2026-06-12": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "zborrarborrar00009.md",
+        "zborrarborrar22222222222.md",
+        "zborrarborrarrr2.md"
+      ]
+    },
+    "Rubbish/2026-06-12/zborrarborrar00009.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-06-12/zborrarborrar22222222222.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-06-12/zborrarborrarrr2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/tmp": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "lock"
+      ]
+    },
+    "Rubbish/tmp/lock": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/University_vault_2026 (2).lnk": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/University_vault_2026.lnk": {
+      "isPinned": false,
       "isHidden": false
     }
   },

@@ -8,7 +8,7 @@ related_notes:
   - "[[_ToDo-system]]"
 tags: [beacon, sync, github, infraestructura]
 date_created: 2026-05-28
-date_updated: 2026-06-13 (rev2)
+date_updated: 2026-06-13
 status: activo
 ---
 
@@ -21,7 +21,7 @@ status: activo
 
 Que Claude pueda leer, crear y editar notas `.md` del vault de Obsidian directamente desde GitHub, sin depender de que la PC esté encendida. El vault local en PC se sincroniza automáticamente con GitHub mediante Obsidian Git y con Mega para distribución entre dispositivos.
 
-> ✅ **Migración completada (2026-06-13):** Se migró completamente de Google Drive a **Mega**. Google Drive fue eliminado por completo — TAB_nexus, symlinks y toda sincronización con Drive han sido removidos. La carpeta `_PDF` dentro del vault reemplaza a TAB_nexus. La cuenta Mega es exclusiva para el vault. La migración se realizó sin problemas — las carpetas fueron reconocidas automáticamente sin resubirse.
+> ⚠️ **Migración completada (2026-06-13):** Se migró de Google Drive File Stream a **Mega** como sistema principal de sincronización del vault entre dispositivos. Drive se mantiene ÚNICAMENTE para TAB_nexus (PDFs tablet ↔ PC). La cuenta Mega usada es exclusiva para el vault. La migración se realizó sin problemas — las carpetas deseadas se sincronizaron correctamente desde el inicio.
 
 ---
 
@@ -36,14 +36,22 @@ Obsidian Git (auto-sync cada 5 min)
         ⇕
 PC Escritorio Local → E:\University_vault_2026  [UNICO que sincroniza con Mega Y con Git]
         ⇕
-Mega (sincronización vault entre dispositivos — cuenta exclusiva del vault)
+Mega (sincronización vault entre dispositivos)
         ⇕
-┌──────────────────────────────────────────────────────┐
-│ Tablet (FolderSync bidirec.)         Celular (FolderSync solo lectura) │
-│ /University_vault_2026               /University_vault_2026            │
-└──────────────────────────────────────────────────────┘
-        Laptop (cliente Mega — bidireccional)
-        /University_vault_2026
+┌──────────────────────────┐
+│ Tablet (FolderSync bidirec.)  │  Celular (FolderSync solo lectura)
+│ /University_vault_2026       │  /University_vault_2026
+└──────────────────────────┘
+        ⇕
+Google Drive (intocable — solo TAB_nexus)
+        ⇕
+Symlink: E:\University_vault_2026\_pdf\TAB_nexus
+        ⇕
+C:\Users\USUARIO\Mi unidad (kraaajooo123@gmail.com)\TAB_nexus
+        ⇕
+Autosync (tablet) — bidireccional, cada 1h, solo WiFi
+        ⇕
+Tablet Samsung S6 Lite → /storage/emulated/0/Documentos/Pdf/
 ```
 
 ### Flujo de apuntes desde tablet
@@ -51,15 +59,17 @@ Mega (sincronización vault entre dispositivos — cuenta exclusiva del vault)
 ```
 Samsung Notes (apunte a mano)
         ↓
-Exportar como PDF → carpeta dentro de /University_vault_2026/_PDF en tablet
+Exportar como PDF → /Documentos/Pdf/ en tablet
         ↓
-FolderSync detecta archivo nuevo → sube a Mega/_PDF
+Autosync detecta archivo nuevo → sube a Mi unidad/TAB_nexus en Drive
         ↓
-Mega sincroniza → E:\University_vault_2026\_PDF\ en PC
+File Stream replica → C:\Users\USUARIO\Mi unidad\TAB_nexus\
+        ↓
+Symlink → E:\University_vault_2026\_pdf\TAB_nexus\ (vault)
         ↓
 PDF++ anota/mejora el PDF en Obsidian
         ↓
-Mega sincroniza cambio de vuelta a tablet
+Autosync bidireccional → versión anotada baja a tablet también
         ↓
 IA transcribe PDF → .md
         ↓
@@ -81,25 +91,58 @@ GitHub (via Obsidian Git)
   - El usuario no necesita ejecutar git manualmente — todo es automático
 - [x] Conector **Filesystem** de Claude apuntando a `E:\University_vault_2026`
 - [x] Conector **GitHub** conectado en Claude.ai — `https://api.githubcopilot.com/mcp`
-- [x] Mega configurado en PC como sistema principal de sync del vault ✅
-- [x] Mega configurado en Laptop — bidireccional ✅
-- [x] FolderSync configurado en Tablet — bidireccional con Mega ✅
-- [x] FolderSync configurado en Celular — solo lectura desde Mega ✅
-- [x] Obsidian instalado en Tablet y Celular ✅
-- [x] `.megaignore` configurado en raíz del vault (PC) ✅
-- [x] Google Drive eliminado por completo — TAB_nexus, symlink y Autosync removidos ✅
-- [x] `_PDF` dentro del vault reemplaza a TAB_nexus como carpeta de PDFs ✅
-- [x] Flujo completo verificado: vault sincroniza entre PC, laptop, tablet y celular vía Mega ✅
+- [x] Carpeta `_pdf/TAB_nexus/` creada en el vault como symlink ✅
+- [x] Google Drive File Stream configurado en modo **replicar archivos** ✅
+- [x] Symlink creado: `E:\University_vault_2026\_pdf\TAB_nexus` → `C:\Users\USUARIO\Mi unidad\TAB_nexus` ✅
+- [x] Autosync instalado y configurado en tablet (bidireccional, cada 1h, solo WiFi) ✅
+- [x] Par sincronizado: `/Documentos/Pdf/` ↔ `Mi unidad/TAB_nexus` ✅
+- [x] Flujo completo verificado: PDF de tablet llega al vault en PC ✅
+- [x] Flujo bidireccional verificado: anotaciones de PDF++ llegan a la tablet ✅
 
 > Tareas y pendientes: [[_ToDo-system]]
 
 ---
 
-## Sincronización tablet — Mega + FolderSync ~~(antes: Google Drive + Autosync)~~
+## Sincronización tablet — Google Drive + Autosync
 
-La tablet usa **Obsidian** y sincroniza el vault completo vía FolderSync + Mega. Reemplaza completamente el sistema anterior de Drive + Autosync + symlink que fue eliminado.
+La tablet **no usa Obsidian**. Sincroniza PDFs via Autosync + Google Drive File Stream.
 
-> El detalle completo de configuración está en la sección **Configuración FolderSync — TABLET** más abajo.
+### Componentes
+
+| Componente | Ubicación | Función |
+|---|---|---|
+| Autosync for Google Drive | Tablet | Sincroniza `/Documentos/Pdf/` ↔ `Mi unidad/TAB_nexus` bidireccional |
+| Google Drive File Stream | PC | Replica `Mi unidad` a `C:\Users\USUARIO\Mi unidad\` |
+| Symlink Windows | PC | Conecta `E:\University_vault_2026\_pdf\TAB_nexus` con la carpeta de Drive |
+
+### Configuración Autosync (tablet)
+
+- Par: `TAB_PDF>TAB_nexus`
+- Carpeta izquierda: `/storage/emulated/0/Documentos/Pdf/`
+- Carpeta derecha: `Mi unidad/TAB_nexus` en Google Drive
+- Dirección: **bidireccional**
+- Intervalo: cada **1 hora**
+- Conexión: **solo WiFi**
+
+### Configuración File Stream (PC)
+
+- Modo Mi unidad: **Replicar archivos**
+- Ruta local: `C:\Users\USUARIO\Mi unidad (kraaajooo123@gmail.com)\`
+
+### Symlink (PC)
+
+Creado con:
+```
+mklink /D "E:\University_vault_2026\_pdf\TAB_nexus" "C:\Users\USUARIO\Mi unidad (kraaajooo123@gmail.com)\TAB_nexus"
+```
+
+### Flujo de trabajo
+
+**Tablet → vault:** Samsung Notes exporta PDF a `/Documentos/Pdf/` → Autosync lo sube a Drive → File Stream lo replica en PC → symlink lo hace visible en el vault.
+
+**Vault → tablet:** PDF++ anota el PDF en el vault → File Stream lo sube a Drive → Autosync bidireccional lo baja a la tablet.
+
+> Remotely Save fue descartado. La tablet no sincroniza el vault completo — solo la carpeta de PDFs.
 
 ---
 
@@ -237,14 +280,14 @@ Obsidian Git detecta cambio → auto-pull → vault local actualizado
 
 - OneDrive descartado: la página de autorización fallaba al conectar con Remotely Save. Migrado a Dropbox definitivamente.
 - Microsoft 365 descartado como conector de Claude: servicio de pago.
-- Google Drive eliminado por completo: TAB_nexus, CELL_PDF, symlinks, Autosync y File Stream removidos. Mega reemplaza todo. `_PDF` dentro del vault es la nueva carpeta de PDFs.
+- Google Drive descartado como sistema de sync del vault: reemplazado por Mega (ver sección abajo). Drive se mantiene exclusivamente para TAB_nexus.
 - Remotely Save descartado: la sincronización completa del vault con servicios externos generó más problemas que ventajas. Mega client + FolderSync es el sistema definitivo.
 
 ---
 
 ## Sincronización Mega — Sistema Principal (desde 2026-06-13)
 
-> Mega reemplaza completamente a Google Drive. La cuenta Mega es **exclusiva para el vault**. La migración se realizó subiendo el vault manualmente a Mega primero, luego configurando la sincronización — los archivos fueron reconocidos automáticamente sin resubirse.
+> Mega reemplaza a Google Drive File Stream para la sincronización del vault completo entre PC, laptop, tablet y celular. La cuenta Mega usada es **exclusiva para el vault**. La migración se realizó subiendo el vault manualmente a Mega primero, luego configurando la sincronización — los archivos fueron reconocidos automáticamente sin resubirse.
 
 ### Carpetas sincronizadas en Mega
 
@@ -255,7 +298,7 @@ Obsidian Git detecta cambio → auto-pull → vault local actualizado
 | `E:\University_vault_2026\Semestres` | `/University_vault_2026/Semestres` |
 | `E:\University_vault_2026\_PDF` | `/University_vault_2026/_PDF` |
 
-> `_PDF` es la carpeta definitiva de PDFs — reemplaza al anterior TAB_nexus de Drive. Todos los PDFs de Samsung Notes van directamente aquí.
+> Pendiente: cuando el sistema esté estable, eliminar copia de TAB_nexus de `_PDF` en Mega.
 
 ### .megaignore (PC)
 
@@ -371,33 +414,8 @@ App: **FolderSync** | Cuenta: Mega exclusiva del vault | Obsidian instalado en e
 
 Iguales a las de la tablet (misma tabla de arriba).
 
----
-
-## Cómo decide Mega qué hacer
-
-Mega mantiene un **registro de eventos** en la nube — no solo archivos, sino acciones: _archivo creado_, _archivo modificado_, _archivo eliminado_, con timestamp. Cuando un cliente conecta, no compara carpetas ciegamente sino que consulta ese historial y replica los eventos pendientes.
-
----
-
-## Las tres reglas que gobiernan todo
-
-**Regla 1 — Archivo nuevo en un lado** El evento "creado" se propaga a todos los clientes conectados. El archivo se copia. Nunca se borra algo que existe en la nube.
-
-**Regla 2 — Archivo modificado** Gana el timestamp más reciente. Si PC y laptop modificaron el mismo archivo estando ambos offline, Mega detecta conflicto y en tu configuración actual **gana el más reciente** — el otro queda como archivo de conflicto con sufijo en el nombre.
-
-**Regla 3 — Archivo eliminado** Mega registra la eliminación como evento. Cuando otros clientes sincronizan, replican ese evento — borran el archivo localmente. No es "veo que falta, lo borro" sino "recibo la orden de borrar, ejecuto". Por eso un dispositivo apagado no puede "restaurar" algo borrado en otro — cuando enciende, recibe el evento de eliminación y obedece.
-
----
-
-## El único escenario de conflicto real
-
-Si el dispositivo B estaba **apagado cuando PC borró X**, y antes de encender B alguien **crea un archivo nuevo con el mismo nombre X** desde otro dispositivo — Mega puede confundirse. Fuera de ese caso extremo, el sistema es determinista.
-
-
 %%
 galaxy-links
 [[_galaxy-system]]
 [[_ToDo-system]]
 %%
-
-

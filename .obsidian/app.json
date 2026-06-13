@@ -1,6 +1,6 @@
 {
   "defaultViewMode": "preview",
-  "showUnsupportedFiles": true,
+  "showUnsupportedFiles": false,
   "showInlineTitle": false,
   "propertiesInDocument": "source",
   "rightToLeft": false,
@@ -12,5 +12,6 @@
   "showLineNumber": true,
   "vimMode": false,
   "userIgnoreFilters": null,
-  "strictLineBreaks": false
+  "strictLineBreaks": false,
+  "trashOption": "local"
 }
