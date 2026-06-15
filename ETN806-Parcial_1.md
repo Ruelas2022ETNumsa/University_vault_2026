@@ -946,7 +946,228 @@ Con esas tres herramientas la demostración sale de forma completamente mecánic
 
 Sean $X_1$ y $X_2$ dos variables aleatorias independientes. Sean $Y_1=X_1-X_2$ y $Y_2=X_1+X_2$. Hallar la condición que deben cumplir $X_1$ y $X_2$ para qué $Y_1$ y $Y_2$ sean no correlacionados.
 
-## solucion
+## Solución
+
+### Paso 1. Condición de variables no correlacionadas
+
+Dos variables aleatorias son no correlacionadas si su covarianza es cero.
+
+Según el formulario:
+
+$$  
+COV[Y_1,Y_2]=0  
+$$
+
+Por lo tanto, debemos calcular:
+
+$$  
+COV(Y_1,Y_2)  
+$$
+
+y determinar cuándo vale cero.
+
+---
+
+### Paso 2. Sustituir las definiciones de $Y_1$ y $Y_2$
+
+Como
+
+$$  
+Y_1=X_1-X_2  
+$$
+
+y
+
+$$  
+Y_2=X_1+X_2  
+$$
+
+entonces
+
+$$  
+COV(Y_1,Y_2)
+=
+COV(X_1-X_2,;X_1+X_2)  
+$$
+
+---
+
+### Paso 3. Aplicar la linealidad de la covarianza
+
+Desarrollamos la covarianza término a término:
+
+$$  
+COV(X_1-X_2,;X_1+X_2)
+=
+COV(X_1,X_1)  
++  
+COV(X_1,X_2)
+-
+COV(X_2,X_1)
+-
+COV(X_2,X_2)  
+$$
+
+Por lo tanto,
+
+$$  
+COV(Y_1,Y_2)
+=
+COV(X_1,X_1)  
++  
+COV(X_1,X_2)
+-
+COV(X_2,X_1)
+-
+COV(X_2,X_2)  
+$$
+
+---
+
+### Paso 4. Utilizar la hipótesis de independencia
+
+El enunciado indica que $X_1$ y $X_2$ son independientes.
+
+Del formulario:
+
+$$  
+X_1 \text{ independiente de } X_2  
+\Longrightarrow  
+COV(X_1,X_2)=0  
+$$
+
+Además, por simetría de la covarianza:
+
+$$  
+COV(X_2,X_1)=0  
+$$
+
+Sustituyendo:
+
+$$  
+COV(Y_1,Y_2)
+=
+COV(X_1,X_1)  
++  
+0
+-
+0
+-
+COV(X_2,X_2)  
+$$
+
+obtenemos
+
+$$  
+COV(Y_1,Y_2)
+=
+COV(X_1,X_1)
+-
+COV(X_2,X_2)  
+$$
+
+---
+
+### Paso 5. Relacionar covarianza y varianza
+
+Sabemos que la covarianza de una variable consigo misma es su varianza:
+
+$$  
+COV(X_1,X_1)=VAR(X_1)  
+$$
+
+$$  
+COV(X_2,X_2)=VAR(X_2)  
+$$
+
+Sustituyendo:
+
+$$  
+COV(Y_1,Y_2)
+=
+VAR(X_1)-VAR(X_2)  
+$$
+
+---
+
+### Paso 6. Imponer la condición de no correlación
+
+Para que $Y_1$ y $Y_2$ sean no correlacionadas debe cumplirse:
+
+$$  
+COV(Y_1,Y_2)=0  
+$$
+
+Sustituyendo el resultado obtenido:
+
+$$  
+VAR(X_1)-VAR(X_2)=0  
+$$
+
+Sumando $VAR(X_2)$ a ambos lados:
+
+$$  
+VAR(X_1)=VAR(X_2)  
+$$
+
+---
+
+## Conclusión
+
+Por lo tanto,
+
+$$  
+COV(Y_1,Y_2)=0  
+\iff  
+VAR(X_1)-VAR(X_2)=0  
+\iff  
+VAR(X_1)=VAR(X_2)  
+$$
+
+Finalmente,
+
+$$  
+\boxed{  
+Y_1 \text{ y } Y_2 \text{ son no correlacionadas}  
+\iff  
+VAR(X_1)=VAR(X_2)  
+}  
+$$
+
+$$  
+\blacksquare  
+$$
+
+---
+
+## Resultado Final
+
+La condición que deben cumplir las variables aleatorias independientes $X_1$ y $X_2$ es:
+
+$$  
+\boxed{  
+VAR(X_1)=VAR(X_2)  
+}  
+$$
+
+Es decir, **deben tener la misma varianza**.
+
+### Observación
+
+Las medias de $X_1$ y $X_2$ no intervienen en la condición obtenida. La covarianza final depende únicamente de las varianzas, por lo que basta exigir:
+
+$$  
+\boxed{  
+VAR(X_1)=VAR(X_2)  
+}  
+$$
+
+para garantizar que $Y_1=X_1-X_2$ y $Y_2=X_1+X_2$ sean no correlacionadas.
+
+
+
+
+
 
 # Enunciado del Ejercicio 5 (practica)
 
@@ -954,11 +1175,457 @@ Un experimento aleatorio consiste en probar dos circuitos integrados, uno tras o
 
 ## solucion
 
+Correcto. A partir de ahora seguiré **exactamente la convención de tu formulario**, aunque en otros textos de Estadística se utilicen nombres distintos.
+
+Para este curso debemos distinguir claramente:
+
+### Correlación
+
+Según tu formulario:
+
+$$  
+\gamma_{X,Y}
+=
+E[XY]
+=
+\sum_{x\in S_x}  
+\sum_{y\in S_y}  
+xy,P_{X,Y}(x,y)  
+$$
+
+Por tanto, cuando un ejercicio pida:
+
+> "Hallar la correlación"
+
+debe interpretarse como
+
+$$  
+\gamma_{X,Y}=E[XY]  
+$$
+
+y **no** como el coeficiente de correlación.
+
+---
+
+### Coeficiente de correlación
+
+Según tu formulario:
+
+$$  
+\rho_{X,Y}
+=
+\frac{COV[X,Y]}  
+{\sqrt{VAR[X]VAR[Y]}}  
+$$
+
+Este es otro concepto diferente.
+
+---
+
+### En el ejercicio de los circuitos
+
+Las variables son independientes.
+
+#### Correlación
+
+$$  
+\gamma_{X,Y}
+=
+E[XY]  
+$$
+
+Como únicamente el caso
+
+$$  
+(X,Y)=(1,1)  
+$$
+
+aporta valor distinto de cero,
+
+$$  
+E[XY]
+=
+1\cdot1\cdot p^2
+=
+p^2  
+$$
+
+Por tanto
+
+$$  
+\boxed{\gamma_{X,Y}=p^2}  
+$$
+
+---
+
+#### Covarianza
+
+Utilizando
+
+$$  
+COV[X,Y]
+=
+E[XY]-E[X]E[Y]  
+$$
+
+se tiene
+
+$$  
+COV[X,Y]
+=
+p^2-p\cdot p
+=
+0  
+$$
+
+Por tanto
+
+$$  
+\boxed{COV[X,Y]=0}  
+$$
+
+---
+
+#### Coeficiente de correlación
+
+$$  
+\rho_{X,Y}
+=
+\frac{COV[X,Y]}  
+{\sqrt{VAR[X]VAR[Y]}}
+=
+\frac{0}  
+{\sqrt{VAR[X]VAR[Y]}}
+
+0  
+$$
+
+Luego
+
+$$  
+\boxed{\rho_{X,Y}=0}  
+$$
+
+---
+
+#### Regla que seguiré en adelante
+
+Si el enunciado dice:
+
+- **"correlación"** $\rightarrow$ calcularé
+    
+
+$$  
+\gamma_{X,Y}=E[XY]  
+$$
+
+- **"coeficiente de correlación"** $\rightarrow$ calcularé
+    
+
+$$  
+\rho_{X,Y}
+=
+\frac{COV[X,Y]}  
+{\sqrt{VAR[X]VAR[Y]}}  
+$$
+
+exactamente como aparece en tu formulario.
+
+Así evitaremos cualquier conflicto entre la terminología del curso y la terminología utilizada en otros libros de Probabilidad y Estadística.
+
+
+
+
+
 # Enunciado del Ejercicio 6 (practica)
 
 Un experimento aleatorio consiste en el lanzamiento de una moneda 3 veces, si se define la variable aleatoria X como el numero total de sellos obtenidos y la variable aleatoria Y como el número de caras obtenidas en el último lanzamiento, encontrar la función de distribución de probabilidad conjunta y las distribuciones marginales todas expresadas en forma de lista.
 
 ## solucion
+
+Sí. Tus observaciones son correctas y, para una resolución de nivel universitario, conviene incorporarlas como análisis adicional después de obtener la distribución conjunta y las marginales.
+
+Hay tres puntos importantes:
+
+---
+
+### 1. Naturaleza de la variable (Y)
+
+El enunciado define:
+
+> (Y): número de caras obtenidas en el último lanzamiento.
+
+Como en el último lanzamiento solamente puede ocurrir:
+
+- Cara
+- Sello
+
+entonces (Y) solamente puede tomar los valores
+
+$$  
+S_Y={0,1}  
+$$
+
+donde
+
+$$  
+Y=  
+\begin{cases}  
+1, & \text{si el último lanzamiento es cara}\   \\
+0, & \text{si el último lanzamiento es sello}  
+\end{cases}  
+$$
+
+Por tanto (Y) puede interpretarse como una **variable indicadora** del evento
+
+$$  
+A=\{\text{cara en el tercer lanzamiento}\}.  
+$$
+
+Esta observación es correcta y aporta rigor matemático.
+
+---
+
+### 2. Identificación de distribuciones conocidas
+
+#### Variable (X)
+
+(X) cuenta el número total de sellos obtenidos en tres lanzamientos independientes.
+
+Cada lanzamiento produce:
+
+- sello con probabilidad
+    
+
+$$  
+p=\frac12  
+$$
+
+- cara con probabilidad
+    
+
+$$  
+q=\frac12  
+$$
+
+Por definición,
+
+$$  
+X\sim Binomial\left(3,\frac12\right).  
+$$
+
+De hecho,
+
+$$  
+P(X=x)
+=
+\binom{3}{x}  
+\left(\frac12\right)^x  
+\left(\frac12\right)^{3-x}
+=
+\frac{\binom{3}{x}}{8}.  
+$$
+
+Para
+
+$$  
+x=0,1,2,3.  
+$$
+
+Las probabilidades obtenidas coinciden exactamente con las marginales:
+
+$$  
+P(X=0)=\frac18,  
+$$
+
+$$  
+P(X=1)=\frac38,  
+$$
+
+$$  
+P(X=2)=\frac38,  
+$$
+
+$$  
+P(X=3)=\frac18.  
+$$
+
+---
+
+#### Variable (Y)
+
+(Y) depende únicamente del tercer lanzamiento.
+
+Por tanto
+
+$$  
+Y\sim Bernoulli\left(\frac12\right).  
+$$
+
+Ya que
+
+$$  
+P(Y=1)=\frac12,  
+$$
+
+$$  
+P(Y=0)=\frac12.  
+$$
+
+---
+
+### 3. ¿Son independientes (X) e (Y)?
+
+Este es el punto más importante.
+
+Muchos estudiantes concluyen erróneamente que sí son independientes porque los lanzamientos de la moneda son independientes.
+
+Sin embargo:
+
+- Los lanzamientos son independientes.
+    
+- Las variables aleatorias construidas a partir de ellos no necesariamente son independientes.
+    
+
+Debemos verificar la definición:
+
+$$  
+P_{X,Y}(x,y)
+=
+P_X(x)P_Y(y).  
+$$
+
+Basta encontrar un contraejemplo.
+
+Tomemos
+
+$$  
+x=3,  
+\qquad  
+y=1.  
+$$
+
+---
+
+#### Probabilidad conjunta
+
+Para que
+
+$$  
+X=3  
+$$
+
+deben haberse obtenido tres sellos:
+
+$$  
+SSS.  
+$$
+
+Pero entonces el último lanzamiento es sello.
+
+Por consiguiente,
+
+$$  
+P(X=3,Y=1)=0.  
+$$
+
+---
+
+#### Producto de marginales
+
+Tenemos
+
+$$  
+P(X=3)=\frac18,  
+$$
+
+y
+
+$$  
+P(Y=1)=\frac12.  
+$$
+
+Entonces
+
+$$  
+P(X=3)P(Y=1)
+=
+\frac18\cdot\frac12
+=
+\frac1{16}.  
+$$
+
+---
+
+#### Comparación
+
+$$  
+P(X=3,Y=1)
+=
+0  
+$$
+
+mientras que
+
+$$  
+P(X=3)P(Y=1)
+=
+\frac1{16}.  
+$$
+
+Como
+
+$$  
+0\neq\frac1{16},  
+$$
+
+se concluye que
+
+$$  
+P(X=3,Y=1)  
+\neq  
+P(X=3)P(Y=1).  
+$$
+
+Luego (X) e (Y) **no son independientes**.
+
+---
+
+#### Conclusión adicional
+
+Después de hallar la distribución conjunta y las marginales, es correcto agregar:
+
+- (X) sigue una distribución binomial:
+    
+
+$$  
+X\sim Binomial\left(3,\frac12\right)  
+$$
+
+- (Y) sigue una distribución de Bernoulli:
+    
+
+$$  
+Y\sim Bernoulli\left(\frac12\right)  
+$$
+
+- (Y) es una variable indicadora del evento "cara en el último lanzamiento".
+    
+- Las variables (X) e (Y) **no son independientes**, porque
+    
+$$  
+P(X=3,Y=1)=0  
+\neq  
+\frac1{16}
+=
+P(X=3)P(Y=1).  
+$$
+
+Estas observaciones enriquecen la solución y muestran comprensión teórica más allá del cálculo de probabilidades.
+
+
+
+
 
 # Enunciado del Ejercicio 7 (practica)
 
@@ -977,7 +1644,322 @@ c) Cuales son las probabilidades marginales
 d) Calcule los valores esperados $E[X]$ y $E[Y]$
 e) Determine las desviaciones estándar $\sigma_x$ y $\sigma_y$
 
-## solucion
+## solución
+
+La solución es esencialmente correcta, pero para ajustarse al **formulario que me indicaste** haría algunas observaciones importantes.
+
+# Observación 1. Notación
+
+Conviene utilizar siempre
+
+$$  
+P_{X,Y}(x,y)  
+$$
+
+porque esa es la notación del enunciado y del formulario.
+
+En lugar de escribir indistintamente
+
+$$  
+f(x,y)  
+$$
+
+o
+
+$$  
+P(x,y)  
+$$
+
+mantendría siempre
+
+$$  
+P_{X,Y}(x,y).  
+$$
+
+---
+
+# Observación 2. Verificación de las marginales
+
+Después de obtener las marginales es recomendable verificar que son distribuciones válidas.
+
+Para (X):
+
+$$  
+P_X(1)+P_X(2)+P_X(4)
+=
+\frac17+\frac27+\frac47
+=
+\frac77
+=
+1  
+$$
+
+Para (Y):
+
+$$  
+P_Y(1)+P_Y(3)
+=
+\frac14+\frac34
+=
+1  
+$$
+
+Por tanto ambas marginales son correctas.
+
+---
+
+# Observación 3. Independencia
+
+Este es un resultado adicional interesante.
+
+De la marginal de (X):
+
+$$  
+P_X(1)=\frac17,  
+\qquad  
+P_X(2)=\frac27,  
+\qquad  
+P_X(4)=\frac47  
+$$
+
+De la marginal de (Y):
+
+$$  
+P_Y(1)=\frac14,  
+\qquad  
+P_Y(3)=\frac34  
+$$
+
+Verificamos algunos puntos:
+
+$$  
+P_{X,Y}(1,1)
+=
+\frac1{28}  
+$$
+
+y
+
+$$  
+P_X(1)P_Y(1)
+=
+\frac17\cdot\frac14
+=
+\frac1{28}  
+$$
+
+---
+
+$$  
+P_{X,Y}(2,3)
+=
+\frac{6}{28}
+=
+\frac3{14}  
+$$
+
+y
+
+$$  
+P_X(2)P_Y(3)
+=
+\frac27\cdot\frac34
+=
+\frac6{28}
+=
+\frac3{14}  
+$$
+
+---
+
+$$  
+P_{X,Y}(4,3)
+=
+\frac{12}{28}
+=
+\frac37  
+$$
+
+y
+
+$$  
+P_X(4)P_Y(3)
+=
+\frac47\cdot\frac34
+=
+\frac{12}{28}
+=
+\frac37  
+$$
+
+---
+
+Más generalmente,
+
+como
+
+$$  
+P_{X,Y}(x,y)
+=
+\frac1{28}xy  
+$$
+
+y
+
+$$  
+P_X(x)
+=
+\frac{x}{7},  
+\qquad  
+P_Y(y)
+=
+\frac{y}{4},  
+$$
+
+entonces
+
+$$  
+P_X(x)P_Y(y)
+=
+\frac{x}{7}\cdot\frac{y}{4}
+=
+\frac{xy}{28}
+=
+P_{X,Y}(x,y).  
+$$
+
+Por consiguiente,
+
+$$  
+P_{X,Y}(x,y)
+=
+P_X(x)P_Y(y)  
+\qquad  
+\forall(x,y).  
+$$
+
+Luego las variables son estadísticamente independientes.
+
+Por la propiedad de independencia de tu formulario:
+
+$$  
+\boxed{X \text{ e } Y \text{ son independientes}}  
+$$
+
+---
+
+# Observación 4. Cálculo de la varianza
+
+La solución calcula
+
+$$  
+VAR[X]
+=
+E[X^2]-(E[X])^2  
+$$
+
+y
+
+$$  
+VAR[Y]
+=
+E[Y^2]-(E[Y])^2.  
+$$
+
+Los resultados son correctos.
+
+Sin embargo, en un examen donde el docente exige seguir estrictamente el formulario, podría preferirse usar
+
+$$  
+VAR[X]
+=
+\sum_{x\in S_x}  
+(x-\mu_x)^2P_X(x)  
+$$
+
+y
+
+$$  
+VAR[Y]
+=
+\sum_{y\in S_y}  
+(y-\mu_y)^2P_Y(y).  
+$$
+
+Aunque ambas fórmulas son equivalentes, yo seguiré la del formulario cuando resuelva ejercicios nuevos.
+
+---
+
+# Respuestas finales
+
+$$  
+\boxed{c=\frac1{28}}  
+$$
+
+$$  
+\boxed{P(Y<X)=\frac9{14}}  
+$$
+
+Marginal de (X):
+
+$$  
+\boxed{  
+P_X(1)=\frac17,  
+P_X(2)=\frac27,  
+P_X(4)=\frac47  
+}  
+$$
+
+Marginal de (Y):
+
+$$  
+\boxed{  
+P_Y(1)=\frac14,  
+P_Y(3)=\frac34  
+}  
+$$
+
+Valores esperados:
+
+$$  
+\boxed{E[X]=3}  
+$$
+
+$$  
+\boxed{E[Y]=\frac52}  
+$$
+
+Desviaciones estándar:
+
+$$  
+\boxed{  
+\sigma_X=\sqrt{\frac{10}{7}}  
+}  
+$$
+
+$$  
+\boxed{  
+\sigma_Y=\sqrt{\frac34}  
+}  
+$$
+
+Resultado adicional:
+
+$$  
+\boxed{  
+X \text{ e } Y \text{ son independientes}  
+}  
+$$
+
+porque
+
+$$  
+P_{X,Y}(x,y)=P_X(x)P_Y(y).  
+$$
+
+
+
+
 
 # Enunciado del Ejercicio 8 (practica)
 
