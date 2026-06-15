@@ -355,34 +355,44 @@ $$14.4$$
 $$VAR[C]=9.6+14.4$$
 $$\boxed{VAR[C]=24}$$
 
+#### Paso 3: Calcular la desviación estándar
 
-#### 2\. Varianza ($\\sigma^2$)
+Según el formulario:
+$$\sigma_C=\sqrt{VAR[C]}$$
 
-Para hallar la desviación estándar, primero debemos calcular la varianza. Usaremos la fórmula simplificada:$$\\sigma^2 \= E(C^2) \- E(C)^2$$ 8-10
+Sustituyendo:
+$$\sigma_C=\sqrt{24}$$
 
-* **Paso 1: Calcular $E(C^2)$**  
-* $EC^2 \= (20^2 \\cdot 0.6) \+ (30^2 \\cdot 0.4)$  
-* $EC^2 \= (400 \\cdot 0.6) \+ (900 \\cdot 0.4)$  
-* $EC^2 \= 240 \+ 360 \= 600$  
-* **Paso 2: Aplicar la fórmula de varianza**  
-* $\\sigma^2 \= 600 \- (24)^2$  
-* $\\sigma^2 \= 600 \- 576$  
-* **$\\sigma^2 \= 24$**
+$$\sigma_C\approx 4.899$$
+Por lo tanto:
+$$\boxed{\sigma_C\approx 4.90}$$
+centavos.
 
-#### 3\. Desviación estándar ($\\sigma$)
+---
 
-La desviación estándar es la raíz cuadrada positiva de la varianza 11-13.
+### Respuesta final
 
-* $\\sigma \= \\sqrt{24}$  
-* **$\\sigma \\approx 4.899$ centavos**
+#### Distribución de probabilidad
 
-**Resumen de resultados:**
+| (c) | (P(C=c)) |
+| --- | -------- |
+| 20  | 0.6      |
+| 30  | 0.4      |
 
-* **Distribución**: $P(C=20)=0.6$ y $P(C=30)=0.4$.  
-* **Valor Esperado**: 24 centavos.  
-* **Desviación Estándar**: 4.899 centavos.
+#### Valor esperado
+$$\boxed{E[C]=24\text{ centavos}}$$
 
+#### Varianza
+$$\boxed{VAR[C]=24}$$
 
+#### Desviación estándar
+$$\boxed{\sigma_C\approx 4.90\text{ centavos}}$$
+
+#### Interpretación
+
+En promedio, una llamada cuesta **24 centavos**, y los costos individuales suelen alejarse de ese promedio aproximadamente **4.90 centavos**.
+
+---
 
 
 
@@ -392,7 +402,315 @@ Considere una variable aleatoria X y una combinación lineal de esta:
 $Y=aX+b$.
 Calcular el coeficiente de correlación lineal de "X" y "Y".
 
-## solucion
+## solución
+
+### Paso 1. Escribir la fórmula del coeficiente de correlación
+
+Del formulario:
+
+$$
+\rho_{X,Y}
+=
+\frac{COV[X,Y]}
+{\sqrt{VAR[X]\cdot VAR[Y]}}
+$$
+
+Por lo tanto, debemos calcular:
+
+1. $COV[X,Y]$
+2. $VAR[X]$
+3. $VAR[Y]$
+
+---
+
+### Paso 2. Calcular la covarianza $COV[X,Y]$
+
+Sabemos que
+$$
+Y=aX+b
+$$
+
+Utilizamos la definición de covarianza:
+
+$$
+COV[X,Y]
+=
+E[XY]-E[X]E[Y]
+$$
+
+Sustituyendo $Y=aX+b$:
+
+$$
+COV[X,Y]
+=
+E[X(aX+b)]
+-
+E[X]E[aX+b]
+$$
+
+Distribuyendo:
+
+$$
+COV[X,Y]
+=
+E[aX^2+bX]+
+E[X]\left(aE[X]+b\right)
+$$
+
+Aplicando linealidad de la esperanza:
+
+$$
+COV[X,Y]
+=
+aE[X^2]
++
+bE[X]
+-
+a(E[X])^2-
+bE[X]
+$$
+
+Los términos $bE[X]$ se cancelan:
+
+$$
+COV[X,Y]
+=
+aE[X^2]-
+a(E[X])^2
+$$
+
+Factorizando $a$:
+$$
+COV[X,Y]
+=
+a\left(E[X^2]-(E[X])^2\right)
+$$
+
+Como
+
+$$
+VAR[X]
+=
+E[X^2]-(E[X])^2
+$$
+
+obtenemos:
+
+$$
+COV[X,Y]
+=
+a,VAR[X]
+$$
+
+---
+
+### Paso 3. Calcular la varianza de $Y$
+
+Partimos de
+
+$$
+Y=aX+b
+$$
+
+La constante $b$ no afecta la dispersión, por lo que:
+
+$$
+VAR[Y]
+=
+VAR[aX+b]
+$$
+
+$$
+VAR[Y]
+=
+a^2VAR[X]
+$$
+
+---
+
+### Paso 4. Sustituir en la fórmula de correlación
+
+Tenemos:
+
+$$
+\rho_{X,Y}
+=
+\frac{aVAR[X]}
+{\sqrt{VAR[X]\cdot a^2VAR[X]}}
+$$
+
+Multiplicando dentro de la raíz:
+
+$$
+\rho_{X,Y}
+=
+\frac{aVAR[X]}
+{\sqrt{a^2(VAR[X])^2}}
+$$
+
+Aplicando la propiedad de la raíz:
+
+$$
+\rho_{X,Y}
+=
+\frac{aVAR[X]}
+{|a|,VAR[X]}
+$$
+
+Simplificando $VAR[X]$:
+
+$$
+\rho_{X,Y}
+=
+\frac{a}{|a|}
+$$
+
+---
+
+### Paso 5. Analizar los posibles casos
+
+#### Caso 1: $a>0$
+
+Si $a$ es positivo:
+
+$$
+|a|=a
+$$
+
+Entonces:
+
+$$
+\rho_{X,Y}
+=
+\frac{a}{a}
+=
+1
+$$
+
+Por lo tanto:
+
+$$
+\boxed{\rho_{X,Y}=1}
+$$
+
+Existe una relación lineal positiva perfecta.
+
+---
+
+#### Caso 2: $a<0$
+
+Si $a$ es negativo:
+
+$$
+|a|=-a
+$$
+
+Entonces:
+
+$$
+\rho_{X,Y}
+=
+\frac{a}{-a}
+=
+-1
+$$
+
+Por lo tanto:
+
+$$
+\boxed{\rho_{X,Y}=-1}
+$$
+
+Existe una relación lineal negativa perfecta.
+
+---
+
+#### Caso 3: $a=0$
+
+Si
+
+$$
+a=0
+$$
+
+entonces
+
+$$
+Y=b
+$$
+
+es una constante.
+
+Por consiguiente:
+
+$$
+VAR[Y]=0
+$$
+
+Sustituyendo en la fórmula de correlación:
+
+$$
+\rho_{X,Y}
+=
+\frac{COV[X,Y]}
+{\sqrt{VAR[X]\cdot 0}}
+$$
+
+$$
+\rho_{X,Y}
+=
+\frac{COV[X,Y]}
+{0}
+$$
+
+El denominador es cero, por lo que la expresión no está definida.
+
+Así:
+
+$$
+\boxed{\rho_{X,Y}\text{ no está definido}}
+$$
+
+---
+
+## Respuesta Final
+
+$$
+\boxed{
+\rho_{X,Y}
+=
+\frac{a}{|a|}
+}
+$$
+
+equivalentemente,
+
+$$
+\boxed{
+\rho_{X,Y}=
+\begin{cases}
+1,& a>0 \\
+-1,& a<0 \\
+\text{No definido},& a=0
+\end{cases}
+}
+$$
+
+## Conclusión
+
+Una transformación lineal de la forma
+
+$$
+Y=aX+b
+$$
+
+mantiene una correlación perfecta con $X$:
+
+* Positiva perfecta si $a>0$.
+* Negativa perfecta si $a<0$.
+* No definida si $a=0$, porque $Y$ se convierte en una constante y $VAR[Y]=0$.
+
+---
 
 # Enunciado del Ejercicio 3 (practica)
 
@@ -401,7 +719,228 @@ $$
 E[E[Y/X]]=E[Y]  
 $$
 
-## solucion
+## Demostración
+
+### Hipótesis
+
+Sean $X$ e $Y$ variables aleatorias discretas tales que existe la esperanza de $Y$.
+
+Es decir,
+
+$$  
+E[|Y|]<\infty  
+$$
+
+lo cual garantiza que las sumatorias convergen y pueden reordenarse.
+
+---
+
+### Paso 1. Aplicar la definición de esperanza
+
+Como $E[Y/X]$ es una función de la variable aleatoria $X$, su esperanza se calcula mediante
+
+$$  
+E[E[Y/X]]
+=
+\sum_{x\in S_X}  
+E[Y/X=x],  
+P_X(x)  
+$$
+
+---
+
+### Paso 2. Sustituir la definición de esperanza condicional
+
+Según la definición de esperanza condicional:
+
+$$  
+E[Y/X=x]
+=
+\sum_{y\in S_Y}  
+y,P_{Y/X}(y/x)  
+$$
+
+Sustituyendo en la ecuación anterior:
+
+$$  
+E[E[Y/X]]
+
+\sum_{x\in S_X}  
+\left(  
+\sum_{y\in S_Y}  
+y,P_{Y/X}(y/x)  
+\right)  
+P_X(x)  
+$$
+
+Distribuyendo $P_X(x)$:
+
+$$  
+E[E[Y/X]]
+=
+\sum_{x\in S_X}  
+\sum_{y\in S_Y}  
+y,P_{Y/X}(y/x),P_X(x)  
+$$
+
+---
+
+### Paso 3. Utilizar la definición de probabilidad condicional
+
+Del formulario:
+
+$$  
+P_{Y/X}(y/x)
+=
+\frac{P_{X,Y}(x,y)}  
+{P_X(x)}  
+$$
+
+Multiplicando ambos lados por $P_X(x)$:
+
+$$  
+P_{Y/X}(y/x),P_X(x)
+=
+P_{X,Y}(x,y)  
+$$
+
+Sustituyendo:
+
+$$  
+E[E[Y/X]]
+=
+\sum_{x\in S_X}  
+\sum_{y\in S_Y}  
+y,P_{X,Y}(x,y)  
+$$
+
+---
+
+### Paso 4. Cambiar el orden de las sumatorias
+
+Como la esperanza existe, podemos intercambiar el orden de suma:
+
+$$  
+E[E[Y/X]]
+=
+\sum_{y\in S_Y}  
+\sum_{x\in S_X}  
+y,P_{X,Y}(x,y)  
+$$
+
+Factorizando $y$ porque no depende de $x$:
+
+$$  
+E[E[Y/X]]
+=
+\sum_{y\in S_Y}  
+y  
+\left(  
+\sum_{x\in S_X}  
+P_{X,Y}(x,y)  
+\right)  
+$$
+
+---
+
+### Paso 5. Reconocer la distribución marginal de $Y$
+
+Del formulario:
+
+$$  
+P_Y(y)
+=
+\sum_{x\in S_X}  
+P_{X,Y}(x,y)  
+$$
+
+Sustituyendo:
+
+$$  
+E[E[Y/X]]
+=
+\sum_{y\in S_Y}  
+y,P_Y(y)  
+$$
+
+---
+
+### Paso 6. Aplicar la definición de esperanza de $Y$
+
+Por definición:
+
+$$  
+E[Y]
+=
+\sum_{y\in S_Y}  
+y,P_Y(y)  
+$$
+
+Por lo tanto:
+
+$$  
+E[E[Y/X]]
+=
+E[Y]  
+$$
+
+---
+
+## Conclusión
+
+Hemos demostrado que
+
+$$  
+\boxed{  
+E[E[Y/X]]
+=
+E[Y]  
+}  
+$$
+
+lo que se conoce como la **Ley de la Esperanza Total** o **Propiedad de la Esperanza Iterada**.
+
+$$  
+\blacksquare  
+$$
+
+---
+
+### Observación para examen
+
+La clave de la demostración está en tres pasos del formulario:
+
+1. Definición de esperanza:
+    
+
+$$  
+E[X]
+=
+\sum_x xP_X(x)  
+$$
+
+2. Definición de probabilidad condicional:
+    
+
+$$  
+P_{Y/X}(y/x)
+=
+\frac{P_{X,Y}(x,y)}  
+{P_X(x)}  
+$$
+
+3. Definición de distribución marginal:
+    $$  
+P_Y(y)
+=
+\sum_x P_{X,Y}(x,y)  
+$$
+
+Con esas tres herramientas la demostración sale de forma completamente mecánica y rigurosa.
+
+
+
+
 
 # Enunciado del Ejercicio 4 (practica)
 
