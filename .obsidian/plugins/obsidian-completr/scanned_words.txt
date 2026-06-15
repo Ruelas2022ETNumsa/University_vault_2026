@@ -6094,6 +6094,9 @@ tales
 transform
 terminolog
 titula
+tome
+tiro
+terminen
 ToDo
 Templater
 Text
@@ -12951,6 +12954,7 @@ Tecno
 Tenemos
 Toma
 Tomemos
+TECNO
 Sistema
 Sync
 Save
@@ -19921,6 +19925,8 @@ Sustituir
 Sustento
 Sobre
 Sello
+Suponemos
+Sellos
 Plugins
 Pendientes
 Plugin
@@ -25267,6 +25273,10 @@ PRACTICA
 PASOS
 Positiva
 Precisi
+Prob
+PIDE
+PASO
+Probabilidades
 del
 date
 de
@@ -30401,6 +30411,7 @@ descripci
 demuestras
 definiendo
 dividiendo
+desglosando
 Vault
 Verificar
 Variables
@@ -36462,6 +36473,8 @@ VARIANZA
 VARIABLES
 Varianzas
 Veredicto
+Verificamos
+VERIFICACI
 galaxy
 gina
 genes
@@ -54523,6 +54536,10 @@ sabes
 suele
 solucionario
 solamente
+sacarla
+sumatoria
+seguimos
+seleccionamos
 vault
 vil
 ver
@@ -66835,6 +66852,15 @@ arreglos
 acertado
 arreglo
 afirma
+asignamos
+ajustarse
+algunas
+apartado
+adecuada
+argumento
+adimensional
+abscisas
+asigne
 related
 recomendados
 ribbon
@@ -73155,6 +73181,8 @@ resalta
 refiere
 reservarse
 reflejar
+rigurosamente
+realizaremos
 notes
 notas
 nuevas
@@ -79331,6 +79359,9 @@ necesarias
 narrativos
 nuestro
 normalizada
+nuestra
+ndonos
+ntas
 created
 commit
 cada
@@ -85869,6 +85900,9 @@ contando
 calculamos
 concluyen
 construidas
+calculados
+calcule
+constituye
 updated
 un
 universo
@@ -92849,6 +92883,7 @@ uniforme
 utilizadas
 utilizaremos
 utilicen
+utiliz
 Galaxy
 Git
 Gr
@@ -104144,6 +104179,10 @@ Clasificaci
 Caras
 Cuidado
 Cara
+Conviene
+Construir
+Conjuntas
+Contamos
 Instalados
 Instalado
 Instalar
@@ -111106,6 +111145,8 @@ Imponer
 Indicadora
 Insight
 Independientes
+INFINIX
+IDENTIFICACI
 Funci
 File
 Fase
@@ -117197,6 +117238,7 @@ FUNCI
 Faltaban
 Factor
 Fubini
+FINAL
 Estado
 Excalidraw
 EPUBs
@@ -124079,6 +124121,8 @@ ESPACIO
 Esperanzas
 Efectivamente
 Espacio
+Experimento
+Equiprobables
 Obsidian
 OmniSearch
 Ocultar
@@ -130226,6 +130270,7 @@ Obtenga
 Offset
 Obtener
 Otras
+Observa
 Auto
 Annotator
 Autocompletado
@@ -135327,6 +135372,8 @@ Aceptado
 Asumimos
 Asociamos
 Adopta
+Agrupar
+Aleatoria
 push
 pull
 para
@@ -141122,6 +141169,11 @@ piden
 profunda
 parcialmente
 perfectamente
+principios
+preferirse
+proporcionaste
+partirse
+prever
 min
 mica
 movimiento
@@ -148337,6 +148389,9 @@ muestras
 modelar
 muestral
 mejorar
+mantendr
+marginalizaci
+moderada
 YAML
 Ya
 You
@@ -159786,6 +159841,7 @@ Bytes
 Bits
 Below
 Basta
+Binomial
 en
 exacta
 escaneados
@@ -166303,6 +166359,9 @@ extrajo
 estricta
 estudiantes
 enriquecen
+evaluado
+exhaustivo
+evaluamos
 Motor
 Media
 Mantiene
@@ -173773,6 +173832,7 @@ MULTIPLES
 Medhi
 Muestral
 Muchos
+Multivariada
 Lectura
 LaTeX
 Linter
@@ -179821,6 +179881,8 @@ Listo
 Linealidad
 Literatura
 Lanzar
+LCULO
+Lanzamiento
 links
 las
 listar
@@ -185230,6 +185292,7 @@ linealidad
 legal
 lculos
 lanzamientos
+ltiplo
 incluyendo
 im
 instalar
@@ -192790,6 +192853,9 @@ interpretarse
 incluyas
 insight
 incorporarlas
+invalidar
+indistintamente
+interesante
 Dependencia
 Dropbox
 Dataview
@@ -198813,6 +198879,10 @@ Diferenciaci
 Distribuciones
 Deber
 Demuestran
+Debe
+DATOS
+Donde
+Despejamos
 Remotely
 Raz
 Revisa
@@ -205810,6 +205880,10 @@ Reconocer
 Refinan
 Relacionar
 Reflejan
+Repuestos
+RESOLUCI
+RESULTADO
+RESULTADOS
 Hider
 Hace
 Herramientas
@@ -210664,6 +210738,8 @@ Huawei
 Hacerlo
 Hemos
 Hacen
+HUAWEI
+Hipergeom
 filtrar
 formato
 faltantes
@@ -216084,6 +216160,10 @@ finita
 fracci
 frecuencias
 factorizar
+finales
+fundamentado
+finito
+fundamentos
 haya
 hace
 hacer
@@ -236107,6 +236187,7 @@ Utilizamos
 Usamos
 Usaremos
 Utilizar
+UTILIZADAS
 Nombre
 Notas
 No
@@ -242749,6 +242830,7 @@ Negativa
 Narrativa
 Nomenclatura
 Naturaleza
+Nuevamente
 originales
 observatory
 oficial
@@ -249282,6 +249364,8 @@ obtenida
 obtuvieron
 obtienen
 observas
+obtenci
+observar
 junto
 json
 jer
@@ -256404,6 +256488,7 @@ jzRt
 jsnN
 jpvHh
 juntos
+justa
 Qu
 Qui
 Quick
@@ -295469,6 +295554,7 @@ JcREWq
 JHKH
 Jfjx
 Jump
+JUSTIFICACI
 KB
 Kirchhoff
 Ksv

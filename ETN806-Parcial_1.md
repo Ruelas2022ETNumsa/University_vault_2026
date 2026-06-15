@@ -1648,7 +1648,7 @@ e) Determine las desviaciones estándar $\sigma_x$ y $\sigma_y$
 
 La solución es esencialmente correcta, pero para ajustarse al **formulario que me indicaste** haría algunas observaciones importantes.
 
-# Observación 1. Notación
+### Observación 1. Notación
 
 Conviene utilizar siempre
 
@@ -1678,7 +1678,7 @@ $$
 
 ---
 
-# Observación 2. Verificación de las marginales
+### Observación 2. Verificación de las marginales
 
 Después de obtener las marginales es recomendable verificar que son distribuciones válidas.
 
@@ -1708,7 +1708,7 @@ Por tanto ambas marginales son correctas.
 
 ---
 
-# Observación 3. Independencia
+### Observación 3. Independencia
 
 Este es un resultado adicional interesante.
 
@@ -1848,7 +1848,7 @@ $$
 
 ---
 
-# Observación 4. Cálculo de la varianza
+### Observación 4. Cálculo de la varianza
 
 La solución calcula
 
@@ -1890,7 +1890,7 @@ Aunque ambas fórmulas son equivalentes, yo seguiré la del formulario cuando re
 
 ---
 
-# Respuestas finales
+## Respuestas finales
 
 $$  
 \boxed{c=\frac1{28}}  
@@ -1970,6 +1970,349 @@ b) El valor esperado de W.
 c) La probabilidad de $P[W>0]$
 
 ## solucion
+
+La solución es correcta en los resultados finales. Sin embargo, si seguimos estrictamente el **formulario que me proporcionaste**, hay algunos detalles que conviene mejorar para una respuesta de examen universitario.
+
+---
+
+# Observación 1. Cálculo de la constante (c)
+
+El procedimiento es correcto.
+
+Debe partirse de la propiedad
+
+$$  
+\sum_{x\in S_x}  
+\sum_{y\in S_y}  
+P_{X,Y}(x,y)
+=
+1  
+$$
+
+Sustituyendo
+
+$$  
+P_{X,Y}(x,y)
+=
+c|x+y|  
+$$
+
+obtenemos
+
+
+
+$$  
+c  
+\sum_{x\in{-2,0,2}}  
+\sum_{y\in{-1,0,1}}  
+|x+y|
+=
+1  
+$$
+
+La suma total resulta
+
+$$  
+3+2+1+1+0+1+1+2+3
+=
+14  
+$$
+
+por tanto
+
+$$  
+14c=1  
+$$
+
+y
+
+$$  
+\boxed{  
+c=\frac1{14}  
+}  
+$$
+
+Este apartado está perfectamente resuelto.
+
+---
+
+# Observación 2. Distribución de (W=X+2Y)
+
+La forma utilizada es exactamente la adecuada.
+
+Cuando se pide
+
+$$  
+P_W(w)  
+$$
+
+no se calcula mediante marginalización.
+
+Lo correcto es:
+
+1. Construir todos los pares ((x,y)).
+    
+2. Calcular
+    
+
+$$  
+w=x+2y.  
+$$
+
+3. Agrupar los pares que producen el mismo valor de (w).
+    
+4. Sumar sus probabilidades.
+    
+
+La distribución obtenida es:
+
+$$  
+P_W(-4)=\frac3{14}  
+$$
+
+$$  
+P_W(-2)=\frac3{14}  
+$$
+
+$$  
+P_W(0)=\frac2{14}  
+=\frac17  
+$$
+
+$$  
+P_W(2)=\frac3{14}  
+$$
+
+$$  
+P_W(4)=\frac3{14}  
+$$
+
+Verificación:
+
+$$  
+\frac3{14}  
++  
+\frac3{14}  
++  
+\frac2{14}  
++  
+\frac3{14}  
++  
+\frac3{14}
+=
+1  
+$$
+
+por lo que la distribución es válida.
+
+---
+
+# Observación 3. Esperanza de (W)
+
+En tu solución se utilizó
+
+$$  
+E[W]
+=
+\sum_w wP_W(w).  
+$$
+
+Esto es correcto.
+
+Sin embargo, siguiendo literalmente el formulario, también podría escribirse
+
+$$  
+E[W]
+=
+E[G(X,Y)]  
+$$
+
+donde
+
+$$  
+G(X,Y)=X+2Y.  
+$$
+
+Entonces
+
+$$  
+E[W]
+=
+\sum_x  
+\sum_y  
+(x+2y)  
+P_{X,Y}(x,y).  
+$$
+
+Ambos procedimientos producen exactamente el mismo resultado.
+
+Como ya tienes la distribución de (W), el cálculo más corto es:
+
+$$  
+E[W]
+=
+(-4)\frac3{14}  
++  
+(-2)\frac3{14}  
++  
+0\frac2{14}  
++  
+2\frac3{14}  
++  
+4\frac3{14}  
+$$
+
+$$
+=
+\frac{-12-6+0+6+12}{14}  
+$$
+
+$$
+=0
+$$
+
+Por tanto
+
+$$  
+\boxed{E[W]=0}  
+$$
+
+---
+
+# Observación 4. Probabilidad (P(W>0))
+
+El procedimiento también es correcto.
+
+Los únicos valores positivos de (W) son
+
+$$  
+W=2  
+$$
+
+y
+
+$$  
+W=4.  
+$$
+
+Por tanto
+
+$$  
+P(W>0)
+=
+P(W=2)+P(W=4)  
+$$
+
+$$
+=
+\frac3{14}  
++  
+\frac3{14}  
+$$
+
+$$
+=
+\frac6{14}  
+$$
+
+$$
+=
+\frac37.  
+$$
+
+Luego
+
+$$  
+\boxed{  
+P(W>0)=\frac37  
+}  
+$$
+
+---
+
+# Observación 5. Simetría de la distribución
+
+Existe una propiedad interesante que permite prever inmediatamente que
+
+$$  
+E[W]=0.  
+$$
+
+Observa que
+
+$$  
+P_W(-4)=P_W(4),  
+$$
+
+$$  
+P_W(-2)=P_W(2),  
+$$
+
+y
+
+$$  
+P_W(0)=\frac17.  
+$$
+
+La distribución es simétrica respecto de cero.
+
+Por esta razón:
+
+$$  
+E[W]=0.  
+$$
+
+No es necesario usar este argumento en el examen, pero sirve como verificación rápida.
+
+---
+
+# Respuestas finales
+
+### a)
+
+$$  
+\boxed{  
+P_W(-4)=\frac3{14},  
+\quad  
+P_W(-2)=\frac3{14},  
+\quad  
+P_W(0)=\frac17,  
+\quad  
+P_W(2)=\frac3{14},  
+\quad  
+P_W(4)=\frac3{14}  
+}  
+$$
+
+### b)
+
+$$  
+\boxed{  
+E[W]=0  
+}  
+$$
+
+### c)
+
+$$  
+\boxed{  
+P(W>0)=\frac37  
+}  
+$$
+
+con
+
+$$  
+\boxed{  
+c=\frac1{14}  
+}  
+$$
+
+como constante de normalización.
+
+
+
+
 
 # Enunciado del Ejercicio 9 (practica)
 
