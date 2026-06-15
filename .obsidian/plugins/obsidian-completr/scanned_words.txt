@@ -30362,6 +30362,9 @@ dejaba
 disminuye
 delimitada
 delimitan
+discretas
+desviaci
+discreta
 Vault
 Verificar
 Variables
@@ -85722,6 +85725,8 @@ cumpliendo
 cercano
 confundiendo
 condicionada
+costo
+centavos
 updated
 un
 universo
@@ -103982,6 +103987,7 @@ Correlaci
 CONDICIONAL
 Claramente
 Calculando
+Costo
 Instalados
 Instalado
 Instalar
@@ -123901,6 +123907,7 @@ ESPERANZA
 ESTAD
 ESPERADO
 EJERCICIOS
+Esperado
 Obsidian
 OmniSearch
 Ocultar
@@ -140923,6 +140930,8 @@ promediando
 posibles
 proyectar
 proyectada
+presentes
+ponderado
 min
 mica
 movimiento
@@ -148128,6 +148137,7 @@ marcada
 multiplicarlas
 mathbf
 momentos
+mayores
 YAML
 Ya
 You
@@ -198533,6 +198543,7 @@ DENSIDAD
 DESVIACI
 DISTRIBUCI
 Delimita
+Desviaci
 Remotely
 Raz
 Revisa
@@ -235803,6 +235814,7 @@ Usando
 Utiliza
 Utilizamos
 Usamos
+Usaremos
 Nombre
 Notas
 No
