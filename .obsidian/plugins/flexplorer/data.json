@@ -5,7 +5,6 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
-        "ETN806-Parcial_2.md",
         "book 806.md",
         "practica 3 806.md",
         "in_work",
@@ -1009,6 +1008,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "ETN806-Parcial_2.md",
         "contexto806.md",
         "ETN806-2P-E1-Normalizacion-Marginales-Independencia-Probabilidad-region-curva.md",
         "ETN806-2P-E2-Independencia-VAR-suma-cuadrado-unitario.md",
@@ -1279,7 +1279,6 @@
       "customOrder": [
         "TagReport_#e0ac00.md",
         "TagReport_frontmatter_tag_ETN-302.md",
-        "TagReport_frontmatter_tag_ETN806.md",
         "TagReport_frontmatter_tag_Leaves.md",
         "TagReport_frontmatter_tag_Parte_II.md"
       ]
@@ -1289,10 +1288,6 @@
       "isHidden": false
     },
     "_app/TagsRoutes/reports/TagReport_frontmatter_tag_ETN-302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/TagsRoutes/reports/TagReport_frontmatter_tag_ETN806.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -2466,6 +2461,7 @@
     "Borrar": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "borrar00009.md",
         "921_enunciado.md",
@@ -2480,8 +2476,7 @@
         "zborrar111das111.md",
         "P3A.asm",
         "borrarrr2.md"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "Borrar/borrarrr2.md": {
       "isPinned": false,
@@ -2538,6 +2533,7 @@
     "in_work": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "MAT101-Números-reales-y-desigualdades.md",
         "MAT101_T1-Funciones-reales.md",
@@ -2545,8 +2541,7 @@
         "MAT101_T0_0conclaude.md",
         "MAT101T0_transcripcion.md",
         "MAT101-NúmerosT0connotebook.md"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "in_work/MAT101-NúmerosT0connotebook.md": {
       "isPinned": false,
@@ -2580,7 +2575,7 @@
       "isPinned": false,
       "isHidden": false
     },
-    "ETN806-Parcial_2.md": {
+    "Semestres/SEM_08/ETN806/Partial_2/ETN806-Parcial_2.md": {
       "isPinned": false,
       "isHidden": false
     }

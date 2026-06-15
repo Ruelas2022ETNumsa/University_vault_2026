@@ -1219,18 +1219,18 @@ f(x)=0.5(1-x)|BLUE|-1<=x<=1
 >temas: [densidad-condicional, probabilidad-evento, region-triangular, exponencial-bivariada]
 
 Las variables aleatorias $X, Y$ tienen la función de densidad de distribución de probabilidad conjunta que se indica:
-    $$f_{X,Y}(x,y) = \begin{cases} 6e^{-(2x+3y)} & \text{si } x \ge 0, y \ge 0 \\ 0 & \text{en otro caso} \end{cases}$$
-    Determine la función de densidad de distribución condicional $f_{X,Y|A}(x,y)$, sabiendo que $A$ es el evento dado por la expresión $x+y \le 1$ y que la densidad condicional es igual a la densidad conjunta dividida entre la probabilidad del evento $A$ para el rango $(x,y) \in A$.
+$$f_{X,Y}(x,y) = \begin{cases} 6e^{-(2x+3y)} & \text{si } x \ge 0, y \ge 0 \\ 0 & \text{en otro caso} \end{cases}$$
+Determine la función de densidad de distribución condicional $f_{X,Y|A}(x,y)$, sabiendo que $A$ es el evento dado por la expresión $x+y \le 1$ y que la densidad condicional es igual a la densidad conjunta dividida entre la probabilidad del evento $A$ para el rango $(x,y) \in A$.
 
 Para resolver el **Ejercicio E7** de la **Práctica 2**, seguiremos el procedimiento para determinar una función de densidad condicional dado un evento específico $A$, utilizando las propiedades de las funciones de densidad conjunta y el cálculo de probabilidades en regiones del plano.
 
-### 1. Definición de la región y la función
+## 1. Definición de la región y la función
 
 La función de densidad conjunta está dada por $f_{X,Y}(x,y) = 6e^{-(2x+3y)}$ para el primer cuadrante ($x, y \ge 0$). El evento $A$ corresponde a la región triangular delimitada por las desigualdades $x \ge 0, y \ge 0$ y $x+y \le 1$.
 
 Para hallar la densidad condicional, la fórmula establecida es: $$f_{X,Y|A}(x,y) = \frac{f_{X,Y}(x,y)}{P[A]}, \quad \text{si } (x,y) \in A$$ Y es igual a $0$ en cualquier otro caso.
 
-### 2. Cálculo de la probabilidad del evento $A$ ($P[A]$)
+## 2. Cálculo de la probabilidad del evento $A$ ($P[A]$)
 
 La probabilidad del evento $A$ se obtiene integrando la función de densidad conjunta sobre la región triangular descrita:
 
@@ -1246,7 +1246,7 @@ $$P[A] = \int_{0}^{1} \int_{0}^{1-x} 6e^{-(2x+3y)} , dy , dx$$
 > **Corrección:** $e^{x-3}\big|_{x=1} = e^{1-3} = e^{-2}$, por lo que el valor correcto es $-e^{-2} - 2e^{-2} = -3e^{-2}$. El resultado final $P[A]=1-3e^{-2}+2e^{-3}$ era correcto aunque el paso intermedio estaba mal.
     
 
-### 3. Función de densidad condicional final
+## 3. Función de densidad condicional final
 
 Sustituimos el valor de $P[A]$ en la definición de la densidad condicional para obtener el resultado:
 
@@ -1259,7 +1259,7 @@ _Nota: El valor numérico de la constante de normalización es aproximadamente $
 
 ---
 
-### Gráfica en Desmos
+## Gráfica en Desmos
 
 La gráfica representa la región de soporte $A$ (el triángulo) donde la densidad condicional es distinta de cero.
 
@@ -1284,15 +1284,3 @@ y=1-x|BLUE|0<=x<=1
 - **Área sombreada (#a5d8ff):** Representa el dominio del evento $A$ ($x+y \le 1$) donde la variable aleatoria condicionada tiene probabilidad definida.
 - **Líneas Azules:** Son las fronteras que delimitan el triángulo de soporte en el primer cuadrante.
 - **Puntos etiquetados:** Indican los vértices de la región de integración utilizada para calcular $P[A]$.
-
-
-
-
-
-
-
-
-
-
-
-
