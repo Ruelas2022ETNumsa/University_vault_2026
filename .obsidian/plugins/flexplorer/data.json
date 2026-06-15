@@ -5,6 +5,7 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
+        "ETN806-Parcial_2.md",
         "book 806.md",
         "practica 3 806.md",
         "in_work",
@@ -1009,7 +1010,6 @@
       "sortOrder": "custom",
       "customOrder": [
         "contexto806.md",
-        "E1.md",
         "ETN806-2P-E1-Normalizacion-Marginales-Independencia-Probabilidad-region-curva.md",
         "ETN806-2P-E2-Independencia-VAR-suma-cuadrado-unitario.md",
         "ETN806-2P-E3-Marginales-semicirculo-unitario.md",
@@ -1026,10 +1026,6 @@
       ]
     },
     "Semestres/SEM_08/ETN806/Partial_2/contexto806.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_08/ETN806/Partial_2/E1.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -2581,6 +2577,10 @@
       "isHidden": false
     },
     "book 806.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "ETN806-Parcial_2.md": {
       "isPinned": false,
       "isHidden": false
     }

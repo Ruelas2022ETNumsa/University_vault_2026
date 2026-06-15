@@ -19898,6 +19898,8 @@ Seleccionamos
 Sustituyendo
 Simplificando
 SEGUNDO
+STICA
+SUMA
 Plugins
 Pendientes
 Plugin
@@ -25241,6 +25243,7 @@ Procesos
 Planteamos
 PARCIAL
 PRACTICA
+PASOS
 del
 date
 de
@@ -30348,6 +30351,8 @@ dada
 demostramos
 decimales
 despejamos
+dados
+densidades
 Vault
 Verificar
 Variables
@@ -36405,6 +36410,7 @@ Video
 Vale
 Varianza
 VIGILAR
+VARIANZA
 galaxy
 gina
 genes
@@ -66730,6 +66736,7 @@ aproximadamente
 abarcando
 ancha
 acotada
+acumulativa
 related
 recomendados
 ribbon
@@ -73029,6 +73036,7 @@ restante
 reutilizada
 restringe
 ranges
+region
 notes
 notas
 nuevas
@@ -79195,6 +79203,8 @@ neutrinos
 ngase
 normalizar
 nula
+negativa
+normalizacion
 created
 commit
 cada
@@ -85687,6 +85697,7 @@ conjuntas
 concentraci
 conforman
 cruce
+correlacionadas
 updated
 un
 universo
@@ -103937,6 +103948,13 @@ Circular
 COMUNES
 Correcciones
 Conjunta
+CONJUNTA
+COVARIANZA
+Covarianza
+COEFICIENTE
+CORRELACI
+Correlaci
+CONDICIONAL
 Instalados
 Instalado
 Instalar
@@ -110888,6 +110906,7 @@ Integrar
 Igualamos
 Indica
 Integramos
+INDEPENDENCIA
 Funci
 File
 Fase
@@ -116975,6 +116994,7 @@ Filosof
 Finalizaci
 FolderSync
 FORMULARIO
+FUNCI
 Estado
 Excalidraw
 EPUBs
@@ -123848,6 +123868,10 @@ Evento
 Estad
 Extraemos
 ESTOCASTICOS
+ESPERANZA
+ESTAD
+ESPERADO
+EJERCICIOS
 Obsidian
 OmniSearch
 Ocultar
@@ -135088,6 +135112,7 @@ Alerta
 Aprovechando
 Alternativo
 Analice
+ACUMULATIVA
 push
 pull
 para
@@ -148069,6 +148094,7 @@ metodol
 masa
 multiplicada
 marcada
+multiplicarlas
 YAML
 Ya
 You
@@ -166005,6 +166031,7 @@ estad
 exista
 establecidos
 enfoca
+estadistica
 Motor
 Media
 Mantiene
@@ -173467,6 +173494,7 @@ Marginal
 MANEJO
 Mantenemos
 Marginales
+MARGINAL
 Lectura
 LaTeX
 Linter
@@ -179512,6 +179540,7 @@ Limpieza
 Llevar
 LEER
 Listo
+Linealidad
 links
 las
 listar
@@ -192452,6 +192481,7 @@ integrando
 intersectan
 internas
 individualmente
+inferiores
 Dependencia
 Dropbox
 Dataview
@@ -198456,6 +198486,9 @@ Determinaci
 Debemos
 Dada
 Definida
+DENSIDAD
+DESVIACI
+DISTRIBUCI
 Remotely
 Raz
 Revisa
@@ -205440,6 +205473,7 @@ Representa
 Roja
 Realizamos
 Realizar
+RESOLVER
 Hider
 Hace
 Herramientas
@@ -242356,6 +242390,7 @@ None
 Necesitaremos
 Normalizaci
 Note
+NDAR
 originales
 observatory
 oficial
