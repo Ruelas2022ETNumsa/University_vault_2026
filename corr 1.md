@@ -319,13 +319,31 @@ Sumamos las filas para obtener la marginal de $Y$ y las columnas para la margina
 
 #### A. Función de Distribución Conjunta
 
-La tabla presentada en el Paso 3 constituye la función de probabilidad conjunta. Matemáticamente se expresa como: $$P_{X,Y}(x, y) = \begin{cases} 1/8, & (x,y) \in {(0,1), (1,0), (2,1), (3,0)} \ 2/8, & (x,y) \in {(1,1), (2,0)} \ 0, & \text{en otro caso} \end{cases}$$
+La tabla presentada en el Paso 3 constituye la función de probabilidad conjunta. Matemáticamente se expresa como: 
+
+$$P_{X,Y}(x, y) = \begin{cases} 1/8, & (x,y) \in {(0,1), (1,0), (2,1), (3,0)} \ \\
+ \\
+ 2/8, & (x,y) \in {(1,1), (2,0)} \ \\
+ \\
+ 0, & \text{en otro caso} \end{cases}$$
+
+
 
 #### B. Distribuciones Marginales
 
-**Distribución de $X$ (Número total de sellos):** Sigue una **distribución Binomial** con $n=3$ y $p=0.5$: $$P_X(x) = \begin{cases} 1/8, & x=0 \ 3/8, & x=1 \ 3/8, & x=2 \ 1/8, & x=3 \ 0, & \text{otro caso} \end{cases}$$
+**Distribución de $X$ (Número total de sellos):** Sigue una **distribución Binomial** con $n=3$ y $p=0.5$:
 
-**Distribución de $Y$ (Cara en el último lanzamiento):** Sigue una **distribución de Bernoulli** con $p=0.5$: $$P_Y(y) = \begin{cases} 1/2, & y=0 \ 1/2, & y=1 \ 0, & \text{otro caso} \end{cases}$$
+$$P_X(x) = \begin{cases} 1/8, & x=0  \\
+\ 3/8, & x=1 \ \\
+ 3/8, & x=2  \\
+\ 1/8, & x=3  \\
+\ 0, & \text{otro caso} \end{cases}$$
+
+**Distribución de $Y$ (Cara en el último lanzamiento):** Sigue una **distribución de Bernoulli** con $p=0.5$: 
+
+$$P_Y(y) = \begin{cases} 1/2, & y=0  \\
+\ 1/2, & y=1 \ \\
+ 0, & \text{otro caso} \end{cases}$$
 
 ---
 
