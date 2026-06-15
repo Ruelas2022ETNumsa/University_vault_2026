@@ -5,6 +5,7 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
+        "book 806.md",
         "practica 3 806.md",
         "in_work",
         "Borrar",
@@ -2576,6 +2577,10 @@
       "isHidden": false
     },
     "practica 3 806.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "book 806.md": {
       "isPinned": false,
       "isHidden": false
     }
