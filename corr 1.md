@@ -193,7 +193,8 @@ De acuerdo con el formulario de la materia y los textos de referencia, las fórm
 
 **Paso 3: Realizar el desarrollo algebraico de la integración.** Extraemos la constante $\frac{2}{\pi}$ de la integral y evaluamos: $$f_X(x) = \frac{2}{\pi} \left[ y \right]_{0}^{\sqrt{1 - x^2}}$$ $$f_X(x) = \frac{2}{\pi} \left( \sqrt{1 - x^2} - 0 \right)$$
 
-**Resultado final de $f_X(x)$:** $$\boxed{f_X(x) = \begin{cases} \frac{2\sqrt{1 - x^2}}{\pi}, & \text{si } -1 \le x \le 1 \ 0, & \text{en otro caso} \end{cases}}$$
+**Resultado final de $f_X(x)$:** $$\boxed{f_X(x) = \begin{cases} \frac{2\sqrt{1 - x^2}}{\pi}, & \text{si } -1 \le x \le 1 \ \\
+ 0, & \text{en otro caso} \end{cases}}$$
 
 ---
 
@@ -205,7 +206,8 @@ De acuerdo con el formulario de la materia y los textos de referencia, las fórm
 
 **Paso 3: Realizar el desarrollo algebraico de la integración.** $$f_Y(y) = \frac{2}{\pi} \left[ x \right]_{-\sqrt{1 - y^2}}^{\sqrt{1 - y^2}}$$ Sustituimos los límites: $$f_Y(y) = \frac{2}{\pi} \left( \sqrt{1 - y^2} - (-\sqrt{1 - y^2}) \right)$$ $$f_Y(y) = \frac{2}{\pi} \left( \sqrt{1 - y^2} + \sqrt{1 - y^2} \right)$$ $$f_Y(y) = \frac{2}{\pi} \left( 2\sqrt{1 - y^2} \right)$$
 
-**Resultado final de $f_Y(y)$:** $$\boxed{f_Y(y) = \begin{cases} \frac{4\sqrt{1 - y^2}}{\pi}, & \text{si } 0 \le y \le 1 \ 0, & \text{en otro caso} \end{cases}}$$
+**Resultado final de $f_Y(y)$:** $$\boxed{f_Y(y) = \begin{cases} \frac{4\sqrt{1 - y^2}}{\pi}, & \text{si } 0 \le y \le 1  \\
+\ 0, & \text{en otro caso} \end{cases}}$$
 
 ---
 
