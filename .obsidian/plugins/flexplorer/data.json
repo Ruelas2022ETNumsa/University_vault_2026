@@ -5,6 +5,9 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
+        "corr2.md",
+        "corr 1.md",
+        "corr.md",
         "ETN806-Parcial_1.md",
         "Untitled.md",
         "book 806.md",
@@ -2682,6 +2685,18 @@
       "isHidden": false
     },
     "ETN806-Parcial_1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "corr.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "corr 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "corr2.md": {
       "isPinned": false,
       "isHidden": false
     }
