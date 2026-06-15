@@ -5,6 +5,8 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
+        "ETN806-Parcial_1.md",
+        "Untitled.md",
         "book 806.md",
         "practica 3 806.md",
         "in_work",
@@ -1001,7 +1003,27 @@
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
-      "customOrder": []
+      "customOrder": [
+        "E3a.md",
+        "E2b.md",
+        "E2Aa.md",
+        "ETN806-P1-E1.md",
+        "10b.md",
+        "10a.md",
+        "9b.md",
+        "9a.md",
+        "8b.md",
+        "8a.md",
+        "7b.md",
+        "7a.md",
+        "6b.md",
+        "6a.md",
+        "5b.md",
+        "5a.md",
+        "4b.md",
+        "4a.md",
+        "E3b.md"
+      ]
     },
     "Semestres/SEM_08/ETN806/Partial_2": {
       "isPinned": false,
@@ -2576,6 +2598,90 @@
       "isHidden": false
     },
     "Semestres/SEM_08/ETN806/Partial_2/ETN806-Parcial_2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08/ETN806/Partial_1/E3b.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08/ETN806/Partial_1/4a.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08/ETN806/Partial_1/4b.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08/ETN806/Partial_1/5a.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08/ETN806/Partial_1/5b.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08/ETN806/Partial_1/6a.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08/ETN806/Partial_1/6b.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08/ETN806/Partial_1/7a.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08/ETN806/Partial_1/7b.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08/ETN806/Partial_1/8a.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08/ETN806/Partial_1/8b.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08/ETN806/Partial_1/9a.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08/ETN806/Partial_1/9b.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08/ETN806/Partial_1/10a.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08/ETN806/Partial_1/10b.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08/ETN806/Partial_1/E2Aa.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08/ETN806/Partial_1/E2b.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08/ETN806/Partial_1/E3a.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08/ETN806/Partial_1/ETN806-P1-E1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "ETN806-Parcial_1.md": {
       "isPinned": false,
       "isHidden": false
     }

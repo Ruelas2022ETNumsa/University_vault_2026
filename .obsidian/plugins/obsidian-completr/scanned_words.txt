@@ -6085,6 +6085,7 @@ tabaco
 transici
 tasa
 traiga
+telef
 ToDo
 Templater
 Text
@@ -19901,6 +19902,7 @@ SEGUNDO
 STICA
 SUMA
 Separamos
+STICAMENTE
 Plugins
 Pendientes
 Plugin
@@ -30365,6 +30367,8 @@ delimitan
 discretas
 desviaci
 discreta
+distribuciones
+desviaciones
 Vault
 Verificar
 Variables
@@ -36423,6 +36427,7 @@ Vale
 Varianza
 VIGILAR
 VARIANZA
+VARIABLES
 galaxy
 gina
 genes
@@ -54466,6 +54471,7 @@ semiplano
 semicircunferencia
 sabiendo
 sombreamos
+sellos
 vault
 vil
 ver
@@ -66754,6 +66760,7 @@ acotada
 acumulativa
 alerta
 asumiremos
+aleatorio
 related
 recomendados
 ribbon
@@ -73057,6 +73064,8 @@ region
 respectivos
 reemplaz
 redundantes
+rechazado
+rechazos
 notes
 notas
 nuevas
@@ -85727,6 +85736,12 @@ confundiendo
 condicionada
 costo
 centavos
+cobra
+coeficiente
+correlaci
+correlacionados
+consiste
+caras
 updated
 un
 universo
@@ -103988,6 +104003,10 @@ CONDICIONAL
 Claramente
 Calculando
 Costo
+Considere
+Cual
+Cuales
+Calcule
 Instalados
 Instalado
 Instalar
@@ -110941,6 +110960,7 @@ Indica
 Integramos
 INDEPENDENCIA
 Indican
+INDEPENDIENTES
 Funci
 File
 Fase
@@ -123908,6 +123928,7 @@ ESTAD
 ESPERADO
 EJERCICIOS
 Esperado
+ESPACIO
 Obsidian
 OmniSearch
 Ocultar
@@ -135150,6 +135171,7 @@ Alternativo
 Analice
 ACUMULATIVA
 Azules
+ALEATORIAS
 push
 pull
 para
@@ -166082,6 +166104,9 @@ estaba
 especificada
 eliminaron
 establecida
+experimento
+expresadas
+esperados
 Motor
 Media
 Mantiene
@@ -173547,6 +173572,8 @@ Marginales
 MARGINAL
 Marcan
 Momentos
+MUESTRAL
+MULTIPLES
 Lectura
 LaTeX
 Linter
@@ -184997,6 +185024,7 @@ logo
 llegadas
 lavado
 linealmente
+lanzamiento
 incluyendo
 im
 instalar
@@ -192535,6 +192563,7 @@ intersectan
 internas
 individualmente
 inferiores
+integrados
 Dependencia
 Dropbox
 Dataview
@@ -198544,6 +198573,8 @@ DESVIACI
 DISTRIBUCI
 Delimita
 Desviaci
+DISCRETAS
+Demostrar
 Remotely
 Raz
 Revisa
@@ -205531,6 +205562,7 @@ Realizar
 RESOLVER
 Representamos
 Restando
+RANGO
 Hider
 Hace
 Herramientas
@@ -215796,6 +215828,8 @@ faltaban
 fixed
 finalmente
 factorizable
+fonos
+finita
 haya
 hace
 hacer
@@ -248978,6 +249012,7 @@ octeto
 operando
 olvidar
 obtenidas
+obtenidos
 junto
 json
 jer
