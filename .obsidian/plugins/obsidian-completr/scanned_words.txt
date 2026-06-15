@@ -6081,6 +6081,9 @@ terminador
 terminaran
 transfiere
 trata
+tabaco
+transici
+tasa
 ToDo
 Templater
 Text
@@ -12931,6 +12934,8 @@ Tratamiento
 TABLET
 Triple
 Traza
+TEOR
+Tiempo
 Sistema
 Sync
 Save
@@ -19884,6 +19889,8 @@ Subred
 Semestres
 Sobrescribir
 Secundario
+STICOS
+Suponiendo
 Plugins
 Pendientes
 Plugin
@@ -25218,6 +25225,9 @@ Planteamiento
 Principal
 Pares
 Puntero
+PROCESOS
+Poisson
+Probabilidad
 del
 date
 de
@@ -30307,6 +30317,12 @@ dispositivo
 definitiva
 detiene
 deposita
+departamento
+dejen
+desplazamientos
+desplaz
+duerme
+determine
 Vault
 Verificar
 Variables
@@ -47608,6 +47624,9 @@ binario
 bucle
 basura
 bits
+brica
+bolas
+banco
 scope
 status
 selector
@@ -54383,6 +54402,7 @@ subiendo
 symlinks
 sido
 seguridad
+selecciona
 vault
 vil
 ver
@@ -60873,6 +60893,9 @@ validado
 validaci
 validar
 ventajas
+viajar
+viajante
+ventanilla
 audience
 activo
 auto
@@ -66644,6 +66667,10 @@ avanza
 alcance
 acumulador
 accesos
+adquirir
+azar
+atender
+autos
 related
 recomendados
 ribbon
@@ -72932,6 +72959,8 @@ removidos
 reconocidas
 reservadas
 retorna
+ritmo
+remolque
 notes
 notas
 nuevas
@@ -79095,6 +79124,7 @@ numero
 novecientos
 nueve
 neutrinos
+ngase
 created
 commit
 cada
@@ -85560,6 +85590,17 @@ colateral
 contamina
 cascada
 complemento
+compra
+comprar
+compren
+compraron
+cara
+comercial
+ciudades
+ciudad
+clientes
+cajero
+colocan
 updated
 un
 universo
@@ -92533,6 +92574,8 @@ utilice
 ustedes
 unidireccionales
 unidireccional
+urna
+utilizaci
 Galaxy
 Git
 Gr
@@ -103791,6 +103834,10 @@ Celular
 Cuenta
 Clasificador
 Constante
+CTICA
+CADENA
+COLAS
+Calcular
 Instalados
 Instalado
 Instalar
@@ -123682,6 +123729,7 @@ Escritorio
 Encendido
 Exclusiones
 Equal
+ESTOC
 Obsidian
 OmniSearch
 Ocultar
@@ -140673,6 +140721,16 @@ pares
 progresiva
 pila
 programas
+poblaci
+pase
+pasen
+pintar
+pintada
+pintamos
+probabilidades
+pernocta
+paguen
+promedio
 min
 mica
 movimiento
@@ -147867,6 +147925,9 @@ migra
 megaignore
 multicast
 mutuamente
+mercado
+meses
+moneda
 YAML
 Ya
 You
@@ -165795,6 +165856,9 @@ eliminaciones
 exclusiva
 empiezan
 excluyentes
+estudios
+estima
+ensamble
 Motor
 Media
 Mantiene
@@ -173250,6 +173314,9 @@ Mega
 Migraci
 Mensajes
 Modelo
+MARKOV
+Modele
+Markov
 Lectura
 LaTeX
 Linter
@@ -184694,6 +184761,8 @@ loopback
 laptop
 llamadas
 logo
+llegadas
+lavado
 incluyendo
 im
 instalar
@@ -192219,6 +192288,7 @@ icono
 informa
 inicializa
 iteraci
+individuos
 Dependencia
 Dropbox
 Dataview
@@ -215445,6 +215515,9 @@ finalizaci
 fijarla
 fusionado
 flags
+fuman
+fumador
+fumar
 haya
 hace
 hacer
@@ -221201,6 +221274,8 @@ hover
 hist
 hardware
 hubiera
+habitantes
+hospital
 que
 quedan
 queda
@@ -228212,6 +228287,8 @@ qbt
 quyw
 quemar
 quedaron
+quienes
+quince
 University
 Usar
 Un
