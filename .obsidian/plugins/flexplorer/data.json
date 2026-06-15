@@ -5,58 +5,18 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
+        "practica 3 806.md",
+        "in_work",
+        "Borrar",
         "README.md",
-        "921_enunciado.md",
-        "borrar00009.md",
-        "borrarrr2.md",
         "Rubbish",
-        "zborrar111das111.md",
-        "zborrar903 3 arquietxtura.md",
-        "P3A.asm",
-        "zborrar903_3gemino.md",
-        "zborrar903_3 otro.md",
-        "zborrar1111111111111.md",
-        "zborrar903 3.md",
-        "zborrar903 2.md",
-        "zborrar903.md",
         "MOC",
-        "zborrar921_enunciado.md",
-        "MAT101-Números-reales-y-desigualdades.md",
-        "MAT101-NúmerosT0connotebook.md",
-        "MAT101T0_transcripcion.md",
-        "MAT101_T0_0conclaude.md",
-        "MAT101_T0_1enriquezido.md",
-        "MAT101_T1-Funciones-reales.md",
         "Semesters",
         "Semestres",
         "_app",
         "_PDF",
         "_templates"
       ]
-    },
-    "MAT101-Números-reales-y-desigualdades.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "MAT101-NúmerosT0connotebook.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "MAT101T0_transcripcion.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "MAT101_T0_0conclaude.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "MAT101_T0_1enriquezido.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "MAT101_T1-Funciones-reales.md": {
-      "isPinned": false,
-      "isHidden": false
     },
     "Semesters": {
       "isPinned": false,
@@ -2455,58 +2415,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "P3A.asm": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "zborrar921_enunciado.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "zborrar903.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "zborrar903_3gemino.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "zborrar1111111111111.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "zborrar903_3 otro.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "zborrar111das111.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "zborrar903 2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "zborrar903 3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "zborrar903 3 arquietxtura.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "921_enunciado.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "borrar00009.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "borrarrr2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Rubbish": {
       "isPinned": false,
       "isHidden": false,
@@ -2555,6 +2463,119 @@
       "isHidden": false
     },
     "README.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Borrar": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "borrar00009.md",
+        "921_enunciado.md",
+        "zborrar1111111111111.md",
+        "zborrar921_enunciado.md",
+        "zborrar903_3gemino.md",
+        "zborrar903_3 otro.md",
+        "zborrar903.md",
+        "zborrar903 3.md",
+        "zborrar903 3 arquietxtura.md",
+        "zborrar903 2.md",
+        "zborrar111das111.md",
+        "P3A.asm",
+        "borrarrr2.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "Borrar/borrarrr2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Borrar/P3A.asm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Borrar/zborrar111das111.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Borrar/zborrar903 2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Borrar/zborrar903 3 arquietxtura.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Borrar/zborrar903 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Borrar/zborrar903.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Borrar/zborrar903_3 otro.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Borrar/zborrar903_3gemino.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Borrar/zborrar921_enunciado.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Borrar/zborrar1111111111111.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Borrar/921_enunciado.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Borrar/borrar00009.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "in_work": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "MAT101-Números-reales-y-desigualdades.md",
+        "MAT101_T1-Funciones-reales.md",
+        "MAT101_T0_1enriquezido.md",
+        "MAT101_T0_0conclaude.md",
+        "MAT101T0_transcripcion.md",
+        "MAT101-NúmerosT0connotebook.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "in_work/MAT101-NúmerosT0connotebook.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "in_work/MAT101T0_transcripcion.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "in_work/MAT101_T0_0conclaude.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "in_work/MAT101_T0_1enriquezido.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "in_work/MAT101_T1-Funciones-reales.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "in_work/MAT101-Números-reales-y-desigualdades.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "practica 3 806.md": {
       "isPinned": false,
       "isHidden": false
     }
