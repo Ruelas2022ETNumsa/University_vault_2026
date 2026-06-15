@@ -253,34 +253,177 @@ Para hallar el coeficiente, necesitamos la covarianza y las desviaciones estánd
 **Resultado Final:** El **coeficiente de correlación** se calcula como: $$\rho_{XY} = \frac{Cov(X, Y)}{\sigma_X \sigma_Y} = \frac{-9/56}{\sqrt{(45/112)(9/28)}} = -\frac{1}{\sqrt{5}} \approx \mathbf{-0.4472}$$ _(Nota: Aunque el cálculo matemático exacto da $-1/\sqrt{5}$, una de las fuentes proporciona como respuesta final $-1/5$, lo cual podría deberse a un redondeo o error tipográfico en dicho texto)._
 
 
-# PRACTICA N°1
+# PRACTICA N°1 (VARIABLES ALEATORIAS DISCRETAS MULTIPLES)
 
-# PROCESOS ESTOCASTICOS
+# Enunciado del Ejercicio 1 (practica)
 
-# VARIABLES ALEATORIAS DISCRETAS MULTIPLES
+ Una compañía de teléfonos cobra 20 centavos por llamada de voz y 30 centavos por una llamada de fax; si la variable aleatoria C representa el costo de una llamada telefónica y la probabilidad de que una llamada de voz $P[V]=0.6$ y que sea de fax $P[F]=0.4$ determine:
+a) La distribución de probabilidad de la variable C
+b) El valor esperado y la desviación estándar de C
 
-1. Una compañía de teléfonos cobra 20 centavos por llamada de voz y 30 centavos por una llamada de fax; si la variable aleatoria C representa el costo de una llamada telefónica y la probabilidad de que una llamada de voz $P[V]=0.6$ y que sea de fax $P[F]=0.4$ determine:
-    a) La distribución de probabilidad de la variable C
-    b) El valor esperado y la desviación estándar de C
+## solución
 
-2. Considere una variable aleatoria X y una combinación lineal de esta:
-    $Y=aX+b$.
-    Calcular el coeficiente de correlación lineal de "X" y "Y".
 
-3. Sean "X" y "Y" variables aleatorias discretas, con esperanza finita. Demostrar la siguiente igualdad
+### a) Distribución de probabilidad de la variable C
+
+#### Definición de la variable aleatoria
+
+La variable aleatoria (C) representa el costo de una llamada.
+Los posibles valores que puede tomar son:
+$$S_C=\{20,30\}$$
+
+donde:
+
+* (C=20) si la llamada es de voz.
+* (C=30) si la llamada es de fax.
+
+Por lo tanto:
+
+$$P(C=20)=0.6$$
+
+$$P(C=30)=0.4$$
+
+
+La distribución de probabilidad queda:
+
+| (c) | (P(C=c)) |
+| --- | -------- |
+| 20  | 0.6      |
+| 30  | 0.4      |
+
+### Verificación
+
+Comprobamos que la suma de probabilidades es 1:
+$$0.6+0.4=1$$
+
+Por lo tanto, la distribución es válida.
+
+
+### b) Valor esperado y desviación estándar
+
+#### Paso 1: Calcular el valor esperado (E[C])
+
+Según el formulario:
+
+$$E[C]=\mu_C=\sum_{c\in S_C} cP_C(c)$$
+
+Sustituyendo los valores:
+$$E[C]=(20)(0.6)+(30)(0.4)$$
+
+Realizando las multiplicaciones:
+$$E[C]=12+12$$
+
+Finalmente:
+$$\boxed{E[C]=24}$$
+
+Por lo tanto, el costo promedio de una llamada es:
+$$\boxed{24\text{ centavos}}$$
+
+
+---
+
+#### Paso 2: Calcular la varianza (VAR[C])
+
+Según el formulario:
+$$VAR[C]=\sum_{c\in S_C}(c-\mu_C)^2P_C(c)$$
+
+Como ya conocemos que:
+$$\mu_C=24$$
+sustituimos:
+$$VAR[C]=(20-24)^2(0.6)+(30-24)^2(0.4)$$
+
+
+Calculamos cada término por separado.
+
+##### Para (c=20)
+$$(20-24)^2(0.6)$$
+
+$$(-4)^2(0.6)$$
+$$16(0.6)$$
+
+$$9.6$$
+##### Para (c=30)
+$$(30-24)^2(0.4)$$
+$$6^2(0.4)$$
+
+$$36(0.4)$$
+
+$$14.4$$
+
+
+##### Sumando ambos resultados
+$$VAR[C]=9.6+14.4$$
+$$\boxed{VAR[C]=24}$$
+
+
+#### 2\. Varianza ($\\sigma^2$)
+
+Para hallar la desviación estándar, primero debemos calcular la varianza. Usaremos la fórmula simplificada:$$\\sigma^2 \= E(C^2) \- E(C)^2$$ 8-10
+
+* **Paso 1: Calcular $E(C^2)$**  
+* $EC^2 \= (20^2 \\cdot 0.6) \+ (30^2 \\cdot 0.4)$  
+* $EC^2 \= (400 \\cdot 0.6) \+ (900 \\cdot 0.4)$  
+* $EC^2 \= 240 \+ 360 \= 600$  
+* **Paso 2: Aplicar la fórmula de varianza**  
+* $\\sigma^2 \= 600 \- (24)^2$  
+* $\\sigma^2 \= 600 \- 576$  
+* **$\\sigma^2 \= 24$**
+
+#### 3\. Desviación estándar ($\\sigma$)
+
+La desviación estándar es la raíz cuadrada positiva de la varianza 11-13.
+
+* $\\sigma \= \\sqrt{24}$  
+* **$\\sigma \\approx 4.899$ centavos**
+
+**Resumen de resultados:**
+
+* **Distribución**: $P(C=20)=0.6$ y $P(C=30)=0.4$.  
+* **Valor Esperado**: 24 centavos.  
+* **Desviación Estándar**: 4.899 centavos.
+
+
+
+
+
+# Enunciado del Ejercicio 2 (practica)
+
+Considere una variable aleatoria X y una combinación lineal de esta:
+$Y=aX+b$.
+Calcular el coeficiente de correlación lineal de "X" y "Y".
+
+## solucion
+
+# Enunciado del Ejercicio 3 (practica)
+
+Sean "X" y "Y" variables aleatorias discretas, con esperanza finita. Demostrar la siguiente igualdad
 $$  
 E[E[Y/X]]=E[Y]  
 $$
 
-4. Sean $X_1$ y $X_2$ dos variables aleatorias independientes. Sean $Y_1=X_1-X_2$ y $Y_2=X_1+X_2$. Hallar la condición que deben cumplir $X_1$ y $X_2$ para qué $Y_1$ y $Y_2$ sean no correlacionados.
+## solucion
 
-5. Un experimento aleatorio consiste en probar dos circuitos integrados, uno tras otro; en cada prueba la probabilidad de que el circuito sea rechazado es "p". Sea X el numero de rechazos (ya sea 0 o 1) en la primera prueba y sea Y el numero de rechazos en la segunda prueba. Determine la función de distribución de probabilidad conjunta de "X" y "Y"; la función de correlación entre las variables y el valor esperado de la suma, es decir $E[X+Y]$
+# Enunciado del Ejercicio 4 (practica)
 
-6. Un experimento aleatorio consiste en el lanzamiento de una moneda 3 veces, si se define la variable aleatoria X como el numero total de sellos obtenidos y la variable aleatoria Y como el número de caras obtenidas en el último lanzamiento, encontrar la función de distribución de probabilidad conjunta y las distribuciones marginales todas expresadas en forma de lista.
-    
-7. Las variables "X" y "Y" tiene la distribución de probabilidad conjunta dada por
-    
+Sean $X_1$ y $X_2$ dos variables aleatorias independientes. Sean $Y_1=X_1-X_2$ y $Y_2=X_1+X_2$. Hallar la condición que deben cumplir $X_1$ y $X_2$ para qué $Y_1$ y $Y_2$ sean no correlacionados.
 
+## solucion
+
+# Enunciado del Ejercicio 5 (practica)
+
+Un experimento aleatorio consiste en probar dos circuitos integrados, uno tras otro; en cada prueba la probabilidad de que el circuito sea rechazado es "p". Sea X el numero de rechazos (ya sea 0 o 1) en la primera prueba y sea Y el numero de rechazos en la segunda prueba. Determine la función de distribución de probabilidad conjunta de "X" y "Y"; la función de correlación entre las variables y el valor esperado de la suma, es decir $E[X+Y]$
+
+## solucion
+
+# Enunciado del Ejercicio 6 (practica)
+
+Un experimento aleatorio consiste en el lanzamiento de una moneda 3 veces, si se define la variable aleatoria X como el numero total de sellos obtenidos y la variable aleatoria Y como el número de caras obtenidas en el último lanzamiento, encontrar la función de distribución de probabilidad conjunta y las distribuciones marginales todas expresadas en forma de lista.
+
+## solucion
+
+# Enunciado del Ejercicio 7 (practica)
+
+Las variables "X" y "Y" tiene la distribución de probabilidad conjunta dada por
 $$  
 P_{X,Y}(x,y)=  
 \begin{cases}  
@@ -295,32 +438,27 @@ c) Cuales son las probabilidades marginales
 d) Calcule los valores esperados $E[X]$ y $E[Y]$
 e) Determine las desviaciones estándar $\sigma_x$ y $\sigma_y$
 
-8. Las variables aleatorias "X" y "Y" tiene distribución de probabilidad conjunta dada por $P_{X,Y}(x,y)=c|x+y|$ para $x=-2,0,2$ ;  $y=-1,0,1$ y $P_{X,Y}(x,y)=0$ para otro caso.
+## solucion
+
+# Enunciado del Ejercicio 8 (practica)
+
+Las variables aleatorias "X" y "Y" tiene distribución de probabilidad conjunta dada por $P_{X,Y}(x,y)=c|x+y|$ para $x=-2,0,2$ ;  $y=-1,0,1$ y $P_{X,Y}(x,y)=0$ para otro caso.
 
 a) Calcular la función de distribución de probabilidad de $P_w(w)$ cuándo $W=X+2Y$
 b) El valor esperado de W.
 c) La probabilidad de $P[W>0]$
 
-9. Determinar la función de probabilidad conjunta de las variables aleatorias A y B, la función de distribución de probabilidad condicional
-    
+## solucion
 
-$$  
-P_{A/B}(a/0)  
-$$
+# Enunciado del Ejercicio 9 (practica)
 
-cuando $B=0$ y calcular la
-
-$$  
-COV[A,B]  
-$$
-
-sabiendo que la función de distribución de probabilidad de la variable aleatoria A y la función de distribución de probabilidad condicional de B dado A son:
+Determinar la función de probabilidad conjunta de las variables aleatorias A y B, la función de distribución de probabilidad condicional $P_{A/B}(a/0)$ cuando $B=0$ y calcular la $COV[A,B]$ sabiendo que la función de distribución de probabilidad de la variable aleatoria A y la función de distribución de probabilidad condicional de B dado A son:
 
 $$  
 P_A(a)=  
-\begin{cases}  
-0.4 & ;a=0\  
-0.6 & ;a=2\  
+\begin{cases}
+0.4 & ;a=0\   \\
+0.6 & ;a=2\   \\
 0 & ;\text{en otro caso}  
 \end{cases}  
 $$
@@ -328,33 +466,32 @@ $$
 $$  
 P_{B/A}(b/0)=  
 \begin{cases}  
-0.8 & ;b=0\  
-0.2 & ;b=1\  
-0 & ;\text{en otro caso}  
+0.8 & ;b=0\   \\
+0.2 & ;b=1\   \\
+0 & ;\text{en otro caso} 
 \end{cases}  
 $$
 
 $$  
 P_{B/A}(b/2)=  
 \begin{cases}  
-0.5 & ;b=0\  
-0.5 & ;b=1\  
+0.5 & ;b=0\   \\
+0.5 & ;b=1\   \\
 0 & ;\text{en otro caso}  
 \end{cases}  
 $$
 
-10. La función de probabilidad conjunta para dos variables aleatorias "X" y "Y" esta dada por la matriz que se indica a continuación; determine el valor esperado condicional
-    
+## solucion
 
-$$  
-E[X/Y=y]  
-$$
+# Enunciado del Ejercicio 10 (practica)
 
-para cada valor de Y.
+La función de probabilidad conjunta para dos variables aleatorias "X" y "Y" esta dada por la matriz que se indica a continuación; determine el valor esperado condicional $E[X/Y=y]$ para cada valor de Y.
 
-|$P_{X,Y}(x,y)$|$y=0$|$y=1$|$y=2$|
-|---|--:|--:|--:|
-|$x=0$|0.01|0|0|
-|$x=1$|0.09|0.09|0|
-|$x=2$|0|0|0.81|
+| $P_{X,Y}(x,y)$ | $y=0$ | $y=1$ | $y=2$ |
+| -------------- | ----: | ----: | ----: |
+| $x=0$          |  0.01 |     0 |     0 |
+| $x=1$          |  0.09 |  0.09 |     0 |
+| $x=2$          |     0 |     0 |  0.81 |
+
+## solucion
 
