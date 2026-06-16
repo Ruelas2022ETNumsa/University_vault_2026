@@ -68,46 +68,51 @@ $\pi(1) = \text{vector de probabilidades de estado para tres tiendas en el perio
 
 También debería observarse que las probabilidades en el vector de estado para las tres tiendas de abarrotes representan la **participación en el mercado para las mismas en el primer periodo**. Así, en el periodo 1 American Food tiene 40% el mercado; Food Mart 30%; y Atlas Foods 30%. Cuando se trata de participación en el mercado, estos se pueden utilizar en vez de los valores de probabilidad.
 
-- American Food $\#1$ (0.4)
-	- 0.8
-- American Mart $\#2$ (0.3)
-- Atlas Foods $\#3$ (0.3)
-
-
-
-
+##### American Food $\#1$ (0.4)
 En este ejemplo, se realizó un estudio para determinar la lealtad de los clientes. Se determinó que 80% de los clientes que compran en American Food un mes regresarán a esa tienda el siguiente. Del otro 20% de sus clientes, 10% cambia a Food Mart y 10% a Atlas Foods en su siguiente compra.
+###### Multiplicando el porcentaje en decimal del estudio por el porcentaje inicial.
 
-##### Multiplicando el porcentaje en decimal del estudio por el porcentaje inicial.
+Multiplicando: 
+0.8 (0.4) = 0.32
+0.1 (0.4) = 0.04
+0.1 (0.4) = 0.04
+
+##### American Mart $\#2$ (0.3)
+En Food Mart, 70% regresan, 10% cambia a American Food y 20% a Atlas Foods.
+
+###### Multiplicando el porcentaje en decimal del estudio por el porcentaje inicial.
 
 Multiplicando: 
 0.3 (0.1) = 0.03
 0.3 (0.7) = 0.21
 0.3 (0.2) = 0.06
 
-##### En Food Mart, 70% regresan, 10% cambia a American Food y 20% a Atlas Foods.
+##### Atlas Foods $\#3$ (0.3)
 
-##### De los clientes que compran este mes en Atlas Foods, 60% regresan, pero 20% cambiará a American Food y 20% a Food Mart.
+De los clientes que compran este mes en Atlas Foods, 60% regresan, pero 20% cambiará a American Food y 20% a Food Mart.
 
-##### Multiplicando: 0.3 (0.2) = 0.06; 0.3 (0.2) = 0.06; 0.3 (0.6) = 0.18
+###### Multiplicando el porcentaje en decimal del estudio por el porcentaje inicial.
+
+Multiplicando: 
+0.3 (0.2) = 0.06
+0.3 (0.2) = 0.06
+0.3 (0.6) = 0.18
+
+##### **CONCLUYENDO**
+
+La participación de mercado de 40% para American Food este mes, 32% regresa, 4% compra en Food Mart y 4% compra en Atlas Foods.
+
+Para encontrar la participación de mercado de American el siguiente mes, sumamos este 32% de clientes que regresan mas el 3% de quienes vienen de Food Mart mas el 6% de quienes vienen de Atlas Foods.
+
+**Entonces, American Food tendrá 41% del mercado el próximo mes.**
 
 ---
 
-### **Página 5**
+## **MATRIZ DE PROBABILIDADES DE TRANSICIÓN**
 
-# **CONCLUYENDO**
+>**La matriz de probabilidades de transición nos permite ir de un estado a actual a un estado futuro.**
 
-##### la participación de mercado de 40% para American Food este mes, 32% regresa, 4% compra en Food Mart y 4% compra en Atlas Foods.
-
-##### Para encontrar la participación de mercado de American el siguiente mes, sumamos este 32% de clientes que regresan mas el 3% de quienes vienen de Food Mart mas el 6% de quienes vienen de Atlas Foods.
-
-##### Entonces, American Food tendrá 41% del mercado el próximo mes.
-
-# **MATRIZ DE PROBABILIDADES DE TRANSICIÓN**
-
-##### **La matriz de probabilidades de transición nos permite ir de un estado a actual a un estado futuro.**
-
-##### **Sea Pij = Probabilidad condicional de estar en el estado j en el futuro, dado que el estado actual es i**
+**Sea $P_ij = Probabilidad condicional de estar en el estado j en el futuro, dado que el estado actual es i$**
 
 ##### _Por ejemplo, $P_{12}$ es la probabilidad de estar en el estado 2 en el futuro, dado que el evento estaba en el estado 1 en el periodo anterior._
 
