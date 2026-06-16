@@ -5,12 +5,7 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
-        "RUELAS_recu.pdf",
-        "corr2.md",
-        "corr 1.md",
-        "corr.md",
-        "ETN806-Parcial_1.md",
-        "Untitled.md",
+        "ANÁLISIS DE MARKOV.md",
         "book 806.md",
         "practica 3 806.md",
         "in_work",
@@ -2561,6 +2556,11 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "corr.md",
+        "corr 1.md",
+        "Untitled.md",
+        "ETN806-Parcial_1.md",
+        "corr2.md",
         "MAT101-Números-reales-y-desigualdades.md",
         "MAT101_T1-Funciones-reales.md",
         "MAT101_T0_1enriquezido.md",
@@ -2602,10 +2602,6 @@
       "isHidden": false
     },
     "Semestres/SEM_08/ETN806/Partial_2/ETN806-Parcial_2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Untitled.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -2685,23 +2681,27 @@
       "isPinned": false,
       "isHidden": false
     },
-    "ETN806-Parcial_1.md": {
+    "in_work/corr2.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "corr.md": {
+    "in_work/ETN806-Parcial_1.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "corr 1.md": {
+    "in_work/Untitled.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "corr2.md": {
+    "in_work/corr 1.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "RUELAS_recu.pdf": {
+    "in_work/corr.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "ANÁLISIS DE MARKOV.md": {
       "isPinned": false,
       "isHidden": false
     }
