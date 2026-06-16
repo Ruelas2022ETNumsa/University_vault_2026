@@ -112,28 +112,65 @@ Para encontrar la participación de mercado de American el siguiente mes, sumamo
 
 >**La matriz de probabilidades de transición nos permite ir de un estado a actual a un estado futuro.**
 
-**Sea $P_ij = Probabilidad condicional de estar en el estado j en el futuro, dado que el estado actual es i$**
+**Sea $P_{ij} = \text{Probabilidad condicional de estar en el estado j en el futuro, dado que el estado actual es i}$**
 
-##### _Por ejemplo, $P_{12}$ es la probabilidad de estar en el estado 2 en el futuro, dado que el evento estaba en el estado 1 en el periodo anterior._
+_Por ejemplo, $P_{12}$ es la probabilidad de estar en el estado 2 en el futuro, dado que el evento estaba en el estado 1 en el periodo anterior._
 
-##### _Definimos P = matriz de probabilidades de transición_
+_Definimos $P = \text{matriz de probabilidades de transición}$_
 
-$P = \begin{bmatrix} P_{11} & P_{12} & P_{13} & \dots & P_{1n} \ P_{21} & P_{22} & P_{23} & \dots & P_{2n} \ \vdots & \vdots & \vdots & & \vdots \ P_{m1} & P_{m2} & P_{m3} & \dots & P_{mn} \end{bmatrix}$
+$$P = 
+\begin{bmatrix}  
+P_{11} & P_{12} & P_{13} & \dots & P_{1n}  \\
+P_{21} & P_{22} & P_{23} & \dots & P_{2n} \\
+\vdots & \vdots & \vdots & & \vdots \\
+ P_{m1} & P_{m2} & P_{m3} & \dots & P_{mn} 
+\end{bmatrix}$$
+
+---
+
+## **Probabilidades de transición para las tres tiendas de abarrotes**
+
+Usamos los datos históricos de las tres tiendas para determinar qué porcentaje de clientes cambiaría cada mes. Ponemos estas probabilidades de transición en la siguiente matriz:
 
 
+$$
+P=
+\begin{bmatrix}
+0.8 & 0.1 & 0.1 \\
+0.1 & 0.7 & 0.2 \\
+0.2 & 0.2 & 0.6
+\end{bmatrix}
+\qquad
+\begin{array}{l}
+&\text{Estado 1, American Foods}\\
+&\text{Food Mart es el estado 2}\\
+&\text{Atlas Foods es el estado 3}
+\end{array}
+$$
+El significado de sus probabilidades se expresa en términos de los diferentes estados, como sigue:
 
+**Renglón 1**
+0.8 = $P_{11}$ = probabilidad de estar en el estado 1 después de estar en el estado 1 el periodo anterior
+0.1 = $P_{12}$ = probabilidad de estar en el estado 2 después de estar en el estado 1 el periodo anterior
+0.1 = $P_{13}$ = probabilidad de estar en el estado 3 después de estar en el estado 1 el periodo anterior
 
+**Renglón 2**
+0.1 = $P_{21}$ = probabilidad de estar en el estado 1 después de estar en el estado 2 el periodo anterior
+0.7 = $P_{22}$ = probabilidad de estar en el estado 2 después de estar en el estado 2 el periodo anterior
+0.2 = $P_{23}$ = probabilidad de estar en el estado 3 después de estar en el estado 2 el periodo anterior
 
+**Renglón 3**
 
+0.2 = $P_{31}$ = probabilidad de estar en el estado 1 después de estar en el estado 3 el periodo anterior
+0.2 = $P_{32}$ = probabilidad de estar en el estado 2 después de estar en el estado 3 el periodo anterior
+0.6 = $P_{33}$ = probabilidad de estar en el estado 3 después de estar en el estado 3 el periodo anterior
 
+ >**Los valores de probabilidad para cualquier renglón deben sumar 1.**
 
+---
+ 
+## **Predicción de la participación futura en el mercado**
 
-# **Probabilidades de transición para las tres tiendas de abarrotes**
+Uno de los propósitos del análisis de Markov es predecir el futuro. Dado el vector de probabilidades de estado y la matriz de probabilidades de transición, no es muy difícil determinar las probabilidades de estado en una fecha futura.
 
-##### Usamos los datos históricos de las tres tiendas para determinar qué porcentaje de clientes cambiaría cada mes. Ponemos estas probabilidades de transición en la siguiente matriz:
-
-##### Estado 1, American Foods
-
-##### Food Mart es el estado 2
-
-##### Atlas Foods es el estado 3
+#### Con ese tipo de análisis, podemos comparar la probabilidad de que un individuo compre en una de las tiendas en el futuro.
