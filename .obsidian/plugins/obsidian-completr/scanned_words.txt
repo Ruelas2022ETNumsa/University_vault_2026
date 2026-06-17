@@ -25488,6 +25488,7 @@ Pistas
 Puesto
 Periodo
 Permanecer
+Parciales
 del
 date
 de
@@ -30715,6 +30716,7 @@ dibujados
 delatoras
 dibuj
 dividimos
+despeje
 Vault
 Verificar
 Variables
@@ -55018,6 +55020,7 @@ sucesivamente
 sujetos
 selecciones
 sustituye
+sustituidos
 vault
 vil
 ver
@@ -86669,6 +86672,7 @@ cifras
 canales
 calo
 camente
+comprueba
 updated
 un
 universo
@@ -142437,6 +142441,9 @@ pica
 proporcionan
 partiendo
 predicci
+pases
+pose
+procede
 min
 mica
 movimiento

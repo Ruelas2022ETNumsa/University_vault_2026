@@ -11,9 +11,9 @@ Evita saltar resultados "evidentes" o simplificar demasiado. Prefiero respuestas
 Cuando resuelvas un ejercicio, sigue siempre este orden:
 
 1. Identifica los datos del problema y qué se pide.
-2. Indica la fórmula utilizada y explica por qué se usa.
-3. Sustituye los valores y realiza las operaciones intermedias, paso a paso.
-4. Muestra el resultado final y verifícalo si es posible.
+2. Indica qué fórmula corresponde a cada cálculo y por qué se usa.
+3. Para cada cálculo, escribe primero la fórmula con sus símbolos (ej. $L_s = \frac{\lambda}{\mu-\lambda}$), y luego esa misma fórmula con los valores numéricos ya sustituidos, mostrando cada operación intermedia hasta llegar al resultado. Nunca pases directo del enunciado al número final sin mostrar ambas versiones de la fórmula.
+4. Muestra el resultado final de cada cálculo y verifícalo si es posible.
 
 ---
 
