@@ -5,7 +5,6 @@
       "isHidden": false,
       "sortOrder": "byCreatedTimeReverse",
       "customOrder": [
-        "(ING) Ejercicios Markov.md",
         "notebooklm new.md",
         "notebooklm old.md",
         "tables no terminado.md",
@@ -1110,6 +1109,8 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "(ING) Ejercicios Markov.md",
+        "(ING)TEORÍA DE COLAS.md",
         "(ING) ANÁLISIS DE MARKOV.md"
       ]
     },
@@ -2727,7 +2728,11 @@
       "isPinned": false,
       "isHidden": false
     },
-    "(ING) Ejercicios Markov.md": {
+    "Semestres/SEM_08/ETN806/Partial_3/(ING)TEORÍA DE COLAS.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08/ETN806/Partial_3/(ING) Ejercicios Markov.md": {
       "isPinned": false,
       "isHidden": false
     }

@@ -132,11 +132,6 @@ En cada paso, la suma de las probabilidades debe ser igual a $1$:
 - **Mes 3:** $0.475 + 0.525 = 1.0$ (Correcto)
 - **Mes 4:** $0.5375 + 0.4625 = 1.0$ (Correcto)
 
-
-
-
-
-
 ---
 
 ## Ejercicio 2.
@@ -227,7 +222,7 @@ Calculamos las probabilidades de permanencia (bucles) restando las probabilidade
     - Hacia $F1$ ($P_{32}$): $0.10$.
     - Permanece $F2$ ($P_{33}$): $1 - (0.05 + 0.10) = 0.85$.
 
-La matriz de transición resultante es: $$P = \begin{bmatrix} 0.93 & 0.05 & 0.02 \ 0.10 & 0.80 & 0.10 \ 0.05 & 0.10 & 0.85 \end{bmatrix}$$.
+La matriz de transición resultante es: $$P = \begin{bmatrix} 0.93 & 0.05 & 0.02 \\ 0.10 & 0.80 & 0.10 \\ 0.05 & 0.10 & 0.85 \end{bmatrix}$$.
 
 ### 5. Definición del Vector de Estado Inicial ($\pi(0)$)
 
@@ -241,7 +236,7 @@ Vector inicial: $$\pi(0) = [0.50, \quad 0.25, \quad 0.25]$$.
 
 ### 6. Desarrollo de los cálculos paso a paso
 
-Multiplicamos el vector inicial por la matriz de transición para hallar $\pi(1)$: $$\pi(1) = [0.50, \quad 0.25, \quad 0.25] \begin{bmatrix} 0.93 & 0.05 & 0.02 \ 0.10 & 0.80 & 0.10 \ 0.05 & 0.10 & 0.85 \end{bmatrix}$$
+Multiplicamos el vector inicial por la matriz de transición para hallar $\pi(1)$: $$\pi(1) = [0.50, \quad 0.25, \quad 0.25] \begin{bmatrix} 0.93 & 0.05 & 0.02 \\ 0.10 & 0.80 & 0.10 \\ 0.05 & 0.10 & 0.85 \end{bmatrix}$$
 
 **Cálculo para No Fumadores ($\pi_{NF}(1)$):** $$\pi_{NF}(1) = (0.50 \times 0.93) + (0.25 \times 0.10) + (0.25 \times 0.05)$$ $$\pi_{NF}(1) = 0.465 + 0.025 + 0.0125 = \mathbf{0.5025}$$.
 
@@ -413,7 +408,7 @@ La probabilidad de transición se calcula sumando las probabilidades de los even
 
 Organizamos los valores en la matriz siguiendo el orden de los estados del 0 al 5:
 
-$$P = \begin{bmatrix} 0 & 0.5 & 0.5 & 0 & 0 & 0 \ 0 & 0 & 0.5 & 0.25 & 0 & 0.25 \ 0 & 0.5 & 0 & 0 & 0.25 & 0.25 \ 0 & 0 & 0 & 0 & 0 & 1 \ 0 & 0 & 0 & 0 & 0 & 1 \ 0 & 0 & 0 & 0.5 & 0.5 & 0 \end{bmatrix}$$
+$$P = \begin{bmatrix} 0 & 0.5 & 0.5 & 0 & 0 & 0 \\ 0 & 0 & 0.5 & 0.25 & 0 & 0.25 \\ 0 & 0.5 & 0 & 0 & 0.25 & 0.25 \\ 0 & 0 & 0 & 0 & 0 & 1 \\ 0 & 0 & 0 & 0 & 0 & 1 \\ 0 & 0 & 0 & 0.5 & 0.5 & 0 \end{bmatrix}$$
 
 ### 7. Verificación
 
@@ -508,7 +503,7 @@ Se solicita modelar el proceso como una cadena de Markov, lo que implica estruct
 
 ### 3. Fórmulas utilizadas y razonamiento
 
-La matriz de transición se define como: $$P = \begin{bmatrix} P_{AA} & P_{AB} & P_{AC} \ P_{BA} & P_{BB} & P_{BC} \ P_{CA} & P_{CB} & P_{CC} \end{bmatrix}$$
+La matriz de transición se define como: $$P = \begin{bmatrix} P_{AA} & P_{AB} & P_{AC} \\ P_{BA} & P_{BB} & P_{BC} \\ P_{CA} & P_{CB} & P_{CC} \end{bmatrix}$$
 
 Una propiedad fundamental de las matrices estocásticas es que **la suma de las probabilidades de cada renglón debe ser igual a 1**. Esto representa la certeza de que el agente debe estar en alguna de las tres ciudades al día siguiente (los estados son colectivamente exhaustivos).
 
@@ -524,7 +519,7 @@ Organizamos los datos proporcionados en cada renglón de la matriz:
 
 Insertando todos los valores en la estructura matricial, obtenemos el modelo matemático del comportamiento del agente comercial:
 
-$$P = \begin{bmatrix} 0.1 & 0.3 & 0.6 \ 0.2 & 0.2 & 0.6 \ 0.2 & 0.4 & 0.4 \end{bmatrix}$$
+$$P = \begin{bmatrix} 0.1 & 0.3 & 0.6 \\ 0.2 & 0.2 & 0.6 \\ 0.2 & 0.4 & 0.4 \end{bmatrix}$$
 
 ### 6. Verificación del resultado
 
