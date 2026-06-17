@@ -1,28 +1,272 @@
-# PRÁCTICA N° 3
+# CADENA DE MARKOV Y TEORÍA DE COLAS
 
-# PROCESOS ESTOCÁSTICOS
-
-## CADENA DE MARKOV Y TEORÍA DE COLAS
-
-### E1.
+## Ejercicio 1.
 
 El departamento de estudios de mercado de una fábrica estima que el 20% de la gente que compra un producto un mes, no lo comprará el mes siguiente. Además, el 30% de quienes no lo compren un mes lo adquirirá al mes siguiente. En una población de 1000 individuos, 100 compraron el producto el primer mes.
 
 ¿Cuántos lo comprarán al mes próximo? ¿Y dentro de tres meses?
+### solución
+
+```tikz
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning}
+
+\begin{document}
+\begin{tikzpicture}
+
+    % Configuración de los nodos de estado (Regla: draw, circle, thick, color; NO fill)
+    \node[draw, circle, thick, color=orange, minimum size=1.5cm] (C) at (0,0) {\textbf{C}};
+    \node[draw, circle, thick, color=pink, minimum size=1.5cm] (NC) at (4,0) {\textbf{NC}};
+
+    % Self-loops (Regla: controls cx1,cy1 and cx2,cy2)
+    \draw[->, ultra thick, color=orange] (C) .. controls (-1, 1.5) and (1, 1.5) .. node[above] {$0.80$} (C);
+    \draw[->, ultra thick, color=pink] (NC) .. controls (3, 1.5) and (5, 1.5) .. node[above] {$0.70$} (NC);
+
+    % Flechas de transición (Regla: bend left=N)
+    \draw[->, very thick, color=orange] (C) to[bend left=30] node[above, pos=0.5] {$0.20$} (NC);
+    \draw[->, very thick, color=pink] (NC) to[bend left=30] node[below, pos=0.5] {$0.30$} (C);
+
+\end{tikzpicture}
+\end{document}
+```
+
+Este ejercicio corresponde a un proceso estocástico conocido como **Cadena de Markov de tiempo discreto**. Se identifica como tal porque la población se divide en estados finitos y excluyentes (Comprar o No Comprar), las probabilidades de cambio entre estados son constantes mes a mes, y la situación futura depende únicamente de la situación presente.
+
+### 1. Identificación de los datos del problema
+
+- **Población total ($N$):** $1000$ individuos.
+- **Estados posibles:**
+    - **Estado 1 ($C$):** Clientes que compran el producto.
+    - **Estado 2 ($NC$):** Clientes que no compran el producto.
+- **Probabilidades de transición dadas ($P_{ij}$):**
+    - Probabilidad de que un comprador no compre el mes siguiente ($C \to NC$): $P_{12} = 0.20$.
+    - Probabilidad de que un no comprador compre el mes siguiente ($NC \to C$): $P_{21} = 0.30$.
+- **Estado Inicial (Mes 1):**
+    - Compradores iniciales: $100$ individuos.
+    - No compradores iniciales: $1000 - 100 = 900$ individuos.
+
+### 2. Explicación de lo que se pide
+
+Se solicita proyectar la distribución de la población en dos momentos específicos:
+
+1. **Al mes próximo (Mes 2):** El estado inmediatamente después del inicial.
+2. **Dentro de tres meses (Mes 4):** El estado tras transcurrir tres periodos de transición desde el estado inicial (Periodo 1 $\to$ Periodo 4).
+
+### 3. Fórmulas utilizadas y razonamiento
+
+Para resolver este problema utilizaremos el análisis de matrices de Markov:
+
+1. **Matriz de Probabilidades de Transición ($P$):** Organiza las probabilidades de moverse entre estados. La suma de cada renglón debe ser igual a $1$ (probabilidad total).
+2. **Vector de Probabilidades de Estado ($\pi(n)$):** Representa la probabilidad de estar en cada estado en el periodo $n$.
+3. **Relación de recurrencia:** Para hallar el estado en el periodo $n+1$, multiplicamos el vector de estado actual por la matriz de transición: $$\pi(n+1) = \pi(n) \cdot P$$
+
+### 4. Construcción de la Matriz de Transición ($P$)
+
+Calculamos las probabilidades de permanencia (bucles) asegurando que cada fila sume $1$:
+
+- $P_{11}$ (Permanece comprando) $= 1 - P_{12} = 1 - 0.20 = 0.80$
+- $P_{22}$ (Permanece sin comprar) $= 1 - P_{21} = 1 - 0.30 = 0.70$
+
+La matriz resulta: $$P = \begin{bmatrix} 0.8 & 0.2 \\ 0.3 & 0.7 \end{bmatrix}$$
+
+### 5. Definición del Vector de Estado Inicial ($\pi(1)$)
+
+Convertimos el número de individuos iniciales en probabilidades relativas a la población total ($1000$):
+
+- $\pi_1(1) = \frac{100}{1000} = 0.1$
+- $\pi_2(1) = \frac{900}{1000} = 0.9$
+
+Vector inicial: $$\pi(1) = [0.1, \quad 0.9]$$
+
+### 6. Desarrollo de los cálculos paso a paso
+
+#### Cálculo para el próximo mes (Mes 2)
+
+Aplicamos $\pi(2) = \pi(1) \cdot P$: $$\pi(2) = [0.1, \quad 0.9] \begin{bmatrix} 0.8 & 0.2 \\ 0.3 & 0.7 \end{bmatrix}$$
+
+- **Probabilidad de compra ($\pi_1(2)$):** 
+  $\pi_1(2) = (0.1 \times 0.8) + (0.9 \times 0.3)$
+   $\pi_1(2) = 0.08 + 0.27 = 0.35$
+- **Probabilidad de no compra ($\pi_2(2)$):**
+   $\pi_2(2) = (0.1 \times 0.2) + (0.9 \times 0.7)$
+   $\pi_2(2) = 0.02 + 0.63 = 0.65$
+
+**Individuos compradores (Mes 2):** $0.35 \times 1000 = \mathbf{350}$.
+
+#### Cálculo para dentro de dos meses (Mes 3)
+
+Aplicamos $\pi(3) = \pi(2) \cdot P$: $$\pi(3) = [0.35, \quad 0.65] \begin{bmatrix} 0.8 & 0.2 \\ 0.3 & 0.7 \end{bmatrix}$$
+
+- **Probabilidad de compra ($\pi_1(3)$):**
+   $\pi_1(3) = (0.35 \times 0.8) + (0.65 \times 0.3)$ 
+   $\pi_1(3) = 0.28 + 0.195 = 0.475$
+- **Probabilidad de no compra ($\pi_2(3)$):** 
+  $\pi_2(3) = (0.35 \times 0.2) + (0.65 \times 0.7)$ 
+  $\pi_2(3) = 0.07 + 0.455 = 0.525$
+
+**Individuos compradores (Mes 3):** $0.475 \times 1000 = \mathbf{475}$.
+
+#### Cálculo para dentro de tres meses (Mes 4)
+
+Aplicamos $\pi(4) = \pi(3) \cdot P$: $$\pi(4) = [0.475, \quad 0.525] \begin{bmatrix} 0.8 & 0.2 \\ 0.3 & 0.7 \end{bmatrix}$$
+
+- **Probabilidad de compra ($\pi_1(4)$):** 
+  $\pi_1(4) = (0.475 \times 0.8) + (0.525 \times 0.3)$ 
+  $\pi_1(4) = 0.38 + 0.1575 = 0.5375$
+- **Probabilidad de no compra ($\pi_2(4)$):** 
+  $\pi_2(4) = (0.475 \times 0.2) + (0.525 \times 0.7)$ 
+  $\pi_2(4) = 0.095 + 0.3675 = 0.4625$
+
+**Individuos compradores (Mes 4):** $0.5375 \times 1000 = \mathbf{537.5}$ (se puede redondear a 538 según el contexto).
+
+### 7. Resultado final
+
+- **Al mes próximo:** Comprarán el producto **350 individuos**.
+- **Dentro de tres meses:** Comprarán el producto **538 individuos** (redondeado).
+
+### 8. Verificación
+
+En cada paso, la suma de las probabilidades debe ser igual a $1$:
+
+- **Mes 2:** $0.35 + 0.65 = 1.0$ (Correcto)
+- **Mes 3:** $0.475 + 0.525 = 1.0$ (Correcto)
+- **Mes 4:** $0.5375 + 0.4625 = 1.0$ (Correcto)
+
+
+
+
+
 
 ---
 
-### E2.
+## Ejercicio 2.
 
 En una población de 10000 habitantes, 5000 no fuman, 2500 fuman uno o menos de un paquete diario y 2500 fuman más de un paquete diario. En un mes hay un 5% de probabilidad de que un no fumador comience a fumar un paquete diario, o menos, y un 2% de que un no fumador pase a fumar más de un paquete diario.
 
 Para los que fuman un paquete, o menos, hay un 10% de probabilidad de que dejen el tabaco, y un 10% de que pasen a fumar más de un paquete diario. Entre los que fuman más de un paquete, hay un 5% de probabilidad de que dejen el tabaco y un 10% de que pasen a fumar un paquete, o menos.
 
 ¿Cuántos individuos habrá de cada clase el próximo mes?
+### solución
+
+```tikz
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+
+\begin{document}
+\begin{tikzpicture}
+
+    % Configuración de los nodos de estado (Regla: draw, circle, thick, color; NO fill)
+    % N=3, Centro=(6,6), R=4.5. Ángulos: 90, -30, -150.
+    \node[draw, circle, thick, color=orange, minimum size=1.5cm] (NF) at (6, 10.5) {\textbf{NF}};
+    \node[draw, circle, thick, color=pink, minimum size=1.5cm] (F1) at (9.9, 3.75) {\textbf{F1}};
+    \node[draw, circle, thick, color=lime, minimum size=1.5cm] (F2) at (2.1, 3.75) {\textbf{F2}};
+
+    % Bucle (self-loop) de cada estado (Regla: controls cx1,cy1 and cx2,cy2)
+    % Probabilidades: NF=0.93, F1=0.80, F2=0.85
+    \draw[->, ultra thick, color=orange] (NF) .. controls (5, 12.5) and (7, 12.5) .. node[above] {$0.93$} (NF);
+    \draw[->, ultra thick, color=pink] (F1) .. controls (11.5, 3) and (11.5, 4.5) .. node[right] {$0.80$} (F1);
+    \draw[->, ultra thick, color=lime] (F2) .. controls (0.5, 4.5) and (0.5, 3) .. node[left] {$0.85$} (F2);
+
+    % Flechas de transición (Regla: bend left=N)
+    % Salidas de NF
+    \draw[->, very thick, color=orange] (NF) to[bend left=10] node[pos=0.2, right] {$0.05$} (F1);
+    \draw[->, very thick, color=orange] (NF) to[bend left=10] node[pos=0.2, left] {$0.02$} (F2);
+
+    % Salidas de F1
+    \draw[->, very thick, color=pink] (F1) to[bend left=20] node[pos=0.3, left] {$0.10$} (NF);
+    \draw[->, very thick, color=pink] (F1) to[bend left=20] node[pos=0.3, above] {$0.10$} (F2);
+
+    % Salidas de F2
+    \draw[->, very thick, color=lime] (F2) to[bend left=30] node[pos=0.4, right] {$0.05$} (NF);
+    \draw[->, very thick, color=lime] (F2) to[bend left=30] node[pos=0.4, below] {$0.10$} (F1);
+
+\end{tikzpicture}
+\end{document}
+```
+
+Este problema se clasifica como una **Cadena de Markov de tiempo discreto**. Se identifica este patrón porque la población se distribuye en categorías exhaustivas y excluyentes (estados), las probabilidades de cambio entre estas categorías son constantes (estacionarias) y el estado futuro depende únicamente del estado actual (propiedad de Markov).
+
+### 1. Identificación de los datos del problema
+
+- **Población total ($N$):** $10,000$ habitantes.
+- **Estados del sistema:**
+    - **Estado 1 ($NF$):** Habitantes que no fuman.
+    - **Estado 2 ($F1$):** Habitantes que fuman un paquete o menos diariamente.
+    - **Estado 3 ($F2$):** Habitantes que fuman más de un paquete diariamente.
+- **Distribución Inicial (Mes 0):**
+    - $5,000$ no fumadores.
+    - $2,500$ fuman $\le 1$ paquete.
+    - $2,500$ fuman $> 1$ paquete.
+
+### 2. Explicación de lo que se pide
+
+Se solicita determinar el número exacto de individuos que pertenecerán a cada una de las tres clases de fumadores transcurrido un periodo de tiempo (el próximo mes).
+
+### 3. Fórmulas utilizadas y razonamiento
+
+Para proyectar la evolución de la población, utilizaremos el álgebra matricial de Markov:
+
+1. **Matriz de Probabilidades de Transición ($P$):** Organiza las probabilidades de cambio entre estados. La suma de cada renglón debe ser exactamente $1$ (probabilidad total de salida).
+2. **Vector de Estado Inicial ($\pi(0)$):** Representa la distribución porcentual de la población en el tiempo inicial.
+3. **Relación Recurrente de Markov:** Para hallar la distribución en el tiempo $n+1$, multiplicamos el vector de estado actual por la matriz de transición: $$\pi(n+1) = \pi(n) \cdot P$$.
+
+### 4. Construcción de la Matriz de Transición ($P$)
+
+Calculamos las probabilidades de permanencia (bucles) restando las probabilidades de salida de $1$:
+
+- **Renglón 1 (Desde $NF$):**
+    - Hacia $F1$ ($P_{12}$): $0.05$.
+    - Hacia $F2$ ($P_{13}$): $0.02$.
+    - Permanece $NF$ ($P_{11}$): $1 - (0.05 + 0.02) = 0.93$.
+- **Renglón 2 (Desde $F1$):**
+    - Hacia $NF$ ($P_{21}$): $0.10$.
+    - Hacia $F2$ ($P_{23}$): $0.10$.
+    - Permanece $F1$ ($P_{22}$): $1 - (0.10 + 0.10) = 0.80$.
+- **Renglón 3 (Desde $F2$):**
+    - Hacia $NF$ ($P_{31}$): $0.05$.
+    - Hacia $F1$ ($P_{32}$): $0.10$.
+    - Permanece $F2$ ($P_{33}$): $1 - (0.05 + 0.10) = 0.85$.
+
+La matriz de transición resultante es: $$P = \begin{bmatrix} 0.93 & 0.05 & 0.02 \ 0.10 & 0.80 & 0.10 \ 0.05 & 0.10 & 0.85 \end{bmatrix}$$.
+
+### 5. Definición del Vector de Estado Inicial ($\pi(0)$)
+
+Convertimos las cifras de población inicial en probabilidades dividiendo por el total ($10,000$):
+
+- $\pi_{NF}(0) = \frac{5000}{10000} = 0.50$
+- $\pi_{F1}(0) = \frac{2500}{10000} = 0.25$
+- $\pi_{F2}(0) = \frac{2500}{10000} = 0.25$
+
+Vector inicial: $$\pi(0) = [0.50, \quad 0.25, \quad 0.25]$$.
+
+### 6. Desarrollo de los cálculos paso a paso
+
+Multiplicamos el vector inicial por la matriz de transición para hallar $\pi(1)$: $$\pi(1) = [0.50, \quad 0.25, \quad 0.25] \begin{bmatrix} 0.93 & 0.05 & 0.02 \ 0.10 & 0.80 & 0.10 \ 0.05 & 0.10 & 0.85 \end{bmatrix}$$
+
+**Cálculo para No Fumadores ($\pi_{NF}(1)$):** $$\pi_{NF}(1) = (0.50 \times 0.93) + (0.25 \times 0.10) + (0.25 \times 0.05)$$ $$\pi_{NF}(1) = 0.465 + 0.025 + 0.0125 = \mathbf{0.5025}$$.
+
+**Cálculo para Fumadores $\le 1$ paquete ($\pi_{F1}(1)$):** $$\pi_{F1}(1) = (0.50 \times 0.05) + (0.25 \times 0.80) + (0.25 \times 0.10)$$ $$\pi_{F1}(1) = 0.025 + 0.20 + 0.025 = \mathbf{0.25}$$.
+
+**Cálculo para Fumadores $> 1$ paquete ($\pi_{F2}(1)$):** $$\pi_{F2}(1) = (0.50 \times 0.02) + (0.25 \times 0.10) + (0.25 \times 0.85)$$ $$\pi_{F2}(1) = 0.01 + 0.025 + 0.2125 = \mathbf{0.2475}$$.
+
+### 7. Conversión a número de individuos
+
+Multiplicamos las probabilidades obtenidas por la población total ($10,000$):
+
+- **No fumadores:** $0.5025 \times 10,000 = \mathbf{5,025}$ sujetos.
+- **Fumadores $\le 1$ paquete:** $0.25 \times 10,000 = \mathbf{2,500}$ sujetos.
+- **Fumadores $> 1$ paquete:** $0.2475 \times 10,000 = \mathbf{2,475}$ sujetos.
+
+### 8. Resultado final y Verificación
+
+El próximo mes habrá **5,025 no fumadores**, **2,500 fumadores de un paquete o menos** y **2,475 fumadores de más de un paquete**.
+
+**Verificación:** La suma total de los individuos debe coincidir con la población original: $5025 + 2500 + 2475 = 10,000$ habitantes. El cálculo es correcto.
+
 
 ---
 
-### E3.
+## Ejercicio 3.
 
 Una urna contiene dos bolas sin pintar. Se selecciona una bola al azar y se lanza una moneda.
 Si la bola elegida no está pintada y la moneda produce cara, pintamos la bola de rojo; si la moneda produce cruz, la pintamos de negro.
@@ -30,10 +274,161 @@ Si la bola elegida no está pintada y la moneda produce cara, pintamos la bola d
 Si la bola ya está pintada, entonces cambiamos el color de la bola de rojo a negro o de negro a rojo, independientemente de si la moneda produce cara o cruz.
 
 Modele el problema como una cadena de Markov y encuentre la matriz de probabilidades de transición.
+### solución
+
+```tikz
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+
+\begin{document}
+\begin{tikzpicture}
+
+    % Configuración de los nodos de estado (N=6, Centro=(6,6), R=5)
+    % Ángulos: 90, 30, -30, -90, -150, -210
+    \node[draw, circle, thick, color=orange, minimum size=1.2cm] (UU) at (6, 11) {\textbf{UU}};
+    \node[draw, circle, thick, color=pink, minimum size=1.2cm] (UR) at (10.3, 8.5) {\textbf{UR}};
+    \node[draw, circle, thick, color=lime, minimum size=1.2cm] (UN) at (10.3, 3.5) {\textbf{UN}};
+    \node[draw, circle, thick, color=purple, minimum size=1.2cm] (RR) at (6, 1) {\textbf{RR}};
+    \node[draw, circle, thick, color=teal, minimum size=1.2cm] (NN) at (1.7, 3.5) {\textbf{NN}};
+    \node[draw, circle, thick, color=magenta, minimum size=1.2cm] (RN) at (1.7, 8.5) {\textbf{RN}};
+
+    % Bucles (self-loops) obligatorios por regla de formato (P_ii = 0)
+    \draw[->, ultra thick, color=orange] (UU) .. controls (5, 13) and (7, 13) .. node[above] {$0.0$} (UU);
+    \draw[->, ultra thick, color=pink] (UR) .. controls (11.8, 9.5) and (11.8, 7.5) .. node[right] {$0.0$} (UR);
+    \draw[->, ultra thick, color=lime] (UN) .. controls (11.8, 4.5) and (11.8, 2.5) .. node[right] {$0.0$} (UN);
+    \draw[->, ultra thick, color=purple] (RR) .. controls (7, -1) and (5, -1) .. node[below] {$0.0$} (RR);
+    \draw[->, ultra thick, color=teal] (NN) .. controls (0.2, 2.5) and (0.2, 4.5) .. node[left] {$0.0$} (NN);
+    \draw[->, ultra thick, color=magenta] (RN) .. controls (0.2, 7.5) and (0.2, 9.5) .. node[left] {$0.0$} (RN);
+
+    % Flechas de transición entre estados (solo P_ij > 0)
+    % Salidas de UU (Estado 0)
+    \draw[->, very thick, color=orange] (UU) to[bend left=10] node[pos=0.2, above] {$0.50$} (UR);
+    \draw[->, very thick, color=orange] (UU) to[bend left=10] node[pos=0.2, left] {$0.50$} (UN);
+
+    % Salidas de UR (Estado 1)
+    \draw[->, very thick, color=pink] (UR) to[bend left=20] node[pos=0.3, left] {$0.50$} (UN);
+    \draw[->, very thick, color=pink] (UR) to[bend left=20] node[pos=0.3, right] {$0.25$} (RR);
+    \draw[->, very thick, color=pink] (UR) to[bend left=20] node[pos=0.3, above] {$0.25$} (RN);
+
+    % Salidas de UN (Estado 2)
+    \draw[->, very thick, color=lime] (UN) to[bend left=30] node[pos=0.3, right] {$0.50$} (UR);
+    \draw[->, very thick, color=lime] (UN) to[bend left=30] node[pos=0.3, below] {$0.25$} (NN);
+    \draw[->, very thick, color=lime] (UN) to[bend left=30] node[pos=0.3, left] {$0.25$} (RN);
+
+    % Salidas de RR (Estado 3)
+    \draw[->, very thick, color=purple] (RR) to[bend left=40] node[pos=0.4, right] {$1.0$} (RN);
+
+    % Salidas de NN (Estado 4)
+    \draw[->, very thick, color=teal] (NN) to[bend left=50] node[pos=0.4, left] {$1.0$} (RN);
+
+    % Salidas de RN (Estado 5)
+    \draw[->, very thick, color=magenta] (RN) to[bend left=60] node[pos=0.2, below] {$0.50$} (RR);
+    \draw[->, very thick, color=magenta] (RN) to[bend left=60] node[pos=0.2, right] {$0.50$} (NN);
+
+\end{tikzpicture}
+\end{document}
+```
+
+Este problema se modela mediante una **Cadena de Markov de tiempo discreto**. Se identifica como tal porque el sistema evoluciona en etapas (selecciones), posee un número finito de estados posibles (combinaciones de colores en la urna), y la probabilidad de pasar al siguiente estado depende exclusivamente de la composición actual de la urna y no de los pasos previos.
+
+### 1. Identificación de los datos del problema
+
+- **Población total ($N$):** $2$ bolas.
+- **Acción 1:** Selección aleatoria de una bola (probabilidad de elegir una bola específica $= 1/2$).
+- **Acción 2:** Lanzamiento de una moneda justa ($P(H) = 1/2$, $P(T) = 1/2$).
+- **Reglas de transición:**
+    1. Si la bola es **sin pintar (U)**:
+        - Cae cara (H): La bola se vuelve **Roja (R)**.
+        - Cae cruz (T): La bola se vuelve **Negra (N)**.
+    2. Si la bola es **pintada (R o N)**:
+        - Se cambia al color opuesto ($R \to N$ o $N \to R$) sin importar la moneda.
+
+### 2. Definición de los estados del sistema
+
+Los estados representan las posibles combinaciones de colores de las dos bolas dentro de la urna. Denotaremos los estados de la siguiente manera:
+
+- **Estado 0 ($UU$):** Dos bolas sin pintar.
+- **Estado 1 ($UR$):** Una bola sin pintar y una roja.
+- **Estado 2 ($UN$):** Una bola sin pintar y una negra.
+- **Estado 3 ($RR$):** Dos bolas rojas.
+- **Estado 4 ($NN$):** Dos bolas negras.
+- **Estado 5 ($RN$):** Una bola roja y una negra.
+
+### 3. Explicación de lo que se pide
+
+Se solicita modelar el proceso y construir la **matriz de probabilidades de transición ($P$)**, la cual organiza las probabilidades $P_{ij}$ de pasar del estado $i$ al estado $j$ en un solo paso.
+
+### 4. Razonamiento y fórmulas utilizadas
+
+La probabilidad de transición se calcula sumando las probabilidades de los eventos que llevan de un estado a otro. Dado que la selección de la bola y el lanzamiento de la moneda son eventos independientes, multiplicamos sus probabilidades: $$P(\text{Evento}) = P(\text{Selección}) \times P(\text{Moneda})$$
+
+### 5. Cálculo de las probabilidades de transición paso a paso
+
+#### Desde el Estado 0 ($UU$)
+
+- Se selecciona una bola sin pintar (probabilidad $1$).
+- Si sale cara ($1/2$), pasa a ser roja: $(U, U) \to (R, U)$. Prob $= 1 \times 1/2 = 0.5$.
+- Si sale cruz ($1/2$), pasa a ser negra: $(U, U) \to (N, U)$. Prob $= 1 \times 1/2 = 0.5$.
+- **Resultados:** $P_{01} = 0.5, P_{02} = 0.5$.
+
+#### Desde el Estado 1 ($UR$)
+
+- Caso A: Se elige la bola **U** ($1/2$):
+    - Cara ($1/2$): Se vuelve roja $\to (R, R)$. Prob $= 1/2 \times 1/2 = 0.25$.
+    - Cruz ($1/2$): Se vuelve negra $\to (N, R)$. Prob $= 1/2 \times 1/2 = 0.25$.
+- Caso B: Se elige la bola **R** ($1/2$):
+    - Cambia de color a negra $\to (U, N)$. Prob $= 1/2 \times 1 = 0.5$.
+- **Resultados:** $P_{13} = 0.25, P_{15} = 0.25, P_{12} = 0.5$.
+
+#### Desde el Estado 2 ($UN$)
+
+- Caso A: Se elige la bola **U** ($1/2$):
+    - Cara ($1/2$): Se vuelve roja $\to (R, N)$. Prob $= 1/2 \times 1/2 = 0.25$.
+    - Cruz ($1/2$): Se vuelve negra $\to (N, N)$. Prob $= 1/2 \times 1/2 = 0.25$.
+- Caso B: Se elige la bola **N** ($1/2$):
+    - Cambia de color a roja $\to (U, R)$. Prob $= 1/2 \times 1 = 0.5$.
+- **Resultados:** $P_{25} = 0.25, P_{24} = 0.25, P_{21} = 0.5$.
+
+#### Desde el Estado 3 ($RR$)
+
+- Se selecciona una bola roja (probabilidad $1$).
+- Cambia obligatoriamente a negra $\to (N, R)$. Prob $= 1 \times 1 = 1$.
+- **Resultado:** $P_{35} = 1$.
+
+#### Desde el Estado 4 ($NN$)
+
+- Se selecciona una bola negra (probabilidad $1$).
+- Cambia obligatoriamente a roja $\to (R, N)$. Prob $= 1 \times 1 = 1$.
+- **Resultado:** $P_{45} = 1$.
+
+#### Desde el Estado 5 ($RN$)
+
+- Caso A: Se elige la bola **R** ($1/2$):
+    - Cambia a negra $\to (N, N)$. Prob $= 1/2 \times 1 = 0.5$.
+- Caso B: Se elige la bola **N** ($1/2$):
+    - Cambia a roja $\to (R, R)$. Prob $= 1/2 \times 1 = 0.5$.
+- **Resultados:** $P_{54} = 0.5, P_{53} = 0.5$.
+
+### 6. Resultado Final: Matriz de Transición ($P$)
+
+Organizamos los valores en la matriz siguiendo el orden de los estados del 0 al 5:
+
+$$P = \begin{bmatrix} 0 & 0.5 & 0.5 & 0 & 0 & 0 \ 0 & 0 & 0.5 & 0.25 & 0 & 0.25 \ 0 & 0.5 & 0 & 0 & 0.25 & 0.25 \ 0 & 0 & 0 & 0 & 0 & 1 \ 0 & 0 & 0 & 0 & 0 & 1 \ 0 & 0 & 0 & 0.5 & 0.5 & 0 \end{bmatrix}$$
+
+### 7. Verificación
+
+Comprobamos que la suma de cada renglón sea igual a $1$ (propiedad de matriz estocástica):
+
+- Fila 0: $0.5 + 0.5 = 1.0$ (Correcto)
+- Fila 1: $0.5 + 0.25 + 0.25 = 1.0$ (Correcto)
+- Fila 2: $0.5 + 0.25 + 0.25 = 1.0$ (Correcto)
+- Fila 3: $1.0 = 1.0$ (Correcto)
+- Fila 4: $1.0 = 1.0$ (Correcto)
+- Fila 5: $0.5 + 0.5 = 1.0$ (Correcto)
 
 ---
 
-### E4.
+## Ejercicio 4.
 
 Un agente comercial realiza su trabajo en tres ciudades A, B y C. Para evitar desplazamientos innecesarios está todo el día en la misma ciudad y allí pernocta, desplazándose a otra ciudad al día siguiente, si no tiene suficiente trabajo. Después de estar trabajando un día en C, la probabilidad de tener que seguir trabajando en ella al día siguiente es 0.4, la de tener que viajar a B es 0.4 y la de tener que ir a A es 0.2.
 
@@ -42,11 +437,112 @@ Si el viajante duerme un día en B, con probabilidad de un 20% tendrá que segui
 Por último, si el agente comercial trabaja todo un día en A, permanecerá en esa misma ciudad al día siguiente con una probabilidad 0.1, irá a B con una probabilidad de 0.3 y a C con una probabilidad de 0.6.
 
 Modele el problema como una cadena de Markov.
+### solución
+```tikz
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+
+\begin{document}
+\begin{tikzpicture}
+
+    % Configuración de los nodos de estado (N=3, Centro=(6,6), R=4.5)
+    % Colores: orange (A), pink (B), lime (C)
+    \node[draw, circle, thick, color=orange, minimum size=1.5cm] (A) at (6, 10.5) {\textbf{A}};
+    \node[draw, circle, thick, color=pink, minimum size=1.5cm] (B) at (9.9, 3.75) {\textbf{B}};
+    \node[draw, circle, thick, color=lime, minimum size=1.5cm] (C) at (2.1, 3.75) {\textbf{C}};
+
+    % Bucles (self-loops) sobresaliendo hacia afuera del centro (Regla: controls cx1,cy1 and cx2,cy2)
+    \draw[->, ultra thick, color=orange] (A) .. controls (5, 12.5) and (7, 12.5) .. node[above] {$0.1$} (A);
+    \draw[->, ultra thick, color=pink] (B) .. controls (11.5, 3) and (11.5, 4.5) .. node[right] {$0.2$} (B);
+    \draw[->, ultra thick, color=lime] (C) .. controls (0.5, 4.5) and (0.5, 3) .. node[left] {$0.4$} (C);
+
+    % Flechas de transición curvas (Regla: bend left=N)
+    % Transiciones desde A (orange)
+    \draw[->, very thick, color=orange] (A) to[bend left=10] node[pos=0.2, right] {$0.3$} (B);
+    \draw[->, very thick, color=orange] (A) to[bend left=10] node[pos=0.2, left] {$0.6$} (C);
+
+    % Transiciones desde B (pink)
+    \draw[->, very thick, color=pink] (B) to[bend left=20] node[pos=0.3, left] {$0.2$} (A);
+    \draw[->, very thick, color=pink] (B) to[bend left=20] node[pos=0.3, above] {$0.6$} (C);
+
+    % Transiciones desde C (lime)
+    \draw[->, very thick, color=lime] (C) to[bend left=30] node[pos=0.4, right] {$0.2$} (A);
+    \draw[->, very thick, color=lime] (C) to[bend left=30] node[pos=0.4, below] {$0.4$} (B);
+
+\end{tikzpicture}
+\end{document}
+```
+
+Este ejercicio se modela como una **Cadena de Markov de tiempo discreto**. Se identifica como tal porque cumple con las características fundamentales de estos procesos estocásticos:
+
+- **Estados finitos:** El sistema puede estar en tres situaciones o categorías mutuamente excluyentes (Ciudades A, B o C).
+- **Probabilidades de transición constantes:** Las probabilidades de moverse de una ciudad a otra al día siguiente son fijas y no cambian con el tiempo.
+- **Propiedad de Markov:** La ciudad donde el agente estará mañana depende únicamente de la ciudad donde se encuentra hoy, y no de su historial de viajes previos.
+
+### 1. Identificación de los datos del problema
+
+El sistema tiene tres estados posibles correspondientes a las ciudades donde el agente puede pernoctar:
+
+- **Estado 1 ($A$):** Estar en la ciudad A.
+- **Estado 2 ($B$):** Estar en la ciudad B.
+- **Estado 3 ($C$):** Estar en la ciudad C.
+
+Las probabilidades condicionales de transición dadas por el enunciado son:
+
+- **Desde Ciudad A:**
+    - Permanecer en A ($A \to A$): $0.1$
+    - Ir a Ciudad B ($A \to B$): $0.3$
+    - Ir a Ciudad C ($A \to C$): $0.6$
+- **Desde Ciudad B:**
+    - Ir a Ciudad A ($B \to A$): $0.2$
+    - Permanecer en B ($B \to B$): $0.2$
+    - Ir a Ciudad C ($B \to C$): $0.6$
+- **Desde Ciudad C:**
+    - Ir a Ciudad A ($C \to A$): $0.2$
+    - Ir a Ciudad B ($C \to B$): $0.4$
+    - Permanecer en C ($C \to C$): $0.4$
+
+### 2. Explicación de lo que se pide
+
+Se solicita modelar el proceso como una cadena de Markov, lo que implica estructurar formalmente los estados y construir la **matriz de probabilidades de transición ($P$)**. Esta matriz organiza las probabilidades de moverse de un estado $i$ a un estado $j$ en un solo paso de tiempo (un día).
+
+### 3. Fórmulas utilizadas y razonamiento
+
+La matriz de transición se define como: $$P = \begin{bmatrix} P_{AA} & P_{AB} & P_{AC} \ P_{BA} & P_{BB} & P_{BC} \ P_{CA} & P_{CB} & P_{CC} \end{bmatrix}$$
+
+Una propiedad fundamental de las matrices estocásticas es que **la suma de las probabilidades de cada renglón debe ser igual a 1**. Esto representa la certeza de que el agente debe estar en alguna de las tres ciudades al día siguiente (los estados son colectivamente exhaustivos).
+
+### 4. Sustitución de valores paso a paso
+
+Organizamos los datos proporcionados en cada renglón de la matriz:
+
+- **Renglón 1 (Ciudad A):** Sustituimos las probabilidades $P_{AA} = 0.1$, $P_{AB} = 0.3$ y $P_{AC} = 0.6$.
+- **Renglón 2 (Ciudad B):** Sustituimos las probabilidades $P_{BA} = 0.2$, $P_{BB} = 0.2$ y $P_{BC} = 0.6$.
+- **Renglón 3 (Ciudad C):** Sustituimos las probabilidades $P_{CA} = 0.2$, $P_{CB} = 0.4$ y $P_{CC} = 0.4$.
+
+### 5. Resultado Final: Matriz de Transición ($P$)
+
+Insertando todos los valores en la estructura matricial, obtenemos el modelo matemático del comportamiento del agente comercial:
+
+$$P = \begin{bmatrix} 0.1 & 0.3 & 0.6 \ 0.2 & 0.2 & 0.6 \ 0.2 & 0.4 & 0.4 \end{bmatrix}$$
+
+### 6. Verificación del resultado
+
+Comprobamos que cada fila sume la unidad para asegurar que el modelo es estocásticamente válido:
+
+- **Fila A:** $0.1 + 0.3 + 0.6 = 1.0$ (Correcto)
+- **Fila B:** $0.2 + 0.2 + 0.6 = 1.0$ (Correcto)
+- **Fila C:** $0.2 + 0.4 + 0.4 = 1.0$ (Correcto)
+
+La matriz describe completamente las transiciones diarias del sistema y permite realizar predicciones futuras sobre la ubicación del agente.
+
+
+
 
 ---
 ---
 
-### E5.
+## Ejercicio 5.
 
 Un banco está considerando abrir un servicio para que los clientes paguen desde su automóvil, se estima que los clientes llegarán a una tasa promedio $(\lambda)$ de 15 quince por hora. El cajero que trabajará en la ventanilla puede atender a los clientes a un ritmo promedio $(\mu)$ de 1 cada 3 minutos.
 Suponiendo que el patrón de llegadas en Poisson y el patrón de servicios es exponencial, encuentre:
@@ -56,10 +552,10 @@ b) El número promedio de clientes en la línea de espera.
 c) El número promedio de clientes en el sistema.
 d) El tiempo promedio de espera en la fila.
 e) El tiempo promedio de espera en el sistema.
-
+### solución
 ---
 
-### E6.
+## Ejercicio 6.
 
 En un hospital llegan 10 clientes cada hora $(\lambda)$ y un solo servidor puede atender 8 clientes cada hora $(\mu)$. Si se colocan 2 servidores determine:
 
@@ -68,10 +564,10 @@ b) Número promedio de unidades en el sistema.
 c) Tiempo promedio en el que una unidad está dentro del sistema.
 d) Número de clientes en la fila.
 e) Tiempo de espera en la fila.
-
+### solución
 ---
 
-### E7.
+## Ejercicio 7.
 
 Existe un lavado automático de autos con una línea de remolque, de manera que los autos se mueven a través de la instalación de lavado como en una línea de ensamble. Supóngase que el lavado de autos puede aceptar un auto cada cinco minutos $(\mu)$ (un auto cada cinco minutos da una tasa de 12 autos por hora) y que la tasa promedio de llegadas $(\lambda)$ es de nueve autos por hora.
 
@@ -80,5 +576,5 @@ a) Longitud media de la cola.
 b) Tiempo medio de espera en la cola.
 c) Número medio de clientes en el sistema.
 d) Tiempo medio de espera en el sistema.
-
+### solución
 ---

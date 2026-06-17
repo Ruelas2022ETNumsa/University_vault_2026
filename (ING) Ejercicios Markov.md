@@ -6,34 +6,33 @@ Un profesor de ingeniería adquiere una computadora nueva cada dos años. El pro
 ### Diagrama de la Cadena de Markov
 
 ```tikz
-%\documentclass[margin=10pt]{standalone}
 \usepackage{tikz}
 \begin{document}
 \begin{tikzpicture}
 
     % ESTADO_1: M1 (Posición: 90 grados)
-    \node[draw,circle,thick,orange] (M1) at (6,10) {M1};
+    \node[draw,circle,thick,color=orange] (M1) at (6,10) {M1};
 
     % ESTADO_2: M2 (Posición: -30 grados)
-    \node[draw,circle,thick,pink] (M2) at (9.46,4) {M2};
+    \node[draw,circle,thick,color=pink] (M2) at (9.46,4) {M2};
 
     % ESTADO_3: M3 (Posición: -150 grados)
-    \node[draw,circle,thick,lime] (M3) at (2.54,4) {M3};
+    \node[draw,circle,thick,color=lime] (M3) at (2.54,4) {M3};
 
     % TRANSICIONES DESDE M1
-    \draw[->,ultra thick,orange] (M1) .. controls (5,12) and (7,12) ..node[above] {$0.65$} (M1);
-    \draw[->,very thick,orange] (M1) to[bend left=15] node[pos=0.2, right] {$0.2$} (M2);
-    \draw[->,very thick,orange] (M1) to[bend left=15] node[pos=0.2, left] {$0.15$} (M3);
+    \draw[->,ultra thick,color=orange] (M1) .. controls (5,12) and (7,12) ..node[above] {$0.65$} (M1);
+    \draw[->,very thick,color=orange] (M1) to[bend left=15] node[pos=0.2, right] {$0.2$} (M2);
+    \draw[->,very thick,color=orange] (M1) to[bend left=15] node[pos=0.2, left] {$0.15$} (M3);
 
     % TRANSICIONES DESDE M2
-    \draw[->,ultra thick,pink] (M2) .. controls (11,5) and (11,3) ..node[right] {$0.15$} (M2);
-    \draw[->,very thick,pink] (M2) to[bend left=15] node[pos=0.2, left] {$0.6$} (M1);
-    \draw[->,very thick,pink] (M2) to[bend left=15] node[pos=0.2, below] {$0.25$} (M3);
+    \draw[->,ultra thick,color=pink] (M2) .. controls (11,5) and (11,3) ..node[right] {$0.15$} (M2);
+    \draw[->,very thick,color=pink] (M2) to[bend left=15] node[pos=0.2, left] {$0.6$} (M1);
+    \draw[->,very thick,color=pink] (M2) to[bend left=15] node[pos=0.2, below] {$0.25$} (M3);
 
     % TRANSICIONES DESDE M3
-    \draw[->,ultra thick,lime] (M3) .. controls (1,5) and (1,3) ..node[left] {$0.4$} (M3);
-    \draw[->,very thick,lime] (M3) to[bend left=15] node[pos=0.2, right] {$0.5$} (M1);
-    \draw[->,very thick,lime] (M3) to[bend left=15] node[pos=0.2, above] {$0.1$} (M2);
+    \draw[->,ultra thick,color=lime] (M3) .. controls (1,5) and (1,3) ..node[left] {$0.4$} (M3);
+    \draw[->,very thick,color=lime] (M3) to[bend left=15] node[pos=0.2, right] {$0.5$} (M1);
+    \draw[->,very thick,color=lime] (M3) to[bend left=15] node[pos=0.2, above] {$0.1$} (M2);
 
 \end{tikzpicture}
 \end{document}
@@ -114,24 +113,23 @@ El departamento de estudios de mercado de una fábrica estima que el 20% de la g
 ```tikz
 \begin{document}
 \begin{tikzpicture}
-
     % ESTADO_1: Comprar (Posición horizontal para N=2)
-    \node[draw,circle,thick,orange] (C) at (2,6) {C};
+    \node[draw,circle,thick,color=orange] (C) at (2,6) {C};
 
     % ESTADO_2: No Comprar
-    \node[draw,circle,thick,pink] (NC) at (10,6) {NC};
+    \node[draw,circle,thick,color=pink] (NC) at (10,6) {NC};
 
     % TRANSICIONES ESTADO C (Comprar)
     % Bucle: 1 - 0.20 = 0.80
-    \draw[->,ultra thick,orange] (C) .. controls (0.5,8) and (3.5,8) .. node[above] {$0.8$} (C);
+    \draw[->,ultra thick,color=orange] (C) .. controls (0.5,8) and (3.5,8) .. node[above] {$0.8$} (C);
     % Salida hacia NC: 0.20
-    \draw[->,very thick,orange] (C) to[bend left=25] node[pos=0.5, above] {$0.2$} (NC);
+    \draw[->,very thick,color=orange] (C) to[bend left=25] node[pos=0.5, above] {$0.2$} (NC);
 
     % TRANSICIONES ESTADO NC (No Comprar)
     % Bucle: 1 - 0.30 = 0.70
-    \draw[->,ultra thick,pink] (NC) .. controls (8.5,8) and (11.5,8) .. node[above] {$0.7$} (NC);
+    \draw[->,ultra thick,color=pink] (NC) .. controls (8.5,8) and (11.5,8) .. node[above] {$0.7$} (NC);
     % Salida hacia C: 0.30
-    \draw[->,very thick,pink] (NC) to[bend left=25] node[pos=0.5, below] {$0.3$} (C);
+    \draw[->,very thick,color=pink] (NC) to[bend left=25] node[pos=0.5, below] {$0.3$} (C);
 
 \end{tikzpicture}
 \end{document}
@@ -225,43 +223,42 @@ En una población de 10,000 habitantes, 5000 no fuman, 2500 fuman uno o menos de
 ### Diagrama de la Cadena de Markov
 
 ```tikz
-%\documentclass[margin=10pt]{standalone}
 \usepackage{tikz}
 \begin{document}
 \begin{tikzpicture}
 
     % ESTADO_1: No fuman (NF) - Posición: 90 grados
-    \node[draw,circle,thick,orange] (NF) at (6,10) {NF};
+    \node[draw,circle,thick,color=orange] (NF) at (6,10) {NF};
 
     % ESTADO_2: Fuman <= 1 paquete (F1) - Posición: -30 grados
-    \node[draw,circle,thick,pink] (F1) at (9.46,4) {F1};
+    \node[draw,circle,thick,color=pink] (F1) at (9.46,4) {F1};
 
     % ESTADO_3: Fuman > 1 paquete (F2) - Posición: -150 grados
-    \node[draw,circle,thick,lime] (F2) at (2.54,4) {F2};
+    \node[draw,circle,thick,color=lime] (F2) at (2.54,4) {F2};
 
     % TRANSICIONES ESTADO NF (No fuman)
     % Bucle: 1 - (0.05 + 0.02) = 0.93
-    \draw[->,ultra thick,orange] (NF) .. controls (5,12) and (7,12) ..node[above] {$0.93$} (NF);
+    \draw[->,ultra thick,color=orange] (NF) .. controls (5,12) and (7,12) ..node[above] {$0.93$} (NF);
     % Hacia F1: 0.05
-    \draw[->,very thick,orange] (NF) to[bend left=15] node[pos=0.2, right] {$0.05$} (F1);
+    \draw[->,very thick,color=orange] (NF) to[bend left=15] node[pos=0.2, right] {$0.05$} (F1);
     % Hacia F2: 0.02
-    \draw[->,very thick,orange] (NF) to[bend left=15] node[pos=0.2, left] {$0.02$} (F2);
+    \draw[->,very thick,color=orange] (NF) to[bend left=15] node[pos=0.2, left] {$0.02$} (F2);
 
     % TRANSICIONES ESTADO F1 (Fuman <= 1 paquete)
     % Bucle: 1 - (0.10 + 0.10) = 0.80
-    \draw[->,ultra thick,pink] (F1) .. controls (11,5) and (11,3) ..node[right] {$0.80$} (F1);
+    \draw[->,ultra thick,color=pink] (F1) .. controls (11,5) and (11,3) ..node[right] {$0.80$} (F1);
     % Hacia NF: 0.10
-    \draw[->,very thick,pink] (F1) to[bend left=15] node[pos=0.2, left] {$0.10$} (NF);
+    \draw[->,very thick,color=pink] (F1) to[bend left=15] node[pos=0.2, left] {$0.10$} (NF);
     % Hacia F2: 0.10
-    \draw[->,very thick,pink] (F1) to[bend left=15] node[pos=0.2, below] {$0.10$} (F2);
+    \draw[->,very thick,color=pink] (F1) to[bend left=15] node[pos=0.2, below] {$0.10$} (F2);
 
     % TRANSICIONES ESTADO F2 (Fuman > 1 paquete)
     % Bucle: 1 - (0.05 + 0.10) = 0.85
-    \draw[->,ultra thick,lime] (F2) .. controls (1,5) and (1,3) ..node[left] {$0.85$} (F2);
+    \draw[->,ultra thick,color=lime] (F2) .. controls (1,5) and (1,3) ..node[left] {$0.85$} (F2);
     % Hacia NF: 0.05
-    \draw[->,very thick,lime] (F2) to[bend left=15] node[pos=0.2, right] {$0.05$} (NF);
+    \draw[->,very thick,color=lime] (F2) to[bend left=15] node[pos=0.2, right] {$0.05$} (NF);
     % Hacia F1: 0.10
-    \draw[->,very thick,lime] (F2) to[bend left=15] node[pos=0.2, above] {$0.10$} (F1);
+    \draw[->,very thick,color=lime] (F2) to[bend left=15] node[pos=0.2, above] {$0.10$} (F1);
 
 \end{tikzpicture}
 \end{document}
