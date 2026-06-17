@@ -58,10 +58,23 @@ node[above] {$0.9$}
 \node[draw,circle,thick,color=teal]    (E) at (3,6) {$E$};
 
 % =====================================================
-% CICLO PRINCIPAL
+% A
 % =====================================================
 
-\draw[->,ultra thick,orange ] (A) -- node[right] {$0.4$} (B);
+\draw[->,ultra thick,orange] (A) .. controls (5,10) and (7,10) ..node[above] {$0.4$}(A);
+\draw[->,ultra thick,orange] (A) to[bend left=10] node[pos=0.1,right] {$0.4$} (B);
+\draw[->,very thick,orange]  (A) to[bend left=20] node[pos=0.2,right] {$0.X$} (C);
+\draw[->,very thick,orange]  (A) to[bend left=30] node[pos=0.3,right] {$0.2$} (D);
+\draw[->,very thick,orange]  (A) to[bend left=40] node[pos=0.4,right] {$0.2$} (E);
+
+% =====================================================
+% B
+% =====================================================
+\draw[->,ultra thick,pink] (B) .. controls (8.2,7.2) and (9.8,7.2) ..node[above] {$0.4$}(B);
+
+\draw[->,ultra thick,red] (B) .. controls (10,7.2) and (10,7.2) ..node[above] {$0.4$}(B);
+
+
 \draw[->,ultra thick,pink   ] (B) -- node[right] {$0.5$} (C);
 \draw[->,ultra thick,lime   ] (C) -- node[below] {$0.6$} (D);
 \draw[->,ultra thick,magenta] (D) -- node[left] {$0.3$} (E);
@@ -71,21 +84,17 @@ node[above] {$0.9$}
 % CONEXIONES INTERNAS
 % =====================================================
 
-\draw[->,very thick,orange] (A) to[bend left=10] node[above] {$0.2$} (D);
-\draw[->,very thick,pink] (B) to[bend left=20] node[right] {$0.1$} (E);
-\draw[->,very thick,lime] (C) to[bend left=20] node[right] {$0.2$} (A);
+
+\draw[->,very thick,pink] (B) to[bend left=10] node[right] {$0.1$} (E);
+\draw[->,very thick,lime] (C) to[bend left=30] node[right] {$0.2$} (A);
 
 % =====================================================
 % AUTO-TRANSICIONES
 % =====================================================
 
-\draw[->,orange] (A) .. controls (4.8,9.8) and (7.2,9.8) ..
-node[above] {$0.4$}
-(A);
 
-\draw[->,pink] (B) .. controls (8.2,7.2) and (9.8,7.2) ..
-node[above] {$0.4$}
-(B);
+
+
 
 \draw[->,lime] (C) .. controls (7.2,1.0) and (8.8,1.0) ..
 node[below] {$0.2$}
