@@ -5,6 +5,7 @@
       "isHidden": false,
       "sortOrder": "byCreatedTimeReverse",
       "customOrder": [
+        "Tikz_markov_guide.md",
         "Untitled.md",
         "tables no terminado.md",
         "book 806.md",
@@ -2713,6 +2714,10 @@
       "isHidden": false
     },
     "Untitled.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Tikz_markov_guide.md": {
       "isPinned": false,
       "isHidden": false
     }
