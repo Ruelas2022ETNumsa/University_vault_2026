@@ -5,6 +5,7 @@
       "isHidden": false,
       "sortOrder": "byCreatedTimeReverse",
       "customOrder": [
+        "Untitled.md",
         "tables no terminado.md",
         "book 806.md",
         "practica 3 806.md",
@@ -2708,6 +2709,10 @@
       "isHidden": false
     },
     "Semestres/SEM_08/ETN806/Partial_3/(ING) ANÁLISIS DE MARKOV.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled.md": {
       "isPinned": false,
       "isHidden": false
     }
