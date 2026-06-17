@@ -6131,6 +6131,7 @@ tendencia
 turquesa
 traza
 transiciones
+tricos
 ToDo
 Templater
 Text
@@ -13040,6 +13041,9 @@ TYBZ
 TRANSICI
 Tolsky
 TRANSICIONES
+Tikz
+Transici
+Transiciones
 Sistema
 Sync
 Save
@@ -20059,6 +20063,7 @@ Significa
 Siguiente
 Suponga
 Salidas
+Self
 Plugins
 Pendientes
 Plugin
@@ -25449,6 +25454,8 @@ PERIODO
 Pagada
 Posici
 Pide
+Purple
+Probability
 del
 date
 de
@@ -30640,6 +30647,7 @@ detr
 demasiado
 desplazamiento
 defina
+depois
 Vault
 Verificar
 Variables
@@ -73673,6 +73681,7 @@ reparten
 rtelas
 reemplazarlo
 reutilizable
+radio
 notes
 notas
 nuevas
@@ -79884,6 +79893,7 @@ nWsL
 nzZZf
 nQmZ
 numerar
+ndares
 created
 commit
 cada
@@ -104872,6 +104882,8 @@ Calcula
 Checklist
 Compilado
 Cyan
+Centro
+Coordenada
 Instalados
 Instalado
 Instalar
@@ -142162,6 +142174,8 @@ progresi
 placeholder
 pinta
 prohibido
+proporcionados
+prob
 min
 mica
 movimiento
@@ -149428,6 +149442,8 @@ multiplicando
 marr
 manteniendo
 male
+markov
+models
 YAML
 Ya
 You
@@ -155812,6 +155828,7 @@ YMNOe
 YcQE
 YLYr
 YRUn
+Yellow
 Bot
 Baja
 Builder
@@ -160960,6 +160977,7 @@ Bho
 BNaU
 BfWrb
 BUCLES
+Bucles
 en
 exacta
 escaneados
@@ -167545,6 +167563,9 @@ efectivo
 empezando
 envuelto
 envoltorio
+elevarse
+envuelve
+edition
 Motor
 Media
 Mantiene
@@ -175049,6 +175070,8 @@ MUTUAMENTE
 Mart
 MATRIZ
 Menos
+Magenta
+Models
 Lectura
 LaTeX
 Linter
@@ -186589,6 +186612,7 @@ lima
 loop
 letra
 llamados
+loops
 incluyendo
 im
 instalar
@@ -194199,6 +194223,7 @@ incobrable
 interesantes
 incobrables
 ilustran
+introduction
 Dependencia
 Dropbox
 Dataview
@@ -200278,6 +200303,8 @@ DKMjT
 Dagr
 Deuda
 Dibuja
+Datos
+Detallado
 Remotely
 Raz
 Revisa
@@ -251063,6 +251090,7 @@ ocurrencias
 observarse
 oliva
 omitirse
+ocupe
 junto
 json
 jer

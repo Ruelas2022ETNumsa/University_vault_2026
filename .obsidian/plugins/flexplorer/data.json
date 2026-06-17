@@ -5,9 +5,6 @@
       "isHidden": false,
       "sortOrder": "byCreatedTimeReverse",
       "customOrder": [
-        "Tikz_markov_guide 1.md",
-        "asdsad.md",
-        "Tikz_markov_guide.md",
         "Untitled.md",
         "tables no terminado.md",
         "book 806.md",
@@ -1331,6 +1328,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "Tikz_markov_guide.md",
         "PDF_PP-guide.md",
         "better-export-pdf.md",
         "class-notes-guide.md",
@@ -2719,15 +2717,7 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Tikz_markov_guide.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "asdsad.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Tikz_markov_guide 1.md": {
+    "_app/_appnotes/Tikz_markov_guide.md": {
       "isPinned": false,
       "isHidden": false
     }

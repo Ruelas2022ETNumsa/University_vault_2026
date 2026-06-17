@@ -63,13 +63,13 @@ Redondea `x_i`, `y_i` al entero más cercano para que las coordenadas calcen con
 
 Radio `R` sugerido según N (para que ningún nodo quede pegado al borde 0 o 12):
 
-| N estados | R sugerido | Caso especial |
-|---|---|---|
-| 2 | — | No usar círculo: colocar en línea horizontal, p. ej. (2,6) y (10,6) |
-| 3 | 4.5 | |
-| 4 | 4 | Da un cuadrado perfecto: arriba, derecha, abajo, izquierda |
-| 5–6 | 5 | |
-| 7 u más | 5.5 | Si los nodos quedan muy juntos, ampliar la grilla a 14×14 o 16×16 manteniendo el centro proporcional |
+| N estados | R sugerido | Caso especial                                                                                        |
+| --------- | ---------- | ---------------------------------------------------------------------------------------------------- |
+| 2         | —          | No usar círculo: colocar en línea horizontal, p. ej. (2,6) y (10,6)                                  |
+| 3         | 4.5        |                                                                                                      |
+| 4         | 4          | Da un cuadrado perfecto: arriba, derecha, abajo, izquierda                                           |
+| 5–6       | 5          |                                                                                                      |
+| 7 u más   | 5.5        | Si los nodos quedan muy juntos, ampliar la grilla a 14×14 o 16×16 manteniendo el centro proporcional |
 
 Ejemplo: para N=4, ángulos = 90°, 0°, -90°, -180° → posiciones (6,10), (10,6), (6,2), (2,6). Esto coincide exactamente con el ejemplo de 4 estados más abajo.
 
