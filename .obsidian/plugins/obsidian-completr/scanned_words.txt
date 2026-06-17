@@ -13045,6 +13045,7 @@ TRANSICIONES
 Tikz
 Transici
 Transiciones
+Trata
 Sistema
 Sync
 Save
@@ -25460,6 +25461,7 @@ Pide
 Purple
 Probability
 Prefiero
+Poseer
 del
 date
 de
@@ -30658,6 +30660,12 @@ digan
 detectas
 discretos
 dadas
+dividas
+dibujando
+dejes
+decida
+denominadas
+despejando
 Vault
 Verificar
 Variables
@@ -54936,6 +54944,10 @@ superponen
 situaciones
 sano
 sumen
+salas
+solas
+sexto
+sticas
 vault
 vil
 ver
@@ -67332,6 +67344,7 @@ alfab
 amontonen
 adquisici
 actualmente
+agotado
 related
 recomendados
 ribbon
@@ -73706,6 +73719,7 @@ radios
 represente
 requisito
 renglones
+resolviendo
 notes
 notas
 nuevas
@@ -79918,6 +79932,7 @@ nzZZf
 nQmZ
 numerar
 ndares
+nimas
 created
 commit
 cada
@@ -86509,6 +86524,8 @@ curvadas
 code
 conversiones
 coincidiendo
+cuarto
+caracter
 updated
 un
 universo
@@ -104910,6 +104927,7 @@ Compilado
 Cyan
 Centro
 Coordenada
+Conversiones
 Instalados
 Instalado
 Instalar
@@ -149484,6 +149502,8 @@ male
 markov
 models
 matricial
+mezcles
+moverse
 YAML
 Ya
 You
@@ -167610,6 +167630,8 @@ extremadamente
 enfermo
 expliques
 estoc
+entregues
+elijas
 Motor
 Media
 Mantiene
@@ -175116,6 +175138,7 @@ MATRIZ
 Menos
 Magenta
 Models
+Menci
 Lectura
 LaTeX
 Linter
@@ -194272,6 +194295,9 @@ introduction
 intermedios
 intermedias
 itera
+indirecta
+invertidas
+ilustrativos
 Dependencia
 Dropbox
 Dataview
@@ -200354,6 +200380,8 @@ Dibuja
 Datos
 Detallado
 Detecta
+Despejes
+Dados
 Remotely
 Raz
 Revisa
@@ -207408,6 +207436,7 @@ Reordenando
 Redondea
 Radio
 Realiza
+Respeta
 Hider
 Hace
 Herramientas
@@ -217776,6 +217805,8 @@ funcionado
 futuros
 flujos
 fence
+fallado
+fijas
 haya
 hace
 hacer
@@ -223566,6 +223597,7 @@ hWPc
 hacemos
 heur
 homog
+historia
 que
 quedan
 queda
@@ -230616,6 +230648,7 @@ qoss
 qYoB
 qYmC
 quicklatex
+quinto
 University
 Usar
 Un
@@ -244574,6 +244607,7 @@ NOSL
 Ncb
 NIYH
 Nuestro
+Ning
 originales
 observatory
 oficial
@@ -258295,6 +258329,7 @@ jYuo
 jNxX
 jXeF
 justifiques
+jalas
 Qu
 Qui
 Quick

@@ -1,99 +1,104 @@
 ### Diagrama de la Cadena de Markov
+
 ```tikz
-\begin{document} \begin{tikzpicture}[node distance=4cm, every node/.style={circle, draw, minimum size=1.2cm, very thick}, font=\sffamily]
+\begin{document}
+\begin{tikzpicture}
 
+    % ESTADO_1: Comprar (Posición horizontal para N=2)
+    \node[draw,circle,thick,orange] (C) at (2,6) {C};
 
-% ESTADO_1: M1 (Posición: 90 grados)
-\node[blue] (M1) at (6,10) {M1};
+    % ESTADO_2: No Comprar
+    \node[draw,circle,thick,pink] (NC) at (10,6) {NC};
 
-% ESTADO_2: M2 (Posición: -30 grados)
-\node[teal] (M2) at (9.46,4) {M2};
+    % TRANSICIONES ESTADO C (Comprar)
+    % Bucle: 1 - 0.20 = 0.80
+    \draw[->,ultra thick,orange] (C) .. controls (0.5,8) and (3.5,8) .. node[above] {$0.8$} (C);
+    % Salida hacia NC: 0.20
+    \draw[->,very thick,orange] (C) to[bend left=25] node[pos=0.5, above] {$0.2$} (NC);
 
-% ESTADO_3: M3 (Posición: -150 grados)
-\node[violet] (M3) at (2.54,4) {M3};
+    % TRANSICIONES ESTADO NC (No Comprar)
+    % Bucle: 1 - 0.30 = 0.70
+    \draw[->,ultra thick,pink] (NC) .. controls (8.5,8) and (11.5,8) .. node[above] {$0.7$} (NC);
+    % Salida hacia C: 0.30
+    \draw[->,very thick,pink] (NC) to[bend left=25] node[pos=0.5, below] {$0.3$} (C);
 
-% TRANSICIONES ESTADO M1
-\path[->, blue, ultra thick] (M1) edge [loop above] node[above] {0.65} (M1);
-\path[->, blue, very thick] (M1) edge [bend left=10] node[right, pos=0.3] {0.2} (M2);
-\path[->, blue, very thick] (M1) edge [bend left=10] node[left, pos=0.3] {0.15} (M3);
-
-% TRANSICIONES ESTADO M2
-\path[->, teal, ultra thick] (M2) edge [loop right] node[right] {0.15} (M2);
-\path[->, teal, very thick] (M2) edge [bend left=20] node[left, pos=0.3] {0.6} (M1);
-\path[->, teal, very thick] (M2) edge [bend left=20] node[below, pos=0.3] {0.25} (M3);
-
-% TRANSICIONES ESTADO M3
-\path[->, violet, ultra thick] (M3) edge [loop left] node[left] {0.4} (M3);
-\path[->, violet, very thick] (M3) edge [bend left=30] node[right, pos=0.3] {0.5} (M1);
-\path[->, violet, very thick] (M3) edge [bend left=30] node[above, pos=0.3] {0.1} (M2);
-
-
-\end{tikzpicture} \end{document}
+\end{tikzpicture}
+\end{document}
 ```
-
-
 
 ---
 
-### Análisis Técnico del Ejercicio
+### Análisis Técnico y Resolución del Ejercicio
 
 #### 1. Identificación del Tipo de Ejercicio y Tema
 
-Este es un ejercicio de **Procesos Estocásticos**, específicamente sobre **Cadenas de Markov de tiempo discreto**. Se identifica como tal porque el sistema presenta un número finito de estados (modelos de computadora) y la probabilidad de pasar a un estado futuro depende únicamente del estado actual (el modelo que el profesor tiene en el presente), cumpliendo así con la **Propiedad de Markov**. El proceso ocurre en pasos discretos (cada dos años, coincidiendo con la adquisición de una nueva máquina).
+Este es un ejercicio de **procesos estocásticos**, específicamente sobre **Cadenas de Markov de tiempo discreto**. Se identifica como tal porque cumple con las tres condiciones fundamentales:
+
+1. **Estados finitos:** La población se divide en dos categorías mutuamente excluyentes: quienes compran el producto ($C$) y quienes no lo compran ($NC$).
+2. **Probabilidades de transición constantes:** El problema define porcentajes fijos de cambio de un mes al siguiente (probabilidades estacionarias).
+3. **Propiedad de Markov:** La decisión de compra en el mes próximo depende únicamente de la situación en el mes actual.
 
 #### 2. Identificación de los Datos del Problema
 
-El problema define tres estados posibles para el sistema en cualquier punto del tiempo $n$:
+- **Población total ($N$):** $1000$ individuos.
+- **Estados:**
+    - Estado 1 ($C$): Comprar el producto.
+    - Estado 2 ($NC$): No comprar el producto.
+- **Probabilidades de transición dadas:**
+    - Probabilidad de pasar de $C$ a $NC$: $P_{12} = 0.2$.
+    - Probabilidad de pasar de $NC$ a $C$: $P_{21} = 0.3$.
+- **Estado Inicial (Mes 1):**
+    - Compradores: $100$.
+    - No compradores: $1000 - 100 = 900$.
 
-- **Estado 1 ($M_1$):** El profesor posee el modelo de computadora 1.
-- **Estado 2 ($M_2$):** El profesor posee el modelo de computadora 2.
-- **Estado 3 ($M_3$):** El profesor posee el modelo de computadora 3.
+#### 3. Explicación de las Fórmulas Utilizadas
 
-Las probabilidades condicionales de transición dadas son:
+Para resolver este problema, utilizaremos la **matriz de probabilidades de transición ($P$)** y el **vector de probabilidades de estado ($\pi$)**:
 
-- **Desde $M_1$:**
-    - Probabilidad de pasar a $M_2$: $P_{12} = 0.2$
-    - Probabilidad de pasar a $M_3$: $P_{13} = 0.15$
-- **Desde $M_2$:**
-    - Probabilidad de pasar a $M_1$: $P_{21} = 0.6$
-    - Probabilidad de pasar a $M_3$: $P_{23} = 0.25$
-- **Desde $M_3$:**
-    - Probabilidad de pasar a $M_1$: $P_{31} = 0.5$
-    - Probabilidad de pasar a $M_2$: $P_{32} = 0.1$
+1. **Matriz de Transición ($P$):** Representa las probabilidades de moverse entre estados en un paso. Cada fila debe sumar 1. $$P = \begin{bmatrix} P_{11} & P_{12} \\ P_{21} & P_{22} \end{bmatrix}$$
+2. **Vector de Estado ($\pi(n)$):** Contiene la probabilidad de que el sistema esté en cada estado en el tiempo $n$.
+3. **Relación Recurrente:** Para predecir el estado en el periodo $n+1$, multiplicamos el vector de estado actual por la matriz de transición: $$\pi(n+1) = \pi(n) \cdot P$$
 
-#### 3. Explicación de lo que se Pide
+#### 4. Desarrollo Paso a Paso
 
-Se solicita hallar la **matriz de probabilidades de transición ($P$)**. Esta matriz organiza todas las probabilidades de cambio entre los estados de forma que el elemento en la fila $i$ y columna $j$ represente la probabilidad de que el sistema pase al estado $j$ en el siguiente paso, dado que actualmente se encuentra en el estado $i$.
+**Paso 1: Construcción de la matriz de transición $P$** Calculamos las probabilidades de permanencia (bucles):
 
-#### 4. Fórmulas Utilizadas y Razonamiento
+- $P_{11} = 1 - P_{12} = 1 - 0.2 = 0.8$ (Probabilidad de seguir comprando).
+- $P_{22} = 1 - P_{21} = 1 - 0.3 = 0.7$ (Probabilidad de seguir sin comprar).
 
-Para construir la matriz, aplicamos la definición de una **Matriz Estocástica**: $$P = \begin{bmatrix} P_{11} & P_{12} & P_{13} \ P_{21} & P_{22} & P_{23} \ P_{31} & P_{32} & P_{33} \end{bmatrix}$$
+La matriz resulta: $$P = \begin{bmatrix} 0.8 & 0.2 \\ 0.3 & 0.7 \end{bmatrix}$$
 
-Un requisito fundamental es que **los valores de probabilidad para cualquier renglón deben sumar 1**. Esto se debe a que el sistema debe estar obligatoriamente en uno de los estados definidos en el siguiente periodo (ley de probabilidad total). La fórmula para las probabilidades de "permanencia" (auto-transición) es: $$P_{ii} = 1 - \sum_{j \neq i} P_{ij}$$
+**Paso 2: Definición del vector de estado inicial $\pi(1)$** Expresamos el número de individuos como probabilidades dividiendo entre el total ($1000$):
 
-#### 5. Sustitución de Valores y Operaciones Intermedias
+- $\pi_1(1) = 100 / 1000 = 0.1$.
+- $\pi_2(1) = 900 / 1000 = 0.9$. $$\pi(1) = [0.1, \quad 0.9]$$
 
-**Paso 1: Calcular las probabilidades de permanecer en el mismo estado ($P_{ii}$)**
+**Paso 3: Cálculo para el próximo mes (Mes 2)** Aplicamos la fórmula $\pi(2) = \pi(1) \cdot P$: $$\pi(2) = [0.1, \quad 0.9] \begin{bmatrix} 0.8 & 0.2 \\ 0.3 & 0.7 \end{bmatrix}$$
 
-- **Para el Estado 1 ($M_1$):** Sabemos que $P_{12} = 0.2$ y $P_{13} = 0.15$. $$P_{11} = 1 - (P_{12} + P_{13})$$ $$P_{11} = 1 - (0.2 + 0.15)$$ $$P_{11} = 1 - 0.35 = 0.65$$
-    
-- **Para el Estado 2 ($M_2$):** Sabemos que $P_{21} = 0.6$ y $P_{23} = 0.25$. $$P_{22} = 1 - (P_{21} + P_{23})$$ $$P_{22} = 1 - (0.6 + 0.25)$$ $$P_{22} = 1 - 0.85 = 0.15$$
-    
-- **Para el Estado 3 ($M_3$):** Sabemos que $P_{31} = 0.5$ y $P_{32} = 0.1$. $$P_{33} = 1 - (P_{31} + P_{32})$$ $$P_{33} = 1 - (0.5 + 0.1)$$ $$P_{33} = 1 - 0.6 = 0.4$$
-    
+- $\pi_1(2) = (0.1 \times 0.8) + (0.9 \times 0.3) = 0.08 + 0.27 = 0.35$
+- $\pi_2(2) = (0.1 \times 0.2) + (0.9 \times 0.7) = 0.02 + 0.63 = 0.65$
 
-#### 6. Resultado Final: Matriz de Transición
+Convertimos a número de individuos:
 
-Insertamos los valores obtenidos y los proporcionados en la estructura matricial:
+- Compradores = $0.35 \times 1000 = 350$.
 
-$$P = \begin{bmatrix} 0.65 & 0.20 & 0.15 \\ 0.60 & 0.15 & 0.25 \\ 0.50 & 0.10 & 0.40 \end{bmatrix}$$
+**Paso 4: Cálculo para dentro de dos meses (Mes 3)** Aplicamos la fórmula $\pi(3) = \pi(2) \cdot P$: $$\pi(3) = [0.35, \quad 0.65] \begin{bmatrix} 0.8 & 0.2 \\ 0.3 & 0.7 \end{bmatrix}$$
 
-#### 7. Verificación del Resultado
+- $\pi_1(3) = (0.35 \times 0.8) + (0.65 \times 0.3) = 0.28 + 0.195 = 0.475$
+- $\pi_2(3) = (0.35 \times 0.2) + (0.65 \times 0.7) = 0.07 + 0.455 = 0.525$
 
-Para asegurar que la matriz es válida (estocástica por renglones), sumamos los elementos de cada fila:
+Convertimos a número de individuos:
 
-- **Fila 1:** $0.65 + 0.20 + 0.15 = 1.00$ (Correcto)
-- **Fila 2:** $0.60 + 0.15 + 0.25 = 1.00$ (Correcto)
-- **Fila 3:** $0.50 + 0.10 + 0.40 = 1.00$ (Correcto)
+- Compradores = $0.475 \times 1000 = 475$.
 
-La matriz cumple con todas las propiedades de una cadena de Markov homogénea y finita.
+#### 5. Resultado Final
+
+- **Al mes próximo:** Comprarán el producto **350 individuos**.
+- **Dentro de dos meses:** Comprarán el producto **475 individuos**.
+
+#### 6. Verificación
+
+Comprobamos que las probabilidades en cada paso sumen 1 (100% de la población):
+
+- Mes 2: $0.35 + 0.65 = 1.0$ (Correcto).
+- Mes 3: $0.475 + 0.525 = 1.0$ (Correcto). Los cálculos son consistentes con las propiedades de una cadena de Markov finita.
