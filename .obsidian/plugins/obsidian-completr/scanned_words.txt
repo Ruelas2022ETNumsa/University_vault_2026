@@ -30628,6 +30628,7 @@ derivamos
 deudas
 deuda
 dinero
+determinamos
 Vault
 Verificar
 Variables
@@ -86434,6 +86435,7 @@ center
 colspan
 cantidades
 calculan
+calcularon
 updated
 un
 universo

@@ -5,7 +5,7 @@
       "isHidden": false,
       "sortOrder": "byCreatedTimeReverse",
       "customOrder": [
-        "ANÁLISIS DE MARKOV.md",
+        "tables no terminado.md",
         "book 806.md",
         "practica 3 806.md",
         "in_work",
@@ -1106,7 +1106,9 @@
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
-      "customOrder": []
+      "customOrder": [
+        "(ING) ANÁLISIS DE MARKOV.md"
+      ]
     },
     "_app": {
       "isPinned": false,
@@ -2701,7 +2703,11 @@
       "isPinned": false,
       "isHidden": false
     },
-    "ANÁLISIS DE MARKOV.md": {
+    "tables no terminado.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08/ETN806/Partial_3/(ING) ANÁLISIS DE MARKOV.md": {
       "isPinned": false,
       "isHidden": false
     }

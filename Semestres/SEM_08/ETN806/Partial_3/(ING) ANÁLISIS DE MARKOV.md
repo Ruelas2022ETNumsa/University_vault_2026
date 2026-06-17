@@ -430,144 +430,21 @@ $FA = \begin{bmatrix} 1.38 & 0.34 \\ 0.52 & 1.38 \end{bmatrix} \times \begin{bma
 La nueva matriz **FA** tiene un significado importante. Indica la probabilidad de que una cantidad que está en uno de los estados no absorbentes termine en uno de ellos.
 El renglón superior indica las probabilidades de que una cantidad en la categoría de menos de un mes termine en la categoría de pagada (0.97) o deuda incobrable (0.03).
 
+$$M = (M_1, M_2, M_3, \dots, M_n)$$ 
+donde
+$n = \text{número de estados no absorbentes}$
+$M_1 = \text{cantidad en el primer estado o categoría}$ 
+$M_2 = \text{cantidad en el segundo estado o categoría}$ 
+$M_n = \text{cantidad en el n-ésimo estado o categoría}$ 
 
+Suponga que hay $2,000 en la categoría de menos de un mes, y $5,000 en la de uno a tres meses. Entonces, $M$ se representaría de la siguiente manera: $M = (2,000, 5,000)$
 
+Si conocemos las cantidades en las categorías de menos de un mes y de entre uno y tres meses, determinamos la cantidad de dinero que se pagará y la cantidad que se convertirá en deuda incobrable. Sea la matriz M la cantidad de dinero que está en cada estado no absorbente
 
+Las cantidades de dinero que terminarán como pagada y como deuda incobrable se calculan multiplicando la matriz $M$ por la matriz $FA$ que se calcularon antes. Los cálculos son: 
 
+Cantidad pagada y cantidad de deuda incobrable = $MFA$
 
-Sea la matriz **M** la cantidad de dinero que está en cada estado no absorbente: $M = (M_1, M_2, M_3, \dots, M_n)$ Suponga que hay $2,000 en la categoría de menos de un mes, y $5,000 en la de uno a tres meses. $M = (2,000, 5,000)$ Las cantidades que terminarán como pagada y como deuda incobrable se calculan multiplicando $M$ por $FA$: $MFA = (2,000, 5,000) \begin{bmatrix} 0.97 & 0.03 \ 0.86 & 0.14 \end{bmatrix} = (6,240, 760)$
-
-**Entonces, del total de $7,000, $6,240 se pagarán al final y $760 terminarán como deuda incobrable.**
-
-
-
-
-Aquí tienes la transcripción literal de las páginas 20 a la 23 del documento, que es donde finaliza el material proporcionado en las fuentes:
-
-### **Página 20**
-
-mercado no influyen en las probabilidades del estado en equilibrio. El análisis para determinar las probabilidades del estado en equilibrio o las participaciones en el mercado es el mismo cuando hay más de tres estados.
-
-En los ejemplos estudiados hasta ahora, suponemos que es posible que el proceso o sistema vaya de un estado a cualquier otro, entre cualesquiera dos periodos. Sin embargo, en algunos casos no se puede ira otro estado en el futuro. En otras palabras, cuando se encuentra en un estado dado, este lo “absorbe”, y permanecerá en ese estado. Cualquier estado que tiene tal propiedad se llama **estado absorbente** un ejemplo es la aplicación de las cuentas por cobrar.
-
-Un sistema de cuentas por cobrar generalmente coloca las deudas o las cuentas por cobrar de sus clientes en una de varias categorías o estados, dependiendo de lo atrasada que esté la cuenta sin pagar más antigua. Desde luego, las categorías o los estados exactos dependen de la política establecida por cada compañía. Cuatro estados o categorías típicos para una aplicación de cuentas por cobrar son los siguientes:
-
-- _Estado 1 ($\pi_1$): pagadas, todas las cuentas_
-- _Estado 2 ($\pi_2$): deuda incobrable, atrasada por más de tres meses_
-- _Estado 3 ($\pi_3$): atrasada menos de un mes_
-- _Estado 4 ($\pi_4$): atrasada entre uno y tres meses_
-
-# **Estados absorbentes y matriz fundamental: Cuentas por cobrar**
-
-###  Igual que en otros procesos de Markov, establecemos una matriz de probabilidades de transición para los cuatro estados.
-
-###  La probabilidad de estar en la categoría pagada para cualquier cuenta en un mes futuro, dado que el cliente está en la categoría de pagada por una compra este mes, es de 100% o 1.
-
----
-
-### **Página 21**
-
-###  Para cualquier estado absorbente, la probabilidad de que un cliente esté en ese estado en el futuro es de 1, en tanto que la probabilidad de que un cliente esté en otro estado es de 0
-
-#  antes de elaborar esa matriz (a matriz de probabilidades de transición), necesitamos conocer las probabilidades para los otros dos estados: deuda de menos de un mes y deuda de uno a tres meses de antigüedad.
-
-|ESTE MES|PAGADA|DEUDA INCOBRABLE|< 1 MES|1 A 3 MESES|
-|:--|:-:|:-:|:-:|:-:|
-|Pagada|1|0|0|0|
-|Deuda incobrable|0|1|0|0|
-|Menos de 1 mes|0.6|0|0.2|0.2|
-|1 a 3 meses|0.4|0.1|0.3|0.2|
-
-_También debería tener en mente que los cuatro estados se pueden colocar en el orden que elija. Por ejemplo, parecería más natural ordenar este problema con los estados:_
-
-1. _Pagada_
-2. _Atrasada menos de un mes_
-3. _Atrasada entre uno y tres meses_
-4. _Atrasada más de tres meses; deuda incobrable_ _Esto es perfectamente legítimo y la única razón para no usar este orden es facilitar algunas manipulaciones de matrices que verá en seguida._
-
-$P = \begin{bmatrix} 1 & 0 & 0 & 0 \ 0 & 1 & 0 & 0 \ 0.6 & 0 & 0.2 & 0.2 \ 0.4 & 0.1 & 0.3 & 0.2 \end{bmatrix}$
-
-##### Las condiciones de equilibrio son aún más interesantes. Desde luego, a la larga, todos estarán en la categoría de pagada o deuda incobrable, lo cual se debe a que las categorías son estados absorbentes. ¿Pero cuántas personas, o cuánto dinero, estarán en cada categoría? Si encontramos la cantidad total de dinero que quedará como pagada o deuda incobrable, ayudamos a la compañía a manejar sus deudas incobrables y sus flujos de efectivo. Un análisis así requiere lo que se conoce como **matriz fundamental**.
-
----
-
-### **Página 22**
-
-Para obtener la matriz fundamental, es necesario hacer una _partición de la matriz de probabilidades de transición, P_, como: $P = \begin{bmatrix} I & 0 \ A & B \end{bmatrix}$
-
-$I = \begin{bmatrix} 1 & 0 \ 0 & 1 \end{bmatrix} \quad 0 = \begin{bmatrix} 0 & 0 \ 0 & 0 \end{bmatrix}$ $A = \begin{bmatrix} 0.6 & 0 \ 0.4 & 0.1 \end{bmatrix} \quad B = \begin{bmatrix} 0.2 & 0.2 \ 0.3 & 0.2 \end{bmatrix}$
-
-donde _I = matriz identidad (tiene unos en la diagonal y ceros en otra parte)_ _0 = matriz con tan solo ceros._ La matriz fundamental se calcula como: $F = (I - B)^{-1}$
-
-_F es la matriz fundamental._ En la ecuación 15-8, $(I - B)$ significa que restamos la matriz $B$ de la matriz $I$. El superíndice -1 significa que tomamos la inversa del resultado de $(I - B)$. Veamos cómo se calcula la matriz fundamental para la aplicación de cuentas por cobrar: $F = (I - B)^{-1}$ o bien, $F = \left( \begin{bmatrix} 1 & 0 \ 0 & 1 \end{bmatrix} - \begin{bmatrix} 0.2 & 0.2 \ 0.3 & 0.2 \end{bmatrix} \right)^{-1}$ Al restar $B$ de $I$, $F = \begin{bmatrix} 0.8 & -0.2 \ -0.3 & 0.8 \end{bmatrix}^{-1}$
-
-La matriz inversa de $\begin{bmatrix} a & b \ c & d \end{bmatrix}$ es $\begin{bmatrix} a & b \ c & d \end{bmatrix}^{-1} = \begin{bmatrix} d/r & -b/r \ -c/r & a/r \end{bmatrix}$ donde $r = ad - bc$
-
-### para una matriz con dos renglones y dos columnas, los cálculos son relativamente sencillos, como se indica aquí:
-
-Para encontrar la matriz $F$ en el ejemplo de cuentas por cobrar, primero calculamos $r = ad - bc = (0.8)(0.8) - (-0.2)(-0.3) = 0.64 - 0.06 = 0.58$ Con esto tenemos $F = \begin{bmatrix} 0.8 & -0.2 \ -0.3 & 0.8 \end{bmatrix}^{-1} = \begin{bmatrix} 0.8/0.58 & -(-0.2)/0.58 \ -(-0.3)/0.58 & 0.8/0.58 \end{bmatrix} = \begin{bmatrix} 1.38 & 0.34 \ 0.52 & 1.38 \end{bmatrix}$
-
----
-
-### **Página 23**
-
-Ahora estamos en posición de usar la matriz fundamental para calcular la cantidad de dinero en deuda incobrable que esperaríamos a la larga. Primero necesitamos multiplicar la matriz fundamental, $F$, por la matriz $A$. Esto se logra como sigue: $FA = \begin{bmatrix} 1.38 & 0.34 \ 0.52 & 1.38 \end{bmatrix} \times \begin{bmatrix} 0.6 & 0 \ 0.4 & 0.1 \end{bmatrix}$ es decir; $FA = \begin{bmatrix} 0.97 & 0.03 \ 0.86 & 0.14 \end{bmatrix}$
-
-#### La nueva matriz FA tiene un significado importante. Indica la probabilidad de que una cantidad que está en uno de los estados no absorbentes termine en uno de ellos.
-
-#### El renglón superior de esta matriz indica las probabilidades de que una cantidad en la categoría de menos de un mes termine en la categoría de pagada o deuda incobrable.
-
-Si conocemos las cantidades en las categorías de menos de un mes y de entre uno y tres meses, determinamos la cantidad de dinero que se pagará y la cantidad que se convertirá en deuda incobrable. Sea la matriz M la cantidad de dinero que está en cada estado no absorbente $M = (M_1, M_2, M_3, \dots, M_n)$ donde $n = \text{número de estados no absorbentes}$ $M_1 = \text{cantidad en el primer estado o categoría}$ $M_2 = \text{cantidad en el segundo estado o categoría}$ $M_n = \text{cantidad en el n-ésimo estado o categoría}$ Suponga que hay $2,000 en la categoría de menos de un mes, y $5,000 en la de uno a tres meses. Entonces, $M$ se representaría de la siguiente manera: $M = (2,000, 5,000)$
-
-Las cantidades de dinero que terminarán como pagada y como deuda incobrable se calculan multiplicando la matriz $M$ por la matriz $FA$ que se calcularon antes. Los cálculos son: Cantidad pagada y cantidad de deuda incobrable = $MFA$ $= (2,000, 5,000) \begin{bmatrix} 0.97 & 0.03 \ 0.86 & 0.14 \end{bmatrix}$ $= (6,240, 760)$
+$MFA = (2,000, 5,000) \begin{bmatrix} 0.97 & 0.03 \\ 0.86 & 0.14 \end{bmatrix}= (6,240, 760)$
 
 Entonces, del total de $7,000 ($2,000 en la categoría de menos de un mes y $5,000 en la de uno a tres meses), $6,240 se pagarán al final y $760 terminarán como deuda incobrable.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-|                             Este mes                             | Siguiente mes |        <         |       <        |      <      |
-|:----------------------------------------------------------------:|:-------------:|:----------------:|:--------------:|:-----------:|
-| Pagada~ ~ { "vertical-align": "middle" } |    Pagada     | Deuda incobrable | Menos de 1 mes | 1 a 3 meses |
-|                                ^                                 |       1       |        0         |       0        |      0      |
-|                         Deuda incobrable                         |       0       |        1         |       0        |      0      |
-|                          Menos de 1 mes                          |      0.6      |        0         |      0.2       |     0.2     |
-|                           1 a 3 meses                            |      0.4      |       0.1        |      0.3       |     0.2     |
-
-
-
-
----
