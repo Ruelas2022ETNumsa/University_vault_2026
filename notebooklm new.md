@@ -1,5 +1,6 @@
 # Instrucciones de respuesta — NotebookLM
 
+**FUENTE PRIORITARIA:** Para toda resolución de ejercicios, consulta y prioriza el documento `for_colas.md`. Usa sus fórmulas, notación y procedimientos por encima de cualquier otro recurso. Si hay conflicto entre `for_colas.md` y tu conocimiento general, siempre prevalece el documento.
 ## 1. Estilo general de las respuestas
 
 Quiero respuestas extremadamente detalladas y pedagógicas, especialmente para ejercicios matemáticos, físicos, electrónicos, de programación y de análisis técnico.
@@ -20,10 +21,8 @@ Cuando resuelvas un ejercicio, sigue siempre este orden:
 
 1. Identifica los datos del problema y qué se pide.
 2. Indica qué fórmula corresponde a cada cálculo y por qué se usa.
-
 3. Sustituye los valores paso a paso.
 4. Realiza las operaciones intermedias completas.
-
 5. Muestra el resultado final claramente y verifícalo si es posible.
 
 ---

@@ -73,7 +73,14 @@ d) El tiempo promedio de la espera en la fila.
 e) El tiempo promedio de espera en el sistema.
 
 **Resolución:**
- 
+
+```mermaid
+flowchart LR
+    L([Llegadas]) --> Q[Cola]
+    Q --> S((Servidor))
+    S --> O([Salida])
+```
+
  $\lambda = 15$ 
  
  Para $\mu$:
@@ -127,6 +134,16 @@ b) Número promedio de unidades en el sistema.
 
 **Resolución:**
 
+```mermaid
+
+flowchart LR
+    L([Llegadas]) --> Q[Cola]
+    Q --> S1((Servidor 1))
+    Q --> S2((Servidor 2))
+    S1 --> O([Salida])
+    S2 --> O
+```
+
 - **a)** $P_o = \frac{1}{\frac{(10/8)^0}{0!} + \frac{(10/8)^1}{1!} + \frac{(10/8)^2}{2!} \left( \frac{1}{1 - (10/16)} \right)} = \frac{3}{13} = 0,231 \leadsto 23%$
 - **b)** $L_s = \frac{10 \cdot 8 (10/8)^2 (0,231)}{(2 - 1)! (2 \cdot 8 - 10)^2} + \frac{10}{8} = 2,052$ # pacientes $\cong 2$
 
@@ -152,6 +169,15 @@ a) Calcule la longitud media de la cola.
 b) Tiempo de espera en la cola.
 
 **Resolución:** $\lambda = 9$, $\mu = 12$
+
+```mermaid
+
+flowchart LR
+    L([Llegadas]) --> Q[Cola]
+    Q --> S((Servidor))
+    S --> O([Salida])
+```
+
 
 - **a)** $L_q = \frac{\lambda^2}{2\mu(\mu - \lambda)} = \frac{9^2}{2(12)(12 - 9)} = 1,125$ autos $\cong 1$
 - **b)** $W_q = \frac{\lambda}{2\mu(\mu - \lambda)} = \frac{9}{2(12)(12 - 9)} = 0,125$ horas

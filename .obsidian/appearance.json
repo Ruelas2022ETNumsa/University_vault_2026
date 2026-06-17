@@ -3,7 +3,7 @@
   "showRibbon": false,
   "accentColor": "",
   "nativeMenus": false,
-  "baseFontSize": 10,
+  "baseFontSize": 13,
   "baseFontSizeAction": true,
   "enabledCssSnippets": [
     "print",
