@@ -5,6 +5,7 @@
       "isHidden": false,
       "sortOrder": "byCreatedTimeReverse",
       "customOrder": [
+        "(ING) Ejercicios teo colas.md",
         "notebooklm new.md",
         "notebooklm old.md",
         "tables no terminado.md",
@@ -2733,6 +2734,10 @@
       "isHidden": false
     },
     "Semestres/SEM_08/ETN806/Partial_3/(ING) Ejercicios Markov.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "(ING) Ejercicios teo colas.md": {
       "isPinned": false,
       "isHidden": false
     }

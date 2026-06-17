@@ -1,5 +1,4 @@
-
-### **Página 1: Teoría de Colas**
+# Teoría de Colas
 
 **Estructura**
 
@@ -9,10 +8,10 @@
 
 ---
 
-### **Página 2: Estructura de líneas de espera**
+## Estructura de líneas de espera
 
 1. (Gráfico: Fila $\longrightarrow$ Servicio) $\longrightarrow$ **Consulta de un dentista**
-2. (Gráfico: Fila $\longrightarrow$ Fase 1 $\longrightarrow$ $\bigcirc$ $\longrightarrow$ Fase 2) $\longrightarrow$ **Venta de Hamburguesas Mc donalds**
+2. (Gráfico: Fila $\longrightarrow$ Fase 1 $\longrightarrow$ $\bigcirc$ $\longrightarrow$ Fase 2) $\longrightarrow$ **Venta de Hamburguesas Mcdonalds**
 3. (Gráfico: Fila con 3 flechas hacia Servicio 1, 2 y 3) $\longrightarrow$ **Cajeros automáticos de un Banco**
 4. (Gráfico: Fila con 2 flechas hacia dos flujos de Fase 1 $\longrightarrow$ Fase 2) $\longrightarrow$ **Matriculación Universitaria**
 
@@ -66,9 +65,25 @@
 
 ### **Páginas 8 a 11: Ejemplo Modelo A**
 
-**Ejemplo:** Un banco está considerando abrir un servicio para que los clientes paguen desde su automóvil. Se estima que los clientes llegarán a una tasa promedio ($\lambda$) de 15 por hora. El cajero que trabajará en la ventanilla puede atender a los clientes a un ritmo de uno cada tres minutos ($\mu$). a) La utilización promedio del cajero. b) El número promedio de clientes en la línea de espera. c) El número promedio de clientes en el sistema. d) El tiempo promedio de la espera en la fila. e) El tiempo promedio de espera en el sistema.
+**Ejemplo:** Un banco está considerando abrir un servicio para que los clientes paguen desde su automóvil. Se estima que los clientes llegarán a una tasa promedio ($\lambda$) de 15 por hora. El cajero que trabajará en la ventanilla puede atender a los clientes a un ritmo de uno cada tres minutos ($\mu$).
 
-**Resolución:** $\lambda = 15$ Para $\mu$: 1 cliente $\longrightarrow$ 3 min; $x \longrightarrow$ 60 min. $x = \frac{60 min \cdot 1 cliente}{3 min} = 20$ clientes por hora. $\mu = 20$.
+a) La utilización promedio del cajero. 
+b) El número promedio de clientes en la línea de espera. 
+c) El número promedio de clientes en el sistema. 
+d) El tiempo promedio de la espera en la fila. 
+e) El tiempo promedio de espera en el sistema.
+
+**Resolución:**
+ 
+ $\lambda = 15$ 
+ 
+ Para $\mu$:
+1 cliente $\longrightarrow$ 3 min;
+$x \longrightarrow$ 60 min. 
+
+$x = \frac{60 min \cdot 1 cliente}{3 min} = 20$ clientes por hora. 
+
+$\mu = 20$.
 
 - **a)** $\rho = \frac{\lambda}{\mu} = \frac{15}{20} = 0,75 \leadsto 75%$
 - **b)** $L_q = \frac{\lambda^2}{\mu(\mu - \lambda)} = \frac{(15)^2}{20(20 - 15)} = 2,25$ clientes $\cong 2$
@@ -108,7 +123,12 @@
 
 ### **Páginas 15 a 17: Ejemplo Modelo B**
 
-**Ejemplo:** En un hospital llegan 10 pacientes cada hora ($\lambda$) y un solo servidor puede atender 8 pacientes cada hora ($\mu$). Si se colocan dos servidores determine: a) Probabilidad de que ningún cliente se encuentre en el sistema. b) Número promedio de unidades en el sistema. **Datos:** $\lambda = 10$, $\mu = 8$, $s = 2$.
+**Ejemplo:** En un hospital llegan 10 pacientes cada hora ($\lambda$) y un solo servidor puede atender 8 pacientes cada hora ($\mu$). Si se colocan dos servidores determine:
+
+a) Probabilidad de que ningún cliente se encuentre en el sistema. 
+b) Número promedio de unidades en el sistema. 
+
+**Datos:** $\lambda = 10$, $\mu = 8$, $s = 2$.
 
 **Resolución:**
 
@@ -135,7 +155,10 @@
 
 ### **Páginas 20 y 21: Ejemplo Modelo C**
 
-**Ejemplo:** Un lavado automático de autos con línea de remolque de manera que los autos se mueven a través de la instalación en una línea de ensamble. Suponga que el lavado de autos se puede hacer con un auto cada 5 minutos ($\mu$) (Un auto cada cinco minutos da una tasa de 12 autos por hora) y que la tasa de llegadas ($\lambda$) es de 9 autos. a) Calcule la longitud media de la cola. b) Tiempo de espera en la cola.
+**Ejemplo:** Un lavado automático de autos con línea de remolque de manera que los autos se mueven a través de la instalación en una línea de ensamble. Suponga que el lavado de autos se puede hacer con un auto cada 5 minutos ($\mu$) (Un auto cada cinco minutos da una tasa de 12 autos por hora) y que la tasa de llegadas ($\lambda$) es de 9 autos. 
+
+a) Calcule la longitud media de la cola. 
+b) Tiempo de espera en la cola.
 
 **Resolución:** $\lambda = 9$, $\mu = 12$
 
