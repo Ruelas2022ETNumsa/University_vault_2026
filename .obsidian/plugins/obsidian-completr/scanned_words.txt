@@ -6129,6 +6129,8 @@ tiendas
 tienda
 tendencia
 turquesa
+traza
+transiciones
 ToDo
 Templater
 Text
@@ -13037,6 +13039,7 @@ TvlP
 TYBZ
 TRANSICI
 Tolsky
+TRANSICIONES
 Sistema
 Sync
 Save
@@ -20055,6 +20058,7 @@ SDGR
 Significa
 Siguiente
 Suponga
+Salidas
 Plugins
 Pendientes
 Plugin
@@ -25443,6 +25447,8 @@ Ponemos
 Paul
 PERIODO
 Pagada
+Posici
+Pide
 del
 date
 de
@@ -30630,6 +30636,10 @@ deudas
 deuda
 dinero
 determinamos
+detr
+demasiado
+desplazamiento
+defina
 Vault
 Verificar
 Variables
@@ -48064,6 +48074,7 @@ bTWv
 bUOR
 bALdl
 bALMK
+bucles
 scope
 status
 selector
@@ -54897,6 +54908,12 @@ supone
 sitos
 seguros
 suponemos
+self
+sobresalir
+superponerse
+saliendo
+sume
+superponen
 vault
 vil
 ver
@@ -67287,6 +67304,9 @@ absorbente
 atrasada
 antigüedad
 ayudamos
+angular
+alfab
+amontonen
 related
 recomendados
 ribbon
@@ -73649,6 +73669,10 @@ resolvemos
 resolveremos
 rowspan
 rosa
+reparten
+rtelas
+reemplazarlo
+reutilizable
 notes
 notas
 nuevas
@@ -86440,6 +86464,15 @@ cantidades
 calculan
 calcularon
 cian
+calcen
+cruzar
+cardinal
+cruzan
+curvatura
+clicamente
+compilar
+curvadas
+code
 updated
 un
 universo
@@ -93450,6 +93483,7 @@ uZIM
 uDi
 uUQkS
 utilizamos
+ubicar
 Galaxy
 Git
 Gr
@@ -99487,6 +99521,8 @@ GvDx
 GRhu
 Gaf
 GMDz
+Grosor
+Green
 Convenci
 Creaci
 Commander
@@ -104831,6 +104867,11 @@ CONCLUYENDO
 Continuar
 Cuatro
 Cuentas
+Cadenas
+Calcula
+Checklist
+Compilado
+Cyan
 Instalados
 Instalado
 Instalar
@@ -124925,6 +124966,7 @@ Equilibrio
 ESTADO
 Expresamos
 Eliminemos
+Envuelve
 Obsidian
 OmniSearch
 Ocultar
@@ -131104,6 +131146,7 @@ OBRL
 OQdA
 OJwW
 OLTs
+Orange
 Auto
 Annotator
 Autocompletado
@@ -136260,6 +136303,7 @@ AnV
 ANALISIS
 American
 Atlas
+Asigna
 push
 pull
 para
@@ -142111,6 +142155,13 @@ picos
 pagadas
 pagada
 partici
+posicionamiento
+proporcional
+pronunciadas
+progresi
+placeholder
+pinta
+prohibido
 min
 mica
 movimiento
@@ -149375,6 +149426,8 @@ middle
 manejar
 multiplicando
 marr
+manteniendo
+male
 YAML
 Ya
 You
@@ -160906,6 +160959,7 @@ BWvy
 Bho
 BNaU
 BfWrb
+BUCLES
 en
 exacta
 escaneados
@@ -167488,6 +167542,9 @@ establecemos
 elaborar
 encontramos
 efectivo
+empezando
+envuelto
+envoltorio
 Motor
 Media
 Mantiene
@@ -186529,6 +186586,9 @@ lvst
 lealtad
 llaman
 lima
+loop
+letra
+llamados
 incluyendo
 im
 instalar
@@ -194138,6 +194198,7 @@ influyen
 incobrable
 interesantes
 incobrables
+ilustran
 Dependencia
 Dropbox
 Dataview
@@ -200216,6 +200277,7 @@ Dal
 DKMjT
 Dagr
 Deuda
+Dibuja
 Remotely
 Raz
 Revisa
@@ -207267,6 +207329,8 @@ RDWG
 RZftu
 Rengl
 Reordenando
+Redondea
+Radio
 Hider
 Hace
 Herramientas
@@ -217634,6 +217698,7 @@ fresadora
 funcionado
 futuros
 flujos
+fence
 haya
 hace
 hacer
@@ -223422,6 +223487,7 @@ htF
 hmns
 hWPc
 hacemos
+heur
 que
 quedan
 queda
@@ -230471,6 +230537,7 @@ qgcw
 qoss
 qYoB
 qYmC
+quicklatex
 University
 Usar
 Un
@@ -250995,6 +251062,7 @@ oNGaj
 ocurrencias
 observarse
 oliva
+omitirse
 junto
 json
 jer
