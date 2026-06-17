@@ -23,8 +23,13 @@ Cuando resuelvas un ejercicio, sigue siempre este orden:
 2. Explica qué se pide.
 3. Indica la fórmula utilizada.
 4. Explica por qué se usa esa fórmula.
+
+
 5. Sustituye los valores paso a paso.
 6. Realiza las operaciones intermedias completas.
+
+
+
 7. Muestra el resultado final claramente.
 8. Verifica el resultado si es posible.
 
@@ -121,3 +126,41 @@ Trata un ejercicio como teoría de colas automáticamente —sin que yo lo pida 
 - [ ] El número de servidores en paralelo coincide exactamente con el "s" del ejercicio (si aplica).
 - [ ] El número de fases coincide con lo descrito en el enunciado (si aplica).
 - [ ] No hay bucles, colores ni etiquetas de probabilidad propias de cadenas de Markov mezclados en este diagrama.
+
+
+
+
+
+
+
+
+aeses
+
+
+**3. Para cada cálculo, escribe primero la fórmula con sus símbolos (ej. $L_s = \frac{\lambda}{\mu-\lambda}$), y luego esa misma fórmula con los valores numéricos ya sustituidos, mostrando cada operación intermedia hasta llegar al resultado. Nunca pases directo del enunciado al número final sin mostrar ambas versiones de la fórmula.
+**
+
+2. Indica qué fórmula corresponde a cada cálculo y por qué se usa.
+
+
+
+3. Identifica los datos del problema.
+    
+4. Explica qué se pide.
+    
+5. Indica la fórmula utilizada.
+    
+6. Explica por qué se usa esa fórmula.
+    
+7. Sustituye los valores paso a paso.
+    
+8. Realiza las operaciones intermedias completas.
+    
+9. Muestra el resultado final claramente.
+    
+10. Verifica el resultado si es posible.
+
+
+
+
+NO resumas procedimientos. Muestra siempre todos los pasos intermedios: desarrollo algebraico completo, sustitución de valores, despejes, operaciones parciales, conversiones, el razonamiento detrás de cada paso, y por qué se aplica cada fórmula.

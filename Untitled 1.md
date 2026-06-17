@@ -181,3 +181,95 @@ En cada paso, la suma de las probabilidades es igual a 1 (100% de la población)
 
 - Mes 2: $0.35 + 0.65 = 1.0$ (Correcto).
 - Mes 3: $0.475 + 0.525 = 1.0$ (Correcto).
+
+
+### 3333
+
+
+
+Este es un ejercicio de **procesos estocásticos**, específicamente sobre **Cadenas de Markov de tiempo discreto**. Se identifica como tal porque cumple con las tres condiciones fundamentales: tiene estados finitos (categorías de fumadores), probabilidades de transición constantes en el tiempo y la situación futura depende únicamente del estado actual.
+
+### Diagrama de la Cadena de Markov
+
+Siguiendo las reglas de diseño para $N=3$ estados, los nodos se ubican de forma circular con la paleta de colores establecida.
+
+```tikz
+%\documentclass[tikz,border=10pt]{standalone}
+%\usepackage[utf8]{inputenc}
+\begin{document}
+\begin{tikzpicture}
+
+% CONFIGURACIÓN DE NODOS (Posicionamiento circular para N=3)
+% Estado 1 (NF): (6,10) - orange
+% Estado 2 (F1): (9.46,4) - pink
+% Estado 3 (F2): (2.54,4) - lime
+
+\node[draw,circle,thick,color=orange,minimum size=1.5cm] (NF) at (6,10) {\textbf{NF}};
+\node[draw,circle,thick,color=pink,minimum size=1.5cm] (F1) at (9.46,4) {\textbf{F1}};
+\node[draw,circle,thick,color=lime,minimum size=1.5cm] (F2) at (2.54,4) {\textbf{F2}};
+
+% ESTADO 1: No fumadores (NF) - orange
+\draw[->,ultra thick,orange] (NF) .. controls (5,12) and (7,12) ..node[pos=0.5,above,black] {$0.93$} (NF);
+\draw[->,very thick,orange] (NF) to[bend left=10] node[pos=0.3,right,black] {$0.05$} (F1);
+\draw[->,very thick,orange] (NF) to[bend left=10] node[pos=0.3,left,black] {$0.02$} (F2);
+
+% ESTADO 2: Fuman <= 1 paquete (F1) - pink
+\draw[->,ultra thick,pink] (F1) .. controls (11,4) and (11,2) ..node[pos=0.5,right,black] {$0.80$} (F1);
+\draw[->,very thick,pink] (F1) to[bend left=20] node[pos=0.3,left,black] {$0.10$} (NF);
+\draw[->,very thick,pink] (F1) to[bend left=20] node[pos=0.3,below,black] {$0.10$} (F2);
+
+% ESTADO 3: Fuman > 1 paquete (F2) - lime
+\draw[->,ultra thick,lime] (F2) .. controls (1,2) and (1,4) ..node[pos=0.5,left,black] {$0.85$} (F2);
+\draw[->,very thick,lime] (F2) to[bend left=30] node[pos=0.3,right,black] {$0.05$} (NF);
+\draw[->,very thick,lime] (F2) to[bend left=30] node[pos=0.3,above,black] {$0.10$} (F1);
+
+\end{tikzpicture}
+\end{document}
+```
+
+---
+
+### Resolución del Ejercicio
+
+#### 1. Identificación de los Datos del Problema
+
+- **Población Total ($N$):** $10,000$ habitantes.
+- **Estados del sistema:**
+    - **Estado 1 ($NF$):** No fumadores.
+    - **Estado 2 ($F1$):** Fuman un paquete o menos diariamente.
+    - **Estado 3 ($F2$):** Fuman más de un paquete diariamente.
+- **Distribución inicial (Mes 0):**
+    - $5,000$ no fumadores ($NF$).
+    - $2,500$ fumadores de $\leq 1$ paquete ($F1$).
+    - $2,500$ fumadores de $> 1$ paquete ($F2$).
+
+#### 2. Fórmulas Utilizadas y Razonamiento
+
+Se pide determinar la distribución de la población el próximo mes (un paso de tiempo). Para ello se utiliza la matriz de probabilidades de transición ($P$) y el vector de estado inicial ($\pi(0)$).
+
+- **Vector de Estado Inicial:** Se obtiene dividiendo la población inicial de cada estado entre el total ($10,000$): $$\pi_{NF}(0) = 5000/10000 = 0.50$$ $$\pi_{F1}(0) = 2500/10000 = 0.25$$ $$\pi_{F2}(0) = 2500/10000 = 0.25$$ $$\pi(0) = [0.50, \quad 0.25, \quad 0.25]$$
+- **Relación Recurrente:** La proyección para el periodo $n+1$ es: $$\pi(n+1) = \pi(n) \cdot P$$
+
+#### 3. Desarrollo Paso a Paso
+
+**Paso 1: Construcción de la Matriz de Transición ($P$)** Las probabilidades de permanencia en cada estado (diagonal de la matriz) se calculan restando de 1 las probabilidades de salida hacia otros estados:
+
+- **Desde $NF$:** $P_{11} = 1 - (0.05 + 0.02) = 0.93$.
+- **Desde $F1$:** $P_{22} = 1 - (0.10 + 0.10) = 0.80$.
+- **Desde $F2$:** $P_{33} = 1 - (0.05 + 0.10) = 0.85$. La matriz resulta en: $$P = \begin{bmatrix} 0.93 & 0.05 & 0.02 \ 0.10 & 0.80 & 0.10 \ 0.05 & 0.10 & 0.85 \end{bmatrix}$$
+
+**Paso 2: Cálculo del estado el próximo mes ($\pi(1)$)** Multiplicamos el vector inicial por la matriz: $$\pi(1) = [0.50, \quad 0.25, \quad 0.25] \begin{bmatrix} 0.93 & 0.05 & 0.02 \ 0.10 & 0.80 & 0.10 \ 0.05 & 0.10 & 0.85 \end{bmatrix}$$
+
+- **Proporción de No fumadores ($\pi_{NF}(1)$):** $$\pi_{NF}(1) = (0.50 \times 0.93) + (0.25 \times 0.10) + (0.25 \times 0.05)$$ $$\pi_{NF}(1) = 0.465 + 0.025 + 0.0125 = 0.5025$$
+- **Proporción de fumadores $\leq 1$ paquete ($\pi_{F1}(1)$):** $$\pi_{F1}(1) = (0.50 \times 0.05) + (0.25 \times 0.80) + (0.25 \times 0.10)$$ $$\pi_{F1}(1) = 0.025 + 0.20 + 0.025 = 0.25$$
+- **Proporción de fumadores $> 1$ paquete ($\pi_{F2}(1)$):** $$\pi_{F2}(1) = (0.50 \times 0.02) + (0.25 \times 0.10) + (0.25 \times 0.85)$$ $$\pi_{F2}(1) = 0.01 + 0.025 + 0.2125 = 0.2475$$
+
+**Paso 3: Conversión a número de individuos** Multiplicamos las probabilidades obtenidas por la población total de $10,000$:
+
+- **No fumadores:** $0.5025 \times 10,000 = \mathbf{5,025}$ individuos.
+- **Fumadores $\leq 1$ paquete:** $0.25 \times 10,000 = \mathbf{2,500}$ individuos.
+- **Fumadores $> 1$ paquete:** $0.2475 \times 10,000 = \mathbf{2,475}$ individuos.
+
+#### 4. Resultado Final y Verificación
+
+El próximo mes habrá **5,025 no fumadores**, **2,500 fumadores de un paquete o menos** y **2,475 fumadores de más de un paquete**. **Verificación:** La suma total debe ser igual a la población original: $5,025 + 2,500 + 2,475 = 10,000$ habitantes. El cálculo es correcto.
