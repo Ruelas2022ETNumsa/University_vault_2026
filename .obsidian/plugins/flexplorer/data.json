@@ -6,6 +6,8 @@
       "sortOrder": "byCreatedTimeReverse",
       "customOrder": [
         "Untitled.md",
+        "notebooklm new.md",
+        "notebooklm old.md",
         "tables no terminado.md",
         "book 806.md",
         "practica 3 806.md",
@@ -2713,11 +2715,19 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Untitled.md": {
+    "_app/_appnotes/Tikz_markov_guide.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_app/_appnotes/Tikz_markov_guide.md": {
+    "notebooklm old.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "notebooklm new.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled.md": {
       "isPinned": false,
       "isHidden": false
     }

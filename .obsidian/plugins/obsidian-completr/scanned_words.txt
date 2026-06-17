@@ -6132,6 +6132,7 @@ turquesa
 traza
 transiciones
 tricos
+turno
 ToDo
 Templater
 Text
@@ -20064,6 +20065,8 @@ Siguiente
 Suponga
 Salidas
 Self
+Sustituye
+SOLO
 Plugins
 Pendientes
 Plugin
@@ -25456,6 +25459,7 @@ Posici
 Pide
 Purple
 Probability
+Prefiero
 del
 date
 de
@@ -30648,6 +30652,12 @@ demasiado
 desplazamiento
 defina
 depois
+despejes
+delatan
+digan
+detectas
+discretos
+dadas
 Vault
 Verificar
 Variables
@@ -48083,6 +48093,7 @@ bUOR
 bALdl
 bALMK
 bucles
+breves
 scope
 status
 selector
@@ -54922,6 +54933,9 @@ superponerse
 saliendo
 sume
 superponen
+situaciones
+sano
+sumen
 vault
 vil
 ver
@@ -61446,6 +61460,7 @@ varios
 vaya
 varias
 violeta
+vocabulario
 audience
 activo
 auto
@@ -67315,6 +67330,8 @@ ayudamos
 angular
 alfab
 amontonen
+adquisici
+actualmente
 related
 recomendados
 ribbon
@@ -73682,6 +73699,13 @@ rtelas
 reemplazarlo
 reutilizable
 radio
+resumas
+razonamiento
+resuelvas
+radios
+represente
+requisito
+renglones
 notes
 notas
 nuevas
@@ -86483,6 +86507,8 @@ clicamente
 compilar
 curvadas
 code
+conversiones
+coincidiendo
 updated
 un
 universo
@@ -111903,6 +111929,8 @@ IbSW
 IVJq
 Introducci
 INTRODUCCI
+Intermedias
+Insertamos
 Funci
 File
 Fase
@@ -118054,6 +118082,8 @@ FAAtg
 FnXB
 Food
 Foods
+Frases
+Fila
 Estado
 Excalidraw
 EPUBs
@@ -124979,6 +125009,8 @@ ESTADO
 Expresamos
 Eliminemos
 Envuelve
+Explica
+Entrega
 Obsidian
 OmniSearch
 Ocultar
@@ -142176,6 +142208,13 @@ pinta
 prohibido
 proporcionados
 prob
+programaci
+porcentajes
+picas
+prolongado
+plazo
+plantea
+posee
 min
 mica
 movimiento
@@ -149444,6 +149483,7 @@ manteniendo
 male
 markov
 models
+matricial
 YAML
 Ya
 You
@@ -167566,6 +167606,10 @@ envoltorio
 elevarse
 envuelve
 edition
+extremadamente
+enfermo
+expliques
+estoc
 Motor
 Media
 Mantiene
@@ -186613,6 +186657,7 @@ loop
 letra
 llamados
 loops
+largo
 incluyendo
 im
 instalar
@@ -194224,6 +194269,9 @@ interesantes
 incobrables
 ilustran
 introduction
+intermedios
+intermedias
+itera
 Dependencia
 Dropbox
 Dataview
@@ -200305,6 +200353,7 @@ Deuda
 Dibuja
 Datos
 Detallado
+Detecta
 Remotely
 Raz
 Revisa
@@ -207358,6 +207407,7 @@ Rengl
 Reordenando
 Redondea
 Radio
+Realiza
 Hider
 Hace
 Herramientas
@@ -223515,6 +223565,7 @@ hmns
 hWPc
 hacemos
 heur
+homog
 que
 quedan
 queda
@@ -251091,6 +251142,8 @@ observarse
 oliva
 omitirse
 ocupe
+organiza
+obligatoriamente
 junto
 json
 jer
@@ -258241,6 +258294,7 @@ jbTK
 jYuo
 jNxX
 jXeF
+justifiques
 Qu
 Qui
 Quick
@@ -265253,6 +265307,7 @@ QbmQ
 QUmF
 QPiGp
 QFLE
+Quiero
 ya
 yaml
 yo

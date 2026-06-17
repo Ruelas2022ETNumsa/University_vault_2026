@@ -44,6 +44,7 @@ Por último, si el agente comercial trabaja todo un día en A, permanecerá en e
 Modele el problema como una cadena de Markov.
 
 ---
+---
 
 ### E5.
 
