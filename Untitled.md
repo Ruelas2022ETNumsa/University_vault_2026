@@ -75,15 +75,15 @@ node[above] {$0.9$}
 % =====================================================
 % ESTADOS
 % =====================================================
-\node[draw,circle,thick,color=orange]  (A) at (6,9) {$A$};
-\node[draw,circle,thick,color=pink]    (B) at (9,6) {$B$};
-\node[draw,circle,thick,color=lime]    (C) at (8,2) {$C$};
-\node[draw,circle,thick,color=purple]  (D) at (4,2) {$D$};
-\node[draw,circle,thick,color=teal]    (E) at (3,6) {$E$};
+\node[draw,circle,thick,color=orange]  (A) at (6,11) {$A$};
+\node[draw,circle,thick,color=pink]    (B) at (10,7) {$B$};
+\node[draw,circle,thick,color=lime]    (C) at (9,2) {$C$};
+\node[draw,circle,thick,color=purple]  (D) at (3,2) {$D$};
+\node[draw,circle,thick,color=teal]    (E) at (2,7) {$E$};
 % =====================================================
 % A
 % =====================================================
-\draw[->,ultra thick,orange] (A) .. controls (5,10) and (7,10) ..node[above] {$0.4$}(A);
+\draw[->,ultra thick,orange] (A) .. controls (5,12) and (7,12) ..node[above] {$0.4$}(A);
 \draw[->,very thick,orange]  (A) to[bend left=10] node[pos=0.2,right] {$0.4$} (B);
 \draw[->,very thick,orange]  (A) to[bend left=10] node[pos=0.2,right] {$0.X$} (C);
 \draw[->,very thick,orange]  (A) to[bend left=10] node[pos=0.2,right] {$0.2$} (D);
@@ -91,7 +91,7 @@ node[above] {$0.9$}
 % =====================================================
 % B
 % =====================================================
-\draw[->,ultra thick,pink] (B) .. controls (10,7) and (10,5) ..node[right] {$0.4$}(B);
+\draw[->,ultra thick,pink] (B) .. controls (11,8) and (11,6) ..node[right] {$0.4$}(B);
 \draw[->,very thick,pink] (B) to[bend left=20] node[pos=0.2,right] {$0.4$} (C);
 \draw[->,very thick,pink] (B) to[bend left=20] node[pos=0.2,right] {$0.4$} (D);
 \draw[->,very thick,pink] (B) to[bend left=20] node[pos=0.2,right] {$0.4$} (E);
@@ -99,19 +99,29 @@ node[above] {$0.9$}
 % =====================================================
 % C
 % =====================================================
-\draw[->,ultra thick,lime] (C) .. controls (8.5,1.0) and (7.5,1.0) ..node[below] {$0.2$}(C);
+\draw[->,ultra thick,lime] (C) .. controls (10,3) and (10,1.0) ..node[right] {$0.2$}(C);
 \draw[->,very thick,lime] (C) to[bend left=30] node[pos=0.2,right] {$0.4$} (D);
 \draw[->,very thick,lime] (C) to[bend left=30] node[pos=0.2,right] {$0.4$} (E);
 \draw[->,very thick,lime] (C) to[bend left=30] node[pos=0.2,right] {$0.4$} (A);
 \draw[->,very thick,lime] (C) to[bend left=30] node[pos=0.3,right] {$0.4$} (B);
+
 % =====================================================
 % D
 % =====================================================
-\draw[->,ultra thick,purple] (D) .. controls (4.5,1.0) and (3.5,1.0) ..node[below] {$0.7$}(D);
+\draw[->,ultra thick,purple] (D) .. controls (4,1) and (2,1) ..node[below] {$0.7$}(D);
 \draw[->,very thick,purple] (D) to[bend left=40] node[pos=0.2,right] {$0.4$} (A);
 \draw[->,very thick,purple] (D) to[bend left=40] node[pos=0.2,right] {$0.4$} (B);
 \draw[->,very thick,purple] (D) to[bend left=40] node[pos=0.2,right] {$0.4$} (C);
 \draw[->,very thick,purple] (D) to[bend left=40] node[pos=0.3,right] {$0.4$} (E);
+\end{tikzpicture}
+\end{document}
+```
+
+
+
+
+
+
 % =====================================================
 % E
 % =====================================================
@@ -122,9 +132,11 @@ node[above] {$0.9$}
 \draw[->,very thick,teal] (E) to[bend left=50] node[pos=0.3,right] {$0.4$} (D);
 
 
-\end{tikzpicture}
-\end{document}
-```
+
+
+
+
+
 
 
 
@@ -147,11 +159,64 @@ node[above] {$0.9$}
 % =====================================================
 \node[draw,circle,thick,color=orange]  (A) at (6,11) {$A$};
 \node[draw,circle,thick,color=pink]    (B) at (10,8) {$B$};
-\node[draw,circle,thick,color=lime]    (C) at (8,2) {$C$};
-\node[draw,circle,thick,color=purple]  (D) at (4,2) {$D$};
-\node[draw,circle,thick,color=teal]    (E) at (3,6) {$E$};
-\node[draw,circle,thick,color=teal]    (F) at (3,6) {$E$};
-
+\node[draw,circle,thick,color=lime]    (C) at (10,4) {$C$};
+\node[draw,circle,thick,color=purple]  (D) at (6,1) {$D$};
+\node[draw,circle,thick,color=teal]    (E) at (2,4) {$E$};
+\node[draw,circle,thick,color=magenta]    (F) at (2,8) {$F$};
+% =====================================================
+% A
+% =====================================================
+\draw[->,ultra thick,orange] (A) .. controls (5,12) and (7,12) ..node[above] {$0.4$}(A);
+\draw[->,very thick,orange]  (A) to[bend left=10] node[pos=0.2,right] {$0.4$} (B);
+\draw[->,very thick,orange]  (A) to[bend left=10] node[pos=0.2,right] {$0.X$} (C);
+\draw[->,very thick,orange]  (A) to[bend left=10] node[pos=0.2,right] {$0.2$} (D);
+\draw[->,very thick,orange]  (A) to[bend left=10] node[pos=0.2,right] {$0.2$} (E);
+\draw[->,very thick,orange]  (A) to[bend left=10] node[pos=0.4,right] {$0.2$} (F);
+% =====================================================
+% B
+% =====================================================
+\draw[->,ultra thick,pink] (B) .. controls (11,9) and (11,7) ..node[right] {$0.4$}(B);
+\draw[->,very thick,pink] (B) to[bend left=20] node[pos=0.2,right] {$0.4$} (C);
+\draw[->,very thick,pink] (B) to[bend left=20] node[pos=0.2,right] {$0.4$} (D);
+\draw[->,very thick,pink] (B) to[bend left=20] node[pos=0.2,right] {$0.4$} (E);
+\draw[->,very thick,pink] (B) to[bend left=20] node[pos=0.2,right] {$0.4$} (F);
+\draw[->,very thick,pink] (B) to[bend left=20] node[pos=0.4,right] {$0.4$} (A);
+% =====================================================
+% C
+% =====================================================
+\draw[->,ultra thick,lime] (C) .. controls (11,5) and (11,3) ..node[right] {$0.2$}(C);
+\draw[->,very thick,lime] (C) to[bend left=30] node[pos=0.2,right] {$0.4$} (D);
+\draw[->,very thick,lime] (C) to[bend left=30] node[pos=0.2,right] {$0.4$} (E);
+\draw[->,very thick,lime] (C) to[bend left=30] node[pos=0.2,right] {$0.4$} (F);
+\draw[->,very thick,lime] (C) to[bend left=30] node[pos=0.2,right] {$0.4$} (A);
+\draw[->,very thick,lime] (C) to[bend left=30] node[pos=0.3,right] {$0.4$} (B);
+% =====================================================
+% D
+% =====================================================
+\draw[->,ultra thick,purple] (D) .. controls (7,0) and (5,0) ..node[below] {$0.7$}(D);
+\draw[->,very thick,purple] (D) to[bend left=30] node[pos=0.2,right] {$0.4$} (A);
+\draw[->,very thick,purple] (D) to[bend left=30] node[pos=0.2,right] {$0.4$} (B);
+\draw[->,very thick,purple] (D) to[bend left=30] node[pos=0.2,right] {$0.4$} (C);
+\draw[->,very thick,purple] (D) to[bend left=30] node[pos=0.2,right] {$0.4$} (E);
+\draw[->,very thick,purple] (D) to[bend left=30] node[pos=0.3,right] {$0.4$} (F);
+% =====================================================
+% E
+% =====================================================
+\draw[->,ultra thick,teal] (E) .. controls (1,3) and (1,5) ..node[left] {$0.8$}(E);
+\draw[->,very thick,teal] (E) to[bend left=20] node[pos=0.2,right] {$0.4$} (A);
+\draw[->,very thick,teal] (E) to[bend left=20] node[pos=0.2,right] {$0.4$} (B);
+\draw[->,very thick,teal] (E) to[bend left=20] node[pos=0.2,right] {$0.4$} (C);
+\draw[->,very thick,teal] (E) to[bend left=20] node[pos=0.2,right] {$0.4$} (D);
+\draw[->,very thick,teal] (E) to[bend left=20] node[pos=0.3,right] {$0.4$} (F);
+% =====================================================
+% F
+% =====================================================
+\draw[->,ultra thick,magenta] (F) .. controls (1,7) and (1,9) ..node[left] {$0.8$}(F);
+\draw[->,very thick,magenta] (F) to[bend left=20] node[pos=0.2,right] {$0.4$} (A);
+\draw[->,very thick,magenta] (F) to[bend left=20] node[pos=0.2,right] {$0.4$} (B);
+\draw[->,very thick,magenta] (F) to[bend left=20] node[pos=0.2,right] {$0.4$} (C);
+\draw[->,very thick,magenta] (F) to[bend left=20] node[pos=0.2,right] {$0.4$} (D);
+\draw[->,very thick,magenta] (F) to[bend left=20] node[pos=0.3,right] {$0.4$} (E);
 
 \end{tikzpicture}
 \end{document}
@@ -159,43 +224,6 @@ node[above] {$0.9$}
 
 
 
-% =====================================================
-% A
-% =====================================================
-\draw[->,ultra thick,orange] (A) .. controls (5,10) and (7,10) ..node[above] {$0.4$}(A);
-\draw[->,very thick,orange]  (A) to[bend left=10] node[pos=0.2,right] {$0.4$} (B);
-\draw[->,very thick,orange]  (A) to[bend left=10] node[pos=0.2,right] {$0.X$} (C);
-\draw[->,very thick,orange]  (A) to[bend left=10] node[pos=0.2,right] {$0.2$} (D);
-\draw[->,very thick,orange]  (A) to[bend left=10] node[pos=0.3,right] {$0.2$} (E);
-% =====================================================
-% B
-% =====================================================
-\draw[->,ultra thick,pink] (B) .. controls (10,7) and (10,5) ..node[right] {$0.4$}(B);
-\draw[->,very thick,pink] (B) to[bend left=20] node[pos=0.2,right] {$0.4$} (C);
-\draw[->,very thick,pink] (B) to[bend left=20] node[pos=0.2,right] {$0.4$} (D);
-\draw[->,very thick,pink] (B) to[bend left=20] node[pos=0.2,right] {$0.4$} (E);
-\draw[->,very thick,pink] (B) to[bend left=20] node[pos=0.3,right] {$0.4$} (A);
-% =====================================================
-% C
-% =====================================================
-\draw[->,ultra thick,lime] (C) .. controls (8.5,1.0) and (7.5,1.0) ..node[below] {$0.2$}(C);
-\draw[->,very thick,lime] (C) to[bend left=30] node[pos=0.2,right] {$0.4$} (D);
-\draw[->,very thick,lime] (C) to[bend left=30] node[pos=0.2,right] {$0.4$} (E);
-\draw[->,very thick,lime] (C) to[bend left=30] node[pos=0.2,right] {$0.4$} (A);
-\draw[->,very thick,lime] (C) to[bend left=30] node[pos=0.3,right] {$0.4$} (B);
-% =====================================================
-% D
-% =====================================================
-\draw[->,ultra thick,purple] (D) .. controls (4.5,1.0) and (3.5,1.0) ..node[below] {$0.7$}(D);
-\draw[->,very thick,purple] (D) to[bend left=40] node[pos=0.2,right] {$0.4$} (A);
-\draw[->,very thick,purple] (D) to[bend left=40] node[pos=0.2,right] {$0.4$} (B);
-\draw[->,very thick,purple] (D) to[bend left=40] node[pos=0.2,right] {$0.4$} (C);
-\draw[->,very thick,purple] (D) to[bend left=40] node[pos=0.3,right] {$0.4$} (E);
-% =====================================================
-% E
-% =====================================================
-\draw[->,ultra thick,teal] (E) .. controls (2,5) and (2,7) ..node[left] {$0.8$}(E);
-\draw[->,very thick,teal] (E) to[bend left=50] node[pos=0.2,right] {$0.4$} (A);
-\draw[->,very thick,teal] (E) to[bend left=50] node[pos=0.2,right] {$0.4$} (B);
-\draw[->,very thick,teal] (E) to[bend left=50] node[pos=0.2,right] {$0.4$} (C);
-\draw[->,very thick,teal] (E) to[bend left=50] node[pos=0.3,right] {$0.4$} (D);
+
+
+
