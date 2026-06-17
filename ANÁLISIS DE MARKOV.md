@@ -359,85 +359,92 @@ Un sistema de cuentas por cobrar generalmente coloca las deudas o las cuentas po
 
 
 
-|     Este mes     | Siguiente mes |        <         |       <        |      <      |
-|:----------------:|:-------------:|:----------------:|:--------------:|:-----------:|
-|                  |    Pagada     | Deuda incobrable | Menos de 1 mes | 1 a 3 meses |
-|      Pagada      |       1       |        0         |       0        |      0      |
-| Deuda incobrable |       0       |        1         |       0        |      0      |
-|  Menos de 1 mes  |      0.6      |        0         |      0.2       |     0.2     |
-|   1 a 3 meses    |      0.4      |       0.1        |      0.3       |     0.2     |
+|     Este mes     |             Siguiente mes              |        <         |       <        |      <      |
+|:----------------:|:--------------------------------------:|:----------------:|:--------------:|:-----------:|
+|                  | Pagada~ { "vertical-align": "middle" } | Deuda incobrable | Menos de 1 mes | 1 a 3 meses |
+|      Pagada      |                   1                    |        0         |       0        |      0      |
+| Deuda incobrable |                   0                    |        1         |       0        |      0      |
+|  Menos de 1 mes  |                  0.6                   |        0         |      0.2       |     0.2     |
+|   1 a 3 meses    |                  0.4                   |       0.1        |      0.3       |     0.2     |
 
-
-|                             Este mes                             | Siguiente mes |        <         |       <        |      <      |
-|:----------------------------------------------------------------:|:-------------:|:----------------:|:--------------:|:-----------:|
-| Pagada~ ~ { "vertical-align": "middle" } |    Pagada     | Deuda incobrable | Menos de 1 mes | 1 a 3 meses |
-|                                ^                                 |       1       |        0         |       0        |      0      |
-|                         Deuda incobrable                         |       0       |        1         |       0        |      0      |
-|                          Menos de 1 mes                          |      0.6      |        0         |      0.2       |     0.2     |
-|                           1 a 3 meses                            |      0.4      |       0.1        |      0.3       |     0.2     |
-
-
-
-
-
-| Stage              | Direct Products | ATP Yields |
-| ------------------ | --------------- | ---------- |
-| Glycolysis         | 2 ATP           |            |
-| ^>                  | 2 NADH          | 3-5 ATP    |
-| Pyruvate oxidation | 2 NADH          | 5 ATP      |
-| **30-32** ATP      |                 |            |
-
-
-
-
-
-
-
-
-<table border="1">
-    <tr>
-        <th rowspan="2" align="center">Este mes</th>
-        <th colspan="4" align="center">Siguiente mes</th>
-    </tr>
-    <tr>
-        <th align="center">Pagada</th>
-        <th align="center">Deuda incobrable</th>
-        <th align="center">&lt;1 mes</th>
-        <th align="center">1 a 3 meses</th>
-    </tr>
-    <tr align="center">
-        <td>Pagada</td>
-        <td align="center">1</td><td>0</td><td>0</td><td>0</td>
-    </tr>
-    <tr align="center">
-        <td>Deuda incobrable</td>
-        <td>0</td><td>1</td><td>0</td><td>0</td>
-    </tr>
-    <tr align="center">
-        <td>Menos de 1 mes</td>
-        <td>0.6</td><td>0</td><td>0.2</td><td>0.2</td>
-    </tr>
-    <tr align="center">
-        <td>1 a 3 meses</td>
-        <td>0.4</td><td>0.1</td><td>0.3</td><td>0.2</td>
-    </tr>
-</table>
-
-
-
-
-
-
-
-Entonces, $P = \begin{bmatrix} 1 & 0 & 0 & 0 \ 0 & 1 & 0 & 0 \ 0.6 & 0 & 0.2 & 0.2 \ 0.4 & 0.1 & 0.3 & 0.2 \end{bmatrix}$
+Entonces, 
+$$P = 
+\begin{bmatrix} 
+1 & 0 & 0 & 0  \\ 
+ 0 & 1 & 0 & 0 \\
+  0.6 & 0 & 0.2 & 0.2 \\
+   0.4 & 0.1 & 0.3 & 0.2 
+   \end{bmatrix}$$
 
 Las condiciones de equilibrio son aún más interesantes. Desde luego, a la larga, todos estarán en la categoría de pagada o deuda incobrable, lo cual se debe a que las categorías son estados absorbentes. ¿Pero cuántas personas, o cuánto dinero, estarán en cada categoría? Si encontramos la cantidad total de dinero que quedará como pagada o deuda incobrable, ayudamos a la compañía a manejar sus deudas incobrables y sus flujos de efectivo. Un análisis así requiere lo que se conoce como **matriz fundamental**.
 
----
+Para obtener la matriz fundamental, es necesario hacer una **partición de la matriz de probabilidades de transición, P**, como:
 
-### **Página 22**
 
-Para obtener la matriz fundamental, es necesario hacer una **partición de la matriz de probabilidades de transición, P**, como: $P = \begin{bmatrix} I & 0 \ A & B \end{bmatrix}$ donde $I = \begin{bmatrix} 1 & 0 \ 0 & 1 \end{bmatrix}$ (matriz identidad) $0 = \begin{bmatrix} 0 & 0 \ 0 & 0 \end{bmatrix}$ (matriz con tan solo ceros) $A = \begin{bmatrix} 0.6 & 0 \ 0.4 & 0.1 \end{bmatrix}$ $B = \begin{bmatrix} 0.2 & 0.2 \ 0.3 & 0.2 \end{bmatrix}$
+
+
+$$
+P=
+\begin{bmatrix} 
+0.8 & 0.1 & 0.1 \\
+0.1 & 0.7 & 0.2 \\
+0.2 & 0.2 & 0.6
+\end{bmatrix}
+\qquad
+\begin{array}{l}
+&\text{Estado 1, American Foods}\\
+&\text{Food Mart es el estado 2}\\
+&\text{Atlas Foods es el estado 3}
+\end{array}
+$$
+
+
+$$
+P=
+\begin{bmatrix}
+0.8 & 0.1 & 0.1 \\
+0.1 & 0.7 & 0.2 \\
+0.2 & 0.2 & 0.6
+\end{bmatrix}
+\qquad
+\begin{array}{l|dot}
+&\text{Estado 1, American Foods}\\
+&\text{Food Mart es el estado 2}\\
+&\text{Atlas Foods es el estado 3}
+\end{array}
+$$
+
+
+$$  
+P=  
+\begin{array}{c|ccc}  
+& 1 & 2 & 3\\  
+\hline  
+1 & 0.8 & 0.1 & 0.1\\  
+2 & 0.1 & 0.7 & 0.2\\  
+3 & 0.2 & 0.2 & 0.6  
+\end{array}  
+$$
+
+
+$P = \begin{bmatrix} I & 0 \ A & B \end{bmatrix}$ 
+
+donde 
+
+$I = \begin{bmatrix} 1 & 0 \ 0 & 1 \end{bmatrix}$ (matriz identidad) 
+
+$0 = \begin{bmatrix} 0 & 0 \ 0 & 0 \end{bmatrix}$ (matriz con tan solo ceros)
+
+ $A = \begin{bmatrix} 0.6 & 0 \ 0.4 & 0.1 \end{bmatrix}$ 
+ 
+ 
+ 
+ $B = \begin{bmatrix} 0.2 & 0.2 \ 0.3 & 0.2 \end{bmatrix}$
+
+
+
+
+
 
 La matriz fundamental se calcula como: **$F = (I - B)^{-1}$** Donde **F es la matriz fundamental**. Veamos cómo se calcula para la aplicación de cuentas por cobrar: $F = \left( \begin{bmatrix} 1 & 0 \ 0 & 1 \end{bmatrix} - \begin{bmatrix} 0.2 & 0.2 \ 0.3 & 0.2 \end{bmatrix} \right)^{-1}$ Al restar $B$ de $I$: $F = \begin{bmatrix} 0.8 & -0.2 \ -0.3 & 0.8 \end{bmatrix}^{-1}$
 
@@ -454,3 +461,17 @@ La nueva matriz **FA** tiene un significado importante. Indica la probabilidad d
 Sea la matriz **M** la cantidad de dinero que está en cada estado no absorbente: $M = (M_1, M_2, M_3, \dots, M_n)$ Suponga que hay $2,000 en la categoría de menos de un mes, y $5,000 en la de uno a tres meses. $M = (2,000, 5,000)$ Las cantidades que terminarán como pagada y como deuda incobrable se calculan multiplicando $M$ por $FA$: $MFA = (2,000, 5,000) \begin{bmatrix} 0.97 & 0.03 \ 0.86 & 0.14 \end{bmatrix} = (6,240, 760)$
 
 **Entonces, del total de $7,000, $6,240 se pagarán al final y $760 terminarán como deuda incobrable.**
+
+
+|                             Este mes                             | Siguiente mes |        <         |       <        |      <      |
+|:----------------------------------------------------------------:|:-------------:|:----------------:|:--------------:|:-----------:|
+| Pagada~ ~ { "vertical-align": "middle" } |    Pagada     | Deuda incobrable | Menos de 1 mes | 1 a 3 meses |
+|                                ^                                 |       1       |        0         |       0        |      0      |
+|                         Deuda incobrable                         |       0       |        1         |       0        |      0      |
+|                          Menos de 1 mes                          |      0.6      |        0         |      0.2       |     0.2     |
+|                           1 a 3 meses                            |      0.4      |       0.1        |      0.3       |     0.2     |
+
+
+
+
+---
