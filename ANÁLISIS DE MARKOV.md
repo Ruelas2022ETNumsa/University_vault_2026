@@ -368,13 +368,29 @@ Un sistema de cuentas por cobrar generalmente coloca las deudas o las cuentas po
 |   1 a 3 meses    |      0.4      |       0.1        |      0.3       |     0.2     |
 
 
-|     Este mes     | Siguiente mes |        <         |       <        |      <      |
-|:----------------:|:-------------:|:----------------:|:--------------:|:-----------:|
-|        ^         |    Pagada     | Deuda incobrable | Menos de 1 mes | 1 a 3 meses |
-|      Pagada      |       1       |        0         |       0        |      0      |
-| Deuda incobrable |       0       |        1         |       0        |      0      |
-|  Menos de 1 mes  |      0.6      |        0         |      0.2       |     0.2     |
-|   1 a 3 meses    |      0.4      |       0.1        |      0.3       |     0.2     |
+|                             Este mes                             | Siguiente mes |        <         |       <        |      <      |
+|:----------------------------------------------------------------:|:-------------:|:----------------:|:--------------:|:-----------:|
+| Pagada~ ~ { "vertical-align": "middle" } |    Pagada     | Deuda incobrable | Menos de 1 mes | 1 a 3 meses |
+|                                ^                                 |       1       |        0         |       0        |      0      |
+|                         Deuda incobrable                         |       0       |        1         |       0        |      0      |
+|                          Menos de 1 mes                          |      0.6      |        0         |      0.2       |     0.2     |
+|                           1 a 3 meses                            |      0.4      |       0.1        |      0.3       |     0.2     |
+
+
+
+
+
+| Stage              | Direct Products | ATP Yields |
+| ------------------ | --------------- | ---------- |
+| Glycolysis         | 2 ATP           |            |
+| ^>                  | 2 NADH          | 3-5 ATP    |
+| Pyruvate oxidation | 2 NADH          | 5 ATP      |
+| **30-32** ATP      |                 |            |
+
+
+
+
+
 
 
 
