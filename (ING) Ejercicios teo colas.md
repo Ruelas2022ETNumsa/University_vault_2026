@@ -17,7 +17,7 @@
 
 ---
 
-### **Página 3: Tabla - Modelo de Colas**
+## Modelo de Colas
 
 |Tipo|# de canales|Ritmo Llegada|Tiempo de servicio|Número de Fases|Disciplina de la cola|
 |:--|:--|:--|:--|:--|:--|
@@ -27,7 +27,7 @@
 
 ---
 
-### **Página 4: Modelo A : M/M/1**
+## Modelo A : M/M/1
 
 - **M:** Markoviana (Poisson)
 - **M:** Markoviana (Exponencial)
@@ -41,29 +41,21 @@
 
 ---
 
-### **Página 5: Fórmulas Modelo A (I)**
+### Fórmulas Modelo A 
 
 - $L_s$: número promedio de clientes $\longrightarrow$ $L_s = \frac{\lambda}{\mu - \lambda}$
 - $\rho$: Factor de utilización $\longrightarrow$ $\rho = \frac{\lambda}{\mu}$
 - $W_s$: Tiempo promedio de una unidad que permanece en el sistema $\longrightarrow$ $W_s = \frac{1}{\mu - \lambda}$
 
----
-
-### **Página 6: Fórmulas Modelo A (II)**
-
 - $L_q$: Número promedio de unidades en cola $\longrightarrow$ $L_q = \frac{\lambda^2}{\mu(\mu - \lambda)}$
 - $W_q$: Tiempo promedio que se espera en la cola $\longrightarrow$ $W_q = \frac{\lambda}{\mu(\mu - \lambda)}$
 - $P_n$: Probabilidad de que "n" clientes estén en el sistema $\longrightarrow$ $P_n = (1 - \frac{\lambda}{\mu}) \cdot (\frac{\lambda}{\mu})^n$
-
----
-
-### **Página 7: Fórmulas Modelo A (III)**
 
 - $P_{n > k}$: Probabilidad que más "k" unidades estén en el sistema $\longrightarrow$ $P_{n > k} = (\frac{\lambda}{\mu})^{k+1}$
 
 ---
 
-### **Páginas 8 a 11: Ejemplo Modelo A**
+### Ejemplo Modelo A
 
 **Ejemplo:** Un banco está considerando abrir un servicio para que los clientes paguen desde su automóvil. Se estima que los clientes llegarán a una tasa promedio ($\lambda$) de 15 por hora. El cajero que trabajará en la ventanilla puede atender a los clientes a un ritmo de uno cada tres minutos ($\mu$).
 
@@ -93,7 +85,7 @@ $\mu = 20$.
 
 ---
 
-### **Página 12: Modelo B: M/M/s**
+## Modelo B: M/M/s
 
 **Modelo multicanal**
 
@@ -107,21 +99,17 @@ $\mu = 20$.
 
 ---
 
-### **Página 13: Fórmulas Modelo B (I)**
+### Fórmulas Modelo B
 
 - $P_o = \frac{1}{\sum_{n=0}^{s-1} \frac{(\lambda / \mu)^n}{n!} + \frac{(\lambda / \mu)^s}{s!} \left( \frac{1}{1 - (\lambda / s \cdot \mu)} \right)}$
 - $L_s$: Número promedio de unidades en el sistema $\longrightarrow$ $L_s = \frac{\lambda \mu (\lambda / \mu)^s P_o}{(s - 1)! (s \mu - \lambda)^2} + \frac{\lambda}{\mu}$
-
----
-
-### **Página 14: Fórmulas Modelo B (II)**
 
 - **Tiempo promedio de unidades en el sistema:** $W_s = \frac{L_s}{\lambda}$
 - **Tiempo de espera en la fila:** $W_q = W_s - \frac{1}{\mu}$
 
 ---
 
-### **Páginas 15 a 17: Ejemplo Modelo B**
+### Ejemplo Modelo B
 
 **Ejemplo:** En un hospital llegan 10 pacientes cada hora ($\lambda$) y un solo servidor puede atender 8 pacientes cada hora ($\mu$). Si se colocan dos servidores determine:
 
@@ -137,23 +125,19 @@ b) Número promedio de unidades en el sistema.
 
 ---
 
-### **Página 18: Modelo constante (M/D/1)**
+## Modelo constante (M/D/1)
 
+### Fórmulas Modelo C
 **Elementos**
 
 - **Longitud media de la cola:** $L_q = \frac{\lambda^2}{2\mu(\mu - \lambda)}$
 - **Tiempo medio de espera en la cola:** $W_q = \frac{\lambda}{2\mu(\mu - \lambda)}$
-
----
-
-### **Página 19: Fórmulas Modelo C (II)**
-
 - **Número medio de clientes en el sistema:** $L_s = L_q + \frac{\lambda}{\mu}$
 - **Tiempo medio de espera en el sistema:** $W_s = W_q + \frac{1}{\mu}$
 
 ---
 
-### **Páginas 20 y 21: Ejemplo Modelo C**
+### Ejemplo Modelo C
 
 **Ejemplo:** Un lavado automático de autos con línea de remolque de manera que los autos se mueven a través de la instalación en una línea de ensamble. Suponga que el lavado de autos se puede hacer con un auto cada 5 minutos ($\mu$) (Un auto cada cinco minutos da una tasa de 12 autos por hora) y que la tasa de llegadas ($\lambda$) es de 9 autos. 
 

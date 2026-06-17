@@ -5,6 +5,7 @@
       "isHidden": false,
       "sortOrder": "byCreatedTimeReverse",
       "customOrder": [
+        "colas_guide_s.md",
         "(ING) Ejercicios teo colas.md",
         "notebooklm new.md",
         "notebooklm old.md",
@@ -2738,6 +2739,10 @@
       "isHidden": false
     },
     "(ING) Ejercicios teo colas.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "colas_guide_s.md": {
       "isPinned": false,
       "isHidden": false
     }
