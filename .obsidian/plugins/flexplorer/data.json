@@ -3,7 +3,7 @@
     "/": {
       "isPinned": false,
       "isHidden": false,
-      "sortOrder": "byName",
+      "sortOrder": "byCreatedTimeReverse",
       "customOrder": [
         "ANÁLISIS DE MARKOV.md",
         "book 806.md",

@@ -20052,6 +20052,8 @@ Sqqw
 SORVax
 SDGR
 Significa
+Siguiente
+Suponga
 Plugins
 Pendientes
 Plugin
@@ -25439,6 +25441,7 @@ PROBABILIDADES
 Ponemos
 Paul
 PERIODO
+Pagada
 del
 date
 de
@@ -30624,6 +30627,7 @@ determin
 derivamos
 deudas
 deuda
+dinero
 Vault
 Verificar
 Variables
@@ -67278,6 +67282,8 @@ arbitraria
 absorbe
 absorbente
 atrasada
+antigüedad
+ayudamos
 related
 recomendados
 ribbon
@@ -73638,6 +73644,7 @@ registr
 repetir
 resolvemos
 resolveremos
+rowspan
 notes
 notas
 nuevas
@@ -86423,6 +86430,10 @@ compran
 compre
 contestar
 cualesquiera
+center
+colspan
+cantidades
+calculan
 updated
 un
 universo
@@ -142092,6 +142103,8 @@ pensar
 pagar
 picos
 pagadas
+pagada
+partici
 min
 mica
 movimiento
@@ -149352,6 +149365,9 @@ mIRdP
 mtbWB
 maquinaria
 muchos
+middle
+manejar
+multiplicando
 YAML
 Ya
 You
@@ -167461,6 +167477,10 @@ eliminamos
 estuvi
 esperan
 estudiados
+establecemos
+elaborar
+encontramos
+efectivo
 Motor
 Media
 Mantiene
@@ -174964,6 +174984,7 @@ MHiHZ
 MUTUAMENTE
 Mart
 MATRIZ
+Menos
 Lectura
 LaTeX
 Linter
@@ -194107,6 +194128,8 @@ incluyeran
 interrelacionadas
 influyen
 incobrable
+interesantes
+incobrables
 Dependencia
 Dropbox
 Dataview
@@ -200184,6 +200207,7 @@ Dxbo
 Dal
 DKMjT
 Dagr
+Deuda
 Remotely
 Raz
 Revisa
@@ -217601,6 +217625,7 @@ fresadoras
 fresadora
 funcionado
 futuros
+flujos
 haya
 hace
 hacer

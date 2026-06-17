@@ -352,20 +352,100 @@ Un sistema de cuentas por cobrar generalmente coloca las deudas o las cuentas po
 - Estado 3 ($\pi_3$): atrasada menos de un mes
 - Estado 4 ($\pi_4$): atrasada entre uno y tres meses
 
-1. sdf
+- **Igual que en otros procesos de Markov, establecemos una matriz de probabilidades de transición para los cuatro estados.** 
+- **La probabilidad de estar en la categoría pagada para cualquier cuenta en un mes futuro, dado que el cliente está en la categoría de pagada por una compra este mes, es de 100% o 1.** 
+- **Para cualquier estado absorbente, la probabilidad de que un cliente esté en ese estado en el futuro es de 1, en tanto que la probabilidad de que un cliente esté en otro estado es de 0.**
+- **Antes de elaborar esa matriz (a matriz de probabilidades de transición), necesitamos conocer las probabilidades para los otros dos estados: deuda de menos de un mes y deuda de uno a tres meses de antigüedad.**
 
 
-- Igual que en otros procesos de Markov, establecemos una matriz de probabilidades de transición para los cuatro estados. 
-- La probabilidad de estar en la categoría pagada para cualquier cuenta en un mes futuro, dado que el cliente está en la categoría de pagada por una compra este mes, es de 100% o 1. 
-- Para cualquier estado absorbente, la probabilidad de que un cliente esté en ese estado en el futuro es de 1, en tanto que la probabilidad de que un cliente esté en otro estado es de 0.
-- Antes de elaborar esa matriz (a matriz de probabilidades de transición), necesitamos conocer las probabilidades para los otros dos estados: deuda de menos de un mes y deuda de uno a tres meses de antigüedad.
+---
+---
+---
 
-|ESTE MES|PAGADA|DEUDA INCOBRABLE|< 1 MES|1 A 3 MESES|
-|:--|:--|:--|:--|:--|
-|Pagada|1|0|0|0|
-|Deuda incobrable|0|1|0|0|
-|Menos de 1 mes|0.6|0|0.2|0.2|
-|1 a 3 meses|0.4|0.1|0.3|0.2|
+
+<table border="1">
+    <tr>
+        <th rowspan="2" style="text-align:center; vertical-align:middle;">
+            Este mes
+        </th>
+        <th colspan="4" style="text-align:center;">
+            Siguiente mes
+        </th>
+    </tr>
+    <tr>
+        <th style="text-align:center;">Pagada</th>
+        <th style="text-align:center;">Deuda incobrable</th>
+        <th style="text-align:center;">&lt;1 mes</th>
+        <th style="text-align:center;">1 a 3 meses</th>
+    </tr>
+    <tr>
+        <td style="text-align:center;">Pagada</td>
+        <td style="text-align:center;">1</td>
+        <td style="text-align:center;">0</td>
+        <td style="text-align:center;">0</td>
+        <td style="text-align:center;">0</td>
+    </tr>
+    <tr>
+        <td style="text-align:center;">Deuda incobrable</td>
+        <td style="text-align:center;">0</td>
+        <td style="text-align:center;">1</td>
+        <td style="text-align:center;">0</td>
+        <td style="text-align:center;">0</td>
+    </tr>
+    <tr>
+        <td style="text-align:center;">Menos de 1 mes</td>
+        <td style="text-align:center;">0.6</td>
+        <td style="text-align:center;">0</td>
+        <td style="text-align:center;">0.2</td>
+        <td style="text-align:center;">0.2</td>
+    </tr>
+    <tr>
+        <td style="text-align:center;">1 a 3 meses</td>
+        <td style="text-align:center;">0.4</td>
+        <td style="text-align:center;">0.1</td>
+        <td style="text-align:center;">0.3</td>
+        <td style="text-align:center;">0.2</td>
+    </tr>
+</table>
+
+---
+---
+---
+
+<table border="1">
+    <tr>
+        <th rowspan="2" align="center">Este mes</th>
+        <th colspan="4" align="center">Siguiente mes</th>
+    </tr>
+    <tr>
+        <th align="center">Pagada</th>
+        <th align="center">Deuda incobrable</th>
+        <th align="center">&lt;1 mes</th>
+        <th align="center">1 a 3 meses</th>
+    </tr>
+    <tr align="center">
+        <td>Pagada</td>
+        <td align="center">1</td><td>0</td><td>0</td><td>0</td>
+    </tr>
+    <tr align="center">
+        <td>Deuda incobrable</td>
+        <td>0</td><td>1</td><td>0</td><td>0</td>
+    </tr>
+    <tr align="center">
+        <td>Menos de 1 mes</td>
+        <td>0.6</td><td>0</td><td>0.2</td><td>0.2</td>
+    </tr>
+    <tr align="center">
+        <td>1 a 3 meses</td>
+        <td>0.4</td><td>0.1</td><td>0.3</td><td>0.2</td>
+    </tr>
+</table>
+
+
+
+
+
+
 
 Entonces, $P = \begin{bmatrix} 1 & 0 & 0 & 0 \ 0 & 1 & 0 & 0 \ 0.6 & 0 & 0.2 & 0.2 \ 0.4 & 0.1 & 0.3 & 0.2 \end{bmatrix}$
 
