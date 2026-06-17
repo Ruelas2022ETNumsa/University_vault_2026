@@ -37,122 +37,67 @@ node[above] {$0.9$}
 
 ```tikz
 \begin{document}
-
 \begin{tikzpicture}
-% Grilla
-\draw[gray!90] (0,0) grid (15,10);
-% Marcas en los ejes
-\foreach \x in {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
-    \node[below, color=red] at (\x,0) {\x};
-\foreach \y in {1,2,3,4,5,6,7,8,9,10}
-    \node[left, color=red] at (0,\y) {\y};
-% Aquí van tus nodos...
 % =====================================================
-% CADENA DE MARKOV DE 5 ESTADOS
-% Estado destacado: A
-% Las transiciones que salen de A tienen el mismo color.
+% GRILLA
 % =====================================================
-% Estados
-\node[draw,circle ,color=orange ] (A) at (6,9) {$A$};
-\node[draw,circle ,color=pink   ] (B) at (9,6) {$B$};
-\node[draw,circle, color=lime   ] (C) at (8,2) {$C$};
-\node[draw,circle, color=magenta] (D) at (4,2) {$D$};
-\node[draw,circle, color=teal   ] (E) at (3,6) {$E$};
+\draw[gray!100] (0,0) grid (12,12);
+\foreach \x in {1,2,...,12}
+    \node[below,red] at (\x,0) {\x};
 
-% -----------------------------------------------------
-% Transiciones desde A (azules)
-% -----------------------------------------------------
+\foreach \y in {1,2,...,12}
+    \node[left,red] at (0,\y) {\y};
+% =====================================================
+% ESTADOS
+% =====================================================
 
-%\draw[->,blue,thick]
-%(A) to[bend left=15]
-%node[above] {$0.4$}
-%(B);
+\node[draw,circle,thick,color=orange]  (A) at (6,9) {$A$};
+\node[draw,circle,thick,color=pink]    (B) at (9,6) {$B$};
+\node[draw,circle,thick,color=lime]    (C) at (8,2) {$C$};
+\node[draw,circle,thick,color=magenta] (D) at (4,2) {$D$};
+\node[draw,circle,thick,color=teal]    (E) at (3,6) {$E$};
 
-%\draw[->,blue,thick]
-%(A) to[bend right=15]
-%node[below] {$0.3$}
-%(C);
+% =====================================================
+% CICLO PRINCIPAL
+% =====================================================
 
-%\draw[->,blue,thick]
-%(A) .. controls (-1,1.2) and (1,1.2) ..
-%node[above] {$0.3$}
-%(A);
+\draw[->,ultra thick,orange ] (A) -- node[right] {$0.4$} (B);
+\draw[->,ultra thick,pink   ] (B) -- node[right] {$0.5$} (C);
+\draw[->,ultra thick,lime   ] (C) -- node[below] {$0.6$} (D);
+\draw[->,ultra thick,magenta] (D) -- node[left] {$0.3$} (E);
+\draw[->,ultra thick,teal   ] (E) -- node[left] {$0.2$} (A);
 
-% -----------------------------------------------------
-% Transiciones desde B
-% -----------------------------------------------------
+% =====================================================
+% CONEXIONES INTERNAS
+% =====================================================
 
-%\draw[->]
-%(B) to[bend left=15]
-%node[above] {$0.5$}
-%(D);
+\draw[->,very thick,orange] (A) to[bend left=10] node[above] {$0.2$} (D);
+\draw[->,very thick,pink] (B) to[bend left=20] node[right] {$0.1$} (E);
+\draw[->,very thick,lime] (C) to[bend left=20] node[right] {$0.2$} (A);
 
-%\draw[->]
-%(B) to[bend left=15]
-%node[left] {$0.2$}
-%(C);
+% =====================================================
+% AUTO-TRANSICIONES
+% =====================================================
 
-%\draw[->]
-%(B) .. controls (3.2,3.2) and (4.8,3.2) ..
-%node[above] {$0.3$}
-%(B);
+\draw[->,orange] (A) .. controls (4.8,9.8) and (7.2,9.8) ..
+node[above] {$0.4$}
+(A);
 
-% -----------------------------------------------------
-% Transiciones desde C
-% -----------------------------------------------------
+\draw[->,pink] (B) .. controls (8.2,7.2) and (9.8,7.2) ..
+node[above] {$0.4$}
+(B);
 
-%\draw[->]
-%(C) to[bend right=15]
-%node[below] {$0.4$}
-%(E);
+\draw[->,lime] (C) .. controls (7.2,1.0) and (8.8,1.0) ..
+node[below] {$0.2$}
+(C);
 
-%\draw[->]
-%(C) to[bend left=15]
-%node[right] {$0.2$}
-%(B);
+\draw[->,magenta] (D) .. controls (3.2,1.0) and (4.8,1.0) ..
+node[below] {$0.7$}
+(D);
 
-%\draw[->]
-%(C) .. controls (3.2,-3.2) and (4.8,-3.2) ..
-%node[below] {$0.4$}
-%(C);
-
-% -----------------------------------------------------
-% Transiciones desde D
-% -----------------------------------------------------
-
-%\draw[->]
-%(D) to[bend left=20]
-%node[right] {$0.3$}
-%(E);
-
-%\draw[->]
-%(D) to[bend left=20]
-%node[above] {$0.2$}
-%(B);
-
-%\draw[->]
-%(D) .. controls (7.2,3.2) and (8.8,3.2) ..
-%node[above] {$0.5$}
-%(D);
-
-% -----------------------------------------------------
-% Transiciones desde E
-% -----------------------------------------------------
-
-%\draw[->]
-%(E) to[bend left=20]
-%node[left] {$0.4$}
-%(D);
-
-%\draw[->]
-%(E) to[bend left=20]
-%node[below] {$0.2$}
-%(C);
-
-%\draw[->]
-%(E) .. controls (7.2,-3.2) and (8.8,-3.2) ..
-%node[below] {$0.4$}
-%(E);
+\draw[->,teal] (E) .. controls (2.0,6.8) and (4.0,6.8) ..
+node[above] {$0.8$}
+(E);
 
 \end{tikzpicture}
 
