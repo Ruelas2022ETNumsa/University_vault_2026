@@ -282,23 +282,23 @@ Al considerar el ejemplo de la máquina de Tolsky, es fácil pensar que con el p
 
 Una manera de calcular el estado estable del mercado es utilizar el análisis de Markov para un número grande de periodos. Es posible ver si los valores futuros se acercan a un valor estable. Por ejemplo, es posible repetir el análisis de Markov para la máquina de Tolsky durante 15 periodos. No es difícil hacerlo a mano. Los resultados del cálculo se muestran en la tabla:
 
-|PERIODO|ESTADO 1|ESTADO 2|
-|:--|:--|:--|
-|1|1.000000|0.000000|
-|2|0.800000|0.200000|
-|3|0.660000|0.340000|
-|4|0.562000|0.438000|
-|5|0.493400|0.506600|
-|6|0.445380|0.554620|
-|7|0.411766|0.588234|
-|8|0.388236|0.611763|
-|9|0.371765|0.628234|
-|10|0.360235|0.639754|
-|11|0.352165|0.647834|
-|12|0.346515|0.653484|
-|13|0.342560|0.657439|
-|14|0.339792|0.660207|
-|15|0.337854|0.662145|
+| PERIODO | ESTADO 1 | ESTADO 2 |
+|:------- |:-------- |:-------- |
+| 1       | 1.000000 | 0.000000 |
+| 2       | 0.800000 | 0.200000 |
+| 3       | 0.660000 | 0.340000 |
+| 4       | 0.562000 | 0.438000 |
+| 5       | 0.493400 | 0.506600 |
+| 6       | 0.445380 | 0.554620 |
+| 7       | 0.411766 | 0.588234 |
+| 8       | 0.388236 | 0.611763 |
+| 9       | 0.371765 | 0.628234 |
+| 10      | 0.360235 | 0.639754 |
+| 11      | 0.352165 | 0.647834 |
+| 12      | 0.346515 | 0.653484 |
+| 13      | 0.342560 | 0.657439 |
+| 14      | 0.339792 | 0.660207 |
+| 15      | 0.337854 | 0.662145 |
 
 La máquina comienza con un funcionamiento correcto (en el estado 1) en el primer periodo. En el periodo 5, hay una probabilidad de tan solo 0.4934 de que la máquina todavía funcione correctamente y, para el periodo 10, esta probabilidad es solamente de 0.360235. En el periodo 15, la probabilidad de que la máquina todavía tenga un funcionamiento correcto es cercana a 0.34. La probabilidad de que la máquina todavía funcione bien en un periodo futuro disminuye, pero lo hace a una tasa determinada. ¿Qué se esperaría a la larga? Si hacemos los cálculos para 100 periodos, ¿qué pasaría? ¿Habrá un equilibrio en este caso? Si la respuesta es sí, ¿cuál sería? Viendo la tabla 15.1, parece que habrá un equilibrio en 0.333333, o bien, 1/3. Pero, ¿cómo estaríamos seguros?
 
@@ -358,59 +358,25 @@ Un sistema de cuentas por cobrar generalmente coloca las deudas o las cuentas po
 - **Antes de elaborar esa matriz (a matriz de probabilidades de transición), necesitamos conocer las probabilidades para los otros dos estados: deuda de menos de un mes y deuda de uno a tres meses de antigüedad.**
 
 
----
----
----
+
+|     Este mes     | Siguiente mes |        <         |       <        |      <      |
+|:----------------:|:-------------:|:----------------:|:--------------:|:-----------:|
+|                  |    Pagada     | Deuda incobrable | Menos de 1 mes | 1 a 3 meses |
+|      Pagada      |       1       |        0         |       0        |      0      |
+| Deuda incobrable |       0       |        1         |       0        |      0      |
+|  Menos de 1 mes  |      0.6      |        0         |      0.2       |     0.2     |
+|   1 a 3 meses    |      0.4      |       0.1        |      0.3       |     0.2     |
 
 
-<table border="1">
-    <tr>
-        <th rowspan="2" style="text-align:center; vertical-align:middle;">
-            Este mes
-        </th>
-        <th colspan="4" style="text-align:center;">
-            Siguiente mes
-        </th>
-    </tr>
-    <tr>
-        <th style="text-align:center;">Pagada</th>
-        <th style="text-align:center;">Deuda incobrable</th>
-        <th style="text-align:center;">&lt;1 mes</th>
-        <th style="text-align:center;">1 a 3 meses</th>
-    </tr>
-    <tr>
-        <td style="text-align:center;">Pagada</td>
-        <td style="text-align:center;">1</td>
-        <td style="text-align:center;">0</td>
-        <td style="text-align:center;">0</td>
-        <td style="text-align:center;">0</td>
-    </tr>
-    <tr>
-        <td style="text-align:center;">Deuda incobrable</td>
-        <td style="text-align:center;">0</td>
-        <td style="text-align:center;">1</td>
-        <td style="text-align:center;">0</td>
-        <td style="text-align:center;">0</td>
-    </tr>
-    <tr>
-        <td style="text-align:center;">Menos de 1 mes</td>
-        <td style="text-align:center;">0.6</td>
-        <td style="text-align:center;">0</td>
-        <td style="text-align:center;">0.2</td>
-        <td style="text-align:center;">0.2</td>
-    </tr>
-    <tr>
-        <td style="text-align:center;">1 a 3 meses</td>
-        <td style="text-align:center;">0.4</td>
-        <td style="text-align:center;">0.1</td>
-        <td style="text-align:center;">0.3</td>
-        <td style="text-align:center;">0.2</td>
-    </tr>
-</table>
+|     Este mes     | Siguiente mes |        <         |       <        |      <      |
+|:----------------:|:-------------:|:----------------:|:--------------:|:-----------:|
+|        ^         |    Pagada     | Deuda incobrable | Menos de 1 mes | 1 a 3 meses |
+|      Pagada      |       1       |        0         |       0        |      0      |
+| Deuda incobrable |       0       |        1         |       0        |      0      |
+|  Menos de 1 mes  |      0.6      |        0         |      0.2       |     0.2     |
+|   1 a 3 meses    |      0.4      |       0.1        |      0.3       |     0.2     |
 
----
----
----
+
 
 <table border="1">
     <tr>
