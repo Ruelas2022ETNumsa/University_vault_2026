@@ -173,4 +173,157 @@ El significado de sus probabilidades se expresa en términos de los diferentes e
 
 Uno de los propósitos del análisis de Markov es predecir el futuro. Dado el vector de probabilidades de estado y la matriz de probabilidades de transición, no es muy difícil determinar las probabilidades de estado en una fecha futura.
 
-#### Con ese tipo de análisis, podemos comparar la probabilidad de que un individuo compre en una de las tiendas en el futuro.
+>Con ese tipo de análisis, podemos comparar la probabilidad de que un individuo compre en una de las tiendas en el futuro.
+
+> Como tal probabilidad es equivalente a la participación en el mercado, es posible determinar participación futura en el mercado para American Food, Food Mart y Atlas Foods. Cuando el periodo actual es 0, calcular las probabilidades de estado para el siguiente periodo (periodo 1) se hace como sigue:
+
+$$\pi(1) = \pi(0)P\tag{15-3}$$
+Más aún, si estamos en cualquier periodo $n$, calculamos las probabilidades de estado para el periodo $n+1$ como:
+$$\pi(n+1) = \pi(n)P\tag{15-4}$$
+La ecuación 15-3 sirve para contestar la pregunta de las participaciones de mercado del siguiente periodo para las tiendas. Los cálculos son:
+
+$$
+\begin{array}{rcl}
+\pi(1) &=& \pi(0)P \\[4pt]
+&=& (0.4,\,0.3,\,0.3)
+\begin{bmatrix}
+0.8 & 0.1 & 0.1 \\
+0.1 & 0.7 & 0.2 \\
+0.2 & 0.2 & 0.6
+\end{bmatrix} \\[8pt]
+&=& \bigl[\;
+(0.4)(0.8)+(0.3)(0.1)+(0.3)(0.2), \\[2pt]
+&& (0.4)(0.1)+(0.3)(0.7)+(0.3)(0.2), \\[2pt]
+&& (0.4)(0.1)+(0.3)(0.2)+(0.3)(0.6)
+\; \bigr ] \\[8pt]
+&=& (0.41,\,0.31,\,0.28)
+\end{array}
+$$
+
+>Como se observa, la participación de mercado para American Food y Food Mart aumenta, en tanto que la de Atlas Food disminuye. ¿Continuará esta tendencia en el siguiente periodo y en el que le sigue? De la ecuación 15-4, derivamos un modelo que nos dirá cuáles serán las probabilidades en cualquier periodo futuro. Considere dos periodos a partir de ahora:
+
+$$\pi(2) = \pi(1)P$$
+Como sabemos que
+$$\pi(1) = \pi(0)P$$
+Tenemos $$\pi(2) = [\pi(1)]P = [\pi(0)P]P = \pi(0)PP = \pi(0)P^2$$
+En general, $$\pi(n) = \pi(0)P^{n}\tag{15-5}$$
+>Entonces, las probabilidades de estado n periodos en el futuro se obtienen de las probabilidades de estado actuales y la matriz de probabilidades de transición.
+
+---
+
+## **Análisis de Markov en operación de maquinaria**
+
+Paul Tolsky, dueño de Tolsky Works, registró durante varios años la operación de sus fresadoras. En los dos últimos años, 80% de las veces la fresadora funcionaba correctamente en el mes actual, si había funcionado correctamente el mes anterior. Esto también significa que tan solo 20% del tiempo el funcionamiento de la máquina era incorrecto para cualquier mes, cuando estaba funcionando correctamente el mes anterior.
+
+>En otras palabras, esta máquina puede corregirse cuando no ha funcionado bien en el pasado y esto ocurre 10% de las veces. Estos valores ahora se utilizan para construir la matriz de probabilidades de transición. De nuevo, el estado 1 es una situación donde la máquina funciona correctamente; y el estado 2, donde la máquina no lo hace.
+
+$$P = 
+\begin{bmatrix} 
+0.8 & 0.2  \\
+0.1 & 0.9 
+\end{bmatrix}$$ 
+donde 
+$P_{11} = 0.8 = \text{probabilidad de que la máquina funcione correctamente este mes, dado que funcionaba correctamente el mes pasado}$
+$P_{12} = 0.2 = \text{probabilidad de que la máquina no funcione correctamente este mes, dado que funcionaba correctamente el mes pasado}$
+$P_{21} = 0.1 = \text{probabilidad de que la máquina funcione correctamente este mes, dado que no funcionaba correctamente el mes pasado}$
+$P_{22} = 0.9 = \text{probabilidad de que la máquina no funcione correctamente este mes, dado que no funcionaba correctamente el mes pasado}$
+
+>Las dos probabilidades del renglón superior son las probabilidades de funcionamiento correcto y funcionamiento incorrecto, dado que la máquina funcionaba correctamente el periodo anterior.
+
+>- ¿Cuál es la probabilidad de que la máquina de Tolsky funcione correctamente dentro de un mes?
+>- ¿Cuál es la probabilidad de que la máquina funcione correctamente dentro de dos meses?
+
+
+
+$\pi(1) = \pi(0)P$ $= (1, 0) \begin{bmatrix} 0.8 & 0.2 \ 0.1 & 0.9 \end{bmatrix}$ $= [(1)(0.8) + (0)(0.1), (1)(0.2) + (0)(0.9)]$ $= (0.8, 0.2)$
+
+
+>La probabilidad de que la máquina funcione correctamente dentro de un mes es de 0.80. La probabilidad de que no funcione correctamente en un mes es de 0.20.
+
+$\pi(2) = \pi(1)P$ $= (0.8, 0.2) \begin{bmatrix} 0.8 & 0.2 \ 0.1 & 0.9 \end{bmatrix}$ $= [(0.8)(0.8) + (0.2)(0.1), (0.8)(0.2) + (0.2)(0.9)]$ $= (0.66, 0.34)$
+
+**Ahora utilizamos estos resultados para determinar la probabilidad de que la máquina funcione correctamente dentro de dos meses. El análisis es exactamente el mismo.**
+
+---
+
+### **Página 15**
+
+- **Significa que dentro de dos meses hay una probabilidad de 0.66 de que la máquina todavía funcione correctamente.**
+- **La probabilidad de que la máquina no funcione correctamente es de 0.34. Desde luego,**
+
+# **Condiciones de Equilibrio**
+
+Al considerar el ejemplo de la máquina de Tolsky, es fácil pensar que con el paso del tiempo todas las participaciones de mercado o las probabilidades de estado serán 0 o 1. En general no ocurre así. Es normal encontrar el **porcentaje de equilibrio de los valores o las probabilidades de mercado. Las** probabilidades se llaman **probabilidades de estado estable o probabilidades de equilibrio.**
+
+---
+
+### **Página 16**
+
+Una manera de calcular el estado estable del mercado es utilizar el análisis de Markov para un número grande de periodos. Es posible ver si los valores futuros se acercan a un valor estable. Por ejemplo, es posible repetir el análisis de Markov para la máquina de Tolsky durante 15 periodos. No es difícil hacerlo a mano. Los resultados del cálculo se muestran en la tabla:
+
+|PERIODO|ESTADO 1|ESTADO 2|
+|:--|:--|:--|
+|1|1.000000|0.000000|
+|2|0.800000|0.200000|
+|3|0.660000|0.340000|
+|4|0.562000|0.438000|
+|5|0.493400|0.506600|
+|6|0.445380|0.554620|
+|7|0.411766|0.588234|
+|8|0.388236|0.611763|
+|9|0.371765|0.628234|
+|10|0.360235|0.639754|
+|11|0.352165|0.647834|
+|12|0.346515|0.653484|
+|13|0.342560|0.657439|
+|14|0.339792|0.660207|
+|15|0.337854|0.662145|
+
+---
+
+### **Página 17**
+
+La máquina comienza con un funcionamiento correcto (en el estado 1) en el primer periodo. En el periodo 5, hay una probabilidad de tan solo 0.4934 de que la máquina todavía funcione correctamente y, para el periodo 10, esta probabilidad es solamente de 0.360235. En el periodo 15, la probabilidad de que la máquina todavía tenga un funcionamiento correcto es cercana a 0.34. La probabilidad de que la máquina todavía funcione bien en un periodo futuro disminuye, pero lo hace a una tasa determinada. ¿Qué se esperaría a la larga? Si hacemos los cálculos para 100 periodos, ¿qué pasaría? ¿Habrá un equilibrio en este caso? Si la respuesta es sí, ¿cuál sería? Viendo la tabla 15.1, parece que habrá un equilibrio en 0.333333, o bien, 1/3. Pero, ¿cómo estaríamos seguros?
+
+$\pi(n+1) = \pi(n)P$
+
+Por definición, una condición de equilibrio existe si las probabilidades de estado o las participaciones de mercado no cambian después de muchos periodos. Entonces, el equilibrio, en este caso las probabilidades de estado para un periodo futuro, debe ser igual que las probabilidades de estado para el periodo actual. Este hecho es la clave para obtener las probabilidades de estado estable, cuya relación se expresa como: De la ecuación $\pi(n+1) = \pi(n)P$ siempre es cierto que (siguiente periodo) (este periodo)P
+
+---
+
+### **Página 18**
+
+En el equilibrio, vemos que $\pi(n+1) = \pi(n)$ Por lo tanto, en el equilibrio, $\pi(n+1) = \pi(n)P = \pi(n)$ De manera que $\pi(n) = \pi(n)P$ o, eliminando el término en $n$, $\pi = \pi P$
+
+**En el equilibrio, las probabilidades de estado para el siguiente periodo son iguales a las probabilidades de estado para este periodo.** Esta ecuación establece que, en el equilibrio, las probabilidades de estado para el siguiente periodo son las mismas que las probabilidades de estado para el periodo actual.
+
+Para la máquina de Tolsky, esto se expresa como sigue: $\pi = \pi P$ $(\pi_1, \pi_2) = (\pi_1, \pi_2) \begin{bmatrix} 0.8 & 0.2 \ 0.1 & 0.9 \end{bmatrix}$ Aplicando la multiplicación de matrices $(\pi_1, \pi_2) = [(\pi_1)(0.8) + (\pi_2)(0.1), (\pi_1)(0.2) + (\pi_2)(0.9)]$
+
+El primer término del lado izquierdo, $\pi_1$, es igual al primer término del lado derecho, $(\pi_1)(0.8) + (\pi_2)(0.1)$. Además, el segundo término del lado izquierdo, $\pi_2$, es igual al segundo término del lado derecho, $(\pi_1)(0.2) + (\pi_2)(0.9)$. Esto da lo siguiente: $\pi_1 = 0.8\pi_1 + 0.1\pi_2$ (a) $\pi_2 = 0.2\pi_1 + 0.9\pi_2$ (b) También sabemos que las probabilidades de estado, $\pi_1$ y $\pi_2$ en este caso, deben sumar 1. Expresamos esto como sigue: $\pi_1 + \pi_2 + \dots + \pi_n = 1$ (c) Para la máquina de Tolsky, tenemos $\pi_1 + \pi_2 = 1$
+
+---
+
+### **Página 19**
+
+Ahora tenemos tres ecuaciones (a, b y c) para la máquina. Sabemos que debe cumplirse la ecuación c. Entonces, eliminamos la ecuación a o la b, y resolvemos las dos ecuaciones que quedan para obtener $\pi_1$ y $\pi_2$. Es necesario eliminar una de las ecuaciones, de manera que tengamos dos incógnitas y dos ecuaciones. Si estuviéramos buscando las condiciones de equilibrio que incluyeran tres estados, tendríamos cuatro ecuaciones. De nuevo, será necesario eliminar una de las ecuaciones para terminar con tres ecuaciones y tres incógnitas.
+
+El motivo por el cual podemos eliminar una de las ecuaciones es que están matemáticamente interrelacionadas. En otras palabras, una de las ecuaciones es redundante al especificar las relaciones entre las diferentes ecuaciones de equilibrio.
+
+Eliminemos de manera arbitraria la ecuación a. Así, resolveremos las siguientes dos ecuaciones: $\pi_2 = 0.2\pi_1 + 0.9\pi_2$ $\pi_1 + \pi_2 = 1$ Reordenando la primera ecuación, $0.1\pi_2 = 0.2\pi_1$ o bien, $\pi_2 = 2\pi_1$ Al sustituir esto en la ecuación d, obtenemos $\pi_1 + \pi_2 = 1$ o bien, $\pi_1 + 2\pi_1 = 1$ o bien, $3\pi_1 = 1$ $\pi_1 = 1/3 = 0.33333333$ Entonces, $\pi_2 = 2/3 = 0.66666667$
+
+---
+
+### **Página 20**
+
+Como se observa, la probabilidad del estado estable para el estado 1 es 0.33333333, y la probabilidad del estado de equilibrio para el estado 2 es 0.66666667, que son los valores que se esperan al ver los resultados de la tabla. El análisis indica que tan solo es necesario conocer la matriz de transición para determinar las participaciones en el mercado en equilibrio. Los valores iniciales para las probabilidades de estado o la participación en el mercado no influyen en las probabilidades del estado en equilibrio. El análisis para determinar las probabilidades del estado en equilibrio o las participaciones en el mercado es el mismo cuando hay más de tres estados.
+
+En los ejemplos estudiados hasta ahora, suponemos que es posible que el proceso o sistema vaya de un estado a cualquier otro, entre cualesquiera dos periodos. Sin embargo, en algunos casos no se puede ir a otro estado en el futuro. En otras palabras, cuando se encuentra en un estado dado, este lo "absorbe", y permanecerá en ese estado. Cualquier estado que tiene tal propiedad se llama **estado absorbente** un ejemplo es la aplicación de las cuentas por cobrar.
+
+Un sistema de cuentas por cobrar generalmente coloca las deudas o las cuentas por cobrar de sus clientes en una de varias categorías o estados, dependiendo de lo atrasada que esté la cuenta sin pagar más antigua. Desde luego, las categorías o los estados exactos dependen de la política establecida por cada compañía. Cuatro estados o categorías típicos para una aplicación de cuentas por cobrar son los siguientes:
+
+- Estado 1 ($\pi_1$): pagadas, todas las cuentas
+- Estado 2 ($\pi_2$): deuda incobrable, atrasada por más de tres meses
+- Estado 3 ($\pi_3$): atrasada menos de un mes
+- Estado 4 ($\pi_4$): atrasada entre uno y tres meses
+
+# **Estados absorbentes y matriz fundamental: Cuentas por cobrar**
