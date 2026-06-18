@@ -1,4 +1,110 @@
-555
+66666
+ Este ejercicio se identifica como un problema de **Teoría de Colas** del tipo **Multicanal (Modelo B: M/M/s)**. El sistema describe llegadas de clientes que forman una sola fila para ser atendidos por cualquiera de los dos servidores disponibles.
+
+### Estructura del Sistema de Colas
+
+Se trata de un sistema de **múltiples canales (2 servidores) y una sola fase**, donde los pacientes llegan a una cola común y pasan al primer servidor que quede libre.
+
+```mermaid
+flowchart LR
+L([Llegadas]) --> Q[Cola]
+Q --> S1((Servidor 1))
+Q --> S2((Servidor 2))
+S1 --> O([Salidas])
+S2 --> O
+```
+
+---
+
+### Resolución del Ejercicio
+
+#### 1. Identificación de los datos y modelo
+
+- **Tasa promedio de llegadas ($\lambda$):** $10$ clientes por hora.
+- **Tasa promedio de servicio ($\mu$):** $8$ clientes por hora (por servidor).
+- **Número de servidores ($s$):** $2$.
+- **Modelo:** **M/M/2** (Modelo B).
+
+**Verificación de estabilidad:** Para que el sistema alcance un estado estable, se debe cumplir que $\lambda < s\mu$: $10 < 2(8) \Rightarrow 10 < 16$. El sistema es estable.
+
+#### 2. Cálculos Paso a Paso
+
+**a) Probabilidad de que ningún cliente se encuentre en el sistema ($P_0$)** Esta fórmula determina la probabilidad de que los servidores estén inactivos.
+
+- **Fórmula:** $P_o = \frac{1}{\sum_{n=0}^{s-1} \frac{(\lambda / \mu)^n}{n!} + \frac{(\lambda / \mu)^s}{s!} \left( \frac{1}{1 - (\lambda / s \mu)} \right)}$
+- **Sustitución de valores:** $P_o = \frac{1}{\left[ \frac{(10/8)^0}{0!} + \frac{(10/8)^1}{1!} \right] + \frac{(10/8)^2}{2!} \left( \frac{1}{1 - (10 / 16)} \right)}$
+- **Operaciones parciales:**
+    1. $\frac{1.25^0}{1} + \frac{1.25^1}{1} = 1 + 1.25 = 2.25$
+    2. $\frac{1.5625}{2} \left( \frac{1}{1 - 0.625} \right) = 0.78125 \left( \frac{1}{0.375} \right) = 0.78125 \times 2.6667 = 2.0833$
+    3. $\sum = 2.25 + 2.0833 = 4.3333$
+- **Resultado:** $P_o = \frac{1}{4.3333} = \mathbf{0.2307}$ (aproximadamente **$23.1%$**).
+
+**b) Número promedio de unidades en el sistema ($L_s$)** Representa la cantidad total de clientes tanto en fila como en atención.
+
+- **Fórmula:** $L_s = \frac{\lambda \mu (\lambda / \mu)^s P_o}{(s - 1)! (s \mu - \lambda)^2} + \frac{\lambda}{\mu}$
+- **Sustitución:** $L_s = \frac{(10)(8)(1.25)^2(0.231)}{(2-1)!(16-10)^2} + \frac{10}{8}$
+- **Operaciones parciales:**
+    1. $\frac{80 \times 1.5625 \times 0.231}{1 \times 36} = \frac{28.875}{36} = 0.802$
+    2. $L_s = 0.802 + 1.25 = 2.052$
+- **Resultado:** $L_s = \mathbf{2.052 \text{ clientes}}$.
+
+**c) Tiempo promedio en el que una unidad está dentro del sistema ($W_s$)** Es el tiempo total desde la llegada hasta la salida.
+
+- **Fórmula:** $W_s = \frac{L_s}{\lambda}$
+- **Sustitución:** $W_s = \frac{2.052}{10}$
+- **Operación:** $W_s = 0.2052 \text{ horas}$
+- **Conversión a minutos:** $0.2052 \times 60 \text{ min} = \mathbf{12.31 \text{ minutos}}$.
+
+**d) Número de clientes en la fila ($L_q$)** Representa cuántos pacientes están esperando físicamente en la fila.
+
+- **Fórmula:** $L_q = L_s - \frac{\lambda}{\mu}$
+- **Sustitución:** $L_q = 2.052 - 1.25$
+- **Resultado:** $L_q = \mathbf{0.802 \text{ clientes}}$.
+
+**e) Tiempo de espera en la fila ($W_q$)** Es el tiempo que el paciente pasa exclusivamente esperando turno.
+
+- **Fórmula:** $W_q = W_s - \frac{1}{\mu}$
+- **Sustitución:** $W_q = 0.2052 - \frac{1}{8}$
+- **Operación:** $W_q = 0.2052 - 0.125 = 0.0802 \text{ horas}$
+- **Conversión a minutos:** $0.0802 \times 60 \text{ min} = \mathbf{4.81 \text{ minutos}}$.
+
+---
+
+### Resumen de Resultados
+
+- **$P_0$:** $23.1%$ de probabilidad de que el hospital no tenga pacientes.
+- **$L_s$:** En promedio hay $2.05$ personas en el hospital.
+- **$W_s$:** Un paciente pasa un promedio de $12.3$ minutos en total.
+- **$L_q$:** En promedio hay $0.80$ personas esperando en la fila.
+- **$W_q$:** El tiempo de espera antes de ser atendido es de $4.8$ minutos.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+55
 
 
 Este ejercicio se identifica como un problema de **Teoría de Colas** debido a que describe un sistema de línea de espera con llegadas aleatorias de clientes y un tiempo de servicio determinado para ser atendidos por un servidor.
