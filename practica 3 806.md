@@ -6,131 +6,92 @@ El departamento de estudios de mercado de una fábrica estima que el 20% de la g
 
 ¿Cuántos lo comprarán al mes próximo? ¿Y dentro de tres meses?
 ### solución
+Este ejercicio se identifica como una **Cadena de Markov en tiempo discreto** porque presenta un número finito de estados (comprar o no comprar), probabilidades de transición constantes en el tiempo y la propiedad de que el estado futuro depende únicamente del estado actual.
+
+### Diagrama de la Cadena de Markov
 
 ```tikz
-\usepackage{tikz}
-\usetikzlibrary{arrows.meta, positioning}
-
 \begin{document}
 \begin{tikzpicture}
+% Definición de estados (N=2, posicionamiento en línea horizontal)
+\node[draw,circle,thick,color=orange] (C) at (2,6) {C};
+\node[draw,circle,thick,color=pink] (NC) at (10,6) {NC};
 
-    % Configuración de los nodos de estado (Regla: draw, circle, thick, color; NO fill)
-    \node[draw, circle, thick, color=orange, minimum size=1.5cm] (C) at (0,0) {\textbf{C}};
-    \node[draw, circle, thick, color=pink, minimum size=1.5cm] (NC) at (4,0) {\textbf{NC}};
+% Bucles (hacia afuera)
+\draw[->,ultra thick,orange] (C) .. controls (0,8) and (0,4) .. node[left] {$0.8$} (C);
+\draw[->,ultra thick,pink] (NC) .. controls (12,8) and (12,4) .. node[right] {$0.7$} (NC);
 
-    % Self-loops (Regla: controls cx1,cy1 and cx2,cy2)
-    \draw[->, ultra thick, color=orange] (C) .. controls (-1, 1.5) and (1, 1.5) .. node[above] {$0.80$} (C);
-    \draw[->, ultra thick, color=pink] (NC) .. controls (3, 1.5) and (5, 1.5) .. node[above] {$0.70$} (NC);
-
-    % Flechas de transición (Regla: bend left=N)
-    \draw[->, very thick, color=orange] (C) to[bend left=30] node[above, pos=0.5] {$0.20$} (NC);
-    \draw[->, very thick, color=pink] (NC) to[bend left=30] node[below, pos=0.5] {$0.30$} (C);
+% Flechas de transición
+\draw[->,very thick,orange] (C) to[bend left=30] node[above] {$0.2$} (NC);
+\draw[->,very thick,pink] (NC) to[bend left=30] node[below] {$0.3$} (C);
 
 \end{tikzpicture}
 \end{document}
 ```
 
-Este ejercicio corresponde a un proceso estocástico conocido como **Cadena de Markov de tiempo discreto**. Se identifica como tal porque la población se divide en estados finitos y excluyentes (Comprar o No Comprar), las probabilidades de cambio entre estados son constantes mes a mes, y la situación futura depende únicamente de la situación presente.
+---
 
-### 1. Identificación de los datos del problema
+### Resolución del Ejercicio
+
+#### 1. Identificación de datos y estados
 
 - **Población total ($N$):** $1000$ individuos.
-- **Estados posibles:**
-    - **Estado 1 ($C$):** Clientes que compran el producto.
-    - **Estado 2 ($NC$):** Clientes que no compran el producto.
-- **Probabilidades de transición dadas ($P_{ij}$):**
-    - Probabilidad de que un comprador no compre el mes siguiente ($C \to NC$): $P_{12} = 0.20$.
-    - Probabilidad de que un no comprador compre el mes siguiente ($NC \to C$): $P_{21} = 0.30$.
-- **Estado Inicial (Mes 1):**
-    - Compradores iniciales: $100$ individuos.
-    - No compradores iniciales: $1000 - 100 = 900$ individuos.
+- **Estados del sistema:**
+    - **Estado 1 ($C$):** Comprar el producto.
+    - **Estado 2 ($NC$):** No comprar el producto.
+- **Probabilidades dadas:**
+    - De compra a no compra: $P_{12} = 0.2$ ($20\%$).
+    - De no compra a compra: $P_{21} = 0.3$ ($30\%$).
 
-### 2. Explicación de lo que se pide
+#### 2. Construcción de la matriz de transición ($P$)
 
-Se solicita proyectar la distribución de la población en dos momentos específicos:
+La suma de las probabilidades de cada fila debe ser igual a $1$ (propiedad estocástica).
 
-1. **Al mes próximo (Mes 2):** El estado inmediatamente después del inicial.
-2. **Dentro de tres meses (Mes 4):** El estado tras transcurrir tres periodos de transición desde el estado inicial (Periodo 1 $\to$ Periodo 4).
+- $P_{11} = 1 - P_{12} = 1 - 0.2 = \mathbf{0.8}$ (Probabilidad de seguir comprando).
+- $P_{22} = 1 - P_{21} = 1 - 0.3 = \mathbf{0.7}$ (Probabilidad de seguir sin comprar).
 
-### 3. Fórmulas utilizadas y razonamiento
+La matriz de transición es: $$P = \begin{bmatrix} 0.8 & 0.2 \ 0.3 & 0.7 \end{bmatrix}$$
 
-Para resolver este problema utilizaremos el análisis de matrices de Markov:
+#### 3. Definición del vector de estado inicial ($\pi(1)$)
 
-1. **Matriz de Probabilidades de Transición ($P$):** Organiza las probabilidades de moverse entre estados. La suma de cada renglón debe ser igual a $1$ (probabilidad total).
-2. **Vector de Probabilidades de Estado ($\pi(n)$):** Representa la probabilidad de estar en cada estado en el periodo $n$.
-3. **Relación de recurrencia:** Para hallar el estado en el periodo $n+1$, multiplicamos el vector de estado actual por la matriz de transición: $$\pi(n+1) = \pi(n) \cdot P$$
+En el primer mes, $100$ personas compraron el producto. Expresamos esto en probabilidades dividiendo por la población total ($1000$):
 
-### 4. Construcción de la Matriz de Transición ($P$)
+- $\pi_1(1) = 100 / 1000 = 0.1$
+- $\pi_2(1) = (1000 - 100) / 1000 = 0.9$ $$\pi(1) = [0.1, \quad 0.9]$$
 
-Calculamos las probabilidades de permanencia (bucles) asegurando que cada fila sume $1$:
+#### 4. Proyección para el próximo mes (Mes 2)
 
-- $P_{11}$ (Permanece comprando) $= 1 - P_{12} = 1 - 0.20 = 0.80$
-- $P_{22}$ (Permanece sin comprar) $= 1 - P_{21} = 1 - 0.30 = 0.70$
+Aplicamos la relación recurrente $\pi(n+1) = \pi(n) \cdot P$: $$\pi(2) = [0.1, \quad 0.9] \begin{bmatrix} 0.8 & 0.2 \ 0.3 & 0.7 \end{bmatrix}$$
 
-La matriz resulta: $$P = \begin{bmatrix} 0.8 & 0.2 \\ 0.3 & 0.7 \end{bmatrix}$$
+- $\pi_1(2) = (0.1 \times 0.8) + (0.9 \times 0.3) = 0.08 + 0.27 = \mathbf{0.35}$
+- $\pi_2(2) = (0.1 \times 0.2) + (0.9 \times 0.7) = 0.02 + 0.63 = \mathbf{0.65}$
 
-### 5. Definición del Vector de Estado Inicial ($\pi(1)$)
+**Número de compradores (Mes 2):** $0.35 \times 1000 = \mathbf{350}$ individuos.
 
-Convertimos el número de individuos iniciales en probabilidades relativas a la población total ($1000$):
+#### 5. Proyección para dentro de tres meses (Mes 4)
 
-- $\pi_1(1) = \frac{100}{1000} = 0.1$
-- $\pi_2(1) = \frac{900}{1000} = 0.9$
+Para calcular el estado en el periodo 4 (tres meses después del primero), podemos iterar paso a paso:
 
-Vector inicial: $$\pi(1) = [0.1, \quad 0.9]$$
+**Cálculo para el Mes 3:** $$\pi(3) = \pi(2) \cdot P = [0.35, \quad 0.65] \begin{bmatrix} 0.8 & 0.2 \ 0.3 & 0.7 \end{bmatrix}$$
 
-### 6. Desarrollo de los cálculos paso a paso
+- $\pi_1(3) = (0.35 \times 0.8) + (0.65 \times 0.3) = 0.28 + 0.195 = \mathbf{0.475}$
+- $\pi_2(3) = (0.35 \times 0.2) + (0.65 \times 0.7) = 0.07 + 0.455 = \mathbf{0.525}$
 
-#### Cálculo para el próximo mes (Mes 2)
+**Cálculo para el Mes 4:** $$\pi(4) = \pi(3) \cdot P = [0.475, \quad 0.525] \begin{bmatrix} 0.8 & 0.2 \ 0.3 & 0.7 \end{bmatrix}$$
 
-Aplicamos $\pi(2) = \pi(1) \cdot P$: $$\pi(2) = [0.1, \quad 0.9] \begin{bmatrix} 0.8 & 0.2 \\ 0.3 & 0.7 \end{bmatrix}$$
+- $\pi_1(4) = (0.475 \times 0.8) + (0.525 \times 0.3) = 0.38 + 0.1575 = \mathbf{0.5375}$
+- $\pi_2(4) = (0.475 \times 0.2) + (0.525 \times 0.7) = 0.095 + 0.3675 = \mathbf{0.4625}$
 
-- **Probabilidad de compra ($\pi_1(2)$):** 
-  $\pi_1(2) = (0.1 \times 0.8) + (0.9 \times 0.3)$
-   $\pi_1(2) = 0.08 + 0.27 = 0.35$
-- **Probabilidad de no compra ($\pi_2(2)$):**
-   $\pi_2(2) = (0.1 \times 0.2) + (0.9 \times 0.7)$
-   $\pi_2(2) = 0.02 + 0.63 = 0.65$
+**Número de compradores (Mes 4):** $0.5375 \times 1000 = \mathbf{537.5}$ (aproximadamente **538 individuos**).
 
-**Individuos compradores (Mes 2):** $0.35 \times 1000 = \mathbf{350}$.
+---
 
-#### Cálculo para dentro de dos meses (Mes 3)
+### Resultado Final
 
-Aplicamos $\pi(3) = \pi(2) \cdot P$: $$\pi(3) = [0.35, \quad 0.65] \begin{bmatrix} 0.8 & 0.2 \\ 0.3 & 0.7 \end{bmatrix}$$
+- Al mes próximo lo comprarán **350 individuos**.
+- Dentro de tres meses lo comprarán aproximadamente **538 individuos**.
 
-- **Probabilidad de compra ($\pi_1(3)$):**
-   $\pi_1(3) = (0.35 \times 0.8) + (0.65 \times 0.3)$ 
-   $\pi_1(3) = 0.28 + 0.195 = 0.475$
-- **Probabilidad de no compra ($\pi_2(3)$):** 
-  $\pi_2(3) = (0.35 \times 0.2) + (0.65 \times 0.7)$ 
-  $\pi_2(3) = 0.07 + 0.455 = 0.525$
-
-**Individuos compradores (Mes 3):** $0.475 \times 1000 = \mathbf{475}$.
-
-#### Cálculo para dentro de tres meses (Mes 4)
-
-Aplicamos $\pi(4) = \pi(3) \cdot P$: $$\pi(4) = [0.475, \quad 0.525] \begin{bmatrix} 0.8 & 0.2 \\ 0.3 & 0.7 \end{bmatrix}$$
-
-- **Probabilidad de compra ($\pi_1(4)$):** 
-  $\pi_1(4) = (0.475 \times 0.8) + (0.525 \times 0.3)$ 
-  $\pi_1(4) = 0.38 + 0.1575 = 0.5375$
-- **Probabilidad de no compra ($\pi_2(4)$):** 
-  $\pi_2(4) = (0.475 \times 0.2) + (0.525 \times 0.7)$ 
-  $\pi_2(4) = 0.095 + 0.3675 = 0.4625$
-
-**Individuos compradores (Mes 4):** $0.5375 \times 1000 = \mathbf{537.5}$ (se puede redondear a 538 según el contexto).
-
-### 7. Resultado final
-
-- **Al mes próximo:** Comprarán el producto **350 individuos**.
-- **Dentro de tres meses:** Comprarán el producto **538 individuos** (redondeado).
-
-### 8. Verificación
-
-En cada paso, la suma de las probabilidades debe ser igual a $1$:
-
-- **Mes 2:** $0.35 + 0.65 = 1.0$ (Correcto)
-- **Mes 3:** $0.475 + 0.525 = 1.0$ (Correcto)
-- **Mes 4:** $0.5375 + 0.4625 = 1.0$ (Correcto)
+**Verificación:** En cada paso, las probabilidades suman $1$ ($0.5375 + 0.4625 = 1.0$), lo que valida la consistencia del modelo.
 
 ---
 

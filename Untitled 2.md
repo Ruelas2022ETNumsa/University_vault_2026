@@ -1,21 +1,29 @@
-Este ejercicio se identifica como una **Cadena de Markov en tiempo discreto** porque presenta un número finito de estados (comprar o no comprar), probabilidades de transición constantes en el tiempo y la propiedad de que el estado futuro depende únicamente del estado actual.
+Este ejercicio se identifica como una **Cadena de Markov en tiempo discreto**. Presenta un número finito de estados (categorías de fumadores), probabilidades de transición constantes de un mes al siguiente y la propiedad de que la situación futura depende únicamente del estado actual.
 
 ### Diagrama de la Cadena de Markov
 
 ```tikz
 \begin{document}
 \begin{tikzpicture}
-% Definición de estados (N=2, posicionamiento en línea horizontal)
-\node[draw,circle,thick,color=orange] (C) at (2,6) {C};
-\node[draw,circle,thick,color=pink] (NC) at (10,6) {NC};
+% Definición de estados (N=3, posicionamiento circular)
+\node[draw,circle,thick,color=orange] (NF) at (90:4) {NF};
+\node[draw,circle,thick,color=pink] (F1) at (210:4) {F1};
+\node[draw,circle,thick,color=lime] (F2) at (330:4) {F2};
 
-% Bucles (hacia afuera)
-\draw[->,ultra thick,orange] (C) .. controls (0,8) and (0,4) .. node[left] {$0.8$} (C);
-\draw[->,ultra thick,pink] (NC) .. controls (12,8) and (12,4) .. node[right] {$0.7$} (NC);
+% Bucles (Permanencia en el estado)
+\draw[->,ultra thick,orange] (NF) .. controls (70:6) and (110:6) .. node[above] {$0.93$} (NF);
+\draw[->,ultra thick,pink] (F1) .. controls (190:6) and (230:6) .. node[left] {$0.80$} (F1);
+\draw[->,ultra thick,lime] (F2) .. controls (310:6) and (350:6) .. node[right] {$0.85$} (F2);
 
 % Flechas de transición
-\draw[->,very thick,orange] (C) to[bend left=30] node[above] {$0.2$} (NC);
-\draw[->,very thick,pink] (NC) to[bend left=30] node[below] {$0.3$} (C);
+\draw[->,very thick,orange] (NF) to[bend left=20] node[pos=0.2, right] {$0.05$} (F1);
+\draw[->,very thick,orange] (NF) to[bend right=20] node[pos=0.2, left] {$0.02$} (F2);
+
+\draw[->,very thick,pink] (F1) to[bend left=20] node[pos=0.2, left] {$0.10$} (NF);
+\draw[->,very thick,pink] (F1) to[bend left=20] node[pos=0.2, above] {$0.10$} (F2);
+
+\draw[->,very thick,lime] (F2) to[bend right=20] node[pos=0.2, right] {$0.05$} (NF);
+\draw[->,very thick,lime] (F2) to[bend left=20] node[pos=0.2, below] {$0.10$} (F1);
 
 \end{tikzpicture}
 \end{document}
@@ -27,60 +35,53 @@ Este ejercicio se identifica como una **Cadena de Markov en tiempo discreto** po
 
 #### 1. Identificación de datos y estados
 
-- **Población total ($N$):** $1000$ individuos.
+- **Población total ($N$):** $10,000$ habitantes.
 - **Estados del sistema:**
-    - **Estado 1 ($C$):** Comprar el producto.
-    - **Estado 2 ($NC$):** No comprar el producto.
-- **Probabilidades dadas:**
-    - De compra a no compra: $P_{12} = 0.2$ ($20%$).
-    - De no compra a compra: $P_{21} = 0.3$ ($30%$).
+    - **Estado 1 ($NF$):** No fumadores.
+    - **Estado 2 ($F1$):** Fuman un paquete o menos diariamente.
+    - **Estado 3 ($F2$):** Fuman más de un paquete diariamente.
+- **Distribución inicial (Mes 0):**
+    - $\pi_{NF}(0) = 5,000 / 10,000 = 0.50$.
+    - $\pi_{F1}(0) = 2,500 / 10,000 = 0.25$.
+    - $\pi_{F2}(0) = 2,500 / 10,000 = 0.25$.
+    - Vector inicial: $\pi(0) = [0.50, \quad 0.25, \quad 0.25]$.
 
 #### 2. Construcción de la matriz de transición ($P$)
 
-La suma de las probabilidades de cada fila debe ser igual a $1$ (propiedad estocástica).
+Las probabilidades se organizan por renglones, asegurando que la suma de cada uno sea igual a 1 (probabilidad total).
 
-- $P_{11} = 1 - P_{12} = 1 - 0.2 = \mathbf{0.8}$ (Probabilidad de seguir comprando).
-- $P_{22} = 1 - P_{21} = 1 - 0.3 = \mathbf{0.7}$ (Probabilidad de seguir sin comprar).
+- **Renglón 1 (Desde NF):** Hacia F1 es $0.05$; hacia F2 es $0.02$; permanece en NF: $1 - (0.05 + 0.02) = 0.93$.
+- **Renglón 2 (Desde F1):** Hacia NF es $0.10$; hacia F2 es $0.10$; permanece en F1: $1 - (0.10 + 0.10) = 0.80$.
+- **Renglón 3 (Desde F2):** Hacia NF es $0.05$; hacia F1 es $0.10$; permanece en F2: $1 - (0.05 + 0.10) = 0.85$.
 
-La matriz de transición es: $$P = \begin{bmatrix} 0.8 & 0.2 \ 0.3 & 0.7 \end{bmatrix}$$
+La matriz de transición resultante es: $$P = \begin{bmatrix} 0.93 & 0.05 & 0.02 \ 0.10 & 0.80 & 0.10 \ 0.05 & 0.10 & 0.85 \end{bmatrix}$$
 
-#### 3. Definición del vector de estado inicial ($\pi(1)$)
+#### 3. Proyección para el próximo mes (Mes 1)
 
-En el primer mes, $100$ personas compraron el producto. Expresamos esto en probabilidades dividiendo por la población total ($1000$):
+Se utiliza la fórmula $\pi(n+1) = \pi(n) \cdot P$ para calcular la distribución del siguiente periodo.
 
-- $\pi_1(1) = 100 / 1000 = 0.1$
-- $\pi_2(1) = (1000 - 100) / 1000 = 0.9$ $$\pi(1) = [0.1, \quad 0.9]$$
+**Cálculo de $\pi_{NF}(1)$ (Individuos que no fuman):** $\pi_{NF}(1) = (0.50 \times 0.93) + (0.25 \times 0.10) + (0.25 \times 0.05)$. $\pi_{NF}(1) = 0.465 + 0.025 + 0.0125 = \mathbf{0.5025}$.
 
-#### 4. Proyección para el próximo mes (Mes 2)
+**Cálculo de $\pi_{F1}(1)$ (Fuman $\le 1$ paquete):** $\pi_{F1}(1) = (0.50 \times 0.05) + (0.25 \times 0.80) + (0.25 \times 0.10)$. $\pi_{F1}(1) = 0.025 + 0.20 + 0.025 = \mathbf{0.25}$.
 
-Aplicamos la relación recurrente $\pi(n+1) = \pi(n) \cdot P$: $$\pi(2) = [0.1, \quad 0.9] \begin{bmatrix} 0.8 & 0.2 \ 0.3 & 0.7 \end{bmatrix}$$
+**Cálculo de $\pi_{F2}(1)$ (Fuman $> 1$ paquete):** $\pi_{F2}(1) = (0.50 \times 0.02) + (0.25 \times 0.10) + (0.25 \times 0.85)$. $\pi_{F2}(1) = 0.01 + 0.025 + 0.2125 = \mathbf{0.2475}$.
 
-- $\pi_1(2) = (0.1 \times 0.8) + (0.9 \times 0.3) = 0.08 + 0.27 = \mathbf{0.35}$
-- $\pi_2(2) = (0.1 \times 0.2) + (0.9 \times 0.7) = 0.02 + 0.63 = \mathbf{0.65}$
+#### 4. Conversión a número de individuos
 
-**Número de compradores (Mes 2):** $0.35 \times 1000 = \mathbf{350}$ individuos.
+Multiplicamos las probabilidades obtenidas por la población total ($10,000$ habitantes).
 
-#### 5. Proyección para dentro de tres meses (Mes 4)
-
-Para calcular el estado en el periodo 4 (tres meses después del primero), podemos iterar paso a paso:
-
-**Cálculo para el Mes 3:** $$\pi(3) = \pi(2) \cdot P = [0.35, \quad 0.65] \begin{bmatrix} 0.8 & 0.2 \ 0.3 & 0.7 \end{bmatrix}$$
-
-- $\pi_1(3) = (0.35 \times 0.8) + (0.65 \times 0.3) = 0.28 + 0.195 = \mathbf{0.475}$
-- $\pi_2(3) = (0.35 \times 0.2) + (0.65 \times 0.7) = 0.07 + 0.455 = \mathbf{0.525}$
-
-**Cálculo para el Mes 4:** $$\pi(4) = \pi(3) \cdot P = [0.475, \quad 0.525] \begin{bmatrix} 0.8 & 0.2 \ 0.3 & 0.7 \end{bmatrix}$$
-
-- $\pi_1(4) = (0.475 \times 0.8) + (0.525 \times 0.3) = 0.38 + 0.1575 = \mathbf{0.5375}$
-- $\pi_2(4) = (0.475 \times 0.2) + (0.525 \times 0.7) = 0.095 + 0.3675 = \mathbf{0.4625}$
-
-**Número de compradores (Mes 4):** $0.5375 \times 1000 = \mathbf{537.5}$ (aproximadamente **538 individuos**).
+- **No fumadores:** $0.5025 \times 10,000 = \mathbf{5,025}$.
+- **Fumadores $\le 1$ paquete:** $0.25 \times 10,000 = \mathbf{2,500}$.
+- **Fumadores $> 1$ paquete:** $0.2475 \times 10,000 = \mathbf{2,475}$.
 
 ---
 
 ### Resultado Final
 
-- Al mes próximo lo comprarán **350 individuos**.
-- Dentro de tres meses lo comprarán aproximadamente **538 individuos**.
+El próximo mes la población se distribuirá de la siguiente manera:
 
-**Verificación:** En cada paso, las probabilidades suman $1$ ($0.5375 + 0.4625 = 1.0$), lo que valida la consistencia del modelo.
+- **5,025** individuos que no fuman.
+- **2,500** individuos que fuman un paquete diario o menos.
+- **2,475** individuos que fuman más de un paquete diario.
+
+**Verificación:** La suma total es $5025 + 2500 + 2475 = 10,000$ habitantes, lo que confirma que el cálculo es correcto.
