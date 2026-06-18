@@ -1,3 +1,83 @@
+7777
+
+Este ejercicio se identifica como un problema de **Teoría de Colas** correspondiente al **Modelo C (M/D/1)**, caracterizado por tener tiempos de servicio constantes (determinísticos). Esto se deduce del enunciado al mencionar una "línea de remolque" y "línea de ensamble", lo que implica que cada auto recibe exactamente la misma cantidad de tiempo de atención sin variaciones aleatorias.
+
+### Estructura del Sistema de Colas
+
+De acuerdo con la descripción, se trata de una estructura de **canal único y fase única**. Los autos llegan, forman una fila común, pasan por la línea de lavado (servidor) y salen del sistema.
+
+```mermaid
+flowchart LR
+L([Llegadas]) --> Q[Cola] --> S((Servidor)) --> O([Salidas])
+```
+
+---
+
+### Resolución del Ejercicio
+
+#### 1. Identificación de los datos y modelo
+
+- **Tasa promedio de llegadas ($\lambda$):** $9$ autos por hora.
+- **Tasa promedio de servicio ($\mu$):** $1$ auto cada $5$ minutos. Para estandarizar las unidades a horas: $$\mu = \frac{60 \text{ min}}{5 \text{ min/auto}} = 12 \text{ autos por hora}.$$
+- **Modelo aplicado:** **M/D/1** (Llegadas Poisson, Servicio Determinado, 1 Servidor).
+
+#### 2. Cálculos Paso a Paso
+
+**a) Longitud media de la cola ($L_q$)** Representa el número promedio de autos que están esperando físicamente antes de entrar a la línea de lavado.
+
+- **Fórmula:** $L_q = \frac{\lambda^2}{2\mu(\mu - \lambda)}$.
+- **Sustitución:** $L_q = \frac{9^2}{2(12)(12 - 9)}$.
+- **Operaciones parciales:**
+    1. $9^2 = 81$.
+    2. $2 \times 12 \times (3) = 72$.
+- **Resultado:** $L_q = \frac{81}{72} = \mathbf{1.125 \text{ autos}}$.
+- **Redondeo:** Siguiendo criterios prácticos, se aproxima a **$1$ auto**.
+
+**b) Tiempo medio de espera en la cola ($W_q$)** Es el tiempo promedio que un auto permanece exclusivamente en la fila antes de que comience su proceso de lavado.
+
+- **Fórmula:** $W_q = \frac{\lambda}{2\mu(\mu - \lambda)}$.
+- **Sustitución:** $W_q = \frac{9}{2(12)(12 - 9)}$.
+- **Operación:** $W_q = \frac{9}{72} = \mathbf{0.125 \text{ horas}}$.
+- **Conversión a minutos:** $0.125 \times 60 \text{ min} = \mathbf{7.5 \text{ minutos}}$.
+
+**c) Número medio de clientes en el sistema ($L_s$)** Es la cantidad promedio de autos en toda la instalación (los que esperan en la cola más el que se está lavando).
+
+- **Fórmula:** $L_s = L_q + \frac{\lambda}{\mu}$.
+- **Sustitución:** $L_s = 1.125 + \frac{9}{12}$.
+- **Operación:** $L_s = 1.125 + 0.75 = \mathbf{1.875 \text{ autos}}$.
+- **Redondeo:** Se aproxima al entero más cercano, es decir, **$2$ autos**.
+
+**d) Tiempo medio de espera en el sistema ($W_s$)** Es el tiempo total desde que el auto llega a la instalación hasta que sale completamente limpio.
+
+- **Fórmula:** $W_s = W_q + \frac{1}{\mu}$.
+- **Sustitución:** $W_s = 0.125 + \frac{1}{12}$.
+- **Operación:** $W_s = 0.125 + 0.0833 = \mathbf{0.2083 \text{ horas}}$.
+- **Conversión a minutos:** $0.2083 \times 60 \text{ min} = \mathbf{12.5 \text{ minutos}}$.
+
+---
+
+### Resumen de Resultados Redondeados
+
+|Medida|Valor Calculado|Valor Redondeado|
+|:--|:--|:--|
+|**Longitud media de la cola ($L_q$)**|$1.125$ autos|**$1$ auto**|
+|**Tiempo de espera en la cola ($W_q$)**|$7.5$ minutos|**$8$ minutos**|
+|**Número de clientes en el sistema ($L_s$)**|$1.875$ autos|**$2$ autos**|
+|**Tiempo de espera en el sistema ($W_s$)**|$12.5$ minutos|**$13$ minutos**|
+
+**Razonamiento del modelo:** Al comparar estos resultados con un modelo M/M/1 (donde el servicio es aleatorio), se observa que la constante en el servicio del M/D/1 reduce el tiempo de espera a la mitad, lo que hace que la línea de ensamble sea mucho más eficiente para el flujo de clientes.
+
+
+
+
+
+
+
+
+
+
+
+
 66666
  Este ejercicio se identifica como un problema de **Teoría de Colas** del tipo **Multicanal (Modelo B: M/M/s)**. El sistema describe llegadas de clientes que forman una sola fila para ser atendidos por cualquiera de los dos servidores disponibles.
 

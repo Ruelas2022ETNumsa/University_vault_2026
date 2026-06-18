@@ -61565,6 +61565,7 @@ verif
 volvemos
 variabilidad
 valida
+variaciones
 audience
 activo
 auto
@@ -67463,6 +67464,7 @@ aguardando
 analizamos
 abandonan
 atendidas
+aproxima
 related
 recomendados
 ribbon
@@ -86699,6 +86701,9 @@ culos
 carril
 composiciones
 colocando
+caracterizado
+criterios
+cticos
 updated
 un
 universo
@@ -105123,6 +105128,7 @@ Cajeros
 Canales
 Canal
 Cumple
+Calculado
 Instalados
 Instalado
 Instalar
@@ -167908,6 +167914,7 @@ encadena
 encuentran
 expresados
 estabilidad
+estandarizar
 Motor
 Media
 Mantiene
@@ -175423,6 +175430,7 @@ Multicanal
 Markoviana
 Mermaid
 Modelado
+Medida
 Lectura
 LaTeX
 Linter
@@ -186973,6 +186981,7 @@ llegada
 ltiple
 libere
 lavados
+lavando
 incluyendo
 im
 instalar
@@ -200692,6 +200701,7 @@ Denotaremos
 Disciplina
 Directa
 Determin
+Determinado
 Remotely
 Raz
 Revisa
@@ -207751,6 +207761,9 @@ Recurrente
 Ritmo
 Repite
 Resto
+Redondeo
+Redondeados
+Redondeado
 Hider
 Hace
 Herramientas
