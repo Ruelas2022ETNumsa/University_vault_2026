@@ -1,3 +1,100 @@
+Este ejercicio se identifica como una **Cadena de Markov en tiempo discreto** porque el sistema evoluciona a través de un número finito de estados (las ciudades A, B y C), en intervalos de tiempo regulares (un día), y la probabilidad de desplazarse a la siguiente ciudad depende únicamente de la ciudad donde se encuentra el agente en el día actual.
+
+### Diagrama de la Cadena de Markov
+
+```tikz
+\begin{document}
+\begin{tikzpicture}
+% Definición de estados (N=3, posicionamiento circular según guía)
+\node[draw,circle,thick,color=orange] (A) at (6,11) {A};
+\node[draw,circle,thick,color=pink] (B) at (10,4) {B};
+\node[draw,circle,thick,color=lime] (C) at (2,4) {C};
+
+% Bucles (Permanencia en el estado, hacia afuera)
+\draw[->,ultra thick,orange] (A) .. controls (5,13) and (7,13) .. node[above] {$0.1$} (A);
+\draw[->,ultra thick,pink] (B) .. controls (11,3) and (11,5) .. node[right] {$0.2$} (B);
+\draw[->,ultra thick,lime] (C) .. controls (1,5) and (1,3) .. node[left] {$0.4$} (C);
+
+% Flechas de transición desde A
+\draw[->,very thick,orange] (A) to[bend left=20] node[pos=0.3, right] {$0.3$} (B);
+\draw[->,very thick,orange] (A) to[bend right=20] node[pos=0.3, left] {$0.6$} (C);
+
+% Flechas de transición desde B
+\draw[->,very thick,pink] (B) to[bend left=20] node[pos=0.3, below] {$0.6$} (C);
+\draw[->,very thick,pink] (B) to[bend left=20] node[pos=0.2, left] {$0.2$} (A);
+
+% Flechas de transición desde C
+\draw[->,very thick,lime] (C) to[bend left=20] node[pos=0.2, right] {$0.2$} (A);
+\draw[->,very thick,lime] (C) to[bend left=20] node[pos=0.3, above] {$0.4$} (B);
+
+\end{tikzpicture}
+\end{document}
+```
+
+---
+
+### Resolución del Ejercicio
+
+#### 1. Identificación de los datos del problema
+
+El sistema presenta tres estados posibles que representan la ciudad donde el agente pernocta:
+
+- **Estado 1 ($A$):** Ciudad A.
+- **Estado 2 ($B$):** Ciudad B.
+- **Estado 3 ($C$):** Ciudad C.
+
+Las probabilidades de transición dadas son las siguientes:
+
+- **Desde A:** Se queda en A con $0.1$, va a B con $0.3$ y va a C con $0.6$.
+- **Desde B:** Se queda en B con $0.2$, va a C con $0.6$ y va a A con $0.2$.
+- **Desde C:** Se queda en C con $0.4$, va a B con $0.4$ y va a A con $0.2$.
+
+#### 2. Construcción de la matriz de probabilidades de transición ($P$)
+
+La matriz se organiza de forma que cada fila represente el estado actual y cada columna el estado siguiente. Una propiedad fundamental es que la suma de las probabilidades de cada renglón debe ser igual a 1 ($100%$ de las posibilidades de movimiento).
+
+- **Renglón 1 (Origen A):** $P_{AA} = 0.1, P_{AB} = 0.3, P_{AC} = 0.6$.
+- **Renglón 2 (Origen B):** $P_{BA} = 0.2, P_{BB} = 0.2, P_{BC} = 0.6$.
+- **Renglón 3 (Origen C):** $P_{CA} = 0.2, P_{CB} = 0.4, P_{CC} = 0.4$.
+
+La matriz de transición resultante es: $$P = \begin{bmatrix} 0.1 & 0.3 & 0.6 \ 0.2 & 0.2 & 0.6 \ 0.2 & 0.4 & 0.4 \end{bmatrix}$$
+
+#### 3. Verificación de la Matriz
+
+Comprobamos que la matriz sea estocástica (suma de filas igual a la unidad):
+
+- Fila 1: $0.1 + 0.3 + 0.6 = 1.0$ (Correcto)
+- Fila 2: $0.2 + 0.2 + 0.6 = 1.0$ (Correcto)
+- Fila 3: $0.2 + 0.4 + 0.4 = 1.0$ (Correcto)
+
+### Conclusión del Modelado
+
+El problema ha sido modelado satisfactoriamente como una cadena de Markov homogénea de tres estados, donde la matriz $P$ define completamente el comportamiento del agente comercial a corto y largo plazo.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+---
+
 Este ejercicio se identifica como una **Cadena de Markov en tiempo discreto** porque el sistema evoluciona a través de un número finito de estados (las posibles composiciones de las bolas en la urna) y la probabilidad de transición al siguiente estado depende únicamente de la composición actual y de las reglas fijas establecidas (propiedad de Markov).
 
 ### 1. Identificación de Estados y Datos

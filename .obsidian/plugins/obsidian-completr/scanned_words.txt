@@ -30723,6 +30723,7 @@ dibuj
 dividimos
 despeje
 deducida
+desplazarse
 Vault
 Verificar
 Variables
@@ -55027,6 +55028,7 @@ sujetos
 selecciones
 sustituye
 sustituidos
+satisfactoriamente
 vault
 vil
 ver
@@ -73853,6 +73855,7 @@ reparte
 respetan
 recurrente
 realizamos
+regulares
 notes
 notas
 nuevas
@@ -131410,6 +131413,7 @@ Orange
 Organiza
 Organizamos
 Organizando
+Origen
 Auto
 Annotator
 Autocompletado
@@ -149749,6 +149753,7 @@ multicanal
 multifase
 mostrarlos
 mezclados
+modelado
 YAML
 Ya
 You
@@ -175412,6 +175417,7 @@ Matriculaci
 Multicanal
 Markoviana
 Mermaid
+Modelado
 Lectura
 LaTeX
 Linter
