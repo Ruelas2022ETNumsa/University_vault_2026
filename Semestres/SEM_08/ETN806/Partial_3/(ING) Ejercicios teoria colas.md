@@ -5,13 +5,6 @@
 1. **Cliente** $\longrightarrow$ Población finita / Población infinita
 2. **Arribos** $\longrightarrow$ Distribución del cliente / Probabilidad de Poisson / Distribución Exponencial
 3. **Tiempos de servicio** $\longrightarrow$ 1 servidor o múltiples servidores **FIFO** $\longrightarrow$ First in, First out (Primero en entrar - Primero en salir)
-```mermaid
-flowchart LR
-    A --o B
-```
-
-
-
 
 ---
 

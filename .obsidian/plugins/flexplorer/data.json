@@ -9,7 +9,6 @@
         "Untitled.md",
         "notebooklm oldesdd.md",
         "colas_guide_s.md",
-        "(ING) Ejercicios teo colas.md",
         "notebooklm new.md",
         "notebooklm old.md",
         "tables no terminado.md",
@@ -1114,6 +1113,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "(ING) Ejercicios teoria colas.md",
         "(ING) Ejercicios Markov.md",
         "(ING)TEORÍA DE COLAS.md",
         "(ING) ANÁLISIS DE MARKOV.md"
@@ -2741,10 +2741,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "(ING) Ejercicios teo colas.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "colas_guide_s.md": {
       "isPinned": false,
       "isHidden": false
@@ -2758,6 +2754,10 @@
       "isHidden": false
     },
     "notebooklm oldesdd.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08/ETN806/Partial_3/(ING) Ejercicios teoria colas.md": {
       "isPinned": false,
       "isHidden": false
     }

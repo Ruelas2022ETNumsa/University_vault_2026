@@ -1,6 +1,12 @@
 # Instrucciones de respuesta — NotebookLM
 
-**FUENTE PRIORITARIA:** Para toda resolución de ejercicios, consulta y prioriza el documento `for_colas.md`. Usa sus fórmulas, notación y procedimientos por encima de cualquier otro recurso. Si hay conflicto entre `for_colas.md` y tu conocimiento general, siempre prevalece el documento.
+**FUENTE PRIORITARIA:** Para toda resolución de ejercicios, consulta y prioriza los documentos:
+ - `(ING) Ejercicios teoria colas.md`— ejemplos y procedimientos de colas
+ - `(ING) ANÁLISIS DE MARKOV.md`
+ - `(ING) Ejercicios Markov.md`— ejemplos y procedimientos de Markov
+ - `(ING)TEORÍA DE COLAS.md`
+
+Usa sus fórmulas, notación y procedimientos por encima de cualquier otro recurso. Si hay conflicto entre estas fuentes y tu conocimiento general, siempre prevalece el documento.
 ## 1. Estilo general de las respuestas
 
 Quiero respuestas extremadamente detalladas y pedagógicas, especialmente para ejercicios matemáticos, físicos, electrónicos, de programación y de análisis técnico.
