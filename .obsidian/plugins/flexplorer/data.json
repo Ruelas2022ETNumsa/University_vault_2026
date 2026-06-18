@@ -14,7 +14,7 @@
         "notebooklm old.md",
         "tables no terminado.md",
         "book 806.md",
-        "practica 3 806.md",
+        "ETN806-practica_3.md",
         "in_work",
         "Borrar",
         "README.md",
@@ -2606,10 +2606,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "practica 3 806.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "book 806.md": {
       "isPinned": false,
       "isHidden": false
@@ -2763,6 +2759,10 @@
       "isHidden": false
     },
     "Untitled 2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "ETN806-practica_3.md": {
       "isPinned": false,
       "isHidden": false
     }

@@ -412,9 +412,6 @@ Comprobamos que la matriz sea estocástica (suma de filas igual a la unidad):
 
 El problema ha sido modelado satisfactoriamente como una cadena de Markov homogénea de tres estados, donde la matriz $P$ define completamente el comportamiento del agente comercial a corto y largo plazo.
 
-
-
-
 ---
 ---
 
@@ -503,7 +500,7 @@ Por tanto el sistema tiene solución estacionaria.
 - **Fórmula:** $W_s = \dfrac{1}{\mu - \lambda}$
 - **Sustitución:** $W_s = \frac{1}{20 - 15}$
 - **Operación:** $W_s = \frac{1}{5} = 0.2 \text{ horas}$
-- **Conversión a minutos:** $0.2 \times 60 \text{ min} = \mathbf{12 \text{ minutos}}$.
+- **Conversión a minutos:** $0.2 \times 60 \text{ min} = \mathbf{12 \text{ minutos}}$. Desde que llega hasta que termina su atención, un cliente permanece en promedio 12 minutos en el sistema.
 
 ---
 
@@ -596,6 +593,23 @@ S2 --> O
 - **Operación:** $W_q = 0.2052 - 0.125 = 0.0802 \text{ horas}$
 - **Conversión a minutos:** $0.0802 \times 60 \text{ min} = \mathbf{4.81 \text{ minutos}}$. El tiempo promedio de espera en fila es de **4 minutos** y **47 segundos**.
 
+#### Verificación
+
+##### Relación de Little para la cola
+
+$L_q=\lambda W_q$ 
+​ $10(0.0802)=0.802$
+
+✓ Correcto
+
+---
+
+##### Relación de Little para el sistema
+
+$L=\lambda W$
+$10(0.2052)=2.052$
+✓ Correcto
+
 ---
 
 ## Ejercicio 7.
@@ -626,6 +640,16 @@ L([Llegadas]) --> Q[Cola] --> S((Servidor)) --> O([Salidas])
 - **Tasa promedio de llegadas ($\lambda$):** $\lambda = 9 \text{ autos/hora}$.
 - **Tasa promedio de servicio ($\mu$):** $1$ auto cada $5$ minutos. Para estandarizar las unidades a horas: $$\mu = \frac{60 \text{ min}}{5 \text{ min/auto}} = 12 \text{ autos/hora}$$
 - **Modelo aplicado:** **M/D/1** (Llegadas Poisson, Servicio Determinado, 1 Servidor).
+
+##### Verificación de estabilidad
+
+Antes de utilizar cualquier fórmula debemos verificar:
+
+$\rho=\dfrac{\lambda}{\mu}$
+$\rho=\frac{9}{12}$
+$\rho=0.75$
+Como:
+$\rho<1$ el sistema es estable.
 
 #### 2. Cálculos Paso a Paso
 
@@ -660,6 +684,21 @@ L([Llegadas]) --> Q[Cola] --> S((Servidor)) --> O([Salidas])
 - **Operación:** $W_s = 0.125 + 0.0833 = \mathbf{0.2083 \text{ horas}}$.
 - **Conversión a minutos:** $0.2083 \times 60 \text{ min} = \mathbf{12.5 \text{ minutos}}$.El tiempo total desde que el auto llega hasta que se va limpio es de 12 minutos y 30 segundos.
 
----
+
+##### Verificación mediante la Ley de Little
+
+###### Para la cola
+
+$L_q=\lambda W_q$
+$L_q=9(0.125)$
+$L_q=1.125$
+✓ Correcto
 
 ---
+
+###### Para el sistema
+
+$L=\lambda W$
+$L=9(0.20833)$
+$L=1.875$
+✓ Correcto
