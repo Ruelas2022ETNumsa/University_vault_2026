@@ -1,3 +1,90 @@
+555
+
+
+Este ejercicio se identifica como un problema de **Teoría de Colas** debido a que describe un sistema de línea de espera con llegadas aleatorias de clientes y un tiempo de servicio determinado para ser atendidos por un servidor.
+
+### Estructura del Sistema de Colas
+
+De acuerdo con la descripción, se trata de un sistema de **canal único y fase única**, donde los clientes llegan a una fila, son atendidos por un solo cajero y luego abandonan el sistema.
+
+```mermaid
+flowchart LR
+L([Llegadas]) --> Q[Cola] --> S((Servidor)) --> O([Salidas])
+```
+
+---
+
+### Resolución del Ejercicio
+
+#### 1. Identificación de los datos y modelo
+
+- **Patrón de llegadas:** Poisson.
+- **Patrón de servicios:** Exponencial.
+- **Número de servidores ($s$):** 1 (canal único).
+- **Modelo:** **Modelo A (M/M/1)**.
+
+**Parámetros del sistema:**
+
+- **Tasa promedio de llegadas ($\lambda$):** $15$ clientes por hora.
+- **Tasa promedio de servicio ($\mu$):** Se atiende 1 cliente cada 3 minutos. Debemos convertir esto a la misma unidad de tiempo (clientes por hora): $$\mu = \frac{60 \text{ min}}{3 \text{ min/cliente}} = 20 \text{ clientes por hora}.$$
+
+#### 2. Cálculos Paso a Paso
+
+**a) La utilización promedio del cajero ($\rho$)** Esta fórmula mide la fracción del tiempo que el servidor está ocupado.
+
+- **Fórmula:** $\rho = \frac{\lambda}{\mu}$
+- **Sustitución:** $\rho = \frac{15}{20}$
+- **Operación:** $\rho = 0.75$
+- **Resultado:** El cajero está ocupado el **$75%$** del tiempo.
+
+**b) El número promedio de clientes en la línea de espera ($L_q$)** Representa la cantidad de unidades que están físicamente en la fila esperando ser atendidas.
+
+- **Fórmula:** $L_q = \frac{\lambda^2}{\mu(\mu - \lambda)}$
+- **Sustitución:** $L_q = \frac{15^2}{20(20 - 15)}$
+- **Operaciones parciales:**
+    - $15^2 = 225$
+    - $20(5) = 100$
+- **Resultado:** $L_q = \frac{225}{100} = \mathbf{2.25 \text{ clientes}}$.
+
+**c) El número promedio de clientes en el sistema ($L_s$)** Es el número total de clientes en la instalación, incluyendo los que esperan y el que está siendo atendido.
+
+- **Fórmula:** $L_s = \frac{\lambda}{\mu - \lambda}$
+- **Sustitución:** $L_s = \frac{15}{20 - 15}$
+- **Operación:** $L_s = \frac{15}{5}$
+- **Resultado:** $L_s = \mathbf{3 \text{ clientes}}$.
+
+**d) El tiempo promedio de espera en la fila ($W_q$)** Es el tiempo que un cliente pasa exclusivamente esperando antes de que comience su servicio.
+
+- **Fórmula:** $W_q = \frac{\lambda}{\mu(\mu - \lambda)}$
+- **Sustitución:** $W_q = \frac{15}{20(20 - 15)}$
+- **Operación:** $W_q = \frac{15}{100} = 0.15 \text{ horas}$
+- **Conversión a minutos:** $0.15 \times 60 \text{ min} = \mathbf{9 \text{ minutos}}$.
+
+**e) El tiempo promedio de espera en el sistema ($W_s$)** Es el tiempo total desde que el cliente llega hasta que termina de ser atendido (espera + servicio).
+
+- **Fórmula:** $W_s = \frac{1}{\mu - \lambda}$
+- **Sustitución:** $W_s = \frac{1}{20 - 15}$
+- **Operación:** $W_s = \frac{1}{5} = 0.2 \text{ horas}$
+- **Conversión a minutos:** $0.2 \times 60 \text{ min} = \mathbf{12 \text{ minutos}}$.
+
+---
+
+### Verificación de los resultados
+
+Podemos verificar la relación de Little ($L = \lambda W$):
+
+- $L_s = \lambda \times W_s \rightarrow 3 = 15 \times 0.2 \rightarrow 3 = 3$ (Correcto).
+- $L_q = \lambda \times W_q \rightarrow 2.25 = 15 \times 0.15 \rightarrow 2.25 = 2.25$ (Correcto).
+- $W_s = W_q + (1/\mu) \rightarrow 12 \text{ min} = 9 \text{ min} + 3 \text{ min} \rightarrow 12 = 12$ (Correcto).
+
+
+
+
+---
+---
+
+4444
+
 Este ejercicio se identifica como una **Cadena de Markov en tiempo discreto** porque el sistema evoluciona a través de un número finito de estados (las ciudades A, B y C), en intervalos de tiempo regulares (un día), y la probabilidad de desplazarse a la siguiente ciudad depende únicamente de la ciudad donde se encuentra el agente en el día actual.
 
 ### Diagrama de la Cadena de Markov
@@ -94,6 +181,8 @@ El problema ha sido modelado satisfactoriamente como una cadena de Markov homog�
 
 ---
 ---
+
+33333
 
 Este ejercicio se identifica como una **Cadena de Markov en tiempo discreto** porque el sistema evoluciona a través de un número finito de estados (las posibles composiciones de las bolas en la urna) y la probabilidad de transición al siguiente estado depende únicamente de la composición actual y de las reglas fijas establecidas (propiedad de Markov).
 

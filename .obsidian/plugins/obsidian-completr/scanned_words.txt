@@ -30724,6 +30724,7 @@ dividimos
 despeje
 deducida
 desplazarse
+determinado
 Vault
 Verificar
 Variables
@@ -67460,6 +67461,8 @@ atiende
 atendiendo
 aguardando
 analizamos
+abandonan
+atendidas
 related
 recomendados
 ribbon
@@ -181514,6 +181517,7 @@ LfHHj
 LLEGADAS
 Llegadas
 Llegada
+Little
 links
 las
 listar
