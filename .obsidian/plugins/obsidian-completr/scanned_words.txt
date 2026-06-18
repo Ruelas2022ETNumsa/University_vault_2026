@@ -25494,6 +25494,7 @@ Permanecer
 Parciales
 PRIORITARIA
 Presenta
+Proporci
 del
 date
 de
@@ -167915,6 +167916,7 @@ encuentran
 expresados
 estabilidad
 estandarizar
+estacionaria
 Motor
 Media
 Mantiene
@@ -175431,6 +175433,7 @@ Markoviana
 Mermaid
 Modelado
 Medida
+Moneda
 Lectura
 LaTeX
 Linter
@@ -194610,6 +194613,7 @@ identificaci
 identifi
 iterar
 inactivos
+irrelevante
 Dependencia
 Dropbox
 Dataview
@@ -200702,6 +200706,7 @@ Disciplina
 Directa
 Determin
 Determinado
+DESDE
 Remotely
 Raz
 Revisa
