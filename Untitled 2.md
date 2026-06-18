@@ -1,29 +1,60 @@
-Este ejercicio se identifica como una **Cadena de Markov en tiempo discreto**. Presenta un número finito de estados (categorías de fumadores), probabilidades de transición constantes de un mes al siguiente y la propiedad de que la situación futura depende únicamente del estado actual.
+Este ejercicio se identifica como una **Cadena de Markov en tiempo discreto** porque el sistema evoluciona a través de un número finito de estados (las posibles composiciones de las bolas en la urna) y la probabilidad de transición al siguiente estado depende únicamente de la composición actual y de las reglas fijas establecidas (propiedad de Markov).
+
+### 1. Identificación de Estados y Datos
+
+Existen dos bolas en la urna. Denotaremos los posibles colores como:
+
+- **U:** Sin pintar (Unpainted).
+- **R:** Roja (Red).
+- **N:** Negra (Black/Negra).
+
+Los estados del sistema se definen por la combinación de colores de las dos bolas (el orden no importa):
+
+- **Estado 0 ($S_0$):** ${U, U}$ — Dos bolas sin pintar.
+- **Estado 1 ($S_1$):** ${R, U}$ — Una bola roja y una sin pintar.
+- **Estado 2 ($S_2$):** ${N, U}$ — Una bola negra y una sin pintar.
+- **Estado 3 ($S_3$):** ${R, R}$ — Dos bolas rojas.
+- **Estado 4 ($S_4$):** ${N, N}$ — Dos bolas negras.
+- **Estado 5 ($S_5$):** ${R, N}$ — Una bola roja y una negra.
+
+---
 
 ### Diagrama de la Cadena de Markov
 
 ```tikz
 \begin{document}
 \begin{tikzpicture}
-% Definición de estados (N=3, posicionamiento circular)
-\node[draw,circle,thick,color=orange] (NF) at (90:4) {NF};
-\node[draw,circle,thick,color=pink] (F1) at (210:4) {F1};
-\node[draw,circle,thick,color=lime] (F2) at (330:4) {F2};
+% Definición de estados (N=6, posicionamiento circular)
+\node[draw,circle,thick,color=orange] (S0) at (90:4) {$S_0$};
+\node[draw,circle,thick,color=pink] (S1) at (30:4) {$S_1$};
+\node[draw,circle,thick,color=lime] (S2) at (330:4) {$S_2$};
+\node[draw,circle,thick,color=purple] (S3) at (270:4) {$S_3$};
+\node[draw,circle,thick,color=teal] (S4) at (210:4) {$S_4$};
+\node[draw,circle,thick,color=magenta] (S5) at (150:4) {$S_5$};
 
-% Bucles (Permanencia en el estado)
-\draw[->,ultra thick,orange] (NF) .. controls (70:6) and (110:6) .. node[above] {$0.93$} (NF);
-\draw[->,ultra thick,pink] (F1) .. controls (190:6) and (230:6) .. node[left] {$0.80$} (F1);
-\draw[->,ultra thick,lime] (F2) .. controls (310:6) and (350:6) .. node[right] {$0.85$} (F2);
+% Transiciones desde S0 (0.5 a S1, 0.5 a S2)
+\draw[->,very thick,orange] (S0) to[bend left=15] node[pos=0.3, right] {$0.5$} (S1);
+\draw[->,very thick,orange] (S0) to[bend right=15] node[pos=0.3, left] {$0.5$} (S2);
 
-% Flechas de transición
-\draw[->,very thick,orange] (NF) to[bend left=20] node[pos=0.2, right] {$0.05$} (F1);
-\draw[->,very thick,orange] (NF) to[bend right=20] node[pos=0.2, left] {$0.02$} (F2);
+% Transiciones desde S1 (0.5 a S2, 0.25 a S3, 0.25 a S5)
+\draw[->,very thick,pink] (S1) to[bend left=15] node[pos=0.2, right] {$0.5$} (S2);
+\draw[->,very thick,pink] (S1) to[bend left=15] node[pos=0.2, right] {$0.25$} (S3);
+\draw[->,very thick,pink] (S1) to[bend right=15] node[pos=0.2, above] {$0.25$} (S5);
 
-\draw[->,very thick,pink] (F1) to[bend left=20] node[pos=0.2, left] {$0.10$} (NF);
-\draw[->,very thick,pink] (F1) to[bend left=20] node[pos=0.2, above] {$0.10$} (F2);
+% Transiciones desde S2 (0.5 a S1, 0.25 a S4, 0.25 a S5)
+\draw[->,very thick,lime] (S2) to[bend left=15] node[pos=0.2, left] {$0.5$} (S1);
+\draw[->,very thick,lime] (S2) to[bend left=15] node[pos=0.2, left] {$0.25$} (S4);
+\draw[->,very thick,lime] (S2) to[bend left=15] node[pos=0.2, below] {$0.25$} (S5);
 
-\draw[->,very thick,lime] (F2) to[bend right=20] node[pos=0.2, right] {$0.05$} (NF);
-\draw[->,very thick,lime] (F2) to[bend left=20] node[pos=0.2, below] {$0.10$} (F1);
+% Transiciones desde S3 (1.0 a S5)
+\draw[->,very thick,purple] (S3) to[bend right=15] node[pos=0.2, left] {$1.0$} (S5);
+
+% Transiciones desde S4 (1.0 a S5)
+\draw[->,very thick,teal] (S4) to[bend left=15] node[pos=0.2, left] {$1.0$} (S5);
+
+% Transiciones desde S5 (0.5 a S3, 0.5 a S4)
+\draw[->,very thick,magenta] (S5) to[bend right=15] node[pos=0.2, left] {$0.5$} (S3);
+\draw[->,very thick,magenta] (S5) to[bend left=15] node[pos=0.2, left] {$0.5$} (S4);
 
 \end{tikzpicture}
 \end{document}
@@ -31,57 +62,55 @@ Este ejercicio se identifica como una **Cadena de Markov en tiempo discreto**. P
 
 ---
 
-### Resolución del Ejercicio
+### 2. Análisis de Probabilidades de Transición ($P_{ij}$)
 
-#### 1. Identificación de datos y estados
+Para cada estado, analizamos qué sucede al seleccionar una bola y lanzar la moneda ($H$: cara, $T$: cruz):
 
-- **Población total ($N$):** $10,000$ habitantes.
-- **Estados del sistema:**
-    - **Estado 1 ($NF$):** No fumadores.
-    - **Estado 2 ($F1$):** Fuman un paquete o menos diariamente.
-    - **Estado 3 ($F2$):** Fuman más de un paquete diariamente.
-- **Distribución inicial (Mes 0):**
-    - $\pi_{NF}(0) = 5,000 / 10,000 = 0.50$.
-    - $\pi_{F1}(0) = 2,500 / 10,000 = 0.25$.
-    - $\pi_{F2}(0) = 2,500 / 10,000 = 0.25$.
-    - Vector inicial: $\pi(0) = [0.50, \quad 0.25, \quad 0.25]$.
-
-#### 2. Construcción de la matriz de transición ($P$)
-
-Las probabilidades se organizan por renglones, asegurando que la suma de cada uno sea igual a 1 (probabilidad total).
-
-- **Renglón 1 (Desde NF):** Hacia F1 es $0.05$; hacia F2 es $0.02$; permanece en NF: $1 - (0.05 + 0.02) = 0.93$.
-- **Renglón 2 (Desde F1):** Hacia NF es $0.10$; hacia F2 es $0.10$; permanece en F1: $1 - (0.10 + 0.10) = 0.80$.
-- **Renglón 3 (Desde F2):** Hacia NF es $0.05$; hacia F1 es $0.10$; permanece en F2: $1 - (0.05 + 0.10) = 0.85$.
-
-La matriz de transición resultante es: $$P = \begin{bmatrix} 0.93 & 0.05 & 0.02 \ 0.10 & 0.80 & 0.10 \ 0.05 & 0.10 & 0.85 \end{bmatrix}$$
-
-#### 3. Proyección para el próximo mes (Mes 1)
-
-Se utiliza la fórmula $\pi(n+1) = \pi(n) \cdot P$ para calcular la distribución del siguiente periodo.
-
-**Cálculo de $\pi_{NF}(1)$ (Individuos que no fuman):** $\pi_{NF}(1) = (0.50 \times 0.93) + (0.25 \times 0.10) + (0.25 \times 0.05)$. $\pi_{NF}(1) = 0.465 + 0.025 + 0.0125 = \mathbf{0.5025}$.
-
-**Cálculo de $\pi_{F1}(1)$ (Fuman $\le 1$ paquete):** $\pi_{F1}(1) = (0.50 \times 0.05) + (0.25 \times 0.80) + (0.25 \times 0.10)$. $\pi_{F1}(1) = 0.025 + 0.20 + 0.025 = \mathbf{0.25}$.
-
-**Cálculo de $\pi_{F2}(1)$ (Fuman $> 1$ paquete):** $\pi_{F2}(1) = (0.50 \times 0.02) + (0.25 \times 0.10) + (0.25 \times 0.85)$. $\pi_{F2}(1) = 0.01 + 0.025 + 0.2125 = \mathbf{0.2475}$.
-
-#### 4. Conversión a número de individuos
-
-Multiplicamos las probabilidades obtenidas por la población total ($10,000$ habitantes).
-
-- **No fumadores:** $0.5025 \times 10,000 = \mathbf{5,025}$.
-- **Fumadores $\le 1$ paquete:** $0.25 \times 10,000 = \mathbf{2,500}$.
-- **Fumadores $> 1$ paquete:** $0.2475 \times 10,000 = \mathbf{2,475}$.
+- **Desde $S_0$ ${U, U}$:**
+    
+    - Se elige una bola $U$ (probabilidad $1.0$).
+    - Si moneda es $H$ (prob $0.5$): la bola se pinta de Rojo $\rightarrow {R, U}$ ($S_1$).
+    - Si moneda es $T$ (prob $0.5$): la bola se pinta de Negro $\rightarrow {N, U}$ ($S_2$).
+    - $P_{01} = 0.5$, $P_{02} = 0.5$.
+- **Desde $S_1$ ${R, U}$:**
+    
+    - Elegir bola $U$ (prob $0.5$): Si moneda es $H$ ($0.5$), pasa a ${R, R}$ ($S_3$); si es $T$ ($0.5$), pasa a ${R, N}$ ($S_5$).
+    - Elegir bola $R$ (prob $0.5$): Cambia a Negro independientemente de la moneda $\rightarrow {N, U}$ ($S_2$).
+    - $P_{13} = 0.5 \times 0.5 = 0.25$; $P_{15} = 0.5 \times 0.5 = 0.25$; $P_{12} = 0.5$.
+- **Desde $S_2$ ${N, U}$:**
+    
+    - Elegir bola $U$ (prob $0.5$): Si moneda es $H$ ($0.5$), pasa a ${N, R}$ ($S_5$); si es $T$ ($0.5$), pasa a ${N, N}$ ($S_4$).
+    - Elegir bola $N$ (prob $0.5$): Cambia a Rojo independientemente de la moneda $\rightarrow {R, U}$ ($S_1$).
+    - $P_{25} = 0.5 \times 0.5 = 0.25$; $P_{24} = 0.5 \times 0.5 = 0.25$; $P_{21} = 0.5$.
+- **Desde $S_3$ ${R, R}$:**
+    
+    - Cualquier bola elegida es $R$ (prob $1.0$). Cambia a Negro $\rightarrow {R, N}$ ($S_5$).
+    - $P_{35} = 1.0$.
+- **Desde $S_4$ ${N, N}$:**
+    
+    - Cualquier bola elegida es $N$ (prob $1.0$). Cambia a Rojo $\rightarrow {N, R}$ ($S_5$).
+    - $P_{45} = 1.0$.
+- **Desde $S_5$ ${R, N}$:**
+    
+    - Elegir bola $R$ (prob $0.5$): Cambia a Negro $\rightarrow {N, N}$ ($S_4$).
+    - Elegir bola $N$ (prob $0.5$): Cambia a Rojo $\rightarrow {R, R}$ ($S_3$).
+    - $P_{54} = 0.5$, $P_{53} = 0.5$.
 
 ---
 
-### Resultado Final
+### 3. Matriz de Probabilidades de Transición ($P$)
 
-El próximo mes la población se distribuirá de la siguiente manera:
+La matriz se construye colocando las probabilidades $P_{ij}$ donde la fila representa el estado actual y la columna el estado futuro.
 
-- **5,025** individuos que no fuman.
-- **2,500** individuos que fuman un paquete diario o menos.
-- **2,475** individuos que fuman más de un paquete diario.
+$$P = \begin{bmatrix} 0 & 0.5 & 0.5 & 0 & 0 & 0 \ 0 & 0 & 0.5 & 0.25 & 0 & 0.25 \ 0 & 0.5 & 0 & 0 & 0.25 & 0.25 \ 0 & 0 & 0 & 0 & 0 & 1 \ 0 & 0 & 0 & 0 & 0 & 1 \ 0 & 0 & 0 & 0.5 & 0.5 & 0 \end{bmatrix}$$
 
-**Verificación:** La suma total es $5025 + 2500 + 2475 = 10,000$ habitantes, lo que confirma que el cálculo es correcto.
+### 4. Verificación
+
+Comprobamos que la suma de cada renglón sea igual a 1 para asegurar que es una matriz estocástica válida:
+
+- Fila 0: $0.5 + 0.5 = 1.0$ (Correcto)
+- Fila 1: $0.5 + 0.25 + 0.25 = 1.0$ (Correcto)
+- Fila 2: $0.5 + 0.25 + 0.25 = 1.0$ (Correcto)
+- Fila 3: $1.0 = 1.0$ (Correcto)
+- Fila 4: $1.0 = 1.0$ (Correcto)
+- Fila 5: $0.5 + 0.5 = 1.0$ (Correcto)

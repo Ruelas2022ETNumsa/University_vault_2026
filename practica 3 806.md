@@ -140,85 +140,60 @@ Para los que fuman un paquete, o menos, hay un 10% de probabilidad de que dejen 
 \end{document}
 ```
 
-Este problema se clasifica como una **Cadena de Markov de tiempo discreto**. Se identifica este patrón porque la población se distribuye en categorías exhaustivas y excluyentes (estados), las probabilidades de cambio entre estas categorías son constantes (estacionarias) y el estado futuro depende únicamente del estado actual (propiedad de Markov).
+### Resolución del Ejercicio
 
-### 1. Identificación de los datos del problema
+#### 1. Identificación de datos y estados
 
 - **Población total ($N$):** $10,000$ habitantes.
 - **Estados del sistema:**
-    - **Estado 1 ($NF$):** Habitantes que no fuman.
-    - **Estado 2 ($F1$):** Habitantes que fuman un paquete o menos diariamente.
-    - **Estado 3 ($F2$):** Habitantes que fuman más de un paquete diariamente.
-- **Distribución Inicial (Mes 0):**
-    - $5,000$ no fumadores.
-    - $2,500$ fuman $\le 1$ paquete.
-    - $2,500$ fuman $> 1$ paquete.
+    - **Estado 1 ($NF$):** No fumadores.
+    - **Estado 2 ($F1$):** Fuman un paquete o menos diariamente.
+    - **Estado 3 ($F2$):** Fuman más de un paquete diariamente.
+- **Distribución inicial (Mes 0):**
+    - $\pi_{NF}(0) = 5,000 / 10,000 = 0.50$.
+    - $\pi_{F1}(0) = 2,500 / 10,000 = 0.25$.
+    - $\pi_{F2}(0) = 2,500 / 10,000 = 0.25$.
+    - Vector inicial: $\pi(0) = [0.50, \quad 0.25, \quad 0.25]$.
 
-### 2. Explicación de lo que se pide
+#### 2. Construcción de la matriz de transición ($P$)
 
-Se solicita determinar el número exacto de individuos que pertenecerán a cada una de las tres clases de fumadores transcurrido un periodo de tiempo (el próximo mes).
+Las probabilidades se organizan por renglones, asegurando que la suma de cada uno sea igual a 1 (probabilidad total).
 
-### 3. Fórmulas utilizadas y razonamiento
+- **Renglón 1 (Desde NF):** Hacia F1 es $0.05$; hacia F2 es $0.02$; permanece en NF: $1 - (0.05 + 0.02) = 0.93$.
+- **Renglón 2 (Desde F1):** Hacia NF es $0.10$; hacia F2 es $0.10$; permanece en F1: $1 - (0.10 + 0.10) = 0.80$.
+- **Renglón 3 (Desde F2):** Hacia NF es $0.05$; hacia F1 es $0.10$; permanece en F2: $1 - (0.05 + 0.10) = 0.85$.
 
-Para proyectar la evolución de la población, utilizaremos el álgebra matricial de Markov:
+La matriz de transición resultante es: $$P = \begin{bmatrix} 0.93 & 0.05 & 0.02 \ 0.10 & 0.80 & 0.10 \ 0.05 & 0.10 & 0.85 \end{bmatrix}$$
 
-1. **Matriz de Probabilidades de Transición ($P$):** Organiza las probabilidades de cambio entre estados. La suma de cada renglón debe ser exactamente $1$ (probabilidad total de salida).
-2. **Vector de Estado Inicial ($\pi(0)$):** Representa la distribución porcentual de la población en el tiempo inicial.
-3. **Relación Recurrente de Markov:** Para hallar la distribución en el tiempo $n+1$, multiplicamos el vector de estado actual por la matriz de transición: $$\pi(n+1) = \pi(n) \cdot P$$.
+#### 3. Proyección para el próximo mes (Mes 1)
 
-### 4. Construcción de la Matriz de Transición ($P$)
+Se utiliza la fórmula $\pi(n+1) = \pi(n) \cdot P$ para calcular la distribución del siguiente periodo.
 
-Calculamos las probabilidades de permanencia (bucles) restando las probabilidades de salida de $1$:
+**Cálculo de $\pi_{NF}(1)$ (Individuos que no fuman):** $\pi_{NF}(1) = (0.50 \times 0.93) + (0.25 \times 0.10) + (0.25 \times 0.05)$. $\pi_{NF}(1) = 0.465 + 0.025 + 0.0125 = \mathbf{0.5025}$.
 
-- **Renglón 1 (Desde $NF$):**
-    - Hacia $F1$ ($P_{12}$): $0.05$.
-    - Hacia $F2$ ($P_{13}$): $0.02$.
-    - Permanece $NF$ ($P_{11}$): $1 - (0.05 + 0.02) = 0.93$.
-- **Renglón 2 (Desde $F1$):**
-    - Hacia $NF$ ($P_{21}$): $0.10$.
-    - Hacia $F2$ ($P_{23}$): $0.10$.
-    - Permanece $F1$ ($P_{22}$): $1 - (0.10 + 0.10) = 0.80$.
-- **Renglón 3 (Desde $F2$):**
-    - Hacia $NF$ ($P_{31}$): $0.05$.
-    - Hacia $F1$ ($P_{32}$): $0.10$.
-    - Permanece $F2$ ($P_{33}$): $1 - (0.05 + 0.10) = 0.85$.
+**Cálculo de $\pi_{F1}(1)$ (Fuman $\le 1$ paquete):** $\pi_{F1}(1) = (0.50 \times 0.05) + (0.25 \times 0.80) + (0.25 \times 0.10)$. $\pi_{F1}(1) = 0.025 + 0.20 + 0.025 = \mathbf{0.25}$.
 
-La matriz de transición resultante es: $$P = \begin{bmatrix} 0.93 & 0.05 & 0.02 \\ 0.10 & 0.80 & 0.10 \\ 0.05 & 0.10 & 0.85 \end{bmatrix}$$.
+**Cálculo de $\pi_{F2}(1)$ (Fuman $> 1$ paquete):** $\pi_{F2}(1) = (0.50 \times 0.02) + (0.25 \times 0.10) + (0.25 \times 0.85)$. $\pi_{F2}(1) = 0.01 + 0.025 + 0.2125 = \mathbf{0.2475}$.
 
-### 5. Definición del Vector de Estado Inicial ($\pi(0)$)
+#### 4. Conversión a número de individuos
 
-Convertimos las cifras de población inicial en probabilidades dividiendo por el total ($10,000$):
+Multiplicamos las probabilidades obtenidas por la población total ($10,000$ habitantes).
 
-- $\pi_{NF}(0) = \frac{5000}{10000} = 0.50$
-- $\pi_{F1}(0) = \frac{2500}{10000} = 0.25$
-- $\pi_{F2}(0) = \frac{2500}{10000} = 0.25$
+- **No fumadores:** $0.5025 \times 10,000 = \mathbf{5,025}$.
+- **Fumadores $\le 1$ paquete:** $0.25 \times 10,000 = \mathbf{2,500}$.
+- **Fumadores $> 1$ paquete:** $0.2475 \times 10,000 = \mathbf{2,475}$.
 
-Vector inicial: $$\pi(0) = [0.50, \quad 0.25, \quad 0.25]$$.
+---
 
-### 6. Desarrollo de los cálculos paso a paso
+### Resultado Final
 
-Multiplicamos el vector inicial por la matriz de transición para hallar $\pi(1)$: $$\pi(1) = [0.50, \quad 0.25, \quad 0.25] \begin{bmatrix} 0.93 & 0.05 & 0.02 \\ 0.10 & 0.80 & 0.10 \\ 0.05 & 0.10 & 0.85 \end{bmatrix}$$
+El próximo mes la población se distribuirá de la siguiente manera:
 
-**Cálculo para No Fumadores ($\pi_{NF}(1)$):** $$\pi_{NF}(1) = (0.50 \times 0.93) + (0.25 \times 0.10) + (0.25 \times 0.05)$$ $$\pi_{NF}(1) = 0.465 + 0.025 + 0.0125 = \mathbf{0.5025}$$.
+- **5,025** individuos que no fuman.
+- **2,500** individuos que fuman un paquete diario o menos.
+- **2,475** individuos que fuman más de un paquete diario.
 
-**Cálculo para Fumadores $\le 1$ paquete ($\pi_{F1}(1)$):** $$\pi_{F1}(1) = (0.50 \times 0.05) + (0.25 \times 0.80) + (0.25 \times 0.10)$$ $$\pi_{F1}(1) = 0.025 + 0.20 + 0.025 = \mathbf{0.25}$$.
-
-**Cálculo para Fumadores $> 1$ paquete ($\pi_{F2}(1)$):** $$\pi_{F2}(1) = (0.50 \times 0.02) + (0.25 \times 0.10) + (0.25 \times 0.85)$$ $$\pi_{F2}(1) = 0.01 + 0.025 + 0.2125 = \mathbf{0.2475}$$.
-
-### 7. Conversión a número de individuos
-
-Multiplicamos las probabilidades obtenidas por la población total ($10,000$):
-
-- **No fumadores:** $0.5025 \times 10,000 = \mathbf{5,025}$ sujetos.
-- **Fumadores $\le 1$ paquete:** $0.25 \times 10,000 = \mathbf{2,500}$ sujetos.
-- **Fumadores $> 1$ paquete:** $0.2475 \times 10,000 = \mathbf{2,475}$ sujetos.
-
-### 8. Resultado final y Verificación
-
-El próximo mes habrá **5,025 no fumadores**, **2,500 fumadores de un paquete o menos** y **2,475 fumadores de más de un paquete**.
-
-**Verificación:** La suma total de los individuos debe coincidir con la población original: $5025 + 2500 + 2475 = 10,000$ habitantes. El cálculo es correcto.
-
+**Verificación:** La suma total es $5025 + 2500 + 2475 = 10,000$ habitantes, lo que confirma que el cálculo es correcto.
 
 ---
 
