@@ -9,7 +9,7 @@ De acuerdo con la descripción, se trata de un sistema de **canal único y fase 
 
 ```mermaid
 flowchart LR
-L([Llegadas]) --> Q[Cola] --> S((Servidor)) --> O([Salidas])
+L([Llegadas 15 clientes/hora]) --> Q[Cola] --> S((Servidor cajero 20 )) --> O([Salidas])
 ```
 
 ---
