@@ -331,4 +331,88 @@ Suponga un restaurante de comidas rápidas al cual llegan en promedio 100 client
 
 
 
+Para resolver este ejercicio de teoría de colas, seguiremos el procedimiento pedagógico detallado en las fuentes prioritarias, identificando primero los datos, la estructura del sistema y aplicando las fórmulas del modelo correspondiente.
 
+### 1. Identificación de Datos y Modelo
+
+A partir del enunciado, extraemos los siguientes parámetros:
+
+- **Tasa promedio de llegadas ($\lambda$):** $100$ clientes/hora.
+- **Tasa promedio de servicio ($\mu$):** $150$ clientes/hora.
+- **Tiempo promedio de espera en la cola ($W_q$):** $2$ minutos.
+    - _Conversión a horas:_ $W_q = \frac{2 \text{ min}}{60 \text{ min/hora}} = \mathbf{\frac{1}{30} \text{ horas}} \approx 0.0333 \text{ h}$.
+- **Número de servidores ($s$):** $1$ (se asume canal único al no mencionar múltiples cajeros).
+- **Modelo de colas:** Dado que se proporcionan tasas promedio y se comporta como un sistema de espera estándar, aplicamos el **Modelo A: M/M/1** (Llegadas Poisson, Servicio Exponencial, 1 Servidor).
+
+#### Diagrama del Sistema (Canal Único, Fase Única)
+
+Según la guía de dibujo para líneas de espera:
+
+```mermaid
+flowchart LR
+    L([Llegadas]) --> Q[Cola única]
+    Q --> S((Servidor S1))
+    S --> O([Salida])
+```
+
+---
+
+### 2. Verificación de Estabilidad
+
+Antes de realizar los cálculos, verificamos que la tasa de servicio sea mayor que la de llegada ($\lambda < \mu$) para que el sistema no crezca indefinidamente: $$100 < 150$$ La condición se cumple, por lo tanto, el sistema es estable y tiene una solución de estado estacionario.
+
+Calculamos el **factor de utilización ($\rho$)**:
+
+- **Fórmula:** $\rho = \frac{\lambda}{\mu}$
+- **Sustitución:** $\rho = \frac{100}{150}$
+- **Resultado:** $\rho = \mathbf{0.6667}$ (o $66.67\%$).
+
+---
+
+### 3. Resolución de los Incisos
+
+#### a) ¿Cuál es la probabilidad que el sistema esté ocioso ($P_0$)?
+
+La probabilidad de que el sistema esté vacío (u ocioso) es el complemento de la utilización.
+
+- **Fórmula:** $P_0 = 1 - \rho$
+- **Sustitución:** $P_0 = 1 - 0.6667$
+- **Resultado:** $P_0 = \mathbf{0.3333}$ Existe una probabilidad del **33.33%** de que el restaurante esté vacío.
+
+#### b) ¿Cuál es la probabilidad que un cliente llegue y tenga que esperar ($P_w$)?
+
+Un cliente debe esperar si el servidor está ocupado al momento de su llegada. En un sistema M/M/1, esto es igual a la utilización del sistema.
+
+- **Fórmula:** $P_w = \rho$
+- **Sustitución:** $P_w = \frac{100}{150}$
+- **Resultado:** $P_w = \mathbf{0.6667}$ La probabilidad de tener que esperar es del **66.67%**.
+
+#### c) ¿Cuál es el número promedio de clientes en la cola ($L_q$)?
+
+Utilizamos la **Ley de Little** ($L = \lambda W$), ya que el tiempo de espera en la cola ($W_q$) es un dato conocido.
+
+- **Datos:** $\lambda = 100$ cl/h, $W_q = 1/30$ h.
+- **Fórmula:** $L_q = \lambda \times W_q$
+- **Sustitución:** $L_q = 100 \times \left(\frac{1}{30}\right)$
+- **Operación:** $L_q = \frac{100}{30} = \mathbf{3.33 \text{ clientes}}$ En promedio, hay **3.33 clientes** esperando en la fila.
+
+#### d) ¿Cuál es la probabilidad que haya 10 clientes en la cola ($P_{N_q=10}$)?
+
+Tener 10 clientes **en la cola** implica que hay **11 clientes en el sistema** (10 esperando + 1 siendo atendido). Buscamos la probabilidad de estado $P_{11}$.
+
+- **Fórmula:** $P_n = (1 - \rho)\rho^n$
+- **Sustitución ($n=11$):** $P_{11} = (1 - 0.6667) \times (0.6667)^{11}$
+- **Operaciones parciales:**
+    - $1 - 0.6667 = 0.3333$
+    - $(0.6667)^{11} \approx 0.01156$
+- **Cálculo final:** $P_{11} = 0.3333 \times 0.01156 = \mathbf{0.00385}$ La probabilidad de que haya exactamente 10 clientes en la cola es de **0.385%**.
+
+---
+
+### 4. Resumen de Medidas de Desempeño
+
+- **Utilización ($\rho$):** $66.67\%$.
+- **Probabilidad de sistema ocioso ($P_0$):** $33.33\%$.
+- **Probabilidad de esperar ($P_w$):** $66.67\%$.
+- **Clientes en cola ($L_q$):** $3.33$ personas.
+- **Probabilidad de 10 en cola ($P_{11}$):** $0.00385$.
