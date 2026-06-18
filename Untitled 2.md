@@ -35,7 +35,7 @@ L([Llegadas 15 clientes/hora]) --> Q[Cola] --> S((Servidor cajero 20 )) --> O([S
 - **Fórmula:** $\rho = \frac{\lambda}{\mu}$
 - **Sustitución:** $\rho = \frac{15}{20}$
 - **Operación:** $\rho = 0.75$
-- **Resultado:** El cajero está ocupado el **$75%$** del tiempo.
+- **Resultado:** El cajero está ocupado el **$75\%$** del tiempo.
 
 **b) El número promedio de clientes en la línea de espera ($L_q$)** Representa la cantidad de unidades que están físicamente en la fila esperando ser atendidas.
 
