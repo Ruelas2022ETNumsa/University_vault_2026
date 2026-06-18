@@ -400,30 +400,17 @@ La matriz se organiza de forma que cada fila represente el estado actual y cada 
 - **Renglón 3 (Origen C):** $P_{CA} = 0.2, P_{CB} = 0.4, P_{CC} = 0.4$.
 
 La matriz de transición resultante es: $$P = \begin{bmatrix} 0.1 & 0.3 & 0.6 \\ 0.2 & 0.2 & 0.6 \\ 0.2 & 0.4 & 0.4 \end{bmatrix}$$
+#### 3. Verificación de la Matriz
 
-### 4. Sustitución de valores paso a paso
+Comprobamos que la matriz sea estocástica (suma de filas igual a la unidad):
 
-Organizamos los datos proporcionados en cada renglón de la matriz:
+- Fila 1: $0.1 + 0.3 + 0.6 = 1.0$ (Correcto)
+- Fila 2: $0.2 + 0.2 + 0.6 = 1.0$ (Correcto)
+- Fila 3: $0.2 + 0.4 + 0.4 = 1.0$ (Correcto)
 
-- **Renglón 1 (Ciudad A):** Sustituimos las probabilidades $P_{AA} = 0.1$, $P_{AB} = 0.3$ y $P_{AC} = 0.6$.
-- **Renglón 2 (Ciudad B):** Sustituimos las probabilidades $P_{BA} = 0.2$, $P_{BB} = 0.2$ y $P_{BC} = 0.6$.
-- **Renglón 3 (Ciudad C):** Sustituimos las probabilidades $P_{CA} = 0.2$, $P_{CB} = 0.4$ y $P_{CC} = 0.4$.
+### Conclusión del Modelado
 
-### 5. Resultado Final: Matriz de Transición ($P$)
-
-Insertando todos los valores en la estructura matricial, obtenemos el modelo matemático del comportamiento del agente comercial:
-
-$$P = \begin{bmatrix} 0.1 & 0.3 & 0.6 \\ 0.2 & 0.2 & 0.6 \\ 0.2 & 0.4 & 0.4 \end{bmatrix}$$
-
-### 6. Verificación del resultado
-
-Comprobamos que cada fila sume la unidad para asegurar que el modelo es estocásticamente válido:
-
-- **Fila A:** $0.1 + 0.3 + 0.6 = 1.0$ (Correcto)
-- **Fila B:** $0.2 + 0.2 + 0.6 = 1.0$ (Correcto)
-- **Fila C:** $0.2 + 0.4 + 0.4 = 1.0$ (Correcto)
-
-La matriz describe completamente las transiciones diarias del sistema y permite realizar predicciones futuras sobre la ubicación del agente.
+El problema ha sido modelado satisfactoriamente como una cadena de Markov homogénea de tres estados, donde la matriz $P$ define completamente el comportamiento del agente comercial a corto y largo plazo.
 
 
 
@@ -442,93 +429,91 @@ c) El número promedio de clientes en el sistema.
 d) El tiempo promedio de espera en la fila.
 e) El tiempo promedio de espera en el sistema.
 ### solución
+### Estructura del Sistema de Colas
 
-Este ejercicio corresponde a un problema de **Teoría de Colas**. A continuación, se presenta la identificación del modelo, la estructura física del sistema y la resolución detallada paso a paso.
-
-### 1. Identificación de la estructura y el modelo
-
-De acuerdo con los datos proporcionados:
-
-- **Llegadas (Poisson):** Los clientes llegan a una tasa promedio de $\lambda = 15$ por hora.
-- **Servicio (Exponencial):** El cajero atiende a un ritmo de un cliente cada 3 minutos.
-- **Configuración:** Existe un solo cajero (canal único) y el proceso consta de una sola parada para el cliente (fase única).
-- **Modelo de cola:** Se trata de un modelo **M/M/1** (Modelo A), que asume llegadas de Poisson, tiempos de servicio exponenciales y un solo servidor.
-
-#### Diagrama de la estructura (Mermaid)
-
-Según la guía de estructuras de líneas de espera, esta es la representación del flujo físico del sistema:
+De acuerdo con la descripción, se trata de un sistema de **canal único y fase única**, donde los clientes llegan a una fila, son atendidos por un solo cajero y luego abandonan el sistema.
 
 ```mermaid
 flowchart LR
-    L([Llegadas]) --> Q[Cola]
-    Q --> S((Servidor))
-    S --> O([Salida])
+L([Llegadas 15 clientes/hora]) --> Q[Cola] --> S((Servidor cajero 20 )) --> O([Salidas])
 ```
 
 ---
 
-### 2. Identificación de datos y conversiones
+### Resolución del Ejercicio
 
-Para que los cálculos sean consistentes, ambos parámetros ($\lambda$ y $\mu$) deben estar en la misma unidad de tiempo (clientes por hora).
+#### 1. Identificación de los datos y modelo
 
-- **Tasa de llegada ($\lambda$):** $$\lambda = 15 \text{ clientes/hora}$$
-    
-- **Tasa de servicio ($\mu$):** El problema indica que el tiempo de servicio es de 3 minutos por cliente. Para hallar $\mu$ (cuántos clientes se pueden atender en una hora), realizamos la conversión: $$1 \text{ cliente} \longrightarrow 3 \text{ min}$$ $$x \text{ clientes} \longrightarrow 60 \text{ min}$$ $$\mu = \frac{60 \text{ min} \cdot 1 \text{ cliente}}{3 \text{ min}} = 20 \text{ clientes/hora}$$ $$\mu = 20 \text{ clientes/hora}$$
-    
+- **Patrón de llegadas:** Poisson.
+- **Patrón de servicios:** Exponencial.
+- **Número de servidores ($s$):** 1 (canal único).
+- **Modelo:** **Modelo A (M/M/1)**.
+
+**Parámetros del sistema:**
+
+- **Tasa promedio de llegadas ($\lambda$):** $15$ clientes por hora.
+- **Tasa promedio de servicio ($\mu$):** Se atiende 1 cliente cada 3 minutos. Debemos convertir esto a la misma unidad de tiempo (clientes por hora): $$\mu = \frac{60 \text{ min}}{3 \text{ min/cliente}} = 20 \text{ clientes por hora}.$$
+##### Verificación de estabilidad
+
+Antes de aplicar cualquier fórmula debemos verificar que el sistema sea estable.
+
+La condición es:
+$\lambda < \mu$
+
+Sustituyendo:
+$15<20$
+
+Se cumple.
+Por tanto el sistema tiene solución estacionaria.
+
+#### 2. Cálculos Paso a Paso
+
+**a) La utilización promedio del cajero ($\rho$)** Esta fórmula mide la fracción del tiempo que el servidor está ocupado.
+
+- **Fórmula:** $\rho = \dfrac{\lambda}{\mu}$
+- **Sustitución:** $\rho = \frac{15}{20}$
+- **Operación:** $\rho = 0.75$
+- **Resultado:** El cajero está ocupado el **$75\%$** del tiempo.
+
+**b) El número promedio de clientes en la línea de espera ($L_q$)** Representa la cantidad de unidades que están físicamente en la fila esperando ser atendidas.
+
+- **Fórmula:** $L_q = \dfrac{\lambda^2}{\mu(\mu - \lambda)}$
+- **Sustitución:** $L_q = \frac{15^2}{20(20 - 15)}$
+- **Operaciones parciales:**
+    - $15^2 = 225$
+    - $20(5) = 100$
+- **Resultado:** $L_q = \frac{225}{100} = \mathbf{2.25 \text{ clientes}}$.(aproximadamente **2 clientes**).
+
+**c) El número promedio de clientes en el sistema ($L_s$)** Es el número total de clientes en la instalación, incluyendo los que esperan y el que está siendo atendido.
+
+- **Fórmula:** $L_s = \dfrac{\lambda}{\mu - \lambda}$
+- **Sustitución:** $L_s = \frac{15}{20 - 15}$
+- **Operación:** $L_s = \frac{15}{5}$
+- **Resultado:** $L_s = \mathbf{3 \text{ clientes}}$ en el sistema.
+
+**d) El tiempo promedio de espera en la fila ($W_q$)** Es el tiempo que un cliente pasa exclusivamente esperando antes de que comience su servicio.
+
+- **Fórmula:** $W_q = \dfrac{\lambda}{\mu(\mu - \lambda)}$
+- **Sustitución:** $W_q = \frac{15}{20(20 - 15)}$
+- **Operación:** $W_q = \frac{15}{100} = 0.15 \text{ horas}$
+- **Conversión a minutos:** $0.15 \times 60 \text{ min} = \mathbf{9 \text{ minutos}}$. Un cliente espera aproximadamente 9 minutos antes de ser atendido.
+
+**e) El tiempo promedio de espera en el sistema ($W_s$)** Es el tiempo total desde que el cliente llega hasta que termina de ser atendido (espera + servicio).
+
+- **Fórmula:** $W_s = \dfrac{1}{\mu - \lambda}$
+- **Sustitución:** $W_s = \frac{1}{20 - 15}$
+- **Operación:** $W_s = \frac{1}{5} = 0.2 \text{ horas}$
+- **Conversión a minutos:** $0.2 \times 60 \text{ min} = \mathbf{12 \text{ minutos}}$.
 
 ---
 
-### 3. Resolución de los incisos
+### Verificación de los resultados
 
-#### a) La utilización promedio del cajero ($\rho$)
+Podemos verificar la relación de Little ($L = \lambda W$):
 
-Esta fórmula determina la fracción del tiempo que el cajero está ocupado atendiendo clientes.
-
-- **Fórmula:** $\rho = \frac{\lambda}{\mu}$
-- **Sustitución:** $\rho = \frac{15}{20}$
-- **Operación:** $0.75$
-- **Resultado:** La utilización es del **75%**.
-
-#### b) El número promedio de clientes en la línea de espera ($L_q$)
-
-Representa la cantidad de vehículos que se encuentran físicamente en la fila aguardando ser atendidos.
-
-- **Fórmula:** $L_q = \frac{\lambda^2}{\mu(\mu - \lambda)}$
-- **Sustitución:** $L_q = \frac{15^2}{20(20 - 15)}$
-- **Operación parcial:** $\frac{225}{20(5)} = \frac{225}{100}$
-- **Resultado:** $2.25$ clientes (aproximadamente **2 clientes**).
-
-#### c) El número promedio de clientes en el sistema ($L_s$)
-
-Incluye tanto a los clientes que están en la fila como al que está siendo atendido en la ventanilla.
-
-- **Fórmula:** $L_s = \frac{\lambda}{\mu - \lambda}$
-- **Sustitución:** $L_s = \frac{15}{20 - 15}$
-- **Operación:** $\frac{15}{5}$
-- **Resultado:** **3 clientes** en el sistema.
-
-#### d) El tiempo promedio de espera en la fila ($W_q$)
-
-Es el tiempo que un cliente pasa únicamente en la cola antes de llegar a la ventanilla.
-
-- **Fórmula:** $W_q = \frac{\lambda}{\mu(\mu - \lambda)}$
-- **Sustitución:** $W_q = \frac{15}{20(20 - 15)}$
-- **Operación:** $\frac{15}{100} = 0.15$ horas.
-- **Conversión a minutos:** $0.15 \text{ horas} \times 60 \text{ min/hora} = 9$ minutos.
-- **Resultado:** **9 minutos**.
-
-#### e) El tiempo promedio de espera en el sistema ($W_s$)
-
-Es el tiempo total desde que el cliente llega a la cola hasta que termina de pagar y sale del servicio.
-
-- **Fórmula:** $W_s = \frac{1}{\mu - \lambda}$
-- **Sustitución:** $W_s = \frac{1}{20 - 15}$
-- **Operación:** $\frac{1}{5} = 0.2$ horas.
-- **Conversión a minutos:** $0.2 \text{ horas} \times 60 \text{ min/hora} = 12$ minutos.
-- **Resultado:** **12 minutos**.
-
-
-
+- $L_s = \lambda \times W_s \rightarrow 3 = 15 \times 0.2 \rightarrow 3 = 3$ (Correcto).
+- $L_q = \lambda \times W_q \rightarrow 2.25 = 15 \times 0.15 \rightarrow 2.25 = 2.25$ (Correcto).
+- $W_s = W_q + (1/\mu) \rightarrow 12 \text{ min} = 9 \text{ min} + 3 \text{ min} \rightarrow 12 = 12$ (Correcto).
 
 ---
 
@@ -543,92 +528,73 @@ d) Número de clientes en la fila.
 e) Tiempo de espera en la fila.
 ### solución
 
-### 1. Identificación de la estructura y el modelo
+### Estructura del Sistema de Colas
 
-De acuerdo con los datos del problema:
-
-- **Tasa de llegada ($\lambda$):** 10 clientes/hora.
-- **Tasa de servicio ($\mu$):** 8 clientes/hora por servidor.
-- **Número de servidores ($s$):** 2 servidores.
-- **Configuración:** Los clientes forman una sola fila para ser atendidos por el primer servidor que se libere (multicanal, fase única),.
-- **Modelo de cola:** Se trata de un modelo **M/M/s** (Modelo B), que asume llegadas de Poisson, tiempos de servicio exponenciales y $s$ servidores en paralelo,.
-
-#### Diagrama de la estructura (Mermaid)
-
-Según la guía de estructuras de líneas de espera para un sistema multicanal ($s=2$):
+Se trata de un sistema de **múltiples canales (2 servidores) y una sola fase**, donde los pacientes llegan a una cola común y pasan al primer servidor que quede libre.
 
 ```mermaid
 flowchart LR
-    L([Llegadas]) --> Q[Cola]
-    Q --> S1((Servidor 1))
-    Q --> S2((Servidor 2))
-    S1 --> O([Salida])
-    S2 --> O
+L([Llegadas]) --> Q[Cola]
+Q --> S1((Servidor 1))
+Q --> S2((Servidor 2))
+S1 --> O([Salidas])
+S2 --> O
 ```
 
 ---
 
-### 2. Identificación de datos y parámetros
+### Resolución del Ejercicio
 
-- $\lambda = 10 \text{ pacientes/hora}$
-- $\mu = 8 \text{ pacientes/hora}$
-- $s = 2$
-- Factor de utilización ($\rho$): $\rho = \frac{\lambda}{s \cdot \mu} = \frac{10}{2 \cdot 8} = \frac{10}{16} = 0.625$. Como $\rho < 1$, el sistema es estable,.
+#### 1. Identificación de los datos y modelo
 
----
+- **Tasa promedio de llegadas ($\lambda$):** $\lambda = 10 \text{ pacientes/hora}$
+- **Tasa promedio de servicio ($\mu$):** $\mu = 8 \text{ pacientes/hora}$ (por servidor).
+- **Número de servidores ($s$):** $s = 2$.
+- **Modelo:** **M/M/2** (Modelo B).
 
-### 3. Resolución de los incisos
+**Verificación de estabilidad:** Para que el sistema alcance un estado estable, se debe cumplir que $\lambda < s\mu$: $10 < 2(8) \Rightarrow 10 < 16$. El sistema es estable.
 
-#### a) Probabilidad de que ningún cliente se encuentre en el sistema ($P_o$)
+#### 2. Cálculos Paso a Paso
 
-Esta fórmula calcula la probabilidad de que el sistema esté vacío.
+**a) Probabilidad de que ningún cliente se encuentre en el sistema ($P_0$)** Esta fórmula determina la probabilidad de que los servidores estén inactivos.
 
-- **Fórmula:** $P_o = \frac{1}{\sum_{n=0}^{s-1} \frac{(\lambda / \mu)^n}{n!} + \frac{(\lambda / \mu)^s}{s!} \left( \frac{1}{1 - (\lambda / s \cdot \mu)} \right)}$.
+- **Fórmula:** $P_o = \dfrac{1}{\sum_{n=0}^{s-1} \frac{(\lambda / \mu)^n}{n!} + \frac{(\lambda / \mu)^s}{s!} \left( \frac{1}{1 - (\lambda / s \mu)} \right)}$
+- **Sustitución de valores:** $P_o = \dfrac{1}{\left[ \frac{(10/8)^0}{0!} + \frac{(10/8)^1}{1!} \right] + \frac{(10/8)^2}{2!} \left( \frac{1}{1 - (10 / 16)} \right)}$
 - **Operaciones parciales:**
     1. Sumatoria ($n=0$ a $1$): $\frac{(10/8)^0}{0!} + \frac{(10/8)^1}{1!} = 1 + 1.25 = 2.25$.
-    2. Término de los servidores: $\frac{(10/8)^2}{2!} \left( \frac{1}{1 - (10/16)} \right) = \frac{1.5625}{2} \left( \frac{1}{0.375} \right) = 0.78125 \cdot 2.6667 \approx 2.0833$.
+    2. Término de los servidores: $\frac{(10/8)^2}{2!} \left( \frac{1}{1 - (10/16)} \right) = \frac{1.5625}{2} \left( \frac{1}{0.375} \right) = 0.78125 \cdot 2.6667 \approx 2.0833$
     3. Denominador total: $2.25 + 2.0833 = 4.3333$.
-- **Resultado:** $P_o = \frac{1}{4.3333} = 0.231$. Existe una probabilidad del **23.1%** de que el sistema esté vacío.
 
-#### b) Número promedio de unidades en el sistema ($L_s$)
+- **Resultado:** $P_o = \frac{1}{4.3333} = \mathbf{0.2307}$ (aproximadamente **$23.1\%$**) de que el sistema esté vacío.
 
-Representa el promedio de pacientes tanto en espera como en atención.
+**b) Número promedio de unidades en el sistema ($L_s$)** Representa la cantidad total de clientes tanto en fila como en atención.
 
-- **Fórmula:** $L_s = \frac{\lambda \mu (\lambda / \mu)^s P_o}{(s - 1)! (s \mu - \lambda)^2} + \frac{\lambda}{\mu}$.
-- **Sustitución:** $L_s = \frac{10 \cdot 8 \cdot (1.25)^2 \cdot 0.231}{(1)! \cdot (16 - 10)^2} + 1.25$.
-- **Operaciones parciales:** $\frac{80 \cdot 1.5625 \cdot 0.231}{36} + 1.25 = \frac{28.875}{36} + 1.25 = 0.802 + 1.25$.
-- **Resultado:** $L_s = 2.052$. Hay un promedio de **2.05 pacientes** en el sistema.
+- **Fórmula:** $L_s = \dfrac{\lambda \mu (\lambda / \mu)^s P_o}{(s - 1)! (s \mu - \lambda)^2} + \frac{\lambda}{\mu}$
+- **Sustitución:** $L_s = \frac{(10)(8)(1.25)^2(0.231)}{(2-1)!(16-10)^2} + \frac{10}{8}$
+- **Operaciones parciales:**
+    1. $\frac{80 \times 1.5625 \times 0.231}{1 \times 36} = \frac{28.875}{36} = 0.802$
+    2. $L_s = 0.802 + 1.25 = 2.052$
+- **Resultado:** $L_s = \mathbf{2.052}$ Hay un promedio de **2.05 pacientes** en el sistema.
 
-#### c) Tiempo promedio en el que una unidad está dentro del sistema ($W_s$)
+**c) Tiempo promedio en el que una unidad está dentro del sistema ($W_s$)** Es el tiempo total desde la llegada hasta la salida.
 
-- **Fórmula:** $W_s = \frac{L_s}{\lambda}$.
-- **Sustitución:** $W_s = \frac{2.052}{10} = 0.2052 \text{ horas}$.
-- **Conversión a minutos:** $0.2052 \text{ h} \cdot 60 \text{ min/h} = 12.31 \text{ min}$.
-- **Resultado:** El tiempo promedio en el sistema es de **12.31 minutos**.
+- **Fórmula:** $W_s = \dfrac{L_s}{\lambda}$
+- **Sustitución:** $W_s = \frac{2.052}{10}$
+- **Operación:** $W_s = 0.2052 \text{ horas}$
+- **Conversión a minutos:** $0.2052 \times 60 \text{ min} = \mathbf{12.31 \text{ minutos}}$ El tiempo promedio en el sistema es de **12 minutos** y 20 segundos.
 
-#### d) Número de clientes en la fila ($L_q$)
+**d) Número de clientes en la fila ($L_q$)** Representa cuántos pacientes están esperando físicamente en la fila.
 
-Representa a los pacientes que están únicamente esperando en la fila.
-
-- **Fórmula:** $L_q = L_s - \frac{\lambda}{\mu}$ (deducida de,).
+- **Fórmula:** $L_q = L_s - \dfrac{\lambda}{\mu}$
 - **Sustitución:** $L_q = 2.052 - \frac{10}{8} = 2.052 - 1.25$.
-- **Resultado:** $L_q = 0.802$. Hay un promedio de **0.80 pacientes** en la fila.
+- **Resultado:** $L_q = \mathbf{0.802}$ Hay un promedio de **0.80 pacientes** en la fila..
 
-#### e) Tiempo de espera en la fila ($W_q$)
+**e) Tiempo de espera en la fila ($W_q$)** Es el tiempo que el paciente pasa exclusivamente esperando turno.
 
-- **Fórmula:** $W_q = W_s - \frac{1}{\mu}$.
-- **Sustitución:** $W_q = 0.2052 - \frac{1}{8} = 0.2052 - 0.125 = 0.0802 \text{ horas}$.
-- **Conversión a minutos:** $0.0802 \text{ h} \cdot 60 \text{ min/h} = 4.81 \text{ min}$.
-- **Resultado:** El tiempo promedio de espera en fila es de **4.81 minutos**.
-
-
-
-
-
-
-
-
-
+- **Fórmula:** $W_q = W_s - \dfrac{1}{\mu}$
+- **Sustitución:** $W_q = 0.2052 - \frac{1}{8}$
+- **Operación:** $W_q = 0.2052 - 0.125 = 0.0802 \text{ horas}$
+- **Conversión a minutos:** $0.0802 \times 60 \text{ min} = \mathbf{4.81 \text{ minutos}}$. El tiempo promedio de espera en fila es de **4 minutos** y **47 segundos**.
 
 ---
 
@@ -642,86 +608,58 @@ b) Tiempo medio de espera en la cola.
 c) Número medio de clientes en el sistema.
 d) Tiempo medio de espera en el sistema.
 ### solución
+### Estructura del Sistema de Colas
 
-Este ejercicio corresponde a un problema de **Teoría de Colas** con tiempos de servicio constantes. A continuación, se presenta la identificación del modelo, la estructura física del sistema y la resolución detallada paso a paso siguiendo los procedimientos de las fuentes prioritarias,.
-
-### 1. Identificación de la estructura y el modelo
-
-De acuerdo con la descripción del problema:
-
-- **Llegadas:** Los clientes llegan a una tasa promedio de $\lambda = 9$ autos por hora.
-- **Servicio:** El lavado es automático (línea de ensamble), lo que implica un tiempo de servicio **constante** (no probabilístico) de 5 minutos por auto.
-- **Configuración:** Existe un solo carril de lavado (canal único) y el proceso es de una sola etapa (fase única).
-- **Modelo de cola:** Se identifica como el **Modelo C: M/D/1**, que asume llegadas de Poisson, tiempos de servicio constantes (Determinísticos) y un solo servidor,.
-
-#### Diagrama de la estructura (Mermaid)
-
-Representación del flujo físico del sistema para un canal único y fase única:
+De acuerdo con la descripción, se trata de una estructura de **canal único y fase única**. Los autos llegan, forman una fila común, pasan por la línea de lavado (servidor) y salen del sistema.
 
 ```mermaid
 flowchart LR
-    L([Llegadas]) --> Q[Cola]
-    Q --> S((Servidor))
-    S --> O([Salida])
+L([Llegadas]) --> Q[Cola] --> S((Servidor)) --> O([Salidas])
 ```
 
 ---
 
-### 2. Identificación de datos y parámetros
+### Resolución del Ejercicio
 
-Para realizar los cálculos, los datos deben estar expresados en las mismas unidades de tiempo (autos por hora):
+#### 1. Identificación de los datos y modelo
 
-- **Tasa de llegada ($\lambda$):** $$\lambda = 9 \text{ autos/hora}$$
-    
-- **Tasa de servicio ($\mu$):** El problema indica que se acepta un auto cada 5 minutos. $$\mu = \frac{60 \text{ min}}{5 \text{ min/auto}} = 12 \text{ autos/hora}$$
-    
+- **Tasa promedio de llegadas ($\lambda$):** $\lambda = 9 \text{ autos/hora}$.
+- **Tasa promedio de servicio ($\mu$):** $1$ auto cada $5$ minutos. Para estandarizar las unidades a horas: $$\mu = \frac{60 \text{ min}}{5 \text{ min/auto}} = 12 \text{ autos/hora}$$
+- **Modelo aplicado:** **M/D/1** (Llegadas Poisson, Servicio Determinado, 1 Servidor).
+
+#### 2. Cálculos Paso a Paso
+
+**a) Longitud media de la cola ($L_q$)** Representa el número promedio de autos que están esperando físicamente antes de entrar a la línea de lavado.
+
+- **Fórmula:** $L_q = \dfrac{\lambda^2}{2\mu(\mu - \lambda)}$.
+- **Sustitución:** $L_q = \frac{9^2}{2(12)(12 - 9)}$.
+- **Operaciones parciales:**
+    1. $9^2 = 81$.
+    2. $2 \times 12 \times (3) = 72$.
+- **Resultado:** $L_q = \frac{81}{72} = \mathbf{1.125 \text{ autos}}$.
+- **Redondeo:** Siguiendo criterios prácticos, se aproxima a **$1$ auto**.
+
+**b) Tiempo medio de espera en la cola ($W_q$)** Es el tiempo promedio que un auto permanece exclusivamente en la fila antes de que comience su proceso de lavado.
+
+- **Fórmula:** $W_q = \dfrac{\lambda}{2\mu(\mu - \lambda)}$.
+- **Sustitución:** $W_q = \frac{9}{2(12)(12 - 9)}$.
+- **Operación:** $W_q = \frac{9}{72} = \mathbf{0.125 \text{ horas}}$.
+- **Conversión a minutos:** $0.125 \times 60 \text{ min} = \mathbf{7.5 \text{ minutos}}$. el tiempo promedio que pasa un auto en la fila es de 7 minutos y 30 segundos.
+
+**c) Número medio de clientes en el sistema ($L_s$)** Es la cantidad promedio de autos en toda la instalación (los que esperan en la cola más el que se está lavando).
+
+- **Fórmula:** $L_s = L_q + \dfrac{\lambda}{\mu}$.
+- **Sustitución:** $L_s = 1.125 + \frac{9}{12}$.
+- **Operación:** $L_s = 1.125 + 0.75 = \mathbf{1.875 \text{ autos}}$.
+- **Redondeo:** Se aproxima al entero más cercano, es decir, **$2$ autos**.
+
+**d) Tiempo medio de espera en el sistema ($W_s$)** Es el tiempo total desde que el auto llega a la instalación hasta que sale completamente limpio.
+
+- **Fórmula:** $W_s = W_q + \dfrac{1}{\mu}$.
+- **Sustitución:** $W_s = 0.125 + \frac{1}{12}$.
+- **Operación:** $W_s = 0.125 + 0.0833 = \mathbf{0.2083 \text{ horas}}$.
+- **Conversión a minutos:** $0.2083 \times 60 \text{ min} = \mathbf{12.5 \text{ minutos}}$.El tiempo total desde que el auto llega hasta que se va limpio es de 12 minutos y 30 segundos.
 
 ---
-
-### 3. Resolución de los incisos
-
-#### a) Longitud media de la cola ($L_q$)
-
-Esta medida representa el número promedio de autos que están esperando en la fila antes de entrar a la línea de lavado. En el modelo M/D/1, la cola es exactamente la mitad que en el modelo M/M/1 debido a la falta de variabilidad en el servicio.
-
-- **Fórmula:** $L_q = \frac{\lambda^2}{2\mu(\mu - \lambda)}$
-- **Sustitución:** $L_q = \frac{9^2}{2(12)(12 - 9)}$
-- **Operaciones parciales:**
-    1. Numerador: $9^2 = 81$
-    2. Denominador: $2 \cdot 12 \cdot (3) = 24 \cdot 3 = 72$
-    3. División: $81 / 72 = 1.125$
-- **Resultado:** $1.125$ autos (aproximadamente **1 auto** en fila).
-
-#### b) Tiempo medio de espera en la cola ($W_q$)
-
-Representa el tiempo promedio que un vehículo pasa únicamente esperando en la fila.
-
-- **Fórmula:** $W_q = \frac{\lambda}{2\mu(\mu - \lambda)}$
-- **Sustitución:** $W_q = \frac{9}{2(12)(12 - 9)}$
-- **Operación:** $\frac{9}{72} = 0.125$ horas.
-- **Conversión a minutos:** $0.125 \text{ horas} \cdot 60 \text{ min/hora} = 7.5$ minutos.
-- **Resultado:** **7.5 minutos**.
-
-#### c) Número medio de clientes en el sistema ($L_s$)
-
-Es la suma de los autos que están esperando en la fila más los que están siendo lavados en la línea de ensamble.
-
-- **Fórmula:** $L_s = L_q + \frac{\lambda}{\mu}$
-- **Sustitución:** $L_s = 1.125 + \frac{9}{12}$
-- **Operación:** $1.125 + 0.75$
-- **Resultado:** **1.875 autos** en el sistema.
-
-#### d) Tiempo medio de espera en el sistema ($W_s$)
-
-Es el tiempo total desde que el auto llega a la instalación hasta que sale completamente limpio.
-
-- **Fórmula:** $W_s = W_q + \frac{1}{\mu}$
-- **Sustitución:** $W_s = 0.125 + \frac{1}{12}$
-- **Operaciones parciales:**
-    1. Tiempo de servicio en horas: $1/12 \approx 0.0833$ horas.
-    2. Suma: $0.125 + 0.0833 = 0.2083$ horas.
-- **Conversión a minutos:** $0.2083 \text{ horas} \cdot 60 \text{ min/hora} \approx 12.5$ minutos.
-- **Resultado:** **12.5 minutos**.
-
 
 ---
