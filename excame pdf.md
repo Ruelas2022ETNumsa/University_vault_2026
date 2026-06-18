@@ -135,7 +135,7 @@ De acuerdo con el enunciado, el sistema presenta las siguientes características
 
 Según la guía de dibujo para líneas de espera:
 
-```
+```mermaid
 flowchart LR
     L([Llegadas]) --> Q[Cola única]
     Q --> S((Cajero S1))
