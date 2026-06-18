@@ -277,7 +277,7 @@ $$P = \begin{bmatrix} 0.1 & 0.3 & 0.6 \ 0.2 & 0.2 & 0.6 \ 0.2 & 0.4 & 0.4 \end{b
 
 Si hoy está en la ciudad C, el vector de estado inicial es $\pi(0) = [0, \quad 0, \quad 1]$. Para hallar el estado después de 4 días, aplicamos la relación recurrente $\pi(n) = \pi(n-1) \cdot P$:
 
-- **Día 1 ($\pi(1)$):** $$\pi(1) = \begin{bmatrix} 0.1 & 0.3 & 0.6 \ 0.2 & 0.2 & 0.6 \ 0.2 & 0.4 & 0.4 \end{bmatrix} = [0.2, \quad 0.4, \quad 0.4]$$
+- **Día 1 ($\pi(1)$):** $$\pi(1) = \begin{bmatrix} 0.1 & 0.3 & 0.6  \\  0.2 & 0.2 & 0.6  \\  0.2 & 0.4 & 0.4 \end{bmatrix} = [0.2, \quad 0.4, \quad 0.4]$$
     
 - **Día 2 ($\pi(2)$):** $$\pi(2) = [0.2, 0.4, 0.4] \cdot P = [0.18, \quad 0.30, \quad 0.52]$$
     
