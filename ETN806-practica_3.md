@@ -223,6 +223,85 @@ Los estados del sistema se definen por la combinación de colores de las dos bol
 
 ---
 
+---
+
+### 2. Análisis de Probabilidades de Transición ($P_{ij}$)
+
+Para cada estado, analizamos qué sucede al seleccionar una bola y lanzar la moneda ($H$: cara, $T$: cruz):
+
+#### **Desde $S_0$ ${U, U}$:**
+
+DESDE S0 {U, U}
+│
+└── Elegir bola U (p=1.0)
+    ├── Moneda Cara  (p=0.5) ──→ {R, U} = S1   [P01 = 0.50]
+    └── Moneda Cruz  (p=0.5) ──→ {N, U} = S2   [P02 = 0.50]
+
+- Se elige una bola $U$ (probabilidad $1.0$).
+- Si moneda es $H$ (prob $0.5$): la bola se pinta de Rojo $\rightarrow {R, U}$ ($S_1$).
+- Si moneda es $T$ (prob $0.5$): la bola se pinta de Negro $\rightarrow {N, U}$ ($S_2$).
+- $P_{01} = 0.5$, $P_{02} = 0.5$.
+
+#### **Desde $S_1$ ${R, U}$:**
+
+DESDE S1 {R, U}
+│
+├── Elegir bola U (p=0.5)
+│   ├── Moneda Cara  (p=0.5) ──→ {R, R} = S3   [P13 = 0.25]
+│   └── Moneda Cruz  (p=0.5) ──→ {R, N} = S5   [P15 = 0.25]
+│
+└── Elegir bola R (p=0.5)
+    └── (moneda irrelevante)  ──→ {N, U} = S2   [P12 = 0.50]
+
+- Elegir bola $U$ (prob $0.5$): Si moneda es $H$ ($0.5$), pasa a ${R, R}$ ($S_3$); si es $T$ ($0.5$), pasa a ${R, N}$ ($S_5$).
+- Elegir bola $R$ (prob $0.5$): Cambia a Negro independientemente de la moneda $\rightarrow {N, U}$ ($S_2$).
+- $P_{13} = 0.5 \times 0.5 = 0.25$; $P_{15} = 0.5 \times 0.5 = 0.25$; $P_{12} = 0.5$.
+
+#### **Desde $S_2$ ${N, U}$:**
+DESDE S2 {N, U}
+│
+├── Elegir bola U (p=0.5)
+│   ├── Moneda Cara  (p=0.5) ──→ {N, R} = S5   [P25 = 0.25]
+│   └── Moneda Cruz  (p=0.5) ──→ {N, N} = S4   [P24 = 0.25]
+│
+└── Elegir bola N (p=0.5)
+    └── (moneda irrelevante)  ──→ {R, U} = S1   [P21 = 0.50]
+
+- Elegir bola $U$ (prob $0.5$): Si moneda es $H$ ($0.5$), pasa a ${N, R}$ ($S_5$); si es $T$ ($0.5$), pasa a ${N, N}$ ($S_4$).
+- Elegir bola $N$ (prob $0.5$): Cambia a Rojo independientemente de la moneda $\rightarrow {R, U}$ ($S_1$).
+- $P_{25} = 0.5 \times 0.5 = 0.25$; $P_{24} = 0.5 \times 0.5 = 0.25$; $P_{21} = 0.5$.
+
+#### **Desde $S_3$ ${R, R}$:**
+DESDE S3 {R, R}
+│
+└── Elegir cualquier bola (p=1.0)
+    └── (moneda irrelevante)  ──→ {R, N} = S5   [P35 = 1.00]
+
+- Cualquier bola elegida es $R$ (prob $1.0$). Cambia a Negro $\rightarrow {R, N}$ ($S_5$).
+- $P_{35} = 1.0$.
+
+#### **Desde $S_4$ ${N, N}$:**
+DESDE S4 {N, N}
+│
+└── Elegir cualquier bola (p=1.0)
+    └── (moneda irrelevante)  ──→ {N, R} = S5   [P45 = 1.00]
+
+- Cualquier bola elegida es $N$ (prob $1.0$). Cambia a Rojo $\rightarrow {N, R}$ ($S_5$).
+- $P_{45} = 1.0$.
+
+#### **Desde $S_5$ ${R, N}$:**
+DESDE S5 {R, N}
+│
+├── Elegir bola R (p=0.5)
+│   └── (moneda irrelevante)  ──→ {N, N} = S4   [P54 = 0.50]
+│
+└── Elegir bola N (p=0.5)
+    └── (moneda irrelevante)  ──→ {R, R} = S3   [P53 = 0.50]
+
+- Elegir bola $R$ (prob $0.5$): Cambia a Negro $\rightarrow {N, N}$ ($S_4$).
+- Elegir bola $N$ (prob $0.5$): Cambia a Rojo $\rightarrow {R, R}$ ($S_3$).
+- $P_{54} = 0.5$, $P_{53} = 0.5$.
+
 ### Diagrama de la Cadena de Markov
 
 ```tikz
@@ -263,43 +342,6 @@ Los estados del sistema se definen por la combinación de colores de las dos bol
 \end{tikzpicture}
 \end{document}
 ```
-
----
-
-### 2. Análisis de Probabilidades de Transición ($P_{ij}$)
-
-Para cada estado, analizamos qué sucede al seleccionar una bola y lanzar la moneda ($H$: cara, $T$: cruz):
-
-- **Desde $S_0$ ${U, U}$:**
-    
-    - Se elige una bola $U$ (probabilidad $1.0$).
-    - Si moneda es $H$ (prob $0.5$): la bola se pinta de Rojo $\rightarrow {R, U}$ ($S_1$).
-    - Si moneda es $T$ (prob $0.5$): la bola se pinta de Negro $\rightarrow {N, U}$ ($S_2$).
-    - $P_{01} = 0.5$, $P_{02} = 0.5$.
-- **Desde $S_1$ ${R, U}$:**
-    
-    - Elegir bola $U$ (prob $0.5$): Si moneda es $H$ ($0.5$), pasa a ${R, R}$ ($S_3$); si es $T$ ($0.5$), pasa a ${R, N}$ ($S_5$).
-    - Elegir bola $R$ (prob $0.5$): Cambia a Negro independientemente de la moneda $\rightarrow {N, U}$ ($S_2$).
-    - $P_{13} = 0.5 \times 0.5 = 0.25$; $P_{15} = 0.5 \times 0.5 = 0.25$; $P_{12} = 0.5$.
-- **Desde $S_2$ ${N, U}$:**
-    
-    - Elegir bola $U$ (prob $0.5$): Si moneda es $H$ ($0.5$), pasa a ${N, R}$ ($S_5$); si es $T$ ($0.5$), pasa a ${N, N}$ ($S_4$).
-    - Elegir bola $N$ (prob $0.5$): Cambia a Rojo independientemente de la moneda $\rightarrow {R, U}$ ($S_1$).
-    - $P_{25} = 0.5 \times 0.5 = 0.25$; $P_{24} = 0.5 \times 0.5 = 0.25$; $P_{21} = 0.5$.
-- **Desde $S_3$ ${R, R}$:**
-    
-    - Cualquier bola elegida es $R$ (prob $1.0$). Cambia a Negro $\rightarrow {R, N}$ ($S_5$).
-    - $P_{35} = 1.0$.
-- **Desde $S_4$ ${N, N}$:**
-    
-    - Cualquier bola elegida es $N$ (prob $1.0$). Cambia a Rojo $\rightarrow {N, R}$ ($S_5$).
-    - $P_{45} = 1.0$.
-- **Desde $S_5$ ${R, N}$:**
-    
-    - Elegir bola $R$ (prob $0.5$): Cambia a Negro $\rightarrow {N, N}$ ($S_4$).
-    - Elegir bola $N$ (prob $0.5$): Cambia a Rojo $\rightarrow {R, R}$ ($S_3$).
-    - $P_{54} = 0.5$, $P_{53} = 0.5$.
-
 ---
 
 ### 3. Matriz de Probabilidades de Transición ($P$)
