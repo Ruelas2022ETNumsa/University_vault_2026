@@ -50,7 +50,7 @@ La suma de las probabilidades de cada fila debe ser igual a $1$ (propiedad estoc
 - $P_{11} = 1 - P_{12} = 1 - 0.2 = \mathbf{0.8}$ (Probabilidad de seguir comprando).
 - $P_{22} = 1 - P_{21} = 1 - 0.3 = \mathbf{0.7}$ (Probabilidad de seguir sin comprar).
 
-La matriz de transición es: $$P = \begin{bmatrix} 0.8 & 0.2 \ 0.3 & 0.7 \end{bmatrix}$$
+La matriz de transición es: $$P = \begin{bmatrix} 0.8 & 0.2 \\ 0.3 & 0.7 \end{bmatrix}$$
 
 #### 3. Definición del vector de estado inicial ($\pi(1)$)
 
@@ -61,8 +61,7 @@ En el primer mes, $100$ personas compraron el producto. Expresamos esto en proba
 
 #### 4. Proyección para el próximo mes (Mes 2)
 
-Aplicamos la relación recurrente $\pi(n+1) = \pi(n) \cdot P$: $$\pi(2) = [0.1, \quad 0.9] \begin{bmatrix} 0.8 & 0.2 \ 0.3 & 0.7 \end{bmatrix}$$
-
+Aplicamos la relación recurrente $\pi(n+1) = \pi(n) \cdot P$: $$\pi(2) = [0.1, \quad 0.9] \begin{bmatrix} 0.8 & 0.2 \\ 0.3 & 0.7 \end{bmatrix}$$
 - $\pi_1(2) = (0.1 \times 0.8) + (0.9 \times 0.3) = 0.08 + 0.27 = \mathbf{0.35}$
 - $\pi_2(2) = (0.1 \times 0.2) + (0.9 \times 0.7) = 0.02 + 0.63 = \mathbf{0.65}$
 
@@ -72,13 +71,11 @@ Aplicamos la relación recurrente $\pi(n+1) = \pi(n) \cdot P$: $$\pi(2) = [0.1, 
 
 Para calcular el estado en el periodo 4 (tres meses después del primero), podemos iterar paso a paso:
 
-**Cálculo para el Mes 3:** $$\pi(3) = \pi(2) \cdot P = [0.35, \quad 0.65] \begin{bmatrix} 0.8 & 0.2 \ 0.3 & 0.7 \end{bmatrix}$$
-
+**Cálculo para el Mes 3:** $$\pi(3) = \pi(2) \cdot P = [0.35, \quad 0.65] \begin{bmatrix} 0.8 & 0.2 \\ 0.3 & 0.7 \end{bmatrix}$$
 - $\pi_1(3) = (0.35 \times 0.8) + (0.65 \times 0.3) = 0.28 + 0.195 = \mathbf{0.475}$
 - $\pi_2(3) = (0.35 \times 0.2) + (0.65 \times 0.7) = 0.07 + 0.455 = \mathbf{0.525}$
 
-**Cálculo para el Mes 4:** $$\pi(4) = \pi(3) \cdot P = [0.475, \quad 0.525] \begin{bmatrix} 0.8 & 0.2 \ 0.3 & 0.7 \end{bmatrix}$$
-
+**Cálculo para el Mes 4:** $$\pi(4) = \pi(3) \cdot P = [0.475, \quad 0.525] \begin{bmatrix} 0.8 & 0.2 \\ 0.3 & 0.7 \end{bmatrix}$$
 - $\pi_1(4) = (0.475 \times 0.8) + (0.525 \times 0.3) = 0.38 + 0.1575 = \mathbf{0.5375}$
 - $\pi_2(4) = (0.475 \times 0.2) + (0.525 \times 0.7) = 0.095 + 0.3675 = \mathbf{0.4625}$
 
@@ -163,7 +160,7 @@ Las probabilidades se organizan por renglones, asegurando que la suma de cada un
 - **Renglón 2 (Desde F1):** Hacia NF es $0.10$; hacia F2 es $0.10$; permanece en F1: $1 - (0.10 + 0.10) = 0.80$.
 - **Renglón 3 (Desde F2):** Hacia NF es $0.05$; hacia F1 es $0.10$; permanece en F2: $1 - (0.05 + 0.10) = 0.85$.
 
-La matriz de transición resultante es: $$P = \begin{bmatrix} 0.93 & 0.05 & 0.02 \ 0.10 & 0.80 & 0.10 \ 0.05 & 0.10 & 0.85 \end{bmatrix}$$
+La matriz de transición resultante es: $$P = \begin{bmatrix} 0.93 & 0.05 & 0.02 \\ 0.10 & 0.80 & 0.10 \\ 0.05 & 0.10 & 0.85 \end{bmatrix}$$
 
 #### 3. Proyección para el próximo mes (Mes 1)
 
@@ -207,148 +204,113 @@ Si la bola ya está pintada, entonces cambiamos el color de la bola de rojo a ne
 Modele el problema como una cadena de Markov y encuentre la matriz de probabilidades de transición.
 ### solución
 
-```tikz
-\usepackage{tikz}
-\usetikzlibrary{arrows.meta}
+### 1. Identificación de Estados y Datos
 
+Existen dos bolas en la urna. Denotaremos los posibles colores como:
+
+- **U:** Sin pintar (Unpainted).
+- **R:** Roja (Red).
+- **N:** Negra (Black/Negra).
+
+Los estados del sistema se definen por la combinación de colores de las dos bolas (el orden no importa):
+
+- **Estado 0 ($S_0$):** ${U, U}$ — Dos bolas sin pintar.
+- **Estado 1 ($S_1$):** ${R, U}$ — Una bola roja y una sin pintar.
+- **Estado 2 ($S_2$):** ${N, U}$ — Una bola negra y una sin pintar.
+- **Estado 3 ($S_3$):** ${R, R}$ — Dos bolas rojas.
+- **Estado 4 ($S_4$):** ${N, N}$ — Dos bolas negras.
+- **Estado 5 ($S_5$):** ${R, N}$ — Una bola roja y una negra.
+
+---
+
+### Diagrama de la Cadena de Markov
+
+```tikz
 \begin{document}
 \begin{tikzpicture}
+% Definición de estados (N=6, posicionamiento circular)
+\node[draw,circle,thick,color=orange] (S0) at (90:4) {$S_0$};
+\node[draw,circle,thick,color=pink] (S1) at (30:4) {$S_1$};
+\node[draw,circle,thick,color=lime] (S2) at (330:4) {$S_2$};
+\node[draw,circle,thick,color=purple] (S3) at (270:4) {$S_3$};
+\node[draw,circle,thick,color=teal] (S4) at (210:4) {$S_4$};
+\node[draw,circle,thick,color=magenta] (S5) at (150:4) {$S_5$};
 
-    % Configuración de los nodos de estado (N=6, Centro=(6,6), R=5)
-    % Ángulos: 90, 30, -30, -90, -150, -210
-    \node[draw, circle, thick, color=orange, minimum size=1.2cm] (UU) at (6, 11) {\textbf{UU}};
-    \node[draw, circle, thick, color=pink, minimum size=1.2cm] (UR) at (10.3, 8.5) {\textbf{UR}};
-    \node[draw, circle, thick, color=lime, minimum size=1.2cm] (UN) at (10.3, 3.5) {\textbf{UN}};
-    \node[draw, circle, thick, color=purple, minimum size=1.2cm] (RR) at (6, 1) {\textbf{RR}};
-    \node[draw, circle, thick, color=teal, minimum size=1.2cm] (NN) at (1.7, 3.5) {\textbf{NN}};
-    \node[draw, circle, thick, color=magenta, minimum size=1.2cm] (RN) at (1.7, 8.5) {\textbf{RN}};
+% Transiciones desde S0 (0.5 a S1, 0.5 a S2)
+\draw[->,very thick,orange] (S0) to[bend left=15] node[pos=0.3, right] {$0.5$} (S1);
+\draw[->,very thick,orange] (S0) to[bend right=15] node[pos=0.3, left] {$0.5$} (S2);
 
-    % Bucles (self-loops) obligatorios por regla de formato (P_ii = 0)
-    \draw[->, ultra thick, color=orange] (UU) .. controls (5, 13) and (7, 13) .. node[above] {$0.0$} (UU);
-    \draw[->, ultra thick, color=pink] (UR) .. controls (11.8, 9.5) and (11.8, 7.5) .. node[right] {$0.0$} (UR);
-    \draw[->, ultra thick, color=lime] (UN) .. controls (11.8, 4.5) and (11.8, 2.5) .. node[right] {$0.0$} (UN);
-    \draw[->, ultra thick, color=purple] (RR) .. controls (7, -1) and (5, -1) .. node[below] {$0.0$} (RR);
-    \draw[->, ultra thick, color=teal] (NN) .. controls (0.2, 2.5) and (0.2, 4.5) .. node[left] {$0.0$} (NN);
-    \draw[->, ultra thick, color=magenta] (RN) .. controls (0.2, 7.5) and (0.2, 9.5) .. node[left] {$0.0$} (RN);
+% Transiciones desde S1 (0.5 a S2, 0.25 a S3, 0.25 a S5)
+\draw[->,very thick,pink] (S1) to[bend left=15] node[pos=0.2, right] {$0.5$} (S2);
+\draw[->,very thick,pink] (S1) to[bend left=15] node[pos=0.2, right] {$0.25$} (S3);
+\draw[->,very thick,pink] (S1) to[bend right=15] node[pos=0.2, above] {$0.25$} (S5);
 
-    % Flechas de transición entre estados (solo P_ij > 0)
-    % Salidas de UU (Estado 0)
-    \draw[->, very thick, color=orange] (UU) to[bend left=10] node[pos=0.2, above] {$0.50$} (UR);
-    \draw[->, very thick, color=orange] (UU) to[bend left=10] node[pos=0.2, left] {$0.50$} (UN);
+% Transiciones desde S2 (0.5 a S1, 0.25 a S4, 0.25 a S5)
+\draw[->,very thick,lime] (S2) to[bend left=15] node[pos=0.2, left] {$0.5$} (S1);
+\draw[->,very thick,lime] (S2) to[bend left=15] node[pos=0.2, left] {$0.25$} (S4);
+\draw[->,very thick,lime] (S2) to[bend left=15] node[pos=0.2, below] {$0.25$} (S5);
 
-    % Salidas de UR (Estado 1)
-    \draw[->, very thick, color=pink] (UR) to[bend left=20] node[pos=0.3, left] {$0.50$} (UN);
-    \draw[->, very thick, color=pink] (UR) to[bend left=20] node[pos=0.3, right] {$0.25$} (RR);
-    \draw[->, very thick, color=pink] (UR) to[bend left=20] node[pos=0.3, above] {$0.25$} (RN);
+% Transiciones desde S3 (1.0 a S5)
+\draw[->,very thick,purple] (S3) to[bend right=15] node[pos=0.2, left] {$1.0$} (S5);
 
-    % Salidas de UN (Estado 2)
-    \draw[->, very thick, color=lime] (UN) to[bend left=30] node[pos=0.3, right] {$0.50$} (UR);
-    \draw[->, very thick, color=lime] (UN) to[bend left=30] node[pos=0.3, below] {$0.25$} (NN);
-    \draw[->, very thick, color=lime] (UN) to[bend left=30] node[pos=0.3, left] {$0.25$} (RN);
+% Transiciones desde S4 (1.0 a S5)
+\draw[->,very thick,teal] (S4) to[bend left=15] node[pos=0.2, left] {$1.0$} (S5);
 
-    % Salidas de RR (Estado 3)
-    \draw[->, very thick, color=purple] (RR) to[bend left=40] node[pos=0.4, right] {$1.0$} (RN);
-
-    % Salidas de NN (Estado 4)
-    \draw[->, very thick, color=teal] (NN) to[bend left=50] node[pos=0.4, left] {$1.0$} (RN);
-
-    % Salidas de RN (Estado 5)
-    \draw[->, very thick, color=magenta] (RN) to[bend left=60] node[pos=0.2, below] {$0.50$} (RR);
-    \draw[->, very thick, color=magenta] (RN) to[bend left=60] node[pos=0.2, right] {$0.50$} (NN);
+% Transiciones desde S5 (0.5 a S3, 0.5 a S4)
+\draw[->,very thick,magenta] (S5) to[bend right=15] node[pos=0.2, left] {$0.5$} (S3);
+\draw[->,very thick,magenta] (S5) to[bend left=15] node[pos=0.2, left] {$0.5$} (S4);
 
 \end{tikzpicture}
 \end{document}
 ```
 
-Este problema se modela mediante una **Cadena de Markov de tiempo discreto**. Se identifica como tal porque el sistema evoluciona en etapas (selecciones), posee un número finito de estados posibles (combinaciones de colores en la urna), y la probabilidad de pasar al siguiente estado depende exclusivamente de la composición actual de la urna y no de los pasos previos.
+---
 
-### 1. Identificación de los datos del problema
+### 2. Análisis de Probabilidades de Transición ($P_{ij}$)
 
-- **Población total ($N$):** $2$ bolas.
-- **Acción 1:** Selección aleatoria de una bola (probabilidad de elegir una bola específica $= 1/2$).
-- **Acción 2:** Lanzamiento de una moneda justa ($P(H) = 1/2$, $P(T) = 1/2$).
-- **Reglas de transición:**
-    1. Si la bola es **sin pintar (U)**:
-        - Cae cara (H): La bola se vuelve **Roja (R)**.
-        - Cae cruz (T): La bola se vuelve **Negra (N)**.
-    2. Si la bola es **pintada (R o N)**:
-        - Se cambia al color opuesto ($R \to N$ o $N \to R$) sin importar la moneda.
+Para cada estado, analizamos qué sucede al seleccionar una bola y lanzar la moneda ($H$: cara, $T$: cruz):
 
-### 2. Definición de los estados del sistema
+- **Desde $S_0$ ${U, U}$:**
+    
+    - Se elige una bola $U$ (probabilidad $1.0$).
+    - Si moneda es $H$ (prob $0.5$): la bola se pinta de Rojo $\rightarrow {R, U}$ ($S_1$).
+    - Si moneda es $T$ (prob $0.5$): la bola se pinta de Negro $\rightarrow {N, U}$ ($S_2$).
+    - $P_{01} = 0.5$, $P_{02} = 0.5$.
+- **Desde $S_1$ ${R, U}$:**
+    
+    - Elegir bola $U$ (prob $0.5$): Si moneda es $H$ ($0.5$), pasa a ${R, R}$ ($S_3$); si es $T$ ($0.5$), pasa a ${R, N}$ ($S_5$).
+    - Elegir bola $R$ (prob $0.5$): Cambia a Negro independientemente de la moneda $\rightarrow {N, U}$ ($S_2$).
+    - $P_{13} = 0.5 \times 0.5 = 0.25$; $P_{15} = 0.5 \times 0.5 = 0.25$; $P_{12} = 0.5$.
+- **Desde $S_2$ ${N, U}$:**
+    
+    - Elegir bola $U$ (prob $0.5$): Si moneda es $H$ ($0.5$), pasa a ${N, R}$ ($S_5$); si es $T$ ($0.5$), pasa a ${N, N}$ ($S_4$).
+    - Elegir bola $N$ (prob $0.5$): Cambia a Rojo independientemente de la moneda $\rightarrow {R, U}$ ($S_1$).
+    - $P_{25} = 0.5 \times 0.5 = 0.25$; $P_{24} = 0.5 \times 0.5 = 0.25$; $P_{21} = 0.5$.
+- **Desde $S_3$ ${R, R}$:**
+    
+    - Cualquier bola elegida es $R$ (prob $1.0$). Cambia a Negro $\rightarrow {R, N}$ ($S_5$).
+    - $P_{35} = 1.0$.
+- **Desde $S_4$ ${N, N}$:**
+    
+    - Cualquier bola elegida es $N$ (prob $1.0$). Cambia a Rojo $\rightarrow {N, R}$ ($S_5$).
+    - $P_{45} = 1.0$.
+- **Desde $S_5$ ${R, N}$:**
+    
+    - Elegir bola $R$ (prob $0.5$): Cambia a Negro $\rightarrow {N, N}$ ($S_4$).
+    - Elegir bola $N$ (prob $0.5$): Cambia a Rojo $\rightarrow {R, R}$ ($S_3$).
+    - $P_{54} = 0.5$, $P_{53} = 0.5$.
 
-Los estados representan las posibles combinaciones de colores de las dos bolas dentro de la urna. Denotaremos los estados de la siguiente manera:
+---
 
-- **Estado 0 ($UU$):** Dos bolas sin pintar.
-- **Estado 1 ($UR$):** Una bola sin pintar y una roja.
-- **Estado 2 ($UN$):** Una bola sin pintar y una negra.
-- **Estado 3 ($RR$):** Dos bolas rojas.
-- **Estado 4 ($NN$):** Dos bolas negras.
-- **Estado 5 ($RN$):** Una bola roja y una negra.
+### 3. Matriz de Probabilidades de Transición ($P$)
 
-### 3. Explicación de lo que se pide
-
-Se solicita modelar el proceso y construir la **matriz de probabilidades de transición ($P$)**, la cual organiza las probabilidades $P_{ij}$ de pasar del estado $i$ al estado $j$ en un solo paso.
-
-### 4. Razonamiento y fórmulas utilizadas
-
-La probabilidad de transición se calcula sumando las probabilidades de los eventos que llevan de un estado a otro. Dado que la selección de la bola y el lanzamiento de la moneda son eventos independientes, multiplicamos sus probabilidades: $$P(\text{Evento}) = P(\text{Selección}) \times P(\text{Moneda})$$
-
-### 5. Cálculo de las probabilidades de transición paso a paso
-
-#### Desde el Estado 0 ($UU$)
-
-- Se selecciona una bola sin pintar (probabilidad $1$).
-- Si sale cara ($1/2$), pasa a ser roja: $(U, U) \to (R, U)$. Prob $= 1 \times 1/2 = 0.5$.
-- Si sale cruz ($1/2$), pasa a ser negra: $(U, U) \to (N, U)$. Prob $= 1 \times 1/2 = 0.5$.
-- **Resultados:** $P_{01} = 0.5, P_{02} = 0.5$.
-
-#### Desde el Estado 1 ($UR$)
-
-- Caso A: Se elige la bola **U** ($1/2$):
-    - Cara ($1/2$): Se vuelve roja $\to (R, R)$. Prob $= 1/2 \times 1/2 = 0.25$.
-    - Cruz ($1/2$): Se vuelve negra $\to (N, R)$. Prob $= 1/2 \times 1/2 = 0.25$.
-- Caso B: Se elige la bola **R** ($1/2$):
-    - Cambia de color a negra $\to (U, N)$. Prob $= 1/2 \times 1 = 0.5$.
-- **Resultados:** $P_{13} = 0.25, P_{15} = 0.25, P_{12} = 0.5$.
-
-#### Desde el Estado 2 ($UN$)
-
-- Caso A: Se elige la bola **U** ($1/2$):
-    - Cara ($1/2$): Se vuelve roja $\to (R, N)$. Prob $= 1/2 \times 1/2 = 0.25$.
-    - Cruz ($1/2$): Se vuelve negra $\to (N, N)$. Prob $= 1/2 \times 1/2 = 0.25$.
-- Caso B: Se elige la bola **N** ($1/2$):
-    - Cambia de color a roja $\to (U, R)$. Prob $= 1/2 \times 1 = 0.5$.
-- **Resultados:** $P_{25} = 0.25, P_{24} = 0.25, P_{21} = 0.5$.
-
-#### Desde el Estado 3 ($RR$)
-
-- Se selecciona una bola roja (probabilidad $1$).
-- Cambia obligatoriamente a negra $\to (N, R)$. Prob $= 1 \times 1 = 1$.
-- **Resultado:** $P_{35} = 1$.
-
-#### Desde el Estado 4 ($NN$)
-
-- Se selecciona una bola negra (probabilidad $1$).
-- Cambia obligatoriamente a roja $\to (R, N)$. Prob $= 1 \times 1 = 1$.
-- **Resultado:** $P_{45} = 1$.
-
-#### Desde el Estado 5 ($RN$)
-
-- Caso A: Se elige la bola **R** ($1/2$):
-    - Cambia a negra $\to (N, N)$. Prob $= 1/2 \times 1 = 0.5$.
-- Caso B: Se elige la bola **N** ($1/2$):
-    - Cambia a roja $\to (R, R)$. Prob $= 1/2 \times 1 = 0.5$.
-- **Resultados:** $P_{54} = 0.5, P_{53} = 0.5$.
-
-### 6. Resultado Final: Matriz de Transición ($P$)
-
-Organizamos los valores en la matriz siguiendo el orden de los estados del 0 al 5:
+La matriz se construye colocando las probabilidades $P_{ij}$ donde la fila representa el estado actual y la columna el estado futuro.
 
 $$P = \begin{bmatrix} 0 & 0.5 & 0.5 & 0 & 0 & 0 \\ 0 & 0 & 0.5 & 0.25 & 0 & 0.25 \\ 0 & 0.5 & 0 & 0 & 0.25 & 0.25 \\ 0 & 0 & 0 & 0 & 0 & 1 \\ 0 & 0 & 0 & 0 & 0 & 1 \\ 0 & 0 & 0 & 0.5 & 0.5 & 0 \end{bmatrix}$$
 
-### 7. Verificación
+### 4. Verificación
 
-Comprobamos que la suma de cada renglón sea igual a $1$ (propiedad de matriz estocástica):
+Comprobamos que la suma de cada renglón sea igual a 1 para asegurar que es una matriz estocástica válida:
 
 - Fila 0: $0.5 + 0.5 = 1.0$ (Correcto)
 - Fila 1: $0.5 + 0.25 + 0.25 = 1.0$ (Correcto)
@@ -404,21 +366,17 @@ Modele el problema como una cadena de Markov.
 \end{document}
 ```
 
-Este ejercicio se modela como una **Cadena de Markov de tiempo discreto**. Se identifica como tal porque cumple con las características fundamentales de estos procesos estocásticos:
+### Resolución del Ejercicio
 
-- **Estados finitos:** El sistema puede estar en tres situaciones o categorías mutuamente excluyentes (Ciudades A, B o C).
-- **Probabilidades de transición constantes:** Las probabilidades de moverse de una ciudad a otra al día siguiente son fijas y no cambian con el tiempo.
-- **Propiedad de Markov:** La ciudad donde el agente estará mañana depende únicamente de la ciudad donde se encuentra hoy, y no de su historial de viajes previos.
+#### 1. Identificación de los datos del problema
 
-### 1. Identificación de los datos del problema
+El sistema presenta tres estados posibles que representan la ciudad donde el agente pernocta:
 
-El sistema tiene tres estados posibles correspondientes a las ciudades donde el agente puede pernoctar:
+- **Estado 1 ($A$):** Ciudad A.
+- **Estado 2 ($B$):** Ciudad B.
+- **Estado 3 ($C$):** Ciudad C.
 
-- **Estado 1 ($A$):** Estar en la ciudad A.
-- **Estado 2 ($B$):** Estar en la ciudad B.
-- **Estado 3 ($C$):** Estar en la ciudad C.
-
-Las probabilidades condicionales de transición dadas por el enunciado son:
+Las probabilidades de transición dadas son las siguientes:
 
 - **Desde Ciudad A:**
     - Permanecer en A ($A \to A$): $0.1$
@@ -433,15 +391,15 @@ Las probabilidades condicionales de transición dadas por el enunciado son:
     - Ir a Ciudad B ($C \to B$): $0.4$
     - Permanecer en C ($C \to C$): $0.4$
 
-### 2. Explicación de lo que se pide
+#### 2. Construcción de la matriz de probabilidades de transición ($P$)
 
-Se solicita modelar el proceso como una cadena de Markov, lo que implica estructurar formalmente los estados y construir la **matriz de probabilidades de transición ($P$)**. Esta matriz organiza las probabilidades de moverse de un estado $i$ a un estado $j$ en un solo paso de tiempo (un día).
+La matriz se organiza de forma que cada fila represente el estado actual y cada columna el estado siguiente. Una propiedad fundamental es que la suma de las probabilidades de cada renglón debe ser igual a 1 ($100\%$ de las posibilidades de movimiento).
 
-### 3. Fórmulas utilizadas y razonamiento
+- **Renglón 1 (Origen A):** $P_{AA} = 0.1, P_{AB} = 0.3, P_{AC} = 0.6$.
+- **Renglón 2 (Origen B):** $P_{BA} = 0.2, P_{BB} = 0.2, P_{BC} = 0.6$.
+- **Renglón 3 (Origen C):** $P_{CA} = 0.2, P_{CB} = 0.4, P_{CC} = 0.4$.
 
-La matriz de transición se define como: $$P = \begin{bmatrix} P_{AA} & P_{AB} & P_{AC} \\ P_{BA} & P_{BB} & P_{BC} \\ P_{CA} & P_{CB} & P_{CC} \end{bmatrix}$$
-
-Una propiedad fundamental de las matrices estocásticas es que **la suma de las probabilidades de cada renglón debe ser igual a 1**. Esto representa la certeza de que el agente debe estar en alguna de las tres ciudades al día siguiente (los estados son colectivamente exhaustivos).
+La matriz de transición resultante es: $$P = \begin{bmatrix} 0.1 & 0.3 & 0.6 \\ 0.2 & 0.2 & 0.6 \\ 0.2 & 0.4 & 0.4 \end{bmatrix}$$
 
 ### 4. Sustitución de valores paso a paso
 
