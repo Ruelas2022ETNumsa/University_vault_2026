@@ -1434,6 +1434,7 @@
         "_library-system.md",
         "_mindmap-system.md",
         "_note-system.md",
+        "_TABnote-system.md",
         "_notebooklm-prompt.md",
         "_notebooklm-system.md",
         "_pdf-system.md",
@@ -2763,6 +2764,10 @@
       "isHidden": false
     },
     "rendimiento.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_config/_TABnote-system.md": {
       "isPinned": false,
       "isHidden": false
     }
