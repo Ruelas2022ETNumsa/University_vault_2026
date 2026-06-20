@@ -6141,6 +6141,8 @@ tratarlos
 transcurrir
 transcurrido
 tantos
+trabajara
+trabaje
 ToDo
 Templater
 Text
@@ -13059,6 +13061,7 @@ Talleres
 Tasa
 Tiempos
 Tomamos
+Tener
 Sistema
 Sync
 Save
@@ -20089,6 +20092,7 @@ SERVIDOR
 Suele
 Seguir
 Sumatoria
+Sabiendo
 Plugins
 Pendientes
 Plugin
@@ -25495,6 +25499,7 @@ Parciales
 PRIORITARIA
 Presenta
 Proporci
+Porcentajes
 del
 date
 de
@@ -30726,6 +30731,7 @@ despeje
 deducida
 desplazarse
 determinado
+desempe
 Vault
 Verificar
 Variables
@@ -55031,6 +55037,7 @@ selecciones
 sustituye
 sustituidos
 satisfactoriamente
+solicitados
 vault
 vil
 ver
@@ -61567,6 +61574,7 @@ volvemos
 variabilidad
 valida
 variaciones
+verificamos
 audience
 activo
 auto
@@ -67466,6 +67474,8 @@ analizamos
 abandonan
 atendidas
 aproxima
+aplicando
+alcanza
 related
 recomendados
 ribbon
@@ -73862,6 +73872,7 @@ respetan
 recurrente
 realizamos
 regulares
+redondeando
 notes
 notas
 nuevas
@@ -86705,6 +86716,8 @@ colocando
 caracterizado
 criterios
 cticos
+cabo
+comidas
 updated
 un
 universo
@@ -112156,6 +112169,8 @@ Individuos
 Instalaciones
 Insertando
 Indirecta
+Inciso
+Incisos
 Funci
 File
 Fase
@@ -125240,6 +125255,8 @@ Eliminemos
 Envuelve
 Explica
 Entrega
+Estabilidad
+Estable
 Obsidian
 OmniSearch
 Ocultar
@@ -142483,6 +142500,7 @@ prevalece
 parada
 prioritarias
 pasan
+proceder
 min
 mica
 movimiento
@@ -161302,6 +161320,7 @@ Bucles
 Basado
 BASICOS
 Banco
+Buscamos
 en
 exacta
 escaneados
@@ -167917,6 +167936,9 @@ expresados
 estabilidad
 estandarizar
 estacionaria
+estacionarios
+estacionario
+extraemos
 Motor
 Media
 Mantiene
@@ -175434,6 +175456,7 @@ Mermaid
 Modelado
 Medida
 Moneda
+Medidas
 Lectura
 LaTeX
 Linter
@@ -186985,6 +187008,8 @@ ltiple
 libere
 lavados
 lavando
+llegaran
+llegue
 incluyendo
 im
 instalar
@@ -194614,6 +194639,8 @@ identifi
 iterar
 inactivos
 irrelevante
+iteramos
+identificando
 Dependencia
 Dropbox
 Dataview
@@ -200707,6 +200734,7 @@ Directa
 Determin
 Determinado
 DESDE
+Desempe
 Remotely
 Raz
 Revisa
@@ -238277,6 +238305,7 @@ UJYjP
 Unas
 Universitaria
 Unpainted
+Utilizaci
 Nombre
 Notas
 No
@@ -251531,6 +251560,7 @@ ocup
 operativa
 ocupado
 organizan
+ocioso
 junto
 json
 jer
