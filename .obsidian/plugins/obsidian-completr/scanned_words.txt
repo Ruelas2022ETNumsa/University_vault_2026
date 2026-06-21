@@ -30748,6 +30748,7 @@ discusi
 documentado
 diff
 divergir
+desuso
 Vault
 Verificar
 Variables
@@ -55080,6 +55081,7 @@ sitio
 separ
 sobrescritura
 sobrescrito
+subrayar
 vault
 vil
 ver
@@ -149883,6 +149885,7 @@ modelado
 modificado
 miles
 mitigado
+monitorear
 YAML
 Ya
 You
@@ -278735,6 +278738,7 @@ wnOK
 wMWj
 wODPE
 wkPsc
+widget
 xima
 xeles
 xy
