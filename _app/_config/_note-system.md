@@ -135,21 +135,21 @@ galaxy-links
 
 ## Carpetas del baúl
 
-| Carpeta | Función |
-|---------|---------|
-| `Semesters/` | Todo el contenido académico |
-| `MOC/` | Notas de índice por materia, enlazan todas sus stars |
-| `_app/_config/` | Configuración del sistema: convención, galaxy system, tags |
-| `_app/_appnotes/` | Guías de herramientas: Desmos, tags, etc. |
+| Carpeta            | Función                                                            |
+| ------------------ | ------------------------------------------------------------------ |
+| `Semesters/`       | Todo el contenido académico                                        |
+| `MOC/`             | Notas de índice por materia, enlazan todas sus stars               |
+| `_app/_config/`    | Configuración del sistema: convención, galaxy system, tags         |
+| `_app/_appnotes/`  | Guías de herramientas: Desmos, tags, etc.                          |
 | `_app/Excalidraw/` | Archivos fuente de Excalidraw — `Constellations/` y `Observatory/` |
-| `_app/scripts/` | Scripts de automatización del baúl |
-| `_app/solve/` | Problemas conocidos y soluciones (git, sync, etc.) |
-| `_app/TagsRoutes/` | Archivos de configuración de rutas de tags |
-| `.cache/desmos/` | Caché SVG de Desmos — generado automáticamente por el plugin |
-| `_assets/` | Imágenes exportadas: .png, .svg, .jpeg |
-| `_templates/` | Plantillas de notas — una por tipo de cuerpo galaxy |
-| `_pdf/` | Archivos PDF físicos — una carpeta por materia |
-| `borrar/` | Zona de espera antes de eliminar archivos permanentemente |
+| `_app/scripts/`    | Scripts de automatización del baúl                                 |
+| `_app/solve/`      | Problemas conocidos y soluciones (git, sync, etc.)                 |
+| `_app/TagsRoutes/` | Archivos de configuración de rutas de tags                         |
+| `.cache/desmos/`   | Caché SVG de Desmos — generado automáticamente por el plugin       |
+| `_assets/`         | Imágenes exportadas: .png, .svg, .jpeg                             |
+| `_templates/`      | Plantillas de notas — una por tipo de cuerpo galaxy                |
+| `_PDF/`            | Archivos PDF físicos — una carpeta por materia                     |
+| `borrar/`          | Zona de espera antes de eliminar archivos permanentemente          |
 
 %%
 galaxy-links

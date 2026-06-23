@@ -89,7 +89,7 @@ University_Vault_2026/
 │                                  Excalidraw, o imágenes insertadas.
 │                                  Se nombran igual que la nota fuente.
 │
-├── _pdf/                       ← archivos PDF físicos — ver [[_pdf-system]]
+├── _PDF/                       ← archivos PDF físicos — ver [[_pdf-system]]
 │   ├── ETN806/                    una carpeta por materia, sin sub-carpetas
 │   ├── ETN302/                    la organización semántica la llevan los nombres
 │   └── ETNXXX/                    y las notas asteroid en Semesters/
@@ -574,31 +574,31 @@ galaxy-links
 
 ## Registro de decisiones de diseño
 
-| Decisión | Razón |
+| Decisión                                                          | Razón |
 |----------|-------|
-| `constellation` y `observatory` como tipos separados | Excalidraw tiene dos modos de uso distintos: mapa mental estructural (con Mindmap Builder) y dibujo técnico libre. Separarlos en tipos galaxy permite filtrarlos con DataView y distinguirlos en el grafo. |
-| `photon` = imagen estática únicamente (2026-05-30) | Un archivo visual puro (.png, .jpg arrastrado o recorte PDF++) no tiene la misma naturaleza que código que genera una imagen. Mezclarlos en un solo tipo era un error conceptual. |
-| `neutrino` como tipo separado (2026-05-30) | Desmos y TikZJax son código — tienen sintaxis, se editan, se versionan con Git. La imagen es solo su output. Un `neutrino` no es nota separada sino bloque embebido en la nota host. El nombre refleja su naturaleza: no se ve directamente pero genera un efecto visible. |
-| `neutrino` vive embebido, no como nota propia | Casi nunca justifica nota separada. Su contexto siempre es la teoría o el ejercicio que ilustra. |
-| `photon` ya no incluye Excalidraw ni código generador | Con `constellation`, `observatory` y `neutrino` dedicados, `photon` queda exclusivamente para imágenes estáticas puras. |
+| `constellation` y `observatory` como tipos separados              | Excalidraw tiene dos modos de uso distintos: mapa mental estructural (con Mindmap Builder) y dibujo técnico libre. Separarlos en tipos galaxy permite filtrarlos con DataView y distinguirlos en el grafo. |
+| `photon` = imagen estática únicamente (2026-05-30)                | Un archivo visual puro (.png, .jpg arrastrado o recorte PDF++) no tiene la misma naturaleza que código que genera una imagen. Mezclarlos en un solo tipo era un error conceptual. |
+| `neutrino` como tipo separado (2026-05-30)                        | Desmos y TikZJax son código — tienen sintaxis, se editan, se versionan con Git. La imagen es solo su output. Un `neutrino` no es nota separada sino bloque embebido en la nota host. El nombre refleja su naturaleza: no se ve directamente pero genera un efecto visible. |
+| `neutrino` vive embebido, no como nota propia                     | Casi nunca justifica nota separada. Su contexto siempre es la teoría o el ejercicio que ilustra. |
+| `photon` ya no incluye Excalidraw ni código generador             | Con `constellation`, `observatory` y `neutrino` dedicados, `photon` queda exclusivamente para imágenes estáticas puras. |
 | Canvas desactivado — reemplazado por Excalidraw + Mindmap Builder | Canvas es rígido y no integra con el grafo de Obsidian de forma útil. Excalidraw con Mindmap Builder ofrece auto-layout, atajos de teclado y los archivos `.excalidraw` participan del grafo como notas `.md`. |
-| La galaxia vive en el YAML, no en el nombre del archivo | Los nombres se mantienen limpios y cortos. El YAML lleva todos los datos semánticos. |
-| Semestre y parcial no van en el nombre del archivo | Ya están codificados en la ruta de carpeta. Sin redundancia. |
-| Slugs descriptivos en inglés | Legibles en búsqueda sin memorizar códigos. Evita problemas de codificación con tildes. |
-| T00 para notas de parcial completo | Formularios y enunciados pertenecen al parcial, no a un tema específico. |
-| ETN302 se queda como legacy | Renombrar rompería cientos de wikilinks internos. |
-| `beacon` como tipo de infraestructura | Las notas de `_app/` no son contenido académico — necesitan un tipo visual propio que las distinga en el grafo sin contaminar los tipos galaxy del contenido real. El nombre refleja su rol: señales de orientación del vault. |
-| Números de tema con cero al frente | El explorador de archivos ordena correctamente: `T01` antes que `T10`. |
-| Los photons siempre adjuntos | Un visual no tiene significado sin la nota que ilustra. |
-| Bridge como nota explícita | La conexión entre materias es conocimiento valioso en sí mismo. |
-| Wikilinks en bloque `%%` | Invisibles en lectura, visibles en el grafo. Grafo limpio sin ensuciar el contenido. |
-| Dos capas de conexión (YAML + `%%`) | YAML para búsquedas y DataView. `%%` para visualización en el grafo. Cada una con su propósito. |
-| `borrar/` como carpeta de espera | Más seguro que borrar directamente — revisar antes de eliminar permanentemente. |
-| `_pdf/` como almacén separado de `Semesters/` | Los PDFs son fuentes, no conocimiento procesado. El `asteroid` es el puente al grafo. |
-| PDF++ para texto, Annotator para EPUBs/escaneados | Cada plugin tiene su dominio sin solaparse. OmniSearch + Text Extractor cubren la búsqueda. |
-| Opción B como sistema oficial para Semesters/ (2026-05-28) | Las plantillas B preguntan materia, semestre, parcial, tema y nombre, y mueven el archivo automáticamente. Elimina la necesidad de navegar manualmente a la carpeta destino. Las plantillas A quedan en `_templates/alt-B/plantillas-A-respaldo.md`. |
-| YAML híbrido en constellation y observatory (2026-05-28) | El plugin de Excalidraw requiere `excalidraw-plugin: parsed` en el frontmatter para abrir el archivo como lienzo. Se unifica con los campos galaxy en un solo bloque YAML. Sin este campo el archivo se abre como nota de texto. |
-| Extensión `.excalidraw.md` en lugar de `.excalidraw` | Mantener `.md` preserva compatibilidad con YAML, DataView y el grafo de Obsidian. Para usar en excalidraw.com se exporta con el comando del plugin. |
+| La galaxia vive en el YAML, no en el nombre del archivo           | Los nombres se mantienen limpios y cortos. El YAML lleva todos los datos semánticos. |
+| Semestre y parcial no van en el nombre del archivo                | Ya están codificados en la ruta de carpeta. Sin redundancia. |
+| Slugs descriptivos en inglés                                      | Legibles en búsqueda sin memorizar códigos. Evita problemas de codificación con tildes. |
+| T00 para notas de parcial completo                                | Formularios y enunciados pertenecen al parcial, no a un tema específico. |
+| ETN302 se queda como legacy                                       | Renombrar rompería cientos de wikilinks internos. |
+| `beacon` como tipo de infraestructura                             | Las notas de `_app/` no son contenido académico — necesitan un tipo visual propio que las distinga en el grafo sin contaminar los tipos galaxy del contenido real. El nombre refleja su rol: señales de orientación del vault. |
+| Números de tema con cero al frente                                | El explorador de archivos ordena correctamente: `T01` antes que `T10`. |
+| Los photons siempre adjuntos                                      | Un visual no tiene significado sin la nota que ilustra. |
+| Bridge como nota explícita                                        | La conexión entre materias es conocimiento valioso en sí mismo. |
+| Wikilinks en bloque `%%`                                          | Invisibles en lectura, visibles en el grafo. Grafo limpio sin ensuciar el contenido. |
+| Dos capas de conexión (YAML + `%%`)                               | YAML para búsquedas y DataView. `%%` para visualización en el grafo. Cada una con su propósito. |
+| `borrar/` como carpeta de espera                                  | Más seguro que borrar directamente — revisar antes de eliminar permanentemente. |
+| `_PDF/` como almacén separado de `Semesters/`                     | Los PDFs son fuentes, no conocimiento procesado. El `asteroid` es el puente al grafo. |
+| PDF++ para texto, Annotator para EPUBs/escaneados                 | Cada plugin tiene su dominio sin solaparse. OmniSearch + Text Extractor cubren la búsqueda. |
+| Opción B como sistema oficial para Semesters/ (2026-05-28)        | Las plantillas B preguntan materia, semestre, parcial, tema y nombre, y mueven el archivo automáticamente. Elimina la necesidad de navegar manualmente a la carpeta destino. Las plantillas A quedan en `_templates/alt-B/plantillas-A-respaldo.md`. |
+| YAML híbrido en constellation y observatory (2026-05-28)          | El plugin de Excalidraw requiere `excalidraw-plugin: parsed` en el frontmatter para abrir el archivo como lienzo. Se unifica con los campos galaxy en un solo bloque YAML. Sin este campo el archivo se abre como nota de texto. |
+| Extensión `.excalidraw.md` en lugar de `.excalidraw`              | Mantener `.md` preserva compatibilidad con YAML, DataView y el grafo de Obsidian. Para usar en excalidraw.com se exporta con el comando del plugin. |
 
 %%
 galaxy-links

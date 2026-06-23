@@ -82,7 +82,7 @@ University_Vault_2026/
 │   └── scripts/
 │
 ├── _assets/                    ← imágenes exportadas (.png, .svg, .jpeg)
-├── _pdf/                       ← archivos PDF físicos (una carpeta por materia)
+├── _PDF/                       ← archivos PDF físicos (una carpeta por materia)
 ├── _templates/                 ← plantillas de notas (tpl-star, tpl-planet, etc.)
 └── borrar/                     ← zona de espera antes de eliminar archivos
 ```
