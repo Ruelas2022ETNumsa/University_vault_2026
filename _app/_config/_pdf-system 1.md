@@ -55,19 +55,12 @@ University_Vault_2026/
 ├── _templates/                 ← plantillas de notas
 │
 └── _PDF/                       ← ★ archivos PDF físicos
-    ├── PDF-601/                   subcarpetas legacy — ver nota de convención abajo
-    ├── PDF-903/
-    ├── PDF-921/
-    ├── PDF-Electrónica analógica/
-    ├── PDF-Microprocesadores/
-    ├── PDF-telefonia/
-    └── [PDFs sueltos en raíz]     archivos sin subcarpeta — legacy, sin reorganizar aún
+    ├── ETN806/
+    ├── ETN302/
+    └── ETNXXX/
 ```
 
-
-`_PDF/` es un almacén de archivos fuente, no de notas. La organización semántica la llevan los nombres de archivo y las notas `asteroid`.
-
-> ⚠️ **Convención de subcarpetas — estado real (verificado en disco 2026-06-23):** Las subcarpetas existentes usan el formato `PDF-nombre` (nombre descriptivo de materia o tema, no sigla ETN). Esta es la convención **real y vigente** — no la convención `ETN806/` que se documentó originalmente. Para PDFs nuevos: crear subcarpeta `PDF-nombre` si la materia aún no tiene carpeta. No renombrar las carpetas existentes salvo decisión explícita del usuario. También hay PDFs sueltos directamente en la raíz de `_PDF/` sin subcarpeta — son archivos legacy sin organizar. No moverlos salvo indicación explícita.
+`_PDF/` sigue la misma lógica que `_assets/`: es un almacén de archivos fuente, no de notas. Una carpeta por materia, sin sub-carpetas de parcial ni de tema — la organización semántica la llevan los nombres de archivo y las notas `asteroid`.
 
 ---
 
