@@ -6153,6 +6153,7 @@ transmite
 transcribe
 trae
 tope
+transcriba
 ToDo
 Templater
 Text
@@ -30784,6 +30785,9 @@ detenido
 desinstalar
 desinstalado
 desinstalarlo
+dedicado
+discrepancia
+discrepancias
 Vault
 Verificar
 Variables
@@ -48253,6 +48257,7 @@ bugs
 bloqueante
 bruto
 background
+borrarla
 scope
 status
 selector
@@ -55137,6 +55142,11 @@ salteado
 scannow
 successfully
 sincronizando
+superado
+sigla
+sueltas
+sueltos
+significativa
 vault
 vil
 ver
@@ -67612,6 +67622,11 @@ aplicaciones
 alternativas
 audio
 assembler
+archivado
+aprueba
+aprobado
+aprobar
+aparte
 related
 recomendados
 ribbon
@@ -74031,6 +74046,9 @@ repar
 restore
 requieran
 reinstalar
+report
+reci
+registrados
 notes
 notas
 nuevas
@@ -86901,6 +86919,7 @@ cookies
 cambiado
 cursando
 compilaci
+capturas
 updated
 un
 universo
@@ -112368,6 +112387,7 @@ Idioma
 Inicio
 Indexaci
 Installer
+Indexado
 Funci
 File
 Fase
@@ -136816,6 +136836,7 @@ Adapter
 Administraci
 Administrador
 Aplicaciones
+Ante
 push
 pull
 para
@@ -142739,6 +142760,7 @@ pendrive
 pena
 pesa
 posiblemente
+propone
 min
 mica
 movimiento
@@ -168206,6 +168228,8 @@ estimar
 excluida
 encendido
 energ
+eliminados
+eliminada
 Motor
 Media
 Mantiene
@@ -201040,6 +201064,7 @@ DISM
 Digilent
 Discovery
 Desinstalar
+Discrepancia
 Remotely
 Raz
 Revisa
@@ -208112,6 +208137,7 @@ ReadyBoost
 RestoreHealth
 Reinicio
 Revisadas
+RICO
 Hider
 Hace
 Herramientas
@@ -213023,6 +213049,7 @@ HDMI
 HECHO
 Health
 Hubo
+HIST
 filtrar
 formato
 faltantes
@@ -251900,6 +251927,7 @@ opcionalmente
 optar
 omitido
 operation
+ofrecer
 junto
 json
 jer

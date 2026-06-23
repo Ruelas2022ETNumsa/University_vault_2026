@@ -9,12 +9,17 @@ related_notes:
   - "[[_template-system]]"
   - "[[_pdf-system]]"
   - "[[_mindmap-system]]"
+  - "[[_excalidraw-system]]"
+  - "[[_graph-system]]"
   - "[[_sync-system]]"
+  - "[[_basic-memory-system]]"
+  - "[[_notebooklm-system]]"
+  - "[[_TABnote-system]]"
   - "[[_ToDo-system]]"
   - "[[claude_solve]]"
 tags: [beacon, claude, arranque, infraestructura]
 date_created: 2026-05-30
-date_updated: 2026-06-03
+date_updated: 2026-06-23
 status: activo
 ---
 
@@ -29,11 +34,12 @@ status: activo
 Cuando el usuario comparta este archivo, Claude debe:
 
 1. Leerlo completo.
-2. Determinar el **modo de acceso** (ver sección Conectores).
+2. Determinar el **modo de acceso** (ver sección Conectores) — incluyendo si Basic Memory está disponible para búsqueda semántica.
 3. Determinar si el usuario quiere trabajar con una **materia específica** o con la **infraestructura del vault**.
 4. Si hay materia específica → leer su contexto según las rutas de la sección Materias.
 5. Confirmar con un mensaje breve: _"Contexto cargado. ¿En qué trabajamos?"_
-6. Para editar archivos existentes: siempre edit_file, nunca write_file. (Ver [[claude_solve]] para errores conocidos.)
+6. Para editar archivos existentes con Filesystem MCP: siempre `edit_file`, nunca `write_file` salvo que el usuario pida explícitamente sobrescribir o crear un archivo nuevo. (Ver [[claude_solve]] para errores conocidos.)
+7. **Antes de editar cualquier beacon de `_app/_config/`**, si el cambio es significativo, ofrecer o confirmar si se quiere un respaldo (copia con sufijo ` 1.md`) antes de tocar el original — es la práctica que se viene usando en este vault.
 
 ---
 
@@ -43,8 +49,12 @@ Cuando el usuario comparta este archivo, Claude debe:
 
 El vault está organizado como un **universo de galaxias**. Cada materia es una galaxia. La metáfora vive en el campo `galaxy_body` del YAML de cada nota — no en los nombres de carpetas.
 
-**Estado actual del vault: fase de construcción.**
-El Sistema Galaxy está definido pero las carpetas de materias y notas académicas aún no existen. ETN302 es una materia legacy de un trabajo anterior — se considera obsoleta. Las materias nuevas se crearán cuando termine la fase de construcción.
+**Estado actual del vault (verificado en disco, 2026-06-23): fase de construcción avanzada, no fase cero.**
+- El Sistema Galaxy está definido y estable.
+- Ya existen carpetas-esqueleto de materia: `Semesters/Sem_05/ETN506/Partial_2/` y `Semesters/Sem_09/ETN901/Partial_1/` — **ambas vacías, sin notas creadas todavía.**
+- `MOC/` no tiene ninguna MOC real — solo 2 capturas de pantalla sueltas (`comfor numbss.png` y su copia), que no son parte del sistema y deberían moverse a `_assets/` o `borrar/`.
+- `ETN302` es una materia legacy de un trabajo anterior — se considera obsoleta, no se le crean notas ni carpetas nuevas.
+- El foco sigue siendo infraestructura: cerrar las decisiones pendientes de tablet/TABnote, terminar Dataview, y luego recién empezar contenido académico real en ETN506 y ETN901.
 
 ---
 
@@ -53,39 +63,45 @@ El Sistema Galaxy está definido pero las carpetas de materias y notas académic
 ```
 University_Vault_2026/
 │
-├── Semesters/                  ← contenido académico (vacío en fase de construcción)
-│   └── Sem_NN/
-│       └── ETNXXX/
-│           ├── Partial_1/
-│           │   └── Topic_NN_nombre/
-│           │       └── [notas]
-│           ├── Partial_2/
-│           └── Partial_3/
+├── Semesters/                  ← contenido académico
+│   ├── Sem_05/
+│   │   └── ETN506/
+│   │       └── Partial_2/      ← creada, vacía
+│   └── Sem_09/
+│       └── ETN901/
+│           └── Partial_1/      ← creada, vacía
 │
-├── MOC/                        ← índices por materia (vacío en fase de construcción)
+├── MOC/                        ← índices por materia (vacío de MOCs reales; tiene 2 imágenes sueltas a limpiar)
 │
 ├── _app/
 │   ├── _config/                ← beacons del sistema (aquí vive este archivo)
-│   │   ├── _claude-boot.md     ← ESTE ARCHIVO
-│   │   ├── _galaxy-system.md   ← sistema completo: tipos, YAML, convenciones
-│   │   ├── _note-system.md     ← convención de nombres
-│   │   ├── _template-system.md ← plantillas Templater
-│   │   ├── _pdf-system.md      ← integración de PDFs
-│   │   ├── _mindmap-system.md  ← Excalidraw + Mindmap Builder
-│   │   ├── _excalidraw-system.md ← configuración del plugin
-│   │   ├── _sync-system.md     ← sincronización GitHub + Dropbox
-│   │   └── _ToDo-system.md     ← pendientes del sistema
-│   ├── _appnotes/              ← guías de herramientas (Desmos, LaTeX, tags)
+│   │   ├── _claude-boot.md       ← ESTE ARCHIVO
+│   │   ├── _galaxy-system.md     ← sistema completo: tipos, YAML, convenciones
+│   │   ├── _note-system.md       ← convención de nombres
+│   │   ├── _template-system.md   ← plantillas Templater
+│   │   ├── _pdf-system.md        ← integración de PDFs (convención documentada — ver nota de discrepancia abajo)
+│   │   ├── _mindmap-system.md    ← Excalidraw + Mindmap Builder
+│   │   ├── _excalidraw-system.md ← configuración del plugin Excalidraw
+│   │   ├── _graph-system.md      ← Desmos / TikZJax (`neutrino`)
+│   │   ├── _sync-system.md       ← sincronización GitHub + Mega
+│   │   ├── _basic-memory-system.md ← MCP Basic Memory (memoria semántica)
+│   │   ├── _notebooklm-system.md ← integración con NotebookLM
+│   │   ├── _TABnote-system.md    ← apuntes de tablet — status: en-discusion, NO cerrado
+│   │   └── _ToDo-system.md       ← pendientes del sistema
+│   ├── _appnotes/               ← guías de herramientas (Desmos, LaTeX, tags)
 │   ├── Excalidraw/
-│   │   ├── Constellations/     ← mapas mentales galaxy
-│   │   └── Observatory/        ← dibujos técnicos libres
+│   │   ├── Constellations/      ← mapas mentales galaxy
+│   │   └── Observatory/         ← dibujos técnicos libres
 │   └── scripts/
 │
-├── _assets/                    ← imágenes exportadas (.png, .svg, .jpeg)
-├── _PDF/                       ← archivos PDF físicos (una carpeta por materia)
-├── _templates/                 ← plantillas de notas (tpl-star, tpl-planet, etc.)
-└── borrar/                     ← zona de espera antes de eliminar archivos
+├── _assets/                     ← imágenes exportadas (.png, .svg, .jpeg)
+├── _PDF/                        ← ★ archivos PDF físicos — ver nota de discrepancia abajo
+├── _tabnotes_archivo/           ← propuesto en [[_TABnote-system]], aún no aprobado/creado — snapshots de cierre de parcial, fuera de Git
+├── _templates/                  ← plantillas de notas (tpl-star, tpl-planet, etc.)
+└── borrar/                      ← zona de espera antes de eliminar archivos
 ```
+
+> ⚠️ **Discrepancia conocida en `_PDF/` (sin resolver, ver [[_ToDo-system]]):** `_pdf-system.md` documenta subcarpetas por sigla de materia (`_PDF/ETN806/`). En disco, las subcarpetas reales son por nombre de materia/tema en texto: `PDF-601`, `PDF-903`, `PDF-921`, `PDF-Electrónica analógica`, `PDF-Microprocesadores`, `PDF-telefonia`. También hay PDFs sueltos directo en la raíz de `_PDF/` sin subcarpeta. Claude debe usar la convención **real** que encuentre en disco al leer o guardar PDFs, no asumir `ETNXXX/` hasta que esta discrepancia se resuelva y `_pdf-system.md` se actualice.
 
 ---
 
@@ -97,7 +113,7 @@ University_Vault_2026/
 ETNXXX-TNN-nombre-descriptivo.md
 ```
 
-- `ETNXXX` → código de materia (ej. `ETN806`)
+- `ETNXXX` → código de materia (ej. `ETN806`, `ETN506`, `ETN901`)
 - `TNN` → número de tema con cero (`T01`, `T03`). Usar `T00` para notas de parcial completo.
 - `nombre-descriptivo` → slug corto en inglés con guiones
 
@@ -118,6 +134,8 @@ ETNXXX-TNN-nombre-descriptivo.md
 | `observatory` | 🔭 | Dibujo técnico libre en Excalidraw |
 | `bridge` | 🌉 | Conexión entre dos materias |
 | `beacon` | 📡 | Guía de infraestructura del vault |
+
+> ⚠️ **Tipo #14 en discusión:** `_TABnote-system.md` propone `tabnote` para apuntes de tablet en Samsung Cloud. **No está aprobado** — no usar `galaxy_body: tabnote` en notas reales hasta que se cierre esa decisión (ver [[_ToDo-system]]).
 
 ### Dos capas de conexión obligatorias
 
@@ -152,31 +170,33 @@ galaxy-links
 
 ## CONECTORES — CÓMO ACCEDE CLAUDE AL VAULT
 
-Claude tiene dos vías de acceso. Usar la que esté disponible:
+Claude tiene **tres** vías de acceso. Usar la que esté disponible y la que corresponda a la tarea:
 
-| Situación | Conector | Acceso |
-|-----------|----------|--------|
-| PC encendida | **Filesystem MCP** | Lee y escribe directo en `E:\University_vault_2026` |
-| PC apagada / móvil | **GitHub MCP** | Lee y escribe en `https://github.com/Ruelas2022ETNumsa/University_vault_2026` |
+| Situación / tarea | Conector | Acceso |
+|---|---|---|
+| PC encendida — leer/crear/editar archivos puntuales | **Filesystem MCP** | Lee y escribe directo en `E:\University_vault_2026` |
+| PC apagada / móvil — leer o editar sin PC | **GitHub MCP** | Lee y escribe en `https://github.com/Ruelas2022ETNumsa/University_vault_2026` |
+| Cualquier situación — buscar por significado, no por nombre exacto; recordar contexto entre sesiones | **Basic Memory MCP** | Indexado semántico local de todo el vault (`BASIC_MEMORY_PROJECT_PATH`) — ver [[_basic-memory-system]] |
 
-Obsidian Git sincroniza PC ↔ GitHub automáticamente cada 5 minutos. Los cambios hechos por Claude desde GitHub llegan al vault local en el próximo auto-pull.
+**Cómo elegir:**
+- Si el usuario pide "busca las notas sobre X" sin saber el nombre exacto del archivo → preferir **Basic Memory** (`search_notes`) sobre Filesystem.
+- Si el usuario pide editar, mover o crear un archivo específico → **Filesystem MCP** (PC encendida) o **GitHub MCP** (sin PC).
+- Basic Memory y Filesystem conviven — no son excluyentes. Basic Memory no reemplaza la necesidad de Filesystem/GitHub para escribir, solo aporta búsqueda semántica y memoria.
 
-**Claude no puede ejecutar comandos de terminal.** Solo leer y escribir archivos.
+Obsidian Git sincroniza PC ↔ GitHub automáticamente cada 5 minutos. Mega sincroniza el vault entre PC, laptop, tablet y celular (ver [[_sync-system]]) — esa sincronización es independiente de GitHub y de los conectores de Claude. Los cambios hechos por Claude desde GitHub llegan al vault local en el próximo auto-pull.
+
+**Claude no puede ejecutar comandos de terminal.** Solo leer y escribir archivos (Filesystem/GitHub) o indexar/buscar (Basic Memory).
 
 ---
 
 ## MATERIAS ACTIVAS
 
-> En fase de construcción. Ninguna materia tiene carpetas ni notas creadas aún.
-> Completar esta sección cuando comience la fase de contenido.
+| Código | Nombre completo | Semestre | Parcial actual | Ruta | Estado |
+|--------|----------------|----------|----------------|------|--------|
+| ETN506 | *(completar nombre)* | 5 | 2 | `Semesters/Sem_05/ETN506/Partial_2/` | Carpeta creada, sin notas |
+| ETN901 | *(completar nombre)* | 9 | 1 | `Semesters/Sem_09/ETN901/Partial_1/` | Carpeta creada, sin notas |
 
-### Plantilla para registrar una materia nueva
-
-```
-| Código | Nombre completo | Semestre | Parcial actual | Ruta |
-|--------|----------------|----------|----------------|------|
-| ETNXXX | Nombre         | N        | N              | Semesters/Sem_NN/ETNXXX/ |
-```
+> Tabla a completar con el usuario — los nombres completos de ETN506 y ETN901 no están registrados en ningún beacon todavía.
 
 ### Materia legacy (no usar)
 
@@ -191,14 +211,14 @@ Obsidian Git sincroniza PC ↔ GitHub automáticamente cada 5 minutos. Los cambi
 ### Si el usuario pide ayuda con una materia
 
 1. Verificar que la materia existe en la sección Materias Activas.
-2. Si existe → leer la star del tema correspondiente en `MOC/` o en `Semesters/`.
+2. Si existe → leer la star del tema correspondiente en `MOC/` o en `Semesters/`. Si la carpeta está vacía (como ETN506 y ETN901 hoy), decírselo en vez de asumir contenido.
 3. Leer las notas relevantes según el tipo de pedido (planet para teoría, comet para ejercicios, etc.).
 4. Responder con el contexto real del vault — no de memoria genérica.
 
 ### Si el usuario pide crear una nota nueva
 
 1. Respetar siempre el patrón de nombre: `ETNXXX-TNN-nombre-descriptivo.md`
-2. Usar el YAML mínimo del tipo correspondiente (ver `_galaxy-system.md` para plantillas completas).
+2. Usar el YAML mínimo del tipo correspondiente (ver `_galaxy-system.md` para plantillas completas). No usar `tabnote` — sigue sin aprobar.
 3. Incluir el bloque `%%` al final con los wikilinks galaxy.
 4. Guardar en la ruta correcta según el tipo.
 5. Si la carpeta destino no existe aún → avisarle al usuario antes de crear el archivo.
@@ -212,16 +232,20 @@ Leer el beacon específico según el tema:
 | Sistema completo, tipos galaxy, YAML | `_app/_config/_galaxy-system.md` |
 | Nombres de archivos, convención | `_app/_config/_note-system.md` |
 | Plantillas Templater | `_app/_config/_template-system.md` |
-| PDFs, plugin PDF++, asteroids | `_app/_config/_pdf-system.md` |
+| PDFs, plugin PDF++, asteroids | `_app/_config/_pdf-system.md` (ver discrepancia de `_PDF/` arriba) |
 | Excalidraw, Mindmap Builder | `_app/_config/_mindmap-system.md` |
 | Configuración plugin Excalidraw | `_app/_config/_excalidraw-system.md` |
-| Sincronización GitHub, Dropbox | `_app/_config/_sync-system.md` |
+| Desmos / TikZJax (`neutrino`) | `_app/_config/_graph-system.md` |
+| Sincronización GitHub + Mega | `_app/_config/_sync-system.md` |
+| Memoria semántica (Basic Memory MCP) | `_app/_config/_basic-memory-system.md` |
+| NotebookLM (tutor externo) | `_app/_config/_notebooklm-system.md` |
+| Apuntes de tablet (en discusión, no cerrado) | `_app/_config/_TABnote-system.md` |
 | Pendientes del sistema | `_app/_config/_ToDo-system.md` |
 
 ### Si el usuario está en móvil sin PC encendida
 
 - Usar GitHub MCP para leer y escribir notas.
-- Avisar al usuario que los cambios llegarán al vault local en el próximo auto-pull de Obsidian Git (hasta 5 min después de encender la PC).
+- Avisar al usuario que los cambios llegarán al vault local en el próximo auto-pull de Obsidian Git (hasta 5 min después de encender la PC), y que la sincronización con Mega hacia tablet/celular es un canal aparte.
 
 ---
 
@@ -233,8 +257,10 @@ Leer el beacon específico según el tema:
 4. **Respuestas concisas en el chat** — el detalle va en el archivo `.md`, no en la conversación.
 5. **Si una ruta no existe aún** → decírselo al usuario antes de crear archivos, no asumir rutas.
 6. **ETN302 es legacy** — no crear notas ni carpetas para esta materia.
-7. **En fase de construcción** → el foco es la infraestructura, no el contenido académico.
-8. **Actualizar `date_updated`** en el YAML de cualquier beacon que se modifique.
+7. **No usar `galaxy_body: tabnote`** en notas reales — tipo en discusión, no aprobado.
+8. **Ante discrepancias entre lo documentado y lo que hay en disco** (como `_PDF/`) → confiar en lo que hay en disco y avisar de la discrepancia, no forzar la convención documentada.
+9. **Antes de editar un beacon de forma significativa** → ofrecer respaldo (copia ` 1.md`) si no se hizo ya.
+10. **Actualizar `date_updated`** en el YAML de cualquier beacon que se modifique.
 
 %%
 galaxy-links
@@ -243,8 +269,12 @@ galaxy-links
 [[_template-system]]
 [[_pdf-system]]
 [[_mindmap-system]]
+[[_excalidraw-system]]
 [[_graph-system]]
 [[_sync-system]]
+[[_basic-memory-system]]
+[[_notebooklm-system]]
+[[_TABnote-system]]
 [[_ToDo-system]]
 [[claude_solve]]
 %%

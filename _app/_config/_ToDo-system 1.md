@@ -7,10 +7,9 @@ related_notes:
   - "[[_galaxy-system]]"
   - "[[_note-system]]"
   - "[[_sync-system]]"
-  - "[[_TABnote-system]]"
 tags: [beacon, todo, plugins, infraestructura]
 date_created: 2026-05-29
-date_updated: 2026-06-23
+date_updated: 2026-06-09
 status: activo
 ---
 
@@ -19,7 +18,6 @@ status: activo
 > Sistema Galaxy: [[_galaxy-system]]
 > Convención de notas: [[_note-system]]
 > Sistema Sync: [[_sync-system]]
-> Sistema TABnote (apuntes de tablet): [[_TABnote-system]]
 
 ---
 
@@ -58,31 +56,22 @@ status: activo
 
 ## Pendientes del sistema
 
-### Sincronización tablet — HISTÓRICO (Google Drive, descartado)
-> Este modelo ya no existe. `TAB_nexus` y todo Google Drive fueron eliminados — ver [[_sync-system]] (migración a Mega, 2026-06-13). Se deja la lista tal cual quedó, marcada como histórica, en vez de borrarla, para que quede registro de que se intentó y se abandonó.
-- [x] ~~Decidir flujo tablet: Samsung Notes → PDF → Google Drive → vault~~ — descartado
-- [x] ~~Carpeta `_pdf/TAB_nexus/` creada en el vault~~ — eliminada
-- [x] ~~Crear carpeta `TAB_nexus` en Google Drive~~ — eliminada
-- [x] ~~Google Drive File Stream configurado~~ — eliminado
-- [x] ~~Symlink `_pdf/TAB_nexus` → `Mi unidad/TAB_nexus`~~ — eliminado
-- [x] ~~Autosync instalado y configurado en tablet~~ — reemplazado por FolderSync + Mega
-- [x] ~~Flujo tablet → vault verificado (Drive)~~ — superado por el flujo Mega
-- [x] ~~Flujo vault → tablet verificado (Drive)~~ — superado por el flujo Mega
-
-### Sincronización tablet — modelo actual (Samsung Cloud nativo, en discusión)
-> Ver [[_TABnote-system]] — `status: en-discusion`. El apunte manuscrito vive nativo en Samsung Cloud (`.sdocx`), sincronizado tablet ↔ PC. El PDF activo en el baúl quedó descartado; solo se genera un snapshot PDF al cerrar cada parcial, archivado en `_tabnotes_archivo/` (separado de `_PDF/`, fuera de Git).
-- [x] Validar empíricamente edición multi-dispositivo tablet ↔ PC vía Samsung Cloud (2026-06-20) ✅
-- [ ] Repetir la prueba de edición multi-dispositivo en la laptop ASUS (Windows 11) — confirmar que el comportamiento se repite en un segundo equipo
-- [ ] Decidir: ¿`tabnote` como `galaxy_body` nuevo (tipo #14), o extender `asteroid` con `source_type: pdf-apunte-propio`? — bloquea actualizar [[_galaxy-system]] y [[_note-system]], y crear `tpl-tabnote.md` si se aprueba como tipo
-- [ ] Definir disparador/recordatorio para generar el snapshot PDF al cerrar cada parcial — sin esto, la única red de seguridad del modelo actual depende de que el usuario se acuerde manualmente
-- [ ] Medir tamaño real del PDF+(Samsung) de cierre de parcial — para estimar peso acumulado en `_tabnotes_archivo/` a lo largo del semestre
-- [ ] Confirmar convención real de subcarpetas dentro de `_PDF/` — el usuario reportó carpetas tipo `PDF-telefonia`, `PDF-921` (nombre de materia/tema en texto), que no coincide con el patrón documentado en [[_pdf-system]] (`_PDF/ETN806/`, una carpeta por sigla `ETNXXX`). Hay que decidir cuál es la convención real y actualizar [[_pdf-system]] en consecuencia.
+### Sincronización tablet — Google Drive
+- [x] Decidir flujo tablet: Samsung Notes → PDF → Google Drive → vault ✅
+- [x] Carpeta `_pdf/TAB_nexus/` creada en el vault ✅
+- [x] Crear carpeta `TAB_nexus` en Google Drive ✅
+- [x] Google Drive File Stream configurado (replicar archivos) ✅
+- [x] Symlink `_pdf/TAB_nexus` → `Mi unidad/TAB_nexus` creado en PC ✅
+- [x] Autosync instalado y configurado en tablet (bidireccional, 1h, WiFi) ✅
+- [x] Flujo tablet → vault verificado ✅
+- [x] Flujo vault → tablet verificado (anotaciones PDF++) ✅
 
 ### PDF++ — pendientes
-- [ ] Crear guía `_pdf-plus-guide.md` en `_app/_appnotes/` — cómo anotar, subrayar, quemar anotaciones (flatten), y flujo completo actual con `_PDF/` + Mega (ya no con TAB_nexus)
+- [ ] Crear guía `_pdf-plus-guide.md` en `_app/_appnotes/` — cómo anotar, subrayar, quemar anotaciones (flatten), y flujo completo con TAB_nexus
 
-### NotebookLM — guía de transcripción (TABnote)
-- [ ] Guía de formato de apuntes manuscritos para que NotebookLM transcriba bien (¿Cornell? ¿headers claros? ¿prompt de configuración dedicado?) — documentar en [[_notebooklm-system]], referenciado desde [[_TABnote-system]]
+### Autosync — pendientes
+- [ ] Configurar widget de sincronización en pantalla de inicio de la tablet
+- [ ] Revisar si hay app o widget en PC para monitorear estado de Drive File Stream
 
 ### Plugins — configuración pendiente
 - [ ] **TikZJax** — instalar y verificar que `circuitikz` renderiza correctamente (puede requerir reabrir Obsidian al primer render)
@@ -140,5 +129,4 @@ galaxy-links
 [[_sync-system]]
 [[_excalidraw-system]]
 [[_graph-system]]
-[[_TABnote-system]]
 %%

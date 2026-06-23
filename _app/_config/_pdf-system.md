@@ -175,11 +175,11 @@ Lector y anotador principal. Las citas se copian como callouts `[!PDF]` con link
 
 **Ajustes aplicados:**
 
-| Ajuste | Valor | Dónde |
-|--------|-------|-------|
-| Default location for new attachments | In the folder specified below → `_pdf` | Obsidian Settings → Files and links |
-| Dummy file folder path | `_pdf` | PDF++ Settings → Dummy PDF for external files |
-| Copy format "Quote" | `> [!PDF] {{linkWithDisplay}}`<br>`> {{text}}` | PDF++ Settings → Copying → Copy formats |
+| Ajuste                               | Valor                                          | Dónde                                         |
+| ------------------------------------ | ---------------------------------------------- | --------------------------------------------- |
+| Default location for new attachments | In the folder specified below → `_PDF`         | Obsidian Settings → Files and links           |
+| Dummy file folder path               | `_PDF`                                         | PDF++ Settings → Dummy PDF for external files |
+| Copy format "Quote"                  | `> [!PDF] {{linkWithDisplay}}`<br>`> {{text}}` | PDF++ Settings → Copying → Copy formats       |
 
 **Cuándo usarlo:** PDFs con texto seleccionable — apuntes, slides, prácticas, libros digitales. Es el 90% del flujo diario.
 
@@ -195,9 +195,9 @@ annotation-target: _PDF/ETN806/ETN806-T01-apuntes-pdf-conjunta.pdf
 
 **Ajuste aplicado:**
 
-| Ajuste | Valor | Dónde |
-|--------|-------|-------|
-| Custom default path | `_pdf` | Annotator Settings → Custom default path |
+| Ajuste              | Valor  | Dónde                                    |
+| ------------------- | ------ | ---------------------------------------- |
+| Custom default path | `_PDF` | Annotator Settings → Custom default path |
 
 **Cuándo usarlo:**
 - EPUBs — Annotator es la única opción para libros `.epub`
