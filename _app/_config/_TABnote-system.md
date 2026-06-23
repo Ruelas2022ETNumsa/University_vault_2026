@@ -26,16 +26,18 @@ status: en-discusion
 
 > **Estado: en discusión.** Este sistema documenta decisiones ya tomadas y deja explícitos los puntos aún abiertos. No se considera "activo" hasta cerrar la sección de Decisiones pendientes.
 
+> **Nota de versión (2026-06-20):** este documento tuvo un cambio de arquitectura a mitad de la discusión. La primera versión proponía exportar los apuntes como PDF y guardarlos como pieza activa dentro del baúl (`_tabnotes/`). Tras validar empíricamente la edición multi-dispositivo (ver más abajo), se abandonó ese modelo: **los apuntes manuscritos ahora viven nativamente en Samsung Cloud**, y el baúl solo recibe la transcripción `.md`. El export a PDF se conserva, pero degradado a **respaldo de archivo al cerrar cada parcial**, no como flujo activo. Las secciones de este documento reflejan ya el modelo nuevo; donde aplica, se deja constancia de qué quedó descartado del modelo anterior.
+
 ---
 
 ## Objetivo
 
-Los apuntes manuscritos se toman en la tablet con **Samsung Notes**, en formato nativo `.sdocx`. Este sistema define cómo ese material entra al baúl sin romper la arquitectura Galaxy, y se mantiene **separado del Sistema PDF** ([[_pdf-system]]) a propósito:
+Los apuntes manuscritos se toman en la tablet con **Samsung Notes**, en formato nativo `.sdocx`, y ahora también se editan/completan desde la PC vía la app oficial de Windows. Este sistema define cómo ese material se relaciona con el baúl, manteniéndose **separado del Sistema PDF** ([[_pdf-system]]) a propósito:
 
-> `_pdf/` almacena **fuentes externas** (libros, slides del profesor, prácticas oficiales) — material que el usuario no produjo.
-> `_tabnotes/` almacena **producción propia** — apuntes manuscritos del usuario, capturados en tablet.
+> `_pdf/` almacena **fuentes externas** (libros, slides del profesor, prácticas oficiales) — material que el usuario no produjo. Se sincroniza con Mega.
+> Los **apuntes manuscritos propios** ya no se almacenan como archivo activo dentro del baúl — viven en **Samsung Cloud**, sincronizados entre tablet y PC/laptop directamente por la app de Samsung. El baúl solo recibe su **transcripción en texto** vía NotebookLM, y opcionalmente un **snapshot PDF de archivo** al cerrar el parcial.
 
-Mezclarlos sería un error conceptual: un capítulo de Papoulis y un apunte de clase escrito a mano no tienen la misma naturaleza, aunque ambos terminen como PDF.
+Mezclar el almacenamiento activo de apuntes propios con `_pdf/` (fuentes externas) seguiría siendo un error conceptual aunque ya no se vayan a guardar ahí de forma activa — la distinción de naturaleza (producción propia vs fuente externa) se mantiene como principio del sistema.
 
 ---
 
@@ -45,48 +47,78 @@ Para evitar confusión entre dos herramientas con nombres parecidos:
 
 | Término | Qué es |
 |---|---|
-| **PDF+(Samsung)** | PDF exportado desde Samsung Notes con la opción "edición habilitada" — permite anotar con S Pen y editar cuadros de texto *solo dentro de la app Samsung Notes*. La plantilla de fondo queda fija al exportar. |
-| **PDF++(Obs)** | Plugin [obsidian-pdf-plus](https://github.com/ryotaushio/obsidian-pdf-plus) usado en el baúl para leer/anotar/citar PDFs dentro de Obsidian. Ya documentado en [[_pdf-system]]. |
-| **.sdocx** | Formato nativo de Samsung Notes. Es la única forma 100% editable (plantilla, cuadros de texto, trazos como objetos). Vive en la app / Samsung Cloud, no en el baúl. |
+| **PDF+(Samsung)** | PDF exportado desde Samsung Notes con la opción "edición habilitada" — permite anotar con S Pen y editar cuadros de texto *solo dentro de la app Samsung Notes*. La plantilla de fondo queda fija al exportar. En el modelo actual, se usa únicamente como snapshot de archivo, no como flujo activo. |
+| **PDF++(Obs)** | Plugin [obsidian-pdf-plus](https://github.com/ryotaushio/obsidian-pdf-plus) usado en el baúl para leer/anotar/citar PDFs dentro de Obsidian. Documentado en [[_pdf-system]]; aplica a los snapshots archivados de este sistema, no a los apuntes vivos. |
+| **.sdocx** | Formato nativo de Samsung Notes. Es la única forma 100% editable (plantilla, cuadros de texto, trazos como objetos). Vive en Samsung Cloud, sincronizado entre tablet y PC — **es la fuente de verdad activa** en el modelo actual. |
 
 ---
 
-## Flujo de vida de un apunte
+## Edición multi-dispositivo (PC + Tablet) — validado empíricamente, 2026-06-20
+
+Se probó editar una misma nota nativa `.sdocx` desde tablet y desde PC (Samsung Notes para Windows + app Samsung Account, instaladas vía Microsoft Store), con sincronización por Samsung Cloud.
+
+**Resultado de la prueba (tablet → PC → tablet):**
+
+| Elemento | Resultado |
+|---|---|
+| Sincronización | Casi inmediata (~2 segundos) una vez configurada |
+| Texto a mano (S Pen) | Se ve correctamente en PC |
+| Texto ASCII (teclado) | Perfecto en ambas direcciones, incluyendo edición (agregar/borrar) |
+| Imagen pegada | Llega correctamente, editable desde PC (ej. rotar) |
+| Trazo hecho con mouse en PC | Llega a la tablet, pero se ve "feo"/anguloso — el mouse no transmite presión/velocidad como el S Pen. No es un error de sync, es una limitación estética del input. |
+| Plantilla | Al crear una nota nueva **desde la PC**, no aparece la plantilla personalizada. Se soluciona fácilmente cambiándola desde la tablet — no se considera un problema bloqueante. |
+
+**Conclusión práctica:** la edición de texto desde PC es completamente confiable y es ahora el método preferido para convertir trazos a texto ASCII (más rápido con teclado que el conversor nativo de escritura a texto, y no depende de que el reconocimiento de Samsung interprete bien la letra del usuario). El motivo de optar por edición manual en vez del conversor automático de Samsung: el conversor a veces no transcribe bien por legibilidad de la letra o por requerir conexión a internet — pasar el texto a ASCII manualmente desde el teclado de PC es más confiable para el caso de uso del usuario.
+
+> Esto **resuelve y reemplaza** la antigua "Decisión pendiente: validar el modo PDF reader de edición en sitio" — no se está usando ese modo, sino edición directa del `.sdocx` nativo vía la app instalada. Ver Registro de decisiones cerradas.
+
+**Idioma de reconocimiento de escritura a texto:** se eligió **Español (México)** entre las opciones disponibles (España, México, Colombia, Estados Unidos) por ser el perfil más usado como "español latinoamericano neutro" en motores de reconocimiento, sin las particularidades de conjugación de España (vosotros) y con vocabulario técnico más cercano al usado en Bolivia que el perfil de Estados Unidos. No hay opción específica para Bolivia. Colombia queda como alternativa a probar si México falla mucho en vocabulario técnico puntual.
+
+**Pendiente de repetir:** la misma prueba en la laptop Windows 11 (ASUS) del usuario, para confirmar que el comportamiento es consistente entre equipos.
+
+---
+
+## Flujo de vida de un apunte (modelo actual)
 
 ```
-1. CAPTURA — Samsung Notes, formato nativo .sdocx
-   Toda la escritura y edición real ocurre aquí, siempre.
+1. CAPTURA Y EDICIÓN — Samsung Notes, formato nativo .sdocx
+   Ocurre indistintamente en tablet o PC (Samsung Notes para Windows),
+   sincronizado vía Samsung Cloud casi en tiempo real.
+   Aquí se hace también la limpieza de trazos a texto ASCII desde PC,
+   para facilitar la siguiente etapa.
         ↓
-2. EXPORT — PDF+(Samsung)
-   Se exporta cuando el apunte está en un punto estable
-   (no necesariamente "terminado" — ver Convención de versionado).
-        ↓
-3. ALMACENAMIENTO — _tabnotes/ETNXXX/
-   El PDF+(Samsung) entra al baúl, se sincroniza con todo el sistema
-   (PC, laptop) EXCEPTO GitHub — ver Exclusión de Git.
-        ↓
-4. ENRIQUECIMIENTO (opcional, dentro de Obsidian)
-   PDF++(Obs) permite seleccionar partes del PDF como imagen
-   y llevarlas a notas (recortes → photon, pdf-crop).
-        ↓
-5. TRANSCRIPCIÓN — NotebookLM
-   El PDF+(Samsung) se sube a NotebookLM → transcripción a .md con LaTeX.
+2. TRANSCRIPCIÓN — NotebookLM
+   La nota (como PDF exportado puntualmente para este fin, o el método
+   que defina [[_notebooklm-system]]) se sube a NotebookLM →
+   transcripción a .md con LaTeX.
    Guía de formato para que NotebookLM transcriba bien: PENDIENTE,
    ver [[_notebooklm-system]].
         ↓
-6. INTEGRACIÓN AL GRAFO
+3. INTEGRACIÓN AL GRAFO
    La transcripción .md se reparte en notas Galaxy normales
    (planet, moon, comet, etc.) según su contenido — NO queda como
-   un solo bloque. El tabnote original queda como fuente de respaldo.
+   un solo bloque.
         ↓
-7. VISIBILIDAD PARA CLAUDE
-   La transcripción .md sí llega a GitHub (a diferencia del PDF) →
+4. VISIBILIDAD PARA CLAUDE
+   La transcripción .md llega a GitHub →
    Claude puede leerla vía conectores y ayudar con la materia.
+        ↓
+5. ARCHIVO (al cerrar el parcial) — opcional pero recomendado
+   Se exporta un único PDF+(Samsung) de la nota ya cerrada y se
+   guarda como snapshot histórico en el baúl — ver sección Archivo
+   de cierre de parcial. No es parte del flujo activo, es solo
+   un respaldo contra pérdida total del original en Samsung Cloud.
 ```
+
+> **Descartado del modelo anterior:** ya no existe un paso de "export y guardar PDF en `_tabnotes/`" como pieza activa sincronizada en cada sesión de estudio. El PDF solo se genera una vez, al cerrar el tema/parcial, como archivo histórico.
 
 ---
 
-## Dónde viven los archivos
+## Archivo de cierre de parcial (snapshot, no flujo activo)
+
+Cuando un tema/parcial se da por terminado y la nota `.sdocx` ya no se va a seguir editando, se recomienda generar **un único** PDF+(Samsung) de esa nota y guardarlo en el baúl, como red de seguridad ante los riesgos conocidos de Samsung Cloud (ver más abajo) — no porque se vaya a usar activamente desde ahí.
+
+**Dónde se guarda:**
 
 ```
 University_Vault_2026/
@@ -94,65 +126,47 @@ University_Vault_2026/
 ├── _pdf/                       ← fuentes externas (libros, slides, prácticas) — ver [[_pdf-system]]
 │   └── ETNXXX/
 │
-└── _tabnotes/                  ← ★ apuntes manuscritos propios, exportados de Samsung Notes
-    ├── ETN806/
-    ├── ETN302/
-    └── ETNXXX/                 ← una carpeta por materia, sin sub-carpetas de parcial/tema
-                                    (misma lógica que _pdf/ — la organización semántica
-                                    la llevan el nombre del archivo y la nota tabnote)
+└── _tabnotes_archivo/          ← ★ snapshots de cierre de parcial, NO flujo activo
+    └── ETNXXX/
+        └── ETNXXX-P2-T01-apuntes-cierre.pdf
 ```
 
-`_tabnotes/` es estructuralmente igual a `_pdf/` (un almacén de archivos fuente, no de notas), pero semánticamente distinto: aquí no hay autor externo, el autor es el usuario.
+Se mantiene como carpeta separada de `_pdf/` por la misma razón conceptual de siempre: producción propia vs fuente externa. Se renombra de `_tabnotes/` a `_tabnotes_archivo/` para dejar explícito en el propio nombre que ya no es almacenamiento activo, sino histórico.
+
+**Convención de nombre:**
+
+```
+ETNXXX-PN-TNN-apuntes-cierre.pdf
+```
+
+Un solo archivo por tema, generado una sola vez al cerrar — no se reexporta ni se sobrescribe después, porque para entonces la nota ya no se edita más.
+
+**Exclusión de Git/GitHub:** igual que `_pdf/`, esta carpeta no sube a GitHub (binarios pesados rompen la sincronización de Git). Se sincroniza con el resto del sistema vía Mega/Obsidian Sync igual que `_pdf/`.
+
+```
+.gitignore
+_pdf/
+_tabnotes_archivo/
+```
 
 ---
 
-## Convención de nombres
+## Nota `tabnote` — el puente al grafo (modelo actual)
 
-Mismo patrón Galaxy, sin sub-numeración de versión en el nombre — el control de versión real lo lleva el historial de Git sobre un único archivo (ver más abajo):
-
-```
-ETNXXX-TNN-nombre-descriptivo.pdf
-```
-
-```
-_tabnotes/ETN806/ETN806-T01-apuntes-tablet-joint-pdf.pdf
-_tabnotes/ETN806/ETN806-T00-apuntes-tablet-formulario-p2.pdf
-```
-
-> Un solo archivo por tema, en escritura continua durante el semestre. No se crean `-v1`, `-v2` — el archivo se sobrescribe a medida que el tema crece (subtítulo 2, subtítulo 3...) hasta archivarse al cerrar el parcial. Ver **Convención de versionado** abajo.
-
----
-
-## Convención de versionado (un solo archivo, escritura continua)
-
-El flujo real del usuario: un tema empieza con los primeros subtítulos, se exporta; semanas después se agregan subtítulos nuevos a la **misma nota .sdocx**, se reexporta y se **sobrescribe el mismo PDF** en `_tabnotes/`. Esto se mantiene así hasta que el parcial cierra.
-
-Reglas:
-- **Nunca editar el PDF directamente.** Toda edición ocurre en el `.sdocx` original en Samsung Notes. El PDF en el baúl siempre es un export, nunca la fuente de edición — esto reduce (no elimina) el riesgo del bug de guardado in situ, ver Riesgos conocidos.
-- **Sobrescribir, no duplicar.** Mismo nombre de archivo en cada export. Git lleva el historial real de cambios — no hace falta numerarlo a mano.
-- **Archivar al cerrar el parcial.** Cuando el tema/parcial se da por terminado, el archivo deja de tocarse. No requiere moverse de carpeta — su estado pasa a "cerrado" implícitamente (se podría marcar con un campo `status` en la nota `tabnote`, ver YAML abajo).
-
-> **Pendiente de validar con uso real:** cómo se comporta el repositorio de Git con un PDF que se sobrescribe seguido durante el semestre (cada export es un blob binario nuevo, sin diff legible). Ver Decisiones pendientes.
-
----
-
-## Nota `tabnote` — el puente al grafo
-
-Igual que el `asteroid` conecta un PDF externo al grafo, el `tabnote` conecta un PDF+(Samsung) propio. Vive en `Semesters/` junto al resto de notas Galaxy del tema.
+A diferencia del modelo anterior, la nota `tabnote` ya **no apunta a un PDF activo en el baúl** — apunta a la nota viva en Samsung Cloud (como referencia, no como archivo abrible desde Obsidian) y a la transcripción, que sí es el contenido realmente integrado al grafo. El snapshot de cierre de parcial es opcional y se enlaza solo si existe.
 
 ```yaml
 ---
-title: "ETN806 — T01 — Apunte de tablet: PDF conjunta"
+title: "ETN806 — T01 — Apunte de tablet: Joint PDF"
 galaxy_body: tabnote
 subject: ETN806
 semester: 8
 partial: 2
 topic: 1
-source_device: "Galaxy Tab — Samsung Notes"
-export_format: "pdf-plus-samsung"
-pdf_file: "[[ETN806-T01-apuntes-tablet-joint-pdf.pdf]]"
+source: "Samsung Cloud — Samsung Notes (.sdocx), sincronizado tablet + PC"
 transcribed: false
 transcription_note: "[[ETN806-T01-transcripcion-notebooklm]]"
+archive_snapshot: "[[ETN806-P2-T01-apuntes-cierre.pdf]]"   # solo si ya se cerró el parcial
 related_planets:
   - "[[ETN806-T01-joint-pdf-definition]]"
 tags: [ETN806, galaxy-tabnote, P2, T01]
@@ -171,38 +185,23 @@ galaxy-links
 
 | Campo | Propósito |
 |---|---|
-| `export_format` | Siempre `pdf-plus-samsung` por ahora. Reservado por si en el futuro se prueba otro modo de export. |
+| `source` | Deja explícito que la fuente viva no está en el baúl, sino en Samsung Cloud — evita que alguien busque el archivo dentro del repo y no lo encuentre. |
 | `transcribed` | `false` hasta que exista una transcripción NotebookLM vinculada. Permite filtrar con DataView qué apuntes faltan transcribir. |
 | `transcription_note` | Wikilink a la nota que contiene la transcripción `.md`. Esa nota sí participa de Git/GitHub. |
-| `status` | `en-proceso` mientras el tema sigue en escritura activa, `cerrado` cuando el parcial termina. |
-
-> `tabnote` se diferencia de `asteroid` (ver [[_pdf-system]]) en que `asteroid` apunta a una fuente externa y `tabnote` apunta a producción propia. Ambos comparten la lógica de "el archivo es mudo, la nota lo activa".
-
----
-
-## Exclusión de Git/GitHub
-
-Los PDF+(Samsung) en `_tabnotes/` se sincronizan con todo el sistema (Obsidian Sync / la herramienta de sync de archivos que use el baúl entre PC y laptop) **pero no se suben a GitHub**, por el mismo motivo que ya se abandonó con los PDF de libros en `_pdf/`: archivos binarios pesados rompen la sincronización de Git.
-
-```
-.gitignore
-_pdf/
-_tabnotes/      ← se agrega esta línea
-```
-
-Lo que sí llega a GitHub (y por lo tanto a Claude vía conectores) es la **transcripción `.md`** generada con NotebookLM, no el PDF.
+| `archive_snapshot` | Wikilink al PDF de cierre de parcial, si ya existe. Vacío/omitido mientras el tema sigue activo. |
+| `status` | `en-proceso` mientras el tema sigue en escritura activa, `cerrado` cuando el parcial termina (momento en que corresponde generar el `archive_snapshot`). |
 
 ---
 
 ## Acceso a Samsung Notes / Samsung Cloud desde PC
 
-Para mover trabajo de la tablet al baúl sin depender solo de exportar a mano:
-
 | Método | Qué permite | Confiabilidad |
 |---|---|---|
-| App "Samsung Notes" (Microsoft Store, solo Windows) + Sync con Samsung Cloud | Ver y editar notas `.sdocx` nativas directo en PC, mismas que en la tablet | Alta — es el método recomendado |
-| Portal web `account.samsung.com` → Samsung Cloud → ícono "Samsung Notes" | Ver/editar notas desde cualquier navegador | Media — hay reportes (2024-2025) de exportaciones de Samsung Cloud que llegan vacías |
-| Modo "Samsung Notes PDF reader" al abrir un PDF | Edición en sitio: guarda cambios directo en la ubicación original del archivo, sin reexportar manualmente | Baja-media — bug conocido donde el guardado conserva solo la anotación y pierde el contenido original (queda en blanco). **Probar empíricamente con un archivo de bajo riesgo antes de confiar el flujo en esto.** |
+| App "Samsung Notes" (Microsoft Store) + app "Samsung Account" + Sync con Samsung Cloud | Ver y **editar** notas `.sdocx` nativas directo en PC, mismas que en la tablet, sync casi inmediato | **Alta — validado empíricamente el 2026-06-20.** Instalar primero "Samsung Account" fue necesario para que el login funcionara. |
+| Portal web `account.samsung.com` → Samsung Cloud → ícono "Samsung Notes" | Ver/editar notas desde cualquier navegador, sin instalar nada (PWA opcional, solo cambia la ventana, no agrega funcionalidad) | Media — hay reportes (2024-2025) de exportaciones de Samsung Cloud que llegan vacías. No se probó edición real por este medio, se usó la app instalada en su lugar. |
+| Modo "Samsung Notes PDF reader" al abrir un PDF | Edición en sitio sobre un PDF ya exportado | **Descartado del flujo actual** — bug conocido de guardado que pierde contenido. Ya no es necesario evaluarlo porque la edición ahora ocurre directo sobre el `.sdocx`, no sobre un PDF intermedio. |
+
+> Nota: Samsung restringe oficialmente la app de Windows a equipos Galaxy Book; en PCs no-Samsung puede no aparecer el botón de login hasta instalar la app "Samsung Account" por separado. Esto funcionó en la prueba del usuario (PC no-Samsung).
 
 ---
 
@@ -216,30 +215,30 @@ Samsung Notes ha tenido rupturas de compatibilidad documentadas en actualizacion
 | 2024–2025 | Actualización rompió la visualización de PDFs importados desde apps de escaneo de terceros (quedaban en blanco) — afectó a usuarios con miles de notas. |
 | Recurrente | Reportes de guardado de PDF anotado que pierde el contenido original, dejando solo la capa de anotación. |
 
-**Mitigación:** el `.sdocx` original en Samsung Cloud sigue siendo la fuente de verdad mientras no se decida lo contrario (ver Decisiones pendientes). El PDF+(Samsung) en el baúl es una copia de trabajo/consulta, no el único respaldo.
+**Mitigación en el modelo actual:** al ya no exportar PDF de forma activa, el `.sdocx` en Samsung Cloud es la **única** copia del apunte mientras el tema está en proceso — no hay redundancia en el baúl hasta el cierre del parcial. Esto hace **más importante, no menos**, generar el snapshot de archivo al cerrar cada tema (ver sección correspondiente), como única red de seguridad ante estos riesgos documentados.
 
 ---
 
-## Resumen Pros / Contras (de la discusión 2026-06-20)
+## Resumen Pros / Contras (actualizado 2026-06-20)
 
-**Pros:**
+**Pros del modelo actual (apuntes nativos en Samsung Cloud, sin PDF activo en el baúl):**
 
-1. Sincronización del apunte con todo el sistema del baúl (PC, laptop) salvo GitHub.
-2. Pipeline hacia NotebookLM para transcripción a `.md` con LaTeX.
-3. Como efecto secundario de la transcripción, Claude puede leer los apuntes vía GitHub para ayudar con la materia.
-4. Posible enriquecimiento futuro con PDF++(Obs) — recortes de imagen hacia notas `photon`.
-5. El PDF es formato universal — se puede abrir sin Samsung Notes instalado, aunque se pierda la edición.
-6. Existe un modo de edición en sitio (PDF reader) que evitaría reexportar manualmente — pendiente de validar su fiabilidad.
-7. No cambia el hábito de captura del usuario (años usando la tablet para apuntes).
+1. Elimina el problema de divergencia entre dos copias (.sdocx vs PDF) — solo hay una fuente viva.
+2. Elimina el problema de Git con binarios pesados sobrescritos seguido — el PDF ya no entra al flujo activo.
+3. Edición con teclado desde PC, validada y confiable, más rápida que el conversor automático de escritura a texto.
+4. Edita donde la herramienta es más capaz: trazos vectoriales reales, plantillas, sin las limitaciones del PDF+(Samsung) documentadas antes.
+5. El baúl queda más limpio: solo contiene lo que aporta valor real (transcripción buscable + PDFs de libros), nada de copias "muertas".
+6. Pipeline hacia NotebookLM para transcripción a `.md` con LaTeX se mantiene igual.
+7. Como efecto secundario de la transcripción, Claude puede leer los apuntes vía GitHub para ayudar con la materia.
 
-**Contras:**
+**Contras del modelo actual:**
 
-1. La plantilla queda fija al exportar — solo páginas nuevas agregadas después permiten elegir plantilla.
-2. El modo de edición en sitio tiene un bug de guardado documentado — no confiar en él sin probarlo primero.
-3. Riesgo real (no hipotético) de ruptura de compatibilidad en actualizaciones de Samsung Notes — mitigado manteniendo el `.sdocx` como fuente de verdad.
-4. El contenido manuscrito no es buscable en el PDF — la búsqueda real vive en la transcripción `.md`, no en el PDF.
-5. Tamaño en almacenamiento del PDF+(Samsung) vs `.sdocx`: sin dato confirmado, pendiente de prueba empírica del usuario.
-6. Comportamiento de Git ante un archivo binario en escritura/sobrescritura continua durante el semestre: sin resolver aún.
+1. El apunte en bruto (manuscrito, diagramas) ya **no tiene respaldo en el baúl** mientras el tema sigue activo — depende 100% de que Samsung Cloud funcione bien. Mitigado solo parcialmente con el snapshot de cierre de parcial.
+2. Riesgo real (no hipotético) de ruptura de compatibilidad en actualizaciones de Samsung Notes — ver Riesgos conocidos.
+3. El contenido manuscrito no es buscable directamente — la búsqueda real vive en la transcripción `.md`, no en Samsung Cloud.
+4. Trazo hecho con mouse desde PC se ve estéticamente pobre (sin presión/velocidad) — aceptable porque el caso de uso es texto, no dibujo, pero limita si se quisiera anotar gráficos finos desde PC.
+5. Plantilla personalizada no aparece al crear nota nueva desde PC — hay que crearla/cambiarla desde la tablet (menor, no bloqueante).
+6. Tamaño en almacenamiento del PDF+(Samsung) vs `.sdocx`: sin dato confirmado, pendiente de prueba empírica del usuario — relevante ahora solo para el snapshot de cierre de parcial, no para el flujo diario.
 
 ---
 
@@ -247,12 +246,11 @@ Samsung Notes ha tenido rupturas de compatibilidad documentadas en actualizacion
 
 | Pregunta abierta | Notas |
 |---|---|
-| ¿Se conserva el `.sdocx` en Samsung Cloud como respaldo permanente, o se borra tras exportar? | El borrado simplifica "una sola fuente de verdad" pero pierde la edición nativa real. Conservarlo es más seguro pero crea dos copias que pueden divergir si no se respeta la regla de "nunca editar el PDF directo". |
-| ¿`tabnote` como `galaxy_body` nuevo, o extender `asteroid` con `source_type: pdf-apunte-propio`? | Este documento usa `tabnote` como propuesta — falta decidir si se integra al registro de tipos en [[_galaxy-system]]. |
-| Validar empíricamente el modo "PDF reader" de edición en sitio | Probar con un apunte de bajo riesgo: editar, guardar, reabrir en otro visor, confirmar que el contenido no se pierde. |
-| Medir diferencia de tamaño real `.sdocx` vs PDF+(Samsung) | Exportar un apunte real con plantilla propia y comparar tamaños. |
+| Repetir la prueba de edición multi-dispositivo en la laptop ASUS (Windows 11) | Confirmar que el comportamiento (sync casi inmediato, edición de texto confiable) se repite en un segundo equipo. |
+| ¿`tabnote` como `galaxy_body` nuevo, o extender `asteroid` con `source_type: pdf-apunte-propio`? | Este documento usa `tabnote` como propuesta — falta decidir si se integra al registro de tipos en [[_galaxy-system]]. Su semántica cambió (ya no apunta a un archivo en el baúl, sino a una fuente en Samsung Cloud) — revisar si sigue encajando como subtipo de `asteroid` o si amerita un tipo propio con más razón aún. |
 | Guía de formato de apuntes para NotebookLM | Qué estructura (¿Cornell? ¿headers claros? ¿prompt de configuración en NotebookLM?) mejora la transcripción. Pendiente, documentar en [[_notebooklm-system]]. |
-| Comportamiento de Git con el archivo en sobrescritura continua | Decidir si conviene algún tipo de Git LFS, o si el repo simplemente acepta el peso del historial binario mientras `_tabnotes/` esté en `.gitignore` (no debería pesar si nunca se sube — confirmar que `.gitignore` cubre esto desde el inicio del repo). |
+| Medir tamaño real del snapshot PDF+(Samsung) de cierre de parcial | Ya no es urgente (no es flujo activo), pero útil para estimar peso acumulado en `_tabnotes_archivo/` a lo largo del semestre. |
+| Definir disparador/recordatorio para generar el snapshot al cerrar cada parcial | Sin esto, el paso de archivo (la única red de seguridad del modelo actual) depende de que el usuario se acuerde manualmente. Posible tarea recurrente en [[_ToDo-system]]. |
 
 ---
 
@@ -260,12 +258,15 @@ Samsung Notes ha tenido rupturas de compatibilidad documentadas en actualizacion
 
 | Decisión | Razón |
 |---|---|
-| `_tabnotes/` separado de `_pdf/` | `_pdf/` es para fuentes externas (libros, slides del profesor); `_tabnotes/` es producción propia. Mezclarlos rompe la distinción semántica que ya usa el resto del sistema (asteroid = fuente externa). |
-| Edición siempre en el `.sdocx`, nunca en el PDF exportado | El PDF+(Samsung) editable solo funciona dentro del ecosistema Samsung y tiene bugs de guardado conocidos. Mantener la fuente de edición en la app reduce el riesgo de pérdida de contenido. |
-| Un solo archivo por tema, sobrescrito, sin numeración de versión en el nombre | Refleja el flujo real del usuario (tema en escritura continua hasta cerrar parcial) y delega el versionado real al historial de Git. |
-| `_tabnotes/` excluido de GitHub vía `.gitignore` | Mismo problema ya vivido con PDFs de libros en `_pdf/` — binarios pesados rompen la sincronización de Git. |
+| Los apuntes manuscritos viven en Samsung Cloud, no como PDF activo en el baúl | Validado empíricamente que la edición multi-dispositivo (tablet + PC) vía Samsung Cloud es rápida y confiable para texto, eliminando la necesidad de pasar por un PDF intermedio en el flujo diario. Reemplaza el modelo original de `_tabnotes/` como almacén activo. |
+| Edición de texto desde PC (teclado) en vez de depender del conversor de escritura a texto | El conversor automático puede fallar por legibilidad de letra o necesitar internet; escribir directo en ASCII desde el teclado es más confiable para el caso de uso del usuario. |
+| Modo "PDF reader" de edición en sitio: descartado | Ya no aplica — la edición ocurre directo sobre el `.sdocx` nativo vía la app instalada, no sobre un PDF intermedio. Reemplaza la antigua decisión pendiente de "validar este modo". |
+| Idioma de reconocimiento de escritura: Español (México) | Perfil más cercano a "español latinoamericano neutro" entre las opciones disponibles (no existe Bolivia); evita particularidades de España (vosotros) y es más afín a vocabulario técnico que el perfil de Estados Unidos. |
+| El PDF+(Samsung) se conserva solo como snapshot de archivo al cerrar cada parcial | Sirve como red de seguridad ante los riesgos documentados de Samsung Cloud, sin reintroducir el problema de divergencia/Git que tenía el modelo anterior de export activo. |
+| Carpeta renombrada de `_tabnotes/` a `_tabnotes_archivo/`, excluida de GitHub | El nombre deja explícito que ya no es almacenamiento activo. Se mantiene fuera de Git por el mismo motivo que `_pdf/` — binarios pesados rompen la sincronización. |
 | Transcripción `.md` (NotebookLM) como lo único que llega a GitHub | Es lo único realmente buscable e indexable, y es lo que necesita Claude para ayudar con la materia vía conectores. |
 | Nomenclatura PDF+(Samsung) vs PDF++(Obs) | Evitar confusión entre dos herramientas con nombres casi idénticos pero de naturaleza totalmente distinta (export con anotación vs plugin lector de Obsidian). |
+| `_pdf/` reservado exclusivamente para libros/fuentes externas | Se mantiene sin cambios respecto a [[_pdf-system]]; los apuntes propios (activos o archivados) nunca se mezclan ahí. |
 
 %%
 galaxy-links
