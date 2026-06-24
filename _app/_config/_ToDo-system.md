@@ -10,7 +10,7 @@ related_notes:
   - "[[_TABnote-system]]"
 tags: [beacon, todo, plugins, infraestructura]
 date_created: 2026-05-29
-date_updated: 2026-06-23
+date_updated: 2026-06-24
 status: activo
 ---
 
@@ -70,11 +70,11 @@ status: activo
 - [x] ~~Flujo vault → tablet verificado (Drive)~~ — superado por el flujo Mega
 
 ### Sincronización tablet — modelo actual (Samsung Cloud nativo, en discusión)
-> Ver [[_TABnote-system]] — `status: en-discusion`. El apunte manuscrito vive nativo en Samsung Cloud (`.sdocx`), sincronizado tablet ↔ PC. El PDF activo en el baúl quedó descartado; solo se genera un snapshot PDF al cerrar cada parcial, archivado en `_tabnotes_archivo/` (separado de `_PDF/`, fuera de Git).
+> Ver [[_TABnote-system]] — `status: activo` (cerrado 2026-06-24). El apunte manuscrito vive nativo en Samsung Cloud (`.sdocx`), sincronizado tablet ↔ PC. El PDF activo en el baúl quedó descartado; solo se genera un snapshot PDF al cerrar cada parcial, archivado en `_tabnotes_archivo/` (separado de `_PDF/`, fuera de Git). `galaxy_body: supernova` aprobado como tipo #14.
 - [x] Validar empíricamente edición multi-dispositivo tablet ↔ PC vía Samsung Cloud (2026-06-20) ✅
 - [ ] Repetir la prueba de edición multi-dispositivo en la laptop ASUS (Windows 11) — confirmar que el comportamiento se repite en un segundo equipo
-- [ ] Decidir: ¿`tabnote` como `galaxy_body` nuevo (tipo #14), o extender `asteroid` con `source_type: pdf-apunte-propio`? — bloquea actualizar [[_galaxy-system]] y [[_note-system]], y crear `tpl-tabnote.md` si se aprueba como tipo
-- [ ] Definir disparador/recordatorio para generar el snapshot PDF al cerrar cada parcial — sin esto, la única red de seguridad del modelo actual depende de que el usuario se acuerde manualmente
+- [x] Decidir: `supernova` como `galaxy_body` nuevo (tipo #14) — aprobado 2026-06-24. Resuelve la pregunta de `tabnote vs asteroid`. Registrado en [[_galaxy-system]], [[_note-system]], [[_template-system]], [[_TABnote-system]].
+- [x] Definir disparador/recordatorio para generar el snapshot PDF al cerrar cada parcial — resuelto: campo `archive_snapshot` en plantilla + ítem en `_TABnote-system` registro de decisiones cerradas.
 - [ ] Medir tamaño real del PDF+(Samsung) de cierre de parcial — para estimar peso acumulado en `_tabnotes_archivo/` a lo largo del semestre
 - [ ] Confirmar convención real de subcarpetas dentro de `_PDF/` — el usuario reportó carpetas tipo `PDF-telefonia`, `PDF-921` (nombre de materia/tema en texto), que no coincide con el patrón documentado en [[_pdf-system]] (`_PDF/ETN806/`, una carpeta por sigla `ETNXXX`). Hay que decidir cuál es la convención real y actualizar [[_pdf-system]] en consecuencia.
 

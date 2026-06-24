@@ -9,11 +9,10 @@ related_notes:
   - "[[_mindmap-system]]"
   - "[[_note-system]]"
   - "[[_pdf-system]]"
-  - "[[_TABnote-system]]"
   - "[[_ToDo-system]]"
 tags: [beacon, templater, plantillas, infraestructura]
 date_created: 2026-05-28
-date_updated: 2026-06-24
+date_updated: 2026-05-30
 status: activo
 ---
 
@@ -46,12 +45,11 @@ Cada tipo de cuerpo galaxy tiene su plantilla en `_templates/`. Al crear una not
 | `tpl-comet.md` | `comet` | `Semesters/.../Topic_NN.../` | Automático (Opción B) |
 | `tpl-nebula.md` | `nebula` | `Semesters/.../Topic_NN.../` | Automático (Opción B) |
 | `tpl-dwarf.md` | `dwarf` | `Semesters/.../Partial_N/` | Automático (Opción B) |
-| `tpl-asteroid.md` | `asteroid` | Normal: `Semesters/.../Topic_NN.../` / PDF: `Semesters/.../Partial_N/` | Automático (Opción B) — pregunta tipo al inicio |
-| `tpl-photon.md` | `photon` | `desmos`/`tikzjax`: `Semesters/.../Topic_NN.../` / `pdf-crop`: `_assets/` | Automático — pregunta tipo al inicio |
+| `tpl-asteroid.md` | `asteroid` | `Semesters/.../Topic_NN.../` | Automático (Opción B) |
+| `tpl-photon.md` | `photon` | `Semesters/.../Topic_NN.../` | Automático (Opción B) |
 | `tpl-bridge.md` | `bridge` | `Semesters/Materia1-Materia2/` | Automático (Opción B) |
 | `tpl-constellation.md` | `constellation` | `_app/Excalidraw/Constellations/` | Automático |
 | `tpl-observatory.md` | `observatory` | `_app/Excalidraw/Observatory/` | Automático |
-| `tpl-supernova.md` | `supernova` | `Semesters/.../Partial_N/` | Automático — pregunta tipo al inicio (class / fusionada) |
 
 **Automático (Opción B)** = Templater pregunta materia, semestre, parcial, tema y nombre. Mueve el archivo a la ruta correcta automáticamente.
 **Automático** = Templater pide solo el nombre y mueve el archivo a la carpeta fija correspondiente.
@@ -65,12 +63,11 @@ Cada tipo de cuerpo galaxy tiene su plantilla en `_templates/`. Al crear una not
 | `tpl-comet.md` | Materia, semestre, parcial, tema, nombre |
 | `tpl-nebula.md` | Materia, semestre, parcial, tema, nombre |
 | `tpl-dwarf.md` | Materia, semestre, parcial, nombre |
-| `tpl-asteroid.md` | Materia, semestre, parcial, tipo (Normal/PDF); si PDF: número de tema + nombre; si Normal: tema + nombre |
-| `tpl-photon.md` | Materia, semestre, parcial, tipo (desmos/tikzjax/pdf-crop); si pdf-crop: nombre; si otro: nombre + tema |
+| `tpl-asteroid.md` | Materia, semestre, parcial, tema, nombre |
+| `tpl-photon.md` | Materia, semestre, parcial, tema, nombre |
 | `tpl-bridge.md` | Materia 1, materia 2, nombre |
 | `tpl-constellation.md` | Nombre |
 | `tpl-observatory.md` | Nombre |
-| `tpl-supernova.md` | Materia, semestre, parcial, tipo (class/fusionada); si class: número + fecha; si fusionada: número de tema + slug |
 
 ### Respaldo Opción A
 
@@ -283,9 +280,6 @@ date_created: <% tp.date.now("YYYY-MM-DD") %>
 
 ### tpl-asteroid
 
-Dos ramas según tipo — la plantilla pregunta al inicio cuál es.
-
-**Rama Normal** (va a `Topic_NN.../`):
 ```yaml
 ---
 title: "<% tp.file.title %>"
@@ -294,22 +288,6 @@ subject: <% subject %>
 semester: <% sem %>
 partial: <% partial %>
 topic: 
-orbiting: []
-tags: [<% subject %>, galaxy-asteroid, P<% partial %>]
-date_created: <% tp.date.now("YYYY-MM-DD") %>
-status: en-proceso
----
-```
-
-**Rama PDF** (va a `Partial_N/` directamente):
-```yaml
----
-title: "<% tp.file.title %>"
-galaxy_body: asteroid
-subject: <% subject %>
-semester: <% sem %>
-partial: <% partial %>
-topic: <% tnum %>
 source_type: 
 source_title: ""
 source_author: ""
@@ -328,41 +306,19 @@ status: en-proceso
 
 ### tpl-photon
 
-Tres tipos — la plantilla pregunta al inicio cuál es.
-
-**`desmos` / `tikzjax`** (va a `Topic_NN.../`):
 ```yaml
 ---
 title: "<% tp.file.title %>"
 galaxy_body: photon
-photon_type: <% photonType %>
-subject: <% subject %>
-semester: <% sem %>
-partial: <% partial %>
+photon_type: desmos
 attached_to: ""
+subject: <% subject %>
 tags: [<% subject %>, galaxy-photon, P<% partial %>]
 date_created: <% tp.date.now("YYYY-MM-DD") %>
 ---
 ```
 
-**`pdf-crop`** (va a `_assets/`):
-```yaml
----
-title: "<% tp.file.title %>"
-galaxy_body: photon
-photon_type: pdf-crop
-subject: <% subject %>
-semester: <% sem %>
-partial: <% partial %>
-source_pdf: ""
-source_page: 
-attached_to: ""
-tags: [<% subject %>, galaxy-photon, P<% partial %>]
-date_created: <% tp.date.now("YYYY-MM-DD") %>
----
-```
-
-> `photon_type` válidos: `desmos` | `tikzjax` | `pdf-crop`. No incluye Excalidraw — para eso usar `tpl-constellation` o `tpl-observatory`.
+> `photon_type` puede ser: `desmos` | `image` | `pdf-crop`. No incluye Excalidraw — para eso usar `tpl-constellation` o `tpl-observatory`.
 
 ---
 
@@ -431,52 +387,6 @@ date_created: <% tp.date.now("YYYY-MM-DD") %>
 
 ---
 
-### tpl-supernova
-
-Dos variantes según ciclo de vida — la plantilla pregunta al inicio cuál es.
-
-**Class individual** (`ETNXXX-classNNN-PN-mesdía.md`, va a `Partial_N/`):
-```yaml
----
-title: "<% title %>"
-galaxy_body: supernova
-subject: <% subject %>
-semester: <% sem %>
-partial: <% partial %>
-class_number: <% classNum %>
-class_date: <% tp.date.now("YYYY-MM-DD") %>
-subtopics:
-  - ""
-related_planets: []
-tags: [<% subject %>, galaxy-supernova, P<% partial %>]
-date_created: <% tp.date.now("YYYY-MM-DD") %>
-status: en-proceso
----
-```
-
-**Supernova fusionada** (`ETNXXX-TN-slug_del_tema-PN.md`, va a `Partial_N/`):
-```yaml
----
-title: "<% title %>"
-galaxy_body: supernova
-subject: <% subject %>
-semester: <% sem %>
-partial: <% partial %>
-topic: 
-topic_name: 
-class_parts:
-  - ""
-related_planets: []
-tags: [<% subject %>, galaxy-supernova, P<% partial %>]
-date_created: <% tp.date.now("YYYY-MM-DD") %>
-status: completo
----
-```
-
-> Ver [[_TABnote-system]] para el ciclo de vida completo y [[_galaxy-system]] para la convención de nombres.
-
----
-
 ## Registro de decisiones de diseño
 
 | Decisión | Razón |
@@ -489,9 +399,6 @@ status: completo
 | YAML híbrido en constellation y observatory (2026-05-28) | El plugin de Excalidraw requiere `excalidraw-plugin: parsed` en el frontmatter para abrir el archivo como lienzo. Se unifica con los campos galaxy en un solo bloque YAML. Sin este campo el archivo se abre como nota de texto. |
 | Extensión `.excalidraw.md` en lugar de `.excalidraw` | Mantener `.md` preserva compatibilidad con YAML, DataView y el grafo de Obsidian. Para usar en excalidraw.com se exporta con el comando del plugin. |
 | `contextogen.md` vive en `_templates/` pero no es una plantilla galaxy | Es una herramienta de infraestructura para generar contexto para Claude. Se mantiene ahí por conveniencia. |
-| `tpl-asteroid.md` actualizado a dos ramas (2026-06-24) | La plantilla original tenía solo los campos del YAML PDF — no reflejaba la rama Normal (sin PDF). Se agregó la rama Normal con `orbiting: []` y se corrige la ruta destino: Normal va a `Topic_NN.../`, PDF va directamente a `Partial_N/` para no obligar al usuario a elegir un tema para una referencia general. |
-| `tpl-photon.md` actualizado a tres ramas (2026-06-24) | La plantilla original solo ofrecía `desmos` como tipo. Se agregan `tikzjax` y `pdf-crop` con lógica de ruta propia: `pdf-crop` va a `_assets/` (es una imagen exportada, no una nota de Semesters/); `desmos` y `tikzjax` van a `Topic_NN.../`. Se eliminan campos incorrectos de la versión anterior. |
-| `tpl-supernova.md` creado (2026-06-24) | Nuevo tipo #14 aprobado en [[_TABnote-system]]. Una sola plantilla con dos ramas: `class` individual (por sesión) y fusionada (tema completo). Ambas van a la raíz de `Partial_N/` porque una class puede cubrir subtítulos de varios temas. |
 
 %%
 galaxy-links

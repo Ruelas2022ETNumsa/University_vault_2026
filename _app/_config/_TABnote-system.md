@@ -12,8 +12,8 @@ related_notes:
   - "[[_ToDo-system]]"
 tags: [beacon, tabnote, samsung-notes, infraestructura]
 date_created: 2026-06-20
-date_updated: 2026-06-20
-status: en-discusion
+date_updated: 2026-06-24
+status: activo
 ---
 
 # Sistema TABnote — University Vault
@@ -24,7 +24,7 @@ status: en-discusion
 > Sistema NotebookLM (transcripción): [[_notebooklm-system]]
 > Pendientes: [[_ToDo-system]]
 
-> **Estado: en discusión.** Este sistema documenta decisiones ya tomadas y deja explícitos los puntos aún abiertos. No se considera "activo" hasta cerrar la sección de Decisiones pendientes.
+> **Estado: activo** (cerrado 2026-06-24). Las decisiones de diseño están resueltas. Ver sección Registro de decisiones cerradas.
 
 > **Nota de versión (2026-06-20):** este documento tuvo un cambio de arquitectura a mitad de la discusión. La primera versión proponía exportar los apuntes como PDF y guardarlos como pieza activa dentro del baúl (`_tabnotes/`). Tras validar empíricamente la edición multi-dispositivo (ver más abajo), se abandonó ese modelo: **los apuntes manuscritos ahora viven nativamente en Samsung Cloud**, y el baúl solo recibe la transcripción `.md`. El export a PDF se conserva, pero degradado a **respaldo de archivo al cerrar cada parcial**, no como flujo activo. Las secciones de este documento reflejan ya el modelo nuevo; donde aplica, se deja constancia de qué quedó descartado del modelo anterior.
 
@@ -158,7 +158,7 @@ A diferencia del modelo anterior, la nota `tabnote` ya **no apunta a un PDF acti
 ```yaml
 ---
 title: "ETN806 — T01 — Apunte de tablet: Joint PDF"
-galaxy_body: tabnote
+galaxy_body: supernova
 subject: ETN806
 semester: 8
 partial: 2
@@ -247,7 +247,6 @@ Samsung Notes ha tenido rupturas de compatibilidad documentadas en actualizacion
 | Pregunta abierta | Notas |
 |---|---|
 | Repetir la prueba de edición multi-dispositivo en la laptop ASUS (Windows 11) | Confirmar que el comportamiento (sync casi inmediato, edición de texto confiable) se repite en un segundo equipo. |
-| ¿`tabnote` como `galaxy_body` nuevo, o extender `asteroid` con `source_type: pdf-apunte-propio`? | Este documento usa `tabnote` como propuesta — falta decidir si se integra al registro de tipos en [[_galaxy-system]]. Su semántica cambió (ya no apunta a un archivo en el baúl, sino a una fuente en Samsung Cloud) — revisar si sigue encajando como subtipo de `asteroid` o si amerita un tipo propio con más razón aún. |
 | Guía de formato de apuntes para NotebookLM | Qué estructura (¿Cornell? ¿headers claros? ¿prompt de configuración en NotebookLM?) mejora la transcripción. Pendiente, documentar en [[_notebooklm-system]]. |
 | Medir tamaño real del snapshot PDF+(Samsung) de cierre de parcial | Ya no es urgente (no es flujo activo), pero útil para estimar peso acumulado en `_tabnotes_archivo/` a lo largo del semestre. |
 | Definir disparador/recordatorio para generar el snapshot al cerrar cada parcial | Sin esto, el paso de archivo (la única red de seguridad del modelo actual) depende de que el usuario se acuerde manualmente. Posible tarea recurrente en [[_ToDo-system]]. |
@@ -267,6 +266,10 @@ Samsung Notes ha tenido rupturas de compatibilidad documentadas en actualizacion
 | Transcripción `.md` (NotebookLM) como lo único que llega a GitHub | Es lo único realmente buscable e indexable, y es lo que necesita Claude para ayudar con la materia vía conectores. |
 | Nomenclatura PDF+(Samsung) vs PDF++(Obs) | Evitar confusión entre dos herramientas con nombres casi idénticos pero de naturaleza totalmente distinta (export con anotación vs plugin lector de Obsidian). |
 | `_pdf/` reservado exclusivamente para libros/fuentes externas | Se mantiene sin cambios respecto a [[_pdf-system]]; los apuntes propios (activos o archivados) nunca se mezclan ahí. |
+| `galaxy_body: supernova` como tipo #14 (no extender `asteroid`) | La transcripción de NotebookLM es producción propia, no una fuente externa — forzarla en `asteroid` rompía el principio producción-propia vs fuente-externa que es eje del sistema. Se aprueba `supernova` (✨) como tipo propio. Nombre elegido por la metáfora: material en bruto de alta energía que aún no se ha condensado en notas galaxy. Registrado en [[_galaxy-system]] como tipo #14. Plantilla: `tpl-supernova.md`. |
+| Convención de nombres para notas `supernova` | `class` individual: `ETNXXX-classNNN-PN-mesdía.md` (ej. `ETN901-class001-P1-jun15.md`). Fusionada: `ETNXXX-TN-slug_del_tema-PN.md` (ej. `ETN901-T1-densidad_probabilidad_conjunta-P1.md`). Slug en español con guion_bajo, sin tildes ni ñ. Contador `classNNN` corrido por semestre, no reinicia por parcial. |
+| Ruta de las notas `supernova` | `Semesters/Sem_NN/ETNXXX/Partial_N/` — raíz del parcial, no dentro de `Topic_NN/`, porque una class puede cubrir subtítulos de varios temas. |
+| Ciclo de vida `supernova` | `class` individuales con `status: en-proceso`. Al terminar el tema se fusionan en un solo archivo cuyo nombre cambia a la convención fusionada y `status: completo`. Las `class` originales se marcan `status: diseccionada` antes de eliminar. |
 
 %%
 galaxy-links

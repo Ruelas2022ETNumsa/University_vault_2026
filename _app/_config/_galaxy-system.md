@@ -12,7 +12,7 @@ related_notes:
   - "[[_ToDo-system]]"
 tags: [beacon, galaxy, infraestructura]
 date_created: 2026-05-28
-date_updated: 2026-05-30
+date_updated: 2026-06-24
 status: activo
 ---
 
@@ -171,6 +171,7 @@ El campo `galaxy_body` en el YAML define el rol de la nota. Trece tipos:
 | `observatory` | 🔭 | Dibujo técnico libre en Excalidraw sin Mindmap Builder. Vive en `_app/Excalidraw/Observatory/`. |
 | `bridge` | 🌉 | Conexión entre materias. Enlaza conceptos de dos galaxias distintas. |
 | `beacon` | 📡 | Guía de infraestructura del vault. Herramientas, procesos, soluciones. Vive en `_app/`. |
+| `supernova` | ✨ | Transcripción bruta de NotebookLM de apuntes de clase. Material en bruto pendiente de disección en notas galaxy. Ver [[_TABnote-system]]. |
 
 ---
 
@@ -572,6 +573,62 @@ galaxy-links
 
 ---
 
+### supernova
+
+Dos variantes según ciclo de vida — usar `tpl-supernova.md` (pregunta al inicio cuál es).
+
+**Class individual** (`ETN901-class001-P1-jun15.md`):
+```yaml
+---
+title: "ETN901-class001-P1-jun15"
+galaxy_body: supernova
+subject: ETN901
+semester: 9
+partial: 1
+class_number: 001
+class_date: YYYY-MM-DD
+subtopics:
+  - "1.1 Definicion"
+  - "1.2 Propiedades"
+related_planets: []
+tags: [ETN901, galaxy-supernova, P1]
+date_created: YYYY-MM-DD
+status: en-proceso
+---
+```
+
+**Supernova fusionada** (`ETN901-T1-densidad_probabilidad_conjunta-P1.md`):
+```yaml
+---
+title: "ETN901-T1-densidad_probabilidad_conjunta-P1"
+galaxy_body: supernova
+subject: ETN901
+semester: 9
+partial: 1
+topic: T1
+topic_name: densidad_probabilidad_conjunta
+class_parts:
+  - "[[ETN901-class001-P1-jun15]]"
+  - "[[ETN901-class002-P1-jun17]]"
+related_planets:
+  - "[[ETN901-T01-definicion-densidad]]"
+tags: [ETN901, galaxy-supernova, P1]
+date_created: YYYY-MM-DD
+status: completo
+---
+```
+
+```markdown
+%%
+galaxy-links
+[[ETN901-T01-definicion-densidad]]
+%%
+```
+
+> Las `class` individuales no necesitan bloque `%%` hasta tener `related_planets`. Al fusionar, solo el archivo final lleva las conexiones al grafo. Ver [[_TABnote-system]] para el ciclo de vida completo.
+
+---
+
 ## Registro de decisiones de diseño
 
 | Decisión                                                          | Razón |
@@ -599,6 +656,7 @@ galaxy-links
 | Opción B como sistema oficial para Semesters/ (2026-05-28)        | Las plantillas B preguntan materia, semestre, parcial, tema y nombre, y mueven el archivo automáticamente. Elimina la necesidad de navegar manualmente a la carpeta destino. Las plantillas A quedan en `_templates/alt-B/plantillas-A-respaldo.md`. |
 | YAML híbrido en constellation y observatory (2026-05-28)          | El plugin de Excalidraw requiere `excalidraw-plugin: parsed` en el frontmatter para abrir el archivo como lienzo. Se unifica con los campos galaxy en un solo bloque YAML. Sin este campo el archivo se abre como nota de texto. |
 | Extensión `.excalidraw.md` en lugar de `.excalidraw`              | Mantener `.md` preserva compatibilidad con YAML, DataView y el grafo de Obsidian. Para usar en excalidraw.com se exporta con el comando del plugin. |
+| `supernova` como tipo #14 (2026-06-24) | Las transcripciones de NotebookLM son producción propia, no fuentes externas — forzarlas en `asteroid` rompía el principio producción-propia vs fuente-externa. Material en bruto de alta energía que aún no se ha condensado en notas galaxy. Símbolo ✨. Dos variantes: `class` individual (por sesión, `status: en-proceso`) y fusionada (tema completo, `status: completo`). Slug en español con guion_bajo. Contador `classNNN` corrido por semestre. Ruta: raíz de `Partial_N/`. Ver [[_TABnote-system]]. |
 
 %%
 galaxy-links

@@ -8,11 +8,10 @@ related_notes:
   - "[[_template-system]]"
   - "[[_mindmap-system]]"
   - "[[_pdf-system]]"
-  - "[[_TABnote-system]]"
   - "[[_ToDo-system]]"
 tags: [beacon, convencion, infraestructura]
 date_created: 2026-05-28
-date_updated: 2026-06-24
+date_updated: 2026-05-30
 status: activo
 ---
 
@@ -78,54 +77,6 @@ ETN806-ETN302-laplace-vs-probability.md
 
 ---
 
-### Caso especial: notas PDF (`asteroid` tipo PDF)
-
-Las notas asteroid que referencian un PDF van directamente en `Partial_N/` (sin entrar a `Topic_NN/`) porque suelen ser referencias generales del parcial. Nombre igual al patrón estándar con `T00` o el tema que corresponda:
-
-```
-ETN806-T00-PDF-papoulis-cap6.md
-ETN806-T01-PDF-apuntes-conjunta.md
-```
-
----
-
-### Caso especial: notas `supernova`
-
-Dos variantes según el ciclo de vida. Ambas van en la raíz de `Partial_N/` (no dentro de `Topic_NN/`).
-
-**Class individual** — una por sesión de clase, mientras el tema está en proceso:
-```
-ETNXXX-classNNN-PN-mesdía.md
-```
-- `classNNN` → contador corrido por semestre, no reinicia por parcial
-- `PN` → número de parcial (ej. `P1`)
-- `mesdía` → formato abreviado sin separador (ej. `jun15`, `ago03`)
-
-Ejemplos:
-```
-ETN901-class001-P1-jun15.md
-ETN901-class002-P1-jun17.md
-ETN901-class003-P1-jun22.md
-```
-
-**Supernova fusionada** — cuando el tema está completo, se fusionan todas las class en un solo archivo:
-```
-ETNXXX-TN-slug_del_tema-PN.md
-```
-- `TN` → número de tema (ej. `T1`, `T2`) — mismo sistema que el resto del vault
-- `slug_del_tema` → nombre en español, guion_bajo entre palabras, sin tildes ni ñ
-- `PN` → número de parcial
-
-Ejemplos:
-```
-ETN901-T1-densidad_probabilidad_conjunta-P1.md
-ETN901-T2-variables_aleatorias_continuas-P1.md
-```
-
-> Ver [[_TABnote-system]] para el ciclo de vida completo (class → fusionada → diseccionada en notas galaxy).
-
----
-
 ### Tipos de cuerpo galaxy (en el YAML)
 
 | `galaxy_body` | Símbolo | Rol |
@@ -143,7 +94,6 @@ ETN901-T2-variables_aleatorias_continuas-P1.md
 | `observatory` | 🔭 | Dibujo técnico libre en Excalidraw |
 | `beacon` | 📡 | Guía de infraestructura del vault — vive en `_app/` |
 | `bridge` | 🌉 | Conexión entre materias |
-| `supernova` | ✨ | Transcripción bruta de NotebookLM de apuntes de clase — ver [[_TABnote-system]] |
 
 > `neutrino` no tiene nota propia ni YAML. La nota host (planet/comet) lo contiene.
 
@@ -199,7 +149,6 @@ galaxy-links
 | `_assets/`         | Imágenes exportadas: .png, .svg, .jpeg                             |
 | `_templates/`      | Plantillas de notas — una por tipo de cuerpo galaxy                |
 | `_PDF/`            | Archivos PDF físicos — una carpeta por materia                     |
-| `_tabnotes_archivo/` | Snapshots PDF de cierre de parcial (apuntes manuscritos propios) — fuera de Git, ver [[_TABnote-system]] |
 | `borrar/`          | Zona de espera antes de eliminar archivos permanentemente          |
 
 %%
