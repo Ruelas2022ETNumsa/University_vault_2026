@@ -1,42 +1,50 @@
 <%*
-const subject = await tp.system.prompt("Materia (ej: ETN806)");
-const sem = await tp.system.prompt("Semestre (ej: 8)");
+const subject = await tp.system.prompt("Materia (ej: ETN901)");
+const sem = await tp.system.prompt("Semestre (ej: 9)");
 const partial = await tp.system.prompt("Parcial (1, 2 o 3)");
-const isPDF = await tp.system.suggester(["Normal (teoría, ejercicio)", "PDF (PDF++ o Annotator)"], [false, true], true, "¿Tipo de asteroid?");
+const tipo = await tp.system.suggester(
+  ["Class (nota de sesión individual)", "Supernova completa (tema fusionado)"],
+  ["class", "supernova"],
+  true,
+  "¿Qué tipo de supernova es?"
+);
 
 let path;
-let topic = "";
-let tnum = "";
+let title;
 
-if (isPDF) {
-  tnum = await tp.system.prompt("Número de tema (ej: T01) — T00 si es referencia general");
-  const title = await tp.system.prompt("Nombre del archivo SIN extensión (ej: ETN806-T01-PDF-apuntes-conjunta)");
+let classNum = "";
+if (tipo === "class") {
+  classNum = await tp.system.prompt("Número de clase del semestre (ej: 001)");
+  const fecha = await tp.system.prompt("Fecha de la clase (ej: jun15)");
+  title = `${subject}-class${classNum}-P${partial}-${fecha}`;
   path = `Semesters/Sem_0${sem}/${subject}/Partial_${partial}/${title}`;
   await tp.file.move(path);
 } else {
-  topic = await tp.system.prompt("Tema (ej: T01_joint-density)");
-  const title = await tp.system.prompt("Nombre del archivo SIN extensión");
-  path = `Semesters/Sem_0${sem}/${subject}/Partial_${partial}/Topic_${topic}/${title}`;
+  const topicNum = await tp.system.prompt("Número de tema (ej: T1)");
+  const topicSlug = await tp.system.prompt("Nombre del tema en español, guion_bajo (ej: densidad_probabilidad_conjunta)");
+  title = `${subject}-${topicNum}-${topicSlug}-P${partial}`;
+  path = `Semesters/Sem_0${sem}/${subject}/Partial_${partial}/${title}`;
   await tp.file.move(path);
 }
 %>---
-title: "<% tp.file.title %>"
-galaxy_body: asteroid
+title: "<% title %>"
+galaxy_body: supernova
 subject: <% subject %>
 semester: <% sem %>
 partial: <% partial %>
-<%* if (isPDF) { %>topic: <% tnum %>
-source_type: 
-source_title: ""
-source_author: ""
-source_chapter: ""
-pdf_file: ""
+<%* if (tipo === "class") { %>class_number: <% classNum %>
+class_date: <% tp.date.now("YYYY-MM-DD") %>
+subtopics:
+  - ""
 related_planets: []
 <%* } else { %>topic: 
-orbiting: []
-<%* } %>tags: [<% subject %>, galaxy-asteroid, P<% partial %>]
+topic_name: 
+class_parts:
+  - ""
+related_planets: []
+<%* } %>tags: [<% subject %>, galaxy-supernova, P<% partial %>]
 date_created: <% tp.date.now("YYYY-MM-DD") %>
-status: en-proceso
+status: <%* if (tipo === "class") { %>en-proceso<%* } else { %>completo<%* } %>
 ---
 
 <%* tp.file.cursor() %>

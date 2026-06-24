@@ -57,7 +57,10 @@
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
-      "customOrder": []
+      "customOrder": [
+        "ETN901-class002-P1-ago15.md",
+        "ETN901-class001-P1-ago15.md"
+      ]
     },
     "Semesters/Sem_05": {
       "isPinned": false,
@@ -2770,6 +2773,14 @@
       "isHidden": false
     },
     "_templates/tpl-supernova.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/ETN901/Partial_1/ETN901-class001-P1-ago15.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/ETN901/Partial_1/ETN901-class002-P1-ago15.md": {
       "isPinned": false,
       "isHidden": false
     }
