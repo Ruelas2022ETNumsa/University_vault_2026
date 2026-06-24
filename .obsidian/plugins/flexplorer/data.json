@@ -1455,7 +1455,7 @@
       "isHidden": false
     },
     "_app/_config/_galaxy-system.md": {
-      "isPinned": false,
+      "isPinned": true,
       "isHidden": false
     },
     "_app/_config/_graph-system.md": {
@@ -2768,7 +2768,8 @@
     }
   },
   "pinnedFiles": [
-    "_app/_appnotes/PDF_PP-guide.md"
+    "_app/_appnotes/PDF_PP-guide.md",
+    "_app/_config/_galaxy-system.md"
   ],
   "showHidden": false,
   "newItemPlacement": "top",

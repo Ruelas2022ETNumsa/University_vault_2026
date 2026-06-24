@@ -19,7 +19,7 @@ related_notes:
   - "[[claude_solve]]"
 tags: [beacon, claude, arranque, infraestructura]
 date_created: 2026-05-30
-date_updated: 2026-06-24
+date_updated: 2026-06-23
 status: activo
 ---
 
@@ -39,7 +39,7 @@ Cuando el usuario comparta este archivo, Claude debe:
 4. Si hay materia específica → leer su contexto según las rutas de la sección Materias.
 5. Confirmar con un mensaje breve: _"Contexto cargado. ¿En qué trabajamos?"_
 6. Para editar archivos existentes con Filesystem MCP: siempre `edit_file`, nunca `write_file` salvo que el usuario pida explícitamente sobrescribir o crear un archivo nuevo. (Ver [[claude_solve]] para errores conocidos.)
-7. **Antes de editar cualquier beacon de `_app/_config/`**, si el cambio es significativo, ofrecer o confirmar si se quiere un respaldo antes de tocar el original — ver convención de backups en la sección **NOMENCLATURA DE BACKUPS** de este archivo.
+7. **Antes de editar cualquier beacon de `_app/_config/`**, si el cambio es significativo, ofrecer o confirmar si se quiere un respaldo (copia con sufijo ` 1.md`) antes de tocar el original — es la práctica que se viene usando en este vault.
 
 ---
 
@@ -49,13 +49,12 @@ Cuando el usuario comparta este archivo, Claude debe:
 
 El vault está organizado como un **universo de galaxias**. Cada materia es una galaxia. La metáfora vive en el campo `galaxy_body` del YAML de cada nota — no en los nombres de carpetas.
 
-**Estado actual del vault (verificado en disco, 2026-06-24): fase de construcción avanzada, no fase cero.**
+**Estado actual del vault (verificado en disco, 2026-06-23): fase de construcción avanzada, no fase cero.**
 - El Sistema Galaxy está definido y estable.
-- Materia activa: `Semesters/Sem_09/ETN901/Partial_1/` — carpeta creada, sin notas todavía.
-- `ETN506` fue eliminada — materia ya no relevante, carpeta borrada del vault.
+- Ya existen carpetas-esqueleto de materia: `Semesters/Sem_05/ETN506/Partial_2/` y `Semesters/Sem_09/ETN901/Partial_1/` — **ambas vacías, sin notas creadas todavía.**
 - `MOC/` no tiene ninguna MOC real — solo 2 capturas de pantalla sueltas (`comfor numbss.png` y su copia), que no son parte del sistema y deberían moverse a `_assets/` o `borrar/`.
 - `ETN302` es una materia legacy de un trabajo anterior — se considera obsoleta, no se le crean notas ni carpetas nuevas.
-- El foco sigue siendo infraestructura: cerrar las decisiones pendientes de tablet/TABnote, terminar Dataview, y luego recién empezar contenido académico real en ETN901.
+- El foco sigue siendo infraestructura: cerrar las decisiones pendientes de tablet/TABnote, terminar Dataview, y luego recién empezar contenido académico real en ETN506 y ETN901.
 
 ---
 
@@ -65,6 +64,9 @@ El vault está organizado como un **universo de galaxias**. Cada materia es una 
 University_Vault_2026/
 │
 ├── Semesters/                  ← contenido académico
+│   ├── Sem_05/
+│   │   └── ETN506/
+│   │       └── Partial_2/      ← creada, vacía
 │   └── Sem_09/
 │       └── ETN901/
 │           └── Partial_1/      ← creada, vacía
@@ -191,15 +193,10 @@ Obsidian Git sincroniza PC ↔ GitHub automáticamente cada 5 minutos. Mega sinc
 
 | Código | Nombre completo | Semestre | Parcial actual | Ruta | Estado |
 |--------|----------------|----------|----------------|------|--------|
+| ETN506 | *(completar nombre)* | 5 | 2 | `Semesters/Sem_05/ETN506/Partial_2/` | Carpeta creada, sin notas |
 | ETN901 | *(completar nombre)* | 9 | 1 | `Semesters/Sem_09/ETN901/Partial_1/` | Carpeta creada, sin notas |
 
-> El nombre completo de ETN901 no está registrado todavía — completar con el usuario cuando se inicie trabajo en esa materia.
-
-### Materias eliminadas
-
-| Código | Motivo |
-|--------|--------|
-| ETN506 | Eliminada 2026-06-24 — materia ya no relevante, carpeta borrada del vault |
+> Tabla a completar con el usuario — los nombres completos de ETN506 y ETN901 no están registrados en ningún beacon todavía.
 
 ### Materia legacy (no usar)
 
@@ -214,7 +211,7 @@ Obsidian Git sincroniza PC ↔ GitHub automáticamente cada 5 minutos. Mega sinc
 ### Si el usuario pide ayuda con una materia
 
 1. Verificar que la materia existe en la sección Materias Activas.
-2. Si existe → leer la star del tema correspondiente en `MOC/` o en `Semesters/`. Si la carpeta está vacía (como ETN901 hoy), decírselo en vez de asumir contenido.
+2. Si existe → leer la star del tema correspondiente en `MOC/` o en `Semesters/`. Si la carpeta está vacía (como ETN506 y ETN901 hoy), decírselo en vez de asumir contenido.
 3. Leer las notas relevantes según el tipo de pedido (planet para teoría, comet para ejercicios, etc.).
 4. Responder con el contexto real del vault — no de memoria genérica.
 
@@ -244,33 +241,11 @@ Leer el beacon específico según el tema:
 | NotebookLM (tutor externo) | `_app/_config/_notebooklm-system.md` |
 | Apuntes de tablet (en discusión, no cerrado) | `_app/_config/_TABnote-system.md` |
 | Pendientes del sistema | `_app/_config/_ToDo-system.md` |
-| Protocolo de búsqueda y selección de libros | `_app/_config/_library-system.md` |
 
 ### Si el usuario está en móvil sin PC encendida
 
 - Usar GitHub MCP para leer y escribir notas.
 - Avisar al usuario que los cambios llegarán al vault local en el próximo auto-pull de Obsidian Git (hasta 5 min después de encender la PC), y que la sincronización con Mega hacia tablet/celular es un canal aparte.
-
----
-
-## NOMENCLATURA DE BACKUPS
-
-Convención interna del vault para respaldar archivos antes de editarlos:
-
-| Archivo | Su backup |
-|---|---|
-| `nombre.md` | `nombre 1.md` |
-| `nombre 1.md` | `nombre 2.md` |
-
-**Reglas:**
-- El archivo **sin número** es siempre el **original activo** — el que Claude lee y edita.
-- El archivo **con número** (`nombre 1.md`, `nombre 2.md`…) es siempre el **backup** — no se toca, solo se conserva como respaldo.
-- Si ya existe un `nombre 1.md`, el siguiente backup es `nombre 2.md`, y así sucesivamente.
-- Obsidian puede generar automáticamente copias con este mismo patrón (`nombre 1.md`) al mover o duplicar archivos — eso es compatible con esta convención.
-- Claude **nunca edita un archivo con número en el nombre** salvo instrucción explícita del usuario.
-- Ejemplo real en este vault: `_pdf-system 1.md` es el backup de `_pdf-system.md`; `_claude-boot 1.md` es el backup de este archivo.
-
-> Esta convención aplica a todos los archivos del vault, no solo a los beacons.
 
 ---
 
