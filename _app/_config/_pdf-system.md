@@ -102,7 +102,7 @@ Usar `T00` para notas de referencia general no atadas a un tema (libros-guía, f
 
 **Ejemplos de nombres de nota:**
 ```
-ETN806-T01-PDF-apuntes-pdf-conjunta.md
+ETN806-T01-PDF-apuntes-conjunta.md
 ETN806-T02-PDF-slides-independencia.md
 ETN806-T00-PDF-practica2-enunciados.md
 ETN601-T00-PDF-floyd-fundamentos-digitales.md
@@ -119,7 +119,7 @@ Semesters/Sem_NN/ETNXXX/Partial_N/ETNXXX-TNN-PDF-nombre-descriptivo.md
 
 **Ejemplos:**
 ```
-Semesters/Sem_08/ETN806/Partial_2/ETN806-T01-PDF-apuntes-pdf-conjunta.md
+Semesters/Sem_08/ETN806/Partial_2/ETN806-T01-PDF-apuntes-conjunta.md
 Semesters/Sem_09/ETN901/Partial_1/ETN901-T00-PDF-libro-referencia-cap3.md
 ```
 
@@ -206,7 +206,7 @@ date_created: YYYY-MM-DD
 2. Seleccionas texto → PDF++ copia el callout [!PDF] con link a página exacta
         ↓
 3. Creas la nota .md con la convención Galaxy:
-   ETNXXX-TNN-nombre-descriptivo.md
+   ETNXXX-TNN-PDF-nombre-descriptivo.md
    en Semesters/Sem_NN/ETNXXX/Partial_N/
         ↓
 4. Pegas las citas en la nota → quedan conectadas al grafo

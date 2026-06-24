@@ -5,6 +5,7 @@
       "isHidden": false,
       "sortOrder": "byCreatedTimeReverse",
       "customOrder": [
+        "_assets",
         "rendimiento.md",
         "excame pdf.md",
         "ejercicio.md",
@@ -32,6 +33,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "Sem_08",
         "Sem_09",
         "Sem_05"
       ]
@@ -1520,6 +1522,8 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "tpl-photon 1.md",
+        "tpl-asteroid 1.md",
         "alt-B",
         "contextogen.md",
         "tpl-asteroid.md",
@@ -2489,10 +2493,6 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "borrar00009.md",
-        "921_enunciado.md",
-        "zborrar1111111111111.md",
-        "zborrar921_enunciado.md",
         "zborrar903_3gemino.md",
         "zborrar903_3 otro.md",
         "zborrar903.md",
@@ -2537,22 +2537,6 @@
       "isHidden": false
     },
     "Borrar/zborrar903_3gemino.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Borrar/zborrar921_enunciado.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Borrar/zborrar1111111111111.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Borrar/921_enunciado.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Borrar/borrar00009.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -2763,6 +2747,32 @@
       "isHidden": false
     },
     "_app/_config/_pdf-system 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_templates/tpl-asteroid 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_templates/tpl-photon 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_08": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [],
+      "sortOrder": "custom"
+    },
+    "_assets": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "graficos blob.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "_assets/graficos blob.md": {
       "isPinned": false,
       "isHidden": false
     }
