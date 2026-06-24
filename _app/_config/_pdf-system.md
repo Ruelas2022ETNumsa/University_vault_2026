@@ -11,7 +11,7 @@ related_notes:
   - "[[_ToDo-system]]"
 tags: [beacon, pdf, infraestructura]
 date_created: 2026-05-28
-date_updated: 2026-05-30
+date_updated: 2026-06-24
 status: activo
 ---
 
@@ -27,149 +27,206 @@ status: activo
 
 ## Objetivo
 
-El vault es un **cerebro digital para ingeniería**. Las notas Galaxy capturan el conocimiento procesado — teoría, ejercicios, fórmulas, conexiones. Pero el conocimiento tiene fuentes: apuntes del profesor, libros, prácticas oficiales, papers. Esas fuentes llegan como PDF.
+El vault es un **cerebro digital para ingeniería**. Las notas Galaxy capturan el conocimiento procesado — teoría, ejercicios, fórmulas, conexiones. Pero el conocimiento tiene fuentes: libros, apuntes del docente, prácticas oficiales. Esas fuentes llegan como PDF.
 
-El Sistema PDF resuelve una pregunta concreta: **¿dónde viven los PDFs y cómo se conectan al grafo Galaxy?**
+El Sistema PDF resuelve dos preguntas:
+- **¿Dónde viven los PDFs físicos?** → En `_PDF/`, organizados por materia.
+- **¿Cómo se conectan al grafo Galaxy?** → A través de notas `.md` generadas con PDF++ o Annotator, guardadas en `Semesters/`.
 
-La respuesta tiene dos piezas:
-- Los archivos PDF físicos viven en `_PDF/` — ordenados por materia, sin contaminar el contenido académico.
-- La conexión al grafo se hace a través de notas `asteroid` en `Semesters/` — que son las que llevan YAML, wikilinks y el texto extraído o anotado.
-
-Un PDF sin nota `asteroid` es un archivo mudo. Una nota `asteroid` con `pdf_file` es un nodo activo del cerebro.
+Los PDFs son archivos fuente — no se renombran, no se tocan. Las notas `.md` son los nodos activos del cerebro.
 
 ---
 
-## Lugar de los PDFs en el mapa del vault
+## Estructura de `_PDF/` — estado real en disco
 
 ```
-University_Vault_2026/
-│
-├── Semesters/                  ← contenido académico procesado (notas Galaxy)
-├── MOC/                        ← índices por materia
-├── _app/                       ← infraestructura del vault
-│   └── _config/
-│       ├── _galaxy-system.md
-│       ├── _pdf-system.md      ← este archivo
-│       └── ...
-├── _assets/                    ← imágenes exportadas (.png, .svg, .jpeg)
-├── _templates/                 ← plantillas de notas
-│
-└── _PDF/                       ← ★ archivos PDF físicos
-    ├── PDF-601/                   subcarpetas legacy — ver nota de convención abajo
-    ├── PDF-903/
-    ├── PDF-921/
-    ├── PDF-Electrónica analógica/
-    ├── PDF-Microprocesadores/
-    ├── PDF-telefonia/
-    └── [PDFs sueltos en raíz]     archivos sin subcarpeta — legacy, sin reorganizar aún
+_PDF/
+├── PDF-601/                    ← materia (nombre descriptivo, no sigla ETN)
+│   ├── Memorias de catedra/    ← subcarpeta interna: apuntes del docente por parcial
+│   ├── Manuales/               ← subcarpeta interna: material técnico
+│   ├── Gpt/                    ← subcarpeta interna: otros
+│   ├── Thomas L. Floyd - Digital fundamentals, 11th ed.pdf    ← libro-guía (raíz de materia)
+│   ├── Tocci, Widmer, Moss - Sistemas digitales, 10ma Ed.pdf  ← libro-guía (raíz de materia)
+│   └── ...
+├── PDF-903/                    ← otra materia
+│   ├── 903_LIBRO_ING/          ← subcarpeta interna
+│   ├── ING_PDF/
+│   ├── intel/
+│   ├── img903/
+│   ├── Kip R. Irvine -7ed- Assembly Language for x86 Processors.pdf  ← libro-guía
+│   └── ...
+├── PDF-921/
+├── PDF-Electrónica analógica/
+├── PDF-Microprocesadores/
+├── PDF-telefonia/
+└── [PDFs sueltos en raíz]      ← archivos legacy sin carpeta asignada — no mover salvo indicación
 ```
 
+### Convención de carpetas de materia
 
-`_PDF/` es un almacén de archivos fuente, no de notas. La organización semántica la llevan los nombres de archivo y las notas `asteroid`.
+- Formato: `PDF-nombre` donde `nombre` es el nombre descriptivo de la materia (no la sigla ETN).
+- Ejemplo: `PDF-601`, `PDF-telefonia`, `PDF-Electrónica analógica`.
+- Una carpeta por materia. No crear subcarpetas nuevas salvo que el docente entregue material separado por parcial — en ese caso la subcarpeta refleja esa división (ej. `Memorias de catedra/`).
+- Para materias nuevas: crear `PDF-nombre` siguiendo el mismo patrón.
 
-> ⚠️ **Convención de subcarpetas — estado real (verificado en disco 2026-06-23):** Las subcarpetas existentes usan el formato `PDF-nombre` (nombre descriptivo de materia o tema, no sigla ETN). Esta es la convención **real y vigente** — no la convención `ETN806/` que se documentó originalmente. Para PDFs nuevos: crear subcarpeta `PDF-nombre` si la materia aún no tiene carpeta. No renombrar las carpetas existentes salvo decisión explícita del usuario. También hay PDFs sueltos directamente en la raíz de `_PDF/` sin subcarpeta — son archivos legacy sin organizar. No moverlos salvo indicación explícita.
+### Tipos de contenido dentro de cada carpeta de materia
+
+| Tipo | Ubicación dentro de `PDF-nombre/` | Descripción |
+|------|-----------------------------------|-------------|
+| **Libros-guía** | Raíz de `PDF-nombre/` | Libros de referencia general de la materia. Se mantienen con su nombre original (largo, con autor y edición). |
+| **Material del docente** | Subcarpeta interna (`Memorias de catedra/`, etc.) | Apuntes, slides o prácticas entregadas por el docente. Pueden estar separadas por parcial si el docente las entrega así. |
+
+> Los nombres de los PDFs físicos **no se tocan**. Los libros tienen nombres largos con autor y edición — eso está bien. La identidad del archivo en el grafo la da la nota `.md`, no el nombre del PDF.
 
 ---
 
-## Convención de nombres para PDFs
+## Notas `.md` generadas desde PDF++ y Annotator
 
-Mismo patrón del Sistema Galaxy, sin `.md`:
+Estas notas son el producto de trabajar con un PDF en Obsidian. Son nodos activos del grafo Galaxy — llevan YAML, wikilinks y el contenido anotado o extraído.
+
+### Convención de nombres
+
+La convención Galaxy se aplica **solo a las notas `.md`**, no a los PDFs físicos:
 
 ```
-ETNXXX-TNN-nombre-descriptivo.pdf
+ETNXXX-TNN-PDF-nombre-descriptivo.md
 ```
 
 | Campo | Descripción | Ejemplo |
 |-------|-------------|---------|
 | `ETNXXX` | Sigla de la materia | `ETN806` |
-| `TNN` | Número de tema | `T01`, `T03` |
-| `nombre-descriptivo` | Slug corto en inglés, con guiones | `joint-pdf-slides` |
+| `TNN` | Número de tema o subtema que se está anotando | `T01`, `T03` |
+| `nombre-descriptivo` | Slug corto descriptivo del contenido, en español o inglés con guiones | `apuntes-pdf-conjunta`, `slides-independencia` |
 
-Usar `T00` para material de parcial completo o referencias generales (libros, formularios oficiales).
+Usar `T00` para notas de referencia general no atadas a un tema (libros-guía, formularios, prácticas completas).
 
-### Ejemplos
+**Ejemplos de nombres de nota:**
+```
+ETN806-T01-PDF-apuntes-pdf-conjunta.md
+ETN806-T02-PDF-slides-independencia.md
+ETN806-T00-PDF-practica2-enunciados.md
+ETN601-T00-PDF-floyd-fundamentos-digitales.md
+ETN903-T03-PDF-irvine-modos-direccionamiento.md
+```
+
+### Ubicación en el vault
+
+Las notas `.md` van dentro de `Semesters/`, en la carpeta del parcial correspondiente — **sin subcarpeta de Topic**:
 
 ```
-_PDF/ETN806/ETN806-T01-apuntes-pdf-conjunta.pdf
-_PDF/ETN806/ETN806-T02-slides-independence.pdf
-_PDF/ETN806/ETN806-T00-practica2-enunciados-oficial.pdf
-_PDF/ETN806/ETN806-T00-libro-papoulis-cap6.pdf
-_PDF/ETN302/ETN302-T05-laplace-apuntes.pdf
+Semesters/Sem_NN/ETNXXX/Partial_N/ETNXXX-TNN-PDF-nombre-descriptivo.md
 ```
+
+**Ejemplos:**
+```
+Semesters/Sem_08/ETN806/Partial_2/ETN806-T01-PDF-apuntes-pdf-conjunta.md
+Semesters/Sem_09/ETN901/Partial_1/ETN901-T00-PDF-libro-referencia-cap3.md
+```
+
+> Las notas de PDF no tienen `Topic_NN/` porque una sola nota puede cruzar varios temas del parcial (un capítulo de libro, unas slides del docente). Si el contenido es muy específico de un tema, igualmente va en `Partial_N/` sin Topic.
+
+### `galaxy_body` según el tipo de nota
+
+| Contenido de la nota | `galaxy_body` | Cuándo |
+|---|---|---|
+| Anotaciones, citas, extracción de texto de un PDF | `asteroid` | Trabajando con PDF++ o Annotator sobre libro, apunte o práctica |
+| Recorte de región de un PDF (imagen) | `photon` | Usando la herramienta de recorte de PDF++ — la imagen va a `_assets/` |
+
+Una misma sesión de trabajo puede generar una nota `asteroid` (texto extraído) y uno o más `photon` (recortes de figuras o ecuaciones). Son notas separadas.
 
 ---
 
-## La nota `asteroid` como puente al grafo
+## YAML de las notas PDF
 
-Un PDF solo es útil si está conectado al grafo. La conexión se hace con una nota de tipo `asteroid` ubicada en la carpeta de tema correspondiente dentro de `Semesters/`.
-
-La nota `asteroid` es el nodo activo: tiene YAML, tiene wikilinks, tiene el texto extraído o las citas copiadas con PDF++. El PDF es el archivo fuente al que apunta.
-
-### YAML extendido para `asteroid` con PDF
+### Para `asteroid` (anotaciones y texto extraído)
 
 ```yaml
 ---
-title: "Papoulis — Cap. 6: Variables aleatorias conjuntas"
+title: "Floyd — Cap. 3: Compuertas lógicas"
 galaxy_body: asteroid
-subject: ETN806
-semester: 8
-partial: 2
-topic: 1
+subject: ETN601
+semester: 6
+partial: 1
+topic: 3
 source_type: pdf-libro
-source_title: "Probability, Random Variables and Stochastic Processes"
-source_author: "Papoulis"
-source_chapter: "6"
-pdf_file: "[[ETN806-T00-libro-papoulis-cap6.pdf]]"
+source_title: "Digital Fundamentals, 11th ed."
+source_author: "Thomas L. Floyd"
+source_chapter: "3"
+pdf_file: "Thomas L. Floyd - Digital fundamentals, 11th ed.pdf"
 related_planets:
-  - "[[ETN806-T01-joint-pdf-definition]]"
-  - "[[ETN806-T01-marginal-density-formula]]"
-tags: [ETN806, galaxy-asteroid, referencia, pdf, T01, P2]
+  - "[[ETN601-T03-compuertas-logicas]]"
+tags: [ETN601, galaxy-asteroid, pdf, T03, P1]
 date_created: YYYY-MM-DD
 status: en-proceso
 ---
 ```
 
-El campo `pdf_file` enlaza directamente al archivo en `_PDF/`. PDF++ detecta ese link y permite abrir el PDF con un click desde la nota.
+> `pdf_file` contiene el **nombre exacto del PDF físico** tal como aparece en disco — nombre largo con autor y edición. No se inventa un nombre corto. PDF++ usa este campo para abrir el archivo directamente.
 
-### Cuerpo de la nota `asteroid` con citas PDF++
+### Para `photon` (recorte de región PDF)
 
-Cuando copias texto desde PDF++ (con el formato Quote configurado), se pega así:
-
-```markdown
-## Notas del capítulo
-
-> [!PDF] [[ETN806-T00-libro-papoulis-cap6.pdf#page=142&selection=...|(Papoulis, p.142)]]
-> La densidad conjunta f(x,y) queda definida sobre la región de soporte donde la integral doble normaliza a 1.
-
-> [!PDF] [[ETN806-T00-libro-papoulis-cap6.pdf#page=145&selection=...|(Papoulis, p.145)]]
-> La densidad marginal se obtiene integrando sobre toda la variable que se elimina.
+```yaml
+---
+title: "Figura: tabla de verdad AND-OR"
+galaxy_body: photon
+photon_type: pdf-crop
+subject: ETN601
+semester: 6
+partial: 1
+topic: 3
+source_pdf: "Thomas L. Floyd - Digital fundamentals, 11th ed.pdf"
+source_page: 87
+attached_to: "[[ETN601-T03-compuertas-logicas]]"
+tags: [ETN601, galaxy-photon, pdf-crop, T03]
+date_created: YYYY-MM-DD
+---
 ```
 
-Cada callout `[!PDF]` es un link a la página exacta del PDF. Doble click sobre el highlight en el PDF lleva de vuelta a esta nota.
+---
+
+## Tipos de PDF por `source_type`
+
+| Valor | Descripción | Ejemplo |
+|-------|-------------|--------|
+| `pdf-libro` | Libro-guía de la materia | Floyd, Irvine, Tanenbaum |
+| `pdf-apuntes` | Apuntes o slides del docente | Memorias de cátedra |
+| `pdf-practica` | Enunciados oficiales de práctica o examen | Práctica 2 ETN806 |
+| `pdf-formulario` | Formulario oficial de la materia | Formulario P2 |
+| `pdf-paper` | Artículo académico o paper | Paper de referencia |
 
 ---
 
 ## Flujo de trabajo: de PDF a nodo del cerebro
 
+### Con PDF++ (texto seleccionable)
+
 ```
-1. Consigues un PDF (apunte, libro, práctica oficial)
+1. Abres el PDF en Obsidian desde su carpeta _PDF/PDF-nombre/
         ↓
-2. Lo renombras con la convención Galaxy
-   ETN806-T01-apuntes-pdf-conjunta.pdf
+2. Seleccionas texto → PDF++ copia el callout [!PDF] con link a página exacta
         ↓
-3. Lo guardas en _PDF/ETN806/
+3. Creas la nota .md con la convención Galaxy:
+   ETNXXX-TNN-nombre-descriptivo.md
+   en Semesters/Sem_NN/ETNXXX/Partial_N/
         ↓
-4. Creas una nota asteroid en la carpeta de tema:
-   Semesters/Sem_08/ETN806/Partial_2/Topic_01_.../
-   ETN806-T01-apuntes-pdf-conjunta.md
+4. Pegas las citas en la nota → quedan conectadas al grafo
         ↓
-5. Abres el PDF en Obsidian (PDF++ lo muestra integrado)
+5. Completas el YAML con source_title, source_author, pdf_file (nombre exacto del PDF)
         ↓
-6. Seleccionas texto → PDF++ copia el link con el callout [!PDF]
+6. Agregas wikilinks al bloque %% para conectar con planets y stars del mismo tema
+```
+
+### Con Annotator (EPUBs o PDFs escaneados)
+
+```
+1. Creas la nota .md con el YAML mínimo incluyendo:
+   annotation-target: _PDF/PDF-nombre/nombre-exacto-del-archivo.pdf
         ↓
-7. Pegas en la nota asteroid → queda conectado al grafo
+2. Obsidian abre el PDF en modo Annotator al abrir la nota
         ↓
-8. Agregas wikilinks al bloque %% para conectar con planets y stars
+3. Anotas directamente sobre el PDF → las anotaciones se guardan en la nota .md
+        ↓
+4. Agregas YAML completo y wikilinks galaxy al terminar la sesión
 ```
 
 ---
@@ -178,44 +235,33 @@ Cada callout `[!PDF]` es un link a la página exacta del PDF. Doble click sobre 
 
 ### PDF++
 
-Lector y anotador principal. Las citas se copian como callouts `[!PDF]` con link a página exacta. Doble click en el highlight del PDF abre la nota `asteroid` correspondiente.
+Lector y anotador principal. Las citas se copian como callouts `[!PDF]` con link a página exacta. Doble click en el highlight del PDF abre la nota correspondiente.
 
 **Ajustes aplicados:**
 
-| Ajuste                               | Valor                                          | Dónde                                         |
-| ------------------------------------ | ---------------------------------------------- | --------------------------------------------- |
-| Default location for new attachments | In the folder specified below → `_PDF`         | Obsidian Settings → Files and links           |
-| Dummy file folder path               | `_PDF`                                         | PDF++ Settings → Dummy PDF for external files |
-| Copy format "Quote"                  | `> [!PDF] {{linkWithDisplay}}`<br>`> {{text}}` | PDF++ Settings → Copying → Copy formats       |
+| Ajuste | Valor | Dónde |
+|--------|-------|-------|
+| Default location for new attachments | `_PDF` | Obsidian Settings → Files and links |
+| Dummy file folder path | `_PDF` | PDF++ Settings → Dummy PDF for external files |
+| Copy format "Quote" | `> [!PDF] {{linkWithDisplay}}`<br>`> {{text}}` | PDF++ Settings → Copying → Copy formats |
 
-**Cuándo usarlo:** PDFs con texto seleccionable — apuntes, slides, prácticas, libros digitales. Es el 90% del flujo diario.
-
----
+**Cuándo usarlo:** PDFs con texto seleccionable — libros digitales, slides, prácticas. Es el flujo principal.
 
 ### Annotator
 
-Lector de anotaciones estilo Hypothesis. No tiene configuración global — se activa nota por nota con un campo en el YAML:
-
-```yaml
-annotation-target: _PDF/ETN806/ETN806-T01-apuntes-pdf-conjunta.pdf
-```
+Lector estilo Hypothesis. Se activa nota por nota con el campo YAML `annotation-target`.
 
 **Ajuste aplicado:**
 
-| Ajuste              | Valor  | Dónde                                    |
-| ------------------- | ------ | ---------------------------------------- |
+| Ajuste | Valor | Dónde |
+|--------|-------|-------|
 | Custom default path | `_PDF` | Annotator Settings → Custom default path |
 
-**Cuándo usarlo:**
-- EPUBs — Annotator es la única opción para libros `.epub`
-- PDFs escaneados sin texto seleccionable
-- Si se prefiere anotar con comentarios largos en estilo Hypothesis
-
----
+**Cuándo usarlo:** EPUBs, PDFs escaneados sin texto seleccionable, o cuando se prefiere anotar con comentarios largos.
 
 ### OmniSearch + Text Extractor
 
-OmniSearch indexa todo el vault incluyendo PDFs. **Requiere el plugin compañero "Text Extractor"** instalado y activo para poder leer el contenido de PDFs e imágenes.
+OmniSearch indexa todo el vault incluyendo PDFs. Requiere **Text Extractor** instalado y activo.
 
 **Ajustes aplicados:**
 
@@ -224,53 +270,25 @@ OmniSearch indexa todo el vault incluyendo PDFs. **Requiere el plugin compañero
 | PDF content indexing | ✅ Activado | OmniSearch Settings |
 | Images OCR indexing | ✅ Activado | OmniSearch Settings |
 | Document content indexing | ❌ Desactivado | No se usan archivos Office |
-| Images AI indexing | ❌ Desactivado | Requiere plugin extra innecesario |
-| Index paths of unsupported files | ✅ Activado | Encuentra Canvas y Excalidraw por nombre |
-| Simpler search | ❌ Desactivado | Mantiene el algoritmo BM25 con pesos configurados |
-| Downranked folders | `_app`, `_templates`, `_assets` | Empuja infraestructura al fondo de resultados |
-
-**Plugins requeridos:** Text Extractor (Community Plugins — mismo autor que OmniSearch).
-
----
-
-## Tipos de PDF por `source_type`
-
-| Valor | Descripción | Ejemplo |
-|-------|-------------|---------|
-| `pdf-apuntes` | Apuntes del profesor o diapositivas | Slides de clase ETN806 |
-| `pdf-libro` | Capítulo o sección de libro | Papoulis Cap. 6 |
-| `pdf-practica` | Enunciados oficiales de práctica o examen | Práctica 2 ETN806 |
-| `pdf-paper` | Artículo académico o paper | Paper de referencia |
-| `pdf-formulario` | Formulario oficial de la materia | Formulario P2 ETN806 |
-
----
-
-## Conexión con los tipos de cuerpo Galaxy
-
-| PDF contiene | Nota que se crea | `galaxy_body` |
-|---|---|---|
-| Apuntes de un tema específico | Nota de extracción del tema | `asteroid` |
-| Libro o capítulo de referencia | Nota de referencia bibliográfica | `asteroid` |
-| Enunciados de práctica o examen | Nota de enunciados | `asteroid` |
-| Ejercicio resuelto en PDF | Nota de ejercicio resuelto | `comet` (con `pdf_file`) |
-
-Un `comet` puede tener `pdf_file` si el ejercicio resuelto viene de un PDF oficial. En ese caso el `comet` apunta al PDF y a los `planets` de los conceptos usados.
+| Images AI indexing | ❌ Desactivado | Innecesario |
+| Index paths of unsupported files | ✅ Activado | Encuentra Excalidraw por nombre |
+| Simpler search | ❌ Desactivado | Mantiene BM25 |
+| Downranked folders | `_app`, `_templates`, `_assets` | Empuja infraestructura al fondo |
 
 ---
 
 ## Registro de decisiones de diseño
 
-| Decisión                                      | Razón                                                                                                                                                                                                  |
-| --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `_PDF/` separado de `Semesters/`              | Los PDFs son archivos fuente, no conocimiento procesado. Mismo principio que `_assets/`.                                                                                                               |
-| Una carpeta por materia, sin sub-carpetas     | La organización semántica la llevan los nombres y las notas `asteroid`. Sub-carpetas serían redundancia.                                                                                               |
-| La nota `asteroid` como único puente          | El grafo Galaxy no conecta archivos PDF directamente — conecta notas. El `asteroid` es el nodo que traduce el PDF al lenguaje del grafo.                                                               |
-| Callout `[!PDF]` para citas                   | Visible, identificable, con link a página exacta. Consistente con el sistema de callouts de Obsidian.                                                                                                  |
-| Mismo patrón de nombres que Galaxy            | Sin excepciones al sistema. Un archivo en `_PDF/` y su nota en `Semesters/` tienen el mismo nombre base — solo cambia la extensión.                                                                    |
-| `source_type` como campo YAML                 | Permite filtrar con DataView: todos los libros, todas las prácticas, todos los papers de una materia.                                                                                                  |
-| PDF++ para texto, Annotator para EPUBs        | Cada plugin tiene su dominio. PDF++ es nativo a Obsidian. Annotator cubre lo que PDF++ no soporta.                                                                                                     |
-| Text Extractor como dependencia de OmniSearch | Sin él OmniSearch solo busca en notas markdown. Con él el cerebro busca en todas las fuentes.                                                                                                          |
-| Recortes de región PDF++ → `_assets/`         | Las imágenes generadas al recortar una región de un PDF van al destino global de attachments (`_assets/`), no a `_PDF/`. Son visuals, no fuentes. Se tratan como `photon` con `photon_type: pdf-crop`. |
+| Decisión | Razón |
+|----------|-------|
+| Los PDFs físicos no se renombran | Los libros tienen nombres canónicos con autor y edición — cambiarlos rompe la referencia. La identidad en el grafo la da la nota `.md`. |
+| Notas PDF en `Partial_N/` sin `Topic_NN/` | Una nota de libro o apunte puede cruzar varios temas. Sin Topic evita forzar una clasificación incorrecta. |
+| `pdf_file` contiene el nombre exacto del PDF | PDF++ necesita el nombre real del archivo para abrir el link. No se inventa un alias corto. |
+| `asteroid` para anotaciones, `photon` para recortes | Son productos distintos: texto procesado vs imagen estática. Cada uno tiene su rol en el grafo. |
+| Libros-guía en raíz de `PDF-nombre/` | Son referencias generales de la materia, no atadas a un parcial. Subcarpetas solo para material del docente dividido por parcial. |
+| Carpetas `PDF-nombre` no `ETN-XXX` | Convención real heredada del vault anterior. Se mantiene para no romper links existentes. |
+| `_PDF/` separado de `Semesters/` | Los PDFs son archivos fuente, no conocimiento procesado. Mismo principio que `_assets/`. |
+| Recortes PDF++ → `_assets/` | Son imágenes, no fuentes. Se tratan como `photon` con `photon_type: pdf-crop`. |
 
 %%
 galaxy-links
