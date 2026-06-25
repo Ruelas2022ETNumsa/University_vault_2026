@@ -11,7 +11,7 @@ related_notes:
   - "[[_notebooklm-system]]"
 tags: [beacon, todo, plugins, infraestructura]
 date_created: 2026-05-29
-date_updated: 2026-06-24
+date_updated: 2026-06-25
 status: activo
 ---
 
@@ -80,13 +80,10 @@ status: activo
 - [x] Decidir: `supernova` como `galaxy_body` nuevo (tipo #14) — aprobado 2026-06-24. Resuelve la pregunta de `tabnote vs asteroid`. Registrado en [[_galaxy-system]], [[_note-system]], [[_template-system]], [[_TABnote-system]].
 - [x] Definir disparador/recordatorio para generar el snapshot PDF al cerrar cada parcial — resuelto: campo `archive_snapshot` en plantilla + ítem en `_TABnote-system` registro de decisiones cerradas.
 - [ ] Medir tamaño real del PDF+(Samsung) de cierre de parcial — para estimar peso acumulado en `_tabnotes_archivo/` a lo largo del semestre
-- [x] Confirmar convención real de subcarpetas dentro de `_PDF/` — **RESUELTO**: la convención real usa `PDF-nombre` (ej. `PDF-telefonia`, `PDF-921`), no siglas `ETNXXX`. Documentado en [[_pdf-system]]. Pendiente: actualizar el diagrama de carpetas en [[_galaxy-system]].
+- [x] Confirmar convención real de subcarpetas dentro de `_PDF/` — **RESUELTO**: la convención real usa `PDF-nombre` (ej. `PDF-telefonia`, `PDF-921`), no siglas `ETNXXX`. Documentado en [[_pdf-system]]. Diagrama de carpetas en [[_galaxy-system]] actualizado a `PDF-nombre` (2026-06-25).
 
 ### PDF++ — estado
 - [x] Guía `PDF_PP-guide.md` creada en `_app/_appnotes/` ✅ — flujo completo con `_PDF/` + Mega documentado
-
-### NotebookLM — guía de transcripción (TABnote)
-- [ ] Guía de formato de apuntes manuscritos para transcripción TABnote → supernova `.md` — pendiente de sesión futura. Claude ayuda a crear el prompt que se llevará a NotebookLM. Referenciar en [[_notebooklm-system]] y [[_TABnote-system]] cuando esté lista.
 
 ### Plugins — estado actualizado (2026-06-24)
 - [x] **TikZJax** — instalado y funcionando, `circuitikz` verificado ✅
@@ -131,9 +128,21 @@ status: activo
 - [x] Crear `latex_guide.md` en `_app/_appnotes/` — referencia de comandos frecuentes para ETN806, snippets de Completr y atajos de Quick LaTeX documentados
 
 ### NotebookLM — prompts por materia
-- [x] **ETN806** (Procesos Estocásticos) — prompts para los 3 parciales ✅. Enfoque: resolución de ejercicios con Desmos, TikZJax y Mermaid. Contexto: guías de Desmos y TikZJax + archivos `.md` con ejercicios y fórmulas.
+- [x] **ETN806** (Procesos Estocásticos) — prompts para los 3 parciales ✅. Enfoque: resolución de ejercicios con Desmos, TikZJax y Mermaid. Contexto: guías de Desmos y TikZJax + archivos `.md` con ejercicios y fórmulas. Prompts muy funcionales — se usaron en los 3 parciales y ayudaron a generar gráficas con Desmos y diagramas TikZJax (incl. cadenas de Markov). **Pendiente de sesión futura aparte:** revisión minuciosa de los prompts reales (no solo el beacon) — ver [[_notebooklm-system]] y [[_notebooklm-prompt]].
 - [x] **MAT101** (Cálculo 1) — prompt para transcripción ✅. Enfoque: solo transcripción, no resolución de ejercicios.
+- [ ] **ETN901** — sin prompt todavía.
 - [ ] Prompts para materias futuras — sesión futura: Claude ayuda a crear un **generador de prompts** para sistematizar esto.
+- [ ] Guía de formato de apuntes manuscritos para transcripción TABnote → supernova `.md` — sesión futura aparte, junto con la revisión de prompts.
+
+### Sincronización de beacons — sesión 2026-06-25
+- [x] **`_galaxy-system.md`** — ediciones rápidas: diagrama de `_PDF/` actualizado a `PDF-nombre`, conteo "Trece tipos" → "Catorce tipos" (la tabla ya incluía `supernova`). **Pendiente: revisión minuciosa completa en sesión futura aparte** (el usuario lo marcó explícitamente como insuficiente para una revisión rápida).
+- [x] **`_pdf-system.md`** — verificado contra su backup (`_pdf-system 1.md`, may-2026) — ya estaba correctamente sincronizado con la convención `PDF-nombre`. Backup confirmado eliminable por el usuario. Sin cambios de contenido.
+- [x] **`_library-system.md`** — estandarizado: agregado YAML frontmatter completo (no tenía) con `galaxy_body: beacon`, `related_notes`, tags, fechas; reemplazado el footer suelto por bloque `%% galaxy-links %%` sincronizado con el YAML.
+- [x] **`_graph-system.md`** — verificado: ya describía TikZJax como instalado y funcionando (consistente con el cierre de Fase de plugins del 2026-06-24). Sin cambios de contenido, solo `date_updated`.
+- [x] **`_mindmap-system.md`** — corregido: faltaba `[[_pdf-system]]` en el bloque `%%` final aunque estaba en el YAML `related_notes` y mencionado en el cuerpo — rompía la regla de dos capas sincronizadas del Sistema Galaxy. Agregado.
+- [x] **`_basic-memory-system.md`** — versión instalada verificada con el usuario (`pip show basic-memory` / `basic-memory --version`): **0.21.6**, coincide con lo documentado. Sin cambios de contenido.
+- [ ] **`_notebooklm-system.md`** / **`_notebooklm-prompt.md`** — pospuesto a sesión futura aparte: los prompts de ETN806 son material vivo y muy funcional (usado en los 3 parciales, generación de gráficas Desmos y diagramas TikZJax incl. cadenas de Markov) — requiere que Claude vea los prompts reales, no solo el beacon. Ver detalle en sección "NotebookLM — prompts por materia" arriba.
+- [ ] **`_excalidraw-system.md`** — sigue retrasado, sin tocar esta sesión (ver sección Excalidraw arriba).
 
 ### Fase 4 — DataView
 > ⏸️ Retrasado — instalar cuando se estabilice la infraestructura

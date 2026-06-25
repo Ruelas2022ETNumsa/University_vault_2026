@@ -30842,6 +30842,7 @@ deseable
 determinando
 disecci
 diseccionada
+describ
 Vault
 Verificar
 Variables
@@ -67742,6 +67743,8 @@ await
 attached
 abreviado
 alenta
+ayudaron
+agregado
 related
 recomendados
 ribbon
@@ -94091,6 +94094,7 @@ uPpv
 udv
 ubicado
 unas
+usaron
 Galaxy
 Git
 Gr
@@ -137038,6 +137042,7 @@ AlYu
 Ayjd
 Anotaciones
 Alenta
+Agregado
 push
 pull
 para
@@ -142976,6 +142981,7 @@ poca
 procesador
 planets
 prioritarios
+pospuesto
 min
 mica
 movimiento
@@ -150279,6 +150285,9 @@ mGWkT
 mlnC
 move
 marcan
+minuciosa
+marc
+mencionado
 YAML
 Ya
 You
@@ -161830,6 +161839,7 @@ BdVu
 BOrj
 Bwxr
 BACKUPS
+Backup
 en
 exacta
 escaneados
@@ -168482,6 +168492,8 @@ entregue
 entregadas
 else
 estabilice
+eliminable
+estandarizado
 Motor
 Media
 Mantiene
@@ -195268,6 +195280,8 @@ interacci
 igualmente
 inventa
 isPDF
+incl
+insuficiente
 Dependencia
 Dropbox
 Dataview
@@ -218881,6 +218895,9 @@ fusionan
 fusionada
 fusionar
 forzarlas
+funcionales
+footer
+faltaba
 haya
 hace
 hacer

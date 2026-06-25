@@ -6,14 +6,12 @@
       "sortOrder": "byCreatedTimeReverse",
       "customOrder": [
         "rendimiento.md",
-        "excame pdf.md",
-        "ejercicio.md",
+        "examen final 806 pdf.md",
         "notebooklm oldesdd.md",
         "colas_guide_s.md",
         "notebooklm new.md",
         "notebooklm old.md",
         "tables no terminado.md",
-        "book 806.md",
         "ETN806-practica_3.md",
         "in_work",
         "Borrar",
@@ -1428,12 +1426,6 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "_note-system 1.md",
-        "_TABnote-system 1.md",
-        "_template-system 1.md",
-        "_ToDo-system 1.md",
-        "_galaxy-system 1.md",
-        "_pdf-system 1.md",
         "_basic-memory-system.md",
         "_claude-boot.md",
         "_excalidraw-system.md",
@@ -1456,7 +1448,7 @@
       "isHidden": false
     },
     "_app/_config/_claude-boot.md": {
-      "isPinned": false,
+      "isPinned": true,
       "isHidden": false
     },
     "_app/_config/_excalidraw-system.md": {
@@ -2590,10 +2582,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "book 806.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Semestres/SEM_08/ETN806/Partial_2/ETN806-Parcial_2.md": {
       "isPinned": false,
       "isHidden": false
@@ -2738,23 +2726,11 @@
       "isPinned": false,
       "isHidden": false
     },
-    "excame pdf.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "ejercicio.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "rendimiento.md": {
       "isPinned": false,
       "isHidden": false
     },
     "_app/_config/_TABnote-system.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/_config/_pdf-system 1.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -2772,10 +2748,6 @@
       "sortOrder": "custom",
       "customOrder": []
     },
-    "_app/_config/_galaxy-system 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_templates/tpl-supernova.md": {
       "isPinned": false,
       "isHidden": false
@@ -2788,25 +2760,14 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_app/_config/_note-system 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/_config/_TABnote-system 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/_config/_template-system 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/_config/_ToDo-system 1.md": {
+    "examen final 806 pdf.md": {
       "isPinned": false,
       "isHidden": false
     }
   },
   "pinnedFiles": [
     "_app/_appnotes/PDF_PP-guide.md",
+    "_app/_config/_claude-boot.md",
     "_app/_config/_galaxy-system.md"
   ],
   "showHidden": false,

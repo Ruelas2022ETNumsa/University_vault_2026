@@ -8,7 +8,6 @@ related_notes:
   - "[[_note-system]]"
   - "[[_template-system]]"
   - "[[_pdf-system]]"
-  - "[[_library-system]]"
   - "[[_mindmap-system]]"
   - "[[_excalidraw-system]]"
   - "[[_graph-system]]"
@@ -20,7 +19,7 @@ related_notes:
   - "[[claude_solve]]"
 tags: [beacon, claude, arranque, infraestructura]
 date_created: 2026-05-30
-date_updated: 2026-06-25
+date_updated: 2026-06-24
 status: activo
 ---
 
@@ -294,7 +293,6 @@ galaxy-links
 [[_note-system]]
 [[_template-system]]
 [[_pdf-system]]
-[[_library-system]]
 [[_mindmap-system]]
 [[_excalidraw-system]]
 [[_graph-system]]
