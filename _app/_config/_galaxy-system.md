@@ -12,7 +12,7 @@ related_notes:
   - "[[_ToDo-system]]"
 tags: [beacon, galaxy, infraestructura]
 date_created: 2026-05-28
-date_updated: 2026-06-24
+date_updated: 2026-06-25
 status: activo
 ---
 
@@ -90,9 +90,9 @@ University_Vault_2026/
 │                                  Se nombran igual que la nota fuente.
 │
 ├── _PDF/                       ← archivos PDF físicos — ver [[_pdf-system]]
-│   ├── ETN806/                    una carpeta por materia, sin sub-carpetas
-│   ├── ETN302/                    la organización semántica la llevan los nombres
-│   └── ETNXXX/                    y las notas asteroid en Semesters/
+│   ├── PDF-telefonia/             una carpeta por materia/tema en texto (no sigla ETNXXX)
+│   ├── PDF-921/                   la organización semántica la llevan los nombres
+│   └── PDF-nombre/                y las notas asteroid en Semesters/
 │
 ├── _templates/                 ← plantillas de notas de Obsidian — ver [[_template-system]]
 │   ├── tpl-star.md             ← una plantilla por tipo de cuerpo galaxy
@@ -154,7 +154,7 @@ ETN806-ETN302-laplace-vs-probability.md
 
 ## Tipos de cuerpo galaxy
 
-El campo `galaxy_body` en el YAML define el rol de la nota. Trece tipos:
+El campo `galaxy_body` en el YAML define el rol de la nota. Catorce tipos:
 
 | `galaxy_body` | Símbolo | Rol |
 |---------------|---------|-----|

@@ -6161,6 +6161,7 @@ tKEl
 tUUr
 tedra
 tnum
+transcripciones
 ToDo
 Templater
 Text
@@ -20146,6 +20147,7 @@ SOykS
 STOSB
 Subcarpeta
 Subcarpetas
+Supernova
 Plugins
 Pendientes
 Plugin
@@ -30836,6 +30838,7 @@ devolver
 descartados
 deseable
 determinando
+disecci
 Vault
 Verificar
 Variables
@@ -48336,6 +48339,7 @@ bjC
 basados
 backups
 borrada
+bruta
 scope
 status
 selector
@@ -105512,6 +105516,7 @@ CciVdn
 CDDDDDD
 Contador
 Ciclo
+Catorce
 Instalados
 Instalado
 Instalar
@@ -218864,6 +218869,8 @@ fzDDD
 forzarla
 fusionan
 fusionada
+fusionar
+forzarlas
 haya
 hace
 hacer
