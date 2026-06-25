@@ -30850,6 +30850,7 @@ describ
 descart
 descartada
 dejamos
+derevisi
 Vault
 Verificar
 Variables
@@ -100168,6 +100169,7 @@ GfoB
 GENERADOR
 GENERADO
 GENERAR
+Generador
 Convenci
 Creaci
 Commander
@@ -150324,6 +150326,7 @@ marc
 mencionado
 mindmap
 melo
+movido
 YAML
 Ya
 You
@@ -195322,6 +195325,7 @@ isPDF
 incl
 insuficiente
 ingles
+informal
 Dependencia
 Dropbox
 Dataview

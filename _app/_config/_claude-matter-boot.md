@@ -2,7 +2,7 @@
 title: "Claude Matter Boot — Generador de contexto por materia"
 galaxy_body: beacon
 scope: vault
-audiencia: [claude]
+audience: [claude]
 related_notes:
   - "[[_claude-boot]]"
   - "[[_galaxy-system]]"
@@ -218,3 +218,11 @@ Estas son reglas que Claude debe seguir al construir el archivo generado:
 - **Si el formulario está disponible**, leerlo durante la entrevista y usarlo para completar la sección "Cómo aplicar el formulario" con los procedimientos reales, no con placeholders.
 
 - **El nombre del archivo generado** debe seguir el patrón: `contexto_[CODIGO-MATERIA].md` o `contexto_[NOMBRE-CORTO].md` según lo que el usuario prefiera.
+
+%%
+galaxy-links
+[[_claude-boot]]
+[[_galaxy-system]]
+[[_note-system]]
+[[_ToDo-system]]
+%%

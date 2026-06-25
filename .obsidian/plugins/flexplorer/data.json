@@ -3,7 +3,7 @@
     "/": {
       "isPinned": false,
       "isHidden": false,
-      "sortOrder": "byCreatedTimeReverse",
+      "sortOrder": "byName",
       "customOrder": [
         "rendimiento.md",
         "examen final 806 pdf.md",
@@ -1127,6 +1127,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "notebooklm-prompts",
         "Canvas",
         "completr-words",
         "Excalidraw",
@@ -1339,20 +1340,15 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "Tikz_markov_guide.md",
         "PDF_PP-guide.md",
         "better-export-pdf.md",
         "class-notes-guide.md",
-        "desmos_guide.md",
         "latex_guide.md",
-        "notebooklm_modes.md",
         "pdf-guide.md",
         "plugin_guide.md",
         "tagroute_parche",
         "obsidian_guide.md",
-        "tags_notes.md",
-        "tikzjax_guide.md",
-        "transcription_guide.md"
+        "tags_notes.md"
       ]
     },
     "_app/_appnotes/better-export-pdf.md": {
@@ -1363,15 +1359,7 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_app/_appnotes/desmos_guide.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_app/_appnotes/latex_guide.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/_appnotes/notebooklm_modes.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -1410,14 +1398,6 @@
       "isHidden": false
     },
     "_app/_appnotes/tags_notes.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/_appnotes/tikzjax_guide.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/_appnotes/transcription_guide.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -2670,10 +2650,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_app/_appnotes/Tikz_markov_guide.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "notebooklm old.md": {
       "isPinned": false,
       "isHidden": false
@@ -2745,6 +2721,38 @@
       "isHidden": false
     },
     "_app/_config/_claude-matter-boot.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm-prompts": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "transcription_guide.md",
+        "tikzjax_guide.md",
+        "desmos_guide.md",
+        "Tikz_markov_guide.md",
+        "notebooklm_modes.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "_app/notebooklm-prompts/notebooklm_modes.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm-prompts/Tikz_markov_guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm-prompts/desmos_guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm-prompts/tikzjax_guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm-prompts/transcription_guide.md": {
       "isPinned": false,
       "isHidden": false
     }

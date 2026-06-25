@@ -1,8 +1,9 @@
 ---
-title: "Claude Boot — Arranque de sesión"
+title: Claude Boot — Arranque de sesión
 galaxy_body: beacon
 scope: vault
-audience: [claude]
+audience:
+  - claude
 related_notes:
   - "[[_galaxy-system]]"
   - "[[_note-system]]"
@@ -18,7 +19,12 @@ related_notes:
   - "[[_TABnote-system]]"
   - "[[_ToDo-system]]"
   - "[[claude_solve]]"
-tags: [beacon, claude, arranque, infraestructura]
+  - "[[_claude-matter-boot]]"
+tags:
+  - beacon
+  - claude
+  - arranque
+  - infraestructura
 date_created: 2026-05-30
 date_updated: 2026-06-25
 status: activo
@@ -309,4 +315,5 @@ galaxy-links
 [[_TABnote-system]]
 [[_ToDo-system]]
 [[claude_solve]]
+[[_claude-matter-boot]]
 %%
