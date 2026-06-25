@@ -55,14 +55,14 @@ Semestre y parcial **no se repiten** en el nombre del archivo.
 ### Patrón de nombre de archivo
 
 ```
-ETNXXX-TNN-nombre-descriptivo.md
+ETNXXX-TNN-nombre_descriptivo.md
 ```
 
-| Campo | Ejemplo |
-|-------|---------|
-| Sigla de la materia | `ETN806` |
-| Número de tema (con cero) | `T01`, `T03` |
-| Slug descriptivo en inglés, con guiones | `joint-pdf-definition` |
+| Campo | Ejemplo                |
+| --------------------------------------- | ---------------------- |
+| Sigla de la materia | `ETN806`               |
+| Número de tema (con cero) | `T01`, `T03`           |
+| Slug descriptivo en inglés, con guiones | `joint_pdf_definition` |
 
 Usar `T00` para notas de parcial completo (formularios, enunciados, referencias generales).
 Para notas Bridge entre dos materias: `ETN806-ETN302-nombre-del-puente.md`
@@ -75,6 +75,9 @@ ETN806-T01-normalization-k-solved.md
 ETN806-T00-formulario-partial2.md
 ETN806-ETN302-laplace-vs-probability.md
 ```
+
+
+
 
 ---
 
@@ -177,7 +180,7 @@ El YAML **no genera conexiones** en el grafo nativo de Obsidian. Los `[[wikilink
 %%
 galaxy-links
 [[ETN806-T01-star]]
-[[ETN806-T01-marginal-density-formula]]
+[[ETN806-T01-marginal_density_formula]]
 %%
 ```
 

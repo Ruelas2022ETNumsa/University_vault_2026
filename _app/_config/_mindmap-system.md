@@ -1,19 +1,25 @@
 ---
-title: "Sistema Mindmap — Excalidraw + Mindmap Builder"
+title: Sistema Mindmap — Excalidraw + Mindmap Builder
 galaxy_body: beacon
 scope: vault
 tool: excalidraw
-audience: [usuario, claude]
+audience:
+  - usuario
+  - claude
 related_notes:
   - "[[_galaxy-system]]"
   - "[[_template-system]]"
   - "[[_note-system]]"
   - "[[_pdf-system]]"
   - "[[_ToDo-system]]"
-tags: [beacon, excalidraw, mindmap, infraestructura]
+tags:
+  - beacon
+  - excalidraw
+  - mindmap
+  - infraestructura
 date_created: 2026-05-28
 date_updated: 2026-06-25
-status: activo
+status: pausado
 ---
 
 # Sistema Mindmap — University Vault

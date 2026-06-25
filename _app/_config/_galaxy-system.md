@@ -121,7 +121,7 @@ University_Vault_2026/
 ### Patrón
 
 ```
-ETNXXX-TNN-nombre-descriptivo.md
+ETNXXX-TNN-nombre_descriptivo.md
 ```
 
 | Campo                | Descripción                                    | Ejemplo                  |

@@ -1,9 +1,11 @@
 ---
-title: "Sistema Excalidraw — Configuración del plugin"
+title: Sistema Excalidraw — Configuración del plugin
 galaxy_body: beacon
 scope: vault
 tool: excalidraw
-audience: [usuario, claude]
+audience:
+  - usuario
+  - claude
 related_notes:
   - "[[_galaxy-system]]"
   - "[[_mindmap-system]]"
@@ -11,10 +13,14 @@ related_notes:
   - "[[_note-system]]"
   - "[[_pdf-system]]"
   - "[[_ToDo-system]]"
-tags: [beacon, excalidraw, configuracion, infraestructura]
+tags:
+  - beacon
+  - excalidraw
+  - configuracion
+  - infraestructura
 date_created: 2026-05-28
 date_updated: 2026-05-30
-status: activo
+status: pausado
 ---
 
 # Sistema Excalidraw — Configuración del plugin
