@@ -7,7 +7,7 @@ audience:
   - claude
 related_notes:
   - "[[_galaxy-system]]"
-  - "[[MAT101-notebooklm_modes]]"
+  - "[[MAT101-notebooklm-user_guide.md]]"
   - "[[_notebooklm-prompt]]"
   - "[[desmos_guide]]"
   - "[[tikzjax_guide]]"
@@ -22,7 +22,7 @@ status: activo
 
 # Sistema NotebookLM — University Vault
 
-> Guía de modos y triggers: [[MAT101-notebooklm_modes]]
+> Guía de modos y triggers: [[MAT101-notebooklm-user_guide.md]]
 > Prompt de configuración: [[_notebooklm-prompt]]
 
 NotebookLM es el tutor externo del vault. Recibe las notas `.md` del alumno
@@ -111,7 +111,7 @@ Ver tarea pendiente en [[_ToDo-system]].
 %%
 galaxy-links
 [[_galaxy-system]]
-[[MAT101-notebooklm_modes]]
+[[MAT101-notebooklm-user_guide.md]]
 [[_notebooklm-prompt]]
 [[desmos_guide]]
 [[tikzjax_guide]]

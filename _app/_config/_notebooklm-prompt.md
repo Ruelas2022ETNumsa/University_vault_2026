@@ -5,7 +5,7 @@ scope: vault
 audience:
   - notebooklm
 related_notes:
-  - "[[MAT101-notebooklm_modes]]"
+  - "[[MAT101-notebooklm-user_guide.md]]"
   - "[[desmos_guide]]"
   - "[[tikzjax_guide]]"
 tags:
@@ -33,7 +33,7 @@ que Desmos no puede representar.
 **Fuentes:** 7 libros de Cálculo 1 + guías técnicas de Desmos y TikZJax.
 Cada tema del programa tiene libro prioritario asignado.
 
-> Ver triggers y ejemplos de uso: [[MAT101-notebooklm_modes]]
+> Ver triggers y ejemplos de uso: [[MAT101-notebooklm-user_guide.md]]
 
 ---
 

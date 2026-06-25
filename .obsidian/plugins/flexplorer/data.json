@@ -1094,7 +1094,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "notebooklm-prompts",
+        "notebooklm",
         "Canvas",
         "completr-words",
         "Excalidraw",
@@ -2657,56 +2657,11 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_app/notebooklm-prompts": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "MAT101-notebooklm_prompt.md",
-        "ETN806-P3-notebooklm-oldesdd.md",
-        "ETN806-P1-notebooklm old.md",
-        "ETN806-P3-notebooklm_new.md",
-        "ETN806-P3-colas_guide_s.md",
-        "MAT101-transcription_guide.md",
-        "tikzjax_guide.md",
-        "desmos_guide.md",
-        "ETN806-P3-Tikz_markov_guide.md",
-        "MAT101-notebooklm_modes.md"
-      ]
-    },
-    "_app/notebooklm-prompts/desmos_guide.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm-prompts/tikzjax_guide.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Semestres/SEM_08/ETN806/Partial_2/contexto_claude806.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_app/notebooklm-prompts/ETN806-P3-colas_guide_s.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Semestres/SEM_08/ETN806/Partial_3/ETN806-P3-examen_final_806_pdf.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm-prompts/ETN806-P3-notebooklm_new.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm-prompts/MAT101-transcription_guide.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm-prompts/ETN806-P3-Tikz_markov_guide.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm-prompts/MAT101-notebooklm_modes.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -2726,15 +2681,68 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_app/notebooklm-prompts/ETN806-P3-notebooklm-oldesdd.md": {
+    "_app/notebooklm": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "notebooklm-guides",
+        "MAT101-notebooklm_prompt.md",
+        "ETN806-P3-notebooklm-oldesdd.md",
+        "ETN806-P1-notebooklm old.md",
+        "ETN806-P3-notebooklm_new.md",
+        "MAT101-notebooklm-user_guide.md.md"
+      ]
+    },
+    "_app/notebooklm/ETN806-P3-notebooklm_new.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_app/notebooklm-prompts/ETN806-P1-notebooklm old.md": {
+    "_app/notebooklm/ETN806-P3-notebooklm-oldesdd.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_app/notebooklm-prompts/MAT101-notebooklm_prompt.md": {
+    "_app/notebooklm/ETN806-P1-notebooklm old.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/MAT101-notebooklm_prompt.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/notebooklm-guides": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "desmos_guide.md",
+        "ETN806-P3-colas_guide_s.md",
+        "MAT101-transcription_guide.md",
+        "ETN806-P3-Tikz_markov_guide.md",
+        "tikzjax_guide.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "_app/notebooklm/notebooklm-guides/tikzjax_guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/notebooklm-guides/ETN806-P3-colas_guide_s.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/notebooklm-guides/desmos_guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/notebooklm-guides/ETN806-P3-Tikz_markov_guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/notebooklm-guides/MAT101-transcription_guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/MAT101-notebooklm-user_guide.md.md": {
       "isPinned": false,
       "isHidden": false
     }
