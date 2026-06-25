@@ -58,25 +58,23 @@ Semestre y parcial **no se repiten** en el nombre del archivo.
 ETNXXX-TNN-nombre_descriptivo.md
 ```
 
-| Campo | Ejemplo                |
-| --------------------------------------- | ---------------------- |
-| Sigla de la materia | `ETN806`               |
-| Número de tema (con cero) | `T01`, `T03`           |
-| Slug descriptivo en inglés, con guiones | `joint_pdf_definition` |
+| Campo                                                | Ejemplo                |
+| ---------------------------------------------------- | ---------------------- |
+| Sigla de la materia                                  | `ETN806`               |
+| Número de tema (con cero)                            | `T01`, `T03`           |
+| Slug descriptivo en español o inglés, con barra baja | `joint_pdf_definition` |
 
 Usar `T00` para notas de parcial completo (formularios, enunciados, referencias generales).
 Para notas Bridge entre dos materias: `ETN806-ETN302-nombre-del-puente.md`
 
 **Ejemplos:**
 ```
-ETN806-T01-joint-pdf-definition.md
-ETN806-T01-marginal-density-formula.md
-ETN806-T01-normalization-k-solved.md
-ETN806-T00-formulario-partial2.md
-ETN806-ETN302-laplace-vs-probability.md
+ETN806-T01-joint_pdf_definition.md
+ETN806-T01-marginal_density_formula.md
+ETN806-T01-normalization_k_solved.md
+ETN806-T00-formulario_partial2.md
+ETN806-ETN302-laplace_vs_probability.md
 ```
-
-
 
 
 ---
@@ -86,8 +84,8 @@ ETN806-ETN302-laplace-vs-probability.md
 Las notas asteroid que referencian un PDF van directamente en `Partial_N/` (sin entrar a `Topic_NN/`) porque suelen ser referencias generales del parcial. Nombre igual al patrón estándar con `T00` o el tema que corresponda:
 
 ```
-ETN806-T00-PDF-papoulis-cap6.md
-ETN806-T01-PDF-apuntes-conjunta.md
+ETN806-T00-PDF-papoulis_cap6.md
+ETN806-T01-PDF-apuntes_conjunta.md
 ```
 
 ---

@@ -116,7 +116,7 @@ ETNXXX-TNN-nombre_descriptivo.md
 
 - `ETNXXX` → código de materia (ej. `ETN806`, `ETN506`, `ETN901`)
 - `TNN` → número de tema con cero (`T01`, `T03`). Usar `T00` para notas de parcial completo.
-- `nombre-descriptivo` → slug corto en español con guiones (se excluye símbolos especiales y acentos).
+- `nombre_descriptivo` → slug corto en español o inglés con barra baja, sin tildes ni ñ.
 
 ### Tipos de cuerpo galaxy (`galaxy_body`)
 
@@ -225,7 +225,7 @@ Obsidian Git sincroniza PC ↔ GitHub automáticamente cada 5 minutos. Mega sinc
 
 ### Si el usuario pide crear una nota nueva
 
-1. Respetar siempre el patrón de nombre: `ETNXXX-TNN-nombre-descriptivo.md`
+1. Respetar siempre el patrón de nombre: `ETNXXX-TNN-nombre_descriptivo.md`
 2. Usar el YAML mínimo del tipo correspondiente (ver `_galaxy-system.md` para plantillas completas). El tipo #14 aprobado es `supernova` (la propuesta original `tabnote` se descartó antes de aprobarse — nunca usar `galaxy_body: tabnote`).
 3. Incluir el bloque `%%` al final con los wikilinks galaxy.
 4. Guardar en la ruta correcta según el tipo.

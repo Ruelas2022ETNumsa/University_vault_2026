@@ -56,15 +56,22 @@ University_Vault_2026/
 │                                  una MOC por materia, enlaza todas sus Stars
 │
 ├── _app/                       ← infraestructura del baúl (no es contenido académico)
-│   ├── _config/                ← archivos de configuración del sistema
-│   │   ├── _galaxy-system.md   ← este archivo
-│   │   ├── _pdf-system.md      ← sistema de integración de PDFs
-│   │   ├── _mindmap-system.md  ← sistema Excalidraw + Mindmap Builder
-│   │   ├── _template-system.md ← sistema de plantillas Templater
-│   │   ├── convencion-notas.md ← resumen de convención de nombres
-│   │   ├── TagsRoute.md        ← referencia del sistema de tags
-│   │   ├── _claude-sync.md     ← configuración de comportamiento de Claude
-│   │   └── tagroute_parche/
+│   ├── _config/
+│   │   ├── _basic-memory-system.md    ← MCP Basic Memory (memoria semántica)
+│   │   ├── _claude-boot.md            ← punto de entrada de Claude al vault
+│   │   ├── _excalidraw-system.md      ← configuración del plugin Excalidraw
+│   │   ├── _galaxy-system.md          ← este archivo — sistema completo: tipos, YAML, convenciones
+│   │   ├── _graph-system.md           ← Desmos / TikZJax (neutrino)
+│   │   ├── _library-system.md         ← protocolo de búsqueda y selección de libros
+│   │   ├── _mindmap-system.md         ← Excalidraw + Mindmap Builder
+│   │   ├── _note-system.md            ← convención de nombres de notas
+│   │   ├── _notebooklm-prompt.md      ← prompt de configuración NotebookLM (uno por materia)
+│   │   ├── _notebooklm-system.md      ← integración con NotebookLM
+│   │   ├── _pdf-system.md             ← sistema de integración de PDFs
+│   │   ├── _sync-system.md            ← sincronización GitHub + Mega
+│   │   ├── _TABnote-system.md         ← apuntes de tablet (Samsung Notes → supernova)
+│   │   ├── _template-system.md        ← sistema de plantillas Templater
+│   │   └── _ToDo-system.md            ← pendientes del sistema
 │   │
 │   ├── _appnotes/              ← guías de herramientas usadas dentro del baúl
 │   │   ├── desmos_guide.md     ← guía unificada Desmos (Usuario + NotebookLM + Claude)
@@ -95,6 +102,7 @@ University_Vault_2026/
 │   └── PDF-nombre/                y las notas asteroid en Semesters/
 │
 ├── _templates/                 ← plantillas de notas de Obsidian — ver [[_template-system]]
+│   ├── tpl-supernova.md
 │   ├── tpl-star.md             ← una plantilla por tipo de cuerpo galaxy
 │   ├── tpl-planet.md
 │   ├── tpl-moon.md

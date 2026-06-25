@@ -89,24 +89,24 @@ Estas notas son el producto de trabajar con un PDF en Obsidian. Son nodos activo
 La convención Galaxy se aplica **solo a las notas `.md`**, no a los PDFs físicos:
 
 ```
-ETNXXX-TNN-PDF-nombre-descriptivo.md
+ETNXXX-TNN-PDF-nombre_descriptivo.md
 ```
 
-| Campo | Descripción | Ejemplo |
-|-------|-------------|---------|
-| `ETNXXX` | Sigla de la materia | `ETN806` |
-| `TNN` | Número de tema o subtema que se está anotando | `T01`, `T03` |
-| `nombre-descriptivo` | Slug corto descriptivo del contenido, en español o inglés con guiones | `apuntes-pdf-conjunta`, `slides-independencia` |
+| Campo                | Descripción                                                              | Ejemplo                                        |
+| -------------------- | ------------------------------------------------------------------------ | ---------------------------------------------- |
+| `ETNXXX`             | Sigla de la materia                                                      | `ETN806`                                       |
+| `TNN`                | Número de tema o subtema que se está anotando                            | `T01`, `T03`                                   |
+| `nombre-descriptivo` | Slug corto descriptivo del contenido, en español o inglés con barra baja | `apuntes_pdf_conjunta`, `slides_independencia` |
 
 Usar `T00` para notas de referencia general no atadas a un tema (libros-guía, formularios, prácticas completas).
 
 **Ejemplos de nombres de nota:**
 ```
-ETN806-T01-PDF-apuntes-conjunta.md
-ETN806-T02-PDF-slides-independencia.md
-ETN806-T00-PDF-practica2-enunciados.md
-ETN601-T00-PDF-floyd-fundamentos-digitales.md
-ETN903-T03-PDF-irvine-modos-direccionamiento.md
+ETN806-T01-PDF-apuntes_conjunta.md
+ETN806-T02-PDF-slides_independencia.md
+ETN806-T00-PDF-practica2_enunciados.md
+ETN601-T00-PDF-floyd_fundamentos_digitales.md
+ETN903-T03-PDF-irvine_modos_direccionamiento.md
 ```
 
 ### Ubicación en el vault
@@ -114,13 +114,13 @@ ETN903-T03-PDF-irvine-modos-direccionamiento.md
 Las notas `.md` van dentro de `Semesters/`, en la carpeta del parcial correspondiente — **sin subcarpeta de Topic**:
 
 ```
-Semesters/Sem_NN/ETNXXX/Partial_N/ETNXXX-TNN-PDF-nombre-descriptivo.md
+Semesters/Sem_NN/ETNXXX/Partial_N/ETNXXX-TNN-PDF-nombre_descriptivo.md
 ```
 
 **Ejemplos:**
 ```
-Semesters/Sem_08/ETN806/Partial_2/ETN806-T01-PDF-apuntes-conjunta.md
-Semesters/Sem_09/ETN901/Partial_1/ETN901-T00-PDF-libro-referencia-cap3.md
+Semesters/Sem_08/ETN806/Partial_2/ETN806-T01-PDF-apuntes_conjunta.md
+Semesters/Sem_09/ETN901/Partial_1/ETN901-T00-PDF-libro_referencia_cap3.md
 ```
 
 > Las notas de PDF no tienen `Topic_NN/` porque una sola nota puede cruzar varios temas del parcial (un capítulo de libro, unas slides del docente). Si el contenido es muy específico de un tema, igualmente va en `Partial_N/` sin Topic.
@@ -206,7 +206,7 @@ date_created: YYYY-MM-DD
 2. Seleccionas texto → PDF++ copia el callout [!PDF] con link a página exacta
         ↓
 3. Creas la nota .md con la convención Galaxy:
-   ETNXXX-TNN-PDF-nombre-descriptivo.md
+   ETNXXX-TNN-PDF-nombre_descriptivo.md
    en Semesters/Sem_NN/ETNXXX/Partial_N/
         ↓
 4. Pegas las citas en la nota → quedan conectadas al grafo

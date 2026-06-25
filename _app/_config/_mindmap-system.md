@@ -74,30 +74,30 @@ Templater crea las carpetas automáticamente si no existen al momento de crear e
 ETNXXX-PN-nombre-descriptivo.excalidraw
 ```
 
-| Campo | Descripción | Ejemplo |
-|-------|-------------|---------|
-| `ETNXXX` | Sigla de la materia | `ETN806` |
-| `PN` | Número de parcial | `P1`, `P2`, `P3` |
-| `nombre-descriptivo` | Slug corto en inglés, con guiones | `joint-density`, `integration-region` |
+| Campo                | Descripción                                    | Ejemplo                               |
+| -------------------- | ---------------------------------------------- | ------------------------------------- |
+| `ETNXXX`             | Sigla de la materia                            | `ETN806`                              |
+| `PN`                 | Número de parcial                              | `P1`, `P2`, `P3`                      |
+| `nombre-descriptivo` | Slug corto en español o inglés, con barra baja | `joint_density`, `integration_region` |
 
-> El número de tema (`TNN`) se omite del nombre cuando el mapa cubre un parcial completo. Si el mapa cubre un solo tema, se puede incluir: `ETN806-P2-T01-joint-density.excalidraw`.
+> El número de tema (`TNN`) se omite del nombre cuando el mapa cubre un parcial completo. Si el mapa cubre un solo tema, se puede incluir: `ETN806-P2-T01-joint_density.excalidraw`.
 
 ### Ejemplos
 
 ```
-ETN806-P2-joint-density.excalidraw           ← constellation, cubre parcial completo
-ETN806-P2-T01-joint-density.excalidraw       ← constellation, cubre solo el tema 1
-ETN806-P2-integration-region.excalidraw      ← observatory, dibujo técnico
+ETN806-P2-joint_density.excalidraw           ← constellation, cubre parcial completo
+ETN806-P2-T01-joint_density.excalidraw       ← constellation, cubre solo el tema 1
+ETN806-P2-integration_region.excalidraw      ← observatory, dibujo técnico
 ```
 
 ---
 
 ## Granularidad de los mapas
 
-| Nivel | Cuándo usarlo | Ejemplo de nombre |
-|-------|--------------|-------------------|
-| Parcial completo | Temas cortos o relacionados que caben en un mapa | `ETN806-P2-galaxy-map` |
-| Tema específico | Temas muy extensos que merecen su propio mapa | `ETN806-P2-T01-joint-density` |
+| Nivel            | Cuándo usarlo                                    | Ejemplo de nombre             |
+| ---------------- | ------------------------------------------------ | ----------------------------- |
+| Parcial completo | Temas cortos o relacionados que caben en un mapa | `ETN806-P2-galaxy_map`        |
+| Tema específico  | Temas muy extensos que merecen su propio mapa    | `ETN806-P2-T01-joint_density` |
 
 No hay regla fija — la decisión se toma según la cantidad de nodos. Si el mapa se vuelve difícil de leer, dividir por tema.
 
@@ -148,7 +148,7 @@ subject: ETN806
 semester: 8
 partial: 2
 topic: 1
-attached_to: "[[ETN806-T01-normalization-k-solved]]"
+attached_to: "[[ETN806-T01-normalization_k_solved]]"
 tags: [ETN806, galaxy-observatory, P2, T01]
 date_created: YYYY-MM-DD
 ---
@@ -159,7 +159,7 @@ date_created: YYYY-MM-DD
 ```markdown
 %%
 galaxy-links
-[[ETN806-T01-normalization-k-solved]]
+[[ETN806-T01-normalization_k_solved]]
 %%
 ```
 
