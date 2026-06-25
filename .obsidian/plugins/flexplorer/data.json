@@ -1428,6 +1428,10 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "_note-system 1.md",
+        "_TABnote-system 1.md",
+        "_template-system 1.md",
+        "_ToDo-system 1.md",
         "_galaxy-system 1.md",
         "_pdf-system 1.md",
         "_basic-memory-system.md",
@@ -2765,8 +2769,8 @@
     "Semesters/Sem_08": {
       "isPinned": false,
       "isHidden": false,
-      "customOrder": [],
-      "sortOrder": "custom"
+      "sortOrder": "custom",
+      "customOrder": []
     },
     "_app/_config/_galaxy-system 1.md": {
       "isPinned": false,
@@ -2781,6 +2785,22 @@
       "isHidden": false
     },
     "Semesters/Sem_09/ETN901/Partial_1/ETN901-class002-P1-ago15.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_config/_note-system 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_config/_TABnote-system 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_config/_template-system 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_config/_ToDo-system 1.md": {
       "isPinned": false,
       "isHidden": false
     }

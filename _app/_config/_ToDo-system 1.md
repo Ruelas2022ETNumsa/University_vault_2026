@@ -8,7 +8,6 @@ related_notes:
   - "[[_note-system]]"
   - "[[_sync-system]]"
   - "[[_TABnote-system]]"
-  - "[[_notebooklm-system]]"
 tags: [beacon, todo, plugins, infraestructura]
 date_created: 2026-05-29
 date_updated: 2026-06-24
@@ -34,26 +33,26 @@ status: activo
 | Templater | Creación dinámica de notas con YAML y movimiento automático | ✅ Instalado y configurado |
 | Commander | Botón en ribbon para selector de plantillas | ✅ Instalado y configurado |
 | Excalidraw | Motor de dibujo y mapas mentales — reemplaza Canvas | ✅ Instalado y configurado |
-| PDF++ | Lectura y anotación de PDFs con links a página exacta | ✅ Instalado y configurado — guía en `_app/_appnotes/PDF_PP-guide.md` |
+| PDF++ | Lectura y anotación de PDFs con links a página exacta | ✅ Instalado |
 | Annotator | Lectura de EPUBs y PDFs escaneados | ✅ Instalado |
 | OmniSearch | Búsqueda en todo el vault incluyendo PDFs | ✅ Instalado |
 | Text Extractor | Dependencia de OmniSearch — extrae texto de PDFs e imágenes | ✅ Instalado |
 | Remotely Save | ~~Sync del vault con Dropbox~~ — descartado para tablet | ⚠️ Instalado en PC — en desuso |
 | File Hider | Ocultar archivos por extensión (.tmp, .bat, .ps1) | ✅ Instalado y configurado |
 | Desmos | Renderizado de gráficas matemáticas interactivas en notas | ✅ Instalado y configurado |
-| Completr | Autocompletado de LaTeX, tags y propiedades YAML | ✅ Instalado y configurado |
-| Quick LaTeX | Shortcuts de escritura LaTeX: fracciones automáticas, cierre de llaves, salto entre bloques, shorthands personalizados | ✅ Instalado y configurado |
-| TikZJax | Renderizado de diagramas TikZ y circuitos (circuitikz) | ✅ Instalado y funcionando |
+| Completr | Autocompletado de LaTeX, tags y propiedades YAML | ✅ Instalado — pendiente configurar |
+| Quick LaTeX | Shortcuts de escritura LaTeX: fracciones automáticas, cierre de llaves, salto entre bloques, shorthands personalizados | ✅ Instalado — pendiente configurar |
 
 ---
 
-### Retrasados — instalar cuando corresponda ⏳
+### Pendientes de instalar y configurar ⏳
 
-| Plugin | Estado | Razón |
-|--------|--------|-------|
-| **Dataview** | ⏸️ Retrasado | Alenta el inicio de Obsidian — instalar en Fase 4 |
-| **Linter** | ⏸️ Retrasado | Pendientes más prioritarios — instalar cuando se estabilice la infraestructura |
-| **DB Folder** | ⏸️ Retrasado | Requiere Dataview primero — instalar en Fase 4 |
+| Plugin | Prioridad | Función |
+|--------|-----------|---------|
+| **TikZJax** | 🟡 Media | Renderizado de diagramas TikZ y circuitos electrónicos (circuitikz) dentro de notas |
+| **Dataview** | 🔴 Alta — Fase 4 del sistema | Consultas sobre el YAML de las notas — filtra comets, asteroids, stars, notas pendientes por materia y parcial |
+| **Linter** | 🟡 Media | Revisa y corrige automáticamente YAML y formato al guardar — detecta campos faltantes, tags mal escritos |
+| **DB Folder** | 🟢 Baja — requiere Dataview | Vista de carpeta como tabla editable con campos YAML — instalar después de Dataview |
 
 ---
 
