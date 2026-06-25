@@ -13099,6 +13099,8 @@ Topic
 Trabajando
 Tanenbaum
 Tienen
+Tutor
+TIPO
 Sistema
 Sync
 Save
@@ -20152,6 +20154,7 @@ Subcarpeta
 Subcarpetas
 Supernova
 Snapshots
+Semicircular
 Plugins
 Pendientes
 Plugin
@@ -25583,6 +25586,10 @@ PfZ
 Procesamiento
 Prompts
 PREGUNTAS
+PROMPT
+PROTOCOLO
+PROCEDIMIENTOS
+Partir
 del
 date
 de
@@ -30851,6 +30858,7 @@ descart
 descartada
 dejamos
 derevisi
+dimensional
 Vault
 Verificar
 Variables
@@ -67760,6 +67768,7 @@ ayudaron
 agregado
 aprobarse
 acentos
+absolutas
 related
 recomendados
 ribbon
@@ -74200,6 +74209,7 @@ retrasado
 reflejaba
 resoluciones
 recogida
+restringidos
 notes
 notas
 nuevas
@@ -80427,6 +80437,7 @@ ncoH
 nDMa
 nzkq
 nWPo
+normalizado
 created
 commit
 cada
@@ -87096,6 +87107,8 @@ covers
 cuidadoso
 compartido
 completarla
+citando
+consultarla
 updated
 un
 universo
@@ -105557,6 +105570,7 @@ CDDDDDD
 Contador
 Ciclo
 Catorce
+Confundir
 Instalados
 Instalado
 Instalar
@@ -112596,6 +112610,8 @@ IDDDDDDDDD
 Irvine
 Innecesario
 INFORMACI
+Indicar
+IDENTIFICAR
 Funci
 File
 Fase
@@ -125700,6 +125716,8 @@ Eliminada
 Enfoque
 Entrevista
 ENTREVISTA
+Explicar
+Emojis
 Obsidian
 OmniSearch
 Ocultar
@@ -143018,6 +143036,7 @@ pausado
 parts
 picamente
 prefiera
+precisos
 min
 mica
 movimiento
@@ -168536,6 +168555,8 @@ estandarizado
 eliminan
 exija
 entrevista
+especializado
+elecci
 Motor
 Media
 Mantiene
@@ -176071,6 +176092,7 @@ MOVSB
 Motivo
 Material
 Memorias
+MATERIA
 Lectura
 LaTeX
 Linter
@@ -195326,6 +195348,7 @@ incl
 insuficiente
 ingles
 informal
+implicaciones
 Dependencia
 Dropbox
 Dataview
@@ -201442,6 +201465,8 @@ DnDL
 Dgj
 DDDDDDDDDDDO
 Decirle
+Discretas
+Declarar
 Remotely
 Raz
 Revisa
@@ -208525,6 +208550,7 @@ Registrado
 Retrasados
 Retrasado
 RECOPILAR
+RESPUESTA
 Hider
 Hace
 Herramientas
@@ -218946,6 +218972,7 @@ footer
 faltaba
 favor
 filosof
+falle
 haya
 hace
 hacer

@@ -981,6 +981,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "ETN806-Parcial_1.md",
         "E3a.md",
         "E2b.md",
         "E2Aa.md",
@@ -2477,7 +2478,6 @@
         "corr.md",
         "corr 1.md",
         "Untitled.md",
-        "ETN806-Parcial_1.md",
         "corr2.md",
         "MAT101-Números-reales-y-desigualdades.md",
         "MAT101_T1-Funciones-reales.md",
@@ -2591,10 +2591,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "in_work/ETN806-Parcial_1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "in_work/Untitled.md": {
       "isPinned": false,
       "isHidden": false
@@ -2686,11 +2682,13 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "ETN806-P1-notebooklm(legacy).md",
+        "ETN806-P1-notebooklm_prompt.md",
+        "ETN806-P3-notebooklm-oldesdd.md",
+        "ETN806-P3-notebooklm_new.md",
+        "ETN806-P2-notebooklm_prompt.md",
         "notebooklm-guides",
         "MAT101-notebooklm_prompt.md",
-        "ETN806-P3-notebooklm-oldesdd.md",
-        "ETN806-P1-notebooklm old.md",
-        "ETN806-P3-notebooklm_new.md",
         "MAT101-notebooklm-user_guide.md.md"
       ]
     },
@@ -2699,10 +2697,6 @@
       "isHidden": false
     },
     "_app/notebooklm/ETN806-P3-notebooklm-oldesdd.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/ETN806-P1-notebooklm old.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -2743,6 +2737,22 @@
       "isHidden": false
     },
     "_app/notebooklm/MAT101-notebooklm-user_guide.md.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/ETN806-P2-notebooklm_prompt.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08/ETN806/Partial_1/ETN806-Parcial_1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/ETN806-P1-notebooklm(legacy).md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/ETN806-P1-notebooklm_prompt.md": {
       "isPinned": false,
       "isHidden": false
     }
