@@ -5,6 +5,7 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
+        "Untitled.md",
         "in_work",
         "Borrar",
         "README.md",
@@ -2682,23 +2683,14 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "ETN806-P3-notebooklm_prompt.md",
         "ETN806-P1-notebooklm(legacy).md",
         "ETN806-P1-notebooklm_prompt.md",
-        "ETN806-P3-notebooklm-oldesdd.md",
-        "ETN806-P3-notebooklm_new.md",
         "ETN806-P2-notebooklm_prompt.md",
         "notebooklm-guides",
         "MAT101-notebooklm_prompt.md",
-        "MAT101-notebooklm-user_guide.md.md"
+        "MAT101-notebooklm-user_guide.md"
       ]
-    },
-    "_app/notebooklm/ETN806-P3-notebooklm_new.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/ETN806-P3-notebooklm-oldesdd.md": {
-      "isPinned": false,
-      "isHidden": false
     },
     "_app/notebooklm/MAT101-notebooklm_prompt.md": {
       "isPinned": false,
@@ -2707,14 +2699,14 @@
     "_app/notebooklm/notebooklm-guides": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "desmos_guide.md",
         "ETN806-P3-colas_guide_s.md",
         "MAT101-transcription_guide.md",
         "ETN806-P3-Tikz_markov_guide.md",
         "tikzjax_guide.md"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "_app/notebooklm/notebooklm-guides/tikzjax_guide.md": {
       "isPinned": false,
@@ -2736,10 +2728,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_app/notebooklm/MAT101-notebooklm-user_guide.md.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_app/notebooklm/ETN806-P2-notebooklm_prompt.md": {
       "isPinned": false,
       "isHidden": false
@@ -2753,6 +2741,18 @@
       "isHidden": false
     },
     "_app/notebooklm/ETN806-P1-notebooklm_prompt.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/MAT101-notebooklm-user_guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/ETN806-P3-notebooklm_prompt.md": {
       "isPinned": false,
       "isHidden": false
     }
