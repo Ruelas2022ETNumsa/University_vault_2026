@@ -137022,6 +137022,7 @@ AxI
 AlYu
 Ayjd
 Anotaciones
+Alenta
 push
 pull
 para
@@ -142959,6 +142960,7 @@ paridad
 poca
 procesador
 planets
+prioritarios
 min
 mica
 movimiento
@@ -168464,6 +168466,7 @@ eliminadas
 entregue
 entregadas
 else
+estabilice
 Motor
 Media
 Mantiene
@@ -208445,6 +208448,8 @@ RLhM
 RURDq
 Recorte
 Registrado
+Retrasados
+Retrasado
 Hider
 Hace
 Herramientas
