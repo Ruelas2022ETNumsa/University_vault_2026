@@ -11,6 +11,7 @@ related_notes:
   - "[[tikzjax_guide]]"
 tags: [beacon, notebooklm, infraestructura]
 date_created: 2026-06-03
+date_updated: 2026-06-25
 status: activo
 ---
 

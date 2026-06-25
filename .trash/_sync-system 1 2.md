@@ -241,7 +241,7 @@ Obsidian Git detecta cambio → auto-pull → vault local actualizado
 
 ## Notas adicionales
 
-- OneDrive descartado: la página de autorización fallaba al conectar con Remotely Save. El vault migró a Mega definitivamente como sistema de sync.
+- OneDrive descartado: la página de autorización fallaba al conectar con Remotely Save. Migrado a Dropbox definitivamente.
 - Microsoft 365 descartado como conector de Claude: servicio de pago.
 - Google Drive eliminado por completo: TAB_nexus, CELL_PDF, symlinks, Autosync y File Stream removidos. Mega reemplaza todo. `_PDF` dentro del vault es la nueva carpeta de PDFs.
 - Remotely Save descartado: la sincronización completa del vault con servicios externos generó más problemas que ventajas. Mega client + FolderSync es el sistema definitivo.

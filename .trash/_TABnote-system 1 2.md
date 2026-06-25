@@ -12,7 +12,7 @@ related_notes:
   - "[[_ToDo-system]]"
 tags: [beacon, tabnote, samsung-notes, infraestructura]
 date_created: 2026-06-20
-date_updated: 2026-06-25
+date_updated: 2026-06-24
 status: activo
 ---
 
@@ -151,7 +151,7 @@ _tabnotes_archivo/
 
 ---
 
-## Nota `supernova` — el puente al grafo (modelo actual)
+## Nota `tabnote` — el puente al grafo (modelo actual)
 
 A diferencia del modelo anterior, la nota `tabnote` ya **no apunta a un PDF activo en el baúl** — apunta a la nota viva en Samsung Cloud (como referencia, no como archivo abrible desde Obsidian) y a la transcripción, que sí es el contenido realmente integrado al grafo. El snapshot de cierre de parcial es opcional y se enlaza solo si existe.
 
@@ -169,7 +169,7 @@ transcription_note: "[[ETN806-T01-transcripcion-notebooklm]]"
 archive_snapshot: "[[ETN806-P2-T01-apuntes-cierre.pdf]]"   # solo si ya se cerró el parcial
 related_planets:
   - "[[ETN806-T01-joint-pdf-definition]]"
-tags: [ETN806, galaxy-supernova, P2, T01]
+tags: [ETN806, galaxy-tabnote, P2, T01]
 date_created: YYYY-MM-DD
 date_updated: YYYY-MM-DD
 status: en-proceso
