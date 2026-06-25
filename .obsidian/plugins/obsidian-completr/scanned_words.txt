@@ -87082,6 +87082,7 @@ crop
 class
 condensado
 classNum
+covers
 updated
 un
 universo

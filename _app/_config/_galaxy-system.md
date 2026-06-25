@@ -102,8 +102,8 @@ University_Vault_2026/
 │   └── PDF-nombre/                y las notas asteroid en Semesters/
 │
 ├── _templates/                 ← plantillas de notas de Obsidian — ver [[_template-system]]
-│   ├── tpl-supernova.md
-│   ├── tpl-star.md             ← una plantilla por tipo de cuerpo galaxy
+│   ├── tpl-supernova.md        ← una plantilla por tipo de cuerpo galaxy
+│   ├── tpl-star.md
 │   ├── tpl-planet.md
 │   ├── tpl-moon.md
 │   ├── tpl-comet.md

@@ -72,6 +72,32 @@ IA transcribe PDF → .md
 GitHub (via Obsidian Git)
 ```
 
+
+
+
+```
+Samsung Notes (apunte a mano, formato nativo .sdocx)
+        ↓
+Edición y limpieza de trazos a texto ASCII desde PC
+(Samsung Notes para Windows + Samsung Cloud — sync casi inmediato)
+        ↓
+Exportar puntualmente como PDF → subir a NotebookLM para transcripción
+        ↓
+NotebookLM transcribe → nota .md con LaTeX (galaxy_body: supernova)
+        ↓
+Nota .md guardada en Semesters/Sem_NN/ETNXXX/Partial_N/
+        ↓
+Obsidian Git → GitHub (auto-commit cada 5 min)
+
+── ARCHIVO AL CERRAR EL PARCIAL (opcional, una sola vez) ──
+Samsung Notes exporta PDF+(Samsung) del apunte cerrado
+        ↓
+Guardar en _tabnotes_archivo/ETNXXX/ como snapshot histórico
+(fuera de Git — solo Mega lo sincroniza entre dispositivos)
+
+```
+
+
 ---
 
 ## Lo que ya está hecho ✅
