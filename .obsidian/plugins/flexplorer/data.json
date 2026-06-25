@@ -1440,7 +1440,8 @@
         "_pdf-system.md",
         "_sync-system.md",
         "_template-system.md",
-        "_ToDo-system.md"
+        "_ToDo-system.md",
+        "_claude-matter-boot.md"
       ]
     },
     "_app/_config/_basic-memory-system.md": {
@@ -1525,7 +1526,6 @@
         "tpl-photon 1.md",
         "tpl-asteroid 1.md",
         "alt-B",
-        "contextogen.md",
         "tpl-asteroid.md",
         "tpl-bridge.md",
         "tpl-comet.md",
@@ -1548,10 +1548,6 @@
       ]
     },
     "_templates/alt-B/plantillas-A-respaldo.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_templates/contextogen.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -2454,23 +2450,7 @@
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
-      "customOrder": [
-        "zborrarborrar00009.md",
-        "zborrarborrar22222222222.md",
-        "zborrarborrarrr2.md"
-      ]
-    },
-    "Rubbish/2026-06-12/zborrarborrar00009.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-06-12/zborrarborrar22222222222.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-06-12/zborrarborrarrr2.md": {
-      "isPinned": false,
-      "isHidden": false
+      "customOrder": []
     },
     "Rubbish/tmp": {
       "isPinned": false,
@@ -2761,6 +2741,10 @@
       "isHidden": false
     },
     "examen final 806 pdf.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_config/_claude-matter-boot.md": {
       "isPinned": false,
       "isHidden": false
     }

@@ -71,6 +71,7 @@ University_Vault_2026/
 │   │   ├── _sync-system.md            ← sincronización GitHub + Mega
 │   │   ├── _TABnote-system.md         ← apuntes de tablet (Samsung Notes → supernova)
 │   │   ├── _template-system.md        ← sistema de plantillas Templater
+│   │   ├── _claude-matter-boot.md     ← generador de contexto para Claude
 │   │   └── _ToDo-system.md            ← pendientes del sistema
 │   │
 │   ├── _appnotes/              ← guías de herramientas usadas dentro del baúl
@@ -114,7 +115,6 @@ University_Vault_2026/
 │   ├── tpl-bridge.md
 │   ├── tpl-constellation.md    ← Excalidraw + Mindmap Builder
 │   ├── tpl-observatory.md      ← Excalidraw dibujo libre
-│   ├── contextogen.md          ← generador de contexto para Claude
 │   └── alt-B/                  ← respaldo
 │       └── plantillas-A-respaldo.md  ← plantillas Opción A consolidadas (sin ruta dinámica)
 │

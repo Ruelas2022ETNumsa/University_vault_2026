@@ -13098,6 +13098,7 @@ Teclado
 Topic
 Trabajando
 Tanenbaum
+Tienen
 Sistema
 Sync
 Save
@@ -25581,6 +25582,7 @@ PCnd
 PfZ
 Procesamiento
 Prompts
+PREGUNTAS
 del
 date
 de
@@ -30847,6 +30849,7 @@ diseccionada
 describ
 descart
 descartada
+dejamos
 Vault
 Verificar
 Variables
@@ -43273,6 +43276,8 @@ gXn
 gIDAT
 guion
 github
+graficaci
+gida
 body
 beacon
 bat
@@ -55249,6 +55254,8 @@ supernova
 subtopics
 siglas
 sistematizar
+sepas
+sirvan
 vault
 vil
 ver
@@ -74190,6 +74197,8 @@ romp
 referencian
 retrasado
 reflejaba
+resoluciones
+recogida
 notes
 notas
 nuevas
@@ -87083,6 +87092,9 @@ class
 condensado
 classNum
 covers
+cuidadoso
+compartido
+completarla
 updated
 un
 universo
@@ -100153,6 +100165,9 @@ GeRh
 Gxb
 GcI
 GfoB
+GENERADOR
+GENERADO
+GENERAR
 Convenci
 Creaci
 Commander
@@ -112578,6 +112593,7 @@ IoCi
 IDDDDDDDDD
 Irvine
 Innecesario
+INFORMACI
 Funci
 File
 Fase
@@ -125680,6 +125696,8 @@ EWMeU
 EXl
 Eliminada
 Enfoque
+Entrevista
+ENTREVISTA
 Obsidian
 OmniSearch
 Ocultar
@@ -137053,6 +137071,8 @@ Ayjd
 Anotaciones
 Alenta
 Agregado
+Adaptarlas
+Adaptar
 push
 pull
 para
@@ -142994,6 +143014,8 @@ prioritarios
 pospuesto
 pausado
 parts
+picamente
+prefiera
 min
 mica
 movimiento
@@ -150301,6 +150323,7 @@ minuciosa
 marc
 mencionado
 mindmap
+melo
 YAML
 Ya
 You
@@ -168508,6 +168531,8 @@ estabilice
 eliminable
 estandarizado
 eliminan
+exija
+entrevista
 Motor
 Media
 Mantiene
@@ -201412,6 +201437,7 @@ DWXX
 DnDL
 Dgj
 DDDDDDDDDDDO
+Decirle
 Remotely
 Raz
 Revisa
@@ -208494,6 +208520,7 @@ Recorte
 Registrado
 Retrasados
 Retrasado
+RECOPILAR
 Hider
 Hace
 Herramientas
@@ -218914,6 +218941,7 @@ funcionales
 footer
 faltaba
 favor
+filosof
 haya
 hace
 hacer
@@ -224718,6 +224746,7 @@ hXl
 hEiY
 hHFn
 heredada
+hacerte
 que
 quedan
 queda
@@ -239071,6 +239100,8 @@ UKeK
 UnAM
 UAkK
 UNZaa
+UNIVERSITARIAS
+Usas
 Nombre
 Notas
 No

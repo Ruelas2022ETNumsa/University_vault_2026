@@ -116,7 +116,7 @@ status: activo
 ### Fase 2 — Materias nuevas
 > ⏸️ Retrasado — se hará con tiempo
 - [ ] Aplicar Sistema Galaxy desde el primer día a cualquier materia nueva
-- [ ] Actualizar `contextogen.md` para incluir el campo `galaxy_body` y `neutrino_type`
+- [x] ~~Actualizar `contextogen.md`~~ → renombrado a `_claude-matter-boot.md`, movido a `_app/_config/`, convertido a beacon galaxy con YAML completo (2026-06-25). Pendiente aún: actualizar la entrevista y el contexto generado para incluir campos `galaxy_body` y `neutrino_type` — sesión futura.
 
 ### Fase 3 — Conexiones entre galaxias
 > ⏸️ Retrasado — se hará con tiempo

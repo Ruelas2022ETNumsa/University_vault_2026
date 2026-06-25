@@ -55,27 +55,6 @@ Mega (sincronización vault entre dispositivos — cuenta exclusiva del vault)
 ### Flujo de apuntes desde tablet
 
 ```
-Samsung Notes (apunte a mano)
-        ↓
-Exportar como PDF → carpeta dentro de /University_vault_2026/_PDF en tablet
-        ↓
-FolderSync detecta archivo nuevo → sube a Mega/_PDF
-        ↓
-Mega sincroniza → E:\University_vault_2026\_PDF\ en PC
-        ↓
-PDF++ anota/mejora el PDF en Obsidian
-        ↓
-Mega sincroniza cambio de vuelta a tablet
-        ↓
-IA transcribe PDF → .md
-        ↓
-GitHub (via Obsidian Git)
-```
-
-
-
-
-```
 Samsung Notes (apunte a mano, formato nativo .sdocx)
         ↓
 Edición y limpieza de trazos a texto ASCII desde PC
@@ -96,7 +75,6 @@ Guardar en _tabnotes_archivo/ETNXXX/ como snapshot histórico
 (fuera de Git — solo Mega lo sincroniza entre dispositivos)
 
 ```
-
 
 ---
 

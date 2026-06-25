@@ -120,22 +120,22 @@ ETNXXX-TNN-nombre_descriptivo.md
 
 ### Tipos de cuerpo galaxy (`galaxy_body`)
 
-| Tipo | Símbolo | Rol |
-|------|---------|-----|
-| `star` | ☀️ | MOC del tema — enlaza todas las notas en órbita |
-| `planet` | 🪐 | Teoría central — un concepto por nota |
-| `moon` | 🌙 | Propiedad o fórmula — orbita un planet |
-| `comet` | ☄️ | Ejercicio resuelto |
-| `nebula` | 🌫️ | Agrupador de sesión |
-| `dwarf` | ⬛ | Resumen de tema o parcial |
-| `asteroid` | 🪨 | Referencia externa (libro, PDF, paper) |
-| `photon` | 💡 | Imagen estática pura (.png, .jpg arrastrado, recorte PDF++) |
-| `neutrino` | ⚛️ | Código que genera imagen (Desmos, TikZJax) — embebido en planet/comet, sin nota propia |
-| `constellation` | 🌌 | Mapa mental — Excalidraw + Mindmap Builder |
-| `observatory` | 🔭 | Dibujo técnico libre en Excalidraw |
-| `bridge` | 🌉 | Conexión entre dos materias |
-| `beacon` | 📡 | Guía de infraestructura del vault |
-| `supernova` | ✨ | Transcripción bruta de NotebookLM de apuntes de clase — material en bruto pendiente de disección en notas galaxy |
+| Tipo            | Símbolo | Rol                                                                                                              |
+| --------------- | ------- | ---------------------------------------------------------------------------------------------------------------- |
+| `star`          | ☀️      | MOC del tema — enlaza todas las notas en órbita                                                                  |
+| `planet`        | 🪐      | Teoría central — un concepto por nota                                                                            |
+| `moon`          | 🌙      | Propiedad o fórmula — orbita un planet                                                                           |
+| `comet`         | ☄️      | Ejercicio resuelto                                                                                               |
+| `nebula`        | 🌫️     | Agrupador de sesión                                                                                              |
+| `dwarf`         | ⬛       | Resumen de tema o parcial                                                                                        |
+| `asteroid`      | 🪨      | Referencia externa (libro, PDF, paper)                                                                           |
+| `photon`        | 💡      | Imagen estática pura (.png, .jpg arrastrado, recorte PDF++)                                                      |
+| `neutrino`      | ⚛️      | Código que genera imagen (Desmos, TikZJax) — embebido en planet/comet, sin nota propia                           |
+| `constellation` | 🌌      | Mapa mental — Excalidraw + Mindmap Builder                                                                       |
+| `observatory`   | 🔭      | Dibujo técnico libre en Excalidraw                                                                               |
+| `bridge`        | 🌉      | Conexión entre dos materias                                                                                      |
+| `beacon`        | 📡      | Guía de infraestructura del vault                                                                                |
+| `supernova`     | ✨       | Transcripción bruta de NotebookLM de apuntes de clase — material en bruto pendiente de disección en notas galaxy |
 
 > ✅ **Tipo #14 aprobado (2026-06-24):** `supernova` quedó cerrado como `galaxy_body` oficial para transcripciones de NotebookLM de apuntes de clase (ver [[_TABnote-system]] y [[_ToDo-system]]). La propuesta original era `tabnote`, pero se descartó ese nombre a favor de `supernova` antes de aprobarse.
 
@@ -235,21 +235,22 @@ Obsidian Git sincroniza PC ↔ GitHub automáticamente cada 5 minutos. Mega sinc
 
 Leer el beacon específico según el tema:
 
-| Tema | Beacon a leer |
-|------|--------------|
-| Sistema completo, tipos galaxy, YAML | `_app/_config/_galaxy-system.md` |
-| Nombres de archivos, convención | `_app/_config/_note-system.md` |
-| Plantillas Templater | `_app/_config/_template-system.md` |
-| PDFs, plugin PDF++, asteroids | `_app/_config/_pdf-system.md` (ver discrepancia de `_PDF/` arriba) |
-| Excalidraw, Mindmap Builder | `_app/_config/_mindmap-system.md` |
-| Configuración plugin Excalidraw | `_app/_config/_excalidraw-system.md` |
-| Desmos / TikZJax (`neutrino`) | `_app/_config/_graph-system.md` |
-| Sincronización GitHub + Mega | `_app/_config/_sync-system.md` |
-| Memoria semántica (Basic Memory MCP) | `_app/_config/_basic-memory-system.md` |
-| NotebookLM (tutor externo) | `_app/_config/_notebooklm-system.md` |
-| Apuntes de tablet — activo, cerrado 2026-06-24 | `_app/_config/_TABnote-system.md` |
-| Pendientes del sistema | `_app/_config/_ToDo-system.md` |
-| Protocolo de búsqueda y selección de libros | `_app/_config/_library-system.md` |
+| Tema                                                     | Beacon a leer                                                      |
+| -------------------------------------------------------- | ------------------------------------------------------------------ |
+| Sistema completo, tipos galaxy, YAML                     | `_app/_config/_galaxy-system.md`                                   |
+| Nombres de archivos, convención                          | `_app/_config/_note-system.md`                                     |
+| Plantillas Templater                                     | `_app/_config/_template-system.md`                                 |
+| PDFs, plugin PDF++, asteroids                            | `_app/_config/_pdf-system.md` (ver discrepancia de `_PDF/` arriba) |
+| Excalidraw, Mindmap Builder                              | `_app/_config/_mindmap-system.md`                                  |
+| Configuración plugin Excalidraw                          | `_app/_config/_excalidraw-system.md`                               |
+| Desmos / TikZJax (`neutrino`)                            | `_app/_config/_graph-system.md`                                    |
+| Sincronización GitHub + Mega                             | `_app/_config/_sync-system.md`                                     |
+| Memoria semántica (Basic Memory MCP)                     | `_app/_config/_basic-memory-system.md`                             |
+| NotebookLM (tutor externo)                               | `_app/_config/_notebooklm-system.md`                               |
+| Apuntes de tablet — activo, cerrado 2026-06-24           | `_app/_config/_TABnote-system.md`                                  |
+| Pendientes del sistema                                   | `_app/_config/_ToDo-system.md`                                     |
+| Protocolo de búsqueda y selección de libros              | `_app/_config/_library-system.md`                                  |
+| Contexto de trabajo por materia (ejercicios, formulario) | `_app/_config/_claude-matter-boot.md`                              |
 
 ### Si el usuario está en móvil sin PC encendida
 
