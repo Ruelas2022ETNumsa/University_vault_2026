@@ -12,7 +12,7 @@ related_notes:
   - "[[_ToDo-system]]"
 tags: [beacon, excalidraw, mindmap, infraestructura]
 date_created: 2026-05-28
-date_updated: 2026-06-25
+date_updated: 2026-05-30
 status: activo
 ---
 
@@ -301,6 +301,5 @@ galaxy-links
 [[_galaxy-system]]
 [[_template-system]]
 [[_note-system]]
-[[_pdf-system]]
 [[_ToDo-system]]
 %%

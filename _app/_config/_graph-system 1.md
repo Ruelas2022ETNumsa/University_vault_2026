@@ -10,7 +10,7 @@ related_notes:
   - "[[_ToDo-system]]"
 tags: [beacon, graph, desmos, tikzjax, neutrino, infraestructura]
 date_created: 2026-05-30
-date_updated: 2026-06-25
+date_updated: 2026-05-30
 status: activo
 ---
 

@@ -7,7 +7,7 @@ related_notes:
   - "[[_galaxy-system]]"
 tags: [beacon, infraestructura, mcp, basic-memory, configuracion]
 date_created: 2026-06-07
-date_updated: 2026-06-25
+date_updated: 2026-06-09
 status: activo
 ---
 

@@ -20148,6 +20148,7 @@ STOSB
 Subcarpeta
 Subcarpetas
 Supernova
+Snapshots
 Plugins
 Pendientes
 Plugin
@@ -25577,6 +25578,7 @@ Ppj
 PCnd
 PfZ
 Procesamiento
+Prompts
 del
 date
 de
@@ -30839,6 +30841,7 @@ descartados
 deseable
 determinando
 disecci
+diseccionada
 Vault
 Verificar
 Variables
@@ -55238,6 +55241,8 @@ source
 suggester
 supernova
 subtopics
+siglas
+sistematizar
 vault
 vil
 ver
@@ -67735,6 +67740,8 @@ anotando
 atadas
 await
 attached
+abreviado
+alenta
 related
 recomendados
 ribbon
@@ -74170,6 +74177,8 @@ respaldar
 renombran
 resueltas
 romp
+referencian
+retrasado
 notes
 notas
 nuevas
@@ -125656,6 +125665,7 @@ EuKC
 EWMeU
 EXl
 Eliminada
+Enfoque
 Obsidian
 OmniSearch
 Ocultar

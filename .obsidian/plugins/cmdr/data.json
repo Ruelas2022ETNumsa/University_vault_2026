@@ -68,6 +68,12 @@
       "icon": "lucide-a-large-small",
       "name": "Split right",
       "mode": "any"
+    },
+    {
+      "id": "editor:open-link-in-new-split",
+      "icon": "lucide-link",
+      "name": "Open link under cursor to the right",
+      "mode": "any"
     }
   ],
   "pageHeader": [],

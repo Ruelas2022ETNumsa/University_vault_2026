@@ -1,18 +1,3 @@
----
-title: "Library System — Protocolo de búsqueda y selección de libros"
-galaxy_body: beacon
-scope: vault
-audience: [usuario, claude]
-related_notes:
-  - "[[_claude-boot]]"
-  - "[[_notebooklm-system]]"
-  - "[[_ToDo-system]]"
-tags: [beacon, library, infraestructura]
-date_created: 2026-06-25
-date_updated: 2026-06-25
-status: activo
----
-
 # 📚 LIBRARY SYSTEM — Book Search Protocol
 
 ## Propósito
@@ -208,9 +193,5 @@ consultá ambos archivos.
 
 ---
 
-%%
-galaxy-links
-[[_claude-boot]]
-[[_notebooklm-system]]
-[[_ToDo-system]]
-%%
+*Archivo generado como parte del sistema de gestión bibliográfica universitaria.*
+*Última actualización: junio 2026*
