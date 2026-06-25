@@ -40,7 +40,7 @@ Cuando el usuario comparta este archivo, Claude debe:
 4. Si hay materia específica → leer su contexto según las rutas de la sección Materias.
 5. Confirmar con un mensaje breve: _"Contexto cargado. ¿En qué trabajamos?"_
 6. Para editar archivos existentes con Filesystem MCP: siempre `edit_file`, nunca `write_file` salvo que el usuario pida explícitamente sobrescribir o crear un archivo nuevo. (Ver [[claude_solve]] para errores conocidos.)
-7. **Antes de editar cualquier beacon de `_app/_config/`**, si el cambio es significativo, ofrecer o confirmar si se quiere un respaldo antes de tocar el original — ver convención de backups en la sección **NOMENCLATURA DE BACKUPS** de este archivo.
+7. **Convención de backups establecida:** el usuario crea el respaldo (`nombre 1.md`) antes de pedir una edición significativa a un beacon de `_app/_config/`. Claude **no necesita ofrecer ni confirmar respaldo** — edita el original directamente. Ver convención completa en la sección **NOMENCLATURA DE BACKUPS** de este archivo.
 
 ---
 
@@ -56,7 +56,7 @@ El vault está organizado como un **universo de galaxias**. Cada materia es una 
 - `ETN506` fue eliminada — materia ya no relevante, carpeta borrada del vault.
 - `MOC/` no tiene ninguna MOC real — solo 2 capturas de pantalla sueltas (`comfor numbss.png` y su copia), que no son parte del sistema y deberían moverse a `_assets/` o `borrar/`.
 - `ETN302` es una materia legacy de un trabajo anterior — se considera obsoleta, no se le crean notas ni carpetas nuevas.
-- El foco sigue siendo infraestructura: cerrar las decisiones pendientes de tablet/TABnote, terminar Dataview, y luego recién empezar contenido académico real en ETN901.
+- El foco sigue siendo infraestructura: terminar Dataview, y luego recién empezar contenido académico real en ETN901. Las decisiones de tablet/TABnote ya quedaron cerradas (2026-06-24).
 
 ---
 
@@ -79,13 +79,15 @@ University_Vault_2026/
 │   │   ├── _note-system.md       ← convención de nombres
 │   │   ├── _template-system.md   ← plantillas Templater
 │   │   ├── _pdf-system.md        ← integración de PDFs (convención documentada — ver nota de discrepancia abajo)
+│   │   ├── _library-system.md    ← protocolo de búsqueda y selección de libros
 │   │   ├── _mindmap-system.md    ← Excalidraw + Mindmap Builder
 │   │   ├── _excalidraw-system.md ← configuración del plugin Excalidraw
 │   │   ├── _graph-system.md      ← Desmos / TikZJax (`neutrino`)
 │   │   ├── _sync-system.md       ← sincronización GitHub + Mega
 │   │   ├── _basic-memory-system.md ← MCP Basic Memory (memoria semántica)
 │   │   ├── _notebooklm-system.md ← integración con NotebookLM
-│   │   ├── _TABnote-system.md    ← apuntes de tablet — status: en-discusion, NO cerrado
+│   │   ├── _notebooklm-prompt.md ← prompt de configuración NotebookLM (uno por materia)
+│   │   ├── _TABnote-system.md    ← apuntes de tablet — status: activo (cerrado 2026-06-24)
 │   │   └── _ToDo-system.md       ← pendientes del sistema
 │   ├── _appnotes/               ← guías de herramientas (Desmos, LaTeX, tags)
 │   ├── Excalidraw/
@@ -133,8 +135,9 @@ ETNXXX-TNN-nombre-descriptivo.md
 | `observatory` | 🔭 | Dibujo técnico libre en Excalidraw |
 | `bridge` | 🌉 | Conexión entre dos materias |
 | `beacon` | 📡 | Guía de infraestructura del vault |
+| `supernova` | ✨ | Transcripción bruta de NotebookLM de apuntes de clase — material en bruto pendiente de disección en notas galaxy |
 
-> ⚠️ **Tipo #14 en discusión:** `_TABnote-system.md` propone `tabnote` para apuntes de tablet en Samsung Cloud. **No está aprobado** — no usar `galaxy_body: tabnote` en notas reales hasta que se cierre esa decisión (ver [[_ToDo-system]]).
+> ✅ **Tipo #14 aprobado (2026-06-24):** `supernova` quedó cerrado como `galaxy_body` oficial para transcripciones de NotebookLM de apuntes de clase (ver [[_TABnote-system]] y [[_ToDo-system]]). La propuesta original era `tabnote`, pero se descartó ese nombre a favor de `supernova` antes de aprobarse.
 
 ### Dos capas de conexión obligatorias
 
@@ -164,6 +167,7 @@ galaxy-links
 | `constellation` | `_app/Excalidraw/Constellations/` |
 | `observatory` | `_app/Excalidraw/Observatory/` |
 | `beacon` | `_app/_config/` |
+| `supernova` | `Semesters/Sem_NN/ETNXXX/Partial_N/` (raíz del parcial, no dentro de `Topic_NN/`) |
 
 ---
 
@@ -222,7 +226,7 @@ Obsidian Git sincroniza PC ↔ GitHub automáticamente cada 5 minutos. Mega sinc
 ### Si el usuario pide crear una nota nueva
 
 1. Respetar siempre el patrón de nombre: `ETNXXX-TNN-nombre-descriptivo.md`
-2. Usar el YAML mínimo del tipo correspondiente (ver `_galaxy-system.md` para plantillas completas). No usar `tabnote` — sigue sin aprobar.
+2. Usar el YAML mínimo del tipo correspondiente (ver `_galaxy-system.md` para plantillas completas). El tipo #14 aprobado es `supernova` (la propuesta original `tabnote` se descartó antes de aprobarse — nunca usar `galaxy_body: tabnote`).
 3. Incluir el bloque `%%` al final con los wikilinks galaxy.
 4. Guardar en la ruta correcta según el tipo.
 5. Si la carpeta destino no existe aún → avisarle al usuario antes de crear el archivo.
@@ -243,7 +247,7 @@ Leer el beacon específico según el tema:
 | Sincronización GitHub + Mega | `_app/_config/_sync-system.md` |
 | Memoria semántica (Basic Memory MCP) | `_app/_config/_basic-memory-system.md` |
 | NotebookLM (tutor externo) | `_app/_config/_notebooklm-system.md` |
-| Apuntes de tablet (en discusión, no cerrado) | `_app/_config/_TABnote-system.md` |
+| Apuntes de tablet — activo, cerrado 2026-06-24 | `_app/_config/_TABnote-system.md` |
 | Pendientes del sistema | `_app/_config/_ToDo-system.md` |
 | Protocolo de búsqueda y selección de libros | `_app/_config/_library-system.md` |
 
@@ -283,9 +287,9 @@ Convención interna del vault para respaldar archivos antes de editarlos:
 4. **Respuestas concisas en el chat** — el detalle va en el archivo `.md`, no en la conversación.
 5. **Si una ruta no existe aún** → decírselo al usuario antes de crear archivos, no asumir rutas.
 6. **ETN302 es legacy** — no crear notas ni carpetas para esta materia.
-7. **No usar `galaxy_body: tabnote`** en notas reales — tipo en discusión, no aprobado.
+7. **`galaxy_body: supernova` es el tipo #14 aprobado** — `tabnote` fue la propuesta original, descartada antes de aprobarse. Nunca usar `galaxy_body: tabnote` en notas reales.
 8. **Ante discrepancias entre lo documentado y lo que hay en disco** (como `_PDF/`) → confiar en lo que hay en disco y avisar de la discrepancia, no forzar la convención documentada.
-9. **Antes de editar un beacon de forma significativa** → ofrecer respaldo (copia ` 1.md`) si no se hizo ya.
+9. **El usuario crea los backups, Claude edita el original directamente** — no ofrecer ni confirmar respaldo antes de editar un beacon, salvo que el usuario indique lo contrario.
 10. **Actualizar `date_updated`** en el YAML de cualquier beacon que se modifique.
 
 %%

@@ -30843,6 +30843,8 @@ determinando
 disecci
 diseccionada
 describ
+descart
+descartada
 Vault
 Verificar
 Variables
@@ -67745,6 +67747,7 @@ abreviado
 alenta
 ayudaron
 agregado
+aprobarse
 related
 recomendados
 ribbon
@@ -218898,6 +218901,7 @@ forzarlas
 funcionales
 footer
 faltaba
+favor
 haya
 hace
 hacer
