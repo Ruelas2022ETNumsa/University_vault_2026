@@ -111,12 +111,12 @@ University_Vault_2026/
 ### Convención de nombres de notas
 
 ```
-ETNXXX-TNN-nombre-descriptivo.md
+ETNXXX-TNN-nombre_descriptivo.md
 ```
 
 - `ETNXXX` → código de materia (ej. `ETN806`, `ETN506`, `ETN901`)
 - `TNN` → número de tema con cero (`T01`, `T03`). Usar `T00` para notas de parcial completo.
-- `nombre-descriptivo` → slug corto en inglés con guiones
+- `nombre-descriptivo` → slug corto en español con guiones (se excluye símbolos especiales y acentos).
 
 ### Tipos de cuerpo galaxy (`galaxy_body`)
 
@@ -146,13 +146,13 @@ Toda nota debe tener sus conexiones en **dos lugares**:
 ```yaml
 # En el YAML (para DataView y búsquedas):
 orbiting:
-  - "[[ETN806-T01-joint-pdf-definition]]"
+  - "[[ETN806-T01-ejemplo_pdf_definicio]]"
 ```
 
 ```markdown
 %% Al final del cuerpo (para el grafo de Obsidian):
 galaxy-links
-[[ETN806-T01-joint-pdf-definition]]
+[[ETN806-T01-ejemplo_pdf_definicio]]
 %%
 ```
 

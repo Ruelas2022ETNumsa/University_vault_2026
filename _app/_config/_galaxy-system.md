@@ -124,28 +124,28 @@ University_Vault_2026/
 ETNXXX-TNN-nombre-descriptivo.md
 ```
 
-| Campo | Descripción | Ejemplo |
-|-------|-------------|---------|
-| `ETNXXX` | Sigla de la materia | `ETN806` |
-| `TNN` | Número de tema con cero al frente | `T01`, `T03` |
-| `nombre-descriptivo` | Slug corto en inglés, con guiones | `joint-pdf-definition` |
+| Campo                | Descripción                                    | Ejemplo                  |
+| -------------------- | ---------------------------------------------- | ------------------------ |
+| `ETNXXX`             | Sigla de la materia                            | `ETN806`                 |
+| `TNN`                | Número de tema con cero al frente              | `T01`, `T03`             |
+| `nombre_descriptivo` | Slug corto en español o ingles, con barra baja | `ejemplo_pdf_definicion` |
 
 Usar `T00` para notas que pertenecen al parcial completo y no a un tema específico (formularios, enunciados de práctica, referencias generales).
 
-Para notas Bridge que conectan dos materias: `ETN806-ETN302-nombre-del-puente.md`
+Para notas Bridge que conectan dos materias: `ETN806-ETN302-nombre_del_puente.md`
 
 ### Ejemplos
 
 ```
-ETN806-T01-joint-pdf-definition.md
-ETN806-T01-marginal-density-formula.md
-ETN806-T01-normalization-k-solved.md
-ETN806-T01-support-region-triangle.md
-ETN806-T02-independence-statistical-test.md
-ETN806-T02-variance-sum-covariance.md
-ETN806-T00-formulario-partial2.md
-ETN806-T00-practica2-enunciados.md
-ETN806-ETN302-laplace-vs-probability.md
+ETN806-T01-joint_pdf_definition.md
+ETN806-T01-marginal_density_formula.md
+ETN806-T01-normalization_k_solved.md
+ETN806-T01-support_region_triangle.md
+ETN806-T02-independence_statistical_test.md
+ETN806-T02-variance_sum_covariance.md
+ETN806-T00-formulario_partial2.md
+ETN806-T00-practica2_enunciados.md
+ETN806-ETN302-laplace_vs_probability.md
 ```
 
 > El semestre y el parcial **no van en el nombre** — ya están codificados en la ruta de carpeta y en el YAML. Sin redundancia.
@@ -182,9 +182,9 @@ El grafo nativo de Obsidian **solo detecta `[[wikilinks]]` escritos en el cuerpo
 ```markdown
 %%
 galaxy-links
-[[ETN806-T01-joint-pdf-definition]]
-[[ETN806-T01-marginal-density-formula]]
-[[ETN806-T01-normalization-k-solved]]
+[[ETN806-T01-joint_pdf_definition]]
+[[ETN806-T01-marginal_density_formula]]
+[[ETN806-T01-normalization_k_solved]]
 %%
 ```
 
