@@ -1,15 +1,20 @@
 ---
-title: "Sistema NotebookLM — University Vault"
+title: Sistema NotebookLM — University Vault
 galaxy_body: beacon
 scope: vault
-audience: [usuario, claude]
+audience:
+  - usuario
+  - claude
 related_notes:
   - "[[_galaxy-system]]"
-  - "[[notebooklm_modes]]"
+  - "[[MAT101-notebooklm_modes]]"
   - "[[_notebooklm-prompt]]"
   - "[[desmos_guide]]"
   - "[[tikzjax_guide]]"
-tags: [beacon, notebooklm, infraestructura]
+tags:
+  - beacon
+  - notebooklm
+  - infraestructura
 date_created: 2026-06-03
 date_updated: 2026-06-25
 status: activo
@@ -17,7 +22,7 @@ status: activo
 
 # Sistema NotebookLM — University Vault
 
-> Guía de modos y triggers: [[notebooklm_modes]]
+> Guía de modos y triggers: [[MAT101-notebooklm_modes]]
 > Prompt de configuración: [[_notebooklm-prompt]]
 
 NotebookLM es el tutor externo del vault. Recibe las notas `.md` del alumno
@@ -106,7 +111,7 @@ Ver tarea pendiente en [[_ToDo-system]].
 %%
 galaxy-links
 [[_galaxy-system]]
-[[notebooklm_modes]]
+[[MAT101-notebooklm_modes]]
 [[_notebooklm-prompt]]
 [[desmos_guide]]
 [[tikzjax_guide]]

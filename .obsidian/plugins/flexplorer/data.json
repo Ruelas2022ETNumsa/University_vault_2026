@@ -5,14 +5,6 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
-        "rendimiento.md",
-        "examen final 806 pdf.md",
-        "notebooklm oldesdd.md",
-        "colas_guide_s.md",
-        "notebooklm new.md",
-        "notebooklm old.md",
-        "tables no terminado.md",
-        "ETN806-practica_3.md",
         "in_work",
         "Borrar",
         "README.md",
@@ -31,8 +23,7 @@
       "sortOrder": "custom",
       "customOrder": [
         "Sem_08",
-        "Sem_09",
-        "Sem_05"
+        "Sem_09"
       ]
     },
     "Semesters/Sem_09": {
@@ -59,28 +50,6 @@
         "ETN901-class002-P1-ago15.md",
         "ETN901-class001-P1-ago15.md"
       ]
-    },
-    "Semesters/Sem_05": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "ETN506"
-      ]
-    },
-    "Semesters/Sem_05/ETN506": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Partial_2"
-      ]
-    },
-    "Semesters/Sem_05/ETN506/Partial_2": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": []
     },
     "Semestres": {
       "isPinned": false,
@@ -1038,8 +1007,8 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "ETN806-Parcial_2.md",
-        "contexto806.md",
+        "ETN806-P2-Fuente_Parcial_2.md",
+        "contexto_claude806.md",
         "ETN806-2P-E1-Normalizacion-Marginales-Independencia-Probabilidad-region-curva.md",
         "ETN806-2P-E2-Independencia-VAR-suma-cuadrado-unitario.md",
         "ETN806-2P-E3-Marginales-semicirculo-unitario.md",
@@ -1054,10 +1023,6 @@
         "ETN806-Practica2-Enunciados-Variables-Aleatorias-Multiples.md",
         "ETN806-Resuelto-Referencia-Densidad-Conjunta-Triangular.md"
       ]
-    },
-    "Semestres/SEM_08/ETN806/Partial_2/contexto806.md": {
-      "isPinned": false,
-      "isHidden": false
     },
     "Semestres/SEM_08/ETN806/Partial_2/ETN806-2P-E1-Normalizacion-Marginales-Independencia-Probabilidad-region-curva.md": {
       "isPinned": false,
@@ -1116,6 +1081,8 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "ETN806-P3-examen_final_806_pdf.md",
+        "ETN806-P3-practica_3.md",
         "(ING) Ejercicios teoria colas.md",
         "(ING) Ejercicios Markov.md",
         "(ING)TEORÍA DE COLAS.md",
@@ -2505,6 +2472,8 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "rendimiento.md",
+        "tables no terminado.md",
         "corr.md",
         "corr 1.md",
         "Untitled.md",
@@ -2539,10 +2508,6 @@
       "isHidden": false
     },
     "in_work/MAT101-Números-reales-y-desigualdades.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_08/ETN806/Partial_2/ETN806-Parcial_2.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -2642,19 +2607,7 @@
       "isPinned": false,
       "isHidden": false
     },
-    "tables no terminado.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Semestres/SEM_08/ETN806/Partial_3/(ING) ANÁLISIS DE MARKOV.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "notebooklm old.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "notebooklm new.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -2666,23 +2619,7 @@
       "isPinned": false,
       "isHidden": false
     },
-    "colas_guide_s.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "notebooklm oldesdd.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Semestres/SEM_08/ETN806/Partial_3/(ING) Ejercicios teoria colas.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "ETN806-practica_3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "rendimiento.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -2716,10 +2653,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "examen final 806 pdf.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_app/_config/_claude-matter-boot.md": {
       "isPinned": false,
       "isHidden": false
@@ -2727,22 +2660,19 @@
     "_app/notebooklm-prompts": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
-        "transcription_guide.md",
+        "MAT101-notebooklm_prompt.md",
+        "ETN806-P3-notebooklm-oldesdd.md",
+        "ETN806-P1-notebooklm old.md",
+        "ETN806-P3-notebooklm_new.md",
+        "ETN806-P3-colas_guide_s.md",
+        "MAT101-transcription_guide.md",
         "tikzjax_guide.md",
         "desmos_guide.md",
-        "Tikz_markov_guide.md",
-        "notebooklm_modes.md"
-      ],
-      "sortOrder": "custom"
-    },
-    "_app/notebooklm-prompts/notebooklm_modes.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm-prompts/Tikz_markov_guide.md": {
-      "isPinned": false,
-      "isHidden": false
+        "ETN806-P3-Tikz_markov_guide.md",
+        "MAT101-notebooklm_modes.md"
+      ]
     },
     "_app/notebooklm-prompts/desmos_guide.md": {
       "isPinned": false,
@@ -2752,7 +2682,59 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_app/notebooklm-prompts/transcription_guide.md": {
+    "Semestres/SEM_08/ETN806/Partial_2/contexto_claude806.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm-prompts/ETN806-P3-colas_guide_s.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08/ETN806/Partial_3/ETN806-P3-examen_final_806_pdf.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm-prompts/ETN806-P3-notebooklm_new.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm-prompts/MAT101-transcription_guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm-prompts/ETN806-P3-Tikz_markov_guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm-prompts/MAT101-notebooklm_modes.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "in_work/tables no terminado.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "in_work/rendimiento.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08/ETN806/Partial_2/ETN806-P2-Fuente_Parcial_2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08/ETN806/Partial_3/ETN806-P3-practica_3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm-prompts/ETN806-P3-notebooklm-oldesdd.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm-prompts/ETN806-P1-notebooklm old.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm-prompts/MAT101-notebooklm_prompt.md": {
       "isPinned": false,
       "isHidden": false
     }
