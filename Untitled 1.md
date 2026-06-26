@@ -203,21 +203,21 @@ y=x\left\{-2\le x\le2\right\}
 
 ## Función arco seno
 
-$$y=\arcsen(x)$$
+$$y=\arcsin(x)$$
 
 ```desmos-graph
-left=-2.2; right=2.2; bottom=-2.2; top=2.2;
+left=-3; right=3; bottom=-3.5; top=3.5;
 width=500; height=500;
 ---
-y=\arcsin(x)|-1<=x<=1|#c74440|SOLID
-y=\sin(x)|-1<=x<=1|#2d70b3|DASHED
-y=x|-2<=x<=2|#000000|DASHED
+y=\sin(x)   |-3<=x<=3|#5E81AC|DASHED
+y=x         |-3<=x<=3|#777777|DASHED
+y=-\arcsin(x)-3.1416|-1<=x<=1|#A65C59|dashed
+y=-\arcsin(x)+3.1416|-1<=x<=1|#A65C59|dashed
+y=\arcsin(x)|-1<=x<=1|#D97706|solid
+
+(1,3.1416/2)|label:(1,pi/2)|#D97706|cross
+(-1,-3.1416/2)|label:-(1,pi/2)|#D97706|cross
 ```
-
-
-
-
-
 
 ## Función arco coseno
 
@@ -226,6 +226,23 @@ $f(x)=\arccos(x)$
 ```desmos-graph
 y=\arccos(x)
 ```
+
+## Función arco coseno
+
+$$y=\arccos(x)$$
+
+```desmos-graph
+left=-3; right=3; bottom=-3.5; top=3.5;
+width=500; height=500;
+---
+y=\cos(x)|-3<=x<=3|#5E81AC|DASHED
+y=x|-3<=x<=3|#777777|DASHED
+y=\arccos(x)|-1<=x<=1|#e74440|SOLID
+y=-\arccos(x)|-1<=x<=1|#A65C59|DASHED
+```
+
+
+
 
 ## Función arco tangente
 
