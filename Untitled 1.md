@@ -52,7 +52,7 @@ $f(x)=\dfrac{1}{\tan(x)}$
 
 ```desmos-graph
 width=300; height=200;
-left=-3; right=3; bottom=-3; top=3;
+left=-4; right=4; bottom=-4; top=4;
 ---
 y=\frac{1}{x}
 ```
@@ -84,6 +84,10 @@ $f(x)=x^2-4x+3$
 
 ```desmos-graph
 width=300; height=200;
+
+left=-3; right=7; bottom=-2; top=7;
+
+
 ---
 y=x^2-4x+3
 ```
@@ -106,6 +110,7 @@ $$y=x^{-\frac{1}{2}}$$
 
 ```desmos-graph
 width=300; height=200;
+left=-0.5; right=7; bottom=-0.5; top=5;
 ---
 y=x^{-1/2}
 ```
@@ -116,6 +121,10 @@ y=x^{-1/2}
 $$y=x^{\frac{2}{3}}$$
 
 ```desmos-graph
+
+width=300; height=200;
+left=-10; right=10; bottom=-0.5; top=5;
+---
 y=x^{2/3}
 ```
 
@@ -124,6 +133,10 @@ y=x^{2/3}
 $$y=x^{-\frac{2}{3}}$$
 
 ```desmos-graph
+width=300; height=200;
+left=-5; right=5; bottom=-0.5; top=5;
+---
+
 y=x^{-2/3}
 ```
 
@@ -136,6 +149,9 @@ $f(x)=x^3-3x$
 **Desmos**
 
 ```desmos-graph
+width=300; height=200;
+left=-3; right=3; bottom=-4; top=4;
+---
 y=x^3-3x
 ```
 
@@ -148,6 +164,9 @@ $f(x)=2^x$
 **Desmos**
 
 ```desmos-graph
+width=300; height=200;
+left=-5; right=3; bottom=-0.5; top=5;
+---
 y=2^x
 ```
 
@@ -160,6 +179,9 @@ $f(x)=e^x$
 **Desmos**
 
 ```desmos-graph
+width=300; height=200;
+left=-5; right=3; bottom=-0.5; top=5;
+---
 y=e^x
 ```
 
@@ -172,6 +194,9 @@ $f(x)=\log_{10}(x)$
 **Desmos**
 
 ```desmos-graph
+width=300; height=200;
+left=-0.5; right=3; bottom=-2; top=0.5;
+---
 y=\log(x)
 ```
 
@@ -184,6 +209,9 @@ $f(x)=\ln(x)$
 **Desmos**
 
 ```desmos-graph
+width=300; height=200;
+left=-0.5; right=3; bottom=-3; top=2;
+---
 y=\ln(x)
 ```
 
@@ -194,6 +222,9 @@ y=\ln(x)
 $f(x)=\sin(x)$
 
 ```desmos-graph
+width=300; height=200;
+left=-3.14; right=3.14; bottom=-2; top=2;
+---
 y=\sin(x)
 ```
 
@@ -202,6 +233,9 @@ y=\sin(x)
 $f(x)=\cos(x)$
 
 ```desmos-graph
+width=300; height=200;
+left=-3.14; right=3.14; bottom=-2; top=2;
+---
 y=\cos(x)
 ```
 
@@ -210,6 +244,8 @@ y=\cos(x)
 $f(x)=\tan(x)$
 
 ```desmos-graph
+width=400; height=350;
+---
 y=\tan(x)
 ```
 
@@ -217,31 +253,11 @@ y=\tan(x)
 
 ## Función arco seno
 
-$f(x)=\arcsin(x)$
-
-```desmos-graph
-y=\arcsin(x)
-```
-
-
-## Función arco seno
-
-$$y=\arcsin(x)$$
-
-```desmos-graph
-y=\arcsin(x)
-y=\sin(x)\left\{-1\le x\le1\right\}
-y=x\left\{-2\le x\le2\right\}
-```
-
-
-## Función arco seno
-
 $$y=\arcsin(x)$$
 
 ```desmos-graph
 left=-3; right=3; bottom=-3.5; top=3.5;
-width=500; height=500;
+width=400; height=350;
 ---
 y=\sin(x)   |-3<=x<=3|#5E81AC|DASHED
 y=x         |-3<=x<=3|#777777|DASHED
@@ -255,19 +271,11 @@ y=\arcsin(x)|-1<=x<=1|#D97706|solid
 
 ## Función arco coseno
 
-$f(x)=\arccos(x)$
-
-```desmos-graph
-y=\arccos(x)
-```
-
-## Función arco coseno
-
 $$y=\arccos(x)$$
 
 ```desmos-graph
 left=-3; right=3; bottom=-3.5; top=3.5;
-width=500; height=500;
+width=400; height=350;
 ---
 y=\cos(x)|-3<=x<=3|#5E81AC|DASHED
 y=x|-3<=x<=3|#777777|DASHED
@@ -284,29 +292,8 @@ y=-\arccos(x)|-1<=x<=1|#A65C59|DASHED
 $f(x)=\arctan(x)$
 
 ```desmos-graph
-y=\arctan(x)
-```
-
-
-```desmos-graph
-left=-4; right=4; bottom=-3; top=3;
-width=500; height=500;
----
-y=\tan(x)|-1.55<=x<=1.55|#5E81AC|DASHED
-y=x|-3<=x<=3|#777777|DASHED
-x=-1.5708|-3<=y<=3|#A65C59|DASHED
-x=1.5708|-3<=y<=3|#A65C59|DASHED
-y=\arctan(x)|-4<=x<=4|#D97706|SOLID
-
-(0,0)|label:(0,0)|#D97706|cross
-(1,0.7854)|label:(1,pi/4)|#D97706|cross
-(-1,-0.7854)|label:(-1,-pi/4)|#D97706|cross
-```
-
-
-```desmos-graph
-left=-5; right=5; bottom=-5; top=5;
-width=500; height=500;
+left=-3; right=3; bottom=-3; top=3;
+width=400; height=350;
 ---
 y=\tan(x)   |-1.55<=x<=1.55|#5E81AC|DASHED
 y=x|-7<=x<=7|#777777|DASHED
