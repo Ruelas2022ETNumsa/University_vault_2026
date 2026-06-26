@@ -6168,6 +6168,7 @@ terminados
 transcrito
 tmico
 tratar
+tuve
 ToDo
 Templater
 Text
@@ -43313,6 +43314,8 @@ github
 graficaci
 gida
 generaba
+generalizada
+graficas
 body
 beacon
 bat
@@ -80490,6 +80493,7 @@ nDMa
 nzkq
 nWPo
 normalizado
+notacion
 created
 commit
 cada
@@ -143132,6 +143136,9 @@ pregunt
 procedimentales
 procedimental
 probamos
+potencial
+parace
+pontencias
 min
 mica
 movimiento

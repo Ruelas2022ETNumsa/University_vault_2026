@@ -18,30 +18,6 @@ f(x)=2x^{5}+6x^{3}-8x
 
 ---
 
-## Función seno
-
-$f(x)=\sin(x)$
-
-**Desmos**
-
-```desmos-graph
-y=\sin(x)
-```
-
----
-
-## Función coseno
-
-$f(x)=\cos(x)$
-
-**Desmos**
-
-```desmos-graph
-y=\cos(x)
-```
-
----
-
 ## Función tangente
 
 $f(x)=\tan(x)$
@@ -80,6 +56,41 @@ $f(x)=x^2-4x+3$
 
 ```desmos-graph
 y=x^2-4x+3
+```
+
+## Función potencial generalizada
+
+$$y=x^{\frac{3}{2}}$$
+
+```desmos-graph
+y=x^{3/2}
+```
+
+ojo que en desmos y=x^(3/2) no da, parace que si esta adecuado a la notacion de latex con unas excepciones.
+
+## Función potencial generalizada
+
+$$y=x^{-\frac{1}{2}}$$
+
+```desmos-graph
+y=x^{-1/2}
+```
+
+
+## Función potencial generalizada
+
+$$y=x^{\frac{2}{3}}$$
+
+```desmos-graph
+y=x^{2/3}
+```
+
+## Función potencial generalizada
+
+$$y=x^{-\frac{2}{3}}$$
+
+```desmos-graph
+y=x^{-2/3}
 ```
 
 ---
@@ -178,6 +189,36 @@ $f(x)=\arcsin(x)$
 y=\arcsin(x)
 ```
 
+
+## Función arco seno
+
+$$y=\arcsin(x)$$
+
+```desmos-graph
+y=\arcsin(x)
+y=\sin(x)\left\{-1\le x\le1\right\}
+y=x\left\{-2\le x\le2\right\}
+```
+
+
+## Función arco seno
+
+$$y=\arcsen(x)$$
+
+```desmos-graph
+left=-2.2; right=2.2; bottom=-2.2; top=2.2;
+width=500; height=500;
+---
+y=\arcsin(x)|-1<=x<=1|#c74440|SOLID
+y=\sin(x)|-1<=x<=1|#2d70b3|DASHED
+y=x|-2<=x<=2|#000000|DASHED
+```
+
+
+
+
+
+
 ## Función arco coseno
 
 $f(x)=\arccos(x)$
@@ -238,6 +279,19 @@ $f(x)=|x^2-4x+3|$
 y=\abs(x^{2}-4x+3)
 ```
 
+$y=|x||x-4|$
+
+```desmos-graph
+y=\abs(x)\abs(x-4)
+```
+
+$$y=\left||x^2-4|-4\right|$$
+
+```desmos-graph
+y=\abs(\abs(x^{2}-4)-4)
+```
+
+
 ---
 
 ## Función parte entera
@@ -270,10 +324,16 @@ $$
 y=\min(\operatorname{mod}(x,1),1-\operatorname{mod}(x,1))
 ```
 
-otra forma
+$$y=\{x-1\}$$
 
 ```desmos-graph
-y=\min(\operatorname{mod}(x,1),1-\operatorname{mod}(x,1))
+y=\min(\operatorname{mod}(x-1,1),1-\operatorname{mod}(x-1,1))
+```
+
+$$y=\{x^2\}$$
+
+```desmos-graph
+y=\min(\operatorname{mod}(x^{2},1),1-\operatorname{mod}(x^{2},1))
 ```
 
 ---
@@ -292,34 +352,13 @@ $$
 y=\left\{x<0:0,\ x\ge0:1\right\}
 ```
 
-## Valor absoluto
-
-$$y=|x||x-4|$$
-
-```desmos-graph
-y=\abs(x)\abs(x-4)
-```
-
-$$y=\left||x^2-4|-4\right|$$
-
-```desmos-graph
-y=\abs(\abs(x^{2}-4)-4)
-```
 
 ---
 
-## Función distancia
 
-$$y=\{x-1\}$$
+# cosas que le tuve que aclarar a chat gpt
 
-```desmos-graph
-y=\min(\operatorname{mod}(x-1,1),1-\operatorname{mod}(x-1,1))
-```
-
-## Función distancia
-
-$$y=\{x^2\}$$
-
-```desmos-graph
-y=\min(\operatorname{mod}(x^{2},1),1-\operatorname{mod}(x^{2},1))
-```
+en las graficas desmos:
+- en las pontencias usar {} por ejemplo x^{potencia} nunca x^(potencia)
+- 
+  
