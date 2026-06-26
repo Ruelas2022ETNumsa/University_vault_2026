@@ -1,8 +1,25 @@
+# tamaño desmos
+
+**Pequeño — gráficas simples (rectas numéricas, intervalos, un punto):**  
+`width=300; height=200;`
+
+**Mediano — uso general (funciones, parábolas, trigonométricas, regiones):**  
+`width=400; height=350;`
+
+**Grande — gráficas con muchos detalles (múltiples curvas, etiquetas, regiones sombreadas):**  
+`width=550; height=450;`
+
+El punto crítico es la relación ancho/alto — para funciones estándar un ratio cercano a 1:1 o 4:3 se ve bien. Para rectas numéricas el ratio horizontal es mejor (3:1 o 4:2).
+
+
 ## Función par
 
 $y = x^{4} - 4x^{2} + 3$
 
 ```desmos-graph
+width=300; height=200;
+left=-3; right=3; bottom=-2; top=5;
+---
 y = x^4 - 4x^2 + 3
 ```
 
@@ -13,6 +30,9 @@ y = x^4 - 4x^2 + 3
 $f(x)=2x^{5}+6x^{3}-8x$
 
 ```desmos-graph
+width=300; height=200;
+left=-2; right=2; bottom=-5; top=5;
+---
 f(x)=2x^{5}+6x^{3}-8x
 ```
 
@@ -22,17 +42,23 @@ f(x)=2x^{5}+6x^{3}-8x
 
 $f(x)=\tan(x)$
 
-**Desmos**
-
 ```desmos-graph
+width=400; height=350;
+---
 y=\tan(x)
 ```
 
 $f(x)=\dfrac{1}{\tan(x)}$
 
 ```desmos-graph
+width=300; height=200;
+left=-3; right=3; bottom=-3; top=3;
+---
 y=\frac{1}{x}
 ```
+
+
+
 
 ---
 
@@ -43,6 +69,8 @@ $f(x)=2x+1$
 **Desmos**
 
 ```desmos-graph
+width=300; height=200;
+---
 y=2x+1
 ```
 
@@ -55,6 +83,8 @@ $f(x)=x^2-4x+3$
 **Desmos**
 
 ```desmos-graph
+width=300; height=200;
+---
 y=x^2-4x+3
 ```
 
@@ -63,6 +93,8 @@ y=x^2-4x+3
 $$y=x^{\frac{3}{2}}$$
 
 ```desmos-graph
+width=300; height=200;
+---
 y=x^{3/2}
 ```
 
@@ -73,6 +105,8 @@ ojo que en desmos y=x^(3/2) no da, parace que si esta adecuado a la notacion de 
 $$y=x^{-\frac{1}{2}}$$
 
 ```desmos-graph
+width=300; height=200;
+---
 y=x^{-1/2}
 ```
 
@@ -237,12 +271,13 @@ width=500; height=500;
 ---
 y=\cos(x)|-3<=x<=3|#5E81AC|DASHED
 y=x|-3<=x<=3|#777777|DASHED
-y=\arccos(x)|-1<=x<=1|#e74440|SOLID
+y=\arccos(x)|-1<=x<=1|#D97706|SOLID
 y=-\arccos(x)|-1<=x<=1|#A65C59|DASHED
+
+(1,0)|label:(1,0)|#D97706|cross
+(0,1.5708)|label:(0,pi/2)|#D97706|cross
+(-1,3.1416)|label:(-1,pi)|#D97706|cross
 ```
-
-
-
 
 ## Función arco tangente
 
@@ -251,6 +286,44 @@ $f(x)=\arctan(x)$
 ```desmos-graph
 y=\arctan(x)
 ```
+
+
+```desmos-graph
+left=-4; right=4; bottom=-3; top=3;
+width=500; height=500;
+---
+y=\tan(x)|-1.55<=x<=1.55|#5E81AC|DASHED
+y=x|-3<=x<=3|#777777|DASHED
+x=-1.5708|-3<=y<=3|#A65C59|DASHED
+x=1.5708|-3<=y<=3|#A65C59|DASHED
+y=\arctan(x)|-4<=x<=4|#D97706|SOLID
+
+(0,0)|label:(0,0)|#D97706|cross
+(1,0.7854)|label:(1,pi/4)|#D97706|cross
+(-1,-0.7854)|label:(-1,-pi/4)|#D97706|cross
+```
+
+
+```desmos-graph
+left=-5; right=5; bottom=-5; top=5;
+width=500; height=500;
+---
+y=\tan(x)   |-1.55<=x<=1.55|#5E81AC|DASHED
+y=x|-7<=x<=7|#777777|DASHED
+y=\arctan(x)|-7<=x<=7|#D97706|SOLID
+
+x=-1.5708|-7<=y<=7|#A65C59|DASHED
+x=1.5708 |-7<=y<=7|#A65C59|DASHED
+
+y=-1.5708|-7<=x<=7|#A65C59|DASHED
+y=1.5708 |-7<=x<=7|#A65C59|DASHED
+
+(0,0)       |label:(0,0)|#D97706|cross
+(1,0.7854)  |label:(1,pi/4)|#D97706|cross
+(-1,-0.7854)|label:(-1,-pi/4)|#D97706|cross
+```
+
+
 
 ---
 
@@ -378,4 +451,15 @@ y=\left\{x<0:0,\ x\ge0:1\right\}
 en las graficas desmos:
 - en las pontencias usar {} por ejemplo x^{potencia} nunca x^(potencia)
 - 
-  
+  un hallazgo importante en desmos para algunas palabras reservadas se debe usar \ como
+
+- \cos
+    
+- \frac{1}{3}
+    
+
+esto
+
+```desmos-graph
+
+y=2\cos(x)-\frac{x^2}{10}
