@@ -533,6 +533,36 @@ y=\operatorname{sgn}(x^4-5x^2+4)|#D97706
 
 > **Observación:** El caso $u=0$ únicamente determina los **puntos cerrados** de la gráfica, correspondientes a las raíces del polinomio. Matemáticamente, la función **no contiene segmentos verticales** en esos valores de $x$; solo existen los puntos abiertos provenientes de los intervalos adyacentes y el punto cerrado donde $u=0$. Algunos graficadores, como Desmos, dibujan pequeños segmentos verticales para resaltar la discontinuidad o debido a su algoritmo de renderizado, pero dichos segmentos **no forman parte de la gráfica de la función** desde el punto de vista matemático.
 
+**ALTERNATIVA (GRAFICAMENTE CORRECTA )A LA FUNCION SIGNO**
+
+```desmos-graph
+width=300; height=200;
+left=-3; right=3; bottom=-2; top=2;
+---
+y=1|-3<=x<-2|#D97706
+y=-1|-2<x<-1|#D97706
+y=1|-1<x<1|#D97706
+y=-1|1<x<2|#D97706
+y=1|2<x<=3|#D97706
+
+(-2,0)|label:(-2,0)|#D97706
+(-1,0)|label:(-1,0)|#D97706
+(1,0)|label:(1,0)|#D97706
+(2,0)|label:(2,0)|#D97706
+
+(-2,1)|#D97706|open
+(-2,-1)|#D97706|open
+
+(-1,1)|#D97706|open
+(-1,-1)|#D97706|open
+
+(1,1)|#D97706|open
+(1,-1)|#D97706|open
+
+(2,1)|#D97706|open
+(2,-1)|#D97706|open
+```
+
 
 
 
@@ -549,24 +579,223 @@ u(x)=
 \end{cases}
 $$
 
-```desmos-graph
-width=300; height=200;
-left=-2; right=2; bottom=-0.5; top=2;
----
-y=\left\{x<0:0,\ x\ge0:1\right\}
-```
-
 
 ```desmos-graph
 width=300; height=200;
-left=-2; right=2; bottom=-2; top=2;
+left=-2; right=2; bottom=-1; top=2;
 ---
-y=\operatorname{sgn}(x)|#D97706
+y=0|-2<=x<0|#D97706
+y=1|0<=x<=2|#D97706
 
-(-1,-1)|label:(-1,-1)|#D97706|cross
-(0,0)|label:(0,0)|#D97706|cross
-(1,1)|label:(1,1)|#D97706
+(0,0)|#D97706|open
+(0,1)|label:(0,1)|#D97706
 ```
+
+ejemplos
+
+$$
+y=
+\begin{cases}
+0, & x<0,\\[4pt]
+2x, & 0\le x\le3,\\[4pt]
+6, & x\ge3.
+\end{cases}
+$$
+
+### Análisis
+
+```desmos-graph
+width=300; height=200;
+left=-2; right=5; bottom=-1; top=8;
+---
+y=0|-2<=x<0|#D97706
+y=2x|0<=x<=3|#D97706
+y=6|3<=x<=5|#D97706
+
+(0,0)|label:(0,0)|#D97706
+(3,6)|label:(3,6)|#D97706
+```
+
+Dada la función
+
+$$
+y=
+\begin{cases}
+0, & x<0,\\[4pt]
+2x, & 0\le x\le3,\\[4pt]
+6, & x\ge3.
+\end{cases}
+$$
+
+se desea expresarla utilizando la función escalón unitario
+
+$$
+u(x-a)=
+\begin{cases}
+0, & x<a,\\[4pt]
+1, & x\ge a.
+\end{cases}
+$$
+
+### Paso 1. Identificar los puntos de cambio
+
+La función cambia de expresión en
+
+$$
+x=0
+\qquad\text{y}\qquad
+x=3.
+$$
+
+Por tanto, se utilizarán los escalones
+
+$$
+u(x)
+\qquad\text{y}\qquad
+u(x-3).
+$$
+
+### Paso 2. Analizar el primer intervalo
+
+Para
+
+$$
+x<0,
+$$
+
+la función vale
+
+$$
+y=0.
+$$
+
+Como antes de activar el primer escalón la función ya vale cero, no es necesario escribir ningún término adicional.
+
+### Paso 3. Activar la recta
+
+A partir de
+
+$$
+x=0,
+$$
+
+la función toma la forma
+
+$$
+y=2x.
+$$
+
+Para que esta expresión aparezca únicamente desde $x=0$, se multiplica por
+
+$$
+u(x).
+$$
+
+Así se obtiene
+
+$$
+2x\,u(x).
+$$
+
+Verificación:
+
+- Si $x<0$
+
+$$
+u(x)=0,
+$$
+
+entonces
+
+$$
+2x\,u(x)=0.
+$$
+
+- Si $x\ge0$
+
+$$
+u(x)=1,
+$$
+
+entonces
+
+$$
+2x\,u(x)=2x.
+$$
+
+Hasta este punto la función queda
+
+$$
+y=2x\,u(x).
+$$
+
+### Paso 4. Cambiar la recta por la constante
+
+En
+
+$$
+x=3
+$$
+
+la función deja de ser
+
+$$
+2x
+$$
+
+y pasa a ser
+
+$$
+6.
+$$
+
+La diferencia entre la nueva expresión y la anterior es
+
+$$
+6-2x.
+$$
+
+Esa diferencia debe agregarse únicamente cuando
+
+$$
+x\ge3,
+$$
+
+por lo que se multiplica por
+
+$$
+u(x-3).
+$$
+
+Se obtiene
+
+$$
+(6-2x)\,u(x-3).
+$$
+
+### Paso 5. Expresión final
+
+Sumando ambos aportes,
+
+$$
+\boxed{
+y=2x\,u(x)+(6-2x)\,u(x-3)
+}
+$$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
