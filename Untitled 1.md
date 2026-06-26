@@ -677,8 +677,84 @@ y=2x\,u(x)+(6-2x)\,u(x-3)
 }
 $$
 
+---
 
+ejemplo sea
+$$
+f(x)=
+\begin{cases}
+x, & x<0,\\[4pt]
+3x, & 0\le x<4,\\[4pt]
+-3x+24, & 4\le x<8,\\[4pt]
+0, & x\ge8.
+\end{cases}
+$$
 
+### Representación mediante la función escalón
+
+Se descompone la función en las siguientes contribuciones.
+
+La primera corrige el tramo inicial:
+
+$$
+\begin{cases}
+x, & x<0,\\
+0, & x\ge0,
+\end{cases}
+=-x\,u(x).
+$$
+
+La segunda activa la recta $3x$ a partir de $x=0$:
+
+$$
+\begin{cases}
+3x, & x\ge0,\\
+0, & x<0,
+\end{cases}
+=3x\,u(x).
+$$
+
+La tercera reemplaza $3x$ por $-3x+24$ a partir de $x=4$:
+
+$$
+(-6x+24)\,u(x-4).
+$$
+
+La cuarta anula la función desde $x=8$:
+
+$$
+(3x-24)\,u(x-8).
+$$
+
+Por tanto,
+
+$$
+\boxed{
+f(x)=
+-x\,u(x)
++3x\,u(x)
++(-6x+24)\,u(x-4)
++(3x-24)\,u(x-8)
+}
+$$
+
+```desmos-graph
+width=320; height=250;
+left=-3; right=10; bottom=-2; top=15;
+---
+y=x|-3<=x<0|#D97706
+y=3x|0<=x<4|#D97706
+y=-3x+24|4<=x<8|#D97706
+y=0|8<=x<=10|#D97706
+
+(0,0)|label:(0,0)|#D97706
+(4,12)|label:(4,12)|#D97706
+(8,0)|label:(8,0)|#D97706
+
+(0,0)|#D97706|open
+(4,12)|#D97706|open
+(8,0)|#D97706|open
+```
 
 
 
@@ -705,22 +781,10 @@ $$
 # cosas que le tuve que aclarar a chat gpt
 
 en las graficas desmos:
-- en las pontencias usar {} por ejemplo x^{potencia} nunca x^(potencia)
-- 
-  un hallazgo importante en desmos para algunas palabras reservadas se debe usar \ como
-
+- en las potencias usar {} por ejemplo x^{potencia} nunca x^(potencia)
+- un hallazgo importante en desmos para algunas palabras reservadas se debe usar \ como
 - \cos
-    
 - \frac{1}{3}
-    
-
-esto
-
-```desmos-graph
-
-y=2\cos(x)-\frac{x^2}{10}
-
-```
 
 
 
@@ -728,8 +792,7 @@ y=2\cos(x)-\frac{x^2}{10}
 
 
 
-
-# aca le pregunte a notebooklm que prompt usar para que no se le olvide el desmos-graph, pero en su snippet no lo agrego
+# aca le pregunte a notebooklm que prompt usar para que no se le olvide el desmos-graph, esto contesto pero en su snippet no lo agrego
 
 Tienes toda la razón. Para que el plugin `obsidian-desmos` renderice la gráfica, es imperativo usar el identificador de bloque exacto.
 

@@ -58,14 +58,7 @@ Todo bloque Desmos se escribe así:
 | `grid`       | Mostrar/ocultar cuadrícula | `grid=false`         |
 | `degreeMode` | Modo de ángulos            | `degreeMode=degrees` |
 
-> 💡 Tamaños estándar confirmados:
-> - **Pequeño** (rectas numéricas, intervalos, un punto): `width=300; height=200`
-> - **Mediano** (funciones, parábolas, trigonométricas): `width=400; height=350`
-> - **Grande** (múltiples curvas, etiquetas, regiones): `width=550; height=450`
-> - **Cornell** (dentro de bloque multi-column): `width=320; height=250` máximo
-> - **Plano cuadrado** (probabilidad, geometría): `width=500; height=500`
-> 
-> Para rectas numéricas usar ratio horizontal (3:1 o 4:2). Para funciones estándar ratio 4:3.
+> 💡 Para gráficas de estudio usa `width=500; height=400`. Para plano xy cuadrado usa `width=500; height=500`.
 
 ---
 

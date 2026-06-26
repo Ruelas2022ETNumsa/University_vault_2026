@@ -6169,6 +6169,7 @@ transcrito
 tmico
 tratar
 tuve
+terminos
 ToDo
 Templater
 Text
@@ -20166,6 +20167,7 @@ Segu
 Suger
 Series
 Simb
+SIGNO
 Plugins
 Pendientes
 Plugin
@@ -25605,6 +25607,7 @@ PROGRAMA
 Prioriz
 PRIORITARIOS
 Posibilidad
+Plano
 del
 date
 de
@@ -30883,6 +30886,9 @@ deductiva
 demostrada
 denominado
 deductivo
+discontinuidad
+dichos
+descompone
 Vault
 Verificar
 Variables
@@ -43316,6 +43322,7 @@ gida
 generaba
 generalizada
 graficas
+graficadores
 body
 beacon
 bat
@@ -67815,6 +67822,10 @@ aquel
 asumiendo
 asimismo
 arco
+adyacentes
+agrego
+asegurarte
+ajustado
 related
 recomendados
 ribbon
@@ -74265,6 +74276,7 @@ representarlo
 reforzada
 referenciarlo
 referenciarlas
+ratio
 notes
 notas
 nuevas
@@ -87183,6 +87195,9 @@ confundir
 combinarse
 concluimos
 cumplimiento
+contribuciones
+cuarta
+contesto
 updated
 un
 universo
@@ -100258,6 +100273,8 @@ GENERADOR
 GENERADO
 GENERAR
 Generador
+Grande
+GRAFICAMENTE
 Convenci
 Creaci
 Commander
@@ -105654,6 +105671,7 @@ CORNELL
 CLAVES
 COMPLEMENTO
 Corchete
+CORRECTA
 Instalados
 Instalado
 Instalar
@@ -118864,6 +118882,7 @@ Fmwg
 Fnyr
 Floyd
 Fusionada
+FUNCION
 Estado
 Excalidraw
 EPUBs
@@ -137187,6 +137206,8 @@ Adaptarlas
 Adaptar
 AUDIENCIA
 AGREGAR
+Algunos
+ALTERNATIVA
 push
 pull
 para
@@ -143139,6 +143160,9 @@ probamos
 potencial
 parace
 pontencias
+polinomio
+provenientes
+pregunte
 min
 mica
 movimiento
@@ -168670,6 +168694,7 @@ entreg
 expresarse
 evalu
 entregado
+estricto
 Motor
 Media
 Mantiene
@@ -176211,6 +176236,7 @@ MAPA
 MENSAJE
 Manuscrito
 Multil
+Mediano
 Lectura
 LaTeX
 Linter
@@ -195479,6 +195505,7 @@ incluila
 interpret
 ignoralo
 indicada
+imperativo
 Dependencia
 Dropbox
 Dataview
@@ -224922,6 +224949,7 @@ hHFn
 heredada
 hacerte
 hiperb
+hallazgo
 que
 quedan
 queda
@@ -252563,6 +252591,7 @@ orientado
 omitila
 omitas
 omitidas
+olvide
 junto
 json
 jer
