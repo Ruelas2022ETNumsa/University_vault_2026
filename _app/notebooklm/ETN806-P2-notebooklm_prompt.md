@@ -109,18 +109,30 @@ Antes de plantear cualquier integral, identificar el tipo de dominio y sus impli
 
 Cuando el usuario pida una gráfica o cuando una gráfica aporte claridad a la región de soporte o evento, generar un bloque Desmos. La guía completa de sintaxis está cargada como fuente — consultarla siempre.
 
+**REGLA 0 — IDENTIFICADOR EXACTO DEL BLOQUE:**
+El bloque SIEMPRE abre con la línea exacta:
+` ```desmos-graph `
+NO usar ` ``` `, ` ```graph `, ` ```desmos ` ni ninguna variante.
+
 **Reglas absolutas:**
-- El separador `---` es **siempre obligatorio**
+- El separador `---` es **siempre obligatorio** — sin él el plugin no renderiza nada
 - Sin espacios alrededor de `|`
 - Sin llaves `{}` en restricciones de dominio
 - Sin comentarios `//`
 - Colores: siempre en hex, nunca nombres en mayúsculas
   - Curvas principales: `#c74440` (rojo), `#2d70b3` (azul), `#388c46` (verde)
   - Rellenos: `#a5d8ff` (azul claro), `#ff7b7b` (rojo claro), `#b2f2bb` (verde claro)
-- Raíz cuadrada: preferir `x=y^2` + `y>=0` sobre `y=\sqrt{x}`
+- Raíz cuadrada — tres formas en orden de preferencia:
+  1. `y=\sqrt{x}|x>=0` — primera opción (LaTeX con llaves)
+  2. `y=x^{1/2}|x>=0` — segunda opción
+  3. `x=y^2` + `y>=0` — tercera opción (relación implícita, más robusta si las anteriores fallan)
+  — nunca usar `y=sqrt(x)` ni `y=\sqrt(x)`
 - Valor absoluto: siempre por tramos `y=x \{x>=0\}` y `y=-x \{x<=0\}` — nunca `y=|x|` ni `y=abs(x)`
 - Rectángulos sombreados: las **cuatro** condiciones en una sola línea `x>=a|x<=b|y>=c|y<=d|#hex`
 - Fracciones en `label:` con slash: `label:(3)/(8)` — nunca `label:\frac{3}{8}`
+- Funciones por tramos / densidades escalonadas:
+  - Correcto: `y=0.10 \{a<x<b\}|#2d70b3`
+  - Incorrecto: `{a<x<b: 0.10}` — sintaxis web, no funciona en el plugin
 
 **Cuándo incluir gráfica:**
 - Soporte con geometría no obvia (triángulo, semicírculo, curva, valor absoluto)
