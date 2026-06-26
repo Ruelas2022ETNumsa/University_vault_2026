@@ -440,6 +440,55 @@ y=\min(\operatorname{mod}(x^{2},1),1-\operatorname{mod}(x^{2},1))
 
 ---
 
+## Función signo
+
+$$
+\operatorname{sgn}(x)=
+\begin{cases}
+-1, & \text{si } x<0,\\[4pt]
+0, & \text{si } x=0,\\[4pt]
+1, & \text{si } x>0.
+\end{cases}
+$$
+
+```desmos-graph
+width=300; height=200;
+left=-2; right=2; bottom=-2; top=2;
+---
+y=\operatorname{sgn}(x)|#D97706
+
+(0,0)|label:(-1,-1)|#D97706
+
+(0,-1)|#D97706|open
+(0,1)|#D97706|open
+```
+
+$$
+y=\operatorname{sgn}\!\left(x^{4}-5x^{2}+4\right)
+$$
+
+```desmos-graph
+width=300; height=200;
+left=-3; right=3; bottom=-2; top=2;
+---
+y=\operatorname{sgn}(x^4-5x^2+4)|#D97706
+(-2,1)|label:(-2,1)|#D97706
+(-1,0)|label:(-1,0)|#D97706
+(1,0)|label:(1,0)|#D97706
+(2,1)|label:(2,1)|#D97706
+
+(-2,0)|#D97706|open
+(-1,1)|#D97706|open
+(-1,-1)|#D97706|open
+(1,-1)|#D97706|open
+(1,1)|#D97706|open
+(2,0)|#D97706|open
+```
+
+
+
+
+
 ## Función escalón unitario
 
 $$
@@ -466,8 +515,11 @@ y=\operatorname{sgn}(x)|#D97706
 
 (-1,-1)|label:(-1,-1)|#D97706|cross
 (0,0)|label:(0,0)|#D97706|cross
-(1,1)|label:(1,1)|#D97706|cross
+(1,1)|label:(1,1)|#D97706
 ```
+
+
+
 
 
 ---
