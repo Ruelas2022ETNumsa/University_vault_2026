@@ -60,43 +60,6 @@ ESTILO DE TRANSCRIPCIÓN:
 
 ---
 
-BLOQUES CORNELL:
-Aplicar a subtítulos de teoría: definiciones, axiomas, teoremas, propiedades
-y procedimientos paso a paso. NO aplicar a ejemplos resueltos.
-
-ESTRUCTURA:
---- start-multi-column: cornell-TX-00N
-```column-settings
-number of columns: 2
-column size: [60%, 40%]
-border: off
-```
-
-📝 **Desarrollo**
-[transcripción fiel del subtítulo: texto, fórmulas y gráficas]
-
---- end-column ---
-
-🔑 **Claves**
-[dejar vacío]
-%```desmos-graph
-%```
-
---- end-multi-column
-
-> **Resumen:** [una línea del subtítulo sin redundancia de otros subtítulos]
-
-REGLAS:
-- ID secuencial por tema: cornell-T0-001, cornell-T0-002, cornell-T1-001...
-- Gráficas Desmos dentro de Desarrollo: width máximo 320px.
-- TikZJax dentro de Desarrollo: tamaño normal.
-- El bloque comentado %```desmos-graph / %``` en Claves es OBLIGATORIO
-  siempre que haya un bloque Desmos en Desarrollo — sin él Desmos no renderiza.
-- Si no hay Desmos en Desarrollo, omitir el bloque comentado en Claves.
-- Complemento y ejercicios van siempre FUERA del Cornell, después del Resumen.
-
----
-
 NIVELES DE COMPLEMENTO:
 Va DESPUÉS de la transcripción, separado con: > [!note] Complemento
 
