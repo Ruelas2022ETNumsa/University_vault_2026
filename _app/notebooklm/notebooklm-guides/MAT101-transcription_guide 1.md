@@ -2,30 +2,36 @@
 title: "transcription-guide"
 galaxy_body: beacon
 scope: vault
-audience: [usuario, chatgpt, claude]
+audience: [usuario, notebooklm]
 related_notes:
   - "[[class-notes-guide]]"
   - "[[_note-system]]"
   - "[[desmos_guide]]"
   - "[[tikzjax_guide]]"
-tags: [beacon, chatgpt, claude, transcripcion, infraestructura]
+tags: [beacon, notebooklm, transcripcion, infraestructura]
 date_created: 2026-06-02
-date_updated: 2026-06-05
+date_updated: 2026-06-25
 status: activo
 ---
 
 TAREA:
-Transcribir apuntes manuscritos universitarios de Cálculo I a formato Markdown.
+Transcribir y complementar apuntes manuscritos universitarios de Cálculo I
+a formato Markdown listo para Obsidian.
 
 ---
 
 FLUJO DE TRABAJO:
-1. El usuario proporcionará un PDF manuscrito.
-2. Antes de transcribir, analizar todo el documento.
-3. Identificar títulos y subtítulos principales.
-4. Mostrar únicamente la estructura general detectada.
-5. Esperar a que el usuario indique qué sección transcribir.
-6. Transcribir sección por sección.
+PDF del tema completo cargado como fuente apuntesTX. Dos mensajes por subtítulo:
+
+MENSAJE 1 — Transcripción + complemento:
+  "De apuntesTX, muéstrame subtítulo Y con complemento nivel B/C"
+  → transcripción fiel + complemento según nivel
+  → NO adelantar el subtítulo siguiente
+
+MENSAJE 2 — Ejercicios (solo si el usuario lo pide):
+  "De apuntesTX, subtítulo Y, muéstrame ejercicios resueltos"
+  → ejercicios de los libros fuente, con gráficas si aplica
+  → NO repetir transcripción ni complemento ya entregado
 
 ---
 
@@ -42,236 +48,163 @@ y continúa en la derecha de forma evidente, leerlo como unidad continua.
 ---
 
 DETECCIÓN DE TÍTULOS:
-Los títulos están escritos en rojo.
-El nivel jerárquico se determina por tamaño relativo dentro de la página:
-- Texto rojo grande → ## (sección principal)
-- Texto rojo mediano → ### (subsección)
-Reportar ambos niveles al mostrar la estructura general.
+Títulos en rojo. Tamaño determina jerarquía:
+- Rojo grande → ## | Rojo mediano → ###
 
 ---
 
 ESTILO DE TRANSCRIPCIÓN:
-- Corregir ortografía.
-- Corregir errores evidentes de notación matemática.
-- Mantener el contenido original del manuscrito.
-- No agregar teoría externa.
-- No expandir explicaciones.
-- No agregar preguntas, ejercicios ni ejemplos que no estén en el manuscrito.
-- Mantener estilo de apuntes universitarios.
-- Si se realiza una corrección importante, informarla brevemente al final
-  de esa sección como nota separada.
+- Corregir ortografía y errores evidentes de notación matemática.
+- Manuscrito como esqueleto principal. Estilo apuntes universitarios.
+- Corrección importante → nota breve al final de esa sección.
+
+---
+
+NIVELES DE COMPLEMENTO:
+Va DESPUÉS de la transcripción, separado con: > [!note] Complemento
+
+NIVEL B — Solo definición reforzada (sin ejercicios):
+- Agregar definición formal del libro si la del manuscrito es informal.
+
+NIVEL C — Complemento completo:
+- Definición formal + propiedades omitidas + 1-2 ejercicios resueltos
+  extraídos de los libros fuente + gráfica si aporta claridad.
+
+SIN EJERCICIOS aunque se pida C (aplicar B):
+- Axiomas y propiedades fundamentales (cuerpo, orden, igualdad).
+- Listas de propiedades puras sin aplicación procedimental.
+- Notación y definiciones formales sin desarrollo algorítmico.
+
+NIVEL C COMPLETO cuando:
+- Aplicación directa: dominio, valor absoluto, inecuaciones.
+- Métodos procedimentales: método de signos, completar cuadrados.
+- Funciones con dominio/rango no trivial: trigonométricas inversas, compuestas.
+- El manuscrito ya tiene ejemplos → agregar uno de mayor dificultad.
+
+SIN REDUNDANCIA:
+- Cada subtítulo es independiente. No adelantar el siguiente.
+- No repetir definiciones previas — solo referenciarlas brevemente.
 
 ---
 
 CUANDO ALGO NO SE ENTIENDE:
-Si una palabra, símbolo o expresión no puede leerse con certeza:
-- Detenerse antes de transcribir esa parte.
-- Preguntar al usuario mostrando exactamente qué no se entiende
-  y en qué posición de la página aparece (ej: "mitad derecha, tercer renglón").
-- Esperar respuesta antes de continuar.
+Detenerse, indicar qué no se entiende y su posición (ej: "mitad derecha,
+tercer renglón"). Esperar respuesta antes de continuar.
 
 ---
 
 JERARQUÍA MARKDOWN:
-# → Título principal de la nota (uno solo por archivo).
+# → Título principal (uno por archivo).
 ## → Sección principal (rojo grande).
 ### → Subsección (rojo mediano, solo si tiene desarrollo propio).
-Nunca usar ### para ítems individuales de una lista de axiomas o propiedades.
-Evitar niveles más profundos salvo necesidad real.
+Nunca ### para ítems de listas. Sin niveles más profundos.
 
 ---
 
 TEOREMAS, DEFINICIONES Y PROPIEDADES:
 Nombre en negrita, fórmula en línea siguiente con tab:
-
-1. **Nombre del axioma / teorema / propiedad**
-	- $formula_1$
-	- $formula_2$
-
-Si tiene una sola fórmula:
 1. **Nombre**
-	$formula$
-
-Si tiene explicación textual además de fórmula:
-1. **Nombre**
-	- $formula$
-	- Explicación en español.
-
+	- $formula_1$ / $formula_2$
+	- Explicación si aplica.
 No usar — para separar nombre de fórmula en la misma línea.
 
 ---
 
 FORMATO MATEMÁTICO:
-Preferir fórmulas en línea: $a+b=c$
-
-Usar bloque display ($$...$$) solo cuando:
-- El desarrollo tiene más de una línea.
-- Hay matrices o sistemas de ecuaciones.
-- La fórmula es el resultado principal de una definición o teorema.
-
-Para desarrollos algebraicos multilínea usar:
-$$
-\begin{array}{rcl}
-f(n) & = & (n+1)^3 \\
-     & = & n^3 + 3n^2 + 3n + 1
-\end{array}
-$$
-
-Nunca convertir símbolos matemáticos a texto si el manuscrito los presenta
-simbólicamente.
+Preferir inline $...$. Usar display $...$ solo para:
+- Desarrollo multilínea, matrices, sistemas, resultado principal de teorema.
+Multilínea con \begin{array}{rcl}..\end{array}.
+Nunca convertir símbolos a texto si el manuscrito los presenta simbólicamente.
 
 ---
 
 TABLAS:
-Conservar estructura de tablas Markdown.
-Dentro de tablas, nunca usar | directamente en expresiones matemáticas.
-Usar $\vert x \vert$ para valor absoluto y $\Vert v \Vert$ para norma.
+En tablas: $\vert x \vert$ para valor absoluto, $\Vert v \Vert$ para norma.
+Nunca | dentro de expresiones matemáticas en tablas.
 
 ---
 
-OBSERVACIONES Y NOTAS DEL MANUSCRITO:
-Usar callouts de Obsidian:
-> [!note]
-> Texto de la observación.
-
-> [!important]
-> Texto.
+NOTAS DEL MANUSCRITO:
+> [!note] observaciones aclaratorias
+> [!important] advertencias, "No para examen", tareas
 
 ---
 
-GRÁFICOS:
-Antes de generar cualquier gráfico, determinar la herramienta según este orden:
+GRÁFICOS — elegir herramienta en este orden:
+1. Desmos — funciones, curvas, rectas numéricas, intervalos, trigonométricas.
+   Consultar desmos_guide.md para sintaxis completa.
+2. TikZJax — diagramas de conjuntos, circunferencia trigonométrica,
+   función inversa con espejo y=x, figuras geométricas estructuradas.
+   Consultar tikzjax_guide.md para sintaxis completa.
+3. No reproducible → > [!note] Gráfico manuscrito + descripción textual.
 
-1. Funciones, curvas, rectas numéricas, intervalos, gráficas trigonométricas → Desmos
-   Ver desmos_guide.md para sintaxis completa.
+Nunca inventar gráficos. Nunca usar Desmos para lo que es TikZJax ni viceversa.
 
-2. Diagramas de conjuntos con flechas, circunferencia trigonométrica,
-   función inversa con espejo y=x, figuras geométricas estructuradas → TikZJax
-   Ver tikzjax_guide.md para sintaxis completa.
-
-3. No reproducible (sketch libre, diagrama conceptual sin estructura fija) →
-   > [!note] Gráfico manuscrito
-   > Descripción textual: tipo de gráfico, elementos visibles, etiquetas.
-
-Nunca inventar gráficos que no existan en el manuscrito.
-Nunca forzar en Desmos lo que corresponde a TikZJax ni viceversa.
-
-TIPOS DE GRÁFICOS EN ESTE PDF (Cap. I — Funciones reales):
-- Gráficas de funciones (parábola, exponencial, logarítmica, trigonométricas) → Desmos
-- Diagrama de composición de funciones (óvalos con flechas A→B→C) → TikZJax
-- Circunferencia trigonométrica con puntos etiquetados → TikZJax
-- Función inversa con espejo y=x → TikZJax
-- Rectas numéricas con intervalos → Desmos (ver reglas específicas abajo)
-- Gráficas de seno, coseno, tangente → Desmos
-- Función valor absoluto, escalón, distancia, signo → Desmos por tramos
+TIPOS EN ESTE NOTEBOOK (T0-T1):
+- Funciones, parábolas, exponencial, logarítmica, trigonométricas → Desmos
+- Intervalos en recta numérica → Desmos (ver sección siguiente)
+- Diagramas de conjuntos, composición (óvalos A→B→C), circunferencia
+  trigonométrica, función inversa con espejo y=x → TikZJax
 
 ---
 
-GRAFICA DE RECTA NUMÉRICA E INTERVALOS:
-Cuando el manuscrito muestra una recta numérica con intervalos,
-reproducirla con desmos-graph siguiendo estas reglas.
-
-NOTACIÓN DE INTERVALOS (usada en el manuscrito):
-- [a,b]   → cerrado en ambos extremos (incluye a y b)
-- ]a,b]   → abierto en a, cerrado en b
-- [a,b[   → cerrado en a, abierto en b
-- ]a,b[   → abierto en ambos extremos
-- ]a,+∞[  → desde a sin incluirlo hasta infinito positivo
-- ]-∞,b[  → desde menos infinito hasta b sin incluirlo
-- [a,+∞[  → desde a incluido hasta infinito positivo
-- ]-∞,b]  → desde menos infinito hasta b incluido
-
-ORDEN DE DIBUJO EN DESMOS:
-1. Primero todas las líneas horizontales (los intervalos).
-2. Luego todos los puntos (extremos cerrados sin OPEN, abiertos con OPEN).
-
-PUNTOS:
-- Extremo incluido (corchete cerrado [ o ]) → punto sin OPEN
-- Extremo no incluido (corchete abierto ] o [) → punto con OPEN
-
-INTERVALOS HACIA EL INFINITO:
-Extender la línea hasta el borde de la ventana visible y continuar
-con DOTTED más allá para simular el infinito.
-Los valores de corte (ej: -5, 5) son límites visuales solamente,
-no son extremos matemáticos del intervalo.
-
-MÚLTIPLES INTERVALOS EN LA MISMA RECTA:
-Usar niveles verticales distintos para separarlos visualmente:
-- Primer intervalo → y=0
-- Segundo intervalo → y=1
-- Tercer intervalo → y=2 (si fuera necesario)
-
-OPERACIONES EN LOS VALORES:
-Se pueden usar expresiones aritméticas directamente en el código.
-Ejemplo: p+1 como extremo de un intervalo es válido en Desmos
-y útil para relacionar extremos entre sí.
-
-EJEMPLO — dos intervalos en la misma recta:
-Azul: [-3, 3[
-Rojo: ]-∞, -3[ ∪ [4, +∞[
-
-```desmos-graph
-left=-6.5; right=6.5; bottom=-1; top=3;
-width=350; height=150;
----
-y=0 \{-3<=x<3\}|#2d70b3
-(-3,0)|label:-3|#2d70b3
-(3,0)|OPEN|label:3|#2d70b3
-
-y=1 \{x<-5\}|#ff7b7b|DOTTED
-y=1 \{-5<x<-3\}|#ff7b7b
-(-3,1)|OPEN|label:-3|#ff7b7b
-
-y=1 \{4<=x<5\}|#ff7b7b
-y=1 \{x>5\}|#ff7b7b|DOTTED
-(4,1)|label:4|#ff7b7b
-```
+RECTAS NUMÉRICAS E INTERVALOS:
+Notación del manuscrito: [a,b] cerrado · ]a,b[ abierto · ]a,b] semi · [a,b[ semi.
+Corchete cerrado [ o ] → punto sin OPEN. Corchete abierto ] o [ → punto con OPEN.
+Hacia infinito: línea sólida hasta borde de ventana + DOTTED más allá.
+Múltiples intervalos en misma recta: y=0, y=1, y=2... (niveles distintos).
+Orden: primero líneas, luego puntos.
 
 ---
 
 EJEMPLOS RESUELTOS:
-Cuando el manuscrito presenta un ejercicio con desarrollo algebraico:
-- Encabezar con **Ej.** seguido del enunciado en la misma línea.
-- El desarrollo va en bloque display si es multilínea.
-- Si el ejemplo tiene partes (a), b), c)...) conservar esa numeración.
-- No agregar pasos intermedios que no estén en el manuscrito.
+**Ej.** enunciado en la misma línea. Display si multilínea.
+Conservar numeración de partes. No agregar pasos que no estén en el manuscrito.
 
 ---
 
 NOTAS AL MARGEN:
-El manuscrito tiene anotaciones fuera del cuerpo principal. Tratarlas así:
-- Notas aclaratorias relevantes → > [!note] con el texto de la anotación.
-- Notas como "No para examen", "Tarea", advertencias → > [!important]
-- El separador visual ∼o∼ que aparece entre temas → ignorar, no transcribir.
-- Flechas o marcas de énfasis (★, ✶) sin texto propio → ignorar.
+> [!note] notas aclaratorias · > [!important] advertencias y tareas.
+Separador ∼o∼ entre temas → ignorar. Flechas y marcas sin texto → ignorar.
 
 ---
 
-NOTACIÓN DE FUNCIONES ESPECIALES:
-Usar siempre la notación del manuscrito sin convertirla:
-- Si el manuscrito escribe sen x → transcribir $\text{sen}\, x$ (no $\sin x$)
-- Si escribe tg x → transcribir $\text{tg}\, x$ (no $\tan x$)
-- arc sen, arc cos, arc tg → $\text{arc sen}$, $\text{arc cos}$, $\text{arc tg}$
-- senh, cosh, tgh → $\text{senh}\, x$, $\cosh x$, $\text{tgh}\, x$
-- sech, cosec → $\text{sech}\, x$, $\text{cosec}\, x$
-Nunca sustituir notación hispanohablante por notación anglosajona.
+NOTACIÓN HISPANOHABLANTE (respetar siempre):
+sen x → $\text{sen}\,x$ · tg x → $\text{tg}\,x$ · arc sen/cos/tg → igual.
+senh, tgh, sech, cosec → con \text{}. Nunca sustituir por sin/tan/etc.
 
 ---
 
-SALTOS DE LÍNEA:
-Mantener el texto compacto.
-Evitar líneas vacías innecesarias.
+SALTOS DE LÍNEA: texto compacto, sin líneas vacías innecesarias.
+
+CORRECCIONES: el manuscrito siempre tiene prioridad. Revisar el PDF
+en la sección indicada y corregir.
 
 ---
-CORRECCIONES DEL USUARIO:
-Si el usuario corrige una transcripción:
-1. Revisar nuevamente el PDF en esa sección.
-2. Verificar contra el manuscrito original.
-3. Corregir la transcripción.
-4. El manuscrito siempre tiene prioridad sobre interpretaciones previas.
+
+LIBROS PRIORITARIOS POR TEMA — P1 (Parcial 1):
+Consultar siempre las fuentes cargadas en el notebook según el tema.
+Para ejercicios, Schaum's, Maron y Demidovich son válidos en cualquier tema.
+El Stewart 7ma en español es el puente lingüístico — usarlo para confirmar
+terminología en español.
+
+MAPA DE ARCHIVOS DIVIDIDOS:
+  Apostol Vol.1 2ed   → 1to7 | 8to16
+  Thomas 14th ed      → 1to6 | 7to12 | 13to17
+  Stewart 7ma español → 1to4 | 5to8  | 9to11
+
+| Tema                  | Primera fuente | Segunda fuente | Respaldo español   |
+| --------------------- | -------------- | -------------- | ------------------ |
+| Números reales (T0)   | Apostol (1to7) | Stewart 9na    | Stewart 7ma (1to4) |
+| Funciones reales (T1) | Stewart 9na    | Thomas (1to6)  | Stewart 7ma (1to4) |
+| Límites y continuidad | Stewart 9na    | Apostol (1to7) | Stewart 7ma (1to4) |
+
+Apostol como primera fuente para T0 porque cubre axiomas y orden con
+rigor formal. Para funciones y límites, Stewart 9na es primera opción.
 
 ---
 
 OBJETIVO:
-Transcripción Markdown fiel al manuscrito, matemáticamente correcta
-y lista para usar en Obsidian.
+Transcripción Markdown fiel al manuscrito como esqueleto principal,
+complementada con rigor de nivel ingeniería desde los libros fuente,
+matemáticamente correcta y lista para usar en Obsidian.
