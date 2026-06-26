@@ -299,15 +299,13 @@ y=\tan(x)   |-1.55<=x<=1.55|#5E81AC|DASHED
 y=x|-7<=x<=7|#777777|DASHED
 y=\arctan(x)|-7<=x<=7|#D97706|SOLID
 
-x=-1.5708|-7<=y<=7|#A65C59|DASHED
-x=1.5708 |-7<=y<=7|#A65C59|DASHED
+x=-1.5708|-7<=y<=7|#5E81AC|DASHED
+x=1.5708 |-7<=y<=7|#5E81AC|DASHED
 
 y=-1.5708|-7<=x<=7|#A65C59|DASHED
 y=1.5708 |-7<=x<=7|#A65C59|DASHED
 
 (0,0)       |label:(0,0)|#D97706|cross
-(1,0.7854)  |label:(1,pi/4)|#D97706|cross
-(-1,-0.7854)|label:(-1,-pi/4)|#D97706|cross
 ```
 
 
@@ -319,6 +317,9 @@ y=1.5708 |-7<=x<=7|#A65C59|DASHED
 $f(x)=\sinh(x)$
 
 ```desmos-graph
+width=300; height=200;
+left=-2; right=2; bottom=-2; top=2;
+---
 y=\sinh(x)
 ```
 
@@ -327,7 +328,11 @@ y=\sinh(x)
 $f(x)=\cosh(x)$
 
 ```desmos-graph
-y=\cosh(x)
+width=300; height=200;
+left=-2; right=2; bottom=-0.5; top=4;
+---
+y=\cosh(x)|#D97706
+(0,1)|label:(0,1)|#D97706|cross
 ```
 
 ---
@@ -337,6 +342,9 @@ y=\cosh(x)
 $f(x)=|x|$
 
 ```desmos-graph
+width=300; height=200;
+left=-2; right=2; bottom=-0.5; top=2;
+---
 y=\abs(x)
 ```
 
@@ -345,29 +353,40 @@ y=\abs(x)
 $f(x)=|2x-3|$
 
 ```desmos-graph
+width=300; height=200;
+left=-1; right=4; bottom=-0.5; top=4;
+---
 y=\abs(2x-3)
 ```
 
 ## Función valor absoluto de una ecuación de segundo grado
 
-$f(x)=|x^2-4x+3|$
+$f(x)=|x^{2}-4x+3|$
 
 ```desmos-graph
+width=300; height=200;
+left=-1; right=5; bottom=-0.5; top=3;
+---
 y=\abs(x^{2}-4x+3)
 ```
 
 $y=|x||x-4|$
 
 ```desmos-graph
+width=300; height=200;
+left=-2; right=6; bottom=-0.5; top=5;
+---
 y=\abs(x)\abs(x-4)
 ```
 
 $$y=\left||x^2-4|-4\right|$$
 
 ```desmos-graph
+width=300; height=200;
+left=-5; right=5; bottom=-0.5; top=6;
+---
 y=\abs(\abs(x^{2}-4)-4)
 ```
-
 
 ---
 
@@ -376,12 +395,18 @@ y=\abs(\abs(x^{2}-4)-4)
 $f(x)=\lfloor x\rfloor$
 
 ```desmos-graph
+width=300; height=200;
+left=-4; right=4; bottom=-4; top=4;
+---
 y=\floor(x)
 ```
 
 $f_{x}=x^{2}$
 
 ```desmos-graph
+width=300; height=200;
+left=-3; right=3; bottom=-0.5; top=6;
+---
 y=\floor(x^2)
 ```
 
@@ -398,18 +423,18 @@ $$
 $$
 
 ```desmos-graph
+width=300; height=200;
+left=-2; right=2; bottom=-0.5; top=1;
+---
 y=\min(\operatorname{mod}(x,1),1-\operatorname{mod}(x,1))
-```
-
-$$y=\{x-1\}$$
-
-```desmos-graph
-y=\min(\operatorname{mod}(x-1,1),1-\operatorname{mod}(x-1,1))
 ```
 
 $$y=\{x^2\}$$
 
 ```desmos-graph
+width=300; height=200;
+left=-3; right=3; bottom=-0.5; top=1;
+---
 y=\min(\operatorname{mod}(x^{2},1),1-\operatorname{mod}(x^{2},1))
 ```
 
@@ -426,7 +451,22 @@ u(x)=
 $$
 
 ```desmos-graph
+width=300; height=200;
+left=-2; right=2; bottom=-0.5; top=2;
+---
 y=\left\{x<0:0,\ x\ge0:1\right\}
+```
+
+
+```desmos-graph
+width=300; height=200;
+left=-2; right=2; bottom=-2; top=2;
+---
+y=\operatorname{sgn}(x)|#D97706
+
+(-1,-1)|label:(-1,-1)|#D97706|cross
+(0,0)|label:(0,0)|#D97706|cross
+(1,1)|label:(1,1)|#D97706|cross
 ```
 
 
