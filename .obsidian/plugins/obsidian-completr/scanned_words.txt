@@ -30881,6 +30881,7 @@ definitorios
 deductiva
 demostrada
 denominado
+deductivo
 Vault
 Verificar
 Variables
@@ -125803,6 +125804,7 @@ Emojis
 Estudio
 EXACTO
 EXCEPCIONES
+Elegimos
 Obsidian
 OmniSearch
 Ocultar
