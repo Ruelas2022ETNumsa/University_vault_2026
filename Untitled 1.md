@@ -467,6 +467,77 @@ $$
 y=\operatorname{sgn}\!\left(x^{4}-5x^{2}+4\right)
 $$
 
+Sea
+
+$$
+u=x^4-5x^2+4.
+$$
+
+La función signo está definida por
+
+$$
+\operatorname{sgn}(u)=
+\begin{cases}
+-1,&u<0,\\[4pt]
+0,&u=0,\\[4pt]
+1,&u>0.
+\end{cases}
+$$
+
+Primero se factoriza el polinomio:
+
+$$
+u=x^4-5x^2+4=(x^2-1)(x^2-4)
+=(x-2)(x-1)(x+1)(x+2).
+$$
+
+Las raíces son
+
+$$
+x=-2,\,-1,\,1,\,2.
+$$
+
+Estas raíces dividen la recta real en cinco intervalos. Probando un valor en cada intervalo se obtiene la siguiente tabla de signos.
+
+| Intervalo | Valor de prueba | Signo de $u=x^4-5x^2+4$ | Valor de $\operatorname{sgn}(u)$ |
+|:---------:|:---------------:|:-----------------------:|:--------------------------------:|
+| $(-\infty,-2)$ | $-3$ | $+$ | $1$ |
+| $(-2,-1)$ | $-1.5$ | $-$ | $-1$ |
+| $(-1,1)$ | $0$ | $+$ | $1$ |
+| $(1,2)$ | $1.5$ | $-$ | $-1$ |
+| $(2,\infty)$ | $3$ | $+$ | $1$ |
+
+Ahora se analiza la definición.
+### Caso : $u=0$
+
+$$
+x^4-5x^2+4=0
+$$
+
+tiene soluciones
+
+$$
+x=-2,\,-1,\,1,\,2.
+$$
+
+Como
+
+$$
+\operatorname{sgn}(0)=0,
+$$
+
+se obtienen únicamente los puntos
+
+$$
+(-2,0),\;(-1,0),\;(1,0),\;(2,0).
+$$
+
+> **Observación:** El caso $u=0$ **no genera rectas verticales**. Solo genera puntos aislados sobre el eje $x$. Las aparentes "rectas verticales" que suelen verse en algunos dibujos son únicamente una representación visual del salto de la función y **no forman parte de la gráfica**.
+
+
+
+
+
 ```desmos-graph
 width=300; height=200;
 left=-3; right=3; bottom=-2; top=2;
