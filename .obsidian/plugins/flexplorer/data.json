@@ -1375,6 +1375,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "_notebooklm-system 1.md",
         "_basic-memory-system.md",
         "_claude-boot.md",
         "_excalidraw-system.md",
@@ -1384,7 +1385,6 @@
         "_mindmap-system.md",
         "_note-system.md",
         "_TABnote-system.md",
-        "_notebooklm-prompt.md",
         "_notebooklm-system.md",
         "_pdf-system.md",
         "_sync-system.md",
@@ -1422,10 +1422,6 @@
       "isHidden": false
     },
     "_app/_config/_note-system.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/_config/_notebooklm-prompt.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -2701,6 +2697,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "MAT101-transcription_guide 1.md",
         "desmos_guide.md",
         "ETN806-P3-colas_guide_s.md",
         "MAT101-transcription_guide.md",
@@ -2753,6 +2750,14 @@
       "isHidden": false
     },
     "_app/notebooklm/ETN806-P3-notebooklm_prompt.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/notebooklm-guides/MAT101-transcription_guide 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_config/_notebooklm-system 1.md": {
       "isPinned": false,
       "isHidden": false
     }
