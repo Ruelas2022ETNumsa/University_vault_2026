@@ -128,7 +128,7 @@ status: activo
 - [x] Crear `latex_guide.md` en `_app/_appnotes/` — referencia de comandos frecuentes para ETN806, snippets de Completr y atajos de Quick LaTeX documentados
 
 ### NotebookLM — prompts por materia
-- [x] **ETN806** (Procesos Estocásticos) — prompts para los 3 parciales ✅. Enfoque: resolución de ejercicios con Desmos, TikZJax y Mermaid. Contexto: guías de Desmos y TikZJax + archivos `.md` con ejercicios y fórmulas. Prompts muy funcionales — se usaron en los 3 parciales y ayudaron a generar gráficas con Desmos y diagramas TikZJax (incl. cadenas de Markov). **Pendiente de sesión futura aparte:** revisión minuciosa de los prompts reales (no solo el beacon) — ver [[_notebooklm-system]] y [[_notebooklm-prompt]].
+- [x] **ETN806** (Procesos Estocásticos) — prompts para los 3 parciales ✅. Enfoque: resolución de ejercicios con Desmos, TikZJax y Mermaid. Contexto: guías de Desmos y TikZJax + archivos `.md` con ejercicios y fórmulas. Prompts muy funcionales — se usaron en los 3 parciales y ayudaron a generar gráficas con Desmos y diagramas TikZJax (incl. cadenas de Markov). **Pendiente de sesión futura aparte:** revisión minuciosa de los prompts reales — ver [[_notebooklm-system]] y `_app/notebooklm/`.
 - [x] **MAT101** (Cálculo 1) — prompt para transcripción ✅. Enfoque: solo transcripción, no resolución de ejercicios.
 - [ ] **ETN901** — sin prompt todavía.
 - [ ] Prompts para materias futuras — sesión futura: Claude ayuda a crear un **generador de prompts** para sistematizar esto.
@@ -141,7 +141,7 @@ status: activo
 - [x] **`_graph-system.md`** — verificado: ya describía TikZJax como instalado y funcionando (consistente con el cierre de Fase de plugins del 2026-06-24). Sin cambios de contenido, solo `date_updated`.
 - [x] **`_mindmap-system.md`** — corregido: faltaba `[[_pdf-system]]` en el bloque `%%` final aunque estaba en el YAML `related_notes` y mencionado en el cuerpo — rompía la regla de dos capas sincronizadas del Sistema Galaxy. Agregado.
 - [x] **`_basic-memory-system.md`** — versión instalada verificada con el usuario (`pip show basic-memory` / `basic-memory --version`): **0.21.6**, coincide con lo documentado. Sin cambios de contenido.
-- [ ] **`_notebooklm-system.md`** / **`_notebooklm-prompt.md`** — pospuesto a sesión futura aparte: los prompts de ETN806 son material vivo y muy funcional (usado en los 3 parciales, generación de gráficas Desmos y diagramas TikZJax incl. cadenas de Markov) — requiere que Claude vea los prompts reales, no solo el beacon. Ver detalle en sección "NotebookLM — prompts por materia" arriba.
+- [x] **`_notebooklm-system.md`** — reestructurado en sesión 2026-06-25: dos usos separados (transcripción / estudio), inventario completo de `_app/notebooklm/`, flujo TABnote actualizado, eliminada referencia a `_notebooklm-prompt.md`. **`_notebooklm-prompt.md` eliminado** — contenido migrado a `MAT101-notebooklm_prompt.md`. Pendiente de sesión futura: revisión minuciosa de prompts reales de ETN806 — ver `_app/notebooklm/`.
 - [ ] **`_excalidraw-system.md`** — sigue retrasado, sin tocar esta sesión (ver sección Excalidraw arriba).
 
 ### Fase 4 — DataView

@@ -79,6 +79,8 @@ University_Vault_2026/
 ├── MOC/                        ← índices por materia (vacío de MOCs reales; tiene 2 imágenes sueltas a limpiar)
 │
 ├── _app/
+│   ├── notebooklm/ ← prompts y guías fuente del sistema NotebookLM
+│   │
 │   ├── _config/                ← beacons del sistema (aquí vive este archivo)
 │   │   ├── _claude-boot.md       ← ESTE ARCHIVO
 │   │   ├── _galaxy-system.md     ← sistema completo: tipos, YAML, convenciones
@@ -91,11 +93,10 @@ University_Vault_2026/
 │   │   ├── _graph-system.md      ← Desmos / TikZJax (`neutrino`)
 │   │   ├── _sync-system.md       ← sincronización GitHub + Mega
 │   │   ├── _basic-memory-system.md ← MCP Basic Memory (memoria semántica)
-│   │   ├── _notebooklm-system.md ← integración con NotebookLM
-│   │   ├── _notebooklm-prompt.md ← prompt de configuración NotebookLM (uno por materia)
+│   │   ├── _notebooklm-system.md ← beacon del sistema NotebookLM (transcripción + estudio)
 │   │   ├── _TABnote-system.md    ← apuntes de tablet — status: activo (cerrado 2026-06-24)
 │   │   └── _ToDo-system.md       ← pendientes del sistema
-│   ├── _appnotes/               ← guías de herramientas (Desmos, LaTeX, tags)
+│   ├── _appnotes/               ← guías de herramientas (LaTeX, tags, etc)
 │   ├── Excalidraw/
 │   │   ├── Constellations/      ← mapas mentales galaxy
 │   │   └── Observatory/         ← dibujos técnicos libres
@@ -257,7 +258,7 @@ Leer el beacon específico según el tema:
 | Pendientes del sistema                                   | `_app/_config/_ToDo-system.md`                                     |
 | Protocolo de búsqueda y selección de libros              | `_app/_config/_library-system.md`                                  |
 | Contexto de trabajo por materia (ejercicios, formulario) | `_app/_config/_claude-matter-boot.md`                              |
-
+| Prompts y guías NotebookLM por materia                   | `_app/notebooklm/`                                                 |
 ### Si el usuario está en móvil sin PC encendida
 
 - Usar GitHub MCP para leer y escribir notas.

@@ -30859,6 +30859,8 @@ descartada
 dejamos
 derevisi
 dimensional
+dedicada
+dicen
 Vault
 Verificar
 Variables
@@ -43287,6 +43289,7 @@ guion
 github
 graficaci
 gida
+generaba
 body
 beacon
 bat
@@ -67769,6 +67772,7 @@ agregado
 aprobarse
 acentos
 absolutas
+activarlos
 related
 recomendados
 ribbon
@@ -74210,6 +74214,7 @@ reflejaba
 resoluciones
 recogida
 restringidos
+reestructurado
 notes
 notas
 nuevas
@@ -87109,6 +87114,9 @@ compartido
 completarla
 citando
 consultarla
+comportarse
+consulte
+convertido
 updated
 un
 universo
@@ -94131,6 +94139,7 @@ udv
 ubicado
 unas
 usaron
+usos
 Galaxy
 Git
 Gr
@@ -105571,6 +105580,7 @@ Contador
 Ciclo
 Catorce
 Confundir
+Convierte
 Instalados
 Instalado
 Instalar
@@ -112612,6 +112622,7 @@ Innecesario
 INFORMACI
 Indicar
 IDENTIFICAR
+Instructions
 Funci
 File
 Fase
@@ -125718,6 +125729,7 @@ Entrevista
 ENTREVISTA
 Explicar
 Emojis
+Estudio
 Obsidian
 OmniSearch
 Ocultar
@@ -143037,6 +143049,7 @@ parts
 picamente
 prefiera
 precisos
+personal
 min
 mica
 movimiento
@@ -150346,6 +150359,8 @@ mencionado
 mindmap
 melo
 movido
+mezclarlos
+migrado
 YAML
 Ya
 You
@@ -195349,6 +195364,8 @@ insuficiente
 ingles
 informal
 implicaciones
+integrarse
+inventario
 Dependencia
 Dropbox
 Dataview
@@ -252410,6 +252427,8 @@ organizados
 orbiting
 obligar
 ofrec
+outputs
+optimizar
 junto
 json
 jer

@@ -56,6 +56,20 @@ University_Vault_2026/
 │                                  una MOC por materia, enlaza todas sus Stars
 │
 ├── _app/                       ← infraestructura del baúl (no es contenido académico)
+│   ├── notebooklm/             ← prompts y guías del sistema NotebookLM
+│   │   ├── ETN806-P1-notebooklm_prompt.md   ← prompt P1 Procesos Estocásticos
+│   │   ├── ETN806-P1-notebooklm(legacy).md  ← histórico primer prompt P1
+│   │   ├── ETN806-P2-notebooklm_prompt.md   ← prompt P2 Procesos Estocásticos
+│   │   ├── ETN806-P3-notebooklm_prompt.md   ← prompt P3 Procesos Estocásticos
+│   │   ├── MAT101-notebooklm_prompt.md      ← prompt Cálculo 1
+│   │   ├── MAT101-notebooklm-user_guide.md  ← guía de uso personal Cálculo 1
+│   │   └── notebooklm-guides/               ← fuentes que se suben al notebook
+│   │       ├── desmos_guide.md              ← sintaxis Desmos (sección NotebookLM)
+│   │       ├── tikzjax_guide.md             ← sintaxis TikZJax (sección NotebookLM)
+│   │       ├── ETN806-P3-colas_guide_s.md   ← estructuras de colas con Mermaid
+│   │       ├── ETN806-P3-Tikz_markov_guide.md ← diagramas Markov con TikZ
+│   │       └── MAT101-transcription_guide.md  ← guía de transcripción apuntes
+│   │
 │   ├── _config/
 │   │   ├── _basic-memory-system.md    ← MCP Basic Memory (memoria semántica)
 │   │   ├── _claude-boot.md            ← punto de entrada de Claude al vault
@@ -65,8 +79,7 @@ University_Vault_2026/
 │   │   ├── _library-system.md         ← protocolo de búsqueda y selección de libros
 │   │   ├── _mindmap-system.md         ← Excalidraw + Mindmap Builder
 │   │   ├── _note-system.md            ← convención de nombres de notas
-│   │   ├── _notebooklm-prompt.md      ← prompt de configuración NotebookLM (uno por materia)
-│   │   ├── _notebooklm-system.md      ← integración con NotebookLM
+│   │   ├── _notebooklm-system.md      ← beacon del sistema NotebookLM (transcripción + estudio)
 │   │   ├── _pdf-system.md             ← sistema de integración de PDFs
 │   │   ├── _sync-system.md            ← sincronización GitHub + Mega
 │   │   ├── _TABnote-system.md         ← apuntes de tablet (Samsung Notes → supernova)
@@ -75,7 +88,6 @@ University_Vault_2026/
 │   │   └── _ToDo-system.md            ← pendientes del sistema
 │   │
 │   ├── _appnotes/              ← guías de herramientas usadas dentro del baúl
-│   │   ├── desmos_guide.md     ← guía unificada Desmos (Usuario + NotebookLM + Claude)
 │   │   ├── tags_notes.md       ← documentación del sistema de tags
 │   │   └── ...
 │   │

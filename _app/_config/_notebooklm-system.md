@@ -7,10 +7,11 @@ audience:
   - claude
 related_notes:
   - "[[_galaxy-system]]"
-  - "[[MAT101-notebooklm-user_guide]]"
-  - "[[_notebooklm-prompt]]"
+  - "[[_TABnote-system]]"
+  - "[[_library-system]]"
   - "[[desmos_guide]]"
   - "[[tikzjax_guide]]"
+  - "[[_ToDo-system]]"
 tags:
   - beacon
   - notebooklm
@@ -22,97 +23,183 @@ status: activo
 
 # Sistema NotebookLM — University Vault
 
-> Guía de modos y triggers: [[MAT101-notebooklm-user_guide]]
-> Prompt de configuración: [[_notebooklm-prompt]]
+> Sistema TABnote (transcripción de apuntes): [[_TABnote-system]]
+> Protocolo de libros y fuentes: [[_library-system]]
+> Guías de graficación (fuentes del notebook): [[desmos_guide]] · [[tikzjax_guide]]
+> Pendientes: [[_ToDo-system]]
 
-NotebookLM es el tutor externo del vault. Recibe las notas `.md` del alumno
-como fuente de contexto y las enriquece cruzándolas con los libros de la materia.
-No reemplaza las notas — las mejora.
-
----
-
-## Flujo de trabajo
-
-```
-1. Digitalizás tus apuntes en Obsidian
-   → nota .md con LaTeX, Desmos y formato Cornell
-
-2. Subís el .md a NotebookLM como fuente
-   → NotebookLM lo interpreta según el prompt de configuración
-
-3. Iterás con NotebookLM
-   → Modo 4 para corregir errores matemáticos
-   → Modo 1 para profundizar conceptos
-   → Modo 3 para dictado de contenido nuevo listo para pegar
-
-4. Actualizás la nota en Obsidian con el contenido mejorado
-
-5. Cuando la nota esté completa, exportás a PDF con Better Export
-   → el PDF es para leer, imprimir y estudiar fuera del vault
-   → NO subir el PDF a NotebookLM — el .md es siempre mejor fuente
-
-6. Si la nota cambia significativamente, resubís el .md a NotebookLM
-   → NotebookLM no sincroniza automáticamente — hay que reemplazar
-      la fuente manualmente
-```
+NotebookLM es el tutor externo del vault. Tiene dos usos distintos y bien separados:
+**transcripción de apuntes manuscritos** y **estudio activo por materia**.
+No reemplaza las notas galaxy — las produce (transcripción) o las enriquece (estudio).
 
 ---
 
-## Por qué .md y no PDF como fuente
+## Los dos usos de NotebookLM
 
-| Aspecto | .md | PDF (Better Export) |
-|---------|-----|---------------------|
-| LaTeX | Texto legible — NotebookLM lo interpreta sin ambigüedad | Renderizado como imagen en algunos casos — puede perder contenido |
-| Desmos | Código fuente visible — útil como referencia de sintaxis y contexto del tema | Imagen estática — NotebookLM lo ve como figura sin contenido matemático |
-| Cornell (MCM) | Interpretado correctamente con el prompt de configuración | Flujo continuo — NotebookLM no distingue columnas |
-| YAML | Ignorado naturalmente — no interfiere con el análisis | No presente |
+### Uso 1 — Transcripción de apuntes de tablet
+
+Convierte apuntes manuscritos (`.sdocx` de Samsung Notes) en texto `.md` con LaTeX
+listo para integrarse al vault como notas `supernova`.
+
+**Flujo:**
+
+```
+1. Apunte escrito en Samsung Notes (.sdocx)
+   Editado/limpiado desde PC o tablet vía Samsung Cloud
+        ↓
+2. Export puntual a PDF para subir a NotebookLM
+   (el .sdocx nativo no se sube directamente)
+        ↓
+3. NotebookLM transcribe → entrega .md con LaTeX
+        ↓
+4. El .md se guarda en el vault como nota supernova
+   Ruta: Semesters/Sem_NN/ETNXXX/Partial_N/
+   Ver ciclo de vida completo: [[_TABnote-system]]
+        ↓
+5. La supernova se disecciona en notas galaxy
+   (planet, moon, comet, etc.) según su contenido
+```
+
+**Guías de transcripción disponibles:**
+
+| Archivo | Materia | Estado |
+|---|---|---|
+| `notebooklm-guides/MAT101-transcription_guide.md` | Cálculo 1 | activo |
+| `ETNXXX-transcription_guide_tab.md` (general para tablet) | todas | **en pausa** — pendiente definir formato de apuntes manuscritos |
+
+> La guía general de transcripción para apuntes de tablet está en pausa hasta
+> resolver cómo estructurar los apuntes manuscritos para que NotebookLM los
+> procese correctamente. Es tema de sesión dedicada. Ver [[_ToDo-system]].
 
 ---
 
-## YAML en archivos .md
+### Uso 2 — Estudio activo por materia
 
-NotebookLM lee el bloque YAML como texto plano y no lo confunde con
-contenido matemático. No requiere instrucción especial en el prompt.
-Si en alguna consulta el YAML genera ruido, agregar al prompt:
+NotebookLM actúa como tutor: resuelve ejercicios, explica conceptos, genera
+bloques de código Desmos/TikZJax, y responde según el programa y las fuentes
+de cada materia.
+
+**Flujo:**
 
 ```
-El bloque entre los primeros "---" es YAML de metadatos —
-ignoralo para el análisis matemático.
+1. Se configuran las fuentes del notebook:
+   - Libros de la materia (PDFs) — ver [[_library-system]]
+   - Fuentes de ejercicios y formulario propio (.md del vault)
+   - Guías de graficación (desmos_guide.md, tikzjax_guide.md, etc.)
+        ↓
+2. Se carga el prompt de configuración de la materia/parcial
+   Vive en: _app/notebooklm/ETNXXX-PN-notebooklm_prompt.md
+        ↓
+3. Se estudia: ejercicios, explicaciones, graficación
+   NotebookLM entrega bloques de código Desmos/TikZJax
+   que se pegan directamente en notas galaxy del vault
+        ↓
+4. Si la nota en el vault cambia significativamente,
+   se resubí el .md a NotebookLM (no sincroniza automático)
 ```
+
+**Por qué .md como fuente y no PDF:**
+
+| Aspecto | .md | PDF |
+|---|---|---|
+| LaTeX | Texto legible — NotebookLM lo interpreta sin ambigüedad | Puede renderizarse como imagen — pierde contenido |
+| Desmos | Código fuente visible — útil como referencia de sintaxis | Imagen estática — NotebookLM lo ve como figura sin contenido |
+| YAML | Ignorado naturalmente | No presente |
+
+> Si en alguna consulta el YAML genera ruido, agregar al prompt:
+> `"El bloque entre los primeros --- es YAML de metadatos — ignoralo."`
 
 ---
 
-## Prompt de configuración
+## Carpeta `_app/notebooklm/` — inventario y convención
 
-El prompt vive en [[_notebooklm-prompt]]. Define:
+Todos los archivos del sistema NotebookLM viven en `_app/notebooklm/`.
+Hay tres tipos de archivos con roles distintos:
 
-- 5 modos de respuesta (explicación, ejercicio, ejercicio rápido, dictado, revisión)
-- Reglas de sintaxis Desmos y TikZJax
-- Interpretación de notas Cornell (Multi-Column Markdown)
-- Programa de la materia y mapeo tema → libro prioritario
-- Restricción de fuentes: ejercicios solo de los libros del notebook
+### Prompts (`ETNXXX-PN-notebooklm_prompt.md`)
 
-Un prompt por materia. Cada materia nueva requiere su propio archivo
-`_notebooklm-prompt-ETNXXX.md` siguiendo el mismo modelo.
-Ver tarea pendiente en [[_ToDo-system]].
+Le dicen a NotebookLM cómo comportarse: modos de respuesta, reglas de
+graficación, programa de la materia, prioridad de fuentes.
+**Un prompt por materia/parcial. Se carga en el campo "Instructions" del notebook.**
+
+Convención de nombres:
+```
+ETNXXX-PN-notebooklm_prompt.md    → prompt por parcial
+ETNXXX-notebooklm_prompt.md       → si aplica a todos los parciales
+```
+
+**Inventario actual:**
+
+| Archivo | Materia | Parcial | Estado |
+|---|---|---|---|
+| `ETN806-P1-notebooklm_prompt.md` | Procesos Estocásticos | P1 — Discretas | activo |
+| `ETN806-P1-notebooklm(legacy).md` | Procesos Estocásticos | P1 | histórico |
+| `ETN806-P2-notebooklm_prompt.md` | Procesos Estocásticos | P2 — Continuas | activo |
+| `ETN806-P3-notebooklm_prompt.md` | Procesos Estocásticos | P3 — Markov/Colas | activo |
+| `MAT101-notebooklm_prompt.md` | Cálculo 1 | todos | activo |
+
+> MAT101 tiene un solo prompt para todos los parciales. En el futuro se separará
+> por parciales siguiendo la misma convención `MAT101-PN-notebooklm_prompt.md`.
+
+### Guías fuente (`notebooklm-guides/`)
+
+Archivos `.md` que se suben como **fuentes al notebook** para que NotebookLM
+los consulte al responder. No son instrucciones de comportamiento — son
+conocimiento técnico de referencia.
+
+**Inventario actual:**
+
+| Archivo | Contenido | Aplica a |
+|---|---|---|
+| `desmos_guide.md` | Sintaxis Desmos para Obsidian — sección NotebookLM | todas las materias |
+| `tikzjax_guide.md` | Sintaxis TikZJax para Obsidian — sección NotebookLM | todas las materias |
+| `ETN806-P3-colas_guide_s.md` | Estructuras de teoría de colas con Mermaid | ETN806 P3 |
+| `ETN806-P3-Tikz_markov_guide.md` | Diagramas de Markov con TikZ | ETN806 P3 |
+| `MAT101-transcription_guide.md` | Guía de transcripción de apuntes | MAT101 |
+
+### Guías de uso personal (`ETNXXX-notebooklm-user_guide.md`)
+
+Documentación para el usuario: qué modos existen, cómo activarlos,
+ejemplos de uso. No se suben a NotebookLM — son referencia personal.
+
+| Archivo | Materia | Estado |
+|---|---|---|
+| `MAT101-notebooklm-user_guide.md` | Cálculo 1 | activo — base para otras materias |
+
+---
+
+## Cómo crear un prompt para una materia nueva
+
+1. Copiar como base el prompt de una materia similar ya existente
+2. Renombrar con la convención `ETNXXX-PN-notebooklm_prompt.md`
+3. Adaptar: rol/materia, fuentes prioritarias por tema, modos si cambian
+4. Subir las guías fuente necesarias al notebook (`desmos_guide.md` siempre,
+   más las específicas de la materia si existen)
+5. Actualizar el inventario de esta sección
+
+> Plantilla base para prompts nuevos: pendiente — tema de sesión dedicada.
+> Ver [[_ToDo-system]].
 
 ---
 
 ## Registro de decisiones
 
 | Decisión | Razón |
-|----------|-------|
+|---|---|
+| Dos usos separados (transcripción / estudio) | Son flujos con fuentes, prompts y outputs distintos — mezclarlos en un solo modelo generaba confusión |
+| Prompts en `_app/notebooklm/`, no en `_config/` | Los prompts son operativos por materia/parcial, no infraestructura del vault — pertenecen a su propia carpeta |
+| `_notebooklm-prompt.md` eliminado de `_config/` | Su contenido (prompt de MAT101) migró a `MAT101-notebooklm_prompt.md`. El beacon de infraestructura es este archivo (`_notebooklm-system.md`) |
+| Un prompt por materia/parcial | Cada parcial tiene programa, fórmulas y nivel de rigor distintos — un prompt único por materia produce respuestas menos precisas a medida que avanza el semestre |
 | .md como fuente principal, no PDF | El .md preserva LaTeX como texto y código Desmos como referencia — el PDF los convierte a imagen y pierde contenido matemático |
-| PDF solo para lectura y estudio | Better Export genera un PDF de calidad para imprimir y estudiar, pero no aporta como fuente en NotebookLM |
-| No agregar interpretación de YAML al prompt | NotebookLM ignora el YAML naturalmente — agregar instrucción solo si se confirma ruido en la práctica |
-| Un prompt por materia | Cada materia tiene programa, libros y nivel de rigor distintos — un prompt genérico produce respuestas menos precisas |
+| Guía de transcripción general en pausa | Requiere definir primero cómo estructurar los apuntes manuscritos para optimizar la transcripción — es decisión de diseño previa a la guía técnica |
 | Resubida manual al actualizar la nota | NotebookLM no sincroniza con el vault — resubir el .md cuando la nota cambie significativamente |
+| `desmos_guide.md` siempre como fuente | Todas las materias pueden necesitar graficación — la guía garantiza sintaxis correcta en cualquier notebook |
 
 %%
 galaxy-links
 [[_galaxy-system]]
-[[MAT101-notebooklm-user_guide]]
-[[_notebooklm-prompt]]
+[[_TABnote-system]]
+[[_library-system]]
 [[desmos_guide]]
 [[tikzjax_guide]]
 [[_ToDo-system]]
