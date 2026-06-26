@@ -593,6 +593,7 @@ y=1|0<=x<=2|#D97706
 
 ejemplos
 
+sea la funcion, expresar en terminos de u(x-a)
 $$
 y=
 \begin{cases}
@@ -616,6 +617,13 @@ y=6|3<=x<=5|#D97706
 (3,6)|label:(3,6)|#D97706
 ```
 
+
+
+
+
+---
+
+
 Dada la función
 
 $$
@@ -627,161 +635,51 @@ y=
 \end{cases}
 $$
 
-se desea expresarla utilizando la función escalón unitario
+Se descompone en dos funciones.
+
+La primera corresponde al tramo lineal que comienza en $x=0$:
 
 $$
-u(x-a)=
+y=
 \begin{cases}
-0, & x<a,\\[4pt]
-1, & x\ge a.
+2x, & x\ge0,\\[4pt]
+0, & x<0.
 \end{cases}
 $$
 
-### Paso 1. Identificar los puntos de cambio
-
-La función cambia de expresión en
-
-$$
-x=0
-\qquad\text{y}\qquad
-x=3.
-$$
-
-Por tanto, se utilizarán los escalones
-
-$$
-u(x)
-\qquad\text{y}\qquad
-u(x-3).
-$$
-
-### Paso 2. Analizar el primer intervalo
-
-Para
-
-$$
-x<0,
-$$
-
-la función vale
-
-$$
-y=0.
-$$
-
-Como antes de activar el primer escalón la función ya vale cero, no es necesario escribir ningún término adicional.
-
-### Paso 3. Activar la recta
-
-A partir de
-
-$$
-x=0,
-$$
-
-la función toma la forma
-
-$$
-y=2x.
-$$
-
-Para que esta expresión aparezca únicamente desde $x=0$, se multiplica por
-
-$$
-u(x).
-$$
-
-Así se obtiene
+Esta función se representa mediante
 
 $$
 2x\,u(x).
 $$
 
-Verificación:
-
-- Si $x<0$
+La segunda corresponde a la corrección que transforma la recta $2x$ en la constante $6$ a partir de $x=3$:
 
 $$
-u(x)=0,
+y=
+\begin{cases}
+6-2x, & x\ge3,\\[4pt]
+0, & x<3.
+\end{cases}
 $$
 
-entonces
-
-$$
-2x\,u(x)=0.
-$$
-
-- Si $x\ge0$
-
-$$
-u(x)=1,
-$$
-
-entonces
-
-$$
-2x\,u(x)=2x.
-$$
-
-Hasta este punto la función queda
-
-$$
-y=2x\,u(x).
-$$
-
-### Paso 4. Cambiar la recta por la constante
-
-En
-
-$$
-x=3
-$$
-
-la función deja de ser
-
-$$
-2x
-$$
-
-y pasa a ser
-
-$$
-6.
-$$
-
-La diferencia entre la nueva expresión y la anterior es
-
-$$
-6-2x.
-$$
-
-Esa diferencia debe agregarse únicamente cuando
-
-$$
-x\ge3,
-$$
-
-por lo que se multiplica por
-
-$$
-u(x-3).
-$$
-
-Se obtiene
+Esta función se representa mediante
 
 $$
 (6-2x)\,u(x-3).
 $$
 
-### Paso 5. Expresión final
-
-Sumando ambos aportes,
+Finalmente, sumando ambas contribuciones se obtiene
 
 $$
 \boxed{
 y=2x\,u(x)+(6-2x)\,u(x-3)
 }
 $$
+
+
+
+
 
 
 
@@ -821,3 +719,39 @@ esto
 ```desmos-graph
 
 y=2\cos(x)-\frac{x^2}{10}
+
+```
+
+
+
+
+
+
+
+
+# aca le pregunte a notebooklm que prompt usar para que no se le olvide el desmos-graph, pero en su snippet no lo agrego
+
+Tienes toda la razón. Para que el plugin `obsidian-desmos` renderice la gráfica, es imperativo usar el identificador de bloque exacto.
+
+Para asegurarte de que siempre siga estas reglas, puedes usar un **prompt** como este:
+
+> **"Genera la gráfica siguiendo el formato estricto de la `[[desmos_guide]]`, usando el bloque `desmos-graph`, colores en hex y el separador obligatorio."**
+
+Aquí tienes el snippet corregido y ajustado a los estándares de tus guías (usando `width=320` como se sugiere para tus apuntes):
+
+```
+left=-5; right=5;
+bottom=-1; top=10;
+width=320; height=400;
+---
+y=x^2|#c74440
+```
+
+### Por qué es importante (según tus fuentes):
+
+1. **Identificador:** El bloque debe empezar con ` ```desmos-graph ` para que el plugin lo reconozca.
+2. **Separador `---`:** Es obligatorio para dividir la configuración de las ecuaciones.
+3. **Colores Hex:** Debo usar siempre códigos hexadecimales (como `#c74440`) en lugar de nombres como "RED", ya que los nombres producen colores demasiado saturados.
+4. **Configuración:** Cada parámetro (como `width`) debe terminar en punto y coma `;`.
+
+Si incluyes esta gráfica dentro de un **Bloque Cornell**, recuerda que en la columna de **Claves** es obligatorio colocar el bloque comentado `%```desmos-graph` para que se procese correctamente.
