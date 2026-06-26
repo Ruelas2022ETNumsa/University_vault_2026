@@ -10,12 +10,10 @@ y = x^4 - 4x^2 + 3
 
 ## Función impar
 
-$f(x)=\sin(x)$
-
-**Desmos**
+$f(x)=2x^{5}+6x^{3}-8x$
 
 ```desmos-graph
-y=\sin(x)
+f(x)=2x^{5}+6x^{3}-8x
 ```
 
 ---
@@ -53,6 +51,8 @@ $f(x)=\tan(x)$
 ```desmos-graph
 y=\tan(x)
 ```
+
+$f(x)=\dfrac{1}{\tan(x)}$
 
 ```desmos-graph
 y=\frac{1}{x}
@@ -238,10 +238,88 @@ $f(x)=|x^2-4x+3|$
 y=\abs(x^{2}-4x+3)
 ```
 
+---
 
+## Función parte entera
 
+$f(x)=\lfloor x\rfloor$
 
+```desmos-graph
+y=\floor(x)
+```
 
+$f_{x}=x^{2}$
 
+```desmos-graph
+y=\floor(x^2)
+```
 
 ---
+
+## Función distancia
+
+$$
+\{x\}=
+\begin{cases}
+0, & \text{si } x\in\mathbb{Z},\\[4pt]
+|x-a|, & \text{si } x\notin\mathbb{Z},\ a\in\mathbb{Z}\text{ es el entero más cercano.}
+\end{cases}
+$$
+
+```desmos-graph
+y=\min(\operatorname{mod}(x,1),1-\operatorname{mod}(x,1))
+```
+
+otra forma
+
+```desmos-graph
+y=\min(\operatorname{mod}(x,1),1-\operatorname{mod}(x,1))
+```
+
+---
+
+## Función escalón unitario
+
+$$
+u(x)=
+\begin{cases}
+0, & x<0,\\[4pt]
+1, & x\ge 0.
+\end{cases}
+$$
+
+```desmos-graph
+y=\left\{x<0:0,\ x\ge0:1\right\}
+```
+
+## Valor absoluto
+
+$$y=|x||x-4|$$
+
+```desmos-graph
+y=\abs(x)\abs(x-4)
+```
+
+$$y=\left||x^2-4|-4\right|$$
+
+```desmos-graph
+y=\abs(\abs(x^{2}-4)-4)
+```
+
+---
+
+## Función distancia
+
+$$y=\{x-1\}$$
+
+```desmos-graph
+y=\min(\operatorname{mod}(x-1,1),1-\operatorname{mod}(x-1,1))
+```
+
+## Función distancia
+
+$$y=\{x^2\}$$
+
+```desmos-graph
+y=\min(\operatorname{mod}(x^{2},1),1-\operatorname{mod}(x^{2},1))
+```
