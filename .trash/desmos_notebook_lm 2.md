@@ -61,7 +61,7 @@ y=x^2|#2d70b3
 
 ---
 
-### N2. ESTRUCTURA OBLIGATORIA
+## N2. ESTRUCTURA OBLIGATORIA
 
 ```
 [parámetros de ventana: left right bottom top]
@@ -129,7 +129,7 @@ Para rectas numéricas usar ratio horizontal (3:1). Para funciones estándar rat
 | y = xⁿ (entero)                 | `y=x^2`, `y=x^3`                                            |
 | y = x^(p/q)                     | `y=x^{3/2}`, `y=x^{2/3}`                                    |
 | y = x^(-p/q)                    | `y=x^{-1/2}`, `y=x^{-2/3}`                                  |
-| y = 1/x                         | `y=1/x, Y=\frac{1}{x}`                                                     |
+| y = 1/x                         | `y=1/x`                                                     |
 | x² + y² = r²                    | `x^2+y^2=r^2`                                               |
 | y = 2^x                         | `y=2^x`                                                     |
 | y = eˣ                          | `y=e^x`                                                     |
@@ -148,18 +148,6 @@ Para rectas numéricas usar ratio horizontal (3:1). Para funciones estándar rat
 | y = ⌊x⌋                         | `y=\floor(x)`                                               |
 | y = sgn(x)                      | `y=\operatorname{sgn}(x)`                                   |
 | distancia al entero más cercano | `y=\min(\operatorname{mod}(x,1),1-\operatorname{mod}(x,1))` |
-
-#### Notación funcional y derivadas
-
-| Matemática | Código Desmos |
-| --- | --- |
-| f(x) = expresión | `f(x)=x^2` |
-| y = f'(x) | `y=f'(x)` |
-| f(x) con dominio | `f(x)=x^2\|0<=x<=3` |
-| f(x) oculta, solo f'(x) visible | `f(x)=x^2\|hidden` luego `y=f'(x)` |
-
-
-
 
 ---
 
@@ -267,32 +255,12 @@ x>y^2|y>x^1/2|x>0|y>0|#b2f2bb
 (1,3)|cross|label:(1,3)|#000000
 ```
 
+#### ⚠️ Fracciones en etiquetas — solo slash
+
 `\frac{}{}` no renderiza en `label:` — aparece el texto literal. Usar siempre slash:
 
 ✅ `(3,0)|open|label:(d-b)/(a-c)|#c74440`
 ❌ `(3,0)|open|label:\frac{d-b}{a-c}|#c74440`
-
->no usar notacion latex en label aparece el texto literal, usar su equivalente ascii por ejemplo x² + y² = r² esto si se imprime bien
-
-
-#### Etiquetas en funciones
-
-`label:` solo funciona en puntos, no en líneas. Dos usos:
-
-- Punto visible con etiqueta: 
-
-```desmos-graph
-(0, 2)|label:f(x)
-(1, 1)|label:f(x)|cross
-(2, 0)|label:f(x)|open
-```
-- Solo etiqueta, punto oculto (útil para nombrar funciones):
-
-```desmos-graph
-(0, 2)|label:f(x)|hidden
-(1, 1)|label:f(x)|cross|hidden
-(2, 0)|label:f(x)|open|hidden
-```
 
 ---
 
@@ -364,11 +332,11 @@ y=sqrt{x}
 
 ---
 
-### N10. EJEMPLOS TÉCNICOS DE REFERENCIA
+## N10. EJEMPLOS TÉCNICOS DE REFERENCIA
 
 Estos ejemplos ilustran técnicas de sintaxis, no temas específicos.
 
-#### Función simple
+### Función simple
 
 ```desmos-graph
 left=-4; right=4; bottom=-2; top=6;
@@ -377,7 +345,7 @@ width=300; height=200;
 y=x^2|#2d70b3
 ```
 
-#### Región triangular
+### Región triangular
 
 ```desmos-graph
 left=-0.2; right=1.5; bottom=-0.2; top=2.5;
@@ -392,7 +360,7 @@ y<2-x|y>x|x>=0|x<=1|#a5d8ff
 (0,2)|label:(0,2)|#2d70b3
 ```
 
-#### Rectángulo sombreado
+### Rectángulo sombreado
 
 ```desmos-graph
 left=-0.2; right=1.3; bottom=-0.2; top=1.3;
@@ -405,7 +373,7 @@ y=1|0<=x<=1|#2d70b3|DASHED
 (1,1)|label:(1,1)|#000000
 ```
 
-#### Región entre curva y recta
+### Región entre curva y recta
 
 ```desmos-graph
 left=-0.1; right=1.3; bottom=-0.1; top=1.3;
@@ -421,7 +389,7 @@ y<x^{1/2}|y>x|0<=x<=1|#b2f2bb
 
 ---
 
-### N11. CHECKLIST ANTES DE RESPONDER
+## N11. CHECKLIST ANTES DE RESPONDER
 
 Antes de entregar un bloque Desmos verificar:
 
@@ -440,9 +408,9 @@ Antes de entregar un bloque Desmos verificar:
 
 ---
 
-### N12. FUNCIONES POR TRAMOS — SINTAXIS DEL PLUGIN
+## N12. FUNCIONES POR TRAMOS — SINTAXIS DEL PLUGIN
 
-#### ⚠️ Sintaxis web `{intervalo: valor}` NO funciona en el plugin
+### ⚠️ Sintaxis web `{intervalo: valor}` NO funciona en el plugin
 
 **Sintaxis correcta para el plugin:** usar `y=valor \{condición\}` con las llaves escapadas:
 
@@ -450,7 +418,7 @@ Antes de entregar un bloque Desmos verificar:
 y=1.5\{-1<x<5\}|#2d70b3
 ```
 
-#### Ejemplo completo — función escalonada
+### Ejemplo completo — función escalonada
 
 ```desmos-graph
 left=-1; right=7; bottom=-0.5; top=0.6;
@@ -475,7 +443,7 @@ y=0.35 |a<x<c|#c74440
 - pero nunca usar `y=0.10 {a<x<b}|#2d70b3` , también  `{a<x<b: 0.1}|#2d70b3`.
 
 
-#### Patrón general
+### Patrón general
 
 - Valor constante en intervalo: `y=k|a<x<b|#hex`
 - Función en intervalo: `y=f(x)|a<x<b|#hex`
@@ -485,9 +453,24 @@ y=0.35 |a<x<c|#c74440
 - Etiquetar un tramo: agregar punto en el centro `(medio, k)|label:texto|#hex`
 - Sintaxis web que NO funciona en el plugin: `{a<x<b: k}` o `{a<x<b: f(x)}`
 
-#### Etiquetas en funciones por tramos
+### Etiquetas en funciones por tramos
 
->revisar sección N7. PUNTOS Y ETIQUETAS 
+`label:` solo funciona en puntos, no en líneas. Dos usos:
+
+- Punto visible con etiqueta: 
+
+```desmos-graph
+(0, 2)|label:f(x)
+(1, 1)|label:f(x)|cross
+(2, 0)|label:f(x)|open
+```
+- Solo etiqueta, punto oculto (útil para nombrar funciones):
+
+```desmos-graph
+(0, 2)|label:f(x)|hidden
+(1, 1)|label:f(x)|cross|hidden
+(2, 0)|label:f(x)|open|hidden
+```
 
 ---
 
@@ -503,11 +486,11 @@ Todos los ejemplos de esta sección han sido confirmados y renderizan correctame
 
 ---
 
-### N13. T0 — NÚMEROS REALES Y DESIGUALDADES
+## N13. T0 — NÚMEROS REALES Y DESIGUALDADES
 
 > Tema introductorio. Rectas numéricas, intervalos, valor absoluto básico, inecuaciones.
 
-#### Intervalo abierto \]a, b\[
+### Intervalo abierto \]a, b\[
 
 ```desmos-graph
 width=300; height=100;
@@ -518,7 +501,7 @@ left=-1; right=5; bottom=-1; top=1;
 y=0|1<x<3|#c74440
 ```
 
-#### Intervalo cerrado \[a, b\]
+### Intervalo cerrado \[a, b\]
 
 ```desmos-graph
 width=300; height=100;
@@ -529,7 +512,7 @@ left=-1; right=5; bottom=-1; top=1;
 y=0|1<=x<=3|#2d70b3
 ```
 
-#### Intervalo mixto \[a, b\[
+### Intervalo mixto \[a, b\[
 
 ```desmos-graph
 width=300; height=100;
@@ -540,7 +523,7 @@ left=-1; right=5; bottom=-1; top=1;
 y=0|1<=x<3|#2d70b3
 ```
 
-#### Intervalo con infinito \]inf, b\[
+### Intervalo con infinito \]inf, b\[
 
 ```desmos-graph
 width=300; height=100;
@@ -550,7 +533,7 @@ left=-1; right=5; bottom=-1; top=1;
 y=0|x<=3|#2d70b3
 ```
 
-#### Intervalo con infinito \[a, inf\[
+### Intervalo con infinito \[a, inf\[
 
 ```desmos-graph
 width=300; height=100;
@@ -560,7 +543,7 @@ left=-1; right=5; bottom=-1; top=1;
 y=0|1<=x|#2d70b3
 ```
 
-#### Inecuación — tabla de signos y solución
+### Inecuación — tabla de signos y solución
 
 Este patrón usa **dos gráficas en secuencia** para resolver una inecuación:
 
@@ -607,7 +590,7 @@ y=0 \{3<=x<6\}|#ff7b7b
 
 Solución: $C_s = ]-\infty,-3] \cup \{0\} \cup [3,+\infty[$
 
-#### Valor absoluto — región $\vert x \vert \leq a$
+### Valor absoluto — región $\vert x \vert \leq a$
 
 ```desmos-graph
 left=-5; right=5; bottom=-1; top=5;
@@ -623,11 +606,11 @@ y>=\abs(x)|0<y<4|-a<x<a|#2d70b3
 
 ---
 
-### N14. T1 — FUNCIONES REALES
+## N14. T1 — FUNCIONES REALES
 
 > Primer parcial. Dominio, imagen, gráficas de familias de funciones, transformaciones.
 
-#### Polinomios
+### Polinomios
 
 ```desmos-graph
 left=-3; right=3; bottom=-2; top=5;
@@ -643,7 +626,7 @@ width=300; height=200;
 y=x^3-3x|#2d70b3
 ```
 
-#### Potenciales generalizadas
+### Potenciales generalizadas
 
 ```desmos-graph
 left=-0.5; right=4; bottom=-0.5; top=4;
@@ -673,7 +656,7 @@ width=300; height=200;
 y=x^{-2/3}|#2d70b3
 ```
 
-#### Exponenciales y logarítmicas
+### Exponenciales y logarítmicas
 
 ```desmos-graph
 left=-5; right=3; bottom=-0.5; top=5;
@@ -703,7 +686,7 @@ width=300; height=200;
 y=\ln(x)|#fa7e19
 ```
 
-#### Trigonométricas
+### Trigonométricas
 
 ```desmos-graph
 left=-3.14; right=3.14; bottom=-2; top=2;
@@ -725,7 +708,7 @@ width=400; height=350;
 y=\tan(x)|#388c46
 ```
 
-#### Trigonométricas inversas
+### Trigonométricas inversas
 
 ```desmos-graph
 left=-3; right=3; bottom=-3.5; top=3.5;
@@ -764,7 +747,7 @@ y=1.5708|-7<=x<=7|#c74440|DASHED
 (0,0)|label:(0,0)|#fa7e19|cross
 ```
 
-#### Hiperbólicas
+### Hiperbólicas
 
 ```desmos-graph
 left=-2; right=2; bottom=-2; top=2;
@@ -781,7 +764,7 @@ y=\cosh(x)|#fa7e19
 (0,1)|label:(0,1)|#fa7e19|cross
 ```
 
-#### Valor absoluto (`\abs()`)
+### Valor absoluto (`\abs()`)
 
 ```desmos-graph
 left=-2; right=2; bottom=-0.5; top=2;
@@ -811,7 +794,7 @@ width=300; height=200;
 y=\abs(\abs(x^{2}-4)-4)|#6042a6
 ```
 
-#### Parte entera (`\floor()`)
+### Parte entera (`\floor()`)
 
 ```desmos-graph
 left=-4; right=4; bottom=-4; top=4;
@@ -820,7 +803,7 @@ width=300; height=200;
 y=\floor(x)|#fa7e19
 ```
 
-#### Función signo
+### Función signo
 
 ```desmos-graph
 left=-2; right=2; bottom=-2; top=2;
@@ -831,7 +814,7 @@ y=\operatorname{sgn}(x)|#fa7e19
 (0,1)|#fa7e19|open
 ```
 
-#### Función escalón y por tramos
+### Función escalón y por tramos
 
 ```desmos-graph
 left=-2; right=2; bottom=-1; top=2;
@@ -859,7 +842,7 @@ y=0|8<=x<=10|#2d70b3
 (8,0)|#2d70b3|open
 ```
 
-#### Función distancia al entero más cercano
+### Función distancia al entero más cercano
 
 ```desmos-graph
 left=-2; right=2; bottom=-0.5; top=1;
@@ -870,7 +853,7 @@ y=\min(\operatorname{mod}(x,1),1-\operatorname{mod}(x,1))|#6042a6
 
 ---
 
-### N15. T2 — LÍMITES Y CONTINUIDAD
+## N15. T2 — LÍMITES Y CONTINUIDAD
 
 > Primer parcial. Límites laterales, discontinuidades, comportamiento asintótico.
 
@@ -878,7 +861,7 @@ y=\min(\operatorname{mod}(x,1),1-\operatorname{mod}(x,1))|#6042a6
 
 ---
 
-### N16. T3 — DERIVACIÓN
+## N16. T3 — DERIVACIÓN
 
 > Segundo parcial. Pendiente de tangente, reglas de derivación, derivadas de funciones elementales.
 
@@ -886,7 +869,7 @@ y=\min(\operatorname{mod}(x,1),1-\operatorname{mod}(x,1))|#6042a6
 
 ---
 
-### N17. T4 — APLICACIONES DE LA DERIVACIÓN
+## N17. T4 — APLICACIONES DE LA DERIVACIÓN
 
 > Segundo parcial. Máximos y mínimos, concavidad, optimización, teorema del valor medio.
 
@@ -894,7 +877,7 @@ y=\min(\operatorname{mod}(x,1),1-\operatorname{mod}(x,1))|#6042a6
 
 ---
 
-### N18. T5 — INTEGRACIÓN
+## N18. T5 — INTEGRACIÓN
 
 > Tercer parcial. Integral definida, primitivas, regla de Barrow.
 
@@ -902,7 +885,7 @@ y=\min(\operatorname{mod}(x,1),1-\operatorname{mod}(x,1))|#6042a6
 
 ---
 
-### N19. T6 — APLICACIONES DE LA INTEGRACIÓN
+## N19. T6 — APLICACIONES DE LA INTEGRACIÓN
 
 > Tercer parcial. Área entre curvas, volúmenes de revolución.
 
@@ -910,7 +893,7 @@ y=\min(\operatorname{mod}(x,1),1-\operatorname{mod}(x,1))|#6042a6
 
 ---
 
-### N20. T7 — SERIES REALES (BONUS)
+## N20. T7 — SERIES REALES (BONUS)
 
 > Fuera de parciales. Series numéricas, criterios de convergencia.
 

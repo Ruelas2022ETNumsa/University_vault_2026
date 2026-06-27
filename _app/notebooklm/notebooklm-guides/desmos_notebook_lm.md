@@ -129,7 +129,7 @@ Para rectas numéricas usar ratio horizontal (3:1). Para funciones estándar rat
 | y = xⁿ (entero)                 | `y=x^2`, `y=x^3`                                            |
 | y = x^(p/q)                     | `y=x^{3/2}`, `y=x^{2/3}`                                    |
 | y = x^(-p/q)                    | `y=x^{-1/2}`, `y=x^{-2/3}`                                  |
-| y = 1/x                         | `y=1/x`                                                     |
+| y = 1/x                         | `y=1/x, y=\frac{1}{x}`                                                     |
 | x² + y² = r²                    | `x^2+y^2=r^2`                                               |
 | y = 2^x                         | `y=2^x`                                                     |
 | y = eˣ                          | `y=e^x`                                                     |
@@ -151,12 +151,24 @@ Para rectas numéricas usar ratio horizontal (3:1). Para funciones estándar rat
 
 #### Notación funcional y derivadas
 
-| Matemática | Código Desmos |
-| --- | --- |
-| f(x) = expresión | `f(x)=x^2` |
-| y = f'(x) | `y=f'(x)` |
-| f(x) con dominio | `f(x)=x^2\|0<=x<=3` |
+| Matemática                      | Código Desmos                      |
+| ------------------------------- | ---------------------------------- |
+| f(x) = expresión                | `f(x)=x^2`                         |
+| y = f'(x)                       | `y=f'(x)`                          |
+| f(x) con dominio                | `f(x)=x^2\|0<=x<=3`                |
 | f(x) oculta, solo f'(x) visible | `f(x)=x^2\|hidden` luego `y=f'(x)` |
+
+
+#### Notación funcional y derivadas claude xxxx
+
+| Matemática                      | Código Desmos                      |
+| ------------------------------- | ---------------------------------- |
+| f(x) = expresión                | `f(x)=x^2`                         |
+| y = f'(x)                       | `y=f'(x)`                          |
+| f(x) con dominio fijo           | `f(x)=x^2\|0<=x<=3`                |
+| f(x) con dominio por variables  | `a=1` / `b=4` / `y=f(x)\|a<x<b`    |
+| f(x) oculta, solo f'(x) visible | `f(x)=x^2\|hidden` luego `y=f'(x)` |
+
 
 
 
@@ -261,18 +273,44 @@ x>y^2|y>x^1/2|x>0|y>0|#b2f2bb
 
 ### N7. PUNTOS Y ETIQUETAS
 
+Tres tipos de punto — el sólido es default, no lleva modificador:
+
+- Punto sólido: `(x,y)|#hex`
+- Punto vacío: `(x,y)|open|#hex`
+- Punto con cruz: `(x,y)|cross|#hex`
+
 ```desmos-graph
 (1,1)|label:(1,1)|#000000
 (1,2)|open|label:(1,2)|#000000
 (1,3)|cross|label:(1,3)|#000000
 ```
 
-#### ⚠️ Fracciones en etiquetas — solo slash
+#### Fracciones y LaTeX en etiquetas
 
-`\frac{}{}` no renderiza en `label:` — aparece el texto literal. Usar siempre slash:
+`\frac{}{}` y cualquier notación LaTeX en `label:` imprime el texto literal, no renderiza. Usar siempre equivalente ASCII:
 
 ✅ `(3,0)|open|label:(d-b)/(a-c)|#c74440`
 ❌ `(3,0)|open|label:\frac{d-b}{a-c}|#c74440`
+
+> Excepción: superíndices simples como x² + y² = r² sí se imprimen bien en labels.
+
+#### Etiquetas en funciones
+
+`label:` solo funciona en puntos, no en líneas. Dos usos:
+
+- Punto visible con etiqueta: `(x,y)|label:texto|#hex`
+```desmos-graph
+(0, 2)|label:f(x)
+(1, 1)|label:f(x)|cross
+(2, 0)|label:f(x)|open
+```
+
+- Solo etiqueta, punto oculto: `(x,y)|label:texto|hidden`
+```desmos-graph
+(0, 2)|label:f(x)|hidden
+(1, 1)|label:f(x)|cross|hidden
+(2, 0)|label:f(x)|open|hidden
+```
 
 ---
 
@@ -467,22 +505,7 @@ y=0.35 |a<x<c|#c74440
 
 #### Etiquetas en funciones por tramos
 
-`label:` solo funciona en puntos, no en líneas. Dos usos:
-
-- Punto visible con etiqueta: 
-
-```desmos-graph
-(0, 2)|label:f(x)
-(1, 1)|label:f(x)|cross
-(2, 0)|label:f(x)|open
-```
-- Solo etiqueta, punto oculto (útil para nombrar funciones):
-
-```desmos-graph
-(0, 2)|label:f(x)|hidden
-(1, 1)|label:f(x)|cross|hidden
-(2, 0)|label:f(x)|open|hidden
-```
+>revisar sección N7. PUNTOS Y ETIQUETAS 
 
 ---
 

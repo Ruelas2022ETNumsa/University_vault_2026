@@ -1,11 +1,45 @@
 
+
+
 ```desmos-graph
 width=400; height=300;
 left=-3; right=3; bottom=-2; top=10;
 ---
 f(x)=x^2|#D97706
 y=f'(x)|#5E81AC
+(1,2)|label:x² + y² = r²|hidden
+
+
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ```desmos-graph
 width=400; height=300;
