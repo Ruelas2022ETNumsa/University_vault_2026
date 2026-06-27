@@ -62,7 +62,41 @@ y=\sqrt{x}
 ```
 
 
+```desmos-graph
+left=-1; right=7; bottom=-0.5; top=0.6;
+width=600; height=180;
+---
+y=0
 
+a=1
+b=4
+c=6
+
+(a,0)|label:a
+(b,0)|label:b
+(c,0)|label:c
+
+y=0.10 \{a<x<b\}|#2d70b3
+y=0.20 \{b<x<c\}|#2d70b3
+y=0.35 \{a<x<c\}|#c74440
+```
+
+
+```desmos-graph
+left=-1; right=7; bottom=-0.5; top=0.6;
+width=600; height=180;
+---
+y=0|#000000
+a=1
+b=4
+c=6
+(a,0)|label:a|#2d70b3
+(b,0)|label:b|#2d70b3
+(c,0)|label:c|#2d70b3
+\{a<x<b: 0.1\}|#2d70b3
+\{b<x<c: 0.1\}|#2d70b3
+\{a<x<c: 0.3\}|label:Transitividad|#c74440
+```
 
 ---
 ---
@@ -71,7 +105,9 @@ y=\sqrt{x}
 # tamaño desmos
 
 **Pequeño — gráficas simples (rectas numéricas, intervalos, un punto):**  
-`width=300; height=200;`
+```
+width=300; height=200;
+```
 
 **Mediano — uso general (funciones, parábolas, trigonométricas, regiones):**  
 `width=400; height=350;`

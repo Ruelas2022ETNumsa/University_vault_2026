@@ -277,20 +277,18 @@ Usar en orden de preferencia:
 
 **Forma 1 — primera opción:**
 ```desmos-graph
-y=x^{1/2}|#2d70b3
-```
-
-**Forma 3 — tercera opción (relación implícita):**
-```desmos-graph
-x=y^2|y>=0|#2d70b3
+y=x^{1/2}
 ```
 
 **Forma 2 — segunda opción:**
 ```desmos-graph
-y=\sqrt{x}|#2d70b3
+y=\sqrt{x}
 ```
 
-
+**Forma 3 — tercera opción (relación implícita):**
+```desmos-graph
+x=y^2|y>=0
+```
 
 #### ⚠️ Formas que NO funcionan — nunca usar:
 
@@ -299,10 +297,6 @@ y=sqrt(x)
 y=\sqrt(x)
 y=sqrt{x}
 ```
-
-
-
-
 
 
 
@@ -321,7 +315,7 @@ Estos ejemplos ilustran técnicas de sintaxis, no temas específicos.
 
 ```desmos-graph
 left=-4; right=4; bottom=-2; top=6;
-width=500; height=400;
+width=300; height=200;
 ---
 y=x^2|#2d70b3
 ```
@@ -330,7 +324,7 @@ y=x^2|#2d70b3
 
 ```desmos-graph
 left=-0.2; right=1.5; bottom=-0.2; top=2.5;
-width=500; height=500;
+width=300; height=200;
 ---
 y=x|0<=x<=1|#c74440|SOLID
 y=2-x|0<=x<=1|#2d70b3|SOLID
@@ -345,7 +339,7 @@ y<2-x|y>x|x>=0|x<=1|#a5d8ff
 
 ```desmos-graph
 left=-0.2; right=1.3; bottom=-0.2; top=1.3;
-width=500; height=500;
+width=300; height=200;
 ---
 x>=0|x<=1|y>=0|y<=1|#a5d8ff
 x=1|0<=y<=1|#2d70b3|DASHED
@@ -358,7 +352,7 @@ y=1|0<=x<=1|#2d70b3|DASHED
 
 ```desmos-graph
 left=-0.1; right=1.3; bottom=-0.1; top=1.3;
-width=500; height=500;
+width=300; height=200;
 ---
 y=x|0<=x<=1|#c74440|SOLID
 y=x^{1/2}|0<=x<=1|#388c46|SOLID
@@ -367,19 +361,6 @@ y<x^{1/2}|y>x|0<=x<=1|#b2f2bb
 (1,1)|label:(1,1)|#000000
 ```
 
-### Valor absoluto con región sombreada
-
-```desmos-graph
-left=-5; right=5; bottom=-1; top=5;
-width=500; height=300;
----
-y=x \{x>=0\}|#2d70b3
-y=-x \{x<=0\}|#2d70b3
-y=2|#000000|DASHED
--2<=x<=2|y<=2|y>=0|#a5d8ff
-(-2,2)|label:(-a,a)|#c74440
-(2,2)|label:(a,a)|#c74440
-```
 
 ---
 
@@ -399,7 +380,6 @@ Antes de entregar un bloque Desmos verificar:
 - [ ] ¿Funciones por tramos usan `y=k \{a<x<b\}` y NO `{a<x<b: k}`?
 - [ ] ¿Sin `y=|x|`, `y=abs(x)` ni `|x|` en condiciones de relleno?
 - [ ] ¿Raíz cuadrada usa `x^{1/2}` como primera opción — NO `y=sqrt(x)` ni `y=\sqrt(x)`?
-- [ ] ¿Valor absoluto en texto/tablas usa `\vert` en lugar de `|`?
 
 ---
 
@@ -429,10 +409,13 @@ c=6
 (b,0)|label:b
 (c,0)|label:c
 
-y=0.10 \{a<x<b\}|#2d70b3
-y=0.20 \{b<x<c\}|#2d70b3
-y=0.35 \{a<x<c\}|#c74440
+y=0.10 |a<x<b||#2d70b3
+y=0.20 |b<x<c|#2d70b3
+y=0.35 |a<x<c|#c74440
 ```
+
+- igual funciona con la notación de  `y=0.10 \{a<x<b\}|#2d70b3` , también  `\{a<x<b: 0.1\}|#2d70b3`.
+- pero nunca usar `y=0.10 {a<x<b}|#2d70b3` , también  `{a<x<b: 0.1}|#2d70b3`.
 
 ### Patrón general
 
