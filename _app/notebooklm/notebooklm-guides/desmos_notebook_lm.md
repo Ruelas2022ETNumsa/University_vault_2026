@@ -465,7 +465,7 @@ Todos los ejemplos de esta sección han sido confirmados y renderizan correctame
 
 > Tema introductorio. Rectas numéricas, intervalos, valor absoluto básico, inecuaciones.
 
-### Intervalo abierto (a, b)
+### Intervalo abierto \]a, b\[
 
 ```desmos-graph
 width=300; height=100;
@@ -487,15 +487,83 @@ left=-1; right=5; bottom=-1; top=1;
 y=0|1<=x<=3|#2d70b3
 ```
 
-### Valor absoluto — curva básica
+### Intervalo mixto \[a, b\[
 
 ```desmos-graph
-width=300; height=200;
-left=-4; right=4; bottom=-0.5; top=4;
+width=300; height=100;
+left=-1; right=5; bottom=-1; top=1;
 ---
-y=\abs(x)|y<2|#2d70b3
-
+(1,0)|label:a|#2d70b3
+(3,0)|label:b|open|#2d70b3
+y=0|1<=x<3|#2d70b3
 ```
+
+### Intervalo con infinito \]inf, b\[
+
+```desmos-graph
+width=300; height=100;
+left=-1; right=5; bottom=-1; top=1;
+---
+(3,0)|label:b|open|#2d70b3
+y=0|x<=3|#2d70b3
+```
+
+### Intervalo con infinito \[a, inf\[
+
+```desmos-graph
+width=300; height=100;
+left=-1; right=5; bottom=-1; top=1;
+---
+(1,0)|label:a|#2d70b3
+y=0|1<=x|#2d70b3
+```
+
+### Inecuación — tabla de signos y solución
+
+Este patrón usa **dos gráficas en secuencia** para resolver una inecuación:
+
+**Gráfica 1 — análisis de signos:** muestra los intervalos con etiquetas V/F
+y los puntos críticos como abiertos (aún no se sabe si pertenecen a la solución).
+Usar `|hidden` para flotar etiquetas de intervalo y veredicto encima/debajo del eje.
+
+**Gráfica 2 — solución final:** misma recta numérica pero con los extremos
+corregidos: cerrados `(x,0)|#hex` si el punto pertenece a la solución,
+abiertos `(x,0)|open|#hex` si no.
+
+Ejemplo — $x^4 \ge 9x^2$, puntos críticos $x=-3,\ 0,\ 3$:
+
+```desmos-graph
+left=-6; right=6; bottom=-1; top=1;
+width=350; height=120;
+---
+(-4,0.5)|label:V|#2d70b3|hidden
+(-2,0.5)|label:F|#2d70b3|hidden
+(0,0.5)|label:V|#2d70b3|hidden
+(2,0.5)|label:F|#2d70b3|hidden
+(4,0.5)|label:V|#2d70b3|hidden
+y=0 \{-6<x<=-3\}|#ff7b7b
+y=0 \{3<=x<6\}|#ff7b7b
+(-3,0)|label:-3|open|#ff7b7b
+(0,0)|label:0|open|#ff7b7b
+(3,0)|label:3|open|#ff7b7b
+(-4,-0.5)|label:I_1|#2d70b3|hidden
+(-0.5,-0.5)|label:I_2|#2d70b3|hidden
+(0.5,-0.5)|label:I_3|#2d70b3|hidden
+(4,-0.5)|label:I_4|#2d70b3|hidden
+```
+
+```desmos-graph
+left=-6; right=6; bottom=-1; top=1;
+width=350; height=120;
+---
+y=0 \{-6<x<=-3\}|#ff7b7b
+y=0 \{3<=x<6\}|#ff7b7b
+(-3,0)|label:-3|#ff7b7b
+(0,0)|label:0|#ff7b7b
+(3,0)|label:3|#ff7b7b
+```
+
+Solución: $C_s = ]-\infty,-3] \cup \{0\} \cup [3,+\infty[$
 
 ### Valor absoluto — región $\vert x \vert \leq a$
 
@@ -503,31 +571,12 @@ y=\abs(x)|y<2|#2d70b3
 left=-5; right=5; bottom=-1; top=5;
 width=300; height=200;
 ---
-y=x \{x>=0\}|#2d70b3
-y=-x \{x<=0\}|#2d70b3
-y=2|#000000|DASHED
--2<=x<=2|y<=2|y>=0|#a5d8ff
-(-2,0)|open|label:-a|#c74440
-(2,0)|open|label:a|#c74440
+a=2
+y=\abs(x)|dashed|#2d70b3
+y>=\abs(x)|0<y<4|-a<x<a|#2d70b3
+(-2,0)|label:-a|#c74440
+(2,0)|label:a|#c74440
 ```
-
-
-```desmos-graph
-width=300; height=200;
-left=-5; right=5; bottom=-1; top=5;
----
-y=x\{x>=0\}|#2D70B3
-y=-x\{x<=0\}|#2D70B3
-
-y=2|#777777|DASHED
-
-y>=\abs(x)
-y<=2
-
-(-2,2)|label:(-2,2)|#2D70B3
-(2,2)|label:(2,2)|#2D70B3
-```
-
 
 
 ---
