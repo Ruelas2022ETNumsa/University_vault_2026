@@ -33,11 +33,35 @@ Instrucciones para que NotebookLM genere bloques Desmos correctos listos para co
 
 ---
 
-### N1. REGLA CRÍTICA — EL `---` ES SIEMPRE OBLIGATORIO + ESTRUCTURA
+### N1. REGLA CRÍTICA — EL `---` ES SIEMPRE OBLIGATORIO
 
 **Sin `---` el plugin no renderiza nada.** No importa si hay configuración o no.
 
-#### Estructura obligatoria del bloque
+❌ Incorrecto:
+
+```desmos-graph
+width=300; height=200;
+y=x^2|#005F73
+```
+
+✅ Correcto:
+
+```desmos-graph
+width=300; height=200;
+---
+y=x^2|#005F73
+```
+
+✅ Sin configuración, el `---` igual va:
+
+```desmos-graph
+---
+y=x^2|#005F73
+```
+
+---
+
+### N2. ESTRUCTURA OBLIGATORIA
 
 ```
 [parámetros de ventana: left right bottom top]
@@ -51,42 +75,25 @@ Instrucciones para que NotebookLM genere bloques Desmos correctos listos para co
 1. Primero `left`, `right`, `bottom`, `top` — definen la ventana
 2. Después `width`, `height` — definen el tamaño del canvas
 
-❌ Incorrecto — sin `---`:
-
-```desmos-graph
-width=300; height=200;
-y=x^2|#005F73
+✅ Correcto:
 ```
-
-❌ Incorrecto — orden de parámetros invertido:
-```
-width=350; height=120;
-left=-6; right=6; bottom=-1; top=1;
----
-y=x^2|#005F73
-```
-
-✅ Correcto — con configuración:
-
-```desmos-graph
 left=-6; right=6; bottom=-1; top=1;
 width=350; height=120;
 ---
 y=x^2|#005F73
 ```
 
-✅ Correcto — sin configuración, el `---` igual va:
-
-```desmos-graph
+❌ Incorrecto:
+```
+width=350; height=120;
+left=-6; right=6; bottom=-1; top=1;
 ---
 y=x^2|#005F73
+
 ```
 
-> El plugin no da error visible cuando el orden es incorrecto, pero puede causar comportamiento inesperado en el renderizado.
-
----
-
-### N2.
+El plugin no da error visible pero el orden incorrecto puede causar
+comportamiento inesperado en el renderizado.
 
 ---
 
@@ -183,7 +190,7 @@ y=0|-a<x<a|#005F73
 
 **Nota sobre etiquetas:** las constantes no se evalúan dentro de `label:` — se imprimen como texto literal. Si se necesita mostrar el valor en la etiqueta, escribir el número directamente:
 
-`(a,0)|label:2|#C1121F` ✅  →  a=2
+`(a,0)|label:2|#C1121F` ✅  
 `(a,0)|label:a|#C1121F` → imprime la letra "a", no el valor `2` ⚠️
 
 #### El valor de π
@@ -289,7 +296,7 @@ El plugin acepta nombres (`RED`, `BLUE`, etc.) pero producen colores saturados y
 
 ### N7. ÁREAS SOMBREADAS Y FUNCIONES POR TRAMOS
 
-Usar inecuaciones con todas las condiciones en **una sola línea** pueden ser de 2 p:
+Usar inecuaciones con todas las condiciones en **una sola línea**:
 
 ```desmos-graph
 ---
@@ -339,6 +346,30 @@ y=x^{1/2}|0<=x<=4|#0A9396
 x<y^2|y<x^n|x>0|y>0|#BFD7DC
 x>y^2|y>x^n|x>0|y>0|#C2E4E5
 ```
+
+#### ⚠️ Llaves `{}` — solo válidas en la primera posición
+
+En un bloque Desmos cada línea se divide en segmentos separados por `|`:
+
+```
+expresión | condición_2 | condición_3 | ... | #color
+    1    |      2      |      3      |     |   n
+```
+
+Las llaves `{}` (usadas en potencias fraccionarias como `x^{1/2}`) **solo funcionan en el segmento 1**. A partir del segmento 2 en adelante, las llaves producen error de renderizado sin aviso visible.
+
+❌ No funciona — llaves en segmento 2:
+```
+x<y^{2/3}|y<x^{1/2}|x>0|y>0|#BFD7DC
+```
+
+✅ Solución — declarar una constante antes y usarla en su lugar:
+```
+n=0.5
+x<y^{2/3}|y<x^n|x>0|y>0|#BFD7DC
+```
+
+También funciona `n=1/2` — Desmos evalúa ambas formas correctamente.
 
 #### Funciones por tramos
 
@@ -524,6 +555,47 @@ width=300; height=200;
 y=x^2|#005F73
 ```
 
+#### Región triangular
+
+```desmos-graph
+left=-0.2; right=1.5; bottom=-0.2; top=2.5;
+width=300; height=200;
+---
+y=x|0<=x<=1|#005F73|SOLID
+y=2-x|0<=x<=1|#0A9396|SOLID
+x=0|0<=y<=2|#80AFB9|DASHED
+y<2-x|y>x|x>=0|x<=1|#BFD7DC
+(0,0)|label:(0,0)|#005F73
+(1,1)|label:(1,1)|#0A9396
+(0,2)|label:(0,2)|#005F73
+```
+
+#### Rectángulo sombreado
+
+```desmos-graph
+left=-0.2; right=1.3; bottom=-0.2; top=1.3;
+width=300; height=200;
+---
+x>=0|x<=1|y>=0|y<=1|#BFD7DC
+x=1|0<=y<=1|#80AFB9|DASHED
+y=1|0<=x<=1|#80AFB9|DASHED
+(0,0)|label:(0,0)|#005F73
+(1,1)|label:(1,1)|#005F73
+```
+
+#### Región entre curva y recta
+
+```desmos-graph
+left=-0.1; right=1.3; bottom=-0.1; top=1.3;
+width=300; height=200;
+---
+y=x|0<=x<=1|#005F73|SOLID
+y=x^{1/2}|0<=x<=1|#0A9396|SOLID
+y<x^{1/2}|y>x|0<=x<=1|#BFD7DC
+(0,0)|label:(0,0)|#005F73
+(1,1)|label:(1,1)|#005F73
+```
+
 
 ---
 
@@ -555,36 +627,6 @@ Todos los ejemplos de esta sección han sido confirmados y renderizan correctame
 - Palabras reservadas con `\`: `\cos`, `\sin`, `\ln`, `\frac{}{}`
 - Funciones especiales: `\abs()`, `\floor()`, `\operatorname{sgn}()`, `\operatorname{mod}()`
 - Colores de la paleta oficial únicamente
-
-**Llaves `{}` — solo válidas en el segmento 1 de cada línea:**
-
-Cada línea de un bloque Desmos se divide en segmentos separados por `|`:
-
-```
-expresión | condición_2 | condición_3 | ... | #color
-    1    |      2      |      3      |     |   n
-```
-
-Las llaves `{}` (usadas en potencias fraccionarias como `x^{1/2}`) **solo funcionan en el segmento 1**. En segmentos 2 en adelante producen error de renderizado sin aviso visible.
-
-❌ No funciona — llaves en segmento 2:
-```
-x<y^{2/3}|y<x^{1/2}|x>0|y>0|#BFD7DC
-```
-
-✅ Solución — declarar una constante y usarla en restricciones:
-```
-n=0.5
-x<y^{2/3}|y<x^n|x>0|y>0|#BFD7DC
-```
-
-También funciona `n=1/2` — Desmos evalúa ambas formas correctamente.
-
-**Llaves escapadas `\{` `\}` en funciones por tramos:**
-- Forma preferida con `|`: `y=f(x)|a<x<b|#hex`
-- Alternativa válida: `y=f(x)\{a<x<b\}|#hex` — el backslash es obligatorio
-- `{...}` sin backslash NO funciona en el plugin
-- Sintaxis web que NO funciona: `{a<x<b: k}` o `{a<x<b: f(x)}`
 
 ---
 
