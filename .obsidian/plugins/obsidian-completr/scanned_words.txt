@@ -13109,6 +13109,7 @@ Tutor
 TIPO
 TEXTO
 TEMA
+Trigonom
 Sistema
 Sync
 Save
@@ -25608,6 +25609,9 @@ Prioriz
 PRIORITARIOS
 Posibilidad
 Plano
+Palabras
+Polinomios
+Potenciales
 del
 date
 de
@@ -30889,6 +30893,7 @@ deductivo
 discontinuidad
 dichos
 descompone
+discontinuidades
 Vault
 Verificar
 Variables
@@ -43323,6 +43328,7 @@ generaba
 generalizada
 graficas
 graficadores
+generalizadas
 body
 beacon
 bat
@@ -87198,6 +87204,7 @@ cumplimiento
 contribuciones
 cuarta
 contesto
+compuesta
 updated
 un
 universo
@@ -125829,6 +125836,7 @@ Estudio
 EXACTO
 EXCEPCIONES
 Elegimos
+Exponenciales
 Obsidian
 OmniSearch
 Ocultar
@@ -187834,6 +187842,7 @@ llenando
 logaritmos
 listado
 lico
+licas
 incluyendo
 im
 instalar
@@ -213641,6 +213650,7 @@ HvTv
 HoEy
 HEX
 HISPANOHABLANTE
+Hiperb
 filtrar
 formato
 faltantes
