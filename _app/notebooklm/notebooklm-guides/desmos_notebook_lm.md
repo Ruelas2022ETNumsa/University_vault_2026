@@ -181,25 +181,47 @@ Para rectas numéricas usar ratio horizontal (3:1). Para funciones estándar rat
 
 El plugin acepta nombres (`RED`, `BLUE`, etc.) pero producen colores saturados y duros. Usar siempre hex.
 
-#### Paleta para curvas y líneas
+#### Paleta para curvas y líneas (sólidas)
 
 ```
-#c74440   → rojo medio      (curva principal / frontera)
-#2d70b3   → azul medio      (curva secundaria)
-#388c46   → verde medio     (curva terciaria)
-#fa7e19   → naranja         (destaque)
-#6042a6   → morado          (punto especial)
-#000000   → negro           (ejes, bordes, auxiliares)
+#005F73   → azul petróleo   (curva principal)
+#0A9396   → verde azulado   (curva secundaria)
+#EE9B00   → ámbar           (destaque)
+#BB3E03   → naranja quemado (curva de advertencia)
+#629900   → verde oliva     (curva auxiliar)
+#5A189A   → morado          (punto especial)
+#C1121F   → rojo            (curva de error / evento)
+#DA627D   → rosa            (curva alternativa)
+#FFD60A   → amarillo        (resaltado)
+#474448   → gris antracita  (ejes, bordes, auxiliares)
 ```
 
-#### Paleta para rellenos (áreas sombreadas)
-
+#### Paleta para líneas segmentadas (50% color + 50% blanco)
 ```
-#a5d8ff   → azul claro      (región / área principal)
-#b2f2bb   → verde claro     (región secundaria)
-#ffd8a8   → naranja claro   (región de advertencia)
-#ff7b7b   → rojo claro      (región de evento)
-#d0bfff   → morado claro    (región auxiliar)
+#80AFB9   → azul petróleo segmentado
+#85C9CB   → verde azulado segmentado
+#F7CD80   → ámbar segmentado
+#DD9F81   → naranja quemado segmentado
+#B1CC80   → verde oliva segmentado
+#AD8CCD   → morado segmentado
+#E0898F   → rojo segmentado
+#EDB1BE   → rosa segmentado
+#FFEB85   → amarillo segmentado
+#A3A2A4   → gris antracita segmentado
+```
+
+#### Paleta para rellenos (áreas sombreadas — 25% color + 75% blanco)
+```
+#BFD7DC   → azul petróleo claro   (región principal)
+#C2E4E5   → verde azulado claro   (región secundaria)
+#FBE6BF   → ámbar claro           (región de destaque)
+#EECFC0   → naranja quemado claro (región de advertencia)
+#D8E6BF   → verde oliva claro     (región auxiliar)
+#D6C5E6   → morado claro          (región auxiliar)
+#F0C4C7   → rojo claro            (región de evento)
+#F6D8DF   → rosa claro            (región alternativa)
+#FFF5C2   → amarillo claro        (región de resaltado)
+#D1D0D1   → gris claro            (región neutra)
 ```
 
 > Los hex de curvas son los colores internos de Desmos web. Los de rellenos son sus versiones pastel.

@@ -10,6 +10,46 @@
 | f(x) oculta, solo f'(x) visible | `f(x)=x^2\|hidden` luego `y=f'(x)`             |
 
 
+```desmos-graph
+y = 2x + 1 | #FF0000
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
+
 
 ```desmos-graph
 f(x)=x^2|hidden
