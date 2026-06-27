@@ -19,7 +19,7 @@ status: activo
 # 📈 GUÍA UNIFICADA DE DESMOS PARA OBSIDIAN
 
 > Plugin: `obsidian-desmos` — renderiza gráficas de [desmos.com](https://www.desmos.com/calculator) directamente en tus notas.
-> Este documento está organizado en tres bloques: **Reglas de sintaxis (N1–N9)**, **Checklist y ejemplos técnicos (N10–N12)**, y **Biblioteca de ejemplos por tema MAT101 (N13–N20)**.
+> Este documento está organizado en tres bloques: **Reglas de sintaxis (N1–N9, incluyendo N4.5)**, **Checklist y ejemplos técnicos (N10–N11)**, y **Biblioteca de ejemplos por tema MAT101 (N13–N20)**.
 
 ---
 
@@ -383,9 +383,9 @@ Tres tipos de punto — el sólido es default, no lleva modificador:
 
 ```desmos-graph
 ---
-(1,1)|label:(1,1)|#474448
-(1,2)|open|label:(1,2)|#474448
-(1,3)|cross|label:(1,3)|#474448
+(1,1)|label:(1,1)|#005F73
+(1,2)|open|label:(1,2)|#005F73
+(1,3)|cross|label:(1,3)|#005F73
 ```
 
 #### Fracciones y LaTeX en etiquetas
@@ -430,7 +430,7 @@ El plugin soporta `\abs()` para valor absoluto simple — es la forma preferida 
 y=\abs(x)|#005F73
 y=\abs(2x-3)|#0A9396
 y=\abs(x^{2}-4x+3)|#EE9B00
-y=\abs(\abs(x^{2}-4)-4)|#BB3E03
+y=\abs(\abs(x^{2}-4)-4)|#005F73
 ```
 
 #### Forma por tramos — obligatoria para regiones sombreadas:
@@ -460,19 +460,19 @@ Usar en orden de preferencia:
 **Forma 1 — primera opción:**
 ```desmos-graph
 ---
-y=x^{1/2}|#629900
+y=x^{1/2}|#005F73
 ```
 
 **Forma 2 — segunda opción:**
 ```desmos-graph
 ---
-y=\sqrt{x}|#5A189A
+y=\sqrt{x}|#0A9396
 ```
 
 **Forma 3 — tercera opción (relación implícita):**
 ```desmos-graph
 ---
-x=y^2|y>=0|#C1121F
+x=y^2|y>=0|#EE9B00
 ```
 
 #### ⚠️ Formas que NO funcionan — nunca usar:
@@ -562,70 +562,9 @@ Antes de entregar un bloque Desmos verificar:
 - [ ] ¿Rectángulos sombreados con las 4 condiciones `x>=a|x<=b|y>=c|y<=d`?
 - [ ] ¿Colores de curvas en hex (`#C1121F`, `#005F73`, etc.) y NO nombres en mayúsculas?
 - [ ] ¿Rellenos con hex pastel (`#BFD7DC`, `#F0C4C7`, etc.)?
-- [ ] ¿Funciones por tramos usan `y=k \{a<x<b\}` y NO `{a<x<b: k}`?
+- [ ] ¿Funciones por tramos usan `y=k|a<x<b|#hex` como forma preferida y NO `{a<x<b: k}` sin escapar?
 - [ ] ¿Sin `y=|x|`, `y=abs(x)` ni `|x|` en condiciones de relleno?
 - [ ] ¿Raíz cuadrada usa `x^{1/2}` como primera opción — NO `y=sqrt(x)` ni `y=\sqrt(x)`?
-
----
-
-### N12. FUNCIONES POR TRAMOS — SINTAXIS DEL PLUGIN
-
-#### ⚠️ Sintaxis web `{intervalo: valor}` NO funciona en el plugin
-
-**Sintaxis correcta para el plugin:** usar `y=valor|condición|` con el separador `|` — es la forma preferida:
-
-```desmos-graph
----
-y=1.5|-1<x<5|#005F73
-```
-
-Alternativa válida con llaves escapadas — documentada pero no preferida:
-
-```desmos-graph
----
-y=1.5\{-1<x<5\}|#005F73
-```
-
-#### Ejemplo completo — función escalonada
-
-```desmos-graph
-left=-1; right=7; bottom=-0.5; top=0.6;
-width=600; height=180;
----
-y=0
-
-a=1
-b=4
-c=6
-
-(a,0)|label:a
-(b,0)|label:b
-(c,0)|label:c
-
-y=0.10 |a<x<b|#005F73
-y=0.20 |b<x<c|#005F73
-y=0.35 |a<x<c|#C1121F
-```
-
-- La forma preferida es `y=0.10|a<x<b|#005F73` con separador `|`.
-- Alternativa válida con llaves escapadas: `y=0.10\{a<x<b\}|#005F73`, también `\{a<x<b: 0.1\}`.
-- Nunca usar sin escapar: `y=0.10 {a<x<b}` ni `{a<x<b: 0.1}`.
-
->`\{` y `\}` son llaves escapadas — el backslash es obligatorio. `{...}` sin backslash no funciona en el plugin.
-
-#### Patrón general
-
-- Valor constante en intervalo: `y=k|a<x<b|#hex` — **forma preferida**
-- Función en intervalo: `y=f(x)|a<x<b|#hex`
-- Múltiples tramos: una línea `y=f(x)|a<x<b|#hex` por cada tramo
-- Llaves escapadas (alternativa): `y=f(x)\{a<x<b\}|#hex`
-- Punto de unión entre tramos: `(b, f(b))|open|#hex`
-- Etiquetar un tramo: agregar punto en el centro `(medio, k)|label:texto|#hex`
-- Sintaxis web que NO funciona en el plugin: `{a<x<b: k}` o `{a<x<b: f(x)}`
-
-#### Etiquetas en funciones por tramos
-
->revisar sección N7. PUNTOS Y ETIQUETAS 
 
 ---
 
