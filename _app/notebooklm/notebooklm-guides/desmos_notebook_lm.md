@@ -200,16 +200,25 @@ y=x
 
 igual funciona la notación `x<y<=x^2|2<=x<=4`
 
-otro ejemplos mas complejo
+otros ejemplos 2 ejemplos mas complejos
+
+ejemplo 1
 
 ```desmos-graph
-left=-0.5; right=5.5; bottom=-1; top=24;
 ---
-x<y^2|y<x^2|2<x^2-1|x<4y|
+x>=(y-2)^2-2|y>=(x-3)^2-1|(x-4)/2<=y-1/5|y<=-(x-4)^3+1.5|
 ```
-x<y<=x^2|2<=x<=4|
-y<3-x|y>x-3|x>=-4|x<=2|#a5d8ff
 
+ejemplo 2
+
+```desmos-graph
+width=500; height=500;
+---
+y=x^2|0<=x<=4|#2d70b3
+y=x^1/2|0<=x<=4|#c74440
+x<y^2|y<x^1/2|x>0|y>0|#a5d8ff
+x>y^2|y>x^1/2|x>0|y>0|#b2f2bb
+```
 
 ---
 
