@@ -157,8 +157,8 @@ Para rectas numéricas usar ratio horizontal (3:1). Para funciones estándar rat
 | ------------------------------- | ---------------------------------------------- |
 | f(x) = expresión                | `f(x)=x^2`                                     |
 | y = f'(x)                       | `y=f'(x)`                                      |
-| f(x) con dominio fijo           | `f(x)=x^2|0<=x<=3`                          |
-| f(x) con dominio por variables  | `a=1` / `b=4` / `f(x)=x^3` / `y=f(x)|a<x<b` |
+| f(x) con dominio fijo           | `f(x)=x^2\{0<=x<=3\}`                          |
+| f(x) con dominio por variables  | `a=1` / `b=4` / `f(x)=x^3` / `y=f(x)\{a<x<b\}` |
 | f(x) oculta, solo f'(x) visible | `f(x)=x^2\|hidden` luego `y=f'(x)`             |
 
 ---
@@ -319,14 +319,14 @@ No usar `y<=1|y>=0` sin las restricciones de x — Desmos extenderá el relleno 
 ```desmos-graph
 left=-0.5; right=5.5; bottom=-1; top=24;
 ---
-x<y<=x^2 |2<=x<=4
+x<y<=x^2 \{2<=x<=4\}
 y=x^2
 y=x
 ```
 
-igual funciona la notación `x<y<=x^2\{2<=x<=4\}`
+igual funciona la notación `x<y<=x^2|2<=x<=4`
 
-Dos ejemplos adicionales con regiones más complejas:
+otros ejemplos 2 ejemplos mas complejos
 
 ##### ejemplo 1
 
@@ -340,36 +340,11 @@ x>=(y-2)^2-2|y>=(x-3)^2-1|(x-4)/2<=y-1/5|y<=-(x-4)^3+1.5|#BFD7DC
 ```desmos-graph
 width=500; height=500;
 ---
-n=0.5
 y=x^2|0<=x<=4|#005F73
 y=x^{1/2}|0<=x<=4|#C1121F
-x<y^2|y<x^n|x>0|y>0|#BFD7DC
-x>y^2|y>x^n|x>0|y>0|#D8E6BF
+x<y^{2}|y<x^1/2|x>0|y>0|#BFD7DC
+x>y^2|y>x^1/2|x>0|y>0|#D8E6BF
 ```
-
-#### ⚠️ Llaves `{}` — solo válidas en la primera posición
-
-En un bloque Desmos cada línea se divide en segmentos separados por `|`:
-
-```
-expresión | condición_2 | condición_3 | ... | #color
-    1    |      2      |      3      |     |   n
-```
-
-Las llaves `{}` (usadas en potencias fraccionarias como `x^{1/2}`) **solo funcionan en el segmento 1**. A partir del segmento 2 en adelante, las llaves producen error de renderizado sin aviso visible.
-
-❌ No funciona — llaves en segmento 2:
-```
-x<y^{2/3}|y<x^{1/2}|x>0|y>0|#BFD7DC
-```
-
-✅ Solución — declarar una constante antes y usarla en su lugar:
-```
-n=0.5
-x<y^{2/3}|y<x^n|x>0|y>0|#BFD7DC
-```
-
-También funciona `n=1/2` — Desmos evalúa ambas formas correctamente.
 
 ---
 
@@ -572,14 +547,7 @@ Antes de entregar un bloque Desmos verificar:
 
 #### ⚠️ Sintaxis web `{intervalo: valor}` NO funciona en el plugin
 
-**Sintaxis correcta para el plugin:** usar `y=valor|condición|` con el separador `|` — es la forma preferida:
-
-```desmos-graph
----
-y=1.5|-1<x<5|#005F73
-```
-
-Alternativa válida con llaves escapadas — documentada pero no preferida:
+**Sintaxis correcta para el plugin:** usar `y=valor \{condición\}` con las llaves escapadas:
 
 ```desmos-graph
 ---
@@ -607,18 +575,17 @@ y=0.20 |b<x<c|#005F73
 y=0.35 |a<x<c|#C1121F
 ```
 
-- La forma preferida es `y=0.10|a<x<b|#005F73` con separador `|`.
-- Alternativa válida con llaves escapadas: `y=0.10\{a<x<b\}|#005F73`, también `\{a<x<b: 0.1\}`.
-- Nunca usar sin escapar: `y=0.10 {a<x<b}` ni `{a<x<b: 0.1}`.
+- igual funciona con la notación de  `y=0.10 \{a<x<b\}` , también  `\{a<x<b: 0.1\}`.
+- pero nunca usar `y=0.10 {a<x<b}` , también  `{a<x<b: 0.1}`.
 
 >`\{` y `\}` son llaves escapadas — el backslash es obligatorio. `{...}` sin backslash no funciona en el plugin.
 
 #### Patrón general
 
-- Valor constante en intervalo: `y=k|a<x<b|#hex` — **forma preferida**
+- Valor constante en intervalo: `y=k|a<x<b|#hex`
 - Función en intervalo: `y=f(x)|a<x<b|#hex`
 - Múltiples tramos: una línea `y=f(x)|a<x<b|#hex` por cada tramo
-- Llaves escapadas (alternativa): `y=f(x)\{a<x<b\}|#hex`
+- Llaves escapadas (alternativa): `y=f(x) \{a<x<b\}|#hex`
 - Punto de unión entre tramos: `(b, f(b))|open|#hex`
 - Etiquetar un tramo: agregar punto en el centro `(medio, k)|label:texto|#hex`
 - Sintaxis web que NO funciona en el plugin: `{a<x<b: k}` o `{a<x<b: f(x)}`
@@ -721,8 +688,8 @@ width=350; height=120;
 (0,0.5)|label:V|#005F73|hidden
 (2,0.5)|label:F|#005F73|hidden
 (4,0.5)|label:V|#005F73|hidden
-y=0 |-6<x<=-3|#F0C4C7
-y=0 |3<=x<6|#F0C4C7
+y=0 \{-6<x<=-3\}|#F0C4C7
+y=0 \{3<=x<6\}|#F0C4C7
 (-3,0)|label:-3|open|#F0C4C7
 (0,0)|label:0|open|#F0C4C7
 (3,0)|label:3|open|#F0C4C7
@@ -736,8 +703,8 @@ y=0 |3<=x<6|#F0C4C7
 left=-6; right=6; bottom=-1; top=1;
 width=350; height=120;
 ---
-y=0 |-6<x<=-3|#F0C4C7
-y=0 |3<=x<6|#F0C4C7
+y=0 \{-6<x<=-3\}|#F0C4C7
+y=0 \{3<=x<6\}|#F0C4C7
 (-3,0)|label:-3|#F0C4C7
 (0,0)|label:0|#F0C4C7
 (3,0)|label:3|#F0C4C7
