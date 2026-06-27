@@ -417,12 +417,16 @@ y=0.35 |a<x<c|#c74440
 - igual funciona con la notación de  `y=0.10 \{a<x<b\}|#2d70b3` , también  `\{a<x<b: 0.1\}|#2d70b3`.
 - pero nunca usar `y=0.10 {a<x<b}|#2d70b3` , también  `{a<x<b: 0.1}|#2d70b3`.
 
+
 ### Patrón general
 
-| Intención                | Sintaxis plugin (✅)              | Sintaxis web (❌)    |
-| ------------------------ | -------------------------------- | ------------------- |
-| Valor fijo en intervalo  | `y=k \{a<x<b\}\|#hex`            | `{a<x<b: k}`        |
-| Función en intervalo     | `y=f(x) \{a<x<b\}\|#hex`         | `{a<x<b: f(x)}`     |
+- Valor constante en intervalo: `y=k|a<x<b|#hex`
+- Función en intervalo: `y=f(x)|a<x<b|#hex`
+- Múltiples tramos: una línea `y=f(x)|a<x<b|#hex` por cada tramo
+- Llaves escapadas (alternativa): `y=f(x) \{a<x<b\}|#hex`
+- Punto de unión entre tramos: `(b, f(b))|open|#hex`
+- Etiquetar un tramo: agregar punto en el centro `(medio, k)|label:texto|#hex`
+- Sintaxis web que NO funciona en el plugin: `{a<x<b: k}` o `{a<x<b: f(x)}`
 
 ### Nota sobre etiquetas en funciones por tramos
 

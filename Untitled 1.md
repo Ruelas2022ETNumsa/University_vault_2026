@@ -40,63 +40,32 @@ y=x^2|#D97706
 ---
 
 
+
 ```desmos-graph
 ---
-y=x
-(2,1)|label:
-```
-
-
-
-### ⚠️ Valor absoluto en texto y tablas Markdown
-
-El símbolo `|` rompe las tablas Markdown. Para valor absoluto en texto o dentro de tablas:
-
-| Contexto | Correcto (✅)          | Incorrecto (❌) |
-| -------- | --------------------- | -------------- |
-| Texto    | `$\vert x \vert$`     | `$|x|$`        |
-| Tablas   | `$\vert f(x) \vert$`  | `$|f(x)|$`     |
-
-```desmos-graph
-y=\sqrt{x}
-```
-
-
-```desmos-graph
-left=-1; right=7; bottom=-0.5; top=0.6;
-width=600; height=180;
----
-y=0
-
 a=1
 b=4
-c=6
+f(x)=x^2|dashed
+y=f(x) |a<x<b|#hex
+```
 
-(a,0)|label:a
-(b,0)|label:b
-(c,0)|label:c
+```desmos-graph
+width=300; height=200;
+left=-3; right=3; bottom=-1; top=5;
+---
+y=x^2|#D97706
 
-y=0.10 \{a<x<b\}|#2d70b3
-y=0.20 \{b<x<c\}|#2d70b3
-y=0.35 \{a<x<c\}|#c74440
+(0,4)|label:Parábola y=x^2|#5E81AC
 ```
 
 
 ```desmos-graph
-left=-1; right=7; bottom=-0.5; top=0.6;
-width=600; height=180;
----
-y=0|#000000
-a=1
-b=4
-c=6
-(a,0)|label:a|#2d70b3
-(b,0)|label:b|#2d70b3
-(c,0)|label:c|#2d70b3
-\{a<x<b: 0.1\}|#2d70b3
-\{b<x<c: 0.1\}|#2d70b3
-\{a<x<c: 0.3\}|label:Transitividad|#c74440
+y=0.10 \{-1<x<1\}|#2d70b3
+(2.5, 0.10)|label:f(x)|#2d70b3|hidden
 ```
+
+
+
 
 ---
 ---
