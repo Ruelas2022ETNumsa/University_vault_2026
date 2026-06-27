@@ -2700,6 +2700,8 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "desmos_notebook_lm 3.md",
+        "desmos_notebook_lm 4.md",
         "desmos_notebook_lm 2.md",
         "desmos_notebook_lm 1.md",
         "desmos_notebook_lm.md",
@@ -2783,6 +2785,14 @@
       "isHidden": false
     },
     "_app/notebooklm/notebooklm-guides/desmos_notebook_lm 2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/notebooklm-guides/desmos_notebook_lm 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/notebooklm-guides/desmos_notebook_lm 4.md": {
       "isPinned": false,
       "isHidden": false
     }

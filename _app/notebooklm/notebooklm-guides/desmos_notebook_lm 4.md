@@ -512,7 +512,6 @@ y=0.35 |a<x<c|#C1121F
 - igual funciona con la notación de  `y=0.10 \{a<x<b\}` , también  `\{a<x<b: 0.1\}`.
 - pero nunca usar `y=0.10 {a<x<b}` , también  `{a<x<b: 0.1}`.
 
->`\{` y `\}` son llaves escapadas — el backslash es obligatorio. `{...}` sin backslash no funciona en el plugin.
 
 #### Patrón general
 

@@ -8,6 +8,7 @@
 | f(x) con dominio fijo           | `f(x)=x^2\{0<=x<=3\}`                          |
 | f(x) con dominio por variables  | `a=1` / `b=4` / `y=f(x)\{a<x<b\}` / `f(x)=x^3` |
 | f(x) oculta, solo f'(x) visible | `f(x)=x^2\|hidden` luego `y=f'(x)`             |
+|                                 |                                                |
 ```desmos-graph
 y = 2x + 9 | #005F73
 y = 2x + 7 | #0A9396
@@ -68,8 +69,8 @@ y = 2x - 9 | #D1D0D1 | dashed
 
 
 ```desmos-graph
-f(x)=x^2|hidden
-y=f'(x)
+a(x)=x^2|hidden
+y=a'(x)
 
 
 ```
@@ -79,8 +80,8 @@ y=f'(x)
 width=400; height=300;
 left=-3; right=3; bottom=-2; top=10;
 ---
-f(x)=x^2|#D97706
-y=f'(x)|#5E81AC
+b(x)=x^2|#D97706
+y=b'(x)|#5E81AC
 (1,2)|label:x² + y² = r²|hidden
 
 
@@ -116,18 +117,19 @@ y=f'(x)|#5E81AC
 
 
 ```desmos-graph
+pi=3
 width=400; height=300;
-left=-3; right=3; bottom=-2; top=10;
+left=pi; right=3; bottom=-2; top=10;
 ---
 f(x)=x^2|#D97706
-y=derivative(f,x)|#5E81AC
 ```
 
 ```desmos-graph
 width=400; height=300;
 left=-1; right=3; bottom=-1; top=5;
 ---
-y=x^2|#D97706
+pi=3.1416
+y=x^pi|#D97706
 0<y<=x^2|0<=x<=2|#5E81AC
 ```
 
