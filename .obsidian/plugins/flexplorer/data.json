@@ -2700,6 +2700,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "desmos_notebook_lm 2.md",
         "desmos_notebook_lm 1.md",
         "desmos_notebook_lm.md",
         "MAT101-transcription_guide 1.md",
@@ -2778,6 +2779,10 @@
       "isHidden": false
     },
     "_app/_appnotes/desmos_guide 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/notebooklm-guides/desmos_notebook_lm 2.md": {
       "isPinned": false,
       "isHidden": false
     }
