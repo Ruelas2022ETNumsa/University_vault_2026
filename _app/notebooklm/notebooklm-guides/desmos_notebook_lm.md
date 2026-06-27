@@ -149,29 +149,17 @@ Para rectas numéricas usar ratio horizontal (3:1). Para funciones estándar rat
 | y = sgn(x)                      | `y=\operatorname{sgn}(x)`                                   |
 | distancia al entero más cercano | `y=\min(\operatorname{mod}(x,1),1-\operatorname{mod}(x,1))` |
 
+
+
 #### Notación funcional y derivadas
 
-| Matemática                      | Código Desmos                      |
-| ------------------------------- | ---------------------------------- |
-| f(x) = expresión                | `f(x)=x^2`                         |
-| y = f'(x)                       | `y=f'(x)`                          |
-| f(x) con dominio                | `f(x)=x^2\|0<=x<=3`                |
-| f(x) oculta, solo f'(x) visible | `f(x)=x^2\|hidden` luego `y=f'(x)` |
-
-
-#### Notación funcional y derivadas claude xxxx
-
-| Matemática                      | Código Desmos                      |
-| ------------------------------- | ---------------------------------- |
-| f(x) = expresión                | `f(x)=x^2`                         |
-| y = f'(x)                       | `y=f'(x)`                          |
-| f(x) con dominio fijo           | `f(x)=x^2\|0<=x<=3`                |
-| f(x) con dominio por variables  | `a=1` / `b=4` / `y=f(x)\|a<x<b`    |
-| f(x) oculta, solo f'(x) visible | `f(x)=x^2\|hidden` luego `y=f'(x)` |
-
-
-
-
+| Matemática                      | Código Desmos                                  |
+| ------------------------------- | ---------------------------------------------- |
+| f(x) = expresión                | `f(x)=x^2`                                     |
+| y = f'(x)                       | `y=f'(x)`                                      |
+| f(x) con dominio fijo           | `f(x)=x^2\{0<=x<=3\}`                          |
+| f(x) con dominio por variables  | `a=1` / `b=4` / `f(x)=x^3` / `y=f(x)\{a<x<b\}` |
+| f(x) oculta, solo f'(x) visible | `f(x)=x^2\|hidden` luego `y=f'(x)`             |
 
 ---
 

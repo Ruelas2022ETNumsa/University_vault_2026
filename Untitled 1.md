@@ -1,4 +1,22 @@
 
+#### Notación funcional y derivadas claude xxxx
+
+| Matemática                      | Código Desmos                                  |
+| ------------------------------- | ---------------------------------------------- |
+| f(x) = expresión                | `f(x)=x^2`                                     |
+| y = f'(x)                       | `y=f'(x)`                                      |
+| f(x) con dominio fijo           | `f(x)=x^2\{0<=x<=3\}`                          |
+| f(x) con dominio por variables  | `a=1` / `b=4` / `y=f(x)\{a<x<b\}` / `f(x)=x^3` |
+| f(x) oculta, solo f'(x) visible | `f(x)=x^2\|hidden` luego `y=f'(x)`             |
+
+
+
+```desmos-graph
+f(x)=x^2|hidden
+y=f'(x)
+
+
+```
 
 
 ```desmos-graph
