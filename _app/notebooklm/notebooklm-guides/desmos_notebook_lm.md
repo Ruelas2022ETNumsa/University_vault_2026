@@ -19,7 +19,7 @@ status: activo
 # 📈 GUÍA UNIFICADA DE DESMOS PARA OBSIDIAN
 
 > Plugin: `obsidian-desmos` — renderiza gráficas de [desmos.com](https://www.desmos.com/calculator) directamente en tus notas.
-> Este documento está organizado en tres bloques: **Reglas de sintaxis (N1–N9, incluyendo N4.5)**, **Checklist y ejemplos técnicos (N10–N11)**, y **Biblioteca de ejemplos por tema MAT101 (N13–N20)**.
+> Este documento está organizado en tres bloques: **Reglas de sintaxis (N1–N10)**, **Checklist y ejemplos técnicos (N11–N12)**, y **Biblioteca de ejemplos por tema MAT101 (N13–N20)**.
 
 ---
 
@@ -163,7 +163,7 @@ Para rectas numéricas usar ratio horizontal (3:1). Para funciones estándar rat
 
 ---
 
-### N4.5 CONSTANTES Y FUNCIONES DEFINIDAS POR EL USUARIO
+### N5 CONSTANTES Y FUNCIONES DEFINIDAS POR EL USUARIO
 
 #### Constantes escalares
 
@@ -229,7 +229,7 @@ f(y)=y^2     → función de y (curva horizontal)
 
 ---
 
-### N5. MODIFICADORES Y COLORES
+### N6. MODIFICADORES Y COLORES
 
 ```
 |#hex          → color (SIEMPRE usar hex)
@@ -294,7 +294,7 @@ El plugin acepta nombres (`RED`, `BLUE`, etc.) pero producen colores saturados y
 
 ---
 
-### N6. ÁREAS SOMBREADAS
+### N7. ÁREAS SOMBREADAS Y FUNCIONES POR TRAMOS
 
 Usar inecuaciones con todas las condiciones en **una sola línea**:
 
@@ -342,9 +342,9 @@ width=500; height=500;
 ---
 n=0.5
 y=x^2|0<=x<=4|#005F73
-y=x^{1/2}|0<=x<=4|#C1121F
+y=x^{1/2}|0<=x<=4|#0A9396
 x<y^2|y<x^n|x>0|y>0|#BFD7DC
-x>y^2|y>x^n|x>0|y>0|#D8E6BF
+x>y^2|y>x^n|x>0|y>0|#C2E4E5
 ```
 
 #### ⚠️ Llaves `{}` — solo válidas en la primera posición
@@ -371,9 +371,64 @@ x<y^{2/3}|y<x^n|x>0|y>0|#BFD7DC
 
 También funciona `n=1/2` — Desmos evalúa ambas formas correctamente.
 
+#### Funciones por tramos
+
+**Forma preferida** — separador `|`:
+
+```desmos-graph
+---
+y=1.5|-1<x<5|#005F73
+```
+
+Alternativa válida con llaves escapadas — documentada pero no preferida:
+
+```desmos-graph
+---
+y=1.5\{-1<x<5\}|#005F73
+```
+
+> `\{` y `\}` son llaves escapadas — el backslash es obligatorio. `{...}` sin backslash no funciona en el plugin.
+
+##### Ejemplo completo — función escalonada
+
+```desmos-graph
+left=-1; right=7; bottom=-0.5; top=0.6;
+width=600; height=180;
+---
+y=0
+
+a=1
+b=4
+c=6
+
+(a,0)|label:a
+(b,0)|label:b
+(c,0)|label:c
+
+y=0.10|a<x<b|#005F73
+y=0.20|b<x<c|#005F73
+y=0.35|a<x<c|#0A9396
+```
+
+- La forma preferida es `y=0.10|a<x<b|#005F73` con separador `|`.
+- Alternativa válida con llaves escapadas: `y=0.10\{a<x<b\}|#005F73`, también `\{a<x<b: 0.1\}`.
+- Nunca usar sin escapar: `y=0.10 {a<x<b}` ni `{a<x<b: 0.1}`.
+
+##### Patrón general
+
+- Valor constante en intervalo: `y=k|a<x<b|#hex` — **forma preferida**
+- Función en intervalo: `y=f(x)|a<x<b|#hex`
+- Múltiples tramos: una línea `y=f(x)|a<x<b|#hex` por cada tramo
+- Llaves escapadas (alternativa): `y=f(x)\{a<x<b\}|#hex`
+- Punto de unión entre tramos: `(b, f(b))|open|#hex`
+- Etiquetar un tramo: agregar punto en el centro `(medio, k)|label:texto|#hex`
+- Sintaxis web que NO funciona en el plugin: `{a<x<b: k}` o `{a<x<b: f(x)}`
+
+> Para etiquetas en funciones por tramos → ver N7. PUNTOS Y ETIQUETAS
+
 ---
 
-### N7. PUNTOS Y ETIQUETAS
+### N8. PUNTOS Y ETIQUETAS
 
 Tres tipos de punto — el sólido es default, no lleva modificador:
 
@@ -404,22 +459,22 @@ Tres tipos de punto — el sólido es default, no lleva modificador:
 - Punto visible con etiqueta: `(x,y)|label:texto|#hex`
 ```desmos-graph
 ---
-(0, 2)|label:f(x)
-(1, 1)|label:f(x)|cross
-(2, 0)|label:f(x)|open
+(0, 2)|label:f(x)|#005F73
+(1, 1)|label:f(x)|cross|#005F73
+(2, 0)|label:f(x)|open|#005F73
 ```
 
 - Solo etiqueta, punto oculto: `(x,y)|label:texto|hidden`
 ```desmos-graph
 ---
-(0, 2)|label:f(x)|hidden
-(1, 1)|label:f(x)|cross|hidden
-(2, 0)|label:f(x)|open|hidden
+(0, 2)|label:f(x)|hidden|#005F73
+(1, 1)|label:f(x)|cross|hidden|#005F73
+(2, 0)|label:f(x)|open|hidden|#005F73
 ```
 
 ---
 
-### N8. VALOR ABSOLUTO
+### N9. VALOR ABSOLUTO
 
 El plugin soporta `\abs()` para valor absoluto simple — es la forma preferida para curvas.
 
@@ -453,7 +508,7 @@ y>=x|y>=-x|y<=3|#C2E4E5
 
 ---
 
-### N9. RAÍZ CUADRADA — TRES FORMAS VÁLIDAS
+### N10. RAÍZ CUADRADA — TRES FORMAS VÁLIDAS
 
 Usar en orden de preferencia:
 
@@ -483,16 +538,13 @@ y=\sqrt(x)
 y=sqrt{x}
 ```
 
-
-
-
 ---
 
 ## BLOQUE B — CHECKLIST Y EJEMPLOS TÉCNICOS
 
 ---
 
-### N10. EJEMPLOS TÉCNICOS DE REFERENCIA
+### N11. EJEMPLOS TÉCNICOS DE REFERENCIA
 
 Estos ejemplos ilustran técnicas de sintaxis, no temas específicos.
 
@@ -511,12 +563,12 @@ y=x^2|#005F73
 left=-0.2; right=1.5; bottom=-0.2; top=2.5;
 width=300; height=200;
 ---
-y=x|0<=x<=1|#C1121F|SOLID
-y=2-x|0<=x<=1|#005F73|SOLID
-x=0|0<=y<=2|#A3A2A4|DASHED
+y=x|0<=x<=1|#005F73|SOLID
+y=2-x|0<=x<=1|#0A9396|SOLID
+x=0|0<=y<=2|#80AFB9|DASHED
 y<2-x|y>x|x>=0|x<=1|#BFD7DC
-(0,0)|label:(0,0)|#474448
-(1,1)|label:(1,1)|#C1121F
+(0,0)|label:(0,0)|#005F73
+(1,1)|label:(1,1)|#0A9396
 (0,2)|label:(0,2)|#005F73
 ```
 
@@ -529,8 +581,8 @@ width=300; height=200;
 x>=0|x<=1|y>=0|y<=1|#BFD7DC
 x=1|0<=y<=1|#80AFB9|DASHED
 y=1|0<=x<=1|#80AFB9|DASHED
-(0,0)|label:(0,0)|#474448
-(1,1)|label:(1,1)|#474448
+(0,0)|label:(0,0)|#005F73
+(1,1)|label:(1,1)|#005F73
 ```
 
 #### Región entre curva y recta
@@ -539,17 +591,17 @@ y=1|0<=x<=1|#80AFB9|DASHED
 left=-0.1; right=1.3; bottom=-0.1; top=1.3;
 width=300; height=200;
 ---
-y=x|0<=x<=1|#C1121F|SOLID
-y=x^{1/2}|0<=x<=1|#629900|SOLID
-y<x^{1/2}|y>x|0<=x<=1|#D8E6BF
-(0,0)|label:(0,0)|#474448
-(1,1)|label:(1,1)|#474448
+y=x|0<=x<=1|#005F73|SOLID
+y=x^{1/2}|0<=x<=1|#0A9396|SOLID
+y<x^{1/2}|y>x|0<=x<=1|#BFD7DC
+(0,0)|label:(0,0)|#005F73
+(1,1)|label:(1,1)|#005F73
 ```
 
 
 ---
 
-### N11. CHECKLIST ANTES DE RESPONDER
+### N12. CHECKLIST ANTES DE RESPONDER
 
 Antes de entregar un bloque Desmos verificar:
 
@@ -590,9 +642,9 @@ Todos los ejemplos de esta sección han sido confirmados y renderizan correctame
 left=-1; right=5; bottom=-1; top=1;
 width=300; height=100;
 ---
-(1,0)|open|label:a|#C1121F
-(3,0)|open|label:b|#C1121F
-y=0|1<x<3|#C1121F
+(1,0)|open|label:a|#005F73
+(3,0)|open|label:b|#005F73
+y=0|1<x<3|#005F73
 ```
 
 #### Intervalo cerrado \[a, b\]
@@ -717,7 +769,7 @@ y=x^4-4x^2+3|#005F73
 left=-3; right=3; bottom=-4; top=4;
 width=300; height=200;
 ---
-y=x^3-3x|#005F73
+y=x^3-3x|#0A9396
 ```
 
 #### Potenciales generalizadas
@@ -726,28 +778,28 @@ y=x^3-3x|#005F73
 left=-0.5; right=4; bottom=-0.5; top=4;
 width=300; height=200;
 ---
-y=x^{3/2}|#005F73
+y=x^{3/2}|#EE9B00
 ```
 
 ```desmos-graph
 left=-0.5; right=7; bottom=-0.5; top=5;
 width=300; height=200;
 ---
-y=x^{-1/2}|#005F73
+y=x^{-1/2}|#BB3E03
 ```
 
 ```desmos-graph
 left=-10; right=10; bottom=-0.5; top=5;
 width=300; height=200;
 ---
-y=x^{2/3}|#005F73
+y=x^{2/3}|#629900
 ```
 
 ```desmos-graph
 left=-5; right=5; bottom=-0.5; top=5;
 width=300; height=200;
 ---
-y=x^{-2/3}|#005F73
+y=x^{-2/3}|#5A189A
 ```
 
 #### Exponenciales y logarítmicas
@@ -756,28 +808,28 @@ y=x^{-2/3}|#005F73
 left=-5; right=3; bottom=-0.5; top=5;
 width=300; height=200;
 ---
-y=2^x|#005F73
+y=2^x|#C1121F
 ```
 
 ```desmos-graph
 left=-5; right=3; bottom=-0.5; top=5;
 width=300; height=200;
 ---
-y=e^x|#C1121F
+y=e^x|#DA627D
 ```
 
 ```desmos-graph
 left=-0.5; right=5; bottom=-3; top=2;
 width=300; height=200;
 ---
-y=\log(x)|#629900
+y=\log(x)|#FFD60A
 ```
 
 ```desmos-graph
 left=-0.5; right=5; bottom=-3; top=2;
 width=300; height=200;
 ---
-y=\ln(x)|#EE9B00
+y=\ln(x)|#474448
 ```
 
 #### Trigonométricas
@@ -793,13 +845,13 @@ y=\sin(x)|#005F73
 left=-3.1416; right=3.1416; bottom=-2; top=2;
 width=300; height=200;
 ---
-y=\cos(x)|#C1121F
+y=\cos(x)|#0A9396
 ```
 
 ```desmos-graph
 width=400; height=350;
 ---
-y=\tan(x)|#629900
+y=\tan(x)|#EE9B00
 ```
 
 #### Trigonométricas inversas
@@ -809,10 +861,10 @@ left=-3; right=3; bottom=-3.5; top=3.5;
 width=400; height=350;
 ---
 y=\sin(x)|-3<=x<=3|#80AFB9|DASHED
-y=x|-3<=x<=3|#A3A2A4|DASHED
-y=\arcsin(x)|-1<=x<=1|#EE9B00|SOLID
-(1,1.5708)|label:(1,pi/2)|#EE9B00|cross
-(-1,-1.5708)|label:(-1,-pi/2)|#EE9B00|cross
+y=x|-3<=x<=3|#85C9CB|DASHED
+y=\arcsin(x)|-1<=x<=1|#BB3E03|SOLID
+(1,1.5708)|label:(1,pi/2)|#BB3E03|cross
+(-1,-1.5708)|label:(-1,-pi/2)|#BB3E03|cross
 ```
 
 ```desmos-graph
@@ -820,11 +872,11 @@ left=-3; right=3; bottom=-3.5; top=3.5;
 width=400; height=350;
 ---
 y=\cos(x)|-3<=x<=3|#80AFB9|DASHED
-y=x|-3<=x<=3|#A3A2A4|DASHED
-y=\arccos(x)|-1<=x<=1|#EE9B00|SOLID
-(1,0)|label:(1,0)|#EE9B00|cross
-(0,1.5708)|label:(0,pi/2)|#EE9B00|cross
-(-1,3.1416)|label:(-1,pi)|#EE9B00|cross
+y=x|-3<=x<=3|#85C9CB|DASHED
+y=\arccos(x)|-1<=x<=1|#629900|SOLID
+(1,0)|label:(1,0)|#629900|cross
+(0,1.5708)|label:(0,pi/2)|#629900|cross
+(-1,3.1416)|label:(-1,pi)|#629900|cross
 ```
 
 ```desmos-graph
@@ -832,13 +884,13 @@ left=-3; right=3; bottom=-3; top=3;
 width=400; height=350;
 ---
 y=\tan(x)|-1.55<=x<=1.55|#80AFB9|DASHED
-y=x|-7<=x<=7|#A3A2A4|DASHED
-y=\arctan(x)|-7<=x<=7|#EE9B00|SOLID
+y=x|-7<=x<=7|#85C9CB|DASHED
+y=\arctan(x)|-7<=x<=7|#5A189A|SOLID
 x=-1.5708|-3<=y<=3|#80AFB9|DASHED
 x=1.5708|-3<=y<=3|#80AFB9|DASHED
-y=-1.5708|-7<=x<=7|#E0898F|DASHED
-y=1.5708|-7<=x<=7|#E0898F|DASHED
-(0,0)|label:(0,0)|#EE9B00|cross
+y=-1.5708|-7<=x<=7|#F7CD80|DASHED
+y=1.5708|-7<=x<=7|#F7CD80|DASHED
+(0,0)|label:(0,0)|#5A189A|cross
 ```
 
 #### Hiperbólicas
@@ -847,15 +899,15 @@ y=1.5708|-7<=x<=7|#E0898F|DASHED
 left=-2; right=2; bottom=-2; top=2;
 width=300; height=200;
 ---
-y=\sinh(x)|#005F73
+y=\sinh(x)|#C1121F
 ```
 
 ```desmos-graph
 left=-2; right=2; bottom=-0.5; top=4;
 width=300; height=200;
 ---
-y=\cosh(x)|#EE9B00
-(0,1)|label:(0,1)|#EE9B00|cross
+y=\cosh(x)|#DA627D
+(0,1)|label:(0,1)|#DA627D|cross
 ```
 
 #### Valor absoluto (`\abs()`)
@@ -864,28 +916,28 @@ y=\cosh(x)|#EE9B00
 left=-2; right=2; bottom=-0.5; top=2;
 width=300; height=200;
 ---
-y=\abs(x)|#005F73
+y=\abs(x)|#FFD60A
 ```
 
 ```desmos-graph
 left=-1; right=4; bottom=-0.5; top=4;
 width=300; height=200;
 ---
-y=\abs(2x-3)|#C1121F
+y=\abs(2x-3)|#474448
 ```
 
 ```desmos-graph
 left=-1; right=5; bottom=-0.5; top=3;
 width=300; height=200;
 ---
-y=\abs(x^{2}-4x+3)|#629900
+y=\abs(x^{2}-4x+3)|#005F73
 ```
 
 ```desmos-graph
 left=-5; right=5; bottom=-0.5; top=6;
 width=300; height=200;
 ---
-y=\abs(\abs(x^{2}-4)-4)|#5A189A
+y=\abs(\abs(x^{2}-4)-4)|#0A9396
 ```
 
 #### Parte entera (`\floor()`)
@@ -903,9 +955,9 @@ y=\floor(x)|#EE9B00
 left=-2; right=2; bottom=-2; top=2;
 width=300; height=200;
 ---
-y=\operatorname{sgn}(x)|#EE9B00
-(0,-1)|#EE9B00|open
-(0,1)|#EE9B00|open
+y=\operatorname{sgn}(x)|#BB3E03
+(0,-1)|#BB3E03|open
+(0,1)|#BB3E03|open
 ```
 
 #### Función escalón y por tramos
@@ -914,10 +966,10 @@ y=\operatorname{sgn}(x)|#EE9B00
 left=-2; right=2; bottom=-1; top=2;
 width=300; height=200;
 ---
-y=0|-2<=x<0|#005F73
-y=1|0<=x<=2|#005F73
-(0,0)|#005F73|open
-(0,1)|label:(0,1)|#005F73
+y=0|-2<=x<0|#629900
+y=1|0<=x<=2|#5A189A
+(0,0)|#629900|open
+(0,1)|label:(0,1)|#5A189A
 ```
 
 ```desmos-graph
@@ -925,15 +977,15 @@ left=-3; right=10; bottom=-3; top=15;
 width=320; height=250;
 ---
 y=x|-3<=x<0|#005F73
-y=3x|0<=x<4|#005F73
-y=-3x+24|4<=x<8|#005F73
-y=0|8<=x<=10|#005F73
+y=3x|0<=x<4|#0A9396
+y=-3x+24|4<=x<8|#EE9B00
+y=0|8<=x<=10|#BB3E03
 (0,0)|label:(0,0)|#005F73
-(4,12)|label:(4,12)|#005F73
-(8,0)|label:(8,0)|#005F73
+(4,12)|label:(4,12)|#0A9396
+(8,0)|label:(8,0)|#EE9B00
 (0,0)|#005F73|open
-(4,12)|#005F73|open
-(8,0)|#005F73|open
+(4,12)|#0A9396|open
+(8,0)|#EE9B00|open
 ```
 
 #### Función distancia al entero más cercano
@@ -942,7 +994,7 @@ y=0|8<=x<=10|#005F73
 left=-2; right=2; bottom=-0.5; top=1;
 width=300; height=200;
 ---
-y=\min(\operatorname{mod}(x,1),1-\operatorname{mod}(x,1))|#5A189A
+y=\min(\operatorname{mod}(x,1),1-\operatorname{mod}(x,1))|#C1121F
 ```
 
 ---
