@@ -33,7 +33,7 @@ Instrucciones para que NotebookLM genere bloques Desmos correctos listos para co
 
 ---
 
-## N1. REGLA CRÍTICA — EL `---` ES SIEMPRE OBLIGATORIO
+### N1. REGLA CRÍTICA — EL `---` ES SIEMPRE OBLIGATORIO
 
 **Sin `---` el plugin no renderiza nada.** No importa si hay configuración o no.
 
@@ -61,7 +61,7 @@ y=x^2|#2d70b3
 
 ---
 
-## N2. ESTRUCTURA OBLIGATORIA
+### N2. ESTRUCTURA OBLIGATORIA
 
 ```
 [parámetros terminados en ;]
@@ -73,7 +73,7 @@ Regla de orden: **parámetros arriba → `---` → ecuaciones abajo**. Sin excep
 
 ---
 
-## N3. PARÁMETROS DE CONFIGURACIÓN
+### N3. PARÁMETROS DE CONFIGURACIÓN
 
 | Parámetro | Qué hace           | Valor típico |
 | --------- | ------------------ | ------------ |
@@ -98,37 +98,53 @@ Para rectas numéricas usar ratio horizontal (3:1). Para funciones estándar rat
 
 ---
 
-## N4. SINTAXIS DE ECUACIONES
+### N4. SINTAXIS DE ECUACIONES
 
-| Matemática    | Código              |
-| ------------- | ------------------- |
-| y = x²        | `y=x^2`             |
-| y = √x        | `y=x^{1/2}`         |
-| y = 1/x       | `y=1/x`             |
-| y = eˣ        | `y=e^x`             |
-| y = sin(x)    | `y=\sin(x)`         |
-| x² + y² = r² | `x^2+y^2=r^2`       |
+| Matemática                      | Código Desmos                                               |
+| ------------------------------- | ----------------------------------------------------------- |
+| y = xⁿ (entero)                 | `y=x^2`, `y=x^3`                                            |
+| y = x^(p/q)                     | `y=x^{3/2}`, `y=x^{2/3}`                                    |
+| y = x^(-p/q)                    | `y=x^{-1/2}`, `y=x^{-2/3}`                                  |
+| y = 1/x                         | `y=1/x`                                                     |
+| x² + y² = r²                    | `x^2+y^2=r^2`                                               |
+| y = 2^x                         | `y=2^x`                                                     |
+| y = eˣ                          | `y=e^x`                                                     |
+| y = log(x)                      | `y=\log(x)`                                                 |
+| y = ln(x)                       | `y=\ln(x)`                                                  |
+| y = sin(x)                      | `y=\sin(x)`                                                 |
+| y = cos(x)                      | `y=\cos(x)`                                                 |
+| y = tan(x)                      | `y=\tan(x)`                                                 |
+| y = arcsin(x)                   | `y=\arcsin(x)\|-1<=x<=1`                                    |
+| y = arccos(x)                   | `y=\arccos(x)\|-1<=x<=1`                                    |
+| y = arctan(x)                   | `y=\arctan(x)`                                              |
+| y = sinh(x)                     | `y=\sinh(x)`                                                |
+| y = cosh(x)                     | `y=\cosh(x)`                                                |
+| y = \|x\|                       | `y=\abs(x)`                                                 |
+| y = \|f(x)\| compuesta          | `y=\abs(x^{2}-4x+3)`                                        |
+| y = ⌊x⌋                         | `y=\floor(x)`                                               |
+| y = sgn(x)                      | `y=\operatorname{sgn}(x)`                                   |
+| distancia al entero más cercano | `y=\min(\operatorname{mod}(x,1),1-\operatorname{mod}(x,1))` |
 
 ---
 
-## N5. MODIFICADORES Y COLORES
+### N5. MODIFICADORES Y COLORES
 
 ```
 |#hex          → color (SIEMPRE usar hex)
 |SOLID         → línea sólida (default)
-|DASHED        → línea punteada larga
-|DOTTED        → línea punteada corta
+|DASHED        → línea segmentada
+|DOTTED        → línea punteada
 |0<=x<=1       → restricción de dominio
 |hidden        → ocultar curva
 |open          → punto vacío (discontinuidad)
 |cross         → punto con cruz
 ```
 
-### ⚠️ Regla de color: SIEMPRE hex, NUNCA nombres en mayúsculas
+#### ⚠️ Regla de color: SIEMPRE hex, NUNCA nombres en mayúsculas
 
 El plugin acepta nombres (`RED`, `BLUE`, etc.) pero producen colores saturados y duros. Usar siempre hex.
 
-### Paleta para curvas y líneas
+#### Paleta para curvas y líneas
 
 ```
 #c74440   → rojo medio      (curva principal / frontera)
@@ -139,7 +155,7 @@ El plugin acepta nombres (`RED`, `BLUE`, etc.) pero producen colores saturados y
 #000000   → negro           (ejes, bordes, auxiliares)
 ```
 
-### Paleta para rellenos (áreas sombreadas)
+#### Paleta para rellenos (áreas sombreadas)
 
 ```
 #a5d8ff   → azul claro      (región / área principal)
@@ -153,7 +169,7 @@ El plugin acepta nombres (`RED`, `BLUE`, etc.) pero producen colores saturados y
 
 ---
 
-## N6. ÁREAS SOMBREADAS
+### N6. ÁREAS SOMBREADAS
 
 Usar inecuaciones con todas las condiciones en **una sola línea**:
 
@@ -161,7 +177,7 @@ Usar inecuaciones con todas las condiciones en **una sola línea**:
 y<3-x|y>x-3|x>=-4|x<=2|#a5d8ff
 ```
 
-### ⚠️ Rectángulos sombreados — cuatro condiciones obligatorias
+#### ⚠️ Rectángulos sombreados — cuatro condiciones obligatorias
 
 Para sombrear una región rectangular incluir SIEMPRE las cuatro restricciones en una sola línea:
 
@@ -171,7 +187,7 @@ x>=0|x<=1|y>=0|y<=1|#a5d8ff
 
 No usar `y<=1|y>=0` sin las restricciones de x — Desmos extenderá el relleno fuera del rectángulo.
 
-### Región entre dos curvas
+#### Región entre dos curvas
 
 ```desmos-graph
 left=-0.5; right=5.5;
@@ -184,7 +200,7 @@ y=x
 
 ---
 
-## N7. PUNTOS Y ETIQUETAS
+### N7. PUNTOS Y ETIQUETAS
 
 ```desmos-graph
 (1,2)|label:(1,2)|#000000
@@ -192,7 +208,7 @@ y=x
 (1,2)|cross|label:(1,2)|#000000
 ```
 
-### ⚠️ Fracciones en etiquetas — solo slash
+#### ⚠️ Fracciones en etiquetas — solo slash
 
 `\frac{}{}` no renderiza en `label:` — aparece el texto literal. Usar siempre slash:
 
@@ -210,11 +226,11 @@ El símbolo `|` rompe las tablas Markdown. Para valor absoluto en texto o dentro
 
 ---
 
-## N8. VALOR ABSOLUTO
+### N8. VALOR ABSOLUTO
 
 El plugin soporta `\abs()` para valor absoluto simple — es la forma preferida para curvas.
 
-### Forma con `\abs()` — primera opción para curvas:
+#### Forma con `\abs()` — primera opción para curvas:
 
 ```
 y=\abs(x)
@@ -223,7 +239,7 @@ y=\abs(x^{2}-4x+3)
 y=\abs(\abs(x^{2}-4)-4)
 ```
 
-### Forma por tramos — obligatoria para regiones sombreadas:
+#### Forma por tramos — obligatoria para regiones sombreadas:
 
 `\abs()` no funciona en condiciones de relleno. Usar tramos:
 
@@ -234,7 +250,7 @@ y=2|#000000|DASHED
 -2<=x<=2|y<=2|y>=0|#a5d8ff
 ```
 
-### Tabla de usos
+#### Tabla de usos
 
 | Intención              | Correcto (✅)                 | Incorrecto (❌)          |
 | ---------------------- | ----------------------------- | ------------------------ |
@@ -244,7 +260,7 @@ y=2|#000000|DASHED
 
 ---
 
-## N9. RAÍZ CUADRADA — TRES FORMAS VÁLIDAS
+### N9. RAÍZ CUADRADA — TRES FORMAS VÁLIDAS
 
 Usar en orden de preferencia:
 
@@ -264,13 +280,20 @@ x=y^2
 y>=0
 ```
 
-### ⚠️ Formas que NO funcionan — nunca usar:
+#### ⚠️ Formas que NO funcionan — nunca usar:
 
 ```
 y=sqrt(x)
 y=\sqrt(x)
 y=sqrt{x}
 ```
+
+
+
+
+
+
+
 
 ---
 

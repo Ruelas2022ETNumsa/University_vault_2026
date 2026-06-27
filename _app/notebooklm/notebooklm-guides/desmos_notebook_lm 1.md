@@ -80,13 +80,13 @@ y=x^2|BLUE
 
 **Tamaños estándar confirmados:**
 
-| Tipo | width | height | Uso |
-|------|-------|--------|-----|
-| Pequeño | 300 | 200 | Rectas numéricas, intervalos, un punto |
-| Mediano | 400 | 350 | Funciones, parábolas, trigonométricas |
-| Grande | 550 | 450 | Múltiples curvas, etiquetas, regiones |
-| Cornell | 320 | 250 | Máximo dentro de bloque multi-column |
-| Plano cuadrado | 500 | 500 | Probabilidad, geometría |
+| Tipo           | width | height | Uso                                    |
+| -------------- | ----- | ------ | -------------------------------------- |
+| Pequeño        | 300   | 200    | Rectas numéricas, intervalos, un punto |
+| Mediano        | 400   | 350    | Funciones, parábolas, trigonométricas  |
+| Grande         | 550   | 450    | Múltiples curvas, etiquetas, regiones  |
+| Cornell        | 320   | 250    | Máximo dentro de bloque multi-column   |
+| Plano cuadrado | 500   | 500    | Probabilidad, geometría                |
 
 Para rectas numéricas usar ratio horizontal (3:1). Para funciones estándar ratio 4:3.
 
