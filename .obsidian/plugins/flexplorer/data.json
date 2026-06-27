@@ -1310,6 +1310,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "desmos_guide 1.md",
         "desmos_guide.md",
         "PDF_PP-guide.md",
         "better-export-pdf.md",
@@ -2699,6 +2700,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "desmos_notebook_lm 1.md",
         "desmos_notebook_lm.md",
         "MAT101-transcription_guide 1.md",
         "ETN806-P3-colas_guide_s.md",
@@ -2768,6 +2770,14 @@
       "isHidden": false
     },
     "_app/notebooklm/notebooklm-guides/desmos_notebook_lm.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/notebooklm-guides/desmos_notebook_lm 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_appnotes/desmos_guide 1.md": {
       "isPinned": false,
       "isHidden": false
     }

@@ -428,13 +428,23 @@ y=0.35 |a<x<c|#c74440
 - Etiquetar un tramo: agregar punto en el centro `(medio, k)|label:texto|#hex`
 - Sintaxis web que NO funciona en el plugin: `{a<x<b: k}` o `{a<x<b: f(x)}`
 
-### Nota sobre etiquetas en funciones por tramos
+### Etiquetas en funciones por tramos
 
-`label:` solo funciona en puntos. Para etiquetar un tramo, agregar un punto en el centro:
+`label:` solo funciona en puntos, no en líneas. Dos usos:
+
+- Punto visible con etiqueta: 
 
 ```desmos-graph
-y=0.10 \{a<x<b\}|#2d70b3
-(2.5, 0.10)|label:f(x)|#2d70b3
+(0, 2)|label:f(x)
+(1, 1)|label:f(x)|cross
+(2, 0)|label:f(x)|open
+```
+- Solo etiqueta, punto oculto (útil para nombrar funciones):
+
+```desmos-graph
+(0, 2)|label:f(x)|hidden
+(1, 1)|label:f(x)|cross|hidden
+(2, 0)|label:f(x)|open|hidden
 ```
 
 ---
@@ -445,7 +455,7 @@ Todos los ejemplos de esta sección han sido confirmados y renderizan correctame
 
 **Reglas críticas de sintaxis (recordatorio):**
 - Potencias siempre con `{}`: `x^{3/2}` nunca `x^(3/2)`
-- Palabras reservadas con `\`: `\cos`, `\sin`, `\ln`
+- Palabras reservadas con `\`: `\cos`, `\sin`, `\ln`, `\frac{}{}`
 - Funciones especiales: `\abs()`, `\floor()`, `\operatorname{sgn}()`, `\operatorname{mod}()`
 - Colores de la paleta oficial únicamente
 
@@ -461,19 +471,17 @@ Todos los ejemplos de esta sección han sido confirmados y renderizan correctame
 width=300; height=100;
 left=-1; right=5; bottom=-1; top=1;
 ---
-y=0|-1<=x<=5|#000000
 (1,0)|open|label:a|#c74440
 (3,0)|open|label:b|#c74440
 y=0|1<x<3|#c74440
 ```
 
-### Intervalo cerrado [a, b]
+### Intervalo cerrado \[a, b\]
 
 ```desmos-graph
 width=300; height=100;
 left=-1; right=5; bottom=-1; top=1;
 ---
-y=0|-1<=x<=5|#000000
 (1,0)|label:a|#2d70b3
 (3,0)|label:b|#2d70b3
 y=0|1<=x<=3|#2d70b3
@@ -485,14 +493,15 @@ y=0|1<=x<=3|#2d70b3
 width=300; height=200;
 left=-4; right=4; bottom=-0.5; top=4;
 ---
-y=\abs(x)|#2d70b3
+y=\abs(x)|y<2|#2d70b3
+
 ```
 
 ### Valor absoluto — región $\vert x \vert \leq a$
 
 ```desmos-graph
 left=-5; right=5; bottom=-1; top=5;
-width=400; height=200;
+width=300; height=200;
 ---
 y=x \{x>=0\}|#2d70b3
 y=-x \{x<=0\}|#2d70b3
@@ -501,6 +510,25 @@ y=2|#000000|DASHED
 (-2,0)|open|label:-a|#c74440
 (2,0)|open|label:a|#c74440
 ```
+
+
+```desmos-graph
+width=300; height=200;
+left=-5; right=5; bottom=-1; top=5;
+---
+y=x\{x>=0\}|#2D70B3
+y=-x\{x<=0\}|#2D70B3
+
+y=2|#777777|DASHED
+
+y>=\abs(x)
+y<=2
+
+(-2,2)|label:(-2,2)|#2D70B3
+(2,2)|label:(2,2)|#2D70B3
+```
+
+
 
 ---
 

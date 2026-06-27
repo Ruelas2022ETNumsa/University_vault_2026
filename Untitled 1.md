@@ -58,10 +58,25 @@ y=x^2|#D97706
 (0,4)|label:Parábola y=x^2|#5E81AC
 ```
 
+```desmos-graph
+width=400; height=120;
+left=-4; right=4; bottom=-1; top=1;
+---
+y=0|-4<=x<=4|#777777
+y=0|-2<=x<=2|#D97706
+
+(-2,0)|label:(-2,0)|#D97706
+(2,0)|label:(2,0)|#D97706
+```
+
+
+
+
 
 ```desmos-graph
 y=0.10 \{-1<x<1\}|#2d70b3
 (2.5, 0.10)|label:f(x)|#2d70b3|hidden
+y=\frac{1}{x}
 ```
 
 
