@@ -129,7 +129,7 @@ Para rectas numéricas usar ratio horizontal (3:1). Para funciones estándar rat
 | y = xⁿ (entero)                 | `y=x^2`, `y=x^3`                                            |
 | y = x^(p/q)                     | `y=x^{3/2}`, `y=x^{2/3}`                                    |
 | y = x^(-p/q)                    | `y=x^{-1/2}`, `y=x^{-2/3}`                                  |
-| y = 1/x                         | `y=1/x, y=\frac{1}{x}`                                                     |
+| y = 1/x                         | `y=1/x`, `y=\frac{1}{x}`                                                     |
 | x² + y² = r²                    | `x^2+y^2=r^2`                                               |
 | y = 2^x                         | `y=2^x`                                                     |
 | y = eˣ                          | `y=e^x`                                                     |
@@ -537,8 +537,8 @@ y=0|1<x<3|#c74440
 #### Intervalo cerrado \[a, b\]
 
 ```desmos-graph
-width=300; height=100;
 left=-1; right=5; bottom=-1; top=1;
+width=300; height=100;
 ---
 (1,0)|label:a|#2d70b3
 (3,0)|label:b|#2d70b3
@@ -548,8 +548,8 @@ y=0|1<=x<=3|#2d70b3
 #### Intervalo mixto \[a, b\[
 
 ```desmos-graph
-width=300; height=100;
 left=-1; right=5; bottom=-1; top=1;
+width=300; height=100;
 ---
 (1,0)|label:a|#2d70b3
 (3,0)|label:b|open|#2d70b3
@@ -559,8 +559,8 @@ y=0|1<=x<3|#2d70b3
 #### Intervalo con infinito \]inf, b\[
 
 ```desmos-graph
-width=300; height=100;
 left=-1; right=5; bottom=-1; top=1;
+width=300; height=100;
 ---
 (3,0)|label:b|open|#2d70b3
 y=0|x<=3|#2d70b3
@@ -569,8 +569,8 @@ y=0|x<=3|#2d70b3
 #### Intervalo con infinito \[a, inf\[
 
 ```desmos-graph
-width=300; height=100;
 left=-1; right=5; bottom=-1; top=1;
+width=300; height=100;
 ---
 (1,0)|label:a|#2d70b3
 y=0|1<=x|#2d70b3
