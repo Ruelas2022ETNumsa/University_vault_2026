@@ -1,3 +1,40 @@
+
+```desmos-graph
+width=400; height=300;
+left=-3; right=3; bottom=-2; top=10;
+---
+f(x)=x^2|#D97706
+y=f'(x)|#5E81AC
+```
+
+```desmos-graph
+width=400; height=300;
+left=-3; right=3; bottom=-2; top=10;
+---
+f(x)=x^2|#D97706
+y=derivative(f,x)|#5E81AC
+```
+
+```desmos-graph
+width=400; height=300;
+left=-1; right=3; bottom=-1; top=5;
+---
+y=x^2|#D97706
+0<y<=x^2|0<=x<=2|#5E81AC
+```
+
+```desmos-graph
+width=400; height=300;
+left=-1; right=3; bottom=-1; top=5;
+---
+y=x^2|#D97706
+0<=y<=x^2\{0<=x<=2\}|#5E81AC
+
+(0,0)|label:(0,0)|#D97706
+(2,4)|label:(2,4)|#D97706
+```
+
+
 # tamaño desmos
 
 **Pequeño — gráficas simples (rectas numéricas, intervalos, un punto):**  

@@ -136,8 +136,9 @@ Para rectas numéricas usar ratio horizontal (3:1). Para funciones estándar rat
 |DOTTED        → línea punteada
 |0<=x<=1       → restricción de dominio
 |hidden        → ocultar curva
-|open          → punto vacío (discontinuidad)
+|open          → punto vacío / discontinuidad abierta
 |cross         → punto con cruz
+(x,y)|#hex    → punto sólido (default, sin modificador extra)
 ```
 
 #### ⚠️ Regla de color: SIEMPRE hex, NUNCA nombres en mayúsculas
@@ -190,13 +191,25 @@ No usar `y<=1|y>=0` sin las restricciones de x — Desmos extenderá el relleno 
 #### Región entre dos curvas
 
 ```desmos-graph
-left=-0.5; right=5.5;
-bottom=-1; top=24;
+left=-0.5; right=5.5; bottom=-1; top=24;
 ---
 x<y<=x^2 \{2<=x<=4\}
 y=x^2
 y=x
 ```
+
+igual funciona la notación `x<y<=x^2|2<=x<=4`
+
+otro ejemplos mas complejo
+
+```desmos-graph
+left=-0.5; right=5.5; bottom=-1; top=24;
+---
+x<y^2|y<x^2|2<x^2-1|x<4y|
+```
+x<y<=x^2|2<=x<=4|
+y<3-x|y>x-3|x>=-4|x<=2|#a5d8ff
+
 
 ---
 
