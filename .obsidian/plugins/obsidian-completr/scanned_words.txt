@@ -20171,6 +20171,7 @@ Series
 Simb
 SIGNO
 SERIES
+Segmentos
 Plugins
 Pendientes
 Plugin
@@ -125855,6 +125856,7 @@ EXACTO
 EXCEPCIONES
 Elegimos
 Exponenciales
+ECUACI
 Obsidian
 OmniSearch
 Ocultar
