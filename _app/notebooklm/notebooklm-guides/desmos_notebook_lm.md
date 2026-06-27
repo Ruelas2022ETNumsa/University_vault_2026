@@ -211,7 +211,7 @@ El plugin acepta nombres (`RED`, `BLUE`, etc.) pero producen colores saturados y
 Usar inecuaciones con todas las condiciones en **una sola línea**:
 
 ```desmos-graph
-
+---
 y<3-x|y>x-3|x>=-4|x<=2|#a5d8ff
 ```
 
@@ -220,6 +220,7 @@ y<3-x|y>x-3|x>=-4|x<=2|#a5d8ff
 Para sombrear una región rectangular incluir SIEMPRE las cuatro restricciones en una sola línea:
 
 ```desmos-graph
+---
 x>=0|x<=1|y>=0|y<=1|#a5d8ff
 ```
 
@@ -268,6 +269,7 @@ Tres tipos de punto — el sólido es default, no lleva modificador:
 - Punto con cruz: `(x,y)|cross|#hex`
 
 ```desmos-graph
+---
 (1,1)|label:(1,1)|#000000
 (1,2)|open|label:(1,2)|#000000
 (1,3)|cross|label:(1,3)|#000000
@@ -288,6 +290,7 @@ Tres tipos de punto — el sólido es default, no lleva modificador:
 
 - Punto visible con etiqueta: `(x,y)|label:texto|#hex`
 ```desmos-graph
+---
 (0, 2)|label:f(x)
 (1, 1)|label:f(x)|cross
 (2, 0)|label:f(x)|open
@@ -295,6 +298,7 @@ Tres tipos de punto — el sólido es default, no lleva modificador:
 
 - Solo etiqueta, punto oculto: `(x,y)|label:texto|hidden`
 ```desmos-graph
+---
 (0, 2)|label:f(x)|hidden
 (1, 1)|label:f(x)|cross|hidden
 (2, 0)|label:f(x)|open|hidden
@@ -309,6 +313,7 @@ El plugin soporta `\abs()` para valor absoluto simple — es la forma preferida 
 #### Forma con `\abs()` — primera opción para curvas:
 
 ```desmos-graph
+---
 y=\abs(x)
 y=\abs(2x-3)
 y=\abs(x^{2}-4x+3)
@@ -320,6 +325,7 @@ y=\abs(\abs(x^{2}-4)-4)
 `\abs()` no funciona en condiciones de relleno. Usar tramos:
 
 ```desmos-graph
+---
 y=\abs(x)|hidden
 y>=x|y>=-x|y<=3|
 ```
@@ -340,16 +346,19 @@ Usar en orden de preferencia:
 
 **Forma 1 — primera opción:**
 ```desmos-graph
+---
 y=x^{1/2}
 ```
 
 **Forma 2 — segunda opción:**
 ```desmos-graph
+---
 y=\sqrt{x}
 ```
 
 **Forma 3 — tercera opción (relación implícita):**
 ```desmos-graph
+---
 x=y^2|y>=0
 ```
 
@@ -453,6 +462,7 @@ Antes de entregar un bloque Desmos verificar:
 **Sintaxis correcta para el plugin:** usar `y=valor \{condición\}` con las llaves escapadas:
 
 ```desmos-graph
+---
 y=1.5\{-1<x<5\}|#2d70b3
 ```
 
@@ -516,8 +526,8 @@ Todos los ejemplos de esta sección han sido confirmados y renderizan correctame
 #### Intervalo abierto \]a, b\[
 
 ```desmos-graph
-width=300; height=100;
 left=-1; right=5; bottom=-1; top=1;
+width=300; height=100;
 ---
 (1,0)|open|label:a|#c74440
 (3,0)|open|label:b|#c74440
