@@ -128,20 +128,19 @@ f(x)=x^2|#D97706
 width=400; height=300;
 left=-1; right=3; bottom=-1; top=5;
 ---
-pi=3.1416
-y=x^pi|#D97706
+y=x^|#D97706
 0<y<=x^2|0<=x<=2|#5E81AC
 ```
 
 ```desmos-graph
 width=400; height=300;
-left=-1; right=3; bottom=-1; top=5;
+left=-3; right=3; bottom=-1; top=5;
 ---
+z=3
 y=x^2|#D97706
 0<=y<=x^2\{0<=x<=2\}|#5E81AC
-
 (0,0)|label:(0,0)|#D97706
-(2,4)|label:(2,4)|#D97706
+(z,4)|label:(2,4)|#D97706
 ```
 
 

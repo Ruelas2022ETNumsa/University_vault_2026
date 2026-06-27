@@ -163,72 +163,6 @@ Para rectas numéricas usar ratio horizontal (3:1). Para funciones estándar rat
 
 ---
 
-### N4.5 CONSTANTES Y FUNCIONES DEFINIDAS POR EL USUARIO
-
-#### Constantes escalares
-
-Desmos permite declarar constantes con cualquier letra del abecedario **excepto `x` e `y`** (reservadas como variables de graficación). Las letras válidas van de `a` a `z` excluyendo `x` e `y`:
-
-```
-a=2
-b=-3
-c=0.5
-```
-
-Luego se usan directamente en ecuaciones y restricciones:
-
-```desmos-graph
----
-a=2
-y=\abs(x)|hidden
-(-a,0)|label:-2|#C1121F
-(a,0)|label:2|#C1121F
-y=0|-a<x<a|#005F73
-```
-
-> **Importante:** las constantes **no pueden usarse en la configuración** (arriba del `---`). `left=a` no funciona — escribir siempre el valor numérico directamente.
-
-**Nota sobre etiquetas:** las constantes no se evalúan dentro de `label:` — se imprimen como texto literal. Si se necesita mostrar el valor en la etiqueta, escribir el número directamente:
-
-`(a,0)|label:2|#C1121F` ✅  
-`(a,0)|label:a|#C1121F` → imprime la letra "a", no el valor `2` ⚠️
-
-#### El valor de π
-
-Desmos reconoce `\pi` como constante nativa dentro de las gráficas (debajo del `---`). Usarlo directamente en ecuaciones y restricciones:
-
-```
-y=\sin(x)|-\pi<=x<=\pi|#005F73     ✅
-```
-
-`\pi` **no funciona en la configuración** (arriba del `---`). Usar el valor numérico:
-
-```
-left=-3.1416; right=3.1416;    ✅
-left=-\pi; right=\pi;          ❌
-```
-
-#### Funciones definidas por el usuario
-
-Las funciones se definen con cualquier letra del abecedario seguida de `(x)` o `(y)`, **excepto `x` e `y`**:
-
-```
-a(x)=x^2
-b(x)=\sin(x)
-f(x)=x^3-3x
-```
-
-La función puede depender de `x` o de `y`:
-
-```
-f(x)=x^2     → función de x (la más común)
-f(y)=y^2     → función de y (curva horizontal)
-```
-
-> **Distinción clave:** `a=2` es una constante escalar. `a(x)=x^2` es una función. Desmos los distingue por la presencia o ausencia de `(x)`.
-
----
-
 ### N5. MODIFICADORES Y COLORES
 
 ```
@@ -811,14 +745,14 @@ y=\ln(x)|#EE9B00
 #### Trigonométricas
 
 ```desmos-graph
-left=-3.1416; right=3.1416; bottom=-2; top=2;
+left=-3.14; right=3.14; bottom=-2; top=2;
 width=300; height=200;
 ---
 y=\sin(x)|#005F73
 ```
 
 ```desmos-graph
-left=-3.1416; right=3.1416; bottom=-2; top=2;
+left=-3.14; right=3.14; bottom=-2; top=2;
 width=300; height=200;
 ---
 y=\cos(x)|#C1121F
