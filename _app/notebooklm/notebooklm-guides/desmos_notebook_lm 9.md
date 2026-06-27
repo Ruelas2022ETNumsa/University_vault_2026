@@ -287,45 +287,6 @@ El plugin acepta nombres (`RED`, `BLUE`, etc.) pero producen colores saturados y
 
 ---
 
-### N6.5. ESTRUCTURA DE UNA LÍNEA DE ECUACIÓN
-
-Cada línea debajo del `---` se divide en segmentos separados por `|`:
-
-```
-expresión | modificador_2 | modificador_3 | ... | #color
-    1     |      2       |      3        |     |   n
-```
-
-- **Segmento 1** — la expresión principal: ecuación, inecuación, punto, o constante
-- **Segmentos 2+** — modificadores opcionales en cualquier orden: restricciones de dominio, `hidden`, `open`, `cross`, `DASHED`, `DOTTED`, color hex
-- El color hex siempre va al final, pero el plugin lo acepta en cualquier posición
-
-#### ⚠️ Llaves `{}` — solo válidas en el segmento 1
-
-Las llaves `{}` (usadas en potencias fraccionarias como `x^{1/2}`) **solo funcionan en el segmento 1**. En segmentos 2 en adelante producen error de renderizado sin aviso visible.
-
-❌ No funciona — llaves en segmento 2:
-```
-x<y^{2/3}|y<x^{1/2}|x>0|y>0|#BFD7DC
-```
-
-✅ Solución — declarar una constante y usarla en restricciones:
-```
-n=0.5
-x<y^{2/3}|y<x^n|x>0|y>0|#BFD7DC
-```
-
-También funciona `n=1/2` — Desmos evalúa ambas formas correctamente.
-
-#### Llaves escapadas `\{` `\}` — alternativa para restricciones en funciones por tramos
-
-- Forma preferida con `|`: `y=f(x)|a<x<b|#hex`
-- Alternativa válida: `y=f(x)\{a<x<b\}|#hex` — el backslash es obligatorio
-- `{...}` sin backslash NO funciona en el plugin
-- Sintaxis web que NO funciona en el plugin: `{a<x<b: k}` o `{a<x<b: f(x)}`
-
----
-
 ### N7. ÁREAS SOMBREADAS Y FUNCIONES POR TRAMOS
 
 Usar inecuaciones con todas las condiciones en **una sola línea** pueden ser de 2 tipos:
@@ -590,12 +551,41 @@ Antes de entregar un bloque Desmos verificar:
 
 Todos los ejemplos de esta sección han sido confirmados y renderizan correctamente.
 
-**Reglas críticas de sintaxis (recordatorio) — ver N1–N10 para detalle completo:**
+**Reglas críticas de sintaxis (recordatorio):**
 - Potencias siempre con `{}`: `x^{3/2}` nunca `x^(3/2)`
-- Llaves `{}` solo válidas en segmento 1 de cada línea — ver N6.5
 - Palabras reservadas con `\`: `\cos`, `\sin`, `\ln`, `\frac{}{}`
 - Funciones especiales: `\abs()`, `\floor()`, `\operatorname{sgn}()`, `\operatorname{mod}()`
 - Colores de la paleta oficial únicamente
+
+**Llaves `{}` — solo válidas en el segmento 1 de cada línea:**
+
+Cada línea de un bloque Desmos se divide en segmentos separados por `|`:
+
+```
+expresión | condición_2 | condición_3 | ... | #color
+    1    |      2      |      3      |     |   n
+```
+
+Las llaves `{}` (usadas en potencias fraccionarias como `x^{1/2}`) **solo funcionan en el segmento 1**. En segmentos 2 en adelante producen error de renderizado sin aviso visible.
+
+❌ No funciona — llaves en segmento 2:
+```
+x<y^{2/3}|y<x^{1/2}|x>0|y>0|#BFD7DC
+```
+
+✅ Solución — declarar una constante y usarla en restricciones:
+```
+n=0.5
+x<y^{2/3}|y<x^n|x>0|y>0|#BFD7DC
+```
+
+También funciona `n=1/2` — Desmos evalúa ambas formas correctamente.
+
+**Llaves escapadas `\{` `\}` en funciones por tramos:**
+- Forma preferida con `|`: `y=f(x)|a<x<b|#hex`
+- Alternativa válida: `y=f(x)\{a<x<b\}|#hex` — el backslash es obligatorio
+- `{...}` sin backslash NO funciona en el plugin
+- Sintaxis web que NO funciona: `{a<x<b: k}` o `{a<x<b: f(x)}`
 
 ---
 
