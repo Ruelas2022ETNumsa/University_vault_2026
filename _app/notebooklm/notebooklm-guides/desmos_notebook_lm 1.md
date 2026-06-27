@@ -224,10 +224,10 @@ y=|x|
 y<=abs(x)
 ```
 
-| Intención | Correcto (✅) | Incorrecto (❌) |
-|-----------|--------------|----------------|
-| Curva y=\|x\| | `y=\abs(x)` | `y=\|x\|` |
-| Curva compuesta | `y=\abs(x^{2}-4x+3)` | `y=\|x^2-4x+3\|` |
+| Intención           | Correcto (✅)              | Incorrecto (❌)    |
+| ------------------- | -------------------------- | ------------------ |
+| Curva y=\|x\|       | `y=\abs(x)`                | `y=\|x\|`          |
+| Curva compuesta     | `y=\abs(x^{2}-4x+3)`       | `y=\|x^2-4x+3\|`   |
 | Región bajo y=\|x\| | tramos con cotas numéricas | `-\|y\|<=x<=\|y\|` |
 
 ---

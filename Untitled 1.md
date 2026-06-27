@@ -35,6 +35,39 @@ y=x^2|#D97706
 ```
 
 
+---
+---
+---
+
+
+```desmos-graph
+---
+y=x
+(2,1)|label:
+```
+
+
+
+### ⚠️ Valor absoluto en texto y tablas Markdown
+
+El símbolo `|` rompe las tablas Markdown. Para valor absoluto en texto o dentro de tablas:
+
+| Contexto | Correcto (✅)          | Incorrecto (❌) |
+| -------- | --------------------- | -------------- |
+| Texto    | `$\vert x \vert$`     | `$|x|$`        |
+| Tablas   | `$\vert f(x) \vert$`  | `$|f(x)|$`     |
+
+```desmos-graph
+y=\sqrt{x}
+```
+
+
+
+
+---
+---
+---
+
 # tamaño desmos
 
 **Pequeño — gráficas simples (rectas numéricas, intervalos, un punto):**  

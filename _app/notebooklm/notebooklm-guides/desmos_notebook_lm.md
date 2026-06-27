@@ -225,9 +225,9 @@ x>y^2|y>x^1/2|x>0|y>0|#b2f2bb
 ### N7. PUNTOS Y ETIQUETAS
 
 ```desmos-graph
-(1,2)|label:(1,2)|#000000
+(1,1)|label:(1,1)|#000000
 (1,2)|open|label:(1,2)|#000000
-(1,2)|cross|label:(1,2)|#000000
+(1,3)|cross|label:(1,3)|#000000
 ```
 
 #### ⚠️ Fracciones en etiquetas — solo slash
@@ -237,15 +237,6 @@ x>y^2|y>x^1/2|x>0|y>0|#b2f2bb
 ✅ `(3,0)|open|label:(d-b)/(a-c)|#c74440`
 ❌ `(3,0)|open|label:\frac{d-b}{a-c}|#c74440`
 
-### ⚠️ Valor absoluto en texto y tablas Markdown
-
-El símbolo `|` rompe las tablas Markdown. Para valor absoluto en texto o dentro de tablas:
-
-| Contexto | Correcto (✅)          | Incorrecto (❌) |
-| -------- | --------------------- | -------------- |
-| Texto    | `$\vert x \vert$`     | `$|x|$`        |
-| Tablas   | `$\vert f(x) \vert$`  | `$|f(x)|$`     |
-
 ---
 
 ### N8. VALOR ABSOLUTO
@@ -254,7 +245,7 @@ El plugin soporta `\abs()` para valor absoluto simple — es la forma preferida 
 
 #### Forma con `\abs()` — primera opción para curvas:
 
-```
+```desmos-graph
 y=\abs(x)
 y=\abs(2x-3)
 y=\abs(x^{2}-4x+3)
@@ -266,10 +257,8 @@ y=\abs(\abs(x^{2}-4)-4)
 `\abs()` no funciona en condiciones de relleno. Usar tramos:
 
 ```desmos-graph
-y=x \{x>=0\}|#2d70b3
-y=-x \{x<=0\}|#2d70b3
-y=2|#000000|DASHED
--2<=x<=2|y<=2|y>=0|#a5d8ff
+y=\abs(x)|hidden
+y>=x|y>=-x|y<=3|
 ```
 
 #### Tabla de usos
@@ -288,19 +277,20 @@ Usar en orden de preferencia:
 
 **Forma 1 — primera opción:**
 ```desmos-graph
-y=x^{1/2}|x>=0|#2d70b3
-```
-
-**Forma 2 — segunda opción:**
-```desmos-graph
-y=\sqrt{x}|x>=0|#2d70b3
+y=x^{1/2}|#2d70b3
 ```
 
 **Forma 3 — tercera opción (relación implícita):**
 ```desmos-graph
-x=y^2
-y>=0
+x=y^2|y>=0|#2d70b3
 ```
+
+**Forma 2 — segunda opción:**
+```desmos-graph
+y=\sqrt{x}|#2d70b3
+```
+
+
 
 #### ⚠️ Formas que NO funcionan — nunca usar:
 
