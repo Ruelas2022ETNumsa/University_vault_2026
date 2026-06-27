@@ -8,15 +8,31 @@
 | f(x) con dominio fijo           | `f(x)=x^2\{0<=x<=3\}`                          |
 | f(x) con dominio por variables  | `a=1` / `b=4` / `y=f(x)\{a<x<b\}` / `f(x)=x^3` |
 | f(x) oculta, solo f'(x) visible | `f(x)=x^2\|hidden` luego `y=f'(x)`             |
-
-
 ```desmos-graph
-y = 2x + 1 | #FF0000
+y = 2x + 9 | #005F73
+y = 2x + 7 | #0A9396
+y = 2x + 5 | #EE9B00
+y = 2x + 3 | #BB3E03
+y = 2x + 1 | #629900
+y = 2x - 1 | #5A189A
+y = 2x - 3 | #C1121F
+y = 2x - 5 | #DA627D
+y = 2x - 7 | #FFD60A
+y = 2x - 9 | #474448|dashed
 ```
 
-
-
-
+```desmos-graph
+y = 2x + 9 | #BFD7DC | dashed
+y = 2x + 7 | #C2E4E5 | dashed
+y = 2x + 5 | #FBE6BF | dashed
+y = 2x + 3 | #EECFC0 | dashed
+y = 2x + 1 | #D8E6BF | dashed
+y = 2x - 1 | #D6C5E6 | dashed
+y = 2x - 3 | #F0C4C7 | dashed
+y = 2x - 5 | #F6D8DF | dashed
+y = 2x - 7 | #FFF5C2 | dashed
+y = 2x - 9 | #D1D0D1 | dashed
+```
 
 
 
