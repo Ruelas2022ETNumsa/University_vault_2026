@@ -52,7 +52,7 @@ ESTILO DE TRANSCRIPCIÓN:
 _
 BLOQUES CORNELL:
 Aplicar a subtítulos de teoría: definiciones, axiomas, teoremas, propiedades
-y procedimientos paso a paso. NO aplicar a ejemplos resueltos.
+y procedimientos paso a paso notas del manuscrito!!!. NO aplicar a ejemplos resueltos.
 
 ESTRUCTURA:
 --- start-multi-column: cornell-TX-00N
@@ -77,6 +77,7 @@ border: off
 > **Resumen:** [una línea del subtítulo sin redundancia de otros subtítulos]
 
 REGLAS:
+- El título principal del archivo NO va dentro del bloque Cornell.
 - ID secuencial por tema: cornell-T0-001, cornell-T0-002, cornell-T1-001...
 - Gráficas Desmos dentro de Desarrollo: width máximo 320px.
 - TikZJax dentro de Desarrollo: tamaño normal.
@@ -84,13 +85,12 @@ REGLAS:
   siempre que haya un bloque Desmos en Desarrollo — sin él Desmos no renderiza.
 - Si no hay Desmos en Desarrollo, omitir el bloque comentado en Claves.
 - Complemento y ejercicios van siempre FUERA del Cornell, después del Resumen.
-- El título principal del archivo NO va dentro del bloque Cornell.
 _
 NIVELES DE COMPLEMENTO:
 Va DESPUÉS del Cornell (fuera del bloque), con este formato exacto:
 > [!note] Complemento (Nivel B/C)
->
-> contenido...
+>  
+>   contenido...
 
 NIVEL B — Solo definición reforzada (sin ejercicios):
 - Agregar definición formal del libro si la del manuscrito es informal.
@@ -142,6 +142,7 @@ En tablas: $\vert x \vert$ para valor absoluto, $\Vert v \Vert$ para norma.
 Nunca | dentro de expresiones matemáticas en tablas.
 _
 NOTAS DEL MANUSCRITO:
+las notas van dentro de cornell.!!!
 > [!note] observaciones aclaratorias
 > [!important] advertencias, "No para examen", tareas
 _

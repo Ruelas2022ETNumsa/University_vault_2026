@@ -1,3 +1,7 @@
+## Números reales y desigualdades
+
+### Axiomas de cuerpo de los números reales
+
 --- start-multi-column: cornell-T0-001
 
 ```column-settings
@@ -6,40 +10,42 @@ column size: [60%, 40%]
 border: off
 ```
 
-📝 **Desarrollo**
-
-## Axiomas de cuerpo de los números reales
-
-$\text{si } a, b, c \in \mathbb{R}$
+📝 **Desarrollo** Si $a, b, c \in \mathbb{R}$
 
 1. **Clausura**
     
-    - $a + b \in \mathbb{R}$
-    - $a \cdot b \in \mathbb{R}$
+    - i) $a + b \in \mathbb{R}$
+    - ii) $a \cdot b \in \mathbb{R}$
 2. **Conmutatividad**
     
-    - $a + b = b + a$
-    - $a \cdot b = b \cdot a$
+    - i) $a + b = b + a$
+    - ii) $a \cdot b = b \cdot a$
 3. **Asociatividad**
     
-    - $(a + b) + c = a + (b + c)$
-    - $(a \cdot b) \cdot c = a \cdot (b \cdot c)$
-4. **$\exists$ de neutros**
+    - i) $(a + b) + c = a + (b + c)$
+    - ii) $(a \cdot b) \cdot c = a \cdot (b \cdot c)$
+4. **Existencia de neutros**
     
-    - $\exists, 0 \in \mathbb{R} \ni a + 0 = a$
-    - $\exists, 1 \in \mathbb{R} \ni a \cdot 1 = a$
-    - $0$ es el elemento neutro para la suma ($+$) y $1$ es el neutro para el producto ($\cdot$).
-5. **$\exists$ de negativos**
+    - i) $\exists ! 0 \in \mathbb{R} \ni a + 0 = a$
+    - $0$ es el neutro para la suma "+"
+    - ii) $\exists ! 1 \in \mathbb{R} \ni a \cdot 1 = a$
+    - $1$ es el neutro para la multiplicación "$\times$"
+5. **Existencia de negativos**
     
     - $\forall a \in \mathbb{R}, \exists -a \in \mathbb{R} \ni a + (-a) = 0$
-    - $-a$ se denomina el negativo de $a$.
-6. **$\exists$ de inversos**
+    - $-a$ se denomina el negativo de $a$
+6. **Existencia de inversos**
     
     - $\forall a \in \mathbb{R} - {0}, \exists a^{-1} \in \mathbb{R} \ni a \cdot a^{-1} = 1$
-    - $a^{-1} = \frac{1}{a}$ se denomina el inverso (o recíproco) de $a$.
+    - $a^{-1} = \frac{1}{a}$ se denomina inverso de $a$
 7. **Distributividad**
     
     - $a(b + c) = ab + ac$
+
+> [!note] Resta y división Son casos especiales de la suma y la multiplicación:
+> 
+> - **Resta:** $a - b = a + (-b)$
+> - **División:** $\frac{a}{b} = a \cdot \frac{1}{b} = a \cdot b^{-1}; \quad b \neq 0$
 
 --- end-column ---
 
@@ -47,6 +53,12 @@ $\text{si } a, b, c \in \mathbb{R}$
 
 --- end-multi-column
 
-> **Resumen:** Definición de las reglas operativas fundamentales (suma y producto) que rigen el comportamiento algebraico del conjunto de los números reales.
+> **Resumen:** Los números reales forman un cuerpo bajo las operaciones de adición y multiplicación, cumpliendo propiedades de clausura, conmutatividad, asociatividad, existencia de elementos neutros e inversos, y distributividad.,,
 
-> [!note] Complemento Según Apostol, estos axiomas de cuerpo establecen que el sistema de los números reales posee dos operaciones (adición y multiplicación) que determinan unívocamente un tercer número real a partir de un par dado. Formalmente, se asume que los elementos neutros $0$ y $1$ son números reales distintos entre sí. La existencia del recíproco o inverso (Axioma 6) está estrictamente condicionada a que $x \neq 0$. Estos seis axiomas permiten deducir todas las leyes usuales del álgebra elemental.
+> [!note] Complemento (Nivel B) El Cálculo se estructura como un sistema deductivo tomando a los números reales como conceptos primitivos. Según Apostol, el sistema de axiomas de cuerpo garantiza que la suma $x+y$ y el producto $xy$ están unívocamente determinados por $x$ e $y$. Formalmente, se establece explícitamente que los elementos neutros $0$ y $1$ son números reales distintos. Además, la propiedad de **unicidad** del elemento neutro y de los elementos opuestos (indicada en el manuscrito con el símbolo $\exists !$) es en realidad un resultado que puede demostrarse rigurosamente como teorema (Teorema I.1 y I.2) a partir de la existencia de los mismos,.
+
+
+
+
+
+
