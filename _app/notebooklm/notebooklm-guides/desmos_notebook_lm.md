@@ -19,7 +19,7 @@ status: activo
 # 📈 GUÍA UNIFICADA DE DESMOS PARA OBSIDIAN
 
 > Plugin: `obsidian-desmos` — renderiza gráficas de [desmos.com](https://www.desmos.com/calculator) directamente en tus notas.
-> Este documento está organizado en tres bloques: **Reglas de sintaxis (N1–N10)**, **Checklist y ejemplos técnicos (N11–N12)**, y **Biblioteca de ejemplos por tema MAT101 (N13–N20)**.
+> Este documento está organizado en tres bloques: **Reglas de sintaxis (N1–N10)**, **Checklist (N11)**, y **Biblioteca de ejemplos por tema MAT101 (N12–N19)**.
 
 ---
 
@@ -86,11 +86,7 @@ y=x^2|#005F73
 
 ---
 
-### N2.
-
----
-
-### N3. PARÁMETROS DE CONFIGURACIÓN
+### N2. PARÁMETROS DE CONFIGURACIÓN
 
 | Parámetro | Qué hace           | Valor típico |
 | --------- | ------------------ | ------------ |
@@ -115,7 +111,7 @@ Para rectas numéricas usar ratio horizontal (3:1). Para funciones estándar rat
 
 ---
 
-### N4. SINTAXIS DE ECUACIONES
+### N3. SINTAXIS DE ECUACIONES
 
 | Matemática                      | Código Desmos                                               |
 | ------------------------------- | ----------------------------------------------------------- |
@@ -156,7 +152,7 @@ Para rectas numéricas usar ratio horizontal (3:1). Para funciones estándar rat
 
 ---
 
-### N5 CONSTANTES Y FUNCIONES DEFINIDAS POR EL USUARIO
+### N4. CONSTANTES Y FUNCIONES DEFINIDAS POR EL USUARIO
 
 #### Constantes escalares
 
@@ -222,7 +218,7 @@ f(y)=y^2     → función de y (curva horizontal)
 
 ---
 
-### N6. MODIFICADORES Y COLORES
+### N5. MODIFICADORES Y COLORES
 
 ```
 |#hex          → color (SIEMPRE usar hex)
@@ -287,7 +283,7 @@ El plugin acepta nombres (`RED`, `BLUE`, etc.) pero producen colores saturados y
 
 ---
 
-### N6.5. ESTRUCTURA DE UNA LÍNEA DE ECUACIÓN
+### N6. ESTRUCTURA DE UNA LÍNEA DE ECUACIÓN
 
 Cada línea debajo del `---` se divide en segmentos separados por `|`:
 
@@ -352,12 +348,12 @@ No usar `y<=1|y>=0` sin las restricciones de x — Desmos extenderá el relleno 
 ```desmos-graph
 left=-0.5; right=5.5; bottom=-1; top=24;
 ---
-x<y<=x^2 |2<=x<=4
+x<y<=x^2|2<=x<=4
 y=x^2
 y=x
 ```
 
-igual funciona la notación `x<y<=x^2\{2<=x<=4\}`
+>igual funciona la notación `x<y<=x^2\{2<=x<=4\}`
 
 Dos ejemplos adicionales con regiones más complejas:
 
@@ -547,27 +543,11 @@ y=sqrt{x}
 
 ---
 
-## BLOQUE B — CHECKLIST Y EJEMPLOS TÉCNICOS
+## BLOQUE B — CHECKLIST
 
 ---
 
-### N11. EJEMPLOS TÉCNICOS DE REFERENCIA
-
-Estos ejemplos ilustran técnicas de sintaxis, no temas específicos.
-
-#### Función simple
-
-```desmos-graph
-left=-4; right=4; bottom=-2; top=6;
-width=300; height=200;
----
-y=x^2|#005F73
-```
-
-
----
-
-### N12. CHECKLIST ANTES DE RESPONDER
+### N11. CHECKLIST ANTES DE RESPONDER
 
 Antes de entregar un bloque Desmos verificar:
 
@@ -592,14 +572,14 @@ Todos los ejemplos de esta sección han sido confirmados y renderizan correctame
 
 **Reglas críticas de sintaxis (recordatorio) — ver N1–N10 para detalle completo:**
 - Potencias siempre con `{}`: `x^{3/2}` nunca `x^(3/2)`
-- Llaves `{}` solo válidas en segmento 1 de cada línea — ver N6.5
+- Llaves `{}` solo válidas en segmento 1 de cada línea — ver N6
 - Palabras reservadas con `\`: `\cos`, `\sin`, `\ln`, `\frac{}{}`
 - Funciones especiales: `\abs()`, `\floor()`, `\operatorname{sgn}()`, `\operatorname{mod}()`
 - Colores de la paleta oficial únicamente
 
 ---
 
-### N13. T0 — NÚMEROS REALES Y DESIGUALDADES
+### N12. T0 — NÚMEROS REALES Y DESIGUALDADES
 
 > Tema introductorio. Rectas numéricas, intervalos, valor absoluto básico, inecuaciones.
 
@@ -719,9 +699,18 @@ y>=\abs(x)|0<y<4|-a<x<a|#BFD7DC
 
 ---
 
-### N14. T1 — FUNCIONES REALES
+### N13. T1 — FUNCIONES REALES
 
 > Primer parcial. Dominio, imagen, gráficas de familias de funciones, transformaciones.
+
+#### Función simple
+
+```desmos-graph
+left=-4; right=4; bottom=-2; top=6;
+width=300; height=200;
+---
+y=x^2|#005F73
+```
 
 #### Polinomios
 
@@ -966,7 +955,7 @@ y=\min(\operatorname{mod}(x,1),1-\operatorname{mod}(x,1))|#C1121F
 
 ---
 
-### N15. T2 — LÍMITES Y CONTINUIDAD
+### N14. T2 — LÍMITES Y CONTINUIDAD
 
 > Primer parcial. Límites laterales, discontinuidades, comportamiento asintótico.
 
@@ -974,7 +963,7 @@ y=\min(\operatorname{mod}(x,1),1-\operatorname{mod}(x,1))|#C1121F
 
 ---
 
-### N16. T3 — DERIVACIÓN
+### N15. T3 — DERIVACIÓN
 
 > Segundo parcial. Pendiente de tangente, reglas de derivación, derivadas de funciones elementales.
 
@@ -982,7 +971,7 @@ y=\min(\operatorname{mod}(x,1),1-\operatorname{mod}(x,1))|#C1121F
 
 ---
 
-### N17. T4 — APLICACIONES DE LA DERIVACIÓN
+### N16. T4 — APLICACIONES DE LA DERIVACIÓN
 
 > Segundo parcial. Máximos y mínimos, concavidad, optimización, teorema del valor medio.
 
@@ -990,7 +979,7 @@ y=\min(\operatorname{mod}(x,1),1-\operatorname{mod}(x,1))|#C1121F
 
 ---
 
-### N18. T5 — INTEGRACIÓN
+### N17. T5 — INTEGRACIÓN
 
 > Tercer parcial. Integral definida, primitivas, regla de Barrow.
 
@@ -998,7 +987,7 @@ y=\min(\operatorname{mod}(x,1),1-\operatorname{mod}(x,1))|#C1121F
 
 ---
 
-### N19. T6 — APLICACIONES DE LA INTEGRACIÓN
+### N18. T6 — APLICACIONES DE LA INTEGRACIÓN
 
 > Tercer parcial. Área entre curvas, volúmenes de revolución.
 
@@ -1006,7 +995,7 @@ y=\min(\operatorname{mod}(x,1),1-\operatorname{mod}(x,1))|#C1121F
 
 ---
 
-### N20. T7 — SERIES REALES (BONUS)
+### N19. T7 — SERIES REALES (BONUS)
 
 > Fuera de parciales. Series numéricas, criterios de convergencia.
 
