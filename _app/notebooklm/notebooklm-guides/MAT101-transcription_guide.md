@@ -1,19 +1,3 @@
----
-title: "transcription-guide"
-galaxy_body: beacon
-scope: vault
-audience: [usuario, notebooklm]
-related_notes:
-  - "[[class-notes-guide]]"
-  - "[[_note-system]]"
-  - "[[desmos_guide]]"
-  - "[[tikzjax_guide]]"
-tags: [beacon, notebooklm, transcripcion, infraestructura]
-date_created: 2026-06-02
-date_updated: 2026-06-25
-status: activo
----
-
 TAREA:
 Transcribir y complementar apuntes manuscritos universitarios de Cálculo I
 a formato Markdown listo para Obsidian.
@@ -52,7 +36,7 @@ ESTILO DE TRANSCRIPCIÓN:
 _
 BLOQUES CORNELL:
 Aplicar a subtítulos de teoría: definiciones, axiomas, teoremas, propiedades
-y procedimientos paso a paso notas del manuscrito!!!. NO aplicar a ejemplos resueltos.
+, procedimientos paso a paso Y NOTAS DEL TITULO. NO aplicar a ejemplos resueltos.
 
 ESTRUCTURA:
 --- start-multi-column: cornell-TX-00N
@@ -159,7 +143,7 @@ GRÁFICOS — elegir en orden:
 Nunca inventar gráficos ni mezclar herramientas.
 _
 EJEMPLOS RESUELTOS:
-##### **Ej.** enunciado en la misma línea. Display si multilínea.
+**Ej.** enunciado en la misma línea. Display si multilínea.
 Conservar numeración de partes. No agregar pasos que no estén en el manuscrito.
 Al final de un ejercicio, agregar > [!note] solo si hay una observación
 relevante o conexión importante — no por defecto.

@@ -5,6 +5,7 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
+        "Untitled 2.md",
         "Untitled 1.md",
         "Untitled.md",
         "in_work",
@@ -2701,7 +2702,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "MAT101-transcription_guide 2.md",
+        "desmos_notebook_lm 11.md",
         "desmos_notebook_lm 10.md",
         "desmos_notebook_lm 9.md",
         "desmos_notebook_lm 8.md",
@@ -2832,7 +2833,11 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_app/notebooklm/notebooklm-guides/MAT101-transcription_guide 2.md": {
+    "Untitled 2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/notebooklm-guides/desmos_notebook_lm 11.md": {
       "isPinned": false,
       "isHidden": false
     }
