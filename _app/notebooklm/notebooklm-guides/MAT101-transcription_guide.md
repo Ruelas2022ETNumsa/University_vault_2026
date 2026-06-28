@@ -46,8 +46,6 @@ Títulos en rojo. Tamaño determina jerarquía:
 - Rojo grande → ## | Rojo mediano → ###
 _
 ESTILO DE TRANSCRIPCIÓN:
-- Transcribir TODO el contenido del subtítulo hasta que inicie el siguiente título rojo.
-  No omitir texto, notas al margen ni observaciones dentro del subtítulo.
 - Corregir ortografía y errores evidentes de notación matemática.
 - Manuscrito como esqueleto principal. Estilo apuntes universitarios.
 - Corrección importante → nota breve al final de esa sección.

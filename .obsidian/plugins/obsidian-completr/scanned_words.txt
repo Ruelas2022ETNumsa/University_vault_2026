@@ -30902,6 +30902,7 @@ declaraci
 declararse
 determinados
 deducir
+determinan
 Vault
 Verificar
 Variables
@@ -168759,6 +168760,7 @@ escalares
 excluyendo
 eval
 elemental
+establecen
 Motor
 Media
 Mantiene
@@ -252687,6 +252689,7 @@ open
 oculta
 oculto
 omiten
+operativas
 junto
 json
 jer
