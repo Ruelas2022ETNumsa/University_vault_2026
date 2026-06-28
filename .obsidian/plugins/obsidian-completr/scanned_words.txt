@@ -30903,6 +30903,8 @@ declararse
 determinados
 deducir
 determinan
+designado
+derivados
 Vault
 Verificar
 Variables
@@ -137258,6 +137260,7 @@ Algunos
 ALTERNATIVA
 APLICACIONES
 Asimismo
+Anulaci
 push
 pull
 para
