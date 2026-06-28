@@ -30906,6 +30906,8 @@ deducir
 determinan
 designado
 derivados
+deriva
+demostrarse
 Vault
 Verificar
 Variables
