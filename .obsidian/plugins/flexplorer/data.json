@@ -2692,7 +2692,7 @@
       ]
     },
     "_app/notebooklm/MAT101-notebooklm_prompt.md": {
-      "isPinned": false,
+      "isPinned": true,
       "isHidden": false
     },
     "_app/notebooklm/notebooklm-guides": {
@@ -2700,6 +2700,11 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "desmos_notebook_lm 9.md",
+        "desmos_notebook_lm 8.md",
+        "desmos_notebook_lm 7.md",
+        "desmos_notebook_lm 6.md",
+        "desmos_notebook_lm 5.md",
         "desmos_notebook_lm 3.md",
         "desmos_notebook_lm 4.md",
         "desmos_notebook_lm 2.md",
@@ -2773,7 +2778,7 @@
       "isHidden": false
     },
     "_app/notebooklm/notebooklm-guides/desmos_notebook_lm.md": {
-      "isPinned": false,
+      "isPinned": true,
       "isHidden": false
     },
     "_app/notebooklm/notebooklm-guides/desmos_notebook_lm 1.md": {
@@ -2795,12 +2800,34 @@
     "_app/notebooklm/notebooklm-guides/desmos_notebook_lm 4.md": {
       "isPinned": false,
       "isHidden": false
+    },
+    "_app/notebooklm/notebooklm-guides/desmos_notebook_lm 5.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/notebooklm-guides/desmos_notebook_lm 6.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/notebooklm-guides/desmos_notebook_lm 7.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/notebooklm-guides/desmos_notebook_lm 8.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/notebooklm-guides/desmos_notebook_lm 9.md": {
+      "isPinned": false,
+      "isHidden": false
     }
   },
   "pinnedFiles": [
     "_app/_appnotes/PDF_PP-guide.md",
     "_app/_config/_claude-boot.md",
-    "_app/_config/_galaxy-system.md"
+    "_app/_config/_galaxy-system.md",
+    "_app/notebooklm/notebooklm-guides/desmos_notebook_lm.md",
+    "_app/notebooklm/MAT101-notebooklm_prompt.md"
   ],
   "showHidden": false,
   "newItemPlacement": "top",

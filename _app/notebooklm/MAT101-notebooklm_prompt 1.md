@@ -81,9 +81,17 @@ complementario indicando libro y sección fuente.
 
 **Desmos** es la primera opción para cualquier representación visual de
 Cálculo 1 (funciones, curvas, regiones, límites, derivadas, integrales).
-Las reglas completas de sintaxis están en la sección NOTEBOOKLM de
-`desmos_notebook_lm.md` (fuente del notebook) — son obligatorias sin excepción.
-El prompt retiene solo las 3 reglas mínimas de render en la sección VISUALIZACIONES.
+El prompt incluye 7 reglas críticas de sintaxis que deben respetarse sin
+excepción para que el plugin de Obsidian renderice correctamente:
+
+- Regla 0 — identificador exacto del bloque: `desmos-graph`
+- Regla 1 — estructura interna: parámetros con `;` → separador `---` → ecuaciones
+- Regla 2 — el separador `---` es siempre obligatorio, incluso sin parámetros
+- Regla 3 — colores siempre en hex, nunca nombres como RED o BLUE
+- Regla 4 — restricciones sin llaves: `y=x^2|0<=x<=3` no `{0<=x<=3}`
+- Regla 5 — rectángulos sombreados con 4 condiciones separadas (2 en x, 2 en y)
+- Regla 6 — funciones por tramos con `\{` y `\}`
+- Regla 7 — valor absoluto con `\vert` en texto y tablas, nunca `|`
 
 **TikZJax** se usa solo cuando Desmos no puede representar el contenido:
 circuitos, diagramas de bloques, figuras geométricas técnicas.
@@ -180,13 +188,64 @@ No la incluyas por defecto ni la omitas por defecto — evaluá caso a caso.
 1. DESMOS — primera opción para Cálculo 1: funciones, curvas, regiones,
    áreas, límites, derivadas, integrales.
 
-   SINTAXIS — consultá SIEMPRE la sección NOTEBOOKLM de desmos_notebook_lm.md
-   (fuente del notebook). Todas las reglas ahí son obligatorias sin excepción.
+   ════ REGLAS CRÍTICAS DE SINTAXIS — SIN EXCEPCIONES ════
 
-   REGLAS MÍNIMAS DE RENDER — nunca omitir:
-   · Identificador exacto: ```desmos-graph (ninguna variante)
-   · El "---" es siempre obligatorio, incluso sin parámetros
-   · Restricciones sin llaves: y=x^2|0<=x<=3 nunca y=x^2|{0<=x<=3}
+   REGLA 0 — IDENTIFICADOR DEL BLOQUE:
+   El bloque SIEMPRE abre con la línea exacta:
+   ```desmos-graph
+   NO usar ```, ```graph, ```desmos ni ninguna variante.
+
+   REGLA 1 — ESTRUCTURA INTERNA OBLIGATORIA:
+   Línea 1 a N: parámetros de ventana, cada uno terminado en ";"
+     left=-4; right=4; bottom=-4; top=4;
+     width=500; height=400;
+   Línea N+1: exactamente "---" y nada más
+   Línea N+2 en adelante: ecuaciones con modificadores
+
+   REGLA 2 — EL "---" ES SIEMPRE OBLIGATORIO:
+   Sin "---" el plugin no renderiza nada. Aunque no haya parámetros,
+   el "---" va igual como primera línea del bloque.
+
+   REGLA 3 — COLORES SIEMPRE EN HEX:
+   Nunca usar RED, BLUE, GREEN etc. Usar siempre:
+     #c74440 rojo · #2d70b3 azul · #388c46 verde · #fa7e19 naranja
+     #6042a6 morado · #000000 negro
+   Rellenos (áreas): #a5d8ff azul claro · #ff7b7b rojo claro · #b2f2bb verde claro
+
+   REGLA 4 — RESTRICCIONES SIN LLAVES:
+   Correcto:   y=x^2|0<=x<=3|#2d70b3
+   Incorrecto: y=x^2|{0<=x<=3}
+
+   REGLA 5 — RECTÁNGULOS SOMBREADOS CON 4 CONDICIONES:
+   x>=0|x<=1|y>=0|y<=1|#a5d8ff
+   Nunca omitir las restricciones en x ni en y por separado.
+
+   REGLA 6 — FUNCIONES POR TRAMOS:
+   Correcto:   y=0.10 \{a<x<b\}|#2d70b3
+   Incorrecto: {a<x<b: 0.10}
+
+   REGLA 7 — VALOR ABSOLUTO EN TEXTO Y TABLAS LaTeX:
+   El símbolo | rompe las tablas Markdown. Para valor absoluto en texto
+   o dentro de tablas, usar SIEMPRE \vert en lugar de |:
+     En texto:  $\vert x \vert$        NO: $|x|$
+     En tablas: $\vert f(x) \vert$     NO: $|f(x)|$
+   Para graficar y = |x| en Desmos, usar tramos:
+     y=x \{x>=0\}|#2d70b3
+     y=-x \{x<=0\}|#2d70b3
+
+   EJEMPLO CORRECTO COMPLETO:
+   ```desmos-graph
+   left=-2; right=5; bottom=-1; top=4;
+   width=500; height=400;
+   ---
+   y=x^2|#2d70b3
+   (2,4)|label:(2,4)|#000000
+   ```
+
+   Antes de entregar cualquier bloque Desmos, verificar:
+   ¿Dice exactamente "desmos-graph"? ¿Tiene "---"? ¿Sin llaves en restricciones?
+   ¿Colores en hex? ¿Parámetros terminados en ";"?
+   ¿Valor absoluto con \vert en texto y tablas?
 
 2. TIKZJAX — solo si Desmos no puede representarlo: circuitos eléctricos,
    diagramas de bloques, figuras geométricas técnicas.
