@@ -76,3 +76,13 @@ A continuación se presentan demostraciones de leyes algebraicas fundamentales d
 **Ej. 3** Demostrar la **Ley de simplificación para la multiplicación**: Si $ab = ac$ y $a \neq 0$, entonces $b = c$. Dado que $a \neq 0$, por el axioma 6 existe un recíproco $a^{-1}$ tal que $a^{-1}a = 1$. Multiplicamos ambos miembros por $a^{-1}$: $$a^{-1}(ab) = a^{-1}(ac)$$ Aplicando el axioma 2 para el producto (asociatividad): $$(a^{-1}a)b = (a^{-1}a)c$$ Sustituyendo por el neutro multiplicativo ($1$) y aplicando el axioma 4: $$\begin{array}{rcl} 1 \cdot b & = & 1 \cdot c \ b & = & c \end{array}$$
 
 **Ej. 4** Demostrar que para cualquier número real $a$, se cumple $a \cdot 0 = 0$. Sabemos por el axioma 4 que $0 + 0 = 0$. Aplicando la propiedad distributiva (axioma 7): $$\begin{array}{rcl} a \cdot 0 + a \cdot 0 & = & a \cdot (0 + 0) \ a \cdot 0 + a \cdot 0 & = & a \cdot 0 \end{array}$$ Como el resultado $a \cdot 0$ es un número real, sumamos su opuesto $-(a \cdot 0)$ en ambos miembros: $$(a \cdot 0 + a \cdot 0) + [-(a \cdot 0)] = a \cdot 0 + [-(a \cdot 0)]$$ Usando la asociatividad y la definición de opuesto: $$\begin{array}{rcl} a \cdot 0 + (a \cdot 0 + [-(a \cdot 0)]) & = & 0 \ a \cdot 0 + 0 & = & 0 \ a \cdot 0 & = & 0 \end{array}$$
+
+
+
+
+`> [!note] Complemento (Nivel B)
+> 
+> Según **Apostol**, el sistema de los `
+
+
+`[!note] Complemento(Nivel B) **De`

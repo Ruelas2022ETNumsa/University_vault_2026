@@ -25615,6 +25615,7 @@ Plano
 Palabras
 Polinomios
 Potenciales
+Partiendo
 del
 date
 de
@@ -30897,6 +30898,9 @@ discontinuidad
 dichos
 descompone
 discontinuidades
+declaraci
+declararse
+determinados
 Vault
 Verificar
 Variables
@@ -55322,6 +55326,7 @@ segmentadas
 seguida
 segmentada
 segmentado
+seis
 vault
 vil
 ver
@@ -67848,6 +67853,7 @@ ausencia
 aviso
 azulado
 antracita
+asociativa
 related
 recomendados
 ribbon
@@ -143204,6 +143210,7 @@ provenientes
 pregunte
 presencia
 petr
+produzcan
 min
 mica
 movimiento
@@ -150519,6 +150526,7 @@ mejorarla
 mostr
 modificadores
 modificador
+mencionados
 YAML
 Ya
 You

@@ -84,9 +84,13 @@ REGLAS:
   siempre que haya un bloque Desmos en Desarrollo — sin él Desmos no renderiza.
 - Si no hay Desmos en Desarrollo, omitir el bloque comentado en Claves.
 - Complemento y ejercicios van siempre FUERA del Cornell, después del Resumen.
+- El título principal del archivo NO va dentro del bloque Cornell.
 _
 NIVELES DE COMPLEMENTO:
-Va DESPUÉS de la transcripción, separado con: > [!note] Complemento
+Va DESPUÉS del Cornell (fuera del bloque), con este formato exacto:
+> [!note] Complemento (Nivel B/C)
+>
+> contenido...
 
 NIVEL B — Solo definición reforzada (sin ejercicios):
 - Agregar definición formal del libro si la del manuscrito es informal.

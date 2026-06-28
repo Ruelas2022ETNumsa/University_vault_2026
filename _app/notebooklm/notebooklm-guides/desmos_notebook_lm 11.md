@@ -25,32 +25,13 @@ status: activo
 
 # 🤖 SECCIÓN NOTEBOOKLM
 
-Instrucciones para que NotebookLM genere bloques Desmos correctos listos para copiar 
-en Obsidian. Cuando el usuario pida una gráfica, responder con un bloque de código 
-— no con imagen ni enlace.
+Instrucciones para que NotebookLM genere bloques Desmos correctos listos para copiar en Obsidian. Cuando el usuario pida una gráfica, responder con un bloque de código — no con imagen ni enlace.
 
-### Defaults — cuando el usuario no especifica
-
+**Comportamiento por defecto cuando el usuario no especifica:**
 - Tamaño: `width=300; height=200;`
 - Color de primera curva: `#005F73`
 - Ventana: `left=-5; right=5; bottom=-3; top=3;` como punto de partida, ajustar según la función
 - Siempre incluir `---` aunque no haya configuración
-
-### Reglas base — siempre obligatorias
-
-Antes de generar cualquier bloque, seguir este orden:
-1. ¿Qué tipo de gráfica? (curva / región / puntos / por tramos)
-2. ¿Qué tamaño? (elegir de la tabla en N2 según el tipo)
-3. ¿Cuál es la ventana? (ajustar left/right/bottom/top según la función)
-4. ¿Qué ecuaciones y en qué orden? (constantes → ecuaciones → puntos)
-5. ¿Qué colores? (paleta en N5 según el rol de cada curva)
-
-Reglas que nunca se omiten:
-- Identificador exacto: ```desmos-graph — ninguna variante
-- El `---` es siempre obligatorio, incluso sin parámetros
-- Orden de parámetros: ventana → tamaño → `---` → ecuaciones
-- Colores siempre en hex — ver paleta completa en N5
-- Restricciones sin llaves: `|0<=x<=3|` nunca `|{0<=x<=3}|`
 
 ---
 
@@ -140,8 +121,6 @@ Para rectas numéricas usar ratio horizontal (3:1). Para funciones estándar rat
 
 | Matemática                      | Código Desmos                                               |
 | ------------------------------- | ----------------------------------------------------------- |
-| y = k (constante)               | `y=2`, `y=-1`, `y=0`                                        |
-| y = x (identidad)               | `y=x`                                                       |
 | y = xⁿ (entero)                 | `y=x^2`, `y=x^3`                                            |
 | y = x^(p/q)                     | `y=x^{3/2}`, `y=x^{2/3}`                                   |
 | y = x^(-p/q)                    | `y=x^{-1/2}`, `y=x^{-2/3}`                                 |
@@ -258,10 +237,6 @@ f(y)=y^2     → función de y (curva horizontal)
 |cross         → punto con cruz
 (x,y)|#hex    → punto sólido (default, sin modificador extra)
 ```
-
-#### ⚠️ Orden de declaración obligatorio
-constantes (a=2) → ecuaciones (y=x^2) → puntos ((1,1))
-Las constantes deben declararse antes de usarse en ecuaciones.
 
 #### ⚠️ Regla de color: SIEMPRE hex, NUNCA nombres en mayúsculas
 
@@ -380,8 +355,8 @@ No usar `y<=1|y>=0` sin las restricciones de x — Desmos extenderá el relleno 
 left=-0.5; right=5.5; bottom=-1; top=24;
 ---
 x<y<=x^2|2<=x<=4
-y=x^2|#005F73
-y=x|#0A9396
+y=x^2
+y=x
 ```
 
 > Igual funciona la notación `x<y<=x^2\{2<=x<=4\}`
