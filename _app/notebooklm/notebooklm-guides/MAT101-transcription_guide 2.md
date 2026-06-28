@@ -6,10 +6,9 @@ FLUJO DE TRABAJO:
 PDF del tema completo cargado como fuente apuntesTX. Dos mensajes por subtítulo:
 
 MENSAJE 1 — Transcripción + complemento:
-"De apuntesTX, muéstrame subtítulo Y [HASTA subtítulo Z] con complemento nivel B/C"
-→ transcribir TODO el contenido desde Y hasta detectar el título Z (no incluirlo)
-→ si no se indica HASTA, detenerse al detectar cualquier nuevo título rojo
-→ NO adelantar el subtítulo siguiente
+  "De apuntesTX, muéstrame subtítulo Y con complemento nivel B/C"
+  → transcripción fiel + complemento según nivel
+  → NO adelantar el subtítulo siguiente
 
 MENSAJE 2 — Ejercicios (solo si el usuario lo pide):
   "De apuntesTX, subtítulo Y, muéstrame ejercicios resueltos"
@@ -63,9 +62,6 @@ border: off
 > **Resumen:** [una línea del subtítulo sin redundancia de otros subtítulos]
 
 REGLAS:
-
-- REVISAR QUE EL CONTENIDO DEL TITULO PEDIDO ESTA COMPLETO SINO REVISAR NUEVAMENTE Y TRANSCRIBIR HASTA EL SIGUIENTE TITULO DE COLOR ROJO (NO APLICA EN NOTAS)
-- REVISAR QUE LAS NOTAS DEL TITULO VAN DENTRO DEL BLOQUE CORNELL
 - El título principal del archivo NO va dentro del bloque Cornell.
 - ID secuencial por tema: cornell-T0-001, cornell-T0-002, cornell-T1-001...
 - Gráficas Desmos dentro de Desarrollo: width máximo 320px.
@@ -121,25 +117,19 @@ Nombre en negrita, fórmula en línea siguiente con tab:
 No usar — para separar nombre de fórmula en la misma línea.
 _
 FORMATO MATEMÁTICO:
-Preferir inline $...$. Usar display $$...$$ solo para:
+Preferir inline $...$. Usar display $...$ solo para:
 - Desarrollo multilínea, matrices, sistemas, resultado principal de teorema.
-Multilínea CON \begin{array}{rcl}...\end{array}.
-Separador de línea siempre \\\\ (doble).
+Multilínea con \begin{array}{rcl}..\end{array}.
 Nunca convertir símbolos a texto si el manuscrito los presenta simbólicamente.
 _
 TABLAS:
 En tablas: $\vert x \vert$ para valor absoluto, $\Vert v \Vert$ para norma.
 Nunca | dentro de expresiones matemáticas en tablas.
 _
-
-NOTAS AL MARGEN Y DEL MANUSCRITO:
-Las notas van dentro del Cornell.
+NOTAS DEL MANUSCRITO:
+las notas van dentro de cornell.!!!
 > [!note] observaciones aclaratorias
 > [!important] advertencias, "No para examen", tareas
-Separador ∼o∼ entre temas → ignorar. Flechas y marcas sin texto → ignorar.
-
-
-
 _
 GRÁFICOS — elegir en orden:
 1. Desmos: funciones, curvas, rectas numéricas, intervalos, trigonométricas,
@@ -153,10 +143,14 @@ GRÁFICOS — elegir en orden:
 Nunca inventar gráficos ni mezclar herramientas.
 _
 EJEMPLOS RESUELTOS:
-##### **Ej.** enunciado en la misma línea. Display si multilínea.
+**Ej.** enunciado en la misma línea. Display si multilínea.
 Conservar numeración de partes. No agregar pasos que no estén en el manuscrito.
 Al final de un ejercicio, agregar > [!note] solo si hay una observación
 relevante o conexión importante — no por defecto.
+_
+NOTAS AL MARGEN:
+> [!note] notas aclaratorias · > [!important] advertencias y tareas.
+Separador ∼o∼ entre temas → ignorar. Flechas y marcas sin texto → ignorar.
 _
 NOTACIÓN HISPANOHABLANTE (respetar siempre):
 sen x → $\text{sen}\,x$ · tg x → $\text{tg}\,x$ · arc sen/cos/tg → igual.
