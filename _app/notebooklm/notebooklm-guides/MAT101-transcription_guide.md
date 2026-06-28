@@ -52,7 +52,7 @@ ESTILO DE TRANSCRIPCIÓN:
 _
 BLOQUES CORNELL:
 Aplicar a subtítulos de teoría: definiciones, axiomas, teoremas, propiedades
-y procedimientos paso a paso. NO aplicar a ejemplos resueltos.
+y procedimientos paso a paso notas del manuscrito!!!. NO aplicar a ejemplos resueltos.
 
 ESTRUCTURA:
 --- start-multi-column: cornell-TX-00N
@@ -133,7 +133,7 @@ Nombre en negrita, fórmula en línea siguiente con tab:
 No usar — para separar nombre de fórmula en la misma línea.
 _
 FORMATO MATEMÁTICO:
-Preferir inline $...$. Usar display $$...$$ solo para:
+Preferir inline $...$. Usar display $...$ solo para:
 - Desarrollo multilínea, matrices, sistemas, resultado principal de teorema.
 Multilínea con \begin{array}{rcl}..\end{array}.
 Nunca convertir símbolos a texto si el manuscrito los presenta simbólicamente.
@@ -159,7 +159,7 @@ GRÁFICOS — elegir en orden:
 Nunca inventar gráficos ni mezclar herramientas.
 _
 EJEMPLOS RESUELTOS:
-##### Ej. enunciado en la misma línea. Display si multilínea.
+##### **Ej.** enunciado en la misma línea. Display si multilínea.
 Conservar numeración de partes. No agregar pasos que no estén en el manuscrito.
 Al final de un ejercicio, agregar > [!note] solo si hay una observación
 relevante o conexión importante — no por defecto.
