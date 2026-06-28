@@ -27,6 +27,12 @@ status: activo
 
 Instrucciones para que NotebookLM genere bloques Desmos correctos listos para copiar en Obsidian. Cuando el usuario pida una gráfica, responder con un bloque de código — no con imagen ni enlace.
 
+**Comportamiento por defecto cuando el usuario no especifica:**
+- Tamaño: `width=300; height=200;`
+- Color de primera curva: `#005F73`
+- Ventana: `left=-5; right=5; bottom=-3; top=3;` como punto de partida, ajustar según la función
+- Siempre incluir `---` aunque no haya configuración
+
 ---
 
 ## BLOQUE A — SINTAXIS Y REGLAS
@@ -116,9 +122,9 @@ Para rectas numéricas usar ratio horizontal (3:1). Para funciones estándar rat
 | Matemática                      | Código Desmos                                               |
 | ------------------------------- | ----------------------------------------------------------- |
 | y = xⁿ (entero)                 | `y=x^2`, `y=x^3`                                            |
-| y = x^(p/q)                     | `y=x^{3/2}`, `y=x^{2/3}`                                    |
-| y = x^(-p/q)                    | `y=x^{-1/2}`, `y=x^{-2/3}`                                  |
-| y = 1/x                         | `y=1/x`, `y=\frac{1}{x}`                                                     |
+| y = x^(p/q)                     | `y=x^{3/2}`, `y=x^{2/3}`                                   |
+| y = x^(-p/q)                    | `y=x^{-1/2}`, `y=x^{-2/3}`                                 |
+| y = 1/x                         | `y=1/x` ó `y=\frac{1}{x}`                                  |
 | x² + y² = r²                    | `x^2+y^2=r^2`                                               |
 | y = 2^x                         | `y=2^x`                                                     |
 | y = eˣ                          | `y=e^x`                                                     |
@@ -127,8 +133,6 @@ Para rectas numéricas usar ratio horizontal (3:1). Para funciones estándar rat
 | y = sin(x)                      | `y=\sin(x)`                                                 |
 | y = cos(x)                      | `y=\cos(x)`                                                 |
 | y = tan(x)                      | `y=\tan(x)`                                                 |
-| y = arcsin(x)                   | `y=\arcsin(x)\|-1<=x<=1`                                    |
-| y = arccos(x)                   | `y=\arccos(x)\|-1<=x<=1`                                    |
 | y = arctan(x)                   | `y=\arctan(x)`                                              |
 | y = sinh(x)                     | `y=\sinh(x)`                                                |
 | y = cosh(x)                     | `y=\cosh(x)`                                                |
@@ -138,7 +142,9 @@ Para rectas numéricas usar ratio horizontal (3:1). Para funciones estándar rat
 | y = sgn(x)                      | `y=\operatorname{sgn}(x)`                                   |
 | distancia al entero más cercano | `y=\min(\operatorname{mod}(x,1),1-\operatorname{mod}(x,1))` |
 
-
+> **Nota — arcsin y arccos:** estas funciones requieren restricción de dominio obligatoria para renderizar correctamente. Usarlas siempre con `|-1<=x<=1`:
+> - arcsin: `y=\arcsin(x)|-1<=x<=1`
+> - arccos: `y=\arccos(x)|-1<=x<=1`
 
 #### Notación funcional y derivadas
 
@@ -324,7 +330,7 @@ También funciona `n=1/2` — Desmos evalúa ambas formas correctamente.
 
 ### N7. ÁREAS SOMBREADAS Y FUNCIONES POR TRAMOS
 
-Usar inecuaciones con todas las condiciones en **una sola línea** pueden ser de 2 tipos:
+Las condiciones de sombreado van todas en **una sola línea**, separadas por `|`. Dos formas equivalentes:
 
 ```desmos-graph
 ---
@@ -353,7 +359,7 @@ y=x^2
 y=x
 ```
 
->igual funciona la notación `x<y<=x^2\{2<=x<=4\}`
+> Igual funciona la notación `x<y<=x^2\{2<=x<=4\}`
 
 Dos ejemplos adicionales con regiones más complejas:
 
@@ -563,6 +569,8 @@ Antes de entregar un bloque Desmos verificar:
 - [ ] ¿Funciones por tramos usan `y=k|a<x<b|#hex` como forma preferida y NO `{a<x<b: k}` sin escapar?
 - [ ] ¿Sin `y=|x|`, `y=abs(x)` ni `|x|` en condiciones de relleno?
 - [ ] ¿Raíz cuadrada usa `x^{1/2}` como primera opción — NO `y=sqrt(x)` ni `y=\sqrt(x)`?
+- [ ] ¿Llaves escapadas `\{` `\}` en funciones por tramos llevan backslash obligatorio? (`y=f(x)\{a<x<b\}` — nunca `y=f(x){a<x<b}`)
+- [ ] ¿`arcsin` y `arccos` llevan dominio obligatorio `|-1<=x<=1`? — nunca `y=\arcsin(x)` solo
 
 ---
 
@@ -659,8 +667,8 @@ width=350; height=120;
 (0,0.5)|label:V|#005F73|hidden
 (2,0.5)|label:F|#005F73|hidden
 (4,0.5)|label:V|#005F73|hidden
-y=0 |-6<x<=-3|#F0C4C7
-y=0 |3<=x<6|#F0C4C7
+y=0|-6<x<=-3|#F0C4C7
+y=0|3<=x<6|#F0C4C7
 (-3,0)|label:-3|open|#F0C4C7
 (0,0)|label:0|open|#F0C4C7
 (3,0)|label:3|open|#F0C4C7
@@ -674,8 +682,8 @@ y=0 |3<=x<6|#F0C4C7
 left=-6; right=6; bottom=-1; top=1;
 width=350; height=120;
 ---
-y=0 |-6<x<=-3|#F0C4C7
-y=0 |3<=x<6|#F0C4C7
+y=0|-6<x<=-3|#F0C4C7
+y=0|3<=x<6|#F0C4C7
 (-3,0)|label:-3|#F0C4C7
 (0,0)|label:0|#F0C4C7
 (3,0)|label:3|#F0C4C7
@@ -696,7 +704,6 @@ y>=\abs(x)|0<y<4|-a<x<a|#BFD7DC
 (2,0)|label:a|#C1121F
 ```
 
-
 ---
 
 ### N13. T1 — FUNCIONES REALES
@@ -704,6 +711,8 @@ y>=\abs(x)|0<y<4|-a<x<a|#BFD7DC
 > Primer parcial. Dominio, imagen, gráficas de familias de funciones, transformaciones.
 
 #### Función simple
+
+> Ejemplo base: polinomio de grado 2. Sirve como referencia para verificar que el bloque renderiza correctamente antes de construir algo más complejo.
 
 ```desmos-graph
 left=-4; right=4; bottom=-2; top=6;
