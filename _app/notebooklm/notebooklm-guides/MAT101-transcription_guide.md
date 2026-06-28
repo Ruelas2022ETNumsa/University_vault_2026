@@ -46,6 +46,8 @@ Títulos en rojo. Tamaño determina jerarquía:
 - Rojo grande → ## | Rojo mediano → ###
 _
 ESTILO DE TRANSCRIPCIÓN:
+- Transcribir TODO el contenido del subtítulo hasta que inicie el siguiente título rojo.
+  No omitir texto, notas al margen ni observaciones dentro del subtítulo.
 - Corregir ortografía y errores evidentes de notación matemática.
 - Manuscrito como esqueleto principal. Estilo apuntes universitarios.
 - Corrección importante → nota breve al final de esa sección.
@@ -159,6 +161,8 @@ _
 EJEMPLOS RESUELTOS:
 **Ej.** enunciado en la misma línea. Display si multilínea.
 Conservar numeración de partes. No agregar pasos que no estén en el manuscrito.
+Al final de un ejercicio, agregar > [!note] solo si hay una observación
+relevante o conexión importante — no por defecto.
 _
 NOTAS AL MARGEN:
 > [!note] notas aclaratorias · > [!important] advertencias y tareas.

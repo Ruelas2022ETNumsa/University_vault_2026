@@ -30901,6 +30901,7 @@ discontinuidades
 declaraci
 declararse
 determinados
+deducir
 Vault
 Verificar
 Variables
@@ -67854,6 +67855,7 @@ aviso
 azulado
 antracita
 asociativa
+asignan
 related
 recomendados
 ribbon
@@ -74307,6 +74309,7 @@ referenciarlas
 ratio
 revoluci
 retiene
+rigen
 notes
 notas
 nuevas
@@ -137253,6 +137256,7 @@ AGREGAR
 Algunos
 ALTERNATIVA
 APLICACIONES
+Asimismo
 push
 pull
 para
@@ -168754,6 +168758,7 @@ equicalente
 escalares
 excluyendo
 eval
+elemental
 Motor
 Media
 Mantiene
