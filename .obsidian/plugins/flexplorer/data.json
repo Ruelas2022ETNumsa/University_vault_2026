@@ -2682,6 +2682,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "MAT101-notebooklm_prompt 1.md",
         "ETN806-P3-notebooklm_prompt.md",
         "ETN806-P1-notebooklm(legacy).md",
         "ETN806-P1-notebooklm_prompt.md",
@@ -2700,6 +2701,8 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "MAT101-transcription_guide 2.md",
+        "desmos_notebook_lm 10.md",
         "desmos_notebook_lm 9.md",
         "desmos_notebook_lm 8.md",
         "desmos_notebook_lm 7.md",
@@ -2730,7 +2733,7 @@
       "isHidden": false
     },
     "_app/notebooklm/notebooklm-guides/MAT101-transcription_guide.md": {
-      "isPinned": false,
+      "isPinned": true,
       "isHidden": false
     },
     "_app/notebooklm/ETN806-P2-notebooklm_prompt.md": {
@@ -2820,6 +2823,18 @@
     "_app/notebooklm/notebooklm-guides/desmos_notebook_lm 9.md": {
       "isPinned": false,
       "isHidden": false
+    },
+    "_app/notebooklm/MAT101-notebooklm_prompt 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/notebooklm-guides/desmos_notebook_lm 10.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/notebooklm-guides/MAT101-transcription_guide 2.md": {
+      "isPinned": false,
+      "isHidden": false
     }
   },
   "pinnedFiles": [
@@ -2827,7 +2842,8 @@
     "_app/_config/_claude-boot.md",
     "_app/_config/_galaxy-system.md",
     "_app/notebooklm/notebooklm-guides/desmos_notebook_lm.md",
-    "_app/notebooklm/MAT101-notebooklm_prompt.md"
+    "_app/notebooklm/MAT101-notebooklm_prompt.md",
+    "_app/notebooklm/notebooklm-guides/MAT101-transcription_guide.md"
   ],
   "showHidden": false,
   "newItemPlacement": "top",

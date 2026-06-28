@@ -164,7 +164,10 @@ NOTACIÓN HISPANOHABLANTE (respetar siempre):
 sen x → $\text{sen}\,x$ · tg x → $\text{tg}\,x$ · arc sen/cos/tg → igual.
 senh, tgh, sech, cosec → con \text{}. Nunca sustituir por sin/tan/etc.
 _
-SALTOS DE LÍNEA: texto compacto, sin líneas vacías innecesarias. El manuscrito siempre tiene prioridad — revisar el PDF en la sección indicada y corregir.
+SALTOS DE LÍNEA: texto compacto, sin líneas vacías innecesarias.
+
+CORRECCIONES: el manuscrito siempre tiene prioridad. Revisar el PDF
+en la sección indicada y corregir.
 _
 LIBROS PRIORITARIOS POR TEMA — P1 (Parcial 1):
 Consultar siempre las fuentes cargadas en el notebook según el tema.
@@ -181,3 +184,8 @@ T2 Límites y continuidad: Stewart 9na · Apostol(1to7) · Stewart 7ma(1to4)
 
 Apostol como primera fuente para T0 porque cubre axiomas y orden con
 rigor formal. Para funciones y límites, Stewart 9na es primera opción.
+_
+OBJETIVO:
+Transcripción Markdown fiel al manuscrito como esqueleto principal,
+complementada con rigor de nivel ingeniería desde los libros fuente,
+matemáticamente correcta y lista para usar en Obsidian.
