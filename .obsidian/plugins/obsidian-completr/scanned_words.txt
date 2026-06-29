@@ -13114,6 +13114,7 @@ Tercer
 TITULO
 Tesis
 TRANSCRIBIR
+Transformaciones
 Sistema
 Sync
 Save
@@ -20176,6 +20177,7 @@ SIGNO
 SERIES
 Segmentos
 SIGUIENTE
+Sinusoidal
 Plugins
 Pendientes
 Plugin
@@ -25620,6 +25622,7 @@ Palabras
 Polinomios
 Potenciales
 Partiendo
+Periodicidad
 del
 date
 de
@@ -30914,6 +30917,7 @@ demostrarse
 determinadas
 detenerse
 diez
+dibujarla
 Vault
 Verificar
 Variables
@@ -43350,6 +43354,7 @@ generalizada
 graficas
 graficadores
 generalizadas
+grados
 body
 beacon
 bat
@@ -55340,6 +55345,8 @@ seguida
 segmentada
 segmentado
 seis
+suave
+sexagesimales
 vault
 vil
 ver
@@ -74323,6 +74330,8 @@ ratio
 revoluci
 retiene
 rigen
+repetitivo
+radianes
 notes
 notas
 nuevas
@@ -87253,6 +87262,8 @@ cross
 concavidad
 colapse
 cancelamos
+cruza
+clicos
 updated
 un
 universo
@@ -105733,6 +105744,7 @@ CONSTANTES
 CONTENIDO
 COLOR
 Consideramos
+Ceros
 Instalados
 Instalado
 Instalar
@@ -112781,6 +112793,8 @@ Identific
 INTERNA
 INTEGRACI
 Igualando
+Intersecciones
+Impar
 Funci
 File
 Fase
@@ -132094,6 +132108,7 @@ OMKGY
 OJDDDDD
 OCLa
 ObVkd
+Oscilaci
 Auto
 Annotator
 Autocompletado
@@ -137280,6 +137295,7 @@ APLICACIONES
 Asimismo
 Anulaci
 APLICA
+Amplitud
 push
 pull
 para
@@ -143243,6 +143259,7 @@ postula
 precisado
 presentadas
 proposiciones
+primitivos
 min
 mica
 movimiento
@@ -187936,6 +187953,8 @@ lico
 licas
 laterales
 labels
+ltiplos
+levantar
 incluyendo
 im
 instalar
@@ -208837,6 +208856,7 @@ REFERENCIA
 REALES
 RESUELTOS
 ROJO
+Recorrido
 Hider
 Hace
 Herramientas
@@ -252728,6 +252748,8 @@ oculto
 omiten
 operativas
 ordenada
+oscilatorio
+oscilan
 junto
 json
 jer
