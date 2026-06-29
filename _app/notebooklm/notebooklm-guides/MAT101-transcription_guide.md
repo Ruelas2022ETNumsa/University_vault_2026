@@ -54,7 +54,13 @@ border: off
 --- end-column ---
 
 🔑 **Claves**
-[2-3 palabras clave · pregunta central del subtítulo · fórmula o definición clave]
+
+[palabras clave separadas por · ]
+
+[2-4 preguntas centrales que el subtítulo responde, según su complejidad]
+
+[fórmula o definición clave en inline $...$ — nunca display $$]
+
 %```desmos-graph
 %```
 
