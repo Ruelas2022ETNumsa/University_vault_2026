@@ -2702,16 +2702,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "desmos_notebook_lm 11.md",
-        "desmos_notebook_lm 10.md",
-        "desmos_notebook_lm 9.md",
-        "desmos_notebook_lm 8.md",
-        "desmos_notebook_lm 7.md",
-        "desmos_notebook_lm 6.md",
-        "desmos_notebook_lm 5.md",
-        "desmos_notebook_lm 3.md",
-        "desmos_notebook_lm 4.md",
-        "desmos_notebook_lm 2.md",
+        "MAT101-transcription_guide 2.md",
         "desmos_notebook_lm 1.md",
         "desmos_notebook_lm.md",
         "MAT101-transcription_guide 1.md",
@@ -2793,43 +2784,7 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_app/notebooklm/notebooklm-guides/desmos_notebook_lm 2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/notebooklm-guides/desmos_notebook_lm 3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/notebooklm-guides/desmos_notebook_lm 4.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/notebooklm-guides/desmos_notebook_lm 5.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/notebooklm-guides/desmos_notebook_lm 6.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/notebooklm-guides/desmos_notebook_lm 7.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/notebooklm-guides/desmos_notebook_lm 8.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/notebooklm-guides/desmos_notebook_lm 9.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_app/notebooklm/MAT101-notebooklm_prompt 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/notebooklm-guides/desmos_notebook_lm 10.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -2837,7 +2792,7 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_app/notebooklm/notebooklm-guides/desmos_notebook_lm 11.md": {
+    "_app/notebooklm/notebooklm-guides/MAT101-transcription_guide 2.md": {
       "isPinned": false,
       "isHidden": false
     }

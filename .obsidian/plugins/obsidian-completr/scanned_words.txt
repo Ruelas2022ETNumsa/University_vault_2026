@@ -87249,6 +87249,7 @@ contesto
 compuesta
 cross
 concavidad
+colapse
 updated
 un
 universo
@@ -168783,6 +168784,7 @@ eval
 elemental
 establecen
 extrayendo
+estableciendo
 Motor
 Media
 Mantiene
@@ -252719,6 +252721,7 @@ oculta
 oculto
 omiten
 operativas
+ordenada
 junto
 json
 jer

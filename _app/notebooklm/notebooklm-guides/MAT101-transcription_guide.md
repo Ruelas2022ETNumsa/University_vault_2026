@@ -54,7 +54,7 @@ border: off
 --- end-column ---
 
 🔑 **Claves**
-[dejar vacío]
+[2-3 palabras clave · pregunta central del subtítulo · fórmula o definición clave]
 %```desmos-graph
 %```
 
@@ -175,8 +175,3 @@ T2 Límites y continuidad: Stewart 9na · Apostol(1to7) · Stewart 7ma(1to4)
 
 Apostol como primera fuente para T0 porque cubre axiomas y orden con
 rigor formal. Para funciones y límites, Stewart 9na es primera opción.
-
-
-
-
-
