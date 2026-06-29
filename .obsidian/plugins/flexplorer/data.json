@@ -5,9 +5,6 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
-        "Untitled 2.md",
-        "Untitled 1.md",
-        "Untitled.md",
         "in_work",
         "Borrar",
         "README.md",
@@ -2475,6 +2472,7 @@
       "sortOrder": "custom",
       "customOrder": [
         "rendimiento.md",
+        "Untitled 1.md",
         "tables no terminado.md",
         "corr.md",
         "corr 1.md",
@@ -2745,19 +2743,11 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Untitled.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_app/notebooklm/ETN806-P3-notebooklm_prompt.md": {
       "isPinned": false,
       "isHidden": false
     },
     "_app/_config/_notebooklm-system 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Untitled 1.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -2777,7 +2767,7 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Untitled 2.md": {
+    "in_work/Untitled 1.md": {
       "isPinned": false,
       "isHidden": false
     }
