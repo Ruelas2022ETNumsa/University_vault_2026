@@ -2668,12 +2668,9 @@
         "ETN806-P2-notebooklm_prompt.md",
         "MAT101-notebooklm-user_guide.md",
         "notebooklm-guides",
-        "MAT101-notebooklm_prompt.md"
+        "MAT101-notebooklm_study.md",
+        "obsidian-notebooklm_notation.md"
       ]
-    },
-    "_app/notebooklm/MAT101-notebooklm_prompt.md": {
-      "isPinned": true,
-      "isHidden": false
     },
     "_app/notebooklm/notebooklm-guides": {
       "isPinned": false,
@@ -2682,7 +2679,7 @@
       "customOrder": [
         "desmos_notebook_lm.md",
         "ETN806-P3-colas_guide_s.md",
-        "MAT101-transcription_guide.md",
+        "MAT101-notebooklm_transcription.md",
         "ETN806-P3-Tikz_markov_guide.md",
         "tikzjax_guide.md"
       ]
@@ -2697,10 +2694,6 @@
     },
     "_app/notebooklm/notebooklm-guides/ETN806-P3-Tikz_markov_guide.md": {
       "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/notebooklm-guides/MAT101-transcription_guide.md": {
-      "isPinned": true,
       "isHidden": false
     },
     "_app/notebooklm/ETN806-P2-notebooklm_prompt.md": {
@@ -2750,6 +2743,18 @@
     "in_work/Untitled 1.md": {
       "isPinned": false,
       "isHidden": false
+    },
+    "_app/notebooklm/obsidian-notebooklm_notation.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/notebooklm-guides/MAT101-notebooklm_transcription.md": {
+      "isPinned": true,
+      "isHidden": false
+    },
+    "_app/notebooklm/MAT101-notebooklm_study.md": {
+      "isPinned": true,
+      "isHidden": false
     }
   },
   "pinnedFiles": [
@@ -2757,8 +2762,8 @@
     "_app/_config/_claude-boot.md",
     "_app/_config/_galaxy-system.md",
     "_app/notebooklm/notebooklm-guides/desmos_notebook_lm.md",
-    "_app/notebooklm/MAT101-notebooklm_prompt.md",
-    "_app/notebooklm/notebooklm-guides/MAT101-transcription_guide.md"
+    "_app/notebooklm/MAT101-notebooklm_study.md",
+    "_app/notebooklm/notebooklm-guides/MAT101-notebooklm_transcription.md"
   ],
   "showHidden": false,
   "newItemPlacement": "top",

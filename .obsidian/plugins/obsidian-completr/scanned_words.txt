@@ -20178,6 +20178,8 @@ SERIES
 Segmentos
 SIGUIENTE
 Sinusoidal
+Separadores
+Significado
 Plugins
 Pendientes
 Plugin
@@ -30918,6 +30920,7 @@ determinadas
 detenerse
 diez
 dibujarla
+deba
 Vault
 Verificar
 Variables
@@ -37052,6 +37055,7 @@ VHDDDDDDDDDDDDDDDDDDD
 VISUALIZACIONES
 Verific
 Ventana
+Vert
 galaxy
 gina
 genes
@@ -43355,6 +43359,7 @@ graficas
 graficadores
 generalizadas
 grados
+grosores
 body
 beacon
 bat
@@ -48432,6 +48437,7 @@ backups
 borrada
 bruta
 binarias
+bounds
 scope
 status
 selector
@@ -67876,6 +67882,10 @@ antracita
 asociativa
 asignan
 adaptados
+aclaratoria
+arcoseno
+arcocoseno
+arcotangente
 related
 recomendados
 ribbon
@@ -87264,6 +87274,7 @@ colapse
 cancelamos
 cruza
 clicos
+cosecante
 updated
 un
 universo
@@ -112795,6 +112806,7 @@ INTEGRACI
 Igualando
 Intersecciones
 Impar
+Ignorar
 Funci
 File
 Fase
