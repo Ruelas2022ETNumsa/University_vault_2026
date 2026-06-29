@@ -2476,29 +2476,13 @@
         "tables no terminado.md",
         "corr.md",
         "corr 1.md",
-        "Untitled.md",
         "corr2.md",
         "MAT101-Números-reales-y-desigualdades.md",
         "MAT101_T1-Funciones-reales.md",
-        "MAT101_T0_1enriquezido.md",
-        "MAT101_T0_0conclaude.md",
-        "MAT101T0_transcripcion.md",
-        "MAT101-NúmerosT0connotebook.md"
+        "MAT101T0_transcripcion.md"
       ]
     },
-    "in_work/MAT101-NúmerosT0connotebook.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "in_work/MAT101T0_transcripcion.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "in_work/MAT101_T0_0conclaude.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "in_work/MAT101_T0_1enriquezido.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -2587,10 +2571,6 @@
       "isHidden": false
     },
     "in_work/corr2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "in_work/Untitled.md": {
       "isPinned": false,
       "isHidden": false
     },
