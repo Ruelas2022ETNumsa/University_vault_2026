@@ -36,8 +36,8 @@ ESTILO DE TRANSCRIPCIÓN:
 - Corrección importante → nota breve al final de esa sección.
 _
 BLOQUES CORNELL:
-Aplicar a subtítulos de teoría: definiciones, axiomas, teoremas, propiedades
-, procedimientos paso a paso Y NOTAS DEL TITULO. NO aplicar a ejemplos resueltos.
+Aplicar a subtítulos de teoría: definiciones, axiomas, teoremas, propiedades, procedimientos
+paso a paso Y NOTAS DEL TITULO. NO aplicar a ejemplos resueltos.
 
 ESTRUCTURA:
 --- start-multi-column: cornell-TX-00N
@@ -60,6 +60,12 @@ border: off
 [2-4 preguntas centrales que el subtítulo responde, según su complejidad]
 
 [fórmula o definición clave en inline $...$ — nunca display $$]
+
+[conexiones: "ver también: X" — solo si hay un subtítulo relacionado evidente]
+
+[errores comunes: "no confundir X con Y" — solo si aplica]
+
+[mnemónico — solo si el subtítulo tiene una lista de 5 o más ítems]
 
 %```desmos-graph
 %```

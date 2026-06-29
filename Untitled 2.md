@@ -1,6 +1,6 @@
 # Números reales y desigualdades
 
---- start-multi-column: cornell-T0-001
+--- start-multi-column: cornell-T0-010
 
 ```column-settings
 number of columns: 2
@@ -194,7 +194,25 @@ no confundir elemento neutro con elemento inverso.
 
 
 
+A continuación se presentan ejercicios resueltos basados en los **Axiomas de Cuerpo**, extraídos y adaptados del libro **Apostol (Calculus, Vol. 1)**, los cuales demuestran cómo las leyes algebraicas fundamentales se derivan rigurosamente de los axiomas.
 
+##### Ej. 1 Demostrar la Ley de simplificación para la suma: Si $a + b = a + c$, entonces $b = c$.
+
+En virtud del **Axioma 5** (existencia de negativos), existe un número $y$ tal que $y + a = 0$. Sumando $y$ a ambos miembros de la igualdad original: $$\begin{array}{rcl} y + (a + b) & = & y + (a + c) \ (y + a) + b & = & (y + a) + c \quad \text{(por Axioma 2: Asociatividad)} \ 0 + b & = & 0 + c \quad \text{(por Axioma 5)} \ b & = & c \quad \text{(por Axioma 4: Neutro)} \end{array}$$
+
+> [!note] Este ejercicio demuestra que el elemento neutro $0$ es único. Si existieran dos neutros $0$ y $0'$, se cumpliría $0 + 0' = 0$ y $0 + 0 = 0$, lo que por simplificación implica $0 = 0'$.
+
+##### Ej. 2 Demostrar la propiedad del producto por cero: $a \cdot 0 = 0$ para cualquier número real $a$.
+
+Partimos de la propiedad del neutro aditivo $0 + 0 = 0$. Aplicando el **Axioma 7** (distributividad): $$\begin{array}{rcl} a \cdot (0 + 0) & = & a \cdot 0 \ a \cdot 0 + a \cdot 0 & = & a \cdot 0 \end{array}$$ Por el **Axioma 4**, sabemos que $a \cdot 0 + 0 = a \cdot 0$, por lo tanto: $$\begin{array}{rcl} a \cdot 0 + a \cdot 0 & = & a \cdot 0 + 0 \end{array}$$ Aplicando la **Ley de simplificación** (Ej. 1), cancelamos $a \cdot 0$ en ambos lados, resultando: $$\begin{array}{rcl} a \cdot 0 & = & 0 \end{array}$$.
+
+##### Ej. 3 Demostrar la regla de los signos para el producto de negativos: $(-a)(-b) = ab$.
+
+Para demostrar esto, primero es útil establecer que $(-a)b = -(ab)$. Consideramos la suma $ab + (-a)b$. Por distributividad: $$\begin{array}{rcl} ab + (-a)b & = & [a + (-a)]b \ ab + (-a)b & = & 0 \cdot b \quad \text{(por Axioma 5)} \ ab + (-a)b & = & 0 \quad \text{(por Ej. 2)} \end{array}$$ Esto indica que $(-a)b$ es el opuesto de $ab$. Ahora, para $(-a)(-b)$: $$\begin{array}{rcl} (-a)(-b) & = & -[a(-b)] \ (-a)(-b) & = & -[-(ab)] \quad \text{(aplicando la misma lógica al segundo factor)} \end{array}$$ Finalmente, por el teorema de la doble negación $-(-x) = x$, concluimos: $$\begin{array}{rcl} (-a)(-b) & = & ab \end{array}$$.
+
+##### Ej. 4 Demostrar la unicidad del recíproco: Si $a \neq 0$ y $ab = 1$, entonces $b = a^{-1}$.
+
+Supongamos que $b$ y $a^{-1}$ son ambos recíprocos de $a$. Por definición del **Axioma 6**: $$\begin{array}{rcl} a \cdot b & = & 1 \ a \cdot a^{-1} & = & 1 \end{array}$$ Igualando ambas expresiones: $$\begin{array}{rcl} a \cdot b & = & a \cdot a^{-1} \end{array}$$ Dado que $a \neq 0$, multiplicamos por $a^{-1}$ en ambos lados: $$\begin{array}{rcl} a^{-1} \cdot (a \cdot b) & = & a^{-1} \cdot (a \cdot a^{-1}) \ (a^{-1} \cdot a) \cdot b & = & (a^{-1} \cdot a) \cdot a^{-1} \quad \text{(Asociatividad)} \ 1 \cdot b & = & 1 \cdot a^{-1} \ b & = & a^{-1} \end{array}$$.
 
 
 

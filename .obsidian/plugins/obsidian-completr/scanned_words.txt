@@ -67868,6 +67868,7 @@ azulado
 antracita
 asociativa
 asignan
+adaptados
 related
 recomendados
 ribbon
@@ -80554,6 +80555,7 @@ notacion
 nimos
 neutra
 nros
+notar
 created
 commit
 cada
@@ -87250,6 +87252,7 @@ compuesta
 cross
 concavidad
 colapse
+cancelamos
 updated
 un
 universo
@@ -105729,6 +105732,7 @@ CONTINUIDAD
 CONSTANTES
 CONTENIDO
 COLOR
+Consideramos
 Instalados
 Instalado
 Instalar
@@ -112776,6 +112780,7 @@ Infer
 Identific
 INTERNA
 INTEGRACI
+Igualando
 Funci
 File
 Fase
