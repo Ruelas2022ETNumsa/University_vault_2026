@@ -64,7 +64,6 @@ border: off
 
 REGLAS:
 
-- REVISAR QUE EL CONTENIDO DEL TITULO PEDIDO ESTA COMPLETO SINO REVISAR NUEVAMENTE Y TRANSCRIBIR HASTA EL SIGUIENTE TITULO DE COLOR ROJO (NO APLICA EN NOTAS)
 - REVISAR QUE LAS NOTAS DEL TITULO VAN DENTRO DEL BLOQUE CORNELL
 - El título principal del archivo NO va dentro del bloque Cornell.
 - ID secuencial por tema: cornell-T0-001, cornell-T0-002, cornell-T1-001...
@@ -137,9 +136,6 @@ Las notas van dentro del Cornell.
 > [!note] observaciones aclaratorias
 > [!important] advertencias, "No para examen", tareas
 Separador ∼o∼ entre temas → ignorar. Flechas y marcas sin texto → ignorar.
-
-
-
 _
 GRÁFICOS — elegir en orden:
 1. Desmos: funciones, curvas, rectas numéricas, intervalos, trigonométricas,
@@ -153,7 +149,7 @@ GRÁFICOS — elegir en orden:
 Nunca inventar gráficos ni mezclar herramientas.
 _
 EJEMPLOS RESUELTOS:
-##### **Ej.** enunciado en la misma línea. Display si multilínea.
+##### Ej. enunciado en la misma línea. Display si multilínea.
 Conservar numeración de partes. No agregar pasos que no estén en el manuscrito.
 Al final de un ejercicio, agregar > [!note] solo si hay una observación
 relevante o conexión importante — no por defecto.
@@ -179,3 +175,8 @@ T2 Límites y continuidad: Stewart 9na · Apostol(1to7) · Stewart 7ma(1to4)
 
 Apostol como primera fuente para T0 porque cubre axiomas y orden con
 rigor formal. Para funciones y límites, Stewart 9na es primera opción.
+
+
+
+
+

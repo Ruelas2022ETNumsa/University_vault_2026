@@ -13113,6 +13113,7 @@ Trigonom
 Tercer
 TITULO
 Tesis
+TRANSCRIBIR
 Sistema
 Sync
 Save
@@ -20174,6 +20175,7 @@ Simb
 SIGNO
 SERIES
 Segmentos
+SIGUIENTE
 Plugins
 Pendientes
 Plugin
@@ -30910,6 +30912,8 @@ derivados
 deriva
 demostrarse
 determinadas
+detenerse
+diez
 Vault
 Verificar
 Variables
@@ -80549,6 +80553,7 @@ normalizado
 notacion
 nimos
 neutra
+nros
 created
 commit
 cada
@@ -105721,6 +105726,8 @@ CORRECTA
 CNICOS
 CONTINUIDAD
 CONSTANTES
+CONTENIDO
+COLOR
 Instalados
 Instalado
 Instalar
@@ -137266,6 +137273,7 @@ ALTERNATIVA
 APLICACIONES
 Asimismo
 Anulaci
+APLICA
 push
 pull
 para
@@ -143225,6 +143233,10 @@ presencia
 petr
 produzcan
 postulados
+postula
+precisado
+presentadas
+proposiciones
 min
 mica
 movimiento
@@ -195592,6 +195604,8 @@ inesperado
 imprimen
 invertido
 introductorio
+incluirlo
+inherentes
 Dependencia
 Dropbox
 Dataview
@@ -201722,6 +201736,7 @@ Distinci
 Defaults
 DOTTED
 DESIGUALDADES
+DENTRO
 Remotely
 Raz
 Revisa
@@ -208813,6 +208828,7 @@ RICAS
 REFERENCIA
 REALES
 RESUELTOS
+ROJO
 Hider
 Hace
 Herramientas
@@ -213737,6 +213753,7 @@ HoEy
 HEX
 HISPANOHABLANTE
 Hiperb
+HASTA
 filtrar
 formato
 faltantes
@@ -246100,6 +246117,7 @@ NOMENCLATURA
 NIVELES
 NIVEL
 NOTEBOOK
+NUEVAMENTE
 originales
 observatory
 oficial
@@ -299160,6 +299178,7 @@ Jdmf
 Jtaaw
 JcC
 JnXF
+Junto
 KB
 Kirchhoff
 Ksv
