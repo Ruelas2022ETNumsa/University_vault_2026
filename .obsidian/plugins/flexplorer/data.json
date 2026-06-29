@@ -2688,9 +2688,9 @@
         "ETN806-P1-notebooklm(legacy).md",
         "ETN806-P1-notebooklm_prompt.md",
         "ETN806-P2-notebooklm_prompt.md",
+        "MAT101-notebooklm-user_guide.md",
         "notebooklm-guides",
-        "MAT101-notebooklm_prompt.md",
-        "MAT101-notebooklm-user_guide.md"
+        "MAT101-notebooklm_prompt.md"
       ]
     },
     "_app/notebooklm/MAT101-notebooklm_prompt.md": {
@@ -2702,10 +2702,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "MAT101-transcription_guide 2.md",
-        "desmos_notebook_lm 1.md",
         "desmos_notebook_lm.md",
-        "MAT101-transcription_guide 1.md",
         "ETN806-P3-colas_guide_s.md",
         "MAT101-transcription_guide.md",
         "ETN806-P3-Tikz_markov_guide.md",
@@ -2756,10 +2753,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_app/notebooklm/notebooklm-guides/MAT101-transcription_guide 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_app/_config/_notebooklm-system 1.md": {
       "isPinned": false,
       "isHidden": false
@@ -2776,10 +2769,6 @@
       "isPinned": true,
       "isHidden": false
     },
-    "_app/notebooklm/notebooklm-guides/desmos_notebook_lm 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_app/_appnotes/desmos_guide 1.md": {
       "isPinned": false,
       "isHidden": false
@@ -2789,10 +2778,6 @@
       "isHidden": false
     },
     "Untitled 2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/notebooklm-guides/MAT101-transcription_guide 2.md": {
       "isPinned": false,
       "isHidden": false
     }
