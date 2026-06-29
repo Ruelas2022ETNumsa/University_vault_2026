@@ -2661,15 +2661,13 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "MAT101-notebooklm_prompt 1.md",
-        "ETN806-P3-notebooklm_prompt.md",
-        "ETN806-P1-notebooklm(legacy).md",
-        "ETN806-P1-notebooklm_prompt.md",
-        "ETN806-P2-notebooklm_prompt.md",
-        "MAT101-notebooklm-user_guide.md",
+        "MAT101-notebooklm_transcription 1.md",
+        "MAT101-notebooklm_study 1.md",
+        "obsidian-notebooklm_notation.md",
+        "other",
+        "MAT101-notebooklm_transcription.md",
         "notebooklm-guides",
-        "MAT101-notebooklm_study.md",
-        "obsidian-notebooklm_notation.md"
+        "MAT101-notebooklm_study.md"
       ]
     },
     "_app/notebooklm/notebooklm-guides": {
@@ -2679,7 +2677,6 @@
       "customOrder": [
         "desmos_notebook_lm.md",
         "ETN806-P3-colas_guide_s.md",
-        "MAT101-notebooklm_transcription.md",
         "ETN806-P3-Tikz_markov_guide.md",
         "tikzjax_guide.md"
       ]
@@ -2696,27 +2693,7 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_app/notebooklm/ETN806-P2-notebooklm_prompt.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Semestres/SEM_08/ETN806/Partial_1/ETN806-Parcial_1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/ETN806-P1-notebooklm(legacy).md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/ETN806-P1-notebooklm_prompt.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/MAT101-notebooklm-user_guide.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/ETN806-P3-notebooklm_prompt.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -2736,10 +2713,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_app/notebooklm/MAT101-notebooklm_prompt 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "in_work/Untitled 1.md": {
       "isPinned": false,
       "isHidden": false
@@ -2748,12 +2721,57 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_app/notebooklm/notebooklm-guides/MAT101-notebooklm_transcription.md": {
+    "_app/notebooklm/MAT101-notebooklm_study.md": {
       "isPinned": true,
       "isHidden": false
     },
-    "_app/notebooklm/MAT101-notebooklm_study.md": {
+    "_app/notebooklm/MAT101-notebooklm_study 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/MAT101-notebooklm_transcription.md": {
       "isPinned": true,
+      "isHidden": false
+    },
+    "_app/notebooklm/other": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "MAT101-notebooklm-user_guide.md",
+        "MAT101-notebooklm_prompt 1.md",
+        "ETN806-P2-notebooklm_prompt.md",
+        "ETN806-P1-notebooklm_prompt.md",
+        "ETN806-P3-notebooklm_prompt.md",
+        "ETN806-P1-notebooklm(legacy).md"
+      ],
+      "sortOrder": "custom"
+    },
+    "_app/notebooklm/other/ETN806-P1-notebooklm(legacy).md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/other/ETN806-P3-notebooklm_prompt.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/other/ETN806-P1-notebooklm_prompt.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/other/ETN806-P2-notebooklm_prompt.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/other/MAT101-notebooklm-user_guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/other/MAT101-notebooklm_prompt 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/MAT101-notebooklm_transcription 1.md": {
+      "isPinned": false,
       "isHidden": false
     }
   },
@@ -2763,7 +2781,7 @@
     "_app/_config/_galaxy-system.md",
     "_app/notebooklm/notebooklm-guides/desmos_notebook_lm.md",
     "_app/notebooklm/MAT101-notebooklm_study.md",
-    "_app/notebooklm/notebooklm-guides/MAT101-notebooklm_transcription.md"
+    "_app/notebooklm/MAT101-notebooklm_transcription.md"
   ],
   "showHidden": false,
   "newItemPlacement": "top",
