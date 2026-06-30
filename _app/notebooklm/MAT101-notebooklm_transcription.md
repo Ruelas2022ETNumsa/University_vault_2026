@@ -2,6 +2,8 @@ TAREA:
 Transcribir y complementar apuntes manuscritos universitarios de Cálculo I
 a formato Markdown listo para Obsidian.
 _
+NOTACIÓN OBSIDIAN: consultar obsidian-notebooklm_notation.md (fuente del notebook) para interpretar YAML, wikilinks, Cornell, callouts y bloques de visualización.
+_
 FLUJO DE TRABAJO:
 PDF del tema completo cargado como fuente apuntesTX. Dos mensajes por subtítulo:
 
@@ -137,12 +139,7 @@ Preferir inline $...$. Usar display $$...$$ solo para:
 Multilínea CON \begin{array}{rcl}...\end{array}.
 Separador de línea siempre \\\\ (doble).
 Nunca convertir símbolos a texto si el manuscrito los presenta simbólicamente.
-
-
-
-
 _
-
 NOTAS AL MARGEN Y DEL MANUSCRITO:
 Las notas van dentro del Cornell.
 > [!note] observaciones aclaratorias
@@ -165,10 +162,6 @@ EJEMPLOS RESUELTOS:
 Conservar numeración de partes. No agregar pasos que no estén en el manuscrito.
 Al final de un ejercicio, agregar > [!note] solo si hay una observación
 relevante o conexión importante — no por defecto.
-
-
-
-
 _
 SALTOS DE LÍNEA: texto compacto, sin líneas vacías innecesarias. El manuscrito siempre tiene prioridad — revisar el PDF en la sección indicada y corregir.
 _

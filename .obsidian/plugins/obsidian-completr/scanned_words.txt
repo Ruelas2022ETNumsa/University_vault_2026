@@ -20180,6 +20180,7 @@ SIGUIENTE
 Sinusoidal
 Separadores
 Significado
+Simetria
 Plugins
 Pendientes
 Plugin
@@ -30921,6 +30922,7 @@ detenerse
 diez
 dibujarla
 deba
+deducen
 Vault
 Verificar
 Variables
@@ -37056,6 +37058,7 @@ VISUALIZACIONES
 Verific
 Ventana
 Vert
+Verdad
 galaxy
 gina
 genes
@@ -67886,6 +67889,7 @@ aclaratoria
 arcoseno
 arcocoseno
 arcotangente
+afirmaci
 related
 recomendados
 ribbon
@@ -80575,6 +80579,7 @@ nimos
 neutra
 nros
 notar
+notation
 created
 commit
 cada
@@ -118974,6 +118979,7 @@ Fusionada
 FUNCION
 FUERA
 FFEB
+Falsa
 Estado
 Excalidraw
 EPUBs
@@ -132121,6 +132127,7 @@ OJDDDDD
 OCLa
 ObVkd
 Oscilaci
+Opuestos
 Auto
 Annotator
 Autocompletado
@@ -187967,6 +187974,7 @@ laterales
 labels
 ltiplos
 levantar
+loga
 incluyendo
 im
 instalar
@@ -195645,6 +195653,7 @@ invertido
 introductorio
 incluirlo
 inherentes
+iterada
 Dependencia
 Dropbox
 Dataview
