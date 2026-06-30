@@ -48441,6 +48441,7 @@ borrada
 bruta
 binarias
 bounds
+bcancel
 scope
 status
 selector
@@ -67890,6 +67891,7 @@ arcoseno
 arcocoseno
 arcotangente
 afirmaci
+acute
 related
 recomendados
 ribbon
