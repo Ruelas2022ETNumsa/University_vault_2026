@@ -37064,6 +37064,8 @@ Verific
 Ventana
 Vert
 Verdad
+Violet
+Violeta
 galaxy
 gina
 genes
@@ -55363,6 +55365,7 @@ seis
 suave
 sexagesimales
 subpregunta
+sustituido
 vault
 vil
 ver
@@ -74355,6 +74358,7 @@ retiene
 rigen
 repetitivo
 radianes
+resalte
 notes
 notas
 nuevas
@@ -87290,6 +87294,8 @@ cruza
 clicos
 cosecante
 consume
+cancel
+cancelto
 updated
 un
 universo
@@ -100367,6 +100373,7 @@ GENERAR
 Generador
 Grande
 GRAFICAMENTE
+Gray
 Convenci
 Creaci
 Commander
@@ -132139,6 +132146,7 @@ OCLa
 ObVkd
 Oscilaci
 Opuestos
+OliveGreen
 Auto
 Annotator
 Autocompletado
@@ -168845,6 +168853,8 @@ estableciendo
 estructuran
 ecuacion
 excedente
+envolviendo
+escapado
 Motor
 Media
 Mantiene
@@ -176389,6 +176399,7 @@ Multil
 Mediano
 MEROS
 MARGEN
+Mahogany
 Lectura
 LaTeX
 Linter
@@ -187994,6 +188005,7 @@ ltiplos
 levantar
 loga
 lleg
+longrightarrow
 incluyendo
 im
 instalar
@@ -195673,6 +195685,7 @@ introductorio
 incluirlo
 inherentes
 iterada
+importancia
 Dependencia
 Dropbox
 Dataview
@@ -201805,6 +201818,7 @@ DOTTED
 DESIGUALDADES
 DENTRO
 Diferente
+Dato
 Remotely
 Raz
 Revisa
@@ -213824,6 +213838,7 @@ HEX
 HISPANOHABLANTE
 Hiperb
 HASTA
+Hallamos
 filtrar
 formato
 faltantes
@@ -219329,6 +219344,7 @@ faltante
 floor
 fraccionarias
 field
+fcolorbox
 haya
 hace
 hacer

@@ -5,6 +5,8 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
+        "Untitled.md",
+        "Untitled 1.md",
         "in_work",
         "Borrar",
         "README.md",
@@ -2736,6 +2738,7 @@
     "_app/notebooklm/other": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "MAT101-notebooklm-user_guide.md",
         "MAT101-notebooklm_prompt 1.md",
@@ -2743,8 +2746,7 @@
         "ETN806-P1-notebooklm_prompt.md",
         "ETN806-P3-notebooklm_prompt.md",
         "ETN806-P1-notebooklm(legacy).md"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "_app/notebooklm/other/ETN806-P1-notebooklm(legacy).md": {
       "isPinned": false,
@@ -2771,6 +2773,14 @@
       "isHidden": false
     },
     "_app/notebooklm/MAT101-notebooklm_transcription 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled 1.md": {
       "isPinned": false,
       "isHidden": false
     }
