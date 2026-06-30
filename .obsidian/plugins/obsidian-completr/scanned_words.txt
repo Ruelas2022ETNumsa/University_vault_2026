@@ -168829,6 +168829,7 @@ establecen
 extrayendo
 estableciendo
 estructuran
+ecuacion
 Motor
 Media
 Mantiene

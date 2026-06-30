@@ -9,5 +9,6 @@
     "print",
     "desmos-editor-off"
   ],
-  "cssTheme": ""
+  "cssTheme": "",
+  "theme": "moonstone"
 }
