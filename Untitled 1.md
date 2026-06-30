@@ -34,3 +34,11 @@ a & = & a \cdot 1 + a \cdot 0 \\
 a + 0 & = & a + a \cdot 0 \\
 0 & = & a \cdot 0
 \end{array}$$
+$$\boxed{s}$$
+
+$$\fcolorbox{RedOrange}{YellowOrange}{1}$$
+
+$$x+\bcancel{2}=\cancelto{\color{YellowOrange}2}{4}$$
+
+
+$$\can$$
