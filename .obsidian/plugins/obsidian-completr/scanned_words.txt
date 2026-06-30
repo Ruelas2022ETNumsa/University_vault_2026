@@ -6170,6 +6170,7 @@ tmico
 tratar
 tuve
 terminos
+tachado
 ToDo
 Templater
 Text
@@ -13115,6 +13116,8 @@ TITULO
 Tesis
 TRANSCRIBIR
 Transformaciones
+TealBlue
+Tachado
 Sistema
 Sync
 Save
@@ -20181,6 +20184,7 @@ Sinusoidal
 Separadores
 Significado
 Simetria
+Saltos
 Plugins
 Pendientes
 Plugin
@@ -30923,6 +30927,7 @@ diez
 dibujarla
 deba
 deducen
+distinguirlo
 Vault
 Verificar
 Variables
@@ -55357,6 +55362,7 @@ segmentado
 seis
 suave
 sexagesimales
+subpregunta
 vault
 vil
 ver
@@ -67892,6 +67898,7 @@ arcocoseno
 arcotangente
 afirmaci
 acute
+alado
 related
 recomendados
 ribbon
@@ -87282,6 +87289,7 @@ cancelamos
 cruza
 clicos
 cosecante
+consume
 updated
 un
 universo
@@ -105763,6 +105771,7 @@ CONTENIDO
 COLOR
 Consideramos
 Ceros
+Cajas
 Instalados
 Instalado
 Instalar
@@ -137317,6 +137326,7 @@ Asimismo
 Anulaci
 APLICA
 Amplitud
+Advertencia
 push
 pull
 para
@@ -156990,6 +157000,7 @@ YMZt
 YGXt
 YNGi
 YLKOd
+YellowOrange
 Bot
 Baja
 Builder
@@ -162153,6 +162164,9 @@ Biblioteca
 Barrow
 BONUS
 BIBLIOTECA
+BrickRed
+BlueGreen
+Borde
 en
 exacta
 escaneados
@@ -168830,6 +168844,7 @@ extrayendo
 estableciendo
 estructuran
 ecuacion
+excedente
 Motor
 Media
 Mantiene
@@ -187978,6 +187993,7 @@ labels
 ltiplos
 levantar
 loga
+lleg
 incluyendo
 im
 instalar
@@ -201788,6 +201804,7 @@ Defaults
 DOTTED
 DESIGUALDADES
 DENTRO
+Diferente
 Remotely
 Raz
 Revisa
@@ -208881,6 +208898,7 @@ REALES
 RESUELTOS
 ROJO
 Recorrido
+RedOrange
 Hider
 Hace
 Herramientas
@@ -225119,6 +225137,7 @@ hacerte
 hiperb
 hallazgo
 hidden
+hallado
 que
 quedan
 queda
@@ -246171,6 +246190,7 @@ NIVEL
 NOTEBOOK
 NUEVAMENTE
 Norma
+NavyBlue
 originales
 observatory
 oficial
@@ -299235,6 +299255,7 @@ Jtaaw
 JcC
 JnXF
 Junto
+Jerarqu
 KB
 Kirchhoff
 Ksv
@@ -305396,6 +305417,7 @@ KFxJ
 KhDm
 KDDDD
 KDDDDDDD
+KaTeX
 Zonas
 Zoom
 Zona
