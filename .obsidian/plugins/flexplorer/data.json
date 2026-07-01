@@ -2678,6 +2678,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "MAT101_TikzJax 1.md",
         "MAT101_TikzJax.md",
         "latex_notebook_lm.md",
         "MAT101_desmos.md",
@@ -2797,6 +2798,10 @@
     },
     "_app/notebooklm/notebooklm-guides/MAT101_TikzJax.md": {
       "isPinned": true,
+      "isHidden": false
+    },
+    "_app/notebooklm/notebooklm-guides/MAT101_TikzJax 1.md": {
+      "isPinned": false,
       "isHidden": false
     }
   },
