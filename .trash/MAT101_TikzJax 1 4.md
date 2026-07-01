@@ -595,8 +595,6 @@ $$
 \end{document}
 ```
 
-> Contexto para NotebookLM: usar cuando el usuario pida mostrar una función periódica. El ejemplo usa $y=\sin^2 x$ con período $p=\pi$. Incluir siempre la línea horizontal del período y los puntos de máximo marcados.
-
 - La gráfica en $p$ unidades se repite indefinidamente.
 
 
@@ -722,8 +720,6 @@ $$
 \end{document}
 ```
 
-> Contexto para NotebookLM: usar cuando el usuario pida diagrama de composición $f\circ g$. Tres elipses en línea representando los conjuntos $A$, $B$, $C$; flecha `teal` para $g$ y flecha `orange` para $f$, ambas por encima de los conjuntos.
-
 > donde el dominio de $f \circ g$ es el conjunto de todos los $x$ en el dominio de $g$ tales que $g(x)$ esté en el dominio de $f$.
 
 ---
@@ -778,8 +774,6 @@ ademas:
 \end{document}
 ```
 
-> Contexto para NotebookLM: usar para $f(x)=ax+b$. Mostrar triángulo de pendiente con catetos `1` y `a`, marca de $b$ en eje $y$, y ángulo $\alpha$ en la recta.
-
 **Función constante**
 
 Cuando:
@@ -803,8 +797,6 @@ $$f(x)=b$$
 \end{tikzpicture}
 \end{document}
 ```
-
-> Contexto para NotebookLM: usar para $f(x)=b$ con $a=0$. Recta horizontal, sin triángulo de pendiente, etiqueta $b$ en eje $y$.
 
 **Recta vertical**
 
@@ -832,8 +824,6 @@ representa una recta vertical.
 \end{tikzpicture}
 \end{document}
 ```
-
-> Contexto para NotebookLM: usar para $x=c$. Recta vertical en `orange` — no es función. Útil para ilustrar por qué falla el test de la recta vertical.
 
 La recta vertical no representa una función.
 
@@ -871,9 +861,7 @@ $$D_{f}=\mathbb{R} \, ; \, R_{f}=\mathbb{R}$$
 \end{document}
 ```
 
-> Contexto para NotebookLM: usar para $f(x)=ax$ (recta en el origen). Mostrar ángulo $\alpha$ en la base y etiqueta de pendiente $a$ sobre la recta.
-
-- además, ideas gráficas
+- además, ideas graficas
 
 ```tikz
 \usepackage{pgfplots}
@@ -916,8 +904,6 @@ $$D_{f}=\mathbb{R} \, ; \, R_{f}=\mathbb{R}$$
 \end{tikzpicture}
 \end{document}
 ```
-
-> Contexto para NotebookLM: usar para ilustrar el test de la recta vertical en una función. Rectas verticales punteadas en distintos $x$, cada una corta la curva en exactamente un punto — confirma que es función.
 
 >Si toda vertical corta en un punto la grafica es **funcion**
 
@@ -962,8 +948,6 @@ $$D_{f}=\mathbb{R} \, ; \, R_{f}=\mathbb{R}$$
 \end{tikzpicture}
 \end{document}
 ```
-
-> Contexto para NotebookLM: usar para ilustrar el test de la recta vertical en una relación que NO es función. La parábola $y^2=x+1$ (horizontal) y la vertical $x=2$ cortan en dos puntos — confirma que no es función.
 
 >Si una vertical corta en mas de un punto es una grafica **no es función**, es solo relacion.
 
@@ -1014,8 +998,6 @@ $$R_f=\text{según coeficientes } a,b,c$$
 \end{document}
 ```
 
-> Contexto para NotebookLM: usar para parábola cóncava arriba ($a>0$). Mostrar vértice $V$ con líneas guía punteadas al eje $x$ e $y$. Etiqueta de la ecuación en forma vértice.
-
 - para $a<0$
 
 ```tikz
@@ -1049,8 +1031,6 @@ $$R_f=\text{según coeficientes } a,b,c$$
 \end{tikzpicture}
 \end{document}
 ```
-
-> Contexto para NotebookLM: usar para parábola cóncava abajo ($a<0$). Misma estructura que $a>0$: vértice $V$ con líneas guía. El vértice es máximo en este caso.
 
 Se reconoce las graficas identificando
 
@@ -1115,9 +1095,7 @@ Como (a<0), la parábola abre hacia abajo.
 ```
 
 
-> Contexto para NotebookLM: usar cuando el usuario dé una ecuación concreta de parábola. Mostrar vértice, raíces en `orange` con etiquetas exactas, e intersección con eje $y$ en `purple`.
-
-$D_{f}=\mathbb{R}\quad ; \quad  R_{f}=\left]-\infty,\frac{11}{2}\right]$
+$$D_{f}=\mathbb{R}\quad ; \quad  R_{f}=\left]-\infty,\frac{11}{2}\right]$$
 
 ---
 
@@ -1186,8 +1164,6 @@ Ejemplo
 \end{tikzpicture}
 \end{document}
 ```
-
-> Contexto para NotebookLM: usar cuando el usuario pida comparar $x^n$ para distintos $n$. Cuatro curvas en un mismo sistema: $x^2$ (`teal`), $x^3$ (`orange`), $x^4$ (`violet`), $x^5$ (`red!70!black`). Todas pasan por el origen.
 
 ---
 
@@ -1277,8 +1253,6 @@ $$
 ```
 
 
-> Contexto para NotebookLM: usar para familia $a^x$ con $a>1$ (creciente). Cuatro curvas con distintas bases, punto común $(0,1)$, asíntota horizontal $y=0$. Leyenda en esquina superior izquierda.
-
 - 0<a<1
 
 ```tikz
@@ -1338,9 +1312,7 @@ $$
 \end{document}
 ```
 
-> Contexto para NotebookLM: usar para familia $a^x$ con $0<a<1$ (decreciente). Misma estructura que $a>1$: cuatro curvas, punto común $(0,1)$, asíntota $y=0$. Leyenda en esquina superior derecha.
-
-en general  $a=\dfrac{1}{b}$
+en general  $$a=\dfrac{1}{b}$$
 
 
 $$f(x)=a^{x} = \left( \frac{1}{b}\right)^{x}= b^{-x} \quad ;\quad b>1$$
@@ -1385,13 +1357,19 @@ $$a= e = 2,718281\dots \quad = \text{número de nepper}$$
 \end{document}
 ```
 
-> Contexto para NotebookLM: usar para el caso particular $f(x)=e^x$. Mostrar la tangente en $(0,1)$ con pendiente 1 ($\alpha=45°$) como rasgo distintivo de esta base.
+----
 
 ---
 
-#### Funciones logarítmicas
+#### Funciones logarítmicas 
 
-$y=f(x)=\log_{a}{x} \quad ; \quad a>0,\ a\neq 1 \qquad D_{f}=\mathbb{R}^{+},\ R_{f}=\mathbb{R}$
+- Se define "$\log$" segun:
+$$\log_{b}{a} = c\quad \Rightarrow \quad b^{c}=a$$
+
+- Como fúncion
+$$y=f(x)=\log_{a}{x} \quad ; \quad a>0 , \quad y\neq 0$$
+
+$$D_{f}=\mathbb{R}^{+} \quad ; \quad R_{f}=\mathbb{R}$$
 
 - $a>1$
 
@@ -1447,9 +1425,7 @@ $y=f(x)=\log_{a}{x} \quad ; \quad a>0,\ a\neq 1 \qquad D_{f}=\mathbb{R}^{+},\ R_
 \end{document}
 ```
 
-> Contexto para NotebookLM: usar para $\log_a x$ con $a>1$ (creciente). Asíntota vertical $x=0$ punteada, tangente en $(1,0)$, ángulo $\alpha$ en ese punto.
-
-- $0<a<1$
+- $0>a>1$
 
 
 ```tikz
@@ -1519,8 +1495,6 @@ $y=f(x)=\log_{a}{x} \quad ; \quad a>0,\ a\neq 1 \qquad D_{f}=\mathbb{R}^{+},\ R_
 \end{tikzpicture}
 \end{document}
 ```
-
-> Contexto para NotebookLM: usar para $\log_a x$ con $0<a<1$ (decreciente). Misma estructura que $a>1$: asíntota $x=0$, tangente en $(1,0)$, pero la curva desciende.
 
 - Casos especiales
 
@@ -1611,8 +1585,6 @@ Se definen en la circunferencia trigonométrica.
 
 Donde:
 
-> Contexto para NotebookLM: usar cuando el usuario pida el diagrama de la circunferencia trigonométrica con los seis segmentos. Semicircunferencia en `teal` punteada, recta del ángulo en `orange`, tangentes verticales y horizontales como guías. Los puntos $P$, $T$, $R$, $M$, $N$ identifican cada razón trigonométrica según la tabla de abajo.
-
 | $\sin{x}=\overline{PQ}$ | $\tan{x}=\overline{RT}$ | $\sec{x}=\overline{OR}$ |
 | ----------------------- | ----------------------- | ----------------------- |
 | $\cos{x}=\overline{OQ}$ | $\cot{x}=\overline{MN}$ | $\csc{x}=\overline{OM}$ |
@@ -1668,8 +1640,6 @@ Grafica :
 \end{document}
 ```
 
-> Contexto para NotebookLM: usar para graficar $\sin x$. Mostrar al menos dos períodos, puntos en ceros con etiqueta ($0$, $\pi$, $2\pi$, $3\pi$) en `orange`, banda $y=\pm1$ en punteado gris.
-
 >$f(x)=\sin x$ es periódico con $p=2\pi$ y es impar $\sin{-x}=-\sin{x}$
 
 ---
@@ -1722,8 +1692,6 @@ Grafica :
 \end{tikzpicture}
 \end{document}
 ```
-
-> Contexto para NotebookLM: usar para graficar $\cos x$. Misma estructura que seno, puntos en ceros desplazados ($\pi/2$, $3\pi/2$, $5\pi/2$, $7\pi/2$) en `orange`.
 
 >$f(x)=\cos x$ es periódico con $p=2\pi$ y es par $\cos{-x}=\cos{x}$
 
@@ -1788,8 +1756,6 @@ Grafica :
 
 
 
-
-> Contexto para NotebookLM: usar para graficar $\tan x$. Asíntotas verticales en $x=(2k+1)\pi/2$ con `line width=3pt` para tapar la línea falsa que pgfplots dibuja entre ramas. Puntos en ceros en `orange`.
 
 ---
 
@@ -1857,8 +1823,6 @@ Grafica :
 ```
 
 
-> Contexto para NotebookLM: usar para graficar $\arcsin x$. Mostrar $\sin x$ en `teal` punteado como referencia, espejo $y=x$ en gris, y la rama principal $\arcsin$ en `orange`. Puntos clave: $(-1,-\pi/2)$, $(0,0)$, $(1,\pi/2)$. Recuadro con asíntotas horizontales y verticales.
-
 ---
 
 #### Funcion $\arccos$
@@ -1922,8 +1886,6 @@ Grafica :
 \end{document}
 ```
 
-
-> Contexto para NotebookLM: usar para graficar $\arccos x$. Misma estructura que $\arcsin$: $\cos x$ en `teal` punteado (rama $[0,\pi]$), espejo $y=x$, $\arccos$ en `orange`. Puntos clave: $(-1,\pi)$, $(0,\pi/2)$, $(1,0)$.
 
 ---
 
@@ -1989,7 +1951,10 @@ Grafica :
 \end{document}
 ```
 
-> Contexto para NotebookLM: usar para graficar $\arctan x$. $\tan x$ en `teal` punteado (rama principal), espejo $y=x$, $\arctan$ en `orange` con asíntotas horizontales $y=\pm\pi/2$. Puntos clave: $(-1,-\pi/4)$, $(0,0)$, $(1,\pi/4)$.
+
+
+
+-xxx
 
 ---
 
@@ -2046,5 +2011,3 @@ galaxy-links
 [[_galaxy-system]]
 [[_note-system]]
 %%
-
-

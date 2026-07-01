@@ -309,8 +309,6 @@ Antes de entregar un bloque TikZJax verificar:
 
 > Primer parcial. Dominio, imagen, gráficas de familias de funciones, transformaciones.
 
--xxx
-
 ### Relación vs. función (diagramas de conjuntos)
 
 > Contexto para NotebookLM: estos tres ejemplos muestran cómo distinguir una relación cualquiera de una función usando diagramas de flechas entre dos conjuntos. Usar este tipo de gráfica cuando el usuario pida representar dominio/codominio con elementos discretos y sus correspondencias.
@@ -351,34 +349,6 @@ Analizar si $f$ es o no función.
 \end{document}
 ```
 
-```desmos-graph
-left=4; right=16;
-bottom=5; top=11;
-width=320; height=250;
-grid=false;
----
-\frac{(x-6)^2}{1}+\frac{(y-8)^2}{4}=1
-\frac{(x-14)^2}{1}+\frac{(y-8)^2}{4}=1
-
-(6,10.6)|label:D|hidden
-(14,10.6)|label:R|hidden
-(10,10.8)|label:f|hidden
-
-(6,9)|label:1|hidden
-(6,8)|label:2|hidden
-(6,7)|label:3|hidden
-
-(14,9)|label:4|
-(14,8)|label:5|cross
-(14,7)|label:6|cross
-
-(6*(1-t)^3+3*9*(1-t)^2*t+3*11*(1-t)*t^2+14*t^3,9*(1-t)^3+3*9.5*(1-t)^2*t+3*6.5*(1-t)*t^2+7*t^3)|0<=t<=1|#F28E2B
-
-(6+8t,8)|0<=t<=1|#4ECDC4
-
-(6*(1-t)^3+3*9*(1-t)^2*t+3*11*(1-t)*t^2+14*t^3,7*(1-t)^3+3*6.5*(1-t)^2*t+3*9.5*(1-t)*t^2+9*t^3)|0<=t<=1|#7A9E3A
-```
-
 
 $f$ sí es función.
 
@@ -412,7 +382,7 @@ $$R_f=\{4,5,6\}=rango,\ recorrido,\ codominio ,\text{ conjunto de imágenes}$$
 \node (b5) at (4,0) {$5$};
 \node (b6) at (4,-1) {$6$};
 
-\draw[->, thick, purple]
+\draw[->, thick, olive]
 (a1) .. controls (-1,1.2) and (1,0.6) .. (b5);
 
 \draw[->, thick, teal]
@@ -454,7 +424,7 @@ Todas las flechas llegan a 5.
 \node (b6) at (4,-1) {$6$};
 
 % 1 -> 4
-\draw[->, thick, violet]
+\draw[->, thick, olive]
 (a1) .. controls (-1,2) and (1,2) .. (b4);
 
 % 3 -> 5
@@ -901,7 +871,7 @@ $$D_{f}=\mathbb{R} \, ; \, R_{f}=\mathbb{R}$$
 
 > Contexto para NotebookLM: usar para $f(x)=ax$ (recta en el origen). Mostrar ángulo $\alpha$ en la base y etiqueta de pendiente $a$ sobre la recta.
 
-- además, ideas gráficas
+**Ejemplo — test de la recta vertical**
 
 ```tikz
 \usepackage{pgfplots}
@@ -945,9 +915,7 @@ $$D_{f}=\mathbb{R} \, ; \, R_{f}=\mathbb{R}$$
 \end{document}
 ```
 
-> Contexto para NotebookLM: usar para ilustrar el test de la recta vertical en una función. Rectas verticales punteadas en distintos $x$, cada una corta la curva en exactamente un punto — confirma que es función.
-
->Si toda vertical corta en un punto la grafica es **funcion**
+> Contexto para NotebookLM: usar para ilustrar el test de la recta vertical en una función. Rectas verticales punteadas en distintos $x$, cada una corta la curva en exactamente un punto — confirma que es función. Si en cambio una vertical corta en más de un punto, la gráfica no es función (ver ejemplo $y^2=x+1$ abajo).
 
 ```tikz
 \usepackage{tikz}
@@ -992,8 +960,6 @@ $$D_{f}=\mathbb{R} \, ; \, R_{f}=\mathbb{R}$$
 ```
 
 > Contexto para NotebookLM: usar para ilustrar el test de la recta vertical en una relación que NO es función. La parábola $y^2=x+1$ (horizontal) y la vertical $x=2$ cortan en dos puntos — confirma que no es función.
-
->Si una vertical corta en mas de un punto es una grafica **no es función**, es solo relacion.
 
 ---
 
@@ -1550,8 +1516,6 @@ $y=f(x)=\log_{a}{x} \quad ; \quad a>0,\ a\neq 1 \qquad D_{f}=\mathbb{R}^{+},\ R_
 
 > Contexto para NotebookLM: usar para $\log_a x$ con $0<a<1$ (decreciente). Misma estructura que $a>1$: asíntota $x=0$, tangente en $(1,0)$, pero la curva desciende.
 
-- Casos especiales
-
 ### Funciones trigonométricas
 
 Se definen en la circunferencia trigonométrica.
@@ -2074,3 +2038,5 @@ galaxy-links
 [[_galaxy-system]]
 [[_note-system]]
 %%
+
+
