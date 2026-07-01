@@ -167,13 +167,13 @@ Reglas:
 
 ### N6. ESCALA Y TAMAÑO
 
-Mismas 6 categorías que `MAT101_desmos.md` (N2 de esa guía — incluyendo Panorámico), valores adaptados a TikZ:
+Mismas categorías que `MAT101_desmos.md` (N2 de esa guía), valores adaptados a TikZ:
 
 | Tipo           | pgfplots (width/height)  | tikzpicture (scale aprox.) | Uso                                    |
 | -------------- | ------------------------ | -------------------------- | -------------------------------------- |
 | Pequeño        | `width=6cm, height=4cm`  | `scale=0.7`                | Rectas numéricas, intervalos, un punto |
 | Mediano        | `width=8cm, height=7cm`  | `scale=1` a `1.2`          | Funciones, parábolas                   |
-| Grande         | `width=11cm, height=9cm` | `scale=0.9` a `1.5`        | Múltiples curvas, etiquetas, regiones  |
+| Grande         | `width=11cm, height=9cm` | `scale=1.5`                | Múltiples curvas, etiquetas, regiones  |
 | Cornell        | `width=6cm, height=5cm`  | `scale=0.85`               | Máximo dentro de bloque multi-column   |
 | Plano cuadrado | `width=9cm, height=9cm`  | `scale=1.3`                | Regiones, geometría, área entre curvas |
 | Panorámico     | `width=12cm, height=5cm` | `scale=1` (ancho)          | Funciones trigonométricas, periódicas  |
@@ -200,9 +200,7 @@ Los hex de abajo son los mismos usados en `MAT101_desmos.md`, para mantener cons
 \draw[thick, curvaPpal] ...
 ```
 
-Alternativa más simple — nombres estándar de TikZ (ya usados en los ejemplos existentes de T1): `teal`, `orange`, `olive`, `gray`. Válidos cuando no hace falta coincidencia exacta de color con Desmos.
-
-> **Excepción para familias de funciones con 4 curvas:** `violet`, `purple` y `red!70!black` están reservados para diagramas que necesitan una cuarta serie (ej. función potencial, exponencial). No usar como color general en diagramas de 1–3 curvas.
+Alternativa más simple — nombres estándar de TikZ (ya usados en los ejemplos existentes de T1): `teal`, `orange`, `violet`, `purple`, `olive`, `gray`, `red`. Válidos cuando no hace falta coincidencia exacta de color con Desmos.
 
 #### Paleta para curvas y líneas (sólidas)
 
@@ -497,6 +495,9 @@ La gráfica de $y=f(x)$ es simétrica respecto al eje $y$.
 ```
 > Contexto para NotebookLM: la gráfica muestra $y=x^4-x^2+0.5$, simétrica respecto al eje $y$ — los puntos $(-1, 0.5)$ y $(1, 0.5)$ ilustran esa simetría. Usar cuando el usuario pida graficar una función par o mostrar simetría axial respecto al eje $y$.
 
+> [!note]
+> Gráfica: espejo.
+
 ---
 
 ### Función impar
@@ -508,6 +509,8 @@ f(-x)=-f(x)
 $$
 
 La gráfica de $y=f(x)$ impar es simétrica respecto al origen $(0,0)$.
+
+
 
 ```tikz
 \usepackage{amsmath}
@@ -741,7 +744,7 @@ ademas:
 
 ```tikz
 \begin{document}
-\begin{tikzpicture}[scale=1.2] % N6: Mediano
+\begin{tikzpicture}[scale=1.3]
 
 % Ejes
 \draw[->] (-0.5,0) -- (4.5,0) node[right] {$x$};
@@ -811,7 +814,7 @@ representa una recta vertical.
 
 ```tikz
 \begin{document}
-\begin{tikzpicture}[scale=1.2] % N6: Mediano
+\begin{tikzpicture}[scale=1.3]
 
 % Ejes
 \draw[->] (-1,0) -- (3.5,0);
@@ -841,7 +844,7 @@ $$D_{f}=\mathbb{R} \, ; \, R_{f}=\mathbb{R}$$
 
 ```tikz
 \begin{document}
-\begin{tikzpicture}[scale=1.2] % N6: Mediano
+\begin{tikzpicture}[scale=1.3]
 
 % Ejes
 \draw[->] (-0.5,0) -- (4.5,0) node[right] {$x$};
@@ -915,8 +918,9 @@ $$D_{f}=\mathbb{R} \, ; \, R_{f}=\mathbb{R}$$
 > Contexto para NotebookLM: usar para ilustrar el test de la recta vertical en una función. Rectas verticales punteadas en distintos $x$, cada una corta la curva en exactamente un punto — confirma que es función. Si en cambio una vertical corta en más de un punto, la gráfica no es función (ver ejemplo $y^2=x+1$ abajo).
 
 ```tikz
+\usepackage{tikz}
 \begin{document}
-\begin{tikzpicture}[scale=1.2] % N6: Mediano
+\begin{tikzpicture}[scale=1]
 
 % Ejes
 \draw[->] (-2,0) -- (6,0) node[right] {$x$};
@@ -948,7 +952,7 @@ $$D_{f}=\mathbb{R} \, ; \, R_{f}=\mathbb{R}$$
 
 
 % Vértice
-\fill[teal] (-1,0) circle (0.07);
+\fill[teal!70] (-1,0) circle (0.07);
 \node[teal, above left, font=\small] at (-1,0) {$(-1,0)$};
 
 \end{tikzpicture}
@@ -1056,7 +1060,7 @@ Como (a<0), la parábola abre hacia abajo.
 
 ```tikz
 \begin{document}
-\begin{tikzpicture}[scale=0.7] % N6: Pequeño
+\begin{tikzpicture}[scale=0.6]
 
 % Ejes
 \draw[->] (-1,0) -- (4,0) node[right] {$x$};
@@ -1094,8 +1098,8 @@ Como (a<0), la parábola abre hacia abajo.
 \node[below left,  orange, font=\small] at ( 5.158, 0) {$\frac{3+\sqrt{11}}{2}$};
 
 % Intersección eje y: x=0 → y = -2(9/4)+11/2 = 7/2
-\fill[violet] (0, 3.5) circle (0.07);
-\node[right, violet, font=\small] at (-0.1, 3.5) {$\frac{7}{2}$};
+\fill[purple] (0, 3.5) circle (0.07);
+\node[right, purple, font=\small] at (-0.1, 3.5) {$\frac{7}{2}$};
 
 % Etiqueta ecuación
 \node[teal, font=\small] at (3.3, 1.5) {$y-\frac{11}{2}=-2\!\left(x-\frac{3}{2}\right)^{\!2}$};
@@ -1129,8 +1133,9 @@ $$
 Ejemplo
 
 ```tikz
+\usepackage{tikz}
 \begin{document}
-\begin{tikzpicture}[scale=0.7] % N6: Pequeño
+\begin{tikzpicture}[scale=0.8]
 
 % Cuadrícula
 %\draw[gray!25, thin, step=1] (-5,-5) grid (5,5);
@@ -1203,6 +1208,7 @@ $$
 - a>0
 
 ```tikz
+\usepackage{tikz}
 \begin{document}
 \begin{tikzpicture}[scale=0.9]
 
@@ -1270,6 +1276,7 @@ $$
 - 0<a<1
 
 ```tikz
+\usepackage{tikz}
 \begin{document}
 \begin{tikzpicture}[scale=0.9]
 
@@ -1336,6 +1343,7 @@ $$f(x)=a^{x} = \left( \frac{1}{b}\right)^{x}= b^{-x} \quad ;\quad b>1$$
 $$a= e = 2,718281\dots \quad = \text{número de nepper}$$
 
 ```tikz
+\usepackage{tikz}
 \begin{document}
 \begin{tikzpicture}[scale=0.9]
 % Ejes
@@ -1382,6 +1390,7 @@ $y=f(x)=\log_{a}{x} \quad ; \quad a>0,\ a\neq 1 \qquad D_{f}=\mathbb{R}^{+},\ R_
 - $a>1$
 
 ```tikz
+\usepackage{tikz}
 \begin{document}
 \begin{tikzpicture}[scale=0.9]
 
@@ -1438,6 +1447,7 @@ $y=f(x)=\log_{a}{x} \quad ; \quad a>0,\ a\neq 1 \qquad D_{f}=\mathbb{R}^{+},\ R_
 
 
 ```tikz
+\usepackage{tikz}
 \begin{document}
 \begin{tikzpicture}[scale=0.9]
 
@@ -1510,7 +1520,15 @@ $y=f(x)=\log_{a}{x} \quad ; \quad a>0,\ a\neq 1 \qquad D_{f}=\mathbb{R}^{+},\ R_
 
 Se definen en la circunferencia trigonométrica.
 
+
+
+
+
+
+
+
 ```tikz
+\usepackage{tikz}
 \begin{document}
 \begin{tikzpicture}[scale=2]
 
@@ -1580,6 +1598,8 @@ Se definen en la circunferencia trigonométrica.
 \end{tikzpicture}
 \end{document}
 ```
+
+
 
 Donde:
 

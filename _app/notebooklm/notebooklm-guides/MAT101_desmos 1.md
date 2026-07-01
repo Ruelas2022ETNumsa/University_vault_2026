@@ -131,7 +131,6 @@ y=x^2|#005F73
 | Grande         | 550   | 450    | Múltiples curvas, etiquetas, regiones        |
 | Cornell        | 320   | 250    | Máximo dentro de bloque multi-column         |
 | Plano cuadrado | 500   | 500    | Regiones, geometría, área entre curvas       |
-| Panorámico     | 550   | 200    | Funciones trigonométricas, periódicas        |
 
 Para rectas numéricas usar ratio horizontal (3:1). Para funciones estándar ratio 4:3.
 
@@ -267,8 +266,6 @@ Las constantes deben declararse antes de usarse en ecuaciones.
 #### ⚠️ Regla de color: SIEMPRE hex, NUNCA nombres en mayúsculas
 
 El plugin acepta nombres (`RED`, `BLUE`, etc.) pero producen colores saturados y duros. Usar siempre hex.
-
-> **Nota sobre modificadores:** la restricción de mayúsculas aplica únicamente a colores. Los modificadores `DASHED`, `SOLID` y `DOTTED` se escriben en mayúsculas — es la sintaxis correcta y requerida.
 
 #### Paleta para curvas y líneas (sólidas)
 
@@ -592,7 +589,7 @@ Antes de entregar un bloque Desmos verificar:
 - [ ] ¿Sin llaves `{}` en restricciones inline? (`|0<=x<=3|` no `|{0<=x<=3}|`)
 - [ ] ¿Sin comentarios `//`?
 - [ ] ¿Rectángulos sombreados con las 4 condiciones `x>=a|x<=b|y>=c|y<=d`?
-- [ ] ¿Colores de curvas en hex (`#C1121F`, `#005F73`, etc.) y NO nombres en mayúsculas (`RED`, `BLUE`)? Los modificadores `DASHED`, `SOLID`, `DOTTED` sí van en mayúsculas — es correcto.
+- [ ] ¿Colores de curvas en hex (`#C1121F`, `#005F73`, etc.) y NO nombres en mayúsculas?
 - [ ] ¿Rellenos con hex pastel (`#BFD7DC`, `#F0C4C7`, etc.)?
 - [ ] ¿Funciones por tramos usan `y=k|a<x<b|#hex` como forma preferida y NO `{a<x<b: k}` sin escapar?
 - [ ] ¿Sin `y=|x|`, `y=abs(x)` ni `|x|` en condiciones de relleno?
@@ -835,7 +832,7 @@ y=\sin(x)|#005F73
 ```
 
 ```desmos-graph
-left=-3.14; right=3.1416; bottom=-2; top=2;
+left=-3.1416; right=3.1416; bottom=-2; top=2;
 width=300; height=200;
 ---
 y=\cos(x)|#0A9396
