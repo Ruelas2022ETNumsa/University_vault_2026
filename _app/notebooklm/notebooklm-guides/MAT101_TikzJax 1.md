@@ -167,15 +167,23 @@ Reglas:
 
 ### N6. ESCALA Y TAMAÑO
 
+Mismas categorías que `MAT101_desmos.md` (N2 de esa guía), valores adaptados a TikZ:
+
+| Tipo | pgfplots (width/height) | tikzpicture (scale aprox.) | Uso |
+|------|--------------------------|------------------------------|-----|
+| Pequeño | `width=6cm; height=4cm;` | `scale=0.7` | Rectas numéricas, intervalos, un punto |
+| Mediano | `width=8cm; height=6cm;` | `scale=1` a `1.2` | Funciones, parábolas, trigonométricas |
+| Grande | `width=12cm; height=9cm;` | `scale=1.5` | Múltiples curvas, etiquetas, regiones |
+| Plano cuadrado | `width=8cm; height=8cm;` | `scale=1.2` | Regiones, geometría, área entre curvas |
+
 ```
 \begin{tikzpicture}[scale=1.2]         → escala el dibujo completo
 \begin{axis}[width=8cm, height=6cm]    → tamaño fijo en pgfplots
 ```
 
-Referencia rápida:
-- Diagramas de conjuntos/composición: `scale=1` a `1.5`
-- Funciones con detalle (parábolas, trigonométricas con puntos etiquetados): `scale=1.2` a `2`
-- Gráficas pgfplots: `width=8cm; height=6cm;` como punto de partida
+- `scale` no tiene equivalente px exacto — depende del rango de coordenadas del dibujo. La columna de la tabla es punto de partida, no valor fijo.
+- Diagramas de conjuntos/composición (elipses, nodos, flechas): usar fila "Mediano" o "Grande" según cantidad de elementos.
+- Circunferencia trigonométrica: `scale=2` como excepción documentada — necesita más espacio para etiquetas de segmentos.
 
 ---
 
@@ -438,7 +446,7 @@ $f$ no es función.
 
 ---
 
-## 4. Función par
+### Función par
 
 $y=f(x)$ es par si verifica
 
@@ -490,7 +498,7 @@ La gráfica de $y=f(x)$ es simétrica respecto al eje $y$.
 
 ---
 
-## 5. Función impar
+### Función impar
 
 $y=f(x)$ es impar si cumple:
 
@@ -541,7 +549,7 @@ La gráfica de $y=f(x)$ impar es simétrica respecto al origen $(0,0)$.
 
 > Contexto para NotebookLM: la gráfica muestra $y=x^3-x$, simétrica respecto al origen — los puntos $(-0.5, 0.375)$ y $(0.5, -0.375)$ ilustran esa simetría puntual.
 
-## 6. Función periódica
+### Función periódica
 
 $y=f(x)$ es periódica con período $p$ si cumple
 
@@ -586,7 +594,7 @@ $$
 - La gráfica en $p$ unidades se repite indefinidamente.
 
 
-## 7. Función inversa
+### Función inversa
 
 Si $y=f(x)$ es inyectiva, existe $f^{-1}(x)$ tal que $f^{-1}(f(x))=x$. La gráfica de $f^{-1}$ es el reflejo de la gráfica de $f$ respecto a la recta $y=x$.
 
@@ -654,7 +662,7 @@ Si $y=f(x)$ es inyectiva, existe $f^{-1}(x)$ tal que $f^{-1}(f(x))=x$. La gráfi
 
 ---
 
-## 8. Composición de funciones
+### Composición de funciones
 
 **Def.** Sean las funciones
 $$f:B\to C$$
@@ -712,9 +720,9 @@ $$
 
 ---
 
-## Características generales de las principales funciones reales
+### Características generales de las principales funciones reales
 
-### Función de 1er grado (recta)
+#### Función de 1er grado (recta)
 
 La función de primer grado tiene la forma:
 
@@ -762,7 +770,7 @@ ademas:
 \end{document}
 ```
 
-#### Función constante
+**Función constante**
 
 Cuando:
 $$a=0$$
@@ -786,7 +794,7 @@ $$f(x)=b$$
 \end{document}
 ```
 
-#### Recta vertical
+**Recta vertical**
 
 La ecuación:
 
@@ -816,7 +824,7 @@ representa una recta vertical.
 La recta vertical no representa una función.
 
 
-#### Función lineal 
+**Función lineal**
 
 $$y=f(x)=ax \, ; \, a\in \mathbb{R}$$
 $$D_{f}=\mathbb{R} \, ; \, R_{f}=\mathbb{R}$$
@@ -941,7 +949,7 @@ $$D_{f}=\mathbb{R} \, ; \, R_{f}=\mathbb{R}$$
 
 ---
 
-### Función de 2do grado (parabólica)
+#### Función de 2do grado (parabólica)
 
 $$y=f(x)=ax^{2}+bx+c \quad ; \quad a,b,c\in\mathbb{R}$$
 
@@ -1027,8 +1035,8 @@ Se reconoce las graficas identificando
 - Eje de simetría: $$x=h$$
 ---
 
-#### Ejemplo
-$$y-\frac{11}{2}=-2\left(x-\frac32\right)^{2}$$
+**Ejemplo**
+$y-\frac{11}{2}=-2\left(x-\frac32\right)^{2}$
 
 Como (a<0), la parábola abre hacia abajo.
 
@@ -1087,7 +1095,7 @@ $$D_{f}=\mathbb{R}\quad ; \quad  R_{f}=\left]-\infty,\frac{11}{2}\right]$$
 
 ---
 
-### Función potencial generalizada
+#### Función potencial generalizada
 
 $$y=f(x)=x^{n} \quad ; \quad n=2,3,4,5,\ldots$$
 
@@ -1155,7 +1163,7 @@ Ejemplo
 
 ---
 
-### Función exponencial
+#### Función exponencial
 
 $$
 y=f(x)=a^x
@@ -1349,7 +1357,7 @@ $$a= e = 2,718281\dots \quad = \text{número de nepper}$$
 
 ---
 
-### Funciones logarítmicas 
+#### Funciones logarítmicas 
 
 - Se define "$\log$" segun:
 $$\log_{b}{a} = c\quad \Rightarrow \quad b^{c}=a$$
@@ -1486,7 +1494,7 @@ $$D_{f}=\mathbb{R}^{+} \quad ; \quad R_{f}=\mathbb{R}$$
 
 - Casos especiales
 
-## Funciones trigonométricas
+### Funciones trigonométricas
 
 Se definen en la circunferencia trigonométrica.
 
@@ -1579,7 +1587,7 @@ Donde:
 
 ---
 
-### Función seno
+#### Función seno
 
 $$y=f(x)=\sin{x}$$
 
@@ -1632,7 +1640,7 @@ Grafica :
 
 ---
 
-### Función coseno
+#### Función coseno
 
 $$y=f(x)=\cos{x}$$
 
@@ -1685,7 +1693,7 @@ Grafica :
 
 ---
 
-### Función tangente
+#### Función tangente
 
 $$y=f(x)=\tan{x}=\dfrac{\sin x}{\cos x}$$
 
@@ -1747,8 +1755,7 @@ Grafica :
 
 ---
 
-### Funciones trigonométricas inversas 
-
+**Funciones trigonométricas inversas**
 
 #### Funcion $\arcsin$
 
