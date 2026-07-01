@@ -1,3 +1,204 @@
+---
+title: TikZJax — Guía unificada para Obsidian
+galaxy_body: beacon
+scope: vault
+tool: TikzJax-plugin
+audience:
+  - usuario
+  - notebooklm
+  - claude
+tags:
+  - beacon
+  - TikzJax
+  - infraestructura
+date_created: 2026-
+date_updated: 2026-
+status: en-proceso
+---
+
+# 📈 GUÍA UNIFICADA DE DESMOS PARA OBSIDIAN
+
+> Plugin: `obsidian-TikzJax` — renderiza gráficas de []() directamente en tus notas.
+> Este documento está organizado en tres bloques: **Reglas de sintaxis (N–N)**, **Checklist (N)**, y **Biblioteca de ejemplos por tema MAT101 (N–N)**.
+
+---
+
+# 🤖 SECCIÓN NOTEBOOKLM
+
+Instrucciones para que NotebookLM genere bloques TikzJax correctos listos para copiar 
+en Obsidian. Cuando el usuario pida una gráfica, responder con un bloque de código 
+— no con imagen ni enlace.
+
+### Defaults — cuando el usuario no especifica
+
+### Reglas base — siempre obligatorias
+
+---
+
+## BLOQUE A — SINTAXIS Y REGLAS
+
+---
+
+#### Paleta para curvas y líneas (sólidas)
+
+```
+#005F73   → azul petróleo   (curva principal)
+#0A9396   → verde azulado   (curva secundaria)
+#EE9B00   → ámbar           (destaque)
+#BB3E03   → naranja quemado (curva de advertencia)
+#629900   → verde oliva     (curva auxiliar)
+#5A189A   → morado          (punto especial)
+#C1121F   → rojo            (curva de error / evento)
+#DA627D   → rosa            (curva alternativa)
+#FFD60A   → amarillo        (resaltado)
+#474448   → gris antracita  (ejes, bordes, auxiliares)
+```
+
+#### Paleta para líneas segmentadas (50% color + 50% blanco)
+```
+#80AFB9   → azul petróleo segmentado
+#85C9CB   → verde azulado segmentado
+#F7CD80   → ámbar segmentado
+#DD9F81   → naranja quemado segmentado
+#B1CC80   → verde oliva segmentado
+#AD8CCD   → morado segmentado
+#E0898F   → rojo segmentado
+#EDB1BE   → rosa segmentado
+#FFEB85   → amarillo segmentado
+#A3A2A4   → gris antracita segmentado
+```
+
+#### Paleta para rellenos (áreas sombreadas — 25% color + 75% blanco)
+```
+#BFD7DC   → azul petróleo claro   (región principal)
+#C2E4E5   → verde azulado claro   (región secundaria)
+#FBE6BF   → ámbar claro           (región de destaque)
+#EECFC0   → naranja quemado claro (región de advertencia)
+#D8E6BF   → verde oliva claro     (región auxiliar)
+#D6C5E6   → morado claro          (región auxiliar)
+#F0C4C7   → rojo claro            (región de evento)
+#F6D8DF   → rosa claro            (región alternativa)
+#FFF5C2   → amarillo claro        (región de resaltado)
+#D1D0D1   → gris claro            (región neutra)
+```
+
+---
+
+## BLOQUE B — CHECKLIST
+
+---
+
+### N11. CHECKLIST ANTES DE RESPONDER
+
+---
+
+## BLOQUE C — BIBLIOTECA DE EJEMPLOS POR TEMA (MAT101)
+
+---
+
+### N12. T0 — NÚMEROS REALES Y DESIGUALDADES
+
+---
+
+### N13. T1 — FUNCIONES REALES
+
+---
+
+### N14. T2 — LÍMITES Y CONTINUIDAD
+
+> Primer parcial. Límites laterales, discontinuidades, comportamiento asintótico.
+
+*(Agregar ejemplos confirmados aquí)*
+
+---
+
+### N15. T3 — DERIVACIÓN
+
+> Segundo parcial. Pendiente de tangente, reglas de derivación, derivadas de funciones elementales.
+
+*(Agregar ejemplos confirmados aquí)*
+
+---
+
+### N16. T4 — APLICACIONES DE LA DERIVACIÓN
+
+> Segundo parcial. Máximos y mínimos, concavidad, optimización, teorema del valor medio.
+
+*(Agregar ejemplos confirmados aquí)*
+
+---
+
+### N17. T5 — INTEGRACIÓN
+
+> Tercer parcial. Integral definida, primitivas, regla de Barrow.
+
+*(Agregar ejemplos confirmados aquí)*
+
+---
+
+### N18. T6 — APLICACIONES DE LA INTEGRACIÓN
+
+> Tercer parcial. Área entre curvas, volúmenes de revolución.
+
+*(Agregar ejemplos confirmados aquí)*
+
+---
+
+### N19. T7 — SERIES REALES (BONUS)
+
+> Fuera de parciales. Series numéricas, criterios de convergencia.
+
+*(Agregar ejemplos confirmados aquí)*
+
+---
+
+%%
+galaxy-links
+[[_galaxy-system]]
+[[_note-system]]
+%%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----
 # Funciones reales
 
 
@@ -342,464 +543,6 @@ $$
 ```
 
 > donde el dominio de $f \circ g$ es el conjunto de todos los $x$ en el dominio de $g$ tales que $g(x)$ esté en el dominio de $f$.
-
-
-
-
-
-
-### Propiedades
-1. Propiedad 1 — No conmutatividad
-$$f \circ g \neq g \circ f \quad \text{(en general)}$$
-
-La composición **no es conmutativa**. El orden importa: aplicar primero $g$ y luego $f$ es distinto de aplicar primero $f$ y luego $g$.
-
-
-2. Propiedad 2 — Distributividad de la composición por la derecha
-$$(f + g) \circ h = f \circ h + g \circ h$$
-
-La composición **es distributiva respecto a la suma por la derecha**: componer una suma de funciones con $h$ es equivalente a componer cada función con $h$ y luego sumar.
-
-> **Condición:** $h$ debe estar en el dominio de $f$ y de $g$.
-
-
-3. Propiedad 3 — No distributividad de la composición por la izquierda
-$$f \circ (g + h) \neq f \circ g + f \circ h \quad \text{(en general)}$$
-
-La composición **no es distributiva respecto a la suma por la izquierda**, salvo que $f$ sea una función lineal de la forma $f(x) = ax + b$ con $b = 0$ (es decir, $f(x) = ax$).
-
-
-4. Propiedad 4 — Asociatividad
-$$f \circ (g \circ h) = (f \circ g) \circ h$$
-
-La composición **es asociativa**, siempre que las composiciones involucradas estén definidas (es decir, que los dominios e imágenes sean compatibles).
-
-> **Condición:** Se requiere que $\text{Im}(h) \subseteq \text{Dom}(g)$ y $\text{Im}(g) \subseteq \text{Dom}(f)$.
-
-5. Propiedad 5 — Composición con la función inversa
-
-Si $f$ es biyectiva (inyectiva y sobreyectiva), entonces existe $f^{-1}$ y se cumple:
-
-$$(f \circ f^{-1})(x) = (f^{-1} \circ f)(x) = x = \text{Id}(x)$$
-
-donde $\text{Id}$ es la **función identidad**. Es decir, componer una función con su inversa (en cualquier orden) produce la identidad.
-
-> **Condición:** $f$ debe ser biyectiva para que $f^{-1}$ exista.
-
-
-6. Propiedad 6 — Dominio e imagen de la composición ⚠️ _Corrección_
-Si $f: A \to B$ y $g: B \to C$, entonces:
-$$g \circ f : A \to C$$
-
-> **Condición:** El codominio de $f$ debe coincidir con el dominio de $g$ (es decir, $\text{Im}(f) \subseteq \text{Dom}(g) = B$).
-
-7. Propiedad 7 — Composición con la función identidad
-Sea $\text{Id}$ la función identidad, definida como $\text{Id}(x) = x$. Entonces:
-$$f \circ \text{Id} = \text{Id} \circ f = f$$
-
-La identidad actúa como **elemento neutro** de la composición.
-
----
-
-#### **Ejercicio a.**
-Para
-$$f(x)=\sqrt{\frac{x}{x-1}}$$
-$$g(x)=e^{-4x^2}$$
-
-Hallar $(f\circ g)(x)$ y $(g\circ f)(x)$.
-
-**Sol.**
-
-a) Composición $f\circ g$
-$$(f\circ g)(x)=f(g(x))$$
-
-Sustituyendo $g(x)$ en $f$:
-$$(f\circ g)(x)=
-\sqrt{
-\frac{e^{-4x^2}}
-     {e^{-4x^2}-1}
-}$$
-
-simplificando
-$$(f\circ g)(x)=
-\sqrt{
-\frac{1}
-     {1-e^{4x^2}}
-}$$
-
-
-b) Composición $g\circ f$
-$$(g\circ f)(x)=g(f(x))$$
-
-Sustituyendo $f(x)$ en $g$:
-$$(g\circ f)(x)=
-e^{-4\left(\sqrt{\frac{x}{x-1}}\right)^2}$$
-
-$$(g\circ f)(x)=
-e^{-\frac{4x}{x-1}}$$
-
-$$(g\circ f)(x)=
-\sqrt[1-x]{e^{4x}}$$
-
----
-
-#### **Ejercicio b**
-Si
-$$f(x)=\frac{3x}{2}-1$$
-
-hallar
-$$(f\circ f\circ f)\left(\frac{3x}{2}+1\right)$$
-
-**Sol.**
-
-Sea
-$$u=\frac{3x}{2}+1$$
-
-Primera composición:
-$$f(u)=
-\frac{3}{2}\left(\frac{3x}{2}+1\right)-1
-$$
-
-$$f(u)=
-\frac{9x}{4}+\frac{1}{2}
-$$
-
-Segunda composición:
-$$f(f(u))=
-\frac{3}{2}\left(\frac{9x}{4}+\frac{1}{2}\right)-1
-$$
-
-$$f(f(u))=
-\frac{27x}{8}-\frac{1}{4}
-$$
-
-Tercera composición:
-$$f(f(f(u)))=
-\frac{3}{2}\left(\frac{27x}{8}-\frac{1}{4}\right)-1
-$$
-
-$$f(f(f(u)))=\frac{81x}{16}-\frac{11}{8}
-$$
-
-Por tanto,
-$$(f\circ f\circ f)\left(\frac{3x}{2}+1\right)=
-\frac{81x}{16}-\frac{11}{8}
-$$
-
-
----
-
-
-#### **Ejercicio c**
-Se conocen
-$$f(x)=\frac{2x^{3}-7}{3x^3+4}$$
-y
-$$f^{-1}(x)=\sqrt[3]{\frac{7+4x}{2-3x}}$$
-Hallar
-$$(f\circ f^{-1})(x)$$
-
-**Sol.**
-
-Por definición de composición,
-$$(f\circ f^{-1})(x)=
-f\!\left(f^{-1}(x)\right)
-$$
-
-Sustituyendo:
-$$(f\circ f^{-1})(x)=
-\frac{
-2\left(\sqrt[3]{\frac{7+4x}{2-3x}}\right)^3-7
-}{
-3\left(\sqrt[3]{\frac{7+4x}{2-3x}}\right)^3+4
-}
-$$
-
-Como
-$$\left(\sqrt[3]{\frac{7+4x}{2-3x}}\right)^3=
-\frac{7+4x}{2-3x}
-$$
-
-resulta
-$$(f\circ f^{-1})(x)=
-\frac{
-2\left(\frac{7+4x}{2-3x}\right)-7
-}{
-3\left(\frac{7+4x}{2-3x}\right)+4
-}$$
-
-$$=\frac{
-\frac{14+8x-14+21x}{2-3x}
-}{
-\frac{21+12x+8-12x}{2-3x}
-}$$
-
-$$=
-\frac{
-\frac{29x}{2-3x}
-}{
-\frac{29}{2-3x}
-}$$
-
-$$=x$$
-
-Por tanto,
-$$(f\circ f^{-1})(x)=x$$
-
-
-> [!note]  
-> Se verifica la propiedad de la función inversa:
-> 
-> $$  
-> f\circ f^{-1}=I  
-> $$
-> 
-> donde $I(x)=x$ es la función identidad.
-
-
----
-
-#### **Ejercicio d**
-Si
-$$f(x)=\frac{2x+1}{x}$$
-y
-$$(f\circ g)(x)=\frac{x}{x-1}$$
-
-hallar $g(x)$.
-
-**Sol.**
-
-Por definición de composición,
-
-$$(f\circ g)(x)=f(g(x))$$
-
-Sustituyendo $g(x)$ en la función $f$:
-$$\frac{2g(x)+1}{g(x)}=
-\frac{x}{x-1}
-$$
-
-Multiplicando en cruz:
-$$(2g(x)+1)(x-1)=x\,g(x)$$
-
-$$2xg(x)-2g(x)+x-1=xg(x)$$
-
-Agrupando términos con $g(x)$:
-$$xg(x)-2g(x)=1-x$$
-
-$$g(x)(x-2)=1-x$$
-
-Despejando:
-$$g(x)=\frac{1-x}{x-2}$$
-
-o equivalentemente,
-$$g(x)=\frac{x-1}{2-x}$$
-
-Por tanto,
-$$g(x)=\frac{1-x}{x-2}$$
-
->[!note]  
->También puede resolverse utilizando
->$$g=f^{−1}∘(f∘g)$$
->pero el despeje directo suele ser el procedimiento más corto.
-
----
-#### **Ejercicio e**
-Si
-$$f(x)=\frac{x-1}{x}$$
-
-hallar
-$$\underbrace{(f\circ f\circ f\circ\cdots\circ f)}_{50\text{ veces}}(x)$$
-
-**Sol.**
-
-Calculamos las primeras composiciones:
-$$f(x)=\frac{x-1}{x}$$
-
-$$f(f(x))=
-\frac{\frac{x-1}{x}-1}{\frac{x-1}{x}}
-$$
-
-$$=\frac{-1/x}{(x-1)/x}$$
-
-$$=-\frac{1}{x-1}$$
-
-Entonces,
-$$f^2(x)=-\frac{1}{x-1}$$
-
-Ahora,
-$$f^3(x)=
-f\!\left(-\frac{1}{x-1}\right)
-$$
-
-$$=\frac{-\frac{1}{x-1}-1}{-\frac{1}{x-1}}$$
-
-$$=x$$
-
-Por tanto,
-$$f^3(x)=x$$
-
-Luego la composición es periódica de período $3$:
-$$f^1(x)=f(x)$$
-
-$$f^2(x)=-\frac{1}{x-1}$$
-
-$$f^3(x)=x$$
-
-$$f^4(x)=f(x)$$
-
-$$f^5(x)=f^2(x)$$
-
-$$f^6(x)=x$$
-
-y así sucesivamente.
-
-Como
-$$50=3\cdot16+2$$
-
-se tiene
-$$f^{50}(x)=f^2(x)$$
-
-Por consiguiente,
-$$\underbrace{(f\circ f\circ f\circ\cdots\circ f)}_{50\text{ veces}}(x)=
--\frac{1}{x-1}
-$$
-
-> [!note]  
-> Se utilizó que la función cumple
-> 
-> $$  
-> f^3(x)=x  
-> $$
-> 
-> por lo que las composiciones se repiten cada tres aplicaciones.
-
----
-
-#### **Ejercicio f**
-Para
-$$f\!\left(\frac{x-2}{x}\right)=\frac{x-1}{x+1}$$
-
-y
-$$g^{-1}\!\left(\frac{2}{x}\right)=\frac{x}{x+2}$$
-
-hallar
-$$(f^{-1}\circ g\circ f)\left(\frac{1}{x^3}\right)$$
-
-**Sol.**
-
-Primero determinamos $f$.
-Sea
-$$t=\frac{x-2}{x}$$
-
-entonces
-$$tx=x-2$$
-
-$$x(t-1)=-2$$
-
-$$x=\frac{2}{1-t}$$
-
-Sustituyendo en
-$$f(t)=\frac{x-1}{x+1}$$
-
-obtenemos
-$$f(t)=
-\frac{\frac{2}{1-t}-1}
-     {\frac{2}{1-t}+1}
-$$
-
-$$=\frac{1+t}{3-t}$$
-
-Por tanto,
-$$f(x)=\frac{x+1}{3-x}$$
-
-Ahora hallamos $f^{-1}$:
-
-$$y=\frac{x+1}{3-x}$$
-
-$$y(3-x)=x+1$$
-
-$$3y-1=x(1+y)$$
-
-$$x=\frac{3y-1}{y+1}$$
-
-Luego,
-$$f^{-1}(x)=\frac{3x-1}{x+1}$$
-
----
-
-Determinamos ahora $g$.
-
-Sea
-$$t=\frac{2}{x}$$
-
-entonces
-$$x=\frac{2}{t}$$
-
-y
-$$g^{-1}(t)=
-\frac{\frac{2}{t}}
-     {\frac{2}{t}+2}
-=
-\frac{1}{t+1}
-$$
-
-Así,
-$$g^{-1}(x)=\frac{1}{x+1}$$
-
-Hallando la inversa:
-$$y=\frac{1}{x+1}$$
-
-$$x+1=\frac{1}{y}$$
-
-$$x=\frac{1-y}{y}$$
-
-Por tanto,
-$$g(x)=\frac{1-x}{x}$$
-
----
-
-Ahora calculamos
-$$(f^{-1}\circ g\circ f)\left(\frac{1}{x^3}\right)$$
-
-Sea
-$$u=\frac{1}{x^3}$$
-
-Entonces
-$$f(u)=
-\frac{u+1}{3-u}
-$$
-
-$$=\frac{\frac1{x^3}+1}
-     {3-\frac1{x^3}}
-$$
-
-$$=\frac{x^3+1}{3x^3-1}$$
-
-Aplicando $g$:
-$$g(f(u))=
-\frac{1-\frac{x^3+1}{3x^3-1}}
-     {\frac{x^3+1}{3x^3-1}}
-$$
-
-$$=\frac{2x^3-2}{x^3+1}$$
-
-$$=\frac{2(x^3-1)}{x^3+1}$$
-
-Aplicando $f^{-1}$:
-$$f^{-1}(g(f(u)))=
-\frac{3\left(\frac{2(x^3-1)}{x^3+1}\right)-1}
-     {\left(\frac{2(x^3-1)}{x^3+1}\right)+1}
-$$
-
-$$=\frac{\frac{6(x^3-1)-(x^3+1)}{x^3+1}}
-     {\frac{2(x^3-1)+(x^3+1)}{x^3+1}}
-$$
-
-$$=\frac{5x^3-7}{3x^3-1}$$
-
-Por consiguiente,
-$$(f^{-1}\circ g\circ f)\left(\frac{1}{x^3}\right)=
-\frac{5x^3-7}{3x^3-1}
-$$
 
 ---
 
@@ -1179,45 +922,10 @@ Se reconoce las graficas identificando
 - Vértice $$V=(h,k)$$.
     
 - Eje de simetría: $$x=h$$
-
-También se observa:
-
-- Parábola con (a>0) (abre hacia arriba).
-- Parábola con (a<0) (abre hacia abajo).
-- Transformación:
-	$$y=ax^2+bx+c$$
-	en
-	$$y-k=a(x-h)^2$$
-	(con el proceso de completar cuadrados).
-
 ---
 
 #### Ejemplo
-$$f(x)=1+6x-2x^2$$
-
-Reordenando:
-$$y=-2x^2+6x+1$$
-
-Factorizando:
-$$y=-2(x^2-3x)+1$$
-
-Completando cuadrados:
-$$y=-2\left(x^2-3x+\left(\frac32\right)^2\right)+1+2\left(\frac32\right)^2  
-$$
-
 $$y-\frac{11}{2}=-2\left(x-\frac32\right)^{2}$$
-
-Forma de vértice:
-$$y-k=a(x-h)^{2}$$
-
-Por comparación:
-$$a=-2,\qquad h=\frac32,\qquad k=\frac{11}{2}$$
-
-Vértice:
-$$V(h,k)=\left(\frac32,\frac{11}{2}\right)$$
-
-Eje de simetría:
-$$x=\frac32$$
 
 Como (a<0), la parábola abre hacia abajo.
 
@@ -1536,28 +1244,6 @@ $$a= e = 2,718281\dots \quad = \text{número de nepper}$$
 
 ----
 
-#### Propiedades de las potencias
-1. **Producto de potencias de igual base**
-	- $a^m \cdot a^n = a^{m+n}$
-2. **Cociente de potencias de igual base**
-	- $\dfrac{a^m}{a^n}=a^{m-n}$
-3. **Igualdad de potencias de igual base**
-	- Si $a^b=a^c$, entonces $b=c$
-4. **Potencia de una potencia**
-	- $(a^b)^c=a^{bc}$
-5. **Potencia de una potencia**
-	- $a^{(b^c)}=a^{b^c}$
-6. **Potencia de un producto**
-	- $(ab)^n=a^n b^n$
-7. **Potencia de un cociente**
-	- $\left(\dfrac{a}{b}\right)^n=\dfrac{a^n}{b^n}$
-8. **Exponente cero**
-	- $a^0=1\quad, \quad a\neq0$
-9. **Exponente negativo**
-	- $a^{-n}=\dfrac{1}{a^n}$
-10. **Exponente uno**
-	- $a^1=a$
-
 ---
 
 ### Funciones logarítmicas 
@@ -1697,89 +1383,6 @@ $$D_{f}=\mathbb{R}^{+} \quad ; \quad R_{f}=\mathbb{R}$$
 
 - Casos especiales
 
-$$a=10 \Rightarrow f(x)=\log_{10}{x}= \log x = \text{logatirmo decimal}$$
-
-$$a=e \Rightarrow f(x)=\log_{e}{x}= \ln x = \text{logaritmo  natural , neperiano}$$
-
-#### Propiedades de los logaritmos
-
-1. **Logaritmo de un producto**
-   * $\log_a(mn) = \log_a m + \log_a n$
-
-2. **Logaritmo de un cociente**
-   * $\log_a\left(\dfrac{m}{n}\right) = \log_a m - \log_a n$
-
-3. **Logaritmo de una potencia**
-   * $\log_a(m^n) = n\log_a m$
-
-4. **Logaritmo de una raíz**
-   * $\log_a\left(\sqrt[n]{m}\right) = \dfrac{\log_a m}{n}$
-
-5. **Logaritmo de la base**
-   * $\log_a a = 1$
-
-6. **Logaritmo de la unidad**
-   * $\log_a 1 = 0 \quad,\quad a \neq 1,\ a > 0$
-
-7. **Igualdad de logaritmos**
-   * Si $\log_a m = \log_a n$, entonces $m = n$
-
-8. **Cambio de base**
-   * $\log_a m = \dfrac{\log_b m}{\log_b a}$
-
-9. **Logaritmo recíproco**
-   * $\log_a b = \dfrac{1}{\log_b a}$
-
-10. **Potenciación logarítmica**
-    * $a^{\log_a m} = m$
-
-11. **Logaritmo natural y decimal**
-    * $\ln m = \log_e m \qquad \log m = \log_{10} m$
-
----
-
-#### Ejercicio 1
-Evaluación de $f(x) = \ln(x)$
-
-**$x = 1$**
-$$f(1) = \ln(1) = 0$$
-
-**$x = e$**
-$$f(e) = \ln(e) = 1$$
-
-**$x \to +\infty$**
-$$\lim_{x \to +\infty} \ln(x) = +\infty$$
-
->A medida que $x$ crece, necesitamos exponentes $n$ cada vez más grandes
-
-**$x \to 0^+$**
-$$\lim_{x \to 0^+} \ln(x) = -\infty$$
-
-> $x = 0$ no pertenece al dominio de $\ln(x)$, ya que el logaritmo solo está definido para $x > 0$.  
-> Por eso se analiza el límite cuando $x$ se acerca a $0$ por la derecha.
-
-
-
-#### Ejercicio 2
-Inversa de $f(x) = \ln x$
-
-$$y = \ln x$$
-$$x = \ln y^{-1} \implies e^x = y$$
-
-$$\boxed{f^{-1}(x) = e^x}$$
-
----
-
-#### Ejercicio 3
-
-Composición $f(x) = \ln x$ y $f^{-1}(x) = e^x$
-
-$$(f \circ f^{-1})(x) = f(f^{-1}(x)) = \ln(e^x) = x$$
-
-$$\boxed{(f \circ f^{-1})(x) = x}$$
-
----
-
 ## Funciones trigonométricas
 
 Se definen en la circunferencia trigonométrica.
@@ -1870,26 +1473,6 @@ Donde:
 | $\sin{x}=\overline{PQ}$ | $\tan{x}=\overline{RT}$ | $\sec{x}=\overline{OR}$ |
 | ----------------------- | ----------------------- | ----------------------- |
 | $\cos{x}=\overline{OQ}$ | $\cot{x}=\overline{MN}$ | $\csc{x}=\overline{OM}$ |
-
->Solo se miden ángulos redianes
->$$1^{\circ}=\frac{\pi}{180^{\circ}}[rad]$$
-
-Por ejemplo
-
-$$30^{\circ}=\frac{\pi}{180^{\circ}}\times 30^{\circ}=\frac{\pi}{6}$$
-
-$$45^{\circ}=\frac{\pi}{180^{\circ}}\times 45^{\circ}=\frac{\pi}{4}$$
-
-$$90^{\circ}=\frac{\pi}{180^{\circ}}\times 90^{\circ}=\frac{\pi}{2}$$
-
-$$120^{\circ}=\frac{\pi}{180^{\circ}}\times 120^{\circ}=\frac{2\pi}{3}$$
-
-$$\vdots$$
-
-Además
-
-$$\sin\frac{\pi}{6} = \frac{1}{2}\quad ; \quad \cos \frac{\pi}{6}=\frac{\sqrt{3}}{2} \quad ; \quad \sin\frac{\pi}{4} = \frac{\sqrt{2}}{2}=\frac{1}{\sqrt{2}}$$
-$$\vdots$$
 
 ---
 
@@ -2058,38 +1641,10 @@ Grafica :
 
 
 
-- además
-
-$$f(x)=\cot{x}=\frac{1}{\tan x} = \frac{\cos x}{\sin x}$$
-
-$$f(x)=\sec{x}=\frac{1}{\cos x} $$
-
-$$f(x)=\csc{x}=\frac{1}{\sin x} $$
-
->- también  $$\sin^{2}{x}+\cos^{2}{x}=1\quad ; \quad \forall x\in \mathbb{R}$$
->Identidad fundamental
 
 ---
 
 ### Funciones trigonométricas inversas 
-
-
-Se definen los elementos inversos según:
-$$\arcsin{u}=v \quad \Rightarrow \quad u=\sin{v}$$
-$$\arccos{u}=v \quad \Rightarrow \quad u=\cos{v}$$
-$$\arctan{u}=v \quad \Rightarrow \quad u=\tan{v}$$
-$$\text{arcotg }{u}=v \quad \Rightarrow \quad u=\cot v$$
-$$\text{arcsec }{u}=v \quad \Rightarrow \quad u=\sec{v}$$
-$$\text{arcosec }{u}=v \quad \Rightarrow \quad u=\csc v$$
-
-- por ejemplo:
-
-$$\arcsin{1}=\frac{\pi}{2}$$
-$$\arctan{1}=\frac{\pi}{4}$$
-$$\arccos{0}=\frac{\pi}{2}$$
-$$\arcsin{\frac{\sqrt{3}}{2}}=\frac{\pi}{3}$$
-$$\arctan \infty =\frac{\pi}{2}$$
-$$\vdots$$
 
 
 #### Funcion $\arcsin$
@@ -2154,7 +1709,6 @@ Grafica :
 
 ---
 
-
 #### Funcion $\arccos$
 
 $$y=f(x)=\arccos{x}$$
@@ -2215,9 +1769,7 @@ Grafica :
 ```
 
 
-
 ---
-
 
 #### Funcion $\arctan$
 
@@ -2278,14 +1830,4 @@ Grafica :
 \end{tikzpicture}
 \end{document}
 ```
-
---
-
-### Funciones Hiperbólicas
-
-Se definen en términos de $e^{x}$ según:
-
-
-
-
 

@@ -55384,6 +55384,7 @@ suave
 sexagesimales
 subpregunta
 sustituido
+segun
 vault
 vil
 ver
@@ -67921,6 +67922,7 @@ afirmaci
 acute
 alado
 aprox
+ademas
 related
 recomendados
 ribbon
@@ -74380,6 +74382,7 @@ radianes
 resalte
 reducir
 rough
+relacion
 notes
 notas
 nuevas
@@ -80615,6 +80618,7 @@ nros
 notar
 notation
 necesitaras
+ncion
 created
 commit
 cada
@@ -100400,6 +100404,7 @@ Generador
 Grande
 GRAFICAMENTE
 Gray
+Grafica
 Convenci
 Creaci
 Commander
@@ -119025,6 +119030,7 @@ FUERA
 FFEB
 Falsa
 Facilidad
+Funcion
 Estado
 Excalidraw
 EPUBs
@@ -143330,6 +143336,8 @@ proposiciones
 primitivos
 pagu
 program
+parab
+particular
 min
 mica
 movimiento
@@ -188041,6 +188049,7 @@ levantar
 loga
 lleg
 longrightarrow
+lica
 incluyendo
 im
 instalar
@@ -195724,6 +195733,7 @@ importancia
 inactivo
 instancias
 infla
+ideas
 Dependencia
 Dropbox
 Dataview

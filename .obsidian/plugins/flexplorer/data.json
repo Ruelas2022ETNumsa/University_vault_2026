@@ -5,7 +5,6 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
-        "MAT101_TikzJax.md",
         "claude vision.md",
         "Untitled.md",
         "in_work",
@@ -2679,6 +2678,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "MAT101_TikzJax.md",
         "latex_notebook_lm.md",
         "MAT101_desmos.md",
         "ETN806-P3-colas_guide_s.md",
@@ -2795,8 +2795,8 @@
       "isPinned": true,
       "isHidden": false
     },
-    "MAT101_TikzJax.md": {
-      "isPinned": false,
+    "_app/notebooklm/notebooklm-guides/MAT101_TikzJax.md": {
+      "isPinned": true,
       "isHidden": false
     }
   },
@@ -2806,7 +2806,8 @@
     "_app/_config/_galaxy-system.md",
     "_app/notebooklm/notebooklm-guides/MAT101_desmos.md",
     "_app/notebooklm/MAT101-notebooklm_study.md",
-    "_app/notebooklm/MAT101-notebooklm_transcription.md"
+    "_app/notebooklm/MAT101-notebooklm_transcription.md",
+    "_app/notebooklm/notebooklm-guides/MAT101_TikzJax.md"
   ],
   "showHidden": false,
   "newItemPlacement": "top",
