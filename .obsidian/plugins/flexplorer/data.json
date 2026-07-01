@@ -5,8 +5,8 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
+        "Untitled 2.md",
         "Untitled.md",
-        "Untitled 1.md",
         "in_work",
         "Borrar",
         "README.md",
@@ -2677,6 +2677,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "latex_notebook_lm.md",
         "desmos_notebook_lm.md",
         "ETN806-P3-colas_guide_s.md",
         "ETN806-P3-Tikz_markov_guide.md",
@@ -2780,7 +2781,11 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Untitled 1.md": {
+    "Untitled 2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/notebooklm-guides/latex_notebook_lm.md": {
       "isPinned": false,
       "isHidden": false
     }
