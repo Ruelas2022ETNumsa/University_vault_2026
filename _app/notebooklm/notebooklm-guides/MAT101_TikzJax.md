@@ -167,15 +167,23 @@ Reglas:
 
 ### N6. ESCALA Y TAMAÑO
 
+Mismas categorías que `MAT101_desmos.md` (N2 de esa guía), valores adaptados a TikZ:
+
+| Tipo | pgfplots (width/height) | tikzpicture (scale aprox.) | Uso |
+|------|--------------------------|------------------------------|-----|
+| Pequeño | `width=6cm; height=4cm;` | `scale=0.7` | Rectas numéricas, intervalos, un punto |
+| Mediano | `width=8cm; height=6cm;` | `scale=1` a `1.2` | Funciones, parábolas, trigonométricas |
+| Grande | `width=12cm; height=9cm;` | `scale=1.5` | Múltiples curvas, etiquetas, regiones |
+| Plano cuadrado | `width=8cm; height=8cm;` | `scale=1.2` | Regiones, geometría, área entre curvas |
+
 ```
 \begin{tikzpicture}[scale=1.2]         → escala el dibujo completo
 \begin{axis}[width=8cm, height=6cm]    → tamaño fijo en pgfplots
 ```
 
-Referencia rápida:
-- Diagramas de conjuntos/composición: `scale=1` a `1.5`
-- Funciones con detalle (parábolas, trigonométricas con puntos etiquetados): `scale=1.2` a `2`
-- Gráficas pgfplots: `width=8cm; height=6cm;` como punto de partida
+- `scale` no tiene equivalente px exacto — depende del rango de coordenadas del dibujo. La columna de la tabla es punto de partida, no valor fijo.
+- Diagramas de conjuntos/composición (elipses, nodos, flechas): usar fila "Mediano" o "Grande" según cantidad de elementos.
+- Circunferencia trigonométrica: `scale=2` como excepción documentada — necesita más espacio para etiquetas de segmentos.
 
 ---
 
@@ -438,7 +446,7 @@ $f$ no es función.
 
 ---
 
-## 4. Función par
+### Función par
 
 $y=f(x)$ es par si verifica
 
@@ -490,7 +498,7 @@ La gráfica de $y=f(x)$ es simétrica respecto al eje $y$.
 
 ---
 
-## 5. Función impar
+### Función impar
 
 $y=f(x)$ es impar si cumple:
 
@@ -541,7 +549,7 @@ La gráfica de $y=f(x)$ impar es simétrica respecto al origen $(0,0)$.
 
 > Contexto para NotebookLM: la gráfica muestra $y=x^3-x$, simétrica respecto al origen — los puntos $(-0.5, 0.375)$ y $(0.5, -0.375)$ ilustran esa simetría puntual.
 
-## 6. Función periódica
+### Función periódica
 
 $y=f(x)$ es periódica con período $p$ si cumple
 
@@ -586,7 +594,7 @@ $$
 - La gráfica en $p$ unidades se repite indefinidamente.
 
 
-## 7. Función inversa
+### Función inversa
 
 Si $y=f(x)$ es inyectiva, existe $f^{-1}(x)$ tal que $f^{-1}(f(x))=x$. La gráfica de $f^{-1}$ es el reflejo de la gráfica de $f$ respecto a la recta $y=x$.
 
@@ -654,7 +662,7 @@ Si $y=f(x)$ es inyectiva, existe $f^{-1}(x)$ tal que $f^{-1}(f(x))=x$. La gráfi
 
 ---
 
-## 8. Composición de funciones
+### Composición de funciones
 
 **Def.** Sean las funciones
 $$f:B\to C$$
@@ -712,7 +720,7 @@ $$
 
 ---
 
-## Características generales de las principales funciones reales
+### Características generales de las principales funciones reales
 
 ### Función de 1er grado (recta)
 
@@ -1486,7 +1494,7 @@ $$D_{f}=\mathbb{R}^{+} \quad ; \quad R_{f}=\mathbb{R}$$
 
 - Casos especiales
 
-## Funciones trigonométricas
+### Funciones trigonométricas
 
 Se definen en la circunferencia trigonométrica.
 
