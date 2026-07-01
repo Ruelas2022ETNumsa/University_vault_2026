@@ -169,16 +169,18 @@ Reglas:
 
 Mismas categorías que `MAT101_desmos.md` (N2 de esa guía), valores adaptados a TikZ:
 
-| Tipo | pgfplots (width/height) | tikzpicture (scale aprox.) | Uso |
-|------|--------------------------|------------------------------|-----|
-| Pequeño | `width=6cm; height=4cm;` | `scale=0.7` | Rectas numéricas, intervalos, un punto |
-| Mediano | `width=8cm; height=6cm;` | `scale=1` a `1.2` | Funciones, parábolas, trigonométricas |
-| Grande | `width=12cm; height=9cm;` | `scale=1.5` | Múltiples curvas, etiquetas, regiones |
-| Plano cuadrado | `width=8cm; height=8cm;` | `scale=1.2` | Regiones, geometría, área entre curvas |
+| Tipo           | pgfplots (width/height)  | tikzpicture (scale aprox.) | Uso                                    |
+| -------------- | ------------------------ | -------------------------- | -------------------------------------- |
+| Pequeño        | `width=6cm, height=4cm`  | `scale=0.7`                | Rectas numéricas, intervalos, un punto |
+| Mediano        | `width=8cm, height=7cm`  | `scale=1` a `1.2`          | Funciones, parábolas                   |
+| Grande         | `width=11cm, height=9cm` | `scale=1.5`                | Múltiples curvas, etiquetas, regiones  |
+| Cornell        | `width=6cm, height=5cm`  | `scale=0.85`               | Máximo dentro de bloque multi-column   |
+| Plano cuadrado | `width=9cm, height=9cm`  | `scale=1.3`                | Regiones, geometría, área entre curvas |
+| Panorámico     | `width=12cm, height=5cm` | `scale=1` (ancho)          | Funciones trigonométricas, periódicas  |
 
 ```
 \begin{tikzpicture}[scale=1.2]         → escala el dibujo completo
-\begin{axis}[width=8cm, height=6cm]    → tamaño fijo en pgfplots
+\begin{axis}[width=8cm, height=7cm]    → tamaño fijo en pgfplots
 ```
 
 - `scale` no tiene equivalente px exacto — depende del rango de coordenadas del dibujo. La columna de la tabla es punto de partida, no valor fijo.
@@ -611,7 +613,7 @@ Si $y=f(x)$ es inyectiva, existe $f^{-1}(x)$ tal que $f^{-1}(f(x))=x$. La gráfi
     axis lines=middle,
     xmin=-5, xmax=5,
     ymin=-5, ymax=5,
-    width=12cm,
+    width=11cm,
     height=9cm,
     xlabel={$x$},
     ylabel={$y$},
@@ -869,8 +871,8 @@ $$D_{f}=\mathbb{R} \, ; \, R_{f}=\mathbb{R}$$
     axis lines=middle,
     xmin=-0.5, xmax=13,
     ymin=-1.5, ymax=1.5,
-    width=12cm,
-    height=6cm,
+    width=8cm,
+    height=7cm,
     xlabel={$x$},
     ylabel={$y$},
     xtick=\empty,
@@ -908,7 +910,7 @@ $$D_{f}=\mathbb{R} \, ; \, R_{f}=\mathbb{R}$$
 ```tikz
 \usepackage{tikz}
 \begin{document}
-\begin{tikzpicture}[scale=1.0]
+\begin{tikzpicture}[scale=1]
 
 % Ejes
 \draw[->] (-2,0) -- (6,0) node[right] {$x$};
@@ -1605,8 +1607,8 @@ Grafica :
     axis lines=middle,
     xmin=-3, xmax=13,
     ymin=-1.2, ymax=1.2,
-    width=12cm,
-    height=6cm,
+    width=8cm,
+    height=7cm,
     xlabel={$x$},
     ylabel={$y$},
     xtick=\empty,
@@ -1658,8 +1660,8 @@ Grafica :
     axis lines=middle,
     xmin=-3, xmax=13,
     ymin=-1.2, ymax=1.2,
-    width=12cm,
-    height=6cm,
+    width=8cm,
+    height=7cm,
     xlabel={$x$},
     ylabel={$y$},
     xtick=\empty,
@@ -1715,8 +1717,8 @@ Grafica :
     axis lines=middle,
     xmin=-3, xmax=13,
     ymin=-4, ymax=4,
-    width=12cm,
-    height=6cm,
+    width=11cm,
+    height=9cm,
     xlabel={$x$},
     ylabel={$y$},
     xtick=\empty,
@@ -1775,6 +1777,8 @@ Grafica :
     axis lines=middle,
     xmin=-2, xmax=2,
     ymin=-2, ymax=2,
+    width=11cm,
+    height=9cm,
     xlabel={$x$},
     ylabel={$y$},
     xtick={-1,0,1},
@@ -1837,6 +1841,8 @@ Grafica :
     axis lines=middle,
     xmin=-2.5, xmax=3,
     ymin=-2, ymax=4,
+    width=11cm,
+    height=9cm,
     xlabel={$x$},
     ylabel={$y$},
     xtick={-1,0,1},
@@ -1897,6 +1903,8 @@ Grafica :
 \begin{tikzpicture}
 \begin{axis}[
     axis lines=middle,
+    width=11cm,
+    height=9cm,
     xmin=-4, xmax=4,
     ymin=-4, ymax=4,
     xlabel={$x$},
