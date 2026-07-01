@@ -722,7 +722,7 @@ $$
 
 ### Características generales de las principales funciones reales
 
-### Función de 1er grado (recta)
+#### Función de 1er grado (recta)
 
 La función de primer grado tiene la forma:
 
@@ -770,7 +770,7 @@ ademas:
 \end{document}
 ```
 
-#### Función constante
+**Función constante**
 
 Cuando:
 $$a=0$$
@@ -794,7 +794,7 @@ $$f(x)=b$$
 \end{document}
 ```
 
-#### Recta vertical
+**Recta vertical**
 
 La ecuación:
 
@@ -824,7 +824,7 @@ representa una recta vertical.
 La recta vertical no representa una función.
 
 
-#### Función lineal 
+**Función lineal**
 
 $$y=f(x)=ax \, ; \, a\in \mathbb{R}$$
 $$D_{f}=\mathbb{R} \, ; \, R_{f}=\mathbb{R}$$
@@ -949,7 +949,7 @@ $$D_{f}=\mathbb{R} \, ; \, R_{f}=\mathbb{R}$$
 
 ---
 
-### Función de 2do grado (parabólica)
+#### Función de 2do grado (parabólica)
 
 $$y=f(x)=ax^{2}+bx+c \quad ; \quad a,b,c\in\mathbb{R}$$
 
@@ -1035,8 +1035,8 @@ Se reconoce las graficas identificando
 - Eje de simetría: $$x=h$$
 ---
 
-#### Ejemplo
-$$y-\frac{11}{2}=-2\left(x-\frac32\right)^{2}$$
+**Ejemplo**
+$y-\frac{11}{2}=-2\left(x-\frac32\right)^{2}$
 
 Como (a<0), la parábola abre hacia abajo.
 
@@ -1095,7 +1095,7 @@ $$D_{f}=\mathbb{R}\quad ; \quad  R_{f}=\left]-\infty,\frac{11}{2}\right]$$
 
 ---
 
-### Función potencial generalizada
+#### Función potencial generalizada
 
 $$y=f(x)=x^{n} \quad ; \quad n=2,3,4,5,\ldots$$
 
@@ -1163,7 +1163,7 @@ Ejemplo
 
 ---
 
-### Función exponencial
+#### Función exponencial
 
 $$
 y=f(x)=a^x
@@ -1357,7 +1357,7 @@ $$a= e = 2,718281\dots \quad = \text{número de nepper}$$
 
 ---
 
-### Funciones logarítmicas 
+#### Funciones logarítmicas 
 
 - Se define "$\log$" segun:
 $$\log_{b}{a} = c\quad \Rightarrow \quad b^{c}=a$$
@@ -1587,7 +1587,7 @@ Donde:
 
 ---
 
-### Función seno
+#### Función seno
 
 $$y=f(x)=\sin{x}$$
 
@@ -1640,7 +1640,7 @@ Grafica :
 
 ---
 
-### Función coseno
+#### Función coseno
 
 $$y=f(x)=\cos{x}$$
 
@@ -1693,7 +1693,7 @@ Grafica :
 
 ---
 
-### Función tangente
+#### Función tangente
 
 $$y=f(x)=\tan{x}=\dfrac{\sin x}{\cos x}$$
 
@@ -1755,8 +1755,7 @@ Grafica :
 
 ---
 
-### Funciones trigonométricas inversas 
-
+**Funciones trigonométricas inversas**
 
 #### Funcion $\arcsin$
 
