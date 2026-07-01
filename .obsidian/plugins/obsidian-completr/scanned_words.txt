@@ -30953,6 +30953,7 @@ desactives
 domain
 declararlos
 derivada
+diente
 Vault
 Verificar
 Variables
@@ -55404,6 +55405,7 @@ segun
 samples
 soportado
 senoidal
+sierra
 vault
 vil
 ver
@@ -74411,6 +74413,7 @@ rough
 relacion
 reconsiderar
 recorrido
+rfloor
 notes
 notas
 nuevas
@@ -126021,6 +126024,7 @@ Escala
 ENTORNOS
 Elipses
 ECDC
+Extremos
 Obsidian
 OmniSearch
 Ocultar
@@ -188105,6 +188109,7 @@ longrightarrow
 lica
 lines
 line
+lfloor
 incluyendo
 im
 instalar
