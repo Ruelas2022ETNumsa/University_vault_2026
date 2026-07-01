@@ -1,6 +1,6 @@
 {
   "showViewHeader": false,
-  "showRibbon": true,
+  "showRibbon": false,
   "accentColor": "",
   "nativeMenus": false,
   "baseFontSize": 13,

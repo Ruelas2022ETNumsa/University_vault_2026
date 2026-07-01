@@ -44,7 +44,7 @@ Antes de generar cualquier bloque, seguir este orden:
 2. ¿Qué paquete necesita? (ver N2)
 3. ¿Escala y tamaño? (ver N6)
 4. ¿Qué colores? (ver N7)
-5. ¿Esto aporta algo que Desmos no puede dar? (ver N10) — si no, usar Desmos en su lugar.
+5. ¿Qué nivel de detalle requiere? (ver N10) — pocos elementos/curva simple → Desmos; varios elementos relacionados o anotaciones → TikZJax. En caso de duda, revisar si el tipo de gráfico ya tiene precedente en la biblioteca de ejemplos (Bloque C) de esta guía o de `MAT101_desmos.md`.
 
 ---
 
@@ -251,17 +251,14 @@ El plugin puede no mostrar el diagrama la primera vez que se abre la nota. Si el
 
 ---
 
-### N10. CUÁNDO USAR TIKZJAX EN LUGAR DE DESMOS
+### N10. CÓMO DECIDIR ENTRE TIKZJAX Y DESMOS
 
-Desmos es la primera opción para Cálculo 1. Usar TikZJax solo cuando Desmos no puede representar el contenido:
+No se decide por tema, sino por **nivel de detalle** del diagrama solicitado. La pregunta es siempre la misma sin importar el tema de MAT101: ¿cuántos elementos hay y cómo se relacionan entre sí?
 
-- Diagramas de conjuntos y composición de funciones (óvalos con flechas)
-- Circunferencia trigonométrica con puntos y segmentos etiquetados
-- Función inversa mostrando el espejo respecto a $y=x$
-- Figuras geométricas con medidas exactas (triángulos, ángulos, vectores)
-- Superficies o volúmenes 3D
+- **Curva o región simple** (una función, área bajo una curva, comparación de 2-3 curvas sin anotaciones extra) → **Desmos**. Más rápido de generar y calcular.
+- **Múltiples elementos relacionados, anotaciones densas, o precisión geométrica** (conjuntos con flechas de relación/composición, circunferencia trigonométrica con segmentos y puntos etiquetados, función inversa con espejo `y=x`, figuras con medidas exactas, superficies o volúmenes 3D) → **TikZJax**. Permite el nivel de control que Desmos no ofrece.
 
-Si el diagrama es una curva o región estándar (parábola, trigonométrica, exponencial, área bajo curva simple) → usar Desmos (`MAT101_desmos.md`).
+Cuando no esté claro cuál usar: revisar si ese tipo de gráfico ya tiene un ejemplo confirmado en el Bloque C de esta guía o en el de `MAT101_desmos.md` — el precedente ya resuelto tiene prioridad sobre reevaluar el criterio desde cero. Esta sección no se actualiza por tema nuevo; los ejemplos concretos van acumulándose en el Bloque C de cada guía.
 
 ---
 
@@ -302,7 +299,12 @@ Antes de entregar un bloque TikZJax verificar:
 
 > Primer parcial. Dominio, imagen, gráficas de familias de funciones, transformaciones.
 
-*(Sección pendiente de completar en conjunto — ver borrador de ejemplos existentes más abajo, a integrar)*
+-xxx
+
+
+
+
+-xxx
 
 ---
 
