@@ -74410,6 +74410,7 @@ reducir
 rough
 relacion
 reconsiderar
+recorrido
 notes
 notas
 nuevas
@@ -126018,6 +126019,7 @@ EECFC
 Editabilidad
 Escala
 ENTORNOS
+Elipses
 Obsidian
 OmniSearch
 Ocultar
@@ -188101,6 +188103,7 @@ lleg
 longrightarrow
 lica
 lines
+line
 incluyendo
 im
 instalar
