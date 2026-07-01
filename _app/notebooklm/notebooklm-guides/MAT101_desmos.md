@@ -860,13 +860,13 @@ y=\sin(x)|#005F73
 left=-3.1416; right=3.1416; bottom=-2; top=2;
 width=300; height=200;
 ---
-y=\cos(x)|#0A9396
+y=\cos(x)|#005F73
 ```
 
 ```desmos-graph
 width=400; height=350;
 ---
-y=\tan(x)|#EE9B00
+y=\tan(x)|#005F73
 ```
 
 #### Trigonométricas inversas
