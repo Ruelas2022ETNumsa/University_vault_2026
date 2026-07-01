@@ -5,6 +5,7 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
+        "MAT101_TikzJax.md",
         "claude vision.md",
         "Untitled.md",
         "in_work",
@@ -2679,7 +2680,7 @@
       "sortOrder": "custom",
       "customOrder": [
         "latex_notebook_lm.md",
-        "desmos_notebook_lm.md",
+        "MAT101_desmos.md",
         "ETN806-P3-colas_guide_s.md",
         "ETN806-P3-Tikz_markov_guide.md",
         "tikzjax_guide.md"
@@ -2707,10 +2708,6 @@
     },
     "_app/_appnotes/desmos_guide.md": {
       "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/notebooklm-guides/desmos_notebook_lm.md": {
-      "isPinned": true,
       "isHidden": false
     },
     "_app/_appnotes/desmos_guide 1.md": {
@@ -2793,13 +2790,21 @@
     "claude vision.md": {
       "isPinned": false,
       "isHidden": false
+    },
+    "_app/notebooklm/notebooklm-guides/MAT101_desmos.md": {
+      "isPinned": true,
+      "isHidden": false
+    },
+    "MAT101_TikzJax.md": {
+      "isPinned": false,
+      "isHidden": false
     }
   },
   "pinnedFiles": [
     "_app/_appnotes/PDF_PP-guide.md",
     "_app/_config/_claude-boot.md",
     "_app/_config/_galaxy-system.md",
-    "_app/notebooklm/notebooklm-guides/desmos_notebook_lm.md",
+    "_app/notebooklm/notebooklm-guides/MAT101_desmos.md",
     "_app/notebooklm/MAT101-notebooklm_study.md",
     "_app/notebooklm/MAT101-notebooklm_transcription.md"
   ],
