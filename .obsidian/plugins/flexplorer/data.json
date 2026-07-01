@@ -5,7 +5,7 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
-        "Untitled 2.md",
+        "claude vision.md",
         "Untitled.md",
         "in_work",
         "Borrar",
@@ -2782,15 +2782,15 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Untitled 2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_app/notebooklm/notebooklm-guides/latex_notebook_lm.md": {
       "isPinned": false,
       "isHidden": false
     },
     "_app/solve/google_drive_solve.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "claude vision.md": {
       "isPinned": false,
       "isHidden": false
     }

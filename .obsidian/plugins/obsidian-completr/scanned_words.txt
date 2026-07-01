@@ -6171,6 +6171,8 @@ tratar
 tuve
 terminos
 tachado
+tokens
+tuviera
 ToDo
 Templater
 Text
@@ -20185,6 +20187,7 @@ Separadores
 Significado
 Simetria
 Saltos
+String
 Plugins
 Pendientes
 Plugin
@@ -25630,6 +25633,7 @@ Polinomios
 Potenciales
 Partiendo
 Periodicidad
+Puntuaci
 del
 date
 de
@@ -30929,6 +30933,14 @@ deba
 deducen
 distinguirlo
 drive
+dudarlo
+desactiv
+drawn
+decodificar
+distingu
+dije
+descomprimir
+desactives
 Vault
 Verificar
 Variables
@@ -37067,6 +37079,7 @@ Vert
 Verdad
 Violet
 Violeta
+Visi
 galaxy
 gina
 genes
@@ -43371,6 +43384,7 @@ graficadores
 generalizadas
 grados
 grosores
+ganador
 body
 beacon
 bat
@@ -48450,6 +48464,9 @@ bruta
 binarias
 bounds
 bcancel
+barato
+beneficio
+baratos
 scope
 status
 selector
@@ -67903,6 +67920,7 @@ arcotangente
 afirmaci
 acute
 alado
+aprox
 related
 recomendados
 ribbon
@@ -74360,6 +74378,8 @@ rigen
 repetitivo
 radianes
 resalte
+reducir
+rough
 notes
 notas
 nuevas
@@ -80594,6 +80614,7 @@ neutra
 nros
 notar
 notation
+necesitaras
 created
 commit
 cada
@@ -87297,6 +87318,10 @@ cosecante
 consume
 cancel
 cancelto
+crudo
+combinados
+corrigiendo
+contraste
 updated
 un
 universo
@@ -118999,6 +119024,7 @@ FUNCION
 FUERA
 FFEB
 Falsa
+Facilidad
 Estado
 Excalidraw
 EPUBs
@@ -125948,6 +125974,7 @@ Elegimos
 Exponenciales
 ECUACI
 EECFC
+Editabilidad
 Obsidian
 OmniSearch
 Ocultar
@@ -137336,6 +137363,7 @@ Anulaci
 APLICA
 Amplitud
 Advertencia
+Architect
 push
 pull
 para
@@ -143300,6 +143328,8 @@ precisado
 presentadas
 proposiciones
 primitivos
+pagu
+program
 min
 mica
 movimiento
@@ -150616,6 +150646,7 @@ mostr
 modificadores
 modificador
 mencionados
+mostrale
 YAML
 Ya
 You
@@ -162176,6 +162207,7 @@ BIBLIOTECA
 BrickRed
 BlueGreen
 Borde
+Barato
 en
 exacta
 escaneados
@@ -168856,6 +168888,8 @@ ecuacion
 excedente
 envolviendo
 escapado
+entienda
+eran
 Motor
 Media
 Mantiene
@@ -195688,6 +195722,8 @@ inherentes
 iterada
 importancia
 inactivo
+instancias
+infla
 Dependencia
 Dropbox
 Dataview
@@ -225156,6 +225192,7 @@ hiperb
 hallazgo
 hidden
 hallado
+hand
 que
 quedan
 queda
@@ -252813,6 +252850,7 @@ operativas
 ordenada
 oscilatorio
 oscilan
+overhead
 junto
 json
 jer
@@ -259975,6 +260013,7 @@ jwUL
 jgMh
 jePK
 joint
+justificar
 Qu
 Qui
 Quick
