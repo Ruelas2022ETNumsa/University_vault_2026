@@ -352,54 +352,33 @@ Analizar si $f$ es o no función.
 ```
 
 ```desmos-graph
-left=-6; right=6;bottom=-3; top=3;
-width=500; height=300;
+left=4; right=16;
+bottom=5; top=11;
+width=499; height=250;
+grid=false;
+
 ---
-\frac{(x+4)^2}{1}+\frac{y^2}{4}=1
-\frac{(x-4)^2}{1}+\frac{y^2}{4}=1
+\frac{(x-6)^2}{1}+\frac{(y-8)^2}{4}=1
+\frac{(x-14)^2}{1}+\frac{(y-8)^2}{4}=1
 
+(6,9)|label:1|hidden
+(6,8)|label:2|hidden
+(6,7)|label:3|hidden
 
-(-4,1)|label:1
-(-4,0)|label:2
-(-4,-1)|label:3
+(14,9)|label:4|cross
+(14,8)|label:5|cross
+(14,7)|label:6|cross
 
-(4,1)|label:4
-(4,0)|label:5
-(4,-1)|label:6
+(6,10.6)|label:D|hidden
+(14,10.6)|label:R|hidden
+(10,10.8)|label:f|hidden
 
-(-4,2.6)|label:D
-(4,2.6)|label:R
-(0,2.8)|label:f
+(6+8t,8)|0<=t<=1|#4ECDC4
 
+(6*(1-t)^3+3*9*(1-t)^2*t+3*11*(1-t)*t^2+14*t^3,9*(1-t)^3+3*9.5*(1-t)^2*t+3*6.5*(1-t)*t^2+7*t^3)|0<=t<=1|#F28E2B
 
-(-4+8t,0)|0<=t<=1|#4ECDC4
-
+(6*(1-t)^3+3*9*(1-t)^2*t+3*11*(1-t)*t^2+14*t^3,7*(1-t)^3+3*6.5*(1-t)^2*t+3*9.5*(1-t)*t^2+9*t^3)|0<=t<=1|#7A9E3A
 ```
-
-
-(
-(1-t)^3(-4)+3(1-t)^2t(-1)+3(1-t)t^2(1)+t^3(4),
-(1-t)^3(1)+3(1-t)^2t(1.5)+3(1-t)t^2(-1.5)+t^3(-1)
-)
-|0<=t<=1|#F28E2B
-
-
-
-
-
-
-
-
-(
-(1-t)^3(-4)+3(1-t)^2t(-1)+3(1-t)t^2(1)+t^3(4),
-(1-t)^3(-1)+3(1-t)^2t(-1.5)+3(1-t)t^2(1.5)+t^3(1)
-)
-|0<=t<=1|#7A9E3A
-
-
-
-
-
 
 
 $f$ sí es función.
