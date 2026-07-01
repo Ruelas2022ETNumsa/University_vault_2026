@@ -1218,6 +1218,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "google_drive_solve.md",
         "claude_solve.md",
         "git_solve.md"
       ]
@@ -2786,6 +2787,10 @@
       "isHidden": false
     },
     "_app/notebooklm/notebooklm-guides/latex_notebook_lm.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/solve/google_drive_solve.md": {
       "isPinned": false,
       "isHidden": false
     }

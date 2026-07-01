@@ -136,66 +136,18 @@ Jerarquía visual: TD > TA > B > E > C > `\boxed`
 Sintaxis:
 
 ```latex
-\fcolorbox{RedOrange}{white}{\color{RedOrange} x = 1}
+\bbox[2px,border:2px solid #FF4500;background:white]{\color{#FF4500} x = 1}
 
-\fcolorbox{TealBlue}{white}{\color{TealBlue} x = 2}
+\bbox[2px,border:2px solid #008080;background:white]{\color{#008080} x = 2}
 
-\fcolorbox{NavyBlue}{white}{\color{NavyBlue} m = 3}
+\bbox[2px,border:2px solid #000080;background:white]{\color{#000080} m = 3}
 
-\fcolorbox{Gray}{white}{\color{Gray} y = 4}
+\bbox[2px,border:2px solid #808080;background:white]{\color{#808080} y = 4}
 
-\fcolorbox{Mahogany}{white}{\color{Mahogany} x \neq 0}
+\bbox[2px,border:2px solid #C04000;background:white]{\color{#C04000} x \neq 0}
 
 \boxed{m = 3}
 ```
-
-
-$$\fcolorbox{RedOrange}{white}{\color{RedOrange} \dfrac{1}{1-s} = 1}$$
-
-$$\fcolorbox{TealBlue}{white}{\color{TealBlue} x = 2}$$
-
-$$\fcolorbox{NavyBlue}{white}{\color{NavyBlue} m = 3}$$
-
-$$\fcolorbox{Gray}{white}{\color{Gray} y = 4}$$
-
-$$\fcolorbox{Mahogany}{white}{\color{Mahogany} x\neq0}$$
-
-$$\boxed{m = 3}$$
-
-
----
-$$\bbox[2px,border:2px solid #FF4500;background:white]{\color{#FF4500} x = 1}$$
-
-$$\bbox[2px,border:2px solid #008080;background:white]{\color{#008080} x = 2}$$
-
-$$\bbox[2px,border:2px solid #000080;background:white]{\color{#000080} m = 3}$$
-
-$$\bbox[2px,border:2px solid #808080;background:white]{\color{#808080} y = 4}$$
-
-$$\bbox[2px,border:2px solid #C04000;background:white]{\color{#C04000} x \neq 0}$$
-
-
-
-
-
-
-
-$$
-\bbox[2px,border:2px solid Mahogany]{
-\color{Mahogany}{x \neq 0}
-}
-$$
-$$
-\bbox[2px,border:2px solid #C04000]{
-\color{#C04000}{x \neq 0}
-}
-$$
-
-$$
-\bbox[2px,border:2px solid #C04000;background:white]{
-\color{#C04000}{x \neq 0}
-}
-$$
 
 ---
 
@@ -241,9 +193,10 @@ $$x + \cancel{2} = \cancelto{\color{YellowOrange}2}{4} \Rightarrow {\color{TealB
 ### Inciso con resultado intermedio y final
 
 ```latex
-Hallamos la pendiente: $\fcolorbox{NavyBlue}{white}{\color{NavyBlue} m = \dfrac{3}{2}}$
+Hallamos la pendiente: $\bbox[2px,border:2px solid #000080;background:white]{\color{#000080} m = \dfrac{3}{2}}$
 
-$$\fcolorbox{RedOrange}{white}{\color{RedOrange} y = \dfrac{3}{2}x + 1}$$
+$$\bbox[2px,border:2px solid #FF4500;background:white]{\color{#FF4500} y = \dfrac{3}{2}x + 1}$$
+
 ```
 
 ### Sistema de ecuaciones con valor auxiliar
@@ -254,7 +207,7 @@ $$\begin{array}{rcl}
 x - y & = & 2
 \end{array}$$
 
-$\fcolorbox{Gray}{white}{\color{Gray} x = 3}$
+$\bbox[2px,border:2px solid #808080;background:white]{\color{#808080} x = 3}$
 
-$$\fcolorbox{TealBlue}{white}{\color{TealBlue} y = 1}$$
+$$\bbox[2px,border:2px solid #008080;background:white]{\color{#008080} y = 1}$$
 ```
