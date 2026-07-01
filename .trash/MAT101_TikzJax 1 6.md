@@ -319,7 +319,7 @@ Analizar si $f$ es o no función.
 
 ```tikz
 \begin{document}
-\begin{tikzpicture}[scale=1.2] % N6: Mediano
+\begin{tikzpicture}[scale=1.2]
 
 \draw (-4,0) ellipse (1 and 2);
 \draw (4,0) ellipse (1 and 2);
@@ -365,7 +365,7 @@ $$R_f=\{4,5,6\}=rango,\ recorrido,\ codominio ,\text{ conjunto de imágenes}$$
 
 ```tikz
 \begin{document}
-\begin{tikzpicture}[scale=1.2] % N6: Mediano
+\begin{tikzpicture}[scale=1.2]
 
 \draw (-4,0) ellipse (1 and 2);
 \draw (4,0) ellipse (1 and 2);
@@ -406,7 +406,7 @@ Todas las flechas llegan a 5.
 
 ```tikz
 \begin{document}
-\begin{tikzpicture}[scale=1.2] % N6: Mediano
+\begin{tikzpicture}[scale=1.2]
 
 \draw (-4,0) ellipse (1 and 2);
 \draw (4,0) ellipse (1 and 2);
@@ -459,7 +459,7 @@ La gráfica de $y=f(x)$ es simétrica respecto al eje $y$.
 ```tikz
 \usepackage{amsmath}
 \begin{document}
-\begin{tikzpicture}[scale=1.5] % N6: Grande
+\begin{tikzpicture}[scale=1.5]
 
 % Ejes
 \draw[->] (-2.2,0) -- (2.2,0) node[right] {$x$};
@@ -515,7 +515,7 @@ La gráfica de $y=f(x)$ impar es simétrica respecto al origen $(0,0)$.
 ```tikz
 \usepackage{amsmath}
 \begin{document}
-\begin{tikzpicture}[scale=1.2] % N6: Mediano
+\begin{tikzpicture}[scale=1.2]
 
 % Ejes
 \draw[->] (-1.8,0) -- (1.8,0) node[right] {$x$};
@@ -561,7 +561,7 @@ $$
 
 ```tikz
 \begin{document}
-\begin{tikzpicture}[scale=1.5] % N6: Grande
+\begin{tikzpicture}[scale=1.5]
 
 % Ejes
 \draw[->] (-0.5,0) -- (7.2,0) node[right] {$x$};
@@ -687,7 +687,7 @@ $$
 
 ```tikz
 \begin{document}
-\begin{tikzpicture}[scale=1.2] % N6: Mediano
+\begin{tikzpicture}
 
 % Conjuntos
 \draw (-3.5,0) ellipse (1 and 1.5);

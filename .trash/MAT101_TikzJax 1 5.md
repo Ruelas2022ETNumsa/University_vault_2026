@@ -309,6 +309,8 @@ Antes de entregar un bloque TikZJax verificar:
 
 > Primer parcial. Dominio, imagen, gráficas de familias de funciones, transformaciones.
 
+-xxx
+
 ### Relación vs. función (diagramas de conjuntos)
 
 > Contexto para NotebookLM: estos tres ejemplos muestran cómo distinguir una relación cualquiera de una función usando diagramas de flechas entre dos conjuntos. Usar este tipo de gráfica cuando el usuario pida representar dominio/codominio con elementos discretos y sus correspondencias.
@@ -319,7 +321,7 @@ Analizar si $f$ es o no función.
 
 ```tikz
 \begin{document}
-\begin{tikzpicture}[scale=1.2] % N6: Mediano
+\begin{tikzpicture}[scale=1.2]
 
 \draw (-4,0) ellipse (1 and 2);
 \draw (4,0) ellipse (1 and 2);
@@ -365,7 +367,7 @@ $$R_f=\{4,5,6\}=rango,\ recorrido,\ codominio ,\text{ conjunto de imágenes}$$
 
 ```tikz
 \begin{document}
-\begin{tikzpicture}[scale=1.2] % N6: Mediano
+\begin{tikzpicture}[scale=1.2]
 
 \draw (-4,0) ellipse (1 and 2);
 \draw (4,0) ellipse (1 and 2);
@@ -382,7 +384,7 @@ $$R_f=\{4,5,6\}=rango,\ recorrido,\ codominio ,\text{ conjunto de imágenes}$$
 \node (b5) at (4,0) {$5$};
 \node (b6) at (4,-1) {$6$};
 
-\draw[->, thick, olive]
+\draw[->, thick, purple]
 (a1) .. controls (-1,1.2) and (1,0.6) .. (b5);
 
 \draw[->, thick, teal]
@@ -406,7 +408,7 @@ Todas las flechas llegan a 5.
 
 ```tikz
 \begin{document}
-\begin{tikzpicture}[scale=1.2] % N6: Mediano
+\begin{tikzpicture}[scale=1.2]
 
 \draw (-4,0) ellipse (1 and 2);
 \draw (4,0) ellipse (1 and 2);
@@ -424,7 +426,7 @@ Todas las flechas llegan a 5.
 \node (b6) at (4,-1) {$6$};
 
 % 1 -> 4
-\draw[->, thick, olive]
+\draw[->, thick, violet]
 (a1) .. controls (-1,2) and (1,2) .. (b4);
 
 % 3 -> 5
@@ -459,7 +461,7 @@ La gráfica de $y=f(x)$ es simétrica respecto al eje $y$.
 ```tikz
 \usepackage{amsmath}
 \begin{document}
-\begin{tikzpicture}[scale=1.5] % N6: Grande
+\begin{tikzpicture}[scale=1.5]
 
 % Ejes
 \draw[->] (-2.2,0) -- (2.2,0) node[right] {$x$};
@@ -515,7 +517,7 @@ La gráfica de $y=f(x)$ impar es simétrica respecto al origen $(0,0)$.
 ```tikz
 \usepackage{amsmath}
 \begin{document}
-\begin{tikzpicture}[scale=1.2] % N6: Mediano
+\begin{tikzpicture}[scale=1.2]
 
 % Ejes
 \draw[->] (-1.8,0) -- (1.8,0) node[right] {$x$};
@@ -561,7 +563,7 @@ $$
 
 ```tikz
 \begin{document}
-\begin{tikzpicture}[scale=1.5] % N6: Grande
+\begin{tikzpicture}[scale=1.5]
 
 % Ejes
 \draw[->] (-0.5,0) -- (7.2,0) node[right] {$x$};
@@ -687,7 +689,7 @@ $$
 
 ```tikz
 \begin{document}
-\begin{tikzpicture}[scale=1.2] % N6: Mediano
+\begin{tikzpicture}
 
 % Conjuntos
 \draw (-3.5,0) ellipse (1 and 1.5);
@@ -871,7 +873,7 @@ $$D_{f}=\mathbb{R} \, ; \, R_{f}=\mathbb{R}$$
 
 > Contexto para NotebookLM: usar para $f(x)=ax$ (recta en el origen). Mostrar ángulo $\alpha$ en la base y etiqueta de pendiente $a$ sobre la recta.
 
-**Ejemplo — test de la recta vertical**
+- además, ideas gráficas
 
 ```tikz
 \usepackage{pgfplots}
@@ -915,7 +917,9 @@ $$D_{f}=\mathbb{R} \, ; \, R_{f}=\mathbb{R}$$
 \end{document}
 ```
 
-> Contexto para NotebookLM: usar para ilustrar el test de la recta vertical en una función. Rectas verticales punteadas en distintos $x$, cada una corta la curva en exactamente un punto — confirma que es función. Si en cambio una vertical corta en más de un punto, la gráfica no es función (ver ejemplo $y^2=x+1$ abajo).
+> Contexto para NotebookLM: usar para ilustrar el test de la recta vertical en una función. Rectas verticales punteadas en distintos $x$, cada una corta la curva en exactamente un punto — confirma que es función.
+
+>Si toda vertical corta en un punto la grafica es **funcion**
 
 ```tikz
 \usepackage{tikz}
@@ -960,6 +964,8 @@ $$D_{f}=\mathbb{R} \, ; \, R_{f}=\mathbb{R}$$
 ```
 
 > Contexto para NotebookLM: usar para ilustrar el test de la recta vertical en una relación que NO es función. La parábola $y^2=x+1$ (horizontal) y la vertical $x=2$ cortan en dos puntos — confirma que no es función.
+
+>Si una vertical corta en mas de un punto es una grafica **no es función**, es solo relacion.
 
 ---
 
@@ -1515,6 +1521,8 @@ $y=f(x)=\log_{a}{x} \quad ; \quad a>0,\ a\neq 1 \qquad D_{f}=\mathbb{R}^{+},\ R_
 ```
 
 > Contexto para NotebookLM: usar para $\log_a x$ con $0<a<1$ (decreciente). Misma estructura que $a>1$: asíntota $x=0$, tangente en $(1,0)$, pero la curva desciende.
+
+- Casos especiales
 
 ### Funciones trigonométricas
 

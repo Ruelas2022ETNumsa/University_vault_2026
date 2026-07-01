@@ -319,7 +319,7 @@ Analizar si $f$ es o no función.
 
 ```tikz
 \begin{document}
-\begin{tikzpicture}[scale=1.2]
+\begin{tikzpicture}[scale=1.2] % N6: Mediano
 
 \draw (-4,0) ellipse (1 and 2);
 \draw (4,0) ellipse (1 and 2);
@@ -365,7 +365,7 @@ $$R_f=\{4,5,6\}=rango,\ recorrido,\ codominio ,\text{ conjunto de imágenes}$$
 
 ```tikz
 \begin{document}
-\begin{tikzpicture}[scale=1.2]
+\begin{tikzpicture}[scale=1.2] % N6: Mediano
 
 \draw (-4,0) ellipse (1 and 2);
 \draw (4,0) ellipse (1 and 2);
@@ -406,7 +406,7 @@ Todas las flechas llegan a 5.
 
 ```tikz
 \begin{document}
-\begin{tikzpicture}[scale=1.2]
+\begin{tikzpicture}[scale=1.2] % N6: Mediano
 
 \draw (-4,0) ellipse (1 and 2);
 \draw (4,0) ellipse (1 and 2);
@@ -459,7 +459,7 @@ La gráfica de $y=f(x)$ es simétrica respecto al eje $y$.
 ```tikz
 \usepackage{amsmath}
 \begin{document}
-\begin{tikzpicture}[scale=1.5]
+\begin{tikzpicture}[scale=1.5] % N6: Grande
 
 % Ejes
 \draw[->] (-2.2,0) -- (2.2,0) node[right] {$x$};
@@ -495,9 +495,6 @@ La gráfica de $y=f(x)$ es simétrica respecto al eje $y$.
 ```
 > Contexto para NotebookLM: la gráfica muestra $y=x^4-x^2+0.5$, simétrica respecto al eje $y$ — los puntos $(-1, 0.5)$ y $(1, 0.5)$ ilustran esa simetría. Usar cuando el usuario pida graficar una función par o mostrar simetría axial respecto al eje $y$.
 
-> [!note]
-> Gráfica: espejo.
-
 ---
 
 ### Función impar
@@ -515,7 +512,7 @@ La gráfica de $y=f(x)$ impar es simétrica respecto al origen $(0,0)$.
 ```tikz
 \usepackage{amsmath}
 \begin{document}
-\begin{tikzpicture}[scale=1.2]
+\begin{tikzpicture}[scale=1.2] % N6: Mediano
 
 % Ejes
 \draw[->] (-1.8,0) -- (1.8,0) node[right] {$x$};
@@ -561,7 +558,7 @@ $$
 
 ```tikz
 \begin{document}
-\begin{tikzpicture}[scale=1.5]
+\begin{tikzpicture}[scale=1.5] % N6: Grande
 
 % Ejes
 \draw[->] (-0.5,0) -- (7.2,0) node[right] {$x$};
@@ -687,7 +684,7 @@ $$
 
 ```tikz
 \begin{document}
-\begin{tikzpicture}
+\begin{tikzpicture}[scale=1.2] % N6: Mediano
 
 % Conjuntos
 \draw (-3.5,0) ellipse (1 and 1.5);
@@ -1520,13 +1517,6 @@ $y=f(x)=\log_{a}{x} \quad ; \quad a>0,\ a\neq 1 \qquad D_{f}=\mathbb{R}^{+},\ R_
 
 Se definen en la circunferencia trigonométrica.
 
-
-
-
-
-
-
-
 ```tikz
 \usepackage{tikz}
 \begin{document}
@@ -1598,8 +1588,6 @@ Se definen en la circunferencia trigonométrica.
 \end{tikzpicture}
 \end{document}
 ```
-
-
 
 Donde:
 
