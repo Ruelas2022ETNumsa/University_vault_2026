@@ -6173,6 +6173,9 @@ terminos
 tachado
 tokens
 tuviera
+tangentes
+tapar
+transformaciones
 ToDo
 Templater
 Text
@@ -13120,6 +13123,8 @@ TRANSCRIBIR
 Transformaciones
 TealBlue
 Tachado
+TikzJax
+Ticks
 Sistema
 Sync
 Save
@@ -20188,6 +20193,8 @@ Significado
 Simetria
 Saltos
 String
+Superficies
+Semicircunferencia
 Plugins
 Pendientes
 Plugin
@@ -25634,6 +25641,8 @@ Potenciales
 Partiendo
 Periodicidad
 Puntuaci
+PGFPLOTS
+PLUGIN
 del
 date
 de
@@ -30941,6 +30950,9 @@ distingu
 dije
 descomprimir
 desactives
+domain
+declararlos
+derivada
 Vault
 Verificar
 Variables
@@ -43385,6 +43397,8 @@ generalizadas
 grados
 grosores
 ganador
+graficada
+gruesas
 body
 beacon
 bat
@@ -48467,6 +48481,7 @@ bcancel
 barato
 beneficio
 baratos
+borrador
 scope
 status
 selector
@@ -55385,6 +55400,9 @@ sexagesimales
 subpregunta
 sustituido
 segun
+samples
+soportado
+senoidal
 vault
 vil
 ver
@@ -67923,6 +67941,13 @@ acute
 alado
 aprox
 ademas
+alzada
+aproximado
+aproximada
+angulo
+asin
+acos
+atan
 related
 recomendados
 ribbon
@@ -74383,6 +74408,7 @@ resalte
 reducir
 rough
 relacion
+reconsiderar
 notes
 notas
 nuevas
@@ -87326,6 +87352,9 @@ crudo
 combinados
 corrigiendo
 contraste
+curvaPpal
+centra
+coincidencia
 updated
 un
 universo
@@ -94349,6 +94378,7 @@ ubicado
 unas
 usaron
 usos
+unidos
 Galaxy
 Git
 Gr
@@ -105810,6 +105840,8 @@ COLOR
 Consideramos
 Ceros
 Cajas
+CONOCIDAS
+Cuadr
 Instalados
 Instalado
 Instalar
@@ -112861,6 +112893,7 @@ Igualando
 Intersecciones
 Impar
 Ignorar
+Intersecci
 Funci
 File
 Fase
@@ -119031,6 +119064,7 @@ FFEB
 Falsa
 Facilidad
 Funcion
+Figuras
 Estado
 Excalidraw
 EPUBs
@@ -125981,6 +126015,8 @@ Exponenciales
 ECUACI
 EECFC
 Editabilidad
+Escala
+ENTORNOS
 Obsidian
 OmniSearch
 Ocultar
@@ -132181,6 +132217,7 @@ ObVkd
 Oscilaci
 Opuestos
 OliveGreen
+Obligatorio
 Auto
 Annotator
 Autocompletado
@@ -137370,6 +137407,9 @@ APLICA
 Amplitud
 Advertencia
 Architect
+Asintota
+Angulo
+Arcotangente
 push
 pull
 para
@@ -143338,6 +143378,7 @@ pagu
 program
 parab
 particular
+punteados
 min
 mica
 movimiento
@@ -182562,6 +182603,12 @@ LLAVES
 LIBROS
 Listas
 Llaves
+LIMITACIONES
+LUGAR
+Leyenda
+Labels
+Linea
+Lineas
 links
 las
 listar
@@ -188050,6 +188097,7 @@ loga
 lleg
 longrightarrow
 lica
+lines
 incluyendo
 im
 instalar
@@ -195734,6 +195782,7 @@ inactivo
 instancias
 infla
 ideas
+inestable
 Dependencia
 Dropbox
 Dataview
@@ -219393,6 +219442,8 @@ floor
 fraccionarias
 field
 fcolorbox
+foreach
+familias
 haya
 hace
 hacer
