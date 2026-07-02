@@ -2681,7 +2681,7 @@
         "MAT101_desmos 1.md",
         "MAT101_TikzJax 1.md",
         "MAT101_TikzJax.md",
-        "latex_notebook_lm.md",
+        "MAT101_latex.md",
         "MAT101_desmos.md",
         "ETN806-P3-colas_guide_s.md",
         "ETN806-P3-Tikz_markov_guide.md",
@@ -2781,10 +2781,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_app/notebooklm/notebooklm-guides/latex_notebook_lm.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_app/solve/google_drive_solve.md": {
       "isPinned": false,
       "isHidden": false
@@ -2806,6 +2802,10 @@
       "isHidden": false
     },
     "_app/notebooklm/notebooklm-guides/MAT101_desmos 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/notebooklm-guides/MAT101_latex.md": {
       "isPinned": false,
       "isHidden": false
     }
