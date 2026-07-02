@@ -4,6 +4,8 @@ a formato Markdown listo para Obsidian.
 _
 NOTACIÓN OBSIDIAN: consultar obsidian_notation.md (fuente del notebook) para interpretar YAML, wikilinks, Cornell, callouts y bloques de visualización.
 _
+FUENTES DE REFERENCIA: consultar MAT101_library.md (fuente del notebook) para criterio de selección, capítulos y páginas exactas de cada libro por tema.
+-
 FLUJO DE TRABAJO:
 PDF del tema completo cargado como fuente apuntesTX. Dos mensajes por subtítulo:
 
@@ -168,18 +170,30 @@ _
 NOTACIÓN LATEX: consultar MAT101_latex.md (fuente del notebook) para cancelaciones,
 colores, cajas de resultado, fracciones y desarrollos multilínea.
 _
-LIBROS PRIORITARIOS POR TEMA — P1 (Parcial 1):
+LIBROS PRIORITARIOS POR TEMA:
 Consultar siempre las fuentes cargadas en el notebook según el tema.
 Para ejercicios, Schaum's, Maron y Demidovich son válidos en cualquier tema.
-El Stewart 7ma en español es el puente lingüístico — usarlo para confirmar
-terminología en español.
+El Stewart 7ma en español es el puente lingüístico — usarlo para confirmar terminología en español.
 
-LIBROS POR TEMA(ARCHIVOS DIVIDIDOS):
+LIBROS POR TEMA (ARCHIVOS DIVIDIDOS):
 Apostol: 1to7|8to16 · Thomas: 1to6|7to12|13to17 · Stewart 7ma: 1to4|5to8|9to11
 
-T0 Números reales: Apostol(1to7) · Stewart 9na · Stewart 7ma(1to4)
-T1 Funciones reales: Stewart 9na · Thomas(1to6) · Stewart 7ma(1to4)
-T2 Límites y continuidad: Stewart 9na · Apostol(1to7) · Stewart 7ma(1to4)
+— P1 —
+T0 Números reales:        Apostol(1to7) · Stewart 9na · Stewart 7ma(1to4)
+T1 Funciones reales:      Stewart 9na · Piskunov · Stewart 7ma(1to4)
+T2 Límites y continuidad: Stewart 9na · Piskunov · Stewart 7ma(1to4)
 
-Apostol como primera fuente para T0 porque cubre axiomas y orden con
-rigor formal. Para funciones y límites, Stewart 9na es primera opción.
+— P2 —
+T3 Derivación:            Stewart 9na · Piskunov · Stewart 7ma(1to4)
+T4 Aplic. derivación:     Stewart 9na · Piskunov · Thomas(1to6) · Stewart 7ma(1to4)
+
+— P3 —
+T5 Integración:           Stewart 9na · Piskunov · Stewart 7ma(5to8)
+T6 Aplic. integración:    Piskunov · Stewart 9na · Thomas(1to6) · Stewart 7ma(5to8)
+
+— EXTRA —
+T7 Series reales:         Apostol(8to16) · Stewart 9na · Stewart 7ma(9to11)
+
+Apostol primera fuente en T0 (axiomas) y T7 (series).
+Stewart 9na columna vertebral en T1–T5. Piskunov segunda fuente clave en T1–T6.
+Thomas consulta puntual en T4 y T6.

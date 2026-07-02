@@ -16,15 +16,13 @@ date_updated: 2026-07-02
 status: activo
 ---
 
-## Propósito
+PROPÓSITO:
+Fuente de referencia para NotebookLM. Consultá este archivo cuando tengas
+dudas sobre qué PDF usar para un tema o qué contiene un archivo específico.
+_
+PARTE 1 — CRITERIO DE USO POR TEMA
 
-Fuente de referencia para NotebookLM. Consultá este archivo cuando tengas dudas sobre qué PDF usar para un tema o qué contiene un archivo específico.
-
----
-
-## Parte 1 — Criterio de uso por tema
-
-### Teoría
+**TEORÍA**
 
 | Nro | Tema                        | Parcial | 1ra fuente                                                                                                                                                                                                                                                                                   | 2da fuente                                                                                                                                                                                                                                | Consulta puntual                                                                              | Respaldo español                                                                                                                                                |
 | --- | --------------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -37,7 +35,7 @@ Fuente de referencia para NotebookLM. Consultá este archivo cuando tengas dudas
 | 6   | Aplicaciones de integración | 3P      | `Piskunov Vol 1- Differential and Integral Calculus.pdf` — Cap.11: The Definite Integral (pp. 387–436) [impropias: sec.11.7] · Cap.12: Geometric and Mechanical Applications of the Definite Integral (pp. 437–464)                                                                          | `James Stewart 9th Ed-Calculus Early Transcendentals.pdf` — Cap.6: Applications of Integration (pp. 435–484)                                                                                                                              | `Thomas 14th ed-Calculus_-1to6.pdf` — Cap.6: Applications of Definite Integrals (pp. 314–369) | `Stewart, James 7ed-Cálculo en una variable. Trascendentes tempranas-5to8.pdf` — Cap.6: Aplicaciones de la integración (pp. 421–462)                            |
 | 7   | Series reales               | extra   | `Apostol vol 1 2ed-Calculus-8to16.pdf` — Cap.10: Sequences, Series, Improper Integrals (pp. 457–516) [D'Alembert/Cauchy: sec.10.15 · alternadas: sec.10.17 · conv.absoluta: sec.10.18] · Cap.11: Sequences and Series of Functions (pp. 517–544) [series de potencias: sec.11.6, 11.8, 11.9] | `James Stewart 9th Ed-Calculus Early Transcendentals.pdf` — Cap.11: Sequences, Series, and Power Series (pp. 723–828)                                                                                                                     | —                                                                                             | `Stewart, James 7ed-Cálculo en una variable. Trascendentes tempranas-9to11.pdf` — Cap.11: Sucesiones y series infinitas (pp. 689–780)                           |
 
-### Ejercicios
+**EJERCICIOS**
 
 | Nro | Tema | Parcial | Inicio | Práctica | Examen |
 |---|---|---|---|---|---|
@@ -50,11 +48,12 @@ Fuente de referencia para NotebookLM. Consultá este archivo cuando tengas dudas
 | 6 | Aplicaciones de integración | 3P | `Schaums 1ed-3000 solved problems in calculus.pdf` — Cap.21: Area and Arc Length (pp. 163–172) · Cap.22: Volume (pp. 173–184) · Cap.32: Improper Integrals (pp. 232–244) | `Maron-Problems in Calculus of One Variable.pdf` — Cap.VII: Applications of the Definite Integral (pp. 310–386) · Cap.VIII: Improper Integrals (pp. 387–417) | `Demidovich-Problems in Mathematical Analysis.pdf` — Cap.V: Definite Integrals (pp. 138–179) [impropias: sec.3 · áreas, longitud, volúmenes] |
 | 7 | Series reales | extra | `Schaums 1ed-3000 solved problems in calculus.pdf` — Cap.36: Infinite Sequences (pp. 245–252) · Cap.37: Infinite Series (pp. 253–259) · Cap.38: Power Series (pp. 260–267) · Cap.39: Taylor and Maclaurin Series (pp. 268–346) | `Demidovich-Problems in Mathematical Analysis.pdf` — Cap.VIII: Series (pp. 293–321) | — |
 
----
 
-## Notas de criterio
 
-### Teoría
+
+NOTAS DE CRITERIO:
+
+TEORÍA:
 · Apostol: primera fuente en T0 (axiomática de reales) y T7 (series).
   En T2 y T3 segunda fuente cuando se necesita fundamento formal.
 · Stewart 9na: columna vertebral del curso — primera fuente en T1, T2, T3, T4, T5.
@@ -71,7 +70,7 @@ Fuente de referencia para NotebookLM. Consultá este archivo cuando tengas dudas
 · Stewart 7ma español: puente lingüístico — confirmar terminología en español.
   En T5 cubre Cap.5 y Cap.7 (técnicas de integración pp. 463–536).
 
-### Ejercicios
+EJERCICIOS:
 · Schaum's: ejercicios de inicio en todos los temas — volumen alto, mecánico.
   Caps. detallados por tema: T0(1-2) · T1(5) · T2(6-7) · T3(8-10,12) · T4(13,16,18,25)
   T5(19-20,28-30) · T6(21-22,32) · T7(36-39).
@@ -84,14 +83,14 @@ Fuente de referencia para NotebookLM. Consultá este archivo cuando tengas dudas
   En T7 reemplaza a Maron como práctica por su fortaleza en series (Cap.VIII).
   En T0 no disponible — no tiene sección de números reales puros.
 
-### Referencia rápida
+REFERENCIA RÁPIDA:
 · Larson Cheat Sheet: fórmulas — solo verificación, no para desarrollo.
 
 ---
 
-## Parte 2 — Índice de PDFs
+PARTE 2 — ÍNDICE DE PDFs
 
-### `Apostol vol 1 2ed-Calculus-1to7.pdf`
+[Apostol vol 1 2ed-Calculus-1to7.pdf]
 Título: Calculus. One-Variable Calculus, with an Introduction to Linear Algebra
 Autor: Apostol, Tom M.
 Editorial: Blaisdell Publishing Company
@@ -110,9 +109,9 @@ Rango del archivo: páginas 1 a 372 del libro original.
   Cap. 6 — The Logarithm, the Exponential, and the Inverse Trigonometric Functions — pp. 277–332
   Cap. 7 — Polynomial Approximations to Functions — pp. 333–372
 
----
+-
 
-### `Apostol vol 1 2ed-Calculus-8to16.pdf`
+[Apostol vol 1 2ed-Calculus-8to16.pdf]
 Título: Calculus. One-Variable Calculus, with an Introduction to Linear Algebra
 Autor: Apostol, Tom M.
 Editorial: Blaisdell Publishing Company
@@ -131,9 +130,9 @@ Rango del archivo: páginas 373 a 813 del libro original.
   Answers to exercises — pp. 757–804
   Index — pp. 805–813
 
----
+-
 
-### `Demidovich-Problems in Mathematical Analysis.pdf`
+[Demidovich-Problems in Mathematical Analysis.pdf]
 Título: Problems in Mathematical Analysis
 Autor: Demidovich, B. P. (ed.); Baranenkov, G.; Efimenko, V. A.; Kogan, S. M.;
        Lunts, G. L.; Porshneva, E. F.; Sycheva, E. P.; Frolov, S. V.;
@@ -155,9 +154,9 @@ Edición: Second Printing
   Appendix — pp. 475–487
   Index — pp. 488–497
 
----
+-
 
-### `James Stewart 9th Ed-Calculus Early Transcendentals.pdf`
+[James Stewart 9th Ed-Calculus Early Transcendentals.pdf]
 Título: Calculus: Early Transcendentals
 Autor: Stewart, James; Clegg, Daniel; Watson, Saleem
 Editorial: Cengage Learning
@@ -184,9 +183,9 @@ Edición: Ninth Edition, Metric Version
   Answers — A61–A142
   Index — A143–A158
 
----
+-
 
-### `Larson Cheat Sheet-Calculus.pdf`
+[Larson Cheat Sheet-Calculus.pdf]
 Título: Calculus Cheat Sheet
 Autor: Larson, Ron
 Editorial: Cengage Learning
@@ -198,9 +197,9 @@ Contenido: referencia rápida de fórmulas — no tiene índice por capítulos.
   Formulas from Geometry
   Integration Tables — pp. A3–A6
 
----
+-
 
-### `Maron-Problems in Calculus of One Variable.pdf`
+[Maron-Problems in Calculus of One Variable.pdf]
 Título: Problems in Calculus of One Variable (With elements of theory)
 Autor: Maron, I. A.
 Editorial: Mir Publishers
@@ -216,9 +215,9 @@ Edición: N/A
   Cap. VIII — Improper Integrals — pp. 387–417
   Answers and Hints — pp. 418–453
 
----
+-
 
-### `Piskunov Vol 1- Differential and Integral Calculus.pdf`
+[Piskunov Vol 1- Differential and Integral Calculus.pdf]
 Título: Differential and Integral Calculus
 Autor: Piskunov, N. S.
 Editorial: Mir Publishers
@@ -238,9 +237,9 @@ Edición: Second Edition
   Cap. 12 — Geometric and Mechanical Applications of the Definite Integral — pp. 437–464
   Index — pp. 465–471
 
----
+-
 
-### `Schaums 1ed-3000 solved problems in calculus.pdf`
+[Schaums 1ed-3000 solved problems in calculus.pdf]
 Título: 3,000 Solved Problems in Calculus
 Autor: Mendelson, Elliott
 Editorial: McGraw-Hill Companies, Inc.
@@ -256,58 +255,60 @@ Edición: First Edition
 
 CONTENTS
 
-cap. 1 INEQUALITIES pp. 1
-cap. 2 ABSOLUTE VALUE pp. 5
-cap. 3 LINES pp. 9
-cap. 4 CIRCLES pp. 19
-cap. 5 FUNCTIONS AND THEIR GRAPHS pp. 23
-cap. 6 LIMITS pp. 35
-cap. 7 CONTINUITY pp. 43
-cap. 8 THE DERIVATIVE pp. 49
-cap. 9 THE CHAIN RULE pp. 56
-cap. 10 TRIGONOMETRIC FUNCTIONS AND THEIR DERIVATIVES pp. 62
-cap. 11 ROLLE'S THEOREM, THE MEAN VALUE THEOREM, AND THE SIGN OF THE DERIVATIVE pp. 69
-cap. 12 HIGHER-ORDER DERIVATIVES AND IMPLICIT DIFFERENTIATION pp. 75
-cap. 13 MAXIMA AND MINIMA pp. 81
-cap. 14 RELATED RATES pp. 88
-cap. 15 CURVE SKETCHING (GRAPHS) pp. 100
-cap. 16 APPLIED MAXIMUM AND MINIMUM PROBLEMS pp. 118
-cap. 17 RECTILINEAR MOTION pp. 133
-cap. 18 APPROXIMATION BY DIFFERENTIALS pp. 138
-cap. 19 ANTIDERIVATIVES (INDEFINITE INTEGRALS) pp. 142
-cap. 20 THE DEFINITE INTEGRAL AND THE FUNDAMENTAL THEOREM OF CALCULUS pp. 152
-cap. 21 AREA AND ARC LENGTH pp. 163
-cap. 22 VOLUME pp. 173
-cap. 23 THE NATURAL LOGARITHM pp. 185
-cap. 24 EXPONENTIAL FUNCTIONS pp. 195
-cap. 25 L'HÔPITAL'S RULE pp. 208
-cap. 26 EXPONENTIAL GROWTH AND DECAY pp. 215
-cap. 27 INVERSE TRIGONOMETRIC FUNCTIONS pp. 220
-cap. 28 INTEGRATION BY PARTS pp. 232
-cap. 29 TRIGONOMETRIC INTEGRANDS AND SUBSTITUTIONS pp. 238
-cap. 30 INTEGRATION OF RATIONAL FUNCTIONS: THE METHOD OF PARTIAL FRACTIONS pp. 245
-cap. 31 INTEGRALS FOR SURFACE AREA, WORK, CENTROIDS Surface Area of a Solid of Revolution / Work / Centroid of a Planar Region pp. 253
-cap. 32 IMPROPER INTEGRALS pp. 260
-cap. 33 PLANAR VECTORS pp. 268
-cap. 34 PARAMETRIC EQUATIONS, VECTOR FUNCTIONS, CURVILINEAR MOTION Parametric Equations of Plane Curves / Vector-Valued Functions pp. 274
-cap. 35 POLAR COORDINATES pp. 289
-cap. 36 INFINITE SEQUENCES pp. 305
-cap. 37 INFINITE SERIES pp. 312
-cap. 38 POWER SERIES pp. 326
-cap. 39 TAYLOR AND MACLAURIN SERIES pp. 340
-cap. 40 VECTORS IN SPACE. LINES AND PLANES pp. 347
-cap. 41 FUNCTIONS OF SEVERAL VARIABLES Multivariable Functions and Their Graphs / Cylindrical and Spherical Coordinates pp. 361
-cap. 42 PARTIAL DERIVATIVES pp. 376
-cap. 43 DIRECTIONAL DERIVATIVES AND THE GRADIENT. EXTREME VALUES pp. 392
-cap. 44 MULTIPLE INTEGRALS AND THEIR APPLICATIONS pp. 405
-cap. 45 VECTOR FUNCTIONS IN SPACE. DIVERGENCE AND CURL. LINE INTEGRALS pp. 425
-cap. 46 DIFFERENTIAL EQUATIONS pp. 431
+Chapter 1 INEQUALITIES pag 1
+Chapter 2 ABSOLUTE VALUE pag 5
+Chapter 3 LINES pag 9
+Chapter 4 CIRCLES pag 19
+Chapter 5 FUNCTIONS AND THEIR GRAPHS pag 23
+Chapter 6 LIMITS pag 35
+Chapter 7 CONTINUITY pag 43
+Chapter 8 THE DERIVATIVE pag 49
+Chapter 9 THE CHAIN RULE pag 56
+Chapter 10 TRIGONOMETRIC FUNCTIONS AND THEIR DERIVATIVES pag 62
+Chapter 11 ROLLE'S THEOREM, THE MEAN VALUE THEOREM, AND THE SIGN OF THE DERIVATIVE pag 69
+Chapter 12 HIGHER-ORDER DERIVATIVES AND IMPLICIT DIFFERENTIATION pag 75
+Chapter 13 MAXIMA AND MINIMA pag 81
+Chapter 14 RELATED RATES pag 88
+Chapter 15 CURVE SKETCHING (GRAPHS) pag 100
+Chapter 16 APPLIED MAXIMUM AND MINIMUM PROBLEMS pag 118
+Chapter 17 RECTILINEAR MOTION pag 133
+Chapter 18 APPROXIMATION BY DIFFERENTIALS pag 138
+Chapter 19 ANTIDERIVATIVES (INDEFINITE INTEGRALS) pag 142
+Chapter 20 THE DEFINITE INTEGRAL AND THE FUNDAMENTAL THEOREM OF CALCULUS pag 152
+Chapter 21 AREA AND ARC LENGTH pag 163
+Chapter 22 VOLUME pag 173
+Chapter 23 THE NATURAL LOGARITHM pag 185
+Chapter 24 EXPONENTIAL FUNCTIONS pag 195
+Chapter 25 L'HÔPITAL'S RULE pag 208
+Chapter 26 EXPONENTIAL GROWTH AND DECAY pag 215
+Chapter 27 INVERSE TRIGONOMETRIC FUNCTIONS pag 220
+Chapter 28 INTEGRATION BY PARTS pag 232
+Chapter 29 TRIGONOMETRIC INTEGRANDS AND SUBSTITUTIONS pag 238
+Chapter 30 INTEGRATION OF RATIONAL FUNCTIONS: THE METHOD OF PARTIAL FRACTIONS pag 245
+Chapter 31 INTEGRALS FOR SURFACE AREA, WORK, CENTROIDS Surface Area of a Solid of Revolution / Work / Centroid of a Planar Region pag 253
+Chapter 32 IMPROPER INTEGRALS pag 260
+Chapter 33 PLANAR VECTORS pag 268
+Chapter 34 PARAMETRIC EQUATIONS, VECTOR FUNCTIONS, CURVILINEAR MOTION Parametric Equations of Plane Curves / Vector-Valued Functions pag 274
+Chapter 35 POLAR COORDINATES pag 289
+Chapter 36 INFINITE SEQUENCES pag 305
+Chapter 37 INFINITE SERIES pag 312
+Chapter 38 POWER SERIES pag 326
+Chapter 39 TAYLOR AND MACLAURIN SERIES pag 340
+Chapter 40 VECTORS IN SPACE. LINES AND PLANES pag 347
+Chapter 41 FUNCTIONS OF SEVERAL VARIABLES Multivariable Functions and Their Graphs / Cylindrical and Spherical Coordinates pag 361
+Chapter 42 PARTIAL DERIVATIVES pag 376
+Chapter 43 DIRECTIONAL DERIVATIVES AND THE GRADIENT. EXTREME VALUES pag 392
+Chapter 44 MULTIPLE INTEGRALS AND THEIR APPLICATIONS pag 405
+Chapter 45 VECTOR FUNCTIONS IN SPACE. DIVERGENCE AND CURL. LINE INTEGRALS pag 425
+Chapter 46 DIFFERENTIAL EQUATIONS pag 431
 
-INDEX pp. 443
+INDEX pag 443
 
----
 
-### `Stewart, James 7ed-Cálculo en una variable. Trascendentes tempranas-1to4.pdf`
+
+-
+
+[Stewart, James 7ed-Cálculo en una variable. Trascendentes tempranas-1to4.pdf]
 Título: Cálculo de una variable. Trascendentes tempranas
 Autor: Stewart, James
 Editorial: Cengage Learning Editores, S.A. de C.V.
@@ -320,9 +321,9 @@ Rango del archivo: páginas 1 a 358 del libro original.
   Cap. 3 — Reglas de derivación — pp. 173–272
   Cap. 4 — Aplicaciones de la derivada — pp. 273–358
 
----
+-
 
-### `Stewart, James 7ed-Cálculo en una variable. Trascendentes tempranas-5to8.pdf`
+[Stewart, James 7ed-Cálculo en una variable. Trascendentes tempranas-5to8.pdf]
 Título: Cálculo de una variable. Trascendentes tempranas
 Autor: Stewart, James
 Editorial: Cengage Learning Editores, S.A. de C.V.
@@ -334,9 +335,9 @@ Rango del archivo: páginas 359 a 578 del libro original.
   Cap. 7 — Técnicas de integración — pp. 463–536
   Cap. 8 — Aplicaciones adicionales de la integración — pp. 537–578
 
----
+-
 
-### `Stewart, James 7ed-Cálculo en una variable. Trascendentes tempranas-9to11.pdf`
+[Stewart, James 7ed-Cálculo en una variable. Trascendentes tempranas-9to11.pdf]
 Título: Cálculo de una variable. Trascendentes tempranas
 Autor: Stewart, James
 Editorial: Cengage Learning Editores, S.A. de C.V.
@@ -350,9 +351,9 @@ Rango del archivo: páginas 579 a 781 del libro original.
   Apéndices — A1–A114
   Índice — A115–A123
 
----
+-
 
-### `Thomas 14th ed-Calculus_-1to6.pdf`
+[Thomas 14th ed-Calculus_-1to6.pdf]
 Título: Thomas' Calculus
 Autor: Thomas, George B.; Hass, Joel; Heil, Christopher; Weir, Maurice D.
 Editorial: Pearson Education, Inc.
@@ -366,9 +367,9 @@ Rango del archivo: páginas 1 a 369 del libro original.
   Cap. 5 — Integrals — pp. 248–313
   Cap. 6 — Applications of Definite Integrals — pp. 314–369
 
----
+-
 
-### `Thomas 14th ed-Calculus_-7to12.pdf`
+[Thomas 14th ed-Calculus_-7to12.pdf]
 Título: Thomas' Calculus
 Autor: Thomas, George B.; Hass, Joel; Heil, Christopher; Weir, Maurice D.
 Editorial: Pearson Education, Inc.
@@ -382,9 +383,9 @@ Rango del archivo: páginas 370 a 748 del libro original.
   Cap. 11 — Parametric Equations and Polar Coordinates — pp. 649–699
   Cap. 12 — Vectors and the Geometry of Space — pp. 700–748
 
----
+-
 
-### `Thomas 14th ed-Calculus_-13to17.pdf`
+[Thomas 14th ed-Calculus_-13to17.pdf]
 Título: Thomas' Calculus
 Autor: Thomas, George B.; Hass, Joel; Heil, Christopher; Weir, Maurice D.
 Editorial: Pearson Education, Inc.
@@ -399,6 +400,7 @@ Rango del archivo: páginas 749 a final del libro original.
   Appendices — A1–A9
   Answers to Odd-Numbered Exercises — A-1 to A-74
   Applications Index — AI-1 to I-13
+_
 %%
 galaxy-link
 %%

@@ -119221,6 +119221,7 @@ FUNCTIONS
 FUNDAMENTAL
 FRACTIONS
 Fractions
+FUENTES
 Estado
 Excalidraw
 EPUBs
@@ -126188,6 +126189,7 @@ Exercises
 EXPONENTIAL
 EQUATIONS
 EXTREME
+EXTRA
 Obsidian
 OmniSearch
 Ocultar
@@ -137599,6 +137601,7 @@ APPLICATIONS
 Absolute
 Approximation
 Antiderivatives
+Aplic
 push
 pull
 para
@@ -188340,6 +188343,7 @@ lines
 line
 lfloor
 lograr
+library
 incluyendo
 im
 instalar
