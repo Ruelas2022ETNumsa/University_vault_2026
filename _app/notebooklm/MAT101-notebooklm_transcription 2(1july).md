@@ -2,7 +2,7 @@ TAREA:
 Transcribir y complementar apuntes manuscritos universitarios de Cálculo I
 a formato Markdown listo para Obsidian.
 _
-NOTACIÓN OBSIDIAN: consultar obsidian_notation.md (fuente del notebook) para interpretar YAML, wikilinks, Cornell, callouts y bloques de visualización.
+NOTACIÓN OBSIDIAN: consultar obsidian-notebooklm_notation.md (fuente del notebook) para interpretar YAML, wikilinks, Cornell, callouts y bloques de visualización.
 _
 FLUJO DE TRABAJO:
 PDF del tema completo cargado como fuente apuntesTX. Dos mensajes por subtítulo:
@@ -150,10 +150,10 @@ GRÁFICOS — elegir en orden:
 1. Desmos: funciones, curvas, rectas numéricas, intervalos, trigonométricas,
    parábolas, exponencial, logarítmica. Múltiples intervalos: y=0, y=1, y=2...
    Sintaxis completa: sección NOTEBOOKLM de
-   MAT101_desmos.md — obligatoria sin excepción.
+   desmos_notebook_lm.md — obligatoria sin excepción.
    Mínimos: ```desmos-graph exacto · "---" siempre · sin llaves en restricciones
 2. TikZJax: conjuntos, composición (óvalos A→B→C), circunferencia trigonométrica,
-   función inversa con espejo y=x, figuras geométricas. Sintaxis: MAT101_TikzJax.md
+   función inversa con espejo y=x, figuras geométricas. Sintaxis: tikzjax_guide.md
 3. No reproducible → > [!note] Gráfico manuscrito + descripción textual.
 Nunca inventar gráficos ni mezclar herramientas.
 _
@@ -164,9 +164,6 @@ Al final de un ejercicio, agregar > [!note] solo si hay una observación
 relevante o conexión importante — no por defecto.
 _
 SALTOS DE LÍNEA: texto compacto, sin líneas vacías innecesarias. El manuscrito siempre tiene prioridad — revisar el PDF en la sección indicada y corregir.
-_
-NOTACIÓN LATEX: consultar MAT101_latex.md (fuente del notebook) para cancelaciones,
-colores, cajas de resultado, fracciones y desarrollos multilínea.
 _
 LIBROS PRIORITARIOS POR TEMA — P1 (Parcial 1):
 Consultar siempre las fuentes cargadas en el notebook según el tema.

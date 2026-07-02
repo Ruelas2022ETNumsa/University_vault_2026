@@ -2664,9 +2664,10 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "MAT101-notebooklm_transcription 2(1july).md",
         "MAT101-notebooklm_transcription 1.md",
         "MAT101-notebooklm_study 1.md",
-        "obsidian-notebooklm_notation.md",
+        "obsidian_notation.md",
         "other",
         "MAT101-notebooklm_transcription.md",
         "notebooklm-guides",
@@ -2717,10 +2718,6 @@
       "isHidden": false
     },
     "in_work/Untitled 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/obsidian-notebooklm_notation.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -2806,6 +2803,14 @@
       "isHidden": false
     },
     "_app/notebooklm/notebooklm-guides/MAT101_latex.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/obsidian_notation.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/MAT101-notebooklm_transcription 2(1july).md": {
       "isPinned": false,
       "isHidden": false
     }
