@@ -12,7 +12,7 @@ tags:
   - desmos
   - infraestructura
 date_created: 2026-01-01
-date_updated: 2026-06-26
+date_updated: 2026-07-01
 status: activo
 ---
 
@@ -131,6 +131,7 @@ y=x^2|#005F73
 | Grande         | 550   | 450    | Múltiples curvas, etiquetas, regiones        |
 | Cornell        | 320   | 250    | Máximo dentro de bloque multi-column         |
 | Plano cuadrado | 500   | 500    | Regiones, geometría, área entre curvas       |
+| Panorámico     | 550   | 200    | Funciones trigonométricas, periódicas        |
 
 Para rectas numéricas usar ratio horizontal (3:1). Para funciones estándar ratio 4:3.
 
@@ -266,6 +267,8 @@ Las constantes deben declararse antes de usarse en ecuaciones.
 #### ⚠️ Regla de color: SIEMPRE hex, NUNCA nombres en mayúsculas
 
 El plugin acepta nombres (`RED`, `BLUE`, etc.) pero producen colores saturados y duros. Usar siempre hex.
+
+> **Nota sobre modificadores:** la restricción de mayúsculas aplica únicamente a colores. Los modificadores `DASHED`, `SOLID` y `DOTTED` se escriben en mayúsculas — es la sintaxis correcta y requerida.
 
 #### Paleta para curvas y líneas (sólidas)
 
@@ -589,7 +592,7 @@ Antes de entregar un bloque Desmos verificar:
 - [ ] ¿Sin llaves `{}` en restricciones inline? (`|0<=x<=3|` no `|{0<=x<=3}|`)
 - [ ] ¿Sin comentarios `//`?
 - [ ] ¿Rectángulos sombreados con las 4 condiciones `x>=a|x<=b|y>=c|y<=d`?
-- [ ] ¿Colores de curvas en hex (`#C1121F`, `#005F73`, etc.) y NO nombres en mayúsculas?
+- [ ] ¿Colores de curvas en hex (`#C1121F`, `#005F73`, etc.) y NO nombres en mayúsculas (`RED`, `BLUE`)? Los modificadores `DASHED`, `SOLID`, `DOTTED` sí van en mayúsculas — es correcto.
 - [ ] ¿Rellenos con hex pastel (`#BFD7DC`, `#F0C4C7`, etc.)?
 - [ ] ¿Funciones por tramos usan `y=k|a<x<b|#hex` como forma preferida y NO `{a<x<b: k}` sin escapar?
 - [ ] ¿Sin `y=|x|`, `y=abs(x)` ni `|x|` en condiciones de relleno?
@@ -618,6 +621,8 @@ Todos los ejemplos de esta sección han sido confirmados y renderizan correctame
 
 #### Intervalo abierto \]a, b\[
 
+> Contexto para NotebookLM: usar para representar un intervalo abierto en la recta numérica. Extremos con `|open`, segmento entre ellos con restricción estricta `<`.
+
 ```desmos-graph
 left=-1; right=5; bottom=-1; top=1;
 width=300; height=100;
@@ -628,6 +633,8 @@ y=0|1<x<3|#005F73
 ```
 
 #### Intervalo cerrado \[a, b\]
+
+> Contexto para NotebookLM: usar para intervalo cerrado. Extremos sólidos (sin `|open`), restricción con `<=`.
 
 ```desmos-graph
 left=-1; right=5; bottom=-1; top=1;
@@ -640,6 +647,8 @@ y=0|1<=x<=3|#005F73
 
 #### Intervalo mixto \[a, b\[
 
+> Contexto para NotebookLM: usar para intervalo semiabierto. Extremo izquierdo sólido, derecho con `|open`, restricción mixta `<=` y `<`.
+
 ```desmos-graph
 left=-1; right=5; bottom=-1; top=1;
 width=300; height=100;
@@ -651,6 +660,8 @@ y=0|1<=x<3|#005F73
 
 #### Intervalo con infinito \]inf, b\[
 
+> Contexto para NotebookLM: usar para intervalo que se extiende hacia $-\infty$. Solo un extremo visible con `|open`, restricción sin límite izquierdo.
+
 ```desmos-graph
 left=-1; right=5; bottom=-1; top=1;
 width=300; height=100;
@@ -661,6 +672,8 @@ y=0|x<=3|#005F73
 
 #### Intervalo con infinito \[a, inf\[
 
+> Contexto para NotebookLM: usar para intervalo que se extiende hacia $+\infty$. Solo un extremo visible sólido, restricción sin límite derecho.
+
 ```desmos-graph
 left=-1; right=5; bottom=-1; top=1;
 width=300; height=100;
@@ -670,6 +683,8 @@ y=0|1<=x|#005F73
 ```
 
 #### Inecuación — tabla de signos y solución
+
+> Contexto para NotebookLM: usar cuando el usuario pida resolver una inecuación con tabla de signos. Dos gráficas en secuencia: primera muestra análisis V/F con etiquetas flotantes; segunda muestra la solución final con extremos corregidos.
 
 Este patrón usa **dos gráficas en secuencia** para resolver una inecuación:
 
@@ -718,6 +733,8 @@ Solución: $C_s = ]-\infty,-3] \cup \{0\} \cup [3,+\infty[$
 
 #### Valor absoluto — región $\vert x \vert \leq a$
 
+> Contexto para NotebookLM: usar para mostrar la región $|x| \leq a$ como área sombreada bajo la curva $y=|x|$. Constante `a` declarada antes del relleno.
+
 ```desmos-graph
 left=-5; right=5; bottom=-1; top=5;
 width=300; height=200;
@@ -737,7 +754,7 @@ y>=\abs(x)|0<y<4|-a<x<a|#BFD7DC
 
 #### Función simple
 
-> Ejemplo base: polinomio de grado 2. Sirve como referencia para verificar que el bloque renderiza correctamente antes de construir algo más complejo.
+> Contexto para NotebookLM: ejemplo base de verificación — polinomio de grado 2 en ventana estándar. Usar como referencia mínima antes de construir algo más complejo.
 
 ```desmos-graph
 left=-4; right=4; bottom=-2; top=6;
@@ -747,6 +764,8 @@ y=x^2|#005F73
 ```
 
 #### Polinomios
+
+> Contexto para NotebookLM: usar para graficar polinomios de grado par ($x^4-4x^2+3$) o impar ($x^3-3x$) como curva principal. Ajustar ventana según los extremos de la función.
 
 ```desmos-graph
 left=-3; right=3; bottom=-2; top=5;
@@ -764,65 +783,71 @@ y=x^3-3x|#0A9396
 
 #### Potenciales generalizadas
 
+> Contexto para NotebookLM: usar para graficar $x^{p/q}$ con exponente fraccionario. Cada ejemplo es una curva individual — ajustar ventana según el dominio real de la función.
+
 ```desmos-graph
 left=-0.5; right=4; bottom=-0.5; top=4;
 width=300; height=200;
 ---
-y=x^{3/2}|#EE9B00
+y=x^{3/2}|#005F73
 ```
 
 ```desmos-graph
 left=-0.5; right=7; bottom=-0.5; top=5;
 width=300; height=200;
 ---
-y=x^{-1/2}|#BB3E03
+y=x^{-1/2}|#005F73
 ```
 
 ```desmos-graph
 left=-10; right=10; bottom=-0.5; top=5;
 width=300; height=200;
 ---
-y=x^{2/3}|#629900
+y=x^{2/3}|#005F73
 ```
 
 ```desmos-graph
 left=-5; right=5; bottom=-0.5; top=5;
 width=300; height=200;
 ---
-y=x^{-2/3}|#5A189A
+y=x^{-2/3}|#005F73
 ```
 
 #### Exponenciales y logarítmicas
 
+> Contexto para NotebookLM: usar para graficar funciones exponenciales ($a^x$, $e^x$) o logarítmicas ($\log x$, $\ln x$) individualmente. Curva principal en `#005F73`.
+
 ```desmos-graph
 left=-5; right=3; bottom=-0.5; top=5;
 width=300; height=200;
 ---
-y=2^x|#C1121F
+y=2^x|#005F73
 ```
 
 ```desmos-graph
 left=-5; right=3; bottom=-0.5; top=5;
 width=300; height=200;
 ---
-y=e^x|#DA627D
+y=e^x|#005F73
 ```
 
 ```desmos-graph
 left=-0.5; right=5; bottom=-3; top=2;
 width=300; height=200;
 ---
-y=\log(x)|#FFD60A
+y=\log(x)|#005F73
 ```
 
 ```desmos-graph
 left=-0.5; right=5; bottom=-3; top=2;
 width=300; height=200;
 ---
-y=\ln(x)|#474448
+y=\ln(x)|#005F73
 ```
 
 #### Trigonométricas
+
+> Contexto para NotebookLM: usar para graficar $\sin x$, $\cos x$ o $\tan x$ individualmente. Ventana por defecto $[-\pi, \pi]$ para seno y coseno; sin restricción para tangente.
 
 ```desmos-graph
 left=-3.1416; right=3.1416; bottom=-2; top=2;
@@ -835,16 +860,18 @@ y=\sin(x)|#005F73
 left=-3.1416; right=3.1416; bottom=-2; top=2;
 width=300; height=200;
 ---
-y=\cos(x)|#0A9396
+y=\cos(x)|#005F73
 ```
 
 ```desmos-graph
 width=400; height=350;
 ---
-y=\tan(x)|#EE9B00
+y=\tan(x)|#005F73
 ```
 
 #### Trigonométricas inversas
+
+> Contexto para NotebookLM: usar para graficar $\arcsin$, $\arccos$ o $\arctan$ con su función original como referencia punteada y la recta $y=x$ como eje de simetría. La función inversa siempre en color sólido de la paleta principal.
 
 ```desmos-graph
 left=-3; right=3; bottom=-3.5; top=3.5;
@@ -885,35 +912,39 @@ y=1.5708|-7<=x<=7|#F7CD80|DASHED
 
 #### Hiperbólicas
 
+> Contexto para NotebookLM: usar para graficar $\sinh x$ o $\cosh x$. Para $\cosh$, marcar el mínimo $(0,1)$ con `|cross`.
+
 ```desmos-graph
 left=-2; right=2; bottom=-2; top=2;
 width=300; height=200;
 ---
-y=\sinh(x)|#C1121F
+y=\sinh(x)|#005F73
 ```
 
 ```desmos-graph
 left=-2; right=2; bottom=-0.5; top=4;
 width=300; height=200;
 ---
-y=\cosh(x)|#DA627D
-(0,1)|label:(0,1)|#DA627D|cross
+y=\cosh(x)|#005F73
+(0,1)|label:(0,1)|#005F73|cross
 ```
 
 #### Valor absoluto (`\abs()`)
+
+> Contexto para NotebookLM: usar `\abs()` para curvas de valor absoluto. Para regiones sombreadas bajo $|x|$ usar forma por tramos — ver N9.
 
 ```desmos-graph
 left=-2; right=2; bottom=-0.5; top=2;
 width=300; height=200;
 ---
-y=\abs(x)|#FFD60A
+y=\abs(x)|#005F73
 ```
 
 ```desmos-graph
 left=-1; right=4; bottom=-0.5; top=4;
 width=300; height=200;
 ---
-y=\abs(2x-3)|#474448
+y=\abs(2x-3)|#005F73
 ```
 
 ```desmos-graph
@@ -932,34 +963,40 @@ y=\abs(\abs(x^{2}-4)-4)|#0A9396
 
 #### Parte entera (`\floor()`)
 
+> Contexto para NotebookLM: usar `\floor()` para la función parte entera $\lfloor x \rfloor$. La gráfica es escalonada — no agregar puntos de discontinuidad manualmente, Desmos los renderiza automáticamente.
+
 ```desmos-graph
 left=-4; right=4; bottom=-4; top=4;
 width=300; height=200;
 ---
-y=\floor(x)|#EE9B00
+y=\floor(x)|#005F73
 ```
 
 #### Función signo
+
+> Contexto para NotebookLM: usar `\operatorname{sgn}()` para la función signo. Marcar los puntos de discontinuidad en $(0,-1)$ y $(0,1)$ con `|open`.
 
 ```desmos-graph
 left=-2; right=2; bottom=-2; top=2;
 width=300; height=200;
 ---
-y=\operatorname{sgn}(x)|#BB3E03
-(0,-1)|#BB3E03|open
-(0,1)|#BB3E03|open
+y=\operatorname{sgn}(x)|#005F73
+(0,-1)|#005F73|open
+(0,1)|#005F73|open
 ```
 
 #### Función escalón y por tramos
+
+> Contexto para NotebookLM: usar para funciones definidas por tramos. Cada tramo en una línea separada con restricción `|a<x<b`. Puntos de unión entre tramos con `|open` si el extremo no pertenece al tramo.
 
 ```desmos-graph
 left=-2; right=2; bottom=-1; top=2;
 width=300; height=200;
 ---
-y=0|-2<=x<0|#629900
-y=1|0<=x<=2|#5A189A
-(0,0)|#629900|open
-(0,1)|label:(0,1)|#5A189A
+y=0|-2<=x<0|#005F73
+y=1|0<=x<=2|#005F73
+(0,0)|#005F73|open
+(0,1)|label:(0,1)|#005F73
 ```
 
 ```desmos-graph
@@ -980,11 +1017,13 @@ y=0|8<=x<=10|#BB3E03
 
 #### Función distancia al entero más cercano
 
+> Contexto para NotebookLM: usar `\min(\operatorname{mod}(x,1), 1-\operatorname{mod}(x,1))` para la distancia al entero más cercano. Función periódica en diente de sierra.
+
 ```desmos-graph
 left=-2; right=2; bottom=-0.5; top=1;
 width=300; height=200;
 ---
-y=\min(\operatorname{mod}(x,1),1-\operatorname{mod}(x,1))|#C1121F
+y=\min(\operatorname{mod}(x,1),1-\operatorname{mod}(x,1))|#005F73
 ```
 
 ---

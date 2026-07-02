@@ -967,9 +967,9 @@ $$D_f=\mathbb{R}$$
 
 $$R_f=\text{según coeficientes } a,b,c$$
 
-> Contexto para NotebookLM: usar para parábola cóncava arriba ($a>0$). Mostrar vértice $V$ con líneas guía punteadas al eje $x$ e $y$. Etiqueta de la ecuación en forma vértice.
-
 - para $a>0$
+
+> Contexto para NotebookLM: usar para parábola cóncava arriba ($a>0$). Mostrar vértice $V$ con líneas guía punteadas al eje $x$ e $y$. Etiqueta de la ecuación en forma vértice.
 
 ```tikz
 \begin{document}
@@ -1003,9 +1003,9 @@ $$R_f=\text{según coeficientes } a,b,c$$
 \end{document}
 ```
 
-> Contexto para NotebookLM: usar para parábola cóncava abajo ($a<0$). Misma estructura que $a>0$: vértice $V$ con líneas guía. El vértice es máximo en este caso.
-
 - para $a<0$
+
+> Contexto para NotebookLM: usar para parábola cóncava abajo ($a<0$). Misma estructura que $a>0$: vértice $V$ con líneas guía. El vértice es máximo en este caso.
 
 ```tikz
 \begin{document}
@@ -1041,8 +1041,7 @@ $$R_f=\text{según coeficientes } a,b,c$$
 
 Se reconoce las graficas identificando
 
-- Vértice $$V=(h,k)$$.
-    
+- Vértice $$V=(h,k)$$
 - Eje de simetría: $$x=h$$
 ---
 
@@ -1199,7 +1198,7 @@ $$
 
 > Contexto para NotebookLM: usar para familia $a^x$ con $a>1$ (creciente). Cuatro curvas con distintas bases, punto común $(0,1)$, asíntota horizontal $y=0$. Leyenda en esquina superior izquierda.
 
-- a>0
+- para $a>0$
 
 ```tikz
 \begin{document}
@@ -1263,9 +1262,9 @@ $$
 \end{document}
 ```
 
-> Contexto para NotebookLM: usar para familia $a^x$ con $0<a<1$ (decreciente). Misma estructura que $a>1$: cuatro curvas, punto común $(0,1)$, asíntota $y=0$. Leyenda en esquina superior derecha.
+- para $0<a<1$
 
-- 0<a<1
+> Contexto para NotebookLM: usar para familia $a^x$ con $0<a<1$ (decreciente). Misma estructura que $a>1$: cuatro curvas, punto común $(0,1)$, asíntota $y=0$. Leyenda en esquina superior derecha.
 
 ```tikz
 \begin{document}
@@ -1374,9 +1373,9 @@ $$a= e = 2,718281\dots \quad = \text{número de nepper}$$
 
 $y=f(x)=\log_{a}{x} \quad ; \quad a>0,\ a\neq 1 \qquad D_{f}=\mathbb{R}^{+},\ R_{f}=\mathbb{R}$
 
-> Contexto para NotebookLM: usar para $\log_a x$ con $a>1$ (creciente). Asíntota vertical $x=0$ punteada, tangente en $(1,0)$, ángulo $\alpha$ en ese punto.
-
 - $a>1$
+
+> Contexto para NotebookLM: usar para $\log_a x$ con $a>1$ (creciente). Asíntota vertical $x=0$ punteada, tangente en $(1,0)$, ángulo $\alpha$ en ese punto.
 
 ```tikz
 \begin{document}
@@ -1430,6 +1429,8 @@ $y=f(x)=\log_{a}{x} \quad ; \quad a>0,\ a\neq 1 \qquad D_{f}=\mathbb{R}^{+},\ R_
 ```
 
 - $0<a<1$
+
+> Contexto para NotebookLM: usar para $\log_a x$ con $0<a<1$ (decreciente). Misma estructura que $a>1$: asíntota $x=0$, tangente en $(1,0)$, pero la curva desciende.
 
 ```tikz
 \begin{document}
@@ -1498,9 +1499,9 @@ $y=f(x)=\log_{a}{x} \quad ; \quad a>0,\ a\neq 1 \qquad D_{f}=\mathbb{R}^{+},\ R_
 \end{document}
 ```
 
-> Contexto para NotebookLM: usar para $\log_a x$ con $0<a<1$ (decreciente). Misma estructura que $a>1$: asíntota $x=0$, tangente en $(1,0)$, pero la curva desciende.
-
 ### Funciones trigonométricas
+
+> Contexto para NotebookLM: usar cuando el usuario pida el diagrama de la circunferencia trigonométrica con los seis segmentos. Semicircunferencia en `teal` punteada, recta del ángulo en `orange`, tangentes verticales y horizontales como guías. Los puntos $P$, $T$, $R$, $M$, $N$ identifican cada razón trigonométrica según la tabla de abajo.
 
 Se definen en la circunferencia trigonométrica.
 
@@ -1577,8 +1578,6 @@ Se definen en la circunferencia trigonométrica.
 
 Donde:
 
-> Contexto para NotebookLM: usar cuando el usuario pida el diagrama de la circunferencia trigonométrica con los seis segmentos. Semicircunferencia en `teal` punteada, recta del ángulo en `orange`, tangentes verticales y horizontales como guías. Los puntos $P$, $T$, $R$, $M$, $N$ identifican cada razón trigonométrica según la tabla de abajo.
-
 | $\sin{x}=\overline{PQ}$ | $\tan{x}=\overline{RT}$ | $\sec{x}=\overline{OR}$ |
 | ----------------------- | ----------------------- | ----------------------- |
 | $\cos{x}=\overline{OQ}$ | $\cot{x}=\overline{MN}$ | $\csc{x}=\overline{OM}$ |
@@ -1586,6 +1585,8 @@ Donde:
 ---
 
 #### Función seno
+
+> Contexto para NotebookLM: usar para graficar $\sin x$. Mostrar al menos dos períodos, puntos en ceros con etiqueta ($0$, $\pi$, $2\pi$, $3\pi$) en `orange`, banda $y=\pm1$ en punteado gris.
 
 $$y=f(x)=\sin{x}$$
 
@@ -1634,13 +1635,13 @@ Grafica :
 \end{document}
 ```
 
-> Contexto para NotebookLM: usar para graficar $\sin x$. Mostrar al menos dos períodos, puntos en ceros con etiqueta ($0$, $\pi$, $2\pi$, $3\pi$) en `orange`, banda $y=\pm1$ en punteado gris.
-
 >$f(x)=\sin x$ es periódico con $p=2\pi$ y es impar $\sin{-x}=-\sin{x}$
 
 ---
 
 #### Función coseno
+
+> Contexto para NotebookLM: usar para graficar $\cos x$. Misma estructura que seno, puntos en ceros desplazados ($\pi/2$, $3\pi/2$, $5\pi/2$, $7\pi/2$) en `orange`.
 
 $$y=f(x)=\cos{x}$$
 
@@ -1689,13 +1690,13 @@ Grafica :
 \end{document}
 ```
 
-> Contexto para NotebookLM: usar para graficar $\cos x$. Misma estructura que seno, puntos en ceros desplazados ($\pi/2$, $3\pi/2$, $5\pi/2$, $7\pi/2$) en `orange`.
-
 >$f(x)=\cos x$ es periódico con $p=2\pi$ y es par $\cos{-x}=\cos{x}$
 
 ---
 
 #### Función tangente
+
+> Contexto para NotebookLM: usar para graficar $\tan x$. Asíntotas verticales en $x=(2k+1)\pi/2$ con `line width=3pt` para tapar la línea falsa que pgfplots dibuja entre ramas. Puntos en ceros en `orange`.
 
 $$y=f(x)=\tan{x}=\dfrac{\sin x}{\cos x}$$
 
@@ -1752,16 +1753,13 @@ Grafica :
 \end{document}
 ```
 
-
-
-
-> Contexto para NotebookLM: usar para graficar $\tan x$. Asíntotas verticales en $x=(2k+1)\pi/2$ con `line width=3pt` para tapar la línea falsa que pgfplots dibuja entre ramas. Puntos en ceros en `orange`.
-
 ---
 
 **Funciones trigonométricas inversas**
 
-#### Funcion $\arcsin$
+#### Función $\arcsin$
+
+> Contexto para NotebookLM: usar para graficar $\arcsin x$. Mostrar $\sin x$ en `teal` punteado como referencia, espejo $y=x$ en gris, y la rama principal $\arcsin$ en `orange`. Puntos clave: $(-1,-\pi/2)$, $(0,0)$, $(1,\pi/2)$. Recuadro con asíntotas horizontales y verticales.
 
 $$y=f(x)=\arcsin{x}$$
 
@@ -1822,12 +1820,11 @@ Grafica :
 \end{document}
 ```
 
-
-> Contexto para NotebookLM: usar para graficar $\arcsin x$. Mostrar $\sin x$ en `teal` punteado como referencia, espejo $y=x$ en gris, y la rama principal $\arcsin$ en `orange`. Puntos clave: $(-1,-\pi/2)$, $(0,0)$, $(1,\pi/2)$. Recuadro con asíntotas horizontales y verticales.
-
 ---
 
-#### Funcion $\arccos$
+#### Función $\arccos$
+
+> Contexto para NotebookLM: usar para graficar $\arccos x$. Misma estructura que $\arcsin$: $\cos x$ en `teal` punteado (rama $[0,\pi]$), espejo $y=x$, $\arccos$ en `orange`. Puntos clave: $(-1,\pi)$, $(0,\pi/2)$, $(1,0)$.
 
 $$y=f(x)=\arccos{x}$$
 
@@ -1888,12 +1885,11 @@ Grafica :
 \end{document}
 ```
 
-
-> Contexto para NotebookLM: usar para graficar $\arccos x$. Misma estructura que $\arcsin$: $\cos x$ en `teal` punteado (rama $[0,\pi]$), espejo $y=x$, $\arccos$ en `orange`. Puntos clave: $(-1,\pi)$, $(0,\pi/2)$, $(1,0)$.
-
 ---
 
-#### Funcion $\arctan$
+#### Función $\arctan$
+
+> Contexto para NotebookLM: usar para graficar $\arctan x$. $\tan x$ en `teal` punteado (rama principal), espejo $y=x$, $\arctan$ en `orange` con asíntotas horizontales $y=\pm\pi/2$. Puntos clave: $(-1,-\pi/4)$, $(0,0)$, $(1,\pi/4)$.
 
 $$y=f(x)=\arctan{x}$$
 
@@ -1954,8 +1950,6 @@ Grafica :
 \end{tikzpicture}
 \end{document}
 ```
-
-> Contexto para NotebookLM: usar para graficar $\arctan x$. $\tan x$ en `teal` punteado (rama principal), espejo $y=x$, $\arctan$ en `orange` con asíntotas horizontales $y=\pm\pi/2$. Puntos clave: $(-1,-\pi/4)$, $(0,0)$, $(1,\pi/4)$.
 
 ---
 
