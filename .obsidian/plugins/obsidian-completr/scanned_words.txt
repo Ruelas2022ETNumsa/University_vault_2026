@@ -25676,6 +25676,7 @@ Power
 Partial
 Previo
 Pearson
+PIDA
 del
 date
 de
@@ -169051,6 +169052,7 @@ eran
 elipses
 exercises
 elements
+exposici
 Motor
 Media
 Mantiene
@@ -219587,6 +219589,7 @@ field
 fcolorbox
 foreach
 familias
+fortaleza
 haya
 hace
 hacer

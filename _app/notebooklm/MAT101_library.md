@@ -22,20 +22,6 @@ dudas sobre qué PDF usar para un tema o qué contiene un archivo específico.
 _
 PARTE 1 — CRITERIO DE USO POR TEMA
 
-|Nro|Tema|Parcial|1ra fuente|2da fuente|Consulta puntual|Respaldo español|
-|---|---|---|---|---|---|---|
-|0|Números reales|1P|Apostol Cap.0 (1to7)|Stewart Cap.1|—|Stewart 7ma Cap.1 (1to4)|
-|1|Funciones reales|1P|Stewart Cap.1|Piskunov Cap.1|—|Stewart 7ma Cap.1 (1to4)|
-|2|Límites y continuidad|1P|Stewart Cap.2|Piskunov Cap.2|—|Stewart 7ma Cap.2 (1to4)|
-|3|Derivación|2P|Stewart Cap.3|Piskunov Cap.3|—|Stewart 7ma Cap.3 (1to4)|
-|4|Aplicaciones de derivación|2P|Piskunov Cap.4-6|Stewart Cap.4|Thomas Cap.4 (1to6)|Stewart 7ma Cap.4 **(1to4)**|
-|5|Integración|3P|Stewart Cap.5|Piskunov Cap.10-11|—|Stewart 7ma Cap.5 (5to8)|
-|6|Aplicaciones de integración|3P|Piskunov Cap.12|Stewart Cap.6|Thomas Cap.6 (1to6)|Stewart 7ma Cap.6 (5to8)|
-|7|Series reales|extra|Apostol Cap.10-11 (8to16)|Piskunov Cap.11|—|Stewart 7ma Cap.11 (9to11)|
-
-
-Tabla completa — teoría + ejercicios:
-
 **TEORÍA**
 
 |Nro|Tema|Parcial|1ra fuente|2da fuente|Consulta puntual|Respaldo español|
@@ -48,8 +34,6 @@ Tabla completa — teoría + ejercicios:
 |5|Integración|3P|Stewart Cap.5|Piskunov Cap.10-11|—|Stewart 7ma Cap.5 (5to8)|
 |6|Aplicaciones de integración|3P|Piskunov Cap.12|Stewart Cap.6|Thomas Cap.6 (1to6)|Stewart 7ma Cap.6 (5to8)|
 |7|Series reales|extra|Apostol Cap.10-11 (8to16)|Piskunov Cap.11|—|Stewart 7ma Cap.11 (9to11)|
-
----
 
 **EJERCICIOS**
 
@@ -64,23 +48,30 @@ Tabla completa — teoría + ejercicios:
 |6|Aplicaciones de integración|3P|Schaum's|Maron|Demidovich|
 |7|Series reales|extra|Schaum's|Demidovich|—|
 
-
-
-
-
-
-
-
-
-
-
 NOTAS DE CRITERIO:
-· Schaum's, Maron y Demidovich son válidos como fuente de ejercicios en cualquier tema.
-· Larson Cheat Sheet: referencia rápida de fórmulas — consultarlo para verificación, no para desarrollo.
-· Stewart 7ma español: puente lingüístico — usarlo para confirmar terminología en español.
-· Criterio detallado por libro (cuándo usar Apostol vs Stewart dentro del mismo tema,
-  rigor vs explicación vs ejercicios): actualización futura.
-_
+
+TEORÍA:
+· Apostol: primera fuente en T0 (axiomática de reales) y T7 (series).
+  En T2 y T3 segunda fuente cuando se necesita fundamento formal.
+· Stewart 9na: columna vertebral del curso — primera fuente en T1, T2, T3, T5.
+  Segunda fuente en T4 y T6 como complemento de ejemplos aplicados.
+· Piskunov: segunda fuente en T1, T2, T3. Primera fuente en T4 y T6
+  por su exposición ordenada y ejemplos claros a nivel ingeniería.
+· Thomas: consulta puntual en T4 (aplicaciones geométricas de derivación)
+  y T6 (áreas, volúmenes, longitud de curva). No es fuente principal.
+· Stewart 7ma español: puente lingüístico — confirmar terminología en español.
+
+EJERCICIOS:
+· Schaum's: ejercicios de inicio en todos los temas — volumen alto, mecánico.
+· Maron: práctica en T0–T6 — dificultad media-alta, combina mecánica y razonamiento.
+· Demidovich: nivel examen en T1–T6 — mecánico difícil y razonamiento medio-alto.
+  En T7 reemplaza a Maron como práctica por su fortaleza en series.
+
+REFERENCIA RÁPIDA:
+· Larson Cheat Sheet: fórmulas — solo verificación, no para desarrollo.
+
+---
+
 PARTE 2 — ÍNDICE DE PDFs
 
 [Apostol vol 1 2ed-Calculus-1to7.pdf]
