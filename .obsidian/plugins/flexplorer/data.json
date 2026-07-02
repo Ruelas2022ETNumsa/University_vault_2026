@@ -5,6 +5,7 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
+        "Untitled 2.md",
         "Untitled 1.md",
         "claude vision.md",
         "Untitled.md",
@@ -1380,6 +1381,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "_library_MAT101.md",
         "_library-system 1.md",
         "_notebooklm-system 1.md",
         "_basic-memory-system.md",
@@ -2666,6 +2668,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "MAT101_library 1.md",
         "MAT101_library.md",
         "MAT101-notebooklm_transcription 2(1july).md",
         "MAT101-notebooklm_transcription 1.md",
@@ -2826,6 +2829,18 @@
       "isHidden": false
     },
     "_app/notebooklm/MAT101_library.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled 2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/MAT101_library 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_config/_library_MAT101.md": {
       "isPinned": false,
       "isHidden": false
     }
