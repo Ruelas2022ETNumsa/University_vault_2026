@@ -6178,6 +6178,8 @@ tapar
 transformaciones
 trivialmente
 theory
+tricamente
+trig
 ToDo
 Templater
 Text
@@ -20230,6 +20232,7 @@ SEQUENCES
 SPACE
 SEVERAL
 Spherical
+Substitutions
 Plugins
 Pendientes
 Plugin
@@ -25702,6 +25705,7 @@ Plane
 POLAR
 POWER
 PLANES
+Parts
 del
 date
 de
@@ -31015,6 +31019,8 @@ derivada
 diente
 directas
 dudas
+desarrolla
+descubrimiento
 Vault
 Verificar
 Variables
@@ -37162,6 +37168,7 @@ VOLUME
 VECTORS
 VECTOR
 VALUES
+Volume
 galaxy
 gina
 genes
@@ -43469,6 +43476,7 @@ grosores
 ganador
 graficada
 gruesas
+generalizar
 body
 beacon
 bat
@@ -48554,6 +48562,7 @@ baratos
 borrador
 biblioteca
 bbox
+buscarse
 scope
 status
 selector
@@ -55477,6 +55486,8 @@ soportado
 senoidal
 sierra
 saltear
+sima
+sust
 vault
 vil
 ver
@@ -68022,6 +68033,7 @@ angulo
 asin
 acos
 atan
+aborda
 related
 recomendados
 ribbon
@@ -87432,6 +87444,7 @@ curvaPpal
 centra
 coincidencia
 consultarlo
+cobertura
 updated
 un
 universo
@@ -105951,6 +105964,7 @@ Curves
 COORDINATES
 Cylindrical
 CURL
+Chain
 Instalados
 Instalado
 Instalar
@@ -113025,6 +113039,8 @@ INTEGRANDS
 IMPROPER
 INFINITE
 INDEX
+Implicit
+Integrands
 Funci
 File
 Fase
@@ -119204,6 +119220,7 @@ Fields
 FUNCTIONS
 FUNDAMENTAL
 FRACTIONS
+Fractions
 Estado
 Excalidraw
 EPUBs
@@ -137579,6 +137596,9 @@ APPLIED
 APPROXIMATION
 ANTIDERIVATIVES
 APPLICATIONS
+Absolute
+Approximation
+Antiderivatives
 push
 pull
 para
@@ -176685,6 +176705,11 @@ METHOD
 MACLAURIN
 Multivariable
 MULTIPLE
+Maxima
+Minima
+Maximum
+Minimum
+Maclaurin
 Lectura
 LaTeX
 Linter
@@ -196002,6 +196027,8 @@ ideas
 inestable
 interpretarla
 ignorarlo
+inductiva
+inducci
 Dependencia
 Dropbox
 Dataview
@@ -202152,6 +202179,7 @@ DECAY
 DIRECTIONAL
 DIVERGENCE
 DIFFERENTIAL
+Differentials
 Remotely
 Raz
 Revisa
@@ -209257,6 +209285,7 @@ RECTILINEAR
 RATIONAL
 Revolution
 Region
+Rational
 Hider
 Hace
 Herramientas
@@ -214187,6 +214216,7 @@ Historical
 Hints
 Hill
 HIGHER
+Higher
 filtrar
 formato
 faltantes
@@ -219696,6 +219726,8 @@ fcolorbox
 foreach
 familias
 fortaleza
+formulaci
+fracc
 haya
 hace
 hacer
@@ -253168,6 +253200,8 @@ ordenada
 oscilatorio
 oscilan
 overhead
+obra
+obteniendo
 junto
 json
 jer
