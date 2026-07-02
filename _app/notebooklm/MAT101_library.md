@@ -22,16 +22,20 @@ dudas sobre qué PDF usar para un tema o qué contiene un archivo específico.
 _
 PARTE 1 — CRITERIO DE USO POR TEMA
 
-| Nro de tema | Tema                        | Parcial | Primera fuente  | Segunda fuente | Respaldo español    |
-| ----------- | --------------------------- | ------- | --------------- | -------------- | ------------------- |
-| 0           | Números reales              | 1P      | Apostol (1to7)  | Stewart 9na    | Stewart 7ma (1to4)  |
-| 1           | Funciones reales            | 1P      | Stewart 9na     | Thomas (1to6)  | Stewart 7ma (1to4)  |
-| 2           | Límites y continuidad       | 1P      | Stewart 9na     | Apostol (1to7) | Stewart 7ma (1to4)  |
-| 3           | Derivación                  | 2P      | Stewart 9na     | Piskunov       | Stewart 7ma (1to4)  |
-| 4           | Aplicaciones de derivación  | 2P      | Thomas (1to6)   | Stewart 9na    | Stewart 7ma (5to8)  |
-| 5           | Integración                 | 3P      | Stewart 9na     | Piskunov       | Stewart 7ma (5to8)  |
-| 6           | Aplicaciones de integración | 3P      | Thomas (7to12)  | Stewart 9na    | Stewart 7ma (5to8)  |
-| 7           | Series reales               | extra   | Apostol (8to16) | Piskunov       | Stewart 7ma (9to11) |
+|Nro|Tema|Parcial|1ra fuente|2da fuente|Consulta puntual|Respaldo español|
+|---|---|---|---|---|---|---|
+|0|Números reales|1P|Apostol Cap.0 (1to7)|Stewart Cap.1|—|Stewart 7ma Cap.1 (1to4)|
+|1|Funciones reales|1P|Stewart Cap.1|Piskunov Cap.1|—|Stewart 7ma Cap.1 (1to4)|
+|2|Límites y continuidad|1P|Stewart Cap.2|Piskunov Cap.2|—|Stewart 7ma Cap.2 (1to4)|
+|3|Derivación|2P|Stewart Cap.3|Piskunov Cap.3|—|Stewart 7ma Cap.3 (1to4)|
+|4|Aplicaciones de derivación|2P|Piskunov Cap.4-6|Stewart Cap.4|Thomas Cap.4 (1to6)|Stewart 7ma Cap.4 **(1to4)**|
+|5|Integración|3P|Stewart Cap.5|Piskunov Cap.10-11|—|Stewart 7ma Cap.5 (5to8)|
+|6|Aplicaciones de integración|3P|Piskunov Cap.12|Stewart Cap.6|Thomas Cap.6 (1to6)|Stewart 7ma Cap.6 (5to8)|
+|7|Series reales|extra|Apostol Cap.10-11 (8to16)|Piskunov Cap.11|—|Stewart 7ma Cap.11 (9to11)|
+
+
+
+
 
 NOTAS DE CRITERIO:
 · Schaum's, Maron y Demidovich son válidos como fuente de ejercicios en cualquier tema.
