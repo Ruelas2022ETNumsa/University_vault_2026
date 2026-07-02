@@ -37,16 +37,16 @@ PARTE 1 — CRITERIO DE USO POR TEMA
 
 **EJERCICIOS**
 
-|Nro|Tema|Parcial|Inicio|Práctica|Examen|
-|---|---|---|---|---|---|
-|0|Números reales|1P|Schaum's|Maron|—|
-|1|Funciones reales|1P|Schaum's|Maron|Demidovich|
-|2|Límites y continuidad|1P|Schaum's|Maron|Demidovich|
-|3|Derivación|2P|Schaum's|Maron|Demidovich|
-|4|Aplicaciones de derivación|2P|Schaum's|Maron|Demidovich|
-|5|Integración|3P|Schaum's|Maron|Demidovich|
-|6|Aplicaciones de integración|3P|Schaum's|Maron|Demidovich|
-|7|Series reales|extra|Schaum's|Demidovich|—|
+| Nro | Tema                        | Parcial | Inicio                                                                                                                  | Práctica                                                                                                                                                                                                                               | Examen                                                                                                                                              |
+| --- | --------------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0   | Números reales              | 1P      | `Schaums 1ed-3000 solved problems in calculus.pdf` — Caps.1–10: Inequalities to Trigonometric Functions (pp. 1–68)      | `Maron-Problems in Calculus of One Variable.pdf` — Cap.I: Introduction to Mathematical Analysis (pp. 11–97)                                                                                                                            | —                                                                                                                                                   |
+| 1   | Funciones reales            | 1P      | `Schaums 1ed-3000 solved problems in calculus.pdf` — Caps.1–10: Inequalities to Trigonometric Functions (pp. 1–68)      | `Maron-Problems in Calculus of One Variable.pdf` — Cap.I: Introduction to Mathematical Analysis (pp. 11–97)                                                                                                                            | `Demidovich-Problems in Mathematical Analysis.pdf` — Cap.I: Introduction to Analysis (pp. 11–41)                                                    |
+| 2   | Límites y continuidad       | 1P      | `Schaums 1ed-3000 solved problems in calculus.pdf` — Caps.1–10: Inequalities to Trigonometric Functions (pp. 1–68)      | `Maron-Problems in Calculus of One Variable.pdf` — Cap.I: Introduction to Mathematical Analysis (pp. 11–97)                                                                                                                            | `Demidovich-Problems in Mathematical Analysis.pdf` — Cap.I: Introduction to Analysis (pp. 11–41)                                                    |
+| 3   | Derivación                  | 2P      | `Schaums 1ed-3000 solved problems in calculus.pdf` — Caps.11–18: Mean Value Theorems to Approximations (pp. 69–141)     | `Maron-Problems in Calculus of One Variable.pdf` — Cap.II: Differentiation of Functions (pp. 98–130)                                                                                                                                   | `Demidovich-Problems in Mathematical Analysis.pdf` — Cap.II: Differentiation of Functions (pp. 42–82)                                               |
+| 4   | Aplicaciones de derivación  | 2P      | `Schaums 1ed-3000 solved problems in calculus.pdf` — Caps.11–18: Mean Value Theorems to Approximations (pp. 69–141)     | `Maron-Problems in Calculus of One Variable.pdf` — Cap.III: Application of Differential Calculus to Investigation of Functions (pp. 131–194)                                                                                           | `Demidovich-Problems in Mathematical Analysis.pdf` — Cap.III: The Extrema of a Function and the Geometric Applications of a Derivative (pp. 83–106) |
+| 5   | Integración                 | 3P      | `Schaums 1ed-3000 solved problems in calculus.pdf` — Caps.19–25: Integrals to L'Hôpital's Rule (pp. 142–214)            | `Maron-Problems in Calculus of One Variable.pdf` — Cap.IV: Indefinite Integrals. Basic Methods of Integration (pp. 195–213) · Cap.V: Basic Classes of Integrable Functions (pp. 214–246) · Cap.VI: The Definite Integral (pp. 247–309) | `Demidovich-Problems in Mathematical Analysis.pdf` — Cap.IV: Indefinite Integrals (pp. 107–137) · Cap.V: Definite Integrals (pp. 138–179)           |
+| 6   | Aplicaciones de integración | 3P      | `Schaums 1ed-3000 solved problems in calculus.pdf` — Caps.26–32: Exponential Growth to Improper Integrals (pp. 215–267) | `Maron-Problems in Calculus of One Variable.pdf` — Cap.VII: Applications of the Definite Integral (pp. 310–386) · Cap.VIII: Improper Integrals (pp. 387–417)                                                                           | `Demidovich-Problems in Mathematical Analysis.pdf` — Cap.V: Definite Integrals (pp. 138–179)                                                        |
+| 7   | Series reales               | extra   | `Schaums 1ed-3000 solved problems in calculus.pdf` — Caps.33–39: Vectors to Taylor Series (pp. 268–346)                 | `Demidovich-Problems in Mathematical Analysis.pdf` — Cap.VIII: Series (pp. 293–321)                                                                                                                                                    | —                                                                                                                                                   |
 
 NOTAS DE CRITERIO:
 
@@ -66,8 +66,10 @@ TEORÍA:
 EJERCICIOS:
 · Schaum's: ejercicios de inicio en todos los temas — volumen alto, mecánico.
 · Maron: práctica en T0–T6 — dificultad media-alta, combina mecánica y razonamiento.
+  En T7 no disponible — no tiene capítulo de series.
 · Demidovich: nivel examen en T1–T6 — mecánico difícil y razonamiento medio-alto.
   En T7 reemplaza a Maron como práctica por su fortaleza en series.
+  En T0 no disponible — no tiene sección de números reales puros.
 
 REFERENCIA RÁPIDA:
 · Larson Cheat Sheet: fórmulas — solo verificación, no para desarrollo.
