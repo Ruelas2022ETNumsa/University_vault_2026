@@ -1,0 +1,305 @@
+---
+title: MAT101 — Índice de fuentes para NotebookLM
+galaxy_body: beacon
+scope: vault
+tool: notebooklm
+audience:
+  - notebooklm
+  - claude
+tags:
+  - beacon
+  - biblioteca
+  - infraestructura
+  - MAT101
+date_created: 2026-07-02
+date_updated: 2026-07-02
+status: activo
+---
+
+PROPÓSITO:
+Fuente de referencia para NotebookLM. Consultá este archivo cuando tengas
+dudas sobre qué PDF usar para un tema o qué contiene un archivo específico.
+_
+PARTE 1 — CRITERIO DE USO POR TEMA
+
+| Tema                        | Parcial | Primera fuente      | Segunda fuente    | Respaldo español        |
+|-----------------------------|---------|---------------------|-------------------|-------------------------|
+| Números reales              | 1P      | Apostol (1to7)      | Stewart 9na       | Stewart 7ma (1to4)      |
+| Funciones reales            | 1P      | Stewart 9na         | Thomas (1to6)     | Stewart 7ma (1to4)      |
+| Límites y continuidad       | 1P      | Stewart 9na         | Apostol (1to7)    | Stewart 7ma (1to4)      |
+| Derivación                  | 2P      | Stewart 9na         | Piskunov          | Stewart 7ma (1to4)      |
+| Aplicaciones de derivación  | 2P      | Thomas (1to6)       | Stewart 9na       | Stewart 7ma (5to8)      |
+| Integración                 | 3P      | Stewart 9na         | Piskunov          | Stewart 7ma (5to8)      |
+| Aplicaciones de integración | 3P      | Thomas (7to12)      | Stewart 9na       | Stewart 7ma (5to8)      |
+| Series reales               | extra   | Apostol (8to16)     | Piskunov          | Stewart 7ma (9to11)     |
+
+NOTAS DE CRITERIO:
+· Schaum's, Maron y Demidovich son válidos como fuente de ejercicios en cualquier tema.
+· Larson Cheat Sheet: referencia rápida de fórmulas — consultarlo para verificación, no para desarrollo.
+· Stewart 7ma español: puente lingüístico — usarlo para confirmar terminología en español.
+· Criterio detallado por libro (cuándo usar Apostol vs Stewart dentro del mismo tema,
+  rigor vs explicación vs ejercicios): actualización futura.
+_
+PARTE 2 — ÍNDICE DE PDFs
+
+[Apostol vol 1 2ed-Calculus-1to7.pdf]
+Título: Calculus. One-Variable Calculus, with an Introduction to Linear Algebra
+Autor: Apostol, Tom M.
+Editorial: Blaisdell Publishing Company
+Edición: Second Edition
+Rango del archivo: páginas 1 a 372 del libro original.
+Índice:
+  Cap. 0 (pt.1) — A Historical Introduction — pp. 1–12
+  Cap. 0 (pt.2) — Some Basic Concepts of the Theory of Sets — pp. 13–20
+  Cap. 0 (pt.3) — A Set of Axioms for the Real Number System — pp. 21–39
+  Cap. 0 (pt.4) — Mathematical Induction, Summation Notation — pp. 40–58
+  Cap. 1 — The Concepts of the Integral Calculus — pp. 59–108
+  Cap. 2 — Some Applications of Integration — pp. 109–154
+  Cap. 3 — Continuous Functions — pp. 155–190
+  Cap. 4 — Differential Calculus — pp. 191–246
+  Cap. 5 — The Relation Between Integration and Differentiation — pp. 247–276
+  Cap. 6 — The Logarithm, the Exponential, and the Inverse Trigonometric Functions — pp. 277–332
+  Cap. 7 — Polynomial Approximations to Functions — pp. 333–372
+
+-
+
+[Apostol vol 1 2ed-Calculus-8to16.pdf]
+Título: Calculus. One-Variable Calculus, with an Introduction to Linear Algebra
+Autor: Apostol, Tom M.
+Editorial: Blaisdell Publishing Company
+Edición: Second Edition
+Rango del archivo: páginas 373 a 813 del libro original.
+Índice:
+  Cap. 8  — Introduction to Differential Equations — pp. 373–436
+  Cap. 9  — Complex Numbers — pp. 437–456
+  Cap. 10 — Sequences, Series, Improper Integrals — pp. 457–516
+  Cap. 11 — Sequences and Series of Functions — pp. 517–544
+  Cap. 12 — Vector Algebra — pp. 545–576
+  Cap. 13 — Applications of Vector Algebra to Analytic Geometry — pp. 577–626
+  Cap. 14 — Calculus of Vector-Valued Functions — pp. 627–674
+  Cap. 15 — Linear Spaces — pp. 675–708
+  Cap. 16 — Linear Transformations and Matrices — pp. 709–756
+  Answers to exercises — pp. 757–804
+  Index — pp. 805–813
+
+-
+
+[Demidovich-Problems in Mathematical Analysis.pdf]
+Título: Problems in Mathematical Analysis
+Autor: Demidovich, B. P. (ed.); Baranenkov, G.; Efimenko, V. A.; Kogan, S. M.;
+       Lunts, G. L.; Porshneva, E. F.; Sycheva, E. P.; Frolov, S. V.;
+       Shostak, R. Ya.; Yanpolsky, A. R.
+Editorial: Mir Publishers
+Edición: Second Printing
+Índice:
+  Cap. I   — Introduction to Analysis — pp. 11–41
+  Cap. II  — Differentiation of Functions — pp. 42–82
+  Cap. III — The Extrema of a Function and the Geometric Applications of a Derivative — pp. 83–106
+  Cap. IV  — Indefinite Integrals — pp. 107–137
+  Cap. V   — Definite Integrals — pp. 138–179
+  Cap. VI  — Functions of Several Variables — pp. 180–245
+  Cap. VII — Multiple and Line Integrals — pp. 246–292
+  Cap. VIII — Series — pp. 293–321
+  Cap. IX  — Differential Equations — pp. 322–366
+  Cap. X   — Approximate Calculations — pp. 367–395
+  Answers — pp. 396–474
+  Appendix — pp. 475–487
+  Index — pp. 488–497
+
+-
+
+[James Stewart 9th Ed-Calculus Early Transcendentals.pdf]
+Título: Calculus: Early Transcendentals
+Autor: Stewart, James; Clegg, Daniel; Watson, Saleem
+Editorial: Cengage Learning
+Edición: Ninth Edition, Metric Version
+Índice:
+  Preview — A Preview of Calculus — pp. 1–5
+  Cap. 1  — Functions and Models — pp. 7–76
+  Cap. 2  — Limits and Derivatives — pp. 77–172
+  Cap. 3  — Differentiation Rules — pp. 173–278
+  Cap. 4  — Applications of Differentiation — pp. 279–370
+  Cap. 5  — Integrals — pp. 371–434
+  Cap. 6  — Applications of Integration — pp. 435–484
+  Cap. 7  — Techniques of Integration — pp. 485–558
+  Cap. 8  — Further Applications of Integration — pp. 559–604
+  Cap. 9  — Differential Equations — pp. 605–660
+  Cap. 10 — Parametric Equations and Polar Coordinates — pp. 661–722
+  Cap. 11 — Sequences, Series, and Power Series — pp. 723–828
+  Cap. 12 — Vectors and the Geometry of Space — pp. 829–888
+  Cap. 13 — Vector Functions — pp. 889–932
+  Cap. 14 — Partial Derivatives — pp. 933–1036
+  Cap. 15 — Multiple Integrals — pp. 1037–1122
+  Cap. 16 — Vector Calculus — pp. 1123–1214
+  Appendixes — A1–A60
+  Answers — A61–A142
+  Index — A143–A158
+
+-
+
+[Larson Cheat Sheet-Calculus.pdf]
+Título: Calculus Cheat Sheet
+Autor: Larson, Ron
+Editorial: Cengage Learning
+Edición: N/A
+Contenido: referencia rápida de fórmulas — no tiene índice por capítulos.
+  Derivatives and Integrals
+  Trigonometry
+  Algebra
+  Formulas from Geometry
+  Integration Tables — pp. A3–A6
+
+-
+
+[Maron-Problems in Calculus of One Variable.pdf]
+Título: Problems in Calculus of One Variable (With elements of theory)
+Autor: Maron, I. A.
+Editorial: Mir Publishers
+Edición: N/A
+Índice:
+  Cap. I    — Introduction to Mathematical Analysis — pp. 11–97
+  Cap. II   — Differentiation of Functions — pp. 98–130
+  Cap. III  — Application of Differential Calculus to Investigation of Functions — pp. 131–194
+  Cap. IV   — Indefinite Integrals. Basic Methods of Integration — pp. 195–213
+  Cap. V    — Basic Classes of Integrable Functions — pp. 214–246
+  Cap. VI   — The Definite Integral — pp. 247–309
+  Cap. VII  — Applications of the Definite Integral — pp. 310–386
+  Cap. VIII — Improper Integrals — pp. 387–417
+  Answers and Hints — pp. 418–453
+
+-
+
+[Piskunov Vol 1- Differential and Integral Calculus.pdf]
+Título: Differential and Integral Calculus
+Autor: Piskunov, N. S.
+Editorial: Mir Publishers
+Edición: Second Edition
+Índice:
+  Cap. 1  — Number. Variable. Function — pp. 11–28
+  Cap. 2  — Limit. Continuity of a Function — pp. 29–64
+  Cap. 3  — Derivative and Differential — pp. 65–132
+  Cap. 4  — Some Theorems on Differentiable Functions — pp. 133–154
+  Cap. 5  — Investigating the Behaviour of Functions — pp. 155–199
+  Cap. 6  — The Curvature of a Curve — pp. 200–223
+  Cap. 7  — Complex Numbers — pp. 224–248
+  Cap. 8  — Functions of Several Variables — pp. 249–310
+  Cap. 9  — Applications of Differential Calculus to Solid Geometry — pp. 311–340
+  Cap. 10 — The Indefinite Integral — pp. 341–386
+  Cap. 11 — The Definite Integral — pp. 387–436
+  Cap. 12 — Geometric and Mechanical Applications of the Definite Integral — pp. 437–464
+  Index — pp. 465–471
+
+-
+
+[Schaums 1ed-3000 solved problems in calculus.pdf]
+Título: 3,000 Solved Problems in Calculus
+Autor: Mendelson, Elliott
+Editorial: McGraw-Hill Companies, Inc.
+Edición: First Edition
+Índice:
+  Caps. 1–10  — Inequalities to Trigonometric Functions — pp. 1–68
+  Caps. 11–18 — Mean Value Theorems to Approximations — pp. 69–141
+  Caps. 19–25 — Integrals to L'Hôpital's Rule — pp. 142–214
+  Caps. 26–32 — Exponential Growth to Improper Integrals — pp. 215–267
+  Caps. 33–39 — Vectors to Taylor Series — pp. 268–346
+  Caps. 40–46 — Vectors in Space to Differential Equations — pp. 347–442
+  Index — pp. 443–455
+
+-
+
+[Stewart, James 7ed-Cálculo en una variable. Trascendentes tempranas-1to4.pdf]
+Título: Cálculo de una variable. Trascendentes tempranas
+Autor: Stewart, James
+Editorial: Cengage Learning Editores, S.A. de C.V.
+Edición: Séptima edición
+Rango del archivo: páginas 1 a 358 del libro original.
+Índice:
+  Previo — Un previo de Cálculo — pp. 1–8
+  Cap. 1 — Funciones y modelos — pp. 9–80
+  Cap. 2 — Límites y derivadas — pp. 81–172
+  Cap. 3 — Reglas de derivación — pp. 173–272
+  Cap. 4 — Aplicaciones de la derivada — pp. 273–358
+
+-
+
+[Stewart, James 7ed-Cálculo en una variable. Trascendentes tempranas-5to8.pdf]
+Título: Cálculo de una variable. Trascendentes tempranas
+Autor: Stewart, James
+Editorial: Cengage Learning Editores, S.A. de C.V.
+Edición: Séptima edición
+Rango del archivo: páginas 359 a 578 del libro original.
+Índice:
+  Cap. 5 — Integrales — pp. 359–420
+  Cap. 6 — Aplicaciones de la integración — pp. 421–462
+  Cap. 7 — Técnicas de integración — pp. 463–536
+  Cap. 8 — Aplicaciones adicionales de la integración — pp. 537–578
+
+-
+
+[Stewart, James 7ed-Cálculo en una variable. Trascendentes tempranas-9to11.pdf]
+Título: Cálculo de una variable. Trascendentes tempranas
+Autor: Stewart, James
+Editorial: Cengage Learning Editores, S.A. de C.V.
+Edición: Séptima edición
+Rango del archivo: páginas 579 a 781 del libro original.
+Índice:
+  Cap. 9  — Ecuaciones diferenciales — pp. 579–634
+  Cap. 10 — Ecuaciones paramétricas y coordenadas polares — pp. 635–688
+  Cap. 11 — Sucesiones y series infinitas — pp. 689–780
+  Problemas adicionales — pp. 781–784
+  Apéndices — A1–A114
+  Índice — A115–A123
+
+-
+
+[Thomas 14th ed-Calculus_-1to6.pdf]
+Título: Thomas' Calculus
+Autor: Thomas, George B.; Hass, Joel; Heil, Christopher; Weir, Maurice D.
+Editorial: Pearson Education, Inc.
+Edición: Fourteenth Edition
+Rango del archivo: páginas 1 a 369 del libro original.
+Índice:
+  Cap. 1 — Functions — pp. 1–37
+  Cap. 2 — Limits and Continuity — pp. 38–101
+  Cap. 3 — Derivatives — pp. 102–182
+  Cap. 4 — Applications of Derivatives — pp. 183–247
+  Cap. 5 — Integrals — pp. 248–313
+  Cap. 6 — Applications of Definite Integrals — pp. 314–369
+
+-
+
+[Thomas 14th ed-Calculus_-7to12.pdf]
+Título: Thomas' Calculus
+Autor: Thomas, George B.; Hass, Joel; Heil, Christopher; Weir, Maurice D.
+Editorial: Pearson Education, Inc.
+Edición: Fourteenth Edition
+Rango del archivo: páginas 370 a 748 del libro original.
+Índice:
+  Cap. 7  — Transcendental Functions — pp. 370–446
+  Cap. 8  — Techniques of Integration — pp. 447–525
+  Cap. 9  — First-Order Differential Equations — pp. 526–562
+  Cap. 10 — Infinite Sequences and Series — pp. 563–648
+  Cap. 11 — Parametric Equations and Polar Coordinates — pp. 649–699
+  Cap. 12 — Vectors and the Geometry of Space — pp. 700–748
+
+-
+
+[Thomas 14th ed-Calculus_-13to17.pdf]
+Título: Thomas' Calculus
+Autor: Thomas, George B.; Hass, Joel; Heil, Christopher; Weir, Maurice D.
+Editorial: Pearson Education, Inc.
+Edición: Fourteenth Edition
+Rango del archivo: páginas 749 a final del libro original.
+Índice:
+  Cap. 13 — Vector-Valued Functions and Motion in Space — pp. 749–791
+  Cap. 14 — Partial Derivatives — pp. 792–882
+  Cap. 15 — Multiple Integrals — pp. 883–954
+  Cap. 16 — Integrals and Vector Fields — pp. 955–1048
+  Cap. 17 — Second-Order Differential Equations — Online
+  Appendices — A1–A9
+  Answers to Odd-Numbered Exercises — A-1 to A-74
+  Applications Index — AI-1 to I-13
+_
+%%
+galaxy-link
+%%
