@@ -47,8 +47,24 @@ VISUALIZACIONES:
 Decidí vos si una visualización aporta claridad real al concepto o ejercicio.
 No la incluyas por defecto ni la omitas por defecto — evaluá caso a caso.
 
-1. DESMOS — primera opción para Cálculo 1: funciones, curvas, regiones,
-   intervalos, límites, derivadas, integrales.
+CRITERIO DE ELECCIÓN — la pregunta siempre es:
+¿Cuál herramienta produce el código más simple y directo para este diagrama?
+
+· DESMOS cuando la sintaxis es natural para lo que se quiere dibujar:
+  funciones explícitas, curvas, regiones sombreadas, intervalos en recta
+  numérica, límites, derivadas, integrales — lo que Desmos representa
+  con ecuaciones directas y sin cálculos auxiliares.
+
+· TIKZJAX cuando Desmos requeriría ecuaciones complejas o paramétricas
+  para lograr algo que TikZ dibuja trivialmente: elipses como conjuntos,
+  flechas entre nodos, diagramas de composición, circunferencia
+  trigonométrica con segmentos etiquetados, figuras geométricas.
+
+En caso de duda: consultar el Bloque C (biblioteca de ejemplos) de
+MAT101_desmos.md y MAT101_TikzJax.md — el precedente ya resuelto
+tiene prioridad sobre reevaluar el criterio desde cero.
+
+1. DESMOS
 
    SINTAXIS — consultar SIEMPRE la sección NOTEBOOKLM de MAT101_desmos.md
    (fuente del notebook) para reglas completas y biblioteca de ejemplos.
@@ -83,9 +99,7 @@ No la incluyas por defecto ni la omitas por defecto — evaluá caso a caso.
    #C2E4E5 verde azulado claro (región secundaria)
    #F0C4C7 rojo claro (región de evento)
 
-2. TIKZJAX — usar solo cuando Desmos no puede representarlo: diagramas de
-   conjuntos, composición de funciones, circunferencia trigonométrica,
-   función inversa con espejo y=x, figuras geométricas con precisión.
+2. TIKZJAX
 
    SINTAXIS — consultar la sección NOTEBOOKLM de MAT101_TikzJax.md
    (fuente del notebook) para reglas completas y biblioteca de ejemplos.

@@ -6176,6 +6176,7 @@ tuviera
 tangentes
 tapar
 transformaciones
+trivialmente
 ToDo
 Templater
 Text
@@ -30954,6 +30955,7 @@ domain
 declararlos
 derivada
 diente
+directas
 Vault
 Verificar
 Variables
@@ -105849,6 +105851,7 @@ Ceros
 Cajas
 CONOCIDAS
 Cuadr
+CRITERIO
 Instalados
 Instalado
 Instalar
@@ -126027,6 +126030,7 @@ ENTORNOS
 Elipses
 ECDC
 Extremos
+ELECCI
 Obsidian
 OmniSearch
 Ocultar
@@ -143391,6 +143395,7 @@ particular
 punteados
 pocos
 precedente
+param
 min
 mica
 movimiento
@@ -168951,6 +168956,7 @@ envolviendo
 escapado
 entienda
 eran
+elipses
 Motor
 Media
 Mantiene
@@ -188114,6 +188120,7 @@ lica
 lines
 line
 lfloor
+lograr
 incluyendo
 im
 instalar
