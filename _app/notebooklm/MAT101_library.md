@@ -22,16 +22,16 @@ dudas sobre qué PDF usar para un tema o qué contiene un archivo específico.
 _
 PARTE 1 — CRITERIO DE USO POR TEMA
 
-| Tema                        | Parcial | Primera fuente      | Segunda fuente    | Respaldo español        |
-|-----------------------------|---------|---------------------|-------------------|-------------------------|
-| Números reales              | 1P      | Apostol (1to7)      | Stewart 9na       | Stewart 7ma (1to4)      |
-| Funciones reales            | 1P      | Stewart 9na         | Thomas (1to6)     | Stewart 7ma (1to4)      |
-| Límites y continuidad       | 1P      | Stewart 9na         | Apostol (1to7)    | Stewart 7ma (1to4)      |
-| Derivación                  | 2P      | Stewart 9na         | Piskunov          | Stewart 7ma (1to4)      |
-| Aplicaciones de derivación  | 2P      | Thomas (1to6)       | Stewart 9na       | Stewart 7ma (5to8)      |
-| Integración                 | 3P      | Stewart 9na         | Piskunov          | Stewart 7ma (5to8)      |
-| Aplicaciones de integración | 3P      | Thomas (7to12)      | Stewart 9na       | Stewart 7ma (5to8)      |
-| Series reales               | extra   | Apostol (8to16)     | Piskunov          | Stewart 7ma (9to11)     |
+| Nro de tema | Tema                        | Parcial | Primera fuente  | Segunda fuente | Respaldo español    |
+| ----------- | --------------------------- | ------- | --------------- | -------------- | ------------------- |
+| 0           | Números reales              | 1P      | Apostol (1to7)  | Stewart 9na    | Stewart 7ma (1to4)  |
+| 1           | Funciones reales            | 1P      | Stewart 9na     | Thomas (1to6)  | Stewart 7ma (1to4)  |
+| 2           | Límites y continuidad       | 1P      | Stewart 9na     | Apostol (1to7) | Stewart 7ma (1to4)  |
+| 3           | Derivación                  | 2P      | Stewart 9na     | Piskunov       | Stewart 7ma (1to4)  |
+| 4           | Aplicaciones de derivación  | 2P      | Thomas (1to6)   | Stewart 9na    | Stewart 7ma (5to8)  |
+| 5           | Integración                 | 3P      | Stewart 9na     | Piskunov       | Stewart 7ma (5to8)  |
+| 6           | Aplicaciones de integración | 3P      | Thomas (7to12)  | Stewart 9na    | Stewart 7ma (5to8)  |
+| 7           | Series reales               | extra   | Apostol (8to16) | Piskunov       | Stewart 7ma (9to11) |
 
 NOTAS DE CRITERIO:
 · Schaum's, Maron y Demidovich son válidos como fuente de ejercicios en cualquier tema.
