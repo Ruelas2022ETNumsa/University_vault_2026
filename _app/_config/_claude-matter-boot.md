@@ -81,7 +81,7 @@ El archivo generado debe seguir esta estructura. Claude la llena con la informac
 Cuando el usuario comparta este archivo, Claude debe hacer lo siguiente antes de responder cualquier otra cosa:
 
 1. Leer el archivo [FORMULARIO O ARCHIVO PRINCIPAL] completo.
-2. [Leer `E:\University_vault_2026\_app\_appnotes\desmos_guide.md` sección Claude si la materia usa gráficas Desmos.]
+2. [Leer `E:\University_vault_2026\_app\notebooklm\guides\MAT101\MAT101_desmos.md` sección Claude si la materia usa gráficas Desmos.]
 3. Confirmar al usuario con un mensaje breve: "Contexto cargado. Listo para revisar ejercicios."
 
 > Si en el futuro hay un formulario actualizado u otro archivo indicado por el usuario, leerlo en lugar del anterior o además de él.

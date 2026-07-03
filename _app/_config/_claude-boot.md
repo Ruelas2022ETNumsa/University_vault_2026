@@ -79,7 +79,11 @@ University_Vault_2026/
 ├── MOC/                        ← índices por materia (vacío de MOCs reales; tiene 2 imágenes sueltas a limpiar)
 │
 ├── _app/
-│   ├── notebooklm/ ← prompts y guías fuente del sistema NotebookLM
+│   ├── notebooklm/    ← prompts y guías fuente — ver [[_notebooklm-system]]
+│   │   ├── prompts/
+│   │   ├── guides/
+│   │   ├── general/
+│   │   └── other/
 │   │
 │   ├── _config/                ← beacons del sistema (aquí vive este archivo)
 │   │   ├── _claude-boot.md       ← ESTE ARCHIVO

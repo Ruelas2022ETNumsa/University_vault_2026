@@ -141,7 +141,7 @@ status: activo
 - [x] **`_graph-system.md`** — verificado: ya describía TikZJax como instalado y funcionando (consistente con el cierre de Fase de plugins del 2026-06-24). Sin cambios de contenido, solo `date_updated`.
 - [x] **`_mindmap-system.md`** — corregido: faltaba `[[_pdf-system]]` en el bloque `%%` final aunque estaba en el YAML `related_notes` y mencionado en el cuerpo — rompía la regla de dos capas sincronizadas del Sistema Galaxy. Agregado.
 - [x] **`_basic-memory-system.md`** — versión instalada verificada con el usuario (`pip show basic-memory` / `basic-memory --version`): **0.21.6**, coincide con lo documentado. Sin cambios de contenido.
-- [x] **`_notebooklm-system.md`** — reestructurado en sesión 2026-06-25: dos usos separados (transcripción / estudio), inventario completo de `_app/notebooklm/`, flujo TABnote actualizado, eliminada referencia a `_notebooklm-prompt.md`. **`_notebooklm-prompt.md` eliminado** — contenido migrado a `MAT101-notebooklm_prompt.md`. Pendiente de sesión futura: revisión minuciosa de prompts reales de ETN806 — ver `_app/notebooklm/`.
+- [x] **`_notebooklm-system.md`** — reestructurado en sesión 2026-06-25: dos usos separados (transcripción / estudio), inventario completo de `_app/notebooklm/`, flujo TABnote actualizado, eliminada referencia a `_notebooklm-prompt.md`. **`_notebooklm-prompt.md` eliminado** — contenido migrado a `MAT101-study.md` y `MAT101-transcription.md` en `prompts/MAT101/`. Pendiente de sesión futura: revisión minuciosa de prompts reales de ETN806 — ver `_app/notebooklm/`.
 - [ ] **`_excalidraw-system.md`** — sigue retrasado, sin tocar esta sesión (ver sección Excalidraw arriba).
 
 ### Fase 4 — DataView

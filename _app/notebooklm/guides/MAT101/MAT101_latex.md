@@ -1,3 +1,21 @@
+---
+title: LaTeX — Guía de notación para NotebookLM (MAT101)
+galaxy_body: beacon
+scope: vault
+tool: notebooklm
+audience:
+  - notebooklm
+  - claude
+tags:
+  - beacon
+  - latex
+  - infraestructura
+  - MAT101
+date_created: 2026-07-02
+date_updated: 2026-07-02
+status: activo
+---
+
 # Guía de notación LaTeX para NotebookLM
 
 Esta guía define la notación LaTeX usada en las notas de Cálculo I.

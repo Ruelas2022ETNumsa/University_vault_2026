@@ -19,7 +19,7 @@ status: en-proceso
 # ⚡ GUÍA UNIFICADA DE TIKZJAX PARA OBSIDIAN (MAT101)
 
 > Plugin: `obsidian-tikzjax` — renderiza LaTeX/TikZ como SVG directamente en tus notas usando WebAssembly.
-> Guía específica de Cálculo 1. Para circuitos electrónicos y otras materias ver `tikzjax_guide.md` (guía general).
+> Guía específica de Cálculo 1. Para circuitos electrónicos y otras materias ver `tikzjax_guide-legacy.md` en `_app/notebooklm/general/` (guía genérica — legacy).
 > Este documento está organizado en tres bloques: **Reglas de sintaxis (N1–N10)**, **Checklist (N11)**, y **Biblioteca de ejemplos por tema MAT101 (N12–N19)**.
 
 ---

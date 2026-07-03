@@ -20,7 +20,7 @@ status: activo
 > Convención de notas: [[_note-system]]
 > Sistema Mindmap (Excalidraw): [[_mindmap-system]]
 > Pendientes: [[_ToDo-system]]
-> Guía Desmos: [[MAT101_desmos]]
+> Guía Desmos: [[desmos_guide]]
 > Guía TikZJax: [[tikzjax_guide-legacy]]
 
 ---
@@ -97,7 +97,7 @@ y=x^2|BLUE
 
 **Regla crítica:** el separador `---` es **siempre obligatorio**, incluso sin configuración.
 
-> Documentación completa: [[MAT101_desmos]]
+> Documentación completa: [[desmos_guide]]
 
 ---
 
@@ -125,7 +125,7 @@ Plugin: `obsidian-tikzjax` — renderiza LaTeX/TikZ como SVG dentro de las notas
 
 **Nota sobre renders:** circuitikz puede no cargar al primer render. Si el diagrama no aparece, cerrar y reabrir Obsidian lo resuelve.
 
-> Documentación completa: [[tikzjax_guide-legacy]]
+> Documentación completa: [[tikzjax_guide]]
 
 ---
 
@@ -203,7 +203,7 @@ galaxy-links
 [[_galaxy-system]]
 [[_note-system]]
 [[_mindmap-system]]
-[[MAT101_desmos]]
+[[desmos_guide]]
 [[tikzjax_guide-legacy]]
 [[_ToDo-system]]
 %%
