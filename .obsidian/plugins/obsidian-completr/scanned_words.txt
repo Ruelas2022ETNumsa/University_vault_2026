@@ -31033,6 +31033,8 @@ desarrolla
 descubrimiento
 dhhH
 dakk
+delta
+decreciente
 Vault
 Verificar
 Variables
@@ -37183,6 +37185,7 @@ VALUES
 Volume
 VidlMc
 Viven
+Variaciones
 galaxy
 gina
 genes
@@ -55508,6 +55511,7 @@ sima
 sust
 sJDDDDD
 srrp
+senoides
 vault
 vil
 ver
@@ -68061,6 +68065,8 @@ atan
 aborda
 aGmS
 ajyyy
+anillo
+alternas
 related
 recomendados
 ribbon
@@ -80770,6 +80776,7 @@ nnnpqq
 nnnen
 nDvv
 notebooks
+ncava
 created
 commit
 cada
@@ -87485,6 +87492,7 @@ cobertura
 cKTY
 caps
 configuracion
+convexa
 updated
 un
 universo
@@ -106023,6 +106031,9 @@ CDGG
 Cdee
 CDDDU
 Cuaderno
+Conceptos
+Criterios
+Convergencia
 Instalados
 Instalado
 Instalar
@@ -113102,6 +113113,7 @@ Integrands
 Ingl
 IDDDDDDDDdd
 Infiere
+Indeterminaciones
 Funci
 File
 Fase
@@ -137676,6 +137688,7 @@ Approximation
 Antiderivatives
 Aplic
 AAAj
+Alembert
 push
 pull
 para
@@ -143653,6 +143666,7 @@ ptima
 polares
 puros
 practicar
+planas
 min
 mica
 movimiento
@@ -169229,6 +169243,7 @@ exercises
 elements
 exposici
 expliquen
+evitable
 Motor
 Media
 Mantiene
@@ -196128,6 +196143,12 @@ ixxx
 idddD
 iSDDD
 intuitivamente
+indeterminadas
+indeterminados
+infinitesimales
+inevitable
+inflexi
+indefinidas
 Dependencia
 Dropbox
 Dataview
@@ -202282,6 +202303,7 @@ Differentials
 Desactualizado
 DFFb
 Dividido
+Derivada
 Remotely
 Raz
 Revisa

@@ -20,6 +20,107 @@ Este archivo es tu referencia personal para saber qué libro usar en cada tema d
 
 ---
 
+## Temario oficial
+
+### T0 — Números reales
+- Axiomas de cuerpo de los números reales
+- Axiomas de igualdad
+- Teoremas sobre números reales
+- Axiomas de orden de los números reales
+- Teoremas de desigualdades e inecuaciones
+- La recta real e intervalos
+- Valor absoluto y sus propiedades
+- Solución de inecuaciones en variable $x$ (inecuaciones de primer grado)
+- Método de signos para solución de inecuaciones
+
+### T1 — Funciones reales
+- Definición y notación
+- Álgebra de funciones: definición y propiedades
+- Funciones par, impar, periódica e inversa
+- Composición de funciones y sus propiedades
+- Características generales de las principales funciones reales
+- Funciones de primer grado, función lineal y de segundo grado
+- Función potencial generalizada
+- Función exponencial y sus propiedades
+- Funciones logarítmicas y sus propiedades
+- Funciones trigonométricas: senoides, inversas e hiperbólicas
+- Funciones especiales: valor absoluto, parte entera, distancia al entero más cercano, signo, escalón unitario
+
+### T2 — Límites y continuidad
+- Límites y continuidad: definición y notación
+- Propiedades básicas
+- Indeterminaciones
+- Fórmulas no indeterminadas
+- Cálculo de límites indeterminados algebraicos
+- Límites infinitesimales y al infinito
+- Teorema de cambio de variable
+- Límites trigonométricos
+- Límites exponenciales
+- Límites laterales: definición, notación y método delta
+- Continuidad
+- Tipos de discontinuidad: evitable e inevitable (primera y segunda clase)
+
+### T3 — Derivación
+- Definición y notación
+- Interpretación genérica de la derivada
+- Propiedades básicas
+- Derivación de las principales funciones reales
+- Regla de la cadena
+- Derivación implícita
+- Método logarítmico de derivación
+- Derivada de orden superior: notación y grado de orden
+- Teorema de Leibniz para la derivada $n$-ésima de un producto
+- Derivación en notación paramétrica
+- Derivación y continuidad
+
+### T4 — Aplicaciones de la derivada
+- Rectas tangente y normal de una curva
+- Ángulo entre curvas
+- Máximos y mínimos locales
+- Teorema del valor extremo
+- Punto crítico
+- Teorema de Rolle
+- Teorema del valor medio de Lagrange
+- Función creciente y decreciente
+- Criterio de la primera derivada
+- Curva convexa y cóncava
+- Criterio de la segunda derivada
+- Punto de inflexión
+- Problemas de aplicación de máximos y mínimos
+- Teorema de L’Hôpital para cálculo de límites indeterminados
+- Diferenciales
+- Variaciones con el tiempo
+
+### T5 — Integración
+- Definición y notación
+- Propiedades básicas
+- Teorema fundamental del cálculo: primera y segunda forma
+- Integrales indefinidas (primitivas)
+- Cálculo de integrales indefinidas
+- Manejo de tablas de integración
+- Métodos de integración: sustitución, por partes, trigonométricas, fracciones parciales con coeficientes indeterminados, sustitución trigonométrica
+- Integración de formas racionales trigonométricas
+
+### T6 — Aplicaciones de la integración
+- Cálculo de áreas de figuras planas
+- Volúmenes de sólidos de revolución: método del disco y del anillo
+- Integrales impropias
+- Longitud de curva
+
+### T7 — Series reales *(tema complementario)*
+- Conceptos básicos: definición y notación
+- Series conocidas: geométrica y serie $p$
+- Criterios de convergencia y divergencia para series de términos positivos
+- Series alternas
+- Criterio de Cauchy para series alternas
+- Convergencia absoluta y condicional
+- Criterio de convergencia absoluta y condicional
+- Criterio de la razón de D’Alembert
+- Criterio de la raíz $n$-ésima
+- Series de potencias
+
+---
+
 ## Stack completo
 
 | Libro | Rol | Idioma |
