@@ -2666,45 +2666,11 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "general",
+        "guides",
         "prompts",
-        "MAT101_library 1.md",
-        "MAT101_library.md",
-        "MAT101-notebooklm_transcription 2(1july).md",
-        "MAT101-notebooklm_transcription 1.md",
-        "MAT101-notebooklm_study 1.md",
-        "obsidian_notation.md",
-        "other",
-        "MAT101-notebooklm_transcription.md",
-        "notebooklm-guides",
-        "MAT101-notebooklm_study.md"
+        "other"
       ]
-    },
-    "_app/notebooklm/notebooklm-guides": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "MAT101_desmos 1.md",
-        "MAT101_TikzJax 1.md",
-        "MAT101_TikzJax.md",
-        "MAT101_latex.md",
-        "MAT101_desmos.md",
-        "ETN806-P3-colas_guide_s.md",
-        "ETN806-P3-Tikz_markov_guide.md",
-        "tikzjax_guide.md"
-      ]
-    },
-    "_app/notebooklm/notebooklm-guides/tikzjax_guide.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/notebooklm-guides/ETN806-P3-colas_guide_s.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/notebooklm-guides/ETN806-P3-Tikz_markov_guide.md": {
-      "isPinned": false,
-      "isHidden": false
     },
     "Semestres/SEM_08/ETN806/Partial_1/ETN806-Parcial_1.md": {
       "isPinned": false,
@@ -2722,58 +2688,14 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_app/notebooklm/MAT101-notebooklm_study.md": {
-      "isPinned": true,
-      "isHidden": false
-    },
-    "_app/notebooklm/MAT101-notebooklm_study 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/MAT101-notebooklm_transcription.md": {
-      "isPinned": true,
-      "isHidden": false
-    },
     "_app/notebooklm/other": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
         "MAT101-notebooklm-user_guide.md",
-        "MAT101-notebooklm_prompt 1.md",
-        "ETN806-P2-notebooklm_prompt.md",
-        "ETN806-P1-notebooklm_prompt.md",
-        "ETN806-P3-notebooklm_prompt.md",
-        "ETN806-P1-notebooklm(legacy).md"
+        "tikzjax_guide.md"
       ]
-    },
-    "_app/notebooklm/other/ETN806-P1-notebooklm(legacy).md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/other/ETN806-P3-notebooklm_prompt.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/other/ETN806-P1-notebooklm_prompt.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/other/ETN806-P2-notebooklm_prompt.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/other/MAT101-notebooklm-user_guide.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/other/MAT101-notebooklm_prompt 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/MAT101-notebooklm_transcription 1.md": {
-      "isPinned": false,
-      "isHidden": false
     },
     "Untitled.md": {
       "isPinned": false,
@@ -2787,47 +2709,11 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_app/notebooklm/notebooklm-guides/MAT101_desmos.md": {
-      "isPinned": true,
-      "isHidden": false
-    },
-    "_app/notebooklm/notebooklm-guides/MAT101_TikzJax.md": {
-      "isPinned": true,
-      "isHidden": false
-    },
-    "_app/notebooklm/notebooklm-guides/MAT101_TikzJax 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/notebooklm-guides/MAT101_desmos 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/notebooklm-guides/MAT101_latex.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/obsidian_notation.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/MAT101-notebooklm_transcription 2(1july).md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Untitled 1.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_app/notebooklm/MAT101_library.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Untitled 2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/MAT101_library 1.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -2838,8 +2724,128 @@
     "_app/notebooklm/prompts": {
       "isPinned": false,
       "isHidden": false,
-      "customOrder": [],
+      "customOrder": [
+        "ETN806",
+        "MAT101"
+      ],
       "sortOrder": "custom"
+    },
+    "_app/notebooklm/guides": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "ETN806",
+        "MAT101"
+      ],
+      "sortOrder": "custom"
+    },
+    "_app/notebooklm/general": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "obsidian_notation.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "_app/notebooklm/guides/MAT101": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "MAT101_TikzJax.md",
+        "MAT101_latex.md",
+        "MAT101_desmos.md",
+        "MAT101_library.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "_app/notebooklm/guides/ETN806": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "ETN806-P3-Tikz_markov_guide.md",
+        "ETN806-P3-colas_guide_s.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "_app/notebooklm/prompts/MAT101": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "MAT101-transcription.md",
+        "MAT101-study.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "_app/notebooklm/prompts/ETN806": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "ETN806-P3.md",
+        "ETN806-P2.md",
+        "ETN806-P1.md",
+        "ETN806-P1-legacy.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "_app/notebooklm/general/obsidian_notation.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/guides/MAT101/MAT101_library.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/guides/MAT101/MAT101_desmos.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/guides/MAT101/MAT101_latex.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/guides/MAT101/MAT101_TikzJax.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/other/tikzjax_guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/other/MAT101-notebooklm-user_guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/MAT101/MAT101-study.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/MAT101/MAT101-transcription.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/guides/ETN806/ETN806-P3-colas_guide_s.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/guides/ETN806/ETN806-P3-Tikz_markov_guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN806/ETN806-P3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN806/ETN806-P2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN806/ETN806-P1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN806/ETN806-P1-legacy.md": {
+      "isPinned": false,
+      "isHidden": false
     }
   },
   "pinnedFiles": [
