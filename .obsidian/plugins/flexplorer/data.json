@@ -1381,8 +1381,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "_library-system 1.md",
-        "_notebooklm-system 1.md",
+        "_graph-system 1.md",
         "_library_MAT101.md",
         "_basic-memory-system.md",
         "_claude-boot.md",
@@ -2845,15 +2844,11 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_app/_config/_notebooklm-system 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/_config/_library-system 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_app/notebooklm/general/tikzjax_guide-legacy.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_config/_graph-system 1.md": {
       "isPinned": false,
       "isHidden": false
     }
@@ -2862,7 +2857,6 @@
     "_app/_appnotes/PDF_PP-guide.md",
     "_app/_config/_claude-boot.md",
     "_app/_config/_galaxy-system.md",
-    "_app/notebooklm/MAT101-notebooklm_study.md",
     "_app/notebooklm/notebooklm-guides/MAT101_TikzJax.md"
   ],
   "showHidden": false,
