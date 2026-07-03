@@ -158,7 +158,7 @@ Stewart 7ma español → 1to4  | 5to8  | 9to11
 - Transcripción de apuntes → `[[prompts/MAT101/MAT101-transcription]]`
 - Estudio y consulta → `[[prompts/MAT101/MAT101-study]]`
 
-**Libros por tema (actualizado):** ver `[[_library_MAT101]]`
+**Libros por tema (actualizado):** ver `[[_config/_library_MAT101]]`
 
 **Guía de fuentes del notebook:** ver `[[guides/MAT101/MAT101_library]]`
 

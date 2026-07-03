@@ -4,7 +4,7 @@ galaxy_body: beacon
 scope: vault
 audience: usuario
 related_notes:
-  - "[[_library-system]]"
+  - "[[_config/_library-system]]"
   - "[[guides/MAT101/MAT101_library]]"
 tags: [beacon, library, MAT101, infraestructura]
 date_created: 2026-07-02
@@ -129,6 +129,6 @@ Verificar fórmula rápida  → Larson Cheat Sheet
 
 %%
 galaxy-links
-[[_library-system]]
+[[_config/_library-system]]
 [[guides/MAT101/MAT101_library]]
 %%

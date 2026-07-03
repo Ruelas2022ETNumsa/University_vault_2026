@@ -9,8 +9,8 @@ related_notes:
   - "[[_galaxy-system]]"
   - "[[_TABnote-system]]"
   - "[[_library-system]]"
-  - "[[MAT101_desmos]]"
-  - "[[MAT101_TikzJax]]"
+  - "[[guides/MAT101/MAT101_desmos]]"
+  - "[[guides/MAT101/MAT101_TikzJax]]"
   - "[[_ToDo-system]]"
 tags:
   - beacon
@@ -25,7 +25,7 @@ status: activo
 
 > Sistema TABnote (transcripción de apuntes): [[_TABnote-system]]
 > Protocolo de libros y fuentes: [[_library-system]]
-> Guías de graficación (fuentes del notebook): [[MAT101_desmos]] · [[MAT101_TikzJax]]
+> Guías de graficación (fuentes del notebook): [[guides/MAT101/MAT101_desmos]] · [[guides/MAT101/MAT101_TikzJax]]
 > Pendientes: [[_ToDo-system]]
 
 NotebookLM es el tutor externo del vault. Tiene dos usos distintos y bien separados:
@@ -88,7 +88,7 @@ de cada materia.
    - Guías de graficación (MAT101_desmos.md, MAT101_TikzJax.md, etc.)
         ↓
 2. Se carga el prompt de configuración de la materia/parcial
-   Vive en: _app/notebooklm/ETNXXX-PN-notebooklm_prompt.md
+   Vive en: _app/notebooklm/prompts/ETNXXX/
         ↓
 3. Se estudia: ejercicios, explicaciones, graficación
    NotebookLM entrega bloques de código Desmos/TikZJax
@@ -116,16 +116,17 @@ de cada materia.
 Todos los archivos del sistema NotebookLM viven en `_app/notebooklm/`.
 Hay tres tipos de archivos con roles distintos:
 
-### Prompts (`ETNXXX-PN-notebooklm_prompt.md`)
+### Prompts (`prompts/`)
 
 Le dicen a NotebookLM cómo comportarse: modos de respuesta, reglas de
 graficación, programa de la materia, prioridad de fuentes.
 **Un prompt por materia/parcial. Se carga en el campo "Instructions" del notebook.**
+Organizados en subcarpetas por materia: `prompts/MAT101/`, `prompts/ETN806/`, etc.
 
 Convención de nombres:
 ```
-ETNXXX-PN-notebooklm_prompt.md    → prompt por parcial
-ETNXXX-notebooklm_prompt.md       → si aplica a todos los parciales
+ETNXXX-PN-description.md    → prompt por parcial        (ej: ETN806-P1-study.md)
+ETNXXX-description.md       → todos los parciales       (ej: MAT101-study.md)
 ```
 
 **Inventario actual:**
@@ -144,6 +145,7 @@ ETNXXX-notebooklm_prompt.md       → si aplica a todos los parciales
 Archivos `.md` que se suben como **fuentes al notebook** para que NotebookLM
 los consulte al responder. No son instrucciones de comportamiento — son
 conocimiento técnico de referencia.
+Organizadas en subcarpetas por materia: `guides/MAT101/`, `guides/ETN806/`, etc.
 
 **Inventario actual:**
 
@@ -158,11 +160,17 @@ conocimiento técnico de referencia.
 
 **Carpeta `general/`:**
 
+Guías reutilizables independientemente de la materia. Se suben como fuente en cualquier notebook.
+
 | Archivo | Contenido | Aplica a |
 |---|---|---|
 | `general/obsidian_notation.md` | YAML, wikilinks, Cornell, callouts, bloques de visualización | todas las materias |
 
 **Carpeta `other/`:**
+
+Archivos en desuso pendientes de revisión. Cada uno debe resolverse como:
+- **legacy** → renombrar con sufijo `-legacy`, mover a su carpeta de materia o a `general/` según scope
+- **activar** → mejorar y mover a `prompts/`, `guides/` o `general/` según corresponda
 
 | Archivo | Contenido | Estado |
 |---|---|---|
@@ -213,7 +221,7 @@ galaxy-links
 [[_galaxy-system]]
 [[_TABnote-system]]
 [[_library-system]]
-[[MAT101_desmos]]
-[[MAT101_TikzJax]]
+[[guides/MAT101/MAT101_desmos]]
+[[guides/MAT101/MAT101_TikzJax]]
 [[_ToDo-system]]
 %%
