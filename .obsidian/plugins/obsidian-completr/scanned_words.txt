@@ -87475,6 +87475,7 @@ coincidencia
 consultarlo
 cobertura
 cKTY
+caps
 updated
 un
 universo
@@ -106012,6 +106013,7 @@ CDDd
 CDGG
 Cdee
 CDDDU
+Cuaderno
 Instalados
 Instalado
 Instalar
