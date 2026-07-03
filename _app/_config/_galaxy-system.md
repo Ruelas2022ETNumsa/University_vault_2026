@@ -54,22 +54,31 @@ University_Vault_2026/
 │
 ├── MOC/                        ← notas de índice a nivel de materia
 │                                  una MOC por materia, enlaza todas sus Stars
-│
 ├── _app/                       ← infraestructura del baúl (no es contenido académico)
 │   ├── notebooklm/             ← prompts y guías del sistema NotebookLM
-│   │   ├── ETN806-P1-notebooklm_prompt.md   ← prompt P1 Procesos Estocásticos
-│   │   ├── ETN806-P1-notebooklm(legacy).md  ← histórico primer prompt P1
-│   │   ├── ETN806-P2-notebooklm_prompt.md   ← prompt P2 Procesos Estocásticos
-│   │   ├── ETN806-P3-notebooklm_prompt.md   ← prompt P3 Procesos Estocásticos
-│   │   ├── MAT101-notebooklm_prompt.md      ← prompt Cálculo 1
-│   │   ├── MAT101-notebooklm-user_guide.md  ← guía de uso personal Cálculo 1
-│   │   └── notebooklm-guides/               ← fuentes que se suben al notebook
-│   │       ├── desmos_guide.md              ← sintaxis Desmos (sección NotebookLM)
-│   │       ├── tikzjax_guide.md             ← sintaxis TikZJax (sección NotebookLM)
-│   │       ├── ETN806-P3-colas_guide_s.md   ← estructuras de colas con Mermaid
-│   │       ├── ETN806-P3-Tikz_markov_guide.md ← diagramas Markov con TikZ
-│   │       └── MAT101-transcription_guide.md  ← guía de transcripción apuntes
-│   │
+│   │   ├── prompts/            ← instrucciones de comportamiento para NotebookLM
+│   │   │   ├── ETN806/
+│   │   │   │   ├── ETN806-P1.md         ← prompt P1 Procesos Estocásticos
+│   │   │   │   ├── ETN806-P1-legacy.md  ← histórico primer prompt P1
+│   │   │   │   ├── ETN806-P2.md         ← prompt P2 Procesos Estocásticos
+│   │   │   │   └── ETN806-P3.md         ← prompt P3 Procesos Estocásticos
+│   │   │   └── MAT101/
+│   │   │       ├── MAT101-study.md          ← prompt estudio activo Cálculo 1
+│   │   │       └── MAT101-transcription.md  ← guía de transcripción cuaderno físico MAT101
+│   │   ├── guides/             ← fuentes que se suben al notebook
+│   │   │   ├── ETN806/
+│   │   │   │   ├── ETN806-P3-colas_guide_s.md       ← estructuras de colas con Mermaid
+│   │   │   │   └── ETN806-P3-Tikz_markov_guide.md   ← diagramas Markov con TikZ
+│   │   │   └── MAT101/
+│   │   │       ├── MAT101_desmos.md     ← sintaxis Desmos para Obsidian
+│   │   │       ├── MAT101_TikzJax.md   ← sintaxis TikZJax para Obsidian
+│   │   │       ├── MAT101_latex.md     ← notación LaTeX: cancelaciones, colores, cajas
+│   │   │       └── MAT101_library.md   ← criterio de fuentes, caps y páginas por tema
+│   │   ├── general/            ← guías reutilizables independientes de la materia
+│   │   │   ├── obsidian_notation.md      ← YAML, wikilinks, Cornell, callouts, bloques
+│   │   │   └── tikzjax_guide-legacy.md  ← sintaxis antigua y genérica de TikZJax (legacy)
+│   │   └── other/              ← archivos en desuso pendientes de revisión
+│   │       └── MAT101-notebooklm-user_guide.md  ← guía de uso personal Cálculo 1
 │   ├── _config/
 │   │   ├── _basic-memory-system.md    ← MCP Basic Memory (memoria semántica)
 │   │   ├── _claude-boot.md            ← punto de entrada de Claude al vault
