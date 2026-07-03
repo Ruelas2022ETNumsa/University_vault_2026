@@ -136,8 +136,10 @@ ETNXXX-notebooklm_prompt.md       → si aplica a todos los parciales
 | `ETN806-P1-notebooklm(legacy).md` | Procesos Estocásticos | P1                | histórico |
 | `ETN806-P2-notebooklm_prompt.md`  | Procesos Estocásticos | P2 — Continuas    | activo    |
 | `ETN806-P3-notebooklm_prompt.md`  | Procesos Estocásticos | P3 — Markov/Colas | activo    |
-| `MAT101-notebooklm_study.md`          | Cálculo 1             | estudio activo (todos los parciales)      | activo    |
-| `MAT101-notebooklm_transcription.md`  | Cálculo 1             | transcripción cuaderno físico               | activo    |
+| `MAT101-notebooklm_prompt.md`     | Cálculo 1             | todos             | activo    |
+
+> MAT101 tiene un solo prompt para todos los parciales. En el futuro se separará
+> por parciales siguiendo la misma convención `MAT101-PN-notebooklm_prompt.md`.
 
 ### Guías fuente (`notebooklm-guides/`)
 

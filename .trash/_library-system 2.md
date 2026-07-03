@@ -9,7 +9,7 @@ related_notes:
   - "[[_ToDo-system]]"
 tags: [beacon, library, infraestructura]
 date_created: 2026-06-25
-date_updated: 2026-07-02
+date_updated: 2026-06-25
 status: activo
 ---
 
@@ -154,11 +154,45 @@ Thomas 14th ed      → 1to6  | 7to12 | 13to17
 Stewart 7ma español → 1to4  | 5to8  | 9to11
 ```
 
-**Prompts de NotebookLM:**
-- Transcripción de apuntes → `[[MAT101-notebooklm_transcription]]`
-- Estudio y consulta → `[[MAT101-notebooklm_study]]`
+**Prompt de NotebookLM — tabla de fuentes por tema:**
+```
+── PROGRAMA Y LIBROS POR TEMA ──
+Priorizá estos libros según el tema consultado. Para ejercicios,
+siempre Schaum's, Maron y Demidovich son válidos en cualquier tema.
+El Stewart 7ma en español actúa como puente lingüístico — usarlo
+para confirmar terminología en español o cuando se prefiera
+explicación en ese idioma.
 
-**Libros por tema (actualizado):** ver `[[_library_MAT101]]`
+── MAPA DE ARCHIVOS ──
+Apostol Vol.1 2ed     → 1to7 | 8to16
+Thomas 14th ed        → 1to6 | 7to12 | 13to17
+Stewart 7ma español   → 1to4 | 5to8  | 9to11
+Stewart 9na ET        → archivo único
+Piskunov Vol.1        → archivo único
+Schaum's 3000         → archivo único
+Maron                 → archivo único
+Demidovich            → archivo único
+
+── LIBROS POR TEMA ──
+| Tema                        | Parcial | Primera fuente          | Segunda fuente       | Respaldo español      |
+|-----------------------------|---------|-------------------------|----------------------|-----------------------|
+| Funciones reales            | 1P      | Stewart 9na             | Thomas (1to6)        | Stewart 7ma (1to4)    |
+| Límites y continuidad       | 1P      | Stewart 9na             | Apostol (1to7)       | Stewart 7ma (1to4)    |
+| Derivación                  | 2P      | Stewart 9na             | Piskunov             | Stewart 7ma (1to4)    |
+| Aplicaciones de derivación  | 2P      | Thomas (1to6)           | Stewart 9na          | Stewart 7ma (5to8)    |
+| Integración                 | 3P      | Stewart 9na             | Piskunov             | Stewart 7ma (5to8)    |
+| Aplicaciones de integración | 3P      | Thomas (7to12)          | Stewart 9na          | Stewart 7ma (5to8)    |
+| Series reales               | extra   | Apostol (8to16)         | Piskunov             | Stewart 7ma (9to11)   |
+
+Apostol como primera fuente solo cuando el usuario pida rigor
+formal o demostración. Para series, Apostol es siempre primera
+opción.
+
+── NOTA SOBRE ARCHIVOS DIVIDIDOS ──
+Cuando un libro está dividido en partes, consultá el rango
+correspondiente al tema. Si el tema cae entre dos rangos,
+consultá ambos archivos.
+```
 
 **Descartados y razón:**
 - Larson 11va ed. → redundante con Stewart
