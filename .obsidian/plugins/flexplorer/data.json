@@ -1382,8 +1382,6 @@
       "sortOrder": "custom",
       "customOrder": [
         "_library_MAT101.md",
-        "_library-system 1.md",
-        "_notebooklm-system 1.md",
         "_basic-memory-system.md",
         "_claude-boot.md",
         "_excalidraw-system.md",
@@ -2668,6 +2666,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "prompts",
         "MAT101_library 1.md",
         "MAT101_library.md",
         "MAT101-notebooklm_transcription 2(1july).md",
@@ -2708,10 +2707,6 @@
       "isHidden": false
     },
     "Semestres/SEM_08/ETN806/Partial_1/ETN806-Parcial_1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/_config/_notebooklm-system 1.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -2824,10 +2819,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_app/_config/_library-system 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_app/notebooklm/MAT101_library.md": {
       "isPinned": false,
       "isHidden": false
@@ -2843,6 +2834,12 @@
     "_app/_config/_library_MAT101.md": {
       "isPinned": false,
       "isHidden": false
+    },
+    "_app/notebooklm/prompts": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [],
+      "sortOrder": "custom"
     }
   },
   "pinnedFiles": [
