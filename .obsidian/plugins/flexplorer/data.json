@@ -2725,69 +2725,69 @@
     "_app/notebooklm/prompts": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "ETN806",
         "MAT101"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "_app/notebooklm/guides": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "ETN806",
         "MAT101"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "_app/notebooklm/general": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "tikzjax_guide-legacy.md",
         "obsidian_notation.md"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "_app/notebooklm/guides/MAT101": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "MAT101_TikzJax.md",
         "MAT101_latex.md",
         "MAT101_desmos.md",
         "MAT101_library.md"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "_app/notebooklm/guides/ETN806": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "ETN806-P3-Tikz_markov_guide.md",
         "ETN806-P3-colas_guide_s.md"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "_app/notebooklm/prompts/MAT101": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "MAT101-transcription.md",
         "MAT101-study.md"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "_app/notebooklm/prompts/ETN806": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "ETN806-P3.md",
         "ETN806-P2.md",
         "ETN806-P1.md",
         "ETN806-P1-legacy.md"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "_app/notebooklm/general/obsidian_notation.md": {
       "isPinned": false,
@@ -2862,9 +2862,7 @@
     "_app/_appnotes/PDF_PP-guide.md",
     "_app/_config/_claude-boot.md",
     "_app/_config/_galaxy-system.md",
-    "_app/notebooklm/notebooklm-guides/MAT101_desmos.md",
     "_app/notebooklm/MAT101-notebooklm_study.md",
-    "_app/notebooklm/MAT101-notebooklm_transcription.md",
     "_app/notebooklm/notebooklm-guides/MAT101_TikzJax.md"
   ],
   "showHidden": false,

@@ -6181,6 +6181,7 @@ theory
 tricamente
 trig
 tdee
+transcribirlo
 ToDo
 Templater
 Text
@@ -13143,6 +13144,7 @@ TAYLOR
 Their
 TuHZ
 TulS
+Transcribe
 Sistema
 Sync
 Save
@@ -74526,6 +74528,7 @@ rrrt
 ryXX
 reutilizables
 resolverse
+resuelvan
 notes
 notas
 nuevas
@@ -80765,6 +80768,7 @@ ncion
 nnnpqq
 nnnen
 nDvv
+notebooks
 created
 commit
 cada
@@ -113095,6 +113099,7 @@ Implicit
 Integrands
 Ingl
 IDDDDDDDDdd
+Infiere
 Funci
 File
 Fase
@@ -143645,6 +143650,7 @@ pital
 ptima
 polares
 puros
+practicar
 min
 mica
 movimiento
@@ -169220,6 +169226,7 @@ elipses
 exercises
 elements
 exposici
+expliquen
 Motor
 Media
 Mantiene
@@ -196118,6 +196125,7 @@ inducci
 ixxx
 idddD
 iSDDD
+intuitivamente
 Dependencia
 Dropbox
 Dataview
@@ -202271,6 +202279,7 @@ DIFFERENTIAL
 Differentials
 Desactualizado
 DFFb
+Dividido
 Remotely
 Raz
 Revisa
@@ -246701,6 +246710,8 @@ Ninth
 NATURAL
 NDhhh
 NBLL
+Niveles
+Notebook
 originales
 observatory
 oficial

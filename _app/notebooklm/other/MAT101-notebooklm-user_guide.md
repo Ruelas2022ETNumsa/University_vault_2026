@@ -1,252 +1,231 @@
 ---
-title: NotebookLM — Guía de modos y triggers
+title: MAT101 — Guía de uso NotebookLM
 galaxy_body: beacon
 scope: vault
 audience:
   - usuario
 related_notes:
-  - "[[desmos_guide]]"
-  - "[[tikzjax_guide-legacy]]"
+  - "[[_config/_notebooklm-system]]"
+  - "[[prompts/MAT101/MAT101-study]]"
+  - "[[prompts/MAT101/MAT101-transcription]]"
 tags:
   - beacon
   - notebooklm
+  - MAT101
   - infraestructura
 date_created: 2026-06-03
+date_updated: 2026-07-02
 status: activo
 ---
 
-# NotebookLM — Guía de modos y triggers
+# MAT101 — Guía de uso NotebookLM
 
-> Referencia de uso del notebook de Cálculo 1. Describe cada modo del prompt de configuración, cómo activarlo y qué esperar como respuesta.
-
----
-
-## Stack de fuentes del notebook
-
-| Fuente | Uso principal |
-|--------|--------------|
-| Stewart — *Early Transcendentals* 9na ed. | Explicaciones, ejemplos visuales, límites, derivadas, integrales |
-| Apostol — *Cálculo* Vol. 1 | Rigor formal, demostraciones, definiciones precisas |
-| Piskunov — *Differential and Integral Calculus* Vol. 1 | Desarrollo clásico, teoría aplicada |
-| Mendelson — *Schaum's 3,000 Solved Problems* | Ejercicios resueltos paso a paso, variedad de tipos |
-| Maron — *Problems in Calculus of One Variable* | Ejercicios progresivos, estilo examen |
-| Demidovich — *Course of Mathematical Analysis (Problems)* | Ejercicios de dificultad creciente, ingeniería |
-| Thomas — *Calculus* 14va ed. | Explicaciones aplicadas, contexto de ingeniería |
-| `desmos_guide.md` | Sintaxis Desmos para el plugin de Obsidian |
-| `tikzjax_guide.md` | Sintaxis TikZJax para diagramas técnicos |
-| Nota del alumno (`.md`) | Base de contexto — apuntes propios como referencia |
+> MAT101 tiene dos notebooks con prompts distintos: uno para **transcribir apuntes manuscritos** y otro para **estudiar y resolver ejercicios**. Esta guía explica cómo usar cada uno.
 
 ---
 
-## Modos de respuesta
+## Prompt de transcripción — `MAT101-transcription`
+
+Convierte apuntes manuscritos (PDF escaneado o exportado desde tablet) en `.md` listo para Obsidian. Genera bloques Cornell, complemento de los libros y gráficas Desmos/TikZJax según corresponda.
+
+**Cuándo usarlo:** cuando tenés un PDF de apuntes de un tema completo y querés transcribirlo subtítulo por subtítulo.
+
+**Fuente del PDF en el notebook:** se sube con el nombre `apuntesTX` donde `X` es el código del tema (T0, T1, T2, etc.).
 
 ---
 
-### MODO 1 · Explicación de concepto
+### Mensaje 1 — Transcripción + complemento
 
-**Para qué sirve:** entender un tema desde cero o en profundidad. NotebookLM explica de forma intuitiva primero, agrega rigor formal si aporta, conecta con los libros, incluye visualización Desmos si corresponde, y cierra con preguntas de comprensión más ejercicios resueltos de los libros.
+Este es el mensaje principal. Transcribe el contenido del subtítulo indicado y agrega complemento del nivel pedido.
 
-**Triggers:**
+**Sintaxis:**
 ```
-"Explicame [concepto]"
-"No entiendo [tema], explicame desde el principio"
-"Modo 1 — [tema]"
-"¿Qué es [definición]?"
+De apuntesTX, muéstrame el subtítulo "[nombre exacto]" con complemento nivel [B/C]
 ```
 
-**Ejemplo de trigger completo:**
+**Con rango (de un subtítulo hasta otro):**
 ```
-Explicame el concepto de valor absoluto para ingeniería,
-conectalo con inecuaciones y mostrá una visualización.
+De apuntesTX, muéstrame el subtítulo "[nombre exacto]" HASTA "[nombre del siguiente]" con complemento nivel [B/C]
 ```
 
-**Qué esperar como respuesta:**
-- Explicación intuitiva en prosa
-- Definición formal o demostración (si aporta comprensión real)
-- Referencia a uno o más libros del stack (reformulada, no copiada)
-- Bloque Desmos si el concepto es graficable
-- 2-3 preguntas de comprensión al final
-- 1-2 ejercicios resueltos extraídos de los libros
+> Si no se indica HASTA, el notebook se detiene al detectar cualquier nuevo título. Si se indica HASTA, transcribe todo lo que hay entre ambos sin incluir el segundo.
+
+**Niveles de complemento:**
+
+| Nivel | Qué agrega |
+|---|---|
+| B | Solo definición formal del libro si la del manuscrito es informal |
+| C | Definición formal + propiedades omitidas + 1-2 ejercicios resueltos + gráfica si aporta |
+
+> Nivel C sin ejercicios (aplica B automáticamente) en: axiomas, propiedades puras, notación formal.
+
+**Ejemplos:**
+
+```
+De apuntesT0, muéstrame el subtítulo "Axiomas de cuerpo de los números reales"
+HASTA "Teoremas sobre números reales" con complemento nivel B
+```
+
+```
+De apuntesT1, muéstrame el subtítulo "Dominio y rango de una función" con complemento nivel C
+```
+
+```
+De apuntesT2, muéstrame el subtítulo "Definición de límite" HASTA "Propiedades de límites" con complemento nivel C
+```
 
 ---
 
-### MODO 2 · Ejercicio resuelto
+### Mensaje 2 — Ejercicios resueltos
 
-**Para qué sirve:** resolver un ejercicio con desarrollo completo paso a paso, justificando cada paso. Incluye un ejercicio similar de mayor dificultad al final.
+Opcional. Se usa después del Mensaje 1 si querés ejercicios adicionales del mismo subtítulo, extraídos de los libros fuente.
 
-**Triggers:**
+**Sintaxis:**
 ```
-"Resolvé [ejercicio]"
-"Modo 2 — [ejercicio]"
-"Paso a paso: [problema]"
-"¿Cómo se resuelve [tipo de ejercicio]?"
+De apuntesTX, subtítulo "[nombre exacto]", muéstrame ejercicios resueltos
 ```
 
-**Ejemplo de trigger completo:**
+> No repite la transcripción ni el complemento ya entregado — solo agrega los ejercicios.
+
+**Ejemplos:**
+
 ```
-Resolvé la inecuación |2x - 3| > 5 paso a paso
-y al final dame un ejercicio similar más difícil.
+De apuntesT1, subtítulo "Dominio y rango de una función", muéstrame ejercicios resueltos
 ```
 
-**Qué esperar como respuesta:**
+```
+De apuntesT3, subtítulo "Regla de la cadena", muéstrame ejercicios resueltos
+```
+
+---
+
+## Prompt de estudio — `MAT101-study`
+
+Actúa como tutor de Cálculo 1 orientado a ingeniería. Infiere el modo según lo que pedís — no hace falta activarlo explícitamente. Si hay ambigüedad, pregunta.
+
+**Cuándo usarlo:** para entender conceptos, resolver ejercicios o practicar antes de un examen.
+
+---
+
+### Modo 1 · Explicación de concepto
+
+Para entender un tema desde cero o en profundidad. El notebook explica intuitivamente, agrega rigor formal si aporta, conecta con los libros, incluye visualización si corresponde, y cierra con preguntas de comprensión y ejercicios resueltos de los libros.
+
+**Lo activa:** pedir que expliquen un concepto, definición o tema.
+
+**Qué devuelve:**
+- Explicación intuitiva
+- Definición formal (solo si aporta comprensión real)
+- Referencia a libros del stack (reformulada, nunca copiada)
+- Visualización Desmos o TikZJax si el concepto lo requiere
+- 2-3 preguntas de comprensión
+- 1-2 ejercicios resueltos de los libros
+
+**Ejemplos:**
+
+```
+Explicame qué es la continuidad de una función en un punto
+```
+
+```
+No entiendo la regla de la cadena, explicame desde el principio con un ejemplo
+```
+
+```
+Explicame el teorema del valor medio según Piskunov
+```
+
+---
+
+### Modo 2 · Ejercicio resuelto
+
+Para resolver un ejercicio con desarrollo completo paso a paso. Incluye un ejercicio similar de mayor dificultad al final, extraído de los libros.
+
+**Lo activa:** entregar un ejercicio para resolver.
+
+**Qué devuelve:**
 - Enunciado claro
-- Desarrollo numerado con justificación de cada paso
-- Visualización Desmos si aporta (a criterio de NotebookLM)
-- Resultado final destacado
-- Ejercicio de mayor dificultad resuelto, extraído de los libros
+- Desarrollo paso a paso sin saltear pasos algebraicos
+- Visualización si aporta claridad
+- Resultado final destacado con caja
+- Ejercicio de mayor dificultad resuelto al final
+
+**Ejemplos:**
+
+```
+Resolvé: encontrá el dominio de f(x) = sqrt(x^2 - 4) / (x - 1)
+```
+
+```
+Resolvé paso a paso: lim(x→2) (x^2 - 4) / (x - 2)
+```
+
+```
+Resolvé: derivá f(x) = sin(x^2) * e^(3x) usando regla de la cadena y producto
+```
 
 ---
 
-### MODO 3 · Ejercicio rápido
+### Modo 3 · Ejercicio rápido
 
-**Para qué sirve:** resolver sin explicación adicional ni ejercicio extra al final. Solo los 4 pasos esenciales: enunciado, desarrollo, visualización si aplica, resultado.
+Para resolver sin explicación extra ni ejercicio adicional al final. Solo enunciado, desarrollo y resultado.
 
-**Triggers:**
-```
-"Solo resolvé [ejercicio]"
-"Ejercicio rápido: [problema]"
-"Modo 3 — [ejercicio]"
-"Resolvé sin extras: [problema]"
-```
+**Lo activa:** pedir que resuelvan sin extras, o aclarar que no querés ejercicio adicional.
 
-**Ejemplo de trigger completo:**
-```
-Solo resolvé: encontrá los valores de x para los que
-(x-1)(x+3) > 0
-```
-
-**Qué esperar como respuesta:**
+**Qué devuelve:**
 - Enunciado
-- Desarrollo paso a paso con justificación
+- Desarrollo paso a paso
 - Visualización si aplica
 - Resultado final — sin ejercicio extra, sin preguntas
 
----
+**Ejemplos:**
 
-### MODO 4 · Dictado para Obsidian
-
-**Para qué sirve:** generar contenido listo para pegar directamente en una nota de Obsidian. Responde en texto plano sin introducción ni cierre — solo el bloque de contenido con título, desarrollo, código si aplica y resumen.
-
-**Triggers:**
 ```
-"Completá mi nota sobre [tema]"
-"Dictame [concepto] para Obsidian"
-"Modo 4 — [tema]"
-"Dame el contenido para pegar en mi nota de [tema]"
+Solo resolvé, sin ejercicio extra: derivá f(x) = ln(cos(x))
 ```
 
-**Ejemplo de trigger completo:**
 ```
-Dictame el contenido de la propiedad triangular
-del valor absoluto para pegar en mi nota.
+Rápido: calculá la integral de x * e^x dx
 ```
 
-**Qué esperar como respuesta:**
-```markdown
-## Título
-
-[desarrollo en prosa con LaTeX]
-[bloque Desmos si aplica]
-
-> **Resumen en una línea.**
 ```
-Sin texto antes ni después del bloque — directo al contenido.
+Solo el resultado con desarrollo: lim(x→0) sin(3x) / x
+```
 
 ---
 
-### MODO 5 · Revisión de nota
+## Fuentes del notebook
 
-**Para qué sirve:** revisar si el contenido matemático de una nota es correcto. NotebookLM identifica errores matemáticos (definición incorrecta, notación mal usada, paso inválido, omisión importante), señala imprecisiones de notación y sugiere qué agregar indicando de qué libro lo tomaría. Aplica a cualquier nota, no solo MAT101.
+Ambos notebooks comparten el mismo stack de PDFs. Las guías `.md` varían según el notebook.
 
-**Triggers:**
-```
-"Modo 5 — revisá la sección [nombre] de mi nota [nombre]"
-"Revisá si esto es correcto: [pega la sección]"
-"¿Hay errores en esta sección? [pega el contenido]"
-"Corregí y mejorá: [pega el contenido]"
-```
+### PDFs (libros)
 
-**Ejemplo de trigger completo:**
-```
-Modo 5 — revisá la sección "Axiomas de orden"
-de mi nota MAT101. La tenés como fuente en el notebook.
-```
+| Fuente | Rol |
+|---|---|
+| Stewart — *Calculus ET* 9na ed. | Teoría principal — columna vertebral |
+| Apostol — *Calculus* Vol.1 2da ed. | Teoría rigurosa — axiomas y series |
+| Piskunov — *Differential and Integral Calculus* Vol.1 | Teoría soviética — clara para ingeniería |
+| Thomas — *Calculus* 14va ed. | Consulta puntual — aplicaciones geométricas |
+| Stewart — *Cálculo ET* 7ma ed. (1to4 / 5to8 / 9to11) | Puente lingüístico español |
+| Apostol (1to7 / 8to16) | Dividido por rango de capítulos |
+| Thomas (1to6 / 7to12) | Dividido por rango de capítulos |
+| Mendelson — *Schaum's 3000 Solved Problems* | Ejercicios de inicio |
+| Maron — *Problems in Calculus of One Variable* | Ejercicios de práctica |
+| Demidovich — *Problems in Mathematical Analysis* | Ejercicios nivel examen |
 
-**Qué esperar como respuesta:**
-- Lista de errores encontrados (o confirmación de que no hay)
-- Por cada error: fragmento original → explicación → versión corregida
-- Imprecisiones de notación señaladas con versión mejorada
-- Sugerencias de contenido complementario con referencia al libro y sección
+### Guías `.md` (fuentes de referencia técnica)
 
----
-
-## Triggers para tareas especiales
-
-Estas no son modos formales — son pedidos directos que el prompt maneja bien.
-
----
-
-### Resumen para examen
-
-```
-Generá un resumen de [sección/tema] de mi nota MAT101
-estilo hoja de fórmulas para examen de ingeniería,
-con las propiedades más importantes y condiciones de cada una.
-```
-
-**Qué esperar:** tabla o lista compacta con propiedades, fórmulas clave, condiciones de aplicación y casos especiales. Cruza tu nota con los libros para no omitir nada relevante.
-
----
-
-### Guía de ejercicios tipo examen
-
-```
-Del tema [tema], generá una guía de 5 ejercicios progresivos
-estilo examen de ingeniería, resueltos,
-extraídos de los libros disponibles.
-```
-
-**Qué esperar:** 5 ejercicios de dificultad creciente, cada uno con enunciado y resolución paso a paso. NotebookLM prioriza Schaum's, Maron y Demidovich para este tipo de pedido.
-
----
-
-### Profundizar con un libro específico
-
-```
-Explicame [tema] según Apostol.
-¿Qué dice Stewart sobre [concepto]?
-Buscá ejercicios de [tema] en Demidovich.
-```
-
-**Qué esperar:** respuesta anclada en el libro indicado, reformulada, sin copiar párrafos.
-
----
-
-### Mejorar una sección específica de la nota
-
-```
-Tengo esto en mi nota sobre [tema]: [pega la sección].
-¿Cómo lo mejorarías con los libros disponibles?
-Agregá definiciones más precisas, ejemplos y
-propiedades que falten.
-```
-
-**Qué esperar:** versión enriquecida de la sección con definiciones más completas, propiedades faltantes y ejemplos adicionales de los libros.
-
----
-
-## Nota sobre el formato .md como fuente
-
-Cuando subís una nota `.md` al notebook, NotebookLM la interpreta así gracias al prompt de configuración:
-
-- Los separadores `--- start-multi-column` / `--- end-column ---` / `--- end-multi-column` son infraestructura visual — los ignora para el análisis matemático
-- Columna izquierda (60%) = desarrollo → definiciones y fórmulas principales
-- Columna derecha (40%) = claves → conceptos clave y condiciones
-- `> Resumen:` = síntesis del subtema
-- Bloques ` ```desmos-graph ``` ` = código de gráfica — los lee como referencia de sintaxis y como contexto del tema
+| Archivo | Contenido | Notebook |
+|---|---|---|
+| `MAT101_library.md` | Criterio de fuentes por tema, caps y páginas | ambos |
+| `obsidian_notation.md` | Interpretación de YAML, Cornell, callouts, Desmos | ambos |
+| `MAT101_desmos.md` | Sintaxis Desmos para Obsidian | ambos |
+| `MAT101_TikzJax.md` | Sintaxis TikZJax para Obsidian | ambos |
+| `MAT101_latex.md` | Notación LaTeX: cajas, cancelaciones, fracciones | ambos |
 
 %%
 galaxy-links
-[[desmos_guide]]
-[[tikzjax_guide-legacy]]
+[[_config/_notebooklm-system]]
+[[prompts/MAT101/MAT101-study]]
+[[prompts/MAT101/MAT101-transcription]]
 %%
