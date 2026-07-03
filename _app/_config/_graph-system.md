@@ -21,7 +21,7 @@ status: activo
 > Sistema Mindmap (Excalidraw): [[_mindmap-system]]
 > Pendientes: [[_ToDo-system]]
 > Guía Desmos: [[desmos_guide]]
-> Guía TikZJax: [[tikzjax_guide]]
+> Guía TikZJax: [[tikzjax_guide-legacy]]
 
 ---
 
@@ -204,6 +204,6 @@ galaxy-links
 [[_note-system]]
 [[_mindmap-system]]
 [[desmos_guide]]
-[[tikzjax_guide]]
+[[tikzjax_guide-legacy]]
 [[_ToDo-system]]
 %%

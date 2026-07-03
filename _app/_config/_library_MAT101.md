@@ -5,7 +5,7 @@ scope: vault
 audience: usuario
 related_notes:
   - "[[_library-system]]"
-  - "[[MAT101_library]]"
+  - "[[guides/MAT101/MAT101_library]]"
 tags: [beacon, library, MAT101, infraestructura]
 date_created: 2026-07-02
 date_updated: 2026-07-02
@@ -16,7 +16,7 @@ status: activo
 
 ## Propósito
 
-Este archivo es tu referencia personal para saber qué libro usar en cada tema de MAT101. Para el detalle completo de capítulos y páginas, consultá `MAT101_library.md`.
+Este archivo es tu referencia personal para saber qué libro usar en cada tema de MAT101. Para el detalle completo de capítulos y páginas, consultá `[[guides/MAT101/MAT101_library]]`.
 
 ---
 
@@ -130,5 +130,5 @@ Verificar fórmula rápida  → Larson Cheat Sheet
 %%
 galaxy-links
 [[_library-system]]
-[[MAT101_library]]
+[[guides/MAT101/MAT101_library]]
 %%

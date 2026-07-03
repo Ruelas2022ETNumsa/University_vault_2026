@@ -1,12 +1,16 @@
 ---
-title: "NotebookLM — Guía de modos y triggers"
+title: NotebookLM — Guía de modos y triggers
 galaxy_body: beacon
 scope: vault
-audience: [usuario]
+audience:
+  - usuario
 related_notes:
   - "[[desmos_guide]]"
-  - "[[tikzjax_guide]]"
-tags: [beacon, notebooklm, infraestructura]
+  - "[[tikzjax_guide-legacy]]"
+tags:
+  - beacon
+  - notebooklm
+  - infraestructura
 date_created: 2026-06-03
 status: activo
 ---
@@ -244,5 +248,5 @@ Cuando subís una nota `.md` al notebook, NotebookLM la interpreta así gracias 
 %%
 galaxy-links
 [[desmos_guide]]
-[[tikzjax_guide]]
+[[tikzjax_guide-legacy]]
 %%

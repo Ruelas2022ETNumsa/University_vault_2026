@@ -16,7 +16,7 @@ status: activo
 # Plugin Guide — Plugins simples del vault
 
 > Plugins que no requieren archivo propio pero sí documentación de configuración y uso.
-> Para plugins con sistema completo ver: [[desmos_guide]], [[tikzjax_guide]], [[obsidian_guide]], [[_pdf-system]], [[_excalidraw-system]], [[better-export-pdf]].
+> Para plugins con sistema completo ver: [[desmos_guide]], [[tikzjax_guide-legacy]], [[obsidian_guide]], [[_pdf-system]], [[_excalidraw-system]], [[better-export-pdf]].
 
 ---
 
@@ -207,7 +207,7 @@ Paso a paso del ejercicio.
 
 ### Nota sobre "Reload app without saving"
 
-Este botón existe exclusivamente como workaround para el bug de TikZJax: los bloques `tikz` a veces no renderizan al primer arranque del vault. Recargar Obsidian sin guardar fuerza el re-render sin perder cambios no guardados (Obsidian guarda automáticamente). Ver [[tikzjax_guide]] sección U7.
+Este botón existe exclusivamente como workaround para el bug de TikZJax: los bloques `tikz` a veces no renderizan al primer arranque del vault. Recargar Obsidian sin guardar fuerza el re-render sin perder cambios no guardados (Obsidian guarda automáticamente). Ver [[tikzjax_guide-legacy]] sección U7.
 
 ---
 
@@ -296,7 +296,7 @@ galaxy-links
 [[_galaxy-system]]
 [[obsidian_guide]]
 [[desmos_guide]]
-[[tikzjax_guide]]
+[[tikzjax_guide-legacy]]
 [[better-export-pdf]]
 [[_ToDo-system]]
 %%

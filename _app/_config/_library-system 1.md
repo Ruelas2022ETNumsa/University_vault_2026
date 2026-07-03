@@ -155,12 +155,10 @@ Stewart 7ma español → 1to4  | 5to8  | 9to11
 ```
 
 **Prompts de NotebookLM:**
-- Transcripción de apuntes → `[[prompts/MAT101/MAT101-transcription]]`
-- Estudio y consulta → `[[prompts/MAT101/MAT101-study]]`
+- Transcripción de apuntes → `[[MAT101-notebooklm_transcription]]`
+- Estudio y consulta → `[[MAT101-notebooklm_study]]`
 
 **Libros por tema (actualizado):** ver `[[_library_MAT101]]`
-
-**Guía de fuentes del notebook:** ver `[[guides/MAT101/MAT101_library]]`
 
 **Descartados y razón:**
 - Larson 11va ed. → redundante con Stewart

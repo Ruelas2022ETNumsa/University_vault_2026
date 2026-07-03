@@ -1381,6 +1381,8 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "_library-system 1.md",
+        "_notebooklm-system 1.md",
         "_library_MAT101.md",
         "_basic-memory-system.md",
         "_claude-boot.md",
@@ -2693,8 +2695,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "MAT101-notebooklm-user_guide.md",
-        "tikzjax_guide.md"
+        "MAT101-notebooklm-user_guide.md"
       ]
     },
     "Untitled.md": {
@@ -2743,6 +2744,7 @@
       "isPinned": false,
       "isHidden": false,
       "customOrder": [
+        "tikzjax_guide-legacy.md",
         "obsidian_notation.md"
       ],
       "sortOrder": "custom"
@@ -2807,10 +2809,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_app/notebooklm/other/tikzjax_guide.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_app/notebooklm/other/MAT101-notebooklm-user_guide.md": {
       "isPinned": false,
       "isHidden": false
@@ -2844,6 +2842,18 @@
       "isHidden": false
     },
     "_app/notebooklm/prompts/ETN806/ETN806-P1-legacy.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_config/_notebooklm-system 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_config/_library-system 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/general/tikzjax_guide-legacy.md": {
       "isPinned": false,
       "isHidden": false
     }

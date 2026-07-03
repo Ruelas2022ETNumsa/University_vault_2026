@@ -63,9 +63,9 @@ listo para integrarse al vault como notas `supernova`.
 
 | Archivo | Materia | Tipo de apunte | Estado |
 |---|---|---|---|
-| `prompts/MAT101/MAT101-transcription.md` | Cálculo 1 | Cuaderno físico | activo |
-| `prompts/MAT101/MAT101-transcription_tab.md` | Cálculo 1 | Tablet (Samsung Notes) | aún no creado |
-| `prompts/ETNXXX/ETNXXX-transcription.md` | otras materias | general | aún no creado |
+| `MAT101-notebooklm_transcription.md` | Cálculo 1 | Cuaderno físico | activo |
+| `MAT101-notebooklm_transcription_tab.md` | Cálculo 1 | Tablet (Samsung Notes) | aún no creado |
+| `ETNXXX-notebooklm_transcription.md` | otras materias | general | aún no creado |
 
 > Los apuntes de cuaderno físico y de tablet tienen estructuras distintas
 > y requieren prompts separados. El prompt de tablet para MAT101
@@ -130,16 +130,16 @@ ETNXXX-notebooklm_prompt.md       → si aplica a todos los parciales
 
 **Inventario actual:**
 
-| Archivo                                      | Materia               | Parcial           | Estado    |
-| -------------------------------------------- | --------------------- | ----------------- | --------- |
-| `prompts/ETN806/ETN806-P1.md`                | Procesos Estocásticos | P1 — Discretas    | activo    |
-| `prompts/ETN806/ETN806-P1-legacy.md`         | Procesos Estocásticos | P1                | histórico |
-| `prompts/ETN806/ETN806-P2.md`                | Procesos Estocásticos | P2 — Continuas    | activo    |
-| `prompts/ETN806/ETN806-P3.md`                | Procesos Estocásticos | P3 — Markov/Colas | activo    |
-| `prompts/MAT101/MAT101-study.md`             | Cálculo 1             | estudio activo (todos los parciales)      | activo    |
-| `prompts/MAT101/MAT101-transcription.md`     | Cálculo 1             | transcripción cuaderno físico               | activo    |
+| Archivo                           | Materia               | Parcial           | Estado    |
+| --------------------------------- | --------------------- | ----------------- | --------- |
+| `ETN806-P1-notebooklm_prompt.md`  | Procesos Estocásticos | P1 — Discretas    | activo    |
+| `ETN806-P1-notebooklm(legacy).md` | Procesos Estocásticos | P1                | histórico |
+| `ETN806-P2-notebooklm_prompt.md`  | Procesos Estocásticos | P2 — Continuas    | activo    |
+| `ETN806-P3-notebooklm_prompt.md`  | Procesos Estocásticos | P3 — Markov/Colas | activo    |
+| `MAT101-notebooklm_study.md`          | Cálculo 1             | estudio activo (todos los parciales)      | activo    |
+| `MAT101-notebooklm_transcription.md`  | Cálculo 1             | transcripción cuaderno físico               | activo    |
 
-### Guías fuente (`guides/`)
+### Guías fuente (`notebooklm-guides/`)
 
 Archivos `.md` que se suben como **fuentes al notebook** para que NotebookLM
 los consulte al responder. No son instrucciones de comportamiento — son
@@ -149,42 +149,30 @@ conocimiento técnico de referencia.
 
 | Archivo | Contenido | Aplica a |
 |---|---|---|
-| `guides/MAT101/MAT101_desmos.md` | Sintaxis Desmos para Obsidian — sección NotebookLM | MAT101 |
-| `guides/MAT101/MAT101_TikzJax.md` | Sintaxis TikZJax para Obsidian — sección NotebookLM | MAT101 |
-| `guides/MAT101/MAT101_latex.md` | Notación LaTeX: cancelaciones, colores, cajas, fracciones | MAT101 |
-| `guides/MAT101/MAT101_library.md` | Criterio de fuentes, caps y páginas por tema | MAT101 |
-| `guides/ETN806/ETN806-P3-colas_guide_s.md` | Estructuras de teoría de colas con Mermaid | ETN806 P3 |
-| `guides/ETN806/ETN806-P3-Tikz_markov_guide.md` | Diagramas de Markov con TikZ | ETN806 P3 |
-
-**Carpeta `general/`:**
-
-| Archivo | Contenido | Aplica a |
-|---|---|---|
-| `general/obsidian_notation.md` | YAML, wikilinks, Cornell, callouts, bloques de visualización | todas las materias |
-
-**Carpeta `other/`:**
-
-| Archivo | Contenido | Estado |
-|---|---|---|
-| `other/MAT101-notebooklm-user_guide.md` | Guía personal de uso — modos y ejemplos MAT101 | activo |
-| `other/tikzjax_guide.md` | Guía TikZJax genérica | pendiente revisar — posible legacy |
+| `notebooklm-guides/MAT101_desmos.md` | Sintaxis Desmos para Obsidian — sección NotebookLM | MAT101 |
+| `notebooklm-guides/MAT101_TikzJax.md` | Sintaxis TikZJax para Obsidian — sección NotebookLM | MAT101 |
+| `notebooklm-guides/MAT101_latex.md` | Notación LaTeX: cancelaciones, colores, cajas, fracciones | MAT101 |
+| `ETN806-P3-colas_guide_s.md` | Estructuras de teoría de colas con Mermaid | ETN806 P3 |
+| `ETN806-P3-Tikz_markov_guide.md` | Diagramas de Markov con TikZ | ETN806 P3 |
+| `MAT101_library.md` | Criterio de fuentes, caps y páginas por tema | MAT101 |
+| `obsidian_notation.md` | YAML, wikilinks, Cornell, callouts, bloques de visualización | MAT101 |
+| `MAT101-notebooklm_transcription.md` | Prompt de transcripción cuaderno físico | MAT101 — transcripción |
 
 ### Guías de uso personal (`ETNXXX-notebooklm-user_guide.md`)
 
 Documentación para el usuario: qué modos existen, cómo activarlos,
 ejemplos de uso. No se suben a NotebookLM — son referencia personal.
-Viven en `other/`.
 
 | Archivo | Materia | Estado |
 |---|---|---|
-| `other/MAT101-notebooklm-user_guide.md` | Cálculo 1 | activo — base para otras materias |
+| `MAT101-notebooklm-user_guide.md` | Cálculo 1 | activo — base para otras materias |
 
 ---
 
 ## Cómo crear un prompt para una materia nueva
 
 1. Copiar como base el prompt de una materia similar ya existente
-2. Renombrar con la convención `ETNXXX-PN.md` (dentro de `prompts/ETNXXX/`)
+2. Renombrar con la convención `ETNXXX-PN-notebooklm_prompt.md`
 3. Adaptar: rol/materia, fuentes prioritarias por tema, modos si cambian
 4. Subir las guías fuente necesarias al notebook (`MAT101_desmos.md` siempre,
    más las específicas de la materia si existen)
@@ -201,7 +189,7 @@ Viven en `other/`.
 |---|---|
 | Dos usos separados (transcripción / estudio) | Son flujos con fuentes, prompts y outputs distintos — mezclarlos en un solo modelo generaba confusión |
 | Prompts en `_app/notebooklm/`, no en `_config/` | Los prompts son operativos por materia/parcial, no infraestructura del vault — pertenecen a su propia carpeta |
-| `_notebooklm-prompt.md` eliminado de `_config/` | Su contenido migró a `prompts/MAT101/MAT101-study.md` y `prompts/MAT101/MAT101-transcription.md`. El beacon de infraestructura es este archivo (`_notebooklm-system.md`) |
+| `_notebooklm-prompt.md` eliminado de `_config/` | Su contenido migró a `MAT101-notebooklm_study.md` y `MAT101-notebooklm_transcription.md`. El beacon de infraestructura es este archivo (`_notebooklm-system.md`) |
 | Un prompt por materia/parcial | Cada parcial tiene programa, fórmulas y nivel de rigor distintos — un prompt único por materia produce respuestas menos precisas a medida que avanza el semestre |
 | .md como fuente principal, no PDF | El .md preserva LaTeX como texto y código Desmos como referencia — el PDF los convierte a imagen y pierde contenido matemático |
 | Guía de transcripción general en pausa | Requiere definir primero cómo estructurar los apuntes manuscritos para optimizar la transcripción — es decisión de diseño previa a la guía técnica |
