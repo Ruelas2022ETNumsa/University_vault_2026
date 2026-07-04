@@ -517,7 +517,7 @@ $$\begin{array}{rcll}
 
 ---
 
-# Solución de inecuaciones en variable $x$
+## Solución de inecuaciones en variable $x$
 
 ````cornell
 ::cue
@@ -597,7 +597,7 @@ $C_s=\left[\dfrac{1}{4},+\infty\right[  =\left\{\,x\in\mathbb{R}\;\middle|\;x\ge
 
 ---
 
-## Método de signos para solución de inecuaciones
+### Método de signos para solución de inecuaciones
 
 ````cornell
 ::cue
@@ -659,7 +659,8 @@ y=0|#005F73
 > - Los ceros provenientes del denominador ($Q(x)=0$) **nunca** se incluyen en el conjunto solución (siempre generan intervalos abiertos), independientemente de si la desigualdad incluye el signo igual ($\geq, \leq$), para evitar la división por cero.
 
 ---
-#### Ejemplos. Resolver las inecuaciones.
+
+## Ejemplos. Resolver las inecuaciones.
 
 ##### Ej. a)
 

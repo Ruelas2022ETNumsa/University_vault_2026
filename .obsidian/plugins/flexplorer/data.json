@@ -2936,11 +2936,51 @@
       "isPinned": false,
       "isHidden": false,
       "customOrder": [
+        "MAT101-T00-inecuaciones_lineales.md",
+        "MAT101-T00-valor_absoluto.md",
+        "MAT101-T00-recta_real_intervalos.md",
+        "MAT101-T00-teoremas_desigualdades.md",
+        "MAT101-T00-axiomas_orden.md",
+        "MAT101-T00-metodo_signos.md",
+        "MAT101-T00-teoremas_reales.md",
+        "MAT101-T00-axiomas_igualdad.md",
         "MAT101-T00-axiomas_cuerpo.md"
       ],
       "sortOrder": "custom"
     },
     "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-axiomas_cuerpo.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-axiomas_igualdad.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-teoremas_reales.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-metodo_signos.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-axiomas_orden.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-teoremas_desigualdades.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-recta_real_intervalos.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-valor_absoluto.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-inecuaciones_lineales.md": {
       "isPinned": false,
       "isHidden": false
     }
