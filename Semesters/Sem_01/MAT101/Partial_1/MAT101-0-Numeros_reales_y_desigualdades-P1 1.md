@@ -503,16 +503,13 @@ Si $x, y \in \mathbb{R}$
 $$\begin{array}{rcll}
   -6 & = & -6 \\
   4 - 10 & = & 9 - 15 \\
-  2^2 - 2 \cdot 2 \cdot \dfrac{5}{2} + \left(\dfrac{5}{2}\right)^2 & = & 3^2 - 2 \cdot 3 \cdot \frac{5}{2} + \left(\dfrac{5}{2}\right)^2 & (\text{completando cuadrados}) \\
+  2^2 - 2 \cdot 2 \cdot \dfrac{5}{2} + \left(\dfrac{5}{2}\right)^2 & = & 3^2 - 2 \cdot 3 \cdot \dfrac{5}{2} + \left(\dfrac{5}{2}\right)^2 & (\text{completando cuadrados}) \\
   \left( 2 - \dfrac{5}{2} \right)^2 & = & \left( 3 - \dfrac{5}{2} \right)^2 \\
   \sqrt{\left( 2 - \dfrac{5}{2} \right)^2} & = & \sqrt{\left( 3 - \dfrac{5}{2} \right)^2} \\
   \left| 2 - \dfrac{5}{2} \right| & = & \left| 3 - \dfrac{5}{2} \right| & (\text{aplicando prop. 7}) \\
   \left| -\dfrac{1}{2} \right| & = & \left| \dfrac{1}{2} \right| \\
   \frac{1}{2} & = & \frac{1}{2} & (V)
 \end{array}$$
-
-
-
 
 > [!note] Complemento (Nivel B)
 > 
@@ -523,9 +520,156 @@ $$\begin{array}{rcll}
 > 3. **Propiedad de la raíz:** Es un error común simplificar $\sqrt{x^2} = x$ sin considerar el signo. La definición correcta es $\sqrt{x^2} = |x|$, asegurando un resultado no negativo independientemente del signo de la base original.
 > 4. **Desigualdad Triangular:** Esta propiedad establece que el valor absoluto de la suma de dos números no puede exceder la suma de sus valores absolutos ($|a + b| \le |a| + |b|$). La igualdad se cumple únicamente si $a$ y $b$ tienen el mismo signo o si alguno es cero.
 
+---
+
+# Solución de inecuaciones en variable $x$
+
+````cornell
+::cue
+Inecuaciones lineales<br>
+inecuaciones · primer grado · conjunto solución · despeje · intervalos<br>
+¿Qué es una inecuación de primer grado?<br>
+¿Cuál es el procedimiento para hallar el conjunto solución?<br>
+¿Cómo se representa gráficamente el $C_s$?<br>
+$ax + b \gtreqless cx + d$<br>
+ver también: intervalos
+
+::note
+### Inecuación de $1^{\text{er}}$ grado
+
+**Forma**
+- $ax + b \gtreqless cx + d$
+- $a, b, c, d \in \mathbb{R}$
+
+Se recomienda despejar $x$ con propiedades:
+$$\begin{array}{rcll}
+  ax - cx & > & d - b & \\
+  (a - c)x & > & d - b & (\text{si } a - c > 0) \\
+  x & > & \dfrac{d - b}{a - c} &
+\end{array}$$
+
+$C_s$: conjunto solución de la inecuación.
+
+```desmos-graph
+left=-2; right=6; bottom=-1; top=1;
+width=320; height=80;
+---
+y=0 |x>2| #005F73
+(2,0) | open | #005F73
+x > 2 \{y=0\} | #005F73
+(2, 0) | label: (d-b)/(a-c)
+```
+
+$C_s = \left] \frac{d - b}{a - c}, +\infty \right[ = \left\{ x \in \mathbb{R} \mid x > \frac{d - b}{a - c} \right\}$
+
+> [!note] El manuscrito presenta el despeje asumiendo que el coeficiente resultante es positivo para mantener el sentido de la desigualdad.
+
+````
+
+> [!summary](Procedimiento para resolver desigualdades de primer grado mediante el aislamiento de la variable y la determinación del intervalo solución en la recta real.)
+
+##### Ej. Hallar el $C_s$: $(4x - 3)^2 \leq (4x + 1)^2$
+
+$$\begin{array}{rcl}
+ 16x^2 - 24x + 9 & \leq & 16x^2 + 8x + 1 \\ 8 & \leq & 32x \\ \dfrac{8}{32} & \leq & x \\ x & \geq & \dfrac{1}{4} \end{array}
+ $$
+
+**$C_s$**
+
+```desmos-graph
+left=-1; right=3; bottom=-1; top=1;
+width=320; height=80;
+---
+y=0 |x >= 0.25 | #005F73
+(0.25, 0) | #005F73
+x >= 0.25 \{y=0\} | #005F73
+(0.25, 0) | label:1/4
+```
+
+$C_s=\left[\dfrac{1}{4},+\infty\right[  =\left\{\,x\in\mathbb{R}\;\middle|\;x\ge\dfrac{1}{4}\,\right\}$
 
 
+> [!note] Complemento (Nivel B)
+> 
+> De acuerdo con James Stewart, resolver una desigualdad significa determinar el conjunto de números reales para los cuales el enunciado es verdadero. Este conjunto se denomina **conjunto solución**.
+> 
+> Al manipular desigualdades, se deben seguir reglas fundamentales que difieren de las igualdades de la siguiente manera:
+> 
+> 1. **Suma y resta**: Si $a \leq b$, entonces $a + c \leq b + c$ para cualquier $c \in \mathbb{R}$.
+> 2. **Multiplicación por positivo**: Si $a \leq b$ y $c > 0$, entonces $ac \leq bc$.
+> 3. **Multiplicación por negativo**: Si $a \leq b$ y $c < 0$, entonces $ac \geq bc$. El sentido de la desigualdad **se invierte**.
+> 4. **Recíprocos**: Si $a$ y $b$ son positivos y $a \leq b$, entonces $\frac{1}{a} \geq \frac{1}{b}$.
 
+---
+
+## Método de signos para solución de inecuaciones
+
+````cornell
+::cue
+Generalización del método<br>
+inecuaciones · ceros · polos · puntos críticos · intervalos · valor de prueba<br>
+¿En qué consiste el método de signos?<br>
+¿Cómo se determinan los intervalos de prueba?<br>
+¿Qué criterio se usa para incluir un intervalo en el conjunto solución?<br>
+$\frac{P(x)}{Q(x)} \gtreqless 0$<br>
+ver también: inecuaciones lineales
+
+::note
+### Generalizando
+
+Para resolver inecuaciones de grado superior o racionales, se recomiendan los siguientes pasos:
+
+1. **Formar comparación con cero (0)**
+	- Con $+ / (-)$ : $\frac{P(x)}{Q(x)} \gtreqless 0$
+
+2. **Factorizar totalmente $P$ y $Q$**
+	- $\frac{(x - a_1)(x - a_2) \dots (x - a_k)}{(x - b_1)(x - b_2) \dots (x - b_k)} \gtreqless 0$ $\quad \dots (2)$
+
+3. **Representar en la recta real**
+	- Los valores $a_1, a_2, \dots, b_n$ quedan definidos en $n$ intervalos: $I_1, I_2, I_3, \dots, I_t$.
+
+```desmos-graph
+left=-5; right=5; bottom=-1; top=1;
+width=320; height=80;
+---
+y=0 | #005F73
+(-3, 0) | #005F73
+(0, 0) | #005F73
+(3, 0) | #005F73
+"a_1" (-3, 0) | label: bottom
+"b_1" (0, 0) | label: bottom
+"a_2" (3, 0) | label: bottom
+"I_1" (-4, 0.5) | label: #005F73
+"I_2" (-1.5, 0.5) | label: #005F73
+"I_3" (1.5, 0.5) | label: #005F73
+"I_4" (4, 0.5) | label: #005F73
+```
+
+4. **Prueba de signos**
+	- De $I_1$ se toma un valor (no extremo) y se prueba el signo reemplazando en $(2)$:
+	- $\frac{(+)(-)(+) \dots (-)}{(-)(+)(+) \dots (+)} \gtreqless 0$
+
+5. **Resultan 2 posibilidades**
+	- $1^\circ$ Si $(+) > 0 \rightarrow V$ (verdad): se concluye que $I_1 \in C_s$.
+	- $2^\circ$ Si $(-) > 0 \rightarrow F$ (falsedad): se concluye que $I_1 \notin C_s$.
+
+6. **Repetición**
+	- Se repite el proceso para $I_2, I_3, \text{etc.}$
+
+7. **Conjunto Solución**
+	- El $C_s$ buscado se da por la unión ($\cup$) de los intervalos que cumplen la desigualdad.
+
+````
+
+> [!summary](Algoritmo sistemático para resolver inecuaciones mediante la factorización de polinomios, determinación de puntos críticos y testeo de intervalos en la recta real.)
+
+> [!note] Complemento (Nivel B)
+> 
+> Según James Stewart, este procedimiento se conoce como el **método de los puntos de prueba** para desigualdades no lineales. Los puntos donde los factores se anulan se denominan **números críticos** o valores de frontera.
+> 
+> Una propiedad fundamental omitida en el manuscrito es que los signos de los intervalos suelen alternarse siempre que los factores tengan potencias impares. Si un factor aparece con una potencia par, el signo no cambia al cruzar ese punto crítico.
+> 
+> De acuerdo con el Apéndice A de Stewart, al resolver inecuaciones racionales, los valores que anulan el denominador ($Q(x) = 0$) **nunca** deben incluirse en el conjunto solución (siempre serán intervalos abiertos en esos puntos), ya que la división por cero no está definida.
 
 
 
