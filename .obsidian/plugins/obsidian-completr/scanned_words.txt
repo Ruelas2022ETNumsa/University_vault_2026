@@ -6188,6 +6188,7 @@ tiende
 transcribio
 totalidad
 theorems
+them
 ToDo
 Templater
 Text
@@ -20252,6 +20253,7 @@ Semiabierto
 Subconjunto
 Soluciones
 Semantic
+Splits
 Plugins
 Pendientes
 Plugin
@@ -25729,6 +25731,7 @@ PTTd
 Pamm
 PRINCIPAL
 Positividad
+PARTITION
 del
 date
 de
@@ -31056,6 +31059,7 @@ denominan
 diferenciabilidad
 diferencial
 differentiable
+does
 Vault
 Verificar
 Variables
@@ -43524,6 +43528,7 @@ geea
 guides
 guias
 garantizando
+groups
 body
 beacon
 bat
@@ -48613,6 +48618,7 @@ buscarse
 bccacc
 bierto
 blur
+bytetiles
 scope
 status
 selector
@@ -55549,6 +55555,7 @@ summary
 sintetiza
 sumatorios
 safe
+stay
 vault
 vil
 ver
@@ -68113,6 +68120,7 @@ afilado
 anti
 alfabetico
 aproximaci
+across
 related
 recomendados
 ribbon
@@ -74585,6 +74593,7 @@ resuelvan
 reale
 rayos
 relacionadas
+rows
 notes
 notas
 nuevas
@@ -87560,6 +87569,9 @@ cues
 cocientes
 converge
 cuestiones
+calculation
+collapsing
+collapses
 updated
 un
 universo
@@ -100662,6 +100674,7 @@ GDDDDDDD
 GDDDDDDDTEvvv
 GDDDDDDDDDDDDd
 GEOMETRY
+GROUP
 Convenci
 Creaci
 Commander
@@ -188581,6 +188594,7 @@ leerlos
 lausura
 levaci
 literatura
+logical
 incluyendo
 im
 instalar
@@ -196294,6 +196308,8 @@ impropia
 inconcluyente
 informativa
 intetraci
+into
+inside
 Dependencia
 Dropbox
 Dataview
@@ -220024,6 +220040,7 @@ fueran
 fundamenta
 freely
 functions
+function
 haya
 hace
 hacer
@@ -240195,6 +240212,7 @@ Usas
 Usarlo
 Usarlas
 UuHDDD
+Unlike
 Nombre
 Notas
 No
@@ -280593,6 +280611,7 @@ wVbU
 wvqIK
 wPPP
 woall
+window
 xima
 xeles
 xy
@@ -293100,6 +293119,7 @@ Waaa
 WKwvv
 WFNN
 Write
+What
 JavaScript
 JSON
 JERARQU
@@ -326072,6 +326092,7 @@ kAYb
 kWNs
 kumUKY
 kkkH
+keeps
 Xe
 Xm
 Xu
