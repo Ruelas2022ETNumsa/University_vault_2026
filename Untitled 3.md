@@ -1,59 +1,86 @@
 ---
-cssclasses:
-  - cornell-note
+title: "MAT101-0-Numeros_reales_y_desigualdades-P1"
+galaxy_body: supernova
+subject: MAT101
+semester: 1
+partial: 1
+topic: 
+topic_name: 
+class_parts:
+  - ""
+related_planets: []
+tags: [MAT101, galaxy-supernova, P1]
+date_created: 2026-07-03
+status: completo
 ---
 
-> [!title] Valor absoluto
+# Números reales y desigualdades
 
-> [!cue] ¿Cómo se define formalmente el valor absoluto de un número real?
+--- start-multi-column: cornell-T0-001
 
-**Definición.** Sea $x \in \mathbb{R}$:
+```column-settings
+number of columns: 2
+column size: [60%, 40%]
+border: off
+```
 
-$|x| = \left\{ \begin{array}{rcl} x & ; & x \geq 0 \\ -x & ; & x < 0 \end{array} \right.$
+## Axiomas de cuerpo de los números reales (ℝ)
 
-**Ejemplos:**
-- $|3| = 3$
-- $|-1{,}6| = 1{,}6$
-- $|1{,}5| = \frac{3}{2} = 1{,}5$
+📝 **Desarrollo**
 
-> [!cue] ¿Cuál es la interpretación geométrica de $|x|$?
+Si $a, b, c \in \mathbb{R}$:
 
-En la recta real, $|x|$ representa la **distancia** desde el punto $x$ hasta el origen $0$.
-Más general: $|a - b|$ es la distancia entre $a$ y $b$.
+1. **Clausura**
+    - $a + b \in \mathbb{R}$ y $a \cdot b \in \mathbb{R}$
+2. **Conmutatividad**
+    - $a + b = b + a$
+    - $a \cdot b = b \cdot a$
+3. **Asociatividad**
+    - $(a + b) + c = a + (b + c)$
+    - $(a \cdot b) \cdot c = a \cdot (b \cdot c)$
+4. **Existencia de neutros**
+    - i. $\exists \; 0 \in \mathbb{R} : a + 0 = a$
+        - $0$ es el neutro para la suma "$+$".
+    - ii. $\exists \; 1 \in \mathbb{R} : a \cdot 1 = a$
+        - $1$ es el neutro para la multiplicación "$\times$".
+5. **Existencia de negativos**
+    - $\forall a \in \mathbb{R}, \exists -a \in \mathbb{R} : a + (-a) = 0$
+    - $-a$ es el negativo de $a$.
+6. **Existencia de inversos**
+    - $\forall a \in \mathbb{R} - \{0\}, \exists \; a^{-1} \in \mathbb{R} : a \cdot a^{-1} = 1$
+    - $a^{-1} = \frac{1}{a}$ es el inverso de $a$.
+7. **Distributividad**
+    - $a(b + c) = ab + ac$
 
-Identidad clave: $|x| = \sqrt{x^2}$
+--- end-column ---
 
-> ⚠️ No confundir $\sqrt{x^2} = x$ (solo válido si $x \geq 0$) con la identidad general $\sqrt{x^2} = |x|$.
+🔑 **Claves**
 
-> [!cue] ¿Qué propiedades permiten eliminar las barras en una inecuación?
+Axiomas · Cuerpo · Reales · Neutros · Inversos
 
-**Propiedades.** Sea $x, y \in \mathbb{R}$:
+¿Cuáles son las reglas básicas que rigen la suma y multiplicación? ¿Qué elementos permiten la existencia de operaciones inversas? ¿Cómo se relacionan la suma y el producto aritmético?
 
-1. $|-x| = |x|$
-2. $|x| \geq 0$
-3. $|x \cdot y| = |x| \cdot |y|$
-4. $\left| \dfrac{x}{y} \right| = \dfrac{|x|}{|y|}\,;\; y \neq 0$
-5. $(|x| = a \wedge a > 0) \Rightarrow (x = a \vee x = -a)$
-6. $|x|^2 = x^2$
-7. $\sqrt{x^2} = |x|$
-8. $(|x| < a \wedge a > 0) \Rightarrow -a < x < a$
-9. $|x| > a \Rightarrow (x > a \vee x < -a)$
-10. $|x + y| \leq |x| + |y|$ — Desigualdad triangular
-11. $|x \cdot y| \geq x \cdot y$ — Desigualdad de Schwarz
+$a + (-a) = 0$ $a \cdot a^{-1} = 1, a \neq 0$
 
-**Palabras clave:** valor absoluto · distancia · magnitud · desigualdad triangular
+ver también: Axiomas de orden
 
-> [!summary]
-> El valor absoluto representa la magnitud no negativa de un número real, interpretándose geométricamente como su distancia al origen en la recta numérica.
+No confundir el neutro aditivo ($0$) con el neutro multiplicativo ($1$).
 
-##### Ej. Analizar la Verdad (V) o Falsedad (F) de:
+**C**lausura, **C**onmutativa, **A**sociativa, **N**eutros, **N**egativos, **I**nversos, **D**istributiva (**CCANNID**)
 
-$-6 = -6$ $4 - 10 = 9 - 15$ $2^2 - 2 \cdot 5 \cdot \left(\frac{5}{2}\right) + \left(\frac{5}{2}\right)^2 = 3^2 - 3 \cdot 5 \cdot \left(\frac{5}{2}\right) + \left(\frac{5}{2}\right)^2$ $\left(2 - \frac{5}{2}\right)^2 = \left(3 - \frac{5}{2}\right)^2$ $\sqrt{\left(2 - \frac{5}{2}\right)^2} = \sqrt{\left(3 - \frac{5}{2}\right)^2}$ $|2 - 2,5| = |3 - 2,5|$ $|-0,5| = |0,5|$ $\frac{1}{2} = \frac{1}{2} \quad V$
+--- end-multi-column
+
+> **Resumen:** Definición de los siete axiomas fundamentales que establecen a los números reales como un cuerpo algebraico bajo las operaciones de adición y multiplicación.
 
 > [!note] Complemento (Nivel B)
 > 
-> La definición formal de valor absoluto establece que para todo número real $x$, el valor $|x|$ es el máximo entre $x$ y $-x$; es decir, $|x| = \max{x, -x}$.
+> Según **Apostol (Cap. 0, sección I 3.2)**, el sistema de los números reales se postula como un conjunto de elementos sobre los cuales se definen dos operaciones (adición y multiplicación) que cumplen unívocamente con las propiedades de cuerpo.
 > 
-> **Interpretación geométrica:** En la recta real, $|x|$ representa la **distancia** desde el punto $x$ hasta el origen $0$. De manera más general, la expresión $|a - b|$ representa la distancia entre los puntos $a$ y $b$.
+> **Refuerzo de definiciones formales:**
 > 
-> **Teorema de existencia:** Si $a \geq 0$, entonces $|x| \leq a$ si y solo si $-a \leq x \leq a$. Este teorema es fundamental para la resolución de inecuaciones con valor absoluto, ya que permite transformar una desigualdad con valor absoluto en una desigualdad simultánea (o intervalo) sin barras.
+> 1. **Unicidad de resultados:** La suma $x+y$ y el producto $xy$ están unívocamente determinados por $x$ e $y$.
+> 2. **Distinción de neutros:** El Axioma 4 de Apostol especifica explícitamente que existen dos números reales **distintos**, indicados por $0$ y $1$, tales que $0+x=x$ y $1 \cdot x = x$ para cada número real $x$.
+> 3. **Existencia del recíproco:** Se enfatiza que para cada número real $x \neq 0$ existe un número real $y$ (denotado $x^{-1}$ o $1/x$) tal que $xy = 1$.
+> 4. **Identidad de los elementos:** Apostol aclara en una nota que los números $0$ y $1$ utilizados para definir los negativos e inversos en los axiomas 5 y 6 son exactamente los mismos elementos neutros definidos en el axioma 4.
+
+---

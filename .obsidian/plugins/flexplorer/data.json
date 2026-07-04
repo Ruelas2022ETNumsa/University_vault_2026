@@ -5,6 +5,7 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
+        "Untitled 3 1.md",
         "Untitled 3.md",
         "Untitled 2.md",
         "Untitled 1.md",
@@ -2898,6 +2899,10 @@
       "isHidden": false
     },
     "_app/notebooklm/prompts/MAT101/Untitled Cornell note.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled 3 1.md": {
       "isPinned": false,
       "isHidden": false
     }

@@ -3,16 +3,9 @@ cssclasses:
   - cornell-note
 ---
 
-<!-- ============================================================
-     EJEMPLOS VARIADOS — Cornell Note Obsidian Plugin
-     Estructura: [!title] | [!cue] | [!summary]
-     Cada bloque [!title] inicia una "página" nueva.
-     ============================================================ -->
-
-
-<!-- ──────────────────────────────────────────────
-     EJEMPLO 1 — Texto plano (párrafos bajo cues)
-     ────────────────────────────────────────────── -->
+---
+---
+---
 
 > [!title] Ejemplo 1 · Texto plano
 
@@ -35,11 +28,11 @@ Se aplica cuando una función está compuesta dentro de otra.
 
 
 ---
+---
+---
 
 
-<!-- ──────────────────────────────────────────────
-     EJEMPLO 2 — Listas bajo cues
-     ────────────────────────────────────────────── -->
+
 
 > [!title] Ejemplo 2 · Listas
 
@@ -63,11 +56,9 @@ Se aplica cuando una función está compuesta dentro de otra.
 
 
 ---
-
-
-<!-- ──────────────────────────────────────────────
-     EJEMPLO 3 — Fórmulas / LaTeX
-     ────────────────────────────────────────────── -->
+---
+---
+---
 
 > [!title] Ejemplo 3 · Fórmulas LaTeX
 
@@ -93,12 +84,9 @@ $\int_a^b f(x)\,dx = F(b) - F(a)$
 
 
 ---
-
-
-<!-- ──────────────────────────────────────────────
-     EJEMPLO 4 — Múltiples páginas en un archivo
-     (segundo [!title] dentro del mismo .md)
-     ────────────────────────────────────────────── -->
+---
+---
+---
 
 > [!title] Ejemplo 4 · Página 2 en el mismo archivo
 
@@ -117,16 +105,18 @@ Si $\int f$ diverge, entonces $\int g$ también diverge.
 
 
 ---
-
-
-<!-- ──────────────────────────────────────────────
-     EJEMPLO 5 — Cues como preguntas de repaso
-     (uso con Review Mode del plugin)
-     ────────────────────────────────────────────── -->
+---
+---
+---
 
 > [!title] Ejemplo 5 · Modo Repaso (Review Mode)
 
-> [!cue] ¿Qué condición necesaria tiene un extremo local?
+> [!cue] ¿Qué 
+> condición 
+> necesaria
+>  tiene 
+> un extremo
+>  local?
 
 $f'(c) = 0$ o $f'(c)$ no existe (punto crítico).
 ⚠️ Es condición necesaria, no suficiente.
@@ -144,4 +134,7 @@ $f'(c) = 0$ o $f'(c)$ no existe (punto crítico).
 3. El mayor valor es el máximo absoluto; el menor, el mínimo.
 
 > [!summary]
-> Los extremos ocurren en puntos críticos; la segunda derivada clasifica si es suficientemente informativa; en cerrados siempre comparar con los extremos del intervalo.
+> Los extremos ocurren en puntos crític
+> os; la segunda derivada clasifica 
+> si es suficientemente informativa; en cerrados siempre comparar con los 
+> extremos del intervalo.
