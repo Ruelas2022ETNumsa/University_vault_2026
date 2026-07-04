@@ -9,7 +9,7 @@ related_notes:
   - "[[_ToDo-system]]"
 tags: [beacon, obsidian, plugins, infraestructura]
 date_created: 2026-06-01
-date_updated: 2026-07-04
+date_updated: 2026-06-02
 status: activo
 ---
 
@@ -24,7 +24,7 @@ status: activo
 
 1. [Completr — Autocompletado de palabras y LaTeX](#1-completr--autocompletado-de-palabras-y-latex)
 2. [Advanced Tables — Edición de tablas](#2-advanced-tables--edición-de-tablas)
-3. [Cornell Notes — Layout Cornell en notas](#3-cornell-notes--layout-cornell-en-notas)
+3. [Multi-Column Markdown — Columnas en notas](#3-multi-column-markdown--columnas-en-notas)
 4. [Commander — Botones personalizados en el ribbon](#4-commander--botones-personalizados-en-el-ribbon)
 5. [File Hider — Ocultar archivos del explorador](#5-file-hider--ocultar-archivos-del-explorador)
 6. [Attachment Management — Renombrar y organizar imágenes pegadas](#6-attachment-management--renombrar-y-organizar-imágenes-pegadas)
@@ -101,58 +101,89 @@ valor absoluto
 
 ---
 
-## 3. Cornell Notes — Layout Cornell en notas
+## 3. Multi-Column Markdown — Columnas en notas
 
-**Plugin:** [bytetiles/obsidian-cornell-notes](https://github.com/bytetiles/obsidian-cornell-notes) — v1.0.2
+**Propósito:** Permite dividir el cuerpo de una nota en columnas visibles en modo lectura y edición (Live Preview). Usado en el vault para el layout Cornell en notas `planet` y `comet`.
 
-**Propósito:** Renderiza el layout Cornell de dos columnas en notas `planet` y `comet`. Reemplaza a Multi-Column Markdown.
+### Sintaxis actual (0.9.x)
 
-**Razón del cambio:** Multi-Column causaba carga lenta en modo lectura y tenía bugs de renderizado frecuentes. Cornell Notes es más liviano, sin bugs conocidos, y soporta nativamente bloques Desmos y TikZJax dentro del layout.
+Text displayed above.
 
-### Sintaxis
+--- start-multi-column: ID-unico
+```column-settings
+number of columns: 2
+column size: [60%, 40%]
+border: off
+```
 
-La sintaxis es idéntica a la ya usada en todo el vault — sin migración de notas existentes.
+Contenido columna izquierda 
 
-````cornell
-::cue
+--- end-column ---
 
-Contenido de la columna izquierda — claves, preguntas, mnemónicos.
+Contenido columna derecha
 
-::note
+--- end-multi-column
 
-Contenido de la columna derecha — desarrollo, definiciones, fórmulas.
+> El ID debe ser único dentro del mismo archivo. Si hay dos bloques en la misma nota usar `cornell-001`, `cornell-002`, etc.
 
-````
+### Layout Cornell para `planet` (teoría)
 
-> 4 backticks para el fence exterior. Si hay bloques de código adentro, usar 3 backticks internos normalmente.
+--- start-multi-column: cornell-0010
+```column-settings
+number of columns: 2
+column size: [60%, 40%]
+border: off
+```
 
-### Títulos de columnas
+## 📝 Desarrollo
 
-Configurables desde **Settings → Cornell Notes**. En el vault están configurados como:
+Contenido principal del subtítulo —
+definiciones, fórmulas, desarrollo.
 
-- Columna izquierda: `🔑 Claves`
-- Columna derecha: `📝 Desarrollo`
+--- end-column ---
 
-No se declaran dentro del bloque de código — se aplican globalmente desde la configuración.
+## 🔑 Claves
 
-### Modos de renderizado
+- Concepto central
+- Condición importante
+- Palabra clave: **X**
 
-Funciona correctamente en los tres modos (probado):
+--- end-multi-column
 
-| Modo | Resultado |
-|---|---|
-| Lectura | ✓ Dos columnas |
-| Escritura (Live Preview) | ✓ Dos columnas |
-| Escritura con vista previa | ✓ Dos columnas |
+> **Resumen:** Idea central del subtítulo en una línea.
 
-### Soporte de bloques dentro del layout
+### Layout Cornell para `comet` (ejercicio)
 
-A diferencia de Multi-Column, este plugin soporta nativamente:
-- Bloques `desmos-graph`
-- Bloques `tikz`
-- Callouts (`> [!note]`, `> [!summary]`)
-- LaTeX (`$...$`)
-- Wikilinks y todo Markdown estándar
+--- start-multi-column: cornell-001
+```column-settings
+number of columns: 2
+column size: [60%, 40%]
+border: off
+```
+
+## 📋 Desarrollo
+
+Paso a paso del ejercicio.
+
+--- end-column ---
+
+## ⚠️ Notas de método
+
+- Justificación del paso clave
+- Error común a evitar
+
+--- end-multi-column
+
+> **Patrón:** Tipo de ejercicio y estrategia de resolución.
+
+
+
+### Reglas
+
+- `border: off` siempre — el vault no usa bordes en columnas.
+- El resumen `>` va **fuera** del bloque, después de `--- end-multi-column`.
+- En modo edición (Live Preview) las columnas se renderizan correctamente. En modo lectura también.
+- Si el bloque no renderiza: `Ctrl+P` → **"Fix Multi-Column Syntax in Current File"**.
 
 ---
 
