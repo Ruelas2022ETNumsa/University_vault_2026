@@ -74,6 +74,12 @@
       "icon": "lucide-link",
       "name": "Open link under cursor to the right",
       "mode": "any"
+    },
+    {
+      "id": "app:open-settings",
+      "icon": "lucide-settings",
+      "name": "Open settings",
+      "mode": "any"
     }
   ],
   "pageHeader": [],

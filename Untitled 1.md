@@ -2,7 +2,7 @@
 
 %%  FEATURE 1 — Sintaxis básica inline  %%
 
-Los números reales forman un cuerpo algebraico bajo suma y multiplicación. %%> Axiomas de cuerpo %%
+Los números reales forman un cuerpo algebraico bajo suma y multiplicación. %%> Axiomas de cuerpo  ^mlq5wm %%
 
 El neutro aditivo es $0$ y el neutro multiplicativo es $1$. %%> ! Distinción clave: $0 \neq 1$ %%
 
@@ -41,8 +41,13 @@ Existe $a^{-1}$ tal que $a \cdot a^{-1} = 1$ para todo $a \neq 0$. %%< Axioma 6 
 %%  FEATURE 5 — Agrupación Method B: Cornell Block (Reading View + PDF safe)  %%
 
 ```cornell
-%%> CCANNID: Clausura · Conmutativa · Asociativa · Neutros · Negativos · Inversos · Distributiva %%
+%%> CCANNID: Clausura · 
+Conmuta
+tiva · Asociativa · Neutros · 
+Negativos · Inversos · Distributiva %%
 Los **7 axiomas de cuerpo** de $\mathbb{R}$:
+
+
 1. Clausura
 2. Conmutatividad
 3. Asociatividad
@@ -54,6 +59,31 @@ Los **7 axiomas de cuerpo** de $\mathbb{R}$:
 
 ---
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 %%  FEATURE 6 — Active Recall con blur ;;  %%
 
 El negativo de $a$ cumple $a + (-a) = 0$. %%> ? ¿Cómo se llama la propiedad que garantiza su existencia? ;; Existencia de negativos — Axioma 5 %%
@@ -64,4 +94,15 @@ El inverso de $a$ es $a^{-1} = \frac{1}{a}$. %%> ? ¿Para qué valores existe $a
 
 %%  FEATURE 7 — Imagen en margen  %%
 
-La recta numérica representa geométricamente a $\mathbb{R}$. %%> img:[[recta_numerica.png]] %%
+La recta numérica representa geométricamente a $\mathbb{R}$. %%> img:[[comfor numbss - copia.png]] %%
+
+
+
+
+asdsad%%< img:[[comfor numbss - copia.png]] %%
+
+
+
+> [!cornell]
+> %%> img:[[comfor numbss - copia.png]] %%
+> La recta numérica representa geométricamente a $\mathbb{R}$.
