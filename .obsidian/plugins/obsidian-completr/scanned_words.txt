@@ -6182,6 +6182,8 @@ tricamente
 trig
 tdee
 transcribirlo
+tomaron
+tomados
 ToDo
 Templater
 Text
@@ -25716,6 +25718,7 @@ PLANES
 Parts
 PTTd
 Pamm
+PRINCIPAL
 del
 date
 de
@@ -31035,6 +31038,7 @@ dhhH
 dakk
 delta
 decreciente
+digitalizaci
 Vault
 Verificar
 Variables
@@ -68067,6 +68071,7 @@ aGmS
 ajyyy
 anillo
 alternas
+adaptaci
 related
 recomendados
 ribbon
@@ -132478,6 +132483,7 @@ OFfff
 Okjmm
 Organizados
 Organizadas
+Obligatoria
 Auto
 Annotator
 Autocompletado
@@ -137689,6 +137695,8 @@ Antiderivatives
 Aplic
 AAAj
 Alembert
+AVISO
+Algunas
 push
 pull
 para
@@ -143667,6 +143675,8 @@ polares
 puros
 practicar
 planas
+pasadas
+preliminar
 min
 mica
 movimiento
@@ -169244,6 +169254,7 @@ elements
 exposici
 expliquen
 evitable
+elaborados
 Motor
 Media
 Mantiene
@@ -176812,6 +176823,8 @@ Minimum
 Maclaurin
 MBLL
 MNNF
+Marcador
+Modificadores
 Lectura
 LaTeX
 Linter
@@ -188450,6 +188463,7 @@ library
 leMX
 lllp
 lahh
+leerlos
 incluyendo
 im
 instalar
@@ -202304,6 +202318,7 @@ Desactualizado
 DFFb
 Dividido
 Derivada
+Depende
 Remotely
 Raz
 Revisa
@@ -209414,6 +209429,7 @@ Redundante
 Reemplazado
 RKii
 RSSe
+RELLENOS
 Hider
 Hace
 Herramientas
