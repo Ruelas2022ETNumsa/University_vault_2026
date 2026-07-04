@@ -375,7 +375,7 @@ No confundir la elevación a una potencia par (requiere base positiva para mante
 
 ---
 
---- start-multi-column: cornell-T0-0060
+--- start-multi-column: cornell-T0-006
 
 ```column-settings
 number of columns: 2
@@ -398,10 +398,10 @@ y=0|#000000
 (-1,0)|label:-1|#000000
 (0,0)|label:0|#000000
 (1,0)|label:1|#000000
-(1.414,0)|label:\sqrt{2}|#000000
+(1.414,0)|label:√2|#000000
 (2,0)|label:2|#000000
 (3,0)|label:3|#000000
-(3.141,0)|label:\pi|#000000
+(3.141,0)|label:π|#000000
 ```
 
 Un intervalo es un subconjunto de la recta real.
@@ -457,9 +457,8 @@ y=0|#000000|DASHED
 (2,0)|#005F73|label:a
 ```
 
-```
+
 - $]-\infty, b[ = \{x \in \mathbb{R} / x < b\}$
-```
 
 ```desmos-graph
 left=-1;right=5;bottom=-1;top=1;
@@ -503,134 +502,18 @@ no confundir $]a, b[$ (notación europea) con $(a, b)$ (notación anglosajona).
 > 
 > Se utiliza la notación $\infty$ (infinito) no como un número, sino como un símbolo para indicar que el conjunto no está acotado en esa dirección.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ---
----
----
-## La recta real intervalos
-
---- start-multi-column: cornell-T0-006
-
-```column-settings
-number of columns: 2
-column size: [60%, 40%]
-border: off
-```
-
-📝 **Desarrollo**
-
-Existe correspondencia biunívoca "uno a uno" entre el conjunto $\mathbb{R}$ y una recta a escala llamada la **recta real**.
-
-```desmos-graph
-left=-5; right=5; bottom=-1; top=1;
-width=320; height=150;
----
-y=0 | #262626
-(-2,0) | label: -2 | #262626
-(-1,0) | label: -1 | #262626
-(0,0) | label: 0 | #262626
-(1,0) | label: 1 | #262626
-(1.414,0) | label: \sqrt{2} | #262626
-(2,0) | label: 2 | #262626
-(2.718,0) | label: e | #262626
-(3,0) | label: 3 | #262626
-(3.141,0) | label: \pi | #262626
-```
-
-- **Un intervalo es un subconjunto de la recta real**
-
-1. **Intervalo cerrado**
-    - $x = [a, b] = {x / a \le x \le b}$
-2. **Intervalo abierto**
-    - $x = ]a, b[ = {x / a < x < b}$
-3. **Intervalo semiabierto**
-    - $x = ]a, b] = {x / a < x \le b}$
-4. **Intervalos infinitos**
-    - $x = [a, +\infty[ = {x / x \ge a}$
-    - $x = ]-\infty, b[ = {x / x < b}$
-
-> [!note] Valores extremos Los puntos $a$ y $b$ se denominan extremos de los intervalos.
-
-```desmos-graph
-left=-1; right=6; bottom=-1; top=5;
-width=320; height=250;
----
-a=1
-b=4
-y=0 | a <= x <= b | #C1121F
-(a,0) | #C1121F
-(b,0) | #C1121F
-(0.2,0) | label: "[a, b]" | #C1121F | hidden
-
-y=1 | a < x < b | #1D4ED8
-(1,1) | open | #1D4ED8
-(4,1) | open | #1D4ED8
-(0.2,1) | label: "]a, b[" | #1D4ED8 | hidden
-
-y=2 | a < x <= b | #059669
-(1,2) | open | #059669
-(b,2) | #059669
-(0.2,2) | label: "]a, b]" | #059669 | hidden
-
-y=3 | x >= a | #D97706
-(a,3) | #D97706
-(0.2,3) | label: "[a, \infty[" | #D97706 | hidden
-
-y=4 | x < b | #7C3AED
-(4,4) | open | #7C3AED
-(0.2,4) | label: "]-\infty, b[" | #7C3AED | hidden
-```
-
---- end-column ---
-
-🔑 **Claves**
-
-Correspondencia biunívoca · Subconjunto · Recta real · Intervalos · Extremos
-
-¿Cómo se relaciona el conjunto de los números reales con la geometría? ¿Cuál es la diferencia notacional y gráfica entre un intervalo abierto y uno cerrado? ¿Qué caracteriza a un intervalo infinito?
-
-${x / a \le x \le b}$
-
-ver también: [[Conjuntos]]
-
-no confundir $]a, b[$ con $(a, b)$ en contextos de puntos del plano.
-
-%%```desmos-graph```%%
 
 
 
---- end-multi-column
 
-> **Resumen:** La recta real es la representación geométrica de $\mathbb{R}$, donde los intervalos son segmentos de recta definidos por sus valores extremos y su inclusión o exclusión.
 
-> [!note] Complemento (Nivel B)
-> 
-> **Definición formal de intervalo:** Un subconjunto $I$ de la recta real $\mathbb{R}$ se denomina **intervalo** si contiene al menos dos números y tiene la propiedad de que, para cualquier par de elementos $x, y \in I$, todo número real $z$ tal que $x < z < y$ también pertenece a $I$.
-> 
-> De acuerdo con Thomas, los intervalos se clasifican según su acotación y la inclusión de sus puntos frontera:
-> 
-> 1. **Intervalos finitos:** Tienen longitud finita $b - a$.
->     - **Cerrado:** Contiene ambos extremos $[a, b]$.
->     - **Abierto:** No contiene los extremos $(a, b)$ o $]a, b[$.
->     - **Semiabierto:** Contiene solo uno de los extremos, ej. $(a, b]$ o $[a, b)$.
-> 2. **Intervalos infinitos:** Se extienden ilimitadamente en una o ambas direcciones.
->     - El conjunto de todos los números reales $\mathbb{R}$ es el intervalo $(-\infty, \infty)$, el cual se considera simultáneamente abierto y cerrado.
+
+
+
+
+
+
 
 
 

@@ -13,5 +13,10 @@
   "vimMode": false,
   "userIgnoreFilters": null,
   "strictLineBreaks": false,
-  "trashOption": "local"
+  "trashOption": "local",
+  "foldHeading": false,
+  "foldIndent": false,
+  "showIndentGuide": true,
+  "smartIndentList": true,
+  "useTab": true
 }

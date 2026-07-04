@@ -12,7 +12,7 @@ border: off
 
 Existe correspondencia biunívoca "uno a uno" entre el conjunto $\mathbb{R}$ y una recta a escala llamada la **recta real**.
 
-```
+```desmos-graph
 left=-5;right=5;bottom=-1;top=1;
 width=320;height=100;
 ---
@@ -32,7 +32,7 @@ Un intervalo es un subconjunto de la recta real.
 1. **Intervalo cerrado**
     - $[a, b] = {x \in \mathbb{R} / a \le x \le b}$
 
-```
+```desmos-graph
 left=-1;right=5;bottom=-1;top=1;
 width=320;height=60;
 ---
@@ -45,7 +45,7 @@ y=0|#000000|DASHED
 2. **Intervalo abierto**
     - $]a, b[ = {x \in \mathbb{R} / a < x < b}$
 
-```
+```desmos-graph
 left=-1;right=5;bottom=-1;top=1;
 width=320;height=60;
 ---
@@ -58,7 +58,7 @@ y=0|#000000|DASHED
 3. **Intervalo semiabierto**
     - $[a, b[ = {x \in \mathbb{R} / a \le x < b}$
 
-```
+```desmos-graph
 left=-1;right=5;bottom=-1;top=1;
 width=320;height=60;
 ---
@@ -71,7 +71,7 @@ y=0|#000000|DASHED
 4. **Intervalos infinitos**
     - $[a, +\infty[ = {x \in \mathbb{R} / x \ge a}$
 
-```
+```desmos-graph
 left=-1;right=5;bottom=-1;top=1;
 width=320;height=60;
 ---
@@ -80,11 +80,11 @@ y=0|#000000|DASHED
 (2,0)|#005F73|label:a
 ```
 
-```
+```desmos-graph
 - $]-\infty, b[ = \{x \in \mathbb{R} / x < b\}$
 ```
 
-```
+```desmos-graph
 left=-1;right=5;bottom=-1;top=1;
 width=320;height=60;
 ---
@@ -109,7 +109,7 @@ ver también: [[Axiomas de orden]]
 
 no confundir $]a, b[$ (notación de corchetes invertidos) con $(a, b)$ (notación de paréntesis).
 
-%%`desmos-graph`%%
+%%```desmos-graph```%%
 
 --- end-multi-column ---
 
