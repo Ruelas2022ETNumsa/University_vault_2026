@@ -1,7 +1,7 @@
 {
-  "showHeader": false,
-  "cueLabel": "Cues / Questions",
-  "noteLabel": "Notes",
+  "showHeader": true,
+  "cueLabel": "🔑 Claves",
+  "noteLabel": "📝 Desarrollo",
   "borderStyle": "solid",
   "borderColor": "",
   "accentBorderThickness": "2pt",

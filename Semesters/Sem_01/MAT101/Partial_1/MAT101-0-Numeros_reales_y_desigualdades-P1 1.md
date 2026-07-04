@@ -184,7 +184,7 @@ Si: $a, b, c, d, x \in \mathbb{R}$
 
 **Hipótesis:** $a + b = a + c$ — **Tesis:** $b = c$
 
-$\begin{array}{rcll}
+$$\begin{array}{rcll}
 b & = & b & (\text{ax. reflexivo}) \\
 & = & b + 0 & (\text{ax. } \exists \text{ neutro}) \\
 & = & b + [a + (-a)] & (\text{ax. } \exists \text{ negativo}) \\
@@ -196,7 +196,7 @@ b & = & b & (\text{ax. reflexivo}) \\
 & = & c + 0 & (\text{ax. } \exists \text{ negativo}) \\
 & = & c & (\text{ax. } \exists \text{ neutro}) \\
 b & = & c & (\text{LQQD})
-\end{array}$
+\end{array}$$
 
 > **Resumen:** Conjunto de 13 teoremas fundamentales derivados de los axiomas de cuerpo que rigen las operaciones algebraicas, incluyendo leyes de cancelación, propiedades del cero y aritmética de fracciones.
 
@@ -497,7 +497,12 @@ y=0|#000000|DASHED
 
 
 
-
+$$\begin{array}{rcll}
+  \text{expr}_1 & = & \text{expr}_2 & (\text{justificación}) \\
+                & = & \text{expr}_3 & (\text{justificación}) \\
+                & \vdots &          &                        \\
+  \text{expr}_1 & = & \text{expr}_n & (\text{LQQD})
+\end{array}$$
 
 
 

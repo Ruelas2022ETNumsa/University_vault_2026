@@ -41,30 +41,17 @@ ESTILO DE TRANSCRIPCIÓN:
 _
 BLOQUES CORNELL:
 Aplicar a subtítulos de teoría: definiciones, axiomas, teoremas, propiedades, procedimientos
-paso a paso Y NOTAS DEL TITULO. NO aplicar a ejemplos resueltos.
+paso a paso. NO aplicar a ejemplos resueltos.
 
 ESTRUCTURA:
---- start-multi-column: cornell-TX-00N
-```
-column-settings
-number of columns: 2
-column size: [60%, 40%]
-border: off
-```
-## [SUBTITULO Y]
-📝 **Desarrollo**
-[transcripción fiel del subtítulo: texto, fórmulas y gráficas]
-ESTRUCTURA DEL BLOQUE DESMOS (si hay graficas en los apuntes):
-```
-desmos-graph (obligatorio)
-left= ;right= ;bottom= ;top= ;
-width= ;height= ;
----
-[ecuaciones con modificadores]
-```
---- end-column ---
 
-🔑 **Claves**
+## [SUBTITULO Y]
+
+````cornell
+
+::cue
+
+[contenido de las claves]
 
 [palabras clave separadas por · ]
 
@@ -78,22 +65,30 @@ width= ;height= ;
 
 [mnemónico — solo si el subtítulo tiene una lista de 5 o más ítems]
 
-%%```desmos-graph```%%
+::note
 
---- end-multi-column ---
+[transcripción fiel del subtítulo: texto, fórmulas y gráficas]
+
+ESTRUCTURA DEL BLOQUE DESMOS (si hay graficas en los apuntes):
+
+```
+desmos-graph (obligatorio)
+left= ;right= ;bottom= ;top= ;
+width= ;height= ;
+---
+[ecuaciones con modificadores]
+[en lables: usar unicode o ascii nunca latex]
+```
+
+````
 
 > **Resumen:** [una línea del subtítulo sin redundancia de otros subtítulos]
 
 REGLAS:
 
-- REVISAR QUE LAS NOTAS DEL TITULO VAN DENTRO DEL BLOQUE CORNELL
-- El título principal del archivo NO va dentro del bloque Cornell.
-- ID secuencial por tema: cornell-T0-001, cornell-T0-002, cornell-T1-001...
+- El subtítulo Y del archivo NO va dentro del bloque Cornell.
 - Gráficas Desmos dentro de Desarrollo: width máximo 320px.
 - TikZJax dentro de Desarrollo: tamaño normal.
-- El bloque comentado %```desmos-graph / %``` en Claves es OBLIGATORIO
-  siempre que haya un bloque Desmos en Desarrollo — sin él Desmos no renderiza.
-- Si no hay Desmos en Desarrollo, omitir el bloque comentado en Claves.
 - Complemento y ejercicios van siempre FUERA del Cornell, después del Resumen.
 _
 NIVELES DE COMPLEMENTO:
@@ -143,9 +138,12 @@ No usar — para separar nombre de fórmula en la misma línea.
 _
 FORMATO MATEMÁTICO:
 Preferir inline $...$. Usar display $$...$$ solo para:
+ESTR
+
+
+
 - Desarrollo multilínea, matrices, sistemas, resultado principal de teorema.
 Multilínea CON \begin{array}{rcl}...\end{array}.
-Separador de línea siempre \\\\ (doble).
 Nunca convertir símbolos a texto si el manuscrito los presenta simbólicamente.
 _
 NOTAS AL MARGEN Y DEL MANUSCRITO:
