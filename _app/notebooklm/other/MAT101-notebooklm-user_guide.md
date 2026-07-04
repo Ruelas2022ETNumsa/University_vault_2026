@@ -50,6 +50,12 @@ De apuntesTX, muéstrame el subtítulo "[nombre exacto]" HASTA "[nombre del sigu
 
 > Si no se indica HASTA, el notebook se detiene al detectar cualquier nuevo título. Si se indica HASTA, transcribe todo lo que hay entre ambos sin incluir el segundo.
 
+**Con rango (de un subtítulo hasta otro) y graficas para que no olvide incluirlas:**
+
+```
+De apuntesT0, muéstrame el subtítulo "" HASTA "" con complemento nivel [B] no olvides todas las graficas con el bloque de codigo desmos/TikzJax
+```
+
 **Niveles de complemento:**
 
 | Nivel | Qué agrega |

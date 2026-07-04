@@ -24,9 +24,9 @@ column size: [60%, 40%]
 border: off
 ```
 
-📝 **Desarrollo**
-
 ## Axiomas de cuerpo de los números reales (ℝ)
+
+📝 **Desarrollo**
 
 Si $a, b, c \in \mathbb{R}$:
 
@@ -68,7 +68,7 @@ No confundir el neutro aditivo ($0$) con el neutro multiplicativo ($1$).
 
 **C**lausura, **C**onmutativa, **A**sociativa, **N**eutros, **N**egativos, **I**nversos, **D**istributiva (**CCANNID**)
 
---- end-multi-column ---
+--- end-multi-column
 
 > **Resumen:** Definición de los siete axiomas fundamentales que establecen a los números reales como un cuerpo algebraico bajo las operaciones de adición y multiplicación.
 
@@ -93,9 +93,9 @@ column size: [60%, 40%]
 border: off
 ```
 
-📝 **Desarrollo**
-
 ## Axiomas de igualdad
+
+📝 **Desarrollo**
 
 Si $a, b, c \in \mathbb{R}$:
 
@@ -133,7 +133,7 @@ ver también: Axiomas de cuerpo
 
 No confundir una Identidad (válida para todo el dominio) con una Ecuación (válida para valores específicos).
 
---- end-multi-column ---
+--- end-multi-column
 
 > **Resumen:** Establece las propiedades lógicas de la igualdad (reflexiva, simétrica y transitiva) y clarifica que la resta y división son extensiones de la suma y multiplicación por el opuesto/recíproco.
 
@@ -157,9 +157,9 @@ column size: [60%, 40%]
 border: off
 ```
 
-📝 **Desarrollo**
-
 ## Teoremas sobre números reales (ℝ)
+
+📝 **Desarrollo**
 
 Si: $a, b, c, d, x \in \mathbb{R}$
 
@@ -210,7 +210,7 @@ ver también: Axiomas de cuerpo
 
 No confundir la ley de cancelación de la suma con la del producto; esta última requiere estrictamente que el factor sea distinto de cero ($a \neq 0$).
 
---- end-multi-column ---
+--- end-multi-column
 
 > **Resumen:** Conjunto de 13 teoremas fundamentales derivados de los axiomas de cuerpo que rigen las operaciones algebraicas, incluyendo leyes de cancelación, propiedades del cero y aritmética de fracciones.
 
@@ -234,9 +234,9 @@ column size: [60%, 40%]
 border: off
 ```
 
-📝 **Desarrollo**
-
 ## Axiomas de orden de los números reales  (ℝ)
+
+📝 **Desarrollo**
 
 Si $a, b \in \mathbb{R}$:
 
@@ -285,7 +285,7 @@ ver también: Axiomas de cuerpo
 
 No confundir la relación de orden ($<, >$) con la pertenencia a un subconjunto ($\mathbb{R}^+$). El orden se deriva de la positividad.
 
---- end-multi-column ---
+--- end-multi-column
 
 > **Resumen:** Los axiomas de orden postulan la existencia de un subconjunto de números positivos ($\mathbb{R}^+$) cerrado bajo la suma y el producto, permitiendo definir las relaciones de desigualdad y la estructura de cuerpo ordenado para $\mathbb{R}$.
 
@@ -309,9 +309,9 @@ column size: [60%, 40%]
 border: off
 ```
 
-📝 **Desarrollo**
-
 ## Teoremas de desigualdades e inecuaciones
+
+📝 **Desarrollo**
 
 Si $a, b, c, d \in \mathbb{R}$:
 
@@ -357,7 +357,7 @@ No confundir la elevación a una potencia par (requiere base positiva para mante
 
 **S**uma, **A**dición, **M**ultiplicación (pos/neg), **R**egla de signos, **C**uadrado, **U**nidad, **I**nversos, **E**levación (2/3)
 
---- end-multi-column ---
+--- end-multi-column
 
 > **Resumen:** Conjunto de 12 leyes operativas que rigen el comportamiento de las desigualdades ante operaciones aritméticas y potencias en el conjunto de los números reales.
 
@@ -481,13 +481,13 @@ Correspondencia biunívoca · Recta real · Intervalo · Subconjunto · Extremos
 
 Definición de intervalo: $I \subseteq \mathbb{R}$
 
-ver también: [[Axiomas de orden]]
+ver también: Axiomas de orden
 
 no confundir $]a, b[$ (notación europea) con $(a, b)$ (notación anglosajona).
 
 %%```desmos-graph```%%
 
---- end-multi-column ---
+--- end-multi-column
 
 > **Resumen:** Los intervalos son subconjuntos de la recta real que representan todos los números comprendidos entre dos extremos, cuya naturaleza (abierta o cerrada) depende de la inclusión o exclusión de dichos puntos.
 
@@ -551,7 +551,8 @@ $$\begin{array}{rcl} a + b & = & a + c \ (-a) + (a + b) & = & (-a) + (a + c) \ [
 
 
 
-
+##### cosas por hacer
+en las guias colocar desmos-graph para que notebooklm lo haga tambien
 
 
 ---
