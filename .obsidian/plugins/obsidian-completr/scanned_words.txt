@@ -6187,6 +6187,7 @@ tomados
 tiende
 transcribio
 totalidad
+theorems
 ToDo
 Templater
 Text
@@ -13150,6 +13151,7 @@ Their
 TuHZ
 TulS
 Transcribe
+TRIGONOMETRY
 Sistema
 Sync
 Save
@@ -20248,6 +20250,7 @@ Ssssq
 SSSH
 Semiabierto
 Subconjunto
+Soluciones
 Plugins
 Pendientes
 Plugin
@@ -31050,6 +31053,8 @@ delegada
 desarollo
 denominan
 diferenciabilidad
+diferencial
+differentiable
 Vault
 Verificar
 Variables
@@ -37202,6 +37207,7 @@ VidlMc
 Viven
 Variaciones
 VARIADOS
+Vectores
 galaxy
 gina
 genes
@@ -55537,6 +55543,7 @@ sera
 subdividen
 summary
 sintetiza
+sumatorios
 vault
 vil
 ver
@@ -68099,6 +68106,8 @@ acotaci
 anything
 afilado
 anti
+alfabetico
+aproximaci
 related
 recomendados
 ribbon
@@ -74570,6 +74579,7 @@ resolverse
 resuelvan
 reale
 rayos
+relacionadas
 notes
 notas
 nuevas
@@ -87544,6 +87554,7 @@ cssclasses
 cues
 cocientes
 converge
+cuestiones
 updated
 un
 universo
@@ -100645,6 +100656,7 @@ GjIR
 GDDDDDDD
 GDDDDDDDTEvvv
 GDDDDDDDDDDDDd
+GEOMETRY
 Convenci
 Creaci
 Commander
@@ -106092,6 +106104,7 @@ Cerrado
 CASI
 Corresponden
 Cues
+Crecimiento
 Instalados
 Instalado
 Instalar
@@ -113174,6 +113187,7 @@ Infiere
 Indeterminaciones
 Inecuaci
 Identidades
+Indice
 Funci
 File
 Fase
@@ -119357,6 +119371,7 @@ Fractions
 FUENTES
 Fccc
 Falsedad
+FORMULAS
 Estado
 Excalidraw
 EPUBs
@@ -126335,6 +126350,7 @@ Elevaci
 Excluye
 Evitable
 Esencial
+EXERCISES
 Obsidian
 OmniSearch
 Ocultar
@@ -137759,6 +137775,9 @@ AVISO
 Algunas
 Aquellos
 Another
+Aproximaci
+ALGEBRA
+ANSWERS
 push
 pull
 para
@@ -143744,6 +143763,7 @@ positividad
 procamente
 paragraphs
 point
+polinomios
 min
 mica
 movimiento
@@ -196263,6 +196283,7 @@ incrementales
 impropia
 inconcluyente
 informativa
+intetraci
 Dependencia
 Dropbox
 Dataview
@@ -209534,6 +209555,7 @@ Refuerzo
 Representan
 Review
 Repaso
+Revert
 Hider
 Hace
 Herramientas
@@ -214471,6 +214493,7 @@ Hamm
 HFFF
 HIIALL
 HNNFAA
+HINTS
 filtrar
 formato
 faltantes
@@ -219987,6 +220010,7 @@ fall
 fueran
 fundamenta
 freely
+functions
 haya
 hace
 hacer
@@ -246863,6 +246887,7 @@ Niveles
 Notebook
 Numeros
 Nros
+NUMBERED
 originales
 observatory
 oficial
