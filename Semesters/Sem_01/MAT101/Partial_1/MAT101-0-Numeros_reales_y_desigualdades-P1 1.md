@@ -21,17 +21,15 @@ status: completo
 ````cornell
 ::cue
 
-Axiomas · Cuerpo · Reales · Neutros · Inversos
-
-¿Cuáles son las reglas básicas que rigen la suma y multiplicación? ¿Qué elementos permiten la existencia de operaciones inversas? ¿Cómo se relacionan la suma y el producto aritmético?
-
-$a + (-a) = 0$ $a \cdot a^{-1} = 1, a \neq 0$
-
-ver también: Axiomas de orden
-
-No confundir el neutro aditivo ($0$) con el neutro multiplicativo ($1$).
-
-**C**lausura, **C**onmutativa, **A**sociativa, **N**eutros, **N**egativos, **I**nversos, **D**istributiva (**CCANNID**)
+Axiomas · Cuerpo · Reales · Neutros · Inversos<br>
+¿Cuáles son las reglas básicas que rigen la suma y multiplicación?<br>
+¿Qué elementos permiten la existencia de operaciones inversas?<br>
+¿Cómo se relacionan la suma y el producto aritmético?<br>
+$a + (-a) = 0$ $a \cdot a^{-1} = 1, a \neq 0$<br>
+ver también: Axiomas de orden<br>
+No confundir el neutro aditivo ($0$) con el neutro multiplicativo ($1$).<br>
+**C**lausura, **C**onmutativa, **A**sociativa, **N**eutros, **N**egativos, **I**nversos,
+**D**istributiva (**CCANNID**)
 
 ::note
 
@@ -62,7 +60,7 @@ Si $a, b, c \in \mathbb{R}$:
 ````
 
 
-> **Resumen:** Definición de los siete axiomas fundamentales que establecen a los números reales como un cuerpo algebraico bajo las operaciones de adición y multiplicación.
+> [!summary] Definición de los siete axiomas fundamentales que establecen a los números reales como un cuerpo algebraico bajo las operaciones de adición y multiplicación.
 
 > [!note] Complemento (Nivel B)
 > 
@@ -77,25 +75,20 @@ Si $a, b, c \in \mathbb{R}$:
 
 ---
 
+## Axiomas de igualdad
 
 ````cornell
 ::cue
 
-Igualdad · Ecuación · Identidad · Transitividad
-
-¿Qué propiedades rigen la relación de equivalencia en $\mathbb{R}$? ¿Cuál es la diferencia técnica entre una ecuación y una identidad? ¿Cómo se definen formalmente la resta y la división?
-
-$(a = b \land b = c) \Rightarrow a = c$
-
-ver también: Axiomas de cuerpo
-
+Igualdad · Ecuación · Identidad · Transitividad<br>
+¿Qué propiedades rigen la relación de equivalencia en $\mathbb{R}$?<br>
+¿Cuál es la diferencia técnica entre una ecuación y una identidad?<br>
+¿Cómo se definen formalmente la resta y la división?<br>
+$(a = b \land b = c) \Rightarrow a = c$<br>
+ver también: Axiomas de cuerpo<br>
 No confundir una Identidad (válida para todo el dominio) con una Ecuación (válida para valores específicos).
 
 ::note
-
-## Axiomas de igualdad
-
-📝 **Desarrollo**
 
 Si $a, b, c \in \mathbb{R}$:
 
@@ -120,7 +113,7 @@ Si $a, b, c \in \mathbb{R}$:
 - $x^2 - 4 = (x - 2)(x + 2) \Rightarrow$ Identidad $\to$ verdad para toda $x \in \mathbb{R}$.
 ````
 
-> **Resumen:** Establece las propiedades lógicas de la igualdad (reflexiva, simétrica y transitiva) y clarifica que la resta y división son extensiones de la suma y multiplicación por el opuesto/recíproco.
+> [!summary] Establece las propiedades lógicas de la igualdad (reflexiva, simétrica y transitiva) y clarifica que la resta y división son extensiones de la suma y multiplicación por el opuesto/recíproco.
 
 > [!note] Complemento (Nivel B)
 > 
@@ -134,23 +127,20 @@ Si $a, b, c \in \mathbb{R}$:
 
 ---
 
+## Teoremas sobre números reales (ℝ)
 
 ````cornell
 ::cue
 
-Teoremas · Simplificación · Elemento cero · Opuestos · Recíprocos
-
-¿Cómo se demuestra formalmente la ley de cancelación? ¿Qué ocurre al multiplicar cualquier número real por cero? ¿Cuáles son las propiedades de los signos en la multiplicación?
-
-$a \cdot b = 0 \Rightarrow (a = 0 \lor b = 0)$ $a + b = a + c \Rightarrow b = c$
-
-ver también: Axiomas de cuerpo
-
+Teoremas · Simplificación · Elemento cero · Opuestos · Recíprocos<br>
+¿Cómo se demuestra formalmente la ley de cancelación?<br>
+¿Qué ocurre al multiplicar cualquier número real por cero?<br>
+¿Cuáles son las propiedades de los signos en la multiplicación?<br>
+$a \cdot b = 0 \Rightarrow (a = 0 \lor b = 0)$ $a + b = a + c \Rightarrow b = c$<br>
+ver también: Axiomas de cuerpo<br>
 No confundir la ley de cancelación de la suma con la del producto; esta última requiere estrictamente que el factor sea distinto de cero ($a \neq 0$).
 
 ::note
-
-## Teoremas sobre números reales (ℝ)
 
 Si: $a, b, c, d, x \in \mathbb{R}$
 
@@ -188,7 +178,7 @@ b & = & b & (\text{ax. reflexivo}) \\
 b & = & c & (\text{LQQD})
 \end{array}$$
 
-> **Resumen:** Conjunto de 13 teoremas fundamentales derivados de los axiomas de cuerpo que rigen las operaciones algebraicas, incluyendo leyes de cancelación, propiedades del cero y aritmética de fracciones.
+> [!summary] Conjunto de 13 teoremas fundamentales derivados de los axiomas de cuerpo que rigen las operaciones algebraicas, incluyendo leyes de cancelación, propiedades del cero y aritmética de fracciones.
 
 > [!note] Complemento (Nivel B)
 > 
@@ -202,25 +192,21 @@ b & = & c & (\text{LQQD})
 
 ---
 
-
+## Axiomas de orden de los números reales  (ℝ)
 
 ````cornell
 
 ::cue
 
-Orden · Positividad · Tricotomía · Reales positivos
-
-¿Cuáles son las condiciones para que la suma y el producto conserven el orden? ¿Qué significa que un conjunto sea "ordenado"? ¿Cómo se define formalmente un número negativo en función de los positivos?
-
-$a > 0 \Leftrightarrow a \in \mathbb{R}^+$ $x < y \Leftrightarrow y - x \in \mathbb{R}^+$
-
-ver también: Axiomas de cuerpo
-
+Orden · Positividad · Tricotomía · Reales positivos<br>
+¿Cuáles son las condiciones para que la suma y el producto conserven el orden?<br>
+¿Qué significa que un conjunto sea "ordenado"?<br>
+¿Cómo se define formalmente un número negativo en función de los positivos?<br>
+$a > 0 \Leftrightarrow a \in \mathbb{R}^+$ $x < y \Leftrightarrow y - x \in \mathbb{R}^+$<br>
+ver también: Axiomas de cuerpo<br>
 No confundir la relación de orden ($<, >$) con la pertenencia a un subconjunto ($\mathbb{R}^+$). El orden se deriva de la positividad.
 
 ::note
-
-## Axiomas de orden de los números reales  (ℝ)
 
 Si $a, b \in \mathbb{R}$:
 
@@ -257,7 +243,7 @@ Si $a, b \in \mathbb{R}$:
 
 ````
 
-> **Resumen:** Los axiomas de orden postulan la existencia de un subconjunto de números positivos ($\mathbb{R}^+$) cerrado bajo la suma y el producto, permitiendo definir las relaciones de desigualdad y la estructura de cuerpo ordenado para $\mathbb{R}$.
+> [!summary] Los axiomas de orden postulan la existencia de un subconjunto de números positivos ($\mathbb{R}^+$) cerrado bajo la suma y el producto, permitiendo definir las relaciones de desigualdad y la estructura de cuerpo ordenado para $\mathbb{R}$.
 
 > [!note] Complemento (Nivel B)
 > 
@@ -271,26 +257,22 @@ Si $a, b \in \mathbb{R}$:
 
 ---
 
-
+## Teoremas de desigualdades e inecuaciones
 
 ````cornell
 ::cue
 
-Desigualdad · Inecuación · Regla de signos · Inversos
+Desigualdad · Inecuación · Regla de signos · Inversos<br>
 
-¿Cómo afecta multiplicar por un número negativo a una desigualdad? ¿Qué condiciones deben cumplirse para que el producto de dos reales sea positivo? ¿Cómo se comportan los inversos multiplicativos en una relación de orden?
-
-$a > b \land c < 0 \Rightarrow ac < bc$ $0 < a < b \Rightarrow \frac{1}{a} > \frac{1}{b}$
-
-ver también: Axiomas de orden
-
-No confundir la elevación a una potencia par (requiere base positiva para mantener el orden) con la potencia impar (mantiene el orden siempre).
-
+¿Cómo afecta multiplicar por un número negativo a una desigualdad?<br>
+¿Qué condiciones deben cumplirse para que el producto de dos reales sea positivo?<br>
+¿Cómo se comportan los inversos multiplicativos en una relación de orden?<br>
+$a > b \land c < 0 \Rightarrow ac < bc$ $0 < a < b \Rightarrow \frac{1}{a} > \frac{1}{b}$<br>
+ver también: Axiomas de orden<br>
+No confundir la elevación a una potencia par (requiere base positiva para mantener el orden) con la potencia impar (mantiene el orden siempre).<br>
 **S**uma, **A**dición, **M**ultiplicación (pos/neg), **R**egla de signos, **C**uadrado, **U**nidad, **I**nversos, **E**levación (2/3)
 
 ::note
-
-## Teoremas de desigualdades e inecuaciones
 
 Si $a, b, c, d \in \mathbb{R}$:
 
@@ -324,7 +306,7 @@ Si $a, b, c, d \in \mathbb{R}$:
 
 ````
 
-> **Resumen:** Conjunto de 12 leyes operativas que rigen el comportamiento de las desigualdades ante operaciones aritméticas y potencias en el conjunto de los números reales.
+> [!summary] Conjunto de 12 leyes operativas que rigen el comportamiento de las desigualdades ante operaciones aritméticas y potencias en el conjunto de los números reales.
 
 > [!note] Complemento (Nivel B)
 > 
@@ -340,26 +322,21 @@ Si $a, b, c, d \in \mathbb{R}$:
 
 ---
 
+## La recta real e intervalos
 
 ````cornell
 
 ::cue
 
-Correspondencia biunívoca · Recta real · Intervalo · Subconjunto · Extremos
-
-¿Qué significa que exista una correspondencia "uno a uno" entre $\mathbb{R}$ y la recta? ¿Cómo se representa simbólicamente un intervalo infinito? ¿Qué diferencia gráfica hay entre un extremo abierto y uno cerrado?
-
-Definición de intervalo: $I \subseteq \mathbb{R}$
-
-ver también: Axiomas de orden
-
-no confundir $]a, b[$ (notación europea) con $(a, b)$ (notación anglosajona).
-
-%%```desmos-graph```%%
+Correspondencia biunívoca · Recta real · Intervalo · Subconjunto · Extremos<br>
+¿Qué significa que exista una correspondencia "uno a uno" entre $\mathbb{R}$ y la recta?<br>
+¿Cómo se representa simbólicamente un intervalo infinito?<br>
+¿Qué diferencia gráfica hay entre un extremo abierto y uno cerrado?<br>
+Definición de intervalo: $I \subseteq \mathbb{R}$<br>
+ver también: Axiomas de orden<br>
+no confundir $]a, b[$ (notación europea) con $(a, b)$ (notación anglosajona).<br>
 
 ::note
-
-## La recta real e intervalos
 
 Existe correspondencia biunívoca "uno a uno" entre el conjunto $\mathbb{R}$ y una recta a escala llamada la **recta real**.
 
@@ -447,7 +424,7 @@ y=0|#000000|DASHED
 
 ````
 
-> **Resumen:** Los intervalos son subconjuntos de la recta real que representan todos los números comprendidos entre dos extremos, cuya naturaleza (abierta o cerrada) depende de la inclusión o exclusión de dichos puntos.
+> [!summary] Los intervalos son subconjuntos de la recta real que representan todos los números comprendidos entre dos extremos, cuya naturaleza (abierta o cerrada) depende de la inclusión o exclusión de dichos puntos.
 
 > [!note] Complemento (Nivel B)
 > 
@@ -462,25 +439,96 @@ y=0|#000000|DASHED
 
 ---
 
+## Valor absoluto
+
+```cornell
+::cue
+valor absoluto · distancia · módulo · magnitud<br>
+¿Cómo se define el valor absoluto de un número real de forma analítica?<br>
+¿Qué interpretación geométrica tiene el valor absoluto en la recta real?<br>
+¿Cuáles son las propiedades fundamentales que rigen las operaciones con barras de valor absoluto?<br>
+$|x| = \sqrt{x^2}$<br>
+ver también: intervalos<br>
+no confundir $|x| < a$ con la unión de intervalos.<br>
+mnemónico: **S**implemente **P**ara **M**i **D**iversión **I**ntenté **C**omprar **R**opa **M**uy **M**oderna, **T**rajes **S**ueltos. (Signos, Positividad, Multiplicación, División, Igualdad, Cuadrado, Raíz, Menor, Mayor, Triangular, Schwarz).
 
 
+::note
+**Definición**
+Sea $x \in \mathbb{R}$
+$|x| = \text{Valor absoluto de } x$
 
+$$|x| = \begin{cases} x \;; & x \ge 0 \\ -x \;; & x < 0 \end{cases}$$
 
+**Ejemplos**
+- $|3| = 3$
+- $|1,5| = \frac{3}{2} = 1,5$
+- $|-1,6| = 1,6$
+etc.
 
+**Propiedades**
+Si $x, y \in \mathbb{R}$
 
+1. **Signo opuesto**
+	- $|-x| = |x|$
+2. **No negatividad**
+	- $|x| \ge 0$
+3. **Producto**
+	- $|xy| = |x||y|$
+4. **Cociente**
+	- $\left| \dfrac{x}{y} \right| = \dfrac{|x|}{|y|} \; ; \; y \ne 0$
+5. **Igualdad**
+	- $(|x| = a \wedge a > 0) \implies (x = a \vee x = -a)$
+6. **Cuadrado**
+	- $|x^2| = |x|^2 = x^2$
+7. **Raíz cuadrada**
+	- $\sqrt{x^2} = |x|$
+8. **Menor que (intervalo)**
+	- $(|x| \le a \wedge a > 0) \implies (-a \le x \le a)$
+9. **Mayor que (unión)**
+	- $|x| \ge a \implies (x \ge a \vee x \le -a)$
+10. **Desigualdad triangular**
+	- $|x + y| \le |x| + |y|$
+11. **Desigualdad de Schwarz**
+	- $|xy| \ge xy$
 
+> [!note] Nota manuscrita
+> En el desarrollo se observa la importancia de la propiedad $\sqrt{x^2} = |x|$ para evitar la contradicción $2 = 3$.
 
+```
 
+> [!summary] El valor absoluto define la magnitud no negativa de un número real, representable como su distancia al origen y sujeta a propiedades algebraicas de orden y desigualdad.
 
-
-
-
+##### Ej. Analizar la V o F de:
 $$\begin{array}{rcll}
-  \text{expr}_1 & = & \text{expr}_2 & (\text{justificación}) \\
-                & = & \text{expr}_3 & (\text{justificación}) \\
-                & \vdots &          &                        \\
-  \text{expr}_1 & = & \text{expr}_n & (\text{LQQD})
+  -6 & = & -6 \\
+  4 - 10 & = & 9 - 15 \\
+  2^2 - 2 \cdot 2 \cdot \dfrac{5}{2} + \left(\dfrac{5}{2}\right)^2 & = & 3^2 - 2 \cdot 3 \cdot \frac{5}{2} + \left(\dfrac{5}{2}\right)^2 & (\text{completando cuadrados}) \\
+  \left( 2 - \dfrac{5}{2} \right)^2 & = & \left( 3 - \dfrac{5}{2} \right)^2 \\
+  \sqrt{\left( 2 - \dfrac{5}{2} \right)^2} & = & \sqrt{\left( 3 - \dfrac{5}{2} \right)^2} \\
+  \left| 2 - \dfrac{5}{2} \right| & = & \left| 3 - \dfrac{5}{2} \right| & (\text{aplicando prop. 7}) \\
+  \left| -\dfrac{1}{2} \right| & = & \left| \dfrac{1}{2} \right| \\
+  \frac{1}{2} & = & \frac{1}{2} & (V)
 \end{array}$$
+
+
+
+
+> [!note] Complemento (Nivel B)
+> 
+> De acuerdo con la bibliografía consultada, se refuerzan los siguientes conceptos:
+> 
+> 1. **Definición Geométrica:** El valor absoluto de un número real $a$ se define formalmente como la distancia desde $a$ hasta 0 en la recta numérica real. Dado que las distancias nunca son negativas, $|a| \ge 0$ para cualquier número.
+> 2. **Distancia entre puntos:** Para cualesquiera dos números reales $x$ e $y$, el valor $|x - y|$ representa la distancia geométrica entre los puntos $x$ e $y$ sobre la recta real.
+> 3. **Propiedad de la raíz:** Es un error común simplificar $\sqrt{x^2} = x$ sin considerar el signo. La definición correcta es $\sqrt{x^2} = |x|$, asegurando un resultado no negativo independientemente del signo de la base original.
+> 4. **Desigualdad Triangular:** Esta propiedad establece que el valor absoluto de la suma de dos números no puede exceder la suma de sus valores absolutos ($|a + b| \le |a| + |b|$). La igualdad se cumple únicamente si $a$ y $b$ tienen el mismo signo o si alguno es cero.
+
+
+
+
+
+
+
 
 
 
@@ -507,12 +555,6 @@ $$\begin{array}{rcl} a + b & = & a + c \ (-a) + (a + b) & = & (-a) + (a + c) \ [
 3. demostraciones deben estar fuera de cornell? notebooklm las transcribio dentro
 
 4. NOTEBOOKLM olvida la estructura de los array no coloca el doble `\\` para el salto de linea creo que esta tarea sera delegada a claude corregir los arrays
-
-5. en cornell en desarollo entrego este bloque desmos
-   %`desmos-graph %y=0|#444 %(-2,0)|label:-2|#444 %(-1,0)|label:-1|#444 %(0,0)|label:0|#444 %(0.5,0)|label:1/2|#444 %(1,0)|label:1|#444 %(1.414,0)|label:\sqrt{2}|#444 %(2,0)|label:2|#444 %(2.718,0)|label:e|#444 %(3,0)|label:3|#444 %(3.141,0)|label:\pi|#444 %`
-
-
-
 
 ##### cosas por hacer
 en las guias colocar desmos-graph para que notebooklm lo haga tambien
