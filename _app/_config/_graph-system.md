@@ -10,7 +10,7 @@ related_notes:
   - "[[_ToDo-system]]"
 tags: [beacon, graph, desmos, tikzjax, neutrino, infraestructura]
 date_created: 2026-05-30
-date_updated: 2026-06-25
+date_updated: 2026-07-03
 status: activo
 ---
 
@@ -20,8 +20,8 @@ status: activo
 > Convención de notas: [[_note-system]]
 > Sistema Mindmap (Excalidraw): [[_mindmap-system]]
 > Pendientes: [[_ToDo-system]]
-> Guía Desmos: [[MAT101_desmos]]
-> Guía TikZJax: [[tikzjax_guide-legacy]]
+> Guía Desmos: [[guides/MAT101/MAT101_desmos]]
+> Guía TikZJax: [[guides/MAT101/MAT101_TikzJax]]
 
 ---
 
@@ -204,6 +204,6 @@ galaxy-links
 [[_note-system]]
 [[_mindmap-system]]
 [[MAT101_desmos]]
-[[tikzjax_guide-legacy]]
+[[guides/MAT101/MAT101_TikzJax]]
 [[_ToDo-system]]
 %%

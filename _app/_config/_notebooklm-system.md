@@ -175,7 +175,7 @@ Archivos en desuso pendientes de revisión. Cada uno debe resolverse como:
 | Archivo | Contenido | Estado |
 |---|---|---|
 | `other/MAT101-notebooklm-user_guide.md` | Guía personal de uso — modos y ejemplos MAT101 | activo |
-| `other/tikzjax_guide.md` | Guía TikZJax genérica | pendiente revisar — posible legacy |
+| `general/tikzjax_guide-legacy.md` | Guía TikZJax genérica | legacy — renombrado y movido a `general/` |
 
 ### Guías de uso personal (`ETNXXX-notebooklm-user_guide.md`)
 

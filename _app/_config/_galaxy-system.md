@@ -10,9 +10,11 @@ related_notes:
   - "[[_template-system]]"
   - "[[_graph-system]]"
   - "[[_ToDo-system]]"
+  - "[[_TABnote-system]]"
+  - "[[_notebooklm-system]]"
 tags: [beacon, galaxy, infraestructura]
 date_created: 2026-05-28
-date_updated: 2026-06-25
+date_updated: 2026-07-03
 status: activo
 ---
 
