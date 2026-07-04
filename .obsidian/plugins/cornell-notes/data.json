@@ -1,0 +1,10 @@
+{
+  "showHeader": true,
+  "cueLabel": "Cues / Questions",
+  "noteLabel": "Notes",
+  "borderStyle": "dotted",
+  "borderColor": "",
+  "accentBorderThickness": "2pt",
+  "rowBorderThickness": "1pt",
+  "cueWidth": 30
+}

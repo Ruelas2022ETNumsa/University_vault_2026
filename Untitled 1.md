@@ -187,25 +187,6 @@ No confundir el neutro aditivo ($0$) con el neutro multiplicativo ($1$).
 
 ---
 
-
-::cue
-What is a window function?
-::note
-A calculation across related rows **without collapsing** them.
-
-Unlike GROUP BY, all original rows stay visible.
-
-::cue
-What does PARTITION BY do?
-::note
-Splits rows into logical groups inside the window.
-
-| PARTITION BY | GROUP BY       |
-|--------------|----------------|
-| keeps rows   | collapses rows |
-
----
-
 %% ============================================================
    bytetiles/obsidian-cornell-notes — Ejemplos
    Sintaxis: ````cornell  ::cue  ::note

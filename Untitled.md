@@ -18,11 +18,6 @@ Splits rows into logical groups inside the window.
 
 ---
 
-%% ============================================================
-   bytetiles/obsidian-cornell-notes — Ejemplos
-   Sintaxis: ````cornell  ::cue  ::note
-   Solo Reading View
-   ============================================================ %%
 
 # bytetiles · Cornell Notes — Ejemplos
 
@@ -31,6 +26,9 @@ Splits rows into logical groups inside the window.
 ````cornell
 ::cue
 ¿Qué es el valor absoluto?
+asd
+asdasd
+asd
 ::note
 Medida no negativa de un número real. Geométricamente es la distancia al origen.
 
@@ -72,6 +70,27 @@ Desigualdades
 ::cue
 Axiomas de cuerpo de $\mathbb{R}$
 ::note
+
+
+
+---
+
+---
+
+
+✅ Correcto — con configuración:
+
+```desmos-graph
+left=-6; right=6; bottom=-1; top=1;
+width=350; height=120;
+---
+y=x^2|#005F73
+```
+
+✅ Correcto — sin configuración, el `---` igual va:
+
+
+
 | # | Axioma | Fórmula |
 |---|--------|---------|
 | 1 | Clausura | $a+b \in \mathbb{R}$ |
@@ -122,3 +141,20 @@ LaTeX
 \left| x \right| = \sqrt{x^2}
 ```
 ````
+
+
+
+
+
+
+
+
+
+---
+---
+
+
+::note
+Medida no negativa de un número real. Geométricamente es la distancia al origen.
+
+$|x| = \left\{ \begin{array}{rcl} x & ; & x \geq 0 \\ -x & ; & x < 0 \end{array} \right.$
