@@ -1,5 +1,5 @@
 ---
-title: "MAT101-0-Numeros_reales_y_desigualdades-P1"
+title: "Numeros_reales_y_desigualdades"
 galaxy_body: supernova
 subject: MAT101
 semester: 1
@@ -7,7 +7,16 @@ partial: 1
 topic: T00
 topic_name: numeros_reales_y_desigualdades
 class_parts: []
-related_planets: []
+related_planets:
+  - "[[MAT101-T00-axiomas_cuerpo]]"
+  - "[[MAT101-T00-axiomas_igualdad]]"
+  - "[[MAT101-T00-teoremas_reales]]"
+  - "[[MAT101-T00-axiomas_orden]]"
+  - "[[MAT101-T00-teoremas_desigualdades]]"
+  - "[[MAT101-T00-recta_real_intervalos]]"
+  - "[[MAT101-T00-valor_absoluto]]"
+  - "[[MAT101-T00-inecuaciones_lineales]]"
+  - "[[MAT101-T00-metodo_signos]]"
 tags: [MAT101, galaxy-supernova, P1]
 date_created: 2026-07-03
 status: completo
@@ -916,5 +925,14 @@ $C_s = ]-3, -1] \cup [0, 2[$
 
 %%
 galaxy-links
-
+[[MAT101-T00-star]]
+[[MAT101-T00-axiomas_cuerpo]]
+[[MAT101-T00-axiomas_igualdad]]
+[[MAT101-T00-teoremas_reales]]
+[[MAT101-T00-axiomas_orden]]
+[[MAT101-T00-teoremas_desigualdades]]
+[[MAT101-T00-recta_real_intervalos]]
+[[MAT101-T00-valor_absoluto]]
+[[MAT101-T00-inecuaciones_lineales]]
+[[MAT101-T00-metodo_signos]]
 %%

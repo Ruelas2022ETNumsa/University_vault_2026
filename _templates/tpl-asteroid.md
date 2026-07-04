@@ -16,7 +16,7 @@ if (isPDF) {
 } else {
   topic = await tp.system.prompt("Tema (ej: T01_joint-density)");
   const title = await tp.system.prompt("Nombre del archivo SIN extensión");
-  path = `Semesters/Sem_0${sem}/${subject}/Partial_${partial}/Topic_${topic}/${title}`;
+  path = `Semesters/Sem_0${sem}/${subject}/Partial_${partial}/${topic}/${title}`;
   await tp.file.move(path);
 }
 %>---

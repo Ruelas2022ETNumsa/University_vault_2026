@@ -15,6 +15,14 @@ orbiting:
   - "[[MAT101-T00-recta_real_intervalos]]"
   - "[[MAT101-T00-valor_absoluto]]"
   - "[[MAT101-T00-inecuaciones_lineales]]"
+  - "[[MAT101-T00-metodo_signos]]"
+comets:
+  - "[[MAT101-T00-ej_inec_x4_9x2]]"
+  - "[[MAT101-T00-ej_inec_racional_fracciones]]"
+  - "[[MAT101-T00-ej_inec_valabs_fraccion]]"
+  - "[[MAT101-T00-ej_inec_valabs_cubo]]"
+  - "[[MAT101-T00-ej_inec_valabs_mayor]]"
+  - "[[MAT101-T00-ej_inec_irracional]]"
 tags: [MAT101, galaxy-star, P1, T00]
 date_created: 2026-07-04
 status: activo
@@ -22,6 +30,7 @@ status: activo
 
 ## T00 — Números reales y desigualdades
 
+### Planets
 - [[MAT101-T00-axiomas_cuerpo]]
 - [[MAT101-T00-axiomas_igualdad]]
 - [[MAT101-T00-teoremas_reales]]
@@ -30,6 +39,15 @@ status: activo
 - [[MAT101-T00-recta_real_intervalos]]
 - [[MAT101-T00-valor_absoluto]]
 - [[MAT101-T00-inecuaciones_lineales]]
+- [[MAT101-T00-metodo_signos]]
+
+### Comets
+- [[MAT101-T00-ej_inec_x4_9x2]]
+- [[MAT101-T00-ej_inec_racional_fracciones]]
+- [[MAT101-T00-ej_inec_valabs_fraccion]]
+- [[MAT101-T00-ej_inec_valabs_cubo]]
+- [[MAT101-T00-ej_inec_valabs_mayor]]
+- [[MAT101-T00-ej_inec_irracional]]
 
 %%
 galaxy-links
@@ -41,4 +59,11 @@ galaxy-links
 [[MAT101-T00-recta_real_intervalos]]
 [[MAT101-T00-valor_absoluto]]
 [[MAT101-T00-inecuaciones_lineales]]
+[[MAT101-T00-metodo_signos]]
+[[MAT101-T00-ej_inec_x4_9x2]]
+[[MAT101-T00-ej_inec_racional_fracciones]]
+[[MAT101-T00-ej_inec_valabs_fraccion]]
+[[MAT101-T00-ej_inec_valabs_cubo]]
+[[MAT101-T00-ej_inec_valabs_mayor]]
+[[MAT101-T00-ej_inec_irracional]]
 %%

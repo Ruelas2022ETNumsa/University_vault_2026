@@ -4,7 +4,7 @@ const sem = await tp.system.prompt("Semestre (ej: 8)");
 const partial = await tp.system.prompt("Parcial (1, 2 o 3)");
 const topic = await tp.system.prompt("Tema (ej: T01_joint-density)");
 const title = await tp.system.prompt("Nombre del archivo (sin extensión)");
-const path = `Semesters/Sem_0${sem}/${subject}/Partial_${partial}/Topic_${topic}/${title}`;
+const path = `Semesters/Sem_0${sem}/${subject}/Partial_${partial}/${topic}/${title}`;
 await tp.file.move(path);
 %>---
 title: "<% tp.file.title %>"

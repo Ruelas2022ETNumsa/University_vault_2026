@@ -15,11 +15,11 @@ status: resuelto
 ## Enunciado
 Resolver la inecuación
 
-$$(x^2+x)^{1/2} < 6^{1/2}$$
+$$\sqrt{x^2+x} < \sqrt{6}$$
 
 ## Desarrollo
 
-Esta inecuación irracional requiere que el radicando sea no negativo para existir en el campo real.
+> [!note] Esta inecuación irracional requiere que el radicando sea no negativo para existir en el campo real.
 
 **1. Elevando al cuadrado:** 
 
@@ -31,7 +31,11 @@ x^2 + x - 6 & < & 0 & (\text{transposición})\\
 
 Solución preliminar: $]-3, 2[$.
 
-**2. Condición de existencia:** $x^2 + x \geq 0$ $$\begin{array}{rcll} x(x+1) & \geq & 0 & (\text{factor común}) \end{array}$$ Puntos críticos: $x = 0$, $x = -1$.
+**2. Condición de existencia:** $x^2 + x \geq 0$ 
+
+$$\begin{array}{rcll}
+x(x+1) & \geq & 0 & (\text{factor común})
+\end{array}$$ Puntos críticos: $x = 0$, $x = -1$.
 
 ```desmos-graph
 left=-5; right=4; bottom=-1; top=1;
@@ -43,6 +47,8 @@ y=0 | #005F73
 x <= -1 | #BB3E03
 x >= 0 | #BB3E03
 ```
+
+## Solución
 
 **3. Intersección final:**
 
@@ -60,21 +66,6 @@ y=0 | #005F73
 ```
 
 $C_s = ]-3, -1] \cup [0, 2[$
-
-> [!summary] Resolución de inecuaciones con valor absoluto mediante unión de condiciones disjuntas y control de restricciones de dominio en funciones raíz.
-
-> [!note] Complemento (Nivel B)
-> 
-> La resolución de inecuaciones con valor absoluto del tipo $|x| \geq a$ se fundamenta en la **Propiedad de Disyunción**:
-> 
-> - $|x| \geq a \iff x \geq a \lor x \leq -a$.
-> 
-> En el caso de inecuaciones irracionales como $\sqrt{f(x)} < \sqrt{g(x)}$, es imperativo establecer el conjunto de valores de $x$ para los cuales la expresión tiene sentido. Formalmente, se debe cumplir el sistema:
-> 
-> 1. $f(x) \geq 0$ (Condición de existencia).
-> 2. $g(x) > f(x)$ (Resolución algebraica). No es necesario pedir $g(x) \geq 0$ por separado, ya que al ser mayor que $f(x)$ (que ya es $\geq 0$), se cumple implícitamente.
-
-
 
 %%
 galaxy-links

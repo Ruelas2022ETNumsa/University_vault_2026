@@ -2884,10 +2884,9 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "Topic_T00-numeros_reales",
         "T00-numeros_reales",
         "MAT101-0-Numeros_reales_y_desigualdades-P1 1.md",
-        "MAT101-0-Numeros_reales_y_desigualdades-P1.md"
+        "MAT101-T00-P1-Numeros_reales_y_desigualdades.md"
       ]
     },
     "Untitled 3.md": {
@@ -2911,10 +2910,6 @@
       "isHidden": false
     },
     "Untitled 5.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semesters/Sem_01/MAT101/Partial_1/MAT101-0-Numeros_reales_y_desigualdades-P1.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -2992,18 +2987,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Semesters/Sem_01/MAT101/Partial_1/Topic_T00-numeros_reales": {
-      "isPinned": false,
-      "isHidden": false,
-      "customOrder": [
-        "MAT101-T00-ej_inec_x4_9x2.md"
-      ],
-      "sortOrder": "custom"
-    },
-    "Semesters/Sem_01/MAT101/Partial_1/Topic_T00-numeros_reales/MAT101-T00-ej_inec_x4_9x2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Semesters/MAT101-null": {
       "isPinned": false,
       "isHidden": false,
@@ -3037,6 +3020,10 @@
       "isHidden": false
     },
     "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-ej_inec_irracional.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_01/MAT101/Partial_1/MAT101-T00-P1-Numeros_reales_y_desigualdades.md": {
       "isPinned": false,
       "isHidden": false
     }

@@ -6189,6 +6189,7 @@ transcribio
 totalidad
 theorems
 them
+tools
 ToDo
 Templater
 Text
@@ -25734,6 +25735,7 @@ PRINCIPAL
 Positividad
 PARTITION
 Polos
+Planets
 del
 date
 de
@@ -55569,6 +55571,7 @@ sujeta
 surge
 subjects
 semesters
+session
 vault
 vil
 ver
@@ -87599,6 +87602,7 @@ consultada
 colocarse
 concepts
 connects
+capitulo
 updated
 un
 universo
@@ -106154,6 +106158,7 @@ Cues
 Crecimiento
 Celdas
 Cuadrada
+Comets
 Instalados
 Instalado
 Instalar
@@ -143823,6 +143828,7 @@ paragraphs
 point
 polinomios
 polos
+photonType
 min
 mica
 movimiento
@@ -253584,6 +253590,7 @@ omitida
 olvida
 oscilaci
 only
+orbits
 junto
 json
 jer
