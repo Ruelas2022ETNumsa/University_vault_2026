@@ -41,7 +41,7 @@ ESTILO DE TRANSCRIPCIÓN:
 _
 BLOQUES CORNELL:
 Aplicar a subtítulos de teoría: definiciones, axiomas, teoremas, propiedades, procedimientos
-paso a paso. NO aplicar a ejemplos resueltos.
+paso a paso. NO aplicar a ejemplos resueltos, ej , demostraciones.
 
 ESTRUCTURA:
 
@@ -51,18 +51,12 @@ ESTRUCTURA:
 cornell
 ::cue
 
-[contenido de las claves]
-
-[palabras clave separadas por · ]
-
-[2-4 preguntas centrales que el subtítulo responde, según su complejidad]
-
-[fórmula o definición clave en inline $...$ — nunca display $$]
-
-[conexiones: "ver también: X" — solo si hay un subtítulo relacionado evidente]
-
-[errores comunes: "no confundir X con Y" — solo si aplica]
-
+[contenido de las claves]<br>
+[palabras clave separadas por · ]<br>
+[2-4 preguntas centrales que el subtítulo responde, según su complejidad]<br>
+[fórmula o definición clave en inline $...$ — nunca display $$]<br>
+[conexiones: "ver también: X" — solo si hay un subtítulo relacionado evidente jamas usar corchetes solo palabras ]<br>
+[errores comunes: "no confundir X con Y" — solo si aplica]<br>
 [mnemónico — solo si el subtítulo tiene una lista de 5 o más ítems]
 
 ::note
@@ -77,8 +71,6 @@ left= ;right= ;bottom= ;top= ;
 width= ;height= ;
 ---
 [ecuaciones con modificadores][color defalut #005F73]
-[en lables: usar unicode o ascii nunca latex]
-
 ```
 TIKZJAX:
 ```tikz
@@ -91,12 +83,16 @@ TIKZJAX:
 
 ````
 
-> **Resumen:** [una línea del subtítulo sin redundancia de otros subtítulos]
+>[!summary]( resumen una línea del subtítulo sin redundancia de otros subtítulos)
+
+##### [aca vienen los ejemplos, demostraciones y ejerccicios resueltos]
 
 REGLAS:
+- usar la etiqueta de `[!summary]` y no resumen en el bloque de resumen
 - en la esctructura de cornell debe colocarse `cornell`antes de ::cue de forma obligatoria
 - El subtítulo Y del archivo NO va dentro del bloque Cornell.
 - Gráficas Desmos width máximo 320px.
+- Graficas desmos el uso de label es por ejemplo : (2, 0) | label:(d-b)/(a-c)
 - en la esctructura de los bloques desmos debe colocarse `desmos-graph`antes de left= ... de forma obligatoria
 - TikZJax tamaño normal.
 - Complemento, ejercicios y demostraciones van siempre FUERA del Cornell, después del Resumen.
@@ -190,7 +186,7 @@ GRÁFICOS — elegir en orden:
 Nunca inventar gráficos ni mezclar herramientas.
 _
 EJEMPLOS RESUELTOS:
-##### Ej. enunciado en la misma línea. Display si multilínea.
+##### Ej. enunciado en la misma línea. Display si multilínea (debajo del bloque de resumen).
 Conservar numeración de partes. No agregar pasos que no estén en el manuscrito.
 Al final de un ejercicio, agregar > [!note] solo si hay una observación
 relevante o conexión importante — no por defecto.

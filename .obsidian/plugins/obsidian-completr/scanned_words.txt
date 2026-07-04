@@ -31060,6 +31060,10 @@ diferenciabilidad
 diferencial
 differentiable
 does
+determinaci
+difieren
+delimitados
+dividen
 Vault
 Verificar
 Variables
@@ -68124,6 +68128,8 @@ alfabetico
 aproximaci
 across
 antemano
+aislamiento
+arbitrario
 related
 recomendados
 ribbon
@@ -87580,6 +87586,7 @@ collapsing
 collapses
 caracteriz
 consultada
+colocarse
 updated
 un
 universo
@@ -100683,6 +100690,7 @@ GDDDDDDDTEvvv
 GDDDDDDDDDDDDd
 GEOMETRY
 GROUP
+Graficas
 Convenci
 Creaci
 Commander
@@ -169392,6 +169400,7 @@ extienden
 europea
 extendida
 exceder
+esctructura
 Motor
 Media
 Mantiene
@@ -196323,6 +196332,7 @@ informativa
 intetraci
 into
 inside
+indefinici
 Dependencia
 Dropbox
 Dataview

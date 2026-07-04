@@ -53,7 +53,7 @@ Si $a, b, c \in \mathbb{R}$:
     - $-a$ es el negativo de $a$.
 6. **Existencia de inversos**
     - $\forall a \in \mathbb{R} - \{0\}, \exists \; a^{-1} \in \mathbb{R} : a \cdot a^{-1} = 1$
-    - $a^{-1} = \frac{1}{a}$ es el inverso de $a$.
+    - $a^{-1} = \dfrac{1}{a}$ es el inverso de $a$.
 7. **Distributividad**
     - $a(b + c) = ab + ac$
 
@@ -123,7 +123,7 @@ Si $a, b, c \in \mathbb{R}$:
 > 
 > 1. **Propiedad de sustitución:** Aunque no se lista explícitamente en el manuscrito, es un axioma implícito de la igualdad: si $a = b$, entonces $a$ puede ser reemplazado por $b$ en cualquier proposición matemática sin alterar el valor de verdad de la misma.
 > 2. **Unicidad de operaciones:** Apostol enfatiza que la suma $x + y$ y el producto $xy$ están **unívocamente determinados** por sus elementos. Esto garantiza que si $a = b$, entonces $a + c = b + c$ y $ac = bc$.
-> 3. **Definiciones derivadas:** La resta y la división no se consideran operaciones independientes en la axiomática pura, sino que se definen estrictamente a través de la existencia de **opuestos** ($a - b := a + (-b)$) y **recíprocos** ($\frac{a}{b} := a \cdot b^{-1}$), tal como sugiere la nota del manuscrito.
+> 3. **Definiciones derivadas:** La resta y la división no se consideran operaciones independientes en la axiomática pura, sino que se definen estrictamente a través de la existencia de **opuestos** ($a - b := a + (-b)$) y **recíprocos** ($\dfrac{a}{b} := a \cdot b^{-1}$), tal como sugiere la nota del manuscrito.
 
 ---
 
@@ -267,7 +267,7 @@ Desigualdad · Inecuación · Regla de signos · Inversos<br>
 ¿Cómo afecta multiplicar por un número negativo a una desigualdad?<br>
 ¿Qué condiciones deben cumplirse para que el producto de dos reales sea positivo?<br>
 ¿Cómo se comportan los inversos multiplicativos en una relación de orden?<br>
-$a > b \land c < 0 \Rightarrow ac < bc$ $0 < a < b \Rightarrow \frac{1}{a} > \frac{1}{b}$<br>
+$a > b \land c < 0 \Rightarrow ac < bc$ $0 < a < b \Rightarrow \dfrac{1}{a} > \dfrac{1}{b}$<br>
 ver también: Axiomas de orden<br>
 No confundir la elevación a una potencia par (requiere base positiva para mantener el orden) con la potencia impar (mantiene el orden siempre).<br>
 **S**uma, **A**dición, **M**ultiplicación (pos/neg), **R**egla de signos, **C**uadrado, **U**nidad, **I**nversos, **E**levación (2/3)
@@ -300,7 +300,7 @@ Si $a, b, c, d \in \mathbb{R}$:
 11. **Elevación al cubo**
     - $a > b \Rightarrow a^3 > b^3$
 12. **Inversos multiplicativos**
-    - $0 < a < b \Rightarrow \frac{1}{a} > \frac{1}{b}$
+    - $0 < a < b \Rightarrow \dfrac{1}{a} > \dfrac{1}{b}$
 
 
 
@@ -462,7 +462,7 @@ $$|x| = \begin{cases} x \;; & x \ge 0 \\ -x \;; & x < 0 \end{cases}$$
 
 **Ejemplos**
 - $|3| = 3$
-- $|1,5| = \frac{3}{2} = 1,5$
+- $|1,5| = \dfrac{3}{2} = 1,5$
 - $|-1,6| = 1,6$
 etc.
 
@@ -508,7 +508,7 @@ $$\begin{array}{rcll}
   \sqrt{\left( 2 - \dfrac{5}{2} \right)^2} & = & \sqrt{\left( 3 - \dfrac{5}{2} \right)^2} \\
   \left| 2 - \dfrac{5}{2} \right| & = & \left| 3 - \dfrac{5}{2} \right| & (\text{aplicando prop. 7}) \\
   \left| -\dfrac{1}{2} \right| & = & \left| \dfrac{1}{2} \right| \\
-  \frac{1}{2} & = & \frac{1}{2} & (V)
+  \dfrac{1}{2} & = & \dfrac{1}{2} & (V)
 \end{array}$$
 
 > [!note] Complemento (Nivel B)
@@ -560,7 +560,7 @@ x > 2 \{y=0\} | #005F73
 (2, 0) | label: (d-b)/(a-c)
 ```
 
-$C_s = \left] \frac{d - b}{a - c}, +\infty \right[ = \left\{ x \in \mathbb{R} \mid x > \frac{d - b}{a - c} \right\}$
+$C_s = \left] \dfrac{d - b}{a - c}, +\infty \right[ = \left\{ x \in \mathbb{R} \mid x > \dfrac{d - b}{a - c} \right\}$
 
 > [!note] El manuscrito presenta el despeje asumiendo que el coeficiente resultante es positivo para mantener el sentido de la desigualdad.
 
@@ -598,7 +598,7 @@ $C_s=\left[\dfrac{1}{4},+\infty\right[  =\left\{\,x\in\mathbb{R}\;\middle|\;x\ge
 > 1. **Suma y resta**: Si $a \leq b$, entonces $a + c \leq b + c$ para cualquier $c \in \mathbb{R}$.
 > 2. **Multiplicación por positivo**: Si $a \leq b$ y $c > 0$, entonces $ac \leq bc$.
 > 3. **Multiplicación por negativo**: Si $a \leq b$ y $c < 0$, entonces $ac \geq bc$. El sentido de la desigualdad **se invierte**.
-> 4. **Recíprocos**: Si $a$ y $b$ son positivos y $a \leq b$, entonces $\frac{1}{a} \geq \frac{1}{b}$.
+> 4. **Recíprocos**: Si $a$ y $b$ son positivos y $a \leq b$, entonces $\dfrac{1}{a} \geq \dfrac{1}{b}$.
 
 ---
 
@@ -606,75 +606,102 @@ $C_s=\left[\dfrac{1}{4},+\infty\right[  =\left\{\,x\in\mathbb{R}\;\middle|\;x\ge
 
 ````cornell
 ::cue
-Generalización del método<br>
-inecuaciones · ceros · polos · puntos críticos · intervalos · valor de prueba<br>
-¿En qué consiste el método de signos?<br>
-¿Cómo se determinan los intervalos de prueba?<br>
-¿Qué criterio se usa para incluir un intervalo en el conjunto solución?<br>
-$\frac{P(x)}{Q(x)} \gtreqless 0$<br>
-ver también: inecuaciones lineales
+
+Generalización de inecuaciones<br>
+inecuaciones · método de signos · puntos críticos · intervalos<br>
+¿Cuál es el procedimiento sistemático para resolver inecuaciones de grado superior? ¿Cómo se determina la pertenencia de un intervalo al conjunto solución?<br>
+$\dfrac{P(x)}{Q(x)} \gtrless 0$<br>
+ver también: inecuaciones de primer grado<br>
+no confundir: puntos críticos con soluciones finales sin verificar la restricción del denominador
 
 ::note
-### Generalizando
 
-Para resolver inecuaciones de grado superior o racionales, se recomiendan los siguientes pasos:
+Generalizando.
 
-1. **Formar comparación con cero (0)**
-	- Con $+ / (-)$ : $\frac{P(x)}{Q(x)} \gtreqless 0$
+**Forma general**
+- $M_{(x)} \gtrless N_{(x)}$
 
-2. **Factorizar totalmente $P$ y $Q$**
-	- $\frac{(x - a_1)(x - a_2) \dots (x - a_k)}{(x - b_1)(x - b_2) \dots (x - b_k)} \gtreqless 0$ $\quad \dots (2)$
-
-3. **Representar en la recta real**
-	- Los valores $a_1, a_2, \dots, b_n$ quedan definidos en $n$ intervalos: $I_1, I_2, I_3, \dots, I_t$.
-
+**Pasos para resolver**
+1. Formar comparación con cero ($0$) con $+ / (-)$
+	- $\dfrac{P(x)}{Q(x)} > 0$
+2. Factorizar totalmente $P$ y $Q$:
+	- $\dfrac{(x - a_1)(x - a_2)\dots(x - a_k)}{(x - b_1)(x - b_2)\dots(x - b_n)} > 0$
+3. Se representan en la recta real $a_i, \dots, b_j$ quedando definidos $n$ intervalos $I_1, I_2, I_3 \dots I_n$.
 ```desmos-graph
-left=-5; right=5; bottom=-1; top=1;
-width=320; height=80;
+left=-5;right=5;bottom=-1;top=1;
+width=320;height=120;
 ---
-y=0 | #005F73
-(-3, 0) | #005F73
-(0, 0) | #005F73
-(3, 0) | #005F73
-"a_1" (-3, 0) | label: bottom
-"b_1" (0, 0) | label: bottom
-"a_2" (3, 0) | label: bottom
-"I_1" (-4, 0.5) | label: #005F73
-"I_2" (-1.5, 0.5) | label: #005F73
-"I_3" (1.5, 0.5) | label: #005F73
-"I_4" (4, 0.5) | label: #005F73
+y=0|#000000
+(-4,0.3)|label:I_1|hidden|#005F73
+(-1,0.3)|label:I_2|hidden|#005F73
+(1.5,0.3)|label:I_3|hidden|#005F73
+(4,0.3)|label:I_4|hidden|#005F73
+(-2.5,0)|open|#C1121F|label:a_1
+(0,0)|open|#C1121F|label:b_1
+(3,0)|open|#C1121F|label:a_2
 ```
-
-4. **Prueba de signos**
-	- De $I_1$ se toma un valor (no extremo) y se prueba el signo reemplazando en $(2)$:
-	- $\frac{(+)(-)(+) \dots (-)}{(-)(+)(+) \dots (+)} \gtreqless 0$
-
-5. **Resultan 2 posibilidades**
-	- $1^\circ$ Si $(+) > 0 \rightarrow V$ (verdad): se concluye que $I_1 \in C_s$.
-	- $2^\circ$ Si $(-) > 0 \rightarrow F$ (falsedad): se concluye que $I_1 \notin C_s$.
-
-6. **Repetición**
-	- Se repite el proceso para $I_2, I_3, \text{etc.}$
-
-7. **Conjunto Solución**
-	- El $C_s$ buscado se da por la unión ($\cup$) de los intervalos que cumplen la desigualdad.
+4. **Prueba de signos:**
+	- De $I_1$ se toma un valor (¡no extremo!) y se prueba signos reemplazando en el paso 2.
+	- $\dfrac{(+)(-)\dots(+)}{(-)(+)\dots(+)} = \dfrac{(-)}{(+)} > 0$
+5. Resultan 2 posibilidades:
+	- **$1^\circ$ Si $(+) > 0 \rightarrow V$ (verdad):** Se concluye que $I_i \in C_s$.
+	- **$2^\circ$ Si $(-) > 0 \rightarrow F$ (falsedad):** Se concluye que $I_i \notin C_s$.
+	- Se repite el procedimiento para $I_2, I_3$, etc.
+6. El $C_s$ buscado se da por la unión ($\cup$).
 
 ````
 
-> [!summary](Algoritmo sistemático para resolver inecuaciones mediante la factorización de polinomios, determinación de puntos críticos y testeo de intervalos en la recta real.)
+> [!summary] Método algorítmico para resolver inecuaciones no lineales mediante la determinación de signos en intervalos delimitados por los ceros del numerador y denominador.
 
 > [!note] Complemento (Nivel B)
 > 
-> Según James Stewart, este procedimiento se conoce como el **método de los puntos de prueba** para desigualdades no lineales. Los puntos donde los factores se anulan se denominan **números críticos** o valores de frontera.
+> El **Método de Intervalos** (o de signos) se fundamenta en la propiedad de que una función racional solo puede cambiar de signo en los puntos donde su numerador es cero (raíces) o su denominador es cero (puntos de indefinición).
 > 
-> Una propiedad fundamental omitida en el manuscrito es que los signos de los intervalos suelen alternarse siempre que los factores tengan potencias impares. Si un factor aparece con una potencia par, el signo no cambia al cruzar ese punto crítico.
+> Según Stewart, estos puntos críticos dividen la recta real en intervalos de prueba. Dado que los polinomios son funciones continuas en sus dominios, el signo de la expresión se mantiene constante dentro de cada intervalo. Por ello, basta con elegir un **valor de prueba** arbitrario dentro de cada región para validar si todo el intervalo satisface la desigualdad original.
 > 
-> De acuerdo con el Apéndice A de Stewart, al resolver inecuaciones racionales, los valores que anulan el denominador ($Q(x) = 0$) **nunca** deben incluirse en el conjunto solución (siempre serán intervalos abiertos en esos puntos), ya que la división por cero no está definida.
+> **Propiedad de los puntos críticos:**
+> 
+> - Los ceros provenientes del denominador ($Q(x)=0$) **nunca** se incluyen en el conjunto solución (siempre generan intervalos abiertos), independientemente de si la desigualdad incluye el signo igual ($\geq, \leq$), para evitar la división por cero.
 
 
 
 
+---
 
+---
+
+
+De los apuntes de la materia (**apuntesT0**), se presenta la resolución del ejercicio de inecuaciones con condiciones, finalizando así el tema de Números Reales antes del inicio de Funciones Reales.
+
+##### ej. Resolución de inecuación con condiciones
+
+La condición: $$\begin{array}{rcccl} x(x+1) & \ge & 0 \ \end{array}$$
+
+Evaluación por puntos críticos: $x = 0$ $x = -1$
+
+Prueba de signos: Si $x = 1 \implies (+)(+) = (+) \ge 0 \quad (\text{Verdadera})$ Si $x = -1, 0 \implies 0 \ge 0 \quad (\text{Verdadera})$
+
+> [!important] ¡Toda condición siempre se debe $\cap$ (intersecar) con el $C_s$ hallado!
+
+$$C_s = ]-3, -1] \cup [0, 2[$$
+
+```
+left=-5; right=5; bottom=-1.5; top=1.5;
+width=320; height=100;
+---
+y=0|-3<x<=-1|#005F73
+y=0|0<=x<2|#005F73
+(-3,0)|open|#005F73
+(-1,0)|#005F73
+(0,0)|#005F73
+(2,0)|open|#005F73
+```
+
+> [!summary] Determinación del conjunto solución final mediante la intersección de los intervalos obtenidos con las condiciones de restricción impuestas por la inecuación original.
+
+> [!note] Complemento (Nivel B)
+> 
+> **Definición de resolución de desigualdades** Resolver una desigualdad significa determinar el conjunto de números $x$ para los que la desigualdad es verdadera. A este conjunto resultante se le denomina **conjunto solución** ($C_s$). En problemas complejos, el $C_s$ final surge de la intersección ($\cap$) entre la solución algebraica del cuerpo de la inecuación y las restricciones o condiciones de existencia definidas por los términos de la misma.
 
 
 
