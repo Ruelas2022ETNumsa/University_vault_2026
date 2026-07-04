@@ -15,7 +15,6 @@ orbiting:
   - "[[MAT101-T00-recta_real_intervalos]]"
   - "[[MAT101-T00-valor_absoluto]]"
   - "[[MAT101-T00-inecuaciones_lineales]]"
-  - "[[MAT101-T00-metodo_signos]]"
 tags: [MAT101, galaxy-star, P1, T00]
 date_created: 2026-07-04
 status: activo
@@ -31,7 +30,6 @@ status: activo
 - [[MAT101-T00-recta_real_intervalos]]
 - [[MAT101-T00-valor_absoluto]]
 - [[MAT101-T00-inecuaciones_lineales]]
-- [[MAT101-T00-metodo_signos]]
 
 %%
 galaxy-links
@@ -43,5 +41,4 @@ galaxy-links
 [[MAT101-T00-recta_real_intervalos]]
 [[MAT101-T00-valor_absoluto]]
 [[MAT101-T00-inecuaciones_lineales]]
-[[MAT101-T00-metodo_signos]]
 %%

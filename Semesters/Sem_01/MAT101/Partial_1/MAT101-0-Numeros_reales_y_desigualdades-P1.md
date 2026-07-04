@@ -668,7 +668,11 @@ $x^4 \geq 9x^2$
 
 Desarrollo transcrito del manuscrito: $$\begin{array}{rcll} x^2(x^2-9) & \geq & 0 & (\text{transposición y factorización})\\x^2(x-3)(x+3) & \geq & 0 & (\text{diferencia de cuadrados})\\(x-0)^2(x-3)(x+3) & \geq & 0 & (\text{forma de puntos críticos}) \end{array}$$
 
-Puntos críticos: $x=-3, 0, 3$. Prueba de signos: $I_1: x=-10 \rightarrow (+)(-)(-) \Rightarrow (+) \geq 0$ (Verdad). Debido al exponente par en $(x-0)^2$, el signo no se alterna al pasar por $0$.
+Puntos críticos: $x=-3, 0, 3$.
+
+Prueba de signos: $I_1: x=-10 \rightarrow (+)(-)(-) \Rightarrow (+) \geq 0$ (Verdad).
+
+Debido al exponente par en $(x-0)^2$, el signo no se alterna al pasar por $0$.
 
 ```desmos-graph
 left=-6; right=6; bottom=-1; top=1;
