@@ -16,15 +16,26 @@ status: completo
 
 # Números reales y desigualdades
 
---- start-multi-column: cornell-T0-001
+## Axiomas de cuerpo de los números reales (ℝ)
 
 ````cornell
-number of columns: 2
-column size: [60%, 40%]
-border: off
-```
+::cue
 
-## Axiomas de cuerpo de los números reales (ℝ)
+🔑 **Claves**
+
+Axiomas · Cuerpo · Reales · Neutros · Inversos
+
+¿Cuáles son las reglas básicas que rigen la suma y multiplicación? ¿Qué elementos permiten la existencia de operaciones inversas? ¿Cómo se relacionan la suma y el producto aritmético?
+
+$a + (-a) = 0$ $a \cdot a^{-1} = 1, a \neq 0$
+
+ver también: Axiomas de orden
+
+No confundir el neutro aditivo ($0$) con el neutro multiplicativo ($1$).
+
+**C**lausura, **C**onmutativa, **A**sociativa, **N**eutros, **N**egativos, **I**nversos, **D**istributiva (**CCANNID**)
+
+::note
 
 📝 **Desarrollo**
 
@@ -52,23 +63,8 @@ Si $a, b, c \in \mathbb{R}$:
 7. **Distributividad**
     - $a(b + c) = ab + ac$
 
---- end-column ---
+````
 
-🔑 **Claves**
-
-Axiomas · Cuerpo · Reales · Neutros · Inversos
-
-¿Cuáles son las reglas básicas que rigen la suma y multiplicación? ¿Qué elementos permiten la existencia de operaciones inversas? ¿Cómo se relacionan la suma y el producto aritmético?
-
-$a + (-a) = 0$ $a \cdot a^{-1} = 1, a \neq 0$
-
-ver también: Axiomas de orden
-
-No confundir el neutro aditivo ($0$) con el neutro multiplicativo ($1$).
-
-**C**lausura, **C**onmutativa, **A**sociativa, **N**eutros, **N**egativos, **I**nversos, **D**istributiva (**CCANNID**)
-
---- end-multi-column
 
 > **Resumen:** Definición de los siete axiomas fundamentales que establecen a los números reales como un cuerpo algebraico bajo las operaciones de adición y multiplicación.
 
@@ -87,6 +83,21 @@ No confundir el neutro aditivo ($0$) con el neutro multiplicativo ($1$).
 
 
 ````cornell
+::cue
+
+🔑 **Claves**
+
+Igualdad · Ecuación · Identidad · Transitividad
+
+¿Qué propiedades rigen la relación de equivalencia en $\mathbb{R}$? ¿Cuál es la diferencia técnica entre una ecuación y una identidad? ¿Cómo se definen formalmente la resta y la división?
+
+$(a = b \land b = c) \Rightarrow a = c$
+
+ver también: Axiomas de cuerpo
+
+No confundir una Identidad (válida para todo el dominio) con una Ecuación (válida para valores específicos).
+
+::note
 
 ## Axiomas de igualdad
 
@@ -113,22 +124,7 @@ Si $a, b, c \in \mathbb{R}$:
 - $2^3 = 8 \Rightarrow$ Igualdad $\to$ verdad evidente.
 - $x^2 - 4 = 0 \Rightarrow$ Ecuación $\to$ verdad para algunas $x$.
 - $x^2 - 4 = (x - 2)(x + 2) \Rightarrow$ Identidad $\to$ verdad para toda $x \in \mathbb{R}$.
-
---- end-column ---
-
-🔑 **Claves**
-
-Igualdad · Ecuación · Identidad · Transitividad
-
-¿Qué propiedades rigen la relación de equivalencia en $\mathbb{R}$? ¿Cuál es la diferencia técnica entre una ecuación y una identidad? ¿Cómo se definen formalmente la resta y la división?
-
-$(a = b \land b = c) \Rightarrow a = c$
-
-ver también: Axiomas de cuerpo
-
-No confundir una Identidad (válida para todo el dominio) con una Ecuación (válida para valores específicos).
-
---- end-multi-column
+````
 
 > **Resumen:** Establece las propiedades lógicas de la igualdad (reflexiva, simétrica y transitiva) y clarifica que la resta y división son extensiones de la suma y multiplicación por el opuesto/recíproco.
 
@@ -145,8 +141,22 @@ No confundir una Identidad (válida para todo el dominio) con una Ecuación (vá
 ---
 
 
-```column-settings
+````cornell
+::cue
 
+🔑 **Claves**
+
+Teoremas · Simplificación · Elemento cero · Opuestos · Recíprocos
+
+¿Cómo se demuestra formalmente la ley de cancelación? ¿Qué ocurre al multiplicar cualquier número real por cero? ¿Cuáles son las propiedades de los signos en la multiplicación?
+
+$a \cdot b = 0 \Rightarrow (a = 0 \lor b = 0)$ $a + b = a + c \Rightarrow b = c$
+
+ver también: Axiomas de cuerpo
+
+No confundir la ley de cancelación de la suma con la del producto; esta última requiere estrictamente que el factor sea distinto de cero ($a \neq 0$).
+
+::note
 
 ## Teoremas sobre números reales (ℝ)
 
@@ -168,40 +178,25 @@ Si: $a, b, c, d, x \in \mathbb{R}$
 12. $\left(\dfrac{a}{b}\right)\left(\dfrac{c}{d}\right) = \dfrac{ac}{bd}$
 13. $\dfrac{a/b}{c/d} = \dfrac{ad}{cb}$
 
+````
+
 ### Prueba de (1)
 
-$a + b = a + c \Rightarrow b = c$ Hipótesis: $a + b = a + c$ Tesis: $b = c$
+**Hipótesis:** $a + b = a + c$ — **Tesis:** $b = c$
 
-Demostración: 
-$$\begin{array}{rcl}
-b & = & b \quad &(\text{ax. reflexivo}) \\
-& = & b + 0 \quad &(\text{ax. } \exists \text{ neutro}) \\
-& = & b + [a + (-a)] \quad &(\text{ax. } \exists \text{ negativo}) \\
-& = & (b + a) + (-a) \quad &(\text{ax. asociativo}) \\
-& = & (a + b) + (-a) \quad &(\text{ax. conmutativo}) \\
-& = & (a + c) + (-a) \quad &(\text{Hipótesis}) \\
-& = & (c + a) + (-a) \quad &(\text{ax. conmutativo}) \\
-& = & c + [a + (-a)] \quad &(\text{ax. asociativo}) \\
-& = & c + 0 \quad &(\text{ax. } \exists \text{ negativo}) \\
-& = & c \quad &(\text{ax. } \exists \text{ neutro}) \\
-b & = & c \quad & (\text{LQQD})
-\end{array}$$
-
---- end-column ---
-
-🔑 **Claves**
-
-Teoremas · Simplificación · Elemento cero · Opuestos · Recíprocos
-
-¿Cómo se demuestra formalmente la ley de cancelación? ¿Qué ocurre al multiplicar cualquier número real por cero? ¿Cuáles son las propiedades de los signos en la multiplicación?
-
-$a \cdot b = 0 \Rightarrow (a = 0 \lor b = 0)$ $a + b = a + c \Rightarrow b = c$
-
-ver también: Axiomas de cuerpo
-
-No confundir la ley de cancelación de la suma con la del producto; esta última requiere estrictamente que el factor sea distinto de cero ($a \neq 0$).
-
---- end-multi-column
+$\begin{array}{rcll}
+b & = & b & (\text{ax. reflexivo}) \\
+& = & b + 0 & (\text{ax. } \exists \text{ neutro}) \\
+& = & b + [a + (-a)] & (\text{ax. } \exists \text{ negativo}) \\
+& = & (b + a) + (-a) & (\text{ax. asociativo}) \\
+& = & (a + b) + (-a) & (\text{ax. conmutativo}) \\
+& = & (a + c) + (-a) & (\text{Hipótesis}) \\
+& = & (c + a) + (-a) & (\text{ax. conmutativo}) \\
+& = & c + [a + (-a)] & (\text{ax. asociativo}) \\
+& = & c + 0 & (\text{ax. } \exists \text{ negativo}) \\
+& = & c & (\text{ax. } \exists \text{ neutro}) \\
+b & = & c & (\text{LQQD})
+\end{array}$
 
 > **Resumen:** Conjunto de 13 teoremas fundamentales derivados de los axiomas de cuerpo que rigen las operaciones algebraicas, incluyendo leyes de cancelación, propiedades del cero y aritmética de fracciones.
 
@@ -219,8 +214,23 @@ No confundir la ley de cancelación de la suma con la del producto; esta última
 
 
 
-```column-settings
+````cornell
 
+::cue
+
+🔑 **Claves**
+
+Orden · Positividad · Tricotomía · Reales positivos
+
+¿Cuáles son las condiciones para que la suma y el producto conserven el orden? ¿Qué significa que un conjunto sea "ordenado"? ¿Cómo se define formalmente un número negativo en función de los positivos?
+
+$a > 0 \Leftrightarrow a \in \mathbb{R}^+$ $x < y \Leftrightarrow y - x \in \mathbb{R}^+$
+
+ver también: Axiomas de cuerpo
+
+No confundir la relación de orden ($<, >$) con la pertenencia a un subconjunto ($\mathbb{R}^+$). El orden se deriva de la positividad.
+
+::note
 
 ## Axiomas de orden de los números reales  (ℝ)
 
@@ -259,21 +269,7 @@ Si $a, b \in \mathbb{R}$:
 
 > [!note] 2, 3 y 4 tienen su equivalente en conjuntos.
 
---- end-column ---
-
-🔑 **Claves**
-
-Orden · Positividad · Tricotomía · Reales positivos
-
-¿Cuáles son las condiciones para que la suma y el producto conserven el orden? ¿Qué significa que un conjunto sea "ordenado"? ¿Cómo se define formalmente un número negativo en función de los positivos?
-
-$a > 0 \Leftrightarrow a \in \mathbb{R}^+$ $x < y \Leftrightarrow y - x \in \mathbb{R}^+$
-
-ver también: Axiomas de cuerpo
-
-No confundir la relación de orden ($<, >$) con la pertenencia a un subconjunto ($\mathbb{R}^+$). El orden se deriva de la positividad.
-
---- end-multi-column
+````
 
 > **Resumen:** Los axiomas de orden postulan la existencia de un subconjunto de números positivos ($\mathbb{R}^+$) cerrado bajo la suma y el producto, permitiendo definir las relaciones de desigualdad y la estructura de cuerpo ordenado para $\mathbb{R}$.
 
@@ -291,8 +287,24 @@ No confundir la relación de orden ($<, >$) con la pertenencia a un subconjunto 
 
 
 
-```column-settings
+````cornell
+::cue
 
+🔑 **Claves**
+
+Desigualdad · Inecuación · Regla de signos · Inversos
+
+¿Cómo afecta multiplicar por un número negativo a una desigualdad? ¿Qué condiciones deben cumplirse para que el producto de dos reales sea positivo? ¿Cómo se comportan los inversos multiplicativos en una relación de orden?
+
+$a > b \land c < 0 \Rightarrow ac < bc$ $0 < a < b \Rightarrow \frac{1}{a} > \frac{1}{b}$
+
+ver también: Axiomas de orden
+
+No confundir la elevación a una potencia par (requiere base positiva para mantener el orden) con la potencia impar (mantiene el orden siempre).
+
+**S**uma, **A**dición, **M**ultiplicación (pos/neg), **R**egla de signos, **C**uadrado, **U**nidad, **I**nversos, **E**levación (2/3)
+
+::note
 
 ## Teoremas de desigualdades e inecuaciones
 
@@ -326,23 +338,9 @@ Si $a, b, c, d \in \mathbb{R}$:
 12. **Inversos multiplicativos**
     - $0 < a < b \Rightarrow \frac{1}{a} > \frac{1}{b}$
 
---- end-column ---
 
-🔑 **Claves**
 
-Desigualdad · Inecuación · Regla de signos · Inversos
-
-¿Cómo afecta multiplicar por un número negativo a una desigualdad? ¿Qué condiciones deben cumplirse para que el producto de dos reales sea positivo? ¿Cómo se comportan los inversos multiplicativos en una relación de orden?
-
-$a > b \land c < 0 \Rightarrow ac < bc$ $0 < a < b \Rightarrow \frac{1}{a} > \frac{1}{b}$
-
-ver también: Axiomas de orden
-
-No confundir la elevación a una potencia par (requiere base positiva para mantener el orden) con la potencia impar (mantiene el orden siempre).
-
-**S**uma, **A**dición, **M**ultiplicación (pos/neg), **R**egla de signos, **C**uadrado, **U**nidad, **I**nversos, **E**levación (2/3)
-
---- end-multi-column
+````
 
 > **Resumen:** Conjunto de 12 leyes operativas que rigen el comportamiento de las desigualdades ante operaciones aritméticas y potencias en el conjunto de los números reales.
 
@@ -360,13 +358,26 @@ No confundir la elevación a una potencia par (requiere base positiva para mante
 
 ---
 
---- start-multi-column: cornell-T0-006
 
-```column-settings
-number of columns: 2
-column size: [60%, 40%]
-border: off
-```
+````cornell
+
+::cue
+
+🔑 **Claves**
+
+Correspondencia biunívoca · Recta real · Intervalo · Subconjunto · Extremos
+
+¿Qué significa que exista una correspondencia "uno a uno" entre $\mathbb{R}$ y la recta? ¿Cómo se representa simbólicamente un intervalo infinito? ¿Qué diferencia gráfica hay entre un extremo abierto y uno cerrado?
+
+Definición de intervalo: $I \subseteq \mathbb{R}$
+
+ver también: Axiomas de orden
+
+no confundir $]a, b[$ (notación europea) con $(a, b)$ (notación anglosajona).
+
+%%```desmos-graph```%%
+
+::note
 
 ## La recta real e intervalos
 
@@ -392,7 +403,7 @@ y=0|#000000
 Un intervalo es un subconjunto de la recta real.
 
 1. **Intervalo cerrado**
-    - $[a, b] = {x \in \mathbb{R} / a \le x \le b}$
+    - $[a, b] = \{x \in \mathbb{R} \mid a \le x \le b\}$
 
 ```desmos-graph
 left=-1;right=5;bottom=-1;top=1;
@@ -405,7 +416,7 @@ y=0|#000000|DASHED
 ```
 
 2. **Intervalo abierto**
-    - $]a, b[ = {x \in \mathbb{R} / a < x < b}$
+    - $]a, b[ = \{x \in \mathbb{R} \mid a < x < b\}$
 
 ```desmos-graph
 left=-1;right=5;bottom=-1;top=1;
@@ -418,7 +429,7 @@ y=0|#000000|DASHED
 ```
 
 3. **Intervalo semiabierto**
-    - $[a, b[ = {x \in \mathbb{R} / a \le x < b}$
+    - $[a, b[ = \{x \in \mathbb{R} \mid a \le x < b\}$
 
 ```desmos-graph
 left=-1;right=5;bottom=-1;top=1;
@@ -431,7 +442,7 @@ y=0|#000000|DASHED
 ```
 
 4. **Intervalos infinitos**
-    - $[a, +\infty[ = {x \in \mathbb{R} / x \ge a}$
+    - $[a, +\infty[ = \{x \in \mathbb{R} \mid x \ge a\}$
 
 ```desmos-graph
 left=-1;right=5;bottom=-1;top=1;
@@ -456,23 +467,7 @@ y=0|#000000|DASHED
 
 > [!note] En los apuntes se menciona el término "valores extremos" asociado a los límites $a$ y $b$ de los intervalos.
 
---- end-column ---
-
-🔑 **Claves**
-
-Correspondencia biunívoca · Recta real · Intervalo · Subconjunto · Extremos
-
-¿Qué significa que exista una correspondencia "uno a uno" entre $\mathbb{R}$ y la recta? ¿Cómo se representa simbólicamente un intervalo infinito? ¿Qué diferencia gráfica hay entre un extremo abierto y uno cerrado?
-
-Definición de intervalo: $I \subseteq \mathbb{R}$
-
-ver también: Axiomas de orden
-
-no confundir $]a, b[$ (notación europea) con $(a, b)$ (notación anglosajona).
-
-%%```desmos-graph```%%
-
---- end-multi-column
+````
 
 > **Resumen:** Los intervalos son subconjuntos de la recta real que representan todos los números comprendidos entre dos extremos, cuya naturaleza (abierta o cerrada) depende de la inclusión o exclusión de dichos puntos.
 
