@@ -6184,6 +6184,8 @@ tdee
 transcribirlo
 tomaron
 tomados
+tiende
+transcribio
 ToDo
 Templater
 Text
@@ -20243,6 +20245,7 @@ Substitutions
 SajjZ
 Ssssq
 SSSH
+Semiabierto
 Plugins
 Pendientes
 Plugin
@@ -25719,6 +25722,7 @@ Parts
 PTTd
 Pamm
 PRINCIPAL
+Positividad
 del
 date
 de
@@ -31040,6 +31044,8 @@ delta
 decreciente
 digitalizaci
 deberia
+delegada
+desarollo
 Vault
 Verificar
 Variables
@@ -48589,6 +48595,7 @@ biblioteca
 bbox
 buscarse
 bccacc
+bierto
 scope
 status
 selector
@@ -55518,6 +55525,8 @@ sJDDDDD
 srrp
 senoides
 sociativa
+subconjuntos
+sera
 vault
 vil
 ver
@@ -68074,6 +68083,7 @@ ajyyy
 anillo
 alternas
 adaptaci
+arrays
 related
 recomendados
 ribbon
@@ -74543,6 +74553,7 @@ ryXX
 reutilizables
 resolverse
 resuelvan
+reale
 notes
 notas
 nuevas
@@ -80785,6 +80796,8 @@ nDvv
 notebooks
 ncava
 nversos
+nidad
+nfinito
 created
 commit
 cada
@@ -87501,6 +87514,12 @@ cKTY
 caps
 configuracion
 convexa
+clarifica
+clasifican
+conserven
+cubo
+caracterizados
+convenios
 updated
 un
 universo
@@ -94530,6 +94549,8 @@ uCtt
 uuuEDD
 uBtt
 uRff
+ultiplicaci
+uadrado
 Galaxy
 Git
 Gr
@@ -106043,6 +106064,8 @@ Conceptos
 Criterios
 Convergencia
 CCANNID
+Cerrado
+CASI
 Instalados
 Instalado
 Instalar
@@ -113123,6 +113146,7 @@ Ingl
 IDDDDDDDDdd
 Infiere
 Indeterminaciones
+Inecuaci
 Funci
 File
 Fase
@@ -126279,6 +126303,8 @@ EEEJ
 ERSRRp
 Ettt
 Errr
+Elevaci
+Excluye
 Obsidian
 OmniSearch
 Ocultar
@@ -143682,6 +143708,7 @@ planas
 pasadas
 preliminar
 postulan
+positividad
 min
 mica
 movimiento
@@ -169264,6 +169291,12 @@ eutros
 egativos
 enfatiza
 erorres
+elevaci
+egla
+encadenamiento
+errado
+emiabierto
+entrego
 Motor
 Media
 Mantiene
@@ -188474,6 +188507,8 @@ lllp
 lahh
 leerlos
 lausura
+levaci
+literatura
 incluyendo
 im
 instalar
@@ -196175,6 +196210,9 @@ inflexi
 indefinidas
 istributiva
 indicados
+inmediatas
+inclusi
+invertidos
 Dependencia
 Dropbox
 Dataview
@@ -219893,6 +219931,8 @@ formulaci
 fracc
 fffptt
 fall
+fueran
+fundamenta
 haya
 hace
 hacer
@@ -253377,6 +253417,7 @@ obteniendo
 oRDDDDDDDDDDDDD
 onmutativa
 omitida
+olvida
 junto
 json
 jer

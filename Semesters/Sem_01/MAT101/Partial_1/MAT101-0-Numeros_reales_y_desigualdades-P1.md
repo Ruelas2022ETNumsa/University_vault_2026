@@ -389,19 +389,21 @@ border: off
 
 Existe correspondencia biunívoca "uno a uno" entre el conjunto $\mathbb{R}$ y una recta a escala llamada la **recta real**.
 
-%
 ```desmos-graph
-y=0|#444 
-(-2,0)|label:-2|#444 
-(-1,0)|label:-1|#444 
-(0,0)|label:0|#444 
-(0.5,0)|label:1/2|#444 
-(1,0)|label:1|#444 
-(1.414,0)|label:\sqrt{2}|#444 
-(2,0)|label:2|#444 
-(2.718,0)|label:e|#444 
-(3,0)|label:3|#444 
-(3.141,0)|label:\pi|#444 
+left=-3.5; right=4; bottom=-1; top=1;
+width=320; height=100;
+---
+y=0|#474448
+(-2,0)|label:-2|cross|#474448
+(-1,0)|label:-1|cross|#474448
+(0,0)|label:0|cross|#474448
+(0.5,0)|label:1/2|cross|#474448
+(1,0)|label:1|cross|#474448
+(1.414,0)|label:√2|cross|#474448
+(2,0)|label:2|cross|#474448
+(2.718,0)|label:e|cross|#474448
+(3,0)|label:3|cross|#474448
+(3.141,0)|label:π|cross|#474448
 ```
 
 Un intervalo es un subconjunto de la recta real.
@@ -410,23 +412,23 @@ Un intervalo es un subconjunto de la recta real.
 
 1. **Cerrado**
     
-    - $[a, b] = {x \in \mathbb{R} \mid a \le x \le b}$
+    - $[\,a, b\,] = {x \in \mathbb{R} \mid a \le x \le b}$
     - > [!note] Incluye a los extremos.
         
 2. **Abierto**
     
-    - $]a, b[ = {x \in \mathbb{R} \mid a < x < b}$
+    - $]\,a, b\,[ = {x \in \mathbb{R} \mid a < x < b}$
     - > [!note] Excluye a los extremos.
         
 3. **Semiabierto** (por la derecha)
     
-    - $[a, b[ = {x \in \mathbb{R} \mid a \le x < b}$
+    - $[\,a, b\,[ = {x \in \mathbb{R} \mid a \le x < b}$
 4. **Infinito** (a la derecha)
     
-    - $]a, +\infty[ = {x \in \mathbb{R} \mid x > a}$
+    - $]\,a, +\infty \,[ = {x \in \mathbb{R} \mid x > a}$
 5. **Infinito** (a la izquierda)
     
-    - $]-\infty, b[ = {x \in \mathbb{R} \mid x < b}$
+    - $]-\infty, b\,[ = {x \in \mathbb{R} \mid x < b}$
 
 --- end-column ---
 
@@ -436,7 +438,7 @@ Recta real · Intervalo · Correspondencia biunívoca · Extremos
 
 ¿Cómo se define geométricamente el conjunto de los números reales? ¿Qué diferencia existe entre un intervalo abierto y uno cerrado? ¿Cómo se representan los subconjuntos infinitos en la recta numérica?
 
-$[a, b] = {x \mid a \le x \le b}$ $(a, b) = {x \mid a < x < b}$
+$[\,a, b\,] = {x \mid a \le x \le b}$ $(a, b) = {x \mid a < x < b}$
 
 ver también: Axiomas de orden
 
@@ -444,7 +446,8 @@ No confundir la notación de un par ordenado $(a, b)$ con la de un intervalo abi
 
 **C**errado, **A**bierto, **S**emiabierto, **I**nfinito (**CASI**)
 
-%`desmos-graph %`
+%```desmos-graph
+%```
 
 --- end-multi-column
 
@@ -495,7 +498,8 @@ $$\begin{array}{rcl} a + b & = & a + c \ (-a) + (a + b) & = & (-a) + (a + c) \ [
 
 4. NOTEBOOKLM olvida la estructura de los array no coloca el doble `\\` para el salto de linea creo que esta tarea sera delegada a claude corregir los arrays
 
-
+5. en cornell en desarollo entrego este bloque desmos
+   %`desmos-graph %y=0|#444 %(-2,0)|label:-2|#444 %(-1,0)|label:-1|#444 %(0,0)|label:0|#444 %(0.5,0)|label:1/2|#444 %(1,0)|label:1|#444 %(1.414,0)|label:\sqrt{2}|#444 %(2,0)|label:2|#444 %(2.718,0)|label:e|#444 %(3,0)|label:3|#444 %(3.141,0)|label:\pi|#444 %`
 
 
 
