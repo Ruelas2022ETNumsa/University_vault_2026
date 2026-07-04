@@ -86,14 +86,14 @@ Plugin: `obsidian-desmos` — renderiza gráficas de [desmos.com](https://www.de
 **Caché:** `.cache/desmos/` dentro del vault — SVGs generados automáticamente por el plugin. Carpeta configurada manualmente. No es contenido académico.
 
 **Bloque básico:**
-```
+`````
 ```desmos-graph
 left=-5; right=5; bottom=-3; top=3;
 width=500; height=400;
 ---
 y=x^2|BLUE
 ```
-```
+`````
 
 **Regla crítica:** el separador `---` es **siempre obligatorio**, incluso sin configuración.
 
@@ -110,7 +110,7 @@ Plugin: `obsidian-tikzjax` — renderiza LaTeX/TikZ como SVG dentro de las notas
 **Caché:** IndexedDB de Electron — interno al proceso de Obsidian, no existe como archivo en el vault. Si se limpia el caché (Settings del plugin) o se cambia de PC, TikZJax re-renderiza desde el código fuente en la nota. El código es siempre la fuente de verdad.
 
 **Estructura obligatoria:**
-```
+`````
 ```tikz
 \usepackage{paquete}      ← cargar paquetes necesarios
 \begin{document}
@@ -119,7 +119,7 @@ Plugin: `obsidian-tikzjax` — renderiza LaTeX/TikZ como SVG dentro de las notas
   \end{tikzpicture}
 \end{document}
 ```
-```
+`````
 
 > No incluir `\documentclass{standalone}` — el plugin lo usa automáticamente.
 

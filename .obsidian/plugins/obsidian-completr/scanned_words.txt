@@ -31071,6 +31071,8 @@ dividen
 desdoblamiento
 disjuntas
 declaran
+densa
+degradar
 Vault
 Verificar
 Variables
@@ -55573,6 +55575,7 @@ surge
 subjects
 semesters
 session
+sugerida
 vault
 vil
 ver
@@ -74619,6 +74622,7 @@ rows
 representable
 refuerzan
 radicando
+reportar
 notes
 notas
 nuevas
@@ -113248,6 +113252,7 @@ Indice
 Invisible
 INICIO
 Irreducibles
+Insumos
 Funci
 File
 Fase
@@ -137845,6 +137850,7 @@ ALGEBRA
 ANSWERS
 Active
 ARRAY
+Audiencias
 push
 pull
 para
@@ -240278,6 +240284,7 @@ Usarlo
 Usarlas
 UuHDDD
 Unlike
+Unirlos
 Nombre
 Notas
 No

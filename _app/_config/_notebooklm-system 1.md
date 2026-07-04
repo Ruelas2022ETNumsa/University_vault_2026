@@ -61,11 +61,11 @@ listo para integrarse al vault como notas `supernova`.
 
 **Variantes de transcripción disponibles:**
 
-| Archivo | Materia | Tipo de apunte | Estado |
-|---|---|---|---|
-| `prompts/MAT101/MAT101-transcription.md` | Cálculo 1 | Cuaderno físico | activo |
-| `prompts/MAT101/MAT101-transcription_tab.md` | Cálculo 1 | Tablet (Samsung Notes) | aún no creado |
-| `prompts/ETNXXX/ETNXXX-transcription.md` | otras materias | general | aún no creado |
+| Archivo                                      | Materia        | Tipo de apunte         | Estado        |
+| -------------------------------------------- | -------------- | ---------------------- | ------------- |
+| `prompts/MAT101/MAT101-transcription.md`     | Cálculo 1      | Cuaderno físico        | activo        |
+| `prompts/MAT101/MAT101-transcription_tab.md` | Cálculo 1      | Tablet (Samsung Notes) | aún no creado |
+| `prompts/ETNXXX/ETNXXX-transcription.md`     | otras materias | general                | aún no creado |
 
 > Los apuntes de cuaderno físico y de tablet tienen estructuras distintas
 > y requieren prompts separados. El prompt de tablet para MAT101

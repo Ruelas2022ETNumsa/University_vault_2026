@@ -44,10 +44,10 @@ PC Escritorio Local → E:\University_vault_2026  [UNICO que sincroniza con Mega
         ⇕
 Mega (sincronización vault entre dispositivos — cuenta exclusiva del vault)
         ⇕
-┌──────────────────────────────────────────────────────┐
+┌────────────────────────────────────────────────────────────────────────┐
 │ Tablet (FolderSync bidirec.)         Celular (FolderSync solo lectura) │
 │ /University_vault_2026               /University_vault_2026            │
-└──────────────────────────────────────────────────────┘
+└────────────────────────────────────────────────────────────────────────┘
         Laptop (cliente Mega — bidireccional)
         /University_vault_2026
 ```
@@ -254,12 +254,12 @@ Obsidian Git detecta cambio → auto-pull → vault local actualizado
 
 ### Carpetas sincronizadas en Mega
 
-| Carpeta local PC | Carpeta Mega |
-|---|---|
-| `E:\University_vault_2026\MOC` | `/University_vault_2026/MOC` |
+| Carpeta local PC                     | Carpeta Mega                       |
+| ------------------------------------ | ---------------------------------- |
+| `E:\University_vault_2026\MOC`       | `/University_vault_2026/MOC`       |
 | `E:\University_vault_2026\Semesters` | `/University_vault_2026/Semesters` |
 | `E:\University_vault_2026\Semestres` | `/University_vault_2026/Semestres` |
-| `E:\University_vault_2026\_PDF` | `/University_vault_2026/_PDF` |
+| `E:\University_vault_2026\_PDF`      | `/University_vault_2026/_PDF`      |
 
 > `_PDF` es la carpeta definitiva de PDFs — reemplaza al anterior TAB_nexus de Drive. Todos los PDFs de Samsung Notes van directamente aquí.
 
