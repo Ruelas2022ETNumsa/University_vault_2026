@@ -96,7 +96,7 @@ Dos variantes según el ciclo de vida. Ambas van en la raíz de `Partial_N/` (no
 
 **Class individual** — una por sesión de clase, mientras el tema está en proceso:
 ```
-ETNXXX-classNNN-PN-mesdía.md
+ETNXXX-PN-classNNN-mesdía.md
 ```
 - `classNNN` → contador corrido por semestre, no reinicia por parcial
 - `PN` → número de parcial (ej. `P1`)
@@ -104,23 +104,23 @@ ETNXXX-classNNN-PN-mesdía.md
 
 Ejemplos:
 ```
-ETN901-class001-P1-jun15.md
-ETN901-class002-P1-jun17.md
-ETN901-class003-P1-jun22.md
+ETN901-P1-class001-jun15.md
+ETN901-P1-class002-jun17.md
+ETN901-P1-class003-jun22.md
 ```
 
 **Supernova fusionada** — cuando el tema está completo, se fusionan todas las class en un solo archivo:
 ```
-ETNXXX-TN-slug_del_tema-PN.md
+ETNXXX-TNN-PNN-slug_del_tema.md
 ```
-- `TN` → número de tema (ej. `T1`, `T2`) — mismo sistema que el resto del vault
+- `TNN` → número de tema (ej. `T01`, `T02`) — mismo sistema que el resto del vault
 - `slug_del_tema` → nombre en español, guion_bajo entre palabras, sin tildes ni ñ
 - `PN` → número de parcial
 
 Ejemplos:
 ```
-ETN901-T1-densidad_probabilidad_conjunta-P1.md
-ETN901-T2-variables_aleatorias_continuas-P1.md
+ETN901-T01-P1-densidad_probabilidad_conjunta.md
+ETN901-T02-P1-variables_aleatorias_continuas.md
 ```
 
 > Ver [[_TABnote-system]] para el ciclo de vida completo (class → fusionada → diseccionada en notas galaxy).

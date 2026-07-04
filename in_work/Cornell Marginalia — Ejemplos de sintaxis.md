@@ -94,17 +94,17 @@ El inverso de $a$ es $a^{-1} = \frac{1}{a}$. %%> ? ¿Para qué valores existe $a
 
 %%  FEATURE 7 — Imagen en margen  %%
 
-La recta numérica representa geométricamente a $\mathbb{R}$. %%> img:[[comfor numbss - copia.png]] %%
+La recta numérica representa geométricamente a $\mathbb{R}$. %%> img:[[Cornell Marginalia — Ejemplos de sintaxis-11-06-2026_19-01-03.png]] %%
 
 
 
 
-asdsad%%< img:[[comfor numbss - copia.png]] %%
+asdsad%%< img:[[Cornell Marginalia — Ejemplos de sintaxis-11-06-2026_19-01-03.png]] %%
 
 
 
 > [!cornell]
-> %%> img:[[comfor numbss - copia.png]] %%
+> %%> img:[[Cornell Marginalia — Ejemplos de sintaxis-11-06-2026_19-01-03.png]] %%
 > La recta numérica representa geométricamente a $\mathbb{R}$.
 
 

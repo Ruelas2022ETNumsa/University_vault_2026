@@ -5,14 +5,8 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
-        "Untitled 5.md",
-        "Untitled 4.md",
-        "Untitled 3 1.md",
-        "Untitled 3.md",
-        "Untitled 2.md",
-        "Untitled 1.md",
-        "claude vision.md",
-        "Untitled.md",
+        "_assets",
+        "void.md",
         "in_work",
         "Borrar",
         "README.md",
@@ -30,7 +24,6 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "MAT101-null",
         "Sem_01",
         "Sem_08",
         "Sem_09"
@@ -981,6 +974,9 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "corr2.md",
+        "corr 1.md",
+        "corr.md",
         "Partial_1",
         "Partial_2",
         "Partial_3"
@@ -1563,15 +1559,10 @@
       "sortOrder": "custom",
       "customOrder": [
         "MAT101-T00-star.md",
-        "comfor numbss - copia.png",
         "comfor numbss.png"
       ]
     },
     "MOC/comfor numbss.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "MOC/comfor numbss - copia.png": {
       "isPinned": false,
       "isHidden": false
     },
@@ -2484,26 +2475,16 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "claude vision.md",
+        "obsidian-cornell-notes.md",
+        "Cornell Marginalia — Ejemplos de sintaxis.md",
         "rendimiento.md",
         "Untitled 1.md",
         "tables no terminado.md",
-        "corr.md",
-        "corr 1.md",
-        "corr2.md",
-        "MAT101-Números-reales-y-desigualdades.md",
-        "MAT101_T1-Funciones-reales.md",
-        "MAT101T0_transcripcion.md"
+        "MAT101_T1-Funciones-reales.md"
       ]
     },
-    "in_work/MAT101T0_transcripcion.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "in_work/MAT101_T1-Funciones-reales.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "in_work/MAT101-Números-reales-y-desigualdades.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -2580,18 +2561,6 @@
       "isHidden": false
     },
     "Semestres/SEM_08/ETN806/Partial_1/ETN806-P1-E1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "in_work/corr2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "in_work/corr 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "in_work/corr.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -2704,23 +2673,7 @@
         "MAT101-notebooklm-user_guide.md"
       ]
     },
-    "Untitled.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_app/solve/google_drive_solve.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "claude vision.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Untitled 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Untitled 2.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -2885,31 +2838,14 @@
       "sortOrder": "custom",
       "customOrder": [
         "T00-numeros_reales",
-        "MAT101-0-Numeros_reales_y_desigualdades-P1 1.md",
         "MAT101-T00-P1-Numeros_reales_y_desigualdades.md"
       ]
-    },
-    "Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false
     },
     "_app/notebooklm/prompts/MAT101/Untitled Cornell note.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "Untitled 3 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Untitled 4.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_app/notebooklm/prompts/MAT101/MAT101-transcription (multi columns pluggin).md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Untitled 5.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -2918,10 +2854,6 @@
       "isHidden": false
     },
     "_app/notebooklm/prompts/MAT101/MAT101-transcription.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semesters/Sem_01/MAT101/Partial_1/MAT101-0-Numeros_reales_y_desigualdades-P1 1.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -2987,18 +2919,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Semesters/MAT101-null": {
-      "isPinned": false,
-      "isHidden": false,
-      "customOrder": [
-        "null.md"
-      ],
-      "sortOrder": "custom"
-    },
-    "Semesters/MAT101-null/null.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-ej_inec_x4_9x2.md": {
       "isPinned": false,
       "isHidden": false
@@ -3024,6 +2944,46 @@
       "isHidden": false
     },
     "Semesters/Sem_01/MAT101/Partial_1/MAT101-T00-P1-Numeros_reales_y_desigualdades.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08/ETN806/corr.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08/ETN806/corr 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08/ETN806/corr2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "void.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "Cornell Marginalia — Ejemplos de sintaxis-11-06-2026_19-01-03.png"
+      ],
+      "sortOrder": "custom"
+    },
+    "_assets/Cornell Marginalia — Ejemplos de sintaxis-11-06-2026_19-01-03.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "in_work/Cornell Marginalia — Ejemplos de sintaxis.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "in_work/obsidian-cornell-notes.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "in_work/claude vision.md": {
       "isPinned": false,
       "isHidden": false
     }
