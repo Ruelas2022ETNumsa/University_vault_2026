@@ -1,0 +1,10 @@
+{
+  "cueWidth": 320,
+  "dividerColor": "lightgrey",
+  "dividerThickness": 1,
+  "cueShortcut": "",
+  "summaryShortcut": "",
+  "titleShortcut": "",
+  "reviewHoverHighlight": false,
+  "pdfExportEnabled": false
+}
