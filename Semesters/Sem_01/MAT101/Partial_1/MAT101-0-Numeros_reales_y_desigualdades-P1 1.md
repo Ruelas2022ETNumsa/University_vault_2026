@@ -21,8 +21,6 @@ status: completo
 ````cornell
 ::cue
 
-🔑 **Claves**
-
 Axiomas · Cuerpo · Reales · Neutros · Inversos
 
 ¿Cuáles son las reglas básicas que rigen la suma y multiplicación? ¿Qué elementos permiten la existencia de operaciones inversas? ¿Cómo se relacionan la suma y el producto aritmético?
@@ -36,8 +34,6 @@ No confundir el neutro aditivo ($0$) con el neutro multiplicativo ($1$).
 **C**lausura, **C**onmutativa, **A**sociativa, **N**eutros, **N**egativos, **I**nversos, **D**istributiva (**CCANNID**)
 
 ::note
-
-📝 **Desarrollo**
 
 Si $a, b, c \in \mathbb{R}$:
 
@@ -84,8 +80,6 @@ Si $a, b, c \in \mathbb{R}$:
 
 ````cornell
 ::cue
-
-🔑 **Claves**
 
 Igualdad · Ecuación · Identidad · Transitividad
 
@@ -144,8 +138,6 @@ Si $a, b, c \in \mathbb{R}$:
 ````cornell
 ::cue
 
-🔑 **Claves**
-
 Teoremas · Simplificación · Elemento cero · Opuestos · Recíprocos
 
 ¿Cómo se demuestra formalmente la ley de cancelación? ¿Qué ocurre al multiplicar cualquier número real por cero? ¿Cuáles son las propiedades de los signos en la multiplicación?
@@ -159,8 +151,6 @@ No confundir la ley de cancelación de la suma con la del producto; esta última
 ::note
 
 ## Teoremas sobre números reales (ℝ)
-
-📝 **Desarrollo**
 
 Si: $a, b, c, d, x \in \mathbb{R}$
 
@@ -218,8 +208,6 @@ b & = & c & (\text{LQQD})
 
 ::cue
 
-🔑 **Claves**
-
 Orden · Positividad · Tricotomía · Reales positivos
 
 ¿Cuáles son las condiciones para que la suma y el producto conserven el orden? ¿Qué significa que un conjunto sea "ordenado"? ¿Cómo se define formalmente un número negativo en función de los positivos?
@@ -233,8 +221,6 @@ No confundir la relación de orden ($<, >$) con la pertenencia a un subconjunto 
 ::note
 
 ## Axiomas de orden de los números reales  (ℝ)
-
-📝 **Desarrollo**
 
 Si $a, b \in \mathbb{R}$:
 
@@ -290,8 +276,6 @@ Si $a, b \in \mathbb{R}$:
 ````cornell
 ::cue
 
-🔑 **Claves**
-
 Desigualdad · Inecuación · Regla de signos · Inversos
 
 ¿Cómo afecta multiplicar por un número negativo a una desigualdad? ¿Qué condiciones deben cumplirse para que el producto de dos reales sea positivo? ¿Cómo se comportan los inversos multiplicativos en una relación de orden?
@@ -307,8 +291,6 @@ No confundir la elevación a una potencia par (requiere base positiva para mante
 ::note
 
 ## Teoremas de desigualdades e inecuaciones
-
-📝 **Desarrollo**
 
 Si $a, b, c, d \in \mathbb{R}$:
 
@@ -363,8 +345,6 @@ Si $a, b, c, d \in \mathbb{R}$:
 
 ::cue
 
-🔑 **Claves**
-
 Correspondencia biunívoca · Recta real · Intervalo · Subconjunto · Extremos
 
 ¿Qué significa que exista una correspondencia "uno a uno" entre $\mathbb{R}$ y la recta? ¿Cómo se representa simbólicamente un intervalo infinito? ¿Qué diferencia gráfica hay entre un extremo abierto y uno cerrado?
@@ -380,8 +360,6 @@ no confundir $]a, b[$ (notación europea) con $(a, b)$ (notación anglosajona).
 ::note
 
 ## La recta real e intervalos
-
-📝 **Desarrollo**
 
 Existe correspondencia biunívoca "uno a uno" entre el conjunto $\mathbb{R}$ y una recta a escala llamada la **recta real**.
 

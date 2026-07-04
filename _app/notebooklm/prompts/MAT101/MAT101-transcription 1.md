@@ -47,8 +47,8 @@ ESTRUCTURA:
 
 ## [SUBTITULO Y]
 
-````cornell
-
+````
+cornell
 ::cue
 
 [contenido de las claves]
@@ -72,7 +72,7 @@ ESTRUCTURA:
 ESTRUCTURA GRAFICA (si hay graficas en los apuntes):
 DESMOS:
 ```
-desmos-graph (obligatorio)
+desmos-graph
 left= ;right= ;bottom= ;top= ;
 width= ;height= ;
 ---
@@ -94,9 +94,10 @@ TIKZJAX:
 > **Resumen:** [una línea del subtítulo sin redundancia de otros subtítulos]
 
 REGLAS:
-
+- en la esctructura de cornell debe colocarse `cornell`antes de ::cue de forma obligatoria
 - El subtítulo Y del archivo NO va dentro del bloque Cornell.
 - Gráficas Desmos width máximo 320px.
+- en la esctructura de los bloques desmos debe colocarse `desmos-graph`antes de left= ... de forma obligatoria
 - TikZJax tamaño normal.
 - Complemento, ejercicios y demostraciones van siempre FUERA del Cornell, después del Resumen.
 _
