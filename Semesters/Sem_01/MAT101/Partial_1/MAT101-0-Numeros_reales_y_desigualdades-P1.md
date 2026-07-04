@@ -224,6 +224,241 @@ No confundir la ley de cancelación de la suma con la del producto; esta última
 > 2. **Propiedad del producto nulo:** El Teorema I.11 especifica que un producto es cero **si y solo si** al menos uno de los factores es cero. Esto es fundamental para la resolución de ecuaciones por factorización.
 > 3. **Existencia de la sustracción y división:** Apostol define estas operaciones no como axiomas, sino como teoremas de "posibilidad". La sustracción se define por la existencia de un único $x$ tal que $a + x = b$ (Teorema I.2), y la división por un único $x$ tal que $ax = b$ con $a \neq 0$ (Teorema I.8).
 
+---
+
+--- start-multi-column: cornell-T0-004
+
+```column-settings
+number of columns: 2
+column size: [60%, 40%]
+border: off
+```
+
+📝 **Desarrollo**
+
+## Axiomas de orden de los números reales  (ℝ)
+
+Si $a, b \in \mathbb{R}$:
+
+1. **Axioma 1**
+    - $a, b \in \mathbb{R}^+ \Rightarrow$
+        - i. $a + b \in \mathbb{R}^+$
+        - ii. $a \cdot b \in \mathbb{R}^+$
+2. **Axioma 2**
+    - Si $a \in \mathbb{R} - \{0\} \Rightarrow (a \in \mathbb{R}^+ \lor -a \in \mathbb{R}^{-})$
+3. **Axioma 3**
+    - $0 \notin \mathbb{R}^+$
+
+> [!note] Estos axiomas garantizan que el conjunto $\mathbb{R}$ es **ordenado!!**
+
+- $4 > 2 > 1 > 0 > -3$
+    
+- $-4 < -1 < 1 < 0 < 10$
+    
+- $\mathbb{R}^+ =$ nros. reales positivos.
+    
+- $\mathbb{R}^- =$ nros. reales negativos.
+    
+
+**Definiciones (Def):**
+
+1. $>$ $\to$ mayor que; $<$ $\to$ menor que.
+2. $a > b \Leftrightarrow b < a$
+3. $a \geq b \Leftrightarrow (a > b \lor a = b)$
+4. $a \leq b \Leftrightarrow b \geq a$
+5. $a < 0 \Leftrightarrow a \in \mathbb{R}^-$
+6. $a > 0 \Leftrightarrow a \in \mathbb{R}^+$
+
+> [!note] 2, 3 y 4 tienen su equivalente en conjuntos.
+
+--- end-column ---
+
+🔑 **Claves**
+
+Orden · Positividad · Tricotomía · Reales positivos
+
+¿Cuáles son las condiciones para que la suma y el producto conserven el orden? ¿Qué significa que un conjunto sea "ordenado"? ¿Cómo se define formalmente un número negativo en función de los positivos?
+
+$a > 0 \Leftrightarrow a \in \mathbb{R}^+$ $x < y \Leftrightarrow y - x \in \mathbb{R}^+$
+
+ver también: Axiomas de cuerpo
+
+No confundir la relación de orden ($<, >$) con la pertenencia a un subconjunto ($\mathbb{R}^+$). El orden se deriva de la positividad.
+
+--- end-multi-column ---
+
+> **Resumen:** Los axiomas de orden postulan la existencia de un subconjunto de números positivos ($\mathbb{R}^+$) cerrado bajo la suma y el producto, permitiendo definir las relaciones de desigualdad y la estructura de cuerpo ordenado para $\mathbb{R}$.
+
+> [!note] Complemento (Nivel B)
+> 
+> Según **Apostol (Cap. 0, sección I 3.4)**, el sistema de los números reales se define como un **cuerpo ordenado**. El concepto de "orden" no se introduce directamente, sino que se construye a partir del concepto primitivo de **número positivo**.
+> 
+> **Refuerzo de definiciones formales:**
+> 
+> 1. **Propiedad de Tricotomía:** El Axioma 2 del manuscrito es una forma de la Ley de Tricotomía. Apostol especifica que para cualquier número real $x \neq 0$, se cumple exactamente una de las dos condiciones: $x$ es positivo o $-x$ es positivo.
+> 2. **Definición formal de desigualdad:** La relación "menor que" ($x < y$) se define formalmente como la condición de que la diferencia $y - x$ sea un número positivo ($y - x \in \mathbb{R}^+$).
+> 3. **Interpretación geométrica:** En la recta real, decir que $x < y$ equivale a decir que el punto $x$ se encuentra a la izquierda del punto $y$. Los números positivos están a la derecha del origen ($0$) y los negativos a su izquierda.
+
+---
+
+--- start-multi-column: cornell-T0-005
+
+```column-settings
+number of columns: 2
+column size: [60%, 40%]
+border: off
+```
+
+📝 **Desarrollo**
+
+## Teoremas de desigualdades e inecuaciones
+
+Si $a, b, c, d \in \mathbb{R}$:
+
+1. **Suma de desigualdades**
+    - $a > b \land c > d \Rightarrow a + c > b + d$
+2. **Adición de una constante**
+    - $a > b \land c \in \mathbb{R} \Rightarrow a + c > b + c$
+3. **Multiplicación por positivo**
+    - $a > b \land c > 0 \Rightarrow ac > bc$
+4. **Multiplicación por negativo**
+    - $a > b \land c < 0 \Rightarrow ac < bc$
+    > [!note] Se invierte el sentido de la desigualdad.
+5. **Regla de signos (Producto positivo)**
+    - $a \cdot b > 0 \Rightarrow (a > 0 \land b > 0) \lor (a < 0 \land b < 0)$
+6. **Regla de signos (Producto negativo)**
+    - $a \cdot b < 0 \Rightarrow (a > 0 \land b < 0) \lor (a < 0 \land b > 0)$
+7. **Cuadrado de un real**
+    - $a^{2} \geq 0, \quad \forall \;a \in \mathbb{R}$
+8. **Positividad de la unidad**
+    - $1 > 0$
+9. **Inverso de un positivo**
+    - $a > 0 \Rightarrow a^{-1} > 0$
+10. **Elevación al cuadrado**
+    - $a > b > 0 \Rightarrow a^2 > b^2$
+11. **Elevación al cubo**
+    - $a > b \Rightarrow a^3 > b^3$
+12. **Inversos multiplicativos**
+    - $0 < a < b \Rightarrow \frac{1}{a} > \frac{1}{b}$
+
+--- end-column ---
+
+🔑 **Claves**
+
+Desigualdad · Inecuación · Regla de signos · Inversos
+
+¿Cómo afecta multiplicar por un número negativo a una desigualdad? ¿Qué condiciones deben cumplirse para que el producto de dos reales sea positivo? ¿Cómo se comportan los inversos multiplicativos en una relación de orden?
+
+$a > b \land c < 0 \Rightarrow ac < bc$ $0 < a < b \Rightarrow \frac{1}{a} > \frac{1}{b}$
+
+ver también: Axiomas de orden
+
+No confundir la elevación a una potencia par (requiere base positiva para mantener el orden) con la potencia impar (mantiene el orden siempre).
+
+**S**uma, **A**dición, **M**ultiplicación (pos/neg), **R**egla de signos, **C**uadrado, **U**nidad, **I**nversos, **E**levación (2/3)
+
+--- end-multi-column ---
+
+> **Resumen:** Conjunto de 12 leyes operativas que rigen el comportamiento de las desigualdades ante operaciones aritméticas y potencias en el conjunto de los números reales.
+
+> [!note] Complemento (Nivel B)
+> 
+> Según **Apostol (Cap. 0, sección I 3.4)**, todas estas propiedades son consecuencias lógicas de la estructura de cuerpo ordenado de $\mathbb{R}$.
+> 
+> **Refuerzo de definiciones formales:**
+> 
+> 1. **Definición de orden (Apostol I.3.4)**: La relación $x < y$ (o $y > x$) se define estrictamente como la condición de que la diferencia $y - x$ sea un número positivo ($y - x \in \mathbb{R}^+$).
+> 2. **Ley de Tricotomía (Teorema I.16)**: Para cualquier par de números reales $a$ y $b$, se cumple exactamente una (y solo una) de las siguientes relaciones: $a < b$, $b < a$ o $a = b$.
+> 3. **Propiedad Transitiva (Teorema I.17)**: Si $x < y$ y $y < z$, entonces $x < z$. Esta propiedad es fundamental para el encadenamiento de desigualdades e inecuaciones.
+> 4. **Teoremas de potencias y signos**: Apostol demuestra formalmente que si $a \neq 0$, entonces $a^2 > 0$ (Teorema I.20). De este hecho se deriva inmediatamente que $1 > 0$, ya que $1 = 1^2$ (Teorema I.21).
+> 5. **Interpretación de inversos**: El teorema I.23 de Apostol confirma que si $a < b$, entonces $-a > -b$, lo que fundamenta la regla del cambio de sentido al multiplicar por $-1$.
+
+---
+
+--- start-multi-column: cornell-T0-006
+
+```column-settings
+number of columns: 2
+column size: [60%, 40%]
+border: off
+```
+
+📝 **Desarrollo**
+
+## La recta real e intervalos
+
+Existe correspondencia biunívoca "uno a uno" entre el conjunto $\mathbb{R}$ y una recta a escala llamada la **recta real**.
+
+%
+```desmos-graph
+y=0|#444 
+(-2,0)|label:-2|#444 
+(-1,0)|label:-1|#444 
+(0,0)|label:0|#444 
+(0.5,0)|label:1/2|#444 
+(1,0)|label:1|#444 
+(1.414,0)|label:\sqrt{2}|#444 
+(2,0)|label:2|#444 
+(2.718,0)|label:e|#444 
+(3,0)|label:3|#444 
+(3.141,0)|label:\pi|#444 
+```
+
+Un intervalo es un subconjunto de la recta real.
+
+**Valores extremos:**
+
+1. **Cerrado**
+    
+    - $[a, b] = {x \in \mathbb{R} \mid a \le x \le b}$
+    - > [!note] Incluye a los extremos.
+        
+2. **Abierto**
+    
+    - $]a, b[ = {x \in \mathbb{R} \mid a < x < b}$
+    - > [!note] Excluye a los extremos.
+        
+3. **Semiabierto** (por la derecha)
+    
+    - $[a, b[ = {x \in \mathbb{R} \mid a \le x < b}$
+4. **Infinito** (a la derecha)
+    
+    - $]a, +\infty[ = {x \in \mathbb{R} \mid x > a}$
+5. **Infinito** (a la izquierda)
+    
+    - $]-\infty, b[ = {x \in \mathbb{R} \mid x < b}$
+
+--- end-column ---
+
+🔑 **Claves**
+
+Recta real · Intervalo · Correspondencia biunívoca · Extremos
+
+¿Cómo se define geométricamente el conjunto de los números reales? ¿Qué diferencia existe entre un intervalo abierto y uno cerrado? ¿Cómo se representan los subconjuntos infinitos en la recta numérica?
+
+$[a, b] = {x \mid a \le x \le b}$ $(a, b) = {x \mid a < x < b}$
+
+ver también: Axiomas de orden
+
+No confundir la notación de un par ordenado $(a, b)$ con la de un intervalo abierto; el contexto determina el significado.
+
+**C**errado, **A**bierto, **S**emiabierto, **I**nfinito (**CASI**)
+
+%`desmos-graph %`
+
+--- end-multi-column
+
+> **Resumen:** Establece la relación biunívoca entre $\mathbb{R}$ y la recta real, definiendo los intervalos como subconjuntos caracterizados por la inclusión o exclusión de sus puntos extremos.
+
+> [!note] Complemento (Nivel B)
+> 
+> Según **Stewart (Apéndice A)**, la recta real es una representación visual donde cada punto corresponde unívocamente a un número real.
+> 
+> **Refuerzo de definiciones formales:**
+> 
+> 1. **Propiedad de Completitud (Axioma de Continuidad):** Es la propiedad que garantiza que no existen "huecos" en la recta real. Según **Apostol (Cap. 0, sección I 3.8)**, todo conjunto no vacío de números reales acotado superiormente tiene un **extremo superior** (mínima cota superior) que también es un número real.
+> 2. **Notación de corchetes e intervalos:** La literatura estándar (Stewart, Thomas) suele utilizar paréntesis para intervalos abiertos $(a, b)$ en lugar de corchetes invertidos $]a, b[$.
+> 3. **Naturaleza del Infinito:** Los símbolos $\infty$ y $-\infty$ no representan números reales; son convenios para indicar que un intervalo no tiene cota en una dirección determinada. Por esta razón, el extremo que tiende al infinito siempre se escribe con paréntesis o corchete abierto.
 
 
 
@@ -236,7 +471,21 @@ No confundir la ley de cancelación de la suma con la del producto; esta última
 
 
 
----- erorres de notebook
+
+
+
+
+
+
+
+
+
+
+
+---
+---
+
+### erorres de notebook
 1. {} esta mal deberia ser \{   \ }
 $\forall a \in \mathbb{R} - {0}, \exists a^{-1} \in \mathbb{R} \ni a \cdot a^{-1} = 1$
 2. <\array} esta mal deberia ser \end{array}
