@@ -2778,6 +2778,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "MAT101-transcription (multi columns pluggin).md",
         "Untitled Cornell note.md",
         "MAT101-transcription 1.md",
         "MAT101-transcription.md",
@@ -2913,6 +2914,10 @@
       "isHidden": false
     },
     "Untitled 4.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/MAT101/MAT101-transcription (multi columns pluggin).md": {
       "isPinned": false,
       "isHidden": false
     }

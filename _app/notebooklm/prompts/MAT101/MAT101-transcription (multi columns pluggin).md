@@ -41,17 +41,31 @@ ESTILO DE TRANSCRIPCIÓN:
 _
 BLOQUES CORNELL:
 Aplicar a subtítulos de teoría: definiciones, axiomas, teoremas, propiedades, procedimientos
-paso a paso. NO aplicar a ejemplos resueltos.
+paso a paso Y NOTAS DEL TITULO. NO aplicar a ejemplos resueltos.
 
 ESTRUCTURA:
-
+--- start-multi-column: cornell-TX-00N
+```
+column-settings
+number of columns: 2
+column size: [60%, 40%]
+border: off
+```
 ## [SUBTITULO Y]
+📝 **Desarrollo**
+[transcripción fiel del subtítulo: texto, fórmulas y gráficas]
+ESTRUCTURA DEL BLOQUE DESMOS (si hay graficas en los apuntes):
 
-````cornell
+```
+left= ;right= ;bottom= ;top= ;
+width= ;height= ;
+---
+[ecuaciones con modificadores]
+```
 
-::cue
+--- end-column ---
 
-[contenido de las claves]
+🔑 **Claves**
 
 [palabras clave separadas por · ]
 
@@ -65,40 +79,23 @@ ESTRUCTURA:
 
 [mnemónico — solo si el subtítulo tiene una lista de 5 o más ítems]
 
-::note
+%%```desmos-graph```%% (copiar esto completo obligatorio)
 
-[transcripción fiel del subtítulo: texto, fórmulas y gráficas]
-
-ESTRUCTURA GRAFICA (si hay graficas en los apuntes):
-DESMOS:
-```
-desmos-graph (obligatorio)
-left= ;right= ;bottom= ;top= ;
-width= ;height= ;
----
-[ecuaciones con modificadores][color defalut #005F73]
-[en lables: usar unicode o ascii nunca latex]
-
-```
-TIKZJAX:
-```tikz
-\begin{document}
-\begin{tikzpicture}
-
-\end{tikzpicture}
-\end{document}
-```
-
-````
+--- end-multi-column
 
 > **Resumen:** [una línea del subtítulo sin redundancia de otros subtítulos]
 
 REGLAS:
 
-- El subtítulo Y del archivo NO va dentro del bloque Cornell.
-- Gráficas Desmos width máximo 320px.
-- TikZJax tamaño normal.
-- Complemento, ejercicios y demostraciones van siempre FUERA del Cornell, después del Resumen.
+- REVISAR QUE LAS NOTAS DEL TITULO VAN DENTRO DEL BLOQUE CORNELL
+- El título principal del archivo NO va dentro del bloque Cornell.
+- ID secuencial por tema: cornell-T0-001, cornell-T0-002, cornell-T1-001...
+- Gráficas Desmos dentro de Desarrollo: width máximo 320px.
+- TikZJax dentro de Desarrollo: tamaño normal.
+- El bloque comentado %```desmos-graph / %``` en Claves es OBLIGATORIO COPIARLO COMPLETO
+  siempre que haya un bloque Desmos en Desarrollo — sin él Desmos no renderiza.
+- Si no hay Desmos en Desarrollo, omitir el bloque comentado en Claves.
+- Complemento y ejercicios van siempre FUERA del Cornell, después del Resumen.
 _
 NIVELES DE COMPLEMENTO:
 Va DESPUÉS del Cornell (fuera del bloque), con este formato exacto:
@@ -147,29 +144,10 @@ No usar — para separar nombre de fórmula en la misma línea.
 _
 FORMATO MATEMÁTICO:
 Preferir inline $...$. Usar display $$...$$ solo para:
-ESTRUCTURA DE LATEX ARRAY
-$$\begin{array}{rcll}
-  \text{expr}_1 & = & \text{expr}_2 & (\text{justificación}) \\
-                & = & \text{expr}_3 & (\text{justificación}) \\
-  \text{expr}_1 & = & \text{expr}_n & (\text{LQQD})
-\end{array}$$
-
-O
-
-$$\begin{array}{rcl}
-  \text{expr}_1 & = & \text{expr}_2 \\
-                & = & \text{expr}_3\\
-  \text{expr}_1 & = & \text{expr}_n
-\end{array}$$
-REGLAS DE LATEX ARRAY
-- Nunca convertir símbolos a texto si el manuscrito los presenta simbólicamente.
-- `&` separa columnas — siempre N-1 `&` para N columnas
-- `\\` termina cada fila — la última fila **no** lleva `\\`
-- Celdas vacías → dejar en blanco entre `&&`
-- Texto dentro de math → `\text{...}`
-- El `$$..$$` envuelve todo el bloque
-- INICIO `$$\begin{array}{rcl}` O `$$\begin{array}{rcll}`
-- FIN `\end{array}$$`
+- Desarrollo multilínea, matrices, sistemas, resultado principal de teorema.
+Multilínea CON \begin{array}{rcl}...\end{array}.
+Separador de línea siempre \\\\ (doble).
+Nunca convertir símbolos a texto si el manuscrito los presenta simbólicamente.
 _
 NOTAS AL MARGEN Y DEL MANUSCRITO:
 Las notas van dentro del Cornell.

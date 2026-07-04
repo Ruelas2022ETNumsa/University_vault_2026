@@ -106123,6 +106123,7 @@ CASI
 Corresponden
 Cues
 Crecimiento
+Celdas
 Instalados
 Instalado
 Instalar
@@ -113207,6 +113208,7 @@ Inecuaci
 Identidades
 Indice
 Invisible
+INICIO
 Funci
 File
 Fase
@@ -137799,6 +137801,7 @@ Aproximaci
 ALGEBRA
 ANSWERS
 Active
+ARRAY
 push
 pull
 para
