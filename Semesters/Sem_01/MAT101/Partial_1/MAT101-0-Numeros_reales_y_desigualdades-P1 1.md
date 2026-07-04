@@ -4,9 +4,10 @@ galaxy_body: supernova
 subject: MAT101
 semester: 1
 partial: 1
-topic: T00
-topic_name: numeros_reales_y_desigualdades
-class_parts: []
+topic: 
+topic_name: 
+class_parts:
+  - ""
 related_planets: []
 tags: [MAT101, galaxy-supernova, P1]
 date_created: 2026-07-03
