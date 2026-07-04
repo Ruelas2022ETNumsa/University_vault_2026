@@ -13,7 +13,6 @@ date_created: 2026-07-04
 status: resuelto
 ---
 ## Enunciado
-
 Resolver la inecuación
 $$x^4 \geq 9x^2$$
 ## Desarrollo

@@ -2938,6 +2938,10 @@
       "isPinned": false,
       "isHidden": false,
       "customOrder": [
+        "MAT101-T00-ej_inec_irracional.md",
+        "MAT101-T00-ej_inec_valabs_mayor.md",
+        "MAT101-T00-ej_inec_valabs_cubo.md",
+        "MAT101-T00-ej_inec_valabs_fraccion.md",
         "MAT101-T00-ej_inec_racional_fracciones.md",
         "MAT101-T00-ej_inec_x4_9x2.md",
         "MAT101-T00-inecuaciones_lineales.md",
@@ -3017,6 +3021,22 @@
       "isHidden": false
     },
     "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-ej_inec_racional_fracciones.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-ej_inec_valabs_fraccion.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-ej_inec_valabs_cubo.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-ej_inec_valabs_mayor.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-ej_inec_irracional.md": {
       "isPinned": false,
       "isHidden": false
     }

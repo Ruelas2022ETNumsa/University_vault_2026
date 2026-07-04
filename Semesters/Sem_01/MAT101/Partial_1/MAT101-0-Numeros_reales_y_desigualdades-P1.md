@@ -703,7 +703,9 @@ $$\begin{array}{rcll}
 \dfrac{4x^2-x+1}{(x+3)(x-1)(3x-1)} & \leq & 0 & (\text{división entre 2}) 
 \end{array}$$
 
-Análisis del numerador $4x^2-x+1$: $D = (-1)^2 - 4(4)(1) = -15 < 0$. Como el discriminante es negativo y el coeficiente principal es positivo, la expresión es siempre positiva ($\in \mathbb{C}$ para raíces, siempre $(+)$ en $\mathbb{R}$).
+Análisis del numerador $4x^2-x+1$: $D = (-1)^2 - 4(4)(1) = -15 < 0$. 
+
+Como el discriminante es negativo y el coeficiente principal es positivo, la expresión es siempre positiva ($\in \mathbb{C}$ para raíces, siempre $(+)$ en $\mathbb{R}$).
 
 Puntos críticos (denominador): $x=-3, 1/3, 1$. Prueba de signos en $x=0$: $\dfrac{(+)}{(+)(-)(-)} = \dfrac{(+)}{(+)} = (+) \leq 0$ (Falsedad).
 
@@ -735,6 +737,7 @@ x < -3 | #94D2BD
 ---
 
 ##### Ej. c)
+
 $\left| \dfrac{2x-1}{3x+2} \right| < 2$
 
 Se aplica la propiedad del valor absoluto para inecuaciones: $|x| < a \iff -a < x < a$. El desarrollo se divide en dos condiciones que deben cumplirse simultáneamente (intersección).
