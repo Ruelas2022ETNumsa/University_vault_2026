@@ -7,7 +7,7 @@ audience:
 related_notes:
   - "[[_config/_notebooklm-system]]"
   - "[[prompts/MAT101/MAT101-study]]"
-  - "[[prompts/MAT101/MAT101-transcription]]"
+  - "[[MAT101-transcription-legacy]]"
 tags:
   - beacon
   - notebooklm
@@ -233,5 +233,5 @@ Ambos notebooks comparten el mismo stack de PDFs. Las guías `.md` varían segú
 galaxy-links
 [[_config/_notebooklm-system]]
 [[prompts/MAT101/MAT101-study]]
-[[prompts/MAT101/MAT101-transcription]]
+[[MAT101-transcription-legacy]]
 %%

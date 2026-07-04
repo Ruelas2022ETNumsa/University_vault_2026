@@ -31066,6 +31066,8 @@ determinaci
 difieren
 delimitados
 dividen
+desdoblamiento
+disjuntas
 Vault
 Verificar
 Variables
@@ -74609,6 +74611,7 @@ relacionadas
 rows
 representable
 refuerzan
+radicando
 notes
 notas
 nuevas
@@ -106144,6 +106147,7 @@ Corresponden
 Cues
 Crecimiento
 Celdas
+Cuadrada
 Instalados
 Instalado
 Instalar
@@ -113229,6 +113233,7 @@ Identidades
 Indice
 Invisible
 INICIO
+Irreducibles
 Funci
 File
 Fase
@@ -119415,6 +119420,7 @@ Falsedad
 FORMULAS
 FEATURE
 Falso
+Factores
 Estado
 Excalidraw
 EPUBs
@@ -126394,6 +126400,7 @@ Excluye
 Evitable
 Esencial
 EXERCISES
+Elevando
 Obsidian
 OmniSearch
 Ocultar
@@ -196343,6 +196350,8 @@ inside
 indefinici
 intersecar
 impuestas
+indefine
+incluirse
 Dependencia
 Dropbox
 Dataview
@@ -202500,6 +202509,7 @@ Dividido
 Derivada
 Depende
 Distancia
+Disyunci
 Remotely
 Raz
 Revisa

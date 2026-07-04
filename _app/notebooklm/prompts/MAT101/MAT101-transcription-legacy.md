@@ -19,15 +19,6 @@ MENSAJE 2 — Ejercicios (solo si el usuario lo pide):
   "De apuntesTX, subtítulo Y, muéstrame ejercicios resueltos"
   → ejercicios de los libros fuente, con gráficas si aplica
   → NO repetir transcripción ni complemento ya entregado
-
-MENSAJE 3 — Ejercicios del cuaderno:
-  "De apuntesTX, muéstrame el ejercicio [a) $ec$] hasta [b) $ec$] con complemento nivel B/C"
-  → buscar en el PDF los ejercicios indicados por su enunciado (no por subtítulo)
-  → los incisos a) b) c)... están escritos en rojo en el cuaderno
-  → transcribir resolución completa con gráficas si aplica
-  → usar mismo formato que Mensaje 2: ##### Ej., array LaTeX, Desmos/TikZJax
-  → complemento nivel B/C va después, igual que en Mensaje 2
-  → NO repetir transcripción ni complemento ya entregado
 _
 ORDEN DE LECTURA DEL PDF:
 Cada página está dividida en dos mitades verticales.
@@ -50,61 +41,54 @@ ESTILO DE TRANSCRIPCIÓN:
 _
 BLOQUES CORNELL:
 Aplicar a subtítulos de teoría: definiciones, axiomas, teoremas, propiedades, procedimientos
-paso a paso. NO aplicar a ejemplos resueltos, ej , demostraciones.
+paso a paso Y NOTAS DEL TITULO. NO aplicar a ejemplos resueltos.
 
 ESTRUCTURA:
+--- start-multi-column: cornell-TX-00N
+```
+column-settings
+number of columns: 2
+column size: [60%, 40%]
+border: off
+```
 
-## [SUBTITULO Y]
-
-````
-cornell
-::cue
-
-[contenido de las claves]<br>
-[palabras clave separadas por · ]<br>
-[2-4 preguntas centrales que el subtítulo responde, según su complejidad]<br>
-[fórmula o definición clave en inline $...$ — nunca display $$]<br>
-[conexiones: "ver también: X" — solo si hay un subtítulo relacionado evidente jamas usar corchetes solo palabras ]<br>
-[errores comunes: "no confundir X con Y" — solo si aplica]<br>
-[mnemónico — solo si el subtítulo tiene una lista de 5 o más ítems]
-
-::note
-
+📝 **Desarrollo**
 [transcripción fiel del subtítulo: texto, fórmulas y gráficas]
 
-ESTRUCTURA GRAFICA (si hay graficas en los apuntes):
-DESMOS:
-```
-desmos-graph
-left= ;right= ;bottom= ;top= ;
-width= ;height= ;
----
-[ecuaciones con modificadores][color defalut #005F73]
-```
-TIKZJAX:
-```tikz
-\begin{document}
-\begin{tikzpicture}
+--- end-column ---
 
-\end{tikzpicture}
-\end{document}
-```
+🔑 **Claves**
 
-````
+[palabras clave separadas por · ]
 
->[!summary]( resumen una línea del subtítulo sin redundancia de otros subtítulos)
+[2-4 preguntas centrales que el subtítulo responde, según su complejidad]
 
-##### [aca vienen los ejemplos, demostraciones y ejerccicios resueltos]
+[fórmula o definición clave en inline $...$ — nunca display $$]
+
+[conexiones: "ver también: X" — solo si hay un subtítulo relacionado evidente]
+
+[errores comunes: "no confundir X con Y" — solo si aplica]
+
+[mnemónico — solo si el subtítulo tiene una lista de 5 o más ítems]
+
+%```desmos-graph
+%```
+
+--- end-multi-column
+
+> **Resumen:** [una línea del subtítulo sin redundancia de otros subtítulos]
 
 REGLAS:
-- usar la etiqueta de `[!summary]` y no resumen en el bloque de resumen
-- en la esctructura de cornell debe colocarse `cornell`antes de ::cue de forma obligatoria
-- El subtítulo Y del archivo NO va dentro del bloque Cornell.
-- Gráficas Desmos width máximo 320px.
-- Graficas desmos el uso de label es por ejemplo : (2, 0) | label:(d-b)/(a-c)
-- en la esctructura de los bloques desmos debe colocarse `desmos-graph`antes de left= ... de forma obligatoria
-- TikZJax tamaño normal.
-- Complemento, ejercicios y demostraciones van siempre FUERA del Cornell, después del Resumen.
+
+- REVISAR QUE LAS NOTAS DEL TITULO VAN DENTRO DEL BLOQUE CORNELL
+- El título principal del archivo NO va dentro del bloque Cornell.
+- ID secuencial por tema: cornell-T0-001, cornell-T0-002, cornell-T1-001...
+- Gráficas Desmos dentro de Desarrollo: width máximo 320px.
+- TikZJax dentro de Desarrollo: tamaño normal.
+- El bloque comentado %```desmos-graph / %``` en Claves es OBLIGATORIO
+  siempre que haya un bloque Desmos en Desarrollo — sin él Desmos no renderiza.
+- Si no hay Desmos en Desarrollo, omitir el bloque comentado en Claves.
+- Complemento y ejercicios van siempre FUERA del Cornell, después del Resumen.
 _
 NIVELES DE COMPLEMENTO:
 Va DESPUÉS del Cornell (fuera del bloque), con este formato exacto:
@@ -153,29 +137,10 @@ No usar — para separar nombre de fórmula en la misma línea.
 _
 FORMATO MATEMÁTICO:
 Preferir inline $...$. Usar display $$...$$ solo para:
-ESTRUCTURA DE LATEX ARRAY
-$$\begin{array}{rcll}
-  \text{expr}_1 & = & \text{expr}_2 & (\text{justificación}) \\
-                & = & \text{expr}_3 & (\text{justificación}) \\
-  \text{expr}_1 & = & \text{expr}_n & (\text{LQQD})
-\end{array}$$
-
-O
-
-$$\begin{array}{rcl}
-  \text{expr}_1 & = & \text{expr}_2 \\
-                & = & \text{expr}_3\\
-  \text{expr}_1 & = & \text{expr}_n
-\end{array}$$
-REGLAS DE LATEX ARRAY
-- Nunca convertir símbolos a texto si el manuscrito los presenta simbólicamente.
-- `&` separa columnas — siempre N-1 `&` para N columnas
-- `\\` termina cada fila — la última fila **no** lleva `\\`
-- Celdas vacías → dejar en blanco entre `&&`
-- Texto dentro de math → `\text{...}`
-- El `$$..$$` envuelve todo el bloque
-- INICIO `$$\begin{array}{rcl}` O `$$\begin{array}{rcll}`
-- FIN `\end{array}$$`
+- Desarrollo multilínea, matrices, sistemas, resultado principal de teorema.
+Multilínea CON \begin{array}{rcl}...\end{array}.
+Separador de línea siempre \\\\ (doble).
+Nunca convertir símbolos a texto si el manuscrito los presenta simbólicamente.
 _
 NOTAS AL MARGEN Y DEL MANUSCRITO:
 Las notas van dentro del Cornell.
@@ -195,7 +160,7 @@ GRÁFICOS — elegir en orden:
 Nunca inventar gráficos ni mezclar herramientas.
 _
 EJEMPLOS RESUELTOS:
-##### Ej. enunciado en la misma línea. Display si multilínea (debajo del bloque de resumen).
+##### Ej. enunciado en la misma línea. Display si multilínea.
 Conservar numeración de partes. No agregar pasos que no estén en el manuscrito.
 Al final de un ejercicio, agregar > [!note] solo si hay una observación
 relevante o conexión importante — no por defecto.

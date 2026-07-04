@@ -2781,8 +2781,8 @@
       "customOrder": [
         "MAT101-transcription (multi columns pluggin).md",
         "Untitled Cornell note.md",
-        "MAT101-transcription 1.md",
         "MAT101-transcription.md",
+        "MAT101-transcription-legacy.md",
         "MAT101-study.md"
       ]
     },
@@ -2822,10 +2822,6 @@
       "isHidden": false
     },
     "_app/notebooklm/prompts/MAT101/MAT101-study.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/prompts/MAT101/MAT101-transcription.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -2886,19 +2882,10 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "MAT101-0-Numeros_reales_y_desigualdades-P1 1.md",
         "MAT101-0-Numeros_reales_y_desigualdades-P1.md"
       ]
     },
-    "Semesters/Sem_01/MAT101/Partial_1/MAT101-0-Numeros_reales_y_desigualdades-P1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/prompts/MAT101/MAT101-transcription 1.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -2907,10 +2894,6 @@
       "isHidden": false
     },
     "Untitled 3 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semesters/Sem_01/MAT101/Partial_1/MAT101-0-Numeros_reales_y_desigualdades-P1 1.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -2923,6 +2906,18 @@
       "isHidden": false
     },
     "Untitled 5.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_01/MAT101/Partial_1/MAT101-0-Numeros_reales_y_desigualdades-P1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/MAT101/MAT101-transcription-legacy.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/MAT101/MAT101-transcription.md": {
       "isPinned": false,
       "isHidden": false
     }
