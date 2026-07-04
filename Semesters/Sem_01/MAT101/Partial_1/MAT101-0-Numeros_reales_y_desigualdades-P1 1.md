@@ -556,7 +556,7 @@ width=320; height=80;
 ---
 y=0 |x>2| #005F73
 (2,0) | open | #005F73
-x > 2 \{y=0\} | #005F73
+x > 2 \{y=0\| #005F73
 (2, 0) | label: (d-b)/(a-c)
 ```
 
@@ -582,7 +582,7 @@ width=320; height=80;
 ---
 y=0 |x >= 0.25 | #005F73
 (0.25, 0) | #005F73
-x >= 0.25 \{y=0\} | #005F73
+x >= 0.25 \{y=0\| #005F73
 (0.25, 0) | label:1/4
 ```
 
@@ -663,49 +663,12 @@ y=0|#000000
 > 
 > - Los ceros provenientes del denominador ($Q(x)=0$) **nunca** se incluyen en el conjunto solución (siempre generan intervalos abiertos), independientemente de si la desigualdad incluye el signo igual ($\geq, \leq$), para evitar la división por cero.
 
-
-
-
 ---
 
----
+##### Ej. Resolver la inecuación a)
+$x^4 \ge 9x^2$
 
-
-De los apuntes de la materia (**apuntesT0**), se presenta la resolución del ejercicio de inecuaciones con condiciones, finalizando así el tema de Números Reales antes del inicio de Funciones Reales.
-
-##### ej. Resolución de inecuación con condiciones
-
-La condición: $$\begin{array}{rcccl} x(x+1) & \ge & 0 \ \end{array}$$
-
-Evaluación por puntos críticos: $x = 0$ $x = -1$
-
-Prueba de signos: Si $x = 1 \implies (+)(+) = (+) \ge 0 \quad (\text{Verdadera})$ Si $x = -1, 0 \implies 0 \ge 0 \quad (\text{Verdadera})$
-
-> [!important] ¡Toda condición siempre se debe $\cap$ (intersecar) con el $C_s$ hallado!
-
-$$C_s = ]-3, -1] \cup [0, 2[$$
-
-```
-left=-5; right=5; bottom=-1.5; top=1.5;
-width=320; height=100;
----
-y=0|-3<x<=-1|#005F73
-y=0|0<=x<2|#005F73
-(-3,0)|open|#005F73
-(-1,0)|#005F73
-(0,0)|#005F73
-(2,0)|open|#005F73
-```
-
-> [!summary] Determinación del conjunto solución final mediante la intersección de los intervalos obtenidos con las condiciones de restricción impuestas por la inecuación original.
-
-> [!note] Complemento (Nivel B)
-> 
-> **Definición de resolución de desigualdades** Resolver una desigualdad significa determinar el conjunto de números $x$ para los que la desigualdad es verdadera. A este conjunto resultante se le denomina **conjunto solución** ($C_s$). En problemas complejos, el $C_s$ final surge de la intersección ($\cap$) entre la solución algebraica del cuerpo de la inecuación y las restricciones o condiciones de existencia definidas por los términos de la misma.
-
----
-
-##### Ej. Resolver la inecuación a) $x^4 \ge 9x^2$
+solución:
 
 $$\begin{array}{rcll}
 x^4 & \ge & 9x^2 & \\
@@ -727,9 +690,14 @@ y=0 | #555
 (4, 0.5) | hidden | label: V
 ```
 
-**Signos** $I_1: x = -10 \rightarrow (+) (-)(-) \Rightarrow (+) \ge 0 \rightarrow V$ $\Rightarrow I_1 \in C_s$ [ Intercalado ]
+**Análisis de signos**
 
-**Prueba de extremos** $x = -3, 0, 3 \rightarrow \text{ctte } 0 \Rightarrow 0 \ge 0 \rightarrow V \text{ para } (\ge)$ $\rightarrow -3, 0, 3 \in C_s$
+- $I_1: x = -10 \implies (+)(-)(-) = (+) \geq 0 \implies V$
+- $I_2: x = -1 \implies (+)(-)(+) = (-) \geq 0 \implies F$
+- $I_3: x = 1 \implies (+)(-)(+) = (-) \geq 0 \implies F$
+- $I_4: x = 4 \implies (+)(+)(+) = (+) \geq 0 \implies V$
+
+**Prueba de extremos** $x = -3, 0, 3 \implies 0 \geq 0 \quad V$ (pertenecen al $C_s$)
 
 **$C_s:$**
 
@@ -747,13 +715,19 @@ x >= 3 | #005F73
 ```
 
 $$\begin{array}{rcl}
-C_s & = & ]-\infty, -3] \cup \{0\} \cup [3, +\infty[ \ & = & \mathbb{R} - ]-3, 0[ \cup ]0, 3[ \ & = & {x / x \le -3 \vee x = 0 \vee x \ge 3} \end{array}$$
+C_s & = & ]-\infty, -3] \cup \{0\} \cup [3, +\infty[ \\ & = & \mathbb{R} - ]-3, 0[ \cup ]0, 3[ \\ & = & {x / x \le -3 \vee x = 0 \vee x \ge 3} 
+\end{array}$$
 
-##### Ej. Resolver la inecuación b) $\frac{2x}{x^2+2x-3} + \frac{2x+1}{3x^2+8x-3} \le \frac{-1}{3x^2-4x+1}$
+---
 
-$$\begin{array}{rcl} \frac{2x}{(x+3)(x-1)} + \frac{2x+1}{(3x-1)(x+3)} + \frac{1}{(3x-1)(x-1)} & \le & 0 \ \frac{2x(3x-1) + (2x+1)(x-1) + (x+3)}{(x+3)(x-1)(3x-1)} & \le & 0 \ \frac{6x^2-2x + 2x^2-x-1 + x+3}{(x+3)(x-1)(3x-1)} & \le & 0 \ \frac{8x^2-2x+2}{(x+3)(x-1)(3x-1)} & \le & 0 \ \frac{4x^2-x+1}{(x+3)(x-1)(3x-1)} & \le & 0 \end{array}$$
+##### Ej. Resolver la inecuación b)
+$\dfrac{2x}{x^2+2x-3} + \dfrac{2x+1}{3x^2+8x-3} \le \dfrac{-1}{3x^2-4x+1}$
 
-_Ceros del numerador:_ $4x^2-x+1=0 \rightarrow x = \frac{1 \pm \sqrt{1-16}}{8} \notin \mathbb{R}$
+solución:
+
+$$\begin{array}{rcl} \dfrac{2x}{(x+3)(x-1)} + \dfrac{2x+1}{(3x-1)(x+3)} + \dfrac{1}{(3x-1)(x-1)} & \le & 0\\\dfrac{2x(3x-1) + (2x+1)(x-1) + (x+3)}{(x+3)(x-1)(3x-1)} & \le & 0\\\dfrac{6x^2-2x + 2x^2-x-1 + x+3}{(x+3)(x-1)(3x-1)} & \le & 0\\\dfrac{8x^2-2x+2}{(x+3)(x-1)(3x-1)} & \le & 0\\\dfrac{4x^2-x+1}{(x+3)(x-1)(3x-1)} & \le & 0 \end{array}$$
+
+_Ceros del numerador:_ $4x^2-x+1=0 \rightarrow x = \dfrac{1 \pm \sqrt{1-16}}{8} \notin \mathbb{R}$
 
 ```desmos-graph
 left=-5;right=3;bottom=-1;top=2;
@@ -769,9 +743,14 @@ y=0 | #555
 (2, 0.5) | hidden | label: F
 ```
 
-$x=0 \rightarrow \frac{(+)}{(+)(-)(-)} = (+) \le 0 \rightarrow F$
+**Análisis de raíces**
 
-**Extremos** $x = -3, \frac{1}{3}, 1 \rightarrow \frac{\text{ctte}}{0} \le 0 \rightarrow F$ $\rightarrow -3, \frac{1}{3}, 1 \notin C_s$
+- Numerador: $4x^2 - x + 1 \implies \Delta = (-1)^2 - 4(4)(1) = -15 < 0$ (No tiene raíces reales; siempre es positivo).
+- Denominador (Extremos): $x = -3, 1, \frac{1}{3}$.
+
+**Signos** $x = 0 \implies \frac{(+)}{(+)(-)(-)} = (+) \leq 0 \implies F$
+
+**Extremos** $x = -3, \dfrac{1}{3}, 1 \rightarrow \dfrac{\text{ctte}}{0} \le 0 \rightarrow F$ $\rightarrow -3, \dfrac{1}{3}, 1 \notin C_s$
 
 **$C_s:$**
 
@@ -787,30 +766,17 @@ x < -3 | #005F73
 (1, 0) | open | #005F73
 ```
 
-$$\begin{array}{rcl} C_s & = & ]-\infty, -3[ \cup ]1/3, 1[ \ & = & {x / x < -3 \vee 1/3 < x < 1} \end{array}$$
+$$\begin{array}{rcl} C_s & = & ]-\infty, -3[ \cup ]1/3, 1[\\& = & {x / x < -3 \vee 1/3 < x < 1} \end{array}$$
 
-> [!note] Complemento (Nivel B/C)
+> [!note] Complemento (Nivel B)
 > 
-> **Método de Intervalos para Inecuaciones Racionales** Para resolver una inecuación de la forma $P(x)/Q(x) > 0$ (o $\ge, <, \le$), se deben seguir estos pasos formales:
+> **Método de los signos (o de los intervalos)** Para resolver inecuaciones no lineales (polinomiales o racionales), se utiliza el hecho de que una función solo puede cambiar de signo en sus ceros o en sus puntos de discontinuidad. El procedimiento estándar consiste en:
 > 
-> 1. **Ceros y Polos:** Encontrar los ceros del numerador (raíces de $P(x)$) y los ceros del denominador (polos, raíces de $Q(x)$). Estos son los puntos críticos que dividen la recta real.
-> 2. **Multiplicidad Par:** Si un factor tiene un exponente par (como $x^2$ en el ejercicio a), el signo de la expresión **no cambia** al cruzar ese punto crítico. Esto rompe la alternancia simple de signos.
-> 3. **Restricción de Denominador:** Los ceros del denominador **nunca** se incluyen en el conjunto solución (siempre son puntos abiertos), ya que la división por cero no está definida en $\mathbb{R}$.
-> 
-> **Ejercicio Resuelto (Schaum's 1.11):** Resolver $\frac{2x-3}{3x-5} \ge 3$. $$\begin{array}{rcl} \frac{2x-3}{3x-5} - 3 & \ge & 0 \ \frac{2x-3 - 3(3x-5)}{3x-5} & \ge & 0 \ \frac{-7x+12}{3x-5} & \ge & 0 \end{array}$$ Puntos críticos: $x = 12/7$ (cerrado por $\ge$) y $x = 5/3$ (siempre abierto). Analizando el signo para $x=2$ (derecha): $\frac{-14+12}{6-5} = -2 \ge 0$ (Falso). Solución: $C_s = ]5/3, 12/7]$.
-
-## left=0;right=3;bottom=-1;top=1; width=320;height=80;
-
-y=0 | #555 5/3 < x <= 12/7 | #005F73 (5/3, 0) | open | #005F73 (12/7, 0) | #005F73
-
-
-
-
-
-
-
-
-
+> 1. Trasponer todos los términos a un lado de la desigualdad para compararlos con cero.
+> 2. Factorizar completamente la expresión para identificar los números críticos (raíces del numerador y denominador).
+> 3. Dividir la recta numérica en intervalos abiertos definidos por estos puntos críticos.
+> 4. Evaluar el signo de la expresión en cada intervalo usando valores de prueba.
+> 5. Determinar el conjunto solución incluyendo o excluyendo los extremos según el tipo de desigualdad ($\leq, \geq$ frente a $<, >$) y la definición del dominio (los ceros del denominador nunca se incluyen).
 
 
 
@@ -824,14 +790,6 @@ y=0 | #555 5/3 < x <= 12/7 | #005F73 (5/3, 0) | open | #005F73 (12/7, 0) | #005F
 ---
 
 ### erorres de notebook
-1. {} esta mal deberia ser \{   \ }
-$\forall a \in \mathbb{R} - {0}, \exists a^{-1} \in \mathbb{R} \ni a \cdot a^{-1} = 1$
-2. <\array} esta mal deberia ser \end{array}
-$$\begin{array}{rcl} a + b & = & a + c \ (-a) + (a + b) & = & (-a) + (a + c) \ [(-a) + a] + b & = & [(-a) + a] + c \ 0 + b & = & 0 + c \ b & = & c </array}$$
-
-3. demostraciones deben estar fuera de cornell? notebooklm las transcribio dentro
-
-4. NOTEBOOKLM olvida la estructura de los array no coloca el doble `\\` para el salto de linea creo que esta tarea sera delegada a claude corregir los arrays
 
 ##### cosas por hacer
 en las guias colocar desmos-graph para que notebooklm lo haga tambien
