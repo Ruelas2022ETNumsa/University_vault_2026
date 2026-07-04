@@ -39,36 +39,33 @@ No son fuentes externas. No intentar resolver el enlace.
 ## 2. Estructura Cornell
 
 Las notas de teoría usan un bloque de dos columnas generado por
-el plugin Multi-Column Markdown de Obsidian. El bloque completo tiene
-esta forma:
+el plugin Cornell Notes (bytetiles/obsidian-cornell-notes). El bloque
+completo tiene esta forma:
 
-```
---- start-multi-column: cornell-T1-001
-[column-settings: parámetros visuales — ignorar]
 
-📝 **Desarrollo**
-[contenido principal: definiciones, fórmulas, desarrollo]
+````cornell
+::cue
 
---- end-column ---
-
-🔑 **Claves**
+🔑 Claves
 [palabras clave, preguntas, fórmula central, conexiones]
 
---- end-multi-column
+::note
 
-> **Resumen:** síntesis del subtema en una línea
-```
+📝 Desarrollo
+[contenido principal: definiciones, fórmulas, desarrollo]
 
-**Separadores** — son infraestructura del plugin, no contenido:
-- `--- start-multi-column: ID` → marca inicio del bloque
-- `--- end-column ---` → separa columna izquierda de derecha
-- `--- end-multi-column` → marca fin del bloque
-- Bloque ` ```column-settings``` ` → parámetros visuales, ignorar
+````
+
+**Marcadores** — son infraestructura del plugin, no contenido:
+- ` ````cornell ` → marca inicio del bloque
+- `::cue` → delimita la columna izquierda (Claves)
+- `::note` → delimita la columna derecha (Desarrollo)
+- ` ```` ` de cierre → marca fin del bloque
 
 **Orden de lectura del contenido:**
-1. Desarrollo (columna izquierda) → contenido principal
-2. Claves (columna derecha) → síntesis y conexiones
-3. Resumen (debajo del bloque) → una línea de cierre
+1. Claves (`::cue`, columna izquierda) → síntesis y conexiones
+2. Desarrollo (`::note`, columna derecha) → contenido principal
+3. Callouts debajo del bloque (`> [!summary]`) → resumen de cierre
 
 ---
 

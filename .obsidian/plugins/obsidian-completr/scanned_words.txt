@@ -31070,6 +31070,7 @@ delimitados
 dividen
 desdoblamiento
 disjuntas
+declaran
 Vault
 Verificar
 Variables
@@ -87603,6 +87604,7 @@ colocarse
 concepts
 connects
 capitulo
+causaba
 updated
 un
 universo
@@ -106159,6 +106161,7 @@ Crecimiento
 Celdas
 Cuadrada
 Comets
+Configurables
 Instalados
 Instalado
 Instalar
@@ -126412,6 +126415,7 @@ Evitable
 Esencial
 EXERCISES
 Elevando
+Escritura
 Obsidian
 OmniSearch
 Ocultar
@@ -143829,6 +143833,7 @@ point
 polinomios
 polos
 photonType
+probado
 min
 mica
 movimiento
@@ -188644,6 +188649,8 @@ lausura
 levaci
 literatura
 logical
+lenta
+liviano
 incluyendo
 im
 instalar

@@ -14,7 +14,7 @@ tags:
   - MAT101
   - infraestructura
 date_created: 2026-06-03
-date_updated: 2026-07-02
+date_updated: 2026-07-04
 status: activo
 ---
 
@@ -101,6 +101,44 @@ De apuntesT1, subtítulo "Dominio y rango de una función", muéstrame ejercicio
 
 ```
 De apuntesT3, subtítulo "Regla de la cadena", muéstrame ejercicios resueltos
+```
+
+---
+
+### Mensaje 3 — Ejercicios del cuaderno
+
+Opcional. Se usa cuando querés transcribir los ejercicios resueltos que están en el cuaderno físico, no extraer ejercicios de los libros.
+
+**Sintaxis:**
+```
+De apuntesTX, muéstrame el ejercicio [a) $ec$] hasta [b) $ec$] con complemento nivel [B/C]
+```
+
+> Los incisos se identifican por su enunciado (la expresión matemática), no por subtítulo. En el cuaderno están marcados en rojo.
+
+**Sin rango (un solo inciso):**
+```
+De apuntesTX, muéstrame el ejercicio [a) $ec$]
+```
+
+**Qué devuelve:**
+- Resolución completa del inciso con formato `##### Ej.`
+- Gráfica Desmos o TikZJax si aplica
+- Complemento nivel B/C después, igual que en Mensaje 1
+- No repite transcripción ni complemento ya entregado
+
+**Ejemplos:**
+
+```
+De apuntesT0, muéstrame el ejercicio [a) $x^4 \geq 9x^2$] con complemento nivel B
+```
+
+```
+De apuntesT0, muéstrame el ejercicio [a) $x^4 \geq 9x^2$] hasta [c) $\left|\frac{2x-1}{3x+2}\right| < 2$] con complemento nivel B
+```
+
+```
+De apuntesT1, muéstrame el ejercicio [b) $f(x) = \sqrt{x^2 - 4}$] con complemento nivel C
 ```
 
 ---

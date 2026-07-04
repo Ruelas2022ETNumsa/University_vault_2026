@@ -1241,7 +1241,6 @@
       "sortOrder": "custom",
       "customOrder": [
         "graph-screenshot",
-        "logMessage.md",
         "logs",
         "patch-log.txt",
         "reports"
@@ -1251,27 +1250,7 @@
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
-      "customOrder": [
-        "graph-screenshot-2026-05-14-23-30-50.png",
-        "graph-screenshot-2026-05-14-23-30-57.png",
-        "graph-screenshot-2026-05-14-23-31-02.png"
-      ]
-    },
-    "_app/TagsRoutes/graph-screenshot/graph-screenshot-2026-05-14-23-30-50.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/TagsRoutes/graph-screenshot/graph-screenshot-2026-05-14-23-30-57.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/TagsRoutes/graph-screenshot/graph-screenshot-2026-05-14-23-31-02.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/TagsRoutes/logMessage.md": {
-      "isPinned": false,
-      "isHidden": false
+      "customOrder": []
     },
     "_app/TagsRoutes/logs": {
       "isPinned": false,
@@ -1287,34 +1266,14 @@
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
-      "customOrder": [
-        "TagReport_#e0ac00.md",
-        "TagReport_frontmatter_tag_ETN-302.md",
-        "TagReport_frontmatter_tag_Leaves.md",
-        "TagReport_frontmatter_tag_Parte_II.md"
-      ]
-    },
-    "_app/TagsRoutes/reports/TagReport_#e0ac00.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/TagsRoutes/reports/TagReport_frontmatter_tag_ETN-302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/TagsRoutes/reports/TagReport_frontmatter_tag_Leaves.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/TagsRoutes/reports/TagReport_frontmatter_tag_Parte_II.md": {
-      "isPinned": false,
-      "isHidden": false
+      "customOrder": []
     },
     "_app/_appnotes": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "plugin_guide 1.md",
         "desmos_guide 1.md",
         "desmos_guide.md",
         "PDF_PP-guide.md",
@@ -2669,9 +2628,7 @@
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
-      "customOrder": [
-        "MAT101-notebooklm-user_guide.md"
-      ]
+      "customOrder": []
     },
     "_app/solve/google_drive_solve.md": {
       "isPinned": false,
@@ -2704,6 +2661,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "MAT101-notebooklm-user_guide.md",
         "notebooklm-prompt-guide.md",
         "tikzjax_guide-legacy.md",
         "obsidian_notation.md"
@@ -2735,7 +2693,6 @@
       "sortOrder": "custom",
       "customOrder": [
         "MAT101-transcription (multi columns pluggin).md",
-        "Untitled Cornell note.md",
         "MAT101-transcription.md",
         "MAT101-transcription-legacy.md",
         "MAT101-study.md"
@@ -2769,10 +2726,6 @@
       "isHidden": false
     },
     "_app/notebooklm/guides/MAT101/MAT101_TikzJax.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/other/MAT101-notebooklm-user_guide.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -2840,10 +2793,6 @@
         "T00-numeros_reales",
         "MAT101-T00-P1-Numeros_reales_y_desigualdades.md"
       ]
-    },
-    "_app/notebooklm/prompts/MAT101/Untitled Cornell note.md": {
-      "isPinned": false,
-      "isHidden": false
     },
     "_app/notebooklm/prompts/MAT101/MAT101-transcription (multi columns pluggin).md": {
       "isPinned": false,
@@ -2984,6 +2933,14 @@
       "isHidden": false
     },
     "in_work/claude vision.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_appnotes/plugin_guide 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/general/MAT101-notebooklm-user_guide.md": {
       "isPinned": false,
       "isHidden": false
     }
