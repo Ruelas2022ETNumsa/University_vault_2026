@@ -20251,6 +20251,7 @@ SSSH
 Semiabierto
 Subconjunto
 Soluciones
+Semantic
 Plugins
 Pendientes
 Plugin
@@ -37208,6 +37209,8 @@ Viven
 Variaciones
 VARIADOS
 Vectores
+Verificado
+View
 galaxy
 gina
 genes
@@ -48609,6 +48612,7 @@ bbox
 buscarse
 bccacc
 bierto
+blur
 scope
 status
 selector
@@ -55544,6 +55548,7 @@ subdividen
 summary
 sintetiza
 sumatorios
+safe
 vault
 vil
 ver
@@ -113188,6 +113193,7 @@ Indeterminaciones
 Inecuaci
 Identidades
 Indice
+Invisible
 Funci
 File
 Fase
@@ -119372,6 +119378,7 @@ FUENTES
 Fccc
 Falsedad
 FORMULAS
+FEATURE
 Estado
 Excalidraw
 EPUBs
@@ -137778,6 +137785,7 @@ Another
 Aproximaci
 ALGEBRA
 ANSWERS
+Active
 push
 pull
 para
@@ -162656,6 +162664,7 @@ BCCE
 BCCq
 Body
 Bullet
+Block
 en
 exacta
 escaneados
@@ -176929,6 +176938,7 @@ Marcador
 Modificadores
 More
 Mnemot
+Marginalia
 Lectura
 LaTeX
 Linter
@@ -209556,6 +209566,8 @@ Representan
 Review
 Repaso
 Revert
+Reading
+Recall
 Hider
 Hace
 Herramientas
@@ -214494,6 +214506,7 @@ HFFF
 HIIALL
 HNNFAA
 HINTS
+Highlighting
 filtrar
 formato
 faltantes
