@@ -20254,6 +20254,7 @@ Subconjunto
 Soluciones
 Semantic
 Splits
+Signos
 Plugins
 Pendientes
 Plugin
@@ -25732,6 +25733,7 @@ Pamm
 PRINCIPAL
 Positividad
 PARTITION
+Polos
 del
 date
 de
@@ -55562,6 +55564,7 @@ sumatorios
 safe
 stay
 sujeta
+surge
 vault
 vil
 ver
@@ -68130,6 +68133,7 @@ across
 antemano
 aislamiento
 arbitrario
+alternancia
 related
 recomendados
 ribbon
@@ -119410,6 +119414,7 @@ Fccc
 Falsedad
 FORMULAS
 FEATURE
+Falso
 Estado
 Excalidraw
 EPUBs
@@ -143804,6 +143809,7 @@ procamente
 paragraphs
 point
 polinomios
+polos
 min
 mica
 movimiento
@@ -169401,6 +169407,7 @@ europea
 extendida
 exceder
 esctructura
+exponente
 Motor
 Media
 Mantiene
@@ -176974,6 +176981,7 @@ Modificadores
 More
 Mnemot
 Marginalia
+Multiplicidad
 Lectura
 LaTeX
 Linter
@@ -196333,6 +196341,8 @@ intetraci
 into
 inside
 indefinici
+intersecar
+impuestas
 Dependencia
 Dropbox
 Dataview
@@ -209608,6 +209618,7 @@ Repaso
 Revert
 Reading
 Recall
+Racionales
 Hider
 Hace
 Herramientas
@@ -220065,6 +220076,7 @@ fundamenta
 freely
 functions
 function
+finalizando
 haya
 hace
 hacer

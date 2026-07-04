@@ -19,6 +19,15 @@ MENSAJE 2 — Ejercicios (solo si el usuario lo pide):
   "De apuntesTX, subtítulo Y, muéstrame ejercicios resueltos"
   → ejercicios de los libros fuente, con gráficas si aplica
   → NO repetir transcripción ni complemento ya entregado
+
+MENSAJE 3 — Ejercicios del cuaderno:
+  "De apuntesTX, muéstrame el ejercicio [a) $ec$] hasta [b) $ec$] con complemento nivel B/C"
+  → buscar en el PDF los ejercicios indicados por su enunciado (no por subtítulo)
+  → los incisos a) b) c)... están escritos en rojo en el cuaderno
+  → transcribir resolución completa con gráficas si aplica
+  → usar mismo formato que Mensaje 2: ##### Ej., array LaTeX, Desmos/TikZJax
+  → complemento nivel B/C va después, igual que en Mensaje 2
+  → NO repetir transcripción ni complemento ya entregado
 _
 ORDEN DE LECTURA DEL PDF:
 Cada página está dividida en dos mitades verticales.

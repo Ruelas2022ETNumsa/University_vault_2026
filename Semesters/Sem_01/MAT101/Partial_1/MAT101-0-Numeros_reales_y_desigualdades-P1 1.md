@@ -703,6 +703,112 @@ y=0|0<=x<2|#005F73
 > 
 > **Definición de resolución de desigualdades** Resolver una desigualdad significa determinar el conjunto de números $x$ para los que la desigualdad es verdadera. A este conjunto resultante se le denomina **conjunto solución** ($C_s$). En problemas complejos, el $C_s$ final surge de la intersección ($\cap$) entre la solución algebraica del cuerpo de la inecuación y las restricciones o condiciones de existencia definidas por los términos de la misma.
 
+---
+
+##### Ej. Resolver la inecuación a) $x^4 \ge 9x^2$
+
+$$\begin{array}{rcll}
+x^4 & \ge & 9x^2 & \\
+x^2(x^2 - 9) & \ge & 0 & \\
+x^2(x - 3)(x + 3) & \ge & 0 & \\
+(x - 0)^2(x - 3)(x + 3) & \ge & 0 & (\text{factorización total}) \end{array}$$
+
+```desmos-graph
+left=-5;right=5;bottom=-1;top=2;
+width=320;height=100;
+---
+y=0 | #555
+(-3, 0) | open | label: -3
+(0, 0) | open | label: 0
+(3, 0) | open | label: 3
+(-4, 0.5) | hidden | label: V
+(-1.5, 0.5) | hidden | label: F
+(1.5, 0.5) | hidden | label: F
+(4, 0.5) | hidden | label: V
+```
+
+**Signos** $I_1: x = -10 \rightarrow (+) (-)(-) \Rightarrow (+) \ge 0 \rightarrow V$ $\Rightarrow I_1 \in C_s$ [ Intercalado ]
+
+**Prueba de extremos** $x = -3, 0, 3 \rightarrow \text{ctte } 0 \Rightarrow 0 \ge 0 \rightarrow V \text{ para } (\ge)$ $\rightarrow -3, 0, 3 \in C_s$
+
+**$C_s:$**
+
+```desmos-graph
+left=-5;right=5;bottom=-1;top=1;
+width=320;height=80;
+---
+y=0 | #555
+x <= -3 | #005F73
+x = 0
+x >= 3 | #005F73
+(-3, 0) | #005F73
+(0, 0) | #005F73
+(3, 0) | #005F73
+```
+
+$$\begin{array}{rcl}
+C_s & = & ]-\infty, -3] \cup \{0\} \cup [3, +\infty[ \ & = & \mathbb{R} - ]-3, 0[ \cup ]0, 3[ \ & = & {x / x \le -3 \vee x = 0 \vee x \ge 3} \end{array}$$
+
+##### Ej. Resolver la inecuación b) $\frac{2x}{x^2+2x-3} + \frac{2x+1}{3x^2+8x-3} \le \frac{-1}{3x^2-4x+1}$
+
+$$\begin{array}{rcl} \frac{2x}{(x+3)(x-1)} + \frac{2x+1}{(3x-1)(x+3)} + \frac{1}{(3x-1)(x-1)} & \le & 0 \ \frac{2x(3x-1) + (2x+1)(x-1) + (x+3)}{(x+3)(x-1)(3x-1)} & \le & 0 \ \frac{6x^2-2x + 2x^2-x-1 + x+3}{(x+3)(x-1)(3x-1)} & \le & 0 \ \frac{8x^2-2x+2}{(x+3)(x-1)(3x-1)} & \le & 0 \ \frac{4x^2-x+1}{(x+3)(x-1)(3x-1)} & \le & 0 \end{array}$$
+
+_Ceros del numerador:_ $4x^2-x+1=0 \rightarrow x = \frac{1 \pm \sqrt{1-16}}{8} \notin \mathbb{R}$
+
+```desmos-graph
+left=-5;right=3;bottom=-1;top=2;
+width=320;height=100;
+---
+y=0 | #555
+(-3, 0) | open | label: -3
+(1/3, 0) | open | label: 1/3
+(1, 0) | open | label: 1
+(-4, 0.5) | hidden | label: V
+(-1, 0.5) | hidden | label: F
+(0.6, 0.5) | hidden | label: V
+(2, 0.5) | hidden | label: F
+```
+
+$x=0 \rightarrow \frac{(+)}{(+)(-)(-)} = (+) \le 0 \rightarrow F$
+
+**Extremos** $x = -3, \frac{1}{3}, 1 \rightarrow \frac{\text{ctte}}{0} \le 0 \rightarrow F$ $\rightarrow -3, \frac{1}{3}, 1 \notin C_s$
+
+**$C_s:$**
+
+```desmos-graph
+left=-5;right=3;bottom=-1;top=1;
+width=320;height=80;
+---
+y=0 | #555
+x < -3 | #005F73
+1/3 < x < 1 | #005F73
+(-3, 0) | open | #005F73
+(1/3, 0) | open | #005F73
+(1, 0) | open | #005F73
+```
+
+$$\begin{array}{rcl} C_s & = & ]-\infty, -3[ \cup ]1/3, 1[ \ & = & {x / x < -3 \vee 1/3 < x < 1} \end{array}$$
+
+> [!note] Complemento (Nivel B/C)
+> 
+> **Método de Intervalos para Inecuaciones Racionales** Para resolver una inecuación de la forma $P(x)/Q(x) > 0$ (o $\ge, <, \le$), se deben seguir estos pasos formales:
+> 
+> 1. **Ceros y Polos:** Encontrar los ceros del numerador (raíces de $P(x)$) y los ceros del denominador (polos, raíces de $Q(x)$). Estos son los puntos críticos que dividen la recta real.
+> 2. **Multiplicidad Par:** Si un factor tiene un exponente par (como $x^2$ en el ejercicio a), el signo de la expresión **no cambia** al cruzar ese punto crítico. Esto rompe la alternancia simple de signos.
+> 3. **Restricción de Denominador:** Los ceros del denominador **nunca** se incluyen en el conjunto solución (siempre son puntos abiertos), ya que la división por cero no está definida en $\mathbb{R}$.
+> 
+> **Ejercicio Resuelto (Schaum's 1.11):** Resolver $\frac{2x-3}{3x-5} \ge 3$. $$\begin{array}{rcl} \frac{2x-3}{3x-5} - 3 & \ge & 0 \ \frac{2x-3 - 3(3x-5)}{3x-5} & \ge & 0 \ \frac{-7x+12}{3x-5} & \ge & 0 \end{array}$$ Puntos críticos: $x = 12/7$ (cerrado por $\ge$) y $x = 5/3$ (siempre abierto). Analizando el signo para $x=2$ (derecha): $\frac{-14+12}{6-5} = -2 \ge 0$ (Falso). Solución: $C_s = ]5/3, 12/7]$.
+
+## left=0;right=3;bottom=-1;top=1; width=320;height=80;
+
+y=0 | #555 5/3 < x <= 12/7 | #005F73 (5/3, 0) | open | #005F73 (12/7, 0) | #005F73
+
+
+
+
+
+
+
 
 
 

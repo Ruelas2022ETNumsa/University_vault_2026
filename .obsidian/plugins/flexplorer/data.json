@@ -5,6 +5,7 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
+        "Untitled 5.md",
         "Untitled 4.md",
         "Untitled 3 1.md",
         "Untitled 3.md",
@@ -2918,6 +2919,10 @@
       "isHidden": false
     },
     "_app/notebooklm/prompts/MAT101/MAT101-transcription (multi columns pluggin).md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled 5.md": {
       "isPinned": false,
       "isHidden": false
     }
