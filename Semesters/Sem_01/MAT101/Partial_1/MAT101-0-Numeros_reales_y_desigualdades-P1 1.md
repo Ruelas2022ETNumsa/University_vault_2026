@@ -665,6 +665,65 @@ y=0|#000000
 
 ---
 
+---
+
+##### Ej. a) $x^4 \geq 9x^2$
+
+Desarrollo transcrito del manuscrito: $$\begin{array}{rcll} x^2(x^2-9) & \geq & 0 & (\text{transposición y factorización})\\x^2(x-3)(x+3) & \geq & 0 & (\text{diferencia de cuadrados})\\(x-0)^2(x-3)(x+3) & \geq & 0 & (\text{forma de puntos críticos}) \end{array}$$
+
+Puntos críticos: $x=-3, 0, 3$. Prueba de signos: $I_1: x=-10 \rightarrow (+)(-)(-) \Rightarrow (+) \geq 0$ (Verdad). Debido al exponente par en $(x-0)^2$, el signo no se alterna al pasar por $0$.
+
+```desmos-graph
+left=-6; right=6; bottom=-1; top=1;
+width=320; height=100;
+---
+y=0 | #005F73
+(-3, 0) | label: -3
+(0, 0) | label: 0
+(3, 0) | label: 3
+x <= -3 | #94D2BD
+x = 0 | #94D2BD
+x >= 3 | #94D2BD
+```
+
+**Solución:** $C_s = ]-\infty, -3] \cup {0} \cup [3, \infty[$ $C_s = \mathbb{R} - ]-3, 0[ - ]0, 3[$ $C_s = {x / x \leq -3 \lor x=0 \lor x \geq 3}$
+
+##### Ej. b) $\dfrac{2x}{x^2+2x-3} + \dfrac{2x+1}{3x^2+8x-3} \leq \dfrac{-1}{3x^2-4x+1}$
+
+Desarrollo transcrito del manuscrito: $$\begin{array}{rcll} \dfrac{2x}{(x+3)(x-1)} + \dfrac{2x+1}{(3x-1)(x+3)} + \dfrac{1}{(3x-1)(x-1)} & \leq & 0 & (\text{factorización y transposición})\\\dfrac{2x(3x-1) + (2x+1)(x-1) + (x+3)}{(x+3)(x-1)(3x-1)} & \leq & 0 & (\text{común denominador})\\\dfrac{6x^2-2x + 2x^2-x-1 + x+3}{(x+3)(x-1)(3x-1)} & \leq & 0 & (\text{desarrollo})\\\dfrac{8x^2-2x+2}{(x+3)(x-1)(3x-1)} & \leq & 0 & (\text{simplificación})\\\dfrac{4x^2-x+1}{(x+3)(x-1)(3x-1)} & \leq & 0 & (\text{división entre 2}) \end{array}$$
+
+Análisis del numerador $4x^2-x+1$: $D = (-1)^2 - 4(4)(1) = -15 < 0$. Como el discriminante es negativo y el coeficiente principal es positivo, la expresión es siempre positiva ($\in \mathbb{C}$ para raíces, siempre $(+)$ en $\mathbb{R}$).
+
+Puntos críticos (denominador): $x=-3, 1/3, 1$. Prueba de signos en $x=0$: $\frac{(+)}{(+)(-)(-)} = \frac{(+)}{(+)} = (+) \leq 0$ (Falsedad).
+
+```desmos-graph
+left=-5; right=3; bottom=-1; top=1;
+width=320; height=100;
+---
+y=0 | #005F73
+(-3, 0) | open | label: -3
+(0.333, 0) | open | label: 1/3
+(1, 0) | open | label: 1
+x < -3 | #94D2BD
+0.333 < x < 1 | #94D2BD
+```
+
+**Solución:** $C_s = ]-\infty, -3[ \cup ]1/3, 1[$ $C_s = {x / x < -3 \lor 1/3 < x < 1}$
+
+> [!summary] Resolución de inecuaciones no lineales mediante la determinación de puntos críticos, análisis de signos en intervalos y verificación de restricciones en el denominador.
+
+> [!note] Complemento (Nivel B)
+> 
+> Para resolver inecuaciones racionales de la forma $P(x)/Q(x) > 0$ (o $\geq, <, \leq$), se deben seguir las reglas fundamentales de las desigualdades:
+> 
+> 1. **Puntos Críticos:** Son los valores de $x$ donde $P(x)=0$ (raíces del numerador) o $Q(x)=0$ (donde la expresión se indefine)., [13, A5]
+> 2. **Factores Cuadráticos Irreducibles:** Si un factor cuadrático $ax^2 + bx + c$ tiene un discriminante $D < 0$, no cambia de signo en toda la recta real. Su signo será el mismo que el del coeficiente $a$.
+> 3. **Intervalos:** Los puntos críticos dividen la recta real en intervalos donde la expresión mantiene un signo constante. Basta probar un valor dentro de cada intervalo para determinar si cumple la desigualdad. [13, A5-A6]
+> 4. **Restricciones del Denominador:** Los valores que anulan a $Q(x)$ nunca pueden incluirse en el conjunto solución, independientemente de si la desigualdad es estricta o no., [13, A7]
+
+---
+---
+
 ##### Ej. Resolver la inecuación a)
 $x^4 \ge 9x^2$
 
@@ -778,9 +837,184 @@ $$\begin{array}{rcl} C_s & = & ]-\infty, -3[ \cup ]1/3, 1[\\& = & {x / x < -3 \v
 > 4. Evaluar el signo de la expresión en cada intervalo usando valores de prueba.
 > 5. Determinar el conjunto solución incluyendo o excluyendo los extremos según el tipo de desigualdad ($\leq, \geq$ frente a $<, >$) y la definición del dominio (los ceros del denominador nunca se incluyen).
 
+---
 
+##### Ej. c)
+$\left| \dfrac{2x-1}{3x+2} \right| < 2$
 
+Se aplica la propiedad del valor absoluto para inecuaciones: $|x| < a \iff -a < x < a$. El desarrollo se divide en dos condiciones que deben cumplirse simultáneamente (intersección).
 
+**Condición 1:** $\dfrac{2x-1}{3x+2} < 2$ $$\begin{array}{rcll} \dfrac{2x-1}{3x+2} - 2 & < & 0 & (\text{transposición})\\\dfrac{2x-1-2(3x+2)}{3x+2} & < & 0 & (\text{común denominador})\\\dfrac{-4x-5}{3x+2} & < & 0 & (\text{simplificación}) \end{array}$$ Puntos críticos: $x = -\dfrac{5}{4}$, $x = -\dfrac{2}{3}$. Prueba con $x=0$: $\frac{(-)}{(+)} = (-) < 0$ (Verdad).
+
+```desmos-graph
+left=-3; right=1; bottom=-1; top=1;
+width=320; height=100;
+---
+y=0 | #005F73
+(-1.25, 0) | open | label: -5/4
+(-0.666, 0) | open | label: -2/3
+x < -1.25 | #94D2BD
+x > -0.666 | #94D2BD
+```
+
+$C_{s_1} = ]-\infty, -\frac{5}{4}[ \cup ]-\frac{2}{3}, \infty[$
+
+**Condición 2:** $\dfrac{2x-1}{3x+2} > -2$ $$\begin{array}{rcll} \dfrac{2x-1}{3x+2} + 2 & > & 0 & (\text{transposición})\\\dfrac{2x-1+6x+4}{3x+2} & > & 0 & (\text{común denominador})\\\dfrac{8x+3}{3x+2} & > & 0 & (\text{simplificación}) \end{array}$$ Puntos críticos: $x = -\dfrac{3}{8}$, $x = -\dfrac{2}{3}$. Prueba con $x=0$: $\frac{(+)}{(+)} = (+) > 0$ (Verdad).
+
+```desmos-graph
+left=-2; right=1; bottom=-1; top=1;
+width=320; height=100;
+---
+y=0 | #005F73
+(-0.666, 0) | open | label: -2/3
+(-0.375, 0) | open | label: -3/8
+x < -0.666 | #94D2BD
+x > -0.375 | #94D2BD
+```
+
+$C_{s_2} = ]-\infty, -\frac{2}{3}[ \cup ]-\frac{3}{8}, \infty[$
+
+**Solución Final:** $C_s = C_{s_1} \cap C_{s_2}$
+
+```desmos-graph
+left=-3; right=1; bottom=-1; top=1;
+width=320; height=100;
+---
+y=0 | #005F73
+(-1.25, 0) | open | label: -5/4
+(-0.375, 0) | open | label: -3/8
+x < -1.25 | #EE9B00
+x > -0.375 | #EE9B00
+```
+
+$C_s = ]-\infty, -\frac{5}{4}[ \cup ]-\frac{3}{8}, \infty[$ $C_s = {x / x < -\frac{5}{4} \lor x > -\frac{3}{8}}$
+
+---
+
+##### Ej. d) 
+$|x^3-16x| \leq 0$
+
+Por definición, un valor absoluto nunca es negativo, por lo que la inecuación solo es válida cuando el contenido es exactamente cero. $$\begin{array}{rcll} x^3 - 16x & = & 0 & (\text{propiedad: } |a| \leq 0 \iff a = 0)\\x(x^2 - 16) & = & 0 & (\text{factor común})\\x(x-4)(x+4) & = & 0 & (\text{diferencia de cuadrados}) \end{array}$$ **Solución:** $C_s = {-4, 0, 4}$
+
+> [!summary] Resolución de inecuaciones con valor absoluto mediante desdoblamiento en condiciones simultáneas o análisis de casos críticos.
+
+> [!note] Complemento (Nivel B)
+> 
+> La definición formal de valor absoluto establece que $|a| = a$ si $a \geq 0$ y $|a| = -a$ si $a < 0$. Para resolver inecuaciones del tipo $|x| < a$, se utiliza la equivalencia fundamental:
+> 
+> 1. **Propiedad de Intervalo:**
+> 
+> - $|x| < a \iff -a < x < a$ (con $a > 0$).
+> 
+> 2. **Relación con Raíz Cuadrada:**
+> 
+> - $\sqrt{a^2} = |a|$. Esta identidad es crucial para evitar el error común de asumir $\sqrt{a^2} = a$ sin conocer el signo de $a$.
+
+---
+
+##### Ej. e) 
+$\left| \dfrac{4x+1}{x-2} \right| \geq 3$
+
+Se aplica la propiedad $|a| \geq b \iff a \geq b \lor a \leq -b$. La solución final se obtiene mediante la unión de ambos casos.
+
+**Caso 1:** $\dfrac{4x+1}{x-2} \geq 3$ $$\begin{array}{rcll} \dfrac{4x+1}{x-2} - 3 & \geq & 0 & (\text{transposición})\\\dfrac{4x+1-3(x-2)}{x-2} & \geq & 0 & (\text{común denominador})\\\dfrac{x+7}{x-2} & \geq & 0 & (\text{simplificación}) \end{array}$$ Puntos críticos: $x = -7$, $x = 2$.
+
+```desmos-graph
+left=-12; right=5; bottom=-1; top=1;
+width=320; height=100;
+---
+y=0 | #005F73
+(-7, 0) | label: -7
+(2, 0) | open | label: 2
+x <= -7 | #94D2BD
+x > 2 | #94D2BD
+```
+
+$C_{s_1} = ]-\infty, -7] \cup ]2, \infty[$
+
+**Caso 2:** $\dfrac{4x+1}{x-2} \leq -3$ $$\begin{array}{rcll} \dfrac{4x+1}{x-2} + 3 & \leq & 0 & (\text{transposición})\\\dfrac{4x+1+3(x-2)}{x-2} & \leq & 0 & (\text{común denominador})\\\dfrac{7x-5}{x-2} & \leq & 0 & (\text{simplificación}) \end{array}$$ Puntos críticos: $x = \dfrac{5}{7}$, $x = 2$.
+
+```desmos-graph
+left=-2; right=5; bottom=-1; top=1;
+width=320; height=100;
+---
+y=0 | #005F73
+(0.714, 0) | label: 5/7
+(2, 0) | open | label: 2
+0.714 <= x < 2 | #94D2BD
+```
+
+$C_{s_2} = \left[ \dfrac{5}{7}, 2 \right[$
+
+**Solución Final:** $C_s = C_{s_1} \cup C_{s_2}$
+
+```desmos-graph
+left=-12; right=5; bottom=-1; top=1;
+width=320; height=100;
+---
+y=0 | #005F73
+(-7, 0) | label: -7
+(0.714, 0) | label: 5/7
+(2, 0) | open | label: 2
+(2, 0) | open | #005F73
+x <= -7 | #EE9B00
+2 > x >= 0.714 | #EE9B00
+2 < x | #EE9B00
+```
+
+$C_s = ]-\infty, -7] \cup \left[ \dfrac{5}{7}, \infty \right[ - {2}$
+
+---
+
+##### Ej. f) 
+$(x^2+x)^{1/2} < 6^{1/2}$
+
+Esta inecuación irracional requiere que el radicando sea no negativo para existir en el campo real.
+
+**1. Elevando al cuadrado:** $$\begin{array}{rcll} x^2 + x & < & 6 & (\text{siendo ambos miembros } \geq 0)\\x^2 + x - 6 & < & 0 & (\text{transposición})\\(x+3)(x-2) & < & 0 & (\text{factorización}) \end{array}$$ Solución preliminar: $]-3, 2[$.
+
+**2. Condición de existencia:** $x^2 + x \geq 0$ $$\begin{array}{rcll} x(x+1) & \geq & 0 & (\text{factor común}) \end{array}$$ Puntos críticos: $x = 0$, $x = -1$.
+
+```desmos-graph
+left=-5; right=4; bottom=-1; top=1;
+width=320; height=100;
+---
+y=0 | #005F73
+(0, 0) | label: 0
+(-1, 0) | label: -1
+x <= -1 | #BB3E03
+x >= 0 | #BB3E03
+```
+
+**3. Intersección final:**
+
+```desmos-graph
+left=-5; right=4; bottom=-1; top=1;
+width=320; height=100;
+---
+y=0 | #005F73
+(-3, 0) | open | label: -3
+(-1, 0) | label: -1
+(0, 0) | label: 0
+(2, 0) | open | label: 2
+-3 < x <= -1 | #EE9B00
+0 <= x < 2 | #EE9B00
+```
+
+$C_s = ]-3, -1] \cup [0, 2[$
+
+> [!summary] Resolución de inecuaciones con valor absoluto mediante unión de condiciones disjuntas y control de restricciones de dominio en funciones raíz.
+
+> [!note] Complemento (Nivel B)
+> 
+> La resolución de inecuaciones con valor absoluto del tipo $|x| \geq a$ se fundamenta en la **Propiedad de Disyunción**:
+> 
+> - $|x| \geq a \iff x \geq a \lor x \leq -a$.
+> 
+> En el caso de inecuaciones irracionales como $\sqrt{f(x)} < \sqrt{g(x)}$, es imperativo establecer el conjunto de valores de $x$ para los cuales la expresión tiene sentido. Formalmente, se debe cumplir el sistema:
+> 
+> 1. $f(x) \geq 0$ (Condición de existencia).
+> 2. $g(x) > f(x)$ (Resolución algebraica). No es necesario pedir $g(x) \geq 0$ por separado, ya que al ser mayor que $f(x)$ (que ya es $\geq 0$), se cumple implícitamente.
 
 
 
