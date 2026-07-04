@@ -31039,6 +31039,7 @@ dakk
 delta
 decreciente
 digitalizaci
+deberia
 Vault
 Verificar
 Variables
@@ -55516,6 +55517,7 @@ sust
 sJDDDDD
 srrp
 senoides
+sociativa
 vault
 vil
 ver
@@ -80782,6 +80784,7 @@ nnnen
 nDvv
 notebooks
 ncava
+nversos
 created
 commit
 cada
@@ -106039,6 +106042,7 @@ Cuaderno
 Conceptos
 Criterios
 Convergencia
+CCANNID
 Instalados
 Instalado
 Instalar
@@ -143677,6 +143681,7 @@ practicar
 planas
 pasadas
 preliminar
+postulan
 min
 mica
 movimiento
@@ -169255,6 +169260,10 @@ exposici
 expliquen
 evitable
 elaborados
+eutros
+egativos
+enfatiza
+erorres
 Motor
 Media
 Mantiene
@@ -188464,6 +188473,7 @@ leMX
 lllp
 lahh
 leerlos
+lausura
 incluyendo
 im
 instalar
@@ -196163,6 +196173,8 @@ infinitesimales
 inevitable
 inflexi
 indefinidas
+istributiva
+indicados
 Dependencia
 Dropbox
 Dataview
@@ -209430,6 +209442,7 @@ Reemplazado
 RKii
 RSSe
 RELLENOS
+Refuerzo
 Hider
 Hace
 Herramientas
@@ -246752,6 +246765,8 @@ NDhhh
 NBLL
 Niveles
 Notebook
+Numeros
+Nros
 originales
 observatory
 oficial
@@ -253360,6 +253375,8 @@ overhead
 obra
 obteniendo
 oRDDDDDDDDDDDDD
+onmutativa
+omitida
 junto
 json
 jer

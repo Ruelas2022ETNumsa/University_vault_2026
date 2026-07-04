@@ -26,6 +26,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "Sem_01",
         "Sem_08",
         "Sem_09"
       ]
@@ -1381,7 +1382,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "_graph-system 1.md",
+        "_notebooklm-system 1.md",
         "_library_MAT101.md",
         "_basic-memory-system.md",
         "_claude-boot.md",
@@ -2744,6 +2745,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "notebooklm-prompt-guide.md",
         "tikzjax_guide-legacy.md",
         "obsidian_notation.md"
       ]
@@ -2848,7 +2850,39 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_app/_config/_graph-system 1.md": {
+    "_app/_config/_notebooklm-system 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/general/notebooklm-prompt-guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_01": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "MAT101"
+      ]
+    },
+    "Semesters/Sem_01/MAT101": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Partial_1"
+      ]
+    },
+    "Semesters/Sem_01/MAT101/Partial_1": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "MAT101-0-Numeros_reales_y_desigualdades-P1.md"
+      ]
+    },
+    "Semesters/Sem_01/MAT101/Partial_1/MAT101-0-Numeros_reales_y_desigualdades-P1.md": {
       "isPinned": false,
       "isHidden": false
     }
@@ -2856,8 +2890,7 @@
   "pinnedFiles": [
     "_app/_appnotes/PDF_PP-guide.md",
     "_app/_config/_claude-boot.md",
-    "_app/_config/_galaxy-system.md",
-    "_app/notebooklm/notebooklm-guides/MAT101_TikzJax.md"
+    "_app/_config/_galaxy-system.md"
   ],
   "showHidden": false,
   "newItemPlacement": "top",
