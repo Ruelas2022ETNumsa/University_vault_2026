@@ -2776,6 +2776,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "MAT101-transcription 1.md",
         "MAT101-transcription.md",
         "MAT101-study.md"
       ]
@@ -2888,6 +2889,10 @@
       "isHidden": false
     },
     "Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/MAT101/MAT101-transcription 1.md": {
       "isPinned": false,
       "isHidden": false
     }
