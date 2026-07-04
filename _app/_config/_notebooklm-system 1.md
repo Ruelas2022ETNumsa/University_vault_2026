@@ -17,7 +17,7 @@ tags:
   - notebooklm
   - infraestructura
 date_created: 2026-06-03
-date_updated: 2026-07-03
+date_updated: 2026-07-02
 status: activo
 ---
 
@@ -189,68 +189,17 @@ Viven en `other/`.
 
 ---
 
-## Flujo de incorporación de materia nueva
+## Cómo crear un prompt para una materia nueva
 
-Cuando llega una materia nueva, el proceso completo para tenerla operativa
-en NotebookLM sigue estos pasos en orden.
+1. Copiar como base el prompt de una materia similar ya existente
+2. Renombrar con la convención `ETNXXX-PN.md` (dentro de `prompts/ETNXXX/`)
+3. Adaptar: rol/materia, fuentes prioritarias por tema, modos si cambian
+4. Subir las guías fuente necesarias al notebook (`MAT101_desmos.md` siempre,
+   más las específicas de la materia si existen)
+5. Actualizar el inventario de esta sección
 
-**Insumos de entrada:**
-- Temario oficial (obligatorio)
-- Bibliografía sugerida por el docente (opcional)
-
----
-
-```
-Paso 1 — Selección de libros (Claude)
-   Entregar a Claude: temario + bibliografía sugerida (si existe)
-   Claude evalúa la bibliografía existente y recomienda stack completo
-   con roles definidos (teoría principal, rigurosa, ejercicios, complemento)
-   Resultado: stack aprobado → ver protocolo completo en [[_library-system]]
-        ↓
-Paso 2 — Crear _library_ETNXXX.md (Claude)
-   Claude genera el archivo en _app/_config/
-   Contiene: temario completo + stack + tabla de qué usar por tema
-   + tabla de ejercicios por tema + flujo de uso + libros descartados
-   Audiencia: usuario — guía personal de referencia
-        ↓
-Paso 3 — Subir PDFs a NotebookLM y extraer índices
-   Subir todos los PDFs del stack a un notebook temporal
-   Pedirle a NotebookLM los índices detallados de cada libro
-   (capítulos, secciones, páginas exactas)
-   Revisar visualmente que los índices coincidan con los índices
-   reales de los libros — NotebookLM puede cometer errores puntuales
-   Pasar los índices verificados a Claude
-        ↓
-Paso 4 — Crear ETNXXX_library.md (Claude)
-   Claude genera el archivo en _app/notebooklm/guides/ETNXXX/
-   Contiene: tabla de teoría por tema (1ra fuente, 2da fuente, consulta,
-   español) con capítulos y páginas exactas + tabla de ejercicios
-   + notas de criterio + índice completo de cada PDF del stack
-   Audiencia: NotebookLM — fuente técnica de navegación entre libros
-        ↓
-Paso 5 — Crear ETNXXX-study.md (Claude)
-   Claude adapta el prompt base de MAT101-study.md
-   Solo cambia: materia, nivel, fuentes prioritarias por tema
-   La estructura de modos de respuesta no cambia
-   Ruta: _app/notebooklm/prompts/ETNXXX/ETNXXX-study.md
-        ↓
-Paso 6 — Configurar NotebookLM
-   Subir como fuentes: PDFs del stack + ETNXXX_library.md
-   + obsidian_notation.md + guías de graficación si aplica
-   Cargar ETNXXX-study.md en el campo Instructions del notebook
-   El notebook queda operativo para estudio activo
-```
-
-> **Nota sobre el paso 3:** la verificación visual es necesaria porque
-> NotebookLM puede reportar páginas o secciones incorrectas. Basta con
-> revisar los índices de los libros (primeras páginas) para confirmar
-> que los capítulos y rangos de página sean correctos.
-
-> **Archivos que quedan como resultado de este flujo:**
-> - `_app/_config/_library_ETNXXX.md` — guía personal
-> - `_app/notebooklm/guides/ETNXXX/ETNXXX_library.md` — fuente NotebookLM
-> - `_app/notebooklm/prompts/ETNXXX/ETNXXX-study.md` — prompt de estudio
-> - Actualizar inventario de esta sección con los nuevos archivos
+> Plantilla base para prompts nuevos: pendiente — tema de sesión dedicada.
+> Ver [[_ToDo-system]].
 
 ---
 
@@ -266,8 +215,6 @@ Paso 6 — Configurar NotebookLM
 | Guía de transcripción general en pausa | Requiere definir primero cómo estructurar los apuntes manuscritos para optimizar la transcripción — es decisión de diseño previa a la guía técnica |
 | Resubida manual al actualizar la nota | NotebookLM no sincroniza con el vault — resubir el .md cuando la nota cambie significativamente |
 | `MAT101_desmos.md` siempre como fuente | Todas las materias pueden necesitar graficación — la guía garantiza sintaxis correcta en cualquier notebook |
-| Flujo de materia nueva documentado aquí y no en `_library-system` | El flujo es operativo de NotebookLM — `_library-system` cubre solo la selección de libros; este beacon cubre todo lo que sigue hasta tener el notebook activo |
-| `_library_ETNXXX.md` separado de `ETNXXX_library.md` | Audiencias distintas: el primero es guía personal legible para el usuario; el segundo es fuente técnica densa para NotebookLM. Unirlos degradaría la utilidad de ambos |
 
 %%
 galaxy-links
