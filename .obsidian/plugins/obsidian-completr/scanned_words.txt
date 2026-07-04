@@ -20246,6 +20246,7 @@ SajjZ
 Ssssq
 SSSH
 Semiabierto
+Subconjunto
 Plugins
 Pendientes
 Plugin
@@ -31046,6 +31047,7 @@ digitalizaci
 deberia
 delegada
 desarollo
+denominan
 Vault
 Verificar
 Variables
@@ -68084,6 +68086,7 @@ anillo
 alternas
 adaptaci
 arrays
+acotaci
 related
 recomendados
 ribbon
@@ -80798,6 +80801,7 @@ ncava
 nversos
 nidad
 nfinito
+notacional
 created
 commit
 cada
@@ -87520,6 +87524,7 @@ conserven
 cubo
 caracterizados
 convenios
+caracteriza
 updated
 un
 universo
@@ -169297,6 +169302,7 @@ encadenamiento
 errado
 emiabierto
 entrego
+extienden
 Motor
 Media
 Mantiene
@@ -196213,6 +196219,7 @@ indicados
 inmediatas
 inclusi
 invertidos
+ilimitadamente
 Dependencia
 Dropbox
 Dataview

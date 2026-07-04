@@ -5,6 +5,7 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
+        "Untitled 3.md",
         "Untitled 2.md",
         "Untitled 1.md",
         "claude vision.md",
@@ -2883,6 +2884,10 @@
       ]
     },
     "Semesters/Sem_01/MAT101/Partial_1/MAT101-0-Numeros_reales_y_desigualdades-P1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled 3.md": {
       "isPinned": false,
       "isHidden": false
     }
