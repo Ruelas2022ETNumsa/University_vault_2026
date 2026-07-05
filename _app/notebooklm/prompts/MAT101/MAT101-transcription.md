@@ -75,7 +75,6 @@ cornell
 ESTRUCTURA GRAFICA (si hay graficas en los apuntes):
 DESMOS:
 ```
-desmos-graph
 left= ;right= ;bottom= ;top= ;
 width= ;height= ;
 ---
@@ -155,16 +154,14 @@ FORMATO MATEMÁTICO:
 Preferir inline $...$. Usar display $$...$$ solo para:
 ESTRUCTURA DE LATEX ARRAY
 $$\begin{array}{rcll}
-  \text{expr}_1 & = & \text{expr}_2 & (\text{justificación}) \\
-                & = & \text{expr}_3 & (\text{justificación}) \\
+  \text{expr}_1 & = & \text{expr}_2 & (\text{justificación}) \
+                & = & \text{expr}_3 & (\text{justificación}) \
   \text{expr}_1 & = & \text{expr}_n & (\text{LQQD})
 \end{array}$$
-
 O
-
 $$\begin{array}{rcl}
-  \text{expr}_1 & = & \text{expr}_2 \\
-                & = & \text{expr}_3\\
+  \text{expr}_1 & = & \text{expr}_2 \
+                & = & \text{expr}_3 \
   \text{expr}_1 & = & \text{expr}_n
 \end{array}$$
 REGLAS DE LATEX ARRAY
@@ -188,7 +185,7 @@ GRÁFICOS — elegir en orden:
    parábolas, exponencial, logarítmica. Múltiples intervalos: y=0, y=1, y=2...
    Sintaxis completa: sección NOTEBOOKLM de
    MAT101_desmos.md — obligatoria sin excepción.
-   Mínimos: ```desmos-graph exacto · "---" siempre · sin llaves en restricciones
+   Mínimos: "---" siempre · sin llaves en restricciones
 2. TikZJax: conjuntos, composición (óvalos A→B→C), circunferencia trigonométrica,
    función inversa con espejo y=x, figuras geométricas. Sintaxis: MAT101_TikzJax.md
 3. No reproducible → > [!note] Gráfico manuscrito + descripción textual.

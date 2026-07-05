@@ -20256,6 +20256,7 @@ Soluciones
 Semantic
 Splits
 Signos
+Scripter
 Plugins
 Pendientes
 Plugin
@@ -55577,6 +55578,7 @@ subjects
 semesters
 session
 sugerida
+scripter
 vault
 vil
 ver
@@ -68147,6 +68149,7 @@ aislamiento
 arbitrario
 alternancia
 alterne
+automatizar
 related
 recomendados
 ribbon
@@ -87610,6 +87613,7 @@ concepts
 connects
 capitulo
 causaba
+comete
 updated
 un
 universo
@@ -106167,6 +106171,8 @@ Celdas
 Cuadrada
 Comets
 Configurables
+Corrige
+Correci
 Instalados
 Instalado
 Instalar
@@ -113254,6 +113260,8 @@ Invisible
 INICIO
 Irreducibles
 Insumos
+Interpreter
+Include
 Funci
 File
 Fase
@@ -126422,6 +126430,7 @@ Esencial
 EXERCISES
 Elevando
 Escritura
+Ejecuci
 Obsidian
 OmniSearch
 Ocultar
@@ -132631,6 +132640,7 @@ Okjmm
 Organizados
 Organizadas
 Obligatoria
+Output
 Auto
 Annotator
 Autocompletado
@@ -162734,6 +162744,7 @@ BCCq
 Body
 Bullet
 Block
+BRAT
 en
 exacta
 escaneados
@@ -169440,6 +169451,7 @@ exceder
 esctructura
 exponente
 eesrs
+ejecutables
 Motor
 Media
 Mantiene
@@ -209656,6 +209668,7 @@ Revert
 Reading
 Recall
 Racionales
+Registra
 Hider
 Hace
 Herramientas
@@ -246993,6 +247006,7 @@ Notebook
 Numeros
 Nros
 NUMBERED
+Notice
 originales
 observatory
 oficial

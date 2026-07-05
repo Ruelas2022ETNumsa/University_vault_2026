@@ -2,8 +2,8 @@ import sys
 import re
 import os
 
-# --- Debug: ver argumentos recibidos ---
-print(f"argv: {sys.argv}")
+file_path  = sys.argv[1]
+vault_path = sys.argv[2]
 
 if not file_path:
     print("No hay archivo activo.")
@@ -15,12 +15,6 @@ with open(abs_path, 'r', encoding='utf-8') as f:
     content = f.read()
 
 original = content
-
-
-
-print(f"Archivo: {abs_path}")
-print(f"Caracteres: {len(content)}")
-
 
 # --- 1. \frac -> \dfrac ---
 content = re.sub(r'(?<!d)(?<!t)\\frac', r'\\dfrac', content)
@@ -35,7 +29,7 @@ def fix_arrays(match):
     return block
 
 content = re.sub(
-    r'\$\$\\begin\{array\}.*?\\end\{array\}\$\,
+    r'\$\$\\begin\{array\}.*?\\end\{array\}\$\$',
     fix_arrays,
     content,
     flags=re.DOTALL

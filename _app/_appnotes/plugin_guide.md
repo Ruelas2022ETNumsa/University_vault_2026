@@ -28,6 +28,7 @@ status: activo
 4. [Commander — Botones personalizados en el ribbon](#4-commander--botones-personalizados-en-el-ribbon)
 5. [File Hider — Ocultar archivos del explorador](#5-file-hider--ocultar-archivos-del-explorador)
 6. [Attachment Management — Renombrar y organizar imágenes pegadas](#6-attachment-management--renombrar-y-organizar-imágenes-pegadas)
+7. [Python Scripter — Scripts Python como comandos](#7-python-scripter--scripts-python-como-comandos)
 
 ---
 
@@ -259,6 +260,53 @@ Esos dos pasos siguen siendo manuales o via plantilla `tpl-photon.md`. Ver [[_ga
         ↓
 5. (Manual) Agregás el wikilink en el bloque %% de la nota host
 ```
+
+---
+
+## 7. Python Scripter — Scripts Python como comandos
+
+**Plugin:** `nickrallison/obsidian-python-scripter` (instalado vía BRAT)
+
+**Propósito:** Registra scripts Python como comandos de Obsidian ejecutables desde el ribbon o el Command Palette. Permite automatizar correcciones y tareas sobre las notas del vault sin salir de Obsidian.
+
+### Configuración aplicada
+
+| Campo | Valor |
+|---|---|
+| Interpreter | `C:\Users\USUARIO\AppData\Local\Programs\Python\Python313\python.exe` |
+| Include Current File Path | ON |
+| Include Vault Path | ON |
+| Output Type | Notice |
+
+### Estructura de scripts
+
+Cada script vive en su propia carpeta bajo `.obsidian/scripts/python/`. El plugin detecta cualquier carpeta con `src/main.py` y la registra como comando.
+
+```
+.obsidian/scripts/python/
+└── notebooklm_fix/
+    └── src/
+        └── main.py
+```
+
+### Script: notebooklm_fix
+
+Corrige errores frecuentes que NotebookLM comete al generar notas `.md`. Opera sobre el archivo activo al momento de ejecutarse.
+
+**Correcciones que aplica:**
+
+| # | Error | Correción |
+|---|---|---|
+| 1 | `\frac` sin `d` | `\dfrac` |
+| 2 | Bloque desmos sin etiqueta (` ``` ` + `left=`) | Agrega `desmos-graph` |
+| 3 | Arrays LaTeX en una sola línea (` \ ` como separador) | `\\` + salto de línea |
+
+**El script recibe:** `sys.argv[1]` = file path relativo · `sys.argv[2]` = vault path absoluto.
+
+**Ejecución:** botón en el ribbon (configurado en Commander) → Notice con resultado.
+
+
+
 
 %%
 galaxy-links
