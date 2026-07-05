@@ -1,5 +1,7 @@
 {
   "scriptsFolder": ".obsidian/scripts",
-  "scripts": {},
+  "scripts": {
+    ".obsidian/scripts/python/notebooklm_fix/src/main.py": {}
+  },
   "verbosity": "normal"
 }
