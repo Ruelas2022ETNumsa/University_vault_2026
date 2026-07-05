@@ -305,6 +305,105 @@ Corrige errores frecuentes que NotebookLM comete al generar notas `.md`. Opera s
 
 **Ejecución:** botón en el ribbon (configurado en Commander) → Notice con resultado.
 
+---
+
+### Guía de configuración por script
+
+Cada script tiene su propia configuración en Settings → Python Scripter → [nombre del script].
+
+| Campo | Descripción | Notas |
+|---|---|---|
+| **Run Directory** | Carpeta relativa al vault desde donde se ejecuta el script | Dejar vacío = raíz del vault |
+| **Interpreter** | Ruta al ejecutable de Python | Usar ruta completa: `C:\...\python.exe` |
+| **Include Current File Path** | Pasa la ruta relativa del archivo activo como argumento | Llega en `sys.argv[1]` |
+| **Include Vault Path** | Pasa la ruta absoluta del vault como argumento | Llega en `sys.argv[2]` |
+| **Include Clipboard Contents** | Pasa el contenido del portapapeles como argumento | Llega en `sys.argv[3]` |
+| **Include Highlighted Contents** | Pasa el texto seleccionado en la nota como argumento | Llega en `sys.argv[4]` |
+| **Predefined Arguments** | Argumentos fijos adicionales definidos de antemano | Se agregan después de los anteriores |
+| **Number of Arguments to Prompt For** | Cantidad de argumentos que el plugin pide al usuario antes de ejecutar | Abre un modal por cada uno |
+| **Run Type** | `Ribbon Icon` = botón en el ribbon · `Command` = solo Command Palette | |
+| **Output Type** | `Notice` = notificación flotante · `Insert into File` = inserta en la nota activa | Usar `Notice` para scripts de corrección |
+| **Output Location** | Solo aplica si Output Type es `Insert into File` | `End of File` o `Cursor Location` |
+
+> **Orden fijo de argumentos:** el plugin siempre pasa los argumentos en este orden:
+> `sys.argv[0]` ruta del script · `sys.argv[1]` file path · `sys.argv[2]` vault path · `sys.argv[3]` clipboard · `sys.argv[4]` highlighted
+>
+> Si algún toggle está OFF ese argumento no se pasa — los índices se desplazan. Activar siempre los mismos toggles para mantener el orden predecible.
+
+---
+
+### Guía para escribir scripts
+
+#### Estructura base
+
+Todo script debe comenzar con esta estructura. Ajustar según los toggles activados.
+
+```python
+import sys
+import os
+
+# --- Argumentos del plugin ---
+file_path  = sys.argv[1]  # ruta relativa del archivo activo
+vault_path = sys.argv[2]  # ruta absoluta del vault
+# sys.argv[3] → clipboard (si Include Clipboard Contents = ON)
+# sys.argv[4] → highlighted (si Include Highlighted Contents = ON)
+
+# --- Validar que hay archivo activo ---
+if not file_path or file_path == 'void.md':
+    print("No hay archivo activo.")
+    sys.exit(0)
+
+# --- Construir ruta absoluta ---
+abs_path = os.path.join(vault_path, file_path)
+
+if not os.path.exists(abs_path):
+    print(f"Archivo no encontrado: {abs_path}")
+    sys.exit(0)
+
+# --- Leer el archivo ---
+with open(abs_path, 'r', encoding='utf-8') as f:
+    content = f.read()
+
+original = content
+
+# --- operaciones sobre content ---
+
+# --- Guardar si hubo cambios ---
+if content != original:
+    with open(abs_path, 'w', encoding='utf-8') as f:
+        f.write(content)
+    print("Correcciones realizadas.")
+else:
+    print("Sin cambios.")
+```
+
+> **`void.md`** es el fallback que pasa el plugin cuando no hay nota activa. Siempre validar contra este valor para evitar operar sobre un archivo inexistente.
+
+#### Regex en Python — reglas de escape
+
+El error más común al escribir regex para LaTeX en Python es el escape de `\`. Regla simple:
+
+| Lo que querés buscar | En el string Python | En raw string `r""` |
+|---|---|---|
+| `\frac` | `"\\frac"` | `r"\frac"` |
+| `\\` (doble backslash) | `"\\\\"` | `r"\\"` |
+| `\ ` (backslash + espacio) | `"\\ "` | `r"\ "` |
+
+> Usar siempre **raw strings** `r"..."` en `re.sub()` — evita confusión y errores de escape.
+
+#### Cómo probar desde terminal
+
+Antes de conectar el script a Obsidian, probarlo desde PowerShell:
+
+```powershell
+& "C:\Users\USUARIO\AppData\Local\Programs\Python\Python313\python.exe" `
+  ".obsidian\scripts\python\notebooklm_fix\src\main.py" `
+  "Semesters\Sem_01\MAT101\Partial_1\void.md" `
+  "E:\University_vault_2026"
+```
+
+Si devuelve `Sin cambios.` o `Correcciones realizadas.` — el script funciona. Si lanza excepción — hay un error antes de conectarlo a Obsidian.
+
 
 
 

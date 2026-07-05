@@ -1,5 +1,17 @@
 ##### Ej. a) $x^4 \geq 9x^2$
 
+
+
+
+
+HIGHLIGHT_TEST
+
+
+
+
+
+
+
 Desarrollo transcrito del manuscrito: ^[preuba: esto es una nota de pie]
 
 $$\begin{array}{rcll} x^2(x^2-9) & \geq & 0 & (\text{transposición y factorización})\\
