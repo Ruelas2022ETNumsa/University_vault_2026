@@ -10,12 +10,6 @@
       "icon": "lucide-file-plus",
       "name": "create",
       "mode": "any"
-    },
-    {
-      "id": "app:reload",
-      "icon": "lucide-folder-clock",
-      "name": "Reload app without saving",
-      "mode": "any"
     }
   ],
   "rightRibbon": [],
@@ -97,6 +91,12 @@
       "id": "file-explorer:move-file",
       "icon": "lucide-folder-tree",
       "name": "Move current file to another folder",
+      "mode": "any"
+    },
+    {
+      "id": "workspace:new-window",
+      "icon": "lucide-arrow-up-left-from-square",
+      "name": "New window",
       "mode": "any"
     }
   ],

@@ -5,6 +5,7 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
+        "Untitled.md",
         "_assets",
         "void.md",
         "in_work",
@@ -2931,6 +2932,10 @@
       "isHidden": false
     },
     "_app/notebooklm/general/MAT101-notebooklm-user_guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled.md": {
       "isPinned": false,
       "isHidden": false
     }

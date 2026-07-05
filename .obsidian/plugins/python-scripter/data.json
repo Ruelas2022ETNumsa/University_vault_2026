@@ -1,7 +1,9 @@
 {
   "scriptsFolder": ".obsidian/scripts",
   "scripts": {
-    ".obsidian/scripts/python/notebooklm_fix/src/main.py": {}
+    ".obsidian/scripts/python/notebooklm_fix/src/main.py": {
+      "runType": "icon"
+    }
   },
   "verbosity": "normal"
 }
