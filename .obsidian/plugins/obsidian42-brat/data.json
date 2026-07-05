@@ -1,10 +1,15 @@
 {
   "pluginList": [
+    "Longwind1984/galaxy-view",
     "nickrallison/obsidian-python-scripter",
     "latazadehomero/cornell-marginalia",
     "RyotaUshio/obsidian-pdf-plus"
   ],
   "pluginSubListFrozenVersion": [
+    {
+      "repo": "Longwind1984/galaxy-view",
+      "version": "latest"
+    },
     {
       "repo": "nickrallison/obsidian-python-scripter",
       "version": ""

@@ -1108,7 +1108,6 @@
         "Excalidraw",
         "scripts",
         "solve",
-        "TagsRoutes",
         "_appnotes",
         "_config"
       ]
@@ -1236,39 +1235,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_app/TagsRoutes": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "graph-screenshot",
-        "logs",
-        "patch-log.txt",
-        "reports"
-      ]
-    },
-    "_app/TagsRoutes/graph-screenshot": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": []
-    },
-    "_app/TagsRoutes/logs": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": []
-    },
-    "_app/TagsRoutes/patch-log.txt": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/TagsRoutes/reports": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": []
-    },
     "_app/_appnotes": {
       "isPinned": false,
       "isHidden": false,
@@ -1283,8 +1249,7 @@
         "pdf-guide.md",
         "plugin_guide.md",
         "tagroute_parche",
-        "obsidian_guide.md",
-        "tags_notes.md"
+        "obsidian_guide.md"
       ]
     },
     "_app/_appnotes/better-export-pdf.md": {
@@ -1330,10 +1295,6 @@
       "isHidden": false
     },
     "_app/_appnotes/obsidian_guide.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/_appnotes/tags_notes.md": {
       "isPinned": false,
       "isHidden": false
     },
