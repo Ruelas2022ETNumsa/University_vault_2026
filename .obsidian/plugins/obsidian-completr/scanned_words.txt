@@ -13154,6 +13154,7 @@ TuHZ
 TulS
 Transcribe
 TRIGONOMETRY
+Twig
 Sistema
 Sync
 Save
@@ -20257,6 +20258,8 @@ Semantic
 Splits
 Signos
 Scripter
+Shaum
+Skiling
 Plugins
 Pendientes
 Plugin
@@ -37230,6 +37233,8 @@ VARIADOS
 Vectores
 Verificado
 View
+Viernes
+Venerly
 galaxy
 gina
 genes
@@ -74627,6 +74632,7 @@ representable
 refuerzan
 radicando
 reportar
+requisitos
 notes
 notas
 nuevas
@@ -87614,6 +87620,7 @@ connects
 capitulo
 causaba
 comete
+ctricas
 updated
 un
 universo
@@ -106174,6 +106181,9 @@ Configurables
 Corrige
 Correci
 COPIARLO
+Created
+Clases
+Carrera
 Instalados
 Instalado
 Instalar
@@ -119450,6 +119460,7 @@ FORMULAS
 FEATURE
 Falso
 Factores
+Formaci
 Estado
 Excalidraw
 EPUBs
@@ -132642,6 +132653,7 @@ Organizados
 Organizadas
 Obligatoria
 Output
+Objetivos
 Auto
 Annotator
 Autocompletado
@@ -137863,6 +137875,8 @@ ANSWERS
 Active
 ARRAY
 Audiencias
+Alias
+Analisis
 push
 pull
 para
@@ -177027,6 +177041,7 @@ More
 Mnemot
 Marginalia
 Multiplicidad
+Martes
 Lectura
 LaTeX
 Linter
@@ -183169,6 +183184,9 @@ LAaa
 LApp
 LXYY
 LArr
+Leaf
+Lunes
+Laboratorio
 links
 las
 listar
@@ -196392,6 +196410,7 @@ intersecar
 impuestas
 indefine
 incluirse
+ingenieria
 Dependencia
 Dropbox
 Dataview
@@ -202550,6 +202569,7 @@ Derivada
 Depende
 Distancia
 Disyunci
+Detalles
 Remotely
 Raz
 Revisa
@@ -209670,6 +209690,7 @@ Reading
 Recall
 Racionales
 Registra
+Redes
 Hider
 Hace
 Herramientas
@@ -214609,6 +214630,7 @@ HIIALL
 HNNFAA
 HINTS
 Highlighting
+HORARIO
 filtrar
 formato
 faltantes
@@ -240301,6 +240323,7 @@ Usarlas
 UuHDDD
 Unlike
 Unirlos
+UMSA
 Nombre
 Notas
 No
@@ -300114,6 +300137,8 @@ JnWXv
 JLLTDD
 JYYW
 JHHP
+Jueves
+Jack
 KB
 Kirchhoff
 Ksv
@@ -306277,6 +306302,7 @@ KDDDD
 KDDDDDDD
 KaTeX
 Kogan
+Kemmorly
 Zonas
 Zoom
 Zona

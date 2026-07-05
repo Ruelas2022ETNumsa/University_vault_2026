@@ -2,14 +2,7 @@
   "confirmDeletion": false,
   "showAddCommand": true,
   "debug": false,
-  "editorMenu": [
-    {
-      "id": "app:toggle-right-sidebar",
-      "icon": "lucide-accessibility",
-      "name": "Toggle right sidebar",
-      "mode": "any"
-    }
-  ],
+  "editorMenu": [],
   "fileMenu": [],
   "leftRibbon": [
     {
@@ -23,12 +16,6 @@
   "titleBar": [],
   "statusBar": [
     {
-      "id": "workspace:new-window",
-      "icon": "lucide-arrow-up-left-from-square",
-      "name": "New window",
-      "mode": "any"
-    },
-    {
       "id": "app:reload",
       "icon": "lucide-rotate-ccw",
       "name": "Reload app without saving",
@@ -38,18 +25,6 @@
       "id": "app:open-settings",
       "icon": "lucide-settings",
       "name": "Open settings",
-      "mode": "any"
-    },
-    {
-      "id": "obsidian-style-settings:style-settings-class-toggle-desmos-editor-hide-desmos-editor",
-      "icon": "lucide-eye-off",
-      "name": "Style Settings: Toggle Ocultar Desmos en modo edición",
-      "mode": "any"
-    },
-    {
-      "id": "workspace:copy-full-path",
-      "icon": "lucide-hard-drive",
-      "name": "Copy current file path from system root",
       "mode": "any"
     },
     {
@@ -74,18 +49,6 @@
       "id": "modern-outline:toggle",
       "icon": "lucide-list",
       "name": "Modern Outline: Toggle",
-      "mode": "any"
-    },
-    {
-      "id": "editor:toggle-source",
-      "icon": "lucide-code-2",
-      "name": "Toggle Live Preview/Source mode",
-      "mode": "any"
-    },
-    {
-      "id": "app:go-back",
-      "icon": "lucide-arrow-left",
-      "name": "Navigate back",
       "mode": "any"
     }
   ],
@@ -112,6 +75,30 @@
       "id": "workspace:open-in-new-window",
       "icon": "lucide-maximize",
       "name": "Open current tab in new window",
+      "mode": "any"
+    },
+    {
+      "id": "workspace:copy-full-path",
+      "icon": "lucide-hard-drive",
+      "name": "Copy current file path from system root",
+      "mode": "any"
+    },
+    {
+      "id": "app:go-back",
+      "icon": "lucide-arrow-left",
+      "name": "Navigate back",
+      "mode": "any"
+    },
+    {
+      "id": "obsidian-style-settings:style-settings-class-toggle-desmos-editor-hide-desmos-editor",
+      "icon": "lucide-eye-off",
+      "name": "Style Settings: Toggle Ocultar Desmos en modo edición",
+      "mode": "any"
+    },
+    {
+      "id": "editor:toggle-source",
+      "icon": "lucide-code-2",
+      "name": "Toggle Live Preview/Source mode",
       "mode": "any"
     }
   ],
