@@ -297,7 +297,7 @@ Corrige errores frecuentes que NotebookLM comete al generar notas `.md`. Opera s
 
 | # | Error | Correción |
 |---|---|---|
-| 1 | `\frac` sin `d` | `\dfrac` |
+| 1 | `\dfrac` sin `d` | `\dfrac` |
 | 2 | Bloque desmos sin etiqueta (` ``` ` + `left=`) | Agrega `desmos-graph` |
 | 3 | Arrays LaTeX en una sola línea (` \ ` como separador) | `\\` + salto de línea |
 
@@ -385,7 +385,7 @@ El error más común al escribir regex para LaTeX en Python es el escape de `\`.
 
 | Lo que querés buscar | En el string Python | En raw string `r""` |
 |---|---|---|
-| `\frac` | `"\\frac"` | `r"\frac"` |
+| `\dfrac` | `"\\dfrac"` | `r"\dfrac"` |
 | `\\` (doble backslash) | `"\\\\"` | `r"\\"` |
 | `\ ` (backslash + espacio) | `"\\ "` | `r"\ "` |
 

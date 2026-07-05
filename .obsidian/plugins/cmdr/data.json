@@ -28,8 +28,14 @@
       "mode": "any"
     },
     {
+      "id": "modern-outline:toggle",
+      "icon": "lucide-list",
+      "name": "Modern Outline: Toggle",
+      "mode": "any"
+    },
+    {
       "id": "app:toggle-ribbon",
-      "icon": "lucide-ribbon",
+      "icon": "lucide-panel-left-close",
       "name": "Toggle ribbon",
       "mode": "any"
     },
@@ -44,15 +50,21 @@
       "icon": "lucide-a-arrow-down",
       "name": "PDF++: Edit page labels",
       "mode": "any"
-    },
-    {
-      "id": "modern-outline:toggle",
-      "icon": "lucide-list",
-      "name": "Modern Outline: Toggle",
-      "mode": "any"
     }
   ],
   "pageHeader": [
+    {
+      "id": "app:go-back",
+      "icon": "lucide-arrow-left",
+      "name": "Navigate back",
+      "mode": "any"
+    },
+    {
+      "id": "workspace:split-vertical",
+      "icon": "lucide-separator-vertical",
+      "name": "Split right",
+      "mode": "any"
+    },
     {
       "id": "file-explorer:duplicate-file",
       "icon": "lucide-files",
@@ -66,27 +78,15 @@
       "mode": "any"
     },
     {
-      "id": "workspace:split-vertical",
-      "icon": "lucide-separator-vertical",
-      "name": "Split right",
-      "mode": "any"
-    },
-    {
-      "id": "workspace:open-in-new-window",
-      "icon": "lucide-maximize",
-      "name": "Open current tab in new window",
-      "mode": "any"
-    },
-    {
       "id": "workspace:copy-full-path",
-      "icon": "lucide-hard-drive",
+      "icon": "lucide-folder-cog-2",
       "name": "Copy current file path from system root",
       "mode": "any"
     },
     {
-      "id": "app:go-back",
-      "icon": "lucide-arrow-left",
-      "name": "Navigate back",
+      "id": "workspace:open-in-new-window",
+      "icon": "lucide-square-arrow-out-up-right",
+      "name": "Open current tab in new window",
       "mode": "any"
     },
     {
@@ -97,7 +97,7 @@
     },
     {
       "id": "editor:toggle-source",
-      "icon": "lucide-code-2",
+      "icon": "lucide-file-code-corner",
       "name": "Toggle Live Preview/Source mode",
       "mode": "any"
     }
@@ -110,10 +110,12 @@
       "mysnippets-plugin"
     ],
     "leftRibbon": [
-      "Templater"
+      "Templater",
+      "Open Git source control",
+      "Toggle modern outline"
     ]
   },
-  "spacing": 8,
+  "spacing": "8",
   "advancedToolbar": {
     "rowHeight": 48,
     "rowCount": 1,
