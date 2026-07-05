@@ -181,7 +181,11 @@ Este botón existe exclusivamente como workaround para el bug de TikZJax: los bl
 
 ---
 
-## 5. File Hider — Ocultar archivos del explorador
+## 5. File Hider — Ocultar archivos del explorador (reemplazado por Flexplorer)
+
+>Reemplazado por `Flexlorer`, file hider no ocultaba los archivos pedidos, Flexplorer si lo hace de una mejor y facil manera ademas ofrece "pin" entre otras cosas
+
+>Importante se debe actualizar esta parte de la guia.
 
 **Propósito:** Oculta archivos y extensiones del explorador de Obsidian sin eliminarlos del disco. Mantiene el explorador limpio mostrando solo archivos relevantes para el trabajo en el vault.
 

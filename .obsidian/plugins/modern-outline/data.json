@@ -1,6 +1,6 @@
 {
   "sidebarSide": "left",
-  "verticalPosition": "bottom",
+  "verticalPosition": "top",
   "markerColor": "monochrome",
   "labelColor": "monochrome",
   "highlightColor": "accent",
@@ -11,7 +11,7 @@
   "markerVisibility": "always",
   "labelsAlwaysOn": true,
   "treeLines": false,
-  "treeLineColor": "monochrome",
+  "treeLineColor": "accent",
   "animationsEnabled": false,
   "minHeadingLevel": 1,
   "maxHeadingLevel": 6

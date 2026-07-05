@@ -25740,6 +25740,7 @@ Positividad
 PARTITION
 Polos
 Planets
+Programs
 del
 date
 de
@@ -62146,6 +62147,7 @@ vwwGZZ
 vhdd
 vhh
 vincula
+void
 audience
 activo
 auto
@@ -74633,6 +74635,8 @@ refuerzan
 radicando
 reportar
 requisitos
+read
+realizadas
 notes
 notas
 nuevas
@@ -87621,6 +87625,8 @@ capitulo
 causaba
 comete
 ctricas
+clipboard
+conectarlo
 updated
 un
 universo
@@ -106184,6 +106190,8 @@ COPIARLO
 Created
 Clases
 Carrera
+Cursor
+Clipboard
 Instalados
 Instalado
 Instalar
@@ -113273,6 +113281,8 @@ Irreducibles
 Insumos
 Interpreter
 Include
+Icon
+Insert
 Funci
 File
 Fase
@@ -119461,6 +119471,7 @@ FEATURE
 Falso
 Factores
 Formaci
+Flexplorer
 Estado
 Excalidraw
 EPUBs
@@ -137877,6 +137888,7 @@ ARRAY
 Audiencias
 Alias
 Analisis
+Argumentos
 push
 pull
 para
@@ -143866,6 +143878,7 @@ polinomios
 polos
 photonType
 probado
+powershell
 min
 mica
 movimiento
@@ -169467,6 +169480,7 @@ esctructura
 exponente
 eesrs
 ejecutables
+exit
 Motor
 Media
 Mantiene
@@ -183187,6 +183201,8 @@ LArr
 Leaf
 Lunes
 Laboratorio
+Location
+Local
 links
 las
 listar
@@ -214631,6 +214647,7 @@ HNNFAA
 HINTS
 Highlighting
 HORARIO
+Highlighted
 filtrar
 formato
 faltantes
@@ -220150,6 +220167,7 @@ freely
 functions
 function
 finalizando
+facil
 haya
 hace
 hacer
@@ -225962,6 +225980,8 @@ hallado
 hand
 haga
 here
+highlighted
+hubo
 que
 quedan
 queda
@@ -253645,6 +253665,7 @@ olvida
 oscilaci
 only
 orbits
+ocultaba
 junto
 json
 jer
@@ -260812,6 +260833,7 @@ jVIf
 jHuIN
 jesss
 jmEEE
+join
 Qu
 Qui
 Quick
