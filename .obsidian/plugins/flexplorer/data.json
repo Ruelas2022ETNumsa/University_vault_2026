@@ -1273,7 +1273,6 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "plugin_guide 1.md",
         "desmos_guide 1.md",
         "desmos_guide.md",
         "PDF_PP-guide.md",
@@ -2389,13 +2388,8 @@
         "zborrar903 3 arquietxtura.md",
         "zborrar903 2.md",
         "zborrar111das111.md",
-        "P3A.asm",
-        "borrarrr2.md"
+        "P3A.asm"
       ]
-    },
-    "Borrar/borrarrr2.md": {
-      "isPinned": false,
-      "isHidden": false
     },
     "Borrar/P3A.asm": {
       "isPinned": false,
@@ -2813,6 +2807,7 @@
     "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "MAT101-T00-ej_inec_irracional.md",
         "MAT101-T00-ej_inec_valabs_mayor.md",
@@ -2829,8 +2824,7 @@
         "MAT101-T00-teoremas_reales.md",
         "MAT101-T00-axiomas_igualdad.md",
         "MAT101-T00-axiomas_cuerpo.md"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-axiomas_cuerpo.md": {
       "isPinned": false,
@@ -2915,10 +2909,10 @@
     "_assets": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "Cornell Marginalia — Ejemplos de sintaxis-11-06-2026_19-01-03.png"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "_assets/Cornell Marginalia — Ejemplos de sintaxis-11-06-2026_19-01-03.png": {
       "isPinned": false,
@@ -2933,10 +2927,6 @@
       "isHidden": false
     },
     "in_work/claude vision.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/_appnotes/plugin_guide 1.md": {
       "isPinned": false,
       "isHidden": false
     },

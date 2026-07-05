@@ -1,9 +1,14 @@
 {
   "pluginList": [
+    "nickrallison/obsidian-python-scripter",
     "latazadehomero/cornell-marginalia",
     "RyotaUshio/obsidian-pdf-plus"
   ],
   "pluginSubListFrozenVersion": [
+    {
+      "repo": "nickrallison/obsidian-python-scripter",
+      "version": ""
+    },
     {
       "repo": "latazadehomero/cornell-marginalia",
       "version": ""
