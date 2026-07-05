@@ -2,7 +2,16 @@
   "scriptsFolder": ".obsidian/scripts",
   "scripts": {
     ".obsidian/scripts/python/notebooklm_fix/src/main.py": {
-      "runType": "icon"
+      "runType": "icon",
+      "arguments": {
+        "predefined": [],
+        "currentFile": true,
+        "vaultPath": true
+      },
+      "interpreter": "C:\\Users\\USUARIO\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+      "output": {
+        "type": "notice"
+      }
     }
   },
   "verbosity": "normal"

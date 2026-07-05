@@ -2,8 +2,8 @@ import sys
 import re
 import os
 
-vault_path = sys.argv[1]
-file_path  = sys.argv[2]
+# --- Debug: ver argumentos recibidos ---
+print(f"argv: {sys.argv}")
 
 if not file_path:
     print("No hay archivo activo.")
@@ -15,6 +15,12 @@ with open(abs_path, 'r', encoding='utf-8') as f:
     content = f.read()
 
 original = content
+
+
+
+print(f"Archivo: {abs_path}")
+print(f"Caracteres: {len(content)}")
+
 
 # --- 1. \frac -> \dfrac ---
 content = re.sub(r'(?<!d)(?<!t)\\frac', r'\\dfrac', content)

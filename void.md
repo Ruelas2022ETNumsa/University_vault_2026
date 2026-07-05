@@ -51,3 +51,5 @@ x < -3 | #94D2BD
 > 2. **Factores Cuadráticos Irreducibles:** Si un factor cuadrático $ax^2 + bx + c$ tiene un discriminante $D < 0$, no cambia de signo en toda la recta real. Su signo será el mismo que el del coeficiente $a$.
 > 3. **Intervalos:** Los puntos críticos dividen la recta real en intervalos donde la expresión mantiene un signo constante. Basta probar un valor dentro de cada intervalo para determinar si cumple la desigualdad. [13, A5-A6]
 > 4. **Restricciones del Denominador:** Los valores que anulan a $Q(x)$ nunca pueden incluirse en el conjunto solución, independientemente de si la desigualdad es estricta o no., [13, A7]
+
+
