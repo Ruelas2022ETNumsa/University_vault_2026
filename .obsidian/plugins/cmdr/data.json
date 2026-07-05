@@ -2,7 +2,14 @@
   "confirmDeletion": false,
   "showAddCommand": true,
   "debug": false,
-  "editorMenu": [],
+  "editorMenu": [
+    {
+      "id": "workspace:toggle-pin",
+      "icon": "lucide-pin",
+      "name": "Toggle pin",
+      "mode": "any"
+    }
+  ],
   "fileMenu": [],
   "leftRibbon": [
     {
@@ -15,6 +22,12 @@
   "rightRibbon": [],
   "titleBar": [],
   "statusBar": [
+    {
+      "id": "workspace:new-window",
+      "icon": "lucide-arrow-up-left-from-square",
+      "name": "New window",
+      "mode": "any"
+    },
     {
       "id": "app:reload",
       "icon": "lucide-rotate-ccw",
@@ -58,33 +71,9 @@
       "mode": "any"
     },
     {
-      "id": "workspace:split-vertical",
-      "icon": "lucide-a-large-small",
-      "name": "Split right",
-      "mode": "any"
-    },
-    {
-      "id": "editor:open-link-in-new-split",
-      "icon": "lucide-link",
-      "name": "Open link under cursor to the right",
-      "mode": "any"
-    },
-    {
-      "id": "editor:toggle-source",
-      "icon": "lucide-code-2",
-      "name": "Toggle Live Preview/Source mode",
-      "mode": "any"
-    },
-    {
       "id": "file-explorer:duplicate-file",
       "icon": "lucide-files",
       "name": "Make a copy of the current file",
-      "mode": "any"
-    },
-    {
-      "id": "app:go-back",
-      "icon": "lucide-arrow-left",
-      "name": "Navigate back",
       "mode": "any"
     },
     {
@@ -94,9 +83,27 @@
       "mode": "any"
     },
     {
-      "id": "workspace:new-window",
-      "icon": "lucide-arrow-up-left-from-square",
-      "name": "New window",
+      "id": "workspace:split-vertical",
+      "icon": "lucide-a-large-small",
+      "name": "Split right",
+      "mode": "any"
+    },
+    {
+      "id": "modern-outline:toggle",
+      "icon": "lucide-outdent",
+      "name": "Modern Outline: Toggle",
+      "mode": "any"
+    },
+    {
+      "id": "editor:toggle-source",
+      "icon": "lucide-code-2",
+      "name": "Toggle Live Preview/Source mode",
+      "mode": "any"
+    },
+    {
+      "id": "app:go-back",
+      "icon": "lucide-arrow-left",
+      "name": "Navigate back",
       "mode": "any"
     }
   ],
