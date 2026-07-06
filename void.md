@@ -1,87 +1,209 @@
-##### Ej. a) $x^4 \geq 9x^2$
+las configuraciones te las entrego en forma de texto ojo si es una extraccion
+literal si solo una aclaracion en cada opcion la utloma [] es como se puede
+configurar, [1/0] on/off, [slider] para distintos valores a escoger, [valor x/valor y] entre dos o mas valores,
+[text=MMM] texto escrito en la configuracion solo esta "MMM" sin `text=`,  
+[button=nombre del boton] solo aparece "nombre del boton" no "button=".
+
+# Cornell Marginalia Settings
+
+## 🎨 Appearance & Rendering
+
+### Responsive Marginalia (Auto-Collapse) [1/0]
+OPTIONAL: Automatically move marginalia inside the text when the
+note pane is too narrow (e.g. when you open the sidebar).
+
+### Responsive Threshold (px) [Slider]
+Set the width at which marginalia collapses into the text.
+(Requires Auto-Collapse to be ON).
+
+### Adaptive Width (Theme Compatibility) [1/0]
+🧠 Auto-calculates margin width based on empty screen space. Turn
+ON if you are having problems with your current theme to prevent overlap.
+
+### Margin Alignment [Left/right]
+
+### Margin Width (%) [slider]
+
+### Margin Distance (Offset) [slider]
+Adjust how close or far the marginalia sits from the main
+text. Higher values push it outwards, lower values pull it
+inwards.
+
+### Font Size [text=0.85em]
+
+### Font Family [text=inherit]
+
+### Enable in Reading View [1/0]
+Shows marginalia in reading mode. Turn this off if you prefer a clean
+view.
+
+### Extract Highlights [1/0]
+OPTIONAL: Include standard text highlights (==text==) in the
+Explorer and Pinboard.
+
+### Blur Explanatory Marginalias [1/0]
+🧠 Active Recall: Blurs regular marginalias that share a line with a
+flashcard, preventing spoilers.
 
 
+##🏷️ Color Tags
 
+- Tag 1 [text=!] [seleccion de color valores RGB] [button=eliminar]
+- Tag 2 [text=?] [seleccion de color valores RGB] [button=eliminar]
+- Tag 3 [text=X-] [seleccion de color valores RGB] [button=eliminar]
+- Tag 4 [text=V-] [seleccion de color valores RGB] [button=eliminar]
+- [button=Add Tag ]
 
+##📁 Structural Box Colors
 
-HIGHLIGHT_TEST^[esto esnuna nota de pagina lol]
+Asigna colores EXCLUSIVAMENTE a los recuadros de los Hilos Semánticos
+(ej: #abuelo). Esto NO alterará el color de tus marginalias en el texto.
 
+[button=Add Box Color]
 
+##✅ Task Management
 
+### Auto-Delete Completed Tasks [1/0]
+When you check a marginalia task (- [x]), it will be permanently
+deleted from the Markdown file to keep your vault clean.
 
+### TaskNotes HTTP API Integration [1/0]
+Shows a button on task marginalias to send them directly to the
+TaskNotes plugin.
 
+##📁 File & Output Management
 
+### Omni-Capture Default Folder [text=Example: 00_Inbox]
+Folder where new marginalia files will be
+created (leave empty for root).
 
-Desarrollo transcrito del manuscrito: ^[preuba: esto es una nota de pie]
+### Omni-Capture Template
+[text=
+%%> {{text}} %%
+{{citation}}
+{{image}}
 
-$$\begin{array}{rcll} x^2(x^2-9) & \geq & 0 & (\text{transposición y factorización})\\
-x^2(x-3)(x+3) & \geq & 0 & (\text{diferencia de cuadrados})\\
-(x-0)^2(x-3)(x+3) & \geq & 0 & (\text{forma de puntos críticos}) \end{array}$$
-
->[!cue] Puntos críticos: $x=-3, 0, 3$. Prueba de signos: $I_1: x=-10 \rightarrow (+)(-)(-) \Rightarrow (+) \geq 0$ (Verdad). Debido al exponente par en $(x-0)^2$, el signo no se alterna al pasar por $0$.^[DEAR]
-
-```desmos-graph
-left=-6; right=6; bottom=-1; top=1;
-width=320; height=100;
 ---
-y=0 | #005F73
-(-3, 0) | label: -3
-(0, 0) | label: 0
-(3, 0) | label: 3
-x <= -3 | #94D2BD
-x = 0 | #94D2BD
-x >= 3 | #94D2BD
-```
+]
+Define the output format for your captures.
+Use {{text}}, {{citation}}, and {{image}}. Supports
+Templater (<% %>). If you want to use Flashcard
+mode, remember to include ';;' inside your text template.
 
-**Solución:** $C_s = ]-\infty, -3] \cup {0} \cup [3, \infty[$ $C_s = \mathbb{R} - ]-3, 0[ - ]0, 3[$ $C_s = {x / x \leq -3 \lor x=0 \lor x \geq 3}$
+### Zettelkasten Folder [text=Zettelkasten]
+Where should your ZK notes be created?
+(Leave empty for root).
 
-##### Ej. b) $\dfrac{2x}{x^2+2x-3} + \dfrac{2x+1}{3x^2+8x-3} \leq \dfrac{-1}{3x^2-4x+1}$
+### Zettelkasten Template Path [text=]
+Optional: Path to a markdown file to use as a
+template (e.g., Templates/ZK.md). Supports
+{{title}}, {{date}}, {{time}}.
 
-Desarrollo transcrito del manuscrito: $$\begin{array}{rcll} \dfrac{2x}{(x+3)(x-1)} + \dfrac{2x+1}{(3x-1)(x+3)} + \dfrac{1}{(3x-1)(x-1)} & \leq & 0 & (\text{factorización y transposición})\\
-\dfrac{2x(3x-1) + (2x+1)(x-1) + (x+3)}{(x+3)(x-1)(3x-1)} & \leq & 0 & (\text{común denominador})\\
-\dfrac{6x^2-2x + 2x^2-x-1 + x+3}{(x+3)(x-1)(3x-1)} & \leq & 0 & (\text{desarrollo})\\
-\dfrac{8x^2-2x+2}{(x+3)(x-1)(3x-1)} & \leq & 0 & (\text{simplificación})\\
-\dfrac{4x^2-x+1}{(x+3)(x-1)(3x-1)} & \leq & 0 & (\text{división entre 2}) \end{array}$$
+### Doodles Folder[text=Marginalia Attachments]
+Where should your hand-drawn images
+be saved? (Leave empty for root).
 
-Análisis del numerador $4x^2-x+1$: $D = (-1)^2 - 4(4)(1) = -15 < 0$. Como el discriminante es negativo y el coeficiente principal es positivo, la expresión es siempre positiva ($\in \mathbb{C}$ para raíces, siempre $(+)$ en $\mathbb{R}$).
+### Evidence Boards Folder [text=Evidence Boards]
+Where should your Canvas files be exported?
 
-Puntos críticos (denominador): $x=-3, 1/3, 1$. Prueba de signos en $x=0$: $\dfrac{(+)}{(+)(-)(-)} = \dfrac{(+)}{(+)} = (+) \leq 0$ (Falsedad).
+### Pinboards Folder [textPinboards]
+Where should your exported Pinboard
+Markdown files go?
 
-```desmos-graph
-left=-5; right=3; bottom=-1; top=1;
-width=320; height=100;
----
-y=0 | #005F73
-(-3, 0) | open | label: -3
-(0.333, 0) | open | label: 1/3
-(1, 0) | open | label: 1
-x < -3 | #94D2BD
-0.333 < x < 1 | #94D2BD
-```
+### Pinboards Template Path [text=]
+Optional: Path to a markdown file to use as a
+template for exported Boards.
 
-**Solución:** $C_s = ]-\infty, -3[ \cup ]1/3, 1[$ $C_s = {x / x < -3 \lor 1/3 < x < 1}$
+### Pinboards Item Template Path [text=]
+Optional: Template for each individual
+marginalia in the board. Supports {{text}},
+{{citation}}, and {{source_note}}.
 
-> [!summary] Resolución de inecuaciones no lineales mediante la determinación de puntos críticos, análisis de signos en intervalos y verificación de restricciones en el denominador.
+### Canvas Item Template Path [text= ]
+Optional: Template for the main marginalia
+node in the Evidence Board. Supports {{text}}
+and {{source_note}}.
 
-> [!note] Complemento (Nivel B)
-> 
-> Para resolver inecuaciones racionales de la forma $P(x)/Q(x) > 0$ (o $\geq, <, \leq$), se deben seguir las reglas fundamentales de las desigualdades:
-> 
-> 1. **Puntos Críticos:** Son los valores de $x$ donde $P(x)=0$ (raíces del numerador) o $Q(x)=0$ (donde la expresión se indefine)., [13, A5]
-> 2. **Factores Cuadráticos Irreducibles:** Si un factor cuadrático $ax^2 + bx + c$ tiene un discriminante $D < 0$, no cambia de signo en toda la recta real. Su signo será el mismo que el del coeficiente $a$.
-> 3. **Intervalos:** Los puntos críticos dividen la recta real en intervalos donde la expresión mantiene un signo constante. Basta probar un valor dentro de cada intervalo para determinar si cumple la desigualdad. [13, A5-A6]
-> 4. **Restricciones del Denominador:** Los valores que anulan a $Q(x)$ nunca pueden incluirse en el conjunto solución, independientemente de si la desigualdad es estricta o no., [13, A7]
+### ✨ Clean Exports (Remove Tags) [1/0]
+Automatically strip #tags from notes when exporting to Pinboard,
+Canvas, or Dragging to a note.
+
+### ✨ Clean Exports (Remove Block IDs) [1/0]
+Automatically strip ^block-ids from your notes when exporting.
+
+### Drag & Drop Template (To Note)
+[text=
+- {{text}} {{source_note}}
+]
+
+Format used when you drag a Semantic Thread
+box directly into a Markdown note. Supports
+{{text}}, {{citation}}, {{time}} and {{source_note}}.
+
+## ⚙️ Advanced & Exclusions
+
+### Show Syntax in Source Mode [1/0]
+If enabled, Cornell Notes will show as raw Markdown syntax when
+using Source Mode, instead of rendering visual blocks.
+
+### Ignored Folders [text=Templates]
+Comma-separated list of folders to completely ignore.
+
+### Ignored Folders for Highlights [text=Excalidraw]
+Comma-separated list of folders to ignore ONLY
+for highlights (e.g., Excalidraw, Templates).
+
+### Ignored Highlight Texts
+[text=
+⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠
+]
+
+Comma-separated list of exact texts or fragments
+to ignore (e.g., Switch to EXCALIDRAW VIEW).
 
 
+### 🔗 Semantic Stitching UI [1/0]
+When connecting (stitching) notes, ask for a semantic
+reason (e.g. "miden lo mismo").
 
+## 🛠️ Addons & Modules
 
-```mermaid
-sequenceDiagram
-    Alice->>+John: Hello John, how are you?
-    Alice-->>+John: John, can you hear me?
-    John-->>+Alice: Hi Alice, I can hear you!
-    John-->>+Alice: I feel great!
-    misti-->>+John: hola papu
-    Alice-->>misti: que putas
-```
+### Gamification & User Profile [1/0]
+Turn your marginalia into a game! Earn XP, level up, and customize
+your profile sidebar.
 
+### Custom Explorer Background [1/0]
+Add a beautiful background image to your Marginalia Explorer.
+
+### 🌱 Time Machine & Rhizome [1/0]
+Explore your marginaliae on a chronological, full-screen interactive
+canvas with spaced repetition.
+
+### Pdf Doodle & Harvest [1/0]
+Enable temporary drawing mode on PDFs.
+
+### Super Doodle 🎨 [1/0]
+Transform Zen Doodle into an adjustable-size canvas with panoramic
+navigation, colors, and an advanced selection tool.
+
+### 🧠 Blurting Mode (1-3-7) [1/0]
+Turn your Marginalia Explorer into a Spaced Repetition study deck.
+
+### 🍅 Margidoro Engine [1/0]
+Knowledge-aware Pomodoro timer. Tracks your marginalias during
+study sessions and schedules reviews.
+
+### Anki Advanced Sync [1/0]
+Syncs marginalias to Anki with bidirectional support, native images,
+and PDF++ crops.
+
+### 🔍 Zoom & Pan Doodles [1/0]
+Haz clic en cualquier imagen o doodle en tus marginalias para
+expandirla a pantalla completa con controles de zoom y paneo.
+
+### 🚀 Dashboard:Smart Study [1/0]
+Linear calendar, routines, subjects, and dynamic spaced review.
+
+### Cornell Board 🌌 [1/0]
+Activate an infinite, freeform canvas to drag, connect, and visually
+materialize marginalias.
