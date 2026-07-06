@@ -77,12 +77,12 @@ Esto hace que Marginalia use ` ```cornell-m ` como bloque propio. Cornell Notes 
 ### Inline — método principal
 
 ```
-%%> Nota al margen derecha %%
-%%< Nota al margen izquierda %%
+%%< Nota al margen derecha %%
+%%> Nota al margen izquierda %%
 ```
 
-%%> Nota al margen derecha %%
-%%< Nota al margen izquierda %%
+%%> Nota al margen  izquierda %%
+%%< Nota al margen derecha %%
 
 Las marginalia se escriben directamente en el flujo del texto, en cualquier parte del documento. El plugin las extrae y las renderiza al margen sin ocupar espacio en el área principal.
 
@@ -282,7 +282,7 @@ Modo de estudio que oculta las marginalia para forzar la recuperación activa.
 La mitocondria produce ATP. %%> ¿Qué produce la mitocondria? ;; %%
 ```
 
-La mitocondria produce ATP. %%> ¿Qué produce la mitocondria? ;; %%
+La mitocondria produce ATP. %%> ¿Qué produce la mitocondria?;;%%
 
 En Study Mode, la marginalia se muestra borrosa. El texto principal permanece visible — solo se oculta la respuesta/clave.
 
@@ -461,7 +461,8 @@ Atajos recomendados no asignados por defecto — configurar manualmente:
 ### Insert Margin Note — comportamiento inteligente
 
 El comando "Insert Margin Note" detecta el contexto:
-- **Sin selección:** inserta `%%>  %%` y posiciona el cursor dentro.
+- **Sin selección:** inserta `%%>  % %` y posiciona el cursor dentro.
+
 - **Con texto seleccionado:** envuelve la selección: `%%> texto seleccionado %%`.
 
 ---
@@ -469,19 +470,21 @@ El comando "Insert Margin Note" detecta el contexto:
 ## 14. Configuración del plugin
 
 > Referencia completa de Settings → Cornell Marginalia.
-> `[1/0]` = toggle ON/OFF · `[slider]` = valor numérico ajustable · `[Left/Right]` = selección entre opciones · `[text=...]` = valor actual del campo de texto.
+> `[1/0]` = toggle ON/OFF 
+>  `[slider]` = valor numérico ajustable · `[Left/Right]` = selección entre opciones
+>  `[text=...]` = valor actual del campo de texto.
 
 ---
 
 ### 🎨 Appearance & Rendering
 
-#### Responsive Marginalia (Auto-Collapse) `[1/0]`
+#### Responsive Marginalia (Auto-Collapse) `[1/0]=1`
 
 Mueve las marginalia dentro del texto cuando el panel de la nota es demasiado angosto (ej: al abrir el sidebar lateral).
 
 > Sirve para evitar que las marginalia se superpongan con el contenido cuando el espacio horizontal es reducido.
 
-#### Responsive Threshold (px) `[slider]`
+#### Responsive Threshold (px) `[slider]=850`
 
 Ancho en píxeles por debajo del cual se activa el colapso automático. Requiere Auto-Collapse ON.
 
@@ -501,7 +504,7 @@ Dirección por defecto del margen para todas las marginalia sin `%%<` o `%%>` ex
 
 > Sirve para definir si las notas al margen aparecen a la izquierda o la derecha del texto principal de forma global.
 >
-> **En Galaxy:** configurado en `Right` — las notas `%%>` van a la derecha, consistente con el layout Cornell donde la columna derecha es el desarrollo.
+> **En Galaxy:** configurado en `left` — las notas `%%<` van a la derecha, decisión visual.
 
 #### Margin Width (%) `[slider]`
 

@@ -31126,6 +31126,7 @@ drawing
 deck
 during
 doodle
+doodles
 Vault
 Verificar
 Variables
@@ -68245,6 +68246,8 @@ aclaracion
 abuelo
 adjustable
 aware
+alineada
+arrastrar
 related
 recomendados
 ribbon
@@ -151387,6 +151390,7 @@ marginalias
 miden
 marginaliae
 materialize
+materializar
 YAML
 Ya
 You
@@ -162968,6 +162972,7 @@ Boards
 Board
 Background
 Blurting
+BUENA
 en
 exacta
 escaneados
@@ -177265,6 +177270,7 @@ Marginalias
 Modules
 Machine
 Margidoro
+MALA
 Lectura
 LaTeX
 Linter
@@ -196652,6 +196658,7 @@ ignore
 interactive
 infinite
 index
+inherit
 Dependencia
 Dropbox
 Dataview
@@ -209949,6 +209956,7 @@ Requires
 Remove
 Rhizome
 Repetition
+Right
 Hider
 Hace
 Herramientas

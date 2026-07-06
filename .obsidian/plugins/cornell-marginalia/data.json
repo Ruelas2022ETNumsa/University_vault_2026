@@ -8,11 +8,11 @@
   "ignoredFolders": "Templates",
   "enableSemanticStitching": false,
   "alignment": "left",
-  "marginWidth": 15,
+  "marginWidth": 30,
   "marginOffset": 15,
   "fontSize": "0.85em",
   "fontFamily": "inherit",
-  "adaptiveMode": false,
+  "adaptiveMode": true,
   "enableReadingView": true,
   "tags": [
     {
