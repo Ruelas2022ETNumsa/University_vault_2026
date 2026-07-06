@@ -81,6 +81,9 @@ Esto hace que Marginalia use ` ```cornell-m ` como bloque propio. Cornell Notes 
 %%< Nota al margen izquierda %%
 ```
 
+%%> Nota al margen derecha %%
+%%< Nota al margen izquierda %%
+
 Las marginalia se escriben directamente en el flujo del texto, en cualquier parte del documento. El plugin las extrae y las renderiza al margen sin ocupar espacio en el área principal.
 
 **Ejemplo:**
@@ -129,11 +132,16 @@ Añadir un prefijo al inicio del texto de la marginalia activa un color automát
 %%> V- Verificado con Kreyszig p.218 %%
 ```
 
+%%> ? ¿Por qué se usa Re(s) > σ₀ como condición? %%
+%%> ! Definición de examen %%
+%%> X- La fórmula del libro tiene un error de signo %%
+%%> V- Verificado con Kreyszig p.218 %%
+
 Los prefijos y colores son completamente personalizables desde **Settings → Color Tags**.
 
 ---
 
-## §3. Grouping — Method A vs B
+## §3. Grouping — Method A vs B (se prefiere B)
 
 Por defecto, Obsidian trata párrafos, listas e imágenes como bloques separados. Esto puede causar desalineación visual entre la marginalia y el contenido al que pertenece en Reading View.
 
@@ -144,13 +152,18 @@ Por defecto, Obsidian trata párrafos, listas e imágenes como bloques separados
 Para agrupar contenido mixto (párrafo + lista, párrafo + imagen) de forma liviana y sin romper el Markdown estándar.
 
 ```markdown
-> [!cornell]
-> %%> Nota que cubre todo el grupo %%
+> [!cornell]%%> Nota que cubre todo el grupo %%
 > Párrafo introductorio del concepto.
 > - Ítem 1
 > - Ítem 2
 > - Ítem 3
 ```
+
+> [!cornell]%%> Nota que cubre todo el grupo %%
+> Párrafo introductorio del concepto.
+> - Ítem 1
+> - Ítem 2
+> - Ítem 3
 
 El plugin oculta automáticamente el fondo, borde y título del callout. Se ve como texto normal pero la marginalia queda alineada con todo el grupo.
 
@@ -160,13 +173,30 @@ Para composiciones complejas que requieren alineación exacta o exportación a P
 
 ````markdown
 ```cornell-m
-%%> Nota perfectamente alineada %%
-Texto principal con alineación estricta.
+Texto principal con alineación estricta.  %%> Nota perfectamente alineada %%
 - Puede contener listas
 - Imágenes
 - Múltiples párrafos
 ```
 ````
+
+- Ejemplos
+
+```cornell-m
+%%> Nota perfectamente alineada %%
+MALA NOTA CORNELL!!!
+Texto principal con alineación estricta.
+- Puede contener listas
+- Imágenes
+- Múltiples párrafos
+```
+
+```cornell-m
+Texto principal con alineación estricta.  %%> Nota perfectamente alineada %%
+- Puede contener listas
+- Imágenes
+- Múltiples párrafos
+```
 
 Crea un entorno Flexbox aislado que garantiza que texto y marginalia queden bloqueados entre sí sin importar la cantidad de contenido. Es el método recomendado para exportar a PDF.
 
