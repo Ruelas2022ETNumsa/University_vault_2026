@@ -116,6 +116,7 @@ valor absoluto
 
 La sintaxis es idéntica a la ya usada en todo el vault — sin migración de notas existentes.
 
+
 ````cornell
 ::cue
 

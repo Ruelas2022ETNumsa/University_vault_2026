@@ -1,3 +1,26 @@
+
+
+
+
+
+
+
+
+
+````cornell
+::cue
+
+Contenido de la columna izquierda — claves, preguntas, mnemónicos.
+
+::note
+
+Contenido de la columna derecha — desarrollo, definiciones, fórmulas.%%> otra %%
+
+````
+
+
+rearaer %%> prueba%%
+
 las configuraciones te las entrego en forma de texto ojo si es una extraccion
 literal si solo una aclaracion en cada opcion la utloma [] es como se puede
 configurar, [1/0] on/off, [slider] para distintos valores a escoger, [valor x/valor y] entre dos o mas valores,
