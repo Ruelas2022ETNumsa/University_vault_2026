@@ -25,11 +25,10 @@ status: activo
 1. [Completr — Autocompletado de palabras y LaTeX](#1-completr--autocompletado-de-palabras-y-latex)
 2. [Advanced Tables — Edición de tablas](#2-advanced-tables--edición-de-tablas)
 3. [Cornell Notes — Layout Cornell en notas](#3-cornell-notes--layout-cornell-en-notas)
-4. [Cornell Marginalia — Notas al margen en el editor](#4-cornell-marginalia--notas-al-margen-en-el-editor)
-5. [Commander — Botones personalizados en el ribbon](#5-commander--botones-personalizados-en-el-ribbon)
-6. [File Hider — Ocultar archivos del explorador](#6-file-hider--ocultar-archivos-del-explorador)
-7. [Attachment Management — Renombrar y organizar imágenes pegadas](#7-attachment-management--renombrar-y-organizar-imágenes-pegadas)
-8. [Python Scripter — Scripts Python como comandos](#8-python-scripter--scripts-python-como-comandos)
+4. [Commander — Botones personalizados en el ribbon](#4-commander--botones-personalizados-en-el-ribbon)
+5. [File Hider — Ocultar archivos del explorador](#5-file-hider--ocultar-archivos-del-explorador)
+6. [Attachment Management — Renombrar y organizar imágenes pegadas](#6-attachment-management--renombrar-y-organizar-imágenes-pegadas)
+7. [Python Scripter — Scripts Python como comandos](#7-python-scripter--scripts-python-como-comandos)
 
 ---
 
@@ -158,78 +157,7 @@ A diferencia de Multi-Column, este plugin soporta nativamente:
 
 ---
 
-## 4. Cornell Marginalia — Notas al margen en el editor
-
-**Plugin:** [latazadehomero/cornell-marginalia](https://github.com/latazadehomero/cornell-marginalia) — instalado vía BRAT
-
-**Propósito:** Agrega notas al margen (marginalia) directamente en el editor, fuera del área de texto principal. Complementa a Cornell Notes: mientras Cornell Notes maneja el layout de dos columnas para el contenido de la nota, Marginalia permite anotar al margen — comentarios, aclaraciones, referencias — sin interrumpir el flujo del texto.
-
-> **Estado:** plugin recién integrado al vault. Uso aún en exploración — esta sección se irá actualizando.
-
-### Coexistencia con Cornell Notes — parche aplicado
-
-Ambos plugins registraban el mismo bloque ` ```cornell `, lo que impedía activarlos simultáneamente (Obsidian desactivaba uno automáticamente al activar el otro).
-
-**Parche aplicado** en `.obsidian/plugins/cornell-marginalia/main.js`, línea 14017:
-
-```
-// Antes:
-this.registerMarkdownCodeBlockProcessor("cornell", ...)
-
-// Después:
-this.registerMarkdownCodeBlockProcessor("cornell-m", ...)
-```
-
-Cambio de una sola línea: el bloque de Marginalia pasó de `cornell` a `cornell-m`. Cornell Notes sigue usando `````cornell` (4 backticks) sin modificación. Los dos plugins ahora coexisten sin conflicto.
-
-> **Nota de mantenimiento:** si Cornell Marginalia se actualiza vía BRAT, el `main.js` se sobreescribe y el parche se pierde. Volver a aplicar el cambio en la línea `registerMarkdownCodeBlockProcessor` después de cada actualización.
-
-### Sintaxis
-
-Marginalia tiene dos modos de uso:
-
-**Modo inline** (método principal — funciona en cualquier parte del documento):
-
-```
-%%> Nota al margen derecha %%
-%%< Nota al margen izquierda %%
-```
-
-**Modo bloque** (método secundario — para alineación precisa en Reading View, usa el nuevo nombre tras el parche):
-
-````
-```cornell-m
-Texto principal de la sección.
-%%> Aclaración al margen sobre este párrafo. %%
-Más texto que continúa normalmente.
-```
-````
-
-### Ejemplo de uso
-
-En una nota planet o comet, dentro o fuera de un bloque Cornell Notes:
-
-```
-La transformada de Laplace se define como:
-
-$\mathcal{L}\{f(t)\} = \int_0^\infty e^{-st} f(t)\, dt$
-
-%%> Ver demostración en ETN806-T03. %%
-
-La condición de convergencia requiere que $\text{Re}(s) > \sigma_0$.
-```
-
-La nota `%%> Ver demostración... %%` aparece al margen derecho sin ocupar espacio en el flujo del texto.
-
-### Notas de configuración
-
-- La posición del margen (izquierda/derecha por defecto) se configura en **Settings → Cornell Marginalia → Alignment**.
-- El ancho del margen y el estilo visual son ajustables desde el mismo panel.
-- Las marginalia son visibles en **Live Preview** y en **Reading View** — no en Source Mode.
-
----
-
-## 5. Commander — Botones personalizados en el ribbon
+## 4. Commander — Botones personalizados en el ribbon
 
 **Propósito:** Agrega comandos de Obsidian como botones en el ribbon (barra lateral izquierda), el menú de archivo, o el menú contextual. Evita abrir el Command Palette para acciones frecuentes.
 
@@ -253,7 +181,7 @@ Este botón existe exclusivamente como workaround para el bug de TikZJax: los bl
 
 ---
 
-## 6. File Hider — Ocultar archivos del explorador (reemplazado por Flexplorer)
+## 5. File Hider — Ocultar archivos del explorador (reemplazado por Flexplorer)
 
 >Reemplazado por `Flexlorer`, file hider no ocultaba los archivos pedidos, Flexplorer si lo hace de una mejor y facil manera ademas ofrece "pin" entre otras cosas
 
@@ -279,7 +207,7 @@ File Hider no aplica los patrones de ocultamiento al arrancar Obsidian — los a
 
 ---
 
-## 7. Attachment Management — Renombrar y organizar imágenes pegadas
+## 6. Attachment Management — Renombrar y organizar imágenes pegadas
 
 **Propósito:** Renombra automáticamente cualquier imagen pegada o arrastrada a una nota, heredando el nombre de la nota host y guardándola en `_assets/`. Elimina los nombres genéricos tipo `Pasted image 20260602.png` y mantiene la convención Galaxy sin intervención manual.
 
@@ -339,7 +267,7 @@ Esos dos pasos siguen siendo manuales o via plantilla `tpl-photon.md`. Ver [[_ga
 
 ---
 
-## 8. Python Scripter — Scripts Python como comandos
+## 7. Python Scripter — Scripts Python como comandos
 
 **Plugin:** `nickrallison/obsidian-python-scripter` (instalado vía BRAT)
 

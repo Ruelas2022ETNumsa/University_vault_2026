@@ -6190,6 +6190,7 @@ totalidad
 theorems
 them
 tools
+transformada
 ToDo
 Templater
 Text
@@ -13155,6 +13156,7 @@ TulS
 Transcribe
 TRIGONOMETRY
 Twig
+TEST
 Sistema
 Sync
 Save
@@ -25741,6 +25743,9 @@ PARTITION
 Polos
 Planets
 Programs
+Pasted
+Pasa
+Predefined
 del
 date
 de
@@ -31079,6 +31084,9 @@ declaran
 densa
 degradar
 drtdrt
+docx
+definition
+desplazan
 Vault
 Verificar
 Variables
@@ -68157,6 +68165,11 @@ arbitrario
 alternancia
 alterne
 automatizar
+actualizando
+assets
+arrastr
+argumentos
+activados
 related
 recomendados
 ribbon
@@ -74637,6 +74650,9 @@ reportar
 requisitos
 read
 realizadas
+registraban
+registerMarkdownCodeBlockProcessor
+regex
 notes
 notas
 nuevas
@@ -80884,6 +80900,8 @@ nfinito
 notacional
 note
 negativas
+nickrallison
+notificaci
 created
 commit
 cada
@@ -106192,6 +106210,10 @@ Clases
 Carrera
 Cursor
 Clipboard
+Complementa
+Coexistencia
+Create
+Cre
 Instalados
 Instalado
 Instalar
@@ -119472,6 +119494,7 @@ Falso
 Factores
 Formaci
 Flexplorer
+Flexlorer
 Estado
 Excalidraw
 EPUBs
@@ -126454,6 +126477,7 @@ EXERCISES
 Elevando
 Escritura
 Ejecuci
+ETNXXX
 Obsidian
 OmniSearch
 Ocultar
@@ -137889,6 +137913,8 @@ Audiencias
 Alias
 Analisis
 Argumentos
+Agreg
+Arguments
 push
 pull
 para
@@ -151199,6 +151225,7 @@ mostrale
 mBrr
 mxxx
 mencionada
+marginalia
 YAML
 Ya
 You
@@ -157596,6 +157623,7 @@ YellowOrange
 Yanpolsky
 YkVd
 YpqqA
+YYYYMMDDHHmmss
 Bot
 Baja
 Builder
@@ -169481,6 +169509,7 @@ exponente
 eesrs
 ejecutables
 exit
+escape
 Motor
 Media
 Mantiene
@@ -177056,6 +177085,7 @@ Mnemot
 Marginalia
 Multiplicidad
 Martes
+Manual
 Lectura
 LaTeX
 Linter
@@ -183203,6 +183233,7 @@ Lunes
 Laboratorio
 Location
 Local
+Laplace
 links
 las
 listar
@@ -196427,6 +196458,7 @@ impuestas
 indefine
 incluirse
 ingenieria
+inexistente
 Dependencia
 Dropbox
 Dataview
@@ -202586,6 +202618,8 @@ Depende
 Distancia
 Disyunci
 Detalles
+Directory
+Dejar
 Remotely
 Raz
 Revisa
@@ -209707,6 +209741,7 @@ Recall
 Racionales
 Registra
 Redes
+Regex
 Hider
 Hace
 Herramientas
@@ -220168,6 +220203,7 @@ functions
 function
 finalizando
 facil
+fallback
 haya
 hace
 hacer
@@ -286742,6 +286778,7 @@ xHp
 xrsP
 ximos
 xXYY
+xlsx
 Wikilinks
 WHERE
 WebGL

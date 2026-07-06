@@ -291,3 +291,12 @@ LaTeX
 \left| x \right| = \sqrt{x^2}
 ```
 ````
+
+
+
+
+
+```cornell-m
+Texto principal de la sección.%%> Aclaración al margen sobre este párrafo. %%
+Más texto que continúa normalmente.
+```
