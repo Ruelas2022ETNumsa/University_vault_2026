@@ -23,25 +23,25 @@ status: activo
 
 ## Índice
 
-- [[#§0. Instalación y parche]]
-- [[#§1. Sintaxis core]]
-- [[#§2. Semantic Highlighting]]
-- [[#§3. Grouping — Method A vs B]]
-- [[#§4. Imágenes en el margen]]
-- [[#§5. Marginalia Explorer]]
-- [[#§6. Reading View]]
-- [[#§7. Active Recall — Blur]]
-- [[#§8. Flashcard Generator]]
-- [[#§9. Margin Threads]]
-- [[#§10. Doodle Engine]]
-- [[#§11. Omni-Capture]]
-- [[#§12. PDF Export]]
-- [[#§13. Shortcuts completos]]
-- [[#§14. Configuración del plugin]]
+- [[#0. Instalación y parche]]
+- [[#1. Sintaxis core]]
+- [[#2. Semantic Highlighting]]
+- [[#3. Grouping — Method A vs B]]
+- [[#4. Imágenes en el margen]]
+- [[#5. Marginalia Explorer]]
+- [[#6. Reading View]]
+- [[#7. Active Recall — Blur]]
+- [[#8. Flashcard Generator]]
+- [[#9. Margin Threads]]
+- [[#10. Doodle Engine]]
+- [[#11. Omni-Capture]]
+- [[#12. PDF Export]]
+- [[#13. Shortcuts completos]]
+- [[#14. Configuración del plugin]]
 
 ---
 
-## §0. Instalación y parche
+## 0. Instalación y parche
 
 ### Instalación
 
@@ -72,7 +72,7 @@ Esto hace que Marginalia use ` ```cornell-m ` como bloque propio. Cornell Notes 
 
 ---
 
-## §1. Sintaxis core
+## 1. Sintaxis core
 
 ### Inline — método principal
 
@@ -112,7 +112,7 @@ La condición de convergencia requiere que $\text{Re}(s) > \sigma_0$.
 
 ---
 
-## §2. Semantic Highlighting
+## 2. Semantic Highlighting
 
 Añadir un prefijo al inicio del texto de la marginalia activa un color automático. Permite categorizar el tipo de anotación de un vistazo.
 
@@ -141,7 +141,7 @@ Los prefijos y colores son completamente personalizables desde **Settings → Co
 
 ---
 
-## §3. Grouping — Method A vs B (se prefiere B)
+## 3. Grouping — Method A vs B (se prefiere B)
 
 Por defecto, Obsidian trata párrafos, listas e imágenes como bloques separados. Esto puede causar desalineación visual entre la marginalia y el contenido al que pertenece en Reading View.
 
@@ -192,7 +192,8 @@ Texto principal con alineación estricta.
 ```
 
 ```cornell-m
-Texto principal con alineación estricta.  %%> Nota perfectamente alineada %%
+BUENA NOTA CORNELL  %%> Nota perfectamente alineada %%
+Texto principal con alineación estricta.
 - Puede contener listas
 - Imágenes
 - Múltiples párrafos
@@ -212,7 +213,7 @@ Crea un entorno Flexbox aislado que garantiza que texto y marginalia queden bloq
 
 ---
 
-## §4. Imágenes en el margen
+## 4. Imágenes en el margen
 
 Para evitar conflictos con el motor Markdown de Obsidian, las imágenes en el margen usan el prefijo `img:`.
 
@@ -230,7 +231,7 @@ Al escribir `[[`, el autocompletado nativo de Obsidian sugiere archivos del vaul
 
 ---
 
-## §5. Marginalia Explorer
+## 5. Marginalia Explorer
 
 Sidebar dedicado que lista todas las marginalia del vault. Se abre desde el ribbon o con `Alt+E`.
 
@@ -240,7 +241,7 @@ Sidebar dedicado que lista todas las marginalia del vault. Se abre desde el ribb
 |---|---|
 | **Current** | Solo las marginalia de la nota activa |
 | **Vault** | Todas las marginalia del vault agrupadas por color |
-| **Threads** | Árbol de Margin Threads conectados (ver §9) |
+| **Threads** | Árbol de Margin Threads conectados (ver 9) |
 | **Board** | Pinboard — colección manual de notas seleccionadas |
 
 ### Funcionalidades
@@ -248,11 +249,11 @@ Sidebar dedicado que lista todas las marginalia del vault. Se abre desde el ribb
 - **Click-to-Scroll:** hacer clic en cualquier marginalia abre el archivo y hace scroll exactamente hasta esa línea (funciona en Live Preview y Reading View).
 - **Filtro por color:** clic en un color pill filtra las marginalia por su tipo semántico.
 - **Hover / X-Ray:** tecla `H` sobre un ítem abre popup de contexto con el texto circundante sin abrir el archivo.
-- **Drag & Drop:** arrastrar una marginalia desde el Explorer hacia un Canvas o Excalidraw crea un nodo con Block ID vinculado (ver §9).
+- **Drag & Drop:** arrastrar una marginalia desde el Explorer hacia un Canvas o Excalidraw crea un nodo con Block ID vinculado (ver 9).
 
 ---
 
-## §6. Reading View
+## 6. Reading View
 
 Las marginalia renderizan en Reading View con el toggle activado.
 
@@ -264,7 +265,7 @@ Las marginalia renderizan en Reading View con el toggle activado.
 
 ---
 
-## §7. Active Recall — Blur
+## 7. Active Recall — Blur
 
 Modo de estudio que oculta las marginalia para forzar la recuperación activa.
 
@@ -281,13 +282,15 @@ Modo de estudio que oculta las marginalia para forzar la recuperación activa.
 La mitocondria produce ATP. %%> ¿Qué produce la mitocondria? ;; %%
 ```
 
+La mitocondria produce ATP. %%> ¿Qué produce la mitocondria? ;; %%
+
 En Study Mode, la marginalia se muestra borrosa. El texto principal permanece visible — solo se oculta la respuesta/clave.
 
 **Configuración relacionada:** Settings → Blur Explanatory Marginalias → ON activa que las marginalia normales en la misma línea que una flashcard también se difuminen (evita spoilers cruzados).
 
 ---
 
-## §8. Flashcard Generator
+## 8. Flashcard Generator
 
 Convierte marginalia con `;; ` en tarjetas de repaso al final de la nota.
 
@@ -297,6 +300,7 @@ Convierte marginalia con `;; ` en tarjetas de repaso al final de la nota.
    ```
    %%> ¿Cuál es la condición de convergencia de la Laplace? ;; %%
    ```
+
 2. Command Palette → **"Flashcards Generation"**
 3. El plugin genera automáticamente una sección `### Flashcards` al final de la nota con todas las marginalia marcadas con `;;`.
 
@@ -312,7 +316,7 @@ Convierte marginalia con `;; ` en tarjetas de repaso al final de la nota.
 
 ---
 
-## §9. Margin Threads
+## 9. Margin Threads
 
 Sistema Zettelkasten en los márgenes: conecta marginalia de distintas notas en árboles de pensamiento jerárquicos.
 
@@ -340,7 +344,7 @@ Cuando una marginalia es parte de un thread, aparece un botón `🔗` dentro de 
 
 ---
 
-## §10. Doodle Engine
+## 10. Doodle Engine
 
 Canvas de dibujo flotante para adjuntar bocetos a las marginalia.
 
@@ -356,7 +360,7 @@ Al hacer clic en **"Save to Margin"**:
 
 ---
 
-## §11. Omni-Capture
+## 11. Omni-Capture
 
 Capturador rápido global para ideas en cualquier momento sin abrir la nota destino.
 
@@ -371,11 +375,11 @@ Capturador rápido global para ideas en cualquier momento sin abrir la nota dest
 
 **Carpeta destino por defecto:** configurada en Settings → Omni-Capture Default Folder (actualmente: `Example: 00_Inbox`).
 
-> **Nota — uso en vault:** pendiente de configuración. Requiere evaluar integración con PDF++ antes de definir flujo definitivo. Ver lista de pendientes en §15 del sistema Galaxy.
+> **Nota — uso en vault:** pendiente de configuración. Requiere evaluar integración con PDF++ antes de definir flujo definitivo. Ver lista de pendientes en 15 del sistema Galaxy.
 
 ---
 
-## §12. PDF Export
+## 12. PDF Export
 
 El motor de exportación nativo de Obsidian no maneja bien las notas flotantes al margen. El plugin incluye un motor de impresión dedicado.
 
@@ -396,7 +400,7 @@ El motor de exportación nativo de Obsidian no maneja bien las notas flotantes a
 
 ---
 
-## §13. Shortcuts completos
+## 13. Shortcuts completos
 
 ### Configuración de hotkeys
 
@@ -462,7 +466,7 @@ El comando "Insert Margin Note" detecta el contexto:
 
 ---
 
-## §14. Configuración del plugin
+## 14. Configuración del plugin
 
 > Referencia completa de Settings → Cornell Marginalia.
 > `[1/0]` = toggle ON/OFF · `[slider]` = valor numérico ajustable · `[Left/Right]` = selección entre opciones · `[text=...]` = valor actual del campo de texto.
@@ -533,7 +537,7 @@ Muestra las marginalia en modo lectura (Reading View).
 
 > Sirve para ver las anotaciones al margen al revisar una nota terminada o al preparar la exportación a PDF.
 >
-> **En Galaxy:** ON. Necesario para el flujo de revisión de `supernova` y para exportación PDF (§12).
+> **En Galaxy:** ON. Necesario para el flujo de revisión de `supernova` y para exportación PDF (12).
 
 #### Extract Highlights `[1/0]`
 
@@ -547,7 +551,7 @@ Difumina las marginalia normales que comparten línea con una flashcard (`;;`), 
 
 > Sirve para reforzar el Active Recall: la pregunta (`;;`) y la pista al margen quedan ambas ocultas hasta que el usuario hace hover.
 >
-> **En Galaxy:** ON si se usa el flujo de flashcards de §8. Previene spoilers cruzados al estudiar con blur activado.
+> **En Galaxy:** ON si se usa el flujo de flashcards de 8. Previene spoilers cruzados al estudiar con blur activado.
 
 ---
 
@@ -564,13 +568,13 @@ Define los prefijos semánticos y sus colores asociados. Cada tag tiene un texto
 
 > Sirve para categorizar visualmente las marginalia por tipo de anotación de un vistazo.
 >
-> **En Galaxy:** los 4 tags por defecto cubren los casos de uso del vault. No agregar tags adicionales salvo necesidad concreta. Ver §2 para uso detallado.
+> **En Galaxy:** los 4 tags por defecto cubren los casos de uso del vault. No agregar tags adicionales salvo necesidad concreta. Ver 2 para uso detallado.
 
 ---
 
 ### 📁 Structural Box Colors
 
-Asigna colores a los recuadros de los Margin Threads (§9). No afecta el color de las marginalia inline. Botón **Add Box Color** para definir colores por hilo.
+Asigna colores a los recuadros de los Margin Threads (9). No afecta el color de las marginalia inline. Botón **Add Box Color** para definir colores por hilo.
 
 > Sirve para diferenciar visualmente distintos hilos temáticos en el tab Threads del Explorer.
 
@@ -600,7 +604,7 @@ Carpeta donde se crean los archivos generados por Omni-Capture. Dejar vacío par
 
 > Sirve para centralizar las capturas rápidas en un inbox antes de procesarlas.
 >
-> **En Galaxy:** pendiente de configuración — ver §11.
+> **En Galaxy:** pendiente de configuración — ver 11.
 
 #### Omni-Capture Template
 
@@ -617,7 +621,7 @@ Valor actual:
 
 > Sirve para estandarizar cómo se guardan las capturas rápidas.
 >
-> **En Galaxy:** pendiente de configuración — ver §11.
+> **En Galaxy:** pendiente de configuración — ver 11.
 
 #### Zettelkasten Folder `[text=Zettelkasten]`
 
@@ -633,7 +637,7 @@ Ruta a un archivo `.md` que sirve de plantilla para las notas ZK. Soporta `{{tit
 
 #### Doodles Folder `[text=Marginalia Attachments]`
 
-Carpeta donde se guardan los bocetos creados con el Doodle Engine (§10).
+Carpeta donde se guardan los bocetos creados con el Doodle Engine (10).
 
 > Sirve para centralizar las imágenes generadas por el canvas de dibujo.
 >
