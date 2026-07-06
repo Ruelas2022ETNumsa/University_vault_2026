@@ -6191,6 +6191,7 @@ theorems
 them
 tools
 transformada
+traducci
 ToDo
 Templater
 Text
@@ -31087,6 +31088,7 @@ drtdrt
 docx
 definition
 desplazan
+decode
 Vault
 Verificar
 Variables
@@ -55593,6 +55595,8 @@ semesters
 session
 sugerida
 scripter
+setText
+setName
 vault
 vil
 ver
@@ -74653,6 +74657,7 @@ realizadas
 registraban
 registerMarkdownCodeBlockProcessor
 regex
+replace
 notes
 notas
 nuevas
@@ -94677,6 +94682,7 @@ uRff
 ultiplicaci
 uadrado
 used
+uXXXX
 Galaxy
 Git
 Gr
@@ -183234,6 +183240,7 @@ Laboratorio
 Location
 Local
 Laplace
+Longwind
 links
 las
 listar
@@ -188737,6 +188744,7 @@ literatura
 logical
 lenta
 liviano
+literals
 incluyendo
 im
 instalar
@@ -226018,6 +226026,7 @@ haga
 here
 highlighted
 hubo
+hicieron
 que
 quedan
 queda
@@ -253702,6 +253711,7 @@ oscilaci
 only
 orbits
 ocultaba
+obvias
 junto
 json
 jer
@@ -293293,6 +293303,7 @@ WKwvv
 WFNN
 Write
 What
+WASD
 JavaScript
 JSON
 JERARQU

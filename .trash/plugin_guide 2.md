@@ -9,7 +9,7 @@ related_notes:
   - "[[_ToDo-system]]"
 tags: [beacon, obsidian, plugins, infraestructura]
 date_created: 2026-06-01
-date_updated: 2026-07-05
+date_updated: 2026-07-04
 status: activo
 ---
 
@@ -30,7 +30,6 @@ status: activo
 6. [File Hider — Ocultar archivos del explorador](#6-file-hider--ocultar-archivos-del-explorador)
 7. [Attachment Management — Renombrar y organizar imágenes pegadas](#7-attachment-management--renombrar-y-organizar-imágenes-pegadas)
 8. [Python Scripter — Scripts Python como comandos](#8-python-scripter--scripts-python-como-comandos)
-9. [Galaxy View — Visualización 3D del grafo del vault](#9-galaxy-view--visualización-3d-del-grafo-del-vault)
 
 ---
 
@@ -485,70 +484,6 @@ Si devuelve `Sin cambios.` o `Correcciones realizadas.` — el script funciona. 
 
 
 
-
----
-
-## 9. Galaxy View — Visualización 3D del grafo del vault
-
-**Plugin:** [Longwind1984/galaxy-view](https://github.com/Longwind1984/galaxy-view) — instalado vía BRAT
-
-**Propósito:** Renderiza el grafo de notas del vault como una galaxia 3D interactiva usando Three.js. Cada nota es una estrella, cada link es una arista. Permite navegar el vault espacialmente: hacer zoom, orbitar, buscar una nota y volar hacia ella, enfocar vecinos de una nota seleccionada, y explorar la estructura de conexiones desde otra perspectiva.
-
-### Características principales
-
-- Presets visuales: Galaxy, Nebula, Minimal, Fireworks, Hubble Deep Field, Neon City, Sunset Film, Cyberpunk, Matrix, Aurora
-- Bloom, postproceso y efectos de partículas — corre a 60fps con 3000+ notas
-- Modo foco: al seleccionar una nota atenúa todo excepto sus vecinos directos
-- Búsqueda fuzzy con vuelo animado hacia el nodo seleccionado
-- Panel de física ajustable: repulsión, gravedad, distancia de links, tamaño de nodos
-- Navegación por teclado: `WASD` = volar · `Q/E` = subir/bajar · `Shift` = boost · `F` = volar al seleccionado · `R` = vista general
-- Compatible con los grupos de color del grafo 2D nativo de Obsidian (`graph.json`)
-
-### Instalación
-
-1. Instalar BRAT desde Community Plugins
-2. En BRAT → **Add Beta plugin** → pegar `Longwind1984/galaxy-view`
-3. Activar en Settings → Community plugins → **Galaxy View**
-4. El ícono de órbita aparece en el ribbon
-
-### Parche de traducción aplicado
-
-El `main.js` original tiene toda la UI en chino (strings guardados como secuencias `\uXXXX`). Se aplicó un parche de traducción completa al inglés mediante script Python.
-
-**Backup del `main.js` traducido:**
-```
-_app/scripts/Galaxy_view/Galaxy_view-main.js.bk
-```
-
-**Para reaplicar el parche después de una actualización de BRAT:**
-
-1. Copiar el `Galaxy_view-main.js.bk` del backup a `.obsidian/plugins/galaxy-view/main.js`, reemplazando el original
-2. Desactivar y reactivar el plugin en Settings → Community plugins
-
-> Si se quiere regenerar el parche desde cero (por ejemplo si hay una actualización grande con strings nuevos), el script Python original está documentado al final de esta sección.
-
-### Lo que traduce el parche
-
-| Categoría | Ejemplos |
-|---|---|
-| Presets visuales | Galaxy, Nebula, Minimal, Fireworks, Hubble Deep Field, Neon City, Sunset Film, Cyberpunk, Matrix, Aurora |
-| Panel de física | Repulsion, Link Distance, Link Strength, Gravity, Flatness, Node Size, Link Opacity, Speed |
-| Secciones del panel | Physics, Appearance & Colors, Advanced |
-| Modos de nodo | Size: Uniform, Size: Word Count, Size: Link Count |
-| Orphans y unresolved | Orphans: Show/Hide, Unresolved: Show/Hide |
-| Cruise y calidad | Cruise: On/Off, Quality: Low/Auto/High/Mobile |
-| Tooltips de teclado | WASD = fly · Q/E = up/down · Shift = boost, etc. |
-| Notificaciones | Settled, Laying out, Building star map…, etc. |
-
-> **~5% restante sin traducir:** son comentarios internos dentro del código GLSL de los shaders (los programas que corren en la GPU para renderizar las estrellas). Nunca son visibles para el usuario — son notas del desarrollador para sí mismo.
-
-### Cómo funciona el script de traducción
-
-El parche se hizo con Python en tres pasos:
-
-1. **Leer el archivo completo** — `open('main.js', encoding='utf-8')` carga los 680KB en memoria.
-2. **Detectar los strings chinos** — los caracteres no estaban escritos directamente sino como secuencias unicode escapadas (`\u641C\u7D22` en vez de `搜索`). Se usó regex para encontrar todos los strings que contenían escapes en el rango CJK (`\u4e00`–`\u9fff`) dentro de contextos de UI (`label:`, `setText(`, `Notice(`, `setName(`, etc.). Luego `.decode('unicode_escape')` los convirtió a texto legible para poder entender qué significaba cada uno.
-3. **Aplicar reemplazos con diccionario** — se construyó un diccionario `{raw_escape: traducción_en_inglés}` y se aplicó con `.replace()` sobre el contenido completo. Se hicieron dos pasadas para cubrir strings en template literals y secciones menos obvias.
 
 %%
 galaxy-links
