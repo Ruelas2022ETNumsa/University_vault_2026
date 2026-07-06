@@ -1,7 +1,9 @@
 # Cornell Marginalia — Ejemplos de sintaxis
 
 
-Mitochondria 
+Mitochondria %%> img:[[Cornell Marginalia — Ejemplos de sintaxis-06-07-2026_00-02-53.png]] %%
+
+
 are 
 membrane-bound
 cell organelles that 
@@ -67,7 +69,10 @@ La distributividad vincula suma y producto: $a(b+c)=ab+ac$. %%> ! Único axioma 
 
 %%  FEATURE 3 — Margen opuesto (solo Reading View)  %%
 
-Existe $a^{-1}$ tal que $a \cdot a^{-1} = 1$ para todo $a \neq 0$. %%< Axioma 6 — Inverso multiplicativo %%
+Existe $a^{-1}$ tal que $a \cdot a^{-1} = 1$ para tod
+
+
+
 
 ---
 

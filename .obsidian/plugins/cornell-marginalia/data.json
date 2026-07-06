@@ -8,7 +8,7 @@
   "ignoredFolders": "Templates",
   "enableSemanticStitching": false,
   "alignment": "left",
-  "marginWidth": 60,
+  "marginWidth": 15,
   "marginOffset": 15,
   "fontSize": "0.85em",
   "fontFamily": "inherit",
@@ -38,7 +38,7 @@
   "ignoredHighlightFolders": "Excalidraw",
   "ignoredHighlightTexts": "⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠",
   "showSyntaxInSourceMode": true,
-  "zkMode": false,
+  "zkMode": true,
   "zkFolder": "Zettelkasten",
   "zkTemplatePath": "",
   "doodleFolder": "Marginalia Attachments",
@@ -68,7 +68,8 @@
     "anki-sync": false,
     "zoom-doodle": true,
     "margidoro": false,
-    "blurting-mode": false
+    "blurting-mode": false,
+    "spatial-pinboard": true
   },
   "userStats": {
     "xp": 0,

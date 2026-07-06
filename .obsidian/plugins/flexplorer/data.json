@@ -5,6 +5,7 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
+        "_assets",
         "void.md",
         "in_work",
         "Borrar",
@@ -2781,7 +2782,6 @@
         "MAT101-T00-recta_real_intervalos.md",
         "MAT101-T00-teoremas_desigualdades.md",
         "MAT101-T00-axiomas_orden.md",
-        "MAT101-T00-metodo_signos.md",
         "MAT101-T00-teoremas_reales.md",
         "MAT101-T00-axiomas_igualdad.md",
         "MAT101-T00-axiomas_cuerpo.md"
@@ -2796,10 +2796,6 @@
       "isHidden": false
     },
     "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-teoremas_reales.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-metodo_signos.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -2892,6 +2888,18 @@
       ]
     },
     "_app/scripts/Galaxy_view/Galaxy_view-main.js.bk": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Cornell Marginalia — Ejemplos de sintaxis-06-07-2026_00-02-53.png"
+      ]
+    },
+    "_assets/Cornell Marginalia — Ejemplos de sintaxis-06-07-2026_00-02-53.png": {
       "isPinned": false,
       "isHidden": false
     }
