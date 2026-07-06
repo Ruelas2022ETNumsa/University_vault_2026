@@ -37,7 +37,6 @@ status: activo
 - [[#§11. Omni-Capture]]
 - [[#§12. PDF Export]]
 - [[#§13. Shortcuts completos]]
-- [[#§14. Configuración del plugin]]
 
 ---
 
@@ -432,354 +431,258 @@ El comando "Insert Margin Note" detecta el contexto:
 
 ---
 
-## §14. Configuración del plugin
+las configuraciones te las entrego en forma de texto ojo si es una extraccion  
+literal si solo una aclaracion en cada opcion la utloma [] es como se puede  
+configurar, [1/0] on/off, [slider] para distintos valores a escoger, [valor x/valor y] entre dos o mas valores,  
+[text=MMM] texto escrito en la configuracion solo esta "MMM" sin `text=`,  
+[button=nombre del boton] solo aparece "nombre del boton" no "button=".
 
-> Referencia completa de Settings → Cornell Marginalia.
-> `[1/0]` = toggle ON/OFF · `[slider]` = valor numérico ajustable · `[Left/Right]` = selección entre opciones · `[text=...]` = valor actual del campo de texto.
+# Cornell Marginalia Settings
 
----
+## 🎨 Appearance & Rendering
 
-### 🎨 Appearance & Rendering
+### Responsive Marginalia (Auto-Collapse) [1/0]
 
-#### Responsive Marginalia (Auto-Collapse) `[1/0]`
+OPTIONAL: Automatically move marginalia inside the text when the  
+note pane is too narrow (e.g. when you open the sidebar).
 
-Mueve las marginalia dentro del texto cuando el panel de la nota es demasiado angosto (ej: al abrir el sidebar lateral).
+### Responsive Threshold (px) [Slider]
 
-> Sirve para evitar que las marginalia se superpongan con el contenido cuando el espacio horizontal es reducido.
+Set the width at which marginalia collapses into the text.  
+(Requires Auto-Collapse to be ON).
 
-#### Responsive Threshold (px) `[slider]`
+### Adaptive Width (Theme Compatibility) [1/0]
 
-Ancho en píxeles por debajo del cual se activa el colapso automático. Requiere Auto-Collapse ON.
+🧠 Auto-calculates margin width based on empty screen space. Turn  
+ON if you are having problems with your current theme to prevent overlap.
 
-> Sirve para calibrar en qué punto exacto colapsan las marginalia según el layout habitual de trabajo.
+### Margin Alignment [Left/right]
 
-#### Adaptive Width (Theme Compatibility) `[1/0]`
+### Margin Width (%) [slider]
 
-Calcula automáticamente el ancho del margen en base al espacio libre en pantalla. Activar si el tema causa superposición visual.
+### Margin Distance (Offset) [slider]
 
-> Sirve para compatibilidad con temas que tienen márgenes o sidebars propios que reducen el espacio disponible.
->
-> **En Galaxy:** activar si el tema del vault genera solapamiento entre las marginalia y el contenido principal.
+Adjust how close or far the marginalia sits from the main  
+text. Higher values push it outwards, lower values pull it  
+inwards.
 
-#### Margin Alignment `[Left / Right]`
+### Font Size [text=0.85em]
 
-Dirección por defecto del margen para todas las marginalia sin `%%<` o `%%>` explícito.
+### Font Family [text=inherit]
 
-> Sirve para definir si las notas al margen aparecen a la izquierda o la derecha del texto principal de forma global.
->
-> **En Galaxy:** configurado en `Right` — las notas `%%>` van a la derecha, consistente con el layout Cornell donde la columna derecha es el desarrollo.
+### Enable in Reading View [1/0]
 
-#### Margin Width (%) `[slider]`
+Shows marginalia in reading mode. Turn this off if you prefer a clean  
+view.
 
-Ancho del margen como porcentaje del ancho total del panel de la nota.
+### Extract Highlights [1/0]
 
-> Sirve para controlar cuánto espacio horizontal ocupa la columna de marginalia.
->
-> **En Galaxy:** ajustar para que el margen sea visible sin reducir demasiado el área de texto principal. Un valor entre 20–30% funciona bien con el layout Cornell.
+OPTIONAL: Include standard text highlights (==text==) in the  
+Explorer and Pinboard.
 
-#### Margin Distance (Offset) `[slider]`
+### Blur Explanatory Marginalias [1/0]
 
-Distancia entre el texto principal y el margen. Valores altos empujan el margen hacia afuera, valores bajos lo acercan.
+🧠 Active Recall: Blurs regular marginalias that share a line with a  
+flashcard, preventing spoilers.
 
-> Sirve para ajuste visual fino de la separación entre texto y marginalia.
+##🏷️ Color Tags
 
-#### Font Size `[text=0.85em]`
+- Tag 1 [text=!] [seleccion de color valores RGB] [button=eliminar]
+- Tag 2 [text=?] [seleccion de color valores RGB] [button=eliminar]
+- Tag 3 [text=X-] [seleccion de color valores RGB] [button=eliminar]
+- Tag 4 [text=V-] [seleccion de color valores RGB] [button=eliminar]
+- [button=Add Tag ]
 
-Tamaño de fuente de las marginalia. Por defecto `0.85em` — ligeramente más pequeño que el texto principal.
+##📁 Structural Box Colors
 
-> Sirve para diferenciar visualmente las notas al margen del contenido principal.
->
-> **En Galaxy:** dejar en `0.85em` — la diferencia de tamaño refuerza la jerarquía visual entre nota y marginalia.
+Asigna colores EXCLUSIVAMENTE a los recuadros de los Hilos Semánticos  
+(ej: [#abuelo](app://obsidian.md/index.html#abuelo)). Esto NO alterará el color de tus marginalias en el texto.
 
-#### Font Family `[text=inherit]`
+[button=Add Box Color]
 
-Familia tipográfica de las marginalia. `inherit` hereda la fuente del tema activo.
+##✅ Task Management
 
-> Sirve para uniformar o diferenciar la tipografía de las marginalia respecto al texto principal.
+### Auto-Delete Completed Tasks [1/0]
 
-#### Enable in Reading View `[1/0]`
+When you check a marginalia task (- [x]), it will be permanently  
+deleted from the Markdown file to keep your vault clean.
 
-Muestra las marginalia en modo lectura (Reading View).
+### TaskNotes HTTP API Integration [1/0]
 
-> Sirve para ver las anotaciones al margen al revisar una nota terminada o al preparar la exportación a PDF.
->
-> **En Galaxy:** ON. Necesario para el flujo de revisión de `supernova` y para exportación PDF (§12).
+Shows a button on task marginalias to send them directly to the  
+TaskNotes plugin.
 
-#### Extract Highlights `[1/0]`
+##📁 File & Output Management
 
-Incluye los textos con resaltado estándar (`==texto==`) en el Explorer y el Pinboard además de las marginalia.
+### Omni-Capture Default Folder [text=Example: 00_Inbox]
 
-> Sirve para centralizar en el Explorer tanto las marginalia como los highlights de Obsidian en una sola vista.
+Folder where new marginalia files will be  
+created (leave empty for root).
 
-#### Blur Explanatory Marginalias `[1/0]`
+### Omni-Capture Template
 
-Difumina las marginalia normales que comparten línea con una flashcard (`;;`), evitando que revelen la respuesta antes de que el usuario intente recordarla.
-
-> Sirve para reforzar el Active Recall: la pregunta (`;;`) y la pista al margen quedan ambas ocultas hasta que el usuario hace hover.
->
-> **En Galaxy:** ON si se usa el flujo de flashcards de §8. Previene spoilers cruzados al estudiar con blur activado.
-
----
-
-### 🏷️ Color Tags
-
-Define los prefijos semánticos y sus colores asociados. Cada tag tiene un texto de prefijo y un color RGB asignable. Botón **Add Tag** para agregar prefijos adicionales.
-
-| Tag | Prefijo por defecto | Tipo |
-|---|---|---|
-| Tag 1 | `!` | Importante |
-| Tag 2 | `?` | Pregunta |
-| Tag 3 | `X-` | Error |
-| Tag 4 | `V-` | Verificado |
-
-> Sirve para categorizar visualmente las marginalia por tipo de anotación de un vistazo.
->
-> **En Galaxy:** los 4 tags por defecto cubren los casos de uso del vault. No agregar tags adicionales salvo necesidad concreta. Ver §2 para uso detallado.
-
----
-
-### 📁 Structural Box Colors
-
-Asigna colores a los recuadros de los Margin Threads (§9). No afecta el color de las marginalia inline. Botón **Add Box Color** para definir colores por hilo.
-
-> Sirve para diferenciar visualmente distintos hilos temáticos en el tab Threads del Explorer.
-
----
-
-### ✅ Task Management
-
-#### Auto-Delete Completed Tasks `[1/0]`
-
-Cuando se marca una marginalia de tarea como completada (`- [x]`), la elimina permanentemente del archivo Markdown.
-
-> Sirve para mantener limpio el vault: las tareas completadas desaparecen sin dejar rastro en el archivo fuente.
-
-#### TaskNotes HTTP API Integration `[1/0]`
-
-Muestra un botón en las marginalia de tipo tarea para enviarlas directamente al plugin TaskNotes.
-
-> Sirve para integración con TaskNotes si se usa ese plugin como gestor de tareas central.
-
----
-
-### 📁 File & Output Management
-
-#### Omni-Capture Default Folder `[text=Example: 00_Inbox]`
-
-Carpeta donde se crean los archivos generados por Omni-Capture. Dejar vacío para guardar en la raíz del vault.
-
-> Sirve para centralizar las capturas rápidas en un inbox antes de procesarlas.
->
-> **En Galaxy:** pendiente de configuración — ver §11.
-
-#### Omni-Capture Template
-
-Define el formato de salida de las capturas. Soporta `{{text}}`, `{{citation}}`, `{{image}}` y sintaxis Templater (`<% %>`). Para usar flashcards, incluir `;;` dentro del template de texto.
-
-Valor actual:
-```
-%%> {{text}} %%
-{{citation}}
+[text=  
+  
+{{citation}}  
 {{image}}
 
----
-```
-
-> Sirve para estandarizar cómo se guardan las capturas rápidas.
->
-> **En Galaxy:** pendiente de configuración — ver §11.
-
-#### Zettelkasten Folder `[text=Zettelkasten]`
-
-Carpeta donde se crean las notas ZK generadas desde Margin Threads. Dejar vacío para raíz.
-
-> Sirve para organizar las notas atómicas generadas desde los hilos de marginalia.
-
-#### Zettelkasten Template Path `[text=]`
-
-Ruta a un archivo `.md` que sirve de plantilla para las notas ZK. Soporta `{{title}}`, `{{date}}`, `{{time}}`.
-
-> Sirve para dar estructura uniforme a las notas Zettelkasten generadas por el plugin.
-
-#### Doodles Folder `[text=Marginalia Attachments]`
-
-Carpeta donde se guardan los bocetos creados con el Doodle Engine (§10).
-
-> Sirve para centralizar las imágenes generadas por el canvas de dibujo.
->
-> **En Galaxy:** evaluar mover a `_assets/doodles` para mantener consistencia con el sistema de attachments del vault — pendiente.
-
-#### Evidence Boards Folder `[text=Evidence Boards]`
-
-Carpeta donde se exportan los Canvas creados desde el Marginalia Explorer.
-
-> Sirve para organizar los tableros de evidencia generados desde hilos de marginalia.
-
-#### Pinboards Folder `[text=Pinboards]`
-
-Carpeta donde se exportan los archivos Markdown del Pinboard.
-
-> Sirve para guardar los tableros de trabajo exportados desde el tab Board del Explorer.
-
-#### Pinboards Template Path `[text=]`
-
-Plantilla para los archivos Markdown exportados del Pinboard.
-
-> Sirve para dar estructura uniforme a los boards exportados.
-
-#### Pinboards Item Template Path `[text=]`
-
-Plantilla para cada ítem individual del Pinboard exportado. Soporta `{{text}}`, `{{citation}}`, `{{source_note}}`.
-
-> Sirve para controlar el formato de cada marginalia dentro del board exportado.
-
-#### Canvas Item Template Path `[text=]`
-
-Plantilla para el nodo principal en el Evidence Board. Soporta `{{text}}` y `{{source_note}}`.
-
-> Sirve para personalizar cómo aparece cada nodo de marginalia en el Canvas exportado.
-
-#### ✨ Clean Exports (Remove Tags) `[1/0]`
-
-Elimina automáticamente los `#tags` de las notas al exportar a Pinboard, Canvas o al arrastrar a otra nota.
-
-> Sirve para exportaciones limpias sin ruido de tags.
-
-#### ✨ Clean Exports (Remove Block IDs) `[1/0]`
-
-Elimina automáticamente los `^block-ids` de las notas al exportar.
-
-> Sirve para que las exportaciones no expongan los IDs internos de los Margin Threads.
-
-#### Drag & Drop Template (To Note)
-
-Formato usado al arrastrar un Semantic Thread box directamente a una nota Markdown. Soporta `{{text}}`, `{{citation}}`, `{{time}}`, `{{source_note}}`.
-
-Valor actual:
-```
-- {{text}} {{source_note}}
-```
-
-> Sirve para controlar el formato del texto insertado al hacer drag & drop de un hilo a una nota.
+{{text}}
 
 ---
 
-### ⚙️ Advanced & Exclusions
+]  
+Define the output format for your captures.  
+Use {{text}}, {{citation}}, and {{image}}. Supports  
+Templater (<% %>). If you want to use Flashcard  
+mode, remember to include ';;' inside your text template.
 
-#### Show Syntax in Source Mode `[1/0]`
+### Zettelkasten Folder [text=Zettelkasten]
 
-Muestra la sintaxis Markdown cruda en Source Mode en lugar de renderizar los bloques visuales.
+Where should your ZK notes be created?  
+(Leave empty for root).
 
-> Sirve para edición avanzada o depuración — ver el archivo fuente tal cual.
+### Zettelkasten Template Path [text=]
 
-#### Ignored Folders `[text=Templates]`
+Optional: Path to a markdown file to use as a  
+template (e.g., Templates/ZK.md). Supports  
+{{title}}, {{date}}, {{time}}.
 
-Lista de carpetas separadas por coma que el plugin ignora completamente (no escanea ni renderiza marginalia en esas carpetas).
+### Doodles Folder[text=Marginalia Attachments]
 
-> Sirve para excluir carpetas de infraestructura del escaneo del vault.
->
-> **En Galaxy:** agregar `_app,_templates,_pdf,Excalidraw` para que el plugin no procese las carpetas de sistema.
+Where should your hand-drawn images  
+be saved? (Leave empty for root).
 
-#### Ignored Folders for Highlights `[text=Excalidraw]`
+### Evidence Boards Folder [text=Evidence Boards]
 
-Lista de carpetas ignoradas solo para highlights (`==texto==`), no para marginalia.
+Where should your Canvas files be exported?
 
-> Sirve para evitar que los highlights de archivos Excalidraw aparezcan en el Explorer.
->
-> **En Galaxy:** dejar `Excalidraw` — los archivos `.excalidraw.md` contienen highlights internos que no son anotaciones de estudio.
+### Pinboards Folder [textPinboards]
 
-#### Ignored Highlight Texts
+Where should your exported Pinboard  
+Markdown files go?
 
-Textos exactos o fragmentos a ignorar en la extracción de highlights.
+### Pinboards Template Path [text=]
 
-Valor actual:
-```
-⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠
-```
+Optional: Path to a markdown file to use as a  
+template for exported Boards.
 
-> Sirve para filtrar textos resaltados que son boilerplate de plugins y no son anotaciones reales.
+### Pinboards Item Template Path [text=]
 
-#### 🔗 Semantic Stitching UI `[1/0]`
+Optional: Template for each individual  
+marginalia in the board. Supports {{text}},  
+{{citation}}, and {{source_note}}.
 
-Al conectar dos notas con Stitch, el plugin pide una razón semántica de la conexión (ej: "miden lo mismo").
+### Canvas Item Template Path [text= ]
 
-> Sirve para forzar reflexión explícita sobre por qué dos marginalia están conectadas — enriquece el Zettelkasten.
->
-> **En Galaxy:** ON si se usa Margin Threads activamente para conectar conceptos entre materias.
+Optional: Template for the main marginalia  
+node in the Evidence Board. Supports {{text}}  
+and {{source_note}}.
 
----
+### ✨ Clean Exports (Remove Tags) [1/0]
 
-### 🛠️ Addons & Modules
+Automatically strip [#tags](app://obsidian.md/index.html#tags) from notes when exporting to Pinboard,  
+Canvas, or Dragging to a note.
 
-#### Gamification & User Profile `[1/0]`
+### ✨ Clean Exports (Remove Block IDs) [1/0]
 
-Convierte las marginalia en un sistema de XP y niveles. Agrega perfil personalizable al sidebar.
+Automatically strip ^block-ids from your notes when exporting.
 
-> Sirve para motivación gamificada en el uso del plugin.
+### Drag & Drop Template (To Note)
 
-#### Custom Explorer Background `[1/0]`
+[text=
 
-Agrega una imagen de fondo al Marginalia Explorer.
+- {{text}} {{source_note}}  
+    ]
 
-> Sirve para personalización visual del sidebar.
+Format used when you drag a Semantic Thread  
+box directly into a Markdown note. Supports  
+{{text}}, {{citation}}, {{time}} and {{source_note}}.
 
-#### 🌱 Time Machine & Rhizome `[1/0]`
+## ⚙️ Advanced & Exclusions
 
-Explora las marginalia en un canvas interactivo cronológico de pantalla completa con repetición espaciada.
+### Show Syntax in Source Mode [1/0]
 
-> Sirve para revisión visual del historial de anotaciones en el tiempo.
+If enabled, Cornell Notes will show as raw Markdown syntax when  
+using Source Mode, instead of rendering visual blocks.
 
-#### Pdf Doodle & Harvest `[1/0]`
+### Ignored Folders [text=Templates]
 
-Activa el modo de dibujo temporal sobre PDFs abiertos en Obsidian.
+Comma-separated list of folders to completely ignore.
 
-> Sirve para anotar directamente sobre PDFs sin salir del vault.
+### Ignored Folders for Highlights [text=Excalidraw]
 
-#### Super Doodle 🎨 `[1/0]`
+Comma-separated list of folders to ignore ONLY  
+for highlights (e.g., Excalidraw, Templates).
 
-Amplía el Doodle Engine con canvas de tamaño ajustable, navegación panorámica, colores y herramienta de selección avanzada.
+### Ignored Highlight Texts
 
-> Sirve para bocetos más complejos que requieren más espacio o herramientas de dibujo.
+[text=  
+⚠ Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠  
+]
 
-#### 🧠 Blurting Mode (1-3-7) `[1/0]`
+Comma-separated list of exact texts or fragments  
+to ignore (e.g., Switch to EXCALIDRAW VIEW).
 
-Convierte el Marginalia Explorer en un deck de repetición espaciada.
+### 🔗 Semantic Stitching UI [1/0]
 
-> Sirve para sesiones de estudio activo directamente desde el sidebar sin abrir las notas.
+When connecting (stitching) notes, ask for a semantic  
+reason (e.g. "miden lo mismo").
 
-#### 🍅 Margidoro Engine `[1/0]`
+## 🛠️ Addons & Modules
 
-Pomodoro timer con awareness de marginalia. Rastrea las anotaciones durante la sesión de estudio y agenda revisiones.
+### Gamification & User Profile [1/0]
 
-> Sirve para combinar técnica Pomodoro con el sistema de marginalia en una sesión integrada.
+Turn your marginalia into a game! Earn XP, level up, and customize  
+your profile sidebar.
 
-#### Anki Advanced Sync `[1/0]`
+### Custom Explorer Background [1/0]
 
-Sincroniza las marginalia con Anki con soporte bidireccional, imágenes nativas y crops de PDF++.
+Add a beautiful background image to your Marginalia Explorer.
 
-> Sirve para exportar las marginalia como tarjetas Anki para repaso fuera de Obsidian.
+### 🌱 Time Machine & Rhizome [1/0]
 
-#### 🔍 Zoom & Pan Doodles `[1/0]`
+Explore your marginaliae on a chronological, full-screen interactive  
+canvas with spaced repetition.
 
-Clic en cualquier imagen o doodle en las marginalia para expandirla a pantalla completa con controles de zoom y paneo.
+### Pdf Doodle & Harvest [1/0]
 
-> Sirve para revisar imágenes o bocetos pequeños sin salir de la nota.
->
-> **En Galaxy:** útil al usar `%%> img:[[...]] %%` con diagramas o gráficos — permite ver el detalle sin abrir el archivo de imagen.
+Enable temporary drawing mode on PDFs.
 
-#### 🚀 Dashboard:Smart Study `[1/0]`
+### Super Doodle 🎨 [1/0]
 
-Calendario lineal, rutinas, materias y repaso espaciado dinámico.
+Transform Zen Doodle into an adjustable-size canvas with panoramic  
+navigation, colors, and an advanced selection tool.
 
-> Sirve como panel de control de estudio integrado al vault.
+### 🧠 Blurting Mode (1-3-7) [1/0]
 
-#### Cornell Board 🌌 `[1/0]`
+Turn your Marginalia Explorer into a Spaced Repetition study deck.
 
-Canvas infinito y de forma libre para arrastrar, conectar y materializar marginalia visualmente.
+### 🍅 Margidoro Engine [1/0]
 
-> Sirve para sesiones de síntesis visual — mapa conceptual libre construido desde las marginalia del vault.
+Knowledge-aware Pomodoro timer. Tracks your marginalias during  
+study sessions and schedules reviews.
 
----
+### Anki Advanced Sync [1/0]
+
+Syncs marginalias to Anki with bidirectional support, native images,  
+and PDF++ crops.
+
+### 🔍 Zoom & Pan Doodles [1/0]
+
+Haz clic en cualquier imagen o doodle en tus marginalias para  
+expandirla a pantalla completa con controles de zoom y paneo.
+
+### 🚀 Dashboard:Smart Study [1/0]
+
+Linear calendar, routines, subjects, and dynamic spaced review.
+
+### Cornell Board 🌌 [1/0]
+
+Activate an infinite, freeform canvas to drag, connect, and visually  
+materialize marginalias.
+
+
+
 
 %%
 galaxy-links
