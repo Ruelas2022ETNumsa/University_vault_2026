@@ -1240,6 +1240,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "Marganali_guide.md",
         "desmos_guide 1.md",
         "desmos_guide.md",
         "PDF_PP-guide.md",
@@ -2900,6 +2901,10 @@
       ]
     },
     "_assets/Cornell Marginalia — Ejemplos de sintaxis-06-07-2026_00-02-53.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_appnotes/Marganali_guide.md": {
       "isPinned": false,
       "isHidden": false
     }
