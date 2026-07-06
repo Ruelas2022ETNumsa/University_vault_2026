@@ -22,15 +22,15 @@ status: activo
 
 ## Índice
 
-1. [Completr — Autocompletado de palabras y LaTeX](#1-completr--autocompletado-de-palabras-y-latex)
-2. [Advanced Tables — Edición de tablas](#2-advanced-tables--edición-de-tablas)
-3. [Cornell Notes — Layout Cornell en notas](#3-cornell-notes--layout-cornell-en-notas)
-4. [Cornell Marginalia — Notas al margen en el editor](#4-cornell-marginalia--notas-al-margen-en-el-editor)
-5. [Commander — Botones personalizados en el ribbon](#5-commander--botones-personalizados-en-el-ribbon)
-6. [File Hider — Ocultar archivos del explorador](#6-file-hider--ocultar-archivos-del-explorador)
-7. [Attachment Management — Renombrar y organizar imágenes pegadas](#7-attachment-management--renombrar-y-organizar-imágenes-pegadas)
-8. [Python Scripter — Scripts Python como comandos](#8-python-scripter--scripts-python-como-comandos)
-9. [Galaxy View — Visualización 3D del grafo del vault](#9-galaxy-view--visualización-3d-del-grafo-del-vault)
+- [[#1. Completr — Autocompletado de palabras y LaTeX]]
+- [[#2. Advanced Tables — Edición de tablas]]
+- [[#3. Cornell Notes — Layout Cornell en notas]]
+- [[#4. Cornell Marginalia — Notas al margen en el editor]]
+- [[#5. Commander — Botones personalizados en el ribbon]]
+- [[#6. Flexplorer — Explorador de archivos mejorado]]
+- [[#7. Attachment Management — Renombrar y organizar imágenes pegadas]]
+- [[#8. Python Scripter — Scripts Python como comandos]]
+- [[#9. Galaxy View — Visualización 3D del grafo del vault]]
 
 ---
 

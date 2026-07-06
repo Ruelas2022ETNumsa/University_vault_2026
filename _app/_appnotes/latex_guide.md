@@ -24,23 +24,22 @@ Guía de referencia de sintaxis LaTeX para uso en Obsidian (MathJax). Cubre los 
 ---
 
 ## Índice
-
-1. [Modos matemáticos](#1-modos-matemáticos)
-2. [Fracciones](#2-fracciones)
-3. [Subíndices y superíndices](#3-subíndices-y-superíndices)
-4. [Integrales y diferenciales — Cálculo 1](#4-integrales-y-diferenciales--cálculo-1)
-5. [Límites y sumatorias](#5-límites-y-sumatorias)
-6. [Derivadas](#6-derivadas)
-7. [Cancelaciones y anulaciones visuales](#7-cancelaciones-y-anulaciones-visuales)
-8. [Sistemas y llaves — bloques condicionales](#8-sistemas-y-llaves--bloques-condicionales)
-9. [Alineación de ecuaciones — array y align](#9-alineación-de-ecuaciones--array-y-align)
-10. [Matrices](#10-matrices)
-11. [Tablas con array](#11-tablas-con-array)
-12. [Álgebra lineal](#12-álgebra-lineal)
-13. [Electrónica y circuitos eléctricos](#13-electrónica-y-circuitos-eléctricos)
-14. [Colores](#14-colores)
-15. [Quick LaTeX — atajos activos](#15-quick-latex--atajos-activos)
-16. [Completr — autocompletado LaTeX](#16-completr--autocompletado-latex)
+- [[#1. Modos matemáticos]]
+- [[#2. Fracciones]]
+- [[#3. Subíndices y superíndices]]
+- [[#4. Integrales y diferenciales — Cálculo 1]]
+- [[#5. Límites y sumatorias]]
+- [[#6. Derivadas]]
+- [[#7. Cancelaciones y anulaciones visuales]]
+- [[#8. Sistemas y llaves — bloques condicionales]]
+- [[#9. Alineación de ecuaciones — array y align]]
+- [[#10. Matrices]]
+- [[#11. Tablas con array]]
+- [[#12. Álgebra lineal]]
+- [[#13. Electrónica y circuitos eléctricos]]
+- [[#14. Colores]]
+- [[#15. Quick LaTeX — atajos activos]]
+- [[#16. Completr — autocompletado LaTeX]]
 
 ---
 

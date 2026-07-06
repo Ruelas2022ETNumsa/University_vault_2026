@@ -23,22 +23,21 @@ Guía de referencia para sintaxis avanzada de Obsidian: Markdown avanzado, sinta
 
 ## Índice
 
-1. [Wikilinks — enlaces internos](#1-wikilinks--enlaces-internos)
-2. [Embeds — contenido embebido](#2-embeds--contenido-embebido)
-3. [Referencias de bloque](#3-referencias-de-bloque)
-4. [YAML frontmatter](#4-yaml-frontmatter)
-5. [Bloques de comentario](#5-bloques-de-comentario)
-6. [Callouts](#6-callouts)
-7. [Tablas](#7-tablas)
-8. [LaTeX y matemáticas](#8-latex-y-matemáticas)
-9. [Bloques de código](#9-bloques-de-código)
-10. [Tareas y checkboxes](#10-tareas-y-checkboxes)
-11. [Footnotes](#11-footnotes)
-12. [Aliases y display text](#12-aliases-y-display-text)
-13. [Tags](#13-tags)
-14. [Dataview queries](#14-dataview-queries)
-15. [Excalidraw — embeds en notas](#15-excalidraw--embeds-en-notas)
-16. [PDF++ — citas y embeds desde PDF](#16-pdf--citas-y-embeds-desde-pdf)
+- [[#1. Wikilinks — enlaces internos]]
+- [[#2. Embeds — contenido embebido]]
+- [[#3. Referencias de bloque]]
+- [[#4. YAML frontmatter]]
+- [[#5. Bloques de comentario]]
+- [[#6. Callouts]]
+- [[#7. Tablas]]
+- [[#8. LaTeX y matemáticas]]
+- [[#9. Bloques de código]]
+- [[#10. Tareas y checkboxes]]
+- [[#11. Footnotes]]
+- [[#12. Aliases y display text]]
+- [[#13. Tags]]
+- [[#14. Dataview queries]]
+- [[#15. Excalidraw — embeds en notas]]
 
 ---
 

@@ -39,7 +39,6 @@ status: activo
 - [[MAT101-T00-recta_real_intervalos]]
 - [[MAT101-T00-valor_absoluto]]
 - [[MAT101-T00-inecuaciones_lineales]]
-- [[MAT101-T00-metodo_signos]]
 
 ### Comets
 - [[MAT101-T00-ej_inec_x4_9x2]]
