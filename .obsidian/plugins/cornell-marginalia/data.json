@@ -66,7 +66,9 @@
     "rhizome-time-machine": false,
     "super-doodle": false,
     "anki-sync": false,
-    "zoom-doodle": true
+    "zoom-doodle": true,
+    "margidoro": false,
+    "blurting-mode": false
   },
   "userStats": {
     "xp": 0,
@@ -96,5 +98,5 @@
   },
   "deleteCompletedTasks": false,
   "enableTaskNotesIntegration": false,
-  "visualHelper": false
+  "visualHelper": true
 }

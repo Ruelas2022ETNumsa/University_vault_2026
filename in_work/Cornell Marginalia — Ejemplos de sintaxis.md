@@ -1,8 +1,53 @@
 # Cornell Marginalia — Ejemplos de sintaxis
 
+
+Mitochondria 
+are 
+membrane-bound
+cell organelles that 
+generate most of the chemical energy. %%> "Powerhouse" of the cell (ATP) %%
+
+> [!cornell]
+> %%> Your margin note here %%
+> This is my introductory paragraph:%%> Your margin note here %%
+> - List item 1 %%> Your margin note here %%
+> - List item 2 %%> Your margin note here %%
+```cornell-m
+%%>  ese preuese%%
+srserserse
+serser
+eRTpert
+ert
+ert
+ert
+etre
+tet
+ert
+
+```
+
+```cornell-m
+%%> Your perfectly aligned note here %%
+The main text that requires strict alignment goes here.
+- It can contain lists
+- Images, and more!
+```
+
+eeEr%%> uuui %%
+
+
+
+
+Select any text (or just place your cursor on an empty line).
+
+Right-click and select "Insert Cornell Block" (or use the Command Palette).
+
+The plugin will wrap your text, auto-inject the %%>  %% syntax, and place your cursor magically in the center—ready for you to start typing your margin note instantly.
+
+
 %%  FEATURE 1 — Sintaxis básica inline  %%
 
-Los números reales forman un cuerpo algebraico bajo suma y multiplicación. %%> Axiomas de cuerpo  ^mlq5wm %%
+Los números reales forman un cuerpo algebraico bajo suma y multiplicación. %%> Axiomas de cuerpo  ^mlq5wm%%
 
 El neutro aditivo es $0$ y el neutro multiplicativo es $1$. %%> ! Distinción clave: $0 \neq 1$ %%
 
@@ -40,7 +85,7 @@ Existe $a^{-1}$ tal que $a \cdot a^{-1} = 1$ para todo $a \neq 0$. %%< Axioma 6 
 
 %%  FEATURE 5 — Agrupación Method B: Cornell Block (Reading View + PDF safe)  %%
 
-```cornell
+```cornell-m
 %%> CCANNID: Clausura · 
 Conmuta
 tiva · Asociativa · Neutros · 
@@ -109,83 +154,18 @@ asdsad%%< img:[[Cornell Marginalia — Ejemplos de sintaxis-11-06-2026_19-01-03.
 
 
 
-
-
-
-
-
-
-
-# Números reales y desigualdades
-
---- start-multi-column: cornell-T0-001
-
-```column-settings
-number of columns: 2
-column size: [60%, 40%]
-border: off
+```cornell-m
+Texto principal de la sección.%%> Aclaración al margen sobre este párrafo. %%
+Más texto que continúa normalmente.
 ```
 
-## Axiomas de cuerpo de los números reales (ℝ)
 
-📝 **Desarrollo**
 
-Si $a, b, c \in \mathbb{R}$:
-
-1. **Clausura**
-    - $a + b \in \mathbb{R}$ y $a \cdot b \in \mathbb{R}$
-2. **Conmutatividad**
-    - $a + b = b + a$
-    - $a \cdot b = b \cdot a$
-3. **Asociatividad**
-    - $(a + b) + c = a + (b + c)$
-    - $(a \cdot b) \cdot c = a \cdot (b \cdot c)$
-4. **Existencia de neutros**
-    - i. $\exists \; 0 \in \mathbb{R} : a + 0 = a$
-        - $0$ es el neutro para la suma "$+$".
-    - ii. $\exists \; 1 \in \mathbb{R} : a \cdot 1 = a$
-        - $1$ es el neutro para la multiplicación "$\times$".
-5. **Existencia de negativos**
-    - $\forall a \in \mathbb{R}, \exists -a \in \mathbb{R} : a + (-a) = 0$
-    - $-a$ es el negativo de $a$.
-6. **Existencia de inversos**
-    - $\forall a \in \mathbb{R} - \{0\}, \exists \; a^{-1} \in \mathbb{R} : a \cdot a^{-1} = 1$
-    - $a^{-1} = \frac{1}{a}$ es el inverso de $a$.
-7. **Distributividad**
-    - $a(b + c) = ab + ac$
-
---- end-column ---
-
-🔑 **Claves**
-
-Axiomas · Cuerpo · Reales · Neutros · Inversos
-
-¿Cuáles son las reglas básicas que rigen la suma y multiplicación? ¿Qué elementos permiten la existencia de operaciones inversas? ¿Cómo se relacionan la suma y el producto aritmético?
-
-$a + (-a) = 0$ $a \cdot a^{-1} = 1, a \neq 0$
-
-ver también: Axiomas de orden
-
-No confundir el neutro aditivo ($0$) con el neutro multiplicativo ($1$).
-
-**C**lausura, **C**onmutativa, **A**sociativa, **N**eutros, **N**egativos, **I**nversos, **D**istributiva (**CCANNID**)
-
---- end-multi-column
-
-> **Resumen:** Definición de los siete axiomas fundamentales que establecen a los números reales como un cuerpo algebraico bajo las operaciones de adición y multiplicación.
-
-> [!note] Complemento (Nivel B)
-> 
-> Según **Apostol (Cap. 0, sección I 3.2)**, el sistema de los números reales se postula como un conjunto de elementos sobre los cuales se definen dos operaciones (adición y multiplicación) que cumplen unívocamente con las propiedades de cuerpo.
-> 
-> **Refuerzo de definiciones formales:**
-> 
-> 1. **Unicidad de resultados:** La suma $x+y$ y el producto $xy$ están unívocamente determinados por $x$ e $y$.
-> 2. **Distinción de neutros:** El Axioma 4 de Apostol especifica explícitamente que existen dos números reales **distintos**, indicados por $0$ y $1$, tales que $0+x=x$ y $1 \cdot x = x$ para cada número real $x$.
-> 3. **Existencia del recíproco:** Se enfatiza que para cada número real $x \neq 0$ existe un número real $y$ (denotado $x^{-1}$ o $1/x$) tal que $xy = 1$.
-> 4. **Identidad de los elementos:** Apostol aclara en una nota que los números $0$ y $1$ utilizados para definir los negativos e inversos en los axiomas 5 y 6 son exactamente los mismos elementos neutros definidos en el axioma 4.
 
 ---
+---
+---
+
 
 %% ============================================================
    bytetiles/obsidian-cornell-notes — Ejemplos
@@ -300,3 +280,5 @@ LaTeX
 Texto principal de la sección.%%> Aclaración al margen sobre este párrafo. %%
 Más texto que continúa normalmente.
 ```
+
+[^1]: nota de pued en marjanalia
