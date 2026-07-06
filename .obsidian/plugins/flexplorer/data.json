@@ -5,6 +5,8 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
+        "Zettelkasten",
+        "Marginalia Attachments",
         "_assets",
         "void.md",
         "in_work",
@@ -2898,6 +2900,9 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "20260706175318-06-07-2026_17-53-18.png",
+        "Cornell Marginalia — Ejemplos de sintaxis-06-07-2026_17-50-56.png",
+        "Cornell Marginalia — Ejemplos de sintaxis-06-07-2026_17-49-57.png",
         "Cornell Marginalia — Ejemplos de sintaxis-06-07-2026_00-02-53.png"
       ]
     },
@@ -2910,6 +2915,41 @@
       "isHidden": false
     },
     "_app/_appnotes/Marganali_guide 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Marginalia Attachments": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "Zettelkasten": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "20260706175318.md",
+        "20260706174809.md"
+      ]
+    },
+    "Zettelkasten/20260706174809.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/Cornell Marginalia — Ejemplos de sintaxis-06-07-2026_17-49-57.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/Cornell Marginalia — Ejemplos de sintaxis-06-07-2026_17-50-56.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Zettelkasten/20260706175318.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/20260706175318-06-07-2026_17-53-18.png": {
       "isPinned": false,
       "isHidden": false
     }

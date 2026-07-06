@@ -715,7 +715,7 @@ Lista de carpetas separadas por coma que el plugin ignora completamente (no esca
 
 > Sirve para excluir carpetas de infraestructura del escaneo del vault.
 >
-> **En Galaxy:** agregar `_app,_templates,_pdf,Excalidraw` para que el plugin no procese las carpetas de sistema.
+> **En Galaxy:** agregar `_app,_templates,_PDF,Excalidraw` para que el plugin no procese las carpetas de sistema.
 
 #### Ignored Folders for Highlights `[text=Excalidraw]`
 
@@ -736,7 +736,7 @@ Valor actual:
 
 > Sirve para filtrar textos resaltados que son boilerplate de plugins y no son anotaciones reales.
 
-#### 🔗 Semantic Stitching UI `[1/0]`
+#### 🔗 Semantic Stitching UI `[1/0]=1`
 
 Al conectar dos notas con Stitch, el plugin pide una razón semántica de la conexión (ej: "miden lo mismo").
 
@@ -796,7 +796,7 @@ Sincroniza las marginalia con Anki con soporte bidireccional, imágenes nativas 
 
 > Sirve para exportar las marginalia como tarjetas Anki para repaso fuera de Obsidian.
 
-#### 🔍 Zoom & Pan Doodles `[1/0]`
+#### 🔍 Zoom & Pan Doodles `[1/0]=1`
 
 Clic en cualquier imagen o doodle en las marginalia para expandirla a pantalla completa con controles de zoom y paneo.
 

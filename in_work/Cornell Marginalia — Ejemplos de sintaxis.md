@@ -4,10 +4,18 @@
 Mitochondria %%> img:[[Cornell Marginalia — Ejemplos de sintaxis-06-07-2026_00-02-53.png]] %%
 
 
+otra cosas %%> img:[[Cornell Marginalia — Ejemplos de sintaxis-06-07-2026_17-49-57.png]] %%
+
+
+peruvbeadasd %%> img:[[Cornell Marginalia — Ejemplos de sintaxis-06-07-2026_17-50-56.png]] %%
+
 are 
 membrane-bound
 cell organelles that 
 generate most of the chemical energy. %%> "Powerhouse" of the cell (ATP) %%
+
+
+
 
 > [!cornell]
 > %%> Your margin note here %%
