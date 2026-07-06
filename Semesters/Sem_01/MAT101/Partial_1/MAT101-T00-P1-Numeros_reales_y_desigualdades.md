@@ -67,7 +67,6 @@ Si $a, b, c \in \mathbb{R}$:
 
 ````
 
-
 > [!summary] Definición de los siete axiomas fundamentales que establecen a los números reales como un cuerpo algebraico bajo las operaciones de adición y multiplicación.
 
 > [!note] Complemento (Nivel B)
