@@ -36,7 +36,7 @@ status: activo
 
 ## 1. Completr — Autocompletado de palabras y LaTeX
 
-**Propósito:** Sugiere palabras mientras escribís, basándose en listas de términos propias y en los comandos LaTeX de MathJax. Evita reescribir términos técnicos repetitivos.
+**Propósito:** Sugiere palabras mientras escribís, basándose en listas de términos propias y en los comandos LaTeX de MathJax. Evita reescribir términos técnicos repetitivos. 
 
 ### Configuración recomendada
 
@@ -548,7 +548,7 @@ El parche se hizo con Python en tres pasos:
 
 1. **Leer el archivo completo** — `open('main.js', encoding='utf-8')` carga los 680KB en memoria.
 2. **Detectar los strings chinos** — los caracteres no estaban escritos directamente sino como secuencias unicode escapadas (`\u641C\u7D22` en vez de `搜索`). Se usó regex para encontrar todos los strings que contenían escapes en el rango CJK (`\u4e00`–`\u9fff`) dentro de contextos de UI (`label:`, `setText(`, `Notice(`, `setName(`, etc.). Luego `.decode('unicode_escape')` los convirtió a texto legible para poder entender qué significaba cada uno.
-3. **Aplicar reemplazos con diccionario** — se construyó un diccionario `{raw_escape: traducción_en_inglés}` y se aplicó con `.replace()` sobre el contenido completo. Se hicieron dos pasadas para cubrir strings en template literals y secciones menos obvias.
+3. **Aplicar reemplazos con diccionario** — se construyó un diccionario `{raw_escape: traducción_en_inglés}` y se aplicó con `.replace()` sobre el contenido completo. Se hicieron dos pasadas para cubrir strings en template literals y secciones menos obvias. 
 
 %%
 galaxy-links
