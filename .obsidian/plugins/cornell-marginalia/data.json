@@ -34,7 +34,7 @@
   ],
   "outgoingLinks": [],
   "lastOmniDestination": "Marginalia Inbox",
-  "extractHighlights": false,
+  "extractHighlights": true,
   "ignoredHighlightFolders": "Excalidraw",
   "ignoredHighlightTexts": "⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠",
   "showSyntaxInSourceMode": true,
@@ -53,7 +53,7 @@
   "omniCaptureTemplate": "\n%%> {{text}} %%\n{{citation}}\n{{image}}\n\n---",
   "responsiveMarginalia": true,
   "responsiveThreshold": 850,
-  "blurExplanatoryMarginalia": false,
+  "blurExplanatoryMarginalia": true,
   "enableDashboardAddon": false,
   "dashboardData": {
     "trackerHistory": [],

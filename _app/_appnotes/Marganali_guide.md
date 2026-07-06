@@ -490,7 +490,7 @@ Ancho en píxeles por debajo del cual se activa el colapso automático. Requiere
 
 > Sirve para calibrar en qué punto exacto colapsan las marginalia según el layout habitual de trabajo.
 
-#### Adaptive Width (Theme Compatibility) `[1/0]`
+#### Adaptive Width (Theme Compatibility) `[1/0]=1`
 
 Calcula automáticamente el ancho del margen en base al espacio libre en pantalla. Activar si el tema causa superposición visual.
 
@@ -498,7 +498,7 @@ Calcula automáticamente el ancho del margen en base al espacio libre en pantall
 >
 > **En Galaxy:** activar si el tema del vault genera solapamiento entre las marginalia y el contenido principal.
 
-#### Margin Alignment `[Left / Right]`
+#### Margin Alignment `[Left / Right]=left`
 
 Dirección por defecto del margen para todas las marginalia sin `%%<` o `%%>` explícito.
 
@@ -506,7 +506,7 @@ Dirección por defecto del margen para todas las marginalia sin `%%<` o `%%>` ex
 >
 > **En Galaxy:** configurado en `left` — las notas `%%<` van a la derecha, decisión visual.
 
-#### Margin Width (%) `[slider]`
+#### Margin Width (%) `[slider]=30`
 
 Ancho del margen como porcentaje del ancho total del panel de la nota.
 
@@ -514,7 +514,7 @@ Ancho del margen como porcentaje del ancho total del panel de la nota.
 >
 > **En Galaxy:** ajustar para que el margen sea visible sin reducir demasiado el área de texto principal. Un valor entre 20–30% funciona bien con el layout Cornell.
 
-#### Margin Distance (Offset) `[slider]`
+#### Margin Distance (Offset) `[slider]=15`
 
 Distancia entre el texto principal y el margen. Valores altos empujan el margen hacia afuera, valores bajos lo acercan.
 
@@ -534,7 +534,7 @@ Familia tipográfica de las marginalia. `inherit` hereda la fuente del tema acti
 
 > Sirve para uniformar o diferenciar la tipografía de las marginalia respecto al texto principal.
 
-#### Enable in Reading View `[1/0]`
+#### Enable in Reading View `[1/0]=1`
 
 Muestra las marginalia en modo lectura (Reading View).
 
@@ -542,13 +542,13 @@ Muestra las marginalia en modo lectura (Reading View).
 >
 > **En Galaxy:** ON. Necesario para el flujo de revisión de `supernova` y para exportación PDF (12).
 
-#### Extract Highlights `[1/0]`
+#### Extract Highlights `[1/0]=1`
 
 Incluye los textos con resaltado estándar (`==texto==`) en el Explorer y el Pinboard además de las marginalia.
 
 > Sirve para centralizar en el Explorer tanto las marginalia como los highlights de Obsidian en una sola vista.
 
-#### Blur Explanatory Marginalias `[1/0]`
+#### Blur Explanatory Marginalias `[1/0]=1`
 
 Difumina las marginalia normales que comparten línea con una flashcard (`;;`), evitando que revelen la respuesta antes de que el usuario intente recordarla.
 
@@ -703,7 +703,7 @@ Valor actual:
 
 ### ⚙️ Advanced & Exclusions
 
-#### Show Syntax in Source Mode `[1/0]`
+#### Show Syntax in Source Mode `[1/0]=1`
 
 Muestra la sintaxis Markdown cruda en Source Mode en lugar de renderizar los bloques visuales.
 
