@@ -31133,6 +31133,8 @@ doodle
 doodles
 dsadsadsadd
 difuminado
+denota
+derivado
 Vault
 Verificar
 Variables
@@ -62237,6 +62239,7 @@ vincula
 void
 values
 visually
+verdaderas
 audience
 activo
 auto
@@ -68268,6 +68271,7 @@ aeraersadasd
 active
 anidar
 aclaraci
+afirmaciones
 related
 recomendados
 ribbon
@@ -87779,6 +87783,7 @@ calendar
 connect
 cell
 chemical
+constan
 updated
 un
 universo
@@ -94815,6 +94820,7 @@ uXXXX
 utloma
 using
 uuui
+universales
 Galaxy
 Git
 Gr
@@ -113456,6 +113462,7 @@ Insert
 Inbox
 Item
 Ignored
+IGUALDAD
 Funci
 File
 Fase
@@ -196707,6 +196714,7 @@ inherit
 introductory
 inject
 instantly
+identidades
 Dependencia
 Dropbox
 Dataview
@@ -220475,6 +220483,8 @@ flashcard
 fragments
 full
 freeform
+falsas
+falsedades
 haya
 hace
 hacer

@@ -21,10 +21,8 @@ original = content
 content = re.sub(r'````\ncornell\n', '````cornell\n', content)
 # Apertura: 3 backticks + newline + cornell  →  4 backticks + cornell
 content = re.sub(r'(?m)^```\ncornell\n', '````cornell\n', content)
-# Cierre: dentro de un bloque cornell, 3 backticks solos  →  4 backticks
-def fix_cornell_close(match):
-    return re.sub(r'(?m)^```$', '````', match.group(0))
-content = re.sub(r'````cornell\n.*?(?m)^```$', fix_cornell_close, content, flags=re.DOTALL)
+# Cierre: 3 backticks (no 4) seguidos de linea en blanco + > [!summary]  →  4 backticks
+content = re.sub(r'(?<!`)```(?!`)(\n\n> \[!summary\])', r'````\1', content)
 
 # --- 1. \frac -> \dfrac ---
 content = re.sub(r'(?<!d)(?<!t)\\frac', r'\\dfrac', content)
