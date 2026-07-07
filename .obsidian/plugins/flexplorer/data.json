@@ -5,6 +5,7 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
+        "Untitled.md",
         "Zettelkasten",
         "Marginalia Attachments",
         "_assets",
@@ -2955,6 +2956,10 @@
       "isHidden": false
     },
     "_app/_appnotes/cornell_guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled.md": {
       "isPinned": false,
       "isHidden": false
     }

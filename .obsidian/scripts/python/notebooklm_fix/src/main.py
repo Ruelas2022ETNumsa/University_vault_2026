@@ -16,6 +16,9 @@ with open(abs_path, 'r', encoding='utf-8') as f:
 
 original = content
 
+# --- 0. Bloques cornell sin etiqueta en la misma linea (````\ncornell -> ````cornell) ---
+content = re.sub(r'````\ncornell\n', '````cornell\n', content)
+
 # --- 1. \frac -> \dfrac ---
 content = re.sub(r'(?<!d)(?<!t)\\frac', r'\\dfrac', content)
 
@@ -31,6 +34,28 @@ def fix_arrays(match):
 content = re.sub(
     r'\$\$\\begin\{array\}.*?\\end\{array\}\$\$',
     fix_arrays,
+    content,
+    flags=re.DOTALL
+)
+
+# --- 4. Insertar bloques cornell-m dentro de bloques cornell ---
+def fix_cornell(match):
+    block = match.group(0)
+    block = re.sub(
+        r'(::cue\n)',
+        '::cue\n```cornell-m %%> %%\n',
+        block
+    )
+    block = re.sub(
+        r'(::note\n)',
+        '```\n::note\n```cornell-m %%< %%\n',
+        block
+    )
+    return block
+
+content = re.sub(
+    r'````cornell\n.*?````',
+    fix_cornell,
     content,
     flags=re.DOTALL
 )
