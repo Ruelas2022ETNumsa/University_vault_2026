@@ -6,11 +6,31 @@
 %%> %%
 ```cornell-m
 %%> %%
+```cornell-m
+%%> %%
+```cornell-m
+%%> %%
+```cornell-m
+%%> %%
+```cornell-m
+%%> %%
 Propiedades de la igualdad<br>Igualdad · Identidad · Ecuación<br>¿Cuáles son los tres axiomas fundamentales que rigen la relación de igualdad en los números reales?<br>¿En qué se diferencia una ecuación de una identidad matemática?<br>$a = b \land b = c \Rightarrow a = c$<br>ver también: Axiomas de cuerpo
 
 ```
 ```
+```
+```
+```
+```
 ::note
+```cornell-m
+%%< %%
+```cornell-m
+%%< %%
+```cornell-m
+%%< %%
+```cornell-m
+%%< %%
 ```cornell-m
 %%< %%
 ```cornell-m
@@ -74,6 +94,14 @@ p^2 - 2pq + q^2 & \neq & p^2 - q^2 & (\text{Falso. Solo es cierto si } q=0 \text
 ::cue
 ```cornell-m
 %%> %%
+```cornell-m
+%%> %%
+```cornell-m
+%%> %%
+```cornell-m
+%%> %%
+```cornell-m
+%%> %%
 Correspondencia biunívoca<br>
 recta real · intervalo · subconjunto · puntos extremos<br>
 ¿Cómo se define la correspondencia entre los números reales y la recta?<br>
@@ -84,7 +112,19 @@ ver también: axiomas de orden<br>
 no confundir: corchete $[...]$ (incluye) con paréntesis o corchete invertido $]...[$ (excluye)
 
 ```
+```
+```
+```
+```
 ::note
+```cornell-m
+%%< %%
+```cornell-m
+%%< %%
+```cornell-m
+%%< %%
+```cornell-m
+%%< %%
 ```cornell-m
 %%< %%
 Existe correspondencia biunívoca "uno a uno" entre el conjunto $\mathbb{R}$ y una recta a escala llamada la **recta real**.
@@ -218,3 +258,16 @@ y=0 | #005F73
 \end{tikzpicture}
 \end{document}
 ```
+
+
+
+```marginalia
+esro es una prieaer %%> eses%%
+```
+
+
+````cornell-m
+esese %%> %%
+````
+
+

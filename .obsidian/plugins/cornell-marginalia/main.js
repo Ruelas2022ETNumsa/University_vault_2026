@@ -14014,7 +14014,7 @@ ${selection}
         });
       })
     );
-    this.registerMarkdownCodeBlockProcessor("cornell-m", async (source, el, ctx) => {
+    this.registerMarkdownCodeBlockProcessor("marginalia", async (source, el, ctx) => {
       if (!this.settings.enableReadingView) return;
       const regex = UNIVERSAL_MARGINALIA_REGEX;
       const matches = [...source.matchAll(regex)];
