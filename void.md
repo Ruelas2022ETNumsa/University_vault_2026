@@ -9,14 +9,33 @@
 
 ````cornell
 ::cue
-
-Contenido de la columna izquierda — claves, preguntas, mnemónicos.
-
+```cornell-m
+Contenido de la columna izquierda — claves, preguntas, mnemónicos.%%> notas marginalia para claves%%
+asdasdasddsadd
+asdadasdsadsadsa
+dsadsadsadd%%> img:[[Cornell Marginalia — Ejemplos de sintaxis-06-07-2026_00-02-53.png]] %%
+sdasdasdsad
+asdsadadsa
+asdsadsddsad
+asdsadadasd
+asdsadsda
+asdasdsadsadsadsadsaddadsadsadsadsadsdsadsadasd
+s
+```
 ::note
-
-Contenido de la columna derecha — desarrollo, definiciones, fórmulas.%%> otra %%
-
+```cornell-m
+Contenido de la columna derecha — desarrollo, definiciones, fórmulas.%%< notas marginalia para desarrollo%%
+```
 ````
+
+> [!note] asdasdsadsadsadsadsaddadsadsadsadsadsdsadsad
+> aeraersadasd %%>prueba%%
+> asdsad %%< ptra ptierare %%
+> asd
+> asd
+
+
+
 
 
 rearaer %%> prueba%%
