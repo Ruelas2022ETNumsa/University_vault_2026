@@ -22,48 +22,48 @@ status: activo
 
 ## Plugins involucrados
 
-**Cornell Notes** — genera el layout de dos columnas (claves | desarrollo) dentro de un bloque ` ```cornell `.
+**Cornell Notes** — genera el layout de dos columnas (claves | desarrollo) dentro de un bloque ` `````cornell `.
 - Columna izquierda: configurada como **Claves** (preguntas, palabras clave, mnemónicos)
 - Columna derecha: configurada como **Desarrollo** (transcripción, definiciones, fórmulas)
 
-**Cornell Marginalia** — agrega anotaciones al margen mediante bloques ` ```cornell-m ` y sintaxis `%%> %%` / `%%< %%`.
+**Cornell Marginalia** — agrega anotaciones al margen mediante bloques ` ````marginalia ` y sintaxis `%%> %%` / `%%< %%`.
 - `%%> %%` → margen izquierdo
 - `%%< %%` → margen derecho
 - Opción `;;texto;;` → blur para active recall
 
-> Conflicto resuelto: el plugin usa `cornell-m` como alias (no `cornell`) para evitar conflicto con Cornell Notes. Ver [[plugin_guide]] sección Marginalia.
+> Conflicto resuelto: el plugin usa `marginalia` como alias (no `cornell`) para evitar conflicto con Cornell Notes. Ver [[plugin_guide]] sección Marginalia.
 
 ---
 
 ## Estructura de nota Cornell con Marginalia
 
-### Dentro de un bloque `cornell` — obligatorio anidar `cornell-m`
+### Dentro de un bloque `cornell` — obligatorio anidar `marginalia`
 
-La sintaxis `%%> %%` no renderiza directamente dentro de un bloque `cornell`. Es obligatorio anidar un bloque `cornell-m` para que Marginalia funcione.
+La sintaxis `%%> %%` no renderiza directamente dentro de un bloque `cornell`. Es obligatorio anidar un bloque `marginalia` para que Marginalia funcione.
 
 ~~~markdown
-````cornell
+`````cornell
 ::cue
-```cornell-m %%> %%
+````marginalia %%> %%
 Contenido de claves — palabras clave, preguntas, mnemónicos.
-```
+````
 
 ::note
-```cornell-m %%< %%
+````marginalia %%< %%
 Contenido de desarrollo — transcripción, definiciones, fórmulas.
-```
 ````
+`````
 ~~~
 
 **Notas:**
-- El bloque `cornell-m` va inmediatamente después de `::cue` y `::note`
+- El bloque `marginalia` va inmediatamente después de `::cue` y `::note`
 - `%%> %%` en `::cue` (margen izquierdo) · `%%< %%` en `::note` (margen derecho)
 - Los placeholders `%%> %%` y `%%< %%` son invisibles en modo lectura si están vacíos — no generan ruido visual
 - El script `notebooklm_fix` inserta estos bloques automáticamente. Ver [[plugin_guide]] sección Script.
 
 ### Fuera de un bloque `cornell` — sintaxis directa
 
-Para ejercicios, demostraciones y contenido fuera del layout Cornell, Marginalia se usa directamente sin bloque `cornell-m`:
+Para ejercicios, demostraciones y contenido fuera del layout Cornell, Marginalia se usa directamente sin bloque `marginalia`:
 
 ~~~markdown
 ##### Ej. enunciado
@@ -97,7 +97,7 @@ El uso es **opcional** — aplicar según si la anotación agrega valor real.
 
 En notas `dwarf` las marginalia pueden enriquecerse con preguntas ocultas para active recall:
 
-```cornell-m
+```marginalia
 %%> ;;¿Cuál es la condición de normalización?;;%%
 ```
 

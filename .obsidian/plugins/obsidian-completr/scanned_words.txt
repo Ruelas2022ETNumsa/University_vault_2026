@@ -6199,6 +6199,8 @@ texts
 temporary
 timer
 typing
+traducido
+traducir
 ToDo
 Templater
 Text
@@ -13177,6 +13179,7 @@ Time
 Transform
 Tracks
 This
+Tooltips
 Sistema
 Sync
 Save
@@ -20293,6 +20296,11 @@ Syncs
 Smart
 Study
 Select
+Sunset
+Strength
+Speed
+Secciones
+Settled
 Plugins
 Pendientes
 Plugin
@@ -25783,6 +25791,7 @@ Profile
 Pomodoro
 Powerhouse
 Posee
+Presets
 del
 date
 de
@@ -31136,6 +31145,9 @@ dsadsadsadd
 difuminado
 denota
 derivado
+down
+desarrollador
+diccionario
 Vault
 Verificar
 Variables
@@ -43610,6 +43622,7 @@ groups
 garantice
 game
 generate
+gravedad
 body
 beacon
 bat
@@ -48708,6 +48721,8 @@ blocks
 beautiful
 bidirectional
 bound
+bajar
+boost
 scope
 status
 selector
@@ -55675,6 +55690,9 @@ sessions
 schedules
 support
 sdasdasdsad
+sencillamente
+shaders
+significaba
 vault
 vil
 ver
@@ -62241,6 +62259,8 @@ void
 values
 visually
 verdaderas
+volar
+vuelo
 audience
 activo
 auto
@@ -68274,6 +68294,13 @@ anidar
 aclaraci
 afirmaciones
 acotados
+ajustables
+anclarlos
+arista
+aten
+animado
+ajustable
+aplic
 related
 recomendados
 ribbon
@@ -74774,6 +74801,12 @@ ready
 rearaer
 recall
 revela
+reordenarlos
+repulsi
+reaplicar
+reemplazando
+regenerar
+reemplazos
 notes
 notas
 nuevas
@@ -87788,6 +87821,12 @@ chemical
 constan
 continuos
 complementan
+cumpl
+chino
+corren
+chinos
+conten
+construy
 updated
 un
 universo
@@ -94825,6 +94864,7 @@ utloma
 using
 uuui
 universales
+unresolved
 Galaxy
 Git
 Gr
@@ -100899,6 +100939,8 @@ GEOMETRY
 GROUP
 Graficas
 Gamification
+Gravity
+GLSL
 Convenci
 Creaci
 Commander
@@ -106372,6 +106414,11 @@ Clean
 Comma
 Conflicto
 Conmutativo
+Cierre
+City
+Cyberpunk
+Categor
+Cruise
 Instalados
 Instalado
 Instalar
@@ -119661,6 +119708,10 @@ Family
 Flashcard
 Format
 Folders
+Funcionalidades
+Fireworks
+Film
+Flatness
 Estado
 Excalidraw
 EPUBs
@@ -126656,6 +126707,7 @@ Earn
 Explore
 Engine
 Expresar
+Explorador
 Obsidian
 OmniSearch
 Ocultar
@@ -132871,6 +132923,8 @@ OPTIONAL
 Omni
 Optional
 ONLY
+Opacity
+Orphans
 Auto
 Annotator
 Autocompletado
@@ -138106,6 +138160,7 @@ Anki
 Activate
 Adicionales
 ACACAACAC
+Aurora
 push
 pull
 para
@@ -144117,6 +144172,9 @@ pppppp
 pruba
 papuy
 panamericana
+promet
+postproceso
+part
 min
 mica
 movimiento
@@ -163033,6 +163091,9 @@ Board
 Background
 Blurting
 BUENA
+Bloom
+Beta
+Building
 en
 exacta
 escaneados
@@ -169756,6 +169817,14 @@ enriquecer
 enriquecerse
 esro
 esese
+eliminarse
+existiendo
+estrella
+espacialmente
+enfocar
+estrellas
+estaban
+escapes
 Motor
 Media
 Mantiene
@@ -177338,6 +177407,9 @@ Machine
 Margidoro
 MALA
 Mitochondria
+Mejora
+Minimal
+Mobile
 Lectura
 LaTeX
 Linter
@@ -183488,6 +183560,7 @@ Local
 Laplace
 Longwind
 Leave
+Laying
 links
 las
 listar
@@ -196730,6 +196803,7 @@ introductory
 inject
 instantly
 identidades
+interactiva
 Dependencia
 Dropbox
 Dataview
@@ -210028,6 +210102,8 @@ Remove
 Rhizome
 Repetition
 Right
+Reorden
+Repulsion
 Hider
 Hace
 Herramientas
@@ -214973,6 +215049,9 @@ Highlights
 Hilos
 HTTP
 Harvest
+Hide
+Hubble
+High
 filtrar
 formato
 faltantes
@@ -220501,6 +220580,8 @@ freeform
 falsas
 falsedades
 filldraw
+funcionalidades
+fuzzy
 haya
 hace
 hacer
@@ -226319,6 +226400,8 @@ hicieron
 having
 html
 heredado
+hiciera
+hicieran
 que
 quedan
 queda
@@ -240682,6 +240765,9 @@ Unlike
 Unirlos
 UMSA
 User
+Unifica
+Uniform
+Unresolved
 Nombre
 Notas
 No
@@ -247389,6 +247475,9 @@ Numeros
 Nros
 NUMBERED
 Notice
+Neon
+Navegaci
+Notificaciones
 originales
 observatory
 oficial
@@ -254010,6 +254099,7 @@ overlap
 outwards
 organelles
 ocultas
+orbitar
 junto
 json
 jer
@@ -268195,6 +268285,7 @@ Quiero
 QjAs
 QQUGu
 QdDDDDD
+Quality
 ya
 yaml
 yo

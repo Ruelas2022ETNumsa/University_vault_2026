@@ -51,12 +51,12 @@ def fix_cornell(match):
         return block
     block = re.sub(
         r'(::cue\n)',
-        '::cue\n````marginalia\n%%> %%\n',
+        '::cue\n````marginalia %%> %%\n',
         block
     )
     block = re.sub(
         r'(::note\n)',
-        '````\n::note\n````marginalia\n%%< %%\n',
+        '````\n::note\n````marginalia %%< %%\n',
         block
     )
     return block
