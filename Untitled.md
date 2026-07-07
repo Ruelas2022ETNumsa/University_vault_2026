@@ -2,25 +2,40 @@
 
 `````cornell
 ::cue
-````marginalia
+
 Correspondencia biunívoca<br>%%> izp1%%
 recta real · intervalo · subconjunto · puntos extremos<br>
 ¿Cómo se define la correspondencia entre los números reales y la recta?<br>
 ¿Qué es un intervalo en el contexto de los números reales?<br>
 ¿Cuáles son las distintas formas de representar un intervalo?<br>
-$[a, b] = \{x \in \mathbb{R} \mid a \leq x \leq b\}$<br>
-ver también: axiomas de orden<br>%%> izp2%%
-no confundir: corchete $[...]$ (incluye) con paréntesis o corchete invertido $]...[$ (excluye)
+```marginalia
 
-````
+%%> pruba papuy $[a, b] = \{x \in \mathbb{R} \mid a \leq x \leq b\}$<br> %%
+```
+
+```marginalia
+ver también: axiomas de orden<br>%%> izp2manolo%%
+no confundir: corchete $[...]$ (incluye) con paréntesis o corchete invertido $]...[$ (excluye)
+```
+
+
+
+
+
+
 ::note
+
 ````marginalia
-Existe correspondencia biunívoca "uno a uno" entre el conjunto $\mathbb{R}$ y una recta a escala llamada la **recta real**.%%< prueba 1%%
+Existe correspondencia biunívoca "uno a uno" entre el conjunto $\mathbb{R}$ y una recta a escala llamada la **recta real**.%%< prueba xxx%%
+````
+````marginalia
 
 ```tikz
 \begin{document}
 \begin{tikzpicture}[x=1.5cm]
 \draw[latex-latex] (-2.5,0) -- (4.5,0);
+
+
 \foreach \x in {-2,-1,0,1,2,3,4}
   \draw (\x,0.1) -- (\x,-0.1);
 \node[below] at (-2,-0.1) {$-2$};
@@ -31,7 +46,7 @@ Existe correspondencia biunívoca "uno a uno" entre el conjunto $\mathbb{R}$ y u
 \node[below] at (3,-0.1) {$3$};
 \node[below] at (4,-0.1) {$4$};
 
-\filldraw (1.414,0) circle (1.5pt) node[above] {$\sqrt{2}$};
+\filldraw (1.414,0) circle (1.5pt) node[above] {$\sqrt{2}$}; % COMENTAROOI
 \filldraw (2.718,0) circle (1.5pt) node[above] {$e$};
 \filldraw (3.141,0) circle (1.5pt) node[above] {$\pi$};
 
@@ -41,15 +56,26 @@ Existe correspondencia biunívoca "uno a uno" entre el conjunto $\mathbb{R}$ y u
 \end{document}
 ```
 
+
+%%<! panamericana%%
+````
+
+
+````marginalia
 - Un intervalo es un subconjunto de la recta real.
 
-1. **Intervalo cerrado**%% prueba 2%%
-   
+1. **Intervalo cerrado**%%< prueba 2pppppp%%
+````   
    
    
    
 	- $[a, b] = \{x / a \leq x \leq b\}$
 	- Posee valores extremos.
+	  
+	  
+	  
+````marginalia
+ACACAACAC%%< esto es una prueba%%
 ```desmos-graph
 left=-1; right=5;
 bottom=-1; top=1;
@@ -58,8 +84,9 @@ y=0 | #005F73
 (1,0) | #005F73 | label: a
 (4,0) | #005F73 | label: b
 0 | 1 < x < 4 | #94D2BD
+(4,0) | #005F73 | label HIDDEN: XXX |HIDDEN |
 ```
-
+````	  
 2. **Intervalo semiabierto (izquierda)**
 	- $]a, b] = \{x / a < x \leq b\}$
 ```desmos-graph%%< prueba 3%%
@@ -105,6 +132,10 @@ y=0 | #005F73
 (4,0) | open | #005F73 | label: b
 0 | x < 4 | #94D2BD
 ```
+
+
+
+
 `````
 
 > [!summary] Los intervalos son subconjuntos continuos de la recta real que representan segmentos (acotados) o  %%<! prueba 5%%
