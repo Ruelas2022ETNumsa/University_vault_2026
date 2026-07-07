@@ -1242,6 +1242,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "cornell_guide.md",
         "Marganali_guide 1.md",
         "Marganali_guide.md",
         "desmos_guide 1.md",
@@ -2950,6 +2951,10 @@
       "isHidden": false
     },
     "_assets/20260706175318-06-07-2026_17-53-18.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_appnotes/cornell_guide.md": {
       "isPinned": false,
       "isHidden": false
     }
