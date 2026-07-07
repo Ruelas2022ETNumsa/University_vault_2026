@@ -16,8 +16,15 @@ with open(abs_path, 'r', encoding='utf-8') as f:
 
 original = content
 
-# --- 0. Bloques cornell sin etiqueta en la misma linea (````\ncornell -> ````cornell) ---
+# --- 0. Bloques cornell mal formados ---
+# Apertura: 4 backticks + newline + cornell  →  4 backticks + cornell (en la misma linea)
 content = re.sub(r'````\ncornell\n', '````cornell\n', content)
+# Apertura: 3 backticks + newline + cornell  →  4 backticks + cornell
+content = re.sub(r'(?m)^```\ncornell\n', '````cornell\n', content)
+# Cierre: dentro de un bloque cornell, 3 backticks solos  →  4 backticks
+def fix_cornell_close(match):
+    return re.sub(r'(?m)^```$', '````', match.group(0))
+content = re.sub(r'````cornell\n.*?(?m)^```$', fix_cornell_close, content, flags=re.DOTALL)
 
 # --- 1. \frac -> \dfrac ---
 content = re.sub(r'(?<!d)(?<!t)\\frac', r'\\dfrac', content)
@@ -43,12 +50,12 @@ def fix_cornell(match):
     block = match.group(0)
     block = re.sub(
         r'(::cue\n)',
-        '::cue\n```cornell-m %%> %%\n',
+        '::cue\n```cornell-m\n%%> %%\n',
         block
     )
     block = re.sub(
         r'(::note\n)',
-        '```\n::note\n```cornell-m %%< %%\n',
+        '```\n::note\n```cornell-m\n%%< %%\n',
         block
     )
     return block
