@@ -305,6 +305,31 @@ Antes de entregar un bloque TikZJax verificar:
 
 *(Agregar ejemplos confirmados aquí)*
 
+
+```tikz
+\begin{document}
+\begin{tikzpicture}[x=1.5cm]
+\draw[latex-latex] (-2.5,0) -- (4.5,0);
+\foreach \x in {-2,-1,0,1,2,3,4}
+  \draw (\x,0.1) -- (\x,-0.1);
+\node[below] at (-2,-0.1) {$-2$};
+\node[below] at (-1,-0.1) {$-1$};
+\node[below] at (0,-0.1) {$0$};
+\node[below] at (1,-0.1) {$1$};
+\node[below] at (2,-0.1) {$2$};
+\node[below] at (3,-0.1) {$3$};
+\node[below] at (4,-0.1) {$4$};
+
+\filldraw (1.414,0) circle (1.5pt) node[above] {$\sqrt{2}$};
+\filldraw (2.718,0) circle (1.5pt) node[above] {$e$};
+\filldraw (3.141,0) circle (1.5pt) node[above] {$\pi$};
+
+\node[right] at (4.5,0.3) {$+\infty$};
+\node[left] at (-2.5,0.3) {$-\infty$};
+\end{tikzpicture}
+\end{document}
+```
+
 ---
 
 ### N13. T1 — FUNCIONES REALES

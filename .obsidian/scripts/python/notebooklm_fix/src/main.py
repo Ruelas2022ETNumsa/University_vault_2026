@@ -17,12 +17,12 @@ with open(abs_path, 'r', encoding='utf-8') as f:
 original = content
 
 # --- 0. Bloques cornell mal formados ---
-# Apertura: 4 backticks + newline + cornell  →  4 backticks + cornell (en la misma linea)
-content = re.sub(r'````\ncornell\n', '````cornell\n', content)
-# Apertura: 3 backticks + newline + cornell  →  4 backticks + cornell
-content = re.sub(r'(?m)^```\ncornell\n', '````cornell\n', content)
-# Cierre: 3 backticks (no 4) seguidos de linea en blanco + > [!summary]  →  4 backticks
-content = re.sub(r'(?<!`)```(?!`)(\n\n> \[!summary\])', r'````\1', content)
+# Apertura: 5 backticks + newline + cornell  →  5 backticks + cornell (en la misma linea)
+content = re.sub(r'`````\ncornell\n', '`````cornell\n', content)
+# Apertura: 3 o 4 backticks + newline + cornell  →  5 backticks + cornell
+content = re.sub(r'(?m)^````?\ncornell\n', '`````cornell\n', content)
+# Cierre: menos de 5 backticks seguidos de linea en blanco + > [!summary]  →  5 backticks
+content = re.sub(r'(?<!`)````?(?!`)(\n\n> \[!summary\])', r'`````\1', content)
 
 # --- 1. \frac -> \dfrac ---
 content = re.sub(r'(?<!d)(?<!t)\\frac', r'\\dfrac', content)
@@ -43,23 +43,26 @@ content = re.sub(
     flags=re.DOTALL
 )
 
-# --- 4. Insertar bloques cornell-m dentro de bloques cornell ---
+# --- 4. Insertar bloques marginalia dentro de bloques cornell ---
 def fix_cornell(match):
     block = match.group(0)
+    # Solo insertar si aun no tiene bloques marginalia (idempotente)
+    if '```marginalia' in block:
+        return block
     block = re.sub(
         r'(::cue\n)',
-        '::cue\n```cornell-m\n%%> %%\n',
+        '::cue\n````marginalia %%> %%\n',
         block
     )
     block = re.sub(
         r'(::note\n)',
-        '```\n::note\n```cornell-m\n%%< %%\n',
+        '````\n::note\n````marginalia %%< %%\n',
         block
     )
     return block
 
 content = re.sub(
-    r'````cornell\n.*?````',
+    r'`````cornell\n.*?`````',
     fix_cornell,
     content,
     flags=re.DOTALL
