@@ -2763,7 +2763,7 @@
       "isHidden": false
     },
     "_app/notebooklm/prompts/MAT101/MAT101-transcription.md": {
-      "isPinned": false,
+      "isPinned": true,
       "isHidden": false
     },
     "MOC/MAT101-T00-star.md": {
@@ -2957,7 +2957,8 @@
   "pinnedFiles": [
     "_app/_appnotes/PDF_PP-guide.md",
     "_app/_config/_claude-boot.md",
-    "_app/_config/_galaxy-system.md"
+    "_app/_config/_galaxy-system.md",
+    "_app/notebooklm/prompts/MAT101/MAT101-transcription.md"
   ],
   "showHidden": false,
   "newItemPlacement": "top",
