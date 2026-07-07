@@ -2,19 +2,19 @@
 
 `````cornell
 ::cue
-````marginalia %%> %%
-Correspondencia biunívoca<br>
+````marginalia
+Correspondencia biunívoca<br>%%> izp1%%
 recta real · intervalo · subconjunto · puntos extremos<br>
 ¿Cómo se define la correspondencia entre los números reales y la recta?<br>
 ¿Qué es un intervalo en el contexto de los números reales?<br>
 ¿Cuáles son las distintas formas de representar un intervalo?<br>
 $[a, b] = \{x \in \mathbb{R} \mid a \leq x \leq b\}$<br>
-ver también: axiomas de orden<br>
+ver también: axiomas de orden<br>%%> izp2%%
 no confundir: corchete $[...]$ (incluye) con paréntesis o corchete invertido $]...[$ (excluye)
 
 ````
 ::note
-````marginalia %%< %%
+````marginalia
 Existe correspondencia biunívoca "uno a uno" entre el conjunto $\mathbb{R}$ y una recta a escala llamada la **recta real**.%%< prueba 1%%
 
 ```tikz
@@ -95,7 +95,7 @@ y=0 | #005F73
 0 | x > 1 | #94D2BD
 ```
 
-5. **Intervalo infinito (izquierda)**%%< prueba 5%%
+5. **Intervalo infinito (izquierda)** %%<! prueba 5%%
 	- $]-\infty, b[ = \{x / x < b\}$
 ```desmos-graph
 left=-1; right=5;
@@ -107,7 +107,8 @@ y=0 | #005F73
 ```
 `````
 
-> [!summary] Los intervalos son subconjuntos continuos de la recta real que representan segmentos (acotados) o semirrectas (infinitos) definidos por desigualdades.
+> [!summary] Los intervalos son subconjuntos continuos de la recta real que representan segmentos (acotados) o  %%<! prueba 5%%
+> semirrectas (infinitos) definidos por desigualdades.
 
 > [!note] Complemento (Nivel C)
 > 
