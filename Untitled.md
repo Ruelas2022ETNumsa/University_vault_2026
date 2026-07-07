@@ -48,7 +48,7 @@ Existe correspondencia biunívoca "uno a uno" entre el conjunto $\mathbb{R}$ y u
 
 \filldraw (1.414,0) circle (1.5pt) node[above] {$\sqrt{2}$}; % COMENTAROOI
 \filldraw (2.718,0) circle (1.5pt) node[above] {$e$};
-\filldraw (3.141,0) circle (1.5pt) node[above] {$\pi$};
+\filldraw (3.141,0) circle (1.5pt) node[above] {$\pi$}; %%< paleta de coco%%
 
 \node[right] at (4.5,0.3) {$+\infty$};
 \node[left] at (-2.5,0.3) {$-\infty$};

@@ -128,7 +128,7 @@ Contenido de la columna derecha — desarrollo, definiciones, fórmulas.
 
 ````
 
-> 5 backticks para el fence exterior. Bloques internos usan 4 backticks (marginalia) y 3 backticks (desmos/tikzjax).
+> 4 backticks para el fence exterior. Si hay bloques de código adentro, usar 3 backticks internos normalmente.
 
 ### Títulos de columnas
 
@@ -162,11 +162,11 @@ A diferencia de Multi-Column, este plugin soporta nativamente:
 
 ## 4. Cornell Marginalia — Notas al margen en el editor
 
-**Plugin:** [latazadehomero/cornell-marginalia](https://github.com/latazadehomero/cornell-marginalia) — v4.9.0 (Community Plugins)
+**Plugin:** [latazadehomero/cornell-marginalia](https://github.com/latazadehomero/cornell-marginalia) — instalado vía BRAT
 
-**Propósito:** Agrega notas al margen (marginalia) directamente en el editor, fuera del área de texto principal. Complementa a Cornell Notes: mientras Cornell Notes maneja el layout de dos columnas, Marginalia permite anotar al margen sin interrumpir el flujo del texto.
+**Propósito:** Agrega notas al margen (marginalia) directamente en el editor, fuera del área de texto principal. Complementa a Cornell Notes: mientras Cornell Notes maneja el layout de dos columnas para el contenido de la nota, Marginalia permite anotar al margen — comentarios, aclaraciones, referencias — sin interrumpir el flujo del texto.
 
-> Ver sintaxis completa y uso por tipo de nota en [[cornell_guide]].
+> **Estado:** plugin recién integrado al vault. Uso aún en exploración — esta sección se irá actualizando.
 
 ### Coexistencia con Cornell Notes — parche aplicado
 
@@ -179,44 +179,33 @@ Ambos plugins registraban el mismo bloque ` ```cornell `, lo que impedía activa
 this.registerMarkdownCodeBlockProcessor("cornell", ...)
 
 // Después:
-this.registerMarkdownCodeBlockProcessor("marginalia", ...)
+this.registerMarkdownCodeBlockProcessor("cornell-m", ...)
 ```
 
-Cambio de una sola línea: el bloque de Marginalia pasó de `cornell` a `marginalia`. Cornell Notes sigue usando `````cornell` (5 backticks) sin modificación. Los dos plugins ahora coexisten sin conflicto.
+Cambio de una sola línea: el bloque de Marginalia pasó de `cornell` a `cornell-m`. Cornell Notes sigue usando `````cornell` (4 backticks) sin modificación. Los dos plugins ahora coexisten sin conflicto.
 
 > **Nota de mantenimiento:** si Cornell Marginalia se actualiza vía BRAT, el `main.js` se sobreescribe y el parche se pierde. Volver a aplicar el cambio en la línea `registerMarkdownCodeBlockProcessor` después de cada actualización.
 
 ### Sintaxis
 
-**Modo inline** (funciona en cualquier parte del documento):
+Marginalia tiene dos modos de uso:
+
+**Modo inline** (método principal — funciona en cualquier parte del documento):
 
 ```
-%%> Nota al margen izquierda %%
-%%< Nota al margen derecha %%
+%%> Nota al margen derecha %%
+%%< Nota al margen izquierda %%
 ```
 
-**Modo bloque dentro de cornell** (obligatorio anidar para que renderice):
+**Modo bloque** (método secundario — para alineación precisa en Reading View, usa el nuevo nombre tras el parche):
 
-``````markdown
-`````cornell
-::cue
-````marginalia
-%%> %%
-Contenido claves...
 ````
-::note
-````marginalia
-%%< %%
-Contenido desarrollo...
+```cornell-m
+Texto principal de la sección.
+%%> Aclaración al margen sobre este párrafo. %%
+Más texto que continúa normalmente.
+```
 ````
-``````
-
-
-
-
-
-
-> El script `notebooklm_fix` inserta los bloques `marginalia` automáticamente. Ver sección 8.
 
 ### Ejemplo de uso
 
@@ -386,14 +375,11 @@ Corrige errores frecuentes que NotebookLM comete al generar notas `.md`. Opera s
 
 **Correcciones que aplica:**
 
-| # | Error | Corrección |
+| # | Error | Correción |
 |---|---|---|
-| 0 | Bloque cornell con backticks separados de la etiqueta | Unifica en `````cornell` (5 backticks) |
-| 0 | Cierre de bloque cornell con menos de 5 backticks | Corrige a 5 backticks |
-| 1 | `\frac` sin `d` | `\dfrac` |
+| 1 | `\dfrac` sin `d` | `\dfrac` |
 | 2 | Bloque desmos sin etiqueta (` ``` ` + `left=`) | Agrega `desmos-graph` |
 | 3 | Arrays LaTeX en una sola línea (` \ ` como separador) | `\\` + salto de línea |
-| 4 | Bloques cornell sin `marginalia` anidado | Inserta `````marginalia` con placeholders `%%> %%` / `%%< %%` |
 
 **El script recibe:** `sys.argv[1]` = file path relativo · `sys.argv[2]` = vault path absoluto.
 
