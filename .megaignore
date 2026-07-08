@@ -1,9 +1,8 @@
-# ============================================================
+# ============================================
 # .megaignore — Universidad vault 2026
 # PROHIBIDO editar o sobreescribir por Claude
 # salvo que el usuario lo pida explícitamente.
-# ============================================================
-
+# ============================================
 # Archivos basura de Windows
 -:Thumbs.db
 -:desktop.ini
@@ -19,7 +18,6 @@
 -:.git
 
 # Cache de Obsidian — se regenera en cada dispositivo
-# (SVGs de Desmos y similares no viajan: rutas internas incompatibles)
 -:.cache
 
 # Archivos del sistema de sync — cada dispositivo mantiene los suyos
@@ -29,7 +27,6 @@
 
 # Obsidian — solo estos 3 generan conflicto entre dispositivos
 # (estado de UI: paneles abiertos, posición, grafo visual)
-# Todo lo demás de .obsidian SÍ se sincroniza (plugins, snippets, hotkeys, themes)
 -:workspace.json
 -:workspace-mobile.json
 -:graph.json
