@@ -2932,9 +2932,7 @@
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
-      "customOrder": [
-        "20260707205449.md"
-      ]
+      "customOrder": []
     },
     "_assets/Cornell Marginalia — Ejemplos de sintaxis-06-07-2026_17-49-57.png": {
       "isPinned": false,
@@ -3003,10 +3001,6 @@
       "isHidden": false
     },
     "MAT101-study 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Zettelkasten/20260707205449.md": {
       "isPinned": false,
       "isHidden": false
     }

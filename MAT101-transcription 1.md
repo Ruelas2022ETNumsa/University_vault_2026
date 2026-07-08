@@ -1,4 +1,4 @@
-TAREA:%%> transcription 2 [[MAT101-study 1#^n9jesu]] {stitch: otra prueba para stitch}%%
+TAREA:%%> transcription final ^uwnao1 %%
 Transcribir y complementar apuntes manuscritos universitarios de Cálculo I
 a formato Markdown listo para Obsidian.
 _
