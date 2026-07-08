@@ -1404,6 +1404,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "tpl-zk.md",
         "tpl-supernova.md",
         "tpl-photon 1.md",
         "tpl-asteroid 1.md",
@@ -2932,7 +2933,9 @@
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
-      "customOrder": []
+      "customOrder": [
+        "20260707215136.md"
+      ]
     },
     "_assets/Cornell Marginalia — Ejemplos de sintaxis-06-07-2026_17-49-57.png": {
       "isPinned": false,
@@ -3001,6 +3004,14 @@
       "isHidden": false
     },
     "MAT101-study 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Zettelkasten/20260707215136.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_templates/tpl-zk.md": {
       "isPinned": false,
       "isHidden": false
     }

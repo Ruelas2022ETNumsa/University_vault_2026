@@ -40,7 +40,7 @@
   "showSyntaxInSourceMode": true,
   "zkMode": true,
   "zkFolder": "Zettelkasten",
-  "zkTemplatePath": "",
+  "zkTemplatePath": "_templates/tpl-zk.md",
   "doodleFolder": "",
   "canvasFolder": "Evidence Boards",
   "pinboardFolder": "Pinboards",

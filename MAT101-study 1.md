@@ -1,4 +1,4 @@
-TAREA:%%> study final [[MAT101-transcription 1#^uwnao1]] {stitch: prueba conexion stitch final}%%
+TAREA:%%> study final [[MAT101-transcription 1#^uwnao1]] {stitch: prueba conexion stitch final} ^avau8c %%
 Actuar como tutor universitario de Cálculo 1 orientado a ingeniería.
 Respondé siempre en español. Inferí el modo de respuesta según el pedido.
 _

@@ -6202,6 +6202,7 @@ typing
 traducido
 traducir
 tWH
+threads
 ToDo
 Templater
 Text
@@ -87839,6 +87840,8 @@ construy
 connection
 conecxion
 cjqpt
+conexion
+connected
 updated
 un
 universo
@@ -94877,6 +94880,7 @@ using
 uuui
 universales
 unresolved
+uwnao
 Galaxy
 Git
 Gr
@@ -240786,6 +240790,7 @@ User
 Unifica
 Uniform
 Unresolved
+UNTAGGED
 Nombre
 Notas
 No
