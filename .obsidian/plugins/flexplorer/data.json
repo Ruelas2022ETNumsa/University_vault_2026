@@ -2913,7 +2913,6 @@
         "void-07-07-2026_20-17-39.png",
         "doodle_20260707_202126.png",
         "doodles",
-        "20260706175318-06-07-2026_17-53-18.png",
         "Cornell Marginalia — Ejemplos de sintaxis-06-07-2026_17-50-56.png",
         "Cornell Marginalia — Ejemplos de sintaxis-06-07-2026_17-49-57.png",
         "Cornell Marginalia — Ejemplos de sintaxis-06-07-2026_00-02-53.png"
@@ -2934,27 +2933,14 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "20260706175318.md",
-        "20260706174809.md"
+        "20260707205449.md"
       ]
-    },
-    "Zettelkasten/20260706174809.md": {
-      "isPinned": false,
-      "isHidden": false
     },
     "_assets/Cornell Marginalia — Ejemplos de sintaxis-06-07-2026_17-49-57.png": {
       "isPinned": false,
       "isHidden": false
     },
     "_assets/Cornell Marginalia — Ejemplos de sintaxis-06-07-2026_17-50-56.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Zettelkasten/20260706175318.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/20260706175318-06-07-2026_17-53-18.png": {
       "isPinned": false,
       "isHidden": false
     },
@@ -3017,6 +3003,10 @@
       "isHidden": false
     },
     "MAT101-study 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Zettelkasten/20260707205449.md": {
       "isPinned": false,
       "isHidden": false
     }

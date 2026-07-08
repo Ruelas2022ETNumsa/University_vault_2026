@@ -1,5 +1,5 @@
-TAREA:
-Transcribir y complementar apuntes manuscritos universitarios de Cálculo I%%> ! mismo concepto desde otro ángulo %%
+TAREA:%%> transcription 2 [[MAT101-study 1#^n9jesu]] {stitch: otra prueba para stitch}%%
+Transcribir y complementar apuntes manuscritos universitarios de Cálculo I
 a formato Markdown listo para Obsidian.
 _
 NOTACIÓN OBSIDIAN: consultar obsidian_notation.md (fuente del notebook) para interpretar YAML, wikilinks, Cornell, callouts y bloques de visualización.
