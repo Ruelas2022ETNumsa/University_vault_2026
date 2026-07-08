@@ -1243,9 +1243,10 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "plugin_guide 1.md",
         "cornell_guide.md",
         "Marganali_guide 1.md",
-        "Marganali_guide.md",
+        "Marginalia_guide.md",
         "desmos_guide 1.md",
         "desmos_guide.md",
         "PDF_PP-guide.md",
@@ -1309,6 +1310,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "_claude-boot 1.md",
         "_notebooklm-system 1.md",
         "_library_MAT101.md",
         "_basic-memory-system.md",
@@ -2912,10 +2914,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_app/_appnotes/Marganali_guide.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_app/_appnotes/Marganali_guide 1.md": {
       "isPinned": false,
       "isHidden": false
@@ -2960,6 +2958,18 @@
       "isHidden": false
     },
     "Untitled.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_appnotes/plugin_guide 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_config/_claude-boot 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_appnotes/Marginalia_guide.md": {
       "isPinned": false,
       "isHidden": false
     }

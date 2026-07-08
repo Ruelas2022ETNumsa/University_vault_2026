@@ -16,7 +16,7 @@ status: activo
 
 # Cornell Marginalia — Guía completa
 
-> Plugin: [latazadehomero/cornell-marginalia](https://github.com/latazadehomero/cornell-marginalia) — instalado vía Community Plugins
+> Plugin: [latazadehomero/marginaliaarginalia](https://github.com/latazadehomero/marginaliaarginalia) — instalado vía Community Plugins
 > Versión actual: v4.9.0
 
 ---
@@ -60,13 +60,13 @@ Cornell Notes (`bytetiles/obsidian-cornell-notes`) y Cornell Marginalia registra
 this.registerMarkdownCodeBlockProcessor("cornell", ...)
 ```
 
-Cambiar `"cornell"` por `"cornell-m"`:
+Cambiar `"cornell"` por `"marginalia"`:
 
 ```
-this.registerMarkdownCodeBlockProcessor("cornell-m", ...)
+this.registerMarkdownCodeBlockProcessor("marginalia", ...)
 ```
 
-Esto hace que Marginalia use ` ```cornell-m ` como bloque propio. Cornell Notes sigue usando ` ````cornell ` (4 backticks) sin modificación. Ambos plugins coexisten sin conflicto.
+Esto hace que Marginalia use ` ```marginalia `,como bloque propio  dentro de Cornell notes puede usar 3 backicks o 4 (por defecto usa 4 con el script de python). Cornell Notes sigue usando ` `````cornell ` (5 backticks) sin modificación. Ambos plugins coexisten sin conflicto.
 
 > ⚠️ **Mantenimiento:** si el plugin se actualiza desde Community Plugins, el `main.js` se sobreescribe y el parche se pierde. Reaplicar el cambio después de cada actualización.
 
@@ -167,12 +167,12 @@ Para agrupar contenido mixto (párrafo + lista, párrafo + imagen) de forma livi
 
 El plugin oculta automáticamente el fondo, borde y título del callout. Se ve como texto normal pero la marginalia queda alineada con todo el grupo.
 
-### Method B — Bloque `cornell-m`
+### Method B — Bloque `marginalia`
 
 Para composiciones complejas que requieren alineación exacta o exportación a PDF.
 
 ````markdown
-```cornell-m
+```marginalia
 Texto principal con alineación estricta.  %%> Nota perfectamente alineada %%
 - Puede contener listas
 - Imágenes
@@ -182,7 +182,7 @@ Texto principal con alineación estricta.  %%> Nota perfectamente alineada %%
 
 - Ejemplos
 
-```cornell-m
+```marginalia
 %%> Nota perfectamente alineada %%
 MALA NOTA CORNELL!!!
 Texto principal con alineación estricta.
@@ -191,7 +191,7 @@ Texto principal con alineación estricta.
 - Múltiples párrafos
 ```
 
-```cornell-m
+```marginalia
 BUENA NOTA CORNELL  %%> Nota perfectamente alineada %%
 Texto principal con alineación estricta.
 - Puede contener listas
@@ -208,7 +208,7 @@ Crea un entorno Flexbox aislado que garantiza que texto y marginalia queden bloq
 | Situación | Método |
 |---|---|
 | Texto simple con lista o imagen | A — callout `[!cornell]` |
-| Composición compleja o exportación PDF | B — bloque `cornell-m` |
+| Composición compleja o exportación PDF | B — bloque `marginalia` |
 | Marginalia inline en flujo de texto | Sintaxis directa `%%> %%` |
 
 ---
@@ -396,7 +396,7 @@ El motor de exportación nativo de Obsidian no maneja bien las notas flotantes a
 
 > ⚠️ **Siempre ejecutar Restore después de exportar.** Si no se restaura, el archivo queda con etiquetas HTML en lugar de sintaxis Markdown.
 
-**Method B (`cornell-m`) es recomendado para PDF** — el entorno Flexbox garantiza alineación exacta durante la exportación.
+**Method B (`marginalia`) es recomendado para PDF** — el entorno Flexbox garantiza alineación exacta durante la exportación.
 
 ---
 

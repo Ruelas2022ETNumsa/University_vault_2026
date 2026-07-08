@@ -1,13 +1,19 @@
 ---
-title: "Cornell Notes + Cornell Marginalia — Guía de uso"
+title: Cornell Notes + Cornell Marginalia — Guía de uso
 galaxy_body: beacon
 scope: vault
-audience: [usuario, claude]
+audience:
+  - usuario
+  - claude
 related_notes:
   - "[[_note-system]]"
   - "[[plugin_guide]]"
-  - "[[Marganali_guide]]"
-tags: [beacon, cornell, marginalia, infraestructura]
+  - "[[Marginalia_guide]]"
+tags:
+  - beacon
+  - cornell
+  - marginalia
+  - infraestructura
 date_created: 2026-07-07
 date_updated: 2026-07-07
 status: activo
@@ -107,5 +113,5 @@ El texto entre `;;` aparece difuminado en modo lectura — al hacer hover se rev
 galaxy-links
 [[_note-system]]
 [[plugin_guide]]
-[[Marganali_guide]]
+[[Marginalia_guide]]
 %%

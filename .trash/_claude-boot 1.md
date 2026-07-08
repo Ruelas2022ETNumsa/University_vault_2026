@@ -28,7 +28,7 @@ tags:
   - arranque
   - infraestructura
 date_created: 2026-05-30
-date_updated: 2026-07-07
+date_updated: 2026-06-25
 status: activo
 ---
 

@@ -174,6 +174,14 @@ Ver [[_galaxy-system]] para plantillas YAML completas por tipo.
 
 El YAML **no genera conexiones** en el grafo nativo de Obsidian. Los `[[wikilinks]]` dentro de bloques `%%` sí lo hacen y son invisibles en modo lectura. Ambas capas deben estar sincronizadas.
 
+```markdown
+%%
+galaxy-links
+[[ETN806-T01-star]]
+[[ETN806-T01-marginal_density_formula]]
+%%
+```
+
 ---
 
 ## Sistema Cornell — layout y marginalia
@@ -187,13 +195,6 @@ El vault usa dos plugins complementarios para el formato de apuntes. Ver [[corne
 
 **Aplica en:** `supernova` · `planet` · `comet` · `dwarf`
 **No aplica en:** `star` · `beacon` · `asteroid` · `photon` · `constellation` · `observatory`
-
-%%
-galaxy-links
-[[ETN806-T01-star]]
-[[ETN806-T01-marginal_density_formula]]
-%%
-
 
 ---
 
