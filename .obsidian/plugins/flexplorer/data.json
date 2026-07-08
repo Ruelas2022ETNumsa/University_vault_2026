@@ -5,6 +5,8 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
+        "MAT101-study 1.md",
+        "MAT101-transcription 1.md",
         "Untitled.md",
         "Zettelkasten",
         "Marginalia Attachments",
@@ -2902,6 +2904,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "doodle_20260707_202326.png",
         "doodle_20260707_202211.png",
         "doodle_20260707_202242.png",
         "doodle_20260707_202300.png",
@@ -3002,6 +3005,18 @@
       "isHidden": false
     },
     "_assets/doodle_20260707_202300.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/doodle_20260707_202326.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "MAT101-transcription 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "MAT101-study 1.md": {
       "isPinned": false,
       "isHidden": false
     }
