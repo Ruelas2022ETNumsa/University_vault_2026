@@ -94,6 +94,12 @@
       "icon": "lucide-git-fork",
       "name": "Graph view: Open local graph",
       "mode": "any"
+    },
+    {
+      "id": "cornell-marginalia:cornell-focus-explorer",
+      "icon": "lucide-air-vent",
+      "name": "Cornell Marginalia: Open & Focus Marginalia Explorer",
+      "mode": "any"
     }
   ],
   "macros": [],

@@ -1246,6 +1246,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "zettakasten_guide_temp.md",
         "plugin_guide 1.md",
         "cornell_guide.md",
         "Marginalia_guide.md",
@@ -2937,7 +2938,9 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "tit2047.md"
+        "9.md",
+        "20260707231443.md",
+        "11111.md"
       ]
     },
     "_assets/Cornell Marginalia — Ejemplos de sintaxis-06-07-2026_17-49-57.png": {
@@ -3026,7 +3029,19 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Zettelkasten/tit2047.md": {
+    "Zettelkasten/11111.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Zettelkasten/20260707231443.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Zettelkasten/9.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_appnotes/zettakasten_guide_temp.md": {
       "isPinned": false,
       "isHidden": false
     }
