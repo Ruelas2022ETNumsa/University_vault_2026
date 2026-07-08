@@ -24,11 +24,11 @@ galaxy-links
 
 %%
 
-
-%%> # UNTAGGED
+%%
+# UNTAGGED
 
 - study final [[MAT101-study 1#^avau8c]]
-	- transcription final [[MAT101-transcription 1#^uwnao1]] %%
-
+	- transcription final [[MAT101-transcription 1#^uwnao1]] 
+%%
 
 ---

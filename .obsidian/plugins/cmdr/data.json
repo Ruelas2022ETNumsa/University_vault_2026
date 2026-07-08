@@ -88,6 +88,12 @@
       "icon": "lucide-file-code-corner",
       "name": "Toggle Live Preview/Source mode",
       "mode": "any"
+    },
+    {
+      "id": "graph:open-local",
+      "icon": "lucide-git-fork",
+      "name": "Graph view: Open local graph",
+      "mode": "any"
     }
   ],
   "macros": [],
