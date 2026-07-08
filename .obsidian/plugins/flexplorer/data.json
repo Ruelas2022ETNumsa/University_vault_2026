@@ -5,7 +5,7 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
-        "Untitled.md",
+        "hola_raiz.txt",
         "Zettelkasten",
         "Marginalia Attachments",
         "_assets",
@@ -1487,6 +1487,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "holamoc.txt",
         "MAT101-T00-star.md"
       ]
     },
@@ -2316,6 +2317,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "2026-07-08",
         "2026-06-12",
         "tmp"
       ]
@@ -2941,10 +2943,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Untitled.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_app/_appnotes/plugin_guide 1.md": {
       "isPinned": false,
       "isHidden": false
@@ -3022,6 +3020,20 @@
     "_assets/titulo0022-08-07-2026_00-22-48-1.png": {
       "isPinned": false,
       "isHidden": false
+    },
+    "hola_raiz.txt": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "MOC/holamoc.txt": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-08": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
     }
   },
   "pinnedFiles": [
