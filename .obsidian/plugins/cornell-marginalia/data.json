@@ -9,7 +9,7 @@
   "enableSemanticStitching": true,
   "alignment": "left",
   "marginWidth": 30,
-  "marginOffset": 0,
+  "marginOffset": 10,
   "fontSize": "0.85em",
   "fontFamily": "inherit",
   "adaptiveMode": true,
@@ -52,7 +52,7 @@
   "omniCaptureFolder": "",
   "omniCaptureTemplate": "\n%%> {{text}} %%\n{{citation}}\n{{image}}\n\n---",
   "responsiveMarginalia": true,
-  "responsiveThreshold": 840,
+  "responsiveThreshold": 860,
   "blurExplanatoryMarginalia": true,
   "enableDashboardAddon": false,
   "dashboardData": {
@@ -63,7 +63,7 @@
   "addons": {
     "gamification-profile": false,
     "custom-background": false,
-    "rhizome-time-machine": false,
+    "rhizome-time-machine": true,
     "super-doodle": true,
     "anki-sync": false,
     "zoom-doodle": true,

@@ -5,7 +5,6 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
-        "Untitled 1.md",
         "Untitled.md",
         "Zettelkasten",
         "Marginalia Attachments",
@@ -29,7 +28,6 @@
       "sortOrder": "custom",
       "customOrder": [
         "Sem_01",
-        "Sem_08",
         "Sem_09"
       ]
     },
@@ -1489,13 +1487,8 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "MAT101-T00-star.md",
-        "comfor numbss.png"
+        "MAT101-T00-star.md"
       ]
-    },
-    "MOC/comfor numbss.png": {
-      "isPinned": false,
-      "isHidden": false
     },
     "_PDF/PDF-601": {
       "isPinned": false,
@@ -2518,12 +2511,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Semesters/Sem_08": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": []
-    },
     "_templates/tpl-supernova.md": {
       "isPinned": false,
       "isHidden": false
@@ -2907,6 +2894,8 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "titulo0022-08-07-2026_00-22-48-1.png",
+        "o usamos slug oara este dibujo-08-07-2026_00-19-13.png",
         "doodle_20260707_202326.png",
         "doodle_20260707_202211.png",
         "doodle_20260707_202242.png",
@@ -2935,7 +2924,10 @@
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
-      "customOrder": []
+      "customOrder": [
+        "titulo0022.md",
+        "o usamos slug oara este dibujo.md"
+      ]
     },
     "_assets/Cornell Marginalia — Ejemplos de sintaxis-06-07-2026_17-49-57.png": {
       "isPinned": false,
@@ -2999,10 +2991,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Untitled 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_templates/tpl-zk 1.md": {
       "isPinned": false,
       "isHidden": false
@@ -3016,6 +3004,22 @@
       "isHidden": false
     },
     "_app/_appnotes/zettakasten_guide_temp.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Zettelkasten/o usamos slug oara este dibujo.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/o usamos slug oara este dibujo-08-07-2026_00-19-13.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Zettelkasten/titulo0022.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/titulo0022-08-07-2026_00-22-48-1.png": {
       "isPinned": false,
       "isHidden": false
     }

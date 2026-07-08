@@ -100,6 +100,12 @@
       "icon": "lucide-air-vent",
       "name": "Cornell Marginalia: Open & Focus Marginalia Explorer",
       "mode": "any"
+    },
+    {
+      "id": "cornell-marginalia:cornell-open-sidebar-doodle",
+      "icon": "lucide-pen-tool",
+      "name": "Cornell Marginalia: Open Sidebar Doodle Canvas",
+      "mode": "any"
     }
   ],
   "macros": [],

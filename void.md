@@ -2,43 +2,6 @@
 
 
 
-
-
-
-
-
-````cornell
-
-::cue
-```cornell-m %%> %%
-Contenido de la columna izquierda — claves, preguntas, mnemónicos.
-asdasdasddsadd
-asdadasdsadsadsa
-dsadsadsadd 
-sdasdasdsad
-asdsadadsa
-asdsadsddsad
-asdsadadasd
-asdsadsda
-asdasdsadsadsadsadsaddadsadsadsadsadsdsadsadasd
-s
-```
-::note
-```cornell-m %%< %%
-Contenido de la columna derecha — desarrollo, definiciones, fórmulas.
-```
-````
-
-> [!note] asdasdsadsadsadsadsaddadsadsadsadsadsdsadsad
-> aeraersadasd %%>prueba%%
-> asdsad %%< ptra ptierare %%
-> asd
-> asd
-
-
-
-
-
 rearaer %%> prueba%%
 
 las configuraciones te las entrego en forma de texto ojo si es una extraccion%%> img:[[void-07-07-2026_20-17-39.png]] %%
