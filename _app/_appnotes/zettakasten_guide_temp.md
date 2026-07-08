@@ -43,8 +43,8 @@ Usar prefijos semánticos si aplica (`!` importante, `?` pregunta, etc.).
 
 1. Abrir Explorer con `Alt+E`
 2. Ir al tab **Vault** (`Alt+2`)
-3. Hacer clic en **Stitch** sobre la marginalia origen
-4. Hacer clic sobre reloj (recientes)   
+3. Hacer clic sobre reloj (recientes)  
+4. Hacer clic en **Stitch** sobre la marginalia origen 
 5. Seleccionar la marginalia destino
 6. En el modal escribir una descripción corta de la conexión
 7. Confirmar — el plugin escribe el Block ID en ambas notas

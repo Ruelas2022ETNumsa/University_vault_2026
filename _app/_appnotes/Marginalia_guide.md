@@ -52,7 +52,7 @@ El plugin está disponible en **Community Plugins** de Obsidian.
 
 ### Parche obligatorio — coexistencia con Cornell Notes
 
-Cornell Notes (`bytetiles/obsidian-cornell-notes`) y Cornell Marginalia registran el mismo bloque ` ```cornell `. Obsidian desactiva uno si los dos están activos simultáneamente.
+Cornell Notes (`bytetiles/obsidian-cornell-notes`) y Cornell Marginalia registran el mismo bloque ` ```cornell ` (3 backticks por defecto). Obsidian desactiva uno si los dos están activos simultáneamente.
 
 **Parche:** editar `.obsidian/plugins/cornell-marginalia/main.js`, línea donde aparece:
 
@@ -66,7 +66,7 @@ Cambiar `"cornell"` por `"marginalia"`:
 this.registerMarkdownCodeBlockProcessor("marginalia", ...)
 ```
 
-Esto hace que Marginalia use ` ```marginalia `,como bloque propio  dentro de Cornell notes puede usar 3 backicks o 4 (por defecto usa 4 con el script de python). Cornell Notes sigue usando ` `````cornell ` (5 backticks) sin modificación. Ambos plugins coexisten sin conflicto.
+Esto hace que Marginalia use ` ```marginalia `,como bloque propio  dentro de Cornell notes puede usar 3 backicks o 4 (por defecto usa 4 con el script de python). Cornell Notes usa ` `````cornell ` (5 backticks) para contener mas bloques de códigos. Ambos plugins coexisten sin conflicto.
 
 > ⚠️ **Mantenimiento:** si el plugin se actualiza desde Community Plugins, el `main.js` se sobreescribe y el parche se pierde. Reaplicar el cambio después de cada actualización.
 

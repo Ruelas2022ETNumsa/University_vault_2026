@@ -6,8 +6,6 @@
       "sortOrder": "byName",
       "customOrder": [
         "Untitled 1.md",
-        "MAT101-study 1.md",
-        "MAT101-transcription 1.md",
         "Untitled.md",
         "Zettelkasten",
         "Marginalia Attachments",
@@ -2937,11 +2935,7 @@
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
-      "customOrder": [
-        "9.md",
-        "20260707231443.md",
-        "11111.md"
-      ]
+      "customOrder": []
     },
     "_assets/Cornell Marginalia — Ejemplos de sintaxis-06-07-2026_17-49-57.png": {
       "isPinned": false,
@@ -3005,14 +2999,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "MAT101-transcription 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "MAT101-study 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Untitled 1.md": {
       "isPinned": false,
       "isHidden": false
@@ -3026,18 +3012,6 @@
       "isHidden": false
     },
     "_templates/tpl-zk 2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Zettelkasten/11111.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Zettelkasten/20260707231443.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Zettelkasten/9.md": {
       "isPinned": false,
       "isHidden": false
     },
