@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "movable": true,
+  "resizable": true,
+  "rememberGeometry": true,
+  "showPresetControls": true,
+  "disableOnMobile": true,
+  "disableOnNarrowWindows": true,
+  "narrowWindowThreshold": 720,
+  "geometry": {
+    "schemaVersion": 1,
+    "x": 615.8333129882812,
+    "y": 44.046897888183594,
+    "width": 640,
+    "height": 420,
+    "lastAppliedBounds": {
+      "width": 1334,
+      "height": 726
+    }
+  }
+}

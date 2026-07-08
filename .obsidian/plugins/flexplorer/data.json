@@ -1245,7 +1245,6 @@
       "customOrder": [
         "plugin_guide 1.md",
         "cornell_guide.md",
-        "Marganali_guide 1.md",
         "Marginalia_guide.md",
         "desmos_guide 1.md",
         "desmos_guide.md",
@@ -1310,7 +1309,6 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "_claude-boot 1.md",
         "_notebooklm-system 1.md",
         "_library_MAT101.md",
         "_basic-memory-system.md",
@@ -2904,6 +2902,14 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "doodle_20260707_202211.png",
+        "doodle_20260707_202242.png",
+        "doodle_20260707_202300.png",
+        "doodle_20260707_202044.png",
+        "void-07-07-2026_20-19-07.png",
+        "void-07-07-2026_20-17-39.png",
+        "doodle_20260707_202126.png",
+        "doodles",
         "20260706175318-06-07-2026_17-53-18.png",
         "Cornell Marginalia — Ejemplos de sintaxis-06-07-2026_17-50-56.png",
         "Cornell Marginalia — Ejemplos de sintaxis-06-07-2026_17-49-57.png",
@@ -2911,10 +2917,6 @@
       ]
     },
     "_assets/Cornell Marginalia — Ejemplos de sintaxis-06-07-2026_00-02-53.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/_appnotes/Marganali_guide 1.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -2965,11 +2967,41 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_app/_config/_claude-boot 1.md": {
+    "_app/_appnotes/Marginalia_guide.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_app/_appnotes/Marginalia_guide.md": {
+    "_assets/doodles": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "_assets/doodle_20260707_202044.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/doodle_20260707_202126.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/void-07-07-2026_20-19-07.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/void-07-07-2026_20-17-39.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/doodle_20260707_202211.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/doodle_20260707_202242.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/doodle_20260707_202300.png": {
       "isPinned": false,
       "isHidden": false
     }

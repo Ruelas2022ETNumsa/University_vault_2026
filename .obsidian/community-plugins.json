@@ -7,7 +7,6 @@
   "quick-latex",
   "obsidian-tikzjax",
   "table-editor-obsidian",
-  "attachment-management",
   "obsidian-style-settings",
   "flexplorer",
   "sheets",
@@ -15,5 +14,7 @@
   "modern-outline",
   "galaxy-view",
   "cornell-marginalia",
-  "cornell-notes"
+  "cornell-notes",
+  "attachment-management",
+  "settings-float"
 ]

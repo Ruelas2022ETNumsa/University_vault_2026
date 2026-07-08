@@ -41,18 +41,18 @@ Contenido de la columna derecha — desarrollo, definiciones, fórmulas.
 
 rearaer %%> prueba%%
 
-las configuraciones te las entrego en forma de texto ojo si es una extraccion
-literal si solo una aclaracion en cada opcion la utloma [] es como se puede
-configurar, [1/0] on/off, [slider] para distintos valores a escoger, [valor x/valor y] entre dos o mas valores,
-[text=MMM] texto escrito en la configuracion solo esta "MMM" sin `text=`,  
-[button=nombre del boton] solo aparece "nombre del boton" no "button=".
+las configuraciones te las entrego en forma de texto ojo si es una extraccion%%> img:[[void-07-07-2026_20-17-39.png]] %%
+literal si solo una aclaracion en cada opcion la utloma [] es como se puede%%> img:[[doodle_20260707_202126.png]] %%
+configurar, [1/0] on/off, [slider] para distintos valores a escoger, [valor x/valor y] entre dos o mas valores,%%> img:[[doodle_20260707_202044.png]] %%
+[text=MMM] texto escrito en la configuracion solo esta "MMM" sin `text=`,  %%> img:[[doodle_20260707_202211.png]] %%
+[button=nombre del boton] solo aparece "nombre del boton" no "button=".%%> img:[[void-07-07-2026_20-19-07.png]] %%
 
-# Cornell Marginalia Settings
+# Cornell Marginalia Sdfgdfgdfgdfgettingsdfg> img:[[doodle_20260707_202242.png]] %%
 
 ## 🎨 Appearance & Rendering
 
 ### Responsive Marginalia (Auto-Collapse) [1/0]
-OPTIONAL: Automatically move marginalia inside the text when the
+OPTIONAL: Automatically move marginalia inside the text when the%%> img:[[doodle_20260707_202300.png]] %%
 note pane is too narrow (e.g. when you open the sidebar).
 
 ### Responsive Threshold (px) [Slider]
@@ -107,7 +107,7 @@ Asigna colores EXCLUSIVAMENTE a los recuadros de los Hilos Semánticos
 ##✅ Task Management
 
 ### Auto-Delete Completed Tasks [1/0]
-When you check a marginalia task (- [x]), it will be permanently
+When you check a marginalia task (- [x]), it will be permanentlyasdasd%%> img:[[doodle_20260707_202326.png]] %%
 deleted from the Markdown file to keep your vault clean.
 
 ### TaskNotes HTTP API Integration [1/0]

@@ -41,7 +41,7 @@
   "zkMode": true,
   "zkFolder": "Zettelkasten",
   "zkTemplatePath": "",
-  "doodleFolder": "Marginalia Attachments",
+  "doodleFolder": "",
   "canvasFolder": "Evidence Boards",
   "pinboardFolder": "Pinboards",
   "pinboardNodes": {},
