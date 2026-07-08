@@ -5,8 +5,8 @@
 -:*.crdownload
 -:*.sb-????????-??????
 -:*.tmp
--f:.cache
--f:.git
+-:.cache
+-:.git
 
 
 # Archivos de Git (no necesarios en el vault)
