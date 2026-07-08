@@ -1,4 +1,4 @@
-l---
+---
 title: Sistema Sync — Vault y Acceso Claude
 galaxy_body: beacon
 scope: vault

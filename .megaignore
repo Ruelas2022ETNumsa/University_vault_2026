@@ -1,7 +1,6 @@
 -:Thumbs.db
 -:desktop.ini
 -:~*
--:.*
 -:*~.*
 -:*.crdownload
 -:*.sb-????????-??????
@@ -13,12 +12,17 @@
 # Archivos de Git (no necesarios en el vault)
 -:.gitignore
 -:.gitattributes
+-:.megaignore
 
 # Obsidian - archivos conflictivos entre dispositivos
 -:workspace.json
 -:workspace-mobile.json
 -:graph.json
 
-# Obsidian - carpetas conflictivas
--f:.obsidian/cache
+# Obsidian - carpetas con punto (NO sincronizar)
+# Se excluyen explicitamente en lugar de usar -:.* para poder incluir plugins
+-f:.obsidian
 -f:.trash
+
+# Obsidian plugins - INCLUIR en sync (main.js modificados)
++f:.obsidian/plugins
