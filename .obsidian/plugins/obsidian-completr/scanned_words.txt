@@ -6203,6 +6203,7 @@ traducido
 traducir
 tWH
 threads
+tipodeconexion
 ToDo
 Templater
 Text
@@ -31152,6 +31153,7 @@ derivado
 down
 desarrollador
 diccionario
+dointento
 Vault
 Verificar
 Variables
@@ -55700,6 +55702,8 @@ sencillamente
 shaders
 significaba
 stitch
+slugo
+slugcorto
 vault
 vil
 ver
@@ -74815,6 +74819,7 @@ reaplicar
 reemplazando
 regenerar
 reemplazos
+rueba
 notes
 notas
 nuevas
@@ -81069,6 +81074,7 @@ navigation
 native
 nombrequeluan
 nose
+nombrefinal
 created
 commit
 cada
@@ -94881,6 +94887,7 @@ uuui
 universales
 unresolved
 uwnao
+ultimo
 Galaxy
 Git
 Gr
@@ -144194,6 +144201,8 @@ postproceso
 part
 permanentlyasdasd
 papatua
+pruebatipodeconexion
+pruebaparcial
 min
 mica
 movimiento
@@ -169844,6 +169853,7 @@ enfocar
 estrellas
 estaban
 escapes
+ernombre
 Motor
 Media
 Mantiene

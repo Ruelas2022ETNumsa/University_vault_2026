@@ -5,6 +5,7 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
+        "Untitled 1.md",
         "MAT101-study 1.md",
         "MAT101-transcription 1.md",
         "Untitled.md",
@@ -1404,6 +1405,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "tpl-zk 1.md",
         "tpl-zk.md",
         "tpl-supernova.md",
         "tpl-photon 1.md",
@@ -2934,7 +2936,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "20260707215136.md"
+        "slugcorto.md"
       ]
     },
     "_assets/Cornell Marginalia — Ejemplos de sintaxis-06-07-2026_17-49-57.png": {
@@ -3007,11 +3009,19 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Zettelkasten/20260707215136.md": {
+    "Untitled 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_templates/tpl-zk 1.md": {
       "isPinned": false,
       "isHidden": false
     },
     "_templates/tpl-zk.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Zettelkasten/slugcorto.md": {
       "isPinned": false,
       "isHidden": false
     }
