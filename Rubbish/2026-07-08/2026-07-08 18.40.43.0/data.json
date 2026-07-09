@@ -8,11 +8,11 @@
   "ignoredFolders": "_app,_templates,_PDF",
   "enableSemanticStitching": true,
   "alignment": "left",
-  "marginWidth": 60,
+  "marginWidth": 30,
   "marginOffset": 10,
-  "fontSize": "0.75em",
+  "fontSize": "0.85em",
   "fontFamily": "inherit",
-  "adaptiveMode": true,
+  "adaptiveMode": false,
   "enableReadingView": true,
   "tags": [
     {
@@ -51,8 +51,8 @@
   "canvasItemTemplatePath": "",
   "omniCaptureFolder": "",
   "omniCaptureTemplate": "\n%%> {{text}} %%\n{{citation}}\n{{image}}\n\n---",
-  "responsiveMarginalia": false,
-  "responsiveThreshold": 690,
+  "responsiveMarginalia": true,
+  "responsiveThreshold": 400,
   "blurExplanatoryMarginalia": true,
   "enableDashboardAddon": false,
   "dashboardData": {

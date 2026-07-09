@@ -28,12 +28,6 @@
       "mode": "any"
     },
     {
-      "id": "modern-outline:toggle",
-      "icon": "lucide-list",
-      "name": "Modern Outline: Toggle",
-      "mode": "any"
-    },
-    {
       "id": "app:toggle-ribbon",
       "icon": "lucide-panel-left-close",
       "name": "Toggle ribbon",
@@ -78,18 +72,6 @@
       "mode": "any"
     },
     {
-      "id": "obsidian-style-settings:style-settings-class-toggle-desmos-editor-hide-desmos-editor",
-      "icon": "lucide-eye-off",
-      "name": "Style Settings: Toggle Ocultar Desmos en modo edición",
-      "mode": "any"
-    },
-    {
-      "id": "editor:toggle-source",
-      "icon": "lucide-file-code-corner",
-      "name": "Toggle Live Preview/Source mode",
-      "mode": "any"
-    },
-    {
       "id": "graph:open-local",
       "icon": "lucide-git-fork",
       "name": "Graph view: Open local graph",
@@ -102,9 +84,21 @@
       "mode": "any"
     },
     {
+      "id": "modern-outline:toggle",
+      "icon": "lucide-list",
+      "name": "Modern Outline: Toggle",
+      "mode": "any"
+    },
+    {
       "id": "cornell-marginalia:cornell-open-sidebar-doodle",
       "icon": "lucide-pen-tool",
       "name": "Cornell Marginalia: Open Sidebar Doodle Canvas",
+      "mode": "any"
+    },
+    {
+      "id": "editor:toggle-source",
+      "icon": "lucide-file-code-corner",
+      "name": "Toggle Live Preview/Source mode",
       "mode": "any"
     }
   ],
@@ -121,7 +115,7 @@
       "Toggle modern outline"
     ]
   },
-  "spacing": "8",
+  "spacing": "0",
   "advancedToolbar": {
     "rowHeight": 48,
     "rowCount": 1,

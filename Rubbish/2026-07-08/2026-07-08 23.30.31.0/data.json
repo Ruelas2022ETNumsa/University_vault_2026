@@ -10,7 +10,7 @@
   "alignment": "left",
   "marginWidth": 60,
   "marginOffset": 10,
-  "fontSize": "0.75em",
+  "fontSize": "0.85em",
   "fontFamily": "inherit",
   "adaptiveMode": true,
   "enableReadingView": true,
@@ -52,7 +52,7 @@
   "omniCaptureFolder": "",
   "omniCaptureTemplate": "\n%%> {{text}} %%\n{{citation}}\n{{image}}\n\n---",
   "responsiveMarginalia": false,
-  "responsiveThreshold": 690,
+  "responsiveThreshold": 400,
   "blurExplanatoryMarginalia": true,
   "enableDashboardAddon": false,
   "dashboardData": {

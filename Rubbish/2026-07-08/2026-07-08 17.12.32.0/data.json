@@ -1,8 +1,18 @@
 {
   "pluginList": [
+    "Longwind1984/galaxy-view",
+    "nickrallison/obsidian-python-scripter",
     "RyotaUshio/obsidian-pdf-plus"
   ],
   "pluginSubListFrozenVersion": [
+    {
+      "repo": "Longwind1984/galaxy-view",
+      "version": "latest"
+    },
+    {
+      "repo": "nickrallison/obsidian-python-scripter",
+      "version": ""
+    },
     {
       "repo": "RyotaUshio/obsidian-pdf-plus",
       "version": ""

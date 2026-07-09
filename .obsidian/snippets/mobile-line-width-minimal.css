@@ -1,0 +1,10 @@
+/* Ajuste de línea legible para tablet y móvil */
+.is-mobile {
+  --line-width: 60%;
+  --max-width: 60%;
+}
+
+.is-tablet {
+  --line-width: 50%;
+  --max-width: 50%;
+}

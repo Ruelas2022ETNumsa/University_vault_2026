@@ -1,19 +1,20 @@
 [
+  "obsidian-git",
   "obsidian-desmos",
-  "better-export-pdf",
+  "templater-obsidian",
+  "cmdr",
   "obsidian-completr",
   "quick-latex",
   "obsidian-tikzjax",
   "table-editor-obsidian",
-  "attachment-management",
   "obsidian-style-settings",
   "flexplorer",
-  "cmdr",
+  "sheets",
+  "python-scripter",
+  "modern-outline",
+  "galaxy-view",
   "cornell-marginalia",
   "cornell-notes",
-  "modern-outline",
-  "settings-float",
-  "templater-obsidian",
-  "python-scripter",
-  "obsidian-git"
+  "attachment-management",
+  "settings-float"
 ]

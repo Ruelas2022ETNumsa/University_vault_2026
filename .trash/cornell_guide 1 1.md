@@ -1,4 +1,4 @@
----
+/----
 title: Cornell Notes + Cornell Marginalia — Guía de uso
 galaxy_body: beacon
 scope: vault
@@ -65,12 +65,12 @@ Contenido de desarrollo — transcripción, definiciones, fórmulas.
 `````cornell
 ::cue
 ````marginalia %%> %%
-Contenido de claves — palabras clave, preguntas, mnemónicos.%%> marginalia izquierda%%
+Contenido de claves — palabras clave, preguntas, mnemónicos.%%> marginalia izquierda prueba larga 1 prueba larga 2 prueba larga 3 prueba larga 4 prueba larga 5%%
 ````
 
 ::note
 ````marginalia %%< %%
-Contenido de desarrollo — transcripción, definiciones, fórmulas.%%< marginalia derecha%%
+Contenido de desarrollo — transcripción, definiciones, fórmulas.%%< marginalia derecha prueba larga 1 prueba larga 2 prueba larga 3 prueba larga 4 prueba larga 5%%
 ````
 `````
 

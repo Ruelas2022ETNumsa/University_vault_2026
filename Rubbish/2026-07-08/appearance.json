@@ -5,7 +5,10 @@
   "nativeMenus": false,
   "baseFontSize": 12,
   "baseFontSizeAction": true,
-  "enabledCssSnippets": [],
+  "enabledCssSnippets": [
+    "print",
+    "desmos-editor-off"
+  ],
   "cssTheme": "",
   "theme": "moonstone"
 }
