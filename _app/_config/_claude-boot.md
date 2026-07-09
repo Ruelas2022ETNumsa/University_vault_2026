@@ -30,8 +30,10 @@ tags:
 date_created: 2026-05-30
 date_updated: 2026-07-07
 status: activo
+fase: infraestructura
 ---
 
+%% fase: infraestructura — el vault está en construcción del sistema base (beacons, convenciones, plantillas, plugins, conectores). Aún no se crean notas académicas de forma sistemática. Cuando cambie la fase, actualizar este campo. %%
 # Claude Boot — Arranque de sesión
 
 > Este archivo es el punto de entrada de Claude al vault. Leerlo es suficiente para operar correctamente en cualquier conversación. Los beacons completos están en `_app/_config/` si se necesita mayor profundidad.
@@ -184,6 +186,31 @@ galaxy-links
 
 ---
 
+## SISTEMA DE LINKS — DOS CAPAS
+
+El vault mantiene dos capas de conexión en cada nota. Son redundantes intencionalmente durante la fase de transición:
+
+| Capa | Ubicación | Para quién | Estado |
+|---|---|---|---|
+| `related_notes` en YAML | Frontmatter | Obsidian + Claude | Activo — se elimina cuando se confirme que `galaxy-links` sostiene el grafo solo |
+| `%% galaxy-links %%` | Pie del archivo | Obsidian + Claude | Activo — fuente principal a largo plazo |
+
+### Cómo Claude usa los galaxy-links
+
+El Filesystem MCP tiene como raíz `E:\University_vault_2026`. Los `galaxy-links` usan ruta relativa desde esa raíz:
+
+```
+%%
+galaxy-links
+[[_app/_config/_galaxy-system]]
+[[Semesters/Sem_09/ETN901/Partial_1/ETN901-T01-intro]]
+%%
+```
+
+Si Claude necesita más contexto sobre un archivo enlazado, puede leerlo directamente usando la ruta del wikilink como ruta relativa desde la raíz del vault. No es necesario escribir la ruta absoluta en el link.
+
+---
+
 ## CONECTORES — CÓMO ACCEDE CLAUDE AL VAULT
 
 Claude tiene **tres** vías de acceso. Usar la que esté disponible y la que corresponda a la tarea:
@@ -298,7 +325,7 @@ Convención interna del vault para respaldar archivos antes de editarlos:
 
 1. **Nunca borrar contenido original** — solo agregar o editar lo que se indica explícitamente.
 2. **Respetar siempre la convención de nombres** — sin excepciones.
-3. **Mantener las dos capas de conexión sincronizadas** — si se agrega un enlace al YAML, también va en el bloque `%%`.
+3. **Mantener las dos capas de conexión sincronizadas** — mientras `related_notes` esté activo, todo enlace nuevo va también en el bloque `%%` con ruta relativa desde la raíz del vault. Cuando `related_notes` se elimine, el bloque `%%` será la única fuente de verdad.
 4. **Respuestas concisas en el chat** — el detalle va en el archivo `.md`, no en la conversación.
 5. **Si una ruta no existe aún** → decírselo al usuario antes de crear archivos, no asumir rutas.
 6. **ETN302 es legacy** — no crear notas ni carpetas para esta materia.
@@ -307,65 +334,9 @@ Convención interna del vault para respaldar archivos antes de editarlos:
 9. **El usuario crea los backups, Claude edita el original directamente** — no ofrecer ni confirmar respaldo antes de editar un beacon, salvo que el usuario indique lo contrario.
 10. **Actualizar `date_updated`** en el YAML de cualquier beacon que se modifique.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## SISTEMA DE LINKS — DOS CAPAS
-
-El vault mantiene dos capas de conexión en cada nota. Son redundantes intencionalmente durante la fase de transición:
-
-| Capa | Ubicación | Para quién | Estado |
-|---|---|---|---|
-| `related_notes` en YAML | Frontmatter | Obsidian + Claude | Activo — se elimina cuando se confirme que `galaxy-links` sostiene el grafo solo |
-| `%% galaxy-links %%` | Pie del archivo | Obsidian + Claude | Activo — fuente principal a largo plazo |
-
-### Cómo Claude usa los galaxy-links
-
-El Filesystem MCP tiene como raíz `E:\University_vault_2026`. Los `galaxy-links` usan ruta relativa desde esa raíz:
-
-```
 %%
 galaxy-links
 [[_app/_config/_galaxy-system]]
-[[Semesters/Sem_09/ETN901/Partial_1/ETN901-T01-intro]]
-%%
-```
-
-Si Claude necesita más contexto sobre un archivo enlazado, puede leerlo directamente usando la ruta del wikilink como ruta relativa desde la raíz del vault. No es necesario escribir la ruta absoluta en el link.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-%%
-galaxy-links
-
-[[_app/_config/_galaxy-system]]
-
-
 [[_note-system]]
 [[_template-system]]
 [[_pdf-system]]
