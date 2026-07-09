@@ -100,6 +100,12 @@
       "icon": "lucide-file-code-corner",
       "name": "Toggle Live Preview/Source mode",
       "mode": "any"
+    },
+    {
+      "id": "theme:toggle-light-dark",
+      "icon": "lucide-toggle-right",
+      "name": "Alternar modo claro/oscuro",
+      "mode": "any"
     }
   ],
   "macros": [],

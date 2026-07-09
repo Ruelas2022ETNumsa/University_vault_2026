@@ -268,25 +268,46 @@ Obsidian Git detecta cambio → auto-pull → vault local actualizado
 Archivo en raíz del vault `E:\University_vault_2026\.megaignore` generado por el cliente Mega PC con los siguientes patrones:
 
 ```
+```
+### .megaignore (PC)
+
+Archivo en raíz del vault `E:\University_vault_2026\.megaignore` generado por el cliente Mega PC con los siguientes patrones:
+
+```
+# Archivos basura de Windows
 -:Thumbs.db
 -:desktop.ini
+
+# Archivos temporales y en proceso de descarga
 -:~*
--:.*
 -:*~.*
 -:*.crdownload
 -:*.sb-????????-??????
 -:*.tmp
--f:.cache
--f:.git
 
-# Obsidian conflictivos
+# Repositorio Git — no debe tocar Mega
+-:.git
+
+# Cache de Obsidian — se regenera en cada dispositivo
+-:.cache
+
+# Archivos del sistema de sync — cada dispositivo mantiene los suyos
+-:.gitignore
+-:.gitattributes
+-:.megaignore
+
+# Obsidian — solo estos generan conflicto entre dispositivos
+# (estado de UI: paneles abiertos, posición, grafo visual, tema, plugins)
 -:workspace.json
 -:workspace-mobile.json
 -:graph.json
--f:.trash
+-:community-plugins.json
+-:core-plugins.json
 ```
 
-> Nota: `-:.*` ya cubre `.gitignore`, `.gitattributes` y `.DS_Store` por ser archivos que empiezan con punto.
+> Nota: `-:.gitignore`, `-:.gitattributes` y `-:.megaignore` se excluyen porque cada dispositivo mantiene su propia configuración de sync. `community-plugins.json` y `core-plugins.json` se excluyen porque los plugins activos pueden variar por dispositivo.
+
+> Nota.- `community-plugins.json` y `core-plugins.json` se excluyen porque algunos plugins no funcionan en móvil — al sincronizarse, Obsidian móvil los desactivaba y ese cambio se propagaba a PC. Cada dispositivo mantiene su propio estado de plugins.
 
 ### Rol de cada dispositivo
 
@@ -338,11 +359,12 @@ App: **FolderSync** | Cuenta: Mega exclusiva del vault
 | Archivo | iguales a | `workspace.json` |
 | Archivo | iguales a | `workspace-mobile.json` |
 | Archivo | iguales a | `graph.json` |
-| Archivo | iguales a | `Thumbs.db` |
+| Archivo | iguales a | `community-plugins.json` |
+| Archivo | iguales a | `core-plugins.json` |
 | Archivo | termina con | `.tmp` |
-| Carpeta | iguales a | `.trash` |
+| Archivo | termina con | `.temp` |
 | Carpeta | iguales a | `.obsidian` |
-| Carpeta | iguales a | `cache` |
+| Carpeta | iguales a | `.cache` |
 
 ---
 
