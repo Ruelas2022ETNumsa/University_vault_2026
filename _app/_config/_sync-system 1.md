@@ -14,7 +14,7 @@ tags:
   - github
   - infraestructura
 date_created: 2026-05-28
-date_updated: 2026-07-09
+date_updated: 2026-06-13
 status: activo
 ---
 
@@ -311,7 +311,9 @@ Archivo en raíz del vault `E:\University_vault_2026\.megaignore` generado por e
 -:core-plugins.json
 ```
 
-> Nota: `-:.gitignore`, `-:.gitattributes` y `-:.megaignore` se excluyen porque cada dispositivo mantiene su propia configuración de sync. `community-plugins.json` y `core-plugins.json` se excluyen porque algunos plugins no funcionan en móvil — al sincronizarse, Obsidian móvil los desactivaba y ese cambio se propagaba a PC. Cada dispositivo mantiene su propio estado de plugins.
+> Nota: `-:.gitignore`, `-:.gitattributes` y `-:.megaignore` se excluyen porque cada dispositivo mantiene su propia configuración de sync. `community-plugins.json` y `core-plugins.json` se excluyen porque los plugins activos pueden variar por dispositivo.
+
+> Nota.- `community-plugins.json` y `core-plugins.json` se excluyen porque algunos plugins no funcionan en móvil — al sincronizarse, Obsidian móvil los desactivaba y ese cambio se propagaba a PC. Cada dispositivo mantiene su propio estado de plugins.
 
 ### Rol de cada dispositivo
 

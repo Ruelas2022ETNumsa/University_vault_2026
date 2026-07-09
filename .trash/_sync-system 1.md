@@ -14,7 +14,7 @@ tags:
   - github
   - infraestructura
 date_created: 2026-05-28
-date_updated: 2026-07-09
+date_updated: 2026-06-13
 status: activo
 ---
 
@@ -254,26 +254,17 @@ Obsidian Git detecta cambio → auto-pull → vault local actualizado
 
 ### Carpetas sincronizadas en Mega
 
-| Carpeta local PC                                      | Carpeta Mega                                  |
-| ----------------------------------------------------- | --------------------------------------------- |
-| `E:\University_vault_2026\.obsidian`                  | `/University_vault_2026/.obsidian`            |
-| `E:\University_vault_2026\.trash`                     | `/University_vault_2026/.trash`               |
-| `E:\University_vault_2026\Borrar`                     | `/University_vault_2026/Borrar`               |
-| `E:\University_vault_2026\in_work`                    | `/University_vault_2026/in_work`              |
-| `E:\University_vault_2026\Marginalia Attachments`     | `/University_vault_2026/Marginalia Attachments` |
-| `E:\University_vault_2026\MOC`                        | `/University_vault_2026/MOC`                  |
-| `E:\University_vault_2026\Rubbish`                    | `/University_vault_2026/Rubbish`              |
-| `E:\University_vault_2026\Semesters`                  | `/University_vault_2026/Semesters`            |
-| `E:\University_vault_2026\Semestres`                  | `/University_vault_2026/Semestres`            |
-| `E:\University_vault_2026\Zettelkasten`               | `/University_vault_2026/Zettelkasten`         |
-| `E:\University_vault_2026\_app`                       | `/University_vault_2026/_app`                 |
-| `E:\University_vault_2026\_assets`                    | `/University_vault_2026/_assets`              |
-| `E:\University_vault_2026\_PDF`                       | `/University_vault_2026/_PDF`                 |
-| `E:\University_vault_2026\_templates`                 | `/University_vault_2026/_templates`           |
+| Carpeta local PC                     | Carpeta Mega                       |
+| ------------------------------------ | ---------------------------------- |
+| `E:\University_vault_2026\MOC`       | `/University_vault_2026/MOC`       |
+| `E:\University_vault_2026\Semesters` | `/University_vault_2026/Semesters` |
+| `E:\University_vault_2026\Semestres` | `/University_vault_2026/Semestres` |
+| `E:\University_vault_2026\_PDF`      | `/University_vault_2026/_PDF`      |
 
-> `.obsidian` se sincroniza parcialmente — los archivos `workspace.json`, `workspace-mobile.json`, `graph.json`, `community-plugins.json` y `core-plugins.json` están excluidos vía `.megaignore`.
-> `.trash` se sincroniza intencionalmente para monitorear eliminaciones desde PC.
-> `.cache` y `.git` **no** se sincronizan — excluidos en `.megaignore`.
+> `_PDF` es la carpeta definitiva de PDFs — reemplaza al anterior TAB_nexus de Drive. Todos los PDFs de Samsung Notes van directamente aquí.
+
+
+
 
 ### .megaignore (PC)
 
@@ -311,7 +302,9 @@ Archivo en raíz del vault `E:\University_vault_2026\.megaignore` generado por e
 -:core-plugins.json
 ```
 
-> Nota: `-:.gitignore`, `-:.gitattributes` y `-:.megaignore` se excluyen porque cada dispositivo mantiene su propia configuración de sync. `community-plugins.json` y `core-plugins.json` se excluyen porque algunos plugins no funcionan en móvil — al sincronizarse, Obsidian móvil los desactivaba y ese cambio se propagaba a PC. Cada dispositivo mantiene su propio estado de plugins.
+> Nota: `-:.gitignore`, `-:.gitattributes` y `-:.megaignore` se excluyen porque cada dispositivo mantiene su propia configuración de sync. `community-plugins.json` y `core-plugins.json` se excluyen porque los plugins activos pueden variar por dispositivo.
+
+> Nota.- `community-plugins.json` y `core-plugins.json` se excluyen porque algunos plugins no funcionan en móvil — al sincronizarse, Obsidian móvil los desactivaba y ese cambio se propagaba a PC. Cada dispositivo mantiene su propio estado de plugins.
 
 ### Rol de cada dispositivo
 

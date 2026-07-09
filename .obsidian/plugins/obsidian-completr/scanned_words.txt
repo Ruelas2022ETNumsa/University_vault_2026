@@ -31175,6 +31175,7 @@ descubierto
 describa
 divididas
 diferencias
+desactivaba
 Vault
 Verificar
 Variables
@@ -55729,6 +55730,7 @@ slugcorto
 superficial
 secante
 segmentaria
+sincronizarse
 vault
 vil
 ver
@@ -144282,6 +144284,7 @@ parent
 polinomial
 predictor
 problem
+propagaba
 min
 mica
 movimiento
@@ -169944,6 +169947,7 @@ esper
 editamos
 edites
 explorada
+excluidos
 Motor
 Media
 Mantiene
@@ -196938,6 +196942,7 @@ insertarlos
 iterativos
 interpolaci
 ingenieros
+intencionalmente
 Dependencia
 Dropbox
 Dataview

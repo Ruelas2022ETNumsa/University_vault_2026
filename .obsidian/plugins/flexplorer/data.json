@@ -5,7 +5,6 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
-        "desktop.ini",
         "Rubbish",
         "void.md",
         "_assets",
@@ -1232,6 +1231,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "marginalia_solve.md",
         "google_drive_solve.md",
         "claude_solve.md",
         "git_solve.md"
@@ -1319,7 +1319,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "_assets-section.tmp",
+        "_sync-system 1.md",
         "_library_ETN505(i).md",
         "_claude-matter-boot.md",
         "_notebooklm-system 1.md",
@@ -2989,7 +2989,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "2026-06-13",
+        "2026-07-08",
         "2026-07-09",
         "2026-06-12",
         "tmp"
@@ -2999,11 +2999,7 @@
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
-      "customOrder": [
-        "zborrarborrar00009.md",
-        "zborrarborrar22222222222.md",
-        "zborrarborrarrr2.md"
-      ]
+      "customOrder": []
     },
     "Rubbish/tmp": {
       "isPinned": false,
@@ -3021,485 +3017,489 @@
       "isPinned": false,
       "isHidden": false
     },
-    "desktop.ini": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-06-12/zborrarborrar00009.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-06-12/zborrarborrar22222222222.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-06-12/zborrarborrarrr2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-06-13": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "2026-06-13 17.41.07.0",
-        "_sync-system 1.md",
-        "_sync-system.md"
-      ]
-    },
-    "Rubbish/2026-06-13/2026-06-13 17.41.07.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "_sync-system.md"
-      ]
-    },
-    "Rubbish/2026-06-13/2026-06-13 17.41.07.0/_sync-system.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-06-13/_sync-system 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-06-13/_sync-system.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Rubbish/2026-07-09": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "2026-07-09 15.57.50.0",
-        "2026-07-09 15.57.50.1",
-        "921_enunciado.md",
-        "app.json",
-        "appearance.json",
-        "borrar00009.md",
-        "borrarrr2.md",
-        "comfor numbss.png",
-        "comfor numbss - copia.png",
-        "claude_solve.md",
-        "contextogen.md",
-        "data.json",
-        "E1.md",
-        "desmos_guide.md",
-        "latex_guide.md",
-        "MAT101-Números-reales-y-desigualdades.md",
-        "MAT101T0_transcripcion.md",
-        "MAT101-NúmerosT0connotebook.md",
-        "MAT101_T0_0conclaude.md",
-        "MAT101_T0_1enriquezido.md",
-        "MAT101_T1-Funciones-reales.md",
-        "mega.md",
-        "notebooklm_modes.md",
-        "obsidian_guide.md",
-        "scanned_words.txt",
-        "plugin_guide.md",
-        "Sem_05",
-        "TagsRoutes",
-        "tags_notes.md",
-        "tpl-asteroid.md",
-        "tpl-comet.md",
-        "tpl-moon.md",
-        "tpl-nebula.md",
-        "tpl-planet.md",
-        "tpl-photon.md",
-        "transcription_guide.md",
-        "University_vault_2026 (2).lnk",
-        "University_vault_2026.lnk",
-        "zborrar1111111111111.md",
-        "zborrar111das111.md",
-        "zborrar903 2.md",
-        "zborrar903 3 arquietxtura.md",
-        "zborrar903 3.md",
-        "zborrar903.md",
-        "zborrar903_3 otro.md",
-        "zborrar921_enunciado.md",
-        "zborrar903_3gemino.md",
-        "_basic-memory-system.md",
-        "_claude-boot.md",
-        "_excalidraw-system.md",
-        "_graph-system.md",
-        "_galaxy-system.md",
-        "_library-system.md",
-        "_mindmap-system.md",
-        "_note-system.md",
-        "_notebooklm-prompt.md",
-        "_notebooklm-system.md",
-        "_pdf-system.md",
-        "_PDF.lnk",
-        "_sync-system 1.md",
-        "_template-system.md",
-        "_sync-system.md",
-        "_ToDo-system.md"
-      ]
-    },
-    "Rubbish/2026-07-09/2026-07-09 15.57.50.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
+        "megaignore",
+        "multi-column-markdown",
+        "notebook-mindmap-to-canvas",
+        "pdf-to-md",
+        "OA-file-hider",
+        "remotely-save",
+        "tags-routes",
         "data.json"
       ]
-    },
-    "Rubbish/2026-07-09/2026-07-09 15.57.50.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-09/2026-07-09 15.57.50.1": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-07-09/2026-07-09 15.57.50.1/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-09/921_enunciado.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-09/app.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-09/appearance.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-09/borrar00009.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-09/borrarrr2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-09/comfor numbss.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-09/comfor numbss - copia.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-09/claude_solve.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-09/contextogen.md": {
-      "isPinned": false,
-      "isHidden": false
     },
     "Rubbish/2026-07-09/data.json": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-09/E1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-09/desmos_guide.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-09/latex_guide.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-09/MAT101-Números-reales-y-desigualdades.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-09/MAT101T0_transcripcion.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-09/MAT101-NúmerosT0connotebook.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-09/MAT101_T0_0conclaude.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-09/MAT101_T0_1enriquezido.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-09/MAT101_T1-Funciones-reales.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-09/mega.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-09/notebooklm_modes.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-09/obsidian_guide.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-09/scanned_words.txt": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-09/plugin_guide.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-09/Sem_05": {
+    "Rubbish/2026-07-08": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "ETN506"
+        "2026-07-08 17.12.32.0",
+        "2026-07-08 17.14.53.0",
+        "2026-07-08 18.00.26.0",
+        "2026-07-08 18.35.49.0",
+        "2026-07-08 18.40.43.0",
+        "2026-07-08 22.06.56.0",
+        "2026-07-08 18.37.13.0",
+        "2026-07-08 22.48.27.0",
+        "2026-07-08 22.51.14.0",
+        "2026-07-08 23.06.46.0",
+        "2026-07-08 23.16.07.0",
+        "2026-07-08 23.17.39.0",
+        "2026-07-08 23.30.31.0",
+        "appearance.json",
+        "community-plugins.json",
+        "cornell_guide 1 1.md",
+        "data.json",
+        "main.js",
+        "manifest.json",
+        "mobile-line-width.css",
+        "multi-column-markdown",
+        "notebook-mindmap-to-canvas",
+        "remotely-save",
+        "tags-routes"
       ]
     },
-    "Rubbish/2026-07-09/Sem_05/ETN506": {
+    "Rubbish/2026-07-08/2026-07-08 17.12.32.0": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "Partial_2"
+        "data.json"
       ]
     },
-    "Rubbish/2026-07-09/Sem_05/ETN506/Partial_2": {
+    "Rubbish/2026-07-08/2026-07-08 17.12.32.0/data.json": {
       "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": []
+      "isHidden": false
     },
-    "Rubbish/2026-07-09/TagsRoutes": {
+    "Rubbish/2026-07-08/2026-07-08 17.14.53.0": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "logMessage.md",
-        "graph-screenshot",
-        "logs",
-        "patch-log.txt",
-        "reports"
+        "data.json"
       ]
     },
-    "Rubbish/2026-07-09/TagsRoutes/logMessage.md": {
+    "Rubbish/2026-07-08/2026-07-08 17.14.53.0/data.json": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-09/TagsRoutes/graph-screenshot": {
+    "Rubbish/2026-07-08/2026-07-08 18.00.26.0": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "graph-screenshot-2026-05-14-23-30-50.png",
-        "graph-screenshot-2026-05-14-23-30-57.png",
-        "graph-screenshot-2026-05-14-23-31-02.png"
+        "data.json"
       ]
     },
-    "Rubbish/2026-07-09/TagsRoutes/graph-screenshot/graph-screenshot-2026-05-14-23-30-50.png": {
+    "Rubbish/2026-07-08/2026-07-08 18.00.26.0/data.json": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-09/TagsRoutes/graph-screenshot/graph-screenshot-2026-05-14-23-30-57.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-09/TagsRoutes/graph-screenshot/graph-screenshot-2026-05-14-23-31-02.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-09/TagsRoutes/logs": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": []
-    },
-    "Rubbish/2026-07-09/TagsRoutes/patch-log.txt": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-09/TagsRoutes/reports": {
+    "Rubbish/2026-07-08/2026-07-08 18.35.49.0": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "TagReport_#e0ac00.md",
-        "TagReport_frontmatter_tag_Leaves.md",
-        "TagReport_frontmatter_tag_ETN806.md",
-        "TagReport_frontmatter_tag_ETN-302.md",
-        "TagReport_frontmatter_tag_Parte_II.md"
+        "data.json",
+        "manifest.json"
       ]
     },
-    "Rubbish/2026-07-09/TagsRoutes/reports/TagReport_#e0ac00.md": {
+    "Rubbish/2026-07-08/2026-07-08 18.35.49.0/data.json": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-09/TagsRoutes/reports/TagReport_frontmatter_tag_Leaves.md": {
+    "Rubbish/2026-07-08/2026-07-08 18.35.49.0/manifest.json": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-09/TagsRoutes/reports/TagReport_frontmatter_tag_ETN806.md": {
+    "Rubbish/2026-07-08/2026-07-08 18.40.43.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-07-08/2026-07-08 18.40.43.0/data.json": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-09/TagsRoutes/reports/TagReport_frontmatter_tag_ETN-302.md": {
+    "Rubbish/2026-07-08/2026-07-08 22.06.56.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-07-08/2026-07-08 22.06.56.0/data.json": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-09/TagsRoutes/reports/TagReport_frontmatter_tag_Parte_II.md": {
+    "Rubbish/2026-07-08/2026-07-08 18.37.13.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json",
+        "manifest.json"
+      ]
+    },
+    "Rubbish/2026-07-08/2026-07-08 18.37.13.0/data.json": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-09/tags_notes.md": {
+    "Rubbish/2026-07-08/2026-07-08 18.37.13.0/manifest.json": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-09/tpl-asteroid.md": {
+    "Rubbish/2026-07-08/2026-07-08 22.48.27.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "appearance.json"
+      ]
+    },
+    "Rubbish/2026-07-08/2026-07-08 22.48.27.0/appearance.json": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-09/tpl-comet.md": {
+    "Rubbish/2026-07-08/2026-07-08 22.51.14.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-07-08/2026-07-08 22.51.14.0/data.json": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-09/tpl-moon.md": {
+    "Rubbish/2026-07-08/2026-07-08 23.06.46.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-07-08/2026-07-08 23.06.46.0/data.json": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-09/tpl-nebula.md": {
+    "Rubbish/2026-07-08/2026-07-08 23.16.07.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "appearance.json"
+      ]
+    },
+    "Rubbish/2026-07-08/2026-07-08 23.16.07.0/appearance.json": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-09/tpl-planet.md": {
+    "Rubbish/2026-07-08/2026-07-08 23.17.39.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-07-08/2026-07-08 23.17.39.0/data.json": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-09/tpl-photon.md": {
+    "Rubbish/2026-07-08/2026-07-08 23.30.31.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json",
+        "mobile-line-width.css"
+      ]
+    },
+    "Rubbish/2026-07-08/2026-07-08 23.30.31.0/data.json": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-09/transcription_guide.md": {
+    "Rubbish/2026-07-08/2026-07-08 23.30.31.0/mobile-line-width.css": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-09/University_vault_2026 (2).lnk": {
+    "Rubbish/2026-07-08/appearance.json": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-09/University_vault_2026.lnk": {
+    "Rubbish/2026-07-08/community-plugins.json": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-09/zborrar1111111111111.md": {
+    "Rubbish/2026-07-08/cornell_guide 1 1.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-09/zborrar111das111.md": {
+    "Rubbish/2026-07-08/data.json": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-09/zborrar903 2.md": {
+    "Rubbish/2026-07-08/main.js": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-09/zborrar903 3 arquietxtura.md": {
+    "Rubbish/2026-07-08/manifest.json": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-09/zborrar903 3.md": {
+    "Rubbish/2026-07-08/mobile-line-width.css": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-09/zborrar903.md": {
+    "Rubbish/2026-07-08/multi-column-markdown": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "main.js",
+        "manifest.json",
+        "styles.css"
+      ]
+    },
+    "Rubbish/2026-07-08/multi-column-markdown/main.js": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-09/zborrar903_3 otro.md": {
+    "Rubbish/2026-07-08/multi-column-markdown/manifest.json": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-09/zborrar921_enunciado.md": {
+    "Rubbish/2026-07-08/multi-column-markdown/styles.css": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-09/zborrar903_3gemino.md": {
+    "Rubbish/2026-07-08/notebook-mindmap-to-canvas": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "main.js",
+        "manifest.json",
+        "styles.css"
+      ]
+    },
+    "Rubbish/2026-07-08/notebook-mindmap-to-canvas/main.js": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-09/_basic-memory-system.md": {
+    "Rubbish/2026-07-08/notebook-mindmap-to-canvas/manifest.json": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-09/_claude-boot.md": {
+    "Rubbish/2026-07-08/notebook-mindmap-to-canvas/styles.css": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-09/_excalidraw-system.md": {
+    "Rubbish/2026-07-08/remotely-save": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json",
+        "main.js",
+        "manifest.json",
+        "styles.css"
+      ]
+    },
+    "Rubbish/2026-07-08/remotely-save/data.json": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-09/_graph-system.md": {
+    "Rubbish/2026-07-08/remotely-save/main.js": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-09/_galaxy-system.md": {
+    "Rubbish/2026-07-08/remotely-save/manifest.json": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-09/_library-system.md": {
+    "Rubbish/2026-07-08/remotely-save/styles.css": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-09/_mindmap-system.md": {
+    "Rubbish/2026-07-08/tags-routes": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "main.js",
+        "manifest.json",
+        "styles.css"
+      ]
+    },
+    "Rubbish/2026-07-08/tags-routes/main.js": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-09/_note-system.md": {
+    "Rubbish/2026-07-08/tags-routes/manifest.json": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-09/_notebooklm-prompt.md": {
+    "Rubbish/2026-07-08/tags-routes/styles.css": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-09/_notebooklm-system.md": {
+    "Rubbish/2026-07-09/megaignore": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-09/_pdf-system.md": {
+    "Rubbish/2026-07-09/multi-column-markdown": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "main.js",
+        "manifest.json",
+        "styles.css"
+      ]
+    },
+    "Rubbish/2026-07-09/multi-column-markdown/main.js": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-09/_PDF.lnk": {
+    "Rubbish/2026-07-09/multi-column-markdown/manifest.json": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-09/_sync-system 1.md": {
+    "Rubbish/2026-07-09/multi-column-markdown/styles.css": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-09/_template-system.md": {
+    "Rubbish/2026-07-09/notebook-mindmap-to-canvas": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "main.js",
+        "manifest.json",
+        "styles.css"
+      ]
+    },
+    "Rubbish/2026-07-09/notebook-mindmap-to-canvas/main.js": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-09/_sync-system.md": {
+    "Rubbish/2026-07-09/notebook-mindmap-to-canvas/manifest.json": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-09/_ToDo-system.md": {
+    "Rubbish/2026-07-09/notebook-mindmap-to-canvas/styles.css": {
       "isPinned": false,
       "isHidden": false
     },
-    "_app/_config/_assets-section.tmp": {
+    "Rubbish/2026-07-09/pdf-to-md": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "main.js",
+        "manifest.json"
+      ]
+    },
+    "Rubbish/2026-07-09/pdf-to-md/main.js": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/pdf-to-md/manifest.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/OA-file-hider": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json",
+        "main.js",
+        "manifest.json"
+      ]
+    },
+    "Rubbish/2026-07-09/OA-file-hider/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/OA-file-hider/main.js": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/OA-file-hider/manifest.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/remotely-save": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json",
+        "main.js",
+        "manifest.json",
+        "styles.css"
+      ]
+    },
+    "Rubbish/2026-07-09/remotely-save/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/remotely-save/main.js": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/remotely-save/manifest.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/remotely-save/styles.css": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/tags-routes": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "main.js",
+        "manifest.json",
+        "styles.css"
+      ]
+    },
+    "Rubbish/2026-07-09/tags-routes/main.js": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/tags-routes/manifest.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/tags-routes/styles.css": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_config/_sync-system 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/solve/marginalia_solve.md": {
       "isPinned": false,
       "isHidden": false
     }
