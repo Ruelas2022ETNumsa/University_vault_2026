@@ -213,3 +213,14 @@ Linear calendar, routines, subjects, and dynamic spaced review.
 ### Cornell Board 🌌 [1/0]
 Activate an infinite, freeform canvas to drag, connect, and visually
 materialize marginalias.
+
+
+
+
+
+
+
+
+
+
+[_galaxy-system](E:\University_vault_2026\_app\_config\_galaxy-system.md)

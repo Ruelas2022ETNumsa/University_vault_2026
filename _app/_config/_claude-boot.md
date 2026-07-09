@@ -307,9 +307,65 @@ Convención interna del vault para respaldar archivos antes de editarlos:
 9. **El usuario crea los backups, Claude edita el original directamente** — no ofrecer ni confirmar respaldo antes de editar un beacon, salvo que el usuario indique lo contrario.
 10. **Actualizar `date_updated`** en el YAML de cualquier beacon que se modifique.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## SISTEMA DE LINKS — DOS CAPAS
+
+El vault mantiene dos capas de conexión en cada nota. Son redundantes intencionalmente durante la fase de transición:
+
+| Capa | Ubicación | Para quién | Estado |
+|---|---|---|---|
+| `related_notes` en YAML | Frontmatter | Obsidian + Claude | Activo — se elimina cuando se confirme que `galaxy-links` sostiene el grafo solo |
+| `%% galaxy-links %%` | Pie del archivo | Obsidian + Claude | Activo — fuente principal a largo plazo |
+
+### Cómo Claude usa los galaxy-links
+
+El Filesystem MCP tiene como raíz `E:\University_vault_2026`. Los `galaxy-links` usan ruta relativa desde esa raíz:
+
+```
 %%
 galaxy-links
-[[_galaxy-system]]
+[[_app/_config/_galaxy-system]]
+[[Semesters/Sem_09/ETN901/Partial_1/ETN901-T01-intro]]
+%%
+```
+
+Si Claude necesita más contexto sobre un archivo enlazado, puede leerlo directamente usando la ruta del wikilink como ruta relativa desde la raíz del vault. No es necesario escribir la ruta absoluta en el link.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%
+galaxy-links
+
+[[_app/_config/_galaxy-system]]
+
+
 [[_note-system]]
 [[_template-system]]
 [[_pdf-system]]
