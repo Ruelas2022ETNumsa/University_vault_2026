@@ -1319,10 +1319,8 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "_sync-system 1.md",
         "_library_ETN505(i).md",
         "_claude-matter-boot.md",
-        "_notebooklm-system 1.md",
         "_TABnote-system.md",
         "_library_MAT101.md",
         "_basic-memory-system.md",
@@ -1345,7 +1343,7 @@
       "isHidden": false
     },
     "_app/_config/_claude-boot.md": {
-      "isPinned": false,
+      "isPinned": true,
       "isHidden": false
     },
     "_app/_config/_excalidraw-system.md": {
@@ -2508,10 +2506,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_app/_config/_notebooklm-system 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_app/_config/_TABnote-system.md": {
       "isPinned": false,
       "isHidden": false
@@ -2608,7 +2602,7 @@
         "MAT101-study.md",
         "MAT101-transcription-legacy.md",
         "MAT101-transcription.md",
-        "MAT101-transcription (multi columns pluggin).md"
+        "MAT101-transcription (multi columns pluggin)-legacy.md"
       ]
     },
     "_app/notebooklm/prompts/MAT101/MAT101-study.md": {
@@ -2620,10 +2614,6 @@
       "isHidden": false
     },
     "_app/notebooklm/prompts/MAT101/MAT101-transcription.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/prompts/MAT101/MAT101-transcription (multi columns pluggin).md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -3495,17 +3485,18 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_app/_config/_sync-system 1.md": {
+    "_app/solve/marginalia_solve.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_app/solve/marginalia_solve.md": {
+    "_app/notebooklm/prompts/MAT101/MAT101-transcription (multi columns pluggin)-legacy.md": {
       "isPinned": false,
       "isHidden": false
     }
   },
   "pinnedFiles": [
-    "_app/_appnotes/PDF_PP-guide.md"
+    "_app/_appnotes/PDF_PP-guide.md",
+    "_app/_config/_claude-boot.md"
   ],
   "showHidden": false,
   "newItemPlacement": "top",

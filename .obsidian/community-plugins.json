@@ -7,7 +7,6 @@
   "table-editor-obsidian",
   "attachment-management",
   "obsidian-style-settings",
-  "flexplorer",
   "cmdr",
   "cornell-marginalia",
   "cornell-notes",
@@ -15,5 +14,6 @@
   "settings-float",
   "templater-obsidian",
   "python-scripter",
-  "obsidian-git"
+  "obsidian-git",
+  "flexplorer"
 ]
