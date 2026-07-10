@@ -5,6 +5,7 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
+        "Sin título.md",
         "Rubbish",
         "void.md",
         "_assets",
@@ -3490,6 +3491,10 @@
       "isHidden": false
     },
     "_app/notebooklm/prompts/MAT101/MAT101-transcription (multi columns pluggin)-legacy.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Sin título.md": {
       "isPinned": false,
       "isHidden": false
     }
