@@ -15,7 +15,6 @@ orbiting:
   - "[[MAT101-T00-recta_real_intervalos]]"
   - "[[MAT101-T00-valor_absoluto]]"
   - "[[MAT101-T00-inecuaciones_lineales]]"
-  - "[[MAT101-T00-metodo_signos]]"
 comets:
   - "[[MAT101-T00-ej_inec_x4_9x2]]"
   - "[[MAT101-T00-ej_inec_racional_fracciones]]"
@@ -58,7 +57,6 @@ galaxy-links
 [[MAT101-T00-recta_real_intervalos]]
 [[MAT101-T00-valor_absoluto]]
 [[MAT101-T00-inecuaciones_lineales]]
-[[MAT101-T00-metodo_signos]]
 [[MAT101-T00-ej_inec_x4_9x2]]
 [[MAT101-T00-ej_inec_racional_fracciones]]
 [[MAT101-T00-ej_inec_valabs_fraccion]]
