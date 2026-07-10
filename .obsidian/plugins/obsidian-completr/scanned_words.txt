@@ -31176,6 +31176,7 @@ describa
 divididas
 diferencias
 desactivaba
+densas
 Vault
 Verificar
 Variables
@@ -87889,6 +87890,7 @@ compuesto
 corrector
 calor
 conducci
+coincidan
 updated
 un
 universo
@@ -144285,6 +144287,7 @@ polinomial
 predictor
 problem
 propagaba
+prolongaci
 min
 mica
 movimiento
@@ -169948,6 +169951,7 @@ editamos
 edites
 explorada
 excluidos
+emplea
 Motor
 Media
 Mantiene

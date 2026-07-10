@@ -1251,6 +1251,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "Rclone_guide.md",
         "cornell_guide.md",
         "zettakasten_guide_temp.md",
         "Marginalia_guide.md",
@@ -1320,6 +1321,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "_sync-system 1.md",
         "_library_ETN505(i).md",
         "_claude-matter-boot.md",
         "_TABnote-system.md",
@@ -3495,6 +3497,14 @@
       "isHidden": false
     },
     "Sin título.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_config/_sync-system 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_appnotes/Rclone_guide.md": {
       "isPinned": false,
       "isHidden": false
     }
