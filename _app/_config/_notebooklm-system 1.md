@@ -12,13 +12,12 @@ related_notes:
   - "[[guides/MAT101/MAT101_desmos]]"
   - "[[guides/MAT101/MAT101_TikzJax]]"
   - "[[_ToDo-system]]"
-  - "[[Rclone_guide]]"
 tags:
   - beacon
   - notebooklm
   - infraestructura
 date_created: 2026-06-03
-date_updated: 2026-07-10
+date_updated: 2026-07-03
 status: activo
 ---
 
@@ -96,8 +95,7 @@ de cada materia.
    que se pegan directamente en notas galaxy del vault
         ↓
 4. Si la nota en el vault cambia significativamente,
-   rclone sync sube el .md a Drive automáticamente cada hora
-   → hacer refresh manual de la fuente en NotebookLM
+   se resubí el .md a NotebookLM (no sincroniza automático)
 ```
 
 **Por qué .md como fuente y no PDF:**
@@ -266,7 +264,7 @@ Paso 6 — Configurar NotebookLM
 | Un prompt por materia/parcial | Cada parcial tiene programa, fórmulas y nivel de rigor distintos — un prompt único por materia produce respuestas menos precisas a medida que avanza el semestre |
 | .md como fuente principal, no PDF | El .md preserva LaTeX como texto y código Desmos como referencia — el PDF los convierte a imagen y pierde contenido matemático |
 | Guía de transcripción general en pausa | Requiere definir primero cómo estructurar los apuntes manuscritos para optimizar la transcripción — es decisión de diseño previa a la guía técnica |
-| Sync de guías vía rclone + refresh manual en NotebookLM | NotebookLM no detecta cambios automáticamente — rclone sube las guías a Drive cada hora (Task Scheduler); el refresh en NotebookLM sigue siendo manual. Ver [[Rclone_guide]] |
+| Resubida manual al actualizar la nota | NotebookLM no sincroniza con el vault — resubir el .md cuando la nota cambie significativamente |
 | `MAT101_desmos.md` siempre como fuente | Todas las materias pueden necesitar graficación — la guía garantiza sintaxis correcta en cualquier notebook |
 | Flujo de materia nueva documentado aquí y no en `_library-system` | El flujo es operativo de NotebookLM — `_library-system` cubre solo la selección de libros; este beacon cubre todo lo que sigue hasta tener el notebook activo |
 | `_library_ETNXXX.md` separado de `ETNXXX_library.md` | Audiencias distintas: el primero es guía personal legible para el usuario; el segundo es fuente técnica densa para NotebookLM. Unirlos degradaría la utilidad de ambos |
@@ -279,5 +277,4 @@ galaxy-links
 [[guides/MAT101/MAT101_desmos]]
 [[guides/MAT101/MAT101_TikzJax]]
 [[_ToDo-system]]
-[[Rclone_guide]]
 %%

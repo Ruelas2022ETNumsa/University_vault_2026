@@ -20318,6 +20318,7 @@ SOLUCI
 Seidel
 Simpson
 Steven
+Scheduler
 Plugins
 Pendientes
 Plugin
@@ -74854,6 +74855,8 @@ reemplazos
 rueba
 reloj
 recientes
+rclone
+refresh
 notes
 notas
 nuevas
@@ -87891,6 +87894,7 @@ corrector
 calor
 conducci
 coincidan
+credenciales
 updated
 un
 universo
@@ -106496,6 +106500,7 @@ Cuadratura
 Crank
 Chapra
 Canale
+Consumo
 Instalados
 Instalado
 Instalar
@@ -210260,6 +210265,7 @@ Raymond
 Richard
 Ronald
 Randall
+Rclone
 Hider
 Hace
 Herramientas

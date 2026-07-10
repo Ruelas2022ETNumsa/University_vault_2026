@@ -14,7 +14,7 @@ tags:
   - github
   - infraestructura
 date_created: 2026-05-28
-date_updated: 2026-07-10
+date_updated: 2026-07-09
 status: activo
 ---
 
@@ -96,7 +96,6 @@ Obsidian Git → GitHub (auto-commit cada 5 min)
 - [x] Google Drive eliminado por completo — TAB_nexus, symlink y Autosync removidos ✅
 - [x] `_PDF` dentro del vault reemplaza a TAB_nexus como carpeta de PDFs ✅
 - [x] Flujo completo verificado: vault sincroniza entre PC, laptop, tablet y celular vía Mega ✅
-- [x] **Rclone** instalado y configurado — sync automático de fuentes NotebookLM hacia Google Drive cada 1 hora vía Task Scheduler ✅ → ver [[Rclone_guide]]
 
 > Tareas y pendientes: [[_ToDo-system]]
 
@@ -237,29 +236,6 @@ Obsidian Git detecta cambio → auto-pull → vault local actualizado
 - Claude **no puede ejecutar comandos de terminal** (git push, git pull, etc.) por ninguno de los métodos.
 - Con MCP Filesystem, si la PC se apaga a mitad de una edición, los cambios quedan en disco pero **no sincronizados** hasta que Obsidian Git corra de nuevo.
 - El Conector nativo de GitHub es el más limitado pero el más sencillo de usar para consultas rápidas.
-
----
-
-## Sincronización Rclone — Fuentes NotebookLM (desde 2026-07-10)
-
-Rclone sincroniza exclusivamente la carpeta `_app/notebooklm/` del vault hacia Google Drive.
-No reemplaza a Mega ni a Git — cumple un rol específico como canal hacia NotebookLM.
-
-| Qué | Detalle |
-|---|---|
-| Herramienta | Rclone v1.74.4 |
-| Remote configurado | `gdrive` (Google Drive, cuenta personal) |
-| Carpeta local | `E:\University_vault_2026\_app\notebooklm\` |
-| Carpeta en Drive | `NotebookLM_sources/` |
-| Frecuencia | Automático cada 1 hora vía Task Scheduler |
-| Consumo | Mínimo — proceso que corre segundos y termina, no permanente |
-
-Comando de sync:
-```bash
-rclone sync "E:\University_vault_2026\_app\notebooklm" gdrive:NotebookLM_sources
-```
-
-> Configuración completa, credenciales y solución de problemas: [[Rclone_guide]]
 
 ---
 
@@ -454,7 +430,6 @@ Si el dispositivo B estaba **apagado cuando PC borró X**, y antes de encender B
 galaxy-links
 [[_galaxy-system]]
 [[_ToDo-system]]
-[[Rclone_guide]]
 %%
 
 
