@@ -1321,7 +1321,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "_sync-system 1.md",
+        "_notebooklm-system 1.md",
         "_library_ETN505(i).md",
         "_claude-matter-boot.md",
         "_TABnote-system.md",
@@ -3500,11 +3500,11 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_app/_config/_sync-system 1.md": {
+    "_app/_appnotes/Rclone_guide.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_app/_appnotes/Rclone_guide.md": {
+    "_app/_config/_notebooklm-system 1.md": {
       "isPinned": false,
       "isHidden": false
     }
