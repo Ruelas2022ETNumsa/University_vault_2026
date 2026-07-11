@@ -71,7 +71,6 @@ status: activo
 - [x] ~~Flujo vault → tablet verificado (Drive)~~ — superado por el flujo Mega
 
 ### Sincronización tablet — modelo actual (dos canales, cerrado 2026-06-24)
-
 > Ver [[_TABnote-system]]. Dos canales independientes:
 > - **Mega** → sincroniza el vault de Obsidian completo (PC ↔ laptop ↔ tablet ↔ celular).
 > - **Samsung Account / Samsung Notes** → sincroniza los archivos `.sdocx` (apuntes manuscritos). Estos `.sdocx` **no forman parte del vault** — son material bruto que NotebookLM transcribe a notas `supernova`.

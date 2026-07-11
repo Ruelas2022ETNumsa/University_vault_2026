@@ -1,0 +1,85 @@
+import sys
+import os
+import json
+import shutil
+import re
+
+file_path  = sys.argv[1]
+vault_path = sys.argv[2]
+
+# --- Rutas fijas ---
+section_md   = os.path.join(vault_path, "Rubbish", "section.md")
+section_json = os.path.join(vault_path, ".obsidian", "scripts", "python", "section_tool", "section.json")
+
+# --- Validar que section.md tiene contenido ---
+if not os.path.exists(section_md) or os.path.getsize(section_md) == 0:
+    print("section.md está vacío. Corré section_extract primero.")
+    sys.exit(0)
+
+# --- Leer metadata ---
+if not os.path.exists(section_json):
+    print("section.json no encontrado. Corré section_extract primero.")
+    sys.exit(0)
+
+with open(section_json, 'r', encoding='utf-8') as f:
+    meta = json.load(f)
+
+heading     = meta["heading"]
+source_path = meta["source_path"]
+
+# --- Validar archivo fuente ---
+if not os.path.exists(source_path):
+    print(f"Archivo original no encontrado: {source_path}")
+    sys.exit(0)
+
+# --- Crear backup (nombre 1.md, nombre 2.md, etc.) ---
+base, ext = os.path.splitext(source_path)
+n = 1
+while True:
+    backup_path = f"{base} {n}{ext}"
+    if not os.path.exists(backup_path):
+        break
+    n += 1
+shutil.copy2(source_path, backup_path)
+
+# --- Leer archivo fuente ---
+with open(source_path, 'r', encoding='utf-8') as f:
+    lines = f.readlines()
+
+# --- Detectar nivel del heading ---
+match = re.match(r'^(#+)\s', heading)
+level = len(match.group(1))
+pattern = re.compile(r'^#{1,' + str(level) + r'}\s')
+
+# --- Buscar inicio y fin de la sección original ---
+start = None
+for i, line in enumerate(lines):
+    if line.rstrip('\n') == heading:
+        start = i
+        break
+
+if start is None:
+    print(f"No se encontró en el original: {heading}")
+    sys.exit(0)
+
+end = len(lines)
+for i in range(start + 1, len(lines)):
+    if pattern.match(lines[i]):
+        end = i
+        break
+
+# --- Leer contenido editado de section.md ---
+with open(section_md, 'r', encoding='utf-8') as f:
+    new_section = f.readlines()
+
+# --- Reemplazar sección en el original ---
+new_lines = lines[:start] + new_section + lines[end:]
+
+with open(source_path, 'w', encoding='utf-8') as f:
+    f.writelines(new_lines)
+
+# --- Limpiar section.md y section.json ---
+open(section_md, 'w').close()
+os.remove(section_json)
+
+print(f"Sección reintegrada: {heading} | Backup: {os.path.basename(backup_path)}")
