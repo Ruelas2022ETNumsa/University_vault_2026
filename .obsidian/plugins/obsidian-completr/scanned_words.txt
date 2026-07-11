@@ -55758,6 +55758,8 @@ small
 shell
 stdout
 stderr
+sistem
+sostiene
 vault
 vil
 ver
@@ -87938,6 +87940,7 @@ conf
 conectividad
 cercanos
 complementarios
+confirme
 updated
 un
 universo
@@ -106551,6 +106554,7 @@ Console
 Correr
 Commands
 Confirmaci
+CAPAS
 Instalados
 Instalado
 Instalar
@@ -119851,6 +119855,7 @@ Flatness
 FUNCIONAL
 Formulaci
 Faires
+Frontmatter
 Estado
 Excalidraw
 EPUBs
@@ -170028,6 +170033,7 @@ exponerse
 enteras
 emitir
 exitoso
+elimine
 Motor
 Media
 Mantiene
