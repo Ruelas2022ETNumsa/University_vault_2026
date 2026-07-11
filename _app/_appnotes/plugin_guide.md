@@ -29,8 +29,7 @@ status: activo
 - [[#5. Commander — Botones personalizados en el ribbon]]
 - [[#6. Flexplorer — Explorador de archivos mejorado]]
 - [[#7. Attachment Management — Renombrar y organizar imágenes pegadas]]
-- [[#8. Python Scripter — Scripts Python como comandos]]
-- [[#8.5 Shell Commands — Comandos de sistema desde Obsidian]]
+- [[#8. Shell Commands — Comandos de sistema desde Obsidian]]
 - [[#9. Galaxy View — Visualización 3D del grafo del vault]]
 
 ---
@@ -212,11 +211,6 @@ Contenido desarrollo...
 ````
 ``````
 
-
-
-
-
-
 > El script `notebooklm_fix` inserta los bloques `marginalia` automáticamente. Ver sección 8.
 
 ### Ejemplo de uso
@@ -249,10 +243,13 @@ La nota `%%> Ver demostración... %%` aparece al margen derecho sin ocupar espac
 
 ### Botones configurados en el vault
 
-| Botón | Comando | Uso |
-|-------|---------|-----|
-| Crear nota desde plantilla | `Templater: Create new note from template` | Abre el selector de plantillas galaxy para crear cualquier tipo de nota |
-| Recargar Obsidian | `Reload app without saving` | Fuerza el re-render de bloques TikZJax que no renderizan en el primer arranque |
+| Botón                      | Comando                                          | Uso                                                                            |
+| -------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------ |
+| Crear nota desde plantilla | `Templater: Create new note from template`       | Abre el selector de plantillas galaxy para crear cualquier tipo de nota        |
+| Recargar Obsidian          | `Reload app without saving`                      | Fuerza el re-render de bloques TikZJax que no renderizan en el primer arranque |
+| Sync NotebookLM            | `Shell Commands: Sync NotebookLM → Google Drive` | Fuerza el sync de rclone hacia Drive sin esperar el Task Scheduler             |
+| NotebookLM Fix             | `Shell Commands: NotebookLM Fix — nota activa`   | Aplica correcciones automáticas sobre la nota activa                           |
+Los botones listados son los críticos para el flujo del vault. Commander puede tener botones adicionales de uso personal no documentados aquí.
 
 ### Cómo agregar un botón nuevo
 
@@ -355,13 +352,44 @@ Esos dos pasos siguen siendo manuales o via plantilla `tpl-photon.md`. Ver [[_ga
 
 ---
 
-## 8. Python Scripter — Scripts Python como comandos
+## 8. Shell Commands — Comandos de sistema desde Obsidian
+
+**Plugin:** [taitava/obsidian-shellcommands](https://github.com/taitava/obsidian-shellcommands) — Community Plugins
+
+**Propósito:** Registra comandos de shell como comandos de Obsidian ejecutables desde el ribbon (vía Commander) o el Command Palette. Reemplaza a Python Scripter para comandos que no requieren lógica Python compleja.
+
+> **Estado (2026-07-10):** reemplaza a Python Scripter — traspaso exitoso. Ver subsección [[#Python Scripter — reemplazado por Shell Commands (2026-07-10)]].
+
+### Comandos configurados
+
+#### Sync NotebookLM → Google Drive
+
+| Campo | Valor |
+|---|---|
+| Alias | `Sync NotebookLM → Google Drive` |
+| Ícono | `upload-cloud` |
+| Comando | `rclone sync "E:\University_vault_2026\_app\notebooklm" gdrive:NotebookLM_sources --verbose` |
+| stdout | Notification balloon |
+| stderr | Error balloon |
+| Confirmación | No |
+
+**Acceso:** botón `upload-cloud` en el ribbon vía Commander → ejecuta el sync de inmediato sin esperar el Task Scheduler (sync automático cada 1 hora).
+
+**Output esperado:** notificación flotante con el log de rclone al terminar. Si no hay cambios, rclone puede no emitir output — el `--verbose` fuerza la notificación.
+
+> Configuración completa de rclone, remote `gdrive` y Task Scheduler: [[Rclone_guide]]
+> Sistema de sync general: [[_sync-system]]
+
+
+### Python Scripter — reemplazado por Shell Commands (2026-07-10)
+
+**Estado:** deshabilitado (2026-07-10) — mantenido como respaldo por precaución. Shell Commands reemplaza su función. Evaluar desinstalación definitiva en el futuro.
 
 **Plugin:** `nickrallison/obsidian-python-scripter` (instalado vía BRAT)
 
 **Propósito:** Registra scripts Python como comandos de Obsidian ejecutables desde el ribbon o el Command Palette. Permite automatizar correcciones y tareas sobre las notas del vault sin salir de Obsidian.
 
-### Configuración aplicada
+#### Configuración aplicada
 
 | Campo | Valor |
 |---|---|
@@ -370,7 +398,7 @@ Esos dos pasos siguen siendo manuales o via plantilla `tpl-photon.md`. Ver [[_ga
 | Include Vault Path | ON |
 | Output Type | Notice |
 
-### Estructura de scripts
+#### Estructura de scripts
 
 Cada script vive en su propia carpeta bajo `.obsidian/scripts/python/`. El plugin detecta cualquier carpeta con `src/main.py` y la registra como comando.
 
@@ -381,7 +409,7 @@ Cada script vive en su propia carpeta bajo `.obsidian/scripts/python/`. El plugi
         └── main.py
 ```
 
-### Script: notebooklm_fix
+#### Script: notebooklm_fix
 
 Corrige errores frecuentes que NotebookLM comete al generar notas `.md`. Opera sobre el archivo activo al momento de ejecutarse.
 
@@ -402,7 +430,7 @@ Corrige errores frecuentes que NotebookLM comete al generar notas `.md`. Opera s
 
 ---
 
-### Guía de configuración por script
+#### Guía de configuración por script
 
 Cada script tiene su propia configuración en Settings → Python Scripter → [nombre del script].
 
@@ -427,9 +455,9 @@ Cada script tiene su propia configuración en Settings → Python Scripter → [
 
 ---
 
-### Guía para escribir scripts
+#### Guía para escribir scripts
 
-#### Estructura base
+##### Estructura base
 
 Todo script debe comenzar con esta estructura. Ajustar según los toggles activados.
 
@@ -474,7 +502,7 @@ else:
 
 > **`void.md`** es el fallback que pasa el plugin cuando no hay nota activa. Siempre validar contra este valor para evitar operar sobre un archivo inexistente.
 
-#### Regex en Python — reglas de escape
+##### Regex en Python — reglas de escape
 
 El error más común al escribir regex para LaTeX en Python es el escape de `\`. Regla simple:
 
@@ -486,7 +514,7 @@ El error más común al escribir regex para LaTeX en Python es el escape de `\`.
 
 > Usar siempre **raw strings** `r"..."` en `re.sub()` — evita confusión y errores de escape.
 
-#### Cómo probar desde terminal
+##### Cómo probar desde terminal
 
 Antes de conectar el script a Obsidian, probarlo desde PowerShell:
 
@@ -498,39 +526,6 @@ Antes de conectar el script a Obsidian, probarlo desde PowerShell:
 ```
 
 Si devuelve `Sin cambios.` o `Correcciones realizadas.` — el script funciona. Si lanza excepción — hay un error antes de conectarlo a Obsidian.
-
-
-
-
----
-
-## 8.5 Shell Commands — Comandos de sistema desde Obsidian
-
-**Plugin:** [taitava/obsidian-shellcommands](https://github.com/taitava/obsidian-shellcommands) — Community Plugins
-
-**Propósito:** Registra comandos de shell como comandos de Obsidian ejecutables desde el ribbon (vía Commander) o el Command Palette. Reemplaza a Python Scripter para comandos que no requieren lógica Python compleja.
-
-> **Estado (2026-07-10):** en evaluación como reemplazo de Python Scripter. Ver sección 8.
-
-### Comandos configurados
-
-#### Sync NotebookLM → Google Drive
-
-| Campo | Valor |
-|---|---|
-| Alias | `Sync NotebookLM → Google Drive` |
-| Ícono | `upload-cloud` |
-| Comando | `rclone sync "E:\University_vault_2026\_app\notebooklm" gdrive:NotebookLM_sources --verbose` |
-| stdout | Notification balloon |
-| stderr | Error balloon |
-| Confirmación | No |
-
-**Acceso:** botón `upload-cloud` en el ribbon vía Commander → ejecuta el sync de inmediato sin esperar el Task Scheduler (sync automático cada 1 hora).
-
-**Output esperado:** notificación flotante con el log de rclone al terminar. Si no hay cambios, rclone puede no emitir output — el `--verbose` fuerza la notificación.
-
-> Configuración completa de rclone, remote `gdrive` y Task Scheduler: [[Rclone_guide]]
-> Sistema de sync general: [[_sync-system]]
 
 ---
 
@@ -604,4 +599,5 @@ galaxy-links
 [[tikzjax_guide-legacy]]
 [[better-export-pdf]]
 [[_ToDo-system]]
+[[Rclone_guide]]
 %%

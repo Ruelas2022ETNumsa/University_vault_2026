@@ -188,6 +188,8 @@ Desde cmd:
 rclone sync "E:\University_vault_2026\_app\notebooklm" gdrive:NotebookLM_sources --progress
 ```
 
+Desde Obsidian: botón `upload-cloud` en el ribbon → ver [[plugin_guide]] sección 8. Shell Commands.
+
 ---
 
 ## Flujo completo de uso
