@@ -2982,6 +2982,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "section.md",
         "2026-07-08",
         "2026-07-09",
         "2026-06-12",
@@ -3506,6 +3507,10 @@
     },
     "_app/_appnotes/claude_prompts.md": {
       "isPinned": true,
+      "isHidden": false
+    },
+    "Rubbish/section.md": {
+      "isPinned": false,
       "isHidden": false
     }
   },
