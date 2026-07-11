@@ -22,6 +22,12 @@
       "icon": "lucide-file-terminal",
       "name": "Shell commands: Execute: NotebookLM Fix — nota activa",
       "mode": "any"
+    },
+    {
+      "id": "obsidian-shellcommands:shell-command-k2m7wcnbgc",
+      "icon": "lucide-scissors-line-dashed",
+      "name": "Shell commands: Execute: Section Extract",
+      "mode": "any"
     }
   ],
   "rightRibbon": [],

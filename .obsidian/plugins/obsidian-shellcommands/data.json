@@ -98,10 +98,10 @@
     {
       "id": "k2m7wcnbgc",
       "platform_specific_commands": {
-        "default": "& \"C:\\Users\\USUARIO\\AppData\\Local\\Programs\\Python\\Python313\\python.exe\" \"{{vault_path}}\\.obsidian\\scripts\\python\\section_extract\\src\\main.py\" \"{{file_path}}\" \"{{vault_path}}\" \"{{prompt:Sección (## Título)}}\" \"{{prompt:Ruta del archivo}}\""
+        "default": "\"C:\\Users\\USUARIO\\AppData\\Local\\Programs\\Python\\Python313\\python.exe\" \"{{vault_path}}\\.obsidian\\scripts\\python\\section_extract\\src\\main.py\" \"{{file_path:relative}}\" \"{{vault_path}}\" \"{{_section_heading}}\" \"{{_section_source}}\""
       },
       "shells": {},
-      "alias": "",
+      "alias": "Section Extract",
       "icon": null,
       "confirm_execution": false,
       "ignore_error_codes": [],
@@ -110,7 +110,7 @@
       },
       "output_handlers": {
         "stdout": {
-          "handler": "ignore",
+          "handler": "notification",
           "convert_ansi_code": true
         },
         "stderr": {
@@ -128,11 +128,43 @@
       "events": {},
       "debounce": null,
       "command_palette_availability": "enabled",
-      "preactions": [],
+      "preactions": [
+        {
+          "type": "prompt",
+          "enabled": true,
+          "prompt_id": "uzmj38imq2"
+        }
+      ],
       "variable_default_values": {}
     }
   ],
-  "prompts": [],
+  "prompts": [
+    {
+      "id": "uzmj38imq2",
+      "title": "Section Extract",
+      "description": "",
+      "preview_shell_command": false,
+      "fields": [
+        {
+          "type": "single-line-text",
+          "label": "Sección (## Título)",
+          "description": "Heading exacto a extraer, ej: ## Título",
+          "default_value": "",
+          "target_variable_id": "hk45zr5dfw",
+          "required": true
+        },
+        {
+          "type": "single-line-text",
+          "label": "Ruta del archivo",
+          "description": "Ruta absoluta del archivo fuente",
+          "default_value": "",
+          "target_variable_id": "b593feucxn",
+          "required": true
+        }
+      ],
+      "execute_button_text": "Extraer"
+    }
+  ],
   "builtin_variables": {},
   "custom_variables": [
     {
