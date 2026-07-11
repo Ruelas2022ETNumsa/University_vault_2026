@@ -11,9 +11,9 @@
   "cornell-marginalia",
   "cornell-notes",
   "modern-outline",
-  "settings-float",
   "templater-obsidian",
   "python-scripter",
   "obsidian-git",
-  "flexplorer"
+  "flexplorer",
+  "obsidian-shellcommands"
 ]
