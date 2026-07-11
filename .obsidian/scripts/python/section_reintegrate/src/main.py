@@ -4,6 +4,8 @@ import json
 import shutil
 import re
 
+sys.stdout.reconfigure(encoding='utf-8')
+
 file_path  = sys.argv[1]
 vault_path = sys.argv[2]
 

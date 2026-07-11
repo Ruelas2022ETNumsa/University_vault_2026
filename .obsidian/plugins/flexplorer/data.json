@@ -1251,6 +1251,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "script_guide.md",
         "claude_prompts.md",
         "Rclone_guide.md",
         "cornell_guide.md",
@@ -1322,6 +1323,10 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "_TABnote-system 2.md",
+        "_TABnote-system 1.md",
+        "_ToDo-system 2.md",
+        "_ToDo-system 1.md",
         "_notebooklm-system 1.md",
         "_library_ETN505(i).md",
         "_claude-matter-boot.md",
@@ -2465,6 +2470,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "MAT101_T1-Funciones-reales 1.md",
         "claude vision.md",
         "Cornell Marginalia — Ejemplos de sintaxis.md",
         "Untitled 1.md",
@@ -3017,13 +3023,6 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "megaignore",
-        "multi-column-markdown",
-        "notebook-mindmap-to-canvas",
-        "pdf-to-md",
-        "OA-file-hider",
-        "remotely-save",
-        "tags-routes",
         "data.json"
       ]
     },
@@ -3055,11 +3054,7 @@
         "data.json",
         "main.js",
         "manifest.json",
-        "mobile-line-width.css",
-        "multi-column-markdown",
-        "notebook-mindmap-to-canvas",
-        "remotely-save",
-        "tags-routes"
+        "mobile-line-width.css"
       ]
     },
     "Rubbish/2026-07-08/2026-07-08 17.12.32.0": {
@@ -3261,235 +3256,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-08/multi-column-markdown": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "main.js",
-        "manifest.json",
-        "styles.css"
-      ]
-    },
-    "Rubbish/2026-07-08/multi-column-markdown/main.js": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-08/multi-column-markdown/manifest.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-08/multi-column-markdown/styles.css": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-08/notebook-mindmap-to-canvas": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "main.js",
-        "manifest.json",
-        "styles.css"
-      ]
-    },
-    "Rubbish/2026-07-08/notebook-mindmap-to-canvas/main.js": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-08/notebook-mindmap-to-canvas/manifest.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-08/notebook-mindmap-to-canvas/styles.css": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-08/remotely-save": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json",
-        "main.js",
-        "manifest.json",
-        "styles.css"
-      ]
-    },
-    "Rubbish/2026-07-08/remotely-save/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-08/remotely-save/main.js": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-08/remotely-save/manifest.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-08/remotely-save/styles.css": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-08/tags-routes": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "main.js",
-        "manifest.json",
-        "styles.css"
-      ]
-    },
-    "Rubbish/2026-07-08/tags-routes/main.js": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-08/tags-routes/manifest.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-08/tags-routes/styles.css": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-09/megaignore": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-09/multi-column-markdown": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "main.js",
-        "manifest.json",
-        "styles.css"
-      ]
-    },
-    "Rubbish/2026-07-09/multi-column-markdown/main.js": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-09/multi-column-markdown/manifest.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-09/multi-column-markdown/styles.css": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-09/notebook-mindmap-to-canvas": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "main.js",
-        "manifest.json",
-        "styles.css"
-      ]
-    },
-    "Rubbish/2026-07-09/notebook-mindmap-to-canvas/main.js": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-09/notebook-mindmap-to-canvas/manifest.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-09/notebook-mindmap-to-canvas/styles.css": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-09/pdf-to-md": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "main.js",
-        "manifest.json"
-      ]
-    },
-    "Rubbish/2026-07-09/pdf-to-md/main.js": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-09/pdf-to-md/manifest.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-09/OA-file-hider": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json",
-        "main.js",
-        "manifest.json"
-      ]
-    },
-    "Rubbish/2026-07-09/OA-file-hider/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-09/OA-file-hider/main.js": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-09/OA-file-hider/manifest.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-09/remotely-save": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json",
-        "main.js",
-        "manifest.json",
-        "styles.css"
-      ]
-    },
-    "Rubbish/2026-07-09/remotely-save/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-09/remotely-save/main.js": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-09/remotely-save/manifest.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-09/remotely-save/styles.css": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-09/tags-routes": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "main.js",
-        "manifest.json",
-        "styles.css"
-      ]
-    },
-    "Rubbish/2026-07-09/tags-routes/main.js": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-09/tags-routes/manifest.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-09/tags-routes/styles.css": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_app/solve/marginalia_solve.md": {
       "isPinned": false,
       "isHidden": false
@@ -3511,10 +3277,34 @@
       "isHidden": false
     },
     "Rubbish/section.md": {
-      "isPinned": false,
+      "isPinned": true,
       "isHidden": false
     },
     "Untitled.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_config/_ToDo-system 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_config/_ToDo-system 2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_config/_TABnote-system 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_config/_TABnote-system 2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "in_work/MAT101_T1-Funciones-reales 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_appnotes/script_guide.md": {
       "isPinned": false,
       "isHidden": false
     }
@@ -3522,7 +3312,8 @@
   "pinnedFiles": [
     "_app/_appnotes/PDF_PP-guide.md",
     "_app/_config/_claude-boot.md",
-    "_app/_appnotes/claude_prompts.md"
+    "_app/_appnotes/claude_prompts.md",
+    "Rubbish/section.md"
   ],
   "showHidden": false,
   "newItemPlacement": "top",

@@ -44,7 +44,6 @@ Mezclar el almacenamiento activo de apuntes propios con `_pdf/` (fuentes externa
 ## Nomenclatura usada en este documento
 
 Para evitar confusión entre dos herramientas con nombres parecidos:
-xxx prueba de pegadoxxxx
 
 | Término | Qué es |
 |---|---|
