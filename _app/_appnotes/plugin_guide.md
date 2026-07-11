@@ -9,7 +9,7 @@ related_notes:
   - "[[_ToDo-system]]"
 tags: [beacon, obsidian, plugins, infraestructura]
 date_created: 2026-06-01
-date_updated: 2026-07-05
+date_updated: 2026-07-10
 status: activo
 ---
 
@@ -30,6 +30,7 @@ status: activo
 - [[#6. Flexplorer — Explorador de archivos mejorado]]
 - [[#7. Attachment Management — Renombrar y organizar imágenes pegadas]]
 - [[#8. Python Scripter — Scripts Python como comandos]]
+- [[#8.5 Shell Commands — Comandos de sistema desde Obsidian]]
 - [[#9. Galaxy View — Visualización 3D del grafo del vault]]
 
 ---
@@ -500,6 +501,36 @@ Si devuelve `Sin cambios.` o `Correcciones realizadas.` — el script funciona. 
 
 
 
+
+---
+
+## 8.5 Shell Commands — Comandos de sistema desde Obsidian
+
+**Plugin:** [taitava/obsidian-shellcommands](https://github.com/taitava/obsidian-shellcommands) — Community Plugins
+
+**Propósito:** Registra comandos de shell como comandos de Obsidian ejecutables desde el ribbon (vía Commander) o el Command Palette. Reemplaza a Python Scripter para comandos que no requieren lógica Python compleja.
+
+> **Estado (2026-07-10):** en evaluación como reemplazo de Python Scripter. Ver sección 8.
+
+### Comandos configurados
+
+#### Sync NotebookLM → Google Drive
+
+| Campo | Valor |
+|---|---|
+| Alias | `Sync NotebookLM → Google Drive` |
+| Ícono | `upload-cloud` |
+| Comando | `rclone sync "E:\University_vault_2026\_app\notebooklm" gdrive:NotebookLM_sources --verbose` |
+| stdout | Notification balloon |
+| stderr | Error balloon |
+| Confirmación | No |
+
+**Acceso:** botón `upload-cloud` en el ribbon vía Commander → ejecuta el sync de inmediato sin esperar el Task Scheduler (sync automático cada 1 hora).
+
+**Output esperado:** notificación flotante con el log de rclone al terminar. Si no hay cambios, rclone puede no emitir output — el `--verbose` fuerza la notificación.
+
+> Configuración completa de rclone, remote `gdrive` y Task Scheduler: [[Rclone_guide]]
+> Sistema de sync general: [[_sync-system]]
 
 ---
 

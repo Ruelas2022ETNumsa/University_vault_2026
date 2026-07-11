@@ -16,6 +16,12 @@
       "icon": "lucide-upload-cloud",
       "name": "Shell commands: Execute: Sync NotebookLM → Google Drive",
       "mode": "any"
+    },
+    {
+      "id": "obsidian-shellcommands:shell-command-alcxjwunhl",
+      "icon": "lucide-file-terminal",
+      "name": "Shell commands: Execute: NotebookLM Fix — nota activa",
+      "mode": "any"
     }
   ],
   "rightRibbon": [],
@@ -123,8 +129,7 @@
     ],
     "leftRibbon": [
       "Templater",
-      "Open Git source control",
-      "Toggle modern outline"
+      "Open Git source control"
     ]
   },
   "spacing": "0",
