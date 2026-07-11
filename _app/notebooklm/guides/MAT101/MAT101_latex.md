@@ -16,6 +16,8 @@ date_updated: 2026-07-02
 status: activo
 ---
 
+ultima prueba
+
 # Guía de notación LaTeX para NotebookLM
 
 Esta guía define la notación LaTeX usada en las notas de Cálculo I.

@@ -26,7 +26,7 @@
     {
       "id": "clozwpb8q6",
       "platform_specific_commands": {
-        "default": "rclone sync \"E:\\University_vault_2026\\_app\\notebooklm\" gdrive:NotebookLM_sources"
+        "default": "rclone sync \"E:\\University_vault_2026\\_app\\notebooklm\" gdrive:NotebookLM_sources --verbose"
       },
       "shells": {},
       "alias": "Sync NotebookLM → Google Drive",
@@ -38,7 +38,7 @@
       },
       "output_handlers": {
         "stdout": {
-          "handler": "ignore",
+          "handler": "notification",
           "convert_ansi_code": true
         },
         "stderr": {

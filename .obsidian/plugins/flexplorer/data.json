@@ -1251,6 +1251,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "plugin_guide 1.md",
         "Rclone_guide.md",
         "cornell_guide.md",
         "zettakasten_guide_temp.md",
@@ -3505,6 +3506,10 @@
       "isHidden": false
     },
     "_app/_config/_notebooklm-system 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_appnotes/plugin_guide 1.md": {
       "isPinned": false,
       "isHidden": false
     }

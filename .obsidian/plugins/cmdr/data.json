@@ -10,6 +10,12 @@
       "icon": "lucide-file-plus",
       "name": "create",
       "mode": "any"
+    },
+    {
+      "id": "obsidian-shellcommands:shell-command-clozwpb8q6",
+      "icon": "lucide-upload-cloud",
+      "name": "Shell commands: Execute: Sync NotebookLM → Google Drive",
+      "mode": "any"
     }
   ],
   "rightRibbon": [],
