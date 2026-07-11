@@ -19,8 +19,10 @@
       "arguments": {
         "currentFile": true,
         "vaultPath": true,
-        "clipboard": true,
-        "highlight": true
+        "clipboard": false,
+        "highlight": false,
+        "promptArgumentCount": 2,
+        "predefined": []
       },
       "interpreter": "C:\\Users\\USUARIO\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
       "runType": "icon"

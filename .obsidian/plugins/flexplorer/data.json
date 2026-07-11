@@ -5,6 +5,7 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
+        "Untitled.md",
         "Rubbish",
         "void.md",
         "_assets",
@@ -3510,6 +3511,10 @@
       "isHidden": false
     },
     "Rubbish/section.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled.md": {
       "isPinned": false,
       "isHidden": false
     }
