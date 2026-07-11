@@ -1,4 +1,6 @@
 {
   "templater-obsidian:insert-templater": [],
-  "templater-obsidian:replace-in-file-templater": []
+  "templater-obsidian:replace-in-file-templater": [],
+  "editor:delete-paragraph": [],
+  "obsidian-completr:completr-bypass-enter-key": []
 }
