@@ -5,7 +5,6 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
-        "Sin título.md",
         "Rubbish",
         "void.md",
         "_assets",
@@ -1251,7 +1250,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "plugin_guide 1.md",
+        "claude_prompts.md",
         "Rclone_guide.md",
         "cornell_guide.md",
         "zettakasten_guide_temp.md",
@@ -3497,10 +3496,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Sin título.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_app/_appnotes/Rclone_guide.md": {
       "isPinned": false,
       "isHidden": false
@@ -3509,14 +3504,15 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_app/_appnotes/plugin_guide 1.md": {
-      "isPinned": false,
+    "_app/_appnotes/claude_prompts.md": {
+      "isPinned": true,
       "isHidden": false
     }
   },
   "pinnedFiles": [
     "_app/_appnotes/PDF_PP-guide.md",
-    "_app/_config/_claude-boot.md"
+    "_app/_config/_claude-boot.md",
+    "_app/_appnotes/claude_prompts.md"
   ],
   "showHidden": false,
   "newItemPlacement": "top",
