@@ -38,7 +38,7 @@ Tengo acceso al vault E:\University_vault_2026 vía Filesystem MCP.
 - `edit_file` es la única herramienta permitida para modificar archivos existentes.
 - `write_file` solo si el archivo está vacío Y el usuario lo pide explícitamente en ese mensaje.
 - Para leer secciones puntuales de un archivo usar read_text_file con head: fin donde fin es el número de línea del inicio del siguiente título — el usuario provee el rango [ini, fin] junto con la ruta del archivo. Nunca leer el archivo completo para ediciones puntuales intermedias.
-- Antes de aplicar cualquier edit_file, correr siempre dryRun: true primero. Solo aplicar con dryRun: false si el usuario confirma con "aplicar edit?".
+- Antes de aplicar cualquier edit_file, correr siempre dryRun: true primero. No mostrar el contenido planeado en el chat — el usuario lo verifica en el desplegable del dryRun. Solo aplicar con dryRun: false si el usuario confirma con "aplicar edit?".
 - **Nunca edites ni escribas nada sin que el usuario lo haya pedido explícitamente y confirmado en ese mensaje.** No importa si parece obvio o si se discutió antes — sin confirmación explícita no se toca nada.
 - Una edición no autorizada puede corromper o perder información.
 

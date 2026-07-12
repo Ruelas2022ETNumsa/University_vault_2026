@@ -13195,6 +13195,7 @@ TdOW
 TSXY
 Threads
 Titulo
+Target
 Sistema
 Sync
 Save
@@ -20329,6 +20330,7 @@ Subconjuntos
 Shell
 Section
 Seccion
+Single
 Plugins
 Pendientes
 Plugin
@@ -25826,6 +25828,8 @@ PARCIALES
 PATRIA
 PATH
 Programador
+Preactions
+Pestana
 del
 date
 de
@@ -31193,6 +31197,7 @@ densas
 denotar
 deshabilitado
 desinstalaci
+directory
 Vault
 Verificar
 Variables
@@ -68388,6 +68393,8 @@ autenticaci
 autenticar
 asuma
 aborta
+autocomplete
+automaticamente
 related
 recomendados
 ribbon
@@ -74905,6 +74912,7 @@ recursos
 rprete
 reintegrate
 relative
+raiz
 notes
 notas
 nuevas
@@ -106572,6 +106580,8 @@ Commands
 Confirmaci
 CAPAS
 Colecci
+Configuracion
+Creadas
 Instalados
 Instalado
 Instalar
@@ -126879,6 +126889,9 @@ EDPs
 Ejecutable
 Email
 Edit
+Environments
+Events
+Execute
 Obsidian
 OmniSearch
 Ocultar
@@ -144384,6 +144397,8 @@ pruebaaaaaaaaaaaaaaaa
 pensado
 pegadoxxxx
 ppapuy
+pestana
+pestanas
 min
 mica
 movimiento
@@ -151722,6 +151737,7 @@ multilineal
 modelaci
 mantenido
 mapear
+metadata
 YAML
 Ya
 You
@@ -163311,6 +163327,7 @@ Building
 Bolzano
 Burden
 Bibliogr
+Borrador
 en
 exacta
 escaneados
@@ -170063,6 +170080,7 @@ esesdkfnds
 ejecutados
 extract
 extraida
+engranaje
 Motor
 Media
 Mantiene
@@ -183809,6 +183827,7 @@ Llenar
 LINEALES
 Legendre
 LeVeque
+Label
 links
 las
 listar
@@ -203255,6 +203274,8 @@ Desencadenador
 Diariamente
 Detener
 Desencadenadores
+Documenta
+Descripcion
 Remotely
 Raz
 Revisa
@@ -210397,6 +210418,7 @@ Rclone
 Roles
 Rubbish
 Reintegrate
+Required
 Hider
 Hace
 Herramientas
@@ -215347,6 +215369,7 @@ Hubble
 High
 Hurtado
 HILL
+Heading
 filtrar
 formato
 faltantes
@@ -294016,6 +294039,7 @@ WASD
 When
 Where
 Wcxi
+Working
 JavaScript
 JSON
 JERARQU

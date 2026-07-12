@@ -164,16 +164,16 @@ sync automáticamente cada hora sin intervención manual.
 
 ### Configuración de la tarea
 
-| Campo | Valor |
-|---|---|
-| Nombre | `rclone sync notebooklm` |
-| Descripción | `Sincroniza vault con Google Drive` |
-| Desencadenador | Diariamente a las 14:29, repite cada **1 hora** indefinidamente |
-| Acción | Iniciar un programa |
-| Programa | `E:\Programas\Rclone\rclone.exe` |
-| Argumentos | `sync "E:\University_vault_2026\_app\notebooklm" gdrive:NotebookLM_sources` |
-| Iniciar en | `E:\Programas\Rclone` |
-| Detener tarea en ejecución al repetir | No — para no cortar transferencias en curso |
+| Campo                                 | Valor                                                                       |
+| ------------------------------------- | --------------------------------------------------------------------------- |
+| Nombre                                | `rclone sync notebooklm`                                                    |
+| Descripción                           | `Sincroniza vault con Google Drive`                                         |
+| Desencadenador                        | Diariamente a las 12:00, repite cada **5 horas** indefinidamente            |
+| Acción                                | Iniciar un programa                                                         |
+| Programa                              | `E:\Programas\Rclone\rclone.exe`                                            |
+| Argumentos                            | `sync "E:\University_vault_2026\_app\notebooklm" gdrive:NotebookLM_sources` |
+| Iniciar en                            | `E:\Programas\Rclone`                                                       |
+| Detener tarea en ejecución al repetir | No — para no cortar transferencias en curso                                 |
 
 ### Cómo acceder a la tarea para editarla
 
@@ -210,15 +210,15 @@ Desde Obsidian: botón `upload-cloud` en el ribbon → ver [[plugin_guide]] secc
 
 ## Registro de decisiones
 
-| Decisión | Razón |
-|---|---|
-| Rclone en lugar de script Python | Rclone hace lo mismo sin escribir ni mantener código |
-| Client ID propio en lugar del de rclone | El Client ID compartido de rclone tiene cuota limitada entre todos sus usuarios; el propio garantiza cuota exclusiva |
-| `sync` en lugar de `copy` | Los archivos eliminados localmente deben eliminarse también en Drive para que NotebookLM no lea fuentes obsoletas |
-| Task Scheduler cada 1 hora | Las guías de NotebookLM cambian con poca frecuencia — cada hora es suficiente sin consumir recursos innecesariamente |
-| Solo carpeta `_app/notebooklm/` sincronizada con Drive | Drive es exclusivo para fuentes de NotebookLM — el vault completo ya tiene Mega y GitHub como respaldo |
-| rclone.conf excluido de GitHub | Contiene token OAuth2 activo — no debe exponerse en un repositorio |
-| Drive no reemplaza a Mega | Roles distintos: Mega sincroniza el vault completo entre dispositivos; Drive es solo el canal hacia NotebookLM |
+| Decisión                                               | Razón                                                                                                                   |
+| ------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------- |
+| Rclone en lugar de script Python                       | Rclone hace lo mismo sin escribir ni mantener código                                                                    |
+| Client ID propio en lugar del de rclone                | El Client ID compartido de rclone tiene cuota limitada entre todos sus usuarios; el propio garantiza cuota exclusiva    |
+| `sync` en lugar de `copy`                              | Los archivos eliminados localmente deben eliminarse también en Drive para que NotebookLM no lea fuentes obsoletas       |
+| Task Scheduler cada 5 horas                            | Las guías de NotebookLM cambian con poca frecuencia — cada 5 horas es suficiente sin consumir recursos innecesariamente |
+| Solo carpeta `_app/notebooklm/` sincronizada con Drive | Drive es exclusivo para fuentes de NotebookLM — el vault completo ya tiene Mega y GitHub como respaldo                  |
+| rclone.conf excluido de GitHub                         | Contiene token OAuth2 activo — no debe exponerse en un repositorio                                                      |
+| Drive no reemplaza a Mega                              | Roles distintos: Mega sincroniza el vault completo entre dispositivos; Drive es solo el canal hacia NotebookLM          |
 
 ---
 

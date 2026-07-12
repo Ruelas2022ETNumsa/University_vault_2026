@@ -96,7 +96,7 @@ de cada materia.
    que se pegan directamente en notas galaxy del vault
         ↓
 4. Si la nota en el vault cambia significativamente,
-   rclone sync sube el .md a Drive automáticamente cada hora
+   rclone sync sube el .md a Drive automáticamente cada 5 horas
    → hacer refresh manual de la fuente en NotebookLM
 ```
 
@@ -258,18 +258,18 @@ Paso 6 — Configurar NotebookLM
 
 ## Registro de decisiones
 
-| Decisión | Razón |
-|---|---|
-| Dos usos separados (transcripción / estudio) | Son flujos con fuentes, prompts y outputs distintos — mezclarlos en un solo modelo generaba confusión |
-| Prompts en `_app/notebooklm/`, no en `_config/` | Los prompts son operativos por materia/parcial, no infraestructura del vault — pertenecen a su propia carpeta |
-| `_notebooklm-prompt.md` eliminado de `_config/` | Su contenido migró a `prompts/MAT101/MAT101-study.md` y `prompts/MAT101/MAT101-transcription.md`. El beacon de infraestructura es este archivo (`_notebooklm-system.md`) |
-| Un prompt por materia/parcial | Cada parcial tiene programa, fórmulas y nivel de rigor distintos — un prompt único por materia produce respuestas menos precisas a medida que avanza el semestre |
-| .md como fuente principal, no PDF | El .md preserva LaTeX como texto y código Desmos como referencia — el PDF los convierte a imagen y pierde contenido matemático |
-| Guía de transcripción general en pausa | Requiere definir primero cómo estructurar los apuntes manuscritos para optimizar la transcripción — es decisión de diseño previa a la guía técnica |
-| Sync de guías vía rclone + refresh manual en NotebookLM | NotebookLM no detecta cambios automáticamente — rclone sube las guías a Drive cada hora (Task Scheduler); el refresh en NotebookLM sigue siendo manual. Ver [[Rclone_guide]] |
-| `MAT101_desmos.md` siempre como fuente | Todas las materias pueden necesitar graficación — la guía garantiza sintaxis correcta en cualquier notebook |
-| Flujo de materia nueva documentado aquí y no en `_library-system` | El flujo es operativo de NotebookLM — `_library-system` cubre solo la selección de libros; este beacon cubre todo lo que sigue hasta tener el notebook activo |
-| `_library_ETNXXX.md` separado de `ETNXXX_library.md` | Audiencias distintas: el primero es guía personal legible para el usuario; el segundo es fuente técnica densa para NotebookLM. Unirlos degradaría la utilidad de ambos |
+| Decisión | Razón                                                                                                                                                                           |
+| ----------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Dos usos separados (transcripción / estudio) | Son flujos con fuentes, prompts y outputs distintos — mezclarlos en un solo modelo generaba confusión                                                                           |
+| Prompts en `_app/notebooklm/`, no en `_config/` | Los prompts son operativos por materia/parcial, no infraestructura del vault — pertenecen a su propia carpeta                                                                   |
+| `_notebooklm-prompt.md` eliminado de `_config/` | Su contenido migró a `prompts/MAT101/MAT101-study.md` y `prompts/MAT101/MAT101-transcription.md`. El beacon de infraestructura es este archivo (`_notebooklm-system.md`)        |
+| Un prompt por materia/parcial | Cada parcial tiene programa, fórmulas y nivel de rigor distintos — un prompt único por materia produce respuestas menos precisas a medida que avanza el semestre                |
+| .md como fuente principal, no PDF | El .md preserva LaTeX como texto y código Desmos como referencia — el PDF los convierte a imagen y pierde contenido matemático                                                  |
+| Guía de transcripción general en pausa | Requiere definir primero cómo estructurar los apuntes manuscritos para optimizar la transcripción — es decisión de diseño previa a la guía técnica                              |
+| Sync de guías vía rclone + refresh manual en NotebookLM | NotebookLM no detecta cambios automáticamente — rclone sube las guías a Drive cada 5 horas (Task Scheduler); el refresh en NotebookLM sigue siendo manual. Ver [[Rclone_guide]] |
+| `MAT101_desmos.md` siempre como fuente | Todas las materias pueden necesitar graficación — la guía garantiza sintaxis correcta en cualquier notebook                                                                     |
+| Flujo de materia nueva documentado aquí y no en `_library-system` | El flujo es operativo de NotebookLM — `_library-system` cubre solo la selección de libros; este beacon cubre todo lo que sigue hasta tener el notebook activo                   |
+| `_library_ETNXXX.md` separado de `ETNXXX_library.md` | Audiencias distintas: el primero es guía personal legible para el usuario; el segundo es fuente técnica densa para NotebookLM. Unirlos degradaría la utilidad de ambos          |
 
 %%
 galaxy-links

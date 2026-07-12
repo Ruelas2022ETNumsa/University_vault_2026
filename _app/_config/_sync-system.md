@@ -96,7 +96,7 @@ Obsidian Git → GitHub (auto-commit cada 5 min)
 - [x] Google Drive eliminado por completo — TAB_nexus, symlink y Autosync removidos ✅
 - [x] `_PDF` dentro del vault reemplaza a TAB_nexus como carpeta de PDFs ✅
 - [x] Flujo completo verificado: vault sincroniza entre PC, laptop, tablet y celular vía Mega ✅
-- [x] **Rclone** instalado y configurado — sync automático de fuentes NotebookLM hacia Google Drive cada 1 hora vía Task Scheduler ✅ → ver [[Rclone_guide]]
+- [x] **Rclone** instalado y configurado — sync automático de fuentes NotebookLM hacia Google Drive cada 5 horas vía Task Scheduler ✅ → ver [[Rclone_guide]]
 
 > Tareas y pendientes: [[_ToDo-system]]
 
@@ -245,14 +245,14 @@ Obsidian Git detecta cambio → auto-pull → vault local actualizado
 Rclone sincroniza exclusivamente la carpeta `_app/notebooklm/` del vault hacia Google Drive.
 No reemplaza a Mega ni a Git — cumple un rol específico como canal hacia NotebookLM.
 
-| Qué | Detalle |
-|---|---|
-| Herramienta | Rclone v1.74.4 |
-| Remote configurado | `gdrive` (Google Drive, cuenta personal) |
-| Carpeta local | `E:\University_vault_2026\_app\notebooklm\` |
-| Carpeta en Drive | `NotebookLM_sources/` |
-| Frecuencia | Automático cada 1 hora vía Task Scheduler |
-| Consumo | Mínimo — proceso que corre segundos y termina, no permanente |
+| Qué                | Detalle                                                      |
+| ------------------ | ------------------------------------------------------------ |
+| Herramienta        | Rclone v1.74.4                                               |
+| Remote configurado | `gdrive` (Google Drive, cuenta personal)                     |
+| Carpeta local      | `E:\University_vault_2026\_app\notebooklm\`                  |
+| Carpeta en Drive   | `NotebookLM_sources/`                                        |
+| Frecuencia         | Automático cada 5 horas vía Task Scheduler                   |
+| Consumo            | Mínimo — proceso que corre segundos y termina, no permanente |
 
 Comando de sync:
 ```bash
