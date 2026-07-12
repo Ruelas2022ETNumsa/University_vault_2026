@@ -40,23 +40,98 @@ Muestra la estructura de un comando de shell creado en la lista. A la derecha de
 - Alias / Nombre del comando: \[Mi Script de Sincronización\]
 
 #### Botones de acción rápida
-- _ < **Ejecutar ahora:** Clic normal: ejecuta inmediatamente. Ctrl+clic: ejecuta y pregunta qué hacer con la salida (output).
-- ⚙️ **Configuración general:** Configura el alias, ícono, configuraciones generales y la entrada estándar (stdin).
-- 📄 **Preacciones (Preactions):** Solicita valores o confirmaciones al usuario antes de proceder con la ejecución.
-- ≡ **Manejo de salida:** Configura el comportamiento de la salida estándar (stdout), salida de errores (stderr) e ignorar errores.
-- 🗀 **Selección de Shell:** Permite elegir la shell y configurar comandos específicos para diferentes sistemas operativos.
-- ⚄ **Eventos (Events):** Configura disparadores o eventos automáticos para el comando.
-- </> **Variables:** Define los valores por defecto para las variables utilizadas en el script.
-- 🗑️ **Eliminar:** Borra permanentemente este comando de shell.
+- _ < Ejecutar ahora: `Clic` normal: ejecuta inmediatamente. `Ctrl+clic`: ejecuta y pregunta qué hacer con la salida (output).
+- ⚙️ Configuración general: Configura el alias, ícono, configuraciones generales y la entrada estándar (stdin).
+- 📄 Preacciones (Preactions): Solicita valores o confirmaciones al usuario antes de proceder con la ejecución.
+- ≡ Manejo de salida: Configura el comportamiento de la salida estándar (stdout), salida de errores (stderr) e ignorar errores.
+- 🗀 Selección de Shell: Permite elegir la shell y configurar comandos específicos para diferentes sistemas operativos.
+- ⚄ Eventos (Events): Configura disparadores o eventos automáticos para el comando.
+- \</\> Variables: Define los valores por defecto para las variables utilizadas en el script.
+- 🗑️ Eliminar: Borra permanentemente este comando de shell.
 
 #### Configuración del comando
-- Comando principal: \[rclone sync "C:\Ruta\A\Tu\Boveda" remoto:Nombre_Carpeta --verbose\]
-- Preview / Ejecutable: \[rclone sync "C:\Ruta\A\Tu\Boveda" remoto:Nombre_Carpeta --verbose\]
+- Comando principal: \[enter your command\]
+- Preview / Ejecutable: \[copia del comando principal\]
 - Shell / Terminal: \[cmd.exe\]
 
 #### Acciones adicionales
-- 🔗 **Copiar URI de Obsidian:** Copia la URI de Obsidian de este comando al portapapeles; al visitar dicha URI se ejecutará el comando. Ctrl+clic: copia como un enlace en formato Markdown.
-- + **Configurar Hotkey:** Redirige directamente a los ajustes de teclas de acceso rápido (hotkeys) de Obsidian para asignarle un atajo al comando.
+- 🔗 Copiar URI de Obsidian: Copia la URI de Obsidian de este comando al portapapeles; al visitar dicha URI se ejecutará el comando. `Ctrl+clic`: copia como un enlace en formato Markdown.
+- $\bigoplus$ Configurar Hotkey: Redirige directamente a los ajustes de teclas de acceso rápido (hotkeys) de Obsidian para asignarle un atajo al comando.
+
+---
+
+## Pestaña: Configuración del comando / General
+### Alias / Alias
+Si no está vacío, el alias se mostrará en la paleta de comandos en lugar del comando real. Un alias nunca se ejecuta como un comando. Puedes usar variables estilo `{{}}`. Comenzar una variable con `{{!` evitará el escape de caracteres especiales.
+
+- Campo: \[input text\]
+
+### Ícono / Icon
+Si se define, el ícono se mostrará en el menú de archivos, carpetas y del editor delante del texto del alias. Ayuda a distinguir visualmente los comandos.
+
+- Opción: \[No icon / Lista de íconos disponibles\]
+
+### Pedir confirmación antes de la ejecución / Ask confirmation before execution
+- Control: (1/0)
+
+### Pasar variables a la entrada estándar (stdin) (experimental) / Pass variables to standard input (stdin) (experimental)
+Se usa para pasar textos largos como entrada al comando de shell si exceden el límite de longitud de la línea de comandos (ej. `{{note_content}}`). También sirve para programas interactivos que piden múltiples valores (poner en líneas separadas). Puede contener `{{variables}}` o texto estático.
+
+- Campo: \[input text\]
+- Acción: >❓< (Ir a la documentación)
+
+### Identificadores y Atajos / IDs & Shortcuts
+- **Shell command id:** `xxxpwtaxxx` 
+  - Acciones: >🗐< (Copiar valor)
+- **Obsidian command palette id:** `obsidian-shellcommands:shell-command-xxxpwtaxxx`
+  - Acciones: >🗐< (Copiar valor)
+
+> **Tip:** Presiona `Ctrl + arriba/abajo` para cambiar al comando de shell anterior o siguiente.
+- Acción rápida: >_ << (Ejecutar ahora. Ctrl+clic: ejecutar y preguntar qué hacer con la salida).
+
+---
+
+## Pestaña: Configuración del comando / Preactions
+Las preacciones se realizan antes de que se ejecute el comando de shell real, con el fin de hacer ciertos preparativos.
+
+### Mensaje emergente / Prompt
+Se utilizan para solicitar valores al usuario justo antes de la ejecución del comando. Se accede a los valores mediante variables personalizadas. Puedes administrarlos en la pestaña 'Preactions' de la configuración principal del plugin.
+
+- Opción: \[No prompt / Create new prompt\]
+
+---
+
+### Ventana Emergente: Crear nuevo mensaje / Create prompt
+#### Título del prompt / Prompt title
+- Campo: \[input text\]
+- Acción rápida: >>_ < (Ejecutar ahora)
+
+#### Descripción / Description
+Se muestra entre el título del prompt y los campos. Admite el uso de `{{variables}}`.
+
+- Campo: \[input text\]
+
+#### Vista previa del comando de shell en el prompt / Preview shell command in prompt
+Si está activo, el prompt mostrará el comando de shell ejecutable con los nombres de las variables y resaltará las variables afectadas por los valores ingresados.
+
+- Control: (1/0)
+
+#### Campos / Fields
+Permite añadir campos al formulario. Se pueden usar `{{variables}}` en las etiquetas, valores por defecto, descripciones, etc.
+
+- Acción: >New prompt field<
+
+#### Texto del botón de ejecución / Execute button text
+- Campo: \[input text\] (by default : Execute)
+
+---
+
+- Acción final: >Create prompt<
+
+> **Tip:** Puedes personalizar el estilo visual del modal del prompt con CSS usando la clase `.SC-prompt-modal-fyquadt617` o `.SC-prompt-modal` (para todos los modals).
+
+
+
 
 
 
