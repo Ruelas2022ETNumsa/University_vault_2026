@@ -5,6 +5,7 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
+        "Untitled 2 1.md",
         "Untitled.md",
         "Rubbish",
         "void.md",
@@ -3310,6 +3311,10 @@
       "isHidden": false
     },
     "_app/_appnotes/shellcommands_guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled 2 1.md": {
       "isPinned": false,
       "isHidden": false
     }
