@@ -13199,6 +13199,7 @@ TSXY
 Threads
 Titulo
 Target
+Terminal
 Sistema
 Sync
 Save
@@ -20336,6 +20337,8 @@ Seccion
 Single
 Subsystem
 Shells
+Solicita
+Switching
 Plugins
 Pendientes
 Plugin
@@ -25839,6 +25842,10 @@ Principales
 Powershell
 Portapapeles
 Previsualizar
+Preacciones
+Pedir
+Pass
+Presiona
 del
 date
 de
@@ -31218,6 +31225,10 @@ description
 deshabilitar
 desplegable
 desees
+disparadores
+delante
+descripciones
+dispararse
 Vault
 Verificar
 Variables
@@ -55797,6 +55808,11 @@ sustituyen
 separator
 sustituidas
 sucedan
+stdin
+styles
+starts
+seconds
+selectora
 vault
 vil
 ver
@@ -62372,6 +62388,7 @@ virtualiza
 vuelves
 varialbles
 value
+visitar
 audience
 activo
 auto
@@ -68436,6 +68453,11 @@ api
 anidadas
 antiguo
 acceden
+asignarle
+administrarlos
+afectadas
+admite
+automatically
 related
 recomendados
 ribbon
@@ -74956,6 +74978,9 @@ relative
 raiz
 recibido
 relacionada
+realizan
+rodear
+renamed
 notes
 notas
 nuevas
@@ -88023,6 +88048,14 @@ contenedora
 cause
 cuidado
 contengan
+confirmaciones
+confirmation
+channel
+combinar
+codes
+comas
+concurrentes
+cooldown
 updated
 un
 universo
@@ -95065,6 +95098,7 @@ uwnao
 ultimo
 unidimensional
 users
+until
 Galaxy
 Git
 Gr
@@ -106642,6 +106676,11 @@ Colecci
 Configuracion
 Creadas
 Caja
+Configura
+Comenzar
+Controles
+Caret
+Ciertas
 Instalados
 Instalado
 Instalar
@@ -113742,6 +113781,8 @@ Interpolaci
 INTERAMERICANA
 Iniciar
 Icono
+Identificadores
+Ignore
 Funci
 File
 Fase
@@ -126955,6 +126996,10 @@ Execute
 Elecci
 Envolturas
 Enviar
+Emergente
+Envoltorio
+Every
+Editor
 Obsidian
 OmniSearch
 Ocultar
@@ -138429,6 +138474,11 @@ Autenticaci
 Automatizaci
 Alternativamente
 Adiciones
+Acciones
+Ayuda
+Admite
+ANSI
+Availability
 push
 pull
 para
@@ -144471,6 +144521,10 @@ predeterminada
 patch
 peligroso
 provistas
+preacciones
+preparativos
+predefinido
+pospone
 min
 mica
 movimiento
@@ -151818,6 +151872,9 @@ major
 minor
 movida
 malas
+modals
+moved
+modified
 YAML
 Ya
 You
@@ -170168,6 +170225,10 @@ executing
 emergente
 events
 exclamaci
+execution
+experimental
+exceden
+ejecuciones
 Motor
 Media
 Mantiene
@@ -197187,6 +197248,7 @@ integradas
 indexados
 inici
 incluidos
+interactivos
 Dependencia
 Dropbox
 Dataview
@@ -203373,6 +203435,10 @@ Documenta
 Descripcion
 Directorio
 Duraci
+Detect
+Disponibilidad
+Debouncing
+Disparadores
 Remotely
 Raz
 Revisa
@@ -210516,6 +210582,8 @@ Roles
 Rubbish
 Reintegrate
 Required
+Redirige
+Realtime
 Hider
 Hace
 Herramientas
@@ -215467,6 +215535,7 @@ High
 Hurtado
 HILL
 Heading
+Hotkey
 filtrar
 formato
 faltantes
@@ -221005,6 +221074,7 @@ formados
 fatales
 formatting
 font
+finished
 haya
 hace
 hacer
@@ -226825,6 +226895,8 @@ html
 heredado
 hiciera
 hicieran
+hotkeys
+handling
 que
 quedan
 queda
@@ -233884,6 +233956,7 @@ qNbzl
 qFlz
 qZpw
 quemado
+quits
 University
 Usar
 Un
@@ -294146,6 +294219,7 @@ Wcxi
 Working
 Wine
 Workspaces
+Wait
 JavaScript
 JSON
 JERARQU

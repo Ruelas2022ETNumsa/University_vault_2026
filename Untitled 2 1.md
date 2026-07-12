@@ -29,9 +29,9 @@ No hay comandos de shell aún, haz clic en el botón 'New shell command' de abaj
 * Acción: >New shell command<
 
 ---
----
----
----
+
+r
+
 ---
 
 ### Comando de shell creado (Shell command)
@@ -306,29 +306,68 @@ Si está activado, los eventos no pueden realizar múltiples ejecuciones concurr
 
 ---
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+## Pestaña: Configuración del comando / Variables
+### Valores por defecto para variables / Default values for variables
+Ciertas variables pueden no estar disponibles en algunas situaciones (por ejemplo, `{{file_name}}` no está disponible si no hay ningún panel de archivo activo). Puedes definir valores por defecto que se utilizarán cuando una variable no esté disponible de otro modo.
 
 ---
+
+### Configuración por Variable
+Cada una de las siguientes variables cuenta con su propia caja selectora para definir la acción en caso de no estar disponible:
+
+#### Lista de Variables del Editor y Archivo
+* `{{caret_paragraph}}`
+* `{{caret_position}}`
+* `{{environment}}`
+* `{{file_content}}`
+* `{{file_extension}}`
+* `{{file_name}}`
+* `{{file_path}}`
+* `{{file_url}}`
+* `{{folder_name}}`
+* `{{folder_path}}`
+* `{{note_content}}`
+* `{{selection}}`
+* `{{tags}}`
+* `{{title}}`
+* `{{workspace}}`
+* `{{yaml_content}}`
+* `{{yaml_value}}`
+* `{{yaml_values}}`
+
+#### Lista de Variables de Eventos (Disparadores)
+* `{{event_file_content}}`
+* `{{event_file_extension}}`
+* `{{event_file_name}}`
+* `{{event_file_path}}`
+* `{{event_file_url}}`
+* `{{event_folder_name}}`
+* `{{event_folder_path}}`
+* `{{event_note_content}}`
+* `{{event_old_file_name}}`
+* `{{event_old_file_path}}`
+* `{{event_old_folder_name}}`
+* `{{event_old_folder_path}}`
+* `{{event_old_title}}`
+* `{{event_tags}}`
+* `{{event_title}}`
+* `{{event_type}}`
+* `{{event_yaml_content}}`
+* `{{event_yaml_value}}`
+* `{{event_yaml_values}}`
+
+#### Opciones de comportamiento (para todas las variables anteriores):
+Si no está disponible, entonces:
+- Opción: [Inherit: cancel execution and show errors/Cancel execution and show errors/Cancel execution silently/Execute with value:]
+- Acción: >❓<
+
+> **Tip:** Presiona `Ctrl + arriba/abajo` para cambiar al comando de shell anterior o siguiente.
+- Acción rápida: >_ < (Ejecutar ahora. Ctrl+clic: ejecutar y preguntar qué hacer con la salida).
+
 ---
----
----
+
+r
+
 ---
 
 ## Pestaña: Environments
