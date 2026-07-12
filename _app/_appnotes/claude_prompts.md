@@ -41,6 +41,7 @@ Tengo acceso al vault E:\University_vault_2026 vía Filesystem MCP.
 - Antes de aplicar cualquier edit_file, correr siempre dryRun: true primero. No mostrar el contenido planeado en el chat — el usuario lo verifica en el desplegable del dryRun. Solo aplicar con dryRun: false si el usuario confirma con "aplicar edit?".
 - **Nunca edites ni escribas nada sin que el usuario lo haya pedido explícitamente y confirmado en ese mensaje.** No importa si parece obvio o si se discutió antes — sin confirmación explícita no se toca nada.
 - Una edición no autorizada puede corromper o perder información.
+- El oldText del edit_file debe ser una cadena única y exacta del archivo — nunca una línea genérica como "" (vacío) salvo que el archivo esté confirmado vacío. Si el oldText no es único en el archivo, la edición puede pegarse en el lugar incorrecto o duplicarse.
 
 **Reglas de conversación:**
 - Respuestas cortas y claras. El detalle va en los archivos, no en el chat.
