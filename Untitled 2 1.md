@@ -124,18 +124,187 @@ Permite añadir campos al formulario. Se pueden usar `{{variables}}` en las etiq
 #### Texto del botón de ejecución / Execute button text
 - Campo: \[input text\] (by default : Execute)
 
----
-
 - Acción final: >Create prompt<
 
 > **Tip:** Puedes personalizar el estilo visual del modal del prompt con CSS usando la clase `.SC-prompt-modal-fyquadt617` o `.SC-prompt-modal` (para todos los modals).
 
+---
 
+## Pestaña: Configuración del comando / Output
+### Canal de salida para stdout / Output channel for stdout
+- Opción: \[Ignore/Notification balloon/Current file:(Caret position/Top/Bottom)/Open files/Status bar/Clipboard/Assign custom variables/Ask execution\]
 
+### Canal de salida para stderr / Output channel for stderr
+Si tanto stdout como stderr usan el mismo canal, se combinarán en el mismo mensaje con stdout.
 
+- Opción: \[Ignore/Notification balloon/Current file:(Caret position/Top/Bottom)/Status bar/Clipboard/Ask execution\]
 
+### Envoltorio de salida para stdout / Output wrapper for stdout
+Se usa para rodear la salida con texto predefinido (ej. poner la salida en un bloque de código).
 
+- Opción: \[No stdout wrapper/Create a new output wrapper\]
 
+### Envoltorio de salida para stderr / Output wrapper for stderr
+- Opción: \[No stderr wrapper/Create a new output wrapper\]
+
+### Detectar colores, estilos de fuente, etc. en la salida (Código ANSI) / Detect colors, font styles etc. in output (ANSI code)
+Los programas de shell pueden generar código ANSI para aplicar colores y formato. Si está activado, las ocurrencias de ANSI se convierten a elementos HTML. De lo contrario, se muestra como texto plano.
+
+- Controles: \[stdout: Enable/Disable\] \[stderr: Enable/Disable\]
+- Acción: >❓<
+
+### Modo de manejo de salida / Output handling mode
+Establece en 'Realtime' si el comando tarda mucho y deseas que la salida se procese a medida que esté disponible. 'Wait until finished' pospone el manejo hasta recibir toda la salida.
+
+- Opción: \[Wait until finished/Realtime (experimental)\]
+- Acción: >❓<
+
+### Orden de salida stdout/stderr / Order of stdout/stderr output
+Cuando la salida contiene tanto errores como salida normal, define cuál debe presentarse primero (solo importa si el modo es 'Wait until finished').
+
+- Opción: \[Stdout first, then stderr./Stderr first, then stdout.\]
+
+### Ignorar códigos de error / Ignore error codes
+Lista de números separados por comas. Si la ejecución falla con uno de estos códigos de salida, no se mostrará ningún mensaje de error y se ignorará el canal stderr.
+
+- Campo: \[input text\]
+
+### Mostrar una notificación al ejecutar / Show a notification when executing
+- Opción: \[Default (Do not show)/Do not show/Show for 10 seconds/Show until process is finished/Show only if executing takes long\]
+
+> **Tip:** Presiona `Ctrl + arriba/abajo` para cambiar al comando de shell anterior o siguiente.
+- Acción rápida: >_ < (Ejecutar ahora. Ctrl+clic: ejecutar y preguntar qué hacer con la salida).
+
+---
+
+## Pestaña: Configuración del comando / Environments
+### Comando de shell por defecto / Default shell command
+Se usa en sistemas operativos que no definen su propio comando de shell.
+
+- Campo: \[Enter your command\]
+- Preview de terminal: `cmd.exe`
+
+### Comando de shell en macOS / Shell command on macOS
+Si está vacío, se utilizará el comando de shell por defecto en macOS.
+
+- Campo: \[input text\]
+- Preview de terminal: `Unknown shell`
+
+### Comando de shell en Linux / Shell command on Linux
+Si está vacío, se utilizará el comando de shell por defecto en Linux.
+
+- Campo: \[input text\]
+- Preview de terminal: `Unknown shell`
+
+### Comando de shell en Windows / Shell command on Windows
+Si está vacío, se utilizará el comando de shell por defecto en Windows.
+
+- Campo: \[input text\]
+- Preview de terminal: `cmd.exe`
+
+### Terminal de macOS / macOS shell
+- Opción: \[Use default (system default)/Bash/Dash/Zsh (Z shell)\]
+
+### Terminal de Linux / Linux shell
+- Opción: \[Use default (system default)/Bash/Dash/Zsh (Z shell)\]
+
+### Terminal de Windows / Windows shell
+Se recomienda PowerShell sobre cmd.exe, ya que este plugin no admite el escape de variables en CMD.
+
+- Opción: \[Use default (cmd.exe)/PowerShell Core/PowerShell 5/cmd.exe\]
+
+> **Tip:** Presiona `Ctrl + arriba/abajo` para cambiar al comando de shell anterior o siguiente.
+- Acción rápida: >_ < (Ejecutar ahora. Ctrl+clic: ejecutar y preguntar qué hacer con la salida).
+
+---
+
+## Pestaña: Configuración del comando / Events
+### Disponibilidad en la paleta de comandos de Obsidian / Availability in Obsidian's command palette
+- Opción: \[Command palette & hotkeys/hotkeys only/excluded\]
+
+### Debouncing (experimental) / Debouncing (experimental)
+Si está activado, los eventos no pueden realizar múltiples ejecuciones concurrentes o muy continuas de este comando de shell. No afecta a los eventos marcados con un ícono de prohibido.
+- Acción: >❓<
+
+- **Execute before cooldown:** (1/0)
+- **Execute after cooldown:** (1/0)
+
+### Ejecutar este comando de shell automáticamente cuando: / Execute this shell command automatically when:
+
+#### Obsidian inicia / Obsidian starts
+- Control: (1/0)
+- Acción: >❓<
+
+#### Obsidian cierra / Obsidian quits
+- Control: (1/0)
+- Acción: >❓<
+
+#### Cambiar el panel activo / Switching the active pane
+- Control: (1/0)
+- Acción: >❓<
+
+#### El cursor se mueve en el editor / Caret moved in editor
+- Control: (1/0)
+- Acción: >❓<
+
+#### Cada n segundos / Every n seconds
+- Control: (1/0)
+- Acción: >❓<
+
+#### Menú de archivo / File menu 🚫
+- Control: (1/0)
+- Acción: >❓<
+
+#### Menú de carpeta / Folder menu 🚫
+- Control: (1/0)
+- Acción: >❓<
+
+#### Menú del editor / Editor menu 🚫
+- Control: (1/0)
+- Acción: >❓<
+
+#### Contenido del archivo modificado / File content modified
+- Control: (1/0)
+- Acción: >❓<
+
+#### Archivo creado / File created
+- Control: (1/0)
+- Acción: >❓<
+
+#### Archivo eliminado / File deleted
+- Control: (1/0)
+- Acción: >❓<
+
+#### Archivo movido / File moved
+- Control: (1/0)
+- Acción: >❓<
+
+#### Archivo renombrado / File renamed
+- Control: (1/0)
+- Acción: >❓<
+
+#### Carpeta creada / Folder created
+- Control: (1/0)
+- Acción: >❓<
+
+#### Carpeta eliminada / Folder deleted
+- Control: (1/0)
+- Acción: >❓<
+
+#### Carpeta movida / Folder moved
+- Control: (1/0)
+- Acción: >❓<
+
+#### Carpeta renombrada / Folder renamed
+- Control: (1/0)
+- Acción: >❓<
+
+> *Nota general del sistema:* Cada uno de estos eventos proporciona variables adicionales específicas (como `{{event_type}}`, `{{event_file_path}}`, `{{event_file_content}}`, etc.) que pueden ser utilizadas por el script al dispararse de manera automática.
+
+> **Tip:** Presiona `Ctrl + arriba/abajo` para cambiar al comando de shell anterior o siguiente.
+- Acción rápida: >_ < (Ejecutar ahora. Ctrl+clic: ejecutar y preguntar qué hacer con la salida).
+
+---
 
 
 
