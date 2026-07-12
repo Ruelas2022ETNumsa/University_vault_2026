@@ -50,18 +50,27 @@
 
 ### Agregar directorios a la variable de entorno Path (Add directories to the Path environment variable)
 * **Descripción:** Esto es a veces necesario para poder llamar a algunas aplicaciones instaladas por el usuario. Los directorios se añadirán DESPUÉS de los directorios por defecto en Path, a menos que se incluya {{!environment:Path}}. También se pueden usar otras {{variables}}, pero no afectan el orden de adición.
-
+- **Acción:** >Show the current Path content (without any additions)<
 #### Adiciones de PATH para macOS (macOS PATH additions)
 * **Descripción:** Define cada directorio en una línea separada, o múltiples directorios en una sola línea, separados por dos puntos (:).
-* **Campo:** [input text] (caja de texto multilínea vacía)
+* **Campo:** \[input text\] (caja de texto multilínea vacía)
 
 #### Adiciones de PATH para Linux (Linux PATH additions)
 * **Descripción:** Define cada directorio en una línea separada, o múltiples directorios en una sola línea, separados por dos puntos (:).
-* **Campo:** [input text] (caja de texto multilínea vacía)
+* **Campo:** \[input text\] (caja de texto multilínea vacía)
 
 #### Adiciones de Path para Windows (Windows Path additions)
 * **Descripción:** Define cada directorio en una línea separada, o múltiples directorios en una sola línea, separados por un punto y coma (;).
-* **Campo:** [input text] (caja de texto multilínea vacía)
+* **Campo:** \[input text\] (caja de texto multilínea vacía)
 
 #### Nota informativa: Las adiciones de Path no funcionan en Shells personalizadas (The Path additions do not work in Custom shells)
 * **Descripción:** Solo funcionan en shells que vienen predefinidas en este plugin. Para instrucciones sobre cómo hacer adiciones de Path para shells personalizadas, por favor haz clic en el enlace de documentación a la derecha.
+
+---
+
+
+
+
+
+
+

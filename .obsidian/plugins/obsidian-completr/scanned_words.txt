@@ -20331,6 +20331,8 @@ Shell
 Section
 Seccion
 Single
+Subsystem
+Shells
 Plugins
 Pendientes
 Plugin
@@ -25830,6 +25832,8 @@ PATH
 Programador
 Preactions
 Pestana
+Principales
+Powershell
 del
 date
 de
@@ -31198,6 +31202,9 @@ denotar
 deshabilitado
 desinstalaci
 directory
+directorio
+directorios
+directories
 Vault
 Verificar
 Variables
@@ -55772,6 +55779,7 @@ salte
 sldkfsdklfdsfjs
 section
 sesion
+shells
 vault
 vil
 ver
@@ -62342,6 +62350,8 @@ volar
 vuelo
 vpokjsV
 vacio
+veda
+virtualiza
 audience
 activo
 auto
@@ -68395,6 +68405,10 @@ asuma
 aborta
 autocomplete
 automaticamente
+anulado
+additions
+adiciones
+acci
 related
 recomendados
 ribbon
@@ -87965,6 +87979,10 @@ conectividad
 cercanos
 complementarios
 confirme
+commands
+conos
+custom
+coma
 updated
 un
 universo
@@ -106582,6 +106600,7 @@ CAPAS
 Colecci
 Configuracion
 Creadas
+Caja
 Instalados
 Instalado
 Instalar
@@ -126892,6 +126911,7 @@ Edit
 Environments
 Events
 Execute
+Elecci
 Obsidian
 OmniSearch
 Ocultar
@@ -138364,6 +138384,7 @@ Aceptar
 Autenticaci
 Automatizaci
 Alternativamente
+Adiciones
 push
 pull
 para
@@ -144399,6 +144420,8 @@ pegadoxxxx
 ppapuy
 pestana
 pestanas
+personalizadas
+predefinidas
 min
 mica
 movimiento
@@ -163328,6 +163351,7 @@ Bolzano
 Burden
 Bibliogr
 Borrador
+Bash
 en
 exacta
 escaneados
@@ -170081,6 +170105,7 @@ ejecutados
 extract
 extraida
 engranaje
+environment
 Motor
 Media
 Mantiene
@@ -197092,6 +197117,7 @@ intencionalmente
 innecesariamente
 incorrectamente
 identifican
+incluya
 Dependencia
 Dropbox
 Dataview
@@ -203276,6 +203302,7 @@ Detener
 Desencadenadores
 Documenta
 Descripcion
+Directorio
 Remotely
 Raz
 Revisa
@@ -281526,6 +281553,7 @@ which
 will
 want
 wrap
+work
 xima
 xeles
 xy
@@ -294040,6 +294068,7 @@ When
 Where
 Wcxi
 Working
+Wine
 JavaScript
 JSON
 JERARQU
