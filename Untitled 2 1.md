@@ -323,7 +323,7 @@ Cada una de las siguientes variables cuenta con su propia caja selectora para de
 * `{{file_extension}}`
 * `{{file_name}}`
 * `{{file_path}}`
-* `{{file_url}}`
+* `{{file_uri}}`
 * `{{folder_name}}`
 * `{{folder_path}}`
 * `{{note_content}}`
@@ -340,7 +340,7 @@ Cada una de las siguientes variables cuenta con su propia caja selectora para de
 * `{{event_file_extension}}`
 * `{{event_file_name}}`
 * `{{event_file_path}}`
-* `{{event_file_url}}`
+* `{{event_file_uri}}`
 * `{{event_folder_name}}`
 * `{{event_folder_path}}`
 * `{{event_note_content}}`
@@ -407,7 +407,7 @@ Define cada directorio en una línea separada, o múltiples directorios en una s
 Define cada directorio en una línea separada, o múltiples directorios en una sola línea, separados por un punto y coma (;).
 * Campo: \[input text\]
 
-### Nota informativa: Las adiciones de Path no funcionan en Shells personalizadas (The Path additions do not work in Custom shells)
+> [!warning] Nota informativa: Las adiciones de Path no funcionan en Shells personalizadas (The Path additions do not work in Custom shells)
 Solo funcionan en shells que vienen predefinidas in este plugin. Para instrucciones sobre cómo hacer adiciones de Path para shells personalizadas, por favor haz clic en el enlace de documentación a la derecha.
 
 ---
@@ -478,8 +478,7 @@ Si está activado, aparece un menú desplegable cuando comienzas a escribir nomb
 * Campo: (1/0) = 1
 
 ### Variables personalizadas (Custom variables)
- (description:)
-* Acción: >open a pane that displays all custom varialbles and their values<
+ * Acción: >open a pane that displays all custom varialbles and their values<
 * Campo: \[Via URI: Notify/Via URI: Don't Notify\] \[Via output assignment: Notify/Via output assignment: Don't Notify\]
 * Acción: >New custom variable<
 
@@ -540,7 +539,7 @@ Da el nombre de la carpeta contenedora del archivo actual, o un punto si la carp
 ##### Default value
 * → Ver nota al inicio de la sección.
 
-#### `{{folder_path:relative}}` or `{{folder_path:absolute}}`
+#### `{{folder_path:relative}}` or `{{folder_path:absolute}}` — carpeta del archivo activo
 Da la ruta a la carpeta contenedora del archivo actual, ya sea como absoluta desde la raíz del sistema de archivos, o como relativa desde la raíz de la bóveda de Obsidian. Solo disponible cuando el panel activo contiene un archivo, no en la vista de gráfico u otra vista que no sea de archivo.
 ##### Default value
 * → Ver nota al inicio de la sección.
@@ -550,7 +549,7 @@ Da el nombre de la carpeta para "Ubicación predeterminada para nuevas notas" (u
 ##### Default value
 * `{{new_note_folder_name}}` siempre está disponible, por lo que no puede tener un valor por defecto.
 
-#### `{{folder_path:relative}}` or `{{folder_path:absolute}}`
+#### `{{folder_path:relative}}` or `{{folder_path:absolute}}` — carpeta de nuevas notas (`new_note_folder_path`)
 Da la ruta a la carpeta "Ubicación predeterminada para nuevas notas" (una configuración en Obsidian), ya sea como absoluta desde la raíz del sistema de archivos, o como relativa desde la raíz de la bóveda de Obsidian.
 ##### Default value
 * `{{new_note_folder_path}}` siempre está disponible, por lo que no puede tener un valor por defecto.
@@ -625,7 +624,7 @@ Entrega el nombre del archivo relacionado con el evento junto con su extensión 
 ##### Default value
 - → Ver nota al inicio de la sección.
 
-#### `{{event_file_path:relative}}` or `{{event_file_path:absolute}}`
+#### `{{event_file_path:relative}}` or `{{event_file_path:absolute}}` — ruta del archivo del evento
 Entrega la ruta del archivo relacionado con el evento, ya sea absoluta desde la raíz del sistema de archivos, o relativa desde la raíz del vault de Obsidian. Solo disponible en los eventos: Menú de archivo, Archivo creado, Contenido de archivo modificado, Archivo eliminado, Archivo movido, Archivo renombrado.
 ##### Default value
 - → Ver nota al inicio de la sección.
