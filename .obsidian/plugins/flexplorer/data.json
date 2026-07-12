@@ -1251,6 +1251,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "shellcommands_guide.md",
         "script_guide.md",
         "claude_prompts.md",
         "Rclone_guide.md",
@@ -3305,6 +3306,10 @@
       "isHidden": false
     },
     "_app/_appnotes/script_guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_appnotes/shellcommands_guide.md": {
       "isPinned": false,
       "isHidden": false
     }
