@@ -6212,6 +6212,8 @@ tratamientos
 tarda
 traslapen
 traspaso
+their
+terminaci
 ToDo
 Templater
 Text
@@ -25834,6 +25836,8 @@ Preactions
 Pestana
 Principales
 Powershell
+Portapapeles
+Previsualizar
 del
 date
 de
@@ -31205,6 +31209,14 @@ directory
 directorio
 directorios
 directories
+duration
+dirigida
+displays
+dirige
+description
+deshabilitar
+desplegable
+desees
 Vault
 Verificar
 Variables
@@ -55780,6 +55792,8 @@ sldkfsdklfdsfjs
 section
 sesion
 shells
+sustituyen
+separator
 vault
 vil
 ver
@@ -62352,6 +62366,9 @@ vpokjsV
 vacio
 veda
 virtualiza
+vuelves
+varialbles
+value
 audience
 activo
 auto
@@ -68409,6 +68426,10 @@ anulado
 additions
 adiciones
 acci
+apagar
+absolute
+ancestros
+api
 related
 recomendados
 ribbon
@@ -74927,6 +74948,7 @@ rprete
 reintegrate
 relative
 raiz
+recibido
 notes
 notas
 nuevas
@@ -81187,6 +81209,7 @@ nombrexxx
 nuqyeee
 nfsnfkslfn
 nnkndslf
+notification
 created
 commit
 cada
@@ -87983,6 +88006,13 @@ commands
 conos
 custom
 coma
+ciertas
+configuran
+contextuales
+comienzas
+caret
+copiaste
+contenedora
 updated
 un
 universo
@@ -101105,6 +101135,7 @@ Generaci
 Gauss
 GRUPO
 Guenther
+Globo
 Convenci
 Creaci
 Commander
@@ -126912,6 +126943,8 @@ Environments
 Events
 Execute
 Elecci
+Envolturas
+Enviar
 Obsidian
 OmniSearch
 Ocultar
@@ -133135,6 +133168,7 @@ Otros
 Ordinary
 OAuth
 Obliga
+Outputting
 Auto
 Annotator
 Autocompletado
@@ -144422,6 +144456,9 @@ pestana
 pestanas
 personalizadas
 predefinidas
+position
+predeterminada
+patch
 min
 mica
 movimiento
@@ -151761,6 +151798,12 @@ modelaci
 mantenido
 mapear
 metadata
+message
+monospace
+manage
+menus
+major
+minor
 YAML
 Ya
 You
@@ -163352,6 +163395,7 @@ Burden
 Bibliogr
 Borrador
 Bash
+Built
 en
 exacta
 escaneados
@@ -170106,6 +170150,9 @@ extract
 extraida
 engranaje
 environment
+executing
+emergente
+events
 Motor
 Media
 Mantiene
@@ -197118,6 +197165,12 @@ innecesariamente
 incorrectamente
 identifican
 incluya
+informativos
+insert
+introducen
+integradas
+indexados
+inici
 Dependencia
 Dropbox
 Dataview
@@ -203303,6 +203356,7 @@ Desencadenadores
 Documenta
 Descripcion
 Directorio
+Duraci
 Remotely
 Raz
 Revisa
@@ -220932,6 +220986,9 @@ finitas
 fnsdflndsflnsdf
 fknsf
 formados
+fatales
+formatting
+font
 haya
 hace
 hacer
@@ -281554,6 +281611,9 @@ will
 want
 wrap
 work
+wrappers
+wrapper
+workspace
 xima
 xeles
 xy
@@ -294069,6 +294129,7 @@ Where
 Wcxi
 Working
 Wine
+Workspaces
 JavaScript
 JSON
 JERARQU
