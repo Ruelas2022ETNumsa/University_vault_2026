@@ -101180,6 +101180,7 @@ Gauss
 GRUPO
 Guenther
 Globo
+Global
 Convenci
 Creaci
 Commander
@@ -226897,6 +226898,7 @@ hiciera
 hicieran
 hotkeys
 handling
+habilitan
 que
 quedan
 queda

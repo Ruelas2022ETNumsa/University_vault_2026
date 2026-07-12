@@ -5,7 +5,6 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
-        "Untitled 2 1.md",
         "Untitled.md",
         "Rubbish",
         "void.md",
@@ -1252,6 +1251,8 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "shellcmd_config_gral.md",
+        "shellcmd_config_script.md",
         "shellcommands_guide.md",
         "script_guide.md",
         "claude_prompts.md",
@@ -3314,7 +3315,11 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Untitled 2 1.md": {
+    "_app/_appnotes/shellcmd_config_script.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_appnotes/shellcmd_config_gral.md": {
       "isPinned": false,
       "isHidden": false
     }
