@@ -28,7 +28,7 @@ Busca alias de comandos de shell, comandos, IDs e íconos.
 No hay comandos de shell aún, haz clic en el botón 'New shell command' de abajo.
 * Acción: >New shell command<
 
---
+---
 
 ## Pestaña: Environments
 
