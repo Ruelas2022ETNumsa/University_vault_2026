@@ -6214,6 +6214,7 @@ traslapen
 traspaso
 their
 terminaci
+tanda
 ToDo
 Templater
 Text
@@ -55794,6 +55795,8 @@ sesion
 shells
 sustituyen
 separator
+sustituidas
+sucedan
 vault
 vil
 ver
@@ -68430,6 +68433,9 @@ apagar
 absolute
 ancestros
 api
+anidadas
+antiguo
+acceden
 related
 recomendados
 ribbon
@@ -74949,6 +74955,7 @@ reintegrate
 relative
 raiz
 recibido
+relacionada
 notes
 notas
 nuevas
@@ -88013,6 +88020,9 @@ comienzas
 caret
 copiaste
 contenedora
+cause
+cuidado
+contengan
 updated
 un
 universo
@@ -144459,6 +144469,8 @@ predefinidas
 position
 predeterminada
 patch
+peligroso
+provistas
 min
 mica
 movimiento
@@ -151804,6 +151816,8 @@ manage
 menus
 major
 minor
+movida
+malas
 YAML
 Ya
 You
@@ -170153,6 +170167,7 @@ environment
 executing
 emergente
 events
+exclamaci
 Motor
 Media
 Mantiene
@@ -197171,6 +197186,7 @@ introducen
 integradas
 indexados
 inici
+incluidos
 Dependencia
 Dropbox
 Dataview
