@@ -399,12 +399,12 @@ Esos dos pasos siguen siendo manuales o via plantilla `tpl-photon.md`. Ver [[_ga
 
 #### Configuración aplicada
 
-| Campo | Valor |
-|---|---|
-| Interpreter | `C:\Users\USUARIO\AppData\Local\Programs\Python\Python313\python.exe` |
-| Include Current File Path | ON |
-| Include Vault Path | ON |
-| Output Type | Notice |
+| Campo                     | Valor                                                                 |
+| ------------------------- | --------------------------------------------------------------------- |
+| Interpreter               | `C:\Users\USUARIO\AppData\Local\Programs\Python\Python313\python.exe` |
+| Include Current File Path | ON                                                                    |
+| Include Vault Path        | ON                                                                    |
+| Output Type               | Notice                                                                |
 
 #### Estructura de scripts
 
