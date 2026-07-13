@@ -1,8 +1,0 @@
-/* Línea legible para móvil y tablet — tema Default */
-.is-mobile {
-  --file-line-width: 60% !important;
-}
-
-.is-tablet {
-  --file-line-width: 50% !important;
-}

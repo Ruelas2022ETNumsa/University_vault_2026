@@ -1359,7 +1359,7 @@
       "isHidden": false
     },
     "_app/_config/_galaxy-system.md": {
-      "isPinned": false,
+      "isPinned": true,
       "isHidden": false
     },
     "_app/_config/_graph-system.md": {
@@ -3211,13 +3211,13 @@
     "_app/shellcommands": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "shellcommands_guide(scripts).md",
         "shellcmd_config_script.md",
         "shellcmd_config_gral.md",
         "shellcmd_scripting_guide.md"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "_app/shellcommands/shellcmd_scripting_guide.md": {
       "isPinned": false,
@@ -3240,7 +3240,8 @@
     "_app/_appnotes/PDF_PP-guide.md",
     "_app/_config/_claude-boot.md",
     "_app/_appnotes/claude_prompts.md",
-    "Rubbish/section.md"
+    "Rubbish/section.md",
+    "_app/_config/_galaxy-system.md"
   ],
   "showHidden": false,
   "newItemPlacement": "top",
