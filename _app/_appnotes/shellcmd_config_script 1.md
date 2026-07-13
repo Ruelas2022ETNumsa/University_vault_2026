@@ -37,8 +37,6 @@ status: borrador
 
 > [!info] Todo lo documentado en este archivo corresponde a la configuración individual accesible dentro de la pestaña Shell commands.
 
-> **Tip:** Presiona `Ctrl + arriba/abajo` para navegar entre comandos de shell. Acción rápida: `>_ <` ejecuta inmediatamente; `Ctrl+clic` ejecuta y pregunta qué hacer con la salida. *Aplica en todas las pestañas de configuración.*
-
 ---
 
 ### Comando de shell creado (Shell command)
@@ -92,6 +90,9 @@ Se usa para pasar textos largos como entrada al comando de shell si exceden el l
   - Acciones: >🗐< (Copiar valor)
 - **Obsidian command palette id:** `obsidian-shellcommands:shell-command-xxxpwtaxxx`
   - Acciones: >🗐< (Copiar valor)
+
+> **Tip:** Presiona `Ctrl + arriba/abajo` para cambiar al comando de shell anterior o siguiente.
+- Acción rápida: >_ << (Ejecutar ahora. Ctrl+clic: ejecutar y preguntar qué hacer con la salida).
 
 ---
 
@@ -175,6 +176,9 @@ Lista de números separados por comas. Si la ejecución falla con uno de estos c
 
 ### Mostrar una notificación al ejecutar / Show a notification when executing
 - Opción: \[Default (Do not show)/Do not show/Show for 10 seconds/Show until process is finished/Show only if executing takes long\]
+
+> **Tip:** Presiona `Ctrl + arriba/abajo` para cambiar al comando de shell anterior o siguiente.
+- Acción rápida: >_ < (Ejecutar ahora. Ctrl+clic: ejecutar y preguntar qué hacer con la salida).
 
 ---
 
