@@ -373,21 +373,13 @@ Esos dos pasos siguen siendo manuales o via plantilla `tpl-photon.md`. Ver [[_ga
 | stderr | Error balloon |
 | Confirmación | No |
 
-**Acceso:** botón `upload-cloud` en el ribbon vía Commander → ejecuta el sync de inmediato sin esperar el Task Scheduler (sync automático cada 5 horas).
+**Acceso:** botón `upload-cloud` en el ribbon vía Commander → ejecuta el sync de inmediato sin esperar el Task Scheduler (sync automático cada 1 hora).
 
 **Output esperado:** notificación flotante con el log de rclone al terminar. Si no hay cambios, rclone puede no emitir output — el `--verbose` fuerza la notificación.
 
 > Configuración completa de rclone, remote `gdrive` y Task Scheduler: [[Rclone_guide]]
 > Sistema de sync general: [[_sync-system]]
 
-### Archivos complementarios
-
-| Archivo | Descripción |
-|---|---|
-| [[shellcmd_config_gral]] | Transcripción de las opciones generales del plugin |
-| [[shellcmd_config_script]] | Transcripción de las opciones de configuración por script individual |
-| [[shellcmd_scripting_guide]] | Hoja de referencia rápida para construir scripts — complementa las transcripciones |
-| [[shellcommands_guide(scripts)]] | Guía de configuración de scripts en el vault — aún no terminada |
 
 ### Python Scripter — reemplazado por Shell Commands (2026-07-10)
 
