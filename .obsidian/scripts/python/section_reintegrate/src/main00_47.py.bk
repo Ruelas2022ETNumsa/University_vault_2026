@@ -1,3 +1,11 @@
+# fecha: 13-july-2026
+# v1 — reintegra el contenido editado de section.md al archivo fuente original.
+# Lee metadata (heading + source_path) desde section.json.
+# Crea backup numerado del archivo fuente antes de modificarlo.
+# BUG: loop de fin usa toggle simple — no soporta fences anidados (mismo bug que extract v1).
+# BUG: no saltea el separador --- ruta --- al leer section.md (agregado en extract v3).
+# Args: argv[1] file_path · argv[2] vault_path
+
 import sys
 import os
 import json
@@ -65,24 +73,14 @@ if start is None:
     sys.exit(0)
 
 end = len(lines)
-fence_stack = []
 for i in range(start + 1, len(lines)):
-    m = re.match(r'^(`{3,})', lines[i])
-    if m:
-        ticks = m.group(1)
-        if fence_stack and fence_stack[-1] == ticks:
-            fence_stack.pop()
-        elif not fence_stack:
-            fence_stack.append(ticks)
-    if not fence_stack and pattern.match(lines[i]):
+    if pattern.match(lines[i]):
         end = i
         break
 
-# --- Leer contenido editado de section.md (salteando separador --- ruta ---) ---
+# --- Leer contenido editado de section.md ---
 with open(section_md, 'r', encoding='utf-8') as f:
     new_section = f.readlines()
-if new_section and new_section[0].startswith('--- '):
-    new_section = new_section[1:]
 
 # --- Reemplazar sección en el original ---
 new_lines = lines[:start] + new_section + lines[end:]

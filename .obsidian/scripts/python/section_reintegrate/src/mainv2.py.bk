@@ -1,3 +1,11 @@
+# fecha: 13-july-2026
+# v2 — reintegra el contenido editado de section.md al archivo fuente original.
+# Lee metadata (heading + source_path) desde section.json.
+# Crea backup numerado del archivo fuente antes de modificarlo.
+# Loop de fin: fence_stack con conteo exacto de backticks — soporta fences anidados.
+# Saltea el separador --- ruta --- al leer section.md.
+# Args: argv[1] file_path · argv[2] vault_path
+
 import sys
 import os
 import json
