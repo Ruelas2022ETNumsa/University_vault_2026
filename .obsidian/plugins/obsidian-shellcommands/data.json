@@ -143,7 +143,7 @@
         "default": "\"C:\\Users\\USUARIO\\AppData\\Local\\Programs\\Python\\Python313\\python.exe\" \"{{vault_path}}\\.obsidian\\scripts\\python\\section_reintegrate\\src\\main.py\" \"{{file_path:relative}}\" \"{{vault_path}}\" \"{{_section_source}}\""
       },
       "shells": {},
-      "alias": "",
+      "alias": "Section reintegrate",
       "icon": null,
       "confirm_execution": false,
       "ignore_error_codes": [],
@@ -152,7 +152,7 @@
       },
       "output_handlers": {
         "stdout": {
-          "handler": "ignore",
+          "handler": "notification",
           "convert_ansi_code": true
         },
         "stderr": {
@@ -170,7 +170,13 @@
       "events": {},
       "debounce": null,
       "command_palette_availability": "enabled",
-      "preactions": [],
+      "preactions": [
+        {
+          "type": "prompt",
+          "enabled": true,
+          "prompt_id": "w9pbvpq5dj"
+        }
+      ],
       "variable_default_values": {}
     }
   ],
@@ -199,6 +205,23 @@
         }
       ],
       "execute_button_text": "Extraer"
+    },
+    {
+      "id": "w9pbvpq5dj",
+      "title": "Section Reintegrate",
+      "description": "",
+      "preview_shell_command": false,
+      "fields": [
+        {
+          "type": "single-line-text",
+          "label": "Ruta del archivo fuente",
+          "description": "Ruta del archivo a reintegrar",
+          "default_value": "",
+          "target_variable_id": "b593feucxn",
+          "required": true
+        }
+      ],
+      "execute_button_text": "Reintegrar"
     }
   ],
   "builtin_variables": {},
