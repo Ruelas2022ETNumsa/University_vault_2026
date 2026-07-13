@@ -28,14 +28,14 @@ status: borrador
 
 ## Pestañas Principales
 
-> [!info] Todo lo documentado en este archivo corresponde a la configuración individual accesible dentro de la pestaña Shell commands.
-
 * [x] Shell commands
 * [ ] Environments
 * [ ] Preactions
 * [ ] Output
 * [ ] Events
 * [ ] Variables
+
+> [!info] Todo lo documentado en este archivo corresponde a la configuración individual accesible dentro de la pestaña Shell commands.
 
 ---
 
