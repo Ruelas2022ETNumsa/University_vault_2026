@@ -1,3 +1,10 @@
+# fecha:12-july-2026
+# v1 — extrae una sección de un archivo fuente a section.md.
+# Aborta si section.md ya tiene contenido.
+# Guarda metadata (heading + source_path) en section.json.
+# Detecta fences de código para no confundir comentarios # con headings.
+# Args: argv[1] file_path · argv[2] vault_path · argv[3] heading · argv[4] source_path
+
 import sys
 import os
 import json

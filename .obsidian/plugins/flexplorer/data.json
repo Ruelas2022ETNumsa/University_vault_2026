@@ -1250,6 +1250,9 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "plugin_guide 2.md",
+        "plugin_guide 3.md",
+        "plugin_guide 1.md",
         "script_guide.md",
         "claude_prompts.md",
         "Rclone_guide.md",
@@ -1322,11 +1325,6 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "_TABnote-system 2.md",
-        "_TABnote-system 1.md",
-        "_ToDo-system 2.md",
-        "_ToDo-system 1.md",
-        "_notebooklm-system 1.md",
         "_library_ETN505(i).md",
         "_claude-matter-boot.md",
         "_TABnote-system.md",
@@ -2925,32 +2923,12 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_app/_config/_notebooklm-system 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_app/_appnotes/claude_prompts.md": {
       "isPinned": true,
       "isHidden": false
     },
     "Rubbish/section.md": {
       "isPinned": true,
-      "isHidden": false
-    },
-    "_app/_config/_ToDo-system 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/_config/_ToDo-system 2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/_config/_TABnote-system 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/_config/_TABnote-system 2.md": {
-      "isPinned": false,
       "isHidden": false
     },
     "in_work/MAT101_T1-Funciones-reales 1.md": {
@@ -2985,6 +2963,18 @@
       "isHidden": false
     },
     "_app/shellcommands/shellcommands_guide(scripts).md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_appnotes/plugin_guide 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_appnotes/plugin_guide 2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_appnotes/plugin_guide 3.md": {
       "isPinned": false,
       "isHidden": false
     }

@@ -535,8 +535,6 @@ Antes de conectar el script a Obsidian, probarlo desde PowerShell:
 
 Si devuelve `Sin cambios.` o `Correcciones realizadas.` — el script funciona. Si lanza excepción — hay un error antes de conectarlo a Obsidian.
 
-prueba lolo
-
 ---
 
 ## 9. Galaxy View — Visualización 3D del grafo del vault
