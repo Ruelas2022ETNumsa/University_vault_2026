@@ -5,10 +5,8 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
-        "Untitled.md",
         "Rubbish",
         "void.md",
-        "_assets",
         "Zettelkasten",
         "Marginalia Attachments",
         "Borrar",
@@ -1112,6 +1110,7 @@
       "sortOrder": "custom",
       "customOrder": [
         "notebooklm",
+        "shellcommands",
         "Canvas",
         "completr-words",
         "Excalidraw",
@@ -1251,9 +1250,6 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "shellcmd_config_gral.md",
-        "shellcmd_config_script.md",
-        "shellcommands_guide.md",
         "script_guide.md",
         "claude_prompts.md",
         "Rclone_guide.md",
@@ -2475,7 +2471,6 @@
       "customOrder": [
         "MAT101_T1-Funciones-reales 1.md",
         "claude vision.md",
-        "Cornell Marginalia — Ejemplos de sintaxis.md",
         "Untitled 1.md",
         "obsidian-cornell-notes.md",
         "tables no terminado.md",
@@ -2861,101 +2856,11 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_assets": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Cornell Marginalia — Ejemplos de sintaxis-06-07-2026_00-02-53.png",
-        "Cornell Marginalia — Ejemplos de sintaxis-06-07-2026_17-49-57.png",
-        "Cornell Marginalia — Ejemplos de sintaxis-06-07-2026_17-50-56.png",
-        "titulo0022-08-07-2026_00-22-48-1.png",
-        "doodles",
-        "doodle_20260707_202044.png",
-        "doodle_20260707_202211.png",
-        "doodle_20260707_202242.png",
-        "doodle_20260707_202126.png",
-        "doodle_20260707_202300.png",
-        "doodle_20260707_202326.png",
-        "void-07-07-2026_20-19-07.png",
-        "void-07-07-2026_20-17-39.png",
-        "o usamos slug oara este dibujo-08-07-2026_00-19-13.png"
-      ]
-    },
-    "_assets/Cornell Marginalia — Ejemplos de sintaxis-06-07-2026_00-02-53.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/Cornell Marginalia — Ejemplos de sintaxis-06-07-2026_17-49-57.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/Cornell Marginalia — Ejemplos de sintaxis-06-07-2026_17-50-56.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/titulo0022-08-07-2026_00-22-48-1.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/doodles": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": []
-    },
-    "_assets/doodle_20260707_202044.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/doodle_20260707_202211.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/doodle_20260707_202242.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/doodle_20260707_202126.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/doodle_20260707_202300.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/doodle_20260707_202326.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/void-07-07-2026_20-19-07.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/void-07-07-2026_20-17-39.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/o usamos slug oara este dibujo-08-07-2026_00-19-13.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Zettelkasten": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
-      "customOrder": [
-        "o usamos slug oara este dibujo.md",
-        "titulo0022.md"
-      ]
-    },
-    "Zettelkasten/o usamos slug oara este dibujo.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Zettelkasten/titulo0022.md": {
-      "isPinned": false,
-      "isHidden": false
+      "customOrder": []
     },
     "Marginalia Attachments": {
       "isPinned": false,
@@ -2964,10 +2869,6 @@
       "customOrder": []
     },
     "in_work/claude vision.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "in_work/Cornell Marginalia — Ejemplos de sintaxis.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -3283,10 +3184,6 @@
       "isPinned": true,
       "isHidden": false
     },
-    "Untitled.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_app/_config/_ToDo-system 1.md": {
       "isPinned": false,
       "isHidden": false
@@ -3311,15 +3208,30 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_app/_appnotes/shellcommands_guide.md": {
+    "_app/shellcommands": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "shellcommands_guide(scripts).md",
+        "shellcmd_config_script.md",
+        "shellcmd_config_gral.md",
+        "shellcmd_scripting_guide.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "_app/shellcommands/shellcmd_scripting_guide.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_app/_appnotes/shellcmd_config_script.md": {
+    "_app/shellcommands/shellcmd_config_gral.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_app/_appnotes/shellcmd_config_gral.md": {
+    "_app/shellcommands/shellcmd_config_script.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/shellcommands/shellcommands_guide(scripts).md": {
       "isPinned": false,
       "isHidden": false
     }

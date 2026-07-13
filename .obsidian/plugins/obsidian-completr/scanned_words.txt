@@ -13200,6 +13200,7 @@ Threads
 Titulo
 Target
 Terminal
+Trigger
 Sistema
 Sync
 Save
@@ -20341,6 +20342,7 @@ Solicita
 Switching
 Salvo
 SSkI
+Scripting
 Plugins
 Pendientes
 Plugin
@@ -25848,6 +25850,8 @@ Preacciones
 Pedir
 Pass
 Presiona
+Peri
+Patrones
 del
 date
 de
@@ -31231,6 +31235,10 @@ disparadores
 delante
 descripciones
 dispararse
+dispara
+debouncing
+disparado
+disponibilidad
 Vault
 Verificar
 Variables
@@ -68462,6 +68470,7 @@ administrarlos
 afectadas
 admite
 automatically
+asignada
 related
 recomendados
 ribbon
@@ -88062,6 +88071,7 @@ codes
 comas
 concurrentes
 cooldown
+complementa
 updated
 un
 universo
@@ -127008,6 +127018,8 @@ Emergente
 Envoltorio
 Every
 Editor
+Encadenar
+Escape
 Obsidian
 OmniSearch
 Ocultar
@@ -138487,6 +138499,7 @@ Ayuda
 Admite
 ANSI
 Availability
+Asignar
 push
 pull
 para
@@ -170240,6 +170253,7 @@ experimental
 exceden
 ejecuciones
 environments
+escapa
 Motor
 Media
 Mantiene
@@ -203452,6 +203466,7 @@ Detect
 Disponibilidad
 Debouncing
 Disparadores
+Descarta
 Remotely
 Raz
 Revisa
@@ -215549,6 +215564,7 @@ Hurtado
 HILL
 Heading
 Hotkey
+Hoja
 filtrar
 formato
 faltantes
@@ -226911,6 +226927,7 @@ hicieran
 hotkeys
 handling
 habilitan
+hotkey
 que
 quedan
 queda

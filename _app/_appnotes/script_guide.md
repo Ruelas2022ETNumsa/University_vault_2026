@@ -15,7 +15,7 @@ status: activo
 # Script Guide — Scripts de automatización del vault
 
 > Scripts Python ejecutados desde Obsidian via Shell Commands.
-> Configuración del plugin: [[shellcommands_guide]].
+> Configuración del plugin: [[shellcommands_guide(scripts)]].
 > Intérprete: `C:\Users\USUARIO\AppData\Local\Programs\Python\Python313\python.exe`
 > Raíz de scripts: `{{vault_path}}\.obsidian\scripts\python\`
 

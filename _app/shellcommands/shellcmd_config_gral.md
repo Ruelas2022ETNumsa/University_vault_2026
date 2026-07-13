@@ -1,13 +1,22 @@
 ---
-title: "Shell Commands — Configuración Global"
+title: Shell Commands — Configuración Global
 galaxy_body: beacon
 scope: vault
-author: [usuario, claude]
-audience: [usuario, claude]
+author:
+  - usuario
+  - claude
+audience:
+  - usuario
+  - claude
 related_notes:
   - "[[shellcmd_config_script]]"
-  - "[[shellcommands_guide]]"
-tags: [beacon, obsidian, shell-commands, infraestructura, automatizacion]
+  - "[[shellcommands_guide(scripts)]]"
+tags:
+  - beacon
+  - obsidian
+  - shell-commands
+  - infraestructura
+  - automatizacion
 date_created: 2026-07-12
 date_updated: 2026-07-12
 status: borrador
@@ -165,7 +174,7 @@ Si está activado, aparece un menú desplegable cuando comienzas a escribir nomb
 ### Variables integradas (Built-in variables)
 
 > [!note] Default value
-> Salvo que se indique lo contrario en la variable, si no está disponible aplica lo configurado en → [[_app/_appnotes/shellcmd_config_script#Pestaña Configuración del comando / Variables|Pestaña: Variables]].
+> Salvo que se indique lo contrario en la variable, si no está disponible aplica lo configurado en → [[shellcmd_config_script#Pestaña Configuración del comando / Variables|Pestaña: Variables]].
 
 #### `{{caret_paragraph}}`
  Da una línea de texto en la posición actual del cursor. Solo disponible cuando un panel de notas está abierto, no en la vista de gráfico, ni al ver archivos que no sean de texto. No disponible en modo de vista previa.

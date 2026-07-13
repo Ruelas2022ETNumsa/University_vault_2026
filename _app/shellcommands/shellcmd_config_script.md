@@ -1,13 +1,22 @@
 ---
-title: "Shell Commands — Configuración por Script"
+title: Shell Commands — Configuración por Script
 galaxy_body: beacon
 scope: vault
-author: [usuario, claude]
-audience: [usuario, claude]
+author:
+  - usuario
+  - claude
+audience:
+  - usuario
+  - claude
 related_notes:
   - "[[shellcmd_config_gral]]"
-  - "[[shellcommands_guide]]"
-tags: [beacon, obsidian, shell-commands, infraestructura, automatizacion]
+  - "[[shellcommands_guide(scripts)]]"
+tags:
+  - beacon
+  - obsidian
+  - shell-commands
+  - infraestructura
+  - automatizacion
 date_created: 2026-07-12
 date_updated: 2026-07-12
 status: borrador
@@ -214,9 +223,6 @@ Se recomienda PowerShell sobre cmd.exe, ya que este plugin no admite el escape d
 
 - Opción: \[Use default (cmd.exe)/PowerShell Core/PowerShell 5/cmd.exe\]
 
-> **Tip:** Presiona `Ctrl + arriba/abajo` para cambiar al comando de shell anterior o siguiente.
-- Acción rápida: >_ < (Ejecutar ahora. Ctrl+clic: ejecutar y preguntar qué hacer con la salida).
-
 ---
 
 ## Pestaña: Configuración del comando / Events
@@ -232,78 +238,27 @@ Si está activado, los eventos no pueden realizar múltiples ejecuciones concurr
 
 ### Ejecutar este comando de shell automáticamente cuando: / Execute this shell command automatically when:
 
-#### Obsidian inicia / Obsidian starts
-- Control: (1/0)
-- Acción: >❓<
+> [!note] Todos los eventos siguientes tienen el mismo control: toggle (1/0) y un botón >❓< de documentación.
 
-#### Obsidian cierra / Obsidian quits
-- Control: (1/0)
-- Acción: >❓<
-
-#### Cambiar el panel activo / Switching the active pane
-- Control: (1/0)
-- Acción: >❓<
-
-#### El cursor se mueve en el editor / Caret moved in editor
-- Control: (1/0)
-- Acción: >❓<
-
-#### Cada n segundos / Every n seconds
-- Control: (1/0)
-- Acción: >❓<
-
-#### Menú de archivo / File menu 🚫
-- Control: (1/0)
-- Acción: >❓<
-
-#### Menú de carpeta / Folder menu 🚫
-- Control: (1/0)
-- Acción: >❓<
-
-#### Menú del editor / Editor menu 🚫
-- Control: (1/0)
-- Acción: >❓<
-
-#### Contenido del archivo modificado / File content modified
-- Control: (1/0)
-- Acción: >❓<
-
-#### Archivo creado / File created
-- Control: (1/0)
-- Acción: >❓<
-
-#### Archivo eliminado / File deleted
-- Control: (1/0)
-- Acción: >❓<
-
-#### Archivo movido / File moved
-- Control: (1/0)
-- Acción: >❓<
-
-#### Archivo renombrado / File renamed
-- Control: (1/0)
-- Acción: >❓<
-
-#### Carpeta creada / Folder created
-- Control: (1/0)
-- Acción: >❓<
-
-#### Carpeta eliminada / Folder deleted
-- Control: (1/0)
-- Acción: >❓<
-
-#### Carpeta movida / Folder moved
-- Control: (1/0)
-- Acción: >❓<
-
-#### Carpeta renombrada / Folder renamed
-- Control: (1/0)
-- Acción: >❓<
+* Obsidian inicia / Obsidian starts
+* Obsidian cierra / Obsidian quits
+* Cambiar el panel activo / Switching the active pane
+* El cursor se mueve en el editor / Caret moved in editor
+* Cada n segundos / Every n seconds
+* Menú de archivo / File menu 🚫
+* Menú de carpeta / Folder menu 🚫
+* Menú del editor / Editor menu 🚫
+* Contenido del archivo modificado / File content modified
+* Archivo creado / File created
+* Archivo eliminado / File deleted
+* Archivo movido / File moved
+* Archivo renombrado / File renamed
+* Carpeta creada / Folder created
+* Carpeta eliminada / Folder deleted
+* Carpeta movida / Folder moved
+* Carpeta renombrada / Folder renamed
 
 > *Nota general del sistema:* Cada uno de estos eventos proporciona variables adicionales específicas (como `{{event_type}}`, `{{event_file_path}}`, `{{event_file_content}}`, etc.) que pueden ser utilizadas por el script al dispararse de manera automática.
-
-> **Tip:** Presiona `Ctrl + arriba/abajo` para cambiar al comando de shell anterior o siguiente.
-- Acción rápida: >_ < (Ejecutar ahora. Ctrl+clic: ejecutar y preguntar qué hacer con la salida).
 
 ---
 
@@ -361,8 +316,5 @@ Cada una de las siguientes variables cuenta con su propia caja selectora para de
 Si no está disponible, entonces:
 - Opción: [Inherit: cancel execution and show errors/Cancel execution and show errors/Cancel execution silently/Execute with value:]
 - Acción: >❓<
-
-> **Tip:** Presiona `Ctrl + arriba/abajo` para cambiar al comando de shell anterior o siguiente.
-- Acción rápida: >_ < (Ejecutar ahora. Ctrl+clic: ejecutar y preguntar qué hacer con la salida).
 
 ---
