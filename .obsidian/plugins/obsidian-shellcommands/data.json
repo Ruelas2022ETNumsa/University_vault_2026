@@ -199,31 +199,6 @@
         }
       ],
       "execute_button_text": "Extraer"
-    },
-    {
-      "id": "se5k6q1qnu",
-      "title": "Section Reintegrate",
-      "description": "",
-      "preview_shell_command": false,
-      "fields": [],
-      "execute_button_text": "Reintegrar"
-    },
-    {
-      "id": "gqg9o3sq0p",
-      "title": "Section Reintegrate",
-      "description": "",
-      "preview_shell_command": false,
-      "fields": [
-        {
-          "type": "single-line-text",
-          "label": "Ruta del archivo fuente",
-          "description": "",
-          "default_value": "",
-          "target_variable_id": "b593feucxn",
-          "required": true
-        }
-      ],
-      "execute_button_text": "Reintegrar"
     }
   ],
   "builtin_variables": {},
