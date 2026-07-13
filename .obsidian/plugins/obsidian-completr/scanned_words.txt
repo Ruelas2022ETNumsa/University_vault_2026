@@ -13202,6 +13202,10 @@ Titulo
 Target
 Terminal
 Trigger
+Tomar
+Todoist
+Traducir
+Translate
 Sistema
 Sync
 Save
@@ -20344,6 +20348,8 @@ Switching
 Salvo
 SSkI
 Scripting
+Sincronizar
+Scholar
 Plugins
 Pendientes
 Plugin
@@ -25855,6 +25861,9 @@ Peri
 Patrones
 PRUEBABBABABABABBABAB
 PRUEBABBABABABABBABABPRUEBABBABABABABBABABPRUEBABBABABABABBABABPRUEBABBABABABABBABABPRUEBABBABABABABBABABPRUEBABBABABABABBABABPRUEBABBABABABABBABABPRUEBABBABABABABBABABPRUEBABBABABABABBABAB
+Pensando
+PowerPoint
+Publicar
 del
 date
 de
@@ -31242,6 +31251,10 @@ dispara
 debouncing
 disparado
 disponibilidad
+descubrir
+depuraci
+diseccionar
+depurar
 Vault
 Verificar
 Variables
@@ -43719,6 +43732,7 @@ game
 generate
 gravedad
 gzKh
+gaps
 body
 beacon
 bat
@@ -48823,6 +48837,7 @@ backicks
 bisecci
 blico
 balloon
+basadas
 scope
 status
 selector
@@ -55827,6 +55842,9 @@ styles
 starts
 seconds
 selectora
+selectivo
+semanal
+semana
 vault
 vil
 ver
@@ -62404,6 +62422,9 @@ varialbles
 value
 visitar
 vuMI
+valide
+violaciones
+verifique
 audience
 activo
 auto
@@ -68475,6 +68496,9 @@ admite
 automatically
 asignada
 automatizacion
+arxiv
+ausentes
+arXiv
 related
 recomendados
 ribbon
@@ -74999,6 +75023,7 @@ realizan
 rodear
 renamed
 rmts
+referenciadas
 notes
 notas
 nuevas
@@ -88076,6 +88101,8 @@ comas
 concurrentes
 cooldown
 complementa
+conceptuales
+cubiertas
 updated
 un
 universo
@@ -106703,6 +106730,9 @@ Comenzar
 Controles
 Caret
 Ciertas
+Comprimir
+Connections
+Chorographia
 Instalados
 Instalado
 Instalar
@@ -113805,6 +113835,8 @@ Iniciar
 Icono
 Identificadores
 Ignore
+Imprimir
+InfraNodus
 Funci
 File
 Fase
@@ -138504,6 +138536,7 @@ Admite
 ANSI
 Availability
 Asignar
+Alpha
 push
 pull
 para
@@ -144552,6 +144585,9 @@ predefinido
 pospone
 pon
 pMdZO
+proyectos
+publica
+papelera
 min
 mica
 movimiento
@@ -151902,6 +151938,7 @@ malas
 modals
 moved
 modified
+modificadas
 YAML
 Ya
 You
@@ -177849,6 +177886,7 @@ Mexico
 MCGRAW
 MATLAB
 Metodologia
+Mantenimiento
 Lectura
 LaTeX
 Linter
@@ -184007,6 +184045,7 @@ LeVeque
 Label
 LFpO
 LpO
+Listar
 links
 las
 listar
@@ -197281,6 +197320,8 @@ indexados
 inici
 incluidos
 interactivos
+integrada
+impactante
 Dependencia
 Dropbox
 Dataview
@@ -203472,6 +203513,7 @@ Disponibilidad
 Debouncing
 Disparadores
 Descarta
+DeepL
 Remotely
 Raz
 Revisa
@@ -210617,6 +210659,7 @@ Reintegrate
 Required
 Redirige
 Realtime
+Reporte
 Hider
 Hace
 Herramientas
@@ -221109,6 +221152,8 @@ fatales
 formatting
 font
 finished
+filtro
+forzada
 haya
 hace
 hacer
@@ -241304,6 +241349,8 @@ UNTAGGED
 Usos
 Ubicaciones
 Usuarios
+Utilidades
+UMAP
 Nombre
 Notas
 No
@@ -281741,6 +281788,7 @@ work
 wrappers
 wrapper
 workspace
+watcher
 xima
 xeles
 xy
@@ -294261,6 +294309,8 @@ Wine
 Workspaces
 Wait
 WgDj
+Wolfram
+Watcher
 JavaScript
 JSON
 JERARQU
