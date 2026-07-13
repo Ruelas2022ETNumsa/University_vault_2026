@@ -1,3 +1,10 @@
+# fecha: 13-july-2026
+# v2 — extrae una sección de un archivo fuente a section.md.
+# Aborta si section.md ya tiene contenido.
+# Guarda metadata (heading + source_path) en section.json.
+# Búsqueda de inicio: simple (los headings no aparecen dentro de fences en documentos reales).
+# Búsqueda de fin: fence_stack con conteo exacto de backticks — soporta fences anidados.
+# Args: argv[1] file_path · argv[2] vault_path · argv[3] heading · argv[4] source_path
 import sys
 import os
 import json
@@ -14,8 +21,10 @@ source_path = sys.argv[4]  # ruta absoluta del archivo fuente
 section_md   = os.path.join(vault_path, "Rubbish", "section.md")
 section_json = os.path.join(vault_path, ".obsidian", "scripts", "python", "section_tool", "section.json")
 
-# --- Detectar modo (A: vacío → edición+reintegración / B: con contenido → acumulación) ---
-mode_b = os.path.exists(section_md) and os.path.getsize(section_md) > 0
+# --- Validar que section.md está vacío ---
+if os.path.exists(section_md) and os.path.getsize(section_md) > 0:
+    print("section.md ya tiene contenido. Corré section_reintegrate primero.")
+    sys.exit(0)
 
 # --- Validar archivo fuente ---
 if not os.path.exists(source_path):
@@ -37,11 +46,8 @@ pattern = re.compile(r'^#{1,' + str(level) + r'}\s')
 
 # --- Buscar inicio de la sección ---
 start = None
-in_code_block = False
 for i, line in enumerate(lines):
-    if line.startswith('```'):
-        in_code_block = not in_code_block
-    if not in_code_block and line.rstrip('\n') == heading:
+    if line.rstrip('\n') == heading:
         start = i
         break
 
@@ -50,38 +56,32 @@ if start is None:
     sys.exit(0)
 
 # --- Buscar fin de la sección (siguiente heading de mismo nivel o superior) ---
-in_code_block = False
+fence_stack = []
 end = len(lines)
 for i in range(start + 1, len(lines)):
-    if lines[i].startswith('```'):
-        in_code_block = not in_code_block
-    if not in_code_block and pattern.match(lines[i]):
+    m = re.match(r'^(`{3,})', lines[i])
+    if m:
+        ticks = m.group(1)
+        if fence_stack and fence_stack[-1] == ticks:
+            fence_stack.pop()
+        elif not fence_stack:
+            fence_stack.append(ticks)
+    if not fence_stack and pattern.match(lines[i]):
         end = i
         break
 
-# --- Construir separador de ruta relativa al vault ---
-rel_path = os.path.relpath(source_path, vault_path)
-separator = f"--- {rel_path} ---\n"
-
-# --- Extraer contenido ---
+# --- Extraer y escribir en section.md ---
 section_content = ''.join(lines[start:end])
 
-if not mode_b:
-    # --- Modo A: sobrescribir section.md y guardar section.json ---
-    with open(section_md, 'w', encoding='utf-8') as f:
-        f.write(separator)
-        f.write(section_content)
-    meta = {
-        "heading": heading,
-        "source_path": source_path
-    }
-    with open(section_json, 'w', encoding='utf-8') as f:
-        json.dump(meta, f, ensure_ascii=False, indent=2)
-    print(f"Sección extraída (Modo A): {heading}")
-else:
-    # --- Modo B: acumular en section.md, no tocar section.json ---
-    with open(section_md, 'a', encoding='utf-8') as f:
-        f.write("\n")
-        f.write(separator)
-        f.write(section_content)
-    print(f"Sección acumulada (Modo B): {heading}")
+with open(section_md, 'w', encoding='utf-8') as f:
+    f.write(section_content)
+
+# --- Guardar metadata en section.json ---
+meta = {
+    "heading": heading,
+    "source_path": source_path
+}
+with open(section_json, 'w', encoding='utf-8') as f:
+    json.dump(meta, f, ensure_ascii=False, indent=2)
+
+print(f"Sección extraída: {heading}")

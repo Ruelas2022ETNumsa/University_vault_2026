@@ -1,10 +1,10 @@
-# fecha:12-july-2026
-# v1 — extrae una sección de un archivo fuente a section.md.
+# fecha: 13-july-2026
+# v2 — extrae una sección de un archivo fuente a section.md.
 # Aborta si section.md ya tiene contenido.
 # Guarda metadata (heading + source_path) en section.json.
-# Detecta fences de código para no confundir comentarios # con headings.
+# Búsqueda de inicio: simple (los headings no aparecen dentro de fences en documentos reales).
+# Búsqueda de fin: fence_stack con conteo exacto de backticks — soporta fences anidados.
 # Args: argv[1] file_path · argv[2] vault_path · argv[3] heading · argv[4] source_path
-
 import sys
 import os
 import json
@@ -56,9 +56,17 @@ if start is None:
     sys.exit(0)
 
 # --- Buscar fin de la sección (siguiente heading de mismo nivel o superior) ---
+fence_stack = []
 end = len(lines)
 for i in range(start + 1, len(lines)):
-    if pattern.match(lines[i]):
+    m = re.match(r'^(`{3,})', lines[i])
+    if m:
+        ticks = m.group(1)
+        if fence_stack and fence_stack[-1] == ticks:
+            fence_stack.pop()
+        elif not fence_stack:
+            fence_stack.append(ticks)
+    if not fence_stack and pattern.match(lines[i]):
         end = i
         break
 
