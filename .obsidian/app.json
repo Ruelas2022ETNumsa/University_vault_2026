@@ -19,5 +19,5 @@
   "showIndentGuide": true,
   "smartIndentList": true,
   "useTab": true,
-  "openBehavior": "file:README"
+  "openBehavior": ""
 }

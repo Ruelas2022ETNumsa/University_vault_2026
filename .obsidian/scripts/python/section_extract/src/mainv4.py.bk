@@ -1,10 +1,12 @@
 # fecha: 13-july-2026
-# v2 — extrae una sección de un archivo fuente a section.md.
-# Aborta si section.md ya tiene contenido.
-# Guarda metadata (heading + source_path) en section.json.
-# Búsqueda de inicio: simple (los headings no aparecen dentro de fences en documentos reales).
+# v4 — extrae una sección de un archivo fuente a section.md.
+# Modo A (vacío): sobrescribe section.md + guarda section.json como lista.
+# Modo B (con contenido): acumula en section.md + agrega entrada a section.json.
+# Ambos modos escriben separador --- ruta --- al inicio del bloque.
+# Búsqueda de inicio: simple, sin fence tracking.
 # Búsqueda de fin: fence_stack con conteo exacto de backticks — soporta fences anidados.
 # Args: argv[1] file_path · argv[2] vault_path · argv[3] heading · argv[4] source_path
+
 import sys
 import os
 import json
