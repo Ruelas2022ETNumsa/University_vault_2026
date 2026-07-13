@@ -5,6 +5,8 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
+        "Sin título.md",
+        "Sin título 1.md",
         "Rubbish",
         "void.md",
         "Zettelkasten",
@@ -1250,9 +1252,6 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "plugin_guide 1 1.md",
-        "plugin_guide 2.md",
-        "plugin_guide 3.md",
         "plugin_guide 1.md",
         "script_guide.md",
         "claude_prompts.md",
@@ -1419,6 +1418,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "tpl-wolfram.md",
         "tpl-asteroid 1.md",
         "tpl-photon 1.md",
         "tpl-zk 2.md",
@@ -2971,15 +2971,15 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_app/_appnotes/plugin_guide 2.md": {
+    "Sin título 1.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_app/_appnotes/plugin_guide 3.md": {
+    "_templates/tpl-wolfram.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_app/_appnotes/plugin_guide 1 1.md": {
+    "Sin título.md": {
       "isPinned": false,
       "isHidden": false
     }

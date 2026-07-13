@@ -10,11 +10,11 @@
   "geometry": {
     "schemaVersion": 1,
     "x": 0,
-    "y": 92.5,
-    "width": 821,
+    "y": 144.333251953125,
+    "width": 803,
     "height": 581.666748046875,
     "lastAppliedBounds": {
-      "width": 821,
+      "width": 803,
       "height": 726
     }
   }
