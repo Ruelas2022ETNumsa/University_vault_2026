@@ -31302,6 +31302,7 @@ determinant
 days
 devolvio
 devolvi
+dops
 Vault
 Verificar
 Variables
@@ -68576,6 +68577,7 @@ angle
 assuming
 atmosphere
 acre
+abiertas
 related
 recomendados
 ribbon
@@ -75111,6 +75113,7 @@ representation
 roots
 representations
 raices
+resumidas
 notes
 notas
 nuevas
@@ -88206,6 +88209,7 @@ cashflows
 circulo
 compound
 cruda
+concatenar
 updated
 un
 universo
@@ -144755,6 +144759,8 @@ properties
 plane
 polynomial
 pascals
+pruebar
+prueda
 min
 mica
 movimiento
@@ -152114,6 +152120,7 @@ modulus
 mass
 meters
 mortgage
+meno
 YAML
 Ya
 You
@@ -170481,6 +170488,9 @@ expand
 earth
 etymology
 esfera
+estan
+extrajeron
+edicion
 Motor
 Media
 Mantiene
@@ -221401,6 +221411,7 @@ fractions
 factorial
 finansas
 finanzas
+funcionabien
 haya
 hace
 hacer
@@ -282057,6 +282068,7 @@ what
 watts
 water
 wavelength
+wolfram
 xima
 xeles
 xy
