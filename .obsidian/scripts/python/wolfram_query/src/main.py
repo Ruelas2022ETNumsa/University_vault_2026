@@ -14,7 +14,7 @@ import urllib.parse
 
 sys.stdout.reconfigure(encoding='utf-8')
 
-APP_ID     = "TU_APP_ID_AQUI"
+APP_ID     = "A3WL4X56LG"
 ASSETS_DIR = "_assets"
 
 expression = sys.argv[1]
