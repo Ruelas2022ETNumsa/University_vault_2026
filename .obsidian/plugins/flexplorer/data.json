@@ -3022,6 +3022,7 @@
     "_tasks": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "tsk_proyectos_shellcmd.md",
         "tsk_tpl.md",
@@ -3030,8 +3031,7 @@
         "tsk_alxhot.md",
         "tsk_alx-rul.md",
         "tsk_alxgml.md"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "_tasks/tsk_alxgml.md": {
       "isPinned": false,
