@@ -1,9 +1,9 @@
 # fecha: 13-july-2026
-# v3 — consulta Wolfram Alpha Full API con una expresión seleccionada.
-# Extrae dinámicamente todos los pods disponibles en texto y descarga PNG del pod Plot.
-# Pods excluidos: Input, Image:FinancialData.
+# v2 — consulta Wolfram Alpha Full API con una expresión seleccionada.
+# Extrae todos los pods disponibles en texto y descarga PNG del pod Plot.
 # Guarda imagen en _assets/ima-N.png (sin sobreescritura).
 # Inserta en stdout el bloque markdown para Shell Commands → nota activa.
+# Pods omitidos si no existen o no tienen plaintext.
 # Args: argv[1] expression · argv[2] vault_path
 
 import sys
@@ -18,8 +18,19 @@ sys.stdout.reconfigure(encoding='utf-8')
 APP_ID     = "A3WL4X56LG"
 ASSETS_DIR = "_assets"
 
-# Pods que nunca se muestran
-PODS_EXCLUDE = {"Input", "Image:FinancialData"}
+# Pods a extraer en orden — (id, etiqueta en nota)
+PODS_ORDER = [
+    ("GeometricFigure",                              "Figura geométrica"),
+    ("RealAlternateForm",                             "Forma alternativa (real)"),
+    ("AlternateForm",                                 "Forma alternativa"),
+    ("Root",                                          "Raíces"),
+    ("PropertiesAsARealFunction",                     "Propiedades"),
+    ("Derivative",                                    "Derivada"),
+    ("IndefiniteIntegralAssumingAllVariablesAreReal", "Integral indefinida"),
+    ("GlobalMinimum",                                 "Mínimo global"),
+    ("GlobalMaximum",                                 "Máximo global"),
+    ("Result",                                        "Resultado"),
+]
 
 expression = sys.argv[1]
 vault_path = sys.argv[2]
@@ -40,19 +51,15 @@ if not data.get("queryresult", {}).get("success"):
     sys.exit(1)
 
 pods = data["queryresult"].get("pods", [])
+pods_by_id = {p["id"]: p for p in pods}
 
-# --- Buscar URL de gráfica (primer pod con imagen en cualquier Plot) ---
+# --- Buscar URL de gráfica ---
 plot_url = None
-for pod in pods:
-    pid = pod.get("id", "")
-    if "Plot" in pid or "plot" in pid.lower():
-        for sp in pod.get("subpods", []):
-            src = sp.get("img", {}).get("src")
-            if src:
-                plot_url = src
-                break
-    if plot_url:
-        break
+plot_pod = pods_by_id.get("Plot")
+if plot_pod:
+    subpods = plot_pod.get("subpods", [])
+    if subpods and subpods[0].get("img", {}).get("src"):
+        plot_url = subpods[0]["img"]["src"]
 
 # --- Descargar y guardar imagen ---
 image_block = ""
@@ -76,20 +83,16 @@ if plot_url:
     except Exception as e:
         image_block = f"**Gráfica:** *(error al descargar: {e})*"
 
-# --- Extraer pods de texto (dinámico) ---
+# --- Extraer pods de texto ---
 lines = []
 
 if image_block:
     lines.append(image_block)
 
-for pod in pods:
-    pod_id = pod.get("id", "")
-    if pod_id in PODS_EXCLUDE:
+for pod_id, label in PODS_ORDER:
+    pod = pods_by_id.get(pod_id)
+    if not pod:
         continue
-    # pods de imagen ya manejados arriba
-    if "Plot" in pod_id or "plot" in pod_id.lower():
-        continue
-    label = pod.get("title", pod_id)
     subpods = pod.get("subpods", [])
     texts = [s["plaintext"] for s in subpods if s.get("plaintext", "").strip()]
     if not texts:
