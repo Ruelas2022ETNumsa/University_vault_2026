@@ -2978,6 +2978,7 @@
     "_assets": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "MAT101_T1-Funciones-reales 1-13-07-2026_21-04-01.png",
         "MAT101_T1-Funciones-reales 1-13-07-2026_21-03-38.png",
@@ -2987,8 +2988,7 @@
         "MAT101_T1-Funciones-reales 1-13-07-2026_20-52-20.png",
         "MAT101_T1-Funciones-reales 1-13-07-2026_20-44-17.png",
         "MAT101_T1-Funciones-reales 1-13-07-2026_20-38-34.png"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "_assets/MAT101_T1-Funciones-reales 1-13-07-2026_20-38-34.png": {
       "isPinned": false,
