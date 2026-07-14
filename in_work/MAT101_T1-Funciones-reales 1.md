@@ -5,6 +5,50 @@ Para resolver la ecuación cuadrática $f(x) = 2x^2 - 3x + 1$, utilizaremos los 
 
 
 
+
+
+
+
+
+
+
+**WolframAlpha:** $f(x) = 2x^2 - 3x + 1$
+
+**Gráfica:**
+![[MAT101_T1-Funciones-reales 1-13-07-2026_21-04-01.png]]
+
+**Forma alternativa (real):**
+$2 x^2 + 1 = f(x) + 3 x$
+
+**Forma alternativa:**
+$f(x) = (x - 1) (2 x - 1)$
+
+**Raíces:**
+$x = 1/2 | x = 1$
+
+**Propiedades:**
+$R (all real numbers) | {f element R : f>=-1/8}$
+
+**Derivada:**
+$d/dx(2 x^2 - 3 x + 1) = 4 x - 3$
+
+**Integral indefinida:**
+$integral(2 x^2 - 3 x + 1) dx = (2 x^3)/3 - (3 x^2)/2 + x + constant$
+
+**Mínimo global:**
+$min{2 x^2 - 3 x + 1} = -1/8 at x = 3/4$
+
+```
+Resolvé paso a paso sin ejercicio adicional (MODO 3):
+f(x) = 2x^2 - 3x + 1
+Si aplica, graficá usando Desmos o TikZJax.
+```
+
+
+
+
+
+
 **WA — f(x) = 2x^2 - 3x + 1**
 
 **Gráfica:**

@@ -104,7 +104,7 @@ for pod_id, label in PODS_ORDER:
 body = "\n\n".join(lines)
 
 output = f"""
-**WA — {expression}**
+**WolframAlpha:** ${expression}$
 
 {body}
 
