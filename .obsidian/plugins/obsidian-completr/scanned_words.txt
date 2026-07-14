@@ -31301,6 +31301,7 @@ deviation
 determinant
 days
 devolvio
+devolvi
 Vault
 Verificar
 Variables
@@ -88204,6 +88205,7 @@ complete
 cashflows
 circulo
 compound
+cruda
 updated
 un
 universo
@@ -197527,6 +197529,7 @@ information
 interest
 inverse
 intersection
+integration
 Dependencia
 Dropbox
 Dataview
@@ -221397,6 +221400,7 @@ first
 fractions
 factorial
 finansas
+finanzas
 haya
 hace
 hacer

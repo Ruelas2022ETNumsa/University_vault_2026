@@ -5,7 +5,7 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
-        "list.md",
+        "_tasks",
         "_assets",
         "proyectos con shell command.md",
         "Rubbish",
@@ -2925,7 +2925,7 @@
       "isHidden": false
     },
     "_app/_appnotes/claude_prompts.md": {
-      "isPinned": true,
+      "isPinned": false,
       "isHidden": false
     },
     "Rubbish/section.md": {
@@ -3022,7 +3022,15 @@
       "isPinned": false,
       "isHidden": false
     },
-    "list.md": {
+    "_tasks": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "kraaajooo123.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "_tasks/kraaajooo123.md": {
       "isPinned": false,
       "isHidden": false
     }
@@ -3030,7 +3038,6 @@
   "pinnedFiles": [
     "_app/_appnotes/PDF_PP-guide.md",
     "_app/_config/_claude-boot.md",
-    "_app/_appnotes/claude_prompts.md",
     "Rubbish/section.md",
     "_app/_config/_galaxy-system.md"
   ],
