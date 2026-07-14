@@ -5,6 +5,7 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
+        "list.md",
         "_assets",
         "proyectos con shell command.md",
         "Rubbish",
@@ -3018,6 +3019,10 @@
       "isHidden": false
     },
     "_assets/MAT101_T1-Funciones-reales 1-13-07-2026_21-04-01.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "list.md": {
       "isPinned": false,
       "isHidden": false
     }
