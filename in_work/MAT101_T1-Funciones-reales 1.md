@@ -1,5 +1,221 @@
 # Funciones reales
 
+
+Para resolver la ecuación cuadrática $f(x) = 2x^2 - 3x + 1$, utilizaremos los métodos de factorización y la fórmula cuadrática descritos en los textos de referencia.
+
+
+
+**WA — f(x) = 2x^2 - 3x + 1**
+
+**Gráfica:**
+![[MAT101_T1-Funciones-reales 1-13-07-2026_21-00-56.png]]
+
+**Forma alternativa (real):**
+$2 x^2 + 1 = f(x) + 3 x$
+
+**Forma alternativa:**
+$f(x) = (x - 1) (2 x - 1)$
+
+**Raíces:**
+$x = \dfrac{1}{2} | x = 1$
+
+**Propiedades:**
+$R (all real numbers) | {f element R : f>=-1/8}$
+
+**Derivada:**
+$\dfrac{d}{dx}(2 x^2 - 3 x + 1) = 4 x - 3$
+
+**Integral indefinida:**
+$integral(2 x^2 - 3 x + 1) dx = \dfrac{2 x^3}{3} - \dfrac{3 x^2}{2} + x + constant$
+
+**Mínimo global:**
+$min{2 x^2 - 3 x + 1} = \dfrac{-1}{8} at x = 3/4$
+
+```
+Resolvé paso a paso sin ejercicio adicional (MODO 3):
+f(x) = 2x^2 - 3x + 1
+Si aplica, graficá usando Desmos o TikZJax.
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**WA — f(x) = 2x^2 - 3x + 1**
+**Gráfica:** ![[MAT101_T1-Funciones-reales 1-13-07-2026_20-58-01.png]]
+**Forma alternativa (real):** 2 x^2 + 1 = f(x) + 3 x
+**Forma alternativa:** f(x) = (x - 1) (2 x - 1)
+**Raíces:** x = 1/2 | x = 1
+**Propiedades:** R (all real numbers) | {f element R : f>=-1/8}
+**Derivada:** d/dx(2 x^2 - 3 x + 1) = 4 x - 3
+**Integral indefinida:** integral(2 x^2 - 3 x + 1) dx = (2 x^3)/3 - (3 x^2)/2 + x + constant
+**Mínimo global:** min{2 x^2 - 3 x + 1} = -1/8 at x = 3/4
+
+```
+Resolvé paso a paso sin ejercicio adicional (MODO 3):
+f(x) = 2x^2 - 3x + 1
+Si aplica, graficá usando Desmos o TikZJax.
+```
+
+
+
+
+
+**WA — f(x) = 2x^2 - 3x + 1**
+
+**Gráfica:** ![[MAT101_T1-Funciones-reales 1-13-07-2026_20-53-05.png]]
+
+**Forma alternativa (real):** 2 x^2 + 1 = f(x) + 3 x
+
+**Forma alternativa:** f(x) = (x - 1) (2 x - 1)
+
+**Raíces:** x = 1/2 | x = 1
+
+**Propiedades:** R (all real numbers) | {f element R : f>=-1/8}
+
+**Derivada:** d/dx(2 x^2 - 3 x + 1) = 4 x - 3
+
+**Integral indefinida:** integral(2 x^2 - 3 x + 1) dx = (2 x^3)/3 - (3 x^2)/2 + x + constant
+
+**Mínimo global:** min{2 x^2 - 3 x + 1} = -1/8 at x = 3/4
+
+```
+Resolvé paso a paso sin ejercicio adicional (MODO 3):
+f(x) = 2x^2 - 3x + 1
+Si aplica, graficá usando Desmos o TikZJax.
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----
+
+**WA:** x = 1/2
+![[MAT101_T1-Funciones-reales 1-13-07-2026_20-44-17.png]]
+
+```
+Resolvé paso a paso sin ejercicio adicional (MODO 3):
+f(x) = 2x^2 - 3x + 1
+Si aplica, graficá usando Desmos o TikZJax.
+```
+
+
+
+
+## Ecuaciones Cuadráticas
+
+```cornell
+::cue
+Definición de función cuadrática<br>
+Fórmula cuadrática · Discriminante · Parábola · Vértice<br>
+¿Cómo se determinan las raíces de una función de segundo grado?<br>
+¿Qué información proporciona el discriminante sobre las soluciones?<br>
+$x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}$<br>
+ver también: Funciones Polinomiales<br>
+no confundir raíces reales con raíces complejas
+
+::note
+
+Una función polinomial de grado 2 tiene la forma $P(x) = ax^2 + bx + c$, con $a \neq 0$, y se denomina función cuadrática. Su representación gráfica es siempre una **parábola**.
+
+1. **Raíces o Ceros**
+	- Los valores de $x$ que satisfacen $ax^2 + bx + c = 0$ se encuentran mediante la **fórmula cuadrática**:
+	- $x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}$.
+
+2. **Factorización**
+	- Si $x_1$ y $x_2$ son las raíces de la ecuación, el polinomio puede expresarse como:
+	- $P(x) = a(x - x_1)(x - x_2)$.
+
+3. **Propiedades Gráficas**
+	- La parábola abre hacia arriba si $a > 0$ y hacia abajo si $a < 0$.
+	- El vértice se localiza en $x = -b/(2a)$.
+
+`````
+
+> [!summary](La resolución de una ecuación cuadrática implica hallar los valores de $x$ que anulan la función, representados gráficamente como las intersecciones de la parábola con el eje de las abscisas.)
+
+##### Ej. Hallar las raíces de $f(x) = 2x^2 - 3x + 1$ y graficar.
+
+**1. Identificación de coeficientes:** $a = 2$, $b = -3$, $c = 1$.
+
+**2. Aplicación de la fórmula cuadrática:** $$\begin{array}{rcll} x & = & \dfrac{-(-3) \pm \sqrt{(-3)^2 - 4(2)(1)}}{2(2)} & (\text{Sustitución})\\
+& = & \dfrac{3 \pm \sqrt{9 - 8}}{4} & (\text{Operaciones aritméticas})\\
+& = & \dfrac{3 \pm 1}{4} & (\text{Extracción de raíz}) \end{array}$$
+
+**3. Obtención de las raíces:** $$\begin{array}{rcl} x_1 & = & \dfrac{3 + 1}{4} = 1\\
+x_2 & = & \dfrac{3 - 1}{4} = 0.5 \end{array}$$
+
+**4. Factorización:** $f(x) = (2x - 1)(x - 1)$.
+
+**5. Análisis para la gráfica:**
+
+- **Intersección eje $y$:** $f(0) = 1$, punto $(0, 1)$.
+- **Vértice:** $x_v = \dfrac{-(-3)}{2(2)} = 0.75$.
+- $f(0.75) = 2(0.75)^2 - 3(0.75) + 1 = -0.125$. El vértice es $(0.75, -0.125)$.
+
+```desmos-graph
+left=-1;right=2;bottom=-1;top=2;
+width=320;height=320;
+---
+y = 2x^2 - 3x + 1 | #005F73
+(1, 0) | #005F73
+(0.5, 0) | #005F73
+(0.75, -0.125) | label:V(0.75, -0.125) | #C1121F
+```
+
+> [!note] Complemento (Nivel C)
+> 
+> **Definición Formal:** El Teorema Fundamental del Álgebra establece que un polinomio de grado $n$ tiene exactamente $n$ raíces (contando multiplicidad y raíces complejas).
+> 
+> **Propiedad del Discriminante ($\Delta = b^2 - 4ac$):**
+> 
+> - Si $\Delta > 0$: Dos raíces reales distintas (caso de este ejercicio, donde $\Delta = 1$).
+> - Si $\Delta = 0$: Una raíz real de multiplicidad 2 (vértice sobre el eje $x$).
+> - Si $\Delta < 0$: Dos raíces complejas conjugadas (la gráfica no toca el eje $x$).
+> 
+> **Ejercicio Adicional (Stewart 9na ed.):** Resolver $2x^2 + 4x + 1 = 0$. $$\begin{array}{rcl} x & = & \dfrac{-4 \pm \sqrt{4^2 - 4(2)(1)}}{2(2)}\\
+& = & \dfrac{-4 \pm \sqrt{8}}{4} = \dfrac{-4 \pm 2\sqrt{2}}{4} = -1 \pm \dfrac{\sqrt{2}}{2} \end{array}$$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Definición de función
 
 $f$ es función si para cada $x$ de un conjunto $D$ (dominio) existe una ley, regla de correspondencia que le asigna un único $y$ de otro conjunto $R$ (imágenes) según:
@@ -33,11 +249,11 @@ $$
 
 Ej. de funciones
 $$
-f(x)=\frac{x^3-4x}{x^2+1}
+f(x)=\dfrac{x^3-4x}{x^2+1}
 $$
 $$
 f(x)=\ln(4x)+\arctan \!\left(
-\frac{\sqrt{x-1}}{x}
+\dfrac{\sqrt{x-1}}{x}
 \right)
 $$
 $$
@@ -58,14 +274,6 @@ En $y=f(x)$ se reemplaza en cualquier "$x$" en $f$.
 $$
 f(x)=2x^2-3x+1
 $$
-
-
-
-solve f(x)=2x^2-3x+1
-
-
-
-
 $$
 \begin{array}{rcl}
 f(3) & = & 2(3)^2-3(3)+1 \\
@@ -100,18 +308,18 @@ $$
 
 $$
 \begin{array}{rcl}
-f\!\left(\frac{2}{x^3}\right)
+f\!\left(\dfrac{2}{x^3}\right)
 & = &
-2\left(\frac{2}{x^3}\right)^2
--3\left(\frac{2}{x^3}\right)+1
+2\left(\dfrac{2}{x^3}\right)^2
+-3\left(\dfrac{2}{x^3}\right)+1
 \\[6pt]
 & = &
-2\left(\frac{4}{x^6}\right)
--\frac{6}{x^3}+1
+2\left(\dfrac{4}{x^6}\right)
+-\dfrac{6}{x^3}+1
 \\[6pt]
 & = &
-\frac{8}{x^6}
--\frac{6}{x^3}
+\dfrac{8}{x^6}
+-\dfrac{6}{x^3}
 +1
 \end{array}
 $$
@@ -261,7 +469,7 @@ $$
 
 se reconoce como el subconjunto de la recta real $\mathbb{R}$ que cumple las restricciones:
 
-1. Si $f(x)=\frac{P(x)}{Q(x)}$ entonces : $$Q(x)\neq 0$$
+1. Si $f(x)=\dfrac{P(x)}{Q(x)}$ entonces : $$Q(x)\neq 0$$
 
 2. Si $f(x)=\sqrt[n]{P(x)}$ con $n$ par, entonces : $$P(x)\ge 0$$
 3. Si $f(x)=\log_a(P(x))$ con $a>0$, entonces : $$P(x)>0$$
@@ -273,22 +481,22 @@ se reconoce como el subconjunto de la recta real $\mathbb{R}$ que cumple las res
 ### **Ej.** Hallar el dominio de
 
 $$
-f(x)=\sqrt{\frac{x^3-4x}{1-x^2}}
-+\log\left(\frac{x^3-x^2-2x}{x+4}\right)
+f(x)=\sqrt{\dfrac{x^3-4x}{1-x^2}}
++\log\left(\dfrac{x^3-x^2-2x}{x+4}\right)
 $$
 Analizamos por separado.
 
-1. Sea $\sqrt{\frac{x^3-4x}{1-x^2}}$ entonces :
+1. Sea $\sqrt{\dfrac{x^3-4x}{1-x^2}}$ entonces :
 $$
-\frac{x^3-4x}{1-x^2}\ge 0
+\dfrac{x^3-4x}{1-x^2}\ge 0
 $$
 Factorizando:
 
 $$
-\frac{x(x^2-4)}{(1+x)(1-x)}\ge 0
+\dfrac{x(x^2-4)}{(1+x)(1-x)}\ge 0
 $$
 $$
-\frac{x(x-2)(x+2)}{(1+x)(1-x)}\ge 0
+\dfrac{x(x-2)(x+2)}{(1+x)(1-x)}\ge 0
 $$
 
 Puntos críticos:
@@ -300,21 +508,21 @@ $$
 
 Tabla
 
-Para $\frac{x(x-2)(x+2)}{(1+x)(1-x)}\ge 0$
+Para $\dfrac{x(x-2)(x+2)}{(1+x)(1-x)}\ge 0$
 
 | Intervalo      | Prueba x | Signo i                        | $R_i$ |
 | -------------- | -------- | ------------------------------ | ----- |
-| $]-\infty,-2[$ | $-10$    | $\frac{(-)(-)(-)}{(-)(+)}=(+)$ | V     |
+| $]-\infty,-2[$ | $-10$    | $\dfrac{(-)(-)(-)}{(-)(+)}=(+)$ | V     |
 | $-2$           | $-2$     | $0$                            | V     |
-| $]-2,-1[$      | $-1.5$   | $\frac{(-)(-)(+)}{(-)(+)}=(-)$ | F     |
+| $]-2,-1[$      | $-1.5$   | $\dfrac{(-)(-)(+)}{(-)(+)}=(-)$ | F     |
 | $-1$           | $-1$     | No existe                      | F     |
-| $]-1,0[$       | $-0.5$   | $\frac{(-)(-)(+)}{(+)(+)}=(+)$ | V     |
+| $]-1,0[$       | $-0.5$   | $\dfrac{(-)(-)(+)}{(+)(+)}=(+)$ | V     |
 | $0$            | $0$      | $0$                            | V     |
-| $]0,1[$        | $0.5$    | $\frac{(+)(-)(+)}{(+)(+)}=(-)$ | F     |
+| $]0,1[$        | $0.5$    | $\dfrac{(+)(-)(+)}{(+)(+)}=(-)$ | F     |
 | $1$            | $1$      | No existe                      | F     |
-| $]1,2[$        | $1.5$    | $\frac{(+)(-)(+)}{(+)(-)}=(+)$ | V     |
+| $]1,2[$        | $1.5$    | $\dfrac{(+)(-)(+)}{(+)(-)}=(+)$ | V     |
 | $2$            | $2$      | $0$                            | V     |
-| $]2,+\infty[$  | $10$     | $\frac{(+)(+)(+)}{(+)(-)}=(-)$ | F     |
+| $]2,+\infty[$  | $10$     | $\dfrac{(+)(+)(+)}{(+)(-)}=(-)$ | F     |
 
 Gráfico de intervalos (Cs₁)
 
@@ -344,13 +552,13 @@ $$Cs_{1}=]−∞,−2]∪]−1,0]∪]1,2]$$
 
 ---
 
-2. Sea $\log\left(\frac{x^3-x^2-2x}{x+4}\right)$ entonces :
+2. Sea $\log\left(\dfrac{x^3-x^2-2x}{x+4}\right)$ entonces :
 $$
-\frac{x^3-x^2-2x}{x+4}>0
+\dfrac{x^3-x^2-2x}{x+4}>0
 $$
 Factorizando:
 $$
-\frac{x(x-2)(x+1)}{x+4}>0
+\dfrac{x(x-2)(x+1)}{x+4}>0
 $$
 Puntos críticos:
 $$
@@ -361,7 +569,7 @@ $$
 Para
 
 $$
-\frac{x(x-2)(x+1)}{x+4}>0
+\dfrac{x(x-2)(x+1)}{x+4}>0
 $$
 
 los puntos críticos son
@@ -372,15 +580,15 @@ $$
 
 | Intervalo      | Prueba x | Signo i                     | $R_i$ |
 | -------------- | -------- | --------------------------- | ----- |
-| $]-\infty,-4[$ | $-10$    | $\frac{(-)(-)(-)}{(-)}=(+)$ | V     |
+| $]-\infty,-4[$ | $-10$    | $\dfrac{(-)(-)(-)}{(-)}=(+)$ | V     |
 | $-4$           | $-4$     | No existe                   | F     |
-| $]-4,-1[$      | $-2$     | $\frac{(-)(-)(-)}{(+)}=(-)$ | F     |
+| $]-4,-1[$      | $-2$     | $\dfrac{(-)(-)(-)}{(+)}=(-)$ | F     |
 | $-1$           | $-1$     | $0$                         | F     |
-| $]-1,0[$       | $-0.5$   | $\frac{(-)(-)(+)}{(+)}=(+)$ | V     |
+| $]-1,0[$       | $-0.5$   | $\dfrac{(-)(-)(+)}{(+)}=(+)$ | V     |
 | $0$            | $0$      | $0$                         | F     |
-| $]0,2[$        | $1$      | $\frac{(+)(-)(+)}{(+)}=(-)$ | F     |
+| $]0,2[$        | $1$      | $\dfrac{(+)(-)(+)}{(+)}=(-)$ | F     |
 | $2$            | $2$      | $0$                         | F     |
-| $]2,+\infty[$  | $10$     | $\frac{(+)(+)(+)}{(+)}=(+)$ | V     |
+| $]2,+\infty[$  | $10$     | $\dfrac{(+)(+)(+)}{(+)}=(+)$ | V     |
 
 Gráfico de intervalos (Cs₂)
 
@@ -491,7 +699,7 @@ $$
 
 3. **Cociente**
 $$
-\left(\frac{f}{g}\right)(x)=\frac{f(x)}{g(x)}
+\left(\dfrac{f}{g}\right)(x)=\dfrac{f(x)}{g(x)}
 $$
 $$
 D_{f}{g}=D_{f}\cap D_{g}\quad y
@@ -554,11 +762,11 @@ La gráfica de $y=f(x)$ es simétrica respecto al eje $y$.
 **Ej.**
 
 $$
-f(x)=\frac{x^8-4x^6}{x^2+1}
+f(x)=\dfrac{x^8-4x^6}{x^2+1}
 $$
 es par, ya que
 $$
-f(-x)=\frac{x^8-4x^6}{x^2+1}
+f(-x)=\dfrac{x^8-4x^6}{x^2+1}
 $$
 
 por tanto
@@ -694,9 +902,9 @@ $$
 
 % Marcas
 \node[below] at (0,0) {$0$};
-\node[below] at (1.57,0) {$\frac{\pi}{2}$};
+\node[below] at (1.57,0) {$\dfrac{\pi}{2}$};
 \node[below] at (3.14,0) {$\pi$};
-\node[below] at (4.71,0) {$\frac{3\pi}{2}$};
+\node[below] at (4.71,0) {$\dfrac{3\pi}{2}$};
 \node[below] at (6.28,0) {$2\pi$};
 
 % Máximos
@@ -799,12 +1007,12 @@ $$
 **Ej.** Hallar $f^{-1}(x)$ para
 
 $$
-f(x)=\frac{2x^3-7}{3x^3+4}
+f(x)=\dfrac{2x^3-7}{3x^3+4}
 $$
 $$
-y=\frac{2x^3-7}{3x^3+4}
+y=\dfrac{2x^3-7}{3x^3+4}
 \;\Rightarrow\;
-x=\frac{2y^3-7}{3y^3+4}
+x=\dfrac{2y^3-7}{3y^3+4}
 $$
 $$
 \begin{array}{rcl}
@@ -813,11 +1021,11 @@ $$
 \end{array}
 $$
 $$
-\sqrt[3]{\frac{4x+7}{2-3x}}=y
+\sqrt[3]{\dfrac{4x+7}{2-3x}}=y
 $$
 Por tanto,
 $$
-f^{-1}(x)=\sqrt[3]{\frac{4x+7}{2-3x}}
+f^{-1}(x)=\sqrt[3]{\dfrac{4x+7}{2-3x}}
 $$
 
 ## 8. Composición de funciones
@@ -936,7 +1144,7 @@ La identidad actúa como **elemento neutro** de la composición.
 
 #### **Ejercicio a.**
 Para
-$$f(x)=\sqrt{\frac{x}{x-1}}$$
+$$f(x)=\sqrt{\dfrac{x}{x-1}}$$
 $$g(x)=e^{-4x^2}$$
 
 Hallar $(f\circ g)(x)$ y $(g\circ f)(x)$.
@@ -949,14 +1157,14 @@ $$(f\circ g)(x)=f(g(x))$$
 Sustituyendo $g(x)$ en $f$:
 $$(f\circ g)(x)=
 \sqrt{
-\frac{e^{-4x^2}}
+\dfrac{e^{-4x^2}}
      {e^{-4x^2}-1}
 }$$
 
 simplificando
 $$(f\circ g)(x)=
 \sqrt{
-\frac{1}
+\dfrac{1}
      {1-e^{4x^2}}
 }$$
 
@@ -966,10 +1174,10 @@ $$(g\circ f)(x)=g(f(x))$$
 
 Sustituyendo $f(x)$ en $g$:
 $$(g\circ f)(x)=
-e^{-4\left(\sqrt{\frac{x}{x-1}}\right)^2}$$
+e^{-4\left(\sqrt{\dfrac{x}{x-1}}\right)^2}$$
 
 $$(g\circ f)(x)=
-e^{-\frac{4x}{x-1}}$$
+e^{-\dfrac{4x}{x-1}}$$
 
 $$(g\circ f)(x)=
 \sqrt[1-x]{e^{4x}}$$
@@ -978,45 +1186,45 @@ $$(g\circ f)(x)=
 
 #### **Ejercicio b**
 Si
-$$f(x)=\frac{3x}{2}-1$$
+$$f(x)=\dfrac{3x}{2}-1$$
 
 hallar
-$$(f\circ f\circ f)\left(\frac{3x}{2}+1\right)$$
+$$(f\circ f\circ f)\left(\dfrac{3x}{2}+1\right)$$
 
 **Sol.**
 
 Sea
-$$u=\frac{3x}{2}+1$$
+$$u=\dfrac{3x}{2}+1$$
 
 Primera composición:
 $$f(u)=
-\frac{3}{2}\left(\frac{3x}{2}+1\right)-1
+\dfrac{3}{2}\left(\dfrac{3x}{2}+1\right)-1
 $$
 
 $$f(u)=
-\frac{9x}{4}+\frac{1}{2}
+\dfrac{9x}{4}+\dfrac{1}{2}
 $$
 
 Segunda composición:
 $$f(f(u))=
-\frac{3}{2}\left(\frac{9x}{4}+\frac{1}{2}\right)-1
+\dfrac{3}{2}\left(\dfrac{9x}{4}+\dfrac{1}{2}\right)-1
 $$
 
 $$f(f(u))=
-\frac{27x}{8}-\frac{1}{4}
+\dfrac{27x}{8}-\dfrac{1}{4}
 $$
 
 Tercera composición:
 $$f(f(f(u)))=
-\frac{3}{2}\left(\frac{27x}{8}-\frac{1}{4}\right)-1
+\dfrac{3}{2}\left(\dfrac{27x}{8}-\dfrac{1}{4}\right)-1
 $$
 
-$$f(f(f(u)))=\frac{81x}{16}-\frac{11}{8}
+$$f(f(f(u)))=\dfrac{81x}{16}-\dfrac{11}{8}
 $$
 
 Por tanto,
-$$(f\circ f\circ f)\left(\frac{3x}{2}+1\right)=
-\frac{81x}{16}-\frac{11}{8}
+$$(f\circ f\circ f)\left(\dfrac{3x}{2}+1\right)=
+\dfrac{81x}{16}-\dfrac{11}{8}
 $$
 
 
@@ -1025,9 +1233,9 @@ $$
 
 #### **Ejercicio c**
 Se conocen
-$$f(x)=\frac{2x^{3}-7}{3x^3+4}$$
+$$f(x)=\dfrac{2x^{3}-7}{3x^3+4}$$
 y
-$$f^{-1}(x)=\sqrt[3]{\frac{7+4x}{2-3x}}$$
+$$f^{-1}(x)=\sqrt[3]{\dfrac{7+4x}{2-3x}}$$
 Hallar
 $$(f\circ f^{-1})(x)$$
 
@@ -1040,37 +1248,37 @@ $$
 
 Sustituyendo:
 $$(f\circ f^{-1})(x)=
-\frac{
-2\left(\sqrt[3]{\frac{7+4x}{2-3x}}\right)^3-7
+\dfrac{
+2\left(\sqrt[3]{\dfrac{7+4x}{2-3x}}\right)^3-7
 }{
-3\left(\sqrt[3]{\frac{7+4x}{2-3x}}\right)^3+4
+3\left(\sqrt[3]{\dfrac{7+4x}{2-3x}}\right)^3+4
 }
 $$
 
 Como
-$$\left(\sqrt[3]{\frac{7+4x}{2-3x}}\right)^3=
-\frac{7+4x}{2-3x}
+$$\left(\sqrt[3]{\dfrac{7+4x}{2-3x}}\right)^3=
+\dfrac{7+4x}{2-3x}
 $$
 
 resulta
 $$(f\circ f^{-1})(x)=
-\frac{
-2\left(\frac{7+4x}{2-3x}\right)-7
+\dfrac{
+2\left(\dfrac{7+4x}{2-3x}\right)-7
 }{
-3\left(\frac{7+4x}{2-3x}\right)+4
+3\left(\dfrac{7+4x}{2-3x}\right)+4
 }$$
 
-$$=\frac{
-\frac{14+8x-14+21x}{2-3x}
+$$=\dfrac{
+\dfrac{14+8x-14+21x}{2-3x}
 }{
-\frac{21+12x+8-12x}{2-3x}
+\dfrac{21+12x+8-12x}{2-3x}
 }$$
 
 $$=
-\frac{
-\frac{29x}{2-3x}
+\dfrac{
+\dfrac{29x}{2-3x}
 }{
-\frac{29}{2-3x}
+\dfrac{29}{2-3x}
 }$$
 
 $$=x$$
@@ -1093,9 +1301,9 @@ $$(f\circ f^{-1})(x)=x$$
 
 #### **Ejercicio d**
 Si
-$$f(x)=\frac{2x+1}{x}$$
+$$f(x)=\dfrac{2x+1}{x}$$
 y
-$$(f\circ g)(x)=\frac{x}{x-1}$$
+$$(f\circ g)(x)=\dfrac{x}{x-1}$$
 
 hallar $g(x)$.
 
@@ -1106,8 +1314,8 @@ Por definición de composición,
 $$(f\circ g)(x)=f(g(x))$$
 
 Sustituyendo $g(x)$ en la función $f$:
-$$\frac{2g(x)+1}{g(x)}=
-\frac{x}{x-1}
+$$\dfrac{2g(x)+1}{g(x)}=
+\dfrac{x}{x-1}
 $$
 
 Multiplicando en cruz:
@@ -1121,13 +1329,13 @@ $$xg(x)-2g(x)=1-x$$
 $$g(x)(x-2)=1-x$$
 
 Despejando:
-$$g(x)=\frac{1-x}{x-2}$$
+$$g(x)=\dfrac{1-x}{x-2}$$
 
 o equivalentemente,
-$$g(x)=\frac{x-1}{2-x}$$
+$$g(x)=\dfrac{x-1}{2-x}$$
 
 Por tanto,
-$$g(x)=\frac{1-x}{x-2}$$
+$$g(x)=\dfrac{1-x}{x-2}$$
 
 >[!note]  
 >También puede resolverse utilizando
@@ -1137,7 +1345,7 @@ $$g(x)=\frac{1-x}{x-2}$$
 ---
 #### **Ejercicio e**
 Si
-$$f(x)=\frac{x-1}{x}$$
+$$f(x)=\dfrac{x-1}{x}$$
 
 hallar
 $$\underbrace{(f\circ f\circ f\circ\cdots\circ f)}_{50\text{ veces}}(x)$$
@@ -1145,25 +1353,25 @@ $$\underbrace{(f\circ f\circ f\circ\cdots\circ f)}_{50\text{ veces}}(x)$$
 **Sol.**
 
 Calculamos las primeras composiciones:
-$$f(x)=\frac{x-1}{x}$$
+$$f(x)=\dfrac{x-1}{x}$$
 
 $$f(f(x))=
-\frac{\frac{x-1}{x}-1}{\frac{x-1}{x}}
+\dfrac{\dfrac{x-1}{x}-1}{\dfrac{x-1}{x}}
 $$
 
-$$=\frac{-1/x}{(x-1)/x}$$
+$$=\dfrac{-1/x}{(x-1)/x}$$
 
-$$=-\frac{1}{x-1}$$
+$$=-\dfrac{1}{x-1}$$
 
 Entonces,
-$$f^2(x)=-\frac{1}{x-1}$$
+$$f^2(x)=-\dfrac{1}{x-1}$$
 
 Ahora,
 $$f^3(x)=
-f\!\left(-\frac{1}{x-1}\right)
+f\!\left(-\dfrac{1}{x-1}\right)
 $$
 
-$$=\frac{-\frac{1}{x-1}-1}{-\frac{1}{x-1}}$$
+$$=\dfrac{-\dfrac{1}{x-1}-1}{-\dfrac{1}{x-1}}$$
 
 $$=x$$
 
@@ -1173,7 +1381,7 @@ $$f^3(x)=x$$
 Luego la composición es periódica de período $3$:
 $$f^1(x)=f(x)$$
 
-$$f^2(x)=-\frac{1}{x-1}$$
+$$f^2(x)=-\dfrac{1}{x-1}$$
 
 $$f^3(x)=x$$
 
@@ -1193,7 +1401,7 @@ $$f^{50}(x)=f^2(x)$$
 
 Por consiguiente,
 $$\underbrace{(f\circ f\circ f\circ\cdots\circ f)}_{50\text{ veces}}(x)=
--\frac{1}{x-1}
+-\dfrac{1}{x-1}
 $$
 
 > [!note]  
@@ -1209,129 +1417,129 @@ $$
 
 #### **Ejercicio f**
 Para
-$$f\!\left(\frac{x-2}{x}\right)=\frac{x-1}{x+1}$$
+$$f\!\left(\dfrac{x-2}{x}\right)=\dfrac{x-1}{x+1}$$
 
 y
-$$g^{-1}\!\left(\frac{2}{x}\right)=\frac{x}{x+2}$$
+$$g^{-1}\!\left(\dfrac{2}{x}\right)=\dfrac{x}{x+2}$$
 
 hallar
-$$(f^{-1}\circ g\circ f)\left(\frac{1}{x^3}\right)$$
+$$(f^{-1}\circ g\circ f)\left(\dfrac{1}{x^3}\right)$$
 
 **Sol.**
 
 Primero determinamos $f$.
 Sea
-$$t=\frac{x-2}{x}$$
+$$t=\dfrac{x-2}{x}$$
 
 entonces
 $$tx=x-2$$
 
 $$x(t-1)=-2$$
 
-$$x=\frac{2}{1-t}$$
+$$x=\dfrac{2}{1-t}$$
 
 Sustituyendo en
-$$f(t)=\frac{x-1}{x+1}$$
+$$f(t)=\dfrac{x-1}{x+1}$$
 
 obtenemos
 $$f(t)=
-\frac{\frac{2}{1-t}-1}
-     {\frac{2}{1-t}+1}
+\dfrac{\dfrac{2}{1-t}-1}
+     {\dfrac{2}{1-t}+1}
 $$
 
-$$=\frac{1+t}{3-t}$$
+$$=\dfrac{1+t}{3-t}$$
 
 Por tanto,
-$$f(x)=\frac{x+1}{3-x}$$
+$$f(x)=\dfrac{x+1}{3-x}$$
 
 Ahora hallamos $f^{-1}$:
 
-$$y=\frac{x+1}{3-x}$$
+$$y=\dfrac{x+1}{3-x}$$
 
 $$y(3-x)=x+1$$
 
 $$3y-1=x(1+y)$$
 
-$$x=\frac{3y-1}{y+1}$$
+$$x=\dfrac{3y-1}{y+1}$$
 
 Luego,
-$$f^{-1}(x)=\frac{3x-1}{x+1}$$
+$$f^{-1}(x)=\dfrac{3x-1}{x+1}$$
 
 ---
 
 Determinamos ahora $g$.
 
 Sea
-$$t=\frac{2}{x}$$
+$$t=\dfrac{2}{x}$$
 
 entonces
-$$x=\frac{2}{t}$$
+$$x=\dfrac{2}{t}$$
 
 y
 $$g^{-1}(t)=
-\frac{\frac{2}{t}}
-     {\frac{2}{t}+2}
+\dfrac{\dfrac{2}{t}}
+     {\dfrac{2}{t}+2}
 =
-\frac{1}{t+1}
+\dfrac{1}{t+1}
 $$
 
 Así,
-$$g^{-1}(x)=\frac{1}{x+1}$$
+$$g^{-1}(x)=\dfrac{1}{x+1}$$
 
 Hallando la inversa:
-$$y=\frac{1}{x+1}$$
+$$y=\dfrac{1}{x+1}$$
 
-$$x+1=\frac{1}{y}$$
+$$x+1=\dfrac{1}{y}$$
 
-$$x=\frac{1-y}{y}$$
+$$x=\dfrac{1-y}{y}$$
 
 Por tanto,
-$$g(x)=\frac{1-x}{x}$$
+$$g(x)=\dfrac{1-x}{x}$$
 
 ---
 
 Ahora calculamos
-$$(f^{-1}\circ g\circ f)\left(\frac{1}{x^3}\right)$$
+$$(f^{-1}\circ g\circ f)\left(\dfrac{1}{x^3}\right)$$
 
 Sea
-$$u=\frac{1}{x^3}$$
+$$u=\dfrac{1}{x^3}$$
 
 Entonces
 $$f(u)=
-\frac{u+1}{3-u}
+\dfrac{u+1}{3-u}
 $$
 
-$$=\frac{\frac1{x^3}+1}
-     {3-\frac1{x^3}}
+$$=\dfrac{\dfrac1{x^3}+1}
+     {3-\dfrac1{x^3}}
 $$
 
-$$=\frac{x^3+1}{3x^3-1}$$
+$$=\dfrac{x^3+1}{3x^3-1}$$
 
 Aplicando $g$:
 $$g(f(u))=
-\frac{1-\frac{x^3+1}{3x^3-1}}
-     {\frac{x^3+1}{3x^3-1}}
+\dfrac{1-\dfrac{x^3+1}{3x^3-1}}
+     {\dfrac{x^3+1}{3x^3-1}}
 $$
 
-$$=\frac{2x^3-2}{x^3+1}$$
+$$=\dfrac{2x^3-2}{x^3+1}$$
 
-$$=\frac{2(x^3-1)}{x^3+1}$$
+$$=\dfrac{2(x^3-1)}{x^3+1}$$
 
 Aplicando $f^{-1}$:
 $$f^{-1}(g(f(u)))=
-\frac{3\left(\frac{2(x^3-1)}{x^3+1}\right)-1}
-     {\left(\frac{2(x^3-1)}{x^3+1}\right)+1}
+\dfrac{3\left(\dfrac{2(x^3-1)}{x^3+1}\right)-1}
+     {\left(\dfrac{2(x^3-1)}{x^3+1}\right)+1}
 $$
 
-$$=\frac{\frac{6(x^3-1)-(x^3+1)}{x^3+1}}
-     {\frac{2(x^3-1)+(x^3+1)}{x^3+1}}
+$$=\dfrac{\dfrac{6(x^3-1)-(x^3+1)}{x^3+1}}
+     {\dfrac{2(x^3-1)+(x^3+1)}{x^3+1}}
 $$
 
-$$=\frac{5x^3-7}{3x^3-1}$$
+$$=\dfrac{5x^3-7}{3x^3-1}$$
 
 Por consiguiente,
-$$(f^{-1}\circ g\circ f)\left(\frac{1}{x^3}\right)=
-\frac{5x^3-7}{3x^3-1}
+$$(f^{-1}\circ g\circ f)\left(\dfrac{1}{x^3}\right)=
+\dfrac{5x^3-7}{3x^3-1}
 $$
 
 ---
@@ -1735,22 +1943,22 @@ Factorizando:
 $$y=-2(x^2-3x)+1$$
 
 Completando cuadrados:
-$$y=-2\left(x^2-3x+\left(\frac32\right)^2\right)+1+2\left(\frac32\right)^2  
+$$y=-2\left(x^2-3x+\left(\dfrac32\right)^2\right)+1+2\left(\dfrac32\right)^2  
 $$
 
-$$y-\frac{11}{2}=-2\left(x-\frac32\right)^{2}$$
+$$y-\dfrac{11}{2}=-2\left(x-\dfrac32\right)^{2}$$
 
 Forma de vértice:
 $$y-k=a(x-h)^{2}$$
 
 Por comparación:
-$$a=-2,\qquad h=\frac32,\qquad k=\frac{11}{2}$$
+$$a=-2,\qquad h=\dfrac32,\qquad k=\dfrac{11}{2}$$
 
 Vértice:
-$$V(h,k)=\left(\frac32,\frac{11}{2}\right)$$
+$$V(h,k)=\left(\dfrac32,\dfrac{11}{2}\right)$$
 
 Eje de simetría:
-$$x=\frac32$$
+$$x=\dfrac32$$
 
 Como (a<0), la parábola abre hacia abajo.
 
@@ -1776,36 +1984,36 @@ Como (a<0), la parábola abre hacia abajo.
 
 % Vértice V(3/2, 11/2)
 \fill[teal] (1.5, 5.5) circle (0.07);
-\node[above right, font=\small] at (1.5, 5.5) {$V\!\left(\frac{3}{2},\frac{11}{2}\right)$};
+\node[above right, font=\small] at (1.5, 5.5) {$V\!\left(\dfrac{3}{2},\dfrac{11}{2}\right)$};
 
 % Líneas guía punteadas al vértice
 \draw[dashed, gray] (1.5, 0) -- (1.5, 5.5);
 \draw[dashed, gray] (0, 5.5) -- (1.5, 5.5);
 
 % Tick vértice eje x y y
-\node[below, font=\small] at (1.5,-0.05) {$\frac{3}{2}$};
-\node[left,  font=\small] at (-0.3, 5.5) {$\frac{11}{2}$};
+\node[below, font=\small] at (1.5,-0.05) {$\dfrac{3}{2}$};
+\node[left,  font=\small] at (-0.3, 5.5) {$\dfrac{11}{2}$};
 
 % Raíces: x = 3/2 ± √(11/4) = 3/2 ± √11/2
 % x₁ ≈ -0.158   x₂ ≈ 3.158
 \fill[orange] (-0.158, 0) circle (0.07);
 \fill[orange] ( 3.158, 0) circle (0.07);
-\node[below right, orange, font=\small] at (-2, 1) {$\frac{3-\sqrt{11}}{2}$};
-\node[below left,  orange, font=\small] at ( 5.158, 0) {$\frac{3+\sqrt{11}}{2}$};
+\node[below right, orange, font=\small] at (-2, 1) {$\dfrac{3-\sqrt{11}}{2}$};
+\node[below left,  orange, font=\small] at ( 5.158, 0) {$\dfrac{3+\sqrt{11}}{2}$};
 
 % Intersección eje y: x=0 → y = -2(9/4)+11/2 = 7/2
 \fill[purple] (0, 3.5) circle (0.07);
-\node[right, purple, font=\small] at (-0.1, 3.5) {$\frac{7}{2}$};
+\node[right, purple, font=\small] at (-0.1, 3.5) {$\dfrac{7}{2}$};
 
 % Etiqueta ecuación
-\node[teal, font=\small] at (3.3, 1.5) {$y-\frac{11}{2}=-2\!\left(x-\frac{3}{2}\right)^{\!2}$};
+\node[teal, font=\small] at (3.3, 1.5) {$y-\dfrac{11}{2}=-2\!\left(x-\dfrac{3}{2}\right)^{\!2}$};
 
 \end{tikzpicture}
 \end{document}
 ```
 
 
-$$D_{f}=\mathbb{R}\quad ; \quad  R_{f}=\left]-\infty,\frac{11}{2}\right]$$
+$$D_{f}=\mathbb{R}\quad ; \quad  R_{f}=\left]-\infty,\dfrac{11}{2}\right]$$
 
 ---
 
@@ -2010,10 +2218,10 @@ $$
 \node[below left, font=\small] at (0,1) {$(0,1)$};
 
 % Leyenda
-\draw[very thick, teal]         (2.5, 4.8) -- (3.5, 4.8) node[right, font=\small] {$y=\left(\frac{1}{2}\right)^x$};
-\draw[very thick, orange]       (2.5, 4.1) -- (3.5, 4.1) node[right, font=\small] {$y=\left(\frac{1}{3}\right)^x$};
-\draw[very thick, violet]       (2.5, 3.4) -- (3.5, 3.4) node[right, font=\small] {$y=\left(\frac{1}{5}\right)^x$};
-\draw[very thick, red!70!black] (2.5, 2.7) -- (3.5, 2.7) node[right, font=\small] {$y=\left(\frac{1}{10}\right)^x$};
+\draw[very thick, teal]         (2.5, 4.8) -- (3.5, 4.8) node[right, font=\small] {$y=\left(\dfrac{1}{2}\right)^x$};
+\draw[very thick, orange]       (2.5, 4.1) -- (3.5, 4.1) node[right, font=\small] {$y=\left(\dfrac{1}{3}\right)^x$};
+\draw[very thick, violet]       (2.5, 3.4) -- (3.5, 3.4) node[right, font=\small] {$y=\left(\dfrac{1}{5}\right)^x$};
+\draw[very thick, red!70!black] (2.5, 2.7) -- (3.5, 2.7) node[right, font=\small] {$y=\left(\dfrac{1}{10}\right)^x$};
 
 % Etiqueta asíntota
 \node[gray, font=\small] at (-1.5,-0.6) {asíntota $y=0$};
@@ -2025,7 +2233,7 @@ $$
 en general  $$a=\dfrac{1}{b}$$
 
 
-$$f(x)=a^{x} = \left( \frac{1}{b}\right)^{x}= b^{-x} \quad ;\quad b>1$$
+$$f(x)=a^{x} = \left( \dfrac{1}{b}\right)^{x}= b^{-x} \quad ;\quad b>1$$
 
 - Caso particular
 $$a= e = 2,718281\dots \quad = \text{número de nepper}$$
@@ -2048,7 +2256,7 @@ $$a= e = 2,718281\dots \quad = \text{número de nepper}$$
     plot ({\x}, {exp(\x)});
 % Tangente en (0,1): y = x + 1  →  pasa por (0,1) con pendiente 1
 \draw[dashed, gray, thick] (-2.3,-1.3) -- (4,5);
-\node[gray, font=\small] at (4.2,5.0) {$\frac{\pi}{4}$};
+\node[gray, font=\small] at (4.2,5.0) {$\dfrac{\pi}{4}$};
 % Punto (0,1)
 \fill[black] (0,1) circle (0.07);
 \node[below right, font=\small] at (-1,1.7) {$(0,1)$};
@@ -2405,23 +2613,23 @@ Donde:
 | $\cos{x}=\overline{OQ}$ | $\cot{x}=\overline{MN}$ | $\csc{x}=\overline{OM}$ |
 
 >Solo se miden ángulos redianes
->$$1^{\circ}=\frac{\pi}{180^{\circ}}[rad]$$
+>$$1^{\circ}=\dfrac{\pi}{180^{\circ}}[rad]$$
 
 Por ejemplo
 
-$$30^{\circ}=\frac{\pi}{180^{\circ}}\times 30^{\circ}=\frac{\pi}{6}$$
+$$30^{\circ}=\dfrac{\pi}{180^{\circ}}\times 30^{\circ}=\dfrac{\pi}{6}$$
 
-$$45^{\circ}=\frac{\pi}{180^{\circ}}\times 45^{\circ}=\frac{\pi}{4}$$
+$$45^{\circ}=\dfrac{\pi}{180^{\circ}}\times 45^{\circ}=\dfrac{\pi}{4}$$
 
-$$90^{\circ}=\frac{\pi}{180^{\circ}}\times 90^{\circ}=\frac{\pi}{2}$$
+$$90^{\circ}=\dfrac{\pi}{180^{\circ}}\times 90^{\circ}=\dfrac{\pi}{2}$$
 
-$$120^{\circ}=\frac{\pi}{180^{\circ}}\times 120^{\circ}=\frac{2\pi}{3}$$
+$$120^{\circ}=\dfrac{\pi}{180^{\circ}}\times 120^{\circ}=\dfrac{2\pi}{3}$$
 
 $$\vdots$$
 
 Además
 
-$$\sin\frac{\pi}{6} = \frac{1}{2}\quad ; \quad \cos \frac{\pi}{6}=\frac{\sqrt{3}}{2} \quad ; \quad \sin\frac{\pi}{4} = \frac{\sqrt{2}}{2}=\frac{1}{\sqrt{2}}$$
+$$\sin\dfrac{\pi}{6} = \dfrac{1}{2}\quad ; \quad \cos \dfrac{\pi}{6}=\dfrac{\sqrt{3}}{2} \quad ; \quad \sin\dfrac{\pi}{4} = \dfrac{\sqrt{2}}{2}=\dfrac{1}{\sqrt{2}}$$
 $$\vdots$$
 
 ---
@@ -2517,10 +2725,10 @@ Grafica :
 \draw[dashed, gray, line width=1pt] (axis cs:-3, -1) -- (axis cs:13, -1);
 
 % Puntos donde tan(x)=0
-\fill[orange] (axis cs:1.57, 0) circle (2pt)node[above right] {$\frac{\pi}{2}$};
-\fill[orange] (axis cs:4.71, 0) circle (2pt)node[above right] {$\frac{3\pi}{2}$};
-\fill[orange] (axis cs:7.85, 0) circle (2pt)node[above right] {$\frac{5\pi}{2}$};
-\fill[orange] (axis cs:10.99, 0) circle (2pt)node[above right] {$\frac{7\pi}{2}$};
+\fill[orange] (axis cs:1.57, 0) circle (2pt)node[above right] {$\dfrac{\pi}{2}$};
+\fill[orange] (axis cs:4.71, 0) circle (2pt)node[above right] {$\dfrac{3\pi}{2}$};
+\fill[orange] (axis cs:7.85, 0) circle (2pt)node[above right] {$\dfrac{5\pi}{2}$};
+\fill[orange] (axis cs:10.99, 0) circle (2pt)node[above right] {$\dfrac{7\pi}{2}$};
 
 
 \end{axis}
@@ -2536,7 +2744,7 @@ Grafica :
 
 $$y=f(x)=\tan{x}=\dfrac{\sin x}{\cos x}$$
 
-$$D_{f}=\mathbb{R} \quad \rightarrow \{ \; x / x = (2k+1)\frac{\pi}{2}\quad,\quad k\in \mathbb{Z} \; \}$$
+$$D_{f}=\mathbb{R} \quad \rightarrow \{ \; x / x = (2k+1)\dfrac{\pi}{2}\quad,\quad k\in \mathbb{Z} \; \}$$
 
 $$R_{f}=\mathbb{R}$$
 
@@ -2593,11 +2801,11 @@ Grafica :
 
 - además
 
-$$f(x)=\cot{x}=\frac{1}{\tan x} = \frac{\cos x}{\sin x}$$
+$$f(x)=\cot{x}=\dfrac{1}{\tan x} = \dfrac{\cos x}{\sin x}$$
 
-$$f(x)=\sec{x}=\frac{1}{\cos x} $$
+$$f(x)=\sec{x}=\dfrac{1}{\cos x} $$
 
-$$f(x)=\csc{x}=\frac{1}{\sin x} $$
+$$f(x)=\csc{x}=\dfrac{1}{\sin x} $$
 
 >- también  $$\sin^{2}{x}+\cos^{2}{x}=1\quad ; \quad \forall x\in \mathbb{R}$$
 >Identidad fundamental
@@ -2617,11 +2825,11 @@ $$\text{arcosec }{u}=v \quad \Rightarrow \quad u=\csc v$$
 
 - por ejemplo:
 
-$$\arcsin{1}=\frac{\pi}{2}$$
-$$\arctan{1}=\frac{\pi}{4}$$
-$$\arccos{0}=\frac{\pi}{2}$$
-$$\arcsin{\frac{\sqrt{3}}{2}}=\frac{\pi}{3}$$
-$$\arctan \infty =\frac{\pi}{2}$$
+$$\arcsin{1}=\dfrac{\pi}{2}$$
+$$\arctan{1}=\dfrac{\pi}{4}$$
+$$\arccos{0}=\dfrac{\pi}{2}$$
+$$\arcsin{\dfrac{\sqrt{3}}{2}}=\dfrac{\pi}{3}$$
+$$\arctan \infty =\dfrac{\pi}{2}$$
 $$\vdots$$
 
 
@@ -2629,7 +2837,7 @@ $$\vdots$$
 
 $$y=f(x)=\arcsin{x}$$
 
-$$D_{f}=[-1,1] \quad ; \quad R_{f}=\Big [-\frac{\pi}{2},\frac{\pi}{2}\Big ]$$
+$$D_{f}=[-1,1] \quad ; \quad R_{f}=\Big [-\dfrac{\pi}{2},\dfrac{\pi}{2}\Big ]$$
 
 Grafica :
 
@@ -2668,9 +2876,9 @@ Grafica :
 ]{asin(x)/180*pi};
 
 % Puntos clave arcoseno
-\fill[orange] (axis cs:-1, -1.5708) circle (2pt) node[left] {$(-1,-\frac{\pi}{2})$};
+\fill[orange] (axis cs:-1, -1.5708) circle (2pt) node[left] {$(-1,-\dfrac{\pi}{2})$};
 \fill[orange] (axis cs:0, 0)        circle (2pt) node[above right] {$(0,0)$};
-\fill[orange] (axis cs:1,  1.5708)  circle (2pt) node[right] {$(1,\frac{\pi}{2})$};
+\fill[orange] (axis cs:1,  1.5708)  circle (2pt) node[right] {$(1,\dfrac{\pi}{2})$};
 %asintotas
 %||
 \draw[dashed, gray, line width=1pt] (axis cs:1, -2) -- (axis cs:1, 2);
@@ -2732,7 +2940,7 @@ Grafica :
 
 % Puntos clave arcocoseno
 \fill[orange] (axis cs:-1, 3.1416) circle (2pt) node[left] {$(-1,\pi)$};
-\fill[orange] (axis cs:0, 1.5708)  circle (2pt) node[above right] {$(0,\frac{\pi}{2})$};
+\fill[orange] (axis cs:0, 1.5708)  circle (2pt) node[above right] {$(0,\dfrac{\pi}{2})$};
 \fill[orange] (axis cs:1, 0)       circle (2pt) node[below right] {$(1,0)$};
 
 % Lineas de referencia ||
@@ -2756,7 +2964,7 @@ Grafica :
 
 $$y=f(x)=\arctan{x}$$
 
-$$D_{f}=\mathbb{R} \quad ; \quad R_{f}= \Big [ -\frac{\pi}{2},\frac{\pi}{2} \Big ]$$
+$$D_{f}=\mathbb{R} \quad ; \quad R_{f}= \Big [ -\dfrac{\pi}{2},\dfrac{\pi}{2} \Big ]$$
 
 Grafica :
 
@@ -2795,9 +3003,9 @@ Grafica :
 ]{atan(x)/180*pi};
 
 % Puntos clave arctan
-\fill[orange] (axis cs:-1, -0.7854) circle (2pt) node[below left] {$(-1,-\frac{\pi}{4})$};
+\fill[orange] (axis cs:-1, -0.7854) circle (2pt) node[below left] {$(-1,-\dfrac{\pi}{4})$};
 \fill[orange] (axis cs:0, 0)        circle (2pt) node[above right] {$(0,0)$};
-\fill[orange] (axis cs:1, 0.7854)   circle (2pt) node[above left] {$(1,\frac{\pi}{4})$};
+\fill[orange] (axis cs:1, 0.7854)   circle (2pt) node[above left] {$(1,\dfrac{\pi}{4})$};
 
 % Asintotas horizontales de arctan en y=+-pi/2
 \draw[dashed, gray, line width=1pt] (axis cs:-4,  1.5708) -- (axis cs:4,  1.5708);

@@ -182,7 +182,7 @@
     {
       "id": "qpv0o275nb",
       "platform_specific_commands": {
-        "default": "\"C:\\Users\\USUARIO\\AppData\\Local\\Programs\\Python\\Python313\\python.exe\" \"{{vault_path}}\\.obsidian\\scripts\\python\\wolfram_query\\src\\main.py\" \"{{selection}}\" \"{{vault_path}}\""
+        "default": "& \"C:\\Users\\USUARIO\\AppData\\Local\\Programs\\Python\\Python313\\python.exe\" \"E:\\University_vault_2026\\.obsidian\\scripts\\python\\wolfram_query\\src\\main.py\" \"{{selection}}\" \"{{vault_path}}\""
       },
       "shells": {
         "win32": "PowerShell.exe"
