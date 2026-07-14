@@ -7,7 +7,6 @@
       "customOrder": [
         "_tasks",
         "_assets",
-        "proyectos con shell command.md",
         "Rubbish",
         "void.md",
         "Zettelkasten",
@@ -2971,10 +2970,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "proyectos con shell command.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_assets": {
       "isPinned": false,
       "isHidden": false,
@@ -3026,6 +3021,7 @@
       "isPinned": false,
       "isHidden": false,
       "customOrder": [
+        "tsk_proyectos_shellcmd.md",
         "tsk_tpl.md",
         "tsk_krajo.md",
         "tsk_alxrul.md",
@@ -3056,6 +3052,10 @@
       "isHidden": false
     },
     "_tasks/tsk_tpl.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_tasks/tsk_proyectos_shellcmd.md": {
       "isPinned": false,
       "isHidden": false
     }

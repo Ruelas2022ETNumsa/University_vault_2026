@@ -75,3 +75,36 @@
 - Watcher de archivos — ¿ya existe algo similar con los eventos del plugin Shell Commands?
 - Git commit manual — ¿ya está configurado en `_sync-system`?
 - Estadísticas del vault — ¿Dataview ya lo cubre parcialmente?
+
+---
+
+# otros agregados a revisar
+
+**Scripts Python pendientes — sistema galaxy**
+
+**Correcciones / limpieza**
+- [ ] `notebooklm_fix` — ✅ hecho
+- [ ] Listar notas con `status: pendiente` → genera nota con la lista
+- [ ] Detectar planets/comets con bloque `%%` vacío
+- [ ] Normalizar `date_updated` al día actual en archivo activo
+
+**Validación de YAML**
+- [ ] Verificar campos obligatorios según `galaxy_body` — alertar si faltan
+- [ ] Detectar `galaxy_body` con valores inválidos (typos)
+- [ ] Detectar wikilinks en `%%` que apunten a archivos inexistentes
+
+**Reportes**
+- [ ] Generar nota `dwarf` automáticamente con comets de un tema agrupados por `source`
+- [ ] Listar todas las notas de una materia con su `status`
+
+**Automatización estructural**
+- [ ] Renombrar archivo según convención galaxy + actualizar wikilinks que apuntan a él
+- [ ] Sincronizar bloque `%%` con wikilinks declarados en YAML (`orbiting`, `concepts_used`, etc.)
+
+---
+
+# ideas
+
+un script que detecte lo nuevo respecto a lo antiguo, mas que todo para notas de transcripcion se buscaria que el script haga una historial de transcripcion tipo.
+fecha-> se transcribio x y esto se lleva a las nevas notas task
+

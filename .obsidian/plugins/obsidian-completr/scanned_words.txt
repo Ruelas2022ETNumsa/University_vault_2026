@@ -6221,6 +6221,9 @@ toLowerCase
 thickness
 triangle
 today
+titulos
+tenia
+typos
 ToDo
 Templater
 Text
@@ -20369,6 +20372,7 @@ Sample
 SampleSolutionFamily
 SumOfRoots
 SeriesExpansionAtX
+SKILLL
 Plugins
 Pendientes
 Plugin
@@ -31303,6 +31307,11 @@ days
 devolvio
 devolvi
 dops
+documentacion
+diferenci
+debia
+documentaron
+declarados
 Vault
 Verificar
 Variables
@@ -37462,6 +37471,7 @@ Viernes
 Venerly
 Vöw
 VisualRepresentation
+Verificaciones
 galaxy
 gina
 genes
@@ -48892,6 +48902,7 @@ blico
 balloon
 basadas
 between
+borre
 scope
 status
 selector
@@ -55917,6 +55928,9 @@ sequence
 synonym
 science
 sound
+secction
+salio
+skill
 vault
 vil
 ver
@@ -68578,6 +68592,12 @@ assuming
 atmosphere
 acre
 abiertas
+ahorrar
+almenos
+agregados
+alertar
+apunten
+agrupados
 related
 recomendados
 ribbon
@@ -75114,6 +75134,17 @@ roots
 representations
 raices
 resumidas
+reintegrarlos
+relevamiento
+reintegra
+ribon
+resumne
+reintegracion
+reintegrar
+reintegraga
+revis
+rotas
+representados
 notes
 notas
 nuevas
@@ -81379,6 +81410,8 @@ nwGf
 null
 nextN
 names
+ndolo
+numbers
 created
 commit
 cada
@@ -88210,6 +88243,16 @@ circulo
 compound
 cruda
 concatenar
+cripts
+correccion
+cree
+corrsponde
+creator
+conectada
+comprobo
+contextogen
+constant
+conjugadas
 updated
 un
 universo
@@ -106864,6 +106907,7 @@ ComparisonAsThickness
 ComparisonAsCircumference
 Continued
 ContinuedFraction
+CREATOR
 Instalados
 Instalado
 Instalar
@@ -113975,6 +114019,7 @@ InterestRate
 InterestPeriods
 Interpretations
 IndefiniteIntegralAssumingAllVariablesAreReal
+Involucra
 Funci
 File
 Fase
@@ -120182,6 +120227,7 @@ FULL
 FinancialData
 FutureValue
 FrequencyBands
+Factorizaci
 Estado
 Excalidraw
 EPUBs
@@ -138696,6 +138742,7 @@ Additional
 AdditionalConversion
 Alternative
 AlternativeRepresentations
+Adicional
 push
 pull
 para
@@ -144761,6 +144808,8 @@ polynomial
 pascals
 pruebar
 prueda
+probe
+pesadas
 min
 mica
 movimiento
@@ -152121,6 +152170,7 @@ mass
 meters
 mortgage
 meno
+multiplicidad
 YAML
 Ya
 You
@@ -170491,6 +170541,10 @@ esfera
 estan
 extrajeron
 edicion
+editada
+entraga
+editados
+element
 Motor
 Media
 Mantiene
@@ -189771,6 +189825,9 @@ lolo
 length
 luna
 limite
+llegaron
+llegaba
+lecturas
 incluyendo
 im
 instalar
@@ -197540,6 +197597,8 @@ interest
 inverse
 intersection
 integration
+integracion
+inexistentes
 Dependencia
 Dropbox
 Dataview
@@ -203745,6 +203804,7 @@ Determinant
 Diagonalization
 DecimalApproximation
 Divisors
+Discriminante
 Remotely
 Raz
 Revisa
@@ -221412,6 +221472,7 @@ factorial
 finansas
 finanzas
 funcionabien
+funcionana
 haya
 hace
 hacer
@@ -227238,6 +227299,7 @@ habilitan
 hotkey
 happy
 horsepower
+handoff
 que
 quedan
 queda
@@ -248331,6 +248393,7 @@ Nieves
 Numerical
 Notification
 NumberLine
+Normalizar
 originales
 observatory
 oficial
@@ -294596,6 +294659,7 @@ WgDj
 Wolfram
 Watcher
 WordData
+WolframAlpha
 JavaScript
 JSON
 JERARQU
