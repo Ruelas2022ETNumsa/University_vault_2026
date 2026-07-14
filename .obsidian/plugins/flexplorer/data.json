@@ -2975,6 +2975,8 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "MAT101_T1-Funciones-reales 1-14-07-2026_00-09-12.png",
+        "MAT101_T1-Funciones-reales 1-14-07-2026_00-03-59.png",
         "MAT101_T1-Funciones-reales 1-13-07-2026_21-04-01.png",
         "MAT101_T1-Funciones-reales 1-13-07-2026_21-03-38.png",
         "MAT101_T1-Funciones-reales 1-13-07-2026_21-00-56.png",
@@ -3056,6 +3058,14 @@
       "isHidden": false
     },
     "_tasks/tsk_proyectos_shellcmd.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/MAT101_T1-Funciones-reales 1-14-07-2026_00-03-59.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/MAT101_T1-Funciones-reales 1-14-07-2026_00-09-12.png": {
       "isPinned": false,
       "isHidden": false
     }

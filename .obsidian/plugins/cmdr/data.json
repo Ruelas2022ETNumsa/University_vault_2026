@@ -2,7 +2,14 @@
   "confirmDeletion": false,
   "showAddCommand": true,
   "debug": false,
-  "editorMenu": [],
+  "editorMenu": [
+    {
+      "id": "obsidian-shellcommands:shell-command-qpv0o275nb",
+      "icon": "lucide-bot-message-square",
+      "name": "Shell commands: Execute: Preguntar a Wolfram Alpha",
+      "mode": "any"
+    }
+  ],
   "fileMenu": [],
   "leftRibbon": [
     {

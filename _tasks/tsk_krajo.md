@@ -23,7 +23,8 @@ Datos de el api de wolfram
 - [ ] Integrar los valores de los dops de la tabla en el script
 - [ ] probar el script para los casos muestras
 - [ ] documentar el script de wolfram
-- [ ] crear el boton de commander para el script en el meno de edicion
+- [x] crear el boton de commander para el script en el meno de edicion
+- [ ] si se puede que el script haga un fix de lo pegado desde wa la idea es que las fracciones se conviertan es eso  fracciones dentro de latex `\frac` por el momento se hace las correcciones a mano
 
 > [!note]- Historial de pendientes
 > **fecha** — 
@@ -33,6 +34,7 @@ Datos de el api de wolfram
 ## Completado
 
 - [x] el script funcionabien para las pruebar resumidas
+- [X] no es necesario que el script renombre a las imagenes que llegan de la pagina esto ya lo hace otro plugin
 
 > [!note]- Historial de sesiones
 > **fecha** — 

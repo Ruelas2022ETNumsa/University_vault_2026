@@ -308,6 +308,83 @@ y=e^{-2x}+\tanh (6x)+\operatorname{sech}(x)
 $$
 $$etc.$$
 
+
+**WolframAlpha:** $f(x)=\dfrac{x^3-4x}{x^2+1}$
+
+**Gráfica:**
+![[MAT101_T1-Funciones-reales 1-14-07-2026_00-09-12.png]]
+
+**Forma alternativa (real):**
+$x^3 = (x^2 + 1) f(x) + 4 x (for x!=-i and x!=i)$
+
+**Forma alternativa:**
+$f(x) = x - (5 x)/(x^2 + 1) | f(x) = (x (x^2 - 4))/(x^2 + 1) | f(x) = ((x - 2) x (x + 2))/(x^2 + 1)$
+
+**Raíces:**
+$x = -2 | x = 0 | x = 2$
+
+**Propiedades:**
+$R (all real numbers) | R (all real numbers) | surjective onto R | odd$
+
+**Derivada:**
+$d/dx((x^3 - 4 x)/(x^2 + 1)) = (x^4 + 7 x^2 - 4)/(x^2 + 1)^2$
+
+**Integral indefinida:**
+$integral(x^3 - 4 x)/(x^2 + 1) dx = x^2/2 - 5/2 log(x^2 + 1) + constant$
+
+```
+Resolvé paso a paso sin ejercicio adicional (MODO 3):
+f(x)=\dfrac{x^3-4x}{x^2+1}
+Si aplica, graficá usando Desmos o TikZJax.
+```
+
+
+
+
+
+
+
+
+
+
+
+**WolframAlpha:** $f(x)=\dfrac{x^3-4x}{x^2+1}$
+
+**Gráfica:**
+![[MAT101_T1-Funciones-reales 1-14-07-2026_00-03-59.png]]
+
+**Forma alternativa (real):**
+$x^3 = (x^2 + 1) f(x) + 4 x (for x!=-i and x!=i)$
+
+**Forma alternativa:**
+$f(x) = x - (5 x)/(x^2 + 1) | f(x) = (x (x^2 - 4))/(x^2 + 1) | f(x) = ((x - 2) x (x + 2))/(x^2 + 1)$
+
+**Raíces:**
+$x = -2 | x = 0 | x = 2$
+
+**Propiedades:**
+$R (all real numbers) | R (all real numbers) | surjective onto R | odd$
+
+**Derivada:**
+$d/dx((x^3 - 4 x)/(x^2 + 1)) = (x^4 + 7 x^2 - 4)/(x^2 + 1)^2$
+
+**Integral indefinida:**
+$integral(x^3 - 4 x)/(x^2 + 1) dx = x^2/2 - 5/2 log(x^2 + 1) + constant$
+
+```
+Resolvé paso a paso sin ejercicio adicional (MODO 3):
+f(x)=\dfrac{x^3-4x}{x^2+1}
+Si aplica, graficá usando Desmos o TikZJax.
+```
+
+
+
+
+
+
+
+
+
 ---
 
 ## Notación
