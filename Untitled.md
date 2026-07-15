@@ -239,6 +239,38 @@ Si aplica, graficá usando Desmos o TikZJax.
 \frac{1}{x} + \frac{1}{x+1} = 1
 
 
+
+**WolframAlpha:** $\frac{1}{x} + \frac{1}{x+1} = 1$
+
+**Gráfica:**
+![[Untitled-15-07-2026_17-06-40.png]]
+
+**Input:**
+$\dfrac{1}{x} + \dfrac{1}{(x} + 1) = 1$
+
+**Alternate form assuming x is real:**
+$\dfrac{x}{(x} + 1) = \dfrac{1}{x}$
+
+**Alternate forms:**
+$\dfrac{4}{5} (x - \dfrac{1}{2)^2} = 1 (for x\neq -1 and x\neq 0) | (2 x + \dfrac{1)}{(x} (x + 1)) = 1$
+
+**Alternate form assuming x is positive:**
+$x^2 = x + 1 (for x\neq -1 and x\neq 0)$
+
+**Solutions:**
+$x = \dfrac{1}{2} - \sqrt{5}/2 | x = \dfrac{1}{2} + \sqrt{5}/2$
+
+```
+Resolvé paso a paso sin ejercicio adicional (MODO 3):
+\frac{1}{x} + \frac{1}{x+1} = 1
+Si aplica, graficá usando Desmos o TikZJax.
+```
+
+
+
+
+
+
 **WolframAlpha:** $\frac{1}{x} + \frac{1}{x+1} = 1$
 
 **Gráfica:**
@@ -396,6 +428,33 @@ Si aplica, graficá usando Desmos o TikZJax.
 **WolframAlpha:** $\lim_{x \to \infty} \frac{x^2 + 1}{x^2 - 1}$
 
 **Gráfica:**
+![[Untitled-15-07-2026_17-06-00.png]]
+
+**Limit input:**
+$lim_(x\to -1) (x^2 + \dfrac{1)}{(x^2} - 1) | lim_(x\to 1) (x^2 + \dfrac{1)}{(x^2} - 1)$
+
+**Limit:**
+$lim_(x\to 0) (x^2 + \dfrac{1)}{(x^2} - 1) = -1 | lim_(x\to -∞) (x^2 + \dfrac{1)}{(x^2} - 1) = 1 | lim_(x\to ∞) (x^2 + \dfrac{1)}{(x^2} - 1) = 1$
+
+**One-sided limits:**
+$lim_(x\to (-1)^-) (x^2 + \dfrac{1)}{(x^2} - 1) = ∞
+lim_(x\to (-1)^+) (x^2 + \dfrac{1)}{(x^2} - 1) = -∞ | lim_(x\to 1^-) (x^2 + \dfrac{1)}{(x^2} - 1) = -∞
+lim_(x\to 1^+) (x^2 + \dfrac{1)}{(x^2} - 1) = ∞$
+
+```
+Resolvé paso a paso sin ejercicio adicional (MODO 3):
+\lim_{x \to \infty} \frac{x^2 + 1}{x^2 - 1}
+Si aplica, graficá usando Desmos o TikZJax.
+```
+
+
+
+
+
+
+**WolframAlpha:** $\lim_{x \to \infty} \frac{x^2 + 1}{x^2 - 1}$
+
+**Gráfica:**
 ![[ima-13.png]]
 
 **Limit input:**
@@ -419,6 +478,27 @@ Si aplica, graficá usando Desmos o TikZJax.
 
 
 \lim_{x \to 2} \frac{x^2 - 4}{x - 2}
+
+
+
+**WolframAlpha:** $\lim_{x \to 2} \frac{x^2 - 4}{x - 2}$
+
+**Gráfica:**
+![[Untitled-15-07-2026_17-04-33.png]]
+
+**Limit:**
+$lim_(x\to 0) (x^2 - \dfrac{4)}{(x} - 2) = 2 | lim_(x\to 2) (x^2 - \dfrac{4)}{(x} - 2) = 4 | lim_(x\to -∞) (x^2 - \dfrac{4)}{(x} - 2) = -∞ | lim_(x\to ∞) (x^2 - \dfrac{4)}{(x} - 2) = ∞$
+
+```
+Resolvé paso a paso sin ejercicio adicional (MODO 3):
+\lim_{x \to 2} \frac{x^2 - 4}{x - 2}
+Si aplica, graficá usando Desmos o TikZJax.
+```
+
+
+
+
+
 
 
 **WolframAlpha:** $\lim_{x \to 2} \frac{x^2 - 4}{x - 2}$
@@ -475,6 +555,54 @@ Si aplica, graficá usando Desmos o TikZJax.
 
 
 \frac{d}{dx} \frac{\sin(x)}{x}
+
+
+**WolframAlpha:** $\frac{d}{dx} \frac{\sin(x)}{x}$
+
+**Gráfica:**
+![[Untitled-15-07-2026_17-02-35.png]]
+
+**Derivative:**
+$\dfrac{d}{dx(}\\dfrac{sin(x)}{x)} = (x \cos(x) - \\dfrac{sin(x))}{x^2}$
+
+**Expanded form:**
+$\\dfrac{cos(x)}{x} - \\dfrac{sin(x)}{x^2}$
+
+**Alternate form:**
+$-(i e^(-i \dfrac{x))}{(2} x^2) + (i e^(i \dfrac{x))}{(2} x^2) + e^(-i \dfrac{x)}{(2} x) + e^(i \dfrac{x)}{(2} x)$
+
+**Numerical roots:**
+$x ≈ -14.0661939128315... | x ≈ ± 10.9041216594289... | x ≈ ± 7.72525183693771... | x ≈ ± 4.49340945790906...$
+
+**Properties as a real function:**
+$\{x \in \mathbb{R} : x\neq 0\} | odd$
+
+**Series expansion at x = 0:**
+$-\dfrac{x}{3} + \dfrac{x^3}{30} - \dfrac{x^5}{840} + O(x^6)
+(Taylor series)$
+
+**Indefinite integral:**
+$integral(x \cos(x) - \\dfrac{sin(x))}{x^2} dx = \\dfrac{sin(x)}{x} + C$
+
+**Limit:**
+$lim_(x\to  ± ∞) (x \cos(x) - \\dfrac{sin(x))}{x^2} = 0$
+
+**Definite integrals:**
+$integral_0^∞ (x \cos(x) - \\dfrac{sin(x))}{x^2} dx≈-1.00000000000... | integral_(-\dfrac{π}{2)^}∞ (x \cos(x) - \\dfrac{sin(x))}{x^2} dx≈-0.6366197723676... | \dfrac{integral_(π}{2)^π} (x \cos(x) - \\dfrac{sin(x))}{x^2} dx≈-0.6366197723676...$
+
+```
+Resolvé paso a paso sin ejercicio adicional (MODO 3):
+\frac{d}{dx} \frac{\sin(x)}{x}
+Si aplica, graficá usando Desmos o TikZJax.
+```
+
+
+
+
+
+
+
+
 
 **WolframAlpha:** $\frac{d}{dx} \frac{\sin(x)}{x}$
 
@@ -610,6 +738,56 @@ Si aplica, graficá usando Desmos o TikZJax.
 \int \frac{1}{x^2 + 1} dx
 
 
+
+
+**WolframAlpha:** $\int \frac{1}{x^2 + 1} dx$
+
+**Gráfica:**
+![[Untitled-15-07-2026_17-01-47.png]]
+
+**Indefinite integral:**
+$\dfrac{integral1}{(x^2} + 1) dx = \tan^(-1)(x) + C$
+
+**Alternate form of the integral:**
+$\dfrac{1}{2} i \log(1 - i x) - \dfrac{1}{2} i \log(1 + i x) + C$
+
+**Series expansion of the integral at x = 0:**
+$x - \dfrac{x^3}{3} + \dfrac{x^5}{5} + O(x^6)
+(Taylor series)$
+
+**Series expansion of the integral at x = -i:**
+$\dfrac{(1}{4} (2 i \log(x + i) - 2 i \log(2) + π) + (x + \dfrac{i)}{4} - \dfrac{1}{16} i (x + i)^2 - \dfrac{1}{48} (x + i)^3 + \dfrac{1}{128} i (x + i)^4 + \dfrac{1}{320} (x + i)^5 + O((x + i)^6)) - π \dfrac{floor(3}{4} - arg(x + \dfrac{i)}{(2} π))$
+
+**Series expansion of the integral at x = i:**
+$π floor((π - 2 arg(x - \dfrac{i))}{(4} π)) + \dfrac{(1}{4} (-2 i \log(x - i) + 2 i \log(2) + π) + (x - \dfrac{i)}{4} + \dfrac{1}{16} i (x - i)^2 - \dfrac{1}{48} (x - i)^3 - \dfrac{1}{128} i (x - i)^4 + \dfrac{1}{320} (x - i)^5 + O((x - i)^6))$
+
+**Series expansion of the integral at x = ∞:**
+$\dfrac{π}{2} - \dfrac{1}{x} + \dfrac{1}{(3} x^3) - \dfrac{1}{(5} x^5) + \dfrac{O((1}{x)^6)}
+(Laurent series)$
+
+**Definite integral:**
+$integral_0^∞ \dfrac{1}{(1} + x^2) dx = \dfrac{π}{2}≈1.5708$
+
+```
+Resolvé paso a paso sin ejercicio adicional (MODO 3):
+\int \frac{1}{x^2 + 1} dx
+Si aplica, graficá usando Desmos o TikZJax.
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 **WolframAlpha:** $\int \frac{1}{x^2 + 1} dx$
 
 **Gráfica:**
@@ -647,6 +825,62 @@ Si aplica, graficá usando Desmos o TikZJax.
 ---
 
 \sum_{n=1}^{\infty} \frac{1}{n^2}
+
+
+
+**WolframAlpha:** $\sum_{n=1}^{\infty} \frac{1}{n^2}$
+
+**Infinite sum:**
+$sum_(n=1)^∞ \dfrac{1}{n^2} = \dfrac{π^2}{6}≈1.6449$
+
+**Sum convergence:**
+$sum_(n=1)^∞ \dfrac{1}{n^2} converges$
+
+**Partial sum formula:**
+$sum_(n=1)^k \dfrac{1}{n^2} = H_k^(2)$
+
+**Series representations:**
+$\dfrac{π^2}{6} = sum_(k=1)^∞ \dfrac{1}{k^2} | \dfrac{π^2}{6} = -2 sum_(k=1)^∞ (-\dfrac{1)^k}{k^2} | \dfrac{π^2}{6} = \dfrac{4}{3} sum_(k=0)^∞ \dfrac{1}{(1} + 2 k)^2 | \dfrac{π^2}{6} = \dfrac{8}{3} ( sum_(k=0)^∞ (-\dfrac{1)^k}{(1} + 2 k))^2$
+
+```
+Resolvé paso a paso sin ejercicio adicional (MODO 3):
+\sum_{n=1}^{\infty} \frac{1}{n^2}
+Si aplica, graficá usando Desmos o TikZJax.
+```
+
+
+
+
+
+
+
+
+**WolframAlpha:** $\sum_{n=1}^{\infty} \frac{1}{n^2}$
+
+**Infinite sum:**
+$sum_(n=1)^∞ dfrac{1}{n^2} = dfrac{π^2}{6}≈1.6449$
+
+**Sum convergence:**
+$sum_(n=1)^∞ dfrac{1}{n^2} converges$
+
+**Partial sum formula:**
+$sum_(n=1)^k dfrac{1}{n^2} = H_k^(2)$
+
+**Series representations:**
+$dfrac{π^2}{6} = sum_(k=1)^∞ dfrac{1}{k^2} | dfrac{π^2}{6} = -2 sum_(k=1)^∞ (-dfrac{1)^k}{k^2} | dfrac{π^2}{6} = dfrac{4}{3} sum_(k=0)^∞ dfrac{1}{(1} + 2 k)^2 | dfrac{π^2}{6} = dfrac{8}{3} ( sum_(k=0)^∞ (-dfrac{1)^k}{(1} + 2 k))^2$
+
+```
+Resolvé paso a paso sin ejercicio adicional (MODO 3):
+\sum_{n=1}^{\infty} \frac{1}{n^2}
+Si aplica, graficá usando Desmos o TikZJax.
+```
+
+
+
+
+
+
+
 
 
 **WolframAlpha:** $\sum_{n=1}^{\infty} \frac{1}{n^2}$
@@ -785,240 +1019,20 @@ Si aplica, graficá usando Desmos o TikZJax.
 
 \tan(\frac{\pi}{4})
 
-**WolframAlpha:** $\tan(\frac{\pi}{4})$
-
-**Input:**
-$tan(π/4)$
-
-**Result:**
-$1$
-
-**Conversion from radians to degrees:**
-$tan(45 °)$
-
-**Reference triangle for angle π/4 radians:**
-$
-width | cos(π/4) = 1/sqrt(2)≈0.707107
-height | sin(π/4) = 1/sqrt(2)≈0.707107$
-
-**Alternative representations:**
-$tan(π/4) = 1/cot(π/4) | tan(π/4) = cot(π/2 - π/4) | tan(π/4) = -cot(π/2 + π/4)$
-
-**Series representations:**
-$tan(π/4) = i + 2 i sum_(k=1)^∞ (-1)^k q^(2 k) for q = (-1)^(1/4) | tan(π/4) = (8 sum_(k=1)^∞ 1/(3 - 16 k + 16 k^2))/π | tan(π/4) = i sum_(k=-∞)^∞ (-1)^k e^((i k π)/2) sgn(k)$
-
-**Integral representations:**
-$tan(π/4) = integral_0^(π/4) sec^2(t) dt | tan(π/4) = 2/π integral_0^∞ 1/(1 + sqrt(t) + t + t^(3/2)) dt$
-
-**Multiple-argument formulas:**
-$tan(π/4) = -(2 tan(π/8))/(-1 + tan^2(π/8)) | tan(π/4) = (tan(π/12) (-3 + tan^2(π/12)))/(-1 + 3 tan^2(π/12)) | tan(π/4) = (tan(-(3 π)/4) + tan(π))/(1 - tan(-(3 π)/4) tan(π)) | tan(π/4) = (U_(-3/4)(cos(π)) sin(π))/(T_(1/4)(cos(π)))$
-
-```
-Resolvé paso a paso sin ejercicio adicional (MODO 3):
-\tan(\frac{\pi}{4})
-Si aplica, graficá usando Desmos o TikZJax.
-```
-
-
-
-
 
 \arcsin(\frac{\sqrt{2}}{2})
 
-
-**WolframAlpha:** $\arcsin(\frac{\sqrt{2}}{2})$
-
-**Input:**
-$sin^(-1)(sqrt(2)/2)$
-
-**Exact Result:**
-$π/4
-(result in radians)$
-
-**Decimal approximation:**
-$0.7853981633974483096156608458198757210492923498437764552437361480...
-(result in radians)$
-
-**Conversion from radians to degrees:**
-$45°$
-
-**Property:**
-$π/4 is a transcendental number$
-
-**Reference triangle for angle π/4 radians:**
-$
-width | cos(π/4) = 1/sqrt(2)≈0.707107
-height | sin(π/4) = 1/sqrt(2)≈0.707107$
-
-**Continued fraction:**
-$[0; 1, 3, 1, 1, 1, 15, 2, 72, 1, 9, 1, 17, 1, 2, 1, 5, 1, 1, 10, 1, 2, 2, 20, 1, 5, 1, 1, ...]$
-
-**Alternative representations:**
-$sin^(-1)(sqrt(2)/2) = sd^(-1)(sqrt(2)/2|0) | sin^(-1)(sqrt(2)/2) = sn^(-1)(sqrt(2)/2|0) | sin^(-1)(sqrt(2)/2) = -i sinh^(-1)((i sqrt(2))/2)$
-
-**Series representations:**
-$sin^(-1)(sqrt(2)/2) = sum_(k=0)^∞ (-1)^k/(1 + 2 k) | sin^(-1)(sqrt(2)/2) = sum_(k=0)^∞-((-1)^k 1195^(-1 - 2 k) (5^(1 + 2 k) - 4 239^(1 + 2 k)))/(1 + 2 k) | sin^(-1)(sqrt(2)/2) = 1/4 sum_(k=0)^∞ (-1/4)^k (1/(1 + 2 k) + 2/(1 + 4 k) + 1/(3 + 4 k))$
-
-**Integral representations:**
-$sin^(-1)(sqrt(2)/2) = integral_0^1 sqrt(1 - t^2)dt | sin^(-1)(sqrt(2)/2) = 1/2 integral_0^1 1/sqrt(1 - t^2) dt | sin^(-1)(sqrt(2)/2) = 1/2 integral_0^∞ 1/(1 + t^2) dt$
-
-**Continued fraction representations:**
-$sin^(-1)(sqrt(2)/2) = 1/4 (3 + Κ_(k=1)^∞ (1 - 2 k)^2/6) = 1/4 (3 + 1/(6 + 9/(6 + 25/(6 + 49/(6 + ...))))) | sin^(-1)(sqrt(2)/2) = 1/(1 + Κ_(k=1)^∞ (1 - 2 k)^2/2) = 1/(1 + 1/(2 + 9/(2 + 25/(2 + 49/(2 + ...)))))$
-
-```
-Resolvé paso a paso sin ejercicio adicional (MODO 3):
-\arcsin(\frac{\sqrt{2}}{2})
-Si aplica, graficá usando Desmos o TikZJax.
-```
 
 ---
 
 y'' + 4y = 0
 
-**WolframAlpha:** $y'' + 4y = 0$
-
-**Gráfica:**
-![[Untitled-14-07-2026_22-32-45.png]]
-
-**Input:**
-$y''(x) + 4 y(x) = 0$
-
-**Autonomous equation:**
-$y''(x) = -4 y(x)$
-
-**ODE classification:**
-$second-order linear ordinary differential equation$
-
-**Alternate form:**
-$y''(x) = -4 y(x)$
-
-**Differential equation solution:**
-$y(x) = c_2 sin(2 x) + c_1 cos(2 x)$
-
-**Differential equation series solution about x = 0:**
-$c_1 + c_2 x - 2 c_1 x^2 - (2 c_2 x^3)/3 + (2 c_1 x^4)/3 + (2 c_2 x^5)/15 + O(x^6)
-(converges everywhere)$
-
-**Differential equation series solution about x = ∞:**
-$c_1 e^(-2 i x) + c_2 e^(2 i x)
-(converges everywhere)$
-
-**Differential equation infinite series expansion:**
-$sum_(n=0)^∞ ((2^(-1 + n) (((-i)^n + i^n) c_1 + i ((-i)^n - i^n) c_2)) x^n)/(n!)
-(converges everywhere)$
-
-**Differential equation series solution about x = -∞:**
-$c_1 e^(2 i x) + c_2 e^(-2 i x)
-(converges everywhere)$
-
-**Sample solution family:**
-$  (sampling y(0) and y'(0))$
-
-**Possible Lagrangian:**
-$ℒ(y', y) = 1/2 ((y')^2 - 4 y^2)$
-
-```
-Resolvé paso a paso sin ejercicio adicional (MODO 3):
-y'' + 4y = 0
-Si aplica, graficá usando Desmos o TikZJax.
-```
-
-
-
 
 y' = 2xy
-
-**WolframAlpha:** $y' = 2xy$
-
-**Gráfica:**
-![[ima-17.png]]
-
-**Input:**
-$y'(x) = 2 x y(x)$
-
-**Separable equation:**
-$(y'(x))/(2 y(x)) = x$
-
-**ODE classification:**
-$first-order linear ordinary differential equation$
-
-**Differential equation solution:**
-$y(x) = c_1 e^(x^2)$
-
-**Sample solution family:**
-$  (sampling y(0))$
-
-```
-Resolvé paso a paso sin ejercicio adicional (MODO 3):
-y' = 2xy
-Si aplica, graficá usando Desmos o TikZJax.
-```
-
-
-
-
-
-y'' - y' - 6y = 0
-
-
-**WolframAlpha:** $y'' - y' - 6y = 0$
-
-**Gráfica:**
-![[Untitled-14-07-2026_22-33-07.png]]
-
-**Input:**
-$y''(x) - y'(x) - 6 y(x) = 0$
-
-**ODE names:**
-$y''(x) = 6 y(x) + y'(x) | d/(dx) (e^(-x) y'(x)) - 6 e^(-x) y(x) = 0$
-
-**ODE classification:**
-$second-order linear ordinary differential equation$
-
-**Alternate form:**
-$y'(x) + 6 y(x) = y''(x)$
-
-**Differential equation solution:**
-$y(x) = c_1 e^(-2 x) + c_2 e^(3 x)$
-
-**Differential equation infinite series expansion:**
-$sum_(n=0)^∞ (((-2)^n c_1 + 3^n c_2) x^n)/(n!)
-(converges everywhere)$
-
-**Differential equation series solution about x = -∞:**
-$c_1 e^(3 x) + c_2 e^(-2 x)
-(converges everywhere)$
-
-**Sample solution family:**
-$  (sampling y(0) and y'(0))$
-
-**Possible Lagrangian:**
-$ℒ(y', y, x) = 1/2 (6 e^(-x) y^2 + e^(-x) (y')^2)$
-
-```
-Resolvé paso a paso sin ejercicio adicional (MODO 3):
-y'' - y' - 6y = 0
-Si aplica, graficá usando Desmos o TikZJax.
-```
 
 ---
 
 \lim_{x \to 0} \frac{\sin(x)}{x}
-
-
-**WolframAlpha:** $\lim_{x \to 0} \frac{\sin(x)}{x}$
-
-**Gráfica:**
-![[ima-21.png]]
-
-**Limit:**
-$lim_(x\to 0) \\dfrac{sin(x)}{x} = 1 | lim_(x\to -∞) \\dfrac{sin(x)}{x} = 0 | lim_(x\to ∞) \\dfrac{sin(x)}{x} = 0$
-
-```
-Resolvé paso a paso sin ejercicio adicional (MODO 3):
-\lim_{x \to 0} \frac{\sin(x)}{x}
-Si aplica, graficá usando Desmos o TikZJax.
-```
 
 
 
@@ -1030,6 +1044,15 @@ Si aplica, graficá usando Desmos o TikZJax.
 ```
 A3WL4X56LG
 ```
+
+
+$url = "https://api.wolframalpha.com/v2/query?input=limit+sin(x)%2Fx+as+x->0&appid=A3WL4X56LG&output=json"
+$r = Invoke-WebRequest -Uri $url -UseBasicParsing
+($r.Content | ConvertFrom-Json).queryresult.pods | ForEach-Object { $_.title; $_.subpods[0].plaintext; "---" }
+
+
+
+
 
 
 $expr = "\lim_{x \to 0} \frac{\sin(x)}{x}"
