@@ -75,6 +75,34 @@ DESCRIPTIVE_PHRASES = {
 }
 
 
+
+
+# DESCRIPTIVE_PHRASES = [
+    # "all real numbers",
+    # "all positive real numbers",
+    # "all negative real numbers",
+    # "assuming a complex-valued logarithm",
+    # "assuming the principal value",
+    # "Taylor series",
+    # "Maclaurin series",
+    # "injective",
+    # "surjective",
+    # "bijective",
+    # "one-to-one",
+    # "bijective from its domain to R",
+    # "parabola",
+    # "injective (one-to-one)",
+    # "from its domain to R",
+    # "all non-negative real numbers",
+    # "Puiseux series",
+    # "assuming subintervals of equal length",
+    # "converges",
+    # "no roots exist",
+    # "width",
+    # "height",
+    # "result in radians": "resultado en radianes",
+# ]
+
 expression = sys.argv[1]
 vault_path = sys.argv[2]
 
@@ -82,11 +110,6 @@ vault_path = sys.argv[2]
 def latex_to_wa(expr):
     expr = expr.replace(r'\infty', 'infinity')
     expr = expr.replace(r'\to', '->')
-    # \int_a^b expr dx → integrate expr from a to b
-    expr = re.sub(r'\\int_([^\^\s]+)\^([^\s]+)\s*(.+?)\s*d[a-z]',
-                  lambda m: f'integrate {m.group(3)} from {m.group(1)} to {m.group(2)}', expr)
-    # \int sin límites
-    expr = re.sub(r'\\int\s*', 'integrate ', expr)
     expr = re.sub(r'\\frac\{d\^(\w+)\}\{dx\^\1\}', r'd^\1/dx^\1', expr)
     expr = re.sub(r'\\frac\{d\}\{dx\}', 'd/dx', expr)
     expr = re.sub(r'\\lim_\{([^}]+)\}\s*', r'limit ', expr)
@@ -139,19 +162,22 @@ def format_line(l):
     l = l.strip()
     if not l:
         return None
+    # Extraer frases descriptivas de la línea
     desc_found = []
     l_clean = l
-    for phrase, translation in DESCRIPTIVE_PHRASES.items():
+    for phrase in DESCRIPTIVE_PHRASES:
         pattern = re.compile(re.escape(phrase), re.IGNORECASE)
         if pattern.search(l_clean):
+            # También eliminar paréntesis que envuelven la frase si los hay
             l_clean = re.sub(r'\(?' + re.escape(phrase) + r'\)?', '', l_clean, flags=re.IGNORECASE).strip()
-            desc_found.append(translation)
+            desc_found.append(phrase)
     l_clean = l_clean.strip(' ,|')
     if l_clean:
         result = f"$${l_clean}$$"
         if desc_found:
-            result += " " + ", ".join(f"({t})" for t in desc_found)
+            result += " " + ", ".join(f"({p})" for p in desc_found)
     else:
+        # La línea era solo texto descriptivo
         result = ", ".join(desc_found)
     return result
 

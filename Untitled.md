@@ -3,7 +3,7 @@
 **WolframAlpha:** $\frac{x^2 - 4}{x - 2}$
 
 **Gráfica:**
-![[Untitled-15-07-2026_18-36-39.png]]
+![[Untitled-15-07-2026_19-14-33.png]]
 
 **Input:**
 $$(x^2 - 4)/(x - 2)$$
@@ -26,57 +26,7 @@ $$x = -2$$
 **Properties as a real function:**
 $$\{x \in \mathbb{R} : x\neq 2\}$$
 $$\{y \in \mathbb{R} : y\neq 4\}$$
-$$injective (one-to-one)$$
-
-**Derivative:**
-$$d/dx((x^2 - 4)/(x - 2)) = 1$$
-
-**Indefinite integral:**
-$$\int(x^2 - 4)/(x - 2) dx = 1/2 x (x + 4) + C$$
-
-**Series representations:**
-$$(-4 + x^2)/(-2 + x) = \sum_{n=-∞}^∞ (  | 1 | n = 1$$
-$$2 | n = 0) x^n$$
-$$(-4 + x^2)/(-2 + x) = \sum_{n=-∞}^∞ (  | 1 | n = 1$$
-$$4 | n = 0) (-2 + x)^n$$
-$$(-4 + x^2)/(-2 + x) = \sum_{n=-∞}^∞ (  | 1 | n = 1$$
-$$3 | n = 0) (-1 + x)^n$$
-
-```
-Resolvé paso a paso sin ejercicio adicional (MODO 3):
-\frac{x^2 - 4}{x - 2}
-Si aplica, graficá usando Desmos o TikZJax.
-```
-
-
-
-**WolframAlpha:** $\frac{x^2 - 4}{x - 2}$
-
-**Gráfica:**
-![[Untitled-15-07-2026_18-31-15.png]]
-
-**Input:**
-$$(x^2 - 4)/(x - 2)$$
-
-**Result:**
-$$2 + x (\text{for} x\neq 2)$$
-
-**Expanded form:**
-$$x^2/(x - 2) - 4/(x - 2)$$
-
-**Alternate form:**
-$$x + 2 (\text{for} x\neq 2)$$
-
-**Quotient and remainder:**
-$$x^2 - 4 = (x + 2)(x - 2) + 0$$
-
-**Root:**
-$$x = -2$$
-
-**Properties as a real function:**
-$$\{x \in \mathbb{R} : x\neq 2\}$$
-$$\{y \in \mathbb{R} : y\neq 4\}$$
-injective (one-to-one)
+inyectiva, uno a uno
 
 **Derivative:**
 $$d/dx((x^2 - 4)/(x - 2)) = 1$$
@@ -106,13 +56,10 @@ Si aplica, graficá usando Desmos o TikZJax.
 x^3 - 8
 
 
-
-
-
 **WolframAlpha:** $x^3 - 8$
 
 **Gráfica:**
-![[Untitled-15-07-2026_18-31-41.png]]
+![[ima-29.png]]
 
 **Input:**
 $$x^3 - 8$$
@@ -132,9 +79,9 @@ $$x = -1 + i \sqrt{3}$$
 $$Δ = -1728$$
 
 **Properties as a real function:**
-$$R (all real numbers)$$
-$$R (all real numbers)$$
-bijective from its domain to R
+$$R$$ (todos los números reales)
+$$R$$ (todos los números reales)
+biyectiva, de su dominio a R
 
 **Derivative:**
 $$d/dx(x^3 - 8) = 3 x^2$$
@@ -150,15 +97,135 @@ Si aplica, graficá usando Desmos o TikZJax.
 
 
 
+
+
 (x+2)^4
 
 
+**WolframAlpha:** $(x+2)^4$
+
+**Gráfica:**
+![[Untitled-15-07-2026_19-15-04.png]]
+
+**Input:**
+$$(x + 2)^4$$
+
+**Expanded form:**
+$$x^4 + 8 x^3 + 24 x^2 + 32 x + 16$$
+
+**Alternate forms:**
+$$x (x (x (x + 8) + 24) + 32) + 16$$
+$$(x^2 + 4 x)^2 + 8 (x^2 + 4 x) + 16$$
+
+**Root:**
+$$x = -2$$
+
+**Polynomial discriminant:**
+$$Δ = 0$$
+
+**Properties as a real function:**
+$$R$$ (todos los números reales)
+$$\{y \in \mathbb{R} : y\geq 0\}$$ (todos los reales no negativos)
+
+**Derivative:**
+$$d/dx((x + 2)^4) = 4 (x + 2)^3$$
+
+**Indefinite integral:**
+$$\int(x + 2)^4 dx = 1/5 (x + 2)^5 + C$$
+
+**Global minimum:**
+$$min{(x + 2)^4} = 0 at x = -2$$
+
+```
+Resolvé paso a paso sin ejercicio adicional (MODO 3):
+(x+2)^4
+Si aplica, graficá usando Desmos o TikZJax.
+```
+
+
+
+
+
+
 \sqrt[3]{27x^6}
+
+
+**WolframAlpha:** $\sqrt[3]{27x^6}$
+
+**Gráfica:**
+![[ima-30.png]]
+
+**Input:**
+$$(27 x^6)^{1/3}$$
+
+**Result:**
+$$3 (x^6)^{1/3}$$
+
+**Alternate form assuming x is real:**
+$$3 x^2$$
+
+**Root:**
+$$x = 0$$
+
+**Properties as a real function:**
+$$R$$ (todos los números reales)
+$$\{y \in \mathbb{R} : y\geq 0\}$$ (todos los reales no negativos)
+$$even$$
+
+**Series expansion at x = 0:**
+$$(3 (x^6)^{1/3} x^2)/x^2 + O(x^13)$$
+serie de Puiseux
+
+**Series expansion at x = ∞:**
+$$3 x^2 + O((1/x)^13)$$
+serie de Taylor
+
+**Derivative:**
+$$d/dx((27 x^6)^{1/3}) = (6 x^5)/(x^6)^{2/3}$$
+
+**Indefinite integral:**
+$$\int3 (x^6)^{1/3} dx = x (x^6)^{1/3} + C$$
+
+**Global minimum:**
+$$min{(27 x^6)^{1/3}} = 0 at x = 0$$
+
+**Series representation:**
+$$3 (x^6)^{1/3} = \sum_{n=0}^∞ (-1 + x)^n 3 (n)$$
+
+**Integral representation:**
+$$(1 + z)^a = ( \int_{-i ∞ + γ}^{i ∞ + γ} (Γ(s) Γ(-a - s))/z^s ds)/((2 π i) Γ(-a)) \text{for} (0<γ<-Re(a) and abs(arg(z))<π)$$
+
+```
+Resolvé paso a paso sin ejercicio adicional (MODO 3):
+\sqrt[3]{27x^6}
+Si aplica, graficá usando Desmos o TikZJax.
+```
+
+
+
+
+
+
+
 
 \int_0^\infty e^{-x^2} dx
 
 
 
+**WolframAlpha:** $\int_0^\infty e^{-x^2} dx$
+
+**Definite integral:**
+$$\int_0^∞ e^{-x^2} dx = \sqrt{π}/2≈0.8862$$
+
+**Indefinite integral:**
+$$\int e^{-x^2} dx = 1/2 \sqrt{π} erf(x) + C$$
+
+```
+Resolvé paso a paso sin ejercicio adicional (MODO 3):
+\int_0^\infty e^{-x^2} dx
+Si aplica, graficá usando Desmos o TikZJax.
+```
+
 
 
 
@@ -166,11 +233,56 @@ Si aplica, graficá usando Desmos o TikZJax.
 
 
 
+x^2 - 4
 
 
-[ERROR] Wolfram Alpha no pudo interpretar la expresión.
+**WolframAlpha:** $x^2 - 4$
 
-[ERROR] Wolfram Alpha no pudo interpretar la expresión.
+**Gráfica:**
+![[Untitled-15-07-2026_19-15-46.png]]
+
+**Input:**
+$$x^2 - 4$$
+
+**Geometric figure:**
+parábola
+
+**Alternate form:**
+$$(x - 2) (x + 2)$$
+
+**Roots:**
+$$x = -2$$
+$$x = 2$$
+
+**Polynomial discriminant:**
+$$Δ = 16$$
+
+**Properties as a real function:**
+$$R$$ (todos los números reales)
+$$\{y \in \mathbb{R} : y\geq -4\}$$
+$$even$$
+
+**Derivative:**
+$$d/dx(x^2 - 4) = 2 x$$
+
+**Indefinite integral:**
+$$\int(x^2 - 4) dx = x^3/3 - 4 x + C$$
+
+**Global minimum:**
+$$min{x^2 - 4} = -4 at x = 0$$
+
+**Definite integral:**
+$$\int_{-2}^2 (-4 + x^2) dx = -32/3≈-10.6667$$
+
+**Definite integral area below the axis between the smallest and largest real roots:**
+$$\int_{-2}^2 (-4 + x^2) θ(4 - x^2) dx = -32/3≈-10.6667$$
+
+```
+Resolvé paso a paso sin ejercicio adicional (MODO 3):
+x^2 - 4
+Si aplica, graficá usando Desmos o TikZJax.
+```
+
 
 
 
@@ -196,23 +308,6 @@ x^3 - 6x^2 + 11x - 6 = 0
 \lim_{x \to 0} \frac{\sin(x)}{x}
 
 
-**WolframAlpha:** $\lim_{x \to 0} \frac{\sin(x)}{x}$
-
-**Gráfica:**
-![[Untitled-15-07-2026_18-33-41.png]]
-
-**Limit:**
-$$\lim_{x\to 0} \sin(x)/x = 1$$
-$$\lim_{x\to -∞} \sin(x)/x = 0$$
-$$\lim_{x\to ∞} \sin(x)/x = 0$$
-
-```
-Resolvé paso a paso sin ejercicio adicional (MODO 3):
-\lim_{x \to 0} \frac{\sin(x)}{x}
-Si aplica, graficá usando Desmos o TikZJax.
-```
-
-
 
 
 
@@ -224,57 +319,10 @@ Si aplica, graficá usando Desmos o TikZJax.
 \lim_{x \to \infty} \frac{x^2 + 1}{x^2 - 1}
 
 
-**WolframAlpha:** $\lim_{x \to \infty} \frac{x^2 + 1}{x^2 - 1}$
-
-**Gráfica:**
-![[ima-25.png]]
-
-**Limit input:**
-$$\lim_{x\to -1} (x^2 + 1)/(x^2 - 1)$$
-$$\lim_{x\to 1} (x^2 + 1)/(x^2 - 1)$$
-
-**Limit:**
-$$\lim_{x\to 0} (x^2 + 1)/(x^2 - 1) = -1$$
-$$\lim_{x\to -∞} (x^2 + 1)/(x^2 - 1) = 1$$
-$$\lim_{x\to ∞} (x^2 + 1)/(x^2 - 1) = 1$$
-
-**One-sided limits:**
-$$\lim_{x\to -1}^- (x^2 + 1)/(x^2 - 1) = ∞$$
-$$\lim_{x\to (-1}^+) (x^2 + 1)/(x^2 - 1) = -∞$$
-$$\lim_{x\to 1^-} (x^2 + 1)/(x^2 - 1) = -∞$$
-$$\lim_{x\to 1^+} (x^2 + 1)/(x^2 - 1) = ∞$$
-
-```
-Resolvé paso a paso sin ejercicio adicional (MODO 3):
-\lim_{x \to \infty} \frac{x^2 + 1}{x^2 - 1}
-Si aplica, graficá usando Desmos o TikZJax.
-```
-
-
-
 
 
 
 \lim_{x \to 2} \frac{x^2 - 4}{x - 2}
-
-
-**WolframAlpha:** $\lim_{x \to 2} \frac{x^2 - 4}{x - 2}$
-
-**Gráfica:**
-![[Untitled-15-07-2026_18-34-31.png]]
-
-**Limit:**
-$$\lim_{x\to 0} (x^2 - 4)/(x - 2) = 2$$
-$$\lim_{x\to 2} (x^2 - 4)/(x - 2) = 4$$
-$$\lim_{x\to -∞} (x^2 - 4)/(x - 2) = -∞$$
-$$\lim_{x\to ∞} (x^2 - 4)/(x - 2) = ∞$$
-
-```
-Resolvé paso a paso sin ejercicio adicional (MODO 3):
-\lim_{x \to 2} \frac{x^2 - 4}{x - 2}
-Si aplica, graficá usando Desmos o TikZJax.
-```
-
 
 
 
@@ -284,40 +332,6 @@ Si aplica, graficá usando Desmos o TikZJax.
 
 \frac{d}{dx} x^3 \cdot \ln(x)
 
-
-**WolframAlpha:** $\frac{d}{dx} x^3 \cdot \ln(x)$
-
-**Gráfica:**
-![[ima-26.png]]
-
-**Derivative:**
-$$d/dx(x^3 \log(x)) = x^2 (3 \log(x) + 1)$$
-
-**Expanded form:**
-$$x^2 + 3 x^2 \log(x)$$
-
-**Root:**
-$$x = 1/e^{1/3}$$
-
-**Properties as a real function:**
-$$\{x \in \mathbb{R} : x>0\} (all positive real numbers)$$
-$$\{y \in \mathbb{R} : y\geq -3/(2 e^{5/3})\}$$
-
-**Indefinite integral:**
-$$\int x^2 (1 + 3 \log(x)) dx = x^3 \log(x) + C$$
-$$(assuming a complex-valued logarithm)$$
-
-**Global minimum:**
-$$min{x^2 (3 \log(x) + 1)} = -3/(2 e^{5/3}) at x = 1/e^{5/6}$$
-
-**Definite integral:**
-$$\int_0^1 x^2 (1 + 3 \log(x)) dx = 0$$
-
-```
-Resolvé paso a paso sin ejercicio adicional (MODO 3):
-\frac{d}{dx} x^3 \cdot \ln(x)
-Si aplica, graficá usando Desmos o TikZJax.
-```
 
 
 
@@ -332,19 +346,7 @@ Si aplica, graficá usando Desmos o TikZJax.
 
 
 
-
-
-
-
-
-
-
-
-
-
 \frac{d^2}{dx^2} e^{x^2}
-
-
 
 
 
@@ -352,6 +354,11 @@ Si aplica, graficá usando Desmos o TikZJax.
 ---
 
 \int_0^{\pi} \sin(x) dx
+
+
+
+
+
 
 
 
@@ -367,13 +374,7 @@ $$\int \frac{1}{x^3 + x^2+1} dx$$
 
 
 
-
 $$\int_{-\infty}^0 e^x x^2 dx$$
-
-
-
-
-
 
 
 
@@ -388,7 +389,6 @@ $$\int_{-\infty}^0 e^x x^2 dx$$
 \sum_{n=0}^{5} 2^n
 
 
-\prod_{n=1}^{4} n
 
 ---
 
@@ -399,7 +399,22 @@ $$\int_{-\infty}^0 e^x x^2 dx$$
 \tan(\frac{\pi}{4})
 
 
+
+
+
+
+
 \arcsin(\frac{\sqrt{2}}{2})
+
+
+
+
+
+
+
+
+
+
 
 
 ---
@@ -423,6 +438,26 @@ y' = 2xy
 ```
 A3WL4X56LG
 ```
+
+$url = "https://api.wolframalpha.com/v2/query?input=integrate+e^(-x^2)+from+0+to+infinity&appid=A3WL4X56LG&output=json"
+$r = Invoke-WebRequest -Uri $url -UseBasicParsing
+($r.Content | ConvertFrom-Json).queryresult | Select-Object success, error
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 $url = "https://api.wolframalpha.com/v2/query?input=x^2-4&appid=A3WL4X56LG&output=json&formats=plaintext,latex"
