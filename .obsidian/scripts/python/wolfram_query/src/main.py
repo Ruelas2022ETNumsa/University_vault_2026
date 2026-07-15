@@ -1,10 +1,31 @@
 # fecha: 13-july-2026
-# v4 — consulta Wolfram Alpha Full API con una expresión seleccionada.
-# Extrae dinámicamente todos los pods disponibles en texto y descarga PNG del pod Plot.
-# Pods excluidos por título: "Input interpretation", "Image".
-# Traductor plaintext WA → LaTeX (Cálculo 1).
-# Guarda imagen en _assets/ima-N.png (sin sobreescritura).
-# Inserta en stdout el bloque markdown para Shell Commands → nota activa.
+# v11 — consulta Wolfram Alpha Full API con una expresión seleccionada.
+#
+# ESTADO ACTUAL (v11):
+# ✔ Extrae dinámicamente todos los pods que devuelve WA (sin lista fija)
+# ✔ Pods excluidos por título: "Input interpretation", "Image"
+# ✔ Descarga PNG del primer pod Plot y lo guarda en _assets/ima-N.png
+# ✔ Numeración automática ima-1, ima-2... sin sobreescritura
+# ✔ Preprocesador LaTeX→WA: convierte \lim, \frac, \infty, \to antes de mandar a la API
+#   (la API no acepta esos comandos directamente aunque la web sí los entiende)
+# ✔ Traductor plaintext WA→LaTeX en el output:
+#   - Símbolos: != → \neq, -> → \to, infinity → \infty, pi → \pi
+#   - Funciones: sin/cos/tan/ln/log → \sin/\cos/\tan/\ln/\log, sqrt() → \sqrt{}
+#   - integral → \int (WA devuelve formato integral_0^inf etc, se respeta el resto)
+#   - constant → C
+#   - Conjuntos: element R → \in \mathbb{R}
+# ✘ PENDIENTE: limites en output (lim_(x->0) no se convierte a \lim_{x \to 0})
+# ✘ PENDIENTE: fracciones en texto plano por decisión (a/b no se convierte a \dfrac)
+#   el usuario corrige manualmente si necesita LaTeX para fracciones
+#
+# NOTAS IMPORTANTES:
+# - El backslash en re.sub replacement: usar r'\comando' (1 backslash en raw string)
+#   NO usar r'\\comando' (produce doble backslash en el output)
+#   Excepción: cuando se necesita backslash literal en el output usar '\\\\'
+# - safe='\\{}^_' en urllib.parse.quote para no codificar caracteres LaTeX
+# - expression_display guarda el LaTeX original para mostrarlo en la nota
+#   expression es la versión convertida que se manda a WA
+#
 # Args: argv[1] expression · argv[2] vault_path
 
 import sys
@@ -58,10 +79,7 @@ def plaintext_to_latex(text):
     text = re.sub(r'\bln\b',  r'\\ln',  text)
     text = re.sub(r'\blog\b', r'\\log', text)
     # Cálculo
-    text = re.sub(
-        r'integral\(([^)]+)\)\s*d([a-z])',
-        r'\\int \1 \\, d\2', text
-    )
+    text = re.sub(r'integral', r'\\int', text)
     text = re.sub(
         r'limit\s+(.+?)\s+as\s+([a-z])\s*->\s*([^\s|]+)',
         r'\\lim_{\2 \\to \3} \1', text
