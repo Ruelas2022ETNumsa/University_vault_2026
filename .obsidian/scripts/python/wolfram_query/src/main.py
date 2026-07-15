@@ -6,20 +6,22 @@
 # ✔ Pods excluidos por título: "Input interpretation", "Image"
 # ✔ Descarga PNG del primer pod Plot y lo guarda en _assets/ima-N.png
 # ✔ Numeración automática ima-1, ima-2... sin sobreescritura
-# ✔ Preprocesador LaTeX→WA: convierte \lim, \frac, \infty, \to antes de mandar a la API
+# ✔ Preprocesador LaTeX→WA: convierte \lim, \frac, \infty, \to, \int antes de mandar a la API
 #   (la API no acepta esos comandos directamente aunque la web sí los entiende)
+#   - \int_a^b expr dx → integrate expr from a to b
+#   - \int sin límites → integrate
 # ✔ Traductor plaintext WA→LaTeX en el output:
 #   - Símbolos: != → \neq, -> → \to, infinity → \infty, pi → \pi
 #   - Funciones: sin/cos/tan/ln/log → \sin/\cos/\tan/\ln/\log, sqrt() → \sqrt{}
-#   - integral → \int, sum_ → \sum_
+#   - integral → \int, sum_ → \sum_, product_ → \prod_
 #   - lim_(x->a) → \lim_{x->a} (resuelto)
 #   - _(x) → _{x} y ^(x) → ^{x} general (integrales, sumas, límites)
 #   - constant → C, \piecewise eliminado, for → \text{for}
 #   - Conjuntos: element R → \in \mathbb{R}
 #   - Cada línea del pod en su propio bloque $$
-#   - Fracciones a/b en texto plano (decisión: se ven aceptable, el usuario corrige si necesita)
-# ✔ Frases descriptivas de WA extraídas fuera del $$ via lista fija (DESCRIPTIVE_PHRASES)
-#   Agregar nuevas frases a esa lista cuando aparezcan casos nuevos
+#   - Fracciones a/b en texto plano (decisión: aceptable, el usuario corrige si necesita)
+# ✔ Frases descriptivas de WA traducidas al español y extraídas fuera del $$
+#   via diccionario DESCRIPTIVE_PHRASES — agregar nuevas entradas según aparezcan
 #
 # NOTAS IMPORTANTES:
 # - El backslash en re.sub replacement: usar r'\comando' (1 backslash en raw string)
@@ -28,6 +30,12 @@
 # - safe='\\{}^_' en urllib.parse.quote para no codificar caracteres LaTeX
 # - expression_display guarda el LaTeX original para mostrarlo en la nota
 #   expression es la versión convertida que se manda a WA
+#
+# PENDIENTES:
+# - Traducir el titulo de los pods
+# - Ver si hay mas graficas y extraer todas las graficas png
+#
+#
 #
 # Args: argv[1] expression · argv[2] vault_path
 
@@ -49,12 +57,17 @@ PODS_EXCLUDE_TITLES = {"Input interpretation", "Image"}
 # Frases descriptivas de WA que deben ir fuera del $$ — agregar según aparezcan
 
 DESCRIPTIVE_PHRASES = {
+# pods
+"**Input:**":"**Ecuación:**",# no traduce los titulos de los pods
+"**Result:**":"**Resultado:**",
+# En comentarios
     "all real numbers": "todos los números reales",
-    "all positive real numbers": "todos los reales positivos",
-    "all negative real numbers": "todos los reales negativos",
-    "all non-negative real numbers": "todos los reales no negativos",
-    "assuming a complex-valued logarithm": "asumiendo logaritmo de valor complejo",
+    "all positive real numbers": "todos los números reales positivos",
+    "all negative real numbers": "todos los números reales negativos",
+    "all non-negative real numbers": "todos los números reales no negativos",
+    "assuming a complex-valued logarithm": "asumiendo un logaritmo de valor complejo",
     "assuming the principal value": "asumiendo el valor principal",
+    "assuming subintervals of equal length": "asumiendo subintervalos de igual longitud",
     "assuming subintervals of equal length": "asumiendo subintervalos de igual longitud",
     "Taylor series": "serie de Taylor",
     "Maclaurin series": "serie de Maclaurin",
@@ -72,6 +85,43 @@ DESCRIPTIVE_PHRASES = {
     "width": "ancho",
     "height": "alto",
     "result in radians": "resultado en radianes",
+    "even": "par",
+    "odd": "impar",
+    "increasing": "creciente",
+    "decreasing": "decreciente",
+    "strictly increasing": "estrictamente creciente",
+    "strictly decreasing": "estrictamente decreciente",
+    "continuous": "continua",
+    "discontinuous": "discontinua",
+    "differentiable": "derivable",
+    "integrable": "integrable",
+    "periodic": "periódica",
+    "bounded": "acotada",
+    "unbounded": "no acotada",
+    "concave up": "cóncava hacia arriba",
+    "concave down": "cóncava hacia abajo",
+    "inflection point": "punto de inflexión",
+    "local maximum": "máximo local",
+    "local minimum": "mínimo local",
+    "global maximum": "máximo absoluto",
+    "global minimum": "mínimo absoluto",
+    "domain": "dominio",
+    "range": "recorrido",
+    "codomain": "codominio",
+    "root": "raíz",
+    "roots": "raíces",
+    "vertex": "vértice",
+    "intercept": "intersección",
+    "x-intercept": "intersección con el eje x",
+    "y-intercept": "intersección con el eje y",
+    "slope": "pendiente",
+    "asymptote": "asíntota",
+    "vertical asymptote": "asíntota vertical",
+    "horizontal asymptote": "asíntota horizontal",
+    "oblique asymptote": "asíntota oblicua",
+    "first-order linear ordinary differential equation": "ecuación diferencial ordinaria lineal de primer orden",
+    "sampling": "muestreo",
+    "is a transcendental number": "es un número trascendental",
 }
 
 
@@ -119,9 +169,12 @@ def plaintext_to_latex(text):
     text = re.sub(r'integral', r'\\int', text)
     text = re.sub(r'sum_', r'\\sum_', text)
     text = re.sub(r'product_', r'\\prod_', text)
+    text = re.sub(r'min{', r'\\min{', text)
+    text = re.sub(r'max{', r'\\max{', text)
     text = re.sub(r'\\piecewise', '', text)
-    text = re.sub(r'\bfor\b', r'\\text{for}', text)
-    # lim_(x->a) → \lim_{x->a} (formato que devuelve WA en output)
+    text = re.sub(r'\bfor \b', r'\\text{ para }', text)
+    text = re.sub(r'\bat \b', r'\\text{ en }', text)#yo
+        # lim_(x->a) → \lim_{x->a} (formato que devuelve WA en output)
     text = re.sub(r'lim_\(([^)]+)\)', lambda m: r'\lim_{' + m.group(1) + '}', text)
     # _(x) → _{x} y ^(x) → ^{x} general (integrales, sumas, etc.)
     text = re.sub(r'_\(([^)]+)\)', lambda m: '_{' + m.group(1) + '}', text)
