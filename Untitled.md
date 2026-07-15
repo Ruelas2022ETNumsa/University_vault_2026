@@ -1,10 +1,9 @@
-\frac{x^2 - 4}{x - 2}
-
+- $$\frac{x^2 - 4}{x - 2}$$
 
 **WolframAlpha:** $\frac{x^2 - 4}{x - 2}$
 
 **Gráfica:**
-![[Untitled-15-07-2026_18-11-46.png]]
+![[Untitled-15-07-2026_18-36-39.png]]
 
 **Input:**
 $$(x^2 - 4)/(x - 2)$$
@@ -36,11 +35,61 @@ $$d/dx((x^2 - 4)/(x - 2)) = 1$$
 $$\int(x^2 - 4)/(x - 2) dx = 1/2 x (x + 4) + C$$
 
 **Series representations:**
-$$(-4 + x^2)/(-2 + x) = \sum_(n=-∞)^∞ (  | 1 | n = 1$$
+$$(-4 + x^2)/(-2 + x) = \sum_{n=-∞}^∞ (  | 1 | n = 1$$
 $$2 | n = 0) x^n$$
-$$(-4 + x^2)/(-2 + x) = \sum_(n=-∞)^∞ (  | 1 | n = 1$$
+$$(-4 + x^2)/(-2 + x) = \sum_{n=-∞}^∞ (  | 1 | n = 1$$
 $$4 | n = 0) (-2 + x)^n$$
-$$(-4 + x^2)/(-2 + x) = \sum_(n=-∞)^∞ (  | 1 | n = 1$$
+$$(-4 + x^2)/(-2 + x) = \sum_{n=-∞}^∞ (  | 1 | n = 1$$
+$$3 | n = 0) (-1 + x)^n$$
+
+```
+Resolvé paso a paso sin ejercicio adicional (MODO 3):
+\frac{x^2 - 4}{x - 2}
+Si aplica, graficá usando Desmos o TikZJax.
+```
+
+
+
+**WolframAlpha:** $\frac{x^2 - 4}{x - 2}$
+
+**Gráfica:**
+![[Untitled-15-07-2026_18-31-15.png]]
+
+**Input:**
+$$(x^2 - 4)/(x - 2)$$
+
+**Result:**
+$$2 + x (\text{for} x\neq 2)$$
+
+**Expanded form:**
+$$x^2/(x - 2) - 4/(x - 2)$$
+
+**Alternate form:**
+$$x + 2 (\text{for} x\neq 2)$$
+
+**Quotient and remainder:**
+$$x^2 - 4 = (x + 2)(x - 2) + 0$$
+
+**Root:**
+$$x = -2$$
+
+**Properties as a real function:**
+$$\{x \in \mathbb{R} : x\neq 2\}$$
+$$\{y \in \mathbb{R} : y\neq 4\}$$
+injective (one-to-one)
+
+**Derivative:**
+$$d/dx((x^2 - 4)/(x - 2)) = 1$$
+
+**Indefinite integral:**
+$$\int(x^2 - 4)/(x - 2) dx = 1/2 x (x + 4) + C$$
+
+**Series representations:**
+$$(-4 + x^2)/(-2 + x) = \sum_{n=-∞}^∞ (  | 1 | n = 1$$
+$$2 | n = 0) x^n$$
+$$(-4 + x^2)/(-2 + x) = \sum_{n=-∞}^∞ (  | 1 | n = 1$$
+$$4 | n = 0) (-2 + x)^n$$
+$$(-4 + x^2)/(-2 + x) = \sum_{n=-∞}^∞ (  | 1 | n = 1$$
 $$3 | n = 0) (-1 + x)^n$$
 
 ```
@@ -52,13 +101,78 @@ Si aplica, graficá usando Desmos o TikZJax.
 
 
 
+
+
 x^3 - 8
+
+
+
+
+
+**WolframAlpha:** $x^3 - 8$
+
+**Gráfica:**
+![[Untitled-15-07-2026_18-31-41.png]]
+
+**Input:**
+$$x^3 - 8$$
+
+**Alternate forms:**
+$$(x - 2) (x^2 + 2 x + 4)$$
+$$-((-x + 2 (-1)^{1/3} - 2) (x - 2) (x + 2 (-1)^{1/3}))$$
+
+**Real root:**
+$$x = 2$$
+
+**Complex roots:**
+$$x = -1 - i \sqrt{3}$$
+$$x = -1 + i \sqrt{3}$$
+
+**Polynomial discriminant:**
+$$Δ = -1728$$
+
+**Properties as a real function:**
+$$R (all real numbers)$$
+$$R (all real numbers)$$
+bijective from its domain to R
+
+**Derivative:**
+$$d/dx(x^3 - 8) = 3 x^2$$
+
+**Indefinite integral:**
+$$\int(x^3 - 8) dx = x^4/4 - 8 x + C$$
+
+```
+Resolvé paso a paso sin ejercicio adicional (MODO 3):
+x^3 - 8
+Si aplica, graficá usando Desmos o TikZJax.
+```
+
 
 
 (x+2)^4
 
 
 \sqrt[3]{27x^6}
+
+\int_0^\infty e^{-x^2} dx
+
+
+
+
+
+
+[ERROR] Wolfram Alpha no pudo interpretar la expresión.
+
+
+
+
+
+[ERROR] Wolfram Alpha no pudo interpretar la expresión.
+
+[ERROR] Wolfram Alpha no pudo interpretar la expresión.
+
+
 
 
 ---
@@ -82,11 +196,10 @@ x^3 - 6x^2 + 11x - 6 = 0
 \lim_{x \to 0} \frac{\sin(x)}{x}
 
 
-
 **WolframAlpha:** $\lim_{x \to 0} \frac{\sin(x)}{x}$
 
 **Gráfica:**
-![[Untitled-15-07-2026_18-15-27.png]]
+![[Untitled-15-07-2026_18-33-41.png]]
 
 **Limit:**
 $$\lim_{x\to 0} \sin(x)/x = 1$$
@@ -114,7 +227,7 @@ Si aplica, graficá usando Desmos o TikZJax.
 **WolframAlpha:** $\lim_{x \to \infty} \frac{x^2 + 1}{x^2 - 1}$
 
 **Gráfica:**
-![[ima-23.png]]
+![[ima-25.png]]
 
 **Limit input:**
 $$\lim_{x\to -1} (x^2 + 1)/(x^2 - 1)$$
@@ -126,7 +239,7 @@ $$\lim_{x\to -∞} (x^2 + 1)/(x^2 - 1) = 1$$
 $$\lim_{x\to ∞} (x^2 + 1)/(x^2 - 1) = 1$$
 
 **One-sided limits:**
-$$\lim_{x\to (-1}^-) (x^2 + 1)/(x^2 - 1) = ∞$$
+$$\lim_{x\to -1}^- (x^2 + 1)/(x^2 - 1) = ∞$$
 $$\lim_{x\to (-1}^+) (x^2 + 1)/(x^2 - 1) = -∞$$
 $$\lim_{x\to 1^-} (x^2 + 1)/(x^2 - 1) = -∞$$
 $$\lim_{x\to 1^+} (x^2 + 1)/(x^2 - 1) = ∞$$
@@ -145,6 +258,24 @@ Si aplica, graficá usando Desmos o TikZJax.
 \lim_{x \to 2} \frac{x^2 - 4}{x - 2}
 
 
+**WolframAlpha:** $\lim_{x \to 2} \frac{x^2 - 4}{x - 2}$
+
+**Gráfica:**
+![[Untitled-15-07-2026_18-34-31.png]]
+
+**Limit:**
+$$\lim_{x\to 0} (x^2 - 4)/(x - 2) = 2$$
+$$\lim_{x\to 2} (x^2 - 4)/(x - 2) = 4$$
+$$\lim_{x\to -∞} (x^2 - 4)/(x - 2) = -∞$$
+$$\lim_{x\to ∞} (x^2 - 4)/(x - 2) = ∞$$
+
+```
+Resolvé paso a paso sin ejercicio adicional (MODO 3):
+\lim_{x \to 2} \frac{x^2 - 4}{x - 2}
+Si aplica, graficá usando Desmos o TikZJax.
+```
+
+
 
 
 
@@ -152,6 +283,45 @@ Si aplica, graficá usando Desmos o TikZJax.
 ---
 
 \frac{d}{dx} x^3 \cdot \ln(x)
+
+
+**WolframAlpha:** $\frac{d}{dx} x^3 \cdot \ln(x)$
+
+**Gráfica:**
+![[ima-26.png]]
+
+**Derivative:**
+$$d/dx(x^3 \log(x)) = x^2 (3 \log(x) + 1)$$
+
+**Expanded form:**
+$$x^2 + 3 x^2 \log(x)$$
+
+**Root:**
+$$x = 1/e^{1/3}$$
+
+**Properties as a real function:**
+$$\{x \in \mathbb{R} : x>0\} (all positive real numbers)$$
+$$\{y \in \mathbb{R} : y\geq -3/(2 e^{5/3})\}$$
+
+**Indefinite integral:**
+$$\int x^2 (1 + 3 \log(x)) dx = x^3 \log(x) + C$$
+$$(assuming a complex-valued logarithm)$$
+
+**Global minimum:**
+$$min{x^2 (3 \log(x) + 1)} = -3/(2 e^{5/3}) at x = 1/e^{5/6}$$
+
+**Definite integral:**
+$$\int_0^1 x^2 (1 + 3 \log(x)) dx = 0$$
+
+```
+Resolvé paso a paso sin ejercicio adicional (MODO 3):
+\frac{d}{dx} x^3 \cdot \ln(x)
+Si aplica, graficá usando Desmos o TikZJax.
+```
+
+
+
+
 
 
 
@@ -185,68 +355,26 @@ Si aplica, graficá usando Desmos o TikZJax.
 
 
 
-**WolframAlpha:** $\int_0^{\pi} \sin(x) dx$
-
-**Definite integral:**
-$$\int_0^π \sin(x) dx = 2$$
-
-**Riemann sums:**
-$$left sum | (π cot(π/(2 n)))/n = 2 - π^2/(6 n^2) + O((1/n)^4)$$
-$$(assuming subintervals of equal length)$$
-
-**Indefinite integral:**
-$$\int \sin(x) dx = -\cos(x) + C$$
-
-```
-Resolvé paso a paso sin ejercicio adicional (MODO 3):
-\int_0^{\pi} \sin(x) dx
-Si aplica, graficá usando Desmos o TikZJax.
-```
-
-
-
-
-
 
 
 \int x^2 e^x dx
 
 
-**WolframAlpha:** $\int x^2 e^x dx$
 
-**Gráfica:**
-![[Untitled-15-07-2026_18-16-32.png]]
-
-**Indefinite integral:**
-$$\int x^2 e^x dx = e^x (x^2 - 2 x + 2) + C$$
-
-**Alternate forms of the integral:**
-$$e^x x^2 - 2 e^x x + 2 e^x$$
-$$e^x ((x - 2) x + 2) + C$$
-
-**Expanded form of the integral:**
-$$e^x x^2 - 2 e^x x + 2 e^x + C$$
-
-**Series expansion of the integral at x = 0:**
-$$2 + x^3/3 + x^4/4 + O(x^5)$$
-$$(Taylor series)$$
-
-**Definite integral:**
-$$\int_(-∞)^0 e^x x^2 dx = 2$$
-
-```
-Resolvé paso a paso sin ejercicio adicional (MODO 3):
-\int x^2 e^x dx
-Si aplica, graficá usando Desmos o TikZJax.
-```
+$$\int \frac{1}{x^3 + x^2+1} dx$$
 
 
 
 
 
 
+$$\int_{-\infty}^0 e^x x^2 dx$$
 
-\int \frac{1}{x^2 + 1} dx
+
+
+
+
+
 
 
 
@@ -295,6 +423,12 @@ y' = 2xy
 ```
 A3WL4X56LG
 ```
+
+
+$url = "https://api.wolframalpha.com/v2/query?input=x^2-4&appid=A3WL4X56LG&output=json&formats=plaintext,latex"
+$r = Invoke-WebRequest -Uri $url -UseBasicParsing
+($r.Content | ConvertFrom-Json).queryresult.pods | ForEach-Object { $_.title; $_.subpods[0].plaintext; $_.subpods[0].latex; "---" }
+
 
 
 $url = "https://api.wolframalpha.com/v2/query?input=limit+sin(x)%2Fx+as+x->0&appid=A3WL4X56LG&output=json"

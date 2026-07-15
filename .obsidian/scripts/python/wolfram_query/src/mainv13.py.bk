@@ -1,7 +1,7 @@
 # fecha: 13-july-2026
-# v15 — consulta Wolfram Alpha Full API con una expresión seleccionada.
+# v11 — consulta Wolfram Alpha Full API con una expresión seleccionada.
 #
-# ESTADO ACTUAL (v15):
+# ESTADO ACTUAL (v11):
 # ✔ Extrae dinámicamente todos los pods que devuelve WA (sin lista fija)
 # ✔ Pods excluidos por título: "Input interpretation", "Image"
 # ✔ Descarga PNG del primer pod Plot y lo guarda en _assets/ima-N.png
@@ -11,15 +11,12 @@
 # ✔ Traductor plaintext WA→LaTeX en el output:
 #   - Símbolos: != → \neq, -> → \to, infinity → \infty, pi → \pi
 #   - Funciones: sin/cos/tan/ln/log → \sin/\cos/\tan/\ln/\log, sqrt() → \sqrt{}
-#   - integral → \int, sum_ → \sum_
-#   - lim_(x->a) → \lim_{x->a} (resuelto)
-#   - _(x) → _{x} y ^(x) → ^{x} general (integrales, sumas, límites)
-#   - constant → C, \piecewise eliminado, for → \text{for}
+#   - integral → \int (WA devuelve formato integral_0^inf etc, se respeta el resto)
+#   - constant → C
 #   - Conjuntos: element R → \in \mathbb{R}
-#   - Cada línea del pod en su propio bloque $$
-#   - Fracciones a/b en texto plano (decisión: se ven aceptable, el usuario corrige si necesita)
-# ✔ Frases descriptivas de WA extraídas fuera del $$ via lista fija (DESCRIPTIVE_PHRASES)
-#   Agregar nuevas frases a esa lista cuando aparezcan casos nuevos
+# ✘ PENDIENTE: limites en output (lim_(x->0) no se convierte a \lim_{x \to 0})
+# ✘ PENDIENTE: fracciones en texto plano por decisión (a/b no se convierte a \dfrac)
+#   el usuario corrige manualmente si necesita LaTeX para fracciones
 #
 # NOTAS IMPORTANTES:
 # - El backslash en re.sub replacement: usar r'\comando' (1 backslash en raw string)
@@ -45,22 +42,6 @@ ASSETS_DIR = "_assets"
 
 # Títulos de pods que nunca se muestran
 PODS_EXCLUDE_TITLES = {"Input interpretation", "Image"}
-
-# Frases descriptivas de WA que deben ir fuera del $$ — agregar según aparezcan
-DESCRIPTIVE_PHRASES = [
-    "all real numbers",
-    "all positive real numbers",
-    "all negative real numbers",
-    "assuming a complex-valued logarithm",
-    "assuming the principal value",
-    "Taylor series",
-    "Maclaurin series",
-    "injective",
-    "surjective",
-    "bijective",
-    "one-to-one",
-    "bijective from its domain to R",
-]
 
 expression = sys.argv[1]
 vault_path = sys.argv[2]
@@ -104,9 +85,6 @@ def plaintext_to_latex(text):
     text = re.sub(r'\bfor\b', r'\\text{for}', text)
     # lim_(x->a) → \lim_{x->a} (formato que devuelve WA en output)
     text = re.sub(r'lim_\(([^)]+)\)', lambda m: r'\lim_{' + m.group(1) + '}', text)
-    # _(x) → _{x} y ^(x) → ^{x} general (integrales, sumas, etc.)
-    text = re.sub(r'_\(([^)]+)\)', lambda m: '_{' + m.group(1) + '}', text)
-    text = re.sub(r'\^\(([^)]+)\)', lambda m: '^{' + m.group(1) + '}', text)
     # limit ... as x->a (formato generado por el preprocesador, por si acaso)
     text = re.sub(
         r'limit\s+(.+?)\s+as\s+([a-z])\s*->\s*([^\s|]+)',
@@ -114,30 +92,6 @@ def plaintext_to_latex(text):
     )
     text = text.replace('constant', 'C')
     return text
-
-def format_line(l):
-    """Envuelve la línea en $$ salvo que contenga una frase descriptiva conocida."""
-    l = l.strip()
-    if not l:
-        return None
-    # Extraer frases descriptivas de la línea
-    desc_found = []
-    l_clean = l
-    for phrase in DESCRIPTIVE_PHRASES:
-        pattern = re.compile(re.escape(phrase), re.IGNORECASE)
-        if pattern.search(l_clean):
-            # También eliminar paréntesis que envuelven la frase si los hay
-            l_clean = re.sub(r'\(?' + re.escape(phrase) + r'\)?', '', l_clean, flags=re.IGNORECASE).strip()
-            desc_found.append(phrase)
-    l_clean = l_clean.strip(' ,|')
-    if l_clean:
-        result = f"$${l_clean}$$"
-        if desc_found:
-            result += " " + ", ".join(f"({p})" for p in desc_found)
-    else:
-        # La línea era solo texto descriptivo
-        result = ", ".join(desc_found)
-    return result
 
 expression_display = expression
 expression = latex_to_wa(expression)
@@ -214,9 +168,9 @@ for pod in pods:
         continue
     content = "\n".join(texts)
     content = plaintext_to_latex(content)
-    # Cada línea en su propio bloque $$ — frases descriptivas fuera
+    # Cada línea en su propio bloque $$
     content_lines = content.split("\n")
-    block = "\n".join(r for r in (format_line(l) for l in content_lines) if r is not None)
+    block = "\n".join(f"$${l.strip()}$$" for l in content_lines if l.strip())
     lines.append(f"**{label}:**\n{block}")
 
 # --- Construir output para la nota ---
