@@ -115,8 +115,6 @@ for pod in pods:
     if not texts:
         continue
     content = " | ".join(texts)
-    # Convertir fracciones a/b → \frac{a}{b} en el output
-    content = re.sub(r'([\w\^\(\)]+)/([\w\^\(\)]+)', r'\\frac{\1}{\2}', content)
     lines.append(f"**{label}:**\n${content}$")
 
 # --- Construir output para la nota ---

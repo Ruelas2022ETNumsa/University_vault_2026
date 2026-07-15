@@ -24,27 +24,8 @@ PODS_EXCLUDE_TITLES = {"Input interpretation", "Image"}
 expression = sys.argv[1]
 vault_path = sys.argv[2]
 
-# --- Preprocesador LaTeX → texto WA (solo casos que la API no acepta) ---
-def latex_to_wa(expr):
-    # \infty → infinity
-    expr = expr.replace(r'\infty', 'infinity')
-    # \to → ->
-    expr = expr.replace(r'\to', '->')
-    # \frac{d^n}{dx^n} → d^n/dx^n
-    expr = re.sub(r'\\frac\{d\^(\w+)\}\{dx\^\1\}', r'd^\1/dx^\1', expr)
-    # \frac{d}{dx} → d/dx
-    expr = re.sub(r'\\frac\{d\}\{dx\}', 'd/dx', expr)
-    # \lim_{x -> a} expr → limit expr as x->a
-    expr = re.sub(r'\\lim_\{([^}]+)\}\s*', r'limit ', expr)
-    # \frac{a}{b} → (a)/(b)
-    expr = re.sub(r'\\frac\{([^}]+)\}\{([^}]+)\}', r'(\1)/(\2)', expr)
-    return expr
-
-expression_display = expression  # guardamos original para mostrar en la nota
-expression = latex_to_wa(expression)
-
 # --- Llamada a WA Full API ---
-encoded = urllib.parse.quote(expression, safe='\\{}^_')
+encoded = urllib.parse.quote(expression)
 url = f"https://api.wolframalpha.com/v2/query?input={encoded}&appid={APP_ID}&output=json"
 
 try:
@@ -115,21 +96,19 @@ for pod in pods:
     if not texts:
         continue
     content = " | ".join(texts)
-    # Convertir fracciones a/b → \frac{a}{b} en el output
-    content = re.sub(r'([\w\^\(\)]+)/([\w\^\(\)]+)', r'\\frac{\1}{\2}', content)
     lines.append(f"**{label}:**\n${content}$")
 
 # --- Construir output para la nota ---
 body = "\n\n".join(lines)
 
 output = f"""
-**WolframAlpha:** ${expression_display}$
+**WolframAlpha:** ${expression}$
 
 {body}
 
 ```
 Resolvé paso a paso sin ejercicio adicional (MODO 3):
-{expression_display}
+{expression}
 Si aplica, graficá usando Desmos o TikZJax.
 ```
 """

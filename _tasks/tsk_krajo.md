@@ -16,6 +16,29 @@ Datos de el api de wolfram
 | Description | personal vault integration |
 | API         | Full Results API           |
 
+
+$expr = "\lim_{x \to 0} \frac{\sin(x)}{x}"
+$encoded = [System.Web.HttpUtility]::UrlEncode($expr)
+$url = "https://api.wolframalpha.com/v2/query?input=$encoded&appid=A3WL4X56LG&output=json"
+$r = Invoke-WebRequest -Uri $url -UseBasicParsing
+($r.Content | ConvertFrom-Json).queryresult | Select-Object success, error
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ---
 
 ## Pendientes

@@ -6227,6 +6227,7 @@ typos
 trigonometric
 tornado
 trigonometr
+timed
 ToDo
 Templater
 Text
@@ -88264,6 +88265,7 @@ contextogen
 constant
 conjugadas
 conviertan
+convergence
 updated
 un
 universo
@@ -138760,6 +138762,7 @@ AdditionalConversion
 Alternative
 AlternativeRepresentations
 Adicional
+Autonomous
 push
 pull
 para
@@ -170564,6 +170567,7 @@ editada
 entraga
 editados
 element
+encoded
 Motor
 Media
 Mantiene
@@ -197622,6 +197626,7 @@ inexistentes
 imagenes
 integer
 infinity
+integrals
 Dependencia
 Dropbox
 Dataview
@@ -221498,6 +221503,7 @@ finansas
 finanzas
 funcionabien
 funcionana
+formula
 haya
 hace
 hacer
@@ -241702,6 +241708,8 @@ Utilidades
 UMAP
 Unit
 UnitConversion
+UrlEncode
+UseBasicParsing
 Nombre
 Notas
 No
