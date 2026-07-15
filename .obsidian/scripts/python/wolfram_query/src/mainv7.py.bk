@@ -1,8 +1,7 @@
 # fecha: 13-july-2026
-# v4 — consulta Wolfram Alpha Full API con una expresión seleccionada.
+# v3 — consulta Wolfram Alpha Full API con una expresión seleccionada.
 # Extrae dinámicamente todos los pods disponibles en texto y descarga PNG del pod Plot.
-# Pods excluidos por título: "Input interpretation", "Image".
-# Traductor plaintext WA → LaTeX (Cálculo 1).
+# Pods excluidos: Input, Image:FinancialData.
 # Guarda imagen en _assets/ima-N.png (sin sobreescritura).
 # Inserta en stdout el bloque markdown para Shell Commands → nota activa.
 # Args: argv[1] expression · argv[2] vault_path
@@ -27,56 +26,21 @@ vault_path = sys.argv[2]
 
 # --- Preprocesador LaTeX → texto WA (solo casos que la API no acepta) ---
 def latex_to_wa(expr):
+    # \infty → infinity
     expr = expr.replace(r'\infty', 'infinity')
+    # \to → ->
     expr = expr.replace(r'\to', '->')
+    # \frac{d^n}{dx^n} → d^n/dx^n
     expr = re.sub(r'\\frac\{d\^(\w+)\}\{dx\^\1\}', r'd^\1/dx^\1', expr)
+    # \frac{d}{dx} → d/dx
     expr = re.sub(r'\\frac\{d\}\{dx\}', 'd/dx', expr)
+    # \lim_{x -> a} expr → limit expr as x->a
     expr = re.sub(r'\\lim_\{([^}]+)\}\s*', r'limit ', expr)
+    # \frac{a}{b} → (a)/(b)
     expr = re.sub(r'\\frac\{([^}]+)\}\{([^}]+)\}', r'(\1)/(\2)', expr)
     return expr
 
-# --- Traductor plaintext WA → LaTeX (Cálculo 1) ---
-def plaintext_to_latex(text):
-    # Símbolos básicos
-    text = text.replace('!=', r'\neq ')
-    text = text.replace('>=', r'\geq ')
-    text = text.replace('<=', r'\leq ')
-    text = text.replace('->', r'\to ')
-    text = text.replace('infinity', r'\infty')
-    text = text.replace('pi', r'\pi')
-    # Conjuntos
-    text = re.sub(r'element R', r'\\in \\mathbb{R}', text)
-    text = re.sub(
-        r'\{([^}]+) \\in \\mathbb\{R\} : ([^}]+)\}',
-        r'\\{\1 \\in \\mathbb{R} : \2\\}', text
-    )
-    # Funciones
-    text = re.sub(r'sqrt\(([^)]+)\)', r'\\sqrt{\1}', text)
-    text = re.sub(r'\bsin\b', r'\\sin', text)
-    text = re.sub(r'\bcos\b', r'\\cos', text)
-    text = re.sub(r'\btan\b', r'\\tan', text)
-    text = re.sub(r'\bln\b',  r'\\ln',  text)
-    text = re.sub(r'\blog\b', r'\\log', text)
-    # Cálculo
-    text = re.sub(
-        r'integral\(([^)]+)\)\s*d([a-z])',
-        r'\\int \1 \\, d\2', text
-    )
-    text = re.sub(
-        r'd\^(\w+)/dx\^\1\s*',
-        r'\\dfrac{d^{\1}}{dx^{\1}} ', text
-    )
-    text = re.sub(r'd/dx\s*', r'\\dfrac{d}{dx} ', text)
-    text = re.sub(
-        r'limit\s+(.+?)\s+as\s+([a-z])\s*->\s*([^\s|]+)',
-        r'\\lim_{\2 \\to \3} \1', text
-    )
-    text = text.replace('constant', 'C')
-    # Fracciones a/b → \dfrac{a}{b}
-    text = re.sub(r'([\w\^\(\)]+)/([\w\^\(\)]+)', r'\\dfrac{\1}{\2}', text)
-    return text
-
-expression_display = expression
+expression_display = expression  # guardamos original para mostrar en la nota
 expression = latex_to_wa(expression)
 
 # --- Llamada a WA Full API ---
@@ -139,18 +103,20 @@ if image_block:
 
 for pod in pods:
     pod_title = pod.get("title", "")
-    pod_id    = pod.get("id", "")
+    pod_id = pod.get("id", "")
     if pod_title in PODS_EXCLUDE_TITLES:
         continue
+    # pods de imagen ya manejados arriba
     if "Plot" in pod_id or "plot" in pod_id.lower():
         continue
-    label   = pod.get("title", pod_id)
+    label = pod.get("title", pod_id)
     subpods = pod.get("subpods", [])
-    texts   = [s["plaintext"] for s in subpods if s.get("plaintext", "").strip()]
+    texts = [s["plaintext"] for s in subpods if s.get("plaintext", "").strip()]
     if not texts:
         continue
     content = " | ".join(texts)
-    content = plaintext_to_latex(content)
+    # Convertir fracciones a/b → \frac{a}{b} en el output
+    content = re.sub(r'([\w\^\(\)]+)/([\w\^\(\)]+)', r'\\dfrac{\1}{\2}', content)
     lines.append(f"**{label}:**\n${content}$")
 
 # --- Construir output para la nota ---

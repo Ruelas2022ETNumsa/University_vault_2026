@@ -6,7 +6,7 @@
 ![[Untitled-14-07-2026_22-28-09.png]]
 
 **Input:**
-$(x^2 - 4)/(x - 2)$
+$\frac{x^2 - 4}{x - 2}$
 
 **Result:**
 $2 + x (for x!=2)$
@@ -268,6 +268,29 @@ Si aplica, graficá usando Desmos o TikZJax.
 ---
 
 \lim_{x \to 0} \frac{\sin(x)}{x}
+
+
+
+**WolframAlpha:** $\lim_{x \to 0} \frac{\sin(x)}{x}$
+
+**Gráfica:**
+![[ima-20.png]]
+
+**Limit:**
+$lim_(x\to 0) \\dfrac{sin(x)}{x} = 1 | lim_(x\to -∞) \\dfrac{sin(x)}{x} = 0 | lim_(x\to ∞) \\dfrac{sin(x)}{x} = 0$
+
+```
+Resolvé paso a paso sin ejercicio adicional (MODO 3):
+\lim_{x \to 0} \frac{\sin(x)}{x}
+Si aplica, graficá usando Desmos o TikZJax.
+```
+
+
+
+
+
+
+
 
 
 **WolframAlpha:** $\lim_{x \to 0} \frac{\sin(x)}{x}$
@@ -897,7 +920,24 @@ y'' - y' - 6y = 0
 Si aplica, graficá usando Desmos o TikZJax.
 ```
 
+---
 
+\lim_{x \to 0} \frac{\sin(x)}{x}
+
+
+**WolframAlpha:** $\lim_{x \to 0} \frac{\sin(x)}{x}$
+
+**Gráfica:**
+![[ima-21.png]]
+
+**Limit:**
+$lim_(x\to 0) \\dfrac{sin(x)}{x} = 1 | lim_(x\to -∞) \\dfrac{sin(x)}{x} = 0 | lim_(x\to ∞) \\dfrac{sin(x)}{x} = 0$
+
+```
+Resolvé paso a paso sin ejercicio adicional (MODO 3):
+\lim_{x \to 0} \frac{\sin(x)}{x}
+Si aplica, graficá usando Desmos o TikZJax.
+```
 
 
 
