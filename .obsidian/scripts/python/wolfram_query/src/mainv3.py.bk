@@ -18,8 +18,8 @@ sys.stdout.reconfigure(encoding='utf-8')
 APP_ID     = "A3WL4X56LG"
 ASSETS_DIR = "_assets"
 
-# Títulos de pods que nunca se muestran
-PODS_EXCLUDE_TITLES = {"Input interpretation", "Image"}
+# Pods que nunca se muestran
+PODS_EXCLUDE = {"Input", "Image:FinancialData"}
 
 expression = sys.argv[1]
 vault_path = sys.argv[2]
@@ -83,9 +83,8 @@ if image_block:
     lines.append(image_block)
 
 for pod in pods:
-    pod_title = pod.get("title", "")
     pod_id = pod.get("id", "")
-    if pod_title in PODS_EXCLUDE_TITLES:
+    if pod_id in PODS_EXCLUDE:
         continue
     # pods de imagen ya manejados arriba
     if "Plot" in pod_id or "plot" in pod_id.lower():

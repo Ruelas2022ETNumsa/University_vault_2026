@@ -840,3 +840,635 @@ Si aplica, graficá usando Desmos o TikZJax.
 
 
 [ERROR] Wolfram Alpha no pudo interpretar la expresión.
+
+
+
+
+
+limit 1/x as x->infinity
+
+
+**WolframAlpha:** $limit 1/x as x->infinity$
+
+**Limit:**
+$lim_(x->∞) 1/x = 0$
+
+```
+Resolvé paso a paso sin ejercicio adicional (MODO 3):
+limit 1/x as x->infinity
+Si aplica, graficá usando Desmos o TikZJax.
+```
+
+
+
+
+sum n^2 from n=1 to 10
+
+
+**WolframAlpha:** sum n^2 from n=1 to 10
+
+
+
+```
+Resolvé paso a paso sin ejercicio adicional (MODO 3):
+sum n^2 from n=1 to 10
+Si aplica, graficá usando Desmos o TikZJax.
+```
+
+
+
+simple interest 5000 at 3 percent for 5 years
+
+
+**WolframAlpha:** $simple interest 5000 at 3 percent for 5 years$
+
+**Result:**
+$present value | Bs4347.83 (Bolivian bolivianos)$
+
+**Equation:**
+$FV = PV (1 + i n) | 
+PV | present value
+n | interest periods
+FV | future value
+i | interest rate$
+
+```
+Resolvé paso a paso sin ejercicio adicional (MODO 3):
+simple interest 5000 at 3 percent for 5 years
+Si aplica, graficá usando Desmos o TikZJax.
+```
+
+
+
+
+{{1,2},{3,4}}
+
+**WolframAlpha:** ${{1,2},{3,4}}$
+
+**Gráfica:**
+![[Untitled-14-07-2026_21-38-19.png]]
+
+**Dimensions:**
+$2 (rows) × 2 (columns)$
+
+**Transpose:**
+$(1 | 3
+2 | 4)$
+
+**Cofactors:**
+$(4 | -3
+-2 | 1)$
+
+**Trace:**
+$5$
+
+**Determinant:**
+$-2$
+
+**Inverse:**
+$1/2(-4 | 2
+3 | -1)$
+
+**Characteristic polynomial:**
+$λ^2 - 5 λ - 2$
+
+**Eigenvalues:**
+$λ_1 = 1/2 (5 + sqrt(33)) | λ_2 = 1/2 (5 - sqrt(33))$
+
+**Eigenvectors:**
+$v_1 = (1/6 (-3 + sqrt(33)), 1) | v_2 = (1/6 (-3 - sqrt(33)), 1)$
+
+**Diagonalization:**
+$(1 | 2
+3 | 4) = P.D.P^(-1)
+where
+P = 1/6(-3 - sqrt(33) | sqrt(33) - 3
+6 | 6)
+D = 1/2(5 - sqrt(33) | 0
+0 | 5 + sqrt(33))
+P^(-1) = 1/22(-2 sqrt(33) | 11 - sqrt(33)
+2 sqrt(33) | 11 + sqrt(33))$
+
+**Condition number:**
+$21$
+
+```
+Resolvé paso a paso sin ejercicio adicional (MODO 3):
+{{1,2},{3,4}}
+Si aplica, graficá usando Desmos o TikZJax.
+```
+
+
+
+
+sum of n^2 for n=1 to 10
+
+
+**WolframAlpha:** $sum of n^2 for n=1 to 10$
+
+
+
+```
+Resolvé paso a paso sin ejercicio adicional (MODO 3):
+sum of n^2 for n=1 to 10
+Si aplica, graficá usando Desmos o TikZJax.
+```
+
+
+
+$\sum_{n=1}^{10} n^2$
+
+
+**WolframAlpha:** $\sum_{n=1}^{10} n^2$
+
+**Sum:**
+$sum_(n=1)^10 n^2 = 385$
+
+```
+Resolvé paso a paso sin ejercicio adicional (MODO 3):
+\sum_{n=1}^{10} n^2
+Si aplica, graficá usando Desmos o TikZJax.
+```
+
+
+
+
+
+
+
+---
+$$\frac{x^2 - 4}{x - 2}
+x^3 - 8
+(x+2)^4
+\sqrt[3]{27x^6}$$
+
+**WolframAlpha:** $\frac{x^2 - 4}{x - 2}
+x^3 - 8
+(x+2)^4
+\sqrt[3]{27x^6}$
+
+**Gráfica:**
+![[Untitled-14-07-2026_21-59-47.png]]
+
+**Input:**
+$(x^2 - 4)/(x - 2) x^3 - 8 (x + 2)^4 (27 x^6)^(1/3)$
+
+**Result:**
+$(x^3 (x^2 - 4))/(x - 2) - 24 (x^6)^(1/3) (x + 2)^4$
+
+**Alternate form assuming x is real:**
+$x^2 (x + 2) (x - 24 (x + 2)^3)$
+
+**Alternate forms:**
+$x^3 (x + 2) - 24 (x^6)^(1/3) (x + 2)^4 | (-x - 2) (24 (x^6)^(1/3) (x + 2)^3 - x^3) | -((x + 2) (288 (x^6)^(1/3) x + 192 (x^6)^(1/3) - x^3 + 24 (x^6)^(1/3) x^3 + 144 (x^6)^(1/3) x^2))$
+
+**Expanded form:**
+$-24 x^6 + x^5/(x - 2) - 192 x^5 - 576 x^4 - (4 x^3)/(x - 2) - 768 x^3 - 384 x^2$
+
+**Alternate form assuming x>0:**
+$x^2 (x (x + 2) - 24 (x + 2)^4) | (x^3 (x^2 - 4))/(x - 2) - 24 x^2 (x + 2)^4$
+
+**Real roots:**
+$x = -2 | x = 0 | x≈-2.4685$
+
+**Complex roots:**
+$x≈-1.7657 - 0.3507 i | x≈-1.7657 + 0.3507 i$
+
+**Properties as a real function:**
+${x element R : x!=2} | {y element R : y<=2.64203}$
+
+**Series expansion at x = 0:**
+$-(384 (x^6)^(1/3) x^2)/x^2 - (2 (384 (x^6)^(1/3) - x^2) x^3)/x^2 + ((x^2 - 576 (x^6)^(1/3)) x^4)/x^2 - (192 (x^6)^(1/3) x^5)/x^2 - (24 (x^6)^(1/3) x^6)/x^2 + O(x^7)
+(generalized Puiseux series)$
+
+**Series expansion at x = ∞:**
+$-24 x^6 - 192 x^5 - 575 x^4 - 766 x^3 - 384 x^2 + O((1/x)^1)
+(Taylor series)$
+
+**Derivative:**
+$d/dx(((x^2 - 4) x^3)/(x - 2) - 8 (x + 2)^4 (27 x^6)^(1/3)) = -(2 x^2 (72 x^7 + 480 x^6 - 2 (x^6)^(2/3) x - 3 (x^6)^(2/3) + 1152 x^5 + 1152 x^4 + 384 x^3))/(x^6)^(2/3)$
+
+**Indefinite integral assuming all variables are real:**
+$integral(((x^2 - 4) x^3)/(x - 2) - 8 (x + 2)^4 (27 x^6)^(1/3)) dx = -(24 x^7)/7 - 32 x^6 - 115 x^5 - (383 x^4)/2 - 128 x^3 + constant$
+
+**Local minimum:**
+$min{((x^2 - 4) x^3)/(x - 2) - 8 (x + 2)^4 (27 x^6)^(1/3)}≈-34.112 at x≈-0.67329$
+
+**Local maxima:**
+$max{((x^2 - 4) x^3)/(x - 2) - 8 (x + 2)^4 (27 x^6)^(1/3)} = 0 at x = 0 | max{((x^2 - 4) x^3)/(x - 2) - 8 (x + 2)^4 (27 x^6)^(1/3)}≈2.6420 at x≈-2.3170$
+
+```
+Resolvé paso a paso sin ejercicio adicional (MODO 3):
+\frac{x^2 - 4}{x - 2}
+x^3 - 8
+(x+2)^4
+\sqrt[3]{27x^6}
+Si aplica, graficá usando Desmos o TikZJax.
+```
+
+
+
+
+
+
+
+---
+
+$$x^2 + 5x + 6 = 0
+x^3 - 6x^2 + 11x - 6 = 0
+\frac{1}{x} + \frac{1}{x+1} = 1$$
+
+
+**WolframAlpha:** $x^2 + 5x + 6 = 0
+x^3 - 6x^2 + 11x - 6 = 0
+\frac{1}{x} + \frac{1}{x+1} = 1$
+
+**Input:**
+$x^2 + 5 x + 6 = 0 x^3 - 6 x^2 + 11 x - 6 = 0 × 1/x + 1/(x + 1) = 1$
+
+**Result:**
+$x^2 + 5 x + 6 = -6 x^2 + 11 x - 6 = 1/(x + 1) = 1$
+
+**Alternate forms:**
+${4/5 (x + 5/2)^2 = 1, -144/47 (x - 11/12)^2 = 1, x = 0} | {x (x + 5) + 5 = 0, 6 x^2 + 7 = 11 x, 1/(x + 1) = 1} | {(x + 2) (x + 3) = 1, -6 x^2 + 11 x - 6 = 1, 1/(x + 1) = 1}$
+
+**Solutions:**
+$(no solutions exist)$
+
+```
+Resolvé paso a paso sin ejercicio adicional (MODO 3):
+x^2 + 5x + 6 = 0
+x^3 - 6x^2 + 11x - 6 = 0
+\frac{1}{x} + \frac{1}{x+1} = 1
+Si aplica, graficá usando Desmos o TikZJax.
+```
+
+
+
+
+
+----
+
+$$\lim_{x \to 0} \frac{\sin(x)}{x}
+\lim_{x \to \infty} \frac{x^2 + 1}{x^2 - 1}
+\lim_{x \to 2} \frac{x^2 - 4}{x - 2}$$
+
+[ERROR] Wolfram Alpha no pudo interpretar la expresión.
+
+[ERROR] Wolfram Alpha no pudo interpretar la expresión.
+
+[ERROR] Wolfram Alpha no pudo interpretar la expresión.
+
+[ERROR] Wolfram Alpha no pudo interpretar la expresión.
+
+[ERROR] Wolfram Alpha no pudo interpretar la expresión.
+
+
+---
+
+$$\frac{d}{dx} x^3 \cdot \ln(x)
+\frac{d}{dx} \frac{\sin(x)}{x}
+\frac{d^2}{dx^2} e^{x^2}$$
+
+[ERROR] Wolfram Alpha no pudo interpretar la expresión.
+
+[ERROR] Wolfram Alpha no pudo interpretar la expresión.
+
+
+[ERROR] Wolfram Alpha no pudo interpretar la expresión.
+
+
+**WolframAlpha:** $\frac{d}{dx} x^3 \cdot \ln(x)$
+
+**Gráfica:**
+![[Untitled-14-07-2026_22-04-59.png]]
+
+**Derivative:**
+$d/dx(x^3 log(x)) = x^2 (3 log(x) + 1)$
+
+**Expanded form:**
+$x^2 + 3 x^2 log(x)$
+
+**Root:**
+$x = 1/e^(1/3)$
+
+**Properties as a real function:**
+${x element R : x>0} (all positive real numbers) | {y element R : y>=-3/(2 e^(5/3))}$
+
+**Indefinite integral:**
+$integral x^2 (1 + 3 log(x)) dx = x^3 log(x) + constant
+(assuming a complex-valued logarithm)$
+
+**Global minimum:**
+$min{x^2 (3 log(x) + 1)} = -3/(2 e^(5/3)) at x = 1/e^(5/6)$
+
+**Definite integral:**
+$integral_0^1 x^2 (1 + 3 log(x)) dx = 0$
+
+```
+Resolvé paso a paso sin ejercicio adicional (MODO 3):
+\frac{d}{dx} x^3 \cdot \ln(x)
+Si aplica, graficá usando Desmos o TikZJax.
+```
+
+
+
+
+
+
+[ERROR] Wolfram Alpha no pudo interpretar la expresión.
+
+[ERROR] No se pudo conectar con Wolfram Alpha: The read operation timed out
+
+[ERROR] Wolfram Alpha no pudo interpretar la expresión.
+
+
+**WolframAlpha:** $\frac{d}{dx} \frac{\sin(x)}{x}$
+
+**Gráfica:**
+![[ima-5.png]]
+
+**Derivative:**
+$d/dx(sin(x)/x) = (x cos(x) - sin(x))/x^2$
+
+**Expanded form:**
+$cos(x)/x - sin(x)/x^2$
+
+**Alternate form:**
+$-(i e^(-i x))/(2 x^2) + (i e^(i x))/(2 x^2) + e^(-i x)/(2 x) + e^(i x)/(2 x)$
+
+**Numerical roots:**
+$x ≈ -14.0661939128315... | x ≈ ± 10.9041216594289... | x ≈ ± 7.72525183693771... | x ≈ ± 4.49340945790906...$
+
+**Properties as a real function:**
+${x element R : x!=0} | odd$
+
+**Series expansion at x = 0:**
+$-x/3 + x^3/30 - x^5/840 + O(x^6)
+(Taylor series)$
+
+**Indefinite integral:**
+$integral(x cos(x) - sin(x))/x^2 dx = sin(x)/x + constant$
+
+**Limit:**
+$lim_(x-> ± ∞) (x cos(x) - sin(x))/x^2 = 0$
+
+**Definite integrals:**
+$integral_0^∞ (x cos(x) - sin(x))/x^2 dx≈-1.00000000000... | integral_(-π/2)^∞ (x cos(x) - sin(x))/x^2 dx≈-0.6366197723676... | integral_(π/2)^π (x cos(x) - sin(x))/x^2 dx≈-0.6366197723676...$
+
+```
+Resolvé paso a paso sin ejercicio adicional (MODO 3):
+\frac{d}{dx} \frac{\sin(x)}{x}
+Si aplica, graficá usando Desmos o TikZJax.
+```
+
+
+
+
+
+**WolframAlpha:** $\frac{d}{dx} x^3 \cdot \ln(x)$
+
+**Gráfica:**
+![[Untitled-14-07-2026_22-03-48.png]]
+
+**Derivative:**
+$d/dx(x^3 log(x)) = x^2 (3 log(x) + 1)$
+
+**Expanded form:**
+$x^2 + 3 x^2 log(x)$
+
+**Root:**
+$x = 1/e^(1/3)$
+
+**Properties as a real function:**
+${x element R : x>0} (all positive real numbers) | {y element R : y>=-3/(2 e^(5/3))}$
+
+**Indefinite integral:**
+$integral x^2 (1 + 3 log(x)) dx = x^3 log(x) + constant
+(assuming a complex-valued logarithm)$
+
+**Global minimum:**
+$min{x^2 (3 log(x) + 1)} = -3/(2 e^(5/3)) at x = 1/e^(5/6)$
+
+**Definite integral:**
+$integral_0^1 x^2 (1 + 3 log(x)) dx = 0$
+
+```
+Resolvé paso a paso sin ejercicio adicional (MODO 3):
+\frac{d}{dx} x^3 \cdot \ln(x)
+Si aplica, graficá usando Desmos o TikZJax.
+```
+
+
+
+
+
+
+---
+
+$$\int_0^{\pi} \sin(x) dx
+\int x^2 e^x dx
+\int \frac{1}{x^2 + 1} dx$$
+
+
+**WolframAlpha:** $\int_0^{\pi} \sin(x) dx$
+
+**Definite integral:**
+$integral_0^π sin(x) dx = 2$
+
+**Riemann sums:**
+$left sum | (π cot(π/(2 n)))/n = 2 - π^2/(6 n^2) + O((1/n)^4)
+(assuming subintervals of equal length)$
+
+**Indefinite integral:**
+$integral sin(x) dx = -cos(x) + constant$
+
+```
+Resolvé paso a paso sin ejercicio adicional (MODO 3):
+\int_0^{\pi} \sin(x) dx
+Si aplica, graficá usando Desmos o TikZJax.
+```
+
+
+
+---
+
+
+$$\sum_{n=1}^{\infty} \frac{1}{n^2}
+\sum_{n=0}^{5} 2^n
+\prod_{n=1}^{4} n$$
+
+
+**WolframAlpha:** $\sum_{n=1}^{\infty} \frac{1}{n^2}$
+
+**Infinite sum:**
+$sum_(n=1)^∞ 1/n^2 = π^2/6≈1.6449$
+
+**Sum convergence:**
+$sum_(n=1)^∞ 1/n^2 converges$
+
+**Partial sum formula:**
+$sum_(n=1)^k 1/n^2 = H_k^(2)$
+
+**Series representations:**
+$π^2/6 = sum_(k=1)^∞ 1/k^2 | π^2/6 = -2 sum_(k=1)^∞ (-1)^k/k^2 | π^2/6 = 4/3 sum_(k=0)^∞ 1/(1 + 2 k)^2 | π^2/6 = 8/3 ( sum_(k=0)^∞ (-1)^k/(1 + 2 k))^2$
+
+```
+Resolvé paso a paso sin ejercicio adicional (MODO 3):
+\sum_{n=1}^{\infty} \frac{1}{n^2}
+Si aplica, graficá usando Desmos o TikZJax.
+```
+
+
+
+
+---
+
+
+$$
+\sin(x)^2 + \cos(x)^2
+\tan(\frac{\pi}{4})
+\arcsin(\frac{\sqrt{2}}{2})
+$$
+
+
+**WolframAlpha:** $\sin(x)^2 + \cos(x)^2$
+
+**Gráfica:**
+![[Untitled-14-07-2026_22-02-35.png]]
+
+**Input:**
+$sin^2(x) + cos^2(x)$
+
+**Expanded trigonometric form:**
+$1$
+
+**Roots:**
+$(no roots exist)$
+
+**Properties as a real function:**
+$R (all real numbers) | {y element R : y = 1} | even$
+
+**Indefinite integral:**
+$integral(sin^2(x) + cos^2(x)) dx = x + constant$
+
+**Global minimum:**
+$min{sin^2(x) + cos^2(x)} = 1 at x = -49 π$
+
+**Global maximum:**
+$max{sin^2(x) + cos^2(x)} = 1 at x = -49 π$
+
+**Limit:**
+$lim_(x-> ± ∞)(cos^2(x) + sin^2(x)) = 1$
+
+**Alternative representations:**
+$sin^2(x) + cos^2(x) = cosh^2(i x) + cos^2(π/2 - x) | sin^2(x) + cos^2(x) = cosh^2(-i x) + cos^2(π/2 - x) | sin^2(x) + cos^2(x) = cosh^2(-i x) + (-cos(π/2 + x))^2$
+
+**Series representations:**
+$sin^2(x) + cos^2(x) = ( sum_(k=0)^∞ ((-1)^k x^(2 k))/((2 k)!))^2 + ( sum_(k=0)^∞ ((-1)^k (-π/2 + x)^(2 k))/((2 k)!))^2 | sin^2(x) + cos^2(x) = ( sum_(k=0)^∞ ((-1)^k x^(2 k))/((2 k)!))^2 + ( sum_(k=0)^∞ ((-1)^k x^(1 + 2 k))/((1 + 2 k)!))^2 | sin^2(x) + cos^2(x) = ( sum_(k=0)^∞ ((-1)^k x^(1 + 2 k))/((1 + 2 k)!))^2 + ( sum_(k=0)^∞ ((-1)^k (-π/2 + x)^(1 + 2 k))/((1 + 2 k)!))^2$
+
+**Integral representations:**
+$sin^2(x) + cos^2(x) = (-( integral_(-i ∞ + γ)^(i ∞ + γ) e^(s - x^2/(4 s))/sqrt(s) ds)^2 + 4 π x^2 ( integral_0^1 cos(t x) dt)^2)/(4 π) for γ>0 | sin^2(x) + cos^2(x) = (-x^2 ( integral_(-i ∞ + γ)^(i ∞ + γ) e^(s - x^2/(4 s))/s^(3/2) ds)^2 + 16 π ( integral_(π/2)^x sin(t) dt)^2)/(16 π) for γ>0 | sin^2(x) + cos^2(x) = -(x^2 ( integral_(-i ∞ + γ)^(i ∞ + γ) e^(s - x^2/(4 s))/s^(3/2) ds)^2 + 4 ( integral_(-i ∞ + γ)^(i ∞ + γ) e^(s - x^2/(4 s))/sqrt(s) ds)^2)/(16 π) for γ>0$
+
+**Definite integral:**
+$integral_0^(π/2) (cos^2(x) + sin^2(x)) dx = π/2≈1.5708$
+
+```
+Resolvé paso a paso sin ejercicio adicional (MODO 3):
+\sin(x)^2 + \cos(x)^2
+Si aplica, graficá usando Desmos o TikZJax.
+```
+
+
+
+
+
+---
+
+
+$$y'' + 4y = 0
+y' = 2xy
+y'' - y' - 6y = 0$$
+
+
+
+
+
+
+**WolframAlpha:** $y'' + 4y = 0$
+
+**Gráfica:**
+![[ima-4.png]]
+
+**Input:**
+$y''(x) + 4 y(x) = 0$
+
+**Autonomous equation:**
+$y''(x) = -4 y(x)$
+
+**ODE classification:**
+$second-order linear ordinary differential equation$
+
+**Alternate form:**
+$y''(x) = -4 y(x)$
+
+**Differential equation solution:**
+$y(x) = c_2 sin(2 x) + c_1 cos(2 x)$
+
+**Differential equation series solution about x = 0:**
+$c_1 + c_2 x - 2 c_1 x^2 - (2 c_2 x^3)/3 + (2 c_1 x^4)/3 + (2 c_2 x^5)/15 + O(x^6)
+(converges everywhere)$
+
+**Differential equation series solution about x = ∞:**
+$c_1 e^(-2 i x) + c_2 e^(2 i x)
+(converges everywhere)$
+
+**Differential equation infinite series expansion:**
+$sum_(n=0)^∞ ((2^(-1 + n) (((-i)^n + i^n) c_1 + i ((-i)^n - i^n) c_2)) x^n)/(n!)
+(converges everywhere)$
+
+**Differential equation series solution about x = -∞:**
+$c_1 e^(2 i x) + c_2 e^(-2 i x)
+(converges everywhere)$
+
+**Sample solution family:**
+$  (sampling y(0) and y'(0))$
+
+**Possible Lagrangian:**
+$ℒ(y', y) = 1/2 ((y')^2 - 4 y^2)$
+
+```
+Resolvé paso a paso sin ejercicio adicional (MODO 3):
+y'' + 4y = 0
+Si aplica, graficá usando Desmos o TikZJax.
+```
+
+
+
+
+
+
+$url = "https://api.wolframalpha.com/v2/query?input=&appid=A3WL4X56LG&output=json"
+$r = Invoke-WebRequest -Uri $url -UseBasicParsing
+($r.Content | ConvertFrom-Json).queryresult.pods | Select-Object title, id
+
+
+
+
+$url = "https://api.wolframalpha.com/v2/query?input=sum+of+n^2+for+n%3D1+to+10&appid=A3WL4X56LG&output=json"
+$r = Invoke-WebRequest -Uri $url -UseBasicParsing
+($r.Content | ConvertFrom-Json).queryresult.pods | Select-Object title, id
+
+
+
+
+
+
+
+
+
+
+
+$url = "https://api.wolframalpha.com/v2/query?input=sum+of+n^2+for+n%3D1+to+10&appid=A3WL4X56LG&output=json"
+$r = Invoke-WebRequest -Uri $url -UseBasicParsing
+($r.Content | ConvertFrom-Json).queryresult.pods | Select-Object title, id, @{n='plaintext';e={$_.subpods[0].plaintext}}

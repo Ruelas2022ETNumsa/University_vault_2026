@@ -6224,6 +6224,9 @@ today
 titulos
 tenia
 typos
+trigonometric
+tornado
+trigonometr
 ToDo
 Templater
 Text
@@ -20373,6 +20376,7 @@ SampleSolutionFamily
 SumOfRoots
 SeriesExpansionAtX
 SKILLL
+Solutions
 Plugins
 Pendientes
 Plugin
@@ -31312,6 +31316,7 @@ diferenci
 debia
 documentaron
 declarados
+derivatives
 Vault
 Verificar
 Variables
@@ -48903,6 +48908,7 @@ balloon
 basadas
 between
 borre
+bico
 scope
 status
 selector
@@ -62512,6 +62518,7 @@ valide
 violaciones
 verifique
 volume
+variados
 audience
 activo
 auto
@@ -68598,6 +68605,7 @@ agregados
 alertar
 apunten
 agrupados
+approximation
 related
 recomendados
 ribbon
@@ -75146,6 +75154,7 @@ revis
 rotas
 representados
 renombre
+remainder
 notes
 notas
 nuevas
@@ -106910,6 +106919,8 @@ ComparisonAsCircumference
 Continued
 ContinuedFraction
 CREATOR
+Content
+ConvertFrom
 Instalados
 Instalado
 Instalar
@@ -114022,6 +114033,8 @@ InterestPeriods
 Interpretations
 IndefiniteIntegralAssumingAllVariablesAreReal
 Involucra
+Integer
+Invoke
 Funci
 File
 Fase
@@ -120230,6 +120243,7 @@ FinancialData
 FutureValue
 FrequencyBands
 Factorizaci
+Fujita
 Estado
 Excalidraw
 EPUBs
@@ -133480,6 +133494,7 @@ Outputting
 Orbital
 ODENames
 ODEClassification
+Object
 Auto
 Annotator
 Autocompletado
@@ -152174,6 +152189,7 @@ meters
 mortgage
 meno
 multiplicidad
+maximum
 YAML
 Ya
 You
@@ -189831,6 +189847,7 @@ limite
 llegaron
 llegaba
 lecturas
+limit
 incluyendo
 im
 instalar
@@ -197603,6 +197620,8 @@ integration
 integracion
 inexistentes
 imagenes
+integer
+infinity
 Dependencia
 Dropbox
 Dataview
@@ -210963,6 +210982,8 @@ Remainder
 RootPlot
 Reference
 RealAlternateForm
+Reduced
+Riemann
 Hider
 Hace
 Herramientas
@@ -282136,6 +282157,7 @@ watts
 water
 wavelength
 wolfram
+wind
 xima
 xeles
 xy
@@ -294664,6 +294686,7 @@ Wolfram
 Watcher
 WordData
 WolframAlpha
+WebRequest
 JavaScript
 JSON
 JERARQU
@@ -301570,6 +301593,7 @@ JHHP
 Jueves
 Jack
 Jacobi
+Json
 KB
 Kirchhoff
 Ksv
