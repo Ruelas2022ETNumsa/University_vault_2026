@@ -271,6 +271,87 @@ Si aplica, graficá usando Desmos o TikZJax.
 
 
 
+
+**WolframAlpha:** $\lim_{x \to 0} \frac{\sin(x)}{x}$
+
+**Gráfica:**
+![[Untitled-14-07-2026_23-11-40.png]]
+
+**Limit:**
+$lim_(x\to 0) \dfrac{sin(x)}{x} = 1 | lim_(x\to -∞) \dfrac{sin(x)}{x} = 0 | lim_(x\to ∞) \dfrac{sin(x)}{x} = 0$
+
+```
+Resolvé paso a paso sin ejercicio adicional (MODO 3):
+\lim_{x \to 0} \frac{\sin(x)}{x}
+Si aplica, graficá usando Desmos o TikZJax.
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**WolframAlpha:** $\lim_{x \to 0} \frac{\sin(x)}{x}$
+
+**Gráfica:**
+![[Untitled-14-07-2026_23-10-34.png]]
+
+**Limit:**
+$lim_(x\to 0) \\dfrac{sin(x)}{x} = 1 | lim_(x\to -∞) \\dfrac{sin(x)}{x} = 0 | lim_(x\to ∞) \\dfrac{sin(x)}{x} = 0$
+
+```
+Resolvé paso a paso sin ejercicio adicional (MODO 3):
+\lim_{x \to 0} \frac{\sin(x)}{x}
+Si aplica, graficá usando Desmos o TikZJax.
+```
+
+
+
+
+**WolframAlpha:** $\lim_{x \to 0} \frac{\sin(x)}{x}$
+
+**Gráfica:**
+![[Untitled-14-07-2026_23-07-25.png]]
+
+**Limit:**
+$lim_(x\to 0) \\dfrac{sin(x)}{x} = 1 | lim_(x\to -∞) \\dfrac{sin(x)}{x} = 0 | lim_(x\to ∞) \\dfrac{sin(x)}{x} = 0$
+
+```
+Resolvé paso a paso sin ejercicio adicional (MODO 3):
+\lim_{x \to 0} \frac{\sin(x)}{x}
+Si aplica, graficá usando Desmos o TikZJax.
+```
+
+
+
+
+
+
 **WolframAlpha:** $\lim_{x \to 0} \frac{\sin(x)}{x}$
 
 **Gráfica:**

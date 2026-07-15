@@ -62,10 +62,20 @@ def plaintext_to_latex(text):
         r'integral\(([^)]+)\)\s*d([a-z])',
         r'\\int \1 \\, d\2', text
     )
+    #nota claude: esto se comento para realziar la prueba del snippet que mediste
+    # text = re.sub(
+        # r'd\^(\w+)/dx\^\1\s*',
+        # r'\\dfrac{d^{\1}}{dx^{\1}} ', text
+    # )
+    #NOTA CLAUDE: DENTRO DE lambda m: se cambio de "\dfrac" a "dfrac" se probo y funciona
     text = re.sub(
-        r'd\^(\w+)/dx\^\1\s*',
-        r'\\dfrac{d^{\1}}{dx^{\1}} ', text
-    )
+        r'([\w\^\(\)]+)/([\w\^\(\)]+)',
+        lambda m: r'dfrac{' + m.group(1) + '}{' + m.group(2) + '}',
+        text
+    )    
+    
+    
+    
     text = re.sub(r'd/dx\s*', r'\\dfrac{d}{dx} ', text)
     text = re.sub(
         r'limit\s+(.+?)\s+as\s+([a-z])\s*->\s*([^\s|]+)',
