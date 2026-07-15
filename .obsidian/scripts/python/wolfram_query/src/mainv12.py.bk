@@ -80,9 +80,6 @@ def plaintext_to_latex(text):
     text = re.sub(r'\blog\b', r'\\log', text)
     # Cálculo
     text = re.sub(r'integral', r'\\int', text)
-    text = re.sub(r'sum_', r'\\sum_', text)
-    text = re.sub(r'\\piecewise', '', text)
-    text = re.sub(r'\bfor\b', r'\\text{for}', text)
     # lim_(x->a) → \lim_{x->a} (formato que devuelve WA en output)
     text = re.sub(r'lim_\(([^)]+)\)', lambda m: r'\lim_{' + m.group(1) + '}', text)
     # limit ... as x->a (formato generado por el preprocesador, por si acaso)
