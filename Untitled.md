@@ -359,6 +359,129 @@ Si aplica, graficá usando Desmos o TikZJax.
 [ERROR] Wolfram Alpha no pudo interpretar la expresión.
 [ERROR] Wolfram Alpha no pudo interpretar la expresión.
 
+
+
+- `100 km/h to m/s` — conversión de unidades
+
+
+**WolframAlpha:** $100 km/h to m/s$
+
+**Result:**
+$27.78 m/s (meters per second)$
+
+**Additional conversions:**
+$1491 mi/d (miles per day) | 62.14 mph (miles per hour) | 1.036 mi/min (miles per minute) | 91.13 ft/s (feet per second) | 328084 ft/h (feet per hour)$
+
+**Comparisons as speed:**
+$ ≈ 0.91 × speed of the fastest water animal (sailfish) ( ≈ 110 km/h ) |  ≈ typical takeoff speed of a light aircraft like a Cessna 150 ( ≈ 63 mph ) |  ≈ (0.6 to 1.5) × instantaneous speed of air particles during an average human sneeze ( 40 to 100 mph )$
+
+**Fujita tornado wind speed classification:**
+$F0 (gale tornado)$
+
+**Interpretations:**
+$speed$
+
+**Basic unit dimensions:**
+$[length] [time]^(-1)$
+
+**Corresponding quantities:**
+$Time to travel 1 meter from t = d/v:
+ | 36 ms (milliseconds) | Time to travel 1 kilometer from t = d/v:
+ | 36 seconds
+ | 0.6 minutes | Slowness from s = 1/v:
+ | 36 s/km (seconds per kilometer)
+ | 0.6 min/km (minutes per kilometer)
+ | 0.011 s/ft (seconds per foot) | Corresponding Mach number under standard conditions:
+ | 0.081
+ | (assuming speed of sound ≈ 340 m/s) | Observed wind intensity from B = (v/(0.836 m/s))^(2/3):
+ | 10 Beaufort scale numbers | Effective rocket exhaust speed from v_e = I_sp:
+ | 28 m/s (meters per second) | Thrust specific fuel consumption from SFC = 1/I_sp:
+ | 36000 g/(kN s) (grams per kilonewton second)$
+
+```
+Resolvé paso a paso sin ejercicio adicional (MODO 3):
+100 km/h to m/s
+Si aplica, graficá usando Desmos o TikZJax.
+```
+
+
+
+
+
+
+- `area of ellipse a=5 b=3` — geometría
+
+
+
+
+**WolframAlpha:** $area of ellipse a=5 b=3$
+
+**Result:**
+$area | 47.12$
+
+**Equation:**
+$A = π a b | 
+A | area
+a | semimajor axis
+b | semiminor axis$
+
+```
+Resolvé paso a paso sin ejercicio adicional (MODO 3):
+area of ellipse a=5 b=3
+Si aplica, graficá usando Desmos o TikZJax.
+```
+
+
+
+
+
+- `sin(45 degrees)` — trigonometría
+
+
+
+**WolframAlpha:** $sin(45 degrees)$
+
+**Result:**
+$1/sqrt(2)$
+
+**Decimal approximation:**
+$0.7071067811865475244008443621048490392848359376884740365883398689...$
+
+**Reference triangle for angle 45°:**
+$
+width | cos(45 °) = 1/sqrt(2)≈0.707107
+height | sin(45 °) = 1/sqrt(2)≈0.707107$
+
+**Alternate form:**
+$sqrt(2)/2$
+
+**Continued fraction:**
+$[0; 1, 2^_]$
+
+**Alternative representations:**
+$sin(45 °) = cos(45 °) | sin(45 °) = -cos(135 °) | sin(45 °) = 1/csc(45 °)$
+
+```
+Resolvé paso a paso sin ejercicio adicional (MODO 3):
+sin(45 degrees)
+Si aplica, graficá usando Desmos o TikZJax.
+```
+
+
+
+
+
+
+- `simple interest principal=5000 rate=3% time=5 years` — finanzas
+
+
+
+[ERROR] Wolfram Alpha no pudo interpretar la expresión.
+
+
+
+
+
 ----
 
 Aquí van 10 en LaTeX:
@@ -713,6 +836,7 @@ Si aplica, graficá usando Desmos o TikZJax.
 
 
 
+\lim_{x \to \infty}
 
 
-
+[ERROR] Wolfram Alpha no pudo interpretar la expresión.
