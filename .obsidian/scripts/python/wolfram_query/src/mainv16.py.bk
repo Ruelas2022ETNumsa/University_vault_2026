@@ -1,0 +1,306 @@
+# fecha: 13-july-2026
+# v15 — consulta Wolfram Alpha Full API con una expresión seleccionada.
+#
+# ESTADO ACTUAL (v15):
+# ✔ Extrae dinámicamente todos los pods que devuelve WA (sin lista fija)
+# ✔ Pods excluidos por título: "Input interpretation", "Image"
+# ✔ Descarga PNG del primer pod Plot y lo guarda en _assets/ima-N.png
+# ✔ Numeración automática ima-1, ima-2... sin sobreescritura
+# ✔ Preprocesador LaTeX→WA: convierte \lim, \frac, \infty, \to, \int antes de mandar a la API
+#   (la API no acepta esos comandos directamente aunque la web sí los entiende)
+#   - \int_a^b expr dx → integrate expr from a to b
+#   - \int sin límites → integrate
+# ✔ Traductor plaintext WA→LaTeX en el output:
+#   - Símbolos: != → \neq, -> → \to, infinity → \infty, pi → \pi
+#   - Funciones: sin/cos/tan/ln/log → \sin/\cos/\tan/\ln/\log, sqrt() → \sqrt{}
+#   - integral → \int, sum_ → \sum_, product_ → \prod_
+#   - lim_(x->a) → \lim_{x->a} (resuelto)
+#   - _(x) → _{x} y ^(x) → ^{x} general (integrales, sumas, límites)
+#   - constant → C, \piecewise eliminado, for → \text{for}
+#   - Conjuntos: element R → \in \mathbb{R}
+#   - Cada línea del pod en su propio bloque $$
+#   - Fracciones a/b en texto plano (decisión: aceptable, el usuario corrige si necesita)
+# ✔ Frases descriptivas de WA traducidas al español y extraídas fuera del $$
+#   via diccionario DESCRIPTIVE_PHRASES — agregar nuevas entradas según aparezcan
+#
+# NOTAS IMPORTANTES:
+# - El backslash en re.sub replacement: usar r'\comando' (1 backslash en raw string)
+#   NO usar r'\\comando' (produce doble backslash en el output)
+#   Excepción: cuando se necesita backslash literal en el output usar '\\\\'
+# - safe='\\{}^_' en urllib.parse.quote para no codificar caracteres LaTeX
+# - expression_display guarda el LaTeX original para mostrarlo en la nota
+#   expression es la versión convertida que se manda a WA
+#
+# PENDIENTES:
+# - Traducir el titulo de los pods
+# - Ver si hay mas graficas y extraer todas las graficas png
+# - falta \arg
+# - hay titulos de pods que no se transcriben si su contenido pero no los titulos (ej. paridad)
+#
+# Args: argv[1] expression · argv[2] vault_path
+
+import sys
+import os
+import json
+import re
+import urllib.request
+import urllib.parse
+
+sys.stdout.reconfigure(encoding='utf-8')
+
+APP_ID     = "A3WL4X56LG"
+ASSETS_DIR = "_assets"
+
+# Títulos de pods que nunca se muestran
+PODS_EXCLUDE_TITLES = {"Input interpretation", "Image"}
+
+# Frases descriptivas de WA que deben ir fuera del $$ — agregar según aparezcan
+
+DESCRIPTIVE_PHRASES = {
+# pods
+"**Input:**":"**Ecuación:**",# no traduce los titulos de los pods
+"**Result:**":"**Resultado:**",
+# En comentarios
+    "all real numbers": "todos los números reales",
+    "all positive real numbers": "todos los números reales positivos",
+    "all negative real numbers": "todos los números reales negativos",
+    "all non-negative real numbers": "todos los números reales no negativos",
+    "assuming a complex-valued logarithm": "asumiendo un logaritmo de valor complejo",
+    "assuming the principal value": "asumiendo el valor principal",
+    "assuming subintervals of equal length": "asumiendo subintervalos de igual longitud",
+    "Taylor series": "serie de Taylor",
+    "Maclaurin series": "serie de Maclaurin",
+    "Puiseux series": "serie de Puiseux",
+    "injective": "inyectiva",
+    "surjective": "sobreyectiva",
+    "bijective": "biyectiva",
+    "one-to-one": "uno a uno",
+    "injective (one-to-one)": "inyectiva (uno a uno)",
+    "bijective from its domain to R": "biyectiva de su dominio a R",
+    "from its domain to R": "de su dominio a R",
+    "parabola": "parábola",
+    "converges": "converge",
+    "no roots exist": "no existen raíces",
+    "width": "ancho",
+    "height": "alto",
+    "result in radians": "resultado en radianes",
+    "even": "par",
+    "odd": "impar",
+    "increasing": "creciente",
+    "decreasing": "decreciente",
+    "strictly increasing": "estrictamente creciente",
+    "strictly decreasing": "estrictamente decreciente",
+    "continuous": "continua",
+    "discontinuous": "discontinua",
+    "differentiable": "derivable",
+    "integrable": "integrable",
+    "periodic": "periódica",
+    "bounded": "acotada",
+    "unbounded": "no acotada",
+    "concave up": "cóncava hacia arriba",
+    "concave down": "cóncava hacia abajo",
+    "inflection point": "punto de inflexión",
+    "local maximum": "máximo local",
+    "local minimum": "mínimo local",
+    "global maximum": "máximo absoluto",
+    "global minimum": "mínimo absoluto",
+    "domain": "dominio",
+    "range": "recorrido",
+    "codomain": "codominio",
+    "root": "raíz",
+    "roots": "raíces",
+    "vertex": "vértice",
+    "intercept": "intersección",
+    "x-intercept": "intersección con el eje x",
+    "y-intercept": "intersección con el eje y",
+    "slope": "pendiente",
+    "asymptote": "asíntota",
+    "vertical asymptote": "asíntota vertical",
+    "horizontal asymptote": "asíntota horizontal",
+    "oblique asymptote": "asíntota oblicua",
+    "first-order linear ordinary differential equation": "ecuación diferencial ordinaria lineal de primer orden",
+    "sampling": "muestreo",
+    "is a transcendental number": "es un número trascendental",
+}
+
+
+expression = sys.argv[1]
+vault_path = sys.argv[2]
+
+# --- Preprocesador LaTeX → texto WA (solo casos que la API no acepta) ---
+def latex_to_wa(expr):
+    expr = expr.replace(r'\infty', 'infinity')
+    expr = expr.replace(r'\to', '->')
+    # \int_a^b expr dx → integrate expr from a to b
+    expr = re.sub(r'\\int_([^\^\s]+)\^([^\s]+)\s*(.+?)\s*d[a-z]',
+                  lambda m: f'integrate {m.group(3)} from {m.group(1)} to {m.group(2)}', expr)
+    # \int sin límites
+    expr = re.sub(r'\\int\s*', 'integrate ', expr)
+    expr = re.sub(r'\\frac\{d\^(\w+)\}\{dx\^\1\}', r'd^\1/dx^\1', expr)
+    expr = re.sub(r'\\frac\{d\}\{dx\}', 'd/dx', expr)
+    expr = re.sub(r'\\lim_\{([^}]+)\}\s*', r'limit ', expr)
+    expr = re.sub(r'\\frac\{([^}]+)\}\{([^}]+)\}', r'(\1)/(\2)', expr)
+    return expr
+
+# --- Traductor plaintext WA → LaTeX (Cálculo 1) ---
+def plaintext_to_latex(text):
+    # Símbolos básicos
+    text = text.replace('!=', r'\neq ')
+    text = text.replace('>=', r'\geq ')
+    text = text.replace('<=', r'\leq ')
+    text = text.replace('->', r'\to ')
+    text = text.replace('infinity', r'\infty')
+    text = text.replace('pi', r'\pi')
+    # Conjuntos
+    text = re.sub(r'element R', r'\\in \\mathbb{R}', text)
+    text = re.sub(
+        r'\{([^}]+) \\in \\mathbb\{R\} : ([^}]+)\}',
+        r'\\{\1 \\in \\mathbb{R} : \2\\}', text
+    )
+    # Funciones
+    text = re.sub(r'sqrt\(([^)]+)\)', r'\\sqrt{\1}', text)
+    text = re.sub(r'\bsin\b', r'\\sin', text)
+    text = re.sub(r'\bcos\b', r'\\cos', text)
+    text = re.sub(r'\btan\b', r'\\tan', text)
+    text = re.sub(r'\bln\b',  r'\\ln',  text)
+    text = re.sub(r'\blog\b', r'\\log', text)
+    # Cálculo
+    text = re.sub(r'integral', r'\\int', text)
+    text = re.sub(r'sum_', r'\\sum_', text)
+    text = re.sub(r'product_', r'\\prod_', text)
+    text = re.sub(r'min{', r'\\min{', text)
+    text = re.sub(r'max{', r'\\max{', text)
+    text = re.sub(r'\\piecewise', '', text)
+    text = re.sub(r'\bfor \b', r'\\text{ para }', text)
+    text = re.sub(r'\bat \b', r'\\text{ en }', text)#yo
+    text = re.sub(r'\band \b', r'\\text{ y }', text)#yo
+        # lim_(x->a) → \lim_{x->a} (formato que devuelve WA en output)
+    text = re.sub(r'lim_\(([^)]+)\)', lambda m: r'\lim_{' + m.group(1) + '}', text)
+    # _(x) → _{x} y ^(x) → ^{x} general (integrales, sumas, etc.)
+    text = re.sub(r'_\(([^)]+)\)', lambda m: '_{' + m.group(1) + '}', text)
+    text = re.sub(r'\^\(([^)]+)\)', lambda m: '^{' + m.group(1) + '}', text)
+    # limit ... as x->a (formato generado por el preprocesador, por si acaso)
+    text = re.sub(
+        r'limit\s+(.+?)\s+as\s+([a-z])\s*->\s*([^\s|]+)',
+        r'\\lim_{\2 \\to \3} \1', text
+    )
+    text = text.replace('constant', 'C')
+    return text
+
+def format_line(l):
+    """Envuelve la línea en $$ salvo que contenga una frase descriptiva conocida."""
+    l = l.strip()
+    if not l:
+        return None
+    desc_found = []
+    l_clean = l
+    for phrase, translation in DESCRIPTIVE_PHRASES.items():
+        pattern = re.compile(re.escape(phrase), re.IGNORECASE)
+        if pattern.search(l_clean):
+            l_clean = re.sub(r'\(?' + re.escape(phrase) + r'\)?', '', l_clean, flags=re.IGNORECASE).strip()
+            desc_found.append(translation)
+    l_clean = l_clean.strip(' ,|')
+    if l_clean:
+        result = f"$${l_clean}$$"
+        if desc_found:
+            result += " " + ", ".join(f"({t})" for t in desc_found)
+    else:
+        result = ", ".join(desc_found)
+    return result
+
+expression_display = expression
+expression = latex_to_wa(expression)
+
+# --- Llamada a WA Full API ---
+encoded = urllib.parse.quote(expression, safe='\\{}^_')
+url = f"https://api.wolframalpha.com/v2/query?input={encoded}&appid={APP_ID}&output=json"
+
+try:
+    with urllib.request.urlopen(url, timeout=10) as r:
+        data = json.loads(r.read().decode('utf-8'))
+except Exception as e:
+    print(f"[ERROR] No se pudo conectar con Wolfram Alpha: {e}")
+    sys.exit(1)
+
+if not data.get("queryresult", {}).get("success"):
+    print("[ERROR] Wolfram Alpha no pudo interpretar la expresión.")
+    sys.exit(1)
+
+pods = data["queryresult"].get("pods", [])
+
+# --- Buscar URL de gráfica (primer pod con imagen en cualquier Plot) ---
+plot_url = None
+for pod in pods:
+    pid = pod.get("id", "")
+    if "Plot" in pid or "plot" in pid.lower():
+        for sp in pod.get("subpods", []):
+            src = sp.get("img", {}).get("src")
+            if src:
+                plot_url = src
+                break
+    if plot_url:
+        break
+
+# --- Descargar y guardar imagen ---
+image_block = ""
+
+if plot_url:
+    assets_path = os.path.join(vault_path, ASSETS_DIR)
+    os.makedirs(assets_path, exist_ok=True)
+
+    existing = [
+        f for f in os.listdir(assets_path)
+        if re.match(r'^ima-\d+\.png$', f)
+    ]
+    numbers = [int(re.search(r'\d+', f).group()) for f in existing]
+    next_n  = max(numbers) + 1 if numbers else 1
+    img_name = f"ima-{next_n}.png"
+    img_path = os.path.join(assets_path, img_name)
+
+    try:
+        urllib.request.urlretrieve(plot_url, img_path)
+        image_block = f"**Gráfica:**\n![[{img_name}]]"
+    except Exception as e:
+        image_block = f"**Gráfica:** *(error al descargar: {e})*"
+
+# --- Extraer pods de texto (dinámico) ---
+lines = []
+
+if image_block:
+    lines.append(image_block)
+
+for pod in pods:
+    pod_title = pod.get("title", "")
+    pod_id    = pod.get("id", "")
+    if pod_title in PODS_EXCLUDE_TITLES:
+        continue
+    if "Plot" in pod_id or "plot" in pod_id.lower():
+        continue
+    label   = pod.get("title", pod_id)
+    subpods = pod.get("subpods", [])
+    texts   = [s["plaintext"] for s in subpods if s.get("plaintext", "").strip()]
+    if not texts:
+        continue
+    content = "\n".join(texts)
+    content = plaintext_to_latex(content)
+    # Cada línea en su propio bloque $$ — frases descriptivas fuera
+    content_lines = content.split("\n")
+    block = "\n".join(r for r in (format_line(l) for l in content_lines) if r is not None)
+    lines.append(f"**{label}:**\n{block}")
+
+# --- Construir output para la nota ---
+body = "\n\n".join(lines)
+
+output = f"""
+**WolframAlpha:** ${expression_display}$
+
+{body}
+
+```
+Resolvé paso a paso sin ejercicio adicional (MODO 3):
+{expression_display}
+Si aplica, graficá usando Desmos o TikZJax.
+```
+"""
+
+print(output)
