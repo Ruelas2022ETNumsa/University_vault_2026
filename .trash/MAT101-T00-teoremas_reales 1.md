@@ -79,6 +79,5 @@ b & = & c & (\text{LQQD})
 
 %%
 # galaxy-links
-[[MOC/MAT101-T00-star]]
+[[MAT101-T00-star]]
 %%
-

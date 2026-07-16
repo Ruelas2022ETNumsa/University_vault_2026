@@ -94,6 +94,5 @@ $C_s = ]-\infty, -\dfrac{5}{4}[ \cup ]-\dfrac{3}{8}, \infty[$ $C_s = {x / x < -\
 
 %%
 # galaxy-links
-[[Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-inecuaciones_lineales]]
+[[MAT101-T00-metodo_signos]]
 %%
-

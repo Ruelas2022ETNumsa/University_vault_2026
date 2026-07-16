@@ -90,6 +90,5 @@ $C_s = ]-\infty, -7] \cup \left[ \dfrac{5}{7}, \infty \right[ - {2}$
 
 %%
 # galaxy-links
-[[Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-inecuaciones_lineales]]
+[[MAT101-T00-metodo_signos]]
 %%
-

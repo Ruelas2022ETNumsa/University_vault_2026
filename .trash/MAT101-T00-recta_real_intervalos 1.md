@@ -126,6 +126,5 @@ x<3|#005F73
 
 %%
 # galaxy-links
-[[MOC/MAT101-T00-star]]
+[[MAT101-T00-star]]
 %%
-
