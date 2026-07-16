@@ -302,6 +302,8 @@ y agregar wikilinks en bloque %% al final del archivo
 | Crop y annotation folder → Observatory | Las imágenes recortadas o anotadas desde Excalidraw son dibujos técnicos puntuales — encajan como `observatory`, no como `constellation`. |
 | Attachments globales → `_assets` | Imágenes arrastradas desde fuera del vault y recortes de PDF++ van a `_assets/`. Excalidraw tiene su propio destino independiente. |
 
+# P
+
 %%
 galaxy-links
 [[_galaxy-system]]

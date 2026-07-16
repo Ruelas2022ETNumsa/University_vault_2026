@@ -175,6 +175,8 @@ Sin `uvx`, sin caché interno, sin condición de carrera. Claude Desktop invoca 
 ### Estado
 Resuelto. Basic Memory inicia automáticamente al abrir Claude Desktop tras reinicio de PC.
 
+# P
+
 %%
 galaxy-links
 [[_galaxy-system]]

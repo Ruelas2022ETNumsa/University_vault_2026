@@ -36,33 +36,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "Sem_01",
-        "Sem_09"
-      ]
-    },
-    "Semesters/Sem_09": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "ETN901"
-      ]
-    },
-    "Semesters/Sem_09/ETN901": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Partial_1"
-      ]
-    },
-    "Semesters/Sem_09/ETN901/Partial_1": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "ETN901-class001-P1-ago15.md",
-        "ETN901-class002-P1-ago15.md"
+        "Sem_01"
       ]
     },
     "Semestres": {
@@ -1350,7 +1324,7 @@
       "isHidden": false
     },
     "_app/_config/_claude-boot.md": {
-      "isPinned": true,
+      "isPinned": false,
       "isHidden": false
     },
     "_app/_config/_excalidraw-system.md": {
@@ -1358,7 +1332,7 @@
       "isHidden": false
     },
     "_app/_config/_galaxy-system.md": {
-      "isPinned": true,
+      "isPinned": false,
       "isHidden": false
     },
     "_app/_config/_graph-system.md": {
@@ -2811,14 +2785,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Semesters/Sem_09/ETN901/Partial_1/ETN901-class001-P1-ago15.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semesters/Sem_09/ETN901/Partial_1/ETN901-class002-P1-ago15.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Semestres/SEM_08/ETN806/Partial_1/ETN806-Parcial_1.md": {
       "isPinned": false,
       "isHidden": false
@@ -3087,9 +3053,7 @@
   },
   "pinnedFiles": [
     "_app/_appnotes/PDF_PP-guide.md",
-    "_app/_config/_claude-boot.md",
-    "Rubbish/section.md",
-    "_app/_config/_galaxy-system.md"
+    "Rubbish/section.md"
   ],
   "showHidden": false,
   "newItemPlacement": "top",

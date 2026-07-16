@@ -290,6 +290,8 @@ OmniSearch indexa todo el vault incluyendo PDFs. Requiere **Text Extractor** ins
 | `_PDF/` separado de `Semesters/` | Los PDFs son archivos fuente, no conocimiento procesado. Mismo principio que `_assets/`. |
 | Recortes PDF++ → `_assets/` | Son imágenes, no fuentes. Se tratan como `photon` con `photon_type: pdf-crop`. |
 
+# P
+
 %%
 galaxy-links
 [[_galaxy-system]]

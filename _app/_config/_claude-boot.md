@@ -334,6 +334,8 @@ Convención interna del vault para respaldar archivos antes de editarlos:
 9. **El usuario crea los backups, Claude edita el original directamente** — no ofrecer ni confirmar respaldo antes de editar un beacon, salvo que el usuario indique lo contrario.
 10. **Actualizar `date_updated`** en el YAML de cualquier beacon que se modifique.
 
+# P
+
 %%
 galaxy-links
 [[_app/_config/_galaxy-system]]

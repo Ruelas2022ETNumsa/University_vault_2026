@@ -198,6 +198,8 @@ El archivo exportado pasa a ser un `photon` (imagen estática) adjunto a la mism
 | Caché TikZJax en IndexedDB | No es configurable — es interno al plugin. El código en la nota es suficiente para reconstruir el output en cualquier PC con el plugin instalado. |
 | `_graph-system.md` como beacon unificador | Sin este archivo cada guía individual documenta su herramienta pero nadie documenta cuándo usar cuál ni cómo conviven. Este beacon resuelve esa capa de decisión. |
 
+# P
+
 %%
 galaxy-links
 [[_galaxy-system]]

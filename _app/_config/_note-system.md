@@ -217,6 +217,8 @@ El vault usa dos plugins complementarios para el formato de apuntes. Ver [[corne
 | `_tabnotes_archivo/` | Snapshots PDF de cierre de parcial (apuntes manuscritos propios) — fuera de Git, ver [[_TABnote-system]] |
 | `borrar/`          | Zona de espera antes de eliminar archivos permanentemente          |
 
+# P
+
 %%
 galaxy-links
 [[_galaxy-system]]

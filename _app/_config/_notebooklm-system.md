@@ -271,6 +271,8 @@ Paso 6 — Configurar NotebookLM
 | Flujo de materia nueva documentado aquí y no en `_library-system` | El flujo es operativo de NotebookLM — `_library-system` cubre solo la selección de libros; este beacon cubre todo lo que sigue hasta tener el notebook activo                   |
 | `_library_ETNXXX.md` separado de `ETNXXX_library.md` | Audiencias distintas: el primero es guía personal legible para el usuario; el segundo es fuente técnica densa para NotebookLM. Unirlos degradaría la utilidad de ambos          |
 
+# P
+
 %%
 galaxy-links
 [[_galaxy-system]]
