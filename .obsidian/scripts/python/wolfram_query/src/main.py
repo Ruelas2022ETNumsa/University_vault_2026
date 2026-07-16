@@ -34,8 +34,8 @@
 # PENDIENTES:
 # - Traducir el titulo de los pods
 # - Ver si hay mas graficas y extraer todas las graficas png
-#
-#
+# - falta \arg
+# - hay titulos de pods que no se transcriben si su contenido pero no los titulos (ej. paridad)
 #
 # Args: argv[1] expression · argv[2] vault_path
 
@@ -67,7 +67,6 @@ DESCRIPTIVE_PHRASES = {
     "all non-negative real numbers": "todos los números reales no negativos",
     "assuming a complex-valued logarithm": "asumiendo un logaritmo de valor complejo",
     "assuming the principal value": "asumiendo el valor principal",
-    "assuming subintervals of equal length": "asumiendo subintervalos de igual longitud",
     "assuming subintervals of equal length": "asumiendo subintervalos de igual longitud",
     "Taylor series": "serie de Taylor",
     "Maclaurin series": "serie de Maclaurin",
@@ -174,6 +173,7 @@ def plaintext_to_latex(text):
     text = re.sub(r'\\piecewise', '', text)
     text = re.sub(r'\bfor \b', r'\\text{ para }', text)
     text = re.sub(r'\bat \b', r'\\text{ en }', text)#yo
+    text = re.sub(r'\band \b', r'\\text{ y }', text)#yo
         # lim_(x->a) → \lim_{x->a} (formato que devuelve WA en output)
     text = re.sub(r'lim_\(([^)]+)\)', lambda m: r'\lim_{' + m.group(1) + '}', text)
     # _(x) → _{x} y ^(x) → ^{x} general (integrales, sumas, etc.)

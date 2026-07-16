@@ -1,99 +1,10 @@
 - $$\frac{x^2 - 4}{x - 2}$$
 
 
-**WolframAlpha:** $\frac{x^2 - 4}{x - 2}$
-
-**Gráfica:**
-![[Untitled-15-07-2026_19-46-09.png]]
-
-**Input:**
-$$(x^2 - 4)/(x - 2)$$
-
-**Result:**
-$$2 + x (\text{ para }x\neq 2)$$
-
-**Expanded form:**
-$$x^2/(x - 2) - 4/(x - 2)$$
-
-**Alternate form:**
-$$x + 2 (\text{ para }x\neq 2)$$
-
-**Quotient and remainder:**
-$$x^2 - 4 = (x + 2)(x - 2) + 0$$
-
-**Root:**
-$$x = -2$$
-
-**Properties as a real function:**
-$$\{x \in \mathbb{R} : x\neq 2\}$$
-$$\{y \in \mathbb{R} : y\neq 4\}$$
-inyectiva, uno a uno
-
-**Derivative:**
-$$d/dx((x^2 - 4)/(x - 2)) = 1$$
-
-**Indefinite integral:**
-$$\int(x^2 - 4)/(x - 2) dx = 1/2 x (x + 4) + C$$
-
-**Series representations:**
-$$(-4 + x^2)/(-2 + x) = \sum_{n=-∞}^∞ (  | 1 | n = 1$$
-$$2 | n = 0) x^n$$
-$$(-4 + x^2)/(-2 + x) = \sum_{n=-∞}^∞ (  | 1 | n = 1$$
-$$4 | n = 0) (-2 + x)^n$$
-$$(-4 + x^2)/(-2 + x) = \sum_{n=-∞}^∞ (  | 1 | n = 1$$
-$$3 | n = 0) (-1 + x)^n$$
-
-```
-Resolvé paso a paso sin ejercicio adicional (MODO 3):
-\frac{x^2 - 4}{x - 2}
-Si aplica, graficá usando Desmos o TikZJax.
-```
-
-
 
 
 
 x^3 - 8
-
-
-**WolframAlpha:** $x^3 - 8$
-
-**Gráfica:**
-![[ima-35.png]]
-
-**Input:**
-$$x^3 - 8$$
-
-**Alternate forms:**
-$$(x - 2) (x^2 + 2 x + 4)$$
-$$-((-x + 2 (-1)^{1/3} - 2) (x - 2) (x + 2 (-1)^{1/3}))$$
-
-**Real root:**
-$$x = 2$$
-
-**Complex roots:**
-$$x = -1 - i \sqrt{3}$$
-$$x = -1 + i \sqrt{3}$$
-
-**Polynomial discriminant:**
-$$Δ = -1728$$
-
-**Properties as a real function:**
-$$R$$ (todos los números reales)
-$$R$$ (todos los números reales)
-biyectiva, de su dominio a R
-
-**Derivative:**
-$$d/dx(x^3 - 8) = 3 x^2$$
-
-**Indefinite integral:**
-$$\int(x^3 - 8) dx = x^4/4 - 8 x + C$$
-
-```
-Resolvé paso a paso sin ejercicio adicional (MODO 3):
-x^3 - 8
-Si aplica, graficá usando Desmos o TikZJax.
-```
 
 
 
@@ -107,6 +18,7 @@ Si aplica, graficá usando Desmos o TikZJax.
 
 
 \sqrt[3]{27x^6}
+
 
 
 
@@ -293,85 +205,7 @@ y' = 2xy
 A3WL4X56LG
 ```
 
-$url = "https://api.wolframalpha.com/v2/query?input=integrate+e^(-x^2)+from+0+to+infinity&appid=A3WL4X56LG&output=json"
-$r = Invoke-WebRequest -Uri $url -UseBasicParsing
-($r.Content | ConvertFrom-Json).queryresult | Select-Object success, error
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-$url = "https://api.wolframalpha.com/v2/query?input=x^2-4&appid=A3WL4X56LG&output=json&formats=plaintext,latex"
-$r = Invoke-WebRequest -Uri $url -UseBasicParsing
-($r.Content | ConvertFrom-Json).queryresult.pods | ForEach-Object { $_.title; $_.subpods[0].plaintext; $_.subpods[0].latex; "---" }
-
-
-
-$url = "https://api.wolframalpha.com/v2/query?input=limit+sin(x)%2Fx+as+x->0&appid=A3WL4X56LG&output=json"
-$r = Invoke-WebRequest -Uri $url -UseBasicParsing
-($r.Content | ConvertFrom-Json).queryresult.pods | ForEach-Object { $_.title; $_.subpods[0].plaintext; "---" }
-
-
-
-
-
-
-$expr = "\lim_{x \to 0} \frac{\sin(x)}{x}"
-$url = "https://api.wolframalpha.com/v2/query?input=" + $expr + "&appid=A3WL4X56LG&output=json"
-$r = Invoke-WebRequest -Uri $url -UseBasicParsing
-($r.Content | ConvertFrom-Json).queryresult | Select-Object success, error
-
-
-
-
-$url = "https://api.wolframalpha.com/v2/query?input=&appid=A3WL4X56LG&output=json"
-$r = Invoke-WebRequest -Uri $url -UseBasicParsing
-($r.Content | ConvertFrom-Json).queryresult.pods | Select-Object title, id
-
-
-
-
-
-
-
-
-
-
-$url = "https://api.wolframalpha.com/v2/query?input=sum+of+n^2+for+n%3D1+to+10&appid=A3WL4X56LG&output=json"
-$r = Invoke-WebRequest -Uri $url -UseBasicParsing
-($r.Content | ConvertFrom-Json).queryresult.pods | Select-Object title, id
-
-
-
-
-$expr = "\lim_{x \to 0} \frac{\sin(x)}{x}"
-$encoded = [System.Web.HttpUtility]::UrlEncode($expr)
-$url = "https://api.wolframalpha.com/v2/query?input=$encoded&appid=A3WL4X56LG&output=json"
-$r = Invoke-WebRequest -Uri $url -UseBasicParsing
-($r.Content | ConvertFrom-Json).queryresult | Select-Object success, error
-
-
-
-
-
-
-
-
-
-
-$url = "https://api.wolframalpha.com/v2/query?input=sum+of+n^2+for+n%3D1+to+10&appid=A3WL4X56LG&output=json"
-$r = Invoke-WebRequest -Uri $url -UseBasicParsing
-($r.Content | ConvertFrom-Json).queryresult.pods | Select-Object title, id, @{n='plaintext';e={$_.subpods[0].plaintext}}

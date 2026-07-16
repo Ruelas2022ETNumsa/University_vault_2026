@@ -5,6 +5,13 @@ date: 13-7-2026-(23:16)
 
 ## Objetivo
 
+15/july
+> los pendientes estan el el codigo !!!! para WolframAlpha solo faltan detalles, se probo todo para lo que es calculo
+
+
+
+
+
 claude debe integrar la lista de dops para lo cual aca esta la tabla y la lista en bruto, tambien estan los valores input con los que se extrajeron los dop con powershell
 
 ### Datos
