@@ -86,3 +86,9 @@ Verificar si quedaron referencias rotas al archivo original tras el movimiento a
 | ----- | -------- | ------ |
 |       |          |        |
 
+
+---
+
+%%
+# galaxy-links
+%%

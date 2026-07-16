@@ -47,8 +47,10 @@ status: activo
 - [[MAT101-T00-ej_inec_valabs_mayor]]
 - [[MAT101-T00-ej_inec_irracional]]
 
+---
+
 %%
-galaxy-links
+# galaxy-links
 [[MAT101-T00-axiomas_cuerpo]]
 [[MAT101-T00-axiomas_igualdad]]
 [[MAT101-T00-teoremas_reales]]

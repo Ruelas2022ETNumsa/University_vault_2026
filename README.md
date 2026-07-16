@@ -103,7 +103,3 @@ Toda la documentación del sistema vive en `_app/_config/`:
 - `_mindmap-system.md` — sistema Excalidraw + Mindmap Builder
 - `_graph-system.md` — Desmos y TikZJax (neutrinos)
 - `_ToDo-system.md` — pendientes activos del vault
-
-
-
-

@@ -69,3 +69,10 @@ Si Claude necesita más contexto sobre un archivo enlazado, puede leerlo directa
 | Fecha | Decisión | Motivo |
 | ----- | -------- | ------ |
 |       |          |        |
+
+
+---
+
+%%
+# galaxy-links
+%%
