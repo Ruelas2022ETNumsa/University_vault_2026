@@ -209,7 +209,6 @@ El vault usa dos plugins complementarios para el formato de apuntes. Ver [[corne
 | `_app/Excalidraw/` | Archivos fuente de Excalidraw — `Constellations/` y `Observatory/` |
 | `_app/scripts/`    | Scripts de automatización del baúl                                 |
 | `_app/solve/`      | Problemas conocidos y soluciones (git, sync, etc.)                 |
-| `_app/TagsRoutes/` | Archivos de configuración de rutas de tags                         |
 | `.cache/desmos/`   | Caché SVG de Desmos — generado automáticamente por el plugin       |
 | `_assets/`         | Imágenes exportadas: .png, .svg, .jpeg                             |
 | `_templates/`      | Plantillas de notas — una por tipo de cuerpo galaxy                |

@@ -367,4 +367,3 @@ Ribbon:
 [[_app/_config/_sync-system.md]]
 [[_app/_config/_galaxy-system.md]]
 %%
-

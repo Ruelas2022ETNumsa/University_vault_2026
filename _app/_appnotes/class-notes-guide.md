@@ -204,4 +204,3 @@ Sean $a, b \in \mathbb{R}$
 [[_app/_config/_note-system.md]]
 [[_app/_config/_galaxy-system.md]]
 %%
-

@@ -1227,7 +1227,6 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "plugin_guide 1.md",
         "script_guide.md",
         "claude_prompts.md",
         "Rclone_guide.md",
@@ -1276,7 +1275,7 @@
       "customOrder": [
         "patch-obsidian.bat",
         "patch-obsidian.ps1",
-        "TagsRoute.md"
+        "TagsRoute(legacy).md"
       ]
     },
     "_app/_appnotes/tagroute_parche/patch-obsidian.bat": {
@@ -1286,10 +1285,6 @@
     "_app/_appnotes/tagroute_parche/patch-obsidian.ps1": {
       "isPinned": false,
       "isHidden": true
-    },
-    "_app/_appnotes/tagroute_parche/TagsRoute.md": {
-      "isPinned": false,
-      "isHidden": false
     },
     "_app/_appnotes/obsidian_guide.md": {
       "isPinned": false,
@@ -2933,10 +2928,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_app/_appnotes/plugin_guide 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_assets": {
       "isPinned": false,
       "isHidden": false,
@@ -3047,6 +3038,10 @@
       "isHidden": false
     },
     "_tasks/tsk_alx-rul_5.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_appnotes/tagroute_parche/TagsRoute(legacy).md": {
       "isPinned": false,
       "isHidden": false
     }

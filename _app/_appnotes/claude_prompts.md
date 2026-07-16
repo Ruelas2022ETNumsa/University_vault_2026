@@ -127,4 +127,3 @@ Vamos a realizar una configuración técnica. Sigue este flujo:
 # galaxy-links
 [[_app/_config/_claude-boot.md]]
 %%
-

@@ -85,6 +85,5 @@ Siguiendo este orden en **ambas máquinas** se evitan la mayoría de los conflic
 
 %%
 # galaxy-links
-[[_app/_config/_galaxy-system.md]]
+[[_galaxy-system]]
 %%
-

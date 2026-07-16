@@ -60,8 +60,9 @@ Si $a, b, c \in \mathbb{R}$:
 > 1. **Propiedad de sustitución:** Aunque no se lista explícitamente en el manuscrito, es un axioma implícito de la igualdad: si $a = b$, entonces $a$ puede ser reemplazado por $b$ en cualquier proposición matemática sin alterar el valor de verdad de la misma.
 > 2. **Unicidad de operaciones:** Apostol enfatiza que la suma $x + y$ y el producto $xy$ están **unívocamente determinados** por sus elementos. Esto garantiza que si $a = b$, entonces $a + c = b + c$ y $ac = bc$.
 > 3. **Definiciones derivadas:** La resta y la división no se consideran operaciones independientes en la axiomática pura, sino que se definen estrictamente a través de la existencia de **opuestos** ($a - b := a + (-b)$) y **recíprocos** ($\dfrac{a}{b} := a \cdot b^{-1}$), tal como sugiere la nota del manuscrito.
+---
 
 %%
-galaxy-links
+# galaxy-links
 [[MAT101-T00-star]]
 %%

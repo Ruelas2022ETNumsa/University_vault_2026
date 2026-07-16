@@ -1078,6 +1078,6 @@ y=\min(\operatorname{mod}(x,1),1-\operatorname{mod}(x,1))|#005F73
 
 %%
 # galaxy-links
-[[_app/_config/_galaxy-system.md]]
-[[_app/_config/_note-system.md]]
+[[_galaxy-system]]
+[[_note-system]]
 %%

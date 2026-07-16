@@ -164,3 +164,9 @@ Dentro de la columna de Claves puede aparecer:
 Es un marcador técnico obligatorio para el render en Obsidian.
 Ignorar completamente — no contiene contenido matemático.
 
+---
+
+%%
+# galaxy-links
+
+%%

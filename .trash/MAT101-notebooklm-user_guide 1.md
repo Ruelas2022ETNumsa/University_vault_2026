@@ -271,7 +271,7 @@ Ambos notebooks comparten el mismo stack de PDFs. Las guías `.md` varían segú
 
 %%
 # galaxy-links
-[[_config/_app/_config/_notebooklm-system.md]]
-[[_app/notebooklm/prompts/MAT101/MAT101-study.md]]
-[[_app/notebooklm/prompts/MAT101/MAT101-transcription-legacy.md]]
+[[_config/_notebooklm-system]]
+[[prompts/MAT101/MAT101-study]]
+[[MAT101-transcription-legacy]]
 %%

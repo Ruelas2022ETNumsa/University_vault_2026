@@ -300,4 +300,3 @@ OmniSearch indexa todo el vault incluyendo PDFs. Requiere **Text Extractor** ins
 [[_app/_config/_template-system.md]]
 [[_app/_config/_ToDo-system.md]]
 %%
-

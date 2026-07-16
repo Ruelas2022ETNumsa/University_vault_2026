@@ -1059,7 +1059,7 @@ El SVG generado por TikZJax a veces tiene problemas con colores en modo oscuro d
 
 %%
 # galaxy-links
-[[_app/_config/_graph-system.md]]
-[[_app/_config/_galaxy-system.md]]
-[[_app/_appnotes/desmos_guide.md]]
+[[_graph-system]]
+[[_galaxy-system]]
+[[desmos_guide]]
 %%

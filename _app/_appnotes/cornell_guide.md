@@ -131,4 +131,3 @@ El texto entre `;;` aparece difuminado en modo lectura — al hacer hover se rev
 [[_app/_appnotes/plugin_guide.md]]
 [[_app/_appnotes/Marginalia_guide.md]]
 %%
-

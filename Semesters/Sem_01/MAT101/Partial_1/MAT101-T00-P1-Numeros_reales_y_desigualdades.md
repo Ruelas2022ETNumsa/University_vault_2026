@@ -922,8 +922,10 @@ $C_s = ]-3, -1] \cup [0, 2[$
 > 1. $f(x) \geq 0$ (Condición de existencia).
 > 2. $g(x) > f(x)$ (Resolución algebraica). No es necesario pedir $g(x) \geq 0$ por separado, ya que al ser mayor que $f(x)$ (que ya es $\geq 0$), se cumple implícitamente.
 
+---
+
 %%
-galaxy-links
+# galaxy-links
 [[MAT101-T00-star]]
 [[MAT101-T00-axiomas_cuerpo]]
 [[MAT101-T00-axiomas_igualdad]]

@@ -31,7 +31,9 @@ x(x-4)(x+4) & = & 0 & (\text{diferencia de cuadrados})
 
 $C_s = {-4, 0, 4}$
 
+---
+
 %%
-galaxy-links
+# galaxy-links
 [[MAT101-T00-metodo_signos]]
 %%

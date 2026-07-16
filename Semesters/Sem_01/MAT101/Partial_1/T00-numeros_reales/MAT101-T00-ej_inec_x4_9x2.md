@@ -45,7 +45,9 @@ $C_s = ]-\infty, -3] \cup {0} \cup [3, \infty[$
  
  $C_s = {x / x \leq -3 \lor x=0 \lor x \geq 3}$
 
+---
+
 %%
-galaxy-links
+# galaxy-links
 [[MAT101-T00-metodo_signos]]
 %%

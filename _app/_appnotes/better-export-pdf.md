@@ -225,4 +225,3 @@ Uso en el markdown: insertar `<div class="break-page"></div>` donde se quiera fo
 [[_app/_config/_galaxy-system.md]]
 [[_app/_appnotes/desmos_guide.md]]
 %%
-

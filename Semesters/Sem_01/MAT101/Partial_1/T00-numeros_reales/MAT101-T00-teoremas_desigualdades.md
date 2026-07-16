@@ -74,7 +74,9 @@ Si $a, b, c, d \in \mathbb{R}$:
 > 4. **Teoremas de potencias y signos**: Apostol demuestra formalmente que si $a \neq 0$, entonces $a^2 > 0$ (Teorema I.20). De este hecho se deriva inmediatamente que $1 > 0$, ya que $1 = 1^2$ (Teorema I.21).
 > 5. **Interpretación de inversos**: El teorema I.23 de Apostol confirma que si $a < b$, entonces $-a > -b$, lo que fundamenta la regla del cambio de sentido al multiplicar por $-1$.
 
+---
+
 %%
-galaxy-links
+# galaxy-links
 [[MAT101-T00-star]]
 %%

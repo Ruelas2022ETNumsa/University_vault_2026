@@ -67,7 +67,9 @@ y=0 | #005F73
 
 $C_s = ]-3, -1] \cup [0, 2[$
 
+---
+
 %%
-galaxy-links
+# galaxy-links
 [[MAT101-T00-metodo_signos]]
 %%

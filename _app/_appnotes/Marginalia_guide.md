@@ -825,4 +825,3 @@ Canvas infinito y de forma libre para arrastrar, conectar y materializar margina
 [[_app/_appnotes/obsidian_guide.md]]
 [[_app/_appnotes/latex_guide.md]]
 %%
-

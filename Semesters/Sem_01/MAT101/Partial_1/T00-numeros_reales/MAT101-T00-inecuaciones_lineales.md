@@ -152,7 +152,9 @@ y=0|#005F73
 > 
 > - Los ceros provenientes del denominador ($Q(x)=0$) **nunca** se incluyen en el conjunto solución (siempre generan intervalos abiertos), independientemente de si la desigualdad incluye el signo igual ($\geq, \leq$), para evitar la división por cero.
 
+---
+
 %%
-galaxy-links
+# galaxy-links
 [[MAT101-T00-star]]
 %%

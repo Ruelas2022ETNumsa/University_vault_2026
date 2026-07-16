@@ -118,4 +118,3 @@ YAML generado incluye: `galaxy_body: bridge` · `scope: stitch` · `subject` · 
 [[_app/_appnotes/cornell_guide.md]]
 [[_app/_appnotes/plugin_guide.md]]
 %%
-

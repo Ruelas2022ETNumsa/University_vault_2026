@@ -2028,6 +2028,6 @@ Grafica :
 
 %%
 # galaxy-links
-[[_app/_config/_galaxy-system.md]]
-[[_app/_config/_note-system.md]]
+[[_galaxy-system]]
+[[_note-system]]
 %%

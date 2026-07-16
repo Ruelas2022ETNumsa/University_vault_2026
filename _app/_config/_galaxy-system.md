@@ -110,10 +110,9 @@ University_Vault_2026/
 │   ├── scripts/                ← scripts de automatización para mantenimiento del baúl
 │   │   └── tag_routs_scripts/
 │   │
-│   ├── solve/                  ← problemas conocidos y sus soluciones
-│   │   └── git_solve.md        ← soluciones a conflictos de git y sincronización
-│   │
-│   └── TagsRoutes/             ← archivos de configuración de rutas de tags
+│   └── solve/                  ← problemas conocidos y sus soluciones
+│       └── git_solve.md        ← soluciones a conflictos de git y sincronización
+│   
 │
 ├── _assets/                    ← todos los archivos visuales exportados
 │                                  .png, .svg, .jpeg exportados desde Desmos,

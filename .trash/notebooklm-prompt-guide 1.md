@@ -611,7 +611,7 @@ Consultar siempre las fuentes cargadas en el notebook según el tema.
 
 %%
 # galaxy-links
-[[_app/_config/_notebooklm-system.md]]
-[[_app/_config/_library-system.md]]
-[[_app/_config/_TABnote-system.md]]
+[[_notebooklm-system]]
+[[_library-system]]
+[[_TABnote-system]]
 %%

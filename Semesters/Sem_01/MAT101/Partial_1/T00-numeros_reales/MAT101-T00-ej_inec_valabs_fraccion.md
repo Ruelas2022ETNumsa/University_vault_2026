@@ -90,7 +90,9 @@ x > -0.375 | #EE9B00
 
 $C_s = ]-\infty, -\dfrac{5}{4}[ \cup ]-\dfrac{3}{8}, \infty[$ $C_s = {x / x < -\dfrac{5}{4} \lor x > -\dfrac{3}{8}}$
 
+---
+
 %%
-galaxy-links
+# galaxy-links
 [[MAT101-T00-metodo_signos]]
 %%

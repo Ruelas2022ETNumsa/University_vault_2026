@@ -86,7 +86,9 @@ x <= -7 | #EE9B00
 
 $C_s = ]-\infty, -7] \cup \left[ \dfrac{5}{7}, \infty \right[ - {2}$
 
+---
+
 %%
-galaxy-links
+# galaxy-links
 [[MAT101-T00-metodo_signos]]
 %%

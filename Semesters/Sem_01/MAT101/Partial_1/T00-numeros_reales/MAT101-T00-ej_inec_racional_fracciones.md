@@ -50,7 +50,9 @@ $C_s = ]-\infty, -3[ \cup ]1/3, 1[$
 
  $C_s = {x / x < -3 \lor 1/3 < x < 1}$
 
+---
+
 %%
-galaxy-links
+# galaxy-links
 [[MAT101-T00-metodo_signos]]
 %%
