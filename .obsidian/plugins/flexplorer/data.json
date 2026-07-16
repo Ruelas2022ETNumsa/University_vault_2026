@@ -5,7 +5,7 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
-        "Untitled.md",
+        "wolfram alpha example.md",
         "_tasks",
         "_assets",
         "Rubbish",
@@ -3032,10 +3032,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Untitled.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_assets/Untitled-15-07-2026_22-21-20.png": {
       "isPinned": false,
       "isHidden": false
@@ -3081,6 +3077,10 @@
       "isHidden": false
     },
     "_assets/Untitled-15-07-2026_22-40-34.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "wolfram alpha example.md": {
       "isPinned": false,
       "isHidden": false
     }
