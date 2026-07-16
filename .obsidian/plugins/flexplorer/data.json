@@ -2963,32 +2963,12 @@
       "customOrder": [
         "tsk_proyectos_shellcmd.md",
         "tsk_tpl.md",
-        "tsk_krajo.md",
-        "tsk_alxrul.md",
-        "tsk_alxhot.md",
-        "tsk_alx-rul.md",
-        "tsk_alxgml.md"
+        "tsk_krajo_2.md",
+        "tsk_alxrul_4.md",
+        "tsk_alxhot_1.md",
+        "tsk_alx-rul_5.md",
+        "tsk_alxgml_3.md"
       ]
-    },
-    "_tasks/tsk_alxgml.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_tasks/tsk_alx-rul.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_tasks/tsk_alxhot.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_tasks/tsk_alxrul.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_tasks/tsk_krajo.md": {
-      "isPinned": false,
-      "isHidden": false
     },
     "_tasks/tsk_tpl.md": {
       "isPinned": false,
@@ -3047,6 +3027,26 @@
       "isHidden": false
     },
     "wolfram alpha example.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_tasks/tsk_alxgml_3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_tasks/tsk_krajo_2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_tasks/tsk_alxhot_1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_tasks/tsk_alxrul_4.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_tasks/tsk_alx-rul_5.md": {
       "isPinned": false,
       "isHidden": false
     }

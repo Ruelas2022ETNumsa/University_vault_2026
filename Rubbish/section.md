@@ -3,7 +3,7 @@
 
 %%
 galaxy-links
-[[_galaxy-system]]
+[[_app/_config/_galaxy-system.md]]
 %%
 
 --- _app\_config\_claude-boot.md ---
@@ -11,23 +11,23 @@ galaxy-links
 
 %%
 galaxy-links
-[[_app/_config/_galaxy-system]]
-[[_note-system]]
-[[_template-system]]
-[[_pdf-system]]
-[[_library-system]]
-[[_mindmap-system]]
-[[_excalidraw-system]]
-[[_graph-system]]
-[[_sync-system]]
-[[_basic-memory-system]]
-[[_notebooklm-system]]
-[[_TABnote-system]]
-[[_ToDo-system]]
-[[claude_solve]]
-[[_claude-matter-boot]]
-[[cornell_guide]]
-[[Marginalia_guide]]
+[[_app/_config/_galaxy-system.md]]
+[[_app/_config/_note-system.md]]
+[[_app/_config/_template-system.md]]
+[[_app/_config/_pdf-system.md]]
+[[_app/_config/_library-system.md]]
+[[_app/_config/_mindmap-system.md]]
+[[_app/_config/_excalidraw-system.md]]
+[[_app/_config/_graph-system.md]]
+[[_app/_config/_sync-system.md]]
+[[_app/_config/_basic-memory-system.md]]
+[[_app/_config/_notebooklm-system.md]]
+[[_app/_config/_TABnote-system.md]]
+[[_app/_config/_ToDo-system.md]]
+[[_app/solve/claude_solve.md]]
+[[_app/_config/_claude-matter-boot.md]]
+[[_app/_appnotes/cornell_guide.md]]
+[[_app/_appnotes/Marginalia_guide.md]]
 %%
 
 --- _app\_config\_claude-matter-boot.md ---
@@ -35,10 +35,10 @@ galaxy-links
 
 %%
 galaxy-links
-[[_claude-boot]]
-[[_galaxy-system]]
-[[_note-system]]
-[[_ToDo-system]]
+[[_app/_config/_claude-boot.md]]
+[[_app/_config/_galaxy-system.md]]
+[[_app/_config/_note-system.md]]
+[[_app/_config/_ToDo-system.md]]
 %%
 
 --- _app\_config\_excalidraw-system.md ---
@@ -46,12 +46,12 @@ galaxy-links
 
 %%
 galaxy-links
-[[_galaxy-system]]
-[[_mindmap-system]]
-[[_template-system]]
-[[_note-system]]
-[[_pdf-system]]
-[[_ToDo-system]]
+[[_app/_config/_galaxy-system.md]]
+[[_app/_config/_mindmap-system.md]]
+[[_app/_config/_template-system.md]]
+[[_app/_config/_note-system.md]]
+[[_app/_config/_pdf-system.md]]
+[[_app/_config/_ToDo-system.md]]
 %%
 
 --- _app\_config\_galaxy-system.md ---
@@ -59,13 +59,13 @@ galaxy-links
 
 %%
 galaxy-links
-[[_template-system]]
-[[_pdf-system]]
-[[_mindmap-system]]
-[[_note-system]]
-[[_graph-system]]
-[[_ToDo-system]]
-[[_notebooklm-system]]
+[[_app/_config/_template-system.md]]
+[[_app/_config/_pdf-system.md]]
+[[_app/_config/_mindmap-system.md]]
+[[_app/_config/_note-system.md]]
+[[_app/_config/_graph-system.md]]
+[[_app/_config/_ToDo-system.md]]
+[[_app/_config/_notebooklm-system.md]]
 %%
 
 --- _app\_config\_graph-system.md ---
@@ -73,12 +73,12 @@ galaxy-links
 
 %%
 galaxy-links
-[[_galaxy-system]]
-[[_note-system]]
-[[_mindmap-system]]
-[[MAT101_desmos]]
-[[guides/MAT101/MAT101_TikzJax]]
-[[_ToDo-system]]
+[[_app/_config/_galaxy-system.md]]
+[[_app/_config/_note-system.md]]
+[[_app/_config/_mindmap-system.md]]
+[[_app/notebooklm/guides/MAT101/MAT101_desmos.md]]
+[[_app/notebooklm/guides/MAT101/MAT101_TikzJax.md]]
+[[_app/_config/_ToDo-system.md]]
 %%
 
 --- _app\_config\_library-system.md ---
@@ -86,9 +86,9 @@ galaxy-links
 
 %%
 galaxy-links
-[[_claude-boot]]
-[[_notebooklm-system]]
-[[_ToDo-system]]
+[[_app/_config/_claude-boot.md]]
+[[_app/_config/_notebooklm-system.md]]
+[[_app/_config/_ToDo-system.md]]
 %%
 
 --- _app\_config\_library_ETN505(i).md ---
@@ -96,8 +96,10 @@ galaxy-links
 
 %%
 galaxy-links
-[[_config/_library-system]]
-[[guides/ETN505/ETN505_library]]
+[[_app/_config/_library-system.md]]
+
+(aun no existe)
+[[_app/notebooklm/guides/ETN505_library.md]] 
 %%
 
 --- _app\_config\_mindmap-system.md ---
@@ -105,11 +107,11 @@ galaxy-links
 
 %%
 galaxy-links
-[[_galaxy-system]]
-[[_template-system]]
-[[_note-system]]
-[[_pdf-system]]
-[[_ToDo-system]]
+[[_app/_config/_galaxy-system.md]]
+[[_app/_config/_template-system.md]]
+[[_app/_config/_note-system.md]]
+[[_app/_config/_pdf-system.md]]
+[[_app/_config/_ToDo-system.md]]
 %%
 
 --- _app\_config\_note-system.md ---
@@ -117,12 +119,12 @@ galaxy-links
 
 %%
 galaxy-links
-[[_galaxy-system]]
-[[_template-system]]
-[[_mindmap-system]]
-[[_pdf-system]]
-[[_graph-system]]
-[[_ToDo-system]]
+[[_app/_config/_galaxy-system.md]]
+[[_app/_config/_template-system.md]]
+[[_app/_config/_mindmap-system.md]]
+[[_app/_config/_pdf-system.md]]
+[[_app/_config/_graph-system.md]]
+[[_app/_config/_ToDo-system.md]]
 %%
 
 --- _app\_config\_notebooklm-system.md ---
@@ -130,13 +132,13 @@ galaxy-links
 
 %%
 galaxy-links
-[[_galaxy-system]]
-[[_TABnote-system]]
-[[_library-system]]
-[[guides/MAT101/MAT101_desmos]]
-[[guides/MAT101/MAT101_TikzJax]]
-[[_ToDo-system]]
-[[Rclone_guide]]
+[[_app/_config/_galaxy-system.md]]
+[[_app/_config/_TABnote-system.md]]
+[[_app/_config/_library-system.md]]
+[[_app/notebooklm/guides/MAT101/MAT101_desmos.md]]
+[[_app/notebooklm/guides/MAT101/MAT101_TikzJax.md]]
+[[_app/_config/_ToDo-system.md]]
+[[_app/_appnotes/Rclone_guide.md]]
 %%
 
 --- _app\_config\_pdf-system.md ---
@@ -144,9 +146,67 @@ galaxy-links
 
 %%
 galaxy-links
-[[_galaxy-system]]
-[[_note-system]]
-[[_mindmap-system]]
-[[_template-system]]
-[[_ToDo-system]]
+[[_app/_config/_galaxy-system.md]]
+[[_app/_config/_note-system.md]]
+[[_app/_config/_mindmap-system.md]]
+[[_app/_config/_template-system.md]]
+[[_app/_config/_ToDo-system.md]]
+%%
+
+--- _app\_config\_sync-system.md ---
+# P
+
+%%
+galaxy-links
+[[_app/_config/_galaxy-system.md]]
+[[_app/_config/_ToDo-system.md]]
+[[_app/_appnotes/Rclone_guide.md]]
+%%
+
+--- _app\_config\_TABnote-system.md ---
+# P
+
+%%
+galaxy-links
+[[_app/_config/_galaxy-system.md]]
+[[_app/_config/_note-system.md]]
+[[_app/_config/_pdf-system.md]]
+[[_app/_config/_template-system.md]]
+[[_app/_config/_notebooklm-system.md]]
+[[_app/_config/_ToDo-system.md]]
+%%
+
+--- _app\_config\_template-system.md ---
+# P
+
+%%
+galaxy-links
+[[_app/_config/_galaxy-system.md]]
+[[_app/_config/_mindmap-system.md]]
+[[_app/_config/_note-system.md]]
+[[_app/_config/_pdf-system.md]]
+[[_app/_config/_ToDo-system.md]]
+%%
+
+--- _app\_config\_ToDo-system.md ---
+# P
+
+%%
+galaxy-links
+[[_app/_config/_galaxy-system.md]]
+[[_app/_config/_note-system.md]]
+[[_app/_config/_sync-system.md]]
+[[_app/_config/_excalidraw-system.md]]
+[[_app/_config/_graph-system.md]]
+[[_app/_config/_TABnote-system.md]]
+[[_app/_config/_notebooklm-system.md]]
+%%
+
+--- _app\_config\_library_MAT101.md ---
+# P
+
+%%
+galaxy-links
+[[_app/_config/_library-system.md]]
+[[_app/notebooklm/guides/MAT101/MAT101_library.md]]
 %%

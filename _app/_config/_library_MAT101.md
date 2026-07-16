@@ -228,6 +228,8 @@ Verificar fórmula rápida  → Larson Cheat Sheet
 
 ---
 
+# P
+
 %%
 galaxy-links
 [[_config/_library-system]]

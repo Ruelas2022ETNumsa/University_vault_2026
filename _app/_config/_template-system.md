@@ -493,6 +493,9 @@ status: completo
 | `tpl-supernova.md` creado (2026-06-24)                     | Nuevo tipo #14 aprobado en [[_TABnote-system]]. Una sola plantilla con dos ramas: `class` individual (por sesión) y fusionada (tema completo). Ambas van a la raíz de `Partial_N/` porque una class puede cubrir subtítulos de varios temas.                                                                        |
 | `_claude-matter-boot.md` movido a `_app/_config/` (2026-06-25) | Pasó de ser una herramienta informal en`_templates/`a beacon galaxy oficial. Genera el contexto de trabajo de Claude para materias específicas — protocolo derevisión de ejercicios, flujo de trabajo y guía de formulario por materia. |
 
+---
+
+# P
 
 %%
 galaxy-links

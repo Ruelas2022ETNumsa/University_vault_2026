@@ -272,6 +272,10 @@ Samsung Notes ha tenido rupturas de compatibilidad documentadas en actualizacion
 | Ruta de las notas `supernova` | `Semesters/Sem_NN/ETNXXX/Partial_N/` — raíz del parcial, no dentro de `Topic_NN/`, porque una class puede cubrir subtítulos de varios temas. |
 | Ciclo de vida `supernova` | `class` individuales con `status: en-proceso`. Al terminar el tema se fusionan en un solo archivo cuyo nombre cambia a la convención fusionada y `status: completo`. Las `class` originales se marcan `status: diseccionada` antes de eliminar. |
 
+---
+
+# P
+
 %%
 galaxy-links
 [[_galaxy-system]]
