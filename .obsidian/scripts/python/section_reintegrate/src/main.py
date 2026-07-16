@@ -42,7 +42,7 @@ if not os.path.exists(source_path):
 
 # --- Construir separador buscado ---
 rel_path  = os.path.relpath(source_path, vault_path)
-separator = f"--- {rel_path} ---"
+separator = f"--- {rel_path} ---" #separator = f"--- ```{rel_path}``` ---"
 
 # --- Leer section.md y extraer el bloque correspondiente ---
 with open(section_md, 'r', encoding='utf-8') as f:

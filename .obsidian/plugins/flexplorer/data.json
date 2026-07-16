@@ -1470,7 +1470,7 @@
       "isHidden": false
     },
     "_app/_appnotes/PDF_PP-guide.md": {
-      "isPinned": true,
+      "isPinned": false,
       "isHidden": false
     },
     "_PDF/PDF-601": {
@@ -3052,7 +3052,6 @@
     }
   },
   "pinnedFiles": [
-    "_app/_appnotes/PDF_PP-guide.md",
     "Rubbish/section.md"
   ],
   "showHidden": false,
