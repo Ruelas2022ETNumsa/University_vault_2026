@@ -10,12 +10,12 @@
   "geometry": {
     "schemaVersion": 1,
     "x": 0,
-    "y": 144.333251953125,
+    "y": 145.333251953125,
     "width": 803,
     "height": 581.666748046875,
     "lastAppliedBounds": {
-      "width": 1334,
-      "height": 726
+      "width": 867,
+      "height": 727
     }
   }
 }
