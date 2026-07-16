@@ -820,9 +820,8 @@ Canvas infinito y de forma libre para arrastrar, conectar y materializar margina
 
 %%
 # galaxy-links
-[[_app/_config/_galaxy-system.md]]
-[[_app/_appnotes/plugin_guide.md]]
-[[_app/_appnotes/obsidian_guide.md]]
-[[_app/_appnotes/latex_guide.md]]
+[[_galaxy-system]]
+[[plugin_guide]]
+[[obsidian_guide]]
+[[latex_guide]]
 %%
-

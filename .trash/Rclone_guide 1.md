@@ -245,6 +245,6 @@ Verificar que la carpeta `NotebookLM_sources` existe en Drive con `rclone lsd gd
 
 %%
 # galaxy-links
-[[_app/_config/_sync-system.md]]
-[[_app/_config/_notebooklm-system.md]]
+[[_sync-system]]
+[[_notebooklm-system]]
 %%

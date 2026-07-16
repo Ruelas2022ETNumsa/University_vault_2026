@@ -127,8 +127,7 @@ El texto entre `;;` aparece difuminado en modo lectura — al hacer hover se rev
 
 %%
 # galaxy-links
-[[_app/_config/_note-system.md]]
-[[_app/_appnotes/plugin_guide.md]]
-[[_app/_appnotes/Marginalia_guide.md]]
+[[_note-system]]
+[[plugin_guide]]
+[[Marginalia_guide]]
 %%
-

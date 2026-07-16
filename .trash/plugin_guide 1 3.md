@@ -605,11 +605,11 @@ El parche se hizo con Python en tres pasos:
 
 %%
 # galaxy-links
-[[_app/_config/_galaxy-system.md]]
-[[_app/_appnotes/obsidian_guide.md]]
-[[_app/_appnotes/desmos_guide.md]]
-[[_app/notebooklm/general/tikzjax_guide-legacy.md]]
-[[_app/_appnotes/better-export-pdf.md]]
-[[_app/_config/_ToDo-system.md]]
-[[_app/_appnotes/Rclone_guide.md]]
+[[_galaxy-system]]
+[[obsidian_guide]]
+[[desmos_guide]]
+[[tikzjax_guide-legacy]]
+[[better-export-pdf]]
+[[_ToDo-system]]
+[[Rclone_guide]]
 %%

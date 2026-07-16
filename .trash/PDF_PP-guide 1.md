@@ -362,9 +362,8 @@ Ribbon:
 
 %%
 # galaxy-links
-[[_app/_config/_pdf-system.md]]
-[[_app/_appnotes/pdf-guide.md]]
-[[_app/_config/_sync-system.md]]
-[[_app/_config/_galaxy-system.md]]
+[[_pdf-system]]
+[[pdf-guide]]
+[[_sync-system]]
+[[_galaxy-system]]
 %%
-

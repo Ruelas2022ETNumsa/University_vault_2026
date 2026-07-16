@@ -201,7 +201,6 @@ Sean $a, b \in \mathbb{R}$
 
 %%
 # galaxy-links
-[[_app/_config/_note-system.md]]
-[[_app/_config/_galaxy-system.md]]
+[[_note-system]]
+[[_galaxy-system]]
 %%
-
