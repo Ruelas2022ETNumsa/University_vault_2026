@@ -122,6 +122,9 @@ status: activo
 
 (para otra sesion)
 
-%% galaxy links
+---
+
+%%
+# galaxy-links
 
 %%

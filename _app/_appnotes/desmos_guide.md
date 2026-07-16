@@ -1744,14 +1744,10 @@ y=x^2|#c74440
 
 Si incluyes esta gráfica dentro de un **Bloque Cornell**, recuerda que en la columna de **Claves** es obligatorio colocar el bloque comentado `%```desmos-graph` para que se procese correctamente.
 
-
-
-
-
-
+---
 
 %%
-galaxy-links
+# galaxy-links
 [[_galaxy-system]]
 [[_note-system]]
 %%

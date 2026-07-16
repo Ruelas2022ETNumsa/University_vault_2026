@@ -263,12 +263,14 @@ Los siguientes valores fueron modificados respecto al estado inicial del plugin:
 
 ---
 
+# P
+
 %%
-# galaxy-links
-[[_app/_config/_galaxy-system.md]]
-[[_app/_config/_mindmap-system.md]]
-[[_app/_config/_template-system.md]]
-[[_app/_config/_note-system.md]]
-[[_app/_config/_pdf-system.md]]
-[[_app/_config/_ToDo-system.md]]
+galaxy-links
+[[_galaxy-system]]
+[[_mindmap-system]]
+[[_template-system]]
+[[_note-system]]
+[[_pdf-system]]
+[[_ToDo-system]]
 %%

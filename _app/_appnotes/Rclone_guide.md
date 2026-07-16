@@ -241,8 +241,10 @@ Alternativamente, en el campo "Programa" de la tarea usar la ruta completa `E:\P
 Correr el comando manualmente con `--progress` para ver si hay errores de autenticación o conectividad.
 Verificar que la carpeta `NotebookLM_sources` existe en Drive con `rclone lsd gdrive:`.
 
+---
+
 %%
-galaxy-links
+# galaxy-links
 [[_sync-system]]
 [[_notebooklm-system]]
 %%

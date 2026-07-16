@@ -610,7 +610,7 @@ Consultar siempre las fuentes cargadas en el notebook según el tema.
 ---
 
 %%
-galaxy-links
+# galaxy-links
 [[_notebooklm-system]]
 [[_library-system]]
 [[_TABnote-system]]

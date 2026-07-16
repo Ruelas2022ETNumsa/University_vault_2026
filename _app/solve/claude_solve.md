@@ -60,6 +60,6 @@ de verificación previa. Tenerlo en cuenta en cada edición.
 ---
 
 %%
-galaxy-links
+# galaxy-links
 [[_claude-boot]]
 %%

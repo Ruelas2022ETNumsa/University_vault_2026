@@ -399,7 +399,9 @@ Rango del archivo: páginas 749 a final del libro original.
   Appendices — A1–A9
   Answers to Odd-Numbered Exercises — A-1 to A-74
   Applications Index — AI-1 to I-13
-  
+
+---
+
 %%
-galaxy-link
+# galaxy-links
 %%

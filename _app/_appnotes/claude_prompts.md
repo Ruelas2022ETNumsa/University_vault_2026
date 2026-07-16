@@ -121,7 +121,9 @@ Vamos a realizar una configuración técnica. Sigue este flujo:
    - Si el paso tiene opciones o listas, indica exactamente qué elegir y por qué
 ```
 
+---
+
 %%
-galaxy-links
+# galaxy-links
 [[_claude-boot]]
 %%

@@ -5,6 +5,7 @@ scope: vault
 audience: usuario
 related_notes:
   - "[[_config/_library-system]]"
+  - "[[guides/ETN505/ETN505_library]]"
 tags: [beacon, library, ETN505, infraestructura]
 date_created: 2026-07-09
 date_updated: 2026-07-09
@@ -144,9 +145,10 @@ Profundidad en EDPs (T7)  → LeVeque
 
 ---
 
+# P
+
 %%
-# galaxy-links
-[[_app/_config/_library-system.md]]
-(aun no existe)
-[[_app/notebooklm/guides/ETN505_library.md]] 
+galaxy-links
+[[_config/_library-system]]
+[[guides/ETN505/ETN505_library]]
 %%

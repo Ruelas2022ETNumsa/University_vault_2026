@@ -689,15 +689,17 @@ galaxy-links
 | Extensión `.excalidraw.md` en lugar de `.excalidraw`              | Mantener `.md` preserva compatibilidad con YAML, DataView y el grafo de Obsidian. Para usar en excalidraw.com se exporta con el comando del plugin. |
 | `supernova` como tipo #14 (2026-06-24) | Las transcripciones de NotebookLM son producción propia, no fuentes externas — forzarlas en `asteroid` rompía el principio producción-propia vs fuente-externa. Material en bruto de alta energía que aún no se ha condensado en notas galaxy. Símbolo ✨. Dos variantes: `class` individual (por sesión, `status: en-proceso`) y fusionada (tema completo, `status: completo`). Slug en español con guion_bajo. Contador `classNNN` corrido por semestre. Ruta: raíz de `Partial_N/`. Ver [[_TABnote-system]]. |
 
----
+
+
+# P
 
 %%
-# galaxy-links
-[[_app/_config/_template-system.md]]
-[[_app/_config/_pdf-system.md]]
-[[_app/_config/_mindmap-system.md]]
-[[_app/_config/_note-system.md]]
-[[_app/_config/_graph-system.md]]
-[[_app/_config/_ToDo-system.md]]
-[[_app/_config/_notebooklm-system.md]]
+galaxy-links
+[[_template-system]]
+[[_pdf-system]]
+[[_mindmap-system]]
+[[_note-system]]
+[[_graph-system]]
+[[_ToDo-system]]
+[[_notebooklm-system]]
 %%

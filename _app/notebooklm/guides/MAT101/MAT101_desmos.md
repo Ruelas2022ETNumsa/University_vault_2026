@@ -1077,7 +1077,7 @@ y=\min(\operatorname{mod}(x,1),1-\operatorname{mod}(x,1))|#005F73
 ---
 
 %%
-galaxy-links
+# galaxy-links
 [[_galaxy-system]]
 [[_note-system]]
 %%

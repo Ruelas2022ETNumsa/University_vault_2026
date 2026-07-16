@@ -39,7 +39,9 @@ replicados anteriormente — Drive los retoma desde la nube en la nueva ruta.
 
 **Fecha:** 2026-06-10
 
+---
+
 %%
-galaxy-links
+# galaxy-links
 
 %%

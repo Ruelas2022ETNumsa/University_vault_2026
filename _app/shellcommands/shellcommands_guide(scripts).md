@@ -162,3 +162,10 @@ Campos del prompt:
 | stderr | Error balloon |
 
 **Ribbon:** agregado via Commander. Icono: `file-input`.
+
+
+---
+
+%%
+# galaxy-links
+%%

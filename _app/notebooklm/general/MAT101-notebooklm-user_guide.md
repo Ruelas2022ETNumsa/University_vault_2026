@@ -267,8 +267,10 @@ Ambos notebooks comparten el mismo stack de PDFs. Las guías `.md` varían segú
 | `MAT101_TikzJax.md` | Sintaxis TikZJax para Obsidian | ambos |
 | `MAT101_latex.md` | Notación LaTeX: cajas, cancelaciones, fracciones | ambos |
 
+---
+
 %%
-galaxy-links
+# galaxy-links
 [[_config/_notebooklm-system]]
 [[prompts/MAT101/MAT101-study]]
 [[MAT101-transcription-legacy]]

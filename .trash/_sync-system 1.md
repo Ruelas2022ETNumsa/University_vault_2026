@@ -451,9 +451,11 @@ Si el dispositivo B estaba **apagado cuando PC borró X**, y antes de encender B
 
 ---
 
+# P
+
 %%
-# galaxy-links
-[[_app/_config/_galaxy-system.md]]
-[[_app/_config/_ToDo-system.md]]
-[[_app/_appnotes/Rclone_guide.md]]
+galaxy-links
+[[_galaxy-system]]
+[[_ToDo-system]]
+[[Rclone_guide]]
 %%

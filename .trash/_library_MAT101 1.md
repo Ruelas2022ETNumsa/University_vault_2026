@@ -228,8 +228,11 @@ Verificar fórmula rápida  → Larson Cheat Sheet
 
 ---
 
+
+
 %%
 # galaxy-links
-[[_app/_config/_library-system.md]]
-[[_app/notebooklm/guides/MAT101/MAT101_library.md]]
+
+[[_config/_library-system]]
+[[guides/MAT101/MAT101_library]]
 %%

@@ -819,7 +819,7 @@ Canvas infinito y de forma libre para arrastrar, conectar y materializar margina
 ---
 
 %%
-galaxy-links
+# galaxy-links
 [[_galaxy-system]]
 [[plugin_guide]]
 [[obsidian_guide]]

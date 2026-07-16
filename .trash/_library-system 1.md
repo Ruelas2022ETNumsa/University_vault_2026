@@ -176,9 +176,11 @@ Stewart 7ma español → 1to4  | 5to8  | 9to11
 
 ---
 
+# P
+
 %%
-# galaxy-links
-[[_app/_config/_claude-boot.md]]
-[[_app/_config/_notebooklm-system.md]]
-[[_app/_config/_ToDo-system.md]]
+galaxy-links
+[[_claude-boot]]
+[[_notebooklm-system]]
+[[_ToDo-system]]
 %%

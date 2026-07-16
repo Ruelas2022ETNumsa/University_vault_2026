@@ -274,12 +274,14 @@ Samsung Notes ha tenido rupturas de compatibilidad documentadas en actualizacion
 
 ---
 
+# P
+
 %%
-# galaxy-links
-[[_app/_config/_galaxy-system.md]]
-[[_app/_config/_note-system.md]]
-[[_app/_config/_pdf-system.md]]
-[[_app/_config/_template-system.md]]
-[[_app/_config/_notebooklm-system.md]]
-[[_app/_config/_ToDo-system.md]]
+galaxy-links
+[[_galaxy-system]]
+[[_note-system]]
+[[_pdf-system]]
+[[_template-system]]
+[[_notebooklm-system]]
+[[_ToDo-system]]
 %%

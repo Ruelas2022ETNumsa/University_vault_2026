@@ -271,15 +271,15 @@ Paso 6 — Configurar NotebookLM
 | Flujo de materia nueva documentado aquí y no en `_library-system` | El flujo es operativo de NotebookLM — `_library-system` cubre solo la selección de libros; este beacon cubre todo lo que sigue hasta tener el notebook activo                   |
 | `_library_ETNXXX.md` separado de `ETNXXX_library.md` | Audiencias distintas: el primero es guía personal legible para el usuario; el segundo es fuente técnica densa para NotebookLM. Unirlos degradaría la utilidad de ambos          |
 
----
+# P
 
 %%
-# galaxy-links
-[[_app/_config/_galaxy-system.md]]
-[[_app/_config/_TABnote-system.md]]
-[[_app/_config/_library-system.md]]
-[[_app/notebooklm/guides/MAT101/MAT101_desmos.md]]
-[[_app/notebooklm/guides/MAT101/MAT101_TikzJax.md]]
-[[_app/_config/_ToDo-system.md]]
-[[_app/_appnotes/Rclone_guide.md]]
+galaxy-links
+[[_galaxy-system]]
+[[_TABnote-system]]
+[[_library-system]]
+[[guides/MAT101/MAT101_desmos]]
+[[guides/MAT101/MAT101_TikzJax]]
+[[_ToDo-system]]
+[[Rclone_guide]]
 %%

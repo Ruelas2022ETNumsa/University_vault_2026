@@ -218,8 +218,10 @@ Uso en el markdown: insertar `<div class="break-page"></div>` donde se quiera fo
 - Los bloques Desmos no se renderizan como gráficas en el PDF — quedan como código.
 - `break-inside: avoid` es una sugerencia para el navegador, no una orden. Si un elemento es más alto que la página completa, se cortará igual.
 
+---
+
 %%
-galaxy-links
+# galaxy-links
 [[_galaxy-system]]
 [[desmos_guide]]
 %%

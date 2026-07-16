@@ -219,12 +219,12 @@ Estas son reglas que Claude debe seguir al construir el archivo generado:
 
 - **El nombre del archivo generado** debe seguir el patrón: `contexto_[CODIGO-MATERIA].md` o `contexto_[NOMBRE-CORTO].md` según lo que el usuario prefiera.
 
----
+# P
 
 %%
-# galaxy-links
-[[_app/_config/_claude-boot.md]]
-[[_app/_config/_galaxy-system.md]]
-[[_app/_config/_note-system.md]]
-[[_app/_config/_ToDo-system.md]]
+galaxy-links
+[[_claude-boot]]
+[[_galaxy-system]]
+[[_note-system]]
+[[_ToDo-system]]
 %%

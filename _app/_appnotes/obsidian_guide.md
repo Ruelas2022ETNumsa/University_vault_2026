@@ -1132,7 +1132,7 @@ El parámetro `width` controla el ancho del embed en píxeles. Es diferente a la
 ---
 
 %%
-galaxy-links
+# galaxy-links
 [[_galaxy-system]]
 [[_ToDo-system]]
 %%

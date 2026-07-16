@@ -217,14 +217,14 @@ El vault usa dos plugins complementarios para el formato de apuntes. Ver [[corne
 | `_tabnotes_archivo/` | Snapshots PDF de cierre de parcial (apuntes manuscritos propios) — fuera de Git, ver [[_TABnote-system]] |
 | `borrar/`          | Zona de espera antes de eliminar archivos permanentemente          |
 
----
+# P
 
 %%
-# galaxy-links
-[[_app/_config/_galaxy-system.md]]
-[[_app/_config/_template-system.md]]
-[[_app/_config/_mindmap-system.md]]
-[[_app/_config/_pdf-system.md]]
-[[_app/_config/_graph-system.md]]
-[[_app/_config/_ToDo-system.md]]
+galaxy-links
+[[_galaxy-system]]
+[[_template-system]]
+[[_mindmap-system]]
+[[_pdf-system]]
+[[_graph-system]]
+[[_ToDo-system]]
 %%

@@ -156,13 +156,15 @@ status: activo
 
 ---
 
+# P
+
 %%
-# galaxy-links
-[[_app/_config/_galaxy-system.md]]
-[[_app/_config/_note-system.md]]
-[[_app/_config/_sync-system.md]]
-[[_app/_config/_excalidraw-system.md]]
-[[_app/_config/_graph-system.md]]
-[[_app/_config/_TABnote-system.md]]
-[[_app/_config/_notebooklm-system.md]]
+galaxy-links
+[[_galaxy-system]]
+[[_note-system]]
+[[_sync-system]]
+[[_excalidraw-system]]
+[[_graph-system]]
+[[_TABnote-system]]
+[[_notebooklm-system]]
 %%

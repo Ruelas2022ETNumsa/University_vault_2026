@@ -197,8 +197,10 @@ Sean $a, b \in \mathbb{R}$
 	- $a \cdot b=b \cdot a$
 ```
 
+---
+
 %%
-galaxy-links
+# galaxy-links
 [[_note-system]]
 [[_galaxy-system]]
 %%

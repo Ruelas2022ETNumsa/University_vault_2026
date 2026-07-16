@@ -318,3 +318,7 @@ Si no está disponible, entonces:
 - Acción: >❓<
 
 ---
+
+%%
+# galaxy-links
+%%

@@ -361,7 +361,7 @@ Ribbon:
 ---
 
 %%
-galaxy-links
+# galaxy-links
 [[_pdf-system]]
 [[pdf-guide]]
 [[_sync-system]]

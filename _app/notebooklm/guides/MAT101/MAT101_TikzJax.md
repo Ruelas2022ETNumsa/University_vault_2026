@@ -2027,7 +2027,7 @@ Grafica :
 ---
 
 %%
-galaxy-links
+# galaxy-links
 [[_galaxy-system]]
 [[_note-system]]
 %%

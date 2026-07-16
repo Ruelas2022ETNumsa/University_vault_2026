@@ -1148,7 +1148,7 @@
     },
     "_app/Excalidraw/Scripts/Downloaded": {
       "isPinned": false,
-      "isHidden": false,
+      "isHidden": true,
       "sortOrder": "custom",
       "customOrder": [
         "Mindmap Builder.md",
@@ -1179,7 +1179,7 @@
     },
     "_app/scripts": {
       "isPinned": false,
-      "isHidden": false,
+      "isHidden": true,
       "sortOrder": "custom",
       "customOrder": [
         "Galaxy_view",

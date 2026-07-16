@@ -747,7 +747,7 @@ Completr sugiere comandos LaTeX mientras escribes. El trigger por defecto es `\`
 ---
 
 %%
-galaxy-links
+# galaxy-links
 [[_galaxy-system]]
 [[_ToDo-system]]
 [[obsidian_guide]]

@@ -334,25 +334,25 @@ Convención interna del vault para respaldar archivos antes de editarlos:
 9. **El usuario crea los backups, Claude edita el original directamente** — no ofrecer ni confirmar respaldo antes de editar un beacon, salvo que el usuario indique lo contrario.
 10. **Actualizar `date_updated`** en el YAML de cualquier beacon que se modifique.
 
----
+# P
 
 %%
-# galaxy-links
-[[_app/_config/_galaxy-system.md]]
-[[_app/_config/_note-system.md]]
-[[_app/_config/_template-system.md]]
-[[_app/_config/_pdf-system.md]]
-[[_app/_config/_library-system.md]]
-[[_app/_config/_mindmap-system.md]]
-[[_app/_config/_excalidraw-system.md]]
-[[_app/_config/_graph-system.md]]
-[[_app/_config/_sync-system.md]]
-[[_app/_config/_basic-memory-system.md]]
-[[_app/_config/_notebooklm-system.md]]
-[[_app/_config/_TABnote-system.md]]
-[[_app/_config/_ToDo-system.md]]
-[[_app/solve/claude_solve.md]]
-[[_app/_config/_claude-matter-boot.md]]
-[[_app/_appnotes/cornell_guide.md]]
-[[_app/_appnotes/Marginalia_guide.md]]
+galaxy-links
+[[_app/_config/_galaxy-system]]
+[[_note-system]]
+[[_template-system]]
+[[_pdf-system]]
+[[_library-system]]
+[[_mindmap-system]]
+[[_excalidraw-system]]
+[[_graph-system]]
+[[_sync-system]]
+[[_basic-memory-system]]
+[[_notebooklm-system]]
+[[_TABnote-system]]
+[[_ToDo-system]]
+[[claude_solve]]
+[[_claude-matter-boot]]
+[[cornell_guide]]
+[[Marginalia_guide]]
 %%

@@ -216,3 +216,10 @@ comando1 -and comando2
 - [ ] Configurar stdout y stderr en Output
 - [ ] Probar con `Ctrl+clic` en el botón de ejecución para ver el output antes de automatizar
 - [ ] Asignar alias descriptivo en Pestaña General
+
+
+---
+
+%%
+# galaxy-links
+%%

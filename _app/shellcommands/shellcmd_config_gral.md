@@ -331,3 +331,10 @@ Se intenta escapar los caracteres especiales en los valores de las variables (ex
 No hay forma de evitar el procesamiento de variables. Si necesitas caracteres `{{}}` en tu comando, no se procesarán como variables siempre y cuando no contengan ninguno de los nombres de variables listados anteriormente. Si necesitas pasar por ejemplo `{{title}}` literalmente a tu comando, no hay forma de hacerlo en este momento, por favor crea una discusión en GitHub.
 
 Todas las variables que acceden al archivo actual pueden hacer que la vista previa del comando falle si no tenías un panel de archivo activo al abrir la ventana de configuración - por ejemplo, si tenías el foco en la vista de gráfico en lugar de en una nota = ningún archivo está activo actualmente. Pero esto no rompe ninguna otra cosa más que la vista previa.
+
+
+---
+
+%%
+# galaxy-links
+%%

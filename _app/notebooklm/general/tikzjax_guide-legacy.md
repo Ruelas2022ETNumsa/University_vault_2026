@@ -1055,8 +1055,10 @@ El SVG generado por TikZJax a veces tiene problemas con colores en modo oscuro d
 \node at (1,0.5) {$\tfrac{1}{2}$};
 ```
 
+---
+
 %%
-galaxy-links
+# galaxy-links
 [[_graph-system]]
 [[_galaxy-system]]
 [[desmos_guide]]

@@ -231,3 +231,10 @@ $\bbox[2px,border:2px solid #808080;background:white]{\color{#808080} x = 3}$
 
 $$\bbox[2px,border:2px solid #008080;background:white]{\color{#008080} y = 1}$$
 ```
+
+---
+
+%%
+# galaxy-links
+
+%%

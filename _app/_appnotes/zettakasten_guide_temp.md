@@ -110,8 +110,10 @@ YAML generado incluye: `galaxy_body: bridge` · `scope: stitch` · `subject` · 
 - [ ] Definir tags adicionales por tipo de conexión (`bridge-materias`, `bridge-temas`, etc.)
 - [ ] Evaluar si galaxy-links se pueden generar asistidos desde una marginalia apuntando a un título
 
+---
+
 %%
-galaxy-links
+# galaxy-links
 [[Marginalia_guide]]
 [[cornell_guide]]
 [[plugin_guide]]

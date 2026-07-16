@@ -123,8 +123,10 @@ En notas `dwarf` las marginalia pueden enriquecerse con preguntas ocultas para a
 
 El texto entre `;;` aparece difuminado en modo lectura — al hacer hover se revela.
 
+---
+
 %%
-galaxy-links
+# galaxy-links
 [[_note-system]]
 [[plugin_guide]]
 [[Marginalia_guide]]

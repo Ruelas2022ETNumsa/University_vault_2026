@@ -591,8 +591,10 @@ El parche se hizo con Python en tres pasos:
 2. **Detectar los strings chinos** — los caracteres no estaban escritos directamente sino como secuencias unicode escapadas (`\u641C\u7D22` en vez de `搜索`). Se usó regex para encontrar todos los strings que contenían escapes en el rango CJK (`\u4e00`–`\u9fff`) dentro de contextos de UI (`label:`, `setText(`, `Notice(`, `setName(`, etc.). Luego `.decode('unicode_escape')` los convirtió a texto legible para poder entender qué significaba cada uno.
 3. **Aplicar reemplazos con diccionario** — se construyó un diccionario `{raw_escape: traducción_en_inglés}` y se aplicó con `.replace()` sobre el contenido completo. Se hicieron dos pasadas para cubrir strings en template literals y secciones menos obvias. 
 
+---
+
 %%
-galaxy-links
+# galaxy-links
 [[_galaxy-system]]
 [[obsidian_guide]]
 [[desmos_guide]]

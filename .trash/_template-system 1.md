@@ -497,9 +497,9 @@ status: completo
 
 %%
 # galaxy-links
-[[_app/_config/_galaxy-system.md]]
-[[_app/_config/_mindmap-system.md]]
-[[_app/_config/_note-system.md]]
-[[_app/_config/_pdf-system.md]]
-[[_app/_config/_ToDo-system.md]]
+[[_galaxy-system]]
+[[_mindmap-system]]
+[[_note-system]]
+[[_pdf-system]]
+[[_ToDo-system]]
 %%

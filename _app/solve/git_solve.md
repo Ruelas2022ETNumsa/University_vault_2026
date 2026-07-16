@@ -81,7 +81,9 @@ Abrir Obsidian → Git: Pull → Editar notas → Git: Commit all changes → Gi
 
 Siguiendo este orden en **ambas máquinas** se evitan la mayoría de los conflictos.
 
+---
+
 %%
-galaxy-links
+# galaxy-links
 [[_galaxy-system]]
 %%

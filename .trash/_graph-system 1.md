@@ -198,14 +198,14 @@ El archivo exportado pasa a ser un `photon` (imagen estática) adjunto a la mism
 | Caché TikZJax en IndexedDB | No es configurable — es interno al plugin. El código en la nota es suficiente para reconstruir el output en cualquier PC con el plugin instalado. |
 | `_graph-system.md` como beacon unificador | Sin este archivo cada guía individual documenta su herramienta pero nadie documenta cuándo usar cuál ni cómo conviven. Este beacon resuelve esa capa de decisión. |
 
----
+# P
 
 %%
-# galaxy-links
-[[_app/_config/_galaxy-system.md]]
-[[_app/_config/_note-system.md]]
-[[_app/_config/_mindmap-system.md]]
-[[_app/notebooklm/guides/MAT101/MAT101_desmos.md]]
-[[_app/notebooklm/guides/MAT101/MAT101_TikzJax.md]]
-[[_app/_config/_ToDo-system.md]]
+galaxy-links
+[[_galaxy-system]]
+[[_note-system]]
+[[_mindmap-system]]
+[[MAT101_desmos]]
+[[guides/MAT101/MAT101_TikzJax]]
+[[_ToDo-system]]
 %%

@@ -45,6 +45,6 @@ Activar en Obsidian → Settings → Appearance → CSS Snippets → activar `mo
 ---
 
 %%
-galaxy-links
+# galaxy-links
 [[_sync-system]]
 %%
