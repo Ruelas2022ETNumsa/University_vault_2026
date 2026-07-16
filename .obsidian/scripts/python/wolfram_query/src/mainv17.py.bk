@@ -57,6 +57,10 @@ PODS_EXCLUDE_TITLES = {"Input interpretation", "Image"}
 # Frases descriptivas de WA que deben ir fuera del $$ — agregar según aparezcan
 
 DESCRIPTIVE_PHRASES = {
+# pods
+"**Input:**":"**Ecuación:**",# no traduce los titulos de los pods
+"**Result:**":"**Resultado:**",
+# En comentarios
     "all real numbers": "todos los números reales",
     "all positive real numbers": "todos los números reales positivos",
     "all negative real numbers": "todos los números reales negativos",
@@ -80,8 +84,8 @@ DESCRIPTIVE_PHRASES = {
     "width": "ancho",
     "height": "alto",
     "result in radians": "resultado en radianes",
-    "even": "**Paridad** : par",
-    "odd": "**Paridad** : impar",
+    "even": "par",
+    "odd": "impar",
     "increasing": "creciente",
     "decreasing": "decreciente",
     "strictly increasing": "estrictamente creciente",
@@ -315,20 +319,23 @@ if not data.get("queryresult", {}).get("success"):
 
 pods = data["queryresult"].get("pods", [])
 
-# --- Buscar URLs de gráficas (todos los subpods de pods Plot) ---
-plot_urls = []
+# --- Buscar URL de gráfica (primer pod con imagen en cualquier Plot) ---
+plot_url = None
 for pod in pods:
     pid = pod.get("id", "")
     if "Plot" in pid or "plot" in pid.lower():
         for sp in pod.get("subpods", []):
             src = sp.get("img", {}).get("src")
             if src:
-                plot_urls.append(src)
+                plot_url = src
+                break
+    if plot_url:
+        break
 
-# --- Descargar y guardar imágenes ---
-image_blocks = []
+# --- Descargar y guardar imagen ---
+image_block = ""
 
-if plot_urls:
+if plot_url:
     assets_path = os.path.join(vault_path, ASSETS_DIR)
     os.makedirs(assets_path, exist_ok=True)
 
@@ -338,19 +345,14 @@ if plot_urls:
     ]
     numbers = [int(re.search(r'\d+', f).group()) for f in existing]
     next_n  = max(numbers) + 1 if numbers else 1
+    img_name = f"ima-{next_n}.png"
+    img_path = os.path.join(assets_path, img_name)
 
-    for i, url_img in enumerate(plot_urls):
-        img_name = f"ima-{next_n + i}.png"
-        img_path = os.path.join(assets_path, img_name)
-        try:
-            urllib.request.urlretrieve(url_img, img_path)
-            image_blocks.append(f"![[{img_name}]]")
-        except Exception as e:
-            image_blocks.append(f"*(error al descargar: {e})*")
-
-image_block = ""
-if image_blocks:
-    image_block = "**Gráfica:**\n" + "\n".join(image_blocks)
+    try:
+        urllib.request.urlretrieve(plot_url, img_path)
+        image_block = f"**Gráfica:**\n![[{img_name}]]"
+    except Exception as e:
+        image_block = f"**Gráfica:** *(error al descargar: {e})*"
 
 # --- Extraer pods de texto (dinámico) ---
 lines = []

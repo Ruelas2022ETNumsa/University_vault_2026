@@ -3,6 +3,71 @@ alias: "script de Wolfram alpha"
 date: 13-7-2026-(23:16)
 ---
 
+# resumen
+
+```
+## Resumen de sesión — Script Wolfram Alpha
+
+---
+
+### 1. Completado
+
+- Diseño y construcción completa de `main.py` para consultar WA Full API desde Shell Commands
+- Preprocesador LaTeX→WA: `\lim`, `\frac`, `\int`, `\infty`, `\to`
+- Traductor plaintext WA→LaTeX: símbolos, funciones, `\int`, `\sum`, `\prod`, `\lim`, subíndices/superíndices con `()→{}`
+- Extracción dinámica de todos los pods (sin lista fija)
+- Descarga de **todas** las gráficas PNG (múltiples subpods)
+- Diccionario `DESCRIPTIVE_PHRASES` — frases descriptivas traducidas al español y extraídas fuera del `$$`
+- Diccionario `POD_TITLES` — títulos de pods traducidos al español
+- Cada línea del pod en su propio bloque `$$`
+- Fracciones en texto plano (decisión tomada)
+- Botón en Commander configurado
+- Pruebas exitosas para cálculo 1: límites, derivadas, integrales, series, ecuaciones, matrices, conversiones, finanzas
+
+---
+
+### 2. Pendientes
+
+**Títulos faltantes en `POD_TITLES`:**
+
+- Faltan: `"Series expansion at x = ∞"`, `"Series representation"`, `"Integral representation"`, `"Parity"`, `"Polynomial discriminant"` y otros que aparezcan al probar
+- Qué hacer: agregar al diccionario `POD_TITLES` en `main.py`
+- Archivo: `E:\University_vault_2026\.obsidian\scripts\python\wolfram_query\src\main.py`
+- Herramienta: `edit_file`
+
+**Actualizar cabecera del script:**
+
+- Reflejar estado real v15+ con todos los cambios de esta sesión
+- Mismo archivo
+
+**Documentar el script en el vault:**
+
+- Crear nota de documentación del script
+- Ruta sugerida: `E:\University_vault_2026\_app\shellcommands\`
+- Leer antes: `E:\University_vault_2026\_app\_config\_claude-boot.md`
+
+**Revisar `tsk_krajo.md`:**
+
+- Marcar pendientes completados y actualizar decisiones
+- Archivo: `E:\University_vault_2026\_tasks\tsk_krajo.md`
+
+**Integrar en `Sin título 1.md`:**
+
+- Marcar la idea de WA como implementada en la lista de ideas
+- Archivo: `E:\University_vault_2026\Sin título 1.md`
+
+---
+
+**Detalle técnico crítico para la próxima sesión:**
+
+- Backups disponibles: `mainv7.py.bk` hasta `mainv14.py.bk` en la misma carpeta `src/`
+- El `\` en `re.sub` replacement: usar `r'\comando'` — NO `r'\\comando'` (produce doble backslash)
+- `DESCRIPTIVE_PHRASES` itera sobre traducciones ya aplicadas — si se agrega una frase nueva, considerar que el texto ya fue procesado por `plaintext_to_latex` antes de llegar a `format_line`
+- `expression_display` guarda el LaTeX original — `expression` es la versión convertida para WA
+```
+
+
+
 ## Objetivo
 
 15/july

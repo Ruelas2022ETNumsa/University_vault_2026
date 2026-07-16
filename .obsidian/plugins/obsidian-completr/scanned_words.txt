@@ -6228,6 +6228,7 @@ trigonometric
 tornado
 trigonometr
 timed
+tasks
 ToDo
 Templater
 Text
@@ -13223,6 +13224,7 @@ Transpose
 Trace
 Triangle
 TejTfi
+TITLES
 Sistema
 Sync
 Save
@@ -25916,6 +25918,8 @@ ProductOfRoots
 PlotOfSolutionSet
 PXLZq
 PSco
+Puiseux
+PHRASES
 del
 date
 de
@@ -48917,6 +48921,7 @@ borre
 bico
 bbbeeehhhlllkkkjjjnnnrrrwwwyyy
 bigggbbbllljjjklpdhprrrwwwzzz
+boot
 scope
 status
 selector
@@ -55946,6 +55951,7 @@ secction
 salio
 skill
 sided
+shellcommands
 vault
 vil
 ver
@@ -127293,6 +127299,7 @@ Electromagnetic
 Exact
 EEEJJJNNNSSSUUUZZZ
 EtdHE
+Expansi
 Obsidian
 OmniSearch
 Ocultar
@@ -152225,6 +152232,7 @@ meno
 multiplicidad
 maximum
 mvaY
+mainv
 YAML
 Ya
 You
@@ -170604,6 +170612,7 @@ entraga
 editados
 element
 encoded
+expandida
 Motor
 Media
 Mantiene
@@ -197666,6 +197675,7 @@ imagenes
 integer
 infinity
 integrals
+inyectiva
 Dependencia
 Dropbox
 Dataview
@@ -203872,6 +203882,7 @@ Diagonalization
 DecimalApproximation
 Divisors
 Discriminante
+DESCRIPTIVE
 Remotely
 Raz
 Revisa
@@ -211029,6 +211040,7 @@ RealAlternateForm
 Reduced
 Riemann
 RUwU
+Raiz
 Hider
 Hace
 Herramientas
@@ -234436,6 +234448,7 @@ quemado
 quits
 queryresult
 quantities
+query
 University
 Usar
 Un
@@ -327732,6 +327745,7 @@ kkkH
 keeps
 keep
 kinetic
+krajo
 Xe
 Xm
 Xu
