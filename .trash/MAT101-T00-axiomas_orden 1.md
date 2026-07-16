@@ -77,5 +77,5 @@ Si $a, b \in \mathbb{R}$:
 
 %%
 # galaxy-links
-[[MOC/MAT101-T00-star]]
+[[MAT101-T00-star]]
 %%

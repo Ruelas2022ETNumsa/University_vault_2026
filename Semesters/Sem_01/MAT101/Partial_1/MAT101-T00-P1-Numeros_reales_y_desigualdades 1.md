@@ -926,14 +926,14 @@ $C_s = ]-3, -1] \cup [0, 2[$
 
 %%
 # galaxy-links
-[[MOC/MAT101-T00-star]]
-[[Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-axiomas_cuerpo]]
-[[Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-axiomas_igualdad]]
-[[Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-teoremas_reales]]
-[[Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-axiomas_orden]]
-[[Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-teoremas_desigualdades]]
-[[Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-recta_real_intervalos]]
-[[Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-valor_absoluto]]
-[[Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-inecuaciones_lineales]]
+[[MAT101-T00-star]]
+[[MAT101-T00-axiomas_cuerpo]]
+[[MAT101-T00-axiomas_igualdad]]
+[[MAT101-T00-teoremas_reales]]
+[[MAT101-T00-axiomas_orden]]
+[[MAT101-T00-teoremas_desigualdades]]
+[[MAT101-T00-recta_real_intervalos]]
+[[MAT101-T00-valor_absoluto]]
+[[MAT101-T00-inecuaciones_lineales]]
+[[MAT101-T00-metodo_signos]]
 %%
-

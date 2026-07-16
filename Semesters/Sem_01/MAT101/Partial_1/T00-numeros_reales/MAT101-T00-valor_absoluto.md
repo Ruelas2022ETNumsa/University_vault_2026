@@ -92,7 +92,9 @@ $$\begin{array}{rcll}
 > 3. **Propiedad de la raíz:** Es un error común simplificar $\sqrt{x^2} = x$ sin considerar el signo. La definición correcta es $\sqrt{x^2} = |x|$, asegurando un resultado no negativo independientemente del signo de la base original.
 > 4. **Desigualdad Triangular:** Esta propiedad establece que el valor absoluto de la suma de dos números no puede exceder la suma de sus valores absolutos ($|a + b| \le |a| + |b|$). La igualdad se cumple únicamente si $a$ y $b$ tienen el mismo signo o si alguno es cero.
 
+---
+
 %%
-galaxy-links
+# galaxy-links
 [[MAT101-T00-star]]
 %%
