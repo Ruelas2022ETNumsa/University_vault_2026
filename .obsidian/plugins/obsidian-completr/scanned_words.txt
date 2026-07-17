@@ -32388,6 +32388,7 @@ delete
 dryRun
 describan
 descartadas
+detectado
 Vault
 Verificar
 Variables
@@ -57924,6 +57925,7 @@ setViewModeEnabled
 startFullscreen
 scriptFile
 setTimeout
+standb
 vault
 vil
 ver
@@ -70960,6 +70962,9 @@ antecedente
 accionable
 actualizarse
 avance
+alxhot
+alxgml
+alxrul
 related
 recomendados
 ribbon
@@ -77679,6 +77684,7 @@ resetControlPanelElPosition
 reinici
 requer
 replanificado
+rul
 notes
 notas
 nuevas
@@ -91218,6 +91224,7 @@ clearTimeout
 colapsado
 considerados
 condicionan
+confirm
 updated
 un
 universo
@@ -176618,6 +176625,7 @@ eTluxiz
 excalidrawContainer
 evaluaron
 enfoques
+emergn
 Motor
 Media
 Mantiene
