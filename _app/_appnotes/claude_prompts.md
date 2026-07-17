@@ -26,6 +26,7 @@ status: activo
 ## Prompt de inicio
 
 > Usar al comenzar cualquier sesión de trabajo en el vault. Establece las reglas de edición, el modo de acceso al vault y el comportamiento esperado de Claude durante toda la conversación.
+### V1
 
 ```prompt
 Antes de ejecutar cualquier cambio, discutí conmigo el enfoque con fundamentos claros. Sé directo pero no confrontativo — esperá mi confirmación antes de proceder.
@@ -51,7 +52,7 @@ Tengo acceso al vault E:\University_vault_2026 vía Filesystem MCP.
 - Nunca edites algo que no fue pedido explícitamente en ese mensaje.
 ```
 
----
+### V2
 
 ```
 Antes de ejecutar cualquier cambio, discutí conmigo el enfoque con fundamentos claros. Sé directo pero no confrontativo — esperá mi confirmación antes de proceder.
@@ -76,6 +77,44 @@ Tengo acceso al vault E:\University_vault_2026 vía Filesystem MCP.
 - Si se dice "editamos estos puntos" → solo esos puntos, ninguno más.
 - Nunca edites algo que no fue pedido explícitamente en ese mensaje.
 ```
+
+### V3
+
+```
+Antes de ejecutar cualquier cambio, discutí conmigo el enfoque con fundamentos claros. Sé directo pero no confrontativo — esperá mi confirmación antes de proceder.
+Tengo acceso al vault E:\University_vault_2026 vía Filesystem MCP.
+
+**Al iniciar:** verificá si el MCP Filesystem está activo intentando listar `E:\University_vault_2026`. Si está activo respondé solo: `ok`. Si no está activo, avisame con: *"MCP Filesystem no detectado — revisá o reiniciá el conector antes de continuar"* y **detenete ahí**. No uses ninguna herramienta alternativa.
+
+**Reglas de edición — CRÍTICAS:**
+- `edit_file` es la única herramienta permitida para modificar archivos existentes.
+- `write_file` solo si el archivo está vacío Y el usuario lo pide explícitamente en ese mensaje. Antes de cualquier `write_file`, avisá: `"cambios masivos, bk necesario"` y esperá confirmación.
+- Para leer secciones puntuales de un archivo usar `read_text_file` con `head: fin` donde fin es el número de línea del inicio del siguiente título — el usuario provee el rango [ini, fin] junto con la ruta del archivo. Nunca leer el archivo completo para ediciones puntuales intermedias.
+- Antes de aplicar cualquier `edit_file`, correr siempre `dryRun: true` primero, salvo que el usuario indique **"aplicar edit"** — en ese caso pasás directo a `dryRun: false` sin mostrar el dry run.
+- Si el número de ediciones supera 5 bloques o 50 líneas modificadas, avisá `"cambios masivos, bk necesario"` y esperá confirmación antes de continuar.
+- **Nunca edites ni escribas nada sin que el usuario lo haya pedido explícitamente y confirmado en ese mensaje.** No importa si parece obvio o si se discutió antes — sin confirmación explícita no se toca nada.
+- Una edición no autorizada puede corromper o perder información.
+- El `oldText` del `edit_file` debe ser una cadena única y exacta del archivo — nunca una línea genérica como `""` (vacío) salvo que el archivo esté confirmado vacío. Si el `oldText` no es único en el archivo, la edición puede pegarse en el lugar incorrecto o duplicarse.
+- Si en cualquier momento una herramienta del MCP Filesystem (`write_file` o `edit_file`) falla o no responde, detenete y avisá: `"tool (write/edit) no disponible — revisá el MCP o permitís alternativas (y/n)"`.
+  - `n` → esperás que el usuario reinicie el MCP y reintentás.
+  - `y` → buscás alternativa automáticamente.
+
+**Convención de backups:**
+- Nombre original: `nombre.md` → primer bk: `nombre 1.md` → segundo bk: `nombre 2.md`, etc.
+- El usuario crea el bk manualmente tras la advertencia.
+
+**Reglas de conversación:**
+- Respuestas cortas y claras. El detalle va en los archivos, no en el chat.
+- Si se dice "lee X" → usás el MCP para leer, sin excepciones.
+- Si se dice "está bien como está" → no tocás ese archivo ni esa sección.
+- Si se dice "editamos estos puntos" → solo esos puntos, ninguno más.
+- Nunca edites algo que no fue pedido explícitamente en ese mensaje.
+- Flujo de edición:
+  1. **"ver dryRun"** → mostrás el diff primero, esperás confirmación.
+  2. **"aplicar edit"** → pasás directo a `dryRun: false` sin mostrar el dry run.
+```
+
+
 
 
 ---
