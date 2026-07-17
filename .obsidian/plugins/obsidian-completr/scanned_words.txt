@@ -6436,6 +6436,8 @@ targetView
 then
 toggleArrowVisibility
 temp
+tier
+tomada
 ToDo
 Templater
 Text
@@ -26811,6 +26813,7 @@ PzZsB
 Presentation
 PRINT
 Planificaci
+Potencial
 del
 date
 de
@@ -32389,6 +32392,7 @@ dryRun
 describan
 descartadas
 detectado
+discutir
 Vault
 Verificar
 Variables
@@ -57927,6 +57931,8 @@ startFullscreen
 scriptFile
 setTimeout
 standb
+setup
+supernovas
 vault
 vil
 ver
@@ -70967,6 +70973,7 @@ alxhot
 alxgml
 alxrul
 agregando
+arrancamos
 related
 recomendados
 ribbon
@@ -104788,6 +104795,7 @@ GuXnJPIV
 GXWXGJL
 GLgQ
 Generating
+Gemini
 Convenci
 Creaci
 Commander
@@ -110542,6 +110550,7 @@ CRWzmd
 Continue
 Creating
 Confirm
+Chat
 Instalados
 Instalado
 Instalar
@@ -143766,6 +143775,7 @@ AsyncFunction
 About
 Arrow
 Antecedentes
+Automatizador
 push
 pull
 para
@@ -176632,6 +176642,7 @@ excalidrawContainer
 evaluaron
 enfoques
 emergn
+ejecutas
 Motor
 Media
 Mantiene
@@ -204529,6 +204540,7 @@ issues
 initializeEventListners
 isHidden
 inec
+intacto
 Dependencia
 Dropbox
 Dataview
@@ -223480,6 +223492,7 @@ HuJUrpWsaRsmld
 HVWljZkTGUlZdxlOuTERrVlVKs
 HaVPx
 Hold
+Helper
 filtrar
 formato
 faltantes
@@ -235269,6 +235282,7 @@ hideSingleNotice
 helpButton
 help
 head
+hijas
 que
 quedan
 queda
@@ -291898,6 +291912,7 @@ while
 within
 were
 wanted
+workflow
 xima
 xeles
 xy
