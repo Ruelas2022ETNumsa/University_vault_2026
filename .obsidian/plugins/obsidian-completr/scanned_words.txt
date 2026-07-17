@@ -91236,6 +91236,7 @@ considerados
 condicionan
 confirm
 configs
+crearlas
 updated
 un
 universo
@@ -150071,6 +150072,7 @@ project
 puebla
 planificacion
 planificaci
+planificar
 min
 mica
 movimiento
