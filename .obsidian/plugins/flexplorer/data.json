@@ -1388,6 +1388,8 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "tpl-w-project.md",
+        "tpl-w-study.md",
         "tpl-asteroid 1.md",
         "tpl-photon 1.md",
         "tpl-zk 2.md",
@@ -1403,6 +1405,8 @@
         "tpl-moon.md",
         "tpl-nebula.md",
         "tpl-observatory.md",
+        "tpl-w-initial.md",
+        "tpl_w_transcription.md",
         "tpl-photon.md",
         "tpl-planet.md",
         "tpl-star.md"
@@ -3062,6 +3066,22 @@
       "isHidden": false
     },
     "_tasks/7_tsk_emergn.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_templates/tpl_w_transcription.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_templates/tpl-w-initial.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_templates/tpl-w-study.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_templates/tpl-w-project.md": {
       "isPinned": false,
       "isHidden": false
     }
