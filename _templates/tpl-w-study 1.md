@@ -19,18 +19,12 @@ status: activo
 
 # tsk — Estudio P<% partial %> · <% subject %>
 
-## NotebookLM — configuración del parcial
+## NotebookLM — prompts y guías
 
-### Prompts
 - [ ] Prompt de estudio creado → `_app/notebooklm/prompts/<% subject %>/<% subject %>-P<% partial %>-study.md`
 - [ ] Prompt de transcripción creado → `_app/notebooklm/prompts/<% subject %>/<% subject %>-P<% partial %>-transcription.md`
-- [ ] Instructions del notebook actualizado con prompt de estudio
-
-### Fuentes del notebook
-- [ ] `<% subject %>_library.md` cargada/actualizada → `_app/notebooklm/guides/<% subject %>/`
-- [ ] `obsidian_notation.md` cargada → `_app/notebooklm/general/`
-- [ ] Guías de graficación cargadas según materia → `_app/notebooklm/guides/<% subject %>/`
-- [ ] Formulario o resumen del parcial cargado como fuente adicional
+- [ ] Guías y fuentes del notebook actualizadas → `_app/notebooklm/guides/<% subject %>/`
+- [ ] Notebook configurado — fuentes + Instructions cargado
 
 ---
 

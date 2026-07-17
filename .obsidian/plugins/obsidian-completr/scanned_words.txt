@@ -6438,6 +6438,8 @@ toggleArrowVisibility
 temp
 tier
 tomada
+tNum
+trans
 ToDo
 Templater
 Text
@@ -21065,6 +21067,7 @@ SHxwovCz
 SHIFT
 SLIDE
 Start
+Supernovas
 Plugins
 Pendientes
 Plugin
@@ -32393,6 +32396,7 @@ describan
 descartadas
 detectado
 discutir
+destornillador
 Vault
 Verificar
 Variables
@@ -50682,6 +50686,8 @@ bgColor
 backgroundColor
 basename
 bloqueado
+bloquesTemas
+bodies
 scope
 status
 selector
@@ -57933,6 +57939,8 @@ setTimeout
 standb
 setup
 supernovas
+seguimiento
+subidos
 vault
 vil
 ver
@@ -70974,6 +70982,8 @@ alxgml
 alxrul
 agregando
 arrancamos
+actualizadas
+actualizados
 related
 recomendados
 ribbon
@@ -84131,6 +84141,7 @@ nsEKoSLJMSeBETZE
 nXONfswW
 nothing
 nHold
+numTemas
 created
 commit
 cada
@@ -91237,6 +91248,7 @@ condicionan
 confirm
 configs
 crearlas
+comprob
 updated
 un
 universo
@@ -110552,6 +110564,7 @@ Continue
 Creating
 Confirm
 Chat
+Consistencia
 Instalados
 Instalado
 Instalar
@@ -150073,6 +150086,8 @@ puebla
 planificacion
 planificaci
 planificar
+padStart
+pasados
 min
 mica
 movimiento
@@ -157614,6 +157629,8 @@ magCAAA
 mmbSource
 modifier
 masivos
+martillo
+marcha
 YAML
 Ya
 You
@@ -176645,6 +176662,11 @@ evaluaron
 enfoques
 emergn
 ejecutas
+evaluada
+escuadra
+encadenados
+enlazados
+encadenadas
 Motor
 Media
 Mantiene
@@ -257039,6 +257061,7 @@ NGhd
 NGMJZZhlnE
 NDoFXAytWLyFUQ
 NblFQzXRNfwPEzXmqf
+Necesidad
 originales
 observatory
 oficial
@@ -291915,6 +291938,7 @@ within
 were
 wanted
 workflow
+workshop
 xima
 xeles
 xy

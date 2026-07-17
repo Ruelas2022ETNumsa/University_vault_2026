@@ -36,6 +36,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "Sem_09",
         "Sem_01"
       ]
     },
@@ -3082,6 +3083,52 @@
       "isHidden": false
     },
     "_templates/tpl-w-project.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "ETN999"
+      ],
+      "sortOrder": "custom"
+    },
+    "Semesters/Sem_09/ETN999": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "Partial_2",
+        "tsk_ini_ETN999.md",
+        "Partial_1"
+      ],
+      "sortOrder": "custom"
+    },
+    "Semesters/Sem_09/ETN999/Partial_1": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "tsk_trans_ETN999_P1.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "Semesters/Sem_09/ETN999/Partial_1/tsk_trans_ETN999_P1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/ETN999/tsk_ini_ETN999.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/ETN999/Partial_2": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "tsk_study_ETN999_P2.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "Semesters/Sem_09/ETN999/Partial_2/tsk_study_ETN999_P2.md": {
       "isPinned": false,
       "isHidden": false
     }
