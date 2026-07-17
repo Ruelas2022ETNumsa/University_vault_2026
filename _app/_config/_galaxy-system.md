@@ -1,18 +1,23 @@
 ---
-title: "Sistema Galaxy — University Vault"
+title: Sistema Galaxy — University Vault
 galaxy_body: beacon
 scope: vault
-audience: [usuario, claude]
+audience:
+  - usuario
+  - claude
 related_notes:
   - "[[_note-system]]"
-  - "[[_pdf-system]]"
+  - "[[_pdf_pp-system]]"
   - "[[_mindmap-system]]"
   - "[[_template-system]]"
   - "[[_graph-system]]"
   - "[[_ToDo-system]]"
   - "[[_TABnote-system]]"
   - "[[_notebooklm-system]]"
-tags: [beacon, galaxy, infraestructura]
+tags:
+  - beacon
+  - galaxy
+  - infraestructura
 date_created: 2026-05-28
 date_updated: 2026-07-03
 status: activo
@@ -21,7 +26,7 @@ status: activo
 # Sistema Galaxy — University Vault
 
 > Convención de notas: [[_note-system]]
-> Sistema PDF: [[_pdf-system]]
+> Sistema PDF: [[_pdf_pp-system]]
 > Sistema Mindmap: [[_mindmap-system]]
 > Sistema de Plantillas: [[_template-system]]
 > Pendientes: [[_ToDo-system]]
@@ -413,7 +418,7 @@ galaxy-links
 
 ### asteroid
 
-El `asteroid` con PDF tiene YAML extendido — ver [[_pdf-system]] para el detalle completo.
+El `asteroid` con PDF tiene YAML extendido — ver [[_pdf_pp-system]] para el detalle completo.
 
 ```yaml
 ---
@@ -689,7 +694,7 @@ galaxy-links
 | YAML híbrido en constellation y observatory (2026-05-28)          | El plugin de Excalidraw requiere `excalidraw-plugin: parsed` en el frontmatter para abrir el archivo como lienzo. Se unifica con los campos galaxy en un solo bloque YAML. Sin este campo el archivo se abre como nota de texto.                                                                                                                                                                                                                                                                               |
 | Extensión `.excalidraw.md` en lugar de `.excalidraw`              | Mantener `.md` preserva compatibilidad con YAML, DataView y el grafo de Obsidian. Para usar en excalidraw.com se exporta con el comando del plugin.                                                                                                                                                                                                                                                                                                                                                            |
 | `supernova` como tipo #14 (2026-06-24)                            | Las transcripciones de NotebookLM son producción propia, no fuentes externas — forzarlas en `asteroid` rompía el principio producción-propia vs fuente-externa. Material en bruto de alta energía que aún no se ha condensado en notas galaxy. Símbolo ✨. Dos variantes: `class` individual (por sesión, `status: en-proceso`) y fusionada (tema completo, `status: completo`). Slug en español con guion_bajo. Contador `classNNN` corrido por semestre. Ruta: raíz de `Partial_N/`. Ver [[_TABnote-system]]. |
-| Rutas relativas en `galaxy-links` (2026-07-17)                    | Los wikilinks del bloque `\%\%` usan ruta relativa desde la raíz del vault (`E:\University_vault_2026`). Ejemplo: `[[Semesters/Sem_09/ETN901/Partial_1/ETN901-T01-intro.md]]`. Esto permite a Claude leer cualquier archivo enlazado directamente sin ambigüedad. Links a archivos inexistentes son válidos — Obsidian los muestra como nodos sin contenido en el grafo y sirven para planificar notas antes de crearlas.                                                                                      |
+| Rutas relativas en `galaxy-links` (2026-07-17)                    | Los wikilinks del bloque `%%` usan ruta relativa desde la raíz del vault (`E:\University_vault_2026`). Ejemplo: `[[Semesters/Sem_09/ETN901/Partial_1/ETN901-T01-intro.md]]`. Esto permite a Claude leer cualquier archivo enlazado directamente sin ambigüedad. Links a archivos inexistentes son válidos — Obsidian los muestra como nodos sin contenido en el grafo y sirven para planificar notas antes de crearlas.                                                                                        |
 
 
 
@@ -698,7 +703,7 @@ galaxy-links
 %%
 # galaxy-links
 [[_app/_config/_template-system.md]]
-[[_app/_config/_pdf-system.md]]
+[[_pdf_pp-system]]
 [[_app/_config/_mindmap-system.md]]
 [[_app/_config/_note-system.md]]
 [[_app/_config/_graph-system.md]]

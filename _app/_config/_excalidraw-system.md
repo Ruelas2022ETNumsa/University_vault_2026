@@ -11,7 +11,7 @@ related_notes:
   - "[[_mindmap-system]]"
   - "[[_template-system]]"
   - "[[_note-system]]"
-  - "[[_pdf-system]]"
+  - "[[_pdf_pp-system]]"
   - "[[_ToDo-system]]"
 tags:
   - beacon
@@ -29,7 +29,7 @@ status: pausado
 > Sistema Mindmap: [[_mindmap-system]]
 > Sistema de Plantillas: [[_template-system]]
 > Convención de notas: [[_note-system]]
-> Sistema PDF: [[_pdf-system]]
+> Sistema PDF: [[_pdf_pp-system]]
 > Pendientes: [[_ToDo-system]]
 
 Este documento registra la configuración aplicada al plugin `obsidian-excalidraw-plugin` (archivo `data.json`) para alinearla con el Sistema Galaxy. Es la referencia canónica para restaurar o migrar la configuración. 
@@ -68,7 +68,7 @@ Excalidraw tiene su propia configuración de destino, independiente de la config
 | Crop file folder | `_app/Excalidraw/Observatory` | Las imágenes recortadas son dibujos técnicos puntuales → `observatory` |
 | Image annotation file folder | `_app/Excalidraw/Observatory` | Anotar una imagen es un dibujo libre → `observatory` |
 
-> La carpeta global de attachments de Obsidian está configurada en `_assets`. Esto afecta imágenes arrastradas desde fuera del vault. Los recortes de PDF++ también van a `_assets/` — ver [[_pdf-system]].
+> La carpeta global de attachments de Obsidian está configurada en `_assets`. Esto afecta imágenes arrastradas desde fuera del vault. Los recortes de PDF++ también van a `_assets/` — ver [[_pdf_pp-system]].
 
 ---
 
@@ -269,6 +269,6 @@ Los siguientes valores fueron modificados respecto al estado inicial del plugin:
 [[_app/_config/_mindmap-system.md]]
 [[_app/_config/_template-system.md]]
 [[_app/_config/_note-system.md]]
-[[_app/_config/_pdf-system.md]]
+[[_pdf_pp-system]]
 [[_app/_config/_ToDo-system.md]]
 %%

@@ -1,13 +1,19 @@
 ---
-title: "PDF++ — Guía de Opciones y Menú Contextual"
+title: PDF++ — Guía de Opciones y Menú Contextual
 galaxy_body: beacon
 scope: vault
-audience: [usuario, claude]
+audience:
+  - usuario
+  - claude
 related_notes:
-  - "[[_pdf-system]]"
+  - "[[_pdf_pp-system]]"
   - "[[pdf-guide]]"
   - "[[_sync-system]]"
-tags: [beacon, pdf, pdf-plus, infraestructura]
+tags:
+  - beacon
+  - pdf
+  - pdf-plus
+  - infraestructura
 date_created: 2026-06-09
 date_updated: 2026-06-09
 status: activo
@@ -16,7 +22,7 @@ status: activo
 # PDF++ — Guía de Opciones y Menú Contextual
 
 > Guía complementaria: [[pdf-guide]]
-> Sistema PDF: [[_pdf-system]]
+> Sistema PDF: [[_pdf_pp-system]]
 > Sincronización tablet: [[_sync-system]]
 
 ---
@@ -362,7 +368,7 @@ Ribbon:
 
 %%
 # galaxy-links
-[[_app/_config/_pdf-system.md]]
+[[_pdf_pp-system]]
 [[_app/_appnotes/pdf-guide.md]]
 [[_app/_config/_sync-system.md]]
 [[_app/_config/_galaxy-system.md]]

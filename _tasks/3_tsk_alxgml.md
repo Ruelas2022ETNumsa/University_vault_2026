@@ -22,7 +22,7 @@ El vault mantiene dos capas de conexión en cada nota. Son redundantes intencion
 ## Pendientes
 
 - [x] actualizar los galaxy links a su ruta relativa o completa de todos los archivos.
-- [ ] P1 — Documentar sistema de dos capas en `_galaxy-system.md` (S1 y S2)
+- [x] P1 — Documentar sistema de dos capas en `_galaxy-system.md` (S1 y S2)
 - [ ] P2 — Registrar `workshop` como tipo #15 en `_galaxy-system.md`
 - [ ] P3 — Documentar plantillas workshop en beacons correspondientes (`_template-system`, `_notebooklm-system`, `_claude-boot`, `_galaxy-system`)
 - [ ] P4 — Documentar guías MAT101 en beacon correspondiente (`_graph-system` o `_galaxy-system`)

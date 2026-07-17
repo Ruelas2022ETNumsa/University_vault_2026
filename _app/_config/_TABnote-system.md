@@ -1,16 +1,22 @@
 ---
-title: "Sistema TABnote — University Vault"
+title: Sistema TABnote — University Vault
 galaxy_body: beacon
 scope: vault
-audience: [usuario, claude]
+audience:
+  - usuario
+  - claude
 related_notes:
   - "[[_galaxy-system]]"
   - "[[_note-system]]"
-  - "[[_pdf-system]]"
+  - "[[_pdf_pp-system]]"
   - "[[_template-system]]"
   - "[[_notebooklm-system]]"
   - "[[_ToDo-system]]"
-tags: [beacon, tabnote, samsung-notes, infraestructura]
+tags:
+  - beacon
+  - tabnote
+  - samsung-notes
+  - infraestructura
 date_created: 2026-06-20
 date_updated: 2026-06-25
 status: activo
@@ -20,7 +26,7 @@ status: activo
 
 > Sistema base: [[_galaxy-system]]
 > Convención de notas: [[_note-system]]
-> Sistema PDF (fuentes externas): [[_pdf-system]]
+> Sistema PDF (fuentes externas): [[_pdf_pp-system]]
 > Sistema NotebookLM (transcripción): [[_notebooklm-system]]
 > Pendientes: [[_ToDo-system]]
 
@@ -32,7 +38,7 @@ status: activo
 
 ## Objetivo
 
-Los apuntes manuscritos se toman en la tablet con **Samsung Notes**, en formato nativo `.sdocx`, y ahora también se editan/completan desde la PC vía la app oficial de Windows. Este sistema define cómo ese material se relaciona con el baúl, manteniéndose **separado del Sistema PDF** ([[_pdf-system]]) a propósito:
+Los apuntes manuscritos se toman en la tablet con **Samsung Notes**, en formato nativo `.sdocx`, y ahora también se editan/completan desde la PC vía la app oficial de Windows. Este sistema define cómo ese material se relaciona con el baúl, manteniéndose **separado del Sistema PDF** ([[_pdf_pp-system]]) a propósito:
 
 > `_pdf/` almacena **fuentes externas** (libros, slides del profesor, prácticas oficiales) — material que el usuario no produjo. Se sincroniza con Mega.
 > Los **apuntes manuscritos propios** ya no se almacenan como archivo activo dentro del baúl — viven en **Samsung Cloud**, sincronizados entre tablet y PC/laptop directamente por la app de Samsung. El baúl solo recibe su **transcripción en texto** vía NotebookLM, y opcionalmente un **snapshot PDF de archivo** al cerrar el parcial.
@@ -49,7 +55,7 @@ xxx prueba de pegadoxxxx
 | Término | Qué es |
 |---|---|
 | **PDF+(Samsung)** | PDF exportado desde Samsung Notes con la opción "edición habilitada" — permite anotar con S Pen y editar cuadros de texto *solo dentro de la app Samsung Notes*. La plantilla de fondo queda fija al exportar. En el modelo actual, se usa únicamente como snapshot de archivo, no como flujo activo. |
-| **PDF++(Obs)** | Plugin [obsidian-pdf-plus](https://github.com/ryotaushio/obsidian-pdf-plus) usado en el baúl para leer/anotar/citar PDFs dentro de Obsidian. Documentado en [[_pdf-system]]; aplica a los snapshots archivados de este sistema, no a los apuntes vivos. |
+| **PDF++(Obs)** | Plugin [obsidian-pdf-plus](https://github.com/ryotaushio/obsidian-pdf-plus) usado en el baúl para leer/anotar/citar PDFs dentro de Obsidian. Documentado en [[_pdf_pp-system]]; aplica a los snapshots archivados de este sistema, no a los apuntes vivos. |
 | **.sdocx** | Formato nativo de Samsung Notes. Es la única forma 100% editable (plantilla, cuadros de texto, trazos como objetos). Vive en Samsung Cloud, sincronizado entre tablet y PC — **es la fuente de verdad activa** en el modelo actual. |
 
 ---
@@ -266,7 +272,7 @@ Samsung Notes ha tenido rupturas de compatibilidad documentadas en actualizacion
 | Carpeta renombrada de `_tabnotes/` a `_tabnotes_archivo/`, excluida de GitHub | El nombre deja explícito que ya no es almacenamiento activo. Se mantiene fuera de Git por el mismo motivo que `_pdf/` — binarios pesados rompen la sincronización. |
 | Transcripción `.md` (NotebookLM) como lo único que llega a GitHub | Es lo único realmente buscable e indexable, y es lo que necesita Claude para ayudar con la materia vía conectores. |
 | Nomenclatura PDF+(Samsung) vs PDF++(Obs) | Evitar confusión entre dos herramientas con nombres casi idénticos pero de naturaleza totalmente distinta (export con anotación vs plugin lector de Obsidian). |
-| `_pdf/` reservado exclusivamente para libros/fuentes externas | Se mantiene sin cambios respecto a [[_pdf-system]]; los apuntes propios (activos o archivados) nunca se mezclan ahí. |
+| `_pdf/` reservado exclusivamente para libros/fuentes externas | Se mantiene sin cambios respecto a [[_pdf_pp-system]]; los apuntes propios (activos o archivados) nunca se mezclan ahí. |
 | `galaxy_body: supernova` como tipo #14 (no extender `asteroid`) | La transcripción de NotebookLM es producción propia, no una fuente externa — forzarla en `asteroid` rompía el principio producción-propia vs fuente-externa que es eje del sistema. Se aprueba `supernova` (✨) como tipo propio. Nombre elegido por la metáfora: material en bruto de alta energía que aún no se ha condensado en notas galaxy. Registrado en [[_galaxy-system]] como tipo #14. Plantilla: `tpl-supernova.md`. |
 | Convención de nombres para notas `supernova` | `class` individual: `ETNXXX-classNNN-PN-mesdía.md` (ej. `ETN901-class001-P1-jun15.md`). Fusionada: `ETNXXX-TN-slug_del_tema-PN.md` (ej. `ETN901-T1-densidad_probabilidad_conjunta-P1.md`). Slug en español con guion_bajo, sin tildes ni ñ. Contador `classNNN` corrido por semestre, no reinicia por parcial. |
 | Ruta de las notas `supernova` | `Semesters/Sem_NN/ETNXXX/Partial_N/` — raíz del parcial, no dentro de `Topic_NN/`, porque una class puede cubrir subtítulos de varios temas. |
@@ -278,7 +284,7 @@ Samsung Notes ha tenido rupturas de compatibilidad documentadas en actualizacion
 # galaxy-links
 [[_app/_config/_galaxy-system.md]]
 [[_app/_config/_note-system.md]]
-[[_app/_config/_pdf-system.md]]
+[[_pdf_pp-system]]
 [[_app/_config/_template-system.md]]
 [[_app/_config/_notebooklm-system.md]]
 [[_app/_config/_ToDo-system.md]]

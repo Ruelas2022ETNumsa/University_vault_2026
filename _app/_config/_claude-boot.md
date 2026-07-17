@@ -8,7 +8,7 @@ related_notes:
   - "[[_galaxy-system]]"
   - "[[_note-system]]"
   - "[[_template-system]]"
-  - "[[_pdf-system]]"
+  - "[[_pdf_pp-system]]"
   - "[[_library-system]]"
   - "[[_mindmap-system]]"
   - "[[_excalidraw-system]]"
@@ -341,7 +341,7 @@ Convención interna del vault para respaldar archivos antes de editarlos:
 [[_app/_config/_galaxy-system.md]]
 [[_app/_config/_note-system.md]]
 [[_app/_config/_template-system.md]]
-[[_app/_config/_pdf-system.md]]
+[[_pdf_pp-system]]
 [[_app/_config/_library-system.md]]
 [[_app/_config/_mindmap-system.md]]
 [[_app/_config/_excalidraw-system.md]]

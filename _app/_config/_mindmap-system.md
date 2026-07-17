@@ -10,7 +10,7 @@ related_notes:
   - "[[_galaxy-system]]"
   - "[[_template-system]]"
   - "[[_note-system]]"
-  - "[[_pdf-system]]"
+  - "[[_pdf_pp-system]]"
   - "[[_ToDo-system]]"
 tags:
   - beacon
@@ -27,7 +27,7 @@ status: pausado
 > Sistema Galaxy: [[_galaxy-system]]
 > Sistema de Plantillas: [[_template-system]]
 > Convención de notas: [[_note-system]]
-> Sistema PDF: [[_pdf-system]]
+> Sistema PDF: [[_pdf_pp-system]]
 > Pendientes: [[_ToDo-system]]
 
 Este documento define cómo se usa Excalidraw dentro del Sistema Galaxy. Excalidraw reemplaza completamente a Canvas de Obsidian.
@@ -309,6 +309,6 @@ y agregar wikilinks en bloque %% al final del archivo
 [[_app/_config/_galaxy-system.md]]
 [[_app/_config/_template-system.md]]
 [[_app/_config/_note-system.md]]
-[[_app/_config/_pdf-system.md]]
+[[_pdf_pp-system]]
 [[_app/_config/_ToDo-system.md]]
 %%

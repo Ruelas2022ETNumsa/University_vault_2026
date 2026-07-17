@@ -81,7 +81,7 @@ status: activo
 - [x] Decidir: `supernova` como `galaxy_body` nuevo (tipo #14) — aprobado 2026-06-24. Resuelve la pregunta de `tabnote vs asteroid`. Registrado en [[_galaxy-system]], [[_note-system]], [[_template-system]], [[_TABnote-system]].
 - [x] Definir disparador/recordatorio para generar el snapshot PDF al cerrar cada parcial — resuelto: campo `archive_snapshot` en plantilla + ítem en `_TABnote-system` registro de decisiones cerradas.
 - [ ] Medir tamaño real del PDF+(Samsung) de cierre de parcial — para estimar peso acumulado en `_tabnotes_archivo/` a lo largo del semestre
-- [x] Confirmar convención real de subcarpetas dentro de `_PDF/` — **RESUELTO**: la convención real usa `PDF-nombre` (ej. `PDF-telefonia`, `PDF-921`), no siglas `ETNXXX`. Documentado en [[_pdf-system]]. Diagrama de carpetas en [[_galaxy-system]] actualizado a `PDF-nombre` (2026-06-25).
+- [x] Confirmar convención real de subcarpetas dentro de `_PDF/` — **RESUELTO**: la convención real usa `PDF-nombre` (ej. `PDF-telefonia`, `PDF-921`), no siglas `ETNXXX`. Documentado en [[_pdf_pp-system]]. Diagrama de carpetas en [[_galaxy-system]] actualizado a `PDF-nombre` (2026-06-25).
 
 ### PDF++ — estado
 - [x] Guía `PDF_PP-guide.md` creada en `_app/_appnotes/` ✅ — flujo completo con `_PDF/` + Mega documentado

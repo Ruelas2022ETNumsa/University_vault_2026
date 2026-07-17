@@ -1,17 +1,23 @@
 ---
-title: "Sistema de Plantillas — University Vault"
+title: Sistema de Plantillas — University Vault
 galaxy_body: beacon
 scope: vault
 tool: templater
-audience: [usuario, claude]
+audience:
+  - usuario
+  - claude
 related_notes:
   - "[[_galaxy-system]]"
   - "[[_mindmap-system]]"
   - "[[_note-system]]"
-  - "[[_pdf-system]]"
+  - "[[_pdf_pp-system]]"
   - "[[_TABnote-system]]"
   - "[[_ToDo-system]]"
-tags: [beacon, templater, plantillas, infraestructura]
+tags:
+  - beacon
+  - templater
+  - plantillas
+  - infraestructura
 date_created: 2026-05-28
 date_updated: 2026-06-24
 status: activo
@@ -22,7 +28,7 @@ status: activo
 > Sistema Galaxy: [[_galaxy-system]]
 > Sistema Mindmap: [[_mindmap-system]]
 > Convención de notas: [[_note-system]]
-> Sistema PDF: [[_pdf-system]]
+> Sistema PDF: [[_pdf_pp-system]]
 > Pendientes: [[_ToDo-system]]
 > Archivos físicos: `_templates/`
 
@@ -322,7 +328,7 @@ status: en-proceso
 ---
 ```
 
-> Para YAML extendido de asteroid con PDF ver [[_pdf-system]].
+> Para YAML extendido de asteroid con PDF ver [[_pdf_pp-system]].
 
 ---
 
@@ -500,6 +506,6 @@ status: completo
 [[_app/_config/_galaxy-system.md]]
 [[_app/_config/_mindmap-system.md]]
 [[_app/_config/_note-system.md]]
-[[_app/_config/_pdf-system.md]]
+[[_pdf_pp-system]]
 [[_app/_config/_ToDo-system.md]]
 %%

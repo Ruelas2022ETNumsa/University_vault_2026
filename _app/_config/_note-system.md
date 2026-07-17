@@ -1,16 +1,21 @@
 ---
-title: "Convención de Notas — University Vault"
+title: Convención de Notas — University Vault
 galaxy_body: beacon
 scope: vault
-audience: [usuario, claude]
+audience:
+  - usuario
+  - claude
 related_notes:
   - "[[_galaxy-system]]"
   - "[[_template-system]]"
   - "[[_mindmap-system]]"
-  - "[[_pdf-system]]"
+  - "[[_pdf_pp-system]]"
   - "[[_TABnote-system]]"
   - "[[_ToDo-system]]"
-tags: [beacon, convencion, infraestructura]
+tags:
+  - beacon
+  - convencion
+  - infraestructura
 date_created: 2026-05-28
 date_updated: 2026-06-24
 status: activo
@@ -21,7 +26,7 @@ status: activo
 > Sistema Galaxy: [[_galaxy-system]]
 > Sistema de Plantillas: [[_template-system]]
 > Sistema Mindmap: [[_mindmap-system]]
-> Sistema PDF: [[_pdf-system]]
+> Sistema PDF: [[_pdf_pp-system]]
 > Pendientes: [[_ToDo-system]]
 
 > ETN302 = sistema legacy (sin cambios). Todas las materias nuevas = Sistema Galaxy.
@@ -176,9 +181,12 @@ El YAML **no genera conexiones** en el grafo nativo de Obsidian. Los `[[wikilink
 
 ```markdown
 %%
-galaxy-links
-[[ETN806-T01-star]]
-[[ETN806-T01-marginal_density_formula]]
+# galaxy-links
+[[MOC\MAT101-T00-star.md]]
+[[Semesters\Sem_01\MAT101\Partial_1\T00-numeros_reales\MAT101-T00-valor_absoluto.md]]
+
+## Links a notas pendientes de crear
+[[Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/no_existe.md]]
 %%
 ```
 
@@ -223,7 +231,7 @@ El vault usa dos plugins complementarios para el formato de apuntes. Ver [[corne
 [[_app/_config/_galaxy-system.md]]
 [[_app/_config/_template-system.md]]
 [[_app/_config/_mindmap-system.md]]
-[[_app/_config/_pdf-system.md]]
+[[_pdf_pp-system]]
 [[_app/_config/_graph-system.md]]
 [[_app/_config/_ToDo-system.md]]
 %%

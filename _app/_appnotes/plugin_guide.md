@@ -16,7 +16,7 @@ status: activo
 # Plugin Guide — Plugins simples del vault
 
 > Plugins que no requieren archivo propio pero sí documentación de configuración y uso.
-> Para plugins con sistema completo ver: [[desmos_guide]], [[tikzjax_guide-legacy]], [[obsidian_guide]], [[_pdf-system]], [[_excalidraw-system]], [[better-export-pdf]].
+> Para plugins con sistema completo ver: [[desmos_guide]], [[tikzjax_guide-legacy]], [[obsidian_guide]], [[_pdf_pp-system]], [[_excalidraw-system]], [[better-export-pdf]].
 
 ---
 

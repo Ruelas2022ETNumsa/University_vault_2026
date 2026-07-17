@@ -1,6 +1,6 @@
 # Guía de Plugins PDF — University Vault 2026
 
-> **Sistema base:** [[_pdf-system]]
+> **Sistema base:** [[_pdf_pp-system]]
 > **Nivel:** Principiante — Tutorial paso a paso
 > **Plugins cubiertos:** PDF++, Annotator, OmniSearch + Text Extractor
 > **Última actualización:** 2026-05-27
@@ -547,7 +547,7 @@ T01, T02... = temas específicos
 ---
 
 *Guía generada para University Vault 2026 — Sistema PDF Galaxy*
-*Ver también: [[_pdf-system]] · [[_galaxy-system]] · [[_note-system]]*
+*Ver también: [[_pdf_pp-system]] · [[_galaxy-system]] · [[_note-system]]*
 
 ---
 
