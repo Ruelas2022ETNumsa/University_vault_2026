@@ -10,20 +10,6 @@ status: libre | activo | cerrado
 - cerrado: proyecto terminado, pendiente de documentar y archivar
 %%
 
-## Handoff
-%%
-Sobreescribir con edit_file al cerrar cada sesión.
-Es lo primero que Claude lee al retomar — debe ser suficiente para arrancar sin re-explicar.
-%%
-
-**Última sesión:** 
-**Retomar desde:** [ruta + línea final sugerida]
-**Completado esta sesión:** 
-**Próximo paso:** 
-**Preguntas de cierre:** 
-
----
-
 ## Resumen y objetivo
 %%
 Una o dos líneas que describan el proyecto y su meta principal.

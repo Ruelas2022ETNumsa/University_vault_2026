@@ -21069,6 +21069,7 @@ SHIFT
 SLIDE
 Start
 Supernovas
+Sobreescribir
 Plugins
 Pendientes
 Plugin
@@ -218376,6 +218377,7 @@ RBIktxo
 RQhe
 Registrar
 Recursos
+Retomar
 Hider
 Hace
 Herramientas
@@ -223519,6 +223521,7 @@ HVWljZkTGUlZdxlOuTERrVlVKs
 HaVPx
 Hold
 Helper
+Handoff
 filtrar
 formato
 faltantes
