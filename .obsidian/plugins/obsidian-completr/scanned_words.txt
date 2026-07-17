@@ -50677,6 +50677,7 @@ back
 bgColor
 backgroundColor
 basename
+bloqueado
 scope
 status
 selector
@@ -70965,6 +70966,7 @@ avance
 alxhot
 alxgml
 alxrul
+agregando
 related
 recomendados
 ribbon
@@ -77685,6 +77687,7 @@ reinici
 requer
 replanificado
 rul
+recomiendo
 notes
 notas
 nuevas
@@ -91225,6 +91228,7 @@ colapsado
 considerados
 condicionan
 confirm
+configs
 updated
 un
 universo
@@ -110537,6 +110541,7 @@ CbWhCrqYAtCAZxa
 CRWzmd
 Continue
 Creating
+Confirm
 Instalados
 Instalado
 Instalar
@@ -150055,6 +150060,7 @@ permit
 project
 puebla
 planificacion
+planificaci
 min
 mica
 movimiento
