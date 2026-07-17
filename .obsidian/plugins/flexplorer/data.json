@@ -2966,7 +2966,7 @@
       ]
     },
     "_tasks/tsk_tpl.md": {
-      "isPinned": false,
+      "isPinned": true,
       "isHidden": false
     },
     "_tasks/tsk_proyectos_shellcmd.md": {
@@ -3067,7 +3067,8 @@
     }
   },
   "pinnedFiles": [
-    "Rubbish/section.md"
+    "Rubbish/section.md",
+    "_tasks/tsk_tpl.md"
   ],
   "showHidden": false,
   "newItemPlacement": "top",
