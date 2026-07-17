@@ -2954,6 +2954,8 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "7_tsk_emergn.md",
+        "6_tsk_standb.md",
         "tsk_proyectos_shellcmd.md",
         "tsk_tpl.md",
         "2_tsk_krajo.md",
@@ -3052,6 +3054,14 @@
       "isHidden": false
     },
     "_tasks/5_tsk_alx-rul.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_tasks/6_tsk_standb.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_tasks/7_tsk_emergn.md": {
       "isPinned": false,
       "isHidden": false
     }
