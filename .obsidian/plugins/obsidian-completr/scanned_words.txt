@@ -26810,6 +26810,7 @@ PzTJV
 PzZsB
 Presentation
 PRINT
+Planificaci
 del
 date
 de
@@ -32385,6 +32386,8 @@ designing
 double
 delete
 dryRun
+describan
+descartadas
 Vault
 Verificar
 Variables
@@ -70949,6 +70952,14 @@ alphabetical
 additional
 alignment
 actions
+abandonadas
+abandonados
+abordar
+abandonada
+antecedente
+accionable
+actualizarse
+avance
 related
 recomendados
 ribbon
@@ -77665,6 +77676,9 @@ round
 resume
 restart
 resetControlPanelElPosition
+reinici
+requer
+replanificado
 notes
 notas
 nuevas
@@ -91201,6 +91215,9 @@ createPDF
 createPresentationNavigationPanel
 clearDirty
 clearTimeout
+colapsado
+considerados
+condicionan
 updated
 un
 universo
@@ -143736,6 +143753,7 @@ AWlceFZYZvHaHBToZnhmx
 AsyncFunction
 About
 Arrow
+Antecedentes
 push
 pull
 para
@@ -150027,6 +150045,9 @@ pageProps
 presentationPathType
 projector
 permit
+project
+puebla
+planificacion
 min
 mica
 movimiento
@@ -176596,6 +176617,7 @@ eVwChZONDKha
 eTluxiz
 excalidrawContainer
 evaluaron
+enfoques
 Motor
 Media
 Mantiene
@@ -210918,6 +210940,7 @@ DrHRdrZqhneqf
 DrNCyqJl
 DUANBQ
 During
+Descartadas
 Remotely
 Raz
 Revisa
@@ -218299,6 +218322,8 @@ RAZGH
 RXlFbllowtRJtNVng
 RBIktxo
 RQhe
+Registrar
+Recursos
 Hider
 Hace
 Herramientas
