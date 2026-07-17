@@ -2607,6 +2607,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "MAT101_TikzJax 1.md",
         "MAT101_latex.md",
         "MAT101_desmos.md",
         "MAT101_library.md",
@@ -2708,6 +2709,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "MAT101-T00-inecuaciones_lineales 1.md",
         "MAT101-T00-teoremas_desigualdades.md",
         "MAT101-T00-axiomas_cuerpo.md",
         "MAT101-T00-ej_inec_racional_fracciones.md",
@@ -2954,11 +2956,11 @@
       "customOrder": [
         "tsk_proyectos_shellcmd.md",
         "tsk_tpl.md",
-        "tsk_krajo_2.md",
-        "tsk_alxrul_4.md",
-        "tsk_alxhot_1.md",
-        "tsk_alx-rul_5.md",
-        "tsk_alxgml_3.md"
+        "2_tsk_krajo.md",
+        "4_tsk_alxrul.md",
+        "1_tsk_alxhot.md",
+        "5_tsk_alx-rul.md",
+        "3_tsk_alxgml.md"
       ]
     },
     "_tasks/tsk_tpl.md": {
@@ -3021,27 +3023,35 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_tasks/tsk_alxgml_3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_tasks/tsk_krajo_2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_tasks/tsk_alxhot_1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_tasks/tsk_alxrul_4.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_tasks/tsk_alx-rul_5.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_app/_appnotes/tagroute_parche/TagsRoute(legacy).md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/guides/MAT101/MAT101_TikzJax 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-inecuaciones_lineales 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_tasks/1_tsk_alxhot.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_tasks/2_tsk_krajo.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_tasks/3_tsk_alxgml.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_tasks/4_tsk_alxrul.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_tasks/5_tsk_alx-rul.md": {
       "isPinned": false,
       "isHidden": false
     }
