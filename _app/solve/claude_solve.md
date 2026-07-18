@@ -61,5 +61,5 @@ de verificación previa. Tenerlo en cuenta en cada edición.
 
 %%
 # galaxy-links
-[[_app/_config/_claude-boot.md]]
+[[_claude-boot]]
 %%

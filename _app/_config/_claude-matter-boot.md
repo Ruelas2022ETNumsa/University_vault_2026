@@ -223,7 +223,7 @@ Estas son reglas que Claude debe seguir al construir el archivo generado:
 
 %%
 # galaxy-links
-[[_app/_config/_claude-boot.md]]
+[[_claude-boot]]
 [[_app/_config/_galaxy-system.md]]
 [[_app/_config/_note-system.md]]
 [[_app/_config/_ToDo-system.md]]

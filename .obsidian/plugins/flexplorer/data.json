@@ -5,6 +5,7 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
+        "_skills",
         "wolfram alpha example.md",
         "_tasks",
         "_assets",
@@ -1227,6 +1228,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "claude_prompts 1.md",
         "script_guide.md",
         "claude_prompts.md",
         "Rclone_guide.md",
@@ -1300,7 +1302,6 @@
         "_TABnote-system.md",
         "_library_MAT101.md",
         "_basic-memory-system.md",
-        "_claude-boot.md",
         "_excalidraw-system.md",
         "_galaxy-system.md",
         "_graph-system.md",
@@ -1315,10 +1316,6 @@
       ]
     },
     "_app/_config/_basic-memory-system.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/_config/_claude-boot.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -3087,6 +3084,42 @@
       "isHidden": false
     },
     "_app/_config/_pdf_pp-system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_appnotes/claude_prompts 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_skills": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "_claude-setup.md",
+        "_claude-boot.md",
+        "_claude-work.md",
+        "_claude-plan.md",
+        "_claude-close.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "_skills/_claude-boot.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_skills/_claude-work.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_skills/_claude-plan.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_skills/_claude-close.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_skills/_claude-setup.md": {
       "isPinned": false,
       "isHidden": false
     }
