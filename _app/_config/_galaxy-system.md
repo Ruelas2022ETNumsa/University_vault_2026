@@ -300,23 +300,17 @@ Ambas capas deben estar sincronizadas — si un enlace está en el YAML también
 
 ### star
 
-```ad-tip
-title: This is a tip
+````ad-tip
+title: tlp
 collapse: open
 
-This is the content of the admonition.
-```
+
+![[_templates/tpl-star]]
 
 
 
 
-
-
-
-
-
-
-
+````
 
 ```yaml
 ---
@@ -565,18 +559,6 @@ Herramientas soportadas:
 Como `neutrino` no es nota separada, **no tiene YAML propio ni bloque `%%`**. La nota host (planet o comet) lleva el YAML y los wikilinks.
 
 Ejemplo — bloque Desmos dentro de un planet:
-
-
-
-
-
-
-
-
-
-
-
-
 
 ```markdown
 ## Región de soporte
@@ -1075,8 +1057,11 @@ galaxy-links
 | Extensión `.excalidraw.md` en lugar de `.excalidraw`              | Mantener `.md` preserva compatibilidad con YAML, DataView y el grafo de Obsidian. Para usar en excalidraw.com se exporta con el comando del plugin.                                                                                                                                                                                                                                                                                                                                                            |
 | `supernova` como tipo #14 (2026-06-24)                            | Las transcripciones de NotebookLM son producción propia, no fuentes externas — forzarlas en `asteroid` rompía el principio producción-propia vs fuente-externa. Material en bruto de alta energía que aún no se ha condensado en notas galaxy. Símbolo ✨. Dos variantes: `class` individual (por sesión, `status: en-proceso`) y fusionada (tema completo, `status: completo`). Slug en español con guion_bajo. Contador `classNNN` corrido por semestre. Ruta: raíz de `Partial_N/`. Ver [[_TABnote-system]]. |
 | Rutas relativas en `galaxy-links` (2026-07-17)                    | Los wikilinks del bloque `%%` usan ruta relativa desde la raíz del vault (`E:\University_vault_2026`). Ejemplo: `[[Semesters/Sem_09/ETN901/Partial_1/ETN901-T01-intro.md]]`. Esto permite a Claude leer cualquier archivo enlazado directamente sin ambigüedad. Links a archivos inexistentes son válidos — Obsidian los muestra como nodos sin contenido en el grafo y sirven para planificar notas antes de crearlas.                                                                                        |
-| `_skills/` como carpeta sin `galaxy_body` (2026-07-17) | Los skills son instrucciones de comportamiento para Claude, no notas del vault. Forzarles un `galaxy_body` sería ruido — no participan del grafo ni del sistema galaxy. |
-
+| `_skills/` como carpeta sin `galaxy_body` (2026-07-17)            | Los skills son instrucciones de comportamiento para Claude, no notas del vault. Forzarles un `galaxy_body` sería ruido — no participan del grafo ni del sistema galaxy.                                                                                                                                                                                                                                                                                                                                        |
+| `_tasks/` renombrada a `_projects/` (2026-07-18)                  | Nombre más descriptivo — la carpeta contiene proyectos activos y backlog de ideas, no tareas sueltas.                                                                                                                                                                                                                                                                                                                                                                                                          |
+| `workshop` aprobado como tipo #15, símbolo 🔧 (2026-07-18)        | Necesidad de monitorear tareas académicas por materia sin mezclar con galaxy bodies de contenido. Cuatro variantes de plantilla según etapa: initial, transcription, study, project.                                                                                                                                                                                                                                                                                                                           |
+| Archivos `tsk_` sin `galaxy_body` (2026-07-18)                    | Son slots de trabajo temporal — no son notas del vault ni participan del grafo. Forzarles un `galaxy_body` sería ruido. Al cerrar un proyecto se documenta y el slot queda libre. Su ubicacion esta en la ruta \_projects/ .                                                                                                                                                                                                                                                                                   |
+| `_ideas.md` como backlog en `_projects/` (2026-07-18)             | Lista de ideas futuras que pueden convertirse en proyectos activos. Sin `galaxy_body`, sin ciclo de vida fijo. Escalable: `_ideas_2.md` si el primero se satura. Su ruta es \_projects/ .                                                                                                                                                                                                                                                                                                                      |
 
 ---
 
