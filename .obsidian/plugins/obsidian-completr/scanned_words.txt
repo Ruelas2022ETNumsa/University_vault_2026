@@ -13679,6 +13679,7 @@ TNqT
 Tilw
 TGSp
 ToolIcon
+Temporales
 Sistema
 Sync
 Save
@@ -21075,6 +21076,9 @@ Sobreescribir
 SKILL
 Skills
 Setup
+Slots
+Slot
+Seguimiento
 Plugins
 Pendientes
 Plugin
@@ -26825,6 +26829,7 @@ PRINT
 Planificaci
 Potencial
 Pregunt
+Proyectos
 del
 date
 de
@@ -32411,6 +32416,7 @@ duplicarse
 deten
 descubrimientos
 diagnostic
+desborde
 Vault
 Verificar
 Variables
@@ -50705,6 +50711,8 @@ bloqueado
 bloquesTemas
 bodies
 busc
+backlog
+bajos
 scope
 status
 selector
@@ -57962,6 +57970,8 @@ skills
 suger
 segu
 sobreescrib
+slots
+standby
 vault
 vil
 ver
@@ -77741,6 +77751,7 @@ resum
 redefinido
 resolvi
 reportado
+replaceAll
 notes
 notas
 nuevas
@@ -84179,6 +84190,7 @@ nothing
 nHold
 numTemas
 numerados
+neos
 created
 commit
 cada
@@ -91293,6 +91305,8 @@ corromper
 concisa
 continu
 considerables
+controlado
+classNNN
 updated
 un
 universo
@@ -131647,6 +131661,7 @@ ElalHy
 ExcalidrawSlideshow
 ExcalidrawSlideshowStartTimer
 Esper
+Enfoques
 Obsidian
 OmniSearch
 Ocultar
@@ -169777,6 +169792,7 @@ BXpOvPl
 BXZZahe
 Backward
 Backspace
+Backlog
 en
 exacta
 escaneados
@@ -176731,6 +176747,7 @@ escribas
 evolucion
 evite
 ejecut
+emergencia
 Motor
 Media
 Mantiene
@@ -204638,6 +204655,7 @@ intentando
 inferirse
 init
 involucrado
+initial
 Dependencia
 Dropbox
 Dataview
@@ -263972,6 +263990,7 @@ obpklbKypZXQS
 options
 order
 obvio
+ocupados
 junto
 json
 jer

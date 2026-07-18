@@ -136,10 +136,15 @@ University_Vault_2026/
 │   ├── PDF-921/                   la organización semántica la llevan los nombres
 │   └── PDF-nombre/                y las notas asteroid en Semesters/
 |
+├── _projects/                  ← proyectos activos y backlog de ideas
+│   ├── tsk_alias.md            ← slots de proyecto (tsk_krajo, tsk_alxhot, etc.)
+│   │                              5 slots activos + 1 standby + 1 emergencia
+│   ├── tsk_tpl.md              ← plantilla base para los slots
+│   └── _ideas.md               ← backlog de ideas futuras (sin galaxy_body)
+|
 ├── _skills/                    ← skills de sesión de Claude (work, plan, close, setup, boot)
 │                                  cada archivo define el comportamiento de Claude
 │                                  para un tipo de tarea específica
-│
 ├── _templates/                 ← plantillas de notas de Obsidian — ver [[_template-system]]
 │   ├── tpl-supernova.md        ← una plantilla por tipo de cuerpo galaxy
 │   ├── tpl-star.md
@@ -153,8 +158,13 @@ University_Vault_2026/
 │   ├── tpl-bridge.md
 │   ├── tpl-constellation.md    ← Excalidraw + Mindmap Builder
 │   ├── tpl-observatory.md      ← Excalidraw dibujo libre
+│   ├── tpl-w-initial.md        ← workshop: inicio de materia
+│   ├── tpl-w-transcription.md  ← workshop: transcripción por parcial
+│   ├── tpl-w-study.md          ← workshop: estudio por parcial
+│   ├── tpl-w-project.md        ← workshop: proyecto académico puntual
 │   └── alt-B/                  ← respaldo
 │       └── plantillas-A-respaldo.md  ← plantillas Opción A consolidadas (sin ruta dinámica)
+│
 │
 └── borrar/                     ← carpeta de espera antes de eliminar archivos
                                    revisar antes de borrar permanentemente
@@ -162,17 +172,33 @@ University_Vault_2026/
 
 ---
 
-## Skills de Claude
+## Archivos sin galaxy_body
 
-Los archivos en `_skills/` **no tienen `galaxy_body`**. Son instrucciones de comportamiento para Claude, no notas del vault. No participan del grafo de Obsidian ni del sistema galaxy.
+Estos archivos son operativos — no son notas del vault, no participan del grafo de Obsidian ni del sistema galaxy. Se agrupan aquí por convención.
+
+### Skills de Claude
+
+Instrucciones de comportamiento para Claude. Viven en `_skills/`.
 
 | Archivo            | Rol                                           |
 | ------------------ | --------------------------------------------- |
 | `_claude-boot.md`  | Arranque de sesión — carga contexto del vault |
 | `_claude-work.md`  | Sesión de edición de archivos                 |
-| `_claude-plan.md`  | Planificación de proyectos (`tsk_`)           |
+| `_claude-plan.md`  | Planificación de proyectos (`_projects/`)     |
 | `_claude-close.md` | Cierre de sesión — actualiza el `tsk_`        |
 | `_claude-setup.md` | Configuración técnica (plugins, herramientas) |
+
+### Proyectos del usuario
+
+Slots de trabajo activo y backlog. Viven en `_projects/`. Temporales por naturaleza — al cerrar un proyecto se documenta y el slot queda libre.
+
+| Archivo         | Rol                                                                                        |
+| --------------- | ------------------------------------------------------------------------------------------ |
+| `tsk_alias.md`  | Slot de proyecto activo — 5 slots para proyectos en curso simultáneos                      |
+| `tsk_standb.md` | Slot standby — desborde controlado, para un 6to proyecto cuando los 5 slots están ocupados |
+| `tsk_emergn.md` | Slot de emergencia — proyecto urgente que no puede esperar a que se libere un slot activo  |
+| `tsk_tpl.md`    | Plantilla base para los slots                                                              |
+| `_ideas.md`     | Backlog de ideas futuras — sin ciclo de vida fijo                                          |
 
 ---
 
@@ -216,22 +242,23 @@ ETN806-ETN302-laplace_vs_probability.md
 
 El campo `galaxy_body` en el YAML define el rol de la nota. Catorce tipos:
 
-| `galaxy_body` | Símbolo | Rol |
-|---------------|---------|-----|
-| `star` | ☀️ | MOC de un tema. Enlaza todas las notas en órbita. Una por carpeta de tema. |
-| `planet` | 🪐 | Nota de teoría central. Un concepto por nota. |
-| `moon` | 🌙 | Propiedad, fórmula o resultado clave. Siempre orbita un planet. |
-| `comet` | ☄️ | Ejercicio resuelto. Referencia los conceptos que usó. |
-| `nebula` | 🌫️ | Agrupador de sesión. Enlaza comets de una clase o auxiliatura. |
-| `dwarf` | ⬛ | Resumen. Revisión condensada de un tema o parcial. |
-| `asteroid` | 🪨 | Referencia externa. Extracto de libro, nota de PDF, paper. |
-| `photon` | 💡 | Imagen estática pura. Archivo visual (.png, .jpg, .svg) pegado o arrastrado. Siempre adjunto a otra nota. |
-| `neutrino` | ⚛️ | Código que genera una imagen. Bloque Desmos o TikZJax embebido en un planet o comet. No es nota separada — vive dentro de la nota host. Ver [[_graph-system]]. |
-| `constellation` | 🌌 | Mapa mental galaxy. Excalidraw + Mindmap Builder. Uno por parcial o tema. Vive en `_app/Excalidraw/Constellations/`. |
-| `observatory` | 🔭 | Dibujo técnico libre en Excalidraw sin Mindmap Builder. Vive en `_app/Excalidraw/Observatory/`. |
-| `bridge` | 🌉 | Conexión entre materias. Enlaza conceptos de dos galaxias distintas. |
-| `beacon` | 📡 | Guía de infraestructura del vault. Herramientas, procesos, soluciones. Vive en `_app/`. |
-| `supernova` | ✨ | Transcripción bruta de NotebookLM de apuntes de clase. Material en bruto pendiente de disección en notas galaxy. Ver [[_TABnote-system]]. |
+| `galaxy_body`   | Símbolo | Rol                                                                                                                                                            |
+| --------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `star`          | ☀️      | MOC de un tema. Enlaza todas las notas en órbita. Una por carpeta de tema.                                                                                     |
+| `planet`        | 🪐      | Nota de teoría central. Un concepto por nota.                                                                                                                  |
+| `moon`          | 🌙      | Propiedad, fórmula o resultado clave. Siempre orbita un planet.                                                                                                |
+| `comet`         | ☄️      | Ejercicio resuelto. Referencia los conceptos que usó.                                                                                                          |
+| `nebula`        | 🌫️     | Agrupador de sesión. Enlaza comets de una clase o auxiliatura.                                                                                                 |
+| `dwarf`         | ⬛       | Resumen. Revisión condensada de un tema o parcial.                                                                                                             |
+| `asteroid`      | 🪨      | Referencia externa. Extracto de libro, nota de PDF, paper.                                                                                                     |
+| `photon`        | 💡      | Imagen estática pura. Archivo visual (.png, .jpg, .svg) pegado o arrastrado. Siempre adjunto a otra nota.                                                      |
+| `neutrino`      | ⚛️      | Código que genera una imagen. Bloque Desmos o TikZJax embebido en un planet o comet. No es nota separada — vive dentro de la nota host. Ver [[_graph-system]]. |
+| `constellation` | 🌌      | Mapa mental galaxy. Excalidraw + Mindmap Builder. Uno por parcial o tema. Vive en `_app/Excalidraw/Constellations/`.                                           |
+| `observatory`   | 🔭      | Dibujo técnico libre en Excalidraw sin Mindmap Builder. Vive en `_app/Excalidraw/Observatory/`.                                                                |
+| `bridge`        | 🌉      | Conexión entre materias. Enlaza conceptos de dos galaxias distintas.                                                                                           |
+| `beacon`        | 📡      | Guía de infraestructura del vault. Herramientas, procesos, soluciones. Vive en `_app/`.                                                                        |
+| `supernova`     | ✨       | Transcripción bruta de NotebookLM de apuntes de clase. Material en bruto pendiente de disección en notas galaxy. Ver [[_TABnote-system]].                      |
+| `workshop` | 🔧 | Tarea académica por materia. Seguimiento de transcripción, estudio o proyecto puntual dentro de una materia. Vive en `Semesters/`. Ver [[_template-system]]. |
 
 ---
 
@@ -272,6 +299,25 @@ Ambas capas deben estar sincronizadas — si un enlace está en el YAML también
 > Las plantillas de `Semesters/` usan **Opción B**: Templater pregunta materia, semestre, parcial, tema y nombre, y mueve el archivo automáticamente a la ruta correcta.
 
 ### star
+
+```ad-tip
+title: This is a tip
+collapse: open
+
+This is the content of the admonition.
+```
+
+
+
+
+
+
+
+
+
+
+
+
 ```yaml
 ---
 title: "ETN806 — P2 — T01: Densidad de probabilidad conjunta"
@@ -519,6 +565,19 @@ Herramientas soportadas:
 Como `neutrino` no es nota separada, **no tiene YAML propio ni bloque `%%`**. La nota host (planet o comet) lleva el YAML y los wikilinks.
 
 Ejemplo — bloque Desmos dentro de un planet:
+
+
+
+
+
+
+
+
+
+
+
+
+
 ```markdown
 ## Región de soporte
 
@@ -690,6 +749,302 @@ galaxy-links
 ```
 
 > Las `class` individuales no necesitan bloque `%%` hasta tener `related_planets`. Al fusionar, solo el archivo final lleva las conexiones al grafo. Ver [[_TABnote-system]] para el ciclo de vida completo.
+
+---
+
+### workshop
+
+Cuatro variantes según el tipo de tarea académica. Usar la plantilla correspondiente en `_templates/`.
+
+**tpl-w-initial** — inicio de materia:
+```yaml
+<%*
+const subject = await tp.system.prompt("Materia (ej: ETN901)");
+const sem = await tp.system.prompt("Semestre (ej: 9)");
+const title = `tsk_ini_${subject}`;
+const path = `Semesters/Sem_0${sem}/${subject}/${title}`;
+await tp.file.move(path);
+%>---
+title: "<% title %>"
+galaxy_body: workshop
+subject: <% subject %>
+semester: <% sem %>
+tags: [<% subject %>, workshop, inicio]
+date_created: <% tp.date.now("YYYY-MM-DD") %>
+date_updated: <% tp.date.now("YYYY-MM-DD") %>
+status: activo
+---
+
+# tsk — Inicio de materia · <% subject %>
+
+## Libros
+
+- [ ] Temario completo entregado a Claude
+- [ ] Bibliografía sugerida por el docente evaluada
+- [ ] Stack aprobado → ver `[[_app/_config/_library-system]]`
+- [ ] `_library_<% subject %>.md` creado en `_app/_config/`
+
+---
+
+## NotebookLM — fuentes
+
+- [ ] PDFs del stack subidos al notebook
+- [ ] Índices extraídos y verificados visualmente
+- [ ] `<% subject %>_library.md` creado en `_app/notebooklm/guides/<% subject %>/`
+- [ ] Fuentes cargadas en NotebookLM
+
+---
+
+## NotebookLM — prompts
+
+- [ ] `<% subject %>-P1-study.md` creado en `_app/notebooklm/prompts/<% subject %>/`
+- [ ] `<% subject %>-P1-transcription.md` creado en `_app/notebooklm/prompts/<% subject %>/`
+- [ ] Notebook configurado — fuentes + Instructions cargado
+
+---
+
+## Claude
+
+- [ ] `contexto_<% subject %>.md` generado vía `[[_app/_config/_claude-matter-boot]]`
+
+---
+
+## Notas y pendientes
+
+%%
+galaxy-links
+
+%%
+
+```
+
+**tpl-w-transcription** — transcripción por parcial:
+```yaml
+<%*
+const subject = await tp.system.prompt("Materia (ej: ETN901)");
+const sem = await tp.system.prompt("Semestre (ej: 9)");
+const partial = await tp.system.prompt("Parcial (1, 2 o 3)");
+const numTemas = parseInt(await tp.system.prompt("Cantidad de temas del parcial (ej: 3)"));
+const title = `tsk_trans_${subject}_P${partial}`;
+const path = `Semesters/Sem_0${sem}/${subject}/Partial_${partial}/${title}`;
+await tp.file.move(path);
+
+// Generar bloques de temas dinámicamente
+let bloquesTemas = "";
+for (let i = 1; i <= numTemas; i++) {
+  const tNum = String(i).padStart(2, "0");
+  bloquesTemas += `
+### T${tNum} — *(completar título)*
+
+#### Supernovas
+- [ ] Classes individuales completadas
+- [ ] Supernova fusionada creada → \`${subject}-T${tNum}-slug_del_tema-P${partial}.md\`
+
+#### Galaxy bodies obligatorios
+- [ ] \`star\` ☀️ → \`${subject}-T${tNum}-star.md\`
+- [ ] \`planet\` 🪐 — listar uno por concepto:
+  - [ ] 
+- [ ] \`dwarf\` ⬛ tema → \`${subject}-T${tNum}-dwarf-P${partial}.md\`
+
+#### Galaxy bodies opcionales
+- [ ] \`moon\` 🌙
+- [ ] \`comet\` ☄️
+- [ ] \`nebula\` 🌫️
+- [ ] \`asteroid\` 🪨
+- [ ] \`photon\` 💡
+- [ ] \`observatory\` 🔭
+
+---
+`;
+}
+%>---
+title: "<% title %>"
+galaxy_body: workshop
+subject: <% subject %>
+semester: <% sem %>
+partial: <% partial %>
+tags: [<% subject %>, workshop, transcripcion, P<% partial %>]
+date_created: <% tp.date.now("YYYY-MM-DD") %>
+date_updated: <% tp.date.now("YYYY-MM-DD") %>
+status: activo
+---
+
+# tsk — Transcripción P<% partial %> · <% subject %>
+
+## Supernovas — seguimiento de clases
+
+| class | fecha | subtítulos | status |
+| ----- | ----- | ---------- | ------ |
+|       |       |            | pendiente |
+
+---
+
+## Temas del parcial
+<% bloquesTemas %>
+## Cierre de parcial
+
+- [ ] `dwarf` ⬛ parcial completo → `<% subject %>-T00-dwarf-P<% partial %>.md`
+- [ ] `constellation` 🌌 → `_app/Excalidraw/Constellations/<% subject %>-P<% partial %>-constellation.md`
+
+---
+
+## Notas y pendientes
+
+%%
+galaxy-links
+
+%%
+
+```
+
+**tpl-w-study** — estudio por parcial:
+```yaml
+<%*
+const subject = await tp.system.prompt("Materia (ej: ETN901)");
+const sem = await tp.system.prompt("Semestre (ej: 9)");
+const partial = await tp.system.prompt("Parcial (1, 2 o 3)");
+const title = `tsk_study_${subject}_P${partial}`;
+const path = `Semesters/Sem_0${sem}/${subject}/Partial_${partial}/${title}`;
+await tp.file.move(path);
+%>---
+title: "<% title %>"
+galaxy_body: workshop
+subject: <% subject %>
+semester: <% sem %>
+partial: <% partial %>
+tags: [<% subject %>, workshop, estudio, P<% partial %>]
+date_created: <% tp.date.now("YYYY-MM-DD") %>
+date_updated: <% tp.date.now("YYYY-MM-DD") %>
+status: activo
+---
+
+# tsk — Estudio P<% partial %> · <% subject %>
+
+## NotebookLM — configuración del parcial
+
+### Prompts
+- [ ] Prompt de estudio creado → `_app/notebooklm/prompts/<% subject %>/<% subject %>-P<% partial %>-study.md`
+- [ ] Prompt de transcripción creado → `_app/notebooklm/prompts/<% subject %>/<% subject %>-P<% partial %>-transcription.md`
+- [ ] Instructions del notebook actualizado con prompt de estudio
+
+### Fuentes del notebook
+- [ ] `<% subject %>_library.md` cargada/actualizada → `_app/notebooklm/guides/<% subject %>/`
+- [ ] `obsidian_notation.md` cargada → `_app/notebooklm/general/`
+- [ ] Guías de graficación cargadas según materia → `_app/notebooklm/guides/<% subject %>/`
+- [ ] Formulario o resumen del parcial cargado como fuente adicional
+
+---
+
+## Prácticas
+
+| práctica | archivo en vault | status |
+| -------- | ---------------- | ------ |
+|          |                  | pendiente |
+
+---
+
+## Exámenes pasados
+
+| examen | año | archivo en vault | status |
+| ------ | --- | ---------------- | ------ |
+|        |     |                  | pendiente |
+
+---
+
+## Notas y pendientes
+
+%%
+galaxy-links
+
+%%
+
+```
+
+**tpl-w-project** — proyecto académico puntual:
+```yaml
+<%*
+const subject = await tp.system.prompt("Materia (ej: ETN901)");
+const sem = await tp.system.prompt("Semestre (ej: 9)");
+const partial = await tp.system.prompt("Parcial (1, 2 o 3)");
+const slug = await tp.system.prompt("Nombre del proyecto en español, guion_bajo (ej: filtro_pasa_bajos)");
+const title = `tsk_${subject}_${slug}`;
+const path = `Semesters/Sem_0${sem}/${subject}/Partial_${partial}/${title}`;
+await tp.file.move(path);
+%>---
+title: "<% title %>"
+galaxy_body: workshop
+subject: <% subject %>
+semester: <% sem %>
+partial: <% partial %>
+tags: [<% subject %>, workshop, proyecto, P<% partial %>]
+date_created: <% tp.date.now("YYYY-MM-DD") %>
+date_updated: <% tp.date.now("YYYY-MM-DD") %>
+status: activo
+---
+
+# tsk — <% slug.replaceAll("_", " ") %> · <% subject %>
+
+## Resumen y objetivo
+
+%%
+Una o dos líneas: ¿qué se quiere lograr y por qué?
+%%
+
+---
+
+## Planificación
+
+%%
+Contexto, restricciones clave y razonamiento del enfoque elegido.
+Si el proyecto fue replanificado, el plan anterior va en un callout colapsado:
+> [!error]- Planificación abandonada (motivo)
+%%
+
+---
+
+## Flujo de pasos
+
+- [ ] 
+- [ ] 
+
+---
+
+## Tareas
+
+- [ ] 
+- [ ] 
+
+---
+
+## Decisiones
+
+| Fecha | Decisión | Motivo |
+| ----- | -------- | ------ |
+|       |          |        |
+
+> [!note]- Descartadas
+> Enfoques considerados pero abandonados, con motivo.
+
+---
+
+## Recursos
+
+%%
+Herramientas, archivos del vault (con ruta relativa) y links externos necesarios.
+%%
+
+---
+
+## Notas y pendientes
+
+%%
+galaxy-links
+
+%%
+
+```
+
+> Al crear con Templater, pregunta materia, semestre y parcial, y mueve el archivo automáticamente a `Semesters/Sem_NN/ETNXXX/` o `Semesters/Sem_NN/ETNXXX/Partial_N/` según el tipo. `galaxy_body: workshop` en todas las variantes.
 
 ---
 

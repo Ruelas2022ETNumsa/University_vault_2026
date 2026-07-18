@@ -5,8 +5,9 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
+        "_skills",
         "wolfram alpha example.md",
-        "_tasks",
+        "_projects",
         "_assets",
         "Rubbish",
         "void.md",
@@ -1086,7 +1087,6 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "_skills",
         "notebooklm",
         "shellcommands",
         "Canvas",
@@ -1380,7 +1380,6 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "tpl-w-study 1.md",
         "tpl-w-project.md",
         "tpl-w-study.md",
         "tpl-asteroid 1.md",
@@ -2946,30 +2945,6 @@
         "Untitled-15-07-2026_22-21-20.png"
       ]
     },
-    "_tasks": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "7_tsk_emergn.md",
-        "6_tsk_standb.md",
-        "tsk_proyectos_shellcmd.md",
-        "tsk_tpl.md",
-        "2_tsk_krajo.md",
-        "4_tsk_alxrul.md",
-        "1_tsk_alxhot.md",
-        "5_tsk_alx-rul.md",
-        "3_tsk_alxgml.md"
-      ]
-    },
-    "_tasks/tsk_tpl.md": {
-      "isPinned": true,
-      "isHidden": false
-    },
-    "_tasks/tsk_proyectos_shellcmd.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_assets/Untitled-15-07-2026_22-21-20.png": {
       "isPinned": false,
       "isHidden": false
@@ -3034,34 +3009,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_tasks/1_tsk_alxhot.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_tasks/2_tsk_krajo.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_tasks/3_tsk_alxgml.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_tasks/4_tsk_alxrul.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_tasks/5_tsk_alx-rul.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_tasks/6_tsk_standb.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_tasks/7_tsk_emergn.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_templates/tpl_w_transcription.md": {
       "isPinned": false,
       "isHidden": false
@@ -3078,15 +3025,11 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_templates/tpl-w-study 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_app/_config/_pdf_pp-system.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_app/_skills": {
+    "_skills": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
@@ -3099,36 +3042,88 @@
         "_claude-close.md"
       ]
     },
-    "_app/_skills/_claude-close.md": {
+    "_skills/_claude-close.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_app/_skills/_claude-plan.md": {
+    "_skills/_claude-plan.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_app/_skills/_claude-boot.md": {
+    "_skills/_claude-boot.md": {
       "isPinned": true,
       "isHidden": false
     },
-    "_app/_skills/_claude-work.md": {
+    "_skills/_claude-work.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_app/_skills/_start.md": {
+    "_skills/_start.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_app/_skills/_claude-setup.md": {
+    "_skills/_claude-setup.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_projects": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "tsk_emergn.md",
+        "tsk_standb.md",
+        "tsk_proyectos_shellcmd.md",
+        "tsk_tpl.md",
+        "tsk_krajo.md",
+        "tsk_alxrul.md",
+        "tsk_alxhot.md",
+        "tsk_alx-rul.md",
+        "tsk_alxgml.md"
+      ]
+    },
+    "_projects/tsk_tpl.md": {
+      "isPinned": true,
+      "isHidden": false
+    },
+    "_projects/tsk_proyectos_shellcmd.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_projects/tsk_emergn.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_projects/tsk_standb.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_projects/tsk_krajo.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_projects/tsk_alxrul.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_projects/tsk_alxhot.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_projects/tsk_alx-rul.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_projects/tsk_alxgml.md": {
       "isPinned": false,
       "isHidden": false
     }
   },
   "pinnedFiles": [
     "Rubbish/section.md",
-    "_tasks/tsk_tpl.md",
+    "_projects/tsk_tpl.md",
     "_app/_config/_galaxy-system.md",
-    "_app/_skills/_claude-boot.md"
+    "_skills/_claude-boot.md"
   ],
   "showHidden": false,
   "newItemPlacement": "top",
