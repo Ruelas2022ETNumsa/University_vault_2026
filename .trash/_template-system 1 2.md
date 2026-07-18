@@ -176,11 +176,7 @@ galaxy-links
 
 ## Plantillas YAML de referencia
 
-### Notas galaxy
-
-Plantillas para notas de contenido académico — teoría, ejercicios, transcripciones, referencias y visuales. Viven en `Semesters/` organizadas por materia, parcial y tema. Cada tipo corresponde a un `galaxy_body` del sistema galaxy.
-
-#### tpl-star
+### tpl-star
 
 ```yaml
 ---
@@ -209,7 +205,7 @@ galaxy-links
 
 ---
 
-#### tpl-planet
+### tpl-planet
 
 ```yaml
 ---
@@ -230,7 +226,7 @@ status: activo
 
 ---
 
-#### tpl-moon
+### tpl-moon
 
 ```yaml
 ---
@@ -248,7 +244,7 @@ date_created: <% tp.date.now("YYYY-MM-DD") %>
 
 ---
 
-#### tpl-comet
+### tpl-comet
 
 ```yaml
 ---
@@ -268,7 +264,7 @@ date_created: <% tp.date.now("YYYY-MM-DD") %>
 
 ---
 
-#### tpl-nebula
+### tpl-nebula
 
 ```yaml
 ---
@@ -285,7 +281,7 @@ tags: [<% subject %>, galaxy-nebula, P<% partial %>]
 
 ---
 
-#### tpl-dwarf
+### tpl-dwarf
 
 ```yaml
 ---
@@ -302,7 +298,7 @@ date_created: <% tp.date.now("YYYY-MM-DD") %>
 
 ---
 
-#### tpl-asteroid
+### tpl-asteroid
 
 Dos ramas según tipo — la plantilla pregunta al inicio cuál es.
 
@@ -347,7 +343,7 @@ status: en-proceso
 
 ---
 
-#### tpl-photon
+### tpl-photon
 
 Tres tipos — la plantilla pregunta al inicio cuál es.
 
@@ -387,7 +383,7 @@ date_created: <% tp.date.now("YYYY-MM-DD") %>
 
 ---
 
-#### tpl-bridge
+### tpl-bridge
 
 ```yaml
 ---
@@ -403,7 +399,7 @@ date_created: <% tp.date.now("YYYY-MM-DD") %>
 
 ---
 
-#### tpl-constellation
+### tpl-constellation
 
 ```yaml
 ---
@@ -429,7 +425,7 @@ status: activo
 
 ---
 
-#### tpl-observatory
+### tpl-observatory
 
 ```yaml
 ---
@@ -452,7 +448,7 @@ date_created: <% tp.date.now("YYYY-MM-DD") %>
 
 ---
 
-#### tpl-supernova
+### tpl-supernova
 
 Dos variantes según ciclo de vida — la plantilla pregunta al inicio cuál es.
 
@@ -498,92 +494,6 @@ status: completo
 
 ---
 
-### Workshop
-
-Plantillas para seguimiento de tareas académicas por materia — no son notas de contenido sino archivos de gestión. Viven en `Semesters/` pero a nivel de materia o parcial, no de tema. Todas usan `galaxy_body: workshop`.
-
-#### tpl-w-initial
-
-```yaml
----
-title: "tsk_ini_ETNXXX"
-galaxy_body: workshop
-subject: ETNXXX
-semester: N
-tags: [ETNXXX, workshop, inicio]
-date_created: <% tp.date.now("YYYY-MM-DD") %>
-date_updated: <% tp.date.now("YYYY-MM-DD") %>
-status: activo
----
-```
-
-> Carpeta destino: `Semesters/Sem_NN/ETNXXX/` — movimiento automático por Templater.
-> Pregunta: materia, semestre.
-
----
-
-#### tpl-w-transcription
-
-```yaml
----
-title: "tsk_trans_ETNXXX_PN"
-galaxy_body: workshop
-subject: ETNXXX
-semester: N
-partial: N
-tags: [ETNXXX, workshop, transcripcion, PN]
-date_created: <% tp.date.now("YYYY-MM-DD") %>
-date_updated: <% tp.date.now("YYYY-MM-DD") %>
-status: activo
----
-```
-
-> Carpeta destino: `Semesters/Sem_NN/ETNXXX/Partial_N/` — movimiento automático por Templater.
-> Pregunta: materia, semestre, parcial, cantidad de temas. Genera bloques de tema dinámicamente.
-
----
-
-#### tpl-w-study
-
-```yaml
----
-title: "tsk_study_ETNXXX_PN"
-galaxy_body: workshop
-subject: ETNXXX
-semester: N
-partial: N
-tags: [ETNXXX, workshop, estudio, PN]
-date_created: <% tp.date.now("YYYY-MM-DD") %>
-date_updated: <% tp.date.now("YYYY-MM-DD") %>
-status: activo
----
-```
-
-> Carpeta destino: `Semesters/Sem_NN/ETNXXX/Partial_N/` — movimiento automático por Templater.
-> Pregunta: materia, semestre, parcial.
-
----
-
-#### tpl-w-project
-
-```yaml
----
-title: "tsk_ETNXXX_nombre_proyecto"
-galaxy_body: workshop
-subject: ETNXXX
-semester: N
-partial: N
-tags: [ETNXXX, workshop, proyecto, PN]
-date_created: <% tp.date.now("YYYY-MM-DD") %>
-date_updated: <% tp.date.now("YYYY-MM-DD") %>
-status: activo
----
-```
-
-> Carpeta destino: `Semesters/Sem_NN/ETNXXX/Partial_N/` — movimiento automático por Templater.
-> Pregunta: materia, semestre, parcial, slug del proyecto (español, guion_bajo).
-
----
 ## Registro de decisiones de diseño
 
 | Decisión                                                         | Razón                                                                                                                                                                                                                                                                                                                                                |

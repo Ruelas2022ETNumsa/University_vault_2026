@@ -134,22 +134,24 @@ ETN901-T02-P1-variables_aleatorias_continuas.md
 
 ### Tipos de cuerpo galaxy (en el YAML)
 
-| `galaxy_body` | Símbolo | Rol |
-|---------------|---------|-----|
-| `star` | ☀️ | MOC del tema — enlaza todas las notas en órbita |
-| `planet` | 🪐 | Teoría central — un concepto por nota |
-| `moon` | 🌙 | Propiedad o fórmula — orbita un planet |
-| `comet` | ☄️ | Ejercicio resuelto — referencia los conceptos usados |
-| `nebula` | 🌫️ | Agrupador de sesión — enlaza comets de una clase |
-| `dwarf` | ⬛ | Resumen — revisión condensada de tema o parcial |
-| `asteroid` | 🪨 | Referencia externa — libro, PDF, paper |
-| `photon` | 💡 | Imagen estática pura — .png, .jpg arrastrado o recorte de PDF++ |
-| `neutrino` | ⚛️ | Código que genera imagen — bloque Desmos o TikZJax, embebido en planet/comet. Sin nota propia. |
-| `constellation` | 🌌 | Mapa mental galaxy — Excalidraw + Mindmap Builder |
-| `observatory` | 🔭 | Dibujo técnico libre en Excalidraw |
-| `beacon` | 📡 | Guía de infraestructura del vault — vive en `_app/` |
-| `bridge` | 🌉 | Conexión entre materias |
-| `supernova` | ✨ | Transcripción bruta de NotebookLM de apuntes de clase — ver [[_TABnote-system]] |
+| `galaxy_body`   | Símbolo | Rol                                                                                                           |
+| --------------- | ------- | ------------------------------------------------------------------------------------------------------------- |
+| `star`          | ☀️      | MOC del tema — enlaza todas las notas en órbita                                                               |
+| `planet`        | 🪐      | Teoría central — un concepto por nota                                                                         |
+| `moon`          | 🌙      | Propiedad o fórmula — orbita un planet                                                                        |
+| `comet`         | ☄️      | Ejercicio resuelto — referencia los conceptos usados                                                          |
+| `nebula`        | 🌫️     | Agrupador de sesión — enlaza comets de una clase                                                              |
+| `dwarf`         | ⬛       | Resumen — revisión condensada de tema o parcial                                                               |
+| `asteroid`      | 🪨      | Referencia externa — libro, PDF, paper                                                                        |
+| `photon`        | 💡      | Imagen estática pura — .png, .jpg arrastrado o recorte de PDF++                                               |
+| `neutrino`      | ⚛️      | Código que genera imagen — bloque Desmos o TikZJax, embebido en planet/comet. Sin nota propia.                |
+| `constellation` | 🌌      | Mapa mental galaxy — Excalidraw + Mindmap Builder                                                             |
+| `observatory`   | 🔭      | Dibujo técnico libre en Excalidraw                                                                            |
+| `beacon`        | 📡      | Guía de infraestructura del vault — vive en `_app/`                                                           |
+| `bridge`        | 🌉      | Conexión entre materias                                                                                       |
+| `supernova`     | ✨       | Transcripción bruta de NotebookLM de apuntes de clase — ver [[_TABnote-system]]                               |
+| `workshop`      | 🔧      | Tarea académica por materia — seguimiento de transcripción, estudio o proyecto puntual. Vive en `Semesters/`. |
+
 
 > `neutrino` no tiene nota propia ni YAML. La nota host (planet/comet) lo contiene.
 
@@ -208,21 +210,22 @@ El vault usa dos plugins complementarios para el formato de apuntes. Ver [[corne
 
 ## Carpetas del baúl
 
-| Carpeta            | Función                                                            |
-| ------------------ | ------------------------------------------------------------------ |
-| `Semesters/`       | Todo el contenido académico                                        |
-| `MOC/`             | Notas de índice por materia, enlazan todas sus stars               |
-| `_app/_config/`    | Configuración del sistema: convención, galaxy system, tags         |
-| `_app/_appnotes/`  | Guías de herramientas: Desmos, tags, etc.                          |
-| `_app/Excalidraw/` | Archivos fuente de Excalidraw — `Constellations/` y `Observatory/` |
-| `_app/scripts/`    | Scripts de automatización del baúl                                 |
-| `_app/solve/`      | Problemas conocidos y soluciones (git, sync, etc.)                 |
-| `.cache/desmos/`   | Caché SVG de Desmos — generado automáticamente por el plugin       |
-| `_assets/`         | Imágenes exportadas: .png, .svg, .jpeg                             |
-| `_templates/`      | Plantillas de notas — una por tipo de cuerpo galaxy                |
-| `_PDF/`            | Archivos PDF físicos — una carpeta por materia                     |
+| Carpeta              | Función                                                                                                  |
+| -------------------- | -------------------------------------------------------------------------------------------------------- |
+| `Semesters/`         | Todo el contenido académico                                                                              |
+| `MOC/`               | Notas de índice por materia, enlazan todas sus stars                                                     |
+| `_app/_config/`      | Configuración del sistema: convención, galaxy system, tags                                               |
+| `_app/_appnotes/`    | Guías de herramientas: Desmos, tags, etc.                                                                |
+| `_app/Excalidraw/`   | Archivos fuente de Excalidraw — `Constellations/` y `Observatory/`                                       |
+| `_app/scripts/`      | Scripts de automatización del baúl                                                                       |
+| `_app/solve/`        | Problemas conocidos y soluciones (git, sync, etc.)                                                       |
+| `.cache/desmos/`     | Caché SVG de Desmos — generado automáticamente por el plugin                                             |
+| `_assets/`           | Imágenes exportadas: .png, .svg, .jpeg                                                                   |
+| `_templates/`        | Plantillas de notas — una por tipo de cuerpo galaxy                                                      |
+| `_PDF/`              | Archivos PDF físicos — una carpeta por materia                                                           |
 | `_tabnotes_archivo/` | Snapshots PDF de cierre de parcial (apuntes manuscritos propios) — fuera de Git, ver [[_TABnote-system]] |
-| `borrar/`          | Zona de espera antes de eliminar archivos permanentemente          |
+| `borrar/`            | Zona de espera antes de eliminar archivos permanentemente                                                |
+| `_projects/`         | Proyectos activos y backlog de ideas — slots `tsk_alias.md`, plantilla base y `_ideas.md`                |
 
 ---
 
