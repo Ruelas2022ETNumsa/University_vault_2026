@@ -25,8 +25,23 @@ status: activo
 
 > Colección de prompts de sistema para usar con Claude. Cada uno está pensado para un momento específico de la sesión. Copiar y pegar directamente al chat.
 
----
+## _start.md
 
+>Punto de entrada único para todas las sesiones de Claude con acceso al vault. Verifica el MCP, presenta el menú de skills y carga el correspondiente según la elección. El cierre siempre es explícito: "la sesión debe terminar, usa close".
+
+```ad-tip
+title: version 1
+collapse: close
+
+![[_skills/_start]]
+
+```
+
+```
+Usá el MCP Filesystem y leé E:\University_vault_2026\_skills\_start.md
+```
+
+---
 
 ## Prompt de inicio para el galaxy system
 
