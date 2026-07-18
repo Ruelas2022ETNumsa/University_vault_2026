@@ -6441,6 +6441,7 @@ tomada
 tNum
 trans
 tabnotes
+trabajado
 ToDo
 Templater
 Text
@@ -32402,6 +32403,10 @@ detectado
 discutir
 destornillador
 detenete
+discuti
+duplicarse
+deten
+descubrimientos
 Vault
 Verificar
 Variables
@@ -57948,6 +57953,7 @@ supernovas
 seguimiento
 subidos
 skills
+suger
 vault
 vil
 ver
@@ -70996,6 +71002,8 @@ activates
 avis
 antecedentes
 actualiz
+avisame
+autorizada
 related
 recomendados
 ribbon
@@ -77722,6 +77730,7 @@ reinicie
 reintent
 resum
 redefinido
+resolvi
 notes
 notas
 nuevas
@@ -91269,6 +91278,8 @@ comprob
 convencion
 conciso
 crearon
+corromper
+concisa
 updated
 un
 universo
@@ -104829,6 +104840,7 @@ GXWXGJL
 GLgQ
 Generating
 Gemini
+Gener
 Convenci
 Creaci
 Commander
@@ -117909,6 +117921,7 @@ IaXaYtYAIREjFA
 IIlQpuaqiqDIpqX
 IUXJ
 Implementar
+Inclu
 Funci
 File
 Fase
@@ -143813,6 +143826,7 @@ Antecedentes
 Automatizador
 Acordado
 Avis
+Actualiz
 push
 pull
 para
@@ -150114,6 +150128,8 @@ pasados
 provee
 planning
 proced
+planeado
+pegarse
 min
 mica
 movimiento
@@ -176695,6 +176711,7 @@ enlazados
 encadenadas
 escribas
 evolucion
+evite
 Motor
 Media
 Mantiene
@@ -204597,6 +204614,8 @@ intacto
 intercambios
 inconsistencias
 implement
+intentando
+inferirse
 Dependencia
 Dropbox
 Dataview
@@ -263930,6 +263949,7 @@ oBEDCyehPFIP
 obpklbKypZXQS
 options
 order
+obvio
 junto
 json
 jer
@@ -291974,6 +291994,7 @@ were
 wanted
 workflow
 workshop
+workarounds
 xima
 xeles
 xy

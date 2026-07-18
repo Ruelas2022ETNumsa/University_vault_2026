@@ -27,10 +27,9 @@ status: activo
 
 ---
 
-
 ## Prompt de inicio para el galaxy system
 
-> Usar al iniciar cualquier sesión que requiera contexto completo del vault — estructura, beacons, galaxy-links y convenciones. Es el skill base sobre el que operan los demás.
+
 
 ````ad-tip
 title: version 1
@@ -39,6 +38,9 @@ collapse: close
 ![[_skills/_claude-boot]]
 
 ````
+
+
+---
 
 ## Prompt de trabajo
 

@@ -112,6 +112,7 @@ University_Vault_2026/
 │
 ├── _assets/                     ← imágenes exportadas (.png, .svg, .jpeg)
 ├── _PDF/                        ← ★ archivos PDF físicos — ver nota de discrepancia abajo
+├── _skills/                     ← skills de Claude — work, plan, close, setup, boot
 ├── _tabnotes_archivo/           ← propuesto en [[_TABnote-system]], aún no aprobado/creado — snapshots de cierre de parcial, fuera de Git
 ├── _templates/                  ← plantillas de notas (tpl-star, tpl-planet, etc.)
 └── borrar/                      ← zona de espera antes de eliminar archivos
@@ -234,9 +235,11 @@ Obsidian Git sincroniza PC ↔ GitHub automáticamente cada 5 minutos. Mega sinc
 
 ## MATERIAS ACTIVAS
 
-| Código | Nombre completo | Semestre | Parcial actual | Ruta | Estado |
-|--------|----------------|----------|----------------|------|--------|
-| ETN901 | *(completar nombre)* | 9 | 1 | `Semesters/Sem_09/ETN901/Partial_1/` | Carpeta creada, sin notas |
+> solo es un ejemplo no tomar como verdad, aun no hay materias activas.
+
+| Código | Nombre completo      | Semestre | Parcial actual | Ruta                                 | Estado                    |
+| ------ | -------------------- | -------- | -------------- | ------------------------------------ | ------------------------- |
+| ETN901 | *(completar nombre)* | 9        | 1              | `Semesters/Sem_09/ETN901/Partial_1/` | Carpeta creada, sin notas |
 
 > El nombre completo de ETN901 no está registrado todavía — completar con el usuario cuando se inicie trabajo en esa materia.
 
@@ -293,6 +296,8 @@ Leer el beacon específico según el tema:
 | Contexto de trabajo por materia (ejercicios, formulario) | `_app/_config/_claude-matter-boot.md`                              |
 | Prompts y guías NotebookLM por materia                   | `_app/notebooklm/`                                                 |
 | Cornell Notes + Marginalia                               | `_app/_appnotes/cornell_guide.md`                                  |
+| Skills de Claude (work, plan, close, setup, boot) | `_skills/` |
+
 ### Si el usuario está en móvil sin PC encendida
 
 - Usar GitHub MCP para leer y escribir notas.
