@@ -264,9 +264,9 @@ collapse: close
 
 %%
 # galaxy-links
-[[_skills/_claude-boot]]
-[[_skills/_claude-plan]]
-[[_skills/_claude-work]]
-[[_skills/_claude-setup]]
-[[_skills/_claude-close]]
+[[_claude-boot]]
+[[_claude-plan]]
+[[_claude-work]]
+[[_claude-setup]]
+[[_claude-close]]
 %%

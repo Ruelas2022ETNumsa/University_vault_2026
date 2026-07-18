@@ -5,7 +5,6 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
-        "_skills",
         "wolfram alpha example.md",
         "_tasks",
         "_assets",
@@ -1087,6 +1086,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "_skills",
         "notebooklm",
         "shellcommands",
         "Canvas",
@@ -1323,7 +1323,7 @@
       "isHidden": false
     },
     "_app/_config/_galaxy-system.md": {
-      "isPinned": false,
+      "isPinned": true,
       "isHidden": false
     },
     "_app/_config/_graph-system.md": {
@@ -3086,7 +3086,7 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_skills": {
+    "_app/_skills": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
@@ -3099,34 +3099,36 @@
         "_claude-close.md"
       ]
     },
-    "_skills/_claude-boot.md": {
+    "_app/_skills/_claude-close.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_skills/_claude-work.md": {
+    "_app/_skills/_claude-plan.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_skills/_claude-plan.md": {
+    "_app/_skills/_claude-boot.md": {
+      "isPinned": true,
+      "isHidden": false
+    },
+    "_app/_skills/_claude-work.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_skills/_claude-close.md": {
+    "_app/_skills/_start.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_skills/_claude-setup.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_skills/_start.md": {
+    "_app/_skills/_claude-setup.md": {
       "isPinned": false,
       "isHidden": false
     }
   },
   "pinnedFiles": [
     "Rubbish/section.md",
-    "_tasks/tsk_tpl.md"
+    "_tasks/tsk_tpl.md",
+    "_app/_config/_galaxy-system.md",
+    "_app/_skills/_claude-boot.md"
   ],
   "showHidden": false,
   "newItemPlacement": "top",

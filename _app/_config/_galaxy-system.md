@@ -736,9 +736,9 @@ galaxy-links
 [[_app/_config/_notebooklm-system.md]]
 
 [[_app/_appnotes/claude_prompts]]
-[[_skills/_claude-plan]]
-[[_skills/_claude-work]]
-[[_skills/_claude-boot]]
-[[_skills/_claude-setup]]
-[[_skills/_claude-close]]
+[[_claude-plan]]
+[[_claude-work]]
+[[_claude-boot]]
+[[_claude-setup]]
+[[_claude-close]]
 %%
