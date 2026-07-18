@@ -1,58 +1,22 @@
 ---
-alias: "SKILLL CREATOR"
-date: 
+alias: "SKILL CREATOR"
+date: 2026-07-17
+status: cerrado
+---
+
+## Handoff
+
+**Última sesión:** 2026-07-17
+**Retomar desde:** no aplica — proyecto cerrado
+**Completado esta sesión:** todo el alcance redefinido y ejecutado
+**Próximo paso:** documentar en sesión de cierre formal si se requiere
+**Preguntas de cierre:** ninguna
+
 ---
 
 ## Objetivo
 
-
----
-
-## Pendientes
-
-
-**Pendientes:**
-
-- [ ] 1.Leer `_claude-boot.md` para entender el contexto completo del vault antes de diseñar el skill.
-- [ ] 2.Leer `_ToDo-system.md` para saber qué pendientes ya existen y no duplicar.
-- [ ] 3.Definir qué preguntas hace el skill al iniciar una sesión de continuación:
-   - ¿Qué se estaba trabajando?
-   - ¿Qué archivos fueron leídos/editados?
-   - ¿Qué decisiones quedaron pendientes de confirmar?
-   - ¿Hay cambios hechos que aún no se documentaron?
-- [ ] 4.Definir el formato del archivo de handoff — tiene que ser compatible con el vault (YAML + galaxy-links + estilo beacon).
-- [ ] 5.Decidir dónde vive el archivo de handoff dentro del vault (`_app/_config/` o carpeta nueva `_app/handoff/`).
-- [ ] 6.Crear el `SKILL.md` con skill-creator.
-- [ ] 7.Probar el skill en una sesión real y ajustar.
-
-> [!note]- Historial de pendientes
-> **fecha** — 
-
----
-
-## Completado
-
-- [x] 
-
-> [!note]- Historial de sesiones
-> **fecha** — 
-
----
-
-## Preguntas abiertas
-
-**Por qué es necesario:**
-Las sesiones con el vault se vuelven pesadas rápido — beacons largos, múltiples lecturas, decisiones tomadas en el chat que no quedan en ningún archivo. Al iniciar una nueva sesión se pierde ese hilo. Un handoff propio evita re-explicar el estado cada vez.
-
----
-
-## Herramientas / plugins
-
-
----
-
-## Archivos relacionados
-
+Crear un sistema de handoff entre sesiones del vault. El objetivo evolucionó: en lugar de un skill de handoff independiente, se implementó la sección `## Handoff` dentro de cada `tsk_`, se actualizó `tsk_tpl.md`, se mejoró el prompt de cierre (v2), y se crearon 4 skills individuales en `_skills/`.
 
 ---
 
@@ -60,9 +24,32 @@ Las sesiones con el vault se vuelven pesadas rápido — beacons largos, múltip
 
 | Fecha | Decisión | Motivo |
 | ----- | -------- | ------ |
-|       |          |        |
-|       |          |        |
+| 2026-07-17 | Handoff integrado en el `tsk_` (Opción A) | Más simple, sin archivos extra, compatible con el vault |
+| 2026-07-17 | Skills individuales en `_skills/` en lugar de un único skill-creator | Más modular, cada skill tiene scope propio |
+| 2026-07-17 | Prompt de cierre v2 con cierre mínimo/completo | Mayor control sobre qué se actualiza en cada sesión |
+| 2026-07-17 | Punto 2 (`_ToDo-system.md`) descartado | No relevante para el alcance real del proyecto |
 
+---
+
+## Completado
+
+- [x] Leer y analizar `_claude-boot.md`
+- [x] Definir preguntas y estructura del `## Handoff`
+- [x] Implementar `## Handoff` en `tsk_tpl.md`
+- [x] Rediseñar prompt de cierre → v2 con cierre mínimo/completo
+- [x] Crear `_skills/` con 4 skills: `_claude-work.md`, `_claude-plan.md`, `_claude-close.md`, `_claude-setup.md`
+- [x] Probar sistema en sesión real (esta sesión)
+
+---
+
+## Recursos
+
+- `E:\University_vault_2026\_tasks\tsk_tpl.md` — plantilla actualizada con `## Handoff`
+- `E:\University_vault_2026\_skills\_claude-work.md`
+- `E:\University_vault_2026\_skills\_claude-plan.md`
+- `E:\University_vault_2026\_skills\_claude-close.md`
+- `E:\University_vault_2026\_skills\_claude-setup.md`
+- `E:\University_vault_2026\_app\_appnotes\claude_prompts.md` — prompt de cierre v2 agregado
 
 ---
 
