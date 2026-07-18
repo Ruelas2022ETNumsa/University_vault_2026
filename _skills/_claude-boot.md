@@ -28,7 +28,7 @@ tags:
   - arranque
   - infraestructura
 date_created: 2026-05-30
-date_updated: 2026-07-07
+date_updated: 2026-07-18
 status: activo
 fase: infraestructura
 ---
@@ -113,6 +113,7 @@ University_Vault_2026/
 ├── _assets/                     ← imágenes exportadas (.png, .svg, .jpeg)
 ├── _PDF/                        ← ★ archivos PDF físicos — ver nota de discrepancia abajo
 ├── _skills/                     ← skills de Claude — work, plan, close, setup, boot
+├── _projects/                  ← proyectos activos y backlog de ideas — ver [[_galaxy-system]]
 ├── _tabnotes_archivo/           ← propuesto en [[_TABnote-system]], aún no aprobado/creado — snapshots de cierre de parcial, fuera de Git
 ├── _templates/                  ← plantillas de notas (tpl-star, tpl-planet, etc.)
 └── borrar/                      ← zona de espera antes de eliminar archivos
@@ -136,24 +137,27 @@ ETNXXX-TNN-nombre_descriptivo.md
 
 ### Tipos de cuerpo galaxy (`galaxy_body`)
 
-| Tipo            | Símbolo | Rol                                                                                                              |
-| --------------- | ------- | ---------------------------------------------------------------------------------------------------------------- |
-| `star`          | ☀️      | MOC del tema — enlaza todas las notas en órbita                                                                  |
-| `planet`        | 🪐      | Teoría central — un concepto por nota                                                                            |
-| `moon`          | 🌙      | Propiedad o fórmula — orbita un planet                                                                           |
-| `comet`         | ☄️      | Ejercicio resuelto                                                                                               |
-| `nebula`        | 🌫️     | Agrupador de sesión                                                                                              |
-| `dwarf`         | ⬛       | Resumen de tema o parcial                                                                                        |
-| `asteroid`      | 🪨      | Referencia externa (libro, PDF, paper)                                                                           |
-| `photon`        | 💡      | Imagen estática pura (.png, .jpg arrastrado, recorte PDF++)                                                      |
-| `neutrino`      | ⚛️      | Código que genera imagen (Desmos, TikZJax) — embebido en planet/comet, sin nota propia                           |
-| `constellation` | 🌌      | Mapa mental — Excalidraw + Mindmap Builder                                                                       |
-| `observatory`   | 🔭      | Dibujo técnico libre en Excalidraw                                                                               |
-| `bridge`        | 🌉      | Conexión entre dos materias                                                                                      |
-| `beacon`        | 📡      | Guía de infraestructura del vault                                                                                |
-| `supernova`     | ✨       | Transcripción bruta de NotebookLM de apuntes de clase — material en bruto pendiente de disección en notas galaxy |
+| Tipo            | Símbolo | Rol                                                                                                                                     |
+| --------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| `star`          | ☀️      | MOC del tema — enlaza todas las notas en órbita                                                                                         |
+| `planet`        | 🪐      | Teoría central — un concepto por nota                                                                                                   |
+| `moon`          | 🌙      | Propiedad o fórmula — orbita un planet                                                                                                  |
+| `comet`         | ☄️      | Ejercicio resuelto                                                                                                                      |
+| `nebula`        | 🌫️     | Agrupador de sesión                                                                                                                     |
+| `dwarf`         | ⬛       | Resumen de tema o parcial                                                                                                               |
+| `asteroid`      | 🪨      | Referencia externa (libro, PDF, paper)                                                                                                  |
+| `photon`        | 💡      | Imagen estática pura (.png, .jpg arrastrado, recorte PDF++)                                                                             |
+| `neutrino`      | ⚛️      | Código que genera imagen (Desmos, TikZJax) — embebido en planet/comet, sin nota propia                                                  |
+| `constellation` | 🌌      | Mapa mental — Excalidraw + Mindmap Builder                                                                                              |
+| `observatory`   | 🔭      | Dibujo técnico libre en Excalidraw                                                                                                      |
+| `bridge`        | 🌉      | Conexión entre dos materias                                                                                                             |
+| `beacon`        | 📡      | Guía de infraestructura del vault                                                                                                       |
+| `supernova`     | ✨       | Transcripción bruta de NotebookLM de apuntes de clase — material en bruto pendiente de disección en notas galaxy                        |
+| `workshop`      | 🔧      | Tarea académica por materia — seguimiento de transcripción, estudio o proyecto puntual. Vive en `Semesters/`. Ver [[_template-system]]. |
 
 > ✅ **Tipo #14 aprobado (2026-06-24):** `supernova` quedó cerrado como `galaxy_body` oficial para transcripciones de NotebookLM de apuntes de clase (ver [[_TABnote-system]] y [[_ToDo-system]]). La propuesta original era `tabnote`, pero se descartó ese nombre a favor de `supernova` antes de aprobarse.
+
+> ✅ **Tipo #15 aprobado (2026-07-18):** `workshop` quedó cerrado como `galaxy_body` oficial para tareas académicas por materia (ver [[_galaxy-system]]). Cuatro variantes según etapa: `tpl-w-initial`, `tpl-w-transcription`, `tpl-w-study`, `tpl-w-project`. Vive en `Semesters/`.
 
 ### Dos capas de conexión obligatorias
 
@@ -202,9 +206,14 @@ El Filesystem MCP tiene como raíz `E:\University_vault_2026`. Los `galaxy-links
 
 ```
 %%
-galaxy-links
+# galaxy-links
 [[_app/_config/_galaxy-system]]
-[[Semesters/Sem_09/ETN901/Partial_1/ETN901-T01-intro]]
+[[Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-axiomas_cuerpo.md]]
+## Links a notas pendientes de crear
+[[Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/no_existe.md]]
+
+
+
 %%
 ```
 
@@ -296,7 +305,8 @@ Leer el beacon específico según el tema:
 | Contexto de trabajo por materia (ejercicios, formulario) | `_app/_config/_claude-matter-boot.md`                              |
 | Prompts y guías NotebookLM por materia                   | `_app/notebooklm/`                                                 |
 | Cornell Notes + Marginalia                               | `_app/_appnotes/cornell_guide.md`                                  |
-| Skills de Claude (work, plan, close, setup, boot) | `_skills/` |
+| Skills de Claude (work, plan, close, setup, boot)        | `_skills/`                                                         |
+| Sistema de proyectos y backlog (`_projects/`, `tsk_`, `_ideas`) | `_app/_config/_galaxy-system.md` |
 
 ### Si el usuario está en móvil sin PC encendida
 
@@ -338,6 +348,8 @@ Convención interna del vault para respaldar archivos antes de editarlos:
 8. **Ante discrepancias entre lo documentado y lo que hay en disco** (como `_PDF/`) → confiar en lo que hay en disco y avisar de la discrepancia, no forzar la convención documentada.
 9. **El usuario crea los backups, Claude edita el original directamente** — no ofrecer ni confirmar respaldo antes de editar un beacon, salvo que el usuario indique lo contrario.
 10. **Actualizar `date_updated`** en el YAML de cualquier beacon que se modifique.
+11. **Archivos en `_projects/` no tienen `galaxy_body`** — son operativos y temporales. No agregar `galaxy_body` a ningún `tsk_alias.md`, `tsk_tpl.md` ni `_ideas.md`.
+12. **`workshop` es el tipo #15** — usar solo en plantillas `tpl-w-*` dentro de `Semesters/`. Nunca asignar `galaxy_body: workshop` a archivos de `_projects/`.
 
 ---
 

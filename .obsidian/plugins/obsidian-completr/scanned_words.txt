@@ -45433,6 +45433,7 @@ getExcalidrawAPI
 getAppState
 gotoFullscreen
 gravemente
+guiar
 body
 beacon
 bat
@@ -176753,6 +176754,7 @@ evite
 ejecut
 emergencia
 excludes
+explicativos
 Motor
 Media
 Mantiene
