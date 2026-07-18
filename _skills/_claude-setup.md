@@ -21,4 +21,4 @@ Vamos a realizar una configuración técnica. Seguí este flujo:
    - Si el usuario dice **"web"** → buscá documentación oficial o antecedentes para ese paso específico.
 
 > [!note]- Nota
-> Si esta configuración requiere leer archivos del vault (configs guardadas, scripts, rutas), agregá la cabecera MCP de solo lectura al inicio de la sesión.
+> Si esta configuración requiere leer archivos del vault, usá `read_text_file` vía el MCP ya activo.

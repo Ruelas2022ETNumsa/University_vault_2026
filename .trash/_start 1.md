@@ -19,11 +19,6 @@ Leé este archivo y seguí el flujo exactamente.
 3. Si ambos pasan → continuá al paso siguiente
 4. Si alguno falla → avisá cuál y detenete
 
-**Si cualquier tool MCP falla en cualquier momento de la sesión:**
-`"tool (write/edit) no disponible — revisá el MCP o permitís alternativas (y/n)"`
-- `n` → esperás que el usuario reinicie el MCP y reintentás.
-- `y` → buscás alternativa automáticamente.
-
 ---
 
 ## Selección de skill

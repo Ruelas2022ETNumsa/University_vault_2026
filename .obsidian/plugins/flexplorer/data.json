@@ -1228,7 +1228,6 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "claude_prompts 1.md",
         "script_guide.md",
         "claude_prompts.md",
         "Rclone_guide.md",
@@ -3087,21 +3086,18 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_app/_appnotes/claude_prompts 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_skills": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
+        "_start.md",
         "_claude-setup.md",
         "_claude-boot.md",
         "_claude-work.md",
         "_claude-plan.md",
         "_claude-close.md"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "_skills/_claude-boot.md": {
       "isPinned": false,
@@ -3120,6 +3116,10 @@
       "isHidden": false
     },
     "_skills/_claude-setup.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_skills/_start.md": {
       "isPinned": false,
       "isHidden": false
     }

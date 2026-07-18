@@ -16,7 +16,7 @@ lo que falta ahora es la documentacion
 
 ## Pendientes
 
-- [ ] Modo multi-extract (sesión posterior, baja prioridad)
+- [x] Modo multi-extract (sesión posterior, baja prioridad)
 - [ ] documentación de los cripts
 ### Pendiente B — Documentar sync NotebookLM en `script_guide.md`
 

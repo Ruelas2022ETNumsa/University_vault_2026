@@ -6442,6 +6442,7 @@ tNum
 trans
 tabnotes
 trabajado
+technical
 ToDo
 Templater
 Text
@@ -21073,6 +21074,7 @@ Supernovas
 Sobreescribir
 SKILL
 Skills
+Setup
 Plugins
 Pendientes
 Plugin
@@ -26822,6 +26824,7 @@ Presentation
 PRINT
 Planificaci
 Potencial
+Pregunt
 del
 date
 de
@@ -32407,6 +32410,7 @@ discuti
 duplicarse
 deten
 descubrimientos
+diagnostic
 Vault
 Verificar
 Variables
@@ -38791,6 +38795,7 @@ VkEnFll
 VvyUe
 VQoXvG
 VERSION
+Vamos
 galaxy
 gina
 genes
@@ -45421,6 +45426,7 @@ getPrototypeOf
 getExcalidrawAPI
 getAppState
 gotoFullscreen
+gravemente
 body
 beacon
 bat
@@ -57955,6 +57961,7 @@ subidos
 skills
 suger
 segu
+sobreescrib
 vault
 vil
 ver
@@ -71005,6 +71012,7 @@ antecedentes
 actualiz
 avisame
 autorizada
+actualizaron
 related
 recomendados
 ribbon
@@ -77732,6 +77740,7 @@ reintent
 resum
 redefinido
 resolvi
+reportado
 notes
 notas
 nuevas
@@ -84169,6 +84178,7 @@ nXONfswW
 nothing
 nHold
 numTemas
+numerados
 created
 commit
 cada
@@ -91282,6 +91292,7 @@ crearon
 corromper
 concisa
 continu
+considerables
 updated
 un
 universo
@@ -110600,6 +110611,8 @@ Confirm
 Chat
 Consistencia
 Carga
+Close
+Completo
 Instalados
 Instalado
 Instalar
@@ -131633,6 +131646,7 @@ EsMk
 ElalHy
 ExcalidrawSlideshow
 ExcalidrawSlideshowStartTimer
+Esper
 Obsidian
 OmniSearch
 Ocultar
@@ -184533,6 +184547,7 @@ MDznJoOqiOUGVZIqz
 MjAesr
 MlYH
 MAYkroRTGKFCVZ
+Mostr
 Lectura
 LaTeX
 Linter
@@ -204621,6 +204636,8 @@ inconsistencias
 implement
 intentando
 inferirse
+init
+involucrado
 Dependencia
 Dropbox
 Dataview
