@@ -14,12 +14,19 @@ related_notes:
   - "[[_ToDo-system]]"
   - "[[_TABnote-system]]"
   - "[[_notebooklm-system]]"
+  - "[[claude_prompts]]"
+  - "[[_claude-plan]]"
+  - "[[_claude-work]]"
+  - "[[_claude-boot]]"
+  - "[[_claude-setup]]"
+  - "[[_claude-close]]"
+
 tags:
   - beacon
   - galaxy
   - infraestructura
 date_created: 2026-05-28
-date_updated: 2026-07-03
+date_updated: 2026-07-17
 status: activo
 ---
 
@@ -128,6 +135,10 @@ University_Vault_2026/
 │   ├── PDF-telefonia/             una carpeta por materia/tema en texto (no sigla ETNXXX)
 │   ├── PDF-921/                   la organización semántica la llevan los nombres
 │   └── PDF-nombre/                y las notas asteroid en Semesters/
+|
+├── _skills/                    ← skills de sesión de Claude (work, plan, close, setup, boot)
+│                                  cada archivo define el comportamiento de Claude
+│                                  para un tipo de tarea específica
 │
 ├── _templates/                 ← plantillas de notas de Obsidian — ver [[_template-system]]
 │   ├── tpl-supernova.md        ← una plantilla por tipo de cuerpo galaxy
@@ -148,6 +159,20 @@ University_Vault_2026/
 └── borrar/                     ← carpeta de espera antes de eliminar archivos
                                    revisar antes de borrar permanentemente
 ```
+
+---
+
+## Skills de Claude
+
+Los archivos en `_skills/` **no tienen `galaxy_body`**. Son instrucciones de comportamiento para Claude, no notas del vault. No participan del grafo de Obsidian ni del sistema galaxy.
+
+| Archivo            | Rol                                           |
+| ------------------ | --------------------------------------------- |
+| `_claude-boot.md`  | Arranque de sesión — carga contexto del vault |
+| `_claude-work.md`  | Sesión de edición de archivos                 |
+| `_claude-plan.md`  | Planificación de proyectos (`tsk_`)           |
+| `_claude-close.md` | Cierre de sesión — actualiza el `tsk_`        |
+| `_claude-setup.md` | Configuración técnica (plugins, herramientas) |
 
 ---
 
@@ -695,7 +720,7 @@ galaxy-links
 | Extensión `.excalidraw.md` en lugar de `.excalidraw`              | Mantener `.md` preserva compatibilidad con YAML, DataView y el grafo de Obsidian. Para usar en excalidraw.com se exporta con el comando del plugin.                                                                                                                                                                                                                                                                                                                                                            |
 | `supernova` como tipo #14 (2026-06-24)                            | Las transcripciones de NotebookLM son producción propia, no fuentes externas — forzarlas en `asteroid` rompía el principio producción-propia vs fuente-externa. Material en bruto de alta energía que aún no se ha condensado en notas galaxy. Símbolo ✨. Dos variantes: `class` individual (por sesión, `status: en-proceso`) y fusionada (tema completo, `status: completo`). Slug en español con guion_bajo. Contador `classNNN` corrido por semestre. Ruta: raíz de `Partial_N/`. Ver [[_TABnote-system]]. |
 | Rutas relativas en `galaxy-links` (2026-07-17)                    | Los wikilinks del bloque `%%` usan ruta relativa desde la raíz del vault (`E:\University_vault_2026`). Ejemplo: `[[Semesters/Sem_09/ETN901/Partial_1/ETN901-T01-intro.md]]`. Esto permite a Claude leer cualquier archivo enlazado directamente sin ambigüedad. Links a archivos inexistentes son válidos — Obsidian los muestra como nodos sin contenido en el grafo y sirven para planificar notas antes de crearlas.                                                                                        |
-
+| `_skills/` como carpeta sin `galaxy_body` (2026-07-17) | Los skills son instrucciones de comportamiento para Claude, no notas del vault. Forzarles un `galaxy_body` sería ruido — no participan del grafo ni del sistema galaxy. |
 
 
 ---
@@ -709,4 +734,11 @@ galaxy-links
 [[_app/_config/_graph-system.md]]
 [[_app/_config/_ToDo-system.md]]
 [[_app/_config/_notebooklm-system.md]]
+
+[[_app/_appnotes/claude_prompts]]
+[[_skills/_claude-plan]]
+[[_skills/_claude-work]]
+[[_skills/_claude-boot]]
+[[_skills/_claude-setup]]
+[[_skills/_claude-close]]
 %%
