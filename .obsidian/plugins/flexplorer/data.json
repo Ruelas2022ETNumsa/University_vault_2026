@@ -5,6 +5,7 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
+        "Untitled.md",
         "_skills",
         "wolfram alpha example.md",
         "_projects",
@@ -2851,6 +2852,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "section 1.md",
         "section.md",
         "tmp"
       ]
@@ -3115,6 +3117,14 @@
       "isHidden": false
     },
     "_projects/tsk_alxgml.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/section 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled.md": {
       "isPinned": false,
       "isHidden": false
     }

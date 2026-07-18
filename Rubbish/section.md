@@ -7,6 +7,31 @@
 
 > ⚠️ Los bloques `%%` en estos ejemplos usan rutas de archivos inexistentes como ilustración. En notas reales usar siempre ruta relativa completa desde la raíz del vault (`E:\University_vault_2026`). Ver formato en [El grafo de Obsidian y los wikilinks](#el-grafo-de-obsidian-y-los-wikilinks).
 
+```mermaid
+sequenceDiagram
+    star->>planet: orbiting
+    star->>moon: orbiting
+    star->>comet: orbiting
+    planet->>star: star
+    planet->>moon: moons
+    planet->>comet: comets
+    moon->>planet: orbits
+    comet->>planet: concepts_used
+    comet->>moon: concepts_used
+    nebula->>comet: comets
+    dwarf->>star: covers
+    asteroid->>planet: related_planets
+    photon->>planet: attached_to
+    observatory->>planet: attached_to
+    constellation->>star: covers parcial/tema
+    bridge->>planet: connects (materia 1)
+    bridge->>planet: connects (materia 2)
+    supernova->>planet: related_planets
+    Note right of workshop: vacío al crear<br/>se puebla<br/>durante el trabajo
+```
+
+
+
 ---
 
 ### star
@@ -257,7 +282,7 @@ Como `neutrino` no es nota separada, **no tiene YAML propio ni bloque `%%`**. La
 
 Ejemplo — bloque Desmos dentro de un planet:
 
-```markdown
+`````markdown
 ## Región de soporte
 
 ```desmos-graph
@@ -304,7 +329,7 @@ tools: [excalidraw, mindmap-builder]
 date_created: YYYY-MM-DD
 status: activo
 ---
-```
+`````
 
 ```markdown
 %%

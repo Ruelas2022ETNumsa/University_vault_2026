@@ -300,18 +300,6 @@ Ambas capas deben estar sincronizadas — si un enlace está en el YAML también
 
 ### star
 
-````ad-tip
-title: tlp
-collapse: open
-
-
-![[_templates/tpl-star]]
-
-
-
-
-````
-
 ```yaml
 ---
 title: "ETN806 — P2 — T01: Densidad de probabilidad conjunta"
