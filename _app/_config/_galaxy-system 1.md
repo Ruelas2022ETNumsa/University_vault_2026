@@ -298,11 +298,8 @@ Ambas capas deben estar sincronizadas — si un enlace está en el YAML también
 > Archivos físicos en `_templates/` — nombrados `tpl-[tipo].md`
 > Las plantillas de `Semesters/` usan **Opción B**: Templater pregunta materia, semestre, parcial, tema y nombre, y mueve el archivo automáticamente a la ruta correcta.
 
-> ⚠️ Los bloques `%%` en estos ejemplos usan rutas de archivos inexistentes como ilustración. En notas reales usar siempre ruta relativa completa desde la raíz del vault (`E:\University_vault_2026`). Ver formato en [El grafo de Obsidian y los wikilinks](#el-grafo-de-obsidian-y-los-wikilinks).
-
----
-
 ### star
+
 ```yaml
 ---
 title: "ETN806 — P2 — T01: Densidad de probabilidad conjunta"
@@ -322,12 +319,13 @@ status: activo
 ---
 ```
 
+Cuerpo de la nota — al final:
 ```markdown
 %%
-# galaxy-links
-[[Semesters/Sem_NN/ETNXXX/Partial_N/Topic_NN_nombre/ETNXXX-TNN-planet-nombre.md]]
-[[Semesters/Sem_NN/ETNXXX/Partial_N/Topic_NN_nombre/ETNXXX-TNN-moon-nombre.md]]
-[[Semesters/Sem_NN/ETNXXX/Partial_N/Topic_NN_nombre/ETNXXX-TNN-comet-nombre.md]]
+galaxy-links
+[[ETN806-T01-joint-pdf-definition]]
+[[ETN806-T01-marginal-density-formula]]
+[[ETN806-T01-normalization-k-solved]]
 %%
 ```
 
@@ -355,10 +353,10 @@ status: activo
 
 ```markdown
 %%
-# galaxy-links
-[[MOC/ETNXXX-TNN-star.md]]
-[[Semesters/Sem_NN/ETNXXX/Partial_N/Topic_NN_nombre/ETNXXX-TNN-moon-nombre.md]]
-[[Semesters/Sem_NN/ETNXXX/Partial_N/Topic_NN_nombre/ETNXXX-TNN-comet-nombre.md]]
+galaxy-links
+[[ETN806-T01-star]]
+[[ETN806-T01-marginal-density-formula]]
+[[ETN806-T01-normalization-k-solved]]
 %%
 ```
 
@@ -383,8 +381,8 @@ date_created: YYYY-MM-DD
 
 ```markdown
 %%
-# galaxy-links
-[[Semesters/Sem_NN/ETNXXX/Partial_N/Topic_NN_nombre/ETNXXX-TNN-planet-nombre.md]]
+galaxy-links
+[[ETN806-T01-joint-pdf-definition]]
 %%
 ```
 
@@ -411,9 +409,9 @@ date_created: YYYY-MM-DD
 
 ```markdown
 %%
-# galaxy-links
-[[Semesters/Sem_NN/ETNXXX/Partial_N/Topic_NN_nombre/ETNXXX-TNN-planet-nombre.md]]
-[[Semesters/Sem_NN/ETNXXX/Partial_N/Topic_NN_nombre/ETNXXX-TNN-moon-nombre.md]]
+galaxy-links
+[[ETN806-T01-joint-pdf-definition]]
+[[ETN806-T01-marginal-density-formula]]
 %%
 ```
 
@@ -437,9 +435,9 @@ tags: [ETN806, galaxy-nebula, P2]
 
 ```markdown
 %%
-# galaxy-links
-[[Semesters/Sem_NN/ETNXXX/Partial_N/Topic_NN_nombre/ETNXXX-TNN-comet-nombre.md]]
-[[Semesters/Sem_NN/ETNXXX/Partial_N/Topic_NN_nombre/ETNXXX-TNN-comet-nombre2.md]]
+galaxy-links
+[[ETN806-T01-normalization-k-solved]]
+[[ETN806-T02-independence-statistical-test]]
 %%
 ```
 
@@ -463,9 +461,9 @@ date_created: YYYY-MM-DD
 
 ```markdown
 %%
-# galaxy-links
-[[MOC/ETNXXX-T01-star.md]]
-[[MOC/ETNXXX-T02-star.md]]
+galaxy-links
+[[ETN806-T01-star]]
+[[ETN806-T02-star]]
 %%
 ```
 
@@ -498,8 +496,8 @@ status: en-proceso
 
 ```markdown
 %%
-# galaxy-links
-[[Semesters/Sem_NN/ETNXXX/Partial_N/Topic_NN_nombre/ETNXXX-TNN-planet-nombre.md]]
+galaxy-links
+[[ETN806-T01-joint-pdf-definition]]
 %%
 ```
 
@@ -523,8 +521,8 @@ date_created: YYYY-MM-DD
 
 ```markdown
 %%
-# galaxy-links
-[[Semesters/Sem_NN/ETNXXX/Partial_N/Topic_NN_nombre/ETNXXX-TNN-nombre-adjunto.md]]
+galaxy-links
+[[ETN806-T01-normalization-k-solved]]
 %%
 ```
 
@@ -550,7 +548,7 @@ Como `neutrino` no es nota separada, **no tiene YAML propio ni bloque `%%`**. La
 
 Ejemplo — bloque Desmos dentro de un planet:
 
-`````markdown
+````markdown
 ## Región de soporte
 
 ```desmos-graph
@@ -561,10 +559,10 @@ y=x|0<=x<=1|RED
 y=2-x|0<=x<=1|BLUE
 y<2-x|y>x|x>=0|x<=1|#a5d8ff
 ```
-```
+````
 
 Ejemplo — bloque TikZJax dentro de un comet:
-```markdown
+````markdown
 ## Circuito equivalente
 
 ```tikz
@@ -575,7 +573,7 @@ Ejemplo — bloque TikZJax dentro de un comet:
 \end{circuitikz}
 \end{document}
 ```
-```
+````
 
 > Documentación completa de cada herramienta: [[_graph-system]]
 
@@ -597,13 +595,13 @@ tools: [excalidraw, mindmap-builder]
 date_created: YYYY-MM-DD
 status: activo
 ---
-`````
+```
 
 ```markdown
 %%
-# galaxy-links
-[[MOC/ETNXXX-T01-star.md]]
-[[MOC/ETNXXX-T02-star.md]]
+galaxy-links
+[[ETN806-T01-star]]
+[[ETN806-T02-star]]
 %%
 ```
 
@@ -630,8 +628,8 @@ date_created: YYYY-MM-DD
 
 ```markdown
 %%
-# galaxy-links
-[[Semesters/Sem_NN/ETNXXX/Partial_N/Topic_NN_nombre/ETNXXX-TNN-nombre-adjunto.md]]
+galaxy-links
+[[ETN806-T01-joint-pdf-definition]]
 %%
 ```
 
@@ -656,9 +654,9 @@ date_created: YYYY-MM-DD
 
 ```markdown
 %%
-# galaxy-links
-[[Semesters/Sem_NN/ETNXXX1/Partial_N/Topic_NN_nombre/ETNXXX1-TNN-planet-nombre.md]]
-[[Semesters/Sem_NN/ETNXXX2/Partial_N/Topic_NN_nombre/ETNXXX2-TNN-planet-nombre.md]]
+galaxy-links
+[[ETN806-T03-generating-functions]]
+[[ETN302-T05-laplace-transform]]
 %%
 ```
 
@@ -692,8 +690,6 @@ status: en-proceso
 ---
 ```
 
-> Las `class` individuales no necesitan bloque `%%` hasta tener `related_planets`.
-
 **Supernova fusionada** (`ETN901-T1-densidad_probabilidad_conjunta-P1.md`):
 ```yaml
 ---
@@ -717,12 +713,12 @@ status: completo
 
 ```markdown
 %%
-# galaxy-links
-[[Semesters/Sem_NN/ETNXXX/Partial_N/Topic_NN_nombre/ETNXXX-TNN-planet-nombre.md]]
+galaxy-links
+[[ETN901-T01-definicion-densidad]]
 %%
 ```
 
-> Al fusionar, solo el archivo final lleva las conexiones al grafo. Ver [[_TABnote-system]] para el ciclo de vida completo.
+> Las `class` individuales no necesitan bloque `%%` hasta tener `related_planets`. Al fusionar, solo el archivo final lleva las conexiones al grafo. Ver [[_TABnote-system]] para el ciclo de vida completo.
 
 ---
 
@@ -732,73 +728,296 @@ Cuatro variantes según el tipo de tarea académica. Usar la plantilla correspon
 
 **tpl-w-initial** — inicio de materia:
 ```yaml
----
-title: "tsk_ini_ETNXXX"
+<%*
+const subject = await tp.system.prompt("Materia (ej: ETN901)");
+const sem = await tp.system.prompt("Semestre (ej: 9)");
+const title = `tsk_ini_${subject}`;
+const path = `Semesters/Sem_0${sem}/${subject}/${title}`;
+await tp.file.move(path);
+%>---
+title: "<% title %>"
 galaxy_body: workshop
-subject: ETNXXX
-semester: N
-tags: [ETNXXX, workshop, inicio]
-date_created: YYYY-MM-DD
-date_updated: YYYY-MM-DD
+subject: <% subject %>
+semester: <% sem %>
+tags: [<% subject %>, workshop, inicio]
+date_created: <% tp.date.now("YYYY-MM-DD") %>
+date_updated: <% tp.date.now("YYYY-MM-DD") %>
 status: activo
 ---
+
+# tsk — Inicio de materia · <% subject %>
+
+## Libros
+
+- [ ] Temario completo entregado a Claude
+- [ ] Bibliografía sugerida por el docente evaluada
+- [ ] Stack aprobado → ver `[[_app/_config/_library-system]]`
+- [ ] `_library_<% subject %>.md` creado en `_app/_config/`
+
+---
+
+## NotebookLM — fuentes
+
+- [ ] PDFs del stack subidos al notebook
+- [ ] Índices extraídos y verificados visualmente
+- [ ] `<% subject %>_library.md` creado en `_app/notebooklm/guides/<% subject %>/`
+- [ ] Fuentes cargadas en NotebookLM
+
+---
+
+## NotebookLM — prompts
+
+- [ ] `<% subject %>-P1-study.md` creado en `_app/notebooklm/prompts/<% subject %>/`
+- [ ] `<% subject %>-P1-transcription.md` creado en `_app/notebooklm/prompts/<% subject %>/`
+- [ ] Notebook configurado — fuentes + Instructions cargado
+
+---
+
+## Claude
+
+- [ ] `contexto_<% subject %>.md` generado vía `[[_app/_config/_claude-matter-boot]]`
+
+---
+
+## Notas y pendientes
+
+%%
+galaxy-links
+
+%%
+
 ```
 
 **tpl-w-transcription** — transcripción por parcial:
 ```yaml
+<%*
+const subject = await tp.system.prompt("Materia (ej: ETN901)");
+const sem = await tp.system.prompt("Semestre (ej: 9)");
+const partial = await tp.system.prompt("Parcial (1, 2 o 3)");
+const numTemas = parseInt(await tp.system.prompt("Cantidad de temas del parcial (ej: 3)"));
+const title = `tsk_trans_${subject}_P${partial}`;
+const path = `Semesters/Sem_0${sem}/${subject}/Partial_${partial}/${title}`;
+await tp.file.move(path);
+
+// Generar bloques de temas dinámicamente
+let bloquesTemas = "";
+for (let i = 1; i <= numTemas; i++) {
+  const tNum = String(i).padStart(2, "0");
+  bloquesTemas += `
+### T${tNum} — *(completar título)*
+
+#### Supernovas
+- [ ] Classes individuales completadas
+- [ ] Supernova fusionada creada → \`${subject}-T${tNum}-slug_del_tema-P${partial}.md\`
+
+#### Galaxy bodies obligatorios
+- [ ] \`star\` ☀️ → \`${subject}-T${tNum}-star.md\`
+- [ ] \`planet\` 🪐 — listar uno por concepto:
+  - [ ] 
+- [ ] \`dwarf\` ⬛ tema → \`${subject}-T${tNum}-dwarf-P${partial}.md\`
+
+#### Galaxy bodies opcionales
+- [ ] \`moon\` 🌙
+- [ ] \`comet\` ☄️
+- [ ] \`nebula\` 🌫️
+- [ ] \`asteroid\` 🪨
+- [ ] \`photon\` 💡
+- [ ] \`observatory\` 🔭
+
 ---
-title: "tsk_trans_ETNXXX_PN"
+`;
+}
+%>---
+title: "<% title %>"
 galaxy_body: workshop
-subject: ETNXXX
-semester: N
-partial: N
-tags: [ETNXXX, workshop, transcripcion, PN]
-date_created: YYYY-MM-DD
-date_updated: YYYY-MM-DD
+subject: <% subject %>
+semester: <% sem %>
+partial: <% partial %>
+tags: [<% subject %>, workshop, transcripcion, P<% partial %>]
+date_created: <% tp.date.now("YYYY-MM-DD") %>
+date_updated: <% tp.date.now("YYYY-MM-DD") %>
 status: activo
 ---
+
+# tsk — Transcripción P<% partial %> · <% subject %>
+
+## Supernovas — seguimiento de clases
+
+| class | fecha | subtítulos | status |
+| ----- | ----- | ---------- | ------ |
+|       |       |            | pendiente |
+
+---
+
+## Temas del parcial
+<% bloquesTemas %>
+## Cierre de parcial
+
+- [ ] `dwarf` ⬛ parcial completo → `<% subject %>-T00-dwarf-P<% partial %>.md`
+- [ ] `constellation` 🌌 → `_app/Excalidraw/Constellations/<% subject %>-P<% partial %>-constellation.md`
+
+---
+
+## Notas y pendientes
+
+%%
+galaxy-links
+
+%%
+
 ```
 
 **tpl-w-study** — estudio por parcial:
 ```yaml
----
-title: "tsk_study_ETNXXX_PN"
+<%*
+const subject = await tp.system.prompt("Materia (ej: ETN901)");
+const sem = await tp.system.prompt("Semestre (ej: 9)");
+const partial = await tp.system.prompt("Parcial (1, 2 o 3)");
+const title = `tsk_study_${subject}_P${partial}`;
+const path = `Semesters/Sem_0${sem}/${subject}/Partial_${partial}/${title}`;
+await tp.file.move(path);
+%>---
+title: "<% title %>"
 galaxy_body: workshop
-subject: ETNXXX
-semester: N
-partial: N
-tags: [ETNXXX, workshop, estudio, PN]
-date_created: YYYY-MM-DD
-date_updated: YYYY-MM-DD
+subject: <% subject %>
+semester: <% sem %>
+partial: <% partial %>
+tags: [<% subject %>, workshop, estudio, P<% partial %>]
+date_created: <% tp.date.now("YYYY-MM-DD") %>
+date_updated: <% tp.date.now("YYYY-MM-DD") %>
 status: activo
 ---
+
+# tsk — Estudio P<% partial %> · <% subject %>
+
+## NotebookLM — configuración del parcial
+
+### Prompts
+- [ ] Prompt de estudio creado → `_app/notebooklm/prompts/<% subject %>/<% subject %>-P<% partial %>-study.md`
+- [ ] Prompt de transcripción creado → `_app/notebooklm/prompts/<% subject %>/<% subject %>-P<% partial %>-transcription.md`
+- [ ] Instructions del notebook actualizado con prompt de estudio
+
+### Fuentes del notebook
+- [ ] `<% subject %>_library.md` cargada/actualizada → `_app/notebooklm/guides/<% subject %>/`
+- [ ] `obsidian_notation.md` cargada → `_app/notebooklm/general/`
+- [ ] Guías de graficación cargadas según materia → `_app/notebooklm/guides/<% subject %>/`
+- [ ] Formulario o resumen del parcial cargado como fuente adicional
+
+---
+
+## Prácticas
+
+| práctica | archivo en vault | status |
+| -------- | ---------------- | ------ |
+|          |                  | pendiente |
+
+---
+
+## Exámenes pasados
+
+| examen | año | archivo en vault | status |
+| ------ | --- | ---------------- | ------ |
+|        |     |                  | pendiente |
+
+---
+
+## Notas y pendientes
+
+%%
+galaxy-links
+
+%%
+
 ```
 
 **tpl-w-project** — proyecto académico puntual:
 ```yaml
----
-title: "tsk_ETNXXX_nombre_proyecto"
+<%*
+const subject = await tp.system.prompt("Materia (ej: ETN901)");
+const sem = await tp.system.prompt("Semestre (ej: 9)");
+const partial = await tp.system.prompt("Parcial (1, 2 o 3)");
+const slug = await tp.system.prompt("Nombre del proyecto en español, guion_bajo (ej: filtro_pasa_bajos)");
+const title = `tsk_${subject}_${slug}`;
+const path = `Semesters/Sem_0${sem}/${subject}/Partial_${partial}/${title}`;
+await tp.file.move(path);
+%>---
+title: "<% title %>"
 galaxy_body: workshop
-subject: ETNXXX
-semester: N
-partial: N
-tags: [ETNXXX, workshop, proyecto, PN]
-date_created: YYYY-MM-DD
-date_updated: YYYY-MM-DD
+subject: <% subject %>
+semester: <% sem %>
+partial: <% partial %>
+tags: [<% subject %>, workshop, proyecto, P<% partial %>]
+date_created: <% tp.date.now("YYYY-MM-DD") %>
+date_updated: <% tp.date.now("YYYY-MM-DD") %>
 status: activo
 ---
-```
 
-```markdown
-%%
-# galaxy-links
-## Links a notas pendientes de crear
-%%
-```
+# tsk — <% slug.replaceAll("_", " ") %> · <% subject %>
 
-> Al crear con Templater, pregunta materia, semestre y parcial, y mueve el archivo automáticamente a `Semesters/Sem_NN/ETNXXX/` o `Semesters/Sem_NN/ETNXXX/Partial_N/` según el tipo. `galaxy_body: workshop` en todas las variantes. El bloque `%%` se puebla durante el trabajo.
+## Resumen y objetivo
+
+%%
+Una o dos líneas: ¿qué se quiere lograr y por qué?
+%%
 
 ---
+
+## Planificación
+
+%%
+Contexto, restricciones clave y razonamiento del enfoque elegido.
+Si el proyecto fue replanificado, el plan anterior va en un callout colapsado:
+> [!error]- Planificación abandonada (motivo)
+%%
+
+---
+
+## Flujo de pasos
+
+- [ ] 
+- [ ] 
+
+---
+
+## Tareas
+
+- [ ] 
+- [ ] 
+
+---
+
+## Decisiones
+
+| Fecha | Decisión | Motivo |
+| ----- | -------- | ------ |
+|       |          |        |
+
+> [!note]- Descartadas
+> Enfoques considerados pero abandonados, con motivo.
+
+---
+
+## Recursos
+
+%%
+Herramientas, archivos del vault (con ruta relativa) y links externos necesarios.
+%%
+
+---
+
+## Notas y pendientes
+
+%%
+galaxy-links
+
+%%
+
+```
+
+> Al crear con Templater, pregunta materia, semestre y parcial, y mueve el archivo automáticamente a `Semesters/Sem_NN/ETNXXX/` o `Semesters/Sem_NN/ETNXXX/Partial_N/` según el tipo. `galaxy_body: workshop` en todas las variantes.
+
+---
+
 ## Registro de decisiones de diseño
 
 | Decisión                                                          | Razón                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
