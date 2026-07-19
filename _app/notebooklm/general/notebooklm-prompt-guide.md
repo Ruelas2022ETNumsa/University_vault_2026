@@ -1,13 +1,19 @@
 ---
-title: "Guía de Plantillas — Prompts NotebookLM"
+title: Guía de Plantillas — Prompts NotebookLM
 galaxy_body: beacon
 scope: vault
-audience: [usuario, claude]
+audience:
+  - usuario
+  - claude
 related_notes:
   - "[[_notebooklm-system]]"
   - "[[_library-system]]"
-  - "[[_TABnote-system]]"
-tags: [beacon, notebooklm, plantillas, infraestructura]
+  - "[[_TAB_note-system]]"
+tags:
+  - beacon
+  - notebooklm
+  - plantillas
+  - infraestructura
 date_created: 2026-07-03
 date_updated: 2026-07-03
 status: activo
@@ -17,7 +23,7 @@ status: activo
 
 > Sistema NotebookLM: [[_notebooklm-system]]
 > Protocolo de libros: [[_library-system]]
-> Sistema TABnote: [[_TABnote-system]]
+> Sistema TABnote: [[_TAB_note-system]]
 
 Esta guía es de trabajo conjunto Claude + usuario. Contiene las plantillas
 base para crear prompts de NotebookLM para cualquier materia nueva, junto

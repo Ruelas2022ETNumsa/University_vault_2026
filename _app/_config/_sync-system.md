@@ -70,7 +70,7 @@ Nota .md guardada en Semesters/Sem_NN/ETNXXX/Partial_N/
 Obsidian Git → GitHub (auto-commit cada 5 min)
 ```
 
-> Flujo completo, decisiones de diseño y snapshot de cierre de parcial: [[_TABnote-system]]
+> Flujo completo, decisiones de diseño y snapshot de cierre de parcial: [[_TAB_note-system]]
 
 ---
 

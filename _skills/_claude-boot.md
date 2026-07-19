@@ -16,7 +16,7 @@ related_notes:
   - "[[_sync-system]]"
   - "[[_basic-memory-system]]"
   - "[[_notebooklm-system]]"
-  - "[[_TABnote-system]]"
+  - "[[_TAB_note-system]]"
   - "[[_ToDo-system]]"
   - "[[claude_solve]]"
   - "[[_claude-matter-boot]]"
@@ -155,7 +155,7 @@ ETNXXX-TNN-nombre_descriptivo.md
 | `supernova`     | ✨       | Transcripción bruta de NotebookLM de apuntes de clase — material en bruto pendiente de disección en notas galaxy                        |
 | `workshop`      | 🔧      | Tarea académica por materia — seguimiento de transcripción, estudio o proyecto puntual. Vive en `Semesters/`. Ver [[_template-system]]. |
 
-> ✅ **Tipo #14 aprobado (2026-06-24):** `supernova` quedó cerrado como `galaxy_body` oficial para transcripciones de NotebookLM de apuntes de clase (ver [[_TABnote-system]] y [[_ToDo-system]]). La propuesta original era `tabnote`, pero se descartó ese nombre a favor de `supernova` antes de aprobarse.
+> ✅ **Tipo #14 aprobado (2026-06-24):** `supernova` quedó cerrado como `galaxy_body` oficial para transcripciones de NotebookLM de apuntes de clase (ver [[_TAB_note-system]] y [[_ToDo-system]]). La propuesta original era `tabnote`, pero se descartó ese nombre a favor de `supernova` antes de aprobarse.
 
 > ✅ **Tipo #15 aprobado (2026-07-18):** `workshop` quedó cerrado como `galaxy_body` oficial para tareas académicas por materia (ver [[_galaxy-system]]). Cuatro variantes según etapa: `tpl-w-initial`, `tpl-w-transcription`, `tpl-w-study`, `tpl-w-project`. Vive en `Semesters/`.
 
@@ -366,7 +366,7 @@ Convención interna del vault para respaldar archivos antes de editarlos:
 [[_app/_config/_sync-system.md]]
 [[_app/_config/_basic-memory-system.md]]
 [[_app/_config/_notebooklm-system.md]]
-[[_app/_config/_TABnote-system.md]]
+[[_TAB_note-system]]
 [[_app/_config/_ToDo-system.md]]
 [[_app/solve/claude_solve.md]]
 [[_app/_config/_claude-matter-boot.md]]

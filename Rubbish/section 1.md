@@ -428,7 +428,7 @@ galaxy-links
 %%
 ```
 
-> Las `class` individuales no necesitan bloque `%%` hasta tener `related_planets`. Al fusionar, solo el archivo final lleva las conexiones al grafo. Ver [[_TABnote-system]] para el ciclo de vida completo.
+> Las `class` individuales no necesitan bloque `%%` hasta tener `related_planets`. Al fusionar, solo el archivo final lleva las conexiones al grafo. Ver [[_TAB_note-system]] para el ciclo de vida completo.
 
 ---
 

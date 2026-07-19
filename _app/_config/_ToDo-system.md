@@ -1,15 +1,21 @@
 ---
-title: "ToDo Sistema — Plugins y Pendientes del Vault"
+title: ToDo Sistema — Plugins y Pendientes del Vault
 galaxy_body: beacon
 scope: vault
-audience: [usuario, claude]
+audience:
+  - usuario
+  - claude
 related_notes:
   - "[[_galaxy-system]]"
   - "[[_note-system]]"
   - "[[_sync-system]]"
-  - "[[_TABnote-system]]"
+  - "[[_TAB_note-system]]"
   - "[[_notebooklm-system]]"
-tags: [beacon, todo, plugins, infraestructura]
+tags:
+  - beacon
+  - todo
+  - plugins
+  - infraestructura
 date_created: 2026-05-29
 date_updated: 2026-06-25
 status: activo
@@ -20,7 +26,7 @@ status: activo
 > Sistema Galaxy: [[_galaxy-system]]
 > Convención de notas: [[_note-system]]
 > Sistema Sync: [[_sync-system]]
-> Sistema TABnote (apuntes de tablet): [[_TABnote-system]]
+> Sistema TABnote (apuntes de tablet): [[_TAB_note-system]]
 
 ---
 
@@ -72,13 +78,13 @@ status: activo
 
 ### Sincronización tablet — modelo actual (dos canales, cerrado 2026-06-24)
 
-> Ver [[_TABnote-system]]. Dos canales independientes:
+> Ver [[_TAB_note-system]]. Dos canales independientes:
 > - **Mega** → sincroniza el vault de Obsidian completo (PC ↔ laptop ↔ tablet ↔ celular).
 > - **Samsung Account / Samsung Notes** → sincroniza los archivos `.sdocx` (apuntes manuscritos). Estos `.sdocx` **no forman parte del vault** — son material bruto que NotebookLM transcribe a notas `supernova`.
 > El PDF activo en el baúl quedó descartado; solo se genera un snapshot PDF al cerrar cada parcial, archivado en `_tabnotes_archivo/` (separado de `_PDF/`, fuera de Git). `galaxy_body: supernova` aprobado como tipo #14.
 - [x] Validar empíricamente edición multi-dispositivo tablet ↔ PC vía Samsung Cloud (2026-06-20) ✅
 - [ ] Repetir la prueba de edición multi-dispositivo en la laptop ASUS (Windows 11) — confirmar que el comportamiento se repite en un segundo equipo
-- [x] Decidir: `supernova` como `galaxy_body` nuevo (tipo #14) — aprobado 2026-06-24. Resuelve la pregunta de `tabnote vs asteroid`. Registrado en [[_galaxy-system]], [[_note-system]], [[_template-system]], [[_TABnote-system]].
+- [x] Decidir: `supernova` como `galaxy_body` nuevo (tipo #14) — aprobado 2026-06-24. Resuelve la pregunta de `tabnote vs asteroid`. Registrado en [[_galaxy-system]], [[_note-system]], [[_template-system]], [[_TAB_note-system]].
 - [x] Definir disparador/recordatorio para generar el snapshot PDF al cerrar cada parcial — resuelto: campo `archive_snapshot` en plantilla + ítem en `_TABnote-system` registro de decisiones cerradas.
 - [ ] Medir tamaño real del PDF+(Samsung) de cierre de parcial — para estimar peso acumulado en `_tabnotes_archivo/` a lo largo del semestre
 - [x] Confirmar convención real de subcarpetas dentro de `_PDF/` — **RESUELTO**: la convención real usa `PDF-nombre` (ej. `PDF-telefonia`, `PDF-921`), no siglas `ETNXXX`. Documentado en [[_pdf_pp-system]]. Diagrama de carpetas en [[_galaxy-system]] actualizado a `PDF-nombre` (2026-06-25).
@@ -163,6 +169,6 @@ status: activo
 [[_app/_config/_sync-system.md]]
 [[_app/_config/_excalidraw-system.md]]
 [[_app/_config/_graph-system.md]]
-[[_app/_config/_TABnote-system.md]]
+[[_TAB_note-system]]
 [[_app/_config/_notebooklm-system.md]]
 %%

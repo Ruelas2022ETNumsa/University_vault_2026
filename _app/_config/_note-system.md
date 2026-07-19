@@ -10,7 +10,7 @@ related_notes:
   - "[[_template-system]]"
   - "[[_mindmap-system]]"
   - "[[_pdf_pp-system]]"
-  - "[[_TABnote-system]]"
+  - "[[_TAB_note-system]]"
   - "[[_ToDo-system]]"
 tags:
   - beacon
@@ -128,7 +128,7 @@ ETN901-T01-P1-densidad_probabilidad_conjunta.md
 ETN901-T02-P1-variables_aleatorias_continuas.md
 ```
 
-> Ver [[_TABnote-system]] para el ciclo de vida completo (class → fusionada → diseccionada en notas galaxy).
+> Ver [[_TAB_note-system]] para el ciclo de vida completo (class → fusionada → diseccionada en notas galaxy).
 
 ---
 
@@ -149,7 +149,7 @@ ETN901-T02-P1-variables_aleatorias_continuas.md
 | `observatory`   | 🔭      | Dibujo técnico libre en Excalidraw                                                                            |
 | `beacon`        | 📡      | Guía de infraestructura del vault — vive en `_app/`                                                           |
 | `bridge`        | 🌉      | Conexión entre materias                                                                                       |
-| `supernova`     | ✨       | Transcripción bruta de NotebookLM de apuntes de clase — ver [[_TABnote-system]]                               |
+| `supernova`     | ✨       | Transcripción bruta de NotebookLM de apuntes de clase — ver [[_TAB_note-system]]                               |
 | `workshop`      | 🔧      | Tarea académica por materia — seguimiento de transcripción, estudio o proyecto puntual. Vive en `Semesters/`. |
 
 
@@ -223,7 +223,7 @@ El vault usa dos plugins complementarios para el formato de apuntes. Ver [[corne
 | `_assets/`           | Imágenes exportadas: .png, .svg, .jpeg                                                                   |
 | `_templates/`        | Plantillas de notas — una por tipo de cuerpo galaxy                                                      |
 | `_PDF/`              | Archivos PDF físicos — una carpeta por materia                                                           |
-| `_tabnotes_archivo/` | Snapshots PDF de cierre de parcial (apuntes manuscritos propios) — fuera de Git, ver [[_TABnote-system]] |
+| `_tabnotes_archivo/` | Snapshots PDF de cierre de parcial (apuntes manuscritos propios) — fuera de Git, ver [[_TAB_note-system]] |
 | `borrar/`            | Zona de espera antes de eliminar archivos permanentemente                                                |
 | `_projects/`         | Proyectos activos y backlog de ideas — slots `tsk_alias.md`, plantilla base y `_ideas.md`                |
 

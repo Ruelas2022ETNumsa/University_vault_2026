@@ -7,7 +7,7 @@ audience:
   - claude
 related_notes:
   - "[[_galaxy-system]]"
-  - "[[_TABnote-system]]"
+  - "[[_TAB_note-system]]"
   - "[[_library-system]]"
   - "[[guides/MAT101/MAT101_desmos]]"
   - "[[guides/MAT101/MAT101_TikzJax]]"
@@ -24,7 +24,7 @@ status: activo
 
 # Sistema NotebookLM — University Vault
 
-> Sistema TABnote (transcripción de apuntes): [[_TABnote-system]]
+> Sistema TABnote (transcripción de apuntes): [[_TAB_note-system]]
 > Protocolo de libros y fuentes: [[_library-system]]
 > Guías de graficación (fuentes del notebook): [[guides/MAT101/MAT101_desmos]] · [[guides/MAT101/MAT101_TikzJax]]
 > Pendientes: [[_ToDo-system]]
@@ -276,7 +276,7 @@ Paso 6 — Configurar NotebookLM
 %%
 # galaxy-links
 [[_app/_config/_galaxy-system.md]]
-[[_app/_config/_TABnote-system.md]]
+[[_TAB_note-system]]
 [[_app/_config/_library-system.md]]
 [[_app/notebooklm/guides/MAT101/MAT101_desmos.md]]
 [[_app/notebooklm/guides/MAT101/MAT101_TikzJax.md]]

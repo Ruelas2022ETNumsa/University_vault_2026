@@ -11,7 +11,7 @@ related_notes:
   - "[[_mindmap-system]]"
   - "[[_note-system]]"
   - "[[_pdf_pp-system]]"
-  - "[[_TABnote-system]]"
+  - "[[_TAB_note-system]]"
   - "[[_ToDo-system]]"
 tags:
   - beacon
@@ -494,7 +494,7 @@ status: completo
 ---
 ```
 
-> Ver [[_TABnote-system]] para el ciclo de vida completo y [[_galaxy-system]] para la convención de nombres.
+> Ver [[_TAB_note-system]] para el ciclo de vida completo y [[_galaxy-system]] para la convención de nombres.
 
 ---
 
@@ -597,7 +597,7 @@ status: activo
 | Extensión `.excalidraw.md` en lugar de `.excalidraw`             | Mantener `.md` preserva compatibilidad con YAML, DataView y el grafo de Obsidian. Para usar en excalidraw.com se exporta con el comando del plugin.                                                                                                                                                                                                  |
 | `tpl-asteroid.md` actualizado a dos ramas (2026-06-24)           | La plantilla original tenía solo los campos del YAML PDF — no reflejaba la rama Normal (sin PDF). Se agregó la rama Normal con `orbiting: []` y se corrige la ruta destino: Normal va a `Topic_NN.../`, PDF va directamente a `Partial_N/` para no obligar al usuario a elegir un tema para una referencia general.                                  |
 | `tpl-photon.md` actualizado a tres ramas (2026-06-24)            | La plantilla original solo ofrecía `desmos` como tipo. Se agregan `tikzjax` y `pdf-crop` con lógica de ruta propia: `pdf-crop` va a `_assets/` (es una imagen exportada, no una nota de Semesters/); `desmos` y `tikzjax` van a `Topic_NN.../`. Se eliminan campos incorrectos de la versión anterior.                                               |
-| `tpl-supernova.md` creado (2026-06-24)                           | Nuevo tipo #14 aprobado en [[_TABnote-system]]. Una sola plantilla con dos ramas: `class` individual (por sesión) y fusionada (tema completo). Ambas van a la raíz de `Partial_N/` porque una class puede cubrir subtítulos de varios temas.                                                                                                         |
+| `tpl-supernova.md` creado (2026-06-24)                           | Nuevo tipo #14 aprobado en [[_TAB_note-system]]. Una sola plantilla con dos ramas: `class` individual (por sesión) y fusionada (tema completo). Ambas van a la raíz de `Partial_N/` porque una class puede cubrir subtítulos de varios temas.                                                                                                         |
 | `_claude-matter-boot.md` movido a `_app/_config/` (2026-06-25)   | Pasó de ser una herramienta informal en`_templates/`a beacon galaxy oficial. Genera el contexto de trabajo de Claude para materias específicas — protocolo derevisión de ejercicios, flujo de trabajo y guía de formulario por materia.                                                                                                              |
 | 4 plantillas `tpl-w-*` creadas como tipo `workshop` (2026-07-18) | Necesidad de seguimiento estructurado de tareas académicas por materia. Cuatro variantes según etapa: `initial` (inicio de materia), `transcription` (seguimiento por parcial), `study` (estudio y repaso), `project` (proyecto puntual). Todas usan Templater con `tp.file.move()` automático a `Semesters/`. Ver [[_galaxy-system]] para tipo #15. |
 | `tsk_tpl.md` como referencia en `_projects/` (2026-07-18) | No es una plantilla Templater — es un archivo de copia manual para los slots `tsk_alias.md`. Sin `galaxy_body`, sin lógica de movimiento. Más simple que las plantillas de `_templates/` — incluye comentarios `%%` explicativos por sección para guiar al usuario al copiar. |

@@ -5,6 +5,7 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
+        "_blueprint",
         "_skills",
         "wolfram alpha example.md",
         "_projects",
@@ -14,7 +15,6 @@
         "Zettelkasten",
         "Marginalia Attachments",
         "Borrar",
-        "in_work",
         "README.md",
         "MOC",
         "Semesters",
@@ -1298,7 +1298,7 @@
       "customOrder": [
         "_library_ETN505(i).md",
         "_claude-matter-boot.md",
-        "_TABnote-system.md",
+        "_TAB_note-system.md",
         "_library_MAT101.md",
         "_basic-memory-system.md",
         "_excalidraw-system.md",
@@ -2428,24 +2428,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "in_work": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "MAT101_T1-Funciones-reales 1.md",
-        "claude vision.md",
-        "Untitled 1.md",
-        "obsidian-cornell-notes.md",
-        "tables no terminado.md",
-        "rendimiento.md",
-        "MAT101_T1-Funciones-reales.md"
-      ]
-    },
-    "in_work/MAT101_T1-Funciones-reales.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_app/scripts/Galaxy_view": {
       "isPinned": false,
       "isHidden": false,
@@ -2475,10 +2457,6 @@
       "isHidden": false
     },
     "_app/_config/_claude-matter-boot.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/_config/_TABnote-system.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -2826,26 +2804,6 @@
       "sortOrder": "custom",
       "customOrder": []
     },
-    "in_work/claude vision.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "in_work/Untitled 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "in_work/obsidian-cornell-notes.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "in_work/tables no terminado.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "in_work/rendimiento.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Rubbish": {
       "isPinned": false,
       "isHidden": false,
@@ -2892,10 +2850,6 @@
       "isPinned": true,
       "isHidden": false
     },
-    "in_work/MAT101_T1-Funciones-reales 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_app/_appnotes/script_guide.md": {
       "isPinned": false,
       "isHidden": false
@@ -2905,6 +2859,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "rclone_script.md",
         "shellcommands_guide(scripts).md",
         "shellcmd_config_script.md",
         "shellcmd_config_gral.md",
@@ -3120,6 +3075,56 @@
       "isHidden": false
     },
     "_projects/_ideas_0_shellcmd.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/shellcommands/rclone_script.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_blueprint": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 1.md",
+        "tables no terminado.md",
+        "rendimiento.md",
+        "MAT101_T1-Funciones-reales 1.md",
+        "obsidian-cornell-notes.md",
+        "MAT101_T1-Funciones-reales.md",
+        "claude vision.md"
+      ]
+    },
+    "_blueprint/claude vision.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_blueprint/MAT101_T1-Funciones-reales.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_blueprint/obsidian-cornell-notes.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_blueprint/MAT101_T1-Funciones-reales 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_blueprint/rendimiento.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_blueprint/tables no terminado.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_blueprint/Untitled 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_config/_TAB_note-system.md": {
       "isPinned": false,
       "isHidden": false
     }

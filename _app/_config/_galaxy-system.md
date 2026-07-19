@@ -12,7 +12,7 @@ related_notes:
   - "[[_template-system]]"
   - "[[_graph-system]]"
   - "[[_ToDo-system]]"
-  - "[[_TABnote-system]]"
+  - "[[_TAB_note-system]]"
   - "[[_notebooklm-system]]"
   - "[[claude_prompts]]"
   - "[[_claude-plan]]"
@@ -20,7 +20,6 @@ related_notes:
   - "[[_claude-boot]]"
   - "[[_claude-setup]]"
   - "[[_claude-close]]"
-
 tags:
   - beacon
   - galaxy
@@ -257,7 +256,7 @@ El campo `galaxy_body` en el YAML define el rol de la nota. Catorce tipos:
 | `observatory`   | 🔭      | Dibujo técnico libre en Excalidraw sin Mindmap Builder. Vive en `_app/Excalidraw/Observatory/`.                                                                |
 | `bridge`        | 🌉      | Conexión entre materias. Enlaza conceptos de dos galaxias distintas.                                                                                           |
 | `beacon`        | 📡      | Guía de infraestructura del vault. Herramientas, procesos, soluciones. Vive en `_app/`.                                                                        |
-| `supernova`     | ✨       | Transcripción bruta de NotebookLM de apuntes de clase. Material en bruto pendiente de disección en notas galaxy. Ver [[_TABnote-system]].                      |
+| `supernova`     | ✨       | Transcripción bruta de NotebookLM de apuntes de clase. Material en bruto pendiente de disección en notas galaxy. Ver [[_TAB_note-system]].                      |
 | `workshop` | 🔧 | Tarea académica por materia. Seguimiento de transcripción, estudio o proyecto puntual dentro de una materia. Vive en `Semesters/`. Ver [[_template-system]]. |
 
 ---
@@ -722,7 +721,7 @@ status: completo
 %%
 ```
 
-> Al fusionar, solo el archivo final lleva las conexiones al grafo. Ver [[_TABnote-system]] para el ciclo de vida completo.
+> Al fusionar, solo el archivo final lleva las conexiones al grafo. Ver [[_TAB_note-system]] para el ciclo de vida completo.
 
 ---
 
@@ -824,7 +823,7 @@ status: activo
 | Opción B como sistema oficial para Semesters/ (2026-05-28)        | Las plantillas B preguntan materia, semestre, parcial, tema y nombre, y mueven el archivo automáticamente. Elimina la necesidad de navegar manualmente a la carpeta destino. Las plantillas A quedan en `_templates/alt-B/plantillas-A-respaldo.md`.                                                                                                                                                                                                                                                           |
 | YAML híbrido en constellation y observatory (2026-05-28)          | El plugin de Excalidraw requiere `excalidraw-plugin: parsed` en el frontmatter para abrir el archivo como lienzo. Se unifica con los campos galaxy en un solo bloque YAML. Sin este campo el archivo se abre como nota de texto.                                                                                                                                                                                                                                                                               |
 | Extensión `.excalidraw.md` en lugar de `.excalidraw`              | Mantener `.md` preserva compatibilidad con YAML, DataView y el grafo de Obsidian. Para usar en excalidraw.com se exporta con el comando del plugin.                                                                                                                                                                                                                                                                                                                                                            |
-| `supernova` como tipo #14 (2026-06-24)                            | Las transcripciones de NotebookLM son producción propia, no fuentes externas — forzarlas en `asteroid` rompía el principio producción-propia vs fuente-externa. Material en bruto de alta energía que aún no se ha condensado en notas galaxy. Símbolo ✨. Dos variantes: `class` individual (por sesión, `status: en-proceso`) y fusionada (tema completo, `status: completo`). Slug en español con guion_bajo. Contador `classNNN` corrido por semestre. Ruta: raíz de `Partial_N/`. Ver [[_TABnote-system]]. |
+| `supernova` como tipo #14 (2026-06-24)                            | Las transcripciones de NotebookLM son producción propia, no fuentes externas — forzarlas en `asteroid` rompía el principio producción-propia vs fuente-externa. Material en bruto de alta energía que aún no se ha condensado en notas galaxy. Símbolo ✨. Dos variantes: `class` individual (por sesión, `status: en-proceso`) y fusionada (tema completo, `status: completo`). Slug en español con guion_bajo. Contador `classNNN` corrido por semestre. Ruta: raíz de `Partial_N/`. Ver [[_TAB_note-system]]. |
 | Rutas relativas en `galaxy-links` (2026-07-17)                    | Los wikilinks del bloque `%%` usan ruta relativa desde la raíz del vault (`E:\University_vault_2026`). Ejemplo: `[[Semesters/Sem_09/ETN901/Partial_1/ETN901-T01-intro.md]]`. Esto permite a Claude leer cualquier archivo enlazado directamente sin ambigüedad. Links a archivos inexistentes son válidos — Obsidian los muestra como nodos sin contenido en el grafo y sirven para planificar notas antes de crearlas.                                                                                        |
 | `_skills/` como carpeta sin `galaxy_body` (2026-07-17)            | Los skills son instrucciones de comportamiento para Claude, no notas del vault. Forzarles un `galaxy_body` sería ruido — no participan del grafo ni del sistema galaxy.                                                                                                                                                                                                                                                                                                                                        |
 | `_tasks/` renombrada a `_projects/` (2026-07-18)                  | Nombre más descriptivo — la carpeta contiene proyectos activos y backlog de ideas, no tareas sueltas.                                                                                                                                                                                                                                                                                                                                                                                                          |
