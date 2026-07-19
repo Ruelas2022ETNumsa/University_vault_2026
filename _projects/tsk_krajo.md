@@ -3,9 +3,6 @@ alias: "script de Wolfram alpha"
 date: 13-7-2026-(23:16)
 ---
 
-# resumen
-
-```
 ## Resumen de sesión — Script Wolfram Alpha
 
 ---
@@ -64,7 +61,7 @@ date: 13-7-2026-(23:16)
 - El `\` en `re.sub` replacement: usar `r'\comando'` — NO `r'\\comando'` (produce doble backslash)
 - `DESCRIPTIVE_PHRASES` itera sobre traducciones ya aplicadas — si se agrega una frase nueva, considerar que el texto ya fue procesado por `plaintext_to_latex` antes de llegar a `format_line`
 - `expression_display` guarda el LaTeX original — `expression` es la versión convertida para WA
-```
+
 
 
 

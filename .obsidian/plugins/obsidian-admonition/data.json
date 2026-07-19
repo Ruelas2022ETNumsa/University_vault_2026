@@ -10,9 +10,9 @@
   "dropShadow": true,
   "hideEmpty": false,
   "open": {
-    "admonitions": true,
-    "icons": true,
-    "other": true,
+    "admonitions": false,
+    "icons": false,
+    "other": false,
     "advanced": false
   },
   "icons": [],
