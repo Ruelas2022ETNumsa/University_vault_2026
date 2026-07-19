@@ -8,7 +8,7 @@ related_notes:
   - "[[_galaxy-system]]"
 tags: [beacon, obsidian, scripts, infraestructura, automatizacion]
 date_created: 2026-07-11
-date_updated: 2026-07-11
+date_updated: 2026-07-18
 status: activo
 ---
 
@@ -120,7 +120,20 @@ status: activo
 
 ## 3. Sync NotebookLM
 
-(para otra sesion)
+**Propósito:** Sincroniza la carpeta `_app/notebooklm/` del vault hacia Google Drive
+para que NotebookLM pueda acceder a las fuentes actualizadas sin subida manual.
+
+**Herramienta:** rclone (no es un script Python — es un ejecutable externo invocado desde Shell Commands)
+**Alias en Shell Commands:** `Sync NotebookLM → Drive`
+**Icono:** (Commander — pendiente documentar)
+
+**Comando:**
+```
+rclone sync "E:\University_vault_2026\_app\notebooklm" gdrive:NotebookLM_sources --verbose
+```
+
+> Configuración completa, credenciales y solución de problemas: [[rclone_script]]
+> Guía de uso y rol en el vault: [[Rclone_guide]]
 
 ---
 
