@@ -25,7 +25,7 @@ El vault mantiene dos capas de conexión en cada nota. Son redundantes intencion
 - [x] P1 — Documentar sistema de dos capas en `_galaxy-system.md` (S1 y S2)
 - [x] P2 — Registrar `workshop` como tipo #15 en `_galaxy-system.md`
 - [x] P3 — Documentar plantillas workshop en beacons correspondientes (`_template-system`, `_claude-boot`, `_galaxy-system`, `_note-system`)
-- [ ] P4 — Documentar guías MAT101 en beacon correspondiente (`_graph-system` o `_galaxy-system`) — baja prioridad
+- [x] P4 — Documentar guías MAT101 en beacon correspondiente (`_graph-system` o `_galaxy-system`) — baja prioridad
 - [ ] P5 — Script de merge de archivos `tsk` (baja prioridad)
 
 ### Para otra sesión

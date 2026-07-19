@@ -5,7 +5,6 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
-        "Untitled.md",
         "_skills",
         "wolfram alpha example.md",
         "_projects",
@@ -3075,7 +3074,7 @@
       "customOrder": [
         "tsk_emergn.md",
         "tsk_standb.md",
-        "tsk_proyectos_shellcmd.md",
+        "_ideas_0_shellcmd.md",
         "tsk_tpl.md",
         "tsk_krajo.md",
         "tsk_alxrul.md",
@@ -3086,10 +3085,6 @@
     },
     "_projects/tsk_tpl.md": {
       "isPinned": true,
-      "isHidden": false
-    },
-    "_projects/tsk_proyectos_shellcmd.md": {
-      "isPinned": false,
       "isHidden": false
     },
     "_projects/tsk_emergn.md": {
@@ -3124,7 +3119,7 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Untitled.md": {
+    "_projects/_ideas_0_shellcmd.md": {
       "isPinned": false,
       "isHidden": false
     }
