@@ -3028,6 +3028,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "_ideas_1_apps_2brain.md",
         "tsk_emergn.md",
         "tsk_standb.md",
         "_ideas_0_shellcmd.md",
@@ -3130,6 +3131,10 @@
       "isHidden": false
     },
     "_assets/Untitled-19-07-2026_17-20-32.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_projects/_ideas_1_apps_2brain.md": {
       "isPinned": false,
       "isHidden": false
     }

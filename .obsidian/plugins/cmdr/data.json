@@ -8,6 +8,12 @@
       "icon": "lucide-bot-message-square",
       "name": "Shell commands: Execute: Preguntar a Wolfram Alpha",
       "mode": "any"
+    },
+    {
+      "id": "obsidian-admonition:insert-admonition",
+      "icon": "lucide-sticky-note",
+      "name": "Admonition: Insert Admonition",
+      "mode": "any"
     }
   ],
   "fileMenu": [],
