@@ -240,22 +240,26 @@ Obsidian Git detecta cambio → auto-pull → vault local actualizado
 
 ---
 
-## Sincronización Rclone — Vault completo hacia Google Drive (desde 2026-07-10, actualizado 2026-07-19)
+## Sincronización Rclone — Fuentes NotebookLM (desde 2026-07-10)
 
-Rclone sincroniza el **vault completo** hacia la raíz de Google Drive como canal de lectura para Claude desde móvil/tablet. No reemplaza a Mega ni a Git — cada herramienta cumple un rol distinto.
+Rclone sincroniza exclusivamente la carpeta `_app/notebooklm/` del vault hacia Google Drive.
+No reemplaza a Mega ni a Git — cumple un rol específico como canal hacia NotebookLM.
 
 | Qué                | Detalle                                                      |
 | ------------------ | ------------------------------------------------------------ |
 | Herramienta        | Rclone v1.74.4                                               |
 | Remote configurado | `gdrive` (Google Drive, cuenta personal)                     |
-| Origen             | `E:\University_vault_2026\` (vault completo, con exclusiones) |
-| Destino en Drive   | Raíz de `gdrive:` — preserva rutas relativas del vault       |
-| Frecuencia         | Automático cada 5 horas vía Task Scheduler (`rclone sync vault`) |
+| Carpeta local      | `E:\University_vault_2026\_app\notebooklm\`                  |
+| Carpeta en Drive   | `NotebookLM_sources/`                                        |
+| Frecuencia         | Automático cada 5 horas vía Task Scheduler                   |
 | Consumo            | Mínimo — proceso que corre segundos y termina, no permanente |
 
-> `NotebookLM_sources/` fue eliminada de Drive (2026-07-19) — el sync general del vault cubre `_app/notebooklm/`.
+Comando de sync:
+```bash
+rclone sync "E:\University_vault_2026\_app\notebooklm" gdrive:NotebookLM_sources
+```
 
-> Configuración completa, exclusiones, credenciales y solución de problemas: [[Rclone_guide]]
+> Configuración completa, credenciales y solución de problemas: [[Rclone_guide]]
 
 ---
 

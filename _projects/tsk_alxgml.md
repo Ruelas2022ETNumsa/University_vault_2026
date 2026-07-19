@@ -10,7 +10,7 @@ status: activo
 
 **Última sesión:** 2026-07-19
 **Retomar desde:** Pendientes PS2, PS3 y nuevos pendientes de esta sesión
-**Completado esta sesión:** PS0 (publicar app + reconectar token), PS1 (sync vault completo a Drive, Task Scheduler, botón Obsidian, documentación en Rclone_guide, rclone_script, script_guide)
+**Completado esta sesión:** PS6 (sync automático Samsung Notes — Programador de tareas Windows, 3 ciclos diarios, inicio limpio)
 **Próximo paso:** PS2 — distinción `_config/` vs `_appnotes/`
 **Preguntas de cierre:** —
 
@@ -28,7 +28,7 @@ Mantener y evolucionar el sistema de infraestructura del vault: links, sync, acc
 - [ ] PS3 — Revisar sección "Plantillas YAML por tipo de cuerpo" en `_galaxy-system.md` — evaluar callouts colapsados para reducir scroll.
 - [ ] PS4 — Revisar apps conectadas a Drive que suben screenshots desde PC y desconectarlas o redirigirlas para que no ensucien la raíz de Drive donde vive el vault sincronizado.
 - [ ] PS5 — Integrar carpeta `in_work/` al vault como `_blueprint/` — definir si tiene `galaxy_body` propio o es carpeta operativa sin él (como `_projects/`), documentar en `_galaxy-system.md`. Carpeta ya renombrada en disco.
-- [ ] PS6 — Sync de notas de Samsung Notes (tablet) con Samsung Account hacia el vault — evaluar rol del Programador de tareas de Windows en este flujo. Para otra sesión.
+- [x] PS6 — Sync de notas de Samsung Notes (tablet) con Samsung Account hacia el vault — automatización implementada con Programador de tareas de Windows (3 ciclos diarios: 12:00 / 17:00 / 22:00). Documentado en `_TAB_note-system.md`.
 
 ---
 
