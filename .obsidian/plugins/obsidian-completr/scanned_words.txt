@@ -32418,6 +32418,7 @@ deten
 descubrimientos
 diagnostic
 desborde
+descargadas
 Vault
 Verificar
 Variables
@@ -57978,6 +57979,7 @@ satura
 samsung
 scroll
 subcampo
+semanales
 vault
 vil
 ver
@@ -71029,6 +71031,9 @@ actualiz
 avisame
 autorizada
 actualizaron
+ampliaci
+autenticarse
+autorizado
 related
 recomendados
 ribbon
@@ -77759,6 +77764,9 @@ resolvi
 reportado
 replaceAll
 reclasificar
+reconfiguraci
+reconexiones
+reconectar
 notes
 notas
 nuevas
@@ -110639,6 +110647,7 @@ Consistencia
 Carga
 Close
 Completo
+Configurado
 Instalados
 Instalado
 Instalar
@@ -143873,6 +143882,7 @@ Acordado
 Avis
 Actualiz
 Agregados
+Acceder
 push
 pull
 para
@@ -150178,6 +150188,8 @@ planeado
 pegarse
 projects
 postergados
+publicar
+publicada
 min
 mica
 movimiento
@@ -176765,6 +176777,9 @@ ejecut
 emergencia
 excludes
 explicativos
+expira
+expirar
+expire
 Motor
 Media
 Mantiene
@@ -204674,6 +204689,7 @@ init
 involucrado
 initial
 ilustraci
+invocable
 Dependencia
 Dropbox
 Dataview
@@ -218485,6 +218501,7 @@ RQhe
 Registrar
 Recursos
 Retomar
+Renovaci
 Hider
 Hace
 Herramientas
