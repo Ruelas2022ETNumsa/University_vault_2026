@@ -1,6 +1,4 @@
-
-hola bb prueba desde pc para la sinc con el boton.
-
+PRUEBA DESDE OBSIDIAN
 
 rearaer %%> prueba%%
 

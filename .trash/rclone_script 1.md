@@ -8,7 +8,7 @@ related_notes:
   - "[[_sync-system]]"
 tags: [beacon, rclone, sync, google-drive, infraestructura, automatizacion]
 date_created: 2026-07-18
-date_updated: 2026-07-19
+date_updated: 2026-07-18
 status: activo
 ---
 
@@ -20,7 +20,7 @@ status: activo
 Este archivo documenta el proceso de configuración realizado para que rclone
 pueda sincronizar archivos del vault hacia Google Drive. Incluye la configuración
 en Google Cloud Console, la configuración del remote en rclone, la automatización
-vía Task Scheduler y los botones de sync manual en Obsidian.
+vía Task Scheduler y el botón de sync manual en Obsidian.
 
 > ⚠️ Este archivo se sincroniza con GitHub y Mega. No registrar valores de
 > credenciales, tokens ni IDs. Para esos valores consultar los archivos en
@@ -53,7 +53,7 @@ otros usuarios de rclone.
 ### 2.1 Crear proyecto y habilitar API
 
 1. Ir a [Google Cloud Console](https://console.developers.google.com/) con la cuenta personal
-2. Crear proyecto nuevo → nombre: `vault-notebooklm`
+2. Crear proyecto nuevo → nombre: `rclone-personal`
 3. APIs y servicios → Buscar **Google Drive API** → Habilitar
 
 ### 2.2 Pantalla de consentimiento OAuth
@@ -68,6 +68,10 @@ otros usuarios de rclone.
 3. Acceso a datos → Agregar permisos → agregar manualmente:
    `https://www.googleapis.com/auth/drive` → Add to table → Update → Save
 4. Público → Add users → agregar email personal → Guardar
+
+> ⚠️ Con audience "Usuarios externos" y estado "En prueba", el refresh token
+> expira cada 7 días. Para evitar reconexiones semanales, publicar la app
+> (botón **Publicar**) antes de reconectar. Ver sección 6.
 
 ### 2.3 Crear Client ID
 
@@ -109,6 +113,12 @@ Remote resultante guardado como `[gdrive]` en `rclone.conf`.
 rclone lsd gdrive:
 ```
 
+### Crear carpeta destino en Drive
+
+```bash
+rclone mkdir gdrive:NotebookLM_sources
+```
+
 ---
 
 ## 4. PATH de Windows
@@ -128,36 +138,32 @@ rclone version
 
 ## 5. Automatización — Task Scheduler
 
-Tarea configurada para ejecutar el sync del vault automáticamente sin intervención manual.
+Tarea configurada para ejecutar el sync automáticamente sin intervención manual.
 
 | Campo | Valor |
 |---|---|
-| Nombre | `rclone sync vault` |
-| Descripción | `Sincroniza vault completo con Google Drive (canal de lectura)` |
-| Desencadenador | Diariamente a las 13:00, repite cada **5 horas** indefinidamente |
+| Nombre | `rclone sync notebooklm` |
+| Desencadenador | Diariamente a las 12:00, repite cada **5 horas** indefinidamente |
 | Programa | `E:\Programas\Rclone\rclone.exe` |
-| Argumentos | *(ver sección 8 — comando completo)* |
+| Argumentos | `sync "E:\University_vault_2026\_app\notebooklm" gdrive:NotebookLM_sources` |
 | Iniciar en | `E:\Programas\Rclone` |
-| Configurado para | Windows 10 |
 | Detener tarea al repetir | No |
 
-Acceder: `Win + R` → `taskschd.msc` → buscar `rclone sync vault`
+Acceder: `Win + R` → `taskschd.msc` → buscar `rclone sync notebooklm`
 
 ---
 
-## 6. Shell Commands — botones de sync manual en Obsidian
+## 6. Shell Command — botón de sync manual en Obsidian
 
-Configurados vía Shell Commands + Commander para ejecutar el sync sin esperar
+Configurado vía Shell Commands + Commander para ejecutar el sync sin esperar
 Task Scheduler.
-
-### Sync vault completo → Drive
 
 **Pestaña General**
 
 | Campo | Valor |
 |---|---|
-| Alias | `Sync Vault → Drive` |
-| Comando | *(ver sección 8 — comando completo con `--verbose`)* |
+| Alias | `Sync NotebookLM → Drive` |
+| Comando | `rclone sync "E:\University_vault_2026\_app\notebooklm" gdrive:NotebookLM_sources --verbose` |
 
 **Pestaña Output**
 
@@ -166,52 +172,38 @@ Task Scheduler.
 | stdout | Notification balloon |
 | stderr | Error balloon |
 
-**Ribbon:** agregado vía Commander.
+**Ribbon:** agregado vía Commander. Icono: pendiente documentar.
 
 ---
 
 ## 7. Renovación de token
 
-A partir de 2026-07-19 la app está publicada en Google Cloud Console (estado
-**"En producción"**) — el refresh token no expira por tiempo.
-
-**Si el token expira de todas formas** (por ejemplo por falta de uso prolongado):
+El token en `rclone.conf` puede expirar si la app está en estado **"En prueba"**
+en Google Cloud Console (expira cada 7 días) o si no se usa rclone por un
+período prolongado.
 
 **Síntoma:** error `invalid_grant: token expired` en el balloon de error.
 
-**Solución:**
+**Solución — reconectar:**
 ```bash
 rclone config reconnect gdrive:
 ```
 Abre el navegador, autenticarse con la cuenta personal, rclone actualiza el
 token automáticamente en `rclone.conf`.
 
-**Para publicar la app si se pierde el estado** (reconfiguración futura):
+**Solución permanente — publicar la app:**
+
+Para que el refresh token no expire nunca, publicar la app en Google Cloud Console:
 
 1. Ir a [Google Cloud Console](https://console.developers.google.com/)
-2. Seleccionar proyecto `vault-notebooklm`
-3. APIs y servicios → Pantalla de consentimiento OAuth
-4. Estado de publicación → botón **Publicar app** → confirmar
-5. Correr `rclone config reconnect gdrive:` una vez más para obtener token bajo app publicada
+2. APIs y servicios → Pantalla de consentimiento OAuth
+3. Estado de publicación → botón **Publicar app**
+4. Confirmar
+5. Después de publicar, correr `rclone config reconnect gdrive:` una vez más
+   para obtener un token bajo la app publicada
 
 > Publicar no requiere verificación de Google para apps de uso personal con
-> un solo usuario autorizado. El recuadro de verificación que aparece es una
-> advertencia genérica — se ignora y se continúa con el flujo normal.
-
----
-
-## 8. Comando completo — sync vault
-
-```bash
-rclone sync "E:\University_vault_2026" gdrive: --exclude "_PDF/**" --exclude "_assets/**" --exclude "_app/Excalidraw/**" --exclude "_app/shellcommands/**" --exclude "_app/scripts/**" --exclude "_app/completr-words/**" --exclude "_app/_appnotes/tagroute_parche/**" --exclude "Borrar/**" --exclude "Rubbish/**" --exclude "Semestres/**" --exclude ".git/**" --exclude ".gitignore" --exclude ".gitattributes" --exclude ".cache/**" --exclude ".trash/**" --exclude ".obsidian/plugins/**" --exclude ".obsidian/scripts/**" --exclude ".obsidian/snippets/**" --exclude ".obsidian/themes/**" --exclude ".obsidian/cache/**" --exclude ".obsidian/workspace.json" --exclude ".obsidian/workspaces.json" --exclude ".obsidian/.trash/**" --filter "+ .obsidian/core-plugins.json" --filter "+ .obsidian/community-plugins.json" --verbose
-```
-
-**Notas:**
-- Destino: raíz de `gdrive:` — preserva rutas relativas de los galaxy-links.
-- Unidireccional: local → Drive. Drive nunca escribe hacia la PC.
-- `--filter` antes de `--exclude` para `core-plugins.json` y `community-plugins.json`
-  — única excepción dentro de `.obsidian/` que sí se sincroniza.
-- Para dry-run (previsualización sin ejecutar): agregar `--dry-run` al comando.
+> un solo usuario autorizado.
 
 ---
 

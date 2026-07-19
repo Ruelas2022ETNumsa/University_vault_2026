@@ -15,7 +15,7 @@ tags:
   - google-drive
   - infraestructura
 date_created: 2026-07-10
-date_updated: 2026-07-18
+date_updated: 2026-07-19
 status: activo
 ---
 
@@ -25,9 +25,10 @@ status: activo
 > Sistema NotebookLM: [[_notebooklm-system]]
 
 Rclone es una herramienta de línea de comandos para sincronizar archivos hacia y
-desde proveedores de almacenamiento en la nube. En este vault se usa exclusivamente
-para sincronizar las fuentes `.md` del vault hacia Google Drive, de donde
-NotebookLM las lee como fuentes vinculadas.
+desde proveedores de almacenamiento en la nube. En este vault se usa para dos
+propósitos: sincronizar el vault completo hacia Google Drive como canal de lectura
+para Claude desde móvil/tablet, y mantener las fuentes de NotebookLM actualizadas
+en Drive.
 
 ---
 
@@ -38,8 +39,13 @@ Rclone no reemplaza a Mega ni a Git. Cada herramienta cumple un rol distinto:
 | Herramienta | Rol | Destino |
 |---|---|---|
 | Mega + FolderSync | Sync del vault completo entre dispositivos | Todos los dispositivos |
-| Obsidian Git | Control de versiones + acceso de Claude | GitHub |
-| **Rclone** | Sync de fuentes NotebookLM hacia Drive | Google Drive |
+| Obsidian Git | Control de versiones + escritura de Claude desde móvil | GitHub |
+| **Rclone — vault sync** | Sync del vault completo como canal de lectura para Claude | Google Drive (raíz) |
+| **Rclone — NotebookLM** | Sync de fuentes `.md` para NotebookLM | `gdrive:NotebookLM_sources/` *(eliminado 2026-07-19)* |
+
+> A partir de 2026-07-19 el sync de NotebookLM fue absorbido por el sync general
+> del vault. La carpeta `NotebookLM_sources/` fue eliminada de Drive y las fuentes
+> vinculadas fueron dadas de baja en NotebookLM.
 
 Rclone no corre en segundo plano de forma permanente — se ejecuta, sube los
 cambios y termina. El consumo de CPU y memoria es mínimo y solo ocurre durante
@@ -54,8 +60,8 @@ los segundos que tarda la transferencia.
 | Ejecutable | `E:\Programas\Rclone\rclone.exe` |
 | Credenciales OAuth2 (Client ID + Secret) | `E:\Programas\Rclone\datosclientemio\` |
 | Archivo de configuración de rclone | `C:\Users\USUARIO\AppData\Roaming\rclone\rclone.conf` |
-| Carpeta local sincronizada | `E:\University_vault_2026\_app\notebooklm\` |
-| Carpeta destino en Google Drive | `NotebookLM_sources/` |
+| Vault local sincronizado | `E:\University_vault_2026\` |
+| Destino en Google Drive | Raíz de `gdrive:` |
 
 > El archivo `rclone.conf` contiene el remote `gdrive` con el token OAuth2 activo.
 > No compartir ni subir este archivo a GitHub — contiene credenciales de acceso.
@@ -95,7 +101,7 @@ compartir cuota con otros usuarios de rclone.
 ### Pasos realizados para crear el Client ID en Google Cloud Console
 
 1. Ir a https://console.developers.google.com/ con la cuenta de Google personal
-2. Crear proyecto nuevo → nombre: `rclone-personal`
+2. Crear proyecto nuevo → nombre: `vault-notebooklm`
 3. Habilitar **Google Drive API** (+ APIs y servicios → buscar "Google Drive API" → Habilitar)
 4. Pantalla de consentimiento OAuth → Descripción general → Get started:
    - Nombre de app: `rclone`
@@ -110,6 +116,11 @@ compartir cuota con otros usuarios de rclone.
 8. Copiar **Client ID** y **Client Secret** → guardados en `E:\Programas\Rclone\datosclientemio\`
 9. Descargar JSON de credenciales → guardado en la misma carpeta
 
+> **App publicada (2026-07-19):** el proyecto fue publicado en Google Cloud Console
+> (estado "En producción") para evitar que el refresh token expire cada 7 días.
+> Después de publicar se corrió `rclone config reconnect gdrive:` para obtener un
+> token bajo la app publicada — el token ahora no expira por tiempo.
+
 ### Configuración del remote en rclone
 
 Comando usado:
@@ -122,10 +133,10 @@ Opciones seleccionadas durante la configuración interactiva:
 | Pregunta | Valor elegido |
 |---|---|
 | Nombre del remote | `gdrive` |
-| Tipo de storage | `24` — Google Drive |
+| Tipo de storage | `drive` — Google Drive |
 | client_id | Client ID propio (desde `datosclientemio/`) |
 | client_secret | Client Secret propio (desde `datosclientemio/`) |
-| scope | `1` — Full access all files |
+| scope | `drive` — acceso completo |
 | service_account_file | (vacío — no aplica) |
 | Edit advanced config | `n` |
 | Autenticación por navegador | `y` — autenticación completada en navegador |
@@ -141,78 +152,101 @@ rclone lsd gdrive:
 
 ---
 
-## Carpeta en Drive
+## Comando de sincronización — vault completo
 
-Carpeta creada durante la configuración:
-```bash
-rclone mkdir gdrive:NotebookLM_sources
-```
-
-Contenido sincronizado: las subcarpetas `general/` y `guides/` de
-`E:\University_vault_2026\_app\notebooklm\`, con un total inicial de 18 archivos `.md`.
-
----
-
-## Comando de sincronización
+Sincroniza el vault completo hacia la raíz de Drive, excluyendo archivos pesados,
+carpetas de sistema local y contenido irrelevante para consulta.
 
 ```bash
-rclone sync "E:\University_vault_2026\_app\notebooklm" gdrive:NotebookLM_sources --verbose
+rclone sync "E:\University_vault_2026" gdrive: --exclude "_PDF/**" --exclude "_assets/**" --exclude "_app/Excalidraw/**" --exclude "_app/shellcommands/**" --exclude "_app/scripts/**" --exclude "_app/completr-words/**" --exclude "_app/_appnotes/tagroute_parche/**" --exclude "Borrar/**" --exclude "Rubbish/**" --exclude "Semestres/**" --exclude ".git/**" --exclude ".gitignore" --exclude ".gitattributes" --exclude ".cache/**" --exclude ".trash/**" --exclude ".obsidian/plugins/**" --exclude ".obsidian/scripts/**" --exclude ".obsidian/snippets/**" --exclude ".obsidian/themes/**" --exclude ".obsidian/cache/**" --exclude ".obsidian/workspace.json" --exclude ".obsidian/workspaces.json" --exclude ".obsidian/.trash/**" --filter "+ .obsidian/core-plugins.json" --filter "+ .obsidian/community-plugins.json" --verbose
 ```
 
-- `sync` — sincroniza en un sentido: local → Drive. Lo que está en local es la fuente de verdad.
-- `--verbose` — muestra log detallado de transferencias (usado en el botón de Obsidian y en cmd manual).
+### Qué se excluye y por qué
+
+| Excluido | Motivo |
+|---|---|
+| `_PDF/**` | Archivos pesados — cubiertos por Mega y Git |
+| `_assets/**` | Imágenes exportadas — pesadas, no útiles para consulta de texto |
+| `_app/Excalidraw/**` | Archivos `.excalidraw` (JSON pesado) — no legibles como texto |
+| `_app/shellcommands/**` | Scripts con rutas locales y datos sensibles de la PC |
+| `_app/scripts/**` | Scripts JS locales — sin uso en consulta desde Drive |
+| `_app/completr-words/**` | Diccionario local del plugin Completr — irrelevante |
+| `_app/_appnotes/tagroute_parche/**` | Carpeta de parche temporal — sin valor para consulta |
+| `Borrar/**` | Zona de espera de archivos a eliminar |
+| `Rubbish/**` | Carpeta de uso exclusivo en PC/laptop |
+| `Semestres/**` | Carpeta legacy (ETN302 y otros) — fuera del Sistema Galaxy activo |
+| `.git/**` | Control de versiones — innecesario en Drive |
+| `.gitignore`, `.gitattributes` | Archivos de configuración Git — sin uso en Drive |
+| `.cache/**` | Caché local |
+| `.trash/**`, `.obsidian/.trash/**` | Papelera interna de Obsidian |
+| `.obsidian/plugins/**` | Plugins instalados — cubiertos por Mega y Git |
+| `.obsidian/scripts/**` | Scripts de Templater — solo útiles con Obsidian abierto |
+| `.obsidian/snippets/**` | CSS local — irrelevante en Drive |
+| `.obsidian/themes/**` | Temas visuales — irrelevante en Drive |
+| `.obsidian/cache/**` | Caché de Obsidian |
+| `.obsidian/workspace.json` | Estado de sesión — cambia constantemente, sin valor |
+| `.obsidian/workspaces.json` | Estado de sesión — ídem |
+
+### Qué se incluye de `.obsidian/`
+
+| Incluido | Motivo |
+|---|---|
+| `core-plugins.json` | Permite saber qué plugins nativos están activos |
+| `community-plugins.json` | Permite saber qué plugins de comunidad están instalados |
+
+### Notas sobre el comportamiento de sync
+
+- `sync` es **unidireccional**: local → Drive. La PC es siempre la fuente de verdad.
+- Drive nunca escribe hacia la PC.
 - Si un archivo fue eliminado localmente, `sync` lo elimina también en Drive.
-- Si solo se quiere subir sin eliminar nada en Drive, usar `copy` en lugar de `sync`.
+- Si una carpeta es renombrada, rclone sube la carpeta nueva y elimina la vieja en Drive.
+- Los galaxy-links usan rutas relativas desde la raíz del vault. El vault se sincroniza
+  en la raíz de Drive para que esas rutas sean válidas también desde Drive MCP.
 
 ---
 
 ## Automatización — Task Scheduler
 
-Se configuró una tarea en el Programador de tareas de Windows para ejecutar el
-sync automáticamente sin intervención manual.
+Dos tareas configuradas para ejecutar los syncs automáticamente.
 
-### Configuración de la tarea
+### Tarea: `rclone sync vault`
 
 | Campo | Valor |
 |---|---|
-| Nombre | `rclone sync notebooklm` |
-| Descripción | `Sincroniza vault con Google Drive` |
-| Desencadenador | Diariamente a las 12:00, repite cada **5 horas** indefinidamente |
-| Acción | Iniciar un programa |
+| Nombre | `rclone sync vault` |
+| Descripción | `Sincroniza vault completo con Google Drive (canal de lectura)` |
+| Desencadenador | Diariamente a las 13:00, repite cada **5 horas** indefinidamente |
 | Programa | `E:\Programas\Rclone\rclone.exe` |
-| Argumentos | `sync "E:\University_vault_2026\_app\notebooklm" gdrive:NotebookLM_sources` |
+| Argumentos | *(ver comando completo en sección anterior)* |
 | Iniciar en | `E:\Programas\Rclone` |
-| Detener tarea en ejecución al repetir | No — para no cortar transferencias en curso |
+| Configurado para | Windows 10 |
+| Detener tarea al repetir | No |
 
-### Cómo acceder a la tarea para editarla
+### Cómo acceder a las tareas para editarlas
 
-`Win + R` → `taskschd.msc` → buscar `rclone sync notebooklm` en la lista →
+`Win + R` → `taskschd.msc` → buscar la tarea en la lista →
 clic derecho → Propiedades → pestaña Desencadenadores → Editar.
 
 ### Ejecutar manualmente sin esperar la hora
 
 Desde Task Scheduler: clic derecho sobre la tarea → **Ejecutar**.
-Desde cmd:
-```bash
-rclone sync "E:\University_vault_2026\_app\notebooklm" gdrive:NotebookLM_sources --verbose
-```
-
-Desde Obsidian: botón en el ribbon → ver [[rclone_script]] sección 6.
+Desde cmd: pegar el comando completo de la sección anterior con `--verbose`.
+Desde Obsidian: botón `Sync Vault → Drive` en el ribbon → ver [[rclone_script]] sección 8.
 
 ---
 
 ## Flujo completo de uso
 
 ```
-1. Editar o crear archivo .md en _app/notebooklm/ (guides/, general/, prompts/)
+PC — edición normal del vault
         ↓
-2. rclone sync corre automáticamente cada 5 horas (Task Scheduler)
-   o manualmente desde cmd o botón en Obsidian si no se quiere esperar
+rclone sync vault corre automáticamente cada 5 horas (Task Scheduler)
+o manualmente desde cmd o botón en Obsidian si no se quiere esperar
         ↓
-3. Google Drive tiene los archivos actualizados en NotebookLM_sources/
+Google Drive tiene el vault actualizado en su raíz
         ↓
-4. Abrir NotebookLM → fuente vinculada → botón refresh
-   (único paso manual — NotebookLM no detecta cambios automáticamente)
+Claude desde móvil/tablet lee el vault via Drive MCP
+GitHub MCP permite crear/editar notas desde móvil → llegan al vault via Obsidian Git
 ```
 
 ---
@@ -223,24 +257,27 @@ Desde Obsidian: botón en el ribbon → ver [[rclone_script]] sección 6.
 |---|---|
 | Rclone en lugar de script Python | Rclone hace lo mismo sin escribir ni mantener código |
 | Client ID propio en lugar del de rclone | El Client ID compartido de rclone tiene cuota limitada entre todos sus usuarios; el propio garantiza cuota exclusiva |
-| `sync` en lugar de `copy` | Los archivos eliminados localmente deben eliminarse también en Drive para que NotebookLM no lea fuentes obsoletas |
-| Task Scheduler cada 5 horas | Las guías de NotebookLM cambian con poca frecuencia — cada 5 horas es suficiente sin consumir recursos innecesariamente |
-| Solo carpeta `_app/notebooklm/` sincronizada con Drive | Drive es exclusivo para fuentes de NotebookLM — el vault completo ya tiene Mega y GitHub como respaldo |
+| App publicada en Google Cloud Console (2026-07-19) | Evita que el refresh token expire cada 7 días — con app "En prueba" los tokens duran solo 7 días |
+| `sync` en lugar de `copy` | Los archivos eliminados localmente deben eliminarse también en Drive |
+| Vault en raíz de Drive en lugar de subcarpeta | Los galaxy-links usan rutas relativas desde la raíz del vault — sincronizar en la raíz de Drive preserva esas rutas para Drive MCP |
+| Drive unidireccional (solo lectura desde móvil) | La PC es la fuente de verdad; escritura desde móvil va por GitHub MCP → Obsidian Git |
+| `NotebookLM_sources/` eliminada (2026-07-19) | El sync general del vault cubre `_app/notebooklm/` — carpeta dedicada redundante |
+| `Semestres/` excluida | Carpeta legacy fuera del Sistema Galaxy activo |
+| `.obsidian/plugins/` excluida | Pesada e irrelevante para consulta; cubierta por Mega y Git |
+| Solo `core-plugins.json` y `community-plugins.json` de `.obsidian/` | Suficiente para saber qué plugins están activos sin subir configuración local innecesaria |
+| `_app/shellcommands/` excluida | Contiene rutas locales de la PC y datos sensibles |
 | rclone.conf excluido de GitHub | Contiene token OAuth2 activo — no debe exponerse en un repositorio |
-| Drive no reemplaza a Mega | Roles distintos: Mega sincroniza el vault completo entre dispositivos; Drive es solo el canal hacia NotebookLM |
 
 ---
 
 ## Solución de problemas
 
 **Error `invalid_grant: token expired`:**
-El refresh token expiró — ocurre cuando la app está en estado "En prueba" en Google Cloud
-(tokens duran 7 días) o por falta de uso prolongado. Solución:
+El refresh token expiró. Desde 2026-07-19 la app está publicada y esto no debería
+ocurrir. Si ocurre de todas formas:
 ```bash
 rclone config reconnect gdrive:
 ```
-Para solución permanente, publicar la app en Google Cloud Console antes de reconectar.
-Ver [[rclone_script]] sección 7.
 
 **Error `invalid_client` al autenticar:**
 El Client Secret fue copiado incorrectamente. Correr `rclone config` → editar remote `gdrive` →
@@ -257,7 +294,12 @@ Alternativamente, en el campo "Programa" de la tarea usar la ruta completa `E:\P
 
 **Archivos no aparecen en Drive después del sync:**
 Correr el comando manualmente con `--verbose` para ver si hay errores de autenticación o conectividad.
-Verificar que la carpeta `NotebookLM_sources` existe en Drive con `rclone lsd gdrive:`.
+Verificar contenido de Drive con `rclone lsd gdrive:`.
+
+**Carpeta renombrada en el vault:**
+Rclone no detecta renombres — sube la carpeta con el nombre nuevo y elimina la vieja en Drive
+en el próximo sync. No hay pérdida de datos. Si se necesita el cambio en Drive antes del próximo
+sync automático, ejecutar manualmente.
 
 ---
 

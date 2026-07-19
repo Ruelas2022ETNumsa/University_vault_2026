@@ -19,12 +19,6 @@
       "mode": "any"
     },
     {
-      "id": "obsidian-shellcommands:shell-command-clozwpb8q6",
-      "icon": "lucide-upload-cloud",
-      "name": "Shell commands: Execute: Sync NotebookLM → Google Drive",
-      "mode": "any"
-    },
-    {
       "id": "obsidian-shellcommands:shell-command-alcxjwunhl",
       "icon": "lucide-file-terminal",
       "name": "Shell commands: Execute: NotebookLM Fix — nota activa",
@@ -40,6 +34,12 @@
       "id": "obsidian-shellcommands:shell-command-66jk32stvq",
       "icon": "lucide-file-input",
       "name": "Shell commands: Execute: Section reintegrate",
+      "mode": "any"
+    },
+    {
+      "id": "obsidian-shellcommands:shell-command-sh5i2egham",
+      "icon": "lucide-cloud-upload",
+      "name": "Shell commands: Execute: Sync Vault → Drive",
       "mode": "any"
     }
   ],

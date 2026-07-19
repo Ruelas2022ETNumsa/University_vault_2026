@@ -21080,6 +21080,7 @@ Setup
 Slots
 Slot
 Seguimiento
+Suficiente
 Plugins
 Pendientes
 Plugin
@@ -26831,6 +26832,8 @@ Planificaci
 Potencial
 Pregunt
 Proyectos
+Papelera
+Pesada
 del
 date
 de
@@ -32421,6 +32424,7 @@ desborde
 descargadas
 duran
 documentan
+desconectarlas
 Vault
 Verificar
 Variables
@@ -57984,6 +57988,9 @@ scroll
 subcampo
 semanales
 sources
+syncs
+sinc
+screenshots
 vault
 vil
 ver
@@ -71040,6 +71047,7 @@ ampliaci
 autenticarse
 autorizado
 autosuficientes
+absorbido
 related
 recomendados
 ribbon
@@ -77775,6 +77783,8 @@ reconexiones
 reconectar
 redefinici
 retraso
+renombres
+redirigirlas
 notes
 notas
 nuevas
@@ -91335,6 +91345,8 @@ collouts
 colapsados
 completados
 consultor
+corri
+cubierta
 updated
 un
 universo
@@ -110657,6 +110669,7 @@ Carga
 Close
 Completo
 Configurado
+Configurados
 Instalados
 Instalado
 Instalar
@@ -117982,6 +117995,7 @@ IIlQpuaqiqDIpqX
 IUXJ
 Implementar
 Inclu
+Incluido
 Funci
 File
 Fase
@@ -131692,6 +131706,7 @@ ExcalidrawSlideshow
 ExcalidrawSlideshowStartTimer
 Esper
 Enfoques
+Excluido
 Obsidian
 OmniSearch
 Ocultar
@@ -150200,6 +150215,8 @@ projects
 postergados
 publicar
 publicada
+publicado
+previsualizaci
 min
 mica
 movimiento
@@ -176791,6 +176808,9 @@ expira
 expirar
 expire
 expir
+editarlas
+evolucionar
+ensucien
 Motor
 Media
 Mantiene
@@ -211132,6 +211152,7 @@ Descartadas
 Discut
 Discutido
 Discusi
+Diccionario
 Remotely
 Raz
 Revisa
@@ -235452,6 +235473,7 @@ helpButton
 help
 head
 hijas
+hola
 que
 quedan
 queda
@@ -250281,6 +250303,7 @@ UBWwEWZrpnUVMgen
 UBRtY
 UbWbJUrbcABgAuPeirN
 URGENTE
+Unidireccional
 Nombre
 Notas
 No

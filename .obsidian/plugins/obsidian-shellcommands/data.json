@@ -24,42 +24,6 @@
   "max_visible_lines_in_shell_command_fields": false,
   "shell_commands": [
     {
-      "id": "clozwpb8q6",
-      "platform_specific_commands": {
-        "default": "rclone sync \"E:\\University_vault_2026\\_app\\notebooklm\" gdrive:NotebookLM_sources --verbose"
-      },
-      "shells": {},
-      "alias": "Sync NotebookLM → Google Drive",
-      "icon": null,
-      "confirm_execution": false,
-      "ignore_error_codes": [],
-      "input_contents": {
-        "stdin": null
-      },
-      "output_handlers": {
-        "stdout": {
-          "handler": "notification",
-          "convert_ansi_code": true
-        },
-        "stderr": {
-          "handler": "notification",
-          "convert_ansi_code": true
-        }
-      },
-      "output_wrappers": {
-        "stdout": null,
-        "stderr": null
-      },
-      "output_channel_order": "stdout-first",
-      "output_handling_mode": "buffered",
-      "execution_notification_mode": null,
-      "events": {},
-      "debounce": null,
-      "command_palette_availability": "enabled",
-      "preactions": [],
-      "variable_default_values": {}
-    },
-    {
       "id": "alcxjwunhl",
       "platform_specific_commands": {
         "default": "\"C:\\Users\\USUARIO\\AppData\\Local\\Programs\\Python\\Python313\\python.exe\" \"E:\\University_vault_2026\\.obsidian\\scripts\\python\\notebooklm_fix\\src\\main.py\" \"{{file_path:relative}}\" \"{{vault_path}}\""
