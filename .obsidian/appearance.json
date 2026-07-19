@@ -3,9 +3,11 @@
   "showRibbon": true,
   "accentColor": "",
   "nativeMenus": false,
-  "baseFontSize": 11,
+  "baseFontSize": 10,
   "baseFontSizeAction": true,
-  "enabledCssSnippets": [],
+  "enabledCssSnippets": [
+    "mermaid-fit"
+  ],
   "cssTheme": "",
   "theme": "obsidian"
 }
