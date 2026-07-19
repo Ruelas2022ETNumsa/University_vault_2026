@@ -5,6 +5,7 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
+        "Untitled.md",
         "_blueprint",
         "_skills",
         "wolfram alpha example.md",
@@ -2809,7 +2810,6 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "section 1.md",
         "section.md",
         "tmp"
       ]
@@ -2887,6 +2887,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "Untitled-19-07-2026_17-20-32.png",
         "Untitled-15-07-2026_22-40-34.png",
         "Untitled-15-07-2026_22-40-33.png",
         "Untitled-15-07-2026_22-36-49.png",
@@ -3070,10 +3071,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/section 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_projects/_ideas_0_shellcmd.md": {
       "isPinned": false,
       "isHidden": false
@@ -3125,6 +3122,14 @@
       "isHidden": false
     },
     "_app/_config/_TAB_note-system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/Untitled-19-07-2026_17-20-32.png": {
       "isPinned": false,
       "isHidden": false
     }
