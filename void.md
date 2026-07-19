@@ -1,5 +1,5 @@
 
-
+hola bb prueba desde pc para la sinc con el boton.
 
 
 rearaer %%> prueba%%
