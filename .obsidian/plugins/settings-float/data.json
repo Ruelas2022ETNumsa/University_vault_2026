@@ -9,10 +9,10 @@
   "narrowWindowThreshold": 720,
   "geometry": {
     "schemaVersion": 1,
-    "x": 223.33331298828125,
-    "y": 7.66656494140625,
-    "width": 990.5,
-    "height": 718.3334350585938,
+    "x": 0,
+    "y": 0,
+    "width": 640,
+    "height": 726,
     "lastAppliedBounds": {
       "width": 1334,
       "height": 726
