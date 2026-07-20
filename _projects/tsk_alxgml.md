@@ -3,7 +3,7 @@ alias: "SISTEMA DE LINKS — DOS CAPAS y archivos task"
 galaxy_body: workshop
 date_created: 
 date_updated: 2026-07-19
-status: activo
+status: creciente
 ---
 
 ## Handoff

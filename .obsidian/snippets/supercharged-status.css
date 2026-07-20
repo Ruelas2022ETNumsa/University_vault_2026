@@ -1,9 +1,0 @@
-.nav-file-title-content[data-link-status="nueva"]::before {
-    content: "🌑 ";
-}
-.nav-file-title-content[data-link-status="creciente"]::before {
-    content: "🌒 ";
-}
-.nav-file-title-content[data-link-status="llena"]::before {
-    content: "🌕 ";
-}

@@ -1,7 +1,7 @@
 ---
 alias: "sesion de cripts de extraccion e integracion"
 date: 2026-07-11
-status: activo
+status: creciente
 ---
 
 ## Objetivo

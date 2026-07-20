@@ -1,3 +1,7 @@
+---
+status: creciente
+---
+
 **Contexto — Gemini Helper en University Vault**
 
 **Estado:** plugin no instalado, nada configurado. Primera vez.

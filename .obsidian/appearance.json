@@ -8,7 +8,8 @@
   "enabledCssSnippets": [
     "mermaid-fit",
     "supercharged-links-gen",
-    "supercharged-status"
+    "supercharged-status",
+    "supercharged-links"
   ],
   "cssTheme": "",
   "theme": "obsidian"

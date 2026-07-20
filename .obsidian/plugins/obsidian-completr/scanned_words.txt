@@ -21088,6 +21088,7 @@ Slot
 Seguimiento
 Suficiente
 SamsungSync
+Supercharged
 Plugins
 Pendientes
 Plugin
@@ -110701,6 +110702,7 @@ Close
 Completo
 Configurado
 Configurados
+Cambio
 Instalados
 Instalado
 Instalar
@@ -157800,6 +157802,7 @@ masivos
 martillo
 marcha
 memorizaci
+migrados
 YAML
 Ya
 You
@@ -176857,6 +176860,8 @@ ensucien
 elimin
 exclusiones
 exitosas
+emoji
+exitosa
 Motor
 Media
 Mantiene
@@ -184674,6 +184679,7 @@ MjAesr
 MlYH
 MAYkroRTGKFCVZ
 Mostr
+Mapea
 Lectura
 LaTeX
 Linter
@@ -196789,6 +196795,7 @@ looks
 leela
 liberar
 liviana
+lunar
 incluyendo
 im
 instalar
@@ -204773,6 +204780,7 @@ ilustraci
 invocable
 implementada
 instalador
+iconos
 Dependencia
 Dropbox
 Dataview

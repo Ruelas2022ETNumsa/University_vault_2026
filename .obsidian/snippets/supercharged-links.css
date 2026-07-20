@@ -1,0 +1,26 @@
+/* =============================
+   GALAXY BODY
+   ============================= */
+.nav-file-title-content[data-link-galaxy_body="star"]::before { content: "☀️ "; }
+.nav-file-title-content[data-link-galaxy_body="planet"]::before { content: "🪐 "; }
+.nav-file-title-content[data-link-galaxy_body="moon"]::before { content: "🌙 "; }
+.nav-file-title-content[data-link-galaxy_body="comet"]::before { content: "☄️ "; }
+.nav-file-title-content[data-link-galaxy_body="nebula"]::before { content: "🌫️ "; }
+.nav-file-title-content[data-link-galaxy_body="dwarf"]::before { content: "⬛ "; }
+.nav-file-title-content[data-link-galaxy_body="asteroid"]::before { content: "🪨 "; }
+.nav-file-title-content[data-link-galaxy_body="photon"]::before { content: "💡 "; }
+.nav-file-title-content[data-link-galaxy_body="neutrino"]::before { content: "⚛️ "; }
+.nav-file-title-content[data-link-galaxy_body="constellation"]::before { content: "🌌 "; }
+.nav-file-title-content[data-link-galaxy_body="observatory"]::before { content: "🔭 "; }
+.nav-file-title-content[data-link-galaxy_body="bridge"]::before { content: "🌉 "; }
+.nav-file-title-content[data-link-galaxy_body="beacon"]::before { content: "📡 "; }
+.nav-file-title-content[data-link-galaxy_body="supernova"]::before { content: "✨ "; }
+.nav-file-title-content[data-link-galaxy_body="workshop"]::before { content: "🔧 "; }
+
+/* =============================
+   TASK STATUS
+   ============================= */
+.nav-file-title-content[data-link-status="nueva"]::before {content: "🌑 ";}
+.nav-file-title-content[data-link-status="creciente"]::before {content: "🌒 ";}
+.nav-file-title-content[data-link-status="llena"]::before {content: "🌕 ";}
+

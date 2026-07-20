@@ -1,6 +1,6 @@
 ---
 project: ""
 date: 
-status: libre
+status: nueva
 ---
 

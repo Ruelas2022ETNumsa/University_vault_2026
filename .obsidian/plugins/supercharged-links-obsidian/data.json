@@ -1,6 +1,7 @@
 {
   "targetAttributes": [
-    "status"
+    "status",
+    "galaxy_body"
   ],
   "targetTags": true,
   "getFromInlineField": false,

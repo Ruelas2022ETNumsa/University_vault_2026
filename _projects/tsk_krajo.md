@@ -1,7 +1,7 @@
 ---
 alias: "script de Wolfram alpha"
 date: 13-7-2026-(23:16)
-status: activo
+status: creciente
 ---
 
 ## Resumen de sesión — Script Wolfram Alpha
