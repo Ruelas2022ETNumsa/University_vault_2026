@@ -4,10 +4,10 @@ date:
 status: libre
 ---
 %%
-status: libre | activo | cerrado
-- libre: disponible para uso temporal o sin proyecto asignado
-- activo: proyecto en curso
-- cerrado: proyecto terminado, pendiente de documentar y archivar
+status: nueva | creciente | llena
+- nueva: disponible para uso temporal o sin proyecto asignado
+- creciente: proyecto en curso
+- llena: proyecto terminado, pendiente de documentar y archivar
 %%
 
 ## Handoff

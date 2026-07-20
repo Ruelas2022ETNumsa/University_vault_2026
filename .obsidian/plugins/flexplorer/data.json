@@ -5,7 +5,6 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
-        "Untitled.md",
         "_blueprint",
         "_skills",
         "wolfram alpha example.md",
@@ -3028,6 +3027,9 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "tsk_tpl 1 1 1.md",
+        "tsk_tpl 1 1.md",
+        "tsk_tpl 1.md",
         "_ideas_1_apps_2brain.md",
         "tsk_emergn.md",
         "tsk_standb.md",
@@ -3126,15 +3128,23 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Untitled.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_assets/Untitled-19-07-2026_17-20-32.png": {
       "isPinned": false,
       "isHidden": false
     },
     "_projects/_ideas_1_apps_2brain.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_projects/tsk_tpl 1 1 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_projects/tsk_tpl 1 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_projects/tsk_tpl 1.md": {
       "isPinned": false,
       "isHidden": false
     }

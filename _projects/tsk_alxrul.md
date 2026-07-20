@@ -1,6 +1,7 @@
 ---
 alias: "pendientes de el sistema galaxy"
 date: 
+status: activo
 ---
 
 ## Objetivo
