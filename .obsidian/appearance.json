@@ -6,7 +6,9 @@
   "baseFontSize": 10,
   "baseFontSizeAction": true,
   "enabledCssSnippets": [
-    "mermaid-fit"
+    "mermaid-fit",
+    "supercharged-links-gen",
+    "supercharged-status"
   ],
   "cssTheme": "",
   "theme": "obsidian"

@@ -1,3 +1,15 @@
-.nav-file-title[data-status="done"] .nav-file-title-content::before {
-    content: "✅ ";
+.nav-file-title-content[data-link-status="libre"]::before {
+    content: "🗋 ";
+}
+.nav-file-title-content[data-link-status="activo"]::before {
+    content: "🔥📄 ";
+}
+.nav-file-title-content[data-link-status="cerrado"]::before {
+    content: "🗃️ ";
+}
+.nav-file-title-content[data-link-status="review"]::before {
+    content: "🔍 ";
+}
+.nav-file-title-content[data-link-status="abandoned"]::before {
+    content: "🚫 ";
 }

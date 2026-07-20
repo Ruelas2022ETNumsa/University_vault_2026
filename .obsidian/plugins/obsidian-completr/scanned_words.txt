@@ -6445,6 +6445,9 @@ trabajado
 technical
 tabnote
 tablero
+traducidas
+traducidos
+traducciones
 ToDo
 Templater
 Text
@@ -13683,6 +13686,7 @@ TGSp
 ToolIcon
 Temporales
 Trabaja
+Traductor
 Sistema
 Sync
 Save
@@ -26839,6 +26843,8 @@ Papelera
 Pesada
 Proceso
 Pocket
+Preprocesador
+Pruebas
 del
 date
 de
@@ -32433,6 +32439,7 @@ desconectarlas
 deshabilitarlo
 desaparecen
 diarios
+descriptivas
 Vault
 Verificar
 Variables
@@ -71062,6 +71069,7 @@ autosuficientes
 absorbido
 arrancan
 automatiz
+aparezcan
 related
 recomendados
 ribbon
@@ -77802,6 +77810,7 @@ redirigirlas
 reuniones
 retenci
 recurrencias
+replacement
 notes
 notas
 nuevas
@@ -91368,6 +91377,7 @@ ciclos
 cient
 coexistir
 cerr
+convertida
 updated
 un
 universo
@@ -124463,6 +124473,7 @@ Frames
 Forward
 Finish
 Forzarles
+Faltan
 Estado
 Excalidraw
 EPUBs
@@ -169878,6 +169889,7 @@ Backward
 Backspace
 Backlog
 Bases
+Backups
 en
 exacta
 escaneados
@@ -176844,6 +176856,7 @@ evolucionar
 ensucien
 elimin
 exclusiones
+exitosas
 Motor
 Media
 Mantiene
@@ -211191,6 +211204,7 @@ Discutido
 Discusi
 Diccionario
 Deshabilitar
+Descarga
 Remotely
 Raz
 Revisa
@@ -218577,6 +218591,7 @@ Recursos
 Retomar
 Renovaci
 Raindrop
+Reflejar
 Hider
 Hace
 Herramientas
