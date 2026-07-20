@@ -1228,6 +1228,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "supercharged_guide.md",
         "script_guide.md",
         "claude_prompts.md",
         "Rclone_guide.md",
@@ -3130,6 +3131,10 @@
       "isHidden": false
     },
     "_projects/_ideas_1_apps_2brain.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_appnotes/supercharged_guide.md": {
       "isPinned": false,
       "isHidden": false
     }

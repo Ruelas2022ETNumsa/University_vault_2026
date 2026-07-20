@@ -29,7 +29,8 @@ Mantener y evolucionar el sistema de infraestructura del vault: links, sync, acc
 - [x] PS4 — Revisar apps conectadas a Drive que suben screenshots desde PC y desconectarlas o redirigirlas para que no ensucien la raíz de Drive donde vive el vault sincronizado.
 - [ ] PS5 — Integrar carpeta `in_work/` al vault como `_blueprint/` — definir si tiene `galaxy_body` propio o es carpeta operativa sin él (como `_projects/`), documentar en `_galaxy-system.md`. Carpeta ya renombrada en disco.
 - [x] PS6 — Sync de notas de Samsung Notes (tablet) con Samsung Account hacia el vault — automatización implementada con Programador de tareas de Windows (3 ciclos diarios: 12:00 / 17:00 / 22:00). Documentado en `_TAB_note-system.md`.
-- [ ] PS7 — Revisar apps de Microsoft Store que corren en background sin usarse — identificar procesos, deshabilitar los que no se usan para liberar RAM y mejorar el rendimiento general de inicio y uso de la PC (Windows 10).
+- [ ] PS7 — Sync automático vault → Mega con MegaSync (escritorio). Programador de tareas Windows: 3 ciclos diarios (12:05 / 17:05 / 22:02), inicio minimizado en bandeja, se mantiene activo unos minutos para completar la sync y luego cierra. Paralelo a PS6 (Samsung Notes).
+- [ ] PS8 — Revisar apps de Microsoft Store que corren en background sin usarse — identificar procesos, deshabilitar los que no se usan para liberar RAM y mejorar el rendimiento general de inicio y uso de la PC (Windows 10).
 
 ---
 

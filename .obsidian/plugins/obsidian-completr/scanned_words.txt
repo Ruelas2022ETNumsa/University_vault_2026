@@ -13687,6 +13687,9 @@ ToolIcon
 Temporales
 Trabaja
 Traductor
+TUWfG
+TvxI
+Textos
 Sistema
 Sync
 Save
@@ -21089,6 +21092,12 @@ Seguimiento
 Suficiente
 SamsungSync
 Supercharged
+Styling
+SfNkd
+Snippet
+Similar
+Sonar
+Similitud
 Plugins
 Pendientes
 Plugin
@@ -26846,6 +26855,9 @@ Proceso
 Pocket
 Preprocesador
 Pruebas
+PDHj
+PMNu
+Perplexity
 del
 date
 de
@@ -32441,6 +32453,10 @@ deshabilitarlo
 desaparecen
 diarios
 descriptivas
+dAXp
+dvon
+desconocidos
+deepseek
 Vault
 Verificar
 Variables
@@ -38826,6 +38842,13 @@ VvyUe
 VQoXvG
 VERSION
 Vamos
+VNxh
+VaAgv
+VlZa
+VahB
+VNpf
+Versatilidad
+Variedad
 galaxy
 gina
 genes
@@ -45460,6 +45483,15 @@ gravemente
 guiar
 gdrive
 gestor
+gvwN
+gtlGA
+gratuitas
+guiada
+gratis
+gratuita
+groq
+gratuitos
+generoso
 body
 beacon
 bat
@@ -50742,6 +50774,7 @@ backlog
 bajos
 brain
 bookmarks
+bBa
 scope
 status
 selector
@@ -58011,6 +58044,8 @@ syncs
 sinc
 screenshots
 second
+sApp
+significados
 vault
 vil
 ver
@@ -64755,6 +64790,7 @@ viewBackgroundColor
 valabs
 verific
 verbose
+verificables
 audience
 activo
 auto
@@ -71071,6 +71107,11 @@ absorbido
 arrancan
 automatiz
 aparezcan
+aqMTX
+autores
+ayudantes
+alinea
+ayudante
 related
 recomendados
 ribbon
@@ -77812,6 +77853,7 @@ reuniones
 retenci
 recurrencias
 replacement
+registrarse
 notes
 notas
 nuevas
@@ -84251,6 +84293,8 @@ nHold
 numTemas
 numerados
 neos
+nGdly
+nYOM
 created
 commit
 cada
@@ -91379,6 +91423,11 @@ cient
 coexistir
 cerr
 convertida
+ctfG
+citadas
+chatbot
+clasificado
+candidato
 updated
 un
 universo
@@ -104941,6 +104990,7 @@ GLgQ
 Generating
 Gemini
 Gener
+Groq
 Convenci
 Creaci
 Commander
@@ -110703,6 +110753,9 @@ Completo
 Configurado
 Configurados
 Cambio
+CCCGGGIIIMMMPPPRRRSSSUUU
+Cua
+China
 Instalados
 Instalado
 Instalar
@@ -118031,6 +118084,9 @@ Inclu
 Incluido
 Implementado
 Intermediario
+Iconos
+IDATcH
+IOZy
 Funci
 File
 Fase
@@ -124476,6 +124532,7 @@ Forward
 Finish
 Forzarles
 Faltan
+Feeq
 Estado
 Excalidraw
 EPUBs
@@ -131743,6 +131800,7 @@ ExcalidrawSlideshowStartTimer
 Esper
 Enfoques
 Excluido
+Especialidad
 Obsidian
 OmniSearch
 Ocultar
@@ -138154,6 +138212,9 @@ OXrrT
 OqNlveXDnIPl
 OigGuXj
 Omnivore
+OVgA
+OpenRouter
+OpenAI
 Auto
 Annotator
 Autocompletado
@@ -143947,6 +144008,10 @@ Acceder
 Ampliar
 Apps
 Aprovecha
+Attributes
+AqXj
+AUBS
+Anthropic
 push
 pull
 para
@@ -150258,6 +150323,8 @@ publicado
 previsualizaci
 programadas
 podcasts
+precio
+privacidad
 min
 mica
 movimiento
@@ -157803,6 +157870,7 @@ martillo
 marcha
 memorizaci
 migrados
+multimodal
 YAML
 Ya
 You
@@ -164410,6 +164478,7 @@ YWqNOsF
 YdFnwiB
 YwhekQ
 YouTube
+Yfzb
 Bot
 Baja
 Builder
@@ -169893,6 +169962,11 @@ Backspace
 Backlog
 Bases
 Backups
+BfgA
+BBBJJJOOOSSSVVV
+BBBCEIJJJPPPMMMRRRUUUUVY
+BBBGGGFFFKKKMMMOOOTTTUUUZZZ
+BBBGGGNNNPPPJJJFNZSSSVVV
 en
 exacta
 escaneados
@@ -176862,6 +176936,8 @@ exclusiones
 exitosas
 emoji
 exitosa
+expone
+extracto
 Motor
 Media
 Mantiene
@@ -184680,6 +184756,8 @@ MlYH
 MAYkroRTGKFCVZ
 Mostr
 Mapea
+Multimodal
+Mejor
 Lectura
 LaTeX
 Linter
@@ -191048,6 +191126,8 @@ LGJIr
 Left
 Libera
 Logseq
+LOsc
+Llama
 links
 las
 listar
@@ -204781,6 +204861,12 @@ invocable
 implementada
 instalador
 iconos
+inyectar
+iUtU
+iXvc
+iiwM
+identificadas
+infograf
 Dependencia
 Dropbox
 Dataview
@@ -211213,6 +211299,7 @@ Discusi
 Diccionario
 Deshabilitar
 Descarga
+DeepSeek
 Remotely
 Raz
 Revisa
@@ -218600,6 +218687,8 @@ Retomar
 Renovaci
 Raindrop
 Reflejar
+RmSSeG
+Relevante
 Hider
 Hace
 Herramientas
@@ -223746,6 +223835,7 @@ Helper
 Handoff
 Hora
 Heptabase
+HXBJ
 filtrar
 formato
 faltantes
@@ -229512,6 +229602,10 @@ fraccion
 flag
 flashcards
 filtrable
+fCa
+fMbq
+formateo
+free
 haya
 hace
 hacer
@@ -235541,6 +235635,8 @@ head
 hijas
 hola
 horarios
+hHFE
+hostear
 que
 quedan
 queda
@@ -242801,6 +242897,7 @@ qzCh
 qKADTtO
 qTEkpCS
 querySelector
+qEhtOA
 University
 Usar
 Un
@@ -257299,6 +257396,8 @@ NDoFXAytWLyFUQ
 NblFQzXRNfwPEzXmqf
 Necesidad
 Notelyn
+Nombramiento
+Napkin
 originales
 observatory
 oficial
@@ -264136,6 +264235,9 @@ obvio
 ocupados
 organizadas
 ordenable
+oZgi
+oMnl
+openrouter
 junto
 json
 jer
@@ -271519,6 +271621,8 @@ jfmshv
 jrwhUYZvBKZktQSgkBREp
 jqHOsj
 jalando
+jaZ
+jVaJ
 Qu
 Qui
 Quick
@@ -278791,6 +278895,7 @@ QLMFNJRYi
 QMrKoyKlIr
 Qued
 QuickAdd
+QPeI
 ya
 yaml
 yo
@@ -285440,6 +285545,8 @@ ykVN
 ytWXh
 yrSK
 yewH
+ytjMz
+ypua
 wikilinks
 when
 where
@@ -298373,6 +298480,7 @@ xYAM
 xWKadsV
 xKrHNsSpRTvwDISwlHO
 xuiB
+xkLo
 Wikilinks
 WHERE
 WebGL
@@ -312227,6 +312335,8 @@ JxXCutcVjMXjlIDALPhx
 JIZk
 JIVAEFX
 JBVlZa
+JPAI
+JWJt
 KB
 Kirchhoff
 Ksv
@@ -318610,6 +318720,8 @@ KExhdawZIH
 KfXKl
 Keyboard
 Kanban
+Kgzf
+KFQVs
 Zonas
 Zoom
 Zona
@@ -325447,6 +325559,8 @@ ZLIFZTlmBXd
 ZakxqS
 ZRSxaQFytim
 ZfmKoJB
+ZnEI
+ZPhRc
 zona
 zonas
 zT
@@ -331790,6 +331904,7 @@ zHrfEux
 zHYZ
 zoomButton
 zettakasten
+zYsz
 kEG
 kE
 kg
@@ -344798,6 +344913,10 @@ XPyter
 Xqyve
 XXtdIAd
 XlLteHS
+XhCg
+XyAX
+XYDI
+XpJf
 ßK
 ßH
 ßu
