@@ -6444,6 +6444,7 @@ tabnotes
 trabajado
 technical
 tabnote
+tablero
 ToDo
 Templater
 Text
@@ -13681,6 +13682,7 @@ Tilw
 TGSp
 ToolIcon
 Temporales
+Trabaja
 Sistema
 Sync
 Save
@@ -26836,6 +26838,7 @@ Proyectos
 Papelera
 Pesada
 Proceso
+Pocket
 del
 date
 de
@@ -45448,6 +45451,7 @@ gotoFullscreen
 gravemente
 guiar
 gdrive
+gestor
 body
 beacon
 bat
@@ -50728,6 +50732,8 @@ bodies
 busc
 backlog
 bajos
+brain
+bookmarks
 scope
 status
 selector
@@ -57996,6 +58002,7 @@ sources
 syncs
 sinc
 screenshots
+second
 vault
 vil
 ver
@@ -77792,6 +77799,9 @@ redefinici
 retraso
 renombres
 redirigirlas
+reuniones
+retenci
+recurrencias
 notes
 notas
 nuevas
@@ -91355,6 +91365,9 @@ consultor
 corri
 cubierta
 ciclos
+cient
+coexistir
+cerr
 updated
 un
 universo
@@ -138127,6 +138140,7 @@ OvPNIYESuf
 OXrrT
 OqNlveXDnIPl
 OigGuXj
+Omnivore
 Auto
 Annotator
 Autocompletado
@@ -143918,6 +143932,8 @@ Actualiz
 Agregados
 Acceder
 Ampliar
+Apps
+Aprovecha
 push
 pull
 para
@@ -150228,6 +150244,7 @@ publicada
 publicado
 previsualizaci
 programadas
+podcasts
 min
 mica
 movimiento
@@ -157771,6 +157788,7 @@ modifier
 masivos
 martillo
 marcha
+memorizaci
 YAML
 Ya
 You
@@ -164377,6 +164395,7 @@ YlnCNEmzup
 YWqNOsF
 YdFnwiB
 YwhekQ
+YouTube
 Bot
 Baja
 Builder
@@ -169858,6 +169877,7 @@ BXZZahe
 Backward
 Backspace
 Backlog
+Bases
 en
 exacta
 escaneados
@@ -191008,6 +191028,7 @@ LEHuQoRe
 LGJIr
 Left
 Libera
+Logseq
 links
 las
 listar
@@ -196754,6 +196775,7 @@ longer
 looks
 leela
 liberar
+liviana
 incluyendo
 im
 instalar
@@ -218554,6 +218576,7 @@ Registrar
 Recursos
 Retomar
 Renovaci
+Raindrop
 Hider
 Hace
 Herramientas
@@ -223699,6 +223722,7 @@ Hold
 Helper
 Handoff
 Hora
+Heptabase
 filtrar
 formato
 faltantes
@@ -229463,6 +229487,8 @@ fitToPage
 filename
 fraccion
 flag
+flashcards
+filtrable
 haya
 hace
 hacer
@@ -257249,6 +257275,7 @@ NGMJZZhlnE
 NDoFXAytWLyFUQ
 NblFQzXRNfwPEzXmqf
 Necesidad
+Notelyn
 originales
 observatory
 oficial
@@ -264085,6 +264112,7 @@ order
 obvio
 ocupados
 organizadas
+ordenable
 junto
 json
 jer
@@ -278739,6 +278767,7 @@ QdWH
 QLMFNJRYi
 QMrKoyKlIr
 Qued
+QuickAdd
 ya
 yaml
 yo
@@ -318557,6 +318586,7 @@ KrbtIyyVeV
 KExhdawZIH
 KfXKl
 Keyboard
+Kanban
 Zonas
 Zoom
 Zona

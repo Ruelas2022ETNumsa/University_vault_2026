@@ -53,120 +53,114 @@ La metáfora de la galaxia vive **únicamente en el YAML** de cada nota — no e
 
 ## Mapa de carpetas del baúl
 
-```
-University_Vault_2026/
-│
-├── Semesters/                  ← todo el contenido académico vive aquí
-│   └── Sem_NN/                 ← una carpeta por semestre (Sem_03, Sem_08...)
-│       └── ETNXXX/             ← una carpeta por materia
-│           ├── Partial_1/      ← una carpeta por parcial
-│           │   └── Topic_NN_nombre-descriptivo/   ← una carpeta por tema
-│           │       └── [notas]
-│           ├── Partial_2/
-│           └── Partial_3/
-│
-├── MOC/                        ← notas de índice a nivel de materia
-│                                  una MOC por materia, enlaza todas sus Stars
-├── _app/                       ← infraestructura del baúl (no es contenido académico)
-│   ├── notebooklm/             ← prompts y guías del sistema NotebookLM
-│   │   ├── prompts/            ← instrucciones de comportamiento para NotebookLM
-│   │   │   ├── ETN806/
-│   │   │   │   ├── ETN806-P1.md         ← prompt P1 Procesos Estocásticos
-│   │   │   │   ├── ETN806-P1-legacy.md  ← histórico primer prompt P1
-│   │   │   │   ├── ETN806-P2.md         ← prompt P2 Procesos Estocásticos
-│   │   │   │   └── ETN806-P3.md         ← prompt P3 Procesos Estocásticos
-│   │   │   └── MAT101/
-│   │   │       ├── MAT101-study.md          ← prompt estudio activo Cálculo 1
-│   │   │       └── MAT101-transcription.md  ← guía de transcripción cuaderno físico MAT101
-│   │   ├── guides/             ← fuentes que se suben al notebook
-│   │   │   ├── ETN806/
-│   │   │   │   ├── ETN806-P3-colas_guide_s.md       ← estructuras de colas con Mermaid
-│   │   │   │   └── ETN806-P3-Tikz_markov_guide.md   ← diagramas Markov con TikZ
-│   │   │   └── MAT101/
-│   │   │       ├── MAT101_desmos.md     ← sintaxis Desmos para Obsidian
-│   │   │       ├── MAT101_TikzJax.md   ← sintaxis TikZJax para Obsidian
-│   │   │       ├── MAT101_latex.md     ← notación LaTeX: cancelaciones, colores, cajas
-│   │   │       └── MAT101_library.md   ← criterio de fuentes, caps y páginas por tema
-│   │   ├── general/            ← guías reutilizables independientes de la materia
-│   │   │   ├── obsidian_notation.md      ← YAML, wikilinks, Cornell, callouts, bloques
-│   │   │   └── tikzjax_guide-legacy.md  ← sintaxis antigua y genérica de TikZJax (legacy)
-│   │   └── other/              ← archivos en desuso pendientes de revisión
-│   │       └── MAT101-notebooklm-user_guide.md  ← guía de uso personal Cálculo 1
-│   ├── _config/
-│   │   ├── _basic-memory-system.md    ← MCP Basic Memory (memoria semántica)
-│   │   ├── _claude-boot.md            ← punto de entrada de Claude al vault
-│   │   ├── _excalidraw-system.md      ← configuración del plugin Excalidraw
-│   │   ├── _galaxy-system.md          ← este archivo — sistema completo: tipos, YAML, convenciones
-│   │   ├── _graph-system.md           ← Desmos / TikZJax (neutrino)
-│   │   ├── _library-system.md         ← protocolo de búsqueda y selección de libros
-│   │   ├── _mindmap-system.md         ← Excalidraw + Mindmap Builder
-│   │   ├── _note-system.md            ← convención de nombres de notas
-│   │   ├── _notebooklm-system.md      ← beacon del sistema NotebookLM (transcripción + estudio)
-│   │   ├── _pdf-system.md             ← sistema de integración de PDFs
-│   │   ├── _sync-system.md            ← sincronización GitHub + Mega
-│   │   ├── _TABnote-system.md         ← apuntes de tablet (Samsung Notes → supernova)
-│   │   ├── _template-system.md        ← sistema de plantillas Templater
-│   │   ├── _claude-matter-boot.md     ← generador de contexto para Claude
-│   │   └── _ToDo-system.md            ← pendientes del sistema
-│   │
-│   ├── _appnotes/              ← guías de herramientas usadas dentro del baúl
-│   │   ├── tags_notes.md       ← documentación del sistema de tags
-│   │   └── ...
-│   │
-│   ├── Excalidraw/             ← archivos fuente de Excalidraw (.excalidraw)
-│   │   ├── Constellations/     ← mapas mentales galaxy (Excalidraw + Mindmap Builder)
-│   │   │                          galaxy_body: constellation — uno por parcial o tema
-│   │   └── Observatory/        ← dibujos técnicos libres sin Mindmap Builder
-│   │                              galaxy_body: observatory
-│   ├── scripts/                ← scripts de automatización para mantenimiento del baúl
-│   │   └── tag_routs_scripts/
-│   │
-│   └── solve/                  ← problemas conocidos y sus soluciones
-│       └── git_solve.md        ← soluciones a conflictos de git y sincronización
-│   
-│
-├── _assets/                    ← todos los archivos visuales exportados
-│                                  .png, .svg, .jpeg exportados desde Desmos,
-│                                  Excalidraw, o imágenes insertadas.
-│                                  Se nombran igual que la nota fuente.
-│
-├── _PDF/                       ← archivos PDF físicos — ver [[_pdf-system]]
-│   ├── PDF-telefonia/             una carpeta por materia/tema en texto (no sigla ETNXXX)
-│   ├── PDF-921/                   la organización semántica la llevan los nombres
-│   └── PDF-nombre/                y las notas asteroid en Semesters/
-|
-├── _projects/                  ← proyectos activos y backlog de ideas
-│   ├── tsk_alias.md            ← slots de proyecto (tsk_krajo, tsk_alxhot, etc.)
-│   │                              5 slots activos + 1 standby + 1 emergencia
-│   ├── tsk_tpl.md              ← plantilla base para los slots
-│   └── _ideas.md               ← backlog de ideas futuras (sin galaxy_body)
-|
-├── _skills/                    ← skills de sesión de Claude (work, plan, close, setup, boot)
-│                                  cada archivo define el comportamiento de Claude
-│                                  para un tipo de tarea específica
-├── _templates/                 ← plantillas de notas de Obsidian — ver [[_template-system]]
-│   ├── tpl-supernova.md        ← una plantilla por tipo de cuerpo galaxy
-│   ├── tpl-star.md
-│   ├── tpl-planet.md
-│   ├── tpl-moon.md
-│   ├── tpl-comet.md
-│   ├── tpl-nebula.md
-│   ├── tpl-dwarf.md
-│   ├── tpl-asteroid.md
-│   ├── tpl-photon.md
-│   ├── tpl-bridge.md
-│   ├── tpl-constellation.md    ← Excalidraw + Mindmap Builder
-│   ├── tpl-observatory.md      ← Excalidraw dibujo libre
-│   ├── tpl-w-initial.md        ← workshop: inicio de materia
-│   ├── tpl-w-transcription.md  ← workshop: transcripción por parcial
-│   ├── tpl-w-study.md          ← workshop: estudio por parcial
-│   ├── tpl-w-project.md        ← workshop: proyecto académico puntual
-│   └── alt-B/                  ← respaldo
-│       └── plantillas-A-respaldo.md  ← plantillas Opción A consolidadas (sin ruta dinámica)
-│
-│
-└── borrar/                     ← carpeta de espera antes de eliminar archivos
-                                   revisar antes de borrar permanentemente
+```mermaid
+---
+config:
+    treeView:
+        rowIndent: 20
+        paddingX: 8
+        paddingY: 4
+        lineThickness: 1
+    themeVariables:
+        treeView:
+            labelFontSize: '30px'
+            labelColor: '#7c6f9f'
+            lineColor: '#b0a8c8'
+            descriptionColor: '#9fb8a8'
+            highlightBg: 'rgba(180, 160, 210, 0.15)'
+            highlightStroke: '#c4aee0'
+---
+treeView-beta
+    University_Vault_2026/
+        Semesters/ ## todo el contenido académico vive aquí
+            Sem_NN/ ## una carpeta por semestre (Sem_03, Sem_08...)
+                ETNXXX/ ## una carpeta por materia
+                    Partial_1/ ## una carpeta por parcial
+                        Topic_NN_nombre-descriptivo/ ## una carpeta por tema
+                            [notas]
+                    Partial_2/
+                    Partial_3/
+        MOC/ ## notas de índice a nivel de materia — una MOC por materia, enlaza todas sus Stars
+        _app/ ## infraestructura del baúl (no es contenido académico)
+            notebooklm/ ## prompts y guías del sistema NotebookLM
+                prompts/ ## instrucciones de comportamiento para NotebookLM
+                    ETN806/
+                        ETN806-P1.md ## prompt P1 Procesos Estocásticos
+                        ETN806-P1-legacy.md ## histórico primer prompt P1
+                        ETN806-P2.md ## prompt P2 Procesos Estocásticos
+                        ETN806-P3.md ## prompt P3 Procesos Estocásticos
+                    MAT101/
+                        MAT101-study.md ## prompt estudio activo Cálculo 1
+                        MAT101-transcription.md ## guía de transcripción cuaderno físico MAT101
+                guides/ ## fuentes que se suben al notebook
+                    ETN806/
+                        ETN806-P3-colas_guide_s.md ## estructuras de colas con Mermaid
+                        ETN806-P3-Tikz_markov_guide.md ## diagramas Markov con TikZ
+                    MAT101/
+                        MAT101_desmos.md ## sintaxis Desmos para Obsidian
+                        MAT101_TikzJax.md ## sintaxis TikZJax para Obsidian
+                        MAT101_latex.md ## notación LaTeX: cancelaciones, colores, cajas
+                        MAT101_library.md ## criterio de fuentes, caps y páginas por tema
+                general/ ## guías reutilizables independientes de la materia
+                    obsidian_notation.md ## YAML, wikilinks, Cornell, callouts, bloques
+                    tikzjax_guide-legacy.md ## sintaxis antigua y genérica de TikZJax (legacy)
+                other/ ## archivos en desuso pendientes de revisión
+                    MAT101-notebooklm-user_guide.md ## guía de uso personal Cálculo 1
+            _config/ :::highlight
+                _basic-memory-system.md ## MCP Basic Memory (memoria semántica)
+                _claude-boot.md ## punto de entrada de Claude al vault
+                _excalidraw-system.md ## configuración del plugin Excalidraw
+                _galaxy-system.md ## este archivo — sistema completo: tipos, YAML, convenciones
+                _graph-system.md ## Desmos / TikZJax (neutrino)
+                _library-system.md ## protocolo de búsqueda y selección de libros
+                _mindmap-system.md ## Excalidraw + Mindmap Builder
+                _note-system.md ## convención de nombres de notas
+                _notebooklm-system.md ## beacon del sistema NotebookLM (transcripción + estudio)
+                _pdf-system.md ## sistema de integración de PDFs
+                _sync-system.md ## sincronización GitHub + Mega
+                _TABnote-system.md ## apuntes de tablet (Samsung Notes → supernova)
+                _template-system.md ## sistema de plantillas Templater
+                _claude-matter-boot.md ## generador de contexto para Claude
+                _ToDo-system.md ## pendientes del sistema
+            _appnotes/ ## guías de herramientas usadas dentro del baúl
+                tags_notes.md ## documentación del sistema de tags
+            Excalidraw/
+                Constellations/ ## mapas mentales galaxy (Excalidraw + Mindmap Builder) — galaxy_body: constellation
+                Observatory/ ## dibujos técnicos libres sin Mindmap Builder — galaxy_body: observatory
+            scripts/ ## scripts de automatización para mantenimiento del baúl
+                tag_routs_scripts/
+            solve/ ## problemas conocidos y sus soluciones
+                git_solve.md ## soluciones a conflictos de git y sincronización
+        _assets/ ## archivos visuales exportados — .png .svg .jpeg desde Desmos, Excalidraw o imágenes insertadas — se nombran igual que la nota fuente
+        _PDF/ ## archivos PDF físicos — ver _pdf-system
+            PDF-telefonia/ ## una carpeta por materia/tema en texto (no sigla ETNXXX)
+            PDF-921/
+            PDF-nombre/ ## la organización semántica la llevan los nombres y las notas asteroid en Semesters/
+        _projects/ ## proyectos activos y backlog de ideas
+            tsk_alias.md ## slots de proyecto — 5 slots activos + 1 standby + 1 emergencia
+            tsk_tpl.md ## plantilla base para los slots
+            _ideas.md ## backlog de ideas futuras (sin galaxy_body)
+        _skills/ ## skills de sesión de Claude (work, plan, close, setup, boot) — cada archivo define el comportamiento de Claude para un tipo de tarea específica
+        _templates/ ## plantillas de notas de Obsidian — ver _template-system
+            tpl-supernova.md ## una plantilla por tipo de cuerpo galaxy
+            tpl-star.md
+            tpl-planet.md
+            tpl-moon.md
+            tpl-comet.md
+            tpl-nebula.md
+            tpl-dwarf.md
+            tpl-asteroid.md
+            tpl-photon.md
+            tpl-bridge.md
+            tpl-constellation.md ## Excalidraw + Mindmap Builder
+            tpl-observatory.md ## Excalidraw dibujo libre
+            tpl-w-initial.md ## workshop: inicio de materia
+            tpl-w-transcription.md ## workshop: transcripción por parcial
+            tpl-w-study.md ## workshop: estudio por parcial
+            tpl-w-project.md ## workshop: proyecto académico puntual
+            alt-B/ ## respaldo
+                plantillas-A-respaldo.md ## plantillas Opción A consolidadas (sin ruta dinámica)
+        borrar/ ## carpeta de espera antes de eliminar — revisar antes de borrar permanentemente
 ```
 
 ---

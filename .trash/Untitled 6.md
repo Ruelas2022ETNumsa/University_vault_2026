@@ -1,7 +1,7 @@
 
 
 
-```mermaid-next
+```mermaid
 ---
 config:
     treeView:
