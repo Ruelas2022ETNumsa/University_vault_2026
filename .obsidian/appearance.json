@@ -3,10 +3,9 @@
   "showRibbon": true,
   "accentColor": "",
   "nativeMenus": false,
-  "baseFontSize": 15,
+  "baseFontSize": 10,
   "baseFontSizeAction": true,
   "enabledCssSnippets": [
-    "mermaid-fit",
     "supercharged-links-gen",
     "supercharged-status",
     "supercharged-links"
