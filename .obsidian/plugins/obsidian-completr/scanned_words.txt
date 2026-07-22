@@ -13690,6 +13690,7 @@ Traductor
 TUWfG
 TvxI
 Textos
+Transformada
 Sistema
 Sync
 Save
@@ -71121,6 +71122,7 @@ ayudantes
 alinea
 ayudante
 arranc
+anida
 related
 recomendados
 ribbon
@@ -91441,6 +91443,7 @@ candidato
 cort
 cont
 caracteristicas
+causales
 updated
 un
 universo
@@ -118105,6 +118108,7 @@ Intermediario
 Iconos
 IDATcH
 IOZy
+Inversa
 Funci
 File
 Fase
