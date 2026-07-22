@@ -20,6 +20,10 @@ status: activo
 > Para el funcionamiento técnico del plugin ver [[Marginalia_guide]].
 > Cada sección documenta: qué se probó, qué se notó, y dónde se usa en Galaxy.
 
+> **Convención de este archivo:** los ejemplos de sintaxis se muestran
+> en bloques de código fenced (\`\`\`) para evitar que el plugin los procese.
+> El escape \%% se usa solo cuando la sintaxis aparece en línea dentro del texto.
+
 ---
 
 ## Índice
@@ -45,9 +49,9 @@ status: activo
 > Sintaxis: \%%> (margen a izquierdo) \%% "esto no se ve en read mode" \%% < (margen derecho)\%% 
 ### Probado
 
-- Inline izquierdo (`%%>`) y derecho (`%%<`) en medio de párrafo → renderiza correctamente en Live Preview y Reading View.
+- Inline izquierdo (\%%>) y derecho (\%%<) en medio de párrafo → renderiza correctamente en Live Preview y Reading View.
 - Con fórmulas LaTeX dentro del margen → renderiza sin conflicto.
-- Con comillas (texto dentro de backticks `` `%%> texto %%` ``) → el texto **permanece visible en el cuerpo** del archivo, no se extrae al margen. Comportamiento esperado del plugin.
+- Con comillas (texto dentro de backticks `` \%%> $\dfrac{a}{b}$ \%% ``) → el texto **permanece visible en el cuerpo** del archivo, no se extrae al margen. Comportamiento esperado del plugin.
 
 ### Notado
 
