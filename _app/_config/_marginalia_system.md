@@ -77,7 +77,46 @@ status: activo
 
 ## A2. Semantic Highlighting
 
-> Pendiente de prueba.
+> Sintaxis:  \%%> PREFIX- texto \%%
+> Los prefijos activan color automático. Configurables en Settings → Color Tags (valores en RGB).
+
+### Tags Galaxy
+
+| Tag | Significado | Color | Hex | RGB |
+|---|---|---|---|---|
+| `!` | Importante / examen | ámbar | `#EE9B00` | 238, 155, 0 |
+| `?` | Pregunta / duda | azul petróleo | `#005F73` | 0, 95, 115 |
+| `X-` | Error / corrección | naranja quemado | `#BB3E03` | 187, 62, 3 |
+| `V-` | Verificado | verde oliva | `#629900` | 98, 153, 0 |
+| `C-` | Comentario neutro | gris antracita | `#474448` | 71, 68, 72 |
+| `F-` | Fórmula clave | morado | `#5A189A` | 90, 24, 154 |
+| `R-` | Relación entre materias | verde azulado | `#0A9396` | 10, 147, 150 |
+| `T-` | Tarea docente | rojo | `#C1121F` | 193, 18, 31 |
+
+> ⚠️ **`T-` es exclusivo de `supernova`** — no se copia a planet, comet ni dwarf. Los archivos derivados de supernova deben quedar limpios de tareas docentes.
+
+### Probado
+
+- Los 7 tags base probados en `void.md` — colores correctos en Live Preview y Reading View.
+- Cada tag renderiza sin interferir con el texto circundante.
+
+### Notado
+
+- Los colores por defecto del plugin (naranja, amarillo, rojo, verde) fueron reemplazados por la paleta Galaxy — ingresar valores RGB en Settings → Color Tags.
+- `T-` no se prueba en `void.md` — su uso queda restringido a `supernova` en contexto real.
+
+### Dónde se usa en Galaxy
+
+| Tag | `galaxy_body` | Uso |
+|---|---|---|
+| `!` | todos | Concepto de examen, definición central, fórmula que entra seguro |
+| `?` | planet / comet / supernova | Duda activa durante la toma de notas o resolución |
+| `X-` | comet / supernova | Error detectado en el proceso, corrección de signo o unidades |
+| `V-` | planet / comet | Dato confirmado con fuente (libro, docente, ejercicio resuelto) |
+| `C-` | todos | Comentario personal sin carga semántica — aclaración, contexto extra |
+| `F-` | planet / moon / dwarf | Fórmula clave del tema — la ecuación central que define el concepto |
+| `R-` | planet / bridge | Relación con otra materia o tema — señal para crear un `bridge` |
+| `T-` | supernova únicamente | Tarea asignada por el docente — no hereda a ningún otro tipo |
 
 ---
 
