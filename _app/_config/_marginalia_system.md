@@ -122,13 +122,58 @@ status: activo
 
 ## A3. Grouping Method A
 
-> Pendiente de prueba.
+> Sintaxis: `[!cornell]` callout
+
+### Probado
+
+- Párrafo simple, párrafo + lista, párrafo + imagen → descartado, no agrupa visualmente.
+- Múltiples marginalia en el mismo callout → **funciona correctamente**, asigna espacio automático a cada nota.
+
+### Notado
+
+- **Descartado para contenido simple** — se comporta como marginalia inline, no toma el recuadro esperado.
+- **Fuerte específico: múltiples marginalia.** El callout `[!cornell]` distribuye automáticamente el espacio entre notas — no requiere saltos de línea manuales a diferencia de A4.
+- Complementario a A4: usar A3 cuando hay varias notas en un mismo bloque, A4 para el resto.
+
+### Dónde se usa en Galaxy
+
+| Caso | `galaxy_body` | Uso |
+|---|---|---|
+| Múltiples marginalia | planet / comet | Bloque con varias notas semánticas — el callout gestiona el espaciado automáticamente |
 
 ---
 
 ## A4. Grouping Method B
 
-> Pendiente de prueba.
+> Sintaxis: bloque ` ```marginalia ` 
+> Método principal de agrupación en Galaxy.
+
+### Probado
+
+- Párrafo simple → renderiza correctamente.
+- Párrafo + lista → renderiza correctamente.
+- Párrafo + imagen → renderiza correctamente.
+- Párrafo + LaTeX → renderiza correctamente.
+- Nota antes del texto → renderiza correctamente.
+- Nota después del texto → renderiza correctamente.
+- Múltiples marginalia en el mismo bloque → **requiere salto de línea entre cada elemento** para correcta alineación (se prefiere el A3 para este caso).
+- Anidado dentro de bloque `cornell` (::cue / ::note) → flujo Galaxy real, renderiza correctamente.
+
+### Notado
+
+- **Regla de múltiples marginalia:** cada elemento con su propia marginalia debe estar separado por una línea en blanco dentro del bloque. Sin el salto, las notas se apilan o desalinean.
+- **Regla del punto final:** cuando el último elemento es una lista, agregar `.` en la línea siguiente para que el último ítem tenga ancla de alineación.
+- El bloque `marginalia` es superior a `[!cornell]` callout (A3) en todos los casos probados.
+
+### Dónde se usa en Galaxy
+
+| Caso                 | `galaxy_body`         | Uso                                                                        |
+| -------------------- | --------------------- | -------------------------------------------------------------------------- |
+| Párrafo + lista      | planet / moon / dwarf | Concepto + puntos clave agrupados con nota al margen                       |
+| Párrafo + LaTeX      | planet / comet        | Fórmula con sus propiedades y tag `F-`                                     |
+| Párrafo + imagen     | planet / comet        | Diagrama con referencia cruzada al margen                                  |
+| Múltiples marginalia | planet / comet        | Bloque de desarrollo con varias notas semánticas — respetar salto de línea |
+| Anidado en `cornell` | supernova / planet    | Flujo principal — \%%> \%% en ::cue, \%%< \%% en ::note                    |
 
 ---
 
