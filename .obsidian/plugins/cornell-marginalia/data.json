@@ -17,19 +17,31 @@
   "tags": [
     {
       "prefix": "!",
-      "color": "#ffea00"
+      "color": "#ee9b00"
     },
     {
       "prefix": "?",
-      "color": "#ff9900"
+      "color": "#005f73"
     },
     {
       "prefix": "X-",
-      "color": "#ff4d4d"
+      "color": "#bb3e03"
     },
     {
       "prefix": "V-",
-      "color": "#00cc66"
+      "color": "#629900"
+    },
+    {
+      "prefix": "C-",
+      "color": "#474448"
+    },
+    {
+      "prefix": "F-",
+      "color": "#5a189a"
+    },
+    {
+      "prefix": "R-",
+      "color": "#0a9396"
     }
   ],
   "outgoingLinks": [],

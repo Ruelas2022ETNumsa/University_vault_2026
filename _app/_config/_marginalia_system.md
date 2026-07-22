@@ -46,17 +46,22 @@ status: activo
 
 ## A1. Sintaxis core
 
-> Sintaxis: \%%> (margen a izquierdo) \%% "esto no se ve en read mode" \%% < (margen derecho)\%% 
+> Sintaxis:
+> ```
+> %%> texto %%   → margen izquierdo
+> %%< texto %%   → margen derecho
+> ```
 ### Probado
 
 - Inline izquierdo (\%%>) y derecho (\%%<) en medio de párrafo → renderiza correctamente en Live Preview y Reading View.
 - Con fórmulas LaTeX dentro del margen → renderiza sin conflicto.
-- Con comillas (texto dentro de backticks `` \%%> $\dfrac{a}{b}$ \%% ``) → el texto **permanece visible en el cuerpo** del archivo, no se extrae al margen. Comportamiento esperado del plugin.
+- Con escape `\%%`: usar `\%%>` y `\%%` en línea evita que el plugin procese la sintaxis — el texto permanece visible en el cuerpo. Para bloques de ejemplo usar fenced code (` ``` `). Convención estándar de este archivo para documentación.
 
 ### Notado
 
-- El caso de backticks es útil deliberadamente: permite mostrar la sintaxis como ejemplo sin que el plugin la procese. Sirve para documentación técnica.
-- Fuera de backticks, la marginalia desaparece del cuerpo y aparece al margen — es el comportamiento normal de integración.
+- Con escape `\%%` o bloque fenced, la sintaxis queda visible en Reading View sin ser procesada por el plugin — útil para documentación técnica (este archivo).
+- Sin escape, la marginalia desaparece del cuerpo y aparece al margen — comportamiento normal de integración.
+- Backticks solos (`` ` ``) no son suficientes: el contenido dentro de `%%...%%` igualmente desaparece del cuerpo en Reading View.
 
 ### Dónde se usa en Galaxy
 
@@ -66,7 +71,7 @@ status: activo
 | `comet` | Marcar pasos clave de un ejercicio, errores detectados durante la resolución, observaciones del proceso |
 | `supernova` | Anotaciones rápidas durante transcripción de clase — agregar contexto sin cortar el flujo bruto |
 | `dwarf` | Claves de repaso al margen del resumen, referencias a planets relacionados |
-| `beacon` (documentación) | Usar con backticks para mostrar la sintaxis como ejemplo sin que el plugin la procese |
+| `beacon` (documentación) | Usar escape `\%%` o bloque fenced para mostrar la sintaxis como ejemplo sin que el plugin la procese |
 
 ---
 
