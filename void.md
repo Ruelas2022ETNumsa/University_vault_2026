@@ -3,20 +3,23 @@
 
 Tres cosas para probar:
 
-1. **Inline simple** — escribir %%> algún texto %% en medio de un párrafo y ver cómo queda en Live Preview vs Reading View.
-    
-2. **Bidireccional** — poner un %%> y un %% ese %%<ssd%%  en la misma nota y ver si quedan en lados opuestos.
-    
-3. **Con LaTeX** — dado que vas a usarlo en ingeniería, probar algo como `%%> Ver fórmula $e^{j\theta}$ %%` para confirmar que LaTeX dentro del margen renderiza bien.
-    
+1. **Inline simple** — escribir %%> izquierda%% en medio de un párrafo .
 
-Abrí el `void.md` (o cualquier nota de prueba) y arrancá cuando quieras. Me contás qué ves.
+2. **Inline simple** — escribir %%< derecha%% en medio de un párrafo .
+   
+3. **Con LaTeX** — ecuaciones %%> Ver fórmula $e^{j\theta}$ %% para confirmar que LaTeX dentro del margen renderiza bien.
 
+4. **con comillas** — escribir `%%> algún texto %%` en medio de un párrafo
+
+5. **con comillas** — escribir `%%> algún texto %%` en medio de un párrafo
+
+
+
+
+
+bien la idea no es solo probar las caracteristicas del plugin sino tambien saber donde usarlos.
 
 %%
 # galaxy linkds
 
-
-asdasd
-asd
 %%
