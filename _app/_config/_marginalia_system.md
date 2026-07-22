@@ -42,7 +42,7 @@ status: activo
 
 ## A1. Sintaxis core
 
-> Sintaxis: `%%> iquierda %%` (margen izquierdo) `%%< derecha %%` (margen derecho)
+> Sintaxis: \%%> (margen a izquierdo) \%% "esto no se ve en read mode" \%% < (margen derecho)\%% 
 ### Probado
 
 - Inline izquierdo (`%%>`) y derecho (`%%<`) en medio de párrafo → renderiza correctamente en Live Preview y Reading View.

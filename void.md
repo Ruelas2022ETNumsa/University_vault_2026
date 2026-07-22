@@ -9,9 +9,9 @@ Tres cosas para probar:
    
 3. **Con LaTeX** — ecuaciones %%> Ver fórmula $e^{j\theta}$ %% para confirmar que LaTeX dentro del margen renderiza bien.
 
-4. **con comillas** — escribir `%%> algún texto %%` en medio de un párrafo
+4. **con comillas** — escribir `%%> algún texto %%` en medio de un párrafo 111111
 
-5. **con comillas** — escribir `%%> algún texto %%` en medio de un párrafo
+5. **con comillas** — escribir `%%> 2222   algún texto %%` en medio de un párrafo 
 
 
 
