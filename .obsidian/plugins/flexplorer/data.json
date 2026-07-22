@@ -1297,6 +1297,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "_marginalia_system.md",
         "_library_ETN505(i).md",
         "_claude-matter-boot.md",
         "_TAB_note-system.md",
@@ -3135,6 +3136,10 @@
       "isHidden": false
     },
     "_app/_appnotes/supercharged_guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_config/_marginalia_system.md": {
       "isPinned": false,
       "isHidden": false
     }
