@@ -13,10 +13,6 @@ Tres cosas para probar:
 
 5. **con comillas** — escribir `%%> 2222   algún texto %%` en medio de un párrafo 
 
-
-
-
-
 bien la idea no es solo probar las caracteristicas del plugin sino tambien saber donde usarlos.
 
 ---
@@ -40,61 +36,6 @@ Cada línea prueba un tag. Verificar color en Reading View y Live Preview.
 7. **`R-` verde azulado** — Texto de referencia %%< R- Relación con ETN806 T03 %% fin de línea.
 
 ---
-
-**A3 — Grouping Method A** (`[!cornell]` callout)
-
-Uso: agrupar contenido mixto fuera del bloque cornell. Solo renderiza en Reading View.
-
-Caso 1 — párrafo + lista:
-
-> [!cornell]%%> ! Marginalia alineada con todo el grupo %%
-> La transformada de Laplace convierte una EDO en una ecuación algebraica.
-> - Condición: $\text{Re}(s) > \sigma_0$
-> - Útil para sistemas LTI causales
-> - Inversa mediante fracciones parciales
-
-Caso 2 — párrafo + imagen (reemplazar con imagen real del vault para la prueba):
-
-> [!cornell]%%> F- Ver diagrama de polos y ceros %%
-> El plano $s$ representa la región de convergencia.
-> ![[_assets/test_image.png]]
-
----
-
-**A4 — Grouping Method B** (bloque `marginalia`)
-
-Uso principal en Galaxy: se anida dentro de bloques `cornell` (::cue y ::note).
-También funciona standalone para composición compleja o exportación PDF.
-
-Caso 1 — standalone, composición compleja:
-
-```marginalia
-La transformada de Laplace se define como: %%> F- Ecuación central del tema %%
-$\mathcal{L}\{f(t)\} = \int_0^\infty e^{-st} f(t)\, dt$
-- Converge para $\text{Re}(s) > \sigma_0$
-- Lineal: $\mathcal{L}\{af+bg\} = aF+bG$
-```
-
-Caso 2 — anidado dentro de cornell (flujo Galaxy real):
-
-`````cornell
-::cue
-````marginalia %%> %%
-Transformada de Laplace %%> ? ¿Cuál es la condición de convergencia? %%
-````
-
-::note
-````marginalia %%< %%
-Convierte EDO en ecuación algebraica en el dominio $s$. %%< V- Kreyszig p.218 %%
-Condición: $\text{Re}(s) > \sigma_0$
-````
-`````
-
-Caso 3 — nota va ANTES del texto (buena nota Cornell):
-
-```marginalia
-%%> ! Entra en examen %% La región de convergencia determina la unicidad de la transformada.
-```
 
 %%
 # galaxy linkds

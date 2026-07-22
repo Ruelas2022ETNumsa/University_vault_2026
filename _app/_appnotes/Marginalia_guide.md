@@ -152,15 +152,15 @@ Por defecto, Obsidian trata párrafos, listas e imágenes como bloques separados
 Para agrupar contenido mixto (párrafo + lista, párrafo + imagen) de forma liviana y sin romper el Markdown estándar.
 
 ```markdown
-> [!cornell]%%> Nota que cubre todo el grupo %%
-> Párrafo introductorio del concepto.
+> [!cornell]
+> Párrafo introductorio del concepto.%%> Nota que cubre todo el grupo %%
 > - Ítem 1
 > - Ítem 2
 > - Ítem 3
 ```
 
-> [!cornell]%%> Nota que cubre todo el grupo %%
-> Párrafo introductorio del concepto.
+> [!cornell]
+> Párrafo introductorio del concepto.%%> Nota que cubre todo el grupo %%
 > - Ítem 1
 > - Ítem 2
 > - Ítem 3
