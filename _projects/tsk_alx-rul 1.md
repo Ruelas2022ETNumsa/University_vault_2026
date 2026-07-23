@@ -10,11 +10,11 @@ status: creciente
 
 ## Handoff
 
-**Última sesión:** 2026-07-23
-**Retomar desde:** `_marginalia_system.md` A8 — Flashcard Generator
-**Completado esta sesión:** A7 documentado (blur, 6 casos probados, bug `;;` en Reading View identificado). A10 documentado (OCD + SuperDoodle, flujos completos). `tpl-zk.md` modificado (rename por polling + openFile). Sesión de análisis de `main.js` completada — 2 bugs identificados con líneas exactas para parcheo futuro.
-**Próximo paso:** Continuar con A8 → A9 → A11 → A12 → Bloque B
-**Preguntas de cierre:** ¿Se parchea `main.js` antes de continuar con A8 o se deja para el final?
+**Última sesión:** 2026-07-22
+**Retomar desde:** `_marginalia_system.md` A6 — documentar en sistema y continuar con A7
+**Completado esta sesión:** A1, A2, A3, A4, A5 documentados en `_marginalia_system.md`. Creados `_marginalia_system.md`, `marginalia_explorer_guide.md.md`. Tags Galaxy definidos (8 tags con RGB). Reglas de uso A3/A4 establecidas. A6 probado parcialmente (current + vault).
+**Próximo paso:** Documentar A6 en `_marginalia_system.md` → continuar con A7 (Blur)
+**Preguntas de cierre:** —
 
 ---
 
@@ -168,45 +168,6 @@ Recorrer sección por sección. Para cada setting: entender, decidir valor Galax
 
 ---
 
-## Sesión main.js — Bugs pendientes de parcheo
-
-> Análisis realizado 2026-07-23. Parches a aplicar en sesión dedicada sobre `main.js`.
-> Backup disponible: `main.js.bk` en `.obsidian/plugins/cornell-marginalia/`
-
-### BUG-01 — `;;` visible en Reading View
-
-**Síntoma:** En Reading View el marcador `;;` aparece visible dentro del texto de la marginalia. En Live Preview no ocurre.
-
-**Causa:** El post-processor de Reading View (`registerMarkdownPostProcessor`, línea ~14160) hace `replace(";;", "")` solo sobre `tempContent` usado para el visual anchor (puntito de color). El texto real `finalNoteText` que se pasa a `MarkdownRenderer.render` nunca tiene el `;;` removido.
-
-**Fix:** Agregar strip de `;;` sobre `finalNoteText` antes del render. Buscar en `main.js`:
-```
-let finalRenderText = finalNoteText;
-```
-Agregar inmediatamente después:
-```js
-if (finalRenderText.includes("  ;;")) finalRenderText = finalRenderText.replace(/\s*;;\s*/g, "").trim();
-```
-
-### BUG-02 — Nombre timestamp del archivo ZK (no usa slug)
-
-**Síntoma:** Los archivos creados en `Zettelkasten/` reciben nombre de timestamp (`YYYYMMDDHHmmss`) en lugar del slug ingresado por el usuario.
-
-**Causa:** Línea ~286 en `main.js`:
-```js
-const zkId = window.moment().format("YYYYMMDDHHmmss");
-finalDestName = cleanDestName !== "Marginalia Inbox" ? `${zkId} - ${cleanDestName}` : zkId;
-```
-El archivo se crea con el timestamp antes de que el template se ejecute — el slug llega tarde.
-
-**Fix propuesto:** Reemplazar el timestamp por el slug cuando esté disponible. El slug se obtiene del prompt de Templater pero el plugin no lo recibe. Opciones a evaluar en sesión:
-- Usar `cleanDestName` directamente como nombre si no es `"Marginalia Inbox"`
-- Exponer el slug como variable al plugin antes de crear el archivo
-
-**Intentos en `tpl-zk.md`:** Se probaron polling + openFile + rename — no funcionaron porque el template se ejecuta después de que el archivo ya fue creado con timestamp.
-
----
-
 ## Decisiones
 
 | Fecha | Decisión | Motivo |
@@ -223,9 +184,6 @@ El archivo se crea con el timestamp antes de que el template se ejecute — el s
 | 2026-07-22 | `marginalia_explorer_guide.md` creado como beacon en `_appnotes/` | UI demasiado detallada para `_marginalia_system` |
 | 2026-07-23 | A7 blur funciona en ambos modos con botón 👁️ activo | Probado en 6 casos en void.md |
 | 2026-07-23 | Bug visual `;;` en Reading View — pendiente revisión de `main.js` | No configurable desde Settings; se mantiene por ahora |
-| 2026-07-23 | A10 documentado — OCD y SuperDoodle son motores distintos | Flujos y destinos de guardado diferentes |
-| 2026-07-23 | `tpl-zk.md` modificado — rename por polling + openFile | Evita renombrar el archivo activo (void) |
-| 2026-07-23 | Nombre ZK timestamp no resoluble desde template | El archivo se crea antes de que el template corra — fix requiere `main.js` |
 
 > [!note]- Descartadas
 > A3 como método general — no agrupa visualmente el contenido como se esperaba.
@@ -268,5 +226,3 @@ Revisión secuencial de A1–A12 y Bloque B. Para cada ítem: discutir, probar e
 - `E:\University_vault_2026\_app\_appnotes\marginalia_explorer_guide.md.md` — UI del Explorer
 - `E:\University_vault_2026\_app\_appnotes\cornell_guide.md` — integración Cornell Notes
 - `E:\University_vault_2026\void.md` — archivo de prueba (se limpia entre pruebas)
-- `E:\University_vault_2026\_templates\tpl-zk.md` — template ZK modificado esta sesión
-- `E:\University_vault_2026\.obsidian\plugins\cornell-marginalia\main.js` — plugin (con backup `main.js.bk`)

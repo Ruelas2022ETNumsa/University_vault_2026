@@ -4,12 +4,19 @@ const subject = await tp.system.prompt("Materia(s) (ej: MAT101, ETN901)");
 const connection_type = await tp.system.prompt("Tipo de conexión (ej: mismo concepto, contraste, continuación)");
 const partial = await tp.system.prompt("Parcial (1, 2 o 3)");
 if (slug) {
-  await new Promise(r => setTimeout(r, 500));
-  const now = Date.now();
-  const zkFile = app.vault.getFiles()
-    .filter(f => f.path.startsWith("Zettelkasten/") && (now - f.stat.ctime) < 5000)
-    .sort((a, b) => b.stat.ctime - a.stat.ctime)[0];
-  if (zkFile) await app.fileManager.renameFile(zkFile, `Zettelkasten/${slug}.md`);
+  const start = Date.now();
+  let zkFile = null;
+  while (!zkFile && (Date.now() - start) < 5000) {
+    await new Promise(r => setTimeout(r, 200));
+    zkFile = app.vault.getFiles()
+      .filter(f => f.path.startsWith("Zettelkasten/") && (Date.now() - f.stat.ctime) < 8000)
+      .sort((a, b) => b.stat.ctime - a.stat.ctime)[0];
+  }
+  if (zkFile) {
+    await app.workspace.getLeaf().openFile(zkFile);
+    await new Promise(r => setTimeout(r, 300));
+    await tp.file.rename(slug);
+  }
 }
 %>---
 title: "<% slug || tp.file.title %>"
