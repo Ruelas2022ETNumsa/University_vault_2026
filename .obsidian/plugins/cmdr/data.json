@@ -128,7 +128,7 @@
     },
     {
       "id": "modern-outline:toggle",
-      "icon": "lucide-list",
+      "icon": "lucide-list-tree",
       "name": "Modern Outline: Toggle",
       "mode": "any"
     },

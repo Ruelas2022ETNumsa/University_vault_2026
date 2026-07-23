@@ -5,6 +5,7 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
+        "void 1.md",
         "_blueprint",
         "_skills",
         "wolfram alpha example.md",
@@ -1228,6 +1229,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "marginalia_explorer_guide.md.md",
         "supercharged_guide.md",
         "script_guide.md",
         "claude_prompts.md",
@@ -3140,6 +3142,14 @@
       "isHidden": false
     },
     "_app/_config/_marginalia_system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "void 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_appnotes/marginalia_explorer_guide.md.md": {
       "isPinned": false,
       "isHidden": false
     }
