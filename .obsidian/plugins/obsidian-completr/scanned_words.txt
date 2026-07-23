@@ -6451,6 +6451,7 @@ traducciones
 trueno
 templatesulg
 tempContent
+tarjetas
 ToDo
 Templater
 Text
@@ -26886,6 +26887,7 @@ PJA
 PcpO
 PtYm
 Promise
+Prepare
 del
 date
 de
@@ -32494,6 +32496,7 @@ dest
 destination
 difumina
 dvX
+destinadas
 Vault
 Verificar
 Variables
@@ -71186,6 +71189,7 @@ anUo
 attach
 amortiguamiento
 ajajajaja
+activaci
 related
 recomendados
 ribbon
@@ -91546,6 +91550,8 @@ colector
 correrse
 centralxxxA
 centralA
+choque
+contaminan
 updated
 un
 universo
@@ -131950,6 +131956,7 @@ Escapar
 Entra
 Explorar
 Extrae
+Exportador
 Obsidian
 OmniSearch
 Ocultar
@@ -150499,6 +150506,7 @@ prefijado
 producida
 poniendo
 peepepepep
+preservan
 min
 mica
 movimiento
@@ -170153,6 +170161,7 @@ Basurero
 Bayes
 BaZnbjj
 Boceto
+BUG
 en
 exacta
 escaneados
@@ -177128,6 +177137,7 @@ explorer
 elaborado
 exponencialmente
 ertretert
+exportan
 Motor
 Media
 Mantiene
@@ -191327,6 +191337,7 @@ Lineal
 LIDATx
 Limpiar
 LdKI
+Limitaci
 links
 las
 listar
@@ -197078,6 +197089,7 @@ lunar
 libres
 linkds
 lasso
+layers
 incluyendo
 im
 instalar
@@ -205074,6 +205086,7 @@ interpretaba
 impulso
 inestables
 iizS
+imprimible
 Dependencia
 Dropbox
 Dataview
@@ -218905,6 +218918,7 @@ Recuadro
 Refresca
 Reloj
 Recientes
+Restore
 Hider
 Hace
 Herramientas

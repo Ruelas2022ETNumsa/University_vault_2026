@@ -14,7 +14,7 @@
   "concurrency": "5",
   "prevConfig": {
     "pageSize": "A4",
-    "marginType": "2",
+    "marginType": "0",
     "showTitle": true,
     "open": true,
     "scale": 100,
@@ -25,6 +25,6 @@
     "marginRight": "10",
     "displayHeader": false,
     "displayFooter": false,
-    "cssSnippet": "0"
+    "cssSnippet": "E:\\University_vault_2026\\.obsidian\\snippets\\desmos-center.css"
   }
 }

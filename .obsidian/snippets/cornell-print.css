@@ -1,0 +1,22 @@
+@media print {
+
+  /* Ocultar ::cue y ::note */
+  .cornell-print-right p:has(+ p) br,
+  .cornell-print-right > p:first-child {
+    display: none;
+  }
+
+  /* Centrar verticalmente la columna izquierda */
+  .cornell-print-left {
+    justify-content: center !important;
+  }
+
+  /* Línea separadora para ::cue y ::note */
+  .cornell-print-right::before {
+    content: '';
+    display: block;
+    border-top: 1px solid #ee9b00;
+    margin-bottom: 0.5em;
+  }
+
+}

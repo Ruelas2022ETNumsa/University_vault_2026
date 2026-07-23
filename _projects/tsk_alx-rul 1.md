@@ -12,12 +12,9 @@ status: creciente
 
 **Última sesión:** 2026-07-23
 **Retomar desde:** `_marginalia_system.md` A9 — Margin Threads
-**Completado esta sesión:**
-- A8 (Flashcard Generator) — documentado completo: flujo probado, uso principal en `supernova` y `comet`, convención una marginalia por línea en callouts, Flashcards Generation siempre después del Restore. Commander configurado con ícono `layers-2`.
-- A12 (PDF Export) — documentado: flujo Prepare → Better Export PDF → Restore probado. Limitación conocida: bloques `cornell` (::cue/::note) no exportan correctamente por choque de plugins. Convención Galaxy: solo marginalia inline simples en notas destinadas a export.
-- Investigación PDF++ — descartado para A12; rol distinto (anotación de PDFs externos, no export de notas).
-**Próximo paso:** A9 — Margin Threads → A11 — Omni-Capture → Bloque B
-**Preguntas de cierre:** ¿Se parchea `main.js` (BUG-01 y BUG-02) antes de continuar con A9 o se deja para el final del proyecto?
+**Completado esta sesión:** A8 documentado (Flashcard Generator, uso principal en supernova y comet, Commander con ícono layers-2). A12 documentado (flujo Prepare → Better Export PDF → Restore, limitación conocida de bloques cornell en export).
+**Próximo paso:** Continuar con A9 → A11 → Bloque B
+**Preguntas de cierre:** ¿Se parchea `main.js` antes de continuar con A9 o se deja para el final?
 
 ---
 
@@ -229,11 +226,6 @@ El archivo se crea con el timestamp antes de que el template se ejecute — el s
 | 2026-07-23 | A10 documentado — OCD y SuperDoodle son motores distintos | Flujos y destinos de guardado diferentes |
 | 2026-07-23 | `tpl-zk.md` modificado — rename por polling + openFile | Evita renombrar el archivo activo (void) |
 | 2026-07-23 | Nombre ZK timestamp no resoluble desde template | El archivo se crea antes de que el template corra — fix requiere `main.js` |
-| 2026-07-23 | A8: una marginalia por línea en callouts | Dos marginalia en la misma línea contaminan las tarjetas generadas — convención, no bug |
-| 2026-07-23 | A8: Flashcards Generation siempre post-Restore | Durante el Prepare el texto tiene IDs temporales que contaminan las tarjetas |
-| 2026-07-23 | A8: comet es caso de uso propio, no solo herencia | Fórmulas clave y pasos de examen se anotan con `;;` directamente en el comet |
-| 2026-07-23 | A12: bloques cornell no exportan correctamente | Choque entre Cornell Notes y Cornell Marginalia en el motor de print — limitación conocida |
-| 2026-07-23 | A12: convención export = solo marginalia inline | Evitar bloques `cornell` y `marginalia` anidado en notas destinadas a PDF |
 
 > [!note]- Descartadas
 > A3 como método general — no agrupa visualmente el contenido como se esperaba.

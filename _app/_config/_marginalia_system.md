@@ -357,7 +357,33 @@ Explorer → tab `board` → botón `zen doodle mode`
 
 ## A12. PDF Export
 
-> Pendiente de prueba.
+> Flujo: **Prepare → Export → Restore** vía Command Palette.
+> Exportador: **Better Export PDF** (plugin instalado) — soporta activación de CSS snippets.
+
+### Flujo probado
+
+1. `Ctrl+P` → `Cornell Marginalia: Prepare Marginalia for PDF Print` — las `%%> %%` se convierten a HTML de print.
+2. Exportar con Better Export PDF (`Ctrl+P` → `Better Export PDF: Export Current File to PDF`).
+3. `Ctrl+P` → `Cornell Marginalia: Restore Marginalia after PDF Print` — el archivo vuelve al Markdown original.
+
+### Probado
+
+- Marginalia inline simples (`%%> %%`, `%%< %%`) en párrafo → exportan correctamente con layout de columna izquierda.
+- Tags semánticos con colores → se preservan en el PDF.
+- Prepare + Restore → el archivo vuelve limpio al formato original.
+
+### Notado
+
+- **Bloques `cornell` (::cue / ::note) no se exportan correctamente** — el Prepare convierte el bloque externo a HTML pero el contenido interno no renderiza en layout Cornell dentro de Better Export PDF. Los `::cue` y `::note` aparecen como texto plano. Limitación conocida por choque entre Cornell Notes y Cornell Marginalia en el motor de print.
+- **Convención Galaxy para export:** usar solo marginalia inline simples (`%%> %%`) en notas destinadas a exportar. Evitar bloques `cornell` y bloque `marginalia` anidado en notas que se van a imprimir.
+- Correr el comando **Flashcards Generation después del Restore**, nunca durante el estado de Prepare — el Prepare inyecta IDs temporales en el texto que contaminan las tarjetas generadas.
+
+### Dónde se usa en Galaxy
+
+| Caso | `galaxy_body` | Uso |
+|---|---|---|
+| Resumen de parcial imprimible | `dwarf` | Exportar el resumen con marginalia al margen en layout Cornell para estudio en papel o tablet |
+| Ejercicio para revisión | `comet` | Exportar con pasos clave y fórmulas visibles al margen |
 
 ---
 
