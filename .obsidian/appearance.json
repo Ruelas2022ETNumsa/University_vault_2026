@@ -3,7 +3,7 @@
   "showRibbon": true,
   "accentColor": "",
   "nativeMenus": false,
-  "baseFontSize": 10,
+  "baseFontSize": 14,
   "baseFontSizeAction": true,
   "enabledCssSnippets": [
     "supercharged-links-gen",

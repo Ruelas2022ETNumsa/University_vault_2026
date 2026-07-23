@@ -6450,6 +6450,7 @@ traducidos
 traducciones
 trueno
 templatesulg
+tempContent
 ToDo
 Templater
 Text
@@ -77933,6 +77934,7 @@ recorta
 recuperaci
 rueda
 reset
+registerMarkdownPostProcessor
 notes
 notas
 nuevas
@@ -91531,6 +91533,7 @@ chbwN
 conecion
 cccoonn
 ctime
+cleanDestName
 updated
 un
 universo
@@ -150473,6 +150476,9 @@ porta
 portapapeloes
 pOA
 pxXu
+polling
+parcheo
+parchea
 min
 mica
 movimiento
@@ -158022,6 +158028,7 @@ multimodal
 mostradas
 masivo
 mitocondria
+moment
 YAML
 Ya
 You
@@ -184922,6 +184929,7 @@ Memorizar
 Mazo
 Mass
 Mpog
+MarkdownRenderer
 Lectura
 LaTeX
 Linter
@@ -229795,6 +229803,9 @@ fMbq
 formateo
 free
 fenced
+finalNoteText
+finalRenderText
+finalDestName
 haya
 hace
 hacer
@@ -332122,6 +332133,7 @@ zYsz
 zIDAT
 zIdG
 zkFile
+zkId
 kEG
 kE
 kg

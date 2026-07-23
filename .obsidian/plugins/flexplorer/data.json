@@ -2798,15 +2798,11 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "20260723164408.md",
+        "20260723164254.md",
+        "20260723163953.md",
         "20260723163008.md",
-        "title1630.md",
-        "20260723161355.md",
-        "20260723160752.md",
-        "20260723160113.md",
-        "20260723154127.md",
-        "20260723151633.md",
-        "20260723151457.md",
-        "explorer.md"
+        "20260723151457.md"
       ]
     },
     "Marginalia Attachments": {
@@ -2897,17 +2893,13 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "doodle_20260723_164408.png",
+        "doodle_20260723_164254.png",
+        "doodle_20260723_163953.png",
         "doodle_20260723_163008.png",
-        "title1630-23-07-2026_16-18-51.png",
-        "doodle_20260723_161355.png",
-        "doodle_20260723_160752.png",
-        "doodle_20260723_160113.png",
         "superdoodle_20260723_154316.png",
-        "doodle_20260723_154127.png",
         "boarslug.png",
-        "doodle_20260723_151633.png",
         "doodle_20260723_151457.png",
-        "explorer-23-07-2026_15-10-36.png",
         "superdoodle_20260723_150411.png",
         "Untitled-19-07-2026_17-20-32.png",
         "Untitled-15-07-2026_22-40-34.png",
@@ -3038,7 +3030,7 @@
       "isHidden": false
     },
     "_skills/_start.md": {
-      "isPinned": false,
+      "isPinned": true,
       "isHidden": false
     },
     "_skills/_claude-setup.md": {
@@ -3050,6 +3042,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "tsk_alx-rul 1.md",
         "_ideas_1_apps_2brain.md",
         "tsk_emergn.md",
         "tsk_standb.md",
@@ -3184,27 +3177,7 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Zettelkasten/explorer.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Zettelkasten/20260723151457.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/explorer-23-07-2026_15-10-36.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/doodle_20260723_151633.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Zettelkasten/20260723151633.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/doodle_20260723_154127.png": {
       "isPinned": false,
       "isHidden": false
     },
@@ -3212,19 +3185,7 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Zettelkasten/20260723154127.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_assets/superdoodle_20260723_154316.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/doodle_20260723_160113.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Zettelkasten/20260723160113.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -3232,27 +3193,7 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_assets/doodle_20260723_160752.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Zettelkasten/20260723160752.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/doodle_20260723_161355.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Zettelkasten/20260723161355.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_assets/doodle_20260723_163008.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Zettelkasten/title1630.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -3260,7 +3201,31 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_assets/title1630-23-07-2026_16-18-51.png": {
+    "_assets/doodle_20260723_163953.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Zettelkasten/20260723163953.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/doodle_20260723_164254.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Zettelkasten/20260723164254.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/doodle_20260723_164408.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Zettelkasten/20260723164408.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_projects/tsk_alx-rul 1.md": {
       "isPinned": false,
       "isHidden": false
     }
@@ -3269,7 +3234,8 @@
     "Rubbish/section.md",
     "_projects/tsk_tpl.md",
     "_app/_config/_galaxy-system.md",
-    "_skills/_claude-boot.md"
+    "_skills/_claude-boot.md",
+    "_skills/_start.md"
   ],
   "showHidden": false,
   "newItemPlacement": "top",
