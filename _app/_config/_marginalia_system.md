@@ -257,7 +257,64 @@ status: activo
 
 ## A10. Doodle Engine
 
-> Pendiente de prueba.
+> Dos motores de dibujo: **OCD** (Omni-Capture Doodle) y **SuperDoodle** (Zen Doodle del Board).
+> Ambos guardan el PNG en `assets/` y crean nota vía `tpl-zk.md`.
+
+### OCD — Omni-Capture Doodle
+
+**Triggers:**
+- Comando `Cornell Marginalia: Open Sidebar Doodle Canvas`
+- Explorer → botón `doodle` (sección Omni-Capture)
+
+**Interfaz (4 secciones):**
+- Botón cerrar (esquina superior derecha)
+- Título "Omni-capture Doodle"
+- Recuadro de dibujo libre (click izquierdo, derecho y rueda — sin zoom)
+- 6 botones en la base: izquierda → lápiz / borrador / reset · derecha → cancel / attach / trueno
+
+**Flujo probado:**
+1. Dibujar en el recuadro
+2. Presionar `attach` → notificación según trigger:
+   - Comando: `"doodle in memory! press 'trueno' in the sidebar to save"` — el trueno a presionar está en el sidebar
+   - Explorer: `"doodle attached! press 'trueno' to save"` — el trueno está en el mismo Explorer
+3. Presionar trueno → pide slug, materia, connection\_type, partial (campos de `tpl-zk.md`)
+4. Crea nota ZK en `Zettelkasten/` con nombre de timestamp (`20260723151036.md`) + PNG en `assets/`
+
+### SuperDoodle — Zen Doodle del Board
+
+**Flujo de acceso:**
+Explorer → tab `board` → botón `zen doodle mode`
+
+**Interfaz (7 secciones):**
+- Título "Marginalia Explorer"
+- Subtítulo "active board"
+- Recuadro de texto + botón `+`
+- Tabs (current / vault / threads / board)
+- Barra de herramientas: ← return / hand / bolígrafo / borrador / lasso · selector de resolución (1x / 2x / 4x / 8x) · selector de grosor · paleta (negro, rojo, azul, verde)
+- 3 botones de guardado: basurero (clear) / `attach to board` / `omni-capture`
+- Recuadro de dibujo
+
+**Botones de guardado probados:**
+- `basurero` → borra el dibujo (reset)
+- `attach to board` → guarda PNG en `assets/` con nombre `superdoodle_YYYYMMDD_HHMMSS` + lo muestra en el Board del Explorer. Notificación: `"superdoodle attach to board"`
+- `omni-capture` → pide slug, materia, connection\_type, partial (vía `tpl-zk.md`) → crea nota ZK en `Zettelkasten/` con timestamp
+
+### Notado
+
+- OCD es canvas simple sin herramientas — útil para bocetos rápidos.
+- SuperDoodle es canvas completo (resolución, grosor, colores, lasso) — útil para diagramas más elaborados.
+- Ambos motores usan `tpl-zk.md` para el guardado final — el formulario (slug, materia, etc.) es infraestructura Galaxy, no del plugin.
+- La diferencia entre los dos triggers de OCD está en la notificación: "in memory" (comando) vs "attached" (Explorer) — el resultado final es idéntico.
+- El archivo ZK generado puede incluir contenido del portapapeles si hay algo copiado al momento de guardar — es el campo `{{citation}}` del Omni-Capture leyendo el clipboard automáticamente. Limpiar el portapapeles antes de guardar si no se quiere ese contenido.
+- `tpl-zk.md` fue modificado: se comentó `tp.file.rename(slug)` para evitar que el archivo activo sea renombrado al guardar el doodle.
+
+### Dónde se usa en Galaxy
+
+| Caso | Motor | `galaxy_body` | Uso |
+|---|---|---|---|
+| Boceto rápido al margen | OCD | planet / comet / supernova | Diagrama o esquema simple para adjuntar a una nota activa |
+| Diagrama elaborado | SuperDoodle | planet / comet | Canvas con colores y resolución alta para diagramas complejos |
+| Boceto vinculado al Board | SuperDoodle → attach to board | cualquiera | Agregar imagen al Pinboard para síntesis visual |
 
 ---
 
