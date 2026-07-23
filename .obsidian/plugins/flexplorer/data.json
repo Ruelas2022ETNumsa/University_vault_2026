@@ -13,7 +13,7 @@
         "_projects",
         "_assets",
         "Rubbish",
-        "slugexplorer.md",
+        "nombregriego.md",
         "Zettelkasten",
         "Marginalia Attachments",
         "Borrar",
@@ -2798,6 +2798,8 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "20260723154127.md",
+        "20260723151633.md",
         "20260723151457.md",
         "explorer.md"
       ]
@@ -2890,6 +2892,10 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "doodle_20260723_160113.png",
+        "superdoodle_20260723_154316.png",
+        "doodle_20260723_154127.png",
+        "boarslug.png",
         "doodle_20260723_151633.png",
         "doodle_20260723_151457.png",
         "explorer-23-07-2026_15-10-36.png",
@@ -3185,7 +3191,31 @@
       "isPinned": false,
       "isHidden": false
     },
-    "slugexplorer.md": {
+    "Zettelkasten/20260723151633.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/doodle_20260723_154127.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/boarslug.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Zettelkasten/20260723154127.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/superdoodle_20260723_154316.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/doodle_20260723_160113.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "nombregriego.md": {
       "isPinned": false,
       "isHidden": false
     }
