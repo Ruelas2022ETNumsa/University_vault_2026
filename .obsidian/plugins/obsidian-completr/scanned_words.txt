@@ -50785,6 +50785,7 @@ brain
 bookmarks
 bBa
 busco
+bLAbLA
 scope
 status
 selector
@@ -71132,6 +71133,8 @@ apilan
 agrupada
 ammamamama
 amamam
+agrupado
+asign
 related
 recomendados
 ribbon
@@ -91454,6 +91457,7 @@ cort
 cont
 caracteristicas
 causales
+converger
 updated
 un
 universo
@@ -184799,6 +184803,7 @@ Mostr
 Mapea
 Multimodal
 Mejor
+Memorizar
 Lectura
 LaTeX
 Linter
@@ -204913,6 +204918,8 @@ identificadas
 infograf
 inbox
 interpretaba
+impulso
+inestables
 Dependencia
 Dropbox
 Dataview
@@ -223885,6 +223892,7 @@ Handoff
 Hora
 Heptabase
 HXBJ
+Hover
 filtrar
 formato
 faltantes

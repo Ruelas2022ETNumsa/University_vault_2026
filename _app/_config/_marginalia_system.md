@@ -140,6 +140,7 @@ status: activo
 | Caso | `galaxy_body` | Uso |
 |---|---|---|
 | Múltiples marginalia | planet / comet | Bloque con varias notas semánticas — el callout gestiona el espaciado automáticamente |
+| Imagen + texto | planet / comet | Cuando el bloque incluye imagen — A4 no renderiza imagen correctamente |
 
 ---
 
@@ -163,23 +164,43 @@ status: activo
 
 - **Regla de múltiples marginalia:** cada elemento con su propia marginalia debe estar separado por una línea en blanco dentro del bloque. Sin el salto, las notas se apilan o desalinean.
 - **Regla del punto final:** cuando el último elemento es una lista, agregar `.` en la línea siguiente para que el último ítem tenga ancla de alineación.
-- El bloque `marginalia` es superior a `[!cornell]` callout (A3) en todos los casos probados.
+- **Regla imagen:** A4 no renderiza imágenes correctamente dentro del bloque — usar A3 cuando el contenido incluye `img:[[...]]`.
+- El bloque `marginalia` es superior a `[!cornell]` callout (A3) en todos los casos probados excepto imagen y múltiples marginalia.
 
 ### Dónde se usa en Galaxy
 
-| Caso                 | `galaxy_body`         | Uso                                                                        |
-| -------------------- | --------------------- | -------------------------------------------------------------------------- |
-| Párrafo + lista      | planet / moon / dwarf | Concepto + puntos clave agrupados con nota al margen                       |
-| Párrafo + LaTeX      | planet / comet        | Fórmula con sus propiedades y tag `F-`                                     |
-| Párrafo + imagen     | planet / comet        | Diagrama con referencia cruzada al margen                                  |
-| Múltiples marginalia | planet / comet        | Bloque de desarrollo con varias notas semánticas — respetar salto de línea |
-| Anidado en `cornell` | supernova / planet    | Flujo principal — \%%> \%% en ::cue, \%%< \%% en ::note                    |
+| Caso                     | `galaxy_body`         | Uso                                                                            |
+| ------------------------ | --------------------- | ------------------------------------------------------------------------------ |
+| Párrafo + lista          | planet / moon / dwarf | Concepto + puntos clave agrupados con nota al margen                           |
+| Párrafo + LaTeX          | planet / comet        | Fórmula con sus propiedades y tag `F-`                                         |
+| ~~Párrafo + imagen~~     | ~~planet / comet~~    | ~~Diagrama con referencia cruzada al margen~~                                  |
+| ~~Múltiples marginalia~~ | ~~planet / comet~~    | ~~Bloque de desarrollo con varias notas semánticas — respetar salto de línea~~ |
+| Anidado en `cornell`     | supernova / planet    | Flujo principal — \%%> \%% en ::cue, \%%< \%% en ::note                        |
 
 ---
 
 ## A5. Imágenes en el margen
 
-> Pendiente de prueba.
+> Sintaxis: `\%%> img:[[imagen.png]] \%%` / `\%%< img:[[imagen.png]] \%%`
+> Hover zoom automático al pasar el cursor.
+
+### Probado
+
+- Inline izquierda → renderiza correctamente.
+- Tag `C-` derecha → renderiza correctamente.
+- A3 callout con imagen → renderiza correctamente.
+- A4 bloque marginalia con imagen → **falla**, renderiza la imagen recortada.
+
+### Notado
+
+- Para imágenes en el margen usar **siempre A3** muestra imagen completa. A4 recorta la imagen.
+
+### Dónde se usa en Galaxy
+
+| Caso | `galaxy_body` | Uso |
+|---|---|---|
+| Imagen inline | planet / comet / supernova | Diagrama, gráfica o captura al margen con `img:[[...]]` |
+| Imagen + comentario | planet / comet | A3 con `img:[[...]]` y tag `C-` al margen opuesto |
 
 ---
 

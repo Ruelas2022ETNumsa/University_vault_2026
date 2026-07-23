@@ -1,303 +1,101 @@
+**A6 — Marginalia Explorer**
 
-**A1 — Sintaxis core**
-
-Tres cosas para probar:
-
-1. **Inline simple** — escribir %%> izquierda%% en medio de un párrafo .
-
-2. **Inline simple** — escribir %%< derecha%% en medio de un párrafo .
-   
-3. **Con LaTeX** — ecuaciones %%> Ver fórmula $e^{j\theta}$ %% para confirmar que LaTeX dentro del margen renderiza bien.
-
-4. **con comillas** — escribir `%%> algún texto %%` en medio de un párrafo 111111
-
-5. **con comillas** — escribir `%%> 2222   algún texto %%` en medio de un párrafo 
-
-bien la idea no es solo probar las caracteristicas del plugin sino tambien saber donde usarlos.
+Ejemplo completo para probar el sidebar: escanea este archivo y verifica que cada tag aparece agrupado correctamente en el Explorer.
 
 ---
 
-**A2 — Semantic Highlighting**
+**1. Inline simple izquierda — todos los tags**
 
-Cada línea prueba un tag. Verificar color en Reading View y Live Preview.
+La transformada de Laplace convierte una EDO en ecuación algebraica. %%> ! Entra en examen %%
 
-1. **`!` ámbar** — Texto de referencia %%< ! Esto es importante, entra en examen %% fin de línea.
+La región de convergencia determina la unicidad de la transformada. %%> ? ¿Por qué debe converger? %%
 
-2. **`?` azul petróleo** — Texto de referencia %%< ? ¿Por qué se cumple esta condición? %% fin de línea.
+El signo negativo en la exponencial es incorrecto en esta derivación. %%> X- Error de signo %%
 
-3. **`X-` naranja quemado** — Texto de referencia %%< X- Error de signo en esta fórmula %% fin de línea.
+El docente asignó demostrar el teorema de valor final. %%> T- Tarea: demostrar TVF %%
 
-4. **`V-` verde oliva** — Texto de referencia %%< V- Verificado con Kreyszig p.218 %% fin de línea.
+Dato confirmado con Kreyszig p.218. %%> V- Verificado %%
 
-5. **`C-` gris antracita** — Texto de referencia %%< C- Comentario neutro sin carga semántica %% fin de línea.
+Esto se relaciona con el contenido de ETN806 T03. %%> R- Ver ETN806 T03 %%
 
-6. **`F-` morado** — Texto de referencia %%< F- Fórmula clave del tema %% fin de línea.
+La condición inicial es $f(0^-)=0$ para sistemas causales. %%> C- Aplica solo a sistemas causales %%
 
-7. **`R-` verde azulado** — Texto de referencia %%< R- Relación con ETN806 T03 %% fin de línea.
-
----
-
-**A4 — Grouping Method B** (bloque `marginalia`)
-
-Caso 1 — párrafo simple:
-
-```marginalia
-La transformada de Laplace convierte una EDO en una ecuación algebraica. bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla%%> ! Concepto clave %%
-```
-
-Caso 2 — párrafo + lista:
-
-```marginalia
-La transformada de Laplace convierte una EDO en una ecuación algebraica. %%> ! Entra en examen %%
-- Condición: $\text{Re}(s) > \sigma_0$
-- Útil para sistemas LTI causales
-- Inversa mediante fracciones parciales
-```
-
-Caso 3 — párrafo + imagen:
-
-```marginalia
-El plano $s$ representa la región de convergencia. %%> F- Ver diagrama %%
-![[_assets/test_image.png]]
-```
-
-Caso 4 — párrafo + LaTeX:
-
-```marginalia
-$\mathcal{L}\{f(t)\} = \int_0^\infty e^{-st} f(t)\, dt$ %%> F- Ecuación central %%
-- Converge para $\text{Re}(s) > \sigma_0$
-- Lineal: $\mathcal{L}\{af+bg\} = aF+bG$
-```
-
-Caso 5 — nota antes del texto:
-
-```marginalia
-%%> ! Entra en examen %% La región de convergencia determina la unicidad de la transformada.
-```
-
-Caso 6 — nota después del texto:
-
-```marginalia
-La región de convergencia determina la unicidad de la transformada. %%> ! Entra en examen %%
-```
-
-Caso 7 — múltiples marginalia en el mismo bloque:
-
-```marginalia
-La transformada de Laplace convierte una EDO en una ecuación algebraica. %%> ! Entra en examen %%
-
-$\mathcal{L}\{f(t)\} = \int_0^\infty e^{-st} f(t)\, dt$ %%> F- Ecuación central %%
-
-- Converge para $\text{Re}(s) > \sigma_0$ %%> ? ¿Qué pasa si no converge? %% .
-```
-
-
-123123123
-> [!cornell]
-> %%> ! Concepto clave %%
-> La transformada de Laplace convierte una EDO en una ecuación algebraica.%%> ! Entra en examen %%
-> $\mathcal{L}\{f(t)\} = \int_0^\infty e^{-st} f(t)\, dt$%%> F- Ecuación central %%
-> La condición de convergencia es $\text{Re}(s) > \sigma_0$%%> ? ¿Qué pasa si no converge? %%
-
-
-
-
-
-123123123
-
+La ecuación central del tema es la definición integral. %%> F- Fórmula clave %%
 
 ---
 
+**2. Fórmula derecha**
+
+$\mathcal{L}\{f(t)\} = \int_0^\infty e^{-st} f(t)\, dt$ %%< F- Definición integral de Laplace %%
+
+$\mathcal{L}\{f'(t)\} = sF(s) - f(0^-)$ %%< ! Teorema de derivación — entra en examen %%
+
+$\lim_{t \to \infty} f(t) = \lim_{s \to 0} sF(s)$ %%< ? ¿Cuándo falla el TVF? %%
+
+---
+
+**3. Bloque Cornell — ::cue / ::note**
 
 
-
-Caso 8 — anidado dentro de cornell (flujo Galaxy real):
-
-
-
-
-
+- A4
 
 
 `````cornell
 ::cue
 ````marginalia %%> %%
-Transformada de Laplace %%> ? ¿Cuál es la condición de convergencia? %%
+Transformada de Laplace %%> ! Concepto central del curso %%
+ROC %%> ? ¿Qué forma tiene la ROC para señales causales? %%
+Teorema de derivación %%> F- $sF(s)-f(0^-)$ %%
 ````
 
 ::note
 ````marginalia %%< %%
 Convierte EDO en ecuación algebraica en el dominio $s$. %%< V- Kreyszig p.218 %%
-Condición: $\text{Re}(s) > \sigma_0$
+La ROC es un semiplano derecho para señales causales. %%< C- Solo para sistemas LTI causales %%
+Error detectado: el límite inferior debe ser $0^-$ no $0$. %%< X- Corregir límite inferior %%
 ````
-
-````marginalia
-La transformada de Laplace convierte una EDO en una ecuación algebraica. %%> ! Entra en examen %%
-
-$\mathcal{L}\{f(t)\} = \int_0^\infty e^{-st} f(t)\, dt$ %%> F- Ecuación central %%
-
-- Converge para $\text{Re}(s) > \sigma_0$ %%> ? ¿Qué pasa si no converge? %% .
-````
-
-
-
-
-> [!cornell]
-> %%> ! Concepto clave %%
-> ppppLa transformada de Laplace convierte una EDO en una ecuación algebraica.%%> ! Entra en examen %%
-> $\mathcal{L}\{f(t)\} = \int_0^\infty e^{-st} f(t)\, dt$%%> F- Ecuación central %%
-> La condición de convergencia es $\text{Re}(s) > \sigma_0$%%> ? ¿Qué pasa si no converge? %%
-
-
 `````
----
+
+- A3
 
 
 
-
-Primero busco imágenes disponibles en assets:Bien, uso `ima-1.png` que tiene nombre limpio. Los 4 casos:
-
-**Caso 1 — inline simple izquierda:**
-
-
-Texto de referencia antes de la imagen. %%> ! Imagen al margen izquierdo %%
-![[_assets/ima-1.png]]
-
-
-**Caso 2 — tag `C-` derecha:**
-
-
-Texto de referencia antes de la imagen. %%< C- Comentario sobre el diagrama %%
-![[_assets/ima-1.png]]
-
-
-**Caso 3 — A3 (callout `[!cornell]`):**
-
-
-> [!cornell]%%> ! Imagen agrupada en callout %%
-> ![[_assets/ima-1.png]]
-> %%< C- Comentario derecho sobre la misma imagen %%
-> Descripción del diagrama debajo.
-
-
-**Caso 4 — A4 (bloque `marginalia`):**
-
-
-```marginalia
-Descripción del diagrama. %%> ! Imagen en bloque marginalia %%
-![[_assets/ima-1.png]]
-```
-
-
-
-
-
-
-
-
-
-
-
-
-ammamamama
-
-
----
-
-**A5 — Imágenes en el margen**
-
-Sintaxis: `%%> img:[[imagen.png]] %%` / `%%< img:[[imagen.png]] %%`
-
-Caso 1 — inline simple izquierda:
-
-Texto de referencia. %%> img:[[_assets/ima-1.png]] %%
-bLA blA bla
-bLA blA bLAbLA blA bLAbLA blA bLA
-bLA blA bLA
-bLA blA bLA
-bLA blA bLA
-bLA blA bLA
-bLA blA bLA
-bLA blA bLA
-bLA blA bLA
-bLA blA bLA
-bLA blA bLA
-bLA blA bLA
-
-
----
-
-Caso 2 — tag `C-` derecha:
-bLA blA bLA
-
-Texto de referencia. %%< C- img:[[_assets/ima-1.png]] %%
-bLA blA bLA
-bLA blA bLA
-bLA blA bLA
-bLA blA bLA
-bLA blA bLA
-bLA blA bLA
-bLA blA bLA
-bLA blA bLA
-bLA blA bLA
-bLA blA bLA
-bLA blA bLA
-bLA blA bLA
-bLA blA bLA
-
-
----
-
-Caso 3 — A3 callout con imagen:
+```cornell
+::cue
 
 > [!cornell]
-> Descripción del diagrama. %%> img:[[_assets/ima-1.png]] %%
-> %%< C- ww Comentario derecho sobre la imagen %%
+> Transformada de Laplace %%> ! Concepto central del curso %%
+> ROC %%> ? ¿Qué forma tiene la ROC para señales causales? %%
+> Teorema de derivación %%> F- $sF(s)-f(0^-)$ %%
 
-bLA blA bLA
-bLA blA bLA
-bLA blA bLA
-bLA blA bLA
-bLA blA bLA
-bLA blA bLA
-bLA blA bLA
-bLA blA bLA
+::note
+
+> [!cornell]
+> Convierte EDO en ecuación algebraica en el dominio $s$. %%< V- Kreyszig p.218 %%
+> La ROC es un semiplano derecho para señales causales. %%< C- Solo para sistemas LTI causales %%
+> Error detectado: el límite inferior debe ser $0^-$ no $0$. %%< X- Corregir límite inferior %%
+```
+
+
 
 
 
 
 ---
 
-Caso 4 — A4 bloque marginalia con imagen:
+**4. Imagen en el margen — A3 callout**
 
-```marginalia
-Descripción del diagrama. %%> img:[[_assets/ima-1.png]] %%
-Detalle adicional debajo de la imagen.
+> [!cornell]
+> Diagrama del plano $s$ con región de convergencia. %%> img:[[_assets/ima-1.png]] %%
+> %%< C- La ROC nunca contiene polos %%
 
-bLA blA bLA
-bLA blA bLA
-bLA blA bLA
-bLA blA bLA
-bLA blA bLA
-bLA blA bLA
-bLA blA bLA
-bLA blA bLA
-bLA blA bLAbLA blA bLA
-```
+> [!cornell]
+> Respuesta al impulso del sistema. %%> img:[[_assets/ima-1.png]] %%
+> %%< ! Memorizar forma general %%
 
-bLA blA bLA
-bLA blA bLA
-bLA blA bLA
-
-
-amamam
-
-
-
-
-
-
-
+> [!cornell]
+> Diagrama de polos y ceros. %%> img:[[_assets/ima-1.png]] %%
+> %%< ? ¿Dónde están los polos inestables? %%
 
 %%
 # galaxy linkds

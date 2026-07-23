@@ -28,7 +28,7 @@ Recorrer en orden. Probar antes de decidir.
 - [x] **A2. Semantic Highlighting** — prefijos `?` `!` `X-` `V-`. Probar los 4 colores. Evaluar si los 4 cubren los casos de ingeniería o hacen falta más.
 - [x] **A3. Grouping Method A** — callout `[!cornell]`. Probar con párrafo + lista y con párrafo + imagen. Solo Reading View.
 - [x] **A4. Grouping Method B** — bloque ` ```marginalia `. Probar composición compleja. Probar que la nota va ANTES del texto (BUENA NOTA CORNELL). Evaluar cuándo usar A vs B.
-- [ ] **A5. Imágenes en el margen** — \%%> img:[[...]] \%%. Probar con una imagen real del vault. Probar el zoom hover.
+- [x] **A5. Imágenes en el margen** — \%%> img:[[...]] \%%. Probar con una imagen real del vault. Probar el zoom hover.
 - [ ] **A6. Marginalia Explorer** — sidebar, tabs Current / Vault / Threads / Board. Probar Click-to-Scroll, filtro por color, hover X-Ray con tecla H, drag a Canvas o Excalidraw.
 - [ ] **A7. Active Recall — Blur** — ícono 👁️, sintaxis `;;`. Probar en Live Preview y Reading View. Probar Blur Explanatory Marginalias.
 - [ ] **A8. Flashcard Generator** — comando "Flashcards Generation". Probar que genera sección al final. Evaluar relación con `supernova`, `planet`, `comet`.
