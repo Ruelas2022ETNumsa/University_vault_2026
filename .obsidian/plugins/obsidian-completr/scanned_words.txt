@@ -26871,6 +26871,7 @@ Punta
 Play
 Paste
 Pinear
+Pista
 del
 date
 de
@@ -32477,6 +32478,7 @@ dfgdfgdfgdgfdg
 desalinean
 dest
 destination
+difumina
 Vault
 Verificar
 Variables
@@ -50798,6 +50800,7 @@ bookmarks
 bBa
 busco
 bLAbLA
+borroso
 scope
 status
 selector
@@ -58073,6 +58076,7 @@ surjan
 saca
 scan
 skeleton
+setting
 vault
 vil
 ver
@@ -77900,6 +77904,9 @@ rgenes
 resaltados
 repasar
 redocumentar
+recortada
+recorta
+recuperaci
 notes
 notas
 nuevas
@@ -144096,6 +144103,7 @@ Anidado
 Attach
 Adjunta
 Agrupa
+Activaci
 push
 pull
 para

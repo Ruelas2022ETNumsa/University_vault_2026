@@ -92,7 +92,7 @@ Recorrer en orden. Probar antes de decidir.
 
 Recorrer sección por sección. Para cada setting: entender, decidir valor Galaxy, documentar.
 
-- [ ] **A7. Active Recall — Blur** — ícono 👁️, sintaxis `;;`. Probar en Live Preview y Reading View. Probar Blur Explanatory Marginalias.
+- [x] **A7. Active Recall — Blur** — ícono 👁️, sintaxis `;;`. Probar en Live Preview y Reading View. Probar Blur Explanatory Marginalias.
 - [ ] **A8. Flashcard Generator** — comando "Flashcards Generation". Probar que genera sección al final. Evaluar relación con `supernova`, `planet`, `comet`.
 - [ ] **A9. Margin Threads** — Stitch, Drag & Drop, Mass Stitch. Probar conexión entre dos notas distintas. Ver árbol en tab Threads. Probar Hover Peek (botón 🔗).
 - [ ] **A10. Doodle Engine** — comando "Draw a Doodle". Probar guardar boceto → inyección automática en nota. Probar Super Doodle si se activa.
@@ -182,6 +182,8 @@ Recorrer sección por sección. Para cada setting: entender, decidir valor Galax
 | 2026-07-22 | Múltiples marginalia en A4 requieren salto de línea | Sin salto se apilan o desalinean |
 | 2026-07-22 | Regla del punto final en listas con A4 | El último ítem necesita ancla de alineación |
 | 2026-07-22 | `marginalia_explorer_guide.md` creado como beacon en `_appnotes/` | UI demasiado detallada para `_marginalia_system` |
+| 2026-07-23 | A7 blur funciona en ambos modos con botón 👁️ activo | Probado en 6 casos en void.md |
+| 2026-07-23 | Bug visual `;;` en Reading View — pendiente revisión de `main.js` | No configurable desde Settings; se mantiene por ahora |
 
 > [!note]- Descartadas
 > A3 como método general — no agrupa visualmente el contenido como se esperaba.

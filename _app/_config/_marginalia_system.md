@@ -212,7 +212,34 @@ status: activo
 
 ## A7. Active Recall — Blur
 
-> Pendiente de prueba.
+> Sintaxis: `;;` al final del texto de la marginalia.
+> Activación: botón 👁️ **Toggle Active Recall Mode** en el ribbon.
+
+### Probado
+
+- Blur básico (`;;`) en margen izquierdo → renderiza correctamente en Live Preview y Reading View.
+- Blur con tag semántico (`! ;;`) → renderiza correctamente.
+- Blur Explanatory: pista normal + pregunta `;;` en misma línea → la pista también se difumina con setting ON.
+- Blur en margen derecho (`%%<`) → renderiza correctamente.
+- Múltiples blur en mismo párrafo → renderiza correctamente.
+- Marginalia normal conviviendo con blur en misma línea → correcta distinción con Blur Explanatory OFF.
+
+### Notado
+
+- El modo se activa globalmente con el botón 👁️ **Toggle Active Recall Mode** en el ribbon — sin activarlo, ninguna marginalia se difumina.
+- Hover sobre el texto borroso revela la respuesta en ambos modos.
+- **Blur Explanatory Marginalias** (Settings → ON): difumina también las marginalia normales que comparten línea con una `;;`, evitando spoilers cruzados.
+
+> [!warning] Bug visual pendiente
+> En Reading View el marcador `;;` se muestra visible dentro del texto de la marginalia. En Live Preview no aparece — el blur funciona correctamente. El autor del plugin documenta que debería funcionar igual en ambos modos. Se revisará en `main.js` en una sesión futura. Por ahora se mantiene el comportamiento actual.
+
+### Dónde se usa en Galaxy
+
+| Caso | `galaxy_body` | Uso |
+|---|---|---|
+| Pregunta de repaso | dwarf / planet | Marginalia con `;;` para ocultar la respuesta clave durante el repaso |
+| Pista + pregunta | dwarf | Marginalia normal como pista + `;;` en margen opuesto — Blur Explanatory ON oculta ambas |
+| Active recall en flujo Cornell | dwarf / supernova | `;;` dentro de `::cue` para convertir las claves en preguntas de recuperación activa |
 
 ---
 
