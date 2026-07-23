@@ -33,7 +33,7 @@ Recorrer en orden. Probar antes de decidir.
 - [x] **A3. Grouping Method A** — callout `[!cornell]`. Probar con párrafo + lista y con párrafo + imagen. Solo Reading View.
 - [x] **A4. Grouping Method B** — bloque ` ```marginalia `. Probar composición compleja. Probar que la nota va ANTES del texto (BUENA NOTA CORNELL). Evaluar cuándo usar A vs B.
 - [x] **A5. Imágenes en el margen** — \%%> img:[[...]] \%%. Probar con una imagen real del vault. Probar el zoom hover.
-- [x] **A6. Marginalia Explorer** — sidebar, tabs Current / Vault / Threads / Board. Probar Click-to-Scroll, filtro por color, hover X-Ray con tecla H, drag a Canvas o Excalidraw.
+- [ ] **A6. Marginalia Explorer** — sidebar, tabs Current / Vault / Threads / Board. Probar Click-to-Scroll, filtro por color, hover X-Ray con tecla H, drag a Canvas o Excalidraw.
 
 ---
 

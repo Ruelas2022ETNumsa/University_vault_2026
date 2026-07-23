@@ -6448,6 +6448,7 @@ tablero
 traducidas
 traducidos
 traducciones
+trueno
 ToDo
 Templater
 Text
@@ -13691,6 +13692,7 @@ TUWfG
 TvxI
 Textos
 Transformada
+Trueno
 Sistema
 Sync
 Save
@@ -21099,6 +21101,9 @@ Snippet
 Similar
 Sonar
 Similitud
+Step
+Seguidos
+Saltar
 Plugins
 Pendientes
 Plugin
@@ -26862,6 +26867,10 @@ Perplexity
 Probarla
 PRUEBA
 Probado
+Punta
+Play
+Paste
+Pinear
 del
 date
 de
@@ -32467,6 +32476,7 @@ detectados
 dfgdfgdfgdgfdg
 desalinean
 dest
+destination
 Vault
 Verificar
 Variables
@@ -45502,6 +45512,7 @@ gratuita
 groq
 gratuitos
 generoso
+girado
 body
 beacon
 bat
@@ -58060,6 +58071,8 @@ sApp
 significados
 surjan
 saca
+scan
+skeleton
 vault
 vil
 ver
@@ -71136,6 +71149,9 @@ ammamamama
 amamam
 agrupado
 asign
+appendear
+agrupadas
+appendea
 related
 recomendados
 ribbon
@@ -77879,6 +77895,11 @@ recurrencias
 replacement
 registrarse
 registrando
+respetando
+rgenes
+resaltados
+repasar
+redocumentar
 notes
 notas
 nuevas
@@ -91460,6 +91481,10 @@ caracteristicas
 causales
 converger
 clear
+circulares
+cartas
+copied
+conviviendo
 updated
 un
 universo
@@ -110795,6 +110820,10 @@ Constellation
 Comentario
 Converge
 Creados
+Cancel
+Cierra
+Conectar
+Clear
 Instalados
 Instalado
 Instalar
@@ -118127,6 +118156,8 @@ Iconos
 IDATcH
 IOZy
 Inversa
+Import
+Indent
 Funci
 File
 Fase
@@ -124573,6 +124604,9 @@ Finish
 Forzarles
 Faltan
 Feeq
+Filtros
+Filtra
+Flujos
 Estado
 Excalidraw
 EPUBs
@@ -131843,6 +131877,7 @@ Excluido
 Especialidad
 Escapar
 Entra
+Explorar
 Obsidian
 OmniSearch
 Ocultar
@@ -138257,6 +138292,9 @@ Omnivore
 OVgA
 OpenRouter
 OpenAI
+Overlay
+Outdent
+Organizar
 Auto
 Annotator
 Autocompletado
@@ -144055,6 +144093,9 @@ AqXj
 AUBS
 Anthropic
 Anidado
+Attach
+Adjunta
+Agrupa
 push
 pull
 para
@@ -150370,6 +150411,9 @@ precio
 privacidad
 probarla
 probados
+progreso
+previsualiza
+pinear
 min
 mica
 movimiento
@@ -157916,6 +157960,9 @@ marcha
 memorizaci
 migrados
 multimodal
+mostradas
+masivo
+mitocondria
 YAML
 Ya
 You
@@ -170015,6 +170062,8 @@ BBBGGGNNNPPPJJJFNZSSSVVV
 Bidireccional
 Backticks
 Bien
+Basurero
+Bayes
 en
 exacta
 escaneados
@@ -184808,6 +184857,8 @@ Mapea
 Multimodal
 Mejor
 Memorizar
+Mazo
+Mass
 Lectura
 LaTeX
 Linter
@@ -218749,6 +218800,11 @@ Reflejar
 RmSSeG
 Relevante
 Recorrer
+Reset
+Recuadro
+Refresca
+Reloj
+Recientes
 Hider
 Hace
 Herramientas
@@ -257464,6 +257520,7 @@ Nombramiento
 Napkin
 Nada
 Notado
+Notificaci
 originales
 observatory
 oficial
@@ -264304,6 +264361,8 @@ ordenable
 oZgi
 oMnl
 openrouter
+origin
+overlay
 junto
 json
 jer

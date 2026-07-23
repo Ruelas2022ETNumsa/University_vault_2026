@@ -1,0 +1,103 @@
+**A6 — Marginalia Explorer**
+
+Ejemplo completo para probar el sidebar: escanea este archivo y verifica que cada tag aparece agrupado correctamente en el Explorer.
+
+---
+
+**1. Inline simple izquierda — todos los tags**
+
+La transformada de Laplace convierte una EDO en ecuación algebraica. %%> ! Entra en examen %%
+
+La región de convergencia determina la unicidad de la transformada. %%> ? ¿Por qué debe converger? %%
+
+El signo negativo en la exponencial es incorrecto en esta derivación. %%> X- Error de signo %%
+
+El docente asignó demostrar el teorema de valor final. %%> T- Tarea: demostrar TVF %%
+
+Dato confirmado con Kreyszig p.218. %%> V- Verificado %%
+
+Esto se relaciona con el contenido de ETN806 T03. %%> R- Ver ETN806 T03 %%
+
+La condición inicial es $f(0^-)=0$ para sistemas causales. %%> C- Aplica solo a sistemas causales %%
+
+La ecuación central del tema es la definición integral. %%> F- Fórmula clave %%
+
+---
+
+**2. Fórmula derecha**
+
+$\mathcal{L}\{f(t)\} = \int_0^\infty e^{-st} f(t)\, dt$ %%< F- Definición integral de Laplace %%
+
+$\mathcal{L}\{f'(t)\} = sF(s) - f(0^-)$ %%< ! Teorema de derivación — entra en examen %%
+
+$\lim_{t \to \infty} f(t) = \lim_{s \to 0} sF(s)$ %%< ? ¿Cuándo falla el TVF? %%
+
+---
+
+**3. Bloque Cornell — ::cue / ::note**
+
+
+- A4
+
+
+`````cornell
+::cue
+````marginalia %%> %%
+Transformada de Laplace %%> ! Concepto central del curso %%
+ROC %%> ? ¿Qué forma tiene la ROC para señales causales? %%
+Teorema de derivación %%> F- $sF(s)-f(0^-)$ %%
+````
+
+::note
+````marginalia %%< %%
+Convierte EDO en ecuación algebraica en el dominio $s$. %%< V- Kreyszig p.218 %%
+La ROC es un semiplano derecho para señales causales. %%< C- Solo para sistemas LTI causales %%
+Error detectado: el límite inferior debe ser $0^-$ no $0$. %%< X- Corregir límite inferior %%
+````
+`````
+
+- A3
+
+
+
+```cornell
+::cue
+
+> [!cornell]
+> Transformada de Laplace %%> ! Concepto central del curso %%
+> ROC %%> ? ¿Qué forma tiene la ROC para señales causales? %%
+> Teorema de derivación %%> F- $sF(s)-f(0^-)$ %%
+
+::note
+
+> [!cornell]
+> Convierte EDO en ecuación algebraica en el dominio $s$. %%< V- Kreyszig p.218 %%
+> La ROC es un semiplano derecho para señales causales. %%< C- Solo para sistemas LTI causales %%
+> Error detectado: el límite inferior debe ser $0^-$ no $0$. %%< X- Corregir límite inferior %%
+```
+
+
+
+
+
+
+---
+
+**4. Imagen en el margen — A3 callout**
+
+> [!cornell]
+> Diagrama del plano $s$ con región de convergencia. %%> img:[[_assets/ima-1.png]] %%
+> %%< C- La ROC nunca contiene polos %%
+
+> [!cornell]
+> Respuesta al impulso del sistema. %%> img:[[_assets/ima-1.png]] %%
+> %%< ! Memorizar forma general %%
+
+> [!cornell]
+> Diagrama de polos y ceros. %%> img:[[_assets/ima-1.png]] %%
+> %%< ? ¿Dónde están los polos inestables? %%
+
+%%
+# galaxy linkds
+
+%%

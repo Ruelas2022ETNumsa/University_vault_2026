@@ -1,9 +1,9 @@
 {
   "showViewHeader": true,
-  "showRibbon": false,
+  "showRibbon": true,
   "accentColor": "",
   "nativeMenus": false,
-  "baseFontSize": 10,
+  "baseFontSize": 15,
   "baseFontSizeAction": true,
   "enabledCssSnippets": [
     "supercharged-links-gen",

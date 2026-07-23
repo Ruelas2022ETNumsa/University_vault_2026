@@ -12,7 +12,7 @@
   "marginOffset": 10,
   "fontSize": "0.75em",
   "fontFamily": "inherit",
-  "adaptiveMode": true,
+  "adaptiveMode": false,
   "enableReadingView": true,
   "tags": [
     {
@@ -50,7 +50,7 @@
   ],
   "outgoingLinks": [],
   "lastOmniDestination": "Marginalia Inbox",
-  "extractHighlights": true,
+  "extractHighlights": false,
   "ignoredHighlightFolders": "Excalidraw",
   "ignoredHighlightTexts": "⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠",
   "showSyntaxInSourceMode": true,
@@ -115,5 +115,5 @@
   },
   "deleteCompletedTasks": false,
   "enableTaskNotesIntegration": false,
-  "visualHelper": true
+  "visualHelper": false
 }
