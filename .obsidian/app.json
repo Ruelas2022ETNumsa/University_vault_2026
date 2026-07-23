@@ -19,5 +19,12 @@
   "showIndentGuide": true,
   "smartIndentList": true,
   "useTab": true,
-  "openBehavior": ""
+  "openBehavior": "",
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "Letter",
+    "landscape": false,
+    "margin": "2",
+    "downscalePercent": 100
+  }
 }

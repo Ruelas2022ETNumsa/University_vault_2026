@@ -267,8 +267,16 @@ status: activo
 | Caso | `galaxy_body` | Uso |
 |---|---|---|
 | **Uso principal** | `supernova` | Las marginalia `;;` se anotan durante la transcripción de clase; correr el comando genera el mazo de repaso de esa sesión directamente en la supernova |
-| Herencia a notas derivadas | `planet` / `comet` / `dwarf` | Al diseccionar la supernova, el `;;` se copia junto con la marginalia — correr el comando en la nota destino regenera la sección Flashcards allí |
+| Ejercicios y fórmulas de examen | `comet` | Marcar con `;;` los pasos clave, fórmulas críticas y errores frecuentes durante la resolución — el comando genera un mazo de repaso del ejercicio directamente en el comet |
+| Herencia a notas derivadas | `planet` / `dwarf` | Al diseccionar la supernova, el `;;` se copia junto con la marginalia — correr el comando en la nota destino regenera la sección Flashcards allí |
 | Repaso de tema | `dwarf` | Consolida todas las preguntas del resumen en una sección al final para sesión de active recall |
+
+### Commander
+
+- **Comando:** `Cornell Marginalia: Flashcards Generation`
+- **Ícono:** `layers-2`
+- **Posición sugerida:** barra de herramientas o ribbon — acceso rápido sin abrir el Command Palette
+- **Uso:** correr desde cualquier nota con marginalia `;;` activa (supernova, comet, planet, dwarf)
 
 ---
 

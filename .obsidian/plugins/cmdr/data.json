@@ -149,6 +149,12 @@
       "icon": "lucide-toggle-right",
       "name": "Alternar modo claro/oscuro",
       "mode": "any"
+    },
+    {
+      "id": "cornell-marginalia:generate-flashcards-sr",
+      "icon": "lucide-layers-2",
+      "name": "Cornell Marginalia: Flashcards Generation (Spaced Repetition)",
+      "mode": "any"
     }
   ],
   "macros": [],
