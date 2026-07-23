@@ -13,7 +13,7 @@
         "_projects",
         "_assets",
         "Rubbish",
-        "void.md",
+        "slugexplorer.md",
         "Zettelkasten",
         "Marginalia Attachments",
         "Borrar",
@@ -2793,15 +2793,14 @@
       "isPinned": false,
       "isHidden": false
     },
-    "void.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Zettelkasten": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
-      "customOrder": []
+      "customOrder": [
+        "20260723151457.md",
+        "explorer.md"
+      ]
     },
     "Marginalia Attachments": {
       "isPinned": false,
@@ -2891,6 +2890,10 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "doodle_20260723_151633.png",
+        "doodle_20260723_151457.png",
+        "explorer-23-07-2026_15-10-36.png",
+        "superdoodle_20260723_150411.png",
         "Untitled-19-07-2026_17-20-32.png",
         "Untitled-15-07-2026_22-40-34.png",
         "Untitled-15-07-2026_22-40-33.png",
@@ -3155,6 +3158,34 @@
       "isHidden": false
     },
     "void 2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/superdoodle_20260723_150411.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/doodle_20260723_151457.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Zettelkasten/explorer.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Zettelkasten/20260723151457.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/explorer-23-07-2026_15-10-36.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/doodle_20260723_151633.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "slugexplorer.md": {
       "isPinned": false,
       "isHidden": false
     }
