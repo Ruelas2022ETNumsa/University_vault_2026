@@ -11,10 +11,10 @@ status: creciente
 ## Handoff
 
 **Última sesión:** 2026-07-23
-**Retomar desde:** `_marginalia_system.md` A8 — Flashcard Generator
-**Completado esta sesión:** A7 documentado (blur, 6 casos probados, bug `;;` en Reading View identificado). A10 documentado (OCD + SuperDoodle, flujos completos). `tpl-zk.md` modificado (rename por polling + openFile). Sesión de análisis de `main.js` completada — 2 bugs identificados con líneas exactas para parcheo futuro.
-**Próximo paso:** Continuar con A8 → A9 → A11 → A12 → Bloque B
-**Preguntas de cierre:** ¿Se parchea `main.js` antes de continuar con A8 o se deja para el final?
+**Retomar desde:** `_marginalia_system.md` A9 — Margin Threads
+**Completado esta sesión:** A8 documentado (Flashcard Generator, 5 casos probados, convención una marginalia por línea establecida).
+**Próximo paso:** Continuar con A9 → A11 → A12 → Bloque B
+**Preguntas de cierre:** ¿Se parchea `main.js` antes de continuar con A9 o se deja para el final?
 
 ---
 
@@ -93,7 +93,7 @@ Recorrer en orden. Probar antes de decidir.
 Recorrer sección por sección. Para cada setting: entender, decidir valor Galaxy, documentar.
 
 - [x] **A7. Active Recall — Blur** — ícono 👁️, sintaxis `;;`. Probar en Live Preview y Reading View. Probar Blur Explanatory Marginalias.
-- [ ] **A8. Flashcard Generator** — comando "Flashcards Generation". Probar que genera sección al final. Evaluar relación con `supernova`, `planet`, `comet`.
+- [x] **A8. Flashcard Generator** — comando "Flashcards Generation". Probar que genera sección al final. Evaluar relación con `supernova`, `planet`, `comet`.
 - [ ] **A9. Margin Threads** — Stitch, Drag & Drop, Mass Stitch. Probar conexión entre dos notas distintas. Ver árbol en tab Threads. Probar Hover Peek (botón 🔗).
 - [ ] **A10. Doodle Engine** — comando "Draw a Doodle". Probar guardar boceto → inyección automática en nota. Probar Super Doodle si se activa.
 - [ ] **A11. Omni-Capture** — modal `Alt+C`. Probar captura de texto, imagen del portapapeles, doodle integrado. Definir carpeta destino en Galaxy.

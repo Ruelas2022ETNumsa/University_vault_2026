@@ -1,20 +1,3 @@
-# A8 — Flashcard Generator
-
----
-
-## Caso 1 — Básico (una marginalia `;;` por línea)
-
-La transformada de Laplace convierte ecuaciones diferenciales al dominio $s$.%%> ! ¿A qué dominio convierte la Laplace?;; %%
-
-El teorema de Bayes relaciona probabilidades condicionales.%%> ¿Qué relaciona Bayes?;; %%
-
----
-
-## Caso 2 — Bug: dos marginalia en la misma línea
-
-La segunda ley de Newton es $F = ma$.%%> ! Segunda ley — entra en parcial %% %%< ¿Cuál es la segunda ley de Newton?;; %%
-
-> ⚠️ En este caso la sección Flashcards copia los `%%` intermedios en la tarjeta generada.
 
 ---
 
@@ -25,10 +8,31 @@ La segunda ley de Newton es $F = ma$.%%> ! Segunda ley — entra en parcial %% %
 
 `````cornell
 ::cue
-¿Qué es la transformada de Laplace?%%> ! Definición central;; %%
+¿Qué es la transformada de Laplace A0?ajajajaja%%> ! Definición centralA0ajajajaja;; %%
 ::note
-La transformada de Laplace se define como $\mathcal{L}\{f(t)\} = \int_0^\infty e^{-st} f(t)\, dt$.%%> F- Fórmula de examen %% La condición de convergencia requiere $\text{Re}(s) > \sigma_0$.%%< V- Verificado Kreyszig p.218 %%
+La transformada de Laplace se define como $\mathcal{L}\{f(t)\} = \int_0^\infty e^{-st} f(t)\, dt$.%%> F- Fórmula de examen A0peepepepep;;%% La condición de convergencia requiere $\text{Re}000000(s) > \sigma_0$.%%< V- Verificado Kreyszig p.218 A0piiipipipip ;;%%
 `````
+
+# caos55
+
+`````cornell
+::cue
+```marginalia
+¿Qué es la transformada de Laplace?A4 %%> F- Fórmula de examen A4wrwrwer;;%%
+```
+::note
+```marginalia
+La transformada de Laplace se define como $\mathcal{L}\{f(t)\} = \int_0^\infty e^{-st} f(t)\, dt$.%%< Definición centralxxxA4ertretert;; %%
+.
+.
+La condición de convergencia requiere $\text{Re}(s) > \sigma_0$. %%< Verificado Kreyszig p.218A4 rrtyrtyrty ;;%%
+.
+.
+.
+```
+`````
+
+
 
 ---
 
@@ -41,22 +45,14 @@ La transformada de Laplace se define como $\mathcal{L}\{f(t)\} = \int_0^\infty e
 > La respuesta natural decae exponencialmente: $v(t) = V_0 e^{-t/\tau}$.%%> ! Forma de la respuesta natural;; %%
 > Para $t = \tau$ el voltaje cae al 36.8% de su valor inicial.%%< ? ¿Por qué 36.8%? — ver $e^{-1}$ %%
 
----
 
-## Caso 5 — Imagen en margen con A3
-
-> A3 con `img:[[...]]` para imagen al margen izquierdo.
-
-> [!cornell]
-> El diagrama muestra la respuesta al escalón de un sistema de segundo orden.%%> img:[[_assets/ima-1.png]] %%
-> El sobrepico depende del coeficiente de amortiguamiento $\zeta$.%%< ! Sobrepico — parámetro clave;; %%
 
 
 ### Flashcards
-! ¿A qué dominio convierte la Laplace? :: La transformada de Laplace convierte ecuaciones diferenciales al dominio $s$.
-¿Qué relaciona Bayes? :: El teorema de Bayes relaciona probabilidades condicionales.
-! Segunda ley — entra en parcial %% %%< ¿Cuál es la segunda ley de Newton? :: La segunda ley de Newton es $F = ma$.
-! Definición central :: ¿Qué es la transformada de Laplace?
+! Definición centralA0ajajajaja :: ¿Qué es la transformada de Laplace A0?ajajajaja
+F- Fórmula de examen A0peepepepep :: La transformada de Laplace se define como $\mathcal{L}\{f(t)\} = \int_0^\infty e^{-st} f(t)\, dt$.
+F- Fórmula de examen A4wrwrwer :: ¿Qué es la transformada de Laplace?A4
+Definición centralxxxA4ertretert :: La transformada de Laplace se define como $\mathcal{L}\{f(t)\} = \int_0^\infty e^{-st} f(t)\, dt$.
+Verificado Kreyszig p.218A4 rrtyrtyrty :: La condición de convergencia requiere $\text{Re}(s) > \sigma_0$.
 F- τ = RC — entra en parcial :: > El circuito RC en serie tiene constante de tiempo $\tau = RC$.
 ! Forma de la respuesta natural :: > La respuesta natural decae exponencialmente: $v(t) = V_0 e^{-t/\tau}$.
-! Sobrepico — parámetro clave :: > El sobrepico depende del coeficiente de amortiguamiento $\zeta$.

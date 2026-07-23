@@ -10,7 +10,7 @@ related_notes:
   - "[[_template-system]]"
 tags: [beacon, obsidian, plugins, infraestructura, marginalia, galaxy]
 date_created: 2026-07-22
-date_updated: 2026-07-22
+date_updated: 2026-07-23
 status: activo
 ---
 
@@ -245,7 +245,30 @@ status: activo
 
 ## A8. Flashcard Generator
 
-> Pendiente de prueba.
+> Comando: **"Flashcards Generation"** desde el Command Palette.
+> Extrae todas las marginalia con `;;` de la nota activa y genera una sección `### Flashcards` al final.
+
+### Probado
+
+- Marginalia con `;;` una por línea → sección `### Flashcards` generada correctamente con formato `pregunta :: contexto`.
+- Marginalia con tags semánticos (`! ;;`, `F- ;;`) → se incluyen en la sección con el tag prefijado.
+- Bloque `::cue` / `::note` con `marginalia` anidado → las `;;` dentro del bloque se capturan correctamente.
+- A3 callout con múltiples marginalia y `;;` → se capturan todas.
+- Correr el comando dos veces → reemplaza la sección existente, no duplica.
+
+### Notado
+
+- El comando es un **colector**, no un generador de preguntas — extrae el texto de las `;;` que ya escribiste y los lista limpios al final.
+- **Convención — una marginalia por línea:** si dos marginalia están en la misma línea dentro de un callout, el generador copia los `%%` intermedios en la tarjeta producida. No es un bug crítico, pero se evita poniendo cada marginalia en su propia línea.
+- La sección generada es reutilizable: al copiar un subtítulo de `supernova` a `planet` o `comet`, el `;;` viaja con la marginalia y el comando puede volver a correrse en la nota destino.
+
+### Dónde se usa en Galaxy
+
+| Caso | `galaxy_body` | Uso |
+|---|---|---|
+| **Uso principal** | `supernova` | Las marginalia `;;` se anotan durante la transcripción de clase; correr el comando genera el mazo de repaso de esa sesión directamente en la supernova |
+| Herencia a notas derivadas | `planet` / `comet` / `dwarf` | Al diseccionar la supernova, el `;;` se copia junto con la marginalia — correr el comando en la nota destino regenera la sección Flashcards allí |
+| Repaso de tema | `dwarf` | Consolida todas las preguntas del resumen en una sección al final para sesión de active recall |
 
 ---
 
