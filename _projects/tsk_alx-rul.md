@@ -98,7 +98,7 @@ Recorrer sección por sección. Para cada setting: entender, decidir valor Galax
 - [x] **A7. Active Recall — Blur** — ícono 👁️, sintaxis `;;`. Probar en Live Preview y Reading View. Probar Blur Explanatory Marginalias.
 - [x] **A8. Flashcard Generator** — comando "Flashcards Generation". Uso principal en supernova y comet. Commander con ícono layers-2.
 - [ ] **A9. Margin Threads** — Stitch, Drag & Drop, Mass Stitch. Probar conexión entre dos notas distintas. Ver árbol en tab Threads. Probar Hover Peek (botón 🔗).
-- [ ] **A10. Doodle Engine** — comando "Draw a Doodle". Probar guardar boceto → inyección automática en nota. Probar Super Doodle si se activa.
+- [x] **A10. Doodle Engine** — comando "Draw a Doodle". Probar guardar boceto → inyección automática en nota. Probar Super Doodle si se activa.
 - [ ] **A11. Omni-Capture** — modal `Alt+C`. Probar captura de texto, imagen del portapapeles, doodle integrado. Definir carpeta destino en Galaxy.
 - [x] **A12. PDF Export** — flujo Prepare → Better Export PDF → Restore. Limitación: bloques cornell no exportan correctamente.
 
