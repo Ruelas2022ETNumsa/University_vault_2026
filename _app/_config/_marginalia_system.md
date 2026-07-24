@@ -282,7 +282,99 @@ status: activo
 
 ## A9. Margin Threads
 
-> Pendiente de prueba.
+> Dos mecanismos distintos para conectar marginalia entre archivos: **agrupación por `#tag`** y **Stitch**.
+> Visualización en el tab `threads` del Marginalia Explorer.
+
+### Mecanismo 1 — Agrupación por `#tag`
+
+**Sintaxis:** agregar `#nombre-grupo` dentro del texto de la marginalia.
+
+```
+%%> R- relacionada con Laplace #transformadas %%
+```
+
+**Comportamiento:**
+- El plugin crea automáticamente el grupo `TRANSFORMADAS` en el tab Threads.
+- Todas las marginalia con el mismo `#nombre-grupo` en cualquier archivo del vault quedan agrupadas bajo ese grupo.
+- No requiere Stitch — la agrupación es automática por tag.
+- El `#nombre-grupo` **no se muestra en Reading View** — es invisible en la nota renderizada. Solo visible en Live Preview (Edit mode).
+- El grupo se crea en Settings → Structural Box Colors automáticamente — se le puede asignar color desde ahí o desde el botón `paint box` en el Explorer.
+
+### Mecanismo 2 — Stitch
+
+**Flujo:**
+1. Explorer → tab `vault` o `current` → botón `stitch`
+2. Click en la marginalia **origen** (padre)
+3. Click en la marginalia **destino** (hijo)
+4. Modal **Semantic Connection**: campo para escribir la razón de la conexión (dejar vacío = classic stitch)
+5. Presionar `stitch notes`
+
+**Sintaxis generada:**
+
+Clásico (sin etiqueta semántica):
+```
+%%> ! definición base [[void2#^id]] ^czne0y %%           ← en origen
+%%> R- relacionada #^id %%                               ← en destino
+```
+
+Semántico (con etiqueta):
+```
+%%> ! definición base [[void2#^id]] {stitch: herramienta matemática común} ^czne0y %%
+```
+
+**Comportamiento:**
+- Crea jerarquía padre-hijo visible en el árbol del tab Threads.
+- La etiqueta semántica aparece como texto conector entre las dos marginalia en el árbol.
+- Usa Block IDs nativos de Obsidian (`^id`) — sobrevive renombrados y aparece en el Graph View.
+- Sin etiqueta semántica → el grupo se llama `UNTAGGED`.
+- El campo semántico del modal **no controla el nombre del grupo** — solo agrega `{stitch: texto}` como anotación.
+- Para que un stitch quede dentro de un grupo nombrado, agregar `#nombre-grupo` manualmente en la marginalia origen junto con el link generado:
+```
+%%> ! definición base #transformadas [[void2#^id]] {stitch: herramienta matemática común} ^czne0y %%
+```
+- Combinando `#tag` + Stitch se obtiene lo mejor de ambos: grupo nombrado + jerarquía padre-hijo.
+
+### Probado
+
+- Stitch clásico entre `void.md` y `void2.md` → sintaxis correcta en ambos archivos, jerarquía visible en tab Threads.
+- Stitch semántico → etiqueta `{stitch: ...}` visible entre las marginalia en el árbol.
+- Agrupación por `#tag` sin stitch → grupo creado automáticamente en Threads, marginalia al mismo nivel (sin jerarquía).
+- Hover Peek (botón 🔗 en la marginalia origen) → muestra tooltip con ruta del thread (`follow thread: void2^id`). En v4.9.0 es tooltip, no popup de preview como describe el README.
+- Click en botón 🔗 → abre el archivo destino y salta a la línea.
+- Graph View → las notas conectadas por stitch aparecen enlazadas.
+- Export full tree to Board → árbol exportado al tab Board, cada marginalia con botones `←` (outdent) / `→` (indent) / `x`. Título del grupo editable con doble click desde el Board.
+
+### Notado
+
+- **`UNTAGGED` no es configurable** — es el identificador interno del plugin para stitches sin etiqueta semántica. Editar `#Untagged` en `data.json` o en Settings → Structural Box Colors no cambia el nombre en el Explorer — el plugin lo regenera. El workaround es siempre usar etiqueta semántica o `#tag` en la marginalia.
+- **Structural Box Colors** (Settings): solo controla el color del grupo, no el nombre. El nombre del grupo se define exclusivamente por el `#tag` en la marginalia. El `paint box` del Explorer asigna color al grupo y lo registra en `data.json`.
+- El `#tag` agrupador y el tag semántico (`R-`, `!`, etc.) coexisten en la misma marginalia sin conflicto.
+- Drag & Drop y Mass Stitch (`Spacebar` + `Alt+S`) — no probados, considerados de uso avanzado no prioritario para Galaxy en esta fase.
+
+### Convención Galaxy
+
+**Cuándo usar `#tag` (agrupación temática):**
+Para marcar marginalia de distintas notas que pertenecen al mismo concepto transversal — sin jerarquía explícita.
+```
+%%> R- relacionada con Fourier #transformadas-integrales %%
+```
+
+**Cuándo usar Stitch (conexión explícita):**
+Para conectar una marginalia de una nota con su continuación o consecuencia directa en otra nota — con jerarquía padre-hijo.
+
+**Nomenclatura de grupos Galaxy:**
+- Usar kebab-case: `#transformadas-integrales`, `#circuitos-rc`, `#errores-frecuentes`
+- Grupos por tema transversal, no por materia (para eso están los tags `R-`)
+- Evitar `UNTAGGED` — siempre usar `#tag` o etiqueta semántica
+
+### Dónde se usa en Galaxy
+
+| Mecanismo        | `galaxy_body`      | Uso                                                                                            |
+| ---------------- | ------------------ | ---------------------------------------------------------------------------------------------- |
+| `#tag` agrupador | planet / bridge    | Marcar marginalia del mismo concepto en notas de materias distintas — señal visual de relación |
+| `#tag` agrupador | comet / dwarf      | Agrupar errores frecuentes o fórmulas clave recurrentes entre parciales                        |
+| Stitch+agrupador | planet → planet    | Conectar la definición base de un concepto con su desarrollo en otra nota                      |
+| Stitch+agrupador | supernova → planet | Conectar la transcripción bruta con la nota procesada que la disecciona                        |
 
 ---
 

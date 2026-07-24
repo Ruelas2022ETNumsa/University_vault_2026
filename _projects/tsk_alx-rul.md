@@ -11,15 +11,16 @@ status: creciente
 ## Handoff
 
 **Última sesión:** 2026-07-23
-**Retomar desde:** `_marginalia_system.md` A9 — Margin Threads
+**Retomar desde:** A6 — Marginalia Explorer (pendientes detallados en BLOQUE A6)
 **Completado esta sesión:**
-- A8 (Flashcard Generator) — documentado completo: flujo probado, uso principal en `supernova` y `comet`, convención una marginalia por línea en callouts, Flashcards Generation siempre después del Restore. Commander configurado con ícono `layers-2`.
-- A12 (PDF Export) — documentado: flujo Prepare → Better Export PDF → Restore probado. Limitación conocida: bloques `cornell` (::cue/::note) no exportan correctamente por choque de plugins. Convención Galaxy: solo marginalia inline simples en notas destinadas a export.
-- Investigación PDF++ — descartado para A12; rol distinto (anotación de PDFs externos, no export de notas).
-- A11 (Omni-Capture) — documentado completo: `Alt+C` enfoca input del Explorer (no modal flotante — README desactualizado). ZK ON crea nota en `Zettelkasten/`, ZK OFF appendea a `dest:`. Clipboard capturado automáticamente. Convención Galaxy: `_inbox/ETNXXX-inbox.md` por materia + `inbox.md` genérico. `_inbox/` excluido del scanner. `Marginalia Inbox.md` (raíz) eliminado.
-- Infraestructura `_inbox/` creada. Screenshots y doodles → `_assets/` sin excepción.
-**Próximo paso:** A9 — Margin Threads
-**Preguntas de cierre:** ¿Se parchea `main.js` (BUG-01 y BUG-02) antes de continuar con A9 o se deja para el final del proyecto?
+- A8 (Flashcard Generator) — documentado completo.
+- A12 (PDF Export) — documentado. Limitación: bloques cornell no exportan.
+- A11 (Omni-Capture) — documentado completo. Convención `_inbox/` definida.
+- A9 (Margin Threads) — documentado: `#tag` agrupador + Stitch. `UNTAGGED` no configurable. Hover Peek = tooltip en v4.9.0.
+- Infraestructura `_inbox/` creada.
+- A9: agregado que `#tag` + Stitch combinados dan grupo nombrado con jerarquía padre-hijo.
+**Próximo paso:** A6 — completar pendientes del BLOQUE A6 (Explorer: Secciones 2, 4-threads/board, 5, 7-filtros especiales, 8-teclado, Board)
+**Preguntas de cierre:** ¿Se parchea `main.js` (BUG-01 y BUG-02) antes o después de cerrar A6?
 
 ---
 
@@ -49,23 +50,23 @@ Recorrer en orden. Probar antes de decidir.
 
 ### Sección 2 — Omni-Capture
 
-- [ ] **Campo `dest:`** — definir destino Galaxy para capturas rápidas. Opciones: `_inbox/`, `Rubbish/`, parcial activo. Decidir convención.
-- [ ] **Botón `ZK`** — probar creación de nota atómica. ¿Se usa ZK mode en Galaxy o se appendea siempre al destino?
-- [ ] **Botón `clear`** — sin decisión pendiente, funciona como limpieza de contexto.
-- [ ] **Botón `doodle`** — probar flujo completo: dibujar → attach → guardar. Ver EXP-06 en `marginalia_explorer_guide`.
+- [x] **Campo `dest:`** — convención definida: `_inbox/ETNXXX-inbox.md` por materia, `inbox.md` genérico. Autocompletado probado.
+- [x] **Botón `ZK`** — ZK ON crea nota en `Zettelkasten/`, ZK OFF appendea a `dest:`. Probado.
+- [x] **Botón `clear`** — limpia clipboard y memoria del campo dest. Sin decisión pendiente.
+- [x] **Botón `doodle`** — cubierto por A10 (OCD).
 
 ### Sección 4 — Tabs
 
 - [x] **`current`** — probado. Muestra marginalia del archivo activo agrupadas por tag. ✅ integrar al flujo de repaso.
 - [x] **`vault`** — probado. Escanea todo el vault respetando exclusiones. ✅ útil para repaso global pre-parcial.
-- [ ] **`threads`** — pendiente. Solo tiene contenido si se usa Stitch (A9). Probar junto con A9.
-- [ ] **`board`** — pendiente. Probar pinear notas, organizar, exportar. Ver EXP-08 y EXP-09.
+- [x] **`threads`** — probado en A9. Muestra árbol jerárquico de stitches y grupos por `#tag`. ✅
+- [ ] **`board`** — pendiente completar: Import skeleton, Export to markdown, Auto-add copied text.
 
 ### Sección 5 — Acciones
 
-- [ ] **`stitch`** — probar conexión entre dos marginalia de archivos distintos. Ver EXP-03. Decidir si se usa en Galaxy.
-- [ ] **`group`** — probar agrupación de marginalia repetidas. ¿Es útil en flujo de estudio?
-- [ ] **Recargar** — sin decisión pendiente, usar cuando el Explorer no refleje cambios recientes.
+- [x] **`stitch`** — probado en A9. Flujo de dos pasos, sintaxis clásica y semántica verificadas. ✅
+- [ ] **`group`** — pendiente. Probar agrupación de marginalia repetidas.
+- [x] **Recargar** — sin decisión pendiente.
 
 ### Sección 7 — Filtros de tag
 
@@ -85,11 +86,12 @@ Recorrer en orden. Probar antes de decidir.
 
 ### Board
 
-- [ ] **Import skeleton** — probar importar estructura desde nota activa. ¿Compatible con formato Galaxy?
-- [ ] **Export to markdown** — probar exportación. Verificar que el archivo generado sigue convenciones Galaxy.
-- [ ] **Export to canvas** — probar. Verificar Block ID links y compatibilidad con Excalidraw/Constellation.
-- [ ] **Auto-add copied text** — probar modo automático. ¿Interfiere con el clipboard en flujo normal de estudio?
-- [ ] **Zen doodle mode** — probar dentro del Board. Relación con A10.
+- [x] **Export full tree to Board** — probado en A9. Árbol exportado con título editable (doble click). ✅
+- [ ] **Import skeleton** — pendiente.
+- [ ] **Export to markdown** — pendiente.
+- [ ] **Export to canvas** — pendiente.
+- [ ] **Auto-add copied text** — pendiente.
+- [x] **Zen doodle mode** — cubierto por A10 (SuperDoodle). ✅
 
 ---
 
@@ -99,7 +101,7 @@ Recorrer sección por sección. Para cada setting: entender, decidir valor Galax
 
 - [x] **A7. Active Recall — Blur** — ícono 👁️, sintaxis `;;`. Probar en Live Preview y Reading View. Probar Blur Explanatory Marginalias.
 - [x] **A8. Flashcard Generator** — comando "Flashcards Generation". Uso principal en supernova y comet. Commander con ícono layers-2.
-- [ ] **A9. Margin Threads** — Stitch, Drag & Drop, Mass Stitch. Probar conexión entre dos notas distintas. Ver árbol en tab Threads. Probar Hover Peek (botón 🔗).
+- [x] **A9. Margin Threads** — Stitch y agrupación por `#tag` probados. Árbol en tab Threads verificado. Hover Peek = tooltip en v4.9.0. Graph View conectado. Export to Board probado.
 - [x] **A10. Doodle Engine** — comando "Draw a Doodle". Probar guardar boceto → inyección automática en nota. Probar Super Doodle si se activa.
 - [x] **A11. Omni-Capture** — `Alt+C` enfoca input del Explorer. ZK ON/OFF probados. Clipboard texto e imagen probados. Convención `_inbox/` definida.
 - [x] **A12. PDF Export** — flujo Prepare → Better Export PDF → Restore. Limitación: bloques cornell no exportan correctamente.
@@ -195,6 +197,11 @@ if (finalRenderText.includes("  ;;")) finalRenderText = finalRenderText.replace(
 
 ### BUG-02 — Nombre timestamp del archivo ZK (no usa slug)
 
+> [!warning] Fix pendiente — sesión dedicada
+> Los archivos ZK se crean con nombre timestamp (`YYYYMMDDHHmmss`) porque el plugin genera el archivo antes de que el template de Templater corra — el slug llega tarde y no puede usarse para nombrar el archivo en el momento de creación.
+> **Solución:** script externo que lee el slug/title del frontmatter de cada archivo en `Zettelkasten/` y los renombra en lote. No resoluble desde `tpl-zk.md` ni desde `main.js` sin modificación mayor. Resolver en sesión dedicada — ver **Pendientes técnicos**.
+> **observación:** se debe revisar el template tpl-zk.md para que no sea cargado (mejorarlo acorde al script).
+
 **Síntoma:** Los archivos creados en `Zettelkasten/` reciben nombre de timestamp (`YYYYMMDDHHmmss`) en lugar del slug ingresado por el usuario.
 
 **Causa:** Línea ~286 en `main.js`:
@@ -241,6 +248,10 @@ El archivo se crea con el timestamp antes de que el template se ejecute — el s
 | 2026-07-23 | A11: `_inbox/` como carpeta de captura rápida Galaxy | Una nota por materia activa + `inbox.md` genérico. Excluida del scanner del Explorer |
 | 2026-07-23 | Screenshots y doodles → `_assets/` sin excepción | No van al inbox — destinos distintos por tipo de contenido |
 | 2026-07-23 | Script de renombre ZK (timestamp → slug) — pendiente | Requiere script externo; `tpl-zk.md` no puede resolverlo |
+| 2026-07-23 | A9: `#tag` en marginalia crea grupo en Threads automáticamente | No requiere Stitch — agrupación por tag es el mecanismo principal para Galaxy |
+| 2026-07-23 | A9: `UNTAGGED` no renombrable desde Settings ni data.json | El plugin lo regenera — usar siempre `#tag` o etiqueta semántica |
+| 2026-07-23 | A9: Hover Peek es tooltip en v4.9.0, no popup de preview | README desactualizado — comportamiento real verificado |
+| 2026-07-23 | A9: nomenclatura kebab-case para grupos Galaxy | `#transformadas-integrales`, `#circuitos-rc`, etc. |
 
 > [!note]- Descartadas
 > A3 como método general — no agrupa visualmente el contenido como se esperaba.
@@ -265,8 +276,8 @@ Revisión secuencial de A1–A12 y Bloque B. Para cada ítem: discutir, probar e
 
 ## Preguntas abiertas
 
-- ¿Cómo se integra A6 (Explorer) con el flujo de repaso de parcial en Galaxy?
-- ¿Se usará Margin Threads (A9) activamente o es demasiado complejo para el flujo actual?
+- ~~¿Cómo se integra A6 (Explorer) con el flujo de repaso de parcial en Galaxy?~~ — pendiente de cerrar al completar A6.
+- ~~¿Se usará Margin Threads (A9) activamente?~~ — sí, con `#tag` agrupador como mecanismo principal.
 - ~~¿Omni-Capture reemplaza algún flujo existente del vault o es adicional?~~ — Es adicional. Captura rápida hacia `_inbox/`, no reemplaza ningún flujo existente.
 
 ---
