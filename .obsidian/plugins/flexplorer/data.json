@@ -5,6 +5,8 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
+        "Evidence Boards",
+        "Pinboards",
         "void2.md",
         "_inbox",
         "void 2.md",
@@ -3254,6 +3256,35 @@
       "isHidden": false
     },
     "void2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Evidence Boards": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "EvidenceBoard_2026-07-23_22-14-35.canvas",
+        "EvidenceBoard_2026-07-23_22-14-58.canvas"
+      ]
+    },
+    "Evidence Boards/EvidenceBoard_2026-07-23_22-14-35.canvas": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Evidence Boards/EvidenceBoard_2026-07-23_22-14-58.canvas": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Pinboards": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Pinboard_2026-07-23_22-14-22.md"
+      ]
+    },
+    "Pinboards/Pinboard_2026-07-23_22-14-22.md": {
       "isPinned": false,
       "isHidden": false
     }

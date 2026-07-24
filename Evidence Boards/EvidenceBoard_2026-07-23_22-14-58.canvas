@@ -1,0 +1,15 @@
+{
+	"nodes":[
+		{"id":"f10e3a0e12b134ef","type":"text","text":"# UNTAGGEDeses","x":0,"y":0,"width":350,"height":100,"color":"1"},
+		{"id":"6cd7a211a4e8b867","type":"text","text":"**Marginalia:**\n! definición base {stitch: ambas son transformadas integrales}\n\n[[void#^nld71w|🔗 Origin]]","x":450,"y":150,"width":300,"height":140,"color":"4"},
+		{"id":"71ccbe0795b4f6ba","type":"text","text":"> Transformada de Laplace","x":850,"y":130,"width":450,"height":180},
+		{"id":"081733c1dca1a086","type":"text","text":"**Marginalia:**\nR- relacionada con Laplace\n\n[[void2#^id4lol|🔗 Origin]]","x":900,"y":370,"width":300,"height":140,"color":"4"},
+		{"id":"a5cfca763db1d4a2","type":"text","text":"> Transformada de Fourier","x":1300,"y":350,"width":450,"height":180}
+	],
+	"edges":[
+		{"id":"66a6ccf802a72de5","fromNode":"f10e3a0e12b134ef","fromSide":"right","toNode":"6cd7a211a4e8b867","toSide":"left"},
+		{"id":"b09bb747899ae626","fromNode":"6cd7a211a4e8b867","fromSide":"right","toNode":"71ccbe0795b4f6ba","toSide":"left"},
+		{"id":"571df197f08c8c64","fromNode":"6cd7a211a4e8b867","fromSide":"right","toNode":"081733c1dca1a086","toSide":"left"},
+		{"id":"0839e77ea4e509b2","fromNode":"081733c1dca1a086","fromSide":"right","toNode":"a5cfca763db1d4a2","toSide":"left"}
+	]
+}

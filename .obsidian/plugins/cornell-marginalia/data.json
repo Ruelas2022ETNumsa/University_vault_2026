@@ -2,16 +2,20 @@
   "exportCleanTags": true,
   "exportCleanIds": true,
   "dragDropTemplate": "- {{text}} {{source_note}}",
-  "collapsedBoxes": [],
-  "pinnedThreads": [],
+  "collapsedBoxes": [
+    "#Untagged"
+  ],
+  "pinnedThreads": [
+    "#Untaggeddd"
+  ],
   "structuralColors": [
-    {
-      "tag": "#Prueba_void",
-      "color": "#54356e"
-    },
     {
       "tag": "#Untagged",
       "color": "#ff0000"
+    },
+    {
+      "tag": "#new-box",
+      "color": "#4a90e2"
     }
   ],
   "ignoredFolders": "_app,_templates,_PDF,_inbox",
