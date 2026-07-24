@@ -2898,6 +2898,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "void-24-07-2026_11-45-46.png",
         "Marginalia Inbox-23-07-2026_19-48-26.png",
         "doodle_20260723_164408.png",
         "doodle_20260723_164254.png",
@@ -3285,6 +3286,10 @@
       ]
     },
     "Pinboards/Pinboard_2026-07-23_22-14-22.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/void-24-07-2026_11-45-46.png": {
       "isPinned": false,
       "isHidden": false
     }

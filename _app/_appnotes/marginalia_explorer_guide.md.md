@@ -9,7 +9,7 @@ related_notes:
   - "[[_marginalia_system]]"
 tags: [beacon, obsidian, plugins, marginalia, explorer, infraestructura]
 date_created: 2026-07-22
-date_updated: 2026-07-22
+date_updated: 2026-07-24
 status: en-progreso
 ---
 
@@ -55,22 +55,17 @@ Panel lateral con el título **"Marginalia Explorer"**. Se abre con `Alt+E` o de
 
 Cuatro controles para captura rápida con destino configurable:
 
-**Campo `dest:`** — define el archivo destino de la captura. Por defecto muestra `marginalia inbox`. Se puede escribir directamente; tiene autocompletado de archivos del vault y recuerda el último destino usado.
+**Campo `dest:`** — define el archivo destino de la captura. Por defecto muestra `marginalia inbox`. Se puede escribir directamente; tiene autocompletado de archivos del vault y recuerda el último destino usado. El campo recuerda el último destino entre capturas.
 
-**Botón `ZK`** — activa el modo Zettelkasten. Al capturar, crea una nota atómica nueva en lugar de appendear al archivo destino. Usa la plantilla configurada en `zkTemplatePath`.
+**Botón `ZK`** — alterna entre modo append y modo Zettelkasten.
+- **ZK OFF** (default): al capturar, appendea el contenido al archivo `dest:`. Notificación: *"ZK mode: off (will append to destination)"*.
+- **ZK ON**: al capturar, crea una nota atómica nueva en `Zettelkasten/` usando `tpl-zk.md`. Pide slug, materia, connection_type, partial. Notificación: *"ZK mode: on (will create new notes)"*.
 
-**Botón `clear`** — limpia el clipboard y la memoria del campo destino. Notificación: *"clipboard & memory clear"*.
+**Botón `clear`** — limpia el clipboard y la memoria del campo destino. Notificación: *"clipboard & memory clear"*. Usar antes del trueno para enviar solo el texto de S3 sin portapapeles.
 
-**Botón `doodle`** — abre una ventana de dibujo flotante con 6 botones en la base:
+**Botón `doodle`** — abre el canvas OCD (Omni-Capture Doodle). Ver [[#Flujo — Doodle (OCD)]].
 
-| # | Ícono | Función |
-|---|---|---|
-| 1 | Lápiz | Modo dibujo |
-| 2 | Borrador | Modo borrador |
-| 3 | Reset | Elimina el dibujo completo |
-| 4 | Cancel | Cierra sin guardar |
-| 5 | Attach | Adjunta la imagen y continúa escribiendo |
-| 6 | Trueno | Guarda la captura completa (`Ctrl+Enter`) |
+> ⚠️ **Comportamiento del portapapeles:** el trueno captura automáticamente el contenido del portapapeles en el momento de guardar. Presionar `clear` antes del trueno si no se quiere incluir ese contenido.
 
 ---
 
@@ -78,8 +73,18 @@ Cuatro controles para captura rápida con destino configurable:
 
 Dos controles para ingresar texto de captura:
 
-- **Recuadro de texto** — área de escritura libre. Ícono en la esquina inferior derecha para expandir el área.
+- **Recuadro de texto** — área de escritura libre. Ícono en la esquina inferior derecha para expandir el área. Atajo de enfoque: `Alt+C` (requiere Explorer abierto).
 - **Botón trueno** — guarda la captura al archivo destino (`Ctrl+Enter`).
+
+**Formato de salida en `dest:` (ZK OFF):**
+```
+%%> texto de S3 %%
+contenido del portapapeles
+```
+- Si el portapapeles tiene texto: se appendea como texto plano debajo de la marginalia.
+- Si el portapapeles tiene imagen PNG: se appendea como `![[nombre-renombrado.png]]`. El plugin de renombrado del vault renombra automáticamente (ej: `void-24-07-2026_11-45-46.png`) y guarda en `_assets/`.
+- Si se presionó `clear` antes: solo se appendea `%%> texto %%` sin portapapeles.
+- El bloque completo se separa del contenido previo con `---`.
 
 ---
 
