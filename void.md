@@ -1,9 +1,1 @@
-dfdf
-
-
-portapapeles1938888
-%%> agregp etto a boicsdsdsds %%
-Marginalia Inbox
-
-
----
+Transformada de Laplace %%> ! definición base [[void2#^id4lol]] {stitch: ambas son transformadas integrales} %%

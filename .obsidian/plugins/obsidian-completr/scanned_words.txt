@@ -6452,6 +6452,7 @@ trueno
 templatesulg
 tempContent
 tarjetas
+transformadas
 ToDo
 Templater
 Text
@@ -50833,6 +50834,7 @@ basurero
 bocetos
 bGElMjBkZSUyMGV
 buscador
+boicsdsdsds
 scope
 status
 selector
@@ -71206,6 +71208,7 @@ activaci
 aGNhbCU
 avoid
 appendeada
+agregp
 related
 recomendados
 ribbon
@@ -124709,6 +124712,7 @@ FycrTXy
 FyEp
 Flashcards
 Focus
+Fourier
 Estado
 Excalidraw
 EPUBs
@@ -177168,6 +177172,7 @@ exponencialmente
 ertretert
 exportan
 eSUyMGUlNUUlN
+etto
 Motor
 Media
 Mantiene
@@ -285849,6 +285854,7 @@ ytjMz
 ypua
 ybmVsbCUwQSUzQSUzQWN
 ybWFkYSUyMGRlJTIwTGFwbGFjZSUzRiUyNSUyNSUzRSUyMCElMjBEZWZpbmljaSVDMyVCM
+yinyf
 wikilinks
 when
 where
