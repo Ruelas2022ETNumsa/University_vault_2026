@@ -767,6 +767,8 @@ var SuperDoodleAddon = class extends CornellAddon2 {
         api.setSize(parseInt(e.target.value));
       };
       const colors = ["#000000", "#ff4d4d", "#3366ff", "#00cc66"];
+	  // aca se cambia los colores de superdoodle
+	  //const colors = ["#2d2d2d", "#e67e22", "#27ae60", "#8e44ad"];
       const colorBtns = [];
       colors.forEach((c) => {
         const cBtn = centerGrp.createDiv();

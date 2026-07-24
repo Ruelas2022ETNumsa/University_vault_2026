@@ -28,6 +28,8 @@ status: creciente
 
 Revisar cada herramienta del plugin Cornell Marginalia una por una, probarla en Obsidian, y decidir si se integra a Galaxy y cómo. Nada se documenta como parte del sistema sin haberlo probado antes.
 
+comentario: en la linea 770 de main.js se cambia los colores de superdoodle esto para una sesion corta para cambiar los colores y valores default
+
 ---
 
 ## BLOQUE A(1-6) — Herramientas del plugin (funcionalidades)
