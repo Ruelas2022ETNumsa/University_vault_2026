@@ -4,7 +4,16 @@
   "dragDropTemplate": "- {{text}} {{source_note}}",
   "collapsedBoxes": [],
   "pinnedThreads": [],
-  "structuralColors": [],
+  "structuralColors": [
+    {
+      "tag": "#Prueba_void",
+      "color": "#54356e"
+    },
+    {
+      "tag": "#Untagged",
+      "color": "#ff0000"
+    }
+  ],
   "ignoredFolders": "_app,_templates,_PDF,_inbox",
   "enableSemanticStitching": true,
   "alignment": "left",
