@@ -5,6 +5,7 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
+        "Marginalia Inbox.md",
         "void 2.md",
         "void 1.md",
         "_blueprint",
@@ -2798,6 +2799,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "20260723193844.md",
         "20260723164408.md",
         "20260723164254.md",
         "20260723163953.md",
@@ -2893,6 +2895,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "Marginalia Inbox-23-07-2026_19-48-26.png",
         "doodle_20260723_164408.png",
         "doodle_20260723_164254.png",
         "doodle_20260723_163953.png",
@@ -3221,6 +3224,18 @@
       "isHidden": false
     },
     "Zettelkasten/20260723164408.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Zettelkasten/20260723193844.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Marginalia Inbox.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/Marginalia Inbox-23-07-2026_19-48-26.png": {
       "isPinned": false,
       "isHidden": false
     }
