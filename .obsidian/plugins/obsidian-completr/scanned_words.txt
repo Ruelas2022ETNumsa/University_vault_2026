@@ -21115,6 +21115,7 @@ Subt
 SMJA
 SIDATx
 Sobrepico
+Screenshots
 Plugins
 Pendientes
 Plugin
@@ -26888,6 +26889,7 @@ PcpO
 PtYm
 Promise
 Prepare
+Pensamiento
 del
 date
 de
@@ -32499,6 +32501,7 @@ dvX
 destinadas
 direction
 dfdf
+diseccionan
 Vault
 Verificar
 Variables
@@ -50829,6 +50832,7 @@ blablablalba
 basurero
 bocetos
 bGElMjBkZSUyMGV
+buscador
 scope
 status
 selector
@@ -58111,6 +58115,7 @@ sobrepico
 stretch
 shrink
 suiiiiii
+scanner
 vault
 vil
 ver
@@ -71200,6 +71205,7 @@ ajajajaja
 activaci
 aGNhbCU
 avoid
+appendeada
 related
 recomendados
 ribbon
@@ -77955,6 +77961,7 @@ rueda
 reset
 registerMarkdownPostProcessor
 rrtyrtyrty
+revisan
 notes
 notas
 nuevas
@@ -91565,6 +91572,8 @@ contaminan
 cmFsJTNCJTNCJTIwJTI
 child
 coneccion
+create
+capturado
 updated
 un
 universo
@@ -118246,6 +118255,7 @@ Import
 Indent
 IJz
 Interfaz
+Infraestructura
 Funci
 File
 Fase
@@ -124698,6 +124708,7 @@ Flujos
 FycrTXy
 FyEp
 Flashcards
+Focus
 Estado
 Excalidraw
 EPUBs
@@ -144191,6 +144202,7 @@ Adjunta
 Agrupa
 Activaci
 Apos
+Appendeo
 push
 pull
 para
@@ -218948,6 +218960,7 @@ Refresca
 Reloj
 Recientes
 Restore
+README
 Hider
 Hace
 Herramientas

@@ -16,7 +16,9 @@ status: creciente
 - A8 (Flashcard Generator) — documentado completo: flujo probado, uso principal en `supernova` y `comet`, convención una marginalia por línea en callouts, Flashcards Generation siempre después del Restore. Commander configurado con ícono `layers-2`.
 - A12 (PDF Export) — documentado: flujo Prepare → Better Export PDF → Restore probado. Limitación conocida: bloques `cornell` (::cue/::note) no exportan correctamente por choque de plugins. Convención Galaxy: solo marginalia inline simples en notas destinadas a export.
 - Investigación PDF++ — descartado para A12; rol distinto (anotación de PDFs externos, no export de notas).
-**Próximo paso:** A9 — Margin Threads → A11 — Omni-Capture → Bloque B
+- A11 (Omni-Capture) — documentado completo: `Alt+C` enfoca input del Explorer (no modal flotante — README desactualizado). ZK ON crea nota en `Zettelkasten/`, ZK OFF appendea a `dest:`. Clipboard capturado automáticamente. Convención Galaxy: `_inbox/ETNXXX-inbox.md` por materia + `inbox.md` genérico. `_inbox/` excluido del scanner. `Marginalia Inbox.md` (raíz) eliminado.
+- Infraestructura `_inbox/` creada. Screenshots y doodles → `_assets/` sin excepción.
+**Próximo paso:** A9 — Margin Threads
 **Preguntas de cierre:** ¿Se parchea `main.js` (BUG-01 y BUG-02) antes de continuar con A9 o se deja para el final del proyecto?
 
 ---
@@ -99,7 +101,7 @@ Recorrer sección por sección. Para cada setting: entender, decidir valor Galax
 - [x] **A8. Flashcard Generator** — comando "Flashcards Generation". Uso principal en supernova y comet. Commander con ícono layers-2.
 - [ ] **A9. Margin Threads** — Stitch, Drag & Drop, Mass Stitch. Probar conexión entre dos notas distintas. Ver árbol en tab Threads. Probar Hover Peek (botón 🔗).
 - [x] **A10. Doodle Engine** — comando "Draw a Doodle". Probar guardar boceto → inyección automática en nota. Probar Super Doodle si se activa.
-- [ ] **A11. Omni-Capture** — modal `Alt+C`. Probar captura de texto, imagen del portapapeles, doodle integrado. Definir carpeta destino en Galaxy.
+- [x] **A11. Omni-Capture** — `Alt+C` enfoca input del Explorer. ZK ON/OFF probados. Clipboard texto e imagen probados. Convención `_inbox/` definida.
 - [x] **A12. PDF Export** — flujo Prepare → Better Export PDF → Restore. Limitación: bloques cornell no exportan correctamente.
 
 ---
@@ -137,7 +139,7 @@ Recorrer sección por sección. Para cada setting: entender, decidir valor Galax
 
 ### B5. File & Output Management
 
-- [ ] **Omni-Capture Default Folder** — ¿dónde van las capturas rápidas en Galaxy? Opciones: `Rubbish/`, nueva carpeta `_inbox/`, o directo al parcial activo.
+- [x] **Omni-Capture Default Folder** — `_inbox/inbox.md` (genérico) o `_inbox/ETNXXX-inbox.md` (por materia). Decidido.
 - [ ] **Omni-Capture Template** — ¿el template default es suficiente o necesita YAML Galaxy?
 - [ ] **Zettelkasten Folder** — solo relevante si se activan Margin Threads. ¿Carpeta en Galaxy o ignorar?
 - [ ] **Zettelkasten Template Path** — ídem anterior.
@@ -234,6 +236,11 @@ El archivo se crea con el timestamp antes de que el template se ejecute — el s
 | 2026-07-23 | A8: comet es caso de uso propio, no solo herencia | Fórmulas clave y pasos de examen se anotan con `;;` directamente en el comet |
 | 2026-07-23 | A12: bloques cornell no exportan correctamente | Choque entre Cornell Notes y Cornell Marginalia en el motor de print — limitación conocida |
 | 2026-07-23 | A12: convención export = solo marginalia inline | Evitar bloques `cornell` y `marginalia` anidado en notas destinadas a PDF |
+| 2026-07-23 | A11: `Alt+C` enfoca input del Explorer, no abre modal flotante | README del plugin desactualizado — comportamiento real en v4.9.0 |
+| 2026-07-23 | A11: ZK OFF appendea como `%%> %%` inline, no texto plano | El contenido queda listo para ser procesado por el plugin |
+| 2026-07-23 | A11: `_inbox/` como carpeta de captura rápida Galaxy | Una nota por materia activa + `inbox.md` genérico. Excluida del scanner del Explorer |
+| 2026-07-23 | Screenshots y doodles → `_assets/` sin excepción | No van al inbox — destinos distintos por tipo de contenido |
+| 2026-07-23 | Script de renombre ZK (timestamp → slug) — pendiente | Requiere script externo; `tpl-zk.md` no puede resolverlo |
 
 > [!note]- Descartadas
 > A3 como método general — no agrupa visualmente el contenido como se esperaba.
@@ -260,7 +267,13 @@ Revisión secuencial de A1–A12 y Bloque B. Para cada ítem: discutir, probar e
 
 - ¿Cómo se integra A6 (Explorer) con el flujo de repaso de parcial en Galaxy?
 - ¿Se usará Margin Threads (A9) activamente o es demasiado complejo para el flujo actual?
-- ¿Omni-Capture reemplaza algún flujo existente del vault o es adicional?
+- ~~¿Omni-Capture reemplaza algún flujo existente del vault o es adicional?~~ — Es adicional. Captura rápida hacia `_inbox/`, no reemplaza ningún flujo existente.
+
+---
+
+## Pendientes técnicos
+
+- [ ] **Script renombre ZK** — agarrar slug/title de archivos timestamp en `Zettelkasten/` y renombrarlos. Hacer en sesión dedicada.
 
 ---
 
@@ -278,3 +291,4 @@ Revisión secuencial de A1–A12 y Bloque B. Para cada ítem: discutir, probar e
 - `E:\University_vault_2026\void.md` — archivo de prueba (se limpia entre pruebas)
 - `E:\University_vault_2026\_templates\tpl-zk.md` — template ZK modificado esta sesión
 - `E:\University_vault_2026\.obsidian\plugins\cornell-marginalia\main.js` — plugin (con backup `main.js.bk`)
+- `E:\University_vault_2026\_inbox\inbox.md` — captura rápida genérica

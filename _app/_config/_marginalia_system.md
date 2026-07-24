@@ -351,7 +351,59 @@ Explorer → tab `board` → botón `zen doodle mode`
 
 ## A11. Omni-Capture
 
-> Pendiente de prueba.
+> Activación: `Alt+C` (nombre oficial del comando: **Focus Omni-Capture Input**) — enfoca el recuadro de captura en el sidebar del Marginalia Explorer.
+> Requiere que el Explorer esté abierto (`Alt+E` primero).
+
+### Dos modos
+
+**ZK ON** (botón `ZK` activo — notificación: *"ZK mode: on (will create new notes)"*)
+→ trueno → formulario `tpl-zk.md` (slug, materia, connection_type, partial) → crea nota nueva en `Zettelkasten/` con nombre timestamp.
+
+**ZK OFF** (botón `ZK` desactivado — notificación: *"ZK mode: off (will append to destination)"*)
+→ trueno → appendea al archivo configurado en `dest:` sin preguntar nada.
+
+### Probado
+
+- `Alt+C` sin Explorer abierto → no hace nada.
+- `Alt+C` con Explorer abierto → enfoca el recuadro de texto (Sección 3).
+- ZK ON → texto del recuadro + clipboard automático → crea nota en `Zettelkasten/` con timestamp.
+- ZK OFF → texto del recuadro convertido a `%%> texto %%` + clipboard como `{{citation}}` → appendea a `dest:` separado por `---`.
+- Clipboard de texto → capturado automáticamente como `{{citation}}`.
+- Clipboard de imagen → capturada y appendeada junto al texto.
+- Appendeo sin borrar contenido previo — agrega al final separado por `---`.
+- Campo `dest:` → recuerda el último destino usado; tiene buscador con autocompletado de archivos del vault (escribir `inbox` muestra todas las opciones disponibles).
+- Doodle integrado (botón `doodle` en Sección 2) → cubierto por A10.
+
+### Notado
+
+- El "modal flotante" descrito en el README del plugin no existe en v4.9.0 — el Omni-Capture es el panel de captura integrado en el Explorer (Secciones 2 y 3).
+- ZK OFF appendea el texto **como marginalia inline** (`%%> %%`), no como texto plano — el contenido queda listo para ser procesado por el plugin.
+- El clipboard se captura automáticamente al guardar — limpiar portapapeles antes si no se quiere ese contenido como `{{citation}}`.
+- `_inbox/` está excluido de los Ignored Folders del plugin (B6) — las capturas ahí no aparecen en el tab `vault` del Explorer.
+
+### Convención Galaxy — destino
+
+| Caso | `dest:` | Carpeta |
+|---|---|---|
+| Captura durante clase de ETN901 | `ETN901-inbox.md` | `_inbox/` |
+| Captura sin materia específica | `inbox.md` | `_inbox/` |
+| Nota atómica (ZK ON) | — | `Zettelkasten/` |
+
+**Reglas:**
+- Una nota `ETNXXX-inbox.md` por materia activa dentro de `_inbox/`.
+- `inbox.md` para capturas sin materia o contexto cruzado.
+- `_inbox/` excluido del scanner del Explorer — no contamina el tab `vault`.
+- Los archivos en `_inbox/` son **material sin procesar** — se revisan y se diseccionan en notas Galaxy cuando corresponda.
+- Screenshots y doodles → siempre a `_assets/`, sin excepción. No van al inbox.
+- `Marginalia Inbox.md` (raíz) eliminado — reemplazado por esta convención.
+
+### Dónde se usa en Galaxy
+
+| Caso | ZK | `galaxy_body` destino | Uso |
+|---|---|---|---|
+| Captura rápida en clase | OFF | `_inbox/ETNXXX-inbox.md` | Idea, pregunta o fragmento que no se puede desarrollar en el momento |
+| Captura sin contexto de materia | OFF | `_inbox/inbox.md` | Pensamiento genérico, referencia cruzada, pendiente |
+| Nota atómica con doodle | ON | `Zettelkasten/` | Boceto + contexto que se convertirá en bridge o asteroid |
 
 ---
 
