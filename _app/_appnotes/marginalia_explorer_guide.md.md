@@ -53,19 +53,25 @@ Panel lateral con el título **"Marginalia Explorer"**. Se abre con `Alt+E` o de
 
 ### Sección 2 — Omni-Capture
 
+guía rápida:
+
+| dest               | ZK                          | Clear               | Doodle              |
+| ------------------ | --------------------------- | ------------------- | ------------------- |
+| archivo de destino | carpeta Zettelkasten<br>1/0 | limpia portapapeles | abre ventana Doodle |
+
 Cuatro controles para captura rápida con destino configurable:
 
 **Campo `dest:`** — define el archivo destino de la captura. Por defecto muestra `marginalia inbox`. Se puede escribir directamente; tiene autocompletado de archivos del vault y recuerda el último destino usado. El campo recuerda el último destino entre capturas.
 
 **Botón `ZK`** — alterna entre modo append y modo Zettelkasten.
-- **ZK OFF** (default): al capturar, appendea el contenido al archivo `dest:`. Notificación: *"ZK mode: off (will append to destination)"*.
+- **ZK OFF** (default): al capturar, adjunta el contenido al archivo `dest:`. Notificación: *"ZK mode: off (will append to destination)"*.
 - **ZK ON**: al capturar, crea una nota atómica nueva en `Zettelkasten/` usando `tpl-zk.md`. Pide slug, materia, connection_type, partial. Notificación: *"ZK mode: on (will create new notes)"*.
 
 **Botón `clear`** — limpia el clipboard y la memoria del campo destino. Notificación: *"clipboard & memory clear"*. Usar antes del trueno para enviar solo el texto de S3 sin portapapeles.
 
 **Botón `doodle`** — abre el canvas OCD (Omni-Capture Doodle). Ver [[#Flujo — Doodle (OCD)]].
 
-> ⚠️ **Comportamiento del portapapeles:** el trueno captura automáticamente el contenido del portapapeles en el momento de guardar. Presionar `clear` antes del trueno si no se quiere incluir ese contenido.
+> ⚠️ **Comportamiento del portapapeles y botón (guardar captura):** el trueno captura automáticamente el contenido del portapapeles en el momento de guardar (imágenes y texto).Presionar `clear` antes del trueno si no se quiere incluir ese contenido.
 
 ---
 
@@ -74,7 +80,7 @@ Cuatro controles para captura rápida con destino configurable:
 Dos controles para ingresar texto de captura:
 
 - **Recuadro de texto** — área de escritura libre. Ícono en la esquina inferior derecha para expandir el área. Atajo de enfoque: `Alt+C` (requiere Explorer abierto).
-- **Botón trueno** — guarda la captura al archivo destino (`Ctrl+Enter`).
+- **Botón trueno (save capture)** — guarda la captura al archivo destino (`Ctrl+Enter`).
 
 **Formato de salida en `dest:` (ZK OFF):**
 ```

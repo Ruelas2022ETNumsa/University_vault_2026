@@ -277,19 +277,6 @@ Navegación del board por teclado:
 
 ---
 
-# Flujo — Doodle (OCD)
-
-| #   | Ícono    | Función                                   |
-| --- | -------- | ----------------------------------------- |
-| 1   | Lápiz    | Modo dibujo                               |
-| 2   | Borrador | Modo borrador                             |
-| 3   | Reset    | Elimina el dibujo completo                |
-| 4   | Cancel   | Cierra sin guardar                        |
-| 5   | Attach   | Adjunta la imagen y continúa escribiendo  |
-| 6   | Trueno   | Guarda la captura completa (`Ctrl+Enter`) |
-
-
-
 %%
 # galaxy-links
 [[_app/_appnotes/Marginalia_guide.md]]
