@@ -256,14 +256,14 @@ Navegación por teclado:
 
 **Formato de salida en `dest:` (ZK OFF):**
 ```
-%%> texto del recuadro %%
+%%> texto del recuadro  ^i6l0rf %%
 contenido del portapapeles
 ---
 ```
 - El separador `---` se agrega al final de cada captura (configurable).
 - Si el portapapeles tiene texto: se añade como texto plano debajo de la marginalia.
 - Si el portapapeles tiene imagen PNG: se añade como `![[nombre-renombrado.png]]`. El plugin de renombrado renombra automáticamente con formato `nombre_dest-fecha-hora.extension` y guarda en `_assets/`.
-- Si se presionó `clear` antes: solo se añade `%%> texto %%` sin portapapeles.
+- Si se presionó `clear` antes: solo se añade `%%> texto  ^dazf59 %%` sin portapapeles.
 
 **Drag & drop S8 → S3 (copiar al recuadro):**
 

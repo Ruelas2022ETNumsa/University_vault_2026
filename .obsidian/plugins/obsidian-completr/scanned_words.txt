@@ -78012,6 +78012,7 @@ recarga
 residuos
 residuo
 reorganiza
+revelar
 notes
 notas
 nuevas
@@ -150629,6 +150630,7 @@ presionarlo
 persistencia
 press
 preuba
+padres
 min
 mica
 movimiento
@@ -211676,6 +211678,7 @@ DmFx
 DESTINATION
 Deshacer
 Desaparece
+Desplegable
 Remotely
 Raz
 Revisa

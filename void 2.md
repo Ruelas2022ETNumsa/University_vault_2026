@@ -8,7 +8,7 @@ Ejemplo completo para probar el sidebar: escanea este archivo y verifica que cad
 
 La transformada de Laplace convierte una EDO en ecuación algebraica. %%> ! Entra en examen 1730V2 #pep ^uamgt5 %%
 
-La región de convergencia determina la unicidad de la transformada. %%> ? ¿Por qué debe converger? V2 #pep%%
+La región de convergencia determina la unicidad de la transformada. %%> ? ¿Por qué debe converger? V2 #pep ^v5f86v %%
 
 El signo negativo en la exponencial es incorrecto en esta derivación. %%> X- Error de signo V2%%
 
