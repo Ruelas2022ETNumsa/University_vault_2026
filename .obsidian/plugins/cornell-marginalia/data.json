@@ -2,7 +2,9 @@
   "exportCleanTags": true,
   "exportCleanIds": true,
   "dragDropTemplate": "- {{text}} {{source_note}}",
-  "collapsedBoxes": [],
+  "collapsedBoxes": [
+    "📁/_projects"
+  ],
   "pinnedThreads": [
     "#Untaggeddd"
   ],

@@ -182,27 +182,25 @@ Filtra las marginalia mostradas en S8 en tiempo real. Atajo: `Alt+F` (previo exp
 ---
 
 ### S7 DI — Filtros
+[[#S7 CS — Filtros]]
 
-Botones circulares de color para filtrar por tag. Orden:
-
-`!` `?` `X-` `V-` `C-` `F-` `R-` `T-`
-
-Seguidos de 5 filtros especiales:
-`reloj` `Libro` `Mazo de cartas` `Cerebro` `Globo de mensaje`
-
-| Ícono            | Nombre                      | Función                                  |
-| ---------------- | --------------------------- | ---------------------------------------- |
-| Reloj            | Recientes                   | Muestra las marginalia más recientes     |
-| Libro cerrado    | Direct PDF mode             | Activa modo PDF directo                  |
-| Mazo de cartas   | Show only flashcards (`;;`) | Filtra solo marginalia con blur activado |
-| Cerebro          | Active recall en PDF        | Oculta resaltados para repasar           |
-| Globo de mensaje | Overlay mode                | Muestra marginalia sobre el PDF          |
-
-> **Ordenamiento Sección 8** — el orden de las notas sigue el orden visto aca (de izquierda a derecha esta ves en sección 8 de arriba hacia abajo), colocando las marginalia sin tag en la cima.
- 
-> **Vault** — si esta activo este botón, aparece un botón al final (extremo derecha) el icono son 2 carpetas conectadas, (Agrupar por carpetas y archivos); al presionar este filtro se agrupa por nombre de los archivos.
-
->`threads`— Si esta activo este botón, aparece un botón entre `Mazo de cartas` y `cerebro`, el icono es de una hoja limpia y una flecha que le apunta al centro (horizontalmente), el nombre es "Filtrar hilos de la nota actual".
+| Filtro                | Tooltip / Significado           | Color           | Botón requerido |
+| --------------------- | ------------------------------- | --------------- | --------------- |
+| `!`                   | Importante / examen             | ámbar           | —               |
+| `?`                   | Pregunta / duda                 | azul petróleo   | —               |
+| `X-`                  | Error / corrección              | naranja quemado | —               |
+| `V-`                  | Verificado                      | verde oliva     | —               |
+| `C-`                  | Comentario neutro               | gris antracita  | —               |
+| `F-`                  | Fórmula clave                   | morado          | —               |
+| `R-`                  | Relación entre materias         | verde azulado   | —               |
+| `T-`                  | Tarea docente                   | rojo            | —               |
+| Reloj                 | Recientes                       | —               | —               |
+| Libro cerrado         | Direct PDF mode                 | —               | —               |
+| Mazo de cartas        | Show only flashcards (`;;`)     | —               | —               |
+| Hoja + flecha         | Filtrar hilos de la nota actual | —               | `threads`       |
+| Cerebro               | Active recall en PDF            | —               | —               |
+| Globo de mensaje      | Overlay mode                    | —               | —               |
+| 2 carpetas conectadas | Agrupar por carpetas y archivos | —               | `vault`         |
 
 ---
 
@@ -452,8 +450,34 @@ Términos de búsqueda soportados:
 - **`!`** — filtra marginalia que contienen imágenes embebidas (`![[imagen.xxx]]`).
 
 ### S7 CS — Filtros
+[[#S7 DI — Filtros]]
 
-### S8 CS — Panel de resultados
+**Tag-class** (`!` `?` `X-` `V-` `C-` `F-` `R-` `T-`) — al activar un filtro S8 muestra solo las marginalia de ese tipo. Se pueden combinar con S6 (búsqueda) y con `group` (S5).
+
+**Reloj (Recientes)** — muestra las marginalia más recientes del tab activo.
+
+**Libro cerrado (Direct PDF mode)**
+- ON — notificación: *"modo pdf directo: activado"*
+- OFF — notificación: *"modo pdf directo: desactivado"*
+- Comportamiento exacto pendiente de prueba en PDF.
+
+**Mazo de cartas (Show only flashcards `;;`)** — filtra y muestra solo las marginalia con blur activado (`;;`). Útil para repaso de tarjetas tipo examen.
+
+**Cerebro (Active recall en PDF)**
+- ON — notificación: *"active recall pdf: activado (pasa el ratón para revelar bloque completo)"*
+- OFF — notificación: *"active recall pdf: desactivado"*
+- Comportamiento exacto pendiente de prueba en PDF.
+
+**Globo de mensaje (Overlay mode)**
+- ON — notificación: *"hover mode: on"*
+- OFF — notificación: *"hover mode: off"*
+- Comportamiento exacto pendiente de prueba en PDF.
+
+**2 carpetas conectadas (Agrupar por carpetas y archivos)** — disponible con `vault` activo. Agrupa S8 por archivo o carpeta:
+- Archivos en raíz: `[nombre_archivo (N)]` donde N = cantidad de marginalia. Desplegable muestra las N marginalia.
+- Archivos en carpeta: se agrupan bajo el nombre de la carpeta, ej. `[_projects]` → `[tsk_alx-rul (1)]`.
+
+**Hoja + flecha (Filtrar hilos de la nota actual)** — disponible con `threads` activo. Filtra S8 mostrando solo los padres e hilos que pertenecen al archivo abierto.
 
 ### Board
 
