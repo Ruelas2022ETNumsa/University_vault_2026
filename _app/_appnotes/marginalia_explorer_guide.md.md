@@ -33,7 +33,8 @@ status: en-progreso
   - [[#Sección 7 — Filtros]]
   - [[#Sección 8 — Panel de resultados]]
   - [[#Board — Descripción completa]]
-- [[#2. Flujos de uso]]
+- [[#2. Comportamiento por sección]]
+- [[#3. Flujos de uso]]
   - [[#Flujo A — Explorar marginalia del archivo activo]]
   - [[#Flujo B — Explorar marginalia del vault]]
   - [[#Flujo C — Stitch (conectar notas)]]
@@ -214,7 +215,29 @@ Navegación del board por teclado:
 
 ---
 
-## 2. Flujos de uso
+## 2. Comportamiento por sección
+
+### Sección 1 — Título
+
+### Sección 2 — Omni-Capture
+
+### Sección 3 — Captura rápida
+
+### Sección 4 — Tabs de navegación
+
+### Sección 5 — Acciones
+
+### Sección 6 — Búsqueda
+
+### Sección 7 — Filtros
+
+### Sección 8 — Panel de resultados
+
+### Board
+
+---
+
+## 3. Flujos de uso
 
 ### Flujo A — Explorar marginalia del archivo activo
 

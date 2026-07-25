@@ -53,25 +53,19 @@ Panel lateral con el título **"Marginalia Explorer"**. Se abre con `Alt+E` o de
 
 ### Sección 2 — Omni-Capture
 
-guía rápida:
-
-| dest               | ZK                          | Clear               | Doodle              |
-| ------------------ | --------------------------- | ------------------- | ------------------- |
-| archivo de destino | carpeta Zettelkasten<br>1/0 | limpia portapapeles | abre ventana Doodle |
-
 Cuatro controles para captura rápida con destino configurable:
 
 **Campo `dest:`** — define el archivo destino de la captura. Por defecto muestra `marginalia inbox`. Se puede escribir directamente; tiene autocompletado de archivos del vault y recuerda el último destino usado. El campo recuerda el último destino entre capturas.
 
 **Botón `ZK`** — alterna entre modo append y modo Zettelkasten.
-- **ZK OFF** (default): al capturar, adjunta el contenido al archivo `dest:`. Notificación: *"ZK mode: off (will append to destination)"*.
+- **ZK OFF** (default): al capturar, appendea el contenido al archivo `dest:`. Notificación: *"ZK mode: off (will append to destination)"*.
 - **ZK ON**: al capturar, crea una nota atómica nueva en `Zettelkasten/` usando `tpl-zk.md`. Pide slug, materia, connection_type, partial. Notificación: *"ZK mode: on (will create new notes)"*.
 
 **Botón `clear`** — limpia el clipboard y la memoria del campo destino. Notificación: *"clipboard & memory clear"*. Usar antes del trueno para enviar solo el texto de S3 sin portapapeles.
 
 **Botón `doodle`** — abre el canvas OCD (Omni-Capture Doodle). Ver [[#Flujo — Doodle (OCD)]].
 
-> ⚠️ **Comportamiento del portapapeles y botón (guardar captura):** el trueno captura automáticamente el contenido del portapapeles en el momento de guardar (imágenes y texto).Presionar `clear` antes del trueno si no se quiere incluir ese contenido.
+> ⚠️ **Comportamiento del portapapeles:** el trueno captura automáticamente el contenido del portapapeles en el momento de guardar. Presionar `clear` antes del trueno si no se quiere incluir ese contenido.
 
 ---
 
@@ -80,7 +74,7 @@ Cuatro controles para captura rápida con destino configurable:
 Dos controles para ingresar texto de captura:
 
 - **Recuadro de texto** — área de escritura libre. Ícono en la esquina inferior derecha para expandir el área. Atajo de enfoque: `Alt+C` (requiere Explorer abierto).
-- **Botón trueno (save capture)** — guarda la captura al archivo destino (`Ctrl+Enter`).
+- **Botón trueno** — guarda la captura al archivo destino (`Ctrl+Enter`).
 
 **Formato de salida en `dest:` (ZK OFF):**
 ```
@@ -88,8 +82,8 @@ Dos controles para ingresar texto de captura:
 contenido del portapapeles
 ```
 - Si el portapapeles tiene texto: se appendea como texto plano debajo de la marginalia.
-- Si el portapapeles tiene imagen PNG: se appendea como `![[nombre-renombrado.png]]`. El plugin de renombrado del vault renombra automáticamente (ej: `void-24-07-2026_11-45-46.png`) y guarda en `_assets/` la forma es (`nombre_en_dest-fecha-hora.extencion`).
-- Si se presionó `clear` antes: solo se adjunta `%%> texto %%` sin portapapeles.
+- Si el portapapeles tiene imagen PNG: se appendea como `![[nombre-renombrado.png]]`. El plugin de renombrado del vault renombra automáticamente (ej: `void-24-07-2026_11-45-46.png`) y guarda en `_assets/`.
+- Si se presionó `clear` antes: solo se appendea `%%> texto %%` sin portapapeles.
 - El bloque completo se separa del contenido previo con `---`.
 
 ---
@@ -98,30 +92,26 @@ contenido del portapapeles
 
 Cuatro tabs que controlan qué se muestra en la Sección 8:
 
-| Tab       | Función                                                                                                         |
-| --------- | --------------------------------------------------------------------------------------------------------------- |
-| `current` | Muestra todas las marginalia del archivo activo, organizadas (por tag, recientes, ver [[#Sección 7 — Filtros]]) |
-| `vault`   | Muestra marginalia de todo el vault respetando exclusiones configuradas                                         |
-| `threads` | Muestra hilos de notas conectadas entre archivos (Zettelkasten en los márgenes)                                 |
-| `board`   | Cambia el Explorer al modo Pinboard — ver [[#Board — Descripción completa]]                                     |
+| Tab | Función |
+|---|---|
+| `current` | Muestra todas las marginalia del archivo activo, organizadas por tag |
+| `vault` | Muestra marginalia de todo el vault respetando exclusiones configuradas |
+| `threads` | Muestra hilos de notas conectadas entre archivos (Zettelkasten en los márgenes) |
+| `board` | Cambia el Explorer al modo Pinboard — ver [[#Board — Descripción completa]] |
 
-- `current` y `vault`— en la sección 8 se muestran las notas marginalia organizadas según [[#Sección 7 — Filtros]]. Sintaxis:(contenido , nombre del archivo , número de línea).
-- `threads` — en la sección 8 se muestra las marginalias agrupadas según el #tag. Sintaxis:`\%\%> R- relacionada con Laplace #transformadas \%\%` si no tiene tag se agrupan en  "UNTAGGED"
+Cada marginalia en `current` y `vault` muestra: contenido de la marginalia + nombre del archivo + número de línea (columna derecha de la Sección 8).
+
 ---
 
 ### Sección 5 — Acciones
 
 Tres botones de acción:
 
-| Botón    | Función                                                                      |
-| -------- | ---------------------------------------------------------------------------- |
-| `stitch` | Conectar dos marginalia entre archivos.                                      |
-| `group`  | Agrupa marginalia repetidas. Puede estar activo simultáneamente con `stitch` |
-| Recargar | Refresca el scan del vault/archivo en busca de nuevas marginalia             |
-- `stitch`— falta detallar esta parte!!!
- Al presionar: *"Step 1: click the origin note..."* — flujo de dos pasos
- 
- - `group`— agrupa notas marginalias según palabras repetidas (ej: "Entra en examen","Ecuación centra", etc), también se puede filtrar según [[#Sección 6 — Búsqueda]] y [[#Sección 7 — Filtros]].
+| Botón | Función |
+|---|---|
+| `stitch` | Conectar dos marginalia entre archivos. Al presionar: *"Step 1: click the origin note..."* — flujo de dos pasos |
+| `group` | Agrupa marginalia repetidas. Puede estar activo simultáneamente con `stitch` |
+| Recargar | Refresca el scan del vault/archivo en busca de nuevas marginalia |
 
 ---
 
@@ -138,21 +128,14 @@ Botones circulares de color para filtrar por tag. Orden:
 `!` `?` `X-` `V-` `C-` `F-` `R-` `T-`
 
 Seguidos de 5 filtros especiales:
-`reloj` `Libro` `Mazo de cartas` `Cerebro` `Globo de mensaje`
 
-| Ícono            | Nombre                      | Función                                  |
-| ---------------- | --------------------------- | ---------------------------------------- |
-| Reloj            | Recientes                   | Muestra las marginalia más recientes     |
-| Libro cerrado    | Direct PDF mode             | Activa modo PDF directo                  |
-| Mazo de cartas   | Show only flashcards (`;;`) | Filtra solo marginalia con blur activado |
-| Cerebro          | Active recall en PDF        | Oculta resaltados para repasar           |
-| Globo de mensaje | Overlay mode                | Muestra marginalia sobre el PDF          |
-
-> **Ordenamiento Sección 8** — el orden de las notas sigue el orden visto aca (de izquierda a derecha esta ves en sección 8 de arriba hacia abajo), colocando las marginalia sin tag en la cima.
- 
-> **Vault** — si esta activo este botón, aparece un botón al final (extremo derecha) el icono son 2 carpetas conectadas, (Agrupar por carpetas y archivos); al presionar este filtro se agrupa por nombre de los archivos.
-
->`threads`— Si esta activo este botón, aparece un botón entre `Mazo de cartas` y `cerebro`, el icono es de una hoja limpia y una flecha que le apunta al centro (horizontalmente), el nombre es "Filtrar hilos de la nota actual".
+| Ícono | Nombre | Función |
+|---|---|---|
+| Reloj | Recientes | Muestra las marginalia más recientes |
+| Libro cerrado | Direct PDF mode | Activa modo PDF directo |
+| Mazo de cartas | Show only flashcards (`;;`) | Filtra solo marginalia con blur activado |
+| Cerebro | Active recall en PDF | Oculta resaltados para repasar |
+| Globo de mensaje | Overlay mode | Muestra marginalia sobre el PDF |
 
 ---
 
