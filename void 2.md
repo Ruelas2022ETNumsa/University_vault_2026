@@ -6,21 +6,21 @@ Ejemplo completo para probar el sidebar: escanea este archivo y verifica que cad
 
 **1. Inline simple izquierda — todos los tags**
 
-La transformada de Laplace convierte una EDO en ecuación algebraica. %%> ! Entra en examen  ^rxnisv %%
+La transformada de Laplace convierte una EDO en ecuación algebraica. %%> ! Entra en examen V2%%
 
-La región de convergencia determina la unicidad de la transformada. %%> ? ¿Por qué debe converger? [[void 2#^x6io45]]  ^wu5ogm %%
+La región de convergencia determina la unicidad de la transformada. %%> ? ¿Por qué debe converger? V2%%
 
-El signo negativo en la exponencial es incorrecto en esta derivación. %%> X- Error de signo  ^x6io45 %%
+El signo negativo en la exponencial es incorrecto en esta derivación. %%> X- Error de signo V2%%
 
-El docente asignó demostrar el teorema de valor final. %%> T- Tarea: demostrar TVF [[void 2#^ei3tgq]] %%
+El docente asignó demostrar el teorema de valor final. %%> T- Tarea: demostrar TVF V2%%
 
-Dato confirmado con Kreyszig p.218. %%> V- Verificado  ^ei3tgq %%
+Dato confirmado con Kreyszig p.218. %%> V- Verificado V2%%
 
-Esto se relaciona con el contenido de ETN806 T03. %%> R- Ver ETN806 T03 %%
+Esto se relaciona con el contenido de ETN806 T03. %%> R- Ver ETN806 T03  V2%%
 
-La condición inicial es $f(0^-)=0$ para sistemas causales. %%> C- Aplica solo a sistemas causales %%
+La condición inicial es $f(0^-)=0$ para sistemas causales. %%> C- Aplica solo a sistemas causales  V2%%
 
-La ecuación central del tema es la definición integral. %%> F- Fórmula clave %%
+La ecuación central del tema es la definición integral. %%> F- Fórmula clave  V2%%
 
 ---
 

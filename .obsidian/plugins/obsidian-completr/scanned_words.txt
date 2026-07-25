@@ -58134,6 +58134,7 @@ superdoodle
 sobrevive
 stitches
 save
+soltar
 vault
 vil
 ver
@@ -71233,6 +71234,7 @@ arrastrando
 added
 argollas
 arrastre
+acto
 related
 recomendados
 ribbon
@@ -98870,6 +98872,8 @@ usaran
 user
 ubicacion
 uZGljaSVDMyVCM
+undo
+uqakdh
 Galaxy
 Git
 Gr
@@ -150603,6 +150607,7 @@ pruebaasasavoid
 pruebaasasavoidsadadsa
 presionarlo
 persistencia
+press
 min
 mica
 movimiento
@@ -197205,6 +197210,7 @@ lMjBkZSUyMGNvbnZlcmdlbmNpYSUyMHJlcXVpZXJlJTIwJTI
 lnbWFfMCUyNC
 lMjUlMjUlM
 lMjBLcmV
+ltla
 incluyendo
 im
 instalar
@@ -272006,6 +272012,7 @@ jalando
 jaZ
 jVaJ
 juan
+jalar
 Qu
 Qui
 Quick
