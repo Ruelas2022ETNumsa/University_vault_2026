@@ -3,7 +3,7 @@
 
 Tres cosas para probar:
 
-1. **Inline simple** — escribir %%> izquierda [[void 2#^rxnisv]] {stitch: examnelol}%% en medio de un párrafo .
+1. **Inline simple** — escribir %%> izquierda [[void 2#^rxnisv]] {stitch: examnelol} ^ltla01 %% en medio de un párrafo .
 
 2. **Inline simple** — escribir %%< derecha%% en medio de un párrafo .
    

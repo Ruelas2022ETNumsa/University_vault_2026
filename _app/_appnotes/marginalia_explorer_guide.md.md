@@ -259,6 +259,36 @@ contenido del portapapeles
 - Si el portapapeles tiene imagen PNG: se añade como `![[nombre-renombrado.png]]`. El plugin de renombrado renombra automáticamente con formato `nombre_dest-fecha-hora.extension` y guarda en `_assets/`.
 - Si se presionó `clear` antes: solo se añade `%%> texto %%` sin portapapeles.
 
+**Drag & drop S8 → S3 (copiar al recuadro):**
+
+Al arrastrar una marginalia de S8 al recuadro, se genera automáticamente un Block ID en el archivo fuente. El ID se crea con solo el acto de jalar, sin necesidad de soltar en el recuadro.
+
+- **Marginalia simple:**
+```
+%%>! Entra en examen ^rxnisv%%
+```
+
+- **Grupo simple:**
+```
+[[void 2#^uqakdh|Group: ¿Qué forma tiene la ROC para señales causales?]]
+```
+
+- **Threads (desde tab `threads`):**
+```
+# UNTAGGED
+- nota marginalia padre [[archivo1#^ltla01]]
+	- nota marginalia hilo [[archivo2#^rxnisv]]
+```
+Se respeta la jerarquía padre-hilo con indentación.
+
+**Drag & drop S8 → S8 (crear thread):**
+
+Al arrastrar una marginalia sobre otra dentro de S8:
+- La nota arrastrada se convierte en **hilo**, la nota destino en **padre**.
+- Notificación inmediata: *"stitching 1 thread(s)..."*
+- Notificación de éxito: *"Threads successfully connected! (press Ctrl+Shift+Z to undo)"*
+- Sin tag: ambas notas se agrupan bajo `UNTAGGED` en el tab `threads`.
+
 ### S4 CS — Tabs de navegación
 [[#S4 DI — Tabs de navegación]]
 

@@ -8,13 +8,13 @@ Ejemplo completo para probar el sidebar: escanea este archivo y verifica que cad
 
 La transformada de Laplace convierte una EDO en ecuación algebraica. %%> ! Entra en examen  ^rxnisv %%
 
-La región de convergencia determina la unicidad de la transformada. %%> ? ¿Por qué debe converger? %%
+La región de convergencia determina la unicidad de la transformada. %%> ? ¿Por qué debe converger? [[void 2#^x6io45]]  ^wu5ogm %%
 
-El signo negativo en la exponencial es incorrecto en esta derivación. %%> X- Error de signo %%
+El signo negativo en la exponencial es incorrecto en esta derivación. %%> X- Error de signo  ^x6io45 %%
 
-El docente asignó demostrar el teorema de valor final. %%> T- Tarea: demostrar TVF %%
+El docente asignó demostrar el teorema de valor final. %%> T- Tarea: demostrar TVF [[void 2#^ei3tgq]] %%
 
-Dato confirmado con Kreyszig p.218. %%> V- Verificado %%
+Dato confirmado con Kreyszig p.218. %%> V- Verificado  ^ei3tgq %%
 
 Esto se relaciona con el contenido de ETN806 T03. %%> R- Ver ETN806 T03 %%
 
@@ -44,7 +44,7 @@ $\lim_{t \to \infty} f(t) = \lim_{s \to 0} sF(s)$ %%< ? ¿Cuándo falla el TVF? 
 ::cue
 ````marginalia %%> %%
 Transformada de Laplace %%> ! Concepto central del curso %%
-ROC %%> ? ¿Qué forma tiene la ROC para señales causales? %%
+ROC %%> ? ¿Qué forma tiene la ROC para señales causales?  ^uqakdh %%
 Teorema de derivación %%> F- $sF(s)-f(0^-)$ %%
 ````
 

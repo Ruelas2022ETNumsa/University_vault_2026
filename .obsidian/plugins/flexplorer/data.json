@@ -5,6 +5,7 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
+        "xxx.md",
         "Evidence Boards",
         "Pinboards",
         "void2.md",
@@ -1234,6 +1235,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "marginalia_explorer_guide.md 1.md",
         "marginalia_explorer_guide.md.md",
         "supercharged_guide.md",
         "script_guide.md",
@@ -3049,6 +3051,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "tsk_alx-rul 1.md",
         "_ideas_1_apps_2brain.md",
         "tsk_emergn.md",
         "tsk_standb.md",
@@ -3290,6 +3293,18 @@
       "isHidden": false
     },
     "_assets/void-24-07-2026_11-45-46.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "xxx.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_appnotes/marginalia_explorer_guide.md 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_projects/tsk_alx-rul 1.md": {
       "isPinned": false,
       "isHidden": false
     }

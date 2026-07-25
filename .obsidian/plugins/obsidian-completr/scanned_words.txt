@@ -6456,6 +6456,7 @@ transformadas
 tooltip
 tree
 transversal
+tooltips
 ToDo
 Templater
 Text
@@ -71229,6 +71230,9 @@ agrupador
 adjunta
 agrupa
 arrastrando
+added
+argollas
+arrastre
 related
 recomendados
 ribbon
@@ -77991,6 +77995,8 @@ rbol
 recurrentes
 redirigir
 resetea
+reorganizar
+reos
 notes
 notas
 nuevas
@@ -84438,6 +84444,7 @@ nXik
 nando
 nombrado
 nombramiento
+notificaciones
 created
 commit
 cada
@@ -132027,6 +132034,7 @@ Extrae
 Exportador
 EyPh
 Exported
+Escaneo
 Obsidian
 OmniSearch
 Ocultar
@@ -150593,6 +150601,8 @@ presiona
 pinboard
 pruebaasasavoid
 pruebaasasavoidsadadsa
+presionarlo
+persistencia
 min
 mica
 movimiento
@@ -177232,6 +177242,7 @@ ebfcb
 enlazadas
 enviar
 examnelol
+esperadas
 Motor
 Media
 Mantiene
@@ -205196,6 +205207,7 @@ important
 imange
 indent
 indeseados
+implementados
 Dependencia
 Dropbox
 Dataview
@@ -219030,6 +219042,8 @@ Recientes
 Restore
 README
 Reorganiza
+Refresh
+Reestructura
 Hider
 Hace
 Herramientas

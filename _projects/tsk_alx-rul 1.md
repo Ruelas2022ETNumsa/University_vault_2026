@@ -10,21 +10,17 @@ status: creciente
 
 ## Handoff
 
-**Última sesión:** 2026-07-24
-**Retomar desde:** `marginalia_explorer_guide.md` — S5 DI (siguiente en orden)
+**Última sesión:** 2026-07-23
+**Retomar desde:** A6 — Marginalia Explorer (pendientes detallados en BLOQUE A6)
 **Completado esta sesión:**
-- Reestructura de `marginalia_explorer_guide.md`: se añadió `## 2. Comportamiento por sección` (esquema C) con `###` por sección.
-- Links cruzados DI ↔ CS implementados por el usuario (convención `S# DI` / `S# CS`).
-- S2 DI — actualizado: tooltips en guía rápida, autocompletado, persistencia, dest vacío, archivo inexistente.
-- S2 CS — completo: notificaciones ZK ON/OFF, `clear`, bug tpl-zk.md documentado.
-- S3 DI — actualizado: guía rápida, expand por arrastre, `Alt+C` requiere `Alt+E` primero.
-- S3 CS — completo: formato de salida, drag & drop S8→S3 (simple/grupo/threads), drag & drop S8→S8 (crear thread), notificaciones de stitch.
-- S4 DI — actualizado: tooltips, visualización de entradas en S8, subsección Board anidada con 7 botones + tooltips + teclado.
-- S4 CS — completo: comportamiento current/vault/threads/board, filtro exclusivo vault, Export full tree, círculo pin individual, hover, notificación "added to board", visualización de nodos en Board.
-- `### Board — Descripción completa` eliminado (absorbido en S4 DI).
-- IDs espúreos de Obsidian en S3 CS limpiados.
-**Próximo paso:** S5 DI — revisar, luego S5 CS, S6, S7, S8 y flujos.
-**Preguntas de cierre:** `stitch` y `group` en S5 DI quedan pendientes de detalle — tooltips y estado visual activo no confirmados.
+- A8 (Flashcard Generator) — documentado completo.
+- A12 (PDF Export) — documentado. Limitación: bloques cornell no exportan.
+- A11 (Omni-Capture) — documentado completo. Convención `_inbox/` definida.
+- A9 (Margin Threads) — documentado: `#tag` agrupador + Stitch. `UNTAGGED` no configurable. Hover Peek = tooltip en v4.9.0.
+- Infraestructura `_inbox/` creada.
+- A9: agregado que `#tag` + Stitch combinados dan grupo nombrado con jerarquía padre-hijo.
+**Próximo paso:** A6 — completar pendientes del BLOQUE A6 (Explorer: Secciones 2, 4-threads/board, 5, 7-filtros especiales, 8-teclado, Board)
+**Preguntas de cierre:** ¿Se parchea `main.js` (BUG-01 y BUG-02) antes o después de cerrar A6?
 
 ---
 
