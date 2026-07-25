@@ -46,14 +46,15 @@ status: en-progreso
 
 ## 1. Descripción de la interfaz
 
-### Sección 1 — Título
+### S1 DI — Título
 
 Panel lateral con el título **"Marginalia Explorer"**. Se abre con `Alt+E` o desde el Command Palette.
 
 ---
 
-### Sección 2 — Omni-Capture
+### S2 DI — Omni-Capture
 
+[[#Sección 2 — Omni-Capture]]
 guía rápida:
 
 | dest               | ZK                          | Clear               | Doodle              |
@@ -62,21 +63,21 @@ guía rápida:
 
 Cuatro controles para captura rápida con destino configurable:
 
-**Campo `dest:`** — define el archivo destino de la captura. Por defecto muestra `marginalia inbox`. Se puede escribir directamente; tiene autocompletado de archivos del vault y recuerda el último destino usado. El campo recuerda el último destino entre capturas.
+**Campo `dest:`** — define el archivo destino de la captura. Por defecto apunta a `marginalia inbox` (archivo real en `_inbox/`). Se puede escribir directamente; tiene autocompletado por nombre de archivo (sin extensión, no busca rutas ni carpetas) y recuerda el último destino usado incluso al cerrar y reabrir Obsidian.
+- Si se deja vacío y se presiona el trueno: guarda automáticamente en `marginalia inbox`.
+- Si se escribe un archivo inexistente: lo crea en la raíz del vault (revisar configuración para redirigir a `_inbox/`).
 
-**Botón `ZK`** — alterna entre modo append y modo Zettelkasten.
-- **ZK OFF** (default): al capturar, adjunta el contenido al archivo `dest:`. Notificación: *"ZK mode: off (will append to destination)"*.
-- **ZK ON**: al capturar, crea una nota atómica nueva en `Zettelkasten/` usando `tpl-zk.md`. Pide slug, materia, connection_type, partial. Notificación: *"ZK mode: on (will create new notes)"*.
+**Botón `ZK`** — alterna entre modo añadir al final y modo Zettelkasten.
+- **ZK OFF** (default): añade al final del archivo `dest:`. Nunca sobreescribe.
+- **ZK ON**: crea una nota atómica nueva en `Zettelkasten/` usando `tpl-zk.md`.
 
-**Botón `clear`** — limpia el clipboard y la memoria del campo destino. Notificación: *"clipboard & memory clear"*. Usar antes del trueno para enviar solo el texto de S3 sin portapapeles.
+**Botón `clear`** — limpia el portapapeles y la memoria del campo destino.
 
 **Botón `doodle`** — abre el canvas OCD (Omni-Capture Doodle). Ver [[#Flujo — Doodle (OCD)]].
 
-> ⚠️ **Comportamiento del portapapeles y botón (guardar captura):** el trueno captura automáticamente el contenido del portapapeles en el momento de guardar (imágenes y texto).Presionar `clear` antes del trueno si no se quiere incluir ese contenido.
-
 ---
 
-### Sección 3 — Captura rápida
+### S3 DI — Captura rápida
 
 Dos controles para ingresar texto de captura:
 
@@ -95,7 +96,7 @@ contenido del portapapeles
 
 ---
 
-### Sección 4 — Tabs de navegación
+### S4 DI — Tabs de navegación
 
 Cuatro tabs que controlan qué se muestra en la Sección 8:
 
@@ -110,7 +111,7 @@ Cuatro tabs que controlan qué se muestra en la Sección 8:
 - `threads` — en la sección 8 se muestra las marginalias agrupadas según el #tag. Sintaxis:`\%\%> R- relacionada con Laplace #transformadas \%\%` si no tiene tag se agrupan en  "UNTAGGED"
 ---
 
-### Sección 5 — Acciones
+### S5 DI — Acciones
 
 Tres botones de acción:
 
@@ -126,13 +127,13 @@ Tres botones de acción:
 
 ---
 
-### Sección 6 — Búsqueda
+### S6 DI — Búsqueda
 
 Campo `search notes...` — filtra las marginalia mostradas en la Sección 8 en tiempo real. Atajo: `Alt+F`.
 
 ---
 
-### Sección 7 — Filtros
+### S7 DI — Filtros
 
 Botones circulares de color para filtrar por tag. Orden:
 
@@ -157,7 +158,7 @@ Seguidos de 5 filtros especiales:
 
 ---
 
-### Sección 8 — Panel de resultados
+### S8 DI — Panel de resultados
 
 Muestra las marginalia según los filtros activos. Orden por defecto:
 
@@ -217,21 +218,39 @@ Navegación del board por teclado:
 
 ## 2. Comportamiento por sección
 
-### Sección 1 — Título
+### S1 CS — Título
 
-### Sección 2 — Omni-Capture
+### S2 CS — Omni-Capture
 
-### Sección 3 — Captura rápida
+**Campo `dest:`**
+- Si se deja vacío: guarda automáticamente en `marginalia inbox`.
+- Si el archivo no existe: lo crea en la raíz del vault.
+- Persiste entre sesiones de Obsidian.
 
-### Sección 4 — Tabs de navegación
+**Botón `ZK`**
+- **ZK OFF** — notificación: *"ZK mode: off (will append to destination)"*. Añade al final del archivo `dest:`, nunca sobreescribe.
+- **ZK ON** — notificación: *"ZK mode: on (will create new notes)"*. Abre modal con campos en orden: `slug` → `materia` → `connection_type` → `partial`. Crea la nota con el template `tpl-zk.md` y genera el yaml con esos datos.
+  > ⚠️ El template tiene un bug de nombramiento conocido — hay bk disponible. La corrección se hará vía script en otra sesión.
 
-### Sección 5 — Acciones
+**Botón `clear`**
+- Notificación: *"clipboard & memory clear"*.
+- Limpia el portapapeles y resetea el campo `dest:`.
+- Usar antes del trueno para evitar agregados indeseados al archivo destino.
+  > ⚠️ Si no se sabe qué hay en el portapapeles, usar `clear` antes de capturar.
 
-### Sección 6 — Búsqueda
+**Botón `doodle`** — ver [[#Sección 2 — Omni-Capture]] en Flujos.
 
-### Sección 7 — Filtros
+### S3 CS — Captura rápida
 
-### Sección 8 — Panel de resultados
+### S4 CS — Tabs de navegación
+
+### S5 CS — Acciones
+
+### S6 CS — Búsqueda
+
+### S7 CS — Filtros
+
+### S8 CS — Panel de resultados
 
 ### Board
 
