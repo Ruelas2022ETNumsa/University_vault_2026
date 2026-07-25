@@ -6,9 +6,9 @@ Ejemplo completo para probar el sidebar: escanea este archivo y verifica que cad
 
 **1. Inline simple izquierda — todos los tags**
 
-La transformada de Laplace convierte una EDO en ecuación algebraica. %%> ! Entra en examen 1730V2 ^ifos3c %%
+La transformada de Laplace convierte una EDO en ecuación algebraica. %%> ! Entra en examen 1730V2 #pep ^uamgt5 %%
 
-La región de convergencia determina la unicidad de la transformada. %%> ? ¿Por qué debe converger? V2%%
+La región de convergencia determina la unicidad de la transformada. %%> ? ¿Por qué debe converger? V2 #pep%%
 
 El signo negativo en la exponencial es incorrecto en esta derivación. %%> X- Error de signo V2%%
 
@@ -44,7 +44,7 @@ $\lim_{t \to \infty} f(t) = \lim_{s \to 0} sF(s)$ %%< ? ¿Cuándo falla el TVF? 
 ::cue
 ````marginalia %%> %%
 Transformada de Laplace %%> ! Concepto central del curso %%
-ROC %%> ? ¿Qué forma tiene la ROC para señales causales?  ^uqakdh %%
+ROC %%> ! ¿Qué forma tiene la ROC para señales causales?%%
 Teorema de derivación %%> F- $sF(s)-f(0^-)$ %%
 ````
 
