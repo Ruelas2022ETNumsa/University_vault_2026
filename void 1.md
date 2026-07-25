@@ -3,7 +3,7 @@
 
 Cada línea prueba un tag. Verificar color en Reading View y Live Preview.
 
-1. **`!` ámbar** — Texto de referencia %%< ! Esto es importante, entra en examen V1%% fin de línea.
+1. **`!` ámbar** — Texto de referencia %%< ! Esto es importante, entra en examen 1730V1%% fin de línea.
 
 2. **`?` azul petróleo** — Texto de referencia %%< ? ¿Por qué se cumple esta condición?  V1%% fin de línea.
 

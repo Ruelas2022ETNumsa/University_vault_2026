@@ -6,7 +6,7 @@ Ejemplo completo para probar el sidebar: escanea este archivo y verifica que cad
 
 **1. Inline simple izquierda — todos los tags**
 
-La transformada de Laplace convierte una EDO en ecuación algebraica. %%> ! Entra en examen V2%%
+La transformada de Laplace convierte una EDO en ecuación algebraica. %%> ! Entra en examen 1730V2 ^ifos3c %%
 
 La región de convergencia determina la unicidad de la transformada. %%> ? ¿Por qué debe converger? V2%%
 
