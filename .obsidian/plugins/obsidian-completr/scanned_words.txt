@@ -13703,6 +13703,8 @@ Trueno
 TNzX
 TlOu
 TizL
+Toogle
+Tooltip
 Sistema
 Sync
 Save
@@ -26896,6 +26898,7 @@ Promise
 Prepare
 Pensamiento
 Peek
+Persiste
 del
 date
 de
@@ -71225,6 +71228,7 @@ abcf
 agrupador
 adjunta
 agrupa
+arrastrando
 related
 recomendados
 ribbon
@@ -77986,6 +77990,7 @@ renderizada
 rbol
 recurrentes
 redirigir
+resetea
 notes
 notas
 nuevas
@@ -84432,6 +84437,7 @@ nombregriego
 nXik
 nando
 nombrado
+nombramiento
 created
 commit
 cada
@@ -150584,6 +150590,9 @@ presion
 pruebassssgert
 pepepe
 presiona
+pinboard
+pruebaasasavoid
+pruebaasasavoidsadadsa
 min
 mica
 movimiento
@@ -191425,6 +191434,7 @@ LIDATx
 Limpiar
 LdKI
 Limitaci
+Limpia
 links
 las
 listar
@@ -205185,6 +205195,7 @@ items
 important
 imange
 indent
+indeseados
 Dependencia
 Dropbox
 Dataview
@@ -219018,6 +219029,7 @@ Reloj
 Recientes
 Restore
 README
+Reorganiza
 Hider
 Hace
 Herramientas

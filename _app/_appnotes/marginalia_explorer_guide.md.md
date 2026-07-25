@@ -260,6 +260,58 @@ contenido del portapapeles
 - Si se presionó `clear` antes: solo se añade `%%> texto %%` sin portapapeles.
 
 ### S4 CS — Tabs de navegación
+[[#S4 DI — Tabs de navegación]]
+
+**`current`**
+- El Explorer NO se actualiza automáticamente al cambiar de archivo. Requiere presionar **Refresh data** (S5).
+- Cada entrada tiene un círculo en el extremo derecho — al presionarlo se marca y envía la marginalia al Board. Notificación: *"added to board"*.
+- Al pasar el cursor sobre una entrada: hover con preview del contenido de la nota (no del archivo completo).
+- Click en una entrada: abre el archivo y salta a la línea exacta.
+
+**`vault`**
+- Escaneo instantáneo. Si no aparecen marginalia esperadas, presionar Refresh data.
+- Tiene un filtro exclusivo: **Agrupar por carpetas y archivos** (tooltip: *agrupar por carpetas y archivos*, ícono: dos carpetas conectadas). Al activarlo:
+  - Archivos en la raíz se muestran agrupados como archivos.
+  - Archivos en carpetas se agrupan bajo el nombre de la carpeta (ej: todo lo de `Zettelkasten/` aparece bajo `Zettelkasten`).
+  - Aparece botón **Export full tree to board** (cuadrado azul con círculo blanco) para exportar todo el árbol al Board.
+- Sin el filtro de agrupación: comportamiento igual a `current` con círculo individual por nota.
+
+**`threads`**
+- Al pasar el cursor: hover con preview del contenido (igual que `current`).
+- Click en una entrada: abre el archivo y salta a la línea.
+- Entre nota padre e hilo se muestra el tipo de conexión: ícono de cadena (2 argollas) + nombre del `connection_type` asignado en el Stitch.
+- Cada grupo de tag tiene botón **Export full tree to board** (cuadrado azul con círculo blanco) para exportar todo el grupo.
+- Las notas internas del grupo tienen círculo individual para exportar al Board una por una.
+
+**`board`** — ver [[#S4 CS — Board]].
+
+#### S4 CS — Board
+
+**Agregar texto plano desde S3:**
+- Escribir texto en el recuadro y presionar `+`. Se agrega al Board como nodo simple:
+```
+[texto plano                              x]
+```
+
+**Notas exportadas individualmente:**
+```
+[(color tag) marginalia #tag de carpeta       <> x]
+                                nombre_archivo · línea
+```
+- `<` = outdent, `>` = indent (reorganizar jerarquía). No tienen efecto visible confirmado.
+- `x` = elimina la nota del Board.
+
+**Notas exportadas agrupadas (vault + agrupar / threads):**
+```
+UNTAGGED    x
+[NOTA PADRE ...                    <> x]
+              nombre_archivo · línea
+  [nota hilo ...                   <> x]
+                nombre_archivo · línea
+```
+- La indentación refleja la jerarquía padre-hilo del Stitch.
+- Sin Stitch: no hay niveles, todas las notas quedan al mismo nivel.
+- El tipo de conexión (cadena + connection_type) visible en `threads` **no aparece** en el Board.
 
 ### S5 CS — Acciones
 
