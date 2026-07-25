@@ -6457,6 +6457,7 @@ tooltip
 tree
 transversal
 tooltips
+territorio
 ToDo
 Templater
 Text
@@ -26900,6 +26901,7 @@ Prepare
 Pensamiento
 Peek
 Persiste
+Padre
 del
 date
 de
@@ -32514,6 +32516,7 @@ dfdf
 diseccionan
 disecciona
 detallar
+deshacer
 Vault
 Verificar
 Variables
@@ -50847,6 +50850,7 @@ bocetos
 bGElMjBkZSUyMGV
 buscador
 boicsdsdsds
+blancas
 scope
 status
 selector
@@ -58136,6 +58140,8 @@ stitches
 save
 soltar
 semantica
+suficientes
+soportados
 vault
 vil
 ver
@@ -71236,6 +71242,7 @@ added
 argollas
 arrastre
 acto
+apariciones
 related
 recomendados
 ribbon
@@ -78000,6 +78007,11 @@ redirigir
 resetea
 reorganizar
 reos
+reordena
+recarga
+residuos
+residuo
+reorganiza
 notes
 notas
 nuevas
@@ -110975,6 +110987,7 @@ CwI
 Consolida
 Connection
 Combinando
+Connect
 Instalados
 Instalado
 Instalar
@@ -118312,6 +118325,7 @@ Indent
 IJz
 Interfaz
 Infraestructura
+Indicaci
 Funci
 File
 Fase
@@ -138461,6 +138475,7 @@ Overlay
 Outdent
 Organizar
 Ordenamiento
+ORIGIN
 Auto
 Annotator
 Autocompletado
@@ -205220,6 +205235,7 @@ indent
 indeseados
 implementados
 ifos
+identical
 Dependencia
 Dropbox
 Dataview
@@ -211656,6 +211672,9 @@ DeepSeek
 Discutir
 Duplica
 DmFx
+DESTINATION
+Deshacer
+Desaparece
 Remotely
 Raz
 Revisa
@@ -219056,6 +219075,7 @@ README
 Reorganiza
 Refresh
 Reestructura
+Recarga
 Hider
 Hace
 Herramientas
@@ -224207,6 +224227,7 @@ Hover
 HXO
 HgOU
 Herencia
+Hilo
 filtrar
 formato
 faltantes
@@ -264632,6 +264653,7 @@ ojala
 openFile
 opacity
 outdent
+ordenamiento
 junto
 json
 jer

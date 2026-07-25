@@ -152,24 +152,32 @@ Navegación del board por teclado:
 ---
 
 ### S5 DI — Acciones
+[[#S5 CS — Acciones]]
 
 Tres botones de acción:
 
-| Botón    | Función                                                                      |
-| -------- | ---------------------------------------------------------------------------- |
-| `stitch` | Conectar dos marginalia entre archivos.                                      |
-| `group`  | Agrupa marginalia repetidas. Puede estar activo simultáneamente con `stitch` |
-| Recargar | Refresca el scan del vault/archivo en busca de nuevas marginalia             |
-- `stitch`— falta detallar esta parte!!!
- Al presionar: *"Step 1: click the origin note..."* — flujo de dos pasos
- 
- - `group`— agrupa notas marginalias según palabras repetidas (ej: "Entra en examen","Ecuación centra", etc), también se puede filtrar según [[#Sección 6 — Búsqueda]] y [[#Sección 7 — Filtros]].
+| Botón     | Tooltip               | Función                                                                        |
+| --------- | --------------------- | ------------------------------------------------------------------------------ |
+| `stitch`  | Connect two notes     | Conecta dos marginalia entre archivos. Flujo de dos pasos.                     |
+| `group`   | Group identical notes | Agrupa marginalia con contenido idéntico. Puede estar activo junto con stitch. |
+| ↺ (ícono) | Refresh data          | Refresca el scan del vault/archivo activo. Acción instantánea.                 |
+
+**`stitch`** — al presionar aparece un recuadro destacado en S8 indicando el paso actual. Flujo de dos pasos: seleccionar origen → seleccionar destino. Ver [[#S5 CS — Acciones]] para el comportamiento completo.
+
+**`group`** — reordena S8 por número de línea y agrupa marginalia con contenido idéntico, sin importar tag-class ni presencia de Block ID. Compatible con los filtros de [[#S7 DI — Filtros]] y [[#S6 DI — Búsqueda]].
+
+**Refresh** (↺) — solo ícono, sin tooltip visible. Recarga los datos del tab activo. Acción momentánea: el botón vuelve a estado apagado inmediatamente.
 
 ---
 
 ### S6 DI — Búsqueda
+[[#S6 CS — Búsqueda]]
 
-Campo `search notes...` — filtra las marginalia mostradas en la Sección 8 en tiempo real. Atajo: `Alt+F`.
+Campo de búsqueda con forma:
+```
+[🔍 search notes...]
+```
+Filtra las marginalia mostradas en S8 en tiempo real. Atajo: `Alt+F` (previo explorer debe estar abierto `Alt+E`). No disponible en el tab `board` (el campo desaparece).
 
 ---
 
@@ -344,8 +352,104 @@ UNTAGGED    x
 - El tipo de conexión (cadena + connection_type) visible en `threads` **no aparece** en el Board.
 
 ### S5 CS — Acciones
+[[#S5 DI — Acciones]]
+
+> [!note] Dos tipos de tag en el plugin
+> El plugin maneja dos tipos de tag independientes que pueden coexistir en la misma marginalia:
+> - **tag-class** — prefijo de color que clasifica el tipo de marginalia (`!`, `?`, `X-`, `V-`…). Controla color y filtro en S7.
+> - **tag-group** — agrupador de Threads (`#nombre`). Controla la carpeta del árbol en el tab `threads`.
+> Ejemplo: `%%> ! Esto es importante #transformadas %%` tiene tag-class `!` y tag-group `#transformadas`.
+
+**Estado visual de los botones:**
+- **Activo** — fondo morado (color del tema), letras blancas.
+- **Apagado** — fondo gris, letras blancas.
+- `current`, `vault`, `threads` y `board` son mutuamente excluyentes.
+- `stitch` y `group` son independientes entre sí y pueden estar ambos activos simultáneamente.
+- **Refresh** (↺) es acción instantánea: se presiona, recarga, y vuelve a apagado.
+
+---
+
+**Caso 1 — solo Refresh (0 · 0 · 1)**
+
+Presionar Refresh actualiza S8 con las marginalia actuales del tab activo. No activa ningún modo. Útil al cambiar de archivo con `current` activo, ya que el Explorer no se actualiza automáticamente al cambiar de pestaña.
+
+---
+
+**Caso 2 — solo stitch activo (1 · 0 · 0)**
+
+Flujo de conexión en dos pasos:
+
+1. Presionar `stitch` — aparece recuadro destacado en **morado** en S8: *"Step 1: click the ORIGIN note..."*
+2. Click en la marginalia **padre** (origen) — el recuadro cambia a **verde claro**: *"Step 2: click the DESTINATION note..."*
+3. Navegar al archivo del hilo si es necesario (cambiar pestaña + Refresh).
+4. Click en la marginalia **hilo** (destino) — aparece ventana emergente:
+   - Título: *"semantic connection (how is 'archivo1' related to 'archivo2')"*
+   - Campo de texto para escribir el tipo de conexión.
+   - Botones: `[cancel]` / `[stitch notes]`
+5. Presionar `[stitch notes]` — la ventana se cierra y aparecen dos notificaciones:
+   - *"stitching 1 notes"*
+   - Indicación para deshacer: `to undo : Ctrl+Shift+Z`
+
+**Resultado en los archivos:**
+```
+void 1 (padre): texto original [void 2 > ^id](void 2#^id) {stitch: tipo_conexión}
+void 2 (hilo):  texto original ^id
+```
+
+**Resultado en `threads`:**
+```
+[UNTAGGED]
+  [marginalia padre                    void 1 · línea]
+    ⛓ tipo_conexión
+  [marginalia hilo                     void 2 · línea]
+```
+Si ambas marginalia tienen el mismo tag-group, se agrupan bajo esa carpeta en lugar de `UNTAGGED`.
+
+**Deshacer (`Ctrl+Shift+Z`):**
+- Padre → vuelve al texto original sin residuos.
+- Hilo → conserva el `^id` como único residuo.
+
+**Alternativa — drag & drop S8 → S8 (sin ventana emergente):**
+
+Desde el tab `vault`, arrastrar una marginalia sobre otra crea el stitch directamente sin pedir tipo de conexión:
+- Nota arrastrada = **hilo**, nota destino = **padre**.
+- Notificaciones: *"stitching 1 thread(s)..."* → *"Threads successfully connected! (press Ctrl+Shift+Z to undo)"*
+- Si ambas comparten tag-group, el árbol de `threads` las reorganiza bajo la misma carpeta con jerarquía padre → hilo (no duplica la carpeta).
+- Deshacer: igual que el flujo con ventana — padre limpio, hilo conserva `^id`.
+
+---
+
+**Caso 3 — solo group activo (0 · 1 · 0)**
+
+- S8 se reordena por **número de línea** (posición en el archivo activo) en lugar del orden por tag-class.
+- Las marginalia con contenido idéntico se **agrupan visualmente**, mostrando todas sus apariciones con archivo y línea:
+```
+[marginalia z          void 2 · L47
+                       void 2 · L68]
+```
+- La agrupación es por **contenido exacto**, independiente de tag-class y de si alguna tiene Block ID.
+- tag-group no interfiere en la agrupación de `group` — eso es territorio del tab `threads`.
+- `group` activo en el tab `threads` no produce cambio visible (comportamiento no confirmado con suficientes datos).
+
+---
+
+**Caso 4 — stitch + group simultáneos (1 · 1 · 0)**
+
+- El flujo de stitch es idéntico al caso 2.
+- El ordenamiento de S8 durante el flujo es por número de línea (igual que group solo).
+- La agrupación por contenido idéntico se mantiene activa mientras se seleccionan origen y destino.
 
 ### S6 CS — Búsqueda
+[[#S6 DI — Búsqueda]]
+
+Disponible en `current`, `vault` y `threads`. Desaparece en `board`.
+
+Se puede combinar con los filtros de S7 activos — ambos se aplican simultáneamente.
+
+Términos de búsqueda soportados:
+- **Palabra o frase** — filtra por contenido de la marginalia.
+- **tag-group** (`#nombre`) — filtra por el tag de agrupación de Threads.
+- **`!`** — filtra marginalia que contienen imágenes embebidas (`![[imagen.xxx]]`).
 
 ### S7 CS — Filtros
 
