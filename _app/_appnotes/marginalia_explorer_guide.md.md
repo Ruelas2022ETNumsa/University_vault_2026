@@ -53,13 +53,13 @@ Panel lateral con el título **"Marginalia Explorer"**. Se abre con `Alt+E` o de
 ---
 
 ### S2 DI — Omni-Capture
-
 [[#Sección 2 — Omni-Capture]]
+
 guía rápida:
 
-| dest               | ZK                          | Clear               | Doodle              |
-| ------------------ | --------------------------- | ------------------- | ------------------- |
-| archivo de destino | carpeta Zettelkasten<br>1/0 | limpia portapapeles | abre ventana Doodle |
+| dest               | ZK (Toogle Zettelkasten mode) | Clear (Clear clipboard  & memory) | Doodle (Attach doodle) |
+| ------------------ | ----------------------------- | --------------------------------- | ---------------------- |
+| archivo de destino | carpeta Zettelkasten<br>1/0   | limpia portapapeles               | abre ventana Doodle    |
 
 Cuatro controles para captura rápida con destino configurable:
 
@@ -78,37 +78,77 @@ Cuatro controles para captura rápida con destino configurable:
 ---
 
 ### S3 DI — Captura rápida
+[[#S3 CS — Captura rápida]]
 
-Dos controles para ingresar texto de captura:
+guía rápida:
 
-- **Recuadro de texto** — área de escritura libre. Ícono en la esquina inferior derecha para expandir el área. Atajo de enfoque: `Alt+C` (requiere Explorer abierto).
-- **Botón trueno (save capture)** — guarda la captura al archivo destino (`Ctrl+Enter`).
+| Recuadro de texto       | Trueno (save capture)        |
+| ----------------------- | ---------------------------- |
+| área de escritura libre | guarda la captura en `dest:` |
 
-**Formato de salida en `dest:` (ZK OFF):**
-```
-%%> texto de S3 %%
-contenido del portapapeles
-```
-- Si el portapapeles tiene texto: se appendea como texto plano debajo de la marginalia.
-- Si el portapapeles tiene imagen PNG: se appendea como `![[nombre-renombrado.png]]`. El plugin de renombrado del vault renombra automáticamente (ej: `void-24-07-2026_11-45-46.png`) y guarda en `_assets/` la forma es (`nombre_en_dest-fecha-hora.extencion`).
-- Si se presionó `clear` antes: solo se adjunta `%%> texto %%` sin portapapeles.
-- El bloque completo se separa del contenido previo con `---`.
+**Recuadro de texto** — área de escritura libre. Ícono en la esquina inferior derecha para expandir (arrastrando). Atajo de enfoque: `Alt+C` (requiere Explorer abierto con `Alt+E` primero).
+
+**Botón trueno** — guarda la captura al archivo destino (`Ctrl+Enter`).
 
 ---
 
 ### S4 DI — Tabs de navegación
+[[#S4 CS — Tabs de navegación]]
 
-Cuatro tabs que controlan qué se muestra en la Sección 8:
+guía rápida:
 
-| Tab       | Función                                                                                                         |
-| --------- | --------------------------------------------------------------------------------------------------------------- |
-| `current` | Muestra todas las marginalia del archivo activo, organizadas (por tag, recientes, ver [[#Sección 7 — Filtros]]) |
-| `vault`   | Muestra marginalia de todo el vault respetando exclusiones configuradas                                         |
-| `threads` | Muestra hilos de notas conectadas entre archivos (Zettelkasten en los márgenes)                                 |
-| `board`   | Cambia el Explorer al modo Pinboard — ver [[#Board — Descripción completa]]                                     |
+| Tab | Tooltip | Función |
+| --- | --- | --- |
+| `current` | en archivo abierto | marginalia del archivo activo |
+| `vault` | en todo el baúl | marginalia de todo el vault |
+| `threads` | hilos | hilos entre archivos |
+| `board` | your pinboard | modo Pinboard |
 
-- `current` y `vault`— en la sección 8 se muestran las notas marginalia organizadas según [[#Sección 7 — Filtros]]. Sintaxis:(contenido , nombre del archivo , número de línea).
-- `threads` — en la sección 8 se muestra las marginalias agrupadas según el #tag. Sintaxis:`\%\%> R- relacionada con Laplace #transformadas \%\%` si no tiene tag se agrupan en  "UNTAGGED"
+**`current`** — muestra todas las marginalia del archivo activo en S8, organizadas según [[#S7 DI — Filtros]]. Cada entrada se ve así:
+```
+nota_marginalia (arriba izquierda)     nombre_archivo · línea (abajo derecha)
+```
+
+**`vault`** — muestra marginalia de todo el vault respetando exclusiones configuradas. Misma visualización que `current`.
+
+**`threads`** — muestra las marginalia agrupadas por `#tag`. Ejemplo de marginalia con tag:
+```
+%%> R- relacionada con Laplace #transformadas %%
+```
+Las marginalia sin tag se agrupan bajo `UNTAGGED`.
+
+**`board`** — cambia el Explorer a modo Pinboard. Reorganiza la interfaz completa:
+
+#### Board (modo Pinboard)
+
+Al activar `board` las secciones se reorganizan:
+- **S2** → muestra subtítulo *"active board"* en lugar de controles Omni-Capture.
+- **S3** → se mantiene pero el trueno cambia a `+` (*add to board / Enter*).
+- **S4** → se mantiene. Tab `board` en morado, los demás en gris.
+- **S5** → reemplazada por 7 botones de gestión:
+
+| Ícono | Tooltip | Función |
+|---|---|---|
+| Copiar (dos rectángulos) | Copy board to clipboard | copia el board al portapapeles |
+| Descarga (flecha → `]` girado) | Import skeleton from active note | importa esqueleto de la nota activa |
+| Punta de bolígrafo | Zen doodle mode | abre modo doodle zen |
+| Hoja con texto | Export to markdown note | exporta a nota markdown |
+| Canvas | Export to canvas | exporta a canvas |
+| Basurero | Clear board | limpia el board |
+| Play + "auto" | Auto-add copied text to board | añade automáticamente texto copiado |
+
+- **S7** → desaparece.
+- **S8** → muestra *"Your board is empty. Paste a skeleton, add nodes, or pin notes!"* si está vacío.
+
+Navegación del board por teclado:
+
+| Atajo | Función |
+|---|---|
+| `↓/↑` | Navegar nodos |
+| `Enter` | Insertar nodo hermano debajo |
+| `Alt+Enter` | Insertar nodo hijo |
+| `Alt+Flechas` | Mover nodos (Up/Down/Indent/Outdent) |
+| `-`, `--`, `---` al inicio | Define nivel de indentación automáticamente |
 ---
 
 ### S5 DI — Acciones
@@ -178,49 +218,14 @@ Navegación por teclado:
 
 ---
 
-### Board — Descripción completa
 
-Al presionar el tab `board` el Explorer cambia a modo Pinboard. Las secciones se reorganizan:
-
-**Sección 2** → muestra subtítulo *"active board"* en lugar de los controles de Omni-Capture.
-
-**Sección 3** → se mantiene pero el botón trueno cambia a `+` (*add to board / Enter*).
-
-**Sección 4** → se mantiene. El tab `board` aparece en morado, los demás en gris.
-
-**Sección 5** → reemplazada por 7 botones de gestión del board:
-
-| Ícono | Función |
-|---|---|
-| Copiar (dos rectángulos) | Copy board to clipboard |
-| Descarga (flecha → `]` girado) | Import skeleton from active note |
-| Punta de bolígrafo | Zen doodle mode |
-| Hoja con texto | Export to markdown note |
-| Canvas | Export to canvas |
-| Basurero | Clear board |
-| Play + "auto" | Auto-add copied text to board |
-
-**Sección 7** → desaparece en modo board.
-
-**Sección 8** → muestra *"Your board is empty. Paste a skeleton, add nodes, or pin notes!"* si el board está vacío.
-
-Navegación del board por teclado:
-
-| Atajo | Función |
-|---|---|
-| `↓/↑` | Navegar nodos |
-| `Enter` | Insertar nodo hermano debajo |
-| `Alt+Enter` | Insertar nodo hijo |
-| `Alt+Flechas` | Mover nodos (Up/Down/Indent/Outdent) |
-| `-`, `--`, `---` al inicio | Define nivel de indentación automáticamente |
-
----
 
 ## 2. Comportamiento por sección
 
 ### S1 CS — Título
 
 ### S2 CS — Omni-Capture
+[[#S2 DI — Omni-Capture]]
 
 **Campo `dest:`**
 - Si se deja vacío: guarda automáticamente en `marginalia inbox`.
@@ -241,6 +246,18 @@ Navegación del board por teclado:
 **Botón `doodle`** — ver [[#Sección 2 — Omni-Capture]] en Flujos.
 
 ### S3 CS — Captura rápida
+[[#S3 DI — Captura rápida]]
+
+**Formato de salida en `dest:` (ZK OFF):**
+```
+%%> texto del recuadro %%
+contenido del portapapeles
+---
+```
+- El separador `---` se agrega al final de cada captura (configurable).
+- Si el portapapeles tiene texto: se añade como texto plano debajo de la marginalia.
+- Si el portapapeles tiene imagen PNG: se añade como `![[nombre-renombrado.png]]`. El plugin de renombrado renombra automáticamente con formato `nombre_dest-fecha-hora.extension` y guarda en `_assets/`.
+- Si se presionó `clear` antes: solo se añade `%%> texto %%` sin portapapeles.
 
 ### S4 CS — Tabs de navegación
 
