@@ -121,7 +121,7 @@ nota_marginalia (arriba izquierda)     nombre_archivo · línea (abajo derecha)
 
 **`threads`** — muestra las marginalia agrupadas por `#tag`. Ejemplo de marginalia con tag:
 ```
-%%> R- relacionada con Laplace #transformadas  ^rsm3t9 %%
+%%> R- relacionada con Laplace #transformadas [[void 2#^v5f86v]] {stitch: estos se conectan con stitch masivo}  ^rsm3t9 %%
 ```
 Las marginalia sin tag se agrupan bajo `UNTAGGED`.
 
@@ -269,7 +269,7 @@ Navegación por teclado:
 
 **Formato de salida en `dest:` (ZK OFF):**
 ```
-%%> texto del recuadro  ^i6l0rf %%
+%%> texto del recuadro [[void 2#^v5f86v]] {stitch: estos se conectan con stitch masivo}  ^i6l0rf %%
 contenido del portapapeles
 ---
 ```
@@ -501,6 +501,8 @@ Ordenamiento por defecto según tag-class (ver [[#S7 DI — Filtros]]). Con `gro
 
 Click en una entrada: abre el archivo y salta a la línea exacta (Edit y Reading mode).
 
+`Spacebar` sobre una entrada: la marca con marco azul para Mass Stitch. Ver [[#Flujo C2 — Mass Stitch (teclado)]].
+
 ---
 
 **`threads`**
@@ -694,13 +696,45 @@ texto
 
 ### Flujo C — Stitch (conectar notas)
 
-> Probado en sesión anterior — pendiente de redocumentar pasos exactos.
+#### Flujo C1 — Stitch individual (UI)
+
+> Probado.
 
 1. Presionar botón `stitch` (Sección 5).
 2. *"Step 1: click the origin note..."* — hacer click en la marginalia origen en Sección 8.
 3. *"Step 2: click the destination note..."* — hacer click en la marginalia destino.
 4. El plugin escribe automáticamente el Block ID link entre ambas notas.
 5. El hilo queda visible en el tab `threads`.
+
+---
+
+#### Flujo C2 — Mass Stitch (teclado)
+
+> Probado.
+
+1. Abrir Explorer (`Alt+E`). Tab `current` o `vault` activo.
+2. Navegar con `↓/↑` hasta la primera marginalia a conectar.
+3. Presionar `Spacebar` — la marginalia se marca con marco azul (sin notificación). Repetir para cada marginalia adicional en cualquier orden.
+4. La **última** marginalia seleccionada con `Spacebar` será el **hilo único** de todas las anteriores (que serán padres).
+5. Presionar `Alt+S` — aparece ventana emergente pidiendo el tipo de conexión (único para todos los pares).
+6. Escribir el tipo de conexión y confirmar.
+7. Resultado en `threads`: cada padre queda conectado al hilo con el tipo de conexión entre ambos.
+
+```
+# UNTAGGED
+* m1
+   * [tipo de conexión]
+   * m_último (hilo)
+* m2
+   * [tipo de conexión]
+   * m_último (hilo)
+* m3
+   * [tipo de conexión]
+   * m_último (hilo)
+```
+
+> [!warning] Limitación de navegación por teclado
+> Las flechas `↓/↑` para navegar en S8 **no funcionan** con el botón `group` activo ni en el tab `threads`. Funcionan correctamente en `current` y `vault` sin `group`, incluyendo con `stitch` activo.
 
 ---
 
@@ -747,6 +781,7 @@ Dos métodos con comportamientos distintos.
    - Imágenes (`img:[[...]]`): `[[archivo#^id|Group: ![[_assets/imagen.png]]]]` — la imagen sí renderiza dentro del recuadro.
    - Grupos desde `threads` (drag por nombre de tag-group): markdown plano con jerarquía indentada, sin conexiones visuales.
 5. Desde tab `vault`: comportamiento idéntico; solo cambia el nombre del archivo en el link.
+6. También funciona soltando sobre una **nota markdown** abierta — el contenido se inserta como texto plano con el mismo formato.
 
 > ⚠️ Todo el contenido draggeado llega en un solo recuadro. No genera conexiones visuales ni cajas individuales por nota.
 > ✅ Conserva la jerarquía completa (incluyendo padres sin tag-group que se perderían en export to board).

@@ -32,7 +32,7 @@ comentario: en la linea 770 de main.js se cambia los colores de superdoodle esto
 
 Recorrer en orden. Probar antes de decidir.
 
-- [x] **A1. Sintaxis core** —\%%> \%% y \%%< \ ^hti49t %% inline. Probar en Live Preview y Reading View. Verificar comportamiento con y sin parche.
+- [x] **A1. Sintaxis core** —\ [[void 2#^v5f86v]] {stitch: estos se conectan con stitch masivo}%%> \%% y \%%< \ ^hti49t %% inline. Probar en Live Preview y Reading View. Verificar comportamiento con y sin parche.
 - [x] **A2. Semantic Highlighting** — prefijos `?` `!` `X-` `V-`. Probar los 4 colores. Evaluar si los 4 cubren los casos de ingeniería o hacen falta más.
 - [x] **A3. Grouping Method A** — callout `[!cornell]`. Probar con párrafo + lista y con párrafo + imagen. Solo Reading View.
 - [x] **A4. Grouping Method B** — bloque ` ```marginalia `. Probar composición compleja. Probar que la nota va ANTES del texto (BUENA NOTA CORNELL). Evaluar cuándo usar A vs B.
