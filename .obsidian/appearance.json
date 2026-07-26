@@ -1,6 +1,8 @@
 {
   "enabledCssSnippets": [
-    "mobile-line-width",
-    "supercharged-links-gen"
-  ]
+    "supercharged-links-gen",
+    "supercharged-links"
+  ],
+  "baseFontSizeAction": true,
+  "baseFontSize": 15
 }

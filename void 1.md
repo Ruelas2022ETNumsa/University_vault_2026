@@ -3,18 +3,17 @@
 
 
 
-
-
-
-%%> ! Esto es importante V1 ^mdx9of %%
-%%> ? Pregunta de examen V1 ^byakdi %%
-%%> F- fórmula clave V1 ^ax7b9e %%
-%%> R- relación con otro tema V1 #test  ^amthub %%
-
-
-
-
+```
 %%> texto sin tag V1%%
+%%> ! Esto es importante V1%%
+%%> ? Pregunta de examen V1%%
+%%> F- fórmula clave V1%%
+%%> R- relación con otro tema V1 #test%%
+%%> img:[[_assets/ima-1.png]] %%
+```
+
+
+
 
 
 
