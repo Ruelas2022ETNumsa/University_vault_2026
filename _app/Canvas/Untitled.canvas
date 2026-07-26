@@ -1,4 +1,15 @@
 {
-	"nodes":[],
+	"nodes":[
+		{"id":"05a065d54a3aa280","x":465,"y":-16309,"width":375,"height":60,"type":"text","text":"- texto sin tag V1 [[void 1#^h0dew9]]"},
+		{"id":"169667f935c6695d","x":512,"y":-16230,"width":368,"height":50,"type":"text","text":"- Esto es importante V1 [[void 1#^aaxbvn]]"},
+		{"id":"fd5035dbe28e2134","x":539,"y":-16156,"width":421,"height":60,"type":"text","text":"- Pregunta de examen V1 [[void 1#^am16qv]]"},
+		{"id":"efc01ccdfdeadf04","x":579,"y":-15944,"width":421,"height":60,"type":"text","text":"- relación con otro tema V1 [[void 1#^vnw09f]]"},
+		{"id":"b525285dc8a428a6","x":545,"y":-16060,"width":415,"height":60,"type":"text","text":"- fórmula clave V1 [[void 1#^vjz950]]"},
+		{"id":"43978fd4d0f04a22","x":602,"y":-15831,"width":498,"height":231,"type":"text","text":"[[void 1#^ahw7t5|Group: ![[_assets/ima-1.png]]]]"},
+		{"id":"cc02a19f5571e4cf","x":602,"y":-15456,"width":558,"height":216,"type":"text","text":"# OTRO\n\n- operación base de Laplace [[void2#^czne0y]]"},
+		{"id":"52a5c38079c9dba1","x":744,"y":-15091,"width":496,"height":191,"type":"text","text":"# UNTAGGED\n\n- Concepto clave [[void 1]]\n\t- Entra en examen [[void 1#^vs6fg6]]"},
+		{"id":"38d943405694989c","x":810,"y":-14823,"width":470,"height":303,"type":"text","text":"# PEP\n\n- Entra en examen 1730V2 [[void 2#^uamgt5]]\n- ¿Por qué debe converger? V2 [[void 2#^v5f86v]]\n- Esto es importante, entra en examen 1730V1 [[void 1#^x7y9tt]]"},
+		{"id":"d170e35a5a709fac","x":883,"y":-14353,"width":537,"height":333,"type":"text","text":"# UNTAGGED\n\n- Concepto clave [[void 1]]\n\t- Entra en examen [[void 1#^vs6fg6]]\n- ¿Qué pasa si no converge? [[void 1]]\n\t- ¿Cuál es la condición de convergencia? [[void 1#^yqtlwl]]"}
+	],
 	"edges":[]
 }

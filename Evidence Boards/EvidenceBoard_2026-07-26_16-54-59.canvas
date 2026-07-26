@@ -1,0 +1,115 @@
+{
+  "nodes": [
+    {
+      "id": "5dc06ebcbf037da0",
+      "type": "text",
+      "text": "# UNTAGGED",
+      "x": 0,
+      "y": 0,
+      "width": 350,
+      "height": 100,
+      "color": "1"
+    },
+    {
+      "id": "f492fe7a3adc0e2d",
+      "type": "text",
+      "text": "**Marginalia:**\n! Concepto clave\n\n[[void 1#^1gf8te|🔗 Origin]]",
+      "x": 450,
+      "y": 150,
+      "width": 300,
+      "height": 140,
+      "color": "4"
+    },
+    {
+      "id": "2ec14ec4e17846ab",
+      "type": "text",
+      "text": "> La transformada de Laplace convierte una EDO en una ecuación algebraica. bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla",
+      "x": 850,
+      "y": 130,
+      "width": 450,
+      "height": 180
+    },
+    {
+      "id": "ce3e44de7fe012ef",
+      "type": "text",
+      "text": "**Marginalia:**\n! Entra en examen\n\n[[void 1#^vs6fg6|🔗 Origin]]",
+      "x": 900,
+      "y": 370,
+      "width": 300,
+      "height": 140,
+      "color": "4"
+    },
+    {
+      "id": "966b569968e7ac83",
+      "type": "text",
+      "text": "> La transformada de Laplace convierte una EDO en una ecuación algebraica.\n- Condición: $\\text{Re}(s) > \\sigma_0$\n- Útil para sistemas LTI causales\n- Inversa mediante fracciones parciales",
+      "x": 1300,
+      "y": 350,
+      "width": 450,
+      "height": 180
+    },
+    {
+      "id": "c513b688c813fd47",
+      "type": "text",
+      "text": "**Marginalia:**\n? ¿Cuál es la condición de convergencia?\n\n[[void 1#^yqtlwl|🔗 Origin]]",
+      "x": 900,
+      "y": 590,
+      "width": 300,
+      "height": 140,
+      "color": "4"
+    },
+    {
+      "id": "6028b2844ccf9cce",
+      "type": "text",
+      "text": "> Transformada de Laplace",
+      "x": 1300,
+      "y": 570,
+      "width": 450,
+      "height": 180
+    }
+  ],
+  "edges": [
+    {
+      "id": "efa018f35405aa61",
+      "fromNode": "5dc06ebcbf037da0",
+      "fromSide": "right",
+      "toNode": "f492fe7a3adc0e2d",
+      "toSide": "left"
+    },
+    {
+      "id": "24b3c6b54e41adef",
+      "fromNode": "f492fe7a3adc0e2d",
+      "fromSide": "right",
+      "toNode": "2ec14ec4e17846ab",
+      "toSide": "left"
+    },
+    {
+      "id": "26f2279b2a46aa8c",
+      "fromNode": "f492fe7a3adc0e2d",
+      "fromSide": "right",
+      "toNode": "ce3e44de7fe012ef",
+      "toSide": "left"
+    },
+    {
+      "id": "c66d7798362312af",
+      "fromNode": "ce3e44de7fe012ef",
+      "fromSide": "right",
+      "toNode": "966b569968e7ac83",
+      "toSide": "left"
+    },
+    {
+      "id": "45ffabea0014152b",
+      "fromNode": "f492fe7a3adc0e2d",
+      "fromSide": "right",
+      "toNode": "c513b688c813fd47",
+      "toSide": "left"
+    },
+    {
+      "id": "1cb6885a491eb113",
+      "fromNode": "c513b688c813fd47",
+      "fromSide": "right",
+      "toNode": "6028b2844ccf9cce",
+      "toSide": "left"
+    }
+  ]
+}

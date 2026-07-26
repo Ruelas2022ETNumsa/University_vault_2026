@@ -3,14 +3,14 @@
 
 
 
-```
-%%> texto sin tag V1%%
-%%> ! Esto es importante V1%%
-%%> ? Pregunta de examen V1%%
-%%> F- fórmula clave V1%%
-%%> R- relación con otro tema V1 #test%%
-%%> img:[[_assets/ima-1.png]] %%
-```
+
+%%> texto sin tag V1 ^h0dew9 %%
+%%> ! Esto es importante V1 ^aaxbvn %%
+%%> ? Pregunta de examen V1 ^am16qv %%
+%%> F- fórmula clave V1 ^vjz950 %%
+%%> R- relación con otro tema V1 #test ^vnw09f %%
+%%> img:[[_assets/ima-1.png]]  ^ahw7t5 %%
+
 
 
 
@@ -54,13 +54,13 @@ Cada línea prueba un tag. Verificar color en Reading View y Live Preview.
 Caso 1 — párrafo simple:
 
 ```marginalia
-La transformada de Laplace convierte una EDO en una ecuación algebraica. bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla%%> ! Concepto clave %%
+La transformada de Laplace convierte una EDO en una ecuación algebraica. bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla%%> ! Concepto clave [[void 1#^vs6fg6]]  ^1gf8te %%
 ```
 
 Caso 2 — párrafo + lista:
 
 ```marginalia
-La transformada de Laplace convierte una EDO en una ecuación algebraica. %%> ! Entra en examen %%
+La transformada de Laplace convierte una EDO en una ecuación algebraica. %%> ! Entra en examen  ^vs6fg6 %%
 - Condición: $\text{Re}(s) > \sigma_0$
 - Útil para sistemas LTI causales
 - Inversa mediante fracciones parciales
@@ -109,7 +109,7 @@ $\mathcal{L}\{f(t)\} = \int_0^\infty e^{-st} f(t)\, dt$ %%> F- Ecuación central
 > %%> ! Concepto clave %%
 > La transformada de Laplace convierte una EDO en una ecuación algebraica.%%> ! Entra en examen %%
 > $\mathcal{L}\{f(t)\} = \int_0^\infty e^{-st} f(t)\, dt$%%> F- Ecuación central %%
-> La condición de convergencia es $\text{Re}(s) > \sigma_0$%%> ? ¿Qué pasa si no converge? %%
+> La condición de convergencia es $\text{Re}(s) > \sigma_0$%%> ? ¿Qué pasa si no converge? [[void 1#^yqtlwl]] {stitch: este en la conexvcion para canvas} %%
 
 
 
@@ -134,7 +134,7 @@ Caso 8 — anidado dentro de cornell (flujo Galaxy real):
 `````cornell
 ::cue
 ````marginalia %%> %%
-Transformada de Laplace %%> ? ¿Cuál es la condición de convergencia? %%
+Transformada de Laplace %%> ? ¿Cuál es la condición de convergencia?  ^yqtlwl %%
 ````
 
 ::note
