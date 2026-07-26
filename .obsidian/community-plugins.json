@@ -1,6 +1,5 @@
 [
   "obsidian-desmos",
-  "better-export-pdf",
   "obsidian-completr",
   "quick-latex",
   "obsidian-tikzjax",
@@ -19,6 +18,5 @@
   "mermaid-next",
   "settings-float",
   "supercharged-links-obsidian",
-  "obsidian-excalidraw-plugin",
-  "pdf-plus"
+  "galaxy-view"
 ]

@@ -5,19 +5,19 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
+        "Untitled.md",
         "Evidence Boards",
         "Pinboards",
-        "Rubbish",
-        "Untitled.md",
-        "void 1.md",
-        "void 2.md",
         "void2.md",
-        "_blueprint",
         "_inbox",
+        "void 2.md",
+        "void 1.md",
+        "_blueprint",
         "_skills",
-        "_projects",
         "wolfram alpha example.md",
+        "_projects",
         "_assets",
+        "Rubbish",
         "Zettelkasten",
         "Marginalia Attachments",
         "Borrar",
@@ -1305,10 +1305,9 @@
       "sortOrder": "custom",
       "customOrder": [
         "_marginalia_system.md",
-        "_pdf_pp-system.md",
-        "_TAB_note-system.md",
         "_library_ETN505(i).md",
         "_claude-matter-boot.md",
+        "_TAB_note-system.md",
         "_library_MAT101.md",
         "_basic-memory-system.md",
         "_excalidraw-system.md",
@@ -1318,6 +1317,7 @@
         "_mindmap-system.md",
         "_note-system.md",
         "_notebooklm-system.md",
+        "_pdf_pp-system.md",
         "_sync-system.md",
         "_template-system.md",
         "_ToDo-system.md"
@@ -1389,10 +1389,8 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "tpl-w-initial.md",
         "tpl-w-project.md",
         "tpl-w-study.md",
-        "tpl_w_transcription.md",
         "tpl-asteroid 1.md",
         "tpl-photon 1.md",
         "tpl-supernova.md",
@@ -1406,6 +1404,8 @@
         "tpl-moon.md",
         "tpl-nebula.md",
         "tpl-observatory.md",
+        "tpl-w-initial.md",
+        "tpl_w_transcription.md",
         "tpl-photon.md",
         "tpl-planet.md",
         "tpl-star.md"
@@ -2792,12 +2792,12 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "20260723151457.md",
-        "20260723163008.md",
-        "20260723163953.md",
-        "20260723164254.md",
+        "20260723193844.md",
         "20260723164408.md",
-        "20260723193844.md"
+        "20260723164254.md",
+        "20260723163953.md",
+        "20260723163008.md",
+        "20260723151457.md"
       ]
     },
     "Marginalia Attachments": {
@@ -2805,6 +2805,27 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": []
+    },
+    "Rubbish": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "section.md",
+        "tmp"
+      ]
+    },
+    "Rubbish/tmp": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "lock"
+      ]
+    },
+    "Rubbish/tmp/lock": {
+      "isPinned": false,
+      "isHidden": false
     },
     "_app/_config/_library_ETN505(i).md": {
       "isPinned": false,
@@ -2824,6 +2845,10 @@
     },
     "_app/_appnotes/claude_prompts.md": {
       "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/section.md": {
+      "isPinned": true,
       "isHidden": false
     },
     "_app/_appnotes/script_guide.md": {
@@ -2863,25 +2888,25 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "boarslug.png",
+        "Marginalia Inbox-26-07-2026_00-14-48.png",
+        "Marginalia Inbox-26-07-2026_00-12-33.png",
+        "Marginalia Inbox-26-07-2026_00-10-44.png",
         "clip_20260725_225138.png",
-        "doodle_20260723_151457.png",
-        "doodle_20260723_163008.png",
-        "doodle_20260723_163953.png",
-        "doodle_20260723_164254.png",
-        "doodle_20260723_164408.png",
         "doodle_20260725_225138.png",
         "doodle_20260725_225909.png",
-        "Marginalia Inbox-23-07-2026_19-48-26.png",
-        "Marginalia Inbox-26-07-2026_00-10-44.png",
-        "Marginalia Inbox-26-07-2026_00-12-33.png",
-        "Marginalia Inbox-26-07-2026_00-14-48.png",
-        "superdoodle_20260723_150411.png",
-        "superdoodle_20260723_154316.png",
         "superdoodle_20260725_224841.png",
         "superdoodle_20260725_225329.png",
-        "Untitled-19-07-2026_17-20-32.png",
         "void-24-07-2026_11-45-46.png",
+        "Marginalia Inbox-23-07-2026_19-48-26.png",
+        "doodle_20260723_164408.png",
+        "doodle_20260723_164254.png",
+        "doodle_20260723_163953.png",
+        "doodle_20260723_163008.png",
+        "superdoodle_20260723_154316.png",
+        "boarslug.png",
+        "doodle_20260723_151457.png",
+        "superdoodle_20260723_150411.png",
+        "Untitled-19-07-2026_17-20-32.png",
         "Untitled-15-07-2026_22-40-34.png",
         "Untitled-15-07-2026_22-40-33.png",
         "Untitled-15-07-2026_22-36-49.png",
@@ -2960,114 +2985,19 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Evidence Boards": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": []
-    },
-    "Pinboards": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": []
-    },
-    "Rubbish": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "2026-07-26",
-        "tmp",
-        "section.md"
-      ]
-    },
-    "Rubbish/2026-07-26": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json",
-        "appearance.json"
-      ]
-    },
-    "Rubbish/2026-07-26/data.json": {
+    "_templates/tpl_w_transcription.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-26/appearance.json": {
+    "_templates/tpl-w-initial.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/tmp": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "lock"
-      ]
-    },
-    "Rubbish/tmp/lock": {
+    "_templates/tpl-w-study.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/section.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Untitled.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "void 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "void 2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "void2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Zettelkasten/20260723151457.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Zettelkasten/20260723163008.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Zettelkasten/20260723163953.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Zettelkasten/20260723164254.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Zettelkasten/20260723164408.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Zettelkasten/20260723193844.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/shellcommands/rclone_script.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/_appnotes/marginalia_explorer_guide.md.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/_appnotes/supercharged_guide.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/_config/_marginalia_system.md": {
+    "_templates/tpl-w-project.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -3075,83 +3005,97 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_app/_config/_TAB_note-system.md": {
+    "_skills": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_start.md",
+        "_claude-setup.md",
+        "_claude-boot.md",
+        "_claude-work.md",
+        "_claude-plan.md",
+        "_claude-close.md"
+      ]
+    },
+    "_skills/_claude-close.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_assets/boarslug.png": {
+    "_skills/_claude-plan.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_assets/clip_20260725_225138.png": {
+    "_skills/_claude-boot.md": {
+      "isPinned": true,
+      "isHidden": false
+    },
+    "_skills/_claude-work.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_assets/doodle_20260723_151457.png": {
+    "_skills/_start.md": {
+      "isPinned": true,
+      "isHidden": false
+    },
+    "_skills/_claude-setup.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_assets/doodle_20260723_163008.png": {
+    "_projects": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_ideas_1_apps_2brain.md",
+        "tsk_emergn.md",
+        "tsk_standb.md",
+        "_ideas_0_shellcmd.md",
+        "tsk_tpl.md",
+        "tsk_krajo.md",
+        "tsk_alxrul.md",
+        "tsk_alxhot.md",
+        "tsk_alx-rul.md",
+        "tsk_alxgml.md"
+      ]
+    },
+    "_projects/tsk_tpl.md": {
+      "isPinned": true,
+      "isHidden": false
+    },
+    "_projects/tsk_emergn.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_assets/doodle_20260723_163953.png": {
+    "_projects/tsk_standb.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_assets/doodle_20260723_164254.png": {
+    "_projects/tsk_krajo.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_assets/doodle_20260723_164408.png": {
+    "_projects/tsk_alxrul.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_assets/doodle_20260725_225138.png": {
+    "_projects/tsk_alxhot.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_assets/doodle_20260725_225909.png": {
+    "_projects/tsk_alx-rul.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_assets/Marginalia Inbox-23-07-2026_19-48-26.png": {
+    "_projects/tsk_alxgml.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_assets/Marginalia Inbox-26-07-2026_00-10-44.png": {
+    "_projects/_ideas_0_shellcmd.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_assets/Marginalia Inbox-26-07-2026_00-12-33.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/Marginalia Inbox-26-07-2026_00-14-48.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/superdoodle_20260723_150411.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/superdoodle_20260723_154316.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/superdoodle_20260725_224841.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/superdoodle_20260725_225329.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/Untitled-19-07-2026_17-20-32.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/void-24-07-2026_11-45-46.png": {
+    "_app/shellcommands/rclone_script.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -3160,20 +3104,16 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "claude vision.md",
-        "MAT101_T1-Funciones-reales 1.md",
-        "MAT101_T1-Funciones-reales.md",
-        "obsidian-cornell-notes.md",
-        "rendimiento.md",
+        "Untitled 1.md",
         "tables no terminado.md",
-        "Untitled 1.md"
+        "rendimiento.md",
+        "MAT101_T1-Funciones-reales 1.md",
+        "obsidian-cornell-notes.md",
+        "MAT101_T1-Funciones-reales.md",
+        "claude vision.md"
       ]
     },
     "_blueprint/claude vision.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_blueprint/MAT101_T1-Funciones-reales 1.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -3182,6 +3122,10 @@
       "isHidden": false
     },
     "_blueprint/obsidian-cornell-notes.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_blueprint/MAT101_T1-Funciones-reales 1.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -3197,13 +3141,105 @@
       "isPinned": false,
       "isHidden": false
     },
+    "_app/_config/_TAB_note-system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/Untitled-19-07-2026_17-20-32.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_projects/_ideas_1_apps_2brain.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_appnotes/supercharged_guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_config/_marginalia_system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "void 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_appnotes/marginalia_explorer_guide.md.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "void 2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/superdoodle_20260723_150411.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/doodle_20260723_151457.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Zettelkasten/20260723151457.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/boarslug.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/superdoodle_20260723_154316.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/doodle_20260723_163008.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Zettelkasten/20260723163008.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/doodle_20260723_163953.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Zettelkasten/20260723163953.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/doodle_20260723_164254.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Zettelkasten/20260723164254.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/doodle_20260723_164408.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Zettelkasten/20260723164408.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Zettelkasten/20260723193844.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/Marginalia Inbox-23-07-2026_19-48-26.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
     "_inbox": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "inbox.md",
-        "Marginalia Inbox.md"
+        "Marginalia Inbox.md",
+        "inbox.md"
       ]
     },
     "_inbox/inbox.md": {
@@ -3214,120 +3250,68 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_skills": {
+    "void2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Evidence Boards": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
-      "customOrder": [
-        "_claude-boot.md",
-        "_claude-close.md",
-        "_claude-plan.md",
-        "_claude-setup.md",
-        "_claude-work.md",
-        "_start.md"
-      ]
+      "customOrder": []
     },
-    "_skills/_claude-boot.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_skills/_claude-close.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_skills/_claude-plan.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_skills/_claude-setup.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_skills/_claude-work.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_skills/_start.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_projects": {
+    "Pinboards": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
-      "customOrder": [
-        "tsk_alx-rul.md",
-        "tsk_alxgml.md",
-        "tsk_alxhot.md",
-        "tsk_alxrul.md",
-        "tsk_emergn.md",
-        "tsk_krajo.md",
-        "tsk_standb.md",
-        "tsk_tpl.md",
-        "_ideas_0_shellcmd.md",
-        "_ideas_1_apps_2brain.md"
-      ]
+      "customOrder": []
     },
-    "_projects/tsk_alx-rul.md": {
+    "_assets/void-24-07-2026_11-45-46.png": {
       "isPinned": false,
       "isHidden": false
     },
-    "_projects/tsk_alxgml.md": {
+    "Untitled.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_projects/tsk_alxhot.md": {
+    "_assets/clip_20260725_225138.png": {
       "isPinned": false,
       "isHidden": false
     },
-    "_projects/tsk_alxrul.md": {
+    "_assets/doodle_20260725_225138.png": {
       "isPinned": false,
       "isHidden": false
     },
-    "_projects/tsk_emergn.md": {
+    "_assets/doodle_20260725_225909.png": {
       "isPinned": false,
       "isHidden": false
     },
-    "_projects/tsk_krajo.md": {
+    "_assets/superdoodle_20260725_224841.png": {
       "isPinned": false,
       "isHidden": false
     },
-    "_projects/tsk_standb.md": {
+    "_assets/superdoodle_20260725_225329.png": {
       "isPinned": false,
       "isHidden": false
     },
-    "_projects/tsk_tpl.md": {
+    "_assets/Marginalia Inbox-26-07-2026_00-10-44.png": {
       "isPinned": false,
       "isHidden": false
     },
-    "_projects/_ideas_0_shellcmd.md": {
+    "_assets/Marginalia Inbox-26-07-2026_00-12-33.png": {
       "isPinned": false,
       "isHidden": false
     },
-    "_projects/_ideas_1_apps_2brain.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_templates/tpl-w-initial.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_templates/tpl-w-project.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_templates/tpl-w-study.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_templates/tpl_w_transcription.md": {
+    "_assets/Marginalia Inbox-26-07-2026_00-14-48.png": {
       "isPinned": false,
       "isHidden": false
     }
   },
   "pinnedFiles": [
+    "Rubbish/section.md",
     "_projects/tsk_tpl.md",
     "_app/_config/_galaxy-system.md",
+    "_skills/_claude-boot.md",
     "_skills/_start.md"
   ],
   "showHidden": false,

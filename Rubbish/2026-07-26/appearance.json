@@ -1,0 +1,15 @@
+{
+  "showViewHeader": true,
+  "showRibbon": true,
+  "accentColor": "",
+  "nativeMenus": false,
+  "baseFontSize": 11,
+  "baseFontSizeAction": true,
+  "enabledCssSnippets": [
+    "supercharged-links-gen",
+    "supercharged-status",
+    "supercharged-links"
+  ],
+  "cssTheme": "",
+  "theme": "obsidian"
+}
