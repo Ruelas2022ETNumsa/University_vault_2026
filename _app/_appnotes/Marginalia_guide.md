@@ -116,28 +116,35 @@ La condición de convergencia requiere que $\text{Re}(s) > \sigma_0$.
 
 Añadir un prefijo al inicio del texto de la marginalia activa un color automático. Permite categorizar el tipo de anotación de un vistazo.
 
-| Prefijo | Significado | Color por defecto |
-|---|---|---|
-| `?` | Pregunta / duda | 🟠 Naranja |
-| `!` | Importante / examen | 🟡 Amarillo |
-| `X-` | Corrección / error | 🔴 Rojo |
-| `V-` | Verificado / confirmado | 🟢 Verde |
+### Tags Galaxy
+
+| Prefijo | Significado | Color | Hex | RGB |
+|---|---|---|---|---|
+| `!` | Importante / examen | ámbar | `#EE9B00` | 238, 155, 0 |
+| `?` | Pregunta / duda | azul petróleo | `#005F73` | 0, 95, 115 |
+| `X-` | Error / corrección | naranja quemado | `#BB3E03` | 187, 62, 3 |
+| `V-` | Verificado | verde oliva | `#629900` | 98, 153, 0 |
+| `C-` | Comentario neutro | gris antracita | `#474448` | 71, 68, 72 |
+| `F-` | Fórmula clave | morado | `#5A189A` | 90, 24, 154 |
+| `R-` | Relación entre materias | verde azulado | `#0A9396` | 10, 147, 150 |
+| `T-` | Tarea docente ⚠️ | rojo | `#C1121F` | 193, 18, 31 |
+
+> ⚠️ **`T-` es exclusivo de `supernova`** — no se copia a planet, comet ni dwarf.
+
+Los prefijos y colores se configuran en **Settings → Color Tags** (valores RGB).
 
 **Ejemplos:**
 
 ```
-%%> ? ¿Por qué se usa Re(s) > σ₀ como condición? %%
 %%> ! Definición de examen %%
+%%> ? ¿Por qué se usa Re(s) > σ₀ como condición? %%
 %%> X- La fórmula del libro tiene un error de signo %%
 %%> V- Verificado con Kreyszig p.218 %%
+%%> C- Ver también el caso discreto %%
+%%> F- $\mathcal{L}\{f(t)\} = \int_0^\infty e^{-st} f(t)\, dt$ %%
+%%> R- Relacionada con Fourier #transformadas-integrales %%
+%%> T- Entregar ejercicio 3 para el viernes %%
 ```
-
-%%> ? ¿Por qué se usa Re(s) > σ₀ como condición? %%
-%%> ! Definición de examen %%
-%%> X- La fórmula del libro tiene un error de signo %%
-%%> V- Verificado con Kreyszig p.218 %%
-
-Los prefijos y colores son completamente personalizables desde **Settings → Color Tags**.
 
 ---
 
@@ -352,20 +359,32 @@ Al hacer clic en **"Save to Margin"**:
 
 ## 11. Omni-Capture
 
-Capturador rápido global para ideas en cualquier momento sin abrir la nota destino.
+Capturador rápido integrado en el Marginalia Explorer para ideas sin abrir la nota destino.
 
-**Activar:** `Alt+C` (configurar en Settings → Hotkeys) desde cualquier parte de Obsidian.
+**Activar:** `Alt+E` para abrir el Explorer → `Alt+C` para enfocar el recuadro de captura. `Alt+C` no funciona si el Explorer está cerrado.
 
-**Funcionalidades del modal:**
-- Lee el portapapeles automáticamente como contexto.
-- Pegar (`Ctrl+V`) screenshots o imágenes: genera preview y guarda la imagen en el vault.
-- Canvas de doodle integrado: botón "Add Doodle" para adjuntar boceto.
-- Autocompletado de archivos `.md` del vault como destino.
-- Recuerda el último destino usado.
+> En v4.9.0 no existe modal flotante — el Omni-Capture es el panel integrado en las Secciones 2 y 3 del Explorer.
 
-**Carpeta destino por defecto:** configurada en Settings → Omni-Capture Default Folder (actualmente: `Example: 00_Inbox`).
+**Funcionalidades:**
+- Lee el portapapeles automáticamente como contexto (`{{citation}}`).
+- Clipboard de imagen → capturada y appendeada junto al texto.
+- Canvas de doodle integrado: botón `doodle` en S2. Ver [[_marginalia_system]] → A10.
+- Autocompletado de archivos `.md` del vault como destino en campo `dest:`.
+- Recuerda el último destino usado entre sesiones.
 
-> **Nota — uso en vault:** pendiente de configuración. Requiere evaluar integración con PDF++ antes de definir flujo definitivo. Ver lista de pendientes en 15 del sistema Galaxy.
+**Dos modos (botón `ZK`):**
+- **ZK OFF** — appendea al archivo `dest:` como marginalia inline (`%%> %%`). Nunca sobreescribe.
+- **ZK ON** — crea nota atómica nueva en `Zettelkasten/` vía `tpl-zk.md`.
+
+**Convención Galaxy — destino:**
+
+| Caso | `dest:` | Carpeta |
+|---|---|---|
+| Captura en clase (ETN901) | `ETN901-inbox.md` | `_inbox/` |
+| Captura genérica | `inbox.md` | `_inbox/` |
+| Nota atómica (ZK ON) | — | `Zettelkasten/` |
+
+> **Pendiente:** integración con PDF++ — evaluar en sesión dedicada.
 
 ---
 
@@ -426,8 +445,8 @@ Atajos recomendados no asignados por defecto — configurar manualmente:
 |---|---|
 | `↓` / `↑` | Navegar lista de marginalia |
 | `Shift+↓/↑` | Mass Pinning — anclar múltiples ítems al Board |
-| `Enter` o `P` | Anclar ítem al Pinboard |
-| `Ctrl+Enter` | Abrir archivo y saltar a la línea exacta |
+| `Enter` / `P` / `Menu key+Enter` | Anclar ítem al Pinboard |
+| ~~`Ctrl+Enter`~~ | ~~Abrir archivo y saltar a la línea exacta~~ — no funciona en v4.9.0. Usar click directo. |
 | `Spacebar` | Seleccionar/deseleccionar para Mass Stitch |
 | `H` | Hover / X-Ray — preview de contexto sin abrir archivo |
 | `Esc` | Cerrar popup de hover |
@@ -436,11 +455,13 @@ Atajos recomendados no asignados por defecto — configurar manualmente:
 
 | Atajo | Acción |
 |---|---|
+| `Alt+A` | Saltar al input del Board desde cualquier lugar |
 | `Enter` (sobre nodo) | Crear nodo hermano debajo |
 | `Alt+Enter` (sobre nodo) | Crear nodo hijo (indentado) |
 | `Enter` (dentro del input) | Guardar y continuar en modo entrada rápida |
 | `-` al inicio del texto | Define nivel de indentación (`-` = hijo, `--` = nieto) |
 | `↓` / `↑` | Navegar nodos del Board |
+| `Alt+↑↓←→` | Mover nodo (Up/Down/Outdent/Indent) |
 
 ### Omni-Capture Modal
 

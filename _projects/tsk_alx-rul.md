@@ -4,6 +4,9 @@ date: 2026-07-20
 status: creciente
 ---
 
+comentario a ignorar: "9:10" **alxrul** para que actualice este handoff y todo esto.
+**importante handoff desactualizado revisar lo demas y analizar que hacer**
+
 # tsk — Revisión e integración de Cornell Marginalia
 
 ---
