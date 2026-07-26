@@ -5,7 +5,7 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
-        "xxx.md",
+        "Untitled.md",
         "Evidence Boards",
         "Pinboards",
         "void2.md",
@@ -18,7 +18,6 @@
         "_projects",
         "_assets",
         "Rubbish",
-        "void.md",
         "Zettelkasten",
         "Marginalia Attachments",
         "Borrar",
@@ -1235,7 +1234,6 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "marginalia_explorer_guide.md 1.md",
         "marginalia_explorer_guide.md.md",
         "supercharged_guide.md",
         "script_guide.md",
@@ -1395,9 +1393,7 @@
         "tpl-w-study.md",
         "tpl-asteroid 1.md",
         "tpl-photon 1.md",
-        "tpl-zk 2.md",
         "tpl-supernova.md",
-        "tpl-zk 1.md",
         "tpl-zk.md",
         "alt-B",
         "tpl-asteroid.md",
@@ -2640,15 +2636,7 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_templates/tpl-zk 2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_templates/tpl-supernova.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_templates/tpl-zk 1.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -2900,6 +2888,14 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "Marginalia Inbox-26-07-2026_00-14-48.png",
+        "Marginalia Inbox-26-07-2026_00-12-33.png",
+        "Marginalia Inbox-26-07-2026_00-10-44.png",
+        "clip_20260725_225138.png",
+        "doodle_20260725_225138.png",
+        "doodle_20260725_225909.png",
+        "superdoodle_20260725_224841.png",
+        "superdoodle_20260725_225329.png",
         "void-24-07-2026_11-45-46.png",
         "Marginalia Inbox-23-07-2026_19-48-26.png",
         "doodle_20260723_164408.png",
@@ -3051,7 +3047,6 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "tsk_alx-rul 1.md",
         "_ideas_1_apps_2brain.md",
         "tsk_emergn.md",
         "tsk_standb.md",
@@ -3198,10 +3193,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "void.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_assets/doodle_20260723_163008.png": {
       "isPinned": false,
       "isHidden": false
@@ -3267,44 +3258,51 @@
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
-      "customOrder": [
-        "EvidenceBoard_2026-07-23_22-14-35.canvas",
-        "EvidenceBoard_2026-07-23_22-14-58.canvas"
-      ]
-    },
-    "Evidence Boards/EvidenceBoard_2026-07-23_22-14-35.canvas": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Evidence Boards/EvidenceBoard_2026-07-23_22-14-58.canvas": {
-      "isPinned": false,
-      "isHidden": false
+      "customOrder": []
     },
     "Pinboards": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
-      "customOrder": [
-        "Pinboard_2026-07-23_22-14-22.md"
-      ]
-    },
-    "Pinboards/Pinboard_2026-07-23_22-14-22.md": {
-      "isPinned": false,
-      "isHidden": false
+      "customOrder": []
     },
     "_assets/void-24-07-2026_11-45-46.png": {
       "isPinned": false,
       "isHidden": false
     },
-    "xxx.md": {
+    "Untitled.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_app/_appnotes/marginalia_explorer_guide.md 1.md": {
+    "_assets/clip_20260725_225138.png": {
       "isPinned": false,
       "isHidden": false
     },
-    "_projects/tsk_alx-rul 1.md": {
+    "_assets/doodle_20260725_225138.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/doodle_20260725_225909.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/superdoodle_20260725_224841.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/superdoodle_20260725_225329.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/Marginalia Inbox-26-07-2026_00-10-44.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/Marginalia Inbox-26-07-2026_00-12-33.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/Marginalia Inbox-26-07-2026_00-14-48.png": {
       "isPinned": false,
       "isHidden": false
     }

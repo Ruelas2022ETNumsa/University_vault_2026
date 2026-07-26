@@ -1,6 +1,23 @@
 
 
-``
+
+
+
+
+
+> Las operaciones que consumen tiempo:
+
+[[BORRADOR OK OK ETN 825 2022.pdf#page=4&selection=5,0,6,1|BORRADOR OK OK ETN 825 2022, page 4]]
+
+
+aDDasd
+
+[[BORRADOR OK OK ETN 825 2022.pdf#page=4&selection=8,23,8,30|BORRADOR OK OK ETN 825 2022, page 4]]
+
+
+asdasd
+
+
 - [[void 1#^mdx9of|! Esto es importante V1]]
 	- [[void 1#^byakdi|? Pregunta de examen V1]]
 		-  %%> ! Esto es importante V1 ^mdx9of %%
