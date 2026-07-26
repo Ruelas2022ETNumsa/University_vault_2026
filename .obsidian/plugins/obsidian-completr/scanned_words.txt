@@ -6459,6 +6459,7 @@ transversal
 tooltips
 territorio
 tuTKKcz
+trazo
 ToDo
 Templater
 Text
@@ -21126,6 +21127,8 @@ SIDATx
 Sobrepico
 Screenshots
 Session
+Selector
+Slider
 Plugins
 Pendientes
 Plugin
@@ -26904,6 +26907,9 @@ Peek
 Persiste
 Padre
 Paint
+Paneo
+Pluma
+Paralelo
 del
 date
 de
@@ -32519,6 +32525,7 @@ diseccionan
 disecciona
 detallar
 deshacer
+desactivated
 Vault
 Verificar
 Variables
@@ -38912,6 +38919,7 @@ VNpf
 Versatilidad
 Variedad
 VOIDPRUEBA
+Vuelve
 galaxy
 gina
 genes
@@ -50854,6 +50862,7 @@ buscador
 boicsdsdsds
 blancas
 byakdi
+bandeja
 scope
 status
 selector
@@ -58147,6 +58156,10 @@ suficientes
 soportados
 saves
 sangr
+slider
+subniveles
+siuuuuuuuu
+sdasdsadsdsadsadsad
 vault
 vil
 ver
@@ -64896,6 +64909,7 @@ vdj
 viaja
 vJTIwJTI
 vEhfXwY
+visitas
 audience
 activo
 auto
@@ -71250,6 +71264,11 @@ arrastre
 acto
 apariciones
 amthub
+aplana
+arrastrarla
+atado
+armar
+appear
 related
 recomendados
 ribbon
@@ -91644,6 +91663,10 @@ classic
 coexisten
 cima
 conecction
+ctrl
+compiled
+conectando
+cleaned
 updated
 un
 universo
@@ -105217,6 +105240,7 @@ GDEE
 GhC
 Generation
 Grupos
+Goma
 Convenci
 Creaci
 Commander
@@ -118334,6 +118358,9 @@ IJz
 Interfaz
 Infraestructura
 Indicaci
+Inyecta
+Irreversible
+Importa
 Funci
 File
 Fase
@@ -132066,6 +132093,7 @@ Exportador
 EyPh
 Exported
 Escaneo
+Eraser
 Obsidian
 OmniSearch
 Ocultar
@@ -150639,6 +150667,8 @@ press
 preuba
 padres
 pierden
+pasted
+pupup
 min
 mica
 movimiento
@@ -158192,6 +158222,10 @@ moment
 mazo
 mecanismos
 mrHzOd
+miniatura
+moradas
+minimizado
+massive
 YAML
 Ya
 You
@@ -185107,6 +185141,8 @@ Mpog
 MarkdownRenderer
 MlMjBWLSUyMFZlcmlmaWNhZG
 Modal
+Mano
+MegaSync
 Lectura
 LaTeX
 Linter
@@ -191483,6 +191519,8 @@ Limpiar
 LdKI
 Limitaci
 Limpia
+Lanza
+Lasso
 links
 las
 listar
@@ -205248,6 +205286,9 @@ indeseados
 implementados
 ifos
 identical
+indentada
+indentado
+imported
 Dependencia
 Dropbox
 Dataview
@@ -219089,6 +219130,8 @@ Reorganiza
 Refresh
 Reestructura
 Recarga
+Return
+Redimensiona
 Hider
 Hace
 Herramientas
@@ -224242,6 +224285,7 @@ HgOU
 Herencia
 Hilo
 HXNy
+Hand
 filtrar
 formato
 faltantes
@@ -243317,6 +243361,7 @@ qTEkpCS
 querySelector
 qEhtOA
 qNxH
+qrqer
 University
 Usar
 Un
@@ -264670,6 +264715,7 @@ openFile
 opacity
 outdent
 ordenamiento
+outline
 junto
 json
 jer

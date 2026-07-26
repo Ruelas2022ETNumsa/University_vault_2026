@@ -32,7 +32,7 @@ comentario: en la linea 770 de main.js se cambia los colores de superdoodle esto
 
 Recorrer en orden. Probar antes de decidir.
 
-- [x] **A1. Sintaxis core** —\%%> \%% y \%%< \%% inline. Probar en Live Preview y Reading View. Verificar comportamiento con y sin parche.
+- [x] **A1. Sintaxis core** —\%%> \%% y \%%< \ ^hti49t %% inline. Probar en Live Preview y Reading View. Verificar comportamiento con y sin parche.
 - [x] **A2. Semantic Highlighting** — prefijos `?` `!` `X-` `V-`. Probar los 4 colores. Evaluar si los 4 cubren los casos de ingeniería o hacen falta más.
 - [x] **A3. Grouping Method A** — callout `[!cornell]`. Probar con párrafo + lista y con párrafo + imagen. Solo Reading View.
 - [x] **A4. Grouping Method B** — bloque ` ```marginalia `. Probar composición compleja. Probar que la nota va ANTES del texto (BUENA NOTA CORNELL). Evaluar cuándo usar A vs B.
@@ -85,10 +85,10 @@ Recorrer en orden. Probar antes de decidir.
 ### Board
 
 - [x] **Export full tree to Board** — probado en A9. Árbol exportado con título editable (doble click). ✅
-- [ ] **Import skeleton** — pendiente.
-- [ ] **Export to markdown** — pendiente.
-- [ ] **Export to canvas** — pendiente.
-- [ ] **Auto-add copied text** — pendiente.
+- [x] **Import skeleton** — pendiente.
+- [x] **Export to markdown** — pendiente.
+- [x] **Export to canvas** — pendiente.
+- [x] **Auto-add copied text** — pendiente.
 - [x] **Zen doodle mode** — cubierto por A10 (SuperDoodle). ✅
 
 ---
@@ -192,6 +192,26 @@ Agregar inmediatamente después:
 ```js
 if (finalRenderText.includes("  ;;")) finalRenderText = finalRenderText.replace(/\s*;;\s*/g, "").trim();
 ```
+
+### BUG-03 — Zen doodle: selector de lienzo default incorrecto
+
+**Síntoma:** El selector de tamaño de lienzo en Zen doodle mode (SuperDoodle) arranca en `4x (massive)` en lugar de `1x (normal)`.
+
+**Causa:** Valor default hardcodeado en `main.js` — línea ~770 (zona de configuración de SuperDoodle).
+
+**Fix:** Cambiar el valor default del selector de `4x` a `1x` en el código. Identificar la constante o valor inicial en la zona ~770 y reemplazarlo.
+
+---
+
+### BUG-04 — Zen doodle: colores default no son paleta Galaxy
+
+**Síntoma:** Los 4 colores del lienzo SuperDoodle usan la paleta default del plugin, no la paleta Galaxy.
+
+**Causa:** Colores hardcodeados en `main.js` — línea ~770 (zona de configuración de SuperDoodle).
+
+**Fix:** Reemplazar los 4 valores de color por los equivalentes de la paleta Galaxy. Definir paleta antes de aplicar el fix (tarea previa en sesión dedicada).
+
+---
 
 ### BUG-02 — Nombre timestamp del archivo ZK (no usa slug)
 

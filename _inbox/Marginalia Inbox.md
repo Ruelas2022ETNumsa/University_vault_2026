@@ -18,3 +18,12 @@ portapapeles sin za1945
 
 
 ---
+%%> [[tsk_alx-rul#^hti49t|Group: \]]
+
+- \ [[tsk_alx-rul#^hti49t]] %%
+Continuamos documentando el plugin Cornell Marginalia en marginalia_explorer_guide.md.
+Próximo foco: EXP-10 — drag & drop desde Explorer a Canvas/Excalidraw.
+Lee el archivo antes de arrancar y decime cómo preparar la prueba (qué necesito tener abierto, qué archivo canvas usar, etc).
+
+
+---

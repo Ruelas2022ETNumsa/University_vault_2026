@@ -24,31 +24,23 @@ status: en-progreso
 ## Índice
 
 - [[#1. Descripción de la interfaz]]
-  - [[#S1 DI — Título]]
-  - [[#S2 DI — Omni-Capture]]
-  - [[#S3 DI — Captura rápida]]
-  - [[#S4 DI — Tabs de navegación]]
-  - [[#S5 DI — Acciones]]
-  - [[#S6 DI — Búsqueda]]
-  - [[#S7 DI — Filtros]]
-  - [[#S8 DI — Panel de resultados]]
+  - [[#Sección 1 — Título]]
+  - [[#Sección 2 — Omni-Capture]]
+  - [[#Sección 3 — Captura rápida]]
+  - [[#Sección 4 — Tabs de navegación]]
+  - [[#Sección 5 — Acciones]]
+  - [[#Sección 6 — Búsqueda]]
+  - [[#Sección 7 — Filtros]]
+  - [[#Sección 8 — Panel de resultados]]
+  - [[#Board — Descripción completa]]
 - [[#2. Comportamiento por sección]]
-  - [[#S2 CS — Omni-Capture]]
-  - [[#S3 CS — Captura rápida]]
-  - [[#S4 CS — Tabs de navegación]]
-    - [[#S4 CS — Board]]
-  - [[#S5 CS — Acciones]]
-  - [[#S6 CS — Búsqueda]]
-  - [[#S7 CS — Filtros]]
-  - [[#S8 CS — Panel de resultados]]
-  - [[#Board]]
 - [[#3. Flujos de uso]]
   - [[#Flujo A — Explorar marginalia del archivo activo]]
   - [[#Flujo B — Explorar marginalia del vault]]
   - [[#Flujo C — Stitch (conectar notas)]]
   - [[#Flujo D — Omni-Capture]]
   - [[#Flujo E — Board (Pinboard)]]
-- [[#4. Tareas pendientes de prueba]]
+- [[#3. Tareas pendientes de prueba]]
 
 ---
 
@@ -242,6 +234,8 @@ Navegación por teclado:
 
 
 ## 2. Comportamiento por sección
+
+### S1 CS — Título
 
 ### S2 CS — Omni-Capture
 [[#S2 DI — Omni-Capture]]
@@ -731,7 +725,7 @@ texto
 
 ---
 
-## 4. Tareas pendientes de prueba
+## 3. Tareas pendientes de prueba
 
 - [x] **EXP-01** — Verificar agrupación por tag en tab `current` con void.md de A6.
 - [x] **EXP-02** — Verificar tab `vault` con exclusiones configuradas.
