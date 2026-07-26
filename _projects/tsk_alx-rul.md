@@ -37,7 +37,7 @@ Recorrer en orden. Probar antes de decidir.
 - [x] **A3. Grouping Method A** — callout `[!cornell]`. Probar con párrafo + lista y con párrafo + imagen. Solo Reading View.
 - [x] **A4. Grouping Method B** — bloque ` ```marginalia `. Probar composición compleja. Probar que la nota va ANTES del texto (BUENA NOTA CORNELL). Evaluar cuándo usar A vs B.
 - [x] **A5. Imágenes en el margen** — \%%> img:[[...]] \%%. Probar con una imagen real del vault. Probar el zoom hover.
-- [ ] **A6. Marginalia Explorer** — sidebar, tabs Current / Vault / Threads / Board. Probar Click-to-Scroll, filtro por color, hover X-Ray con tecla H, drag a Canvas o Excalidraw.
+- [x] **A6. Marginalia Explorer** — sidebar, tabs Current / Vault / Threads / Board. Probar Click-to-Scroll, filtro por color, hover X-Ray con tecla H, drag a Canvas o Excalidraw.
 
 ---
 
@@ -58,7 +58,7 @@ Recorrer en orden. Probar antes de decidir.
 - [x] **`current`** — probado. Muestra marginalia del archivo activo agrupadas por tag. ✅ integrar al flujo de repaso.
 - [x] **`vault`** — probado. Escanea todo el vault respetando exclusiones. ✅ útil para repaso global pre-parcial.
 - [x] **`threads`** — probado en A9. Muestra árbol jerárquico de stitches y grupos por `#tag`. ✅
-- [ ] **`board`** — pendiente completar: Import skeleton, Export to markdown, Auto-add copied text.
+- [x] **`board`** — pendiente completar: Import skeleton, Export to markdown, Auto-add copied text.
 
 ### Sección 5 — Acciones
 
@@ -77,10 +77,10 @@ Recorrer en orden. Probar antes de decidir.
 
 ### Sección 8 — Navegación por teclado
 
-- [ ] **`H` (hover X-Ray)** — probar previsualización de contexto sin abrir el archivo. Ver EXP-12.
-- [ ] **`Spacebar` (seleccionar para stitch)** — probar mass stitch con `Alt+S`. Ver EXP-03.
-- [ ] **`Shift+↓/↑` (mass pinning)** — probar pinear múltiples notas al Board rápidamente.
-- [ ] **`Ctrl+Enter` (saltar a fuente)** — probado implícitamente con click. Verificar con teclado.
+- [x] **`H` (hover X-Ray)** — probar previsualización de contexto sin abrir el archivo. Ver EXP-12.
+- [x] **`Spacebar` (seleccionar para stitch)** — probar mass stitch con `Alt+S`. Ver EXP-03.
+- [x] **`Shift+↓/↑` (mass pinning)** — probar pinear múltiples notas al Board rápidamente.
+- [x] **`Ctrl+Enter` (saltar a fuente)** — probado implícitamente con click. Verificar con teclado.
 
 ### Board
 

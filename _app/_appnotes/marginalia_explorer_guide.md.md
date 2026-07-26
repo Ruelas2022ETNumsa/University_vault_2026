@@ -334,6 +334,10 @@ Al arrastrar una marginalia sobre otra dentro de S8:
 
 **`board`** — ver [[#S4 CS — Board]].
 
+> [!note] Atajos de tab
+> `Alt+1` = `current` · `Alt+2` = `vault` · `Alt+3` = `threads` · `Alt+4` = `board`
+> Requieren `Alt+E` previo para que el Explorer esté abierto y con foco.
+
 #### S4 CS — Board
 
 **Agregar texto plano desde S3:**
@@ -502,6 +506,11 @@ Ordenamiento por defecto según tag-class (ver [[#S7 DI — Filtros]]). Con `gro
 Click en una entrada: abre el archivo y salta a la línea exacta (Edit y Reading mode).
 
 `Spacebar` sobre una entrada: la marca con marco azul para Mass Stitch. Ver [[#Flujo C2 — Mass Stitch (teclado)]].
+
+> [!note] Métodos equivalentes — Pin to board
+> `P` = `Enter` = `Shift+↓/↑` = `Menu key + Enter` — todos envían la marginalia enfocada al Board.
+> `H` — abre hover/X-Ray de la marginalia enfocada sin abrir el archivo.
+> `Ctrl+Enter` — no funciona en v4.9.0. Usar click directo para saltar a la fuente.
 
 ---
 
@@ -748,6 +757,8 @@ texto
 4. Guardar con botón trueno o `Ctrl+Enter`.
 5. La captura se appendea al archivo destino con el formato de la plantilla configurada.
 
+> Probado. Ver documentación completa en [[_marginalia_system]] → A11.
+
 ---
 
 ### Flujo E — Board (Pinboard)
@@ -814,7 +825,7 @@ Dos métodos con comportamientos distintos.
 - [x] **EXP-09** — Probar Board: exportar a Canvas y verificar links de Block ID.
 - [x] **EXP-10** — Probar drag & drop desde Explorer a Canvas/Excalidraw.
 - [x] **EXP-11** — Probar filtros especiales: flashcards (`;;`), active recall, overlay mode.
-- [ ] **EXP-12** — Probar navegación por teclado completa (`H`, `Spacebar`, `Ctrl+Enter`).
+- [x] **EXP-12** — Probar navegación por teclado completa (`H`, `Spacebar`, `Ctrl+Enter`).
 
 ---
 

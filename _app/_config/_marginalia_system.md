@@ -206,7 +206,32 @@ status: activo
 
 ## A6. Marginalia Explorer
 
-> Pendiente de prueba.
+> Panel lateral de gestión de marginalia. UI completa documentada en [[marginalia_explorer_guide]].
+
+### Resumen
+
+- Abre con `Alt+E`. Tabs: `current` / `vault` / `threads` / `board` (`Alt+1–4`).
+- Click en cualquier marginalia → abre el archivo y salta a la línea exacta.
+- Drag & drop desde S8 → Canvas, Excalidraw o nota markdown (genera Block ID inmutable).
+- Mass Stitch: `Spacebar` para seleccionar, `Alt+S` para conectar — último seleccionado es el hilo de todos los anteriores.
+- Export to board → Export to canvas: método recomendado para visualización con nodos individuales y edges.
+
+### Decisiones Galaxy
+
+| Decisión | Motivo |
+|---|---|
+| Export to board → canvas sobre drag directo | Nodos individuales con edges y contexto de línea — mejor visualización |
+| Mass Stitch con tipo de conexión explícito | El tipo queda visible en threads entre cada padre e hilo |
+| Navegación con flechas solo en `current`/`vault` sin `group` | No funciona en `threads` ni con `group` activo |
+
+### Dónde se usa en Galaxy
+
+| Caso | Tab | Uso |
+|---|---|---|
+| Repaso del archivo activo | `current` | Ver todas las marginalia de la nota en curso agrupadas por tag-class |
+| Repaso global pre-parcial | `vault` | Escanear todo el vault filtrando por tag-class o búsqueda |
+| Síntesis visual | `board` → canvas | Exportar threads a canvas para mapa conceptual con conexiones visuales |
+| Conexión entre conceptos | `threads` | Ver y gestionar jerarquías padre-hilo entre archivos |
 
 ---
 

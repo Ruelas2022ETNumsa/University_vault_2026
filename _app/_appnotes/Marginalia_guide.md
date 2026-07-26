@@ -233,23 +233,13 @@ Al escribir `[[`, el autocompletado nativo de Obsidian sugiere archivos del vaul
 
 ## 5. Marginalia Explorer
 
-Sidebar dedicado que lista todas las marginalia del vault. Se abre desde el ribbon o con `Alt+E`.
+> Documentación completa de la UI en [[marginalia_explorer_guide]].
+> Comportamiento probado y decisiones Galaxy en [[_marginalia_system]] → A6.
 
-### Tabs disponibles
-
-| Tab | Contenido |
-|---|---|
-| **Current** | Solo las marginalia de la nota activa |
-| **Vault** | Todas las marginalia del vault agrupadas por color |
-| **Threads** | Árbol de Margin Threads conectados (ver 9) |
-| **Board** | Pinboard — colección manual de notas seleccionadas |
-
-### Funcionalidades
-
-- **Click-to-Scroll:** hacer clic en cualquier marginalia abre el archivo y hace scroll exactamente hasta esa línea (funciona en Live Preview y Reading View).
-- **Filtro por color:** clic en un color pill filtra las marginalia por su tipo semántico.
-- **Hover / X-Ray:** tecla `H` sobre un ítem abre popup de contexto con el texto circundante sin abrir el archivo.
-- **Drag & Drop:** arrastrar una marginalia desde el Explorer hacia un Canvas o Excalidraw crea un nodo con Block ID vinculado (ver 9).
+- Abre con `Alt+E`. Tabs: `current` / `vault` / `threads` / `board` (`Alt+1–4`).
+- Click en cualquier marginalia → abre el archivo y salta a la línea exacta.
+- Drag & drop desde el panel de resultados → Canvas, Excalidraw o nota markdown.
+- Stitch, Mass Stitch, Board y exportación a canvas documentados en el guide.
 
 ---
 
