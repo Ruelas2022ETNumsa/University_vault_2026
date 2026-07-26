@@ -486,60 +486,6 @@ Términos de búsqueda soportados:
 
 **Hoja + flecha (Filtrar hilos de la nota actual)** — disponible con `threads` activo. Filtra S8 mostrando solo los padres e hilos que pertenecen al archivo abierto.
 
-### S8 CS — Panel de resultados
-[[#S8 DI — Panel de resultados]]
-
-**`current` y `vault`**
-
-Ordenamiento por defecto según tag-class (ver [[#S7 DI — Filtros]]). Con `group` activo: se reordena por número de línea de menor a mayor; en `vault` prioriza el orden de línea a través de todos los archivos.
-
-Click en una entrada: abre el archivo y salta a la línea exacta (Edit y Reading mode).
-
----
-
-**`threads`**
-
-Ordenamiento sin filtros: no confirmado. Las marginalia se agrupan por tag-group:
-
-```
-[nombre-tag-group]
-[marginalia 1          nombre_archivo · L#]
-[marginalia 2          nombre_archivo · L#]
-```
-
-Para padres e hilos (con stitch):
-```
-[nombre-tag-group]
-[marginalia padre       nombre_archivo · L#]
-  [marginalia hilo      nombre_archivo · L#]
-```
-
-Al pasar el cursor sobre el nombre del tag-group aparecen 3 botones a la derecha:
-
-| Botón | Función |
-|---|---|
-| Pin (ícono pin) | Pin to top |
-| Paleta de puntos | Paint box (saves to settings) |
-| Cuadrado azul + círculo blanco | Export full tree to board |
-
-Al presionar **Export full tree to board**: notificación *"[nombre-tag-group] fue exportada a board"*.
-
----
-
-**Resultado en Board tras exportar desde `threads`:**
-
-```
-nombre-tag-group-1                    x
-[marginalia                       ← → x]
-nombre-tag-group-2                    x
-[marginalia                       ← → x]
-```
-
-- Las notas pierden la jerarquía padre-hilo — todas quedan al mismo nivel.
-- Las notas nuevas agregadas posteriormente se suman al final del grupo correspondiente.
-- Tooltips de los botones por nota: `←` = outdent · `→` = indent · `x` = eliminar.
-- Indent agrega un nivel de sangría a la nota (hasta ~15 niveles confirmados).
-
 ### Board
 
 ---
@@ -609,17 +555,17 @@ nombre-tag-group-2                    x
 
 ## 3. Tareas pendientes de prueba
 
-- [x] **EXP-01** — Verificar agrupación por tag en tab `current` con void.md de A6.
-- [x] **EXP-02** — Verificar tab `vault` con exclusiones configuradas.
-- [x] **EXP-03** — Probar `stitch`: conectar marginalia de void.md con otra de otro archivo y verificar en tab `threads`.
-- [x] **EXP-04** — Probar `group`: crear marginalia repetidas y verificar agrupación.
+- [ ] **EXP-01** — Verificar agrupación por tag en tab `current` con void.md de A6.
+- [ ] **EXP-02** — Verificar tab `vault` con exclusiones configuradas.
+- [ ] **EXP-03** — Probar `stitch`: conectar marginalia de void.md con otra de otro archivo y verificar en tab `threads`.
+- [ ] **EXP-04** — Probar `group`: crear marginalia repetidas y verificar agrupación.
 - [ ] **EXP-05** — Probar Omni-Capture: captura de texto simple al inbox.
 - [ ] **EXP-06** — Probar Omni-Capture con doodle adjunto.
 - [ ] **EXP-07** — Probar Omni-Capture modo `ZK`: verificar que crea nota atómica.
 - [ ] **EXP-08** — Probar Board: pinear notas, organizar, exportar a markdown.
 - [ ] **EXP-09** — Probar Board: exportar a Canvas y verificar links de Block ID.
 - [ ] **EXP-10** — Probar drag & drop desde Explorer a Canvas/Excalidraw.
-- [x] **EXP-11** — Probar filtros especiales: flashcards (`;;`), active recall, overlay mode.
+- [ ] **EXP-11** — Probar filtros especiales: flashcards (`;;`), active recall, overlay mode.
 - [ ] **EXP-12** — Probar navegación por teclado completa (`H`, `Spacebar`, `Ctrl+Enter`).
 
 ---

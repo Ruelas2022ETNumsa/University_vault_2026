@@ -10,18 +10,21 @@ status: creciente
 
 ## Handoff
 
-**Última sesión:** 2026-07-25
-**Retomar desde:** Board — probar botones pendientes (Import skeleton, Export to markdown, Export to canvas, Auto-add copied text).
+**Última sesión:** 2026-07-24
+**Retomar desde:** `marginalia_explorer_guide.md` — S5 DI (siguiente en orden)
 **Completado esta sesión:**
-- S5 DI — actualizado: tooltips de stitch, group y refresh; descripción completa de cada botón.
-- S5 CS — completo: estado visual de botones, definición de tag-class y tag-group, 4 casos (refresh, stitch, group, stitch+group), flujo drag & drop S8→S8, deshacer.
-- S6 DI — actualizado: forma visual del search box.
-- S6 CS — completo: disponibilidad por tab, combinación con S7, términos soportados.
-- S7 DI — actualizado: tabla unificada con todos los filtros, colores, tooltips y botón requerido.
-- S7 CS — completo: comportamiento de cada filtro incluyendo notificaciones y contextuales.
-- S8 DI — actualizado: orden completo, forma visual de entrada, hover y punto de board.
-- S8 CS — completo: comportamiento current/vault/threads, botones del tag-group, export a board y resultado en board.
-**Próximo paso:** Board — probar botones: Import skeleton, Export to markdown, Export to canvas, Auto-add copied text.
+- Reestructura de `marginalia_explorer_guide.md`: se añadió `## 2. Comportamiento por sección` (esquema C) con `###` por sección.
+- Links cruzados DI ↔ CS implementados por el usuario (convención `S# DI` / `S# CS`).
+- S2 DI — actualizado: tooltips en guía rápida, autocompletado, persistencia, dest vacío, archivo inexistente.
+- S2 CS — completo: notificaciones ZK ON/OFF, `clear`, bug tpl-zk.md documentado.
+- S3 DI — actualizado: guía rápida, expand por arrastre, `Alt+C` requiere `Alt+E` primero.
+- S3 CS — completo: formato de salida, drag & drop S8→S3 (simple/grupo/threads), drag & drop S8→S8 (crear thread), notificaciones de stitch.
+- S4 DI — actualizado: tooltips, visualización de entradas en S8, subsección Board anidada con 7 botones + tooltips + teclado.
+- S4 CS — completo: comportamiento current/vault/threads/board, filtro exclusivo vault, Export full tree, círculo pin individual, hover, notificación "added to board", visualización de nodos en Board.
+- `### Board — Descripción completa` eliminado (absorbido en S4 DI).
+- IDs espúreos de Obsidian en S3 CS limpiados.
+**Próximo paso:** S5 DI — revisar, luego S5 CS, S6, S7, S8 y flujos.
+**Preguntas de cierre:** `stitch` y `group` en S5 DI quedan pendientes de detalle — tooltips y estado visual activo no confirmados.
 
 ---
 
@@ -68,15 +71,15 @@ Recorrer en orden. Probar antes de decidir.
 ### Sección 5 — Acciones
 
 - [x] **`stitch`** — probado en A9. Flujo de dos pasos, sintaxis clásica y semántica verificadas. ✅
-- [x] **`group`** — pendiente. Probar agrupación de marginalia repetidas.
+- [ ] **`group`** — pendiente. Probar agrupación de marginalia repetidas.
 - [x] **Recargar** — sin decisión pendiente.
 
 ### Sección 7 — Filtros de tag
 
 - [x] **Filtros `!` `?` `X-` `V-` `C-` `F-` `R-` `T-`** — probados. Funcionan correctamente. ✅ usar para repaso selectivo por tipo.
-- [x] **Reloj (Recientes)** — probar. ¿Muestra las últimas marginalia escritas? Útil para retomar sesión.
+- [ ] **Reloj (Recientes)** — probar. ¿Muestra las últimas marginalia escritas? Útil para retomar sesión.
 - [ ] **Libro cerrado (Direct PDF mode)** — probar con PDF abierto en Obsidian. Relevante si se usan PDFs en Galaxy.
-- [x] **Mazo de cartas (flashcards `;;`)** — probar junto con A7 y A8. Muestra solo marginalia con blur.
+- [ ] **Mazo de cartas (flashcards `;;`)** — probar junto con A7 y A8. Muestra solo marginalia con blur.
 - [ ] **Cerebro (Active recall PDF)** — probar en PDF. Oculta resaltados para repasar sin ver las respuestas.
 - [ ] **Globo (Overlay mode)** — probar. Muestra marginalia superpuestas sobre el PDF.
 
@@ -255,14 +258,6 @@ El archivo se crea con el timestamp antes de que el template se ejecute — el s
 | 2026-07-23 | A9: `UNTAGGED` no renombrable desde Settings ni data.json | El plugin lo regenera — usar siempre `#tag` o etiqueta semántica |
 | 2026-07-23 | A9: Hover Peek es tooltip en v4.9.0, no popup de preview | README desactualizado — comportamiento real verificado |
 | 2026-07-23 | A9: nomenclatura kebab-case para grupos Galaxy | `#transformadas-integrales`, `#circuitos-rc`, etc. |
-
-| 2026-07-25 | tag-class = nombre oficial para prefijo de color de marginalia (`!`, `?`, `X-`…) | Evitar confusión con tag-group |
-| 2026-07-25 | tag-group = nombre oficial para agrupador de Threads (`#nombre`) | Evitar confusión con tag-class |
-| 2026-07-25 | Stitch deshacer (`Ctrl+Shift+Z`): padre limpio, hilo conserva `^id` | Comportamiento verificado en ambos flujos (modal y drag & drop) |
-| 2026-07-25 | Drag & drop S8→S8 como alternativa a stitch sin ventana emergente | No pide tipo de conexión; válido desde tab `vault` |
-| 2026-07-25 | Group ordena por línea y agrupa por contenido exacto, independiente de tag-class e id | Comportamiento verificado en casos 3 y 4 |
-| 2026-07-25 | Export full tree to board pierde jerarquía padre-hilo — todas las notas al mismo nivel | Board no refleja indentación de threads |
-| 2026-07-25 | Indent en board hasta ~15 niveles confirmados | Límite superior no determinado |
 
 > [!note]- Descartadas
 > A3 como método general — no agrupa visualmente el contenido como se esperaba.
