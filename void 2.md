@@ -1,6 +1,6 @@
 
 
-```
+``
 - [[void 1#^mdx9of|! Esto es importante V1]]
 	- [[void 1#^byakdi|? Pregunta de examen V1]]
 		-  %%> ! Esto es importante V1 ^mdx9of %%
@@ -8,7 +8,7 @@
 			-  %%> ? Pregunta de examen V1 ^byakdi %%
 - [[void 1#^amthub|R- relación con otro tema V1]]
 	-  %%> F- fórmula clave V1 ^ax7b9e %%
-```
+``
 
 
 
@@ -173,3 +173,22 @@ La segunda ley de Newton es $F = ma$.%%> ! Segunda ley — entra en parcial %% %
 # galaxy linkds
 
 %%
+
+%%> siuuuuuuuu 2258 %%
+
+
+---
+%%> sdasdsadsdsadsadsad %%
+
+
+---
+
+
+
+
+
+%%> img:[[doodle_20260725_225909.png]] %%
+galaxy linkds
+
+
+---
