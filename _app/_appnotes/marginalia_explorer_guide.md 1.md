@@ -541,120 +541,6 @@ nombre-tag-group-2                    x
 - Indent agrega un nivel de sangría a la nota (hasta ~15 niveles confirmados).
 
 ### Board
-[[#S4 DI — Tabs de navegación]]
-
-**Botones de gestión (los 7):**
-
----
-
-**1. Copy board to clipboard**
-- Notificación: *"mindmap copiado, ve a excalidraw y presiona ctrl+v"*
-- Copia el board al portapapeles en formato lista markdown:
-```
-- [[archivo#^id|texto]]
-	-  %%> texto ^id %%
-```
-- Cada nota incluye su Block ID link y la marginalia raw indentada debajo.
-- En Excalidraw (`Ctrl+V`): los links funcionan como accesos directos a la nota origen.
-- El indent aplicado en el board **sí se refleja** en la jerarquía de la lista copiada.
-
----
-
-**2. Export to markdown note**
-- Notificación: *"pinboard compiled successfully"*
-- Crea archivo nuevo en `Pinboards/Pinboard_YYYY-MM-DD_HH-MM-SS.md` (carpeta automática).
-- Formato del archivo:
-```
-# ● Pinboard Session
-*Exported on: YYYY-MM-DD HH:MM*
-
----
-
-texto de la marginalia
-
-*— 🔗 [[archivo#^id|archivo]]*
-
----
-```
-- El tag-class (`!`, `?`, `F-`, `R-`…) **no aparece** — solo el texto limpio.
-- El indent del board **no se refleja** — el archivo siempre aplana todo al mismo nivel.
-
----
-
-**3. Export to canvas**
-- Crea archivo nuevo en `Evidence Boards/EvidenceBoard_YYYY-MM-DD_HH-MM-SS.canvas` (carpeta automática distinta a `Pinboards/`).
-- Cada nota = nodo tipo `text` con formato:
-```
-**Marginalia:**
-texto
-
-[[archivo#^id|🔗 Origin]]
-```
-- Color de nodo: morado (`"4"` en Canvas de Obsidian) para todas las notas.
-- El tag-class **no aparece** — solo el texto limpio.
-- El indent **sí afecta** el canvas:
-  - Sin indent → todos los nodos en la misma columna (`x: 450`), sin edges.
-  - Con indent → cada nivel desplaza el nodo en el eje X (`+450px` por nivel) y genera edges de izquierda a derecha conectando el nodo indentado con su padre.
-
----
-
-**4. Zen doodle mode**
-- Lanza la interfaz **SuperDoodle** (no el OCD de Omni-Capture — motores distintos).
-- El lienzo **persiste** entre visitas — no se limpia al presionar "return to board".
-- Interfaz de izquierda a derecha:
-
-| Control | Tooltip | Función |
-|---|---|---|
-| `[←]` | Return to board | Vuelve al board sin borrar el lienzo |
-| Mano | Hand tool (pan) | Paneo horizontal. Se activa con `Ctrl` si Pen está seleccionado |
-| Pluma | Pen | Dibuja con cualquier botón del ratón (izq, der, rueda) |
-| Goma | Eraser | Borra por área según grosor del slider (no borra trazos completos) |
-| Rectángulo segmentado | Lasso / select tool | Selecciona área rectangular y permite arrastrarla |
-| Selector de lienzo | `8x` / `4x` / `2x` / `1x` | Redimensiona el lienzo (default: `4x`). Se puede cambiar en código |
-| Slider | — | Controla el grosor del trazo |
-| 4 círculos de color | — | Selección de color del trazo. Configurables en código |
-| Basurero | Clear canvas | Borra todos los trazos — lienzo desde cero |
-| Pin + *attach to board* | Save and add to pinboard | Guarda el PNG en `_assets/superdoodle_YYYYMMDD_HHMMSS.png` y lo agrega al board |
-| Trueno + *omni-capture* | Save instantly to omni-capture destination | Inyecta en `dest:` la marginalia `%%> img:[[doodle_...png]] %%` + contenido del portapapeles como `![[clip_...png]]` + `---` |
-
-**Nodo doodle en el board:**
-- Se muestra como texto plano con el nombre del archivo PNG (no renderiza imagen, sin miniatura).
-- Sin hover/preview. Doble click → editable como texto.
-- No tiene click-to-origin (a diferencia de las notas de texto).
-
-**Nota sobre dest: en Zen doodle:** el destino de omni-capture está atado al último `dest:` confirmado desde S3. Para cambiarlo: hacer un envío previo desde S3 con el nuevo destino → luego volver a Zen doodle.
-
----
-
-**5. Clear board**
-- Notificación: *"board cleaned"*
-- Borra todas las notas y doodles del board de forma instantánea.
-- Sin confirmación previa. Irreversible.
-
----
-
-**6. Import skeleton**
-- Notificación: *"imported N skeleton nodes"*
-- Importa la **estructura** de la nota activa como nodos del board. No importa marginalia.
-- Extrae:
-  - Headings (`#`, `##`, `###`…) — con jerarquía visual: `#` aparece en letras grandes y moradas (color del tema), subniveles en texto normal.
-  - Listas con `- ` (guion) — incluyendo las del YAML frontmatter.
-- **No** extrae listas numeradas (`1.`).
-- **No** extrae marginalia `%%> %%`.
-- **No** crea nodo raíz con el nombre del archivo.
-- Caso especial: `%%# texto%%` también es capturado por tener sintaxis de heading del plugin.
-- Uso previsto: importar el outline de la nota y luego pinear marginalia encima para armar un mindmap organizado por secciones.
-
----
-
-**7. Auto-add copied text**
-- Toggle con dos estados:
-  - **ON** — notificación: *"auto-paste ON! copy text to see it appear"*
-  - **OFF** — notificación: *"auto-paste desactivated"*
-- Con el toggle ON: cualquier texto copiado al portapapeles se agrega automáticamente al board. Notificación por cada pegado: *"text auto-pasted"*.
-- Todo llega como **texto plano** — sin formato, sin Block ID links, sin tag-class.
-  - Marginalia `%%> texto %%` → texto plano.
-  - Imágenes `![[img.png]]` → texto plano.
 
 ---
 
@@ -712,16 +598,12 @@ texto
 
 ### Flujo E — Board (Pinboard)
 
-> Probado.
+> Pendiente de prueba.
 
-1. Presionar tab `board` (`Alt+4`).
-2. Pinear notas desde `current` o `vault`: hover sobre la nota → punto derecho, o `Shift+↓/↑`.
-3. Organizar jerarquía con botones `←` (outdent) y `→` (indent) por nota, o `Alt+Flechas`.
-4. Exportar:
-   - `Copy to clipboard` → pegar en Excalidraw con `Ctrl+V`.
-   - `Export to markdown` → genera `Pinboards/Pinboard_fecha.md`.
-   - `Export to canvas` → genera `Evidence Boards/EvidenceBoard_fecha.canvas`.
-5. Limpiar con `Clear board` (instantáneo, sin confirmación).
+1. Presionar tab `board` (Sección 4).
+2. Pinear notas desde `current` o `vault` con `Shift+↓/↑` o `Enter`.
+3. Organizar nodos con `Alt+Flechas`.
+4. Exportar con *"export to markdown note"* o *"export to canvas"*.
 
 ---
 
@@ -734,8 +616,8 @@ texto
 - [ ] **EXP-05** — Probar Omni-Capture: captura de texto simple al inbox.
 - [ ] **EXP-06** — Probar Omni-Capture con doodle adjunto.
 - [ ] **EXP-07** — Probar Omni-Capture modo `ZK`: verificar que crea nota atómica.
-- [x] **EXP-08** — Probar Board: pinear notas, organizar, exportar a markdown.
-- [x] **EXP-09** — Probar Board: exportar a Canvas y verificar links de Block ID.
+- [ ] **EXP-08** — Probar Board: pinear notas, organizar, exportar a markdown.
+- [ ] **EXP-09** — Probar Board: exportar a Canvas y verificar links de Block ID.
 - [ ] **EXP-10** — Probar drag & drop desde Explorer a Canvas/Excalidraw.
 - [x] **EXP-11** — Probar filtros especiales: flashcards (`;;`), active recall, overlay mode.
 - [ ] **EXP-12** — Probar navegación por teclado completa (`H`, `Spacebar`, `Ctrl+Enter`).

@@ -22,3 +22,9 @@ E:\University_vault_2026\_assets\superdoodle_20260725_224841.png
 ![[clip_20260725_225559.png]]
 
 ---
+a.)  asd
+
+1. qrqer
+2. PAPE
+3. pupup
+4. 

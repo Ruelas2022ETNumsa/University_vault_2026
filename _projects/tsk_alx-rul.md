@@ -11,17 +11,12 @@ status: creciente
 ## Handoff
 
 **Última sesión:** 2026-07-25
-**Retomar desde:** Board — probar botones pendientes (Import skeleton, Export to markdown, Export to canvas, Auto-add copied text).
+**Retomar desde:** Board completo — todos los botones documentados. Próximo foco: EXP-10 (drag & drop a Canvas/Excalidraw), EXP-12 (navegación por teclado), y pendientes de S7 (PDF mode, active recall, overlay).
 **Completado esta sesión:**
-- S5 DI — actualizado: tooltips de stitch, group y refresh; descripción completa de cada botón.
-- S5 CS — completo: estado visual de botones, definición de tag-class y tag-group, 4 casos (refresh, stitch, group, stitch+group), flujo drag & drop S8→S8, deshacer.
-- S6 DI — actualizado: forma visual del search box.
-- S6 CS — completo: disponibilidad por tab, combinación con S7, términos soportados.
-- S7 DI — actualizado: tabla unificada con todos los filtros, colores, tooltips y botón requerido.
-- S7 CS — completo: comportamiento de cada filtro incluyendo notificaciones y contextuales.
-- S8 DI — actualizado: orden completo, forma visual de entrada, hover y punto de board.
-- S8 CS — completo: comportamiento current/vault/threads, botones del tag-group, export a board y resultado en board.
-**Próximo paso:** Board — probar botones: Import skeleton, Export to markdown, Export to canvas, Auto-add copied text.
+- Board CS — 7 botones documentados: Copy to clipboard, Export to markdown, Export to canvas, Zen doodle mode (SuperDoodle), Clear board, Import skeleton, Auto-add copied text.
+- Flujo E — actualizado con pasos reales probados.
+- EXP-08 y EXP-09 marcados como completos.
+**Próximo paso:** EXP-10 drag & drop desde Explorer a Canvas/Excalidraw, o continuar con S7 filtros PDF pendientes.
 
 ---
 
