@@ -1,3 +1,27 @@
+
+
+```
+- [[void 1#^mdx9of|! Esto es importante V1]]
+	- [[void 1#^byakdi|? Pregunta de examen V1]]
+		-  %%> ! Esto es importante V1 ^mdx9of %%
+		- [[void 1#^ax7b9e|F- fórmula clave V1]]
+			-  %%> ? Pregunta de examen V1 ^byakdi %%
+- [[void 1#^amthub|R- relación con otro tema V1]]
+	-  %%> F- fórmula clave V1 ^ax7b9e %%
+```
+
+
+
+
+
+
+
+
+
+
+---
+
+
 **A6 — Marginalia Explorer**
 
 Ejemplo completo para probar el sidebar: escanea este archivo y verifica que cada tag aparece agrupado correctamente en el Explorer.

@@ -1,0 +1,45 @@
+{
+  "nodes": [
+    {
+      "id": "535df65629afb01b",
+      "type": "text",
+      "text": "**Marginalia:**\n! Esto es importante V1\n\n[[void 1#^mdx9of|🔗 Origin]]",
+      "x": 450,
+      "y": 0,
+      "width": 300,
+      "height": 140,
+      "color": "4"
+    },
+    {
+      "id": "028fdadbe439f673",
+      "type": "text",
+      "text": "**Marginalia:**\n? Pregunta de examen V1\n\n[[void 1#^byakdi|🔗 Origin]]",
+      "x": 450,
+      "y": 220,
+      "width": 300,
+      "height": 140,
+      "color": "4"
+    },
+    {
+      "id": "30bfa9e7cd8ff0d9",
+      "type": "text",
+      "text": "**Marginalia:**\nF- fórmula clave V1\n\n[[void 1#^ax7b9e|🔗 Origin]]",
+      "x": 450,
+      "y": 440,
+      "width": 300,
+      "height": 140,
+      "color": "4"
+    },
+    {
+      "id": "8553169cd62178b3",
+      "type": "text",
+      "text": "**Marginalia:**\nR- relación con otro tema V1\n\n[[void 1#^amthub|🔗 Origin]]",
+      "x": 450,
+      "y": 660,
+      "width": 300,
+      "height": 140,
+      "color": "4"
+    }
+  ],
+  "edges": []
+}

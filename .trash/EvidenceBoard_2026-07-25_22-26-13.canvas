@@ -1,0 +1,12 @@
+{
+	"nodes":[
+		{"id":"4d8d42945d387eb4","type":"text","text":"**Marginalia:**\n! Esto es importante V1\n\n[[void 1#^mdx9of|🔗 Origin]]","x":450,"y":0,"width":300,"height":140,"color":"4"},
+		{"id":"317e24762fe20255","type":"text","text":"**Marginalia:**\nF- fórmula clave V1\n\n[[void 1#^ax7b9e|🔗 Origin]]","x":1350,"y":440,"width":300,"height":140,"color":"4"},
+		{"id":"5120a233cbb80bec","type":"text","text":"**Marginalia:**\nR- relación con otro tema V1\n\n[[void 1#^amthub|🔗 Origin]]","x":450,"y":660,"width":300,"height":140,"color":"4"},
+		{"id":"349195af90c63551","type":"text","text":"**Marginalia:**\n? Pregunta de examen V1\n\n[[void 1#^byakdi|🔗 Origin]]","x":920,"y":220,"width":300,"height":140,"color":"4"}
+	],
+	"edges":[
+		{"id":"e4f1f2c7859bec93","fromNode":"4d8d42945d387eb4","fromSide":"right","toNode":"349195af90c63551","toSide":"left"},
+		{"id":"421b830e1a709457","fromNode":"349195af90c63551","fromSide":"right","toNode":"317e24762fe20255","toSide":"left"}
+	]
+}

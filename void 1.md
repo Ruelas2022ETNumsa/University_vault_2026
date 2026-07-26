@@ -1,4 +1,35 @@
 
+
+
+
+
+
+
+
+%%> ! Esto es importante V1 ^mdx9of %%
+%%> ? Pregunta de examen V1 ^byakdi %%
+%%> F- fórmula clave V1 ^ax7b9e %%
+%%> R- relación con otro tema V1 #test  ^amthub %%
+
+
+
+
+%%> texto sin tag V1%%
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
 **A2 — Semantic Highlighting**
 
 Cada línea prueba un tag. Verificar color en Reading View y Live Preview.
