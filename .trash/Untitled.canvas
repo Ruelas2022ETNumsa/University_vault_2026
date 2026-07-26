@@ -9,7 +9,11 @@
 		{"id":"cc02a19f5571e4cf","x":602,"y":-15456,"width":558,"height":216,"type":"text","text":"# OTRO\n\n- operación base de Laplace [[void2#^czne0y]]"},
 		{"id":"52a5c38079c9dba1","x":744,"y":-15091,"width":496,"height":191,"type":"text","text":"# UNTAGGED\n\n- Concepto clave [[void 1]]\n\t- Entra en examen [[void 1#^vs6fg6]]"},
 		{"id":"38d943405694989c","x":810,"y":-14823,"width":470,"height":303,"type":"text","text":"# PEP\n\n- Entra en examen 1730V2 [[void 2#^uamgt5]]\n- ¿Por qué debe converger? V2 [[void 2#^v5f86v]]\n- Esto es importante, entra en examen 1730V1 [[void 1#^x7y9tt]]"},
-		{"id":"d170e35a5a709fac","x":883,"y":-14353,"width":537,"height":333,"type":"text","text":"# UNTAGGED\n\n- Concepto clave [[void 1]]\n\t- Entra en examen [[void 1#^vs6fg6]]\n- ¿Qué pasa si no converge? [[void 1]]\n\t- ¿Cuál es la condición de convergencia? [[void 1#^yqtlwl]]"}
+		{"id":"d170e35a5a709fac","x":883,"y":-14353,"width":537,"height":333,"type":"text","text":"# UNTAGGED\n\n- Concepto clave [[void 1]]\n\t- Entra en examen [[void 1#^vs6fg6]]\n- ¿Qué pasa si no converge? [[void 1]]\n\t- ¿Cuál es la condición de convergencia? [[void 1#^yqtlwl]]"},
+		{"id":"989007b9e522c994","x":986,"y":-13805,"width":734,"height":285,"type":"text","text":"# NEW-BOX\n\n- relacionada con Laplace marginalai1 [[void2]]\n\t- esto es unc pruega de marginalia 1hilo [[void2#^z2djti]]\n- prueba de padre 2 marginala2 [[void2]]\n\t- esto es hilo 2 marginalia2 [[void2#^4vtx9c]]"},
+		{"id":"d9ab6f284f3489c9","x":960,"y":-13460,"width":700,"height":81,"type":"text","text":"- esto es unc pruega de marginalia 1hilo [[void2#^z2djti]]"}
 	],
-	"edges":[]
+	"edges":[
+		{"id":"d929301f012d3459","fromNode":"d9ab6f284f3489c9","fromSide":"left","toNode":"562baf06f27b88e8","toSide":"right"}
+	]
 }

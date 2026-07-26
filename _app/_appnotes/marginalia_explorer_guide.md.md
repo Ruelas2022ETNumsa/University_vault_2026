@@ -121,7 +121,7 @@ nota_marginalia (arriba izquierda)     nombre_archivo · línea (abajo derecha)
 
 **`threads`** — muestra las marginalia agrupadas por `#tag`. Ejemplo de marginalia con tag:
 ```
-%%> R- relacionada con Laplace #transformadas %%
+%%> R- relacionada con Laplace #transformadas  ^rsm3t9 %%
 ```
 Las marginalia sin tag se agrupan bajo `UNTAGGED`.
 
@@ -731,6 +731,41 @@ texto
 
 ---
 
+### Flujo F — Drag & drop a Canvas
+
+> Probado.
+
+Dos métodos con comportamientos distintos.
+
+**Método 1 — Drag directo S8 → Canvas**
+
+1. Abrir canvas vacío en panel principal. Explorer visible en sidebar con tab `current` o `vault` activo.
+2. Arrastrar una marginalia de S8 al canvas.
+3. Se genera automáticamente un Block ID en el archivo fuente (si no tenía). Una vez creado, el ID es inmutable.
+4. El canvas recibe **un único recuadro** con todo el contenido en markdown plano:
+   - Marginalia simples: `texto [[archivo#^id]]`
+   - Imágenes (`img:[[...]]`): `[[archivo#^id|Group: ![[_assets/imagen.png]]]]` — la imagen sí renderiza dentro del recuadro.
+   - Grupos desde `threads` (drag por nombre de tag-group): markdown plano con jerarquía indentada, sin conexiones visuales.
+5. Desde tab `vault`: comportamiento idéntico; solo cambia el nombre del archivo en el link.
+
+> ⚠️ Todo el contenido draggeado llega en un solo recuadro. No genera conexiones visuales ni cajas individuales por nota.
+> ✅ Conserva la jerarquía completa (incluyendo padres sin tag-group que se perderían en export to board).
+
+**Método 2 — Export to board → Export to canvas** *(recomendado)*
+
+1. Desde `threads`, presionar **Export full tree to board** (recuadro azul + círculo blanco al hover sobre el tag-group).
+2. Verificar en board que todas las notas llegaron: el punto derecho pintado indica presencia en board.
+3. Si alguna nota falta (ej. padre sin conexión al tag-group): ir a `threads`, encontrarla individualmente, presionar su punto derecho para agregarla al board manualmente.
+4. Reordenar en board si es necesario (`Alt+Flechas` o botones `←` `→`).
+5. Presionar **Export to canvas** → genera `Evidence Boards/EvidenceBoard_fecha.canvas`.
+6. El canvas muestra nodos individuales con conexiones visuales (edges) y caja adicional con el texto de contexto de línea donde vive la marginalia.
+
+> ⚠️ La conexión semántica del stitch (tipo de conexión) **no se exporta** al canvas.
+> ⚠️ Padres sin tag-group pueden no llegar por export masivo — verificar y agregar manualmente desde paso 3.
+> ✅ Mejor para visualización: nodos separados, edges, contexto de línea visible.
+
+---
+
 ## 4. Tareas pendientes de prueba
 
 - [x] **EXP-01** — Verificar agrupación por tag en tab `current` con void.md de A6.
@@ -742,7 +777,7 @@ texto
 - [ ] **EXP-07** — Probar Omni-Capture modo `ZK`: verificar que crea nota atómica.
 - [x] **EXP-08** — Probar Board: pinear notas, organizar, exportar a markdown.
 - [x] **EXP-09** — Probar Board: exportar a Canvas y verificar links de Block ID.
-- [ ] **EXP-10** — Probar drag & drop desde Explorer a Canvas/Excalidraw.
+- [x] **EXP-10** — Probar drag & drop desde Explorer a Canvas/Excalidraw.
 - [x] **EXP-11** — Probar filtros especiales: flashcards (`;;`), active recall, overlay mode.
 - [ ] **EXP-12** — Probar navegación por teclado completa (`H`, `Spacebar`, `Ctrl+Enter`).
 

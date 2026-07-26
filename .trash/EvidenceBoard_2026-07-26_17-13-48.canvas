@@ -1,0 +1,148 @@
+{
+  "nodes": [
+    {
+      "id": "423846fa35a2ae0c",
+      "type": "text",
+      "text": "# NEW-BOX",
+      "x": 0,
+      "y": 0,
+      "width": 350,
+      "height": 100,
+      "color": "1"
+    },
+    {
+      "id": "c196b0515b3b8be2",
+      "type": "text",
+      "text": "**Marginalia:**\nR- relacionada con Laplace marginalai1\n\n[[void2#^nu51nc|🔗 Origin]]",
+      "x": 450,
+      "y": 150,
+      "width": 300,
+      "height": 140,
+      "color": "4"
+    },
+    {
+      "id": "9abea50d36e8c02f",
+      "type": "text",
+      "text": "> Transformada de Fourier",
+      "x": 850,
+      "y": 130,
+      "width": 450,
+      "height": 180
+    },
+    {
+      "id": "8269cfdba87faa7e",
+      "type": "text",
+      "text": "**Marginalia:**\nT- esto es unc pruega de marginalia 1hilo\n\n[[void2#^z2djti|🔗 Origin]]",
+      "x": 900,
+      "y": 370,
+      "width": 300,
+      "height": 140,
+      "color": "4"
+    },
+    {
+      "id": "2264ddfa7aa0254f",
+      "type": "text",
+      "text": "> prueba de contexto fouries",
+      "x": 1300,
+      "y": 350,
+      "width": 450,
+      "height": 180
+    },
+    {
+      "id": "4ef83807a0dd6eaf",
+      "type": "text",
+      "text": "**Marginalia:**\nC- prueba de padre 2 marginala2\n\n[[void2#^5thviy|🔗 Origin]]",
+      "x": 450,
+      "y": 590,
+      "width": 300,
+      "height": 140,
+      "color": "4"
+    },
+    {
+      "id": "0a7347f2b9f6c614",
+      "type": "text",
+      "text": "> prueba de padre 2",
+      "x": 850,
+      "y": 570,
+      "width": 450,
+      "height": 180
+    },
+    {
+      "id": "7d05c0317e011ec7",
+      "type": "text",
+      "text": "**Marginalia:**\n! esto es hilo 2 marginalia2\n\n[[void2#^4vtx9c|🔗 Origin]]",
+      "x": 900,
+      "y": 810,
+      "width": 300,
+      "height": 140,
+      "color": "4"
+    },
+    {
+      "id": "1c46a81ab9ffc2bd",
+      "type": "text",
+      "text": "> hilo 2",
+      "x": 1300,
+      "y": 790,
+      "width": 450,
+      "height": 180
+    }
+  ],
+  "edges": [
+    {
+      "id": "d34a5cccb031a129",
+      "fromNode": "423846fa35a2ae0c",
+      "fromSide": "right",
+      "toNode": "c196b0515b3b8be2",
+      "toSide": "left"
+    },
+    {
+      "id": "503db75d4abb0fb0",
+      "fromNode": "c196b0515b3b8be2",
+      "fromSide": "right",
+      "toNode": "9abea50d36e8c02f",
+      "toSide": "left"
+    },
+    {
+      "id": "fc9aaca41334a001",
+      "fromNode": "c196b0515b3b8be2",
+      "fromSide": "right",
+      "toNode": "8269cfdba87faa7e",
+      "toSide": "left"
+    },
+    {
+      "id": "b6159a93a61907b2",
+      "fromNode": "8269cfdba87faa7e",
+      "fromSide": "right",
+      "toNode": "2264ddfa7aa0254f",
+      "toSide": "left"
+    },
+    {
+      "id": "18718e28d39fb10f",
+      "fromNode": "423846fa35a2ae0c",
+      "fromSide": "right",
+      "toNode": "4ef83807a0dd6eaf",
+      "toSide": "left"
+    },
+    {
+      "id": "bc5e346608252d6b",
+      "fromNode": "4ef83807a0dd6eaf",
+      "fromSide": "right",
+      "toNode": "0a7347f2b9f6c614",
+      "toSide": "left"
+    },
+    {
+      "id": "8589be302d7fd6b7",
+      "fromNode": "4ef83807a0dd6eaf",
+      "fromSide": "right",
+      "toNode": "7d05c0317e011ec7",
+      "toSide": "left"
+    },
+    {
+      "id": "2a95d517287b9c01",
+      "fromNode": "7d05c0317e011ec7",
+      "fromSide": "right",
+      "toNode": "1c46a81ab9ffc2bd",
+      "toSide": "left"
+    }
+  ]
+}
