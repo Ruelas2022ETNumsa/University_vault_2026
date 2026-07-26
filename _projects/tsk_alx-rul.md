@@ -255,7 +255,6 @@ El archivo se crea con el timestamp antes de que el template se ejecute — el s
 | 2026-07-23 | A9: `UNTAGGED` no renombrable desde Settings ni data.json | El plugin lo regenera — usar siempre `#tag` o etiqueta semántica |
 | 2026-07-23 | A9: Hover Peek es tooltip en v4.9.0, no popup de preview | README desactualizado — comportamiento real verificado |
 | 2026-07-23 | A9: nomenclatura kebab-case para grupos Galaxy | `#transformadas-integrales`, `#circuitos-rc`, etc. |
-
 | 2026-07-25 | tag-class = nombre oficial para prefijo de color de marginalia (`!`, `?`, `X-`…) | Evitar confusión con tag-group |
 | 2026-07-25 | tag-group = nombre oficial para agrupador de Threads (`#nombre`) | Evitar confusión con tag-class |
 | 2026-07-25 | Stitch deshacer (`Ctrl+Shift+Z`): padre limpio, hilo conserva `^id` | Comportamiento verificado en ambos flujos (modal y drag & drop) |
