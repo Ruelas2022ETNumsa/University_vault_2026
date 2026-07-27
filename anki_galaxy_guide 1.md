@@ -1,9 +1,8 @@
 ---
 title: "Anki — Guía de instalación e integración Galaxy"
 scope: vault
-status: en progreso
+status: pendiente de prueba
 date_created: 2026-07-26
-date_updated: 2026-07-27
 tags: [anki, obsidian, galaxy, spaced-repetition]
 ---
 
@@ -29,9 +28,9 @@ tags: [anki, obsidian, galaxy, spaced-repetition]
 
 ## 1. Instalación — Anki Desktop (Windows)
 
-1. ~~Descargar desde [ankiweb.net](https://apps.ankiweb.net/) — versión estable para Windows.~~ ✅
-2. ~~Instalar normalmente. No requiere cuenta para funcionar en local.~~ ✅ instalado en `E:\Programas\anki\`
-3. ~~Crear cuenta gratuita en [ankiweb.net](https://ankiweb.net) — necesaria para sync con móvil.~~ ✅
+1. Descargar desde [ankiweb.net](https://apps.ankiweb.net/) — versión estable para Windows.
+2. Instalar normalmente. No requiere cuenta para funcionar en local.
+3. Crear cuenta gratuita en [ankiweb.net](https://ankiweb.net) — necesaria para sync con móvil.
 
 ### AnkiConnect — addon obligatorio para integración con Obsidian
 
@@ -39,14 +38,14 @@ AnkiConnect es el puente que permite a Obsidian (y otros programas) comunicarse 
 
 **Instalación:**
 
-1. ~~Abrir Anki → Tools → Add-ons → Get Add-ons~~ ✅
-2. ~~Pegar código: `2055492159` → OK~~ ✅
-3. ~~Reiniciar Anki~~ ✅
+1. Abrir Anki → Tools → Add-ons → Get Add-ons
+2. Pegar código: `2055492159` → OK
+3. Reiniciar Anki
 
 **Configuración de CORS** (necesaria para que Obsidian pueda conectarse):
 
-1. ~~Abrir Anki → Tools → Add-ons → seleccionar AnkiConnect → Config~~ ✅
-2. ~~Reemplazar el contenido con:~~ ✅
+1. Abrir Anki → Tools → Add-ons → seleccionar AnkiConnect → Config
+2. Reemplazar el contenido con:
 
 ```json
 {
@@ -62,7 +61,7 @@ AnkiConnect es el puente que permite a Obsidian (y otros programas) comunicarse 
 }
 ```
 
-3. ~~OK → reiniciar Anki~~ ✅
+3. OK → reiniciar Anki
 
 > ⚠️ Anki debe estar abierto y corriendo para que cualquier plugin de Obsidian pueda sincronizar tarjetas.
 
@@ -72,25 +71,22 @@ AnkiConnect es el puente que permite a Obsidian (y otros programas) comunicarse 
 
 ### Modo oscuro
 
-~~Anki moderno tiene modo oscuro nativo — no requiere addon.~~ ✅
+Anki moderno tiene modo oscuro nativo — no requiere addon.
 
-- ~~**Desktop:** Preferencias (`Ctrl+P`) → Apariencia → Tema → Night Mode / Dark~~ ✅
-- **AnkiDroid:** Configuración → Apariencia → Tema → Oscuro — pendiente
+- **Desktop:** Preferencias (`Ctrl+P`) → Apariencia → Tema → Night Mode / Dark
+- **AnkiDroid:** Configuración → Apariencia → Tema → Oscuro
 
 ### FSRS — algoritmo moderno de repetición espaciada
 
-~~FSRS viene integrado desde Anki v23.10+. Reemplaza SM-2 (algoritmo de los años 80) y reduce un 20-30% las revisiones diarias manteniendo la misma retención.~~ ✅
+FSRS viene integrado desde Anki v23.10+. Reemplaza SM-2 (algoritmo de los años 80) y reduce un 20-30% las revisiones diarias manteniendo la misma retención.
 
 **Activar:**
 
-1. ~~Seleccionar un deck → Options (engranaje) → Advanced~~ ✅
-2. ~~Activar "FSRS" → Save~~ ✅
+1. Seleccionar un deck → Options (engranaje) → Advanced
+2. Activar "FSRS" → Save
 3. Hacer click en "Optimize" después de acumular ~30 días de revisiones para que el algoritmo se calibre con tu historial.
 
 > ✅ Activar FSRS en todos los decks antes de empezar a estudiar.
-
-> [!note] Observación
-> Al activar FSRS se despliegan varias opciones adicionales — no tocar nada por ahora. Los parámetros se optimizan solos con el uso.
 
 ### Estructura de decks recomendada para Galaxy
 
@@ -113,21 +109,16 @@ Cada materia = deck principal. Los subtemas = subdecks. Los plugins de Obsidian 
 
 ## 3. Addons recomendados
 
-~~Instalar desde Tools → Add-ons → Get Add-ons. Pegar el código y reiniciar.~~ ✅
+Instalar desde Tools → Add-ons → Get Add-ons. Pegar el código y reiniciar.
 
-| Addon | Código | Estado |
+| Addon | Código | Para qué sirve |
 |---|---|---|
-| **Image Occlusion Enhanced** | `1374772155` | ✅ instalado |
-| **Review Heatmap** | `1771074083` | ✅ instalado |
-| **True Retention** | `613684242` | ✅ instalado |
-| **Hierarchical Tags** | `1089921461` | ❌ incompatible con versión actual |
-| **Math Delimiters Replacer** | `401047458` | ✅ instalado |
+| **Image Occlusion Enhanced** | `1374772155` | Ocultar partes de imágenes/circuitos para repaso visual |
+| **Review Heatmap** | `1771074083` | Calendario de actividad tipo GitHub — mantener racha |
+| **True Retention** | `613684242` | Estadísticas reales de retención (más precisas que las default) |
+| **Hierarchical Tags** | `1089921461` | Organizar tags en carpetas anidadas por materia |
 
-> [!warning] Hierarchical Tags obsoleto
-> El código `1089921461` es incompatible con Anki moderno. No es necesario — las versiones actuales ya tienen jerarquía nativa con `::` (ej: `ETN901::Laplace`). Si se quiere color en los tags, existe **Colorful Tags** como alternativa futura.
-
-> [!note] Math Delimiters Replacer
-> Convierte `$...$` y `$$...$$` a formato MathJax con `Alt+M`. Solución temporal hasta tener el script automático. Ver pendiente urgente en sección 9.
+> ℹ️ FSRS ya viene integrado en Anki moderno — no requiere addon separado.
 
 ### Image Occlusion — flujo básico
 
@@ -143,13 +134,13 @@ Cada materia = deck principal. Los subtemas = subdecks. Los plugins de Obsidian 
 
 ## 4. AnkiWeb — Sync en la nube
 
-~~AnkiWeb es el servidor de sincronización oficial, completamente gratuito.~~ ✅
+AnkiWeb es el servidor de sincronización oficial, completamente gratuito.
 
 **Configurar sync:**
 
-1. ~~Anki Desktop → Sync (icono nube arriba a la derecha)~~ ✅
-2. ~~Ingresar cuenta de ankiweb.net~~ ✅
-3. ~~Primera vez: elegir "Upload to AnkiWeb"~~ ✅ (sube los decks locales a la nube)
+1. Anki Desktop → Sync (icono nube arriba a la derecha)
+2. Ingresar cuenta de ankiweb.net
+3. Primera vez: elegir "Upload to AnkiWeb" (sube los decks locales a la nube)
 4. En sesiones posteriores: sync automático al abrir y cerrar Anki
 
 **Frecuencia recomendada:** sync manual antes de cerrar Anki en PC, para que AnkiDroid tenga las tarjetas actualizadas.
@@ -162,18 +153,14 @@ Cada materia = deck principal. Los subtemas = subdecks. Los plugins de Obsidian 
 
 **Instalación:**
 
-1. ~~Play Store → buscar "AnkiDroid Flashcards" → Instalar (gratuito, sin publicidad)~~ ✅
-2. ~~Abrir AnkiDroid → Settings → AnkiWeb account~~ ✅
-3. ~~Ingresar la misma cuenta de ankiweb.net~~ ✅
-4. ~~Sync → los decks del desktop aparecen en el móvil~~ ✅
+1. Play Store → buscar "AnkiDroid" → Instalar (gratuito, sin publicidad)
+2. Abrir AnkiDroid → menú → Settings → AnkiDroid → AnkiWeb account
+3. Ingresar la misma cuenta de ankiweb.net
+4. Sync → los decks del desktop aparecen en el móvil
 
-> [!note] Búsqueda en Play Store
-> Buscar exactamente **"AnkiDroid Flashcards"**. Confirmar desarrollador: **AnkiDroid Open Source Team** (aparece en azul debajo del nombre). Versión actual: 2.24.0.
+**Modo oscuro en AnkiDroid:**
 
-> [!note] Primera sync en AnkiDroid
-> Al aparecer mensaje de conflicto → elegir **"AnkiWeb"**. El desktop ya subió los datos, el móvil debe descargar.
-
-**Modo oscuro en AnkiDroid:** Settings → Apariencia → Tema → Dark / Night Mode
+Settings → Apariencia → Tema → Dark / Night Mode
 
 **Uso en móvil:** solo para repasar. La creación de tarjetas se hace desde Obsidian o Anki Desktop — no desde el móvil.
 
@@ -183,21 +170,21 @@ Cada materia = deck principal. Los subtemas = subdecks. Los plugins de Obsidian 
 
 ### Addon nativo de Marginalia — Anki Advanced Sync
 
-~~El addon de Marginalia tiene sync nativo con Anki.~~ ✅ Probado — ver Opción A en sección 7.
+El addon de Marginalia tiene sync nativo con Anki. Exporta las marginalia marcadas con `;;` directamente como tarjetas.
 
 **Activar:**
 
-1. ~~Marginalia Settings → Addons → Anki Advanced Sync → ON~~ ✅
-2. ~~Anki debe estar abierto con AnkiConnect activo~~ ✅
+1. Marginalia Settings → Addons → Anki Advanced Sync → ON
+2. Reiniciar Obsidian
+3. Anki debe estar abierto con AnkiConnect activo
 
-**Sintaxis real (corregida tras prueba):**
+**Flujo esperado:**
 
 ```
-RESPUESTA %%> PREGUNTA ;; %%
+%%> ¿Cuál es la condición de convergencia de Laplace? ;; %%
 ```
 
-> [!warning] Orden invertido
-> Lo que va **antes** de `%%>` es el reverso (respuesta). Lo que va entre `%%>` y `;;` es el frente (pregunta). No es lo que indica la documentación original del plugin.
+→ Se exporta como tarjeta Basic a Anki con la pregunta como frente y la respuesta (texto después de `;;`) como reverso.
 
 **Pendiente de prueba:**
 - [ ] ¿El addon respeta los tag-class (`!`, `?`, `F-`) como tags en Anki?
@@ -211,23 +198,11 @@ RESPUESTA %%> PREGUNTA ;; %%
 
 Probar en orden. Quedarse con el que mejor se integre al flujo Galaxy.
 
-### Opción A — Anki Advanced Sync (addon de Marginalia) ✅ PROBADA
+### Opción A — Anki Advanced Sync (addon de Marginalia)
 
 **Pros:** integración nativa con `;;`, conoce la sintaxis de Marginalia, soporta crops de PDF++.
-**Contras:** sintaxis de frente/reverso invertida respecto a lo esperado. LaTeX `$...$` no renderiza sin conversión manual.
-
-> [!note] Resultado de prueba
-> Sync funciona correctamente en ambas direcciones (Desktop ↔ AnkiDroid). Tag mapping funciona tanto por frontmatter como inline. LaTeX requiere conversión manual o script. **Fuerte candidato por integración con marginalia.**
-
-> [!tip] Tag inline descubierto en prueba
-> El tag después del ID no se muestra en la tarjeta pero sí determina el deck:
-> `Respuesta %%> Pregunta ;; ^anki-ID #tag %%`
-> Más limpio que frontmatter para notas mixtas.
-
-> [!note] "Felicitaciones — mazo finalizado"
-> FSRS no muestra tarjetas hasta que toca revisarlas. Para ver tarjetas en pruebas: **Estudio personalizado → Repasar tarjetas adelantadas → 9999**.
-
-Ver documentación completa: [[Untitled 1]]
+**Contras:** comportamiento real no documentado — requiere prueba.
+**Instalación:** Settings → Addons → Anki Advanced Sync → ON (ya en el vault).
 
 ---
 
@@ -316,25 +291,24 @@ AnkiWeb → AnkiDroid
 
 ### Instalación y configuración base
 
-- [x] Instalar Anki Desktop desde ankiweb.net
-- [x] Crear cuenta en ankiweb.net
-- [x] Instalar AnkiConnect (código `2055492159`) y configurar CORS para Obsidian
-- [x] Activar modo oscuro en Anki Desktop
-- [x] Activar FSRS en opciones del deck
-- [x] Instalar AnkiDroid en Android y vincular cuenta
-- [x] Verificar sync Desktop → AnkiWeb → AnkiDroid con una tarjeta de prueba
+- [ ] Instalar Anki Desktop desde ankiweb.net
+- [ ] Crear cuenta en ankiweb.net
+- [ ] Instalar AnkiConnect (código `2055492159`) y configurar CORS para Obsidian
+- [ ] Activar modo oscuro en Anki Desktop
+- [ ] Activar FSRS en opciones del deck
+- [ ] Instalar AnkiDroid en Android y vincular cuenta
+- [ ] Verificar sync Desktop → AnkiWeb → AnkiDroid con una tarjeta de prueba
 
 ### Addons de Anki Desktop
 
-- [x] Instalar Image Occlusion Enhanced (`1374772155`)
-- [x] Instalar Review Heatmap (`1771074083`)
-- [x] Instalar True Retention (`613684242`)
-- [x] ~~Instalar Hierarchical Tags (`1089921461`)~~ — incompatible, no necesario
-- [x] Instalar Math Delimiters Replacer (`401047458`) — solución temporal para LaTeX
+- [ ] Instalar Image Occlusion Enhanced (`1374772155`) — probar con un diagrama de circuito
+- [ ] Instalar Review Heatmap (`1771074083`)
+- [ ] Instalar True Retention (`613684242`)
+- [ ] Instalar Hierarchical Tags (`1089921461`)
 
 ### Integración con Obsidian — plugins a comparar
 
-- [x] **Opción A** — Anki Advanced Sync (addon Marginalia): ✅ probado. Funciona. Ver [[Untitled 1]].
+- [ ] **Opción A** — Anki Advanced Sync (addon Marginalia): probar export de `;;` a Anki. Verificar imágenes y crops.
 - [ ] **Opción B** — AnkiSync+: instalar y probar con una nota simple. Verificar integración con Excalidraw.
 - [ ] **Opción C** — Yanki: instalar y probar con carpeta `_anki/` dedicada.
 - [ ] **Opción D** — Obsidian-Anki-Sync: probar solo si se necesita cloze dentro de LaTeX.
@@ -345,17 +319,6 @@ AnkiWeb → AnkiDroid
 - [ ] Probar script Image Occlusion desde Excalidraw con un diagrama de circuito real
 - [ ] Comparar con Image Occlusion Enhanced desde Anki Desktop
 - [ ] Decidir cuál flujo es más cómodo para ingeniería
-
-### 🔴 Pendiente urgente — Script conversor `$` → MathJax
-
-**Problema:** las marginalia con fórmulas usan `$...$` (sintaxis Obsidian) pero Anki necesita `\(...\)`. La conversión manual con `Alt+M` es inviable para uso real.
-
-**Solución propuesta:** script que antes del sync:
-1. Lee la nota `.md`
-2. Convierte `$$...$$` → `\[...\]` y `$...$` → `\(...\)`
-3. Solo dentro de bloques `%%> ... %%` para no afectar el resto de la nota
-4. Exporta a Anki normalmente
-5. Revierte los cambios en el `.md` automáticamente
 
 ---
 
