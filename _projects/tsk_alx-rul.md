@@ -318,6 +318,7 @@ Revisión secuencial de A1–A12 y Bloque B. Para cada ítem: discutir, probar e
 ## Pendientes técnicos
 
 - [ ] **Script renombre ZK** — agarrar slug/title de archivos timestamp en `Zettelkasten/` y renombrarlos. Hacer en sesión dedicada.
+- [ ] **Sesión dedicada — Anki** — instalar Anki desktop + AnkiConnect (código `2055492159`). Probar addon nativo de Marginalia (Anki Advanced Sync) primero: exportar marginalia con `;;` a Anki, verificar llegada al móvil vía AnkiWeb. Si falla o es incómodo, probar Yanki como alternativa (pure markdown, carpetas como decks, soporta LaTeX). Decidir cuál integrar a Galaxy.
 
 ---
 
