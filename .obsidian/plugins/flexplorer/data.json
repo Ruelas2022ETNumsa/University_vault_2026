@@ -6,7 +6,6 @@
       "sortOrder": "byName",
       "customOrder": [
         "Rubbish",
-        "excluir-appearance-json-mega.md",
         "anki_galaxy_guide.md",
         "Evidence Boards",
         "Pinboards",
@@ -3127,10 +3126,6 @@
       "isHidden": false
     },
     "_projects/tsk_pdf_marginalia_pp.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "excluir-appearance-json-mega.md": {
       "isPinned": false,
       "isHidden": false
     },

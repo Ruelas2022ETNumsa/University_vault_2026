@@ -77941,6 +77941,7 @@ addon
 ankiweb
 apagados
 apagando
+anki
 related
 recomendados
 ribbon
@@ -136152,6 +136153,7 @@ Familias
 Flexbox
 Familia
 FSRS
+FSRSsss
 Estado
 Excalidraw
 EPUBs
@@ -325657,6 +325659,7 @@ xKyy
 xIzCPn
 xVou
 xmFZ
+xxAlgoritmo
 Wikilinks
 WHERE
 WebGL
