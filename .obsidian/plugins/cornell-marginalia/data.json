@@ -94,7 +94,7 @@
     "custom-background": false,
     "rhizome-time-machine": true,
     "super-doodle": true,
-    "anki-sync": false,
+    "anki-sync": true,
     "zoom-doodle": true,
     "margidoro": false,
     "blurting-mode": false,
