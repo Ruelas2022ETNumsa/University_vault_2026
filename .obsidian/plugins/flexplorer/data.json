@@ -11,7 +11,6 @@
         "Untitled.md",
         "void 1.md",
         "void 2.md",
-        "void2.md",
         "_blueprint",
         "_inbox",
         "_skills",
@@ -3027,10 +3026,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "void2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Zettelkasten/20260723151457.md": {
       "isPinned": false,
       "isHidden": false
@@ -3256,6 +3251,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "tsk_pdf_marginalia_pp.md",
         "tsk_alx-rul.md",
         "tsk_alxgml.md",
         "tsk_alxhot.md",
@@ -3321,6 +3317,10 @@
       "isHidden": false
     },
     "_templates/tpl_w_transcription.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_projects/tsk_pdf_marginalia_pp.md": {
       "isPinned": false,
       "isHidden": false
     }
