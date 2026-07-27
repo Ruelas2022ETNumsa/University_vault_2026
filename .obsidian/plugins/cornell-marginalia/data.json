@@ -116,7 +116,10 @@
   },
   "enablePdfDoodle": true,
   "ankiRecentDecks": [],
-  "ankiTagToDeck": {},
+  "ankiTagToDeck": {
+    "#pepe": "Deck::New1",
+    "#tilin": "Deck::New2"
+  },
   "margidoro": {
     "workTime": 25,
     "shortBreak": 5,

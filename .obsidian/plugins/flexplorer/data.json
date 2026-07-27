@@ -5,6 +5,7 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
+        "Untitled 1.md",
         "Rubbish",
         "anki_galaxy_guide.md",
         "Evidence Boards",
@@ -3295,6 +3296,10 @@
       ]
     },
     "Rubbish/tmp/lock": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled 1.md": {
       "isPinned": false,
       "isHidden": false
     }

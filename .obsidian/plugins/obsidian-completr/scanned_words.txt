@@ -100122,6 +100122,7 @@ calibre
 chocar
 cloze
 confirmando
+corona
 updated
 un
 universo
@@ -164372,6 +164373,7 @@ pure
 potente
 propuesto
 pisa
+pepe
 min
 mica
 movimiento
@@ -172484,6 +172486,7 @@ marcadas
 motivaci
 moderno
 manej
+mathcal
 YAML
 Ya
 You
@@ -185887,6 +185890,7 @@ BhLl
 BkfuNR
 Button
 BUtp
+BIBO
 en
 exacta
 escaneados
@@ -223687,6 +223691,7 @@ inflar
 ingesta
 inteligencias
 integre
+inductancia
 Dependencia
 Dropbox
 Dataview
@@ -257596,6 +257601,7 @@ hYgq
 heredan
 habitual
 harvest
+henrios
 que
 quedan
 queda
@@ -288507,6 +288513,7 @@ oOBO
 ooLc
 oopx
 ofLWuCtd
+omega
 junto
 json
 jer
