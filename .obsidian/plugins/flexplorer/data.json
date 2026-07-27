@@ -2862,6 +2862,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "void 1-26-07-2026_21-25-07.png",
         "boarslug.png",
         "clip_20260725_225138.png",
         "doodle_20260723_151457.png",
@@ -3321,6 +3322,10 @@
       "isHidden": false
     },
     "_projects/tsk_pdf_marginalia_pp.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/void 1-26-07-2026_21-25-07.png": {
       "isPinned": false,
       "isHidden": false
     }

@@ -2,6 +2,18 @@
 
 
 
+![[BORRADOR OK OK ETN 825 2022.pdf#page=1&rect=47,220,369,360|BORRADOR OK OK ETN 825 2022, p.1]]
+
+
+![[void 1-26-07-2026_21-25-07.png]]
+
+
+
+
+
+---
+
+
 
 
 %%> texto sin tag V1 1 [[void 2#^4j50bo]] {stitch: paoeu}%%

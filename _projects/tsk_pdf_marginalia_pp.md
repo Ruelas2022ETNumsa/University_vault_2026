@@ -17,10 +17,10 @@ Es lo primero que Claude lee al retomar — debe ser suficiente para arrancar si
 %%
 
 **Última sesión:** 2026-07-26
-**Retomar desde:** `_app/_config/_pdf_pp-system.md` — creación del beacon (no existe aún en disco)
-**Completado esta sesión:** análisis de plugins, lectura de beacons, diseño del sistema, llenado del tsk_
-**Próximo paso:** crear `_pdf_pp-system.md` en `_app/_config/` con el beacon completo del sistema
-**Preguntas de cierre:** ¿se agrega `photon_type: pdf-crop` como subtipo oficial en `_galaxy-system.md`? ¿se crea una plantilla `tpl-photon-crop.md` separada de `tpl-photon.md`?
+**Retomar desde:** Preguntas 2 y 3 abiertas (ver sección Preguntas abiertas)
+**Completado esta sesión:** análisis de plugins, lectura de beacons, diseño del sistema, llenado del tsk_, discusión pregunta 1 — pdf-crop unifica image, embed PDF++ va inline
+**Próximo paso:** sesión de planificación para simplificar `photon_type` + responder preguntas 2 y 3
+**Preguntas de cierre:** ver sección Preguntas abiertas
 
 ---
 
@@ -133,6 +133,7 @@ No separar en dos listas — marcar directamente sobre la misma lista.
 - [x] Diseñar el sistema de tres capas (ingesta / nota / estudio)
 - [x] Llenar este `tsk_pdf_marginalia_pp.md`
 - [ ] Resolver preguntas abiertas con el usuario
+- [ ] **[PENDIENTE — sesión de planificación]** Revisar y simplificar `photon_type` en `tpl-photon.md`: unificar `pdf-crop` e `image` en un solo tipo, eliminar confusión con embed de PDF++ (que no crea archivo y va inline en la nota host). Documentar embed de PDF++ como aclaración de sintaxis en `_pdf_pp-system.md`.
 - [ ] Crear `_app/_config/_pdf_pp-system.md`
 - [ ] Editar `_templates/tpl-photon.md` con `photon_type: pdf-crop`
 - [ ] Editar `_app/_config/_galaxy-system.md` — subtipo `pdf-crop` en tabla `photon`
@@ -146,7 +147,7 @@ Dudas, decisiones pendientes o puntos sin resolver que bloquean o condicionan el
 Cuando se resuelven, mover la respuesta a Decisiones y borrar la pregunta.
 %%
 
-1. ¿Se agrega `photon_type: pdf-crop` como campo oficial en `tpl-photon.md` y en `_galaxy-system.md`, o se deja solo documentado en el beacon del sistema?
+1. ¿Se agrega `photon_type: pdf-crop` como campo oficial en `tpl-photon.md` y en `_galaxy-system.md`, o se deja solo documentado en el beacon del sistema? — **parcialmente resuelta:** `pdf-crop` unifica a `image`; pendiente sesión de planificación para ejecutar el cambio en la plantilla.
 2. ¿La guía de uso de Marginalia con PDF va dentro de `Marginalia_guide.md` (sección nueva al final) o directamente en el beacon `_pdf_pp-system.md`?
 3. ¿Se activan los addons `Pdf Doodle & Harvest` y `Anki Advanced Sync` ahora, o se documentan como opcionales para activar cuando se necesiten?
 

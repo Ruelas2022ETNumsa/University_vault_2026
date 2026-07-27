@@ -55743,6 +55743,7 @@ borrosa
 boceto
 boards
 boilerplate
+brecha
 scope
 status
 selector
@@ -63597,6 +63598,7 @@ superpongan
 superposici
 sidebars
 solapamiento
+superpone
 vault
 vil
 ver
@@ -77919,6 +77921,7 @@ asociados
 asignable
 awareness
 agenda
+addons
 related
 recomendados
 ribbon
@@ -85310,6 +85313,7 @@ rastro
 reflexi
 revisiones
 rutinas
+reciben
 notes
 notas
 nuevas
@@ -92286,6 +92290,8 @@ nbtQ
 nCkT
 nSXXQ
 nieto
+naming
+necesiten
 created
 commit
 cada
@@ -100078,6 +100084,7 @@ colapsan
 centralizar
 categorizar
 cronol
+conversacional
 updated
 un
 universo
@@ -107932,6 +107939,7 @@ ukGV
 ugTs
 uzMp
 uniformar
+unificar
 Galaxy
 Git
 Gr
@@ -143976,6 +143984,8 @@ Escanear
 Enfocar
 Explora
 Entregar
+Entregable
+Entregables
 Obsidian
 OmniSearch
 Ocultar
@@ -164298,6 +164308,7 @@ pensamiento
 panor
 procesarlas
 personalizable
+paoeu
 min
 mica
 movimiento
@@ -193409,6 +193420,7 @@ enviarlas
 exportados
 expongan
 espaciada
+extraerse
 Motor
 Media
 Mantiene
@@ -215085,6 +215097,7 @@ likZ
 lzxv
 llMl
 ligeramente
+llenado
 incluyendo
 im
 instalar
@@ -223594,6 +223607,8 @@ inmutable
 intente
 insertado
 interactivo
+inflar
+ingesta
 Dependencia
 Dropbox
 Dataview
