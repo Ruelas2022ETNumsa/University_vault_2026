@@ -329,6 +329,7 @@ Archivo en raíz del vault `E:\University_vault_2026\.megaignore` generado por e
 -:graph.json
 -:community-plugins.json
 -:core-plugins.json
+-:appearance.json
 ```
 
 > Nota: `-:.gitignore`, `-:.gitattributes` y `-:.megaignore` se excluyen porque cada dispositivo mantiene su propia configuración de sync. `community-plugins.json` y `core-plugins.json` se excluyen porque algunos plugins no funcionan en móvil — al sincronizarse, Obsidian móvil los desactivaba y ese cambio se propagaba a PC. Cada dispositivo mantiene su propio estado de plugins.
@@ -378,17 +379,18 @@ App: **FolderSync** | Cuenta: Mega exclusiva del vault
 
 ### Exclusiones (aplicar a todos los pares)
 
-| Tipo | Condición | Valor |
-|---|---|---|
-| Archivo | iguales a | `workspace.json` |
-| Archivo | iguales a | `workspace-mobile.json` |
-| Archivo | iguales a | `graph.json` |
-| Archivo | iguales a | `community-plugins.json` |
-| Archivo | iguales a | `core-plugins.json` |
-| Archivo | termina con | `.tmp` |
-| Archivo | termina con | `.temp` |
-| Carpeta | iguales a | `.obsidian` |
-| Carpeta | iguales a | `.cache` |
+| Tipo    | Condición   | Valor                    |
+| ------- | ----------- | ------------------------ |
+| Archivo | iguales a   | `appearance.json`        |
+| Archivo | iguales a   | `workspace.json`         |
+| Archivo | iguales a   | `workspace-mobile.json`  |
+| Archivo | iguales a   | `graph.json`             |
+| Archivo | iguales a   | `community-plugins.json` |
+| Archivo | iguales a   | `core-plugins.json`      |
+| Archivo | termina con | `.tmp`                   |
+| Archivo | termina con | `.temp`                  |
+| Carpeta | iguales a   | `.obsidian`              |
+| Carpeta | iguales a   | `.cache`                 |
 
 ---
 
