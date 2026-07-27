@@ -5,11 +5,12 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
-        "Rubbish",
+        "desktop.ini",
         "excluir-appearance-json-mega.md",
         "anki_galaxy_guide.md",
         "Evidence Boards",
         "Pinboards",
+        "Rubbish",
         "Untitled.md",
         "void 1.md",
         "void 2.md",
@@ -1305,6 +1306,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "_assets-section.tmp",
         "_marginalia_system.md",
         "_pdf_pp-system.md",
         "_TAB_note-system.md",
@@ -2863,10 +2865,7 @@
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
-      "customOrder": [
-        "Marginalia Inbox-27-07-2026_16-37-05.png",
-        "Marginalia Inbox-27-07-2026_16-36-06.png"
-      ]
+      "customOrder": []
     },
     "wolfram alpha example.md": {
       "isPinned": false,
@@ -2895,6 +2894,28 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": []
+    },
+    "Rubbish": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "2026-07-27",
+        "2026-07-09",
+        "tmp"
+      ]
+    },
+    "Rubbish/tmp": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "lock"
+      ]
+    },
+    "Rubbish/tmp/lock": {
+      "isPinned": false,
+      "isHidden": false
     },
     "Untitled.md": {
       "isPinned": false,
@@ -3138,43 +3159,7 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_assets/Marginalia Inbox-27-07-2026_16-36-06.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/Marginalia Inbox-27-07-2026_16-37-05.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "2026-07-26",
-        "section.md",
-        "2026-07-27",
-        "tmp"
-      ]
-    },
-    "Rubbish/2026-07-26": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "appearance.json",
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-07-26/appearance.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-26/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/section.md": {
+    "desktop.ini": {
       "isPinned": false,
       "isHidden": false
     },
@@ -3183,19 +3168,157 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "2026-07-27 16.31.58.0",
-        "2026-07-27 16.37.21.0",
-        "2026-07-27 16.37.29.0",
-        "2026-07-27 16.32.15.0",
-        "2026-07-27 16.43.16.0",
-        "2026-07-27 16.43.25.0",
-        "2026-07-27 16.39.56.0",
+        "2026-07-27 16.27.08.0",
+        "2026-07-27 16.27.09.0",
+        "2026-07-27 16.27.10.0",
+        "2026-07-27 16.27.10.1",
+        "2026-07-27 16.27.10.2",
+        "2026-07-27 16.27.11.0",
+        "2026-07-27 16.27.11.1",
+        "2026-07-27 16.27.11.2",
+        "2026-07-27 16.27.11.3",
+        "2026-07-27 16.27.12.0",
+        "2026-07-27 16.27.12.1",
+        "2026-07-27 16.27.12.2",
+        "2026-07-27 16.27.12.3",
+        "2026-07-27 16.27.14.0",
+        "2026-07-27 16.27.14.1",
+        "app.json",
+        "appearance.json",
+        "better-export-pdf.md",
+        "class-notes-guide.md",
+        "claude_solve.md",
+        "cornell_guide 1 1.md",
+        "cornell_guide 1.md",
+        "cornell_guide.md",
         "data.json",
-        "Marginalia Inbox.md",
-        "app.json"
+        "desmos_guide 1.md",
+        "desmos_guide.md",
+        "doodles",
+        "git_solve.md",
+        "google_drive_solve.md",
+        "hotkeys.json",
+        "latex_guide.md",
+        "main.js",
+        "manifest.json",
+        "Marginalia_guide.md",
+        "MAT101-notebooklm-user_guide.md",
+        "MAT101-T00-axiomas_cuerpo.md",
+        "MAT101-T00-axiomas_igualdad.md",
+        "MAT101-T00-axiomas_orden.md",
+        "MAT101-T00-ej_inec_irracional.md",
+        "MAT101-T00-ej_inec_racional_fracciones.md",
+        "MAT101-T00-ej_inec_valabs_cubo.md",
+        "MAT101-T00-ej_inec_valabs_fraccion.md",
+        "MAT101-T00-ej_inec_valabs_mayor.md",
+        "MAT101-T00-ej_inec_x4_9x2.md",
+        "MAT101-T00-inecuaciones_lineales.md",
+        "MAT101-T00-P1-Numeros_reales_y_desigualdades.md",
+        "MAT101-T00-recta_real_intervalos.md",
+        "MAT101-T00-star.md",
+        "MAT101-T00-teoremas_desigualdades.md",
+        "MAT101-T00-teoremas_reales.md",
+        "MAT101-T00-valor_absoluto.md",
+        "MAT101_desmos.md",
+        "MAT101_latex.md",
+        "MAT101_library.md",
+        "MAT101_TikzJax.md",
+        "notebooklm-prompt-guide.md",
+        "obsidian_guide.md",
+        "obsidian_notation.md",
+        "pdf-guide.md",
+        "PDF_PP-guide.md",
+        "plugin_guide 1.md",
+        "plugin_guide.md",
+        "README.md",
+        "scanned_words.txt",
+        "styles.css",
+        "Template.excalidraw.md",
+        "Things",
+        "tikzjax_guide-legacy.md",
+        "tpl-zk 1.md",
+        "tpl-zk.md",
+        "Untitled.md",
+        "void.md",
+        "zettakasten_guide_temp.md",
+        "_basic-memory-system.md",
+        "_claude-boot.md",
+        "_claude-matter-boot.md",
+        "_excalidraw-system.md",
+        "_galaxy-system.md",
+        "_graph-system.md",
+        "_library-system.md",
+        "_library_ETN505 1.md",
+        "_library_ETN505(i).md",
+        "_library_MAT101.md",
+        "_mindmap-system.md",
+        "_note-system.md",
+        "_notebooklm-system 1.md",
+        "_notebooklm-system.md",
+        "_pdf-system.md",
+        "_sync-system.md",
+        "_TABnote-system.md",
+        "_template-system.md",
+        "_ToDo-system.md"
       ]
     },
-    "Rubbish/2026-07-27/2026-07-27 16.31.58.0": {
+    "Rubbish/2026-07-27/2026-07-27 16.27.08.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json",
+        "manifest.json"
+      ]
+    },
+    "Rubbish/2026-07-27/2026-07-27 16.27.08.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/2026-07-27 16.27.08.0/manifest.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/2026-07-27 16.27.09.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json",
+        "manifest.json"
+      ]
+    },
+    "Rubbish/2026-07-27/2026-07-27 16.27.09.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/2026-07-27 16.27.09.0/manifest.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/2026-07-27 16.27.10.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json",
+        "main.js",
+        "styles.css"
+      ]
+    },
+    "Rubbish/2026-07-27/2026-07-27 16.27.10.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/2026-07-27 16.27.10.0/main.js": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/2026-07-27 16.27.10.0/styles.css": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/2026-07-27 16.27.10.1": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
@@ -3203,87 +3326,194 @@
         "data.json"
       ]
     },
-    "Rubbish/2026-07-27/2026-07-27 16.31.58.0/data.json": {
+    "Rubbish/2026-07-27/2026-07-27 16.27.10.1/data.json": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-27/2026-07-27 16.37.21.0": {
+    "Rubbish/2026-07-27/2026-07-27 16.27.10.2": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "data.json",
+        "main.js",
+        "manifest.json"
+      ]
+    },
+    "Rubbish/2026-07-27/2026-07-27 16.27.10.2/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/2026-07-27 16.27.10.2/main.js": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/2026-07-27 16.27.10.2/manifest.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/2026-07-27 16.27.11.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json",
+        "manifest.json"
+      ]
+    },
+    "Rubbish/2026-07-27/2026-07-27 16.27.11.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/2026-07-27 16.27.11.0/manifest.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/2026-07-27 16.27.11.1": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "manifest.json",
         "data.json"
       ]
     },
-    "Rubbish/2026-07-27/2026-07-27 16.37.21.0/data.json": {
+    "Rubbish/2026-07-27/2026-07-27 16.27.11.1/manifest.json": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-27/2026-07-27 16.37.29.0": {
+    "Rubbish/2026-07-27/2026-07-27 16.27.11.1/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/2026-07-27 16.27.11.2": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "Marginalia Inbox.md"
+        "data.json",
+        "main.js",
+        "styles.css"
       ]
     },
-    "Rubbish/2026-07-27/2026-07-27 16.37.29.0/Marginalia Inbox.md": {
+    "Rubbish/2026-07-27/2026-07-27 16.27.11.2/data.json": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-27/2026-07-27 16.32.15.0": {
+    "Rubbish/2026-07-27/2026-07-27 16.27.11.2/main.js": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/2026-07-27 16.27.11.2/styles.css": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/2026-07-27 16.27.11.3": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "data.json"
+        "main.js",
+        "manifest.json"
       ]
     },
-    "Rubbish/2026-07-27/2026-07-27 16.32.15.0/data.json": {
+    "Rubbish/2026-07-27/2026-07-27 16.27.11.3/main.js": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-27/2026-07-27 16.43.16.0": {
+    "Rubbish/2026-07-27/2026-07-27 16.27.11.3/manifest.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/2026-07-27 16.27.12.0": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "data.json"
+        "data.json",
+        "main.js"
       ]
     },
-    "Rubbish/2026-07-27/2026-07-27 16.43.16.0/data.json": {
+    "Rubbish/2026-07-27/2026-07-27 16.27.12.0/data.json": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-27/2026-07-27 16.43.25.0": {
+    "Rubbish/2026-07-27/2026-07-27 16.27.12.0/main.js": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/2026-07-27 16.27.12.1": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "data.json"
+        "main.js"
       ]
     },
-    "Rubbish/2026-07-27/2026-07-27 16.43.25.0/data.json": {
+    "Rubbish/2026-07-27/2026-07-27 16.27.12.1/main.js": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-27/2026-07-27 16.39.56.0": {
+    "Rubbish/2026-07-27/2026-07-27 16.27.12.2": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "data.json"
+        "data.json",
+        "main.js",
+        "manifest.json",
+        "styles.css"
       ]
     },
-    "Rubbish/2026-07-27/2026-07-27 16.39.56.0/data.json": {
+    "Rubbish/2026-07-27/2026-07-27 16.27.12.2/data.json": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-27/data.json": {
+    "Rubbish/2026-07-27/2026-07-27 16.27.12.2/main.js": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-07-27/Marginalia Inbox.md": {
+    "Rubbish/2026-07-27/2026-07-27 16.27.12.2/manifest.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/2026-07-27 16.27.12.2/styles.css": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/2026-07-27 16.27.12.3": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "manifest.json"
+      ]
+    },
+    "Rubbish/2026-07-27/2026-07-27 16.27.12.3/manifest.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/2026-07-27 16.27.14.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "main.js"
+      ]
+    },
+    "Rubbish/2026-07-27/2026-07-27 16.27.14.0/main.js": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/2026-07-27 16.27.14.1": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "main.js"
+      ]
+    },
+    "Rubbish/2026-07-27/2026-07-27 16.27.14.1/main.js": {
       "isPinned": false,
       "isHidden": false
     },
@@ -3291,15 +3521,758 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/tmp": {
+    "Rubbish/2026-07-27/appearance.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/better-export-pdf.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/class-notes-guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/claude_solve.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/cornell_guide 1 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/cornell_guide 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/cornell_guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/desmos_guide 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/desmos_guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/doodles": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "Rubbish/2026-07-27/git_solve.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/google_drive_solve.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/hotkeys.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/latex_guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/main.js": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/manifest.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/Marginalia_guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/MAT101-notebooklm-user_guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/MAT101-T00-axiomas_cuerpo.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/MAT101-T00-axiomas_igualdad.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/MAT101-T00-axiomas_orden.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/MAT101-T00-ej_inec_irracional.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/MAT101-T00-ej_inec_racional_fracciones.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/MAT101-T00-ej_inec_valabs_cubo.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/MAT101-T00-ej_inec_valabs_fraccion.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/MAT101-T00-ej_inec_valabs_mayor.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/MAT101-T00-ej_inec_x4_9x2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/MAT101-T00-inecuaciones_lineales.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/MAT101-T00-P1-Numeros_reales_y_desigualdades.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/MAT101-T00-recta_real_intervalos.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/MAT101-T00-star.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/MAT101-T00-teoremas_desigualdades.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/MAT101-T00-teoremas_reales.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/MAT101-T00-valor_absoluto.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/MAT101_desmos.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/MAT101_latex.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/MAT101_library.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/MAT101_TikzJax.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/notebooklm-prompt-guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/obsidian_guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/obsidian_notation.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/pdf-guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/PDF_PP-guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/plugin_guide 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/plugin_guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/README.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/scanned_words.txt": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/styles.css": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/Template.excalidraw.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/Things": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "lock"
+        "manifest.json",
+        "theme.css"
       ]
     },
-    "Rubbish/tmp/lock": {
+    "Rubbish/2026-07-27/Things/manifest.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/Things/theme.css": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/tikzjax_guide-legacy.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/tpl-zk 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/tpl-zk.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/Untitled.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/void.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/zettakasten_guide_temp.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/_basic-memory-system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/_claude-boot.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/_claude-matter-boot.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/_excalidraw-system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/_galaxy-system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/_graph-system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/_library-system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/_library_ETN505 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/_library_ETN505(i).md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/_library_MAT101.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/_mindmap-system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/_note-system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/_notebooklm-system 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/_notebooklm-system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/_pdf-system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/_sync-system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/_TABnote-system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/_template-system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-27/_ToDo-system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "2026-07-09 15.57.50.1",
+        "2026-07-09 15.57.50.0",
+        "app.json",
+        "921_enunciado.md",
+        "appearance.json",
+        "borrar00009.md",
+        "claude_solve.md",
+        "comfor numbss - copia.png",
+        "comfor numbss.png",
+        "contextogen.md",
+        "data.json",
+        "desmos_guide.md",
+        "latex_guide.md",
+        "MAT101-NúmerosT0connotebook.md",
+        "borrarrr2.md",
+        "MAT101T0_transcripcion.md",
+        "MAT101-Números-reales-y-desigualdades.md",
+        "E1.md",
+        "MAT101_T0_0conclaude.md",
+        "notebooklm_modes.md",
+        "obsidian_guide.md",
+        "plugin_guide.md",
+        "mega.md",
+        "scanned_words.txt",
+        "Sem_05",
+        "TagsRoutes",
+        "tpl-asteroid.md",
+        "tags_notes.md",
+        "tpl-comet.md",
+        "tpl-moon.md",
+        "tpl-photon.md",
+        "tpl-nebula.md",
+        "tpl-planet.md",
+        "transcription_guide.md",
+        "University_vault_2026 (2).lnk",
+        "University_vault_2026.lnk",
+        "zborrar1111111111111.md",
+        "zborrar111das111.md",
+        "zborrar903 2.md",
+        "MAT101_T0_1enriquezido.md",
+        "MAT101_T1-Funciones-reales.md",
+        "zborrar903 3 arquietxtura.md",
+        "zborrar903_3gemino.md",
+        "zborrar921_enunciado.md",
+        "_basic-memory-system.md",
+        "zborrar903.md",
+        "zborrar903 3.md",
+        "zborrar903_3 otro.md",
+        "_claude-boot.md",
+        "_galaxy-system.md",
+        "_graph-system.md",
+        "_excalidraw-system.md",
+        "_library-system.md",
+        "_notebooklm-system.md",
+        "_note-system.md",
+        "_pdf-system.md",
+        "_PDF.lnk",
+        "_mindmap-system.md",
+        "_sync-system 1.md",
+        "_sync-system.md",
+        "_ToDo-system.md",
+        "_template-system.md",
+        "_notebooklm-prompt.md"
+      ]
+    },
+    "Rubbish/2026-07-09/2026-07-09 15.57.50.1": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-07-09/2026-07-09 15.57.50.1/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/2026-07-09 15.57.50.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-07-09/2026-07-09 15.57.50.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/app.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/921_enunciado.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/appearance.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/borrar00009.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/claude_solve.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/comfor numbss - copia.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/comfor numbss.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/contextogen.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/desmos_guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/latex_guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/MAT101-NúmerosT0connotebook.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/borrarrr2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/MAT101T0_transcripcion.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/MAT101-Números-reales-y-desigualdades.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/E1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/MAT101_T0_0conclaude.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/notebooklm_modes.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/obsidian_guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/plugin_guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/mega.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/scanned_words.txt": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/Sem_05": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "ETN506"
+      ]
+    },
+    "Rubbish/2026-07-09/Sem_05/ETN506": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Partial_2"
+      ]
+    },
+    "Rubbish/2026-07-09/Sem_05/ETN506/Partial_2": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "Rubbish/2026-07-09/TagsRoutes": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "logMessage.md",
+        "graph-screenshot",
+        "patch-log.txt",
+        "logs",
+        "reports"
+      ]
+    },
+    "Rubbish/2026-07-09/TagsRoutes/logMessage.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/TagsRoutes/graph-screenshot": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "graph-screenshot-2026-05-14-23-30-57.png",
+        "graph-screenshot-2026-05-14-23-30-50.png",
+        "graph-screenshot-2026-05-14-23-31-02.png"
+      ]
+    },
+    "Rubbish/2026-07-09/TagsRoutes/graph-screenshot/graph-screenshot-2026-05-14-23-30-57.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/TagsRoutes/graph-screenshot/graph-screenshot-2026-05-14-23-30-50.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/TagsRoutes/graph-screenshot/graph-screenshot-2026-05-14-23-31-02.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/TagsRoutes/patch-log.txt": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/TagsRoutes/logs": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "Rubbish/2026-07-09/TagsRoutes/reports": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "TagReport_#e0ac00.md",
+        "TagReport_frontmatter_tag_Leaves.md",
+        "TagReport_frontmatter_tag_ETN-302.md",
+        "TagReport_frontmatter_tag_Parte_II.md",
+        "TagReport_frontmatter_tag_ETN806.md"
+      ]
+    },
+    "Rubbish/2026-07-09/TagsRoutes/reports/TagReport_#e0ac00.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/TagsRoutes/reports/TagReport_frontmatter_tag_Leaves.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/TagsRoutes/reports/TagReport_frontmatter_tag_ETN-302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/TagsRoutes/reports/TagReport_frontmatter_tag_Parte_II.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/TagsRoutes/reports/TagReport_frontmatter_tag_ETN806.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/tpl-asteroid.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/tags_notes.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/tpl-comet.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/tpl-moon.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/tpl-photon.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/tpl-nebula.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/tpl-planet.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/transcription_guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/University_vault_2026 (2).lnk": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/University_vault_2026.lnk": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/zborrar1111111111111.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/zborrar111das111.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/zborrar903 2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/MAT101_T0_1enriquezido.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/MAT101_T1-Funciones-reales.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/zborrar903 3 arquietxtura.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/zborrar903_3gemino.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/zborrar921_enunciado.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/_basic-memory-system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/zborrar903.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/zborrar903 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/zborrar903_3 otro.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/_claude-boot.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/_galaxy-system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/_graph-system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/_excalidraw-system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/_library-system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/_notebooklm-system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/_note-system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/_pdf-system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/_PDF.lnk": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/_mindmap-system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/_sync-system 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/_sync-system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/_ToDo-system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/_template-system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-09/_notebooklm-prompt.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_config/_assets-section.tmp": {
       "isPinned": false,
       "isHidden": false
     }

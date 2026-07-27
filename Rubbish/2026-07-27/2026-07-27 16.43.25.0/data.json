@@ -1,29 +1,29 @@
 {
   "bloom": {
-    "strength": 0,
-    "radius": 0.3,
-    "threshold": 0.3
+    "strength": 0.9,
+    "radius": 0.4,
+    "threshold": 0.18
   },
   "physics": {
-    "repel": 230,
-    "linkDistance": 80,
-    "linkStrength": 1,
-    "centerPull": 0.04,
+    "repel": 260,
+    "linkDistance": 62,
+    "linkStrength": 1.1,
+    "centerPull": 0.03,
     "flatten": 0,
-    "coreGravity": 0,
+    "coreGravity": -0.08,
     "spiral": 0
   },
   "look": {
-    "nodeSize": 0.8,
-    "linkOpacity": 0.07,
-    "linkCurve": 0,
-    "twinkle": 0,
+    "nodeSize": 1.3,
+    "linkOpacity": 0.24,
+    "linkCurve": 0.3,
+    "twinkle": 1.5,
     "sizeBy": "degree"
   },
   "space": {
-    "nebula": 0,
-    "fieldStars": 0,
-    "clusterClouds": 0
+    "nebula": 0.45,
+    "fieldStars": 0.2,
+    "clusterClouds": 0.4
   },
   "cruise": true,
   "cruiseSpeed": 1,
@@ -38,10 +38,10 @@
   "filterQuery": "",
   "showGhostEdges": true,
   "showStarfield": false,
-  "colorTheme": "matrix",
+  "colorTheme": "sunset",
   "qualityOverride": "auto",
   "preset": "deep-space",
-  "activePreset": "minimal",
+  "activePreset": "supernova",
   "customPresets": [],
   "language": "es",
   "panelSections": {
@@ -60,2061 +60,2061 @@
   "colorGroups": [
     {
       "query": "path:Semestres",
-      "color": "#00ff41"
+      "color": "#f58529"
     },
     {
       "query": "path:_app",
-      "color": "#33ff66"
+      "color": "#dd2a7b"
     },
     {
       "query": "path:_templates",
-      "color": "#00cc34"
+      "color": "#8134af"
     },
     {
       "query": "path:Semesters",
-      "color": "#66ff8c"
+      "color": "#515bd4"
     },
     {
       "query": "path:_projects",
-      "color": "#00b32d"
+      "color": "#feda77"
     },
     {
       "query": "path:_blueprint",
-      "color": "#80ffa0"
+      "color": "#e1306c"
     },
     {
       "query": "path:Borrar",
-      "color": "#1aff4d"
+      "color": "#c13584"
     },
     {
       "query": "path:_skills",
-      "color": "#00e639"
+      "color": "#fd8d32"
     },
     {
       "query": "path:Zettelkasten",
-      "color": "#4dff79"
+      "color": "#405de6"
     }
   ],
   "positionCache": {
     "anki_galaxy_guide.md": [
-      -143.5,
-      -452.1,
-      -340.1
+      -146.8,
+      -417.2,
+      -382.9
     ],
     "excluir-appearance-json-mega.md": [
-      -360.8,
-      176,
-      -252.3
+      -369.2,
+      139.7,
+      -210.7
     ],
     "Untitled.md": [
-      -326.7,
-      437.7,
-      424.3
+      -409.3,
+      473.5,
+      496.4
     ],
     "_projects/tsk_pdf_marginalia_pp.md": [
-      -84,
-      -451.2,
-      175.5
+      -106.6,
+      -488.2,
+      206
     ],
     "_projects/tsk_tpl.md": [
-      -534.6,
-      433.5,
-      -212
+      -618.9,
+      476.6,
+      -239.8
     ],
     "_projects/tsk_standb.md": [
-      484.1,
-      465.9,
-      211.9
+      548,
+      501.8,
+      216.6
     ],
     "_projects/tsk_emergn.md": [
-      218.5,
-      -310.6,
-      -453.1
+      225.7,
+      -322.1,
+      -519.4
     ],
     "_projects/tsk_krajo.md": [
-      30.8,
-      688.9,
-      -62.7
+      -2.5,
+      757.3,
+      -72.5
     ],
     "_projects/tsk_alxrul.md": [
-      175.6,
-      -641.9,
-      -33.5
+      202.3,
+      -714.8,
+      -61.9
     ],
     "_projects/tsk_alxhot.md": [
-      -278,
-      -384.7,
-      327.8
+      -325.8,
+      -430.4,
+      355.8
     ],
     "_projects/tsk_alxgml.md": [
-      -39.7,
-      441.2,
-      -410.6
+      -70.3,
+      509,
+      -456.5
     ],
     "_projects/tsk_alx-rul.md": [
-      181.1,
-      172.2,
-      -348.3
+      178.6,
+      195.2,
+      -293
     ],
     "_projects/_ideas_1_apps_2brain.md": [
-      211.1,
-      -633.2,
-      59.1
+      232.4,
+      -645.2,
+      28.8
     ],
     "_projects/_ideas_0_shellcmd.md": [
-      -81.6,
-      551.3,
-      427.2
+      -96.7,
+      610.8,
+      469.8
     ],
     "_blueprint/tables no terminado.md": [
-      -193.2,
-      595.9,
-      -236.6
+      -210.6,
+      663.6,
+      -257
     ],
     "_blueprint/Untitled 1.md": [
-      66.7,
-      445.5,
-      -494.7
+      54.7,
+      515.9,
+      -539.5
     ],
     "_blueprint/MAT101_T1-Funciones-reales.md": [
-      607.3,
-      -94.5,
-      -44.5
+      677.3,
+      -122.5,
+      -37.1
     ],
     "_blueprint/rendimiento.md": [
-      166.3,
-      -631.6,
-      136.1
+      189.4,
+      -691.8,
+      127
     ],
     "_blueprint/obsidian-cornell-notes.md": [
-      249.7,
-      505.6,
-      -352
+      282.4,
+      583.8,
+      -383.5
     ],
     "_blueprint/MAT101_T1-Funciones-reales 1.md": [
-      -257.9,
-      -599,
-      223.8
+      -286.1,
+      -637.3,
+      241.1
     ],
     "_blueprint/claude vision.md": [
-      -282.5,
-      624.5,
-      -55
+      -304.8,
+      686,
+      -58.2
     ],
     "_inbox/Marginalia Inbox.md": [
-      150.3,
-      622.2,
-      163.6
+      130.1,
+      658.5,
+      157.3
     ],
     "_inbox/inbox.md": [
-      73.1,
-      331,
-      -424.9
+      74.9,
+      344.5,
+      -399.7
     ],
     "wolfram alpha example.md": [
-      -276.3,
-      611.6,
-      178.5
+      -321.4,
+      669.2,
+      195.4
     ],
     "_skills/_start.md": [
-      73.2,
-      564.3,
-      -340.3
+      76.2,
+      648.4,
+      -378.1
     ],
     "_skills/_claude-work.md": [
-      123.8,
-      -216,
-      -399.1
+      141.1,
+      -228.6,
+      -495.7
     ],
     "_skills/_claude-setup.md": [
-      131,
-      -201.7,
-      -357.5
+      135.6,
+      -200.4,
+      -453.5
     ],
     "_skills/_claude-plan.md": [
-      159.2,
-      -210.7,
-      -318.2
+      161,
+      -208.3,
+      -418.4
     ],
     "_skills/_claude-boot.md": [
-      199.1,
-      -388.9,
-      -338.2
+      200.1,
+      -381.8,
+      -413.8
     ],
     "_skills/_claude-close.md": [
-      154.3,
-      -254,
-      -426.4
+      173.7,
+      -268.1,
+      -494.6
     ],
     "void 2.md": [
-      192.1,
-      254.8,
-      -339.6
+      171.4,
+      276.1,
+      -301.1
     ],
     "README.md": [
-      622.4,
-      -237.9,
-      -253.3
+      657.1,
+      -264.7,
+      -270.7
     ],
     "Borrar/zborrar903.md": [
-      642.6,
-      7.2,
-      -202.9
+      714.1,
+      -5,
+      -222
     ],
     "Borrar/zborrar903 3.md": [
-      -569.8,
-      82.1,
-      -397.7
+      -658.1,
+      70.2,
+      -438.8
     ],
     "Borrar/zborrar903 2.md": [
-      -375.2,
-      391.2,
-      -441.9
+      -430,
+      447.4,
+      -497.4
     ],
     "Borrar/zborrar903_3gemino.md": [
-      -317.6,
-      -292.4,
-      -581.9
+      -363.3,
+      -332.5,
+      -651.5
     ],
     "Borrar/zborrar903 3 arquietxtura.md": [
-      -627.4,
-      337.5,
-      189.4
+      -726.3,
+      352.3,
+      201.7
     ],
     "Borrar/zborrar111das111.md": [
-      665.4,
-      132.6,
-      -84.2
+      750,
+      161.8,
+      -72.5
     ],
     "Borrar/zborrar903_3 otro.md": [
-      673.8,
-      37.5,
-      -0.2
+      765.2,
+      40.2,
+      1.6
     ],
     "Zettelkasten/20260723193844.md": [
-      532.4,
-      481.8,
-      39.4
+      595.4,
+      529.1,
+      23.8
     ],
     "Zettelkasten/20260723164408.md": [
-      -45.1,
-      499.6,
-      -123.2
+      -47.5,
+      560.2,
+      -125.3
     ],
     "Zettelkasten/20260723164254.md": [
-      -123.5,
-      620.8,
-      3.7
+      -146.4,
+      643.5,
+      -3.6
     ],
     "Zettelkasten/20260723163953.md": [
-      -155.4,
-      600,
-      156.5
+      -146.9,
+      616.2,
+      126.7
     ],
     "Zettelkasten/20260723163008.md": [
-      268.2,
-      -524.7,
-      17.6
+      281.9,
+      -543.4,
+      -5
     ],
     "Zettelkasten/20260723151457.md": [
-      -48.5,
-      -583.4,
-      -49.2
+      -50.1,
+      -633.3,
+      -67.5
     ],
     "void 1.md": [
-      180.6,
-      346.7,
-      -309.4
+      160,
+      363.4,
+      -293.6
     ],
     "Semestres/SEM_08/ETN806/corr2.md": [
-      614,
-      291.3,
-      122.2
+      682.3,
+      296.9,
+      151.9
     ],
     "Semestres/SEM_08/ETN806/corr.md": [
-      -368.2,
-      -18.9,
-      615.1
+      -401.9,
+      -2.3,
+      664.1
     ],
     "Semestres/SEM_08/ETN806/corr 1.md": [
-      -583.7,
-      194,
-      -299.7
+      -712.1,
+      211.8,
+      -341
     ],
     "Semestres/SEM_08/ETN806/Partial_3/ETN806-P3-examen_final_806_pdf.md": [
-      -56.9,
-      115.8,
-      -646.9
+      -87.1,
+      130.2,
+      -739.7
     ],
     "Semestres/SEM_08/ETN806/Partial_3/ETN806-P3-practica_3.md": [
-      -243.6,
-      224.6,
-      -614.4
+      -283.3,
+      248,
+      -699.9
     ],
     "Semestres/SEM_08/ETN806/Partial_3/(ING) Ejercicios teoria colas.md": [
-      -320,
-      87.6,
-      -598.4
+      -389.5,
+      71.2,
+      -673.8
     ],
     "Semestres/SEM_08/ETN806/Partial_3/(ING) Ejercicios Markov.md": [
-      -247.1,
-      371.6,
-      -400.8
+      -284.4,
+      398.1,
+      -464.2
     ],
     "Semestres/SEM_08/ETN806/Partial_3/(ING)TEORÍA DE COLAS.md": [
-      555.7,
-      -400.2,
-      -98
+      614.6,
+      -435.1,
+      -105.9
     ],
     "Semestres/SEM_08/ETN806/Partial_3/(ING) ANÁLISIS DE MARKOV.md": [
-      533.6,
-      305,
-      -348.4
+      602.2,
+      340.4,
+      -360.2
     ],
     "Semestres/SEM_08/ETN806/Partial_2/ETN806-P2-Fuente_Parcial_2.md": [
-      651.7,
-      199.9,
-      204.5
+      720.3,
+      201.9,
+      243
     ],
     "Semestres/SEM_08/ETN806/Partial_2/contexto_claude806.md": [
-      -8.9,
-      -628.7,
-      122
+      -16.1,
+      -671.1,
+      139.6
     ],
     "Semestres/SEM_08/ETN806/Partial_2/ETN806-Resuelto-Referencia-Densidad-Conjunta-Triangular.md": [
-      -198.4,
-      104.7,
-      -224.3
+      -222.2,
+      43.5,
+      -191.3
     ],
     "Semestres/SEM_08/ETN806/Partial_2/ETN806-Practica2-Enunciados-Variables-Aleatorias-Multiples.md": [
-      -121,
-      47.1,
-      -515
+      -168.1,
+      3.1,
+      -477.1
     ],
     "Semestres/SEM_08/ETN806/Partial_2/ETN806-P2-E7-Densidad-condicional-evento-exponencial-bivariada.md": [
-      -186.2,
-      -195.5,
-      -276.7
+      -202.3,
+      -214.2,
+      -289.5
     ],
     "Semestres/SEM_08/ETN806/Partial_2/ETN806-P2-E5-PDF-4variables-probabilidad-marginal-W.md": [
-      -347.5,
-      36.1,
-      -407.8
+      -344.7,
+      13.7,
+      -387.2
     ],
     "Semestres/SEM_08/ETN806/Partial_2/ETN806-P2-E2-Independencia-UV-dominio-triangular.md": [
-      -133.5,
-      -259.2,
-      -137.1
+      -176.4,
+      -202.4,
+      -178.2
     ],
     "Semestres/SEM_08/ETN806/Partial_2/ETN806-P2-E4-VAR-suma-W-densidad-uniforme-triangular.md": [
-      -196.7,
-      -84.5,
-      -172.9
+      -213,
+      -108,
+      -156.6
     ],
     "Semestres/SEM_08/ETN806/Partial_2/ETN806-P2-E1-Normalizacion-k-Marginal-X-dominio-infinito.md": [
-      -278.3,
-      -43.6,
-      -500.6
+      -273.9,
+      -76.1,
+      -482.4
     ],
     "Semestres/SEM_08/ETN806/Partial_2/ETN806-P2-E3-Independencia-VAR-suma-cuadrado-unitario.md": [
-      -243.8,
-      156.3,
-      -348
+      -265.7,
+      97,
+      -345.4
     ],
     "Semestres/SEM_08/ETN806/Partial_2/ETN806-2P-E3-Marginales-semicirculo-unitario.md": [
-      -126.9,
-      195.7,
-      -385.3
+      -166.7,
+      96.9,
+      -353.1
     ],
     "Semestres/SEM_08/ETN806/Partial_2/ETN806-Formulario-2doP-Variables-Aleatorias-Multiples.md": [
-      -31.2,
-      -51.9,
-      -256.8
+      -88,
+      -111.9,
+      -250.7
     ],
     "Semestres/SEM_08/ETN806/Partial_2/ETN806-2P-E1-Normalizacion-Marginales-Independencia-Probabilidad-region-curva.md": [
-      -80.9,
-      -9.1,
-      -430.4
+      -109.8,
+      -61.2,
+      -389.3
     ],
     "Semestres/SEM_08/ETN806/Partial_2/ETN806-2P-E2-Independencia-VAR-suma-cuadrado-unitario.md": [
-      -30.9,
-      103.1,
-      -263
+      -81.7,
+      24.5,
+      -275.4
     ],
     "Semestres/SEM_08/ETN806/Partial_2/ETN806-P2-E6-Region-valor-absoluto-marginal-probabilidad-esperanza.md": [
-      -259.2,
-      -58.2,
-      -313.1
+      -290.1,
+      -86.2,
+      -279.9
     ],
     "Semestres/SEM_08/ETN806/Partial_1/ETN806-Parcial_1.md": [
-      435.2,
-      225.9,
-      -469.5
+      504,
+      246.5,
+      -496.2
     ],
     "Semestres/SEM_08/ETN806/Partial_1/ETN806-P1-E1.md": [
-      56,
-      -635.9,
-      243.7
+      67.6,
+      -681.5,
+      256
     ],
     "Semestres/SEM_08/ETN806/Partial_1/E2Aa.md": [
-      -342.1,
-      338.3,
-      526.3
+      -391.8,
+      351.9,
+      604.3
     ],
     "Semestres/SEM_08/ETN806/Partial_1/E2b.md": [
-      -419,
-      -163.7,
-      -544
+      -473.9,
+      -202.2,
+      -610.1
     ],
     "Semestres/SEM_08/ETN806/Partial_1/E3b.md": [
-      704.9,
-      -118.9,
-      72.8
+      774.1,
+      -127.3,
+      123.6
     ],
     "Semestres/SEM_08/ETN806/Partial_1/9b.md": [
-      617.8,
-      -252.5,
-      -58.3
+      684,
+      -267.9,
+      -60.1
     ],
     "Semestres/SEM_08/ETN806/Partial_1/8a.md": [
-      -360.9,
-      252.2,
-      -534.7
+      -394.6,
+      277.2,
+      -599.5
     ],
     "Semestres/SEM_08/ETN806/Partial_1/8b.md": [
-      -182.7,
-      -632.3,
-      -203
+      -180.8,
+      -705.9,
+      -265.8
     ],
     "Semestres/SEM_08/ETN806/Partial_1/7b.md": [
-      -259.6,
-      -634.3,
-      -81.4
+      -274.3,
+      -700.7,
+      -94.4
     ],
     "Semestres/SEM_08/ETN806/Partial_1/7a.md": [
-      626.8,
-      159.6,
-      -308.8
+      673.4,
+      161.3,
+      -316.6
     ],
     "Semestres/SEM_08/ETN806/Partial_1/5b.md": [
-      8.3,
-      259.4,
-      -589.7
+      -10,
+      297.3,
+      -674.5
     ],
     "Semestres/SEM_08/ETN806/Partial_1/E3a.md": [
-      -685.6,
-      189.7,
-      31.1
+      -783.4,
+      206.3,
+      35.5
     ],
     "Semestres/SEM_08/ETN806/Partial_1/4b.md": [
-      -369.8,
-      -324.7,
-      528
+      -412,
+      -333.8,
+      597.9
     ],
     "Semestres/SEM_08/ETN806/Partial_1/5a.md": [
-      608.8,
-      382.3,
-      -120.8
+      682.7,
+      420.9,
+      -133.5
     ],
     "Semestres/SEM_08/ETN806/Partial_1/4a.md": [
-      -503.1,
-      -40.1,
-      -511.4
+      -578,
+      -66.6,
+      -584.2
     ],
     "Semestres/SEM_08/ETN806/Partial_1/9a.md": [
-      -216.7,
-      -9.9,
-      -674.2
+      -252.8,
+      -22.8,
+      -767.5
     ],
     "Semestres/SEM_08/ETN806/Partial_1/10a.md": [
-      -80.7,
-      -364.2,
-      661.7
+      -54.4,
+      -346.2,
+      773.7
     ],
     "Semestres/SEM_08/ETN806/Partial_1/10b.md": [
-      -486.2,
-      -124.1,
-      557.6
+      -545.5,
+      -90.6,
+      609.2
     ],
     "Semestres/SEM_08/ETN806/Partial_1/6b.md": [
-      -254.8,
-      471.7,
-      -316
+      -287.6,
+      540.6,
+      -365.3
     ],
     "Semestres/SEM_08/ETN806/Partial_1/6a.md": [
-      -68.1,
-      687.3,
-      157.1
+      -88.5,
+      720.5,
+      178
     ],
     "Semestres/SEM_03/ETN302/0.ETN-302.md": [
-      56.1,
-      134.9,
-      110.1
+      71.8,
+      147.2,
+      138.3
     ],
     "Semestres/SEM_03/ETN302/9.302/T9.302.md": [
-      193.1,
-      72.3,
-      -50.3
+      218.4,
+      99.7,
+      24.8
     ],
     "Semestres/SEM_03/ETN302/7.302.md": [
-      33.2,
-      17.3,
-      112.4
+      53.7,
+      46.3,
+      169.5
     ],
     "Semestres/SEM_03/ETN302/8.302/T8.302.md": [
-      31.9,
-      284.8,
-      283.3
+      67.3,
+      297.9,
+      314.6
     ],
     "Semestres/SEM_03/ETN302/8.302.md": [
-      68.7,
-      227.2,
-      215.7
+      82.1,
+      242.7,
+      247.2
     ],
     "Semestres/SEM_03/ETN302/7.302/T7.302.md": [
-      59.2,
-      -70.8,
-      117.8
+      69.2,
+      -29.3,
+      190.2
     ],
     "Semestres/SEM_03/ETN302/6.302.md": [
-      28.1,
-      272.1,
-      105
+      44.1,
+      277.6,
+      138.3
     ],
     "Semestres/SEM_03/ETN302/6.302/T6.302.md": [
-      5.5,
-      345.4,
-      59.7
+      47.1,
+      361.2,
+      124.8
     ],
     "Semestres/SEM_03/ETN302/5.302.md": [
-      -15.6,
-      116.2,
-      205
+      19,
+      123.8,
+      218.5
     ],
     "Semestres/SEM_03/ETN302/5.302/T5.302.md": [
-      -85.9,
-      133.4,
-      256.7
+      -28.1,
+      139.9,
+      278.9
     ],
     "Semestres/SEM_03/ETN302/12.302.md": [
-      134.8,
-      244.3,
-      132.8
+      158.2,
+      245.6,
+      166.4
     ],
     "Semestres/SEM_03/ETN302/4.302/T4.302.md": [
-      56.8,
-      276.9,
-      -63.4
+      79.4,
+      275.8,
+      10.2
     ],
     "Semestres/SEM_03/ETN302/4.302.md": [
-      37.4,
-      206.9,
-      -0.6
-    ],
-    "Semestres/SEM_03/ETN302/3.302/TT3.302.md": [
-      -236.3,
-      -122.4,
-      85.7
-    ],
-    "Semestres/SEM_03/ETN302/3.302/T3.302.md": [
-      -283.4,
-      167.6,
-      15.4
-    ],
-    "Semestres/SEM_03/ETN302/3.302/E3.302.md": [
-      -413.6,
-      -179.5,
-      -118.1
-    ],
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/vie.-09-diciembre-22_5-51-56.md": [
-      400.1,
-      -551.8,
-      118.5
-    ],
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/Mon-28-November-22_5-15-2.md": [
-      304.5,
-      132.6,
-      -605.4
-    ],
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/Thu-15-September-22_10-15-13.md": [
-      507.7,
-      108.5,
-      -472.9
-    ],
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.6.302-5.md": [
-      -522.9,
-      -271,
-      -76.7
-    ],
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.6.302-3.md": [
-      -380.4,
-      -262.1,
-      -199.3
-    ],
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.6.302-2.md": [
-      -396.9,
-      -163.4,
-      -234.8
-    ],
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.6.302-1.md": [
-      -458.1,
-      -286.8,
-      -162.7
-    ],
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.6.302-4.md": [
-      -475.3,
-      -117.8,
-      -199.5
-    ],
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.522.302-1.md": [
-      -537.2,
-      -174.9,
-      -125
-    ],
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.523.302-1.md": [
-      -437.1,
-      -66.3,
-      -114.2
-    ],
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.512.302-1.md": [
-      -422.7,
-      -280.2,
-      -38.4
-    ],
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.4.302-1.md": [
-      -480.7,
-      -195.7,
-      -53.3
-    ],
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.511.302-1.md": [
-      -482.7,
-      -123,
-      -32.7
-    ],
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.521.302-1.md": [
-      -479.3,
-      -218.9,
-      -213.6
-    ],
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.3.302-1.md": [
-      -325.7,
-      -204.3,
-      -115.7
-    ],
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.2.302-1.md": [
-      -341.1,
-      -127.8,
-      -139
-    ],
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/TD3.2.302.md": [
-      -396.9,
-      -215,
-      -34.9
-    ],
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.513.302-1.md": [
-      -372.9,
-      -296.6,
-      -102
-    ],
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/T3.6.302-5.md": [
-      -209.5,
-      -205.7,
-      60
-    ],
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/T3.6.302-3.md": [
-      -192.6,
-      -201.4,
-      115.3
-    ],
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/T3.523.302.md": [
-      -252.8,
-      185.3,
-      -67.8
-    ],
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/T3.521.302.md": [
-      -254,
-      246.6,
-      -16.5
-    ],
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.3.302-2.md": [
-      -379.7,
-      -117.2,
-      -63
-    ],
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/T3.522.302.md": [
-      -346,
-      194.7,
-      -50.6
-    ],
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/T3.31.302.md": [
-      -309.8,
-      286,
-      -47.5
-    ],
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/T3.6.302-1.md": [
-      -233.6,
-      -167,
-      170.7
-    ],
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/T3.512.302.md": [
-      -368,
-      192.8,
-      -4.8
-    ],
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/T3.4.302.md": [
-      -373.8,
-      147.2,
-      33
-    ],
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/T3.511.302.md": [
-      -251.2,
-      244.5,
-      45
-    ],
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/T3.6.302-4.md": [
-      -290.5,
-      -151.7,
-      154.7
-    ],
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/T3.3.302.md": [
-      -309.7,
-      139.8,
-      -66.6
-    ],
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/T3.6.302-2.md": [
-      -269.9,
-      -208.1,
-      97.9
-    ],
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/Sun-27-November-22_8-25-46.md": [
-      -318.8,
-      -195.5,
-      616.3
-    ],
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/T3.513.302.md": [
-      -278,
-      176.6,
-      103.8
-    ],
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/Sun-23-October-22_5-3-27.md": [
-      -52.3,
-      -574.2,
-      369.1
-    ],
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/T3.2.302.md": [
-      -361.8,
-      214.7,
-      79.4
-    ],
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/LAB603-1-IMG.md": [
-      -656.2,
-      302.5,
-      -46.7
-    ],
-    "Semestres/SEM_03/ETN302/2.302.md": [
-      200.7,
-      -37.1,
-      305.8
-    ],
-    "Semestres/SEM_03/ETN302/2.302/W2.302.md": [
-      208.8,
-      -131.8,
-      373.8
-    ],
-    "Semestres/SEM_03/ETN302/2.302/T2.302.md": [
-      91.1,
-      -53.8,
-      509.3
-    ],
-    "Semestres/SEM_03/ETN302/2.302/TT2.302.md": [
-      -54.7,
-      108,
-      564.9
-    ],
-    "Semestres/SEM_03/ETN302/2.302/D2.302.md": [
-      289.5,
-      127.4,
-      355.5
-    ],
-    "Semestres/SEM_03/ETN302/2.302/AA2.302.md": [
-      413.2,
-      -83.2,
-      275.6
-    ],
-    "Semestres/SEM_03/ETN302/2.302/A2.302.md": [
-      186.8,
-      -285.7,
-      294.9
-    ],
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/W2.302-2.md": [
-      175.5,
-      -117.4,
-      460.1
-    ],
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/WD2.1.302-1.md": [
-      282.6,
-      217.6,
-      397.7
-    ],
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/T2.42.302-2.md": [
-      -72.2,
-      128.9,
-      648.3
-    ],
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/TD2.31.302.md": [
-      286.2,
-      169.2,
-      442
-    ],
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/T2.23.302-1.md": [
-      105.7,
-      -170.4,
-      560.8
-    ],
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/TD2.23.302.md": [
-      375.4,
-      161.3,
-      338.1
-    ],
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/T2.41.302-4.md": [
-      -76.2,
-      211,
-      518.3
-    ],
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/TD2.1.302.md": [
-      334.1,
-      213.5,
-      342.5
-    ],
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/TD2.22.302.md": [
-      238.8,
-      203.9,
-      379.9
-    ],
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/T2.31.302.md": [
-      136,
-      25.5,
-      502.3
-    ],
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/T2.42.302-1.md": [
-      -157,
-      101.2,
-      525.7
-    ],
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/T2.41.302-2.md": [
-      -137.5,
-      79.8,
-      630.9
-    ],
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/T2.23.302-2.md": [
-      82.3,
-      11.9,
-      618.8
-    ],
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/T2.32.302.md": [
-      179,
-      -60.8,
-      537
-    ],
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/T2.41.302-1.md": [
-      -136.2,
-      182.1,
-      574
-    ],
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/W2.302-1.md": [
-      180.1,
-      -50.2,
-      426.3
-    ],
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/W2.302-3.md": [
-      117.6,
-      -124.3,
-      413.7
-    ],
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/T2.21.302-3.md": [
-      -24.9,
-      -186.6,
-      511.8
-    ],
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/T2.21.302-2.md": [
-      100.2,
-      -99.5,
-      621.1
-    ],
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/T2.22.302-1.md": [
-      163.7,
-      -7.5,
-      591
-    ],
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/T2.41.302-3.md": [
-      -29.4,
-      204.5,
-      613.8
-    ],
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/T2.21.302-1.md": [
-      102.7,
-      70,
-      546
-    ],
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/AD2.1.302.md": [
-      355.4,
-      128.6,
-      423.6
-    ],
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/AA2.2.302-1.md": [
-      441,
-      16.8,
-      238.5
-    ],
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/AAD2.1.302.md": [
-      306.7,
-      195.7,
-      296.2
-    ],
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/AA2.12.302-1.md": [
-      460,
-      -33.9,
-      364.6
-    ],
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/AA2.11.302-6.md": [
-      390.1,
-      -151.8,
-      197.8
-    ],
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/T2.22.302-2.md": [
-      6.6,
-      -41.6,
-      555.7
-    ],
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/AA2.11.302-5.md": [
-      515.1,
-      -118,
-      299.8
-    ],
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/AA2.11.302-4.md": [
-      516.6,
-      -29.4,
-      280.9
-    ],
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/AA2.11.302-3.md": [
-      455.6,
-      -53.4,
-      180.2
-    ],
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/AA2.11.302-2.md": [
-      437.1,
-      -190,
-      308.5
-    ],
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/A2.1.302-3.md": [
-      114.4,
-      -354.2,
-      250.7
-    ],
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/A2.2.302-3.md": [
-      256.9,
-      -324.2,
-      369.2
-    ],
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/A2.2.302-4.md": [
-      208.5,
-      -391.4,
-      344.7
-    ],
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/TD2.21.302.md": [
-      347.1,
-      189.2,
-      408.1
-    ],
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/A2.2.302-2.md": [
-      125.2,
-      -369.2,
-      354
-    ],
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/AA2.12.302-0.md": [
-      504.2,
-      -145,
-      210.6
-    ],
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/A2.2.302-1.md": [
-      269.8,
-      -305,
-      279.7
-    ],
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/A2.1.302-2.md": [
-      186.9,
-      -378.5,
-      234.9
-    ],
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/A2.1.302-1.md": [
-      215.8,
-      -314.4,
-      191.5
-    ],
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/AA2.11.302-1.md": [
-      418,
-      -126.9,
-      372.4
-    ],
-    "Semestres/SEM_03/ETN302/3.302.md": [
-      -216.1,
-      -2.7,
-      9.7
-    ],
-    "Semestres/SEM_03/ETN302/12.302/T12.302.md": [
-      199.6,
-      300.9,
-      177.2
-    ],
-    "Semestres/SEM_03/ETN302/9.302.md": [
-      127,
-      78.5,
-      14
-    ],
-    "Semestres/SEM_03/ETN302/11.302/T11.302.md": [
-      262.1,
-      139.6,
-      133.9
-    ],
-    "Semestres/SEM_03/ETN302/11.302.md": [
-      174.4,
-      116.1,
-      129.1
-    ],
-    "Semestres/SEM_03/ETN302/10.302/T10.302.md": [
-      -89.2,
-      298.1,
-      161.1
-    ],
-    "Semestres/SEM_03/ETN302/10.302.md": [
-      -44.2,
-      218.4,
-      151.2
-    ],
-    "Semestres/SEM_03/ETN302/1.302/T1.302.md": [
-      232.3,
-      386.9,
-      -31.8
-    ],
-    "Semestres/SEM_03/ETN302/1.302/E1.302.md": [
-      354.5,
-      247.6,
-      -37.2
-    ],
-    "Semestres/SEM_03/ETN302/1.302/1.302.add/E1.33.302-6.md": [
-      425,
-      263.7,
-      -92.3
-    ],
-    "Semestres/SEM_03/ETN302/1.302/1.302.add/E1.34.302-7.md": [
-      466.5,
-      241.7,
-      -34.3
-    ],
-    "Semestres/SEM_03/ETN302/1.302/1.302.add/T1.2.302.md": [
-      242.4,
-      494.6,
-      -55
-    ],
-    "Semestres/SEM_03/ETN302/1.302/1.302.add/E1.32.302-5.md": [
-      411.4,
-      165.5,
-      -88.6
-    ],
-    "Semestres/SEM_03/ETN302/1.302/1.302.add/E1.2.302-3.md": [
-      409.8,
-      255.9,
-      33.6
-    ],
-    "Semestres/SEM_03/ETN302/1.302/1.302.add/E1.31.302-4.md": [
-      397.5,
-      325.7,
-      -115.2
-    ],
-    "Semestres/SEM_03/ETN302/1.302/1.302.add/E1.1.302-2.md": [
-      318.6,
-      264,
-      -118.3
-    ],
-    "Semestres/SEM_03/ETN302/1.302/1.302.add/E1.1.302-1.md": [
-      341.7,
-      199.4,
-      -115.2
-    ],
-    "Semestres/SEM_03/ETN302/1.302.md": [
-      207.4,
-      250.8,
-      18.2
-    ],
-    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-valor_absoluto.md": [
-      -514.8,
-      56.9,
-      192.3
-    ],
-    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-inecuaciones_lineales 1.md": [
-      -433.3,
-      23.6,
-      319.8
-    ],
-    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-teoremas_reales.md": [
-      -513.8,
-      11.5,
-      203
-    ],
-    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-teoremas_desigualdades.md": [
-      -566.9,
-      134.7,
-      272.9
-    ],
-    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-recta_real_intervalos.md": [
-      -593,
-      110.2,
-      311
-    ],
-    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-inecuaciones_lineales.md": [
-      -608.4,
-      -5.1,
-      351.6
-    ],
-    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-ej_inec_x4_9x2.md": [
-      -514.7,
-      -49.9,
-      353.8
-    ],
-    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-ej_inec_valabs_mayor.md": [
-      -612.5,
-      -14,
-      270.6
-    ],
-    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-ej_inec_valabs_cubo.md": [
-      -534.4,
-      31.7,
-      371.5
-    ],
-    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-ej_inec_irracional.md": [
-      -460.1,
-      106.8,
-      342.6
-    ],
-    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-ej_inec_racional_fracciones.md": [
-      -521.1,
-      3,
-      388.3
-    ],
-    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-axiomas_orden.md": [
-      -521.9,
-      102.6,
-      206.6
-    ],
-    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-axiomas_igualdad.md": [
-      -565.9,
-      -8.9,
-      226.7
-    ],
-    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-ej_inec_valabs_fraccion.md": [
-      -568.9,
-      -70.3,
-      313.1
-    ],
-    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-axiomas_cuerpo.md": [
-      -522.5,
-      135.4,
-      250.6
-    ],
-    "Semesters/Sem_01/MAT101/Partial_1/MAT101-T00-P1-Numeros_reales_y_desigualdades.md": [
-      -604.7,
-      61.4,
-      222.6
-    ],
-    "MOC/MAT101-T00-star.md": [
-      -517.2,
-      50.3,
-      293.2
-    ],
-    "_templates/tpl-w-study.md": [
-      353.5,
-      -601.5,
-      -53.4
-    ],
-    "_templates/tpl_w_transcription.md": [
-      -587.2,
-      -319.3,
-      184.6
-    ],
-    "_templates/tpl-w-project.md": [
-      25.3,
-      657.6,
-      -209.4
-    ],
-    "_templates/tpl-zk.md": [
-      -366.5,
-      -389.3,
-      430.3
-    ],
-    "_templates/tpl-w-initial.md": [
-      -408.9,
-      536.5,
-      224.6
-    ],
-    "_templates/tpl-supernova.md": [
-      -13.4,
-      585,
-      364.1
-    ],
-    "_templates/tpl-photon.md": [
-      592.4,
-      -340.2,
-      58.7
-    ],
-    "_templates/tpl-moon.md": [
-      -280.9,
-      425.6,
-      322.4
-    ],
-    "_templates/tpl-asteroid.md": [
-      -111.5,
-      204.7,
-      -642.7
-    ],
-    "_templates/tpl-star.md": [
-      -70.3,
-      582.4,
-      -372.3
-    ],
-    "_templates/tpl-photon 1.md": [
-      394.7,
-      436.5,
-      -330.3
-    ],
-    "_templates/tpl-asteroid 1.md": [
-      302.4,
-      399.1,
-      -498.7
-    ],
-    "_templates/tpl-dwarf.md": [
-      -407.6,
-      572.9,
-      23.1
-    ],
-    "_templates/tpl-bridge.md": [
-      672.6,
-      -146.6,
-      -174.2
-    ],
-    "_templates/tpl-constellation.md": [
-      -499.7,
-      431.2,
-      171.8
-    ],
-    "_templates/tpl-planet.md": [
-      -539.1,
-      471.3,
-      -56.9
-    ],
-    "_templates/tpl-comet.md": [
-      -534.1,
-      330.1,
-      -325.6
-    ],
-    "_templates/tpl-nebula.md": [
-      -468.8,
-      -539.3,
-      61.1
-    ],
-    "_templates/tpl-observatory.md": [
-      -697.6,
-      -10,
-      -24.7
-    ],
-    "_templates/alt-B/plantillas-A-respaldo.md": [
-      113.9,
-      320.4,
-      -598.6
-    ],
-    "_app/notebooklm/guides/ETN806/ETN806-P3-Tikz_markov_guide.md": [
-      -465.9,
-      -424.3,
-      217.6
-    ],
-    "_app/notebooklm/guides/ETN806/ETN806-P3-colas_guide_s.md": [
-      580.7,
-      14,
-      -333.8
-    ],
-    "_app/notebooklm/guides/MAT101/MAT101_TikzJax 1.md": [
-      35.3,
-      -291.3,
-      -268.2
-    ],
-    "_app/notebooklm/guides/MAT101/MAT101_TikzJax.md": [
-      174.6,
-      -250.2,
-      -271
-    ],
-    "_app/notebooklm/guides/MAT101/MAT101_desmos.md": [
-      190.9,
-      -273.6,
-      -238.3
-    ],
-    "_app/notebooklm/guides/MAT101/MAT101_library.md": [
-      424.8,
-      -458.7,
-      -238.7
-    ],
-    "_app/notebooklm/guides/MAT101/MAT101_latex.md": [
-      -657.9,
-      170.1,
-      -158.6
-    ],
-    "_app/notebooklm/prompts/MAT101/MAT101-transcription (multi columns pluggin)-legacy.md": [
-      -143.8,
-      -634.5,
-      15.9
-    ],
-    "_app/notebooklm/prompts/MAT101/MAT101-transcription.md": [
-      -659.8,
-      -37,
-      -294
-    ],
-    "_app/notebooklm/prompts/MAT101/MAT101-transcription-legacy.md": [
-      338.7,
-      -55.1,
-      -441.2
-    ],
-    "_app/notebooklm/prompts/MAT101/MAT101-study.md": [
-      406.8,
-      -73.7,
-      -403.8
-    ],
-    "_app/notebooklm/prompts/ETN806/ETN806-P1-legacy.md": [
-      -470.4,
-      95,
-      574
-    ],
-    "_app/notebooklm/prompts/ETN806/ETN806-P2.md": [
-      -129.4,
-      369.2,
-      -609
-    ],
-    "_app/notebooklm/prompts/ETN806/ETN806-P1.md": [
-      507.1,
-      -465.2,
-      70.9
-    ],
-    "_app/notebooklm/prompts/ETN806/ETN806-P3.md": [
-      -470.1,
-      262.4,
-      486.7
-    ],
-    "_app/notebooklm/general/tikzjax_guide-legacy.md": [
-      57.3,
-      -249.7,
-      -358.8
-    ],
-    "_app/notebooklm/general/obsidian_notation.md": [
-      85.5,
-      636,
-      321.8
-    ],
-    "_app/notebooklm/general/notebooklm-prompt-guide.md": [
-      323.8,
-      -301.3,
-      -269.6
-    ],
-    "_app/notebooklm/general/MAT101-notebooklm-user_guide.md": [
-      352.5,
-      -144.3,
-      -405.8
-    ],
-    "_app/_config/_TAB_note-system.md": [
-      229,
-      -382.2,
-      -253.5
-    ],
-    "_app/_config/_pdf_pp-system.md": [
-      120.7,
-      -488.4,
-      -275.7
-    ],
-    "_app/_config/_template-system.md": [
-      121.9,
-      -460.2,
-      -208.4
-    ],
-    "_app/_config/_notebooklm-system.md": [
-      270.6,
-      -274.7,
-      -352.7
-    ],
-    "_app/_config/_marginalia_system.md": [
-      -38.8,
-      -437.9,
-      -288
-    ],
-    "_app/_config/_library_ETN505(i).md": [
-      423.7,
-      -322,
-      -372.6
-    ],
-    "_app/_config/_library_MAT101.md": [
-      401.1,
-      -413.1,
-      -313.5
-    ],
-    "_app/_config/_graph-system.md": [
-      131.9,
-      -307.4,
-      -248.1
-    ],
-    "_app/_config/_ToDo-system.md": [
-      188.3,
-      -441.7,
-      -309.9
-    ],
-    "_app/_config/_sync-system.md": [
-      194.6,
-      -391.2,
-      -454.9
-    ],
-    "_app/_config/_note-system.md": [
-      76.8,
-      -366.6,
-      -234.9
-    ],
-    "_app/_config/_mindmap-system.md": [
-      137.8,
-      -394.3,
-      -192.8
-    ],
-    "_app/_config/_excalidraw-system.md": [
-      91.4,
-      -434.6,
-      -322.4
-    ],
-    "_app/_config/_galaxy-system.md": [
-      116.5,
-      -337.5,
-      -339.5
-    ],
-    "_app/_config/_claude-matter-boot.md": [
-      176.9,
-      -372.1,
-      -240
-    ],
-    "_app/_config/_library-system.md": [
-      320.3,
-      -359,
-      -361.7
-    ],
-    "_app/_config/_basic-memory-system.md": [
-      214.1,
-      -311.6,
-      -371.9
-    ],
-    "_app/_appnotes/pdf-guide.md": [
-      45.8,
-      -435.1,
-      -279
-    ],
-    "_app/_appnotes/supercharged_guide.md": [
-      42.7,
-      -230.4,
-      -467.7
-    ],
-    "_app/_appnotes/marginalia_explorer_guide.md.md": [
-      -115.1,
-      -413.2,
-      -402.7
-    ],
-    "_app/_appnotes/script_guide.md": [
-      134.9,
-      -250.5,
-      -549.6
-    ],
-    "_app/_appnotes/plugin_guide.md": [
-      38.4,
-      -329.8,
-      -508.5
-    ],
-    "_app/_appnotes/zettakasten_guide_temp.md": [
-      -62.6,
-      -374.4,
-      -473.9
-    ],
-    "_app/_appnotes/Rclone_guide.md": [
-      211.2,
-      -267.7,
-      -530
-    ],
-    "_app/_appnotes/PDF_PP-guide.md": [
-      144.9,
-      -461.6,
-      -368.4
-    ],
-    "_app/_appnotes/tagroute_parche/TagsRoute(legacy).md": [
-      89.3,
-      713,
-      123.7
-    ],
-    "_app/_appnotes/Marginalia_guide.md": [
-      -32.1,
-      -450.5,
-      -402.4
-    ],
-    "_app/_appnotes/obsidian_guide.md": [
-      75.4,
-      -444.6,
-      -438.5
-    ],
-    "_app/_appnotes/claude_prompts.md": [
-      217.1,
-      -207.5,
-      -381.7
-    ],
-    "_app/_appnotes/desmos_guide.md": [
-      -5.1,
-      -303.4,
-      -364.5
-    ],
-    "_app/_appnotes/latex_guide.md": [
-      70.1,
-      -501.2,
-      -351.4
-    ],
-    "_app/_appnotes/class-notes-guide.md": [
-      77.2,
-      -273.3,
-      -248.7
-    ],
-    "_app/_appnotes/better-export-pdf.md": [
-      19.5,
-      -280,
-      -440.5
-    ],
-    "_app/_appnotes/cornell_guide.md": [
-      3.7,
-      -374,
-      -380.7
-    ],
-    "_app/shellcommands/rclone_script.md": [
-      217.3,
-      -324.5,
-      -584
-    ],
-    "_app/shellcommands/shellcommands_guide(scripts).md": [
-      71.7,
-      -229.1,
-      -614
-    ],
-    "_app/shellcommands/shellcmd_scripting_guide.md": [
-      3.1,
-      -206.4,
-      -588
-    ],
-    "_app/shellcommands/shellcmd_config_script.md": [
-      -46.1,
-      -245.2,
-      -611.3
-    ],
-    "_app/shellcommands/shellcmd_config_gral.md": [
-      -0.7,
-      -297.8,
-      -636.6
-    ],
-    "_app/solve/marginalia_solve.md": [
-      228.5,
-      -448.7,
-      -514.8
-    ],
-    "_app/solve/google_drive_solve.md": [
-      177,
-      169.9,
-      -640
-    ],
-    "_app/solve/git_solve.md": [
-      89.1,
-      -315.3,
-      -428.3
-    ],
-    "_app/solve/claude_solve.md": [
-      265,
-      -457.4,
-      -354
-    ],
-    "_app/Excalidraw/Template.excalidraw.md": [
-      348,
-      591.9,
-      189.5
-    ],
-    "_app/Excalidraw/Scripts/Downloaded/Slideshow.md": [
-      -136.5,
-      451.2,
-      -506.2
-    ],
-    "_app/Excalidraw/Scripts/Downloaded/Mindmap Builder.md": [
-      -458.2,
-      231.8,
-      -463.1
-    ],
-    "unresolved:MAT101-T00-metodo_signos": [
-      -520,
-      -46.3,
-      264.5
-    ],
-    "unresolved:I1.21.302-1.png": [
-      429.2,
-      357.1,
-      -197.2
-    ],
-    "unresolved:I1.22.302-2.png": [
-      463.1,
-      109.6,
-      -138.5
-    ],
-    "unresolved:I1.24.302-3.png": [
-      552.4,
-      222.6,
-      -62.1
-    ],
-    "unresolved:E1.2.302-3.png": [
-      260,
-      580.3,
-      -41.2
-    ],
-    "unresolved:E1.1.302-1.png": [
-      240.1,
-      433.3,
+      54.8,
+      212.4,
       48
     ],
-    "unresolved:E1.1.302-2.png": [
-      285.6,
-      444.5,
-      14.4
+    "Semestres/SEM_03/ETN302/3.302/TT3.302.md": [
+      -273.6,
+      -182.5,
+      85
     ],
-    "unresolved:E1.31.302-4.png": [
+    "Semestres/SEM_03/ETN302/3.302/T3.302.md": [
+      -341.2,
+      180.1,
+      -6.9
+    ],
+    "Semestres/SEM_03/ETN302/3.302/E3.302.md": [
+      -481.9,
+      -214.3,
+      -147.2
+    ],
+    "Semestres/SEM_03/ETN302/3.302/3.302.add/vie.-09-diciembre-22_5-51-56.md": [
+      458.6,
+      -613.7,
+      99.1
+    ],
+    "Semestres/SEM_03/ETN302/3.302/3.302.add/Mon-28-November-22_5-15-2.md": [
+      346.6,
+      157.3,
+      -675.1
+    ],
+    "Semestres/SEM_03/ETN302/3.302/3.302.add/Thu-15-September-22_10-15-13.md": [
+      582.7,
+      106.4,
+      -507.6
+    ],
+    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.6.302-5.md": [
+      -596.5,
+      -320.6,
+      -109.6
+    ],
+    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.6.302-3.md": [
+      -452.1,
+      -293.7,
+      -225.4
+    ],
+    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.6.302-2.md": [
+      -457.2,
+      -195.7,
+      -255.1
+    ],
+    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.6.302-1.md": [
+      -531.6,
+      -315.1,
+      -199.5
+    ],
+    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.6.302-4.md": [
+      -535.4,
+      -150.9,
+      -226.3
+    ],
+    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.522.302-1.md": [
+      -603,
+      -209.1,
+      -159.7
+    ],
+    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.523.302-1.md": [
+      -496.2,
+      -112.3,
+      -157.7
+    ],
+    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.512.302-1.md": [
+      -489.1,
+      -315.6,
+      -84.1
+    ],
+    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.4.302-1.md": [
+      -539.8,
+      -230.3,
+      -92.9
+    ],
+    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.511.302-1.md": [
+      -535.9,
+      -158.8,
+      -74.1
+    ],
+    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.521.302-1.md": [
+      -546,
+      -250.9,
+      -244.9
+    ],
+    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.3.302-1.md": [
+      -412,
+      -249.3,
+      -158.2
+    ],
+    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.2.302-1.md": [
+      -412.6,
+      -180.7,
+      -166.4
+    ],
+    "Semestres/SEM_03/ETN302/3.302/3.302.add/TD3.2.302.md": [
+      -465.6,
+      -239.9,
+      -73
+    ],
+    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.513.302-1.md": [
+      -431.9,
+      -321.1,
+      -143
+    ],
+    "Semestres/SEM_03/ETN302/3.302/3.302.add/T3.6.302-5.md": [
+      -269.1,
+      -259.3,
+      55.1
+    ],
+    "Semestres/SEM_03/ETN302/3.302/3.302.add/T3.6.302-3.md": [
+      -246.7,
+      -260.3,
+      109.4
+    ],
+    "Semestres/SEM_03/ETN302/3.302/3.302.add/T3.523.302.md": [
+      -320.2,
+      207.2,
+      -80.6
+    ],
+    "Semestres/SEM_03/ETN302/3.302/3.302.add/T3.521.302.md": [
+      -326.1,
+      244.8,
+      -49.5
+    ],
+    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.3.302-2.md": [
+      -444.9,
+      -170.1,
+      -94
+    ],
+    "Semestres/SEM_03/ETN302/3.302/3.302.add/T3.522.302.md": [
+      -396.7,
+      210,
+      -67.2
+    ],
+    "Semestres/SEM_03/ETN302/3.302/3.302.add/T3.31.302.md": [
+      -362.2,
+      325.8,
+      -56.6
+    ],
+    "Semestres/SEM_03/ETN302/3.302/3.302.add/T3.6.302-1.md": [
+      -274.8,
+      -228.5,
+      154.9
+    ],
+    "Semestres/SEM_03/ETN302/3.302/3.302.add/T3.512.302.md": [
+      -407.3,
+      228.4,
+      -18.9
+    ],
+    "Semestres/SEM_03/ETN302/3.302/3.302.add/T3.4.302.md": [
+      -418.7,
+      160.8,
+      -17.3
+    ],
+    "Semestres/SEM_03/ETN302/3.302/3.302.add/T3.511.302.md": [
+      -313.7,
+      251.7,
+      6.5
+    ],
+    "Semestres/SEM_03/ETN302/3.302/3.302.add/T3.6.302-4.md": [
+      -324.1,
+      -237.3,
+      130.8
+    ],
+    "Semestres/SEM_03/ETN302/3.302/3.302.add/T3.3.302.md": [
+      -369.8,
+      162.2,
+      -79.5
+    ],
+    "Semestres/SEM_03/ETN302/3.302/3.302.add/T3.6.302-2.md": [
+      -317.5,
+      -257.6,
+      84.7
+    ],
+    "Semestres/SEM_03/ETN302/3.302/3.302.add/Sun-27-November-22_8-25-46.md": [
+      -325.8,
+      -177.7,
+      681.4
+    ],
+    "Semestres/SEM_03/ETN302/3.302/3.302.add/T3.513.302.md": [
+      -343.3,
+      215.7,
+      57.3
+    ],
+    "Semestres/SEM_03/ETN302/3.302/3.302.add/Sun-23-October-22_5-3-27.md": [
+      -56.9,
+      -617.5,
+      406
+    ],
+    "Semestres/SEM_03/ETN302/3.302/3.302.add/T3.2.302.md": [
+      -423.3,
+      245.9,
+      47.9
+    ],
+    "Semestres/SEM_03/ETN302/3.302/3.302.add/LAB603-1-IMG.md": [
+      -724.5,
+      308.2,
+      -54.5
+    ],
+    "Semestres/SEM_03/ETN302/2.302.md": [
+      231.3,
+      -46.5,
+      349.9
+    ],
+    "Semestres/SEM_03/ETN302/2.302/W2.302.md": [
+      217.6,
+      -104.7,
+      438.9
+    ],
+    "Semestres/SEM_03/ETN302/2.302/T2.302.md": [
+      88.5,
+      -40.8,
+      567
+    ],
+    "Semestres/SEM_03/ETN302/2.302/TT2.302.md": [
+      -75.7,
+      118.5,
+      617.2
+    ],
+    "Semestres/SEM_03/ETN302/2.302/D2.302.md": [
+      317.3,
+      141.8,
+      430.7
+    ],
+    "Semestres/SEM_03/ETN302/2.302/AA2.302.md": [
+      485,
+      -82.3,
+      332.7
+    ],
+    "Semestres/SEM_03/ETN302/2.302/A2.302.md": [
+      213.8,
+      -334.9,
+      329.3
+    ],
+    "Semestres/SEM_03/ETN302/2.302/2.302.add/W2.302-2.md": [
+      177.9,
+      -92.6,
+      521.2
+    ],
+    "Semestres/SEM_03/ETN302/2.302/2.302.add/WD2.1.302-1.md": [
+      309.8,
+      227,
+      461.2
+    ],
+    "Semestres/SEM_03/ETN302/2.302/2.302.add/T2.42.302-2.md": [
+      -97.1,
+      144,
+      683.7
+    ],
+    "Semestres/SEM_03/ETN302/2.302/2.302.add/TD2.31.302.md": [
+      303.7,
+      182.6,
+      505
+    ],
+    "Semestres/SEM_03/ETN302/2.302/2.302.add/T2.23.302-1.md": [
+      104.5,
+      -158.5,
+      620.4
+    ],
+    "Semestres/SEM_03/ETN302/2.302/2.302.add/TD2.23.302.md": [
+      391.1,
+      171.9,
+      411.3
+    ],
+    "Semestres/SEM_03/ETN302/2.302/2.302.add/T2.41.302-4.md": [
+      -80.9,
+      215.3,
+      587.4
+    ],
+    "Semestres/SEM_03/ETN302/2.302/2.302.add/TD2.1.302.md": [
+      351.6,
+      219.9,
+      411.6
+    ],
+    "Semestres/SEM_03/ETN302/2.302/2.302.add/TD2.22.302.md": [
+      261,
+      202.2,
+      432.3
+    ],
+    "Semestres/SEM_03/ETN302/2.302/2.302.add/T2.31.302.md": [
+      134.9,
+      21.1,
+      573.2
+    ],
+    "Semestres/SEM_03/ETN302/2.302/2.302.add/T2.42.302-1.md": [
+      -164.1,
+      92.9,
+      589.1
+    ],
+    "Semestres/SEM_03/ETN302/2.302/2.302.add/T2.41.302-2.md": [
+      -149.2,
+      75.3,
+      676.1
+    ],
+    "Semestres/SEM_03/ETN302/2.302/2.302.add/T2.23.302-2.md": [
+      87.8,
+      18.9,
+      673.4
+    ],
+    "Semestres/SEM_03/ETN302/2.302/2.302.add/T2.32.302.md": [
+      160,
+      -49.5,
+      608.3
+    ],
+    "Semestres/SEM_03/ETN302/2.302/2.302.add/T2.41.302-1.md": [
+      -152,
+      186.5,
+      640.6
+    ],
+    "Semestres/SEM_03/ETN302/2.302/2.302.add/W2.302-1.md": [
+      176.8,
+      -32.7,
+      492
+    ],
+    "Semestres/SEM_03/ETN302/2.302/2.302.add/W2.302-3.md": [
+      129.6,
+      -97.7,
+      479
+    ],
+    "Semestres/SEM_03/ETN302/2.302/2.302.add/T2.21.302-3.md": [
+      -17.3,
+      -184.6,
+      572.4
+    ],
+    "Semestres/SEM_03/ETN302/2.302/2.302.add/T2.21.302-2.md": [
+      114.3,
+      -99.3,
+      682.5
+    ],
+    "Semestres/SEM_03/ETN302/2.302/2.302.add/T2.22.302-1.md": [
+      171.2,
+      -5.4,
+      659
+    ],
+    "Semestres/SEM_03/ETN302/2.302/2.302.add/T2.41.302-3.md": [
+      -50.8,
+      209.2,
+      668.3
+    ],
+    "Semestres/SEM_03/ETN302/2.302/2.302.add/T2.21.302-1.md": [
+      94.4,
+      71.7,
+      598.3
+    ],
+    "Semestres/SEM_03/ETN302/2.302/2.302.add/AD2.1.302.md": [
+      376.5,
+      155.8,
+      489.7
+    ],
+    "Semestres/SEM_03/ETN302/2.302/2.302.add/AA2.2.302-1.md": [
+      501.6,
+      14.4,
+      315.6
+    ],
+    "Semestres/SEM_03/ETN302/2.302/2.302.add/AAD2.1.302.md": [
+      308.7,
+      198.5,
+      373.4
+    ],
+    "Semestres/SEM_03/ETN302/2.302/2.302.add/AA2.12.302-1.md": [
+      523.6,
+      -30.5,
+      420
+    ],
+    "Semestres/SEM_03/ETN302/2.302/2.302.add/AA2.11.302-6.md": [
+      463.8,
+      -150.9,
+      273.8
+    ],
+    "Semestres/SEM_03/ETN302/2.302/2.302.add/T2.22.302-2.md": [
+      9.5,
+      -32.7,
+      602.6
+    ],
+    "Semestres/SEM_03/ETN302/2.302/2.302.add/AA2.11.302-5.md": [
+      588.5,
+      -110.7,
+      362.1
+    ],
+    "Semestres/SEM_03/ETN302/2.302/2.302.add/AA2.11.302-4.md": [
+      575.3,
+      -18.9,
+      343.5
+    ],
+    "Semestres/SEM_03/ETN302/2.302/2.302.add/AA2.11.302-3.md": [
+      524,
+      -45,
+      248.1
+    ],
+    "Semestres/SEM_03/ETN302/2.302/2.302.add/AA2.11.302-2.md": [
+      502.9,
+      -177.3,
+      362.9
+    ],
+    "Semestres/SEM_03/ETN302/2.302/2.302.add/A2.1.302-3.md": [
+      140.2,
+      -397.2,
+      296.7
+    ],
+    "Semestres/SEM_03/ETN302/2.302/2.302.add/A2.2.302-3.md": [
+      284.7,
+      -375,
+      389.7
+    ],
+    "Semestres/SEM_03/ETN302/2.302/2.302.add/A2.2.302-4.md": [
+      245.4,
+      -443,
+      365.4
+    ],
+    "Semestres/SEM_03/ETN302/2.302/2.302.add/TD2.21.302.md": [
+      363.5,
+      206.6,
+      474
+    ],
+    "Semestres/SEM_03/ETN302/2.302/2.302.add/A2.2.302-2.md": [
+      159.3,
+      -418.7,
+      365.6
+    ],
+    "Semestres/SEM_03/ETN302/2.302/2.302.add/AA2.12.302-0.md": [
+      577.5,
+      -147.6,
+      255.7
+    ],
+    "Semestres/SEM_03/ETN302/2.302/2.302.add/A2.2.302-1.md": [
+      280.8,
+      -360.8,
+      318.2
+    ],
+    "Semestres/SEM_03/ETN302/2.302/2.302.add/A2.1.302-2.md": [
+      231.2,
+      -437.3,
+      283.3
+    ],
+    "Semestres/SEM_03/ETN302/2.302/2.302.add/A2.1.302-1.md": [
+      273.4,
+      -367.1,
+      250.5
+    ],
+    "Semestres/SEM_03/ETN302/2.302/2.302.add/AA2.11.302-1.md": [
+      497.6,
+      -122,
+      425.2
+    ],
+    "Semestres/SEM_03/ETN302/3.302.md": [
+      -250.6,
+      -16.9,
+      13.8
+    ],
+    "Semestres/SEM_03/ETN302/12.302/T12.302.md": [
+      202.3,
+      307.6,
+      210.7
+    ],
+    "Semestres/SEM_03/ETN302/9.302.md": [
+      158.2,
+      104.4,
+      73.7
+    ],
+    "Semestres/SEM_03/ETN302/11.302/T11.302.md": [
+      259.4,
+      132.4,
+      160.7
+    ],
+    "Semestres/SEM_03/ETN302/11.302.md": [
       181.5,
-      461.7,
-      -23.7
+      124.1,
+      164.9
     ],
-    "unresolved:E1.32.302-5.png": [
-      254.9,
-      409.8,
-      -119.9
+    "Semestres/SEM_03/ETN302/10.302/T10.302.md": [
+      -57.5,
+      286.6,
+      224.8
     ],
-    "unresolved:E1.33.302-6.png": [
-      316.4,
-      412.9,
-      -45.2
+    "Semestres/SEM_03/ETN302/10.302.md": [
+      -24.1,
+      216.6,
+      189.1
     ],
-    "unresolved:E1.34.302-7.png": [
-      184.6,
-      413.5,
-      -105.6
+    "Semestres/SEM_03/ETN302/1.302/T1.302.md": [
+      265.8,
+      436.4,
+      -18.9
     ],
-    "unresolved:P10-ETN302.0": [
-      -109.9,
-      253.9,
-      205.9
+    "Semestres/SEM_03/ETN302/1.302/E1.302.md": [
+      410,
+      273.5,
+      -56.4
     ],
-    "unresolved:P11-ETN302.0": [
-      249.8,
-      62.5,
-      132.5
+    "Semestres/SEM_03/ETN302/1.302/1.302.add/E1.33.302-6.md": [
+      467.5,
+      280.6,
+      -103.1
     ],
-    "unresolved:P12-ETN302.0": [
-      188.9,
-      318.4,
-      116.9
+    "Semestres/SEM_03/ETN302/1.302/1.302.add/E1.34.302-7.md": [
+      516.9,
+      257.2,
+      -61.8
     ],
-    "unresolved:AD2.1.302-1.svg": [
-      277.3,
-      -365.1,
-      151
+    "Semestres/SEM_03/ETN302/1.302/1.302.add/T1.2.302.md": [
+      278.8,
+      551.4,
+      -32.4
     ],
-    "unresolved:AD2.1.302-2.svg": [
-      214.9,
-      -466.9,
+    "Semestres/SEM_03/ETN302/1.302/1.302.add/E1.32.302-5.md": [
+      463.1,
+      191.5,
+      -90.3
+    ],
+    "Semestres/SEM_03/ETN302/1.302/1.302.add/E1.2.302-3.md": [
+      466.4,
+      279.4,
+      -3.4
+    ],
+    "Semestres/SEM_03/ETN302/1.302/1.302.add/E1.31.302-4.md": [
+      447.3,
+      339.7,
+      -127.9
+    ],
+    "Semestres/SEM_03/ETN302/1.302/1.302.add/E1.1.302-2.md": [
+      368.8,
+      287.3,
+      -116.7
+    ],
+    "Semestres/SEM_03/ETN302/1.302/1.302.add/E1.1.302-1.md": [
+      402.2,
+      230.5,
+      -115.7
+    ],
+    "Semestres/SEM_03/ETN302/1.302.md": [
+      241.2,
+      277.2,
+      18.8
+    ],
+    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-valor_absoluto.md": [
+      -560.8,
+      25.6,
       224.3
     ],
+    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-inecuaciones_lineales 1.md": [
+      -475.3,
+      14,
+      351.2
+    ],
+    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-teoremas_reales.md": [
+      -568.6,
+      -18.1,
+      246.3
+    ],
+    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-teoremas_desigualdades.md": [
+      -601.4,
+      97.1,
+      282.3
+    ],
+    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-recta_real_intervalos.md": [
+      -608.9,
+      92.5,
+      326.9
+    ],
+    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-inecuaciones_lineales.md": [
+      -649.1,
+      -26.9,
+      375.2
+    ],
+    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-ej_inec_x4_9x2.md": [
+      -556.6,
+      -69,
+      358
+    ],
+    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-ej_inec_valabs_mayor.md": [
+      -632.7,
+      -0.7,
+      324.6
+    ],
+    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-ej_inec_valabs_cubo.md": [
+      -585.3,
+      19.5,
+      385.9
+    ],
+    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-ej_inec_irracional.md": [
+      -498.7,
+      79.6,
+      360.3
+    ],
+    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-ej_inec_racional_fracciones.md": [
+      -572.4,
+      -16.8,
+      400
+    ],
+    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-axiomas_orden.md": [
+      -557.2,
+      71.6,
+      236.5
+    ],
+    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-axiomas_igualdad.md": [
+      -607.5,
+      0.9,
+      264.2
+    ],
+    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-ej_inec_valabs_fraccion.md": [
+      -603.2,
+      -70.3,
+      325
+    ],
+    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-axiomas_cuerpo.md": [
+      -558.3,
+      107.3,
+      280.4
+    ],
+    "Semesters/Sem_01/MAT101/Partial_1/MAT101-T00-P1-Numeros_reales_y_desigualdades.md": [
+      -643.7,
+      44.9,
+      253.8
+    ],
+    "MOC/MAT101-T00-star.md": [
+      -546.5,
+      34.8,
+      314.7
+    ],
+    "_templates/tpl-w-study.md": [
+      395,
+      -652.9,
+      -99.6
+    ],
+    "_templates/tpl_w_transcription.md": [
+      -703.5,
+      -352.7,
+      169.7
+    ],
+    "_templates/tpl-w-project.md": [
+      -18,
+      711.1,
+      -233.7
+    ],
+    "_templates/tpl-zk.md": [
+      -405.5,
+      -395.1,
+      495.6
+    ],
+    "_templates/tpl-w-initial.md": [
+      -461.5,
+      577,
+      241.5
+    ],
+    "_templates/tpl-supernova.md": [
+      -27,
+      640.8,
+      377.5
+    ],
+    "_templates/tpl-photon.md": [
+      645.3,
+      -355.2,
+      52.6
+    ],
+    "_templates/tpl-moon.md": [
+      -328,
+      448.4,
+      378.6
+    ],
+    "_templates/tpl-asteroid.md": [
+      -148.5,
+      233.8,
+      -707.2
+    ],
+    "_templates/tpl-star.md": [
+      -90.1,
+      651.5,
+      -398.2
+    ],
+    "_templates/tpl-photon 1.md": [
+      456.4,
+      510.6,
+      -346.5
+    ],
+    "_templates/tpl-asteroid 1.md": [
+      318.3,
+      431.3,
+      -530.9
+    ],
+    "_templates/tpl-dwarf.md": [
+      -472.4,
+      629.2,
+      17.5
+    ],
+    "_templates/tpl-bridge.md": [
+      731.2,
+      -166.4,
+      -182.6
+    ],
+    "_templates/tpl-constellation.md": [
+      -556.4,
+      468.9,
+      192.4
+    ],
+    "_templates/tpl-planet.md": [
+      -608.6,
+      525.6,
+      -72.7
+    ],
+    "_templates/tpl-comet.md": [
+      -618.9,
+      385.2,
+      -347.3
+    ],
+    "_templates/tpl-nebula.md": [
+      -524.2,
+      -584,
+      57.8
+    ],
+    "_templates/tpl-observatory.md": [
+      -818,
+      -23.4,
+      -37.1
+    ],
+    "_templates/alt-B/plantillas-A-respaldo.md": [
+      106.3,
+      354.8,
+      -675.2
+    ],
+    "_app/notebooklm/guides/ETN806/ETN806-P3-Tikz_markov_guide.md": [
+      -539.5,
+      -481.1,
+      264
+    ],
+    "_app/notebooklm/guides/ETN806/ETN806-P3-colas_guide_s.md": [
+      660.3,
+      17.2,
+      -351.4
+    ],
+    "_app/notebooklm/guides/MAT101/MAT101_TikzJax 1.md": [
+      65.6,
+      -271.5,
+      -347.8
+    ],
+    "_app/notebooklm/guides/MAT101/MAT101_TikzJax.md": [
+      172.2,
+      -230.8,
+      -347.8
+    ],
+    "_app/notebooklm/guides/MAT101/MAT101_desmos.md": [
+      193.8,
+      -265.9,
+      -319.8
+    ],
+    "_app/notebooklm/guides/MAT101/MAT101_library.md": [
+      406.4,
+      -475.6,
+      -294.3
+    ],
+    "_app/notebooklm/guides/MAT101/MAT101_latex.md": [
+      -746.8,
+      181.2,
+      -175.1
+    ],
+    "_app/notebooklm/prompts/MAT101/MAT101-transcription (multi columns pluggin)-legacy.md": [
+      -148.8,
+      -720.9,
+      2.3
+    ],
+    "_app/notebooklm/prompts/MAT101/MAT101-transcription.md": [
+      -778.3,
+      -43.1,
+      -320.1
+    ],
+    "_app/notebooklm/prompts/MAT101/MAT101-transcription-legacy.md": [
+      366,
+      -77.5,
+      -510.2
+    ],
+    "_app/notebooklm/prompts/MAT101/MAT101-study.md": [
+      426.9,
+      -106.3,
+      -469
+    ],
+    "_app/notebooklm/prompts/ETN806/ETN806-P1-legacy.md": [
+      -513.6,
+      78,
+      619.1
+    ],
+    "_app/notebooklm/prompts/ETN806/ETN806-P2.md": [
+      -160,
+      375.3,
+      -660.2
+    ],
+    "_app/notebooklm/prompts/ETN806/ETN806-P1.md": [
+      575.2,
+      -507.3,
+      45.8
+    ],
+    "_app/notebooklm/prompts/ETN806/ETN806-P3.md": [
+      -534.6,
+      251.4,
+      533.3
+    ],
+    "_app/notebooklm/general/tikzjax_guide-legacy.md": [
+      74.6,
+      -237.6,
+      -444
+    ],
+    "_app/notebooklm/general/obsidian_notation.md": [
+      88.7,
+      717.5,
+      338.4
+    ],
+    "_app/notebooklm/general/notebooklm-prompt-guide.md": [
+      315.8,
+      -301,
+      -346.6
+    ],
+    "_app/notebooklm/general/MAT101-notebooklm-user_guide.md": [
+      363.7,
+      -154.6,
+      -478.7
+    ],
+    "_app/_config/_TAB_note-system.md": [
+      225.5,
+      -372,
+      -328.9
+    ],
+    "_app/_config/_pdf_pp-system.md": [
+      105.7,
+      -456.6,
+      -346.6
+    ],
+    "_app/_config/_template-system.md": [
+      124.9,
+      -429.2,
+      -289
+    ],
+    "_app/_config/_notebooklm-system.md": [
+      267.2,
+      -278.8,
+      -425.8
+    ],
+    "_app/_config/_marginalia_system.md": [
+      -33.2,
+      -404.2,
+      -351.4
+    ],
+    "_app/_config/_library_ETN505(i).md": [
+      425.8,
+      -343.1,
+      -399.6
+    ],
+    "_app/_config/_library_MAT101.md": [
+      382.3,
+      -420.1,
+      -353.2
+    ],
+    "_app/_config/_graph-system.md": [
+      141.1,
+      -284.6,
+      -336.9
+    ],
+    "_app/_config/_ToDo-system.md": [
+      179.7,
+      -426.5,
+      -380.5
+    ],
+    "_app/_config/_sync-system.md": [
+      189.7,
+      -409.5,
+      -520.8
+    ],
+    "_app/_config/_note-system.md": [
+      85.2,
+      -339.2,
+      -314.7
+    ],
+    "_app/_config/_mindmap-system.md": [
+      129,
+      -377.1,
+      -276.8
+    ],
+    "_app/_config/_excalidraw-system.md": [
+      102.4,
+      -419.8,
+      -395.6
+    ],
+    "_app/_config/_galaxy-system.md": [
+      120.2,
+      -329.8,
+      -415.2
+    ],
+    "_app/_config/_claude-matter-boot.md": [
+      176.7,
+      -350.9,
+      -332.7
+    ],
+    "_app/_config/_library-system.md": [
+      321,
+      -358.8,
+      -418.9
+    ],
+    "_app/_config/_basic-memory-system.md": [
+      203.9,
+      -313.8,
+      -440.2
+    ],
+    "_app/_appnotes/pdf-guide.md": [
+      57.3,
+      -402.7,
+      -349.5
+    ],
+    "_app/_appnotes/supercharged_guide.md": [
+      56.6,
+      -247.1,
+      -553.8
+    ],
+    "_app/_appnotes/marginalia_explorer_guide.md.md": [
+      -119.8,
+      -436.6,
+      -465
+    ],
+    "_app/_appnotes/script_guide.md": [
+      145.6,
+      -293.8,
+      -634
+    ],
+    "_app/_appnotes/plugin_guide.md": [
+      47.9,
+      -347.7,
+      -574.3
+    ],
+    "_app/_appnotes/zettakasten_guide_temp.md": [
+      -44.4,
+      -391,
+      -543.5
+    ],
+    "_app/_appnotes/Rclone_guide.md": [
+      213.8,
+      -304.6,
+      -602.3
+    ],
+    "_app/_appnotes/PDF_PP-guide.md": [
+      130.6,
+      -450.3,
+      -438.4
+    ],
+    "_app/_appnotes/tagroute_parche/TagsRoute(legacy).md": [
+      106.4,
+      767.3,
+      143.6
+    ],
+    "_app/_appnotes/Marginalia_guide.md": [
+      -32.2,
+      -441.3,
+      -456.7
+    ],
+    "_app/_appnotes/obsidian_guide.md": [
+      70.3,
+      -454.3,
+      -498.4
+    ],
+    "_app/_appnotes/claude_prompts.md": [
+      214,
+      -209.9,
+      -476.1
+    ],
+    "_app/_appnotes/desmos_guide.md": [
+      22.9,
+      -275.5,
+      -449.6
+    ],
+    "_app/_appnotes/latex_guide.md": [
+      68,
+      -493.9,
+      -416.2
+    ],
+    "_app/_appnotes/class-notes-guide.md": [
+      97,
+      -268.4,
+      -322.1
+    ],
+    "_app/_appnotes/better-export-pdf.md": [
+      28.5,
+      -314,
+      -495.1
+    ],
+    "_app/_appnotes/cornell_guide.md": [
+      14,
+      -372.3,
+      -451.7
+    ],
+    "_app/shellcommands/rclone_script.md": [
+      216.4,
+      -365.8,
+      -650.2
+    ],
+    "_app/shellcommands/shellcommands_guide(scripts).md": [
+      69.2,
+      -294.7,
+      -690.8
+    ],
+    "_app/shellcommands/shellcmd_scripting_guide.md": [
+      3.4,
+      -270.8,
+      -667.4
+    ],
+    "_app/shellcommands/shellcmd_config_script.md": [
+      -40.8,
+      -300,
+      -683.7
+    ],
+    "_app/shellcommands/shellcmd_config_gral.md": [
+      -6.7,
+      -354.3,
+      -685.8
+    ],
+    "_app/solve/marginalia_solve.md": [
+      223.5,
+      -477.2,
+      -557.8
+    ],
+    "_app/solve/google_drive_solve.md": [
+      196.6,
+      218.7,
+      -704.1
+    ],
+    "_app/solve/git_solve.md": [
+      106,
+      -309.8,
+      -491.6
+    ],
+    "_app/solve/claude_solve.md": [
+      256.3,
+      -442.1,
+      -427.8
+    ],
+    "_app/Excalidraw/Template.excalidraw.md": [
+      398.3,
+      651.4,
+      196.1
+    ],
+    "_app/Excalidraw/Scripts/Downloaded/Slideshow.md": [
+      -175.1,
+      515,
+      -554.5
+    ],
+    "_app/Excalidraw/Scripts/Downloaded/Mindmap Builder.md": [
+      -537.1,
+      272.4,
+      -496
+    ],
+    "unresolved:MAT101-T00-metodo_signos": [
+      -543.7,
+      -37.8,
+      297.7
+    ],
+    "unresolved:I1.21.302-1.png": [
+      472.8,
+      375.5,
+      -196.6
+    ],
+    "unresolved:I1.22.302-2.png": [
+      509.4,
+      134.4,
+      -126.4
+    ],
+    "unresolved:I1.24.302-3.png": [
+      592,
+      234.3,
+      -83.4
+    ],
+    "unresolved:E1.2.302-3.png": [
+      297.2,
+      630.2,
+      -37.5
+    ],
+    "unresolved:E1.1.302-1.png": [
+      268.5,
+      479.8,
+      47.1
+    ],
+    "unresolved:E1.1.302-2.png": [
+      313.7,
+      496,
+      10.9
+    ],
+    "unresolved:E1.31.302-4.png": [
+      221.1,
+      503.3,
+      -10.9
+    ],
+    "unresolved:E1.32.302-5.png": [
+      284.7,
+      468.7,
+      -87
+    ],
+    "unresolved:E1.33.302-6.png": [
+      339.6,
+      450.4,
+      -27.8
+    ],
+    "unresolved:E1.34.302-7.png": [
+      217,
+      467,
+      -71.5
+    ],
+    "unresolved:P10-ETN302.0": [
+      -75.4,
+      249.3,
+      248.7
+    ],
+    "unresolved:P11-ETN302.0": [
+      243,
+      75.4,
+      174.7
+    ],
+    "unresolved:P12-ETN302.0": [
+      193.6,
+      322.1,
+      165.6
+    ],
+    "unresolved:AD2.1.302-1.svg": [
+      333.1,
+      -415.8,
+      210.1
+    ],
+    "unresolved:AD2.1.302-2.svg": [
+      263.4,
+      -518.2,
+      260.1
+    ],
     "unresolved:AD2.1.302-3.svg": [
-      69.9,
-      -436.8,
-      237.4
+      99.5,
+      -466.4,
+      285.1
     ],
     "unresolved:AD2.2.302-1.svg": [
-      83.4,
-      -449.7,
-      390.7
+      132.4,
+      -491.7,
+      396.6
     ],
     "unresolved:AD2.2.302-2.svg": [
-      322.3,
-      -391.4,
-      385.2
+      351.7,
+      -410.8,
+      425.2
     ],
     "unresolved:AD2.2.302-3.svg": [
-      234.3,
-      -479.2,
-      379.1
+      281.9,
+      -524.6,
+      381.4
     ],
     "unresolved:AAD2.11.302-1.svg": [
-      454.5,
-      -161.8,
-      450.8
+      518.8,
+      -152.4,
+      499.4
     ],
     "unresolved:AAD2.11.302-2.svg": [
-      466.4,
-      -280.7,
-      323.2
+      535.7,
+      -253,
+      385.2
     ],
     "unresolved:AAD2.11.302-3.svg": [
-      526.4,
-      -10.8,
-      132.7
+      576.4,
+      -12,
+      191.2
     ],
     "unresolved:AAD2.11.302-4.svg": [
-      594.7,
-      29.4,
-      300.6
+      642.9,
+      37.6,
+      355.8
     ],
     "unresolved:AAD2.11.302-5.svg": [
-      599.5,
-      -140.1,
-      333.6
+      669.7,
+      -136.2,
+      384.1
     ],
     "unresolved:AAD2.11.302-6.svg": [
-      397.1,
-      -230.8,
-      153.4
+      475.7,
+      -221.6,
+      231.1
     ],
     "unresolved:AAD2.12.302-01.svg": [
-      557.2,
-      -220.3,
-      194.3
+      622.9,
+      -213.1,
+      227.1
     ],
     "unresolved:AAD2.12.302-02.svg": [
-      573,
-      -151.5,
-      150.5
+      634,
+      -159.7,
+      196.6
     ],
     "unresolved:AAD2.12.302-1.svg": [
-      513.8,
-      14.5,
-      428.4
+      558.6,
+      15.7,
+      486.7
     ],
     "unresolved:AAD2.2.302-1.svg": [
-      493.2,
-      95.7,
-      223.9
+      535.6,
+      93.4,
+      316.8
     ],
     "unresolved:TD2.21.302-1.svg": [
-      128.3,
-      164.9,
-      586.6
+      110.6,
+      152.4,
+      633.6
     ],
     "unresolved:TD2.21.302-2.svg": [
-      115,
-      -148.2,
-      698.1
+      144.6,
+      -142.6,
+      756.3
     ],
     "unresolved:TD2.21.302-4.svg": [
-      -42.8,
-      -267.8,
-      553.7
+      -37.1,
+      -258.1,
+      610
     ],
     "unresolved:TD2.21.302-3.svg": [
-      -53.7,
-      -269.2,
-      473.4
+      -41.2,
+      -261.7,
+      547.4
     ],
     "unresolved:TD2.21.302-5.svg": [
-      -111.6,
-      -219.1,
-      505.4
+      -86,
+      -229.4,
+      578.4
     ],
     "unresolved:TD2.22.302-5.svg": [
-      226.8,
-      35.6,
-      651.8
+      227.8,
+      23.4,
+      723
     ],
     "unresolved:TD2.23.302-1.svg": [
-      108.5,
-      -260,
-      593.4
+      126.3,
+      -240.8,
+      653.5
     ],
     "unresolved:TD2.23.302-2.svg": [
-      79.5,
-      84.2,
-      684.8
+      97.8,
+      76.3,
+      743
     ],
     "unresolved:TD2.31.302-1.svg": [
-      -205.4,
-      241.2,
-      584.6
+      -205.1,
+      244.5,
+      662.5
     ],
     "unresolved:TD2.31.302-2.svg": [
-      -206.1,
-      39.4,
-      674
+      -204.1,
+      33.8,
+      720.3
     ],
     "unresolved:TD2.31.302-3.svg": [
-      -4,
-      289.1,
-      641.6
+      -38.7,
+      283.5,
+      701
     ],
     "unresolved:TD2.31.302-4.svg": [
-      -86.5,
-      301.8,
-      501.5
+      -86.6,
+      295.9,
+      572.8
     ],
     "unresolved:TD2.31.302-5.svg": [
-      -249.9,
-      88.7,
-      521.1
+      -240.5,
+      73.6,
+      580.8
     ],
     "unresolved:WD2.302-1.svg": [
-      256.2,
-      -1.7,
-      425
+      221.3,
+      29.4,
+      489.3
     ],
     "unresolved:TD2.22.302-1.svg": [
-      156.6,
-      -116.1,
-      543.3
+      134.4,
+      -105.2,
+      590.9
     ],
     "unresolved:TD2.22.302-2.svg": [
-      46.4,
-      -119.5,
-      454.5
+      48.2,
+      -109.7,
+      535.5
     ],
     "unresolved:TD2.22.302-3.svg": [
-      23.3,
-      -105,
-      556
+      24.4,
+      -87.5,
+      607.3
     ],
     "unresolved:TD2.22.302-4.svg": [
-      1.7,
-      -66.4,
-      474.7
+      13.1,
+      -61.9,
+      528.3
     ],
     "unresolved:TD2.1.302-1.svg": [
-      29.7,
-      15,
-      505.1
+      31.2,
+      18,
+      564
     ],
     "unresolved:TD2.1.302-2.svg": [
-      57.8,
-      -55.5,
-      600.9
+      58.8,
+      -51.1,
+      648.9
     ],
     "unresolved:TD2.23.302-3.svg": [
-      43.6,
-      -21.1,
-      434
+      35.7,
+      -17.3,
+      507
     ],
     "unresolved:TD3.2.302-1.svg": [
-      -429.9,
-      277.9,
-      101.4
+      -477.7,
+      302.6,
+      85.6
     ],
     "unresolved:TD3.31.302-1.svg": [
-      -343.3,
-      374.7,
-      -52.8
+      -383.1,
+      407.3,
+      -54.9
     ],
     "unresolved:TD3.31.302-2.svg": [
-      -301.1,
-      351.5,
-      -110
+      -363.6,
+      391.8,
+      -107.8
     ],
     "unresolved:TI3.51.302-1.png": [
-      -550.8,
-      -92.3,
-      24.7
+      -585.2,
+      -122,
+      -17.8
     ],
     "unresolved:TI3.512.302-1.png": [
-      -431.5,
-      -366.6,
-      6
+      -494.1,
+      -395.3,
+      -45
     ],
     "unresolved:0.1/302/TI3.513.302-1.png": [
-      -356.4,
-      -397.3,
-      -104.6
+      -412.5,
+      -410.1,
+      -144.4
     ],
     "unresolved:I3.521.302-1.png": [
-      -530.8,
-      -243.9,
-      -289.8
+      -593.6,
+      -271.1,
+      -319.5
     ],
     "unresolved:I3.522.302-1.png": [
-      -630.3,
-      -167.6,
-      -131.6
+      -691.7,
+      -204.7,
+      -179.9
     ],
     "unresolved:I3.523.302-1.png": [
-      -488,
-      10.1,
-      -134.2
+      -526.2,
+      -37.1,
+      -182.2
     ],
     "unresolved:0.1/I3.6.302-1.png": [
-      -485.3,
-      -371.3,
-      -204.3
+      -560.2,
+      -393.9,
+      -242
     ],
     "unresolved:0.1/I3.6.302-2.png": [
-      -413.2,
-      -157.2,
-      -328.8
+      -458.7,
+      -189.9,
+      -342.6
     ],
     "unresolved:0.1/I3.6.302-3.png": [
-      -379,
-      -339.7,
-      -257.7
+      -439.7,
+      -364.6,
+      -280.1
     ],
     "unresolved:0.1/I3.6.302-4.png": [
-      -526.5,
-      -78.3,
-      -268.4
+      -575.7,
+      -105.7,
+      -294.2
     ],
     "unresolved:0.1/I3.6.302-05.png": [
-      -561,
-      -334.2,
-      -17.1
+      -632.9,
+      -384.4,
+      -68.6
     ],
     "unresolved:0.1/I3.6.302-5.png": [
-      -605.6,
-      -318.4,
-      -79.3
+      -667.3,
+      -365.8,
+      -111.3
     ],
     "unresolved:P4-ETN302.0": [
-      -9.5,
-      272.2,
-      -49.7
+      20.3,
+      266.9,
+      7.3
     ],
     "unresolved:P5-ETN302.0": [
-      -50.1,
-      71,
-      276.7
+      -0.3,
+      86.4,
+      281.1
     ],
     "unresolved:P6-ETN302.0": [
-      6.4,
-      355.9,
-      137.5
+      36.6,
+      358.9,
+      175.8
     ],
     "unresolved:P7-ETN302.0": [
-      -17.6,
-      -53.6,
-      145.2
+      11.4,
+      -14.5,
+      196.5
     ],
     "unresolved:P8-ETN302.0": [
-      76.4,
-      313.4,
-      259.3
+      99.9,
+      324.3,
+      289.9
     ],
     "unresolved:P9-ETN302.0": [
-      208.2,
-      29.2,
-      -2.5
+      229.9,
+      65.5,
+      65.2
     ],
     "unresolved:doodle_20260723_151457.png": [
-      -1,
-      -534.3,
-      -5.8
+      -25.2,
+      -585.3,
+      -22.5
     ],
     "unresolved:doodle_20260723_163008.png": [
-      308.2,
-      -451.7,
-      1.4
+      298.8,
+      -475.7,
+      0.7
     ],
     "unresolved:doodle_20260723_163953.png": [
-      -113.1,
-      531.9,
-      140.6
+      -108.8,
+      563.2,
+      108.9
     ],
     "unresolved:doodle_20260723_164254.png": [
-      -132.3,
-      553.9,
-      -43.9
+      -132.8,
+      578.8,
+      -23.2
     ],
     "unresolved:doodle_20260723_164408.png": [
-      -115.2,
-      457.5,
-      -141.3
+      -108.2,
+      528,
+      -131.5
     ],
     "unresolved:marginalia_explorer_guide": [
-      -93.4,
-      -492,
-      -336.2
+      -94.8,
+      -420.9,
+      -404.5
     ],
     "unresolved:_app/notebooklm/guides/ETN505_library": [
-      504.4,
-      -292,
-      -343.1
+      502.7,
+      -337.3,
+      -371.6
     ],
     "unresolved:_config/_app/_config/_notebooklm-system": [
-      383.7,
-      -100.3,
-      -484.7
+      414.2,
+      -111.4,
+      -533.4
     ],
     "unresolved:MAT101_T1-Funciones-reales 1-13-07-2026_21-04-01.png": [
-      -270.7,
-      -643.6,
-      153
+      -296.1,
+      -684.4,
+      184.7
     ],
     "unresolved:MAT101_T1-Funciones-reales 1-13-07-2026_21-00-56.png": [
-      -199.5,
-      -590.1,
-      291.7
+      -231.5,
+      -628.8,
+      287.6
     ],
     "unresolved:MAT101_T1-Funciones-reales 1-13-07-2026_20-58-01.png": [
-      -260.1,
-      -563.4,
-      303.9
+      -297.2,
+      -632.7,
+      313.2
     ],
     "unresolved:MAT101_T1-Funciones-reales 1-13-07-2026_20-53-05.png": [
-      -322.6,
-      -542.6,
-      251.6
+      -342.7,
+      -602.1,
+      271.5
     ],
     "unresolved:MAT101_T1-Funciones-reales 1-13-07-2026_20-44-17.png": [
-      -201.4,
-      -596.5,
-      154
+      -235,
+      -640.7,
+      188.7
     ],
     "unresolved:MAT101_T1-Funciones-reales 1-14-07-2026_00-09-12.png": [
-      -306.4,
-      -550.2,
-      166.2
+      -342,
+      -637.3,
+      193.7
     ],
     "unresolved:MAT101_T1-Funciones-reales 1-14-07-2026_00-03-59.png": [
-      -179.4,
-      -632.5,
-      234.4
+      -214.2,
+      -659.3,
+      248
     ],
     "unresolved:Marginalia Inbox-26-07-2026_22-21-08.png": [
-      68.7,
-      599,
-      162.9
+      69.4,
+      622.7,
+      159.3
     ],
     "unresolved:_assets/ima-1.png": [
-      147.5,
-      310.4,
-      -389.8
+      128.6,
+      331.3,
+      -354.1
     ],
     "unresolved:...": [
-      204.7,
-      124.4,
-      -284.8
+      191.6,
+      129.7,
+      -261.2
     ],
     "unresolved:_app/_projects/tsk_alx-rul": [
-      -227.9,
-      -445.2,
-      -311.9
+      -203.6,
+      -398.2,
+      -338
     ],
     "unresolved:void 1-26-07-2026_21-25-07.png": [
-      146,
+      133.6,
       424.3,
-      -282.5
+      -277.9
     ]
   }
 }

@@ -5,11 +5,11 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
-        "Rubbish",
         "excluir-appearance-json-mega.md",
         "anki_galaxy_guide.md",
         "Evidence Boards",
         "Pinboards",
+        "Rubbish",
         "Untitled.md",
         "void 1.md",
         "void 2.md",
@@ -2863,10 +2863,7 @@
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
-      "customOrder": [
-        "Marginalia Inbox-27-07-2026_16-37-05.png",
-        "Marginalia Inbox-27-07-2026_16-36-06.png"
-      ]
+      "customOrder": []
     },
     "wolfram alpha example.md": {
       "isPinned": false,
@@ -2895,6 +2892,49 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": []
+    },
+    "Rubbish": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "2026-07-26",
+        "tmp",
+        "section.md"
+      ]
+    },
+    "Rubbish/2026-07-26": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json",
+        "appearance.json"
+      ]
+    },
+    "Rubbish/2026-07-26/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-07-26/appearance.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/tmp": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "lock"
+      ]
+    },
+    "Rubbish/tmp/lock": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/section.md": {
+      "isPinned": false,
+      "isHidden": false
     },
     "Untitled.md": {
       "isPinned": false,
@@ -3135,171 +3175,6 @@
       "isHidden": false
     },
     "anki_galaxy_guide.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/Marginalia Inbox-27-07-2026_16-36-06.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/Marginalia Inbox-27-07-2026_16-37-05.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "2026-07-26",
-        "section.md",
-        "2026-07-27",
-        "tmp"
-      ]
-    },
-    "Rubbish/2026-07-26": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "appearance.json",
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-07-26/appearance.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-26/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/section.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-27": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "2026-07-27 16.31.58.0",
-        "2026-07-27 16.37.21.0",
-        "2026-07-27 16.37.29.0",
-        "2026-07-27 16.32.15.0",
-        "2026-07-27 16.43.16.0",
-        "2026-07-27 16.43.25.0",
-        "2026-07-27 16.39.56.0",
-        "data.json",
-        "Marginalia Inbox.md",
-        "app.json"
-      ]
-    },
-    "Rubbish/2026-07-27/2026-07-27 16.31.58.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-07-27/2026-07-27 16.31.58.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-27/2026-07-27 16.37.21.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-07-27/2026-07-27 16.37.21.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-27/2026-07-27 16.37.29.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Marginalia Inbox.md"
-      ]
-    },
-    "Rubbish/2026-07-27/2026-07-27 16.37.29.0/Marginalia Inbox.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-27/2026-07-27 16.32.15.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-07-27/2026-07-27 16.32.15.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-27/2026-07-27 16.43.16.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-07-27/2026-07-27 16.43.16.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-27/2026-07-27 16.43.25.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-07-27/2026-07-27 16.43.25.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-27/2026-07-27 16.39.56.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-07-27/2026-07-27 16.39.56.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-27/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-27/Marginalia Inbox.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-07-27/app.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/tmp": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "lock"
-      ]
-    },
-    "Rubbish/tmp/lock": {
       "isPinned": false,
       "isHidden": false
     }
