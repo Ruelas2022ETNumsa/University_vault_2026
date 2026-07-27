@@ -478,43 +478,6 @@ El comando "Insert Margin Note" detecta el contexto:
 
 ---
 
-## 14. Pdf Doodle & Harvest
-
-> Probado. Addon — activar en Settings → Addons → `Pdf Doodle & Harvest`. Requiere reinicio de Obsidian.
-
-Permite dibujar sobre un PDF abierto en Obsidian y capturar texto seleccionado junto al doodle directamente en el archivo `dest:`.
-
-**Activar:** Command Palette → `Cornell Marginalia: Start Drawing in PDF`.
-
-**Flujo completo:**
-
-1. Abrir el PDF en Obsidian y navegar a la plana deseada **antes** de activar el comando.
-2. Activar el comando — notificación: *"draw. double-click to freeze and select text"*.
-3. Dibujar sobre el PDF con el mouse (calidad limitada sin stylus/tablet).
-4. Doble click → modo selección de texto sobre el PDF.
-5. Seleccionar el texto deseado → `Ctrl+C` (obligatorio — sin esto el texto no llega al destino).
-6. Presionar el botón ⚡ (trueno) que aparece en la esquina inferior derecha del PDF.
-7. Notificación: *"harvest stored correctly"* + renombramiento automático de la imagen.
-8. Resultado en el archivo `dest:`:
-
-```
-(texto seleccionado del PDF)%%> img:[[Marginalia Inbox-DD-MM-YYYY_HH-MM-SS.png]]%%
----
-```
-
-**Comportamiento confirmado:**
-
-- Solo necesita el PDF abierto — no requiere nota `.md` en paralelo.
-- La imagen guardada en `_assets/` captura **solo el doodle dibujado**, no el texto ni la región del PDF.
-- Sin doodle (comando → doble click → selección → trueno): funciona igual, pero inserta una imagen en blanco.
-- La navegación de páginas debe hacerse **antes** de activar el comando — cambiar de plana después no funciona.
-- El texto seleccionado va al `.md` directamente; `Ctrl+C` es el paso crítico.
-
-> ⚠️ El dibujo con mouse produce trazos de baja calidad. Pensado para uso con stylus o tablet.
-> ✅ Útil para capturar citas textuales de PDF con contexto visual (doodle) en una sola acción.
-
----
-
 ## 20. Configuración del plugin
 
 > Referencia completa de Settings → Cornell Marginalia.
@@ -746,6 +709,43 @@ Valor actual:
 ```
 
 > Sirve para controlar el formato del texto insertado al hacer drag & drop de un hilo a una nota.
+
+---
+
+## 14. Pdf Doodle & Harvest
+
+> Probado. Addon — activar en Settings → Addons → `Pdf Doodle & Harvest`. Requiere reinicio de Obsidian.
+
+Permite dibujar sobre un PDF abierto en Obsidian y capturar texto seleccionado junto al doodle directamente en el archivo `dest:`.
+
+**Activar:** Command Palette → `Cornell Marginalia: Start Drawing in PDF`.
+
+**Flujo completo:**
+
+1. Abrir el PDF en Obsidian y navegar a la plana deseada **antes** de activar el comando.
+2. Activar el comando — notificación: *"draw. double-click to freeze and select text"*.
+3. Dibujar sobre el PDF con el mouse (calidad limitada sin stylus/tablet).
+4. Doble click → modo selección de texto sobre el PDF.
+5. Seleccionar el texto deseado → `Ctrl+C` (obligatorio — sin esto el texto no llega al destino).
+6. Presionar el botón ⚡ (trueno) que aparece en la esquina inferior derecha del PDF.
+7. Notificación: *"harvest stored correctly"* + renombramiento automático de la imagen.
+8. Resultado en el archivo `dest:`:
+
+```
+(texto seleccionado del PDF)%%> img:[[Marginalia Inbox-DD-MM-YYYY_HH-MM-SS.png]]%%
+---
+```
+
+**Comportamiento confirmado:**
+
+- Solo necesita el PDF abierto — no requiere nota `.md` en paralelo.
+- La imagen guardada en `_assets/` captura **solo el doodle dibujado**, no el texto ni la región del PDF.
+- Sin doodle (comando → doble click → selección → trueno): funciona igual, pero inserta una imagen en blanco.
+- La navegación de páginas debe hacerse **antes** de activar el comando — cambiar de plana después no funciona.
+- El texto seleccionado va al `.md` directamente; `Ctrl+C` es el paso crítico.
+
+> ⚠️ El dibujo con mouse produce trazos de baja calidad. Pensado para uso con stylus o tablet.
+> ✅ Útil para capturar citas textuales de PDF con contexto visual (doodle) en una sola acción.
 
 ---
 

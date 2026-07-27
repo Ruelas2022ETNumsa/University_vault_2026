@@ -4,10 +4,6 @@
 
 
 
-USUALMENTE EL MAYOR PROBLEMA ASOCIADO AL DISEÑO DE UNA INTERFACE ES EL DE PRECISAR LAS FUNCIONES Y LA TEMPORIZACION DE LAS LINEAS DE ENTRADA Y SALIDA ASOCIADAS CON LOS SISTEMAS A INTERCONECTARSE.%%> img:[[Marginalia Inbox-26-07-2026_22-08-32.png]]%%
-
----
-
-La interface permite la interconexión de 2 sistemas%%> img:[[Marginalia Inbox-26-07-2026_22-09-54.png]]%%
+MODULE: PRINTER INTERFACE%%> img:[[Marginalia Inbox-26-07-2026_22-21-08.png]]%%
 
 ---

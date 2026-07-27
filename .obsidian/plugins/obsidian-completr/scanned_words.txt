@@ -7051,6 +7051,7 @@ thviy
 terminando
 tableta
 tableros
+textuales
 ToDo
 Templater
 Text
@@ -29369,6 +29370,8 @@ Pegar
 Print
 Pinning
 Previene
+PRINTER
+Pensado
 del
 date
 de
@@ -35608,6 +35611,7 @@ difuminen
 deseleccionar
 diferenciar
 demas
+dibujado
 Vault
 Verificar
 Variables
@@ -63599,6 +63603,7 @@ superposici
 sidebars
 solapamiento
 superpone
+stored
 vault
 vil
 ver
@@ -85316,6 +85321,8 @@ revisiones
 rutinas
 reciben
 resuelta
+renombramiento
+registradas
 notes
 notas
 nuevas
@@ -100087,6 +100094,10 @@ centralizar
 categorizar
 cronol
 conversacional
+clasificar
+correctly
+comparados
+cruzadas
 updated
 un
 universo
@@ -129097,6 +129108,7 @@ IISX
 Introductorios
 Integrados
 Interface
+INTERACTUANTES
 Funci
 File
 Fase
@@ -164312,6 +164324,7 @@ panor
 procesarlas
 personalizable
 paoeu
+plana
 min
 mica
 movimiento
@@ -193425,6 +193438,7 @@ exportados
 expongan
 espaciada
 extraerse
+elismo
 Motor
 Media
 Mantiene
@@ -201789,6 +201803,9 @@ MKsk
 Mundo
 MxjjIq
 MtDlQXQn
+MODULOS
+MODULE
+Menu
 Lectura
 LaTeX
 Linter
@@ -223613,6 +223630,7 @@ insertado
 interactivo
 inflar
 ingesta
+inteligencias
 Dependencia
 Dropbox
 Dataview
@@ -250851,6 +250869,7 @@ fouries
 filtrando
 flotantes
 fino
+freeze
 haya
 hace
 hacer
@@ -257514,6 +257533,7 @@ hvWS
 hYgq
 heredan
 habitual
+harvest
 que
 quedan
 queda

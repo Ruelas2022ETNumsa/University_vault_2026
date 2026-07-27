@@ -2862,6 +2862,11 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "Marginalia Inbox-26-07-2026_22-21-08.png",
+        "Marginalia Inbox-26-07-2026_22-20-13.png",
+        "Marginalia Inbox-26-07-2026_22-19-41.png",
+        "Marginalia Inbox-26-07-2026_22-15-57.png",
+        "Marginalia Inbox-26-07-2026_22-14-29.png",
         "Marginalia Inbox-26-07-2026_22-09-54.png",
         "Marginalia Inbox-26-07-2026_22-08-32.png",
         "Marginalia Inbox-26-07-2026_22-03-54.png",
@@ -3258,6 +3263,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "tsk_alx-rul 1.md",
         "tsk_pdf_marginalia_pp.md",
         "tsk_alx-rul.md",
         "tsk_alxgml.md",
@@ -3356,6 +3362,30 @@
       "isHidden": false
     },
     "_assets/Marginalia Inbox-26-07-2026_22-09-54.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/Marginalia Inbox-26-07-2026_22-14-29.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/Marginalia Inbox-26-07-2026_22-15-57.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/Marginalia Inbox-26-07-2026_22-19-41.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/Marginalia Inbox-26-07-2026_22-20-13.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/Marginalia Inbox-26-07-2026_22-21-08.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_projects/tsk_alx-rul 1.md": {
       "isPinned": false,
       "isHidden": false
     }

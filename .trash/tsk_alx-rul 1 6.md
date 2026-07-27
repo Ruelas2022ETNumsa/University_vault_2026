@@ -4,27 +4,22 @@ date: 2026-07-20
 status: creciente
 ---
 
+comentario a ignorar: "9:10" **alxrul** para que actualice este handoff y todo esto.
+**importante handoff desactualizado revisar lo demas y analizar que hacer**
+
 # tsk — Revisión e integración de Cornell Marginalia
 
 ---
 
 ## Handoff
 
-**Última sesión:** 2026-07-26
-**Retomar desde:** Bloque B (Settings). EXP-05/06/07 cerrados. EXP-10/12 cerrados. A6 completado. Pendientes de S7: Libro cerrado (Direct PDF mode), Cerebro (Active recall PDF), Globo (Overlay mode) — probar en sesión dedicada a PDFs. Anki Advanced Sync pendiente de prueba.
+**Última sesión:** 2026-07-25
+**Retomar desde:** Board completo — todos los botones documentados. Próximo foco: EXP-10 (drag & drop a Canvas/Excalidraw), EXP-12 (navegación por teclado), y pendientes de S7 (PDF mode, active recall, overlay).
 **Completado esta sesión:**
-- EXP-10 — drag & drop a Canvas y markdown documentado (Flujo F). Método 1 (directo) y Método 2 (export to board → canvas) comparados y documentados.
-- EXP-12 — navegación por teclado completada: H, Spacebar+Alt+S (mass stitch), P/Enter/Shift+↑↓/Menu key+Enter (pin), Alt+1-4 (tabs). Ctrl+Enter confirmado como no funcional en v4.9.0.
-- Flujo C reestructurado en C1 (stitch individual UI) y C2 (mass stitch por teclado) con callout de limitación de flechas.
-- EXP-05, EXP-06, EXP-07 cerrados — comportamiento ya documentado en A11 de `_marginalia_system.md`.
-- A6 en `_marginalia_system.md` — resumen con decisiones Galaxy y tabla de uso por tab.
-- Sección 5 de `Marginalia_guide.md` — simplificada con referencias cruzadas.
-- Sección 2 de `Marginalia_guide.md` — actualizada con los 8 tags Galaxy, colores hex y RGB reales, ejemplos por tag.
-- Sección 11 de `Marginalia_guide.md` — corregida (Alt+C requiere Explorer abierto, no modal flotante).
-- Sección 13 de `Marginalia_guide.md` — shortcuts actualizados: Ctrl+Enter tachado, Menu key+Enter agregado, Alt+A y Alt+↑↓←→ en Pinboard.
-- Sección 14 de `Marginalia_guide.md` — Pdf Doodle & Harvest documentado: flujo completo probado, comportamiento confirmado, limitaciones registradas.
-- Pdf Doodle & Harvest probado — flujo: PDF abierto → comando → dibujo → doble click → selección → Ctrl+C → trueno → harvest en dest:.
-**Próximo paso:** Bloque B (Settings) — B1 Appearance & Rendering primero. O sesión dedicada a PDFs (3 botones S7 pendientes + Anki Advanced Sync).
+- Board CS — 7 botones documentados: Copy to clipboard, Export to markdown, Export to canvas, Zen doodle mode (SuperDoodle), Clear board, Import skeleton, Auto-add copied text.
+- Flujo E — actualizado con pasos reales probados.
+- EXP-08 y EXP-09 marcados como completos.
+**Próximo paso:** EXP-10 drag & drop desde Explorer a Canvas/Excalidraw, o continuar con S7 filtros PDF pendientes.
 
 ---
 
@@ -170,7 +165,7 @@ Recorrer sección por sección. Para cada setting: entender, decidir valor Galax
 - [ ] **Gamification & User Profile** — probar o descartar directo.
 - [ ] **Custom Explorer Background** — cosmético, probar o ignorar.
 - [ ] **Time Machine & Rhizome** — canvas cronológico. ¿Útil para revisión de parcial?
-- [x] **Pdf Doodle & Harvest** — dibujar sobre PDFs en Obsidian. Flujo completo probado. Ver sección 14 de `Marginalia_guide.md`.
+- [ ] **Pdf Doodle & Harvest** — dibujar sobre PDFs en Obsidian. ¿Interacción con PDF++?
 - [ ] **Super Doodle** — extensión del Doodle Engine. Probar junto con A10.
 - [ ] **Blurting Mode (1-3-7)** — repetición espaciada desde el Explorer. ¿Reemplaza algo o complementa?
 - [ ] **Margidoro Engine** — Pomodoro + marginalia. Probar si se usa Pomodoro.
