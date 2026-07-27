@@ -5,6 +5,8 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
+        "excluir-appearance-json-mega.md",
+        "anki_galaxy_guide.md",
         "Evidence Boards",
         "Pinboards",
         "Rubbish",
@@ -2861,99 +2863,7 @@
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
-      "customOrder": [
-        "Marginalia Inbox-26-07-2026_22-21-08.png",
-        "Marginalia Inbox-26-07-2026_22-20-13.png",
-        "Marginalia Inbox-26-07-2026_22-19-41.png",
-        "Marginalia Inbox-26-07-2026_22-15-57.png",
-        "Marginalia Inbox-26-07-2026_22-14-29.png",
-        "Marginalia Inbox-26-07-2026_22-09-54.png",
-        "Marginalia Inbox-26-07-2026_22-08-32.png",
-        "Marginalia Inbox-26-07-2026_22-03-54.png",
-        "void 1-26-07-2026_22-01-53.png",
-        "Marginalia Inbox-26-07-2026_22-01-24.png",
-        "Marginalia Inbox-26-07-2026_21-54-32.png",
-        "void 1-26-07-2026_21-25-07.png",
-        "boarslug.png",
-        "clip_20260725_225138.png",
-        "doodle_20260723_151457.png",
-        "doodle_20260723_163008.png",
-        "doodle_20260723_163953.png",
-        "doodle_20260723_164254.png",
-        "doodle_20260723_164408.png",
-        "doodle_20260725_225138.png",
-        "doodle_20260725_225909.png",
-        "Marginalia Inbox-23-07-2026_19-48-26.png",
-        "Marginalia Inbox-26-07-2026_00-10-44.png",
-        "Marginalia Inbox-26-07-2026_00-12-33.png",
-        "Marginalia Inbox-26-07-2026_00-14-48.png",
-        "superdoodle_20260723_150411.png",
-        "superdoodle_20260723_154316.png",
-        "superdoodle_20260725_224841.png",
-        "superdoodle_20260725_225329.png",
-        "Untitled-19-07-2026_17-20-32.png",
-        "void-24-07-2026_11-45-46.png",
-        "Untitled-15-07-2026_22-40-34.png",
-        "Untitled-15-07-2026_22-40-33.png",
-        "Untitled-15-07-2026_22-36-49.png",
-        "Untitled-15-07-2026_22-36-48.png",
-        "Untitled-15-07-2026_22-32-05.png",
-        "Untitled-15-07-2026_22-32-04.png",
-        "Untitled-15-07-2026_22-26-44.png",
-        "Untitled-15-07-2026_22-26-43.png",
-        "ima-1.png",
-        "Untitled-15-07-2026_22-23-04.png",
-        "Untitled-15-07-2026_22-22-10.png",
-        "Untitled-15-07-2026_22-21-20.png"
-      ]
-    },
-    "_assets/Untitled-15-07-2026_22-21-20.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/Untitled-15-07-2026_22-22-10.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/Untitled-15-07-2026_22-23-04.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/ima-1.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/Untitled-15-07-2026_22-26-43.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/Untitled-15-07-2026_22-26-44.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/Untitled-15-07-2026_22-32-04.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/Untitled-15-07-2026_22-32-05.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/Untitled-15-07-2026_22-36-48.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/Untitled-15-07-2026_22-36-49.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/Untitled-15-07-2026_22-40-33.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/Untitled-15-07-2026_22-40-34.png": {
-      "isPinned": false,
-      "isHidden": false
+      "customOrder": []
     },
     "wolfram alpha example.md": {
       "isPinned": false,
@@ -3086,82 +2996,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_assets/boarslug.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/clip_20260725_225138.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/doodle_20260723_151457.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/doodle_20260723_163008.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/doodle_20260723_163953.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/doodle_20260723_164254.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/doodle_20260723_164408.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/doodle_20260725_225138.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/doodle_20260725_225909.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/Marginalia Inbox-23-07-2026_19-48-26.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/Marginalia Inbox-26-07-2026_00-10-44.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/Marginalia Inbox-26-07-2026_00-12-33.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/Marginalia Inbox-26-07-2026_00-14-48.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/superdoodle_20260723_150411.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/superdoodle_20260723_154316.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/superdoodle_20260725_224841.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/superdoodle_20260725_225329.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/Untitled-19-07-2026_17-20-32.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/void-24-07-2026_11-45-46.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_blueprint": {
       "isPinned": false,
       "isHidden": false,
@@ -3263,7 +3097,6 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "tsk_alx-rul 1.md",
         "tsk_pdf_marginalia_pp.md",
         "tsk_alx-rul.md",
         "tsk_alxgml.md",
@@ -3337,55 +3170,11 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_assets/void 1-26-07-2026_21-25-07.png": {
+    "excluir-appearance-json-mega.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_assets/Marginalia Inbox-26-07-2026_21-54-32.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/Marginalia Inbox-26-07-2026_22-01-24.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/void 1-26-07-2026_22-01-53.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/Marginalia Inbox-26-07-2026_22-03-54.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/Marginalia Inbox-26-07-2026_22-08-32.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/Marginalia Inbox-26-07-2026_22-09-54.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/Marginalia Inbox-26-07-2026_22-14-29.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/Marginalia Inbox-26-07-2026_22-15-57.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/Marginalia Inbox-26-07-2026_22-19-41.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/Marginalia Inbox-26-07-2026_22-20-13.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/Marginalia Inbox-26-07-2026_22-21-08.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_projects/tsk_alx-rul 1.md": {
+    "anki_galaxy_guide.md": {
       "isPinned": false,
       "isHidden": false
     }

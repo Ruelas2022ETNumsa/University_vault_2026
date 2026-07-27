@@ -14961,6 +14961,7 @@ TUUlMM
 TNNy
 TiIxT
 TgDw
+True
 Sistema
 Sync
 Save
@@ -35612,6 +35613,10 @@ deseleccionar
 diferenciar
 demas
 dibujado
+decks
+desktop
+dedicadas
+debanjandhar
 Vault
 Verificar
 Variables
@@ -63604,6 +63609,8 @@ sidebars
 solapamiento
 superpone
 stored
+subdecks
+sobreescriba
 vault
 vil
 ver
@@ -70953,6 +70960,8 @@ vbdw
 vZea
 vffV
 viernes
+vincular
+verificarlo
 audience
 activo
 auto
@@ -77928,6 +77937,10 @@ awareness
 agenda
 addons
 ajfO
+addon
+ankiweb
+apagados
+apagando
 related
 recomendados
 ribbon
@@ -85323,6 +85336,10 @@ reciben
 resuelta
 renombramiento
 registradas
+racha
+reverso
+reflejados
+rompiendo
 notes
 notas
 nuevas
@@ -100098,6 +100115,12 @@ clasificar
 correctly
 comparados
 cruzadas
+comunicarse
+conectarse
+calibre
+chocar
+cloze
+confirmando
 updated
 un
 universo
@@ -121218,6 +121241,9 @@ Contadores
 Conserva
 Capturador
 Calendario
+CORS
+Cards
+Cloze
 Instalados
 Instalado
 Instalar
@@ -136125,6 +136151,7 @@ Fzvf
 Familias
 Flexbox
 Familia
+FSRS
 Estado
 Excalidraw
 EPUBs
@@ -144000,6 +144027,10 @@ Explora
 Entregar
 Entregable
 Entregables
+Enhanced
+Exporta
+Excluir
+Entr
 Obsidian
 OmniSearch
 Ocultar
@@ -150951,6 +150982,10 @@ Opzm
 OINNZ
 OOIdI
 OTRO
+Oscuro
+Options
+Optimize
+Occlusion
 Auto
 Annotator
 Autocompletado
@@ -157352,6 +157387,10 @@ Addon
 Anclar
 Ampl
 Awig
+AnkiConnect
+AnkiDroid
+AnkiWeb
+AnkiSync
 push
 pull
 para
@@ -164325,6 +164364,12 @@ procesarlas
 personalizable
 paoeu
 plana
+probarse
+publicidad
+pure
+potente
+propuesto
+pisa
 min
 mica
 movimiento
@@ -172435,6 +172480,8 @@ masiva
 marco
 marcadas
 motivaci
+moderno
+manej
 YAML
 Ya
 You
@@ -179689,6 +179736,7 @@ YSdU
 Ybdja
 YVxP
 YUbH
+Yanki
 Bot
 Baja
 Builder
@@ -193439,6 +193487,11 @@ expongan
 espaciada
 extraerse
 elismo
+escanear
+excluirlo
+encendidos
+entr
+encendiendo
 Motor
 Media
 Mantiene
@@ -223631,6 +223684,7 @@ interactivo
 inflar
 ingesta
 inteligencias
+integre
 Dependencia
 Dropbox
 Dataview
@@ -230656,6 +230710,8 @@ DOZC
 Digitales
 Dispositivos
 Difumina
+Documento
+Dark
 Remotely
 Raz
 Revisa
@@ -238623,6 +238679,8 @@ Reordenar
 Refrescar
 Rastrea
 Relacionada
+Reiniciar
+Retention
 Hider
 Hace
 Herramientas
@@ -244423,6 +244481,8 @@ HggiP
 HusX
 HjSPILXR
 Hotkeys
+Heatmap
+Hierarchical
 filtrar
 formato
 faltantes
@@ -265388,6 +265448,7 @@ qfZX
 qlRq
 qjFx
 qGMG
+quieren
 University
 Usar
 Un
@@ -273568,6 +273629,7 @@ Uthii
 UjwY
 UUwoLh
 UWsj
+Upload
 Nombre
 Notas
 No
@@ -281066,6 +281128,7 @@ NAgd
 Nidb
 NbZz
 Necesario
+Night
 originales
 observatory
 oficial
@@ -304312,6 +304375,7 @@ QWHO
 QfjX
 QYJA
 QVPVl
+Quedarse
 ya
 yaml
 yo
