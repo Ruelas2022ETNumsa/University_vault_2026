@@ -5,7 +5,7 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
-        "Obsidian_KM06qKqHe9.png",
+        "5TxHZDbilb.png",
         "pruebaexcali",
         "anki-opcionB-flashcards.md",
         "obsidian-to-anki-plugin-3.6.0.zip",
@@ -1134,6 +1134,8 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "RENOMBRAR-28-07-2026 15.24.40.excalidraw.svg",
+        "RENOMBRAR-28-07-2026 15.24.40.excalidraw.md",
         "Constellations",
         "Observatory",
         "Scripts",
@@ -1398,6 +1400,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "proex2.md",
         "proex.md",
         "tpl-w-initial.md",
         "tpl-w-project.md",
@@ -2403,6 +2406,9 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "20260728152547498.md",
+        "20260728152547590.md",
+        "20260728152547671.md",
         "zborrar903_3 otro.md",
         "P3A.asm",
         "zborrar111das111.md",
@@ -3185,7 +3191,9 @@
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
-      "customOrder": []
+      "customOrder": [
+        "RENOMBRAR-28-07-2026 15.24.40.excalidraw__2026-07-28 15.25.32"
+      ]
     },
     "Semesters/Sem_09": {
       "isPinned": false,
@@ -3352,7 +3360,73 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Obsidian_KM06qKqHe9.png": {
+    "_templates/proex2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "5TxHZDbilb.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Borrar/20260728152547498.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Borrar/20260728152547590.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Borrar/20260728152547671.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw-Image-Occlusions/RENOMBRAR-28-07-2026 15.24.40.excalidraw__2026-07-28 15.25.32": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "a-20260728152547498.png",
+        "a-20260728152547671.png",
+        "a-20260728152547590.png",
+        "batch-marker.md",
+        "q-20260728152547498.png",
+        "q-20260728152547590.png",
+        "q-20260728152547671.png"
+      ]
+    },
+    "Excalidraw-Image-Occlusions/RENOMBRAR-28-07-2026 15.24.40.excalidraw__2026-07-28 15.25.32/a-20260728152547498.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw-Image-Occlusions/RENOMBRAR-28-07-2026 15.24.40.excalidraw__2026-07-28 15.25.32/a-20260728152547671.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw-Image-Occlusions/RENOMBRAR-28-07-2026 15.24.40.excalidraw__2026-07-28 15.25.32/a-20260728152547590.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw-Image-Occlusions/RENOMBRAR-28-07-2026 15.24.40.excalidraw__2026-07-28 15.25.32/batch-marker.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw-Image-Occlusions/RENOMBRAR-28-07-2026 15.24.40.excalidraw__2026-07-28 15.25.32/q-20260728152547498.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw-Image-Occlusions/RENOMBRAR-28-07-2026 15.24.40.excalidraw__2026-07-28 15.25.32/q-20260728152547590.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw-Image-Occlusions/RENOMBRAR-28-07-2026 15.24.40.excalidraw__2026-07-28 15.25.32/q-20260728152547671.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/Excalidraw/RENOMBRAR-28-07-2026 15.24.40.excalidraw.svg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/Excalidraw/RENOMBRAR-28-07-2026 15.24.40.excalidraw.md": {
       "isPinned": false,
       "isHidden": false
     }
