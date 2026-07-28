@@ -5,16 +5,16 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
-        "AP228OVgPY.png",
+        "Untitled.md",
+        "anki-opcionB-flashcards.md",
+        "obsidian-to-anki-plugin-3.6.0.zip",
         "Excalidraw-Image-Occlusions",
-        "anki_galaxy_guide 1.md",
         "Untitled 1.md",
         "Rubbish",
         "anki_galaxy_guide.md",
         "Evidence Boards",
         "Pinboards",
         "void 1.md",
-        "void 2.md",
         "_blueprint",
         "_inbox",
         "_skills",
@@ -1133,7 +1133,6 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "pruocc.excalidraw.svg",
         "RENOMBRAR-27-07-2026 23.41.28.excalidraw.md",
         "Constellations",
         "Observatory",
@@ -2911,10 +2910,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "void 2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Zettelkasten/20260723151457.md": {
       "isPinned": false,
       "isHidden": false
@@ -3178,10 +3173,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "anki_galaxy_guide 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_app/Excalidraw/Scripts/Downloaded/Image Occlusion.md": {
       "isPinned": false,
       "isHidden": false
@@ -3193,22 +3184,22 @@
     "Excalidraw-Image-Occlusions": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "RENOMBRAR-27-07-2026 23.41.28.excalidraw__2026-07-27 23.42.04",
         "prueba_ex.excalidraw__2026-07-27 23.39.43",
         "prueba_ex.excalidraw__2026-07-27 23.37.58",
         "prueba_ex.excalidraw__2026-07-27 23.30.40",
         "prueba_ex.excalidraw__2026-07-27 23.29.23"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "Excalidraw-Image-Occlusions/prueba_ex.excalidraw__2026-07-27 23.29.23": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "batch-marker.md"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "Excalidraw-Image-Occlusions/prueba_ex.excalidraw__2026-07-27 23.29.23/batch-marker.md": {
       "isPinned": false,
@@ -3217,6 +3208,7 @@
     "Excalidraw-Image-Occlusions/prueba_ex.excalidraw__2026-07-27 23.30.40": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "a-20260727233047802.png",
         "q-20260727233047802.png",
@@ -3229,8 +3221,7 @@
         "a-20260727233047229.png",
         "q-20260727233047229.png",
         "batch-marker.md"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "Excalidraw-Image-Occlusions/prueba_ex.excalidraw__2026-07-27 23.30.40/batch-marker.md": {
       "isPinned": false,
@@ -3279,139 +3270,139 @@
     "Semesters/Sem_09": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "8",
         "ETN999"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "Semesters/Sem_09/ETN999": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "Partial_1"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "Semesters/Sem_09/ETN999/Partial_1": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "T01_pepeitus"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "Semesters/Sem_09/ETN999/Partial_1/T01_pepeitus": {
       "isPinned": false,
       "isHidden": false,
-      "customOrder": [],
-      "sortOrder": "custom"
+      "sortOrder": "custom",
+      "customOrder": []
     },
     "Semesters/Sem_08": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "ETN999"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "Semesters/Sem_08/ETN999": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "Partial_2"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "Semesters/Sem_08/ETN999/Partial_2": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "TNasd"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "Semesters/Sem_08/ETN999/Partial_2/TNasd": {
       "isPinned": false,
       "isHidden": false,
-      "customOrder": [],
-      "sortOrder": "custom"
+      "sortOrder": "custom",
+      "customOrder": []
     },
     "Semesters/Sem_03": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "ETN132"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "Semesters/Sem_03/ETN132": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "Partial_1"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "Semesters/Sem_03/ETN132/Partial_1": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "2"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "Semesters/Sem_03/ETN132/Partial_1/2": {
       "isPinned": false,
       "isHidden": false,
-      "customOrder": [],
-      "sortOrder": "custom"
+      "sortOrder": "custom",
+      "customOrder": []
     },
     "Semesters/Sem_09/8": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "Partial_7"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "Semesters/Sem_09/8/Partial_7": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "4"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "Semesters/Sem_09/8/Partial_7/4": {
       "isPinned": false,
       "isHidden": false,
-      "customOrder": [],
-      "sortOrder": "custom"
+      "sortOrder": "custom",
+      "customOrder": []
     },
     "Semesters/Sem_01/4": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "Partial_2"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "Semesters/Sem_01/4/Partial_2": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "3"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "Semesters/Sem_01/4/Partial_2/3": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "5.md"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "Semesters/Sem_01/4/Partial_2/3/5.md": {
       "isPinned": false,
@@ -3420,10 +3411,10 @@
     "Excalidraw-Image-Occlusions/prueba_ex.excalidraw__2026-07-27 23.37.58": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "batch-marker.md"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "Excalidraw-Image-Occlusions/prueba_ex.excalidraw__2026-07-27 23.37.58/batch-marker.md": {
       "isPinned": false,
@@ -3436,6 +3427,7 @@
     "Excalidraw-Image-Occlusions/prueba_ex.excalidraw__2026-07-27 23.39.43": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "20260727233949691.md",
         "q-20260727233949691.png",
@@ -3449,8 +3441,7 @@
         "q-20260727233949410.png",
         "a-20260727233949286.png",
         "batch-marker.md"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "Excalidraw-Image-Occlusions/prueba_ex.excalidraw__2026-07-27 23.39.43/batch-marker.md": {
       "isPinned": false,
@@ -3504,20 +3495,16 @@
       "isPinned": false,
       "isHidden": false
     },
-    "AP228OVgPY.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Excalidraw-Image-Occlusions/RENOMBRAR-27-07-2026 23.41.28.excalidraw__2026-07-27 23.42.04": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "q-20260727234210412.png",
         "q-20260727234210379.png",
         "a-20260727234210350.png",
         "batch-marker.md"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "Excalidraw-Image-Occlusions/RENOMBRAR-27-07-2026 23.41.28.excalidraw__2026-07-27 23.42.04/batch-marker.md": {
       "isPinned": false,
@@ -3535,7 +3522,15 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_app/Excalidraw/pruocc.excalidraw.svg": {
+    "anki-opcionB-flashcards.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "obsidian-to-anki-plugin-3.6.0.zip": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled.md": {
       "isPinned": false,
       "isHidden": false
     }
