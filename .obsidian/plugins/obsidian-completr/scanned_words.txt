@@ -77949,6 +77949,7 @@ apagados
 apagando
 anki
 adelantadas
+automatica
 related
 recomendados
 ribbon
@@ -136170,6 +136171,7 @@ Familia
 FSRS
 FSRSsss
 Felicitaciones
+FSRSss
 Estado
 Excalidraw
 EPUBs
@@ -172506,6 +172508,7 @@ mathcal
 mappings
 mixtas
 mapping
+mane
 YAML
 Ya
 You

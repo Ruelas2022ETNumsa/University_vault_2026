@@ -5,12 +5,12 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
+        "anki_galaxy_guide 1.md",
         "Untitled 1.md",
         "Rubbish",
         "anki_galaxy_guide.md",
         "Evidence Boards",
         "Pinboards",
-        "Untitled.md",
         "void 1.md",
         "void 2.md",
         "_blueprint",
@@ -2896,10 +2896,6 @@
       "sortOrder": "custom",
       "customOrder": []
     },
-    "Untitled.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "void 1.md": {
       "isPinned": false,
       "isHidden": false
@@ -3147,6 +3143,8 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "ssss.md",
+        "Untitledx.md",
         "2026-07-26",
         "section.md",
         "2026-07-27",
@@ -3300,6 +3298,18 @@
       "isHidden": false
     },
     "Untitled 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "anki_galaxy_guide 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/Untitledx.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/ssss.md": {
       "isPinned": false,
       "isHidden": false
     }
