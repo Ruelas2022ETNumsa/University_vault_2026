@@ -14963,6 +14963,8 @@ TNNy
 TiIxT
 TgDw
 True
+Team
+Tedioso
 Sistema
 Sync
 Save
@@ -29374,6 +29376,7 @@ Pinning
 Previene
 PRINTER
 Pensado
+PREGUNTA
 del
 date
 de
@@ -35618,6 +35621,7 @@ decks
 desktop
 dedicadas
 debanjandhar
+descargar
 Vault
 Verificar
 Variables
@@ -63612,6 +63616,7 @@ superpone
 stored
 subdecks
 sobreescriba
+subi
 vault
 vil
 ver
@@ -77943,6 +77948,7 @@ ankiweb
 apagados
 apagando
 anki
+adelantadas
 related
 recomendados
 ribbon
@@ -85342,6 +85348,7 @@ racha
 reverso
 reflejados
 rompiendo
+revisarlas
 notes
 notas
 nuevas
@@ -100124,6 +100131,9 @@ chocar
 cloze
 confirmando
 corona
+correo
+complementos
+calibran
 updated
 un
 universo
@@ -114864,6 +114874,8 @@ GxP
 GRSv
 GoUHs
 Glosario
+Gratuito
+Gmail
 Convenci
 Creaci
 Commander
@@ -121247,6 +121259,7 @@ Calendario
 CORS
 Cards
 Cloze
+Complementos
 Instalados
 Instalado
 Instalar
@@ -136156,6 +136169,7 @@ Flexbox
 Familia
 FSRS
 FSRSsss
+Felicitaciones
 Estado
 Excalidraw
 EPUBs
@@ -157395,6 +157409,7 @@ AnkiConnect
 AnkiDroid
 AnkiWeb
 AnkiSync
+Accesibles
 push
 pull
 para
@@ -172488,6 +172503,9 @@ motivaci
 moderno
 manej
 mathcal
+mappings
+mixtas
+mapping
 YAML
 Ya
 You
@@ -201866,6 +201884,8 @@ MtDlQXQn
 MODULOS
 MODULE
 Menu
+Mapping
+Mappings
 Lectura
 LaTeX
 Linter
@@ -223693,6 +223713,8 @@ ingesta
 inteligencias
 integre
 inductancia
+incompatible
+inviable
 Dependencia
 Dropbox
 Dataview
@@ -230720,6 +230742,7 @@ Dispositivos
 Difumina
 Documento
 Dark
+Delimiters
 Remotely
 Raz
 Revisa
@@ -238689,6 +238712,9 @@ Rastrea
 Relacionada
 Reiniciar
 Retention
+Replacer
+Repasar
+Revierte
 Hider
 Hace
 Herramientas
@@ -250938,6 +250964,7 @@ filtrando
 flotantes
 fino
 freeze
+finalizado
 haya
 hace
 hacer
@@ -273639,6 +273666,7 @@ UjwY
 UUwoLh
 UWsj
 Upload
+Urgente
 Nombre
 Notas
 No
@@ -288515,6 +288543,7 @@ ooLc
 oopx
 ofLWuCtd
 omega
+obsoleto
 junto
 json
 jer

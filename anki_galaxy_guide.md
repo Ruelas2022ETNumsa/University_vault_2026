@@ -75,7 +75,7 @@ AnkiConnect es el puente que permite a Obsidian (y otros programas) comunicarse 
 ~~Anki moderno tiene modo oscuro nativo — no requiere addon.~~ ✅
 
 - ~~**Desktop:** Preferencias (`Ctrl+P`) → Apariencia → Tema → Night Mode / Dark~~ ✅
-- **AnkiDroid:** Configuración → Apariencia → Tema → Oscuro — pendiente
+- ~~**AnkiDroid:** Configuración → Apariencia → Tema → Oscuro — pendiente~~✅
 
 ### FSRS — algoritmo moderno de repetición espaciada
 

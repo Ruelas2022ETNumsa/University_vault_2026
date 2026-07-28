@@ -143,11 +143,11 @@ tags: [pepe]
 Respuesta %%> Pregunta ;; %%
 ```
 
-**Método 2 — tag inline después del ID (descubierto en prueba):**
+**Método 2 — tag inline después del `;;` (descubierto en prueba):**
 ```
-Respuesta %%> Pregunta ;; ^anki-ID #pepe %%
+Respuesta %%> Pregunta ;;  #pepe %%
 ```
-> ✅ Funciona. El tag después del ID no se muestra en la tarjeta pero sí determina el deck. Más limpio que frontmatter para notas mixtas.
+> ✅ Funciona. El tag después del `;;` el ide ID  se coloca de forma automatica al exportar, no se muestra en la tarjeta pero sí determina el deck. Más limpio que frontmatter para notas mixtas.
 
 Luego ejecutar: `Sync ALL Vault Flashcards to Anki (Tag-Mapped)`
 
