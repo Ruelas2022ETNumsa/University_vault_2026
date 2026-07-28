@@ -94,7 +94,7 @@
   "exportPaddingSVG": 10,
   "exportEmbedScene": false,
   "keepInSync": false,
-  "autoexportSVG": false,
+  "autoexportSVG": true,
   "autoexportPNG": false,
   "autoExportLightAndDark": false,
   "autoexportExcalidraw": false,
@@ -231,6 +231,60 @@
       "Max Text Width": {
         "value": 200,
         "hidden": false
+      }
+    },
+    "Downloaded/Image Occlusion": {
+      "Output Base Folder": {
+        "value": "",
+        "description": "Base folder for storing generated files. Always use forward slash '/' for paths. Example: 'Excalidraw-Image-Occlusions', 'Cards/Image-Occlusions'",
+        "valueset": []
+      },
+      "Card Location": {
+        "value": "ask",
+        "description": "Where to save card files ('default' for same folder as images, or 'choose' for custom location)",
+        "valueset": [
+          "ask",
+          "default",
+          "choose"
+        ]
+      },
+      "Default Card Path": {
+        "value": "",
+        "description": "Default path for card files when 'Card Location' is set to 'default'. Always use forward slash '/' for paths. Examples: 'flashcard/Anki', 'My Notes/Cards/Occlusion'. Leave empty to save with images",
+        "valueset": []
+      },
+      "Default Template": {
+        "value": "",
+        "description": "Default template file path relative to template folder (e.g., 'Anki/Image Occlusion.md'). Leave empty to select template each time",
+        "valueset": []
+      },
+      "Card File Prefix": {
+        "value": "",
+        "description": "Prefix for generated card files. Must be a valid filename without dots. Examples: 'anki - ', 'card ', 'io - '. Leave empty for no prefix",
+        "valueset": []
+      },
+      "Card File Suffix": {
+        "value": "",
+        "description": "Suffix for generated card files (before .md). Examples: ' -card.card3' will generate 'prefix-timestamp-card.card3.md'. Leave empty for no suffix",
+        "valueset": []
+      },
+      "Image Quality": {
+        "value": "1.5",
+        "description": "Export scale for image quality (e.g., 1.5). Higher values mean better quality but larger files. Must be a valid number.",
+        "valueset": []
+      },
+      "Hide All, Guess One - Highlight Color": {
+        "value": "#ffd700",
+        "description": "Color used to highlight the target mask in 'Hide All, Guess One' mode (e.g., #ffd700 for gold, #ff0000 for red)",
+        "valueset": []
+      },
+      "Generate Images No Matter What": {
+        "value": "no",
+        "description": "Always generate images even when template selection is cancelled (yes/no)",
+        "valueset": [
+          "yes",
+          "no"
+        ]
       }
     }
   },
