@@ -85350,6 +85350,7 @@ reverso
 reflejados
 rompiendo
 revisarlas
+reverse
 notes
 notas
 nuevas
@@ -100135,6 +100136,8 @@ corona
 correo
 complementos
 calibran
+cards
+card
 updated
 un
 universo
@@ -185913,6 +185916,8 @@ BkfuNR
 Button
 BUtp
 BIBO
+BGAY
+Bounded
 en
 exacta
 escaneados
@@ -238718,6 +238723,8 @@ Retention
 Replacer
 Repasar
 Revierte
+RmSI
+Reversed
 Hider
 Hace
 Herramientas
@@ -273670,6 +273677,7 @@ UUwoLh
 UWsj
 Upload
 Urgente
+USoXYc
 Nombre
 Notas
 No
@@ -288547,6 +288555,8 @@ oopx
 ofLWuCtd
 omega
 obsoleto
+oKXB
+oIer
 junto
 json
 jer

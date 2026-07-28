@@ -1,43 +1,21 @@
-
-
-USUALMENTE EL MAYOR PROBLEMA ASOCIADO AL DISEÑO DE UNA INTERFACE ES EL DE PRECISAR LAS FUNCIONES Y LA TEMPORIZACION DE LAS LINEAS DE ENTRADA Y SALIDA ASOCIADAS CON LOS SISTEMAS A INTERCONECTARSE.
-
-
-
-
-
------
-
-![[BORRADOR OK OK ETN 825 2022.pdf#page=1&rect=47,220,369,360|BORRADOR OK OK ETN 825 2022, p.1]]
-
-
-![[void 1-26-07-2026_21-25-07.png]]
-
-
-
-
-
+---
+cards-deck: Galaxy::Pruebas
 ---
 
+## Prueba 1 — Básica con LaTeX
+¿Cuál es la transformada de Laplace de $e^{at}$? #card
+$\mathcal{L}\{e^{at}\} = \dfrac{1}{s-a}$, válido para $\text{Re}(s) > a$
 
+## Prueba 2 — Inline con LaTeX
+¿Qué es la ROC? :: Región de Convergencia donde $\sum |x[n]| \cdot r^{-n} < \infty$
 
+## Prueba 3 — Cloze con highlight
+La energía almacenada en un inductor es ==$E = \dfrac{1}{2}Li^2$== donde L es la inductancia.
 
-%%> texto sin tag V1 1 [[void 2#^4j50bo]] {stitch: paoeu} ^ivg2zo %%
-%%> ! Esto es importante V1 3 [[void 2#^4j50bo]] {stitch: paoeu}%%
-%%> ? Pregunta de examen V1 5 [[void 2#^4j50bo]] {stitch: paoeu}%%
-%%> F- fórmula clave V1 7 [[void 2#^4j50bo]] {stitch: paoeu}%%
-%%> R- relación con otro tema V1 #test %%
-%%> img:[[_assets/ima-1.png]]%%
+## Prueba 4 — Reversed
+¿Qué significa BIBO? #card-reverse
+Bounded Input Bounded Output — toda entrada acotada produce una salida acotada.
 
-
-
-
-
-
-
-
-
-
-
-
-
+## Prueba 5 — Imagen
+¿Qué muestra esta captura? #card
+![[Marginalia Inbox-27-07-2026_16-37-05.png]]
