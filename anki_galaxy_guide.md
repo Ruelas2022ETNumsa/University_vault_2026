@@ -75,19 +75,17 @@ AnkiConnect es el puente que permite a Obsidian (y otros programas) comunicarse 
 ~~Anki moderno tiene modo oscuro nativo — no requiere addon.~~ ✅
 
 - ~~**Desktop:** Preferencias (`Ctrl+P`) → Apariencia → Tema → Night Mode / Dark~~ ✅
-- ~~**AnkiDroid:** Configuración → Apariencia → Tema → Oscuro — pendiente~~✅
+- ~~**AnkiDroid:** Configuración → Apariencia → Tema → Oscuro~~ ✅
 
 ### FSRS — algoritmo moderno de repetición espaciada
 
-~~FSRS viene integrado desde Anki v23.10+. Reemplaza SM-2 (algoritmo de los años 80) y reduce un 20-30% las revisiones diarias manteniendo la misma retención.~~ ✅
+~~FSRS viene integrado desde Anki v23.10+. Reemplaza SM-2 y reduce un 20-30% las revisiones diarias manteniendo la misma retención.~~ ✅
 
 **Activar:**
 
 1. ~~Seleccionar un deck → Options (engranaje) → Advanced~~ ✅
 2. ~~Activar "FSRS" → Save~~ ✅
-3. Hacer click en "Optimize" después de acumular ~30 días de revisiones para que el algoritmo se calibre con tu historial.
-
-> ✅ Activar FSRS en todos los decks antes de empezar a estudiar.
+3. Hacer click en "Optimize" después de acumular ~30 días de revisiones.
 
 > [!note] Observación
 > Al activar FSRS se despliegan varias opciones adicionales — no tocar nada por ahora. Los parámetros se optimizan solos con el uso.
@@ -107,8 +105,6 @@ Galaxy
     └── Fórmulas clave
 ```
 
-Cada materia = deck principal. Los subtemas = subdecks. Los plugins de Obsidian que sincronizan por carpeta respetarán esta jerarquía automáticamente.
-
 ---
 
 ## 3. Addons recomendados
@@ -120,24 +116,14 @@ Cada materia = deck principal. Los subtemas = subdecks. Los plugins de Obsidian 
 | **Image Occlusion Enhanced** | `1374772155` | ✅ instalado |
 | **Review Heatmap** | `1771074083` | ✅ instalado |
 | **True Retention** | `613684242` | ✅ instalado |
-| **Hierarchical Tags** | `1089921461` | ❌ incompatible con versión actual |
-| **Math Delimiters Replacer** | `401047458` | ✅ instalado |
+| **Hierarchical Tags** | `1089921461` | ❌ incompatible — no necesario |
+| **Math Delimiters Replacer** | `401047458` | ✅ instalado (solo para Opción A) |
 
 > [!warning] Hierarchical Tags obsoleto
-> El código `1089921461` es incompatible con Anki moderno. No es necesario — las versiones actuales ya tienen jerarquía nativa con `::` (ej: `ETN901::Laplace`). Si se quiere color en los tags, existe **Colorful Tags** como alternativa futura.
+> Incompatible con Anki moderno. No necesario — jerarquía nativa con `::` (ej: `ETN901::Laplace`).
 
 > [!note] Math Delimiters Replacer
-> Convierte `$...$` y `$$...$$` a formato MathJax con `Alt+M`. Solución temporal hasta tener el script automático. Ver pendiente urgente en sección 9.
-
-### Image Occlusion — flujo básico
-
-1. Crear nueva tarjeta → seleccionar tipo "Image Occlusion Enhanced"
-2. Subir imagen (diagrama, circuito, esquema)
-3. Dibujar rectángulos sobre las zonas a ocultar (valores, etiquetas, partes)
-4. Cada rectángulo = una tarjeta separada
-5. Add Cards → las tarjetas se generan automáticamente
-
-> 💡 Alternativa desde Obsidian: el script "Image Occlusion" del plugin Excalidraw hace lo mismo sin salir de Obsidian. Evaluar cuál flujo es más cómodo en la sesión de prueba.
+> Solo relevante para Opción A (Marginalia). Opción B (Flashcards) renderiza `$...$` directamente.
 
 ---
 
@@ -145,37 +131,22 @@ Cada materia = deck principal. Los subtemas = subdecks. Los plugins de Obsidian 
 
 ~~AnkiWeb es el servidor de sincronización oficial, completamente gratuito.~~ ✅
 
-**Configurar sync:**
+1. ~~Anki Desktop → Sync → ingresar cuenta~~ ✅
+2. ~~Primera vez: "Upload to AnkiWeb"~~ ✅
+3. En sesiones posteriores: sync automático al abrir y cerrar Anki
 
-1. ~~Anki Desktop → Sync (icono nube arriba a la derecha)~~ ✅
-2. ~~Ingresar cuenta de ankiweb.net~~ ✅
-3. ~~Primera vez: elegir "Upload to AnkiWeb"~~ ✅ (sube los decks locales a la nube)
-4. En sesiones posteriores: sync automático al abrir y cerrar Anki
-
-**Frecuencia recomendada:** sync manual antes de cerrar Anki en PC, para que AnkiDroid tenga las tarjetas actualizadas.
-
-> ⚠️ El sync solo funciona si Anki Desktop se sincronizó primero. AnkiDroid no puede recibir tarjetas directamente desde Obsidian — el flujo siempre es: Obsidian → Anki Desktop → AnkiWeb → AnkiDroid.
+> ⚠️ Flujo siempre: Obsidian → Anki Desktop → AnkiWeb → AnkiDroid
 
 ---
 
 ## 5. Móvil — AnkiDroid (Android)
 
-**Instalación:**
-
-1. ~~Play Store → buscar "AnkiDroid Flashcards" → Instalar (gratuito, sin publicidad)~~ ✅
-2. ~~Abrir AnkiDroid → Settings → AnkiWeb account~~ ✅
-3. ~~Ingresar la misma cuenta de ankiweb.net~~ ✅
-4. ~~Sync → los decks del desktop aparecen en el móvil~~ ✅
-
-> [!note] Búsqueda en Play Store
-> Buscar exactamente **"AnkiDroid Flashcards"**. Confirmar desarrollador: **AnkiDroid Open Source Team** (aparece en azul debajo del nombre). Versión actual: 2.24.0.
+~~Play Store → "AnkiDroid Flashcards" (AnkiDroid Open Source Team) → Instalar → vincular cuenta~~ ✅
 
 > [!note] Primera sync en AnkiDroid
-> Al aparecer mensaje de conflicto → elegir **"AnkiWeb"**. El desktop ya subió los datos, el móvil debe descargar.
+> Al aparecer mensaje de conflicto → elegir **"AnkiWeb"**.
 
-**Modo oscuro en AnkiDroid:** Settings → Apariencia → Tema → Dark / Night Mode
-
-**Uso en móvil:** solo para repasar. La creación de tarjetas se hace desde Obsidian o Anki Desktop — no desde el móvil.
+**Uso en móvil:** solo para repasar. Creación desde Obsidian o Anki Desktop únicamente.
 
 ---
 
@@ -183,12 +154,7 @@ Cada materia = deck principal. Los subtemas = subdecks. Los plugins de Obsidian 
 
 ### Addon nativo de Marginalia — Anki Advanced Sync
 
-~~El addon de Marginalia tiene sync nativo con Anki.~~ ✅ Probado — ver Opción A en sección 7.
-
-**Activar:**
-
-1. ~~Marginalia Settings → Addons → Anki Advanced Sync → ON~~ ✅
-2. ~~Anki debe estar abierto con AnkiConnect activo~~ ✅
+~~Marginalia Settings → Addons → Anki Advanced Sync → ON~~ ✅ Probado — ver Opción A.
 
 **Sintaxis real (corregida tras prueba):**
 
@@ -197,115 +163,84 @@ RESPUESTA %%> PREGUNTA ;; %%
 ```
 
 > [!warning] Orden invertido
-> Lo que va **antes** de `%%>` es el reverso (respuesta). Lo que va entre `%%>` y `;;` es el frente (pregunta). No es lo que indica la documentación original del plugin.
-
-**Pendiente de prueba:**
-- [ ] ¿El addon respeta los tag-class (`!`, `?`, `F-`) como tags en Anki?
-- [ ] ¿Las imágenes (`img:[[...]]`) llegan correctamente a Anki?
-- [ ] ¿Los crops de PDF++ se exportan como imagen en la tarjeta?
-- [ ] ¿El sync es bidireccional (cambios en Anki reflejados en Obsidian)?
+> Lo que va **antes** de `%%>` es el reverso. Lo que va entre `%%>` y `;;` es el frente.
 
 ---
 
 ## 7. Plugins de Obsidian a probar
 
-Probar en orden. Quedarse con el que mejor se integre al flujo Galaxy.
+### Opción A — Anki Advanced Sync (addon Marginalia) ✅ PROBADA
 
-### Opción A — Anki Advanced Sync (addon de Marginalia) ✅ PROBADA
+**Pros:** integración nativa con `;;`, tag mapping inline y por frontmatter.
+**Contras:** LaTeX `$...$` no renderiza sin conversión. Orden frente/reverso invertido.
 
-**Pros:** integración nativa con `;;`, conoce la sintaxis de Marginalia, soporta crops de PDF++.
-**Contras:** sintaxis de frente/reverso invertida respecto a lo esperado. LaTeX `$...$` no renderiza sin conversión manual.
+> [!note] Resultado
+> Sync funciona. Tag mapping funciona. LaTeX requiere conversión manual. **Fuerte candidato por integración con Marginalia.**
 
-> [!note] Resultado de prueba
-> Sync funciona correctamente en ambas direcciones (Desktop ↔ AnkiDroid). Tag mapping funciona tanto por frontmatter como inline. LaTeX requiere conversión manual o script. **Fuerte candidato por integración con marginalia.**
-
-> [!tip] Tag inline descubierto en prueba
-> El tag después del ID no se muestra en la tarjeta pero sí determina el deck:
-> `Respuesta %%> Pregunta ;; ^anki-ID #tag %%`
-> Más limpio que frontmatter para notas mixtas.
-
-> [!note] "Felicitaciones — mazo finalizado"
-> FSRS no muestra tarjetas hasta que toca revisarlas. Para ver tarjetas en pruebas: **Estudio personalizado → Repasar tarjetas adelantadas → 9999**.
+> [!tip] Tag inline descubierto
+> `Respuesta %%> Pregunta ;; ^anki-ID #tag %%` — el tag determina el deck sin mostrarse en la tarjeta.
 
 Ver documentación completa: [[Untitled 1]]
 
 ---
 
-### Opción B — AnkiSync+ (plugin de Obsidian)
+### Opción B — Flashcards (reuseman) ✅ PROBADA
 
-**Pros:** integración con Excalidraw, soporte de imágenes, organización por tags como decks, limpieza automática de tarjetas eliminadas.
-**Contras:** sintaxis de tarjetas puede chocar con la sintaxis de Marginalia.
-**Instalación:** Community Plugins → buscar "AnkiSync+" → Instalar → Activar.
+**Pros:** LaTeX `$...$` renderiza directo, sintaxis variada (inline `::`, cloze `==`, reversed), imágenes y Excalidraw funcionan, deck automático por carpeta.
+**Contras:** sin mantenimiento desde Oct 2022. No compatible con Image Occlusion de Excalidraw (necesita Opción C). No se mezcla con Marginalia sin script.
 
-**Configuración básica:**
+> [!note] Resultado
+> Todas las pruebas pasaron. LaTeX renderiza en AnkiDroid sin conversión — resuelve pendiente de Opción A. Excalidraw requiere "Export SVG to vault" antes del sync. **Candidato para notas dedicadas y diagramas.**
 
-1. Settings → AnkiSync+ → Anki URL: `http://127.0.0.1:8765`
-2. Definir carpeta del vault a escanear
-3. Definir formato de tarjeta (Basic, Cloze)
-
----
-
-### Opción C — Yanki (plugin de Obsidian)
-
-**Pros:** pure Markdown sin sintaxis especial, una nota = una tarjeta, carpetas como decks, no interfiere con Marginalia.
-**Contras:** requiere notas dedicadas a flashcards (no inline en notas de clase).
-**Instalación:** Community Plugins → buscar "Yanki" → Instalar → Activar.
+> [!warning] AnkiSync+ (RochaG07) — descartado
+> Probado antes de Flashcards. Creaba decks pero no tarjetas. Sin fix, sin mantenimiento activo. Descartado.
 
 **Configuración básica:**
+1. Community Plugins → "Flashcards" (reuseman) → Instalar → Activar
+2. Settings → Grant Permission + Test (con Anki abierto)
+3. Context-aware: `0` | Folder-based deck: `1` | Default deck: `Galaxy::General`
 
-1. Settings → Yanki → seleccionar carpetas del vault a sincronizar
-2. Formato de tarjeta en la nota:
-
-```markdown
----
-# Frente de la tarjeta
-¿Cuál es la condición de convergencia de Laplace?
-
-## Reverso
-Re(s) > σ₀ donde σ₀ es la abscisa de convergencia.
-```
-
-3. Command Palette → "Yanki: Sync flashcard notes to Anki"
+Ver documentación completa: [[anki-opcionB-flashcards]]
 
 ---
 
-### Opción D — Obsidian-Anki-Sync (debanjandhar12)
+### Opción C — Obsidian_to_Anki (Pseudonium) — PENDIENTE
 
-**Pros:** el más potente para LaTeX — permite cloze dentro de bloques matemáticos. Esencial si se quieren tarjetas tipo:
-
-```
-$$\mathcal{L}\{f(t)\} = \int_0^\infty <!-- replace id="1" text="e^{-st} f(t)" --> dt$$
-```
-
-**Contras:** sintaxis más compleja, puede chocar con LaTeX del vault.
-**Instalación:** Community Plugins → buscar "Anki Sync" (debanjandhar12) → Instalar.
+**Por qué es necesaria:** el script Image Occlusion de TrillStones genera archivos `.card.md` en formato Obsidian_to_Anki. Sin este plugin no se puede completar el flujo Excalidraw → Image Occlusion → Anki.
+**Instalación:** Community Plugins → buscar "Export to Anki" o "Obsidian_to_Anki" (Pseudonium).
 
 ---
 
-## 8. Flujo Galaxy propuesto (a validar)
+### Opción D — Obsidian-Anki-Sync (debanjandhar12) — PENDIENTE
 
+**Para qué sirve:** cloze dentro de bloques LaTeX. Sintaxis más compleja.
 ```
-Clase / Estudio
-     ↓
-Nota .md en supernova con marginalia %%> pregunta ;; %%
-     ↓
-Anki Advanced Sync (addon Marginalia) o plugin Obsidian
-     ↓
-Anki Desktop (con AnkiConnect activo)
-     ↓
-Sync → AnkiWeb
-     ↓
-AnkiDroid (Android) — repasar en cualquier lugar
+<!-- replaceblock-start -->
+<!-- replace id="1" text="valor" -->
+$$formula$$
+<!-- replaceblock-end -->
 ```
 
-**Para Image Occlusion (circuitos, diagramas):**
+---
 
+## 8. Flujo Galaxy propuesto
+
+**Flujo principal (texto y fórmulas):**
+```
+Nota .md con marginalia %%> pregunta ;; %%
+     ↓
+Opción A (Marginalia) o Opción B (Flashcards)
+     ↓
+Anki Desktop → AnkiWeb → AnkiDroid
+```
+
+**Flujo Image Occlusion (circuitos, diagramas):**
 ```
 Diagrama en Excalidraw
      ↓
-Script "Image Occlusion" de Excalidraw → genera tarjetas con zonas ocultas
-     ↓ (o directamente desde Anki con Image Occlusion Enhanced)
-Anki Desktop
+Script Image Occlusion (TrillStones) → genera .card.md
+     ↓
+Opción C (Obsidian_to_Anki) exporta a Anki
      ↓
 AnkiWeb → AnkiDroid
 ```
@@ -314,48 +249,30 @@ AnkiWeb → AnkiDroid
 
 ## 9. Pendientes de prueba
 
-### Instalación y configuración base
+### Completado ✅
 
-- [x] Instalar Anki Desktop desde ankiweb.net
-- [x] Crear cuenta en ankiweb.net
-- [x] Instalar AnkiConnect (código `2055492159`) y configurar CORS para Obsidian
-- [x] Activar modo oscuro en Anki Desktop
-- [x] Activar FSRS en opciones del deck
-- [x] Instalar AnkiDroid en Android y vincular cuenta
-- [x] Verificar sync Desktop → AnkiWeb → AnkiDroid con una tarjeta de prueba
+- [x] Instalar Anki Desktop, AnkiConnect, FSRS, modo oscuro
+- [x] Instalar AnkiDroid y vincular cuenta
+- [x] Sync Desktop → AnkiWeb → AnkiDroid verificado
+- [x] Addons: Image Occlusion, Review Heatmap, True Retention, Math Delimiters Replacer
+- [x] **Opción A** — Marginalia Anki Sync: ✅ funciona. Ver [[Untitled 1]]
+- [x] **Opción B** — Flashcards (reuseman): ✅ funciona. Ver [[anki-opcionB-flashcards]]
+- [x] ~~AnkiSync+ (RochaG07)~~ — descartado
 
-### Addons de Anki Desktop
+### Pendiente 🔲
 
-- [x] Instalar Image Occlusion Enhanced (`1374772155`)
-- [x] Instalar Review Heatmap (`1771074083`)
-- [x] Instalar True Retention (`613684242`)
-- [x] ~~Instalar Hierarchical Tags (`1089921461`)~~ — incompatible, no necesario
-- [x] Instalar Math Delimiters Replacer (`401047458`) — solución temporal para LaTeX
+- [ ] **Opción C** — Obsidian_to_Anki (Pseudonium): instalar y probar. Necesario para Image Occlusion de Excalidraw.
+- [ ] **Opción D** — Obsidian-Anki-Sync (debanjandhar12): probar si se necesita cloze en LaTeX.
+- [ ] Image Occlusion completo: Excalidraw → TrillStones script → Opción C → Anki
+- [ ] Decidir flujo definitivo Galaxy y documentar en `_marginalia_system.md`
 
-### Integración con Obsidian — plugins a comparar
+### 🟡 Ideas pendientes — Scripts
 
-- [x] **Opción A** — Anki Advanced Sync (addon Marginalia): ✅ probado. Funciona. Ver [[Untitled 1]].
-- [ ] **Opción B** — AnkiSync+: instalar y probar con una nota simple. Verificar integración con Excalidraw.
-- [ ] **Opción C** — Yanki: instalar y probar con carpeta `_anki/` dedicada.
-- [ ] **Opción D** — Obsidian-Anki-Sync: probar solo si se necesita cloze dentro de LaTeX.
-- [ ] Decidir qué plugin integrar a Galaxy y documentar en `_marginalia_system.md` o nota dedicada.
+**Script 1 — Conversor Marginalia → Flashcards**
+Convertir `RESPUESTA %%> PREGUNTA ;; %%` a `PREGUNTA #card \n RESPUESTA` antes del sync, revertir después.
 
-### Image Occlusion
-
-- [ ] Probar script Image Occlusion desde Excalidraw con un diagrama de circuito real
-- [ ] Comparar con Image Occlusion Enhanced desde Anki Desktop
-- [ ] Decidir cuál flujo es más cómodo para ingeniería
-
-### 🔴 Pendiente urgente — Script conversor `$` → MathJax
-
-**Problema:** las marginalia con fórmulas usan `$...$` (sintaxis Obsidian) pero Anki necesita `\(...\)`. La conversión manual con `Alt+M` es inviable para uso real.
-
-**Solución propuesta:** script que antes del sync:
-1. Lee la nota `.md`
-2. Convierte `$$...$$` → `\[...\]` y `$...$` → `\(...\)`
-3. Solo dentro de bloques `%%> ... %%` para no afectar el resto de la nota
-4. Exporta a Anki normalmente
-5. Revierte los cambios en el `.md` automáticamente
+**Script 2 — Conversor `$` → MathJax (solo para Opción A)**
+Convertir `$...$` → `\(...\)` dentro de bloques `%%> ... %%` antes del sync con Marginalia. No necesario para Opción B.
 
 ---
 
@@ -364,4 +281,6 @@ AnkiWeb → AnkiDroid
 [[_app/_config/_marginalia_system.md]]
 [[_app/_appnotes/Marginalia_guide.md]]
 [[_app/_projects/tsk_alx-rul.md]]
+[[Untitled 1]]
+[[anki-opcionB-flashcards]]
 %%

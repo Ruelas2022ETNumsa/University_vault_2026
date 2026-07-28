@@ -1,6 +1,3 @@
----
-cards-deck: Galaxy::Occlusion
----
+TARGET DECK: Default START Basic Front: ![[{{question}}]] Back: ![[{{answer}}]] [[{{editSource}} |Jump to edit source]] [[{{batchMarker}}|Jump to batch file]]
 
-{{Front}} #card
-{{Back}}
+Tags: Obsidian_to_Anki END
