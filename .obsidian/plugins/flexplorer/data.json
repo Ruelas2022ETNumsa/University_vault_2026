@@ -5,7 +5,7 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
-        "Untitled.md",
+        "pruebaexcali",
         "anki-opcionB-flashcards.md",
         "obsidian-to-anki-plugin-3.6.0.zip",
         "Excalidraw-Image-Occlusions",
@@ -3530,9 +3530,11 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Untitled.md": {
+    "pruebaexcali": {
       "isPinned": false,
-      "isHidden": false
+      "isHidden": false,
+      "customOrder": [],
+      "sortOrder": "custom"
     }
   },
   "pinnedFiles": [
