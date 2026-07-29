@@ -289,10 +289,10 @@
     }
   },
   "previousRelease": "2.25.3",
-  "showReleaseNotes": true,
+  "showReleaseNotes": false,
   "excalidrawMasteryPromoCollapsed": false,
   "compareManifestToPluginVersion": true,
-  "showNewVersionNotification": true,
+  "showNewVersionNotification": false,
   "latexBoilerplate": "\\color{blue}",
   "latexPreambleLocation": "preamble.sty",
   "taskboneEnabled": false,

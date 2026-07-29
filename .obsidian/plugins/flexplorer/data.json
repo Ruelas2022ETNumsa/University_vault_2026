@@ -3166,7 +3166,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "avv.excalidraw.md",
+        "RENOMBRAR-28-07-2026 21.43.11.excalidraw.md",
         "Image-Occlusions",
         "template",
         "Scripts",
@@ -3261,13 +3261,13 @@
     "Marginalia": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "Marginalia Attachments",
         "Zettelkasten",
         "Pinboards",
         "Evidence Boards"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "Marginalia/Evidence Boards": {
       "isPinned": false,
@@ -3302,14 +3302,14 @@
     "_projects/anki": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "tsk_anki.md",
         "anki_galaxy_guide.md",
         "anki-opcionA-marginalia.md",
         "anki-opcionB-flashcards.md",
         "anki-opcionC-obsidian-to-anki.md"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "_projects/anki/anki_galaxy_guide.md": {
       "isPinned": false,
@@ -3331,13 +3331,19 @@
       "isPinned": false,
       "isHidden": false
     },
+    "Excalidraw/RENOMBRAR-28-07-2026 21.43.11.excalidraw.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
     "_assets": {
       "isPinned": false,
       "isHidden": false,
-      "customOrder": [],
+      "customOrder": [
+        "RENOMBRAR-28-07-2026 21.43.11.excalidraw-28-07-2026_21-43-18.png"
+      ],
       "sortOrder": "custom"
     },
-    "Excalidraw/avv.excalidraw.md": {
+    "_assets/RENOMBRAR-28-07-2026 21.43.11.excalidraw-28-07-2026_21-43-18.png": {
       "isPinned": false,
       "isHidden": false
     }
