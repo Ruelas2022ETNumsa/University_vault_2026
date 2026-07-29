@@ -5,22 +5,20 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
-        "AP228OVgPY.png",
+        "anki-opcionC-obsidian-to-anki.md",
         "pruebaexcali",
         "anki-opcionB-flashcards.md",
         "obsidian-to-anki-plugin-3.6.0.zip",
         "Excalidraw-Image-Occlusions",
-        "Untitled 1.md",
+        "anki-opcionA-marginalia.md",
         "Rubbish",
         "anki_galaxy_guide.md",
         "Evidence Boards",
         "Pinboards",
-        "void 1.md",
         "_blueprint",
         "_inbox",
         "_skills",
         "_projects",
-        "wolfram alpha example.md",
         "_assets",
         "Zettelkasten",
         "Marginalia Attachments",
@@ -1134,8 +1132,6 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "RENOMBRAR-28-07-2026 15.28.52.excalidraw.svg",
-        "ssss.excalidraw.md",
         "Constellations",
         "Observatory",
         "Scripts",
@@ -1400,7 +1396,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "proex.md",
+        "tpl-anki_img_oc.md",
         "tpl-w-initial.md",
         "tpl-w-project.md",
         "tpl-w-study.md",
@@ -2405,6 +2401,8 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "void 1.md",
+        "wolfram alpha example.md",
         "20260728152547498.md",
         "20260728152547590.md",
         "20260728152547671.md",
@@ -2879,13 +2877,9 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "Marginalia Inbox-27-07-2026_16-37-05.png",
+        "void 1-27-07-2026_16-38-41.png",
         "Marginalia Inbox-27-07-2026_16-36-06.png"
       ]
-    },
-    "wolfram alpha example.md": {
-      "isPinned": false,
-      "isHidden": false
     },
     "_app/_appnotes/tagroute_parche/TagsRoute(legacy).md": {
       "isPinned": false,
@@ -2910,10 +2904,6 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": []
-    },
-    "void 1.md": {
-      "isPinned": false,
-      "isHidden": false
     },
     "Zettelkasten/20260723151457.md": {
       "isPinned": false,
@@ -3145,10 +3135,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_assets/Marginalia Inbox-27-07-2026_16-37-05.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Rubbish": {
       "isPinned": false,
       "isHidden": false,
@@ -3174,10 +3160,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Untitled 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_app/Excalidraw/Scripts/Downloaded/Image Occlusion.md": {
       "isPinned": false,
       "isHidden": false
@@ -3190,9 +3172,7 @@
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
-      "customOrder": [
-        "ssss.excalidraw__2026-07-28 17.27.09"
-      ]
+      "customOrder": []
     },
     "Semesters/Sem_09": {
       "isPinned": false,
@@ -3335,10 +3315,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_templates/proex.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "anki-opcionB-flashcards.md": {
       "isPinned": false,
       "isHidden": false
@@ -3371,102 +3347,27 @@
       "isPinned": false,
       "isHidden": false
     },
-    "AP228OVgPY.png": {
+    "_templates/tpl-anki_img_oc.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_app/Excalidraw/RENOMBRAR-28-07-2026 15.28.52.excalidraw.svg": {
+    "anki-opcionA-marginalia.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_app/Excalidraw/ssss.excalidraw.md": {
+    "Borrar/wolfram alpha example.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "Excalidraw-Image-Occlusions/ssss.excalidraw__2026-07-28 17.27.09": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "20260728172711344.md",
-        "20260728172711410.md",
-        "20260728172711456.md",
-        "20260728172711571.md",
-        "20260728172711617.md",
-        "a-20260728172711410.png",
-        "a-20260728172711344.png",
-        "a-20260728172711456.png",
-        "a-20260728172711571.png",
-        "a-20260728172711617.png",
-        "batch-marker.md",
-        "q-20260728172711344.png",
-        "q-20260728172711410.png",
-        "q-20260728172711456.png",
-        "q-20260728172711571.png",
-        "q-20260728172711617.png"
-      ]
-    },
-    "Excalidraw-Image-Occlusions/ssss.excalidraw__2026-07-28 17.27.09/20260728172711344.md": {
+    "anki-opcionC-obsidian-to-anki.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "Excalidraw-Image-Occlusions/ssss.excalidraw__2026-07-28 17.27.09/20260728172711410.md": {
+    "Borrar/void 1.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "Excalidraw-Image-Occlusions/ssss.excalidraw__2026-07-28 17.27.09/20260728172711456.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Excalidraw-Image-Occlusions/ssss.excalidraw__2026-07-28 17.27.09/20260728172711571.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Excalidraw-Image-Occlusions/ssss.excalidraw__2026-07-28 17.27.09/20260728172711617.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Excalidraw-Image-Occlusions/ssss.excalidraw__2026-07-28 17.27.09/a-20260728172711410.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Excalidraw-Image-Occlusions/ssss.excalidraw__2026-07-28 17.27.09/a-20260728172711344.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Excalidraw-Image-Occlusions/ssss.excalidraw__2026-07-28 17.27.09/a-20260728172711456.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Excalidraw-Image-Occlusions/ssss.excalidraw__2026-07-28 17.27.09/a-20260728172711571.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Excalidraw-Image-Occlusions/ssss.excalidraw__2026-07-28 17.27.09/a-20260728172711617.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Excalidraw-Image-Occlusions/ssss.excalidraw__2026-07-28 17.27.09/batch-marker.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Excalidraw-Image-Occlusions/ssss.excalidraw__2026-07-28 17.27.09/q-20260728172711344.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Excalidraw-Image-Occlusions/ssss.excalidraw__2026-07-28 17.27.09/q-20260728172711410.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Excalidraw-Image-Occlusions/ssss.excalidraw__2026-07-28 17.27.09/q-20260728172711456.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Excalidraw-Image-Occlusions/ssss.excalidraw__2026-07-28 17.27.09/q-20260728172711571.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Excalidraw-Image-Occlusions/ssss.excalidraw__2026-07-28 17.27.09/q-20260728172711617.png": {
+    "_assets/void 1-27-07-2026_16-38-41.png": {
       "isPinned": false,
       "isHidden": false
     }

@@ -22,4 +22,4 @@ Bounded Input Bounded Output — toda entrada acotada produce una salida acotada
 ---
 
 ¿Qué muestra esta captura? #card
-![[Marginalia Inbox-27-07-2026_16-37-05.png]]
+![[void 1-27-07-2026_16-38-41.png]]

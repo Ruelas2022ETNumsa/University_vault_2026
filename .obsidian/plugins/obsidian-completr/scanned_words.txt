@@ -8026,6 +8026,9 @@ tNPzO
 tIykv
 txKk
 tjag
+transferido
+tracking
+tapada
 ToDo
 Templater
 Text
@@ -16879,6 +16882,7 @@ TVgLrrZDvNCsC
 ToDZhLOw
 TnZF
 TQEv
+Table
 Sistema
 Sync
 Save
@@ -25823,6 +25827,8 @@ SNXgDOYMNAHtI
 SJHg
 SUMO
 Sources
+Scheduling
+STARTI
 Plugins
 Pendientes
 Plugin
@@ -40754,6 +40760,7 @@ dumdL
 dRynMnQOV
 dkiTZc
 dDZb
+diferenciador
 Vault
 Verificar
 Variables
@@ -57050,6 +57057,7 @@ gWMWgY
 gEyGZIGMKB
 grgnmeuZmc
 gGWw
+globs
 body
 beacon
 bat
@@ -72898,6 +72906,9 @@ sUEpb
 sFwFh
 sdkK
 sQMA
+subida
+saltea
+sincronice
 vault
 vil
 ver
@@ -89314,6 +89325,8 @@ aLOV
 avKU
 aeVD
 aYNH
+actualizaste
+afectados
 related
 recomendados
 ribbon
@@ -97743,6 +97756,8 @@ rozH
 rTNpq
 rdNSODW
 rlVh
+releases
+reemplazados
 notes
 notas
 nuevas
@@ -114648,6 +114663,8 @@ ceSOYrLDDnAtLDcyy
 cKkuM
 cJnDPBSbHwvMBvTGK
 csCRS
+carta
+cambiaron
 updated
 un
 universo
@@ -131463,6 +131480,7 @@ GAYP
 GAYO
 GQOi
 GNxS
+Globs
 Convenci
 Creaci
 Commander
@@ -138886,6 +138904,9 @@ CyQoM
 COyuIYKS
 CGRVbs
 CaDB
+CurlyCloze
+Comments
+Cache
 Instalados
 Instalado
 Instalar
@@ -147705,6 +147726,8 @@ ImageOcclusion
 IDATW
 IDATT
 IDATp
+Interval
+Inactivo
 Funci
 File
 Fase
@@ -164645,6 +164668,9 @@ ERSSWVNcYwGyCbPSu
 EFZZAAAAABJRU
 ErkJggg
 EFeRB
+Escanea
+ENDI
+Engranaje
 Obsidian
 OmniSearch
 Ocultar
@@ -172651,6 +172677,8 @@ OKcDcEQwdWT
 OjAvBLLUk
 OdQx
 OjjgJ
+ObsidianToAnki
+Occlusions
 Auto
 Annotator
 Autocompletado
@@ -188064,6 +188092,7 @@ pfYGMAbqVPuDUO
 pGDx
 pPgfaUNrwlhWQYpXdMpu
 pqKaCANHAlkJcBDkdzpmHAXwKNFl
+proex
 min
 mica
 movimiento
@@ -197093,6 +197122,8 @@ mmujLfm
 mYTxI
 mbTAJa
 mIim
+maestro
+mazos
 YAML
 Ya
 You
@@ -212621,6 +212652,7 @@ BUZQ
 BbIq
 BXXmY
 Btlk
+Borraste
 en
 exacta
 escaneados
@@ -221324,6 +221356,7 @@ eTsIIkB
 eLSQ
 epFF
 eZXz
+escribi
 Motor
 Media
 Mantiene
@@ -245903,6 +245936,7 @@ luJUWGBjcr
 lzZnqpKU
 ltKU
 lFfk
+lLLN
 incluyendo
 im
 instalar
@@ -272307,6 +272341,9 @@ Rxld
 RFGm
 RBLz
 Remarks
+Regenerate
+Reconecta
+Reutiliza
 Hider
 Hace
 Herramientas
@@ -279202,6 +279239,7 @@ HcAVspau
 HvWo
 HWgnipPi
 HxUCA
+Hash
 filtrar
 formato
 faltantes
@@ -286807,6 +286845,7 @@ ftHPrAc
 fYPLh
 fQXy
 fSFv
+flow
 haya
 hace
 hacer
@@ -329249,6 +329288,7 @@ oZzIPruNlAm
 oLvfk
 ojwO
 oBFC
+oclusi
 junto
 json
 jer
@@ -412183,6 +412223,7 @@ zNEyLwTx
 zoWLyCBuS
 zWzB
 zZXz
+zsviczian
 kEG
 kE
 kg
