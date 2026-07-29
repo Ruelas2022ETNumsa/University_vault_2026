@@ -8057,6 +8057,7 @@ totalCardsFound
 totalAlreadyMarked
 trailing
 torno
+transparent
 ToDo
 Templater
 Text
@@ -33441,6 +33442,7 @@ Physical
 Permanently
 Proposito
 Patron
+Propiamente
 del
 date
 de
@@ -48896,6 +48898,7 @@ VbyqOrq
 VwKZ
 VcSwgN
 VwCppIrLTBO
+Viento
 galaxy
 gina
 genes
@@ -89589,6 +89592,8 @@ auditoria
 actua
 ausente
 automaticos
+adbb
+afefac
 related
 recomendados
 ribbon
@@ -98038,6 +98043,7 @@ rhHs
 rectangles
 remove
 revierte
+representado
 notes
 notas
 nuevas
@@ -115002,6 +115008,7 @@ completion
 cffdc
 converted
 conversion
+cafd
 updated
 un
 universo
@@ -139303,6 +139310,7 @@ Creates
 Cautious
 Card
 Confirmacion
+CFOX
 Instalados
 Instalado
 Instalar
@@ -148149,6 +148157,7 @@ IMTLQ
 IxJigD
 IYdqne
 IIMU
+Irkls
 Funci
 File
 Fase
@@ -165129,6 +165138,7 @@ ENYm
 ELZWavq
 ErcD
 EBQjYl
+Eolico
 Obsidian
 OmniSearch
 Ocultar
@@ -180740,6 +180750,7 @@ AThl
 Ayqo
 ABz
 Accion
+Alifg
 push
 pull
 para
@@ -188619,6 +188630,7 @@ pWze
 pHyZz
 parentFolder
 processed
+propiamente
 min
 mica
 movimiento
@@ -197670,6 +197682,7 @@ marked
 mkdir
 messagePrefix
 mathjax
+mCAmwzUW
 YAML
 Ya
 You
@@ -213232,6 +213245,7 @@ BnQr
 BneRmWI
 BDfv
 Boton
+BUJsYfG
 en
 exacta
 escaneados
@@ -221975,6 +221989,12 @@ except
 existing
 exist
 errors
+edfd
+efbc
+ewKEBu
+ecbf
+ekey
+edce
 Motor
 Media
 Mantiene
@@ -239235,6 +239255,9 @@ LjkxIkTkpMnTwILGMMwmx
 LnFjidd
 LeKUc
 Logica
+LPIxhJYi
+Lxwzy
+LgBN
 links
 las
 listar
@@ -255990,6 +256013,9 @@ igBM
 iysREY
 imageFolder
 incrementa
+interconectadas
+indeterminada
+interconectados
 Dependencia
 Dropbox
 Dataview
@@ -264121,6 +264147,7 @@ DELETE
 Delection
 Deleted
 Deletion
+DkuaaHYG
 Remotely
 Raz
 Revisa
@@ -273071,6 +273098,7 @@ RWmp
 RtUtw
 RgmfhSlHvs
 RHfXvwGqj
+Representacion
 Hider
 Hace
 Herramientas
@@ -279984,6 +280012,7 @@ HCAsYwTM
 HMMwTBcpFouxgMn
 HLSgBq
 HfQZ
+HjqH
 filtrar
 formato
 faltantes
@@ -287626,6 +287655,7 @@ fkYCNQKWuxKheHnImlaCq
 fgbt
 fHdPvU
 found
+fsIbRdh
 haya
 hace
 hacer
@@ -364314,6 +364344,7 @@ wCJt
 wrbF
 wXGS
 wiki
+waMEDyLr
 xima
 xeles
 xy
@@ -388984,6 +389015,7 @@ JibaPXs
 JjUWMixgV
 JJQIgjtoMOVK
 JgKGBGm
+JpJCzv
 KB
 Kirchhoff
 Ksv
@@ -413268,6 +413300,7 @@ zhZoNoS
 zEMw
 zMDPwPsYVOBjw
 zTAx
+zeoyv
 kEG
 kE
 kg
@@ -422040,6 +422073,7 @@ kal
 kqMt
 keSlnod
 kIMwzDdRIjXjh
+klpg
 Xe
 Xm
 Xu

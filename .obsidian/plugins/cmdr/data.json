@@ -87,6 +87,18 @@
       "icon": "lucide-bot-message-square",
       "name": "Shell commands: Execute: Preguntar a Wolfram Alpha",
       "mode": "any"
+    },
+    {
+      "id": "obsidian-prozen:zenmode",
+      "icon": "lucide-view",
+      "name": "ProZen: Zen mode",
+      "mode": "any"
+    },
+    {
+      "id": "galaxy-view:tour",
+      "icon": "lucide-stars",
+      "name": "Galaxy View: Iniciar / detener recorrido",
+      "mode": "any"
     }
   ],
   "pageHeader": [
