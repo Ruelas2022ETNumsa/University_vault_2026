@@ -5,12 +5,12 @@
   "disableDoubleClickTextEditing": false,
   "phoneFooterSafeAreaPadding": false,
   "tabletFooterSafeAreaPadding": false,
-  "folder": "_app/Excalidraw",
-  "cropFolder": "_app/Excalidraw/Observatory",
-  "annotateFolder": "_app/Excalidraw/Observatory",
+  "folder": "Excalidraw",
+  "cropFolder": "Excalidraw/Observatory",
+  "annotateFolder": "Excalidraw/Observatory",
   "embedUseExcalidrawFolder": true,
-  "templateFilePath": "_app/Excalidraw/Template.excalidraw",
-  "scriptFolderPath": "_app/Excalidraw/Scripts",
+  "templateFilePath": "Excalidraw/template/Template.excalidraw",
+  "scriptFolderPath": "Excalidraw/Scripts",
   "fontAssetsPath": "Excalidraw/CJK Fonts",
   "loadChineseFonts": false,
   "loadJapaneseFonts": false,
@@ -235,12 +235,12 @@
     },
     "Downloaded/Image Occlusion": {
       "Output Base Folder": {
-        "value": "",
+        "value": "Excalidraw/Image-Occlusions",
         "description": "Base folder for storing generated files. Always use forward slash '/' for paths. Example: 'Excalidraw-Image-Occlusions', 'Cards/Image-Occlusions'",
         "valueset": []
       },
       "Card Location": {
-        "value": "ask",
+        "value": "default",
         "description": "Where to save card files ('default' for same folder as images, or 'choose' for custom location)",
         "valueset": [
           "ask",
@@ -254,7 +254,7 @@
         "valueset": []
       },
       "Default Template": {
-        "value": "",
+        "value": "Excalidraw/templates/tpl-occlusion.md",
         "description": "Default template file path relative to template folder (e.g., 'Anki/Image Occlusion.md'). Leave empty to select template each time",
         "valueset": []
       },
@@ -279,7 +279,7 @@
         "valueset": []
       },
       "Generate Images No Matter What": {
-        "value": "no",
+        "value": "yes",
         "description": "Always generate images even when template selection is cancelled (yes/no)",
         "valueset": [
           "yes",
@@ -1243,5 +1243,4 @@
     "margin": "normal"
   },
   "disableContextMenu": false,
-  "isDebugMode": false
-}
+  "isDebugMode": fa

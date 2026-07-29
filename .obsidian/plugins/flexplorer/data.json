@@ -5,10 +5,11 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
+        "Excalidraw",
+        "tsk_anki.md",
         "anki-opcionC-obsidian-to-anki.md",
         "pruebaexcali",
         "anki-opcionB-flashcards.md",
-        "obsidian-to-anki-plugin-3.6.0.zip",
         "Excalidraw-Image-Occlusions",
         "anki-opcionA-marginalia.md",
         "Rubbish",
@@ -1102,7 +1103,6 @@
         "shellcommands",
         "Canvas",
         "completr-words",
-        "Excalidraw",
         "scripts",
         "solve",
         "_appnotes",
@@ -1124,70 +1124,6 @@
       ]
     },
     "_app/completr-words/code.txt": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/Excalidraw": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Constellations",
-        "Observatory",
-        "Scripts",
-        "Template.excalidraw.md"
-      ]
-    },
-    "_app/Excalidraw/Constellations": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": []
-    },
-    "_app/Excalidraw/Observatory": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": []
-    },
-    "_app/Excalidraw/Scripts": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Downloaded"
-      ]
-    },
-    "_app/Excalidraw/Scripts/Downloaded": {
-      "isPinned": false,
-      "isHidden": true,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Image Occlusion.svg",
-        "Image Occlusion.md",
-        "Mindmap Builder.md",
-        "Mindmap Builder.svg",
-        "Slideshow.md",
-        "Slideshow.svg"
-      ]
-    },
-    "_app/Excalidraw/Scripts/Downloaded/Mindmap Builder.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/Excalidraw/Scripts/Downloaded/Mindmap Builder.svg": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/Excalidraw/Scripts/Downloaded/Slideshow.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/Excalidraw/Scripts/Downloaded/Slideshow.svg": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/Excalidraw/Template.excalidraw.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -1396,7 +1332,6 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "tpl-anki_img_oc.md",
         "tpl-w-initial.md",
         "tpl-w-project.md",
         "tpl-w-study.md",
@@ -3160,14 +3095,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_app/Excalidraw/Scripts/Downloaded/Image Occlusion.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/Excalidraw/Scripts/Downloaded/Image Occlusion.svg": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Excalidraw-Image-Occlusions": {
       "isPinned": false,
       "isHidden": false,
@@ -3319,21 +3246,11 @@
       "isPinned": false,
       "isHidden": false
     },
-    "obsidian-to-anki-plugin-3.6.0.zip": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "pruebaexcali": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
-      "customOrder": [
-        "20260728005909390.md"
-      ]
-    },
-    "pruebaexcali/20260728005909390.md": {
-      "isPinned": false,
-      "isHidden": false
+      "customOrder": []
     },
     "Borrar/20260728152547498.md": {
       "isPinned": false,
@@ -3344,10 +3261,6 @@
       "isHidden": false
     },
     "Borrar/20260728152547671.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_templates/tpl-anki_img_oc.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -3368,6 +3281,95 @@
       "isHidden": false
     },
     "_assets/void 1-27-07-2026_16-38-41.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "tsk_anki.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "template",
+        "Scripts",
+        "Observatory",
+        "Constellations"
+      ]
+    },
+    "Excalidraw/Constellations": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "Excalidraw/Observatory": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "Excalidraw/Scripts": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Downloaded"
+      ]
+    },
+    "Excalidraw/Scripts/Downloaded": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Slideshow.svg",
+        "Slideshow.md",
+        "Mindmap Builder.svg",
+        "Mindmap Builder.md",
+        "Image Occlusion.svg",
+        "Image Occlusion.md"
+      ]
+    },
+    "Excalidraw/Scripts/Downloaded/Image Occlusion.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Scripts/Downloaded/Image Occlusion.svg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Scripts/Downloaded/Mindmap Builder.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Scripts/Downloaded/Mindmap Builder.svg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Scripts/Downloaded/Slideshow.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Scripts/Downloaded/Slideshow.svg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/template": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Template.excalidraw.md",
+        "tpl-occlusion.md.md"
+      ]
+    },
+    "Excalidraw/template/Template.excalidraw.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/template/tpl-occlusion.md.md": {
       "isPinned": false,
       "isHidden": false
     }

@@ -64069,6 +64069,7 @@ brWegYy
 bFuQ
 bONE
 bokj
+bloqueador
 scope
 status
 selector
@@ -89327,6 +89328,7 @@ aeVD
 aYNH
 actualizaste
 afectados
+abandono
 related
 recomendados
 ribbon
@@ -138907,6 +138909,9 @@ CaDB
 CurlyCloze
 Comments
 Cache
+Coexisten
+Complejidad
+Consideraciones
 Instalados
 Instalado
 Instalar
@@ -147728,6 +147733,7 @@ IDATT
 IDATp
 Interval
 Inactivo
+Inviable
 Funci
 File
 Fase
@@ -164671,6 +164677,7 @@ EFeRB
 Escanea
 ENDI
 Engranaje
+Escenarios
 Obsidian
 OmniSearch
 Ocultar
@@ -188093,6 +188100,7 @@ pGDx
 pPgfaUNrwlhWQYpXdMpu
 pqKaCANHAlkJcBDkdzpmHAXwKNFl
 proex
+provisional
 min
 mica
 movimiento
@@ -221357,6 +221365,7 @@ eLSQ
 epFF
 eZXz
 escribi
+expr
 Motor
 Media
 Mantiene
@@ -245937,6 +245946,7 @@ lzZnqpKU
 ltKU
 lFfk
 lLLN
+limpiado
 incluyendo
 im
 instalar
@@ -255306,6 +255316,7 @@ injHoezID
 izdlfbhOD
 iMONqCzwakah
 iDAzT
+interrumpe
 Dependencia
 Dropbox
 Dataview
@@ -286846,6 +286857,7 @@ fYPLh
 fQXy
 fSFv
 flow
+fluida
 haya
 hace
 hacer
@@ -329289,6 +329301,7 @@ oLvfk
 ojwO
 oBFC
 oclusi
+optimizado
 junto
 json
 jer
