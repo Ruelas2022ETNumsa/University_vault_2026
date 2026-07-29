@@ -8051,6 +8051,11 @@ tqLdQ
 tPIfqD
 tHyO
 tUfXRIRwJmMB
+tfqx
+through
+totalCardsFound
+totalAlreadyMarked
+trailing
 ToDo
 Templater
 Text
@@ -25888,6 +25893,8 @@ SUXf
 SQqX
 SbOMuRHElvLby
 SIpbtnAxmxKi
+Summary
+Successfully
 Plugins
 Pendientes
 Plugin
@@ -33428,6 +33435,8 @@ PDdF
 PApww
 PAiNe
 PEIyXoexchEGsaFSFcZ
+Physical
+Permanently
 del
 date
 de
@@ -40866,6 +40875,12 @@ dfiIXrH
 dTjKR
 dqyRwWMIZhNhDxK
 dvjx
+dVbW
+dJxx
+deletion
+deletes
+deletedFoldersCount
+doesn
 Vault
 Verificar
 Variables
@@ -57190,6 +57205,9 @@ gYqV
 gmKJ
 gMQzDdJdSqSTFCz
 glRO
+gruxu
+getAllLoadedFiles
+getImageFolder
 body
 beacon
 bat
@@ -64227,6 +64245,9 @@ bhsFHVucS
 biDXUYRqig
 bGAHTp
 bjdnSnhgRMUCuXYGhA
+bWk
+batchMarkers
+baseFolder
 scope
 status
 selector
@@ -73086,6 +73107,14 @@ sYGTSKuIiCY
 sYMH
 sElQRk
 sCqJWATE
+sIPE
+shapes
+shape
+slashes
+selectedFolder
+spaces
+showing
+some
 vault
 vil
 ver
@@ -81586,6 +81615,9 @@ vonvQT
 vpfpO
 vtfiYANlKFmBCmF
 vLuvRMCGylA
+vcyg
+versions
+validation
 audience
 activo
 auto
@@ -89537,6 +89569,13 @@ aMsYAzD
 aDHGNtJsa
 aFLH
 amzjHxSV
+aAZR
+areas
+adding
+adapter
+available
+actualPrefix
+actualSuffix
 related
 recomendados
 ribbon
@@ -97983,6 +98022,8 @@ rVKJ
 rPhWq
 rtpH
 rhHs
+rectangles
+remove
 notes
 notas
 nuevas
@@ -105965,6 +106006,11 @@ ndQfAAAAAXNSR
 noBVlpr
 nhBHgHDwhISGb
 ndCxghr
+nBpj
+nMNQ
+normalizedPath
+normalizedBase
+nGenerated
 created
 commit
 cada
@@ -114927,6 +114973,19 @@ cuPjchI
 cvFi
 clAZgeCPABxLZIBB
 cRPXvfYh
+creates
+cardPath
+cardFile
+contents
+children
+choose
+cancels
+construct
+cardFolder
+cardNumber
+console
+completion
+cffdc
 updated
 un
 universo
@@ -123840,6 +123899,7 @@ uNcO
 uHDTGEc
 uvKUv
 uXLcOnSpfwCJjcf
+undefined
 Galaxy
 Git
 Gr
@@ -131771,6 +131831,8 @@ Gzgo
 GXbyu
 GTwPH
 GItmaiOgKkDsserZHDuTqzEVD
+GkQrX
+Guess
 Convenci
 Creaci
 Commander
@@ -139220,6 +139282,10 @@ CAsYwTE
 CykErFoSncOwbWwcCZdGX
 CwceeYG
 CYII
+Choose
+Creates
+Cautious
+Card
 Instalados
 Instalado
 Instalar
@@ -148065,6 +148131,7 @@ IsYAxDNMzHDx
 IMTLQ
 IxJigD
 IYdqne
+IIMU
 Funci
 File
 Fase
@@ -156153,6 +156220,8 @@ FLly
 FCho
 FWnop
 FmScexvkFjCB
+FpMP
+Found
 Estado
 Excalidraw
 EPUBs
@@ -165041,6 +165110,8 @@ EEXgmMGRMJ
 EWUeR
 ENYm
 ELZWavq
+ErcD
+EBQjYl
 Obsidian
 OmniSearch
 Ocultar
@@ -173067,6 +173138,7 @@ OadaJ
 Oucw
 OuOE
 ORDSFtZ
+OeGy
 Auto
 Annotator
 Autocompletado
@@ -180645,6 +180717,9 @@ AaPzy
 AIoPgIgJOUwpZ
 AhiMgX
 AUtfm
+AThl
+Ayqo
+ABz
 push
 pull
 para
@@ -188520,6 +188595,10 @@ pYuFHNNqQStNnIw
 pwpFvU
 pPqYHkM
 pKsCxjAM
+pWze
+pHyZz
+parentFolder
+processed
 min
 mica
 movimiento
@@ -197564,6 +197643,12 @@ mcYO
 mMwZ
 mUDA
 mZMh
+masks
+marker
+masked
+marked
+mkdir
+messagePrefix
 YAML
 Ya
 You
@@ -205779,6 +205864,7 @@ YRjbUPH
 YPYp
 YQLGAMw
 YxDMN
+YeZp
 Bot
 Baja
 Builder
@@ -213123,6 +213209,7 @@ BAsYwTM
 BimW
 BnQr
 BneRmWI
+BDfv
 en
 exacta
 escaneados
@@ -221861,6 +221948,11 @@ ewWA
 ePnwIDx
 ehQMHDsDo
 eYXs
+ellipses
+except
+existing
+exist
+errors
 Motor
 Media
 Mantiene
@@ -231143,6 +231235,8 @@ MBYxFjCGYXqKmZkZKWBGxFjAGIbpGcbGxuDo
 MgRFjCGYXoTIWDmLqywZcsWYBiG
 MLgC
 MRxbFvy
+MGnE
+Marks
 Lectura
 LaTeX
 Linter
@@ -239117,6 +239211,7 @@ LGB
 LeAx
 LjkxIkTkpMnTwILGMMwmx
 LnFjidd
+LeKUc
 links
 las
 listar
@@ -246482,6 +246577,9 @@ llbcs
 lnvhx
 lBsv
 lFXuaALh
+lIPnW
+locally
+leading
 incluyendo
 im
 instalar
@@ -255867,6 +255965,7 @@ iINR
 iBEzQtoD
 igBM
 iysREY
+imageFolder
 Dependencia
 Dropbox
 Dataview
@@ -263995,6 +264094,9 @@ DbMlg
 DkrYi
 DZRvSVyT
 DELETE
+Delection
+Deleted
+Deletion
 Remotely
 Raz
 Revisa
@@ -279856,6 +279958,8 @@ HSEtBUHEfloUSWNcFEXFFF
 HAkk
 HCAsYwTM
 HMMwTBcpFouxgMn
+HLSgBq
+HfQZ
 filtrar
 formato
 faltantes
@@ -287497,6 +287601,7 @@ fnxTl
 fkYCNQKWuxKheHnImlaCq
 fgbt
 fHdPvU
+found
 haya
 hace
 hacer
@@ -303918,6 +304023,7 @@ qvXQ
 qwULkM
 qVQq
 qMSQrjEG
+qrkD
 University
 Usar
 Un
@@ -313046,6 +313152,8 @@ Udpq
 UJIf
 UfJZvTp
 UQdd
+UiBS
+Usage
 Nombre
 Notas
 No
@@ -321576,6 +321684,8 @@ NKGBKpCkxEvgFJwWsuSLb
 NQUripIsVHNHE
 NQKZoBA
 NQWC
+Newly
+Normalize
 originales
 observatory
 oficial
@@ -330013,6 +330123,8 @@ oOJYQ
 ouMhc
 obtB
 ocvfu
+over
+occlude
 junto
 json
 jer
@@ -339008,6 +339120,7 @@ jzxUKtRfWrOIqPo
 jeEu
 jnrEjCDETLxPtfk
 jnhMxGSJ
+jYHq
 Qu
 Qui
 Quick
@@ -355918,6 +356031,7 @@ yzfYjK
 yHinUDBSycaFn
 yZfHF
 yZxPxxbXgnuOMY
+yoFk
 wikilinks
 when
 where
@@ -364173,6 +364287,8 @@ wdee
 wUHQmYEKviUAGWX
 wCJt
 wrbF
+wXGS
+wiki
 xima
 xeles
 xy
@@ -371811,6 +371927,7 @@ xcYqbN
 xQwnYCBTdsFopMwODaBKjhlQ
 xcFtc
 xIwg
+xnahJ
 Wikilinks
 WHERE
 WebGL
@@ -396734,6 +396851,8 @@ KZEUV
 KOLbCIX
 KwgLGMMxHgHlspMQrEbAtW
 KgIAAAAASUVORK
+KvWe
+KiYuF
 Zonas
 Zoom
 Zona
@@ -405161,6 +405280,7 @@ ZvYdkK
 ZtuHLlCuzfvx
 ZmHfkjn
 ZGvCgBE
+ZpdC
 zona
 zonas
 zT
@@ -413122,6 +413242,7 @@ zNiDWen
 zhZoNoS
 zEMw
 zMDPwPsYVOBjw
+zTAx
 kEG
 kE
 kg
@@ -429296,6 +429417,7 @@ XYttyi
 Xraa
 XSzBgDCEBq
 XsDA
+XQf
 ßK
 ßH
 ßu
@@ -429504,6 +429626,7 @@ XsDA
 Ärf
 ÄfaY
 ÄAU
+Äop
 ÜGSM
 Ür
 ÜA
