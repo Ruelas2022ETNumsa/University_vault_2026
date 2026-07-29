@@ -73115,6 +73115,7 @@ selectedFolder
 spaces
 showing
 some
+sigma
 vault
 vil
 ver
@@ -173139,6 +173140,7 @@ Oucw
 OuOE
 ORDSFtZ
 OeGy
+Otra
 Auto
 Annotator
 Autocompletado
@@ -197649,6 +197651,7 @@ masked
 marked
 mkdir
 messagePrefix
+mathjax
 YAML
 Ya
 You

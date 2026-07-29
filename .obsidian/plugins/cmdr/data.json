@@ -47,6 +47,12 @@
       "icon": "lucide-cloud-upload",
       "name": "Shell commands: Execute: Sync Vault → Drive",
       "mode": "any"
+    },
+    {
+      "id": "obsidian-shellcommands:shell-command-ywvxjw1tak",
+      "icon": "formula",
+      "name": "Shell commands: Execute: LaTeX → MathJax",
+      "mode": "any"
     }
   ],
   "rightRibbon": [],
@@ -159,6 +165,7 @@
   ],
   "macros": [],
   "explorer": [],
+  "textToolbarCommands": [],
   "hide": {
     "statusbar": [
       "remotely-save",
