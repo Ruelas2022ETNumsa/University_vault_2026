@@ -6,7 +6,6 @@
       "sortOrder": "byName",
       "customOrder": [
         "Canvas",
-        "_assets",
         "Marginalia",
         "Excalidraw",
         "Rubbish",
@@ -37,9 +36,6 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "Sem_03",
-        "Sem_08",
-        "Sem_09",
         "Sem_01"
       ]
     },
@@ -2583,7 +2579,6 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "4",
         "MAT101"
       ]
     },
@@ -3007,147 +3002,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Semesters/Sem_09": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "8",
-        "ETN999"
-      ]
-    },
-    "Semesters/Sem_09/ETN999": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Partial_1"
-      ]
-    },
-    "Semesters/Sem_09/ETN999/Partial_1": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "T01_pepeitus"
-      ]
-    },
-    "Semesters/Sem_09/ETN999/Partial_1/T01_pepeitus": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": []
-    },
-    "Semesters/Sem_08": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "ETN999"
-      ]
-    },
-    "Semesters/Sem_08/ETN999": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Partial_2"
-      ]
-    },
-    "Semesters/Sem_08/ETN999/Partial_2": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "TNasd"
-      ]
-    },
-    "Semesters/Sem_08/ETN999/Partial_2/TNasd": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": []
-    },
-    "Semesters/Sem_03": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "ETN132"
-      ]
-    },
-    "Semesters/Sem_03/ETN132": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Partial_1"
-      ]
-    },
-    "Semesters/Sem_03/ETN132/Partial_1": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "2"
-      ]
-    },
-    "Semesters/Sem_03/ETN132/Partial_1/2": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": []
-    },
-    "Semesters/Sem_09/8": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Partial_7"
-      ]
-    },
-    "Semesters/Sem_09/8/Partial_7": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "4"
-      ]
-    },
-    "Semesters/Sem_09/8/Partial_7/4": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": []
-    },
-    "Semesters/Sem_01/4": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Partial_2"
-      ]
-    },
-    "Semesters/Sem_01/4/Partial_2": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "3"
-      ]
-    },
-    "Semesters/Sem_01/4/Partial_2/3": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "5.md"
-      ]
-    },
-    "Semesters/Sem_01/4/Partial_2/3/5.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Borrar/wolfram alpha example.md": {
       "isPinned": false,
       "isHidden": false
@@ -3328,12 +3182,6 @@
     "_projects/anki/tsk_anki.md": {
       "isPinned": false,
       "isHidden": false
-    },
-    "_assets": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": []
     },
     "Excalidraw/Image-Occlusions/RENOMBRAR-28-07-2026 22.28.33.excalidraw__2026-07-28 22.31.46": {
       "isPinned": false,
