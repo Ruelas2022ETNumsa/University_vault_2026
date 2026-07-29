@@ -4,7 +4,7 @@ date: 2026-07-28
 status: creciente
 ---
 
-comentario, las 3 son plugins utiles para distintas etapas, es necesario un anki_system para documentar que hara cada plugin.
+**comentario:** las 3 son plugins utiles para distintas etapas, es necesario un anki_system para documentar que hara cada plugin.
 ## Handoff
 
 **Última sesión:** 2026-07-28
@@ -41,12 +41,12 @@ Decidir el flujo definitivo Anki Galaxy entre las opciones A (Marginalia), B (Fl
 
 ## Decisiones
 
-| Fecha | Decisión | Motivo |
-| ----- | -------- | ------ |
-| 2026-07-28 | Opción C = flujo Image Occlusion | Único plugin que soporta Image Occlusion Enhanced desde Excalidraw |
-| 2026-07-28 | AnkiSync+ (RochaG07) descartado | Creaba decks pero no tarjetas — sin fix, sin mantenimiento |
-| 2026-07-28 | Opción D descartada | Complejidad innecesaria — Opción B resuelve LaTeX sin scripts |
-| 2026-07-28 | Script 3 (limpiar `<!--ID-->`) — pendiente | Necesario para re-exportar si se borran mazos manualmente en Anki |
+| Fecha      | Decisión                                   | Motivo                                                             |
+| ---------- | ------------------------------------------ | ------------------------------------------------------------------ |
+| 2026-07-28 | Opción C = flujo Image Occlusion           | Único plugin que soporta Image Occlusion Enhanced desde Excalidraw |
+| 2026-07-28 | AnkiSync+ (RochaG07) descartado            | Creaba decks pero no tarjetas — sin fix, sin mantenimiento         |
+| 2026-07-28 | Opción D descartada                        | Complejidad innecesaria — Opción B resuelve LaTeX sin scripts      |
+| 2026-07-28 | Script 3 (limpiar `<!--ID-->`) — pendiente | Necesario para re-exportar si se borran mazos manualmente en Anki  |
 
 > [!note]- Descartadas
 > - **AnkiSync+ (RochaG07):** creaba mazos pero no tarjetas. Sin solución conocida, sin mantenimiento activo.
