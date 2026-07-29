@@ -50,6 +50,7 @@ tags: [anki, obsidian-to-anki, pseudonium, image-occlusion, excalidraw, setup, g
 
 ```
 **/*.excalidraw.md
+Excalidraw/template/**
 _app/**
 _assets/**
 _PDF/**
@@ -245,7 +246,7 @@ Excalidraw-Image-Occlusions/
 
 %%
 # galaxy-links
-[[anki_galaxy_guide.md]]
-[[anki-opcionB-flashcards.md]]
+[[anki_galaxy_guide]]
+[[anki-opcionB-flashcards]]
 [[Untitled 1.md]]
 %%

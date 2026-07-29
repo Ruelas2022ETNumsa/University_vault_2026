@@ -94,7 +94,7 @@
   "exportPaddingSVG": 10,
   "exportEmbedScene": false,
   "keepInSync": false,
-  "autoexportSVG": true,
+  "autoexportSVG": false,
   "autoexportPNG": false,
   "autoExportLightAndDark": false,
   "autoexportExcalidraw": false,
@@ -254,7 +254,7 @@
         "valueset": []
       },
       "Default Template": {
-        "value": "Excalidraw/templates/tpl-occlusion.md",
+        "value": "Excalidraw\\template\\tpl-occlusion.md",
         "description": "Default template file path relative to template folder (e.g., 'Anki/Image Occlusion.md'). Leave empty to select template each time",
         "valueset": []
       },
@@ -298,9 +298,8 @@
   "taskboneEnabled": false,
   "taskboneAPIkey": "",
   "pinnedScripts": [
-    "_app/Excalidraw/Scripts/Downloaded/Mindmap Builder.md",
-    "_app/Excalidraw/Scripts/Downloaded/Slideshow.md",
-    "_app/Excalidraw/Scripts/Downloaded/Image Occlusion.md"
+    "_app/Excalidraw/Scripts/Downloaded/Image Occlusion.md",
+    "Excalidraw/Scripts/Downloaded/Image Occlusion.md"
   ],
   "sidepanelTabs": [
     "{\"script\":\"Downloaded/Mindmap Builder\",\"title\":\"Mind Map Builder\"}"
@@ -656,7 +655,7 @@
   "markdownNodeOneClickEditing": false,
   "canvasImmersiveEmbed": true,
   "startupScriptPath": "",
-  "aiEnabled": true,
+  "aiEnabled": false,
   "aiVerboseLogging": false,
   "aiProviderProfiles": {
     "OpenAI": {
@@ -1243,4 +1242,5 @@
     "margin": "normal"
   },
   "disableContextMenu": false,
-  "isDebugMode": fa
+  "isDebugMode": false
+}

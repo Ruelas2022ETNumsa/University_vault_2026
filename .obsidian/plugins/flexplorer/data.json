@@ -5,24 +5,14 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
+        "_assets",
+        "Marginalia",
         "Excalidraw",
-        "tsk_anki.md",
-        "anki-opcionC-obsidian-to-anki.md",
-        "pruebaexcali",
-        "anki-opcionB-flashcards.md",
-        "Excalidraw-Image-Occlusions",
-        "anki-opcionA-marginalia.md",
         "Rubbish",
-        "anki_galaxy_guide.md",
-        "Evidence Boards",
-        "Pinboards",
         "_blueprint",
         "_inbox",
         "_skills",
         "_projects",
-        "_assets",
-        "Zettelkasten",
-        "Marginalia Attachments",
         "Borrar",
         "README.md",
         "MOC",
@@ -1332,6 +1322,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "tpl-ex_occlusion.md",
         "tpl-w-initial.md",
         "tpl-w-project.md",
         "tpl-w-study.md",
@@ -2338,9 +2329,6 @@
       "customOrder": [
         "void 1.md",
         "wolfram alpha example.md",
-        "20260728152547498.md",
-        "20260728152547590.md",
-        "20260728152547671.md",
         "zborrar903_3 otro.md",
         "P3A.asm",
         "zborrar111das111.md",
@@ -2736,25 +2724,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Zettelkasten": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "20260723151457.md",
-        "20260723163008.md",
-        "20260723163953.md",
-        "20260723164254.md",
-        "20260723164408.md",
-        "20260723193844.md"
-      ]
-    },
-    "Marginalia Attachments": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": []
-    },
     "_app/_config/_library_ETN505(i).md": {
       "isPinned": false,
       "isHidden": false
@@ -2807,15 +2776,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_assets": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "void 1-27-07-2026_16-38-41.png",
-        "Marginalia Inbox-27-07-2026_16-36-06.png"
-      ]
-    },
     "_app/_appnotes/tagroute_parche/TagsRoute(legacy).md": {
       "isPinned": false,
       "isHidden": false
@@ -2825,42 +2785,6 @@
       "isHidden": false
     },
     "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-inecuaciones_lineales 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Evidence Boards": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": []
-    },
-    "Pinboards": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": []
-    },
-    "Zettelkasten/20260723151457.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Zettelkasten/20260723163008.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Zettelkasten/20260723163953.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Zettelkasten/20260723164254.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Zettelkasten/20260723164408.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Zettelkasten/20260723193844.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -2989,6 +2913,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "anki",
         "tsk_pdf_marginalia_pp.md",
         "tsk_alx-rul.md",
         "tsk_alxgml.md",
@@ -3062,14 +2987,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "anki_galaxy_guide.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/Marginalia Inbox-27-07-2026_16-36-06.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Rubbish": {
       "isPinned": false,
       "isHidden": false,
@@ -3094,12 +3011,6 @@
     "Rubbish/tmp/lock": {
       "isPinned": false,
       "isHidden": false
-    },
-    "Excalidraw-Image-Occlusions": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": []
     },
     "Semesters/Sem_09": {
       "isPinned": false,
@@ -3242,49 +3153,11 @@
       "isPinned": false,
       "isHidden": false
     },
-    "anki-opcionB-flashcards.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "pruebaexcali": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": []
-    },
-    "Borrar/20260728152547498.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Borrar/20260728152547590.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Borrar/20260728152547671.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "anki-opcionA-marginalia.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Borrar/wolfram alpha example.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "anki-opcionC-obsidian-to-anki.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Borrar/void 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/void 1-27-07-2026_16-38-41.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "tsk_anki.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -3293,6 +3166,8 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "avv.excalidraw.md",
+        "Image-Occlusions",
         "template",
         "Scripts",
         "Observatory",
@@ -3362,14 +3237,107 @@
       "sortOrder": "custom",
       "customOrder": [
         "Template.excalidraw.md",
-        "tpl-occlusion.md.md"
+        "tpl-occlusion.md"
       ]
     },
     "Excalidraw/template/Template.excalidraw.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "Excalidraw/template/tpl-occlusion.md.md": {
+    "Excalidraw/template/tpl-occlusion.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "_templates/tpl-ex_occlusion.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Marginalia": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "Marginalia Attachments",
+        "Zettelkasten",
+        "Pinboards",
+        "Evidence Boards"
+      ],
+      "sortOrder": "custom"
+    },
+    "Marginalia/Evidence Boards": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "Marginalia/Pinboards": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "Marginalia/Zettelkasten": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "20260723193844.md"
+      ]
+    },
+    "Marginalia/Zettelkasten/20260723193844.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Marginalia/Marginalia Attachments": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "_projects/anki": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "tsk_anki.md",
+        "anki_galaxy_guide.md",
+        "anki-opcionA-marginalia.md",
+        "anki-opcionB-flashcards.md",
+        "anki-opcionC-obsidian-to-anki.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "_projects/anki/anki_galaxy_guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_projects/anki/anki-opcionA-marginalia.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_projects/anki/anki-opcionB-flashcards.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_projects/anki/anki-opcionC-obsidian-to-anki.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_projects/anki/tsk_anki.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [],
+      "sortOrder": "custom"
+    },
+    "Excalidraw/avv.excalidraw.md": {
       "isPinned": false,
       "isHidden": false
     }

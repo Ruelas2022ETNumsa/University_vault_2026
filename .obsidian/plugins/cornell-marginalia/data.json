@@ -18,7 +18,7 @@
       "color": "#4a90e2"
     }
   ],
-  "ignoredFolders": "_app,_templates,_PDF,_inbox",
+  "ignoredFolders": "_app,_templates,_PDF,_inbox,Excalidraw",
   "enableSemanticStitching": true,
   "alignment": "left",
   "marginWidth": 60,
@@ -68,11 +68,11 @@
   "ignoredHighlightTexts": "⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠",
   "showSyntaxInSourceMode": true,
   "zkMode": false,
-  "zkFolder": "Zettelkasten",
+  "zkFolder": "Marginalia/Zettelkasten",
   "zkTemplatePath": "_templates/tpl-zk.md",
   "doodleFolder": "",
-  "canvasFolder": "Evidence Boards",
-  "pinboardFolder": "Pinboards",
+  "canvasFolder": "Marginalia/Evidence Boards",
+  "pinboardFolder": "Marginalia/Pinboards",
   "pinboardNodes": {},
   "pinboardStitches": [],
   "pinboardTemplatePath": "",

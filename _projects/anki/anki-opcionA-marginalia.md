@@ -204,6 +204,6 @@ Anki usa MathJax con delimitadores `\(...\)` y `\[...\]`, no `$...$` de Obsidian
 
 %%
 # galaxy-links
-[[anki_galaxy_guide.md]]
+[[anki_galaxy_guide]]
 [[_skills/_start.md]]
 %%

@@ -185,7 +185,7 @@ Solo procesar líneas con `%%>` y `;;`. Revertir después del sync.
 
 %%
 # galaxy-links
-[[anki_galaxy_guide.md]]
-[[anki-opcionA-marginalia.md]]
+[[anki_galaxy_guide]]
+[[anki-opcionA-marginalia]]
 [[anki-opcionA-marginalia]]
 %%

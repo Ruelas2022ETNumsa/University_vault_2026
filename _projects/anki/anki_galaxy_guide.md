@@ -265,7 +265,7 @@ Borra todas las líneas `<!--ID: ...-->` de los `.card.md` en `Excalidraw-Image-
 # galaxy-links
 [[_app/_config/_marginalia_system.md]]
 [[_app/_appnotes/Marginalia_guide.md]]
-[[anki-opcionA-marginalia.md]]
-[[anki-opcionB-flashcards.md]]
-[[anki-opcionC-obsidian-to-anki.md]]
+[[anki-opcionA-marginalia]]
+[[anki-opcionB-flashcards]]
+[[anki-opcionC-obsidian-to-anki]]
 %%
