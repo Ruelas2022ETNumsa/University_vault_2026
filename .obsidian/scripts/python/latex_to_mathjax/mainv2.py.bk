@@ -1,0 +1,121 @@
+"""
+latex_to_mathjax — Script 2
+Convierte delimitadores LaTeX en todo el archivo .md
+de sintaxis Obsidian ($...$ / $$...$$) a sintaxis MathJax (\(...\) / \[...\])
+
+Uso desde Shell Commands:
+    python main.py "<file_path_absolute>"
+
+Flujo:
+    1. Lee el archivo activo
+    2. Convierte $$ → \[...\] y $ → \(...\) en todo el archivo
+    3. Protege bloques de código (no los toca)
+    4. Escribe el archivo modificado en disco
+    5. Obsidian detecta el cambio → Ctrl+Z restaura el original
+
+Restricciones:
+    - No toca bloques de código (`...` ni ```...```)
+    - No toca el YAML frontmatter (entre --- y ---)
+"""
+
+import sys
+import re
+
+
+# ---------------------------------------------------------------------------
+# Conversión LaTeX → MathJax en un bloque de texto
+# ---------------------------------------------------------------------------
+
+def convert_latex(text: str) -> str:
+    """
+    Aplica conversión $$ → \[...\] y $ → \(...\) en el texto recibido.
+    Protege bloques de código antes de convertir y los restaura después.
+    """
+
+    placeholders = {}
+    counter = [0]
+
+    def protect(match):
+        key = f"\x00CODE{counter[0]}\x00"
+        placeholders[key] = match.group(0)
+        counter[0] += 1
+        return key
+
+    # Proteger bloques de código multilinea primero
+    text = re.sub(r'```[\s\S]*?```', protect, text)
+    # Proteger inline code
+    text = re.sub(r'`[^`\n]+`', protect, text)
+
+    # $$ → \[...\]  (primero, para no confundir con $)
+    text = re.sub(r'\$\$([\s\S]+?)\$\$', lambda m: r'\[' + m.group(1) + r'\]', text)
+
+    # $ → \(...\)
+    text = re.sub(r'(?<!\$)\$(?!\$)([^\$\n]+?)\$', lambda m: r'\(' + m.group(1) + r'\)', text)
+
+    # Restaurar bloques de código
+    for key, original in placeholders.items():
+        text = text.replace(key, original)
+
+    return text
+
+
+# ---------------------------------------------------------------------------
+# Procesamiento del archivo completo
+# ---------------------------------------------------------------------------
+
+def convert_file(file_path: str) -> tuple[str, bool]:
+    """
+    Lee el archivo, separa el YAML frontmatter (no se toca),
+    convierte el resto completo y devuelve (contenido_modificado, hubo_cambios).
+    """
+    with open(file_path, 'r', encoding='utf-8') as f:
+        content = f.read()
+
+    # Separar YAML frontmatter si existe
+    yaml_match = re.match(r'^(---\n[\s\S]*?\n---\n)', content)
+    if yaml_match:
+        frontmatter = yaml_match.group(1)
+        body = content[len(frontmatter):]
+    else:
+        frontmatter = ''
+        body = content
+
+    converted_body = convert_latex(body)
+    modified = frontmatter + converted_body
+    changed = modified != content
+
+    return modified, changed
+
+
+# ---------------------------------------------------------------------------
+# Entry point
+# ---------------------------------------------------------------------------
+
+def main():
+    if len(sys.argv) < 2:
+        print("ERROR: Se requiere la ruta del archivo como argumento.", file=sys.stderr)
+        print("Uso: python main.py \"<ruta_absoluta_del_archivo>\"", file=sys.stderr)
+        sys.exit(1)
+
+    file_path = sys.argv[1]
+
+    try:
+        modified_content, changed = convert_file(file_path)
+    except FileNotFoundError:
+        print(f"ERROR: Archivo no encontrado: {file_path}", file=sys.stderr)
+        sys.exit(1)
+    except Exception as e:
+        print(f"ERROR inesperado: {e}", file=sys.stderr)
+        sys.exit(1)
+
+    with open(file_path, 'w', encoding='utf-8') as f:
+        f.write(modified_content)
+
+    if changed:
+        print("✓ LaTeX → MathJax: conversión aplicada. Ctrl+Z para revertir.")
+    else:
+        print("Sin cambios — no se encontraron fórmulas $...$ en el archivo.")
+
+
+if __name__ == "__main__":
+    main()

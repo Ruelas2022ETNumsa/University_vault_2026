@@ -53,6 +53,12 @@
       "icon": "formula",
       "name": "Shell commands: Execute: LaTeX → MathJax",
       "mode": "any"
+    },
+    {
+      "id": "cornell-marginalia:sync-cornell-to-anki",
+      "icon": "lucide-glasses",
+      "name": "Cornell Marginalia: Sync Flashcards to Anki (Current Note)",
+      "mode": "any"
     }
   ],
   "rightRibbon": [],

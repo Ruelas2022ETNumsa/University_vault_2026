@@ -1,27 +1,38 @@
 ---
-title: _tmp_sync — Prueba Script 2 LaTeX → MathJax
+title: _tmp_sync — Prueba Opción A Marginalia + LaTeX
 status: temp
+tags: [anki-test]
+latex_converted: false
 ---
 
-# Prueba Script 2 — latex_to_mathjax
+# Prueba sync Marginalia → Anki
 
-Texto normal con $x^2$ fuera de un bloque — NO debe convertirse.
+> Flujo: abrir archivo → Script 2 → Marginalia Sync → verificar en Anki → Ctrl+Z
 
-%%>
-Esto es un bloque Marginalia.
-Fórmula inline: \(f(x) = x^2 + 1\)
-Fórmula display: \[\int_0^1 f(x)\,dx = \frac{1}{3}\]
-Wikilink que no debe tocarse: [[ETN806-T01-joint-pdf-definition]]
-Código inline que no debe tocarse: `$x$`
-Otra fórmula: \(\mu = E[X]\) y \(\sigma^2 = \text{Var}(X)\)
-%%
+---
 
-Texto entre bloques con $y = mx + b$ — NO debe convertirse.
+La mitocondria es el organelo encargado de producir energía en forma de ATP. %%> ¿Cuál es la función principal de la mitocondria? ;; ^anki-1785295229260 #anki-test %%
 
-%%>
-Segundo bloque Marginalia.
-Sistema de ecuaciones: \[\begin{cases} x + y = 1 \\ x - y = 0 \end{cases}\]
-Inline: \(P(A \cap B) = P(A) \cdot P(B)\)
-%%
+---
 
-Texto final con $z$ suelto — NO debe convertirse.
+La función de densidad normal es $f(x) = \frac{1}{\sqrt{2\pi}\sigma} e^{-\frac{(x-\mu)^2}{2\sigma^2}}$. %%> ¿Cuál es la fórmula de la densidad normal $f(x)$? ;; ^anki-1785295229601 #anki-test %%
+
+---
+
+La esperanza de $X$ se define como $E[X] = \sum_x x \cdot P(X=x)$. %%> ¿Cómo se calcula $E[X]$ para una variable discreta? ;; ^anki-1785295229945 #anki-test %%
+
+---
+
+$$\int_{-\infty}^{\infty} f(x)\,dx = 1$$%%> ¿Qué condición debe cumplir toda función de densidad $f(x)$? ;; ^anki-1785295230290 #anki-test %%
+
+---
+
+La varianza se define como $\sigma^2 = E[(X-\mu)^2]$. %%> ? ¿Qué mide $\sigma^2$? ;; ^anki-1785295230635 #anki-test %%
+
+---
+
+La distribución normal es simétrica respecto a su media $\mu$. %%> ! ¿En torno a qué valor es simétrica la distribución normal? ;; ^anki-1785295231008 #anki-test %%
+
+---
+
+$$F(x) = \int_{-\infty}^{x} f(t)\,dt$$%%> ¿Cómo se obtiene la CDF $F(x)$ a partir de la PDF $f(t)$? ;; ^anki-1785295231351 #anki-test %%
