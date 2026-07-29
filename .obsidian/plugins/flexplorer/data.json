@@ -5,6 +5,7 @@
       "isHidden": false,
       "sortOrder": "byName",
       "customOrder": [
+        "Canvas",
         "_assets",
         "Marginalia",
         "Excalidraw",
@@ -1091,19 +1092,12 @@
       "customOrder": [
         "notebooklm",
         "shellcommands",
-        "Canvas",
         "completr-words",
         "scripts",
         "solve",
         "_appnotes",
         "_config"
       ]
-    },
-    "_app/Canvas": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": []
     },
     "_app/completr-words": {
       "isPinned": false,
@@ -2753,6 +2747,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "shellcmd_latex_mathjax.md",
         "rclone_script.md",
         "shellcommands_guide(scripts).md",
         "shellcmd_config_script.md",
@@ -3404,6 +3399,16 @@
     "_projects/anki/_tmp_sync.md": {
       "isPinned": false,
       "isHidden": false
+    },
+    "_app/shellcommands/shellcmd_latex_mathjax.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Canvas": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
     }
   },
   "pinnedFiles": [

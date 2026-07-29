@@ -8056,6 +8056,7 @@ through
 totalCardsFound
 totalAlreadyMarked
 trailing
+torno
 ToDo
 Templater
 Text
@@ -25895,6 +25896,7 @@ SbOMuRHElvLby
 SIpbtnAxmxKi
 Summary
 Successfully
+Setea
 Plugins
 Pendientes
 Plugin
@@ -33437,6 +33439,8 @@ PAiNe
 PEIyXoexchEGsaFSFcZ
 Physical
 Permanently
+Proposito
+Patron
 del
 date
 de
@@ -40881,6 +40885,8 @@ deletion
 deletes
 deletedFoldersCount
 doesn
+digitos
+delimitador
 Vault
 Verificar
 Variables
@@ -57208,6 +57214,7 @@ glRO
 gruxu
 getAllLoadedFiles
 getImageFolder
+gestionadas
 body
 beacon
 bat
@@ -64248,6 +64255,7 @@ bjdnSnhgRMUCuXYGhA
 bWk
 batchMarkers
 baseFolder
+bandera
 scope
 status
 selector
@@ -89577,6 +89585,10 @@ adapter
 available
 actualPrefix
 actualSuffix
+auditoria
+actua
+ausente
+automaticos
 related
 recomendados
 ribbon
@@ -98025,6 +98037,7 @@ rtpH
 rhHs
 rectangles
 remove
+revierte
 notes
 notas
 nuevas
@@ -114987,6 +115000,8 @@ cardNumber
 console
 completion
 cffdc
+converted
+conversion
 updated
 un
 universo
@@ -139287,6 +139302,7 @@ Choose
 Creates
 Cautious
 Card
+Confirmacion
 Instalados
 Instalado
 Instalar
@@ -173141,6 +173157,7 @@ OuOE
 ORDSFtZ
 OeGy
 Otra
+Opcion
 Auto
 Annotator
 Autocompletado
@@ -180722,6 +180739,7 @@ AUtfm
 AThl
 Ayqo
 ABz
+Accion
 push
 pull
 para
@@ -213213,6 +213231,7 @@ BimW
 BnQr
 BneRmWI
 BDfv
+Boton
 en
 exacta
 escaneados
@@ -239215,6 +239234,7 @@ LeAx
 LjkxIkTkpMnTwILGMMwmx
 LnFjidd
 LeKUc
+Logica
 links
 las
 listar
@@ -255969,6 +255989,7 @@ iBEzQtoD
 igBM
 iysREY
 imageFolder
+incrementa
 Dependencia
 Dropbox
 Dataview
@@ -330128,6 +330149,7 @@ obtB
 ocvfu
 over
 occlude
+organelo
 junto
 json
 jer

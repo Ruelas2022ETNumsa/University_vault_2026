@@ -4,10 +4,11 @@ date: 2026-07-28
 status: creciente
 ---
 
+comentario, las 3 son plugins utiles para distintas etapas, es necesario un anki_system para documentar que hara cada plugin.
 ## Handoff
 
 **Última sesión:** 2026-07-28
-**Retomar desde:** `tsk_anki.md` → sección Tareas → Script 2 (conversor `$` → MathJax)
+**Retomar desde:** `tsk_anki.md` → sección Tareas → Tomar decisión final A o B
 **Completado esta sesión:**
 - Opción A (Marginalia Anki Sync) — probada ✅
 - Opción B (Flashcards reuseman) — probada ✅
@@ -17,8 +18,14 @@ status: creciente
 - `data.json` de Opción C — limpiado y optimizado ✅
 - Documentación A, B, C creada
 - `anki_galaxy_guide.md` actualizado con flujo definitivo provisional
+- Script 2 (`latex_to_mathjax`) — implementado, probado y documentado ✅
+  - Toggle L->M / M->L con bandera `latex_converted` en YAML
+  - Contador `anki_exports` (export_1, export_2, ...)
+  - Limpieza automática de IDs `^anki-XXXXXXXXXXXXX` en M->L
+  - Documentado en `shellcmd_latex_mathjax.md`
+  - Botones ribbon configurados via Commander
 
-**Próximo paso:** implementar Script 2 (conversor `$` → MathJax para Opción A) y ejecutar pruebas de LaTeX con Marginalia para tomar decisión final de flujo Galaxy.
+**Próximo paso:** tomar decisión final — A o B como plugin principal de texto. Actualizar `anki_galaxy_guide.md` con decisión.
 
 **Preguntas de cierre:**
 - ¿Opción A con Script 2 es suficientemente fluida para ser el plugin principal de texto?
@@ -119,9 +126,9 @@ El único bloqueador para decidir entre Opción A y B es el LaTeX en Opción A. 
 - [x] Limpiar y optimizar `data.json` de Opción C
 - [x] Documentar A, B, C en archivos separados
 - [x] Actualizar `anki_galaxy_guide.md`
-- [ ] **Implementar Script 2** — conversor `$` → MathJax para Opción A
-- [ ] Probar Script 2 con notas reales que tengan marginalia + fórmulas LaTeX
-- [ ] Evaluar fluidez del flujo A+Script2 vs B puro
+- [x] **Implementar Script 2** — conversor `$` → MathJax para Opción A
+- [x] Probar Script 2 con notas reales que tengan marginalia + fórmulas LaTeX
+- [x] Evaluar fluidez del flujo A+Script2 vs B puro
 - [ ] **Tomar decisión final** — A o B como plugin principal de texto
 - [ ] Actualizar `anki_galaxy_guide.md` con decisión final
 - [ ] Implementar Script 1 (conversor Marginalia → Flashcards) si se decide B como principal
