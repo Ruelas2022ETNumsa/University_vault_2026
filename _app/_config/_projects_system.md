@@ -31,7 +31,24 @@ Los proyectos tienen ciclo de vida completo: nacen como `blueprint`, se ejecutan
 
 ## Estructura de carpetas
 
-```
+```mermaid
+---
+config:
+    treeView:
+        rowIndent: 20
+        paddingX: 8
+        paddingY: 4
+        lineThickness: 1
+    themeVariables:
+        treeView:
+            labelFontSize: '12px'
+            labelColor: '#7c6f9f'
+            lineColor: '#b0a8c8'
+            descriptionColor: '#9fb8a8'
+            highlightBg: 'rgba(180, 160, 210, 0.15)'
+            highlightStroke: '#c4aee0'
+---
+treeView-beta
 _hangar/
   dock/
     logbook.md              ← índice de dock, dirigido a Claude

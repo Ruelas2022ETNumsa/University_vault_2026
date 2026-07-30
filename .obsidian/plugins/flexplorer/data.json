@@ -12,7 +12,7 @@
         "_blueprint",
         "_inbox",
         "_skills",
-        "_projects",
+        "_hagar",
         "Borrar",
         "README.md",
         "MOC",
@@ -1227,6 +1227,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "_galaxy-system 1.md",
         "_projects_system.md",
         "_marginalia_system.md",
         "_pdf_pp-system.md",
@@ -2862,6 +2863,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "_claude-boot 1.md",
         "_claude-boot.md",
         "_claude-close.md",
         "_claude-plan.md",
@@ -2891,65 +2893,6 @@
       "isHidden": false
     },
     "_skills/_start.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_projects": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "others",
-        "anki",
-        "tsk_alx-rul.md",
-        "tsk_alxgml.md",
-        "tsk_alxhot.md",
-        "tsk_alxrul.md",
-        "tsk_emergn.md",
-        "tsk_krajo.md",
-        "tsk_standb.md",
-        "tsk_tpl.md",
-        "_ideas_0_shellcmd.md",
-        "_ideas_1_apps_2brain.md"
-      ]
-    },
-    "_projects/tsk_alx-rul.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_projects/tsk_alxgml.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_projects/tsk_alxhot.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_projects/tsk_alxrul.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_projects/tsk_emergn.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_projects/tsk_krajo.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_projects/tsk_standb.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_projects/tsk_tpl.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_projects/_ideas_0_shellcmd.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_projects/_ideas_1_apps_2brain.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -3139,7 +3082,49 @@
       "sortOrder": "custom",
       "customOrder": []
     },
-    "_projects/anki": {
+    "_app/shellcommands/shellcmd_latex_mathjax.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Canvas": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "_app/_config/_projects_system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_config/_galaxy-system 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_skills/_claude-boot 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hagar": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "tlp_worker.md",
+        "dock",
+        "anki",
+        "tsk_alx-rul.md",
+        "tsk_alxgml.md",
+        "tsk_alxhot.md",
+        "tsk_alxrul.md",
+        "tsk_emergn.md",
+        "tsk_krajo.md",
+        "tsk_standb.md",
+        "tsk_tpl.md",
+        "_ideas_0_shellcmd.md",
+        "_ideas_1_apps_2brain.md"
+      ]
+    },
+    "_hagar/anki": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
@@ -3153,78 +3138,133 @@
         "anki-opcionC-obsidian-to-anki.md"
       ]
     },
-    "_projects/anki/anki_galaxy_guide.md": {
+    "_hagar/tsk_alx-rul.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_projects/anki/anki-opcionA-marginalia.md": {
+    "_hagar/tsk_alxgml.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_projects/anki/anki-opcionB-flashcards.md": {
+    "_hagar/tsk_alxhot.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_projects/anki/anki-opcionC-obsidian-to-anki.md": {
+    "_hagar/tsk_alxrul.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_projects/anki/tsk_anki.md": {
+    "_hagar/tsk_emergn.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_projects/anki/_tmp_sync 1.md": {
+    "_hagar/tsk_krajo.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_projects/anki/_tmp_sync.md": {
+    "_hagar/tsk_standb.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_app/shellcommands/shellcmd_latex_mathjax.md": {
+    "_hagar/tsk_tpl.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "Canvas": {
+    "_hagar/_ideas_0_shellcmd.md": {
       "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": []
+      "isHidden": false
     },
-    "_projects/others": {
+    "_hagar/_ideas_1_apps_2brain.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hagar/anki/anki-opcionA-marginalia.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hagar/anki/anki-opcionB-flashcards.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hagar/anki/anki-opcionC-obsidian-to-anki.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hagar/anki/anki_galaxy_guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hagar/anki/tsk_anki.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hagar/anki/_tmp_sync 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hagar/anki/_tmp_sync.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hagar/dock": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "tsk_Gemini_Helper_Vault.md",
+        "tsk_Wolfram_alpha_script.md",
+        "tsk_Mapa_IAs_vault_roles_APIs.md",
+        "tsk_pendientes_sistema_galaxy.md",
+        "tsk_script_extaction_integration.md",
         "tsk_pdf_marginalia_pp.md",
         "_library_ETN505(i).md",
         "_library_ETN825.md",
         "tsk_library_ETN825.md"
       ]
     },
-    "_projects/others/tsk_library_ETN825.md": {
+    "_hagar/dock/tsk_library_ETN825.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_projects/others/_library_ETN825.md": {
+    "_hagar/dock/tsk_pdf_marginalia_pp.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_projects/others/_library_ETN505(i).md": {
+    "_hagar/dock/_library_ETN505(i).md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_projects/others/tsk_pdf_marginalia_pp.md": {
+    "_hagar/dock/_library_ETN825.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_app/_config/_projects_system.md": {
+    "_hagar/dock/tsk_script_extaction_integration.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hagar/dock/tsk_pendientes_sistema_galaxy.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hagar/dock/tsk_Mapa_IAs_vault_roles_APIs.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hagar/dock/tsk_Wolfram_alpha_script.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hagar/dock/tsk_Gemini_Helper_Vault.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hagar/tlp_worker.md": {
       "isPinned": false,
       "isHidden": false
     }
   },
   "pinnedFiles": [
-    "_projects/tsk_tpl.md",
+    "_hagar/tsk_tpl.md",
     "_app/_config/_galaxy-system.md",
     "_skills/_start.md"
   ],

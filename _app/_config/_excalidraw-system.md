@@ -19,7 +19,7 @@ tags:
   - configuracion
   - infraestructura
 date_created: 2026-05-28
-date_updated: 2026-05-30
+date_updated: 2026-07-30
 status: pausado
 ---
 
@@ -49,7 +49,7 @@ Archivo de configuración: .obsidian/plugins/obsidian-excalidraw-plugin/data.jso
 
 | Campo en data.json | Valor | Razón |
 |--------------------|-------|-------|
-| `folder` | `Excalidraw` | Carpeta raíz donde viven Constellations/ y Observatory/ |
+| `folder` | `Excalidraw` | Carpeta raíz donde viven Constellations/ y Observatory/ — ubicada en la raíz del vault (`E:\University_vault_2026\Excalidraw`), no dentro de `_app/` |
 | `templateFilePath` | `Excalidraw/Template.excalidraw.md` | Plantilla base para nuevos lienzos creados desde el botón de Excalidraw |
 | `scriptFolderPath` | `Excalidraw/Scripts` | Carpeta donde el Script Store instala Mindmap Builder y otros scripts |
 
@@ -222,6 +222,8 @@ date_created: YYYY-MM-DD
 ---
 
 ## Estructura de carpetas Excalidraw en el vault
+
+> La carpeta `Excalidraw/` vive en la **raíz del vault** (`E:\University_vault_2026\Excalidraw`), no dentro de `_app/`. El plugin requiere esta ubicación para funcionar correctamente.
 
 ```
 Excalidraw/

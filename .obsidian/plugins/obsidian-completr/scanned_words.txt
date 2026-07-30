@@ -8063,6 +8063,7 @@ treeView
 themeVariables
 telefonia
 thyg
+tocados
 ToDo
 Templater
 Text
@@ -25918,6 +25919,10 @@ Scientific
 Schwartz
 Separar
 Sitios
+Subtipo
+Ships
+Ship
+Separa
 Plugins
 Pendientes
 Plugin
@@ -40923,6 +40928,9 @@ decodificaci
 distribuidos
 doctoral
 descriptionColor
+dock
+dirigido
+dropship
 Vault
 Verificar
 Variables
@@ -64302,6 +64310,9 @@ buses
 booleanos
 bifurcaci
 bVgD
+bloqueo
+blueprint
+busy
 scope
 status
 selector
@@ -73176,6 +73187,8 @@ sintetizar
 secuenciamiento
 semestres
 seleccionables
+ships
+ship
 vault
 vil
 ver
@@ -89659,6 +89672,7 @@ aparecieron
 aportar
 archiva
 aTSF
+archivan
 related
 recomendados
 ribbon
@@ -98121,6 +98135,7 @@ relevancia
 rowIndent
 rgba
 routs
+reemplazan
 notes
 notas
 nuevas
@@ -106109,6 +106124,8 @@ normalizedPath
 normalizedBase
 nGenerated
 nombran
+nacen
+naves
 created
 commit
 cada
@@ -115108,6 +115125,9 @@ controladores
 consiguen
 conseguidos
 cpKJJ
+carriers
+completarse
+carrier
 updated
 un
 universo
@@ -139435,6 +139455,9 @@ Computing
 Congelar
 Completada
 Conseguir
+Carrier
+Convenciones
+Carriers
 Instalados
 Instalado
 Instalar
@@ -173315,6 +173338,8 @@ Opcion
 Organization
 OUTPUTS
 OREX
+Operator
+Operators
 Auto
 Annotator
 Autocompletado
@@ -188800,6 +188825,7 @@ perif
 protocolos
 paddingX
 paddingY
+procesadas
 min
 mica
 movimiento
@@ -197856,6 +197882,7 @@ mputo
 multiprocesador
 multiprocesadores
 mencion
+mera
 YAML
 Ya
 You
@@ -213422,6 +213449,8 @@ BUJsYfG
 Bancos
 BUSES
 BKGh
+Blueprint
+Blueprints
 en
 exacta
 escaneados
@@ -222175,6 +222204,7 @@ expansi
 enrutamiento
 entregada
 evaluados
+exclusivos
 Motor
 Media
 Mantiene
@@ -239450,6 +239480,7 @@ LgBN
 LENGUAJE
 Logical
 Langdon
+Logbook
 links
 las
 listar
@@ -246825,6 +246856,7 @@ labelFontSize
 labelColor
 lineColor
 lpviW
+logbook
 incluyendo
 im
 instalar
@@ -256222,6 +256254,7 @@ introductoria
 interfaces
 insertadas
 iMSN
+integran
 Dependencia
 Dropbox
 Dataview
@@ -264362,6 +264395,8 @@ Distributed
 DeHon
 Deisenroth
 David
+Dropship
+Distinguirlos
 Remotely
 Raz
 Revisa
@@ -295475,6 +295510,8 @@ hJwOF
 highlightBg
 highlightStroke
 hgh
+hangar
+hecha
 que
 quedan
 queda
@@ -330427,6 +330464,8 @@ occlude
 organelo
 optimizada
 other
+operators
+operator
 junto
 json
 jer
@@ -348214,6 +348253,7 @@ QKGmZub
 Qsh
 Quantitative
 QBf
+Quince
 ya
 yaml
 yo
@@ -364596,6 +364636,8 @@ wXGS
 wiki
 waMEDyLr
 wCaF
+workshops
+workers
 xima
 xeles
 xy
@@ -380507,6 +380549,8 @@ WpRGcOPkJ
 Wetherall
 Wiley
 WUYvOv
+Worker
+Workers
 JavaScript
 JSON
 JERARQU

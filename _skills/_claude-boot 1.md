@@ -28,7 +28,7 @@ tags:
   - arranque
   - infraestructura
 date_created: 2026-05-30
-date_updated: 2026-07-30
+date_updated: 2026-07-18
 status: activo
 fase: infraestructura
 ---
@@ -72,24 +72,7 @@ El vault está organizado como un **universo de galaxias**. Cada materia es una 
 
 ## ESTRUCTURA DEL VAULT
 
-```mermaid
----
-config:
-    treeView:
-        rowIndent: 20
-        paddingX: 8
-        paddingY: 4
-        lineThickness: 1
-    themeVariables:
-        treeView:
-            labelFontSize: '12px'
-            labelColor: '#7c6f9f'
-            lineColor: '#b0a8c8'
-            descriptionColor: '#9fb8a8'
-            highlightBg: 'rgba(180, 160, 210, 0.15)'
-            highlightStroke: '#c4aee0'
----
-treeView-beta
+```
 University_Vault_2026/
 │
 ├── Semesters/                  ← contenido académico
@@ -129,12 +112,8 @@ University_Vault_2026/
 │   ├── Constellations/      ← mapas mentales galaxy
 │   └── Observatory/         ← dibujos técnicos libres
 ├── _PDF/                        ← ★ archivos PDF físicos — ver nota de discrepancia abajo
-├── _skills/                     ← skills de Claude — start, work, plan, close, setup, boot
-├── _hangar/                    ← sistema de proyectos — ver [[_projects_system]]
-│   ├── dock/                   ← ships en espera (docked, delayed, in-orbit)
-│   ├── [carpeta-carrier]/      ← una por cada proyecto extenso
-│   ├── _legacy/                ← ships, carriers y blueprints completados
-│   └── [operator].md           ← 7 workers activos (sin tsk_)
+├── _skills/                     ← skills de Claude — work, plan, close, setup, boot
+├── _projects/                  ← proyectos activos y backlog de ideas — ver [[_galaxy-system]]
 ├── _tabnotes_archivo/           ← propuesto en [[_TABnote-system]], aún no aprobado/creado — snapshots de cierre de parcial, fuera de Git
 ├── _templates/                  ← plantillas de notas (tpl-star, tpl-planet, etc.)
 └── borrar/                      ← zona de espera antes de eliminar archivos
@@ -179,8 +158,6 @@ ETNXXX-TNN-nombre_descriptivo.md
 > ✅ **Tipo #14 aprobado (2026-06-24):** `supernova` quedó cerrado como `galaxy_body` oficial para transcripciones de NotebookLM de apuntes de clase (ver [[_TAB_note-system]] y [[_ToDo-system]]). La propuesta original era `tabnote`, pero se descartó ese nombre a favor de `supernova` antes de aprobarse.
 
 > ✅ **Tipo #15 aprobado (2026-07-18):** `workshop` quedó cerrado como `galaxy_body` oficial para tareas académicas por materia (ver [[_galaxy-system]]). Cuatro variantes según etapa: `tpl-w-initial`, `tpl-w-transcription`, `tpl-w-study`, `tpl-w-project`. Vive en `Semesters/`.
-
-> ✅ **Subtipo de proyectos aprobado (2026-07-30):** Se agregan 7 `galaxy_body` exclusivos del sistema `_hangar/`: `operator`, `ship`, `carrier`, `dropship`, `logbook`, `blueprint`, `void`. No se mezclan con los tipos galaxy académicos. Documentación completa en [[_projects_system]].
 
 ### Dos capas de conexión obligatorias
 
@@ -329,7 +306,7 @@ Leer el beacon específico según el tema:
 | Prompts y guías NotebookLM por materia                   | `_app/notebooklm/`                                                 |
 | Cornell Notes + Marginalia                               | `_app/_appnotes/cornell_guide.md`                                  |
 | Skills de Claude (work, plan, close, setup, boot)        | `_skills/`                                                         |
-| Sistema de proyectos (`_hangar/`, ships, carriers, operators, dock) | `_app/_config/_projects_system.md` |
+| Sistema de proyectos y backlog (`_projects/`, `tsk_`, `_ideas`) | `_app/_config/_galaxy-system.md` |
 
 ### Si el usuario está en móvil sin PC encendida
 
@@ -371,9 +348,8 @@ Convención interna del vault para respaldar archivos antes de editarlos:
 8. **Ante discrepancias entre lo documentado y lo que hay en disco** (como `_PDF/`) → confiar en lo que hay en disco y avisar de la discrepancia, no forzar la convención documentada.
 9. **El usuario crea los backups, Claude edita el original directamente** — no ofrecer ni confirmar respaldo antes de editar un beacon, salvo que el usuario indique lo contrario.
 10. **Actualizar `date_updated`** en el YAML de cualquier beacon que se modifique.
-11. **Sistema de proyectos vive en `_hangar/`** — la carpeta `_projects/` fue renombrada. Los 7 operators no llevan `tsk_` en el nombre. Ships viven en `dock/`, carriers tienen carpeta propia. Ver [[_projects_system]] para el flujo completo.
-12. **`workshop` es el tipo #15** — usar solo en plantillas `tpl-w-*` dentro de `Semesters/`. Nunca asignar `galaxy_body: workshop` a archivos de `_hangar/`.
-13. **Subtipo de proyectos no se mezcla con galaxy bodies académicos** — `operator`, `ship`, `carrier`, `dropship`, `logbook`, `blueprint`, `void` son exclusivos de `_hangar/`. No usar en `Semesters/` ni en `_app/`.
+11. **Archivos en `_projects/` no tienen `galaxy_body`** — son operativos y temporales. No agregar `galaxy_body` a ningún `tsk_alias.md`, `tsk_tpl.md` ni `_ideas.md`.
+12. **`workshop` es el tipo #15** — usar solo en plantillas `tpl-w-*` dentro de `Semesters/`. Nunca asignar `galaxy_body: workshop` a archivos de `_projects/`.
 
 ---
 
@@ -396,5 +372,4 @@ Convención interna del vault para respaldar archivos antes de editarlos:
 [[_app/_config/_claude-matter-boot.md]]
 [[_app/_appnotes/cornell_guide.md]]
 [[_app/_appnotes/Marginalia_guide.md]]
-[[_app/_config/_projects_system.md]]
 %%
