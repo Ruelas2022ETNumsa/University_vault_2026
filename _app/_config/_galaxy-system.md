@@ -130,8 +130,8 @@ treeView-beta
                 git_solve.md ## soluciones a conflictos de git y sincronización
         _assets/ ## archivos visuales exportados — .png .svg .jpeg desde Desmos, Excalidraw o imágenes insertadas — se nombran igual que la nota fuente
         Excalidraw/
-            Constellations/ ## mapas mentales galaxy (Excalidraw + Mindmap Builder) — galaxy_body: constellation
-		    Observatory/ ## dibujos técnicos libres sin Mindmap Builder — galaxy_body: observatory
+	            Constellations/ ## mapas mentales galaxy (Excalidraw + Mindmap Builder) — galaxy_body: constellation
+	            Observatory/ ## dibujos técnicos libres sin Mindmap Builder — galaxy_body: observatory
         _PDF/ ## archivos PDF físicos — ver _pdf-system
             PDF-telefonia/ ## una carpeta por materia/tema en texto (no sigla ETNXXX)
             PDF-921/
