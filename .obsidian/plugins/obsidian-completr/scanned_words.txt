@@ -16931,6 +16931,8 @@ TbpqoDt
 TFxkDOSbLnuinBDOZ
 TvLJoOZoi
 TqlRHVhgWsXoYhazzDMEz
+Transferencia
+TECNOLOGIA
 Sistema
 Sync
 Save
@@ -25898,6 +25900,8 @@ SIpbtnAxmxKi
 Summary
 Successfully
 Setea
+Secuencia
+Simplificada
 Plugins
 Pendientes
 Plugin
@@ -33443,6 +33447,9 @@ Permanently
 Proposito
 Patron
 Propiamente
+PROGRAMACI
+PERIFERICOS
+Perif
 del
 date
 de
@@ -131856,6 +131863,7 @@ GTwPH
 GItmaiOgKkDsserZHDuTqzEVD
 GkQrX
 Guess
+GRANDES
 Convenci
 Creaci
 Commander
@@ -139311,6 +139319,12 @@ Cautious
 Card
 Confirmacion
 CFOX
+CAPITULO
+Computador
+COMUNICACION
+Conectan
+Cinta
+COMPUTADORAS
 Instalados
 Instalado
 Instalar
@@ -148158,6 +148172,14 @@ IxJigD
 IYdqne
 IIMU
 Irkls
+Interactuantes
+Interconexi
+Impresora
+Iniciada
+Intersistemas
+INTERRUPCIONES
+Interrupci
+INTERFACES
 Funci
 File
 Fase
@@ -156248,6 +156270,7 @@ FWnop
 FmScexvkFjCB
 FpMP
 Found
+Flujograma
 Estado
 Excalidraw
 EPUBs
@@ -180751,6 +180774,12 @@ Ayqo
 ABz
 Accion
 Alifg
+Arbitrario
+AHPL
+ADMINISTRACION
+Asociativa
+Accesos
+AVANCES
 push
 pull
 para
@@ -213246,6 +213275,7 @@ BneRmWI
 BDfv
 Boton
 BUJsYfG
+Bancos
 en
 exacta
 escaneados
@@ -231279,6 +231309,11 @@ MLgC
 MRxbFvy
 MGnE
 Marks
+Master
+Mediante
+MEMORIA
+Monoprocesadores
+Multiprocesadores
 Lectura
 LaTeX
 Linter
@@ -239258,6 +239293,7 @@ Logica
 LPIxhJYi
 Lxwzy
 LgBN
+LENGUAJE
 links
 las
 listar
@@ -264148,6 +264184,7 @@ Delection
 Deleted
 Deletion
 DkuaaHYG
+Disipada
 Remotely
 Raz
 Revisa
@@ -273099,6 +273136,7 @@ RtUtw
 RgmfhSlHvs
 RHfXvwGqj
 Representacion
+Respondiente
 Hider
 Hace
 Herramientas
@@ -280013,6 +280051,7 @@ HMMwTBcpFouxgMn
 HLSgBq
 HfQZ
 HjqH
+HARDWARE
 filtrar
 formato
 faltantes
@@ -313208,6 +313247,7 @@ UfJZvTp
 UQdd
 UiBS
 Usage
+Unidad
 Nombre
 Notas
 No

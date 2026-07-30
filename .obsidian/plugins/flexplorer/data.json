@@ -1227,6 +1227,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "_library_ETN825.md",
         "_marginalia_system.md",
         "_pdf_pp-system.md",
         "_TAB_note-system.md",
@@ -3257,6 +3258,10 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": []
+    },
+    "_app/_config/_library_ETN825.md": {
+      "isPinned": false,
+      "isHidden": false
     }
   },
   "pinnedFiles": [
