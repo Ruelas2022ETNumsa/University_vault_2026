@@ -2900,7 +2900,6 @@
       "customOrder": [
         "others",
         "anki",
-        "tsk_pdf_marginalia_pp.md",
         "tsk_alx-rul.md",
         "tsk_alxgml.md",
         "tsk_alxhot.md",
@@ -2966,10 +2965,6 @@
       "isHidden": false
     },
     "_templates/tpl_w_transcription.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_projects/tsk_pdf_marginalia_pp.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -3200,6 +3195,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "tsk_pdf_marginalia_pp.md",
         "_library_ETN505(i).md",
         "_library_ETN825.md",
         "tsk_library_ETN825.md"
@@ -3214,6 +3210,10 @@
       "isHidden": false
     },
     "_projects/others/_library_ETN505(i).md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_projects/others/tsk_pdf_marginalia_pp.md": {
       "isPinned": false,
       "isHidden": false
     }
