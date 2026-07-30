@@ -27,8 +27,8 @@
 /* =============================
    OPERATOR STATUS
    ============================= */
-.nav-file-title-content[data-link-status="free"]::before  { content: "🟢 "; }
-.nav-file-title-content[data-link-status="busy"]::before  { content: "🔴 "; }
+.nav-file-title-content[data-link-status="free"]::before  { content: "✔ "; }
+.nav-file-title-content[data-link-status="busy"]::before  { content: "❌ "; }
 
 /* =============================
    SHIP / CARRIER STATUS

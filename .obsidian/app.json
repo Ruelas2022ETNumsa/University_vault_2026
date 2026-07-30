@@ -2,5 +2,6 @@
   "propertiesInDocument": "source",
   "alwaysUpdateLinks": true,
   "promptDelete": false,
-  "attachmentFolderPath": "_assets"
+  "attachmentFolderPath": "_assets",
+  "tabSize": 4
 }

@@ -9,7 +9,7 @@
         "Marginalia",
         "Excalidraw",
         "Rubbish",
-        "_blueprint",
+        "_void",
         "_inbox",
         "_skills",
         "_hagar",
@@ -2799,48 +2799,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_blueprint": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "claude vision.md",
-        "MAT101_T1-Funciones-reales 1.md",
-        "MAT101_T1-Funciones-reales.md",
-        "obsidian-cornell-notes.md",
-        "rendimiento.md",
-        "tables no terminado.md",
-        "Untitled 1.md"
-      ]
-    },
-    "_blueprint/claude vision.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_blueprint/MAT101_T1-Funciones-reales 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_blueprint/MAT101_T1-Funciones-reales.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_blueprint/obsidian-cornell-notes.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_blueprint/rendimiento.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_blueprint/tables no terminado.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_blueprint/Untitled 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_inbox": {
       "isPinned": false,
       "isHidden": false,
@@ -3109,19 +3067,18 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "blueprint",
         "tlp_worker.md",
         "dock",
         "anki",
-        "tsk_alx-rul.md",
-        "tsk_alxgml.md",
-        "tsk_alxhot.md",
-        "tsk_alxrul.md",
-        "tsk_emergn.md",
-        "tsk_krajo.md",
-        "tsk_standb.md",
-        "tsk_tpl.md",
-        "_ideas_0_shellcmd.md",
-        "_ideas_1_apps_2brain.md"
+        "alx-rul.md",
+        "alx_gml.md",
+        "alx_hot.md",
+        "alxrul.md",
+        "emergn.md",
+        "krajo.md",
+        "standb.md",
+        "tsk_tpl.md"
       ]
     },
     "_hagar/anki": {
@@ -3138,43 +3095,7 @@
         "anki-opcionC-obsidian-to-anki.md"
       ]
     },
-    "_hagar/tsk_alx-rul.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_hagar/tsk_alxgml.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_hagar/tsk_alxhot.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_hagar/tsk_alxrul.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_hagar/tsk_emergn.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_hagar/tsk_krajo.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_hagar/tsk_standb.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_hagar/tsk_tpl.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_hagar/_ideas_0_shellcmd.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_hagar/_ideas_1_apps_2brain.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -3259,6 +3180,93 @@
       "isHidden": false
     },
     "_hagar/tlp_worker.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_void": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "claude vision.md",
+        "MAT101_T1-Funciones-reales 1.md",
+        "MAT101_T1-Funciones-reales.md",
+        "obsidian-cornell-notes.md",
+        "rendimiento.md",
+        "tables no terminado.md",
+        "Untitled 1.md"
+      ]
+    },
+    "_void/claude vision.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_void/MAT101_T1-Funciones-reales 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_void/MAT101_T1-Funciones-reales.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_void/obsidian-cornell-notes.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_void/rendimiento.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_void/tables no terminado.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_void/Untitled 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hagar/blueprint": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "_ideas_1_apps_2brain.md",
+        "_ideas_0_shellcmd.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "_hagar/blueprint/_ideas_0_shellcmd.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hagar/blueprint/_ideas_1_apps_2brain.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hagar/alx-rul.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hagar/alx_hot.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hagar/alx_gml.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hagar/alxrul.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hagar/emergn.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hagar/krajo.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hagar/standb.md": {
       "isPinned": false,
       "isHidden": false
     }

@@ -40931,6 +40931,7 @@ descriptionColor
 dock
 dirigido
 dropship
+desbloquearlo
 Vault
 Verificar
 Variables
@@ -188826,6 +188827,7 @@ protocolos
 paddingX
 paddingY
 procesadas
+pausar
 min
 mica
 movimiento
@@ -213451,6 +213453,7 @@ BUSES
 BKGh
 Blueprint
 Blueprints
+Bloqueado
 en
 exacta
 escaneados
@@ -364638,6 +364641,7 @@ waMEDyLr
 wCaF
 workshops
 workers
+worker
 xima
 xeles
 xy
