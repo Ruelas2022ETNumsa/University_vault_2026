@@ -20,13 +20,12 @@ related_notes:
   - "[[_claude-boot]]"
   - "[[_claude-setup]]"
   - "[[_claude-close]]"
-  - "[[_projects_system]]"
 tags:
   - beacon
   - galaxy
   - infraestructura
 date_created: 2026-05-28
-date_updated: 2026-07-30
+date_updated: 2026-07-17
 status: activo
 ---
 
@@ -81,7 +80,6 @@ treeView-beta
                             [notas]
                     Partial_2/
                     Partial_3/
-                    _relics/ ## proyectos académicos completados de esta materia — carriers/ships archivados
         MOC/ ## notas de índice a nivel de materia — una MOC por materia, enlaza todas sus Stars
         _app/ ## infraestructura del baúl (no es contenido académico)
             notebooklm/ ## prompts y guías del sistema NotebookLM
@@ -123,7 +121,6 @@ treeView-beta
                 _TABnote-system.md ## apuntes de tablet (Samsung Notes → supernova)
                 _template-system.md ## sistema de plantillas Templater
                 _claude-matter-boot.md ## generador de contexto para Claude
-                _projects_system.md ## sistema de proyectos — hangar, ships, carriers, operators
                 _ToDo-system.md ## pendientes del sistema
             _appnotes/ ## guías de herramientas usadas dentro del baúl
                 tags_notes.md ## documentación del sistema de tags
@@ -132,22 +129,17 @@ treeView-beta
             solve/ ## problemas conocidos y sus soluciones
                 git_solve.md ## soluciones a conflictos de git y sincronización
         _assets/ ## archivos visuales exportados — .png .svg .jpeg desde Desmos, Excalidraw o imágenes insertadas — se nombran igual que la nota fuente
-        Excalidraw/ ## en la raíz del vault — ver _excalidraw-system
-            Constellations/ ## mapas mentales galaxy (Excalidraw + Mindmap Builder) — galaxy_body: constellation
-            Observatory/ ## dibujos técnicos libres sin Mindmap Builder — galaxy_body: observatory
+        Excalidraw/
+	            Constellations/ ## mapas mentales galaxy (Excalidraw + Mindmap Builder) — galaxy_body: constellation
+	            Observatory/ ## dibujos técnicos libres sin Mindmap Builder — galaxy_body: observatory
         _PDF/ ## archivos PDF físicos — ver _pdf-system
             PDF-telefonia/ ## una carpeta por materia/tema en texto (no sigla ETNXXX)
             PDF-921/
             PDF-nombre/ ## la organización semántica la llevan los nombres y las notas asteroid en Semesters/
-        _hangar/ ## sistema de proyectos — ver _projects_system
-            dock/ ## ships en espera (docked, delayed, in-orbit)
-                logbook.md ## índice de dock — galaxy_body: logbook
-            [carpeta-carrier]/ ## una por cada proyecto extenso
-                logbook.md ## índice del carrier — galaxy_body: logbook
-            _legacy/ ## ships, carriers y blueprints completados
-            [operator].md ## 7 workers activos — galaxy_body: operator (sin tsk_)
-            tsk_tpl.md ## plantilla base para ships y carriers
-            _ideas_N.md ## blueprints de futuros proyectos — galaxy_body: blueprint
+        _projects/ ## proyectos activos y backlog de ideas
+            tsk_alias.md ## slots de proyecto — 5 slots activos + 1 standby + 1 emergencia
+            tsk_tpl.md ## plantilla base para los slots
+            _ideas.md ## backlog de ideas futuras (sin galaxy_body)
         _skills/ ## skills de sesión de Claude (work, plan, close, setup, boot) — cada archivo define el comportamiento de Claude para un tipo de tarea específica
         _templates/ ## plantillas de notas de Obsidian — ver _template-system
             tpl-supernova.md ## una plantilla por tipo de cuerpo galaxy
@@ -183,42 +175,23 @@ Instrucciones de comportamiento para Claude. Viven en `_skills/`.
 
 | Archivo            | Rol                                           |
 | ------------------ | --------------------------------------------- |
-| `_start.md`        | Punto de entrada — verifica MCP y muestra menú de skills |
 | `_claude-boot.md`  | Arranque de sesión — carga contexto del vault |
 | `_claude-work.md`  | Sesión de edición de archivos                 |
-| `_claude-plan.md`  | Planificación de proyectos (`_hangar/`)       |
-| `_claude-close.md` | Cierre de sesión                              |
+| `_claude-plan.md`  | Planificación de proyectos (`_projects/`)     |
+| `_claude-close.md` | Cierre de sesión — actualiza el `tsk_`        |
 | `_claude-setup.md` | Configuración técnica (plugins, herramientas) |
 
 ### Proyectos del usuario
 
-El sistema de proyectos vive en `_hangar/`. Documentación completa: [[_projects_system]].
+Slots de trabajo activo y backlog. Viven en `_projects/`. Temporales por naturaleza — al cerrar un proyecto se documenta y el slot queda libre.
 
-**Operators (workers):** 7 archivos fijos sin `tsk_` — procesan un ship a la vez. Nombre corto personal, alias interno `w1`...`w7`.
-
-| Archivo | Rol |
-| ------- | --- |
-| `alx-rul.md` ... `standb.md` | Workers activos — `galaxy_body: operator`, `status: free/busy` |
-| `tsk_tpl.md` | Plantilla base para ships y carriers |
-| `_ideas_N.md` | Blueprints de futuros proyectos — `galaxy_body: blueprint` |
-
-**Ships** (proyectos simples) viven en `dock/` esperando operator. **Carriers** (proyectos extensos) tienen carpeta propia dentro de `_hangar/`. Ver [[_projects_system]] para el flujo completo, estados y convenciones de nombres.
-
----
-
-### Galaxy body de proyectos (subtipo)
-
-Estos tipos son exclusivos del sistema `_hangar/` — no se mezclan con los tipos galaxy de contenido académico. Documentación detallada: [[_projects_system]].
-
-| `galaxy_body` | Símbolo | Rol |
-| ------------- | ------- | --- |
-| `operator` | 🧑‍✈️ | Worker — procesa ships activos, uno a la vez. Sin ciclo de vida propio. |
-| `ship` | 🚀 | Proyecto simple. Un archivo, un objetivo. Vive en `dock/` o cargado en operator. |
-| `carrier` | 🛸 | Proyecto extenso con carpeta propia y múltiples archivos internos. |
-| `dropship` | 🛩️ | Documentación interna de un carrier (opciones, pruebas, config). |
-| `logbook` | 📋 | Índice de carpeta dirigido a Claude. Vive en `dock/` y carpetas carrier. |
-| `blueprint` | 📐 | Idea de futuro proyecto. Se convierte en ship o carrier al aprobarse. |
-| `void` | 🌑 | Nota efímera sin yaml. Carpeta pendiente de diseño. |
+| Archivo         | Rol                                                                                        |
+| --------------- | ------------------------------------------------------------------------------------------ |
+| `tsk_alias.md`  | Slot de proyecto activo — 5 slots para proyectos en curso simultáneos                      |
+| `tsk_standb.md` | Slot standby — desborde controlado, para un 6to proyecto cuando los 5 slots están ocupados |
+| `tsk_emergn.md` | Slot de emergencia — proyecto urgente que no puede esperar a que se libere un slot activo  |
+| `tsk_tpl.md`    | Plantilla base para los slots                                                              |
+| `_ideas.md`     | Backlog de ideas futuras — sin ciclo de vida fijo                                          |
 
 ---
 
@@ -260,7 +233,7 @@ ETN806-ETN302-laplace_vs_probability.md
 
 ## Tipos de cuerpo galaxy
 
-El campo `galaxy_body` en el YAML define el rol de la nota. Quince tipos:
+El campo `galaxy_body` en el YAML define el rol de la nota. Catorce tipos:
 
 | `galaxy_body`   | Símbolo | Rol                                                                                                                                                            |
 | --------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -851,11 +824,6 @@ status: activo
 | `workshop` aprobado como tipo #15, símbolo 🔧 (2026-07-18)        | Necesidad de monitorear tareas académicas por materia sin mezclar con galaxy bodies de contenido. Cuatro variantes de plantilla según etapa: initial, transcription, study, project.                                                                                                                                                                                                                                                                                                                           |
 | Archivos `tsk_` sin `galaxy_body` (2026-07-18)                    | Son slots de trabajo temporal — no son notas del vault ni participan del grafo. Forzarles un `galaxy_body` sería ruido. Al cerrar un proyecto se documenta y el slot queda libre. Su ubicacion esta en la ruta \_projects/ .                                                                                                                                                                                                                                                                                   |
 | `_ideas.md` como backlog en `_projects/` (2026-07-18)             | Lista de ideas futuras que pueden convertirse en proyectos activos. Sin `galaxy_body`, sin ciclo de vida fijo. Escalable: `_ideas_2.md` si el primero se satura. Su ruta es \_projects/ .                                                                                                                                                                                                                                                                                                                      |
-| `_projects/` renombrada a `_hangar/` (2026-07-30) | El nombre refleja mejor la metáfora del sistema: lugar donde viven las naves esperando ser procesadas. Consistente con el nuevo sistema de proyectos (ship, carrier, operator, dock). |
-| Sistema de proyectos rediseñado como subtipo galaxy (2026-07-30) | Los 7 slots `tsk_` se reemplazan por operators (workers sin `tsk_`), ships en `dock/` y carriers con carpeta propia. Se agregan 7 `galaxy_body` de subtipo exclusivos de `_hangar/`: operator, ship, carrier, dropship, logbook, blueprint, void. Documentación completa en `_projects_system.md`. |
-| `Excalidraw/` movida a la raíz del vault (2026-07-30) | El plugin de Excalidraw requiere la carpeta en la raíz para funcionar correctamente. Ya no vive en `_app/excalidraw/`. |
-| `_projects_system.md` como beacon dedicado (2026-07-30) | La complejidad del sistema de proyectos justifica un beacon propio. `_galaxy-system.md` referencia el subtipo y delega los detalles a `_projects_system.md`. |
-| `_relics/` como carpeta de archivo académico (2026-07-30) | Cada materia tiene su propia `_relics/` dentro de `ETNXXX/` para guardar carriers y ships completados con origen en esa materia. Separa el archivo académico del archivo general `_hangar/_legacy/` que recibe proyectos sin materia asociada. |
 
 ---
 
@@ -868,11 +836,11 @@ status: activo
 [[_app/_config/_graph-system.md]]
 [[_app/_config/_ToDo-system.md]]
 [[_app/_config/_notebooklm-system.md]]
+
 [[_app/_appnotes/claude_prompts]]
-[[skills/_claude-plan]]
-[[skills/_claude-work]]
-[[skills/_claude-boot]]
-[[skills/_claude-setup]]
-[[skills/_claude-close]]
-[[_app/_config/_projects_system.md]]
+[[_claude-plan]]
+[[_claude-work]]
+[[_claude-boot]]
+[[_claude-setup]]
+[[_claude-close]]
 %%
