@@ -1227,7 +1227,6 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "Usew.mermaid",
         "_marginalia_system.md",
         "_pdf_pp-system.md",
         "_TAB_note-system.md",
@@ -3097,9 +3096,7 @@
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
-      "customOrder": [
-        "RENOMBRAR-28-07-2026 22.28.33.excalidraw__2026-07-28 22.31.46"
-      ]
+      "customOrder": []
     },
     "_templates/tpl-ex_occlusion.md": {
       "isPinned": false,
@@ -3180,63 +3177,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Excalidraw/Image-Occlusions/RENOMBRAR-28-07-2026 22.28.33.excalidraw__2026-07-28 22.31.46": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "20260728223152298.md",
-        "20260728223152361.md",
-        "20260728223152469.md",
-        "a-20260728223152298.png",
-        "a-20260728223152361.png",
-        "a-20260728223152469.png",
-        "batch-marker.md",
-        "q-20260728223152298.png",
-        "q-20260728223152361.png",
-        "q-20260728223152469.png"
-      ]
-    },
-    "Excalidraw/Image-Occlusions/RENOMBRAR-28-07-2026 22.28.33.excalidraw__2026-07-28 22.31.46/20260728223152298.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Excalidraw/Image-Occlusions/RENOMBRAR-28-07-2026 22.28.33.excalidraw__2026-07-28 22.31.46/20260728223152361.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Excalidraw/Image-Occlusions/RENOMBRAR-28-07-2026 22.28.33.excalidraw__2026-07-28 22.31.46/20260728223152469.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Excalidraw/Image-Occlusions/RENOMBRAR-28-07-2026 22.28.33.excalidraw__2026-07-28 22.31.46/a-20260728223152298.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Excalidraw/Image-Occlusions/RENOMBRAR-28-07-2026 22.28.33.excalidraw__2026-07-28 22.31.46/a-20260728223152361.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Excalidraw/Image-Occlusions/RENOMBRAR-28-07-2026 22.28.33.excalidraw__2026-07-28 22.31.46/a-20260728223152469.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Excalidraw/Image-Occlusions/RENOMBRAR-28-07-2026 22.28.33.excalidraw__2026-07-28 22.31.46/batch-marker.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Excalidraw/Image-Occlusions/RENOMBRAR-28-07-2026 22.28.33.excalidraw__2026-07-28 22.31.46/q-20260728223152298.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Excalidraw/Image-Occlusions/RENOMBRAR-28-07-2026 22.28.33.excalidraw__2026-07-28 22.31.46/q-20260728223152361.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Excalidraw/Image-Occlusions/RENOMBRAR-28-07-2026 22.28.33.excalidraw__2026-07-28 22.31.46/q-20260728223152469.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_projects/anki/_tmp_sync 1.md": {
       "isPinned": false,
       "isHidden": false
@@ -3274,10 +3214,6 @@
       "isHidden": false
     },
     "_projects/others/_library_ETN505(i).md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/_config/Usew.mermaid": {
       "isPinned": false,
       "isHidden": false
     }
