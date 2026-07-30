@@ -8,7 +8,7 @@ related_notes:
 tags: [beacon, library, ETN825, infraestructura]
 date_created: 2026-07-29
 date_updated: 2026-07-29
-status: activo
+status: desarollo
 ---
 
 # 📚 Biblioteca ETN825 — Guía de libros
@@ -16,6 +16,38 @@ status: activo
 ## Propósito
 
 Este archivo es tu referencia personal para saber qué libro usar en cada tema de ETN825.
+
+---
+
+## Temario 2026_1 — Semestre más reciente
+
+> ⚠️ Temario parcial obtenido de foto. Faltan subtemas de T1 a T7. Solo T8, T9 y T10 tienen detalle confirmado.
+
+### T1 — Arquitectura de los procesadores de la familia Intel
+### T2 — Sistemas de computación para comunicaciones en paralelo
+### T3 — Sistemas de computación para comunicación en serie
+### T4 — Sistemas de interrupciones en un sistema de computación
+### T5 — Control de tiempos en un sistema de computación
+### T6 — Introducción a la pila de protocolo TCP/IP
+### T7 — Centros de cómputo
+
+### T8 — Diseño de sistemas de memoria
+- Memoria virtual y paginación
+- Diseño de memoria caché: políticas de reemplazo, políticas de escritura
+- Diseño de memoria virtual: traducción de direcciones, administración de páginas, tamaño de página
+
+### T9 — Diseño de sistemas de entrada/salida
+- Interface de entrada/salida: registros de control, buffers de datos
+- Métodos de transferencia de datos: programada, interrupciones, DMA, interfaz serie y paralelo
+- Controladores de dispositivos: tarjetas de expansión, buses de expansión
+- Protocolo de comunicaciones: RS-232, USB, Ethernet, PCI
+
+### T10 — Diseño de sistemas multiprocesador
+- Sistemas multiprocesador: definición, tipos y características
+- Arquitectura de sistemas multiprocesador: simétrica, asimétrica y numérica
+- Interconexión de sistemas multiprocesador: topologías, enrutamiento y latencia
+- Sincronización y coordinación en sistemas multiprocesador
+- Sistemas de memoria compartida y distribuida
 
 ---
 
@@ -204,6 +236,20 @@ Solo TCP/IP                → Stevens Vol.1 (consulta puntual)
 | Fotocopias del docente — Hill & Peterson 2ª ed. temas 9-13 | Ídem anterior. |
 | Hill & Peterson Digital Systems 3ª ed. — versión sin rayaduras | Buscar en Library Genesis o Anna's Archive. Reemplaza al PDF rayado actual. |
 | Diapositivas Stallings COA (GitHub) | URL del docente: https://github.com/mguludag/Stallings-Computer-Org-and-Arch-Slides — descargar y evaluar calidad antes de subir. |
+
+### Pendientes 2026_2 — Reajuste por temario actualizado
+
+> ⏸️ En pausa hasta tener el temario completo y oficial del docente.
+
+- [ ] Confirmar temario completo 2026 con el docente (faltan subtemas T1–T7)
+- [ ] Reevaluar stack completo contra temario 2026_1 (el 2021 tenía AHPL/SIC, el 2026 no)
+- [ ] Revisar cada complemento ChatGPT contra los temas 2026_1 y actualizar veredictos
+- [ ] Revisar cada complemento de la tabla principal contra temas 2026_1
+- [ ] Evaluar si los PDFs de AHPL/SIC siguen siendo relevantes o pasan a material de ETN821
+- [ ] Agregar libros específicos para T9 (RS-232, USB, Ethernet, PCI, DMA)
+- [ ] Agregar libros específicos para T10 (arquitecturas multiprocesador simétrica/asimétrica)
+- [ ] Actualizar tabla “qué usar por tema” con etiquetas T1–T10 del nuevo temario
+- [ ] Actualizar flujo de uso
 
 ---
 

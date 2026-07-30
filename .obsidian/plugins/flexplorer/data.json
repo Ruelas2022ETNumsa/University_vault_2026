@@ -1227,11 +1227,10 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "_library_ETN825.md",
+        "Usew.mermaid",
         "_marginalia_system.md",
         "_pdf_pp-system.md",
         "_TAB_note-system.md",
-        "_library_ETN505(i).md",
         "_claude-matter-boot.md",
         "_library_MAT101.md",
         "_basic-memory-system.md",
@@ -2714,10 +2713,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_app/_config/_library_ETN505(i).md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_app/solve/marginalia_solve.md": {
       "isPinned": false,
       "isHidden": false
@@ -2904,6 +2899,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "others",
         "anki",
         "tsk_pdf_marginalia_pp.md",
         "tsk_alx-rul.md",
@@ -3259,7 +3255,29 @@
       "sortOrder": "custom",
       "customOrder": []
     },
-    "_app/_config/_library_ETN825.md": {
+    "_projects/others": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_library_ETN505(i).md",
+        "_library_ETN825.md",
+        "tsk_library_ETN825.md"
+      ]
+    },
+    "_projects/others/tsk_library_ETN825.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_projects/others/_library_ETN825.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_projects/others/_library_ETN505(i).md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_config/Usew.mermaid": {
       "isPinned": false,
       "isHidden": false
     }

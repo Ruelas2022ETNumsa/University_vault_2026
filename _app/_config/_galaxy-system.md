@@ -53,6 +53,12 @@ La metáfora de la galaxia vive **únicamente en el YAML** de cada nota — no e
 
 ## Mapa de carpetas del baúl
 
+![[Usew.mermaid]]
+
+
+
+
+
 ```mermaid
 ---
 config:
