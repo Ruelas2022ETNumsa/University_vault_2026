@@ -62,7 +62,7 @@ status: activo
 ## Cierre de parcial
 
 - [ ] `dwarf` ⬛ parcial completo → `<% subject %>-T00-dwarf-P<% partial %>.md`
-- [ ] `constellation` 🌌 → `_app/Excalidraw/Constellations/<% subject %>-P<% partial %>-constellation.md`
+- [ ] `constellation` 🌌 → `Excalidraw/Constellations/<% subject %>-P<% partial %>-constellation.md`
 
 ---
 

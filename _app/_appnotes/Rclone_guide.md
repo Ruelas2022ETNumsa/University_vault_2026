@@ -158,7 +158,7 @@ Sincroniza el vault completo hacia la raíz de Drive, excluyendo archivos pesado
 carpetas de sistema local y contenido irrelevante para consulta.
 
 ```bash
-rclone sync "E:\University_vault_2026" gdrive: --exclude "_PDF/**" --exclude "_assets/**" --exclude "_app/Excalidraw/**" --exclude "_app/shellcommands/**" --exclude "_app/scripts/**" --exclude "_app/completr-words/**" --exclude "_app/_appnotes/tagroute_parche/**" --exclude "Borrar/**" --exclude "Rubbish/**" --exclude "Semestres/**" --exclude ".git/**" --exclude ".gitignore" --exclude ".gitattributes" --exclude ".cache/**" --exclude ".trash/**" --exclude ".obsidian/plugins/**" --exclude ".obsidian/scripts/**" --exclude ".obsidian/snippets/**" --exclude ".obsidian/themes/**" --exclude ".obsidian/cache/**" --exclude ".obsidian/workspace.json" --exclude ".obsidian/workspaces.json" --exclude ".obsidian/.trash/**" --filter "+ .obsidian/core-plugins.json" --filter "+ .obsidian/community-plugins.json" --verbose
+rclone sync "E:\University_vault_2026" gdrive: --exclude "_PDF/**" --exclude "_assets/**" --exclude "Excalidraw/**" --exclude "_app/shellcommands/**" --exclude "_app/scripts/**" --exclude "_app/completr-words/**" --exclude "_app/_appnotes/tagroute_parche/**" --exclude "Borrar/**" --exclude "Rubbish/**" --exclude "Semestres/**" --exclude ".git/**" --exclude ".gitignore" --exclude ".gitattributes" --exclude ".cache/**" --exclude ".trash/**" --exclude ".obsidian/plugins/**" --exclude ".obsidian/scripts/**" --exclude ".obsidian/snippets/**" --exclude ".obsidian/themes/**" --exclude ".obsidian/cache/**" --exclude ".obsidian/workspace.json" --exclude ".obsidian/workspaces.json" --exclude ".obsidian/.trash/**" --filter "+ .obsidian/core-plugins.json" --filter "+ .obsidian/community-plugins.json" --verbose
 ```
 
 ### Qué se excluye y por qué
@@ -167,7 +167,7 @@ rclone sync "E:\University_vault_2026" gdrive: --exclude "_PDF/**" --exclude "_a
 |---|---|
 | `_PDF/**` | Archivos pesados — cubiertos por Mega y Git |
 | `_assets/**` | Imágenes exportadas — pesadas, no útiles para consulta de texto |
-| `_app/Excalidraw/**` | Archivos `.excalidraw` (JSON pesado) — no legibles como texto |
+| `Excalidraw/**` | Archivos `.excalidraw` (JSON pesado) — no legibles como texto |
 | `_app/shellcommands/**` | Scripts con rutas locales y datos sensibles de la PC |
 | `_app/scripts/**` | Scripts JS locales — sin uso en consulta desde Drive |
 | `_app/completr-words/**` | Diccionario local del plugin Completr — irrelevante |

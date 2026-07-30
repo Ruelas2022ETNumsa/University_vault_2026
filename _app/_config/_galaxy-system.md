@@ -53,12 +53,6 @@ La metáfora de la galaxia vive **únicamente en el YAML** de cada nota — no e
 
 ## Mapa de carpetas del baúl
 
-![[Usew.mermaid]]
-
-
-
-
-
 ```mermaid
 ---
 config:
@@ -130,14 +124,14 @@ treeView-beta
                 _ToDo-system.md ## pendientes del sistema
             _appnotes/ ## guías de herramientas usadas dentro del baúl
                 tags_notes.md ## documentación del sistema de tags
-            Excalidraw/
-                Constellations/ ## mapas mentales galaxy (Excalidraw + Mindmap Builder) — galaxy_body: constellation
-                Observatory/ ## dibujos técnicos libres sin Mindmap Builder — galaxy_body: observatory
             scripts/ ## scripts de automatización para mantenimiento del baúl
                 tag_routs_scripts/
             solve/ ## problemas conocidos y sus soluciones
                 git_solve.md ## soluciones a conflictos de git y sincronización
         _assets/ ## archivos visuales exportados — .png .svg .jpeg desde Desmos, Excalidraw o imágenes insertadas — se nombran igual que la nota fuente
+        Excalidraw/
+            Constellations/ ## mapas mentales galaxy (Excalidraw + Mindmap Builder) — galaxy_body: constellation
+		    Observatory/ ## dibujos técnicos libres sin Mindmap Builder — galaxy_body: observatory
         _PDF/ ## archivos PDF físicos — ver _pdf-system
             PDF-telefonia/ ## una carpeta por materia/tema en texto (no sigla ETNXXX)
             PDF-921/
@@ -252,8 +246,8 @@ El campo `galaxy_body` en el YAML define el rol de la nota. Catorce tipos:
 | `asteroid`      | 🪨      | Referencia externa. Extracto de libro, nota de PDF, paper.                                                                                                     |
 | `photon`        | 💡      | Imagen estática pura. Archivo visual (.png, .jpg, .svg) pegado o arrastrado. Siempre adjunto a otra nota.                                                      |
 | `neutrino`      | ⚛️      | Código que genera una imagen. Bloque Desmos o TikZJax embebido en un planet o comet. No es nota separada — vive dentro de la nota host. Ver [[_graph-system]]. |
-| `constellation` | 🌌      | Mapa mental galaxy. Excalidraw + Mindmap Builder. Uno por parcial o tema. Vive en `_app/Excalidraw/Constellations/`.                                           |
-| `observatory`   | 🔭      | Dibujo técnico libre en Excalidraw sin Mindmap Builder. Vive en `_app/Excalidraw/Observatory/`.                                                                |
+| `constellation` | 🌌      | Mapa mental galaxy. Excalidraw + Mindmap Builder. Uno por parcial o tema. Vive en `Excalidraw/Constellations/`.                                           |
+| `observatory`   | 🔭      | Dibujo técnico libre en Excalidraw sin Mindmap Builder. Vive en `Excalidraw/Observatory/`.                                                                |
 | `bridge`        | 🌉      | Conexión entre materias. Enlaza conceptos de dos galaxias distintas.                                                                                           |
 | `beacon`        | 📡      | Guía de infraestructura del vault. Herramientas, procesos, soluciones. Vive en `_app/`.                                                                        |
 | `supernova`     | ✨       | Transcripción bruta de NotebookLM de apuntes de clase. Material en bruto pendiente de disección en notas galaxy. Ver [[_TAB_note-system]].                      |

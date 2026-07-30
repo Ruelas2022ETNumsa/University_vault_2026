@@ -55,8 +55,8 @@ Cada tipo de cuerpo galaxy tiene su plantilla en `_templates/`. Al crear una not
 | `tpl-asteroid.md`      | `asteroid`      | Normal: `Semesters/.../Topic_NN.../` / PDF: `Semesters/.../Partial_N/`    | Automático (Opción B) — pregunta tipo al inicio          |
 | `tpl-photon.md`        | `photon`        | `desmos`/`tikzjax`: `Semesters/.../Topic_NN.../` / `pdf-crop`: `_assets/` | Automático — pregunta tipo al inicio                     |
 | `tpl-bridge.md`        | `bridge`        | `Semesters/Materia1-Materia2/`                                            | Automático (Opción B)                                    |
-| `tpl-constellation.md` | `constellation` | `_app/Excalidraw/Constellations/`                                         | Automático                                               |
-| `tpl-observatory.md`   | `observatory`   | `_app/Excalidraw/Observatory/`                                            | Automático                                               |
+| `tpl-constellation.md` | `constellation` | `Excalidraw/Constellations/`                                         | Automático                                               |
+| `tpl-observatory.md`   | `observatory`   | `Excalidraw/Observatory/`                                            | Automático                                               |
 | `tpl-supernova.md`     | `supernova`     | `Semesters/.../Partial_N/`                                                | Automático — pregunta tipo al inicio (class / fusionada) |
 | `tpl-w-initial.md`       | `workshop` | `Semesters/Sem_NN/ETNXXX/`              | Automático — pregunta materia y semestre                        |
 | `tpl-w-transcription.md` | `workshop` | `Semesters/Sem_NN/ETNXXX/Partial_N/`   | Automático — pregunta materia, semestre, parcial y nro de temas |
@@ -101,8 +101,8 @@ Las plantillas originales (sin lógica de movimiento) están consolidadas en `_t
 
 | Carpeta | Plantilla |
 |---------|-----------|
-| `_app/Excalidraw/Constellations` | `_templates/tpl-constellation` |
-| `_app/Excalidraw/Observatory` | `_templates/tpl-observatory` |
+| `Excalidraw/Constellations` | `_templates/tpl-constellation` |
+| `Excalidraw/Observatory` | `_templates/tpl-observatory` |
 
 > Importante: la ruta de la plantilla en Folder Templates se escribe **sin extensión `.md`**. Usar el selector de archivo de Templater, no escribir la ruta a mano.
 
@@ -135,7 +135,7 @@ Estas dos plantillas son especiales: generan archivos que Obsidian abre como lie
 ````markdown
 <%*
 const title = await tp.system.prompt("Nombre del archivo (sin extensión)");
-await tp.file.move("_app/Excalidraw/Constellations/" + title);
+await tp.file.move("Excalidraw/Constellations/" + title);
 %>---
 excalidraw-plugin: parsed
 tags: [excalidraw, galaxy-constellation]
@@ -424,7 +424,7 @@ status: activo
 
 > `excalidraw-plugin: parsed` debe ir primero — el plugin lo requiere para abrir el archivo como lienzo.
 > `scope`: `partial` si cubre el parcial completo | `topic` si cubre un solo tema.
-> Carpeta destino: `_app/Excalidraw/Constellations/` — movimiento automático por Templater.
+> Carpeta destino: `Excalidraw/Constellations/` — movimiento automático por Templater.
 > Ver [[_mindmap-system]] para convención de nombres y flujo de uso.
 
 ---
@@ -447,7 +447,7 @@ date_created: <% tp.date.now("YYYY-MM-DD") %>
 ```
 
 > `excalidraw-plugin: parsed` debe ir primero — el plugin lo requiere para abrir el archivo como lienzo.
-> Carpeta destino: `_app/Excalidraw/Observatory/` — movimiento automático por Templater.
+> Carpeta destino: `Excalidraw/Observatory/` — movimiento automático por Templater.
 > Ver [[_mindmap-system]] para convención de nombres y flujo de uso.
 
 ---

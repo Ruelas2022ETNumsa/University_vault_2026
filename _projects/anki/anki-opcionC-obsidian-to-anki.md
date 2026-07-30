@@ -152,7 +152,7 @@ END
 
 ### Flujo paso a paso
 
-1. Abrir o crear un dibujo en `_app/Excalidraw/Observatory/` o `Constellations/`
+1. Abrir o crear un dibujo en `Excalidraw/Observatory/` o `Constellations/`
 2. En Excalidraw → `Ctrl+P` → buscar **"Image Occlusion"** → ejecutar script
 3. El script pregunta el template → seleccionar `_templates/proex.md`
 4. El script genera una subcarpeta en `Excalidraw-Image-Occlusions/` con:

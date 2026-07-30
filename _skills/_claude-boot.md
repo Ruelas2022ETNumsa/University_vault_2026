@@ -105,12 +105,12 @@ University_Vault_2026/
 │   │   ├── _TABnote-system.md    ← apuntes de tablet — status: activo (cerrado 2026-06-24)
 │   │   └── _ToDo-system.md       ← pendientes del sistema
 │   ├── _appnotes/               ← guías de herramientas (LaTeX, tags, etc)
-│   ├── Excalidraw/
-│   │   ├── Constellations/      ← mapas mentales galaxy
-│   │   └── Observatory/         ← dibujos técnicos libres
 │   └── scripts/
 │
 ├── _assets/                     ← imágenes exportadas (.png, .svg, .jpeg)
+├── Excalidraw/
+│   ├── Constellations/      ← mapas mentales galaxy
+│   └── Observatory/         ← dibujos técnicos libres
 ├── _PDF/                        ← ★ archivos PDF físicos — ver nota de discrepancia abajo
 ├── _skills/                     ← skills de Claude — work, plan, close, setup, boot
 ├── _projects/                  ← proyectos activos y backlog de ideas — ver [[_galaxy-system]]
@@ -178,16 +178,16 @@ galaxy-links
 
 ### Ruta de carpeta por tipo
 
-| `galaxy_body` | Carpeta destino |
-|---|---|
-| `star` | `MOC/` |
-| `planet`, `moon`, `comet`, `nebula`, `asteroid`, `photon` | `Semesters/Sem_NN/ETNXXX/Partial_N/Topic_NN_nombre/` |
-| `dwarf` | `Semesters/Sem_NN/ETNXXX/Partial_N/` |
-| `bridge` | `Semesters/ETNXXX1-ETNXXX2/` |
-| `constellation` | `_app/Excalidraw/Constellations/` |
-| `observatory` | `_app/Excalidraw/Observatory/` |
-| `beacon` | `_app/_config/` |
-| `supernova` | `Semesters/Sem_NN/ETNXXX/Partial_N/` (raíz del parcial, no dentro de `Topic_NN/`) |
+| `galaxy_body`                                             | Carpeta destino                                                                   |
+| --------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `star`                                                    | `MOC/`                                                                            |
+| `planet`, `moon`, `comet`, `nebula`, `asteroid`, `photon` | `Semesters/Sem_NN/ETNXXX/Partial_N/Topic_NN_nombre/`                              |
+| `dwarf`                                                   | `Semesters/Sem_NN/ETNXXX/Partial_N/`                                              |
+| `bridge`                                                  | `Semesters/ETNXXX1-ETNXXX2/`                                                      |
+| `constellation`                                           | `Excalidraw/Constellations/`                                                 |
+| `observatory`                                             | `Excalidraw/Observatory/`                                                    |
+| `beacon`                                                  | `_app/_config/`                                                                   |
+| `supernova`                                               | `Semesters/Sem_NN/ETNXXX/Partial_N/` (raíz del parcial, no dentro de `Topic_NN/`) |
 
 ---
 

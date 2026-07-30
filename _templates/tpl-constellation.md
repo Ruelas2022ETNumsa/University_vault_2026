@@ -1,6 +1,6 @@
 <%*
 const title = await tp.system.prompt("Nombre del archivo (sin extensión)");
-await tp.file.move("_app/Excalidraw/Constellations/" + title);
+await tp.file.move("Excalidraw/Constellations/" + title);
 %>---
 excalidraw-plugin: parsed
 tags: [excalidraw, galaxy-constellation]

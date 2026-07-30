@@ -44,8 +44,8 @@ Cada materia tiene mapas mentales visuales que representan su estructura galaxy.
 
 | `galaxy_body` | Símbolo | Herramienta | Uso | Carpeta |
 |---|---|---|---|---|
-| `constellation` | 🌌 | Excalidraw + Mindmap Builder | Mapa mental estructural de una materia, parcial o tema | `_app/Excalidraw/Constellations/` |
-| `observatory` | 🔭 | Excalidraw sin Mindmap Builder | Dibujo técnico libre: regiones, esquemas, diagramas | `_app/Excalidraw/Observatory/` |
+| `constellation` | 🌌 | Excalidraw + Mindmap Builder | Mapa mental estructural de una materia, parcial o tema | `Excalidraw/Constellations/` |
+| `observatory` | 🔭 | Excalidraw sin Mindmap Builder | Dibujo técnico libre: regiones, esquemas, diagramas | `Excalidraw/Observatory/` |
 
 **Regla:** si vas a construir un mapa mental galaxy → `constellation`. Si vas a dibujar libremente sin estructura de mapa → `observatory`.
 
@@ -54,8 +54,7 @@ Cada materia tiene mapas mentales visuales que representan su estructura galaxy.
 ## Estructura de carpetas
 
 ```
-_app/
-└── Excalidraw/
+Excalidraw/
     ├── Constellations/     ← galaxy_body: constellation
     │   └── ETNXXX-PN-nombre-descriptivo.excalidraw
     └── Observatory/        ← galaxy_body: observatory
@@ -123,7 +122,7 @@ status: activo
 ---
 ```
 
-> Al crear con `tpl-constellation.md`, Templater pide el nombre del archivo y mueve el archivo a `_app/Excalidraw/Constellations/` automáticamente. Los campos de materia, semestre y parcial se completan a mano después de la creación.
+> Al crear con `tpl-constellation.md`, Templater pide el nombre del archivo y mueve el archivo a `Excalidraw/Constellations/` automáticamente. Los campos de materia, semestre y parcial se completan a mano después de la creación.
 
 Bloque de wikilinks al final:
 
@@ -154,7 +153,7 @@ date_created: YYYY-MM-DD
 ---
 ```
 
-> Al crear con `tpl-observatory.md`, Templater pide el nombre del archivo y mueve el archivo a `_app/Excalidraw/Observatory/` automáticamente.
+> Al crear con `tpl-observatory.md`, Templater pide el nombre del archivo y mueve el archivo a `Excalidraw/Observatory/` automáticamente.
 
 ```markdown
 %%
@@ -234,10 +233,10 @@ Excalidraw tiene su propia configuración de destino, independiente de la config
 
 | Ajuste (Settings → Excalidraw → Saving) | Valor configurado | Razón |
 |---|---|---|
-| Excalidraw folder | `_app/Excalidraw` | Punto de aterrizaje para todos los archivos nuevos |
-| Use Excalidraw folder when embedding | `ON` | Los dibujos embebidos desde el command palette caen en `_app/Excalidraw`, no en `_assets` |
-| Crop file folder | `_app/Excalidraw/Observatory` | Las imágenes recortadas son dibujos técnicos puntuales → `observatory` |
-| Image annotation file folder | `_app/Excalidraw/Observatory` | Anotar una imagen es un dibujo libre → `observatory` |
+| Excalidraw folder | `Excalidraw` | Punto de aterrizaje para todos los archivos nuevos |
+| Use Excalidraw folder when embedding | `ON` | Los dibujos embebidos desde el command palette caen en `Excalidraw`, no en `_assets` |
+| Crop file folder | `Excalidraw/Observatory` | Las imágenes recortadas son dibujos técnicos puntuales → `observatory` |
+| Image annotation file folder | `Excalidraw/Observatory` | Anotar una imagen es un dibujo libre → `observatory` |
 
 > La carpeta global de attachments de Obsidian (Settings → Files & Links) está configurada en `_assets`. Esto afecta imágenes arrastradas desde fuera del vault y recortes generados por PDF++.
 

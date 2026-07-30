@@ -907,8 +907,8 @@ dv.table(
 Existe una variante con ruta explícita para cualquier embed o link de Excalidraw:
 
 ```
-![[_app/Excalidraw/Constellations/nombre.excalidraw.md]]
-![[_app/Excalidraw/Observatory/nombre.excalidraw.md]]
+![[Excalidraw/Constellations/nombre.excalidraw.md]]
+![[Excalidraw/Observatory/nombre.excalidraw.md]]
 ```
 
 **En este vault se usa siempre el formato sin ruta.** La convención de nombres (`ETN806-P2-nombre-descriptivo.excalidraw.md`) garantiza unicidad en el vault, por lo que Obsidian resuelve el archivo correctamente sin necesidad de ruta. La ruta explícita queda reservada para el caso excepcional en que dos archivos de Excalidraw tuvieran el mismo nombre — situación que la convención de nombres hace prácticamente imposible.

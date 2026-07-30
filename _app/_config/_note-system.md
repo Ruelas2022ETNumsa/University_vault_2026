@@ -216,7 +216,7 @@ El vault usa dos plugins complementarios para el formato de apuntes. Ver [[corne
 | `MOC/`               | Notas de índice por materia, enlazan todas sus stars                                                     |
 | `_app/_config/`      | Configuración del sistema: convención, galaxy system, tags                                               |
 | `_app/_appnotes/`    | Guías de herramientas: Desmos, tags, etc.                                                                |
-| `_app/Excalidraw/`   | Archivos fuente de Excalidraw — `Constellations/` y `Observatory/`                                       |
+| `Excalidraw/`   | Archivos fuente de Excalidraw — `Constellations/` y `Observatory/`                                       |
 | `_app/scripts/`      | Scripts de automatización del baúl                                                                       |
 | `_app/solve/`        | Problemas conocidos y soluciones (git, sync, etc.)                                                       |
 | `.cache/desmos/`     | Caché SVG de Desmos — generado automáticamente por el plugin                                             |

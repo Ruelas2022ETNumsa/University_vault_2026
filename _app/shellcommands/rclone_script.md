@@ -203,7 +203,7 @@ token automáticamente en `rclone.conf`.
 ## 8. Comando completo — sync vault
 
 ```bash
-rclone sync "E:\University_vault_2026" gdrive: --exclude "_PDF/**" --exclude "_assets/**" --exclude "_app/Excalidraw/**" --exclude "_app/shellcommands/**" --exclude "_app/scripts/**" --exclude "_app/completr-words/**" --exclude "_app/_appnotes/tagroute_parche/**" --exclude "Borrar/**" --exclude "Rubbish/**" --exclude "Semestres/**" --exclude ".git/**" --exclude ".gitignore" --exclude ".gitattributes" --exclude ".cache/**" --exclude ".trash/**" --exclude ".obsidian/plugins/**" --exclude ".obsidian/scripts/**" --exclude ".obsidian/snippets/**" --exclude ".obsidian/themes/**" --exclude ".obsidian/cache/**" --exclude ".obsidian/workspace.json" --exclude ".obsidian/workspaces.json" --exclude ".obsidian/.trash/**" --filter "+ .obsidian/core-plugins.json" --filter "+ .obsidian/community-plugins.json" --verbose
+rclone sync "E:\University_vault_2026" gdrive: --exclude "_PDF/**" --exclude "_assets/**" --exclude "Excalidraw/**" --exclude "_app/shellcommands/**" --exclude "_app/scripts/**" --exclude "_app/completr-words/**" --exclude "_app/_appnotes/tagroute_parche/**" --exclude "Borrar/**" --exclude "Rubbish/**" --exclude "Semestres/**" --exclude ".git/**" --exclude ".gitignore" --exclude ".gitattributes" --exclude ".cache/**" --exclude ".trash/**" --exclude ".obsidian/plugins/**" --exclude ".obsidian/scripts/**" --exclude ".obsidian/snippets/**" --exclude ".obsidian/themes/**" --exclude ".obsidian/cache/**" --exclude ".obsidian/workspace.json" --exclude ".obsidian/workspaces.json" --exclude ".obsidian/.trash/**" --filter "+ .obsidian/core-plugins.json" --filter "+ .obsidian/community-plugins.json" --verbose
 ```
 
 **Notas:**
