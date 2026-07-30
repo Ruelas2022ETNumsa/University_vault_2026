@@ -24,3 +24,57 @@
 .nav-file-title-content[data-link-status="creciente"]::before {content: "🌒 ";}
 .nav-file-title-content[data-link-status="llena"]::before {content: "🌕 ";}
 
+/* =============================
+   OPERATOR STATUS
+   ============================= */
+.nav-file-title-content[data-link-status="free"]::before  { content: "🟢 "; }
+.nav-file-title-content[data-link-status="busy"]::before  { content: "🔴 "; }
+
+/* =============================
+   SHIP / CARRIER STATUS
+   ============================= */
+.nav-file-title-content[data-link-status="docked"]::before    { content: "🛸 "; }
+.nav-file-title-content[data-link-status="in-orbit"]::before  { content: "💫 "; }
+.nav-file-title-content[data-link-status="delayed"]::before   { content: "⏸️ "; }
+.nav-file-title-content[data-link-status="docking"]::before   { content: "⚙️ "; }
+.nav-file-title-content[data-link-status="aborted"]::before   { content: "💀 "; }
+.nav-file-title-content[data-link-status="delivered"]::before { content: "✅ "; }
+
+/* =============================
+   BLUEPRINT STATUS
+   ============================= */
+.nav-file-title-content[data-link-status="idea"]::before      { content: "💡 "; }
+.nav-file-title-content[data-link-status="evaluando"]::before { content: "🔍 "; }
+.nav-file-title-content[data-link-status="aprobado"]::before  { content: "📐 "; }
+
+/* =============================
+   GALAXY BODY — PROYECTOS (subtipo)
+   ============================= */
+.nav-file-title-content[data-link-galaxy_body="operator"]::before  { content: "🧑✈️ "; }
+.nav-file-title-content[data-link-galaxy_body="ship"]::before      { content: "🚀 "; }
+.nav-file-title-content[data-link-galaxy_body="carrier"]::before   { content: "🛸 "; }
+.nav-file-title-content[data-link-galaxy_body="dropship"]::before  { content: "🛩️ "; }
+.nav-file-title-content[data-link-galaxy_body="logbook"]::before   { content: "📋 "; }
+.nav-file-title-content[data-link-galaxy_body="blueprint"]::before { content: "📐 "; }
+.nav-file-title-content[data-link-galaxy_body="void"]::before      { content: "🌑 "; }
+
+
+
+/* 🤐🥴 😶‍🌫️🤯💀🤖👽💥💫🕳👁️‍🗨️💤🖖✍🧠🧑‍🦰 🌀 👨‍✈️🧙🤺🛌🦠🌐🗺🌎🧭
+
+👨‍🚀🚧🛫🛬🪂 🌠🌌☀⭐🌟⚡✨💎🔍🔎💡🔅
+📔📕📖📗📘📙📚📓📒📃📜📄📰🗞📑🔖🏷
+📤📥🗳📮
+
+✏✒🖋🖊🖌🖍📝
+🔧🔩⚙🗜🔗⛓
+🧬📡🔭
+⚠🚫☢☣
+✅☑✔❌❎✳✴❇
+
+🏴‍☠️🏳🚩🏁
+
+🔶🔷🔸🔹
+🔴🟠🟡🟢🔵🟣🟤⚫⚪
+🟥🟧🟨🟩🟦🟪🟫⬛⬜◼◻🔳🔲
+*/
