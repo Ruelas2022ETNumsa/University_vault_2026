@@ -111,16 +111,26 @@ Archivos adicionales que no son libros completos pero aportan valor puntual a No
 | `introduccion_ahpl_transferencia_registros`                    | Presentación introductoria sobre AHPL enfocada en representación y transferencia de registros, sincronización mediante reloj, operaciones lógicas, buses de datos y secuenciación de control. Material teórico con diagramas de hardware y ejemplos de notación AHPL. Útil como base para comprender el modelado de sistemas digitales y el computador SIC.                                                                                                                                                                   | T1         |
 | `operating_systems_three_easy_pieces`                          | Libro de referencia completo sobre sistemas operativos. Cubre virtualización de CPU y memoria, procesos, planificación, concurrencia, administración de memoria, dispositivos de E/S, sistemas de archivos y sistemas distribuidos. Combina teoría, ejemplos en C y ejercicios. ⚠️ Evaluación corregida: T4 en ETN825 es interfaces de hardware (Hill & Peterson), no E/S de SO. T6 es multiprocesadores a nivel hardware. Los temas reales que cubre son T3 (interrupciones/E/S como contexto de SO) y T5 (memoria virtual, caché). Contexto de fondo para T6. | T3, T5     |
 | `extensiones_ahpl_compilador_msi_lsi`                          | Tesis doctoral que propone extensiones al lenguaje AHPL y el diseño/optimización de un compilador para sintetizar hardware MSI/LSI. Analiza nuevas construcciones del lenguaje, arquitectura del compilador, generación de circuitos y ejemplos de descripción de hardware. Material avanzado de investigación, no introductorio. ⚠️ Borrador: útil si el docente profundiza en AHPL y compilación de descripciones de hardware, pero su enfoque excede el nivel habitual de la materia. | T1         |
+| `ahpl_diseno_sistemas_digitales`                               | Documento teórico que introduce AHPL para describir y diseñar sistemas digitales. Explica transferencia de registros, buses, secuenciamiento de control, lógica combinacional, módulos, memoria y ejemplos completos de implementación de hardware. Material base para comprender el diseño de computadores a nivel de registros y control. | T1, T2, T5 |
 
 ---
 
 ## Archivos divididos
 
-Algunos libros están divididos en partes. Usá el rango que corresponde al tema:
+| Libro | PDF | Capítulos | Contenido | Temas |
+|---|---|---|---|---|
+| Hill & Peterson — Digital Systems 2ª ed. | PDF 1 | 2, 4, 5, 6 | Registros, transferencias, AHPL básico, secuencia de control | T1 |
+| Hill & Peterson — Digital Systems 2ª ed. | PDF 2 | 7 | Computador SIC completo — los 24 pasos | T1 |
+| Hill & Peterson — Digital Systems 2ª ed. | PDF 3 | 9, 10, 11, 13 | Comunicación entre módulos, interfaces, I/O, interrupciones | T2, T3, T4 |
 
-```
-(pendiente — definir cuando se carguen a NotebookLM)
-```
+### Capítulos faltantes
+
+| Capítulo | Contenido | Relevancia | Cobertura alternativa |
+|---|---|---|---|
+| 1 | Introducción y fundamentos digitales | Baja | Complementos AHPL ya cubren la base |
+| 3 | Lógica combinacional en AHPL | Media | Cubierto parcialmente por los resúmenes de complementos |
+| 8 | Memoria | Alta — T5 | Stallings COA 11ª ed. |
+| 12 | Multiprocesadores / sistemas avanzados | Media — T6 | Stallings COA 11ª ed. + Hennessy & Patterson |
 
 ---
 
