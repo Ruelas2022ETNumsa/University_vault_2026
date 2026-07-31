@@ -5,7 +5,6 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "Untitled.md",
         "_app",
         "_hangar",
         "_skills",
@@ -2746,7 +2745,8 @@
         "shellcmd_scripting_guide.md",
         "shellcommands_guide(scripts).md",
         "shellcmd_latex_mathjax.md",
-        "rclone_script.md"
+        "rclone_script.md",
+        "shellcmd_start_snippet.md"
       ]
     },
     "_app/shellcommands/shellcmd_scripting_guide.md": {
@@ -3276,7 +3276,9 @@
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
-      "customOrder": []
+      "customOrder": [
+        "tsk_snippet_templater.md"
+      ]
     },
     "_hangar/tpl_worker.md": {
       "isPinned": false,
@@ -3294,11 +3296,15 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Untitled.md": {
+    "_templates/pru.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_templates/pru.md": {
+    "_app/shellcommands/shellcmd_start_snippet.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/_legacy/tsk_snippet_templater.md": {
       "isPinned": false,
       "isHidden": false
     }

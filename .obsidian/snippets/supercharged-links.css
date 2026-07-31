@@ -37,7 +37,7 @@
 .nav-file-title-content[data-link-status="in-orbit"]::before  { content: "💫 "; }
 .nav-file-title-content[data-link-status="delayed"]::before   { content: "⏸️ "; }
 .nav-file-title-content[data-link-status="docking"]::before   { content: "⚙️ "; }
-.nav-file-title-content[data-link-status="aborted"]::before   { content: "💀 "; }
+.nav-file-title-content[data-link-status="aborted"]::after   { content: "💀 "; }
 .nav-file-title-content[data-link-status="delivered"]::before { content: "✅ "; }
 
 /* =============================

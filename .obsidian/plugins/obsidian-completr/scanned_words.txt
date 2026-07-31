@@ -40946,6 +40946,7 @@ deactualizadas
 docked
 delayed
 delivered
+desaparecer
 Vault
 Verificar
 Variables
@@ -89700,6 +89701,7 @@ apropiado
 actulizar
 aborted
 asignale
+afectada
 related
 recomendados
 ribbon
@@ -106156,6 +106158,7 @@ nacen
 naves
 nHora
 navigator
+normalidad
 created
 commit
 cada
@@ -256297,6 +256300,7 @@ interfaces
 insertadas
 iMSN
 integran
+invocar
 Dependencia
 Dropbox
 Dataview
