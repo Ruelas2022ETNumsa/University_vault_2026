@@ -34,4 +34,5 @@ Hora de inicio: 14:35
 ```
 
 
-
+Usá el MCP Filesystem y leé E:\University_vault_2026\_skills\_start.md
+Hora de inicio: 12:40

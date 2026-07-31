@@ -3,5 +3,6 @@
   "alwaysUpdateLinks": true,
   "promptDelete": false,
   "attachmentFolderPath": "_assets",
-  "tabSize": 4
+  "tabSize": 4,
+  "settingsPopoutWindow": false
 }

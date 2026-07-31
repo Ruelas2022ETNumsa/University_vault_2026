@@ -3309,7 +3309,7 @@
     "_skills/_start.md"
   ],
   "showHidden": false,
-  "newItemPlacement": "top",
+  "newItemPlacement": "bottom",
   "persistOrderOnCreateDelete": false,
   "debugMode": false
 }

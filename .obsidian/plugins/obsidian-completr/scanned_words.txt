@@ -73208,6 +73208,7 @@ seleccionables
 ships
 ship
 subidas
+strofes
 vault
 vil
 ver
@@ -98162,6 +98163,7 @@ rowIndent
 rgba
 routs
 reemplazan
+registrarlo
 notes
 notas
 nuevas
@@ -139491,6 +139493,7 @@ Carrier
 Convenciones
 Carriers
 Copiado
+Caracteres
 Instalados
 Instalado
 Instalar
@@ -280314,6 +280317,7 @@ Hennessy
 Hauck
 HYUjd
 HGIs
+Here
 filtrar
 formato
 faltantes

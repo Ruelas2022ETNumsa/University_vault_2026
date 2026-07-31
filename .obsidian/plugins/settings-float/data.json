@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "movable": true,
+  "resizable": true,
+  "rememberGeometry": true,
+  "showPresetControls": true,
+  "disableOnMobile": true,
+  "disableOnNarrowWindows": true,
+  "narrowWindowThreshold": 720,
+  "geometry": null
+}

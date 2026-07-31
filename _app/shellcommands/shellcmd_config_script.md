@@ -27,6 +27,11 @@ status: borrador
 > [!info] Referencia
 > Este archivo documenta solo la configuración individual por script. Para opciones globales del plugin (environments, output global, variables built-in, etc.) ver: [[shellcmd_config_gral]]
 
+> [!bug] Bug — Obsidian abre configuración en ventana nueva (resuelto)
+> **Versión afectada:** Obsidian con la opción *Open settings in new window* activada.
+> **Síntoma:** Shell Commands no muestra correctamente su ventana de configuración cuando Obsidian abre los ajustes en una ventana separada.
+> **Solución:** Desactivar `Settings > Interface > Open settings in new window`. Con esa opción OFF, Shell Commands funciona con normalidad.
+
 ## Leyenda de Componentes
 * `\[input text\]` o `\[input text (ejemplo)\]`: Caja de texto para escribir.
 * `\[opción1/opción2\]`: Menú de elección de opciones.
@@ -318,6 +323,50 @@ Si no está disponible, entonces:
 - Acción: >❓<
 
 ---
+
+## Estructura de carpetas para nuevos scripts
+
+Cada script de Shell Commands se organiza como un paquete Python independiente dentro de:
+
+```
+{{vault_path}}\.obsidian\scripts\python\
+```
+
+### Convención de carpetas
+
+```
+.obsidian/
+└── scripts/
+    └── python/
+        └── <nombre_del_script>/      ← carpeta con nombre descriptivo en snake_case
+            └── main.py               ← punto de entrada único
+```
+
+> [!rule] Reglas de nomenclatura
+> - El nombre de la carpeta identifica la función del script (ej. `start_snippet`, `sync_notes`).
+> - El archivo ejecutable siempre se llama `main.py`.
+> - Un script = una carpeta. No se comparten archivos entre scripts.
+
+### Registro en Shell Commands
+
+Una vez creado el script, registrarlo con esta configuración:
+
+| Campo | Valor |
+|---|---|
+| **Comando** | `python "{{vault_path}}\.obsidian\scripts\python\<nombre_del_script>\main.py"` |
+| **Alias** | Texto descriptivo en español (ej. `Start — copiar snippet`) |
+| **Shell** | PowerShell 5 |
+| **stdout** | Ignore |
+| **stderr** | Notification balloon |
+
+> [!warning] Caracteres especiales en el comando
+> Si el texto generado por el script contiene apóstrofes u otros caracteres especiales, el `Set-Clipboard -Value '...'` con comillas simples puede fallar en PowerShell. Documentar ese caso al llegar y evaluar escape o Here-String para una v2.
+
+### Scripts existentes
+
+| Carpeta | Alias en Shell Commands | Descripción | Doc |
+|---|---|---|---|
+| `start_snippet` | `Start — copiar snippet` | Copia al portapapeles el snippet de inicio de sesión de Claude con la hora actual | [[shellcmd_start_snippet]] |
 
 %%
 # galaxy-links
