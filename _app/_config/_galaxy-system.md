@@ -862,17 +862,17 @@ status: activo
 %%
 # galaxy-links
 [[_app/_config/_template-system.md]]
-[[_pdf_pp-system]]
+[[_app/_config/_pdf_pp-system.md]]
 [[_app/_config/_mindmap-system.md]]
 [[_app/_config/_note-system.md]]
 [[_app/_config/_graph-system.md]]
 [[_app/_config/_ToDo-system.md]]
 [[_app/_config/_notebooklm-system.md]]
 [[_app/_appnotes/claude_prompts]]
-[[skills/_claude-plan]]
-[[skills/_claude-work]]
-[[skills/_claude-boot]]
-[[skills/_claude-setup]]
-[[skills/_claude-close]]
+[[_skills/_claude-plan]]
+[[_skills/_claude-work]]
+[[_skills/_claude-boot]]
+[[_skills/_claude-setup]]
+[[_skills/_claude-close]]
 [[_app/_config/_projects_system.md]]
 %%

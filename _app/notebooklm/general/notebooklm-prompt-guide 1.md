@@ -15,7 +15,7 @@ tags:
   - plantillas
   - infraestructura
 date_created: 2026-07-03
-date_updated: 2026-07-31
+date_updated: 2026-07-03
 status: activo
 ---
 
@@ -351,31 +351,49 @@ procedimientos paso a paso Y NOTAS DEL TITULO.
 NO aplicar a ejemplos resueltos.
 
 ESTRUCTURA:
+--- start-multi-column: cornell-TX-00N
+```column-settings
+number of columns: 2
+column size: [60%, 40%]
+border: off
+```
 
-`````
-cornell
-::cue
+📝 **Desarrollo**
+[transcripción fiel del subtítulo: texto, fórmulas y gráficas]
+
+--- end-column ---
+
+🔑 **Claves**
+
 [palabras clave separadas por · ]
+
 [2-4 preguntas centrales que el subtítulo responde, según su complejidad]
+
 [fórmula o definición clave en inline $...$ — nunca display $$]
+
 [conexiones: "ver también: X" — solo si hay un subtítulo relacionado evidente]
+
 [errores comunes: "no confundir X con Y" — solo si aplica]
+
 [mnemónico — solo si el subtítulo tiene una lista de 5 o más ítems]
 
-::note
-[transcripción fiel del subtítulo: texto, fórmulas y gráficas]
-`````
+%```desmos-graph
+%```
 
->[!summary] [una línea del subtítulo sin redundancia de otros subtítulos]
+--- end-multi-column
+
+> **Resumen:** [una línea del subtítulo sin redundancia de otros subtítulos]
 
 REGLAS:
 - REVISAR QUE LAS NOTAS DEL TITULO VAN DENTRO DEL BLOQUE CORNELL
 - El título principal del archivo NO va dentro del bloque Cornell.
-- Gráficas Desmos dentro de ::note: width máximo 320px.
-- TikZJax dentro de ::note: tamaño normal.
+- ID secuencial por tema: cornell-T0-001, cornell-T0-002, cornell-T1-001...
+- Gráficas Desmos dentro de Desarrollo: width máximo 320px.
+- TikZJax dentro de Desarrollo: tamaño normal.
+- El bloque comentado %```desmos-graph / %``` en Claves es OBLIGATORIO
+  siempre que haya un bloque Desmos en Desarrollo — sin él Desmos no renderiza.
+- Si no hay Desmos en Desarrollo, omitir el bloque comentado en Claves.
 - Complemento y ejercicios van siempre FUERA del Cornell, después del Resumen.
-- BUG NotebookLM: el identificador cornell debe ir en línea separada de los backticks
-  (primero `````, salto de línea, luego cornell) — de lo contrario no lo coloca.
 _
 NIVELES DE COMPLEMENTO:
 Va DESPUÉS del Cornell (fuera del bloque), con este formato exacto:
