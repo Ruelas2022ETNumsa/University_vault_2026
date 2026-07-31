@@ -72,6 +72,8 @@
    GALAXY BODY — PROYECTOS (subtipo)
    ============================= */
 .nav-file-title-content[data-link-galaxy_body="operator"]::before  { content: "🧑✈️ "; }
+.nav-file-title-content[data-link-galaxy_body="operator"][data-link-status="free"]::before  { content: "✔ "; }
+.nav-file-title-content[data-link-galaxy_body="operator"][data-link-status="busy"]::before  { content: "❌ "; }
 .nav-file-title-content[data-link-galaxy_body="ship"]::before      { content: "🚀 "; }
 .nav-file-title-content[data-link-galaxy_body="carrier"]::before   { content: "🛸 "; }
 .nav-file-title-content[data-link-galaxy_body="dropship"]::before  { content: "🛩️ "; }

@@ -1,9 +1,8 @@
 ---
-alias: "SISTEMA DE LINKS — DOS CAPAS y archivos task"
-galaxy_body: workshop
-date_created: 
-date_updated: 2026-07-19
-status: creciente
+galaxy_body: operator
+project: "Sistema de links, sync y organización de carpetas"
+date: 2026-07-19
+status: busy
 ---
 
 ## Handoff

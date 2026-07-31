@@ -20,7 +20,8 @@
         "MOC",
         "Semesters",
         "Semestres",
-        "README.md"
+        "README.md",
+        "Untitled.md"
       ]
     },
     "MOC": {
@@ -1245,7 +1246,8 @@
         "_sync-system.md",
         "_template-system.md",
         "_ToDo-system.md",
-        "_skill-system.md"
+        "_skill-system.md",
+        "_prompt-system.md"
       ]
     },
     "_app/_config/_basic-memory-system.md": {
@@ -2829,8 +2831,7 @@
         "_claude-plan.md",
         "_claude-setup.md",
         "_claude-close.md",
-        "_claude-boot.md",
-        "_claude-close 1.md"
+        "_claude-boot.md"
       ]
     },
     "_skills/_claude-boot.md": {
@@ -3114,8 +3115,9 @@
         "anki",
         "tpl_tsk 1.md",
         "tpl_carrier.md",
-        "tpl_worker.md",
         "tpl_ship.md",
+        "tpl_worker.md",
+        "logbook.md",
         "alx_hot.md",
         "krajo.md",
         "alx_gml.md",
@@ -3320,11 +3322,19 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_skills/_claude-close 1.md": {
+    "_hangar/dock/tsk_operator_reload_display.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_hangar/dock/tsk_operator_reload_display.md": {
+    "Untitled.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_config/_prompt-system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/logbook.md": {
       "isPinned": false,
       "isHidden": false
     }

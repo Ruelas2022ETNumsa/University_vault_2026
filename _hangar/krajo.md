@@ -1,8 +1,8 @@
 ---
-project: "Implementación sistema _hangar"
+galaxy_body: operator
+project: "Implementación física _hangar/"
 date: 2026-07-30
 status: busy
-alias: w1
 ---
 
 ## Handoff
