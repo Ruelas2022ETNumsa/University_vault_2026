@@ -40941,6 +40941,8 @@ desactualizada
 discutido
 demanda
 docs
+desactualziado
+deactualizadas
 Vault
 Verificar
 Variables
@@ -64324,6 +64326,7 @@ bVgD
 bloqueo
 blueprint
 busy
+bussy
 scope
 status
 selector
@@ -89689,6 +89692,7 @@ archiva
 aTSF
 archivan
 apropiado
+actulizar
 related
 recomendados
 ribbon
@@ -115146,6 +115150,7 @@ completarse
 carrier
 continen
 centralice
+carg
 updated
 un
 universo

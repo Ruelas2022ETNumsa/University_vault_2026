@@ -42,21 +42,21 @@ Implementar físicamente el sistema `_hangar/` diseñado en sesión 2026-07-30. 
 
 ### Cambios físicos en disco
 
-- [ ] Renombrar carpeta `_projects/` → `_hangar/`
-- [ ] Renombrar workers (quitar prefijo `tsk_`):
-  - [ ] `tsk_alx-rul.md` → `alx-rul.md`
-  - [ ] `tsk_alxgml.md` → `alxgml.md`
-  - [ ] `tsk_alxhot.md` → `alxhot.md`
-  - [ ] `tsk_alxrul.md` → `alxrul.md`
-  - [ ] `tsk_emergn.md` → `emergn.md`
-  - [ ] `tsk_krajo.md` → `krajo.md`
-  - [ ] `tsk_standb.md` → `standb.md`
-- [ ] Crear carpeta `_hangar/dock/`
+- [x] Renombrar carpeta `_projects/` → `_hangar/`
+- [x] Renombrar workers (quitar prefijo `tsk_`):
+  - [x] `tsk_alx-rul.md` → `alx-rul.md`
+  - [x] `tsk_alxgml.md` → `alxgml.md`
+  - [x] `tsk_alxhot.md` → `alxhot.md`
+  - [x] `tsk_alxrul.md` → `alxrul.md`
+  - [x] `tsk_emergn.md` → `emergn.md`
+  - [x] `tsk_krajo.md` → `krajo.md`
+  - [x] `tsk_standb.md` → `standb.md`
+- [x] Crear carpeta `_hangar/dock/`
 - [ ] Crear `_hangar/dock/logbook.md`
-- [ ] Crear carpeta `_hangar/_legacy/`
-- [ ] Mover ships existentes a `dock/`:
-  - [ ] `tsk_pdf_marginalia_pp.md` → `dock/tsk_pdf_marginalia_pp.md`
-- [ ] Crear carpeta `anki/` dentro de `_hangar/` (ya existe manualmente — verificar)
+- [x] Crear carpeta `_hangar/_legacy/`
+- [x] Mover ships existentes a `dock/`:
+  - [x] `tsk_pdf_marginalia_pp.md` → `dock/tsk_pdf_marginalia_pp.md`
+- [x] Crear carpeta `anki/` dentro de `_hangar/` (ya existe manualmente — verificar)
 - [ ] Crear `_hangar/anki/logbook.md`
 
 ### Templates nuevos a crear

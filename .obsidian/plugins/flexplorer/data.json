@@ -12,7 +12,7 @@
         "_void",
         "_inbox",
         "_skills",
-        "_hagar",
+        "_hangar",
         "Borrar",
         "README.md",
         "MOC",
@@ -3062,128 +3062,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_hagar": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "blueprint",
-        "tlp_worker.md",
-        "dock",
-        "anki",
-        "alx-rul.md",
-        "alx_gml.md",
-        "alx_hot.md",
-        "alxrul.md",
-        "emergn.md",
-        "krajo.md",
-        "standb.md",
-        "tsk_tpl.md"
-      ]
-    },
-    "_hagar/anki": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "_tmp_sync 1.md",
-        "_tmp_sync.md",
-        "tsk_anki.md",
-        "anki_galaxy_guide.md",
-        "anki-opcionA-marginalia.md",
-        "anki-opcionB-flashcards.md",
-        "anki-opcionC-obsidian-to-anki.md"
-      ]
-    },
-    "_hagar/tsk_tpl.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_hagar/anki/anki-opcionA-marginalia.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_hagar/anki/anki-opcionB-flashcards.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_hagar/anki/anki-opcionC-obsidian-to-anki.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_hagar/anki/anki_galaxy_guide.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_hagar/anki/tsk_anki.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_hagar/anki/_tmp_sync 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_hagar/anki/_tmp_sync.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_hagar/dock": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "tsk_memory_matter.md",
-        "tsk_Gemini_Helper_Vault.md",
-        "tsk_Wolfram_alpha_script.md",
-        "tsk_Mapa_IAs_vault_roles_APIs.md",
-        "tsk_pendientes_sistema_galaxy.md",
-        "tsk_script_extaction_integration.md",
-        "tsk_pdf_marginalia_pp.md",
-        "_library_ETN505(i).md",
-        "_library_ETN825.md",
-        "tsk_library_ETN825.md"
-      ]
-    },
-    "_hagar/dock/tsk_library_ETN825.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_hagar/dock/tsk_pdf_marginalia_pp.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_hagar/dock/_library_ETN505(i).md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_hagar/dock/_library_ETN825.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_hagar/dock/tsk_script_extaction_integration.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_hagar/dock/tsk_pendientes_sistema_galaxy.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_hagar/dock/tsk_Mapa_IAs_vault_roles_APIs.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_hagar/dock/tsk_Wolfram_alpha_script.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_hagar/dock/tsk_Gemini_Helper_Vault.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_hagar/tlp_worker.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_void": {
       "isPinned": false,
       "isHidden": false,
@@ -3226,7 +3104,122 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_hagar/blueprint": {
+    "_hangar": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_legacy",
+        "blueprint",
+        "tpl_worker.md",
+        "dock",
+        "anki",
+        "alx-rul.md",
+        "alx_gml.md",
+        "alx_hot.md",
+        "alxrul.md",
+        "emergn.md",
+        "krajo.md",
+        "standb.md",
+        "tpl_tsk.md"
+      ]
+    },
+    "_hangar/anki": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_tmp_sync 1.md",
+        "_tmp_sync.md",
+        "tsk_anki.md",
+        "anki_galaxy_guide.md",
+        "anki-opcionA-marginalia.md",
+        "anki-opcionB-flashcards.md",
+        "anki-opcionC-obsidian-to-anki.md"
+      ]
+    },
+    "_hangar/anki/anki-opcionA-marginalia.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/anki/anki-opcionB-flashcards.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/anki/anki-opcionC-obsidian-to-anki.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/anki/anki_galaxy_guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/anki/tsk_anki.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/anki/_tmp_sync 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/anki/_tmp_sync.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/dock": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "tsk_memory_matter.md",
+        "tsk_Gemini_Helper_Vault.md",
+        "tsk_Wolfram_alpha_script.md",
+        "tsk_Mapa_IAs_vault_roles_APIs.md",
+        "tsk_pendientes_sistema_galaxy.md",
+        "tsk_script_extaction_integration.md",
+        "tsk_pdf_marginalia_pp.md",
+        "_library_ETN505(i).md",
+        "_library_ETN825.md",
+        "tsk_library_ETN825.md"
+      ]
+    },
+    "_hangar/dock/tsk_library_ETN825.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/dock/tsk_pdf_marginalia_pp.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/dock/_library_ETN505(i).md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/dock/_library_ETN825.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/dock/tsk_script_extaction_integration.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/dock/tsk_pendientes_sistema_galaxy.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/dock/tsk_Mapa_IAs_vault_roles_APIs.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/dock/tsk_Wolfram_alpha_script.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/dock/tsk_Gemini_Helper_Vault.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/blueprint": {
       "isPinned": false,
       "isHidden": false,
       "customOrder": [
@@ -3235,49 +3228,63 @@
       ],
       "sortOrder": "custom"
     },
-    "_hagar/blueprint/_ideas_0_shellcmd.md": {
+    "_hangar/blueprint/_ideas_0_shellcmd.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_hagar/blueprint/_ideas_1_apps_2brain.md": {
+    "_hangar/blueprint/_ideas_1_apps_2brain.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_hagar/alx-rul.md": {
+    "_hangar/alx-rul.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_hagar/alx_hot.md": {
+    "_hangar/alx_hot.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_hagar/alx_gml.md": {
+    "_hangar/alx_gml.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_hagar/alxrul.md": {
+    "_hangar/alxrul.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_hagar/emergn.md": {
+    "_hangar/emergn.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_hagar/krajo.md": {
+    "_hangar/krajo.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_hagar/standb.md": {
+    "_hangar/standb.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_hagar/dock/tsk_memory_matter.md": {
+    "_hangar/dock/tsk_memory_matter.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/_legacy": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [],
+      "sortOrder": "custom"
+    },
+    "_hangar/tpl_worker.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/tpl_tsk.md": {
       "isPinned": false,
       "isHidden": false
     }
   },
   "pinnedFiles": [
-    "_hagar/tsk_tpl.md",
+    "_hangar/tpl_tsk.md",
     "_app/_config/_galaxy-system.md",
     "_skills/_start.md"
   ],
