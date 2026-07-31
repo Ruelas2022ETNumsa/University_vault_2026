@@ -32,58 +32,13 @@
 
 /* =============================
    SHIP / CARRIER STATUS
-   (selectores simples — fallback para archivos sin galaxy_body)
    ============================= */
 .nav-file-title-content[data-link-status="docked"]::before    { content: "🛸 "; }
 .nav-file-title-content[data-link-status="in-orbit"]::before  { content: "💫 "; }
 .nav-file-title-content[data-link-status="delayed"]::before   { content: "⏸️ "; }
 .nav-file-title-content[data-link-status="docking"]::before   { content: "⚙️ "; }
-.nav-file-title-content[data-link-status="aborted"]::before   { content: "💀 "; }
+.nav-file-title-content[data-link-status="aborted"]::after   { content: "💀 "; }
 .nav-file-title-content[data-link-status="delivered"]::before { content: "✅ "; }
-
-/* =============================
-   SHIP — combinado (body + status)
-   ::before = galaxy_body | ::after = status
-   ============================= */
-.nav-file-title-content[data-link-galaxy_body="ship"][data-link-status="docked"]::before    { content: "🚀 "; }
-.nav-file-title-content[data-link-galaxy_body="ship"][data-link-status="docked"]::after     { content: " 🛸"; }
-
-.nav-file-title-content[data-link-galaxy_body="ship"][data-link-status="in-orbit"]::before  { content: "🚀 "; }
-.nav-file-title-content[data-link-galaxy_body="ship"][data-link-status="in-orbit"]::after   { content: " 💫"; }
-
-.nav-file-title-content[data-link-galaxy_body="ship"][data-link-status="delayed"]::before   { content: "🚀 "; }
-.nav-file-title-content[data-link-galaxy_body="ship"][data-link-status="delayed"]::after    { content: " ⏸️"; }
-
-.nav-file-title-content[data-link-galaxy_body="ship"][data-link-status="docking"]::before   { content: "🚀 "; }
-.nav-file-title-content[data-link-galaxy_body="ship"][data-link-status="docking"]::after    { content: " ⚙️"; }
-
-.nav-file-title-content[data-link-galaxy_body="ship"][data-link-status="aborted"]::before   { content: "🚀 "; }
-.nav-file-title-content[data-link-galaxy_body="ship"][data-link-status="aborted"]::after    { content: " 💀"; }
-
-.nav-file-title-content[data-link-galaxy_body="ship"][data-link-status="delivered"]::before { content: "🚀 "; }
-.nav-file-title-content[data-link-galaxy_body="ship"][data-link-status="delivered"]::after  { content: " ✅"; }
-
-/* =============================
-   CARRIER — combinado (body + status)
-   ::before = galaxy_body | ::after = status
-   ============================= */
-.nav-file-title-content[data-link-galaxy_body="carrier"][data-link-status="docked"]::before    { content: "🛸 "; }
-.nav-file-title-content[data-link-galaxy_body="carrier"][data-link-status="docked"]::after     { content: " 🛸"; }
-
-.nav-file-title-content[data-link-galaxy_body="carrier"][data-link-status="in-orbit"]::before  { content: "🛸 "; }
-.nav-file-title-content[data-link-galaxy_body="carrier"][data-link-status="in-orbit"]::after   { content: " 💫"; }
-
-.nav-file-title-content[data-link-galaxy_body="carrier"][data-link-status="delayed"]::before   { content: "🛸 "; }
-.nav-file-title-content[data-link-galaxy_body="carrier"][data-link-status="delayed"]::after    { content: " ⏸️"; }
-
-.nav-file-title-content[data-link-galaxy_body="carrier"][data-link-status="docking"]::before   { content: "🛸 "; }
-.nav-file-title-content[data-link-galaxy_body="carrier"][data-link-status="docking"]::after    { content: " ⚙️"; }
-
-.nav-file-title-content[data-link-galaxy_body="carrier"][data-link-status="aborted"]::before   { content: "🛸 "; }
-.nav-file-title-content[data-link-galaxy_body="carrier"][data-link-status="aborted"]::after    { content: " 💀"; }
-
-.nav-file-title-content[data-link-galaxy_body="carrier"][data-link-status="delivered"]::before { content: "🛸 "; }
-.nav-file-title-content[data-link-galaxy_body="carrier"][data-link-status="delivered"]::after  { content: " ✅"; }
 
 /* =============================
    BLUEPRINT STATUS
@@ -105,8 +60,7 @@
 
 
 
-/*
-🤐🥴 😶‍🌫️🤯💀🤖👽💥💫🕳👁️‍🗨️💤🖖✍🧠🧑‍🦰 🌀 👨‍✈️🧙🤺🛌🦠🌐🗺🌎🧭
+/* 🤐🥴 😶‍🌫️🤯💀🤖👽💥💫🕳👁️‍🗨️💤🖖✍🧠🧑‍🦰 🌀 👨‍✈️🧙🤺🛌🦠🌐🗺🌎🧭
 
 👨‍🚀🚧🛫🛬🪂 🌠🌌☀⭐🌟⚡✨💎🔍🔎💡🔅
 📔📕📖📗📘📙📚📓📒📃📜📄📰🗞📑🔖🏷
