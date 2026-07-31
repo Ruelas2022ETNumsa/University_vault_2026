@@ -89698,6 +89698,7 @@ archivan
 apropiado
 actulizar
 aborted
+asignale
 related
 recomendados
 ribbon
@@ -106151,6 +106152,8 @@ nGenerated
 nombran
 nacen
 naves
+nHora
+navigator
 created
 commit
 cada
@@ -132005,6 +132008,7 @@ GkQrX
 Guess
 GRANDES
 Genesis
+Guard
 Convenci
 Creaci
 Commander
@@ -139486,6 +139490,7 @@ Conseguir
 Carrier
 Convenciones
 Carriers
+Copiado
 Instalados
 Instalado
 Instalar
@@ -364678,6 +364683,7 @@ wCaF
 workshops
 workers
 worker
+writeText
 xima
 xeles
 xy

@@ -5,6 +5,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "Untitled.md",
         "_app",
         "_hangar",
         "_skills",
@@ -1313,6 +1314,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "pru.md",
         "alt-B",
         "tpl-ex_occlusion.md",
         "tpl-w-initial.md",
@@ -3289,6 +3291,14 @@
       "isHidden": false
     },
     "_hangar/tpl_ship.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_templates/pru.md": {
       "isPinned": false,
       "isHidden": false
     }
