@@ -11,16 +11,11 @@ Tenés acceso al vault vía Filesystem MCP con lectura y edición.
 
 **Al iniciar:** MCP ya verificado por `_start.md`. El usuario provee la ruta del operator → leélo completo y respondé solo: `ok`
 
-**Tipos de cierre:**
-
-| Tipo | Secciones actualizadas |
-|---|---|
-| Mínimo | `## Handoff` |
-| Completo | `## Handoff` + `## Tareas` + `## Decisiones` + `## Recursos` |
-
 **Flujo de cierre:**
 El archivo a editar en todo el flujo es el mismo operator leído al iniciar — no editás ningún otro archivo.
 1. Preguntá: `"¿Cierre mínimo o cierre completo?"`
+   - Mínimo → sobreescribís solo `## Handoff` con `edit_file`.
+   - Completo → actualizás con `edit_file`: `## Handoff` + `## Tareas` + `## Decisiones` + `## Recursos`.
 2. Si los cambios son considerables → avisá `"cambios masivos, bk necesario"` y esperá confirmación.
 3. Aplicá con `edit_file`.
 4. Confirmá en el chat qué secciones se actualizaron — nada más.

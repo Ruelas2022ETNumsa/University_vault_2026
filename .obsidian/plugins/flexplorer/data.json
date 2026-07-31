@@ -1244,7 +1244,8 @@
         "_notebooklm-system.md",
         "_sync-system.md",
         "_template-system.md",
-        "_ToDo-system.md"
+        "_ToDo-system.md",
+        "_skill-system.md"
       ]
     },
     "_app/_config/_basic-memory-system.md": {
@@ -2828,8 +2829,8 @@
         "_claude-plan.md",
         "_claude-setup.md",
         "_claude-close.md",
-        "_claude-boot 1.md",
-        "_claude-boot.md"
+        "_claude-boot.md",
+        "_claude-close 1.md"
       ]
     },
     "_skills/_claude-boot.md": {
@@ -3060,10 +3061,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_skills/_claude-boot 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_void": {
       "isPinned": false,
       "isHidden": false,
@@ -3184,7 +3181,8 @@
         "tsk_pdf_marginalia_pp.md",
         "_library_ETN505(i).md",
         "_library_ETN825.md",
-        "tsk_library_ETN825.md"
+        "tsk_library_ETN825.md",
+        "tsk_operator_reload_display.md"
       ]
     },
     "_hangar/dock/tsk_library_ETN825.md": {
@@ -3315,6 +3313,18 @@
       "isHidden": false
     },
     "_hangar/_legacy/logbook.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_config/_skill-system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_skills/_claude-close 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/dock/tsk_operator_reload_display.md": {
       "isPinned": false,
       "isHidden": false
     }

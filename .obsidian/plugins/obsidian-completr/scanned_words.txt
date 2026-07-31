@@ -40953,6 +40953,7 @@ delayed
 delivered
 desaparecer
 dual
+diagnostica
 Vault
 Verificar
 Variables
@@ -73218,6 +73219,7 @@ subidas
 strofes
 supercharged
 selectores
+superan
 vault
 vil
 ver
@@ -89711,6 +89713,7 @@ aborted
 asignale
 afectada
 abortados
+avisa
 related
 recomendados
 ribbon
@@ -98175,6 +98178,7 @@ rgba
 routs
 reemplazan
 registrarlo
+reintenta
 notes
 notas
 nuevas
@@ -180986,6 +180990,7 @@ Avances
 Anna
 Archive
 Armar
+Avisa
 push
 pull
 para
@@ -197937,6 +197942,7 @@ multiprocesadores
 mencion
 mera
 meter
+medianoche
 YAML
 Ya
 You
@@ -264456,6 +264462,7 @@ Deisenroth
 David
 Dropship
 Distinguirlos
+Discute
 Remotely
 Raz
 Revisa
@@ -287985,6 +287992,8 @@ flops
 flujograma
 fotocopias
 fleet
+fallos
+fallo
 haya
 hace
 hacer

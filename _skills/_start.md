@@ -54,6 +54,15 @@ Según la opción elegida, leé el archivo correspondiente y ejecutá su flujo d
 
 ---
 
+## Control de tokens
+
+La hora de inicio se indica en el mensaje de apertura como:
+`Hora de inicio: HH:MM`
+
+Cuando el usuario escriba **`/tokens`** o **`/token`** → respondé exactamente:
+`Tokens se reestablecen a las HH:MM` (hora_inicio + 5 horas)
+
+---
 ## Cierre de sesión
 
 Cuando el usuario diga **"la sesión debe terminar, usa close"** →

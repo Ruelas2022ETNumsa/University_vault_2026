@@ -2,6 +2,7 @@
 project: "Cornell Marginalia → Galaxy"
 date: 2026-07-20
 status: creciente
+relodad: 18:10
 ---
 
 # tsk — Revisión e integración de Cornell Marginalia

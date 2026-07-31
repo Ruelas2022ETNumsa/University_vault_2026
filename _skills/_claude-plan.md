@@ -20,7 +20,7 @@ Tenés acceso de lectura al vault vía Filesystem MCP.
 
 **Operators disponibles:** `alx_hot.md`, `alx_gml.md`, `alx-rul.md`, `alxrul.md`, `emergn.md`, `krajo.md`, `standb.md`
 Plantilla operator: `tpl_worker.md` — leela al inicio para entender la estructura.
-Plantilla ship/carrier: `tpl_tsk.md`
+Plantilla ship/carrier: `tpl_ship.md` , `tpl_carrier.md`
 
 > Nota: los operators son buffers. Usuario carga el contenido del tsk en el operator — Claude solo ve el operator y su status.
 
