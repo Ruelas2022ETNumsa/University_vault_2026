@@ -1,13 +1,20 @@
 ---
+galaxy_body: ship
 project: ""
 date: 
-status: libre
+status: docked
+fleet:           # opcional — materia o contexto al que pertenece
+blocked_by:      # opcional — solo si status: delayed
 ---
 %%
-status: nueva | creciente | llena
-- nueva: disponible para uso temporal o sin proyecto asignado
-- creciente: proyecto en curso
-- llena: proyecto terminado, pendiente de documentar y archivar
+galaxy_body: ship → carrier si el proyecto escala (necesita carpeta propia y archivos extra)
+
+status:
+- docked: en dock/, esperando operator
+- in-orbit: fue trabajado, pausado sin dependencia externa
+- delayed: bloqueado por dependencia externa — ver blocked_by
+- delivered: terminado y documentado, listo para archivar
+- aborted: proyecto no viable, descartado
 %%
 
 ## Handoff
