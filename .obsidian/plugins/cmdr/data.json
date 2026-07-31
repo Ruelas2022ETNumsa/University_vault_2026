@@ -105,6 +105,12 @@
       "icon": "lucide-stars",
       "name": "Galaxy View: Iniciar / detener recorrido",
       "mode": "any"
+    },
+    {
+      "id": "obsidian-shellcommands:shell-command-zrmn479rn0",
+      "icon": "lucide-message-square-code",
+      "name": "Shell commands: Execute: Start — copiar snippet",
+      "mode": "any"
     }
   ],
   "pageHeader": [
