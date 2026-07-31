@@ -3277,7 +3277,9 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "tsk_snippet_templater.md"
+        "logbook.md",
+        "tsk_snippet_templater.md",
+        "tsk_supercharged-dual-icons.md"
       ]
     },
     "_hangar/tpl_worker.md": {
@@ -3305,6 +3307,14 @@
       "isHidden": false
     },
     "_hangar/_legacy/tsk_snippet_templater.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/_legacy/tsk_supercharged-dual-icons.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/_legacy/logbook.md": {
       "isPinned": false,
       "isHidden": false
     }

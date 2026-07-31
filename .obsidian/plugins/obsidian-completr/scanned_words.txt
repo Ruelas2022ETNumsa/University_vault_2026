@@ -8067,6 +8067,7 @@ tocados
 transcribi
 tentativo
 transcriptas
+tenerlos
 ToDo
 Templater
 Text
@@ -25926,6 +25927,10 @@ Subtipo
 Ships
 Ship
 Separa
+Selectores
+SHIP
+STATUS
+Status
 Plugins
 Pendientes
 Plugin
@@ -40947,6 +40952,7 @@ docked
 delayed
 delivered
 desaparecer
+dual
 Vault
 Verificar
 Variables
@@ -73210,6 +73216,8 @@ ships
 ship
 subidas
 strofes
+supercharged
+selectores
 vault
 vil
 ver
@@ -89702,6 +89710,7 @@ actulizar
 aborted
 asignale
 afectada
+abortados
 related
 recomendados
 ribbon
@@ -139497,6 +139506,7 @@ Convenciones
 Carriers
 Copiado
 Caracteres
+CARRIER
 Instalados
 Instalado
 Instalar
@@ -197926,6 +197936,7 @@ multiprocesador
 multiprocesadores
 mencion
 mera
+meter
 YAML
 Ya
 You
@@ -239525,6 +239536,7 @@ LENGUAJE
 Logical
 Langdon
 Logbook
+Legacy
 links
 las
 listar
@@ -256301,6 +256313,7 @@ insertadas
 iMSN
 integran
 invocar
+impacto
 Dependencia
 Dropbox
 Dataview
