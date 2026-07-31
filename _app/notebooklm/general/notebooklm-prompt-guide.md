@@ -126,7 +126,7 @@ Al crear `prompts/ETNXXX/ETNXXX-transcription-notebook.md`:
 > Copiar como `prompts/ETNXXX/ETNXXX-study.md`
 > Reemplazar todos los marcadores `[...]` antes de usar.
 
-```
+~~~
 TAREA:
 Actuar como tutor universitario de [MATERIA_NOMBRE] orientado a [NIVEL].
 Respondé siempre en español. Inferí el modo de respuesta según el pedido.
@@ -253,26 +253,21 @@ tiene prioridad sobre reevaluar el criterio desde cero.
 Nunca inventar gráficos. Nunca mezclar herramientas en un mismo diagrama.
 _
 NOTAS CORNELL:
-Las fuentes .md del alumno usan el plugin Multi-Column Markdown de Obsidian
-con formato Cornell de dos columnas. Al leer una fuente con esta estructura,
-interpretarla así:
+Las fuentes .md del alumno usan el plugin Cornell Notes con este formato:
 
-  --- start-multi-column: ID
-  columna izquierda = DESARROLLO  → definiciones, fórmulas, desarrollo completo
-  --- end-column ---
-  columna derecha   = CLAVES      → conceptos clave, preguntas, fórmula central
-  --- end-multi-column
-  > Resumen: ...                  → síntesis del subtema en una línea
+  `````
+  cornell
+  ::cue
+  claves — palabras clave, preguntas, fórmula central
+  ::
+  ::note
+  desarrollo — definiciones, fórmulas, transcripción completa
+  `````
+  >[!summary] síntesis del subtema en una línea
 
-Los separadores --- start-multi-column, --- end-column --- y
---- end-multi-column son infraestructura del plugin, no contenido matemático.
-El bloque ```column-settings``` contiene parámetros visuales — ignorarlo.
-Orden de lectura: desarrollo → claves → resumen.
-
-Bloque comentado en columna de Claves:
-%```desmos-graph
-%```
-Es un marcador técnico de render — ignorar completamente.
+Orden de lectura: ::cue (claves) → ::note (desarrollo) → [!summary].
+El identificador cornell va en línea separada de los backticks — es infraestructura del plugin, no contenido.
+Los bloques `````...````` son delimitadores — ignorarlos como contenido.
 _
 REGLAS GENERALES:
 - Nunca copies párrafos del libro. Reformulá siempre.
@@ -288,7 +283,7 @@ LIBROS PRIORITARIOS POR TEMA:
 Consultar siempre las fuentes cargadas en el notebook según el tema.
 
 [LIBROS_POR_TEMA]
-```
+~~~
 
 ---
 
@@ -300,7 +295,7 @@ Consultar siempre las fuentes cargadas en el notebook según el tema.
 > Copiar como `prompts/ETNXXX/ETNXXX-transcription-notebook.md`
 > Reemplazar todos los marcadores `[...]` antes de usar.
 
-```
+~~~
 TAREA:
 Transcribir y complementar apuntes manuscritos universitarios de [MATERIA_NOMBRE]
 a formato Markdown listo para Obsidian.
@@ -464,7 +459,7 @@ LIBROS PRIORITARIOS POR TEMA:
 Consultar siempre las fuentes cargadas en el notebook según el tema.
 
 [LIBROS_POR_TEMA]
-```
+~~~
 
 ---
 
@@ -484,7 +479,7 @@ Consultar siempre las fuentes cargadas en el notebook según el tema.
 >
 > Ver [[_TABnote-system]] y [[_ToDo-system]] para el contexto completo.
 
-```
+~~~
 TAREA:
 Transcribir y complementar apuntes universitarios de [MATERIA_NOMBRE]
 tomados en tablet (Samsung Notes) a formato Markdown listo para Obsidian.
@@ -541,29 +536,20 @@ procedimientos paso a paso Y NOTAS DEL TITULO.
 NO aplicar a ejemplos resueltos.
 
 ESTRUCTURA: (igual que plantilla cuaderno físico)
---- start-multi-column: cornell-TX-00N
-```column-settings
-number of columns: 2
-column size: [60%, 40%]
-border: off
-```
 
-📝 **Desarrollo**
-[transcripción fiel del subtítulo]
-
---- end-column ---
-
-🔑 **Claves**
+`````
+cornell
+::cue
 [palabras clave · preguntas · fórmula clave · conexiones · errores comunes]
 
-%```desmos-graph
-%```
+::note
+[transcripción fiel del subtítulo]
+`````
 
---- end-multi-column
-
-> **Resumen:** [una línea]
+>[!summary] [una línea]
 
 REGLAS: (iguales a plantilla cuaderno físico — ver arriba)
+- BUG NotebookLM: el identificador cornell va en línea separada de los backticks.
 _
 NIVELES DE COMPLEMENTO:
 ⚠️ EN REVISIÓN — aplicar igual que cuaderno físico hasta nueva indicación.
@@ -593,7 +579,7 @@ LIBROS PRIORITARIOS POR TEMA:
 Consultar siempre las fuentes cargadas en el notebook según el tema.
 
 [LIBROS_POR_TEMA]
-```
+~~~
 
 ---
 

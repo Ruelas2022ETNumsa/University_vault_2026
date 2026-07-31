@@ -78,6 +78,13 @@ Una vez creado, agregar al inventario de este archivo y al de [[_notebooklm-syst
 
 %%
 # galaxy-links
-[[_notebooklm-system]]
-[[notebooklm-prompt-guide]]
+[[_app/_config/_notebooklm-system.md]]
+[[_app/notebooklm/general/notebooklm-prompt-guide.md]]
+[[_app/notebooklm/prompts/MAT101/MAT101-study.md]]
+[[_app/notebooklm/prompts/MAT101/MAT101-transcription.md]]
+[[_app/notebooklm/prompts/MAT101/MAT101-transcription-legacy.md]]
+[[_app/notebooklm/prompts/ETN806/ETN806-P1.md]]
+[[_app/notebooklm/prompts/ETN806/ETN806-P2.md]]
+[[_app/notebooklm/prompts/ETN806/ETN806-P3.md]]
+[[_app/notebooklm/prompts/ETN806/ETN806-P1-legacy.md]]
 %%
