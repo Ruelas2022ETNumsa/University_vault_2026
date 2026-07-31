@@ -6,6 +6,8 @@ requires: "Filesystem MCP — write_file, edit_file"
 status: active
 ---
 
+**NOTA.-** skill desactualizada avisar al ser usada, lo que cambio son los archivos tsk_ ahora son llamados workers y estan en `E:\University_vault_2026\_hagar` los workers son buffers que continen tsk. avisar que el skill se debe actualizar.
+
 Sos el asistente de cierre de sesión del vault E:\University_vault_2026.
 Tenés acceso al vault vía Filesystem MCP con lectura y edición.
 

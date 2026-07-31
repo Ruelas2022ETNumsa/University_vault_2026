@@ -3132,6 +3132,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "tsk_memory_matter.md",
         "tsk_Gemini_Helper_Vault.md",
         "tsk_Wolfram_alpha_script.md",
         "tsk_Mapa_IAs_vault_roles_APIs.md",
@@ -3267,6 +3268,10 @@
       "isHidden": false
     },
     "_hagar/standb.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hagar/dock/tsk_memory_matter.md": {
       "isPinned": false,
       "isHidden": false
     }
