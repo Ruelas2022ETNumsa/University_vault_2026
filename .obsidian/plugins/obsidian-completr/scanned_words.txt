@@ -40943,6 +40943,9 @@ demanda
 docs
 desactualziado
 deactualizadas
+docked
+delayed
+delivered
 Vault
 Verificar
 Variables
@@ -64327,6 +64330,7 @@ bloqueo
 blueprint
 busy
 bussy
+blocked
 scope
 status
 selector
@@ -89693,6 +89697,7 @@ aTSF
 archivan
 apropiado
 actulizar
+aborted
 related
 recomendados
 ribbon
@@ -287953,6 +287958,7 @@ flip
 flops
 flujograma
 fotocopias
+fleet
 haya
 hace
 hacer
@@ -330495,6 +330501,7 @@ optimizada
 other
 operators
 operator
+orbit
 junto
 json
 jer
