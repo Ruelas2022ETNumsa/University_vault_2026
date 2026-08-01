@@ -314,6 +314,15 @@ Ambas capas deben estar sincronizadas — si un enlace está en el YAML también
 
 ## Plantillas YAML por tipo de cuerpo
 
+> [!info] Campo `scope`
+> Indica el alcance de la nota dentro del sistema. Se usa principalmente en `beacon`, `logbook` y `constellation`.
+> - `vault` — aplica a todo el vault (ej: `_galaxy-system.md`)
+> - `partial` — cubre un parcial completo (ej: constellation de P2)
+> - `topic` — cubre un tema específico (ej: constellation de T1)
+> - `[nombre-carpeta]` — en logbooks, indica de qué subcarpeta del hangar es índice (ej: `dock`, `[carpeta-carrier]`)
+> 
+> En tipos de contenido académico (`planet`, `star`, etc.) el scope no se usa — el alcance ya está codificado en `partial` y `topic`.
+
 > Documentación completa de cada plantilla: [[_template-system]]
 > Archivos físicos en `_templates/` — nombrados `tpl-[tipo].md`
 > Las plantillas de `Semesters/` usan **Opción B**: Templater pregunta materia, semestre, parcial, tema y nombre, y mueve el archivo automáticamente a la ruta correcta.
