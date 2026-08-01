@@ -1318,7 +1318,7 @@
       "customOrder": [
         "alt-B",
         "pru.md",
-        "tpl-ex_occlusion.md",
+        "tpl-excalidraw_occlusion.md",
         "tpl-w-initial.md",
         "tpl-w-project.md",
         "tpl-w-study.md",
@@ -2999,13 +2999,8 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "Prueba_anki.excalidraw__2026-08-01 15.50.24",
-        "Prueba_anki.excalidraw__2026-08-01 16.04.43"
+        "Prueba_anki.excalidraw__2026-08-01 17.38.42"
       ]
-    },
-    "_templates/tpl-ex_occlusion.md": {
-      "isPinned": false,
-      "isHidden": false
     },
     "Marginalia": {
       "isPinned": false,
@@ -3370,136 +3365,83 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 15.50.24": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "batch-marker.md",
-        "q-20260801155027921.png",
-        "a-20260801155027921.png",
-        "20260801155027921.md",
-        "q-20260801155028248.png",
-        "a-20260801155028248.png",
-        "20260801155028248.md",
-        "q-20260801155028411.png",
-        "a-20260801155028411.png",
-        "20260801155028411.md"
-      ]
-    },
-    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 15.50.24/batch-marker.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 15.50.24/q-20260801155027921.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 15.50.24/a-20260801155027921.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 15.50.24/20260801155027921.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 15.50.24/q-20260801155028248.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 15.50.24/a-20260801155028248.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 15.50.24/20260801155028248.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 15.50.24/q-20260801155028411.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 15.50.24/a-20260801155028411.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 15.50.24/20260801155028411.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_hangar/anki/Obsidian_to_anki.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 16.04.43": {
+    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 17.38.42": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "20260801160447493.md",
-        "20260801160447754.md",
-        "20260801160447958.md",
-        "20260801160448124.md",
-        "a-20260801160447493.png",
-        "a-20260801160447754.png",
-        "a-20260801160447958.png",
-        "a-20260801160448124.png",
         "batch-marker.md",
-        "q-20260801160447493.png",
-        "q-20260801160447754.png",
-        "q-20260801160447958.png",
-        "q-20260801160448124.png"
+        "q-20260801173844162.png",
+        "a-20260801173844162.png",
+        "20260801173844162.md",
+        "q-20260801173844432.png",
+        "a-20260801173844432.png",
+        "20260801173844432.md",
+        "q-20260801173844675.png",
+        "a-20260801173844675.png",
+        "20260801173844675.md",
+        "q-20260801173844952.png",
+        "a-20260801173844952.png",
+        "20260801173844952.md"
       ]
     },
-    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 16.04.43/20260801160447493.md": {
+    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 17.38.42/batch-marker.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 16.04.43/20260801160447754.md": {
+    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 17.38.42/q-20260801173844162.png": {
       "isPinned": false,
       "isHidden": false
     },
-    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 16.04.43/20260801160447958.md": {
+    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 17.38.42/a-20260801173844162.png": {
       "isPinned": false,
       "isHidden": false
     },
-    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 16.04.43/20260801160448124.md": {
+    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 17.38.42/20260801173844162.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 16.04.43/a-20260801160447493.png": {
+    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 17.38.42/q-20260801173844432.png": {
       "isPinned": false,
       "isHidden": false
     },
-    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 16.04.43/a-20260801160447754.png": {
+    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 17.38.42/a-20260801173844432.png": {
       "isPinned": false,
       "isHidden": false
     },
-    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 16.04.43/a-20260801160447958.png": {
+    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 17.38.42/20260801173844432.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 16.04.43/a-20260801160448124.png": {
+    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 17.38.42/q-20260801173844675.png": {
       "isPinned": false,
       "isHidden": false
     },
-    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 16.04.43/batch-marker.md": {
+    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 17.38.42/a-20260801173844675.png": {
       "isPinned": false,
       "isHidden": false
     },
-    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 16.04.43/q-20260801160447493.png": {
+    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 17.38.42/20260801173844675.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 16.04.43/q-20260801160447754.png": {
+    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 17.38.42/q-20260801173844952.png": {
       "isPinned": false,
       "isHidden": false
     },
-    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 16.04.43/q-20260801160447958.png": {
+    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 17.38.42/a-20260801173844952.png": {
       "isPinned": false,
       "isHidden": false
     },
-    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 16.04.43/q-20260801160448124.png": {
+    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 17.38.42/20260801173844952.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_templates/tpl-excalidraw_occlusion.md": {
       "isPinned": false,
       "isHidden": false
     }

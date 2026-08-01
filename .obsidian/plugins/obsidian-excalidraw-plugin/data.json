@@ -254,7 +254,7 @@
         "valueset": []
       },
       "Default Template": {
-        "value": "Excalidraw\\template\\tpl-occlusion.md",
+        "value": "tpl-excalidraw_occlusion.md",
         "description": "Default template file path relative to template folder (e.g., 'Anki/Image Occlusion.md'). Leave empty to select template each time",
         "valueset": []
       },

@@ -1,7 +1,7 @@
 ---
 cards-deck: Galaxy::Pruebas
 ---
-
+_templates\tpl-excalidraw_occlusion.md
 
 ¿Cuál es la transformada de Laplace de $e^{at}$? #card
 $\mathcal{L}\{e^{at}\} = \dfrac{1}{s-a}$, válido para $\text{Re}(s) > a$

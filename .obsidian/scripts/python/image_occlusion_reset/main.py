@@ -96,7 +96,7 @@ def anki_delete_notes(note_ids):
                 return False, f"AnkiConnect error: {result['error']}"
             return True, None
     except urllib.error.URLError:
-        return False, "Anki no está abierto o AnkiConnect no responde en localhost:8765"
+        return False, "Anki no esta abierto o AnkiConnect no responde en localhost:8765"
 
 # ---------------------------------------------------------------------------
 # Determinar qué conservar y qué borrar

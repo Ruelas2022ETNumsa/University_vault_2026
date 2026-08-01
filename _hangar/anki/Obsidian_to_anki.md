@@ -94,12 +94,65 @@ Este ID vincula la carta en Obsidian con la nota en Anki. El plugin lo usa para 
 
 ---
 
-## Parte 2 — Script 3: reset de oclusiones (pendiente)
+## Parte 2 — Script 3: image-occlusion-reset ✅
 
-> Documentar después de definir el flujo de re-exportación.
+Script Python que borra carpetas antiguas de Image Occlusion y sus notas en Anki, para permitir re-exportar un excalidraw editado.
+
+**Ruta:** `.obsidian/scripts/python/image_occlusion_reset/main.py`
+
+### Flujo de uso
+
+1. Tener **Anki Desktop abierto** con AnkiConnect activo
+2. Correr el comando desde `Ctrl+P` → `image-occlusion-reset`
+3. El prompt muestra el nombre del archivo activo prellenado (ej. `Prueba_anki.excalidraw`) — editar si no es el correcto
+4. Presionar **Execute**
+5. El script borra las carpetas antiguas del vault y sus notas en Anki
+6. Notificación de confirmación con resumen
+
+> En Anki el borrado puede no verse en la vista principal hasta reiniciar — desde el Explorador de Anki el cambio es inmediato.
+
+### Lógica de selección — qué carpeta conservar
+
+El script busca en `Excalidraw/Image-Occlusions/` todas las carpetas con el nombre base ingresado.
+
+| Caso | Condición | Acción |
+|---|---|---|
+| **A** | Alguna carpeta tiene `.md` sin `<!--ID:-->` | Esa es la nueva (no exportada) — se conserva. Se borran todas las demás |
+| **B** | Todas las carpetas tienen ID (todas exportadas) | Se conserva la más reciente por timestamp. Se borran todas las demás |
+| **Una sola carpeta** | Solo existe una carpeta | No borra nada — avisa al usuario |
+
+### Edge cases probados
+
+| Caso | Comportamiento |
+|---|---|
+| 2 carpetas: una con ID, otra sin ID | Conserva la sin ID (Caso A) ✅ |
+| 2 carpetas: ambas con ID | Conserva la más reciente (Caso B) ✅ |
+| 1 sola carpeta | Avisa "nada que borrar", no toca nada ✅ |
+| Nombre incorrecto | Error claro: "no se encontraron carpetas para X" ✅ |
+| Anki cerrado | Error claro: "Anki no esta abierto... localhost:8765" — no borra carpetas ✅ |
+| Archivo no-excalidraw abierto | Prompt muestra nombre incorrecto — editable antes de ejecutar ✅ |
+
+### Configuración Shell Commands
+
+| Campo | Valor |
+|---|---|
+| Alias | `image-occlusion-reset` |
+| Comando | `& "C:\Users\USUARIO\AppData\Local\Programs\Python\Python313\python.exe" "E:\University_vault_2026\.obsidian\scripts\python\image_occlusion_reset\main.py" "{{_excalidraw_name}}" "{{vault_path}}"` |
+| Shell | PowerShell 5 |
+| stdout | Notification balloon |
+| stderr | Notification balloon |
+| Output mode | Wait until finished |
+
+**Prompt (Preactions):**
+- Título: `Image Occlusion Reset`
+- Descripción: `Nombre del excalidraw a procesar. Edita si el archivo activo no es el correcto.`
+- Campo label: `Excalidraw` | Variable: `{{_excalidraw_name}}` | Default: `{{title}}`
+- Is required: ON
 
 ---
 
-## Parte 3 — Integración con anki_galaxy_guide.md (pendiente)
+## Parte 3 — Template `tpl-Anki_excalidraw.md` (pendiente)
 
-> Integrar cuando el flujo completo esté probado y validado.
+Crear template base en `Excalidraw/Image-Occlusions/` para excalidraws de oclusión.
+Basado en `Excalidraw/template/Template.excalidraw.md` con YAML mínimo sin `galaxy_body`.
+Primer tarea de la próxima sesión.

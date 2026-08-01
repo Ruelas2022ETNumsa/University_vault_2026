@@ -59,11 +59,11 @@ Según la opción elegida, leé el archivo correspondiente y ejecutá su flujo d
 La hora de inicio se indica en el mensaje de apertura como:
 `Hora de inicio: HH:MM`
 
-Cuando el usuario escriba **`/tokens`** o **`/token`** → respondé exactamente:
+Cuando el usuario escriba **`/tokens`** , **`/token`** o diga "a qué hora se reestablecen lo tokens"→ respondé exactamente:
 `Tokens se reestablecen a las HH:MM` (hora_inicio + 5 horas)
 
 ---
 ## Cierre de sesión
 
-Cuando el usuario diga **"la sesión debe terminar, usa close"** →
+Cuando el usuario escriba **`/close`** o diga **"la sesión debe terminar, usa close"** →
 leé `E:\University_vault_2026\_skills\_claude-close.md` y ejecutá su flujo de inicio.
