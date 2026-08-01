@@ -21,7 +21,8 @@
         "Semestres",
         "Borrar",
         "README.md",
-        "_assets"
+        "_assets",
+        "Untitled.md"
       ]
     },
     "MOC": {
@@ -2952,7 +2953,8 @@
         "Mindmap Builder.md",
         "Image Occlusion.svg",
         "Image Occlusion.md",
-        "Image Occlusion 1.md"
+        "Image Occlusion 1.md",
+        "Image Occlusion 2.md"
       ]
     },
     "Excalidraw/Scripts/Downloaded/Image Occlusion.md": {
@@ -3001,12 +3003,20 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "pepenombre.md",
+        "nombrex.md",
+        "perro.md",
         "19pidio.md",
         "borrarlol.md",
         "borrarlol__2026-08-01 18.16.29",
         "estesoup.excalidraw__2026-08-01 18.25.47",
         "1844pru__2026-08-01 18.45.47",
-        "1844pru__2026-08-01 18.46.46"
+        "1844pru__2026-08-01 18.46.46",
+        "19pidio__2026-08-01 19.07.33",
+        "perro__2026-08-01 19.15.57",
+        "perro__2026-08-01 19.18.46",
+        "nombrex__2026-08-01 19.22.11",
+        "nombrex__2026-08-01 19.34.04"
       ]
     },
     "Marginalia": {
@@ -3363,7 +3373,9 @@
       "customOrder": [
         "borrarlol-01-08-2026_18-11-57.png",
         "estesoup.excalidraw-01-08-2026_18-23-47.png",
-        "19pidio-01-08-2026_18-45-24.png"
+        "19pidio-01-08-2026_18-45-24.png",
+        "Pasted Image 20260801191538_405.png",
+        "nombrex-01-08-2026_19-21-43.png"
       ]
     },
     "_hangar/anki/Obsidian_to_anki.md": {
@@ -3616,6 +3628,229 @@
       "isHidden": false
     },
     "_assets/19pidio-01-08-2026_18-45-24.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/19pidio__2026-08-01 19.07.33": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "batch-marker.md",
+        "q-20260801190733278.png",
+        "a-20260801190733278.png",
+        "20260801190733278.md",
+        "q-20260801190733500.png",
+        "a-20260801190733500.png",
+        "20260801190733500.md",
+        "q-20260801190733725.png",
+        "a-20260801190733725.png",
+        "20260801190733725.md"
+      ]
+    },
+    "Excalidraw/Image-Occlusions/19pidio__2026-08-01 19.07.33/batch-marker.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/19pidio__2026-08-01 19.07.33/q-20260801190733278.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/19pidio__2026-08-01 19.07.33/a-20260801190733278.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/19pidio__2026-08-01 19.07.33/20260801190733278.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/19pidio__2026-08-01 19.07.33/q-20260801190733500.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/19pidio__2026-08-01 19.07.33/a-20260801190733500.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/19pidio__2026-08-01 19.07.33/20260801190733500.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/19pidio__2026-08-01 19.07.33/q-20260801190733725.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/19pidio__2026-08-01 19.07.33/a-20260801190733725.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/19pidio__2026-08-01 19.07.33/20260801190733725.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Scripts/Downloaded/Image Occlusion 2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/perro.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/perro__2026-08-01 19.15.57": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "20260801191557974.md",
+        "a-20260801191557974.png",
+        "batch-marker.md",
+        "q-20260801191557974.png"
+      ]
+    },
+    "Excalidraw/Image-Occlusions/perro__2026-08-01 19.15.57/20260801191557974.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/perro__2026-08-01 19.15.57/a-20260801191557974.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/perro__2026-08-01 19.15.57/batch-marker.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/perro__2026-08-01 19.15.57/q-20260801191557974.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/perro__2026-08-01 19.18.46": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "20260801191846223.md",
+        "a-20260801191846223.png",
+        "q-20260801191846223.png",
+        "batch-marker.md"
+      ]
+    },
+    "Excalidraw/Image-Occlusions/perro__2026-08-01 19.18.46/20260801191846223.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/perro__2026-08-01 19.18.46/a-20260801191846223.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/perro__2026-08-01 19.18.46/q-20260801191846223.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/perro__2026-08-01 19.18.46/batch-marker.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/Pasted Image 20260801191538_405.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/nombrex.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/nombrex-01-08-2026_19-21-43.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/nombrex__2026-08-01 19.22.11": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "batch-marker.md",
+        "q-20260801192211911.png",
+        "a-20260801192211911.png",
+        "20260801192211911.md",
+        "q-20260801192212160.png",
+        "a-20260801192212160.png",
+        "20260801192212160.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "Excalidraw/Image-Occlusions/nombrex__2026-08-01 19.22.11/batch-marker.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/nombrex__2026-08-01 19.22.11/q-20260801192211911.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/nombrex__2026-08-01 19.22.11/a-20260801192211911.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/nombrex__2026-08-01 19.22.11/20260801192211911.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/nombrex__2026-08-01 19.22.11/q-20260801192212160.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/nombrex__2026-08-01 19.22.11/a-20260801192212160.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/nombrex__2026-08-01 19.22.11/20260801192212160.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/nombrex__2026-08-01 19.34.04": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "batch-marker.md",
+        "q-20260801193404641.png",
+        "a-20260801193404641.png",
+        "20260801193404641.md",
+        "q-20260801193404847.png",
+        "a-20260801193404847.png",
+        "20260801193404847.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "Excalidraw/Image-Occlusions/nombrex__2026-08-01 19.34.04/batch-marker.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/nombrex__2026-08-01 19.34.04/q-20260801193404641.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/nombrex__2026-08-01 19.34.04/a-20260801193404641.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/nombrex__2026-08-01 19.34.04/20260801193404641.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/nombrex__2026-08-01 19.34.04/q-20260801193404847.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/nombrex__2026-08-01 19.34.04/a-20260801193404847.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/nombrex__2026-08-01 19.34.04/20260801193404847.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/pepenombre.md": {
       "isPinned": false,
       "isHidden": false
     }

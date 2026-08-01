@@ -1,5 +1,4 @@
-TARGET DECK: Galaxy::General
-FILE TAGS: Obsidian_to_Ankipru
+TARGET DECK: templater
 START
 Image Occlusion Enhanced
 ID (hidden): {{card_number}}
