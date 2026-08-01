@@ -4,5 +4,7 @@
   "promptDelete": false,
   "attachmentFolderPath": "_assets",
   "tabSize": 4,
-  "settingsPopoutWindow": false
+  "settingsPopoutWindow": true,
+  "showInlineTitle": true,
+  "showLineNumber": true
 }

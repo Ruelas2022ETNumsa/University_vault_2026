@@ -94,16 +94,6 @@ const mode = await utils.suggester(
 // Exit if user cancels the operation
 if(!mode) return;
 
-// Prompt for deck and tag only when creating cards
-let ankiDeck = "";
-let ankiTags = "";
-if(mode === "hideOne" || mode === "hideAll") {
-  ankiDeck = await utils.inputPrompt("TARGET DECK", "Galaxy::General", "");
-  if(ankiDeck === null) { new Notice("Operation cancelled"); return; }
-  ankiTags = await utils.inputPrompt("FILE TAGS", "Obsidian_to_Ankipru", "");
-  if(ankiTags === null) { new Notice("Operation cancelled"); return; }
-}
-
 // Function to permanently delete related files and images
 // Function to permanently delete related files and images
 const deleteRelatedFilesAndImages = async (sourcePath) => {
@@ -1014,9 +1004,7 @@ const createMarkdownFromTemplate = async (templatePath, cardNumber, imagePath, s
     .replace(/{{question}}/g, relativePath.question)
     .replace(/{{answer}}/g, relativePath.answer)
     .replace(/{{editSource}}/g, sourceFile)
-    .replace(/{{batchMarker}}/g, `${imageFolder}/batch-marker.md`)
-    .replace(/^TARGET DECK:.*$/m, `TARGET DECK: ${ankiDeck}`)
-    .replace(/^FILE TAGS:.*$/m, `FILE TAGS: ${ankiTags}`);
+    .replace(/{{batchMarker}}/g, `${imageFolder}/batch-marker.md`);
   
   // Get and validate file prefix from settings
   const validatePrefix = (prefix) => {
