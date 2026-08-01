@@ -17,5 +17,7 @@
   "galaxy-view",
   "obsidian-prozen",
   "mermaid-elk-renderer",
-  "color-folders-files"
+  "color-folders-files",
+  "obsidian-excalidraw-plugin",
+  "obsidian-to-anki-plugin"
 ]

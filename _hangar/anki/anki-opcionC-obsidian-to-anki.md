@@ -248,5 +248,5 @@ Excalidraw-Image-Occlusions/
 # galaxy-links
 [[anki_galaxy_guide]]
 [[anki-opcionB-flashcards]]
-[[Untitled 1]]
+[[Obsidian_to_anki]]
 %%

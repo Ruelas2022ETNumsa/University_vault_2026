@@ -20,7 +20,8 @@
         "Semesters",
         "Semestres",
         "Borrar",
-        "README.md"
+        "README.md",
+        "_assets"
       ]
     },
     "MOC": {
@@ -2915,7 +2916,8 @@
         "Constellations",
         "Observatory",
         "template",
-        "Scripts"
+        "Scripts",
+        "Prueba_anki.excalidraw.md"
       ]
     },
     "Excalidraw/Constellations": {
@@ -2996,7 +2998,9 @@
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
-      "customOrder": []
+      "customOrder": [
+        "Prueba_anki.excalidraw__2026-08-01 15.50.24"
+      ]
     },
     "_templates/tpl-ex_occlusion.md": {
       "isPinned": false,
@@ -3137,7 +3141,9 @@
         "anki_galaxy_guide.md",
         "anki-opcionA-marginalia.md",
         "anki-opcionB-flashcards.md",
-        "anki-opcionC-obsidian-to-anki.md"
+        "anki-opcionC-obsidian-to-anki.md",
+        "Untitled.md",
+        "Obsidian_to_anki.md"
       ]
     },
     "_hangar/anki/anki-opcionA-marginalia.md": {
@@ -3340,6 +3346,87 @@
       "isHidden": false
     },
     "_hangar/_legacy/tsk_update_notebooklm_system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/anki/Untitled.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Prueba_anki.excalidraw.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "Prueba_anki.excalidraw-01-08-2026_15-44-45.png"
+      ],
+      "sortOrder": "custom"
+    },
+    "_assets/Prueba_anki.excalidraw-01-08-2026_15-44-45.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 15.50.24": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "batch-marker.md",
+        "q-20260801155027921.png",
+        "a-20260801155027921.png",
+        "20260801155027921.md",
+        "q-20260801155028248.png",
+        "a-20260801155028248.png",
+        "20260801155028248.md",
+        "q-20260801155028411.png",
+        "a-20260801155028411.png",
+        "20260801155028411.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 15.50.24/batch-marker.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 15.50.24/q-20260801155027921.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 15.50.24/a-20260801155027921.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 15.50.24/20260801155027921.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 15.50.24/q-20260801155028248.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 15.50.24/a-20260801155028248.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 15.50.24/20260801155028248.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 15.50.24/q-20260801155028411.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 15.50.24/a-20260801155028411.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 15.50.24/20260801155028411.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/anki/Obsidian_to_anki.md": {
       "isPinned": false,
       "isHidden": false
     }
