@@ -2999,7 +2999,8 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "Prueba_anki.excalidraw__2026-08-01 15.50.24"
+        "Prueba_anki.excalidraw__2026-08-01 15.50.24",
+        "Prueba_anki.excalidraw__2026-08-01 16.04.43"
       ]
     },
     "_templates/tpl-ex_occlusion.md": {
@@ -3360,10 +3361,10 @@
     "_assets": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "Prueba_anki.excalidraw-01-08-2026_15-44-45.png"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "_assets/Prueba_anki.excalidraw-01-08-2026_15-44-45.png": {
       "isPinned": false,
@@ -3372,6 +3373,7 @@
     "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 15.50.24": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "batch-marker.md",
         "q-20260801155027921.png",
@@ -3383,8 +3385,7 @@
         "q-20260801155028411.png",
         "a-20260801155028411.png",
         "20260801155028411.md"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 15.50.24/batch-marker.md": {
       "isPinned": false,
@@ -3427,6 +3428,78 @@
       "isHidden": false
     },
     "_hangar/anki/Obsidian_to_anki.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 16.04.43": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "20260801160447493.md",
+        "20260801160447754.md",
+        "20260801160447958.md",
+        "20260801160448124.md",
+        "a-20260801160447493.png",
+        "a-20260801160447754.png",
+        "a-20260801160447958.png",
+        "a-20260801160448124.png",
+        "batch-marker.md",
+        "q-20260801160447493.png",
+        "q-20260801160447754.png",
+        "q-20260801160447958.png",
+        "q-20260801160448124.png"
+      ]
+    },
+    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 16.04.43/20260801160447493.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 16.04.43/20260801160447754.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 16.04.43/20260801160447958.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 16.04.43/20260801160448124.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 16.04.43/a-20260801160447493.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 16.04.43/a-20260801160447754.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 16.04.43/a-20260801160447958.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 16.04.43/a-20260801160448124.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 16.04.43/batch-marker.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 16.04.43/q-20260801160447493.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 16.04.43/q-20260801160447754.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 16.04.43/q-20260801160447958.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/Prueba_anki.excalidraw__2026-08-01 16.04.43/q-20260801160448124.png": {
       "isPinned": false,
       "isHidden": false
     }
