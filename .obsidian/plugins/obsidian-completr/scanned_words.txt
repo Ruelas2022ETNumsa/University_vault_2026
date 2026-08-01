@@ -8069,6 +8069,8 @@ tentativo
 transcriptas
 tenerlos
 trabaj
+tono
+transparente
 ToDo
 Templater
 Text
@@ -40958,6 +40960,7 @@ desaparecer
 dual
 diagnostica
 dormido
+descargas
 Vault
 Verificar
 Variables
@@ -48970,6 +48973,7 @@ VwCppIrLTBO
 Viento
 VRIC
 VDtA
+VaguelyElectric
 galaxy
 gina
 genes
@@ -73224,6 +73228,7 @@ strofes
 supercharged
 selectores
 superan
+switch
 vault
 vil
 ver
@@ -89719,6 +89724,8 @@ afectada
 abortados
 avisa
 adaptaciones
+abandonado
+appearance
 related
 recomendados
 ribbon
@@ -115186,6 +115193,11 @@ centralice
 carg
 cumplieron
 conservan
+colorear
+customizable
+coloreado
+crom
+changes
 updated
 un
 universo
@@ -139521,6 +139533,7 @@ Copiado
 Caracteres
 CARRIER
 CONSTRUCCI
+Coherencia
 Instalados
 Instalado
 Instalar
@@ -148379,6 +148392,7 @@ INTERFACES
 Illustrated
 INPUTS
 Interfaces
+Importar
 Funci
 File
 Fase
@@ -165369,6 +165383,7 @@ Eolico
 Ethernet
 Eijkhout
 EFqE
+Existing
 Obsidian
 OmniSearch
 Ocultar
@@ -181001,6 +181016,7 @@ Anna
 Archive
 Armar
 Avisa
+Apply
 push
 pull
 para
@@ -188895,6 +188911,9 @@ pattern
 posts
 prototipa
 preliminares
+presets
+pasivo
+preset
 min
 mica
 movimiento
@@ -222277,6 +222296,7 @@ enrutamiento
 entregada
 evaluados
 exclusivos
+ecustic
 Motor
 Media
 Mantiene
@@ -231570,6 +231590,7 @@ MEMORY
 MIPS
 Mathematics
 MWVYe
+Mithadon
 Lectura
 LaTeX
 Linter
@@ -256331,6 +256352,7 @@ iMSN
 integran
 invocar
 impacto
+importado
 Dependencia
 Dropbox
 Dataview

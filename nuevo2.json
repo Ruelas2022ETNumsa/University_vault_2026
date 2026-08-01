@@ -1,0 +1,102 @@
+## Resumen de cierre de sesión
+
+---
+
+### 1. Completado
+
+- Verificación de MCP Filesystem activo (`write_file` + `edit_file` operativos).
+- Análisis de `3_tsk_alxgml.md` y `_claude-boot.md` — contexto del sistema de dos capas de links entendido.
+- Identificación de secciones a documentar en `_galaxy-system.md` (S1 y S2).
+- `_claude-boot.md` confirmado sin cambios necesarios — ya estaba actualizado.
+- Discusión y diseño del sistema `workshop` (tipo #15, símbolo 🔧) con 4 tipos de plantillas para tareas académicas.
+- Lectura de contexto completo: `_claude-matter-boot`, `_library-system`, `_TABnote-system`, `_notebooklm-system`, `_library_MAT101`, `tpl-supernova`, `tpl-planet`, `tpl-star`, prompts MAT101, guías MAT101.
+- Escritura de las 4 plantillas workshop:
+  - `_templates/tpl-w-initial.md` ✅
+  - `_templates/tpl_w_transcription.md` ✅
+  - `_templates/tpl-w-study.md` ✅ (incluye ajuste de fuentes NotebookLM)
+  - `_templates/tpl-w-project.md` ✅
+
+---
+
+### 2. Pendientes
+
+---
+
+**P1 — Documentar sistema de dos capas en `_galaxy-system.md`**
+
+Qué hacer:
+- S1 "El grafo de Obsidian y los wikilinks": actualizar ejemplo del bloque `%%` a ruta relativa completa. Agregar subsección `## Links a notas pendientes de crear` con nota explicativa.
+- S2 "Registro de decisiones de diseño": eliminar las dos filas existentes sobre wikilinks/dos capas y reemplazar por una fila unificada que incluya rutas relativas, uso por Claude y links a archivos inexistentes como válidos.
+
+Archivos a leer antes:
+- `E:\University_vault_2026\_app\_config\_galaxy-system.md`
+- `E:\University_vault_2026\_tasks\3_tsk_alxgml.md`
+
+Detalle técnico: el usuario edita manualmente — mostrar dryRun antes de aplicar salvo que diga "aplicar edit".
+
+---
+
+**P2 — Registrar `workshop` como tipo #15 en `_galaxy-system.md`**
+
+Qué hacer: agregar fila en la tabla "Tipos de cuerpo galaxy" con `workshop` | 🔧 | rol: archivo de tarea académica por materia. Agregar entrada en "Ruta de carpeta por tipo". Agregar decisión en "Registro de decisiones de diseño".
+
+Archivos a leer antes:
+- `E:\University_vault_2026\_app\_config\_galaxy-system.md`
+
+Detalle técnico: P1 y P2 tocan el mismo archivo — conviene hacerlos en la misma sesión y en orden, P1 primero.
+
+---
+
+**P3 — Documentar plantillas workshop en beacons correspondientes**
+
+Qué hacer: las 4 plantillas nuevas no están mencionadas en ningún beacon. Agregar referencia en:
+- `_template-system.md` — inventario de plantillas
+- `_galaxy-system.md` — referencia al tipo workshop y sus plantillas
+- `_notebooklm-system.md` — mencionar `tsk_ini` y `tsk_study` como parte del flujo de materia nueva
+- `_claude-boot.md` — si corresponde mencionar `workshop` en la tabla de tipos
+
+Archivos a leer antes:
+- `E:\University_vault_2026\_app\_config\_template-system.md`
+- `E:\University_vault_2026\_app\_config\_notebooklm-system.md`
+- `E:\University_vault_2026\_app\_config\_claude-boot.md`
+- `E:\University_vault_2026\_app\_config\_galaxy-system.md`
+
+---
+
+**P4 — Documentar guías MAT101 en beacon correspondiente**
+
+Qué hacer: `MAT101_desmos.md`, `MAT101_TikzJax.md` y `MAT101_library.md` no están referenciadas donde corresponde en el sistema galaxy. Verificar si `_graph-system.md` o `_galaxy-system.md` deben mencionar que las guías de graficación viven en `_app/notebooklm/guides/ETNXXX/`.
+
+Archivos a leer antes:
+- `E:\University_vault_2026\_app\_config\_graph-system.md`
+- `E:\University_vault_2026\_app\_config\_galaxy-system.md`
+
+---
+
+**P5 — Script de merge de archivos `tsk`**
+
+Qué hacer: script que tome dos archivos `tsk` del mismo tipo y los fusione sin pérdida de contenido (append inteligente por secciones).
+
+Archivos a leer antes: las 4 plantillas workshop para entender la estructura de secciones.
+
+Herramientas: bash o Python vía Filesystem MCP. Pendiente de baja prioridad.
+
+
+
+
+
+
+
+
+
+
+
+
+
+--*-*-*-*-*----*--*
+
+
+
+_galaxy-system
+_note-system
+_claude-boot

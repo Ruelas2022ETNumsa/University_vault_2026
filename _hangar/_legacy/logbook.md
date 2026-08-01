@@ -16,6 +16,7 @@ date_updated: 2026-07-31
 | -------------------------------------------------- | ----------------------- | --------- |
 | [[_hangar/_legacy/tsk_snippet_templater.md]]       | snippet templater       | aborted   |
 | [[_hangar/_legacy/tsk_supercharged-dual-icons.md]] | supercharged dual icons | delivered |
+| [[_hangar/_legacy/tsk_color-folders-files.md]]     | Color Folders and Files | delivered |
 
 ---
 
@@ -23,5 +24,6 @@ date_updated: 2026-07-31
 # galaxy-links
 [[_hangar/_legacy/tsk_snippet_templater.md]]
 [[_hangar/_legacy/tsk_supercharged-dual-icons.md]]
+[[_hangar/_legacy/tsk_color-folders-files.md]]
 [[_app/_config/_projects_system.md]]
 %%

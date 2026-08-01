@@ -9,19 +9,19 @@
         "_hangar",
         "_skills",
         "_templates",
-        "_PDF",
         "Rubbish",
+        "_PDF",
+        "_inbox",
         "Canvas",
         "Marginalia",
         "Excalidraw",
-        "_inbox",
         "_void",
-        "Borrar",
         "MOC",
         "Semesters",
         "Semestres",
+        "Borrar",
         "README.md",
-        "Untitled.md"
+        "nuevo2.json"
       ]
     },
     "MOC": {
@@ -1316,8 +1316,8 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "pru.md",
         "alt-B",
+        "pru.md",
         "tpl-ex_occlusion.md",
         "tpl-w-initial.md",
         "tpl-w-project.md",
@@ -3326,15 +3326,15 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Untitled.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_app/_config/_prompt-system.md": {
       "isPinned": false,
       "isHidden": false
     },
     "_hangar/logbook.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "nuevo2.json": {
       "isPinned": false,
       "isHidden": false
     }
