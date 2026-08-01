@@ -14,9 +14,8 @@ date_updated: 2026-07-31
 
 | Archivo                                            | Proyecto                | Status    |
 | -------------------------------------------------- | ----------------------- | --------- |
-| [[_hangar/_legacy/tsk_snippet_templater.md]]       | snippet templater       | —         |
+| [[_hangar/_legacy/tsk_snippet_templater.md]]       | snippet templater       | aborted   |
 | [[_hangar/_legacy/tsk_supercharged-dual-icons.md]] | supercharged dual icons | delivered |
-
 
 ---
 

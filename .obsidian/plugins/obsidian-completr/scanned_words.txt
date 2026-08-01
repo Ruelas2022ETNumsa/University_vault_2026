@@ -8068,6 +8068,7 @@ transcribi
 tentativo
 transcriptas
 tenerlos
+trabaj
 ToDo
 Templater
 Text
@@ -40956,6 +40957,7 @@ delivered
 desaparecer
 dual
 diagnostica
+dormido
 Vault
 Verificar
 Variables
@@ -98183,6 +98185,7 @@ reemplazan
 registrarlo
 reintenta
 relodad
+recargado
 notes
 notas
 nuevas

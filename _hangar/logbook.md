@@ -28,15 +28,25 @@ date_updated: 2026-07-31
 
 ## Schedule
 
-| Worker       | date_updated | wake  |
-| :------------: | :------------: | :-----: |
-| `alx-rul.md` | 2026-07-31   | 20:48 |
-| `alx_gml.md` |              |       |
-| `krajo.md`   |              |       |
-| `alx_hot.md` |              |       |
-| `alxrul.md`  |              |       |
-| `standb.md`  |              |       |
-| `emergn.md`  |              |       |
+%%
+Estados posibles (columna Status):
+🟡 activo — sesión en curso
+🔴 agotado — cerró sesión antes de la recarga; handoff documentado en tsk o worker libre
+🟢 recargado — pasaron las 5h desde Wake; puede volver a trabajar
+⚫ dormido — no trabajó hoy
+
+Regla: Recarga = Wake + 5:00h. Al iniciar sesión → actualizar Fecha, Wake, Recarga y Status. La tabla refleja solo el día actual.
+%%
+
+|    Worker    |   Fecha    | Wake  | Recarga |   Status   |
+| :----------: | :--------: | :---: | :-----: | :--------: |
+| `alx-rul.md` | 2026-07-31 | 20:48 |  01:48  | 🔴 agotado |
+| `alx_gml.md` |     —      |   —   |    —    | ⚫ dormido  |
+|  `krajo.md`  |     —      |   —   |    —    | ⚫ dormido  |
+| `alx_hot.md` | 2026-07-31 | 21:20 |  02:20  | 🟡 activo  |
+| `alxrul.md`  |     —      |   —   |    —    | ⚫ dormido  |
+| `standb.md`  |     —      |   —   |    —    | ⚫ dormido  |
+| `emergn.md`  |     —      |   —   |    —    | ⚫ dormido  |
 
 ---
 
