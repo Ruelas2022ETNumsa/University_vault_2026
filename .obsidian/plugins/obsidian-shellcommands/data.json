@@ -5,7 +5,9 @@
   "preview_variables_in_command_palette": true,
   "show_autocomplete_menu": true,
   "working_directory": "",
-  "default_shells": {},
+  "default_shells": {
+    "win32": "PowerShell.exe"
+  },
   "environment_variable_path_augmentations": {},
   "show_installation_warnings": true,
   "error_message_duration": 20,
@@ -301,7 +303,7 @@
     {
       "id": "y2ls0w7phc",
       "platform_specific_commands": {
-        "default": "\"C:\\Users\\USUARIO\\AppData\\Local\\Programs\\Python\\Python313\\python.exe\" \"{{vault_path}}\\.obsidian\\scripts\\python\\image_occlusion_reset\\main.py\" \"{{_excalidraw_name}}\" \"{{vault_path}}\""
+        "default": "& \"C:\\Users\\USUARIO\\AppData\\Local\\Programs\\Python\\Python313\\python.exe\" \"E:\\University_vault_2026\\.obsidian\\scripts\\python\\image_occlusion_reset\\main.py\" \"{{_excalidraw_name}}\" \"{{vault_path}}\""
       },
       "shells": {
         "win32": "PowerShell.exe"

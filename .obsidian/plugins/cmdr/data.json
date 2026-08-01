@@ -59,6 +59,12 @@
       "icon": "lucide-glasses",
       "name": "Cornell Marginalia: Sync Flashcards to Anki (Current Note)",
       "mode": "any"
+    },
+    {
+      "id": "obsidian-shellcommands:re-execute-from-command-palette",
+      "icon": "lucide-square-star",
+      "name": "Shell commands: Re-execute: image-occlusion-reset",
+      "mode": "any"
     }
   ],
   "rightRibbon": [],
@@ -164,7 +170,7 @@
     },
     {
       "id": "cornell-marginalia:cornell-open-sidebar-doodle",
-      "icon": "lucide-pen-tool",
+      "icon": "lucide-palette",
       "name": "Cornell Marginalia: Open Sidebar Doodle Canvas",
       "mode": "any"
     },

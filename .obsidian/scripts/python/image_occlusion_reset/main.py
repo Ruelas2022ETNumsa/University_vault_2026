@@ -146,9 +146,9 @@ if errores:
     print(f"Completado con errores: {'; '.join(errores)}", file=sys.stderr)
 else:
     msg_parts = [
-        f"✅ Image Occlusion Reset",
+        f"OK Image Occlusion Reset",
         f"Conservada: {carpeta_conservar}",
         f"Carpetas borradas: {len(carpetas_borrar)}",
         f"Notas eliminadas de Anki: {total_ids_borrados}",
     ]
-    print(" | ".join(msg_parts))
+    sys.stdout.buffer.write((" | ".join(msg_parts) + "\n").encode("utf-8"))
