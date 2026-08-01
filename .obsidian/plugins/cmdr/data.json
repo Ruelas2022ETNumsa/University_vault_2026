@@ -61,9 +61,9 @@
       "mode": "any"
     },
     {
-      "id": "obsidian-shellcommands:re-execute-from-command-palette",
-      "icon": "lucide-square-star",
-      "name": "Shell commands: Re-execute: image-occlusion-reset",
+      "id": "obsidian-shellcommands:shell-command-y2ls0w7phc",
+      "icon": "lucide-star-off",
+      "name": "Shell commands: Execute: image-occlusion-reset",
       "mode": "any"
     }
   ],
