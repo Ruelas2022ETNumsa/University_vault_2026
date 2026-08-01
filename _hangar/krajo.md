@@ -52,7 +52,7 @@ Implementar físicamente el sistema `_hangar/` diseñado en sesión 2026-07-30. 
   - [x] `tsk_krajo.md` → `krajo.md`
   - [x] `tsk_standb.md` → `standb.md`
 - [x] Crear carpeta `_hangar/dock/`
-- [ ] Crear `_hangar/dock/logbook.md`
+- [x] Crear `_hangar/dock/logbook.md`
 - [x] Crear carpeta `_hangar/_legacy/`
 - [x] Mover ships existentes a `dock/`:
   - [x] `tsk_pdf_marginalia_pp.md` → `dock/tsk_pdf_marginalia_pp.md`

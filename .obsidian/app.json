@@ -4,5 +4,5 @@
   "promptDelete": false,
   "attachmentFolderPath": "_assets",
   "tabSize": 4,
-  "settingsPopoutWindow": true
+  "settingsPopoutWindow": false
 }

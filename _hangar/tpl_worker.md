@@ -9,7 +9,6 @@ status: free | busy
 - free: worker disponible, sin proyecto asignado
 - busy: worker cargado con un ship activo
 
-alias: wN → reemplazar N con el número del worker (w1...w7)
 project: nombre corto del ship que está cargado — dejar vacío si status: free
 %%
 

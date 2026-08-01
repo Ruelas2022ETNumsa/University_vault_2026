@@ -3243,10 +3243,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_hangar/alx_hot.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_hangar/alx_gml.md": {
       "isPinned": false,
       "isHidden": false
@@ -3277,6 +3273,7 @@
       "sortOrder": "custom",
       "customOrder": [
         "logbook.md",
+        "tsk_update_notebooklm_system.md",
         "tsk_snippet_templater.md",
         "tsk_supercharged-dual-icons.md",
         "tsk_color-folders-files.md"
@@ -3335,6 +3332,14 @@
       "isHidden": false
     },
     "_hangar/_legacy/tsk_color-folders-files.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/alx_hot.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/_legacy/tsk_update_notebooklm_system.md": {
       "isPinned": false,
       "isHidden": false
     }

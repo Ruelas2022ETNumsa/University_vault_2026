@@ -25,6 +25,7 @@ status: activo
 # Sistema NotebookLM — University Vault
 
 > Sistema TABnote (transcripción de apuntes): [[_TAB_note-system]]
+> Sistema de prompts: [[_app/_config/_prompt-system.md]]
 > Protocolo de libros y fuentes: [[_library-system]]
 > Guías de graficación (fuentes del notebook): [[guides/MAT101/MAT101_desmos]] · [[guides/MAT101/MAT101_TikzJax]]
 > Pendientes: [[_ToDo-system]]
@@ -124,6 +125,7 @@ Le dicen a NotebookLM cómo comportarse: modos de respuesta, reglas de
 graficación, programa de la materia, prioridad de fuentes.
 **Un prompt por materia/parcial. Se carga en el campo "Instructions" del notebook.**
 Organizados en subcarpetas por materia: `prompts/MAT101/`, `prompts/ETN806/`, etc.
+Ver inventario completo y convención de nombres: [[_app/_config/_prompt-system.md]]
 
 Convención de nombres:
 ```
@@ -133,14 +135,14 @@ ETNXXX-description.md       → todos los parciales       (ej: MAT101-study.md)
 
 **Inventario actual:**
 
-| Archivo                                      | Materia               | Parcial           | Estado    |
-| -------------------------------------------- | --------------------- | ----------------- | --------- |
-| `prompts/ETN806/ETN806-P1.md`                | Procesos Estocásticos | P1 — Discretas    | activo    |
-| `prompts/ETN806/ETN806-P1-legacy.md`         | Procesos Estocásticos | P1                | histórico |
-| `prompts/ETN806/ETN806-P2.md`                | Procesos Estocásticos | P2 — Continuas    | activo    |
-| `prompts/ETN806/ETN806-P3.md`                | Procesos Estocásticos | P3 — Markov/Colas | activo    |
-| `prompts/MAT101/MAT101-study.md`             | Cálculo 1             | estudio activo (todos los parciales)      | activo    |
-| `prompts/MAT101/MAT101-transcription.md`     | Cálculo 1             | transcripción cuaderno físico               | activo    |
+| Archivo                                  | Materia               | Parcial                              | Estado    |
+| ---------------------------------------- | --------------------- | ------------------------------------ | --------- |
+| `prompts/ETN806/ETN806-P1.md`            | Procesos Estocásticos | P1 — Discretas                       | histórico |
+| `prompts/ETN806/ETN806-P1-legacy.md`     | Procesos Estocásticos | P1                                   | histórico |
+| `prompts/ETN806/ETN806-P2.md`            | Procesos Estocásticos | P2 — Continuas                       | histórico |
+| `prompts/ETN806/ETN806-P3.md`            | Procesos Estocásticos | P3 — Markov/Colas                    | histórico |
+| `prompts/MAT101/MAT101-study.md`         | Cálculo 1             | estudio activo (todos los parciales) | activo    |
+| `prompts/MAT101/MAT101-transcription.md` | Cálculo 1             | transcripción cuaderno físico        | activo    |
 
 ### Guías fuente (`guides/`)
 
@@ -282,4 +284,5 @@ Paso 6 — Configurar NotebookLM
 [[_app/notebooklm/guides/MAT101/MAT101_TikzJax.md]]
 [[_app/_config/_ToDo-system.md]]
 [[_app/_appnotes/Rclone_guide.md]]
+[[_app/_config/_prompt-system.md]]
 %%
