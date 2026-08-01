@@ -59,12 +59,6 @@
       "icon": "lucide-glasses",
       "name": "Cornell Marginalia: Sync Flashcards to Anki (Current Note)",
       "mode": "any"
-    },
-    {
-      "id": "obsidian-shellcommands:shell-command-zrmn479rn0",
-      "icon": "lucide-message-square-code",
-      "name": "Shell commands: Execute: Start — copiar snippet",
-      "mode": "any"
     }
   ],
   "rightRibbon": [],

@@ -20,8 +20,7 @@
         "Semesters",
         "Semestres",
         "Borrar",
-        "README.md",
-        "nuevo2.json"
+        "README.md"
       ]
     },
     "MOC": {
@@ -3279,7 +3278,8 @@
       "customOrder": [
         "logbook.md",
         "tsk_snippet_templater.md",
-        "tsk_supercharged-dual-icons.md"
+        "tsk_supercharged-dual-icons.md",
+        "tsk_color-folders-files.md"
       ]
     },
     "_hangar/tpl_worker.md": {
@@ -3334,7 +3334,7 @@
       "isPinned": false,
       "isHidden": false
     },
-    "nuevo2.json": {
+    "_hangar/_legacy/tsk_color-folders-files.md": {
       "isPinned": false,
       "isHidden": false
     }
