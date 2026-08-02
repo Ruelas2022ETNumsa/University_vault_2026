@@ -9,19 +9,19 @@ related_notes:
   - "[[shellcmd_config_gral]]"
 tags: [beacon, obsidian, shell-commands, claude, infraestructura, automatizacion]
 date_created: 2026-07-31
-date_updated: 2026-07-31
+date_updated: 2026-08-02
 status: activo
 ---
 
 # Shell Commands — start_snippet
 
-> Script que copia al portapapeles el snippet de inicio de sesión de Claude con la hora actual. Elimina la necesidad de escribir manualmente el comando de inicio cada vez que se abre una sesión.
+> Script que copia al portapapeles el snippet de inicio de sesión de Claude con la hora actual y el nombre del worker activo (archivo abierto en Obsidian). Elimina la necesidad de escribir manualmente el comando de inicio cada vez que se abre una sesión.
 
 ---
 
 ## 1. Propósito
 
-Al iniciar una sesión de Claude, se necesita enviar siempre el mismo mensaje base indicando qué archivo leer vía MCP Filesystem. Este script genera ese mensaje con la hora actual (HH:MM) y lo deja listo en el portapapeles para pegar directamente en Claude.
+Al iniciar una sesión de Claude, se necesita enviar siempre el mismo mensaje base indicando qué archivo leer vía MCP Filesystem. Este script genera ese mensaje con la hora actual (HH:MM) y el nombre del worker activo (`{{title}}` del archivo abierto) y lo deja listo en el portapapeles para pegar directamente en Claude.
 
 ---
 
@@ -38,6 +38,7 @@ Al iniciar una sesión de Claude, se necesita enviar siempre el mismo mensaje ba
 ```
 Usá el MCP Filesystem y leé E:\University_vault_2026\_skills\_start.md
 Hora de inicio: 14:35
+trabajás como: nombre_worker
 ```
 
 ---
@@ -45,11 +46,12 @@ Hora de inicio: 14:35
 ## 4. Lógica del script
 
 1. Lee la hora actual con `datetime.now()` formateada como `HH:MM`.
-2. Arma el string con el mensaje base + la hora.
-3. Lo pasa a `Set-Clipboard` vía `subprocess` (PowerShell).
+2. Recibe `{{title}}` como argumento (`sys.argv[1]`) — el nombre del archivo abierto en Obsidian.
+3. Arma el string con el mensaje base + hora + worker.
+4. Lo pasa a `Set-Clipboard` vía `subprocess` (PowerShell).
 
 > [!warning] Caracteres especiales
-> El `Set-Clipboard -Value '...'` usa comillas simples. Si en el futuro el texto contiene apóstrofes u otros caracteres especiales, puede fallar. Evaluar escape o Here-String para una v2.
+> El `Set-Clipboard -Value '...'` usa comillas simples. Si el nombre del worker contiene apóstrofes u otros caracteres especiales, puede fallar. Evaluar escape o Here-String para una v3.
 
 ---
 
@@ -65,8 +67,14 @@ Hora de inicio: 14:35
 
 **Comando (Windows):**
 ```
-python "{{vault_path}}\.obsidian\scripts\python\start_snippet\main.py"
+python "{{vault_path}}\.obsidian\scripts\python\start_snippet\main.py" "{{title}}"
 ```
+
+### Pestaña Variables
+
+| Variable | Comportamiento si no disponible |
+|---|---|
+| `{{title}}` | `Execute with value:` → campo vacío |
 
 ### Pestaña Environments
 
