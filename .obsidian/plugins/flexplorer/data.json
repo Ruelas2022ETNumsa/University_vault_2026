@@ -1319,7 +1319,7 @@
       "customOrder": [
         "alt-B",
         "pru.md",
-        "tpl-excalidraw_occlusion.md",
+        "tpl-anki.md",
         "tpl-w-initial.md",
         "tpl-w-project.md",
         "tpl-w-study.md",
@@ -2953,8 +2953,7 @@
         "Mindmap Builder.md",
         "Image Occlusion.svg",
         "Image Occlusion.md",
-        "Image Occlusion 1.md",
-        "Image Occlusion 2.md"
+        "Image Occlusion.md.bk"
       ]
     },
     "Excalidraw/Scripts/Downloaded/Image Occlusion.md": {
@@ -3003,6 +3002,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "pepitogrillo.md",
         "pepenombre.md",
         "nombrex.md",
         "perro.md",
@@ -3016,7 +3016,8 @@
         "perro__2026-08-01 19.15.57",
         "perro__2026-08-01 19.18.46",
         "nombrex__2026-08-01 19.22.11",
-        "nombrex__2026-08-01 19.34.04"
+        "nombrex__2026-08-01 19.34.04",
+        "pepenombre__2026-08-01 19.36.09"
       ]
     },
     "Marginalia": {
@@ -3375,14 +3376,12 @@
         "estesoup.excalidraw-01-08-2026_18-23-47.png",
         "19pidio-01-08-2026_18-45-24.png",
         "Pasted Image 20260801191538_405.png",
-        "nombrex-01-08-2026_19-21-43.png"
+        "nombrex-01-08-2026_19-21-43.png",
+        "Pasted Image 20260801193556_770.png",
+        "pepitogrillo-01-08-2026_22-36-03.png"
       ]
     },
     "_hangar/anki/Obsidian_to_anki.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_templates/tpl-excalidraw_occlusion.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -3619,10 +3618,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Excalidraw/Scripts/Downloaded/Image Occlusion 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Excalidraw/Image-Occlusions/19pidio.md": {
       "isPinned": false,
       "isHidden": false
@@ -3685,10 +3680,6 @@
       "isHidden": false
     },
     "Excalidraw/Image-Occlusions/19pidio__2026-08-01 19.07.33/20260801190733725.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Excalidraw/Scripts/Downloaded/Image Occlusion 2.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -3769,6 +3760,7 @@
     "Excalidraw/Image-Occlusions/nombrex__2026-08-01 19.22.11": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "batch-marker.md",
         "q-20260801192211911.png",
@@ -3777,8 +3769,7 @@
         "q-20260801192212160.png",
         "a-20260801192212160.png",
         "20260801192212160.md"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "Excalidraw/Image-Occlusions/nombrex__2026-08-01 19.22.11/batch-marker.md": {
       "isPinned": false,
@@ -3811,6 +3802,7 @@
     "Excalidraw/Image-Occlusions/nombrex__2026-08-01 19.34.04": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "batch-marker.md",
         "q-20260801193404641.png",
@@ -3819,8 +3811,7 @@
         "q-20260801193404847.png",
         "a-20260801193404847.png",
         "20260801193404847.md"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "Excalidraw/Image-Occlusions/nombrex__2026-08-01 19.34.04/batch-marker.md": {
       "isPinned": false,
@@ -3851,6 +3842,68 @@
       "isHidden": false
     },
     "Excalidraw/Image-Occlusions/pepenombre.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/pepenombre__2026-08-01 19.36.09": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "20260801193610008.md",
+        "a-20260801193610008.png",
+        "20260801193610253.md",
+        "a-20260801193610253.png",
+        "batch-marker.md",
+        "q-20260801193610008.png",
+        "q-20260801193610253.png"
+      ]
+    },
+    "Excalidraw/Image-Occlusions/pepenombre__2026-08-01 19.36.09/20260801193610008.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/pepenombre__2026-08-01 19.36.09/a-20260801193610008.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/pepenombre__2026-08-01 19.36.09/20260801193610253.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/pepenombre__2026-08-01 19.36.09/a-20260801193610253.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/pepenombre__2026-08-01 19.36.09/batch-marker.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/pepenombre__2026-08-01 19.36.09/q-20260801193610008.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/pepenombre__2026-08-01 19.36.09/q-20260801193610253.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Scripts/Downloaded/Image Occlusion.md.bk": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/Pasted Image 20260801193556_770.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_templates/tpl-anki.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/pepitogrillo.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/pepitogrillo-01-08-2026_22-36-03.png": {
       "isPinned": false,
       "isHidden": false
     }

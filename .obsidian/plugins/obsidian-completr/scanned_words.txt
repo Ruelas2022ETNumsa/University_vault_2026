@@ -98476,6 +98476,7 @@ rUeh
 rIRT
 rjXz
 rweJ
+reconfigurar
 notes
 notas
 nuevas
@@ -115520,6 +115521,7 @@ cGBChB
 cURpC
 cLwp
 commonAnswerTimestamp
+closed
 updated
 un
 universo
@@ -139925,6 +139927,7 @@ Carta
 CrlnC
 CaTa
 CHYkYK
+Cancelar
 Instalados
 Instalado
 Instalar
@@ -189468,6 +189471,7 @@ prutag
 prefixPart
 pepedeck
 pepetag
+parcheado
 min
 mica
 movimiento
@@ -274296,6 +274300,7 @@ RLFVi
 RwPd
 RQHi
 RaRH
+Reconfigurar
 Hider
 Hace
 Herramientas

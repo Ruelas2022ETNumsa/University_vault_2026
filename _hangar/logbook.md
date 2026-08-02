@@ -44,7 +44,7 @@ Regla: Recarga = Wake + 5:00h. Al iniciar sesión → actualizar Fecha, Wake, Re
 | `alx_gml.md` |     —      |   —   |    —    | ⚫ dormido  |
 |  `krajo.md`  | 2026-08-01 | 18:05 |  23:05  | 🟡 activo  |
 | `alx_hot.md` | 2026-08-01 | 15:10 |  20:10  | 🔴 agotado |
-| `alxrul.md`  |     —      |   —   |    —    | ⚫ dormido  |
+| `alxrul.md`  | 2026-08-01 | 22:35 |  03:35  | 🟡 activo  |
 | `standb.md`  |     —      |   —   |    —    | ⚫ dormido  |
 | `emergn.md`  |     —      |   —   |    —    | ⚫ dormido  |
 
