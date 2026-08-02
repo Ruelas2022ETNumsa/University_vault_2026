@@ -16998,6 +16998,7 @@ Tzfjz
 Tjhrz
 TjkK
 TIFB
+Toca
 Sistema
 Sync
 Save
@@ -26009,6 +26010,8 @@ SfnpH
 SUNE
 SKJo
 Solucionar
+Sale
+Sobreescribe
 Plugins
 Pendientes
 Plugin
@@ -33581,6 +33584,8 @@ PGL
 PzqL
 PMQPUIG
 PiCZj
+Proximo
+Planificacion
 del
 date
 de
@@ -41077,6 +41082,10 @@ dNoblt
 dGcM
 dzzI
 deckpidio
+desconoce
+devuelva
+despues
+decision
 Vault
 Verificar
 Variables
@@ -57465,6 +57474,7 @@ ggoo
 gzseaj
 gbrrJ
 gYL
+gestion
 body
 beacon
 bat
@@ -64546,6 +64556,9 @@ bmyE
 blBe
 bGEo
 borraba
+borrados
+busqueda
+basica
 scope
 status
 selector
@@ -73455,6 +73468,7 @@ sWdr
 stripeando
 stripear
 sssssss
+sintactico
 vault
 vil
 ver
@@ -82003,6 +82017,7 @@ vvwm
 vLGt
 vrfl
 vacios
+vacia
 audience
 activo
 auto
@@ -90018,6 +90033,10 @@ agregada
 athD
 avtp
 accion
+acumulan
+activacion
+activarse
+automatico
 related
 recomendados
 ribbon
@@ -98520,6 +98539,7 @@ rorodddd
 rorotttt
 roroddd
 rorottt
+revision
 notes
 notas
 nuevas
@@ -115570,6 +115590,9 @@ ctttL
 cosS
 cpnT
 conservaba
+creacion
+context
+comparativa
 updated
 un
 universo
@@ -139984,6 +140007,7 @@ CHYkYK
 Cancelar
 CGel
 Conservado
+Clasifica
 Instalados
 Instalado
 Instalar
@@ -148888,6 +148912,7 @@ IDATi
 IPFW
 IDATg
 Ibbal
+Instalacion
 Funci
 File
 Fase
@@ -165932,6 +165957,7 @@ Editable
 Endpoint
 Eglh
 EcqP
+Excalidraws
 Obsidian
 OmniSearch
 Ocultar
@@ -173987,6 +174013,7 @@ OHb
 OSMd
 ONkK
 OZet
+Omite
 Auto
 Annotator
 Autocompletado
@@ -181607,6 +181634,8 @@ ACne
 Ankipru
 AUsS
 Actions
+Archiva
+Acepta
 push
 pull
 para
@@ -189540,6 +189569,8 @@ pqrb
 paputag
 ppdd
 pptt
+precaucion
+problematico
 min
 mica
 movimiento
@@ -198631,6 +198662,9 @@ mUd
 mzlpd
 mlxc
 miladeck
+mayusculas
+minusculas
+maestra
 YAML
 Ya
 You
@@ -223032,6 +223066,9 @@ epTC
 eExu
 edab
 eKPy
+exportacion
+esten
+especifico
 Motor
 Media
 Mantiene
@@ -232356,6 +232393,7 @@ MnLVfeC
 MRcl
 MLbR
 MHyo
+Mezcla
 Lectura
 LaTeX
 Linter
@@ -240378,6 +240416,7 @@ LaLv
 LbTf
 Lsxh
 LslG
+Limitacion
 links
 las
 listar
@@ -247789,6 +247828,8 @@ lCsx
 localhost
 liEU
 lmmJ
+logica
+lineas
 incluyendo
 im
 instalar
@@ -257224,6 +257265,7 @@ inyectan
 itSh
 iodR
 iyeY
+instalacion
 Dependencia
 Dropbox
 Dataview
@@ -265400,6 +265442,8 @@ DneEbQ
 DVvV
 DmlD
 DRCG
+Documentacion
+Decision
 Remotely
 Raz
 Revisa
@@ -274389,6 +274433,7 @@ RaRH
 Reconfigurar
 RnrlO
 Restaura
+Restriccion
 Hider
 Hace
 Herramientas
@@ -296649,6 +296694,7 @@ hSLa
 hUKc
 hhhc
 huerfanos
+habia
 que
 quedan
 queda
@@ -305512,6 +305558,7 @@ qNgc
 quajH
 qBSF
 qOtXpI
+quedo
 University
 Usar
 Un
@@ -314671,6 +314718,7 @@ Ubicado
 UVä
 UkzK
 UEYg
+Ultima
 Nombre
 Notas
 No

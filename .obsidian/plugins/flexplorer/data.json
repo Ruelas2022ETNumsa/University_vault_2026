@@ -2751,7 +2751,8 @@
         "shellcommands_guide(scripts).md",
         "shellcmd_latex_mathjax.md",
         "rclone_script.md",
-        "shellcmd_start_snippet.md"
+        "shellcmd_start_snippet.md",
+        "shellcmd_occlusion_actions.md"
       ]
     },
     "_app/shellcommands/shellcmd_scripting_guide.md": {
@@ -3001,8 +3002,9 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "_legacy",
         "jose.md",
-        "_legacy"
+        "jose__2026-08-02 15.48.13"
       ]
     },
     "Marginalia": {
@@ -3138,11 +3140,14 @@
         "_tmp_sync.md",
         "tsk_anki.md",
         "anki_galaxy_guide.md",
+        "opA_vs_opB.md",
         "anki-opcionA-marginalia.md",
+        "tsk_marginalia_anki.md",
         "anki-opcionB-flashcards.md",
+        "tsk_flashcards.md",
         "anki-opcionC-obsidian-to-anki.md",
-        "Untitled.md",
-        "Obsidian_to_anki.md"
+        "Obsidian_to_anki.md",
+        "tsk_obsidian_to_anki.md"
       ]
     },
     "_hangar/anki/anki-opcionA-marginalia.md": {
@@ -3348,10 +3353,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_hangar/anki/Untitled.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_hangar/anki/Obsidian_to_anki.md": {
       "isPinned": false,
       "isHidden": false
@@ -3378,19 +3379,96 @@
       "sortOrder": "custom",
       "customOrder": []
     },
+    "_assets": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "jose-02-08-2026_15-37-16.png"
+      ]
+    },
+    "_assets/jose-02-08-2026_15-37-16.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
     "Excalidraw/Image-Occlusions/jose.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_assets": {
+    "Excalidraw/Image-Occlusions/jose__2026-08-02 15.48.13": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
-        "jose-02-08-2026_15-37-16.png"
-      ],
-      "sortOrder": "custom"
+        "batch-marker.md",
+        "q-20260802154813147.png",
+        "a-20260802154813147.png",
+        "20260802154813147.md",
+        "q-20260802154813304.png",
+        "a-20260802154813304.png",
+        "20260802154813304.md",
+        "q-20260802154813390.png",
+        "a-20260802154813390.png",
+        "20260802154813390.md"
+      ]
     },
-    "_assets/jose-02-08-2026_15-37-16.png": {
+    "Excalidraw/Image-Occlusions/jose__2026-08-02 15.48.13/batch-marker.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/jose__2026-08-02 15.48.13/q-20260802154813147.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/jose__2026-08-02 15.48.13/a-20260802154813147.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/jose__2026-08-02 15.48.13/20260802154813147.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/jose__2026-08-02 15.48.13/q-20260802154813304.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/jose__2026-08-02 15.48.13/a-20260802154813304.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/jose__2026-08-02 15.48.13/20260802154813304.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/jose__2026-08-02 15.48.13/q-20260802154813390.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/jose__2026-08-02 15.48.13/a-20260802154813390.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/jose__2026-08-02 15.48.13/20260802154813390.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/shellcommands/shellcmd_occlusion_actions.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/anki/tsk_obsidian_to_anki.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/anki/opA_vs_opB.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/anki/tsk_flashcards.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/anki/tsk_marginalia_anki.md": {
       "isPinned": false,
       "isHidden": false
     }

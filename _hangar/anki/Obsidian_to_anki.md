@@ -1,14 +1,13 @@
 ---
 title: "Obsidian to Anki — Image Occlusion: flujo y scripts"
 scope: hangar
-status: buffer
+status: activo
 date: 2026-08-02
 ---
 
 # Obsidian to Anki — Image Occlusion: flujo y scripts
 
-Buffer de documentación del flujo Image Occlusion (Opción C).
-Cuando esté completo se integra a `anki_galaxy_guide.md` y/o `anki-opcionC-obsidian-to-anki.md`.
+Buffer de documentacion del flujo Image Occlusion (Opcion C). Completo para la integracion actual (Excalidraw + Obsidian_to_Anki). Pendiente verificar compatibilidad con Opcion A (Cornell Marginalia) y plugin Flashcards.
 
 ---
 
@@ -180,8 +179,6 @@ Nuevo script Python que reemplaza `image_occlusion_reset`. Gestiona tres accione
 
 ## Pendientes
 
-- [ ] Fix accion S — mover archivo fuente `.excalidraw.md` a legacy
-- [ ] Fix nombre capturado por `{{title}}` — evitar extension `.excalidraw`
-- [ ] Fix carpeta legacy — sin extension en nombre
-- [ ] Probar S completo tras fixes
-- [ ] Actualizar cabecera `main.py` con ejemplo correcto
+- [ ] Verificar compatibilidad con Opcion A (Cornell Marginalia) al tener ambos activos
+- [ ] Verificar compatibilidad con plugin Flashcards al activarlo
+- [ ] Integrar a documentacion definitiva del vault cuando esten resueltas las 2 opciones anteriores

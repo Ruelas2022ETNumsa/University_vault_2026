@@ -3,7 +3,7 @@ title: "Anki — Guía de instalación e integración Galaxy"
 scope: vault
 status: activo
 date_created: 2026-07-26
-date_updated: 2026-07-28
+date_updated: 2026-08-02
 tags: [anki, obsidian, galaxy, spaced-repetition]
 ---
 
@@ -144,42 +144,55 @@ La fórmula es ==$E=mc^2$== en contexto. (cloze)
 
 ---
 
-### Opción C — Obsidian_to_Anki (Pseudonium) ✅ PROBADA
+### Opcion C — Obsidian_to_Anki (Pseudonium) ✅ PROBADA
 
-> Documentación completa: [[anki-opcionC-obsidian-to-anki]]
+> Documentacion completa: [[anki-opcionC-obsidian-to-anki]]
+> Scripts y gestion de carpetas: [[shellcmd_occlusion_actions]]
 
-**Instalación:** manual desde https://github.com/ObsidianToAnki/Obsidian_to_Anki/releases
-(no está en Community Plugins)
+**Instalacion:** manual desde https://github.com/ObsidianToAnki/Obsidian_to_Anki/releases
+(no esta en Community Plugins)
 
 **Sintaxis:**
 ```markdown
 TARGET DECK: Galaxy::General
 
 START
-Básico
+Basico
 ¿Pregunta?
 Reverso: Respuesta con $LaTeX$ directo.
 END
 ```
 
-**Resultado:** funciona. Es el único plugin que soporta el flujo completo Image Occlusion Enhanced desde Excalidraw.
+**Resultado:** funciona. Es el unico plugin que soporta el flujo completo Image Occlusion Enhanced desde Excalidraw.
 
 | | |
 |---|---|
 | **Mejor para** | Image Occlusion desde Excalidraw — flujo visual de diagramas |
-| **Limitación clave** | `<!--ID-->` problemático si se borran cartas en Anki manualmente. Instalación manual |
+| **Limitacion clave** | `<!--ID-->` problematico si se borran cartas en Anki manualmente. Instalacion manual |
 | **Mantenimiento** | Inactivo — repo transferido, desarrollo pausado |
 
-**Flujo Image Occlusion (exclusivo de Opción C):**
+**Script de gestion — `occlusion_actions/main.py` ✅ COMPLETO:**
+Gestiona las carpetas `nombre__timestamp` generadas por el script Image Occlusion. Tres acciones:
+- **B** — Borra carpetas, notas Anki, decks vacios y tags huerfanos (requiere Anki abierto)
+- **S** — Archiva carpetas exportadas a `_legacy/nombre/` junto al archivo fuente
+- **Z** — Restaura desde legacy a `Image-Occlusions/`
+
+Configurado en Shell Commands con prompt `Occlusion Actions` y boton ribbon via Commander.
+
+**Flujo Image Occlusion (exclusivo de Opcion C):**
 ```
-Excalidraw → script "Image Occlusion" (zsviczian) → genera q-/a-.png + .card.md
+Excalidraw → script "Image Occlusion" (zsviczian) → genera q-/a-.png + .md
      ↓
-Opción C (Scan Vault) → Anki Desktop (Image Occlusion Enhanced)
+Opcion C (Scan Vault) → Anki Desktop (Image Occlusion Enhanced)
      ↓
 AnkiWeb → AnkiDroid
 ```
 
-Template activo: `_templates/proex.md`
+Template activo: `_templates/tpl-excalidraw_occlusion.md`
+Template de creacion: `_templates/tpl-Anki_excalidraw.md`
+
+> [!warning] Excalidraws de occlusion se crean como `.md`
+> El template `tpl-Anki_excalidraw.md` crea archivos `.md` (no `.excalidraw`) para que `{{title}}` devuelva el nombre limpio sin extension. Son completamente funcionales como excalidraw.
 
 ---
 
@@ -245,19 +258,23 @@ Nota con marginalia activa
 
 ---
 
-## 7. Scripts pendientes
+## 7. Scripts — estado actual
 
-### Script 1 — Conversor Marginalia → Flashcards
-Convierte `RESPUESTA %%> PREGUNTA ;; %%` a formato `PREGUNTA #card \n RESPUESTA` para poder usar Opción B con notas que ya tienen marginalia.
-**Estado:** 🟡 pendiente — idea válida, no implementada.
+### Script 1 — Conversor Marginalia -> Flashcards
+Convierte `RESPUESTA %%> PREGUNTA ;; %%` a formato `PREGUNTA #card \n RESPUESTA` para usar Opcion B con notas que ya tienen marginalia.
+**Estado:** pendiente — idea valida, no implementada.
 
-### Script 2 — Conversor `$` → MathJax (solo Opción A)
-Convierte `$...$` → `\(...\)` y `$$...$$` → `\[...\]` dentro de bloques `%%> ... %%` antes del sync con Marginalia. Revierte después del sync.
-**Estado:** 🟡 pendiente — necesario para que Opción A sea viable con fórmulas.
+### Script 2 — Conversor `$` -> MathJax (Opcion A)
+Convierte `$...$` -> `\(...\)` y `$$...$$` -> `\[...\]` antes del sync con Marginalia. Revierte despues.
+**Estado:** implementado y documentado en `shellcmd_latex_mathjax.md` ✅
 
-### Script 3 — Limpiar `<!--ID-->` de Excalidraw-Image-Occlusions
-Borra todas las líneas `<!--ID: ...-->` de los `.card.md` en `Excalidraw-Image-Occlusions/`. Necesario cuando se borran mazos en Anki manualmente y se quiere re-exportar.
-**Estado:** 🟡 pendiente — implementar como Shell Command en Obsidian.
+### Script 3 — `occlusion_actions/main.py` (Opcion C)
+Gestiona carpetas Image Occlusion: borrar, archivar en legacy, restaurar desde legacy.
+**Estado:** completo y probado (B/S/Z) ✅ | Documentado en `shellcmd_occlusion_actions.md`
+
+### Script 4 — Limpiar `<!--ID-->` de Image-Occlusions (pendiente)
+Borra todas las lineas `<!--ID: ...-->` de los `.md` en `Image-Occlusions/`. Necesario si se borran mazos en Anki manualmente y se quiere re-exportar.
+**Estado:** pendiente — cubierto parcialmente por accion B del Script 3.
 
 ---
 

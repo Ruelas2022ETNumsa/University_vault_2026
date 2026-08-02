@@ -1,71 +1,100 @@
 ---
 galaxy_body: operator
-project: "Template Anki Excalidraw"
-date: 2026-08-01
-status: busy
+project: ""
+date: 
+status: free
 ---
+%%
+status: free | busy
+- free: worker disponible, sin proyecto asignado
+- busy: worker cargado con un ship activo
+
+project: nombre corto del ship que está cargado — dejar vacío si status: free
+%%
 
 ## Handoff
+%%
+Sobreescribir con edit_file al cerrar cada sesión.
+Es lo primero que Claude lee al retomar — debe ser suficiente para arrancar sin re-explicar.
+Si el worker queda free al cerrar, limpiar todo este bloque.
+%%
 
-**Última sesión:** 2026-08-02
-**Retomar desde:** `E:\University_vault_2026\.obsidian\scripts\python\occlusion_actions\main.py` — fix legacy: archivo fuente .excalidraw no se mueve a legacy + carpeta legacy no debe incluir extensión en su nombre
-**Completado esta sesión:** Script `occlusion_actions/main.py` creado desde cero. Acción B funcional (borra carpetas, notas Anki, decks vacíos, tags huérfanos). Acción S parcial (mueve carpetas timestamp con IDs, bloquea sin export, sobreescribe en legacy — falta mover archivo fuente .excalidraw). Acción Z funcional. Prompt Shell Commands configurado con variables `{{_excalidraw_name}}` y `{{_occlusion_action}}`. Template `tpl-Anki_excalidraw.md` editado para agregar `.excalidraw` al nombre. Botón ribbon creado en Commander.
-**Próximo paso:** Fix S — (1) encontrar y mover archivo fuente `.excalidraw.md` a legacy correctamente, (2) evitar que el nombre capturado por `{{title}}` incluya la extensión `.excalidraw` en el prompt, (3) carpeta legacy no debe tener extensión en su nombre.
-**Preguntas de cierre:** ¿El archivo fuente queda como `nombre.excalidraw.md` tras usar la plantilla corregida, o sigue sin extensión?
+**Última sesión:** 
+**Retomar desde:** [ruta del ship en dock/ si se pausó, o línea final del flujo de pasos]
+**Completado esta sesión:** 
+**Próximo paso:** 
+**Preguntas de cierre:** 
 
 ---
 
 ## Ship activo
+%%
+Descripción de una o dos líneas del ship que está cargado en este worker.
+Responde: ¿qué se quiere lograr y por qué?
+Si el worker está free, este bloque queda vacío.
+%%
 
-**Ship:** Rediseño `image_occlusion_reset/main.py` — acciones B/S/Z
-**Origen:** flujo Image Occlusion — necesidad de borrar, archivar y restaurar tarjetas desde Obsidian
-**Bloqueado por:** —
+**Ship:** 
+**Origen:** [dock/ | blueprint aprobado]
+**Bloqueado por:** — 
 
 ---
 
-## Worker — `occlusion_actions/main.py` fixes pendientes
+## Decisiones
 
-**Ruta:** `E:\University_vault_2026\.obsidian\scripts\python\occlusion_actions\main.py`
-**BKs disponibles:** `mainv2.py.bk`, `mainv3.py.bk`, `mainv4.py.bk`
+%%
+Decisiones tomadas durante la ejecución de este ship.
+Al terminar o pausar el ship, estas decisiones se copian al archivo correspondiente en dock/ antes de limpiar el worker.
+%%
 
-**Fix 1 — Carpeta legacy sin extensión:**
-El nombre capturado por `{{title}}` incluye `.excalidraw` cuando el archivo fuente tiene esa extensión. La carpeta en legacy queda como `nombre.excalidraw/` en vez de `nombre/`. Solucionar stripeando `.excalidraw` del `excalidraw_name` al armar `destino_base` en acción S y Z.
+| Fecha | Decisión | Motivo |
+| ----- | -------- | ------ |
+|       |          |        |
 
-**Fix 2 — Archivo fuente no se mueve a legacy:**
-`find_excalidraw_file` busca `nombre + ".excalidraw.md"` pero el archivo puede estar con otro nombre o ruta. Verificar nombre exacto del archivo fuente tras usar plantilla corregida y ajustar búsqueda.
+> [!note]- Descartadas
+> Enfoques o decisiones considerados pero abandonados durante la ejecución.
 
-**Fix 3 — Prompt muestra extensión:**
-Cuando el archivo activo es `nombre.excalidraw.md`, `{{title}}` devuelve `nombre.excalidraw`. Evaluar stripear en el script o ajustar variable en Shell Commands.
+---
+
+## Flujo de pasos
+%%
+Pasos concretos para completar el ship cargado.
+Se deriva del archivo ship en dock/ o del blueprint de origen.
+Cada paso es algo que se puede hacer y verificar.
+Al pausar o terminar el ship, el estado de los pasos se copia al archivo en dock/.
+%%
 
 ---
 
 ## Tareas
 
-- [x] Crear `.obsidian/scripts/python/image_occlusion_reset/main.py`
-- [x] Probar Caso A — carpeta nueva sin ID + carpeta vieja con ID
-- [x] Probar Caso B — todas las carpetas con ID
-- [x] Probar edge: Anki cerrado
-- [x] Probar edge: una sola carpeta
-- [x] Configurar en Shell Commands con Prompt
-- [x] Documentar en `Obsidian_to_anki.md` — Parte 2
-- [x] Agregar botón al ribbon via Commander (opcional — baja prioridad)
-- [x] Crear `tpl-Anki_excalidraw.md` en `_templates/` con prompt de nombre y carpeta destino
-- [x] Editar script `Image Occlusion.md` — agregar prompt de deck y tag al generar cartas
-- [x] Editar `tpl-excalidraw_occlusion.md` — agregar línea `FILE TAGS`
-- [x] Implementar rediseño `main.py` — acciones B/S/Z (nuevo script `occlusion_actions/main.py`)
-- [x] Reconfigurar Shell Commands — agregar tercer argumento de acción
-- [x] Verificar que el tag llegue correctamente a Anki
-- [x] Acción B funcional — borra carpetas, notas Anki, decks vacíos, tags huérfanos
-- [x] Acción Z funcional — restaura desde legacy
-- [ ] Fix acción S — mover archivo fuente `.excalidraw.md` a legacy
-- [ ] Fix nombre capturado por `{{title}}` — evitar que incluya extensión `.excalidraw`
-- [ ] Fix carpeta legacy — no debe incluir extensión en su nombre
-- [ ] Probar S completo tras fixes
-- [ ] Actualizar cabecera de `main.py` con ejemplo correcto (sin extensión en argumento)
+%%
+Lista unificada de tareas del ship activo.
+- [ ] pendiente
+- [x] completado
+Al pausar → copiar al archivo ship en dock/ antes de limpiar.
+Al terminar → documentar lo necesario y limpiar el worker.
+%%
+
+- [ ] 
+- [ ] 
+
+---
+
+## Preguntas abiertas
+%%
+Dudas o puntos sin resolver que bloquean el avance del ship.
+Al resolverse → mover la respuesta a Decisiones.
+Si el ship se pausa por dependencia externa → registrar aquí qué se necesita para desbloquearlo.
+%%
 
 ---
 
 ## Recursos
-
-- `E:\University_vault_2026\Excalidraw\template\Template.excalidraw.md` — base para el nuevo template
-- `E:\University_vault_2026\_hangar\anki\Obsidian_to_anki.md` — documentación del flujo
+%%
+Todo lo necesario para ejecutar el ship en un solo lugar:
+- Ruta del archivo ship en dock/ (si aplica)
+- Archivos del vault relacionados
+- Links externos de referencia
+- Herramientas o plugins usados
+%%

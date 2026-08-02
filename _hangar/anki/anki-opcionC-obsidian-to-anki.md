@@ -1,8 +1,8 @@
 ---
-title: "Anki — Opción C: Obsidian_to_Anki (Pseudonium / ObsidianToAnki)"
+title: "Anki — Opcion C: Obsidian_to_Anki (Pseudonium / ObsidianToAnki)"
 scope: vault
-status: probado
-date: 2026-07-28
+status: activo
+date: 2026-08-02
 tags: [anki, obsidian-to-anki, pseudonium, image-occlusion, excalidraw, setup, galaxy]
 ---
 
@@ -249,4 +249,6 @@ Excalidraw-Image-Occlusions/
 [[anki_galaxy_guide]]
 [[anki-opcionB-flashcards]]
 [[Obsidian_to_anki]]
+[[shellcmd_occlusion_actions]]
+[[tsk_obsidian_to_anki]]
 %%
