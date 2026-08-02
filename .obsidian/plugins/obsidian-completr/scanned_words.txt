@@ -181539,6 +181539,7 @@ Arma
 Alguna
 AsKS
 ACne
+Ankipru
 push
 pull
 para

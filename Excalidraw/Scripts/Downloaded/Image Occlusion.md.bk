@@ -1,5 +1,14 @@
 /*
 # Image Occlusion for Excalidraw
+# Backup: Image Occlusion.md.bk | Fecha: 2026-08-01
+# Archivo funcional para incluir tag y mazo dinamicos al generar cartas.
+# Modificado: prompts de TARGET DECK y FILE TAGS agregados antes de crear cartas
+# (modos hideOne y hideAll). Valores inyectados via replace en createMarkdownFromTemplate.
+# Ver documentacion: _hangar/anki/Obsidian_to_anki.md — Parte 4
+*/
+
+/*
+# Image Occlusion for Excalidraw
 
 This script creates image occlusion cards similar to Anki's Image Occlusion Enhanced plugin.
 
