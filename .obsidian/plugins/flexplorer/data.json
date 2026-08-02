@@ -21,7 +21,8 @@
         "Semestres",
         "Borrar",
         "README.md",
-        "Untitled.md"
+        "Untitled.md",
+        "_assets"
       ]
     },
     "MOC": {
@@ -2917,8 +2918,7 @@
         "Constellations",
         "Observatory",
         "template",
-        "Scripts",
-        "RENOMBRAR-02-08-2026 00.19.50.excalidraw.md"
+        "Scripts"
       ]
     },
     "Excalidraw/Constellations": {
@@ -3001,6 +3001,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "jose.md",
         "_legacy"
       ]
     },
@@ -3125,8 +3126,7 @@
         "alxrul.md",
         "alx-rul.md",
         "standb.md",
-        "emergn.md",
-        "alx_hot 1.md"
+        "emergn.md"
       ]
     },
     "_hangar/anki": {
@@ -3378,11 +3378,19 @@
       "sortOrder": "custom",
       "customOrder": []
     },
-    "Excalidraw/RENOMBRAR-02-08-2026 00.19.50.excalidraw.md": {
+    "Excalidraw/Image-Occlusions/jose.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_hangar/alx_hot 1.md": {
+    "_assets": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "jose-02-08-2026_15-37-16.png"
+      ],
+      "sortOrder": "custom"
+    },
+    "_assets/jose-02-08-2026_15-37-16.png": {
       "isPinned": false,
       "isHidden": false
     }

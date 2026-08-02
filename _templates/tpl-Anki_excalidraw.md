@@ -1,6 +1,6 @@
 <%*
 const title = await tp.system.prompt("Nombre del archivo (sin extensión)");
-await tp.file.move("Excalidraw/Image-Occlusions/" + title + ".excalidraw");
+await tp.file.move("Excalidraw/Image-Occlusions/" + title);
 %>---
 excalidraw-plugin: parsed
 tags: [excalidraw]

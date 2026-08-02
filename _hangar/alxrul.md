@@ -2,7 +2,7 @@
 galaxy_body: operator
 project: ""
 date: 
-status: busy
+status: free
 ---
 %%
 status: free | busy
