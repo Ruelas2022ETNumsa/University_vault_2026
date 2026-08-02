@@ -1,176 +1,102 @@
 ---
-project: "Anki Galaxy — Decisión de flujo definitivo + Script LaTeX Opción A"
-date: 2026-07-28
-status: creciente
+galaxy_body: carrier
+project: "Anki Galaxy — Sistema completo operativo"
+date: 2026-08-02
+status: delayed
+fleet: anki
+blocked_by: "tsk_marginalia_anki, tsk_flashcards, tsk_obsidian_to_anki — las 3 opciones deben estar probadas, funcionando y documentadas"
 ---
 
-**comentario:** las 3 son plugins utiles para distintas etapas, es necesario un anki_system para documentar que hara cada plugin.
 ## Handoff
 
-**Última sesión:** 2026-07-28
-**Retomar desde:** `tsk_anki.md` → sección Tareas → Tomar decisión final A o B
-**Completado esta sesión:**
-- Opción A (Marginalia Anki Sync) — probada ✅
-- Opción B (Flashcards reuseman) — probada ✅
-- Opción C (Obsidian_to_Anki Pseudonium) — instalada, configurada y probada ✅
-- Flujo Image Occlusion Excalidraw → Opción C → Anki — funcional ✅
-- Template `_templates/proex.md` — configurado para Image Occlusion Enhanced ✅
-- `data.json` de Opción C — limpiado y optimizado ✅
-- Documentación A, B, C creada
-- `anki_galaxy_guide.md` actualizado con flujo definitivo provisional
-- Script 2 (`latex_to_mathjax`) — implementado, probado y documentado ✅
-  - Toggle L->M / M->L con bandera `latex_converted` en YAML
-  - Contador `anki_exports` (export_1, export_2, ...)
-  - Limpieza automática de IDs `^anki-XXXXXXXXXXXXX` en M->L
-  - Documentado en `shellcmd_latex_mathjax.md`
-  - Botones ribbon configurados via Commander
-
-**Próximo paso:** tomar decisión final — A o B como plugin principal de texto. Actualizar `anki_galaxy_guide.md` con decisión.
-
-**Preguntas de cierre:**
-- ¿Opción A con Script 2 es suficientemente fluida para ser el plugin principal de texto?
-- ¿Coexisten A+B o se elige uno como principal?
+**Ultima sesion:** 2026-08-02
+**Retomar desde:** verificar estado de los 3 tsk individuales antes de avanzar aqui
+**Completado esta sesion:** carrier creado. 3 tsk individuales creados (A, B, C). Decisiones A vs B tomadas. Scripts 2 y 3 implementados.
+**Proximo paso:** cuando los 3 tsk individuales esten en status delivered — volver aqui y completar tareas de integracion y documentacion final.
+**Preguntas de cierre:** —
 
 ---
 
 ## Resumen y objetivo
 
-Decidir el flujo definitivo Anki Galaxy entre las opciones A (Marginalia), B (Flashcards reuseman) y C (Obsidian_to_Anki). La decisión depende de si el Script 2 resuelve el único problema de Opción A (LaTeX). C ya está definida como exclusiva para Image Occlusion.
+Coordinar y verificar que el sistema Anki Galaxy completo este operativo: las 3 opciones funcionando juntas sin conflictos, todos los scripts documentados, y la documentacion final integrada al vault.
 
 ---
 
 ## Decisiones
 
-| Fecha      | Decisión                                   | Motivo                                                             |
-| ---------- | ------------------------------------------ | ------------------------------------------------------------------ |
-| 2026-07-28 | Opción C = flujo Image Occlusion           | Único plugin que soporta Image Occlusion Enhanced desde Excalidraw |
-| 2026-07-28 | AnkiSync+ (RochaG07) descartado            | Creaba decks pero no tarjetas — sin fix, sin mantenimiento         |
-| 2026-07-28 | Opción D descartada                        | Complejidad innecesaria — Opción B resuelve LaTeX sin scripts      |
-| 2026-07-28 | Script 3 (limpiar `<!--ID-->`) — pendiente | Necesario para re-exportar si se borran mazos manualmente en Anki  |
+| Fecha | Decision | Motivo |
+| ----- | -------- | ------ |
+| 2026-08-02 | Opcion A principal para planet/moon/comet | Marginalia invisible, Script 2 resuelve LaTeX, mantenimiento activo |
+| 2026-08-02 | Opcion B complemento para dwarf/formularios T00 | Cloze y reversed utiles en notas de repaso puro, carpeta = deck automatico |
+| 2026-08-02 | Opcion C exclusiva para Image Occlusion | Unico plugin que soporta Image Occlusion Enhanced desde Excalidraw |
+| 2026-07-28 | AnkiSync+ descartado | Creaba decks pero no tarjetas |
+| 2026-07-28 | Opcion D descartada | Complejidad innecesaria |
 
 > [!note]- Descartadas
-> - **AnkiSync+ (RochaG07):** creaba mazos pero no tarjetas. Sin solución conocida, sin mantenimiento activo.
-> - **Opción D (Obsidian-Anki-Sync debanjandhar12):** sintaxis de cloze en LaTeX muy compleja. Opción B resuelve el mismo problema de forma más limpia.
-> - **TrillStones Image Occlusion:** genera 2 PNG separados — no compatible con Image Occlusion Enhanced. Reemplazado por script zsviczian.
-
----
-
-## Planificación
-
-El único bloqueador para decidir entre Opción A y B es el LaTeX en Opción A. Opción B lo resuelve nativamente con `$...$`. Opción A requiere conversión `$` → `\(...\)` dentro de bloques `%%> ... %%` antes del sync.
-
-**Restricciones:**
-- El script no debe modificar el `.md` permanentemente — debe revertir después del sync o trabajar sobre una copia temporal
-- Solo debe tocar contenido dentro de bloques `%%> ... %%`
-- Debe correr desde Obsidian (Shell Commands plugin) con un solo click
-
-**Enfoque elegido:** script Python que lee el archivo, convierte `$...$` → `\(...\)` y `$$...$$` → `\[...\]` solo dentro de bloques `%%>...%%`, guarda una versión temporal, lanza el sync de Marginalia, y restaura el original. Alternativa más simple: script que convierte en memoria y no toca el archivo original, sino que genera un archivo temporal que Marginalia lee.
-
-> [!error]- Enfoque descartado — addon Math Delimiters Replacer
-> El addon `401047458` hace la conversión pero manualmente desde Anki Desktop (seleccionar texto → Alt+M). Inviable para uso regular con muchas notas.
-
----
-
-## Consideraciones para decisión final
-
-### Comparativa A vs B para texto y fórmulas
-
-| Criterio | Opción A (Marginalia) | Opción B (Flashcards) |
-|---|---|---|
-| LaTeX `$...$` | ❌ requiere Script 2 | ✅ directo |
-| Integración con flujo de estudio | ✅ nativa — misma sintaxis Marginalia | 🟡 sintaxis separada (`#card`) |
-| Sintaxis en nota activa | ✅ no interrumpe la nota | 🟡 agrega tags `#card` visibles |
-| Mantenimiento | ✅ activo (Cornell Marginalia) | ⚠️ inactivo desde Oct 2022 |
-| Deck por tag | ✅ tag mapping inline y frontmatter | ✅ deck por carpeta automático |
-| Cloze | 🟡 no nativo | ✅ con `==highlight==` |
-| Reversed | 🟡 no nativo | ✅ con `#card-reverse` |
-| Inline cards | 🟡 sintaxis `%%>;;%%` | ✅ con `::` |
-| Riesgo de abandono | bajo | alto (sin updates en 2 años) |
-
-### Escenarios de decisión
-
-**Si Script 2 funciona bien:** Opción A como principal para notas con marginalia. Opción B para notas dedicadas exclusivamente a flashcards (sin marginalia). C para Image Occlusion.
-
-**Si Script 2 es frágil o lento:** Opción B como principal para texto/fórmulas. A solo para marginalia sin LaTeX. C para Image Occlusion.
-
----
-
-## Flujo de pasos — Script 2
-
-1. Leer el `.md` en memoria
-2. Encontrar todos los bloques `%%> ... %%`
-3. Dentro de cada bloque, aplicar:
-   - `$$...$$ ` → `\[...\]`
-   - `$...$` → `\(...\)`
-   - No tocar bloques de código `` ` `` ni wikilinks `[[]]`
-4. Ejecutar sync de Marginalia sobre el contenido convertido
-5. Restaurar el `.md` original (sin cambios en disco)
-
-**Alternativa más simple — solo conversión en archivo temporal:**
-1. Copiar el `.md` a un archivo `_tmp_sync.md`
-2. Aplicar conversiones en el temporal
-3. Abrir el temporal en Obsidian y ejecutar sync manual
-4. Borrar el temporal
+> - AnkiSync+ (RochaG07): creaba mazos pero no tarjetas. Sin fix, sin mantenimiento.
+> - Opcion D (Obsidian-Anki-Sync debanjandhar12): sintaxis de cloze en LaTeX muy compleja.
+> - TrillStones Image Occlusion: genera 2 PNG separados, no compatible con Image Occlusion Enhanced.
 
 ---
 
 ## Tareas
 
-- [x] Instalar Anki Desktop + AnkiConnect + FSRS
-- [x] Instalar AnkiDroid y vincular cuenta AnkiWeb
-- [x] Probar Opción A (Marginalia Anki Sync)
-- [x] Probar Opción B (Flashcards reuseman)
-- [x] Instalar y configurar Opción C (Obsidian_to_Anki Pseudonium)
-- [x] Configurar template `proex.md` para Image Occlusion Enhanced
-- [x] Probar flujo completo Excalidraw → Image Occlusion → Anki
-- [x] Limpiar y optimizar `data.json` de Opción C
-- [x] Documentar A, B, C en archivos separados
-- [x] Actualizar `anki_galaxy_guide.md`
-- [x] **Implementar Script 2** — conversor `$` → MathJax para Opción A
-- [x] Probar Script 2 con notas reales que tengan marginalia + fórmulas LaTeX
-- [x] Evaluar fluidez del flujo A+Script2 vs B puro
-- [ ] **Tomar decisión final** — A o B como plugin principal de texto
-- [ ] Actualizar `anki_galaxy_guide.md` con decisión final
-- [ ] Implementar Script 1 (conversor Marginalia → Flashcards) si se decide B como principal
-- [ ] Implementar Script 3 (limpiar `<!--ID-->`) como Shell Command
+### Prerequisitos — completar antes de avanzar aqui
+- [ ] `tsk_marginalia_anki` entregado — Opcion A probada con Script 2 en notas reales
+- [ ] `tsk_flashcards` entregado — Opcion B activada y probada, compatibilidad con C verificada
+- [ ] `tsk_obsidian_to_anki` entregado — Opcion C completa y probada
+
+### Integracion
+- [ ] Verificar que A + B + C coexisten sin conflictos
+- [ ] Probar flujo completo en nota real: A (planet) + B (dwarf) + C (excalidraw) en misma sesion de Anki
+- [ ] Verificar sync AnkiDroid con las 3 opciones activas
+
+### Documentacion final
+- [ ] Integrar `Obsidian_to_anki.md` a documentacion definitiva del vault
+- [ ] Actualizar `anki_galaxy_guide.md` con estado final de las 3 opciones
+- [ ] Verificar que todos los scripts tienen su `shellcmd_*.md` documentado
+- [ ] Actualizar galaxy-links en todos los archivos relacionados
+
+### Scripts
+- [x] Script 2 — `latex_to_mathjax/main.py` creado y documentado
+- [x] Script 3 — `occlusion_actions/main.py` creado y documentado
+- [ ] Script 1 — conversor Marginalia -> Flashcards (baja prioridad, solo si surge necesidad)
+- [ ] Script 4 — limpiar `<!--ID-->` de Image-Occlusions (pendiente, cubierto parcialmente por accion B del Script 3)
 
 ---
 
-## Preguntas abiertas
+## Archivos del carrier
 
-- ¿El Script 2 debe modificar el archivo temporalmente o trabajar con una copia?
-- ¿Opción A y B coexisten o se elige una como estándar para texto?
-- ¿Se necesita Script 1 (Marginalia → Flashcards) si se decide mantener ambas opciones?
+| Archivo | Tipo | Estado | Descripcion |
+| ------- | ---- | ------ | ----------- |
+| `tsk_anki.md` | carrier | delayed | Este archivo — coordinador general |
+| `tsk_marginalia_anki.md` | ship | in-orbit | Opcion A — validacion con Script 2 |
+| `tsk_flashcards.md` | ship | in-orbit | Opcion B — activacion y pruebas |
+| `tsk_obsidian_to_anki.md` | ship | in-orbit | Opcion C — Image Occlusion completo |
+| `anki_galaxy_guide.md` | beacon | activo | Guia maestra del sistema Anki |
+| `anki-opcionA-marginalia.md` | beacon | activo | Documentacion Opcion A |
+| `anki-opcionB-flashcards.md` | beacon | activo | Documentacion Opcion B |
+| `anki-opcionC-obsidian-to-anki.md` | beacon | activo | Documentacion Opcion C |
+| `Obsidian_to_anki.md` | beacon | activo | Flujo Image Occlusion — pendiente integracion |
+| `opA_vs_opB.md` | beacon | activo | Comparativa y veredicto A vs B |
 
 ---
 
 ## Recursos
 
-### Archivos del vault
-- `anki_galaxy_guide.md` — guía maestra del sistema
-- `anki-opcionA-marginalia.md` — documentación Opción A
-- `anki-opcionB-flashcards.md` — documentación Opción B
-- `anki-opcionC-obsidian-to-anki.md` — documentación Opción C
-- `_templates/proex.md` — template Image Occlusion para Opción C
-- `.obsidian/plugins/obsidian-to-anki-plugin/data.json` — config Opción C
+**Scripts:**
+- `.obsidian/scripts/python/latex_to_mathjax/main.py` — Script 2
+- `.obsidian/scripts/python/occlusion_actions/main.py` — Script 3
+- `.obsidian/scripts/python/image_occlusion_reset/main.py` — legacy
 
-### Plugins de Obsidian
-- Cornell Marginalia (Opción A): https://github.com/Anna-Thomas/cornell-marginalia
-- Flashcards reuseman (Opción B): https://github.com/reuseman/flashcards-obsidian
-- Obsidian_to_Anki (Opción C): https://github.com/ObsidianToAnki/Obsidian_to_Anki
-- Excalidraw plugin: https://github.com/zsviczian/obsidian-excalidraw-plugin
-- Script Image Occlusion zsviczian: https://github.com/zsviczian/obsidian-excalidraw-plugin/blob/master/ea-scripts/Image%20Occlusion.md
-- Shell Commands plugin: https://github.com/Taitava/obsidian-shellcommands
+**Documentacion shell commands:**
+- `_app/shellcommands/shellcmd_latex_mathjax.md`
+- `_app/shellcommands/shellcmd_occlusion_actions.md`
 
-### Anki
-- AnkiConnect addon: código `2055492159` | https://github.com/FooSoft/anki-connect
-- Image Occlusion Enhanced addon: código `1374772155`
-- Math Delimiters Replacer: código `401047458` (solo Opción A, manual)
-- AnkiWeb: https://ankiweb.net
-- AnkiDroid: Play Store → "AnkiDroid Flashcards" (AnkiDroid Open Source Team)
-
-### Referencia LaTeX — conversión MathJax
-- Obsidian usa `$...$` y `$$...$$`
-- Anki usa `\(...\)` y `\[...\]` (MathJax)
-- La conversión es: `$expr$` → `\(expr\)` | `$$expr$$` → `\[expr\]`
-- Aplicar solo dentro de bloques `%%> ... %%` de Marginalia
+**Plugins:**
+- Cornell Marginalia: https://github.com/Anna-Thomas/cornell-marginalia
+- Flashcards reuseman: https://github.com/reuseman/flashcards-obsidian
+- Obsidian_to_Anki: https://github.com/ObsidianToAnki/Obsidian_to_Anki
+- AnkiConnect addon: codigo `2055492159`
+- Image Occlusion Enhanced addon: codigo `1374772155`

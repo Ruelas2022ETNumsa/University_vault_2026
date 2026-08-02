@@ -28,25 +28,31 @@ date_updated: 2026-08-01
 
 ## Schedule
 
+Estados posibles (columna Status):
+
 %%
 Estados posibles (columna Status):
-🟡 activo — sesión en curso
-🔴 agotado — cerró sesión antes de la recarga; handoff documentado en tsk o worker libre
-🟢 recargado — pasaron las 5h desde Wake; puede volver a trabajar
-⚫ dormido — no trabajó hoy
+🟡 activo
+sesión en curso
+🔴 agotado
+cerró sesión antes de la recarga; handoff documentado en tsk o worker libre
+🟢 recargado
+ — pasaron las 5h desde Wake; puede volver a trabajar
+⚫ dormido
+ — no trabajó hoy
 
 Regla: Recarga = Wake + 5:00h. Al iniciar sesión → actualizar Fecha, Wake, Recarga y Status. La tabla refleja solo el día actual.
 %%
 
-|    Worker    |   Fecha    | Wake  | Recarga |  Status   |
-| :----------: | :--------: | :---: | :-----: | :-------: |
-| `alx-rul.md` |     -      |   -   |    -    | ⚫ dormido |
-| `alx_gml.md` |     —      |   —   |    —    | ⚫ dormido |
-|  `krajo.md`  | 2026-08-01 | 18:05 |  23:05  | ⚫ dormido |
-| `alx_hot.md` |     -      | 15:10 |  20:10  | ⚫ dormido |
-| `alxrul.md`  | 2026-08-02 | 14:20 |  19:20  | 🟡 activo |
-| `standb.md`  |     —      |   —   |    —    | ⚫ dormido |
-| `emergn.md`  |     —      |   —   |    —    | ⚫ dormido |
+|    Worker    |   Fecha    | Wake  | Recarga |   Status   |
+| :----------: | :--------: | :---: | :-----: | :--------: |
+| `alx-rul.md` |     -      |   -   |    -    | ⚫ dormido  |
+| `alx_gml.md` |     —      |   —   |    —    | ⚫ dormido  |
+|  `krajo.md`  |     .      |   .   |    .    | ⚫ dormido  |
+| `alx_hot.md` |     -      |   .   |    .    | ⚫ dormido  |
+| `alxrul.md`  | 2026-08-02 | 14:20 |  19:20  | 🔴 agotado |
+| `standb.md`  |     —      |   —   |    —    | ⚫ dormido  |
+| `emergn.md`  |     —      |   —   |    —    | ⚫ dormido  |
 
 ---
 
@@ -59,12 +65,12 @@ Regla: Recarga = Wake + 5:00h. Al iniciar sesión → actualizar Fecha, Wake, Re
 %%
 # galaxy-links
 [[_app/_config/_projects_system.md]]
-[[_hangar/alx-rul.md]]
-[[_hangar/alx_gml.md]]
-[[_hangar/krajo.md]]
+[[alx-rul]]
+[[alx_gml]]
+[[krajo]]
 [[tsk_update_notebooklm_system]]
-[[_hangar/alxrul.md]]
-[[_hangar/standb.md]]
-[[_hangar/emergn.md]]
+[[alxrul]]
+[[standb]]
+[[emergn]]
 [[_hangar/dock/logbook.md]]
 %%

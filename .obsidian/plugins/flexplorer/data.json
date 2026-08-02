@@ -3113,22 +3113,12 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "dock",
+        "template",
         "blueprint",
         "_legacy",
+        "dock",
         "anki",
-        "tpl_tsk 1.md",
-        "tpl_carrier.md",
-        "tpl_ship.md",
-        "tpl_worker.md",
-        "logbook.md",
-        "alx_hot.md",
-        "krajo.md",
-        "alx_gml.md",
-        "alxrul.md",
-        "alx-rul.md",
-        "standb.md",
-        "emergn.md"
+        "bay"
       ]
     },
     "_hangar/anki": {
@@ -3249,30 +3239,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_hangar/alx-rul.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_hangar/alx_gml.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_hangar/alxrul.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_hangar/emergn.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_hangar/krajo.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_hangar/standb.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_hangar/dock/tsk_memory_matter.md": {
       "isPinned": false,
       "isHidden": false
@@ -3288,22 +3254,6 @@
         "tsk_supercharged-dual-icons.md",
         "tsk_color-folders-files.md"
       ]
-    },
-    "_hangar/tpl_worker.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_hangar/tpl_tsk 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_hangar/tpl_carrier.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_hangar/tpl_ship.md": {
-      "isPinned": false,
-      "isHidden": false
     },
     "_templates/pru.md": {
       "isPinned": false,
@@ -3337,15 +3287,7 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_hangar/logbook.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_hangar/_legacy/tsk_color-folders-files.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_hangar/alx_hot.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -3471,10 +3413,89 @@
     "_hangar/anki/tsk_marginalia_anki.md": {
       "isPinned": false,
       "isHidden": false
+    },
+    "_hangar/template": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "tpl_tsk 1.md",
+        "tpl_carrier.md",
+        "tpl_ship.md",
+        "tpl_worker.md",
+        "tpl_dropship.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "_hangar/template/tpl_worker.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/template/tpl_ship.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/template/tpl_carrier.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/template/tpl_tsk 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/bay": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "logbook.md",
+        "alx_hot.md",
+        "krajo.md",
+        "alx_gml.md",
+        "alxrul.md",
+        "alx-rul.md",
+        "standb.md",
+        "emergn.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "_hangar/bay/emergn.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/bay/standb.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/bay/alx-rul.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/bay/alxrul.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/bay/alx_gml.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/bay/krajo.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/bay/alx_hot.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/bay/logbook.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/template/tpl_dropship.md": {
+      "isPinned": false,
+      "isHidden": false
     }
   },
   "pinnedFiles": [
-    "_hangar/tpl_ship.md",
+    "_hangar/template/tpl_ship.md",
     "_app/_config/_galaxy-system.md",
     "_skills/_start.md"
   ],
