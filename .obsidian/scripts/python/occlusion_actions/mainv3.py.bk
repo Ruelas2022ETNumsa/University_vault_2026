@@ -1,35 +1,3 @@
-# ===========================================================================
-# occlusion_actions — main.py
-# ---------------------------------------------------------------------------
-# PROPOSITO:
-#   Gestiona las carpetas de Image Occlusion de un excalidraw dado.
-#   Tres acciones disponibles via argumento:
-#
-#   B — Borrar: elimina todas las carpetas nombre__timestamp del vault,
-#       borra las notas en Anki via AnkiConnect, elimina decks si quedaron
-#       vacios y limpia tags huerfanos.
-#
-#   S — Legacy: archiva todas las carpetas y el .excalidraw.md en
-#       Excalidraw/Image-Occlusions/_legacy/nombre/. No toca Anki.
-#
-#   Z — Revisar: restaura el contenido de _legacy/nombre/ de vuelta a
-#       Excalidraw/Image-Occlusions/. No toca Anki.
-#
-#   otro — Cancelar: sale sin modificar nada.
-#
-# USO:
-#   main.py <nombre_excalidraw> <vault_path> <accion>
-#   Ejemplo: main.py "Prueba_anki" "E:\University_vault_2026" "B"
-#
-# DEPENDENCIAS (solo accion B):
-#   - AnkiConnect activo en localhost:8765
-#   - Anki abierto al momento de ejecutar
-#
-# CONFIGURADO EN:
-#   Obsidian Shell Commands — prompt Occlusion Actions
-#   Variables: {{_excalidraw_name}}, {{vault_path}}, {{_occlusion_action}}
-# ===========================================================================
-
 import sys
 import os
 import re
@@ -59,14 +27,14 @@ legacy_dir     = os.path.join(occlusions_dir, "_legacy")
 # Cancelar
 # ---------------------------------------------------------------------------
 if accion not in ("B", "S", "Z"):
-    print("Operacion cancelada")
+    print("Operación cancelada")
     sys.exit(0)
 
 # ---------------------------------------------------------------------------
 # Validar directorio base
 # ---------------------------------------------------------------------------
 if not os.path.isdir(occlusions_dir):
-    print(f"Error: no se encontro la carpeta {occlusions_dir}", file=sys.stderr)
+    print(f"Error: no se encontró la carpeta {occlusions_dir}", file=sys.stderr)
     sys.exit(1)
 
 # ---------------------------------------------------------------------------
@@ -198,7 +166,7 @@ if accion == "B":
     if registro["ids"]:
         ok, msg = anki_delete_notes(registro["ids"])
         if not ok:
-            print(f"Error: {msg} — operacion detenida, no se borro nada.", file=sys.stderr)
+            print(f"Error: {msg} — operación detenida, no se borró nada.", file=sys.stderr)
             sys.exit(1)
 
     # Borrar carpetas del vault
@@ -213,22 +181,14 @@ if accion == "B":
             anki_request("deleteDecks", decks=[deck], cardsToo=True)
             decks_borrados.append(deck)
 
-    # Verificar tags — cuales quedaron vacios
-    tags_borrados = []
-    for tag in registro["tags"]:
-        notes = anki_request("findNotes", query=f'tag:{tag}')
-        if notes is not None and len(notes) == 0:
-            tags_borrados.append(tag)
-
-    # Limpiar tags huerfanos
+    # Limpiar tags huérfanos
     anki_request("clearUnusedTags")
 
     sys.stdout.buffer.write((
-        f"'{excalidraw_name}' eliminado \n"
-        f"Carpetas: {len(carpetas)} \n"
-        f"cartas Anki: {len(registro['ids'])} \n"
-        f"Decks borrados: {decks_borrados if decks_borrados else 'ninguno'} \n"
-        f"Tags borrados: {tags_borrados if tags_borrados else 'ninguno'}"
+        f"'{excalidraw_name}' eliminado | "
+        f"Carpetas: {len(carpetas)} | "
+        f"Notas Anki: {len(registro['ids'])} | "
+        f"Decks borrados: {decks_borrados if decks_borrados else 'ninguno'}"
         f"\n"
     ).encode("utf-8"))
 

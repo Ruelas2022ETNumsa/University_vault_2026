@@ -213,14 +213,7 @@ if accion == "B":
             anki_request("deleteDecks", decks=[deck], cardsToo=True)
             decks_borrados.append(deck)
 
-    # Verificar tags — cuales quedaron vacios
-    tags_borrados = []
-    for tag in registro["tags"]:
-        notes = anki_request("findNotes", query=f'tag:{tag}')
-        if notes is not None and len(notes) == 0:
-            tags_borrados.append(tag)
-
-    # Limpiar tags huerfanos
+    # Limpiar tags huérfanos
     anki_request("clearUnusedTags")
 
     sys.stdout.buffer.write((
@@ -228,7 +221,7 @@ if accion == "B":
         f"Carpetas: {len(carpetas)} \n"
         f"cartas Anki: {len(registro['ids'])} \n"
         f"Decks borrados: {decks_borrados if decks_borrados else 'ninguno'} \n"
-        f"Tags borrados: {tags_borrados if tags_borrados else 'ninguno'}"
+        f"tags borrados."
         f"\n"
     ).encode("utf-8"))
 

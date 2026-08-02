@@ -467,7 +467,7 @@
           "type": "single-line-text",
           "label": "Acción — B=Borrar  S=Legacy  Z=Revisar  otro=Cancelar",
           "description": "",
-          "default_value": "",
+          "default_value": "B",
           "target_variable_id": "2xqe0nk3o5",
           "required": true
         }
