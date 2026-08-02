@@ -26008,6 +26008,7 @@ SgfD
 SfnpH
 SUNE
 SKJo
+Solucionar
 Plugins
 Pendientes
 Plugin
@@ -64544,6 +64545,7 @@ bade
 bmyE
 blBe
 bGEo
+borraba
 scope
 status
 selector
@@ -73450,6 +73452,8 @@ suffixPart
 sets
 sbD
 sWdr
+stripeando
+stripear
 vault
 vil
 ver
@@ -81997,6 +82001,7 @@ vuDP
 vvwm
 vLGt
 vrfl
+vacios
 audience
 activo
 auto
@@ -90011,6 +90016,7 @@ ankiTags
 agregada
 athD
 avtp
+accion
 related
 recomendados
 ribbon
@@ -115562,6 +115568,7 @@ closed
 ctttL
 cosS
 cpnT
+conservaba
 updated
 un
 universo
@@ -132464,6 +132471,7 @@ GUeB
 GvvrlG
 GdFegFVW
 GjiKU
+Gestiona
 Convenci
 Creaci
 Commander
@@ -139974,6 +139982,7 @@ CaTa
 CHYkYK
 Cancelar
 CGel
+Conservado
 Instalados
 Instalado
 Instalar
@@ -157003,6 +157012,7 @@ Fiul
 FxBaUUAE
 Fbtb
 FWUX
+Funcional
 Estado
 Excalidraw
 EPUBs
@@ -181595,6 +181605,7 @@ AsKS
 ACne
 Ankipru
 AUsS
+Actions
 push
 pull
 para
@@ -214232,6 +214243,7 @@ Bnoookk
 BSsC
 Biqw
 BOww
+Bloquea
 en
 exacta
 escaneados
@@ -274374,6 +274386,7 @@ RQHi
 RaRH
 Reconfigurar
 RnrlO
+Restaura
 Hider
 Hace
 Herramientas
@@ -289009,6 +289022,7 @@ fCgw
 fdae
 fileTimestamp
 fca
+fixes
 haya
 hace
 hacer
@@ -296632,6 +296646,7 @@ hpyd
 hSLa
 hUKc
 hhhc
+huerfanos
 que
 quedan
 queda

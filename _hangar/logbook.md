@@ -38,15 +38,15 @@ Estados posibles (columna Status):
 Regla: Recarga = Wake + 5:00h. Al iniciar sesión → actualizar Fecha, Wake, Recarga y Status. La tabla refleja solo el día actual.
 %%
 
-|    Worker    |   Fecha    | Wake  | Recarga |   Status   |
-| :----------: | :--------: | :---: | :-----: | :--------: |
-| `alx-rul.md` | 2026-07-31 | 20:48 |  01:48  | 🔴 agotado |
-| `alx_gml.md` |     —      |   —   |    —    | ⚫ dormido  |
-|  `krajo.md`  | 2026-08-01 | 18:05 |  23:05  | 🟡 activo  |
-| `alx_hot.md` | 2026-08-01 | 15:10 |  20:10  | 🔴 agotado |
-| `alxrul.md`  | 2026-08-01 | 22:35 |  03:35  | 🟡 activo  |
-| `standb.md`  |     —      |   —   |    —    | ⚫ dormido  |
-| `emergn.md`  |     —      |   —   |    —    | ⚫ dormido  |
+|    Worker    |   Fecha    | Wake  | Recarga |  Status   |
+| :----------: | :--------: | :---: | :-----: | :-------: |
+| `alx-rul.md` |     -      |   -   |    -    | ⚫ dormido |
+| `alx_gml.md` |     —      |   —   |    —    | ⚫ dormido |
+|  `krajo.md`  | 2026-08-01 | 18:05 |  23:05  | ⚫ dormido |
+| `alx_hot.md` |     -      | 15:10 |  20:10  | ⚫ dormido |
+| `alxrul.md`  | 2026-08-02 | 14:20 |  19:20  | 🟡 activo |
+| `standb.md`  |     —      |   —   |    —    | ⚫ dormido |
+| `emergn.md`  |     —      |   —   |    —    | ⚫ dormido |
 
 ---
 
