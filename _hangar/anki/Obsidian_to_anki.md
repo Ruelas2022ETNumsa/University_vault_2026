@@ -151,8 +151,34 @@ El script busca en `Excalidraw/Image-Occlusions/` todas las carpetas con el nomb
 
 ---
 
-## Parte 3 — Template `tpl-Anki_excalidraw.md` (pendiente)
+## Parte 3 — Template `tpl-Anki_excalidraw.md` ✅
 
-Crear template base en `Excalidraw/Image-Occlusions/` para excalidraws de oclusión.
-Basado en `Excalidraw/template/Template.excalidraw.md` con YAML mínimo sin `galaxy_body`.
-Primer tarea de la próxima sesión.
+Template base para crear excalidraws de oclusión. Ubicado en `_templates/tpl-Anki_excalidraw.md`.
+
+Al crear desde Templater pregunta el **nombre del archivo** y lo mueve automáticamente a `Excalidraw/Image-Occlusions/`. YAML mínimo sin `galaxy_body` — solo `excalidraw-plugin: parsed` y `tags: [excalidraw]`.
+
+---
+
+## Parte 4 — Deck y tag dinámicos al generar cartas ✅
+
+El script `Image Occlusion.md` fue editado para preguntar **TARGET DECK** y **FILE TAGS** al momento de generar cartas (modos `hideOne` y `hideAll`). Los valores se inyectan en cada `.md` generado reemplazando las líneas correspondientes del template `tpl-excalidraw_occlusion.md`.
+
+**Flujo actualizado — Paso 2 (completo):**
+
+1. Presionar botón **Image Occlusion** en Excalidraw
+2. Elegir modo (`Hide One` o `Hide All`)
+3. Ingresar **TARGET DECK** (ej. `Galaxy::Anatomia`) — default: `Galaxy::General`
+4. Ingresar **FILE TAGS** (ej. `Anatomia`) — default: `Obsidian_to_Ankipru`
+5. Seleccionar template → `tpl-excalidraw_occlusion.md`
+6. Se generan las cartas con deck y tag correctos
+
+**Archivos modificados:**
+- `Excalidraw/Scripts/Downloaded/Image Occlusion.md` — prompts de deck/tag + replace en template
+- `_templates/tpl-excalidraw_occlusion.md` — agregada línea `FILE TAGS: Obsidian_to_Ankipru`
+
+---
+
+## Pendientes
+
+- [ ] Verificar que `FILE TAGS` llegue correctamente a Anki tras exportar
+- [ ] Evaluar e implementar borrado de carpeta única en `image_occlusion_reset` (con prompt de confirmación)
