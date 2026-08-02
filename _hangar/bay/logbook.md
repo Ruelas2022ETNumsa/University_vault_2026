@@ -12,47 +12,28 @@ date_updated: 2026-08-01
 
 ---
 
-## Workers
+## Panel de operaciones
 
-| Worker | Status | Proyecto activo |
-|---|---|---|
-| `alx-rul.md` | 🔴 busy | Cornell Marginalia → Galaxy |
-| `alx_gml.md` | 🔴 busy | Sistema de links, sync y organización de carpetas |
-| `krajo.md` | 🔴 busy | Implementación física `_hangar/` |
-| `alx_hot.md` | 🟢 free | — |
-| `alxrul.md` | 🟢 free | — |
-| `standb.md` | 🟢 free | — |
-| `emergn.md` | 🟢 free | — |
+|    Worker    | Status | Estamina | Proyecto activo                                   |   Fecha    | Wake  | Recarga |
+| :----------: | :----: | :------: | :------------------------------------------------ | :--------: | :---: | :-----: |
+| `alx-rul.md` |   ❌    |    🟡    | Cornell Marginalia → Galaxy                       |     —      |   —   |    —    |
+| `alx_gml.md` |   ❌    |    🟢    | Sistema de links, sync y organización de carpetas |     —      |   —   |    —    |
+|  `krajo.md`  |   ❌    |    🟢    | Implementación física `_hangar/`                  |     —      |   —   |    —    |
+| `alx_hot.md` |   ✔    |    🟢    | —                                                 |     —      |   —   |    —    |
+| `alxrul.md`  |   ✔    |    🔴    | —                                                 | 2026-08-02 | 14:20 |  19:20  |
+| `standb.md`  |   ✔    |    🟢    | —                                                 |     —      |   —   |    —    |
+| `emergn.md`  |   ✔    |    🟢    | —                                                 |     —      |   —   |    —    |
 
----
+Estados de estamina:
+🟡 active — sesión en curso
+🔴 tired — cerró sesión; necesita recarga
+🟢 ready — descansó 5h desde Wake; estamina completa
 
-## Schedule
+Regla: ready = Wake + 5:00h
 
-Estados posibles (columna Status):
-
-%%
-Estados posibles (columna Status):
-🟡 activo
-sesión en curso
-🔴 agotado
-cerró sesión antes de la recarga; handoff documentado en tsk o worker libre
-🟢 recargado
- — pasaron las 5h desde Wake; puede volver a trabajar
-⚫ dormido
- — no trabajó hoy
-
-Regla: Recarga = Wake + 5:00h. Al iniciar sesión → actualizar Fecha, Wake, Recarga y Status. La tabla refleja solo el día actual.
-%%
-
-|    Worker    |   Fecha    | Wake  | Recarga |   Status   |
-| :----------: | :--------: | :---: | :-----: | :--------: |
-| `alx-rul.md` |     -      |   -   |    -    | ⚫ dormido  |
-| `alx_gml.md` |     —      |   —   |    —    | ⚫ dormido  |
-|  `krajo.md`  |     .      |   .   |    .    | ⚫ dormido  |
-| `alx_hot.md` |     -      |   .   |    .    | ⚫ dormido  |
-| `alxrul.md`  | 2026-08-02 | 14:20 |  19:20  | 🔴 agotado |
-| `standb.md`  |     —      |   —   |    —    | ⚫ dormido  |
-| `emergn.md`  |     —      |   —   |    —    | ⚫ dormido  |
+Estados de status:
+✔ free — worker disponible, sin proyecto asignado
+❌ busy — worker cargado con un ship activo
 
 ---
 

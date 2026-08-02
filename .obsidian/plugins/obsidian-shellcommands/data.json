@@ -265,7 +265,7 @@
     {
       "id": "zrmn479rn0",
       "platform_specific_commands": {
-        "default": "python \"{{vault_path}}\\.obsidian\\scripts\\python\\start_snippet\\main.py\""
+        "default": "python \"{{vault_path}}\\.obsidian\\scripts\\python\\start_snippet\\main.py\" \"{{title}}\""
       },
       "shells": {
         "win32": "PowerShell.exe"
@@ -298,7 +298,12 @@
       "debounce": null,
       "command_palette_availability": "enabled",
       "preactions": [],
-      "variable_default_values": {}
+      "variable_default_values": {
+        "{{title}}": {
+          "type": "value",
+          "value": ""
+        }
+      }
     },
     {
       "id": "y2ls0w7phc",

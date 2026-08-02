@@ -3417,14 +3417,14 @@
     "_hangar/template": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "tpl_tsk 1.md",
         "tpl_carrier.md",
         "tpl_ship.md",
         "tpl_worker.md",
         "tpl_dropship.md"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "_hangar/template/tpl_worker.md": {
       "isPinned": false,
@@ -3445,6 +3445,7 @@
     "_hangar/bay": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "logbook.md",
         "alx_hot.md",
@@ -3453,9 +3454,9 @@
         "alxrul.md",
         "alx-rul.md",
         "standb.md",
-        "emergn.md"
-      ],
-      "sortOrder": "custom"
+        "emergn.md",
+        "Panel logbook.md"
+      ]
     },
     "_hangar/bay/emergn.md": {
       "isPinned": false,
@@ -3490,6 +3491,10 @@
       "isHidden": false
     },
     "_hangar/template/tpl_dropship.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/bay/Panel logbook.md": {
       "isPinned": false,
       "isHidden": false
     }

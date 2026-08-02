@@ -8097,6 +8097,7 @@ tnYk
 trvgk
 tagoie
 twoC
+tired
 ToDo
 Templater
 Text
@@ -41090,6 +41091,8 @@ decision
 docking
 dropships
 desechables
+descans
+devolveria
 Vault
 Verificar
 Variables
@@ -115601,6 +115604,7 @@ context
 comparativa
 chronicle
 coordinador
+creara
 updated
 un
 universo
@@ -165969,6 +165973,7 @@ Endpoint
 Eglh
 EcqP
 Excalidraws
+Estamina
 Obsidian
 OmniSearch
 Ocultar
@@ -223081,6 +223086,7 @@ exportacion
 esten
 especifico
 evaluacion
+estamina
 Motor
 Media
 Mantiene
@@ -257278,6 +257284,7 @@ itSh
 iodR
 iyeY
 instalacion
+intencional
 Dependencia
 Dropbox
 Dataview
