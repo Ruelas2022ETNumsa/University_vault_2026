@@ -21,8 +21,7 @@
         "Semestres",
         "Borrar",
         "README.md",
-        "Untitled.md",
-        "_assets"
+        "Untitled.md"
       ]
     },
     "MOC": {
@@ -2918,7 +2917,8 @@
         "Constellations",
         "Observatory",
         "template",
-        "Scripts"
+        "Scripts",
+        "RENOMBRAR-02-08-2026 00.19.50.excalidraw.md"
       ]
     },
     "Excalidraw/Constellations": {
@@ -3001,7 +3001,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "roroname.md"
+        "_legacy"
       ]
     },
     "Marginalia": {
@@ -3125,7 +3125,8 @@
         "alxrul.md",
         "alx-rul.md",
         "standb.md",
-        "emergn.md"
+        "emergn.md",
+        "alx_hot 1.md"
       ]
     },
     "_hangar/anki": {
@@ -3371,19 +3372,17 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_assets": {
+    "Excalidraw/Image-Occlusions/_legacy": {
       "isPinned": false,
       "isHidden": false,
-      "customOrder": [
-        "roroname-02-08-2026_00-03-40.png"
-      ],
-      "sortOrder": "custom"
+      "sortOrder": "custom",
+      "customOrder": []
     },
-    "Excalidraw/Image-Occlusions/roroname.md": {
+    "Excalidraw/RENOMBRAR-02-08-2026 00.19.50.excalidraw.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_assets/roroname-02-08-2026_00-03-40.png": {
+    "_hangar/alx_hot 1.md": {
       "isPinned": false,
       "isHidden": false
     }

@@ -7,11 +7,11 @@ status: busy
 
 ## Handoff
 
-**Última sesión:** 2026-08-01
-**Retomar desde:** rediseño completo de `image_occlusion_reset/main.py`
-**Completado esta sesión:** `tpl-Anki_excalidraw.md` creado. Script `Image Occlusion.md` parcheado con prompts de deck y tag. Template `tpl-excalidraw_occlusion.md` actualizado con línea `FILE TAGS`. Flujo completo de Image Occlusion diseñado y documentado. Rediseño de `main.py` especificado y listo para implementar.
-**Próximo paso:** implementar rediseño de `main.py` (ver worker abajo) + reconfigurar Shell Commands con nuevo argumento de acción.
-**Preguntas de cierre:** —
+**Última sesión:** 2026-08-02
+**Retomar desde:** `E:\University_vault_2026\.obsidian\scripts\python\occlusion_actions\main.py` — fix legacy: archivo fuente .excalidraw no se mueve a legacy + carpeta legacy no debe incluir extensión en su nombre
+**Completado esta sesión:** Script `occlusion_actions/main.py` creado desde cero. Acción B funcional (borra carpetas, notas Anki, decks vacíos, tags huérfanos). Acción S parcial (mueve carpetas timestamp con IDs, bloquea sin export, sobreescribe en legacy — falta mover archivo fuente .excalidraw). Acción Z funcional. Prompt Shell Commands configurado con variables `{{_excalidraw_name}}` y `{{_occlusion_action}}`. Template `tpl-Anki_excalidraw.md` editado para agregar `.excalidraw` al nombre. Botón ribbon creado en Commander.
+**Próximo paso:** Fix S — (1) encontrar y mover archivo fuente `.excalidraw.md` a legacy correctamente, (2) evitar que el nombre capturado por `{{title}}` incluya la extensión `.excalidraw` en el prompt, (3) carpeta legacy no debe tener extensión en su nombre.
+**Preguntas de cierre:** ¿El archivo fuente queda como `nombre.excalidraw.md` tras usar la plantilla corregida, o sigue sin extensión?
 
 ---
 
@@ -23,41 +23,19 @@ status: busy
 
 ---
 
-## Worker — `main.py` rediseño
+## Worker — `occlusion_actions/main.py` fixes pendientes
 
-**Existe `.bk` en:** `E:\University_vault_2026\.obsidian\scripts\python\image_occlusion_reset\main.py.bk`
+**Ruta:** `E:\University_vault_2026\.obsidian\scripts\python\occlusion_actions\main.py`
+**BKs disponibles:** `mainv2.py.bk`, `mainv3.py.bk`, `mainv4.py.bk`
 
-**Nuevo argumento:** `sys.argv[3]` — acción ingresada via prompt de Shell Commands.
+**Fix 1 — Carpeta legacy sin extensión:**
+El nombre capturado por `{{title}}` incluye `.excalidraw` cuando el archivo fuente tiene esa extensión. La carpeta en legacy queda como `nombre.excalidraw/` en vez de `nombre/`. Solucionar stripeando `.excalidraw` del `excalidraw_name` al armar `destino_base` en acción S y Z.
 
-**Prompt Shell Commands a agregar:** `{{prompt:Acción — B=Borrar, S=Legacy, Z=Revisar, otro=Cancelar}}`
+**Fix 2 — Archivo fuente no se mueve a legacy:**
+`find_excalidraw_file` busca `nombre + ".excalidraw.md"` pero el archivo puede estar con otro nombre o ruta. Verificar nombre exacto del archivo fuente tras usar plantilla corregida y ajustar búsqueda.
 
-**Lógica por acción (acepta mayúsculas y minúsculas):**
-
-`B/b` — Borrar todo sin distinción de cantidad de carpetas ni IDs:
-- Borra notas de Anki via AnkiConnect
-- Borra carpeta(s) `nombre__timestamp` del vault
-- Mensaje: `"Tarjetas de 'nombre' eliminadas de Anki y vault"`
-
-`S/s` — Legacy:
-- Mueve carpeta(s) `nombre__timestamp` → `Excalidraw/Image-Occlusions/_legacy/nombre/`
-- Busca `.excalidraw.md` en `Excalidraw/Image-Occlusions/` primero, fallback `Excalidraw/`
-- Mueve `.excalidraw.md` → `Excalidraw/Image-Occlusions/_legacy/nombre/`
-- No toca Anki
-- Estructura resultante: `_legacy/nombre/nombre__timestamp/` + `_legacy/nombre/nombre.excalidraw.md`
-- Mensaje: `"'nombre' archivado en legacy"`
-
-`Z/z` — Revisar (ctrl+z de legacy):
-- Verifica que exista `_legacy/nombre/` — si no existe: `"Archivo no encontrado"` + exit
-- Mueve todo el contenido de `_legacy/nombre/` → `Excalidraw/Image-Occlusions/`
-- Mensaje: `"'nombre' restaurado para revisión"`
-
-otro — Cancelar:
-- Sin cambios
-- Mensaje: `"Operación cancelada"` + exit 0
-
-**Eliminar:** bloqueo actual `if len(carpetas) == 1: sys.exit(0)`
-
-**Reconfigurar Shell Commands:** agregar tercer argumento con el prompt de acción al comando existente.
+**Fix 3 — Prompt muestra extensión:**
+Cuando el archivo activo es `nombre.excalidraw.md`, `{{title}}` devuelve `nombre.excalidraw`. Evaluar stripear en el script o ajustar variable en Shell Commands.
 
 ---
 
@@ -74,9 +52,16 @@ otro — Cancelar:
 - [x] Crear `tpl-Anki_excalidraw.md` en `_templates/` con prompt de nombre y carpeta destino
 - [x] Editar script `Image Occlusion.md` — agregar prompt de deck y tag al generar cartas
 - [x] Editar `tpl-excalidraw_occlusion.md` — agregar línea `FILE TAGS`
-- [ ] Implementar rediseño `main.py` — acciones B/S/Z (ver worker arriba)
-- [ ] Reconfigurar Shell Commands — agregar tercer argumento de acción
-- [ ] Verificar que el tag llegue correctamente a Anki
+- [x] Implementar rediseño `main.py` — acciones B/S/Z (nuevo script `occlusion_actions/main.py`)
+- [x] Reconfigurar Shell Commands — agregar tercer argumento de acción
+- [x] Verificar que el tag llegue correctamente a Anki
+- [x] Acción B funcional — borra carpetas, notas Anki, decks vacíos, tags huérfanos
+- [x] Acción Z funcional — restaura desde legacy
+- [ ] Fix acción S — mover archivo fuente `.excalidraw.md` a legacy
+- [ ] Fix nombre capturado por `{{title}}` — evitar que incluya extensión `.excalidraw`
+- [ ] Fix carpeta legacy — no debe incluir extensión en su nombre
+- [ ] Probar S completo tras fixes
+- [ ] Actualizar cabecera de `main.py` con ejemplo correcto (sin extensión en argumento)
 
 ---
 

@@ -2,7 +2,7 @@
 title: "Obsidian to Anki — Image Occlusion: flujo y scripts"
 scope: hangar
 status: buffer
-date: 2026-08-01
+date: 2026-08-02
 ---
 
 # Obsidian to Anki — Image Occlusion: flujo y scripts

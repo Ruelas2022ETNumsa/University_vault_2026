@@ -242,13 +242,31 @@ elif accion == "S":
         print(f"No se encontraron carpetas para '{excalidraw_name}'.", file=sys.stderr)
         sys.exit(1)
 
+    # Clasificar carpetas: con IDs (exportadas) y sin IDs (no exportadas)
+    con_ids = []
+    sin_ids = []
+    for c in carpetas:
+        fpath = os.path.join(occlusions_dir, c)
+        ids = get_ids_from_folder(fpath)
+        if ids:
+            con_ids.append(c)
+        else:
+            sin_ids.append(c)
+
+    # Si ninguna fue exportada a Anki — bloquear
+    if not con_ids:
+        print(f"'{excalidraw_name}' aun no fue exportado a Anki — legacy cancelado.", file=sys.stderr)
+        sys.exit(1)
+
     destino_base = os.path.join(legacy_dir, excalidraw_name)
     os.makedirs(destino_base, exist_ok=True)
 
-    # Mover carpetas de oclusión
-    for c in carpetas:
+    # Mover solo carpetas con IDs — sobreescribir si ya existe en legacy
+    for c in con_ids:
         src = os.path.join(occlusions_dir, c)
         dst = os.path.join(destino_base, c)
+        if os.path.exists(dst):
+            shutil.rmtree(dst)
         shutil.move(src, dst)
 
     # Mover .excalidraw.md si existe
@@ -257,9 +275,11 @@ elif accion == "S":
         dst_file = os.path.join(destino_base, os.path.basename(excalidraw_file))
         shutil.move(excalidraw_file, dst_file)
 
-    sys.stdout.buffer.write(
-        f"'{excalidraw_name}' archivado en legacy\n".encode("utf-8")
-    )
+    # Armar mensaje
+    msg = f"'{excalidraw_name}' archivado en legacy | Carpetas: {len(con_ids)}"
+    if sin_ids:
+        msg += f" | Sin exportar (no archivadas): {sin_ids}"
+    sys.stdout.buffer.write((msg + "\n").encode("utf-8"))
 
 # ---------------------------------------------------------------------------
 # Accion Z — Revisar (restaurar desde legacy)

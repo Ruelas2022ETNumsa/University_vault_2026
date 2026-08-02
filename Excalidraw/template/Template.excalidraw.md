@@ -42,13 +42,13 @@ status: activo
 		"currentItemEndArrowhead": "arrow",
 		"currentItemArrowType": "round",
 		"currentItemFrameRole": null,
-		"scrollX": 469.75,
-		"scrollY": 276.39842987060547,
+		"scrollX": 234.375,
+		"scrollY": 396.3984375,
 		"zoom": {
 			"value": 1
 		},
 		"currentItemRoundness": "round",
-		"gridSize": null,
+		"gridSize": 20,
 		"gridStep": 5,
 		"gridModeEnabled": false,
 		"gridColor": {
