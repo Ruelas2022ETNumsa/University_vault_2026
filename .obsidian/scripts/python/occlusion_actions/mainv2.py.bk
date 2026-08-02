@@ -51,9 +51,6 @@ def get_carpetas(nombre):
         and not d.startswith(os.path.join(occlusions_dir, "_legacy"))
     ]
 
-DECK_PATTERN = re.compile(r'^TARGET DECK:\s*(.+)$', re.MULTILINE)
-TAG_PATTERN  = re.compile(r'^FILE TAGS:\s*(.+)$',   re.MULTILINE)
-
 def get_ids_from_folder(folder_path):
     """Extrae todos los <!--ID: N--> de los .md de una carpeta (excluye batch-marker)."""
     ids = []
@@ -65,42 +62,6 @@ def get_ids_from_folder(folder_path):
             found = ID_PATTERN.findall(content)
             ids.extend([int(i) for i in found])
     return ids
-
-def get_deck_tag_from_folder(folder_path):
-    """Lee el primer .md (excluye batch-marker) y extrae TARGET DECK y FILE TAGS."""
-    for fname in sorted(os.listdir(folder_path)):
-        if fname.endswith(".md") and fname != "batch-marker.md":
-            fpath = os.path.join(folder_path, fname)
-            with open(fpath, "r", encoding="utf-8") as f:
-                content = f.read()
-            deck = DECK_PATTERN.search(content)
-            tag  = TAG_PATTERN.search(content)
-            return (
-                deck.group(1).strip() if deck else None,
-                tag.group(1).strip()  if tag  else None
-            )
-    return None, None
-
-def anki_request(action, **params):
-    """Llamada genérica a AnkiConnect. Devuelve result o None si hay error."""
-    payload = json.dumps({
-        "action": action,
-        "version": 6,
-        "params": params
-    }).encode("utf-8")
-    req = urllib.request.Request(
-        "http://127.0.0.1:8765",
-        data=payload,
-        headers={"Content-Type": "application/json"}
-    )
-    try:
-        with urllib.request.urlopen(req, timeout=5) as resp:
-            result = json.loads(resp.read().decode("utf-8"))
-            if result.get("error"):
-                return None
-            return result.get("result")
-    except urllib.error.URLError:
-        return None
 
 def anki_delete_notes(note_ids):
     """Llama a AnkiConnect deleteNotes. Devuelve (ok, mensaje)."""
@@ -151,20 +112,14 @@ if accion == "B":
         print(f"No se encontraron carpetas para '{excalidraw_name}'.", file=sys.stderr)
         sys.exit(1)
 
-    # Recorrer carpetas — acumular IDs, decks y tags únicos
-    registro = {"ids": [], "decks": set(), "tags": set()}
+    # Recolectar todos los IDs primero
+    todos_ids = []
     for c in carpetas:
-        fpath = os.path.join(occlusions_dir, c)
-        registro["ids"].extend(get_ids_from_folder(fpath))
-        deck, tag = get_deck_tag_from_folder(fpath)
-        if deck:
-            registro["decks"].add(deck)
-        if tag:
-            registro["tags"].add(tag)
+        todos_ids.extend(get_ids_from_folder(os.path.join(occlusions_dir, c)))
 
-    # Si hay IDs, Anki debe estar abierto — borrar notas
-    if registro["ids"]:
-        ok, msg = anki_delete_notes(registro["ids"])
+    # Si hay IDs, Anki debe estar abierto
+    if todos_ids:
+        ok, msg = anki_delete_notes(todos_ids)
         if not ok:
             print(f"Error: {msg} — operación detenida, no se borró nada.", file=sys.stderr)
             sys.exit(1)
@@ -173,24 +128,10 @@ if accion == "B":
     for c in carpetas:
         shutil.rmtree(os.path.join(occlusions_dir, c))
 
-    # Verificar decks — borrar solo si quedaron vacíos
-    decks_borrados = []
-    for deck in registro["decks"]:
-        cards = anki_request("findCards", query=f'deck:"{deck}"')
-        if cards is not None and len(cards) == 0:
-            anki_request("deleteDecks", decks=[deck], cardsToo=True)
-            decks_borrados.append(deck)
-
-    # Limpiar tags huérfanos
-    anki_request("clearUnusedTags")
-
-    sys.stdout.buffer.write((
-        f"'{excalidraw_name}' eliminado | "
-        f"Carpetas: {len(carpetas)} | "
-        f"Notas Anki: {len(registro['ids'])} | "
-        f"Decks borrados: {decks_borrados if decks_borrados else 'ninguno'}"
-        f"\n"
-    ).encode("utf-8"))
+    sys.stdout.buffer.write(
+        f"Tarjetas de '{excalidraw_name}' eliminadas de Anki y vault | "
+        f"Carpetas: {len(carpetas)} | Notas Anki: {len(todos_ids)}\n".encode("utf-8")
+    )
 
 # ---------------------------------------------------------------------------
 # Accion S — Legacy (archivar)

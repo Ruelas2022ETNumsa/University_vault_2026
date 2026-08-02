@@ -1,3 +1,33 @@
+# ===========================================================================
+# image_occlusion_reset — main.py
+# Backup: main.py.bk | Fecha: 2026-08-01
+# ---------------------------------------------------------------------------
+# PROPOSITO:
+#   Resetear las carpetas de Image Occlusion de un excalidraw dado.
+#   Borra carpetas antiguas de Obsidian y sus notas correspondientes en Anki.
+#   Conserva siempre la carpeta mas reciente o la que no tiene ID asignado.
+#
+# LOGICA PRINCIPAL:
+#   Caso A: existe carpeta sin ID (no sincronizada con Anki) -> conservarla
+#   Caso B: todas tienen ID -> conservar la mas reciente por timestamp
+#   Todas las demas se borran de Anki (AnkiConnect) y del vault (shutil.rmtree)
+#
+# ADVERTENCIA — PENDIENTE:
+#   Caso de 1 sola carpeta actualmente NO borra nada (sys.exit 0).
+#   Pendiente: agregar prompt de confirmacion y permitir borrado en ese caso.
+#
+# USO:
+#   main.py <nombre_excalidraw> <vault_path>
+#   Ejemplo: main.py "Prueba_anki.excalidraw" "E:\University_vault_2026"
+#
+# DEPENDENCIAS:
+#   - AnkiConnect activo en localhost:8765
+#   - Anki abierto al momento de ejecutar
+#
+# CONFIGURADO EN:
+#   Obsidian Shell Commands — con Prompt para nombre_excalidraw y vault_path
+# ===========================================================================
+
 import sys
 import os
 import re

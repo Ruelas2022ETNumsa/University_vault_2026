@@ -347,7 +347,7 @@
     {
       "id": "ttgd8248x0",
       "platform_specific_commands": {
-        "default": "& \"C:\\Users\\USUARIO\\AppData\\Local\\Programs\\Python\\Python313\\python.exe\" \"{{vault_path}}\\.obsidian\\scripts\\python\\occlusion_actions\\main.py\" \"{{title}}\" \"{{vault_path}}\" \"{{prompt:Acción — B=Borrar, S=Legacy, Z=Revisar, otro=Cancelar}}\""
+        "default": "& \"C:\\Users\\USUARIO\\AppData\\Local\\Programs\\Python\\Python313\\python.exe\" \"E:\\University_vault_2026\\.obsidian\\scripts\\python\\occlusion_actions\\main.py\" \"{{_excalidraw_name}}\" \"{{vault_path}}\" \"{{_occlusion_action}}\""
       },
       "shells": {
         "win32": "PowerShell.exe"
@@ -379,7 +379,13 @@
       "events": {},
       "debounce": null,
       "command_palette_availability": "enabled",
-      "preactions": [],
+      "preactions": [
+        {
+          "type": "prompt",
+          "enabled": true,
+          "prompt_id": "mvx018wnaq"
+        }
+      ],
       "variable_default_values": {}
     }
   ],
@@ -442,6 +448,31 @@
         }
       ],
       "execute_button_text": "Execute"
+    },
+    {
+      "id": "mvx018wnaq",
+      "title": "Occlusion Actions",
+      "description": "Archivo: {{title}}",
+      "preview_shell_command": false,
+      "fields": [
+        {
+          "type": "single-line-text",
+          "label": "Excalidraw",
+          "description": "",
+          "default_value": "{{title}}",
+          "target_variable_id": "e8vhmfpyae",
+          "required": true
+        },
+        {
+          "type": "single-line-text",
+          "label": "Acción — B=Borrar  S=Legacy  Z=Revisar  otro=Cancelar",
+          "description": "",
+          "default_value": "",
+          "target_variable_id": "2xqe0nk3o5",
+          "required": true
+        }
+      ],
+      "execute_button_text": "Execute"
     }
   ],
   "builtin_variables": {},
@@ -463,6 +494,15 @@
       "name": "excalidraw_name",
       "description": "",
       "default_value": null
+    },
+    {
+      "id": "2xqe0nk3o5",
+      "name": "occlusion_action",
+      "description": "",
+      "default_value": {
+        "type": "cancel-silently",
+        "value": ""
+      }
     }
   ],
   "custom_variables_notify_changes_via": {
