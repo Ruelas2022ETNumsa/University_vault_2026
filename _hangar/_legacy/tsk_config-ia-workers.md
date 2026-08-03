@@ -66,6 +66,7 @@ Restricción clave: la IA no puede ver cambios en su configuración global de fo
 - [x] Snippets generados para los 5 workers regulares (alx-rul, alxrul, alx_gml, alx_hot, krajo)
 - [x] `_start.md` actualizado — sección worker y comando `/name`
 - [x] Documentación en `_legacy/`
+- [x] Actualizar `start_snippet/main.py` con la nueva sintaxis de prompt inicial (`worker:` en lugar de `trabajas como:`)
 
 ---
 
@@ -80,3 +81,4 @@ Restricción clave: la IA no puede ver cambios en su configuración global de fo
 - `E:\University_vault_2026\_skills\_start.md` — skill de inicio de sesión, modificado en este proyecto
 - `E:\University_vault_2026\_hangar\bay\` — directorio de workers operators
 - `E:\University_vault_2026\_app\_config\_projects_system.md` — sistema de proyectos del vault
+- `E:\University_vault_2026\.obsidian\scripts\python\start_snippet\main.py` — script Python que copia al portapapeles el snippet de inicio de sesión con hora actual y worker activo (título del archivo abierto en Obsidian); se ejecuta desde Shell Commands vía Ctrl+P

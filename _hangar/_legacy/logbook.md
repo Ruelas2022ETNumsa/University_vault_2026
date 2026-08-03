@@ -1,7 +1,7 @@
 ---
 galaxy_body: logbook
 scope: legacy
-date_updated: 2026-08-01
+date_updated: 2026-08-03
 ---
 
 # Logbook — Legacy
@@ -10,14 +10,54 @@ date_updated: 2026-08-01
 
 ---
 
-## Archivos
+%% IN-ORBIT: ships pausados sin dependencia externa — fueron trabajados pero no terminados en su sesión.
+Columnas: Archivo (wikilink) | Proyecto (nombre del campo project: en YAML) | Motivo de pausa (del Handoff, campo "Retomar desde") | Última sesión (campo "Última sesión" del Handoff)
+Orden: más antigua arriba, más actual abajo. %%
 
-| Archivo                                             | Proyecto                           | Status    |
-| --------------------------------------------------- | ---------------------------------- | --------- |
-| [[_hangar/_legacy/tsk_snippet_templater.md]]        | snippet templater                  | aborted   |
-| [[_hangar/_legacy/tsk_supercharged-dual-icons.md]]  | supercharged dual icons            | delivered |
-| [[_hangar/_legacy/tsk_color-folders-files.md]]      | Color Folders and Files            | delivered |
-| [[_hangar/_legacy/tsk_update_notebooklm_system.md]] | Actualizar `_notebooklm-system.md` | delivered |
+## In-orbit
+
+| Archivo | Proyecto | Motivo de pausa | Última sesión |
+| ------- | -------- | --------------- | ------------- |
+| —       | —        | —               | —             |
+
+---
+
+%% DELAYED: ships bloqueados por una dependencia externa — ver campo blocked_by: en su YAML.
+Columnas: Archivo (wikilink) | Proyecto | Motivo de pausa (qué dependencia lo bloquea, del campo blocked_by: o del Handoff) | Última sesión
+Orden: más antigua arriba, más actual abajo. %%
+
+## Delayed
+
+| Archivo | Proyecto | Motivo de pausa | Última sesión |
+| ------- | -------- | --------------- | ------------- |
+| —       | —        | —               | —             |
+
+---
+
+%% ABORTED: proyectos descartados por no ser viables.
+Columnas: Archivo (wikilink) | Proyecto | Motivo (resumen breve de por qué se abortó, del cuerpo del archivo) | Última sesión
+Orden: más antigua arriba, más actual abajo. %%
+
+## Aborted
+
+| Archivo | Proyecto | Motivo | Última sesión |
+| ------- | -------- | ------ | ------------- |
+| [[_hangar/_legacy/tsk_snippet_templater.md]] | snippet inicio Claude via Templater | Templater no puede ejecutar lógica pura sin crear archivo — reemplazado por script Python | 2026-07-31 |
+
+---
+
+%% DELIVERED: proyectos completados y documentados.
+Columnas: Archivo (wikilink) | Proyecto | Última sesión
+Orden: más antigua arriba, más actual abajo. %%
+
+## Delivered
+
+| Archivo | Proyecto | Última sesión |
+| ------- | -------- | ------------- |
+| [[_hangar/_legacy/tsk_supercharged-dual-icons.md]]  | supercharged dual icons                       | 2026-07-31 |
+| [[_hangar/_legacy/tsk_color-folders-files.md]]      | Color Folders and Files                       | 2026-07-31 |
+| [[_hangar/_legacy/tsk_update_notebooklm_system.md]] | Actualizar `_notebooklm-system.md`            | 2026-08-01 |
+| [[_hangar/_legacy/tsk_config-ia-workers.md]]        | Configuración de nombre único por IA en workers | 2026-08-03 |
 
 ---
 
@@ -27,5 +67,6 @@ date_updated: 2026-08-01
 [[_hangar/_legacy/tsk_supercharged-dual-icons.md]]
 [[_hangar/_legacy/tsk_color-folders-files.md]]
 [[_hangar/_legacy/tsk_update_notebooklm_system.md]]
+[[_hangar/_legacy/tsk_config-ia-workers.md]]
 [[_app/_config/_projects_system.md]]
 %%
