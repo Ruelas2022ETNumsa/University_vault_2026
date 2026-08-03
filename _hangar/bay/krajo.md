@@ -63,13 +63,13 @@ Implementar físicamente el sistema `_hangar/` diseñado en sesión 2026-07-30. 
 
 - [x] `tpl-ship.md` — basado en `tsk_tpl.md` con YAML de ship (`galaxy_body: ship`, estados de ship)
 - [x] `tpl-carrier.md` — YAML de carrier (`galaxy_body: carrier`, `fleet:`, `blocked_by:`)
-- [ ] `tpl-dropship.md` — YAML de dropship (`galaxy_body: dropship`, `carrier:`, `scope:`, `status:`)
+- [x] `tpl-dropship.md` — YAML de dropship (`galaxy_body: dropship`, `carrier:`, `scope:`, `status:`)
 - [ ] `tpl-logbook.md` — YAML de logbook (`galaxy_body: logbook`, `scope:`)
-- [ ] `tpl-blueprint.md` — YAML de blueprint (`galaxy_body: blueprint`, `status:`, `priority:`)
+- [x] `tpl-blueprint.md` — YAML de blueprint (`galaxy_body: blueprint`, `status:`, `priority:`)
 
 ### Documentación pendiente
 
-- [ ] Actualizar `tsk_tpl.md` — cambiar `status: libre/creciente/llena` a `free/busy` para operators
+- [x] Actualizar `tsk_tpl.md` — cambiar `status: libre/creciente/llena` a `free/busy` para operators
 - [ ] Documentar `void` en `_projects_system.md` — carpeta pendiente de diseño (opciones: `drift/`, `nebula/`, `debris/`, `static/`)
 - [ ] Diseñar carpeta para `void` y tomar decisión de nombre
 - [ ] Sesión dedicada a workshops — 4 tipos actuales + tareas docente + prácticas auxiliar

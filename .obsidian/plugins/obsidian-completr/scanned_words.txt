@@ -98564,6 +98564,7 @@ rorottt
 revision
 reload
 renderer
+retomarse
 notes
 notas
 nuevas
@@ -181674,6 +181675,7 @@ Acepta
 Archivados
 ABORTED
 Aborted
+ARCHIVADOS
 push
 pull
 para

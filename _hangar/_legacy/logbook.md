@@ -10,30 +10,6 @@ date_updated: 2026-08-03
 
 ---
 
-%% IN-ORBIT: ships pausados sin dependencia externa — fueron trabajados pero no terminados en su sesión.
-Columnas: Archivo (wikilink) | Proyecto (nombre del campo project: en YAML) | Motivo de pausa (del Handoff, campo "Retomar desde") | Última sesión (campo "Última sesión" del Handoff)
-Orden: más antigua arriba, más actual abajo. %%
-
-## In-orbit
-
-| Archivo | Proyecto | Motivo de pausa | Última sesión |
-| ------- | -------- | --------------- | ------------- |
-| —       | —        | —               | —             |
-
----
-
-%% DELAYED: ships bloqueados por una dependencia externa — ver campo blocked_by: en su YAML.
-Columnas: Archivo (wikilink) | Proyecto | Motivo de pausa (qué dependencia lo bloquea, del campo blocked_by: o del Handoff) | Última sesión
-Orden: más antigua arriba, más actual abajo. %%
-
-## Delayed
-
-| Archivo | Proyecto | Motivo de pausa | Última sesión |
-| ------- | -------- | --------------- | ------------- |
-| —       | —        | —               | —             |
-
----
-
 %% ABORTED: proyectos descartados por no ser viables.
 Columnas: Archivo (wikilink) | Proyecto | Motivo (resumen breve de por qué se abortó, del cuerpo del archivo) | Última sesión
 Orden: más antigua arriba, más actual abajo. %%
