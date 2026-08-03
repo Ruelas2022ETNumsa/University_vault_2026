@@ -41,6 +41,7 @@ Skills disponibles:
 Comandos:
 /tokens  — hora en que se reestablecen los tokens
 /worker  — worker activo en esta sesión
+/name    — nombre de Claude en esta configuración
 /close   — cierra la sesión
 ```
 
@@ -85,3 +86,6 @@ Este nombre corresponde a un archivo `.md` ubicado en `E:\University_vault_2026\
 
 Cuando el usuario escriba **`/worker`** → respondé exactamente:
 `Worker activo: {nombre-worker}`
+
+Cuando el usuario escriba **`/name`** → respondé exactamente:
+`Nombre de configuración: {nombre de las instrucciones de Claude}`

@@ -3251,10 +3251,11 @@
       "sortOrder": "custom",
       "customOrder": [
         "logbook.md",
-        "tsk_update_notebooklm_system.md",
         "tsk_snippet_templater.md",
+        "tsk_update_notebooklm_system.md",
         "tsk_supercharged-dual-icons.md",
-        "tsk_color-folders-files.md"
+        "tsk_color-folders-files.md",
+        "tsk_config-ia-workers.md"
       ]
     },
     "_app/shellcommands/shellcmd_start_snippet.md": {
@@ -3459,6 +3460,10 @@
       "isHidden": false
     },
     "_hangar/dock/logbook.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/_legacy/tsk_config-ia-workers.md": {
       "isPinned": false,
       "isHidden": false
     }

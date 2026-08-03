@@ -33,7 +33,7 @@ worker = sys.argv[1] if len(sys.argv) > 1 else ""
 texto = (
     "Usá el MCP Filesystem y leé E:\\University_vault_2026\\_skills\\_start.md\n"
     f"Hora de inicio: {hora}\n"
-    f"trabajas como: {worker}"
+    f"worker: {worker}"
 )
 
 subprocess.run(

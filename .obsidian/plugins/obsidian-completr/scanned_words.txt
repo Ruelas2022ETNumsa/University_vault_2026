@@ -8098,6 +8098,7 @@ trvgk
 tagoie
 twoC
 tired
+trabajaba
 ToDo
 Templater
 Text
@@ -17001,6 +17002,7 @@ TjkK
 TIFB
 Toca
 Testear
+Trabaj
 Sistema
 Sync
 Save
@@ -41096,6 +41098,8 @@ desechables
 descans
 devolveria
 desavilitado
+desacoplado
+declara
 Vault
 Verificar
 Variables
@@ -115612,6 +115616,7 @@ comparativa
 chronicle
 coordinador
 creara
+considerado
 updated
 un
 universo
@@ -165982,6 +165987,7 @@ Eglh
 EcqP
 Excalidraws
 Estamina
+Establecer
 Obsidian
 OmniSearch
 Ocultar
@@ -198694,6 +198700,7 @@ mayusculas
 minusculas
 maestra
 movi
+mezclaba
 YAML
 Ya
 You
@@ -247866,6 +247873,7 @@ logica
 lineas
 lejana
 logr
+llame
 incluyendo
 im
 instalar
