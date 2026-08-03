@@ -8099,6 +8099,7 @@ tagoie
 twoC
 tired
 trabajaba
+trabajados
 ToDo
 Templater
 Text
@@ -64573,6 +64574,7 @@ borraba
 borrados
 busqueda
 basica
+bloqueados
 scope
 status
 selector
@@ -82033,6 +82035,7 @@ vrfl
 vacios
 vacia
 validacion
+viables
 audience
 activo
 auto
@@ -90055,6 +90058,7 @@ automatico
 aqui
 aplicaron
 aplicarse
+abort
 related
 recomendados
 ribbon
@@ -174044,6 +174048,7 @@ OSMd
 ONkK
 OZet
 Omite
+ORBIT
 Auto
 Annotator
 Autocompletado
@@ -181667,6 +181672,8 @@ Actions
 Archiva
 Acepta
 Archivados
+ABORTED
+Aborted
 push
 pull
 para
@@ -189605,6 +189612,7 @@ problematico
 priority
 pronto
 priorizando
+pausados
 min
 mica
 movimiento
@@ -265490,6 +265498,10 @@ DRCG
 Documentacion
 Decision
 Downloaded
+DELAYED
+Delayed
+DELIVERED
+Delivered
 Remotely
 Raz
 Revisa
