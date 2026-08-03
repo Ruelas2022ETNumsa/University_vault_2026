@@ -16,11 +16,11 @@ date_updated: 2026-08-02
 
 |     Worker     | Status | Estamina | Proyecto activo                                   |  Fecha   | Wake  | Recarga |
 | :------------: | :----: | :------: | :------------------------------------------------ | :------: | :---: | :-----: |
-| [[alx_hot.md]] |   ✔    |    🟢    | —                                                 |    —     |   —   |    —    |
+| [[alx_hot.md]] |   ✔    |    🔴    | —                                                 | 2026-8-3 | 1:00  |  18:00  |
 |  [[krajo.md]]  |   ❌    |    🟢    | Implementación física `_hangar/`                  |    —     |   —   |    —    |
 | [[alx_gml.md]] |   ❌    |    🟢    | Sistema de links, sync y organización de carpetas |    —     |   —   |    —    |
 | [[alxrul.md]]  |   ✔    |    🟢    | —                                                 | 2026-8-2 | 14:20 |  19:20  |
-| [[alx-rul.md]] |   ❌    |    🔴    | Cornell Marginalia → Galaxy                       | 2026-8-3 | 1:00  |  6:00   |
+| [[alx-rul.md]] |   ❌    |    🔴    | Cornell Marginalia → Galaxy                       | 2026-8-3 | 12:00 |  17:00  |
 | [[standb.md]]  |   ✔    |    🟢    | —                                                 |    —     |   —   |    —    |
 | [[emergn.md]]  |   ✔    |    🟢    | —                                                 |    —     |   —   |    —    |
 
