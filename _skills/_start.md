@@ -37,6 +37,11 @@ Skills disponibles:
 2. plan  — planificación de proyectos
 3. setup — configuración técnica
 4. boot  — trabajo completo del vault
+
+Comandos:
+/tokens  — hora en que se reestablecen los tokens
+/worker  — worker activo en esta sesión
+/close   — cierra la sesión
 ```
 
 ---
@@ -67,3 +72,12 @@ Cuando el usuario escriba **`/tokens`** , **`/token`** o diga "a qué hora se re
 
 Cuando el usuario escriba **`/close`** o diga **"la sesión debe terminar, usa close"** →
 leé `E:\University_vault_2026\_skills\_claude-close.md` y ejecutá su flujo de inicio.
+
+---
+## Worker de sesión
+
+El worker se indica en el mensaje de apertura como:
+`trabajas como: nombre-worker`
+
+Cuando el usuario escriba **`/worker`** → respondé exactamente:
+`Worker activo: {nombre-worker}`

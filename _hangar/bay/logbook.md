@@ -14,15 +14,15 @@ date_updated: 2026-08-02
 
 ## Panel de operaciones
 
-|    Worker    | Status | Estamina | Proyecto activo                                   |   Fecha    | Wake  | Recarga |
-| :----------: | :----: | :------: | :------------------------------------------------ | :--------: | :---: | :-----: |
-| `alx-rul.md` |   ❌    |    🟡    | Cornell Marginalia → Galaxy                       |     —      |   —   |    —    |
-| `alx_gml.md` |   ❌    |    🟢    | Sistema de links, sync y organización de carpetas |     —      |   —   |    —    |
-|  `krajo.md`  |   ❌    |    🟢    | Implementación física `_hangar/`                  |     —      |   —   |    —    |
-| `alx_hot.md` |   ✔    |    🟢    | —                                                 |     —      |   —   |    —    |
-| `alxrul.md`  |   ✔    |    🟢    | —                                                 | 2026-08-02 | 14:20 |  19:20  |
-| `standb.md`  |   ✔    |    🟢    | —                                                 |     —      |   —   |    —    |
-| `emergn.md`  |   ✔    |    🟢    | —                                                 |     —      |   —   |    —    |
+|     Worker     | Status | Estamina | Proyecto activo                                   |   Fecha    | Wake  | Recarga |
+| :------------: | :----: | :------: | :------------------------------------------------ | :--------: | :---: | :-----: |
+| [[alx-rul.md]] |   ❌    |    🟡    | Cornell Marginalia → Galaxy                       |     —      |   —   |    —    |
+| [[alx_gml.md]] |   ❌    |    🟢    | Sistema de links, sync y organización de carpetas |     —      |   —   |    —    |
+|  [[krajo.md]]  |   ❌    |    🟢    | Implementación física `_hangar/`                  |     —      |   —   |    —    |
+| [[alx_hot.md]] |   ✔    |    🟢    | —                                                 |     —      |   —   |    —    |
+| [[alxrul.md]]  |   ✔    |    🟢    | —                                                 | 2026-08-02 | 14:20 |  19:20  |
+| [[standb.md]]  |   ✔    |    🟢    | —                                                 |     —      |   —   |    —    |
+| [[emergn.md]]  |   ✔    |    🟢    | —                                                 |     —      |   —   |    —    |
 
 Estados de estamina:
 🟡 active — sesión en curso
