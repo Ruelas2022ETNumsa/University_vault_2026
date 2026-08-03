@@ -76,8 +76,12 @@ leé `E:\University_vault_2026\_skills\_claude-close.md` y ejecutá su flujo de 
 ---
 ## Worker de sesión
 
-El worker se indica en el mensaje de apertura como:
-`trabajas como: nombre-worker`
+Tu nombre como IA es permanente y viene de la configuración de Claude — no cambia entre sesiones.
+
+El archivo de worker a ejecutar se indica en el mensaje de apertura como:
+`worker: nombre-worker`
+
+Este nombre corresponde a un archivo `.md` ubicado en `E:\University_vault_2026\_hangar\bay\`. Trabajás con ese archivo pero tu identidad como IA no cambia.
 
 Cuando el usuario escriba **`/worker`** → respondé exactamente:
 `Worker activo: {nombre-worker}`
