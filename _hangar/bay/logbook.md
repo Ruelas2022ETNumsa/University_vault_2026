@@ -12,12 +12,15 @@ date_updated: 2026-08-02
 
 ---
 
+> [!info] krajo — Sesión incompleta
+> Diseño sistema móvil Drive en curso. Continuar a las **20:46** (recarga de tokens).
+
 ## Panel de operaciones
 
 |     Worker     | Status | Estamina | Proyecto activo                                   |  Fecha   | Wake  | Recarga |
 | :------------: | :----: | :------: | :------------------------------------------------ | :------: | :---: | :-----: |
 | [[alx_hot.md]] |   ✔    |    🔴    | —                                                 | 2026-8-3 | 1:00  |  18:00  |
-|  [[krajo.md]]  |   ❌    |    🟢    | Implementación física `_hangar/`                  |    —     |   —   |    —    |
+|  [[krajo.md]]  |   ❌    |    🔴    | Implementación física `_hangar/`                  | 2026-8-3 | 15:46 |  20:46  |
 | [[alx_gml.md]] |   ❌    |    🟢    | Sistema de links, sync y organización de carpetas |    —     |   —   |    —    |
 | [[alxrul.md]]  |   ✔    |    🟢    | —                                                 | 2026-8-2 | 14:20 |  19:20  |
 | [[alx-rul.md]] |   ❌    |    🔴    | Cornell Marginalia → Galaxy                       | 2026-8-3 | 12:00 |  17:00  |
