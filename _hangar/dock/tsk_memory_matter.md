@@ -1,7 +1,10 @@
 ---
+galaxy_body: ship
 project: "memory-matter"
 date: 2026-07-30
-status: nueva
+status: docked
+fleet:
+blocked_by:
 ---
 
 ## Handoff

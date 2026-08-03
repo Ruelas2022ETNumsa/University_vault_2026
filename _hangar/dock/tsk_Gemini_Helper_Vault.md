@@ -1,5 +1,10 @@
 ---
-status: creciente
+galaxy_body: ship
+project: "Gemini Helper Vault"
+date: 
+status: in-orbit
+fleet:
+blocked_by:
 ---
 
 **Contexto — Gemini Helper en University Vault**

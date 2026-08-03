@@ -7,7 +7,6 @@
       "customOrder": [
         "_app",
         "_hangar",
-        "_assets",
         "_skills",
         "_templates",
         "Rubbish",
@@ -22,7 +21,10 @@
         "Semestres",
         "Borrar",
         "README.md",
-        "Untitled.md"
+        "Untitled.md",
+        "ETN806-T01-joint-pdf-definition.md",
+        "void 1-27-07-2026_16-38-41.png.md",
+        "MAT101_T1-Funciones-reales 1-14-07-2026_00-03-59.png.md"
       ]
     },
     "MOC": {
@@ -1318,7 +1320,6 @@
       "sortOrder": "custom",
       "customOrder": [
         "alt-B",
-        "pru.md",
         "tpl-anki.md",
         "tpl-w-initial.md",
         "tpl-w-project.md",
@@ -2939,7 +2940,8 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "Downloaded"
+        "Downloaded",
+        "excalidraw_parche_image_occlusion.md"
       ]
     },
     "Excalidraw/Scripts/Downloaded": {
@@ -3171,17 +3173,19 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "logbook.md",
+        "tsk_pdf_marginalia_pp.md",
         "tsk_memory_matter.md",
         "tsk_Gemini_Helper_Vault.md",
         "tsk_Wolfram_alpha_script.md",
         "tsk_Mapa_IAs_vault_roles_APIs.md",
         "tsk_pendientes_sistema_galaxy.md",
         "tsk_script_extaction_integration.md",
-        "tsk_pdf_marginalia_pp.md",
         "_library_ETN505(i).md",
         "_library_ETN825.md",
         "tsk_library_ETN825.md",
-        "tsk_operator_reload_display.md"
+        "tsk_operator_reload_display.md",
+        "tsk_logbook_dock.md"
       ]
     },
     "_hangar/dock/tsk_library_ETN825.md": {
@@ -3252,10 +3256,6 @@
         "tsk_supercharged-dual-icons.md",
         "tsk_color-folders-files.md"
       ]
-    },
-    "_templates/pru.md": {
-      "isPinned": false,
-      "isHidden": false
     },
     "_app/shellcommands/shellcmd_start_snippet.md": {
       "isPinned": false,
@@ -3348,7 +3348,10 @@
         "tpl_carrier.md",
         "tpl_ship.md",
         "tpl_worker.md",
-        "tpl_dropship.md"
+        "tpl_dropship.md",
+        "tpl_blueprint.md",
+        "tpl_logbook_dock.md",
+        "tpl_logbook_carrier.md"
       ]
     },
     "_hangar/template/tpl_worker.md": {
@@ -3423,11 +3426,41 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_assets": {
+    "Excalidraw/Scripts/excalidraw_parche_image_occlusion.md": {
       "isPinned": false,
-      "isHidden": false,
-      "customOrder": [],
-      "sortOrder": "custom"
+      "isHidden": false
+    },
+    "ETN806-T01-joint-pdf-definition.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "void 1-27-07-2026_16-38-41.png.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "MAT101_T1-Funciones-reales 1-14-07-2026_00-03-59.png.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/template/tpl_blueprint.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/template/tpl_logbook_dock.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/template/tpl_logbook_carrier.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/dock/tsk_logbook_dock.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/dock/logbook.md": {
+      "isPinned": false,
+      "isHidden": false
     }
   },
   "pinnedFiles": [

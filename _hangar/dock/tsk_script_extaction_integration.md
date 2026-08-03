@@ -1,7 +1,10 @@
 ---
-alias: "sesion de cripts de extraccion e integracion"
+galaxy_body: ship
+project: "scripts de extraccion e integracion"
 date: 2026-07-11
-status: creciente
+status: in-orbit
+fleet:
+blocked_by:
 ---
 
 ## Objetivo

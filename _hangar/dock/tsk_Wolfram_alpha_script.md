@@ -1,7 +1,10 @@
 ---
-alias: "script de Wolfram alpha"
-date: 13-7-2026-(23:16)
-status: creciente
+galaxy_body: ship
+project: "script Wolfram Alpha"
+date: 2026-07-13
+status: in-orbit
+fleet:
+blocked_by:
 ---
 
 ## Resumen de sesión — Script Wolfram Alpha

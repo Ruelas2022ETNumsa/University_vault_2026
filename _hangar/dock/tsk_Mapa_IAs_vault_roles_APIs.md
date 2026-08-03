@@ -1,7 +1,10 @@
 ---
+galaxy_body: ship
 project: "Mapa de IAs del vault — roles y APIs"
 date: 2026-07-19
-status: creciente
+status: in-orbit
+fleet:
+blocked_by:
 ---
 
 ## Handoff

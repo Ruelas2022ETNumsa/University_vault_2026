@@ -1,14 +1,11 @@
 ---
+galaxy_body: ship
 project: "pdf-marginalia-pp-system"
 date: 2026-07-26
-status: creciente
+status: delayed
+fleet:
+blocked_by: carrier anki
 ---
-%%
-status: nueva | creciente | llena
-- nueva: disponible para uso temporal o sin proyecto asignado
-- creciente: proyecto en curso
-- llena: proyecto terminado, pendiente de documentar y archivar
-%%
 
 ## Handoff
 %%

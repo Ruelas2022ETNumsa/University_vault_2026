@@ -1,7 +1,7 @@
 ---
 galaxy_body: logbook
 scope: hangar
-date_updated: 2026-08-01
+date_updated: 2026-08-02
 ---
 
 # Logbook — _hangar/
@@ -20,7 +20,7 @@ date_updated: 2026-08-01
 | `alx_gml.md` |   ❌    |    🟢    | Sistema de links, sync y organización de carpetas |     —      |   —   |    —    |
 |  `krajo.md`  |   ❌    |    🟢    | Implementación física `_hangar/`                  |     —      |   —   |    —    |
 | `alx_hot.md` |   ✔    |    🟢    | —                                                 |     —      |   —   |    —    |
-| `alxrul.md`  |   ✔    |    🔴    | —                                                 | 2026-08-02 | 14:20 |  19:20  |
+| `alxrul.md`  |   ✔    |    🟢    | —                                                 | 2026-08-02 | 14:20 |  19:20  |
 | `standb.md`  |   ✔    |    🟢    | —                                                 |     —      |   —   |    —    |
 | `emergn.md`  |   ✔    |    🟢    | —                                                 |     —      |   —   |    —    |
 

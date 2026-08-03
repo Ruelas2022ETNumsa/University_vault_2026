@@ -1,7 +1,10 @@
 ---
+galaxy_body: ship
 project: "Biblioteca ETN825"
 date: 2026-07-30
-status: creciente
+status: in-orbit
+fleet: ETN825
+blocked_by:
 ---
 
 ## Handoff

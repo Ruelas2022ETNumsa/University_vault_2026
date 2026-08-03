@@ -1,7 +1,10 @@
 ---
-alias: "pendientes de el sistema galaxy"
+galaxy_body: ship
+project: "pendientes sistema galaxy"
 date: 
-status: creciente
+status: in-orbit
+fleet:
+blocked_by:
 ---
 
 ## Objetivo
