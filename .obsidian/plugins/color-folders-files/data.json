@@ -125,6 +125,15 @@
       "opacity": 1,
       "applyToSubfolders": false,
       "applyToFiles": false
+    },
+    "_assets": {
+      "backgroundColor": "#474448",
+      "textColor": "#d1d0d1",
+      "isBold": false,
+      "isItalic": false,
+      "opacity": 1,
+      "applyToSubfolders": false,
+      "applyToFiles": false
     }
   },
   "presets": {

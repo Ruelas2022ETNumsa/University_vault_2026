@@ -82,12 +82,12 @@ if (!validateSelection()) {
 // Present user with operation mode choices
 const mode = await utils.suggester(
   [
-    "⭐⠀      Add Cards:    Hide One, Guess One",
     "⭐⭐     Add Cards:    Hide All, Guess One",
+    "⭐⠀      Add Cards:    Hide One, Guess One",
     "🗑️⠀      Delete Cards: Delete old cards (add DELETE marker)",
     "🗑️💥     Delete Cards: Delete old cards files and related images (Be Cautious!!)"
   ],
-  ["hideOne", "hideAll", "delete", "deleteFiles"],
+  ["hideAll", "hideOne", "delete", "deleteFiles"],
   "Select operation mode"
 );
 

@@ -33588,6 +33588,7 @@ PiCZj
 Proximo
 Planificacion
 Prerequisitos
+Parches
 del
 date
 de
@@ -90046,6 +90047,8 @@ activacion
 activarse
 automatico
 aqui
+aplicaron
+aplicarse
 related
 recomendados
 ribbon
@@ -198681,6 +198684,7 @@ miladeck
 mayusculas
 minusculas
 maestra
+movi
 YAML
 Ya
 You
@@ -223087,6 +223091,7 @@ esten
 especifico
 evaluacion
 estamina
+editarse
 Motor
 Media
 Mantiene
@@ -265463,6 +265468,7 @@ DmlD
 DRCG
 Documentacion
 Decision
+Downloaded
 Remotely
 Raz
 Revisa
