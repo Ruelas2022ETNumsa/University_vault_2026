@@ -8100,6 +8100,7 @@ twoC
 tired
 trabajaba
 trabajados
+tuyo
 ToDo
 Templater
 Text
@@ -26017,6 +26018,7 @@ SKJo
 Solucionar
 Sale
 Sobreescribe
+Separaci
 Plugins
 Pendientes
 Plugin
@@ -41102,6 +41104,7 @@ devolveria
 desavilitado
 desacoplado
 declara
+duplicados
 Vault
 Verificar
 Variables
@@ -64577,6 +64580,7 @@ busqueda
 basica
 bloqueados
 buscalo
+blicamente
 scope
 status
 selector
@@ -82038,6 +82042,8 @@ vacios
 vacia
 validacion
 viables
+venir
+viewUrl
 audience
 activo
 auto
@@ -98567,6 +98573,10 @@ revision
 reload
 renderer
 retomarse
+respald
+recib
+revisarse
+redactar
 notes
 notas
 nuevas
@@ -115625,6 +115635,9 @@ coordinador
 creara
 considerado
 codificado
+comprobado
+cede
+compactas
 updated
 un
 universo
@@ -124562,6 +124575,8 @@ uwvw
 uSwUU
 uYAe
 uIkN
+usala
+ubica
 Galaxy
 Git
 Gr
@@ -140042,6 +140057,7 @@ CGel
 Conservado
 Clasifica
 Coordinar
+Complet
 Instalados
 Instalado
 Instalar
@@ -148948,6 +148964,7 @@ IDATg
 Ibbal
 Instalacion
 Integracion
+Indic
 Funci
 File
 Fase
@@ -181681,6 +181698,8 @@ Archivados
 ABORTED
 Aborted
 ARCHIVADOS
+Auxiliar
+Analiz
 push
 pull
 para
@@ -189620,6 +189639,8 @@ priority
 pronto
 priorizando
 pausados
+propietario
+proponer
 min
 mica
 movimiento
@@ -198718,6 +198739,9 @@ movi
 mezclaba
 mobile
 movil
+mencionalo
+modifican
+minimalistas
 YAML
 Ya
 You
@@ -223128,6 +223152,8 @@ estamina
 editarse
 evaluando
 especulativa
+entendi
+explicarlo
 Motor
 Media
 Mantiene
@@ -232453,6 +232479,7 @@ MRcl
 MLbR
 MHyo
 Mezcla
+Minimiza
 Lectura
 LaTeX
 Linter
@@ -257330,6 +257357,7 @@ iodR
 iyeY
 instalacion
 intencional
+influye
 Dependencia
 Dropbox
 Dataview
@@ -274503,6 +274531,8 @@ Reconfigurar
 RnrlO
 Restaura
 Restriccion
+Reexplic
+Redactar
 Hider
 Hace
 Herramientas
@@ -289139,6 +289169,7 @@ fdae
 fileTimestamp
 fca
 fixes
+fusiona
 haya
 hace
 hacer
@@ -305628,6 +305659,7 @@ quajH
 qBSF
 qOtXpI
 quedo
+quizzes
 University
 Usar
 Un
