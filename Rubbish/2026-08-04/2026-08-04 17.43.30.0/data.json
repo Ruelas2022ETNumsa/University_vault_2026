@@ -9,6 +9,7 @@
         "_hangar",
         "_skills",
         "_templates",
+        "Rubbish",
         "_PDF",
         "_inbox",
         "Canvas",
@@ -19,8 +20,7 @@
         "Semesters",
         "Semestres",
         "Borrar",
-        "README.md",
-        "Rubbish"
+        "README.md"
       ]
     },
     "MOC": {
@@ -2813,6 +2813,10 @@
         "inbox.md"
       ]
     },
+    "_inbox/inbox.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
     "_inbox/Marginalia Inbox.md": {
       "isPinned": false,
       "isHidden": false
@@ -2822,6 +2826,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "_start.md",
         "_claude-work.md",
         "_claude-plan.md",
         "_claude-setup.md",
@@ -2829,8 +2834,7 @@
         "_claude-boot.md",
         "_start_movil.md",
         "_repaso_movil.md",
-        "_plan_movil.md",
-        "_start.md"
+        "_plan_movil.md"
       ]
     },
     "_skills/_claude-boot.md": {
@@ -2853,6 +2857,10 @@
       "isPinned": false,
       "isHidden": false
     },
+    "_skills/_start.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
     "_templates/tpl-w-initial.md": {
       "isPinned": false,
       "isHidden": false
@@ -2866,6 +2874,31 @@
       "isHidden": false
     },
     "_templates/tpl_w_transcription.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "tmp",
+        "section.md"
+      ]
+    },
+    "Rubbish/section.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/tmp": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "lock"
+      ]
+    },
+    "Rubbish/tmp/lock": {
       "isPinned": false,
       "isHidden": false
     },
@@ -3438,70 +3471,12 @@
     "_hangar/tsk_tabnote-plantilla.md": {
       "isPinned": false,
       "isHidden": false
-    },
-    "_skills/_start.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_inbox/inbox.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "2026-08-04",
-        "tmp",
-        "section.md"
-      ]
-    },
-    "Rubbish/2026-08-04": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "2026-08-04 17.43.30.0",
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-08-04/2026-08-04 17.43.30.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-08-04/2026-08-04 17.43.30.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-04/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/tmp": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "lock"
-      ]
-    },
-    "Rubbish/tmp/lock": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/section.md": {
-      "isPinned": false,
-      "isHidden": false
     }
   },
   "pinnedFiles": [
     "_hangar/template/tpl_ship.md",
-    "_app/_config/_galaxy-system.md"
+    "_app/_config/_galaxy-system.md",
+    "_skills/_start.md"
   ],
   "showHidden": false,
   "newItemPlacement": "bottom",

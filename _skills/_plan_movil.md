@@ -38,20 +38,10 @@ Respondé solo: `Plan móvil listo. ¿Qué planificamos?`
 
 ## Crear un ship
 
-1. Preguntá al usuario lo necesario para completar el ship (objetivo, contexto, decisiones ya tomadas)
-2. Si el usuario dice "web" → buscá antecedentes antes de proponer el enfoque
-3. Generá el contenido completo siguiendo la estructura de `tpl_ship.md`:
-   - YAML con `galaxy_body: ship`, `project`, `date`, `status: docked`
-   - Handoff completo
-   - Resumen y objetivo
-   - Decisiones tomadas (tabla)
-   - Planificación
-   - Sugerencias web (si aplica)
-   - Flujo de pasos
-   - Tareas con `- [ ]`
-   - Preguntas abiertas
-   - Recursos
-4. Mostrá el archivo completo en el chat como bloque de código markdown
+1. Buscá y leé `_hangar/template/tpl_ship.md` desde Drive
+2. Preguntá al usuario lo necesario según la estructura del template
+3. Si el usuario dice "web" → buscá antecedentes antes de proponer el enfoque
+4. Generá el archivo completo en el chat como bloque de código markdown
 5. Indicá: `Descargá este texto y guardalo en _hangar/dock/tsk_[nombre].md`
 
 **Convención de nombre:** `tsk_nombre_descriptivo.md` — slug corto en minúsculas con guión bajo
@@ -60,14 +50,10 @@ Respondé solo: `Plan móvil listo. ¿Qué planificamos?`
 
 ## Crear un blueprint
 
-1. Preguntá: tema de la idea y prioridad (alta / media / baja)
-2. Si el usuario dice "web" → buscás antecedentes
-3. Generá el archivo siguiendo `tpl_blueprint.md`:
-   - YAML con `galaxy_body: blueprint`, `status: idea`, `priority`, `date`
-   - H1 con el tema
-   - Bloque de relación
-   - Categorías con ideas en `- [ ]`
-4. Mostrá el archivo en el chat como bloque de código markdown
+1. Buscá y leé `_hangar/template/tpl_blueprint.md` desde Drive
+2. Preguntá al usuario lo necesario según la estructura del template
+3. Si el usuario dice "web" → buscás antecedentes
+4. Generá el archivo en el chat como bloque de código markdown
 5. Indicá: `Descargá este texto y guardalo en _hangar/blueprint/_ideas_N_[tema].md`
 
 **Convención de nombre:** `_ideas_N_tema.md` donde N es el número secuencial en `_hangar/blueprint/`

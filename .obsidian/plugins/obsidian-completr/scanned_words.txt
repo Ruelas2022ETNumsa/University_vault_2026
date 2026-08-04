@@ -8101,6 +8101,7 @@ tired
 trabajaba
 trabajados
 tuyo
+transcriben
 ToDo
 Templater
 Text
@@ -41105,6 +41106,8 @@ desavilitado
 desacoplado
 declara
 duplicados
+digitalizador
+documente
 Vault
 Verificar
 Variables
@@ -64581,6 +64584,7 @@ basica
 bloqueados
 buscalo
 blicamente
+blueprints
 scope
 status
 selector
@@ -73491,6 +73495,7 @@ stripeando
 stripear
 sssssss
 sintactico
+screenshot
 vault
 vil
 ver
@@ -82044,6 +82049,7 @@ validacion
 viables
 venir
 viewUrl
+viejo
 audience
 activo
 auto
@@ -90067,6 +90073,7 @@ aqui
 aplicaron
 aplicarse
 abort
+adoptable
 related
 recomendados
 ribbon
@@ -98577,6 +98584,7 @@ respald
 recib
 revisarse
 redactar
+refleje
 notes
 notas
 nuevas
@@ -140058,6 +140066,7 @@ Conservado
 Clasifica
 Coordinar
 Complet
+Confirmado
 Instalados
 Instalado
 Instalar
@@ -157092,6 +157101,7 @@ Fbtb
 FWUX
 Funcional
 Foco
+Fusionar
 Estado
 Excalidraw
 EPUBs
@@ -166014,6 +166024,8 @@ Excalidraws
 Estamina
 Establecer
 Empez
+Encabezado
+Espaciado
 Obsidian
 OmniSearch
 Ocultar
@@ -181700,6 +181712,7 @@ Aborted
 ARCHIVADOS
 Auxiliar
 Analiz
+Ancla
 push
 pull
 para
@@ -189641,6 +189654,8 @@ priorizando
 pausados
 propietario
 proponer
+pasivamente
+preconfigurada
 min
 mica
 movimiento
@@ -198742,6 +198757,7 @@ movil
 mencionalo
 modifican
 minimalistas
+mezcle
 YAML
 Ya
 You
@@ -223154,6 +223170,7 @@ evaluando
 especulativa
 entendi
 explicarlo
+efectivas
 Motor
 Media
 Mantiene
@@ -232480,6 +232497,7 @@ MLbR
 MHyo
 Mezcla
 Minimiza
+Mapear
 Lectura
 LaTeX
 Linter
@@ -247920,6 +247938,7 @@ lejana
 logr
 llame
 logbooks
+layouts
 incluyendo
 im
 instalar
@@ -274533,6 +274552,8 @@ Restaura
 Restriccion
 Reexplic
 Redactar
+Redactado
+Relevar
 Hider
 Hace
 Herramientas
@@ -289170,6 +289191,8 @@ fileTimestamp
 fca
 fixes
 fusiona
+falte
+fusi
 haya
 hace
 hacer
@@ -296795,6 +296818,7 @@ hUKc
 hhhc
 huerfanos
 habia
+habilit
 que
 quedan
 queda
@@ -349703,6 +349727,7 @@ QiCw
 QweN
 QSQm
 QWdv
+Quer
 ya
 yaml
 yo
