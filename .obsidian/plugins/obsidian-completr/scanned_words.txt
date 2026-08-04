@@ -33593,6 +33593,7 @@ Proximo
 Planificacion
 Prerequisitos
 Parches
+Prohibiciones
 del
 date
 de
@@ -64575,6 +64576,7 @@ borrados
 busqueda
 basica
 bloqueados
+buscalo
 scope
 status
 selector
@@ -165994,6 +165996,7 @@ EcqP
 Excalidraws
 Estamina
 Establecer
+Empez
 Obsidian
 OmniSearch
 Ocultar
@@ -174051,6 +174054,7 @@ ONkK
 OZet
 Omite
 ORBIT
+Obten
 Auto
 Annotator
 Autocompletado
@@ -198712,6 +198716,8 @@ minusculas
 maestra
 movi
 mezclaba
+mobile
+movil
 YAML
 Ya
 You
@@ -214327,6 +214333,7 @@ Biqw
 BOww
 Bloquea
 BLQcHK
+Busc
 en
 exacta
 escaneados
@@ -331817,6 +331824,7 @@ oNowg
 oimnni
 oOso
 oaT
+orientarte
 junto
 json
 jer

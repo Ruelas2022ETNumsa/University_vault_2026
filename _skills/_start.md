@@ -51,12 +51,12 @@ Comandos:
 
 Según la opción elegida, leé el archivo correspondiente y ejecutá su flujo de inicio:
 
-| Opción | Archivo a leer |
-|--------|----------------|
-| work   | `E:\University_vault_2026\_skills\_claude-work.md` |
-| plan   | `E:\University_vault_2026\_skills\_claude-plan.md` |
-| setup  | `E:\University_vault_2026\_skills\_claude-setup.md` |
-| boot   | `E:\University_vault_2026\_skills\_claude-boot.md` |
+| Opción | Archivo a leer                                        |
+| ------ | ----------------------------------------------------- |
+| work   | [[E:\University_vault_2026\_skills\_claude-work.md]]  |
+| plan   | [[E:\University_vault_2026\_skills\_claude-plan.md]]  |
+| setup  | [[E:\University_vault_2026\_skills\_claude-setup.md]] |
+| boot   | [[E:\University_vault_2026\_skills\_claude-boot.md]]  |
 
 ---
 
