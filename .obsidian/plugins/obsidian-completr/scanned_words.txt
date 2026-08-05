@@ -115656,6 +115656,8 @@ comprobado
 cede
 compactas
 centrada
+cruces
+cuad
 updated
 un
 universo
@@ -124595,6 +124597,8 @@ uYAe
 uIkN
 usala
 ubica
+urea
+ureas
 Galaxy
 Git
 Gr
@@ -223184,6 +223188,7 @@ especulativa
 entendi
 explicarlo
 efectivas
+explicando
 Motor
 Media
 Mantiene
@@ -382125,6 +382130,7 @@ WYQE
 WQdG
 WNGh
 WiXUo
+White
 JavaScript
 JSON
 JERARQU
