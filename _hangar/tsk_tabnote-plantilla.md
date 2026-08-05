@@ -8,13 +8,13 @@ blocked_by:
 ---
 
 > [!info] alx_gml — 2026-08-04
-> Preguntas abiertas resueltas. Diseño de sistema completo documentado. Pendiente: tamaño de cuadrícula del template y documentación final `_TABnote-ref.md`.
+> Template diseñado y exportado a Samsung Notes. Listo para prueba en clase. Si requiere ediciones se retoma explicando el problema puntual. Pendiente: prueba real → `_TABnote-ref.md`.
 
 ## Handoff
 
-**Última sesión:** 2026-08-04 17:49 → en curso
-**Completado esta sesión:** Resolución de 4 preguntas abiertas, convenciones de identificador de página, running header, marginalia en tablet, notas adhesivas, herramientas descartadas
-**Próximo paso:** Diseño de cuadrícula del template → documentar `_TABnote-ref.md`
+**Última sesión:** 2026-08-04 17:49 → cierre
+**Completado esta sesión:** Resolución de 4 preguntas abiertas, convenciones de identificador de página, running header, marginalia en tablet, notas adhesivas, herramientas descartadas, diseño completo del template en Excalidraw (cuadrícula, Cornell, áurea, cruces), exportado a Samsung Notes
+**Próximo paso:** Prueba del template en clase real → si hay problemas se retoma con descripción del problema → documentar `_TABnote-ref.md`
 
 ---
 
@@ -47,6 +47,10 @@ Diseñar una plantilla estándar para tomar apuntes en Samsung Notes (tablet S6 
 | 2026-08-04 | Marginalia en tablet: línea de resaltador desde elemento al margen | Conector visual; NLM ignora la línea, lee solo el texto marginal |
 | 2026-08-04 | Notación marginalia: `[!, nota]` `[?, nota]` etc. | Prefijo dentro de corchete; NLM reconoce y transcribe; se convierte en marginalia Obsidian al transcribir |
 | 2026-08-04 | Flecha de ubicación en marginalia | Flecha + subrayado indica el elemento exacto al que pertenece la nota marginal |
+| 2026-08-04 | Template TABnote v1 diseñado en Excalidraw | Página A4 (2100×2970 u.), cuadrícula 18×26 cuadrados de 5mm, márgenes definidos, zonas Cornell (segmentadas) y áureas (punteadas), recuadros de running header y nº de página |
+| 2026-08-04 | 3 variantes del template cargadas en Samsung Notes | White theme (modo claro) · Dark theme (modo oscuro, sin fondo para aprovechar el modo de Notes) · Sin cuadrícula (para imprimir en tareas) |
+| 2026-08-04 | Grosor S Pen con nueva cuadrícula (18 cuad. ancho) | Texto: 5 · Subtítulos: 8 · Títulos/énfasis: 12 (punto de partida, ajustar en clase) |
+| 2026-08-04 | Template listo pero editable | Si algo no funciona en clase se edita en Excalidraw explicando el problema puntual; no se rediseña desde cero |
 
 > [!note]- Descartadas
 > Cornell de 2 columnas — el usuario casi nunca la usa, se descartó como plantilla base. El resaltado horizontal es suficiente separador visual sin columnas.
@@ -164,10 +168,10 @@ Restricciones:
 6. [x] Diseñar plantilla visual v4 con todas las convenciones
 7. [x] Responder preguntas abiertas
 8. [x] Diseñar sistema de marginalia para tablet
-9. [ ] Diseñar cuadrícula del template (tamaño de cuadrados, ancho/alto, márgenes)
-10. [ ] Documentar plantilla final como archivo de referencia `_TABnote-ref.md`
-11. [ ] El usuario prueba la plantilla en clase real
-12. [ ] Ajustes post-prueba
+9. [x] Diseñar cuadrícula del template (18×26 cuadrados de 5mm, A4, márgenes, Cornell + áurea)
+10. [ ] El usuario prueba la plantilla en clase real
+11. [ ] Ajustes post-prueba (si los hay — retomar explicando el problema)
+12. [ ] Documentar plantilla final como archivo de referencia `_TABnote-ref.md`
 13. [ ] Crear prompt de transcripción para NLM (basado en MAT101-transcription.md adaptado a tablet)
 
 ---
@@ -180,9 +184,10 @@ Restricciones:
 - [x] Sugerencias de mejora de apuntes
 - [x] Resolver preguntas abiertas de diseño
 - [x] Sistema de marginalia tablet (notación + flujo transcripción)
-- [ ] Diseño de cuadrícula del template
-- [ ] Archivo de referencia final `_TABnote-ref.md` en vault
+- [x] Diseño de cuadrícula del template (Excalidraw → PNG → Samsung Notes)
 - [ ] Prueba real en clase
+- [ ] Ajustes post-prueba si los hay
+- [ ] Archivo de referencia final `_TABnote-ref.md` en vault
 - [ ] Prompt NLM para tablet
 
 ---

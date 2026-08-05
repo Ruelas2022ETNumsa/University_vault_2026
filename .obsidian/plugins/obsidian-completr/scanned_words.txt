@@ -17006,6 +17006,7 @@ TIFB
 Toca
 Testear
 Trabaj
+Tape
 Sistema
 Sync
 Save
@@ -26020,6 +26021,8 @@ Solucionar
 Sale
 Sobreescribe
 Separaci
+Sticky
+Subrayado
 Plugins
 Pendientes
 Plugin
@@ -57497,6 +57500,7 @@ gzseaj
 gbrrJ
 gYL
 gestion
+gradual
 body
 beacon
 bat
@@ -90074,6 +90078,8 @@ aplicaron
 aplicarse
 abort
 adoptable
+adhesivas
+adoptadas
 related
 recomendados
 ribbon
@@ -98585,6 +98591,9 @@ recib
 revisarse
 redactar
 refleje
+running
+resaltador
+recordatorios
 notes
 notas
 nuevas
@@ -115646,6 +115655,7 @@ codificado
 comprobado
 cede
 compactas
+centrada
 updated
 un
 universo
@@ -140067,6 +140077,7 @@ Clasifica
 Coordinar
 Complet
 Confirmado
+Centrado
 Instalados
 Instalado
 Instalar
@@ -174084,6 +174095,7 @@ OZet
 Omite
 ORBIT
 Obten
+Orientaci
 Auto
 Annotator
 Autocompletado
@@ -181713,6 +181725,7 @@ ARCHIVADOS
 Auxiliar
 Analiz
 Ancla
+Apunte
 push
 pull
 para
@@ -232498,6 +232511,7 @@ MHyo
 Mezcla
 Minimiza
 Mapear
+Memo
 Lectura
 LaTeX
 Linter
@@ -257377,6 +257391,7 @@ iyeY
 instalacion
 intencional
 influye
+insertarla
 Dependencia
 Dropbox
 Dataview
@@ -274554,6 +274569,10 @@ Reexplic
 Redactar
 Redactado
 Relevar
+Registrada
+Running
+Robusto
+Recordatorios
 Hider
 Hace
 Herramientas
@@ -296819,6 +296838,7 @@ hhhc
 huerfanos
 habia
 habilit
+header
 que
 quedan
 queda
@@ -314845,6 +314865,7 @@ UkzK
 UEYg
 Ultima
 Unico
+Unidades
 Nombre
 Notas
 No

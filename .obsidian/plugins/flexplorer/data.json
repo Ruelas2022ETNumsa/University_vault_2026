@@ -3085,7 +3085,9 @@
         "dock",
         "tsk_tabnote-plantilla.md",
         "anki",
-        "bay"
+        "bay",
+        "tsk_tabnote-plantilla 1.md",
+        "tsk_tabnote-plantilla 1 1.md"
       ]
     },
     "_hangar/anki": {
@@ -3495,6 +3497,14 @@
       "isHidden": false
     },
     "Rubbish/section.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/tsk_tabnote-plantilla 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/tsk_tabnote-plantilla 1 1.md": {
       "isPinned": false,
       "isHidden": false
     }
