@@ -19,8 +19,8 @@
         "Semesters",
         "Semestres",
         "Borrar",
-        "README.md",
         "Rubbish",
+        "README.md",
         "_TABnote-template-draft.md",
         "_TABnote-ref.md"
       ]
@@ -3087,7 +3087,8 @@
         "dock",
         "anki",
         "bay",
-        "tsk_tabnote-plantilla.md"
+        "tsk_tabnote-plantilla.md",
+        "tsk_tabnote-prompt-nlm.md"
       ]
     },
     "_hangar/anki": {
@@ -3518,6 +3519,10 @@
       "isHidden": false
     },
     "_TABnote-ref.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/tsk_tabnote-prompt-nlm.md": {
       "isPinned": false,
       "isHidden": false
     }

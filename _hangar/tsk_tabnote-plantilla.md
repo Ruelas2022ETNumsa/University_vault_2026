@@ -175,7 +175,7 @@ Restricciones:
 10. [ ] El usuario prueba la plantilla en clase real
 11. [ ] Ajustes post-prueba (si los hay — retomar explicando el problema)
 12. [x] Documentar plantilla final como archivo de referencia `_TABnote-ref.md`
-13. [ ] Crear prompt de transcripción para NLM (basado en MAT101-transcription.md adaptado a tablet)
+13. [x] Separar prompt NLM a tsk independiente → `tsk_tabnote-prompt-nlm.md`
 
 ---
 
@@ -193,7 +193,7 @@ Restricciones:
 - [ ] Prueba real en clase
 - [ ] Ajustes post-prueba si los hay
 - [x] Archivo de referencia final `_TABnote-ref.md` en vault
-- [ ] Prompt NLM para tablet
+- [x] Prompt NLM separado a tsk independiente → `tsk_tabnote-prompt-nlm.md`
 
 ---
 
