@@ -7,14 +7,14 @@ fleet: sistema-movil
 blocked_by:
 ---
 
-> [!info] alx_gml — 2026-08-04
-> Template diseñado y exportado a Samsung Notes. Listo para prueba en clase. Si requiere ediciones se retoma explicando el problema puntual. Pendiente: prueba real → `_TABnote-ref.md`.
+> [!info] alx_gml — 2026-08-05
+> Template v1 especificado en detalle y documentado en borrador. Catálogo de símbolos tablet cerrado. Borrador en `_TABnote-template-draft.md` en raíz del vault. Pendiente: prueba real en clase → ajustes → `_TABnote-ref.md`.
 
 ## Handoff
 
-**Última sesión:** 2026-08-04 17:49 → cierre
-**Completado esta sesión:** Resolución de 4 preguntas abiertas, convenciones de identificador de página, running header, marginalia en tablet, notas adhesivas, herramientas descartadas, diseño completo del template en Excalidraw (cuadrícula, Cornell, áurea, cruces), exportado a Samsung Notes
-**Próximo paso:** Prueba del template en clase real → si hay problemas se retoma con descripción del problema → documentar `_TABnote-ref.md`
+**Última sesión:** 2026-08-05 → cierre
+**Completado esta sesión:** Resolución de 4 preguntas abiertas, convenciones de identificador de página, running header, marginalia en tablet, notas adhesivas, herramientas descartadas, diseño completo del template en Excalidraw (cuadrícula 44×56 de 4mm, Cornell, áurea, subdivisiones internas, cruces segmentadas), exportado a Samsung Notes en 3 variantes, catálogo de símbolos tablet cerrado, borrador de especificaciones completo creado
+**Próximo paso:** Prueba del template en clase real → si hay problemas se retoma describiendo el problema puntual → documentar `_TABnote-ref.md`
 
 ---
 
@@ -47,7 +47,10 @@ Diseñar una plantilla estándar para tomar apuntes en Samsung Notes (tablet S6 
 | 2026-08-04 | Marginalia en tablet: línea de resaltador desde elemento al margen | Conector visual; NLM ignora la línea, lee solo el texto marginal |
 | 2026-08-04 | Notación marginalia: `[!, nota]` `[?, nota]` etc. | Prefijo dentro de corchete; NLM reconoce y transcribe; se convierte en marginalia Obsidian al transcribir |
 | 2026-08-04 | Flecha de ubicación en marginalia | Flecha + subrayado indica el elemento exacto al que pertenece la nota marginal |
-| 2026-08-04 | Template TABnote v1 diseñado en Excalidraw | Página A4 (2100×2970 u.), cuadrícula 18×26 cuadrados de 5mm, márgenes definidos, zonas Cornell (segmentadas) y áureas (punteadas), recuadros de running header y nº de página |
+| 2026-08-04 | Template TABnote v1 diseñado en Excalidraw | Página A4, cuadrícula 44×56 recuadros de 4mm, márgenes 15mm externos + 2mm internos (1mm inferior), divisiones Cornell y áureas segmentadas, recuadros de running header (88×9mm) y nº de página (7×7mm) |
+| 2026-08-05 | Catálogo de símbolos tablet cerrado | 9 símbolos de 1 carácter, cualquier color, sin guiones: `!` `?` `X` `V` `C` `F` `R` `T` `*` |
+| 2026-08-05 | Símbolos al margen: resaltador que sobrepasa el borde | Línea de resaltador desde el contenido hasta fuera del margen; símbolo escrito en el margen externo; ambos lados válidos |
+| 2026-08-05 | Borrador de especificaciones del template creado | `_TABnote-template-draft.md` en raíz del vault — detalla todas las medidas, divisiones internas y sistema de símbolos |
 | 2026-08-04 | 3 variantes del template cargadas en Samsung Notes | White theme (modo claro) · Dark theme (modo oscuro, sin fondo para aprovechar el modo de Notes) · Sin cuadrícula (para imprimir en tareas) |
 | 2026-08-04 | Grosor S Pen con nueva cuadrícula (18 cuad. ancho) | Texto: 5 · Subtítulos: 8 · Títulos/énfasis: 12 (punto de partida, ajustar en clase) |
 | 2026-08-04 | Template listo pero editable | Si algo no funciona en clase se edita en Excalidraw explicando el problema puntual; no se rediseña desde cero |
@@ -185,6 +188,8 @@ Restricciones:
 - [x] Resolver preguntas abiertas de diseño
 - [x] Sistema de marginalia tablet (notación + flujo transcripción)
 - [x] Diseño de cuadrícula del template (Excalidraw → PNG → Samsung Notes)
+- [x] Catálogo de símbolos tablet (9 símbolos, 1 carácter, cualquier color)
+- [x] Borrador de especificaciones completo (`_TABnote-template-draft.md`)
 - [ ] Prueba real en clase
 - [ ] Ajustes post-prueba si los hay
 - [ ] Archivo de referencia final `_TABnote-ref.md` en vault
@@ -200,3 +205,4 @@ Restricciones:
 - `E:\University_vault_2026\_app\_appnotes\cornell_guide.md`
 - `E:\University_vault_2026\_app\_appnotes\Marginalia_guide.md`
 - `E:\University_vault_2026\_app\notebooklm\prompts\MAT101\MAT101-transcription.md` ← base para el futuro prompt tablet
+- `E:\University_vault_2026\_TABnote-template-draft.md` ← borrador de especificaciones del template v1

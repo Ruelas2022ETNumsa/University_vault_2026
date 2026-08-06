@@ -20,7 +20,8 @@
         "Semestres",
         "Borrar",
         "README.md",
-        "Rubbish"
+        "Rubbish",
+        "_TABnote-template-draft.md"
       ]
     },
     "MOC": {
@@ -3505,6 +3506,10 @@
       "isHidden": false
     },
     "_hangar/tsk_tabnote-plantilla 1 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_TABnote-template-draft.md": {
       "isPinned": false,
       "isHidden": false
     }
