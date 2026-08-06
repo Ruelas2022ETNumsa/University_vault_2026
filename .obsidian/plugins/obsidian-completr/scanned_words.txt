@@ -26023,6 +26023,8 @@ Sobreescribe
 Separaci
 Sticky
 Subrayado
+Superior
+Subdivisi
 Plugins
 Pendientes
 Plugin
@@ -41111,6 +41113,9 @@ declara
 duplicados
 digitalizador
 documente
+delimita
+detalla
+delgada
 Vault
 Verificar
 Variables
@@ -49157,6 +49162,7 @@ VVRVV
 VGoe
 VCb
 Vqoo
+Vertical
 galaxy
 gina
 genes
@@ -57501,6 +57507,9 @@ gbrrJ
 gYL
 gestion
 gradual
+gidas
+generando
+grueso
 body
 beacon
 bat
@@ -73500,6 +73509,14 @@ stripear
 sssssss
 sintactico
 screenshot
+separan
+subgrilla
+subdividido
+subdivisi
+sobrepasa
+subdivisiones
+subdivide
+supernota
 vault
 vil
 ver
@@ -82054,6 +82071,7 @@ viables
 venir
 viewUrl
 viejo
+verticalmente
 audience
 activo
 auto
@@ -90080,6 +90098,7 @@ abort
 adoptable
 adhesivas
 adoptadas
+alizar
 related
 recomendados
 ribbon
@@ -98594,6 +98613,7 @@ refleje
 running
 resaltador
 recordatorios
+resaltadas
 notes
 notas
 nuevas
@@ -106605,6 +106625,7 @@ nIiZA
 nfztx
 nombrexdeck
 ntmh
+notable
 created
 commit
 cada
@@ -124599,6 +124620,9 @@ usala
 ubica
 urea
 ureas
+utilizable
+ureo
+ubique
 Galaxy
 Git
 Gr
@@ -132566,6 +132590,7 @@ GdFegFVW
 GjiKU
 Gestiona
 Guia
+Grilla
 Convenci
 Creaci
 Commander
@@ -148989,6 +149014,7 @@ Ibbal
 Instalacion
 Integracion
 Indic
+Inferior
 Funci
 File
 Fase
@@ -157117,6 +157143,7 @@ FWUX
 Funcional
 Foco
 Fusionar
+Franja
 Estado
 Excalidraw
 EPUBs
@@ -166041,6 +166068,8 @@ Establecer
 Empez
 Encabezado
 Espaciado
+Esquina
+Escrito
 Obsidian
 OmniSearch
 Ocultar
@@ -189673,6 +189702,7 @@ propietario
 proponer
 pasivamente
 preconfigurada
+proporci
 min
 mica
 movimiento
@@ -214391,6 +214421,7 @@ BOww
 Bloquea
 BLQcHK
 Busc
+Basada
 en
 exacta
 escaneados
@@ -223189,6 +223220,9 @@ entendi
 explicarlo
 efectivas
 explicando
+especificaciones
+escriben
+encierran
 Motor
 Media
 Mantiene
@@ -232517,6 +232551,8 @@ Mezcla
 Minimiza
 Mapear
 Memo
+Mitades
+Magnitudes
 Lectura
 LaTeX
 Linter
@@ -240540,6 +240576,7 @@ LbTf
 Lsxh
 LslG
 Limitacion
+Lado
 links
 las
 listar
@@ -257397,6 +257434,7 @@ instalacion
 intencional
 influye
 insertarla
+indistinto
 Dependencia
 Dropbox
 Dataview
@@ -265580,6 +265618,10 @@ DELAYED
 Delayed
 DELIVERED
 Delivered
+Divisiones
+Disponibles
+Delimitada
+Descartada
 Remotely
 Raz
 Revisa
@@ -274578,6 +274620,8 @@ Registrada
 Running
 Robusto
 Recordatorios
+Recuadros
+Resaltador
 Hider
 Hace
 Herramientas
@@ -281526,6 +281570,7 @@ Htww
 HJFp
 Hhdz
 HOk
+Horizontal
 filtrar
 formato
 faltantes
@@ -289217,6 +289262,7 @@ fixes
 fusiona
 falte
 fusi
+flexibilizar
 haya
 hace
 hacer
@@ -323433,6 +323479,7 @@ NIX
 NWRI
 NNUUU
 NSYp
+Numerado
 originales
 observatory
 oficial

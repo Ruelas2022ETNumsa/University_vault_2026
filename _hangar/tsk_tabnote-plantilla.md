@@ -2,9 +2,9 @@
 galaxy_body: ship
 project: "TABnote — Plantilla de apuntes tablet"
 date: 2026-08-03
-status: in-orbit
+status: delayed
 fleet: sistema-movil
-blocked_by:
+blocked_by: prueba real en clase — ajustes post-prueba antes de cerrar
 ---
 
 > [!info] alx_gml — 2026-08-05
@@ -174,7 +174,7 @@ Restricciones:
 9. [x] Diseñar cuadrícula del template (18×26 cuadrados de 5mm, A4, márgenes, Cornell + áurea)
 10. [ ] El usuario prueba la plantilla en clase real
 11. [ ] Ajustes post-prueba (si los hay — retomar explicando el problema)
-12. [ ] Documentar plantilla final como archivo de referencia `_TABnote-ref.md`
+12. [x] Documentar plantilla final como archivo de referencia `_TABnote-ref.md`
 13. [ ] Crear prompt de transcripción para NLM (basado en MAT101-transcription.md adaptado a tablet)
 
 ---
@@ -192,7 +192,7 @@ Restricciones:
 - [x] Borrador de especificaciones completo (`_TABnote-template-draft.md`)
 - [ ] Prueba real en clase
 - [ ] Ajustes post-prueba si los hay
-- [ ] Archivo de referencia final `_TABnote-ref.md` en vault
+- [x] Archivo de referencia final `_TABnote-ref.md` en vault
 - [ ] Prompt NLM para tablet
 
 ---
