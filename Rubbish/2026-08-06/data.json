@@ -21,8 +21,7 @@
         "Borrar",
         "README.md",
         "Rubbish",
-        "_TABnote-template-draft.md",
-        "_TABnote-ref.md"
+        "_TABnote-template-draft.md"
       ]
     },
     "MOC": {
@@ -3085,9 +3084,11 @@
         "blueprint",
         "_legacy",
         "dock",
+        "tsk_tabnote-plantilla.md",
         "anki",
         "bay",
-        "tsk_tabnote-plantilla.md"
+        "tsk_tabnote-plantilla 1.md",
+        "tsk_tabnote-plantilla 1 1.md"
       ]
     },
     "_hangar/anki": {
@@ -3437,6 +3438,10 @@
       "isPinned": false,
       "isHidden": false
     },
+    "_hangar/tsk_tabnote-plantilla.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
     "_skills/_start.md": {
       "isPinned": false,
       "isHidden": false
@@ -3451,9 +3456,8 @@
       "sortOrder": "custom",
       "customOrder": [
         "2026-08-04",
-        "2026-08-06",
-        "section.md",
-        "tmp"
+        "tmp",
+        "section.md"
       ]
     },
     "Rubbish/2026-08-04": {
@@ -3481,22 +3485,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-08-06": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-08-06/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/section.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Rubbish/tmp": {
       "isPinned": false,
       "isHidden": false,
@@ -3509,15 +3497,19 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_hangar/tsk_tabnote-plantilla.md": {
+    "Rubbish/section.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/tsk_tabnote-plantilla 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/tsk_tabnote-plantilla 1 1.md": {
       "isPinned": false,
       "isHidden": false
     },
     "_TABnote-template-draft.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_TABnote-ref.md": {
       "isPinned": false,
       "isHidden": false
     }

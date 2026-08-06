@@ -64,6 +64,17 @@ Cada bloque Cornell se subdivide internamente en 4 partes con líneas segmentada
 | Subtítulos | 8 |
 | Títulos / énfasis | 12 |
 
+### Grosor y opacidad por elemento
+
+| Elemento | G | O | O anterior |
+|---|---|---|---|
+| Título principal | 50 | 90 | 70 |
+| Subtítulo | 30 | 80 | 60 |
+| Línea fina (bajo título) | 1 | 100 | 100 |
+| Callout (caja) | 15 | 100 | 100 |
+
+> Valores anteriores registrados para restauración si la prueba no convence.
+
 ---
 
 ## 2. Jerarquía visual
