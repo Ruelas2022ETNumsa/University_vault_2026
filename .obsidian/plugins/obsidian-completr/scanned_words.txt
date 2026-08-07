@@ -8105,6 +8105,8 @@ transcriben
 tradicionales
 tratamiento
 traslaci
+textualmente
+trayectorias
 ToDo
 Templater
 Text
@@ -17010,6 +17012,7 @@ Toca
 Testear
 Trabaj
 Tape
+TULO
 Sistema
 Sync
 Save
@@ -26030,6 +26033,8 @@ Superior
 Subdivisi
 Science
 Safko
+SCHAUM
+Statics
 Plugins
 Pendientes
 Plugin
@@ -41131,6 +41136,9 @@ detalla
 delgada
 disipativos
 disipativas
+dynamics
+detectan
+divisorias
 Vault
 Verificar
 Variables
@@ -73537,6 +73545,8 @@ subdivisiones
 subdivide
 supernota
 sist
+schaums
+separadoras
 vault
 vil
 ver
@@ -90125,6 +90135,10 @@ accompany
 abstracto
 ambigua
 analog
+acompa
+angosta
+amplia
+aplicable
 related
 recomendados
 ribbon
@@ -106655,6 +106669,8 @@ nombrexdeck
 ntmh
 notable
 ndricas
+notorias
+ndulos
 created
 commit
 cada
@@ -115710,6 +115726,8 @@ cruces
 cuad
 convence
 conservativos
+cols
+cuerpos
 updated
 un
 universo
@@ -140155,6 +140173,7 @@ Charles
 CALLOUTS
 CONVENCIONES
 Conservative
+CARGADAS
 Instalados
 Instalado
 Instalar
@@ -149067,6 +149086,8 @@ Introductorias
 ISBN
 Instructor
 Interamericano
+IZQUIERDA
+Independiente
 Funci
 File
 Fase
@@ -174194,6 +174215,7 @@ ORBIT
 Obten
 Orientaci
 Observar
+OUTPUT
 Auto
 Annotator
 Autocompletado
@@ -198881,6 +198903,7 @@ modifican
 minimalistas
 mezcle
 mixtos
+mechanics
 YAML
 Ya
 You
@@ -223306,6 +223329,7 @@ explicando
 especificaciones
 escriben
 encierran
+escritas
 Motor
 Media
 Mantiene
@@ -240669,6 +240693,8 @@ Lado
 LaGrange
 Libertad
 LAGRANGE
+LimYung
+LITERAL
 links
 las
 listar
@@ -257529,6 +257555,7 @@ insertarla
 indistinto
 ignorarlos
 inferir
+inspeccionando
 Dependencia
 Dropbox
 Dataview
@@ -265721,6 +265748,7 @@ DISIPATIVOS
 Dare
 Dynamics
 Dissipative
+DERECHA
 Remotely
 Raz
 Revisa
@@ -274725,6 +274753,8 @@ Relevamiento
 RIGIDOS
 Rabah
 Rigid
+REVERT
+REVERTE
 Hider
 Hace
 Herramientas
@@ -289370,6 +289400,7 @@ fusi
 flexibilizar
 fina
 fuerzas
+franja
 haya
 hace
 hacer
@@ -315025,6 +315056,7 @@ UEYg
 Ultima
 Unico
 Unidades
+UREA
 Nombre
 Notas
 No
@@ -407460,6 +407492,7 @@ Zjkk
 ZYjd
 ZdqI
 ZlON
+ZONA
 zona
 zonas
 zT

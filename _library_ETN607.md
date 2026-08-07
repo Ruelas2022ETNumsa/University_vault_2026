@@ -135,17 +135,33 @@ Enseñar al estudiante la Dinámica Clásica mediante las ecuaciones de LaGrange
 
 ## Stack completo
 
-| Libro | Autor(es) | Edición / Año | Editorial | Rol | Idioma |
-|---|---|---|---|---|---|
-| Classical Mechanics | John R. Taylor | 1ª ed. — 2005 | University Science Books | Teoría principal | Inglés |
-| Mecánica Clásica | John R. Taylor | 1ª ed. española — 2005 | Editorial Reverté | Puente lingüístico (Taylor) | Español |
-| Instructor's Manual to accompany Classical Mechanics | John R. Taylor | 2005 | University Science Books | Soluciones del Taylor | Inglés |
-| Classical Mechanics | Herbert Goldstein, Charles P. Poole, John L. Safko | 3ª ed. — 2002 | Pearson / Addison-Wesley | Teoría rigurosa | Inglés |
-| Mecánica Clásica | Herbert Goldstein | 1ª ed. española — 1994 | Editorial Reverté | Puente lingüístico (Goldstein) | Español |
-| Schaum's Outline of Lagrangian Dynamics | Dare A. Wells | 1ª ed. — 1967 | McGraw-Hill / Schaum's | Problemas resueltos — libro central | Inglés |
-| Schaum's Outline of Engineering Mechanics: Dynamics | E. W. Nelson, Charles L. Best, W. G. McLean | 5ª ed. | McGraw-Hill / Schaum's | Problemas estándar — nivel de entrada | Inglés |
-| Problems and Solutions on Mechanics | Lim Yung-Kuo (ed.) | 1ª ed. — 1994 | World Scientific | Problemas difíciles | Inglés |
-| Mecánica Vol. 1 | M. Alonso, E. J. Finn | 1970 | Fondo Educativo Interamericano | Apoyo puntual T1–T2 (fundamentos) | Español |
+| Libro | Autor(es) | Edición / Año | Editorial | Rol | Archivo NLM | Idioma |
+|---|---|---|---|---|---|---|
+| Classical Mechanics (caps. 1–9) | John R. Taylor | 1ª ed. — 2005 | University Science Books | Teoría principal | `John R. Taylor-Classical mechanics-eng-1to9.pdf` | Inglés |
+| Classical Mechanics (caps. 10–16) | John R. Taylor | 1ª ed. — 2005 | University Science Books | Teoría principal | `John R. Taylor-Classical mechanics-eng-10to16.pdf` | Inglés |
+| Mecánica Clásica (caps. 1–9) | John R. Taylor | 1ª ed. española — 2005 | Editorial Reverté | Puente lingüístico (Taylor) | `John R. Taylor-Mecánica clásica-2005-ED REVERTÉ-esp-1to9.pdf` | Español |
+| Mecánica Clásica (caps. 10–16) | John R. Taylor | 1ª ed. española — 2005 | Editorial Reverté | Puente lingüístico (Taylor) | `John R. Taylor-Mecánica clásica-2005-ED REVERTÉ-esp-10to16.pdf` | Español |
+| Instructor's Manual to accompany Classical Mechanics | John R. Taylor | 2005 | University Science Books | Soluciones del Taylor | `John R. Taylor-Instructor's Manual to accompany Classical Mechanics-2005.pdf` | Inglés |
+| Classical Mechanics | Herbert Goldstein, Charles P. Poole, John L. Safko | 3ª ed. — 2002 | Pearson / Addison-Wesley | Teoría rigurosa | `Goldstein & Poole & Safko-Classical Mechanics-3th ed-Pearson.pdf` | Inglés |
+| Mecánica Clásica | Herbert Goldstein | 1ª ed. española — 1994 | Editorial Reverté | Puente lingüístico (Goldstein) | `H. Goldstein-Mecánica clásica-1994-ED REVERTE.pdf` | Español |
+| Schaum's Outline of Lagrangian Dynamics | Dare A. Wells | 1ª ed. — 1967 | McGraw-Hill / Schaum's | Problemas resueltos — libro central | `Dare A. Wells-SCHAUM'S Lagrangian Dynamics-McGraw-Hill.pdf` | Inglés |
+| Schaum's Outline of Engineering Mechanics: Dynamics | E. W. Nelson, Charles L. Best, W. G. McLean | 5ª ed. | McGraw-Hill / Schaum's | Problemas estándar — nivel de entrada | `Nelson & Best & McLean-schaums Statics and dynamics.pdf` | Inglés |
+| Problems and Solutions on Mechanics | Lim Yung-Kuo (ed.) | 1ª ed. — 1994 | World Scientific | Problemas difíciles | `LimYung-kuo-Problems and Solutions on Mechanics-1994.pdf` | Inglés |
+| Mecánica Vol. 1 | M. Alonso, E. J. Finn | 1970 | Fondo Educativo Interamericano | Apoyo puntual T1–T2 (fundamentos) | `Alonso & Finn-Mecánica_Vol 1-1970-.pdf` | Español |
+
+### Archivos divididos
+
+Taylor está dividido en dos partes. Usar el archivo que corresponde al capítulo:
+
+```
+John R. Taylor — Classical Mechanics (inglés)
+  caps. 1–9  → John R. Taylor-Classical mechanics-eng-1to9.pdf
+  caps. 10–16 → John R. Taylor-Classical mechanics-eng-10to16.pdf
+
+John R. Taylor — Mecánica Clásica (español)
+  caps. 1–9  → John R. Taylor-Mecánica clásica-2005-ED REVERTÉ-esp-1to9.pdf
+  caps. 10–16 → John R. Taylor-Mecánica clásica-2005-ED REVERTÉ-esp-10to16.pdf
+```
 
 ---
 

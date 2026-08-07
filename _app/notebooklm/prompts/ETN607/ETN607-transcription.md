@@ -35,7 +35,7 @@ página de forma evidente, leerlo como unidad continua antes de seguir.
 
 DETECCIÓN DE TÍTULOS:
 - Título principal: texto centrado, color #BB3E03, con resaltador lateral simétrico
-  y línea delgada debajo → ## en Markdown
+  y línea delgada debajo → # en Markdown (uno por archivo)
 - Subtítulo: texto con resaltador que llega hasta el borde derecho del área útil,
   color cálido variable, numerado (1., 2., 3...) → ## en Markdown
   (el número ancla el orden — preservarlo)
@@ -43,50 +43,43 @@ DETECCIÓN DE TÍTULOS:
 
 DETECCIÓN DE CALLOUTS:
 - Caja de 4 lados con grosor notable, primera línea "> Título"
-  → transcribir como callout Obsidian según catálogo:
-  · "> Ejercicio" → ##### Ej. [enunciado] (formato de ejemplo resuelto)
+  · "> Ejercicio" → ##### Ej. [enunciado]
   · "> Tarea"    → > [!important] Tarea: [contenido]
   · Otros títulos → > [!note] [Título]: [contenido]
 
 DETECCIÓN DE IMÁGENES (IMA):
-- Bloque delimitado por 2 líneas grises horizontales con texto "IMA · descripción"
-  en gris → NO transcribir el contenido visual
-  → incluir: > [!note] IMA · [descripción del pie] — pegar screenshot manualmente
-  → si NLM puede inferir una descripción breve del diagrama, agregarla como pie
+Bloque delimitado por 2 líneas grises con texto "IMA · descripción" en gris.
+→ NO transcribir el contenido visual
+→ incluir: ![[pegar_imagen]]
+            *IMA · [descripción del pie]*
+→ respetar la posición donde estaba en el apunte
 
 DETECCIÓN DE MARGINALIA:
-Línea de resaltador que sobrepasa el borde del área útil hacia el margen externo.
-El símbolo está escrito en el margen. Traducir según esta tabla:
+Línea de resaltador que sobrepasa el borde hacia el margen externo.
+Símbolo escrito en el margen. Traducir:
+! → %%> ! texto %%
+? → %%> ?- texto %%
+X → %%> X- texto %%
+V → %%> V- texto %%
+C → %%> C- texto %%
+F → %%> F- texto %%
+R → %%> R- texto %%
+T → %%> T- texto %%
+* → %%> C- revisar %%
 
-| Símbolo | Tag marginalia         | Callout equivalente si no aplica margen |
-|---------|------------------------|-----------------------------------------|
-| !       | %%> ! texto %%         | > [!important] texto                    |
-| ?       | %%> ?- texto %%        | > [!question] texto                     |
-| X       | %%> X- texto %%        | > [!warning] Corrección: texto          |
-| V       | %%> V- texto %%        | > [!check] texto                        |
-| C       | %%> C- texto %%        | > [!note] texto                         |
-| F       | %%> F- texto %%        | > [!note] Fórmula clave: texto          |
-| R       | %%> R- texto %%        | > [!note] Relación: texto               |
-| T       | %%> T- texto %%        | > [!important] Tarea: texto             |
-| *       | %%> C- revisar %%      | > [!warning] Revisar                    |
-
-REGLA: usar sintaxis %%> %% (marginalia inline) siempre que el símbolo esté
-claramente al margen. Usar callout solo si la posición es ambigua.
-T- es exclusivo de supernova — no heredar a notas derivadas.
+Usar callout solo si la posición es ambigua.
+T- exclusivo de supernova — no heredar a notas derivadas.
 _
-CONVENCIONES DE ESCRITURA DEL APUNTE:
-- valor[unidad] → preservar tal cual: 940[V], 470[Ω], 2[A]
-- ∴ → preservar como símbolo de síntesis al cerrar desarrollos
-- → ver Txx → preservar como referencia cruzada: → ver T03
-- Flechas con texto anotado → incluir como nota al pie del elemento
-- Flechas sin texto → ignorar
+CONVENCIONES DEL APUNTE:
+- valor[unidad] → preservar: 940[V], 470[Ω], 2[A]
+- ∴ → preservar como símbolo de síntesis
+- → ver Txx → preservar como referencia cruzada
+- Flechas con texto → nota al pie del elemento · Flechas sin texto → ignorar
 _
 BLOQUES CORNELL:
-Aplicar a subtítulos de teoría: definiciones, propiedades, procedimientos paso a paso.
-NO aplicar a ejemplos resueltos ni a bloques IMA.
-
-El ::note contiene la transcripción fiel del apunte.
-El ::cue y el [!summary] los completa NLM usando los libros fuente.
+Aplicar a subtítulos de teoría: definiciones, propiedades, procedimientos.
+NO aplicar a ejemplos resueltos ni bloques IMA.
+El ::note contiene la transcripción. El ::cue y [!summary] los completa NLM.
 
 ESTRUCTURA:
 
@@ -95,134 +88,99 @@ ESTRUCTURA:
 `````
 cornell
 ::cue
-[palabras clave separadas por · ]
-[2-4 preguntas centrales que el subtítulo responde]
-[fórmula o definición clave en inline $...$ — nunca display $$]
-[conexiones: ver también: X — sin corchetes]
-[errores comunes: no confundir X con Y — solo si aplica]
+[palabras clave · ]
+[2-4 preguntas centrales]
+[fórmula clave en inline $...$ — nunca display $$]
+[ver también: X — errores comunes si aplica]
 
 ::note
-[transcripción fiel del subtítulo: texto, fórmulas, convenciones y marginalia]
+[transcripción fiel: texto, fórmulas, convenciones, marginalia]
 `````
 
->[!summary] [una línea del subtítulo — sin redundancia con otros subtítulos]
+>[!summary] [una línea — sin redundancia]
 
-[ejemplos resueltos y bloques IMA van aquí, fuera del Cornell]
+[ejemplos resueltos e IMA van aquí, fuera del Cornell]
 
 REGLAS:
-- BUG NotebookLM: el identificador cornell va en línea separada de los backticks
-  (primero `````  salto de línea, luego cornell) — obligatorio
-- El título ## del subtítulo NO va dentro del bloque Cornell
-- Marginalia dentro de ::note: usar %%> %% inline junto al elemento que acompaña
-- Complemento y ejercicios de libros van SIEMPRE fuera del Cornell, después del [!summary]
-- Gráficas TikZJax dentro de ::note: tamaño normal
+- BUG: identificador cornell en línea separada de los backticks — obligatorio
+- Título ## NO va dentro del Cornell
+- Marginalia en ::note: %%> %% inline junto al elemento
+- Complemento y ejercicios SIEMPRE fuera del Cornell, después del [!summary]
 _
-NIVELES DE COMPLEMENTO:
-Va DESPUÉS del Cornell (fuera del bloque), con este formato exacto:
+COMPLEMENTO:
 > [!note] Complemento (Nivel B/C)
 >
 >   contenido...
 
-NIVEL B — Solo definición reforzada:
-- Agregar definición formal del libro si la del apunte es informal o incompleta.
-
-NIVEL C — Complemento completo:
-- Definición formal + propiedades omitidas + 1-2 ejercicios resueltos
-  extraídos de los libros fuente + gráfica TikZJax si aporta claridad.
-
-SIN EJERCICIOS aunque se pida C (aplicar B):
-- Definiciones y axiomas fundamentales sin procedimiento asociado.
-- Listas de propiedades puras.
-- Notación y convenciones formales.
-
-NIVEL C COMPLETO cuando:
-- El subtítulo tiene procedimiento aplicable: deducción de ecuaciones, despeje de variables.
-- El apunte ya tiene ejemplos → agregar uno de mayor dificultad de los libros.
-- Coordenadas, restricciones, grados de libertad con casos concretos.
-
-SIN REDUNDANCIA:
-- Cada subtítulo es independiente. No adelantar el siguiente.
-- No repetir definiciones previas — solo referenciarlas brevemente.
+NIVEL B: definición formal del libro si la del apunte es informal.
+NIVEL C: definición formal + propiedades omitidas + 1-2 ejercicios resueltos + gráfica si aplica.
+SIN ejercicios (aplicar B): axiomas, listas de propiedades puras, notación formal.
+NIVEL C cuando: procedimiento aplicable, coordenadas/restricciones con casos concretos,
+  apunte ya tiene ejemplos → agregar uno de mayor dificultad.
+Sin redundancia — cada subtítulo es independiente.
 _
 CUANDO ALGO NO SE ENTIENDE:
-Detenerse, indicar qué no se entiende y su posición exacta en el PDF
-(ej: "página 2, tercer renglón"). Esperar respuesta antes de continuar.
+Detenerse, indicar posición exacta en el PDF. Esperar respuesta.
 _
 JERARQUÍA MARKDOWN:
-# → Título principal del capítulo (uno por archivo).
-## → Subtítulo numerado (detección por resaltador + número).
-### → Sub-subtítulo solo si tiene desarrollo propio evidente.
-Nunca ### para ítems de listas.
+# → Título principal (uno por archivo) · ## → Subtítulo numerado
+### → Solo si hay sub-subtítulo con desarrollo propio evidente
 _
 FORMATO MATEMÁTICO:
-Preferir inline $...$. Usar display $$...$$ solo para:
-- Desarrollo multilínea, sistemas, resultado principal de un procedimiento.
-
-ESTRUCTURA ARRAY:
+Inline $...$ preferido. Display $$...$$ solo para multilínea:
 $$\begin{array}{rcl}
   \text{expr}_1 & = & \text{expr}_2 \\
                 & = & \text{expr}_3
 \end{array}$$
-
-REGLAS:
-- & separa columnas — siempre N-1 & para N columnas
-- \\ termina cada fila — la última fila no lleva \\
-- Texto dentro de math → \text{...}
-- Nunca convertir símbolos a texto si el apunte los presenta simbólicamente
+Reglas: & separa cols · \\ termina fila (última sin \\) · \text{} para texto en math
 _
 GRÁFICOS:
-La estrategia principal para esta materia es IMA (recorte manual de screenshot).
-TikZJax se usa solo cuando el diagrama es reproducible con código corto y limpio.
-
-1. IMA (estrategia principal):
-   Diagramas de sistemas físicos, cuerpos rígidos, trayectorias, péndulos,
-   restricciones, ángulos de Euler, diagramas complejos en general.
-   → > [!note] IMA · [descripción] — pegar screenshot manualmente
-
-2. TIKZJAX (uso selectivo):
-   Solo para: sistemas de coordenadas (cilíndricas, esféricas), diagramas de
-   cuerpo libre simples, esquemas geométricos básicos, circuitos eléctricos
-   simples (T7) con paquete circuitikz.
-
-   REGLAS MÍNIMAS:
-   · Identificador exacto: ```tikz — nunca latex, nunca tikzjax
-   · \begin{document} y \end{document} siempre presentes
-   · \documentclass NUNCA se incluye
-   · Paquetes con \usepackage{} ANTES de \begin{document}
-   · Si se usa \dfrac en nodos → cargar \usepackage{amsmath}
-   · Para circuitos (T7) → \usepackage{circuitikz}
-   · Color principal: teal / secundario: orange
-
-3. NUNCA inventar gráficos. NUNCA mezclar herramientas.
-   Si hay duda entre IMA y TikZJax → usar IMA.
+IMA es la estrategia principal — sistemas físicos, cuerpos rígidos, trayectorias,
+péndulos, restricciones, Euler, diagramas complejos → ![[pegar_imagen]] + pie.
+TikZJax solo para: coordenadas cilíndricas/esféricas, cuerpo libre simple,
+esquemas geométricos básicos, circuitos T7 con circuitikz.
+REGLAS TIKZJAX: ```tikz exacto · \begin{document} y \end{document} siempre ·
+\documentclass NUNCA · paquetes antes de \begin{document} ·
+circuitikz para T7 · color principal teal / secundario orange.
+Si hay duda → IMA. Nunca inventar. Nunca mezclar.
 _
 EJEMPLOS RESUELTOS:
-Van fuera del bloque Cornell, después del [!summary].
-##### Ej. enunciado en la misma línea.
-- Conservar numeración de partes del apunte.
-- No agregar pasos que no estén en el apunte.
-- Preservar valor[unidad] y ∴ tal cual aparecen.
-- Al final: > [!note] solo si hay observación relevante — no por defecto.
+##### Ej. enunciado en la misma línea — fuera del Cornell.
+Preservar numeración, valor[unidad] y ∴. No agregar pasos que no estén en el apunte.
+> [!note] solo si hay observación relevante — no por defecto.
 _
-NOTACIÓN LATEX: consultar ETN607_latex.md (fuente del notebook) si existe,
-o MAT101_latex.md como referencia base, para cancelaciones, cajas de resultado
-y desarrollos multilínea.
+NOTACIÓN LATEX: consultar ETN607_latex.md o MAT101_latex.md como base.
 _
-LIBROS PRIORITARIOS POR TEMA:
-Consultar siempre _library_ETN607.md (fuente del notebook) según el tema activo.
+FUENTES EN EL NOTEBOOK:
+apuntesTX · _library_ETN607.md · obsidian_notation.md
+Taylor (dividido):
+  John R. Taylor-Classical mechanics-eng-1to9.pdf
+  John R. Taylor-Classical mechanics-eng-10to16.pdf
+  John R. Taylor-Mecánica clásica-2005-ED REVERTÉ-esp-1to9.pdf
+  John R. Taylor-Mecánica clásica-2005-ED REVERTÉ-esp-10to16.pdf
+  John R. Taylor-Instructor's Manual to accompany Classical Mechanics-2005.pdf
+Goldstein & Poole & Safko-Classical Mechanics-3th ed-Pearson.pdf
+H. Goldstein-Mecánica clásica-1994-ED REVERTE.pdf
+Dare A. Wells-SCHAUM'S Lagrangian Dynamics-McGraw-Hill.pdf
+Nelson & Best & McLean-schaums Statics and dynamics.pdf
+LimYung-kuo-Problems and Solutions on Mechanics-1994.pdf
+Alonso & Finn-Mecánica_Vol 1-1970-.pdf
+_
+LIBROS POR TEMA:
+Taylor dividido: caps.1-9 → 1to9 · caps.10-16 → 10to16 (igual en español)
 
-— TEORÍA (transcripción + complemento) —
-T1–T2  Conceptos básicos:        Taylor Cap.1–2 · Alonso & Finn Vol.1
-T3–T4  Lagrange partícula/sist.: Taylor Cap.7 · Goldstein Cap.1–2
-T5     Sistemas conservativos:   Taylor Cap.7 · Goldstein Cap.1–2
-T6     Sistemas disipativos:     Taylor Cap.7 · Goldstein Cap.1
-T7     Circuitos eléctricos:     Wells Cap.7
-T8     Cuerpos rígidos:          Goldstein Cap.4–5 · Taylor Cap.10
-
-— EJERCICIOS (Mensaje 2) —
-T1–T2  Nelson Schaum's Dynamics Cap.11–13 · Wells Cap.1–2
-T3–T4  Wells Cap.2–5 · Lim — Mechanics of a Particle/System
-T5     Wells Cap.5–6 · Lim — Conservative Systems
-T6     Wells Cap.6  · Lim — Dissipative Systems
+TEORÍA:
+T1-T2  Taylor-1to9 Cap.1-2 · Alonso & Finn Vol.1
+T3-T4  Taylor-1to9 Cap.7 · Goldstein Cap.1-2
+T5     Taylor-1to9 Cap.7 y 4 · Goldstein Cap.1-2
+T6     Taylor-1to9 Cap.7 · Goldstein Cap.1
 T7     Wells Cap.7
-T8     Wells Cap.8–9 · Lim — Rigid Bodies
+T8     Goldstein Cap.4-5 · Taylor-10to16 Cap.10
+
+EJERCICIOS:
+T1-T2  Nelson Cap.11-13 · Wells Cap.1-2
+T3-T4  Wells Cap.2-5 · Lim Mechanics of a Particle/System
+T5     Wells Cap.5-6 · Lim Conservative Systems
+T6     Wells Cap.6 · Lim Dissipative Systems
+T7     Wells Cap.7
+T8     Wells Cap.8-9 · Lim Rigid Bodies
