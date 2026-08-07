@@ -135,17 +135,17 @@ Enseñar al estudiante la Dinámica Clásica mediante las ecuaciones de LaGrange
 
 ## Stack completo
 
-| Libro                                                | Autor(es)                                          | Edición / Año          | Editorial                      | Rol                                   | Idioma  |
-| ---------------------------------------------------- | -------------------------------------------------- | ---------------------- | ------------------------------ | ------------------------------------- | ------- |
-| Classical Mechanics                                  | ==John R. Taylor==                                 | 1ª ed. — 2005          | University Science Books       | Teoría principal                      | Inglés  |
-| Mecánica Clásica                                     | John R. Taylor                                     | 1ª ed. española — 2005 | Editorial Reverté              | Puente lingüístico (Taylor)           | Español |
-| Instructor's Manual to accompany Classical Mechanics | John R. Taylor                                     | 2005                   | University Science Books       | Soluciones del Taylor                 | Inglés  |
-| Classical Mechanics                                  | Herbert Goldstein, Charles P. Poole, John L. Safko | 3ª ed. — 2002          | Pearson / Addison-Wesley       | Teoría rigurosa                       | Inglés  |
-| Mecánica Clásica                                     | Herbert Goldstein                                  | 1ª ed. española — 1994 | Editorial Reverté              | Puente lingüístico (Goldstein)        | Español |
-| Schaum's Outline of Lagrangian Dynamics              | Dare A. Wells                                      | 1ª ed. — 1967          | McGraw-Hill / Schaum's         | Problemas resueltos — libro central   | Inglés  |
-| Schaum's Outline of Engineering Mechanics: Dynamics  | E. W. Nelson, Charles L. Best, W. G. McLean        | 5ª ed.                 | McGraw-Hill / Schaum's         | Problemas estándar — nivel de entrada | Inglés  |
-| Problems and Solutions on Mechanics                  | Lim Yung-Kuo (ed.)                                 | 1ª ed. — 1994          | World Scientific               | Problemas difíciles                   | Inglés  |
-| Mecánica Vol. 1                                      | M. Alonso, E. J. Finn                              | 1970                   | Fondo Educativo Interamericano | Apoyo puntual T1–T2 (fundamentos)     | Español |
+| Libro | Autor(es) | Edición / Año | Editorial | Rol | Idioma |
+|---|---|---|---|---|---|
+| Classical Mechanics | John R. Taylor | 1ª ed. — 2005 | University Science Books | Teoría principal | Inglés |
+| Mecánica Clásica | John R. Taylor | 1ª ed. española — 2005 | Editorial Reverté | Puente lingüístico (Taylor) | Español |
+| Instructor's Manual to accompany Classical Mechanics | John R. Taylor | 2005 | University Science Books | Soluciones del Taylor | Inglés |
+| Classical Mechanics | Herbert Goldstein, Charles P. Poole, John L. Safko | 3ª ed. — 2002 | Pearson / Addison-Wesley | Teoría rigurosa | Inglés |
+| Mecánica Clásica | Herbert Goldstein | 1ª ed. española — 1994 | Editorial Reverté | Puente lingüístico (Goldstein) | Español |
+| Schaum's Outline of Lagrangian Dynamics | Dare A. Wells | 1ª ed. — 1967 | McGraw-Hill / Schaum's | Problemas resueltos — libro central | Inglés |
+| Schaum's Outline of Engineering Mechanics: Dynamics | E. W. Nelson, Charles L. Best, W. G. McLean | 5ª ed. | McGraw-Hill / Schaum's | Problemas estándar — nivel de entrada | Inglés |
+| Problems and Solutions on Mechanics | Lim Yung-Kuo (ed.) | 1ª ed. — 1994 | World Scientific | Problemas difíciles | Inglés |
+| Mecánica Vol. 1 | M. Alonso, E. J. Finn | 1970 | Fondo Educativo Interamericano | Apoyo puntual T1–T2 (fundamentos) | Español |
 
 ---
 
@@ -160,6 +160,38 @@ Práctica lagrangiana      → Wells Schaum's
 Nivel examen              → Lim World Scientific
 Fundamentos T1–T2         → Alonso & Finn Vol.1
 ```
+
+---
+
+## Qué usar por tema — Teoría
+
+| Tema | 1ª opción | 2ª opción |
+|---|---|---|
+| T1 — Conceptos básicos I | Taylor Cap. 1 | Goldstein Cap. 1 |
+| T2 — Conceptos básicos II | Taylor Cap. 1–2 | Alonso & Finn Vol.1 Cap. 1–2 |
+| T3 — Lagrange partícula | Taylor Cap. 7 | Goldstein Cap. 1–2 |
+| T4 — Lagrange sistema de partículas | Taylor Cap. 7 | Goldstein Cap. 1–2 |
+| T5 — Sistemas conservativos | Taylor Cap. 7 y 4 | Goldstein Cap. 1–2 |
+| T6 — Sistemas disipativos | Taylor Cap. 7 | Goldstein Cap. 1 |
+| T7 — Circuitos eléctricos | Wells Cap. 7 | Goldstein Cap. 1 (analogías) |
+| T8 — Cuerpos rígidos + Euler | Goldstein Cap. 4–5 | Taylor Cap. 10 |
+
+---
+
+## Qué usar por tema — Ejercicios
+
+| Tema | 1ª opción | 2ª opción |
+|---|---|---|
+| T1 — Conceptos básicos I | Nelson Schaum's Dynamics Cap. 11–12 | Wells Cap. 1 |
+| T2 — Conceptos básicos II | Nelson Schaum's Dynamics Cap. 12–13 | Wells Cap. 2 |
+| T3 — Lagrange partícula | Wells Cap. 2–3 | Lim — sección Mechanics of a Particle |
+| T4 — Lagrange sistema de partículas | Wells Cap. 4–5 | Lim — sección Mechanics of a System |
+| T5 — Sistemas conservativos | Wells Cap. 5–6 | Lim — sección Conservative Systems |
+| T6 — Sistemas disipativos | Wells Cap. 6 | Lim — sección Dissipative Systems |
+| T7 — Circuitos eléctricos | Wells Cap. 7 | — (sin equivalente directo en Lim) |
+| T8 — Cuerpos rígidos + Euler | Wells Cap. 8–9 | Lim — sección Rigid Bodies |
+
+> Wells es referencia central de ejercicios desde T3 en adelante — sus capítulos son espejo del temario. Nelson entra fuerte en T1–T2 donde Wells asume demasiado conocimiento previo.
 
 ---
 
