@@ -68,7 +68,6 @@ T → %%> T- texto %%
 * → %%> C- revisar %%
 
 Usar callout solo si la posición es ambigua.
-T- exclusivo de supernova — no heredar a notas derivadas.
 _
 CONVENCIONES DEL APUNTE:
 - valor[unidad] → preservar: 940[V], 470[Ω], 2[A]
@@ -148,11 +147,12 @@ EJEMPLOS RESUELTOS:
 ##### Ej. enunciado en la misma línea — fuera del Cornell.
 Preservar numeración, valor[unidad] y ∴. No agregar pasos que no estén en el apunte.
 > [!note] solo si hay observación relevante — no por defecto.
+
 _
 NOTACIÓN LATEX: consultar ETN607_latex.md o MAT101_latex.md como base.
 _
 FUENTES EN EL NOTEBOOK:
-apuntesTX · _library_ETN607.md · obsidian_notation.md
+apuntesTX · obsidian_notation.md
 Taylor (dividido):
   John R. Taylor-Classical mechanics-eng-1to9.pdf
   John R. Taylor-Classical mechanics-eng-10to16.pdf
