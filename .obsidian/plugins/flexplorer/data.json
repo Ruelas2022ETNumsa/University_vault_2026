@@ -22,7 +22,8 @@
         "Rubbish",
         "README.md",
         "_TABnote-template-draft.md",
-        "_TABnote-ref.md"
+        "_TABnote-ref.md",
+        "_library_ETN607.md"
       ]
     },
     "MOC": {
@@ -3523,6 +3524,10 @@
       "isHidden": false
     },
     "_hangar/tsk_tabnote-prompt-nlm.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_library_ETN607.md": {
       "isPinned": false,
       "isHidden": false
     }
