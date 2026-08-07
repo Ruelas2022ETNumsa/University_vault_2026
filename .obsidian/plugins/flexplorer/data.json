@@ -23,7 +23,9 @@
         "README.md",
         "_TABnote-template-draft.md",
         "_TABnote-ref.md",
-        "_library_ETN607.md"
+        "_library_ETN607.md",
+        "Untitled.md",
+        "_assets"
       ]
     },
     "MOC": {
@@ -3535,8 +3537,35 @@
     "_app/notebooklm/prompts/ETN607": {
       "isPinned": false,
       "isHidden": false,
-      "customOrder": [],
+      "customOrder": [
+        "ETN607-transcription.md"
+      ],
       "sortOrder": "custom"
+    },
+    "_app/notebooklm/prompts/ETN607/ETN607-transcription.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "Untitled-07-08-2026_16-58-24.png",
+        "Untitled-07-08-2026_16-58-26.png"
+      ],
+      "sortOrder": "custom"
+    },
+    "_assets/Untitled-07-08-2026_16-58-24.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/Untitled-07-08-2026_16-58-26.png": {
+      "isPinned": false,
+      "isHidden": false
     }
   },
   "pinnedFiles": [
