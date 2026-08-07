@@ -2454,7 +2454,8 @@
       "sortOrder": "custom",
       "customOrder": [
         "ETN806",
-        "MAT101"
+        "MAT101",
+        "ETN607"
       ]
     },
     "_app/notebooklm/prompts/ETN806": {
@@ -3530,6 +3531,12 @@
     "_library_ETN607.md": {
       "isPinned": false,
       "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN607": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [],
+      "sortOrder": "custom"
     }
   },
   "pinnedFiles": [
