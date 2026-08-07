@@ -137,7 +137,7 @@ Enseñar al estudiante la Dinámica Clásica mediante las ecuaciones de LaGrange
 
 | Libro                                                | Autor(es)                                          | Edición / Año          | Editorial                      | Rol                                   | Idioma  |
 | ---------------------------------------------------- | -------------------------------------------------- | ---------------------- | ------------------------------ | ------------------------------------- | ------- |
-| Classical Mechanics                                  | John R. Taylor                                     | 1ª ed. — 2005          | University Science Books       | Teoría principal                      | Inglés  |
+| Classical Mechanics                                  | ==John R. Taylor==                                 | 1ª ed. — 2005          | University Science Books       | Teoría principal                      | Inglés  |
 | Mecánica Clásica                                     | John R. Taylor                                     | 1ª ed. española — 2005 | Editorial Reverté              | Puente lingüístico (Taylor)           | Español |
 | Instructor's Manual to accompany Classical Mechanics | John R. Taylor                                     | 2005                   | University Science Books       | Soluciones del Taylor                 | Inglés  |
 | Classical Mechanics                                  | Herbert Goldstein, Charles P. Poole, John L. Safko | 3ª ed. — 2002          | Pearson / Addison-Wesley       | Teoría rigurosa                       | Inglés  |
