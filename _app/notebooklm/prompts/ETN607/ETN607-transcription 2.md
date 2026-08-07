@@ -10,7 +10,7 @@ FUENTES DE REFERENCIA: consultar _library_ETN607.md (fuente del notebook) para
 criterio de selección, capítulos y páginas exactas de cada libro por tema.
 _
 FLUJO DE TRABAJO:
-PDF del tema completo cargado como fuente apuntesTX. Tres mensajes posibles:
+PDF del tema completo cargado como fuente apuntesTX. Dos mensajes por subtítulo:
 
 MENSAJE 1 — Transcripción + complemento:
 "De apuntesTX, muéstrame subtítulo Y [HASTA subtítulo Z] con complemento nivel B/C"
@@ -18,27 +18,10 @@ MENSAJE 1 — Transcripción + complemento:
 → si no se indica HASTA, detenerse al detectar cualquier nuevo subtítulo
 → NO adelantar el subtítulo siguiente
 
-MENSAJE 2 — Ejercicios de libros (solo si el usuario lo pide):
+MENSAJE 2 — Ejercicios (solo si el usuario lo pide):
   "De apuntesTX, subtítulo Y, muéstrame ejercicios resueltos"
-  → ejercicios de los libros fuente según tema
-  → si hay gráfica relevante: citá libro, capítulo y página (ej: "Fig. X, Wells Cap.3 p.47")
-  → si NLM no puede localizar la figura con certeza: omitir — no inventar
+  → ejercicios de los libros fuente según tema, con gráficas si aplica
   → NO repetir transcripción ni complemento ya entregado
-
-MENSAJE 3 — Ejercicios del cuaderno (solo si el usuario lo pide):
-  "De apuntesTX, muéstrame el ejercicio [enunciado/ec inicial] hasta [enunciado/ec final]"
-  → buscar los ejercicios en el PDF por su enunciado o ecuación inicial (no por subtítulo)
-  → transcribir resolución completa entre ambos puntos indicados
-  → si hay gráfica en el apunte: citá figura equivalente del libro fuente
-    (libro, capítulo, página) — si no existe con certeza, omitir
-  → formato idéntico al Mensaje 2: ##### Ej., array LaTeX
-  → complemento nivel B/C va después si el usuario lo pide
-  → NO repetir transcripción ni complemento ya entregado
-_
-ESTILO DE TRANSCRIPCIÓN:
-- Corregir ortografía y errores evidentes de notación matemática.
-- El apunte es el esqueleto — mantener fidelidad al orden y contenido original.
-- Corrección importante → nota breve al final de esa sección.
 _
 PLANTILLA DE APUNTE — TABnote simple:
 Los apuntes están tomados en Samsung Notes con plantilla TABnote en formato simple:
@@ -74,8 +57,16 @@ Bloque delimitado por 2 líneas grises con texto "IMA · descripción" en gris.
 DETECCIÓN DE MARGINALIA:
 Línea de resaltador que sobrepasa el borde hacia el margen externo.
 Símbolo escrito en el margen. Traducir:
-! %%> ! texto %% · ? %%> ?- texto %% · X %%> X- texto %% · V %%> V- texto %%
-C %%> C- texto %% · F %%> F- texto %% · R %%> R- texto %% · T %%> T- texto %% · * %%> C- revisar %%
+! → %%> ! texto %%
+? → %%> ?- texto %%
+X → %%> X- texto %%
+V → %%> V- texto %%
+C → %%> C- texto %%
+F → %%> F- texto %%
+R → %%> R- texto %%
+T → %%> T- texto %%
+* → %%> C- revisar %%
+
 Usar callout solo si la posición es ambigua.
 _
 CONVENCIONES DEL APUNTE:
@@ -160,20 +151,23 @@ Preservar numeración, valor[unidad] y ∴. No agregar pasos que no estén en el
 _
 NOTACIÓN LATEX: consultar ETN607_latex.md o MAT101_latex.md como base.
 _
-FUENTES Y LIBROS POR TEMA:
-apuntesTX · obsidian_notation.md · _library_ETN607.md
+FUENTES EN EL NOTEBOOK:
+apuntesTX · obsidian_notation.md
 Taylor (dividido):
-  caps.1-9   → John R. Taylor-Classical mechanics-eng-1to9.pdf
-  caps.10-16 → John R. Taylor-Classical mechanics-eng-10to16.pdf
-  (esp) caps.1-9   → John R. Taylor-Mecánica clásica-2005-ED REVERTÉ-esp-1to9.pdf
-  (esp) caps.10-16 → John R. Taylor-Mecánica clásica-2005-ED REVERTÉ-esp-10to16.pdf
-  soluciones → John R. Taylor-Instructor's Manual to accompany Classical Mechanics-2005.pdf
-Goldstein (inglés): Goldstein & Poole & Safko-Classical Mechanics-3th ed-Pearson.pdf
-Goldstein (esp):   H. Goldstein-Mecánica clásica-1994-ED REVERTE.pdf
-Wells:   Dare A. Wells-SCHAUM'S Lagrangian Dynamics-McGraw-Hill.pdf
-Nelson:  Nelson & Best & McLean-schaums Statics and dynamics.pdf
-Lim:     LimYung-kuo-Problems and Solutions on Mechanics-1994.pdf
-Alonso:  Alonso & Finn-Mecánica_Vol 1-1970-.pdf
+  John R. Taylor-Classical mechanics-eng-1to9.pdf
+  John R. Taylor-Classical mechanics-eng-10to16.pdf
+  John R. Taylor-Mecánica clásica-2005-ED REVERTÉ-esp-1to9.pdf
+  John R. Taylor-Mecánica clásica-2005-ED REVERTÉ-esp-10to16.pdf
+  John R. Taylor-Instructor's Manual to accompany Classical Mechanics-2005.pdf
+Goldstein & Poole & Safko-Classical Mechanics-3th ed-Pearson.pdf
+H. Goldstein-Mecánica clásica-1994-ED REVERTE.pdf
+Dare A. Wells-SCHAUM'S Lagrangian Dynamics-McGraw-Hill.pdf
+Nelson & Best & McLean-schaums Statics and dynamics.pdf
+LimYung-kuo-Problems and Solutions on Mechanics-1994.pdf
+Alonso & Finn-Mecánica_Vol 1-1970-.pdf
+_
+LIBROS POR TEMA:
+Taylor dividido: caps.1-9 → 1to9 · caps.10-16 → 10to16 (igual en español)
 
 TEORÍA:
 T1-T2  Taylor-1to9 Cap.1-2 · Alonso & Finn Vol.1
@@ -190,5 +184,3 @@ T5     Wells Cap.5-6 · Lim Conservative Systems
 T6     Wells Cap.6 · Lim Dissipative Systems
 T7     Wells Cap.7
 T8     Wells Cap.8-9 · Lim Rigid Bodies
-_
-SALTOS DE LÍNEA: texto compacto, sin líneas vacías innecesarias. El apunte siempre tiene prioridad.
