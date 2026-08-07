@@ -5,15 +5,11 @@ scope: vault
 audience: usuario
 related_notes:
   - "[[_config/_library-system]]"
-
 tags: [beacon, library, ETN607, infraestructura]
 date_created: 2026-08-07
 date_updated: 2026-08-07
-status: desarollo
+status: activo
 ---
-
-
-
 
 ## Objetivo de la materia
 
@@ -27,7 +23,7 @@ Enseñar al estudiante la Dinámica Clásica mediante las ecuaciones de LaGrange
 
 - Introducción.- Curso de Mecánica Clásica
 - Objetivo.- Estudio Movimiento Cuerpos
-- Métodos.- Newton, LaGrange, Euler, D’Alembert y Hamilton.
+- Métodos.- Newton, LaGrange, Euler, D'Alembert y Hamilton.
 - Enfoque
 - Origen.-
 - De los conceptos y magnitudes básicas.-
@@ -98,8 +94,8 @@ Enseñar al estudiante la Dinámica Clásica mediante las ecuaciones de LaGrange
 - Definición de Trabajo
 - Primer método para hallar fuerzas generalizadas disipativas
 - Definición de Función Potencia
-	 - Segundo método para hallar fuerzas generalizadas disipativas
-	 - Expresiones comunes de la Función Potencia
+	 - Segundo método para hallar fuerzas generalizadas disipativas
+	 - Expresiones comunes de la Función Potencia
 - Fuerzas generalizadas como derivadas de la Función Potencia
 - Ecuaciones de LaGrange para sistemas disipativos
 - Sistemas mixtos: conservativos y disipativos
@@ -115,7 +111,7 @@ Enseñar al estudiante la Dinámica Clásica mediante las ecuaciones de LaGrange
 - Fuerzas Generalizadas
 - Ejemplos de aplicación
 
-### T8 — ECUACIONES DE LAGRANGE PARACUERPOS RIGIDOS
+### T8 — ECUACIONES DE LAGRANGE PARA CUERPOS RIGIDOS
 
 - Introducción
 - Fundamentos Básicos
@@ -127,8 +123,56 @@ Enseñar al estudiante la Dinámica Clásica mediante las ecuaciones de LaGrange
 - La energía cinética haciendo uso de ejes de dirección fija
 - Movimiento de un cuerpo rígido con relación a un marco de referencia en traslación y rotación
 
+---
+
 ## Bibliografía del docente
 
 - Dinámica de LaGrange. Autor Dare A. Wells. Ed Schaum
-- Lagrangian Mechanics. Autor:Anh Le van, Rabah Bouzidi. ISBN:9781786304360
-- An Introduction to Lagrangian Mechanics. Autor A. Brizard. St Michael’s College
+- Lagrangian Mechanics. Autor: Anh Le Van, Rabah Bouzidi. ISBN: 9781786304360
+- An Introduction to Lagrangian Mechanics. Autor A. Brizard. St Michael's College
+
+---
+
+## Stack completo
+
+| Libro                                                | Autor(es)                                          | Edición / Año          | Editorial                      | Rol                                   | Idioma  |
+| ---------------------------------------------------- | -------------------------------------------------- | ---------------------- | ------------------------------ | ------------------------------------- | ------- |
+| Classical Mechanics                                  | John R. Taylor                                     | 1ª ed. — 2005          | University Science Books       | Teoría principal                      | Inglés  |
+| Mecánica Clásica                                     | John R. Taylor                                     | 1ª ed. española — 2005 | Editorial Reverté              | Puente lingüístico (Taylor)           | Español |
+| Instructor's Manual to accompany Classical Mechanics | John R. Taylor                                     | 2005                   | University Science Books       | Soluciones del Taylor                 | Inglés  |
+| Classical Mechanics                                  | Herbert Goldstein, Charles P. Poole, John L. Safko | 3ª ed. — 2002          | Pearson / Addison-Wesley       | Teoría rigurosa                       | Inglés  |
+| Mecánica Clásica                                     | Herbert Goldstein                                  | 1ª ed. española — 1994 | Editorial Reverté              | Puente lingüístico (Goldstein)        | Español |
+| Schaum's Outline of Lagrangian Dynamics              | Dare A. Wells                                      | 1ª ed. — 1967          | McGraw-Hill / Schaum's         | Problemas resueltos — libro central   | Inglés  |
+| Schaum's Outline of Engineering Mechanics: Dynamics  | E. W. Nelson, Charles L. Best, W. G. McLean        | 5ª ed.                 | McGraw-Hill / Schaum's         | Problemas estándar — nivel de entrada | Inglés  |
+| Problems and Solutions on Mechanics                  | Lim Yung-Kuo (ed.)                                 | 1ª ed. — 1994          | World Scientific               | Problemas difíciles                   | Inglés  |
+| Mecánica Vol. 1                                      | M. Alonso, E. J. Finn                              | 1970                   | Fondo Educativo Interamericano | Apoyo puntual T1–T2 (fundamentos)     | Español |
+
+---
+
+## Flujo de uso
+
+```
+Tema nuevo                → Taylor inglés (o Mecánica Clásica Reverté si preferís español)
+No entiendo el fondo      → Goldstein 3ª ed.
+Terminología en español   → Taylor Reverté · Goldstein Reverté
+Empezar a practicar       → Nelson et al. Schaum's Dynamics
+Práctica lagrangiana      → Wells Schaum's
+Nivel examen              → Lim World Scientific
+Fundamentos T1–T2         → Alonso & Finn Vol.1
+```
+
+---
+
+## Libros descartados
+
+| Libro | Autor(es) | Razón |
+|---|---|---|
+| Lagrangian Mechanics | Anh Le Van, Rabah Bouzidi | Reemplazado por Goldstein — enfoque más abstracto, orientado a robótica |
+| An Introduction to Lagrangian Mechanics | A. J. Brizard | Reemplazado por Taylor — débil en T7 y T8 |
+
+---
+
+%%
+# galaxy-links
+[[_app/_config/_library-system.md]]
+%%
