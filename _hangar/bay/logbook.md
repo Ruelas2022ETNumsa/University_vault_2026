@@ -10,6 +10,10 @@ date_updated: 2026-08-02
 
 Índice de workers activos y estado de operaciones del hangar.
 
+> rul aun no pego la guia en vault volver 11:20 dek 2026-8-7
+
+
+
 ---
 
 ## Panel de operaciones
@@ -19,7 +23,7 @@ date_updated: 2026-08-02
 | [[alx_hot.md]] |   ❌    |    🟢    | Sistema consulta móvil via Drive MCP              |    —     |   —   |    —    |
 |  [[krajo.md]]  |   ❌    |    🟢    | Implementación física `_hangar/`                  |    —     |   —   |    —    |
 | [[alx_gml.md]] |   ❌    |    🔴    | Sistema de links, sync y organización de carpetas | 2026-8-7 | 11:03 |  21:00  |
-| [[alxrul.md]]  |   ✔    |    🟡    | —                                                 | 2026-8-7 | 18:20 |    —    |
+| [[alxrul.md]]  |   ✔    |    🔴    | —                                                 | 2026-8-7 | 18:20 |    —    |
 | [[alx-rul.md]] |   ❌    |    🟢    | Cornell Marginalia → Galaxy                       |    —     |   —   |    —    |
 | [[standb.md]]  |   ✔    |    🟢    | —                                                 |    —     |   —   |    —    |
 | [[emergn.md]]  |   ✔    |    🟢    | —                                                 |    —     |   —   |    —    |

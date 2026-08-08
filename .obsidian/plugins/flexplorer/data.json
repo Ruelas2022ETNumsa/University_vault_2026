@@ -18,14 +18,14 @@
         "MOC",
         "Semesters",
         "Semestres",
+        "_assets",
         "Borrar",
         "Rubbish",
         "README.md",
         "_TABnote-template-draft.md",
         "_TABnote-ref.md",
         "_library_ETN607.md",
-        "Untitled.md",
-        "_assets"
+        "Untitled.md"
       ]
     },
     "MOC": {
@@ -3538,7 +3538,8 @@
       "isPinned": false,
       "isHidden": false,
       "customOrder": [
-        "ETN607-transcription.md"
+        "ETN607-transcription.md",
+        "ETN607-transcription-divisions.md"
       ],
       "sortOrder": "custom"
     },
@@ -3564,6 +3565,10 @@
       "isHidden": false
     },
     "_assets/Untitled-07-08-2026_16-58-26.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN607/ETN607-transcription-divisions.md": {
       "isPinned": false,
       "isHidden": false
     }

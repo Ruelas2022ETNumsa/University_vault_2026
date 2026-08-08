@@ -20,5 +20,6 @@
   "color-folders-files",
   "obsidian-excalidraw-plugin",
   "obsidian-to-anki-plugin",
-  "pdf-plus"
+  "pdf-plus",
+  "obsidian-tikzjax"
 ]
