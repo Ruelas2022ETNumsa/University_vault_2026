@@ -8108,6 +8108,7 @@ traslaci
 textualmente
 trayectorias
 topol
+track
 ToDo
 Templater
 Text
@@ -64637,6 +64638,8 @@ buscalo
 blicamente
 blueprints
 barrera
+bloquear
+bloqueando
 scope
 status
 selector
@@ -73561,6 +73564,8 @@ schaums
 separadoras
 suelo
 silla
+salud
+significativos
 vault
 vil
 ver
@@ -90160,6 +90165,10 @@ aislado
 angles
 articulaci
 accel
+avanzando
+alcanzados
+avances
+alcanzado
 related
 recomendados
 ribbon
@@ -98683,6 +98692,7 @@ rayas
 reaccion
 riel
 rbitas
+risk
 notes
 notas
 nuevas
@@ -189849,6 +189859,8 @@ pathmorphing
 pivote
 pozo
 punteado
+parado
+pego
 min
 mica
 movimiento
@@ -223385,6 +223397,7 @@ escritas
 eliminacion
 especificas
 elipse
+entenderlo
 Motor
 Media
 Mantiene
@@ -248173,6 +248186,7 @@ llame
 logbooks
 layouts
 lleguen
+logros
 incluyendo
 im
 instalar
@@ -257619,6 +257633,7 @@ inspeccionando
 intermitentemente
 incluyo
 inclinado
+impedimentos
 Dependencia
 Dropbox
 Dataview
@@ -281772,6 +281787,7 @@ Horizontal
 Hamilton
 Herbert
 Hola
+Hitos
 filtrar
 formato
 faltantes
@@ -297097,6 +297113,7 @@ habilit
 header
 heredar
 homocl
+hito
 que
 quedan
 queda

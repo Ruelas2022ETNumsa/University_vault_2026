@@ -42,7 +42,7 @@ Todas las divisiones son líneas segmentadas color `#CED4DA`. Las intersecciones
 | Título | 6 recuadros de alto desde el borde superior |
 | Preguntas / dudas | 13 recuadros de ancho desde el borde izquierdo |
 | Resumen | 10 recuadros de alto desde el borde inferior |
-| Desarrollo | resto del área |
+| Desarrollo | resto del área (31 recuadros de ancho × altura variable) |
 
 Hay dos líneas horizontales de Cornell: una contando el bloque de título (referencia con título) y otra sin él (referencia sin título), para flexibilizar el uso por página.
 

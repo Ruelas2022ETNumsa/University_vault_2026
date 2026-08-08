@@ -23,7 +23,7 @@ date_updated: 2026-08-02
 | [[alx_hot.md]] |   ❌    |    🟢    | Sistema consulta móvil via Drive MCP              |    —     |   —   |    —    |
 |  [[krajo.md]]  |   ❌    |    🟢    | Implementación física `_hangar/`                  |    —     |   —   |    —    |
 | [[alx_gml.md]] |   ❌    |    🔴    | Sistema de links, sync y organización de carpetas | 2026-8-7 | 11:03 |  21:00  |
-| [[alxrul.md]]  |   ✔    |    🔴    | —                                                 | 2026-8-7 | 18:20 |    —    |
+| [[alxrul.md]]  |   ✔    |    🟡    | —                                                 | 2026-8-8 | 16:40 |    —    |
 | [[alx-rul.md]] |   ❌    |    🟢    | Cornell Marginalia → Galaxy                       |    —     |   —   |    —    |
 | [[standb.md]]  |   ✔    |    🟢    | —                                                 |    —     |   —   |    —    |
 | [[emergn.md]]  |   ✔    |    🟢    | —                                                 |    —     |   —   |    —    |

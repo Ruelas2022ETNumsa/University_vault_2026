@@ -22,8 +22,6 @@
         "Borrar",
         "Rubbish",
         "README.md",
-        "_TABnote-template-draft.md",
-        "_TABnote-ref.md",
         "_library_ETN607.md",
         "Untitled.md"
       ]
@@ -3093,8 +3091,6 @@
         "dock",
         "anki",
         "bay",
-        "tsk_tabnote.md",
-        "tsk_tabnote-prompt-nlm.md",
         "TPL_TAB"
       ]
     },
@@ -3515,18 +3511,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_TABnote-template-draft.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_TABnote-ref.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_hangar/tsk_tabnote-prompt-nlm.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_library_ETN607.md": {
       "isPinned": false,
       "isHidden": false
@@ -3592,10 +3576,27 @@
     "_hangar/TPL_TAB": {
       "isPinned": false,
       "isHidden": false,
-      "customOrder": [],
+      "customOrder": [
+        "logbook.md",
+        "tsk_tabnote.md",
+        "tsk_tabnote-prompt-nlm.md",
+        "_TABnote-ref.md"
+      ],
       "sortOrder": "custom"
     },
-    "_hangar/tsk_tabnote.md": {
+    "_hangar/TPL_TAB/tsk_tabnote.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/TPL_TAB/tsk_tabnote-prompt-nlm.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/TPL_TAB/_TABnote-ref.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/TPL_TAB/logbook.md": {
       "isPinned": false,
       "isHidden": false
     }
