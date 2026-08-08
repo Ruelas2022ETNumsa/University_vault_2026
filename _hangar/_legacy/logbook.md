@@ -1,7 +1,7 @@
 ---
 galaxy_body: logbook
 scope: legacy
-date_updated: 2026-08-03
+date_updated: 2026-08-08
 ---
 
 # Logbook — Legacy
@@ -34,6 +34,8 @@ Orden: más antigua arriba, más actual abajo. %%
 | [[_hangar/_legacy/tsk_color-folders-files.md]]      | Color Folders and Files                       | 2026-07-31 |
 | [[_hangar/_legacy/tsk_update_notebooklm_system.md]] | Actualizar `_notebooklm-system.md`            | 2026-08-01 |
 | [[_hangar/_legacy/tsk_config-ia-workers.md]]        | Configuración de nombre único por IA en workers | 2026-08-03 |
+| [[_hangar/_legacy/tsk_logbook_dock.md]]             | Actualizar tsk + crear logbook dock            | 2026-08-02 |
+| [[_hangar/_legacy/tsk_update-rclone.md]]            | Sync Rclone `_assets/` + Drive MCP móvil       | 2026-08-08 |
 
 ---
 

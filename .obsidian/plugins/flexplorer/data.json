@@ -1251,7 +1251,8 @@
         "_template-system.md",
         "_ToDo-system.md",
         "_skill-system.md",
-        "_prompt-system.md"
+        "_prompt-system.md",
+        "_galaxy-system 2.md"
       ]
     },
     "_app/_config/_basic-memory-system.md": {
@@ -2836,7 +2837,8 @@
         "_start_movil.md",
         "_repaso_movil.md",
         "_plan_movil.md",
-        "_start.md"
+        "_start.md",
+        "_claude-boot 1.md"
       ]
     },
     "_skills/_claude-boot.md": {
@@ -3159,7 +3161,6 @@
         "_library_ETN825.md",
         "tsk_library_ETN825.md",
         "tsk_operator_reload_display.md",
-        "tsk_logbook_dock.md",
         "tsk_movil_drive.md"
       ]
     },
@@ -3226,10 +3227,12 @@
       "sortOrder": "custom",
       "customOrder": [
         "logbook.md",
+        "tsk_update-rclone.md",
         "tsk_snippet_templater.md",
         "tsk_update_notebooklm_system.md",
         "tsk_supercharged-dual-icons.md",
         "tsk_color-folders-files.md",
+        "tsk_logbook_dock.md",
         "tsk_config-ia-workers.md"
       ]
     },
@@ -3414,10 +3417,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_hangar/dock/tsk_logbook_dock.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_hangar/dock/logbook.md": {
       "isPinned": false,
       "isHidden": false
@@ -3569,6 +3568,22 @@
       "isHidden": false
     },
     "_app/notebooklm/prompts/ETN607/ETN607-transcription-divisions.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_config/_galaxy-system 2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_skills/_claude-boot 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/_legacy/tsk_update-rclone.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/_legacy/tsk_logbook_dock.md": {
       "isPinned": false,
       "isHidden": false
     }
