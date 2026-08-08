@@ -3093,8 +3093,9 @@
         "dock",
         "anki",
         "bay",
-        "tsk_tabnote-plantilla.md",
-        "tsk_tabnote-prompt-nlm.md"
+        "tsk_tabnote.md",
+        "tsk_tabnote-prompt-nlm.md",
+        "TPL_TAB"
       ]
     },
     "_hangar/anki": {
@@ -3205,6 +3206,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "_ideas_1_mcp-reemplazo-github.md",
         "_ideas_1_apps_2brain.md",
         "_ideas_0_shellcmd.md"
       ]
@@ -3513,10 +3515,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_hangar/tsk_tabnote-plantilla.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_TABnote-template-draft.md": {
       "isPinned": false,
       "isHidden": false
@@ -3584,6 +3582,20 @@
       "isHidden": false
     },
     "_hangar/_legacy/tsk_logbook_dock.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/blueprint/_ideas_1_mcp-reemplazo-github.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/TPL_TAB": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [],
+      "sortOrder": "custom"
+    },
+    "_hangar/tsk_tabnote.md": {
       "isPinned": false,
       "isHidden": false
     }

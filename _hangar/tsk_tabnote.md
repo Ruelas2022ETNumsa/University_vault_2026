@@ -1,6 +1,6 @@
 ---
-galaxy_body: ship
-project: "TABnote — Plantilla de apuntes tablet"
+galaxy_body: carrier
+project: "TABnote"
 date: 2026-08-03
 status: delayed
 fleet: sistema-movil
@@ -197,6 +197,17 @@ Restricciones:
 
 ---
 
+## Archivos del carrier
+
+| Archivo | Tipo | Estado | Descripción |
+| ------- | ---- | ------ | ----------- |
+| `tsk_tabnote.md` | carrier | delayed | Este archivo — plantilla TABnote y sistema de apuntes |
+| `logbook.md` | logbook | — | README histórico del proyecto |
+| `chronicle.md` | chronicle | — | Registro cronológico de pruebas |
+| `tsk_tabnote-prompt-nlm.md` | dropship | docked | Prompt de transcripción NLM para tablet |
+
+---
+
 ## Recursos
 
 - `E:\University_vault_2026\_app\_config\_notebooklm-system.md`
@@ -206,3 +217,4 @@ Restricciones:
 - `E:\University_vault_2026\_app\_appnotes\Marginalia_guide.md`
 - `E:\University_vault_2026\_app\notebooklm\prompts\MAT101\MAT101-transcription.md` ← base para el futuro prompt tablet
 - `E:\University_vault_2026\_TABnote-template-draft.md` ← borrador de especificaciones del template v1
+- `E:\University_vault_2026\_TABnote-ref.md` ← referencia definitiva del sistema TABnote v1

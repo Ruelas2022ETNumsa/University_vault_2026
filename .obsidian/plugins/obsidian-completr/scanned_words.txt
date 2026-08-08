@@ -8107,6 +8107,7 @@ tratamiento
 traslaci
 textualmente
 trayectorias
+topol
 ToDo
 Templater
 Text
@@ -17013,6 +17014,8 @@ Testear
 Trabaj
 Tape
 TULO
+Trayectoria
+Tensi
 Sistema
 Sync
 Save
@@ -26036,6 +26039,8 @@ Safko
 SCHAUM
 Statics
 Skill
+Suelo
+Separatriz
 Plugins
 Pendientes
 Plugin
@@ -33621,6 +33626,9 @@ PARACUERPOS
 Poole
 Preservar
 Particle
+Peso
+Pivote
+Pared
 del
 date
 de
@@ -41140,6 +41148,7 @@ disipativas
 dynamics
 detectan
 divisorias
+decorations
 Vault
 Verificar
 Variables
@@ -49189,6 +49198,7 @@ Vqoo
 Vertical
 Validez
 Varilla
+Verticales
 galaxy
 gina
 genes
@@ -64626,6 +64636,7 @@ bloqueados
 buscalo
 blicamente
 blueprints
+barrera
 scope
 status
 selector
@@ -73548,6 +73559,8 @@ supernota
 sist
 schaums
 separadoras
+suelo
+silla
 vault
 vil
 ver
@@ -90141,6 +90154,12 @@ angosta
 amplia
 aplicable
 alineado
+aceleraci
+amortiguador
+aislado
+angles
+articulaci
+accel
 related
 recomendados
 ribbon
@@ -98658,6 +98677,12 @@ recordatorios
 resaltadas
 restauraci
 rotaci
+reacci
+resorte
+rayas
+reaccion
+riel
+rbitas
 notes
 notas
 nuevas
@@ -106673,6 +106698,7 @@ notable
 ndricas
 notorias
 ndulos
+ntricas
 created
 commit
 cada
@@ -115730,6 +115756,11 @@ convence
 conservativos
 cols
 cuerpos
+coordenada
+coord
+curvo
+cuerda
+conc
 updated
 un
 universo
@@ -132646,6 +132677,8 @@ Generalizadas
 Grados
 Goldstein
 GENES
+Gradiente
+Grado
 Convenci
 Creaci
 Commander
@@ -140176,6 +140209,7 @@ CALLOUTS
 CONVENCIONES
 Conservative
 CARGADAS
+Cuerda
 Instalados
 Instalado
 Instalar
@@ -181859,6 +181893,8 @@ Addison
 Alonso
 APUNTE
 Activacion
+Arco
+Amortiguador
 push
 pull
 para
@@ -189807,6 +189843,12 @@ preservarlo
 preservar
 podria
 personalizaciones
+pared
+patterns
+pathmorphing
+pivote
+pozo
+punteado
 min
 mica
 movimiento
@@ -198911,6 +198953,7 @@ minimalistas
 mezcle
 mixtos
 mechanics
+markings
 YAML
 Ya
 You
@@ -223341,6 +223384,7 @@ encierran
 escritas
 eliminacion
 especificas
+elipse
 Motor
 Media
 Mantiene
@@ -232677,6 +232721,9 @@ Marcos
 Mechanics
 McLean
 MARGINALIA
+Masas
+Masa
+Momento
 Lectura
 LaTeX
 Linter
@@ -240706,6 +240753,7 @@ Libertad
 LAGRANGE
 LimYung
 LITERAL
+Longitudes
 links
 las
 listar
@@ -257570,6 +257618,7 @@ inferir
 inspeccionando
 intermitentemente
 incluyo
+inclinado
 Dependencia
 Dropbox
 Dataview
@@ -274769,6 +274818,8 @@ Rabah
 Rigid
 REVERT
 REVERTE
+Resorte
+Riel
 Hider
 Hace
 Herramientas
@@ -297045,6 +297096,7 @@ habia
 habilit
 header
 heredar
+homocl
 que
 quedan
 queda
@@ -305910,6 +305962,7 @@ qBSF
 qOtXpI
 quedo
 quizzes
+quotes
 University
 Usar
 Un

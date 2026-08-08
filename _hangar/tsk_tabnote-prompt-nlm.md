@@ -1,9 +1,9 @@
 ---
-galaxy_body: ship
-project: "TABnote — Prompt de transcripción NLM"
-date: 2026-08-05
+galaxy_body: dropship
+carrier: "[[_hangar/TPL_TAB/tsk_tabnote.md]]"
+scope: prueba
 status: docked
-fleet: sistema-movil
+date: 2026-08-05
 blocked_by: prueba real en clase — necesario saber cómo responde NLM al PDF de Samsung Notes antes de escribir el prompt
 ---
 
