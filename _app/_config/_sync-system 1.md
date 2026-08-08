@@ -14,7 +14,7 @@ tags:
   - github
   - infraestructura
 date_created: 2026-05-28
-date_updated: 2026-08-08
+date_updated: 2026-07-10
 status: activo
 ---
 
@@ -25,7 +25,7 @@ status: activo
 
 ## Objetivo
 
-Que Claude pueda leer notas `.md` del vault de Obsidian desde cualquier dispositivo. Desde PC se usa el MCP Filesystem (lectura y escritura directa). Desde movil/tablet se usa el MCP de Google Drive como canal principal de consulta — el vault se sincroniza hacia Drive via Rclone. GitHub actua como backup del vault via Obsidian Git.
+Que Claude pueda leer, crear y editar notas `.md` del vault de Obsidian directamente desde GitHub, sin depender de que la PC esté encendida. El vault local en PC se sincroniza automáticamente con GitHub mediante Obsidian Git y con Mega para distribución entre dispositivos.
 
 > ✅ **Migración completada (2026-06-13):** Se migró completamente de Google Drive a **Mega**. Google Drive fue eliminado por completo — TAB_nexus, symlinks y toda sincronización con Drive han sido removidos. La carpeta `_PDF` dentro del vault reemplaza a TAB_nexus. La cuenta Mega es exclusiva para el vault. La migración se realizó sin problemas — las carpetas fueron reconocidas automáticamente sin resubirse.
 
@@ -193,11 +193,9 @@ Obsidian Git detecta cambio → auto-commit + push → GitHub actualizado
 
 ---
 
-### 3. MCP — GitHub (Backup del vault)
+### 3. MCP — GitHub (Conector remoto)
 
 **Estado:** Activo — `https://api.githubcopilot.com/mcp` **No requiere PC encendida.**
-
-> **Rol actual (2026-08-08):** backup del vault. El canal de consulta remota desde movil/tablet es el MCP de Google Drive. El MCP de GitHub se mantiene operativo pero su uso como canal de consulta fue reemplazado por Drive MCP. En evaluacion para eliminacion futura — ocupa un slot de MCP personalizado que podria usarse para otros servicios.
 
 #### ¿Qué puede hacer?
 
@@ -242,26 +240,7 @@ Obsidian Git detecta cambio → auto-pull → vault local actualizado
 
 ---
 
-### 4. MCP — Google Drive (Canal de consulta movil/tablet)
-
-**Estado:** Activo — conector Google Drive conectado en Claude.ai. **No requiere PC encendida.**
-
-> **Rol actual (2026-08-08):** canal principal de consulta remota desde movil/tablet. El vault se sincroniza hacia Drive via Rclone (cada 5 horas, alineado con Samsung Sync). Claude lee archivos `.md` e imagenes desde Drive. Las imagenes no se muestran inline — Claude entrega un link de Drive que el usuario abre directamente como propietario de la cuenta. La escritura desde movil no usa Drive — se hace via GitHub MCP o se descarga el archivo generado en chat.
-
-#### Skills activos para uso movil
-
-| Skill | Activacion | Rol |
-|---|---|---|
-| `_start_movil.md` | `/drive` en instrucciones de Claude | Inicio de sesion movil via Drive MCP |
-| `_repaso_movil.md` | Desde `_start_movil` | Auxiliar de estudio |
-| `_plan_movil.md` | Desde `_start_movil` | Planificacion desde movil |
-
-> Skills completos: `E:\University_vault_2026\_skills\`
-> Configuracion completa de Rclone: [[Rclone_guide]]
-
----
-
-## Sincronización Rclone — Vault completo hacia Google Drive (desde 2026-07-10, actualizado 2026-08-08)
+## Sincronización Rclone — Vault completo hacia Google Drive (desde 2026-07-10, actualizado 2026-07-19)
 
 Rclone sincroniza el **vault completo** hacia la raíz de Google Drive como canal de lectura para Claude desde móvil/tablet. No reemplaza a Mega ni a Git — cada herramienta cumple un rol distinto.
 
@@ -271,7 +250,7 @@ Rclone sincroniza el **vault completo** hacia la raíz de Google Drive como cana
 | Remote configurado | `gdrive` (Google Drive, cuenta personal)                     |
 | Origen             | `E:\University_vault_2026\` (vault completo, con exclusiones) |
 | Destino en Drive   | Raíz de `gdrive:` — preserva rutas relativas del vault       |
-| Frecuencia         | Automático a las 12:05, 17:05 y 22:05 vía Task Scheduler — alineado con Samsung Sync (12:00, 17:00, 22:00) |
+| Frecuencia         | Automático cada 5 horas vía Task Scheduler (`rclone sync vault`) |
 | Consumo            | Mínimo — proceso que corre segundos y termina, no permanente |
 
 > `NotebookLM_sources/` fue eliminada de Drive (2026-07-19) — el sync general del vault cubre `_app/notebooklm/`.

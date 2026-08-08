@@ -47,6 +47,7 @@ project: nombre corto del ship que está cargado — dejar vacío si status: fre
 | 2026-08-03 | `_start_movil.md` independiente de `_start.md` | Sistemas distintos, sin dependencia |
 | 2026-08-03 | Archivos nuevos desde móvil via chat → descarga manual | Rclone es unidireccional |
 | 2026-08-03 | Templates se leen desde Drive al crear ships/blueprints | Evita duplicar estructura en el skill |
+| 2026-08-08 | `_assets/` sincronizada con Rclone hacia Drive | Estaba excluida pero rclone la borraba intermitentemente. Se incluyo en el sync — operativo sin problemas. Imagenes visibles en Drive. |
 
 > [!note]- Descartadas
 > - Rclone `drive_s/` con copy inverso — rompe fuente de verdad única
@@ -65,7 +66,7 @@ project: nombre corto del ship que está cargado — dejar vacío si status: fre
 7. - [ ] Prueba end-to-end modo repaso desde Galaxy
 8. - [ ] Prueba end-to-end modo plan desde Galaxy
 9. - [ ] Decidir fusión `_claude-drive.md` + `_start_movil.md`
-10. - [ ] Evaluar sync `_assets/` con Rclone
+10. - [x] Evaluar sync `_assets/` con Rclone — operativo en Drive sin problemas (2026-08-08)
 11. - [ ] Crear `_claude_movil.md`
 12. - [ ] Evaluar índice de materias en `Semesters/`
 13. - [ ] Evaluar renombre de `_repaso_movil.md`
@@ -88,7 +89,7 @@ project: nombre corto del ship que está cargado — dejar vacío si status: fre
 - [ ] Prueba end-to-end modo repaso desde Galaxy
 - [ ] Prueba end-to-end modo plan desde Galaxy
 - [ ] Decidir fusión `_claude-drive.md` + `_start_movil.md`
-- [ ] Evaluar sync `_assets/` con Rclone
+- [x] Evaluar sync `_assets/` con Rclone — operativo en Drive sin problemas (2026-08-08)
 - [ ] Crear `_claude_movil.md`
 - [ ] Evaluar índice de materias en `Semesters/`
 - [ ] Evaluar renombre de `_repaso_movil.md`
@@ -98,7 +99,7 @@ project: nombre corto del ship que está cargado — dejar vacío si status: fre
 ## Preguntas abiertas
 
 - ¿`_claude-drive.md` se mantiene o se fusiona con `_start_movil.md`?
-- ¿Rclone puede sincronizar `_assets/` sin problemas con imágenes pesadas?
+- `_assets/` en fase de prueba — sync operativo, pendiente validar comportamiento con imagenes pesadas.
 - ¿Renombrar `_repaso_movil.md`? Opciones: `_auxiliar_movil.md`, `_estudio_movil.md`
 - ¿El índice de materias en `Semesters/` es ship nuevo o tarea dentro de este tsk?
 
