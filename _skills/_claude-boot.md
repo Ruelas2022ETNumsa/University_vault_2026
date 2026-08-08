@@ -331,6 +331,7 @@ Leer el beacon específico según el tema:
 | Prompts y guías NotebookLM por materia                   | `_app/notebooklm/`                                                 |
 | Cornell Notes + Marginalia                               | `_app/_appnotes/cornell_guide.md`                                  |
 | Skills de Claude (work, plan, close, setup, boot)        | `_skills/`                                                         |
+| Skills móviles Drive MCP (consulta/repaso desde móvil)    | `_skills/_start_movil.md`, `_skills/_repaso_movil.md`, `_skills/_plan_movil.md` |
 | Sistema de proyectos (`_hangar/`, ships, carriers, operators, dock) | `_app/_config/_projects_system.md` |
 
 ### Si el usuario está en móvil sin PC encendida
