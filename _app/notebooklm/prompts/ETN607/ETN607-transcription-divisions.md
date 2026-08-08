@@ -10,7 +10,7 @@ FUENTES DE REFERENCIA: consultar _library_ETN607.md (fuente del notebook) para
 criterio de selección, capítulos y páginas exactas de cada libro por tema.
 _
 FLUJO DE TRABAJO:
-PDF del tema completo cargado como fuente apuntesTX. Dos mensajes por subtítulo:
+PDF del tema completo cargado como fuente apuntesTX. Tres mensajes posibles:
 
 MENSAJE 1 — Transcripción + complemento:
 "De apuntesTX, muéstrame subtítulo Y [HASTA subtítulo Z] con complemento nivel B/C"
@@ -18,10 +18,27 @@ MENSAJE 1 — Transcripción + complemento:
 → si no se indica HASTA, detenerse al detectar cualquier nuevo subtítulo
 → NO adelantar el subtítulo siguiente
 
-MENSAJE 2 — Ejercicios (solo si el usuario lo pide):
+MENSAJE 2 — Ejercicios de libros (solo si el usuario lo pide):
   "De apuntesTX, subtítulo Y, muéstrame ejercicios resueltos"
-  → ejercicios de los libros fuente según tema, con gráficas si aplica
+  → ejercicios de los libros fuente según tema
+  → si hay gráfica relevante: citá libro, capítulo y página (ej: "Fig. X, Wells Cap.3 p.47")
+  → si NLM no puede localizar la figura con certeza: omitir — no inventar
   → NO repetir transcripción ni complemento ya entregado
+
+MENSAJE 3 — Ejercicios del cuaderno (solo si el usuario lo pide):
+  "De apuntesTX, muéstrame el ejercicio [enunciado/ec inicial] hasta [enunciado/ec final]"
+  → buscar los ejercicios en el PDF por su enunciado o ecuación inicial (no por subtítulo)
+  → transcribir resolución completa entre ambos puntos indicados
+  → si hay gráfica en el apunte: citá figura equivalente del libro fuente
+    (libro, capítulo, página) — si no existe con certeza, omitir
+  → formato idéntico al Mensaje 2: ##### Ej., array LaTeX
+  → complemento nivel B/C va después si el usuario lo pide
+  → NO repetir transcripción ni complemento ya entregado
+_
+ESTILO DE TRANSCRIPCIÓN:
+- Corregir ortografía y errores evidentes de notación matemática.
+- El apunte es el esqueleto — mantener fidelidad al orden y contenido original.
+- Corrección importante → nota breve al final de esa sección.
 _
 DETECCIÓN DE PLANTILLA:
 Antes de transcribir cualquier subtítulo, detectar qué plantilla está activa
@@ -153,6 +170,7 @@ REGLAS:
 - La transcripción en ::cue y ::note es LITERAL — no reformular
 - Si la zona corta está vacía → ::cue vacío, NLM no inventa contenido
 - Si la zona resumen está vacía → [!summary] vacío, NLM no inventa contenido
+- Complemento NLM: SIEMPRE presente — es lo que NLM aporta para compensar que ::cue ya fue llenado por el alumno
 - El Complemento NLM y el Complemento B/C van SIEMPRE fuera del Cornell
 - Ejemplos resueltos del apunte van fuera del Cornell, entre [!summary] y Complemento NLM
 _
@@ -225,6 +243,8 @@ Van fuera del Cornell, entre [!summary] y Complemento NLM.
 _
 NOTACIÓN LATEX: consultar ETN607_latex.md (fuente del notebook) si existe,
 o MAT101_latex.md como referencia base.
+_
+SALTOS DE LÍNEA: texto compacto, sin líneas vacías innecesarias. El apunte siempre tiene prioridad.
 _
 FUENTES CARGADAS EN EL NOTEBOOK:
 Nombres exactos de archivo tal como están importados en NotebookLM:
