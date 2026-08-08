@@ -21,8 +21,8 @@ status: activo
 
 - [ ] Temario completo entregado a Claude
 - [ ] Bibliografía sugerida por el docente evaluada
-- [ ] Stack aprobado → ver `[[_app/_config/_library-system]]`
-- [ ] `_library_<% subject %>.md` creado en `_app/_config/`
+- [ ] Stack aprobado → ver `[[_app/_config/_library-system]]` + `[[Semesters/template/tpl-w-library]]`
+- [ ] `_library_<% subject %>.md` creado en `Semesters/Sem_0<% sem %>/<% subject %>/`
 
 ---
 

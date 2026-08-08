@@ -22,7 +22,6 @@
         "Borrar",
         "Rubbish",
         "README.md",
-        "_library_ETN607.md",
         "Untitled.md"
       ]
     },
@@ -39,7 +38,9 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "Sem_01"
+        "template",
+        "Sem_01",
+        "Sem_04"
       ]
     },
     "Semestres": {
@@ -1236,7 +1237,6 @@
         "_pdf_pp-system.md",
         "_TAB_note-system.md",
         "_claude-matter-boot.md",
-        "_library_MAT101.md",
         "_basic-memory-system.md",
         "_excalidraw-system.md",
         "_galaxy-system.md",
@@ -2401,10 +2401,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_app/_config/_library_MAT101.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_app/notebooklm": {
       "isPinned": false,
       "isHidden": false,
@@ -2596,6 +2592,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "_library_MAT101.md",
         "Partial_1"
       ]
     },
@@ -3158,7 +3155,8 @@
         "_library_ETN825.md",
         "tsk_library_ETN825.md",
         "tsk_operator_reload_display.md",
-        "tsk_movil_drive.md"
+        "tsk_movil_drive.md",
+        "tsk_vault-infra.md"
       ]
     },
     "_hangar/dock/tsk_library_ETN825.md": {
@@ -3511,10 +3509,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_library_ETN607.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_app/notebooklm/prompts/ETN607": {
       "isPinned": false,
       "isHidden": false,
@@ -3580,7 +3574,8 @@
         "logbook.md",
         "tsk_tabnote.md",
         "tsk_tabnote-prompt-nlm.md",
-        "_TABnote-ref.md"
+        "_TABnote-ref.md",
+        "chronicle.md"
       ],
       "sortOrder": "custom"
     },
@@ -3597,6 +3592,50 @@
       "isHidden": false
     },
     "_hangar/TPL_TAB/logbook.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/TPL_TAB/chronicle.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/dock/tsk_vault-infra.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/template": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "tpl-w-library.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "Semesters/template/tpl-w-library.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "ETN607"
+      ],
+      "sortOrder": "custom"
+    },
+    "Semesters/Sem_04/ETN607": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "_library_ETN607.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "Semesters/Sem_04/ETN607/_library_ETN607.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_01/MAT101/_library_MAT101.md": {
       "isPinned": false,
       "isHidden": false
     }

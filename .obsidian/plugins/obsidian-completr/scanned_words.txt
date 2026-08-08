@@ -17017,6 +17017,7 @@ Tape
 TULO
 Trayectoria
 Tensi
+Terminolog
 Sistema
 Sync
 Save
@@ -41150,6 +41151,8 @@ dynamics
 detectan
 divisorias
 decorations
+dates
+dividirlo
 Vault
 Verificar
 Variables
@@ -73566,6 +73569,7 @@ suelo
 silla
 salud
 significativos
+seria
 vault
 vil
 ver
@@ -115771,6 +115775,7 @@ coord
 curvo
 cuerda
 conc
+conocimientos
 updated
 un
 universo
@@ -140220,6 +140225,8 @@ CONVENCIONES
 Conservative
 CARGADAS
 Cuerda
+CAPinicio
+CAPfin
 Instalados
 Instalado
 Instalar
@@ -223398,6 +223405,7 @@ eliminacion
 especificas
 elipse
 entenderlo
+entiendo
 Motor
 Media
 Mantiene
@@ -323709,6 +323717,7 @@ Numerado
 NICA
 NIMO
 Nelson
+NOMBRE
 originales
 observatory
 oficial

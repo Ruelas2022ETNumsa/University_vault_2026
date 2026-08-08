@@ -9,7 +9,7 @@ related_notes:
   - "[[_ToDo-system]]"
 tags: [beacon, library, infraestructura]
 date_created: 2026-06-25
-date_updated: 2026-07-02
+date_updated: 2026-08-08
 status: activo
 ---
 
@@ -41,6 +41,7 @@ El stack final debe cubrir exactamente estos tres roles. No más, no menos:
 |---|---|---|
 | **Teoría + Ejemplos** | 1 libro principal + 1 riguroso | Cubre todo el temario con explicaciones y ejemplos resueltos |
 | **Problemas resueltos** | 1-2 libros | Solo ejercicios con soluciones paso a paso, sin teoría necesariamente |
+| **Puente lingüístico** | 1 libro (opcional) | Versión en español del libro principal — mismo contenido, terminología en español para NLM. Puede ser traducción oficial o libro de autor hispanohablante de nivel equivalente |
 | **Complemento opcional** | 1 libro máximo | Solo si existe un hueco real que los anteriores no cubren |
 
 ---
@@ -50,12 +51,14 @@ El stack final debe cubrir exactamente estos tres roles. No más, no menos:
 Cada libro recomendado debe presentarse así:
 
 ```
-**Título completo oficial** — Autor(es) completos — Edición recomendada
+**Título completo oficial** — Autor(es) completos — Editorial — Edición recomendada
 Idioma original: [idioma]
-Rol en el stack: [Teoría principal / Teoría rigurosa / Problemas / Complemento]
+Rol en el stack: [Teoría principal / Teoría rigurosa / Problemas / Puente lingüístico / Complemento]
 Por qué este libro: [2-3 líneas justificando su lugar en el stack]
 Edición alternativa aceptable: [si aplica]
-Libro alternativo si no se consigue: [título — autor — edición]
+Libro alternativo (opción 1) si no se consigue: [título — autor — editorial — edición]
+Libro alternativo (opción 2) si tampoco se consigue: [título — autor — editorial — edición]
+Puente lingüístico sugerido: [título en español — autor — editorial — edición] (si aplica)
 ```
 
 ---
@@ -77,8 +80,9 @@ Siempre explicar la razón. Nunca descartar sin justificación.
 1. **Sin redundancia** — si dos libros cubren lo mismo, quedarse con el mejor y descartar el otro
 2. **Sin acumulación innecesaria** — más libros no es mejor aprendizaje
 3. **El idioma no importa** — el usuario trabaja con NotebookLM, que procesa cualquier idioma
-4. **Siempre dar edición exacta** — título completo, autor(es) completos, número de edición
-5. **Siempre dar alternativa** — por cada libro recomendado, indicar qué usar si no se consigue
+4. **Siempre dar edición exacta** — título completo, autor(es) completos, editorial, número de edición
+5. **Siempre dar dos alternativas** — por cada libro recomendado, indicar opción 1 y opción 2 si no se consigue
+5b. **Siempre sugerir puente lingüístico** — buscar versión en español del libro principal (traducción oficial, editorial Reverté, Pearson Educación, etc.) o libro equivalente de autor hispanohablante
 6. **Priorizar libros con teoría Y ejemplos** — el libro principal nunca debe ser solo teoría o solo problemas
 7. **Los libros soviéticos son válidos** — editorial Mir, Piskunov, Demidovich, Maron, etc. son de alta calidad para ingeniería
 
@@ -181,4 +185,5 @@ Stewart 7ma español → 1to4  | 5to8  | 9to11
 [[_claude-boot]]
 [[_app/_config/_notebooklm-system.md]]
 [[_app/_config/_ToDo-system.md]]
+[[Semesters/template/tpl-w-library.md]]
 %%
