@@ -15,7 +15,7 @@ tags:
   - google-drive
   - infraestructura
 date_created: 2026-07-10
-date_updated: 2026-07-19
+date_updated: 2026-08-08
 status: activo
 ---
 
@@ -158,7 +158,7 @@ Sincroniza el vault completo hacia la raíz de Drive, excluyendo archivos pesado
 carpetas de sistema local y contenido irrelevante para consulta.
 
 ```bash
-rclone sync "E:\University_vault_2026" gdrive: --exclude "_PDF/**" --exclude "_assets/**" --exclude "Excalidraw/**" --exclude "_app/shellcommands/**" --exclude "_app/scripts/**" --exclude "_app/completr-words/**" --exclude "_app/_appnotes/tagroute_parche/**" --exclude "Borrar/**" --exclude "Rubbish/**" --exclude "Semestres/**" --exclude ".git/**" --exclude ".gitignore" --exclude ".gitattributes" --exclude ".cache/**" --exclude ".trash/**" --exclude ".obsidian/plugins/**" --exclude ".obsidian/scripts/**" --exclude ".obsidian/snippets/**" --exclude ".obsidian/themes/**" --exclude ".obsidian/cache/**" --exclude ".obsidian/workspace.json" --exclude ".obsidian/workspaces.json" --exclude ".obsidian/.trash/**" --filter "+ .obsidian/core-plugins.json" --filter "+ .obsidian/community-plugins.json" --verbose
+rclone sync "E:\University_vault_2026" gdrive: --exclude "_PDF/**" --exclude "_app/Excalidraw/**" --exclude "_app/shellcommands/**" --exclude "_app/scripts/**" --exclude "_app/completr-words/**" --exclude "_app/_appnotes/tagroute_parche/**" --exclude "Borrar/**" --exclude "Rubbish/**" --exclude "Semestres/**" --exclude "NotebookLM_sources/**" --exclude ".git/**" --exclude ".gitignore" --exclude ".gitattributes" --exclude ".cache/**" --exclude ".trash/**" --exclude ".obsidian/plugins/**" --exclude ".obsidian/scripts/**" --exclude ".obsidian/snippets/**" --exclude ".obsidian/themes/**" --exclude ".obsidian/cache/**" --exclude ".obsidian/workspace.json" --exclude ".obsidian/workspaces.json" --exclude ".obsidian/.trash/**" --filter "+ .obsidian/core-plugins.json" --filter "+ .obsidian/community-plugins.json" --verbose
 ```
 
 ### Qué se excluye y por qué
@@ -166,8 +166,7 @@ rclone sync "E:\University_vault_2026" gdrive: --exclude "_PDF/**" --exclude "_a
 | Excluido | Motivo |
 |---|---|
 | `_PDF/**` | Archivos pesados — cubiertos por Mega y Git |
-| `_assets/**` | Imágenes exportadas — pesadas, no útiles para consulta de texto |
-| `Excalidraw/**` | Archivos `.excalidraw` (JSON pesado) — no legibles como texto |
+| `_app/Excalidraw/**` | Archivos `.excalidraw` (JSON pesado) — no legibles como texto |
 | `_app/shellcommands/**` | Scripts con rutas locales y datos sensibles de la PC |
 | `_app/scripts/**` | Scripts JS locales — sin uso en consulta desde Drive |
 | `_app/completr-words/**` | Diccionario local del plugin Completr — irrelevante |
@@ -215,7 +214,7 @@ Dos tareas configuradas para ejecutar los syncs automáticamente.
 |---|---|
 | Nombre | `rclone sync vault` |
 | Descripción | `Sincroniza vault completo con Google Drive (canal de lectura)` |
-| Desencadenador | Diariamente a las 13:00, repite cada **5 horas** indefinidamente |
+| Desencadenador | Diariamente a las 12:05, repite cada **5 horas** indefinidamente (alineado con SamsungSync: 12:00, 17:00, 22:00) |
 | Programa | `E:\Programas\Rclone\rclone.exe` |
 | Argumentos | *(ver comando completo en sección anterior)* |
 | Iniciar en | `E:\Programas\Rclone` |
@@ -267,6 +266,9 @@ GitHub MCP permite crear/editar notas desde móvil → llegan al vault via Obsid
 | Solo `core-plugins.json` y `community-plugins.json` de `.obsidian/` | Suficiente para saber qué plugins están activos sin subir configuración local innecesaria |
 | `_app/shellcommands/` excluida | Contiene rutas locales de la PC y datos sensibles |
 | rclone.conf excluido de GitHub | Contiene token OAuth2 activo — no debe exponerse en un repositorio |
+| `_assets/` incluida en el sync (2026-08-08) | Estaba excluida pero rclone la borraba intermitentemente en Drive al intentar rmdir sobre ella. Se incluyo para estabilizar el sync. |
+| Horario cambiado de 13:00 a 12:05 (2026-08-08) | Alineado con las tareas SamsungSync (12:00, 17:00, 22:00) — rclone corre 5 min despues del sync de Samsung Notes para garantizar que las notas ya esten sincronizadas antes de subir a Drive. |
+| `Excalidraw/` movida de `_app/` a la raiz del vault (2026-08-08) | La carpeta cambio de ubicacion. La ruta en el comando se corrigio de `_app/Excalidraw/**` a `Excalidraw/**`. La carpeta en la raiz no se excluye del sync — se considera aceptable que sus archivos suban a Drive ya que son JSON legibles y no representan un peso significativo. La exclusion `_app/Excalidraw/**` se conserva en el comando como placeholder — aun no puesta en marcha, pero util si en el futuro se necesita excluir archivos especificos dentro de `_app/Excalidraw/` del sync. |
 
 ---
 
