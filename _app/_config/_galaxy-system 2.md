@@ -26,7 +26,7 @@ tags:
   - galaxy
   - infraestructura
 date_created: 2026-05-28
-date_updated: 2026-08-08
+date_updated: 2026-07-30
 status: activo
 ---
 
@@ -865,7 +865,6 @@ status: activo
 | `Excalidraw/` movida a la raíz del vault (2026-07-30) | El plugin de Excalidraw requiere la carpeta en la raíz para funcionar correctamente. Ya no vive en `_app/excalidraw/`. |
 | `_projects_system.md` como beacon dedicado (2026-07-30) | La complejidad del sistema de proyectos justifica un beacon propio. `_galaxy-system.md` referencia el subtipo y delega los detalles a `_projects_system.md`. |
 | `_relics/` como carpeta de archivo académico (2026-07-30) | Cada materia tiene su propia `_relics/` dentro de `ETNXXX/` para guardar carriers y ships completados con origen en esa materia. Separa el archivo académico del archivo general `_hangar/_legacy/` que recibe proyectos sin materia asociada. |
-| Drive MCP como canal de consulta móvil (2026-08-08) | El MCP de Google Drive reemplaza al MCP de GitHub como canal de consulta remota desde móvil/tablet. El vault se sincroniza hacia Drive via Rclone. Los skills `_start_movil.md`, `_repaso_movil.md` y `_plan_movil.md` en `_skills/` definen el comportamiento de Claude en sesiones móviles. Se activa con el comando `/drive` en las instrucciones del usuario. GitHub MCP queda como backup del vault. |
 
 ---
 

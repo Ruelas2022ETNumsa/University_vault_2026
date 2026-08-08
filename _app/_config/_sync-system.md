@@ -313,7 +313,9 @@ Rclone sincroniza el **vault completo** hacia la raíz de Google Drive como cana
 | `E:\University_vault_2026\_templates`                 | `/University_vault_2026/_templates`           |
 
 > `.obsidian` se sincroniza parcialmente — los archivos `workspace.json`, `workspace-mobile.json`, `graph.json`, `community-plugins.json` y `core-plugins.json` están excluidos vía `.megaignore`.
-> `.trash` se sincroniza intencionalmente para monitorear eliminaciones desde PC.
+> `.trash` se sincroniza intencionalmente en todos los dispositivos para monitorear eliminaciones desde PC.
+
+> **Flujo validado (2026-08-08):** Claude chat → descarga archivo → vault tablet → FolderSync → Mega → PC escritorio. Probado con archivo `.md` creado desde Claude en tablet, movido manualmente al vault, sincronizado con FolderSync manual y verificado en PC.
 > `.cache` y `.git` **no** se sincronizan — excluidos en `.megaignore`.
 
 ### .megaignore (PC)
@@ -372,14 +374,13 @@ Archivo en raíz del vault `E:\University_vault_2026\.megaignore` generado por e
 
 App: **FolderSync** | Cuenta: Mega exclusiva del vault
 
-### Pares configurados
+### Configuración de sync
 
-| Par | Izquierda (tablet) | Derecha (Mega) |
-|---|---|---|
-| MOC | `/storage/emulated/0/University_vault_2026/MOC` | `/University_vault_2026/MOC` |
-| Semesters | `/storage/emulated/0/University_vault_2026/Semesters` | `/University_vault_2026/Semesters` |
-| Semestres | `/storage/emulated/0/University_vault_2026/Semestres` | `/University_vault_2026/Semestres` |
-| _PDF | `/storage/emulated/0/University_vault_2026/_PDF` | `/University_vault_2026/_PDF` |
+Sincroniza el **vault completo** bidireccional entre tablet y Mega. La decision de sincronizar todo el vault (en lugar de carpetas especificas) fue para garantizar que las personalizaciones de plugins `.obsidian/plugins/` y la configuracion de Obsidian lleguen a todos los dispositivos sin necesidad de reconfigurar cada uno.
+
+| Par | Izquierda (tablet) | Derecha (Mega) | Dirección |
+|---|---|---|---|
+| Vault completo | `/storage/emulated/0/University_vault_2026` | `/University_vault_2026` | Bidireccional |
 
 ### Opciones de sync (aplicar a todos los pares)
 
@@ -398,20 +399,19 @@ App: **FolderSync** | Cuenta: Mega exclusiva del vault
 - **Conflictos:** más reciente
 - **Conexión:** solo WiFi
 
-### Exclusiones (aplicar a todos los pares)
+### Exclusiones (filtros)
 
 | Tipo    | Condición   | Valor                    |
 | ------- | ----------- | ------------------------ |
 | Archivo | iguales a   | `appearance.json`        |
-| Archivo | iguales a   | `workspace.json`         |
-| Archivo | iguales a   | `workspace-mobile.json`  |
-| Archivo | iguales a   | `graph.json`             |
 | Archivo | iguales a   | `community-plugins.json` |
 | Archivo | iguales a   | `core-plugins.json`      |
-| Archivo | termina con | `.tmp`                   |
+| Archivo | iguales a   | `graph.json`             |
+| Archivo | iguales a   | `workspace-mobile.json`  |
+| Archivo | iguales a   | `workspace.json`         |
 | Archivo | termina con | `.temp`                  |
-| Carpeta | iguales a   | `.obsidian`              |
-| Carpeta | iguales a   | `.cache`                 |
+| Archivo | termina con | `.tmp`                   |
+| Carpeta | iguales a   | `/.cache/`               |
 
 ---
 

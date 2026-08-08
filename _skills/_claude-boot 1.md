@@ -28,7 +28,7 @@ tags:
   - arranque
   - infraestructura
 date_created: 2026-05-30
-date_updated: 2026-08-08
+date_updated: 2026-07-30
 status: activo
 fase: infraestructura
 ---
@@ -251,14 +251,12 @@ Claude tiene **tres** vías de acceso. Usar la que esté disponible y la que cor
 | Situación / tarea | Conector | Acceso |
 |---|---|---|
 | PC encendida — leer/crear/editar archivos puntuales | **Filesystem MCP** | Lee y escribe directo en `E:\University_vault_2026` |
-| PC apagada / móvil — consultar el vault, leer notas, repasar | **Drive MCP** | Lee desde Google Drive — vault sincronizado via Rclone. Activar con `/drive` en instrucciones. Skills: `_start_movil.md`, `_repaso_movil.md`, `_plan_movil.md` |
-| PC apagada / móvil — escribir o editar archivos sin PC | **GitHub MCP** | Lee y escribe en `https://github.com/Ruelas2022ETNumsa/University_vault_2026` |
+| PC apagada / móvil — leer o editar sin PC | **GitHub MCP** | Lee y escribe en `https://github.com/Ruelas2022ETNumsa/University_vault_2026` |
 | Cualquier situación — buscar por significado, no por nombre exacto; recordar contexto entre sesiones | **Basic Memory MCP** | Indexado semántico local de todo el vault (`BASIC_MEMORY_PROJECT_PATH`) — ver [[_basic-memory-system]] |
 
 **Cómo elegir:**
 - Si el usuario pide "busca las notas sobre X" sin saber el nombre exacto del archivo → preferir **Basic Memory** (`search_notes`) sobre Filesystem.
 - Si el usuario pide editar, mover o crear un archivo específico → **Filesystem MCP** (PC encendida) o **GitHub MCP** (sin PC).
-- Si el usuario está en móvil/tablet y quiere consultar o repasar el vault → **Drive MCP** (activar con `/drive`).
 - Basic Memory y Filesystem conviven — no son excluyentes. Basic Memory no reemplaza la necesidad de Filesystem/GitHub para escribir, solo aporta búsqueda semántica y memoria.
 
 Obsidian Git sincroniza PC ↔ GitHub automáticamente cada 5 minutos. Mega sincroniza el vault entre PC, laptop, tablet y celular (ver [[_sync-system]]) — esa sincronización es independiente de GitHub y de los conectores de Claude. Los cambios hechos por Claude desde GitHub llegan al vault local en el próximo auto-pull.
@@ -335,10 +333,8 @@ Leer el beacon específico según el tema:
 
 ### Si el usuario está en móvil sin PC encendida
 
-- Para **consultar, repasar o leer** el vault → usar **Drive MCP** (activar con `/drive`). El vault está sincronizado hacia Google Drive via Rclone. Skills disponibles: `_start_movil.md`, `_repaso_movil.md`, `_plan_movil.md`.
-- Para **crear o editar archivos** sin PC → usar **GitHub MCP**.
-- Las imágenes de `_assets/` no se muestran inline — Claude entrega un link de Drive que el usuario abre directamente como propietario.
-- Avisar al usuario que los cambios hechos via GitHub llegarán al vault local en el próximo auto-pull de Obsidian Git (hasta 5 min después de encender la PC), y que la sincronización con Mega hacia tablet/celular es un canal aparte.
+- Usar GitHub MCP para leer y escribir notas.
+- Avisar al usuario que los cambios llegarán al vault local en el próximo auto-pull de Obsidian Git (hasta 5 min después de encender la PC), y que la sincronización con Mega hacia tablet/celular es un canal aparte.
 
 ---
 
@@ -378,7 +374,6 @@ Convención interna del vault para respaldar archivos antes de editarlos:
 11. **Sistema de proyectos vive en `_hangar/`** — la carpeta `_projects/` fue renombrada. Los 7 operators no llevan `tsk_` en el nombre. Ships viven en `dock/`, carriers tienen carpeta propia. Ver [[_projects_system]] para el flujo completo.
 12. **`workshop` es el tipo #15** — usar solo en plantillas `tpl-w-*` dentro de `Semesters/`. Nunca asignar `galaxy_body: workshop` a archivos de `_hangar/`.
 13. **Subtipo de proyectos no se mezcla con galaxy bodies académicos** — `operator`, `ship`, `carrier`, `dropship`, `logbook`, `blueprint`, `void` son exclusivos de `_hangar/`. No usar en `Semesters/` ni en `_app/`.
-14. **Drive MCP es el canal de consulta móvil** — desde móvil/tablet, usar Drive MCP para leer y repasar el vault (activar con `/drive`). GitHub MCP queda para escritura sin PC. No indicar GitHub MCP como canal de lectura móvil.
 
 ---
 
