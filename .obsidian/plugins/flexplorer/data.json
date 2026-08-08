@@ -3537,11 +3537,11 @@
     "_app/notebooklm/prompts/ETN607": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "ETN607-transcription.md",
         "ETN607-transcription-divisions.md"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "_app/notebooklm/prompts/ETN607/ETN607-transcription.md": {
       "isPinned": false,
@@ -3554,11 +3554,11 @@
     "_assets": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "Untitled-07-08-2026_16-58-24.png",
         "Untitled-07-08-2026_16-58-26.png"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "_assets/Untitled-07-08-2026_16-58-24.png": {
       "isPinned": false,
