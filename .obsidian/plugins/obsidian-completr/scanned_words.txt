@@ -8109,6 +8109,7 @@ textualmente
 trayectorias
 topol
 track
+teoria
 ToDo
 Templater
 Text
@@ -17018,6 +17019,9 @@ TULO
 Trayectoria
 Tensi
 Terminolog
+Transcripcion
+TRANSCRIPCION
+TITULOS
 Sistema
 Sync
 Save
@@ -26043,6 +26047,9 @@ Statics
 Skill
 Suelo
 Separatriz
+Subtitulo
+Simbolo
+Simplicidad
 Plugins
 Pendientes
 Plugin
@@ -33631,6 +33638,7 @@ Particle
 Peso
 Pivote
 Pared
+Prototipo
 del
 date
 de
@@ -41153,6 +41161,9 @@ divisorias
 decorations
 dates
 dividirlo
+divisions
+descripcion
+definicion
 Vault
 Verificar
 Variables
@@ -49203,6 +49214,7 @@ Vertical
 Validez
 Varilla
 Verticales
+VARIANTE
 galaxy
 gina
 genes
@@ -57552,6 +57564,7 @@ generando
 grueso
 grises
 gidos
+geometricos
 body
 beacon
 bat
@@ -64643,6 +64656,7 @@ blueprints
 barrera
 bloquear
 bloqueando
+basicos
 scope
 status
 selector
@@ -73570,6 +73584,12 @@ silla
 salud
 significativos
 seria
+seleccion
+subtitulo
+simetrico
+simbolo
+sintesis
+subtitulos
 vault
 vil
 ver
@@ -82126,6 +82146,8 @@ viewUrl
 viejo
 verticalmente
 vers
+visualizacion
+vacias
 audience
 activo
 auto
@@ -90173,6 +90195,7 @@ avanzando
 alcanzados
 avances
 alcanzado
+adoptado
 related
 recomendados
 ribbon
@@ -98697,6 +98720,8 @@ reaccion
 riel
 rbitas
 risk
+resolucion
+redacci
 notes
 notas
 nuevas
@@ -106713,6 +106738,7 @@ ndricas
 notorias
 ndulos
 ntricas
+navegacion
 created
 commit
 cada
@@ -115776,6 +115802,11 @@ curvo
 cuerda
 conc
 conocimientos
+capitulos
+calido
+cerrarse
+constituido
+consolidados
 updated
 un
 universo
@@ -124720,6 +124751,7 @@ ureas
 utilizable
 ureo
 ubique
+unificado
 Galaxy
 Git
 Gr
@@ -132694,6 +132726,7 @@ Goldstein
 GENES
 Gradiente
 Grado
+GRAFICOS
 Convenci
 Creaci
 Commander
@@ -140227,6 +140260,7 @@ CARGADAS
 Cuerda
 CAPinicio
 CAPfin
+Correccion
 Instalados
 Instalado
 Instalar
@@ -149142,6 +149176,8 @@ Interamericano
 IZQUIERDA
 Independiente
 Imagenes
+Instancia
+IMAGENES
 Funci
 File
 Fase
@@ -166210,6 +166246,7 @@ Engineering
 Educativo
 ESCRITURA
 Estaba
+Excepcion
 Obsidian
 OmniSearch
 Ocultar
@@ -189868,6 +189905,8 @@ pozo
 punteado
 parado
 pego
+paginas
+posicion
 min
 mica
 movimiento
@@ -198973,6 +199012,9 @@ mezcle
 mixtos
 mechanics
 markings
+muestrame
+matematica
+multilinea
 YAML
 Ya
 You
@@ -214599,6 +214641,7 @@ Books
 Best
 Bodies
 Bienvenido
+Balance
 en
 exacta
 escaneados
@@ -232745,6 +232788,7 @@ MARGINALIA
 Masas
 Masa
 Momento
+MATEMATICO
 Lectura
 LaTeX
 Linter
@@ -240775,6 +240819,7 @@ LAGRANGE
 LimYung
 LITERAL
 Longitudes
+LINEA
 links
 las
 listar
@@ -257642,6 +257687,9 @@ intermitentemente
 incluyo
 inclinado
 impedimentos
+identico
+indice
+interdependiente
 Dependencia
 Dropbox
 Dataview
@@ -265835,6 +265883,8 @@ Dare
 Dynamics
 Dissipative
 DERECHA
+Derivado
+DETECCION
 Remotely
 Raz
 Revisa
@@ -323718,6 +323768,7 @@ NICA
 NIMO
 Nelson
 NOMBRE
+NOTACION
 originales
 observatory
 oficial
@@ -332193,6 +332244,8 @@ oOso
 oaT
 orientarte
 opacidad
+ortografia
+observacion
 junto
 json
 jer
@@ -391210,6 +391263,7 @@ JJPzA
 JMGh
 JqJA
 John
+JERARQUIA
 KB
 Kirchhoff
 Ksv

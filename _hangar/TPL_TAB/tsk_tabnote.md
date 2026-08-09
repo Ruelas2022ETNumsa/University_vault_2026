@@ -54,6 +54,7 @@ Diseñar una plantilla estándar para tomar apuntes en Samsung Notes (tablet S6 
 | 2026-08-04 | 3 variantes del template cargadas en Samsung Notes | White theme (modo claro) · Dark theme (modo oscuro, sin fondo para aprovechar el modo de Notes) · Sin cuadrícula (para imprimir en tareas) |
 | 2026-08-04 | Grosor S Pen con nueva cuadrícula (18 cuad. ancho) | Texto: 5 · Subtítulos: 8 · Títulos/énfasis: 12 (punto de partida, ajustar en clase) |
 | 2026-08-04 | Template listo pero editable | Si algo no funciona en clase se edita en Excalidraw explicando el problema puntual; no se rediseña desde cero |
+| 2026-08-08 | Prompts ETN607 son la base del sistema TABnote en producción | `ETN607-transcription.md` y `ETN607-transcription-divisions.md` son la primera instancia completa del sistema TABnote con NLM — el prototipo genérico `tpl_prompt_transcription.md` se deriva de ellos |
 
 > [!note]- Descartadas
 > Cornell de 2 columnas — el usuario casi nunca la usa, se descartó como plantilla base. El resaltado horizontal es suficiente separador visual sin columnas.
@@ -205,6 +206,8 @@ Restricciones:
 | `logbook.md` | logbook | — | README histórico del proyecto |
 | `chronicle.md` | chronicle | — | Registro cronológico de pruebas |
 | `tsk_tabnote-prompt-nlm.md` | dropship | docked | Prompt de transcripción NLM para tablet |
+| `tpl_prompt_transcription.md` | dropship | activo | Prototipo genérico de prompt TABnote para cualquier materia — base: ETN607-transcription.md / ETN607-transcription-divisions.md |
+| `_TABnote-ref.md` | ref | — | Referencia definitiva del sistema TABnote v1 |
 
 ---
 
@@ -215,6 +218,5 @@ Restricciones:
 - `E:\University_vault_2026\_app\_config\_note-system.md`
 - `E:\University_vault_2026\_app\_appnotes\cornell_guide.md`
 - `E:\University_vault_2026\_app\_appnotes\Marginalia_guide.md`
-- `E:\University_vault_2026\_app\notebooklm\prompts\MAT101\MAT101-transcription.md` ← base para el futuro prompt tablet
-- `E:\University_vault_2026\_TABnote-template-draft.md` ← borrador de especificaciones del template v1
-- `E:\University_vault_2026\_TABnote-ref.md` ← referencia definitiva del sistema TABnote v1
+- `E:\University_vault_2026\_app\notebooklm\prompts\ETN607\ETN607-transcription.md` ← instancia completa del sistema TABnote simple en producción
+- `E:\University_vault_2026\_app\notebooklm\prompts\ETN607\ETN607-transcription-divisions.md` ← instancia completa del sistema TABnote con divisiones en producción
