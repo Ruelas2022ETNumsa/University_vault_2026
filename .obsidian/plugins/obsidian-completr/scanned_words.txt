@@ -223449,6 +223449,7 @@ especificas
 elipse
 entenderlo
 entiendo
+eererer
 Motor
 Media
 Mantiene
@@ -232789,6 +232790,7 @@ Masas
 Masa
 Momento
 MATEMATICO
+MECANICA
 Lectura
 LaTeX
 Linter

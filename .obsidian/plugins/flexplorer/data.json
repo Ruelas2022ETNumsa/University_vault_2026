@@ -1230,7 +1230,6 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "_galaxy-system 1.md",
         "_projects_system.md",
         "_marginalia_system.md",
         "_pdf_pp-system.md",
@@ -1248,8 +1247,7 @@
         "_template-system.md",
         "_ToDo-system.md",
         "_skill-system.md",
-        "_prompt-system.md",
-        "_galaxy-system 2.md"
+        "_prompt-system.md"
       ]
     },
     "_app/_config/_basic-memory-system.md": {
@@ -2832,8 +2830,7 @@
         "_start_movil.md",
         "_repaso_movil.md",
         "_plan_movil.md",
-        "_start.md",
-        "_claude-boot 1.md"
+        "_start.md"
       ]
     },
     "_skills/_claude-boot.md": {
@@ -3028,10 +3025,6 @@
       "customOrder": []
     },
     "_app/_config/_projects_system.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/_config/_galaxy-system 1.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -3543,14 +3536,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_app/_config/_galaxy-system 2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_skills/_claude-boot 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_hangar/_legacy/tsk_update-rclone.md": {
       "isPinned": false,
       "isHidden": false
@@ -3566,6 +3551,7 @@
     "_hangar/TPL_TAB": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "logbook.md",
         "tsk_tabnote.md",
@@ -3573,8 +3559,7 @@
         "_TABnote-ref.md",
         "chronicle.md",
         "tpl_prompt_transcription.md"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "_hangar/TPL_TAB/tsk_tabnote.md": {
       "isPinned": false,
@@ -3603,10 +3588,10 @@
     "Semesters/template": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "tpl-w-library.md"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "Semesters/template/tpl-w-library.md": {
       "isPinned": false,
@@ -3615,19 +3600,19 @@
     "Semesters/Sem_04": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "ETN607"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "Semesters/Sem_04/ETN607": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "_library_ETN607.md",
         "tsk_ini_ETN607.md"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "Semesters/Sem_04/ETN607/_library_ETN607.md": {
       "isPinned": false,
@@ -3648,10 +3633,10 @@
     "_app/notebooklm/guides/ETN607": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "ETN607_TikzJax.md"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "_app/notebooklm/guides/ETN607/ETN607_TikzJax.md": {
       "isPinned": false,

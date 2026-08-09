@@ -271,22 +271,27 @@ Obsidian Git sincroniza PC ↔ GitHub automáticamente cada 5 minutos. Mega sinc
 
 > solo es un ejemplo no tomar como verdad, aun no hay materias activas.
 
-| Código | Nombre completo      | Semestre | Parcial actual | Ruta                                 | Estado                    |
-| ------ | -------------------- | -------- | -------------- | ------------------------------------ | ------------------------- |
-| ETN901 | *(completar nombre)* | 9        | 1              | `Semesters/Sem_09/ETN901/Partial_1/` | Carpeta creada, sin notas |
-
-> El nombre completo de ETN901 no está registrado todavía — completar con el usuario cuando se inicie trabajo en esa materia.
+| Código  | Nombre completo                       | Semestre | Parcial actual | Ruta                      | Estado                    |
+| ------- | ------------------------------------- | :------: | :------------: | ------------------------- | ------------------------- |
+| ETN505  | PROGRAMACION Y METODOS NUMERICOS      |    4     |       1        | -                         | -                         |
+| ETN607  | MECANICA APLICADA                     |    4     |       1        | `Semesters/Sem_04/ETN607` | Carpeta creada, sin notas |
+| ETN825  | ORGANIZACION Y DISEÑO DE COMPUTADORAS |    7     |       1        | -                         | -                         |
+| ETN1015 | PROCESAMIENTO DIGITAL DE SEÑALES      |    8     |       1        | -                         | -                         |
+| ETN840  | PREPARACION Y EVALUACION DE PROYECTOS |    8     |       1        | -                         | -                         |
+| ETN1012 | TELEFONIA                             |    9     |       1        | -                         | -                         |
+| REC092  | ESTUDIO DE LOS RECURSOS NATURALES     |    9     |       1        | -                         | -                         |
+| ETN1050 | REDES DE COMPUTADORES                 |    9     |       1        | -                         | -                         |
 
 ### Materias eliminadas
 
-| Código | Motivo |
-|--------|--------|
+| Código | Motivo                                                                    |
+| ------ | ------------------------------------------------------------------------- |
 | ETN506 | Eliminada 2026-06-24 — materia ya no relevante, carpeta borrada del vault |
 
 ### Materia legacy (no usar)
 
-| Código | Estado |
-|--------|--------|
+| Código | Estado                                     |
+| ------ | ------------------------------------------ |
 | ETN302 | legacy — no forma parte del Sistema Galaxy |
 
 ---
