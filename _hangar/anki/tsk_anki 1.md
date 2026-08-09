@@ -6,26 +6,8 @@ status: delayed
 fleet: anki
 blocked_by: "tsk_marginalia_anki, tsk_flashcards, tsk_obsidian_to_anki — las 3 opciones deben estar probadas, funcionando y documentadas"
 ---
-%%
-status:
-- docking: activo dentro de su carpeta, en proceso
-- in-orbit: fue trabajado, pausado sin dependencia externa
-- delayed: bloqueado por dependencia externa — ver blocked_by
-- delivered: terminado y documentado, listo para archivar
-- aborted: proyecto no viable, descartado
-
-Archivos del carrier:
-- tsk_anki.md     → este archivo — tareas activas, se lee en cada sesión
-- logbook.md      → README histórico del proyecto, se lee cuando el proyecto lo necesita
-- dropships       → opciones, configuración y pruebas (ver ## Archivos del carrier)
-- void_*          → archivos de prueba desechables, sin YAML
-%%
 
 ## Handoff
-%%
-Sobreescribir con edit_file al cerrar cada sesión.
-Es lo primero que Claude lee al retomar — debe ser suficiente para arrancar sin re-explicar.
-%%
 
 **Ultima sesion:** 2026-08-02
 **Retomar desde:** verificar estado de los 3 tsk individuales antes de avanzar aqui
