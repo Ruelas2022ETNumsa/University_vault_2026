@@ -21,8 +21,7 @@
         "_assets",
         "Borrar",
         "Rubbish",
-        "README.md",
-        "Untitled.md"
+        "README.md"
       ]
     },
     "MOC": {
@@ -2511,7 +2510,8 @@
       "sortOrder": "custom",
       "customOrder": [
         "ETN806",
-        "MAT101"
+        "MAT101",
+        "ETN607"
       ]
     },
     "_app/notebooklm/guides/MAT101": {
@@ -3522,10 +3522,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Untitled.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_assets": {
       "isPinned": false,
       "isHidden": false,
@@ -3575,7 +3571,8 @@
         "tsk_tabnote.md",
         "tsk_tabnote-prompt-nlm.md",
         "_TABnote-ref.md",
-        "chronicle.md"
+        "chronicle.md",
+        "tpl_prompt_transcription.md"
       ],
       "sortOrder": "custom"
     },
@@ -3627,7 +3624,8 @@
       "isPinned": false,
       "isHidden": false,
       "customOrder": [
-        "_library_ETN607.md"
+        "_library_ETN607.md",
+        "tsk_ini_ETN607.md"
       ],
       "sortOrder": "custom"
     },
@@ -3636,6 +3634,26 @@
       "isHidden": false
     },
     "Semesters/Sem_01/MAT101/_library_MAT101.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/TPL_TAB/tpl_prompt_transcription.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/tsk_ini_ETN607.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/guides/ETN607": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "ETN607_TikzJax.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "_app/notebooklm/guides/ETN607/ETN607_TikzJax.md": {
       "isPinned": false,
       "isHidden": false
     }

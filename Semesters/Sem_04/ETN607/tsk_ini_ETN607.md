@@ -23,8 +23,7 @@ status: activo
 ## NotebookLM — fuentes
 
 - [x] PDFs del stack subidos al notebook
-- [ ] Índices extraídos y verificados visualmente
-- [ ] `ETN607_library.md` creado en `_app/notebooklm/guides/ETN607/`
+- [~] Índices extraídos — no aplica para ETN607 (mapeo por tema ya definido en prompt)
 - [x] Fuentes cargadas en NotebookLM
 
 ---
@@ -35,6 +34,13 @@ status: activo
 - [x] `ETN607-transcription-divisions.md` creado en `_app/notebooklm/prompts/ETN607/`
 - [ ] `ETN607-study.md` creado en `_app/notebooklm/prompts/ETN607/`
 - [ ] Notebook configurado — fuentes + Instructions cargado
+
+---
+
+## NotebookLM — guías
+
+- [x] `ETN607_TikzJax.md` creado en `_app/notebooklm/guides/ETN607/`
+- [ ] `ETN607_library.md` creado en `_app/notebooklm/guides/ETN607/`
 
 ---
 
@@ -51,4 +57,5 @@ galaxy-links
 [[Semesters/Sem_04/ETN607/_library_ETN607]]
 [[_app/notebooklm/prompts/ETN607/ETN607-transcription]]
 [[_app/notebooklm/prompts/ETN607/ETN607-transcription-divisions]]
+[[_app/notebooklm/guides/ETN607/ETN607_TikzJax]]
 %%

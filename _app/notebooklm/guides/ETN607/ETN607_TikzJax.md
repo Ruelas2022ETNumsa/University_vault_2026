@@ -1,18 +1,19 @@
 ---
-title: TikZJax — Guía unificada para Obsidian 
-galaxy_body: beacon 
-scope: vault tool: 
-tikzjax-plugin audience:
-- usuario
-- notebooklm
-- claude 
+title: TikZJax — Guía unificada para Obsidian
+galaxy_body: beacon
+scope: vault
+tool: tikzjax-plugin
+audience:
+  - usuario
+  - notebooklm
+  - claude
 tags:
-- beacon
-- tikzjax
-- infraestructura
+  - beacon
+  - tikzjax
+  - infraestructura
 date_created: 2026-08-07
-date_updated: 2026-08-07
-status: en-proceso
+date_updated: 2026-08-08
+status: activo
 ---
 
 # ⚡ GUÍA UNIFICADA DE TIKZJAX PARA OBSIDIAN (ETN607)
@@ -358,7 +359,7 @@ Antes de entregar un bloque TikZJax verificar:
 > Contexto para NotebookLM: usar para el diagrama estándar del péndulo simple. Pivote fijo, cuerda de longitud $\ell$, masa $m$, ángulo $\theta$ como coordenada generalizada. Fuerzas: tensión $T$ a lo largo de la cuerda, peso $mg$ vertical.
 
 ```tikz
-\usetikzlibrary{angles,quotes}
+\usetikzlibrary{angles,quotes,patterns}
 \begin{document}
 \begin{tikzpicture}[scale=1.4]
 
@@ -445,7 +446,6 @@ Antes de entregar un bloque TikZJax verificar:
 > Contexto para NotebookLM: usar cuando el usuario pida graficar la curva de energía potencial de un sistema conservativo. Mostrar: mínimo de $V$ (equilibrio estable), punto de inflexión (inestable), nivel de energía $E$ como línea horizontal, región de movimiento acotado.
 
 ```tikz
-\usetikzlibrary{}
 \usepackage{pgfplots}
 \begin{document}
 \begin{tikzpicture}
