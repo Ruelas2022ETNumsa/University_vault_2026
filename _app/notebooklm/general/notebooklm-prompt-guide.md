@@ -463,122 +463,259 @@ Consultar siempre las fuentes cargadas en el notebook según el tema.
 
 ---
 
-## Plantilla 3 — Transcripción tablet (Samsung Notes)
+## Plantilla 3 — Transcripción tablet (Samsung Notes / TABnote)
 
-> ⚠️ **EN CONSTRUCCIÓN — sesión futura dedicada**
-> Esta plantilla está basada en la de cuaderno físico con adaptaciones
-> preliminares para apuntes de tablet. No usar como prompt definitivo
-> hasta completar la sesión de revisión.
->
-> Pendientes conocidos:
-> - Definir detección de estructura visual (flechas, gráficas con anotaciones)
-> - Definir manejo del sistema de colores del usuario
->   (2 rojos, 1 azul, 1 naranja — significado de cada uno por confirmar)
-> - Validar orden de lectura (sin división fija de 2 columnas)
-> - Ajustar niveles de complemento si aplica
->
-> Ver [[_TABnote-system]] y [[_ToDo-system]] para el contexto completo.
+> Aplica a materias cuyos apuntes se toman en tablet con plantilla TABnote.
+> Referencia de implementación real: `prompts/ETN607/ETN607-transcription.md`
+> Copiar como `prompts/ETNXXX/ETNXXX-transcription.md`
+> Reemplazar todos los marcadores `[...]` antes de usar.
+
+### Principios de diseño del prompt de transcripción tablet
+
+El prompt de transcripción tablet tiene un criterio central: **NLM no necesita contexto para humano, solo instrucciones accionables.** Aplicar siempre estos filtros antes de agregar cualquier bloque:
+
+| Pregunta | Si la respuesta es NO → |
+|---|---|
+| ¿Cambia algo en el output de NLM si lo sabe? | Eliminar |
+| ¿Es una instrucción sobre qué hacer, no sobre qué es? | Eliminar |
+| ¿Está cubierto por una fuente guía ya listada? | Eliminar (es redundante) |
+
+**Lo que NLM no necesita saber:**
+- La app con la que se tomaron los apuntes (Samsung Notes, GoodNotes, etc.)
+- El nombre del sistema de plantillas (TABnote, Cornell plantilla, etc.)
+- Para qué app es el output (Obsidian, Notion, etc.) — eso va en obsidian_notation.md
+- Descripción del workflow del usuario
+- Contexto académico más allá del nombre de la materia
+
+**Lo que sí necesita:**
+- Tarea concreta (transcribir, complementar)
+- Fuentes guía con nombre exacto y rol de cada una
+- Convenciones visuales del apunte (cómo se ven los títulos, callouts, marginalia)
+- Orden de lectura con sus excepciones
+- Formato de output (Cornell, complemento B/C, ejemplos)
+- Flujo de mensajes y límites de cada uno
+
+### Fuentes guía a cargar (obligatorias)
+
+| Fuente | Rol |
+|---|---|
+| `apuntesTX` | PDF del apunte del tema activo |
+| `obsidian_notation.md` | Sintaxis Cornell, callouts, wikilinks |
+| `_library_ETNXXX.md` | Libros y capítulos por tema |
+| `ETNXXX_latex.md` | Notación LaTeX de la materia |
+| `ETNXXX_TikzJax.md` | Reglas y ejemplos TikZJax para la materia |
+
+> Las fuentes guía van listadas al inicio del prompt con rol explícito y la regla
+> de prioridad sobre conocimiento general. Ver bloque FUENTES GUÍA en ETN607-transcription.md.
+
+### Convención de columnas `> | <`
+
+Cuando el apunte divide una página en dos columnas, se marca con una línea
+vertical y los símbolos `> | <` pegados a la línea (sin caja, sin subrayado):
+
+```
+col izquierda     > | <     col derecha
+```
+
+- `>` del lado izquierdo: indica fin de columna izquierda.
+- `<` del lado derecho: indica inicio de columna derecha.
+- Orden de lectura: columna izquierda completa (arriba↓abajo) → columna derecha completa (arriba↓abajo).
+- Los símbolos pueden estar en la parte superior o inferior de la línea divisoria — cualquiera de los dos es válido.
+- No confundir con callouts (que tienen caja de 4 lados) ni con blockquotes (`> texto`).
+
+### Detección de plantilla TABnote simple vs. divisions
+
+La plantilla puede estar en dos modos. El prompt a usar depende del modo activo:
+
+| Modo | Característica visual | Prompt |
+|---|---|---|
+| TABnote simple | Página A4, flujo vertical, sin divisiones internas | `ETNXXX-transcription.md` |
+| TABnote divisions | Bloques Cornell visibles con zonas ::cue / ::note / summary | `ETNXXX-transcription-divisions.md` |
+
+El usuario reemplaza el prompt en la configuración de NLM según el modo activo —
+no se mezclan en un mismo notebook.
+
+### Checklist de adaptación — prompt de transcripción tablet
+
+Al crear `prompts/ETNXXX/ETNXXX-transcription.md` desde la plantilla:
+
+- [ ] Reemplazar `[MATERIA_NOMBRE]` y `[MATERIA_SIGLA]`
+- [ ] Reemplazar `[SIGLA_library]`, `[SIGLA_latex]`, `[SIGLA_tikzjax]`
+- [ ] Completar bloque FUENTES GUÍA con nombres exactos de los archivos
+- [ ] Completar bloque FUENTES Y LIBROS POR TEMA con datos reales de `_library_ETNXXX.md`
+- [ ] Verificar colores de títulos del apunte (color de título principal, subtema, etc.)
+- [ ] Verificar si la materia usa gráficas TikZJax — agregar o simplificar sección GRÁFICOS
+- [ ] Verificar si aplican niveles de complemento B/C — ajustar si la materia es más textual
+- [ ] Si la materia tiene ejercicios al final de capítulo → agregar MENSAJE 3
+- [ ] Actualizar inventario en `[[_notebooklm-system]]`
 
 ~~~
 TAREA:
-Transcribir y complementar apuntes universitarios de [MATERIA_NOMBRE]
-tomados en tablet (Samsung Notes) a formato Markdown listo para Obsidian.
-El output es una nota supernova lista para integrarse al vault.
+Transcribir y complementar apuntes universitarios de [MATERIA_NOMBRE] a formato Markdown.
 _
-NOTACIÓN OBSIDIAN: consultar obsidian_notation.md (fuente del notebook) para
-interpretar YAML, wikilinks, Cornell, callouts y bloques de visualización.
+FUENTES GUÍA (prioridad sobre conocimiento general):
+- obsidian_notation.md  → sintaxis Obsidian, Cornell, callouts, wikilinks
+- [SIGLA_library].md    → criterio de selección de libros y capítulos por tema
+- [SIGLA_latex].md      → notación LaTeX de la materia
+- [SIGLA_tikzjax].md   → reglas y ejemplos TikZJax para la materia
+Si hay conflicto entre estas fuentes y conocimiento general → prevalece el documento.
 _
-FUENTES DE REFERENCIA: consultar [SIGLA_library].md (fuente del notebook) para
+FUENTES DE REFERENCIA: consultar [SIGLA_library].md para
 criterio de selección, capítulos y páginas exactas de cada libro por tema.
 _
-⚠️ AVISO: este prompt está en revisión. Algunas reglas pueden cambiar
-en sesiones futuras — verificar con el usuario antes de aplicar a materias nuevas.
-_
 FLUJO DE TRABAJO:
-PDF del apunte de tablet cargado como fuente apuntesTX. Dos mensajes por subtítulo:
+PDF del tema completo cargado como fuente apuntesTX. Tres mensajes posibles:
 
 MENSAJE 1 — Transcripción + complemento:
 "De apuntesTX, muéstrame subtítulo Y [HASTA subtítulo Z] con complemento nivel B/C"
-→ transcribir TODO el contenido desde Y hasta detectar el siguiente título
-→ si no se indica HASTA, detenerse al detectar cualquier nuevo título principal
+→ transcribir TODO el contenido desde Y hasta detectar el título Z (no incluirlo)
+→ si no se indica HASTA, detenerse al detectar cualquier nuevo subtítulo
 → NO adelantar el subtítulo siguiente
 
-MENSAJE 2 — Ejercicios (solo si el usuario lo pide):
+MENSAJE 2 — Ejercicios de libros (solo si el usuario lo pide):
   "De apuntesTX, subtítulo Y, muéstrame ejercicios resueltos"
-  → ejercicios de los libros fuente, con gráficas si aplica
+  → ejercicios de los libros fuente según tema
+  → si hay gráfica relevante: citá libro, capítulo y página
+  → si NLM no puede localizar la figura con certeza: omitir — no inventar
   → NO repetir transcripción ni complemento ya entregado
-_
-ORDEN DE LECTURA DEL PDF:
-⚠️ EN REVISIÓN — los apuntes de tablet no tienen estructura fija de 2 columnas.
-Leer en orden natural de arriba hacia abajo, página por página.
-Si hay flechas que conectan elementos, leerlos como unidad continua.
-Ante ambigüedad de orden, preguntar al usuario antes de continuar.
-_
-DETECCIÓN DE TÍTULOS:
-⚠️ EN REVISIÓN — sistema de colores del usuario pendiente de confirmar.
-Guía preliminar basada en uso conocido:
-- Rojo principal (más saturado) → ## título de sección
-- Rojo secundario (más apagado) → ### subtítulo
-- Azul → posiblemente definiciones o términos clave
-- Naranja → posiblemente advertencias o destacados
-Ante duda sobre el rol de un color, indicar la posición y preguntar.
+
+MENSAJE 3 — Ejercicios del cuaderno (solo si el usuario lo pide):
+  "De apuntesTX, muéstrame el ejercicio [enunciado/ec inicial] hasta [enunciado/ec final]"
+  → buscar por enunciado o ecuación inicial (no por subtítulo)
+  → transcribir resolución completa entre ambos puntos indicados
+  → si hay gráfica: citá figura equivalente del libro fuente (libro, capítulo, página)
+  → si no existe con certeza: omitir
+  → NO repetir transcripción ni complemento ya entregado
 _
 ESTILO DE TRANSCRIPCIÓN:
 - Corregir ortografía y errores evidentes de notación matemática.
-- Manuscrito como esqueleto principal. Estilo apuntes universitarios.
+- El apunte es el esqueleto — mantener fidelidad al orden y contenido original.
 - Corrección importante → nota breve al final de esa sección.
-- Flechas con texto anotado → incluir como nota al pie del elemento al que apuntan.
-- Flechas sin texto → ignorar.
+_
+ORDEN DE LECTURA:
+Leer de arriba hacia abajo. Al terminar cada página, pasar a la siguiente.
+Excepción 1 — división en columnas: si la página tiene una línea vertical con
+los símbolos > | < pegados (> del lado izquierdo, < del derecho), leer primero
+la columna izquierda completa de arriba hacia abajo, luego la columna derecha.
+Excepción 2 — desarrollo continuo: si una fórmula o tabla continúa visualmente
+en la misma página de forma evidente, leerla como unidad antes de seguir.
+
+DETECCIÓN DE TÍTULOS:
+- Título principal: texto centrado, color [COLOR_TITULO], con resaltador lateral simétrico
+  y línea delgada debajo → # en Markdown (uno por archivo)
+- Subtítulo: texto con resaltador hasta el borde derecho, numerado (1., 2., 3...) → ## en Markdown
+- Nunca usar ### salvo que haya un sub-subtítulo con desarrollo propio evidente
+
+DETECCIÓN DE CALLOUTS:
+- Caja de 4 lados con grosor notable, primera línea "> Título"
+  · "> Ejercicio" → ##### Ej. [enunciado]
+  · "> Tarea"    → > [!important] Tarea: [contenido]
+  · Otros títulos → > [!note] [Título]: [contenido]
+
+DETECCIÓN DE IMÁGENES (IMA):
+Bloque delimitado por 2 líneas grises con texto "IMA · descripción" en gris.
+→ NO transcribir el contenido visual
+→ incluir: ![[pegar_imagen]]
+            *IMA · [descripción del pie]*
+→ respetar la posición donde estaba en el apunte
+
+DETECCIÓN DE MARGINALIA:
+Línea de resaltador que sobrepasa el borde hacia el margen externo.
+Símbolo escrito en el margen. Traducir:
+! %%> ! texto %% · ? %%> ?- texto %% · X %%> X- texto %% · V %%> V- texto %%
+C %%> C- texto %% · F %%> F- texto %% · R %%> R- texto %% · T %%> T- texto %% · * %%> C- revisar %%
+Usar callout solo si la posición es ambigua.
+_
+CONVENCIONES DEL APUNTE:
+- valor[unidad] → preservar: 940[V], 470[Ω], 2[A]
+- ∴ → preservar como símbolo de síntesis
+- → ver Txx → preservar como referencia cruzada
+- Flechas con texto → nota al pie del elemento · Flechas sin texto → ignorar
 _
 BLOQUES CORNELL:
-Aplicar a subtítulos de teoría: definiciones, teoremas, propiedades,
-procedimientos paso a paso Y NOTAS DEL TITULO.
-NO aplicar a ejemplos resueltos.
+Aplicar a subtítulos de teoría: definiciones, propiedades, procedimientos.
+NO aplicar a ejemplos resueltos ni bloques IMA.
+El ::note contiene la transcripción. El ::cue y [!summary] los completa NLM.
 
-ESTRUCTURA: (igual que plantilla cuaderno físico)
+ESTRUCTURA:
+
+## [N. Subtítulo]
 
 `````
 cornell
 ::cue
-[palabras clave · preguntas · fórmula clave · conexiones · errores comunes]
+[palabras clave · ]
+[2-4 preguntas centrales]
+[fórmula clave en inline $...$ — nunca display $$]
+[ver también: X — errores comunes si aplica]
 
 ::note
-[transcripción fiel del subtítulo]
+[transcripción fiel: texto, fórmulas, convenciones, marginalia]
 `````
 
->[!summary] [una línea]
+>[!summary] [una línea — sin redundancia]
 
-REGLAS: (iguales a plantilla cuaderno físico — ver arriba)
-- BUG NotebookLM: el identificador cornell va en línea separada de los backticks.
+[ejemplos resueltos e IMA van aquí, fuera del Cornell]
+
+REGLAS:
+- BUG: identificador cornell en línea separada de los backticks — obligatorio
+- Título ## NO va dentro del Cornell
+- Marginalia en ::note: %%> %% inline junto al elemento
+- Complemento y ejercicios SIEMPRE fuera del Cornell, después del [!summary]
 _
-NIVELES DE COMPLEMENTO:
-⚠️ EN REVISIÓN — aplicar igual que cuaderno físico hasta nueva indicación.
-Niveles B y C igual que plantilla cuaderno físico.
+COMPLEMENTO:
+> [!note] Complemento (Nivel B/C)
+>
+>   contenido...
+
+NIVEL B: definición formal del libro si la del apunte es informal.
+NIVEL C: definición formal + propiedades omitidas + 1-2 ejercicios resueltos + gráfica si aplica.
+SIN ejercicios (aplicar B): axiomas, listas de propiedades puras, notación formal.
+NIVEL C cuando: procedimiento aplicable, coordenadas/restricciones con casos concretos,
+  apunte ya tiene ejemplos → agregar uno de mayor dificultad.
+→ extraer siempre de los libros fuente según [SIGLA_library].md, no del conocimiento general.
+Sin redundancia — cada subtítulo es independiente.
 _
 CUANDO ALGO NO SE ENTIENDE:
-Detenerse, indicar qué no se entiende y su posición exacta en el PDF.
-Esperar respuesta antes de continuar.
+Detenerse, indicar posición exacta en el PDF. Esperar respuesta.
 _
-JERARQUÍA MARKDOWN: (igual que plantilla cuaderno físico)
+JERARQUÍA MARKDOWN:
+# → Título principal (uno por archivo) · ## → Subtítulo numerado
+### → Solo si hay sub-subtítulo con desarrollo propio evidente
 _
-FORMATO MATEMÁTICO: (igual que plantilla cuaderno físico)
+FORMATO MATEMÁTICO:
+Inline $...$ preferido. Display $$...$$ solo para multilínea:
+$$\begin{array}{rcl}
+  \text{expr}_1 & = & \text{expr}_2 \\
+                & = & \text{expr}_3
+\end{array}$$
+Reglas: & separa cols · \\ termina fila (última sin \\) · \text{} para texto en math
 _
-GRÁFICOS — elegir en orden:
-1. Desmos: funciones, curvas, intervalos (igual que cuaderno físico)
-2. TikZJax: conjuntos, diagramas, figuras geométricas
-3. No reproducible → > [!note] Gráfico de tablet + descripción textual.
-   ⚠️ Los gráficos de tablet pueden ser más elaborados que los manuscritos
-   — si el gráfico tiene anotaciones complejas, describir en detalle.
-Nunca inventar gráficos ni mezclar herramientas.
+GRÁFICOS:
+IMA es la estrategia principal — sistemas físicos, diagramas complejos → ![[pegar_imagen]] + pie.
+TikZJax solo para esquemas geométricos básicos generables con código simple.
+Si se usa TikZJax → consultar [SIGLA_tikzjax].md (fuente del notebook).
+Si hay duda → IMA. Nunca inventar. Nunca mezclar.
 _
-EJEMPLOS RESUELTOS: (igual que plantilla cuaderno físico)
+EJEMPLOS RESUELTOS:
+##### Ej. enunciado en la misma línea — fuera del Cornell.
+Preservar numeración, valor[unidad] y ∴. No agregar pasos que no estén en el apunte.
+> [!note] solo si hay observación relevante — no por defecto.
 _
-NOTACIÓN LATEX: consultar [SIGLA_latex].md (fuente del notebook).
+NOTACIÓN LATEX: consultar [SIGLA_latex].md como base.
 _
-LIBROS PRIORITARIOS POR TEMA:
-Consultar siempre las fuentes cargadas en el notebook según el tema.
+FUENTES Y LIBROS POR TEMA:
+apuntesTX · obsidian_notation.md · [SIGLA_library].md
 
 [LIBROS_POR_TEMA]
+
+TEORÍA:
+[TEORIA_POR_TEMA]
+
+EJERCICIOS:
+[EJERCICIOS_POR_TEMA]
+_
+SALTOS DE LÍNEA: texto compacto, sin líneas vacías innecesarias. El apunte siempre tiene prioridad.
 ~~~
 
 ---
@@ -587,5 +724,5 @@ Consultar siempre las fuentes cargadas en el notebook según el tema.
 # galaxy-links
 [[_app/_config/_notebooklm-system.md]]
 [[_app/_config/_library-system.md]]
-[[_app/_config/_TABnote-system.md]]
+[[_app/_config/_TAB_note-system.md]]
 %%

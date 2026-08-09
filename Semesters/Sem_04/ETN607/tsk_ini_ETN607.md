@@ -41,6 +41,8 @@ status: activo
 
 - [x] `ETN607_TikzJax.md` creado en `_app/notebooklm/guides/ETN607/`
 - [ ] `ETN607_library.md` creado en `_app/notebooklm/guides/ETN607/`
+- [ ] ETN607_TikzJax.md — completar biblioteca de ejemplos N12-N19 (por tema a medida que avance la materia)
+- [ ] ETN607_TikzJax.md — N16 T7 circuitos: probar soporte circuitikz en TikZJax, sesión dedicada
 
 ---
 

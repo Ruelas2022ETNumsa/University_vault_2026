@@ -1,7 +1,6 @@
 TAREA:
 Transcribir y complementar apuntes universitarios de Mecánica Aplicada (ETN607)
-tomados en tablet (Samsung Notes, plantilla TABnote simple) a formato Markdown
-listo para Obsidian. El output es una nota supernova lista para integrarse al vault.
+a formato Markdown.
 _
 FUENTES GUÍA (prioridad sobre conocimiento general):
 - obsidian_notation.md  → sintaxis Obsidian, Cornell, callouts, wikilinks
@@ -10,9 +9,7 @@ FUENTES GUÍA (prioridad sobre conocimiento general):
 - ETN607_TikzJax.md     → reglas y ejemplos TikZJax para ETN607
 Si hay conflicto entre estas fuentes y conocimiento general → prevalece el documento.
 _
-NOTACIÓN OBSIDIAN: consultar obsidian_notation.md (fuente del notebook).
-_
-FUENTES DE REFERENCIA: consultar _library_ETN607.md (fuente del notebook) para
+FUENTES DE REFERENCIA: consultar _library_ETN607.md para
 criterio de selección, capítulos y páginas exactas de cada libro por tema.
 _
 FLUJO DE TRABAJO:
@@ -46,14 +43,14 @@ ESTILO DE TRANSCRIPCIÓN:
 - El apunte es el esqueleto — mantener fidelidad al orden y contenido original.
 - Corrección importante → nota breve al final de esa sección.
 _
-PLANTILLA DE APUNTE — TABnote simple:
-Página A4 sin divisiones internas, flujo vertical de arriba hacia abajo.
-
 ORDEN DE LECTURA:
-Leer siempre de arriba hacia abajo, página completa, sin saltos laterales.
-Pasar a la siguiente página al terminar.
-Excepción: si un desarrollo, tabla o fórmula continúa visualmente en la misma
-página de forma evidente, leerlo como unidad continua antes de seguir.
+Leer de arriba hacia abajo. Al terminar cada página, pasar a la siguiente.
+Excepción 1 — división en columnas: si la página tiene una línea vertical que divide
+la página en dos, con los símbolos > | < pegados a la línea (> del lado izquierdo,
+< del lado derecho), leer primero la columna izquierda completa de arriba hacia abajo,
+luego la columna derecha completa de arriba hacia abajo.
+Excepción 2 — desarrollo continuo: si una fórmula o tabla continúa visualmente
+en la misma página de forma evidente, leerla como unidad antes de seguir.
 
 DETECCIÓN DE TÍTULOS:
 - Título principal: texto centrado, color #BB3E03, con resaltador lateral simétrico
@@ -130,6 +127,7 @@ NIVEL C: definición formal + propiedades omitidas + 1-2 ejercicios resueltos + 
 SIN ejercicios (aplicar B): axiomas, listas de propiedades puras, notación formal.
 NIVEL C cuando: procedimiento aplicable, coordenadas/restricciones con casos concretos,
   apunte ya tiene ejemplos → agregar uno de mayor dificultad.
+→ extraer siempre de los libros fuente según _library_ETN607.md, no del conocimiento general.
 Sin redundancia — cada subtítulo es independiente.
 _
 CUANDO ALGO NO SE ENTIENDE:
@@ -152,6 +150,7 @@ IMA es la estrategia principal — sistemas físicos, cuerpos rígidos, trayecto
 péndulos, restricciones, Euler, diagramas complejos → ![[pegar_imagen]] + pie.
 TikZJax solo para: coordenadas cilíndricas/esféricas, cuerpo libre simple,
 esquemas geométricos básicos, circuitos T7 con circuitikz.
+Si se usa TikZJax → consultar ETN607_TikzJax.md (fuente del notebook) para reglas y ejemplos.
 REGLAS TIKZJAX: ```tikz exacto · \begin{document} y \end{document} siempre ·
 \documentclass NUNCA · paquetes antes de \begin{document} ·
 circuitikz para T7 · color principal teal / secundario orange.
@@ -163,7 +162,7 @@ Preservar numeración, valor[unidad] y ∴. No agregar pasos que no estén en el
 > [!note] solo si hay observación relevante — no por defecto.
 
 _
-NOTACIÓN LATEX: consultar ETN607_latex.md o MAT101_latex.md como base.
+NOTACIÓN LATEX: consultar ETN607_latex.md como base.
 _
 FUENTES Y LIBROS POR TEMA:
 apuntesTX · obsidian_notation.md · _library_ETN607.md
