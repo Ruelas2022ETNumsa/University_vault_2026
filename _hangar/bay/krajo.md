@@ -64,7 +64,7 @@ Implementar físicamente el sistema `_hangar/` diseñado en sesión 2026-07-30. 
 - [x] `tpl-ship.md` — basado en `tsk_tpl.md` con YAML de ship (`galaxy_body: ship`, estados de ship)
 - [x] `tpl-carrier.md` — YAML de carrier (`galaxy_body: carrier`, `fleet:`, `blocked_by:`)
 - [x] `tpl-dropship.md` — YAML de dropship (`galaxy_body: dropship`, `carrier:`, `scope:`, `status:`)
-- [ ] `tpl-logbook.md` — YAML de logbook (`galaxy_body: logbook`, `scope:`)
+- [x] `tpl-logbook.md` — YAML de logbook (`galaxy_body: logbook`, `scope:`)
 - [x] `tpl-blueprint.md` — YAML de blueprint (`galaxy_body: blueprint`, `status:`, `priority:`)
 
 ### Documentación pendiente

@@ -5,6 +5,9 @@ date_updated:
 ---
 
 %%
+# Este archivo es el template base — los bloques %% son instrucciones de llenado.
+# No es necesario copiar los comentarios %% a los logbooks nuevos creados desde este template.
+
 # YAML — instrucciones de llenado
 
 galaxy_body: logbook → siempre este valor, no cambiar
