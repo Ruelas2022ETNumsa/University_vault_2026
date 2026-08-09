@@ -57,7 +57,7 @@ Implementar físicamente el sistema `_hangar/` diseñado en sesión 2026-07-30. 
 - [x] Mover ships existentes a `dock/`:
   - [x] `tsk_pdf_marginalia_pp.md` → `dock/tsk_pdf_marginalia_pp.md`
 - [x] Crear carpeta `anki/` dentro de `_hangar/` (ya existe manualmente — verificar)
-- [ ] Crear `_hangar/anki/logbook.md`
+- [x] Crear `_hangar/anki/logbook.md`
 
 ### Templates nuevos a crear
 

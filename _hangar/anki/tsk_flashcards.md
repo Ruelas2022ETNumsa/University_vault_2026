@@ -1,9 +1,9 @@
 ---
-galaxy_body: ship
-project: "Flashcards (Opcion B) — activacion, pruebas y documentacion en Galaxy"
+galaxy_body: dropship
+carrier: "[[_hangar/anki/tsk_anki.md]]"
+scope: opcion-B
+status: activo
 date: 2026-08-02
-status: in-orbit
-fleet: anki
 ---
 
 ## Handoff

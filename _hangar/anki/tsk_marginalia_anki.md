@@ -1,9 +1,9 @@
 ---
-galaxy_body: ship
-project: "Marginalia Anki (Opcion A) — validacion completa con Script 2"
+galaxy_body: dropship
+carrier: "[[_hangar/anki/tsk_anki.md]]"
+scope: opcion-A
+status: activo
 date: 2026-08-02
-status: in-orbit
-fleet: anki
 ---
 
 ## Handoff

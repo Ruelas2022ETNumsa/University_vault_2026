@@ -3089,18 +3089,20 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "logbook.md",
         "_tmp_sync 1.md",
         "_tmp_sync.md",
         "tsk_anki.md",
+        "tsk_anki 1.md",
+        "tsk_marginalia_anki.md",
+        "tsk_flashcards.md",
+        "tsk_obsidian_to_anki.md",
         "anki_galaxy_guide.md",
         "opA_vs_opB.md",
         "anki-opcionA-marginalia.md",
-        "tsk_marginalia_anki.md",
         "anki-opcionB-flashcards.md",
-        "tsk_flashcards.md",
         "anki-opcionC-obsidian-to-anki.md",
-        "Obsidian_to_anki.md",
-        "tsk_obsidian_to_anki.md"
+        "Obsidian_to_anki.md"
       ]
     },
     "_hangar/anki/anki-opcionA-marginalia.md": {
@@ -3639,6 +3641,14 @@
       ]
     },
     "_app/notebooklm/guides/ETN607/ETN607_TikzJax.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/anki/logbook.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/anki/tsk_anki 1.md": {
       "isPinned": false,
       "isHidden": false
     }

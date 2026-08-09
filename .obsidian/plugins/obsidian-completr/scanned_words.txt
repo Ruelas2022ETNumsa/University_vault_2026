@@ -41164,6 +41164,7 @@ dividirlo
 divisions
 descripcion
 definicion
+desbloquear
 Vault
 Verificar
 Variables
@@ -64657,6 +64658,7 @@ barrera
 bloquear
 bloqueando
 basicos
+basico
 scope
 status
 selector
@@ -82148,6 +82150,7 @@ verticalmente
 vers
 visualizacion
 vacias
+verificacion
 audience
 activo
 auto
@@ -166247,6 +166250,7 @@ Educativo
 ESCRITURA
 Estaba
 Excepcion
+Evaluacion
 Obsidian
 OmniSearch
 Ocultar
@@ -199015,6 +199019,7 @@ markings
 muestrame
 matematica
 multilinea
+metodo
 YAML
 Ya
 You
@@ -289544,6 +289549,7 @@ fina
 fuerzas
 franja
 fidelidad
+fluido
 haya
 hace
 hacer

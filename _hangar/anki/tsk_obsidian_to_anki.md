@@ -1,9 +1,9 @@
 ---
-galaxy_body: ship
-project: "Obsidian to Anki — documentacion y pruebas completas"
+galaxy_body: dropship
+carrier: "[[_hangar/anki/tsk_anki.md]]"
+scope: opcion-C
+status: activo
 date: 2026-08-02
-status: in-orbit
-fleet: anki
 ---
 
 ## Handoff
