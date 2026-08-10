@@ -18,15 +18,15 @@ date_updated: 2026-08-02
 
 ## Panel de operaciones
 
-|     Worker     | Status | Estamina | Proyecto activo                                   |  Fecha   | Wake  | Recarga |
-| :------------: | :----: | :------: | :------------------------------------------------ | :------: | :---: | :-----: |
-| [[alx_hot.md]] |   ❌    |    🟢    | Sistema consulta móvil via Drive MCP              |    —     |   —   |    —    |
-|  [[krajo.md]]  |   ❌    |    🟢    | Implementación física `_hangar/`                  |    —     |   —   |    —    |
-| [[alx_gml.md]] |   ❌    |    🟢    | Sistema de links, sync y organización de carpetas |          |       |         |
-| [[alxrul.md]]  |   ✔    |    🟡    | —                                                 | 2026-8-9 | 15:25 |  20:25  |
-| [[alx-rul.md]] |   ❌    |    🟢    | Cornell Marginalia → Galaxy                       |    —     |   —   |    —    |
-| [[standb.md]]  |   ✔    |    🟢    | —                                                 |    —     |   —   |    —    |
-| [[emergn.md]]  |   ✔    |    🟢    | —                                                 |    —     |   —   |    —    |
+|     Worker     | Status |                       Estamina                       | Proyecto activo                                   |   Fecha   | Wake  | Recarga |
+| :------------: | :----: | :--------------------------------------------------: | :------------------------------------------------ | :-------: | :---: | :-----: |
+| [[alx_hot.md]] |   ❌    |                          🔴                          | Sistema consulta móvil via Drive MCP              | 2026-8-10 | 12:10 |  17:10  |
+|  [[krajo.md]]  |   ❌    |                          🟢                          | Implementación física `_hangar/`                  |     —     |   —   |    —    |
+| [[alx_gml.md]] |   ❌    |                          🟢                          | Sistema de links, sync y organización de carpetas |           |       |         |
+| [[alxrul.md]]  |   ✔    | 🟢 ready — descansó 5h desde Wake; estamina completa | —                                                 |           |       |         |
+| [[alx-rul.md]] |   ❌    |                          🟢                          | Cornell Marginalia → Galaxy                       |     —     |   —   |    —    |
+| [[standb.md]]  |   ✔    |                          🟢                          | —                                                 |     —     |   —   |    —    |
+| [[emergn.md]]  |   ✔    |                          🟢                          | —                                                 |     —     |   —   |    —    |
 
 Estados de estamina:
 🟡 active — sesión en curso
