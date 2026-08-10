@@ -20,6 +20,7 @@
         "Semestres",
         "_assets",
         "Borrar",
+        "Rubbish",
         "README.md"
       ]
     },
@@ -1246,8 +1247,7 @@
         "_template-system.md",
         "_ToDo-system.md",
         "_skill-system.md",
-        "_prompt-system.md",
-        "_assets-section.tmp"
+        "_prompt-system.md"
       ]
     },
     "_app/_config/_basic-memory-system.md": {
@@ -3440,6 +3440,70 @@
       "isPinned": false,
       "isHidden": false
     },
+    "Rubbish": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "2026-08-04",
+        "2026-08-06",
+        "section.md",
+        "tmp"
+      ]
+    },
+    "Rubbish/2026-08-04": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "2026-08-04 17.43.30.0",
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-08-04/2026-08-04 17.43.30.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-08-04/2026-08-04 17.43.30.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-04/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-06": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-08-06/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/section.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/tmp": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "lock"
+      ]
+    },
+    "Rubbish/tmp/lock": {
+      "isPinned": false,
+      "isHidden": false
+    },
     "_app/notebooklm/prompts/ETN607": {
       "isPinned": false,
       "isHidden": false,
@@ -3585,10 +3649,6 @@
       "isHidden": false
     },
     "_hangar/anki/tsk_anki 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/_config/_assets-section.tmp": {
       "isPinned": false,
       "isHidden": false
     }
