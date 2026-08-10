@@ -20,7 +20,8 @@
         "Semestres",
         "_assets",
         "Borrar",
-        "README.md"
+        "README.md",
+        "Rubbish"
       ]
     },
     "MOC": {
@@ -1246,8 +1247,7 @@
         "_template-system.md",
         "_ToDo-system.md",
         "_skill-system.md",
-        "_prompt-system.md",
-        "_assets-section.tmp"
+        "_prompt-system.md"
       ]
     },
     "_app/_config/_basic-memory-system.md": {
@@ -1562,8 +1562,7 @@
         "intel",
         "Kip R. Irvine -7ed-Assembly Language for x86 Processors.pdf",
         "kip R. irvine -5ed- LENGUAJE ENSAMBLADOR PARA COMPUTADORAS BASADAS EN INTEL.pdf",
-        "Francisco Charte Ojeda-2ed-Lenguaje Ensamblador.pdf",
-        "img903"
+        "Francisco Charte Ojeda-2ed-Lenguaje Ensamblador.pdf"
       ]
     },
     "_PDF/PDF-903/Randall Hyde - The Art of Assembly Language. (2nd Edition).pdf": {
@@ -1673,266 +1672,6 @@
       "isHidden": false
     },
     "_PDF/PDF-903/Francisco Charte Ojeda-2ed-Lenguaje Ensamblador.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/img903": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Cap1"
-      ]
-    },
-    "_PDF/PDF-903/img903/Cap1": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Ca01a.png",
-        "Ca01b.png",
-        "Ca01c.png",
-        "Ca01d.png",
-        "Ca01e.png",
-        "Ca01f.png",
-        "Ca01g.png",
-        "Ca01h.png",
-        "Ca01hError.png",
-        "Ca01i.png",
-        "Ca01j.png",
-        "Ca01k.png",
-        "Ca01l.png",
-        "Ca01m.png",
-        "Ca01n.png",
-        "Ca01o.png",
-        "Ca01p.png",
-        "Ca01q.png",
-        "Ca01r.png",
-        "Ca01s.png",
-        "Ca01t.png",
-        "Ca01u.png",
-        "Ca01v.png",
-        "Ca01w.png",
-        "Ca01x.png",
-        "Ca01y.png",
-        "Ca01z.png",
-        "Ca01za.png",
-        "Ca01zb.png",
-        "Ca01zc.png",
-        "Ca01zd.png",
-        "Ca01ze.png",
-        "Ca01zf.png",
-        "Ca01zg.png",
-        "fonts0.asm",
-        "fonts1.asm",
-        "fonts2.asm",
-        "fonts3.asm",
-        "menu.asm",
-        "menu01.asm",
-        "menu02.asm",
-        "menu03.asm",
-        "mod04h0.asm",
-        "mod13h0.asm",
-        "mod13h1.asm",
-        "mod13h2.asm",
-        "mod13h3.asm",
-        "pila0.asm",
-        "unchar.asm"
-      ]
-    },
-    "_PDF/PDF-903/img903/Cap1/Ca01a.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/img903/Cap1/Ca01b.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/img903/Cap1/Ca01c.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/img903/Cap1/Ca01d.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/img903/Cap1/Ca01e.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/img903/Cap1/Ca01f.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/img903/Cap1/Ca01g.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/img903/Cap1/Ca01h.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/img903/Cap1/Ca01hError.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/img903/Cap1/Ca01i.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/img903/Cap1/Ca01j.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/img903/Cap1/Ca01k.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/img903/Cap1/Ca01l.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/img903/Cap1/Ca01m.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/img903/Cap1/Ca01n.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/img903/Cap1/Ca01o.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/img903/Cap1/Ca01p.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/img903/Cap1/Ca01q.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/img903/Cap1/Ca01r.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/img903/Cap1/Ca01s.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/img903/Cap1/Ca01t.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/img903/Cap1/Ca01u.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/img903/Cap1/Ca01v.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/img903/Cap1/Ca01w.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/img903/Cap1/Ca01x.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/img903/Cap1/Ca01y.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/img903/Cap1/Ca01z.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/img903/Cap1/Ca01za.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/img903/Cap1/Ca01zb.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/img903/Cap1/Ca01zc.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/img903/Cap1/Ca01zd.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/img903/Cap1/Ca01ze.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/img903/Cap1/Ca01zf.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/img903/Cap1/Ca01zg.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/img903/Cap1/fonts0.asm": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/img903/Cap1/fonts1.asm": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/img903/Cap1/fonts2.asm": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/img903/Cap1/fonts3.asm": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/img903/Cap1/menu.asm": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/img903/Cap1/menu01.asm": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/img903/Cap1/menu02.asm": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/img903/Cap1/menu03.asm": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/img903/Cap1/mod04h0.asm": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/img903/Cap1/mod13h0.asm": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/img903/Cap1/mod13h1.asm": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/img903/Cap1/mod13h2.asm": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/img903/Cap1/mod13h3.asm": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/img903/Cap1/pila0.asm": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/img903/Cap1/unchar.asm": {
       "isPinned": false,
       "isHidden": false
     },
@@ -3093,7 +2832,6 @@
         "_tmp_sync 1.md",
         "_tmp_sync.md",
         "tsk_anki.md",
-        "tsk_anki 1.md",
         "tsk_marginalia_anki.md",
         "tsk_flashcards.md",
         "tsk_obsidian_to_anki.md",
@@ -3584,11 +3322,341 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_hangar/anki/tsk_anki 1.md": {
+    "Rubbish": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "2026-08-04",
+        "2026-08-06",
+        "2026-08-09",
+        "tmp",
+        "section.md"
+      ]
+    },
+    "Rubbish/2026-08-04": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "2026-08-04 17.43.30.0",
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-08-04/2026-08-04 17.43.30.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-08-04/2026-08-04 17.43.30.0/data.json": {
       "isPinned": false,
       "isHidden": false
     },
-    "_app/_config/_assets-section.tmp": {
+    "Rubbish/2026-08-04/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-06": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-08-06/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json",
+        "img903"
+      ]
+    },
+    "Rubbish/2026-08-09/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Cap1"
+      ]
+    },
+    "Rubbish/2026-08-09/img903/Cap1": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Ca01d.png",
+        "Ca01e.png",
+        "Ca01a.png",
+        "Ca01b.png",
+        "Ca01c.png",
+        "Ca01f.png",
+        "Ca01i.png",
+        "Ca01h.png",
+        "Ca01hError.png",
+        "Ca01g.png",
+        "Ca01k.png",
+        "Ca01j.png",
+        "Ca01m.png",
+        "Ca01l.png",
+        "Ca01o.png",
+        "Ca01n.png",
+        "Ca01q.png",
+        "Ca01p.png",
+        "Ca01r.png",
+        "Ca01s.png",
+        "Ca01t.png",
+        "Ca01u.png",
+        "Ca01v.png",
+        "Ca01x.png",
+        "Ca01w.png",
+        "Ca01y.png",
+        "Ca01z.png",
+        "Ca01zc.png",
+        "Ca01zb.png",
+        "Ca01zd.png",
+        "Ca01za.png",
+        "Ca01ze.png",
+        "Ca01zf.png",
+        "Ca01zg.png",
+        "fonts0.asm",
+        "fonts1.asm",
+        "fonts3.asm",
+        "fonts2.asm",
+        "menu.asm",
+        "menu01.asm",
+        "menu02.asm",
+        "menu03.asm",
+        "mod04h0.asm",
+        "mod13h2.asm",
+        "mod13h0.asm",
+        "mod13h3.asm",
+        "pila0.asm",
+        "mod13h1.asm",
+        "unchar.asm"
+      ]
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01d.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01e.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01a.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01b.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01c.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01f.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01i.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01h.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01hError.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01g.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01k.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01j.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01m.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01l.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01o.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01n.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01q.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01p.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01r.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01s.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01t.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01u.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01v.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01x.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01w.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01y.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01z.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01zc.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01zb.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01zd.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01za.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01ze.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01zf.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01zg.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/fonts0.asm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/fonts1.asm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/fonts3.asm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/fonts2.asm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/menu.asm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/menu01.asm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/menu02.asm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/menu03.asm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/mod04h0.asm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/mod13h2.asm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/mod13h0.asm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/mod13h3.asm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/pila0.asm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/mod13h1.asm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/unchar.asm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/tmp": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "lock"
+      ]
+    },
+    "Rubbish/tmp/lock": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/section.md": {
       "isPinned": false,
       "isHidden": false
     }
