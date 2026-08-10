@@ -33639,6 +33639,7 @@ Peso
 Pivote
 Pared
 Prototipo
+Planteo
 del
 date
 de
@@ -41165,6 +41166,7 @@ divisions
 descripcion
 definicion
 desbloquear
+descarta
 Vault
 Verificar
 Variables
@@ -57566,6 +57568,7 @@ grueso
 grises
 gidos
 geometricos
+gaste
 body
 beacon
 bat
@@ -90199,6 +90202,8 @@ alcanzados
 avances
 alcanzado
 adoptado
+alice
+aliza
 related
 recomendados
 ribbon
@@ -189911,6 +189916,10 @@ parado
 pego
 paginas
 posicion
+pegados
+pymupdf
+parsea
+parseable
 min
 mica
 movimiento
@@ -223455,6 +223464,9 @@ elipse
 entenderlo
 entiendo
 eererer
+extraiga
+emita
+econ
 Motor
 Media
 Mantiene
@@ -248247,6 +248259,10 @@ logbooks
 layouts
 lleguen
 logros
+leerla
+localizaci
+localiza
+localice
 incluyendo
 im
 instalar
@@ -257697,6 +257713,8 @@ impedimentos
 identico
 indice
 interdependiente
+inserte
+insertada
 Dependencia
 Dropbox
 Dataview
@@ -323777,6 +323795,7 @@ NIMO
 Nelson
 NOMBRE
 NOTACION
+NBLM
 originales
 observatory
 oficial
