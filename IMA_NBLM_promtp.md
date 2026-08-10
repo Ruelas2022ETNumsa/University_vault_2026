@@ -66,18 +66,41 @@ No agregues explicación del concepto. No agregues conclusiones. Solo descripci�
 
 ---
 
+## Prompt 2b — Gemini+fuentes: contexto simplificado para dibujo
+
+Usar en Gemini con el cuaderno de NBLM cargado, en el mismo chat o uno separado del Prompt 2.
+Input: la respuesta completa de NBLM (las 2 oraciones de explicación + bloque IMA-SRC).
+
+```
+Tengo esta respuesta de NotebookLM sobre un concepto:
+
+[PEGAR RESPUESTA COMPLETA DE NBLM]
+
+A partir de eso, escribí una sola oración que describa:
+- Qué representa geométrica o visualmente la figura citada
+- Para qué nivel o contexto es (ej: Cálculo 1, análisis, álgebra)
+
+Esa oración es para orientar el estilo de un dibujo — no para explicar el concepto.
+No uses lenguaje formal ni definiciones. Solo describí qué es lo que se va a dibujar y en qué contexto.
+
+Ejemplo de formato esperado:
+"representación geométrica del cociente de diferencias y la recta tangente, para un apunte de Cálculo 1"
+```
+
+---
+
 ## Prompt 3 — Gemini (sin fuentes): generación del dibujo
 
 Usar en Gemini estándar (sin cuaderno cargado).
-Input: contexto mínimo + descripción completa entregada por Gemini+fuentes en el paso anterior.
+Input: output del Prompt 2b (contexto) + output del Prompt 2 (descripción técnica).
 
 ```
-Necesito que dibujes una figura matemática para un apunte de Cálculo 1, estilo diagrama de libro de texto universitario.
+Necesito que dibujes una figura matemática para un apunte universitario.
 
-Contexto: [UNA ORACIÓN — qué concepto ilustra la figura. Ej: "es una representación geométrica del cociente de diferencias y la recta tangente"]
+Contexto: [PEGAR OUTPUT DEL PROMPT 2b — 1 oración]
 
 Descripción de la figura:
-[PEGAR DESCRIPCIÓN COMPLETA DE GEMINI+FUENTES]
+[PEGAR DESCRIPCIÓN COMPLETA DEL PROMPT 2]
 
 Instrucciones para el dibujo:
 - Estilo: diagrama matemático limpio, fondo blanco, líneas claras, sin decoración extra

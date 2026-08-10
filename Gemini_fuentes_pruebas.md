@@ -14,74 +14,107 @@ Fuente usada: *Apostol vol 1 2ed-Calculus-1to7.pdf* — cuaderno de Cálculo 1 e
 
 ---
 
-## Prueba 1 — NBLM con prompt IMA-SRC
+## Prueba 1 — NBLM con prompt IMA-SRC v2
 
 **Consulta enviada:** "explica la derivada"
 
-**Resultado:** NBLM entregó la explicación del concepto en dos oraciones y generó tres bloques IMA-SRC correctamente formateados, citando figuras de Apostol y Piskunov con fuente, página, etiqueta de figura, ubicación y descripción relevante.
+**Respuesta de NBLM:**
+> La derivada es una función que representa la razón de cambio instantánea de una variable respecto a otra, calculada formalmente como el límite del cociente de diferencias cuando el incremento de la variable independiente tiende a cero. Geométricamente, este valor equivale a la pendiente de la recta tangente a la curva de la función en un punto determinado.
+>
+> IMA-SRC | fuente: Apostol vol 1 2ed-Calculus-1to7.pdf | página: 207 | etiqueta de figura: Figura 4.4 | pie de figura: Interpretación geométrica del cociente de diferencia como tangente de un ángulo | ubicación: Parte central de la página
+> justificación: Esta figura es de gran utilidad ya que permite visualizar de manera directa cómo el cociente de diferencias representa la pendiente de una recta secante, conectando de forma intuitiva este concepto geométrico con el proceso de límite que define a la derivada.
 
 **Observaciones:**
 
-- El prompt funcionó correctamente: NBLM respetó el formato IMA-SRC y las condiciones de citado.
-- NBLM entrega el **número de página impreso en el libro**, no el número de página del visor PDF. Ejemplo: entrega `página: 207` (impreso en Apostol) cuando el visor PDF marca la página 231. Esto implica un desfase que el script `ima_src_opener` deberá contemplar.
-- La etiqueta de figura ("Figura 4.4") fue identificada y usada correctamente como campo prioritario.
-- El pie de figura fue incluido con el texto completo tal como aparece en el libro.
-- La descripción relevante conectó la imagen con el concepto explicado en las dos oraciones previas.
+- El prompt v2 funcionó correctamente: la `justificación` conecta la figura con la explicación sin describir visualmente la imagen — diferencia clave respecto a la v1.
+- NBLM entrega el **número de página impreso en el libro** (207), no el del visor PDF (231). Desfase confirmado — el script `ima_src_opener` deberá contemplarlo.
+- La etiqueta de figura y el pie de figura fueron identificados y entregados correctamente.
 
-**Conclusión:** NBLM localiza figuras de libros con precisión suficiente para el flujo IMA-SRC. El formato v1 del prompt es viable.
+**Conclusión:** NBLM con prompt v2 localiza y justifica figuras con precisión suficiente para alimentar el paso siguiente. El campo `justificación` cumple su rol sin invadir la descripción visual.
 
 ---
 
-## Prueba 2 — Gemini con fuentes de NBLM (Gemini+fuentes)
+## Prueba 2 — Gemini+fuentes: descripción técnica
 
-**Contexto:** Dentro de Gemini, en la barra lateral izquierda se pueden acceder a los cuadernos de NBLM. Al seleccionar uno, Gemini puede consultarlo. Las fuentes están disponibles pero Gemini no las lee hasta que se le solicita explícitamente.
+**Contexto:** Se pasó el bloque IMA-SRC completo entregado por NBLM. Gemini tenía el cuaderno de Cálculo 1 cargado en la barra lateral.
 
-**Consulta enviada:**
-> "Tengo en este cuaderno el libro 'Apostol vol 1 Calculus'. ¿Puedes ver la Figura 4.4 de la página 207 (página del PDF)? Descríbela con detalle y dime qué se ve en ella."
+**Input entregado:**
+> IMA-SRC | fuente: Apostol vol 1 2ed-Calculus-1to7.pdf | página: 207 | etiqueta de figura: Figura 4.4 | pie de figura: Interpretación geométrica del cociente de diferencia como tangente de un ángulo | ubicación: Parte central de la página — justificación: [...]
 
-**Resultado:** Gemini entregó una descripción detallada y estructurada de la Figura 4.4, identificando ejes, puntos P y Q, recta secante, triángulo rectángulo auxiliar, y la interpretación geométrica del cociente de diferencias. Además generó espontáneamente un bloque IMA-SRC con la terminología correcta.
+**Resultado:** Gemini entregó una descripción detallada y estructurada de la Figura 4.4 — ejes, puntos P y Q, recta secante, triángulo rectángulo auxiliar, etiquetas de variables, ángulo α — con nivel de detalle suficiente para redibujar la figura sin verla.
 
 **Observaciones:**
 
-- La descripción fue más detallada que la entregada por NBLM para la misma figura.
-- Gemini adoptó el formato IMA-SRC sin que se le instruyera explícitamente — posiblemente por contexto del cuaderno.
-- **Gemini+fuentes no puede generar imágenes** — al intentarlo devuelve error 1152 (límite de función no disponible). Esta es una limitación real de la modalidad.
-- La descripción entregada por Gemini+fuentes resultó suficientemente precisa para usarla como insumo en la prueba siguiente.
+- La descripción fue más detallada que la entregada por NBLM en pruebas anteriores con el prompt v1.
+- **Gemini+fuentes no puede generar imágenes** — error 1152 (limitación real de la modalidad con fuentes cargadas).
+- La descripción resultó directamente utilizable como input para el paso 3.
 
-**Conclusión:** Gemini+fuentes es útil para obtener descripciones detalladas de figuras. No reemplaza a NBLM como señalizador dentro del flujo IMA-SRC, pero puede complementar la descripción cuando se necesita mayor detalle.
-
----
-
-## Prueba 3 — Gemini sin fuentes (solo descripción)
-
-**Contexto:** Se tomó la descripción generada por Gemini+fuentes en la prueba anterior y se llevó a Gemini estándar (sin acceso a las fuentes del cuaderno) para pedirle que dibujara la figura a partir de esa descripción.
-
-**Consulta enviada:** Se le proporcionó la descripción completa de la Figura 4.4 obtenida en la prueba 2 y se le pidió que la dibujara.
-
-**Resultado:** Gemini generó la figura correctamente a partir de la descripción — ejes, curva, puntos, recta secante y triángulo rectángulo visibles y bien ubicados.
-
-**Observaciones y mejoras identificadas para el prompt de descripción:**
-
-- No agregar descripción textual debajo de la imagen generada — ya se cuenta con una.
-- Incluir solo la etiqueta de figura ("Figura 4.4") en la parte superior de la imagen generada.
-- El pie de figura fue incorporado correctamente gracias al nivel de detalle en la descripción de Gemini+fuentes.
-- Los detalles internos de la figura (nombres de líneas, puntos, ángulos) fueron representados correctamente.
-
-**Conclusión:** Gemini puede generar representaciones visuales útiles de figuras matemáticas a partir de descripciones textuales suficientemente detalladas. La calidad del dibujo depende directamente de la calidad de la descripción IMA-SRC.
+**Conclusión:** Gemini+fuentes cumple su rol en el flujo: convierte una referencia IMA-SRC en una descripción técnica visual precisa. No necesita contexto adicional más allá del bloque IMA-SRC.
 
 ---
 
-## Resumen de resultados
+## Prueba 3 — Gemini sin fuentes: generación del dibujo
+
+**Contexto entregado:** La respuesta completa de NBLM (las 2 oraciones de explicación + bloque IMA-SRC) pegada tal cual, sin reducción ni reescritura, más la descripción de Gemini+fuentes.
+
+**Resultado:** Gemini generó una figura correcta y didácticamente sólida. Ver imágenes adjuntas: original del libro (Apostol p.207) y versión generada por Gemini.
+
+**Análisis comparativo — original vs. generado:**
+
+| Elemento | Original Apostol | Gemini generado |
+|---|---|---|
+| Curva f | ✅ | ✅ |
+| Puntos P y Q sobre la curva | ✅ | ✅ |
+| Recta secante PQ | ✅ | ✅ |
+| Triángulo rectángulo con h y f(x+h)−f(x) | ✅ | ✅ |
+| Ángulo α en P | ✅ | ✅ |
+| Etiquetas x y x+h en eje horizontal | ✅ | ✅ |
+| Ejes cartesianos completos (x, y) | ❌ no tiene | ✅ agregado |
+| f(x) y f(x+h) marcados en eje y | ❌ no tiene | ✅ agregado |
+| Líneas punteadas desde P y Q al eje y | ❌ no tiene | ✅ agregado |
+| α también marcado en el origen | ❌ no tiene | ✅ agregado |
+| Recta tangente en P diferenciada | ✅ (punteada) | ❌ omitida |
+| Etiqueta "Figura 4.4" en la imagen | — | ✅ correcto |
+
+**Sobre los elementos agregados por Gemini:** los ejes, las marcas de f(x) y f(x+h) en el eje y, y las líneas punteadas son matemáticamente correctos — f(x) y f(x+h) son las ordenadas de P y Q y marcarlos es convención estándar en libros de Cálculo. Hacen la figura más legible para un apunte de estudio. No son errores.
+
+**Única omisión relevante:** la recta tangente en P (diferenciada de la secante) no fue dibujada. Es el elemento que conecta visualmente con la definición de derivada como pendiente de la tangente. No se corrige en el prompt porque los prompts deben ser generales — queda como limitación conocida del flujo.
+
+**Sobre el contexto del paso 3:** se usó la respuesta completa de NBLM pegada tal cual (sin reducir ni reescribir). Funcionó correctamente. El prompt debe permitir esto — no debe requerir que el usuario redacte un contexto simplificado.
+
+**Conclusión:** el flujo de 3 pasos produce resultados buenos con imágenes correctas y didácticamente útiles. El dibujo generado es una representación válida para la consulta "explica la derivada" en el contexto de Cálculo 1.
+
+---
+
+## Resumen del flujo validado
+
+```
+NBLM (prompt v2)
+  → respuesta + bloque IMA-SRC
+      ↓
+Gemini+fuentes
+  → input: bloque IMA-SRC completo
+  → output: descripción técnica visual
+      ↓
+Gemini simple
+  → input: respuesta NBLM completa (pegada tal cual) + descripción de Gemini+fuentes
+  → output: imagen generada con etiqueta de figura
+```
+
+---
+
+## Tabla de capacidades
 
 | IA | Ve figuras en PDF | Describe con detalle | Genera imagen | Entrega bloque IMA-SRC |
 |----|:-:|:-:|:-:|:-:|
-| NBLM | ✅ | Parcial | ❌ | ✅ (con prompt) |
-| Gemini+fuentes | ✅ | ✅ | ❌ (error 1152) | ✅ (espontáneo) |
+| NBLM | ✅ | Justificación | ❌ | ✅ (con prompt v2) |
+| Gemini+fuentes | ✅ | ✅ técnica | ❌ (error 1152) | ✅ (espontáneo) |
 | Gemini (sin fuentes) | ❌ | — | ✅ | — |
 
 ---
 
 ## Pendientes
 
-- Definir si el campo `página` en IMA-SRC documenta la página impresa o la del visor PDF — actualmente NBLM entrega la impresa; el script `ima_src_opener` debe contemplar el desfase.
-- Mejorar el prompt de descripción para que Gemini no agregue texto redundante al generar imágenes (solo etiqueta de figura en la parte superior).
+- El campo `página` en IMA-SRC es el número impreso en el libro — el script `ima_src_opener` debe contemplar el desfase respecto al visor PDF.
+- La recta tangente en P no aparece en el dibujo generado — limitación conocida, no se corrige en el prompt.
+- Evaluar si el contexto completo de NBLM en el paso 3 puede simplificarse automáticamente (por Gemini+fuentes u otro medio) sin perder calidad en el dibujo.
