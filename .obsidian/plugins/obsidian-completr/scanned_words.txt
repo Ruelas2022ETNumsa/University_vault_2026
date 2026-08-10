@@ -33643,6 +33643,7 @@ Pivote
 Pared
 Prototipo
 Planteo
+Pedirle
 del
 date
 de
@@ -57587,6 +57588,7 @@ gemini
 gustar
 grafiquemos
 gastaron
+guarde
 body
 beacon
 bat
@@ -90242,6 +90244,7 @@ alimentar
 adopt
 alizador
 adjuntas
+aislada
 related
 recomendados
 ribbon
@@ -98776,6 +98779,7 @@ representaciones
 redibujar
 reescritura
 redacte
+referenciarla
 notes
 notas
 nuevas
@@ -149250,6 +149254,7 @@ Imagenes
 Instancia
 IMAGENES
 Ilustra
+Intentar
 Funci
 File
 Fase
@@ -332379,6 +332384,7 @@ opacidad
 ortografia
 observacion
 observan
+observarlo
 junto
 json
 jer
