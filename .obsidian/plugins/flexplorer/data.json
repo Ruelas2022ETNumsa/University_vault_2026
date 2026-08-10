@@ -2966,7 +2966,9 @@
         "tsk_supercharged-dual-icons.md",
         "tsk_color-folders-files.md",
         "tsk_logbook_dock.md",
-        "tsk_config-ia-workers.md"
+        "tsk_config-ia-workers.md",
+        "img_to_assets_via_mcp.md",
+        "img_base64_to_md.md"
       ]
     },
     "_app/shellcommands/shellcmd_start_snippet.md": {
@@ -3052,7 +3054,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "tpl_tsk 1.md",
+        "tpl_tsk (legacy).md",
         "tpl_carrier.md",
         "tpl_ship.md",
         "tpl_worker.md",
@@ -3071,10 +3073,6 @@
       "isHidden": false
     },
     "_hangar/template/tpl_carrier.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_hangar/template/tpl_tsk 1.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -3707,6 +3705,18 @@
       "isHidden": false
     },
     "_hangar/tsk_IMA_NBLM 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/_legacy/img_to_assets_via_mcp.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/_legacy/img_base64_to_md.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/template/tpl_tsk (legacy).md": {
       "isPinned": false,
       "isHidden": false
     }

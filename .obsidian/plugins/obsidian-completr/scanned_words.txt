@@ -98780,6 +98780,8 @@ redibujar
 reescritura
 redacte
 referenciarla
+redactado
+redactados
 notes
 notas
 nuevas
@@ -115882,6 +115884,7 @@ citado
 contemplar
 conect
 contemplarlo
+contextualiza
 updated
 un
 universo
@@ -199112,6 +199115,7 @@ mejoras
 mostrados
 modalidad
 marcarlos
+mapearlo
 YAML
 Ya
 You
@@ -332385,6 +332389,7 @@ ortografia
 observacion
 observan
 observarlo
+obliga
 junto
 json
 jer
