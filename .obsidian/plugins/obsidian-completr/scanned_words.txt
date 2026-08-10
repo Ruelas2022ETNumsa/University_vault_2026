@@ -41167,6 +41167,7 @@ descripcion
 definicion
 desbloquear
 descarta
+desfase
 Vault
 Verificar
 Variables
@@ -98730,6 +98731,7 @@ rbitas
 risk
 resolucion
 redacci
+referencie
 notes
 notas
 nuevas
@@ -115815,6 +115817,8 @@ calido
 cerrarse
 constituido
 consolidados
+consolidaci
+consolidar
 updated
 un
 universo
@@ -157318,6 +157322,7 @@ Franja
 Fuerzas
 Fundamentos
 Finn
+Figura
 Estado
 Excalidraw
 EPUBs
@@ -199029,6 +199034,7 @@ muestrame
 matematica
 multilinea
 metodo
+mejoras
 YAML
 Ya
 You

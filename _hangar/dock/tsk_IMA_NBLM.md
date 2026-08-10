@@ -23,11 +23,19 @@ Sobreescribir con edit_file al cerrar cada sesión.
 Es lo primero que Claude lee al retomar — debe ser suficiente para arrancar sin re-explicar.
 %%
 
-**Última sesión:** 2026-08-10
-**Retomar desde:** Decisiones — definir formato IMA-SRC y ruta de implementación
-**Completado esta sesión:** Planteo del problema, análisis de rutas A y B, creación del ship
-**Próximo paso:** Probar si NBLM localiza figuras de libros con precisión (libro + página + nº figura) — resultado define si se avanza con Ruta A o se descarta
-**Preguntas de cierre:** ¿El bloque IMA-SRC va como comentario `%% %%` o texto visible? (pendiente de prueba NBLM)
+**Última sesión:** 2026-08-10 | hora inicio: 12:52
+**Retomar desde:** Diseño del prompt IMA-SRC — mejoras y consolidación
+**Completado esta sesión:**
+- Prueba NBLM con cuaderno de Cálculo 1 (Apostol vol 1)
+- Confirmado: NBLM ve e interpreta imágenes en PDFs
+- Confirmado: NBLM usa nº de página del PDF (no el impreso en el libro)
+- Confirmado: NBLM referencia figuras por su nombre en el libro (ej: "Figura 4.4") — más útil que posición
+- Formato IMA-SRC v1 probado con Figura 4.4 (derivada, Apostol p.207) — resultado correcto
+- Decisión: mantener campo `ubicación` + agregar campo `referencia` como prioritario
+- Prompt de prueba creado en `E:\University_vault_2026\IMA_NBLM_promtp.md`
+- Pendiente registrado: numerar imágenes propias en apuntes tipo "Figura X" para que NBLM las referencie igual que libros
+**Próximo paso:** Mejorar prompt IMA-SRC (análisis y sugerencias activos — no editar aún)
+**Preguntas de cierre:** —
 
 ---
 
@@ -85,8 +93,8 @@ Se puebla cuando el usuario dispara la búsqueda con la palabra "web".
 
 ## Tareas
 
-- [ ] Probar NBLM: pedir que localice una figura de Wells o Taylor con libro + página + nº figura
-- [ ] Definir formato `IMA-SRC` según resultado de la prueba
+- [x] Probar NBLM: pedir que localice una figura con libro + página + nº figura → ✅ funciona (Apostol, Figura 4.4, p.207)
+- [x] Definir formato `IMA-SRC` según resultado de la prueba → ✅ v1 definido y probado
 - [ ] Redactar instrucción `IMA-SRC` para el prompt (mínimo caracteres)
 - [ ] Crear script `ima_src_opener/main.py`
 - [ ] Registrar en Shell Commands
@@ -96,14 +104,17 @@ Se puebla cuando el usuario dispara la búsqueda con la palabra "web".
 
 ## Preguntas abiertas
 
-- ¿NBLM localiza figuras de libros con precisión real? → responde si la Capa 1 es viable
-- ¿Formato `IMA-SRC`: comentario `%% %%` (invisible, 0 costo visual) o texto visible con pie? → pendiente de prueba; preferencia: lo que gaste menos caracteres en prompt
+- ~~¿NBLM localiza figuras de libros con precisión real?~~ → ✅ confirmado viable
+- ~~¿Formato `IMA-SRC`: comentario o texto visible?~~ → pendiente decidir al consolidar prompt final
+- ¿Cómo manejar el desfase página PDF vs página impresa en el script `ima_src_opener`? → NBLM da página PDF; script debe usar ese número directo
+- ¿El prompt final va en las instrucciones del cuaderno o como primer mensaje del usuario?
 
 ---
 
 ## Recursos
 
-- Prompt activo: `E:\University_vault_2026\_app\notebooklm\prompts\ETN607\ETN607-transcription.md`
+- Prompt activo ETN607: `E:\University_vault_2026\_app\notebooklm\prompts\ETN607\ETN607-transcription.md`
+- Prompt IMA-SRC v1 (prueba): `E:\University_vault_2026\IMA_NBLM_promtp.md`
 - Guía PDF++: `E:\University_vault_2026\_app\_appnotes\PDF_PP-guide.md`
 - Shell Commands config: `E:\University_vault_2026\_app\shellcommands\shellcmd_config_script.md`
 - Scripts Python: `{{vault_path}}\.obsidian\scripts\python\`

@@ -21,7 +21,8 @@
         "_assets",
         "Borrar",
         "README.md",
-        "Rubbish"
+        "Rubbish",
+        "IMA_NBLM_promtp.md"
       ]
     },
     "MOC": {
@@ -2889,7 +2890,8 @@
         "tsk_library_ETN825.md",
         "tsk_operator_reload_display.md",
         "tsk_movil_drive.md",
-        "tsk_vault-infra.md"
+        "tsk_vault-infra.md",
+        "tsk_IMA_NBLM.md"
       ]
     },
     "_hangar/dock/tsk_library_ETN825.md": {
@@ -3657,6 +3659,14 @@
       "isHidden": false
     },
     "Rubbish/section.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/dock/tsk_IMA_NBLM.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "IMA_NBLM_promtp.md": {
       "isPinned": false,
       "isHidden": false
     }
