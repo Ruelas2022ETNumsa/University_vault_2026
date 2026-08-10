@@ -9,7 +9,7 @@ status: documentado
 
 Pruebas realizadas para evaluar la capacidad de NotebookLM (NBLM) y Gemini de localizar, describir y representar figuras de libros en PDF. El objetivo de fondo es alimentar el flujo IMA-SRC: que una IA señalice la ubicación exacta de una figura para que luego un script la extraiga e inserte en el `.md` de Obsidian.
 
-El prompt usado en todas las pruebas con NBLM: `E:\University_vault_2026\IMA_NBLM_promtp.md`
+El prompt usado en todas las pruebas con NBLM: `E:\University_vault_2026\_hangar\IMA_NBLM\IMA_NBLM_promtp.md`
 Fuente usada: *Apostol vol 1 2ed-Calculus-1to7.pdf* — cuaderno de Cálculo 1 en NBLM.
 
 ---

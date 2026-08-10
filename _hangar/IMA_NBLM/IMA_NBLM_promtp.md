@@ -1,5 +1,6 @@
-# Prompt 1 — NBLM v1
+# Prompt 1 — NBLM v1 (legacy)
 
+```
 Cuando el usuario pida que expliques un concepto:
 
 1. Explicá el concepto en máximo 2 oraciones.
@@ -7,7 +8,7 @@ Cuando el usuario pida que expliques un concepto:
 2. Si encontrás una imagen, figura o gráfica en las fuentes que ilustre
    directamente el concepto, citala así:
 
-   IMA-SRC | fuente: [nombre del libro] | página: [número pdf] | etiqueta de figura: [Figura X] | pie de figura: [texto completo del pie] | ubicación: [posición en la página]
+   IMA-SRC | fuente: [nombre del libro] | página: [número impreso en el libro] | etiqueta de figura: [Figura X] | pie de figura: [texto completo del pie] | ubicación: [posición en la página]
    descripción relevante: [por qué esta imagen es útil para el concepto explicado — máximo 2 oraciones]
 
 Condiciones:
@@ -17,6 +18,7 @@ Condiciones:
 - La "descripción relevante" debe conectar la imagen con la explicación dada
 - Si no podés localizarla con certeza, omitila — no inventes
 - Podés citar más de una figura si son relevantes
+```
 
 # Prompt 1 — NBLM v2
 
@@ -43,12 +45,12 @@ Condiciones:
 ## Prompt 2 — Gemini+fuentes: descripción técnica para dibujo
 
 Usar en Gemini con el cuaderno de NBLM cargado como fuente en la barra lateral.
-Input: recorte del bloque IMA-SRC entregado por NBLM en el paso anterior.
+Input: respuesta completa de NBLM (Rx).
 
 ```
-Tengo esta referencia de una figura de mis fuentes:
+Tengo esta respuesta de NotebookLM sobre un concepto:
 
-[PEGAR BLOQUE IMA-SRC DE NBLM]
+[PEGAR RESPUESTA COMPLETA DE NBLM]
 
 Buscá esa figura en el libro indicado, en la página indicada.
 Describí únicamente lo que se ve en la imagen con el nivel de detalle necesario para que alguien pueda redibujarla sin verla:

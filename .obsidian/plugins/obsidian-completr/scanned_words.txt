@@ -41179,6 +41179,7 @@ durmiendo
 despierta
 detuvo
 dibujara
+diferenciada
 Vault
 Verificar
 Variables
@@ -64682,6 +64683,7 @@ basico
 buenas
 baga
 bela
+buenos
 scope
 status
 selector
@@ -73617,6 +73619,8 @@ sintesis
 subtitulos
 sirvio
 sibuje
+simplificado
+simplificarse
 vault
 vil
 ver
@@ -82176,6 +82180,7 @@ vers
 visualizacion
 vacias
 verificacion
+verla
 audience
 activo
 auto
@@ -90236,6 +90241,7 @@ agrege
 alimentar
 adopt
 alizador
+adjuntas
 related
 recomendados
 ribbon
@@ -98767,6 +98773,9 @@ respondio
 representativa
 respet
 representaciones
+redibujar
+reescritura
+redacte
 notes
 notas
 nuevas
@@ -115868,6 +115877,7 @@ concluyo
 citado
 contemplar
 conect
+contemplarlo
 updated
 un
 universo
@@ -199096,6 +199106,7 @@ metodo
 mejoras
 mostrados
 modalidad
+marcarlos
 YAML
 Ya
 You
@@ -223541,6 +223552,7 @@ enviada
 explicado
 estructurada
 espont
+entregados
 Motor
 Media
 Mantiene
@@ -257803,6 +257815,7 @@ instruyera
 intentarlo
 insumo
 incorporado
+invadir
 Dependencia
 Dropbox
 Dataview
@@ -265999,6 +266012,7 @@ DERECHA
 Derivado
 DETECCION
 Descr
+Desfase
 Remotely
 Raz
 Revisa
