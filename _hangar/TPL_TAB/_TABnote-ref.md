@@ -107,10 +107,15 @@ Cada bloque Cornell se subdivide internamente en 4 partes con líneas segmentada
 > Nota: las fórmulas y otros elementos también se encierran en cajas, pero con grosor similar al trazo normal — esto los diferencia visualmente de los callouts.
 
 ### Imagen
-- Delimitada por 2 líneas resaltadas en gris, una arriba y una abajo
-- El subtítulo de la imagen va en gris e incluye la sigla `IMA` para señalizar a NLM que debe omitir el bloque
-- NLM no transcribe imágenes — el usuario realiza un screenshot y lo pega manualmente en la supernova de Obsidian
-- Si es posible dentro del prompt, NLM puede incluir una breve descripción de la imagen como pie, para que el usuario la ubique al pegar el screenshot
+- Delimitada por una **caja cerrada de 4 lados** (cualquier color — el color es libre y no afecta el sistema)
+- Primera línea dentro de la caja: `Figura T.N` — donde T es el número de tema y N es el número correlativo dentro del tema (ej. `Figura 1.1`, `Figura 1.2`, `Figura 7.3`)
+- La palabra `Figura` es la señal que identifica el bloque para NLM — equivalente al `>` del callout
+- Espacio central: imagen, dibujo o esquema a mano (incluyendo mapas mentales con corchetes del docente)
+- Última línea dentro de la caja: descripción breve opcional — va limpia, sin prefijo
+- El pie de descripción es opcional: si la figura es obvia o el espacio no lo permite, se omite
+- La caja puede ocupar media página o la página completa — se adapta al contenido sin restricción de ancho
+- NLM identifica el bloque por la etiqueta `Figura T.N` y entrega número de página, etiqueta y pie en el bloque IMA-SRC
+- La numeración se revisa y corrige a mano antes de exportar el PDF a NLM
 
 ### Énfasis inline
 - Subrayado o trazo más grueso puntual dentro del apunte
@@ -182,8 +187,24 @@ Una flecha + subrayado sobre el elemento exacto indica la ubicación precisa de 
 ### Notas adhesivas (Sticky Memo)
 Capa flotante sobre la nota. No se exportan al PDF — invisibles para NLM. Uso libre: recordatorios, fechas de examen, estado del capítulo, cualquier información que no deba llegar a NLM.
 
-### Herramienta Cinta (Tape)
-**Descartada** — causa pérdida de sincronización tablet → PC.
+### Herramientas prohibidas
+
+| Herramienta | Motivo |
+|---|---|
+| Cinta (Tape) | Causa pérdida de sincronización tablet → PC |
+| Líneas segmentadas del bolígrafo (u otro trazo similar) | Samsung Notes PC no interpreta correctamente las líneas segmentadas — se distorsionan o desaparecen al sincronizar |
+
+> Cualquier elemento visual que requiera líneas segmentadas debe generarse en **Concepts** (app externa en la tablet), exportarse como imagen e insertarse en la nota como imagen. De esta forma llega al PDF sin pasar por la sincronización de trazos, evitando el problema.
+
+### Flujo Concepts → Samsung Notes (para imágenes con líneas segmentadas)
+
+1. Crear el diagrama o esquema en Concepts (tablet)
+2. Exportar como imagen (PNG)
+3. Insertar la imagen en la nota de Samsung Notes en la posición correspondiente
+4. Delimitar con la caja `Figura T.N` según la convención TABnote
+5. La imagen viaja al PDF en la exportación sin depender de la sincronización de trazos
+
+> Estado: en prueba — se está evaluando Concepts como herramienta complementaria para este caso de uso.
 
 ---
 

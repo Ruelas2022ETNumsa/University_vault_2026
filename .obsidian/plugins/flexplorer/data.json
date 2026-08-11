@@ -1319,6 +1319,7 @@
       "sortOrder": "custom",
       "customOrder": [
         "alt-B",
+        "tab",
         "tpl-anki.md",
         "tpl-w-initial.md",
         "tpl-w-project.md",
@@ -3236,7 +3237,8 @@
         "tsk_tabnote-prompt-nlm.md",
         "_TABnote-ref.md",
         "chronicle.md",
-        "tpl_prompt_transcription.md"
+        "tpl_prompt_transcription.md",
+        "_TABnote-ref 1.md"
       ]
     },
     "_hangar/TPL_TAB/tsk_tabnote.md": {
@@ -3719,6 +3721,16 @@
     "_hangar/template/tpl_tsk (legacy).md": {
       "isPinned": false,
       "isHidden": false
+    },
+    "_hangar/TPL_TAB/_TABnote-ref 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_templates/tab": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [],
+      "sortOrder": "custom"
     }
   },
   "pinnedFiles": [
