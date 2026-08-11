@@ -21,9 +21,9 @@
         "_assets",
         "Borrar",
         "README.md",
-        "assets",
         "Rubbish",
-        "Untitled.md"
+        "Untitled.md",
+        "assets"
       ]
     },
     "MOC": {
@@ -1319,6 +1319,7 @@
       "sortOrder": "custom",
       "customOrder": [
         "alt-B",
+        "tab",
         "tpl-anki.md",
         "tpl-w-initial.md",
         "tpl-w-project.md",
@@ -1339,8 +1340,7 @@
         "tpl-photon.md",
         "tpl-planet.md",
         "tpl-star.md",
-        "tpl-Anki_excalidraw.md",
-        "tab"
+        "tpl-Anki_excalidraw.md"
       ]
     },
     "_templates/alt-B": {
@@ -2824,8 +2824,8 @@
         "anki",
         "bay",
         "TPL_TAB",
-        "IMA_NBLM",
-        "tsk_IMA_NBLM 1.md"
+        "tsk_IMA_NBLM 1.md",
+        "IMA_NBLM"
       ]
     },
     "_hangar/anki": {
@@ -3056,14 +3056,14 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "tpl_tsk (legacy).md",
         "tpl_carrier.md",
         "tpl_ship.md",
         "tpl_worker.md",
         "tpl_dropship.md",
         "tpl_blueprint.md",
         "tpl_logbook_dock.md",
-        "tpl_logbook_carrier.md",
-        "tpl_tsk (legacy).md"
+        "tpl_logbook_carrier.md"
       ]
     },
     "_hangar/template/tpl_worker.md": {
@@ -3327,36 +3327,17 @@
       "isPinned": false,
       "isHidden": false
     },
-    "assets": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": []
-    },
     "Rubbish": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "2026-08-06",
         "2026-08-04",
+        "2026-08-06",
         "2026-08-09",
-        "2026-08-10",
         "tmp",
         "section.md"
       ]
-    },
-    "Rubbish/2026-08-06": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-08-06/data.json": {
-      "isPinned": false,
-      "isHidden": false
     },
     "Rubbish/2026-08-04": {
       "isPinned": false,
@@ -3383,14 +3364,30 @@
       "isPinned": false,
       "isHidden": false
     },
+    "Rubbish/2026-08-06": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-08-06/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
     "Rubbish/2026-08-09": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "img903",
-        "data.json"
+        "data.json",
+        "img903"
       ]
+    },
+    "Rubbish/2026-08-09/data.json": {
+      "isPinned": false,
+      "isHidden": false
     },
     "Rubbish/2026-08-09/img903": {
       "isPinned": false,
@@ -3407,53 +3404,53 @@
       "customOrder": [
         "Ca01d.png",
         "Ca01e.png",
-        "Ca01c.png",
         "Ca01a.png",
         "Ca01b.png",
+        "Ca01c.png",
         "Ca01f.png",
-        "Ca01g.png",
+        "Ca01i.png",
         "Ca01h.png",
         "Ca01hError.png",
+        "Ca01g.png",
         "Ca01k.png",
-        "Ca01i.png",
         "Ca01j.png",
-        "Ca01l.png",
-        "Ca01n.png",
         "Ca01m.png",
+        "Ca01l.png",
         "Ca01o.png",
-        "Ca01p.png",
+        "Ca01n.png",
         "Ca01q.png",
+        "Ca01p.png",
         "Ca01r.png",
+        "Ca01s.png",
+        "Ca01t.png",
         "Ca01u.png",
         "Ca01v.png",
-        "Ca01t.png",
-        "Ca01s.png",
         "Ca01x.png",
         "Ca01w.png",
         "Ca01y.png",
         "Ca01z.png",
-        "Ca01zb.png",
-        "Ca01za.png",
         "Ca01zc.png",
+        "Ca01zb.png",
         "Ca01zd.png",
+        "Ca01za.png",
         "Ca01ze.png",
-        "Ca01zg.png",
         "Ca01zf.png",
+        "Ca01zg.png",
         "fonts0.asm",
         "fonts1.asm",
-        "fonts2.asm",
         "fonts3.asm",
-        "menu03.asm",
+        "fonts2.asm",
         "menu.asm",
         "menu01.asm",
         "menu02.asm",
-        "mod13h0.asm",
+        "menu03.asm",
         "mod04h0.asm",
+        "mod13h2.asm",
+        "mod13h0.asm",
         "mod13h3.asm",
         "pila0.asm",
-        "unchar.asm",
-        "mod13h2.asm",
-        "mod13h1.asm"
+        "mod13h1.asm",
+        "unchar.asm"
       ]
     },
     "Rubbish/2026-08-09/img903/Cap1/Ca01d.png": {
@@ -3461,10 +3458,6 @@
       "isHidden": false
     },
     "Rubbish/2026-08-09/img903/Cap1/Ca01e.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/Ca01c.png": {
       "isPinned": false,
       "isHidden": false
     },
@@ -3476,11 +3469,15 @@
       "isPinned": false,
       "isHidden": false
     },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01c.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
     "Rubbish/2026-08-09/img903/Cap1/Ca01f.png": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-08-09/img903/Cap1/Ca01g.png": {
+    "Rubbish/2026-08-09/img903/Cap1/Ca01i.png": {
       "isPinned": false,
       "isHidden": false
     },
@@ -3492,11 +3489,11 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-08-09/img903/Cap1/Ca01k.png": {
+    "Rubbish/2026-08-09/img903/Cap1/Ca01g.png": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-08-09/img903/Cap1/Ca01i.png": {
+    "Rubbish/2026-08-09/img903/Cap1/Ca01k.png": {
       "isPinned": false,
       "isHidden": false
     },
@@ -3504,15 +3501,11 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-08-09/img903/Cap1/Ca01l.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/Ca01n.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Rubbish/2026-08-09/img903/Cap1/Ca01m.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01l.png": {
       "isPinned": false,
       "isHidden": false
     },
@@ -3520,7 +3513,7 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-08-09/img903/Cap1/Ca01p.png": {
+    "Rubbish/2026-08-09/img903/Cap1/Ca01n.png": {
       "isPinned": false,
       "isHidden": false
     },
@@ -3528,7 +3521,19 @@
       "isPinned": false,
       "isHidden": false
     },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01p.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
     "Rubbish/2026-08-09/img903/Cap1/Ca01r.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01s.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01t.png": {
       "isPinned": false,
       "isHidden": false
     },
@@ -3537,14 +3542,6 @@
       "isHidden": false
     },
     "Rubbish/2026-08-09/img903/Cap1/Ca01v.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/Ca01t.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/Ca01s.png": {
       "isPinned": false,
       "isHidden": false
     },
@@ -3564,15 +3561,11 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-08-09/img903/Cap1/Ca01zb.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/Ca01za.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Rubbish/2026-08-09/img903/Cap1/Ca01zc.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01zb.png": {
       "isPinned": false,
       "isHidden": false
     },
@@ -3580,15 +3573,19 @@
       "isPinned": false,
       "isHidden": false
     },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01za.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
     "Rubbish/2026-08-09/img903/Cap1/Ca01ze.png": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-08-09/img903/Cap1/Ca01zg.png": {
+    "Rubbish/2026-08-09/img903/Cap1/Ca01zf.png": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-08-09/img903/Cap1/Ca01zf.png": {
+    "Rubbish/2026-08-09/img903/Cap1/Ca01zg.png": {
       "isPinned": false,
       "isHidden": false
     },
@@ -3600,15 +3597,11 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-08-09/img903/Cap1/fonts2.asm": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Rubbish/2026-08-09/img903/Cap1/fonts3.asm": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-08-09/img903/Cap1/menu03.asm": {
+    "Rubbish/2026-08-09/img903/Cap1/fonts2.asm": {
       "isPinned": false,
       "isHidden": false
     },
@@ -3624,11 +3617,19 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-08-09/img903/Cap1/mod13h0.asm": {
+    "Rubbish/2026-08-09/img903/Cap1/menu03.asm": {
       "isPinned": false,
       "isHidden": false
     },
     "Rubbish/2026-08-09/img903/Cap1/mod04h0.asm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/mod13h2.asm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/mod13h0.asm": {
       "isPinned": false,
       "isHidden": false
     },
@@ -3640,36 +3641,11 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-08-09/img903/Cap1/unchar.asm": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/mod13h2.asm": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Rubbish/2026-08-09/img903/Cap1/mod13h1.asm": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-08-09/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-10": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "BORRADOR OK OK ETN 825 2022.pdf",
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-08-10/BORRADOR OK OK ETN 825 2022.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-10/data.json": {
+    "Rubbish/2026-08-09/img903/Cap1/unchar.asm": {
       "isPinned": false,
       "isHidden": false
     },
@@ -3689,23 +3665,29 @@
       "isPinned": false,
       "isHidden": false
     },
+    "Untitled.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "assets": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
     "_hangar/IMA_NBLM": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "IMA_NBLM_promtp.md",
-        "logbook.md",
+        "Gemini_fuentes_pruebas.md",
         "tsk_IMA_NBLM.md",
+        "IMA_NBLM_promtp.md",
         "IMA_NBLM-prueba_p1.md",
-        "Gemini_fuentes_pruebas.md"
+        "logbook.md"
       ]
     },
     "_hangar/IMA_NBLM/IMA_NBLM_promtp.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_hangar/IMA_NBLM/logbook.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -3713,19 +3695,19 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_hangar/IMA_NBLM/IMA_NBLM-prueba_p1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_hangar/IMA_NBLM/Gemini_fuentes_pruebas.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_hangar/template/tpl_tsk (legacy).md": {
+    "_hangar/IMA_NBLM/IMA_NBLM-prueba_p1.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_hangar/TPL_TAB/_TABnote-ref 1.md": {
+    "_hangar/IMA_NBLM/logbook.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/tsk_IMA_NBLM 1.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -3737,11 +3719,11 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_hangar/_legacy/figura_tabnote_integracion.md": {
+    "_hangar/template/tpl_tsk (legacy).md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_hangar/tsk_IMA_NBLM 1.md": {
+    "_hangar/TPL_TAB/_TABnote-ref 1.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -3750,17 +3732,17 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "tabnote_template_actualizado.png",
         "tabnote_aurea_ohm.png",
-        "tlpf_c.png",
-        "tlpf_p.png",
         "tabnote_cornell_ohm.png",
-        "tabnote_template_preview.png",
+        "tabnote_template_actualizado.png",
+        "tlpf_c.png",
         "tlpf_d.png",
+        "tabnote_template_preview.png",
+        "tlpf_p.png",
         "tlpf_w.png"
       ]
     },
-    "_templates/tab/tabnote_template_actualizado.png": {
+    "_hangar/_legacy/figura_tabnote_integracion.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -3768,19 +3750,15 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_templates/tab/tlpf_c.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_templates/tab/tlpf_p.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_templates/tab/tabnote_cornell_ohm.png": {
       "isPinned": false,
       "isHidden": false
     },
-    "_templates/tab/tabnote_template_preview.png": {
+    "_templates/tab/tabnote_template_actualizado.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_templates/tab/tlpf_c.png": {
       "isPinned": false,
       "isHidden": false
     },
@@ -3788,11 +3766,15 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_templates/tab/tlpf_w.png": {
+    "_templates/tab/tabnote_template_preview.png": {
       "isPinned": false,
       "isHidden": false
     },
-    "Untitled.md": {
+    "_templates/tab/tlpf_p.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_templates/tab/tlpf_w.png": {
       "isPinned": false,
       "isHidden": false
     }
