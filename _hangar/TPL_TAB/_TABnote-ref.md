@@ -56,24 +56,49 @@ Cada bloque Cornell se subdivide internamente en 4 partes con líneas segmentada
 | Dark theme | Sin fondo — Samsung Notes aplica el negro del modo oscuro automáticamente |
 | Sin cuadrícula | Solo márgenes y recuadros notables, para imprimir en tareas |
 
-### Grosor S Pen (punto de partida, ajustar en clase)
+### Herramientas y configuraciones declaradas
 
-| Uso | Grosor |
-|---|---|
-| Texto normal | 5 |
-| Subtítulos | 8 |
-| Títulos / énfasis | 12 |
+| Herramienta | G | O | Color | Uso |
+|---|---|---|---|---|
+| Pluma fuente | 8 | — | `#FFA31F` principal + libre | Texto general y subtítulos — G=12 exclusivo para `Tema #x` |
+| Bolígrafo | 8 | — | libre | Texto alternativo y gráficas (borrador) — reemplazable por Concepts |
+| Marcador | 1 | 39 | libre | Complemento del bolígrafo para gráficas |
+| Resaltador (caja) | 15 | 100 | libre | Cajas de callout e imagen — esquinas notables |
+| Resaltador (caja curva) | 1 | 90 | libre | Alternativa descartada para callout — produce curvas, no esquinas |
+| Resaltador (subtítulo) | 50 | 25 | `#FFD580` sugerido + libre | Fondo del subtítulo — llega hasta el borde derecho del área útil |
+| Resaltador (libro — título) | 50 | 70 | libre | Resaltado lateral del título principal (2 líneas simétricas) |
+| Resaltador (libro — subtítulo) | 30 | 60 | libre | Subtítulos y texto general en libros |
+| Resaltador (línea divisoria) | 1 | 100 | `#BB3E03` para título | Línea fina bajo el título principal |
+| Lápiz | 8 | 70 | libre | Uso poco frecuente |
 
-### Grosor y opacidad por elemento
+> G = grosor declarado en Samsung Notes. O = opacidad (%). `—` indica que la opacidad no es relevante para esa herramienta o queda en valor por defecto.
 
-| Elemento | G | O | O anterior |
-|---|---|---|---|
-| Título principal | 50 | 90 | 70 |
-| Subtítulo | 30 | 80 | 60 |
-| Línea fina (bajo título) | 1 | 100 | 100 |
-| Callout (caja) | 15 | 100 | 100 |
+### Combinaciones de color para subtítulos
 
-> Valores anteriores registrados para restauración si la prueba no convence.
+La combinación es **resaltador (G=50, O=25) + pluma fuente (G=8)**. Regla clave: resaltador y pluma no pueden ser el mismo color — el texto desaparece.
+
+Los colores principales de subtítulo son `#FFA31F` (pluma) + `#FFD580` (resaltador sugerido). Las siguientes combinaciones están **en prueba** — se descartan las que dificulten leer el subtítulo en clase real:
+>notacion P1.5 indica paleta 1 color nro 5; P4.2 paleta 4 color nro2
+
+| #   | Resaltador       | Pluma            | Familia                |
+| --- | ---------------- | ---------------- | ---------------------- |
+| 1   | `#3396FF` (P1.5) | `#1447FF` (P1.6) | Fría — azul            |
+| 2   | `#BCB5E9` (P3.3) | `#6F55B8` (P3.4) | Fría — violeta         |
+| 3   | `#2FEBD2` (P1.4) | `#04878F` (P3.2) | Fría — verde azulado   |
+| 4   | `#FF7043` (P2.2) | `#E54D62` (P4.1) | Cálida — rojo coral    |
+| 5   | `#FFC107` (P2.3) | `#FF8F00` (P4.2) | Cálida — naranja ámbar |
+| 6   | `#E91E63` (P2.1) | `#795548` (P2.7) | Cálida — rosa fucsia   |
+
+> **Pendiente:** evaluar si asignar semántica a los colores de subtítulo (ej. naranja = desarrollo, otro = ejemplo) para aprovecharlo con Gemini+fuentes. Requiere experiencia real en clase antes de decidir.
+
+### Paletas de color disponibles en Samsung Notes
+
+| Paleta | Colores \[1,2,3,4,5,6,7,8\]                                                     |
+| ------ | ------------------------------------------------------------------------------- |
+| P1     | `#FF3636` `#FFCB30` `#F7EB00` `#2FEBD2` `#3396FF` `#1447FF` `#9933FF` `#252525` |
+| P2     | `#E91E63` `#FF7043` `#FFC107` `#CDDC39` `#00BCD4` `#2B61FB` `#795548` `#9D9D9D` |
+| P3     | `#91E2C2` `#04878F` `#BCB5E9` `#6F55B8` `#5CDEE6` `#699BD8` `#00377A` `#071F3C` |
+| P4     | `#E54D62` `#FF8F00` `#24BCEB` `#786AE4` `#FFDA28` `#8FD82F` `#01BC8E` `#EB5CD9` |
 
 ---
 
@@ -88,7 +113,8 @@ Cada bloque Cornell se subdivide internamente en 4 partes con líneas segmentada
 
 ### Subtítulo
 - Texto + resaltador en la misma línea, el resaltador llega hasta el borde derecho del área útil
-- Texto y resaltador del mismo color — se puede usar cualquier color cálido
+- Color principal: pluma `#FFA31F` + resaltador `#FFD580` (G=50, O=25) — el resaltador nunca es el mismo color que la pluma
+- En prueba: 6 combinaciones adicionales (ver tabla en sección 1) — se descartan las que dificulten leer el texto en clase
 - Numerado: `1.`, `2.`, `3.` — ancla de orden para NLM
 - Renglón en blanco antes del siguiente subtítulo
 
