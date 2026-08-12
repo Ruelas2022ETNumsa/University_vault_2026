@@ -1873,7 +1873,8 @@
       "customOrder": [
         "ETN806",
         "MAT101",
-        "ETN607"
+        "ETN607",
+        "ETN1015"
       ]
     },
     "_app/notebooklm/prompts/ETN806": {
@@ -1933,7 +1934,8 @@
       "customOrder": [
         "ETN806",
         "MAT101",
-        "ETN607"
+        "ETN607",
+        "ETN1015"
       ]
     },
     "_app/notebooklm/guides/MAT101": {
@@ -3643,6 +3645,30 @@
       "isHidden": false
     },
     "Rubbish/section.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN1015": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "ETN1015-study.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "_app/notebooklm/prompts/ETN1015/ETN1015-study.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/guides/ETN1015": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "ETN1015_desmos.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "_app/notebooklm/guides/ETN1015/ETN1015_desmos.md": {
       "isPinned": false,
       "isHidden": false
     }

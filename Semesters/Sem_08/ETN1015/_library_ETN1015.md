@@ -96,17 +96,17 @@ Este archivo es tu referencia personal para saber qué libro usar en cada tema d
 
 ## Stack completo
 
-| Libro | Rol | Idioma |
-|---|---|---|
-| K. Deergha Rao — Signals and Systems — Birkhäuser 2018 | Teoría principal — libro base del docente | Inglés |
-| Oppenheim, Willsky, Nawab — Signals and Systems — 2da ed. (1to5) | Teoría rigurosa — caps. 1–5 | Inglés |
-| Oppenheim, Willsky, Nawab — Signals and Systems — 2da ed. (6to11) | Teoría rigurosa — caps. 6–11 | Inglés |
-| Oppenheim & Willsky — Señales y Sistemas — 2da ed. (1to5) | Puente lingüístico — caps. 1–5 | Español |
-| Oppenheim & Willsky — Señales y Sistemas — 2da ed. (6to11) | Puente lingüístico — caps. 6–11 | Español |
-| Mani, Oppenheim, Willsky, Nawab — Solutions Manual | Soluciones oficiales del Oppenheim | Inglés |
-| Hsu — Schaum's Signals and Systems — 1995 | Problemas estándar resueltos | Inglés |
-| Hayes — Schaum's Digital Signal Processing — 1999 | DSP puro — caps. 6–8 de Rao en adelante | Inglés |
-| Phillips, Parr & Riskin — Signals, Systems, and Transforms — 4ta ed. | Transformadas y análisis avanzado | Inglés |
+| Libro                                                                | Rol                                       | Idioma  |
+| -------------------------------------------------------------------- | ----------------------------------------- | ------- |
+| K. Deergha Rao — Signals and Systems — Birkhäuser 2018               | Teoría principal — libro base del docente | Inglés  |
+| Oppenheim, Willsky, Nawab — Signals and Systems — 2da ed. (1to5)     | Teoría rigurosa — caps. 1–5               | Inglés  |
+| Oppenheim, Willsky, Nawab — Signals and Systems — 2da ed. (6to11)    | Teoría rigurosa — caps. 6–11              | Inglés  |
+| Oppenheim & Willsky — Señales y Sistemas — 2da ed. (1to5)            | Puente lingüístico — caps. 1–5            | Español |
+| Oppenheim & Willsky — Señales y Sistemas — 2da ed. (6to11)           | Puente lingüístico — caps. 6–11           | Español |
+| Mani, Oppenheim, Willsky, Nawab — Solutions Manual                   | Soluciones oficiales del Oppenheim        | Inglés  |
+| Hsu — Schaum's Signals and Systems — 1995                            | Problemas estándar resueltos              | Inglés  |
+| Hayes — Schaum's Digital Signal Processing — 1999                    | DSP puro — caps. 6–8 de Rao en adelante   | Inglés  |
+| Phillips, Parr & Riskin — Signals, Systems, and Transforms — 4ta ed. | Transformadas y análisis avanzado         | Inglés  |
 
 ---
 

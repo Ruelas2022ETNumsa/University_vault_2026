@@ -26067,6 +26067,7 @@ SfKh
 SBPN
 SXmDbQ
 SnCk
+SOPORTE
 Plugins
 Pendientes
 Plugin
@@ -33664,6 +33665,7 @@ PFey
 Paletas
 Phillips
 Parr
+Practicar
 del
 date
 de
@@ -190178,6 +190180,7 @@ periodic
 periodicidad
 planteados
 puedas
+profundas
 min
 mica
 movimiento
@@ -214938,6 +214941,7 @@ BysiA
 Butterworth
 Bessel
 Birkhäuser
+Bode
 en
 exacta
 escaneados
@@ -223764,6 +223768,7 @@ exportarse
 encerrarlos
 esquinas
 escalado
+espectros
 Motor
 Media
 Mantiene
@@ -241150,6 +241155,7 @@ LINEA
 LSbb
 LeJK
 LUIR
+LIBRO
 links
 las
 listar
@@ -324192,6 +324198,7 @@ NZJE
 NuYb
 NyL
 Nawab
+Necesito
 originales
 observatory
 oficial
