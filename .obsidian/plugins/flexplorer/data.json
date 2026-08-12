@@ -41,7 +41,8 @@
       "customOrder": [
         "template",
         "Sem_01",
-        "Sem_04"
+        "Sem_04",
+        "Sem_08"
       ]
     },
     "Semestres": {
@@ -1302,15 +1303,13 @@
       "sortOrder": "custom",
       "customOrder": [
         "PDF-601",
-        "PDF-903",
-        "PDF-921",
         "PDF-Electrónica analógica",
-        "PDF-Microprocesadores",
         "PDF-telefonia",
         "BORRADOR OK OK ETN 825 2022.pdf",
         "ETN903 TEOcap1_260311_083759.pdf",
         "Notes_260609_234853.pdf",
-        "Structured Assembler Language For IBM Microcomputers.pdf"
+        "Structured Assembler Language For IBM Microcomputers.pdf",
+        "PDF-1015"
       ]
     },
     "_templates": {
@@ -1552,184 +1551,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_PDF/PDF-903": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Randall Hyde - The Art of Assembly Language. (2nd Edition).pdf",
-        "Kip R. Irvine -6ed- Assembly Language for x86 Processors.pdf",
-        "Andrew S. Tanenbaum, Todd Austin -6e- Structured Computer Organization.pdf",
-        "ING_PDF",
-        "903_LIBRO_ING",
-        "intel",
-        "Kip R. Irvine -7ed-Assembly Language for x86 Processors.pdf",
-        "kip R. irvine -5ed- LENGUAJE ENSAMBLADOR PARA COMPUTADORAS BASADAS EN INTEL.pdf",
-        "Francisco Charte Ojeda-2ed-Lenguaje Ensamblador.pdf"
-      ]
-    },
-    "_PDF/PDF-903/Randall Hyde - The Art of Assembly Language. (2nd Edition).pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/Kip R. Irvine -6ed- Assembly Language for x86 Processors.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/Andrew S. Tanenbaum, Todd Austin -6e- Structured Computer Organization.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/ING_PDF": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Peter Abel(esp)-3e-Lenguaje ensamblador y programacion.pdf",
-        "Peter Abel-4e-IBM PC Assembly languaje and programming.pdf",
-        "Mazidi M.A. - 80x86 IBM PC and Compatible Computers (Volumes I and II). Assembly Language, Design, and Interfacing - 1995.pdf",
-        "Barry Brey -8ed- The Intel Microprocessors.pdf",
-        "Barry B. Brey -7ed- uProcesadores intel.pdf",
-        "8086Instrucciones.pdf",
-        "instrucciones.pdf"
-      ]
-    },
-    "_PDF/PDF-903/ING_PDF/Peter Abel(esp)-3e-Lenguaje ensamblador y programacion.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/ING_PDF/Peter Abel-4e-IBM PC Assembly languaje and programming.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/ING_PDF/Mazidi M.A. - 80x86 IBM PC and Compatible Computers (Volumes I and II). Assembly Language, Design, and Interfacing - 1995.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/ING_PDF/Barry Brey -8ed- The Intel Microprocessors.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/ING_PDF/Barry B. Brey -7ed- uProcesadores intel.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/ING_PDF/8086Instrucciones.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/ING_PDF/instrucciones.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/903_LIBRO_ING": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Cap8-Instrucciones8086.pdf",
-        "Cap1-uProcesador.pdf"
-      ]
-    },
-    "_PDF/PDF-903/903_LIBRO_ING/Cap8-Instrucciones8086.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/903_LIBRO_ING/Cap1-uProcesador.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/intel": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Intel Corp - ASM86 Language Reference Manual.pdf",
-        "Intel Corp - ASM86_Macro Assembler Operating Instructions.pdf",
-        "Intel Corp-The 8086 Family Users Manual.pdf",
-        "Microsoft_Macro_Assembler_5.0_Reference_1987.pdf"
-      ]
-    },
-    "_PDF/PDF-903/intel/Intel Corp - ASM86 Language Reference Manual.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/intel/Intel Corp - ASM86_Macro Assembler Operating Instructions.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/intel/Intel Corp-The 8086 Family Users Manual.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/intel/Microsoft_Macro_Assembler_5.0_Reference_1987.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/Kip R. Irvine -7ed-Assembly Language for x86 Processors.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/kip R. irvine -5ed- LENGUAJE ENSAMBLADOR PARA COMPUTADORAS BASADAS EN INTEL.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-903/Francisco Charte Ojeda-2ed-Lenguaje Ensamblador.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-921": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Robert Love -1th- Linux System Programming.pdf",
-        "Robrt Love-3ed-Linux Kernel Development.pdf",
-        "Tanenbaum meulenbroeks - minix 15 reference manual 1991.pdf",
-        "Andrew S. Tanenbaum - Operating Systems Design and Implementation-Prentice-Hall (1987).pdf",
-        "Andrew S. Tanenbaum -3ed-Operating Systems. Design and Implementation.pdf",
-        "Andrew S. Tanenbaum -4ed- Modern Operating Systems.pdf",
-        "Andrew S. Tanenbaum-3ed-Sistemas operativos modernos.pdf",
-        "Daniel P. Bovet Marco Cesati-3ed-Understanding the LINUX KERNEL.pdf",
-        "Remzi H.&Andera C. Arcapac-iOperating Systems (Three Easy Pieces).pdf"
-      ]
-    },
-    "_PDF/PDF-921/Robert Love -1th- Linux System Programming.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-921/Robrt Love-3ed-Linux Kernel Development.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-921/Tanenbaum meulenbroeks - minix 15 reference manual 1991.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-921/Andrew S. Tanenbaum - Operating Systems Design and Implementation-Prentice-Hall (1987).pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-921/Andrew S. Tanenbaum -3ed-Operating Systems. Design and Implementation.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-921/Andrew S. Tanenbaum -4ed- Modern Operating Systems.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-921/Andrew S. Tanenbaum-3ed-Sistemas operativos modernos.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-921/Daniel P. Bovet Marco Cesati-3ed-Understanding the LINUX KERNEL.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-921/Remzi H.&Andera C. Arcapac-iOperating Systems (Three Easy Pieces).pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_PDF/PDF-Electrónica analógica": {
       "isPinned": false,
       "isHidden": false,
@@ -1749,149 +1570,6 @@
       "isHidden": false
     },
     "_PDF/PDF-Electrónica analógica/Floyd - Dispositivos electronicos, 8va ed.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-Microprocesadores": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Temas",
-        "00Cap 9 - Tablas de Instrucciones Microsex.pdf",
-        "Microsex - Manual de uso del emulador.pdf",
-        "00Cap 9 - Tablas de Instrucciones Microsex (BN).pdf",
-        "Microsex 10 2025 - Diseño de Algoritmos - Sesión 2.pdf",
-        "Capítulo 9 - Programación y Algoritmos (1).pdf",
-        "Cap 9 - Tablas de Instrucciones Microsex (BN).pdf",
-        "Capítulo 9 - Programación y Algoritmos.pdf",
-        "lobrossss"
-      ]
-    },
-    "_PDF/PDF-Microprocesadores/Temas": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Capítulo 1 - Unidad Básica de Cálculo.pdf",
-        "Capítulo 2 - Unidad aritmética y lógica.pdf",
-        "Capítulo 3 - Unidad Secuencial de Cálculo.pdf",
-        "C2 - ALU - Diapositivas BN.pdf",
-        "C3 - USC - Diapositivas BN.pdf",
-        "C1 - UBC - Diapositivas BN.pdf",
-        "Capítulo 4 - Arquitectura de un computador simple.pdf",
-        "Capítulo 5 - Expansión de la Unidad Secuencial de Cálculo.pdf",
-        "Capítulo 6 - Arquitectura de un computador completo.pdf"
-      ]
-    },
-    "_PDF/PDF-Microprocesadores/Temas/Capítulo 1 - Unidad Básica de Cálculo.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-Microprocesadores/Temas/Capítulo 2 - Unidad aritmética y lógica.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-Microprocesadores/Temas/Capítulo 3 - Unidad Secuencial de Cálculo.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-Microprocesadores/Temas/C2 - ALU - Diapositivas BN.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-Microprocesadores/Temas/C3 - USC - Diapositivas BN.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-Microprocesadores/Temas/C1 - UBC - Diapositivas BN.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-Microprocesadores/Temas/Capítulo 4 - Arquitectura de un computador simple.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-Microprocesadores/Temas/Capítulo 5 - Expansión de la Unidad Secuencial de Cálculo.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-Microprocesadores/Temas/Capítulo 6 - Arquitectura de un computador completo.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-Microprocesadores/00Cap 9 - Tablas de Instrucciones Microsex.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-Microprocesadores/Microsex - Manual de uso del emulador.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-Microprocesadores/00Cap 9 - Tablas de Instrucciones Microsex (BN).pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-Microprocesadores/Microsex 10 2025 - Diseño de Algoritmos - Sesión 2.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-Microprocesadores/Capítulo 9 - Programación y Algoritmos (1).pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-Microprocesadores/Cap 9 - Tablas de Instrucciones Microsex (BN).pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-Microprocesadores/Capítulo 9 - Programación y Algoritmos.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-Microprocesadores/lobrossss": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Andrew S. Tanenbaum - Structured Computer Organization.pdf",
-        "David A. Patterson & John L. Hennessy - Computer Architecture A Quantitative Approach (5th edition).pdf",
-        "David A. Patterson & John L. Hennessy - Computer Organization and Design (4th edition).pdf",
-        "Harris, L.Harris - Digital Design and Computer Architecture, 2nd Ed.pdf",
-        "Jonathan Bartlett-Programming from the Ground Up.pdf",
-        "Randal E. Bryant & David R. O’Hallaron - Computer Systems A Programmer’s Perspective.pdf",
-        "Brown, Vranesic - Fundamentos de logica digital VHDL.pdf",
-        "Brown, Vranesic - Fundamentals of Digital logic(3th ed).pdf"
-      ]
-    },
-    "_PDF/PDF-Microprocesadores/lobrossss/Andrew S. Tanenbaum - Structured Computer Organization.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-Microprocesadores/lobrossss/David A. Patterson & John L. Hennessy - Computer Architecture A Quantitative Approach (5th edition).pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-Microprocesadores/lobrossss/David A. Patterson & John L. Hennessy - Computer Organization and Design (4th edition).pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-Microprocesadores/lobrossss/Harris, L.Harris - Digital Design and Computer Architecture, 2nd Ed.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-Microprocesadores/lobrossss/Jonathan Bartlett-Programming from the Ground Up.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-Microprocesadores/lobrossss/Randal E. Bryant & David R. O’Hallaron - Computer Systems A Programmer’s Perspective.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-Microprocesadores/lobrossss/Brown, Vranesic - Fundamentos de logica digital VHDL.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_PDF/PDF-Microprocesadores/lobrossss/Brown, Vranesic - Fundamentals of Digital logic(3th ed).pdf": {
       "isPinned": false,
       "isHidden": false
     },
@@ -3792,7 +3470,89 @@
       "isPinned": false,
       "isHidden": false
     },
+    "_PDF/PDF-1015": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "Oppenheim & Willsky-Signals and Systems-2th ed-6to11.pdf",
+        "SCHAUM-HWEI P. HSU-SIGNALS AND SYSTEMS-1995.pdf",
+        "SCHAUM-MONSON H. HAYES-DIGITAL SIGNAL PROCESSING-1999.pdf",
+        "Charles L. Phillips John Parr Eve Riskin-Signals, Systems, and Transforms-4th ED.pdf",
+        "K. Deergha Rao-Signals and Systems.pdf",
+        "Mani, Oppenheim, Willsky, Nawab-Signals and Systems Solutions Manual.pdf",
+        "Oppenheim & Willsky-Señales y Sistemas-2da ed.pdf",
+        "Oppenheim & Willsky-Señales y Sistemas-2da ed-1to5.pdf",
+        "Oppenheim & Willsky-Señales y Sistemas-2da ed-6to11.pdf",
+        "Oppenheim & Willsky-Signals and Systems-2th ed.pdf",
+        "Oppenheim & Willsky-Signals and Systems-2th ed-1to5.pdf"
+      ],
+      "sortOrder": "custom"
+    },
+    "_PDF/PDF-1015/Oppenheim & Willsky-Signals and Systems-2th ed-6to11.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-1015/SCHAUM-HWEI P. HSU-SIGNALS AND SYSTEMS-1995.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-1015/SCHAUM-MONSON H. HAYES-DIGITAL SIGNAL PROCESSING-1999.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-1015/Charles L. Phillips John Parr Eve Riskin-Signals, Systems, and Transforms-4th ED.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-1015/K. Deergha Rao-Signals and Systems.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-1015/Mani, Oppenheim, Willsky, Nawab-Signals and Systems Solutions Manual.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-1015/Oppenheim & Willsky-Señales y Sistemas-2da ed.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-1015/Oppenheim & Willsky-Señales y Sistemas-2da ed-1to5.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-1015/Oppenheim & Willsky-Señales y Sistemas-2da ed-6to11.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-1015/Oppenheim & Willsky-Signals and Systems-2th ed.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-1015/Oppenheim & Willsky-Signals and Systems-2th ed-1to5.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
     "Untitled.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_08": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "ETN1015"
+      ],
+      "sortOrder": "custom"
+    },
+    "Semesters/Sem_08/ETN1015": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "_library_ETN1015.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "Semesters/Sem_08/ETN1015/_library_ETN1015.md": {
       "isPinned": false,
       "isHidden": false
     }

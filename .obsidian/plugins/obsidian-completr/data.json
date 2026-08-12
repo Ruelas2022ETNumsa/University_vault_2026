@@ -2,7 +2,7 @@
   "characterRegex": "a-zA-ZöäüÖÄÜß",
   "maxLookBackDistance": 50,
   "autoFocus": true,
-  "autoTrigger": false,
+  "autoTrigger": true,
   "minWordLength": 2,
   "minWordTriggerLength": 3,
   "wordInsertionMode": "Ignore-Case & Replace",

@@ -8117,6 +8117,7 @@ tay
 tllR
 tLtl
 tratados
+truncada
 ToDo
 Templater
 Text
@@ -41210,6 +41211,9 @@ declarado
 descartan
 dificulten
 dicta
+dicas
+detalladamente
+dicos
 Vault
 Verificar
 Variables
@@ -73681,6 +73685,11 @@ sjLS
 sIlR
 sGWF
 singulares
+signals
+sinusoidales
+sumada
+sinusoidal
+sinusoide
 vault
 vil
 ver
@@ -90313,6 +90322,7 @@ arnG
 apyvs
 ayvu
 aprovecharlo
+aperiodic
 related
 recomendados
 ribbon
@@ -115975,6 +115985,8 @@ cCvn
 cbDg
 coral
 causalidad
+continuous
+combinada
 updated
 un
 universo
@@ -140447,6 +140459,7 @@ CUIf
 Chicago
 Combinaciones
 Chebyshev
+Classify
 Instalados
 Instalado
 Instalar
@@ -182175,6 +182188,7 @@ ALAlA
 AucB
 AjiPK
 AVZi
+Aperi
 push
 pull
 para
@@ -190154,6 +190168,9 @@ pBur
 pFyc
 ptico
 parcializado
+periodic
+periodicidad
+planteados
 min
 mica
 movimiento
@@ -289916,6 +289933,7 @@ fKQZ
 fwo
 fEEEq
 fucsia
+following
 haya
 hace
 hacer
@@ -332647,6 +332665,7 @@ omEy
 oerr
 oiiiNij
 oRpGtyj
+oscila
 junto
 json
 jer
