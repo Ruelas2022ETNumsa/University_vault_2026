@@ -73691,6 +73691,7 @@ sumada
 sinusoidal
 sinusoide
 signal
+senos
 vault
 vil
 ver
@@ -98872,6 +98873,7 @@ rlTWcqq
 revisada
 reconocida
 reemplazable
+reordenando
 notes
 notas
 nuevas
@@ -166474,6 +166476,7 @@ EHzD
 Esgz
 EDSl
 Educaci
+Evaluemos
 Obsidian
 OmniSearch
 Ocultar
@@ -190174,6 +190177,7 @@ parcializado
 periodic
 periodicidad
 planteados
+puedas
 min
 mica
 movimiento
@@ -258056,6 +258060,7 @@ inferidos
 impulsos
 invarianza
 ideales
+interesa
 Dependencia
 Dropbox
 Dataview
@@ -266260,6 +266265,8 @@ Delimitar
 DTFS
 DTFT
 Deergha
+Dividiendo
+Despejando
 Remotely
 Raz
 Revisa
