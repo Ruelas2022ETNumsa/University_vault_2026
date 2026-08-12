@@ -8,6 +8,7 @@ related_notes:
 tags: [beacon, library, ETN1015, infraestructura]
 date_created: 2026-08-11
 date_updated: 2026-08-11
+date_last_edit: 2026-08-11 — archivos divididos documentados
 status: activo
 ---
 
@@ -98,12 +99,25 @@ Este archivo es tu referencia personal para saber qué libro usar en cada tema d
 | Libro | Rol | Idioma |
 |---|---|---|
 | K. Deergha Rao — Signals and Systems — Birkhäuser 2018 | Teoría principal — libro base del docente | Inglés |
-| Oppenheim, Willsky, Nawab — Signals and Systems — 2da ed. | Teoría rigurosa — referencia estándar mundial | Inglés |
-| Oppenheim & Willsky — Señales y Sistemas — 2da ed. | Puente lingüístico — terminología en español | Español |
+| Oppenheim, Willsky, Nawab — Signals and Systems — 2da ed. (1to5) | Teoría rigurosa — caps. 1–5 | Inglés |
+| Oppenheim, Willsky, Nawab — Signals and Systems — 2da ed. (6to11) | Teoría rigurosa — caps. 6–11 | Inglés |
+| Oppenheim & Willsky — Señales y Sistemas — 2da ed. (1to5) | Puente lingüístico — caps. 1–5 | Español |
+| Oppenheim & Willsky — Señales y Sistemas — 2da ed. (6to11) | Puente lingüístico — caps. 6–11 | Español |
 | Mani, Oppenheim, Willsky, Nawab — Solutions Manual | Soluciones oficiales del Oppenheim | Inglés |
 | Hsu — Schaum's Signals and Systems — 1995 | Problemas estándar resueltos | Inglés |
 | Hayes — Schaum's Digital Signal Processing — 1999 | DSP puro — caps. 6–8 de Rao en adelante | Inglés |
 | Phillips, Parr & Riskin — Signals, Systems, and Transforms — 4ta ed. | Transformadas y análisis avanzado | Inglés |
+
+---
+
+## Archivos divididos
+
+Algunos libros están divididos en partes. Usá el archivo que corresponde al capítulo:
+
+```
+Oppenheim EN (Signals and Systems 2da ed.)  → 1to5  (Caps. 1–5)  | 6to11 (Caps. 6–11)
+Oppenheim ES (Señales y Sistemas 2da ed.)   → 1to5  (Caps. 1–5)  | 6to11 (Caps. 6–11)
+```
 
 ---
 
@@ -113,14 +127,14 @@ Este archivo es tu referencia personal para saber qué libro usar en cada tema d
 
 | Capítulo Rao | Teoría principal | Teoría rigurosa | Ejercicios | Español |
 |---|---|---|---|---|
-| Cap. 1 — Intro señales y sistemas | Rao — Cap. 1 | Oppenheim — Cap. 1 | Hsu Schaum — Cap. 1–2 | Oppenheim ES — Cap. 1 |
-| Cap. 2 — Tiempo continuo (convolución, LTI) | Rao — Cap. 2 | Oppenheim — Cap. 2 | Hsu Schaum — Cap. 3–4 | Oppenheim ES — Cap. 2 |
-| Cap. 3 — Fourier continuo | Rao — Cap. 3 | Oppenheim — Cap. 3–4 | Hsu Schaum — Cap. 5–7 | Oppenheim ES — Cap. 3–4 |
-| Cap. 4 — Laplace | Rao — Cap. 4 | Oppenheim — Cap. 9 | Hsu Schaum — Cap. 8–9 | Oppenheim ES — Cap. 9 |
+| Cap. 1 — Intro señales y sistemas | Rao — Cap. 1 | Oppenheim EN (1to5) — Cap. 1 | Hsu Schaum — Cap. 1–2 | Oppenheim ES (1to5) — Cap. 1 |
+| Cap. 2 — Tiempo continuo (convolución, LTI) | Rao — Cap. 2 | Oppenheim EN (1to5) — Cap. 2 | Hsu Schaum — Cap. 3–4 | Oppenheim ES (1to5) — Cap. 2 |
+| Cap. 3 — Fourier continuo | Rao — Cap. 3 | Oppenheim EN (1to5) — Cap. 3–4 | Hsu Schaum — Cap. 5–7 | Oppenheim ES (1to5) — Cap. 3–4 |
+| Cap. 4 — Laplace | Rao — Cap. 4 | Oppenheim EN (6to11) — Cap. 9 | Hsu Schaum — Cap. 8–9 | Oppenheim ES (6to11) — Cap. 9 |
 | Cap. 5 — Filtros analógicos | Rao — Cap. 5 | Phillips et al. — Cap. 8–9 | Hsu Schaum — Cap. 10 | — |
-| Cap. 6 — Tiempo discreto (convolución, LTI) | Rao — Cap. 6 | Oppenheim — Cap. 5–6 | Hsu Schaum — Cap. 3–4 | Oppenheim ES — Cap. 5–6 |
-| Cap. 7 — Fourier discreto (DTFT, muestreo) | Rao — Cap. 7 | Oppenheim — Cap. 7 | Hsu Schaum — Cap. 5–7 | Oppenheim ES — Cap. 7 |
-| Cap. 8 — Transformada Z | Rao — Cap. 8 | Oppenheim — Cap. 10 | Hsu Schaum — Cap. 11–12 + Hayes | Oppenheim ES — Cap. 10 |
+| Cap. 6 — Tiempo discreto (convolución, LTI) | Rao — Cap. 6 | Oppenheim EN (1to5) — Cap. 5 + (6to11) — Cap. 6 | Hsu Schaum — Cap. 3–4 | Oppenheim ES (1to5) — Cap. 5 + (6to11) — Cap. 6 |
+| Cap. 7 — Fourier discreto (DTFT, muestreo) | Rao — Cap. 7 | Oppenheim EN (6to11) — Cap. 7 | Hsu Schaum — Cap. 5–7 | Oppenheim ES (6to11) — Cap. 7 |
+| Cap. 8 — Transformada Z | Rao — Cap. 8 | Oppenheim EN (6to11) — Cap. 10 | Hsu Schaum — Cap. 11–12 + Hayes | Oppenheim ES (6to11) — Cap. 10 |
 
 ---
 
