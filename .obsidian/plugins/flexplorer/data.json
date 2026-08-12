@@ -2579,7 +2579,8 @@
         "tsk_operator_reload_display.md",
         "tsk_movil_drive.md",
         "tsk_vault-infra.md",
-        "ship_library_ETN1015.md"
+        "ship_library_ETN1015.md",
+        "tsk_prompt_guides_1015.md"
       ]
     },
     "_hangar/dock/tsk_library_ETN825.md": {
@@ -3651,10 +3652,10 @@
     "_app/notebooklm/prompts/ETN1015": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "ETN1015-study.md"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "_app/notebooklm/prompts/ETN1015/ETN1015-study.md": {
       "isPinned": false,
@@ -3663,12 +3664,21 @@
     "_app/notebooklm/guides/ETN1015": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
-        "ETN1015_desmos.md"
-      ],
-      "sortOrder": "custom"
+        "ETN1015_desmos.md",
+        "ETN1015_tikz.md"
+      ]
     },
     "_app/notebooklm/guides/ETN1015/ETN1015_desmos.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/guides/ETN1015/ETN1015_tikz.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/dock/tsk_prompt_guides_1015.md": {
       "isPinned": false,
       "isHidden": false
     }

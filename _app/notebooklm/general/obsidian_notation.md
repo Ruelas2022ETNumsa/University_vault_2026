@@ -104,6 +104,14 @@ El desarrollo va en las líneas siguientes, sin bloque Cornell.
 Las notas usan notación matemática en español. Nunca sustituir
 por equivalentes en inglés:
 
+**Para materias de señales y sistemas (ETN1015 y similares):**
+La notación es estándar internacional en todos los libros del stack.
+No hay variantes en español que deban preservarse — usar siempre
+la notación del libro fuente tal como aparece ($x(t)$, $H(s)$,
+$X(j\omega)$, $h[n]$, $H(z)$, etc.).
+
+**Para materias de cálculo y matemática (MAT101 y similares):**
+
 | Notación en el archivo | Significado     | No reemplazar por |
 |------------------------|-----------------|-------------------|
 | `\text{sen}\,x`        | seno            | sin               |

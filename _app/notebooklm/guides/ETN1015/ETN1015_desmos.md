@@ -63,7 +63,8 @@ Reglas que nunca se omiten:
 
 #### Estructura obligatoria del bloque
 
-```desmos-graph
+```
+desmos-graph
 [parámetros de ventana: left right bottom top]
 [parámetros de tamaño: width height]
 ---
@@ -76,13 +77,15 @@ Reglas que nunca se omiten:
 2. Después `width`, `height` — definen el tamaño del canvas
 
 ❌ Incorrecto — sin `---`:
-```desmos-graph
+```
+desmos-graph
 width=300; height=200;
 y=\sin(x)|#005F73
 ```
 
 ❌ Incorrecto — orden de parámetros invertido:
-```desmos-graph
+```
+desmos-graph
 width=350; height=120;
 left=-6; right=6; bottom=-1; top=1;
 ---
@@ -90,7 +93,8 @@ y=\sin(x)|#005F73
 ```
 
 ✅ Correcto — con configuración:
-```desmos-graph
+```
+desmos-graph
 left=-6; right=6; bottom=-1; top=1;
 width=350; height=120;
 ---
@@ -98,7 +102,8 @@ y=\sin(x)|#005F73
 ```
 
 ✅ Correcto — sin configuración, el `---` igual va:
-```desmos-graph
+```
+desmos-graph
 ---
 y=\sin(x)|#005F73
 ```
@@ -118,14 +123,14 @@ y=\sin(x)|#005F73
 
 **Tamaños estándar confirmados:**
 
-| Tipo           | width | height | Uso                                              |
-| -------------- | ----- | ------ | ------------------------------------------------ |
-| Pequeño        | 300   | 200    | Señales simples, un solo tramo                   |
-| Mediano        | 400   | 350    | Señales con múltiples tramos, espectros          |
-| Grande         | 550   | 450    | Múltiples curvas, etiquetas, regiones            |
-| Cornell        | 320   | 250    | Máximo dentro de bloque multi-column             |
-| Panorámico     | 550   | 200    | Señales periódicas, respuestas en frecuencia     |
-| Plano cuadrado | 500   | 500    | Plano complejo aproximado, regiones              |
+| Tipo           | width | height | Uso                                          |
+| -------------- | ----- | ------ | -------------------------------------------- |
+| Pequeño        | 300   | 200    | Señales simples, un solo tramo               |
+| Mediano        | 400   | 350    | Señales con múltiples tramos, espectros      |
+| Grande         | 550   | 450    | Múltiples curvas, etiquetas, regiones        |
+| Cornell        | 320   | 250    | Máximo dentro de bloque multi-column         |
+| Panorámico     | 550   | 200    | Señales periódicas, respuestas en frecuencia |
+| Plano cuadrado | 500   | 500    | Plano complejo aproximado, regiones          |
 
 Para señales en tiempo usar ratio panorámico (3:1). Para espectros ratio 4:3.
 
@@ -133,27 +138,27 @@ Para señales en tiempo usar ratio panorámico (3:1). Para espectros ratio 4:3.
 
 ### N3. SINTAXIS DE ECUACIONES
 
-| Matemática                    | Código Desmos                              |
-| ----------------------------- | ------------------------------------------ |
-| y = k (constante)             | `y=2`, `y=-1`, `y=0`                       |
-| y = A·sin(ωx + φ)             | `y=A\sin(\omega x+\phi)`                   |
-| y = A·cos(ωx + φ)             | `y=A\cos(\omega x+\phi)`                   |
-| y = eˣ                        | `y=e^x`                                    |
-| y = e^{-ax}                   | `y=e^{-a*x}`                               |
-| y = e^{-ax}·sin(ωx)           | `y=e^{-a*x}\sin(\omega x)`                 |
-| y = 1/x                       | `y=1/x`                                    |
-| y = 1/(1+x²)                  | `y=1/(1+x^2)`                              |
-| y = \|x\|                     | `y=\abs(x)`                                |
-| y = x^{1/2}                   | `y=x^{1/2}`                                |
-| y = ln(x)                     | `y=\ln(x)`                                 |
+| Matemática          | Código Desmos              |
+| ------------------- | -------------------------- |
+| y = k (constante)   | `y=2`, `y=-1`, `y=0`       |
+| y = A·sin(ωx + φ)   | `y=A\sin(\omega x+\phi)`   |
+| y = A·cos(ωx + φ)   | `y=A\cos(\omega x+\phi)`   |
+| y = eˣ              | `y=e^x`                    |
+| y = e^{-ax}         | `y=e^{-a*x}`               |
+| y = e^{-ax}·sin(ωx) | `y=e^{-a*x}\sin(\omega x)` |
+| y = 1/x             | `y=1/x`                    |
+| y = 1/(1+x²)        | `y=1/(1+x^2)`              |
+| y = \|x\|           | `y=\abs(x)`                |
+| y = x^{1/2}         | `y=x^{1/2}`                |
+| y = ln(x)           | `y=\ln(x)`                 |
 
 #### Notación funcional
 
-| Matemática                    | Código Desmos                              |
-| ----------------------------- | ------------------------------------------ |
-| f(x) = expresión              | `f(x)=e^{-x}\sin(x)`                      |
-| f(x) con dominio fijo         | `f(x)=e^{-x}|0<=x<=5`                     |
-| Constante declarada           | `a=2` / `b=0.5`                            |
+| Matemática            | Código Desmos        |          |
+| --------------------- | -------------------- | -------- |
+| f(x) = expresión      | `f(x)=e^{-x}\sin(x)` |          |
+| f(x) con dominio fijo | `f(x)=e^{-x}         | 0<=x<=5` |
+| Constante declarada   | `a=2` / `b=0.5`      |          |
 
 ---
 
@@ -161,7 +166,8 @@ Para señales en tiempo usar ratio panorámico (3:1). Para espectros ratio 4:3.
 
 Desmos permite declarar constantes con cualquier letra **excepto `x` e `y`**:
 
-```desmos-graph
+```
+desmos-graph
 ---
 a=2
 b=0.5
@@ -170,7 +176,8 @@ w=3.1416
 
 Luego se usan directamente en ecuaciones y restricciones:
 
-```desmos-graph
+```
+desmos-graph
 ---
 a=2
 w=2
@@ -183,7 +190,8 @@ y=a*e^{-a*x}\sin(w*x)|0<=x<=5|#005F73
 
 Desmos reconoce `\pi` como constante nativa (debajo del `---`):
 
-```desmos-graph
+```
+desmos-graph
 ---
 y=\sin(x)|-\pi<=x<=\pi|#005F73
 ```
@@ -194,7 +202,8 @@ y=\sin(x)|-\pi<=x<=\pi|#005F73
 
 ### N5. MODIFICADORES Y COLORES
 
-```desmos-graph
+```
+desmos-graph
 ---
 y=\sin(x)|#005F73
 y=\cos(x)|#0A9396|DASHED
@@ -273,13 +282,15 @@ expresión | modificador_2 | modificador_3 | ... | #color
 Las llaves `{}` **solo funcionan en el segmento 1**. En segmentos 2+ producen error sin aviso.
 
 ❌ No funciona:
-```desmos-graph
+```
+desmos-graph
 ---
 y=e^{-x}|x>=0|y^{1/2}>0|#BFD7DC
 ```
 
 ✅ Solución — declarar constante:
-```desmos-graph
+```
+desmos-graph
 ---
 n=0.5
 y=e^{-x}|x>=0|y>0|#BFD7DC
@@ -293,7 +304,8 @@ Las condiciones de sombreado van todas en **una sola línea**, separadas por `|`
 
 #### Señal por tramos — forma preferida
 
-```desmos-graph
+```
+desmos-graph
 ---
 y=0|x<0|#005F73
 y=e^{-x}|x>=0|#005F73
@@ -302,7 +314,8 @@ y=e^{-x}|x>=0|#005F73
 
 Alternativa válida con llaves escapadas:
 
-```desmos-graph
+```
+desmos-graph
 ---
 y=e^{-x}\{x>=0\}|#005F73
 ```
@@ -312,7 +325,8 @@ y=e^{-x}\{x>=0\}|#005F73
 
 #### Área bajo la curva
 
-```desmos-graph
+```
+desmos-graph
 ---
 y=e^{-x}|x>=0|#005F73
 y<=e^{-x}|x>=0|y>=0|#BFD7DC
@@ -320,7 +334,8 @@ y<=e^{-x}|x>=0|y>=0|#BFD7DC
 
 #### ⚠️ Rectángulos sombreados — cuatro condiciones obligatorias
 
-```desmos-graph
+```
+desmos-graph
 ---
 x>=0|x<=1|y>=0|y<=1|#BFD7DC
 ```
@@ -329,7 +344,8 @@ x>=0|x<=1|y>=0|y<=1|#BFD7DC
 
 ### N8. PUNTOS Y ETIQUETAS
 
-```desmos-graph
+```
+desmos-graph
 ---
 (1,1)|label:(1,1)|#005F73
 (2,2)|open|label:(2,2)|#0A9396
@@ -347,7 +363,8 @@ x>=0|x<=1|y>=0|y<=1|#BFD7DC
 
 ### N9. VALOR ABSOLUTO
 
-```desmos-graph
+```
+desmos-graph
 ---
 y=\abs(x)|#005F73
 y=\abs(\sin(x))|#0A9396
@@ -355,7 +372,8 @@ y=\abs(\sin(x))|#0A9396
 
 Para regiones sombreadas usar tramos — `\abs()` no funciona en condiciones de relleno:
 
-```desmos-graph
+```
+desmos-graph
 ---
 y=\abs(x)|hidden
 y>=x|y>=-x|y<=3|#C2E4E5
@@ -417,7 +435,8 @@ Todos los ejemplos de esta sección han sido confirmados y renderizan correctame
 
 > Contexto: tramo 0 para t<0, tramo 1 para t>=0. Punto de discontinuidad en (0,0) con `|open`.
 
-```desmos-graph
+```
+desmos-graph
 left=-3; right=5; bottom=-0.5; top=1.5;
 width=400; height=200;
 ---
@@ -431,7 +450,8 @@ y=1|0<=x<=5|#005F73
 
 > Contexto: escalón retrasado con salto en t=a.
 
-```desmos-graph
+```
+desmos-graph
 left=-2; right=8; bottom=-0.5; top=1.5;
 width=400; height=200;
 ---
@@ -444,7 +464,8 @@ y=1|a<=x<=8|#005F73
 
 #### Rampa r(t) = t·u(t)
 
-```desmos-graph
+```
+desmos-graph
 left=-2; right=5; bottom=-0.5; top=5;
 width=300; height=200;
 ---
@@ -455,7 +476,8 @@ y=x|0<=x<=5|#005F73
 
 #### Exponencial decreciente x(t) = e^{-at}·u(t)
 
-```desmos-graph
+```
+desmos-graph
 left=-1; right=6; bottom=-0.5; top=1.5;
 width=400; height=200;
 ---
@@ -467,7 +489,8 @@ y=e^{-a*x}|0<=x<=6|#005F73
 
 #### Exponencial creciente x(t) = e^{at}·u(-t)
 
-```desmos-graph
+```
+desmos-graph
 left=-6; right=1; bottom=-0.5; top=1.5;
 width=400; height=200;
 ---
@@ -479,7 +502,8 @@ y=0|0<x<=1|#005F73
 
 #### Pulso rectangular Π(t)
 
-```desmos-graph
+```
+desmos-graph
 left=-3; right=3; bottom=-0.5; top=1.5;
 width=400; height=200;
 ---
@@ -494,7 +518,8 @@ y=0|1<x<=3|#005F73
 
 #### Señal senoidal x(t) = A·sin(ωt)
 
-```desmos-graph
+```
+desmos-graph
 left=-6.2832; right=6.2832; bottom=-2; top=2;
 width=550; height=200;
 ---
@@ -505,7 +530,8 @@ y=A\sin(w*x)|#005F73
 
 #### Señal exponencial compleja — Re e Im superpuestas
 
-```desmos-graph
+```
+desmos-graph
 left=-6.2832; right=6.2832; bottom=-1.5; top=1.5;
 width=550; height=200;
 ---
@@ -520,7 +546,8 @@ y=\sin(w*x)|#0A9396|DASHED
 
 #### Respuesta al impulso h(t) = e^{-at}·u(t)
 
-```desmos-graph
+```
+desmos-graph
 left=-1; right=6; bottom=-0.5; top=1.5;
 width=400; height=200;
 ---
@@ -532,7 +559,8 @@ y=e^{-a*x}|0<=x<=6|#EE9B00
 
 #### Convolución gráfica — señales superpuestas
 
-```desmos-graph
+```
+desmos-graph
 left=-1; right=6; bottom=-0.5; top=1.5;
 width=550; height=250;
 ---
@@ -549,7 +577,8 @@ y=e^{-a*(x-2)}|2<=x<=6|#0A9396|DASHED
 
 #### Espectro de amplitud — sinc
 
-```desmos-graph
+```
+desmos-graph
 left=-10; right=10; bottom=-0.5; top=1.5;
 width=550; height=200;
 ---
@@ -559,7 +588,8 @@ y=\sin(x)/x|x!=0|#005F73
 
 #### Serie de Fourier — suma parcial onda cuadrada
 
-```desmos-graph
+```
+desmos-graph
 left=-6.2832; right=6.2832; bottom=-1.5; top=1.5;
 width=550; height=200;
 ---
@@ -568,7 +598,8 @@ y=\sin(x)+\sin(3x)/3+\sin(5x)/5+\sin(7x)/7+\sin(9x)/9|#005F73
 
 #### Respuesta en frecuencia |H(jω)| — primer orden
 
-```desmos-graph
+```
+desmos-graph
 left=-6; right=6; bottom=-0.5; top=1.5;
 width=550; height=250;
 ---
@@ -584,7 +615,8 @@ y=1/(2)^{1/2}|DASHED|#80AFB9
 
 #### Respuesta transitoria — polo real negativo
 
-```desmos-graph
+```
+desmos-graph
 left=-0.5; right=6; bottom=-0.5; top=1.5;
 width=400; height=200;
 ---
@@ -596,7 +628,8 @@ y=0|x<0|#005F73
 
 #### Respuesta transitoria — par de polos complejos (subamortiguado)
 
-```desmos-graph
+```
+desmos-graph
 left=-0.5; right=8; bottom=-1.5; top=1.5;
 width=550; height=250;
 ---
@@ -614,7 +647,8 @@ y=0|x<0|#005F73
 
 #### Butterworth orden N — |H(jω)|
 
-```desmos-graph
+```
+desmos-graph
 left=-0.5; right=4; bottom=-0.5; top=1.2;
 width=550; height=250;
 ---
@@ -626,7 +660,8 @@ y=1/2^{1/2}|DASHED|#80AFB9
 
 #### Bode — magnitud en dB
 
-```desmos-graph
+```
+desmos-graph
 left=0.01; right=100; bottom=-60; top=5;
 width=550; height=250;
 ---
@@ -642,7 +677,8 @@ y=-3|DASHED|#80AFB9
 
 > Para diagramas de tallo exactos usar TikZ.
 
-```desmos-graph
+```
+desmos-graph
 left=-1; right=7; bottom=-0.5; top=1.5;
 width=550; height=200;
 ---
@@ -653,7 +689,8 @@ y=0|x<0|#005F73
 
 #### Proceso de muestreo — señal continua vs muestras
 
-```desmos-graph
+```
+desmos-graph
 left=-0.5; right=6.2832; bottom=-1.5; top=1.5;
 width=550; height=250;
 ---
@@ -668,7 +705,8 @@ y=\sin(\floor(x/T)*T)|0<=x<=6|#005F73
 
 #### DTFT de x[n] = a^n·u[n] — magnitud
 
-```desmos-graph
+```
+desmos-graph
 left=-3.1416; right=3.1416; bottom=-0.5; top=4;
 width=550; height=250;
 ---
@@ -678,7 +716,8 @@ y=1/(1-2*a*\cos(x)+a^2)^{1/2}|#005F73
 
 #### Espectro periódico — repetición cada 2π
 
-```desmos-graph
+```
+desmos-graph
 left=-6.2832; right=6.2832; bottom=-0.5; top=4;
 width=550; height=200;
 ---
@@ -692,7 +731,8 @@ y=1/(1-2*a*\cos(x)+a^2)^{1/2}|#005F73
 
 #### Respuesta al escalón — sistema de primer orden discreto
 
-```desmos-graph
+```
+desmos-graph
 left=-0.5; right=10; bottom=-0.5; top=3;
 width=550; height=250;
 ---
@@ -705,7 +745,8 @@ y=0|x<0|#005F73
 
 #### Respuesta oscilatoria — polos complejos discretos
 
-```desmos-graph
+```
+desmos-graph
 left=-0.5; right=10; bottom=-1.5; top=1.5;
 width=550; height=250;
 ---

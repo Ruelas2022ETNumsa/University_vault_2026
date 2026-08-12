@@ -8118,6 +8118,7 @@ tllR
 tLtl
 tratados
 truncada
+tallo
 ToDo
 Templater
 Text
@@ -17035,6 +17036,8 @@ TyKu
 TnuP
 Transforms
 Transformadas
+TIEMPO
+TRANSFORMADA
 Sistema
 Sync
 Save
@@ -26068,6 +26071,9 @@ SBPN
 SXmDbQ
 SnCk
 SOPORTE
+SICAS
+Serie
+Sumador
 Plugins
 Pendientes
 Plugin
@@ -33666,6 +33672,9 @@ Paletas
 Phillips
 Parr
 Practicar
+Panor
+Pulso
+Polo
 del
 date
 de
@@ -41216,6 +41225,9 @@ dicta
 dicas
 detalladamente
 dicos
+declarada
+desplazado
+deban
 Vault
 Verificar
 Variables
@@ -49272,6 +49284,7 @@ VOpW
 VmrE
 Viuo
 VySM
+VISUALIZACI
 galaxy
 gina
 genes
@@ -73694,6 +73707,9 @@ sinusoidal
 sinusoide
 signal
 senos
+seguidos
+superpuestas
+subamortiguado
 vault
 vil
 ver
@@ -90328,6 +90344,7 @@ ayvu
 aprovecharlo
 aperiodic
 another
+amplitud
 related
 recomendados
 ribbon
@@ -98876,6 +98893,10 @@ revisada
 reconocida
 reemplazable
 reordenando
+refinado
+rampa
+rectangulares
+retroalimentaci
 notes
 notas
 nuevas
@@ -124943,6 +124964,7 @@ uill
 umWi
 uivp
 unilateral
+unitaria
 Galaxy
 Git
 Gr
@@ -132922,6 +132944,7 @@ GvmM
 GWMz
 GZeK
 Gxp
+GICOS
 Convenci
 Creaci
 Commander
@@ -140466,6 +140489,8 @@ Chicago
 Combinaciones
 Chebyshev
 Classify
+CONTINUO
+Convoluci
 Instalados
 Instalado
 Instalar
@@ -157536,6 +157561,9 @@ FGmo
 FNQu
 FpGo
 Find
+Fijar
+FOURIER
+FILTROS
 Estado
 Excalidraw
 EPUBs
@@ -166479,6 +166507,8 @@ Esgz
 EDSl
 Educaci
 Evaluemos
+Escal
+Espectro
 Obsidian
 OmniSearch
 Ocultar
@@ -174550,6 +174580,7 @@ Ozuj
 Occh
 OUgs
 Oppenheim
+Organizado
 Auto
 Annotator
 Autocompletado
@@ -182197,6 +182228,9 @@ AucB
 AjiPK
 AVZi
 Aperi
+ALES
+ANAL
+Angulos
 push
 pull
 para
@@ -190181,6 +190215,10 @@ periodicidad
 planteados
 puedas
 profundas
+polo
+pulso
+prevalecen
+preservarse
 min
 mica
 movimiento
@@ -223769,6 +223807,7 @@ encerrarlos
 esquinas
 escalado
 espectros
+espectro
 Motor
 Media
 Mantiene
@@ -241156,6 +241195,7 @@ LSbb
 LeJK
 LUIR
 LIBRO
+LAPLACE
 links
 las
 listar
@@ -258068,6 +258108,8 @@ impulsos
 invarianza
 ideales
 interesa
+inestabilidad
+internacional
 Dependencia
 Dropbox
 Dataview
@@ -266274,6 +266316,7 @@ DTFT
 Deergha
 Dividiendo
 Despejando
+DISCRETO
 Remotely
 Raz
 Revisa
@@ -275285,6 +275328,7 @@ Riel
 Rügee
 Reconstrucci
 Riskin
+Rampa
 Hider
 Hace
 Herramientas
@@ -332684,6 +332728,7 @@ oerr
 oiiiNij
 oRpGtyj
 oscila
+oscilatoria
 junto
 json
 jer
@@ -350539,6 +350584,7 @@ Quer
 QYfO
 QWrH
 QoeQA
+Quitar
 ya
 yaml
 yo
@@ -358696,6 +358742,8 @@ yhOnw
 yRSU
 ymlZ
 yNju
+ylabel
+ycomb
 wikilinks
 when
 where
@@ -374643,6 +374691,7 @@ xgWS
 xmTHO
 xRIj
 xqcK
+xlabel
 Wikilinks
 WHERE
 WebGL
