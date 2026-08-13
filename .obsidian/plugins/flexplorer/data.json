@@ -2652,7 +2652,8 @@
         "tsk_config-ia-workers.md",
         "img_to_assets_via_mcp.md",
         "img_base64_to_md.md",
-        "figura_tabnote_integracion.md"
+        "figura_tabnote_integracion.md",
+        "tsk_fix-math-notebooklm.md"
       ]
     },
     "_app/shellcommands/shellcmd_start_snippet.md": {
@@ -3674,6 +3675,10 @@
       "isHidden": false
     },
     "Untitled.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/_legacy/tsk_fix-math-notebooklm.md": {
       "isPinned": false,
       "isHidden": false
     }
