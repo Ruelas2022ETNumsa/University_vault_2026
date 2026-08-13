@@ -23,8 +23,7 @@
         "assets",
         "README.md",
         "Rubbish",
-        "Untitled.md",
-        "sse.md"
+        "Untitled.md"
       ]
     },
     "MOC": {
@@ -2172,7 +2171,8 @@
         "shellcmd_latex_mathjax.md",
         "rclone_script.md",
         "shellcmd_start_snippet.md",
-        "shellcmd_occlusion_actions.md"
+        "shellcmd_occlusion_actions.md",
+        "shellcmd_NBLM_fix.md"
       ]
     },
     "_app/shellcommands/shellcmd_scripting_guide.md": {
@@ -2506,7 +2506,8 @@
         "bay",
         "TPL_TAB",
         "IMA_NBLM",
-        "tsk_IMA_NBLM 1.md"
+        "tsk_IMA_NBLM 1.md",
+        "NBLM_update"
       ]
     },
     "_hangar/anki": {
@@ -3693,9 +3694,15 @@
       "isPinned": false,
       "isHidden": false
     },
-    "sse.md": {
+    "_app/shellcommands/shellcmd_NBLM_fix.md": {
       "isPinned": false,
       "isHidden": false
+    },
+    "_hangar/NBLM_update": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [],
+      "sortOrder": "custom"
     }
   },
   "pinnedFiles": [

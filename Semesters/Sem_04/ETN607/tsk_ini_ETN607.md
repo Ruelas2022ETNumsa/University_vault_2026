@@ -32,6 +32,8 @@ status: activo
 
 - [x] `ETN607-transcription.md` creado en `_app/notebooklm/prompts/ETN607/`
 - [x] `ETN607-transcription-divisions.md` creado en `_app/notebooklm/prompts/ETN607/`
+- [x] `ETN607-transcription-v2.md` creado en `_app/notebooklm/prompts/ETN607/` — incluye IMA-SRC y nueva notación NBLM
+- [ ] `ETN607-transcription-v2.md` — revisar y optimizar caracteres luego de actualizar script `notebooklm_fix`
 - [ ] `ETN607-study.md` creado en `_app/notebooklm/prompts/ETN607/`
 - [ ] Notebook configurado — fuentes + Instructions cargado
 

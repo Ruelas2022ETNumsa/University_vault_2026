@@ -26083,6 +26083,7 @@ Serie
 Sumador
 Senoidal
 Scaling
+Scope
 Plugins
 Pendientes
 Plugin
@@ -41250,6 +41251,7 @@ deca
 decaer
 dientes
 desplazada
+diciembre
 Vault
 Verificar
 Variables
@@ -116084,6 +116086,8 @@ compresi
 comprime
 cohete
 combustible
+cierres
+confirmada
 updated
 un
 universo
@@ -190319,6 +190323,7 @@ polar
 provoca
 pulsos
 parchear
+producidos
 min
 mica
 movimiento
@@ -199444,6 +199449,7 @@ mundial
 moslo
 marketplace
 mantenga
+modificarse
 YAML
 Ya
 You
@@ -258238,6 +258244,8 @@ ingresamos
 impidiendo
 invariancia
 impulsor
+impiden
+idempotente
 Dependencia
 Dropbox
 Dataview
@@ -324390,6 +324398,7 @@ NyL
 Nawab
 Necesito
 NASA
+Normaliza
 originales
 observatory
 oficial
