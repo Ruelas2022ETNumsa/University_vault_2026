@@ -1,10 +1,4 @@
 "use strict";
-// =============================================================================
-// Fix Math for Obsidian — v1.0.33 (mod alx-rul)
-// Modificacion: normaliza doble backslash (\\( y \\[) antes de procesar,
-// para compatibilidad con NotebookLM app Android que entrega ecuaciones
-// con delimitadores escapados. El flujo original no se altera.
-// =============================================================================
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
@@ -205,8 +199,6 @@ function convertMath(text, stats) {
   );
   text = text.replace(/^#[ \t]*(\[[ \t]*)$/gm, (_m, bracket) => bracket);
   text = text.replace(/^#[ \t]*(\\begin\{)/gm, "$1");
-  text = text.replace(/\\\\\[/g, "\\[").replace(/\\\\\]/g, "\\]");
-  text = text.replace(/\\\\\(/g, "\\(").replace(/\\\\\)/g, "\\)");
   const displayBackslashRe = /(^|[^\\])\\\[((?:[\s\S]*?))\\\]/g;
   const hasLaTeXCommand = (s) => /\\[a-zA-Z]+/.test(s);
   const inlineBackslashRe = /(^|[^\\])\\\((.+?)\\\)/g;
@@ -246,11 +238,9 @@ function convertMath(text, stats) {
   text = text.replace(/\\\][ \t]*\\\[/g, "\\]\n\\[");
   let out = text.replace(displayBackslashRe, (_, pre, inner) => {
     stats.blockCount++;
-    return `${pre}
-$$
+    return `${pre}$$
 ${inner.trim()}
-$$
-`;
+$$`;
   });
   {
     const lines = out.split(/\r?\n/);
@@ -294,7 +284,6 @@ $$
             result.push(`${prefix}$$`);
             result.push(inner.trim());
             result.push("$$");
-            result.push("");
             i = j + 1;
             continue;
           }
@@ -330,7 +319,9 @@ $$
           if (singleDollars % 2 === 1)
             return match;
           stats.blockCount++;
-          return `\n$$\n${inner.trim()}\n$$\n`;
+          return `$$
+${inner.trim()}
+$$`;
         }
       );
       p = p.replace(
@@ -361,7 +352,9 @@ $$
             return match;
           if (hasLaTeXCommand(inner) || isMathy(inner, true)) {
             stats.blockCount++;
-            return `\n$$\n${inner.trim()}\n$$\n`;
+            return `$$
+${inner.trim()}
+$$`;
           }
           return match;
         }

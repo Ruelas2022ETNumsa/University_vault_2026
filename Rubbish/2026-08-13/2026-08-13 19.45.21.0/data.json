@@ -23,10 +23,7 @@
         "README.md",
         "assets",
         "_library_ETN1015.md",
-        "Sin título.md",
-        "Sin título 1.md",
-        "Untitled.md",
-        "Sin título 2.md"
+        "Sin título.md"
       ]
     },
     "MOC": {
@@ -1857,8 +1854,7 @@
       "customOrder": [
         "ETN806",
         "MAT101",
-        "ETN607",
-        "ETN1015"
+        "ETN607"
       ]
     },
     "_app/notebooklm/prompts/ETN806": {
@@ -1918,8 +1914,7 @@
       "customOrder": [
         "ETN806",
         "MAT101",
-        "ETN607",
-        "ETN1015"
+        "ETN607"
       ]
     },
     "_app/notebooklm/guides/MAT101": {
@@ -2856,8 +2851,7 @@
       "sortOrder": "custom",
       "customOrder": [
         "ETN607-transcription.md",
-        "ETN607-transcription-divisions.md",
-        "ETN607-transcription-v2.md"
+        "ETN607-transcription-divisions.md"
       ]
     },
     "_app/notebooklm/prompts/ETN607/ETN607-transcription.md": {
@@ -3176,56 +3170,6 @@
       "isHidden": false
     },
     "Sin título.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/prompts/ETN607/ETN607-transcription-v2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/prompts/ETN1015": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "ETN1015-study 1.md",
-        "ETN1015-study.md"
-      ]
-    },
-    "_app/notebooklm/prompts/ETN1015/ETN1015-study 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/prompts/ETN1015/ETN1015-study.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/guides/ETN1015": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "ETN1015_desmos.md",
-        "ETN1015_tikz.md"
-      ]
-    },
-    "_app/notebooklm/guides/ETN1015/ETN1015_desmos.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/guides/ETN1015/ETN1015_tikz.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Sin título 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Untitled.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Sin título 2.md": {
       "isPinned": false,
       "isHidden": false
     }
