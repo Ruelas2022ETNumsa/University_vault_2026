@@ -23,7 +23,8 @@
         "assets",
         "README.md",
         "Rubbish",
-        "Untitled.md"
+        "Untitled.md",
+        "sse.md"
       ]
     },
     "MOC": {
@@ -2871,7 +2872,8 @@
       "sortOrder": "custom",
       "customOrder": [
         "ETN607-transcription.md",
-        "ETN607-transcription-divisions.md"
+        "ETN607-transcription-divisions.md",
+        "ETN607-transcription-v2.md"
       ]
     },
     "_app/notebooklm/prompts/ETN607/ETN607-transcription.md": {
@@ -3051,7 +3053,8 @@
         "logbook.md",
         "tsk_IMA_NBLM.md",
         "IMA_NBLM-prueba_p1.md",
-        "Gemini_fuentes_pruebas.md"
+        "Gemini_fuentes_pruebas.md",
+        "IMA_NBLM-opc_slides.md"
       ]
     },
     "_hangar/IMA_NBLM/IMA_NBLM_promtp.md": {
@@ -3679,6 +3682,18 @@
       "isHidden": false
     },
     "_hangar/_legacy/tsk_fix-math-notebooklm.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/IMA_NBLM/IMA_NBLM-opc_slides.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN607/ETN607-transcription-v2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "sse.md": {
       "isPinned": false,
       "isHidden": false
     }

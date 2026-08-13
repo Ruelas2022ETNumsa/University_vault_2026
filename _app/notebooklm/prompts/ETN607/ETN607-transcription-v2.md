@@ -1,12 +1,12 @@
 TAREA:
 Transcribir y complementar apuntes universitarios de Mecánica Aplicada (ETN607)
 a formato Markdown.
-_
+
 FUENTES GUÍA (prioridad sobre conocimiento general):
-- obsidian_notation.md  → sintaxis Obsidian, Cornell, callouts, wikilinks
-- _library_ETN607.md    → criterio de selección de libros y capítulos por tema
-- ETN607_latex.md       → notación LaTeX de la materia
-- ETN607_TikzJax.md     → reglas y ejemplos TikZJax para ETN607
+- obsidian_notation.md → sintaxis Obsidian, Cornell, callouts, wikilinks
+- _library_ETN607.md → criterio de selección de libros y capítulos por tema
+- ETN607_latex.md → notación LaTeX de la materia
+- ETN607_TikzJax.md → reglas y ejemplos TikZJax para ETN607
 Si hay conflicto entre estas fuentes y conocimiento general → prevalece el documento.
 _
 FUENTES DE REFERENCIA: consultar _library_ETN607.md para
@@ -64,25 +64,29 @@ DETECCIÓN DE CALLOUTS:
   · "> Tarea"    → > [!important] Tarea: [contenido]
   · Otros títulos → > [!note] [Título]: [contenido]
 
-DETECCIÓN DE IMÁGENES EN APUNTE (IMA):
+DETECCIÓN DE FIGURAS EN APUNTE:
 Caja cerrada de 4 lados. Primera línea dentro de la caja: `Figura T.N` (ej: Figura 1.3).
 Espacio central: dibujo o esquema a mano. Última línea: descripción breve opcional.
+Fuente del apunte: ETN607_T0X.pdf donde X es el número de tema.
 → NO transcribir el contenido visual
 → incluir siempre:
     ![[pegar_imagen]]
     *Figura T.N · [descripción si existe — omitir si no hay]*
+→ agregar al pie el bloque de localización:
+    IMA | fuente: ETN607_T0X.pdf | página: [número impreso] | id: Figura T.N | posición: [dónde está en la página]
 → respetar la posición donde estaba en el apunte
 → la etiqueta `Figura T.N` es la señal identificadora — equivale al `>` del callout
 
 DETECCIÓN DE MARGINALIA:
 Línea de resaltador que sobrepasa el borde hacia el margen externo.
 Símbolo escrito en el margen. Traducir:
-! %%> ! texto %% · ? %%> ?- texto %% · X %%> X- texto %% · V %%> V- texto %%
-C %%> C- texto %% · F %%> F- texto %% · R %%> R- texto %% · T %%> T- texto %% · * %%> C- revisar %%
+! %%> ! texto %% · ? %%> ?- texto %% · X %%> X- texto %%
+F %%> F- texto %% · * %%> C- revisar %%
+V · C · R · T → transcribir el símbolo tal cual en ::note.
 Usar callout solo si la posición es ambigua.
 _
 CONVENCIONES DEL APUNTE:
-- valor[unidad] → preservar: 940[V], 470[Ω], 2[A]
+- valor[unidad] → preservar: 940[V], 470[Ω]
 - ∴ → preservar como símbolo de síntesis
 - → ver Txx → preservar como referencia cruzada
 - Flechas con texto → nota al pie del elemento · Flechas sin texto → ignorar
@@ -124,17 +128,18 @@ COMPLEMENTO:
 >   contenido...
 
 NIVEL B: definición formal del libro si la del apunte es informal.
-NIVEL C: definición formal + propiedades omitidas + 1-2 ejercicios resueltos + gráfica si aplica.
+  Si la definición se apoya en una figura del libro → usar bloque IMA-SRC.
+NIVEL C: definición formal + propiedades omitidas + 1-2 ejercicios resueltos + figura si aplica.
+  Usar bloque IMA-SRC para cualquier figura relevante del libro fuente.
 SIN ejercicios (aplicar B): axiomas, listas de propiedades puras, notación formal.
 NIVEL C cuando: procedimiento aplicable, coordenadas/restricciones con casos concretos,
   apunte ya tiene ejemplos → agregar uno de mayor dificultad.
 → extraer siempre de los libros fuente según _library_ETN607.md, no del conocimiento general.
 Sin redundancia — cada subtítulo es independiente.
-En el complemento, si hay figura relevante en el libro fuente: usar bloque IMA-SRC.
 _
 IMA-SRC — FIGURAS DE LIBROS FUENTE:
-Usar cuando: complemento nivel C, ejercicios de libros (Mensaje 2), ejercicios del cuaderno
-con figura equivalente (Mensaje 3). NO usar en la transcripción del apunte — ahí va IMA.
+Usar cuando: complemento (nivel B o C), ejercicios de libros (Mensaje 2), ejercicios del cuaderno
+con figura equivalente (Mensaje 3). NO usar en la transcripción del apunte — ahí va el bloque IMA.
 
 Si encontrás en las fuentes una figura que ilustre directamente el concepto o ejercicio, agregá:
 
@@ -155,12 +160,8 @@ JERARQUÍA MARKDOWN:
 ### → Solo si hay sub-subtítulo con desarrollo propio evidente
 _
 FORMATO MATEMÁTICO:
-Inline $...$ preferido. Display $$...$$ solo para multilínea:
-$$\begin{array}{rcl}
-  \text{expr}_1 & = & \text{expr}_2 \\
-                & = & \text{expr}_3
-\end{array}$$
-Reglas: & separa cols · \\ termina fila (última sin \\) · \text{} para texto en math
+Ecuaciones centrales: salto de línea antes y después — delimitadores propios de NBLM.
+Notación específica → ETN607_latex.md.
 _
 GRÁFICOS:
 IMA es la estrategia principal — sistemas físicos, cuerpos rígidos, trayectorias,
@@ -177,8 +178,6 @@ EJEMPLOS RESUELTOS:
 ##### Ej. enunciado en la misma línea — fuera del Cornell.
 Preservar numeración, valor[unidad] y ∴. No agregar pasos que no estén en el apunte.
 > [!note] solo si hay observación relevante — no por defecto.
-_
-NOTACIÓN LATEX: consultar ETN607_latex.md como base.
 _
 FUENTES Y LIBROS POR TEMA:
 apuntesTX · obsidian_notation.md · _library_ETN607.md

@@ -8124,6 +8124,7 @@ tienden
 trinomio
 tren
 tampoco
+transbordador
 ToDo
 Templater
 Text
@@ -17043,6 +17044,7 @@ Transforms
 Transformadas
 TIEMPO
 TRANSFORMADA
+Temporal
 Sistema
 Sync
 Save
@@ -26080,6 +26082,7 @@ SICAS
 Serie
 Sumador
 Senoidal
+Scaling
 Plugins
 Pendientes
 Plugin
@@ -41246,6 +41249,7 @@ divergen
 deca
 decaer
 dientes
+desplazada
 Vault
 Verificar
 Variables
@@ -49304,6 +49308,7 @@ Viuo
 VySM
 VISUALIZACI
 Visualicemos
+Variaci
 galaxy
 gina
 genes
@@ -57672,6 +57677,8 @@ generarse
 gobernado
 giratorio
 graficarlas
+ganancia
+ganancias
 body
 beacon
 bat
@@ -73736,6 +73743,7 @@ subamortiguado
 segmentar
 sumamente
 senoidales
+submuestreo
 vault
 vil
 ver
@@ -90379,6 +90387,8 @@ analicemos
 automatice
 anote
 agiliza
+apoya
+adelanto
 related
 recomendados
 ribbon
@@ -98939,6 +98949,7 @@ rigurosidad
 recordando
 resultan
 resoluble
+retrasamos
 notes
 notas
 nuevas
@@ -116067,6 +116078,12 @@ clica
 cumplan
 crecimiento
 continuamente
+cuyas
+comparando
+compresi
+comprime
+cohete
+combustible
 updated
 un
 universo
@@ -149488,6 +149505,7 @@ IDATe
 Intro
 Inconsistente
 Instrucci
+Inversi
 Funci
 File
 Fase
@@ -166582,6 +166600,7 @@ Escal
 Espectro
 Elevamos
 Expresando
+Escalamiento
 Obsidian
 OmniSearch
 Ocultar
@@ -199424,6 +199443,7 @@ mixta
 mundial
 moslo
 marketplace
+mantenga
 YAML
 Ya
 You
@@ -223895,6 +223915,8 @@ envolvente
 estabiliza
 enormemente
 engineering
+espacial
+escalamiento
 Motor
 Media
 Mantiene
@@ -233249,6 +233271,7 @@ MLA
 Mani
 Magnitud
 Mejoran
+Multiplicadores
 Lectura
 LaTeX
 Linter
@@ -248724,6 +248747,7 @@ lkum
 lTZw
 last
 limitar
+logos
 incluyendo
 im
 instalar
@@ -258207,6 +258231,13 @@ interferencia
 ilimitada
 indicarse
 identificadora
+instante
+invariante
+introduciendo
+ingresamos
+impidiendo
+invariancia
+impulsor
 Dependencia
 Dropbox
 Dataview
@@ -266420,6 +266451,7 @@ Destructiva
 Destacado
 Destacamos
 Discreta
+Desplazamiento
 Remotely
 Raz
 Revisa
@@ -275440,6 +275472,7 @@ Reemplazamos
 Resueltos
 Recordamos
 Releases
+Reversal
 Hider
 Hace
 Herramientas
@@ -306610,6 +306643,7 @@ quotes
 qHnN
 qSGu
 qlsL
+quema
 University
 Usar
 Un
@@ -324355,6 +324389,7 @@ NuYb
 NyL
 Nawab
 Necesito
+NASA
 originales
 observatory
 oficial
