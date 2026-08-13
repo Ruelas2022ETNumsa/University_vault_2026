@@ -9,19 +9,17 @@ blocked_by:
 
 ## Handoff
 
-**Última sesión:** 2026-08-10 | hora inicio: 16:07
-**Retomar desde:** Diseño del flujo de 3 pasos NBLM → Gemini+fuentes → Gemini imagen
+**Última sesión:** 2026-08-13 | hora inicio: 14:50
+**Retomar desde:** Refinamiento de P1 v3 e integración en prompts de materia
 **Completado esta sesión:**
-- Carrier creado — carpeta `_hangar/IMA_NBLM/` activa
-- Prompt NBLM v2 redactado (`justificación` en lugar de `descripción relevante`)
-- Flujo de 3 pasos definido y validado con prueba real (Figura 4.4, Apostol)
-- Prompts 2, 2b y 3 redactados en `IMA_NBLM_promtp.md`
-- Dropship de pruebas creado: `IMA_NBLM-prueba_p1.md`
-- Documentación de pruebas completa en `Gemini_fuentes_pruebas.md`
-- Confirmado: página entregada por NBLM es la impresa en el libro (no visor PDF)
-- Confirmado: Gemini genera imágenes correctas y didácticamente útiles con el flujo
+- P1 v3 redactado en `IMA_NBLM_promtp.md` — campo `id` unifica etiqueta y pie, justificación reducida a 1 oración, reglas colapsadas
+- Pruebas adicionales realizadas con PDF con etiqueta → flujo validado
+- Confirmado: error de página +1 es tolerable cuando existe etiqueta como ancla
+- Confirmado: diapositivas sin número de página ni etiqueta fallan — caso separado
+- Dropship `IMA_NBLM-opc_slides.md` creado para normalizar caso diapositivas
+- Foco del carrier acotado: P1 (NBLM) para PDF con/sin etiqueta — Gemini puede esperar
 
-**Próximo paso:** Probar flujo completo con Prompt 2b — validar que Gemini simple produce mejor resultado con Rz vs. Rx directo
+**Próximo paso:** Evaluar P1 v3 en prueba real y definir si se integra en `ETN607-transcription.md`
 **Preguntas de cierre:** —
 
 ---
@@ -97,6 +95,7 @@ NBLM no puede mostrar imágenes de libros ni de apuntes en su output `.md`. El o
 | `Gemini_fuentes_pruebas.md` | logbook | — | Documentación extendida de pruebas |
 | `IMA_NBLM_promtp.md` | dropship | activo | Prompts P1v1, P1v2, P2, P2b, P3 |
 | `IMA_NBLM-prueba_p1.md` | dropship | evaluado | Prueba fase 1 — flujo NBLM→Gemini+f→Gemini→imagen |
+| `IMA_NBLM-opc_slides.md` | dropship | activo | Caso especial diapositivas — pendiente normalización |
 
 ---
 

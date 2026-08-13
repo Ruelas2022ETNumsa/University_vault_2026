@@ -50,11 +50,11 @@ Cada bloque Cornell se subdivide internamente en 4 partes con líneas segmentada
 
 ### Variantes cargadas en Samsung Notes
 
-| Variante | Descripción |
-|---|---|
-| White theme | Fondo blanco, modo claro |
-| Dark theme | Sin fondo — Samsung Notes aplica el negro del modo oscuro automáticamente |
-| Sin cuadrícula | Solo márgenes y recuadros notables, para imprimir en tareas |
+| Variante       | Descripción                                                               |
+| -------------- | ------------------------------------------------------------------------- |
+| White theme    | Fondo blanco, modo claro                                                  |
+| Dark theme     | Sin fondo — Samsung Notes aplica el negro del modo oscuro automáticamente |
+| Sin cuadrícula | Solo márgenes y recuadros notables, para imprimir en tareas               |
 
 ### Herramientas y configuraciones declaradas
 

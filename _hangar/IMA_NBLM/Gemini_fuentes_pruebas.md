@@ -118,3 +118,29 @@ Gemini simple
 - El campo `página` en IMA-SRC es el número impreso en el libro — el script `ima_src_opener` debe contemplar el desfase respecto al visor PDF.
 - La recta tangente en P no aparece en el dibujo generado — limitación conocida, no se corrige en el prompt.
 - Evaluar si el contexto completo de NBLM en el paso 3 puede simplificarse automáticamente (por Gemini+fuentes u otro medio) sin perder calidad en el dibujo.
+
+---
+
+## Pruebas P1 v3 — 2026-08-13
+
+### PDF con etiqueta de figura
+
+**Resultado:** ✅ flujo validado. NBLM localiza correctamente fuente, página y etiqueta.
+
+**Observación — error de página +1:** En al menos un caso NBLM entregó el número de página de la página siguiente (p+1). Causa probable: el número impreso está en el encabezado superior y NBLM lo asocia a la página siguiente. **Veredicto:** tolerable — cuando existe etiqueta de figura, la localización sigue siendo confiable. La etiqueta es el ancla real; la página es referencia de apoyo.
+
+**PDF con páginas inclinadas / fotos con rayones:** procesados sin errores graves. NBLM los trata como cualquier PDF.
+
+### PDF sin etiqueta
+
+**Resultado:** sin errores graves en las pruebas realizadas. Sin casos de PDF sin etiqueta disponibles para prueba exhaustiva — la mayoría de los PDF del vault tiene etiqueta.
+
+### Diapositivas (sin número de página ni etiqueta)
+
+**Resultado:** ❌ fallo. NBLM entregó número de página incorrecto al no tener ancla (ni etiqueta ni número impreso). El bloque IMA-SRC resultante no es confiable para localizar la imagen.
+
+**Conclusión:** diapositivas sin identificadores son un caso distinto. Requieren normalización separada — ver `IMA_NBLM-opc_slides.md`.
+
+### Veredicto general P1 v3
+
+Validada para PDF con etiqueta. Es el caso principal de uso real y cubre la mayoría del vault. Diapositivas quedan como caso pendiente separado.
