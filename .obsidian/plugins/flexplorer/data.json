@@ -24,12 +24,10 @@
         "assets",
         "Rubbish",
         "Untitled.md",
-        "Untitled 1.md",
-        "Untitled 2.md",
-        "Untitled 3.md",
-        "Untitled 4.md",
-        "Untitled 5.md",
-        "Untitled 6.md"
+        "Practica 2.md",
+        "Untitled 6.md",
+        "Untitled 7.md",
+        "Untitled 8.md"
       ]
     },
     "MOC": {
@@ -3229,6 +3227,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "Practica 1.md",
         "_library_ETN1015.md"
       ]
     },
@@ -3249,22 +3248,6 @@
       ]
     },
     "Rubbish/2026-08-12/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Untitled 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Untitled 2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Untitled 4.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -3689,11 +3672,23 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Untitled 5.md": {
+    "Untitled 6.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "Untitled 6.md": {
+    "Untitled 7.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled 8.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_08/ETN1015/Practica 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Practica 2.md": {
       "isPinned": false,
       "isHidden": false
     }

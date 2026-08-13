@@ -88,3 +88,5 @@ Como la potencia promedio temporal también diverge ($P_\infty = \infty$), la se
 Al comprobar que tanto la energía total $E_\infty$ como la potencia promedio $P_\infty$ tienden a infinito bajo la condición de parte real no nula, podemos concluir con total rigurosidad:
 
 $$\bbox[border: 2px solid #005F73, 10px]{ \begin{array}{c} \mathbf{x(t) = e^{-ct} \text{ es una señal de tipo "ni de energía ni de potencia"}} \\ \text{para cualquier valor complejo } c \in \mathbb{C} \text{ con } \text{Re}\{c\} \neq 0. \end{array} }$$
+
+---
