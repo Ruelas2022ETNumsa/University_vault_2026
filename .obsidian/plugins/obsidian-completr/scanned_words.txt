@@ -8121,6 +8121,7 @@ truncada
 tallo
 tender
 tienden
+trinomio
 ToDo
 Templater
 Text
@@ -41232,6 +41233,8 @@ declarada
 desplazado
 deban
 depurado
+duraci
+desfasada
 Vault
 Verificar
 Variables
@@ -57656,6 +57659,7 @@ gcku
 gbMm
 generarse
 gobernado
+giratorio
 body
 beacon
 bat
@@ -73716,6 +73720,8 @@ senos
 seguidos
 superpuestas
 subamortiguado
+segmentar
+sumamente
 vault
 vil
 ver
@@ -90351,6 +90357,9 @@ aprovecharlo
 aperiodic
 another
 amplitud
+acoplamiento
+amplitudes
+asumimos
 related
 recomendados
 ribbon
@@ -98908,6 +98917,7 @@ representamos
 requerimos
 reescribimos
 rigurosidad
+recordando
 notes
 notas
 nuevas
@@ -116026,6 +116036,11 @@ causalidad
 continuous
 combinada
 cartesiana
+cosenos
+conjugado
+caminos
+conducen
+calculando
 updated
 un
 universo
@@ -132957,6 +132972,7 @@ GWMz
 GZeK
 Gxp
 GICOS
+Grafiquemos
 Convenci
 Creaci
 Commander
@@ -140503,6 +140519,7 @@ Chebyshev
 Classify
 CONTINUO
 Convoluci
+Constructiva
 Instalados
 Instalado
 Instalar
@@ -166522,6 +166539,8 @@ Educaci
 Evaluemos
 Escal
 Espectro
+Elevamos
+Expresando
 Obsidian
 OmniSearch
 Ocultar
@@ -190235,6 +190254,7 @@ preservarse
 preparaci
 planteamos
 puesto
+polar
 min
 mica
 movimiento
@@ -223824,6 +223844,7 @@ esquinas
 escalado
 espectros
 espectro
+envolvente
 Motor
 Media
 Mantiene
@@ -233176,6 +233197,7 @@ McwYJ
 Mapas
 MLA
 Mani
+Magnitud
 Lectura
 LaTeX
 Linter
@@ -258128,6 +258150,8 @@ inestabilidad
 internacional
 incompatibilidad
 imaginaria
+influenciada
+interferencia
 Dependencia
 Dropbox
 Dataview
@@ -266336,6 +266360,9 @@ Dividiendo
 Despejando
 DISCRETO
 Depurar
+Derivar
+Destructiva
+Destacado
 Remotely
 Raz
 Revisa
@@ -275349,6 +275376,9 @@ Reconstrucci
 Riskin
 Rampa
 Recordando
+Reuniendo
+Reconociendo
+Representando
 Hider
 Hace
 Herramientas
@@ -332749,6 +332779,10 @@ oiiiNij
 oRpGtyj
 oscila
 oscilatoria
+odos
+opuestas
+ortogonales
+ortogonalidad
 junto
 json
 jer
