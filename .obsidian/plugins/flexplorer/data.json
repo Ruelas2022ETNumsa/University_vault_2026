@@ -27,7 +27,9 @@
         "Untitled 1.md",
         "Untitled 2.md",
         "Untitled 3.md",
-        "Untitled 4.md"
+        "Untitled 4.md",
+        "Untitled 5.md",
+        "Untitled 6.md"
       ]
     },
     "MOC": {
@@ -3654,7 +3656,8 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "ETN1015-study.md"
+        "ETN1015-study.md",
+        "ETN1015-study 1.md"
       ]
     },
     "_app/notebooklm/prompts/ETN1015/ETN1015-study.md": {
@@ -3679,6 +3682,18 @@
       "isHidden": false
     },
     "_hangar/dock/tsk_prompt_guides_1015.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN1015/ETN1015-study 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled 5.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled 6.md": {
       "isPinned": false,
       "isHidden": false
     }

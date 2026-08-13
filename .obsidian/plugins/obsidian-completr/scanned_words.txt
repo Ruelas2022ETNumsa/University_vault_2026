@@ -8119,6 +8119,8 @@ tLtl
 tratados
 truncada
 tallo
+tender
+tienden
 ToDo
 Templater
 Text
@@ -33675,6 +33677,7 @@ Practicar
 Panor
 Pulso
 Polo
+Promedio
 del
 date
 de
@@ -41228,6 +41231,7 @@ dicos
 declarada
 desplazado
 deban
+depurado
 Vault
 Verificar
 Variables
@@ -49285,6 +49289,7 @@ VmrE
 Viuo
 VySM
 VISUALIZACI
+Visualicemos
 galaxy
 gina
 genes
@@ -57650,6 +57655,7 @@ gAQA
 gcku
 gbMm
 generarse
+gobernado
 body
 beacon
 bat
@@ -98897,6 +98903,11 @@ refinado
 rampa
 rectangulares
 retroalimentaci
+reescrito
+representamos
+requerimos
+reescribimos
+rigurosidad
 notes
 notas
 nuevas
@@ -116014,6 +116025,7 @@ coral
 causalidad
 continuous
 combinada
+cartesiana
 updated
 un
 universo
@@ -157564,6 +157576,7 @@ Find
 Fijar
 FOURIER
 FILTROS
+Fijate
 Estado
 Excalidraw
 EPUBs
@@ -190219,6 +190232,9 @@ polo
 pulso
 prevalecen
 preservarse
+preparaci
+planteamos
+puesto
 min
 mica
 movimiento
@@ -258110,6 +258126,8 @@ ideales
 interesa
 inestabilidad
 internacional
+incompatibilidad
+imaginaria
 Dependencia
 Dropbox
 Dataview
@@ -266317,6 +266335,7 @@ Deergha
 Dividiendo
 Despejando
 DISCRETO
+Depurar
 Remotely
 Raz
 Revisa
@@ -275329,6 +275348,7 @@ Rügee
 Reconstrucci
 Riskin
 Rampa
+Recordando
 Hider
 Hace
 Herramientas

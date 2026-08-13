@@ -925,84 +925,34 @@ Antes de entregar un bloque TikZJax verificar:
 > Contexto para NotebookLM: usar para diagrama de polos y ceros en el plano z. La circunferencia unitaria en gris punteado es referencia obligatoria — la estabilidad de un sistema causal discreto requiere que los polos estén dentro de la circunferencia unitaria.
 
 ```tikz
-\usepackage{pgfplots}
-\pgfplotsset{compat=1.16}
 \begin{document}
-\begin{tikzpicture}
-\begin{axis}[
-    axis lines=middle,
-    xmin=-2, xmax=2,
-    ymin=-2, ymax=2,
-    xlabel={$\text{Re}$},
-    ylabel={$\text{Im}$},
-    width=8cm, height=8cm,
-    xtick={-2,-1,0,1,2},
-    ytick={-2,-1,0,1,2},
-    tick style={thin, black}
-]
-
+\begin{tikzpicture}[scale=2]
+% Ejes
+\draw[->] (-1.5,0) -- (1.5,0) node[right] {Re};
+\draw[->] (0,-1.5) -- (0,1.5) node[above] {Im};
 % Circunferencia unitaria
-\draw[dashed, gray] (axis cs:0,0) circle [radius=1];
-
-% Polo 1
-\node[teal, font=\Large] at (axis cs:0.5, 0.5) {$\times$};
-
-% Polo 2
-\node[teal, font=\Large] at (axis cs:0.5,-0.5) {$\times$};
-
+\draw[dashed, gray] (0,0) circle (1);
+% Marcas de los ejes
+\draw (-1,0.05) -- (-1,-0.05) node[below] {-1};
+\draw (1,0.05) -- (1,-0.05) node[below] {1};
+\draw (0.05,-1) -- (-0.05,-1) node[left] {-1};
+\draw (0.05,1) -- (-0.05,1) node[left] {1};
+% ROC
+\fill[teal!15] (0,0) circle (1.4);
+\fill[white] (0,0) circle (1);
+% Polos
+\node[teal] at (0.5, 0.5) {$\times$};
+\node[teal] at (0.5,-0.5) {$\times$};
+% Etiquetas de polos
+\node[teal] at (0.72, 0.55) {p1};
+\node[teal] at (0.72,-0.55) {p2};
 % Cero
-\draw[orange, thick] (axis cs:0,0) circle [radius=7pt];
-
-% Etiqueta ROC
-\node[gray, font=\small] at (axis cs:1.3,1.3) {ROC};
-
-\end{axis}
+\draw[orange, thick] (0,0) circle (0.06);
+\node[orange] at (0.13,0.13) {z1};
+% Etiquetas
+\node[gray] at (0.78,0.78) {$|z|=1$};
+\node[teal!70] at (1.2,1.1) {ROC};
 \end{tikzpicture}
-\end{document}
-```
-
-
-
-
-
-
-```tikz
-\usepackage{pgfplots}
-\begin{document}
-
-\begin{tikzpicture}
-
-\begin{axis}[
-axis lines=middle,
-xmin=-2,
-xmax=2,
-ymin=-2,
-ymax=2,
-xlabel={Re},
-ylabel={Im},
-width=8cm,
-height=8cm
-]
-
-% Circunferencia unitaria
-\draw[dashed] (axis cs:0,0) circle [radius=90pt];
-
-% Polo 1
-\node at (axis cs:0.5,0.5) {\times};
-
-% Polo 2
-\node at (axis cs:0.5,-0.5) {\times};
-
-% Cero
-\draw (axis cs:0,0) circle [radius=7pt];
-
-% Etiqueta
-\node at (axis cs:1.3,1.3) {ROC};
-
-\end{axis}
-
-\end{tikzpicture}
-
 \end{document}
 ```
 

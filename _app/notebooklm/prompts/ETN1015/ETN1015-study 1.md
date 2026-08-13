@@ -109,7 +109,7 @@ reevaluar el criterio desde cero.
 
    DEFAULTS cuando el usuario no especifica:
    · Diagramas de bloques: entorno tikzpicture, scale=1.2
-   · Plano complejo (polos/ceros): tikzpicture puro con coordenadas manuales — NO usar pgfplots con axis
+   · Plano complejo (polos/ceros): pgfplots con axis lines=middle
    · Color principal: teal / secundario: orange
 
 Nunca inventar gráficos. Nunca mezclar herramientas en un mismo diagrama.
