@@ -28,7 +28,7 @@ _Nota de comprensión:_ A diferencia de los cosenos reales que oscilan entre $-A
 
 ### **Visualización de la señal**
 
-Para visualizar intuitivamente este comportamiento, grafiquemos en Desmos la parte real de la señal $\text{Re}{x(t)} = |A|\cos(\Omega t)$ (que sí oscila) junto a su magnitud absoluta constante $|x(t)| = |A|$ (para valores ilustrativos de $|A| = 3$ y $\Omega = 2$):
+Para visualizar intuitivamente este comportamiento, grafiquemos en Desmos la parte real de la señal $\text{Re}\{x(t)\} = |A|\cos(\Omega t)$ (que sí oscila) junto a su magnitud absoluta constante $|x(t)| = |A|$ (para valores ilustrativos de $|A| = 3$ y $\Omega = 2$):
 
 ```desmos-graph
 left=-5; right=5; bottom=-4; top=4;
@@ -38,7 +38,7 @@ y=3 | -5<=x<=5 | #EE9B00
 y=3*\cos(2*x) | -5<=x<=5 | #005F73
 ```
 
-- _Curva azul petróleo (`#005F73`): parte real oscilatoria de la señal, $\text{Re}{x(t)} = 3\cos(2t)$._
+- _Curva azul petróleo (`#005F73`): parte real oscilatoria de la señal, $\text{Re}\{x(t)\} = 3\cos(2t)$._
 - _Línea ámbar (`#EE9B00`): magnitud constante de la envolvente, $|x(t)| = 3$._
 
 ---

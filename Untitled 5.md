@@ -1,6 +1,6 @@
 ### **Enunciado**
 
-Verificar si la señal de tiempo continuo $x(t) = e^{-ct}$ es una señal de energía, de potencia, o ninguna de las anteriores, para un valor complejo $c$ con parte real no nula ($\text{Re}{c} \neq 0$).
+Verificar si la señal de tiempo continuo $x(t) = e^{-ct}$ es una señal de energía, de potencia, o ninguna de las anteriores, para un valor complejo $c$ con parte real no nula ($\text{Re}\{c\} \neq 0$).
 
 ---
 
@@ -14,8 +14,8 @@ $$c = \sigma + j\omega$$
 
 Donde:
 
-- $\sigma = \text{Re}{c} \neq 0$ (parte real no nula, según la condición del problema).
-- $\omega = \text{Im}{c}$ (parte imaginaria).
+- $\sigma = \text{Re}\{c\} \neq 0$ (parte real no nula, según la condición del problema).
+- $\omega = \text{Im}\{c\}$ (parte imaginaria).
 
 Sustituyendo esto en la expresión de nuestra señal $x(t)$:
 
@@ -87,4 +87,4 @@ Como la potencia promedio temporal también diverge ($P_\infty = \infty$), la se
 
 Al comprobar que tanto la energía total $E_\infty$ como la potencia promedio $P_\infty$ tienden a infinito bajo la condición de parte real no nula, podemos concluir con total rigurosidad:
 
-$$\bbox[border: 2px solid #005F73, 10px]{ \begin{array}{c} \mathbf{x(t) = e^{-ct} \text{ es una señal de tipo "ni de energía ni de potencia"}} \\ \text{para cualquier valor complejo } c \in \mathbb{C} \text{ con } \text{Re}{c} \neq 0. \end{array} }$$
+$$\bbox[border: 2px solid #005F73, 10px]{ \begin{array}{c} \mathbf{x(t) = e^{-ct} \text{ es una señal de tipo "ni de energía ni de potencia"}} \\ \text{para cualquier valor complejo } c \in \mathbb{C} \text{ con } \text{Re}\{c\} \neq 0. \end{array} }$$
