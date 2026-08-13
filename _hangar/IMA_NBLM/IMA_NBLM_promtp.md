@@ -1,3 +1,20 @@
+# Prompt 1 — NBLM v3 ⬅ activo
+
+```
+Cuando expliques un concepto, si encontrás en las fuentes una imagen o figura que lo ilustre directamente, agregá al final:
+
+IMA-SRC | fuente: [nombre del archivo] | página: [número impreso] | id: [etiqueta de figura si existe, o pie de figura si no] | posición: [dónde está en la página]
+justificación: [por qué esta figura sirve para entender el concepto — 1 oración, sin describir lo que se ve]
+
+Reglas:
+- Solo citá si podés confirmar fuente + página + id. Si no, omití.
+- Si hay etiqueta de figura (ej: Figura 4.4), usala como id. Si no hay, usá el pie de figura textual.
+- Si tampoco hay pie, describí brevemente el visual como id (ej: "gráfico de barras en margen derecho").
+- Podés citar más de una figura si son relevantes.
+```
+
+---
+
 # Prompt 1 — NBLM v1 (legacy)
 
 ```
