@@ -90377,6 +90377,7 @@ acumulada
 analicemos
 automatice
 anote
+agiliza
 related
 recomendados
 ribbon
@@ -98936,6 +98937,7 @@ reescribimos
 rigurosidad
 recordando
 resultan
+resoluble
 notes
 notas
 nuevas
@@ -233243,6 +233245,7 @@ Mapas
 MLA
 Mani
 Magnitud
+Mejoran
 Lectura
 LaTeX
 Linter
