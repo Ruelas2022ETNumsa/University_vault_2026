@@ -8123,6 +8123,7 @@ tender
 tienden
 trinomio
 tren
+tampoco
 ToDo
 Templater
 Text
@@ -157632,6 +157633,8 @@ Fijar
 FOURIER
 FILTROS
 Fijate
+FIGURAS
+Figure
 Estado
 Excalidraw
 EPUBs
@@ -258203,6 +258206,7 @@ influenciada
 interferencia
 ilimitada
 indicarse
+identificadora
 Dependencia
 Dropbox
 Dataview
@@ -332842,6 +332846,7 @@ opuestas
 ortogonales
 ortogonalidad
 ondas
+omit
 junto
 json
 jer
