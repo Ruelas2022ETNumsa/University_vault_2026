@@ -191,6 +191,12 @@
       "icon": "lucide-layers-2",
       "name": "Cornell Marginalia: Flashcards Generation (Spaced Repetition)",
       "mode": "any"
+    },
+    {
+      "id": "fix-math:current-file",
+      "icon": "lucide-remove-formatting",
+      "name": "Fix Math: Current file",
+      "mode": "any"
     }
   ],
   "macros": [],

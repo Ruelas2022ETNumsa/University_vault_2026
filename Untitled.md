@@ -1,169 +1,159 @@
-Classify the following continuous-time signals as periodic or aperiodic. If periodic, determine the period. 
+Una **señal de potencia** es aquella que se mantiene activa de forma permanente a lo largo del tiempo sin decaer a cero, por lo que su **energía total acumulada es infinita**. Como no podemos medir su energía de forma directa porque no converge, los ingenieros analizamos su **potencia promedio**, que representa el ritmo con el que la señal consume o entrega energía por unidad de tiempo.
 
-i) $x(t) = \cos\left(\frac{2\pi}{3}t\right) + 2\sin\left(\frac{\pi}{2}t\right)$
-ii) $x(t) = \cos(2\pi t) + \sin\left(\sqrt{2}\pi t\right)$
-iii) $x(t) = \frac{1}{2} - \frac{1}{2}\cos(2t)$
-iv) $x(t) = 1 + \sin(4t) + \cos\left(6t + \frac{\pi}{3}\right)$
-v) $x(t) = e^{j(4t+\tfrac{\pi}{5})}$
-vi) $x(t) = \cos\left(2t + \frac{\pi}{4}\right)$
-vii) $x(t) = \cos(2\pi t)u(t)$
-viii) $x(t) = \cos^2(t)$
+Formalmente, una señal es de potencia si su potencia promedio normalizada $P$ es **finita y distinta de cero** ($0 < P < \infty$).
 
 ---
 
-RESPUESTA DE NBLM
+### Definición Matemática
 
-Para determinar si una señal continua $x(t)$ es periódica, debemos verificar si existe un valor positivo $T > 0$ tal que se cumpla la relación:
+Para una señal continua $x(t)$, la **potencia promedio normalizada** (calculada sobre una resistencia hipotética de $1\ \Omega$) se define como:
 
-$$x(t + T) = x(t) \quad \text{para todo } t \in \mathbb{R}$$
+$$
+P = \lim_{T \to \infty} \dfrac{1}{T} \int_{-T/2}^{T/2} |x(t)|^2 dt
+$$
 
-El menor valor positivo de $T$ que satisface esta condición es el **periodo fundamental** ($T_0$). Para señales sinusoidales de la forma $A\cos(\omega_0 t + \theta)$ o exponenciales complejas $e^{j(\omega_0 t + \theta)}$, la señal siempre es periódica con un periodo fundamental de:
+#### El Caso de las Señales Periódicas
 
-$$T_0 = \frac{2\pi}{|\omega_0|}$$
+Si la señal es periódica con un período fundamental $T_0$ (es decir, cumple que $x(t) = x(t + T_0)$), la potencia promedio a lo largo de toda su historia infinita es idéntica a la potencia promedio calculada **en un único período**. Esto simplifica enormemente el análisis matemático:
 
-Cuando tenemos una **suma de señales periódicas** con periodos fundamentales $T_1, T_2, \dots$, la señal resultante será periódica si y solo si la relación entre cualquiera de sus periodos es un **número racional**:
-
-$$\frac{T_i}{T_j} \in \mathbb{Q}$$
-
-Si esta condición se cumple, el periodo fundamental $T_0$ de la suma es el **mínimo común múltiplo (MCM)** de los periodos individuales. Además, la adición de una constante (componente de cd) no altera la periodicidad ni el periodo fundamental de la señal.
-
-A continuación se clasifica y resuelve detalladamente cada uno de los casos planteados:
+$$
+P = \dfrac{1}{T_0} \int_{-T_0/2}^{T_0/2} |x(t)|^2 dt
+$$
 
 ---
 
-### **i) $x(t) = \cos\left(\frac{2\pi}{3}t\right) + 2\sin\left(\frac{\pi}{2}t\right)$**
+### Ejemplo Clásico: La Onda Senoidal
 
-Esta señal es la suma de dos componentes periódicas:
+Consideremos la señal de voltaje dada por:
 
-1. $x_1(t) = \cos\left(\frac{2\pi}{3}t\right)$, con frecuencia angular $\omega_1 = \frac{2\pi}{3}$ rad/s. Su periodo fundamental es:
+$$
+x(t) = 2 \cos(2t)
+$$
 
-$$T_1 = \frac{2\pi}{\omega_1} = \frac{2\pi}{2\pi/3} = 3 \text{ s}$$
+Esta es una señal continua y periódica, con amplitud $A = 2\text{ V}$ y frecuencia angular $\omega_0 = 2\text{ rad/s}$. Su período fundamental es:
 
-2. $x_2(t) = 2\sin\left(\frac{\pi}{2}t\right)$, con frecuencia angular $\omega_2 = \frac{\pi}{2}$ rad/s. Su periodo fundamental es:
+$$
+T_0 = \dfrac{2\pi}{\omega_0} = \dfrac{2\pi}{2} = \pi\text{ segundos}
+$$
 
-$$T_2 = \frac{2\pi}{\omega_2} = \frac{2\pi}{\pi/2} = 4 \text{ s}$$
+Grafiquemos esta señal senoidal para visualizar su comportamiento continuo y oscilatorio a lo largo del tiempo:
 
-Evaluamos la relación de los periodos:
+```
+left=-5; right=5; bottom=-3; top=3; width=550; height=200;
+---
+y=2\cos(2x)|#005F73
+```
 
-$$\frac{T_1}{T_2} = \frac{3}{4}$$
+Como la señal no se apaga nunca, su energía total integrada es infinita. Calculemos su potencia promedio evaluando un solo período ($T_0 = \pi$):
 
-Como el resultado ($\frac{3}{4}$) es un **número racional**, la señal resultante es **periódica**. Su periodo fundamental $T_0$ es el mínimo común múltiplo de $T_1 = 3$ y $T_2 = 4$:
+$$
+P = \dfrac{1}{\pi} \int_{-\pi/2}^{\pi/2} |2\cos(2t)|^2 dt
+$$
 
-$$T_0 = \text{MCM}(3, 4) = 12 \text{ s}$$
+$$
+P = \dfrac{4}{\pi} \int_{-\pi/2}^{\pi/2} \cos^2(2t) dt
+$$
 
-- **Clasificación:** **Periódica**
-- **Periodo fundamental ($T_0$):** **$12$ s**
+Aplicamos la identidad trigonométrica del ángulo doble $\cos^2(u) = \dfrac{1 + \cos(2u)}{2}$:
+
+$$
+P = \dfrac{4}{\pi} \int_{-\pi/2}^{\pi/2} \left( \dfrac{1 + \cos(4t)}{2} \right) dt
+$$
+
+$$
+P = \dfrac{2}{\pi} \int_{-\pi/2}^{\pi/2} (1 + \cos(4t)) dt
+$$
+
+$$
+P = \dfrac{2}{\pi} \left[ t + \dfrac{\sin(4t)}{4} \right]_{-\pi/2}^{\pi/2}
+$$
+
+Evaluando los límites de integración obtenemos:
+
+$$
+P = \dfrac{2}{\pi} \left[ \left( \dfrac{\pi}{2} + \dfrac{\sin(2\pi)}{4} \right) - \left( -\dfrac{\pi}{2} + \dfrac{\sin(-2\pi)}{4} \right) \right]
+$$
+
+Dado que $\sin(2\pi) = 0$ y $\sin(-2\pi) = 0$:
+
+$$
+P = \dfrac{2}{\pi} \left( \dfrac{\pi}{2} - \left( -\dfrac{\pi}{2} \right) \right) = \dfrac{2}{\pi} (\pi) = 2\text{ W}
+$$
+
+Destacamos nuestro resultado bajo la jerarquía de examen:
+
+$$
+\bbox[5px, border: 2px solid \#005F73]{P = 2\text{ W}}
+$$
+
+Dado que $0 < P < \infty$, **la señal $x(t) = 2\cos(2t)$ es rigurosamente una señal de potencia**. En general, cualquier senoidal pura de la forma $A \cos(\omega_0 t + \theta)$ tiene una potencia constante de $\dfrac{A^2}{2}$, independientemente de su frecuencia y fase.
 
 ---
 
-### **ii) $x(t) = \cos(2\pi t) + \sin\left(\sqrt{2}\pi t\right)$**
+### Preguntas de Comprensión Conceptual
 
-Analizamos las dos componentes de la suma:
-
-1. $x_1(t) = \cos(2\pi t)$, con frecuencia $\omega_1 = 2\pi$ rad/s y periodo fundamental:
-
-$$T_1 = \frac{2\pi}{2\pi} = 1 \text{ s}$$
-
-2. $x_2(t) = \sin\left(\sqrt{2}\pi t\right)$, con frecuencia $\omega_2 = \sqrt{2}\pi$ rad/s y periodo fundamental:
-
-$$T_2 = \frac{2\pi}{\sqrt{2}\pi} = \sqrt{2} \text{ s}$$
-
-Evaluamos la relación de los periodos:
-
-$$\frac{T_1}{T_2} = \frac{1}{\sqrt{2}}$$
-
-Dado que $\frac{1}{\sqrt{2}}$ es un **número irracional**, las señales no comparten un periodo común en el tiempo.
-
-- **Clasificación:** **Aperiódica** (No periódica)
+1. **¿Por qué una señal periódica no nula siempre tiene energía total infinita?** _(Pista: Piensa en qué ocurre al sumar o integrar áreas positivas idénticas de forma infinita)._
+2. **Si una señal física tiene energía total finita ($E < \infty$), ¿cuál es necesariamente su potencia promedio en el intervalo de $-\infty$ a $\infty$?**.
+3. **¿Puede un dispositivo real y físico generar una señal de potencia pura en la práctica?** _(Pista: Considera las restricciones de almacenamiento de energía y el tiempo de vida útil de los componentes físicos)._
 
 ---
 
-### **iii) $x(t) = \frac{1}{2} - \frac{1}{2}\cos(2t)$**
+### Ejercicios de Refuerzo Resueltos
 
-Esta señal es una constante sumada a una función sinusoidal periódica.
+#### Ejercicio 1 (Señal Continua Compleja - Rao Cap. 1)
 
-- La constante $\frac{1}{2}$ no afecta la periodicidad ni el periodo de la componente variable.
-- La componente variable es $x_2(t) = -\frac{1}{2}\cos(2t)$, cuya frecuencia angular es $\omega = 2$ rad/s. Su periodo fundamental es:
+**Determine si la señal exponencial compleja $x(t) = e^{j\left(2t + \dfrac{\pi}{4}\right)}$ es de energía o de potencia, y calcule sus valores correspondientes**.
 
-$$T_0 = \frac{2\pi}{|\omega|} = \frac{2\pi}{2} = \pi \text{ s}$$
+**Desarrollo:**
 
-- **Clasificación:** **Periódica**
-- **Periodo fundamental ($T_0$):** **$\pi$ s** (aproximadamente $3.1416$ s)
+1. Analizamos la magnitud cuadrática de la señal compleja. Recordamos que para cualquier exponente complejo puro $|e^{j\theta}| = 1$: $$
+|x(t)|^2 = \left| e^{j\left(2t + \dfrac{\pi}{4}\right)} \right|^2 = (1)^2 = 1
+$$
+    
+2. Calculamos la energía total $E$: $$
+E = \int_{-\infty}^{\infty} |x(t)|^2 dt = \int_{-\infty}^{\infty} 1 \cdot dt = \infty
+$$ Dado que $E = \infty$, la señal no es de energía.
+    
+3. Calculamos la potencia promedio infinita $P$: $$
+P = \lim_{T \to \infty} \dfrac{1}{T} \int_{-T/2}^{T/2} |x(t)|^2 dt = \lim_{T \to \infty} \dfrac{1}{T} \int_{-T/2}^{T/2} 1 \cdot dt
+$$
+$$
+P = \lim_{T \to \infty} \dfrac{1}{T} [t]_{-T/2}^{T/2} = \lim_{T \to \infty} \dfrac{1}{T} \left( \dfrac{T}{2} - \left(-\dfrac{T}{2}\right) \right) = \lim_{T \to \infty} \dfrac{\cancel{T}}{\cancel{T}} = 1\text{ W}
+$$
+    
 
----
-
-### **iv) $x(t) = 1 + \sin(4t) + \cos\left(6t + \frac{\pi}{3}\right)$**
-
-La constante $1$ no altera el periodo de la señal. Analizamos los dos términos sinusoidales periódicos:
-
-1. $x_1(t) = \sin(4t)$, con frecuencia angular $\omega_1 = 4$ rad/s y periodo:
-
-$$T_1 = \frac{2\pi}{4} = \frac{\pi}{2} \text{ s}$$
-
-2. $x_2(t) = \cos\left(6t + \frac{\pi}{3}\right)$, con frecuencia angular $\omega_2 = 6$ rad/s y periodo:
-
-$$T_2 = \frac{2\pi}{6} = \frac{\pi}{3} \text{ s}$$
-
-Relación de periodos:
-
-$$\frac{T_1}{T_2} = \frac{\pi/2}{\pi/3} = \frac{3}{2}$$
-
-Como la relación es un **número racional** ($\frac{3}{2}$), la señal combinada es **periódica**. Buscamos el menor periodo común $T_0$ de modo que sea un múltiplo entero de ambos periodos:
-
-$$T_0 = 2T_1 = 3T_2 \implies T_0 = 2\left(\frac{\pi}{2}\right) = 3\left(\frac{\pi}{3}\right) = \pi \text{ s}$$
-
-- **Clasificación:** **Periódica**
-- **Periodo fundamental ($T_0$):** **$\pi$ s**
+**Resultado:** La potencia promedio es finita y no nula ($1\text{ W}$). Por lo tanto: $$
+\bbox[5px, border: 2px solid \#005F73]{P = 1\text{ W} \quad (\text{Señal de Potencia})}
+$$
 
 ---
 
-### **v) $x(t) = e^{j\left(4t+\frac{\pi}{5}\right)}$**
+#### Ejercicio 2 (Secuencia Discreta - Rao Cap. 6 / Hsu Schaum Cap. 1)
 
-Esta es una señal exponencial compleja de la forma $e^{j(\omega_0 t + \theta)}$ con frecuencia angular $\omega_0 = 4$ rad/s. Las exponenciales complejas en tiempo continuo siempre son periódicas, y su periodo fundamental es:
+**Determine si la señal en tiempo discreto $x[n] = (0.5)^n u[n]$ es de energía, de potencia o ninguna, y calcule sus valores**.
 
-$$T_0 = \frac{2\pi}{|\omega_0|} = \frac{2\pi}{4} = \frac{\pi}{2} \text{ s}$$
+**Desarrollo:**
 
-- **Clasificación:** **Periódica**
-- **Periodo fundamental ($T_0$):** **$\frac{\pi}{2}$ s**
+1. Planteamos la ecuación de energía para señales discretas. Debido al escalón unitario discreto $u[n]$, los límites de la sumatoria se reducen de $0$ a $\infty$: $$
+E = \sum_{n=-\infty}^{\infty} |x[n]|^2 = \sum_{n=0}^{\infty} |(0.5)^n|^2 = \sum_{n=0}^{\infty} (0.25)^n
+$$
+    
+2. Aplicamos la fórmula de sumatoria para series geométricas infinitas $\sum_{n=0}^{\infty} a^n = \dfrac{1}{1-a}$ para $|a| < 1$: $$
+E = \dfrac{1}{1 - 0.25} = \dfrac{1}{0.75} = \dfrac{4}{3}\text{ J}
+$$
+    
+3. Dado que la energía total es finita ($E = \dfrac{4}{3}\text{ J}$), la señal se clasifica como una **señal de energía**. Su potencia promedio debe ser, por definición, igual a cero. Comprobémoslo aplicando el límite: $$
+P = \lim_{N \to \infty} \dfrac{1}{2N + 1} \sum_{n=0}^{N} (0.25)^n
+$$
+$$
+P = \lim_{N \to \infty} \dfrac{1}{2N + 1} \left( \dfrac{1 - (0.25)^{N+1}}{1 - 0.25} \right) = \lim_{N \to \infty} \dfrac{4}{3(2N + 1)} \left(1 - \cancelto{0}{(0.25)^{N+1}}\right) = 0\text{ W}
+$$
+    
 
----
-
-### **vi) $x(t) = \cos\left(2t + \frac{\pi}{4}\right)$**
-
-Es una señal senoidal simple con frecuencia angular $\omega_0 = 2$ rad/s. Al ser una sinusoide básica continua, siempre es periódica, y su periodo fundamental es:
-
-$$T_0 = \frac{2\pi}{|\omega_0|} = \frac{2\pi}{2} = \pi \text{ s}$$
-
-- **Clasificación:** **Periódica**
-- **Periodo fundamental ($T_0$):** **$\pi$ s**
-
----
-
-### **vii) $x(t) = \cos(2\pi t)u(t)$**
-
-La señal está multiplicada por la función escalón unitario $u(t)$, lo que significa que:
-
-$$x(t) = \begin{cases} \cos(2\pi t) & \text{si } t \ge 0 \\ 0 & \text{si } t < 0 \end{cases}$$
-
-Para que una señal sea periódica, la repetición del patrón debe ocurrir de manera idéntica a lo largo de todo el eje del tiempo, desde $-\infty$ hasta $+\infty$. Al estar truncada (vale $0$ para todo el tiempo negativo y oscila para el tiempo positivo), cualquier desplazamiento en el tiempo $T > 0$ romperá la simetría en la zona de transición alrededor del origen $t = 0$. Por lo tanto, no existe ningún valor $T > 0$ que cumpla la propiedad $x(t + T) = x(t)$ para todo $t$.
-
-- **Clasificación:** **Aperiódica** (No periódica)
+**Resultado:** $$
+\bbox[5px, border: 2px solid \#005F73]{E = \dfrac{4}{3}\text{ J} \quad (\text{Señal de Energía})}
+$$
 
 ---
 
-### **viii) $x(t) = \cos^2(t)$**
-
-Utilizando la identidad trigonométrica del ángulo doble para reducir el exponente de la función:
-
-$$\cos^2(t) = \frac{1}{2} + \frac{1}{2}\cos(2t)$$
-
-Esto nos deja con una constante más un término senoidal cuya frecuencia angular es $\omega_0 = 2$ rad/s. El periodo fundamental de la señal combinada está definido únicamente por este término variable:
-
-$$T_0 = \frac{2\pi}{|\omega_0|} = \frac{2\pi}{2} = \pi \text{ s}$$
-
-- **Clasificación:** **Periódica**
-- **Periodo fundamental ($T_0$):** **$\pi$ s**
-
----
-
-🧩 Si quieres, podemos calcular los coeficientes de la serie de Fourier para alguna de estas señales periódicas, como por ejemplo para $x(t) = \cos^2(t)$.
+📊 ¿Te gustaría que analicemos la potencia de otras señales periódicas de mayor complejidad en ingeniería, como un tren de pulsos rectangulares u ondas dientes de sierra?

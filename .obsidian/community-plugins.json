@@ -22,5 +22,6 @@
   "obsidian-to-anki-plugin",
   "pdf-plus",
   "obsidian-tikzjax",
-  "obsidian-desmos"
+  "obsidian-desmos",
+  "fix-math"
 ]
