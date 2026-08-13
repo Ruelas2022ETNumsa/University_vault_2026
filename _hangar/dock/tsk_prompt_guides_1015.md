@@ -2,7 +2,7 @@
 galaxy_body: ship
 project: "tsk_prompt_guides_1015"
 date: 2026-08-12
-status: delivered
+status: in-orbit
 fleet: ETN1015
 blocked_by:
 ---
@@ -27,7 +27,7 @@ status:
 - `obsidian_notation.md` actualizada con nota de notación para ETN1015
 - Ejemplo N19 (plano z) depurado y corregido — reescrito en `tikzpicture` puro sin `pgfplots` por incompatibilidad con el plugin
 - Decisión documentada: bloques TikZ con `axis` de pgfplots no renderizan en obsidian-tikzjax cuando incluyen etiquetas con modo math en nodos
-**Próximo paso:** —
+**Próximo paso:** Resolver bug de bloques de código con triple backtick + salto de línea + etiqueta (desmos / tikz) — NBLM no los anota; requiere reconfigurar el prompt.
 **Preguntas de cierre:** —
 
 ---
@@ -53,7 +53,8 @@ Crear el stack completo de prompts y guías para NotebookLM de la materia ETN101
 | 2026-08-12 | Ejemplo N19 reescrito sin `pgfplots` | `axis` con etiquetas en modo math falla en obsidian-tikzjax — plano z dibujado en `tikzpicture` puro con coordenadas manuales |
 
 > [!note]- Descartadas
-> — Sin descartadas por ahora.
+> - **Fix en `fix-math` plugin (main.js):** el plugin de Obsidian protege intencionalmente los bloques de código — `splitByCodeFences` los marca como `type: code` y los pasa sin tocar. Agregar el fix de etiqueta ahí requeriría operar justo sobre lo que el plugin excluye a propósito. Descartado. Además el `main.js` es compilado desde `main.ts` — editarlo directo es frágil.
+> - **Fix vía prompt en NBLM:** se intentó indicar en el prompt la sintaxis correcta (triple backtick + etiqueta en la misma línea). NBLM sigue generando el salto de línea intermedio de forma inconsistente. No es suficiente como solución única.
 
 ---
 
@@ -73,7 +74,28 @@ Restricciones clave:
 
 ## Sugerencias
 
-—
+### Enfoque para resolver el bug de etiqueta de bloque
+
+El bug: NBLM genera ` ``` ` + salto de línea + `desmos-graph` (o `tikz`) en lugar de ` ```desmos-graph ` pegado. Obsidian no reconoce la etiqueta y el bloque no renderiza.
+
+**Tres enfoques evaluados:**
+
+**A) Ampliar `main.py` (recomendado)** 
+El parche natural es agregar una regex en `main.py` antes del bloque 2 (desmos sin etiqueta), que detecte el patrón ` ``` ` + newline + etiqueta conocida y lo colapse en una sola línea. Ya existe el patrón para `desmos-graph` (bloque 2) — es extenderlo para `tikz` y para el caso con salto de línea intermedio. Ventaja: mismo archivo, mismo flujo, misma responsabilidad. El script ya corre sobre el archivo activo desde Obsidian.
+
+```python
+# Patrón a agregar en main.py
+# Colapsa: ```\n<etiqueta>\n  →  ```<etiqueta>\n
+content = re.sub(r'```\n(desmos-graph|tikz)\n', r'```\1\n', content)
+```
+
+**B) Script de clipboard (idea tuya — copiar desde NBLM → fix → pegar ya corregido)** 
+Un script Python con `pyperclip` que lee el portapapeles, aplica las mismas regex de `main.py`, y devuelve el contenido corregido al portapapeles. El flujo sería: copiar en NBLM → ejecutar script (hotkey global) → pegar en Obsidian ya limpio. Ventaja: el fix ocurre antes de tocar el vault. Desventaja: requiere `pyperclip` instalado y un hotkey de sistema (AutoHotkey en Windows o similar) para ejecutarlo sin abrir terminal.
+
+**C) Script separado solo para este bug** 
+Un `fix_codeblocks.py` independiente de `main.py`, invocado desde Obsidian igual que el actual. Mantiene separación de responsabilidades pero agrega fricción (otro comando, otro archivo). Solo vale si el scope crece mucho.
+
+**Recomendación:** opción A para el vault (ampliar `main.py`) + opción B como mejora futura si el flujo clipboard se vuelve frecuente. Son complementarias, no excluyentes.
 
 ---
 
@@ -106,12 +128,13 @@ Restricciones clave:
 - [x] Verificar que el prompt referencia correctamente las guías como fuentes del notebook
 - [x] Actualizar `obsidian_notation.md` con bloque de notación para ETN1015
 - [x] Depurar ejemplo N19 (plano z) — reescrito en `tikzpicture` puro
+- [ ] **BUG:** NBLM no anota bloques de código con sintaxis ` ``` ` + salto de línea + etiqueta (`desmos-graph`, `tikz`). Reconfigurar el prompt para parchear este comportamiento.
 
 ---
 
 ## Preguntas abiertas
 
-— Sin preguntas abiertas al cierre de sesión.
+- ¿Cómo debe indicarse en el prompt que NBLM anote bloques con triple backtick + salto de línea + etiqueta? ¿Instrucción explícita de copia literal, ejemplo incluido en el prompt, o ambos?
 
 ---
 

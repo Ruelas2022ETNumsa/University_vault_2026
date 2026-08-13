@@ -90376,6 +90376,7 @@ asumimos
 acumulada
 analicemos
 automatice
+anote
 related
 recomendados
 ribbon
@@ -190293,6 +190294,7 @@ puesto
 polar
 provoca
 pulsos
+parchear
 min
 mica
 movimiento
@@ -258197,6 +258199,7 @@ imaginaria
 influenciada
 interferencia
 ilimitada
+indicarse
 Dependencia
 Dropbox
 Dataview
