@@ -17046,6 +17046,7 @@ Transformadas
 TIEMPO
 TRANSFORMADA
 Temporal
+Transcription
 Sistema
 Sync
 Save
@@ -41258,6 +41259,7 @@ diciembre
 deteccion
 dictadas
 destaca
+deduciendo
 Vault
 Verificar
 Variables
@@ -49317,6 +49319,7 @@ VySM
 VISUALIZACI
 Visualicemos
 Variaci
+Versores
 galaxy
 gina
 genes
@@ -82319,6 +82322,7 @@ vhk
 voXe
 vSyq
 vbgw
+versores
 audience
 activo
 auto
@@ -116111,6 +116115,8 @@ causal
 chip
 comporte
 colapsadas
+clarificada
+conservada
 updated
 un
 universo
@@ -166641,6 +166647,7 @@ Espectro
 Elevamos
 Expresando
 Escalamiento
+Eliminadas
 Obsidian
 OmniSearch
 Ocultar
@@ -223973,6 +223980,7 @@ escalamiento
 entregando
 enviarla
 explote
+entregan
 Motor
 Media
 Mantiene
@@ -241364,6 +241372,7 @@ LeJK
 LUIR
 LIBRO
 LAPLACE
+Lagrangiano
 links
 las
 listar
@@ -266515,6 +266524,7 @@ Destacamos
 Discreta
 Desplazamiento
 Discreto
+Delimitadores
 Remotely
 Raz
 Revisa
@@ -425191,6 +425201,7 @@ krygS
 kvre
 kihp
 kVLZ
+katex
 Xe
 Xm
 Xu

@@ -19,7 +19,7 @@ blocked_by:
 - Dropship `IMA_NBLM-opc_slides.md` creado para normalizar caso diapositivas
 - Foco del carrier acotado: P1 (NBLM) para PDF con/sin etiqueta — Gemini puede esperar
 
-**Próximo paso:** Evaluar P1 v3 en prueba real y definir si se integra en `ETN607-transcription.md`
+**Próximo paso:** Evaluar P1 v3 en prueba real y definir si se integra en `ETN607-transcription-v3.md`
 **Preguntas de cierre:** —
 
 ---
@@ -48,7 +48,7 @@ NBLM no puede mostrar imágenes de libros ni de apuntes en su output `.md`. El o
 
 ## Planificación
 
-**Capa 1 — NBLM señaliza:** prompt v2 activo. NBLM entrega explicación del concepto + bloque IMA-SRC con fuente, página impresa, etiqueta, pie y justificación.
+**Capa 1 — NBLM señaliza:** prompt v3 activo. NBLM entrega explicación del concepto + bloque IMA-SRC con fuente, página impresa, etiqueta, pie y justificación.
 
 **Capa 2 — Gemini describe y contextualiza:** Gemini+fuentes recibe Rx completo y ejecuta dos prompts separados — descripción técnica visual (P2) y contexto simplificado de 1 oración (P2b).
 
@@ -66,7 +66,7 @@ NBLM no puede mostrar imágenes de libros ni de apuntes en su output `.md`. El o
 4. Gemini simple con Ry + Rz → genera imagen con etiqueta de figura
 5. *(pendiente)* Script `ima_src_opener` abre PDF en página exacta en Obsidian
 6. *(pendiente)* Usuario recorta con PDF++ e inserta imagen en el `.md`
-7. *(pendiente)* Agregar instrucción IMA-SRC al prompt ETN607-transcription.md
+7. *(pendiente)* Agregar instrucción IMA-SRC al prompt `ETN607-transcription-v3.md`
 8. *(opcional v2)* Extracción automática con pymupdf si flujo manual es lento
 
 ---
@@ -79,7 +79,7 @@ NBLM no puede mostrar imágenes de libros ni de apuntes en su output `.md`. El o
 - [x] Validar flujo completo con prueba real → ✅ imagen generada correcta
 - [x] Documentar pruebas → ✅ `Gemini_fuentes_pruebas.md` + dropship `IMA_NBLM-prueba_p1.md`
 - [ ] Probar Prompt 2b — validar Rz como contexto vs. Rx directo en Gemini simple
-- [ ] Redactar instrucción IMA-SRC para prompt ETN607-transcription.md
+- [ ] Redactar instrucción IMA-SRC para prompt `ETN607-transcription-v3.md`
 - [ ] Crear script `ima_src_opener/main.py`
 - [ ] Registrar script en Shell Commands
 - [ ] Test de flujo completo en ETN607
@@ -90,7 +90,7 @@ NBLM no puede mostrar imágenes de libros ni de apuntes en su output `.md`. El o
 
 | Archivo | Tipo | Estado | Descripción |
 | ------- | ---- | ------ | ----------- |
-| `tsk_IMA_NBLM.md` | carrier | docking | Este archivo — tareas activas |
+| `tsk_IMA_NBLM.md` | tsk | — | Este archivo — tareas activas |
 | `logbook.md` | logbook | — | README histórico del proyecto |
 | `Gemini_fuentes_pruebas.md` | logbook | — | Documentación extendida de pruebas |
 | `IMA_NBLM_promtp.md` | dropship | activo | Prompts P1v1, P1v2, P2, P2b, P3 |
@@ -112,7 +112,7 @@ NBLM no puede mostrar imágenes de libros ni de apuntes en su output `.md`. El o
 
 - Prompts IMA-SRC: `E:\University_vault_2026\_hangar\IMA_NBLM\IMA_NBLM_promtp.md`
 - Documentación de pruebas: `E:\University_vault_2026\_hangar\IMA_NBLM\Gemini_fuentes_pruebas.md`
-- Prompt activo ETN607: `E:\University_vault_2026\_app\notebooklm\prompts\ETN607\ETN607-transcription.md`
+- Prompt activo ETN607: `E:\University_vault_2026\_app\notebooklm\prompts\ETN607\ETN607-transcription-v3.md`
 - Guía PDF++: `E:\University_vault_2026\_app\_appnotes\PDF_PP-guide.md`
 - Shell Commands config: `E:\University_vault_2026\_app\shellcommands\shellcmd_config_script.md`
 - Scripts Python: `{{vault_path}}\.obsidian\scripts\python\`

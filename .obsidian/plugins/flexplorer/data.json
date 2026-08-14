@@ -2495,9 +2495,7 @@
         "anki",
         "bay",
         "TPL_TAB",
-        "IMA_NBLM",
-        "tsk_IMA_NBLM 1.md",
-        "NBLM_update"
+        "IMA_NBLM"
       ]
     },
     "_hangar/anki": {
@@ -2634,6 +2632,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "NBLM_update",
         "logbook.md",
         "tsk_update-rclone.md",
         "tsk_snippet_templater.md",
@@ -2645,7 +2644,8 @@
         "img_to_assets_via_mcp.md",
         "img_base64_to_md.md",
         "figura_tabnote_integracion.md",
-        "tsk_fix-math-notebooklm.md"
+        "tsk_fix-math-notebooklm.md",
+        "ship_fix-math-mod.md"
       ]
     },
     "_app/shellcommands/shellcmd_start_snippet.md": {
@@ -2862,9 +2862,11 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "DOC-ETN607-transcription.md",
         "ETN607-transcription.md",
-        "ETN607-transcription-divisions.md",
-        "ETN607-transcription-v2.md"
+        "ETN607-transcription-v2.md",
+        "ETN607-transcription-v3.md",
+        "ETN607-transcription-divisions.md"
       ]
     },
     "_app/notebooklm/prompts/ETN607/ETN607-transcription.md": {
@@ -2992,7 +2994,8 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "ETN607_TikzJax.md"
+        "ETN607_TikzJax.md",
+        "ETN607_latex.md"
       ]
     },
     "_app/notebooklm/guides/ETN607/ETN607_TikzJax.md": {
@@ -3059,10 +3062,6 @@
       "isHidden": false
     },
     "_hangar/_legacy/figura_tabnote_integracion.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_hangar/tsk_IMA_NBLM 1.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -3179,10 +3178,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_app/notebooklm/prompts/ETN607/ETN607-transcription-v2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_app/notebooklm/prompts/ETN1015": {
       "isPinned": false,
       "isHidden": false,
@@ -3276,28 +3271,6 @@
       "isHidden": false
     },
     "_hangar/IMA_NBLM/IMA_NBLM-opc_slides.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_hangar/NBLM_update": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "logbook.md",
-        "NBLM_update-opc_script.md",
-        "tsk_NBLM_update.md"
-      ]
-    },
-    "_hangar/NBLM_update/logbook.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_hangar/NBLM_update/NBLM_update-opc_script.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_hangar/NBLM_update/tsk_NBLM_update.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -3786,6 +3759,48 @@
       "isHidden": false
     },
     "Untitled 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/_legacy/ship_fix-math-mod.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN607/ETN607-transcription-v3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/guides/ETN607/ETN607_latex.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN607/DOC-ETN607-transcription.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN607/ETN607-transcription-v2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/_legacy/NBLM_update": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "logbook.md",
+        "NBLM_update-opc_script.md",
+        "tsk_NBLM_update.md"
+      ]
+    },
+    "_hangar/_legacy/NBLM_update/logbook.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/_legacy/NBLM_update/NBLM_update-opc_script.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/_legacy/NBLM_update/tsk_NBLM_update.md": {
       "isPinned": false,
       "isHidden": false
     }

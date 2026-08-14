@@ -33,7 +33,8 @@ status: activo
 - [x] `ETN607-transcription.md` creado en `_app/notebooklm/prompts/ETN607/`
 - [x] `ETN607-transcription-divisions.md` creado en `_app/notebooklm/prompts/ETN607/`
 - [x] `ETN607-transcription-v2.md` creado en `_app/notebooklm/prompts/ETN607/` — incluye IMA-SRC y nueva notación NBLM
-- [ ] `ETN607-transcription-v2.md` — revisar y optimizar caracteres luego de actualizar script `notebooklm_fix`
+- [x] `ETN607-transcription-v3.md` creado en `_app/notebooklm/prompts/ETN607/` — instrucciones de delimitadores eliminadas (resueltas por plugin + script)
+- [x] `DOC-ETN607-transcription.md` creado en `_app/notebooklm/prompts/ETN607/` — documentación del prompt
 - [ ] `ETN607-study.md` creado en `_app/notebooklm/prompts/ETN607/`
 - [ ] Notebook configurado — fuentes + Instructions cargado
 
@@ -42,7 +43,7 @@ status: activo
 ## NotebookLM — guías
 
 - [x] `ETN607_TikzJax.md` creado en `_app/notebooklm/guides/ETN607/`
-- [ ] `ETN607_library.md` creado en `_app/notebooklm/guides/ETN607/`
+- [x] `ETN607_latex.md` creado en `_app/notebooklm/guides/ETN607/` — notación KaTeX de la materia
 - [ ] ETN607_TikzJax.md — completar biblioteca de ejemplos N12-N19 (por tema a medida que avance la materia)
 - [ ] ETN607_TikzJax.md — N16 T7 circuitos: probar soporte circuitikz en TikZJax, sesión dedicada
 
@@ -62,4 +63,7 @@ galaxy-links
 [[_app/notebooklm/prompts/ETN607/ETN607-transcription]]
 [[_app/notebooklm/prompts/ETN607/ETN607-transcription-divisions]]
 [[_app/notebooklm/guides/ETN607/ETN607_TikzJax]]
+[[_app/notebooklm/prompts/ETN607/ETN607-transcription-v3]]
+[[_app/notebooklm/prompts/ETN607/DOC-ETN607-transcription]]
+[[_app/notebooklm/guides/ETN607/ETN607_latex]]
 %%

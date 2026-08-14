@@ -38,6 +38,7 @@ IMA-SRC es un flujo para que NBLM señalice figuras de libros en su output `.md`
 - 2026-08-10 — Formato IMA-SRC v2 definido con campo `justificación`
 - 2026-08-10 — Flujo de 3 pasos validado con prueba real — imagen generada correcta
 - 2026-08-10 — Carrier creado — proyecto escalado desde ship
+- 2026-08-13 — Carrier NBLM_update entregado — prompt v3 creado, plugin y script operativos
 
 ---
 
@@ -46,6 +47,7 @@ IMA-SRC es un flujo para que NBLM señalice figuras de libros en su output `.md`
 - Desfase página impresa vs. visor PDF — NBLM entrega página impresa (ej: 207), el visor marca otra (231). El script `ima_src_opener` debe contemplarlo.
 - Gemini+fuentes no puede generar imágenes (error 1152) — limitación real de la modalidad, no resoluble en el flujo actual.
 - La recta tangente en P no aparece en el dibujo generado por Gemini — limitación conocida, aceptada por ahora.
+- Dependencia resuelta: NBLM_update (delivered 2026-08-13) — plugin + script operativos, prompt v3 activo
 
 ---
 
