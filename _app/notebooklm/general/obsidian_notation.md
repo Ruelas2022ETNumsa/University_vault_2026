@@ -102,15 +102,16 @@ El desarrollo va en las líneas siguientes, sin bloque Cornell.
 ## 5. Notación hispanohablante
 
 Las notas usan notación matemática en español. Nunca sustituir
-por equivalentes en inglés:
+por equivalentes en inglés.
 
-**Para materias de señales y sistemas (ETN1015 y similares):**
+### ETN1015 — Señales y sistemas (y similares)
+
 La notación es estándar internacional en todos los libros del stack.
 No hay variantes en español que deban preservarse — usar siempre
 la notación del libro fuente tal como aparece ($x(t)$, $H(s)$,
 $X(j\omega)$, $h[n]$, $H(z)$, etc.).
 
-**Para materias de cálculo y matemática (MAT101 y similares):**
+### MAT101 — Cálculo y matemática (y similares)
 
 | Notación en el archivo | Significado     | No reemplazar por |
 |------------------------|-----------------|-------------------|
@@ -121,6 +122,19 @@ $X(j\omega)$, $h[n]$, $H(z)$, etc.).
 | `\text{arc\,tg}\,x`    | arcotangente    | arctan            |
 | `\text{senh}\,x`       | seno hiperbólico| sinh              |
 | `\text{cosec}\,x`      | cosecante       | csc               |
+
+### ETN607 — Mecánica Clásica / Lagrange
+
+La notación es estándar internacional. No hay variantes en español
+que deban preservarse. Convenciones propias de la materia:
+
+| Notación en el archivo | Significado | Observación |
+|------------------------|-------------|-------------|
+| `\dot{q}` / `\ddot{q}` | derivada primera / segunda respecto al tiempo | notación de punto — no reemplazar por $dq/dt$ |
+| `\vec{r}`, `\vec{v}`, `\vec{F}` | vectores | flecha arriba — no reemplazar por negrita |
+| `\mathbf{e}_r`, `\mathbf{e}_\theta`, `\mathbf{e}_\phi`, `\mathbf{e}_z` | versores de coordenadas | subíndice identifica el sistema coordenado |
+| `q_i`, `\dot{q}_i`, `Q_i` | coordenada, velocidad y fuerza generalizada | subíndice $i$ es el grado de libertad |
+| `L = T - V` | Lagrangiano | $T$ energía cinética, $V$ potencial, $F$ función potencia |
 
 ---
 
