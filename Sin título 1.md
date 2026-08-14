@@ -6,19 +6,27 @@ A continuación, te explico las condiciones de estabilidad para sistemas Lineale
 Un sistema es **BIBO estable** si, para cualquier entrada acotada en amplitud (que no tiende a infinito), la salida resultante también permanece acotada para todo tiempo [2, 3]. En términos prácticos, si alimentás el sistema con una señal finita, no deberías obtener una señal que crezca sin límites [1].
 
 ### 2. Condición en el Dominio del Tiempo (Respuesta al Impulso)
-La estabilidad de un sistema LTI depende exclusivamente de su respuesta al impulso \\(h(t)\\) o \\(h[n]\\) [4, 5]:
+La estabilidad de un sistema LTI depende exclusivamente de su respuesta al impulso $h(t)$ o $h[n]$ [4, 5]:
 
 *   **Tiempo Continuo $CT$:** El sistema es estable si y solo si su respuesta al impulso es **absolutamente integrable** [6-8]:
-    \\[\int_{-\infty}^{\infty} |h(t)| \, dt < \infty\\]
+    
+$$
+\int_{-\infty}^{\infty} |h(t)| \, dt < \infty
+$$
+
 *   **Tiempo Discreto $DT$:** El sistema es estable si y solo si su respuesta al impulso es **absolutamente sumable** [9-11]:
-    \\[\sum_{n=-\infty}^{\infty} |h[n]| < \infty\\]
+    
+$$
+\sum_{n=-\infty}^{\infty} |h[n]| < \infty
+$$
+
 
 ### 3. Condición en el Dominio de la Transformada (Polos y ROC)
 Para sistemas representados por funciones de transferencia (racionales), la estabilidad se determina observando la Región de Convergencia $ROC$ y la ubicación de los polos:
 
-*   **Sistemas en el plano \\(s\\) (Laplace):** Un sistema es estable si la ROC de \\(H(s)\\) **incluye el eje imaginario \\(j\omega\\)** [12, 13].
-    *   *Si el sistema es causal:* Todos los polos deben tener parte real negativa (estar en el **semiplano izquierdo** del plano \\(s\\)) [14-16].
-*   **Sistemas en el plano \\(z\\) (Transformada Z):** Un sistema es estable si la ROC de \\(H(z)\\) **incluye el círculo unitario (\\(|z|=1\\))** [17-19].
+*   **Sistemas en el plano $s$ (Laplace):** Un sistema es estable si la ROC de $H(s)$ **incluye el eje imaginario $j\omega$** [12, 13].
+    *   *Si el sistema es causal:* Todos los polos deben tener parte real negativa (estar en el **semiplano izquierdo** del plano $s$) [14-16].
+*   **Sistemas en el plano $z$ (Transformada Z):** Un sistema es estable si la ROC de $H(z)$ **incluye el círculo unitario ($|z|=1$)** [17-19].
     *   *Si el sistema es causal:* Todos los polos deben tener una magnitud menor a 1 (estar **dentro del círculo unitario**) [20-23].
 
 ### Visualización de Estabilidad (Sistemas Causales)
@@ -54,16 +62,17 @@ Para sistemas representados por funciones de transferencia (racionales), la esta
 
 ---
 **Preguntas de comprensión conceptual:**
-1. ¿Por qué un sistema causal con un polo en \\(s = 0\\) (como un integrador puro) se considera marginalmente estable y no BIBO estable? [24, 25]
-2. Si un sistema discreto tiene un polo en \\(z = 1.2\\), ¿bajo qué condición de causalidad podría ser estable? [19]
+1. ¿Por qué un sistema causal con un polo en $s = 0$ (como un integrador puro) se considera marginalmente estable y no BIBO estable? [24, 25]
+2. Si un sistema discreto tiene un polo en $z = 1.2$, ¿bajo qué condición de causalidad podría ser estable? [19]
 3. ¿Es posible que un sistema no causal sea estable aunque tenga polos fuera del círculo unitario? [26]
 
 ### Ejercicios de refuerzo (Estilo examen)
 
-**Ejercicio 1 (Rao 3.21a):** Determine la estabilidad del sistema LTI con respuesta al impulso \\(h(t) = e^{-3t}u(t)\\).
+**Ejercicio 1 (Rao 3.21a):** Determine la estabilidad del sistema LTI con respuesta al impulso $h(t) = e^{-3t}u(t)$.
 **Solución:** Calculamos la integral de valor absoluto:
-\\(\int_{-\infty}^{\infty} |e^{-3t}u(t)| \, dt = \int_{0}^{\infty} e^{-3t} \, dt = \left[ \dfrac{e^{-3t}}{-3} \right]_{0}^{\infty} = 0 - (-\dfrac{1}{3}) = \dfrac{1}{3}\\).
-Como \\(\dfrac{1}{3} < \infty\\), el sistema es **estable** [27, 28].
+$\int_{-\infty}^{\infty} |e^{-3t}u(t)| \, dt = \int_{0}^{\infty} e^{-3t} \, dt = \left[ \dfrac{e^{-3t}}{-3} \right]_{0}^{\infty} = 0 - (-\dfrac{1}{3}) = \dfrac{1}{3}$.
+Como $\dfrac{1}{3} < \infty$, el sistema es **estable** [27, 28].
 
-**Ejercicio 2 (Hsu 4.31):** Un sistema discreto tiene la función de transferencia \\(H(z) = \dfrac{1}{z - k/2}\\) con ROC \\(|z| > |k/2|\\). ¿Para qué valores de \\(k\\) es estable?
-**Solución:** Para que un sistema causal sea estable, sus polos deben estar dentro del círculo unitario. El polo está en \\(p = k/2\\). Por lo tanto, requerimos \\(|k/2| < 1\\), lo que implica **\\(|k| < 2\\)** [29].
+**Ejercicio 2 (Hsu 4.31):** Un sistema discreto tiene la función de transferencia $H(z) = \dfrac{1}{z - k/2}$ con ROC $|z| > |k/2|$. ¿Para qué valores de $k$ es estable?
+**Solución:** Para que un sistema causal sea estable, sus polos deben estar dentro del círculo unitario. El polo está en $p = k/2$. Por lo tanto, requerimos $|k/2| < 1$, lo que implica **$|k| < 2$** [29].
+

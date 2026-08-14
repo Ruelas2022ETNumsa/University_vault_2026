@@ -26084,6 +26084,7 @@ Sumador
 Senoidal
 Scaling
 Scope
+Sobran
 Plugins
 Pendientes
 Plugin
@@ -33688,6 +33689,7 @@ Polo
 Promedio
 Piensa
 Preserva
+Procesar
 del
 date
 de
@@ -41252,6 +41254,9 @@ decaer
 dientes
 desplazada
 diciembre
+deteccion
+dictadas
+destaca
 Vault
 Verificar
 Variables
@@ -57681,6 +57686,8 @@ giratorio
 graficarlas
 ganancia
 ganancias
+generacion
+gimnasia
 body
 beacon
 bat
@@ -73746,6 +73753,7 @@ segmentar
 sumamente
 senoidales
 submuestreo
+sumable
 vault
 vil
 ver
@@ -90391,6 +90399,10 @@ anote
 agiliza
 apoya
 adelanto
+ajusto
+acumularse
+aumentamos
+aliment
 related
 recomendados
 ribbon
@@ -98952,6 +98964,7 @@ recordando
 resultan
 resoluble
 retrasamos
+resolvio
 notes
 notas
 nuevas
@@ -116088,6 +116101,13 @@ cohete
 combustible
 cierres
 confirmada
+centradas
+cambiados
+caer
+chips
+causal
+chip
+comporte
 updated
 un
 universo
@@ -140578,6 +140598,12 @@ Compleja
 Comprob
 Convert
 Chrome
+Cabecera
+Computacional
+Causalidad
+Comparamos
+Continuo
+Causales
 Instalados
 Instalado
 Instalar
@@ -149510,6 +149536,11 @@ Intro
 Inconsistente
 Instrucci
 Inversi
+Intuitivo
+Imagina
+Invariantes
+Intuitiva
+Impulso
 Funci
 File
 Fase
@@ -182328,6 +182359,7 @@ Aperi
 ALES
 ANAL
 Angulos
+Adicionalmente
 push
 pull
 para
@@ -190324,6 +190356,9 @@ provoca
 pulsos
 parchear
 producidos
+procesarla
+pedacito
+proc
 min
 mica
 movimiento
@@ -199450,6 +199485,12 @@ moslo
 marketplace
 mantenga
 modificarse
+modificacion
+mundo
+muestrea
+maximizando
+manejamos
+marginalmente
 YAML
 Ya
 You
@@ -223923,6 +223964,9 @@ enormemente
 engineering
 espacial
 escalamiento
+entregando
+enviarla
+explote
 Motor
 Media
 Mantiene
@@ -248754,6 +248798,8 @@ lTZw
 last
 limitar
 logos
+localizado
+llenarse
 incluyendo
 im
 instalar
@@ -258246,6 +258292,8 @@ invariancia
 impulsor
 impiden
 idempotente
+integrable
+integrador
 Dependencia
 Dropbox
 Dataview
@@ -266460,6 +266508,7 @@ Destacado
 Destacamos
 Discreta
 Desplazamiento
+Discreto
 Remotely
 Raz
 Revisa
@@ -290148,6 +290197,7 @@ fwo
 fEEEq
 fucsia
 following
+fono
 haya
 hace
 hacer
@@ -297782,6 +297832,7 @@ hacerle
 hrVw
 hksu
 hZa
+hablando
 que
 quedan
 queda
@@ -324399,6 +324450,7 @@ Nawab
 Necesito
 NASA
 Normaliza
+Normalizacion
 originales
 observatory
 oficial
@@ -332891,6 +332943,10 @@ ortogonales
 ortogonalidad
 ondas
 omit
+ocurrido
+ocurriendo
+optimizados
+observando
 junto
 json
 jer

@@ -1,7 +1,7 @@
 ---
 galaxy_body: logbook
 scope: legacy
-date_updated: 2026-08-08
+date_updated: 2026-08-13
 ---
 
 # Logbook — Legacy
@@ -36,6 +36,7 @@ Orden: más antigua arriba, más actual abajo. %%
 | [[_hangar/_legacy/tsk_config-ia-workers.md]]        | Configuración de nombre único por IA en workers | 2026-08-03 |
 | [[_hangar/_legacy/tsk_logbook_dock.md]]             | Actualizar tsk + crear logbook dock            | 2026-08-02 |
 | [[_hangar/_legacy/tsk_update-rclone.md]]            | Sync Rclone `_assets/` + Drive MCP móvil       | 2026-08-08 |
+| [[_hangar/_legacy/ship_fix-math-mod.md]]            | Fix Math mod — doble backslash NotebookLM Android | 2026-08-13 |
 
 ---
 
