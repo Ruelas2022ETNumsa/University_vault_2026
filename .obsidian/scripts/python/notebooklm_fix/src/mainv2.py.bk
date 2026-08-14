@@ -30,14 +30,6 @@ content = re.sub(r'(?<!d)(?<!t)\\frac', r'\\dfrac', content)
 # --- 2. Bloques desmos sin etiqueta ---
 content = re.sub(r'```\nleft=', '```desmos-graph\nleft=', content)
 
-# --- 2b. Bloques tikz sin etiqueta ---
-# Caso A: ``` + \usepackage{ (cualquier paquete tikz/pgfplots)
-content = re.sub(r'```\n(\\usepackage\{)', r'```tikz\n\1', content)
-# Caso B: ``` + \begin{tikzpicture}
-content = re.sub(r'```\n(\\begin\{tikzpicture\})', r'```tikz\n\1', content)
-# Caso C: ``` + \begin{axis}
-content = re.sub(r'```\n(\\begin\{axis\})', r'```tikz\n\1', content)
-
 # --- 3. Arrays en una linea: espacio+\+espacio -> \\+salto de linea ---
 def fix_arrays(match):
     block = match.group(0)
@@ -75,18 +67,6 @@ content = re.sub(
     content,
     flags=re.DOTALL
 )
-
-# --- [INACTIVO] Normalizacion notacion LaTeX (doble backslash -> simple -> $) ---
-# Activar si el script corre SIN el plugin fix-math de Obsidian.
-# Si el plugin ya corrio, este bloque no es necesario.
-#
-# Paso 1: doble backslash -> simple
-# content = content.replace('\\\\(', '\\(').replace('\\\\)', '\\)')
-# content = content.replace('\\\\[', '\\[').replace('\\\\]', '\\]')
-#
-# Paso 2: \(...\) -> $...$ y \[...\] -> $$...$$
-# content = re.sub(r'\\\((.+?)\\\)', r'$\1$', content)
-# content = re.sub(r'\\\[([\s\S]+?)\\\]', r'$$\1$$', content)
 
 # --- Guardar si hubo cambios ---
 if content != original:

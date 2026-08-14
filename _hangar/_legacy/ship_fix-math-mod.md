@@ -78,6 +78,7 @@ ninguna
 **Archivo modificado:** `E:\University_vault_2026\.obsidian\plugins\fix-math\main.js`
 **Backup:** `E:\University_vault_2026\.obsidian\plugins\fix-math\main.js.bk`
 **Plugin original:** https://github.com/loglux/fix-math-for-obsidian (v1.0.33)
+**Beacon relacionado:** `[[shellcmd_NBLM_fix]]` — documenta el script Python que trabaja en conjunto con este plugin
 
 ### Cambios aplicados al main.js
 

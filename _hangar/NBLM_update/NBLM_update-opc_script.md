@@ -2,7 +2,7 @@
 galaxy_body: dropship
 carrier: "[[_hangar/NBLM_update/tsk_NBLM_update.md]]"
 scope: opcion-A
-status: activo
+status: entregado
 date: 2026-08-13
 ---
 

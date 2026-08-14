@@ -71,8 +71,14 @@ Las pestanas disponibles por comando son: General, Preactions, Output, Environme
 
 | Campo | Valor |
 |---|---|
-| Alias | `NotebookLM Fix — nota activa` |
+| Alias | `NBLM — fix formato` |
 | Comando | `"C:\Users\USUARIO\AppData\Local\Programs\Python\Python313\python.exe" "{{vault_path}}\.obsidian\scripts\python\notebooklm_fix\src\main.py" "{{file_path:relative}}" "{{vault_path}}"` |
+
+**Pestana Environments**
+
+| Campo | Valor |
+|---|---|
+| Terminal de Windows | `PowerShell 5` |
 
 **Pestana Output**
 
