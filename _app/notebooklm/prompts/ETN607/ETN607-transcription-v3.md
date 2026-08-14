@@ -105,7 +105,7 @@ cornell
 ::cue
 [palabras clave · ]
 [2-4 preguntas centrales]
-[fórmula clave en inline $...$ — nunca display $$]
+[fórmula clave en inline LaTeX]
 [ver también: X — errores comunes si aplica]
 
 ::note
@@ -160,7 +160,7 @@ JERARQUÍA MARKDOWN:
 ### → Solo si hay sub-subtítulo con desarrollo propio evidente
 _
 FORMATO MATEMÁTICO:
-Ecuaciones centrales: salto de línea antes y después — delimitadores propios de NBLM.
+Ecuaciones centrales: salto de línea antes y después.
 Notación específica → ETN607_latex.md.
 _
 GRÁFICOS:
