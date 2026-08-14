@@ -14,9 +14,9 @@ NotebookLM migró a Gemini 3 (diciembre 2025) y dejó de usar `$...$` / `$$...$$
 ## Estado actual
 
 **Salud:** on-track
-**Resumen:** Carrier recién creado. Scope acotado a actualización — no cubre el flujo Gemini (P2, P2b, P3) que vive en `IMA_NBLM`.
-**Último avance:** `ETN607-transcription-v2.md` creado con nueva notación. `shellcmd_NBLM_fix.md` documentado.
-**Próximo hito:** Actualización del script `notebooklm_fix` en sesión dedicada.
+**Resumen:** Script y plugin actualizados. Pendiente: documentar y registrar `ETN607-transcription-v2.md`, y revisar el prompt de transcripción/estudio para mejorarlo.
+**Último avance:** Plugin `Fix Math for Obsidian` modificado y documentado. Script `notebooklm_fix/main.py` actualizado (tikz, bloque LaTeX comentado). `shellcmd_NBLM_fix.md` documentado completamente. Dropship de actualización del script entregado.
+**Próximo hito:** Revisión y mejora del prompt de transcripción `ETN607-transcription-v2.md`.
 
 ---
 
@@ -26,20 +26,23 @@ NotebookLM migró a Gemini 3 (diciembre 2025) y dejó de usar `$...$` / `$$...$$
 | ------- | :--: | :----: | ----------- |
 | `logbook.md` | logbook | — | este archivo — README histórico del proyecto |
 | `tsk_NBLM_update.md` | tsk | — | archivo de trabajo activo |
-| `NBLM_update-opc_script.md` | dropship | activo | Actualización script notebooklm_fix — sesión dedicada |
+| `NBLM_update-opc_script.md` | dropship | entregado | Actualización script notebooklm_fix — completado |
 
 ---
 
 ## Hitos
 
 - 2026-08-13 — Carrier creado — scope definido y primeros archivos externos producidos
+- 2026-08-13 — Plugin `Fix Math for Obsidian` modificado (mod alx-rul) y documentado en `_legacy`
+- 2026-08-13 — Script `notebooklm_fix/main.py` actualizado a nueva notación — dropship entregado
+- 2026-08-13 — `shellcmd_NBLM_fix.md` documentado completamente
 
 ---
 
 ## Riesgos y dependencias
 
-- El script `notebooklm_fix` tiene correcciones que pueden seguir siendo válidas con la nueva notación (Cornell, desmos, arrays, marginalia) — evaluar antes de reescribir
-- El plugin de corrección LaTeX no está documentado — riesgo de perder contexto si cambia
+- `ETN607-transcription-v2.md` aún no registrado en `tsk_ini_ETN607.md` — pendiente
+- Evaluar si `ETN607_library.md` va en este carrier o en `tsk_ini_ETN607`
 
 ---
 
