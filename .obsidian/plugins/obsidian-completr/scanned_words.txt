@@ -8133,6 +8133,7 @@ temperatura
 trasladar
 terrestre
 tecnolog
+trabajan
 ToDo
 Templater
 Text
@@ -33733,6 +33734,7 @@ Papers
 Prieto
 Perspectivas
 Proceedings
+Panorama
 del
 date
 de
@@ -82400,6 +82402,7 @@ versores
 volc
 voluntad
 viento
+verificable
 audience
 activo
 auto
@@ -90507,6 +90510,8 @@ avanz
 apellido
 atados
 acumulando
+acumula
+anotalo
 related
 recomendados
 ribbon
@@ -99090,6 +99095,7 @@ representaron
 reduciendo
 reservas
 resources
+redactan
 notes
 notas
 nuevas
@@ -166849,6 +166855,7 @@ Empexa
 Ecuador
 Empresa
 Electricidad
+Ejecut
 Obsidian
 OmniSearch
 Ocultar
@@ -199752,6 +199759,7 @@ mayoritariamente
 manto
 meteorol
 marzo
+metas
 YAML
 Ya
 You
@@ -249089,6 +249097,7 @@ localizado
 llenarse
 legales
 lecciones
+listen
 incluyendo
 im
 instalar

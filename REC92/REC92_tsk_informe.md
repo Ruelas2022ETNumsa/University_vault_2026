@@ -62,6 +62,7 @@ CLAUDE
 | `rec_perplexity.md` | Prompts de complemento e investigación (datos, estado actual, comparativa) |
 | `rec_perplexity_informe.md` | Prompts de Perplexity orientados a cada sección del informe |
 | `rec_otrasia.md` | Prompts para ChatGPT y Gemini |
+| `rec_perplexity_complemento.md` | Prompts para datos concretos: inversión, costos, papers, normativa, altitud |
 | `rec_informe_apa.md` | Plantilla del informe con estructura APA |
 
 ---
@@ -103,17 +104,17 @@ Toda la atención está en Perplexity como primer paso.
 
 ## Estado por sección
 
-| Sección | Fase 1 _p | Fase 2 _n | Fase 3 _c | Fase 4 _x |
-|---------|-----------|-----------|-----------|-----------|
-| Resumen | ⬜ | ⬜ | ⬜ | ⬜ |
-| 1. Introducción | ⬜ | ⬜ | ⬜ | ⬜ |
-| 2. Marco Teórico | ⬜ | ⬜ | ⬜ | ⬜ |
-| 3. Recursos geotérmicos en Bolivia | ⬜ | ⬜ | ⬜ | ⬜ |
-| 4. Proyecto Laguna Colorada | ⬜ | ⬜ | ⬜ | ⬜ |
-| 5. Análisis comparativo regional | ⬜ | ⬜ | ⬜ | ⬜ |
-| 6. Impacto ingeniería y soberanía | ⬜ | ⬜ | ⬜ | ⬜ |
-| 7. Conclusiones | ⬜ | ⬜ | ⬜ | ⬜ |
-| Referencias APA | ⬜ | ⬜ | ⬜ | ⬜ |
+| Sección                            | Fase 1 _p | Fase 2 _n | Fase 3 _c | Fase 4 _x |
+| ---------------------------------- | --------- | --------- | --------- | --------- |
+| Resumen                            | ⬜         | ⬜         | ⬜         | ⬜         |
+| 1. Introducción                    | ⬜         | ⬜         | ⬜         | ⬜         |
+| 2. Marco Teórico                   | ⬜         | ⬜         | ⬜         | ⬜         |
+| 3. Recursos geotérmicos en Bolivia | ⬜         | ⬜         | ⬜         | ⬜         |
+| 4. Proyecto Laguna Colorada        | ⬜         | ⬜         | ⬜         | ⬜         |
+| 5. Análisis comparativo regional   | ⬜         | ⬜         | ⬜         | ⬜         |
+| 6. Impacto ingeniería y soberanía  | ⬜         | ⬜         | ⬜         | ⬜         |
+| 7. Conclusiones                    | ⬜         | ⬜         | ⬜         | ⬜         |
+| Referencias APA                    | ⬜         | ⬜         | ⬜         | ⬜         |
 
 ---
 

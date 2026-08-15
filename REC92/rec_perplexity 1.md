@@ -2,7 +2,6 @@
 proyecto: REC92 — Energía Geotérmica en Bolivia
 archivo: rec_perplexity.md
 uso: prompts listos para copiar y pegar en Perplexity
-nota: archivo original — revisado y reemplazado parcialmente. Ver rec_perplexity_complemento.md para la versión depurada sin solapamientos.
 ---
 
 # Prompts para Perplexity — REC92
