@@ -3833,12 +3833,12 @@
     "Semesters/Sem_08/ETN1015/Avance": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "1015_sistema variante en el tiempo.md",
         "1015_procesamiento de señales.md",
         "1015_señal de potencia.md"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "Semesters/Sem_08/ETN1015/Avance/1015_sistema variante en el tiempo.md": {
       "isPinned": false,
@@ -3855,20 +3855,20 @@
     "Semesters/Sem_09": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "REC92"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "Semesters/Sem_09/REC92": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "tsk_update_REC92.md",
         "tsk_geo-bo.md",
         "geo-bo"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "Semesters/Sem_09/REC92/geo-bo": {
       "isPinned": false,
@@ -3887,29 +3887,31 @@
     "Semesters/Sem_09/REC92/geo-bo/_ctx": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "contexto.md",
         "flujo.md",
         "informe_apa.md"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "Semesters/Sem_09/REC92/geo-bo/_prompts": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "plex_informe.md",
         "plex_datos.md",
         "plex_bk.md",
         "otras_ia.md"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "Semesters/Sem_09/REC92/geo-bo/_section": {
       "isPinned": false,
       "isHidden": false,
-      "customOrder": [],
-      "sortOrder": "custom"
+      "sortOrder": "custom",
+      "customOrder": [
+        "s1_intro.md"
+      ]
     },
     "Semesters/Sem_09/REC92/geo-bo/_ctx/contexto.md": {
       "isPinned": false,
@@ -3940,6 +3942,10 @@
       "isHidden": false
     },
     "Semesters/Sem_09/REC92/tsk_geo-bo.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/REC92/geo-bo/_section/s1_intro.md": {
       "isPinned": false,
       "isHidden": false
     }
