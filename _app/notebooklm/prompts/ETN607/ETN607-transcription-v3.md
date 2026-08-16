@@ -86,7 +86,7 @@ V · C · R · T → transcribir el símbolo tal cual en ::note.
 Usar callout solo si la posición es ambigua.
 _
 CONVENCIONES DEL APUNTE:
-- valor[unidad] → preservar: 940[V], 470[Ω]
+- valor[unidad] → notación del apunte, no convertir: 940[V], 470[Ω]
 - ∴ → preservar como símbolo de síntesis
 - → ver Txx → preservar como referencia cruzada
 - Flechas con texto → nota al pie del elemento · Flechas sin texto → ignorar
@@ -117,7 +117,7 @@ cornell
 [ejemplos resueltos e IMA van aquí, fuera del Cornell]
 
 REGLAS:
-- BUG: identificador cornell en línea separada de los backticks — obligatorio
+- identificador cornell en línea separada de los backticks — obligatorio
 - Título ## NO va dentro del Cornell
 - Marginalia en ::note: %%> %% inline junto al elemento
 - Complemento y ejercicios SIEMPRE fuera del Cornell, después del [!summary]
@@ -134,6 +134,7 @@ NIVEL C: definición formal + propiedades omitidas + 1-2 ejercicios resueltos + 
 SIN ejercicios (aplicar B): axiomas, listas de propiedades puras, notación formal.
 NIVEL C cuando: procedimiento aplicable, coordenadas/restricciones con casos concretos,
   apunte ya tiene ejemplos → agregar uno de mayor dificultad.
+  Si el apunte ya tiene el procedimiento completo → aplicar B.
 → extraer siempre de los libros fuente según _library_ETN607.md, no del conocimiento general.
 Sin redundancia — cada subtítulo es independiente.
 _
@@ -153,7 +154,7 @@ Reglas:
 - Podés citar más de una figura si son relevantes.
 _
 CUANDO ALGO NO SE ENTIENDE:
-Detenerse, indicar posición exacta en el PDF. Esperar respuesta.
+Detenerse, indicar número de página. Esperar respuesta.
 _
 JERARQUÍA MARKDOWN:
 # → Título principal (uno por archivo) · ## → Subtítulo numerado
@@ -195,19 +196,19 @@ Lim:     LimYung-kuo-Problems and Solutions on Mechanics-1994.pdf
 Alonso:  Alonso & Finn-Mecánica_Vol 1-1970-.pdf
 
 TEORÍA:
-T1-T2  Taylor-1to9 Cap.1-2 · Alonso & Finn Vol.1
-T3-T4  Taylor-1to9 Cap.7 · Goldstein Cap.1-2
-T5     Taylor-1to9 Cap.7 y 4 · Goldstein Cap.1-2
-T6     Taylor-1to9 Cap.7 · Goldstein Cap.1
-T7     Wells Cap.7
-T8     Goldstein Cap.4-5 · Taylor-10to16 Cap.10
+T1-T2 Taylor-1to9 Cap.1-2 · Alonso & Finn Vol.1
+T3-T4 Taylor-1to9 Cap.7 · Goldstein Cap.1-2
+T5 Taylor-1to9 Cap.7 y 4 · Goldstein Cap.1-2
+T6 Taylor-1to9 Cap.7 · Goldstein Cap.1
+T7 Wells Cap.7
+T8 Goldstein Cap.4-5 · Taylor-10to16 Cap.10
 
 EJERCICIOS:
-T1-T2  Nelson Cap.11-13 · Wells Cap.1-2
-T3-T4  Wells Cap.2-5 · Lim Mechanics of a Particle/System
-T5     Wells Cap.5-6 · Lim Conservative Systems
-T6     Wells Cap.6 · Lim Dissipative Systems
-T7     Wells Cap.7
-T8     Wells Cap.8-9 · Lim Rigid Bodies
+T1-T2 Nelson Cap.11-13 · Wells Cap.1-2
+T3-T4 Wells Cap.2-5 · Lim Mechanics of a Particle/System
+T5 Wells Cap.5-6 · Lim Conservative Systems
+T6 Wells Cap.6 · Lim Dissipative Systems
+T7 Wells Cap.7
+T8 Wells Cap.8-9 · Lim Rigid Bodies
 _
 SALTOS DE LÍNEA: texto compacto, sin líneas vacías innecesarias. El apunte siempre tiene prioridad.
