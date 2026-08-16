@@ -41310,6 +41310,7 @@ desfavorables
 diferenciadores
 diversificar
 declive
+depurada
 Vault
 Verificar
 Variables
@@ -73834,6 +73835,7 @@ sostenible
 siles
 sostenibles
 significativas
+solapamientos
 vault
 vil
 ver
