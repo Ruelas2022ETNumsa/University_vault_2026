@@ -1,11 +1,7 @@
 ---
-proyecto: "Energía Geotérmica en Bolivia"
-tipo: investigación + exposición + informe
-nivel: universitario — Ingeniería Electrónica
-enfoque: concientización sobre recursos naturales renovables en Bolivia
-normas: APA
-estado: en_curso
-worker: alx_gml
+title: "geo-bo — contexto del proyecto, antecedentes y datos técnicos"
+scope: REC92
+date_updated: 2026-08-16
 ---
 
 # REC92 — Plan de Investigación: Energía Geotérmica en Bolivia

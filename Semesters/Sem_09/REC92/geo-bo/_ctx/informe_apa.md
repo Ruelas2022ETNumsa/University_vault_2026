@@ -1,8 +1,7 @@
 ---
-proyecto: REC92 — Energía Geotérmica en Bolivia
-archivo: rec_informe_apa.md
-uso: plantilla del informe final con estructura APA y ejemplos orientativos
-estado: vacío — llenar con contenido real
+title: "geo-bo — plantilla del informe final con estructura APA"
+scope: REC92
+date_updated: 2026-08-16
 ---
 
 # Energía Geotérmica en Bolivia: Potencial y Perspectivas de Desarrollo

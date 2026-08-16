@@ -1,7 +1,7 @@
 ---
-proyecto: REC92 — Energía Geotérmica en Bolivia
-archivo: rec_otrasia.md
-uso: prompts para ChatGPT y Gemini
+title: "geo-bo — prompts ChatGPT y Gemini por sección"
+scope: REC92
+date_updated: 2026-08-16
 ---
 
 # Prompts para otras IAs — REC92

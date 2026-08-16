@@ -1,11 +1,8 @@
 ---
-proyecto: REC92 — Energía Geotérmica en Bolivia
-archivo: rec_perplexity_informe.md
-uso: prompts para Perplexity orientados a cada sección del informe APA
-nota: todos los prompts incluyen instrucción de listar fuentes al final
-estado: listo para ejecutar
+title: "geo-bo — prompts Perplexity por sección del informe"
+scope: REC92
+date_updated: 2026-08-16
 ---
-
 # Prompts Perplexity — Informe APA
 
 > Estos prompts están diseñados para obtener contenido y fuentes para cada sección del informe.

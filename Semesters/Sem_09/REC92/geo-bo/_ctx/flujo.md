@@ -1,8 +1,7 @@
 ---
-proyecto: REC92 — Energía Geotérmica en Bolivia
-archivo: REC92_tsk_informe.md
-uso: plan de trabajo para la creación del informe final
-estado: en_diseño
+title: "geo-bo — flujo de producción del informe por fases y herramientas"
+scope: REC92
+date_updated: 2026-08-16
 ---
 
 # REC92 — Plan de Creación del Informe

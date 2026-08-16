@@ -1,10 +1,7 @@
 ---
-proyecto: REC92 — Energía Geotérmica en Bolivia
-archivo: rec_perplexity_complemento.md
-uso: prompts para obtener datos concretos y específicos que complementan los prompts del informe
-enfoque: cifras de inversión, costos, papers académicos, normativa, análisis argumentales
-nota: todos los prompts incluyen instrucción de listar fuentes al final
-estado: listo para ejecutar
+title: "geo-bo — prompts Perplexity datos puntuales y complemento"
+scope: REC92
+date_updated: 2026-08-16
 ---
 
 # Prompts Perplexity — Complemento de Datos

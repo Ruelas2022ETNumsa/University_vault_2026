@@ -20,16 +20,9 @@
         "Semestres",
         "_assets",
         "Borrar",
-        "README.md",
         "assets",
-        "Sin título.md",
-        "Sin título 1.md",
-        "Untitled.md",
-        "Sin título 2.md",
-        "Sin título 3.md",
-        "Untitled 1.md",
-        "REC92",
-        "Rubbish"
+        "Rubbish",
+        "README.md"
       ]
     },
     "MOC": {
@@ -48,7 +41,8 @@
         "template",
         "Sem_01",
         "Sem_04",
-        "Sem_08"
+        "Sem_08",
+        "Sem_09"
       ]
     },
     "Semestres": {
@@ -56,1041 +50,8 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "SEM_03",
-        "SEM_08"
-      ]
-    },
-    "Semestres/SEM_03": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "ETN302"
-      ]
-    },
-    "Semestres/SEM_03/ETN302": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "1.302",
-        "1.302.md",
-        "0.ETN-302.md",
-        "10.302",
-        "10.302.md",
-        "11.302",
-        "11.302.md",
-        "12.302",
-        "12.302.md",
-        "2.302",
-        "2.302.md",
-        "3.302",
-        "3.302.md",
-        "4.302",
-        "4.302.md",
-        "5.302",
-        "5.302.md",
-        "6.302",
-        "6.302.md",
-        "7.302",
-        "7.302.md",
-        "8.302",
-        "8.302.md",
-        "9.302",
-        "9.302.md"
-      ]
-    },
-    "Semestres/SEM_03/ETN302/1.302": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "1.302.add",
-        "E1.302.md",
-        "T1.302.md"
-      ]
-    },
-    "Semestres/SEM_03/ETN302/1.302/1.302.add": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "E1.1.302-1.md",
-        "E1.1.302-2.md",
-        "E1.2.302-3.md",
-        "E1.31.302-4.md",
-        "E1.32.302-5.md",
-        "E1.33.302-6.md",
-        "E1.34.302-7.md",
-        "T1.2.302.md"
-      ]
-    },
-    "Semestres/SEM_03/ETN302/1.302/1.302.add/E1.1.302-1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/1.302/1.302.add/E1.1.302-2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/1.302/1.302.add/E1.2.302-3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/1.302/1.302.add/E1.31.302-4.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/1.302/1.302.add/E1.32.302-5.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/1.302/1.302.add/E1.33.302-6.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/1.302/1.302.add/E1.34.302-7.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/1.302/1.302.add/T1.2.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/1.302/E1.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/1.302/T1.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/1.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/0.ETN-302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/10.302": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "10.302.add",
-        "T10.302.md"
-      ]
-    },
-    "Semestres/SEM_03/ETN302/10.302/10.302.add": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": []
-    },
-    "Semestres/SEM_03/ETN302/10.302/T10.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/10.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/11.302": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "11.302.add",
-        "T11.302.md"
-      ]
-    },
-    "Semestres/SEM_03/ETN302/11.302/11.302.add": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": []
-    },
-    "Semestres/SEM_03/ETN302/11.302/T11.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/11.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/12.302": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "12.302.add",
-        "T12.302.md"
-      ]
-    },
-    "Semestres/SEM_03/ETN302/12.302/12.302.add": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": []
-    },
-    "Semestres/SEM_03/ETN302/12.302/T12.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/12.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/2.302": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "2.302.add",
-        "A2.302.md",
-        "D2.302.md",
-        "T2.302.md",
-        "TT2.302.md",
-        "W2.302.md",
-        "AA2.302.md"
-      ]
-    },
-    "Semestres/SEM_03/ETN302/2.302/2.302.add": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "A2.1.302-1.md",
-        "A2.1.302-2.md",
-        "A2.1.302-3.md",
-        "A2.2.302-1.md",
-        "A2.2.302-2.md",
-        "A2.2.302-3.md",
-        "A2.2.302-4.md",
-        "AA2.11.302-1.md",
-        "AA2.11.302-2.md",
-        "AA2.11.302-3.md",
-        "AA2.11.302-4.md",
-        "AA2.11.302-5.md",
-        "AA2.11.302-6.md",
-        "AA2.12.302-0.md",
-        "AA2.12.302-1.md",
-        "AA2.2.302-1.md",
-        "AAD2.1.302.md",
-        "AD2.1.302.md",
-        "T2.21.302-1.md",
-        "T2.21.302-2.md",
-        "T2.21.302-3.md",
-        "T2.22.302-1.md",
-        "T2.22.302-2.md",
-        "T2.23.302-1.md",
-        "T2.23.302-2.md",
-        "T2.31.302.md",
-        "T2.41.302-1.md",
-        "T2.32.302.md",
-        "T2.41.302-2.md",
-        "T2.41.302-3.md",
-        "T2.41.302-4.md",
-        "T2.42.302-1.md",
-        "T2.42.302-2.md",
-        "TD2.1.302.md",
-        "TD2.21.302.md",
-        "TD2.22.302.md",
-        "TD2.23.302.md",
-        "TD2.31.302.md",
-        "W2.302-1.md",
-        "W2.302-2.md",
-        "W2.302-3.md",
-        "WD2.1.302-1.md"
-      ]
-    },
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/A2.1.302-1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/A2.1.302-2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/A2.1.302-3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/A2.2.302-1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/A2.2.302-2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/A2.2.302-3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/A2.2.302-4.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/AA2.11.302-1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/AA2.11.302-2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/AA2.11.302-3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/AA2.11.302-4.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/AA2.11.302-5.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/AA2.11.302-6.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/AA2.12.302-0.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/AA2.12.302-1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/AA2.2.302-1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/AAD2.1.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/AD2.1.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/T2.21.302-1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/T2.21.302-2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/T2.21.302-3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/T2.22.302-1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/T2.22.302-2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/T2.23.302-1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/T2.23.302-2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/T2.31.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/T2.41.302-1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/T2.32.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/T2.41.302-2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/T2.41.302-3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/T2.41.302-4.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/T2.42.302-1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/T2.42.302-2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/TD2.1.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/TD2.21.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/TD2.22.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/TD2.23.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/TD2.31.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/W2.302-1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/W2.302-2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/W2.302-3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/2.302/2.302.add/WD2.1.302-1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/2.302/A2.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/2.302/D2.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/2.302/T2.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/2.302/TT2.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/2.302/W2.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/2.302/AA2.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/2.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "3.302.add",
-        "E3.302.md",
-        "T3.302.md",
-        "TT3.302.md"
-      ]
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "LAB603-1-IMG.md",
-        "LAB603-1-IMG.png",
-        "Mon-28-November-22_5-15-2.md",
-        "Sun-23-October-22_5-3-27.md",
-        "Sun-27-November-22_8-25-46.md",
-        "Sun-27-November-22_8-25-46.png",
-        "T3.2.302.md",
-        "T3.3.302.md",
-        "T3.31.302.md",
-        "T3.4.302.md",
-        "T3.511.302.md",
-        "T3.512.302.md",
-        "T3.513.302.md",
-        "T3.521.302.md",
-        "T3.522.302.md",
-        "T3.523.302.md",
-        "T3.6.302-1.md",
-        "T3.6.302-2.md",
-        "T3.6.302-3.md",
-        "T3.6.302-4.md",
-        "T3.6.302-5.md",
-        "TD3.2.302.md",
-        "TE3.2.302-1.png",
-        "TE3.2.302-1.md",
-        "TE3.3.302-1.md",
-        "TE3.3.302-1.png",
-        "TE3.3.302-2.md",
-        "TE3.3.302-2.png",
-        "TE3.4.302-1.md",
-        "TE3.4.302-1.png",
-        "TE3.511.302-1.md",
-        "TE3.511.302-1.png",
-        "TE3.512.302-1.md",
-        "TE3.512.302-1.png",
-        "TE3.513.302-1.md",
-        "TE3.513.302-1.png",
-        "TE3.521.302-1.md",
-        "TE3.521.302-1.png",
-        "TE3.522.302-1.md",
-        "TE3.522.302-1.png",
-        "TE3.523.302-1.md",
-        "TE3.523.302-1.png",
-        "TE3.6.302-01.png",
-        "TE3.6.302-03.png",
-        "TE3.6.302-05.png",
-        "TE3.6.302-1.md",
-        "TE3.6.302-1.png",
-        "TE3.6.302-2.md",
-        "TE3.6.302-2.png",
-        "TE3.6.302-3.md",
-        "TE3.6.302-3.png",
-        "TE3.6.302-4.md",
-        "TE3.6.302-4.png",
-        "TE3.6.302-5.md",
-        "TE3.6.302-5.png",
-        "Thu-15-September-22_10-15-13.md",
-        "vie.-09-diciembre-22_5-51-56.md"
-      ]
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/LAB603-1-IMG.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/LAB603-1-IMG.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/Mon-28-November-22_5-15-2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/Sun-23-October-22_5-3-27.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/Sun-27-November-22_8-25-46.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/Sun-27-November-22_8-25-46.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/T3.2.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/T3.3.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/T3.31.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/T3.4.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/T3.511.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/T3.512.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/T3.513.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/T3.521.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/T3.522.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/T3.523.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/T3.6.302-1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/T3.6.302-2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/T3.6.302-3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/T3.6.302-4.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/T3.6.302-5.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/TD3.2.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.2.302-1.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.2.302-1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.3.302-1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.3.302-1.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.3.302-2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.3.302-2.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.4.302-1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.4.302-1.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.511.302-1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.511.302-1.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.512.302-1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.512.302-1.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.513.302-1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.513.302-1.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.521.302-1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.521.302-1.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.522.302-1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.522.302-1.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.523.302-1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.523.302-1.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.6.302-01.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.6.302-03.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.6.302-05.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.6.302-1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.6.302-1.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.6.302-2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.6.302-2.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.6.302-3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.6.302-3.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.6.302-4.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.6.302-4.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.6.302-5.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/TE3.6.302-5.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/Thu-15-September-22_10-15-13.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/3.302.add/vie.-09-diciembre-22_5-51-56.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/E3.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/T3.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302/TT3.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/3.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/4.302": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "4.302.add",
-        "T4.302.md"
-      ]
-    },
-    "Semestres/SEM_03/ETN302/4.302/4.302.add": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": []
-    },
-    "Semestres/SEM_03/ETN302/4.302/T4.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/4.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/5.302": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "5.302.add",
-        "T5.302.md"
-      ]
-    },
-    "Semestres/SEM_03/ETN302/5.302/5.302.add": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": []
-    },
-    "Semestres/SEM_03/ETN302/5.302/T5.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/5.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/6.302": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "6.302.add",
-        "T6.302.md"
-      ]
-    },
-    "Semestres/SEM_03/ETN302/6.302/6.302.add": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": []
-    },
-    "Semestres/SEM_03/ETN302/6.302/T6.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/6.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/7.302": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "7.302.add",
-        "T7.302.md"
-      ]
-    },
-    "Semestres/SEM_03/ETN302/7.302/7.302.add": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": []
-    },
-    "Semestres/SEM_03/ETN302/7.302/T7.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/7.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/8.302": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "8.302.add",
-        "T8.302.md"
-      ]
-    },
-    "Semestres/SEM_03/ETN302/8.302/8.302.add": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": []
-    },
-    "Semestres/SEM_03/ETN302/8.302/T8.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/8.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/9.302": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "9.302.add",
-        "T9.302.md"
-      ]
-    },
-    "Semestres/SEM_03/ETN302/9.302/9.302.add": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": []
-    },
-    "Semestres/SEM_03/ETN302/9.302/T9.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_03/ETN302/9.302.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_08": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "ETN806"
-      ]
-    },
-    "Semestres/SEM_08/ETN806": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "corr 1.md",
-        "corr.md",
-        "corr2.md",
-        "Partial_1",
-        "Partial_2",
-        "Partial_3"
-      ]
-    },
-    "Semestres/SEM_08/ETN806/Partial_1": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "ETN806-Parcial_1.md",
-        "6a.md",
-        "6b.md",
-        "10b.md",
-        "10a.md",
-        "9a.md",
-        "4a.md",
-        "5a.md",
-        "4b.md",
-        "E3a.md",
-        "5b.md",
-        "7a.md",
-        "7b.md",
-        "8b.md",
-        "8a.md",
-        "9b.md",
-        "E3b.md",
-        "E2b.md",
-        "E2Aa.md",
-        "ETN806-P1-E1.md"
-      ]
-    },
-    "Semestres/SEM_08/ETN806/Partial_2": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "contexto_claude806.md",
-        "ETN806-P2-Fuente_Parcial_2.md",
-        "ETN806-2P-E1-Normalizacion-Marginales-Independencia-Probabilidad-region-curva.md",
-        "ETN806-2P-E2-Independencia-VAR-suma-cuadrado-unitario.md",
-        "ETN806-2P-E3-Marginales-semicirculo-unitario.md",
-        "ETN806-Formulario-2doP-Variables-Aleatorias-Multiples.md",
-        "ETN806-P2-E1-Normalizacion-k-Marginal-X-dominio-infinito.md",
-        "ETN806-P2-E2-Independencia-UV-dominio-triangular.md",
-        "ETN806-P2-E4-VAR-suma-W-densidad-uniforme-triangular.md",
-        "ETN806-P2-E5-PDF-4variables-probabilidad-marginal-W.md",
-        "ETN806-P2-E6-Region-valor-absoluto-marginal-probabilidad-esperanza.md",
-        "ETN806-P2-E7-Densidad-condicional-evento-exponencial-bivariada.md",
-        "ETN806-Practica2-Enunciados-Variables-Aleatorias-Multiples.md",
-        "ETN806-Resuelto-Referencia-Densidad-Conjunta-Triangular.md",
-        "ETN806-P2-E3-Independencia-VAR-suma-cuadrado-unitario.md"
-      ]
-    },
-    "Semestres/SEM_08/ETN806/Partial_2/ETN806-2P-E1-Normalizacion-Marginales-Independencia-Probabilidad-region-curva.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_08/ETN806/Partial_2/ETN806-2P-E2-Independencia-VAR-suma-cuadrado-unitario.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_08/ETN806/Partial_2/ETN806-2P-E3-Marginales-semicirculo-unitario.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_08/ETN806/Partial_2/ETN806-Formulario-2doP-Variables-Aleatorias-Multiples.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_08/ETN806/Partial_2/ETN806-P2-E1-Normalizacion-k-Marginal-X-dominio-infinito.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_08/ETN806/Partial_2/ETN806-P2-E2-Independencia-UV-dominio-triangular.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_08/ETN806/Partial_2/ETN806-P2-E4-VAR-suma-W-densidad-uniforme-triangular.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_08/ETN806/Partial_2/ETN806-P2-E5-PDF-4variables-probabilidad-marginal-W.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_08/ETN806/Partial_2/ETN806-P2-E6-Region-valor-absoluto-marginal-probabilidad-esperanza.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_08/ETN806/Partial_2/ETN806-P2-E7-Densidad-condicional-evento-exponencial-bivariada.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_08/ETN806/Partial_2/ETN806-Practica2-Enunciados-Variables-Aleatorias-Multiples.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_08/ETN806/Partial_2/ETN806-Resuelto-Referencia-Densidad-Conjunta-Triangular.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_08/ETN806/Partial_2/ETN806-P2-E3-Independencia-VAR-suma-cuadrado-unitario.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_08/ETN806/Partial_3": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "ETN806-P3-practica_3.md",
-        "ETN806-P3-examen_final_806_pdf.md",
-        "(ING) ANÁLISIS DE MARKOV.md",
-        "(ING)TEORÍA DE COLAS.md",
-        "(ING) Ejercicios Markov.md",
-        "(ING) Ejercicios teoria colas.md"
+        "SEM_03x",
+        "SEM_08x"
       ]
     },
     "_app": {
@@ -1636,98 +597,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Semestres/SEM_08/ETN806/Partial_1/6a.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_08/ETN806/Partial_1/6b.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_08/ETN806/Partial_1/10b.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_08/ETN806/Partial_1/10a.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_08/ETN806/Partial_1/9a.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_08/ETN806/Partial_1/4a.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_08/ETN806/Partial_1/5a.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_08/ETN806/Partial_1/4b.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_08/ETN806/Partial_1/E3a.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_08/ETN806/Partial_1/5b.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_08/ETN806/Partial_1/7a.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_08/ETN806/Partial_1/7b.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_08/ETN806/Partial_1/8b.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_08/ETN806/Partial_1/8a.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_08/ETN806/Partial_1/9b.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_08/ETN806/Partial_1/E3b.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_08/ETN806/Partial_1/E2b.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_08/ETN806/Partial_1/E2Aa.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_08/ETN806/Partial_1/ETN806-P1-E1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_08/ETN806/Partial_3/(ING) ANÁLISIS DE MARKOV.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_08/ETN806/Partial_3/(ING)TEORÍA DE COLAS.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_08/ETN806/Partial_3/(ING) Ejercicios Markov.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_08/ETN806/Partial_3/(ING) Ejercicios teoria colas.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Borrar": {
       "isPinned": false,
       "isHidden": false,
@@ -2095,38 +964,6 @@
       "isHidden": false
     },
     "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-ej_inec_valabs_mayor.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_08/ETN806/Partial_1/ETN806-Parcial_1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_08/ETN806/Partial_2/contexto_claude806.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_08/ETN806/Partial_2/ETN806-P2-Fuente_Parcial_2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_08/ETN806/Partial_3/ETN806-P3-practica_3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_08/ETN806/Partial_3/ETN806-P3-examen_final_806_pdf.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_08/ETN806/corr 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_08/ETN806/corr.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semestres/SEM_08/ETN806/corr2.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -3175,10 +2012,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Sin título.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_app/notebooklm/prompts/ETN607/ETN607-transcription-v2.md": {
       "isPinned": false,
       "isHidden": false
@@ -3217,18 +2050,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Sin título 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Untitled.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Sin título 2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_app/shellcommands/shellcmd_NBLM_fix.md": {
       "isPinned": false,
       "isHidden": false
@@ -3248,7 +2069,8 @@
       "customOrder": [
         "_library_ETN1015.md",
         "Practica 1.md",
-        "Practica 2.md"
+        "Practica 2.md",
+        "Avance"
       ]
     },
     "Semesters/Sem_08/ETN1015/_library_ETN1015.md": {
@@ -3276,61 +2098,6 @@
       "isHidden": false
     },
     "_hangar/IMA_NBLM/IMA_NBLM-opc_slides.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Sin título 3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Untitled 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "REC92": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "REC92_tsk.md",
-        "REC92_tsk_informe.md",
-        "rec_informe_apa.md",
-        "rec_otrasia.md",
-        "rec_perplexity 1.md",
-        "rec_perplexity_informe.md",
-        "rec_perplexity.md",
-        "rec_perplexity_complemento.md"
-      ]
-    },
-    "REC92/REC92_tsk.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "REC92/REC92_tsk_informe.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "REC92/rec_informe_apa.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "REC92/rec_otrasia.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "REC92/rec_perplexity 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "REC92/rec_perplexity_informe.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "REC92/rec_perplexity.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "REC92/rec_perplexity_complemento.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -3903,6 +2670,1248 @@
       "isHidden": false
     },
     "_hangar/_legacy/ship_fix-math-mod.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "ETN806"
+      ]
+    },
+    "Semestres/SEM_08x/ETN806": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "corr 1.md",
+        "corr.md",
+        "corr2.md",
+        "Partial_1",
+        "Partial_2",
+        "Partial_3"
+      ]
+    },
+    "Semestres/SEM_08x/ETN806/corr 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/corr2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_1": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "ETN806-Parcial_1.md",
+        "6a.md",
+        "6b.md",
+        "10b.md",
+        "10a.md",
+        "9a.md",
+        "4a.md",
+        "5a.md",
+        "4b.md",
+        "E3a.md",
+        "5b.md",
+        "7a.md",
+        "7b.md",
+        "8b.md",
+        "8a.md",
+        "9b.md",
+        "E3b.md",
+        "E2b.md",
+        "E2Aa.md",
+        "ETN806-P1-E1.md"
+      ]
+    },
+    "Semestres/SEM_08x/ETN806/Partial_2": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "contexto_claude806.md",
+        "ETN806-P2-Fuente_Parcial_2.md",
+        "ETN806-2P-E1-Normalizacion-Marginales-Independencia-Probabilidad-region-curva.md",
+        "ETN806-2P-E2-Independencia-VAR-suma-cuadrado-unitario.md",
+        "ETN806-2P-E3-Marginales-semicirculo-unitario.md",
+        "ETN806-Formulario-2doP-Variables-Aleatorias-Multiples.md",
+        "ETN806-P2-E1-Normalizacion-k-Marginal-X-dominio-infinito.md",
+        "ETN806-P2-E2-Independencia-UV-dominio-triangular.md",
+        "ETN806-P2-E4-VAR-suma-W-densidad-uniforme-triangular.md",
+        "ETN806-P2-E5-PDF-4variables-probabilidad-marginal-W.md",
+        "ETN806-P2-E6-Region-valor-absoluto-marginal-probabilidad-esperanza.md",
+        "ETN806-P2-E7-Densidad-condicional-evento-exponencial-bivariada.md",
+        "ETN806-Practica2-Enunciados-Variables-Aleatorias-Multiples.md",
+        "ETN806-Resuelto-Referencia-Densidad-Conjunta-Triangular.md",
+        "ETN806-P2-E3-Independencia-VAR-suma-cuadrado-unitario.md"
+      ]
+    },
+    "Semestres/SEM_08x/ETN806/Partial_3": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "ETN806-P3-practica_3.md",
+        "ETN806-P3-examen_final_806_pdf.md",
+        "(ING) ANÁLISIS DE MARKOV.md",
+        "(ING)TEORÍA DE COLAS.md",
+        "(ING) Ejercicios Markov.md",
+        "(ING) Ejercicios teoria colas.md"
+      ]
+    },
+    "Semestres/SEM_08x/ETN806/corr.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_1/10b.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_1/10a.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_1/4a.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_1/5a.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_1/5b.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_1/4b.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_1/6a.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_1/6b.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_1/7a.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_1/7b.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_1/8a.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_1/9a.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_1/8b.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_1/9b.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_1/E2Aa.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_1/E2b.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_1/E3b.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_1/E3a.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_1/ETN806-P1-E1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_1/ETN806-Parcial_1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_2/contexto_claude806.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_2/ETN806-2P-E3-Marginales-semicirculo-unitario.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_2/ETN806-2P-E1-Normalizacion-Marginales-Independencia-Probabilidad-region-curva.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_2/ETN806-2P-E2-Independencia-VAR-suma-cuadrado-unitario.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_2/ETN806-Formulario-2doP-Variables-Aleatorias-Multiples.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_2/ETN806-P2-E1-Normalizacion-k-Marginal-X-dominio-infinito.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_2/ETN806-P2-E4-VAR-suma-W-densidad-uniforme-triangular.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_2/ETN806-P2-E2-Independencia-UV-dominio-triangular.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_2/ETN806-P2-E3-Independencia-VAR-suma-cuadrado-unitario.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_2/ETN806-P2-E5-PDF-4variables-probabilidad-marginal-W.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_2/ETN806-P2-E6-Region-valor-absoluto-marginal-probabilidad-esperanza.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_2/ETN806-P2-E7-Densidad-condicional-evento-exponencial-bivariada.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_2/ETN806-Resuelto-Referencia-Densidad-Conjunta-Triangular.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_2/ETN806-P2-Fuente_Parcial_2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_3/(ING) Ejercicios Markov.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_3/(ING) ANÁLISIS DE MARKOV.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_3/(ING) Ejercicios teoria colas.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_3/(ING)TEORÍA DE COLAS.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_3/ETN806-P3-practica_3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_3/ETN806-P3-examen_final_806_pdf.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_2/ETN806-Practica2-Enunciados-Variables-Aleatorias-Multiples.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "ETN302"
+      ]
+    },
+    "Semestres/SEM_03x/ETN302": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "1.302",
+        "1.302.md",
+        "0.ETN-302.md",
+        "10.302",
+        "10.302.md",
+        "11.302",
+        "11.302.md",
+        "12.302",
+        "12.302.md",
+        "2.302",
+        "2.302.md",
+        "3.302",
+        "3.302.md",
+        "4.302",
+        "4.302.md",
+        "5.302",
+        "5.302.md",
+        "6.302",
+        "6.302.md",
+        "7.302",
+        "7.302.md",
+        "8.302",
+        "8.302.md",
+        "9.302",
+        "9.302.md"
+      ]
+    },
+    "Semestres/SEM_03x/ETN302/1.302": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "1.302.add",
+        "E1.302.md",
+        "T1.302.md"
+      ]
+    },
+    "Semestres/SEM_03x/ETN302/10.302": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "10.302.add",
+        "T10.302.md"
+      ]
+    },
+    "Semestres/SEM_03x/ETN302/0.ETN-302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/10.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/11.302": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "11.302.add",
+        "T11.302.md"
+      ]
+    },
+    "Semestres/SEM_03x/ETN302/12.302": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "12.302.add",
+        "T12.302.md"
+      ]
+    },
+    "Semestres/SEM_03x/ETN302/11.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "2.302.add",
+        "A2.302.md",
+        "D2.302.md",
+        "T2.302.md",
+        "TT2.302.md",
+        "W2.302.md",
+        "AA2.302.md"
+      ]
+    },
+    "Semestres/SEM_03x/ETN302/12.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/1.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "3.302.add",
+        "E3.302.md",
+        "T3.302.md",
+        "TT3.302.md"
+      ]
+    },
+    "Semestres/SEM_03x/ETN302/4.302": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "4.302.add",
+        "T4.302.md"
+      ]
+    },
+    "Semestres/SEM_03x/ETN302/3.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/4.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/5.302": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "5.302.add",
+        "T5.302.md"
+      ]
+    },
+    "Semestres/SEM_03x/ETN302/6.302": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "6.302.add",
+        "T6.302.md"
+      ]
+    },
+    "Semestres/SEM_03x/ETN302/7.302": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "7.302.add",
+        "T7.302.md"
+      ]
+    },
+    "Semestres/SEM_03x/ETN302/5.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/8.302": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "8.302.add",
+        "T8.302.md"
+      ]
+    },
+    "Semestres/SEM_03x/ETN302/7.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/8.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/6.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/9.302": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "9.302.add",
+        "T9.302.md"
+      ]
+    },
+    "Semestres/SEM_03x/ETN302/9.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/1.302/1.302.add": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "E1.1.302-1.md",
+        "E1.1.302-2.md",
+        "E1.2.302-3.md",
+        "E1.31.302-4.md",
+        "E1.32.302-5.md",
+        "E1.33.302-6.md",
+        "E1.34.302-7.md",
+        "T1.2.302.md"
+      ]
+    },
+    "Semestres/SEM_03x/ETN302/1.302/E1.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/1.302/T1.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/10.302/10.302.add": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "Semestres/SEM_03x/ETN302/10.302/T10.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/11.302/11.302.add": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "Semestres/SEM_03x/ETN302/11.302/T11.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/12.302/12.302.add": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "Semestres/SEM_03x/ETN302/12.302/T12.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "A2.1.302-1.md",
+        "A2.1.302-2.md",
+        "A2.1.302-3.md",
+        "A2.2.302-1.md",
+        "A2.2.302-2.md",
+        "A2.2.302-3.md",
+        "A2.2.302-4.md",
+        "AA2.11.302-1.md",
+        "AA2.11.302-2.md",
+        "AA2.11.302-3.md",
+        "AA2.11.302-4.md",
+        "AA2.11.302-5.md",
+        "AA2.11.302-6.md",
+        "AA2.12.302-0.md",
+        "AA2.12.302-1.md",
+        "AA2.2.302-1.md",
+        "AAD2.1.302.md",
+        "AD2.1.302.md",
+        "T2.21.302-1.md",
+        "T2.21.302-2.md",
+        "T2.21.302-3.md",
+        "T2.22.302-1.md",
+        "T2.22.302-2.md",
+        "T2.23.302-1.md",
+        "T2.23.302-2.md",
+        "T2.31.302.md",
+        "T2.41.302-1.md",
+        "T2.32.302.md",
+        "T2.41.302-2.md",
+        "T2.41.302-3.md",
+        "T2.41.302-4.md",
+        "T2.42.302-1.md",
+        "T2.42.302-2.md",
+        "TD2.1.302.md",
+        "TD2.21.302.md",
+        "TD2.22.302.md",
+        "TD2.23.302.md",
+        "TD2.31.302.md",
+        "W2.302-1.md",
+        "W2.302-2.md",
+        "W2.302-3.md",
+        "WD2.1.302-1.md"
+      ]
+    },
+    "Semestres/SEM_03x/ETN302/2.302/A2.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/AA2.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/D2.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/T2.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/TT2.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/W2.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "LAB603-1-IMG.md",
+        "LAB603-1-IMG.png",
+        "Mon-28-November-22_5-15-2.md",
+        "Sun-23-October-22_5-3-27.md",
+        "Sun-27-November-22_8-25-46.md",
+        "Sun-27-November-22_8-25-46.png",
+        "T3.2.302.md",
+        "T3.3.302.md",
+        "T3.31.302.md",
+        "T3.4.302.md",
+        "T3.511.302.md",
+        "T3.512.302.md",
+        "T3.513.302.md",
+        "T3.521.302.md",
+        "T3.522.302.md",
+        "T3.523.302.md",
+        "T3.6.302-1.md",
+        "T3.6.302-2.md",
+        "T3.6.302-3.md",
+        "T3.6.302-4.md",
+        "T3.6.302-5.md",
+        "TD3.2.302.md",
+        "TE3.2.302-1.png",
+        "TE3.2.302-1.md",
+        "TE3.3.302-1.md",
+        "TE3.3.302-1.png",
+        "TE3.3.302-2.md",
+        "TE3.3.302-2.png",
+        "TE3.4.302-1.md",
+        "TE3.4.302-1.png",
+        "TE3.511.302-1.md",
+        "TE3.511.302-1.png",
+        "TE3.512.302-1.md",
+        "TE3.512.302-1.png",
+        "TE3.513.302-1.md",
+        "TE3.513.302-1.png",
+        "TE3.521.302-1.md",
+        "TE3.521.302-1.png",
+        "TE3.522.302-1.md",
+        "TE3.522.302-1.png",
+        "TE3.523.302-1.md",
+        "TE3.523.302-1.png",
+        "TE3.6.302-01.png",
+        "TE3.6.302-03.png",
+        "TE3.6.302-05.png",
+        "TE3.6.302-1.md",
+        "TE3.6.302-1.png",
+        "TE3.6.302-2.md",
+        "TE3.6.302-2.png",
+        "TE3.6.302-3.md",
+        "TE3.6.302-3.png",
+        "TE3.6.302-4.md",
+        "TE3.6.302-4.png",
+        "TE3.6.302-5.md",
+        "TE3.6.302-5.png",
+        "Thu-15-September-22_10-15-13.md",
+        "vie.-09-diciembre-22_5-51-56.md"
+      ]
+    },
+    "Semestres/SEM_03x/ETN302/3.302/E3.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/T3.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/TT3.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/4.302/4.302.add": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "Semestres/SEM_03x/ETN302/5.302/5.302.add": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "Semestres/SEM_03x/ETN302/4.302/T4.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/6.302/6.302.add": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "Semestres/SEM_03x/ETN302/5.302/T5.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/6.302/T6.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/7.302/7.302.add": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "Semestres/SEM_03x/ETN302/7.302/T7.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/8.302/8.302.add": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "Semestres/SEM_03x/ETN302/8.302/T8.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/9.302/9.302.add": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "Semestres/SEM_03x/ETN302/9.302/T9.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/1.302/1.302.add/E1.1.302-1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/1.302/1.302.add/E1.1.302-2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/1.302/1.302.add/E1.2.302-3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/1.302/1.302.add/E1.31.302-4.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/1.302/1.302.add/E1.32.302-5.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/1.302/1.302.add/E1.33.302-6.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/1.302/1.302.add/E1.34.302-7.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/1.302/1.302.add/T1.2.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/A2.1.302-1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/A2.1.302-2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/A2.1.302-3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/A2.2.302-1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/A2.2.302-2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/A2.2.302-3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/A2.2.302-4.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/AA2.11.302-1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/AA2.11.302-4.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/AA2.11.302-5.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/AA2.11.302-2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/AA2.11.302-6.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/AA2.2.302-1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/AA2.11.302-3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/AA2.12.302-1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/AA2.12.302-0.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/T2.21.302-1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/AAD2.1.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/T2.21.302-2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/AD2.1.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/T2.21.302-3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/T2.22.302-2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/T2.22.302-1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/T2.23.302-1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/T2.31.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/T2.23.302-2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/T2.32.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/T2.41.302-1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/T2.41.302-2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/T2.41.302-4.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/T2.42.302-1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/T2.41.302-3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/T2.42.302-2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/TD2.22.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/TD2.1.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/TD2.23.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/W2.302-1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/W2.302-3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/WD2.1.302-1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/LAB603-1-IMG.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/W2.302-2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/TD2.31.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/TD2.21.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/LAB603-1-IMG.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/Mon-28-November-22_5-15-2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/Sun-23-October-22_5-3-27.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/Sun-27-November-22_8-25-46.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/Sun-27-November-22_8-25-46.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/T3.2.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/T3.3.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/T3.31.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/T3.4.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/T3.511.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/T3.512.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/T3.513.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/T3.521.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/T3.522.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/T3.523.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/T3.6.302-1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/T3.6.302-3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/T3.6.302-2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/T3.6.302-4.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/T3.6.302-5.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TD3.2.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.2.302-1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.2.302-1.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.3.302-1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.3.302-1.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.4.302-1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.3.302-2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.3.302-2.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.4.302-1.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.511.302-1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.511.302-1.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.512.302-1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.512.302-1.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.521.302-1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.513.302-1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.513.302-1.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.521.302-1.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.523.302-1.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.522.302-1.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.522.302-1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.523.302-1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.6.302-01.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.6.302-03.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.6.302-05.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.6.302-1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.6.302-1.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.6.302-2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.6.302-2.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.6.302-3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.6.302-3.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.6.302-4.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.6.302-4.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.6.302-5.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.6.302-5.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/Thu-15-September-22_10-15-13.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/vie.-09-diciembre-22_5-51-56.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_08/ETN1015/Avance": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "1015_sistema variante en el tiempo.md",
+        "1015_procesamiento de señales.md",
+        "1015_señal de potencia.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "Semesters/Sem_08/ETN1015/Avance/1015_sistema variante en el tiempo.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_08/ETN1015/Avance/1015_procesamiento de señales.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_08/ETN1015/Avance/1015_señal de potencia.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "REC92"
+      ],
+      "sortOrder": "custom"
+    },
+    "Semesters/Sem_09/REC92": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "tsk_update_REC92.md",
+        "geo-bo"
+      ],
+      "sortOrder": "custom"
+    },
+    "Semesters/Sem_09/REC92/geo-bo": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "REC92_tsk.md",
+        "REC92_tsk_informe.md",
+        "rec_informe_apa.md",
+        "rec_otrasia.md",
+        "rec_perplexity_informe.md",
+        "rec_perplexity.md",
+        "rec_perplexity_complemento.md"
+      ]
+    },
+    "Semesters/Sem_09/REC92/geo-bo/REC92_tsk.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/REC92/geo-bo/REC92_tsk_informe.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/REC92/geo-bo/rec_informe_apa.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/REC92/geo-bo/rec_otrasia.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/REC92/geo-bo/rec_perplexity_informe.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/REC92/geo-bo/rec_perplexity.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/REC92/geo-bo/rec_perplexity_complemento.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/REC92/tsk_update_REC92.md": {
       "isPinned": false,
       "isHidden": false
     }

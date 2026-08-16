@@ -8135,6 +8135,7 @@ terrestre
 tecnolog
 trabajan
 tracker
+traen
 ToDo
 Templater
 Text
@@ -33737,6 +33738,7 @@ Prieto
 Perspectivas
 Proceedings
 Panorama
+Phase
 del
 date
 de
@@ -57756,6 +57758,7 @@ geothermal
 geothermics
 guiarse
 geograf
+grupal
 body
 beacon
 bat
@@ -64869,6 +64872,7 @@ biomasa
 boliviano
 boliviana
 bullets
+buscan
 scope
 status
 selector
@@ -73838,6 +73842,7 @@ siles
 sostenibles
 significativas
 solapamientos
+sections
 vault
 vil
 ver
@@ -90517,6 +90522,8 @@ acumulando
 acumula
 anotalo
 acordado
+argumentales
+argumental
 related
 recomendados
 ribbon
@@ -107126,6 +107133,7 @@ nacional
 noticias
 numerosos
 normativa
+narrativo
 created
 commit
 cada
@@ -166861,6 +166869,7 @@ Ecuador
 Empresa
 Electricidad
 Ejecut
+Ejecutalos
 Obsidian
 OmniSearch
 Ocultar
@@ -190622,6 +190631,8 @@ prospecciones
 provincia
 perforaci
 planos
+phase
+plex
 min
 mica
 movimiento
@@ -224264,6 +224275,7 @@ ebullici
 estatal
 encuesta
 enfrentado
+ejecutalos
 Motor
 Media
 Mantiene

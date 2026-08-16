@@ -159,15 +159,15 @@ date_updated: 2026-08-16
 
 ## Tareas
 
-- [ ] Crear carpetas `_ctx/`, `_prompts/`, `_s/`
+- [x] Crear carpetas `_ctx/`, `_prompts/`, `_s/`
 - [ ] Crear `tsk_REC92.md`
-- [ ] Mover `REC92_tsk.md` → `_ctx/contexto.md` + agregar YAML mínimo
-- [ ] Mover `REC92_tsk_informe.md` → `_ctx/flujo.md` + agregar YAML mínimo
-- [ ] Mover `rec_informe_apa.md` → `_ctx/informe_apa.md` + agregar YAML mínimo
-- [ ] Mover `rec_perplexity_informe.md` → `_prompts/plex_informe.md` + agregar YAML mínimo
-- [ ] Mover `rec_perplexity_complemento.md` → `_prompts/plex_datos.md` + agregar YAML mínimo
-- [ ] Mover `rec_perplexity.md` → `_prompts/plex_bk.md` + agregar YAML mínimo
-- [ ] Mover `rec_otrasia.md` → `_prompts/otras_ia.md` + agregar YAML mínimo
+- [x] Mover `REC92_tsk.md` → `_ctx/contexto.md` + agregar YAML mínimo
+- [x] Mover `REC92_tsk_informe.md` → `_ctx/flujo.md` + agregar YAML mínimo
+- [x] Mover `rec_informe_apa.md` → `_ctx/informe_apa.md` + agregar YAML mínimo
+- [x] Mover `rec_perplexity_informe.md` → `_prompts/plex_informe.md` + agregar YAML mínimo
+- [x] Mover `rec_perplexity_complemento.md` → `_prompts/plex_datos.md` + agregar YAML mínimo
+- [x] Mover `rec_perplexity.md` → `_prompts/plex_bk.md` + agregar YAML mínimo
+- [x] Mover `rec_otrasia.md` → `_prompts/otras_ia.md` + agregar YAML mínimo
 - [ ] Crear `_s/s1_intro.md`
 - [ ] Crear `_s/s2_marco.md`
 - [ ] Crear `_s/s3_recursos.md`
