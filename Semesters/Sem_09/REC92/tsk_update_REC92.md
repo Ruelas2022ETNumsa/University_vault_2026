@@ -2,16 +2,16 @@
 galaxy_body: ship
 project: "update REC92 — migración a estructura workshop + secciones"
 date: 2026-08-16
-status: docked
+status: in-orbit
 fleet: REC92
 ---
 
 ## Handoff
 
 **Última sesión:** 2026-08-16 — alx_hot
-**Retomar desde:** sección ## Tareas — primer ítem pendiente
-**Completado esta sesión:** diseño completo de estructura, YAMLs definidos, ship creado
-**Próximo paso:** crear `tsk_REC92.md` en `REC92/`
+**Retomar desde:** ## Tareas — crear los 7 archivos s# en _section/
+**Completado esta sesión:** estructura completa creada, YAMLs aplicados a _ctx/ y _prompts/, tsk_geo-bo.md creado, proyecto en ruta correcta Semesters/Sem_09/REC92/geo-bo/
+**Próximo paso:** crear los 7 archivos s# en _section/ y verificar estructura final
 **Preguntas de cierre:** —
 
 ---
@@ -159,8 +159,7 @@ date_updated: 2026-08-16
 
 ## Tareas
 
-- [x] Crear carpetas `_ctx/`, `_prompts/`, `_s/`
-- [ ] Crear `tsk_REC92.md`
+- [x] Crear carpetas `_ctx/`, `_prompts/`, `_section/`
 - [x] Mover `REC92_tsk.md` → `_ctx/contexto.md` + agregar YAML mínimo
 - [x] Mover `REC92_tsk_informe.md` → `_ctx/flujo.md` + agregar YAML mínimo
 - [x] Mover `rec_informe_apa.md` → `_ctx/informe_apa.md` + agregar YAML mínimo
@@ -168,13 +167,14 @@ date_updated: 2026-08-16
 - [x] Mover `rec_perplexity_complemento.md` → `_prompts/plex_datos.md` + agregar YAML mínimo
 - [x] Mover `rec_perplexity.md` → `_prompts/plex_bk.md` + agregar YAML mínimo
 - [x] Mover `rec_otrasia.md` → `_prompts/otras_ia.md` + agregar YAML mínimo
-- [ ] Crear `_s/s1_intro.md`
-- [ ] Crear `_s/s2_marco.md`
-- [ ] Crear `_s/s3_recursos.md`
-- [ ] Crear `_s/s4_laguna.md`
-- [ ] Crear `_s/s5_comparativa.md`
-- [ ] Crear `_s/s6_impacto.md`
-- [ ] Crear `_s/s7_conclusiones.md`
+- [x] Crear `tsk_geo-bo.md` con YAML completo, handoff, estado y galaxy-links
+- [ ] Crear `_section/s1_intro.md`
+- [ ] Crear `_section/s2_marco.md`
+- [ ] Crear `_section/s3_recursos.md`
+- [ ] Crear `_section/s4_laguna.md`
+- [ ] Crear `_section/s5_comparativa.md`
+- [ ] Crear `_section/s6_impacto.md`
+- [ ] Crear `_section/s7_conclusiones.md`
 - [ ] Verificar estructura final con list_directory
 - [ ] Marcar ship `delivered` → mover a `_hangar/_legacy/`
 
@@ -182,7 +182,6 @@ date_updated: 2026-08-16
 
 ## Preguntas abiertas
 
-- ¿El YAML mínimo de los archivos en `_ctx/` y `_prompts/` incluye `date_updated` o solo `title` y `scope`?
 - ¿Los archivos `s#` necesitan bloque `%%` con galaxy-links desde el inicio, o se agrega cuando haya contenido real?
 
 ---
