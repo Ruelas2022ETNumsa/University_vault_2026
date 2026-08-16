@@ -20,7 +20,6 @@
         "Semestres",
         "_assets",
         "Borrar",
-        "assets",
         "Rubbish",
         "README.md"
       ]
@@ -1843,12 +1842,6 @@
     "_hangar/anki/logbook.md": {
       "isPinned": false,
       "isHidden": false
-    },
-    "assets": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": []
     },
     "_hangar/IMA_NBLM": {
       "isPinned": false,

@@ -8136,6 +8136,7 @@ tecnolog
 trabajan
 tracker
 traen
+tuya
 ToDo
 Templater
 Text
@@ -49377,6 +49378,7 @@ Variaci
 Versores
 Volc
 Validador
+Validada
 galaxy
 gina
 genes
@@ -57759,6 +57761,7 @@ geothermics
 guiarse
 geograf
 grupal
+graves
 body
 beacon
 bat
@@ -73843,6 +73846,7 @@ sostenibles
 significativas
 solapamientos
 sections
+splitByCodeFences
 vault
 vil
 ver
@@ -90524,6 +90528,7 @@ anotalo
 acordado
 argumentales
 argumental
+asocia
 related
 recomendados
 ribbon
@@ -99108,6 +99113,9 @@ reduciendo
 reservas
 resources
 redactan
+responsabilidad
+responsabilidades
+rayones
 notes
 notas
 nuevas
@@ -107134,6 +107142,7 @@ noticias
 numerosos
 normativa
 narrativo
+newline
 created
 commit
 cada
@@ -116287,6 +116296,8 @@ concretarse
 complementen
 confiables
 citarla
+complementarias
+coordenado
 updated
 un
 universo
@@ -182614,6 +182625,7 @@ Autoridad
 Anexos
 Anexo
 ACTUAL
+AutoHotkey
 push
 pull
 para
@@ -224276,6 +224288,9 @@ estatal
 encuesta
 enfrentado
 ejecutalos
+extenderlo
+ejecutarlo
+exhaustiva
 Motor
 Media
 Mantiene
@@ -258633,6 +258648,7 @@ identificaron
 intensific
 informativo
 intro
+inclinadas
 Dependencia
 Dropbox
 Dataview
@@ -266852,6 +266868,7 @@ Delimitadores
 DIGITAL
 Delgadillo
 Docente
+Desventaja
 Remotely
 Raz
 Revisa
@@ -275883,6 +275900,7 @@ Rioseco
 ResearchGate
 Redactor
 Recopilar
+Refinar
 Hider
 Hace
 Herramientas
