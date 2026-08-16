@@ -8134,6 +8134,7 @@ trasladar
 terrestre
 tecnolog
 trabajan
+tracker
 ToDo
 Templater
 Text
@@ -17063,6 +17064,7 @@ Trabajos
 Termodin
 Terminar
 Tecnolog
+Tracker
 Sistema
 Sync
 Save
@@ -90514,6 +90516,7 @@ atados
 acumulando
 acumula
 anotalo
+acordado
 related
 recomendados
 ribbon
@@ -190618,6 +190621,7 @@ ptimas
 prospecciones
 provincia
 perforaci
+planos
 min
 mica
 movimiento
@@ -199762,6 +199766,8 @@ manto
 meteorol
 marzo
 metas
+modelan
+moverlo
 YAML
 Ya
 You
@@ -208000,6 +208006,7 @@ YYSMg
 YJTn
 YExk
 YIrM
+YAMLs
 Bot
 Baja
 Builder
@@ -249100,6 +249107,7 @@ llenarse
 legales
 lecciones
 listen
+lite
 incluyendo
 im
 instalar
@@ -258612,6 +258620,7 @@ intensa
 identificaron
 intensific
 informativo
+intro
 Dependencia
 Dropbox
 Dataview
@@ -298179,6 +298188,7 @@ hablando
 hidro
 high
 hidroelectricidad
+hubs
 que
 quedan
 queda
