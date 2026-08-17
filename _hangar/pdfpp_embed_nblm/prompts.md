@@ -103,55 +103,95 @@ REGLAS:
 
 ```
 TAREA:
-Dado un rango de subtítulos de ETN607 (Mecánica Aplicada), buscar en los libros fuente
-el complemento nivel B y las figuras relevantes.
+Dado un rango de subtítulos o un concepto individual de ETN607 (Mecánica Aplicada),
+buscar en los libros fuente el complemento nivel B o C y las figuras relevantes.
 
 FUENTES: usar solo los libros cargados en este notebook y _library_ETN607.md.
 No usar conocimiento general. Consultar _library_ETN607.md para criterio de selección
 de libros y capítulos por tema.
 
-FLUJO:
-"De [fuente], desde subtítulo X hasta subtítulo Y, complemento nivel B"
+MENSAJES POSIBLES:
+
+MENSAJE 1 — rango de subtítulos:
+"De [fuente], desde subtítulo X hasta subtítulo Y, complemento nivel B/C"
 → buscar en los libros fuente según _library_ETN607.md
-→ entregar para cada subtítulo del rango:
-   1. Definición formal (si aplica)
-   2. Figura (si existe)
-→ si un subtítulo no tiene complemento relevante en los libros → omitirlo sin avisar
+→ entregar complemento para cada subtítulo del rango
+→ si un subtítulo no tiene complemento relevante → omitirlo sin avisar
+
+MENSAJE 2 — concepto o subtítulo individual (para prueba o consulta puntual):
+"Complemento nivel B/C: [nombre del concepto o subtítulo]"
+→ buscar el concepto directamente en los libros fuente
+→ entregar un solo bloque de complemento para ese concepto
+→ misma estructura que Mensaje 1
+
+NIVEL B: definición formal del libro + figura si existe.
+NIVEL C: definición formal + propiedades omitidas + 1-2 ejercicios resueltos + figura si aplica.
+  Si no hay figura en el libro → intentar TikZJax para el ejercicio (ver reglas abajo).
+SIN ejercicios (aplicar B): axiomas, listas de propiedades puras, notación formal.
+NIVEL C cuando: procedimiento aplicable, coordenadas/restricciones con casos concretos,
+  el concepto tiene ejemplos canónicos en los libros → agregar uno de mayor dificultad.
 
 FORMATO DE RESPUESTA POR SUBTÍTULO:
 
 ## [N. Subtítulo]
 
-> [!note] Complemento (Nivel B)
->
-> 1. Definición formal
-> Extraer del libro fuente la definición más clara y directa.
-> Una sola definición — sin parafrasear, sin expandir.
->
-> 2. Idea clave (opcional)
-> Solo si hay una propiedad o relación central que la definición no captura.
-> Máximo 2 líneas.
->
-> 3. Figura (si existe)
-> Si en los libros hay una figura que ilustre directamente el concepto:
->
-> [[nombre_exacto_del_archivo.pdf#page=N]]
-> *[etiqueta de figura tal como aparece en el libro, ej: Figure 4.3]*
-> *[descripción breve si existe — omitir si no hay]*
-> IMA-SRC | fuente: [nombre del archivo PDF] | página: [número impreso] | id: [etiqueta o pie de figura] | posición: [dónde está en la página]
-> justificación: [por qué esta figura sirve — 1 oración, sin describir lo que se ve]
->
-> Si no hay figura relevante → omitir esta sección.
+`````note Complemento (Nivel B/C)
 
-REGLAS:
+1. Definición formal
+Extraer del libro fuente la definición más clara y directa.
+Una sola definición — sin parafrasear, sin expandir.
+
+2. Idea clave (opcional)
+Solo si hay una propiedad o relación central que la definición no captura.
+Máximo 2 líneas.
+
+3. Figura o diagrama (si existe o aplica TikZJax)
+
+CASO A — figura en el libro:
+[[nombre_exacto_del_archivo.pdf#page=N]]
+*[etiqueta de figura tal como aparece en el libro, ej: Fig. 2-4]*
+*[descripción breve si existe — omitir si no hay]*
+%%IMA-SRC | fuente: [nombre del archivo PDF] | página: [número impreso] | id: [etiqueta de figura] | posición: [dónde está en la página]
+justificación: [por qué esta figura sirve — 1 oración, sin describir lo que se ve]%%
+
+CASO B — no hay figura en el libro pero el concepto es geométrico o el ejercicio
+tiene un diagrama representable → generar bloque TikZJax:
+```tikz
+\usepackage{tikz}
+\begin{document}
+% diagrama del concepto o ejercicio
+\end{document}
+```
+Solo si el diagrama es simple: coordenadas, cuerpo libre, esquema geométrico básico.
+Si hay duda sobre la complejidad → omitir y dejar espacio para IMA manual.
+
+4. Ejercicios resueltos (solo nivel C)
+##### Ej. [enunciado breve]
+[resolución en LaTeX, array si corresponde]
+Si el ejercicio involucra un diagrama y no hay figura en el libro → TikZJax (ver Caso B).
+
+Si no hay figura ni diagrama aplicable → omitir sección 3.
+
+`````
+
+REGLAS GENERALES:
 - Solo citar si podés confirmar fuente + página + id. Si no, omitir — no inventar.
 - El embed usa doble corchete sin ! → [[archivo.pdf#page=N]]
 - El nombre del archivo debe coincidir exactamente con el nombre del PDF cargado.
-- La etiqueta de figura es obligatoria como id. Si no hay etiqueta, usar el pie textual.
+- La etiqueta de figura es obligatoria como id (ej: Fig. 2-4). Si no hay etiqueta, usar el pie textual.
   Si tampoco hay pie, describir brevemente el visual como id.
 - Podés citar más de una figura si son relevantes.
 - Sin introducción, sin cierre, sin comentarios — solo el contenido estructurado.
 - Respuesta compacta: no más de lo necesario para entender el concepto.
+
+REGLAS TIKZJAX:
+- Bloque exacto: ```tikz
+- \begin{document} y \end{document} siempre presentes
+- \documentclass NUNCA
+- Paquetes antes de \begin{document}
+- Color principal: teal · Color secundario: orange
+- Solo para: coordenadas cilíndricas/esféricas, cuerpo libre simple, esquemas geométricos básicos
+- Si hay duda sobre si el diagrama es representable → omitir, dejar espacio para IMA manual
 
 LIBROS DISPONIBLES:
 Taylor (dividido):
