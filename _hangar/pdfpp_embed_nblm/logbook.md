@@ -45,6 +45,20 @@ Explorar si NotebookLM puede generar automáticamente un link embed de PDF++ que
 ## Pendientes futuros
 
 - **Script delta de numeración:** descartado para PDFs con texto seleccionable — reemplazado por flujo de búsqueda por etiqueta (ver abajo). Para PDFs sin texto seleccionable (escaneados) no hay solución automática — caso borde, minoría.
+- **Script búsqueda por etiqueta — múltiples coincidencias:** el script lista todas las páginas donde aparece la etiqueta (ej: `Figure 4.3`) y el usuario elige. El usuario iniciará la búsqueda por la última coincidencia, que suele ser donde la figura está físicamente.
+- **Script búsqueda por etiqueta — integración Obsidian:** pendiente para después de fase de pruebas por línea de comandos. No se agrega a Shell Commands hasta confirmar que funciona.
+- **OCRmyPDF — integración Obsidian:** ídem — primero pruebas por línea de comandos, luego evaluar integración con Shell Commands si pasa la fase de pruebas.
+
+## Herramientas disponibles
+
+### OCRmyPDF
+Herramienta de línea de comandos para agregar capa de texto a PDFs escaneados. El PDF resultante es visualmente idéntico al original pero con texto seleccionable y buscable.
+- **Uso básico:** `ocrmypdf input.pdf output.pdf`
+- **Motor OCR:** Tesseract (soporta español, inglés, otros)
+- **Ventaja:** local, sin límites de tamaño ni páginas, gratuito, open source
+- **Instalación:** OCRmyPDF + Tesseract — ambos instalados en Windows via pip/instalador
+- **Estado:** fase de pruebas por línea de comandos — no integrado a Obsidian aún
+- **Caso de uso ETN-607:** PDFs escaneados como Alonso & Finn 1970. La mayoría de los libros de ETN-607 son PDFs digitales y no lo necesitan.
 
 ## Flujo resuelto — búsqueda por etiqueta
 

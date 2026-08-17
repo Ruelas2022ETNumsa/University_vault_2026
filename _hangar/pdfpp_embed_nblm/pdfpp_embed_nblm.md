@@ -25,7 +25,9 @@ blocked_by:
 - [ ] Evaluar el problema de numeración: página impresa vs página del visor PDF
 - [ ] Documentar resultado de cada prueba en `chronicle.md`
 - [ ] Decidir si el embed convive con IMA-SRC o lo reemplaza
-- [ ] Script delta: calcular diferencia página impresa vs visor por cada PDF de ETN-607 — discutir diseño antes de implementar
+- [ ] Script delta: descartado — reemplazado por flujo de búsqueda por etiqueta
+- [ ] Script búsqueda por etiqueta: diseñar e implementar — lista todas las coincidencias, usuario elige — fase pruebas CLI antes de integrar a Obsidian
+- [ ] OCRmyPDF: instalar y probar en PDF escaneado (ej: Alonso & Finn) — fase pruebas CLI antes de integrar a Obsidian
 
 ---
 
@@ -36,4 +38,5 @@ blocked_by:
 | `pdfpp_embed_nblm.md` | tsk | — | este archivo — trabajo activo del carrier |
 | `logbook.md` | logbook | — | README histórico del proyecto |
 | `chronicle.md` | chronicle | — | registro cronológico de pruebas |
+| `ocrmypdf-install.md` | dropship | activo | instalación y config de OCRmyPDF — fase pruebas CLI |
 | `prompts.md` | dropship | activo | prompts de prueba para NotebookLM |
