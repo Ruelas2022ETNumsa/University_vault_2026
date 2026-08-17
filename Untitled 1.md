@@ -1,137 +1,121 @@
-## 2.2 Sistemas de Coordenadas
+## Sistema de coordenadas
 
-> [!note] Complemento (Nivel C)
->
-> 1. Definición formal
-> Uno de los primeros pasos en el tratamiento de cualquier problema es el de seleccionar coordenadas apropiadas. Las ecuaciones de transformación juegan un papel importante al expresar la energía cinética, la aceleración y muchas otras cantidades en términos de las coordenadas elegidas.
->
-> 2. Idea clave
-> Las ecuaciones de transformación permiten definir la posición, velocidad y aceleración en sistemas curvilíneos locales (polares, cilíndricos, esféricos) a partir de coordenadas cartesianas mediante factores de escala y versores unitarios.
->
-> 3. Figura o diagrama
->
-> [[Dare A. Wells-SCHAUM'S Lagrangian Dynamics-McGraw-Hill.pdf#page=12]]
-> *Fig. 2-3*
-> *Cylindrical Coordinates*
-> %%IMA-SRC | fuente: Dare A. Wells-SCHAUM'S Lagrangian Dynamics-McGraw-Hill.pdf | página: 12 | id: Fig. 2-3 | posición: centro de la página | justificación: Esta figura muestra la definición geométrica y las relaciones de transformación del sistema de coordenadas cilíndricas en el espacio tridimensional.%%
->
-> [[Dare A. Wells-SCHAUM'S Lagrangian Dynamics-McGraw-Hill.pdf#page=12]]
-> *Fig. 2-4*
-> *Spherical Coordinates*
-> %%IMA-SRC | fuente: Dare A. Wells-SCHAUM'S Lagrangian Dynamics-McGraw-Hill.pdf | página: 12 | id: Fig. 2-4 | posición: centro-derecha de la página | justificación: Esta figura ilustra la orientación angular y la distancia radial que definen a las coordenadas esféricas.%%
->
-> ```tikz
-> \usepackage{tikz}
-> \begin{document}
-> \begin{tikzpicture}[scale=1.3, >=stealth]
->   % Ejes Cartesianos
->   \draw[->, thick, black] $0,0$ -- $4,0$ node[anchor=west] {$x$};
->   \draw[->, thick, black] $0,0$ -- $0,3.5$ node[anchor=south] {$y$};
->   
->   % Vector de posición y Punto P
->   \draw[->, ultra thick, teal] $0,0$ -- $2.6, 1.5$ node[midway, above left] {$\vec{r}$};
->   \filldraw[teal] $2.6, 1.5$ circle (2pt) node[anchor=south west] {$P(r, \theta)$};
->   
->   % Arco de ángulo theta
->   \draw[->, thick, orange] $0.8,0$ arc (0:30:0.8);
->   \node[orange] at $1.0, 0.25$ {$\theta$};
->   
->   % Versores unitarios de coordenadas polares
->   \draw[->, thick, teal] $2.6, 1.5$ -- $3.46, 2.0$ node[anchor=west] {$\mathbf{e}_r$};
->   \draw[->, thick, orange] $2.6, 1.5$ -- $2.1, 2.36$ node[anchor=south] {$\mathbf{e}_\theta$};
->   
->   % Proyecciones a los ejes
->   \draw[dashed, thin, gray] $2.6, 1.5$ -- $2.6, 0$ node[midway, right] {$y = r\text{sen}\,\theta$};
->   \draw[dashed, thin, gray] $2.6, 1.5$ -- $0, 1.5$ node[midway, above] {$x = r\text{cos}\,\theta$};
-> \end{tikzpicture}
-> \end{document}
-> ```
->
-> 4. Ejercicios resueltos (solo nivel C)
->
-> ##### Ej. 1: Cuenta deslizándose en un alambre circular en rotación uniforme
-> Una cuenta de masa $m$ está obligada a moverse sobre un aro de radio $R$ en un plano horizontal que gira con velocidad angular constante $\omega$ alrededor de un eje vertical. Determine la ecuación de movimiento de la cuenta utilizando coordenadas polares.
->
-> **Resolución:**
-> Empleamos coordenadas polares planas $(r, \theta)$ con el origen en el centro del movimiento. La ligadura del alambre impone que el radio sea constante $r = R$, y que la orientación angular sea $\theta = \omega t$. 
->
-> La energía cinética en coordenadas polares es:
-> 
-$$
-T = \dfrac{1}{2}m(\dot{r}^2 + r^2\dot{\theta}^2)
-$$
+``````ad-note
+title: Complemento (Nivel C)
 
->
-> Si consideramos el caso donde la cuenta se desliza radialmente a lo largo de una varilla recta en rotación constante $\theta = \omega t$:
-> 
-$$
-T = \dfrac{1}{2}m(\dot{r}^2 + r^2\omega^2)
-$$
+1. Definición formal
+La posición de un punto $p$ puede ser localizada por varios conjuntos de magnitudes (longitudes, ángulos, funciones trigonométricas, áreas, etc.). Cada par o conjunto constituye un sistema de coordenadas [2, p. 12].
 
->
-> Aplicamos la ecuación de Lagrange para la coordenada libre $r$:
-> 
-$$
-\dfrac{d}{dt}\left(\dfrac{\partial T}{\partial \dot{r}}\right) - \dfrac{\partial T}{\partial r} = Q_r
-$$
+2. Idea clave y propiedades
+* Las ecuaciones de transformación permiten expresar las coordenadas de un punto entre distintos sistemas, siendo fundamentales para representar magnitudes físicas en el sistema más conveniente [2, p. 13].
+* **Invarianza y ortogonalidad**: En transformaciones entre sistemas cartesianos, el módulo de un vector es invariante ($x'_i x'_i = x_i x_i$) y los coeficientes de la transformación satisfacen la condición de ortogonalidad $a_{ij} a_{ik} = \delta_{jk}$ [5, p. 139].
+* **Sistemas móviles**: Las ecuaciones de transformación pueden depender explícitamente del tiempo ($x_i = x_i(q_1, \dots, q_n, t)$) si el sistema de referencia está en movimiento [2, p. 11].
 
->
-> Calculamos las derivadas parciales de la energía cinética:
-> 
+3. Figura o diagrama
+[[Dare A. Wells-SCHAUM'S Lagrangian Dynamics-McGraw-Hill.pdf#page=11]]
+*Fig. 2-1*
+*Sistemas rectangulares bidimensionales y sus relaciones de transformación.*
+%%IMA-SRC | fuente: Dare A. Wells-SCHAUM'S Lagrangian Dynamics-McGraw-Hill.pdf | página: 11 | id: Fig. 2-1 | posición: superior
+justificación: Esta figura muestra la relación geométrica y los ángulos de rotación entre dos sistemas de coordenadas rectangulares con un origen común.%%
+
+[[Dare A. Wells-SCHAUM'S Lagrangian Dynamics-McGraw-Hill.pdf#page=12]]
+*Fig. 2-3*
+*Coordenadas cilíndricas $(\rho, \phi, z)$.*
+%%IMA-SRC | fuente: Dare A. Wells-SCHAUM'S Lagrangian Dynamics-McGraw-Hill.pdf | página: 12 | id: Fig. 2-3 | posición: centro
+justificación: Ilustra la definición geométrica de las coordenadas cilíndricas en relación con el sistema cartesiano.%%
+
+[[Dare A. Wells-SCHAUM'S Lagrangian Dynamics-McGraw-Hill.pdf#page=12]]
+*Fig. 2-4*
+*Coordenadas esféricas $(r, \theta, \phi)$.*
+%%IMA-SRC | fuente: Dare A. Wells-SCHAUM'S Lagrangian Dynamics-McGraw-Hill.pdf | página: 12 | id: Fig. 2-4 | posición: centro
+justificación: Representa la definición de las coordenadas polares esféricas y su relación con las componentes cartesianas.%%
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[scale=1.2]
+  % Ejes originales X1, Y1
+  \draw[thick, ->, >=stealth, teal] (0,0) -- (3,0) node[right] {$X_1$};
+  \draw[thick, ->, >=stealth, teal] (0,0) -- (0,3) node[above] {$Y_1$};
+  
+  % Ejes rotados X2, Y2
+  \draw[thick, ->, >=stealth, orange] (0,0) -- (30:3) node[right] {$X_2$};
+  \draw[thick, ->, >=stealth, orange] (0,0) -- (120:3) node[above] {$Y_2$};
+  
+  % Punto P
+  \fill[teal] (30:2) ++(120:1) circle (2pt) node[above right] {$P(x_1, y_1)$};
+  \draw[dashed, gray] (30:2) ++(120:1) -- (30:2) node[below] {$x_2$};
+  \draw[dashed, gray] (30:2) ++(120:1) -- (120:1) node[left] {$y_2$};
+  
+  % Angulo de rotacion \alpha
+  \draw[thick, teal!60] (0.8,0) arc (0:30:0.8) node[midway, right=1pt] {$\alpha$};
+  \draw[thick, teal!60] (0,0.8) arc (90:120:0.8) node[midway, above=1pt] {$\alpha$};
+\end{tikzpicture}
+\end{document}
+```
+
+4. Ejercicios resueltos
+##### Ej. Obtención de las ecuaciones de transformación para un sistema rectangular rotado en el plano
+Un sistema rectangular $(X_2, Y_2)$ tiene su origen coincidente con el sistema $(X_1, Y_1)$, pero sus ejes están rotados un ángulo constante $\alpha$ en sentido antihorario. Encontrar las ecuaciones de transformación que expresan las coordenadas de un punto en $(X_1, Y_1)$ en función de las coordenadas en $(X_2, Y_2)$ y verificar que la transformación es ortogonal.
+
+**Resolución:**
+Las coordenadas en el sistema $X_1, Y_1$ se relacionan geométricamente con las de $X_2, Y_2$ mediante:
 $$
 \begin{array}{rcl}
-> \dfrac{\partial T}{\partial \dot{r}} & = & m\dot{r} \\
-> \dfrac{d}{dt}\left(\dfrac{\partial T}{\partial \dot{r}}\right) & = & m\ddot{r} \\
-> \dfrac{\partial T}{\partial r} & = & mr\omega^2
-> \end{array}
+x_1 & = & x_2 \cos \alpha - y_2 \sin \alpha \\
+y_1 & = & x_2 \sin \alpha + y_2 \cos \alpha
+\end{array}
 $$
-
->
-> Sustituyendo en la ecuación de Lagrange con $Q_r = 0$ (sin fricción radial):
-> 
-$$
-m\ddot{r} - mr\omega^2 = 0 \implies \ddot{r} = r\omega^2
-$$
-
->
-> Esta ecuación diferencial describe la aceleración centrípeta que empuja la cuenta hacia el extremo exterior de la varilla giratoria.
->
-> ##### Ej. 2: Fuerza de reacción en una hélice cilíndrica
-> Una partícula de masa $m$ está restringida a moverse a lo largo de una hélice cilíndrica tallada sobre un cilindro de radio constante $r = R$ con la relación $z = b\phi$. Si no actúan fuerzas externas activas más que la gravedad en la dirección de $z$ ($F_z = -mg$), determine las componentes de la fuerza de reacción reactiva ($f_r, f_\phi, f_z$) en coordenadas cilíndricas.
->
-> **Resolución:**
-> En coordenadas cilíndricas $(r, \phi, z)$, las ecuaciones del movimiento con fuerzas reactivas de ligadura son:
-> 
+La matriz de transformación $\mathbf{A}$ asociada es:
 $$
 \begin{array}{rcl}
-> m(\ddot{r} - r\dot{\phi}^2) - F_r & = & f_r \\
-> m(r^2\ddot{\phi} + 2r\dot{r}\dot{\phi}) - rF_\phi & = & r f_\phi \\
-> m\ddot{z} - F_z + mg & = & f_z
-> \end{array}
+\mathbf{A} & = & \begin{pmatrix} \cos \alpha & -\sin \alpha \\ \sin \alpha & \cos \alpha \end{pmatrix}
+\end{array}
 $$
-
->
-> Dado que la partícula está obligada a permanecer en la trayectoria helicoidal con las condiciones de restricción:
-> 
-$$
-r = R \implies \dot{r} = \ddot{r} = 0
-$$
-
-> 
-$$
-z = b\phi \implies \ddot{z} = b\ddot{\phi}
-$$
-
->
-> Sustituyendo estas restricciones y las fuerzas activas ($F_r = 0, F_\phi = 0, F_z = -mg$) en las ecuaciones de movimiento, obtenemos de inmediato:
-> 
+Verificamos la condición de ortogonalidad del sistema aplicando $\mathbf{A}^T \mathbf{A} = \mathbf{I}$:
 $$
 \begin{array}{rcl}
-> f_r & = & -m R \dot{\phi}^2 \\
-> f_\phi & = & m R \ddot{\phi} \\
-> f_z & = & m b \ddot{\phi}
-> \end{array}
+\mathbf{A}^T \mathbf{A} & = & \begin{pmatrix} \cos \alpha & \sin \alpha \\ -\sin \alpha & \cos \alpha \end{pmatrix} \begin{pmatrix} \cos \alpha & -\sin \alpha \\ \sin \alpha & \cos \alpha \end{pmatrix} \\
+& = & \begin{pmatrix} \cos^2 \alpha + \sin^2 \alpha & -\cos \alpha \sin \alpha + \sin \alpha \cos \alpha \\ -\sin \alpha \cos \alpha + \cos \alpha \sin \alpha & \sin^2 \alpha + \cos^2 \alpha \end{pmatrix} \\
+& = & \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix} = \mathbf{I}
+\end{array}
 $$
 
->
-> Las componentes de la fuerza reactiva de ligadura se determinan de forma directa en términos de la evolución angular del sistema.
+##### Ej. Transformación a coordenadas cilíndricas y cálculo de la velocidad
+Expresar las coordenadas cartesianas $(x, y, z)$ de una partícula en términos de las coordenadas cilíndricas $(\rho, \phi, z)$ y determinar el cuadrado de la velocidad $\vec{v}^2 = \dot{x}^2 + \dot{y}^2 + \dot{z}^2$ en este sistema de coordenadas.
+
+**Resolución:**
+Las relaciones de transformación de coordenadas a cilíndricas son:
+$$
+\begin{array}{rcl}
+x & = & \rho \cos \phi \\
+y & = & \rho \sin \phi \\
+z & = & z
+\end{array}
+$$
+Derivando respecto al tiempo $t$ utilizando la regla de la cadena:
+$$
+\begin{array}{rcl}
+\dot{x} & = & \dot{\rho} \cos \phi - \rho \dot{\phi} \sin \phi \\
+\dot{y} & = & \dot{\rho} \sin \phi + \rho \dot{\phi} \cos \phi \\
+\dot{z} & = & \dot{z}
+\end{array}
+$$
+Elevando al cuadrado cada componente de la velocidad:
+$$
+\begin{array}{rcl}
+\dot{x}^2 & = & \dot{\rho}^2 \cos^2 \phi + \rho^2 \dot{\phi}^2 \sin^2 \phi - 2 \rho \dot{\rho} \dot{\phi} \cos \phi \sin \phi \\
+\dot{y}^2 & = & \dot{\rho}^2 \sin^2 \phi + \rho^2 \dot{\phi}^2 \cos^2 \phi + 2 \rho \dot{\rho} \dot{\phi} \cos \phi \sin \phi \\
+\dot{z}^2 & = & \dot{z}^2
+\end{array}
+$$
+Sumando miembro a miembro para obtener la velocidad al cuadrado:
+$$
+\begin{array}{rcl}
+\vec{v}^2 & = & \dot{x}^2 + \dot{y}^2 + \dot{z}^2 \\
+& = & \dot{\rho}^2 (\cos^2 \phi + \sin^2 \phi) + \rho^2 \dot{\phi}^2 (\sin^2 \phi + \cos^2 \phi) + \dot{z}^2 \\
+& = & \dot{\rho}^2 + \rho^2 \dot{\phi}^2 + \dot{z}^2
+\end{array}
+$$
+``````
+

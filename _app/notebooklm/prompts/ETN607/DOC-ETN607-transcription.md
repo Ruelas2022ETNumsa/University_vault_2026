@@ -20,7 +20,7 @@ Documentación del prompt de transcripción para ETN607 (Mecánica Clásica / La
 | Archivo | Rol | Estado |
 |---|---|---|
 | `ETN607-transcription_Av4.md` | Transcripción pura — bloques Cornell, figuras del apunte, IMA | en pruebas |
-| `ETN607-transcription_BCv3.md` | Complemento B/C — embed PDF++, IMA-SRC, TikZJax fallback | en pruebas |
+| `ETN607-transcription_BCv4.md` | Complemento B/C — ad-note 6 backticks, embed PDF++, IMA-SRC, TikZJax fallback | activo |
 
 > Los demás archivos (`v2`, `v3`, `v4`) son **legacy** — conservados como referencia. No usar.
 
@@ -34,7 +34,8 @@ Documentación del prompt de transcripción para ETN607 (Mecánica Clásica / La
 | v2 | 2026-08-13 | Adaptación a nueva notación NBLM (`\(...\)` / `\[...\]`) tras migración a Gemini 3 |
 | v3 | 2026-08-13 | Eliminadas instrucciones de delimitadores del prompt — resueltas por plugin + script. Referencia al Cornell clarificada. |
 | A-v4 | 2026-08-17 | Separación en dos prompts. A: solo transcripción — sin complemento ni referencias a libros fuente. Detección de figuras del apunte con bloque IMA. |
-| BC-v3 | 2026-08-17 | BC: complemento nivel B/C con embed PDF++ + IMA-SRC en `%% %%` + TikZJax fallback. Notebook separado con los 9 libros. ad-note con 5 backticks (en evaluación — puede revertirse a `> [!note]` si rompe ecuaciones). |
+| BC-v3 | 2026-08-17 | BC: complemento nivel B/C con embed PDF++ + IMA-SRC en `%% %%` + TikZJax fallback. Notebook separado con los 9 libros. Callout nativo `> [!note]`. |
+| BC-v4 | 2026-08-17 | Reemplazo de callout por `ad-note` (ebullient/obsidian-admonition). Bloque abre y cierra con **6 backticks** para permitir bloques de código internos (tikz) sin colisión. Workaround de script: ver nota abajo. |
 
 ---
 
@@ -74,7 +75,11 @@ Cada subtítulo de teoría se estructura en bloque Cornell. Ejemplos resueltos e
 - **Mensaje 1** — Complemento nivel B/C de un rango de subtítulos
 - **Mensaje 2** — Complemento nivel B/C de un concepto individual (prueba puntual)
 
-Cada subtítulo se estructura en bloque `ad-note` (5 backticks). Figuras con embed `[[]]` + IMA-SRC en `%% %%`. TikZJax como fallback si no hay figura.
+Cada subtítulo se estructura en bloque `ad-note` (6 backticks apertura/cierre). Figuras con embed `[[]]` + IMA-SRC en `%% %%`. TikZJax como fallback si no hay figura.
+
+> [!warning] Workaround — script `notebooklm_fix`
+> El script de corrección de ecuaciones (`main.py`) no procesa el contenido del bloque si los 6 backticks de apertura están intactos — los interpreta como fence cerrado.
+> **Solución:** anteponer `\` a los 6 backticks de apertura (`\``````ad-note`) antes de correr el script. Esto rompe el fence para el parser del script sin afectar el render en Obsidian. Restaurar luego si es necesario.
 
 ---
 
@@ -90,6 +95,7 @@ Cada subtítulo se estructura en bloque `ad-note` (5 backticks). Figuras con emb
 # galaxy-links
 [[_app/notebooklm/prompts/ETN607/ETN607-transcription_Av4.md]]
 [[ETN607-transcription_BCv3]]
+[[_app/notebooklm/prompts/ETN607/ETN607-transcription_BCv4.md]]
 [[_app/notebooklm/prompts/ETN607/ETN607-transcription-v3.md]]
 [[_app/notebooklm/prompts/ETN607/ETN607-transcription.md]]
 [[_app/notebooklm/guides/ETN607/ETN607_latex.md]]

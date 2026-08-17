@@ -109630,6 +109630,9 @@ radialmente
 restringida
 reactiva
 reactivas
+revertirse
+rotados
+rotacion
 notes
 notas
 nuevas
@@ -128262,6 +128265,7 @@ curvil
 consideramos
 centr
 cilindro
+conservados
 updated
 un
 universo
