@@ -10,24 +10,26 @@ blocked_by:
 ## Handoff
 
 **Última sesión:** 2026-08-17
-**Retomar desde:** probar prompt v3 en NotebookLM (notebook separado con los 9 libros + _library_ETN607.md)
-**Completado esta sesión:** pngquant instalado (zip manual, PATH), pruebas optimize 1 y 2 sin efecto en Alonso & Finn (escala de grises), Ctrl+F confirmado en Obsidian, ETN607-transcription-v4.md creado (solo transcripción), prompts.md v3 creado (complemento + embed PDF++)
-**Próximo paso:** probar prompt v3 en NotebookLM — mandar "desde subtítulo X hasta Y" y verificar formato de figura y desfase de numeración
+**Retomar desde:** probar ETN607-transcription-v4 en NotebookLM (detección de figuras del apunte) y probar prompt v3 de complemento
+**Completado esta sesión:** pngquant instalado, optimize 1 y 2 sin efecto (PDF en escala de grises), Ctrl+F confirmado, ETN607-transcription-v4.md creado (solo transcripción, sin complemento), prompts.md v3 creado y refinado (complemento B/C + embed PDF++ + admonition ad-note + TikZJax fallback + IMA-SRC en %% %%)
+**Próximo paso:** 1) probar v4 en notebook de transcripción — foco en detección de figuras del apunte y bloque IMA · 2) probar prompts.md v3 en notebook de complemento con un concepto individual (Mensaje 2)
 **Preguntas de cierre:** —
 
 ---
 
 ## Tareas
 
-- [ ] Verificar nombres de PDFs de libros ETN607 en vault vs nombres reportados por IMA-SRC
-- [ ] Probar embed básico `![[libro.pdf#page=N]]` manualmente en una nota de Obsidian
-- [ ] Probar si NotebookLM entrega el embed de forma separada (notebook duplicado, prompt simple)
-- [ ] Evaluar el problema de numeración: página impresa vs página del visor PDF
-- [ ] Documentar resultado de cada prueba en `chronicle.md`
-- [ ] Decidir si el embed convive con IMA-SRC o lo reemplaza
-- [ ] Script delta: descartado — reemplazado por flujo de búsqueda por etiqueta
-- [ ] Script búsqueda por etiqueta: diseñar e implementar — lista todas las coincidencias, usuario elige — fase pruebas CLI antes de integrar a Obsidian
-- [x] OCRmyPDF: instalado y probado (pruebas 1-3) — optimize 1 sin ahorro — pendiente optimize 2 con pngquant
+- [x] Verificar nombres de PDFs de libros ETN607 en vault vs nombres reportados por IMA-SRC — confirmados en prompts.md
+- [x] Probar embed básico `[[libro.pdf#page=N]]` manualmente — confirmado, usar `[[]]` sin `!`
+- [x] Probar si NotebookLM entrega el embed — sí, formato v3 funciona (prueba coordenadas generalizadas)
+- [x] Evaluar problema de numeración: página impresa vs visor — riesgo conocido, IMA-SRC queda como respaldo en `%% %%`
+- [ ] Documentar resultados de pruebas v4 y v3 en `chronicle.md` — pendiente tras pruebas
+- [x] Decidir si embed convive con IMA-SRC — conviven: embed visible, IMA-SRC oculto en `%% %%`
+- [x] Script delta: descartado — reemplazado por flujo de búsqueda por etiqueta
+- [ ] Script búsqueda por etiqueta: pendiente — fase pruebas CLI antes de integrar a Obsidian
+- [x] OCRmyPDF: instalado y probado (pruebas 1-5) — optimize 1 y 2 sin efecto en grises — Ctrl+F confirmado
+- [ ] Probar ETN607-transcription-v4 en notebook de transcripción — foco en detección de figuras del apunte
+- [ ] Probar prompts.md v3 en notebook de complemento — Mensaje 2 con concepto individual
 
 ---
 

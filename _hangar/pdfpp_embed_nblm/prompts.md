@@ -101,7 +101,7 @@ REGLAS:
 
 **Notas:** el embed usa `[[]]` sin `!` — no renderiza inline, evita que Obsidian se lentee. El bloque IMA-SRC queda como localizador de respaldo mientras el desfase de numeración no esté resuelto.
 
-```
+``````
 TAREA:
 Dado un rango de subtítulos o un concepto individual de ETN607 (Mecánica Aplicada),
 buscar en los libros fuente el complemento nivel B o C y las figuras relevantes.
@@ -135,7 +135,8 @@ FORMATO DE RESPUESTA POR SUBTÍTULO:
 
 ## [N. Subtítulo]
 
-`````note Complemento (Nivel B/C)
+`````ad-note
+title: Complemento (Nivel B/C)
 
 1. Definición formal
 Extraer del libro fuente la definición más clara y directa.
@@ -171,7 +172,6 @@ Si hay duda sobre la complejidad → omitir y dejar espacio para IMA manual.
 Si el ejercicio involucra un diagrama y no hay figura en el libro → TikZJax (ver Caso B).
 
 Si no hay figura ni diagrama aplicable → omitir sección 3.
-
 `````
 
 REGLAS GENERALES:
@@ -214,7 +214,8 @@ T5 Taylor-1to9 Cap.7 y 4 · Goldstein Cap.1-2
 T6 Taylor-1to9 Cap.7 · Goldstein Cap.1
 T7 Wells Cap.7
 T8 Goldstein Cap.4-5 · Taylor-10to16 Cap.10
-```
+
+``````
 
 ---
 

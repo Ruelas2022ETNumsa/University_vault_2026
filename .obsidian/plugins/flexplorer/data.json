@@ -22,7 +22,8 @@
         "Borrar",
         "Rubbish",
         "README.md",
-        "Untitled.md"
+        "Untitled.md",
+        "Untitled 1.md"
       ]
     },
     "MOC": {
@@ -1706,7 +1707,8 @@
         "ETN607-transcription-divisions.md",
         "ETN607-transcription-v2.md",
         "DOC-ETN607-transcription.md",
-        "ETN607-transcription-v3.md"
+        "ETN607-transcription-v3.md",
+        "ETN607-transcription-v4.md"
       ]
     },
     "_app/notebooklm/prompts/ETN607/ETN607-transcription.md": {
@@ -4050,6 +4052,14 @@
       "isHidden": false
     },
     "_PDF/ETN-607/Alonso & Finn-OCR-opt2.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN607/ETN607-transcription-v4.md": {
       "isPinned": false,
       "isHidden": false
     }

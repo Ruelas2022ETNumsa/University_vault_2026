@@ -9,7 +9,8 @@
 
 3. **Figura o diagrama**
 
-[[Dare A. Wells-SCHAUM'S Lagrangian Dynamics-McGraw-Hill.pdf#page=12]]
+![[Dare A. Wells-SCHAUM'S Lagrangian Dynamics-McGraw-Hill.pdf#page=23&rect=344,577,587,806|Dare A. Wells-SCHAUM'S Lagrangian Dynamics-McGraw-Hill, p.12]]
+
 *Fig. 2-5*
 *Representación de ejes oblicuos $Q_1, Q_2$ y sus respectivas coordenadas en relación con un sistema cartesiano rectangular.*
 %%IMA-SRC | fuente: Dare A. Wells-SCHAUM'S Lagrangian Dynamics-McGraw-Hill.pdf | página: 12 | id: Fig. 2-5 | posición: inferior de la página
