@@ -396,7 +396,7 @@
     {
       "id": "72ny8o8zq4",
       "platform_specific_commands": {
-        "default": "py \"{{vault_path}}\\.obsidian\\scripts\\python\\pdf_figure_search\\main.py\" \"{{_sigla}}\" \"{{_etiqueta}}\""
+        "default": "py \"{{vault_path}}\\.obsidian\\scripts\\python\\pdf_figure_search\\main.py\" \"{{_sigla}}\" \"{{_etiqueta}}\" \"{{_nblm_ref}}\""
       },
       "shells": {},
       "alias": "PDF — buscar figura",
@@ -542,6 +542,14 @@
           "default_value": "",
           "target_variable_id": "11tuy56kjj",
           "required": true
+        },
+        {
+          "type": "multi-line-text",
+          "label": "Ref NotebookLM (link + etiqueta — opcional)",
+          "description": "",
+          "default_value": "",
+          "target_variable_id": "gzehkv6qgb",
+          "required": false
         }
       ],
       "execute_button_text": "Buscar"
@@ -585,6 +593,12 @@
     {
       "id": "11tuy56kjj",
       "name": "etiqueta",
+      "description": "",
+      "default_value": null
+    },
+    {
+      "id": "gzehkv6qgb",
+      "name": "nblm_ref",
       "description": "",
       "default_value": null
     }

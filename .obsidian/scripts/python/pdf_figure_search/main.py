@@ -3,12 +3,19 @@ pdf_figure_search/main.py
 Busca una etiqueta de figura en los PDFs de una materia y devuelve
 una lista de links PDF++ lista para pegar en Obsidian.
 
-Uso: py main.py <sigla> <etiqueta>
-Ejemplo: py main.py ETN607 "4.3"
-         py main.py ETN-607 "Fig. 2-4"
+Uso:
+  py main.py <sigla> <etiqueta> [nblm_ref]
+
+  sigla     — carpeta en _PDF (ej: ETN607 o ETN-607)
+  etiqueta  — fallback si no viene nblm_ref (ej: "Fig. 2-4" o "4.3")
+  nblm_ref  — bloque pegado desde NotebookLM (opcional, multiline):
+              [[Dare A. Wells.pdf#page=11]]Fig. 2-1
+              o con salto de linea entre el link y la etiqueta
+              Si viene → extrae PDF y etiqueta de ahi, ignora <etiqueta>
 """
 
 import os
+import re
 import sys
 import subprocess
 
@@ -18,19 +25,61 @@ except ImportError:
     print("PyMuPDF no instalado. Ejecuta: py -m pip install pymupdf")
     sys.exit(1)
 
-# ── Configuración ────────────────────────────────────────────────────────────
+# ── Configuracion ─────────────────────────────────────────────────────────────
 
-VAULT_PATH = r"E:\University_vault_2026"
-PDF_ROOT   = os.path.join(VAULT_PATH, "_PDF")
+VAULT_PATH    = r"E:\University_vault_2026"
+PDF_ROOT      = os.path.join(VAULT_PATH, "_PDF")
 SPLIT_PATTERN = r"-\d+to\d+"
 
 
-# ── Funciones ────────────────────────────────────────────────────────────────
+# ── Parseo de referencia NotebookLM ──────────────────────────────────────────
+
+def parse_nblm_ref(ref: str):
+    """
+    Extrae (pdf_name, label, hint_page) desde el bloque pegado de NotebookLM.
+
+    Formatos soportados:
+      [[Dare A. Wells.pdf#page=11]]Fig. 2-1
+      [[Dare A. Wells.pdf#page=11]]
+      Fig. 2-1
+      [Dare A. Wells.pdf > page=11](Dare A. Wells.pdf#page=11)Fig. 2-1
+
+    Retorna (pdf_name, label, hint_page) — hint_page puede ser None.
+    """
+    ref = ref.strip()
+    if not ref:
+        return None, None, None
+
+    pdf_name  = None
+    label     = None
+    hint_page = None
+
+    # Extraer nombre de PDF y page hint desde [[ ]] con #page=N
+    pdf_match = re.search(r'\[\[([^\]]+\.pdf)(?:#page=(\d+))?\]\]', ref)
+    if not pdf_match:
+        pdf_match = re.search(r'\(([^)]+\.pdf)(?:#page=(\d+))?\)', ref)
+    if pdf_match:
+        pdf_name = pdf_match.group(1).strip()
+        if pdf_match.group(2):
+            hint_page = int(pdf_match.group(2))
+
+    # Extraer etiqueta
+    label_match = re.search(
+        r'(Fig\.?\s*\d[\d\-\.]*|fig\.?\s*\d[\d\-\.]*|Figure\s*\d[\d\-\.]*|Figura\s*\d[\d\-\.]*)',
+        ref
+    )
+    if label_match:
+        label = label_match.group(1).strip()
+
+    return pdf_name, label, hint_page
+
+
+# ── Funciones generales ───────────────────────────────────────────────────────
 
 def build_variants(label: str):
-    import re
-    num = re.sub(r"^(figura|figure|fig\.?)\s*", "", label.strip(), flags=re.IGNORECASE).strip()
-    prefixes = [
+    """Genera todas las variantes de busqueda a partir de la etiqueta."""
+    num = re.sub(r'^(figura|figure|fig\.?)\s*', '', label.strip(), flags=re.IGNORECASE).strip()
+    variants = [
         f"Fig. {num}",
         f"Fig {num}",
         f"fig. {num}",
@@ -38,10 +87,11 @@ def build_variants(label: str):
         f"Figure {num}",
         f"Figura {num}",
     ]
-    return prefixes, num
+    return variants, num
 
 
 def get_pdf_folder(sigla: str):
+    """Busca la carpeta en _PDF que coincida con la sigla."""
     candidates = [
         sigla,
         sigla[:3] + "-" + sigla[3:],
@@ -58,7 +108,7 @@ def list_pdfs(folder: str):
 
 
 def group_split_pdfs(pdf_list: list):
-    import re
+    """Agrupa PDFs partidos (1to9, 10to16) bajo su nombre base."""
     groups = {}
     for pdf in sorted(pdf_list):
         base = re.sub(SPLIT_PATTERN, "", pdf, flags=re.IGNORECASE)
@@ -70,29 +120,65 @@ def group_split_pdfs(pdf_list: list):
     return groups
 
 
+def find_parts_for_pdf(pdf_name: str, groups: dict):
+    """
+    Dado un nombre de PDF (que puede o no tener sufijo -1to9 etc.),
+    devuelve la lista de archivos reales donde buscar.
+    Busqueda case-insensitive y tolerante al sufijo de particion.
+    """
+    name_lower = pdf_name.lower()
+
+    # Coincidencia exacta primero
+    for base, parts in groups.items():
+        for part in parts:
+            if part.lower() == name_lower:
+                # Devolver todos los parts del mismo grupo
+                return parts
+
+    # Coincidencia por nombre base (sin sufijo)
+    name_stripped = re.sub(SPLIT_PATTERN, "", name_lower, flags=re.IGNORECASE)
+    name_stripped = re.sub(r"-+\.", ".", name_stripped)
+    name_stripped = re.sub(r"-+", "-", name_stripped).strip("-")
+
+    for base, parts in groups.items():
+        base_lower = base.lower()
+        if base_lower == name_stripped or name_stripped in base_lower:
+            return parts
+
+    return None
+
+
 def search_in_pdf(pdf_path: str, variants: list):
+    """Busca variantes en el PDF. Retorna lista de paginas (1-indexed)."""
     found_pages = []
     try:
         doc = fitz.open(pdf_path)
         for page_num in range(len(doc)):
-            page = doc[page_num]
-            text = page.get_text("text")
+            text = doc[page_num].get_text("text")
             for v in variants:
                 if v in text:
                     found_pages.append(page_num + 1)
                     break
         doc.close()
-    except Exception as e:
-        pass  # PDF ilegible — se reporta como sin texto
+    except Exception:
+        pass
     return found_pages
 
 
+def rank_by_proximity(pages: list, hint: int, top: int = 3):
+    """
+    Ordena las paginas por proximidad al hint (numero impreso de NotebookLM).
+    Retorna los `top` candidatos con su error:
+    [(page, error), ...]
+    """
+    scored = sorted(set(pages), key=lambda p: abs(p - hint))
+    return [(p, abs(p - hint)) for p in scored[:top]]
+
+
 def ocr_command(pdf_path: str) -> str:
-    name = os.path.basename(pdf_path)
+    name   = os.path.basename(pdf_path)
     stem, ext = os.path.splitext(name)
-    out_name = f"{stem}_OCR{ext}"
-    folder = os.path.dirname(pdf_path)
-    out_path = os.path.join(folder, out_name)
+    out_path  = os.path.join(os.path.dirname(pdf_path), f"{stem}_OCR{ext}")
     return f'py -m ocrmypdf -l spa+eng --force-ocr "{pdf_path}" "{out_path}"'
 
 
@@ -102,41 +188,55 @@ def format_link(pdf_name: str, page: int) -> str:
 
 def copy_to_clipboard(text: str):
     try:
-        # Here-string de PowerShell con @' '@ — maneja apóstrofes y caracteres especiales
         ps = f"@'\r\n{text}\r\n'@ | Set-Clipboard"
         subprocess.run(
             ["powershell", "-NoProfile", "-Command", ps],
-            check=True,
-            capture_output=True
+            check=True, capture_output=True
         )
         return True
     except Exception:
         return False
 
 
-# ── Main ─────────────────────────────────────────────────────────────────────
+# ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
-    # Argumentos desde Shell Commands
-    if len(sys.argv) < 3:
-        error = "[pdf_figure_search] Faltan argumentos: sigla y etiqueta."
-        print(error, file=sys.stderr)
+    if len(sys.argv) < 2:
+        print("[pdf_figure_search] Falta la sigla.", file=sys.stderr)
         sys.exit(1)
 
-    sigla  = sys.argv[1].strip()
-    label  = sys.argv[2].strip()
+    sigla    = sys.argv[1].strip()
+    label    = sys.argv[2].strip() if len(sys.argv) > 2 else ""
+    nblm_ref = sys.argv[3].strip() if len(sys.argv) > 3 else ""
 
-    # 1. Carpeta de PDFs
+    # ── Modo: referencia NotebookLM o busqueda general ────────────────────────
+    target_pdf = None
+    hint_page  = None
+
+    if nblm_ref:
+        parsed_pdf, parsed_label, parsed_page = parse_nblm_ref(nblm_ref)
+        if parsed_label:
+            label = parsed_label
+        if parsed_pdf:
+            target_pdf = parsed_pdf
+        if parsed_page:
+            hint_page = parsed_page
+
+    if not label:
+        print("[pdf_figure_search] No se pudo determinar la etiqueta a buscar.", file=sys.stderr)
+        sys.exit(1)
+
+    # ── Carpeta de PDFs ───────────────────────────────────────────────────────
     folder = get_pdf_folder(sigla)
     if not folder:
         disponibles = ', '.join(os.listdir(PDF_ROOT))
         print(f"[pdf_figure_search] Carpeta '{sigla}' no encontrada. Disponibles: {disponibles}", file=sys.stderr)
         sys.exit(1)
 
-    # 2. Variantes de búsqueda
+    # ── Variantes ─────────────────────────────────────────────────────────────
     variants, num = build_variants(label)
 
-    # 3. PDFs y grupos
+    # ── PDFs a buscar ─────────────────────────────────────────────────────────
     pdf_list = list_pdfs(folder)
     if not pdf_list:
         print(f"[pdf_figure_search] No hay PDFs en {folder}", file=sys.stderr)
@@ -144,53 +244,81 @@ def main():
 
     groups = group_split_pdfs(pdf_list)
 
-    # 4. Buscar
-    results  = []   # (pdf_file, page)
-    no_text  = []   # (base_name, [parts])
+    if target_pdf:
+        # Modo selectivo — solo el PDF indicado por NotebookLM
+        parts = find_parts_for_pdf(target_pdf, groups)
+        if not parts:
+            print(f"[pdf_figure_search] PDF '{target_pdf}' no encontrado en {folder}.", file=sys.stderr)
+            sys.exit(1)
+        search_groups = {target_pdf: parts}
+    else:
+        # Modo general — todos los PDFs
+        search_groups = groups
 
-    for base_name, parts in groups.items():
+    # ── Buscar ────────────────────────────────────────────────────────────────
+    results = []   # (pdf_file, page, error)  error=None si no hay hint
+    no_text = []   # (base_name, [parts])
+
+    for base_name, parts in search_groups.items():
         group_found = []
         for part in parts:
             pdf_path = os.path.join(folder, part)
             pages = search_in_pdf(pdf_path, variants)
-            for p in pages:
-                group_found.append((part, p))
+            if pages:
+                if hint_page is not None:
+                    # Modo proximidad — top 3 mas cercanos al hint
+                    ranked = rank_by_proximity(pages, hint_page, top=3)
+                    for p, err in ranked:
+                        group_found.append((part, p, err))
+                else:
+                    # Modo general — todas las paginas
+                    for p in pages:
+                        group_found.append((part, p, None))
         if not group_found:
             no_text.append((base_name, parts))
         else:
             results.extend(group_found)
 
-    # 5. Construir salida
+    # ── Construir salida ──────────────────────────────────────────────────────
     lines = []
 
+    if hint_page and target_pdf:
+        lines.append(f"> Figura {num} en {target_pdf} — top 3 por proximidad a page={hint_page} (NLM)")
+    elif target_pdf:
+        lines.append(f"> Figura {num} en {target_pdf}")
+    else:
+        lines.append(f"> Figura {num} — todos los PDFs")
+    lines.append("")
+
     if results:
-        lines.append(f"> Figura {num} — empezá por la última coincidencia de cada grupo.")
-        lines.append("")
-        for pdf_file, page in results:
-            lines.append(format_link(pdf_file, page))
+        for pdf_file, page, err in results:
+            err_str = f"  ← error {err}" if err is not None else ""
+            lines.append(f"{format_link(pdf_file, page)}{err_str}")
         lines.append("")
 
     if no_text:
-        lines.append("> No encontrado en los siguientes PDFs (posiblemente sin capa de texto):")
+        lines.append("> No encontrado (posiblemente sin capa de texto):")
         lines.append("")
         for base_name, parts in no_text:
             for part in parts:
                 pdf_path = os.path.join(folder, part)
                 lines.append(f"[[{part}]]")
-                lines.append(f"```sh")
+                lines.append("```sh")
                 lines.append(ocr_command(pdf_path))
-                lines.append(f"```")
+                lines.append("```")
                 lines.append("")
-        lines.append("> Corré el comando en shell, luego volvé a ejecutar el script.")
+        lines.append("> Corre el comando en shell, luego vuelve a ejecutar el script.")
 
     output = "\n".join(lines)
 
-    # 6. Copiar al portapapeles
+    # ── Portapapeles ──────────────────────────────────────────────────────────
     ok = copy_to_clipboard(output)
 
-    # 7. Notificación stdout (Shell Commands puede mostrarlo o ignorarlo)
     if ok:
-        print(f"OK: Figura {num} - {len(results)} resultado(s) copiados al portapapeles.")
+        n = len(results)
+        modo = f"en {target_pdf}" if target_pdf else "en todos los PDFs"
+        hint_str = f" (hint page={hint_page})" if hint_page else ""
+        print(f"OK: Figura {num} {modo}{hint_str} - {n} candidato(s) copiados al portapapeles.")
     else:
         print(output)
 
