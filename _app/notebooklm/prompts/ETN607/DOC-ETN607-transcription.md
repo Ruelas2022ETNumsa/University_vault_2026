@@ -6,6 +6,7 @@ audience: [usuario, claude]
 tags: [beacon, notebooklm, ETN607, infraestructura, prompts]
 date_created: 2026-08-13
 date_updated: 2026-08-17
+reviewed: 2026-08-17
 status: activo
 ---
 
@@ -20,7 +21,7 @@ Documentación del prompt de transcripción para ETN607 (Mecánica Clásica / La
 | Archivo | Rol | Estado |
 |---|---|---|
 | `ETN607-transcription_Av4.md` | Transcripción pura — bloques Cornell, figuras del apunte, IMA | en pruebas |
-| `ETN607-transcription_BCv4.md` | Complemento B/C — ad-note 6 backticks, embed PDF++, IMA-SRC, TikZJax fallback | activo |
+| `ETN607-transcription_BCv4.md` | Complemento B/C — ad-note 6 backticks, embed PDF++, IMA-SRC, TikZJax fallback | probado ✅ |
 
 > Los demás archivos (`v2`, `v3`, `v4`) son **legacy** — conservados como referencia. No usar.
 
@@ -34,8 +35,7 @@ Documentación del prompt de transcripción para ETN607 (Mecánica Clásica / La
 | v2 | 2026-08-13 | Adaptación a nueva notación NBLM (`\(...\)` / `\[...\]`) tras migración a Gemini 3 |
 | v3 | 2026-08-13 | Eliminadas instrucciones de delimitadores del prompt — resueltas por plugin + script. Referencia al Cornell clarificada. |
 | A-v4 | 2026-08-17 | Separación en dos prompts. A: solo transcripción — sin complemento ni referencias a libros fuente. Detección de figuras del apunte con bloque IMA. |
-| BC-v3 | 2026-08-17 | BC: complemento nivel B/C con embed PDF++ + IMA-SRC en `%% %%` + TikZJax fallback. Notebook separado con los 9 libros. Callout nativo `> [!note]`. |
-| BC-v4 | 2026-08-17 | Reemplazo de callout por `ad-note` (ebullient/obsidian-admonition). Bloque abre y cierra con **6 backticks** para permitir bloques de código internos (tikz) sin colisión. Workaround de script: ver nota abajo. |
+| BC-v4 | 2026-08-17 | BC: complemento nivel B/C con embed PDF++ + IMA-SRC en `%% %%` + TikZJax fallback. Reemplazo de callout nativo por `ad-note` (ebullient/obsidian-admonition). Bloque abre y cierra con **6 backticks** para permitir bloques de código internos (tikz) sin colisión. Workaround de script: ver nota abajo. **Probado y comprobado.** |
 
 ---
 
@@ -71,7 +71,7 @@ Documentación del script: `_app/shellcommands/shellcmd_NBLM_fix.md`
 
 Cada subtítulo de teoría se estructura en bloque Cornell. Ejemplos resueltos e IMA van fuera del Cornell.
 
-**ETN607-transcription_BCv3** — dos mensajes:
+**ETN607-transcription_BCv4** — dos mensajes:
 - **Mensaje 1** — Complemento nivel B/C de un rango de subtítulos
 - **Mensaje 2** — Complemento nivel B/C de un concepto individual (prueba puntual)
 
@@ -94,7 +94,6 @@ Cada subtítulo se estructura en bloque `ad-note` (6 backticks apertura/cierre).
 %%
 # galaxy-links
 [[_app/notebooklm/prompts/ETN607/ETN607-transcription_Av4.md]]
-[[ETN607-transcription_BCv3]]
 [[_app/notebooklm/prompts/ETN607/ETN607-transcription_BCv4.md]]
 [[_app/notebooklm/prompts/ETN607/ETN607-transcription-v3.md]]
 [[_app/notebooklm/prompts/ETN607/ETN607-transcription.md]]
