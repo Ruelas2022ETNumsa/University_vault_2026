@@ -1710,7 +1710,8 @@
         "ETN607-transcription-v3.md",
         "ETN607-transcription-v4.md",
         "ETN607-transcription_Av4.md",
-        "ETN607-transcription_BCv3.md"
+        "ETN607-transcription_BCv3.md",
+        "ETN607-transcription_BCv4.md"
       ]
     },
     "_app/notebooklm/prompts/ETN607/ETN607-transcription.md": {
@@ -4070,6 +4071,10 @@
       "isHidden": false
     },
     "_app/notebooklm/prompts/ETN607/ETN607-transcription_BCv3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN607/ETN607-transcription_BCv4.md": {
       "isPinned": false,
       "isHidden": false
     }
