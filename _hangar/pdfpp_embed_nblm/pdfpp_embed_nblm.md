@@ -25,6 +25,7 @@ blocked_by:
 - [ ] Evaluar el problema de numeración: página impresa vs página del visor PDF
 - [ ] Documentar resultado de cada prueba en `chronicle.md`
 - [ ] Decidir si el embed convive con IMA-SRC o lo reemplaza
+- [ ] Script delta: calcular diferencia página impresa vs visor por cada PDF de ETN-607 — discutir diseño antes de implementar
 
 ---
 

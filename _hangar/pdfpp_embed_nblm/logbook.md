@@ -44,7 +44,21 @@ Explorar si NotebookLM puede generar automáticamente un link embed de PDF++ que
 
 ## Pendientes futuros
 
-- **Script delta de numeración:** calcular la diferencia entre el número de página impreso en el libro y el número real del visor PDF (delta = visor − impreso). Si el delta es consistente por archivo, se puede corregir automáticamente el embed. Evaluar si vale la pena según resultados de las pruebas.
+- **Script delta de numeración:** descartado para PDFs con texto seleccionable — reemplazado por flujo de búsqueda por etiqueta (ver abajo). Para PDFs sin texto seleccionable (escaneados) no hay solución automática — caso borde, minoría.
+
+## Flujo resuelto — búsqueda por etiqueta
+
+Para PDFs con texto seleccionable en Obsidian, el flujo óptimo es:
+
+1. Copiar etiqueta entregada por NotebookLM (ej: `Figure 4.3`)
+2. Abrir el enlace `[[libro.pdf#page=N]]` en Obsidian
+3. `Ctrl+F` en el visor PDF
+4. Pegar la etiqueta — PDF++ navega directo a la figura
+5. Seleccionar el área con PDF++ (rectangular selection → genera `&rect=`)
+6. Pegar en la nota reemplazando el link y la etiqueta
+
+Resultado final en la nota: `![[libro.pdf#page=N&rect=x1,y1,x2,y2]]`
+Ventaja: el número de página del visor se resuelve solo — PDF++ lo genera al hacer la selección.
 - **PDFs en vault:** Los libros de ETN607 deben estar en `_PDF\ETN-607\` con nombres consistentes con lo que IMA-SRC reporta como `fuente`. Por el momento la carpeta está vacía.
 - **Límite del prompt v3:** 9985/10000 chars — sin margen para agregar instrucciones al prompt existente. Decisión tomada: no se modifica el prompt v3, se prueba de forma separada.
 
