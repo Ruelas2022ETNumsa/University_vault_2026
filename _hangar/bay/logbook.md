@@ -16,7 +16,7 @@ date_updated: 2026-08-02
 
 |     Worker     | Status | Estamina | Proyecto activo                                   |   Fecha   | Wake  | Recarga |
 | :------------: | :----: | :------: | :------------------------------------------------ | :-------: | :---: | :-----: |
-| [[alx_hot.md]] |   ❌    |    🟡    | Sistema consulta móvil via Drive MCP              |           |       |         |
+| [[alx_hot.md]] |   ❌    |    🔴    | Sistema consulta móvil via Drive MCP              | 2026-8-17 |       |  20:25  |
 |  [[krajo.md]]  |   ❌    |    🟢    | Implementación física `_hangar/`                  |           |       |         |
 | [[alx_gml.md]] |   ❌    |    🟢    | Sistema de links, sync y organización de carpetas |           |       |         |
 | [[alxrul.md]]  |   ✔    |    🔴    | —                                                 | 2026-8-17 | 11:00 |  16:00  |

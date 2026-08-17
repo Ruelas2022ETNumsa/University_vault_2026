@@ -8888,6 +8888,7 @@ tessdata
 tridimensional
 tallada
 trayectoria
+tolera
 ToDo
 Templater
 Text
@@ -37031,6 +37032,9 @@ PaMRQo
 PNxc
 Proyecciones
 POSIBLES
+Parsea
+PyMuPDF
+Parseo
 del
 date
 de
@@ -81287,6 +81291,7 @@ szKoZ
 sHVW
 sRSh
 suspende
+selectiva
 vault
 vil
 ver
@@ -100281,6 +100286,7 @@ alambre
 admonition
 alarga
 anteponer
+ascendente
 related
 recomendados
 ribbon
@@ -109638,6 +109644,8 @@ reactivas
 revertirse
 rotados
 rotacion
+ranking
+reenv
 notes
 notas
 nuevas
@@ -128272,6 +128280,7 @@ centr
 cilindro
 conservados
 colisi
+candidatos
 updated
 un
 universo
@@ -193436,6 +193445,7 @@ Oqif
 OoyD
 OrGRFCpzD
 Obnm
+Ordena
 Auto
 Annotator
 Autocompletado
@@ -211187,6 +211197,8 @@ pdfpp
 paletas
 parafrasear
 peta
+proximidad
+partidos
 min
 mica
 movimiento
@@ -221358,6 +221370,7 @@ mrnQ
 mZEZ
 mMfh
 masas
+multiline
 YAML
 Ya
 You
@@ -267397,6 +267410,7 @@ LRl
 LsVW
 Lbfd
 Localizador
+Localiza
 links
 las
 listar
@@ -305687,6 +305701,7 @@ RFRXf
 ReUYx
 RwFD
 Reemplazo
+Ranking
 Hider
 Hace
 Herramientas
@@ -322071,6 +322086,7 @@ fiBq
 fssp
 features
 fines
+frentes
 haya
 hace
 hacer
@@ -330600,6 +330616,7 @@ hSEC
 hwAq
 hdVr
 helicoidal
+hint
 que
 quedan
 queda

@@ -34,3 +34,9 @@ Formato por entrada:
 **Resultado:** ✅ Ctrl+F encuentra texto correctamente
 **Veredicto:** ok
 **Notas:** flujo OCR confirmado para PDFs escaneados en escala de grises. La capa de texto es funcional para búsqueda en Obsidian.
+
+### 2026-08-17 — creacion del script 
+**Objetivo:**  la creacion del script (E:\University_vault_2026\_app\shellcommands\shellcmd_pdf_figure_search.md) simplifica la busqueda de la imagen
+**Resultado:** muy bueno
+**Veredicto:** ok
+**Notas:** se esta revisando la posibilidad de mejorar el script a una version 2 (la version 1 es bueno paro los datos ingresados pueden ser mejoradas)

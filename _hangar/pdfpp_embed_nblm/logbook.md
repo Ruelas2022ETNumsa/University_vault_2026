@@ -2,7 +2,7 @@
 galaxy_body: logbook
 scope: pdfpp_embed_nblm
 status: on-track
-date_updated: 2026-08-16
+date_updated: 2026-08-17
 ---
 
 ## Visión general
@@ -14,9 +14,9 @@ Explorar si NotebookLM puede generar automáticamente un link embed de PDF++ que
 ## Estado actual
 
 **Salud:** on-track
-**Resumen:** Idea definida y documentada. Sin pruebas realizadas aún.
-**Último avance:** Definición del flujo completo y análisis de features de PDF++. Conversión de ship a carrier.
-**Próximo hito:** Primera prueba de embed básico en Obsidian + primera prueba en NotebookLM con notebook duplicado.
+**Resumen:** Script `pdf_figure_search` v1 creado, probado e integrado en Shell Commands. Problema de numeración de páginas resuelto via ranking por error mínimo. OCRmyPDF integrado como fallback automático en el script. Pendiente: pruebas de prompts v4 y BCv4 en NotebookLM.
+**Último avance:** Script v1 funcional — búsqueda por etiqueta con 6 variantes, ranking top 3 por proximidad al hint de NLM, comando OCR automático para PDFs sin texto.
+**Próximo hito:** Probar `ETN607-transcription_Av4` en notebook de transcripción (detección de figuras del apunte) y `BCv4` con Mensaje 2 (concepto individual).
 
 ---
 
@@ -27,27 +27,32 @@ Explorar si NotebookLM puede generar automáticamente un link embed de PDF++ que
 | `pdfpp_embed_nblm.md` | tsk | — | archivo de trabajo activo |
 | `logbook.md` | logbook | — | este archivo — README histórico del proyecto |
 | `chronicle.md` | chronicle | — | registro cronológico de pruebas |
+| `ocrmypdf-install.md` | dropship | activo | instalación y config de OCRmyPDF |
 | `prompts.md` | dropship | activo | prompts de prueba para NotebookLM |
+| `[[shellcmd_pdf_figure_search]]` | doc | activo | script v1 — búsqueda por etiqueta con ranking por error mínimo |
 
 ---
 
 ## Hitos
 
 - 2026-08-16 — definición del flujo completo y análisis de PDF++ features. Carrier creado.
+- 2026-08-17 — OCRmyPDF instalado y probado (5 pruebas). Ctrl+F confirmado en Obsidian.
+- 2026-08-17 — prompts BCv4 y Av4 creados. BCv4 probado y comprobado.
+- 2026-08-17 — script `pdf_figure_search` v1 creado, probado e integrado en Shell Commands. Problema de numeración resuelto.
 
 ---
 
 ## Riesgos y dependencias
 
-- **Numeración de páginas:** NotebookLM entrega el número impreso en el libro, no el número que el visor PDF cuenta. PDF++ usa el número del visor. El desfase puede variar por PDF (portada, índice, etc.). Sin resolver. Ver pendiente de script delta abajo.
-- **[[]] vs ![[]]:** el embed `![[]]` renderiza la página inline en Obsidian pero es lento. `[[]]` abre el PDF en otra ventana al hacer click — más liviano para navegar. Confirmado en prueba: usar `[[]]` en los prompts.
+- **Numeración de páginas:** ~~Sin resolver~~ **Resuelto** — el script calcula `error = |página_visor - hint_page|` y devuelve los 3 candidatos con menor error. El de error 0 es coincidencia exacta; los siguientes cubren desfase por portada/índice.
+- **[[]] vs ![[]]:** confirmado — usar `[[]]` sin `!` en los prompts. Más liviano, abre en otra ventana.
 
 ## Pendientes futuros
 
-- **Script delta de numeración:** descartado para PDFs con texto seleccionable — reemplazado por flujo de búsqueda por etiqueta (ver abajo). Para PDFs sin texto seleccionable (escaneados) no hay solución automática — caso borde, minoría.
-- **Script búsqueda por etiqueta — múltiples coincidencias:** el script lista todas las páginas donde aparece la etiqueta (ej: `Figure 4.3`) y el usuario elige. El usuario iniciará la búsqueda por la última coincidencia, que suele ser donde la figura está físicamente.
-- **Script búsqueda por etiqueta — integración Obsidian:** pendiente para después de fase de pruebas por línea de comandos. No se agrega a Shell Commands hasta confirmar que funciona.
-- **OCRmyPDF — integración Obsidian:** ídem — primero pruebas por línea de comandos, luego evaluar integración con Shell Commands si pasa la fase de pruebas.
+- **Script v2 — campo NLM obligatorio:** el campo `etiqueta` desaparece como campo separado. El bloque completo de NLM (link markdown + etiqueta en línea siguiente) será el único input. La etiqueta se extrae siempre del bloque.
+- **Script búsqueda por etiqueta — múltiples coincidencias:** resuelto por ranking de error mínimo — cerrado.
+- **Script búsqueda por etiqueta — integración Obsidian:** completado en v1 via Shell Commands.
+- **OCRmyPDF — integración Obsidian:** integrado como fallback automático en el script — entrega el comando listo en el portapapeles cuando no encuentra texto.
 
 ## Herramientas disponibles
 
@@ -82,9 +87,11 @@ Ventaja: el número de página del visor se resuelve solo — PDF++ lo genera al
 
 | Fecha | Decisión | Motivo |
 | ----- | -------- | ------ |
-| 2026-08-16 | No modificar el prompt v3 — probar el embed de forma separada con notebook duplicado | El prompt ya está al límite de caracteres |
+| 2026-08-16 | No modificar el prompt v3 — probar el embed de forma separada con notebook duplicado | El prompt ya estaba al límite de caracteres |
 | 2026-08-16 | IMA-SRC sigue siendo el flujo principal — este carrier es una mejora opcional | Si el embed no funciona bien, IMA-SRC no se toca |
 | 2026-08-16 | Pendiente a futuro: duplicar el notebook — uno para transcripción, otro para el embed y complementos | Buena idea registrada, no es prioridad actual |
+| 2026-08-17 | Script delta de numeración descartado — reemplazado por ranking de error mínimo en el script | Más simple y efectivo |
+| 2026-08-17 | OCRmyPDF integrado como fallback automático en el script — no como paso manual separado | Reduce fricción: el comando aparece directamente en el portapapeles |
 
 > [!note]- Descartadas
 > - Redibujo automático con Gemini — descartado por complejidad; pruebas en `_hangar/IMA_NBLM/`

@@ -14,6 +14,14 @@ La posición de un punto $p$ puede ser localizada por varios conjuntos de magnit
 3. Figura o diagrama
 [[Dare A. Wells-SCHAUM'S Lagrangian Dynamics-McGraw-Hill.pdf#page=11]]
 *Fig. 2-1*
+
+> Figura 2-1 en Dare A. Wells-SCHAUM'S Lagrangian Dynamics-McGraw-Hill.pdf — top 3 por proximidad a page=11 (NLM)
+
+[[Dare A. Wells-SCHAUM'S Lagrangian Dynamics-McGraw-Hill.pdf#page=21]]  ← error 10
+[[Dare A. Wells-SCHAUM'S Lagrangian Dynamics-McGraw-Hill.pdf#page=24]]  ← error 13
+[[Dare A. Wells-SCHAUM'S Lagrangian Dynamics-McGraw-Hill.pdf#page=25]]  ← error 14
+
+
 *Sistemas rectangulares bidimensionales y sus relaciones de transformación.*
 %%IMA-SRC | fuente: Dare A. Wells-SCHAUM'S Lagrangian Dynamics-McGraw-Hill.pdf | página: 11 | id: Fig. 2-1 | posición: superior
 justificación: Esta figura muestra la relación geométrica y los ángulos de rotación entre dos sistemas de coordenadas rectangulares con un origen común.%%
