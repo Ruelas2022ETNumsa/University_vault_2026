@@ -1,9 +1,7 @@
-%%
-status: pendiente-prueba
+%%status: pendiente-prueba
 version: v4
 date: 2026-08-17
-nota: separado del v3 — solo transcripción, sin complemento. Prueba pendiente: detección de figuras del apunte y bloque IMA.
-%%
+nota: separado del v3 — solo transcripción, sin complemento. Prueba pendiente: detección de figuras del apunte y bloque IMA.%%
 
 TAREA:
 Transcribir apuntes universitarios de Mecánica Aplicada (ETN607) a formato Markdown.

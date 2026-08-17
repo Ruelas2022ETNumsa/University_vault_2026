@@ -5,7 +5,7 @@ scope: vault
 audience: [usuario, claude]
 tags: [beacon, notebooklm, ETN607, infraestructura, prompts]
 date_created: 2026-08-13
-date_updated: 2026-08-13
+date_updated: 2026-08-17
 status: activo
 ---
 
@@ -15,9 +15,14 @@ Documentación del prompt de transcripción para ETN607 (Mecánica Clásica / La
 
 ---
 
-## Archivo activo
+## Archivos activos
 
-`ETN607-transcription-v3.md` — versión actual del prompt.
+| Archivo | Rol | Estado |
+|---|---|---|
+| `ETN607-transcription_Av4.md` | Transcripción pura — bloques Cornell, figuras del apunte, IMA | en pruebas |
+| `ETN607-transcription_BCv3.md` | Complemento B/C — embed PDF++, IMA-SRC, TikZJax fallback | en pruebas |
+
+> Los demás archivos (`v2`, `v3`, `v4`) son **legacy** — conservados como referencia. No usar.
 
 ---
 
@@ -28,6 +33,8 @@ Documentación del prompt de transcripción para ETN607 (Mecánica Clásica / La
 | v1 | anterior | Versión original — notación `$...$` / `$$...$$` |
 | v2 | 2026-08-13 | Adaptación a nueva notación NBLM (`\(...\)` / `\[...\]`) tras migración a Gemini 3 |
 | v3 | 2026-08-13 | Eliminadas instrucciones de delimitadores del prompt — resueltas por plugin + script. Referencia al Cornell clarificada. |
+| A-v4 | 2026-08-17 | Separación en dos prompts. A: solo transcripción — sin complemento ni referencias a libros fuente. Detección de figuras del apunte con bloque IMA. |
+| BC-v3 | 2026-08-17 | BC: complemento nivel B/C con embed PDF++ + IMA-SRC en `%% %%` + TikZJax fallback. Notebook separado con los 9 libros. ad-note con 5 backticks (en evaluación — puede revertirse a `> [!note]` si rompe ecuaciones). |
 
 ---
 
@@ -55,15 +62,19 @@ Documentación del script: `_app/shellcommands/shellcmd_NBLM_fix.md`
 
 ---
 
-## Estructura del prompt
+## Estructura de los prompts
 
-El prompt define tres mensajes de trabajo:
+**ETN607-transcription_Av4** — dos mensajes:
+- **Mensaje 1** — Transcripción de subtítulo(s) del apunte manuscrito
+- **Mensaje 2** — Ejercicios del cuaderno
 
-- **Mensaje 1** — Transcripción + complemento de un subtítulo
-- **Mensaje 2** — Ejercicios de libros fuente
-- **Mensaje 3** — Ejercicios del cuaderno
+Cada subtítulo de teoría se estructura en bloque Cornell. Ejemplos resueltos e IMA van fuera del Cornell.
 
-Cada subtítulo de teoría se estructura en bloque Cornell. Los ejemplos resueltos y bloques IMA van fuera del Cornell.
+**ETN607-transcription_BCv3** — dos mensajes:
+- **Mensaje 1** — Complemento nivel B/C de un rango de subtítulos
+- **Mensaje 2** — Complemento nivel B/C de un concepto individual (prueba puntual)
+
+Cada subtítulo se estructura en bloque `ad-note` (5 backticks). Figuras con embed `[[]]` + IMA-SRC en `%% %%`. TikZJax como fallback si no hay figura.
 
 ---
 
@@ -71,11 +82,14 @@ Cada subtítulo de teoría se estructura en bloque Cornell. Los ejemplos resuelt
 
 - `ETN607-transcription-divisions.md` — archivo auxiliar de divisiones de temas, no es un prompt independiente.
 - `ETN607-transcription.md` — versión v1, conservada como referencia histórica.
+- `ETN607-transcription-v2.md`, `v3.md`, `v4.md` — versiones legacy, no usar.
 
 ---
 
 %%
 # galaxy-links
+[[_app/notebooklm/prompts/ETN607/ETN607-transcription_Av4.md]]
+[[ETN607-transcription_BCv3]]
 [[_app/notebooklm/prompts/ETN607/ETN607-transcription-v3.md]]
 [[_app/notebooklm/prompts/ETN607/ETN607-transcription.md]]
 [[_app/notebooklm/guides/ETN607/ETN607_latex.md]]
