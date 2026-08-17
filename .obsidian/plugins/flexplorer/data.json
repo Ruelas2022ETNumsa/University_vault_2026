@@ -272,7 +272,8 @@
         "PDF-Electrónica analógica",
         "PDF-telefonia",
         "BORRADOR OK OK ETN 825 2022.pdf",
-        "PDF-1015"
+        "PDF-1015",
+        "ETN-607"
       ]
     },
     "_templates": {
@@ -1332,7 +1333,8 @@
         "anki",
         "bay",
         "TPL_TAB",
-        "IMA_NBLM"
+        "IMA_NBLM",
+        "pdfpp_embed_nblm"
       ]
     },
     "_hangar/anki": {
@@ -1807,7 +1809,8 @@
       "sortOrder": "custom",
       "customOrder": [
         "_library_ETN607.md",
-        "tsk_ini_ETN607.md"
+        "tsk_ini_ETN607.md",
+        "tsk_ini_ETN607 1.md"
       ]
     },
     "Semesters/Sem_04/ETN607/_library_ETN607.md": {
@@ -3939,6 +3942,28 @@
       "isHidden": false
     },
     "Semesters/Sem_09/REC92/geo-bo/_section/s1_intro.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/tsk_ini_ETN607 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/ETN-607": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [],
+      "sortOrder": "custom"
+    },
+    "_hangar/pdfpp_embed_nblm": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "pdfpp_embed_nblm.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "_hangar/pdfpp_embed_nblm/pdfpp_embed_nblm.md": {
       "isPinned": false,
       "isHidden": false
     }

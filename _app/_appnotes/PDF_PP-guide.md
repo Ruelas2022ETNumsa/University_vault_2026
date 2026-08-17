@@ -373,3 +373,19 @@ Ribbon:
 [[_app/_config/_sync-system.md]]
 [[_app/_config/_galaxy-system.md]]
 %%
+
+---
+
+## Embeds de página — en evaluación
+
+> [!attention] En evaluación
+> Esta funcionalidad está siendo explorada en el ship `pdfpp_embed_nblm.md` en `_hangar/dock/`.
+> Ver secciones: **Planificación**, **Flujo de pasos**, y **Preguntas abiertas**.
+> Documentación técnica detallada en `pdf-guide.md` — sección *Embeds de página y recortes rectangulares*.
+
+PDF++ permite embeds inline de páginas completas o recortes rectangulares de un PDF directamente en una nota `.md`. Caso de uso principal: mostrar la página donde se encuentra una figura referenciada por IMA-SRC de NotebookLM, sin necesidad de copiar/pegar la imagen manualmente.
+
+```
+![[archivo.pdf#page=N]]          ← página completa
+![[archivo.pdf#page=N&rect=...]] ← recorte rectangular
+```

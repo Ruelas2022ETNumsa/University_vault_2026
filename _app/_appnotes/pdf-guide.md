@@ -551,6 +551,55 @@ T01, T02... = temas específicos
 
 ---
 
+## Embeds de página y recortes rectangulares
+
+> [!attention] Consideración activa
+> Esta sección es base para el ship `pdfpp_embed_nblm.md` en `_hangar/dock/`.
+> Ver secciones: **Planificación**, **Flujo de pasos**, y **Preguntas abiertas**.
+
+### Embed de página completa
+
+Muestra la página entera del PDF renderizada inline en la nota:
+
+```
+![[archivo.pdf#page=N]]
+```
+
+No requiere selección previa. Útil cuando la figura ocupa gran parte de la página o cuando no se conoce el rect exacto.
+
+### Embed con recorte rectangular
+
+Muestra solo una región de la página:
+
+```
+![[archivo.pdf#page=N&rect=x1,y1,x2,y2]]
+```
+
+El `rect` se obtiene seleccionando una región rectangular en PDF++ (Rectangular selection embed). Es preciso pero requiere selección manual en PDF++.
+
+### Trim selection embed
+
+Muestra la selección de texto y su contexto inmediato, no la página completa. Se activa en Settings → PDF++. Útil para citas largas que ocupan varias líneas.
+
+### Workaround — embed no renderiza
+
+Si el embed no renderiza correctamente, agregar `[` al inicio del bloque:
+
+```
+[![[archivo.pdf#page=N]]
+```
+
+### Cuándo usar cada uno
+
+| Caso | Formato recomendado |
+| --- | --- |
+| Figura ocupa casi toda la página | `![[archivo.pdf#page=N]]` |
+| Figura pequeña en página densa | `![[archivo.pdf#page=N&rect=...]]` |
+| Cita de texto con contexto visual | Trim selection embed |
+| Solo referencia sin render | Link: `[[archivo.pdf#page=N]]` |
+
+---
+
 %%
 # galaxy-links
 
