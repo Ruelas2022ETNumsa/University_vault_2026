@@ -39,7 +39,12 @@ Explorar si NotebookLM puede generar automáticamente un link embed de PDF++ que
 
 ## Riesgos y dependencias
 
-- **Numeración de páginas:** NotebookLM entrega el número impreso en el libro, no el número que el visor PDF cuenta. PDF++ usa el número del visor. El desfase puede variar por PDF (portada, índice, etc.). Sin resolver.
+- **Numeración de páginas:** NotebookLM entrega el número impreso en el libro, no el número que el visor PDF cuenta. PDF++ usa el número del visor. El desfase puede variar por PDF (portada, índice, etc.). Sin resolver. Ver pendiente de script delta abajo.
+- **[[]] vs ![[]]:** el embed `![[]]` renderiza la página inline en Obsidian pero es lento. `[[]]` abre el PDF en otra ventana al hacer click — más liviano para navegar. Confirmado en prueba: usar `[[]]` en los prompts.
+
+## Pendientes futuros
+
+- **Script delta de numeración:** calcular la diferencia entre el número de página impreso en el libro y el número real del visor PDF (delta = visor − impreso). Si el delta es consistente por archivo, se puede corregir automáticamente el embed. Evaluar si vale la pena según resultados de las pruebas.
 - **PDFs en vault:** Los libros de ETN607 deben estar en `_PDF\ETN-607\` con nombres consistentes con lo que IMA-SRC reporta como `fuente`. Por el momento la carpeta está vacía.
 - **Límite del prompt v3:** 9985/10000 chars — sin margen para agregar instrucciones al prompt existente. Decisión tomada: no se modifica el prompt v3, se prueba de forma separada.
 
