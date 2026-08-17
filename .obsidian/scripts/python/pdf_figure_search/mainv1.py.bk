@@ -1,17 +1,42 @@
 """
-pdf_figure_search/main.py
+pdf_figure_search/mainv1.py.bk  v1  —  2026-08-17
+===================================================
+BACKUP de main.py antes de la migracion a v2.
+No ejecutar — conservar como referencia historica.
+
 Busca una etiqueta de figura en los PDFs de una materia y devuelve
 una lista de links PDF++ lista para pegar en Obsidian.
 
-Uso:
+Uso
+---
   py main.py <sigla> <etiqueta> [nblm_ref]
 
-  sigla     — carpeta en _PDF (ej: ETN607 o ETN-607)
-  etiqueta  — fallback si no viene nblm_ref (ej: "Fig. 2-4" o "4.3")
-  nblm_ref  — bloque pegado desde NotebookLM (opcional, multiline):
-              [[Dare A. Wells.pdf#page=11]]Fig. 2-1
-              o con salto de linea entre el link y la etiqueta
-              Si viene → extrae PDF y etiqueta de ahi, ignora <etiqueta>
+  sigla     — carpeta en _PDF (ej: ETN607 o ETN-607)  [obligatorio]
+  etiqueta  — etiqueta a buscar (ej: "Fig. 2-4")      [obligatorio]
+  nblm_ref  — bloque pegado desde NotebookLM (multiline) [opcional]
+              Si viene, extrae PDF y etiqueta de ahi e ignora <etiqueta>
+
+Diferencias con v2
+------------------
+  - etiqueta era argumento 2 (obligatorio), nblm_ref era argumento 3 (opcional)
+  - nblm_ref era opcional — sin el, buscaba en todos los PDFs de la carpeta
+  - soportaba formato inline [[pdf#page=N]]Fig. 2-1 (sin salto de linea)
+  - soportaba formato markdown [pdf > page=N](pdf#page=N) como fallback
+  - no ignoraba asteriscos de italics en la etiqueta
+
+Dependencias
+------------
+  PyMuPDF   — pip install pymupdf
+  ocrmypdf  — pip install ocrmypdf     (solo si hay PDFs sin OCR)
+  Tesseract — winget + tessdata spa    (motor OCR, requerido por ocrmypdf)
+
+Configuracion
+-------------
+  VAULT_PATH    — ruta absoluta del vault
+  PDF_ROOT      — _PDF/ dentro del vault
+  SPLIT_PATTERN — regex para detectar sufijos de PDFs partidos
+
+Doc: E:/University_vault_2026/_app/shellcommands/shellcmd_pdf_figure_search.md
 """
 
 import os

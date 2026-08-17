@@ -14,8 +14,8 @@ Explorar si NotebookLM puede generar automáticamente un link embed de PDF++ que
 ## Estado actual
 
 **Salud:** on-track
-**Resumen:** Script `pdf_figure_search` v1 creado, probado e integrado en Shell Commands. Problema de numeración de páginas resuelto via ranking por error mínimo. OCRmyPDF integrado como fallback automático en el script. Pendiente: pruebas de prompts v4 y BCv4 en NotebookLM.
-**Último avance:** Script v1 funcional — búsqueda por etiqueta con 6 variantes, ranking top 3 por proximidad al hint de NLM, comando OCR automático para PDFs sin texto.
+**Resumen:** Script `pdf_figure_search` v2 creado, probado e integrado en Shell Commands. Problema de numeración de páginas resuelto via ranking por error mínimo. OCRmyPDF integrado como fallback automático en el script. Pendiente: pruebas de prompts v4 y BCv4 en NotebookLM.
+**Último avance:** Script v2 — bloque NLM obligatorio, etiqueta extraída del bloque (ignora asteriscos de italics), modo siempre selectivo. Backup de v1 guardado como mainv1.py.bk.
 **Próximo hito:** Probar `ETN607-transcription_Av4` en notebook de transcripción (detección de figuras del apunte) y `BCv4` con Mensaje 2 (concepto individual).
 
 ---
@@ -29,7 +29,7 @@ Explorar si NotebookLM puede generar automáticamente un link embed de PDF++ que
 | `chronicle.md` | chronicle | — | registro cronológico de pruebas |
 | `ocrmypdf-install.md` | dropship | activo | instalación y config de OCRmyPDF |
 | `prompts.md` | dropship | activo | prompts de prueba para NotebookLM |
-| `[[shellcmd_pdf_figure_search]]` | doc | activo | script v1 — búsqueda por etiqueta con ranking por error mínimo |
+| `[[shellcmd_pdf_figure_search]]` | doc | activo | script v2 — bloque NLM obligatorio, etiqueta extraída del bloque, modo siempre selectivo |
 
 ---
 
@@ -39,6 +39,7 @@ Explorar si NotebookLM puede generar automáticamente un link embed de PDF++ que
 - 2026-08-17 — OCRmyPDF instalado y probado (5 pruebas). Ctrl+F confirmado en Obsidian.
 - 2026-08-17 — prompts BCv4 y Av4 creados. BCv4 probado y comprobado.
 - 2026-08-17 — script `pdf_figure_search` v1 creado, probado e integrado en Shell Commands. Problema de numeración resuelto.
+- 2026-08-17 — script `pdf_figure_search` v2 — bloque NLM obligatorio, etiqueta extraída del bloque, Shell Commands migrado. Backup v1 guardado.
 
 ---
 
@@ -49,7 +50,7 @@ Explorar si NotebookLM puede generar automáticamente un link embed de PDF++ que
 
 ## Pendientes futuros
 
-- **Script v2 — campo NLM obligatorio:** el campo `etiqueta` desaparece como campo separado. El bloque completo de NLM (link markdown + etiqueta en línea siguiente) será el único input. La etiqueta se extrae siempre del bloque.
+- ~~**Script v2 — campo NLM obligatorio:**~~ completado — bloque NLM obligatorio, etiqueta extraída del bloque (ignora asteriscos), Shell Commands migrado, backup v1 guardado.
 - **Script búsqueda por etiqueta — múltiples coincidencias:** resuelto por ranking de error mínimo — cerrado.
 - **Script búsqueda por etiqueta — integración Obsidian:** completado en v1 via Shell Commands.
 - **OCRmyPDF — integración Obsidian:** integrado como fallback automático en el script — entrega el comando listo en el portapapeles cuando no encuentra texto.

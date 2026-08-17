@@ -259,6 +259,9 @@ def main():
     if parsed_label:
         label = parsed_label  # etiqueta extraida del bloque tiene prioridad
 
+    # NOTA: esta validacion es inerte — si sys.argv < 3 el script ya salio
+    # arriba, y nblm_ref = sys.argv[2].strip() garantiza que existe.
+    # Se conserva como documentacion de intencion original.
     if not nblm_ref:
         print("[pdf_figure_search] Falta la referencia NotebookLM (D3).", file=sys.stderr)
         sys.exit(1)
