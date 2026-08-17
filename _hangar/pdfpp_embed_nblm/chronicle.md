@@ -35,13 +35,19 @@ Formato por entrada:
 **Veredicto:** ok
 **Notas:** flujo OCR confirmado para PDFs escaneados en escala de grises. La capa de texto es funcional para búsqueda en Obsidian.
 
-### 2026-08-17 — creacion del script 
-**Objetivo:**  la creacion del script (E:\University_vault_2026\_app\shellcommands\shellcmd_pdf_figure_search.md) simplifica la busqueda de la imagen
+### 2026-08-17 — creacion del script v1
+**Objetivo:** la creacion del script (E:\University_vault_2026\_app\shellcommands\shellcmd_pdf_figure_search.md) simplifica la busqueda de la imagen
 **Resultado:** muy bueno
 **Veredicto:** ok
-**Notas:** se esta revisando la posibilidad de mejorar el script a una version 2 (la version 1 es bueno paro los datos ingresados pueden ser mejoradas)
+**Notas:** script funcional. Se identificó que el ingreso de datos podía mejorarse — etiqueta separada era redundante si el bloque NLM ya la contiene.
+
+### 2026-08-17 — migracion a v2 del script
+**Objetivo:** simplificar el ingreso de datos — hacer obligatorio el bloque NLM completo y opcional la etiqueta manual
+**Resultado:** script actualizado y configuracion de Shell Commands migrada. Formato de entrada confirmado:
+[[nombre.pdf#page=N]]
+*Fig. X-X*
+**Veredicto:** ok — script funciona correctamente con v2
+**Notas:** etiqueta se extrae del bloque NLM (ignorando asteriscos de italics). Campo D2 paso a ser nblm_ref (obligatorio), campo D3 paso a ser etiqueta fallback (opcional). main.py actualizado, backup guardado como mainv1.py.bk.
 
 
 
-[[Dare A. Wells-SCHAUM'S Lagrangian Dynamics-McGraw-Hill.pdf#page=11]]
-*Fig. 2-1*

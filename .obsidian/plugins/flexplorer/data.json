@@ -23,7 +23,8 @@
         "Rubbish",
         "README.md",
         "Untitled.md",
-        "Untitled 1.md"
+        "Untitled 1.md",
+        "Untitled 2.md"
       ]
     },
     "MOC": {
@@ -1002,7 +1003,8 @@
         "rclone_script.md",
         "shellcmd_start_snippet.md",
         "shellcmd_occlusion_actions.md",
-        "shellcmd_NBLM_fix.md"
+        "shellcmd_NBLM_fix.md",
+        "shellcmd_pdf_figure_search.md"
       ]
     },
     "_app/shellcommands/shellcmd_scripting_guide.md": {
@@ -4080,6 +4082,14 @@
       "isHidden": false
     },
     "_assets/Untitled 1-17-08-2026_16-52-19.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled 2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/shellcommands/shellcmd_pdf_figure_search.md": {
       "isPinned": false,
       "isHidden": false
     }

@@ -1,16 +1,58 @@
 """
-pdf_figure_search/main.py  v2
+pdf_figure_search/main.py  v2  —  2026-08-17
+==============================================
 Busca una etiqueta de figura en los PDFs de una materia y devuelve
-una lista de links PDF++ lista para pegar en Obsidian.
+una lista de links PDF++ ordenados por proximidad al numero de pagina
+indicado por NotebookLM. El resultado se copia al portapapeles listo
+para pegar en Obsidian.
 
-Uso:
+Contexto
+--------
+NotebookLM entrega referencias de figuras en formato:
+    [[nombre.pdf#page=N]]
+    *Fig. 2-1*
+El page=N es el numero impreso en el libro, que puede tener desfase
+respecto al numero real del visor PDF++ (portada, indice, etc.).
+El script resuelve ese desfase devolviendo los 3 candidatos mas
+cercanos ordenados por error minimo.
+
+Uso
+---
   py main.py <sigla> <nblm_ref> [etiqueta]
 
   sigla     — carpeta en _PDF (ej: ETN607 o ETN-607)  [obligatorio]
-  nblm_ref  — bloque pegado desde NotebookLM (multiline): [obligatorio]
-              [[Dare A. Wells.pdf#page=11]]
-              *Fig. 2-1*
+  nblm_ref  — bloque pegado desde NotebookLM (multiline) [obligatorio]
+              Formato esperado:
+                [[Dare A. Wells.pdf#page=11]]
+                *Fig. 2-1*
   etiqueta  — fallback si nblm_ref no trae etiqueta (ej: "Fig. 2-4") [opcional]
+
+Logica
+------
+  1. Parsea nblm_ref: extrae nombre del PDF, etiqueta (ignora asteriscos
+     de italics) y hint_page (numero de pagina del link).
+  2. Localiza la carpeta del PDF en _PDF/ segun la sigla.
+  3. Agrupa PDFs partidos (-1to9, -10to16) bajo su nombre base.
+  4. Genera 6 variantes de busqueda: Fig./fig./Figure/Figura con y sin punto.
+  5. Busca en cada pagina del PDF con PyMuPDF.
+  6. Calcula error = |pagina_visor - hint_page| y toma top 3.
+  7. Copia resultado al portapapeles via PowerShell Here-String.
+  Si el PDF no tiene capa de texto: reporta el PDF e incluye el
+  comando ocrmypdf listo para correr en shell.
+
+Dependencias
+------------
+  PyMuPDF   — pip install pymupdf      (busqueda de texto en PDF)
+  ocrmypdf  — pip install ocrmypdf     (solo si hay PDFs sin OCR)
+  Tesseract — winget + tessdata spa    (motor OCR, requerido por ocrmypdf)
+
+Configuracion
+-------------
+  VAULT_PATH    — ruta absoluta del vault (modificar si cambia)
+  PDF_ROOT      — _PDF/ dentro del vault
+  SPLIT_PATTERN — regex para detectar sufijos de PDFs partidos
+
+Doc: E:/University_vault_2026/_app/shellcommands/shellcmd_pdf_figure_search.md
 """
 
 import os

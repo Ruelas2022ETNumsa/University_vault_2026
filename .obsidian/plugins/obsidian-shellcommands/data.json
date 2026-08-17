@@ -396,7 +396,7 @@
     {
       "id": "72ny8o8zq4",
       "platform_specific_commands": {
-        "default": "py \"{{vault_path}}\\.obsidian\\scripts\\python\\pdf_figure_search\\main.py\" \"{{_sigla}}\" \"{{_etiqueta}}\" \"{{_nblm_ref}}\""
+        "default": "py \"{{vault_path}}\\.obsidian\\scripts\\python\\pdf_figure_search\\main.py\" \"{{_sigla}}\" \"{{_nblm_ref}}\" \"{{_etiqueta}}\""
       },
       "shells": {},
       "alias": "PDF — buscar figura",
@@ -433,7 +433,12 @@
           "prompt_id": "00hjfovakq"
         }
       ],
-      "variable_default_values": {}
+      "variable_default_values": {
+        "11tuy56kjj": {
+          "type": "cancel-silently",
+          "value": ""
+        }
+      }
     }
   ],
   "prompts": [
@@ -530,25 +535,25 @@
         {
           "type": "single-line-text",
           "label": "Sigla (ej: ETN607)",
-          "description": "",
-          "default_value": "ETN607",
+          "description": "Sigla de la materia. Ej: ETN-607. Debe coincidir con una carpeta en _PDF.",
+          "default_value": "ETN-",
           "target_variable_id": "hq46y7n7ep",
           "required": true
         },
         {
-          "type": "single-line-text",
-          "label": "Etiqueta (ej: 4.3 o Fig. 2-4)",
-          "description": "",
+          "type": "multi-line-text",
+          "label": "Ref NotebookLM",
+          "description": "Bloque pegado desde NotebookLM. Formato esperado (dos lineas): [[Nombre del libro.pdf#page=11]] *Fig. 2-1* Pegar tal cual, sin modificar.",
           "default_value": "",
-          "target_variable_id": "11tuy56kjj",
+          "target_variable_id": "gzehkv6qgb",
           "required": true
         },
         {
-          "type": "multi-line-text",
-          "label": "Ref NotebookLM (link + etiqueta — opcional)",
-          "description": "",
+          "type": "single-line-text",
+          "label": "Etiqueta (fallback)",
+          "description": "Fallback opcional. Solo completar si el bloque NLM no trae etiqueta. Ej: Fig. 2-4",
           "default_value": "",
-          "target_variable_id": "gzehkv6qgb",
+          "target_variable_id": "11tuy56kjj",
           "required": false
         }
       ],

@@ -12,12 +12,13 @@ tags: [beacon, obsidian, shell-commands, ETN607, notebooklm, pdf, infraestructur
 date_created: 2026-08-17
 date_updated: 2026-08-17
 status: activo
-version: v1
+version: v2
 ---
 
 # Shell Commands — pdf_figure_search
 
 > Script que busca una etiqueta de figura en los PDFs de una materia y devuelve una lista de links PDF++ ordenados por proximidad al número de página entregado por NotebookLM. El resultado se copia al portapapeles listo para pegar en Obsidian.
+> v2: el bloque NLM completo es obligatorio — la etiqueta se extrae del bloque automáticamente.
 
 ---
 
@@ -25,9 +26,10 @@ version: v1
 
 Al transcribir apuntes con NotebookLM, el prompt de complemento (BCv4) entrega referencias a figuras de los libros fuente en formato:
 ```
-[[nombre.pdf#page=N]]Fig. 2-1
+[[nombre.pdf#page=N]]
+*Fig. 2-1*
 ```
-El `page=N` es el número de página **impreso** en el libro — puede tener desfase respecto al número del visor PDF++ (por portada, índice, etc.). Este script recibe esa referencia, busca la etiqueta en el PDF real, y devuelve los 3 candidatos más cercanos al número indicado ordenados por error mínimo.
+El `page=N` es el número de página **impreso** en el libro — puede tener desfase respecto al número del visor PDF++ (por portada, índice, etc.). Este script recibe esa referencia, extrae el PDF y la etiqueta del bloque, busca la etiqueta en el PDF real, y devuelve los 3 candidatos más cercanos al número indicado ordenados por error mínimo.
 
 ---
 
@@ -55,19 +57,18 @@ El candidato con `error 0` es coincidencia exacta. Los siguientes son respaldo p
 
 ## 4. Lógica del script
 
-1. Recibe `sigla`, `etiqueta` (fallback) y `nblm_ref` como argumentos.
-2. Parsea `nblm_ref` para extraer: nombre del PDF, etiqueta (`Fig. X`) y `hint_page` (número de página del link).
-3. Localiza la carpeta del PDF en `_PDF/` según la sigla (tolera `ETN607` y `ETN-607`).
-4. Agrupa PDFs partidos (`-1to9`, `-10to16`) bajo su nombre base — busca en todas las partes.
-5. Genera 6 variantes de búsqueda: `Fig. X`, `Fig X`, `fig. X`, `fig X`, `Figure X`, `Figura X`.
-6. Busca las variantes en cada página del PDF con PyMuPDF.
-7. Calcula `error = |página_visor - hint_page|` para cada página encontrada.
-8. Ordena por error ascendente y toma los 3 más cercanos.
-9. Copia el resultado al portapapeles vía PowerShell Here-String.
+1. Recibe `sigla` y `nblm_ref` (obligatorios) y `etiqueta` (fallback opcional) como argumentos.
+2. Parsea `nblm_ref` para extraer: nombre del PDF, etiqueta (`Fig. X` — ignorando asteriscos de italics) y `hint_page`.
+3. La etiqueta del bloque NLM tiene prioridad sobre el campo fallback.
+4. Localiza la carpeta del PDF en `_PDF/` según la sigla (tolera `ETN607` y `ETN-607`).
+5. Agrupa PDFs partidos (`-1to9`, `-10to16`) bajo su nombre base — busca en todas las partes.
+6. Genera 6 variantes de búsqueda: `Fig. X`, `Fig X`, `fig. X`, `fig X`, `Figure X`, `Figura X`.
+7. Busca las variantes en cada página del PDF con PyMuPDF.
+8. Calcula `error = |página_visor - hint_page|` para cada página encontrada.
+9. Ordena por error ascendente y toma los 3 más cercanos.
+10. Copia el resultado al portapapeles vía PowerShell Here-String.
 
-**Modos de operación:**
-- **Con `nblm_ref`** → extrae PDF, etiqueta y hint_page — búsqueda selectiva con ranking por proximidad.
-- **Sin `nblm_ref`** → usa `etiqueta` como fallback y busca en todos los PDFs de la carpeta (sin ranking).
+**Modo de operación (v2):** siempre selectivo — busca solo en el PDF indicado por el bloque NLM con ranking por proximidad.
 
 **PDFs sin capa de texto:** si no se encuentra la etiqueta, el script reporta el PDF como posiblemente sin OCR e incluye el comando `ocrmypdf` listo para correr en shell.
 
@@ -112,7 +113,7 @@ El script devuelve los 3 con menor error. En la práctica, el desfase suele ser 
 
 **Comando (Windows):**
 ```
-py "{{vault_path}}\.obsidian\scripts\python\pdf_figure_search\main.py" "{{_sigla}}" "{{_etiqueta}}" "{{_nblm_ref}}"
+py "{{vault_path}}\.obsidian\scripts\python\pdf_figure_search\main.py" "{{_sigla}}" "{{_nblm_ref}}" "{{_etiqueta}}"
 ```
 
 ### Pestaña Environments
@@ -148,23 +149,26 @@ py "{{vault_path}}\.obsidian\scripts\python\pdf_figure_search\main.py" "{{_sigla
 | Target variable | `{{_sigla}}` |
 | Is required | ON |
 
-**Campo 2 — Etiqueta (fallback):**
+**Campo 2 — Referencia NotebookLM:**
 
 | | |
 |---|---|
-| Field label | `Etiqueta (ej: Fig. 2-4) — dejar vacío si usás Ref NLM` |
-| Default value | vacío |
-| Target variable | `{{_etiqueta}}` |
-| Is required | OFF |
-
-**Campo 3 — Referencia NotebookLM:**
-
-| | |
-|---|---|
-| Field label | `Ref NotebookLM (link + etiqueta — opcional)` |
+| Field label | `Ref NotebookLM` |
+| Description | `Bloque pegado desde NotebookLM. Formato esperado (dos lineas): [[Nombre del libro.pdf#page=11]] *Fig. 2-1* Pegar tal cual, sin modificar.` |
 | Default value | vacío |
 | Target variable | `{{_nblm_ref}}` |
 | Field type | multiline text |
+| Is required | ON |
+
+**Campo 3 — Etiqueta (fallback):**
+
+| | |
+|---|---|
+| Field label | `Etiqueta (fallback)` |
+| Description | `Fallback opcional. Solo completar si el bloque NLM no trae etiqueta. Ej: Fig. 2-4` |
+| Default value | vacío |
+| Target variable | `{{_etiqueta}}` |
+| Field type | text |
 | Is required | OFF |
 
 ### Pestaña Variables
@@ -172,8 +176,8 @@ py "{{vault_path}}\.obsidian\scripts\python\pdf_figure_search\main.py" "{{_sigla
 | Variable | Si no está disponible |
 |---|---|
 | `{{_sigla}}` | `Cancel execution and show errors` |
+| `{{_nblm_ref}}` | `Cancel execution and show errors` |
 | `{{_etiqueta}}` | `Cancel execution silently` |
-| `{{_nblm_ref}}` | `Cancel execution silently` |
 
 ---
 
@@ -183,7 +187,8 @@ py "{{vault_path}}\.obsidian\scripts\python\pdf_figure_search\main.py" "{{_sigla
 2. Completar sigla (`ETN607`).
 3. En campo **Ref NotebookLM** pegar el bloque del prompt BCv4:
    ```
-   [[Dare A. Wells-SCHAUM'S Lagrangian Dynamics-McGraw-Hill.pdf#page=11]]Fig. 2-1
+   [[Dare A. Wells-SCHAUM'S Lagrangian Dynamics-McGraw-Hill.pdf#page=11]]
+   *Fig. 2-1*
    ```
 4. Click **Buscar**.
 5. Pegar resultado (`Ctrl+V`) en la nota — reemplaza el link placeholder de NotebookLM.
@@ -193,7 +198,7 @@ py "{{vault_path}}\.obsidian\scripts\python\pdf_figure_search\main.py" "{{_sigla
 
 ## 9. Notas de versión
 
-### v1 — 2026-08-17 (actual)
+### v1 — 2026-08-17
 - Búsqueda por etiqueta con 6 variantes (`Fig.`, `fig.`, `Figure`, `Figura`, con y sin punto)
 - Parseo de `nblm_ref`: extrae PDF, etiqueta y `hint_page` desde el bloque de NotebookLM
 - Ranking por error mínimo — top 3 candidatos
@@ -201,14 +206,13 @@ py "{{vault_path}}\.obsidian\scripts\python\pdf_figure_search\main.py" "{{_sigla
 - Detección de PDFs sin OCR + comando `ocrmypdf` de respaldo
 - Campo `etiqueta` como fallback para búsqueda manual sin contexto NLM
 
-### v2 — pendiente
-- Campo obligatorio: bloque completo de NotebookLM (link markdown + etiqueta en línea siguiente)
-- La etiqueta deja de ser campo separado — se extrae siempre del bloque
-- Soporte para formato con salto de línea entre link y etiqueta:
-  ```
-  [nombre.pdf > page=11](nombre.pdf#page=11)
-  Fig. 2-1
-  ```
+### v2 — 2026-08-17 (actual)
+- Bloque NLM obligatorio — `nblm_ref` pasa a argumento 2, `etiqueta` a argumento 3 (fallback opcional)
+- Etiqueta se extrae siempre del bloque NLM — regex actualizado para ignorar asteriscos de italics Markdown (`*Fig. 2-1*`)
+- Formato de entrada confirmado: `[[nombre.pdf#page=N]]` + `*Fig. X-X*` en línea siguiente
+- Eliminado el modo búsqueda general — v2 es siempre selectivo (solo el PDF del bloque NLM)
+- Validaciones explícitas: falla si no hay PDF o etiqueta extraíble del bloque
+- Backup de v1 guardado como `mainv1.py.bk` en la misma carpeta
 
 ---
 
