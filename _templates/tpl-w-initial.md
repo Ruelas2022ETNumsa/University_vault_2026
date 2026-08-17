@@ -49,6 +49,26 @@ status: activo
 
 ---
 
+## Decisiones de infraestructura
+
+| Fecha | Decisión | Motivo |
+| --- | --- | --- |
+|  |  |  |
+
+> [!note]- Descartadas
+> 
+
+---
+
+## Handoff
+
+**Última sesión:** 
+**Completado esta sesión:** 
+**Próximo paso:** 
+**Notas para retomar:** 
+
+---
+
 ## Notas y pendientes
 
 %%
