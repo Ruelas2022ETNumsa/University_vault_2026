@@ -40,3 +40,8 @@ Formato por entrada:
 **Resultado:** muy bueno
 **Veredicto:** ok
 **Notas:** se esta revisando la posibilidad de mejorar el script a una version 2 (la version 1 es bueno paro los datos ingresados pueden ser mejoradas)
+
+
+
+[[Dare A. Wells-SCHAUM'S Lagrangian Dynamics-McGraw-Hill.pdf#page=11]]
+*Fig. 2-1*

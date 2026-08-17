@@ -1,16 +1,17 @@
 """
-pdf_figure_search/main.py  v2
+pdf_figure_search/main.py
 Busca una etiqueta de figura en los PDFs de una materia y devuelve
 una lista de links PDF++ lista para pegar en Obsidian.
 
 Uso:
-  py main.py <sigla> <nblm_ref> [etiqueta]
+  py main.py <sigla> <etiqueta> [nblm_ref]
 
-  sigla     — carpeta en _PDF (ej: ETN607 o ETN-607)  [obligatorio]
-  nblm_ref  — bloque pegado desde NotebookLM (multiline): [obligatorio]
-              [[Dare A. Wells.pdf#page=11]]
-              *Fig. 2-1*
-  etiqueta  — fallback si nblm_ref no trae etiqueta (ej: "Fig. 2-4") [opcional]
+  sigla     — carpeta en _PDF (ej: ETN607 o ETN-607)
+  etiqueta  — fallback si no viene nblm_ref (ej: "Fig. 2-4" o "4.3")
+  nblm_ref  — bloque pegado desde NotebookLM (opcional, multiline):
+              [[Dare A. Wells.pdf#page=11]]Fig. 2-1
+              o con salto de linea entre el link y la etiqueta
+              Si viene → extrae PDF y etiqueta de ahi, ignora <etiqueta>
 """
 
 import os
@@ -37,11 +38,12 @@ def parse_nblm_ref(ref: str):
     """
     Extrae (pdf_name, label, hint_page) desde el bloque pegado de NotebookLM.
 
-    Formato soportado (v2):
+    Formatos soportados:
+      [[Dare A. Wells.pdf#page=11]]Fig. 2-1
       [[Dare A. Wells.pdf#page=11]]
-      *Fig. 2-1*
+      Fig. 2-1
+      [Dare A. Wells.pdf > page=11](Dare A. Wells.pdf#page=11)Fig. 2-1
 
-    Los asteriscos de italics son ignorados al extraer la etiqueta.
     Retorna (pdf_name, label, hint_page) — hint_page puede ser None.
     """
     ref = ref.strip()
@@ -54,14 +56,16 @@ def parse_nblm_ref(ref: str):
 
     # Extraer nombre de PDF y page hint desde [[ ]] con #page=N
     pdf_match = re.search(r'\[\[([^\]]+\.pdf)(?:#page=(\d+))?\]\]', ref)
+    if not pdf_match:
+        pdf_match = re.search(r'\(([^)]+\.pdf)(?:#page=(\d+))?\)', ref)
     if pdf_match:
         pdf_name = pdf_match.group(1).strip()
         if pdf_match.group(2):
             hint_page = int(pdf_match.group(2))
 
-    # Extraer etiqueta — ignora asteriscos de italics Markdown
+    # Extraer etiqueta
     label_match = re.search(
-        r'\*{0,2}(Fig\.?\s*\d[\d\-\.]*|fig\.?\s*\d[\d\-\.]*|Figure\s*\d[\d\-\.]*|Figura\s*\d[\d\-\.]*)\*{0,2}',
+        r'(Fig\.?\s*\d[\d\-\.]*|fig\.?\s*\d[\d\-\.]*|Figure\s*\d[\d\-\.]*|Figura\s*\d[\d\-\.]*)',
         ref
     )
     if label_match:
@@ -128,6 +132,7 @@ def find_parts_for_pdf(pdf_name: str, groups: dict):
     for base, parts in groups.items():
         for part in parts:
             if part.lower() == name_lower:
+                # Devolver todos los parts del mismo grupo
                 return parts
 
     # Coincidencia por nombre base (sin sufijo)
@@ -196,37 +201,29 @@ def copy_to_clipboard(text: str):
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
-    if len(sys.argv) < 3:
-        print("[pdf_figure_search] Uso: py main.py <sigla> <nblm_ref> [etiqueta]", file=sys.stderr)
+    if len(sys.argv) < 2:
+        print("[pdf_figure_search] Falta la sigla.", file=sys.stderr)
         sys.exit(1)
 
     sigla    = sys.argv[1].strip()
-    nblm_ref = sys.argv[2].strip()
-    label    = sys.argv[3].strip() if len(sys.argv) > 3 else ""
+    label    = sys.argv[2].strip() if len(sys.argv) > 2 else ""
+    nblm_ref = sys.argv[3].strip() if len(sys.argv) > 3 else ""
 
-    # ── Parseo del bloque NLM ─────────────────────────────────────────────────
+    # ── Modo: referencia NotebookLM o busqueda general ────────────────────────
     target_pdf = None
     hint_page  = None
 
-    parsed_pdf, parsed_label, parsed_page = parse_nblm_ref(nblm_ref)
-
-    if parsed_pdf:
-        target_pdf = parsed_pdf
-    if parsed_page:
-        hint_page = parsed_page
-    if parsed_label:
-        label = parsed_label  # etiqueta extraida del bloque tiene prioridad
-
-    if not nblm_ref:
-        print("[pdf_figure_search] Falta la referencia NotebookLM (D3).", file=sys.stderr)
-        sys.exit(1)
+    if nblm_ref:
+        parsed_pdf, parsed_label, parsed_page = parse_nblm_ref(nblm_ref)
+        if parsed_label:
+            label = parsed_label
+        if parsed_pdf:
+            target_pdf = parsed_pdf
+        if parsed_page:
+            hint_page = parsed_page
 
     if not label:
-        print("[pdf_figure_search] No se pudo extraer la etiqueta del bloque NLM. Verificar formato.", file=sys.stderr)
-        sys.exit(1)
-
-    if not target_pdf:
-        print("[pdf_figure_search] No se pudo extraer el nombre del PDF del bloque NLM. Verificar formato.", file=sys.stderr)
+        print("[pdf_figure_search] No se pudo determinar la etiqueta a buscar.", file=sys.stderr)
         sys.exit(1)
 
     # ── Carpeta de PDFs ───────────────────────────────────────────────────────
@@ -247,15 +244,19 @@ def main():
 
     groups = group_split_pdfs(pdf_list)
 
-    # Modo selectivo — solo el PDF indicado por NotebookLM
-    parts = find_parts_for_pdf(target_pdf, groups)
-    if not parts:
-        print(f"[pdf_figure_search] PDF '{target_pdf}' no encontrado en {folder}.", file=sys.stderr)
-        sys.exit(1)
-    search_groups = {target_pdf: parts}
+    if target_pdf:
+        # Modo selectivo — solo el PDF indicado por NotebookLM
+        parts = find_parts_for_pdf(target_pdf, groups)
+        if not parts:
+            print(f"[pdf_figure_search] PDF '{target_pdf}' no encontrado en {folder}.", file=sys.stderr)
+            sys.exit(1)
+        search_groups = {target_pdf: parts}
+    else:
+        # Modo general — todos los PDFs
+        search_groups = groups
 
     # ── Buscar ────────────────────────────────────────────────────────────────
-    results = []   # (pdf_file, page, error)
+    results = []   # (pdf_file, page, error)  error=None si no hay hint
     no_text = []   # (base_name, [parts])
 
     for base_name, parts in search_groups.items():
@@ -265,10 +266,12 @@ def main():
             pages = search_in_pdf(pdf_path, variants)
             if pages:
                 if hint_page is not None:
+                    # Modo proximidad — top 3 mas cercanos al hint
                     ranked = rank_by_proximity(pages, hint_page, top=3)
                     for p, err in ranked:
                         group_found.append((part, p, err))
                 else:
+                    # Modo general — todas las paginas
                     for p in pages:
                         group_found.append((part, p, None))
         if not group_found:
@@ -279,10 +282,12 @@ def main():
     # ── Construir salida ──────────────────────────────────────────────────────
     lines = []
 
-    if hint_page:
+    if hint_page and target_pdf:
         lines.append(f"> Figura {num} en {target_pdf} — top 3 por proximidad a page={hint_page} (NLM)")
-    else:
+    elif target_pdf:
         lines.append(f"> Figura {num} en {target_pdf}")
+    else:
+        lines.append(f"> Figura {num} — todos los PDFs")
     lines.append("")
 
     if results:
@@ -311,8 +316,9 @@ def main():
 
     if ok:
         n = len(results)
+        modo = f"en {target_pdf}" if target_pdf else "en todos los PDFs"
         hint_str = f" (hint page={hint_page})" if hint_page else ""
-        print(f"OK: Figura {num} en {target_pdf}{hint_str} - {n} candidato(s) copiados al portapapeles.")
+        print(f"OK: Figura {num} {modo}{hint_str} - {n} candidato(s) copiados al portapapeles.")
     else:
         print(output)
 

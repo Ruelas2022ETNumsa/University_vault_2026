@@ -81292,6 +81292,7 @@ sHVW
 sRSh
 suspende
 selectiva
+shellcmd
 vault
 vil
 ver
@@ -211199,6 +211200,7 @@ parafrasear
 peta
 proximidad
 partidos
+paro
 min
 mica
 movimiento
@@ -221371,6 +221373,7 @@ mZEZ
 mMfh
 masas
 multiline
+mejoradas
 YAML
 Ya
 You
