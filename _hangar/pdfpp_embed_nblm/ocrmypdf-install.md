@@ -50,6 +50,16 @@ Comando: `py -m ocrmypdf -l spa+eng --force-ocr --optimize 1 "Alonso & Finn..." 
 Resultado: ✅ completó — 41.087 KB — sin ahorro respecto a prueba 2 (optimize 1 no tiene efecto en este PDF)
 Conclusión: necesario probar --optimize 2 con pngquant instalado.
 
+**Prueba 4 — force-ocr + optimize 2 (con pngquant 2.17.0)**
+Comando: `py -m ocrmypdf -l spa+eng --force-ocr --optimize 2 "Alonso & Finn..." "Alonso & Finn-OCR-opt2.pdf"`
+Resultado: ✅ completó — 41.087 KB — sin ahorro respecto a prueba 3
+Conclusión: pngquant instalado y funcionando pero sin efecto. El PDF es un escaneado en escala de grises — pngquant cuantiza paletas de color, no tiene qué reducir en grises. Ninguna de las optimizaciones (opt1, opt2) produjo cambio respecto a la prueba 2 base. Para PDFs escaneados en grises, el resultado óptimo es OCRmyPDF sin flags de optimización.
+
+**Prueba 5 — Ctrl+F en Obsidian**
+Archivo: `Alonso & Finn-OCR.pdf` (prueba 2, 41.087 KB)
+Resultado: ✅ búsqueda funciona correctamente en Obsidian
+Conclusión: flujo OCR cerrado para Alonso & Finn. Capa de texto funcional.
+
 ---
 
 ### Notas técnicas
@@ -84,8 +94,9 @@ py -m ocrmypdf -l eng --force-ocr "input.pdf" "output-OCR.pdf"
 
 ### Próximos pasos
 
-- [ ] Instalar pngquant: `winget install -e --id ImageOptim.pngquant`
-- [ ] Probar --optimize 2 con Alonso & Finn y comparar tamaño
-- [ ] Probar búsqueda Ctrl+F en Obsidian con el archivo optimizado
+- [x] Instalar pngquant: descargado zip desde pngquant.org, exe en `C:\tools\pngquant\pngquant\`, agregado al PATH manualmente
+- [x] Probar --optimize 2 con Alonso & Finn — sin ahorro (41.087 KB igual que opt1)
+- [x] Probar búsqueda Ctrl+F en Obsidian — funciona correctamente
 - [ ] Probar con otros PDFs de ETN-607 — verificar cuáles necesitan OCR
-- [ ] Documentar resultado final en chronicle.md
+- [x] Documentar resultado en chronicle.md
+- [x] Compresión descartada para PDFs en escala de grises — optimize 1 y 2 sin efecto

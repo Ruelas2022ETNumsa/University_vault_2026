@@ -9,10 +9,10 @@ blocked_by:
 
 ## Handoff
 
-**Última sesión:** 2026-08-16
-**Retomar desde:** `ocrmypdf-install.md` — instalar pngquant y probar --optimize 2
-**Completado esta sesión:** carrier creado, prompts v1 y v2 diseñados, OCRmyPDF instalado y probado (pruebas 1-3 con Alonso & Finn), flujo de búsqueda por etiqueta definido y documentado
-**Próximo paso:** instalar pngquant — `winget install -e --id ImageOptim.pngquant` — luego probar --optimize 2, luego probar prompts v1/v2 en NotebookLM
+**Última sesión:** 2026-08-17
+**Retomar desde:** probar prompt v3 en NotebookLM (notebook separado con los 9 libros + _library_ETN607.md)
+**Completado esta sesión:** pngquant instalado (zip manual, PATH), pruebas optimize 1 y 2 sin efecto en Alonso & Finn (escala de grises), Ctrl+F confirmado en Obsidian, ETN607-transcription-v4.md creado (solo transcripción), prompts.md v3 creado (complemento + embed PDF++)
+**Próximo paso:** probar prompt v3 en NotebookLM — mandar "desde subtítulo X hasta Y" y verificar formato de figura y desfase de numeración
 **Preguntas de cierre:** —
 
 ---

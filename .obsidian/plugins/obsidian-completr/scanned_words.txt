@@ -90783,6 +90783,7 @@ vLlnDpmLzt
 vGlS
 vIWwE
 vSBx
+viabilidad
 audience
 activo
 auto
@@ -118363,6 +118364,7 @@ npFPh
 nPsO
 nPCI
 njlU
+nblm
 created
 commit
 cada
@@ -128223,6 +128225,8 @@ cyVb
 cNCJ
 cedL
 cMsm
+cuantizando
+cuantiza
 updated
 un
 universo
@@ -211128,6 +211132,8 @@ pifc
 pTLM
 pOtt
 pngquant
+pdfpp
+paletas
 min
 mica
 movimiento
@@ -238556,6 +238562,7 @@ BpoP
 BuIIdrKoZKBp
 BdzQ
 BkbaC
+Buena
 en
 exacta
 escaneados
@@ -258520,6 +258527,7 @@ MAonj
 MCoi
 MpQr
 MsQl
+Mandar
 Lectura
 LaTeX
 Linter
@@ -275599,6 +275607,8 @@ lckfWGO
 lReV
 lSWtL
 lNEd
+lentee
+localizador
 incluyendo
 im
 instalar
@@ -321989,6 +321999,7 @@ fxak
 fIawK
 fiBq
 fssp
+features
 haya
 hace
 hacer
@@ -368764,6 +368775,7 @@ ogba
 oUBN
 oqFtA
 optimize
+optimizaciones
 junto
 json
 jer

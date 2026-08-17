@@ -86,6 +86,98 @@ REGLAS:
 
 ---
 
+### v3 — complemento B con embed PDF++ (prompt de producción)
+
+**Objetivo:** dado un rango de subtítulos, buscar en los libros fuente el complemento nivel B y las figuras relevantes con embed PDF++ + bloque IMA-SRC de respaldo. Este es el prompt de producción que reemplaza IMA-SRC puro.
+
+**Uso:** cargar en notebook separado con los 9 libros de ETN607 + _library_ETN607.md. Mandar el mismo rango que se usó en el notebook de transcripción: "desde subtítulo X hasta Y".
+
+**Fuentes del notebook:**
+- _library_ETN607.md
+- Los 9 libros de ETN607 (ver lista en prompt)
+- NO cargar el PDF de apuntes manuscritos
+
+**Resultado:** pendiente
+
+**Notas:** el embed usa `[[]]` sin `!` — no renderiza inline, evita que Obsidian se lentee. El bloque IMA-SRC queda como localizador de respaldo mientras el desfase de numeración no esté resuelto.
+
+```
+TAREA:
+Dado un rango de subtítulos de ETN607 (Mecánica Aplicada), buscar en los libros fuente
+el complemento nivel B y las figuras relevantes.
+
+FUENTES: usar solo los libros cargados en este notebook y _library_ETN607.md.
+No usar conocimiento general. Consultar _library_ETN607.md para criterio de selección
+de libros y capítulos por tema.
+
+FLUJO:
+"De [fuente], desde subtítulo X hasta subtítulo Y, complemento nivel B"
+→ buscar en los libros fuente según _library_ETN607.md
+→ entregar para cada subtítulo del rango:
+   1. Definición formal (si aplica)
+   2. Figura (si existe)
+→ si un subtítulo no tiene complemento relevante en los libros → omitirlo sin avisar
+
+FORMATO DE RESPUESTA POR SUBTÍTULO:
+
+## [N. Subtítulo]
+
+> [!note] Complemento (Nivel B)
+>
+> 1. Definición formal
+> Extraer del libro fuente la definición más clara y directa.
+> Una sola definición — sin parafrasear, sin expandir.
+>
+> 2. Idea clave (opcional)
+> Solo si hay una propiedad o relación central que la definición no captura.
+> Máximo 2 líneas.
+>
+> 3. Figura (si existe)
+> Si en los libros hay una figura que ilustre directamente el concepto:
+>
+> [[nombre_exacto_del_archivo.pdf#page=N]]
+> *[etiqueta de figura tal como aparece en el libro, ej: Figure 4.3]*
+> *[descripción breve si existe — omitir si no hay]*
+> IMA-SRC | fuente: [nombre del archivo PDF] | página: [número impreso] | id: [etiqueta o pie de figura] | posición: [dónde está en la página]
+> justificación: [por qué esta figura sirve — 1 oración, sin describir lo que se ve]
+>
+> Si no hay figura relevante → omitir esta sección.
+
+REGLAS:
+- Solo citar si podés confirmar fuente + página + id. Si no, omitir — no inventar.
+- El embed usa doble corchete sin ! → [[archivo.pdf#page=N]]
+- El nombre del archivo debe coincidir exactamente con el nombre del PDF cargado.
+- La etiqueta de figura es obligatoria como id. Si no hay etiqueta, usar el pie textual.
+  Si tampoco hay pie, describir brevemente el visual como id.
+- Podés citar más de una figura si son relevantes.
+- Sin introducción, sin cierre, sin comentarios — solo el contenido estructurado.
+- Respuesta compacta: no más de lo necesario para entender el concepto.
+
+LIBROS DISPONIBLES:
+Taylor (dividido):
+  caps.1-9   → John R. Taylor-Classical mechanics-eng-1to9.pdf
+  caps.10-16 → John R. Taylor-Classical mechanics-eng-10to16.pdf
+  (esp) caps.1-9   → John R. Taylor-Mecánica clásica-2005-ED REVERTÉ-esp-1to9.pdf
+  (esp) caps.10-16 → John R. Taylor-Mecánica clásica-2005-ED REVERTÉ-esp-10to16.pdf
+  soluciones → John R. Taylor-Instructor's Manual to accompany Classical Mechanics-2005.pdf
+Goldstein (inglés): Goldstein & Poole & Safko-Classical Mechanics-3th ed-Pearson.pdf
+Goldstein (esp):   H. Goldstein-Mecánica clásica-1994-ED REVERTE.pdf
+Wells:   Dare A. Wells-SCHAUM'S Lagrangian Dynamics-McGraw-Hill.pdf
+Nelson:  Nelson & Best & McLean-schaums Statics and dynamics.pdf
+Lim:     LimYung-kuo-Problems and Solutions on Mechanics-1994.pdf
+Alonso:  Alonso & Finn-Mecánica_Vol 1-1970-.pdf
+
+TEORÍA POR TEMA (según _library_ETN607.md):
+T1-T2 Taylor-1to9 Cap.1-2 · Alonso & Finn Vol.1
+T3-T4 Taylor-1to9 Cap.7 · Goldstein Cap.1-2
+T5 Taylor-1to9 Cap.7 y 4 · Goldstein Cap.1-2
+T6 Taylor-1to9 Cap.7 · Goldstein Cap.1
+T7 Wells Cap.7
+T8 Goldstein Cap.4-5 · Taylor-10to16 Cap.10
+```
+
+---
+
 ### v2 — complemento B con embed + IMA-SRC (comparación)
 
 **Objetivo:** probar la misma consulta que v1 pero pidiendo ambos formatos — embed PDF++ e IMA-SRC — para comparar cuál es más útil en la práctica y detectar diferencias en el número de página reportado.
