@@ -408,7 +408,7 @@
       },
       "output_handlers": {
         "stdout": {
-          "handler": "ignore",
+          "handler": "notification",
           "convert_ansi_code": true
         },
         "stderr": {
@@ -426,7 +426,13 @@
       "events": {},
       "debounce": null,
       "command_palette_availability": "enabled",
-      "preactions": [],
+      "preactions": [
+        {
+          "type": "prompt",
+          "enabled": true,
+          "prompt_id": "00hjfovakq"
+        }
+      ],
       "variable_default_values": {}
     }
   ],
@@ -514,6 +520,31 @@
         }
       ],
       "execute_button_text": "Execute"
+    },
+    {
+      "id": "00hjfovakq",
+      "title": "PDF — buscar figura",
+      "description": "Busca una etiqueta de figura en los PDFs de la materia",
+      "preview_shell_command": false,
+      "fields": [
+        {
+          "type": "single-line-text",
+          "label": "Sigla (ej: ETN607)",
+          "description": "",
+          "default_value": "ETN607",
+          "target_variable_id": "hq46y7n7ep",
+          "required": true
+        },
+        {
+          "type": "single-line-text",
+          "label": "Etiqueta (ej: 4.3 o Fig. 2-4)",
+          "description": "",
+          "default_value": "",
+          "target_variable_id": "11tuy56kjj",
+          "required": true
+        }
+      ],
+      "execute_button_text": "Buscar"
     }
   ],
   "builtin_variables": {},
@@ -544,6 +575,18 @@
         "type": "cancel-silently",
         "value": ""
       }
+    },
+    {
+      "id": "hq46y7n7ep",
+      "name": "sigla",
+      "description": "",
+      "default_value": null
+    },
+    {
+      "id": "11tuy56kjj",
+      "name": "etiqueta",
+      "description": "",
+      "default_value": null
     }
   ],
   "custom_variables_notify_changes_via": {

@@ -1724,7 +1724,8 @@
       "sortOrder": "custom",
       "customOrder": [
         "Untitled-07-08-2026_16-58-24.png",
-        "Untitled-07-08-2026_16-58-26.png"
+        "Untitled-07-08-2026_16-58-26.png",
+        "Untitled 1-17-08-2026_16-52-19.png"
       ]
     },
     "_assets/Untitled-07-08-2026_16-58-24.png": {
@@ -4075,6 +4076,10 @@
       "isHidden": false
     },
     "_app/notebooklm/prompts/ETN607/ETN607-transcription_BCv4.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/Untitled 1-17-08-2026_16-52-19.png": {
       "isPinned": false,
       "isHidden": false
     }

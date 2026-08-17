@@ -65,6 +65,12 @@
       "icon": "lucide-circle-star",
       "name": "Shell commands: Execute: Occlusion Actions",
       "mode": "any"
+    },
+    {
+      "id": "obsidian-shellcommands:shell-command-72ny8o8zq4",
+      "icon": "lucide-book-search",
+      "name": "Shell commands: Execute: PDF — buscar figura",
+      "mode": "any"
     }
   ],
   "rightRibbon": [],
@@ -213,7 +219,15 @@
       "Run Script: .obsidian/scripts/python/section_reintegrate/src/main.py",
       "Run Script: .obsidian/scripts/python/section_extract/src/main.py",
       "Shell commands: Custom variables",
-      "Run Script: .obsidian/scripts/python/notebooklm_fix/src/main.py"
+      "Run Script: .obsidian/scripts/python/notebooklm_fix/src/main.py",
+      "Open quick switcher",
+      "Open graph view",
+      "Insert template",
+      "Open command palette",
+      "Toggle modern outline",
+      "Advanced Tables Toolbar",
+      "Create new canvas",
+      "Abrir Galaxy View"
     ]
   },
   "spacing": "0",

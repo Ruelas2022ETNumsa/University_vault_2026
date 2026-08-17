@@ -1,6 +1,6 @@
 ## Sistema de coordenadas
 
-\``````ad-note
+``````ad-note
 title: Complemento (Nivel C)
 
 1. Definición formal
@@ -118,4 +118,5 @@ $$
 \end{array}
 $$
 ``````
+
 

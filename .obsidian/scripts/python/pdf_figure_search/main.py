@@ -13,7 +13,7 @@ import sys
 import subprocess
 
 try:
-    import fitz  # PyMuPDF
+    import pymupdf as fitz
 except ImportError:
     print("PyMuPDF no instalado. Ejecuta: py -m pip install pymupdf")
     sys.exit(1)
@@ -190,7 +190,7 @@ def main():
 
     # 7. Notificación stdout (Shell Commands puede mostrarlo o ignorarlo)
     if ok:
-        print(f"✅ Figura {num} — {len(results)} resultado(s) copiados al portapapeles.")
+        print(f"OK: Figura {num} - {len(results)} resultado(s) copiados al portapapeles.")
     else:
         print(output)
 
