@@ -23,40 +23,69 @@ Registro de instalación y configuración de OCRmyPDF en Windows para el carrier
 | OCRmyPDF | 17.10.0 | ✅ instalado vía pip |
 | pypdfium2 | 5.13.0 | ✅ instalado vía pip |
 | Idioma `eng` | — | ✅ incluido por defecto |
-| Idioma `spa` | — | ❌ falta instalar |
+| Idioma `spa` | — | ✅ instalado manualmente (tessdata) |
+| pngquant | — | ❌ no instalado — necesario para --optimize 2 |
+| JBIG2 | — | ❌ no instalado — opcional, reduce tamaño |
 
 **Ruta de Tesseract:** `C:\Program Files\Tesseract-OCR\tesseract.exe`
 
 ---
 
-### Problemas encontrados
+### Pruebas realizadas — Alonso & Finn-Mecánica_Vol 1-1970-.pdf
 
-**1. Tesseract no está en el PATH**
-WinError 2 al correr OCRmyPDF — no encuentra el ejecutable.
-Solución: agregar `C:\Program Files\Tesseract-OCR` al PATH del sistema.
-Inicio → "variables de entorno" → Variables del sistema → Path → Editar → Nuevo → pegar la ruta → Aceptar todo → reiniciar PowerShell.
+**PDF original:** 19.025 KB
 
-**2. Idioma español falta**
-Error: `OCR engine does not have language data for spa`
-Solución: descargar `spa.traineddata` y copiarlo a `C:\Program Files\Tesseract-OCR\tessdata\`
-Descarga: https://github.com/tesseract-ocr/tessdata/raw/main/spa.traineddata
+**Prueba 1 — sin flags extra**
+Comando: `py -m ocrmypdf -l spa+eng "Alonso & Finn..." "Alonso & Finn-OCR.pdf"`
+Resultado: falló — PDF tiene estructura Tagged, OCRmyPDF se niega sin flag explícito.
+
+**Prueba 2 — force-ocr**
+Comando: `py -m ocrmypdf -l spa+eng --force-ocr "Alonso & Finn..." "Alonso & Finn-OCR.pdf"`
+Resultado: ✅ generó PDF con capa de texto — 41.087 KB (doble del original)
+Búsqueda en Obsidian: ✅ Ctrl+F encuentra `figura` y `fig`
+Problemas: OCR con errores en dígitos similares (ej: `3` reconocido como `8`) — esperado en texto antiguo. Warnings de diacríticos en páginas con mucho español.
+
+**Prueba 3 — force-ocr + optimize 1**
+Comando: `py -m ocrmypdf -l spa+eng --force-ocr --optimize 1 "Alonso & Finn..." "Alonso & Finn-OCR-opt.pdf"`
+Resultado: ✅ completó — 41.087 KB — sin ahorro respecto a prueba 2 (optimize 1 no tiene efecto en este PDF)
+Conclusión: necesario probar --optimize 2 con pngquant instalado.
+
+---
+
+### Notas técnicas
+
+- `--force-ocr` necesario para PDFs Tagged — rasteriza todas las páginas
+- `--optimize 2` requiere `pngquant` — instalar con `winget install -e --id ImageOptim.pngquant`
+- `--optimize 1` sin pérdida, no requiere dependencias extra
+- Warnings `[WinError 2]` = componentes opcionales ausentes (JBIG2, pngquant) — no afectan el OCR
+- `lots of diacritics` = warning esperado en texto en español
+- `no best words` = páginas con figuras o contenido vectorial sin texto reconocible
+- GPU: Tesseract usa solo CPU — sin aceleración por GPU
+
+---
+
+### Comandos de referencia
+
+```
+# Básico con force-ocr
+py -m ocrmypdf -l spa+eng --force-ocr "input.pdf" "output-OCR.pdf"
+
+# Con compresión sin pérdida (no requiere pngquant)
+py -m ocrmypdf -l spa+eng --force-ocr --optimize 1 "input.pdf" "output-OCR-opt.pdf"
+
+# Con compresión con pérdida (requiere pngquant)
+py -m ocrmypdf -l spa+eng --force-ocr --optimize 2 "input.pdf" "output-OCR-opt2.pdf"
+
+# Solo inglés
+py -m ocrmypdf -l eng --force-ocr "input.pdf" "output-OCR.pdf"
+```
 
 ---
 
 ### Próximos pasos
 
-- [ ] Agregar `C:\Program Files\Tesseract-OCR` al PATH del sistema
-- [ ] Descargar `spa.traineddata` y copiarlo a `tessdata\`
-- [ ] Verificar con `tesseract --version` en PowerShell nuevo
-- [ ] Probar: `py -m ocrmypdf -l spa+eng "Alonso & Finn-Mecánica_Vol 1-1970-.pdf" "Alonso & Finn-OCR.pdf"` desde `E:\University_vault_2026\_PDF\ETN-607`
-- [ ] Evaluar calidad del OCR en el resultado
-- [ ] Documentar resultado en `chronicle.md`
-
----
-
-### Comando de prueba
-
-```
-cd "E:\University_vault_2026\_PDF\ETN-607"
-py -m ocrmypdf -l spa+eng "Alonso & Finn-Mecánica_Vol 1-1970-.pdf" "Alonso & Finn-OCR.pdf"
-```
+- [ ] Instalar pngquant: `winget install -e --id ImageOptim.pngquant`
+- [ ] Probar --optimize 2 con Alonso & Finn y comparar tamaño
+- [ ] Probar búsqueda Ctrl+F en Obsidian con el archivo optimizado
+- [ ] Probar con otros PDFs de ETN-607 — verificar cuáles necesitan OCR
+- [ ] Documentar resultado final en chronicle.md

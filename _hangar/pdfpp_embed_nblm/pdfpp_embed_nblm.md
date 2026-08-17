@@ -10,10 +10,10 @@ blocked_by:
 ## Handoff
 
 **Última sesión:** 2026-08-16
-**Retomar desde:** pruebas de PDF++ y flujo de embed desde NotebookLM — leer Tareas
-**Completado esta sesión:** definición del flujo, análisis de PDF++ y su feature de rectangular selection embed. Convertido de ship a carrier.
-**Próximo paso:** probar embed básico `![[libro.pdf#page=N]]` en Obsidian y probar si NotebookLM entrega el formato de embed de forma separada (sin modificar el prompt v3)
-**Preguntas de cierre:** ver ## Tareas — pendientes de prueba
+**Retomar desde:** `ocrmypdf-install.md` — instalar pngquant y probar --optimize 2
+**Completado esta sesión:** carrier creado, prompts v1 y v2 diseñados, OCRmyPDF instalado y probado (pruebas 1-3 con Alonso & Finn), flujo de búsqueda por etiqueta definido y documentado
+**Próximo paso:** instalar pngquant — `winget install -e --id ImageOptim.pngquant` — luego probar --optimize 2, luego probar prompts v1/v2 en NotebookLM
+**Preguntas de cierre:** —
 
 ---
 
@@ -27,7 +27,7 @@ blocked_by:
 - [ ] Decidir si el embed convive con IMA-SRC o lo reemplaza
 - [ ] Script delta: descartado — reemplazado por flujo de búsqueda por etiqueta
 - [ ] Script búsqueda por etiqueta: diseñar e implementar — lista todas las coincidencias, usuario elige — fase pruebas CLI antes de integrar a Obsidian
-- [ ] OCRmyPDF: instalar y probar en PDF escaneado (ej: Alonso & Finn) — fase pruebas CLI antes de integrar a Obsidian
+- [x] OCRmyPDF: instalado y probado (pruebas 1-3) — optimize 1 sin ahorro — pendiente optimize 2 con pngquant
 
 ---
 

@@ -8884,6 +8884,7 @@ tUGp
 tFGd
 tOuNN
 tKZw
+tessdata
 ToDo
 Templater
 Text
@@ -18547,6 +18548,7 @@ TtFh
 TIyZ
 TWUE
 TDJr
+Tagged
 Sistema
 Sync
 Save
@@ -45658,6 +45660,7 @@ dvPK
 dNsL
 dgKi
 duOA
+diacr
 Vault
 Verificar
 Variables
@@ -100251,6 +100254,7 @@ aGbn
 aCXp
 aXgoD
 aPyR
+ahorro
 related
 recomendados
 ribbon
@@ -109598,6 +109602,8 @@ resN
 rgRY
 rVnj
 rUEr
+rasteriza
+reconocible
 notes
 notas
 nuevas
@@ -211121,6 +211127,7 @@ pZkhxVbhUShVnxCIEI
 pifc
 pTLM
 pOtt
+pngquant
 min
 mica
 movimiento
@@ -368756,6 +368763,7 @@ olKl
 ogba
 oUBN
 oqFtA
+optimize
 junto
 json
 jer
@@ -406102,6 +406110,7 @@ wPZp
 wHYAX
 wUFW
 wjQa
+warning
 xima
 xeles
 xy
@@ -423879,6 +423888,7 @@ WRDq
 Wfdl
 WvzYT
 WHsV
+Warnings
 JavaScript
 JSON
 JERARQU
@@ -433391,6 +433401,7 @@ JIER
 JJICq
 JxWT
 JFww
+JBIG
 KB
 Kirchhoff
 Ksv

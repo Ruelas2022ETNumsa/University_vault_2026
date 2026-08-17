@@ -21,7 +21,8 @@
         "_assets",
         "Borrar",
         "Rubbish",
-        "README.md"
+        "README.md",
+        "Untitled.md"
       ]
     },
     "MOC": {
@@ -3952,18 +3953,103 @@
     "_PDF/ETN-607": {
       "isPinned": false,
       "isHidden": false,
-      "customOrder": [],
-      "sortOrder": "custom"
+      "sortOrder": "custom",
+      "customOrder": [
+        "Alonso & Finn-Mecánica_Vol 1-1970-.pdf",
+        "Alonso & Finn-OCR-opt.pdf",
+        "Alonso & Finn-OCR.pdf",
+        "Dare A. Wells-SCHAUM'S Lagrangian Dynamics-McGraw-Hill.pdf",
+        "Goldstein & Poole & Safko-Classical Mechanics-3th ed-Pearson.pdf",
+        "H. Goldstein-Mecánica clásica-1994-ED REVERTE.pdf",
+        "John R. Taylor-Classical mechanics-eng.pdf",
+        "John R. Taylor-Instructor's Manual to accompany Classical Mechanics-2005.pdf",
+        "John R. Taylor-Mecánica clásica-2005-ED REVERTÉ-esp.pdf",
+        "LimYung-kuo-Problems and Solutions on Mechanics-1994.pdf",
+        "Nelson & Best & McLean-schaums Statics and dynamics.pdf",
+        "Alonso & Finn-OCR-opt2.pdf"
+      ]
     },
     "_hangar/pdfpp_embed_nblm": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
-        "pdfpp_embed_nblm.md"
-      ],
-      "sortOrder": "custom"
+        "pdfpp_embed_nblm.md",
+        "chronicle.md",
+        "logbook.md",
+        "ocrmypdf-install.md",
+        "prompts.md"
+      ]
     },
     "_hangar/pdfpp_embed_nblm/pdfpp_embed_nblm.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/pdfpp_embed_nblm/chronicle.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/pdfpp_embed_nblm/logbook.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/pdfpp_embed_nblm/ocrmypdf-install.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/pdfpp_embed_nblm/prompts.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/ETN-607/Alonso & Finn-Mecánica_Vol 1-1970-.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/ETN-607/Alonso & Finn-OCR-opt.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/ETN-607/Alonso & Finn-OCR.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/ETN-607/Dare A. Wells-SCHAUM'S Lagrangian Dynamics-McGraw-Hill.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/ETN-607/Goldstein & Poole & Safko-Classical Mechanics-3th ed-Pearson.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/ETN-607/H. Goldstein-Mecánica clásica-1994-ED REVERTE.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/ETN-607/John R. Taylor-Classical mechanics-eng.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/ETN-607/John R. Taylor-Instructor's Manual to accompany Classical Mechanics-2005.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/ETN-607/John R. Taylor-Mecánica clásica-2005-ED REVERTÉ-esp.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/ETN-607/LimYung-kuo-Problems and Solutions on Mechanics-1994.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/ETN-607/Nelson & Best & McLean-schaums Statics and dynamics.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/ETN-607/Alonso & Finn-OCR-opt2.pdf": {
       "isPinned": false,
       "isHidden": false
     }
