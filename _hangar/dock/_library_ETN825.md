@@ -8,7 +8,7 @@ related_notes:
 tags: [beacon, library, ETN825, infraestructura]
 date_created: 2026-07-29
 date_updated: 2026-08-17
-_last_edit: 2026-08-17 — OSTEP y tesis Swanson AHPL eliminados de complementos ChatGPT y movidos a descartados
+_last_edit: 2026-08-17 — ETN825-Hill-Peterson-Resumen-Docente-ESP agregado a complementos; fotocopias docente registradas como recibidas; Hill & Peterson 3ª ed. removido de libros por conseguir
 status: desarollo
 ---
 
@@ -130,6 +130,7 @@ Archivos adicionales que no son libros completos pero aportan valor puntual a No
 
 | Archivo                                                        | Contenido                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Temas      |
 | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
+| `ETN825-Hill-Peterson-Resumen-Docente-ESP` | Resumen elaborado por el docente basado en Hill & Peterson Digital Systems 2ª ed. En español. Cubre comunicación entre sistemas, operaciones en paralelo, módulos interactuantes, sincronización, interconexión (IOBUS/CSBUS), handshake respondiente/no-respondiente, interfaces de impresora con módulo AHPL completo, interrupciones (flags, MR, vectorial/no-vectorial, PSR/PSW), transferencia de datos (programada, Buffer, DMA) con flujogramas y secuencias AHPL, interfaces y periféricos (interface SIC genérica, simplificada, lectora de cinta), administración de memoria (Stack, Asociativa, Buffer/Caché, Virtual, Bancos múltiples). ⚠️ Sin numeración de página ni etiquetas en imágenes — afecta extracción por referencia específica pero no consultas conceptuales. Sirve como puente al español y refleja el criterio del docente sobre qué es relevante. | T1, T2, T3, T4, T5 |
 | `AHPL-Resumen-Garcia-Vargas-basado-Hill-Peterson-3ed`          | Resumen completo de AHPL basado en Hill & Peterson 3ª ed. Cubre convención de operandos (escalares, vectores, matrices), operadores booleanos y de reducción, declaraciones con reloj, estructura de módulos (NAME, MEMORY, INPUTS, OUTPUTS, BUSES, CLUNITS), secuencia de control con pasos numerados y saltos, descripción de unidades lógicas combinatorias (CLUNIT). Incluye ejemplos resueltos: fetch routine, DATA SELECTOR, FULLADD.                                                                                   | T1, T2, T3 |
 | `AHPL-Slides-Sintaxis-Operadores-Transferencias-Condicionales` | Diapositivas académicas. Complementa el resumen anterior con sintaxis alternativa de operadores (`&` AND, `+` OR, `@` XOR), operadores relacionales (NE, EQ, GT, GE, LT, LE), transferencias condicionales con múltiples registros fuente/destino, manejo de arreglos RAM con DCD(AR), y mapeo AHPL → VHDL. Útil para comparar con VHDL si el docente lo menciona.                                                                                                                                                            | T1, T2     |
 | `AHPL-Teoria-Base-Rocasalvo-ETN821`                            | Teoría base de AHPL elaborada por el auxiliar Rocasalvo para ETN-821. Cubre la arquitectura de dos secciones (circuito secuencial de control + registro de datos y lógica), diferencia entre conexiones (`=`) y transferencias (`←`), operaciones lógicas (AND, OR, XOR, NOT), reducción, concatenación, rotaciones, suma, resta, incremento, codificación, operaciones condicionadas por derecha e izquierda, condiciones de bifurcación y diagramas de tiempo. Incluye diagramas de circuito real (flip-flops, compuertas). | T1, T2     |
@@ -223,7 +224,6 @@ Solo TCP/IP                → Stevens Vol.1 (consulta puntual)
 
 | Libro | Prioridad | Razón |
 |---|---|---|
-| Hill & Peterson — Digital Systems 3ª ed. (1987) — Wiley | 🔴 Alta | Edición más completa de AHPL — el PDF encontrado tiene rayaduras |
 | Pérez, S.A. — Diseño de Sistemas Digitales con VHDL — 1ª ed. — Thomson (2002) | 🟡 Media | Contexto comparativo AHPL vs VHDL moderno |
 | Stallings, W. — Operating Systems — 8ª ed. — Pearson (2015) | 🟡 Media | Contexto interrupciones (T3) y control de tiempos desde el SO |
 | Tanenbaum, A.S. & Van Steen, M. — Distributed Systems — 2ª ed. — Pearson (2007) | 🟢 Baja | Contexto centros de cómputo y multiprocesadores (T6) |
@@ -232,10 +232,10 @@ Solo TCP/IP                → Stevens Vol.1 (consulta puntual)
 
 | Pendiente | Detalle |
 |---|---|
-| Fotocopias del docente — Hill & Peterson 2ª ed. temas 2-6 | Subir como PDF escaneado una vez disponible. Verificar que el texto sea seleccionable antes de subir. |
-| Fotocopias del docente — Hill & Peterson 2ª ed. temas 9-13 | Ídem anterior. |
-| Hill & Peterson Digital Systems 3ª ed. — versión sin rayaduras | Buscar en Library Genesis o Anna's Archive. Reemplaza al PDF rayado actual. |
-| Diapositivas Stallings COA (GitHub) | URL del docente: https://github.com/mguludag/Stallings-Computer-Org-and-Arch-Slides — descargar y evaluar calidad antes de subir. |
+| Fotocopias del docente — Hill & Peterson 2ª ed. caps. 2, 4, 5, 6 | Recibidas del docente. Texto escaneado (fotos). Verificar que el texto sea seleccionable antes de subir a NotebookLM; si no lo es, subir igual y evaluar calidad de extracción. |
+| Fotocopias del docente — Hill & Peterson 2ª ed. caps. 9, 10, 11, 13 | Recibidas del docente. Ídem anterior. |
+| Fotocopias del docente — Hill & Peterson 2ª ed. cap. 7 | Recibidas del docente. Ídem anterior. |
+| Diapositivas Stallings COA (GitHub) — 21 caps. en PDF | Descargadas y convertidas a PDF. Formato de diapositivas. Evaluar calidad de extracción de texto antes de subir a NotebookLM — analizar en próxima sesión. |
 
 ### Pendientes 2026_2 — Reajuste por temario actualizado
 

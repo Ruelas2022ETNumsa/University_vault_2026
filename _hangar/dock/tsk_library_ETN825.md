@@ -9,10 +9,10 @@ blocked_by:
 
 ## Handoff
 
-**Última sesión:** 2026-07-30
-**Retomar desde:** `E:\University_vault_2026\_app\_config\_library_ETN825.md` → sección `### Pendientes 2026_2`
-**Completado esta sesión:** Stack completo armado, complementos documentados, temario 2026_1 agregado, pendientes de reajuste creados.
-**Próximo paso:** Esperar temario completo y oficial del docente para ejecutar reajuste 2026_2.
+**Última sesión:** 2026-08-17
+**Retomar desde:** Diapositivas Stallings COA (21 caps. en PDF) — evaluar calidad de extracción de texto y decidir si subir a NotebookLM.
+**Completado esta sesión:** Revisión de complementos ChatGPT (OSTEP y tesis Swanson eliminados y movidos a descartados); Mano CSA 3ª ed. actualizado (edición india DK 2007, 539 pp.); Hill & Peterson 1ª ed. confirmada en stack; fotocopias docente caps. 2,4,5,6 / 7 / 9,10,11,13 registradas como recibidas; Hill & Peterson 3ª ed. removido de libros por conseguir; ETN825-Hill-Peterson-Resumen-Docente-ESP agregado a complementos; diapositivas Stallings GitHub descargadas y convertidas a PDF (21 caps.).
+**Próximo paso:** Analizar diapositivas Stallings COA en PDF — evaluar formato, calidad de texto y decidir si subir a NotebookLM y cómo.
 **Preguntas de cierre:** ¿El docente maneja AHPL en ETN825 o solo en ETN821? ¿Los temas T1–T7 del 2026 tienen subtemas detallados?
 
 ---
