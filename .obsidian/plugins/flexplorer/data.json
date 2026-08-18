@@ -22,9 +22,7 @@
         "Borrar",
         "Rubbish",
         "README.md",
-        "Untitled.md",
-        "Untitled 1.md",
-        "Untitled 2.md"
+        "shared"
       ]
     },
     "MOC": {
@@ -1488,7 +1486,8 @@
         "figura_tabnote_integracion.md",
         "tsk_fix-math-notebooklm.md",
         "NBLM_update",
-        "ship_fix-math-mod.md"
+        "ship_fix-math-mod.md",
+        "tks_ETN1015-notebooklm-latex.md"
       ]
     },
     "_app/shellcommands/shellcmd_start_snippet.md": {
@@ -1726,8 +1725,7 @@
       "sortOrder": "custom",
       "customOrder": [
         "Untitled-07-08-2026_16-58-24.png",
-        "Untitled-07-08-2026_16-58-26.png",
-        "Untitled 1-17-08-2026_16-52-19.png"
+        "Untitled-07-08-2026_16-58-26.png"
       ]
     },
     "_assets/Untitled-07-08-2026_16-58-24.png": {
@@ -1970,7 +1968,8 @@
         "Oppenheim & Willsky-Signals and Systems-2th ed-6to11.pdf",
         "Oppenheim & Willsky-Signals and Systems-2th ed.pdf",
         "SCHAUM-HWEI P. HSU-SIGNALS AND SYSTEMS-1995.pdf",
-        "SCHAUM-MONSON H. HAYES-DIGITAL SIGNAL PROCESSING-1999.pdf"
+        "SCHAUM-MONSON H. HAYES-DIGITAL SIGNAL PROCESSING-1999.pdf",
+        "S. Palani, D. Kalaiyarasi-Principles of Digital Signal Processing - 2nd Ed.pdf"
       ]
     },
     "_PDF/PDF-1015/K. Deergha Rao-Signals and Systems.pdf": {
@@ -2026,13 +2025,8 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "ETN1015-study 1.md",
         "ETN1015-study.md"
       ]
-    },
-    "_app/notebooklm/prompts/ETN1015/ETN1015-study 1.md": {
-      "isPinned": false,
-      "isHidden": false
     },
     "_app/notebooklm/prompts/ETN1015/ETN1015-study.md": {
       "isPinned": false,
@@ -2044,7 +2038,8 @@
       "sortOrder": "custom",
       "customOrder": [
         "ETN1015_desmos.md",
-        "ETN1015_tikz.md"
+        "ETN1015_tikz.md",
+        "ETN1015_latex.md"
       ]
     },
     "_app/notebooklm/guides/ETN1015/ETN1015_desmos.md": {
@@ -3993,10 +3988,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Untitled.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_hangar/pdfpp_embed_nblm/chronicle.md": {
       "isPinned": false,
       "isHidden": false
@@ -4061,10 +4052,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Untitled 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_app/notebooklm/prompts/ETN607/ETN607-transcription-v4.md": {
       "isPinned": false,
       "isHidden": false
@@ -4081,15 +4068,25 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_assets/Untitled 1-17-08-2026_16-52-19.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Untitled 2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_app/shellcommands/shellcmd_pdf_figure_search.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "shared": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "_app/notebooklm/guides/ETN1015/ETN1015_latex.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/_legacy/tks_ETN1015-notebooklm-latex.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-1015/S. Palani, D. Kalaiyarasi-Principles of Digital Signal Processing - 2nd Ed.pdf": {
       "isPinned": false,
       "isHidden": false
     }

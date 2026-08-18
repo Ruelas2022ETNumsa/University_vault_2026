@@ -8,7 +8,7 @@ related_notes:
 tags: [beacon, library, ETN1015, infraestructura]
 date_created: 2026-08-11
 date_updated: 2026-08-11
-date_last_edit: 2026-08-11 — archivos divididos documentados
+date_last_edit: 2026-08-17 — libro base cambiado a Palani & Kalaiyarasi 2da ed.
 status: activo
 ---
 
@@ -16,12 +16,12 @@ status: activo
 
 ## Propósito
 
-Este archivo es tu referencia personal para saber qué libro usar en cada tema de ETN1015 — Procesamiento Digital de Señales. El libro base del docente es Rao, que dicta el orden del curso.
+Este archivo es tu referencia personal para saber qué libro usar en cada tema de ETN1015 — Procesamiento Digital de Señales. El libro base del docente es ahora **Palani & Kalaiyarasi (2da ed.)**, que dicta el orden del curso.
 
 ---
 
-> [!warning] Libro base provisional
-> El docente actualmente dicta la materia siguiendo a **Rao**. Es posible que en algún momento cambie de libro base sin aviso previo. Si eso ocurre, el stack completo debe ser revisado y actualizado: el nuevo libro del docente pasa a ser la teoría principal y se re-evalúan los roles del resto.
+> [!info] Libro base actualizado — 2026-08-17
+> El docente **cambió el libro base a Palani & Kalaiyarasi**. Palani arranca directo en tiempo discreto y DSP puro (sin señales continuas, Laplace ni filtros analógicos). Rao pasa a rol de referencia de fondo para la parte continua (caps. 1–5 del curso anterior).
 
 ---
 
@@ -96,17 +96,18 @@ Este archivo es tu referencia personal para saber qué libro usar en cada tema d
 
 ## Stack completo
 
-| Libro                                                                | Rol                                       | Idioma  |
-| -------------------------------------------------------------------- | ----------------------------------------- | ------- |
-| K. Deergha Rao — Signals and Systems — Birkhäuser 2018               | Teoría principal — libro base del docente | Inglés  |
-| Oppenheim, Willsky, Nawab — Signals and Systems — 2da ed. (1to5)     | Teoría rigurosa — caps. 1–5               | Inglés  |
-| Oppenheim, Willsky, Nawab — Signals and Systems — 2da ed. (6to11)    | Teoría rigurosa — caps. 6–11              | Inglés  |
-| Oppenheim & Willsky — Señales y Sistemas — 2da ed. (1to5)            | Puente lingüístico — caps. 1–5            | Español |
-| Oppenheim & Willsky — Señales y Sistemas — 2da ed. (6to11)           | Puente lingüístico — caps. 6–11           | Español |
-| Mani, Oppenheim, Willsky, Nawab — Solutions Manual                   | Soluciones oficiales del Oppenheim        | Inglés  |
-| Hsu — Schaum's Signals and Systems — 1995                            | Problemas estándar resueltos              | Inglés  |
-| Hayes — Schaum's Digital Signal Processing — 1999                    | DSP puro — caps. 6–8 de Rao en adelante   | Inglés  |
-| Phillips, Parr & Riskin — Signals, Systems, and Transforms — 4ta ed. | Transformadas y análisis avanzado         | Inglés  |
+| Libro                                                                | Rol                                            | Idioma  |
+| -------------------------------------------------------------------- | ---------------------------------------------- | ------- |
+| Palani & Kalaiyarasi — Principles of DSP — Springer 2022 (2da ed.)   | Teoría principal — libro base del docente      | Inglés  |
+| K. Deergha Rao — Signals and Systems — Birkhäuser 2018               | Referencia de fondo — parte continua (caps. 1–5) | Inglés  |
+| Oppenheim, Willsky, Nawab — Signals and Systems — 2da ed. (1to5)     | Teoría rigurosa — caps. 1–5                    | Inglés  |
+| Oppenheim, Willsky, Nawab — Signals and Systems — 2da ed. (6to11)    | Teoría rigurosa — caps. 6–11                   | Inglés  |
+| Oppenheim & Willsky — Señales y Sistemas — 2da ed. (1to5)            | Puente lingüístico — caps. 1–5                 | Español |
+| Oppenheim & Willsky — Señales y Sistemas — 2da ed. (6to11)           | Puente lingüístico — caps. 6–11                | Español |
+| Mani, Oppenheim, Willsky, Nawab — Solutions Manual                   | Soluciones oficiales del Oppenheim             | Inglés  |
+| Hsu — Schaum's Signals and Systems — 1995                            | Problemas estándar resueltos                    | Inglés  |
+| Hayes — Schaum's Digital Signal Processing — 1999                    | Ejercicios DSP — complemento directo de Palani  | Inglés  |
+| Phillips, Parr & Riskin — Signals, Systems, and Transforms — 4ta ed. | Transformadas y análisis avanzado              | Inglés  |
 
 ---
 
@@ -123,30 +124,30 @@ Oppenheim ES (Señales y Sistemas 2da ed.)   → 1to5  (Caps. 1–5)  | 6to11 (C
 
 ## Qué usar por tema
 
-> Sin temario parcializado — organizado por capítulo de Rao.
+> Sin temario parcializado — organizado por capítulo de **Palani** (nuevo libro base).
 
-| Capítulo Rao | Teoría principal | Teoría rigurosa | Ejercicios | Español |
+| Capítulo Palani | Teoría principal | Teoría rigurosa | Ejercicios | Español |
 |---|---|---|---|---|
-| Cap. 1 — Intro señales y sistemas | Rao — Cap. 1 | Oppenheim EN (1to5) — Cap. 1 | Hsu Schaum — Cap. 1–2 | Oppenheim ES (1to5) — Cap. 1 |
-| Cap. 2 — Tiempo continuo (convolución, LTI) | Rao — Cap. 2 | Oppenheim EN (1to5) — Cap. 2 | Hsu Schaum — Cap. 3–4 | Oppenheim ES (1to5) — Cap. 2 |
-| Cap. 3 — Fourier continuo | Rao — Cap. 3 | Oppenheim EN (1to5) — Cap. 3–4 | Hsu Schaum — Cap. 5–7 | Oppenheim ES (1to5) — Cap. 3–4 |
-| Cap. 4 — Laplace | Rao — Cap. 4 | Oppenheim EN (6to11) — Cap. 9 | Hsu Schaum — Cap. 8–9 | Oppenheim ES (6to11) — Cap. 9 |
-| Cap. 5 — Filtros analógicos | Rao — Cap. 5 | Phillips et al. — Cap. 8–9 | Hsu Schaum — Cap. 10 | — |
-| Cap. 6 — Tiempo discreto (convolución, LTI) | Rao — Cap. 6 | Oppenheim EN (1to5) — Cap. 5 + (6to11) — Cap. 6 | Hsu Schaum — Cap. 3–4 | Oppenheim ES (1to5) — Cap. 5 + (6to11) — Cap. 6 |
-| Cap. 7 — Fourier discreto (DTFT, muestreo) | Rao — Cap. 7 | Oppenheim EN (6to11) — Cap. 7 | Hsu Schaum — Cap. 5–7 | Oppenheim ES (6to11) — Cap. 7 |
-| Cap. 8 — Transformada Z | Rao — Cap. 8 | Oppenheim EN (6to11) — Cap. 10 | Hsu Schaum — Cap. 11–12 + Hayes | Oppenheim ES (6to11) — Cap. 10 |
+| Cap. 1 — Discrete Signals and Systems | Palani — Cap. 1 | Oppenheim EN (1to5) — Cap. 5 + (6to11) — Cap. 6 | Hsu Schaum — Cap. 3–4 | Oppenheim ES (1to5) — Cap. 5 + (6to11) — Cap. 6 |
+| Cap. 2 — DFT y FFT | Palani — Cap. 2 | Oppenheim EN (6to11) — Cap. 8 | Hayes Schaum DSP — Cap. 5–6 | Oppenheim ES (6to11) — Cap. 8 |
+| Cap. 3 — Diseño de filtros IIR | Palani — Cap. 3 | Oppenheim EN (6to11) — Cap. 7 + Phillips — Cap. 8–9 | Hayes Schaum DSP — Cap. 8–9 | Oppenheim ES (6to11) — Cap. 7 |
+| Cap. 4 — Diseño de filtros FIR | Palani — Cap. 4 | Oppenheim EN (6to11) — Cap. 7 | Hayes Schaum DSP — Cap. 10–11 | Oppenheim ES (6to11) — Cap. 7 |
+| Cap. 5 — Finite Word Length Effects | Palani — Cap. 5 | Oppenheim EN (6to11) — Cap. 6 | Hayes Schaum DSP — Cap. 12 | — |
+| Cap. 6 — Multi-rate DSP | Palani — Cap. 6 | — | Hayes Schaum DSP — Cap. 13 | — |
 
 ---
 
 ## Flujo de uso
 
 ```
-Tema nuevo del docente              → Rao (seguís el libro base)
-No entiendo el fondo                → Oppenheim 2da ed.
+Tema nuevo del docente              → Palani (seguís el libro base)
+No entiendo el fondo / parte continua → Rao (referencia de fondo)
+Teoría rigurosa discreta            → Oppenheim 2da ed. (6to11)
+Teoría rigurosa continua            → Oppenheim 2da ed. (1to5)
 Terminología en español             → Oppenheim versión Pearson Educación
 Verificar ejercicios del Oppenheim  → Solutions Manual de Mani
 Practicar ejercicios estándar       → Hsu Schaum
-Caps. 6–8 de Rao (DSP puro)        → Hayes Schaum DSP
+Ejercicios DSP (DFT, filtros, FWL)  → Hayes Schaum DSP
 Transformadas profundas             → Phillips, Parr & Riskin
 ```
 
