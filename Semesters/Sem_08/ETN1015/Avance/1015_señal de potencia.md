@@ -1,12 +1,12 @@
 Una **señal de potencia** es aquella que se mantiene activa de forma permanente a lo largo del tiempo sin decaer a cero, por lo que su **energía total acumulada es infinita**. Como no podemos medir su energía de forma directa porque no converge, los ingenieros analizamos su **potencia promedio**, que representa el ritmo con el que la señal consume o entrega energía por unidad de tiempo.
 
-Formalmente, una señal es de potencia si su potencia promedio normalizada $P$ es **finita y distinta de cero** ($0 < P < \infty$).
+Formalmente, una señal es de potencia si su potencia promedio normalizada $P$ es **finita y distinta de cero** $$0 < P < \infty$$.
 
 ---
 
 ### Definición Matemática
 
-Para una señal continua $x(t)$, la **potencia promedio normalizada** (calculada sobre una resistencia hipotética de $1\ \Omega$) se define como:
+Para una señal continua $x(t)$, la **potencia promedio normalizada** $calculada sobre una resistencia hipotética de $1\ \Omega$$ se define como:
 
 $$
 P = \lim_{T \to \infty} \dfrac{1}{T} \int_{-T/2}^{T/2} |x(t)|^2 dt
@@ -44,7 +44,7 @@ left=-5; right=5; bottom=-3; top=3; width=550; height=200;
 y=2\cos(2x)|#005F73
 ```
 
-Como la señal no se apaga nunca, su energía total integrada es infinita. Calculemos su potencia promedio evaluando un solo período ($T_0 = \pi$):
+Como la señal no se apaga nunca, su energía total integrada es infinita. Calculemos su potencia promedio evaluando un solo período $$T_0 = \pi$$:
 
 $$
 P = \dfrac{1}{\pi} \int_{-\pi/2}^{\pi/2} |2\cos(2t)|^2 dt
@@ -93,7 +93,7 @@ Dado que $0 < P < \infty$, **la señal $x(t) = 2\cos(2t)$ es rigurosamente una s
 ### Preguntas de Comprensión Conceptual
 
 1. **¿Por qué una señal periódica no nula siempre tiene energía total infinita?** _(Pista: Piensa en qué ocurre al sumar o integrar áreas positivas idénticas de forma infinita)._
-2. **Si una señal física tiene energía total finita ($E < \infty$), ¿cuál es necesariamente su potencia promedio en el intervalo de $-\infty$ a $\infty$?**.
+2. **Si una señal física tiene energía total finita $$E < \infty$$, ¿cuál es necesariamente su potencia promedio en el intervalo de $-\infty$ a $\infty$?**.
 3. **¿Puede un dispositivo real y físico generar una señal de potencia pura en la práctica?** _(Pista: Considera las restricciones de almacenamiento de energía y el tiempo de vida útil de los componentes físicos)._
 
 ---
@@ -114,7 +114,8 @@ $$
 E = \int_{-\infty}^{\infty} |x(t)|^2 dt = \int_{-\infty}^{\infty} 1 \cdot dt = \infty
 $$ Dado que $E = \infty$, la señal no es de energía.
     
-3. Calculamos la potencia promedio infinita $P$: $$
+3. Calculamos la potencia promedio infinita $P$: 
+$$
 P = \lim_{T \to \infty} \dfrac{1}{T} \int_{-T/2}^{T/2} |x(t)|^2 dt = \lim_{T \to \infty} \dfrac{1}{T} \int_{-T/2}^{T/2} 1 \cdot dt
 $$
 $$
@@ -122,7 +123,8 @@ P = \lim_{T \to \infty} \dfrac{1}{T} [t]_{-T/2}^{T/2} = \lim_{T \to \infty} \dfr
 $$
     
 
-**Resultado:** La potencia promedio es finita y no nula ($1\text{ W}$). Por lo tanto: $$
+**Resultado:** La potencia promedio es finita y no nula $$1\text{ W}$$. Por lo tanto: 
+$$
 \bbox[5px, border: 2px solid \#005F73]{P = 1\text{ W} \quad (\text{Señal de Potencia})}
 $$
 
@@ -134,15 +136,19 @@ $$
 
 **Desarrollo:**
 
-1. Planteamos la ecuación de energía para señales discretas. Debido al escalón unitario discreto $u[n]$, los límites de la sumatoria se reducen de $0$ a $\infty$: $$
+1. Planteamos la ecuación de energía para señales discretas. Debido al escalón unitario discreto $u[n]$, los límites de la sumatoria se reducen de $0$ a $\infty$: 
+$$
 E = \sum_{n=-\infty}^{\infty} |x[n]|^2 = \sum_{n=0}^{\infty} |(0.5)^n|^2 = \sum_{n=0}^{\infty} (0.25)^n
 $$
     
-2. Aplicamos la fórmula de sumatoria para series geométricas infinitas $\sum_{n=0}^{\infty} a^n = \dfrac{1}{1-a}$ para $|a| < 1$: $$
+2. Aplicamos la fórmula de sumatoria para series geométricas infinitas $\sum_{n=0}^{\infty} a^n = \dfrac{1}{1-a}$ para $|a| < 1$: 
+
+$$
 E = \dfrac{1}{1 - 0.25} = \dfrac{1}{0.75} = \dfrac{4}{3}\text{ J}
 $$
     
-3. Dado que la energía total es finita ($E = \dfrac{4}{3}\text{ J}$), la señal se clasifica como una **señal de energía**. Su potencia promedio debe ser, por definición, igual a cero. Comprobémoslo aplicando el límite: $$
+3. Dado que la energía total es finita $$E = \dfrac{4}{3}\text{ J}$$, la señal se clasifica como una **señal de energía**. Su potencia promedio debe ser, por definición, igual a cero. Comprobémoslo aplicando el límite: 
+$$
 P = \lim_{N \to \infty} \dfrac{1}{2N + 1} \sum_{n=0}^{N} (0.25)^n
 $$
 $$
@@ -150,10 +156,12 @@ P = \lim_{N \to \infty} \dfrac{1}{2N + 1} \left( \dfrac{1 - (0.25)^{N+1}}{1 - 0.
 $$
     
 
-**Resultado:** $$
+**Resultado:** 
+$$
 \bbox[5px, border: 2px solid \#005F73]{E = \dfrac{4}{3}\text{ J} \quad (\text{Señal de Energía})}
 $$
 
 ---
 
 📊 ¿Te gustaría que analicemos la potencia de otras señales periódicas de mayor complejidad en ingeniería, como un tren de pulsos rectangulares u ondas dientes de sierra?
+

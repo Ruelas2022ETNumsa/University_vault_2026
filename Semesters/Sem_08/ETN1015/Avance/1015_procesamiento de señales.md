@@ -26,7 +26,7 @@ Para sistemas representados por funciones de transferencia (racionales), la esta
 
 *   **Sistemas en el plano $s$ (Laplace):** Un sistema es estable si la ROC de $H(s)$ **incluye el eje imaginario $j\omega$** [12, 13].
     *   *Si el sistema es causal:* Todos los polos deben tener parte real negativa (estar en el **semiplano izquierdo** del plano $s$) [14-16].
-*   **Sistemas en el plano $z$ (Transformada Z):** Un sistema es estable si la ROC de $H(z)$ **incluye el círculo unitario ($|z|=1$)** [17-19].
+*   **Sistemas en el plano $z$ (Transformada Z):** Un sistema es estable si la ROC de $H(z)$ **incluye el círculo unitario $$|z|=1$$** [17-19].
     *   *Si el sistema es causal:* Todos los polos deben tener una magnitud menor a 1 (estar **dentro del círculo unitario**) [20-23].
 
 ### Visualización de Estabilidad (Sistemas Causales)
@@ -70,9 +70,10 @@ Para sistemas representados por funciones de transferencia (racionales), la esta
 
 **Ejercicio 1 (Rao 3.21a):** Determine la estabilidad del sistema LTI con respuesta al impulso $h(t) = e^{-3t}u(t)$.
 **Solución:** Calculamos la integral de valor absoluto:
-$\int_{-\infty}^{\infty} |e^{-3t}u(t)| \, dt = \int_{0}^{\infty} e^{-3t} \, dt = \left[ \dfrac{e^{-3t}}{-3} \right]_{0}^{\infty} = 0 - (-\dfrac{1}{3}) = \dfrac{1}{3}$.
+$\int_{-\infty}^{\infty} |e^{-3t}u(t)| \, dt = \int_{0}^{\infty} e^{-3t} \, dt = \left[ \dfrac{e^{-3t}}{-3} \right]_{0}^{\infty} = 0 - $-\dfrac{1}{3}$ = \dfrac{1}{3}$.
 Como $\dfrac{1}{3} < \infty$, el sistema es **estable** [27, 28].
 
 **Ejercicio 2 (Hsu 4.31):** Un sistema discreto tiene la función de transferencia $H(z) = \dfrac{1}{z - k/2}$ con ROC $|z| > |k/2|$. ¿Para qué valores de $k$ es estable?
 **Solución:** Para que un sistema causal sea estable, sus polos deben estar dentro del círculo unitario. El polo está en $p = k/2$. Por lo tanto, requerimos $|k/2| < 1$, lo que implica **$|k| < 2$** [29].
+
 
