@@ -28384,6 +28384,9 @@ Sesiones
 Springer
 SHOTS
 Swanson
+Support
+Structure
+Superscalar
 Plugins
 Pendientes
 Plugin
@@ -37042,6 +37045,7 @@ Parseo
 Palani
 Principles
 Pieces
+Parallelism
 del
 date
 de
@@ -128302,6 +128306,8 @@ cilindro
 conservados
 colisi
 candidatos
+convertidos
+consultan
 updated
 un
 universo
@@ -155809,6 +155815,7 @@ Corregido
 COMP
 CSBUS
 Compiler
+Computers
 Instalados
 Instalado
 Instalar
@@ -165642,6 +165649,10 @@ IhcLx
 IUOF
 IBUS
 IOBUS
+Issues
+Interconnection
+Internal
+Instruction
 Funci
 File
 Fase
@@ -174742,6 +174753,7 @@ FmOD
 FDJD
 FnzivK
 FWL
+Formats
 Estado
 Excalidraw
 EPUBs
@@ -184631,6 +184643,9 @@ Empleamos
 Effects
 Easy
 Extensions
+Evolution
+External
+Examples
 Obsidian
 OmniSearch
 Ocultar
@@ -258644,6 +258659,9 @@ MpQr
 MsQl
 Mandar
 MENSAJES
+Multicore
+Microprogrammed
+Microinstruction
 Lectura
 LaTeX
 Linter
@@ -267457,6 +267475,7 @@ Localizador
 Localiza
 LOGIC
 LABELS
+Level
 links
 las
 listar
@@ -305763,6 +305782,7 @@ Reemplazo
 Ranking
 Reduce
 Recibidas
+RISC
 Hider
 Hace
 Herramientas

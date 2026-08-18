@@ -253,6 +253,42 @@ Solo TCP/IP                → Stevens Vol.1 (consulta puntual)
 
 ---
 
+## Diapositivas de clase (uso en sesión — no NotebookLM)
+
+Archivos convertidos a PDF desde formato de diapositivas. No se suben a NotebookLM. Se usan directamente en sesión como material de repaso rápido.
+
+### Stallings COA 10ª ed. (2016) — 21 capítulos en PDF
+
+Fuente: https://github.com/mguludag/Stallings-Computer-Org-and-Arch-Slides — pasadas por el docente, convertidas a PDF.
+
+| Cap. | Título | Temas ETN825 | Útil |
+|---|---|---|---|
+| 1 | Basic Concepts and Computer Evolution | T1 | ✅ |
+| 2 | Performance Issues | — | ⚪️ Contextual |
+| 3 | A Top-Level View of Computer Function and Interconnection | T1, T2 | ✅ |
+| 4 | Cache Memory | T5, T8 | ✅ |
+| 5 | Internal Memory | T5, T8 | ✅ |
+| 6 | External Memory | — | ⚪️ Secundario |
+| 7 | Input/Output | T3, T4, T9 | ✅ |
+| 8 | Operating System Support | — | ⚪️ SO — no directo |
+| 9 | Number Systems | — | ⚪️ Base matemática |
+| 10 | Computer Arithmetic | — | ⚪️ Base matemática |
+| 11 | Digital Logic | — | ⚪️ Cubierto por Hill & Peterson |
+| 12 | Instruction Sets: Characteristics and Functions | T1 | ✅ |
+| 13 | Instruction Sets: Addressing Modes and Formats | T1 | ✅ |
+| 14 | Processor Structure and Function | T1 | ✅ |
+| 15 | Reduced Instruction Set Computers (RISC) | T1 | ✅ |
+| 16 | Instruction-Level Parallelism and Superscalar | T2, T6 | ✅ |
+| 17 | Parallel Processing | T6, T10 | ✅ |
+| 18 | Multicore Computers | T6, T10 | ✅ |
+| 19 | Control Unit Operation | T1 | ✅ |
+| 20 | Microprogrammed Control | T1 | ✅ |
+| 21 | Microinstruction Examples | T1 | ✅ |
+
+> ⚠️ Caps. ✅ directamente útiles: 1, 3, 4, 5, 7, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21 (15 de 21). Caps. ⚪️ se consultan solo si el docente los menciona explícitamente.
+
+---
+
 ## Libros descartados
 
 | Libro | Razón |
