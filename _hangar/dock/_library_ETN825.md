@@ -22,15 +22,67 @@ Este archivo es tu referencia personal para saber qué libro usar en cada tema d
 
 ## Temario 2026_1 — Semestre más reciente
 
-> ⚠️ Temario parcial obtenido de foto. Faltan subtemas de T1 a T7. Solo T8, T9 y T10 tienen detalle confirmado.
+> ⚠️ Subtemas T1–T7 completados con base en material disponible del docente (Hill & Peterson 2ª ed. fotocopias + resumen docente ESP + Stallings COA). Pendiente confirmación oficial del docente.
+
+> [!warning] Temario T1–T7 autocompletado — no oficial
+> Los subtemas de T1 a T7 fueron **inferidos** del material del docente disponible, no del temario oficial. El contenido probablemente es correcto pero puede diferir en orden, nomenclatura o alcance. **Confirmar con el docente antes de usarlo como referencia definitiva.** Punto crítico: T6 se llama "Introducción a la pila de protocolo TCP/IP" pero el material disponible apunta principalmente a multiprocesadores — verificar si TCP/IP es subtema o tema completo.
 
 ### T1 — Arquitectura de los procesadores de la familia Intel
+- Organización y arquitectura del computador: visión general
+- Evolución de la arquitectura Intel (8086 → x86-64)
+- Estructura interna del procesador: registros, ALU, unidad de control
+- Sets de instrucciones: características, formatos y modos de direccionamiento
+- Microprogramación y unidad de control microprogramada
+- Arquitecturas RISC vs CISC
+- Pipeline de instrucciones
+
 ### T2 — Sistemas de computación para comunicaciones en paralelo
+- Operaciones en paralelo y convergencia de secuencias
+- Módulos interactuantes: secuencias de control paralelo y separadas
+- Sincronización entre módulos (mismo clock y distinto clock)
+- Interconexión de sistemas: líneas de control separadas y comunes (IOBUS, CSBUS)
+- Paralelismo a nivel de instrucción y superescalar
+
 ### T3 — Sistemas de computación para comunicación en serie
+- Comunicación intersistemas respondiente y no-respondiente
+- Handshake: parcialmente respondiente y completamente respondiente
+- Comunicación entre módulo Master y módulo arbitrario
+- Interface de impresora: secuencia iniciada por la impresora y por la CPU
+- Señales de control: ready, datavalid, accept, csrdy
+
 ### T4 — Sistemas de interrupciones en un sistema de computación
+- Interrupciones: flags (INTR), registro de enmascaramiento (MR)
+- Secuencia de interrupción: prioridad por hardware PRI, codificador ADDR
+- Sistemas de interrupción vectorial y no-vectorial
+- Program Status Register (PSR) y Program Status Word (PSW)
+- Operaciones para transferencia de datos: programada, Buffer, DMA
+- Instrucciones I/O: INT, TST, IOT (ODn, IDn, ISn, OBn, IBn, OCn)
+- Flujograma secuencia I/O completo
+
 ### T5 — Control de tiempos en un sistema de computación
+- Transferencia de datos mediante Buffer: BWC, BIOR, BCR, BUFRDY
+- Flujograma y descripción AHPL de la secuencia Buffer
+- Acceso directo a memoria (DMA): ruta alternativa a memoria
+- Interfaces y periféricos: interface genérica SIC
+- Interface simplificada: respuesta a comandos ID e IS
+- Interface de lectora de cinta de papel: step, datatrue, forward, ONESHOTS
+- Reacción a comandos SIC: CSBUS, csrdy, accept
+
 ### T6 — Introducción a la pila de protocolo TCP/IP
+- Introducción a multiprocesadores: definición y motivación
+- Límite de la potencia disipada y transición a multiprocesadores
+- Arquitecturas multiprocesador: simétrica (SMP), asimétrica
+- Procesamiento paralelo y multicore
+- Contexto TCP/IP: pila de protocolos (consulta puntual)
+
 ### T7 — Centros de cómputo
+- Administración de memoria para sistemas grandes: introducción
+- Memoria Stack (LIFO): implementaciones por registros, RAM exclusiva, software
+- Memoria Asociativa (CAM): descriptor, ASSOC, lectura y escritura asociativa
+- Memoria Buffer (Caché): UC, AA, AM, políticas de acceso y reemplazo
+- Interface de memoria Buffer con RAM: Memory Control Module
+- Memoria Virtual: páginas, AROM, operación (fetch, execute, missing page, replace)
+- Bancos de memoria múltiple (traslapados) y con accesos múltiples (DMA)
 
 ### T8 — Diseño de sistemas de memoria
 - Memoria virtual y paginación
@@ -228,7 +280,7 @@ Solo TCP/IP                → Stevens Vol.1 (consulta puntual)
 | Stallings, W. — Operating Systems — 8ª ed. — Pearson (2015) | 🟡 Media | Contexto interrupciones (T3) y control de tiempos desde el SO |
 | Tanenbaum, A.S. & Van Steen, M. — Distributed Systems — 2ª ed. — Pearson (2007) | 🟢 Baja | Contexto centros de cómputo y multiprocesadores (T6) |
 
-### Pendientes NotebookLM
+### ~~Pendientes NotebookLM~~ → ver tsk
 
 | Pendiente | Detalle |
 |---|---|
@@ -301,7 +353,8 @@ Fuente: https://github.com/mguludag/Stallings-Computer-Org-and-Arch-Slides — p
 | Eijkhout — Introduction to High Performance Scientific Computing | HPC / computación científica — fuera del scope |
 | Hauck & DeHon — Reconfigurable Computing | FPGAs — fuera del scope del temario |
 | Deisenroth & Faisal — Mathematics for Machine Learning | Machine learning — fuera del scope |
-| Schwartz & Ben-David — Understanding Machine Learning | Machine learning — fuera del scope |
+| Stallings — Solutions Manual Operating Systems 5ª ed. (2004) | SO puro — misma razón que OSTEP |
+| Stallings — Solutions Manual Data and Computer Communications 10ª ed. caps. 1–13 (2014) | Redes/telecomunicaciones puro — Protocol Architecture, LAN, WAN, Ethernet. Sin contacto real con ETN825 |
 | Arpaci-Dusseau, R.H. & Arpaci-Dusseau, A.C. — Operating Systems: Three Easy Pieces (OSTEP) | SO puro — los temas de contacto (memoria virtual, DMA) están mejor cubiertos desde hardware por Stallings y Mano. Genera ruido en NotebookLM sin aportar valor diferencial para ETN825 |
 | Swanson, R.E. — Extensions of AHPL and Optimization of the AHPL Compiler for MSI/LSI Design (tesis doctoral, U. of Arizona) | Investigación de posgrado sobre construcción del compilador AHPL y extensiones para síntesis en chips MSI/LSI — excede completamente el nivel del temario. ETN825 trabaja AHPL como herramienta de descripción, no como objeto de investigación |
 

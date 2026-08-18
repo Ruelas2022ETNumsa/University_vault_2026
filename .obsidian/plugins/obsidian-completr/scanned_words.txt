@@ -8889,6 +8889,8 @@ tridimensional
 tallada
 trayectoria
 tolera
+telecomunicaciones
+traslapados
 ToDo
 Templater
 Text
@@ -28387,6 +28389,7 @@ Swanson
 Support
 Structure
 Superscalar
+Subtemas
 Plugins
 Pendientes
 Plugin
@@ -37046,6 +37049,8 @@ Palani
 Principles
 Pieces
 Parallelism
+Paralelismo
+Program
 del
 date
 de
@@ -45690,6 +45695,11 @@ desliza
 duele
 defin
 decimadores
+diferir
+datavalid
+datatrue
+disipada
+descriptor
 Vault
 Verificar
 Variables
@@ -81312,6 +81322,8 @@ sentencias
 subsistemas
 sustancialmente
 serial
+superescalar
+step
 vault
 vil
 ver
@@ -100308,6 +100320,7 @@ alarga
 anteponer
 ascendente
 asterisco
+accept
 related
 recomendados
 ribbon
@@ -128308,6 +128321,9 @@ colisi
 candidatos
 convertidos
 consultan
+csrdy
+codificador
+conseguida
 updated
 un
 universo
@@ -155816,6 +155832,7 @@ COMP
 CSBUS
 Compiler
 Computers
+CISC
 Instalados
 Instalado
 Instalar
@@ -165653,6 +165670,7 @@ Issues
 Interconnection
 Internal
 Instruction
+INTR
 Funci
 File
 Fase
@@ -184646,6 +184664,8 @@ Extensions
 Evolution
 External
 Examples
+Evoluci
+Eliminado
 Obsidian
 OmniSearch
 Ocultar
@@ -193495,6 +193515,7 @@ Ordena
 OCLV
 OSTEP
 Optimization
+ONESHOTS
 Auto
 Annotator
 Autocompletado
@@ -202333,6 +202354,10 @@ AiL
 Arturo
 Arpaci
 Arizona
+ADDR
+ASSOC
+AROM
+Autocompletar
 push
 pull
 para
@@ -221427,6 +221452,9 @@ masas
 multiline
 mejoradas
 movidos
+microprogramada
+multicore
+missing
 YAML
 Ya
 You
@@ -238687,6 +238715,8 @@ BdzQ
 BkbaC
 Buena
 BUSFN
+BIOR
+BUFRDY
 en
 exacta
 escaneados
@@ -248491,6 +248521,8 @@ empuja
 ebullient
 elegilo
 encadenar
+enmascaramiento
+execute
 Motor
 Media
 Mantiene
@@ -258662,6 +258694,8 @@ MENSAJES
 Multicore
 Microprogrammed
 Microinstruction
+Microprogramaci
+Module
 Lectura
 LaTeX
 Linter
@@ -267476,6 +267510,7 @@ Localiza
 LOGIC
 LABELS
 Level
+LIFO
 links
 las
 listar
@@ -286177,6 +286212,8 @@ interpoladores
 india
 interactuantes
 impresora
+intersistemas
+implementaciones
 Dependencia
 Dropbox
 Dataview
@@ -295851,6 +295888,7 @@ DELAY
 Dorling
 Descargadas
 Dusseau
+Deben
 Remotely
 Raz
 Revisa
@@ -305783,6 +305821,8 @@ Ranking
 Reduce
 Recibidas
 RISC
+Reacci
+Reemplazada
 Hider
 Hace
 Herramientas
@@ -313522,6 +313562,7 @@ HyiY
 HwMz
 HzHR
 HpCm
+Handshake
 filtrar
 formato
 faltantes
@@ -322169,6 +322210,7 @@ features
 fines
 frentes
 flujogramas
+forward
 haya
 hace
 hacer

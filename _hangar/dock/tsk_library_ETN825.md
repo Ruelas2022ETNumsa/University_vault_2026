@@ -10,10 +10,12 @@ blocked_by:
 ## Handoff
 
 **Última sesión:** 2026-08-17
-**Retomar desde:** Diapositivas Stallings COA (21 caps. en PDF) — evaluar calidad de extracción de texto y decidir si subir a NotebookLM.
-**Completado esta sesión:** Revisión de complementos ChatGPT (OSTEP y tesis Swanson eliminados y movidos a descartados); Mano CSA 3ª ed. actualizado (edición india DK 2007, 539 pp.); Hill & Peterson 1ª ed. confirmada en stack; fotocopias docente caps. 2,4,5,6 / 7 / 9,10,11,13 registradas como recibidas; Hill & Peterson 3ª ed. removido de libros por conseguir; ETN825-Hill-Peterson-Resumen-Docente-ESP agregado a complementos; diapositivas Stallings GitHub descargadas y convertidas a PDF (21 caps.).
-**Próximo paso:** Analizar diapositivas Stallings COA en PDF — evaluar formato, calidad de texto y decidir si subir a NotebookLM y cómo.
-**Preguntas de cierre:** ¿El docente maneja AHPL en ETN825 o solo en ETN821? ¿Los temas T1–T7 del 2026 tienen subtemas detallados?
+**Retomar desde:** Diapositivas Stallings COA 10ª ed. (21 caps. en PDF) — evaluar calidad de extracción de texto y definir cómo usar en sesión.
+**Completado esta sesión:** Revisión completa de complementos (OSTEP, tesis Swanson, Solutions Manual OS y DCC — todos descartados); Mano CSA DK 2007 confirmado (539 pp.); fotocopias docente caps. 2,4,5,6 / 7 / 9,10,11,13 registradas; Hill & Peterson 3ª ed. removido de libros por conseguir; ETN825-Hill-Peterson-Resumen-Docente-ESP agregado a complementos (T1–T5); diapositivas Stallings COA 10ª ed. registradas en sección especial (15 caps. útiles de 21, no NotebookLM); **temario 2026_1 T1–T7 autocompletado con material del docente — library activado**.
+**Próximo paso:** (1) Confirmar temario oficial con el docente — especialmente T6 (TCP/IP vs multiprocesadores) y verificar subtemas T1–T7. (2) Analizar diapositivas Stallings COA en PDF.
+
+> [!warning] Temario T1–T7 autocompletado
+> Los subtemas de T1 a T7 fueron inferidos del material disponible del docente (Hill & Peterson 2ª ed. fotocopias + resumen docente ESP + Stallings COA 10ª ed.). **No son el temario oficial.** Deben ser confirmados con el docente antes de usarlos como referencia definitiva. T6 en particular tiene ambigüedad: el nombre dice TCP/IP pero el contenido disponible apunta a multiprocesadores.
 
 ---
 
@@ -86,13 +88,20 @@ Restricciones:
 - [x] Registrar capítulos disponibles de Hill & Peterson 2ª ed.
 - [x] Agregar temario 2026_1 (parcial) al archivo de biblioteca
 - [x] Crear pendientes 2026_2 en archivo de biblioteca
-- [ ] Obtener temario completo 2026 del docente
-- [ ] Ejecutar reajuste 2026_2 (ver flujo de pasos 2–12)
-- [ ] Conseguir Hill & Peterson Digital Systems 3ª ed. en buena calidad
-- [ ] Subir fotocopias del docente (temas 2-6 y 9-13) a NotebookLM
-- [ ] Descargar y evaluar diapositivas Stallings COA del GitHub
-- [ ] Reevaluar `operating_systems_three_easy_pieces` contra temario 2026
-- [ ] Reevaluar `extensiones_ahpl_compilador_msi_lsi` contra temario 2026
+- [x] Revisar complementos ChatGPT contra temario 2026 (OSTEP y tesis Swanson eliminados)
+- [x] Confirmar edición Mano CSA (DK 2007, 539 pp.) y mapear capítulos por tema
+- [x] Registrar fotocopias docente Hill & Peterson 2ª ed. caps. 2,4,5,6 / 7 / 9,10,11,13 como recibidas
+- [x] Descargar y registrar diapositivas Stallings COA del GitHub (21 caps. convertidos a PDF)
+- [x] Agregar ETN825-Hill-Peterson-Resumen-Docente-ESP a complementos
+- [x] Autocompletar subtemas T1–T7 del temario 2026_1 con material del docente — library activado
+- [x] ~~Conseguir Hill & Peterson Digital Systems 3ª ed. en buena calidad~~ → **No conseguida. Reemplazada por fotocopias del docente (caps. 2,4,5,6 / 7 / 9,10,11,13 de la 2ª ed.) — aceptable como material base.**
+- [x] ~~Reevaluar `operating_systems_three_easy_pieces` contra temario 2026~~ → **Eliminado del stack — SO puro, fuera del scope.**
+- [x] ~~Reevaluar `extensiones_ahpl_compilador_msi_lsi` contra temario 2026~~ → **Eliminado del stack — excede nivel del temario.**
+- [ ] Obtener temario completo 2026 del docente — especialmente confirmar T6 (TCP/IP vs multiprocesadores)
+- [ ] Ejecutar reajuste 2026_2 (ver flujo de pasos 2–12) — en pausa hasta temario oficial
+- [ ] Subir fotocopias del docente (caps. 2,4,5,6 / 7 / 9,10,11,13) a NotebookLM y evaluar calidad de extracción
+- [ ] Analizar diapositivas Stallings COA 10ª ed. en PDF — evaluar calidad de texto y definir uso en sesión
+- [ ] Confirmar subtemas T1–T7 con el docente y actualizar temario si hay diferencias
 
 ---
 
