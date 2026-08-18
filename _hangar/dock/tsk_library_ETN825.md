@@ -105,6 +105,16 @@ Restricciones:
 
 ---
 
+## Libros por conseguir
+
+| Libro | Prioridad | Razón |
+|---|---|---|
+| Pérez, S.A. — Diseño de Sistemas Digitales con VHDL — 1ª ed. — Thomson (2002) | 🟡 Media | Contexto comparativo AHPL vs VHDL moderno |
+| Stallings, W. — Operating Systems — 8ª ed. — Pearson (2015) | 🟡 Media | Contexto interrupciones (T3) y control de tiempos desde el SO |
+| Tanenbaum, A.S. & Van Steen, M. — Distributed Systems — 2ª ed. — Pearson (2007) | 🟢 Baja | Contexto centros de cómputo y multiprocesadores (T6) |
+
+---
+
 ## Preguntas abiertas
 
 - ¿El docente maneja AHPL/SIC en ETN825 o solo en ETN821? (determina si el stack de AHPL se mantiene o se archiva)
@@ -127,6 +137,3 @@ Restricciones:
 - https://libgen.is
 - https://archive.org
 - https://z-lib.id
-
-**Pendiente de descarga:**
-- https://github.com/mguludag/Stallings-Computer-Org-and-Arch-Slides (diapositivas Stallings — pasadas por el docente)

@@ -272,39 +272,6 @@ Solo TCP/IP                → Stevens Vol.1 (consulta puntual)
 
 ---
 
-## Libros por conseguir
-
-| Libro | Prioridad | Razón |
-|---|---|---|
-| Pérez, S.A. — Diseño de Sistemas Digitales con VHDL — 1ª ed. — Thomson (2002) | 🟡 Media | Contexto comparativo AHPL vs VHDL moderno |
-| Stallings, W. — Operating Systems — 8ª ed. — Pearson (2015) | 🟡 Media | Contexto interrupciones (T3) y control de tiempos desde el SO |
-| Tanenbaum, A.S. & Van Steen, M. — Distributed Systems — 2ª ed. — Pearson (2007) | 🟢 Baja | Contexto centros de cómputo y multiprocesadores (T6) |
-
-### ~~Pendientes NotebookLM~~ → ver tsk
-
-| Pendiente | Detalle |
-|---|---|
-| Fotocopias del docente — Hill & Peterson 2ª ed. caps. 2, 4, 5, 6 | Recibidas del docente. Texto escaneado (fotos). Verificar que el texto sea seleccionable antes de subir a NotebookLM; si no lo es, subir igual y evaluar calidad de extracción. |
-| Fotocopias del docente — Hill & Peterson 2ª ed. caps. 9, 10, 11, 13 | Recibidas del docente. Ídem anterior. |
-| Fotocopias del docente — Hill & Peterson 2ª ed. cap. 7 | Recibidas del docente. Ídem anterior. |
-| Diapositivas Stallings COA (GitHub) — 21 caps. en PDF | Descargadas y convertidas a PDF. Formato de diapositivas. Evaluar calidad de extracción de texto antes de subir a NotebookLM — analizar en próxima sesión. |
-
-### Pendientes 2026_2 — Reajuste por temario actualizado
-
-> ⏸️ En pausa hasta tener el temario completo y oficial del docente.
-
-- [ ] Confirmar temario completo 2026 con el docente (faltan subtemas T1–T7)
-- [ ] Reevaluar stack completo contra temario 2026_1 (el 2021 tenía AHPL/SIC, el 2026 no)
-- [ ] Revisar cada complemento ChatGPT contra los temas 2026_1 y actualizar veredictos
-- [ ] Revisar cada complemento de la tabla principal contra temas 2026_1
-- [ ] Evaluar si los PDFs de AHPL/SIC siguen siendo relevantes o pasan a material de ETN821
-- [ ] Agregar libros específicos para T9 (RS-232, USB, Ethernet, PCI, DMA)
-- [ ] Agregar libros específicos para T10 (arquitecturas multiprocesador simétrica/asimétrica)
-- [ ] Actualizar tabla “qué usar por tema” con etiquetas T1–T10 del nuevo temario
-- [ ] Actualizar flujo de uso
-
----
-
 ## Diapositivas de clase (uso en sesión — no NotebookLM)
 
 Archivos convertidos a PDF desde formato de diapositivas. No se suben a NotebookLM. Se usan directamente en sesión como material de repaso rápido.
