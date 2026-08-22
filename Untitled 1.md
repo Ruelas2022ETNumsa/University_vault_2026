@@ -1,182 +1,159 @@
 
-### b) Cilíndrico 3D (Polar 2D) $(r, \theta, z)$
+### c) Esférico 3D (Polar 2D) $(\rho, \theta, \phi)$
 
 ``````cornell
 ::cue
-Coordenadas cilíndricas · Vector de posición · Ecuaciones de transformación · Derivadas de versores · No constancia de base
+Coordenadas esféricas · Vector de posición · Ecuaciones de transformación · Derivadas de versores · Componentes de velocidad · Aceleración en esféricas
 
-¿Cómo se define el vector de posición en coordenadas cilíndricas?
-¿Por qué la base unitaria en el plano no es constante en el tiempo?
-¿Cuáles son las derivadas de los versores de la base con respecto al tiempo?
-$$
-\vec{R} = r\hat{\mathbf{e}}_r + z\hat{\mathbf{e}}_z
-\dot{\hat{\mathbf{e}}}_r = \dot{\theta}\hat{\mathbf{e}}_\theta$$
+¿Cómo se define el vector de posición de una partícula en coordenadas esféricas utilizando \rho como la variable radial?
+¿Cuáles son las ecuaciones de transformación entre el sistema rectangular cartesiano y el esférico?
+¿Cómo se obtienen las derivadas temporales de los versores de la base móvil en coordenadas esféricas?
+¿Cuáles son las expresiones para la velocidad, rapidez al cuadrado y aceleración en este sistema de coordenadas?
 
-ver también: T2 — Sistemas de coordenadas
+$\vec{R} = \rho\hat{\mathbf{e}}_\rho$
 
 ---
 
-![[ETN607T01.pdf#page=5&rect=83,88,277,197|ETN607T01, p.5]]
-*Figura 1.11 · Versores en coordenadas polares.*
+![[ETN607T01.pdf#page=6&rect=55,554,346,762|ETN607T01, p.6]]
+*Figura 1.12 · Coordenadas esféricas aplicadas a un volumen diferencial.*
 
 ::note
 
+Posición $(\rho, \theta, \phi)$
+$$\vec{R} = \rho \hat{e}_{\rho}$$
+$$\vec{v} = \dfrac{d\vec{R}}{dt}$$
+
+Ecuaciones de transformación
+$$x = \rho \sin \theta \cos \phi$$
+$$y = \rho \sin \theta \sin \phi$$
+$$z = \rho \cos \theta$$
+
+Ecuaciones de transformación
+$$\rho^{2} = x^{2} + y^{2} + z^{2}$$
+$$\text{tg}\,\phi = \dfrac{y}{x}$$
+$$\theta = \text{arc}\,\cos \left( \dfrac{z}{\sqrt{x^{2}+y^{2}+z^{2}}} \right)$$
+
+```ad-nota_3
+title: Desarrollo formal
+collapse: closed
 **Coordenadas**
-Posición de un punto: $(r, \theta, z)$
+Posición: $(\rho, \theta, \phi)$
+
 $$
-\vec{R} = r\hat{\mathbf{e}}_r + z\hat{\mathbf{e}}_z
-\quad \left| \quad
+\vec{R} = \rho\hat{\mathbf{e}}_\rho \quad \left| \quad
 \begin{array}{l}
-\hat{\mathbf{e}}_r \text{ no es cte.} \\
-\hat{\mathbf{e}}_\theta \text{ no es cte.} \\
-\hat{\mathbf{e}}_z \text{ es cte.}
+\hat{\mathbf{e}}_\rho \text{ no es de cte.} \\
+\hat{\mathbf{e}}_\theta \text{ no es de cte.} \\
+\hat{\mathbf{e}}_\phi \text{ no es de cte.}
 \end{array}
 \right.
 $$
 
 
-![[ETN607T01.pdf#page=5&rect=72,200,340,390|ETN607T01, p.5]]
-
-*Figura 1.10 · Punto P en coordenadas cilíndricas con su base de vectores unitarios local.*
-
----
-
 **Ecuaciones de transformación**
-$$
-\begin{array}{l}
-x &=& r\,\text{cos}\,\theta \\
-y &=& r\,\text{sen}\,\theta \\
-z &=& z
-\end{array}
-$$
 
----
-
-A partir de la geometría en el plano $xy$ (Figura 1.11), podemos expresar los versores móviles en términos de la base cartesiana fija:
 $$
-\hat{\mathbf{e}}_r = 1\,\text{cos}\,\theta\hat{\mathbf{i}} + 1\,\text{sen}\,\theta\hat{\mathbf{j}}
-$$
-$$
-\hat{\mathbf{e}}_\theta = 1\,\text{cos}\,\theta\hat{\mathbf{j}} + 1\,\text{sen}\,\theta(-\hat{\mathbf{i}}) = -\text{sen}\,\theta\hat{\mathbf{i}} + \text{cos}\,\theta\hat{\mathbf{j}}
-$$
-
-Derivando con respecto al tiempo (aplicando la regla de la cadena, ya que dependen del tiempo a través del ángulo $\theta(t)$):
-$$
-\dot{\hat{\mathbf{e}}}_r = -\text{sen}\,\theta\dot{\theta}\hat{\mathbf{i}} + \text{cos}\,\theta\dot{\theta}\hat{\mathbf{j}} = \dot{\theta}(-\text{sen}\,\theta\hat{\mathbf{i}} + \text{cos}\,\theta\hat{\mathbf{j}}) = \dot{\theta}\hat{\mathbf{e}}_\theta
-$$
-$$
-\dot{\hat{\mathbf{e}}}_\theta = -\text{cos}\,\theta\dot{\theta}\hat{\mathbf{i}} - \text{sen}\,\theta\dot{\theta}\hat{\mathbf{j}} = -\dot{\theta}(\text{cos}\,\theta\hat{\mathbf{i}} + \text{sen}\,\theta\hat{\mathbf{j}}) = -\dot{\theta}\hat{\mathbf{e}}_r
+\begin{aligned}
+x &= \rho\,\text{sen}\,\theta\,\text{cos}\,\phi \\
+y &= \rho\,\text{sen}\,\theta\,\text{sen}\,\phi \\
+z &= \rho\,\text{cos}\,\theta
+\end{aligned}
 $$
 
 
+![[pegar_imagen]]
+*Figura 1.12 · Representación de un punto P en coordenadas esféricas tridimensionales.*
+
+**Deducción de los versores y sus derivadas temporales**
+Expresando los versores de la base esférica móvil en términos de la base cartesiana fija $(\hat{\mathbf{i}}, \hat{\mathbf{j}}, \hat{\mathbf{k}})$:
+
+$$
+\hat{\mathbf{e}}_\rho = \text{sen}\,\theta\,\text{cos}\,\phi\,\hat{\mathbf{i}} + \text{sen}\,\theta\,\text{sen}\,\phi\,\hat{\mathbf{j}} + \text{cos}\,\theta\,\hat{\mathbf{k}}
+$$
 
 
-```ad-note
-title: Nota de corrección: La naturaleza física de los versores cilíndricos y el vector de posición
-collapse: closed
-De acuerdo con **Alonso & Finn (Cap. 3.5)** y **Goldstein (Cap. 1.4)**, un error conceptual común en física es intentar formular el vector de posición en coordenadas cilíndricas como $\vec{R} = r\hat{\mathbf{e}}_r + \theta\hat{\mathbf{e}}_\theta + z\hat{\mathbf{e}}_z$. Físicamente, el ángulo $\theta$ es un parámetro angular de orientación (no una magnitud con dimensión de longitud) y el vector de posición no tiene componente en la dirección tangencial $\hat{\mathbf{e}}_\theta$; este se reduce estrictamente a la suma de la proyección radial en el plano y la altura vertical:
-$$\vec{R} = r\hat{\mathbf{e}}_r + z\hat{\mathbf{e}}_z$$
+$$
+\hat{\mathbf{e}}_\theta = \text{cos}\,\theta\,\text{cos}\,\phi\,\hat{\mathbf{i}} + \text{cos}\,\theta\,\text{sen}\,\phi\,\hat{\mathbf{j}} - \text{sen}\,\theta\,\hat{\mathbf{k}}
+$$
 
-Sin embargo, al obtener la velocidad $\vec{v} = \dot{\vec{R}}$, se debe aplicar la derivada temporal completa considerando que la base cilíndrica móvil en el plano $xy$ cambia de orientación en el tiempo ($\dot{\hat{\mathbf{e}}}_r \neq 0$):
-$$\vec{v} = \dot{r}\hat{\mathbf{e}}_r + r\dot{\hat{\mathbf{e}}}_r + \dot{z}\hat{\mathbf{e}}_z = \dot{r}\hat{\mathbf{e}}_r + r\dot{\theta}\hat{\mathbf{e}}_\theta + \dot{z}\hat{\mathbf{e}}_z$$
-Donde el término $r\dot{\theta}\hat{\mathbf{e}}_\theta$ representa la velocidad tangencial (o transversal) originada exclusivamente por la rotación de la base, sentando la base de la cinemática de partículas en coordenadas curvilíneas.
+
+$$
+\hat{\mathbf{e}}_\phi = -\text{sen}\,\phi\,\hat{\mathbf{i}} + \text{cos}\,\phi\,\hat{\mathbf{j}}
+$$
+
+
+Derivando parcialmente respecto a $\theta$ y $\phi$:
+
+$$
+\frac{\partial \hat{\mathbf{e}}_\rho}{\partial \theta} = \hat{\mathbf{e}}_\theta, \quad \frac{\partial \hat{\mathbf{e}}_\rho}{\partial \phi} = \text{sen}\,\theta\,\hat{\mathbf{e}}_\phi
+$$
+
+
+$$
+\frac{\partial \hat{\mathbf{e}}_\theta}{\partial \theta} = -\hat{\mathbf{e}}_\rho, \quad \frac{\partial \hat{\mathbf{e}}_\theta}{\partial \phi} = \text{cos}\,\theta\,\hat{\mathbf{e}}_\phi
+$$
+
+
+$$
+\frac{\partial \hat{\mathbf{e}}_\phi}{\partial \theta} = 0, \quad \frac{\partial \hat{\mathbf{e}}_\phi}{\partial \phi} = -(\text{sen}\,\theta\,\hat{\mathbf{e}}_\rho + \text{cos}\,\theta\,\hat{\mathbf{e}}_\theta)
+$$
+
+
+Aplicando la regla de la cadena para obtener las derivadas temporales totales:
+
+$$
+\dot{\hat{\mathbf{e}}}_\rho = \dot{\theta}\hat{\mathbf{e}}_\theta + \dot{\phi}\,\text{sen}\,\theta\,\hat{\mathbf{e}}_\phi
+$$
+
+
+$$
+\dot{\hat{\mathbf{e}}}_\theta = -\dot{\theta}\hat{\mathbf{e}}_\rho + \dot{\phi}\,\text{cos}\,\theta\,\hat{\mathbf{e}}_\phi
+$$
+
+
+$$
+\dot{\hat{\mathbf{e}}}_\phi = -\dot{\phi}(\text{sen}\,\theta\,\hat{\mathbf{e}}_\rho + \text{cos}\,\theta\,\hat{\mathbf{e}}_\theta)
+$$
+
+
+**Velocidad**
+El vector velocidad $\vec{v}$ se obtiene diferenciando el vector de posición respecto al tiempo:
+
+$$
+\vec{v} = \dot{\vec{R}} = \dot{\rho}\hat{\mathbf{e}}_\rho + \rho\dot{\hat{\mathbf{e}}}_\rho = \dot{\rho}\hat{\mathbf{e}}_\rho + \rho\dot{\theta}\hat{\mathbf{e}}_\theta + \rho\dot{\phi}\,\text{sen}\,\theta\,\hat{\mathbf{e}}_\phi
+$$
+
+
+La rapidez al cuadrado (magnitud de la velocidad al cuadrado) es:
+
+$$
+v^2 = \dot{\rho}^2 + \rho^2\dot{\theta}^2 + \rho^2\,\text{sen}^2\theta\dot{\phi}^2
+$$
+
+
+**Aceleración**
+Derivando sucesivamente el vector velocidad respecto al tiempo, se obtienen las componentes de la aceleración total $\vec{a} = a_\rho\hat{\mathbf{e}}_\rho + a_\theta\hat{\mathbf{e}}_\theta + a_\phi\hat{\mathbf{e}}_\phi$:
+
+$$
+a_\rho = \ddot{\rho} - \rho\dot{\theta}^2 - \rho\dot{\phi}^2\,\text{sen}^2\theta
+$$
+
+
+$$
+a_\theta = \rho\ddot{\theta} + 2\dot{\rho}\dot{\theta} - \rho\dot{\phi}^2\,\text{sen}\,\theta\,\text{cos}\,\theta
+$$
+
+
+$$
+a_\phi = \rho\ddot{\phi}\,\text{sen}\,\theta + 2\dot{\rho}\dot{\phi}\,\text{sen}\,\theta + 2\rho\dot{\theta}\dot{\phi}\,\text{cos}\,\theta
+$$
 ```
 
+```ad-note
+title: Nota de corrección: Fundamentación física de la cinemática esférica
+collapse: closed
+De acuerdo con **Taylor (Cap. 1.7 y 4.8)** y **Goldstein (Cap. 1.2 y 1.4)**, el vector de posición de un punto en coordenadas esféricas se proyecta de manera exclusiva en la dirección radial $\hat{\mathbf{e}}_\rho$ como $\vec{R} = \rho\hat{\mathbf{e}}_\rho$. Al derivar con respecto al tiempo, el carácter móvil de los ejes coordenados genera de forma natural las componentes transversales de la velocidad y de la aceleración. Los términos de Coriolis y la aceleración centrípeta se derivan rigurosamente a partir de la variación temporal de la base móvil $(\hat{\mathbf{e}}_\rho, \hat{\mathbf{e}}_\theta, \hat{\mathbf{e}}_\phi)$ aquí deducida, garantizando la consistencia y ortogonalidad geométrica del sistema físico.
+```
 ``````
-## b) Cilíndrico 3D (Polar 2D) $(r, \theta, z)$
 
-`````cornell
-::cue
-Coordenadas cilíndricas · Posición · Ecuaciones de transformación · Derivadas de versores · Versores móviles
-
-¿Cómo se define el vector de posición en coordenadas cilíndricas?
-¿Qué versores son constantes y cuáles dependen de la posición?
-¿Cuáles son las derivadas temporales de los versores de base?
-
-$$\vec{R} = r\hat{\mathbf{e}}_r + z\hat{\mathbf{e}}_z$$
-
-::note
-![[pegar_imagen]]
-*Figura 1.10 · Representación de un punto P en coordenadas cilíndricas tridimensionales.*
-
-**Coordenadas**
-Posición $(r, \theta, z)$
-
-
-$$
-\vec{R} = r\hat{\mathbf{e}}_r + z\hat{\mathbf{e}}_z \quad \left| \quad
-\begin{array}{l}
-\hat{\mathbf{e}}_r \text{ no de cte} \\
-\hat{\mathbf{e}}_\theta \text{ no de cte} \\
-\hat{\mathbf{e}}_z \text{ de cte}
-\end{array}
-\right.
-$$
-
-
-**Ecuaciones de transformación**
-
-$$
-\begin{array}{l}
-x = r\,\text{cos}\,\theta \\
-y = r\,\text{sen}\,\theta \\
-z = z
-\end{array}
-$$
-
-
-![[pegar_imagen]]
-*Figura 1.11 · Relación geométrica de los versores polares en el plano bidimensional.*
-
-
-$$
-\hat{\mathbf{e}}_r = 1\,\text{cos}\,\theta\hat{\mathbf{i}} + 1\,\text{sen}\,\theta\hat{\mathbf{j}}
-$$
-
-
-$$
-\hat{\mathbf{e}}_\theta = 1\,\text{cos}\,\theta\hat{\mathbf{j}} + 1\,\text{sen}\,\theta(-\hat{\mathbf{i}}) = -\text{sen}\,\theta\hat{\mathbf{i}} + \text{cos}\,\theta\hat{\mathbf{j}}
-$$
-
-
-Derivando con respecto al tiempo:
-
-$$
-\dot{\hat{\mathbf{e}}}_r = -\text{sen}\,\theta\dot{\theta}\hat{\mathbf{i}} + \text{cos}\,\theta\dot{\theta}\hat{\mathbf{j}} = \dot{\theta}(-\text{sen}\,\theta\hat{\mathbf{i}} + \text{cos}\,\theta\hat{\mathbf{j}}) = \dot{\theta}\hat{\mathbf{e}}_\theta
-$$
-
-
-$$
-\dot{\hat{\mathbf{e}}}_\theta = -\text{cos}\,\theta\dot{\theta}\hat{\mathbf{i}} - \text{sen}\,\theta\dot{\theta}\hat{\mathbf{j}} = -\dot{\theta}(\text{cos}\,\theta\hat{\mathbf{i}} + \text{sen}\,\theta\hat{\mathbf{j}}) = -\dot{\theta}\hat{\mathbf{e}}_r
-$$
-
-
-IMA | fuente: ETN607T01.pdf | página: 5 | id: Figura 1.10 | posición: superior izquierda
-IMA | fuente: ETN607T01.pdf | página: 5 | id: Figura 1.11 | posición: centro izquierda
-`````
-
->[!summary] Definición del sistema de coordenadas cilíndricas tridimensional, vector de posición, ecuaciones de transformación y derivadas temporales de sus versores de base.
-
-***
-
-¿Deseas continuar con la transcripción del siguiente subtítulo (`c) Esférico 3D`) en la página 6 o prefieres aplicar alguna corrección sobre este bloque? 🔍
-
-
-%%< correcciones hechas: Se corrigió la notación de los versores de la base a formato negrita y sombrero (\hat{\mathbf{e}}_r, \hat{\mathbf{e}}_\theta, \hat{\mathbf{e}}_z) según las guías. Se incorporó una nota de corrección teórica basada en Alonso & Finn (Cap. 3.5) y Goldstein (Cap. 1.4) para aclarar por qué el vector de posición no contiene un término tangencial (\theta\hat{\mathbf{e}}_\theta) a pesar de que el vector velocidad sí posee componente en dicha dirección debido a la derivada de la base móvil. %%
-
-## b) Cilíndrico 3D (Polar 2D) (r, \theta, z)
-
-`````cornell
-::cue
-.
-::note
-.
-.
-
-`````
-
->[!summary] Definición del sistema de coordenadas cilíndricas tridimensional, ecuaciones de transformación y derivación temporal de sus versores móviles.
-
-***
-
-¿Deseas que procedamos con el siguiente subtítulo ("c) Esférico 3D HASTA ...") o prefieres revisar algún detalle antes de continuar? 🔍
+>[!summary] Definición del sistema de coordenadas esféricas tridimensionales utilizando la variable radial $\rho$, sus ecuaciones de transformación, y la deducción matemática completa de su velocidad, rapidez y aceleración.

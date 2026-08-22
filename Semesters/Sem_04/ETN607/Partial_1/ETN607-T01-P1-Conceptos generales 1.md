@@ -642,15 +642,20 @@ De acuerdo con **Alonso & Finn (Cap. 3.3)** y **Wells (Cap. 2.2)**, al definir l
 
 >[!summary] Definición del sistema rectangular cartesiano, su vector de posición, velocidad en componentes cartesianas y transformaciones fundamentales.
 
-
 ### b) Cilíndrico 3D (Polar 2D) $(r, \theta, z)$
 
 ``````cornell
 ::cue
+Coordenadas cilíndricas · Vector de posición · Ecuaciones de transformación · Derivadas de versores · No constancia de base
 
-![[ETN607T01.pdf#page=5&rect=72,200,340,390|ETN607T01, p.5]]
+¿Cómo se define el vector de posición en coordenadas cilíndricas?
+¿Por qué la base unitaria en el plano no es constante en el tiempo?
+¿Cuáles son las derivadas de los versores de la base con respecto al tiempo?
+$$
+\vec{R} = r\hat{\mathbf{e}}_r + z\hat{\mathbf{e}}_z
+\dot{\hat{\mathbf{e}}}_r = \dot{\theta}\hat{\mathbf{e}}_\theta$$
 
-*Figura 1.10 · Punto P en coordenadas cilíndricas con su base de vectores unitarios local.*
+ver también: T2 — Sistemas de coordenadas
 
 ---
 
@@ -659,16 +664,70 @@ De acuerdo con **Alonso & Finn (Cap. 3.3)** y **Wells (Cap. 2.2)**, al definir l
 
 ::note
 
-Posición $(r, \theta, z)$
+**Coordenadas**
+Posición de un punto: $(r, \theta, z)$
+$$
+\vec{R} = r\hat{\mathbf{e}}_r + z\hat{\mathbf{e}}_z
+\quad \left| \quad
+\begin{array}{l}
+\hat{\mathbf{e}}_r \text{ no es cte.} \\
+\hat{\mathbf{e}}_\theta \text{ no es cte.} \\
+\hat{\mathbf{e}}_z \text{ es cte.}
+\end{array}
+\right.
+$$
 
-$$\vec{R} = r \hat{e}_{r} + z \hat{e}_{u}$ $\begin{cases} \hat{e}_{r} \text{ no constante} \\ \hat{e}_{u} \text{ constante} \\ \hat{e}_{\theta} \text{ no constante} \end{cases}$$
 
-Ecuaciones de transformación
-$$x = r \cos \theta$$
-$$y = r \sin \theta$$
-$$z = z$$
+![[ETN607T01.pdf#page=5&rect=72,200,340,390|ETN607T01, p.5]]
+
+*Figura 1.10 · Punto P en coordenadas cilíndricas con su base de vectores unitarios local.*
+
+---
+
+**Ecuaciones de transformación**
+$$
+\begin{array}{l}
+x &=& r\,\text{cos}\,\theta \\
+y &=& r\,\text{sen}\,\theta \\
+z &=& z
+\end{array}
+$$
+
+---
+
+A partir de la geometría en el plano $xy$ (Figura 1.11), podemos expresar los versores móviles en términos de la base cartesiana fija:
+$$
+\hat{\mathbf{e}}_r = 1\,\text{cos}\,\theta\hat{\mathbf{i}} + 1\,\text{sen}\,\theta\hat{\mathbf{j}}
+$$
+$$
+\hat{\mathbf{e}}_\theta = 1\,\text{cos}\,\theta\hat{\mathbf{j}} + 1\,\text{sen}\,\theta(-\hat{\mathbf{i}}) = -\text{sen}\,\theta\hat{\mathbf{i}} + \text{cos}\,\theta\hat{\mathbf{j}}
+$$
+
+Derivando con respecto al tiempo (aplicando la regla de la cadena, ya que dependen del tiempo a través del ángulo $\theta(t)$):
+$$
+\dot{\hat{\mathbf{e}}}_r = -\text{sen}\,\theta\dot{\theta}\hat{\mathbf{i}} + \text{cos}\,\theta\dot{\theta}\hat{\mathbf{j}} = \dot{\theta}(-\text{sen}\,\theta\hat{\mathbf{i}} + \text{cos}\,\theta\hat{\mathbf{j}}) = \dot{\theta}\hat{\mathbf{e}}_\theta
+$$
+$$
+\dot{\hat{\mathbf{e}}}_\theta = -\text{cos}\,\theta\dot{\theta}\hat{\mathbf{i}} - \text{sen}\,\theta\dot{\theta}\hat{\mathbf{j}} = -\dot{\theta}(\text{cos}\,\theta\hat{\mathbf{i}} + \text{sen}\,\theta\hat{\mathbf{j}}) = -\dot{\theta}\hat{\mathbf{e}}_r
+$$
+
+
+
+
+```ad-note
+title: Nota de corrección: La naturaleza física de los versores cilíndricos y el vector de posición
+collapse: closed
+De acuerdo con **Alonso & Finn (Cap. 3.5)** y **Goldstein (Cap. 1.4)**, un error conceptual común en física es intentar formular el vector de posición en coordenadas cilíndricas como $\vec{R} = r\hat{\mathbf{e}}_r + \theta\hat{\mathbf{e}}_\theta + z\hat{\mathbf{e}}_z$. Físicamente, el ángulo $\theta$ es un parámetro angular de orientación (no una magnitud con dimensión de longitud) y el vector de posición no tiene componente en la dirección tangencial $\hat{\mathbf{e}}_\theta$; este se reduce estrictamente a la suma de la proyección radial en el plano y la altura vertical:
+$$\vec{R} = r\hat{\mathbf{e}}_r + z\hat{\mathbf{e}}_z$$
+
+Sin embargo, al obtener la velocidad $\vec{v} = \dot{\vec{R}}$, se debe aplicar la derivada temporal completa considerando que la base cilíndrica móvil en el plano $xy$ cambia de orientación en el tiempo ($\dot{\hat{\mathbf{e}}}_r \neq 0$):
+$$\vec{v} = \dot{r}\hat{\mathbf{e}}_r + r\dot{\hat{\mathbf{e}}}_r + \dot{z}\hat{\mathbf{e}}_z = \dot{r}\hat{\mathbf{e}}_r + r\dot{\theta}\hat{\mathbf{e}}_\theta + \dot{z}\hat{\mathbf{e}}_z$$
+Donde el término $r\dot{\theta}\hat{\mathbf{e}}_\theta$ representa la velocidad tangencial (o transversal) originada exclusivamente por la rotación de la base, sentando la base de la cinemática de partículas en coordenadas curvilíneas.
+```
 
 ``````
+
+>[!summary] Definición del sistema de coordenadas cilíndricas tridimensional, ecuaciones de transformación y derivación temporal de sus versores móviles.
 
 ### c) Esférico 3D (Polar 2D) $(\rho, \theta, \phi)$
 

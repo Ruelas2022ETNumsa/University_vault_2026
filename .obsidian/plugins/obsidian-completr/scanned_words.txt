@@ -101186,6 +101186,8 @@ ajust
 acumuladas
 aclarando
 albergar
+azimut
+angulares
 related
 recomendados
 ribbon
@@ -110638,6 +110640,7 @@ relativista
 restringen
 relativistamente
 referencial
+rapidez
 notes
 notas
 nuevas
@@ -129463,6 +129466,8 @@ conservativas
 cuadratura
 cosmol
 clarificaron
+corrigi
+colatitud
 updated
 un
 universo
@@ -139301,6 +139306,7 @@ ugNS
 uqom
 uPMeoqq
 uRDjO
+unific
 Galaxy
 Git
 Gr
@@ -223427,6 +223433,7 @@ movilidad
 marcos
 matlab
 menudo
+medido
 YAML
 Ya
 You
