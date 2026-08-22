@@ -82054,6 +82054,8 @@ subat
 sensibilidad
 sentando
 semidistancia
+superpuestos
+subplots
 vault
 vil
 ver
@@ -110679,6 +110681,7 @@ recursivo
 reposo
 residual
 resultantes
+reconstrucci
 notes
 notas
 nuevas
@@ -129512,6 +129515,7 @@ confocales
 confocal
 calculemos
 corresponder
+convolucion
 updated
 un
 universo
@@ -223490,6 +223494,7 @@ marcos
 matlab
 menudo
 medido
+malla
 YAML
 Ya
 You
@@ -250778,6 +250783,7 @@ ente
 electrost
 electrodos
 extendiendo
+escalando
 Motor
 Media
 Mantiene
@@ -288819,6 +288825,7 @@ inmensas
 impredecible
 incluy
 impulsional
+implementemos
 Dependencia
 Dropbox
 Dataview
@@ -325150,6 +325157,7 @@ fluidos
 focos
 focal
 factorizamos
+forzando
 haya
 hace
 hacer
