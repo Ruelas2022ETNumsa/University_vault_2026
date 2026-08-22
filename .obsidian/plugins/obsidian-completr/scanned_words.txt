@@ -8971,6 +8971,9 @@ transcripto
 transcriptos
 tridimensionales
 tensor
+tallos
+truncamiento
+truncar
 ToDo
 Templater
 Text
@@ -18727,6 +18730,7 @@ Traslacion
 Trayectorias
 Twiddle
 TDSSKiller
+Truncamiento
 Sistema
 Sync
 Save
@@ -28642,6 +28646,8 @@ Sheets
 SoftMaker
 Solves
 SimulinK
+SIGNALS
+SIGNAL
 Plugins
 Pendientes
 Plugin
@@ -37369,6 +37375,7 @@ PROHIBIDO
 Proyeccion
 Permitiendo
 Planck
+PROCESSING
 del
 date
 de
@@ -46103,6 +46110,11 @@ derivar
 dedujeron
 difracci
 descriptiva
+distribuidas
+deslizamiento
+despreciable
+distorsi
+diferenciaci
 Vault
 Verificar
 Variables
@@ -64456,6 +64468,7 @@ grep
 guiado
 gravitatorio
 gimen
+generemos
 body
 beacon
 bat
@@ -72284,6 +72297,9 @@ bisagra
 bilineal
 bleepingcomputer
 bidimensional
+bulo
+bulos
+bosquejar
 scope
 status
 selector
@@ -91637,6 +91653,7 @@ vMcX
 ventanas
 virus
 virustotal
+volteo
 audience
 activo
 auto
@@ -101200,6 +101217,8 @@ albergar
 azimut
 angulares
 admisibles
+abruptos
+apliquemos
 related
 recomendados
 ribbon
@@ -110657,6 +110676,9 @@ rendijas
 rbolas
 respectiva
 recursivo
+reposo
+residual
+resultantes
 notes
 notas
 nuevas
@@ -129488,6 +129510,8 @@ coordinadas
 cilindros
 confocales
 confocal
+calculemos
+corresponder
 updated
 un
 universo
@@ -148592,6 +148616,7 @@ GZrnO
 Ggfz
 Giro
 GINA
+Graficaci
 Convenci
 Creaci
 Commander
@@ -157254,6 +157279,7 @@ Cilindro
 Caos
 Constancia
 Coriolis
+Considerar
 Instalados
 Instalado
 Instalar
@@ -213183,6 +213209,8 @@ perpendiculares
 poseen
 pticas
 pautas
+preparemos
+perceptible
 min
 mica
 movimiento
@@ -261035,6 +261063,7 @@ MERO
 MAPAS
 MENTALES
 Mercurio
+MONSON
 Lectura
 LaTeX
 Linter
@@ -288789,6 +288818,7 @@ incertidumbre
 inmensas
 impredecible
 incluy
+impulsional
 Dependencia
 Dropbox
 Dataview
@@ -316389,6 +316419,8 @@ HUTVbp
 Harris
 Holonomicidad
 Heisenberg
+HWEI
+HAYES
 filtrar
 formato
 faltantes
@@ -325117,6 +325149,7 @@ fuertes
 fluidos
 focos
 focal
+factorizamos
 haya
 hace
 hacer

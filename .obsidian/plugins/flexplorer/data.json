@@ -25,7 +25,12 @@
         "README.md",
         "lab1.md",
         "Untitled.md",
-        "Untitled 1.md"
+        "Untitled 1.md",
+        "E1_L1_1015.md",
+        "E2_L1_1015.md",
+        "E3_L1_1015.md",
+        "E4_L1_1015.md",
+        "E5_L1_1015.md"
       ]
     },
     "MOC": {
@@ -4408,6 +4413,26 @@
       "isHidden": false
     },
     "_app/notebooklm/prompts/ETN607/legacy/ETN607-transcription_Av5.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "E1_L1_1015.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "E2_L1_1015.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "E3_L1_1015.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "E4_L1_1015.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "E5_L1_1015.md": {
       "isPinned": false,
       "isHidden": false
     }

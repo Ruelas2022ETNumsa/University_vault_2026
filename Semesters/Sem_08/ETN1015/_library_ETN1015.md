@@ -7,8 +7,8 @@ related_notes:
   - "[[_config/_library-system]]"
 tags: [beacon, library, ETN1015, infraestructura]
 date_created: 2026-08-11
-date_updated: 2026-08-20
-date_last_edit: 2026-08-20 — archivos divididos actualizados (Proakis & Manolakis, Schilling & Harris)
+date_updated: 2026-08-22
+date_last_edit: 2026-08-22 — nombres de PDF corregidos al nombre exacto en NotebookLM
 status: activo
 ---
 
@@ -96,23 +96,25 @@ Este archivo es tu referencia personal para saber qué libro usar en cada tema d
 
 ## Stack completo
 
-| Libro                                                                | Rol                                            | Idioma  |
+| Libro | Rol | Idioma |
 | -------------------------------------------------------------------- | ---------------------------------------------- | ------- |
-| Palani & Kalaiyarasi — Principles of DSP — Springer 2022 (2da ed.)   | Teoría principal — libro base del docente      | Inglés  |
-| K. Deergha Rao — Signals and Systems — Birkhäuser 2018               | Referencia de fondo — parte continua (caps. 1–5) | Inglés  |
-| Oppenheim, Willsky, Nawab — Signals and Systems — 2da ed. (1to5)     | Teoría rigurosa — caps. 1–5                    | Inglés  |
-| Oppenheim, Willsky, Nawab — Signals and Systems — 2da ed. (6to11)    | Teoría rigurosa — caps. 6–11                   | Inglés  |
-| Oppenheim & Willsky — Señales y Sistemas — 2da ed. (1to5)            | Puente lingüístico — caps. 1–5                 | Español |
-| Oppenheim & Willsky — Señales y Sistemas — 2da ed. (6to11)           | Puente lingüístico — caps. 6–11                | Español |
-| Mani, Oppenheim, Willsky, Nawab — Solutions Manual                   | Soluciones oficiales del Oppenheim             | Inglés  |
-| Hsu — Schaum's Signals and Systems — 1995                            | Problemas estándar resueltos                    | Inglés  |
-| Hayes — Schaum's Digital Signal Processing — 1999                    | Ejercicios DSP — complemento directo de Palani  | Inglés  |
-| Phillips, Parr & Riskin — Signals, Systems, and Transforms — 4ta ed. | Transformadas y análisis avanzado              | Inglés  |
-| Ingle & Proakis — Digital Signal Processing Using MATLAB — 3rd ed    | MATLAB — implementación DSP con código         | Inglés  |
-| Proakis & Manolakis — Digital Signal Processing Principles Algorithms Applications — 4th ed | Teoría DSP avanzada — referencia profunda | Inglés  |
-| Proakis & Manolakis — Digital Signal Processing Solutions Manual — 4th ed | Soluciones oficiales del Proakis & Manolakis | Inglés  |
-| Schilling & Harris — Fundamentals of DSP Using MATLAB — 1st ed       | MATLAB — introducción práctica                 | Inglés  |
-| Schilling & Harris — Fundamentals of DSP Using MATLAB Instructor Solutions Manual — 2nd ed | Soluciones con código MATLAB — Schilling | Inglés  |
+| S. Palani, D. Kalaiyarasi-Principles of Digital Signal Processing - 2nd Ed.pdf | Teoría principal — libro base del docente | Inglés |
+| K. Deergha Rao-Signals and Systems.pdf | Referencia de fondo — parte continua (caps. 1–5) | Inglés |
+| Oppenheim & Willsky-Signals and Systems-2th ed-1to5.pdf | Teoría rigurosa — caps. 1–5 | Inglés |
+| Oppenheim & Willsky-Signals and Systems-2th ed-6to11.pdf | Teoría rigurosa — caps. 6–11 | Inglés |
+| Oppenheim & Willsky-Señales y Sistemas-2da ed-1to5.pdf | Puente lingüístico — caps. 1–5 | Español |
+| Oppenheim & Willsky-Señales y Sistemas-2da ed-6to11.pdf | Puente lingüístico — caps. 6–11 | Español |
+| Mani, Oppenheim, Willsky, Nawab-Signals and Systems Solutions Manual.pdf | Soluciones oficiales del Oppenheim | Inglés |
+| SCHAUM-HWEI P. HSU-SIGNALS AND SYSTEMS-1995.pdf | Problemas estándar resueltos | Inglés |
+| SCHAUM-MONSON H. HAYES-DIGITAL SIGNAL PROCESSING-1999.pdf | Ejercicios DSP — complemento directo de Palani | Inglés |
+| Charles L. Phillips John Parr Eve Riskin-Signal, Systems, and Transforms-4th ED.pdf | Transformadas y análisis avanzado | Inglés |
+| Ingle & Proakis — Digital Signal Processing Using MATLAB — 3rd ed.pdf | MATLAB — implementación DSP con código | Inglés |
+| Proakis & Manolakis — Digital Signal Processing Principles Algorithms Applications — 4th ed-1to5.pdf | Teoría DSP avanzada — caps. 1–5 | Inglés |
+| Proakis & Manolakis — Digital Signal Processing Principles Algorithms Applications — 4th ed-6to9.pdf | Teoría DSP avanzada — caps. 6–9 | Inglés |
+| Proakis & Manolakis — Digital Signal Processing Principles Algorithms Applications — 4th ed-10to14.pdf | Teoría DSP avanzada — caps. 10–14 | Inglés |
+| Proakis & Manolakis — Digital Signal Processing Solutions Manual — 4th ed.pdf | Soluciones oficiales del Proakis & Manolakis | Inglés |
+| Schilling & Harris — Fundamentals of DSP Using MATLAB — 1st ed-[1/2/3/4/5/6to7/8/9/A].pdf | MATLAB — introducción práctica (dividido por cap.) | Inglés |
+| Schilling & Harris — Fundamentals of DSP Using MATLAB Instructor Solutions Manual — 2nd ed.pdf | Soluciones con código MATLAB — Schilling | Inglés |
 
 ---
 
@@ -121,10 +123,14 @@ Este archivo es tu referencia personal para saber qué libro usar en cada tema d
 Algunos libros están divididos en partes. Usá el archivo que corresponde al capítulo:
 
 ```
-Oppenheim EN (Signals and Systems 2da ed.)       → 1to5  (Caps. 1–5)   | 6to11 (Caps. 6–11)
-Oppenheim ES (Señales y Sistemas 2da ed.)        → 1to5  (Caps. 1–5)   | 6to11 (Caps. 6–11)
-Proakis & Manolakis DSP 4th ed.                  → 1to5  (Caps. 1–5)   | 6to9  (Caps. 6–9)  | 10to14 (Caps. 10–14)
-Schilling & Harris Fundamentals of DSP MATLAB 1st → 1 | 2 | 3 | 4 | 5 | 6to7 | 8 | 9 | A
+Oppenheim EN (Signals and Systems 2th ed.)        → Oppenheim & Willsky-Signals and Systems-2th ed-1to5.pdf   (Caps. 1–5)
+                                                   | Oppenheim & Willsky-Signals and Systems-2th ed-6to11.pdf  (Caps. 6–11)
+Oppenheim ES (Señales y Sistemas 2da ed.)         → Oppenheim & Willsky-Señales y Sistemas-2da ed-1to5.pdf    (Caps. 1–5)
+                                                   | Oppenheim & Willsky-Señales y Sistemas-2da ed-6to11.pdf   (Caps. 6–11)
+Proakis & Manolakis DSP 4th ed.                   → ...4th ed-1to5.pdf  (Caps. 1–5)
+                                                   | ...4th ed-6to9.pdf  (Caps. 6–9)
+                                                   | ...4th ed-10to14.pdf (Caps. 10–14)
+Schilling & Harris Fundamentals of DSP MATLAB 1st → ...-1.pdf | ...-2.pdf | ...-3.pdf | ...-4.pdf | ...-5.pdf | ...-6to7.pdf | ...-8.pdf | ...-9.pdf | ...-A.pdf
 ```
 
 ---
@@ -148,18 +154,18 @@ Schilling & Harris Fundamentals of DSP MATLAB 1st → 1 | 2 | 3 | 4 | 5 | 6to7 |
 
 ```
 Tema nuevo del docente              → Palani (seguís el libro base)
-No entiendo el fondo / parte continua → Rao (referencia de fondo)
-Teoría rigurosa discreta            → Oppenheim 2da ed. (6to11)
-Teoría rigurosa continua            → Oppenheim 2da ed. (1to5)
-Terminología en español             → Oppenheim versión Pearson Educación
-Verificar ejercicios del Oppenheim  → Solutions Manual de Mani
-Practicar ejercicios estándar       → Hsu Schaum
-Ejercicios DSP (DFT, filtros, FWL)  → Hayes Schaum DSP
-Transformadas profundas             → Phillips, Parr & Riskin
-Implementar en MATLAB               → Ingle & Proakis (libro principal MATLAB)
-Ejercicios MATLAB resueltos         → Schilling & Harris Solutions Manual 2nd ed
-Teoría DSP avanzada / profunda      → Proakis & Manolakis 4th ed
-Verificar soluciones Proakis        → Proakis & Manolakis Solutions Manual 4th ed
+No entiendo el fondo / parte continua → K. Deergha Rao-Signals and Systems.pdf
+Teoría rigurosa discreta            → Oppenheim & Willsky-Signals and Systems-2th ed-6to11.pdf
+Teoría rigurosa continua            → Oppenheim & Willsky-Signals and Systems-2th ed-1to5.pdf
+Terminología en español             → Oppenheim & Willsky-Señales y Sistemas-2da ed-[1to5/6to11].pdf
+Verificar ejercicios del Oppenheim  → Mani, Oppenheim, Willsky, Nawab-Signals and Systems Solutions Manual.pdf
+Practicar ejercicios estándar       → SCHAUM-HWEI P. HSU-SIGNALS AND SYSTEMS-1995.pdf
+Ejercicios DSP (DFT, filtros, FWL)  → SCHAUM-MONSON H. HAYES-DIGITAL SIGNAL PROCESSING-1999.pdf
+Transformadas profundas             → Charles L. Phillips John Parr Eve Riskin-Signal, Systems, and Transforms-4th ED.pdf
+Implementar en MATLAB               → Ingle & Proakis — Digital Signal Processing Using MATLAB — 3rd ed.pdf
+Ejercicios MATLAB resueltos         → Schilling & Harris — Fundamentals of DSP Using MATLAB Instructor Solutions Manual — 2nd ed.pdf
+Teoría DSP avanzada / profunda      → Proakis & Manolakis — Digital Signal Processing Principles Algorithms Applications — 4th ed-[1to5/6to9/10to14].pdf
+Verificar soluciones Proakis        → Proakis & Manolakis — Digital Signal Processing Solutions Manual — 4th ed.pdf
 ```
 
 ---

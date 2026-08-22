@@ -165,7 +165,7 @@ Si hay conflicto entre estas fuentes y conocimiento general → prevalece el doc
 LIBROS DISPONIBLES (nombres exactos de PDF en el notebook):
 
 Palani (libro base):
-  Palani & Kalaiyarasi — Principles of Digital Signal Processing — 2nd ed — Springer 2022.pdf
+  S. Palani, D. Kalaiyarasi-Principles of Digital Signal Processing - 2nd Ed.pdf
 
 Ingle & Proakis (MATLAB principal):
   Ingle & Proakis — Digital Signal Processing Using MATLAB — 3rd ed.pdf
@@ -196,24 +196,24 @@ Rao (referencia de fondo — parte continua):
   K. Deergha Rao — Signals and Systems.pdf
 
 Oppenheim EN (dividido):
-  caps. 1–5  → Oppenheim, Willsky, Nawab — Signals and Systems — 2nd ed (1to5).pdf
-  caps. 6–11 → Oppenheim, Willsky, Nawab — Signals and Systems — 2nd ed (6to11).pdf
+  caps. 1–5  → Oppenheim & Willsky-Signals and Systems-2th ed-1to5.pdf
+  caps. 6–11 → Oppenheim & Willsky-Signals and Systems-2th ed-6to11.pdf
 
 Oppenheim ES (dividido):
   caps. 1–5  → Oppenheim & Willsky — Señales y Sistemas — 2da ed (1to5).pdf
   caps. 6–11 → Oppenheim & Willsky — Señales y Sistemas — 2da ed (6to11).pdf
 
 Soluciones Oppenheim:
-  Mani, Oppenheim, Willsky, Nawab — Solutions Manual.pdf
+  Mani, Oppenheim, Willsky, Nawab-Signals and Systems Solutions Manual.pdf
 
 Schaum Signals:
-  Hsu — Schaum's Signals and Systems — 1995.pdf
+  SCHAUM-HWEI P. HSU-SIGNALS AND SYSTEMS-1995.pdf
 
 Schaum DSP:
-  Hayes — Schaum's Digital Signal Processing — 1999.pdf
+  SCHAUM-MONSON H. HAYES-DIGITAL SIGNAL PROCESSING-1999.pdf
 
 Transformadas avanzadas:
-  Phillips, Parr & Riskin — Signals, Systems, and Transforms — 4th ed.pdf
+  Charles L. Phillips John Parr Eve Riskin-Signal, Systems, and Transforms-4th ED.pdf
 
 ---
 
