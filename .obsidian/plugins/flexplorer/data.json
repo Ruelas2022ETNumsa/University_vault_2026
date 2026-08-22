@@ -26,7 +26,6 @@
         "lab1.md",
         "Untitled.md",
         "Untitled 1.md",
-        "E1_L1_1015.md",
         "E2_L1_1015.md",
         "E3_L1_1015.md",
         "E4_L1_1015.md",
@@ -35,11 +34,15 @@
         "dtft_analisis.m",
         "sistema_recursivo.m",
         "convolucion_discreta.m",
-        "E1_L1_sol.md",
         "E2_L1_sol.md",
         "E3_L1_sol.md",
         "E4_L1_sol.md",
-        "E5_L1_sol.md"
+        "E5_L1_sol.md",
+        "F1_1015.md",
+        "F2_1015.md",
+        "F3_1015.md",
+        "F4_1015.md",
+        "F5_1015.md"
       ]
     },
     "MOC": {
@@ -4425,10 +4428,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "E1_L1_1015.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "E2_L1_1015.md": {
       "isPinned": false,
       "isHidden": false
@@ -4461,10 +4460,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "E1_L1_sol.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "E2_L1_sol.md": {
       "isPinned": false,
       "isHidden": false
@@ -4478,6 +4473,26 @@
       "isHidden": false
     },
     "E5_L1_sol.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "F1_1015.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "F2_1015.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "F3_1015.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "F4_1015.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "F5_1015.md": {
       "isPinned": false,
       "isHidden": false
     }
