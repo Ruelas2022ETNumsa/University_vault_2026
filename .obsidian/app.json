@@ -6,7 +6,13 @@
   "tabSize": 4,
   "settingsPopoutWindow": false,
   "showInlineTitle": true,
-  "showLineNumber": true,
+  "showLineNumber": false,
   "defaultViewMode": "preview",
-  "autoConvertHtml": false
+  "autoConvertHtml": false,
+  "mobilePullAction": "",
+  "readableLineLength": true,
+  "strictLineBreaks": false,
+  "foldHeading": true,
+  "foldIndent": true,
+  "showIndentGuide": true
 }

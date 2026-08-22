@@ -4,6 +4,7 @@
     "supercharged-links"
   ],
   "baseFontSizeAction": true,
-  "baseFontSize": 15,
-  "nativeMenus": false
+  "baseFontSize": 13,
+  "nativeMenus": false,
+  "showRibbon": true
 }

@@ -12,7 +12,7 @@ tags:
   - infraestructura
   - ETN607
 date_created: 2026-08-13
-date_updated: 2026-08-13
+date_updated: 2026-08-19
 status: activo
 ---
 
@@ -75,14 +75,17 @@ Vectores con flecha arriba:
 \( \vec{F} \)     ← vector fuerza
 ```
 
-Versores de coordenadas cilíndricas y esféricas con subíndice:
+Versores de coordenadas cilíndricas y esféricas con sombrero y negrita:
 
 ```latex
-\( \mathbf{e}_r \)        ← versor radial
-\( \mathbf{e}_\theta \)   ← versor angular (cilíndricas / esféricas)
-\( \mathbf{e}_\phi \)     ← versor azimutal (esféricas)
-\( \mathbf{e}_z \)        ← versor axial (cilíndricas)
+\( \hat{\mathbf{e}}_r \)        ← versor radial
+\( \hat{\mathbf{e}}_\theta \)   ← versor angular (cilíndricas / esféricas)
+\( \hat{\mathbf{e}}_\phi \)     ← versor azimutal (esféricas)
+\( \hat{\mathbf{e}}_z \)        ← versor axial (cilíndricas)
+\( \hat{\mathbf{e}}_\ell \)     ← versor radial (esféricas — notación del docente: ℓ)
 ```
+
+El apunte usa sombrero (`^`) sobre los versores — usar siempre `\hat{\mathbf{e}}`, nunca `\mathbf{e}` solo.
 
 Versores cartesianos:
 
@@ -150,6 +153,14 @@ En coordenadas cilíndricas:
 ```latex
 \[
 T = \dfrac{1}{2} m \left( \dot{r}^2 + r^2\dot{\theta}^2 + \dot{z}^2 \right)
+\]
+```
+
+En coordenadas esféricas:
+
+```latex
+\[
+T = \dfrac{1}{2} m \left( \dot{\ell}^2 + \ell^2\dot{\theta}^2 + \ell^2\dot{\phi}^2\sin^2\theta \right)
 \]
 ```
 
@@ -226,6 +237,107 @@ Notación: `{\color{Color} contenido}`
 ```latex
 \( \longrightarrow \)   ← operación realizada, se pasa a la siguiente expresión
 \( \Rightarrow \)       ← resultado alcanzado
+```
+
+---
+
+## 13. Aceleración vectorial en coordenadas cilíndricas
+
+Forma completa usada por el docente:
+
+```latex
+\[
+\vec{a} = (\ddot{r} - r\dot{\theta}^2)\,\hat{\mathbf{e}}_r
+        + (r\ddot{\theta} + 2\dot{r}\dot{\theta})\,\hat{\mathbf{e}}_\theta
+        + \ddot{z}\,\hat{\mathbf{e}}_z
+\]
+```
+
+Componente tangencial simplificada (pendulo, r = \ell = cte):
+
+```latex
+\( a_\theta = \ell\ddot{\theta} + 2(0)\dot{\theta} \)
+```
+
+---
+
+## 14. Matrices de rotación
+
+Usar `\begin{bmatrix}` para matrices. Columnas separadas con `&`, filas con `\\`:
+
+```latex
+\[
+\begin{bmatrix} x \\ y \\ z \end{bmatrix}
+=
+\begin{bmatrix}
+  \cos\mu & -\sin\mu & 0 \\
+  \sin\mu &  \cos\mu & 0 \\
+  0       &  0       & 1
+\end{bmatrix}
+\begin{bmatrix} u \\ v \\ w \end{bmatrix}
+\]
+```
+
+Rotaciones sucesivas — producto de matrices, de derecha a izquierda:
+
+```latex
+\[
+\begin{bmatrix} u \\ v \\ w \end{bmatrix}
+=
+\begin{bmatrix} \cos\beta & 0 & \sin\beta \\ 0 & 1 & 0 \\ -\sin\beta & 0 & \cos\beta \end{bmatrix}
+\left(
+\begin{bmatrix} \cos\mu & -\sin\mu & 0 \\ \sin\mu & \cos\mu & 0 \\ 0 & 0 & 1 \end{bmatrix}
+\begin{bmatrix} x \\ y \\ z \end{bmatrix}
+\right)
+\]
+```
+
+---
+
+## 15. Tangente — convención del apunte
+
+El docente escribe $tg\,\theta$ (notación española). En la transcripción usar siempre `\tan`:
+
+```latex
+\( \tan\theta \)          ← correcto
+\( tg\,\theta \)          ← NO usar — es la notación manuscrita del apunte
+```
+
+Ecuaciones de transformación que el docente escribe con $tg$:
+
+```latex
+\( \tan\theta = \dfrac{y}{x} \)
+\( \tan\phi = \dfrac{y}{x} \)
+```
+
+---
+
+## 16. Etiquetas $C_n$ del apunte
+
+El docente marca resultados importantes con $C_1$, $C_2$, $C_3$ al margen derecho.
+Transcribir como comentario inline al final del array, sin callout:
+
+```latex
+\[
+\begin{array}{rcll}
+v^2 & = & \dot{r}^2 + r^2\dot{\theta}^2 + \dot{z}^2 & C_2
+\end{array}
+\]
+```
+
+Usar columna extra `l` en el array para la etiqueta. No usar negrita ni color en $C_n$.
+
+---
+
+## 17. Notación valor[unidad]
+
+El apunte usa corchetes para unidades: $50[\text{km/h}]$, $940[\text{V}]$.
+Transcribir exactamente así — no convertir a notación estándar:
+
+```latex
+\( 50[\text{km/h}] \)
+\( 940[\text{V}] \)
+\( 470[\Omega] \)
 ```
 
 ---

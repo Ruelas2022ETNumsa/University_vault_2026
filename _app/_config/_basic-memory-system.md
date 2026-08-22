@@ -177,6 +177,41 @@ Resuelto. Basic Memory inicia automáticamente al abrir Claude Desktop tras rein
 
 ---
 
+---
+
+## Comportamiento en Autoruns / Administrador de tareas (2026-08-18)
+
+> [!NOTE] ✅ Comportamiento verificado — no es malware
+> Al revisar las apps de inicio con **Autoruns de Sysinternals**, Claude Desktop aparece con características que pueden parecer sospechosas pero son completamente normales:
+>
+> - **Nombre:** `\` (barra invertida) — sin nombre visible
+> - **Publisher:** `(Not Verified)` — sin firma digital de Microsoft
+> - **Image Path:** `\` en vez de la ruta completa del exe
+> - **No abre ubicación** al hacer clic derecho → "Abrir ubicación del archivo"
+>
+> **Por qué ocurre esto:** Claude Desktop se registra en el inicio de Windows con el parámetro `--startup` para arrancar minimizado. La entrada real en el registro es:
+> ```
+> "C:\Users\Alxnd\AppData\Local\AnthropicClaude\claude.exe" --startup
+> ```
+> El nombre `\` y la falta de verificación son artefactos de cómo Claude Desktop se registra — no tiene firma Authenticode de Microsoft porque es una app Electron de terceros. Es el mismo comportamiento en todas las PCs/laptops donde Claude Desktop está instalado.
+>
+> **El mismo proceso aparece en la laptop** con ícono de hoja blanca y sin poder abrir ubicación — mismo motivo, misma app, comportamiento idéntico.
+>
+> **Confirmado limpio con:** Autoruns (Sysinternals) · Malwarebytes · Windows Defender · SFC /scannow · análisis manual de rutas
+
+---
+
+## Caja blanca al apagar la laptop (2026-08-18)
+
+> [!warning] A confirmar — muy probable que sea Basic Memory
+> Al apagar o reiniciar, en ocasiones aparece una ventana/caja blanca sin ícono ni nombre reconocible indicando que hay una tarea aún corriendo.
+>
+> **Hipótesis:** Basic Memory corre como servidor Python en segundo plano sin interfaz gráfica. Cuando Windows manda la señal de cierre, Claude Desktop empieza a cerrar pero Basic Memory puede quedarse corriendo unos segundos más como proceso hijo separado — Windows lo muestra como caja blanca sin identificar.
+>
+> **Prueba para confirmar:** cerrar Claude Desktop manualmente antes de apagar y verificar si la caja blanca desaparece.
+>
+> **Estado:** pendiente de confirmar con prueba.
+
 %%
 # galaxy-links
 [[_app/_config/_galaxy-system.md]]

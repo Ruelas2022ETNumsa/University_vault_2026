@@ -6,3 +6,7 @@ workspace.json
 _PDF/
 *.pdf
 *.PDF
+
+# tiene problemas con:
+octave-11.3.0-w64-installer.exe
+scilab-2026.1.0.bin.x64.exe

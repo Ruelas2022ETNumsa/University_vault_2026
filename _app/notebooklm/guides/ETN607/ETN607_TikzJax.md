@@ -12,7 +12,7 @@ tags:
   - tikzjax
   - infraestructura
 date_created: 2026-08-07
-date_updated: 2026-08-08
+date_updated: 2026-08-19
 status: activo
 ---
 
@@ -275,6 +275,239 @@ Antes de entregar un bloque TikZJax verificar:
 ### N12. T1–T2 — CONCEPTOS BÁSICOS: PARTÍCULA Y SISTEMA DE PARTÍCULAS
 
 > Cinemática y dinámica de partícula. Métodos Newton, Lagrange, D'Alembert. Grados de libertad. Coordenadas generalizadas.
+
+#### Péndulo invertido sobre carro móvil (Figura 1.1)
+
+> Contexto para NotebookLM: usar para el ejemplo clásico de péndulo invertido — masa $m$ unida por varilla al carro $M$ que se desplaza horizontalmente. Ángulo $\theta$ respecto a la vertical. Este diagrama NO es el péndulo simple — la masa está arriba del pivote.
+
+```tikz
+\usetikzlibrary{patterns}
+\begin{document}
+\begin{tikzpicture}[scale=1.3]
+
+% Suelo con rayas
+\fill[pattern=north east lines] (-1,-0.5) rectangle (3,-0.2);
+\draw[thick] (-1,-0.2) -- (3,-0.2);
+
+% Ruedas
+\fill[gray] (0.3,-0.2) circle (0.15);
+\fill[gray] (1.3,-0.2) circle (0.15);
+
+% Carro M
+\draw[fill=teal!15, draw=teal, thick] (0,0) rectangle (1.6,0.5);
+\node at (0.8,0.25) {$M$};
+
+% Pivote
+\fill (0.8,0.5) circle (0.07);
+
+% Varilla (péndulo invertido: masa arriba)
+\draw[thick, gray] (0.8,0.5) -- (1.5,2.2);
+
+% Masa m
+\fill[orange!80!black] (1.5,2.2) circle (0.15);
+\node[right] at (1.65,2.2) {$m$};
+
+% Vertical de referencia (punteada)
+\draw[dashed, gray] (0.8,0.5) -- (0.8,2.5);
+
+% Ángulo theta
+\draw (0.8,1.0) arc (90:70:0.5);
+\node at (1.05,1.05) {$\theta$};
+
+% Coordenada x del carro
+\draw[->, violet, thick] (0,-0.6) -- (1.6,-0.6);
+\node[below, violet] at (0.8,-0.6) {$x$};
+
+\end{tikzpicture}
+\end{document}
+```
+
+---
+
+#### Desplazamiento vectorial — límite de $\Delta\vec{R}$ (Figura 1.9)
+
+> Contexto para NotebookLM: usar para ilustrar la definición de velocidad vectorial como límite del cociente $\Delta\vec{R}/\Delta t$. Triángulo de vectores $\vec{R}_0$, $\vec{R}_f$, $\Delta\vec{R}$.
+
+```tikz
+\begin{document}
+\begin{tikzpicture}[scale=1.4]
+
+% Origen
+\fill (0,0) circle (0.06);
+\node[below left] at (0,0) {O};
+
+% Vector R0
+\draw[->, thick, teal] (0,0) -- (1.5,0.5);
+\node[below, teal] at (0.75,0.25) {$\vec{R}_0$};
+
+% Vector Rf
+\draw[->, thick, violet] (0,0) -- (2.2,1.8);
+\node[above left, violet] at (1.1,0.9) {$\vec{R}_f$};
+
+% Delta R
+\draw[->, thick, orange] (1.5,0.5) -- (2.2,1.8);
+\node[right, orange] at (1.9,1.15) {$\Delta\vec{R}$};
+
+% Extremos
+\fill[teal] (1.5,0.5) circle (0.06);
+\fill[violet] (2.2,1.8) circle (0.06);
+
+% Fórmula
+\node[gray] at (1.4,-0.3)
+{$\vec{v} =
+\displaystyle
+\lim_{\Delta t\to0}
+\frac{\Delta\vec{R}}{\Delta t}$};
+
+\end{tikzpicture}
+\end{document}
+```
+
+---
+
+#### Coordenadas cilíndricas 3D — versores (Figuras 1.10–1.11)
+
+> Contexto para NotebookLM: usar para ilustrar el sistema de coordenadas cilíndricas con los tres versores $\hat{e}_r$, $\hat{e}_\theta$, $\hat{e}_z$ en perspectiva 2D proyectada. El versor $\hat{e}_z$ no depende de $\theta$; $\hat{e}_r$ y $\hat{e}_\theta$ sí.
+
+```tikz
+\begin{document}
+\begin{tikzpicture}[scale=1.4]
+
+% Ejes principales (perspectiva isométrica manual)
+% Eje z (vertical)
+\draw[->, thick, gray] (0,0) -- (0,2.5) node[above]{$z$};
+% Eje x (diagonal izquierda)
+\draw[->, thick, gray] (0,0) -- (-1.5,-0.8) node[below left]{$x$};
+% Eje y (diagonal derecha)
+\draw[->, thick, gray] (0,0) -- (2.0,-0.5) node[below right]{$y$};
+
+% Punto P en el espacio
+\fill[teal] (1.2,1.5) circle (0.08);
+\node[right] at (1.25,1.5) {$P$};
+
+% Radio r (proyección en plano xy)
+\draw[dashed, gray] (0,0) -- (1.2,0.2);
+\draw[dashed, gray] (1.2,0.2) -- (1.2,1.5);
+\node[gray, font=\small] at (0.5,-0.05) {$r$};
+
+% Ángulo theta
+\draw (0.5,-0.12) arc (-14:0:0.5);
+\node[gray, font=\small] at (0.7,-0.25) {$\theta$};
+
+% Versor e_r (radial, en el plano)
+\draw[->, very thick, orange] (1.2,0.2) -- (1.85,0.37);
+\node[orange, right] at (1.85,0.37) {$\hat{e}_r$};
+
+% Versor e_theta (tangencial, perpendicular a e_r en plano)
+\draw[->, very thick, violet] (1.2,0.2) -- (0.85,0.9);
+\node[violet, left] at (0.85,0.9) {$\hat{e}_\theta$};
+
+% Versor e_z (vertical)
+\draw[->, very thick, teal] (1.2,1.5) -- (1.2,2.2);
+\node[teal, right] at (1.2,2.2) {$\hat{e}_z$};
+
+% Vector R
+\draw[->, thick, teal, dashed] (0,0) -- (1.2,1.5);
+\node[teal, above left] at (0.6,0.75) {$\vec{R}$};
+
+\end{tikzpicture}
+\end{document}
+```
+
+---
+
+#### Coordenadas esféricas 3D — versores (Figura 1.12)
+
+> Contexto para NotebookLM: usar para el sistema de coordenadas esféricas con $\ell$, $\theta$, $\phi$ y los tres versores $\hat{e}_\ell$, $\hat{e}_\theta$, $\hat{e}_\phi$. La sombra en el plano $xy$ ayuda a visualizar $\phi$.
+
+```tikz
+\begin{document}
+\begin{tikzpicture}[scale=1.4]
+
+% Ejes (perspectiva manual)
+\draw[->, thick, gray] (0,0) -- (0,2.8) node[above]{$z$};
+\draw[->, thick, gray] (0,0) -- (-1.4,-0.7) node[below left]{$x$};
+\draw[->, thick, gray] (0,0) -- (2.2,-0.4) node[below right]{$y$};
+
+% Punto P
+\fill[teal] (1.1,1.8) circle (0.08);
+\node[right] at (1.18,1.8) {$P$};
+
+% Vector ell (radio esférico)
+\draw[->, thick, teal] (0,0) -- (1.1,1.8);
+\node[teal, left] at (0.55,0.9) {$\ell$};
+
+% Sombra en plano xy
+\draw[dashed, gray] (0,0) -- (1.1,0.15);
+\draw[dashed, gray] (1.1,0.15) -- (1.1,1.8);
+\node[gray, font=\small] at (0.8,-0.1) {$\ell\sin\theta$};
+
+% Ángulo theta (con eje z)
+\draw[gray] (0,0.7) arc (90:58:0.7);
+\node[gray, font=\small] at (0.35,0.85) {$\theta$};
+
+% Ángulo phi (en plano xy)
+\draw[gray] (0.45,-0.06) arc (-8:0:0.45);
+\node[gray, font=\small] at (0.7,-0.2) {$\phi$};
+
+% Versor e_ell (radial esférico)
+\draw[->, very thick, teal] (1.1,1.8) -- (1.65,2.65);
+\node[teal, right] at (1.65,2.65) {$\hat{e}_\ell$};
+
+% Versor e_theta (meridional)
+\draw[->, very thick, violet] (1.1,1.8) -- (1.75,1.2);
+\node[violet, right] at (1.75,1.2) {$\hat{e}_\theta$};
+
+% Versor e_phi (azimutal)
+\draw[->, very thick, orange] (1.1,1.8) -- (0.4,2.1);
+\node[orange, left] at (0.4,2.1) {$\hat{e}_\phi$};
+
+\end{tikzpicture}
+\end{document}
+```
+
+---
+
+#### Coordenadas no lineales $(A, \theta)$ — plano $xy$ (pág. 6)
+
+> Contexto para NotebookLM: usar para el sistema de coordenadas no lineales donde $A = xy/2$ y $\tan\theta = y/x$. Punto $P$ definido por su posición en el plano con los ejes y el ángulo $\theta$ marcado.
+
+```tikz
+\begin{document}
+\begin{tikzpicture}[scale=1.3]
+
+% Ejes
+\draw[->, thick, gray] (-0.3,0) -- (3,0) node[right]{$x$};
+\draw[->, thick, gray] (0,-0.3) -- (0,2.5) node[above]{$y$};
+\node[below left] at (0,0) {$O$};
+
+% Punto P
+\fill[teal] (2.2,1.5) circle (0.08);
+\node[right] at (2.3,1.5) {$P$};
+
+% Proyecciones punteadas
+\draw[dashed, gray] (2.2,0) -- (2.2,1.5);
+\draw[dashed, gray] (0,1.5) -- (2.2,1.5);
+\node[below, gray] at (2.2,0) {$x$};
+\node[left, gray] at (0,1.5) {$y$};
+
+% Radio A (desde origen)
+\draw[->, thick, violet] (0,0) -- (2.2,1.5);
+\node[violet, above left] at (1.1,0.75) {$A$};
+
+% Ángulo theta
+\draw (0.7,0) arc (0:34:0.7);
+\node at (0.85,0.22) {$\theta$};
+
+% Cuadrícula auxiliar (hash en origen)
+\draw[thick] (-0.15,-0.15) -- (0.15,0.15);
+\draw[thick] (0.15,-0.15) -- (-0.15,0.15);
+
+\end{tikzpicture}
+\end{document}
+```
+
+---
 
 #### Cuerpo libre — partícula en plano inclinado
 
@@ -592,11 +825,128 @@ _(Agregar ejemplos confirmados aquí)_
 
 ### N18. DIAGRAMAS AUXILIARES — USO TRANSVERSAL
 
+#### Diagrama de bloques — Simulink con rectángulos (Figura 1.5)
+
+> Contexto para NotebookLM: bloques como rectángulos. Retroalimentación con dos `\draw` separados en la esquina para evitar artefactos visuales — nunca encadenar la esquina en un solo `\draw`.
+
+```tikz
+\begin{document}
+\begin{tikzpicture}[scale=1.1]
+
+% Etiqueta entrada
+\node[left] at (0,0) {$\ddot{\theta}$};
+
+% Integrador 1
+\draw[draw=teal, thick] (0.8,-0.4) rectangle (2.2,0.4);
+\node at (1.5,0) {$1/s$};
+
+% Etiqueta dot theta
+\node[above] at (3.2,0) {$\dot{\theta}$};
+
+% Integrador 2
+\draw[draw=teal, thick] (3.8,-0.4) rectangle (5.2,0.4);
+\node at (4.5,0) {$1/s$};
+
+% Etiqueta theta
+\node[above] at (6.2,0) {$\theta$};
+
+% Scope (borde punteado)
+\draw[draw=orange, thick, dashed] (6.5,-0.5) rectangle (8,0.5);
+\node at (7.25,0) {Scope};
+
+% Conexiones hacia adelante
+\draw[->, thick] (0,0) -- (0.8,0);
+\draw[->, thick] (2.2,0) -- (3.8,0);
+\draw[->, thick] (5.2,0) -- (6.5,0);
+
+% Rama de retroalimentacion: bajar desde theta
+\draw[thick] (6.2,0) -- (6.2,-1.6);
+
+% Bloque sin
+\draw[draw=teal, thick] (3.8,-2.0) rectangle (5.2,-1.2);
+\node at (4.5,-1.6) {$\sin$};
+
+% Bloque ganancia
+\draw[draw=teal, thick] (1.5,-2.0) rectangle (3.0,-1.2);
+\node at (2.25,-1.6) {$-g/\ell$};
+
+% Flechas retroalimentacion — esquina separada en dos draw
+\draw[->, thick] (6.2,-1.6) -- (5.2,-1.6);
+\draw[->, thick] (3.8,-1.6) -- (3.0,-1.6);
+\draw[thick] (1.5,-1.6) -- (0,-1.6);
+\draw[->, thick] (0,-1.6) -- (0,0);
+
+\end{tikzpicture}
+\end{document}
+```
+
+---
+
+#### Diagrama de bloques — Simulink con triángulos (Figura 1.5 alt.)
+
+> Contexto para NotebookLM: misma topología pero bloques como triángulos. Triángulo de ida: punta hacia la derecha `(x,0.5)--(x+1,1)--(x+1,0)--cycle`. Triángulo de retorno: punta hacia la izquierda `(x,1)--(x+1,0.5)--(x,0)--cycle`. Retroalimentación con dos `\draw` separados en esquinas.
+
+```tikz
+\begin{document}
+\begin{tikzpicture}[scale=1.1]
+
+% Etiqueta entrada
+\node[left] at (0,0.5) {$\ddot{\theta}$};
+
+% Integrador 1 — triangulo ida (punta derecha)
+\draw[draw=teal, thick] (1,0) -- (2,0.5) -- (1,1) -- cycle;
+\node at (1.35,0.5) {$1/s$};
+
+% Etiqueta dot theta
+\node[above] at (2.8,0.5) {$\dot{\theta}$};
+
+% Integrador 2 — triangulo ida (punta derecha)
+\draw[draw=teal, thick] (3.5,0) -- (4.5,0.5) -- (3.5,1) -- cycle;
+\node at (3.85,0.5) {$1/s$};
+
+% Etiqueta theta
+\node[above] at (5.3,0.5) {$\theta$};
+
+% Scope (borde punteado)
+\draw[draw=orange, thick, dashed] (5.6,0) rectangle (7,1);
+\node at (6.3,0.5) {Scope};
+
+% Conexiones hacia adelante
+\draw[->, thick] (0,0.5) -- (1,0.5);
+\draw[->, thick] (2,0.5) -- (3.5,0.5);
+\draw[->, thick] (4.5,0.5) -- (5.6,0.5);
+
+% Rama de retroalimentacion: bajar desde theta
+\draw[thick] (5.3,0.5) -- (5.3,-1.6);
+
+% Bloque sin — triangulo retorno (punta izquierda)
+\draw[draw=teal, thick] (3.5,-1.6) -- (4.5,-1.1) -- (4.5,-2.1) -- cycle;
+\node at (4.15,-1.6) {$\sin$};
+
+% Bloque ganancia — triangulo retorno (punta izquierda)
+\draw[draw=teal, thick] (1.5,-1.6) -- (2.5,-1.1) -- (2.5,-2.1) -- cycle;
+\node at (2.15,-1.6) {$-g/\ell$};
+
+% Flechas retroalimentacion — esquinas separadas
+\draw[->, thick] (5.3,-1.6) -- (4.5,-1.6);
+\draw[->, thick] (3.5,-1.6) -- (2.5,-1.6);
+\draw[thick] (1.5,-1.6) -- (0,-1.6);
+\draw[->, thick] (0,-1.6) -- (0,0.5);
+
+\end{tikzpicture}
+\end{document}
+```
+
+> **Nota:** las Figuras E1, E2, E3 (brazo robótico 3D, pág. 8) son IMA — no usar TikZJax para esas.
+
+---
+
 #### Péndulo doble — T3/T4
 
 > Contexto para NotebookLM: usar para el péndulo doble como ejemplo de sistema con $n=2$ DoF y coordenadas generalizadas $\theta_1$, $\theta_2$. Masas $m_1$, $m_2$.
 
 ```tikz
+\usetikzlibrary{patterns}
 \begin{document}
 \begin{tikzpicture}[scale=1.3]
 
@@ -648,9 +998,9 @@ _(Agregar ejemplos confirmados aquí)_
 
 ### N19. ESPACIO DE FASES — USO TRANSVERSAL
 
-#### Espacio de fases $(\dot{q}, q)$ — retrato de fase
+#### Espacio de fases $( \dot{q}, q )$ — retrato de fase del péndulo (separatriz correcta)
 
-> Contexto para NotebookLM: usar cuando el usuario pida el espacio de fases o retrato de fase de un sistema. Mostrar trayectorias cerradas (movimiento acotado), separatriz y trayectorias abiertas. Curvas representativas sin datos numéricos exactos.
+> Contexto para NotebookLM: versión corregida del retrato de fase para el péndulo simple ($\ddot{q} + \sin q = 0$). La separatriz homoclínica real tiene forma de "ojos" — dos ramas $\dot{q} = \pm 2\cos(q/2)$ que parten del equilibrio inestable en $q = \pm\pi$, cierran en $q = 0$ y vuelven. La curva anterior (`1.9*sin(deg(x/2))`) era una aproximación visual incorrecta.
 
 ```tikz
 \usepackage{pgfplots}
@@ -673,15 +1023,18 @@ _(Agregar ejemplos confirmados aquí)_
 \addplot[teal, thick, domain=0:360, samples=100]
     ({2.5*cos(x)},{1.8*sin(x)});
 
-% Separatriz (órbita homoclínica) — aproximación manual
+% Separatriz correcta — rama superior: qdot = +2*cos(q/2)
 \addplot[orange, very thick, domain=-3.14:3.14, samples=200]
-    {1.9*sin(deg(x/2))};
+    {2*cos(deg(x/2))};
+% Separatriz correcta — rama inferior: qdot = -2*cos(q/2)
+\addplot[orange, very thick, domain=-3.14:3.14, samples=200]
+    {-2*cos(deg(x/2))};
 
 % Punto de equilibrio estable (centro)
 \fill[teal] (axis cs:0,0) circle (3pt);
 \node[teal, above right] at (axis cs:0.1,0.1) {estable};
 
-% Punto de equilibrio inestable (silla)
+% Puntos de equilibrio inestable (silla) — en q = ±π donde la separatriz toca qdot=0
 \fill[orange] (axis cs:3.14,0) circle (3pt);
 \fill[orange] (axis cs:-3.14,0) circle (3pt);
 

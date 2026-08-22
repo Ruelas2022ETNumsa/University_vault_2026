@@ -1,0 +1,12 @@
+{
+  "propertiesInDocument": "source",
+  "alwaysUpdateLinks": true,
+  "promptDelete": false,
+  "attachmentFolderPath": "_assets",
+  "tabSize": 4,
+  "settingsPopoutWindow": false,
+  "showInlineTitle": true,
+  "showLineNumber": true,
+  "defaultViewMode": "preview",
+  "autoConvertHtml": false
+}

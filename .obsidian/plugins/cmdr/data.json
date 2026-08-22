@@ -121,6 +121,12 @@
   ],
   "pageHeader": [
     {
+      "id": "fix-math:current-file",
+      "icon": "lucide-remove-formatting",
+      "name": "Fix Math: Current file",
+      "mode": "any"
+    },
+    {
       "id": "app:go-back",
       "icon": "lucide-arrow-left",
       "name": "Navigate back",
@@ -151,9 +157,15 @@
       "mode": "any"
     },
     {
-      "id": "workspace:open-in-new-window",
-      "icon": "lucide-square-arrow-out-up-right",
-      "name": "Open current tab in new window",
+      "id": "editor:toggle-source",
+      "icon": "lucide-file-code-corner",
+      "name": "Toggle Live Preview/Source mode",
+      "mode": "any"
+    },
+    {
+      "id": "theme:toggle-light-dark",
+      "icon": "lucide-toggle-right",
+      "name": "Alternar modo claro/oscuro",
       "mode": "any"
     },
     {
@@ -169,27 +181,9 @@
       "mode": "any"
     },
     {
-      "id": "modern-outline:toggle",
-      "icon": "lucide-list-tree",
-      "name": "Modern Outline: Toggle",
-      "mode": "any"
-    },
-    {
       "id": "cornell-marginalia:cornell-open-sidebar-doodle",
       "icon": "lucide-palette",
       "name": "Cornell Marginalia: Open Sidebar Doodle Canvas",
-      "mode": "any"
-    },
-    {
-      "id": "editor:toggle-source",
-      "icon": "lucide-file-code-corner",
-      "name": "Toggle Live Preview/Source mode",
-      "mode": "any"
-    },
-    {
-      "id": "theme:toggle-light-dark",
-      "icon": "lucide-toggle-right",
-      "name": "Alternar modo claro/oscuro",
       "mode": "any"
     },
     {
@@ -199,9 +193,15 @@
       "mode": "any"
     },
     {
-      "id": "fix-math:current-file",
-      "icon": "lucide-remove-formatting",
-      "name": "Fix Math: Current file",
+      "id": "workspace:open-in-new-window",
+      "icon": "lucide-square-arrow-out-up-right",
+      "name": "Open current tab in new window",
+      "mode": "any"
+    },
+    {
+      "id": "full-screen-cross-platform:toggle-full-screen",
+      "icon": "lucide-fullscreen",
+      "name": "Full Screen Toggle: toggle",
       "mode": "any"
     }
   ],
@@ -224,7 +224,6 @@
       "Open graph view",
       "Insert template",
       "Open command palette",
-      "Toggle modern outline",
       "Advanced Tables Toolbar",
       "Create new canvas",
       "Abrir Galaxy View"

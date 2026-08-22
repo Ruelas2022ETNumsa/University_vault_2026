@@ -86,10 +86,10 @@ status: activo
 %%
 galaxy-links
 [[Semesters/Sem_04/ETN607/_library_ETN607]]
-[[_app/notebooklm/prompts/ETN607/ETN607-transcription]]
+[[ETN607-transcription]]
 [[_app/notebooklm/prompts/ETN607/ETN607-transcription-divisions]]
 [[_app/notebooklm/guides/ETN607/ETN607_TikzJax]]
-[[_app/notebooklm/prompts/ETN607/ETN607-transcription-v3]]
+[[ETN607-transcription-v3]]
 [[_app/notebooklm/prompts/ETN607/DOC-ETN607-transcription]]
 [[_app/notebooklm/guides/ETN607/ETN607_latex]]
 %%

@@ -7,8 +7,8 @@ related_notes:
   - "[[_config/_library-system]]"
 tags: [beacon, library, ETN1015, infraestructura]
 date_created: 2026-08-11
-date_updated: 2026-08-11
-date_last_edit: 2026-08-17 — libro base cambiado a Palani & Kalaiyarasi 2da ed.
+date_updated: 2026-08-20
+date_last_edit: 2026-08-20 — archivos divididos actualizados (Proakis & Manolakis, Schilling & Harris)
 status: activo
 ---
 
@@ -27,7 +27,7 @@ Este archivo es tu referencia personal para saber qué libro usar en cada tema d
 
 ## Temario oficial
 
-> **Sin temario oficial disponible.** El docente avanza siguiendo el libro base (Rao) capítulo a capítulo. Los temas están inferidos del índice del libro.
+> **Sin temario oficial disponible.** El docente avanza siguiendo el libro base (Palani) capítulo a capítulo. Los temas están inferidos del índice del libro.
 
 ### Cap. 1 — Introducción a señales y sistemas
 - Definición de señal y sistema
@@ -108,6 +108,11 @@ Este archivo es tu referencia personal para saber qué libro usar en cada tema d
 | Hsu — Schaum's Signals and Systems — 1995                            | Problemas estándar resueltos                    | Inglés  |
 | Hayes — Schaum's Digital Signal Processing — 1999                    | Ejercicios DSP — complemento directo de Palani  | Inglés  |
 | Phillips, Parr & Riskin — Signals, Systems, and Transforms — 4ta ed. | Transformadas y análisis avanzado              | Inglés  |
+| Ingle & Proakis — Digital Signal Processing Using MATLAB — 3rd ed    | MATLAB — implementación DSP con código         | Inglés  |
+| Proakis & Manolakis — Digital Signal Processing Principles Algorithms Applications — 4th ed | Teoría DSP avanzada — referencia profunda | Inglés  |
+| Proakis & Manolakis — Digital Signal Processing Solutions Manual — 4th ed | Soluciones oficiales del Proakis & Manolakis | Inglés  |
+| Schilling & Harris — Fundamentals of DSP Using MATLAB — 1st ed       | MATLAB — introducción práctica                 | Inglés  |
+| Schilling & Harris — Fundamentals of DSP Using MATLAB Instructor Solutions Manual — 2nd ed | Soluciones con código MATLAB — Schilling | Inglés  |
 
 ---
 
@@ -116,8 +121,10 @@ Este archivo es tu referencia personal para saber qué libro usar en cada tema d
 Algunos libros están divididos en partes. Usá el archivo que corresponde al capítulo:
 
 ```
-Oppenheim EN (Signals and Systems 2da ed.)  → 1to5  (Caps. 1–5)  | 6to11 (Caps. 6–11)
-Oppenheim ES (Señales y Sistemas 2da ed.)   → 1to5  (Caps. 1–5)  | 6to11 (Caps. 6–11)
+Oppenheim EN (Signals and Systems 2da ed.)       → 1to5  (Caps. 1–5)   | 6to11 (Caps. 6–11)
+Oppenheim ES (Señales y Sistemas 2da ed.)        → 1to5  (Caps. 1–5)   | 6to11 (Caps. 6–11)
+Proakis & Manolakis DSP 4th ed.                  → 1to5  (Caps. 1–5)   | 6to9  (Caps. 6–9)  | 10to14 (Caps. 10–14)
+Schilling & Harris Fundamentals of DSP MATLAB 1st → 1 | 2 | 3 | 4 | 5 | 6to7 | 8 | 9 | A
 ```
 
 ---
@@ -149,6 +156,10 @@ Verificar ejercicios del Oppenheim  → Solutions Manual de Mani
 Practicar ejercicios estándar       → Hsu Schaum
 Ejercicios DSP (DFT, filtros, FWL)  → Hayes Schaum DSP
 Transformadas profundas             → Phillips, Parr & Riskin
+Implementar en MATLAB               → Ingle & Proakis (libro principal MATLAB)
+Ejercicios MATLAB resueltos         → Schilling & Harris Solutions Manual 2nd ed
+Teoría DSP avanzada / profunda      → Proakis & Manolakis 4th ed
+Verificar soluciones Proakis        → Proakis & Manolakis Solutions Manual 4th ed
 ```
 
 ---

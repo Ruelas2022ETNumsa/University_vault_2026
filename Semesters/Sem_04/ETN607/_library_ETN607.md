@@ -7,7 +7,7 @@ related_notes:
   - "[[_config/_library-system]]"
 tags: [beacon, library, ETN607, infraestructura]
 date_created: 2026-08-07
-date_updated: 2026-08-07
+date_updated: 2026-08-19
 status: activo
 ---
 
@@ -145,6 +145,7 @@ Enseñar al estudiante la Dinámica Clásica mediante las ecuaciones de LaGrange
 | Classical Mechanics | Herbert Goldstein, Charles P. Poole, John L. Safko | 3ª ed. — 2002 | Pearson / Addison-Wesley | Teoría rigurosa | `Goldstein & Poole & Safko-Classical Mechanics-3th ed-Pearson.pdf` | Inglés |
 | Mecánica Clásica | Herbert Goldstein | 1ª ed. española — 1994 | Editorial Reverté | Puente lingüístico (Goldstein) | `H. Goldstein-Mecánica clásica-1994-ED REVERTE.pdf` | Español |
 | Schaum's Outline of Lagrangian Dynamics | Dare A. Wells | 1ª ed. — 1967 | McGraw-Hill / Schaum's | Problemas resueltos — libro central | `Dare A. Wells-SCHAUM'S Lagrangian Dynamics-McGraw-Hill.pdf` | Inglés |
+| Dinámica de Lagrange | Dare A. Wells | 1972 | McGraw-Hill / Schaum's | Puente lingüístico (Wells) | `Dare A. Wells-Dinamica de Lagrange-1972-McGraw-Hill-esp.pdf` | Español |
 | Schaum's Outline of Engineering Mechanics: Dynamics | E. W. Nelson, Charles L. Best, W. G. McLean | 5ª ed. | McGraw-Hill / Schaum's | Problemas estándar — nivel de entrada | `Nelson & Best & McLean-schaums Statics and dynamics.pdf` | Inglés |
 | Problems and Solutions on Mechanics | Lim Yung-Kuo (ed.) | 1ª ed. — 1994 | World Scientific | Problemas difíciles | `LimYung-kuo-Problems and Solutions on Mechanics-1994.pdf` | Inglés |
 | Mecánica Vol. 1 | M. Alonso, E. J. Finn | 1970 | Fondo Educativo Interamericano | Apoyo puntual T1–T2 (fundamentos) | `Alonso & Finn-Mecánica_Vol 1-1970-.pdf` | Español |
@@ -170,7 +171,7 @@ John R. Taylor — Mecánica Clásica (español)
 ```
 Tema nuevo                → Taylor inglés (o Mecánica Clásica Reverté si preferís español)
 No entiendo el fondo      → Goldstein 3ª ed.
-Terminología en español   → Taylor Reverté · Goldstein Reverté
+Terminología en español   → Taylor Reverté · Goldstein Reverté · Wells esp.
 Empezar a practicar       → Nelson et al. Schaum's Dynamics
 Práctica lagrangiana      → Wells Schaum's
 Nivel examen              → Lim World Scientific

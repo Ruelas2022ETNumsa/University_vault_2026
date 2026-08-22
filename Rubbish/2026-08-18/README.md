@@ -1,0 +1,51 @@
+```
+                &$$$&$$$$X$$&    
+               $&$$$$$$$$$$$&&$  
+              $$$X&&&$$$$XX$$$&  
+             :;xX&&&$$$X$$$$$$X  
+            ::+xXX&&$X$$&&$XXX$  
+            ++:+xX&&&$$$&&$XXX   
+            ;+++;++++x$$$X$$X    
+            +++++++++++++xx      
+           Xxx+++++++++++xxX     
+            xx+++;++;;++++ ++    
+          :..:;++.....:;+++Xxx   
+         :.::::;;;:....:;++;;;   
+        +:;x$&;::+;::...:;;+;;;;:
+        Xxxx$&&X;;++:::::::;;;;+ 
+        +;+x$&&&&&&$$Xx+:::::::  
+        x;+X$&&&&&&&&$Xx;;;+;;:: 
+        +++X$&&&&&&&&$$$$        
+       +;+XX&&&&&&&&$$$$$$       
+      +;;;X$&&&&&&&&&$$$$$$      
+     +;;;X&$X$$$$&&&&& $$$XX     
+     ;;;;x&&&$$$& XX$$$ $$$XX    
+&$$  &&&&&&&&&&&   XX$$$ $$X;;++x
+&&&&&&&&&&&&&&&    XXXXXX  XXxx++
+   &&&&&&&&&&&&     $x+;;;;+     
+    $&&&&&$&$$$       X+;;+x+    
+     &&&&$$&&$$         X$XX     
+     &&&&x$&$$                   
+    $&&&&X&&                     
+    &&&&&$                       
+   &&&&&&                        
+  &&&$&&                         
+  &&$$&&&                        
+   $XX&&&                        
+   Xx++                          
+   xx+xx
+```
+
+# University_vault_2026
+
+> [!tip] Consideraciones Claude
+>
+> **Hora pico: 9 am – 3 pm** (lunes a viernes, no aplica fines de semana)
+>
+> En este horario el consumo de tokens es significativamente mayor.
+>
+> **Conversación simple** → consumo bajo; la hora pico no duele mucho. El problema surge si la conversación se extiende, porque el historial acumulado se reenvía completo en cada turno.
+>
+> **Sesiones de vault** → el gasto se multiplica desde varios frentes a la vez: cada lectura de archivo carga contexto, cada escritura es una operación de herramienta, y el historial crece con cada turno. El costo elevado no viene del archivo en sí, sino de todo ese contexto combinado que viaja en cada mensaje.
+>
+> **Regla práctica:** en hora pico, conversación corta y puntual está bien. Para sesiones de vault largas, mejor después de las 3 pm Bolivia.

@@ -1,15 +1,242 @@
 {
-  "userAdmonitions": {},
+  "userAdmonitions": {
+    "teoría_1": {
+      "type": "teoría_1",
+      "color": "rgb(195, 188, 162)",
+      "icon": {
+        "name": "readme",
+        "type": "fab"
+      },
+      "command": false,
+      "title": "[Teoría]()",
+      "injectColor": true,
+      "noTitle": false,
+      "copy": false
+    },
+    "auxiliatura_1": {
+      "type": "auxiliatura_1",
+      "color": "rgb(244, 211, 94)",
+      "icon": {
+        "name": "pencil-alt",
+        "type": "fas"
+      },
+      "command": false,
+      "title": "[Auxiliatura]()",
+      "injectColor": true,
+      "noTitle": false,
+      "copy": false
+    },
+    "adiciones_1": {
+      "type": "adiciones_1",
+      "color": "rgb(238, 150, 75)",
+      "icon": {
+        "name": "feather-alt",
+        "type": "fas"
+      },
+      "command": false,
+      "title": "[Adiciones]()",
+      "injectColor": true,
+      "noTitle": false,
+      "copy": false
+    },
+    "importante_1": {
+      "type": "importante_1",
+      "color": "rgb(249, 86, 56)",
+      "icon": {
+        "name": "stack-overflow",
+        "type": "fab"
+      },
+      "command": false,
+      "title": "Nota",
+      "injectColor": true,
+      "noTitle": false,
+      "copy": false
+    },
+    "recordando_1": {
+      "type": "recordando_1",
+      "color": "rgb(13, 59, 105)",
+      "icon": {
+        "name": "brain",
+        "type": "fas"
+      },
+      "command": false,
+      "title": "Recordando...",
+      "injectColor": true,
+      "noTitle": false,
+      "copy": false
+    },
+    "nota_1": {
+      "type": "nota_1",
+      "color": "rgb(0, 18, 25)",
+      "icon": {
+        "type": "obsidian",
+        "name": "Clipboard"
+      },
+      "command": false,
+      "title": "Nota",
+      "injectColor": true,
+      "noTitle": false,
+      "copy": false
+    },
+    "nota_2": {
+      "type": "nota_2",
+      "color": "rgb(0, 95, 115)",
+      "icon": {
+        "name": "clipboard",
+        "type": "fas"
+      },
+      "command": false,
+      "title": "Nota",
+      "injectColor": true,
+      "noTitle": false,
+      "copy": false
+    },
+    "recordando_2": {
+      "type": "recordando_2",
+      "color": "rgb(10, 147, 150)",
+      "icon": {
+        "name": "paperclip",
+        "type": "fas"
+      },
+      "command": false,
+      "title": "Recordando...",
+      "injectColor": true,
+      "noTitle": false,
+      "copy": false
+    },
+    "recordando_3": {
+      "type": "recordando_3",
+      "color": "rgb(148, 210, 189)",
+      "icon": {
+        "type": "obsidian",
+        "name": "Paperclip"
+      },
+      "command": false,
+      "title": "Recordando...",
+      "injectColor": true,
+      "noTitle": false,
+      "copy": false
+    },
+    "ejercicio_1": {
+      "type": "ejercicio_1",
+      "color": "rgb(233, 216, 116)",
+      "icon": {
+        "name": "edit",
+        "type": "fas"
+      },
+      "command": false,
+      "title": "EN.",
+      "injectColor": true,
+      "noTitle": false,
+      "copy": false
+    },
+    "ejercicio_2": {
+      "type": "ejercicio_2",
+      "color": "rgb(238, 155, 0)",
+      "icon": {
+        "type": "obsidian",
+        "name": "Edit"
+      },
+      "command": false,
+      "title": "E-N.",
+      "injectColor": true,
+      "noTitle": false,
+      "copy": false
+    },
+    "nota_3": {
+      "type": "nota_3",
+      "color": "rgb(202, 103, 2)",
+      "icon": {
+        "type": "obsidian",
+        "name": "Edit2"
+      },
+      "command": false,
+      "title": "Nota",
+      "injectColor": true,
+      "noTitle": false,
+      "copy": false
+    },
+    "ejercicio_3": {
+      "type": "ejercicio_3",
+      "color": "rgb(187, 62, 3)",
+      "icon": {
+        "type": "obsidian",
+        "name": "Edit3"
+      },
+      "command": false,
+      "title": "E-N.",
+      "injectColor": true,
+      "noTitle": false,
+      "copy": false
+    },
+    "nota_4": {
+      "type": "nota_4",
+      "color": "rgb(174, 32, 18)",
+      "icon": {
+        "name": "pen-nib",
+        "type": "fas"
+      },
+      "command": false,
+      "title": "Nota",
+      "injectColor": true,
+      "noTitle": false,
+      "copy": false
+    },
+    "nota_5": {
+      "type": "nota_5",
+      "color": "rgb(155, 34, 38)",
+      "icon": {
+        "type": "obsidian",
+        "name": "PenTool"
+      },
+      "command": false,
+      "title": "Nota",
+      "injectColor": true,
+      "noTitle": false,
+      "copy": false
+    },
+    "resumen_1": {
+      "type": "resumen_1",
+      "color": "rgb(0, 0, 0)",
+      "icon": {
+        "type": "obsidian",
+        "name": "Codesandbox"
+      },
+      "command": false,
+      "title": "Resumen",
+      "injectColor": true,
+      "noTitle": false,
+      "copy": false
+    },
+    "temario": {
+      "type": "temario",
+      "color": "rgb(128, 128, 128)",
+      "icon": {
+        "type": "rpg",
+        "name": "circle-of-circles"
+      },
+      "command": false,
+      "title": "Contenido de la materia",
+      "injectColor": true,
+      "noTitle": false,
+      "copy": false
+    }
+  },
   "syntaxHighlight": false,
   "copyButton": false,
   "version": "12.0.5",
-  "autoCollapse": false,
-  "defaultCollapseType": "open",
+  "autoCollapse": true,
+  "defaultCollapseType": "closed",
   "injectColor": true,
   "parseTitles": true,
   "dropShadow": true,
   "hideEmpty": false,
-  "icons": [],
+  "icons": [
+    "fab",
+    "fas",
+    "rpg",
+    "octicons"
+  ],
   "rpgDownloadedOnce": false,
   "useSnippet": false,
   "snippetPath": "custom-admonitions.0a864c",

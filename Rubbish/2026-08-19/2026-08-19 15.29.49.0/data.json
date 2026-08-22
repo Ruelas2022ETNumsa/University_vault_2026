@@ -1,0 +1,4140 @@
+{
+  "items": {
+    "/": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_app",
+        "_hangar",
+        "_skills",
+        "_templates",
+        "_PDF",
+        "_inbox",
+        "Canvas",
+        "Marginalia",
+        "Excalidraw",
+        "_void",
+        "MOC",
+        "Semesters",
+        "Semestres",
+        "_assets",
+        "Borrar",
+        "Rubbish",
+        "README.md",
+        "shared",
+        "Transformada Discreta de Fourier $DFT$.md",
+        "Par de Transformadas Discretas de Fourier $DFT$.md",
+        "Factores de Giro (Twiddle Factors) para N=4, 6 y 8.md",
+        "Zero Padding.md",
+        "Relación de la DFT con otras transformadas.md"
+      ]
+    },
+    "MOC": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "MAT101-T00-star.md"
+      ]
+    },
+    "Semesters": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "template",
+        "Sem_01",
+        "Sem_04",
+        "Sem_08",
+        "Sem_09"
+      ]
+    },
+    "Semestres": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "SEM_03x",
+        "SEM_08x"
+      ]
+    },
+    "_app": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "notebooklm",
+        "shellcommands",
+        "completr-words",
+        "scripts",
+        "solve",
+        "_appnotes",
+        "_config"
+      ]
+    },
+    "_app/completr-words": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "code.txt"
+      ]
+    },
+    "_app/completr-words/code.txt": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/scripts": {
+      "isPinned": false,
+      "isHidden": true,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Galaxy_view",
+        "tag_routs_scripts"
+      ]
+    },
+    "_app/scripts/tag_routs_scripts": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "patch-obsidian.bat",
+        "patch-obsidian.ps1"
+      ]
+    },
+    "_app/scripts/tag_routs_scripts/patch-obsidian.bat": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/scripts/tag_routs_scripts/patch-obsidian.ps1": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/solve": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "google_drive_solve.md",
+        "marginalia_solve.md",
+        "claude_solve.md",
+        "git_solve.md"
+      ]
+    },
+    "_app/solve/claude_solve.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/solve/git_solve.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_appnotes": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "marginalia_explorer_guide.md.md",
+        "supercharged_guide.md",
+        "script_guide.md",
+        "claude_prompts.md",
+        "Rclone_guide.md",
+        "cornell_guide.md",
+        "zettakasten_guide_temp.md",
+        "Marginalia_guide.md",
+        "PDF_PP-guide.md",
+        "better-export-pdf.md",
+        "class-notes-guide.md",
+        "desmos_guide.md",
+        "latex_guide.md",
+        "pdf-guide.md",
+        "plugin_guide.md",
+        "tagroute_parche",
+        "obsidian_guide.md"
+      ]
+    },
+    "_app/_appnotes/better-export-pdf.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_appnotes/class-notes-guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_appnotes/desmos_guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_appnotes/latex_guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_appnotes/pdf-guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_appnotes/plugin_guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_appnotes/tagroute_parche": {
+      "isPinned": false,
+      "isHidden": true,
+      "sortOrder": "custom",
+      "customOrder": [
+        "patch-obsidian.bat",
+        "patch-obsidian.ps1",
+        "TagsRoute(legacy).md"
+      ]
+    },
+    "_app/_appnotes/tagroute_parche/patch-obsidian.bat": {
+      "isPinned": false,
+      "isHidden": true
+    },
+    "_app/_appnotes/tagroute_parche/patch-obsidian.ps1": {
+      "isPinned": false,
+      "isHidden": true
+    },
+    "_app/_appnotes/obsidian_guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_config": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_projects_system.md",
+        "_marginalia_system.md",
+        "_pdf_pp-system.md",
+        "_TAB_note-system.md",
+        "_claude-matter-boot.md",
+        "_basic-memory-system.md",
+        "_excalidraw-system.md",
+        "_galaxy-system.md",
+        "_graph-system.md",
+        "_library-system.md",
+        "_mindmap-system.md",
+        "_note-system.md",
+        "_notebooklm-system.md",
+        "_sync-system.md",
+        "_template-system.md",
+        "_ToDo-system.md",
+        "_skill-system.md",
+        "_prompt-system.md"
+      ]
+    },
+    "_app/_config/_basic-memory-system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_config/_excalidraw-system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_config/_galaxy-system.md": {
+      "isPinned": true,
+      "isHidden": false
+    },
+    "_app/_config/_graph-system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_config/_library-system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_config/_mindmap-system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_config/_note-system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_config/_notebooklm-system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_config/_sync-system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_config/_template-system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_config/_ToDo-system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "PDF-601",
+        "PDF-Electrónica analógica",
+        "PDF-telefonia",
+        "BORRADOR OK OK ETN 825 2022.pdf",
+        "PDF-1015",
+        "ETN-607"
+      ]
+    },
+    "_templates": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "alt-B",
+        "tpl-anki.md",
+        "tpl-w-initial.md",
+        "tpl-w-project.md",
+        "tpl-w-study.md",
+        "tpl_w_transcription.md",
+        "tpl-zk.md",
+        "tpl-asteroid 1.md",
+        "tpl-photon 1.md",
+        "tpl-supernova.md",
+        "tpl-asteroid.md",
+        "tpl-bridge.md",
+        "tpl-comet.md",
+        "tpl-constellation.md",
+        "tpl-dwarf.md",
+        "tpl-moon.md",
+        "tpl-nebula.md",
+        "tpl-observatory.md",
+        "tpl-photon.md",
+        "tpl-planet.md",
+        "tpl-star.md",
+        "tpl-Anki_excalidraw.md",
+        "tab"
+      ]
+    },
+    "_templates/alt-B": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "plantillas-A-respaldo.md"
+      ]
+    },
+    "_templates/alt-B/plantillas-A-respaldo.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_templates/tpl-asteroid.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_templates/tpl-bridge.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_templates/tpl-comet.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_templates/tpl-constellation.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_templates/tpl-dwarf.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_templates/tpl-moon.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_templates/tpl-nebula.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_templates/tpl-observatory.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_templates/tpl-photon.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_templates/tpl-planet.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_templates/tpl-star.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_appnotes/PDF_PP-guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-601": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Manuales",
+        "Gpt",
+        "Tocci, Widmer, Moss - Sistemas digitales, 10ma Ed.pdf",
+        "Thomas L. Floyd - Fundamentos de Sistemas Digitales, 9na ed.pdf",
+        "Tocci, Widmer, Mossi - Didital systems, 12th Ed - 2018.pdf",
+        "Thomas L. Floyd - Digital fundamentals, 11th ed.pdf",
+        "Memorias de catedra"
+      ]
+    },
+    "_PDF/PDF-601/Manuales": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "MANUAL_TTL_esp.pdf",
+        "On HighSpeed CMOS Data 2000.pdf",
+        "Texas instrument AHC.pdf",
+        "Tarjetas"
+      ]
+    },
+    "_PDF/PDF-601/Manuales/MANUAL_TTL_esp.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-601/Manuales/On HighSpeed CMOS Data 2000.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-601/Manuales/Texas instrument AHC.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-601/Manuales/Tarjetas": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Manual de Usuario ATMEL – WinCUPL.pdf",
+        "Manual de Usuario CycloneII.pdf",
+        "Manual de Usuario Spartan3AN.pdf"
+      ]
+    },
+    "_PDF/PDF-601/Manuales/Tarjetas/Manual de Usuario ATMEL – WinCUPL.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-601/Manuales/Tarjetas/Manual de Usuario CycloneII.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-601/Manuales/Tarjetas/Manual de Usuario Spartan3AN.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-601/Gpt": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Anil k. Maini - Digital electronic.pdf",
+        "Scherz, Monk Practica electronics for invertors 4th edl.pdf"
+      ]
+    },
+    "_PDF/PDF-601/Gpt/Anil k. Maini - Digital electronic.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-601/Gpt/Scherz, Monk Practica electronics for invertors 4th edl.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-601/Tocci, Widmer, Moss - Sistemas digitales, 10ma Ed.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-601/Thomas L. Floyd - Fundamentos de Sistemas Digitales, 9na ed.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-601/Tocci, Widmer, Mossi - Didital systems, 12th Ed - 2018.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-601/Thomas L. Floyd - Digital fundamentals, 11th ed.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-601/Memorias de catedra": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Cap-3 Simplificaion de funciones logicas.pdf",
+        "Cap-5 Circuitos aritmeticos.pdf",
+        "Cap-10 Aplicaciones de logica comb y sec.pdf",
+        "Cap-1 Logica de proposiciones.pdf",
+        "Cap-6 Logica secuencial.pdf",
+        "Cap-8 Dispositivos logicos programables.pdf",
+        "Cap-9 Conversor analogo y analogo digital.pdf",
+        "Cap-2 Sistemas de numeracion y codigos.pdf",
+        "Cap-4 Modulos funcionales de logica combinacional.pdf",
+        "Cap-7 Modulos funcionales de logica secuencial.pdf"
+      ]
+    },
+    "_PDF/PDF-601/Memorias de catedra/Cap-3 Simplificaion de funciones logicas.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-601/Memorias de catedra/Cap-5 Circuitos aritmeticos.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-601/Memorias de catedra/Cap-10 Aplicaciones de logica comb y sec.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-601/Memorias de catedra/Cap-1 Logica de proposiciones.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-601/Memorias de catedra/Cap-6 Logica secuencial.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-601/Memorias de catedra/Cap-8 Dispositivos logicos programables.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-601/Memorias de catedra/Cap-9 Conversor analogo y analogo digital.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-601/Memorias de catedra/Cap-2 Sistemas de numeracion y codigos.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-601/Memorias de catedra/Cap-4 Modulos funcionales de logica combinacional.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-601/Memorias de catedra/Cap-7 Modulos funcionales de logica secuencial.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-Electrónica analógica": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "L. Boylestad, Nashelsky - Electrónica Teoría de Circuitos y Dispositivos Electrónicos, 10ma ed.pdf",
+        "K. Alexander, N.O. Sadiku - Fundamentos de circuitos eléctricos, 5ta. Ed.pdf",
+        "Floyd - Dispositivos electronicos, 8va ed.pdf"
+      ]
+    },
+    "_PDF/PDF-Electrónica analógica/L. Boylestad, Nashelsky - Electrónica Teoría de Circuitos y Dispositivos Electrónicos, 10ma ed.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-Electrónica analógica/K. Alexander, N.O. Sadiku - Fundamentos de circuitos eléctricos, 5ta. Ed.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-Electrónica analógica/Floyd - Dispositivos electronicos, 8va ed.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-telefonia": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "2.-hhING. DE TRAFICO AVANZADO_4.pdf",
+        "1.-hhING. DE TRAFICO AVANZADO_3.pdf",
+        "5.- hhING. DE TRAFICO AVANZADO_1.pdf",
+        "5.2hh FORMULAS DE ING.TRAFICO.pdf",
+        "TABLAS DE INGENIERIA DE TRAFICO.pdf",
+        "4.- ING_DE TRAFICO AVANZADO GRAF_EQUIVALENTE.pdf",
+        "1.- ttCONCEPTO DE REDES PARA TELEFONIA.pdf",
+        "2.-tt PLANTA INTERNA Y EXTERNA.pdf",
+        "3.- hhINGENIERIA DE TRAFICO BASICO PARA TELEFONIA.pdf"
+      ]
+    },
+    "_PDF/PDF-telefonia/2.-hhING. DE TRAFICO AVANZADO_4.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-telefonia/1.-hhING. DE TRAFICO AVANZADO_3.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-telefonia/5.- hhING. DE TRAFICO AVANZADO_1.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-telefonia/5.2hh FORMULAS DE ING.TRAFICO.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-telefonia/TABLAS DE INGENIERIA DE TRAFICO.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-telefonia/4.- ING_DE TRAFICO AVANZADO GRAF_EQUIVALENTE.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-telefonia/1.- ttCONCEPTO DE REDES PARA TELEFONIA.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-telefonia/2.-tt PLANTA INTERNA Y EXTERNA.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-telefonia/3.- hhINGENIERIA DE TRAFICO BASICO PARA TELEFONIA.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/BORRADOR OK OK ETN 825 2022.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "README.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Borrar": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "void 1.md",
+        "wolfram alpha example.md",
+        "zborrar903_3 otro.md",
+        "P3A.asm",
+        "zborrar111das111.md",
+        "zborrar903 3 arquietxtura.md",
+        "zborrar903_3gemino.md",
+        "zborrar903 2.md",
+        "zborrar903 3.md",
+        "zborrar903.md"
+      ]
+    },
+    "Borrar/zborrar903_3 otro.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Borrar/P3A.asm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Borrar/zborrar111das111.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Borrar/zborrar903 3 arquietxtura.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Borrar/zborrar903_3gemino.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Borrar/zborrar903 2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Borrar/zborrar903 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Borrar/zborrar903.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/scripts/Galaxy_view": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Galaxy_view-main.js.bk"
+      ]
+    },
+    "_app/scripts/Galaxy_view/Galaxy_view-main.js.bk": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/solve/google_drive_solve.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_appnotes/cornell_guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_appnotes/zettakasten_guide_temp.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_appnotes/Marginalia_guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_config/_claude-matter-boot.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "general",
+        "prompts",
+        "guides",
+        "other"
+      ]
+    },
+    "_app/notebooklm/general": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "obsidian_notation.md",
+        "tikzjax_guide-legacy.md",
+        "notebooklm-prompt-guide.md",
+        "MAT101-notebooklm-user_guide.md"
+      ]
+    },
+    "_app/notebooklm/general/obsidian_notation.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/general/tikzjax_guide-legacy.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/general/notebooklm-prompt-guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/general/MAT101-notebooklm-user_guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/other": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "_app/notebooklm/prompts": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "ETN806",
+        "MAT101",
+        "ETN607",
+        "ETN1015"
+      ]
+    },
+    "_app/notebooklm/prompts/ETN806": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "ETN806-P3.md",
+        "ETN806-P1.md",
+        "ETN806-P2.md",
+        "ETN806-P1-legacy.md"
+      ]
+    },
+    "_app/notebooklm/prompts/ETN806/ETN806-P3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN806/ETN806-P1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN806/ETN806-P2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN806/ETN806-P1-legacy.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/MAT101": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "MAT101-study.md",
+        "MAT101-transcription-legacy.md",
+        "MAT101-transcription.md",
+        "MAT101-transcription (multi columns pluggin)-legacy.md"
+      ]
+    },
+    "_app/notebooklm/prompts/MAT101/MAT101-study.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/MAT101/MAT101-transcription-legacy.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/MAT101/MAT101-transcription.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/guides": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "ETN806",
+        "MAT101",
+        "ETN607",
+        "ETN1015"
+      ]
+    },
+    "_app/notebooklm/guides/MAT101": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "MAT101_TikzJax 1.md",
+        "MAT101_latex.md",
+        "MAT101_desmos.md",
+        "MAT101_library.md",
+        "MAT101_TikzJax.md"
+      ]
+    },
+    "_app/notebooklm/guides/MAT101/MAT101_latex.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/guides/MAT101/MAT101_desmos.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/guides/MAT101/MAT101_library.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/guides/MAT101/MAT101_TikzJax.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/guides/ETN806": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "ETN806-P3-colas_guide_s.md",
+        "ETN806-P3-Tikz_markov_guide.md"
+      ]
+    },
+    "_app/notebooklm/guides/ETN806/ETN806-P3-colas_guide_s.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/guides/ETN806/ETN806-P3-Tikz_markov_guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_templates/tpl-asteroid 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_templates/tpl-photon 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_templates/tpl-supernova.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_templates/tpl-zk.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "MOC/MAT101-T00-star.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_01": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "MAT101"
+      ]
+    },
+    "Semesters/Sem_01/MAT101": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_library_MAT101.md",
+        "Partial_1"
+      ]
+    },
+    "Semesters/Sem_01/MAT101/Partial_1": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "MAT101-T00-P1-Numeros_reales_y_desigualdades.md",
+        "T00-numeros_reales"
+      ]
+    },
+    "Semesters/Sem_01/MAT101/Partial_1/MAT101-T00-P1-Numeros_reales_y_desigualdades.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "MAT101-T00-inecuaciones_lineales 1.md",
+        "MAT101-T00-teoremas_desigualdades.md",
+        "MAT101-T00-axiomas_cuerpo.md",
+        "MAT101-T00-ej_inec_racional_fracciones.md",
+        "MAT101-T00-axiomas_igualdad.md",
+        "MAT101-T00-axiomas_orden.md",
+        "MAT101-T00-ej_inec_valabs_cubo.md",
+        "MAT101-T00-ej_inec_valabs_fraccion.md",
+        "MAT101-T00-ej_inec_x4_9x2.md",
+        "MAT101-T00-inecuaciones_lineales.md",
+        "MAT101-T00-recta_real_intervalos.md",
+        "MAT101-T00-teoremas_reales.md",
+        "MAT101-T00-valor_absoluto.md",
+        "MAT101-T00-ej_inec_irracional.md",
+        "MAT101-T00-ej_inec_valabs_mayor.md"
+      ]
+    },
+    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-teoremas_desigualdades.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-axiomas_cuerpo.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-ej_inec_racional_fracciones.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-axiomas_igualdad.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-axiomas_orden.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-ej_inec_valabs_cubo.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-ej_inec_valabs_fraccion.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-ej_inec_x4_9x2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-inecuaciones_lineales.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-recta_real_intervalos.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-teoremas_reales.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-valor_absoluto.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-ej_inec_irracional.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-ej_inec_valabs_mayor.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/solve/marginalia_solve.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/MAT101/MAT101-transcription (multi columns pluggin)-legacy.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_appnotes/Rclone_guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_appnotes/claude_prompts.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_appnotes/script_guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/shellcommands": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "shellcmd_config_gral.md",
+        "shellcmd_config_script.md",
+        "shellcmd_scripting_guide.md",
+        "shellcommands_guide(scripts).md",
+        "shellcmd_latex_mathjax.md",
+        "rclone_script.md",
+        "shellcmd_start_snippet.md",
+        "shellcmd_occlusion_actions.md",
+        "shellcmd_NBLM_fix.md",
+        "shellcmd_pdf_figure_search.md"
+      ]
+    },
+    "_app/shellcommands/shellcmd_scripting_guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/shellcommands/shellcmd_config_gral.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/shellcommands/shellcmd_config_script.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/shellcommands/shellcommands_guide(scripts).md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_appnotes/tagroute_parche/TagsRoute(legacy).md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/guides/MAT101/MAT101_TikzJax 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_01/MAT101/Partial_1/T00-numeros_reales/MAT101-T00-inecuaciones_lineales 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/shellcommands/rclone_script.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_appnotes/marginalia_explorer_guide.md.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_appnotes/supercharged_guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_config/_marginalia_system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_config/_pdf_pp-system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_config/_TAB_note-system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_inbox": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Marginalia Inbox.md",
+        "inbox.md"
+      ]
+    },
+    "_inbox/Marginalia Inbox.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_skills": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_claude-work.md",
+        "_claude-plan.md",
+        "_claude-setup.md",
+        "_claude-close.md",
+        "_claude-boot.md",
+        "_start_movil.md",
+        "_repaso_movil.md",
+        "_plan_movil.md",
+        "_start.md"
+      ]
+    },
+    "_skills/_claude-boot.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_skills/_claude-close.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_skills/_claude-plan.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_skills/_claude-setup.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_skills/_claude-work.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_templates/tpl-w-initial.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_templates/tpl-w-project.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_templates/tpl-w-study.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_templates/tpl_w_transcription.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Borrar/wolfram alpha example.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Borrar/void 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Image-Occlusions",
+        "Constellations",
+        "Observatory",
+        "template",
+        "Scripts"
+      ]
+    },
+    "Excalidraw/Constellations": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "Excalidraw/Observatory": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "Excalidraw/Scripts": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Downloaded",
+        "excalidraw_parche_image_occlusion.md"
+      ]
+    },
+    "Excalidraw/Scripts/Downloaded": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Slideshow.svg",
+        "Slideshow.md",
+        "Mindmap Builder.svg",
+        "Mindmap Builder.md",
+        "Image Occlusion.svg",
+        "Image Occlusion.md",
+        "Image Occlusion.md.bk"
+      ]
+    },
+    "Excalidraw/Scripts/Downloaded/Image Occlusion.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Scripts/Downloaded/Image Occlusion.svg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Scripts/Downloaded/Mindmap Builder.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Scripts/Downloaded/Mindmap Builder.svg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Scripts/Downloaded/Slideshow.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Scripts/Downloaded/Slideshow.svg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/template": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Template.excalidraw.md",
+        "tpl-occlusion.md"
+      ]
+    },
+    "Excalidraw/template/Template.excalidraw.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/template/tpl-occlusion.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_legacy"
+      ]
+    },
+    "Marginalia": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Marginalia Attachments",
+        "Evidence Boards",
+        "Zettelkasten",
+        "Pinboards"
+      ]
+    },
+    "Marginalia/Evidence Boards": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "Marginalia/Pinboards": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "Marginalia/Zettelkasten": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "20260723193844.md"
+      ]
+    },
+    "Marginalia/Zettelkasten/20260723193844.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Marginalia/Marginalia Attachments": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "_app/shellcommands/shellcmd_latex_mathjax.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Canvas": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "_app/_config/_projects_system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_void": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "claude vision.md",
+        "MAT101_T1-Funciones-reales 1.md",
+        "MAT101_T1-Funciones-reales.md",
+        "obsidian-cornell-notes.md",
+        "rendimiento.md",
+        "tables no terminado.md",
+        "Untitled 1.md"
+      ]
+    },
+    "_void/claude vision.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_void/MAT101_T1-Funciones-reales 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_void/MAT101_T1-Funciones-reales.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_void/obsidian-cornell-notes.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_void/rendimiento.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_void/tables no terminado.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_void/Untitled 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "template",
+        "blueprint",
+        "_legacy",
+        "dock",
+        "anki",
+        "bay",
+        "TPL_TAB",
+        "IMA_NBLM",
+        "pdfpp_embed_nblm"
+      ]
+    },
+    "_hangar/anki": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "logbook.md",
+        "_tmp_sync 1.md",
+        "_tmp_sync.md",
+        "tsk_anki.md",
+        "tsk_marginalia_anki.md",
+        "tsk_flashcards.md",
+        "tsk_obsidian_to_anki.md",
+        "anki_galaxy_guide.md",
+        "opA_vs_opB.md",
+        "anki-opcionA-marginalia.md",
+        "anki-opcionB-flashcards.md",
+        "anki-opcionC-obsidian-to-anki.md",
+        "Obsidian_to_anki.md"
+      ]
+    },
+    "_hangar/anki/anki-opcionA-marginalia.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/anki/anki-opcionB-flashcards.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/anki/anki-opcionC-obsidian-to-anki.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/anki/anki_galaxy_guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/anki/tsk_anki.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/anki/_tmp_sync 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/anki/_tmp_sync.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/dock": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "logbook.md",
+        "tsk_pdf_marginalia_pp.md",
+        "tsk_memory_matter.md",
+        "tsk_Gemini_Helper_Vault.md",
+        "tsk_Wolfram_alpha_script.md",
+        "tsk_Mapa_IAs_vault_roles_APIs.md",
+        "tsk_pendientes_sistema_galaxy.md",
+        "tsk_script_extaction_integration.md",
+        "_library_ETN505(i).md",
+        "_library_ETN825.md",
+        "tsk_library_ETN825.md",
+        "tsk_operator_reload_display.md",
+        "tsk_movil_drive.md",
+        "tsk_vault-infra.md",
+        "ship_library_ETN1015.md",
+        "tsk_prompt_guides_1015.md"
+      ]
+    },
+    "_hangar/dock/tsk_library_ETN825.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/dock/tsk_pdf_marginalia_pp.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/dock/_library_ETN505(i).md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/dock/_library_ETN825.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/dock/tsk_script_extaction_integration.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/dock/tsk_pendientes_sistema_galaxy.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/dock/tsk_Mapa_IAs_vault_roles_APIs.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/dock/tsk_Wolfram_alpha_script.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/dock/tsk_Gemini_Helper_Vault.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/blueprint": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_ideas_1_mcp-reemplazo-github.md",
+        "_ideas_1_apps_2brain.md",
+        "_ideas_0_shellcmd.md"
+      ]
+    },
+    "_hangar/blueprint/_ideas_0_shellcmd.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/blueprint/_ideas_1_apps_2brain.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/dock/tsk_memory_matter.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/_legacy": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "logbook.md",
+        "tsk_update-rclone.md",
+        "tsk_snippet_templater.md",
+        "tsk_update_notebooklm_system.md",
+        "tsk_supercharged-dual-icons.md",
+        "tsk_color-folders-files.md",
+        "tsk_logbook_dock.md",
+        "tsk_config-ia-workers.md",
+        "img_to_assets_via_mcp.md",
+        "img_base64_to_md.md",
+        "figura_tabnote_integracion.md",
+        "tsk_fix-math-notebooklm.md",
+        "NBLM_update",
+        "ship_fix-math-mod.md",
+        "tks_ETN1015-notebooklm-latex.md"
+      ]
+    },
+    "_app/shellcommands/shellcmd_start_snippet.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/_legacy/tsk_snippet_templater.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/_legacy/tsk_supercharged-dual-icons.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/_legacy/logbook.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_config/_skill-system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/dock/tsk_operator_reload_display.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_config/_prompt-system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/_legacy/tsk_color-folders-files.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/_legacy/tsk_update_notebooklm_system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/anki/Obsidian_to_anki.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_templates/tpl-Anki_excalidraw.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Scripts/Downloaded/Image Occlusion.md.bk": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_templates/tpl-anki.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Image-Occlusions/_legacy": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "_app/shellcommands/shellcmd_occlusion_actions.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/anki/tsk_obsidian_to_anki.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/anki/opA_vs_opB.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/anki/tsk_flashcards.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/anki/tsk_marginalia_anki.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/template": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "tpl_carrier.md",
+        "tpl_ship.md",
+        "tpl_worker.md",
+        "tpl_dropship.md",
+        "tpl_blueprint.md",
+        "tpl_logbook_dock.md",
+        "tpl_logbook_carrier.md",
+        "tpl_tsk (legacy).md"
+      ]
+    },
+    "_hangar/template/tpl_worker.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/template/tpl_ship.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/template/tpl_carrier.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/bay": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "logbook.md",
+        "alx_hot.md",
+        "krajo.md",
+        "alx_gml.md",
+        "alxrul.md",
+        "alx-rul.md",
+        "standb.md",
+        "emergn.md",
+        "Panel logbook.md"
+      ]
+    },
+    "_hangar/bay/emergn.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/bay/standb.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/bay/alx-rul.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/bay/alxrul.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/bay/alx_gml.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/bay/krajo.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/bay/alx_hot.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/bay/logbook.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/template/tpl_dropship.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/bay/Panel logbook.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/Scripts/excalidraw_parche_image_occlusion.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/template/tpl_blueprint.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/template/tpl_logbook_dock.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/template/tpl_logbook_carrier.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/dock/logbook.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/_legacy/tsk_config-ia-workers.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_skills/_start_movil.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/dock/tsk_movil_drive.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_skills/_repaso_movil.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_skills/_plan_movil.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_skills/_start.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_inbox/inbox.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN607": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "DOC-ETN607-transcription.md",
+        "ETN607-transcription-divisions.md",
+        "ETN607-transcription.md",
+        "ETN607-transcription-v2.md",
+        "ETN607-transcription-v3.md",
+        "ETN607-transcription-v4.md",
+        "ETN607-transcription_Av4.md",
+        "ETN607-transcription_BCv3.md",
+        "ETN607-transcription_BCv4.md"
+      ]
+    },
+    "_app/notebooklm/prompts/ETN607/ETN607-transcription.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled-07-08-2026_16-58-24.png",
+        "Untitled-07-08-2026_16-58-26.png"
+      ]
+    },
+    "_assets/Untitled-07-08-2026_16-58-24.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/Untitled-07-08-2026_16-58-26.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN607/ETN607-transcription-divisions.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/_legacy/tsk_update-rclone.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/_legacy/tsk_logbook_dock.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/blueprint/_ideas_1_mcp-reemplazo-github.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/TPL_TAB": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "logbook.md",
+        "tsk_tabnote.md",
+        "tsk_tabnote-prompt-nlm.md",
+        "_TABnote-ref.md",
+        "chronicle.md",
+        "tpl_prompt_transcription.md",
+        "_TABnote-ref 1.md"
+      ]
+    },
+    "_hangar/TPL_TAB/tsk_tabnote.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/TPL_TAB/tsk_tabnote-prompt-nlm.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/TPL_TAB/_TABnote-ref.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/TPL_TAB/logbook.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/TPL_TAB/chronicle.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/dock/tsk_vault-infra.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/template": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "tpl-w-library.md"
+      ]
+    },
+    "Semesters/template/tpl-w-library.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "ETN607"
+      ]
+    },
+    "Semesters/Sem_04/ETN607": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_library_ETN607.md",
+        "tsk_ini_ETN607.md",
+        "tsk_ini_ETN607 1.md"
+      ]
+    },
+    "Semesters/Sem_04/ETN607/_library_ETN607.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_01/MAT101/_library_MAT101.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/TPL_TAB/tpl_prompt_transcription.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/tsk_ini_ETN607.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/guides/ETN607": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "ETN607_TikzJax.md",
+        "ETN607_latex.md"
+      ]
+    },
+    "_app/notebooklm/guides/ETN607/ETN607_TikzJax.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/anki/logbook.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/IMA_NBLM": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "IMA_NBLM_promtp.md",
+        "logbook.md",
+        "tsk_IMA_NBLM.md",
+        "IMA_NBLM-prueba_p1.md",
+        "Gemini_fuentes_pruebas.md",
+        "IMA_NBLM-opc_slides.md"
+      ]
+    },
+    "_hangar/IMA_NBLM/IMA_NBLM_promtp.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/IMA_NBLM/logbook.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/IMA_NBLM/tsk_IMA_NBLM.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/IMA_NBLM/IMA_NBLM-prueba_p1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/IMA_NBLM/Gemini_fuentes_pruebas.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/template/tpl_tsk (legacy).md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/TPL_TAB/_TABnote-ref 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/_legacy/img_to_assets_via_mcp.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/_legacy/img_base64_to_md.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/_legacy/figura_tabnote_integracion.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_templates/tab": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "tabnote_template_actualizado.png",
+        "tabnote_aurea_ohm.png",
+        "tlpf_c.png",
+        "tlpf_p.png",
+        "tabnote_cornell_ohm.png",
+        "tabnote_template_preview.png",
+        "tlpf_d.png",
+        "tlpf_w.png"
+      ]
+    },
+    "_templates/tab/tabnote_template_actualizado.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_templates/tab/tabnote_aurea_ohm.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_templates/tab/tlpf_c.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_templates/tab/tlpf_p.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_templates/tab/tabnote_cornell_ohm.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_templates/tab/tabnote_template_preview.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_templates/tab/tlpf_d.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_templates/tab/tlpf_w.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-1015": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "K. Deergha Rao-Signals and Systems.pdf",
+        "Charles L. Phillips John Parr Eve Riskin-Signals, Systems, and Transforms-4th ED.pdf",
+        "Mani, Oppenheim, Willsky, Nawab-Signals and Systems Solutions Manual.pdf",
+        "Oppenheim & Willsky-Señales y Sistemas-2da ed-6to11.pdf",
+        "Oppenheim & Willsky-Señales y Sistemas-2da ed-1to5.pdf",
+        "Oppenheim & Willsky-Señales y Sistemas-2da ed.pdf",
+        "Oppenheim & Willsky-Signals and Systems-2th ed-1to5.pdf",
+        "Oppenheim & Willsky-Signals and Systems-2th ed-6to11.pdf",
+        "Oppenheim & Willsky-Signals and Systems-2th ed.pdf",
+        "SCHAUM-HWEI P. HSU-SIGNALS AND SYSTEMS-1995.pdf",
+        "SCHAUM-MONSON H. HAYES-DIGITAL SIGNAL PROCESSING-1999.pdf",
+        "S. Palani, D. Kalaiyarasi-Principles of Digital Signal Processing - 2nd Ed.pdf"
+      ]
+    },
+    "_PDF/PDF-1015/K. Deergha Rao-Signals and Systems.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-1015/Charles L. Phillips John Parr Eve Riskin-Signals, Systems, and Transforms-4th ED.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-1015/Mani, Oppenheim, Willsky, Nawab-Signals and Systems Solutions Manual.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-1015/Oppenheim & Willsky-Señales y Sistemas-2da ed-6to11.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-1015/Oppenheim & Willsky-Señales y Sistemas-2da ed-1to5.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-1015/Oppenheim & Willsky-Señales y Sistemas-2da ed.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-1015/Oppenheim & Willsky-Signals and Systems-2th ed-1to5.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-1015/Oppenheim & Willsky-Signals and Systems-2th ed-6to11.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-1015/Oppenheim & Willsky-Signals and Systems-2th ed.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-1015/SCHAUM-HWEI P. HSU-SIGNALS AND SYSTEMS-1995.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-1015/SCHAUM-MONSON H. HAYES-DIGITAL SIGNAL PROCESSING-1999.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN607/ETN607-transcription-v2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN1015": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "ETN1015-study.md"
+      ]
+    },
+    "_app/notebooklm/prompts/ETN1015/ETN1015-study.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/guides/ETN1015": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "ETN1015_desmos.md",
+        "ETN1015_tikz.md",
+        "ETN1015_latex.md"
+      ]
+    },
+    "_app/notebooklm/guides/ETN1015/ETN1015_desmos.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/guides/ETN1015/ETN1015_tikz.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/shellcommands/shellcmd_NBLM_fix.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_08": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "ETN1015"
+      ]
+    },
+    "Semesters/Sem_08/ETN1015": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_library_ETN1015.md",
+        "Practica 1.md",
+        "Practica 2.md",
+        "Avance"
+      ]
+    },
+    "Semesters/Sem_08/ETN1015/_library_ETN1015.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_08/ETN1015/Practica 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_08/ETN1015/Practica 2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/_legacy/tsk_fix-math-notebooklm.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/dock/ship_library_ETN1015.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/dock/tsk_prompt_guides_1015.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/IMA_NBLM/IMA_NBLM-opc_slides.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "2026-08-04",
+        "2026-08-06",
+        "2026-08-09",
+        "2026-08-10",
+        "2026-08-12",
+        "2026-08-13",
+        "2026-08-15",
+        "2026-08-16",
+        "section.md",
+        "tmp"
+      ]
+    },
+    "Rubbish/2026-08-04": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "2026-08-04 17.43.30.0",
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-08-04/2026-08-04 17.43.30.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-08-04/2026-08-04 17.43.30.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-04/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-06": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-08-06/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "img903",
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-08-09/img903": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Cap1"
+      ]
+    },
+    "Rubbish/2026-08-09/img903/Cap1": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Ca01d.png",
+        "Ca01e.png",
+        "Ca01b.png",
+        "Ca01a.png",
+        "Ca01c.png",
+        "Ca01f.png",
+        "Ca01h.png",
+        "Ca01g.png",
+        "Ca01hError.png",
+        "Ca01j.png",
+        "Ca01k.png",
+        "Ca01i.png",
+        "Ca01l.png",
+        "Ca01o.png",
+        "Ca01m.png",
+        "Ca01n.png",
+        "Ca01q.png",
+        "Ca01p.png",
+        "Ca01r.png",
+        "Ca01s.png",
+        "Ca01t.png",
+        "Ca01w.png",
+        "Ca01y.png",
+        "Ca01x.png",
+        "Ca01u.png",
+        "Ca01z.png",
+        "Ca01v.png",
+        "Ca01zd.png",
+        "Ca01zb.png",
+        "Ca01zc.png",
+        "Ca01za.png",
+        "Ca01zf.png",
+        "fonts0.asm",
+        "fonts1.asm",
+        "fonts2.asm",
+        "Ca01ze.png",
+        "fonts3.asm",
+        "Ca01zg.png",
+        "menu.asm",
+        "menu01.asm",
+        "menu02.asm",
+        "menu03.asm",
+        "mod04h0.asm",
+        "mod13h2.asm",
+        "mod13h3.asm",
+        "mod13h0.asm",
+        "pila0.asm",
+        "unchar.asm",
+        "mod13h1.asm"
+      ]
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01d.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01e.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01b.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01a.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01c.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01f.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01h.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01g.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01hError.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01j.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01k.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01i.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01l.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01o.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01m.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01n.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01q.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01p.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01r.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01s.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01t.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01w.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01y.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01x.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01u.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01z.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01v.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01zd.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01zb.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01zc.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01za.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01zf.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/fonts0.asm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/fonts1.asm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/fonts2.asm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01ze.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/fonts3.asm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/Ca01zg.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/menu.asm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/menu01.asm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/menu02.asm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/menu03.asm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/mod04h0.asm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/mod13h2.asm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/mod13h3.asm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/mod13h0.asm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/pila0.asm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/unchar.asm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/img903/Cap1/mod13h1.asm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-09/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-10": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "BORRADOR OK OK ETN 825 2022.pdf",
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-08-10/BORRADOR OK OK ETN 825 2022.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-10/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-12": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "2026-08-12 15.48.56.0",
+        "2026-08-12 15.49.03.0",
+        "2026-08-12 15.49.14.0",
+        "2026-08-12 15.49.20.0",
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-08-12/2026-08-12 15.48.56.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-08-12/2026-08-12 15.48.56.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-12/2026-08-12 15.49.03.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-08-12/2026-08-12 15.49.03.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-12/2026-08-12 15.49.14.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-08-12/2026-08-12 15.49.14.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-12/2026-08-12 15.49.20.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-08-12/2026-08-12 15.49.20.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-12/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-13": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "2026-08-13 19.45.21.0",
+        "2026-08-13 19.50.18.0",
+        "BORRADOR OK OK ETN 825 2022.pdf",
+        "data.json",
+        "ETN903 TEOcap1_260311_083759.pdf",
+        "Notes_260609_234853.pdf",
+        "Structured Assembler Language For IBM Microcomputers.pdf"
+      ]
+    },
+    "Rubbish/2026-08-13/2026-08-13 19.45.21.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-08-13/2026-08-13 19.45.21.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-13/2026-08-13 19.50.18.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-08-13/2026-08-13 19.50.18.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-13/BORRADOR OK OK ETN 825 2022.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-13/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-13/ETN903 TEOcap1_260311_083759.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-13/Notes_260609_234853.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-13/Structured Assembler Language For IBM Microcomputers.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-15": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json",
+        "scanned_words.txt"
+      ]
+    },
+    "Rubbish/2026-08-15/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-15/scanned_words.txt": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-16": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "2026-08-16 15.46.00.0",
+        "app.json",
+        "data.json",
+        "Sin título 3.md"
+      ]
+    },
+    "Rubbish/2026-08-16/2026-08-16 15.46.00.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-08-16/2026-08-16 15.46.00.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-16/app.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-16/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-16/Sin título 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/section.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/tmp": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "lock"
+      ]
+    },
+    "Rubbish/tmp/lock": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/guides/ETN607/ETN607_latex.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN607/DOC-ETN607-transcription.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN607/ETN607-transcription-v3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/_legacy/NBLM_update": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "logbook.md",
+        "NBLM_update-opc_script.md",
+        "tsk_NBLM_update.md"
+      ]
+    },
+    "_hangar/_legacy/NBLM_update/logbook.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/_legacy/NBLM_update/NBLM_update-opc_script.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/_legacy/NBLM_update/tsk_NBLM_update.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/_legacy/ship_fix-math-mod.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "ETN806"
+      ]
+    },
+    "Semestres/SEM_08x/ETN806": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "corr 1.md",
+        "corr.md",
+        "corr2.md",
+        "Partial_1",
+        "Partial_2",
+        "Partial_3"
+      ]
+    },
+    "Semestres/SEM_08x/ETN806/corr 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/corr2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_1": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "ETN806-Parcial_1.md",
+        "6a.md",
+        "6b.md",
+        "10b.md",
+        "10a.md",
+        "9a.md",
+        "4a.md",
+        "5a.md",
+        "4b.md",
+        "E3a.md",
+        "5b.md",
+        "7a.md",
+        "7b.md",
+        "8b.md",
+        "8a.md",
+        "9b.md",
+        "E3b.md",
+        "E2b.md",
+        "E2Aa.md",
+        "ETN806-P1-E1.md"
+      ]
+    },
+    "Semestres/SEM_08x/ETN806/Partial_2": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "contexto_claude806.md",
+        "ETN806-P2-Fuente_Parcial_2.md",
+        "ETN806-2P-E1-Normalizacion-Marginales-Independencia-Probabilidad-region-curva.md",
+        "ETN806-2P-E2-Independencia-VAR-suma-cuadrado-unitario.md",
+        "ETN806-2P-E3-Marginales-semicirculo-unitario.md",
+        "ETN806-Formulario-2doP-Variables-Aleatorias-Multiples.md",
+        "ETN806-P2-E1-Normalizacion-k-Marginal-X-dominio-infinito.md",
+        "ETN806-P2-E2-Independencia-UV-dominio-triangular.md",
+        "ETN806-P2-E4-VAR-suma-W-densidad-uniforme-triangular.md",
+        "ETN806-P2-E5-PDF-4variables-probabilidad-marginal-W.md",
+        "ETN806-P2-E6-Region-valor-absoluto-marginal-probabilidad-esperanza.md",
+        "ETN806-P2-E7-Densidad-condicional-evento-exponencial-bivariada.md",
+        "ETN806-Practica2-Enunciados-Variables-Aleatorias-Multiples.md",
+        "ETN806-Resuelto-Referencia-Densidad-Conjunta-Triangular.md",
+        "ETN806-P2-E3-Independencia-VAR-suma-cuadrado-unitario.md"
+      ]
+    },
+    "Semestres/SEM_08x/ETN806/Partial_3": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "ETN806-P3-practica_3.md",
+        "ETN806-P3-examen_final_806_pdf.md",
+        "(ING) ANÁLISIS DE MARKOV.md",
+        "(ING)TEORÍA DE COLAS.md",
+        "(ING) Ejercicios Markov.md",
+        "(ING) Ejercicios teoria colas.md"
+      ]
+    },
+    "Semestres/SEM_08x/ETN806/corr.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_1/10b.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_1/10a.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_1/4a.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_1/5a.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_1/5b.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_1/4b.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_1/6a.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_1/6b.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_1/7a.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_1/7b.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_1/8a.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_1/9a.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_1/8b.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_1/9b.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_1/E2Aa.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_1/E2b.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_1/E3b.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_1/E3a.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_1/ETN806-P1-E1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_1/ETN806-Parcial_1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_2/contexto_claude806.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_2/ETN806-2P-E3-Marginales-semicirculo-unitario.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_2/ETN806-2P-E1-Normalizacion-Marginales-Independencia-Probabilidad-region-curva.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_2/ETN806-2P-E2-Independencia-VAR-suma-cuadrado-unitario.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_2/ETN806-Formulario-2doP-Variables-Aleatorias-Multiples.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_2/ETN806-P2-E1-Normalizacion-k-Marginal-X-dominio-infinito.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_2/ETN806-P2-E4-VAR-suma-W-densidad-uniforme-triangular.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_2/ETN806-P2-E2-Independencia-UV-dominio-triangular.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_2/ETN806-P2-E3-Independencia-VAR-suma-cuadrado-unitario.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_2/ETN806-P2-E5-PDF-4variables-probabilidad-marginal-W.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_2/ETN806-P2-E6-Region-valor-absoluto-marginal-probabilidad-esperanza.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_2/ETN806-P2-E7-Densidad-condicional-evento-exponencial-bivariada.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_2/ETN806-Resuelto-Referencia-Densidad-Conjunta-Triangular.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_2/ETN806-P2-Fuente_Parcial_2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_3/(ING) Ejercicios Markov.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_3/(ING) ANÁLISIS DE MARKOV.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_3/(ING) Ejercicios teoria colas.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_3/(ING)TEORÍA DE COLAS.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_3/ETN806-P3-practica_3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_3/ETN806-P3-examen_final_806_pdf.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_08x/ETN806/Partial_2/ETN806-Practica2-Enunciados-Variables-Aleatorias-Multiples.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "ETN302"
+      ]
+    },
+    "Semestres/SEM_03x/ETN302": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "1.302",
+        "1.302.md",
+        "0.ETN-302.md",
+        "10.302",
+        "10.302.md",
+        "11.302",
+        "11.302.md",
+        "12.302",
+        "12.302.md",
+        "2.302",
+        "2.302.md",
+        "3.302",
+        "3.302.md",
+        "4.302",
+        "4.302.md",
+        "5.302",
+        "5.302.md",
+        "6.302",
+        "6.302.md",
+        "7.302",
+        "7.302.md",
+        "8.302",
+        "8.302.md",
+        "9.302",
+        "9.302.md"
+      ]
+    },
+    "Semestres/SEM_03x/ETN302/1.302": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "1.302.add",
+        "E1.302.md",
+        "T1.302.md"
+      ]
+    },
+    "Semestres/SEM_03x/ETN302/10.302": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "10.302.add",
+        "T10.302.md"
+      ]
+    },
+    "Semestres/SEM_03x/ETN302/0.ETN-302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/10.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/11.302": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "11.302.add",
+        "T11.302.md"
+      ]
+    },
+    "Semestres/SEM_03x/ETN302/12.302": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "12.302.add",
+        "T12.302.md"
+      ]
+    },
+    "Semestres/SEM_03x/ETN302/11.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "2.302.add",
+        "A2.302.md",
+        "D2.302.md",
+        "T2.302.md",
+        "TT2.302.md",
+        "W2.302.md",
+        "AA2.302.md"
+      ]
+    },
+    "Semestres/SEM_03x/ETN302/12.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/1.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "3.302.add",
+        "E3.302.md",
+        "T3.302.md",
+        "TT3.302.md"
+      ]
+    },
+    "Semestres/SEM_03x/ETN302/4.302": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "4.302.add",
+        "T4.302.md"
+      ]
+    },
+    "Semestres/SEM_03x/ETN302/3.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/4.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/5.302": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "5.302.add",
+        "T5.302.md"
+      ]
+    },
+    "Semestres/SEM_03x/ETN302/6.302": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "6.302.add",
+        "T6.302.md"
+      ]
+    },
+    "Semestres/SEM_03x/ETN302/7.302": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "7.302.add",
+        "T7.302.md"
+      ]
+    },
+    "Semestres/SEM_03x/ETN302/5.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/8.302": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "8.302.add",
+        "T8.302.md"
+      ]
+    },
+    "Semestres/SEM_03x/ETN302/7.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/8.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/6.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/9.302": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "9.302.add",
+        "T9.302.md"
+      ]
+    },
+    "Semestres/SEM_03x/ETN302/9.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/1.302/1.302.add": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "E1.1.302-1.md",
+        "E1.1.302-2.md",
+        "E1.2.302-3.md",
+        "E1.31.302-4.md",
+        "E1.32.302-5.md",
+        "E1.33.302-6.md",
+        "E1.34.302-7.md",
+        "T1.2.302.md"
+      ]
+    },
+    "Semestres/SEM_03x/ETN302/1.302/E1.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/1.302/T1.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/10.302/10.302.add": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "Semestres/SEM_03x/ETN302/10.302/T10.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/11.302/11.302.add": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "Semestres/SEM_03x/ETN302/11.302/T11.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/12.302/12.302.add": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "Semestres/SEM_03x/ETN302/12.302/T12.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "A2.1.302-1.md",
+        "A2.1.302-2.md",
+        "A2.1.302-3.md",
+        "A2.2.302-1.md",
+        "A2.2.302-2.md",
+        "A2.2.302-3.md",
+        "A2.2.302-4.md",
+        "AA2.11.302-1.md",
+        "AA2.11.302-2.md",
+        "AA2.11.302-3.md",
+        "AA2.11.302-4.md",
+        "AA2.11.302-5.md",
+        "AA2.11.302-6.md",
+        "AA2.12.302-0.md",
+        "AA2.12.302-1.md",
+        "AA2.2.302-1.md",
+        "AAD2.1.302.md",
+        "AD2.1.302.md",
+        "T2.21.302-1.md",
+        "T2.21.302-2.md",
+        "T2.21.302-3.md",
+        "T2.22.302-1.md",
+        "T2.22.302-2.md",
+        "T2.23.302-1.md",
+        "T2.23.302-2.md",
+        "T2.31.302.md",
+        "T2.41.302-1.md",
+        "T2.32.302.md",
+        "T2.41.302-2.md",
+        "T2.41.302-3.md",
+        "T2.41.302-4.md",
+        "T2.42.302-1.md",
+        "T2.42.302-2.md",
+        "TD2.1.302.md",
+        "TD2.21.302.md",
+        "TD2.22.302.md",
+        "TD2.23.302.md",
+        "TD2.31.302.md",
+        "W2.302-1.md",
+        "W2.302-2.md",
+        "W2.302-3.md",
+        "WD2.1.302-1.md"
+      ]
+    },
+    "Semestres/SEM_03x/ETN302/2.302/A2.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/AA2.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/D2.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/T2.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/TT2.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/W2.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "LAB603-1-IMG.md",
+        "LAB603-1-IMG.png",
+        "Mon-28-November-22_5-15-2.md",
+        "Sun-23-October-22_5-3-27.md",
+        "Sun-27-November-22_8-25-46.md",
+        "Sun-27-November-22_8-25-46.png",
+        "T3.2.302.md",
+        "T3.3.302.md",
+        "T3.31.302.md",
+        "T3.4.302.md",
+        "T3.511.302.md",
+        "T3.512.302.md",
+        "T3.513.302.md",
+        "T3.521.302.md",
+        "T3.522.302.md",
+        "T3.523.302.md",
+        "T3.6.302-1.md",
+        "T3.6.302-2.md",
+        "T3.6.302-3.md",
+        "T3.6.302-4.md",
+        "T3.6.302-5.md",
+        "TD3.2.302.md",
+        "TE3.2.302-1.png",
+        "TE3.2.302-1.md",
+        "TE3.3.302-1.md",
+        "TE3.3.302-1.png",
+        "TE3.3.302-2.md",
+        "TE3.3.302-2.png",
+        "TE3.4.302-1.md",
+        "TE3.4.302-1.png",
+        "TE3.511.302-1.md",
+        "TE3.511.302-1.png",
+        "TE3.512.302-1.md",
+        "TE3.512.302-1.png",
+        "TE3.513.302-1.md",
+        "TE3.513.302-1.png",
+        "TE3.521.302-1.md",
+        "TE3.521.302-1.png",
+        "TE3.522.302-1.md",
+        "TE3.522.302-1.png",
+        "TE3.523.302-1.md",
+        "TE3.523.302-1.png",
+        "TE3.6.302-01.png",
+        "TE3.6.302-03.png",
+        "TE3.6.302-05.png",
+        "TE3.6.302-1.md",
+        "TE3.6.302-1.png",
+        "TE3.6.302-2.md",
+        "TE3.6.302-2.png",
+        "TE3.6.302-3.md",
+        "TE3.6.302-3.png",
+        "TE3.6.302-4.md",
+        "TE3.6.302-4.png",
+        "TE3.6.302-5.md",
+        "TE3.6.302-5.png",
+        "Thu-15-September-22_10-15-13.md",
+        "vie.-09-diciembre-22_5-51-56.md"
+      ]
+    },
+    "Semestres/SEM_03x/ETN302/3.302/E3.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/T3.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/TT3.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/4.302/4.302.add": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "Semestres/SEM_03x/ETN302/5.302/5.302.add": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "Semestres/SEM_03x/ETN302/4.302/T4.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/6.302/6.302.add": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "Semestres/SEM_03x/ETN302/5.302/T5.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/6.302/T6.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/7.302/7.302.add": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "Semestres/SEM_03x/ETN302/7.302/T7.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/8.302/8.302.add": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "Semestres/SEM_03x/ETN302/8.302/T8.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/9.302/9.302.add": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "Semestres/SEM_03x/ETN302/9.302/T9.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/1.302/1.302.add/E1.1.302-1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/1.302/1.302.add/E1.1.302-2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/1.302/1.302.add/E1.2.302-3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/1.302/1.302.add/E1.31.302-4.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/1.302/1.302.add/E1.32.302-5.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/1.302/1.302.add/E1.33.302-6.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/1.302/1.302.add/E1.34.302-7.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/1.302/1.302.add/T1.2.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/A2.1.302-1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/A2.1.302-2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/A2.1.302-3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/A2.2.302-1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/A2.2.302-2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/A2.2.302-3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/A2.2.302-4.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/AA2.11.302-1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/AA2.11.302-4.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/AA2.11.302-5.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/AA2.11.302-2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/AA2.11.302-6.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/AA2.2.302-1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/AA2.11.302-3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/AA2.12.302-1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/AA2.12.302-0.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/T2.21.302-1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/AAD2.1.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/T2.21.302-2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/AD2.1.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/T2.21.302-3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/T2.22.302-2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/T2.22.302-1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/T2.23.302-1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/T2.31.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/T2.23.302-2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/T2.32.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/T2.41.302-1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/T2.41.302-2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/T2.41.302-4.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/T2.42.302-1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/T2.41.302-3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/T2.42.302-2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/TD2.22.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/TD2.1.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/TD2.23.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/W2.302-1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/W2.302-3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/WD2.1.302-1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/LAB603-1-IMG.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/W2.302-2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/TD2.31.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/2.302/2.302.add/TD2.21.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/LAB603-1-IMG.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/Mon-28-November-22_5-15-2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/Sun-23-October-22_5-3-27.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/Sun-27-November-22_8-25-46.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/Sun-27-November-22_8-25-46.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/T3.2.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/T3.3.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/T3.31.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/T3.4.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/T3.511.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/T3.512.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/T3.513.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/T3.521.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/T3.522.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/T3.523.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/T3.6.302-1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/T3.6.302-3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/T3.6.302-2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/T3.6.302-4.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/T3.6.302-5.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TD3.2.302.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.2.302-1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.2.302-1.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.3.302-1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.3.302-1.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.4.302-1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.3.302-2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.3.302-2.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.4.302-1.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.511.302-1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.511.302-1.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.512.302-1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.512.302-1.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.521.302-1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.513.302-1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.513.302-1.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.521.302-1.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.523.302-1.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.522.302-1.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.522.302-1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.523.302-1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.6.302-01.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.6.302-03.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.6.302-05.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.6.302-1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.6.302-1.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.6.302-2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.6.302-2.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.6.302-3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.6.302-3.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.6.302-4.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.6.302-4.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.6.302-5.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/TE3.6.302-5.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/Thu-15-September-22_10-15-13.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semestres/SEM_03x/ETN302/3.302/3.302.add/vie.-09-diciembre-22_5-51-56.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_08/ETN1015/Avance": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "1015_sistema variante en el tiempo.md",
+        "1015_procesamiento de señales.md",
+        "1015_señal de potencia.md"
+      ]
+    },
+    "Semesters/Sem_08/ETN1015/Avance/1015_sistema variante en el tiempo.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_08/ETN1015/Avance/1015_procesamiento de señales.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_08/ETN1015/Avance/1015_señal de potencia.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "REC92"
+      ]
+    },
+    "Semesters/Sem_09/REC92": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "tsk_update_REC92.md",
+        "tsk_geo-bo.md",
+        "geo-bo",
+        "tsk_geo-bo.md",
+        "tsk_update_REC92.md"
+      ]
+    },
+    "Semesters/Sem_09/REC92/geo-bo": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_ctx",
+        "_prompts",
+        "_section"
+      ]
+    },
+    "Semesters/Sem_09/REC92/tsk_update_REC92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/REC92/geo-bo/_ctx": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "contexto.md",
+        "flujo.md",
+        "informe_apa.md",
+        "contexto.md",
+        "flujo.md",
+        "informe_apa.md"
+      ]
+    },
+    "Semesters/Sem_09/REC92/geo-bo/_prompts": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "plex_informe.md",
+        "plex_datos.md",
+        "plex_bk.md",
+        "otras_ia.md",
+        "otras_ia.md",
+        "plex_bk.md",
+        "plex_datos.md",
+        "plex_informe.md"
+      ]
+    },
+    "Semesters/Sem_09/REC92/geo-bo/_section": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "s1_intro.md",
+        "s1_intro.md"
+      ]
+    },
+    "Semesters/Sem_09/REC92/geo-bo/_ctx/contexto.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/REC92/geo-bo/_ctx/flujo.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/REC92/geo-bo/_ctx/informe_apa.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/REC92/geo-bo/_prompts/plex_informe.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/REC92/geo-bo/_prompts/plex_datos.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/REC92/geo-bo/_prompts/plex_bk.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/REC92/geo-bo/_prompts/otras_ia.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/REC92/tsk_geo-bo.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/REC92/geo-bo/_section/s1_intro.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/tsk_ini_ETN607 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/ETN-607": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Alonso & Finn-Mecánica_Vol 1-1970-.pdf",
+        "Alonso & Finn-OCR-opt.pdf",
+        "Alonso & Finn-OCR.pdf",
+        "Dare A. Wells-SCHAUM'S Lagrangian Dynamics-McGraw-Hill.pdf",
+        "Goldstein & Poole & Safko-Classical Mechanics-3th ed-Pearson.pdf",
+        "H. Goldstein-Mecánica clásica-1994-ED REVERTE.pdf",
+        "John R. Taylor-Classical mechanics-eng.pdf",
+        "John R. Taylor-Instructor's Manual to accompany Classical Mechanics-2005.pdf",
+        "John R. Taylor-Mecánica clásica-2005-ED REVERTÉ-esp.pdf",
+        "LimYung-kuo-Problems and Solutions on Mechanics-1994.pdf",
+        "Nelson & Best & McLean-schaums Statics and dynamics.pdf",
+        "Alonso & Finn-OCR-opt2.pdf",
+        "LimYung-kuo-Problems and Solutions on Mechanics-1994.pdf",
+        "John R. Taylor-Mecánica clásica-2005-ED REVERTÉ-esp.pdf",
+        "Nelson & Best & McLean-schaums Statics and dynamics.pdf"
+      ]
+    },
+    "_hangar/pdfpp_embed_nblm": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "pdfpp_embed_nblm.md",
+        "chronicle.md",
+        "logbook.md",
+        "ocrmypdf-install.md",
+        "prompts.md"
+      ]
+    },
+    "_hangar/pdfpp_embed_nblm/pdfpp_embed_nblm.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/pdfpp_embed_nblm/chronicle.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/pdfpp_embed_nblm/logbook.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/pdfpp_embed_nblm/ocrmypdf-install.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/pdfpp_embed_nblm/prompts.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/ETN-607/Alonso & Finn-Mecánica_Vol 1-1970-.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/ETN-607/Alonso & Finn-OCR-opt.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/ETN-607/Alonso & Finn-OCR.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/ETN-607/Dare A. Wells-SCHAUM'S Lagrangian Dynamics-McGraw-Hill.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/ETN-607/Goldstein & Poole & Safko-Classical Mechanics-3th ed-Pearson.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/ETN-607/H. Goldstein-Mecánica clásica-1994-ED REVERTE.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/ETN-607/John R. Taylor-Classical mechanics-eng.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/ETN-607/John R. Taylor-Instructor's Manual to accompany Classical Mechanics-2005.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/ETN-607/John R. Taylor-Mecánica clásica-2005-ED REVERTÉ-esp.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/ETN-607/LimYung-kuo-Problems and Solutions on Mechanics-1994.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/ETN-607/Nelson & Best & McLean-schaums Statics and dynamics.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/ETN-607/Alonso & Finn-OCR-opt2.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN607/ETN607-transcription-v4.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN607/ETN607-transcription_Av4.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN607/ETN607-transcription_BCv3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN607/ETN607-transcription_BCv4.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/shellcommands/shellcmd_pdf_figure_search.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "shared": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "_app/notebooklm/guides/ETN1015/ETN1015_latex.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/_legacy/tks_ETN1015-notebooklm-latex.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/PDF-1015/S. Palani, D. Kalaiyarasi-Principles of Digital Signal Processing - 2nd Ed.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Transformada Discreta de Fourier $DFT$.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Par de Transformadas Discretas de Fourier $DFT$.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Factores de Giro (Twiddle Factors) para N=4, 6 y 8.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Zero Padding.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Relación de la DFT con otras transformadas.md": {
+      "isPinned": false,
+      "isHidden": false
+    }
+  },
+  "pinnedFiles": [
+    "_hangar/template/tpl_ship.md",
+    "_app/_config/_galaxy-system.md"
+  ],
+  "showHidden": false,
+  "newItemPlacement": "bottom",
+  "persistOrderOnCreateDelete": false,
+  "debugMode": false
+}
