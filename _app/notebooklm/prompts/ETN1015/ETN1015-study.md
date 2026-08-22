@@ -200,15 +200,8 @@ Proakis & Manolakis Solutions:
 Proakis & Manolakis — Digital Signal Processing Solutions Manual — 4th ed.pdf
 
 Schilling & Harris (MATLAB, dividido):
-cap. 1 → Schilling & Harris — Fundamentals of DSP Using MATLAB — 1st ed-1.pdf
-cap. 2 → Schilling & Harris — Fundamentals of DSP Using MATLAB — 1st ed-2.pdf
-cap. 3 → Schilling & Harris — Fundamentals of DSP Using MATLAB — 1st ed-3.pdf
-cap. 4 → Schilling & Harris — Fundamentals of DSP Using MATLAB — 1st ed-4.pdf
-cap. 5 → Schilling & Harris — Fundamentals of DSP Using MATLAB — 1st ed-5.pdf
-caps. 6–7 → Schilling & Harris — Fundamentals of DSP Using MATLAB — 1st ed-6to7.pdf
-cap. 8 → Schilling & Harris — Fundamentals of DSP Using MATLAB — 1st ed-8.pdf
-cap. 9 → Schilling & Harris — Fundamentals of DSP Using MATLAB — 1st ed-9.pdf
-apénd. A → Schilling & Harris — Fundamentals of DSP Using MATLAB — 1st ed-A.pdf
+Schilling & Harris — Fundamentals of DSP Using MATLAB — 1st ed-[N].pdf
+[N] = número de capítulo (ej: -1, -2 … -9, -A); si son dos caps juntos: -6to7 (caps. 6 y 7).
 
 Schilling & Harris Solutions:
 Schilling & Harris — Fundamentals of DSP Using MATLAB Instructor Solutions Manual — 2nd ed.pdf

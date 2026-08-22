@@ -152,3 +152,70 @@ Resolución analítica: S. Palani, D. Kalaiyarasi-Principles of Digital Signal P
 Código: Ingle & Proakis — Digital Signal Processing Using MATLAB — 3rd ed.pdf Cap. 5.
 Verificación: SCHAUM-MONSON H. HAYES-DIGITAL SIGNAL PROCESSING-1999.pdf Cap. 5–6 — Proakis & Manolakis — Digital Signal Processing Solutions Manual — 4th ed.pdf.
 ```
+
+---
+
+## Mensajes NotebookLM — Resolución analítica
+
+## Ejercicio 1 — Analítico
+
+```
+Resolvé rápido / sin ejercicio adicional: Determinar analíticamente si las siguientes señales de tiempo continuo son periódicas. Para cada señal periódica, calcular el período fundamental T0.
+
+Señal 1: x(t) = 5·cos[2π(15)t + 0.25π]
+Señal 2: x(t) = 5·cos[2π(15)t + 0.25π] + 5·cos[2π(10)t + 0.3π]
+
+Para la señal 2: aplicar el criterio de periodicidad de suma de sinusoides — verificar si el cociente de frecuencias es racional y calcular el período de la suma como mínimo común múltiplo de los períodos individuales. Mostrar cada paso.
+Referencia: Palani Cap. 1 — Rao Cap. 1 — Oppenheim EN (1to5) Cap. 1.
+```
+
+## Ejercicio 2 — Analítico
+
+```
+Resolvé rápido / sin ejercicio adicional: Calcular analíticamente la convolución lineal y(n) = x(n) * h(n) de las siguientes secuencias mediante la suma de convolución.
+
+x(n) = [1  1  1  1]   (n = 0, 1, 2, 3)
+h(n) = [1  2  3]       (n = 0, 1, 2)
+
+Desarrollar la suma de convolución y(n) = Σ x(k)·h(n-k) término a término para cada n. Indicar el soporte de y(n) (longitud = 6, índices n = 0…5). Mostrar la tabla de productos desplazados si es necesario.
+Referencia: Palani Cap. 1 — Oppenheim EN (6to11) Cap. 6 — Hsu Schaum Cap. 3–4.
+```
+
+## Ejercicio 3 — Analítico
+
+```
+Resolvé rápido / sin ejercicio adicional: Resolver analíticamente el sistema recursivo de tiempo discreto muestra a muestra para n = 0, 1, 2, 3, 4, 5.
+
+Ecuación en diferencias: y(n) = 2·y(n-1) + x(n)
+Entrada: x(n) = δ(n)
+Condición inicial: y(-1) = 0
+
+Sustituir directamente en la ecuación para cada n y obtener y(0), y(1), …, y(5). Luego analizar la estabilidad identificando el polo del sistema (denominador de H(z)) y verificar si cae dentro o fuera del círculo unitario.
+Referencia: Palani Cap. 1 — Oppenheim EN (6to11) Cap. 6 — Hsu Schaum Cap. 4.
+```
+
+## Ejercicio 4 — Analítico
+
+```
+Resolvé rápido / sin ejercicio adicional: Obtener la expresión analítica de la DTFT X(e^jω) para las siguientes secuencias y simplificar hasta forma cerrada.
+
+Señal a: x(n) = Σ_{k=0}^{4} δ(n-k)   (suma de 5 impulsos desplazados)
+Señal b: x(n) = (0.5)^|n|             (secuencia bilateral)
+
+Señal a: aplicar linealidad y la propiedad de desplazamiento de la DTFT — X(e^jω) = Σ e^{-jωk} para k = 0…4 — simplificar usando suma de progresión geométrica.
+Señal b: separar en parte causal y anticausal, aplicar la fórmula de serie geométrica a cada parte y sumar — obtener forma cerrada en función de cos(ω).
+Indicar magnitud |X(e^jω)| y fase ∠X(e^jω) resultantes.
+Referencia: Palani Cap. 2 — Oppenheim EN (6to11) Cap. 7 — Hayes Schaum DSP Cap. 3 — Proakis & Manolakis (1to5) Cap. 3.
+```
+
+## Ejercicio 5 — Analítico
+
+```
+Resolvé rápido / sin ejercicio adicional: Calcular analíticamente la DFT de N puntos de las siguientes secuencias para N = 5, N = 10 y N = 50.
+
+Señal a: x(n) = [1 1 1 1 1]  (n = 0…4)
+Señal b: x(n) = [(0.5)^|n|]  evaluada en n = 0…4 → [1, 0.5, 0.25, 0.125, 0.0625]
+
+Para cada caso aplicar la definición X[k] = Σ_{n=0}^{N-1} x(n)·e^{-j2πkn/N}. Para N > 5 el zero-padding extiende la secuencia — aclarar qué muestras se agregan. Señal a con N = 5: simplificar usando suma geométrica en función de k. Indicar los N valores de X[k] para k = 0…N-1 en cada caso y explicar cómo el zero-padding aumenta la resolución de la DTFT muestreada.
+Referencia: Palani Cap. 2 — Oppenheim EN (6to11) Cap. 8 — Hayes Schaum DSP Cap. 5–6.
+```
