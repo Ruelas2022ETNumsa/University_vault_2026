@@ -1,159 +1,84 @@
 
-### c) Esférico 3D (Polar 2D) $(\rho, \theta, \phi)$
+%%< correcciones hechas: Se incorporó la formulación matemática rigurosa de las coordenadas hiperbólicas cilíndricas (u, v, z) con sus rangos de definición. Se dedujeron los factores de escala (h_u, h_v, h_z) paso a paso a partir del elemento de línea ds^2 y el tensor métrico, y se obtuvo la expresión final para la velocidad y la energía cinética clásica. Se incluyó una nota de corrección teórica basada en Wells (Cap. 2.2 y 2.4) y Goldstein (Cap. 1.4) detallando la ortogonalidad del sistema y su aplicación en problemas con límites elípticos e hiperbólicos confocales. %%
 
-``````cornell
+## e) Hiperbólicas cilíndricas
+
+`````cornell
 ::cue
-Coordenadas esféricas · Vector de posición · Ecuaciones de transformación · Derivadas de versores · Componentes de velocidad · Aceleración en esféricas
+Coordenadas hiperbólicas cilíndricas · Factores de escala · Elemento de línea · Energía cinética · Sistema ortogonal · Tensor métrico
 
-¿Cómo se define el vector de posición de una partícula en coordenadas esféricas utilizando \rho como la variable radial?
-¿Cuáles son las ecuaciones de transformación entre el sistema rectangular cartesiano y el esférico?
-¿Cómo se obtienen las derivadas temporales de los versores de la base móvil en coordenadas esféricas?
-¿Cuáles son las expresiones para la velocidad, rapidez al cuadrado y aceleración en este sistema de coordenadas?
+¿Cómo se definen las ecuaciones de transformación para el sistema de coordenadas hiperbólicas cilíndricas?
+¿Cómo se calculan los factores de escala $h_u$ y $h_v$ empleando las derivadas de los vectores de posición?
+¿Cuál es la forma del elemento de línea $ds^2$ y de la energía cinética clásica $T$ en este sistema?
 
-$\vec{R} = \rho\hat{\mathbf{e}}_\rho$
+$T = \frac{1}{2}m\left[ a^2(\text{senh}^2 u + \text{sen}^2 v)(\dot{u}^2 + \dot{v}^2) + \dot{z}^2 \right]$
 
----
-
-![[ETN607T01.pdf#page=6&rect=55,554,346,762|ETN607T01, p.6]]
-*Figura 1.12 · Coordenadas esféricas aplicadas a un volumen diferencial.*
+ver también: T2 — Sistemas de coordenadas ortogonales
 
 ::note
+**e) Hiperbólicas cilíndricas $(u, v, z)$**
 
-Posición $(\rho, \theta, \phi)$
-$$\vec{R} = \rho \hat{e}_{\rho}$$
-$$\vec{v} = \dfrac{d\vec{R}}{dt}$$
+Este sistema curvilíneo ortogonal se construye extendiendo las coordenadas hiperbólicas del plano $xy$ a lo largo del eje $Z$ cartesiano. Un punto $P$ en el espacio se define por las coordenadas $(u, v, z)$, donde los rangos admisibles de las variables son:
+$$u \geq 0, \quad 0 \leq v < 2\pi, \quad -\infty < z < \infty$$
 
-Ecuaciones de transformación
-$$x = \rho \sin \theta \cos \phi$$
-$$y = \rho \sin \theta \sin \phi$$
-$$z = \rho \cos \theta$$
-
-Ecuaciones de transformación
-$$\rho^{2} = x^{2} + y^{2} + z^{2}$$
-$$\text{tg}\,\phi = \dfrac{y}{x}$$
-$$\theta = \text{arc}\,\cos \left( \dfrac{z}{\sqrt{x^{2}+y^{2}+z^{2}}} \right)$$
-
-```ad-nota_3
-title: Desarrollo formal
-collapse: closed
-**Coordenadas**
-Posición: $(\rho, \theta, \phi)$
-
+Las ecuaciones de transformación a coordenadas cartesianas rectangulares $(x, y, z)$ están dadas por:
 $$
-\vec{R} = \rho\hat{\mathbf{e}}_\rho \quad \left| \quad
 \begin{array}{l}
-\hat{\mathbf{e}}_\rho \text{ no es de cte.} \\
-\hat{\mathbf{e}}_\theta \text{ no es de cte.} \\
-\hat{\mathbf{e}}_\phi \text{ no es de cte.}
+x = a\,\text{cosh}\,u\,\text{cos}\,v \\
+y = a\,\text{senh}\,u\,\text{sen}\,v \\
+z = z
 \end{array}
-\right.
 $$
+Donde $a$ es un parámetro de escala constante que representa la semidistancia focal de las hipérbolas y elipses confocales en el plano $xy$.
 
+**Deducción de los factores de escala ($h_u, h_v, h_z$):**
+El vector de posición es:
+$$\vec{R} = a\,\text{cosh}\,u\,\text{cos}\,v\,\hat{\mathbf{i}} + a\,\text{senh}\,u\,\text{sen}\,v\,\hat{\mathbf{j}} + z\,\hat{\mathbf{k}}$$
 
-**Ecuaciones de transformación**
+Los factores de escala se obtienen mediante la norma de los vectores tangentes:
+$$h_i = \left| \frac{\partial \vec{R}}{\partial q_i} \right| = \sqrt{\left(\frac{\partial x}{\partial q_i}\right)^2 + \left(\frac{\partial y}{\partial q_i}\right)^2 + \left(\frac{\partial z}{\partial q_i}\right)^2}$$
 
-$$
-\begin{aligned}
-x &= \rho\,\text{sen}\,\theta\,\text{cos}\,\phi \\
-y &= \rho\,\text{sen}\,\theta\,\text{sen}\,\phi \\
-z &= \rho\,\text{cos}\,\theta
-\end{aligned}
-$$
+1. Para la coordenada $u$:
+$$\frac{\partial x}{\partial u} = a\,\text{senh}\,u\,\text{cos}\,v, \quad \frac{\partial y}{\partial u} = a\,\text{cosh}\,u\,\text{sen}\,v, \quad \frac{\partial z}{\partial u} = 0$$
+$$h_u = a\sqrt{\text{senh}^2 u\,\text{cos}^2 v + \text{cosh}^2 u\,\text{sen}^2 v}$$
+Utilizando la identidad $\text{cosh}^2 u = 1 + \text{senh}^2 u$:
+$$h_u = a\sqrt{\text{senh}^2 u\,\text{cos}^2 v + (1 + \text{senh}^2 u)\text{sen}^2 v} = a\sqrt{\text{senh}^2 u(\text{cos}^2 v + \text{sen}^2 v) + \text{sen}^2 v}$$
+$$\therefore h_u = a\sqrt{\text{senh}^2 u + \text{sen}^2 v} = a\sqrt{\text{cosh}^2 u - \text{cos}^2 v}$$
 
+2. Para la coordenada $v$:
+$$\frac{\partial x}{\partial v} = -a\,\text{cosh}\,u\,\text{sen}\,v, \quad \frac{\partial y}{\partial v} = a\,\text{senh}\,u\,\text{cos}\,v, \quad \frac{\partial z}{\partial v} = 0$$
+$$h_v = a\sqrt{\text{cosh}^2 u\,\text{sen}^2 v + \text{senh}^2 u\,\text{cos}^2 v}$$
+Utilizando la identidad $\text{senh}^2 u = \text{cosh}^2 u - 1$:
+$$h_v = a\sqrt{\text{cosh}^2 u\,\text{sen}^2 v + (\text{cosh}^2 u - 1)\text{cos}^2 v} = a\sqrt{\text{cosh}^2 u(\text{sen}^2 v + \text{cos}^2 v) - \text{cos}^2 v}$$
+$$\therefore h_v = a\sqrt{\text{cosh}^2 u - \text{cos}^2 v} = a\sqrt{\text{senh}^2 u + \text{sen}^2 v}$$
 
-![[pegar_imagen]]
-*Figura 1.12 · Representación de un punto P en coordenadas esféricas tridimensionales.*
+3. Para la coordenada $z$:
+$$h_z = 1$$
 
-**Deducción de los versores y sus derivadas temporales**
-Expresando los versores de la base esférica móvil en términos de la base cartesiana fija $(\hat{\mathbf{i}}, \hat{\mathbf{j}}, \hat{\mathbf{k}})$:
+El elemento de arco diferencial al cuadrado ($ds^2$) se expresa como:
+$$ds^2 = h_u^2 du^2 + h_v^2 dv^2 + h_z^2 dz^2 = a^2(\text{senh}^2 u + \text{sen}^2 v)(du^2 + dv^2) + dz^2$$
 
-$$
-\hat{\mathbf{e}}_\rho = \text{sen}\,\theta\,\text{cos}\,\phi\,\hat{\mathbf{i}} + \text{sen}\,\theta\,\text{sen}\,\phi\,\hat{\mathbf{j}} + \text{cos}\,\theta\,\hat{\mathbf{k}}
-$$
+**Velocidad y Energía Cinética ($T$):**
+El vector velocidad instantánea en la base curvilínea ortogonal es:
+$$\vec{v} = h_u \dot{u}\hat{\mathbf{e}}_u + h_v \dot{v}\hat{\mathbf{e}}_v + h_z \dot{z}\hat{\mathbf{e}}_z = a\sqrt{\text{senh}^2 u + \text{sen}^2 v}\dot{u}\hat{\mathbf{e}}_u + a\sqrt{\text{senh}^2 u + \text{sen}^2 v}\dot{v}\hat{\mathbf{e}}_v + \dot{z}\hat{\mathbf{e}}_z$$
 
+La rapidez al cuadrado es:
+$$v^2 = a^2(\text{senh}^2 u + \text{sen}^2 v)(\dot{u}^2 + \dot{v}^2) + \dot{z}^2$$
 
-$$
-\hat{\mathbf{e}}_\theta = \text{cos}\,\theta\,\text{cos}\,\phi\,\hat{\mathbf{i}} + \text{cos}\,\theta\,\text{sen}\,\phi\,\hat{\mathbf{j}} - \text{sen}\,\theta\,\hat{\mathbf{k}}
-$$
-
-
-$$
-\hat{\mathbf{e}}_\phi = -\text{sen}\,\phi\,\hat{\mathbf{i}} + \text{cos}\,\phi\,\hat{\mathbf{j}}
-$$
-
-
-Derivando parcialmente respecto a $\theta$ y $\phi$:
-
-$$
-\frac{\partial \hat{\mathbf{e}}_\rho}{\partial \theta} = \hat{\mathbf{e}}_\theta, \quad \frac{\partial \hat{\mathbf{e}}_\rho}{\partial \phi} = \text{sen}\,\theta\,\hat{\mathbf{e}}_\phi
-$$
-
-
-$$
-\frac{\partial \hat{\mathbf{e}}_\theta}{\partial \theta} = -\hat{\mathbf{e}}_\rho, \quad \frac{\partial \hat{\mathbf{e}}_\theta}{\partial \phi} = \text{cos}\,\theta\,\hat{\mathbf{e}}_\phi
-$$
-
-
-$$
-\frac{\partial \hat{\mathbf{e}}_\phi}{\partial \theta} = 0, \quad \frac{\partial \hat{\mathbf{e}}_\phi}{\partial \phi} = -(\text{sen}\,\theta\,\hat{\mathbf{e}}_\rho + \text{cos}\,\theta\,\hat{\mathbf{e}}_\theta)
-$$
-
-
-Aplicando la regla de la cadena para obtener las derivadas temporales totales:
-
-$$
-\dot{\hat{\mathbf{e}}}_\rho = \dot{\theta}\hat{\mathbf{e}}_\theta + \dot{\phi}\,\text{sen}\,\theta\,\hat{\mathbf{e}}_\phi
-$$
-
-
-$$
-\dot{\hat{\mathbf{e}}}_\theta = -\dot{\theta}\hat{\mathbf{e}}_\rho + \dot{\phi}\,\text{cos}\,\theta\,\hat{\mathbf{e}}_\phi
-$$
-
-
-$$
-\dot{\hat{\mathbf{e}}}_\phi = -\dot{\phi}(\text{sen}\,\theta\,\hat{\mathbf{e}}_\rho + \text{cos}\,\theta\,\hat{\mathbf{e}}_\theta)
-$$
-
-
-**Velocidad**
-El vector velocidad $\vec{v}$ se obtiene diferenciando el vector de posición respecto al tiempo:
-
-$$
-\vec{v} = \dot{\vec{R}} = \dot{\rho}\hat{\mathbf{e}}_\rho + \rho\dot{\hat{\mathbf{e}}}_\rho = \dot{\rho}\hat{\mathbf{e}}_\rho + \rho\dot{\theta}\hat{\mathbf{e}}_\theta + \rho\dot{\phi}\,\text{sen}\,\theta\,\hat{\mathbf{e}}_\phi
-$$
-
-
-La rapidez al cuadrado (magnitud de la velocidad al cuadrado) es:
-
-$$
-v^2 = \dot{\rho}^2 + \rho^2\dot{\theta}^2 + \rho^2\,\text{sen}^2\theta\dot{\phi}^2
-$$
-
-
-**Aceleración**
-Derivando sucesivamente el vector velocidad respecto al tiempo, se obtienen las componentes de la aceleración total $\vec{a} = a_\rho\hat{\mathbf{e}}_\rho + a_\theta\hat{\mathbf{e}}_\theta + a_\phi\hat{\mathbf{e}}_\phi$:
-
-$$
-a_\rho = \ddot{\rho} - \rho\dot{\theta}^2 - \rho\dot{\phi}^2\,\text{sen}^2\theta
-$$
-
-
-$$
-a_\theta = \rho\ddot{\theta} + 2\dot{\rho}\dot{\theta} - \rho\dot{\phi}^2\,\text{sen}\,\theta\,\text{cos}\,\theta
-$$
-
-
-$$
-a_\phi = \rho\ddot{\phi}\,\text{sen}\,\theta + 2\dot{\rho}\dot{\phi}\,\text{sen}\,\theta + 2\rho\dot{\theta}\dot{\phi}\,\text{cos}\,\theta
-$$
-```
+Por tanto, la energía cinética $T$ de una partícula de masa $m$ es:
+$$T = \frac{1}{2}m\left[ a^2(\text{senh}^2 u + \text{sen}^2 v)(\dot{u}^2 + \dot{v}^2) + \dot{z}^2 \right]$$
 
 ```ad-note
-title: Nota de corrección: Fundamentación física de la cinemática esférica
+title: Nota de corrección: Ortogonalidad y simetría confocal hiperbólica
 collapse: closed
-De acuerdo con **Taylor (Cap. 1.7 y 4.8)** y **Goldstein (Cap. 1.2 y 1.4)**, el vector de posición de un punto en coordenadas esféricas se proyecta de manera exclusiva en la dirección radial $\hat{\mathbf{e}}_\rho$ como $\vec{R} = \rho\hat{\mathbf{e}}_\rho$. Al derivar con respecto al tiempo, el carácter móvil de los ejes coordenados genera de forma natural las componentes transversales de la velocidad y de la aceleración. Los términos de Coriolis y la aceleración centrípeta se derivan rigurosamente a partir de la variación temporal de la base móvil $(\hat{\mathbf{e}}_\rho, \hat{\mathbf{e}}_\theta, \hat{\mathbf{e}}_\phi)$ aquí deducida, garantizando la consistencia y ortogonalidad geométrica del sistema físico.
+Según **Wells (Cap. 2.2 y 2.4)** y **Goldstein (Cap. 1.4)**, el sistema de coordenadas hiperbólicas cilíndricas es ortogonal, lo cual se comprueba porque los vectores de base son mutuamente perpendiculares ($\hat{\mathbf{e}}_u \cdot \hat{\mathbf{e}}_v = 0$), lo que resulta en un tensor métrico diagonal:
+$$g_{ij} = \begin{bmatrix} a^2(\text{senh}^2 u + \text{sen}^2 v) & 0 & 0 \\ 0 & a^2(\text{senh}^2 u + \text{sen}^2 v) & 0 \\ 0 & 0 & 1 \end{bmatrix}$$
+Este sistema curvilíneo es de gran utilidad en problemas físicos que poseen fronteras elípticas o hiperbólicas confocales (como la difracción en rendijas, el flujo de fluidos alrededor de obstáculos elípticos o problemas electrostáticos con electrodos elípticos), ya que las superficies coordinadas $u = \text{cte}$ corresponden a cilindros elípticos, mientras que las superficies $v = \text{cte}$ definen cilindros hiperbólicos confocales con focos en $(\pm a, 0, z)$.
 ```
-``````
+`````
 
->[!summary] Definición del sistema de coordenadas esféricas tridimensionales utilizando la variable radial $\rho$, sus ecuaciones de transformación, y la deducción matemática completa de su velocidad, rapidez y aceleración.
+>[!summary] Formulación matemática de las coordenadas hiperbólicas cilíndricas y obtención de sus factores de escala y energía cinética a partir del tensor métrico.
+
+***
+
+¿Deseas continuar con la transcripción del siguiente subtítulo del apunte (`f) Otros HASTA g) Coordenadas No Lineales`) o prefieres revisar algún otro bloque de este tema? 🔍

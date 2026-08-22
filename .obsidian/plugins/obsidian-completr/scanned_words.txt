@@ -8969,6 +8969,8 @@ tula
 tdsskiller
 transcripto
 transcriptos
+tridimensionales
+tensor
 ToDo
 Templater
 Text
@@ -46095,6 +46097,9 @@ desventaja
 derivables
 destacando
 desv
+dimensi
+diferenciando
+derivar
 Vault
 Verificar
 Variables
@@ -72275,6 +72280,7 @@ bend
 bisagra
 bilineal
 bleepingcomputer
+bidimensional
 scope
 status
 selector
@@ -82027,6 +82033,7 @@ simplificando
 simulaci
 subat
 sensibilidad
+sentando
 vault
 vil
 ver
@@ -129468,6 +129475,9 @@ cosmol
 clarificaron
 corrigi
 colatitud
+coordinadas
+cilindros
+confocales
 updated
 un
 universo
@@ -176328,6 +176338,7 @@ Fundamentals
 FreeOffice
 Formales
 Fronteras
+Fundamentaci
 Estado
 Excalidraw
 EPUBs
@@ -213155,6 +213166,7 @@ precesi
 perihelio
 predictibilidad
 parametrizar
+proyecta
 min
 mica
 movimiento
@@ -278229,6 +278241,7 @@ lagrangiano
 lisas
 linealidades
 lapsos
+licos
 incluyendo
 im
 instalar
@@ -372256,6 +372269,8 @@ octave
 omisiones
 ordinario
 obligando
+originada
+ortogonal
 junto
 json
 jer
