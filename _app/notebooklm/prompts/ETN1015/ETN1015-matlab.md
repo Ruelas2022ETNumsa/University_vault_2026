@@ -1,6 +1,6 @@
 %%
-prompt ETN1015-matlab — V2 basado en ETN1015-study
-MATLAB como herramienta de resolución — ETN1015 — 2026-08-20
+prompt ETN1015-matlab — V3 basado en ETN1015-study
+MATLAB como herramienta de resolución — ETN1015 — 2026-08-22
 %%
 
 TAREA:
@@ -155,7 +155,6 @@ Para la salida del código, las gráficas son siempre en MATLAB (`stem`, `plot`,
 FUENTES GUÍA (prioridad sobre conocimiento general):
 
 * ETN1015_matlab.md  → convenciones de código: estructura, funciones por capítulo, visualización
-* ETN1015_octave.md  → adaptación a Octave: pkg load signal, freqz sin salida, compatibilidad por capítulo
 * ETN1015_latex.md   → notación KaTeX completa: delimitadores, transformadas, señales, H(z), DFT, colores y cajas
 * obsidian_notation.md → sintaxis Obsidian, callouts, bloques
 
@@ -166,7 +165,7 @@ Si hay conflicto entre estas fuentes y conocimiento general → prevalece el doc
 LIBROS DISPONIBLES (nombres exactos de PDF en el notebook):
 
 Palani (libro base):
-  S. Palani, D. Kalaiyarasi-Principles of Digital Signal Processing - 2nd Ed.pdf
+  Palani & Kalaiyarasi — Principles of Digital Signal Processing — 2nd ed — Springer 2022.pdf
 
 Ingle & Proakis (MATLAB principal):
   Ingle & Proakis — Digital Signal Processing Using MATLAB — 3rd ed.pdf
@@ -180,15 +179,15 @@ Proakis & Manolakis Solutions:
   Proakis & Manolakis — Digital Signal Processing Solutions Manual — 4th ed.pdf
 
 Schilling & Harris (MATLAB secundario, dividido):
-  cap. 1  → Schilling & Harris — Fundamentals of DSP Using MATLAB — 1st ed-1.pdf
-  cap. 2  → Schilling & Harris — Fundamentals of DSP Using MATLAB — 1st ed-2.pdf
-  cap. 3  → Schilling & Harris — Fundamentals of DSP Using MATLAB — 1st ed-3.pdf
-  cap. 4  → Schilling & Harris — Fundamentals of DSP Using MATLAB — 1st ed-4.pdf
-  cap. 5  → Schilling & Harris — Fundamentals of DSP Using MATLAB — 1st ed-5.pdf
+  cap. 1    → Schilling & Harris — Fundamentals of DSP Using MATLAB — 1st ed-1.pdf
+  cap. 2    → Schilling & Harris — Fundamentals of DSP Using MATLAB — 1st ed-2.pdf
+  cap. 3    → Schilling & Harris — Fundamentals of DSP Using MATLAB — 1st ed-3.pdf
+  cap. 4    → Schilling & Harris — Fundamentals of DSP Using MATLAB — 1st ed-4.pdf
+  cap. 5    → Schilling & Harris — Fundamentals of DSP Using MATLAB — 1st ed-5.pdf
   caps. 6–7 → Schilling & Harris — Fundamentals of DSP Using MATLAB — 1st ed-6to7.pdf
-  cap. 8  → Schilling & Harris — Fundamentals of DSP Using MATLAB — 1st ed-8.pdf
-  cap. 9  → Schilling & Harris — Fundamentals of DSP Using MATLAB — 1st ed-9.pdf
-  apénd. A → Schilling & Harris — Fundamentals of DSP Using MATLAB — 1st ed-A.pdf
+  cap. 8    → Schilling & Harris — Fundamentals of DSP Using MATLAB — 1st ed-8.pdf
+  cap. 9    → Schilling & Harris — Fundamentals of DSP Using MATLAB — 1st ed-9.pdf
+  apénd. A  → Schilling & Harris — Fundamentals of DSP Using MATLAB — 1st ed-A.pdf
 
 Schilling & Harris Solutions:
   Schilling & Harris — Fundamentals of DSP Using MATLAB Instructor Solutions Manual — 2nd ed.pdf
