@@ -1,84 +1,185 @@
 
-%%< correcciones hechas: Se incorporó la formulación matemática rigurosa de las coordenadas hiperbólicas cilíndricas (u, v, z) con sus rangos de definición. Se dedujeron los factores de escala (h_u, h_v, h_z) paso a paso a partir del elemento de línea ds^2 y el tensor métrico, y se obtuvo la expresión final para la velocidad y la energía cinética clásica. Se incluyó una nota de corrección teórica basada en Wells (Cap. 2.2 y 2.4) y Goldstein (Cap. 1.4) detallando la ortogonalidad del sistema y su aplicación en problemas con límites elípticos e hiperbólicos confocales. %%
+### g) Coordenadas No Lineales (3D) $(A, \theta, Z)$
 
-## e) Hiperbólicas cilíndricas
+``````cornell
+::cue
+
+![[ETN607T01.pdf#page=6&rect=89,196,208,292|ETN607T01, p.6]]
+
+::note
+
+Posición $(A, \theta, Z)$
+
+$$\vec{R} \quad \text{ Newton}$$
+
+$$\vec{v} = \dfrac{d\vec{R}}{dt}$$
+
+E.T.
+$$A = \dfrac{xy}{2}$$
+$$\text{tg}\,\theta = \dfrac{y}{x}$$
+$$z = z$$
+
+Multiplico
+
+$$\text{tg}\,\theta \cdot A = \dfrac{y^{2}}{2} \Rightarrow y = \pm \sqrt{2 A \text{tg}\,\theta}$$
+
+$$\text{ Divido}$$
+
+$$\dfrac{A}{\text{tg}\,\theta} = \dfrac{x^{2}}{2} \Rightarrow x = \pm \sqrt{\dfrac{2 A}{\text{tg}\,\theta}}$$
+
+``````
+
+```ad-nota_2
+title: Comentario
+collapse: closed
+$$A \rightarrow \text{Distancia}^{2}$$
+$$\theta \rightarrow \text{Angulo}$$
+$$Z \rightarrow \text{Dist.}$$
+```
+
+
+Aquí tienes la transcripción en formato Markdown de la sección de **Coordenadas No Lineales** de la página 6 de los apuntes (ETN607T01), estructurada bajo el formato de bloque **Cornell** según las pautas de estilo. 
+
+El archivo ha sido publicado y está listo para tu Obsidian como `etn607-t01-p6.md` en el panel de Studio.
+
+## g) Coordenadas No Lineales (3D) $A, \theta, z$
 
 `````cornell
 ::cue
-Coordenadas hiperbólicas cilíndricas · Factores de escala · Elemento de línea · Energía cinética · Sistema ortogonal · Tensor métrico
-
-¿Cómo se definen las ecuaciones de transformación para el sistema de coordenadas hiperbólicas cilíndricas?
-¿Cómo se calculan los factores de escala $h_u$ y $h_v$ empleando las derivadas de los vectores de posición?
-¿Cuál es la forma del elemento de línea $ds^2$ y de la energía cinética clásica $T$ en este sistema?
-
-$T = \frac{1}{2}m\left[ a^2(\text{senh}^2 u + \text{sen}^2 v)(\dot{u}^2 + \dot{v}^2) + \dot{z}^2 \right]$
-
-ver también: T2 — Sistemas de coordenadas ortogonales
+coordenadas no lineales · ecuaciones de transformación · variables independientes
+¿Cómo se definen las coordenadas no lineales $A$ y $\theta$?
+¿Cuáles son las ecuaciones de transformación para este sistema?
+Fórmula clave: $A = \dfrac{xy}{2}$, $\operatorname{tg}\theta = \dfrac{y}{x}$
 
 ::note
-**e) Hiperbólicas cilíndricas $(u, v, z)$**
+**Posición $(A, \theta, z)$**
 
-Este sistema curvilíneo ortogonal se construye extendiendo las coordenadas hiperbólicas del plano $xy$ a lo largo del eje $Z$ cartesiano. Un punto $P$ en el espacio se define por las coordenadas $(u, v, z)$, donde los rangos admisibles de las variables son:
-$$u \geq 0, \quad 0 \leq v < 2\pi, \quad -\infty < z < \infty$$
+$\vec{R} \rightarrow \text{Newton}$
+$\vec{v} = \dfrac{d\vec{R}}{dt}$
 
-Las ecuaciones de transformación a coordenadas cartesianas rectangulares $(x, y, z)$ están dadas por:
+**E.T. (Ecuaciones de Transformación)**
+
+
 $$
-\begin{array}{l}
-x = a\,\text{cosh}\,u\,\text{cos}\,v \\
-y = a\,\text{senh}\,u\,\text{sen}\,v \\
+A = \dfrac{xy}{2}
+$$
+
+
+$$
+\operatorname{tg}\theta = \dfrac{y}{x}
+$$
+
+
+**o multiplica:**
+
+$$
+A \cdot \operatorname{tg}\theta = \dfrac{xy}{2} \cdot \dfrac{y}{x} = \dfrac{y^2}{2} \Rightarrow y = \pm\sqrt{2A\operatorname{tg}\theta}
+$$
+
+
+**Divido:**
+
+$$
+\dfrac{A}{\operatorname{tg}\theta} = \dfrac{\dfrac{xy}{2}}{\dfrac{y}{x}} = \dfrac{x^2}{2} \Rightarrow x = \pm\sqrt{\dfrac{2A}{\operatorname{tg}\theta}}
+$$
+
+
+
+$$
 z = z
-\end{array}
 $$
-Donde $a$ es un parámetro de escala constante que representa la semidistancia focal de las hipérbolas y elipses confocales en el plano $xy$.
 
-**Deducción de los factores de escala ($h_u, h_v, h_z$):**
-El vector de posición es:
-$$\vec{R} = a\,\text{cosh}\,u\,\text{cos}\,v\,\hat{\mathbf{i}} + a\,\text{senh}\,u\,\text{sen}\,v\,\hat{\mathbf{j}} + z\,\hat{\mathbf{k}}$$
-
-Los factores de escala se obtienen mediante la norma de los vectores tangentes:
-$$h_i = \left| \frac{\partial \vec{R}}{\partial q_i} \right| = \sqrt{\left(\frac{\partial x}{\partial q_i}\right)^2 + \left(\frac{\partial y}{\partial q_i}\right)^2 + \left(\frac{\partial z}{\partial q_i}\right)^2}$$
-
-1. Para la coordenada $u$:
-$$\frac{\partial x}{\partial u} = a\,\text{senh}\,u\,\text{cos}\,v, \quad \frac{\partial y}{\partial u} = a\,\text{cosh}\,u\,\text{sen}\,v, \quad \frac{\partial z}{\partial u} = 0$$
-$$h_u = a\sqrt{\text{senh}^2 u\,\text{cos}^2 v + \text{cosh}^2 u\,\text{sen}^2 v}$$
-Utilizando la identidad $\text{cosh}^2 u = 1 + \text{senh}^2 u$:
-$$h_u = a\sqrt{\text{senh}^2 u\,\text{cos}^2 v + (1 + \text{senh}^2 u)\text{sen}^2 v} = a\sqrt{\text{senh}^2 u(\text{cos}^2 v + \text{sen}^2 v) + \text{sen}^2 v}$$
-$$\therefore h_u = a\sqrt{\text{senh}^2 u + \text{sen}^2 v} = a\sqrt{\text{cosh}^2 u - \text{cos}^2 v}$$
-
-2. Para la coordenada $v$:
-$$\frac{\partial x}{\partial v} = -a\,\text{cosh}\,u\,\text{sen}\,v, \quad \frac{\partial y}{\partial v} = a\,\text{senh}\,u\,\text{cos}\,v, \quad \frac{\partial z}{\partial v} = 0$$
-$$h_v = a\sqrt{\text{cosh}^2 u\,\text{sen}^2 v + \text{senh}^2 u\,\text{cos}^2 v}$$
-Utilizando la identidad $\text{senh}^2 u = \text{cosh}^2 u - 1$:
-$$h_v = a\sqrt{\text{cosh}^2 u\,\text{sen}^2 v + (\text{cosh}^2 u - 1)\text{cos}^2 v} = a\sqrt{\text{cosh}^2 u(\text{sen}^2 v + \text{cos}^2 v) - \text{cos}^2 v}$$
-$$\therefore h_v = a\sqrt{\text{cosh}^2 u - \text{cos}^2 v} = a\sqrt{\text{senh}^2 u + \text{sen}^2 v}$$
-
-3. Para la coordenada $z$:
-$$h_z = 1$$
-
-El elemento de arco diferencial al cuadrado ($ds^2$) se expresa como:
-$$ds^2 = h_u^2 du^2 + h_v^2 dv^2 + h_z^2 dz^2 = a^2(\text{senh}^2 u + \text{sen}^2 v)(du^2 + dv^2) + dz^2$$
-
-**Velocidad y Energía Cinética ($T$):**
-El vector velocidad instantánea en la base curvilínea ortogonal es:
-$$\vec{v} = h_u \dot{u}\hat{\mathbf{e}}_u + h_v \dot{v}\hat{\mathbf{e}}_v + h_z \dot{z}\hat{\mathbf{e}}_z = a\sqrt{\text{senh}^2 u + \text{sen}^2 v}\dot{u}\hat{\mathbf{e}}_u + a\sqrt{\text{senh}^2 u + \text{sen}^2 v}\dot{v}\hat{\mathbf{e}}_v + \dot{z}\hat{\mathbf{e}}_z$$
-
-La rapidez al cuadrado es:
-$$v^2 = a^2(\text{senh}^2 u + \text{sen}^2 v)(\dot{u}^2 + \dot{v}^2) + \dot{z}^2$$
-
-Por tanto, la energía cinética $T$ de una partícula de masa $m$ es:
-$$T = \frac{1}{2}m\left[ a^2(\text{senh}^2 u + \text{sen}^2 v)(\dot{u}^2 + \dot{v}^2) + \dot{z}^2 \right]$$
 
 ```ad-note
-title: Nota de corrección: Ortogonalidad y simetría confocal hiperbólica
+title: Comentario
 collapse: closed
-Según **Wells (Cap. 2.2 y 2.4)** y **Goldstein (Cap. 1.4)**, el sistema de coordenadas hiperbólicas cilíndricas es ortogonal, lo cual se comprueba porque los vectores de base son mutuamente perpendiculares ($\hat{\mathbf{e}}_u \cdot \hat{\mathbf{e}}_v = 0$), lo que resulta en un tensor métrico diagonal:
-$$g_{ij} = \begin{bmatrix} a^2(\text{senh}^2 u + \text{sen}^2 v) & 0 & 0 \\ 0 & a^2(\text{senh}^2 u + \text{sen}^2 v) & 0 \\ 0 & 0 & 1 \end{bmatrix}$$
-Este sistema curvilíneo es de gran utilidad en problemas físicos que poseen fronteras elípticas o hiperbólicas confocales (como la difracción en rendijas, el flujo de fluidos alrededor de obstáculos elípticos o problemas electrostáticos con electrodos elípticos), ya que las superficies coordinadas $u = \text{cte}$ corresponden a cilindros elípticos, mientras que las superficies $v = \text{cte}$ definen cilindros hiperbólicos confocales con focos en $(\pm a, 0, z)$.
+\(A \rightarrow \text{Distancia}^2\)
+\(\theta \rightarrow \text{Ángulo}\)
+\(z \rightarrow \text{Dist.}\)
 ```
 `````
 
->[!summary] Formulación matemática de las coordenadas hiperbólicas cilíndricas y obtención de sus factores de escala y energía cinética a partir del tensor métrico.
+>[!summary] Transcripción del sistema de coordenadas no lineales con sus ecuaciones de transformación directa e inversa.
 
 ***
 
-¿Deseas continuar con la transcripción del siguiente subtítulo del apunte (`f) Otros HASTA g) Coordenadas No Lineales`) o prefieres revisar algún otro bloque de este tema? 🔍
+🧩 ¿Te gustaría continuar con la transcripción de los ejemplos prácticos de la página 7 como el de **Ex x=4, y=3, z=0**?
+
+
+%%< correcciones hechas %%
+
+## g) Coordenadas no lineales (3D) $A, \theta, z$
+
+`````cornell
+::cue
+coordenadas no lineales · ecuaciones de transformación · variables independientes
+¿Cómo se definen las coordenadas no lineales $A$ y $\theta$?
+¿Cuáles son las ecuaciones de transformación para este sistema?
+Fórmula clave: $A = \dfrac{xy}{2}$, $\tan\theta = \dfrac{y}{x}$
+
+::note
+**Posición $(A, \theta, z)$**
+
+$\vec{r} \rightarrow \text{Newton}$
+$\vec{v} = \dfrac{d\vec{r}}{dt}$
+
+**E.T. (Ecuaciones de Transformación)**
+
+
+$$
+A = \dfrac{xy}{2}
+$$
+
+
+$$
+\tan\theta = \dfrac{y}{x}
+$$
+
+
+**o multiplica:**
+
+$$
+A \cdot \tan\theta = \dfrac{xy}{2} \cdot \dfrac{y}{x} = \dfrac{y^2}{2} \Rightarrow y = \pm\sqrt{2A\tan\theta}
+$$
+
+
+**Divido:**
+
+$$
+\dfrac{A}{\tan\theta} = \dfrac{\dfrac{xy}{2}}{\dfrac{y}{x}} = \dfrac{x^2}{2} \Rightarrow x = \pm\sqrt{\dfrac{2A}{\tan\theta}}
+$$
+
+
+
+$$
+z = z
+$$
+
+
+![[pegar_imagen]]
+*Figura 1.2 · Coordenadas no lineales $(A, \theta)$ en el plano $xy$.*
+
+```ad-note
+title: Comentario
+collapse: closed
+\(A \rightarrow \text{Distancia}^2\)
+\(\theta \rightarrow \text{Ángulo}\)
+\(z \rightarrow \text{Dist.}\)
+```
+
+IMA | fuente: ETN607_T01.pdf | página: 6 | id: Figura 1.2 | posición: abajo
+`````
+
+>[!summary] Transcripción del sistema de coordenadas no lineales con sus ecuaciones de transformación directa e inversa.
+
+***
+
+He corregido y mejorado la transcripción de la sección **g) Coordenadas no lineales** de la página 6 según los libros guía de la materia y las pautas del estilo. Se han realizado los siguientes cambios específicos:
+
+1. **Corrección de notación trigonométrica:** Reemplacé `\operatorname{tg}` y `tg` por `\tan` en todo el bloque para cumplir estrictamente con las reglas de notación LaTeX de `ETN607`.
+2. **Corrección del vector de posición:** Se cambió `\vec{R}` por la forma estándar `\vec{r}` para la posición de una partícula individual.
+3. **Incorporación de la figura omitida:** Añadí la caja de imagen `![[pegar_imagen]]` con su respectiva etiqueta de identificación y leyenda descriptiva de la **Figura 1.2** (*Coordenadas no lineales \\((A, \theta)\\) en el plano \\(xy\\)*), junto con su bloque de localización `IMA` al pie del bloque Cornell.
+
+He guardado y publicado estos cambios en la versión actualizada del apunte: **`etn607-t01-p6-v2.md`**, la cual ya está disponible para ti en el panel de Studio.
+
+🧩 ¿Te gustaría que continuemos ahora con la transcripción del ejercicio **Ex x=4, y=3, z=0** que inicia en la página 7?

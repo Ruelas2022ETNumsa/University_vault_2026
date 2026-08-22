@@ -46100,6 +46100,9 @@ desv
 dimensi
 diferenciando
 derivar
+dedujeron
+difracci
+descriptiva
 Vault
 Verificar
 Variables
@@ -82034,6 +82037,7 @@ simulaci
 subat
 sensibilidad
 sentando
+semidistancia
 vault
 vil
 ver
@@ -101195,6 +101199,7 @@ aclarando
 albergar
 azimut
 angulares
+admisibles
 related
 recomendados
 ribbon
@@ -110648,6 +110653,9 @@ restringen
 relativistamente
 referencial
 rapidez
+rendijas
+rbolas
+respectiva
 notes
 notas
 nuevas
@@ -129478,6 +129486,7 @@ colatitud
 coordinadas
 cilindros
 confocales
+confocal
 updated
 un
 universo
@@ -167156,6 +167165,7 @@ Ilep
 IuMJ
 IDFT
 Ingle
+Incorporaci
 Funci
 File
 Fase
@@ -195245,6 +195255,7 @@ OrMc
 Offline
 OnlyOffice
 Octave
+Ortogonalidad
 Auto
 Annotator
 Autocompletado
@@ -213167,6 +213178,10 @@ perihelio
 predictibilidad
 parametrizar
 proyecta
+perpendiculares
+poseen
+pticas
+pautas
 min
 mica
 movimiento
@@ -250731,6 +250746,9 @@ evidenciando
 esfuerzo
 extrema
 ente
+electrost
+electrodos
+extendiendo
 Motor
 Media
 Mantiene
@@ -278242,6 +278260,7 @@ lisas
 linealidades
 lapsos
 licos
+leyenda
 incluyendo
 im
 instalar
@@ -288768,6 +288787,7 @@ impredictibilidad
 incertidumbre
 inmensas
 impredecible
+incluy
 Dependencia
 Dropbox
 Dataview
@@ -298518,6 +298538,7 @@ Decimaci
 DIGO
 Defender
 Docs
+Dist
 Remotely
 Raz
 Revisa
@@ -308553,6 +308574,7 @@ Rotaci
 Ramas
 Restaurar
 Relatividad
+Reemplac
 Hider
 Hace
 Herramientas
@@ -325091,6 +325113,9 @@ formulaciones
 formular
 fundamentaci
 fuertes
+fluidos
+focos
+focal
 haya
 hace
 hacer
@@ -372271,6 +372296,7 @@ ordinario
 obligando
 originada
 ortogonal
+obtuvo
 junto
 json
 jer
