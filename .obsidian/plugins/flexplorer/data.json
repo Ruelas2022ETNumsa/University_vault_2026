@@ -30,7 +30,16 @@
         "E2_L1_1015.md",
         "E3_L1_1015.md",
         "E4_L1_1015.md",
-        "E5_L1_1015.md"
+        "E5_L1_1015.md",
+        "dft_comparacion.m",
+        "dtft_analisis.m",
+        "sistema_recursivo.m",
+        "convolucion_discreta.m",
+        "E1_L1_sol.md",
+        "E2_L1_sol.md",
+        "E3_L1_sol.md",
+        "E4_L1_sol.md",
+        "E5_L1_sol.md"
       ]
     },
     "MOC": {
@@ -4433,6 +4442,42 @@
       "isHidden": false
     },
     "E5_L1_1015.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "dft_comparacion.m": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "dtft_analisis.m": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "sistema_recursivo.m": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "convolucion_discreta.m": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "E1_L1_sol.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "E2_L1_sol.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "E3_L1_sol.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "E4_L1_sol.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "E5_L1_sol.md": {
       "isPinned": false,
       "isHidden": false
     }

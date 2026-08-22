@@ -8974,6 +8974,7 @@ tensor
 tallos
 truncamiento
 truncar
+tratarse
 ToDo
 Templater
 Text
@@ -18731,6 +18732,7 @@ Trayectorias
 Twiddle
 TDSSKiller
 Truncamiento
+Tallo
 Sistema
 Sync
 Save
@@ -37376,6 +37378,7 @@ Proyeccion
 Permitiendo
 Planck
 PROCESSING
+Productos
 del
 date
 de
@@ -46115,6 +46118,7 @@ deslizamiento
 despreciable
 distorsi
 diferenciaci
+deslizante
 Vault
 Verificar
 Variables
@@ -64469,6 +64473,7 @@ guiado
 gravitatorio
 gimen
 generemos
+gruesa
 body
 beacon
 bat
@@ -82056,6 +82061,8 @@ sentando
 semidistancia
 superpuestos
 subplots
+sinusoides
+separables
 vault
 vil
 ver
@@ -91656,6 +91663,8 @@ ventanas
 virus
 virustotal
 volteo
+valles
+vals
 audience
 activo
 auto
@@ -101221,6 +101230,7 @@ angulares
 admisibles
 abruptos
 apliquemos
+anticausal
 related
 recomendados
 ribbon
@@ -110682,6 +110692,8 @@ reposo
 residual
 resultantes
 reconstrucci
+rejilla
+revelando
 notes
 notas
 nuevas
@@ -119535,6 +119547,7 @@ nomo
 nomas
 newtoniano
 notablemente
+nulas
 created
 commit
 cada
@@ -129517,6 +129530,10 @@ calculemos
 corresponder
 convolucion
 corregidos
+compone
+conjugada
+comparacion
+cubriendo
 updated
 un
 universo
@@ -167198,6 +167215,8 @@ IuMJ
 IDFT
 Ingle
 Incorporaci
+Identificamos
+Invariable
 Funci
 File
 Fase
@@ -186366,6 +186385,8 @@ Excel
 ESQUEMAS
 Especial
 Einstein
+Espectros
+Espectral
 Obsidian
 OmniSearch
 Ocultar
@@ -195288,6 +195309,8 @@ Offline
 OnlyOffice
 Octave
 Ortogonalidad
+Obtenemos
+Obtenidas
 Auto
 Annotator
 Autocompletado
@@ -204192,6 +204215,7 @@ Akeod
 AkjN
 Arrancamos
 Algorithms
+Agrupamos
 push
 pull
 para
@@ -213216,6 +213240,8 @@ pticas
 pautas
 preparemos
 perceptible
+primos
+presentarla
 min
 mica
 movimiento
@@ -250785,6 +250811,12 @@ electrost
 electrodos
 extendiendo
 escalando
+expresado
+estructuradamente
+extendemos
+espaciadas
+espectral
+espaciamiento
 Motor
 Media
 Mantiene
@@ -261071,6 +261103,7 @@ MAPAS
 MENTALES
 Mercurio
 MONSON
+Mejorada
 Lectura
 LaTeX
 Linter
@@ -288827,6 +288860,7 @@ impredecible
 incluy
 impulsional
 implementemos
+igualar
 Dependencia
 Dropbox
 Dataview
@@ -298578,6 +298612,8 @@ DIGO
 Defender
 Docs
 Dist
+Desplazados
+Dirichlet
 Remotely
 Raz
 Revisa
@@ -308614,6 +308650,7 @@ Ramas
 Restaurar
 Relatividad
 Reemplac
+Resultante
 Hider
 Hace
 Herramientas
@@ -316429,6 +316466,7 @@ Holonomicidad
 Heisenberg
 HWEI
 HAYES
+Hojas
 filtrar
 formato
 faltantes
@@ -325159,6 +325197,7 @@ focos
 focal
 factorizamos
 forzando
+fuesen
 haya
 hace
 hacer
@@ -418719,6 +418758,7 @@ xUiT
 xqgA
 xSBc
 xoPK
+xlim
 Wikilinks
 WHERE
 WebGL
