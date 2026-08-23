@@ -8976,6 +8976,11 @@ truncamiento
 truncar
 tratarse
 textgris
+titleformat
+tituloinforme
+textbf
+toprule
+textcolor
 ToDo
 Templater
 Text
@@ -28652,6 +28657,7 @@ SimulinK
 SIGNALS
 SIGNAL
 Suprime
+Senal
 Plugins
 Pendientes
 Plugin
@@ -37383,6 +37389,7 @@ PROCESSING
 Productos
 Primeros
 Preambulo
+PaginaEstilo
 del
 date
 de
@@ -72315,6 +72322,9 @@ bulos
 bosquejar
 blancoW
 blancoBW
+backgroundsetup
+boldmath
+bottomrule
 scope
 status
 selector
@@ -82078,6 +82088,11 @@ supresi
 suprimir
 subfile
 suprimido
+suprime
+subsection
+subsubsection
+senales
+subplot
 vault
 vil
 ver
@@ -101264,6 +101279,7 @@ azulprinc
 azulclaro
 actualizarlo
 anexos
+arraystretch
 related
 recomendados
 ribbon
@@ -110739,6 +110755,10 @@ refactorizaci
 reutilizando
 raramente
 reestructurar
+referenciados
+readme
+rule
+renewcommand
 notes
 notas
 nuevas
@@ -119599,6 +119619,8 @@ negroR
 negroBR
 naranjaV
 naranjaBV
+newcommand
+newpage
 created
 commit
 cada
@@ -129590,6 +129612,12 @@ cafeBT
 compilarse
 colisionar
 compilarlo
+cuadropregunta
+centering
+caption
+comp
+cccccccc
+conv
 updated
 un
 universo
@@ -148697,6 +148725,7 @@ Ggfz
 Giro
 GINA
 Graficaci
+Graficos
 Convenci
 Creaci
 Commander
@@ -157363,6 +157392,10 @@ Considerar
 CTAN
 Comprim
 Compilar
+Capitulos
+Cargada
+Comparacion
+Convolucion
 Instalados
 Instalado
 Instalar
@@ -186450,6 +186483,7 @@ Einstein
 Espectros
 Espectral
 Entornos
+EstiloSecciones
 Obsidian
 OmniSearch
 Ocultar
@@ -213310,6 +213344,7 @@ presentarla
 poloE
 poloBE
 pdfLaTeX
+prev
 min
 mica
 movimiento
@@ -223593,6 +223628,7 @@ malla
 mbulo
 madurez
 moviendo
+midrule
 YAML
 Ya
 You
@@ -270062,6 +270098,9 @@ LFDo
 LISIS
 LibreOffice
 Latex
+Laboratorios
+LABORATORIO
+LineWidth
 links
 las
 listar
@@ -278410,6 +278449,10 @@ lilaD
 lilaBD
 laboratorios
 large
+lstset
+linewidth
+lstlisting
+linspace
 incluyendo
 im
 instalar
@@ -288947,6 +288990,8 @@ instituci
 ilustraciones
 institucional
 incorporan
+itshape
+itemize
 Dependencia
 Dropbox
 Dataview
@@ -298701,6 +298746,7 @@ Dist
 Desplazados
 Dirichlet
 Digitalizaci
+DEPENDENCIAS
 Remotely
 Raz
 Revisa
@@ -308739,6 +308785,7 @@ Relatividad
 Reemplac
 Resultante
 Reestructurar
+READMEs
 Hider
 Hace
 Herramientas
@@ -325287,6 +325334,9 @@ factorizamos
 forzando
 fuesen
 fijada
+fancyhdr
+footnotesize
+filled
 haya
 hace
 hacer
@@ -333899,6 +333949,7 @@ hojas
 habla
 hechas
 herencia
+hold
 que
 quedan
 queda
@@ -372470,6 +372521,7 @@ originada
 ortogonal
 obtuvo
 overleaf
+ones
 junto
 json
 jer
@@ -400929,6 +400981,7 @@ yllm
 yBno
 yYQwAE
 ynYN
+ylim
 wikilinks
 when
 where
@@ -464970,6 +465023,7 @@ zjpc
 zUcZ
 zpnTcf
 zrIu
+zeros
 kEG
 kE
 kg
@@ -483321,6 +483375,8 @@ Xyexv
 Xxif
 XQEr
 XmYdRJ
+Xref
+Xdft
 ßK
 ßH
 ßu

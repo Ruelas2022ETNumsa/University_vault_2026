@@ -2,7 +2,7 @@
 galaxy_body: ship
 project: "latex-overleaf-estructura-profesional"
 date: 2026-08-23
-status: docked
+status: in-orbit
 fleet: Latex
 blocked_by:
 ---
@@ -23,9 +23,9 @@ Sobreescribir con edit_file al cerrar cada sesión.
 %%
 
 **Última sesión:** 2026-08-23 — sesión alx-rul
-**Retomar desde:** revisar si queda algo pendiente o cerrar el task
-**Completado esta sesión:** migración completa a `subfiles`, corrección de numeración, draft suprimido, `\graphicspath` multi-ruta, estructura de vault y flujo Obsidian→Overleaf documentados en `README_vault.md`
-**Próximo paso:** reestructurar vault moviendo contenido actual a `ETN903/` y crear `README_vault.md` definitivo
+**Retomar desde:** definir `\lstinputlisting` en `Anexos/` o cerrar task
+**Completado esta sesión:** arquitectura completa definida y documentada — `subfiles`, numeración, draft, `\graphicspath`, estructura vault vs Overleaf, dos READMEs (general y ETN1015)
+**Próximo paso:** `Anexos/` — convención `\lstinputlisting` (pendiente menor)
 **Preguntas de cierre:** —
 
 ---
@@ -98,8 +98,9 @@ El preámbulo y la carátula siguen con `\input` — no se tocan.
 - [ ] Reestructurar vault: mover contenido actual a `ETN903/` dentro de `Latex/`
 
 **Documentación:**
-- [x] `README.md` — actualizar con nueva arquitectura `subfiles` y convenciones
-- [x] `README_vault.md` — documentar estructura Obsidian vs Overleaf y flujo de creación
+- [x] `Latex/README.md` — readme general del vault (estructura, flujo, convenciones)
+- [x] `ETN1015/README.md` — readme de materia (solo archivos de esa carpeta)
+- [x] `README_vault.md` — vaciado, borrar desde Obsidian
 
 ---
 

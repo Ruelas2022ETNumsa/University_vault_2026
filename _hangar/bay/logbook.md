@@ -17,10 +17,10 @@ date_updated: 2026-08-02
 |     Worker     | Status | Estamina | Proyecto activo                                   |   Fecha   | Wake | Recarga |
 | :------------: | :----: | :------: | :------------------------------------------------ | :-------: | :--: | :-----: |
 | [[alx_hot.md]] |   ❌    |    🟢    | Sistema consulta móvil via Drive MCP              |           |      |         |
-|  [[krajo.md]]  |   ❌    |    🔴    | Implementación física `_hangar/`                  | 2026-8-19 |      |  18:20  |
-| [[alx_gml.md]] |   ❌    |    🔴    | Sistema de links, sync y organización de carpetas | 2026-8-19 |      |  20:50  |
-| [[alxrul.md]]  |   ✔    |    🔴    | —                                                 |           |      |         |
-| [[alx-rul.md]] |   ❌    |    🟢    | Cornell Marginalia → Galaxy                       |           |      |         |
+|  [[krajo.md]]  |   ❌    |    🟢    | Implementación física `_hangar/`                  |           |      |         |
+| [[alx_gml.md]] |   ❌    |    🟢    | Sistema de links, sync y organización de carpetas |           |      |         |
+| [[alxrul.md]]  |   ✔    |    🔴    | —                                                 | 2026-8-23 |      |  8:40   |
+| [[alx-rul.md]] |   ❌    |    🔴    | Cornell Marginalia → Galaxy                       | 2026-8-23 |      |  9:40   |
 | [[standb.md]]  |   ✔    |    🟢    | —                                                 |     —     |  —   |    —    |
 | [[emergn.md]]  |   ✔    |    🟢    | —                                                 |     —     |  —   |    —    |
 
