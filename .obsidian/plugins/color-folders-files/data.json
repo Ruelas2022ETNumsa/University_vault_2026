@@ -134,6 +134,15 @@
       "opacity": 1,
       "applyToSubfolders": false,
       "applyToFiles": false
+    },
+    "Latex": {
+      "backgroundColor": "#bb3e03",
+      "textColor": "#eecfc0",
+      "isBold": false,
+      "isItalic": false,
+      "opacity": 1,
+      "applyToSubfolders": false,
+      "applyToFiles": false
     }
   },
   "presets": {

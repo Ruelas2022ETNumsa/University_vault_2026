@@ -28,11 +28,12 @@
 % --- Carátula ---
 \input{Capitulos/C00-Caratula}
 
-% Reaplicar estilo fancy después de la carátula
+% Reaplicar estilo fancy y resetear contador de página tras la carátula
 \pagestyle{fancy}
+\setcounter{page}{1}
 
 % --- Capítulos ---
-\input{Capitulos/Laboratorio1_903}  % capítulo activo
-%\input{Capitulos/Esquema_basico}   % desactivado
+\subfile{Capitulos/Laboratorio1_903}  % capítulo activo
+%\subfile{Capitulos/Esquema_basico}   % desactivado
 
 \end{document}

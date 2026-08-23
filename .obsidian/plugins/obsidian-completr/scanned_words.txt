@@ -82071,6 +82071,7 @@ superpuestos
 subplots
 sinusoides
 separables
+subfiles
 vault
 vil
 ver
@@ -110726,6 +110727,8 @@ rosaF
 rosaBF
 rowcolor
 rojoclaro
+refactorizaci
+reutilizando
 notes
 notas
 nuevas
@@ -129574,6 +129577,7 @@ comparacion
 cubriendo
 cafeT
 cafeBT
+compilarse
 updated
 un
 universo
@@ -157344,6 +157348,7 @@ Caos
 Constancia
 Coriolis
 Considerar
+CTAN
 Instalados
 Instalado
 Instalar
@@ -213288,6 +213293,7 @@ primos
 presentarla
 poloE
 poloBE
+pdfLaTeX
 min
 mica
 movimiento
@@ -223568,6 +223574,8 @@ matlab
 menudo
 medido
 malla
+mbulo
+madurez
 YAML
 Ya
 You
@@ -250863,6 +250871,8 @@ extendemos
 espaciadas
 espectral
 espaciamiento
+escalable
+eventualmente
 Motor
 Media
 Mantiene
@@ -261150,6 +261160,7 @@ MENTALES
 Mercurio
 MONSON
 Mejorada
+Main
 Lectura
 LaTeX
 Linter
@@ -270033,6 +270044,7 @@ LkTTi
 LFDo
 LISIS
 LibreOffice
+Latex
 links
 las
 listar
@@ -278379,6 +278391,8 @@ licos
 leyenda
 lilaD
 lilaBD
+laboratorios
+large
 incluyendo
 im
 instalar
@@ -372431,6 +372445,7 @@ obligando
 originada
 ortogonal
 obtuvo
+overleaf
 junto
 json
 jer
@@ -382355,6 +382370,7 @@ jVSo
 jsem
 jJpWOkv
 jose
+justificarlo
 Qu
 Qui
 Quick

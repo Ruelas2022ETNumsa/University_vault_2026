@@ -23,9 +23,9 @@ Sobreescribir con edit_file al cerrar cada sesión.
 %%
 
 **Última sesión:** 2026-08-23 — sesión alx-rul
-**Retomar desde:** `Main_Include.tex` — listo para aplicar cambios, no se tocó nada aún
-**Completado esta sesión:** lectura de README, Main_Include.tex y análisis del estado actual
-**Próximo paso:** aplicar `\include` + `\includeonly` en `Main_Include.tex` (tarea 1)
+**Retomar desde:** `Main_Include.tex` — decisión tomada: migrar a `subfiles`, no se tocó nada aún
+**Completado esta sesión:** lectura de README y Main_Include.tex, investigación web de enfoques multi-archivo, decisión de arquitectura
+**Próximo paso:** agregar `\usepackage{subfiles}` en `Preambulo.tex`, luego editar `Main_Include.tex` y cada capítulo
 **Preguntas de cierre:** —
 
 ---
@@ -42,11 +42,11 @@ Meta: compilación eficiente, organización escalable por laboratorio, y flujo l
 | Fecha | Decisión | Motivo |
 | ----- | -------- | ------ |
 | 2026-08-23 | Mantener `\input` para preámbulo y carátula | `\include` forzaría salto de página no deseado en carátula |
-| 2026-08-23 | Migrar capítulos a `\include` | Permite `\includeonly` para compilación parcial en Overleaf |
+| 2026-08-23 | Migrar capítulos a paquete `subfiles` en lugar de `\include` | `subfiles` permite compilar cada laboratorio independientemente en Overleaf; `\include` solo permite compilación parcial desde el main |
 | 2026-08-23 | No convertir a `.sty` todavía | El proyecto aún no tiene la madurez suficiente para justificarlo |
 
 > [!note]- Descartadas
-> — ninguna por ahora
+> `\include` + `\includeonly` para capítulos — descartado porque no permite compilar un capítulo solo sin pasar por `Main_Include.tex`. Reemplazado por `subfiles`.
 
 ---
 
@@ -54,7 +54,10 @@ Meta: compilación eficiente, organización escalable por laboratorio, y flujo l
 
 El proyecto LaTeX ya tiene una base sólida y modular. Las mejoras son incrementales, no una refactorización.
 Restricciones: debe compilar en Overleaf con pdfLaTeX sin cambios de clase o motor.
-Enfoque: aplicar mejoras en orden de prioridad (alta → baja) sin romper la compilación actual.
+
+Enfoque elegido: **paquete `subfiles`** para capítulos. Cada archivo de `Capitulos/` agrega una línea de encabezado (`\documentclass[../Main_Include.tex]{subfiles}`) que le permite compilarse solo en Overleaf, reutilizando el preámbulo del main automáticamente. Ideal para escalar a muchos laboratorios.
+
+El preámbulo y la carátula siguen con `\input` — no se tocan.
 
 ---
 
@@ -66,23 +69,33 @@ Enfoque: aplicar mejoras en orden de prioridad (alta → baja) sin romper la com
 
 ## Flujo de pasos
 
-1. Leer `Main_Include.tex` y aplicar `\include` + bloque `\includeonly` comentado
-2. Leer `Preambulo/Preambulo.tex` y actualizar `\graphicspath` con multi-ruta
-3. Crear subcarpetas `Lab1/`, `Lab2/` en `Graficos/`
-4. Definir convención `\lstinputlisting` para `Anexos/` y documentar en README
-5. Actualizar README con los cambios aplicados
+1. Agregar `\usepackage{subfiles}` en `Preambulo/Preambulo.tex`
+2. Editar `Main_Include.tex`: cambiar `\input{Capitulos/...}` → `\subfile{Capitulos/...}` para capítulos (carátula se queda con `\input`)
+3. Editar `Capitulos/Laboratorio1_903.tex`: agregar encabezado `subfiles` al inicio y `\end{document}` al final
+4. Verificar compilación del main y del laboratorio solo en Overleaf
+5. Leer `Preambulo/Preambulo.tex` y actualizar `\graphicspath` con multi-ruta
+6. Crear subcarpetas `Lab1/`, `Lab2/` en `Graficos/`
+7. Definir convención `\lstinputlisting` para `Anexos/` y documentar en README
+8. Actualizar README con los cambios aplicados y la nueva convención `subfiles`
 
 ---
 
 ## Tareas
 
-- [ ] `Main_Include.tex` — cambiar `\input{Capitulos/...}` → `\include{Capitulos/...}` para capítulos
-- [ ] `Main_Include.tex` — agregar bloque `\includeonly` comentado con instrucciones de uso
+**Migración a subfiles:**
+- [ ] `Preambulo/Preambulo.tex` — agregar `\usepackage{subfiles}`
+- [ ] `Main_Include.tex` — cambiar `\input{Capitulos/...}` → `\subfile{Capitulos/...}` para capítulos
+- [ ] `Capitulos/Laboratorio1_903.tex` — agregar encabezado `subfiles` y `\end{document}` final
+- [ ] Verificar compilación completa desde `Main_Include.tex` en Overleaf
+- [ ] Verificar compilación standalone de `Laboratorio1_903.tex` en Overleaf
+
+**Estructura y organización:**
 - [ ] `Preambulo/Preambulo.tex` — verificar y actualizar `\graphicspath` a multi-ruta
 - [ ] `Graficos/` — crear subcarpetas `Lab1/` y `Lab2/`
 - [ ] `Anexos/` — definir estructura y convención con `\lstinputlisting`
-- [ ] `README.md` — actualizar con cambios aplicados y convenciones nuevas
-- [ ] Verificar compilación en Overleaf después de los cambios
+
+**Documentación:**
+- [ ] `README.md` — actualizar con nueva arquitectura `subfiles` y convenciones
 
 ---
 
@@ -107,4 +120,6 @@ Enfoque: aplicar mejoras en orden de prioridad (alta → baja) sin romper la com
 - `E:\University_vault_2026\Latex\README.md`
 
 **Referencia:**
-- Overleaf docs: `\include` vs `\input` — https://www.overleaf.com/learn/latex/Management_in_a_large_project
+- Overleaf — multi-file projects: https://www.overleaf.com/learn/latex/Multi-file_LaTeX_projects
+- Overleaf — management large project: https://www.overleaf.com/learn/latex/Management_in_a_large_project
+- subfiles CTAN docs: https://ctan.csail.mit.edu/macros/latex2e/contrib/subfiles/subfiles.pdf

@@ -18,35 +18,14 @@
         "MOC",
         "Semesters",
         "Semestres",
+        "Latex",
         "_assets",
         "Rubbish",
-        "Latex",
         "Borrar",
         "shared",
         "README.md",
-        "lab1.md",
         "Untitled.md",
-        "Untitled 1.md",
-        "E2_L1_1015.md",
-        "E3_L1_1015.md",
-        "E4_L1_1015.md",
-        "E5_L1_1015.md",
-        "dft_comparacion.m",
-        "dtft_analisis.m",
-        "sistema_recursivo.m",
-        "convolucion_discreta.m",
-        "E2_L1_sol.md",
-        "E3_L1_sol.md",
-        "E4_L1_sol.md",
-        "E5_L1_sol.md",
-        "F1_1015.md",
-        "F2_1015.md",
-        "F3_1015.md",
-        "F4_1015.md",
-        "F5_1015.md",
-        "lab1 1.md",
-        "lab1_ETN1015.docx",
-        "L1_1015"
+        "Untitled 1.md"
       ]
     },
     "MOC": {
@@ -1433,7 +1412,8 @@
         "tsk_movil_drive.md",
         "tsk_vault-infra.md",
         "ship_library_ETN1015.md",
-        "tsk_prompt_guides_1015.md"
+        "tsk_prompt_guides_1015.md",
+        "latex-overleaf-estructura-profesional.md"
       ]
     },
     "_hangar/dock/tsk_library_ETN825.md": {
@@ -2092,7 +2072,7 @@
         "Practica 1.md",
         "Practica 2.md",
         "Avance",
-        "_library_ETN1015 1.md"
+        "L1_1015"
       ]
     },
     "Semesters/Sem_08/ETN1015/_library_ETN1015.md": {
@@ -3324,22 +3304,10 @@
         "Factores de Giro (Twiddle Factors) para N=4, 6 y 8.md",
         "Zero Padding.md",
         "Relación de la DFT con otras transformadas.md",
-        "1015_sistema variante en el tiempo.md",
-        "1015_procesamiento de señales.md",
-        "1015_señal de potencia.md"
+        "sistema variante en el tiempo.md",
+        "señal de potencia.md",
+        "procesamiento de señales.md"
       ]
-    },
-    "Semesters/Sem_08/ETN1015/Avance/1015_sistema variante en el tiempo.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semesters/Sem_08/ETN1015/Avance/1015_procesamiento de señales.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semesters/Sem_08/ETN1015/Avance/1015_señal de potencia.md": {
-      "isPinned": false,
-      "isHidden": false
     },
     "Semesters/Sem_09": {
       "isPinned": false,
@@ -3755,10 +3723,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Semesters/Sem_08/ETN1015/_library_ETN1015 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_app/notebooklm/prompts/ETN1015/ETN1015-matlab 1.md": {
       "isPinned": false,
       "isHidden": false
@@ -3777,10 +3741,6 @@
       "isHidden": false
     },
     "Rubbish/2026-08-20/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "lab1.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -4432,82 +4392,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "E2_L1_1015.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "E3_L1_1015.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "E4_L1_1015.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "E5_L1_1015.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "dft_comparacion.m": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "dtft_analisis.m": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "sistema_recursivo.m": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "convolucion_discreta.m": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "E2_L1_sol.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "E3_L1_sol.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "E4_L1_sol.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "E5_L1_sol.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "F1_1015.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "F2_1015.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "F3_1015.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "F4_1015.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "F5_1015.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "lab1 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "lab1_ETN1015.docx": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Latex": {
       "isPinned": false,
       "isHidden": false,
@@ -5137,11 +5021,128 @@
       "isPinned": false,
       "isHidden": false
     },
-    "L1_1015": {
+    "_hangar/dock/latex-overleaf-estructura-profesional.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_08/ETN1015/L1_1015": {
       "isPinned": false,
       "isHidden": false,
-      "customOrder": [],
+      "customOrder": [
+        "convolucion_discreta.m",
+        "dtft_analisis.m",
+        "E2_L1_1015.md",
+        "E2_L1_sol.md",
+        "E3_L1_1015.md",
+        "E3_L1_sol.md",
+        "E4_L1_1015.md",
+        "E4_L1_sol.md",
+        "E5_L1_1015.md",
+        "E5_L1_sol.md",
+        "F1_1015.md",
+        "F2_1015.md",
+        "F3_1015.md",
+        "F4_1015.md",
+        "dft_comparacion.m",
+        "F5_1015.md",
+        "lab1 1.md",
+        "lab1.md",
+        "sistema_recursivo.m",
+        "lab1_ETN1015.docx"
+      ],
       "sortOrder": "custom"
+    },
+    "Semesters/Sem_08/ETN1015/L1_1015/convolucion_discreta.m": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_08/ETN1015/L1_1015/dtft_analisis.m": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_08/ETN1015/L1_1015/E2_L1_1015.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_08/ETN1015/L1_1015/E2_L1_sol.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_08/ETN1015/L1_1015/E3_L1_1015.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_08/ETN1015/L1_1015/E3_L1_sol.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_08/ETN1015/L1_1015/E4_L1_1015.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_08/ETN1015/L1_1015/E4_L1_sol.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_08/ETN1015/L1_1015/E5_L1_1015.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_08/ETN1015/L1_1015/E5_L1_sol.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_08/ETN1015/L1_1015/F1_1015.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_08/ETN1015/L1_1015/F2_1015.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_08/ETN1015/L1_1015/F3_1015.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_08/ETN1015/L1_1015/F4_1015.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_08/ETN1015/L1_1015/dft_comparacion.m": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_08/ETN1015/L1_1015/F5_1015.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_08/ETN1015/L1_1015/lab1 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_08/ETN1015/L1_1015/lab1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_08/ETN1015/L1_1015/sistema_recursivo.m": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_08/ETN1015/L1_1015/lab1_ETN1015.docx": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_08/ETN1015/Avance/sistema variante en el tiempo.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_08/ETN1015/Avance/señal de potencia.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_08/ETN1015/Avance/procesamiento de señales.md": {
+      "isPinned": false,
+      "isHidden": false
     }
   },
   "pinnedFiles": [
