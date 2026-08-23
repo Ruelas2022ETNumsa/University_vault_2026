@@ -23,9 +23,9 @@ Sobreescribir con edit_file al cerrar cada sesión.
 %%
 
 **Última sesión:** 2026-08-23 — sesión alx-rul
-**Retomar desde:** paso 7 — definir convención `\lstinputlisting` para `Anexos/`
-**Completado esta sesión:** migración completa a `subfiles` verificada en Overleaf (main + standalone), corrección de numeración de páginas, supresión de watermark draft, `\graphicspath` multi-ruta con Lab1–Lab5 y Legacy, README actualizado
-**Próximo paso:** definir estructura y convención `\lstinputlisting` para `Anexos/`
+**Retomar desde:** revisar si queda algo pendiente o cerrar el task
+**Completado esta sesión:** migración completa a `subfiles`, corrección de numeración, draft suprimido, `\graphicspath` multi-ruta, estructura de vault y flujo Obsidian→Overleaf documentados en `README_vault.md`
+**Próximo paso:** reestructurar vault moviendo contenido actual a `ETN903/` y crear `README_vault.md` definitivo
 **Preguntas de cierre:** —
 
 ---
@@ -95,9 +95,11 @@ El preámbulo y la carátula siguen con `\input` — no se tocan.
 - [x] `Preambulo/Preambulo.tex` — actualizar `\graphicspath` a multi-ruta (Lab1–Lab5, Legacy)
 - [x] `Graficos/` — subcarpetas Lab1–Lab5 creadas, Cap3legacy renombrada a Legacy
 - [ ] `Anexos/` — definir estructura y convención con `\lstinputlisting`
+- [ ] Reestructurar vault: mover contenido actual a `ETN903/` dentro de `Latex/`
 
 **Documentación:**
 - [x] `README.md` — actualizar con nueva arquitectura `subfiles` y convenciones
+- [x] `README_vault.md` — documentar estructura Obsidian vs Overleaf y flujo de creación
 
 ---
 
