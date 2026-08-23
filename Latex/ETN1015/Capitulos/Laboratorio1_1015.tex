@@ -2,7 +2,7 @@
 \begin{document}
 \backgroundsetup{contents={}}  % suprime draft de background en compilación standalone
 % ============================
-% LABORATORIO 1 — Laboratorio1_903.tex
+% LABORATORIO 1 — Laboratorio1_1015.tex
 % ============================
 %
 % CONTENIDO:
@@ -110,42 +110,9 @@ $k_1 T_1 = k_2 T_2$:
 % ──────────────────────────────────────────────────────────────────────
 \subsection*{Código MATLAB}
 
-\begin{lstlisting}[style=matlab_dark,
-    caption={Ejercicio 1 — Periodicidad y graficación de señales continuas},
-    label={lst:ej1}]
-% ETN1015 - Ejercicio 1
-clear; clc; close all;
-
-T1 = 1/15;
-T0 = 0.2;
-dt = 0.0005;
-
-x1 = @(t) 5*cos(2*pi*15*t + 0.25*pi);
-x2 = @(t) 5*cos(2*pi*15*t + 0.25*pi) + 5*cos(2*pi*10*t + 0.3*pi);
-
-% Comparacion general
-t_comp = 0:dt:3*T0;
-figure(1);
-plot(t_comp, x1(t_comp), 'b', 'LineWidth', 1.5); hold on;
-plot(t_comp, x2(t_comp), 'r', 'LineWidth', 1.5);
-xlabel('t (s)'); ylabel('x(t)');
-title('Senal 1 y Senal 2 - 3 periodos de x_2(t)');
-legend('x_1(t)', 'x_2(t)'); grid on; hold off;
-
-% Senal 1 - 3 periodos
-t_x1 = 0:dt:3*T1;
-figure(2);
-plot(t_x1, x1(t_x1), 'b', 'LineWidth', 1.5);
-xlabel('t (s)'); ylabel('x_1(t)');
-title('Senal 1 - 3 periodos (T_1 = 1/15 s)'); grid on;
-
-% Senal 2 - 3 periodos
-t_x2 = 0:dt:3*T0;
-figure(3);
-plot(t_x2, x2(t_x2), 'r', 'LineWidth', 1.5);
-xlabel('t (s)'); ylabel('x_2(t)');
-title('Senal 2 - 3 periodos (T_0 = 0.2 s)'); grid on;
-\end{lstlisting}
+\lstinputlisting[style=matlab_dark,
+    caption={Ejercicio 1 --- Periodicidad y graficaci\'on de se\~nales continuas},
+    label={lst:ej1}]{Anexos/Lab1/L1_E1.m}
 
 % ══════════════════════════════════════════════════════════════════════
 \newpage
@@ -264,25 +231,9 @@ $h(5-k)$  & 0 & 0 & 0 & 3 & 2 & 1 & \textbf{3} \\
 % ──────────────────────────────────────────────────────────────────────
 \subsection*{Código MATLAB}
 
-\begin{lstlisting}[style=matlab_dark,
+\lstinputlisting[style=matlab_dark,
     caption={Ejercicio 2 --- Convoluci\'on lineal discreta},
-    label={lst:ej2}]
-% ETN1015 - Ejercicio 2: Convolucion lineal discreta
-clear; clc; close all;
-
-x = [1, 1, 1, 1];  nx = 0:3;
-h = [1, 2, 3];     nh = 0:2;
-
-y = conv(x, h);
-ny = (nx(1)+nh(1)) : (nx(end)+nh(end));
-
-figure(1);
-stem(ny, y, 'filled', 'LineWidth', 1.5, 'Color', [0 0.4470 0.7410]);
-xlabel('n'); ylabel('y(n)');
-title('y(n) = x(n) * h(n)');
-xlim([ny(1)-1, ny(end)+1]); ylim([0, max(y)+1]);
-grid on;
-\end{lstlisting}
+    label={lst:ej2}]{Anexos/Lab1/L1_E2.m}
 
 % ══════════════════════════════════════════════════════════════════════
 \newpage
@@ -367,33 +318,9 @@ causal ($|z| > 2$) no incluye $|z| = 1$.
 % ──────────────────────────────────────────────────────────────────────
 \subsection*{Código MATLAB}
 
-\begin{lstlisting}[style=matlab_dark,
+\lstinputlisting[style=matlab_dark,
     caption={Ejercicio 3 --- Sistema recursivo inestable},
-    label={lst:ej3}]
-% ETN1015 - Ejercicio 3: Sistema recursivo inestable
-clear; clc; close all;
-
-N = 6;
-x = zeros(1, N);  x(1) = 1;   % x(n) = delta(n)
-y = zeros(1, N);
-y_prev = 0;                    % y(-1) = 0
-
-for n = 1:N
-    if n == 1
-        y(n) = 2*y_prev + x(n);
-    else
-        y(n) = 2*y(n-1) + x(n);
-    end
-end
-
-n_vec = 0:5;
-figure(1);
-stem(n_vec, y, 'filled', 'LineWidth', 1.5, 'Color', [0.8500 0.3250 0.0980]);
-xlabel('n'); ylabel('y(n)');
-title('y(n) = 2y(n-1) + delta(n)  -  polo en z = 2 (inestable)');
-xlim([-1, 6]); ylim([0, max(y)+5]);
-grid on;
-\end{lstlisting}
+    label={lst:ej3}]{Anexos/Lab1/L1_E3.m}
 
 % ══════════════════════════════════════════════════════════════════════
 \newpage
@@ -485,47 +412,9 @@ Como $x_b(n)$ es real y par, $X_b$ es puramente real y positiva:
 % ──────────────────────────────────────────────────────────────────────
 \subsection*{Código MATLAB}
 
-\begin{lstlisting}[style=matlab_dark,
+\lstinputlisting[style=matlab_dark,
     caption={Ejercicio 4 --- DTFT de se\~nales discretas},
-    label={lst:ej4}]
-% ETN1015 - Ejercicio 4: DTFT de senales discretas
-clear; clc; close all;
-
-w = linspace(-pi, pi, 1000);
-
-% --- Senal a ---
-n_a = 0:4;
-x_a = ones(1, 5);
-X_a = x_a * exp(-1j * (n_a' * w));
-
-figure(1);
-subplot(2,1,1);
-plot(w/pi, abs(X_a), 'LineWidth', 1.5);
-xlabel('\omega / \pi'); ylabel('|X_a|');
-title('Senal a - Magnitud DTFT'); grid on;
-
-subplot(2,1,2);
-plot(w/pi, angle(X_a)/pi, 'r', 'LineWidth', 1.5);
-xlabel('\omega / \pi'); ylabel('\angle X_a  (rad/\pi)');
-title('Senal a - Fase DTFT'); grid on;
-
-% --- Senal b (truncada en Nt = 15: (0.5)^15 aprox 3e-5) ---
-Nt = 15;
-n_b = -Nt:Nt;
-x_b = (0.5).^abs(n_b);
-X_b = x_b * exp(-1j * (n_b' * w));
-
-figure(2);
-subplot(2,1,1);
-plot(w/pi, abs(X_b), 'LineWidth', 1.5);
-xlabel('\omega / \pi'); ylabel('|X_b|');
-title('Senal b - Magnitud DTFT'); grid on;
-
-subplot(2,1,2);
-plot(w/pi, angle(X_b)/pi, 'r', 'LineWidth', 1.5);
-xlabel('\omega / \pi'); ylabel('\angle X_b  (rad/\pi)');
-title('Senal b - Fase DTFT'); ylim([-1.1 1.1]); grid on;
-\end{lstlisting}
+    label={lst:ej4}]{Anexos/Lab1/L1_E4.m}
 
 % ══════════════════════════════════════════════════════════════════════
 \newpage
@@ -755,4 +644,8 @@ for sig = 1:2
     end
 end
 \end{lstlisting}
+
+\lstinputlisting[style=matlab_dark,
+    caption={Ejercicio 5 --- DFT con zero-padding vs.\ DTFT (archivo externo)},
+    label={lst:ej5b}]{Anexos/Lab1/L1_E5.m}
 \end{document}

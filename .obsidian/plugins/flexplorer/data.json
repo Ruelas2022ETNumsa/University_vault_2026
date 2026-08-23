@@ -4400,7 +4400,6 @@
         "Graficos_legacy",
         "Preambulo",
         "ETN1015",
-        "README_vault.md",
         "README.md"
       ]
     },
@@ -4454,8 +4453,6 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "convolucion_discreta.m",
-        "dtft_analisis.m",
         "E2_L1_1015.md",
         "E2_L1_sol.md",
         "E3_L1_1015.md",
@@ -4468,21 +4465,11 @@
         "F2_1015.md",
         "F3_1015.md",
         "F4_1015.md",
-        "dft_comparacion.m",
         "F5_1015.md",
         "lab1 1.md",
         "lab1.md",
-        "sistema_recursivo.m",
         "lab1_ETN1015.docx"
       ]
-    },
-    "Semesters/Sem_08/ETN1015/L1_1015/convolucion_discreta.m": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semesters/Sem_08/ETN1015/L1_1015/dtft_analisis.m": {
-      "isPinned": false,
-      "isHidden": false
     },
     "Semesters/Sem_08/ETN1015/L1_1015/E2_L1_1015.md": {
       "isPinned": false,
@@ -4532,10 +4519,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Semesters/Sem_08/ETN1015/L1_1015/dft_comparacion.m": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Semesters/Sem_08/ETN1015/L1_1015/F5_1015.md": {
       "isPinned": false,
       "isHidden": false
@@ -4545,10 +4528,6 @@
       "isHidden": false
     },
     "Semesters/Sem_08/ETN1015/L1_1015/lab1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semesters/Sem_08/ETN1015/L1_1015/sistema_recursivo.m": {
       "isPinned": false,
       "isHidden": false
     },
@@ -4565,10 +4544,6 @@
       "isHidden": false
     },
     "Semesters/Sem_08/ETN1015/Avance/procesamiento de señales.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Latex/README_vault.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -4590,14 +4565,10 @@
       "sortOrder": "custom",
       "customOrder": [
         "C00-Caratula.tex",
-        "Laboratorio1_903.tex"
+        "Laboratorio1_1015.tex"
       ]
     },
     "Latex/ETN1015/Capitulos/C00-Caratula.tex": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Latex/ETN1015/Capitulos/Laboratorio1_903.tex": {
       "isPinned": false,
       "isHidden": false
     },
@@ -5079,7 +5050,13 @@
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
-      "customOrder": []
+      "customOrder": [
+        "L1_E2.m",
+        "L1_E4.m",
+        "L1_E3.m",
+        "L1_E5.m",
+        "L1_E1.m"
+      ]
     },
     "Latex/ETN1015/Anexos/Lab2": {
       "isPinned": false,
@@ -5230,6 +5207,30 @@
       "isHidden": false
     },
     "Latex/Graficos_legacy/Fig39.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/ETN1015/Anexos/Lab1/L1_E2.m": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/ETN1015/Anexos/Lab1/L1_E4.m": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/ETN1015/Anexos/Lab1/L1_E3.m": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/ETN1015/Anexos/Lab1/L1_E5.m": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/ETN1015/Anexos/Lab1/L1_E1.m": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/ETN1015/Capitulos/Laboratorio1_1015.tex": {
       "isPinned": false,
       "isHidden": false
     }

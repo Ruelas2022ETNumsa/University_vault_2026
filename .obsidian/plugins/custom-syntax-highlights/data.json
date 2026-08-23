@@ -1,0 +1,29 @@
+{
+  "extensionMappings": [
+    {
+      "extension": "tex",
+      "language": ""
+    },
+    {
+      "extension": "json",
+      "language": ""
+    },
+    {
+      "extension": "yaml",
+      "language": ""
+    },
+    {
+      "extension": "bib",
+      "language": "ini"
+    },
+    {
+      "extension": "txt",
+      "language": "md"
+    },
+    {
+      "extension": "m",
+      "language": ""
+    }
+  ],
+  "autoSwitchToReading": true
+}

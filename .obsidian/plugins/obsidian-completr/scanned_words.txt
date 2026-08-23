@@ -46133,6 +46133,8 @@ deslizante
 desplazados
 darkgreen
 draft
+dense
+dtft
 Vault
 Verificar
 Variables
@@ -278453,6 +278455,7 @@ lstset
 linewidth
 lstlisting
 linspace
+lstinputlisting
 incluyendo
 im
 instalar
