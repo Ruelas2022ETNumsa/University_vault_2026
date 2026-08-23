@@ -42,7 +42,9 @@
         "F2_1015.md",
         "F3_1015.md",
         "F4_1015.md",
-        "F5_1015.md"
+        "F5_1015.md",
+        "lab1 1.md",
+        "lab1_ETN1015.docx"
       ]
     },
     "MOC": {
@@ -4493,6 +4495,14 @@
       "isHidden": false
     },
     "F5_1015.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "lab1 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "lab1_ETN1015.docx": {
       "isPinned": false,
       "isHidden": false
     }
