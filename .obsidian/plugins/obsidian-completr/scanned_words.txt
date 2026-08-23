@@ -37379,6 +37379,7 @@ Permitiendo
 Planck
 PROCESSING
 Productos
+Primeros
 del
 date
 de
@@ -119549,6 +119550,7 @@ nomas
 newtoniano
 notablemente
 nulas
+nulos
 created
 commit
 cada
@@ -139374,6 +139376,8 @@ uqom
 uPMeoqq
 uRDjO
 unific
+unitarias
+uniformemente
 Galaxy
 Git
 Gr
@@ -288862,6 +288866,8 @@ incluy
 impulsional
 implementemos
 igualar
+interpolando
+idealmente
 Dependencia
 Dropbox
 Dataview
@@ -325199,6 +325205,7 @@ focal
 factorizamos
 forzando
 fuesen
+fijada
 haya
 hace
 hacer
