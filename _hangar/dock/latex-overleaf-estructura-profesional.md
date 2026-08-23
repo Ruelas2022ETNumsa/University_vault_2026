@@ -23,9 +23,9 @@ Sobreescribir con edit_file al cerrar cada sesión.
 %%
 
 **Última sesión:** 2026-08-23 — sesión alx-rul
-**Retomar desde:** `Main_Include.tex` — decisión tomada: migrar a `subfiles`, no se tocó nada aún
-**Completado esta sesión:** lectura de README y Main_Include.tex, investigación web de enfoques multi-archivo, decisión de arquitectura
-**Próximo paso:** agregar `\usepackage{subfiles}` en `Preambulo.tex`, luego editar `Main_Include.tex` y cada capítulo
+**Retomar desde:** paso 7 — definir convención `\lstinputlisting` para `Anexos/`
+**Completado esta sesión:** migración completa a `subfiles` verificada en Overleaf (main + standalone), corrección de numeración de páginas, supresión de watermark draft, `\graphicspath` multi-ruta con Lab1–Lab5 y Legacy, README actualizado
+**Próximo paso:** definir estructura y convención `\lstinputlisting` para `Anexos/`
 **Preguntas de cierre:** —
 
 ---
@@ -83,19 +83,21 @@ El preámbulo y la carátula siguen con `\input` — no se tocan.
 ## Tareas
 
 **Migración a subfiles:**
-- [ ] `Preambulo/Preambulo.tex` — agregar `\usepackage{subfiles}`
-- [ ] `Main_Include.tex` — cambiar `\input{Capitulos/...}` → `\subfile{Capitulos/...}` para capítulos
-- [ ] `Capitulos/Laboratorio1_903.tex` — agregar encabezado `subfiles` y `\end{document}` final
-- [ ] Verificar compilación completa desde `Main_Include.tex` en Overleaf
-- [ ] Verificar compilación standalone de `Laboratorio1_903.tex` en Overleaf
+- [x] `Preambulo/Preambulo.tex` — agregar `\usepackage{subfiles}`
+- [x] `Main_Include.tex` — cambiar `\input{Capitulos/...}` → `\subfile{Capitulos/...}` para capítulos
+- [x] `Capitulos/Laboratorio1_903.tex` — agregar encabezado `subfiles` y `\end{document}` final
+- [x] `Main_Include.tex` — `\setcounter{page}{1}` tras carátula para numeración correcta
+- [x] `Capitulos/Laboratorio1_903.tex` — `\backgroundsetup{contents={}}` para suprimir draft standalone
+- [x] Verificar compilación completa desde `Main_Include.tex` en Overleaf
+- [x] Verificar compilación standalone de `Laboratorio1_903.tex` en Overleaf
 
 **Estructura y organización:**
-- [ ] `Preambulo/Preambulo.tex` — verificar y actualizar `\graphicspath` a multi-ruta
-- [ ] `Graficos/` — crear subcarpetas `Lab1/` y `Lab2/`
+- [x] `Preambulo/Preambulo.tex` — actualizar `\graphicspath` a multi-ruta (Lab1–Lab5, Legacy)
+- [x] `Graficos/` — subcarpetas Lab1–Lab5 creadas, Cap3legacy renombrada a Legacy
 - [ ] `Anexos/` — definir estructura y convención con `\lstinputlisting`
 
 **Documentación:**
-- [ ] `README.md` — actualizar con nueva arquitectura `subfiles` y convenciones
+- [x] `README.md` — actualizar con nueva arquitectura `subfiles` y convenciones
 
 ---
 
