@@ -1,0 +1,21 @@
+% ============================
+% ENTORNOS PERSONALIZADOS — Entornos.tex
+% ============================
+%
+% CONTENIDO:
+%   1. cuadropregunta — caja con fondo azul claro para enunciados/preguntas
+%
+% NOTA: Requiere \usepackage{tcolorbox} o \usepackage{xcolor} + colortbl.
+%       El color azulclaro y azulprinc vienen de Preambulo.tex
+%
+% ============================
+
+% --- Caja para enunciados o preguntas destacadas ---
+% Uso: \begin{cuadropregunta} ... \end{cuadropregunta}
+\newenvironment{cuadropregunta}{%
+  \begin{center}
+  \colorbox{azulclaro}{\begin{minipage}{0.92\textwidth}
+  \vspace{6pt}\itshape\color{azulprinc}
+}{%
+  \vspace{6pt}\end{minipage}}\end{center}
+}

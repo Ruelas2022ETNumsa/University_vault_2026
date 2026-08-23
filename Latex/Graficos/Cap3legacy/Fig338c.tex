@@ -1,0 +1,24 @@
+\begin{tikzpicture}
+[midarrow/.style={decoration={markings, mark=at position 0.5 with {\arrow{latex}}},postaction={decorate}}]
+\tikzstyle{obj} = [circle, minimum width=4pt, draw=red, inner sep=0pt]
+\tikzstyle{loopdown} = [min distance=15mm,in=-135,out=-45,looseness=10, draw=blue]
+\tikzstyle{loopup} = [min distance=15mm,in=135,out=45,looseness=10, draw=blue]
+
+\node[obj, label=left:$x_{1}$] (x1) at (2,0) {};
+\node[obj, label=below:$x_{2}$] (x2) at (4,0) {};
+\node[obj, label=below:$x_{4}$] (x4) at (6,0) {};
+\node[obj, label=right:$x_{5}$] (x5) at (8,0) {};
+\draw[midarrow,blue] (x1) to node[below, font={\footnotesize},black] {$a$} (x2);
+\draw[midarrow,blue] (x2) to node[below, font={\footnotesize},black] {$\frac{bc}{1-cf}$} (x4);
+\draw[midarrow,blue] (x4) to node[below, font={\footnotesize},black] {$d$} (x5);
+\draw[midarrow,blue,bend right = 30] (x5) to node[above, font={\footnotesize},black] {$\frac{e}{1-cf}$} (x4);
+\draw[midarrow,blue,bend right = 60] (x5) to node[below, font={\footnotesize},black] {$g$} (x2);
+
+%\path[->, draw=blue]
+%	(x1) edge node[swap] {$a$} (x2)
+%	(x2) edge node[swap] {$\frac{bc}{1-cf}$} (x4)
+%	(x4) edge node[swap] {$d$} (x5)
+	
+%	(x5) edge [bend right] node [swap] {$\frac{e}{1-cf}$} (x4)
+%	(x5) edge [bend right=70] node [swap] {$g$} (x2);
+\end{tikzpicture}

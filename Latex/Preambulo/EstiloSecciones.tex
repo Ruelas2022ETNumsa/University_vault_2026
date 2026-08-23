@@ -1,0 +1,31 @@
+% ============================
+% ESTILO DE SECCIONES — EstiloSecciones.tex
+% ============================
+%
+% CONTENIDO:
+%   1. Secciones    — \titleformat para \section y \subsection
+%   2. Encabezado   — fancyhdr por informe (lhead con título, rhead con página)
+%
+% NOTA: \titleformat requiere \usepackage{titlesec} — incluido en Preambulo.tex
+%       Los colores azulprinc y textgris vienen de Preambulo.tex
+%       El título del encabezado debe actualizarse en cada informe.
+%
+% ============================
+
+% --- Formato de secciones ---
+\titleformat{\section}
+  {\large\bfseries\color{azulprinc}}
+  {\thesection.}{0.5em}{}[\textcolor{azulprinc}{\titlerule[0.8pt]}]
+
+\titleformat{\subsection}
+  {\normalsize\bfseries\color{azulprinc}}
+  {\thesubsection.}{0.5em}{}
+
+% --- Encabezado por informe ---
+% Modificá \tituloinforme en cada capítulo antes de incluir este archivo,
+% o redefiní \fancyhead directamente en el archivo del informe si el título cambia.
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\color{textgris}\tituloinforme}
+\fancyhead[R]{\small\color{textgris}\thepage}
+\renewcommand{\headrulewidth}{0.4pt}

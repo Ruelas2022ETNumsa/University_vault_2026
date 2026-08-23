@@ -1,0 +1,36 @@
+% ============================
+% ESTILO DE PÁGINA
+% ============================
+%
+% CONTENIDO:
+%   1. Encabezado/pie   — lhead (sección), rhead (página), cfoot, headrulewidth
+%   2. Listados         — firstnumber, numberfirstline (extiende lstset de Preambulo)
+%   3. Opcional         — marco de página con fancypage (desactivado)
+%
+% ============================
+
+% --- Encabezado y pie de página ---
+% NOTA: \pagestyle{fancy} debe activarse en el documento principal (main.tex)
+%       Se mantiene comentado aquí para evitar conflictos con la carátula.
+%\pagestyle{fancy}
+\lhead{\tiny\rightmark}            % Sección actual (izquierda)
+\rhead{\thepage}                   % Número de página (derecha)
+\cfoot{}                           % Pie de página central vacío
+\renewcommand{\headrulewidth}{1pt} % Línea decorativa bajo el encabezado
+
+% --- Extensión del lstset global (definido en Preambulo.tex) ---
+% Solo se agregan campos no presentes en el lstset base.
+\lstset{
+  firstnumber=1,        % Reiniciar numeración desde 1 en cada listado
+  numberfirstline=true  % Numerar también la primera línea
+}
+
+% ============================
+% OPCIONAL: MARCO EN LAS PÁGINAS
+% ============================
+% Descomenta si querés un borde visible en cada página.
+% Requiere \usepackage{fancyhdr,geometry,fancybox}
+
+% \fancypage{\setlength{\fboxsep}{10pt}\fbox}{}
+% - Dibuja un marco rectangular alrededor del área de texto
+% - Ajustá \fboxsep para cambiar la distancia entre texto y borde

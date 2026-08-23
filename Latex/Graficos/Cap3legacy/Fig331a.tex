@@ -1,0 +1,12 @@
+\begin{tikzpicture}
+[midarrow/.style={decoration={markings, mark=at position 0.5 with {\arrow{latex}}},postaction={decorate}}]
+\tikzstyle{obj} = [circle, minimum width=4pt, draw=red, inner sep=0pt]
+
+\node[obj, label=left:$x_{1}$] (x1) at (2,0) {};
+\node[obj, label=right:$x_{2}$] (x2) at (4,0) {};
+\draw[midarrow,blue,bend left=60] (x1) to node[above, font={\footnotesize},black] {$a$} (x2);
+\draw[midarrow,blue,bend right=40] (x1) to node[above, font={\footnotesize},black] {$b$} (x2);
+%\path[->, draw=blue]
+%	(x1) edge [bend left=60] node [above] {$a$} (x2)
+%	(x1) edge [bend right=40] node [above] {$b$} (x2);
+\end{tikzpicture}

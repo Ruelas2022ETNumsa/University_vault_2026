@@ -1,0 +1,754 @@
+% ============================
+% LABORATORIO 1 — Laboratorio1_903.tex
+% ============================
+%
+% CONTENIDO:
+%   Sec. 1 — Señales de tiempo continuo periódicas y no periódicas
+%   Sec. 2 — Convolución lineal de secuencias discretas
+%   Sec. 3 — Sistema de tiempo discreto recursivo
+%   Sec. 4 — Transformada de Fourier de Tiempo Discreto (DTFT)
+%   Sec. 5 — Transformada Discreta de Fourier (DFT)
+%
+% DEPENDENCIAS (cargadas desde Main_Include.tex):
+%   Preambulo.tex       — paquetes, colores, estilos de código
+%   PaginaEstilo.tex    — lstset global
+%   EstiloSecciones.tex — \titleformat, fancyhdr
+%   Entornos.tex        — cuadropregunta
+%
+% NOTA: \tituloinforme se define aquí para que EstiloSecciones lo use en
+%       el encabezado. Cambiarlo por el título real del informe.
+%
+% ============================
+
+% --- Título del encabezado para este informe ---
+\newcommand{\tituloinforme}{Digitalización de Señales — Laboratorio 1}
+
+% ══════════════════════════════════════════════════════════════════════
+\section{Señales de tiempo continuo periódicas y no periódicas}
+
+\textbf{Graficar} las siguientes señales de tiempo continuo usando MATLAB o Python.
+Determinar qué señal es periódica y seleccionar un rango de tiempo que cubra
+al menos tres períodos, presentándola en una gráfica separada.
+
+\begin{align}
+    x_1(t) &= 5\cos\!\left[2\pi(15)t + 0.25\pi\right] \\[6pt]
+    x_2(t) &= 5\cos\!\left[2\pi(15)t + 0.25\pi\right]
+             + 5\cos\!\left[2\pi(10)t + 0.3\pi\right]
+\end{align}
+
+% ──────────────────────────────────────────────────────────────────────
+\subsection*{Resolución analítica}
+
+% ·· Señal x1 ··
+\subsubsection*{Señal \boldmath$x_1(t)$}
+
+Toda sinusoide continua $A\cos(\omega_0 t + \phi)$ con $\omega_0 \neq 0$
+es \textbf{siempre periódica}. Su período fundamental es:
+
+\[
+    T_1 = \frac{2\pi}{\omega_1} = \frac{2\pi}{30\pi} = \frac{1}{15}\ \text{s}
+    \approx 0{,}0667\ \text{s}
+\]
+
+\[
+    \boxed{x_1(t)\ \text{es periódica} \quad \Rightarrow \quad T_1 = \tfrac{1}{15}\ \text{s}}
+\]
+
+\begin{figure}[H]
+    \centering
+    \rule{\linewidth}{0.4pt}\\[4pt]
+    {\small\itshape [Gráfica: $x_1(t)$ — 3 períodos ($T_1 = 1/15$ s)]}\\[4pt]
+    \rule{\linewidth}{0.4pt}
+    \caption{Señal $x_1(t)$ graficada en 3 períodos.}
+\end{figure}
+
+% ·· Señal x2 ··
+\subsubsection*{Señal \boldmath$x_2(t)$}
+
+$x_2(t) = x_1(t) + 5\cos[2\pi(10)t + 0.3\pi]$, donde $T_1 = \tfrac{1}{15}$ s
+ya fue determinado. Para el segundo componente:
+
+\[
+    \omega_2 = 20\pi\ \text{rad/s}
+    \qquad\Rightarrow\qquad
+    T_2 = \frac{2\pi}{20\pi} = \frac{1}{10}\ \text{s}
+\]
+
+\paragraph{Criterio de periodicidad.}
+La suma de dos sinusoides es periódica si y solo si la razón de sus períodos
+es racional:
+
+\[
+    \frac{T_1}{T_2} = \frac{1/15}{1/10} = \frac{2}{3} \in \mathbb{Q}
+    \quad\Longrightarrow\quad \text{la señal es periódica.}
+\]
+
+Se buscan $k_1, k_2 \in \mathbb{Z}^+$ primos entre sí tales que
+$k_1 T_1 = k_2 T_2$:
+
+\[
+    k_1 = 3,\quad k_2 = 2
+    \qquad\Rightarrow\qquad
+    T_0 = 3 \cdot \frac{1}{15} = 2 \cdot \frac{1}{10} = \frac{1}{5}\ \text{s}
+\]
+
+\[
+    \boxed{x_2(t)\ \text{es periódica} \quad \Rightarrow \quad T_0 = \tfrac{1}{5}\ \text{s} = 0{,}2\ \text{s}}
+\]
+
+\begin{figure}[H]
+    \centering
+    \rule{\linewidth}{0.4pt}\\[4pt]
+    {\small\itshape [Gráfica: $x_2(t)$ — 3 períodos ($T_0 = 0{,}2$ s)]}\\[4pt]
+    \rule{\linewidth}{0.4pt}
+    \caption{Señal $x_2(t)$ graficada en 3 períodos.}
+\end{figure}
+
+% ──────────────────────────────────────────────────────────────────────
+\subsection*{Código MATLAB}
+
+\begin{lstlisting}[style=matlab_dark,
+    caption={Ejercicio 1 — Periodicidad y graficación de señales continuas},
+    label={lst:ej1}]
+% ETN1015 - Ejercicio 1
+clear; clc; close all;
+
+T1 = 1/15;
+T0 = 0.2;
+dt = 0.0005;
+
+x1 = @(t) 5*cos(2*pi*15*t + 0.25*pi);
+x2 = @(t) 5*cos(2*pi*15*t + 0.25*pi) + 5*cos(2*pi*10*t + 0.3*pi);
+
+% Comparacion general
+t_comp = 0:dt:3*T0;
+figure(1);
+plot(t_comp, x1(t_comp), 'b', 'LineWidth', 1.5); hold on;
+plot(t_comp, x2(t_comp), 'r', 'LineWidth', 1.5);
+xlabel('t (s)'); ylabel('x(t)');
+title('Senal 1 y Senal 2 - 3 periodos de x_2(t)');
+legend('x_1(t)', 'x_2(t)'); grid on; hold off;
+
+% Senal 1 - 3 periodos
+t_x1 = 0:dt:3*T1;
+figure(2);
+plot(t_x1, x1(t_x1), 'b', 'LineWidth', 1.5);
+xlabel('t (s)'); ylabel('x_1(t)');
+title('Senal 1 - 3 periodos (T_1 = 1/15 s)'); grid on;
+
+% Senal 2 - 3 periodos
+t_x2 = 0:dt:3*T0;
+figure(3);
+plot(t_x2, x2(t_x2), 'r', 'LineWidth', 1.5);
+xlabel('t (s)'); ylabel('x_2(t)');
+title('Senal 2 - 3 periodos (T_0 = 0.2 s)'); grid on;
+\end{lstlisting}
+
+% ══════════════════════════════════════════════════════════════════════
+\newpage
+\section{Convolución lineal de secuencias discretas}
+
+Determinar la convolución lineal $y(n) = x(n) * h(n)$, donde $x(n)$ es la
+entrada y $h(n)$ la respuesta al impulso. Graficar la salida en todos los
+instantes donde $y(n) \neq 0$.
+
+\[
+    x(n) = \begin{bmatrix} 1 & 1 & 1 & 1 \end{bmatrix}, \quad n = 0,1,2,3
+    \qquad
+    h(n) = \begin{bmatrix} 1 & 2 & 3 \end{bmatrix}, \quad n = 0,1,2
+\]
+
+% ──────────────────────────────────────────────────────────────────────
+\subsection*{Resolución analítica}
+
+\subsubsection*{Soporte de la salida}
+
+\[
+    L_y = N_x + N_h - 1 = 4 + 3 - 1 = 6
+    \quad\Rightarrow\quad n \in [0,\ 5]
+\]
+
+\subsubsection*{Suma de convolución}
+
+Como $x(k) = 1$ para todo $k \in \{0,1,2,3\}$, la suma de convolución
+se reduce a:
+
+\[
+    y(n) = \sum_{k=0}^{3} h(n-k)
+\]
+
+Desarrollo término a término:
+
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{ccc}
+\toprule
+\rowcolor{azulprinc}
+\textcolor{white}{\textbf{$n$}} &
+\textcolor{white}{\textbf{Productos $x(k)\,h(n-k)$}} &
+\textcolor{white}{\textbf{$y(n)$}} \\
+\midrule
+\rowcolor{grisclaro}
+$0$ & $h(0) = 1$ & $1$ \\
+$1$ & $h(1)+h(0) = 2+1$ & $3$ \\
+\rowcolor{grisclaro}
+$2$ & $h(2)+h(1)+h(0) = 3+2+1$ & $6$ \\
+$3$ & $h(2)+h(1)+h(0) = 3+2+1$ & $6$ \\
+\rowcolor{grisclaro}
+$4$ & $h(2)+h(1) = 3+2$ & $5$ \\
+$5$ & $h(2) = 3$ & $3$ \\
+\bottomrule
+\end{tabular}
+\caption{Desarrollo de la convolución término a término.}
+\end{table}
+
+\[
+    \boxed{y(n) = \{\underline{1},\ 3,\ 6,\ 6,\ 5,\ 3\},
+    \qquad 0 \le n \le 5}
+\]
+
+\subsubsection*{Tabla de productos desplazados}
+
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{cccccccc}
+\toprule
+\rowcolor{azulprinc}
+\textcolor{white}{\textbf{$k$}} &
+\textcolor{white}{\textbf{0}} &
+\textcolor{white}{\textbf{1}} &
+\textcolor{white}{\textbf{2}} &
+\textcolor{white}{\textbf{3}} &
+\textcolor{white}{\textbf{4}} &
+\textcolor{white}{\textbf{5}} &
+\textcolor{white}{\textbf{$y(n)$}} \\
+\midrule
+\rowcolor{grisclaro}
+$x(k)$    & \textbf{1} & \textbf{1} & \textbf{1} & \textbf{1} & 0 & 0 & --- \\
+$h(0-k)$  & 1 & 0 & 0 & 0 & 0 & 0 & \textbf{1} \\
+\rowcolor{grisclaro}
+$h(1-k)$  & 2 & 1 & 0 & 0 & 0 & 0 & \textbf{3} \\
+$h(2-k)$  & 3 & 2 & 1 & 0 & 0 & 0 & \textbf{6} \\
+\rowcolor{grisclaro}
+$h(3-k)$  & 0 & 3 & 2 & 1 & 0 & 0 & \textbf{6} \\
+$h(4-k)$  & 0 & 0 & 3 & 2 & 1 & 0 & \textbf{5} \\
+\rowcolor{grisclaro}
+$h(5-k)$  & 0 & 0 & 0 & 3 & 2 & 1 & \textbf{3} \\
+\bottomrule
+\end{tabular}
+\caption{Productos desplazados de la convolución.}
+\end{table}
+
+\subsubsection*{Diagrama de tallo}
+% [pegar imagen cuando esté disponible]
+%\begin{figure}[H]
+%\centering
+%\begin{tikzpicture}[scale=1.1]
+%    \draw[->] (-0.5,0) -- (6.5,0) node[right] {$n$};
+%    \draw[->] (0,-0.3) -- (0,7) node[above] {$y(n)$};
+%    \foreach \x/\y in {0/1, 1/3, 2/6, 3/6, 4/5, 5/3}{
+%        \draw[teal, thick] (\x,0) -- (\x,\y);
+%        \fill[teal] (\x,\y) circle (2.5pt);
+%        \node[above, yshift=2pt] at (\x,\y) {\footnotesize $\y$};
+%        \node[below, yshift=-4pt] at (\x,0) {\footnotesize $\x$};
+%    }
+%\end{tikzpicture}
+%\caption{Salida $y(n) = x(n)*h(n)$ en los instantes $0 \le n \le 5$.}
+%\end{figure}
+
+% ──────────────────────────────────────────────────────────────────────
+\subsection*{Código MATLAB}
+
+\begin{lstlisting}[style=matlab_dark,
+    caption={Ejercicio 2 --- Convoluci\'on lineal discreta},
+    label={lst:ej2}]
+% ETN1015 - Ejercicio 2: Convolucion lineal discreta
+clear; clc; close all;
+
+x = [1, 1, 1, 1];  nx = 0:3;
+h = [1, 2, 3];     nh = 0:2;
+
+y = conv(x, h);
+ny = (nx(1)+nh(1)) : (nx(end)+nh(end));
+
+figure(1);
+stem(ny, y, 'filled', 'LineWidth', 1.5, 'Color', [0 0.4470 0.7410]);
+xlabel('n'); ylabel('y(n)');
+title('y(n) = x(n) * h(n)');
+xlim([ny(1)-1, ny(end)+1]); ylim([0, max(y)+1]);
+grid on;
+\end{lstlisting}
+
+% ══════════════════════════════════════════════════════════════════════
+\newpage
+\section{Sistema de tiempo discreto recursivo}
+
+Considere un sistema de tiempo discreto recursivo con entrada $x(n)$
+y salida $y(n)$, descrito por la siguiente ecuación en diferencias:
+
+\[
+    y(n) = 2\,y(n-1) + x(n), \qquad x(n) = \delta(n), \qquad y(-1) = 0
+\]
+
+Determinar $y(n)$ para $0 \le n \le 5$ y graficar la respuesta.
+
+% ──────────────────────────────────────────────────────────────────────
+\subsection*{Resolución analítica}
+
+\subsubsection*{Desarrollo muestra a muestra}
+
+La delta unitaria vale:
+
+\[
+    x(n) = \begin{cases} 1, & n = 0 \\ 0, & n \neq 0 \end{cases}
+\]
+
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{ccc}
+\toprule
+\rowcolor{azulprinc}
+\textcolor{white}{\textbf{$n$}} &
+\textcolor{white}{\textbf{$y(n) = 2\,y(n-1) + x(n)$}} &
+\textcolor{white}{\textbf{$y(n)$}} \\
+\midrule
+\rowcolor{grisclaro}
+$0$ & $2(0) + 1$ & $1$ \\
+$1$ & $2(1) + 0$ & $2$ \\
+\rowcolor{grisclaro}
+$2$ & $2(2) + 0$ & $4$ \\
+$3$ & $2(4) + 0$ & $8$ \\
+\rowcolor{grisclaro}
+$4$ & $2(8) + 0$ & $16$ \\
+$5$ & $2(16) + 0$ & $32$ \\
+\bottomrule
+\end{tabular}
+\caption{Desarrollo muestra a muestra del sistema recursivo.}
+\end{table}
+
+La forma general de la respuesta es:
+
+\[
+    \boxed{y(n) = 2^n\, u(n)}
+\]
+
+\begin{figure}[H]
+    \centering
+    % [pegar imagen cuando esté disponible]
+    \caption{Respuesta $y(n) = 2^n\,u(n)$ para $0 \le n \le 5$.}
+\end{figure}
+
+\subsubsection*{Análisis de estabilidad}
+
+Aplicando la Transformada $\mathcal{Z}$ a la ecuación en diferencias
+(bajo condiciones de reposo):
+
+\[
+    Y(z)\!\left(1 - 2z^{-1}\right) = X(z)
+    \quad\Longrightarrow\quad
+    H(z) = \frac{Y(z)}{X(z)} = \frac{z}{z - 2}
+\]
+
+El polo del sistema se ubica en $z_p = 2$. Como $|z_p| = 2 > 1$,
+el polo cae \textbf{fuera del círculo unitario} y la ROC del sistema
+causal ($|z| > 2$) no incluye $|z| = 1$.
+
+\[
+    \boxed{\text{El sistema es \textbf{inestable BIBO} —
+    la salida crece exponencialmente ante entrada acotada.}}
+\]
+
+% ──────────────────────────────────────────────────────────────────────
+\subsection*{Código MATLAB}
+
+\begin{lstlisting}[style=matlab_dark,
+    caption={Ejercicio 3 --- Sistema recursivo inestable},
+    label={lst:ej3}]
+% ETN1015 - Ejercicio 3: Sistema recursivo inestable
+clear; clc; close all;
+
+N = 6;
+x = zeros(1, N);  x(1) = 1;   % x(n) = delta(n)
+y = zeros(1, N);
+y_prev = 0;                    % y(-1) = 0
+
+for n = 1:N
+    if n == 1
+        y(n) = 2*y_prev + x(n);
+    else
+        y(n) = 2*y(n-1) + x(n);
+    end
+end
+
+n_vec = 0:5;
+figure(1);
+stem(n_vec, y, 'filled', 'LineWidth', 1.5, 'Color', [0.8500 0.3250 0.0980]);
+xlabel('n'); ylabel('y(n)');
+title('y(n) = 2y(n-1) + delta(n)  -  polo en z = 2 (inestable)');
+xlim([-1, 6]); ylim([0, max(y)+5]);
+grid on;
+\end{lstlisting}
+
+% ══════════════════════════════════════════════════════════════════════
+\newpage
+\section{Transformada de Fourier de Tiempo Discreto (DTFT)}
+
+Determinar la DTFT de las siguientes secuencias y graficar magnitud y fase.
+
+\[
+    x_a(n) = \sum_{k=0}^{4}\delta(n-k)
+    \qquad\qquad
+    x_b(n) = (0{,}5)^{|n|}
+\]
+
+% ──────────────────────────────────────────────────────────────────────
+\subsection*{Resolución analítica}
+
+\subsubsection*{Señal $x_a(n)$ — Pulso rectangular de 5 muestras}
+
+Aplicando la definición de la DTFT sobre el soporte $0 \le n \le 4$:
+
+\[
+    X_a(e^{j\omega}) = \sum_{n=0}^{4} e^{-j\omega n}
+    = \frac{1 - e^{-j5\omega}}{1 - e^{-j\omega}}
+\]
+
+Factorizando la fase mitad en numerador y denominador y aplicando
+$e^{j\theta} - e^{-j\theta} = 2j\sin\theta$:
+
+\[
+    \boxed{X_a(e^{j\omega}) = e^{-j2\omega}\,
+    \frac{\sin\!\left(\dfrac{5\omega}{2}\right)}
+         {\sin\!\left(\dfrac{\omega}{2}\right)}}
+\]
+
+\begin{itemize}[leftmargin=1.5cm, itemsep=2pt]
+    \item \textbf{Magnitud:}
+        $\displaystyle\left|\frac{\sin(5\omega/2)}{\sin(\omega/2)}\right|$
+        — máximo $5$ en $\omega = 0$, ceros en múltiplos de $\dfrac{2\pi}{5}$.
+    \item \textbf{Fase:} $-2\omega$ más saltos de $\pm\pi$ donde el
+        cociente de senos cambia de signo.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    % [pegar imagen cuando esté disponible]
+    \caption{Magnitud y fase de $X_a(e^{j\omega})$.}
+\end{figure}
+
+% ·· Señal b ··
+\subsubsection*{Señal $x_b(n)$ — Secuencia bilateral}
+
+La secuencia es bilateral e infinita. Se separa en parte anticausal
+($n < 0$) y causal ($n \ge 0$):
+
+\[
+    X_b(e^{j\omega})
+    = \underbrace{\sum_{m=1}^{\infty}(0{,}5\;e^{j\omega})^m}_{\text{anticausal}}
+    + \underbrace{\sum_{n=0}^{\infty}(0{,}5\;e^{-j\omega})^n}_{\text{causal}}
+\]
+
+Ambas series geométricas convergen ($|0{,}5\,e^{\pm j\omega}| = 0{,}5 < 1$):
+
+\[
+    X_b(e^{j\omega})
+    = \frac{0{,}5\,e^{j\omega}}{1 - 0{,}5\,e^{j\omega}}
+    + \frac{1}{1 - 0{,}5\,e^{-j\omega}}
+\]
+
+Reduciendo a denominador común:
+
+\[
+    \boxed{X_b(e^{j\omega}) = \frac{3}{5 - 4\cos(\omega)}}
+\]
+
+Como $x_b(n)$ es real y par, $X_b$ es puramente real y positiva:
+
+\begin{itemize}[leftmargin=1.5cm, itemsep=2pt]
+    \item \textbf{Magnitud:} $\dfrac{3}{5-4\cos(\omega)}$
+        — máximo $3$ en $\omega = 0$, mínimo $\dfrac{1}{3}$ en $\omega = \pm\pi$.
+    \item \textbf{Fase:} $0$ para todo $\omega$.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    % [pegar imagen cuando esté disponible]
+    \caption{Magnitud y fase de $X_b(e^{j\omega})$.}
+\end{figure}
+
+% ──────────────────────────────────────────────────────────────────────
+\subsection*{Código MATLAB}
+
+\begin{lstlisting}[style=matlab_dark,
+    caption={Ejercicio 4 --- DTFT de se\~nales discretas},
+    label={lst:ej4}]
+% ETN1015 - Ejercicio 4: DTFT de senales discretas
+clear; clc; close all;
+
+w = linspace(-pi, pi, 1000);
+
+% --- Senal a ---
+n_a = 0:4;
+x_a = ones(1, 5);
+X_a = x_a * exp(-1j * (n_a' * w));
+
+figure(1);
+subplot(2,1,1);
+plot(w/pi, abs(X_a), 'LineWidth', 1.5);
+xlabel('\omega / \pi'); ylabel('|X_a|');
+title('Senal a - Magnitud DTFT'); grid on;
+
+subplot(2,1,2);
+plot(w/pi, angle(X_a)/pi, 'r', 'LineWidth', 1.5);
+xlabel('\omega / \pi'); ylabel('\angle X_a  (rad/\pi)');
+title('Senal a - Fase DTFT'); grid on;
+
+% --- Senal b (truncada en Nt = 15: (0.5)^15 aprox 3e-5) ---
+Nt = 15;
+n_b = -Nt:Nt;
+x_b = (0.5).^abs(n_b);
+X_b = x_b * exp(-1j * (n_b' * w));
+
+figure(2);
+subplot(2,1,1);
+plot(w/pi, abs(X_b), 'LineWidth', 1.5);
+xlabel('\omega / \pi'); ylabel('|X_b|');
+title('Senal b - Magnitud DTFT'); grid on;
+
+subplot(2,1,2);
+plot(w/pi, angle(X_b)/pi, 'r', 'LineWidth', 1.5);
+xlabel('\omega / \pi'); ylabel('\angle X_b  (rad/\pi)');
+title('Senal b - Fase DTFT'); ylim([-1.1 1.1]); grid on;
+\end{lstlisting}
+
+% ══════════════════════════════════════════════════════════════════════
+\newpage
+\section{Transformada Discreta de Fourier (DFT)}
+
+Seleccionar 5 puntos de cada señal del Ejercicio 4 y calcular la DFT
+para $N = 5$, $N = 10$ y $N = 50$. Comparar cada gráfica con la DTFT
+obtenida anteriormente.
+
+\[
+    x_a(n) = [1,\ 1,\ 1,\ 1,\ 1]
+    \qquad\qquad
+    x_b(n) = [1,\ 0{,}5,\ 0{,}25,\ 0{,}125,\ 0{,}0625]
+\]
+
+% ──────────────────────────────────────────────────────────────────────
+\subsection*{Resolución analítica}
+
+\subsubsection*{Señal $x_a$ — Forma cerrada general}
+
+Aplicando la definición de la DFT de $N$ puntos:
+
+\[
+    X_a[k] = \sum_{n=0}^{4} e^{-j\frac{2\pi}{N}kn}
+    = \frac{1 - e^{-j\frac{10\pi}{N}k}}{1 - e^{-j\frac{2\pi}{N}k}},
+    \qquad k \neq 0
+\]
+
+Simplificando con la identidad de Euler:
+
+\[
+    \boxed{X_a[k] = e^{-j\frac{4\pi}{N}k}\,
+    \frac{\sin\!\left(\dfrac{5\pi k}{N}\right)}
+         {\sin\!\left(\dfrac{\pi k}{N}\right)}}
+\]
+
+\paragraph{$N = 5$.}
+$\sin(5\pi k/5) = \sin(\pi k) = 0$ para $k = 1,2,3,4$
+— todos nulos salvo DC:
+\[
+    X_a[k] = [5,\ 0,\ 0,\ 0,\ 0]
+\]
+
+\paragraph{$N = 10$.}
+Los ceros coinciden en $k$ par ($k = 2,4,6,8$). Valores para $k$ impar:
+
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{cc}
+\toprule
+\rowcolor{azulprinc}
+\textcolor{white}{\textbf{$k$}} &
+\textcolor{white}{\textbf{$X_a[k]$}} \\
+\midrule
+\rowcolor{grisclaro}
+$0$ & $5$ \\
+$1$ & $1 - j3{,}0777$ \\
+\rowcolor{grisclaro}
+$3$ & $1 - j0{,}7265$ \\
+$5$ & $1$ \\
+\rowcolor{grisclaro}
+$7$ & $1 + j0{,}7265$ \\
+$9$ & $1 + j3{,}0777$ \\
+\bottomrule
+\end{tabular}
+\caption{$X_a[k]$ para $N = 10$, valores en $k$ impar.}
+\end{table}
+
+\paragraph{$N = 50$.}
+50 muestras uniformemente espaciadas en $[0, 2\pi)$ de la envolvente
+$|X_a(e^{j\omega})|$. Primeros valores:
+\[
+    X_a[0] = 5, \quad
+    X_a[1] \approx 4{,}767 - j1{,}224, \quad
+    X_a[2] \approx 4{,}110 - j2{,}259, \quad \dots
+\]
+
+\begin{figure}[H]
+    \centering
+    % [pegar imagen cuando esté disponible]
+    \caption{DFT de $x_a$ para $N = 5$, $10$ y $50$ vs.\ DTFT de referencia.}
+\end{figure}
+
+% ·· Señal b ··
+\subsubsection*{Señal $x_b$ — Forma cerrada general}
+
+Serie geométrica con razón $q = 0{,}5\,e^{-j\frac{2\pi}{N}k}$:
+
+\[
+    \boxed{X_b[k] = \frac{1 - \dfrac{1}{32}\,e^{-j\frac{10\pi}{N}k}}
+                        {1 - 0{,}5\,e^{-j\frac{2\pi}{N}k}}}
+\]
+
+\paragraph{$N = 5$.}
+$e^{-j2\pi k} = 1$ → numerador $= 31/32$ para todo $k$:
+
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{cc}
+\toprule
+\rowcolor{azulprinc}
+\textcolor{white}{\textbf{$k$}} &
+\textcolor{white}{\textbf{$X_b[k]$}} \\
+\midrule
+\rowcolor{grisclaro}
+$0$ & $1{,}9375$ \\
+$1$ & $0{,}8704 - j0{,}4896$ \\
+\rowcolor{grisclaro}
+$2$ & $0{,}6608 - j0{,}1383$ \\
+$3$ & $0{,}6608 + j0{,}1383$ \\
+\rowcolor{grisclaro}
+$4$ & $0{,}8704 + j0{,}4896$ \\
+\bottomrule
+\end{tabular}
+\caption{$X_b[k]$ para $N = 5$.}
+\end{table}
+
+\paragraph{$N = 10$.}
+$e^{-j\pi k} = (-1)^k$ → numerador $31/32$ para $k$ par, $33/32$ para $k$ impar:
+
+\[
+    X_b[k] = \begin{cases}
+        \dfrac{31}{32 - 16\,e^{-j\frac{\pi}{5}k}}, & k\ \text{par} \\[8pt]
+        \dfrac{33}{32 - 16\,e^{-j\frac{\pi}{5}k}}, & k\ \text{impar}
+    \end{cases}
+\]
+
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{cc}
+\toprule
+\rowcolor{azulprinc}
+\textcolor{white}{\textbf{$k$}} &
+\textcolor{white}{\textbf{$X_b[k]$}} \\
+\midrule
+\rowcolor{grisclaro}
+$0$ & $1{,}9375$ \\
+$1$ & $1{,}3926 - j0{,}6873$ \\
+\rowcolor{grisclaro}
+$2$ & $0{,}8704 - j0{,}4896$ \\
+$3$ & $0{,}7637 - j0{,}3145$ \\
+\rowcolor{grisclaro}
+$4$ & $0{,}6608 - j0{,}1383$ \\
+$5$ & $0{,}6875$ \\
+\rowcolor{grisclaro}
+$6$--$9$ & simetría conjugada \\
+\bottomrule
+\end{tabular}
+\caption{$X_b[k]$ para $N = 10$.}
+\end{table}
+
+\paragraph{$N = 50$.}
+\[
+    X_b[k] = \frac{1 - \tfrac{1}{32}\,e^{-j\frac{\pi}{5}k}}
+                  {1 - 0{,}5\,e^{-j\frac{\pi}{25}k}}
+\]
+Primeros valores: $X_b[0] = 1{,}9375$, $X_b[1] \approx 1{,}909 - j0{,}201$,
+$X_b[2] \approx 1{,}828 - j0{,}383$, \dots
+
+\begin{figure}[H]
+    \centering
+    % [pegar imagen cuando esté disponible]
+    \caption{DFT de $x_b$ para $N = 5$, $10$ y $50$ vs.\ DTFT de referencia.}
+\end{figure}
+
+% ──────────────────────────────────────────────────────────────────────
+\subsection*{Zero-padding: efecto en la resolución}
+
+El zero-padding \textbf{no agrega información espectral} — la resolución
+física está fijada por las 5 muestras originales. Lo que aumenta es la
+\textbf{densidad de muestreo} de la DTFT: el espaciado
+$\Delta\omega = 2\pi/N$ se reduce, interpolando idealmente la envolvente
+continua y revelando la forma de los lóbulos sin alterar su ancho.
+
+% ──────────────────────────────────────────────────────────────────────
+\subsection*{Código MATLAB}
+
+\begin{lstlisting}[style=matlab_dark,
+    caption={Ejercicio 5 --- DFT con zero-padding vs.\ DTFT},
+    label={lst:ej5}]
+% ETN1015 - Ejercicio 5: DFT con zero-padding vs DTFT
+clear; clc; close all;
+
+xa = ones(1,5);
+xb = (0.5).^(0:4);
+N_vals = [5, 10, 50];
+w = linspace(0, 2*pi, 1000);
+
+% DTFT de referencia
+Xa_ref = exp(-1j*2*w) .* sin(2.5*w) ./ sin(0.5*w);
+Xa_ref(abs(sin(0.5*w)) < 1e-10) = 5;
+Xb_ref = ones(1,5) * exp(-1j * ((0:4)' * w));
+
+for sig = 1:2
+    if sig == 1; x = xa; Xref = Xa_ref; label = 'a';
+    else;        x = xb; Xref = Xb_ref; label = 'b'; end
+
+    figure(2*sig-1); % Magnitud
+    for i = 1:3
+        N = N_vals(i);
+        Xdft = fft(x, N);
+        wk = (0:N-1)*2*pi/N;
+        subplot(3,1,i);
+        plot(w/pi, abs(Xref), 'r--', 'LineWidth', 1.2); hold on;
+        stem(wk/pi, abs(Xdft), 'filled', 'b', 'LineWidth', 1.2);
+        xlabel('\omega/\pi'); ylabel('|X[k]|');
+        title(['Senal ' label ' - Magnitud (N=' num2str(N) ')']);
+        xlim([0 2]); grid on;
+        if i==1; legend('DTFT','DFT'); end
+    end
+
+    figure(2*sig); % Fase
+    for i = 1:3
+        N = N_vals(i);
+        Xdft = fft(x, N);
+        Xdft(abs(Xdft) < 1e-10) = 0;
+        wk = (0:N-1)*2*pi/N;
+        subplot(3,1,i);
+        plot(w/pi, angle(Xref), 'r--', 'LineWidth', 1.2); hold on;
+        stem(wk/pi, angle(Xdft), 'filled', 'b', 'LineWidth', 1.2);
+        xlabel('\omega/\pi'); ylabel('\angle X[k] (rad)');
+        title(['Senal ' label ' - Fase (N=' num2str(N) ')']);
+        xlim([0 2]); ylim([-pi-0.5 pi+0.5]); grid on;
+    end
+end
+\end{lstlisting}

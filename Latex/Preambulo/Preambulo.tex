@@ -1,0 +1,270 @@
+% ============================================================
+% PREÁMBULO — Configuración global del documento
+% ============================================================
+%
+% CONTENIDO:
+%   1. Presentación     — fondo de carátula (background)
+%   2. Codificación     — inputenc (UTF-8), fontenc (T1), lmodern, courier
+%   3. Matemáticas      — amsmath, amssymb, amsfonts, latexsym, textcomp, cancel
+%   4. Tablas           — array, tabularx, multirow, longtable, booktabs
+%   5. Figuras          — graphicx, caption, subfigure, float, rotating
+%   6. Colores          — xcolor + paletas en Colores.tex
+%   7. Listados         — listings + estilos matlab_dark, asmstyle, miasm
+%   8. Cajas            — tcolorbox
+%   9. TikZ             — tikz + librerías + estilos en TikzEstilos.tex
+%  10. Gráficas         — pgfplots, circuitikz
+%  11. Página           — geometry, fancyhdr, titlesec
+%  12. Listas           — enumerate, paralist, easylist, enumitem
+%  13. Extras           — pdfpages, verbatim, parindent, hyphenation
+%  14. Comandos         — nombres en castellano, atajos de bloques
+%
+% ARCHIVOS ASOCIADOS (cargados al final de cada sección):
+%   Colores.tex         — todas las paletas de color
+%   TikzEstilos.tex     — \tikzset para bloques y diagramas de flujo
+%
+% ============================================================
+
+% ============================================================
+% PRESENTACIÓN
+% ============================================================
+
+% --- Imagen de fondo en la carátula ---
+\usepackage{background}
+
+% ============================================================
+% CODIFICACIÓN Y FUENTES
+% ============================================================
+
+% --- Codificación UTF-8 y separación correcta de palabras con acentos ---
+\usepackage[utf8]{inputenc}
+% --- Fuente de salida con soporte completo de caracteres T1 ---
+\usepackage[T1]{fontenc}
+% --- Fuente vectorial moderna (reemplaza Computer Modern bitmap) ---
+\usepackage{lmodern}
+% --- Fuente monoespaciada Courier (para código) ---
+\usepackage{courier}
+
+% ============================================================
+% MATEMÁTICAS
+% ============================================================
+
+% --- Entornos y símbolos matemáticos avanzados (AMS) ---
+\usepackage{amsmath,amssymb,amsfonts}
+% --- Símbolos extra: latexsym, textcomp, cancelación de términos ---
+\usepackage{latexsym,textcomp,cancel}
+
+% ============================================================
+% TABLAS
+% ============================================================
+
+% --- Columnas con formato avanzado (p, m, b, >{}, etc.) ---
+\usepackage{array}
+% --- Tablas con ancho ajustable al texto ---
+\usepackage{tabularx}
+% --- Celdas que abarcan varias filas ---
+\usepackage{multirow}
+% --- Tablas que se extienden a lo largo de varias páginas ---
+\usepackage{longtable}
+% --- Líneas horizontales profesionales (\toprule, \midrule, \bottomrule) ---
+\usepackage{booktabs}
+% --- Colores en celdas y filas de tablas ---
+\usepackage{colortbl}
+
+% ============================================================
+% FIGURAS Y GRÁFICOS
+% ============================================================
+
+% --- Inserción de imágenes externas ---
+\usepackage{graphicx}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+\graphicspath{{Graficos/}}
+
+% --- Control avanzado de leyendas (caption) ---
+\usepackage{caption}
+% --- Subfiguras dentro de una figura ---
+\usepackage{subfigure}
+% --- Posicionamiento forzado de flotantes con [H] ---
+\usepackage{float}
+% --- Rotación de figuras y tablas ---
+\usepackage{rotating}
+
+% ============================================================
+% COLORES
+% ============================================================
+
+% --- Motor de color con soporte para tablas y nombres extendidos ---
+\usepackage[table,dvipsnames]{xcolor}
+
+% --- Paletas de color (matlab, flujo, acento, tablas, informes) ---
+\input{Preambulo/Colores}
+
+% ============================================================
+% LISTADOS DE CÓDIGO
+% ============================================================
+
+% --- Inserción y resaltado de código fuente ---
+\usepackage{listings}
+
+% ── Estilo global por defecto ────────────────────────────────
+\lstset{
+  basicstyle=\scriptsize\ttfamily,
+  numbers=left,
+  numberstyle=\tiny\color{matlab_com},
+  stepnumber=1,
+  numbersep=5pt,
+  breaklines=true,
+  captionpos=b,
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  tabsize=4
+}
+
+% ── Estilo MATLAB (fondo azul pálido, bajo consumo de tinta) ─
+\lstdefinestyle{matlab_dark}{
+  language=Matlab,
+  captionpos=b,
+  backgroundcolor=\color{bg_matlab},
+  basicstyle=\ttfamily\small\color{black},
+  keywordstyle=\color{matlab_kw}\bfseries,
+  stringstyle=\color{matlab_str},
+  commentstyle=\color{matlab_com}\itshape,
+  numberstyle=\tiny\color{matlab_num},
+  numbers=left,
+  numbersep=10pt,
+  frame=single,
+  framerule=0pt,
+  rulecolor=\color{bg_matlab},
+  breaklines=true,
+  tabsize=4,
+  showstringspaces=false,
+  xleftmargin=16pt,
+  framexleftmargin=16pt
+}
+
+% ── Estilo ensamblador x86 ───────────────────────────────────
+\lstdefinestyle{asmstyle}{
+  language=[x86masm]Assembler,
+  backgroundcolor=\color{white},
+  basicstyle=\ttfamily\footnotesize,
+  keywordstyle=\color{magenta},
+  commentstyle=\color{verdeBZ},
+  stringstyle=\color{lilaBD},
+  numberstyle=\tiny\color{matlab_com},
+  numbers=left,
+  numbersep=5pt,
+  frame=single,
+  breaklines=true,
+  captionpos=b,
+  keepspaces=true,
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  tabsize=4
+}
+
+% ── Estilo ensamblador genérico (sin keywords fijos) ─────────
+\lstdefinestyle{miasm}{
+  basicstyle=\ttfamily\footnotesize,
+  keywordstyle=\color{blue},
+  commentstyle=\color{gray},
+  columns=fullflexible,
+  keepspaces=true,
+  frame=single,
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  xleftmargin=1em,
+  tabsize=4
+}
+
+% ============================================================
+% CAJAS Y ENTORNOS ESPECIALES
+% ============================================================
+
+% --- Cajas con color, bordes y fondos personalizables ---
+\usepackage{tcolorbox}
+
+% ============================================================
+% TIKZ — GRÁFICOS VECTORIALES
+% ============================================================
+
+% --- Motor principal de diagramas vectoriales ---
+\usepackage{tikz}
+\usetikzlibrary{
+  arrows.meta,
+  shapes.geometric,
+  shapes.misc,
+  positioning,
+  calc,
+  decorations.markings,
+  shapes,
+  arrows,
+  fit
+}
+
+% --- Estilos de bloques y diagramas de flujo ---
+\input{Preambulo/TikzEstilos}
+
+% ============================================================
+% PGFPLOTS Y CIRCUITIKZ
+% ============================================================
+
+% --- Gráficas de funciones y datos con TikZ ---
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% --- Diagramas de circuitos eléctricos ---
+\usepackage[siunitx]{circuitikz}
+
+% ============================================================
+% MÁRGENES Y FORMATO DE PÁGINA
+% ============================================================
+
+% --- Márgenes del documento ---
+\usepackage[top=2.5cm, bottom=2.5cm, left=3cm, right=2cm]{geometry}
+% --- Encabezados y pies de página personalizados ---
+\usepackage{fancyhdr}
+% --- Formato de títulos de sección (usado en EstiloSecciones.tex) ---
+\usepackage{titlesec}
+
+% ============================================================
+% LISTAS
+% ============================================================
+
+% --- Listas numeradas con estilos personalizables ---
+\usepackage{enumerate}
+% --- Listas compactas (inparaenum, compactitem, etc.) ---
+\usepackage{paralist}
+% --- Listas simplificadas con @ como marcador ---
+\usepackage{easylist}
+% --- Control fino de márgenes en listas (itemsep, leftmargin, etc.) ---
+\usepackage{enumitem}
+
+% ============================================================
+% EXTRAS
+% ============================================================
+
+% --- Inserción de páginas PDF completas ---
+\usepackage{pdfpages}
+% --- Bloque de texto literal sin interpretación ---
+\usepackage{verbatim}
+
+% Sin sangría en párrafos
+\parindent=0pt
+% Palabras que LaTeX no debe partir con guión
+\hyphenation{Linux manera}
+
+% ============================================================
+% COMANDOS PERSONALIZADOS
+% ============================================================
+
+% Nombres en castellano
+\renewcommand{\tablename}{Tabla}
+\renewcommand{\figurename}{Figura}
+\renewcommand{\contentsname}{Contenido}
+\renewcommand{\lstlistingname}{Listado}
+
+% Atajos para diagramas de bloques
+\newcommand{\suma}{\Large$+$}
+\newcommand{\inte}{$\displaystyle \int$}
+\newcommand{\derv}{\huge$\frac{d}{dt}$}

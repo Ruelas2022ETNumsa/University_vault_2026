@@ -1,0 +1,18 @@
+\begin{tikzpicture}[scale=0.5]
+	\normalsize
+	\tikzset{
+		blockBlue/.style={rectangle,draw=black,thick,fill=blue!10,text centered,minimum height=3em},
+		blockText/.style={rectangle,draw=none,thick,fill=white!20,text centered,minimum height=3em},
+		line/.style={draw,thick,-latex',shorten >=0pt},
+		linwit/.style={draw,thick,shorten >=0pt},
+	}
+	\matrix [column sep=10mm,row sep=4mm]{
+		& \node [blockText,text width=0.5cm,minimum height=1em] (Dia10) {$ V_{i}(s) $};
+		& \node [blockBlue,text width=2cm,minimum height=1cm] (Dia11) {$ \frac{1}{R_{1}C_{1}s + 1} $};
+		& \node [blockText,text width=0.3cm,minimum height=1em] (Dia12) {$ V_{o}(s) $};\\};
+	
+	\tikzset{every path/.style=line}% Conexion de los bloques
+	\path (Dia10.east)(-2.5,0) -- (Dia11.west);
+	\path (Dia11) -- (Dia12);
+\end{tikzpicture}
+

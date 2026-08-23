@@ -20,6 +20,7 @@
         "Semestres",
         "_assets",
         "Rubbish",
+        "Latex",
         "Borrar",
         "shared",
         "README.md",
@@ -44,7 +45,8 @@
         "F4_1015.md",
         "F5_1015.md",
         "lab1 1.md",
-        "lab1_ETN1015.docx"
+        "lab1_ETN1015.docx",
+        "L1_1015"
       ]
     },
     "MOC": {
@@ -4505,6 +4507,641 @@
     "lab1_ETN1015.docx": {
       "isPinned": false,
       "isHidden": false
+    },
+    "Latex": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "Anexos",
+        "Capitulos",
+        "Graficos",
+        "Preambulo",
+        "Main_Include.tex",
+        "README.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "Latex/Anexos": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [],
+      "sortOrder": "custom"
+    },
+    "Latex/Capitulos": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "Laboratorio1_903.tex",
+        "C00-Caratula.tex"
+      ],
+      "sortOrder": "custom"
+    },
+    "Latex/Graficos": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "Cap3legacy",
+        "img_caratula_fonfo.jpg",
+        "logo_umsa.png"
+      ],
+      "sortOrder": "custom"
+    },
+    "Latex/Preambulo": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "Colores.tex",
+        "Entornos.tex",
+        "EstiloSecciones.tex",
+        "PaginaEstilo.tex",
+        "Preambulo.tex",
+        "TikzEstilos.tex"
+      ],
+      "sortOrder": "custom"
+    },
+    "Latex/Main_Include.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/README.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Capitulos/Laboratorio1_903.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Capitulos/C00-Caratula.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "Fig310.tex",
+        "Fig311.tex",
+        "Fig312b.tex",
+        "Fig312c.tex",
+        "Fig313b.tex",
+        "Fig313c.tex",
+        "Fig314a.tex",
+        "Fig312a.tex",
+        "Fig314b.tex",
+        "Fig315b.tex",
+        "Fig316a.tex",
+        "Fig313a.tex",
+        "Fig316b.tex",
+        "Fig317a.tex",
+        "Fig317b.tex",
+        "Fig318a.tex",
+        "Fig318b.tex",
+        "Fig319a.tex",
+        "Fig319b.tex",
+        "Fig31a.tex",
+        "Fig31b.tex",
+        "Fig32.tex",
+        "Fig320a.tex",
+        "Fig320b.tex",
+        "Fig322a.tex",
+        "Fig321.tex",
+        "Fig322b.tex",
+        "Fig323.tex",
+        "Fig325.tex",
+        "Fig326.tex",
+        "Fig327.tex",
+        "Fig328.tex",
+        "Fig33.tex",
+        "Fig315a.tex",
+        "Fig330a.tex",
+        "Fig331a.tex",
+        "Fig331b.tex",
+        "Fig332a.tex",
+        "Fig332b.tex",
+        "Fig333a.tex",
+        "Fig333b.tex",
+        "Fig334a.tex",
+        "Fig334b.tex",
+        "Fig335a.tex",
+        "Fig329.tex",
+        "Fig335b.tex",
+        "Fig336a.tex",
+        "Fig336b.tex",
+        "Fig337a.tex",
+        "Fig337b.tex",
+        "Fig338b.tex",
+        "Fig330b.tex",
+        "Fig338c.tex",
+        "Fig338a.tex",
+        "Fig338e.tex",
+        "Fig338f.tex",
+        "Fig338g.tex",
+        "Fig340.tex",
+        "Fig35a.tex",
+        "Fig324.tex",
+        "Fig339.tex",
+        "Fig37b.tex",
+        "Fig37a.tex",
+        "Fig38b.tex",
+        "OldImage",
+        "Fig39.tex",
+        "Fig338d.tex",
+        "Fig36.png"
+      ],
+      "sortOrder": "custom"
+    },
+    "Latex/Graficos/img_caratula_fonfo.jpg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/logo_umsa.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Preambulo/Colores.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Preambulo/Entornos.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Preambulo/EstiloSecciones.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Preambulo/PaginaEstilo.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Preambulo/Preambulo.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Preambulo/TikzEstilos.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig310.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig311.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig312b.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig312c.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig313b.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig313c.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig314a.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig312a.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig314b.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig315b.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig316a.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig313a.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig316b.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig317a.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig317b.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig318a.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig318b.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig319a.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig319b.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig31a.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig31b.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig32.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig320a.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig320b.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig322a.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig321.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig322b.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig323.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig325.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig326.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig327.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig328.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig33.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig315a.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig330a.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig331a.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig331b.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig332a.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig332b.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig333a.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig333b.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig334a.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig334b.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig335a.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig329.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig335b.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig336a.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig336b.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig337a.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig337b.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig338b.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig330b.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig338c.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig338a.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig338e.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig338f.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig338g.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig340.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig35a.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig324.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig339.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig37b.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig37a.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig38b.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/OldImage": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "Fig312b.png",
+        "Fig312c.png",
+        "Fig313a.png",
+        "Fig313b.png",
+        "Fig313c.png",
+        "Fig314b.png",
+        "Fig315a.png",
+        "Fig315b.png",
+        "Fig316a.png",
+        "Fig312a.png",
+        "Fig316b.png",
+        "Fig317a.png",
+        "Fig317b.png",
+        "Fig318b.png",
+        "Fig318a.png",
+        "Fig319a.png",
+        "Fig319b.png",
+        "Fig31a.png",
+        "Fig31b.png",
+        "Fig32.png",
+        "Fig320a.png",
+        "Fig320b.png",
+        "Fig321.png",
+        "Fig322a.png",
+        "Fig322b.png",
+        "Fig323.png",
+        "Fig325.png",
+        "Fig33.png",
+        "Fig35a.png",
+        "Fig35b.png",
+        "Fig37a.png",
+        "Fig37b.png",
+        "Fig324.png",
+        "Fig38a.png",
+        "Fig314a.png",
+        "Fig38b.png"
+      ],
+      "sortOrder": "custom"
+    },
+    "Latex/Graficos/Cap3legacy/Fig39.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig338d.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/Fig36.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/OldImage/Fig312b.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/OldImage/Fig312c.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/OldImage/Fig313a.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/OldImage/Fig313b.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/OldImage/Fig313c.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/OldImage/Fig314b.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/OldImage/Fig315a.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/OldImage/Fig315b.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/OldImage/Fig316a.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/OldImage/Fig312a.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/OldImage/Fig316b.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/OldImage/Fig317a.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/OldImage/Fig317b.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/OldImage/Fig318b.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/OldImage/Fig318a.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/OldImage/Fig319a.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/OldImage/Fig319b.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/OldImage/Fig31a.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/OldImage/Fig31b.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/OldImage/Fig32.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/OldImage/Fig320a.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/OldImage/Fig320b.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/OldImage/Fig321.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/OldImage/Fig322a.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/OldImage/Fig322b.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/OldImage/Fig323.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/OldImage/Fig325.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/OldImage/Fig33.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/OldImage/Fig35a.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/OldImage/Fig35b.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/OldImage/Fig37a.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/OldImage/Fig37b.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/OldImage/Fig324.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/OldImage/Fig38a.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/OldImage/Fig314a.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Graficos/Cap3legacy/OldImage/Fig38b.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "L1_1015": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [],
+      "sortOrder": "custom"
     }
   },
   "pinnedFiles": [

@@ -8975,6 +8975,7 @@ tallos
 truncamiento
 truncar
 tratarse
+textgris
 ToDo
 Templater
 Text
@@ -37380,6 +37381,7 @@ Planck
 PROCESSING
 Productos
 Primeros
+Preambulo
 del
 date
 de
@@ -46121,6 +46123,7 @@ distorsi
 diferenciaci
 deslizante
 desplazados
+darkgreen
 Vault
 Verificar
 Variables
@@ -64476,6 +64479,7 @@ gravitatorio
 gimen
 generemos
 gruesa
+grisclaro
 body
 beacon
 bat
@@ -72307,6 +72311,8 @@ bidimensional
 bulo
 bulos
 bosquejar
+blancoW
+blancoBW
 scope
 status
 selector
@@ -91667,6 +91673,13 @@ virustotal
 volteo
 valles
 vals
+vacioQ
+vacioBQ
+verdeZ
+verdeBZ
+verdeX
+verdeBX
+verdeclaro
 audience
 activo
 auto
@@ -101233,6 +101246,15 @@ admisibles
 abruptos
 apliquemos
 anticausal
+azulA
+azulBA
+azulS
+azulBS
+amarilloC
+amarilloBC
+acento
+azulprinc
+azulclaro
 related
 recomendados
 ribbon
@@ -110696,6 +110718,14 @@ resultantes
 reconstrucci
 rejilla
 revelando
+rojoG
+rojoBG
+rojoB
+rojoBB
+rosaF
+rosaBF
+rowcolor
+rojoclaro
 notes
 notas
 nuevas
@@ -119551,6 +119581,11 @@ newtoniano
 notablemente
 nulas
 nulos
+navy
+negroR
+negroBR
+naranjaV
+naranjaBV
 created
 commit
 cada
@@ -129537,6 +129572,8 @@ compone
 conjugada
 comparacion
 cubriendo
+cafeT
+cafeBT
 updated
 un
 universo
@@ -167222,6 +167259,7 @@ Ingle
 Incorporaci
 Identificamos
 Invariable
+Informes
 Funci
 File
 Fase
@@ -204221,6 +204259,7 @@ AkjN
 Arrancamos
 Algorithms
 Agrupamos
+Acento
 push
 pull
 para
@@ -213247,6 +213286,8 @@ preparemos
 perceptible
 primos
 presentarla
+poloE
+poloBE
 min
 mica
 movimiento
@@ -278336,6 +278377,8 @@ linealidades
 lapsos
 licos
 leyenda
+lilaD
+lilaBD
 incluyendo
 im
 instalar
@@ -288868,6 +288911,7 @@ implementemos
 igualar
 interpolando
 idealmente
+indicadores
 Dependencia
 Dropbox
 Dataview
@@ -474652,6 +474696,7 @@ kWmg
 kHVA
 kzSjZv
 kvgL
+keywords
 Xe
 Xm
 Xu

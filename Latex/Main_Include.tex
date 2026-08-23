@@ -1,0 +1,38 @@
+% =============================================================================
+% DOCUMENTO PRINCIPAL — Main_Include.tex
+% =============================================================================
+%
+% CONTENIDO:
+%   1. Clase            — article, letterpaper, 11pt
+%   2. Preámbulo        — Preambulo.tex (carga Colores.tex y TikzEstilos.tex)
+%   3. Estilos          — PaginaEstilo.tex, EstiloSecciones.tex, Entornos.tex
+%   4. Carátula         — C00-Caratula (pagestyle plain durante la carátula)
+%   5. Capítulos        — Laboratorio1_903 (Esquema_basico desactivado)
+%
+% =============================================================================
+\documentclass[letterpaper,11pt]{article}
+
+% --- Preámbulo y estilo ---
+\input{Preambulo/Preambulo}
+\input{Preambulo/PaginaEstilo}
+\input{Preambulo/EstiloSecciones}
+\input{Preambulo/Entornos}
+
+% --- Título opcional (si se usa \maketitle) ---
+\title{Labos Latex}
+\author{G07}
+\date{}
+
+\begin{document}
+
+% --- Carátula ---
+\input{Capitulos/C00-Caratula}
+
+% Reaplicar estilo fancy después de la carátula
+\pagestyle{fancy}
+
+% --- Capítulos ---
+\input{Capitulos/Laboratorio1_903}  % capítulo activo
+%\input{Capitulos/Esquema_basico}   % desactivado
+
+\end{document}

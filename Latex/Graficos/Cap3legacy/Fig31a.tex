@@ -1,0 +1,8 @@
+\begin{circuitikz}[scale=0.5,line width=0.1mm]
+	\draw
+	++(0,0) node[left]{$v_{i}(t)$}
+	++(7,0) node[right]{$v_{o}(t)$}
+	(0,0) to[R=$R$] (5,0) -- (7,0)
+	(5,0) to[C=$C$, *-] (5,-2.5) node[ground]{};
+	\draw ++(1,-0.5) node[below]{$\rightarrow i(t)$};
+\end{circuitikz}

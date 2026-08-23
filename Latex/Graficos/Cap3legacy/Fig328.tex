@@ -1,0 +1,20 @@
+\begin{tikzpicture}
+[midarrow/.style={decoration={markings, mark=at position 0.5 with {\arrow{latex}}},postaction={decorate}}]
+\tikzstyle{obj} = [circle, minimum width=4pt, draw=red, inner sep=0pt]
+
+\node[obj, label=left:$x_{1}$] (x1) at (2,0) {};
+\node[obj, label=below:$x_{2}$] (x2) at (4,0) {};
+\node[obj, label=below:$x_{3}$] (x3) at (6,0) {};
+\node[obj, label=below:$x_{4}$] (x4) at (8,0) {};
+\node[obj, label=below:$x_{5}$] (x5) at (10,0) {};
+\node[obj, label=right:$x_{6}$] (x6) at (12,0) {};
+
+\draw[midarrow,blue] (x1) -- node[below, font={\footnotesize},black] {$G_{1}$} (x2);
+\draw[midarrow,blue] (x2) -- node[below, font={\footnotesize},black] {$G_{2}$} (x3);
+\draw[midarrow,blue] (x3) -- node[below, font={\footnotesize},black] {$G_{3}$} (x4);
+\draw[midarrow,blue] (x4) -- node[below, font={\footnotesize},black] {$G_{4}$} (x5);
+\draw[midarrow,blue] (x5) -- node[below, font={\footnotesize},black] {$G_{5}$} (x6);
+\draw[midarrow,blue,bend right=40] (x4) to node[above, font={\footnotesize},black] {$-H_{1}$} (x3);
+\draw[midarrow,blue,bend right=40] (x5) to node[above, font={\footnotesize},black] {$-H_{2}$} (x4);
+\draw[midarrow,blue,bend right=57] (x5) to node[above, font={\footnotesize},black] {$-H_{3}$} (x2);
+\end{tikzpicture}

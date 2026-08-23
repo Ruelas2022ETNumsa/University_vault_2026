@@ -1,0 +1,14 @@
+\begin{tikzpicture}
+[midarrow/.style={decoration={markings, mark=at position 0.5 with {\arrow{latex}}},postaction={decorate}}]
+\tikzstyle{obj} = [circle, minimum width=4pt, draw, inner sep=0pt]
+
+\node[obj, label=left:$x_{1}$] (x1) at (2,0) {};
+\node[obj, label=below:$x_{2}$] (x2) at (4,0) {};
+\node[obj, label=below:$x_{3}$] (x3) at (6,0) {};
+\node[obj, label=right:$x_{4}$] (x4) at (8,0) {};
+
+\draw[midarrow] (x1) -- node[below, font={\footnotesize}] {$G_{1}$} (x2);
+\draw[midarrow] (x2) -- node[below, font={\footnotesize }] {$G_{2}$} (x3);
+\draw[midarrow] (x3) -- node[below, font={\footnotesize }] {$G_{1}$} (x4);
+\draw[midarrow,bend right=40] (x3) to node[above, font={\footnotesize }] {$H_{1}$} (x2);
+\end{tikzpicture}

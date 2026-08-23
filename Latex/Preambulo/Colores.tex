@@ -1,0 +1,75 @@
+% ============================
+% COLORES — Colores.tex
+% ============================
+%
+% CONTENIDO:
+%   1. matlab_dark  — colores para el estilo de listados MATLAB
+%   2. Flujo        — paleta completa para diagramas de flujo TikZ
+%   3. Acento       — paleta c1–c9 (azul oscuro → rojo)
+%   4. Tablas       — encabezado y filas alternas
+%   5. Informes     — cajas, texto secundario, indicadores
+%
+% NOTA: Requiere \usepackage[table,dvipsnames]{xcolor} — cargado en Preambulo.tex
+%
+% ============================
+
+% ── Colores para el estilo matlab_dark ──────────────────────
+\definecolor{bg_matlab}{RGB}{235, 242, 252}   % azul muy claro (fondo)
+\definecolor{matlab_kw}{RGB}{0,   60, 160}    % azul navy (keywords)
+\definecolor{matlab_str}{RGB}{0,  120,  60}   % verde (strings)
+\definecolor{matlab_com}{RGB}{110, 110, 110}  % gris (comentarios)
+\definecolor{matlab_num}{RGB}{110, 110, 110}  % gris (números de línea)
+
+% ── Colores para diagramas de flujo ─────────────────────────
+\definecolor{vacioQ}{RGB}{255, 252, 242}
+\definecolor{vacioBQ}{RGB}{180, 180, 200}
+\definecolor{blancoW}{RGB}{255, 255, 255}
+\definecolor{blancoBW}{RGB}{200, 200, 200}
+\definecolor{poloE}{RGB}{220, 220, 220}
+\definecolor{poloBE}{RGB}{100, 100, 100}
+\definecolor{negroR}{RGB}{30,  30,  30}
+\definecolor{negroBR}{RGB}{0,   0,   0}
+\definecolor{cafeT}{RGB}{210, 190, 170}
+\definecolor{cafeBT}{RGB}{130, 100,  80}
+\definecolor{azulA}{RGB}{150, 230, 240}
+\definecolor{azulBA}{RGB}{0,  120, 150}
+\definecolor{azulS}{RGB}{150, 200, 255}
+\definecolor{azulBS}{RGB}{0,  100, 200}
+\definecolor{lilaD}{RGB}{190, 170, 250}
+\definecolor{lilaBD}{RGB}{100,  70, 200}
+\definecolor{rojoG}{RGB}{255, 160, 180}
+\definecolor{rojoBG}{RGB}{200,   0,   0}
+\definecolor{verdeZ}{RGB}{170, 240, 190}
+\definecolor{verdeBZ}{RGB}{0,  150,   0}
+\definecolor{verdeX}{RGB}{150, 255, 220}
+\definecolor{verdeBX}{RGB}{0,  150, 120}
+\definecolor{amarilloC}{RGB}{255, 230, 150}
+\definecolor{amarilloBC}{RGB}{230, 150,   0}
+\definecolor{naranjaV}{RGB}{255, 200, 150}
+\definecolor{naranjaBV}{RGB}{220, 100,   0}
+\definecolor{rojoB}{RGB}{255, 150, 150}
+\definecolor{rojoBB}{RGB}{200,   0,   0}
+\definecolor{rosaF}{RGB}{255, 200, 220}
+\definecolor{rosaBF}{RGB}{200,  80, 130}
+\definecolor{darkgreen}{RGB}{0,  130,   0}
+
+% ── Paleta de acento (c1–c9) ────────────────────────────────
+\definecolor{c1}{HTML}{011627}
+\definecolor{c2}{HTML}{004E67}
+\definecolor{c3}{HTML}{008891}
+\definecolor{c4}{HTML}{9FD9C3}
+\definecolor{c5}{HTML}{E6D7A7}
+\definecolor{c6}{HTML}{F6A600}
+\definecolor{c7}{HTML}{D2691E}
+\definecolor{c8}{HTML}{A33300}
+\definecolor{c9}{HTML}{7C1E18}
+
+% ── Colores para tablas con rowcolor ────────────────────────
+\definecolor{azulprinc}{RGB}{46, 116, 181}   % encabezado de tabla
+\definecolor{grisclaro}{RGB}{242, 242, 242}  % filas alternas
+
+% ── Colores generales de informes ────────────────────────────
+\definecolor{azulclaro}{RGB}{210, 225, 245}  % fondo de cajas y resaltados
+\definecolor{textgris}{RGB}{90, 90, 90}      % texto secundario (encabezados)
+\definecolor{verdeclaro}{RGB}{220, 240, 220} % fondo indicador positivo
+\definecolor{rojoclaro}{RGB}{250, 225, 225}  % fondo indicador negativo

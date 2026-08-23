@@ -1,0 +1,30 @@
+\tikzset{%
+    block/.style = {draw, thick, rectangle, minimum height = 5mm, minimum width = 5mm},
+    block1/.style = {draw=none, rectangle, minimum height = 5mm, minimum width = 5mm},
+    gain/.style  = {draw, thick, isosceles triangle, isosceles triangle apex angle=45},
+    port/.style  = {inner sep=0pt, font=\tiny},
+    sum/.style n args = 
+		{4}{draw, circle, node distance = 2cm, minimum size=5mm, alias=sum, append after command={
+            node at (sum.north) [port, below=1pt] {$#1$}
+            node at (sum.west) [port, right=1pt] {$#2$}
+            node at (sum.south) [port, above=1pt] {$#3$}
+            node at (sum.east) [port, left=1pt] {$#4$}
+        },
+    }, % Adder
+    joint/.style    = {circle, draw, fill, inner sep=0pt, minimum size=2pt},
+    input/.style    = {coordinate}, % Input
+    output/.style   = {coordinate} % Output
+}
+% Defining string as labels of certain blocks.
+
+\begin{tikzpicture}[auto, thick, node distance=20mm, >=triangle 45, scale=0.7,line width=0.1mm]
+	\draw
+	node at (-1.1,0) {{\scriptsize $V_{i}(s)$}}
+	node at (-0.6,0) [input,name=input,thick,above]{}
+	node at (3.3,0) [block](blo11) {{\scriptsize $\frac{G_{1}G_{2}G_{3}}{1+G_{2}G_{3}H_{2}-G_{1}G_{2}H_{1}+G_{1}G_{2}G_{3}}$}}
+	node at (7.2,0) (out) {}
+	node at (7.6,0) {{\scriptsize $V_{o}(s)$}};
+
+	\draw[->](input) -- node {}(blo11);
+	\draw[->](blo11) -- node {}(out);
+\end{tikzpicture}

@@ -1,0 +1,13 @@
+\begin{tikzpicture}
+[midarrow/.style={decoration={markings, mark=at position 0.5 with {\arrow{latex}}},postaction={decorate}}]
+\tikzstyle{obj} = [circle, minimum width=4pt, draw=red, inner sep=0pt]
+\tikzstyle{loopdown} = [min distance=15mm,in=-135,out=-45,looseness=10, draw=blue]
+\tikzstyle{loopup} = [min distance=15mm,in=135,out=45,looseness=10, draw=blue]
+
+\node[obj, label=left:$x_{1}$] (x1) at (2,0) {};
+\node[obj, label=left:$x_{2}$] (x2) at (2,1) {};
+\node[obj, label=right:$y$] (y) at (4,0.5) {};
+\draw[midarrow,blue] (x1) -- node[below, font={\footnotesize},black] {$a$} (y);
+\draw[midarrow,blue] (x2) -- node[below, font={\footnotesize},black] {$b$} (y);
+\draw[midarrow,blue,loopup] (y) to node[above, font={\footnotesize},black] {$-c$} (y);
+\end{tikzpicture}

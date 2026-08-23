@@ -1,0 +1,8 @@
+\begin{tikzpicture}
+[midarrow/.style={decoration={markings, mark=at position 0.5 with {\arrow{latex}}},postaction={decorate}}]
+\tikzstyle{obj} = [circle, minimum width=4pt, draw=red, inner sep=0pt]
+
+\node[obj, label=left:$x_{1}$] (x1) at (2,0) {};
+\node[obj, label=right:$x_{2}$] (x2) at (4,0) {};
+\draw[midarrow,blue] (x1) -- node[below, font={\footnotesize},black] {$a+b$} (x2);
+\end{tikzpicture}

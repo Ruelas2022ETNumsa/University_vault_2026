@@ -1,0 +1,84 @@
+% ============================
+% ESTILOS TIKZ — TikzEstilos.tex
+% ============================
+%
+% CONTENIDO:
+%   1. Bloques      — block, gain, port, sum, joint, input, output, box,
+%                     lifeline, copyarrow, circ
+%   2. Flujo        — terminator, process, decision, io, coment, document,
+%                     subprocess, data, database, connector, cloud,
+%                     startstop, loop, junction, line*, arrow
+%
+% NOTA: Requiere \usepackage{tikz} y \usetikzlibrary{...} — cargados en Preambulo.tex
+%       Los colores de flujo vienen de Colores.tex
+%
+% ============================
+
+% ── Estilos genéricos de diagramas de bloques ────────────────
+\tikzset{
+  block/.style     = {draw, thick, rectangle, minimum height=10mm, minimum width=3em},
+  block1/.style    = {draw=none, rectangle, minimum height=7mm, minimum width=3em},
+  gain/.style      = {draw, thick, isosceles triangle, isosceles triangle apex angle=45},
+  port/.style      = {inner sep=0pt, font=\tiny},
+  sum/.style n args={4}{draw, circle, node distance=2cm, minimum size=7mm, alias=sum,
+    append after command={
+      node at (sum.north) [port, below=1pt] {$#1$}
+      node at (sum.west)  [port, right=1pt] {$#2$}
+      node at (sum.south) [port, above=1pt] {$#3$}
+      node at (sum.east)  [port, left=1pt]  {$#4$}
+    }},
+  joint/.style     = {circle, draw, fill, inner sep=0pt, minimum size=2pt},
+  jointi/.style    = {circle, draw, fill, inner sep=0pt, minimum size=0pt},
+  input/.style     = {coordinate},
+  output/.style    = {coordinate},
+  box/.style       = {rectangle, draw, fill=blue!15, minimum width=3cm,
+                      minimum height=1cm, text centered, font=\bfseries},
+  lifeline/.style  = {dashed, thick},
+  copyarrow/.style = {-{Stealth}, thick},
+  circ/.style      = {circle, fill=black, inner sep=2pt}
+}
+
+% ── Estilos para diagramas de flujo ─────────────────────────
+\tikzset{
+  terminator/.style = {ellipse, draw=verdeBZ, fill=verdeZ,
+    text centered, minimum height=2em, minimum width=6em},
+  process/.style    = {rectangle, draw=azulBS, fill=azulS,
+    text width=10em, text centered, rounded corners, minimum height=2em},
+  decision/.style   = {diamond, draw=rojoBG, fill=rojoG,
+    text width=6em, text badly centered, inner sep=0pt},
+  io/.style         = {trapezium, trapezium left angle=70, trapezium right angle=110,
+    draw=verdeBX, fill=verdeX, text centered,
+    minimum height=2em, minimum width=8em},
+  coment/.style     = {rectangle, draw=vacioBQ, fill=vacioQ, dashed,
+    text width=15em, align=justify, minimum height=4em, inner sep=6pt},
+  document/.style   = {rectangle, draw=azulBA, fill=azulA,
+    text centered, minimum height=2em, minimum width=8em,
+    append after command={
+      (\tikzlastnode.south west) .. controls +(0,-0.5) and +(0,-0.5) ..
+      (\tikzlastnode.south east) -- cycle}},
+  subprocess/.style = {rectangle, draw=rosaBF, fill=rosaF,
+    double, double distance=1pt, text centered,
+    minimum height=2em, minimum width=8em},
+  data/.style       = {cylinder, draw=amarilloBC, fill=amarilloC,
+    shape border rotate=90, aspect=0.25,
+    text centered, minimum height=3em, minimum width=4em},
+  database/.style   = {cylinder, draw=naranjaBV, fill=naranjaV,
+    shape border rotate=90, aspect=0.15,
+    text centered, minimum height=3em, minimum width=6em},
+  connector/.style  = {circle, draw=negroBR, fill=blancoW,
+    minimum size=1.5em, text centered},
+  cloud/.style      = {ellipse, draw=cafeBT, fill=cafeT,
+    text centered, minimum height=3em, minimum width=6em},
+  startstop/.style  = {ellipse, draw=darkgreen, fill=verdeZ,
+    minimum width=20mm, minimum height=6mm, align=center, font=\footnotesize},
+  loop/.style       = {rectangle, draw=black, fill=yellow!40,
+    minimum width=50mm, minimum height=8mm, align=center, font=\footnotesize},
+  junction/.style   = {circle, draw=black, fill=black,
+    minimum size=4pt, inner sep=0pt},
+  line/.style       = {draw=black, -latex', very thick},
+  lineRed/.style    = {draw=rojoBG, -latex', very thick},
+  lineBlue/.style   = {draw=azulBA, -latex', very thick},
+  lineGreen/.style  = {draw=verdeBX, -latex', very thick},
+  lineComent/.style = {dashed, draw=vacioBQ},
+  arrow/.style      = {-Stealth, thick}
+}

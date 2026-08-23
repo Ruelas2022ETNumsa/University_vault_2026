@@ -1,0 +1,18 @@
+\begin{circuitikz}[scale=0.5,line width=0.1mm]
+	\draw
+	% Entrada y salida
+	++(-1.2,0) node[left]{$V_{i}$}
+	++(12.5,0) node[right]{$V_{o}(t)$}
+	% Puntos de union
+	(-0.5,0) to [short,o-] (0.5,0)
+	(9,0) to [short,*-o] (11,0)
+	% Componentes
+	% (0.5,0) -- (0.5,2) to[C=$C_2$] (9,2) -- (9,0)
+	(0,0) to[R=$R_1$] (5,0) to[R=$R_3$] (8,0) -- (11,0)
+	(5,0) to[R=$R_2$, *-] (5,-4) node[ground]{}
+	(9,0) to[C=$C$] (9,-4) node[ground]{};
+	\draw ++(5.0,0) node[above]{$V_{2}$};
+	\draw ++(1,-0.5) node[below]{$\rightarrow I_{1}$};
+	\draw ++(4,-2) node[below]{$\downarrow I_{2}$};
+	\draw ++(7,-0.5) node[below]{$\rightarrow I_{3}$};
+\end{circuitikz}
