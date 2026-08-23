@@ -8981,6 +8981,7 @@ tituloinforme
 textbf
 toprule
 textcolor
+thispagestyle
 ToDo
 Templater
 Text
@@ -18739,6 +18740,7 @@ Twiddle
 TDSSKiller
 Truncamiento
 Tallo
+TULA
 Sistema
 Sync
 Save
@@ -28658,6 +28660,7 @@ SIGNALS
 SIGNAL
 Suprime
 Senal
+Suprimir
 Plugins
 Pendientes
 Plugin
@@ -129620,6 +129623,7 @@ caption
 comp
 cccccccc
 conv
+clearpage
 updated
 un
 universo
@@ -139461,6 +139465,7 @@ uRDjO
 unific
 unitarias
 uniformemente
+umsa
 Galaxy
 Git
 Gr
@@ -148728,6 +148733,7 @@ Giro
 GINA
 Graficaci
 Graficos
+Gesti
 Convenci
 Creaci
 Commander
@@ -157398,6 +157404,7 @@ Capitulos
 Cargada
 Comparacion
 Convolucion
+Caratula
 Instalados
 Instalado
 Instalar
@@ -167314,6 +167321,7 @@ Incorporaci
 Identificamos
 Invariable
 Informes
+INGENIER
 Funci
 File
 Fase
@@ -176497,6 +176505,7 @@ FreeOffice
 Formales
 Fronteras
 Fundamentaci
+FACULTAD
 Estado
 Excalidraw
 EPUBs
@@ -186486,6 +186495,7 @@ Espectros
 Espectral
 Entornos
 EstiloSecciones
+Exploratoria
 Obsidian
 OmniSearch
 Ocultar
@@ -204317,6 +204327,8 @@ Algorithms
 Agrupamos
 Acento
 Arrastr
+Andr
+Alexander
 push
 pull
 para
@@ -261216,6 +261228,8 @@ Mercurio
 MONSON
 Mejorada
 Main
+Mijahel
+MACHICADO
 Lectura
 LaTeX
 Linter
@@ -270103,6 +270117,7 @@ Latex
 Laboratorios
 LABORATORIO
 LineWidth
+Large
 links
 las
 listar
@@ -288995,6 +289010,7 @@ institucional
 incorporan
 itshape
 itemize
+includegraphics
 Dependencia
 Dropbox
 Dataview
@@ -308789,6 +308805,8 @@ Reemplac
 Resultante
 Reestructurar
 READMEs
+RUELAS
+Resetear
 Hider
 Hace
 Herramientas
@@ -325340,6 +325358,7 @@ fijada
 fancyhdr
 footnotesize
 filled
+flushleft
 haya
 hace
 hacer
@@ -353624,6 +353643,7 @@ UkFR
 UmGR
 UvZK
 Unitario
+Univ
 Nombre
 Notas
 No
@@ -363072,6 +363092,7 @@ NOim
 NiBXluz
 NJqz
 NNvm
+NoBgThispage
 originales
 observatory
 oficial

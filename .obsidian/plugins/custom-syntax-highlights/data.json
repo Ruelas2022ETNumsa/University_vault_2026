@@ -2,7 +2,7 @@
   "extensionMappings": [
     {
       "extension": "tex",
-      "language": ""
+      "language": "tex"
     },
     {
       "extension": "json",

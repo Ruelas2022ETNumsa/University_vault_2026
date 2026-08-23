@@ -1413,7 +1413,8 @@
         "tsk_vault-infra.md",
         "ship_library_ETN1015.md",
         "tsk_prompt_guides_1015.md",
-        "latex-overleaf-estructura-profesional.md"
+        "latex-overleaf-estructura-profesional.md",
+        "latex-matlab-limpieza-comentarios.md"
       ]
     },
     "_hangar/dock/tsk_library_ETN825.md": {
@@ -5231,6 +5232,10 @@
       "isHidden": false
     },
     "Latex/ETN1015/Capitulos/Laboratorio1_1015.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/dock/latex-matlab-limpieza-comentarios.md": {
       "isPinned": false,
       "isHidden": false
     }
