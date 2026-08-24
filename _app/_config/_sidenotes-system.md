@@ -95,6 +95,9 @@ Todos los siguientes tipos de contenido funcionan dentro de `<span class="sideno
 | Combinado imagen + link | `![[img.png\|180]] — [[pdf.pdf\|alias]]` | ✅ |
 | Combinado bold + code + link | `**IR** \`REG_IR\` — [[pdf.pdf\|§3.2]]` | ✅ |
 | Dentro de callout | cualquier contenido | ✅ (fixeado en v0.5.0) |
+| Link PDF++ con selección | `[[pdf.pdf#page=N&selection=...\|alias]]` | ✅ |
+| Recorte rectangular PDF++ | `![[pdf.pdf#page=N&rect=...]]` | ✅ |
+| Combinado recorte + link PDF++ | `![[pdf.pdf#page=N&rect=...]] [[pdf.pdf#page=N&selection=...\|alias]]` | ✅ |
 
 > La combinación imagen + LaTeX + wikilinks en una sola sidenote permite construir una **referencia académica completa al margen** — fórmula, diagrama y fuente juntos, sin tocar el cuerpo.
 
@@ -148,13 +151,31 @@ Ejemplo:
 
 ### `asteroid` — extracto con fuente al margen
 
-El cuerpo transcribe el extracto. La sidenote lleva la referencia exacta (autor, capítulo, página) o una imagen del diagrama del libro.
+El flujo oficial combina sidenote HTML con el callout que PDF++ genera al subrayar texto. Ambos apuntan al mismo `#selection` — un click desde cualquiera abre el PDF en el lugar exacto.
 
 ```
-Ejemplo:
-→ Cuerpo: desarrollo del teorema de Papoulis
-→ Sidenote: ![[_assets/papoulis-fig6-2.png|180]] Papoulis, Cap. 6, p. 142
+Flujo con PDF++:
+→ Subrayás texto en el PDF con PDF++
+→ PDF++ genera el callout con el extracto literal
+→ Agrégas una sidenote HTML con el mismo link como ancla al margen
+
+Resultado en la nota:
 ```
+
+```markdown
+La CPU coordina la actividad de todos los sistemas digitales<span class="sidenote">[[pdf.pdf#page=1&selection=7,0,10,11|Autor p.1]]</span>, actuando como árbitro central.
+
+> [!PDF] [[pdf.pdf#page=1&selection=7,0,10,11|Autor, p.1]]
+> Texto literal extraído del libro con PDF++.
+```
+
+| Qué va en sidenote | Qué va en el cuerpo |
+|---|---|
+| Link PDF++ con `#selection` o `#rect` | Callout `[!PDF]` con el extracto literal |
+| Recorte rectangular de ecuación o diagrama | Paráfrasis o desarrollo propio |
+| Imagen de figura + link a la página fuente | — |
+
+> El callout de PDF++ **no puede ir dentro de un `<span>`** — es un bloque y los spans solo admiten contenido inline. La sidenote lleva el link; el callout lleva el texto. Los dos conviven en la misma nota sin conflicto.
 
 ---
 
@@ -217,16 +238,35 @@ Activa/desactiva desde **Settings → Appearance → CSS Snippets**.
 
 ---
 
-## Footnotes — estado y pendiente
+## Footnotes — rol en Galaxy
 
-Los footnotes Markdown (`[^1]`) son el formato alternativo del plugin. **No son el formato oficial de Galaxy** por las siguientes razones verificadas:
+Los footnotes Markdown (`[^1]`) **no son el formato principal de Side-Notes en Galaxy** — tienen comportamiento inconsistente en Live Preview dentro de callouts. Sin embargo tienen un rol definido y probado como **referencias bibliográficas** en notas de texto narrativo.
 
-- En Live Preview, las sidenotes de footnotes dentro de callouts no renderizan (limitación de cómo Obsidian expone los footnotes en ese contexto — funciona en Reading Mode)
-- El cursor tarda más en moverse alrededor de los números de referencia (mejorado en v0.5.1 pero no resuelto del todo)
+### Cuándo usar footnotes
 
-**Cuándo podría tener sentido en Galaxy (pendiente futuro):** notas tipo `asteroid` con texto narrativo largo sin callouts, donde el estilo de cita académica con número al pie es natural y el cuerpo nunca entra en callouts. Evaluar cuando el plugin estabilice el comportamiento en Live Preview.
+En notas tipo `asteroid` con cuerpo narrativo largo y sin callouts, los footnotes funcionan como citas académicas al pie — el estilo más cercano a una referencia de libro.
 
-> Registrar avances en una nueva sesión de `plan` si se decide revisar.
+**Contenido soportado en footnotes — probado:**
+
+| Tipo | Sintaxis | Estado |
+|---|---|---|
+| Link PDF++ con selección | `[[pdf.pdf#page=N&selection=...\|alias]]` | ✅ |
+| Recorte rectangular PDF++ | `![[pdf.pdf#page=N&rect=...]]` | ✅ |
+| Texto + link | `[[pdf.pdf#page=N&selection=...\|alias]] — nota breve` | ✅ |
+
+**Uso exclusivo:** referencias a libros y PDFs con link directo a la selección o página exacta. No usar para contenido visual complejo (imágenes grandes, fórmulas en bloque, callouts) — para eso usar sidenote HTML.
+
+```markdown
+La densidad conjunta tiene región de soporte triangular.[^1]
+La ecuación de normalización integra sobre esa región.[^2]
+
+[^1]: [[_PDF/papoulis.pdf#page=42&selection=10,5,15,30|Papoulis p.42]] — definición formal
+[^2]: ![[_PDF/papoulis.pdf#page=42&rect=100,200,400,300]]
+```
+
+### Limitación conocida
+
+Footnotes no renderizan en Live Preview cuando la nota contiene callouts. Si el `asteroid` usa callouts de PDF++, usar sidenote HTML en vez de footnote para las referencias al margen.
 
 ---
 
