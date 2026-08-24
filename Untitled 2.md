@@ -16,4 +16,7 @@ claude (2026-08-24T03:10:00.000Z): prueba de claude — comentario creado direct
 alex (2026-08-24T03:13:36.739Z): esto en un cpmentaroi
 -->
 
-Las raíces absorben agua y minerales del suelo, que luego son transportados por el xilema hacia las hojas.
+Las raíces absorben agua y %%> minerales %% del suelo, que luego son <!--c:spshn-->transportados<!--/c:spshn--> por el xilema hacia las hojas.
+<!--co:spshn by:alex at:2026-08-24T03:28:40.290Z status:open quote:"transportados"
+alex (2026-08-24T03:28:40.290Z): esto es una prueba
+-->

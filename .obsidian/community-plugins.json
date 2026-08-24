@@ -26,5 +26,6 @@
   "fix-math",
   "full-screen-cross-platform",
   "vscode-editor",
-  "document-comments"
+  "document-comments",
+  "side-notes"
 ]

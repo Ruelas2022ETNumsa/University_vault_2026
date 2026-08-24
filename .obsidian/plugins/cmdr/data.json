@@ -14,6 +14,12 @@
       "icon": "lucide-sticky-note",
       "name": "Admonition: Insert Admonition",
       "mode": "any"
+    },
+    {
+      "id": "document-comments:add-comment",
+      "icon": "lucide-message-square",
+      "name": "Document Comments: Add comment",
+      "mode": "any"
     }
   ],
   "fileMenu": [],

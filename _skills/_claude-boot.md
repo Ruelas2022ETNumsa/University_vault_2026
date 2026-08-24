@@ -28,7 +28,7 @@ tags:
   - arranque
   - infraestructura
 date_created: 2026-05-30
-date_updated: 2026-08-08
+date_updated: 2026-08-24
 status: activo
 fase: infraestructura
 ---
@@ -335,6 +335,7 @@ Leer el beacon específico según el tema:
 | Contexto de trabajo por materia (ejercicios, formulario) | `_app/_config/_claude-matter-boot.md`                              |
 | Prompts y guías NotebookLM por materia                   | `_app/notebooklm/`                                                 |
 | Cornell Notes + Marginalia                               | `_app/_appnotes/cornell_guide.md`                                  |
+| Document Comments (revisiones, estados, canal Claude)    | `_app/_config/_comments-system.md`                                 |
 | Skills de Claude (work, plan, close, setup, boot)        | `_skills/`                                                         |
 | Skills móviles Drive MCP (consulta/repaso desde móvil)    | `_skills/_start_movil.md`, `_skills/_repaso_movil.md`, `_skills/_plan_movil.md` |
 | Sistema de proyectos (`_hangar/`, ships, carriers, operators, dock) | `_app/_config/_projects_system.md` |
