@@ -28665,6 +28665,7 @@ Senal
 Suprimir
 Side
 SISO
+Sidenote
 Plugins
 Pendientes
 Plugin
@@ -82112,6 +82113,7 @@ subplot
 spshn
 seriales
 sidenote
+solapa
 vault
 vil
 ver
@@ -110796,6 +110798,7 @@ resolved
 reproducirse
 reply
 rquicas
+receptor
 notes
 notas
 nuevas
@@ -204374,6 +204377,7 @@ Andr
 Alexander
 Atendido
 Aprendizaje
+Apertura
 push
 pull
 para
@@ -289065,6 +289069,7 @@ inicios
 indistinguibles
 incorrelaci
 italic
+invariantes
 Dependencia
 Dropbox
 Dataview
@@ -363155,6 +363160,7 @@ NiBXluz
 NJqz
 NNvm
 NoBgThispage
+Nyquist
 originales
 observatory
 oficial

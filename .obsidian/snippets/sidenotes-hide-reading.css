@@ -1,0 +1,11 @@
+/* sidenotes-hide-reading.css
+   Oculta todos los sidenotes en Reading Mode.
+   El plugin renderiza los sidenotes en .sidenote-margin (no en .sidenote).
+   Activar/desactivar desde Settings → Appearance → CSS Snippets.
+*/
+
+.markdown-reading-view .sidenote-margin {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}

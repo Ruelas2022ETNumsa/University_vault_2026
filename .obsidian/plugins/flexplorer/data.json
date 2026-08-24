@@ -25,7 +25,10 @@
         "shared",
         "README.md",
         "Untitled.md",
-        "Untitled 1.md"
+        "Untitled 1.md",
+        "Untitled 2.md",
+        "Untitled 3.md",
+        "Untitled 4.md"
       ]
     },
     "MOC": {
@@ -221,7 +224,8 @@
         "_template-system.md",
         "_ToDo-system.md",
         "_skill-system.md",
-        "_prompt-system.md"
+        "_prompt-system.md",
+        "_comments-system.md"
       ]
     },
     "_app/_config/_basic-memory-system.md": {
@@ -5236,6 +5240,22 @@
       "isHidden": false
     },
     "_hangar/dock/latex-matlab-limpieza-comentarios.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled 2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled 4.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_config/_comments-system.md": {
       "isPinned": false,
       "isHidden": false
     }
