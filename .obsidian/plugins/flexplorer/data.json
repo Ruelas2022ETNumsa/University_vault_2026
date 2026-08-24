@@ -27,9 +27,9 @@
         "Untitled.md",
         "Untitled 1.md",
         "ETN607-T02-P1-Ecuaciones de Lagrange.md",
-        "paso607.md",
         "tema 1 nose607.md",
-        "Untitled 2.md"
+        "Untitled 2.md",
+        "Untitled 3.md"
       ]
     },
     "MOC": {
@@ -1736,8 +1736,8 @@
         "paso607-24-08-2026_17-16-22.png",
         "paso607-24-08-2026_17-16-32.png",
         "paso607-24-08-2026_19-03-41.png",
-        "paso607-24-08-2026_19-03-54.png",
-        "paso607-24-08-2026_19-04-13.png"
+        "P1-E5-607-24-08-2026_19-03-54.png",
+        "P1-E5-607-24-08-2026_19-04-13.png"
       ]
     },
     "_app/notebooklm/prompts/ETN607/ETN607-transcription-divisions.md": {
@@ -3633,6 +3633,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "P1-E5-607.md",
         "P1-E4-607.md",
         "P1-E3-607.md",
         "P1-E2-607.md",
@@ -5263,10 +5264,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "paso607.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_assets/paso607-24-08-2026_17-16-22.png": {
       "isPinned": false,
       "isHidden": false
@@ -5307,15 +5304,23 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_assets/paso607-24-08-2026_19-03-54.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/paso607-24-08-2026_19-04-13.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Semesters/Sem_04/ETN607/Partial_1/P1-E4-607.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/P1-E5-607-24-08-2026_19-03-54.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/P1-E5-607-24-08-2026_19-04-13.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Partial_1/P1-E5-607.md": {
       "isPinned": false,
       "isHidden": false
     }

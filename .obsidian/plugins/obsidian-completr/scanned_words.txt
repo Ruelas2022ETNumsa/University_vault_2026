@@ -46314,6 +46314,8 @@ dificultades
 desconocidas
 detallaron
 desglose
+dobla
+direccion
 Vault
 Verificar
 Variables
@@ -64736,6 +64738,7 @@ gobernada
 gravitacional
 gMrm
 gxve
+geometrica
 body
 beacon
 bat
@@ -72605,6 +72608,8 @@ byuuU
 bXzg
 bOoz
 bmdp
+brazo
+basales
 scope
 status
 selector
@@ -82408,6 +82413,7 @@ subrayada
 sßx
 simplifacnado
 suspendido
+sceles
 vault
 vil
 ver
@@ -101677,6 +101683,10 @@ anSx
 aLJo
 arignals
 aline
+articulares
+articulacion
+angulos
+alcanzar
 related
 recomendados
 ribbon
@@ -111202,6 +111212,7 @@ rigidez
 rodadura
 reactivo
 restituye
+rotado
 notes
 notas
 nuevas
@@ -130146,6 +130157,8 @@ cuelga
 colgando
 contribuye
 ckHH
+calculos
+codo
 updated
 un
 universo
@@ -187197,6 +187210,7 @@ Enlaces
 EnQxgs
 Expandiendo
 ENMk
+Elevacion
 Obsidian
 OmniSearch
 Ocultar
@@ -224505,6 +224519,7 @@ moZD
 mJFO
 mSmJP
 msieub
+mira
 YAML
 Ya
 You
@@ -251908,6 +251923,13 @@ extenderse
 ejerce
 expresada
 efectiva
+eslabones
+eslab
+elevacion
+eslabon
+espaciales
+elbow
+eleva
 Motor
 Media
 Mantiene
@@ -290141,6 +290163,8 @@ incrementando
 integrabilidad
 incorporando
 importes
+isosceles
+inclina
 Dependencia
 Dropbox
 Dataview
@@ -299918,6 +299942,7 @@ DRTM
 DEAzQD
 Djoo
 Dificultades
+Determinamos
 Remotely
 Raz
 Revisa
@@ -309998,6 +310023,7 @@ RphC
 RyMb
 RQGn
 RkkU
+Relacion
 Hider
 Hace
 Herramientas
@@ -373978,6 +374004,7 @@ oILH
 oUyl
 oscilar
 oeiU
+orienta
 junto
 json
 jer
