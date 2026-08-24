@@ -1,0 +1,2 @@
+> [!PDF] [[_PDF/BORRADOR OK OK ETN 825 2022.pdf#page=1&annotation=662R|BORRADOR OK OK ETN 825 2022, p.1]]
+> La inteligencia de algunos sistemas digitales (ej.: unidad de cinta) es tan rudimentaria que pueden funcionar adecuadamente solo en comunicación con otro sistema. En una computadora, usualmente la CPU coordina la actividad de los sistemas digitales individuales.

@@ -7,6 +7,7 @@ related_notes:
   - "[[_galaxy-system]]"
   - "[[_marginalia_system]]"
   - "[[_claude-boot]]"
+  - "[[_sidenotes-system]]"
 tags: [beacon, obsidian, plugins, infraestructura, comments, galaxy]
 date_created: 2026-08-24
 date_updated: 2026-08-24
@@ -217,7 +218,7 @@ Claude:
 | Sistema | Sigue siendo para |
 |---|---|
 | **Cornell Marginalia** | Aprendizaje activo — semantic highlighting, active recall `;;`, flashcards, threads entre notas, blur mode |
-| **Side-Notes** (`[^1]`) | Notas narrativas al margen que forman parte del contenido de la nota |
+| **Side-Notes** (`<span class="sidenote">`) | Notas narrativas al margen que forman parte del contenido de la nota — formato HTML oficial |
 | **`_ToDo-system.md`** | Pendientes globales del vault sin ancla a texto específico |
 
 ---
@@ -227,4 +228,5 @@ Claude:
 [[_app/_config/_galaxy-system.md]]
 [[_app/_config/_marginalia_system.md]]
 [[_app/_config/_claude-boot.md]]
+[[_app/_config/_sidenotes-system.md]]
 %%

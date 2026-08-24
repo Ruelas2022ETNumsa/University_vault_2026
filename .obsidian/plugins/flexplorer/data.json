@@ -28,7 +28,9 @@
         "Untitled 1.md",
         "Untitled 2.md",
         "Untitled 3.md",
-        "Untitled 4.md"
+        "Untitled 4.md",
+        "Untitled 5.md",
+        "Untitled 6.md"
       ]
     },
     "MOC": {
@@ -225,7 +227,8 @@
         "_ToDo-system.md",
         "_skill-system.md",
         "_prompt-system.md",
-        "_comments-system.md"
+        "_comments-system.md",
+        "_sidenotes-system.md"
       ]
     },
     "_app/_config/_basic-memory-system.md": {
@@ -1418,7 +1421,8 @@
         "ship_library_ETN1015.md",
         "tsk_prompt_guides_1015.md",
         "latex-overleaf-estructura-profesional.md",
-        "latex-matlab-limpieza-comentarios.md"
+        "latex-matlab-limpieza-comentarios.md",
+        "tsk_toggle-readable-line-length.md"
       ]
     },
     "_hangar/dock/tsk_library_ETN825.md": {
@@ -1729,7 +1733,8 @@
       "sortOrder": "custom",
       "customOrder": [
         "Untitled-07-08-2026_16-58-24.png",
-        "Untitled-07-08-2026_16-58-26.png"
+        "Untitled-07-08-2026_16-58-26.png",
+        "Untitled 5-24-08-2026_00-51-39.png"
       ]
     },
     "_assets/Untitled-07-08-2026_16-58-24.png": {
@@ -5256,6 +5261,26 @@
       "isHidden": false
     },
     "_app/_config/_comments-system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_config/_sidenotes-system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/dock/tsk_toggle-readable-line-length.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled 5.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled 6.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/Untitled 5-24-08-2026_00-51-39.png": {
       "isPinned": false,
       "isHidden": false
     }
