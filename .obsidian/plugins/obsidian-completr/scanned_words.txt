@@ -46305,6 +46305,9 @@ daecc
 dtyn
 dpbz
 dArvg
+deteni
+dificultades
+desconocidas
 Vault
 Verificar
 Variables
@@ -92034,6 +92037,7 @@ vjtD
 vQjD
 vREk
 vNNS
+vectorialmente
 audience
 activo
 auto
@@ -120076,6 +120080,7 @@ nYub
 nwgt
 nLGG
 nbTMP
+newtoniana
 created
 commit
 cada
@@ -177119,6 +177124,7 @@ FAat
 FiXo
 FVVuu
 FcMPc
+Fzas
 Estado
 Excalidraw
 EPUBs
@@ -187142,6 +187148,7 @@ EQDQtyy
 EEQX
 EonV
 ExlzH
+Exige
 Obsidian
 OmniSearch
 Ocultar
@@ -251837,6 +251844,7 @@ ezmgErND
 erkO
 edgs
 eOHn
+extricto
 Motor
 Media
 Mantiene
@@ -279458,6 +279466,7 @@ lwHS
 lbmX
 lMZO
 ljgv
+laborioso
 incluyendo
 im
 instalar
@@ -299836,6 +299845,7 @@ DsgJ
 DRTM
 DEAzQD
 Djoo
+Dificultades
 Remotely
 Raz
 Revisa
@@ -326532,6 +326542,7 @@ fldf
 fGTJ
 fOlK
 fvHw
+fundamentar
 haya
 hace
 hacer

@@ -30,7 +30,9 @@
         "Untitled 3.md",
         "Untitled 4.md",
         "Untitled 5.md",
-        "Untitled 6.md"
+        "Untitled 6.md",
+        "ETN607.md",
+        "paso607.md"
       ]
     },
     "MOC": {
@@ -5281,6 +5283,14 @@
       "isHidden": false
     },
     "_assets/Untitled 5-24-08-2026_00-51-39.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "ETN607.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "paso607.md": {
       "isPinned": false,
       "isHidden": false
     }
