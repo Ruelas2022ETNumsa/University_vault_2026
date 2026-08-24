@@ -9019,6 +9019,8 @@ tucP
 tUPV
 tPxq
 tBzZ
+tese
+transcribiendo
 ToDo
 Templater
 Text
@@ -101660,6 +101662,7 @@ aDriM
 anSx
 aLJo
 arignals
+aline
 related
 recomendados
 ribbon
@@ -111180,6 +111183,10 @@ rfzCO
 rPrD
 rYVo
 rbitro
+reacciones
+rigidez
+rodadura
+reactivo
 notes
 notas
 nuevas
@@ -120081,6 +120088,7 @@ nwgt
 nLGG
 nbTMP
 newtoniana
+noma
 created
 commit
 cada
@@ -130113,6 +130121,7 @@ cnvI
 cEgW
 cton
 calloutr
+confinada
 updated
 un
 universo
@@ -196123,6 +196132,7 @@ Odjqt
 Otdl
 Omzm
 OOgoJ
+Obteniendo
 Auto
 Annotator
 Autocompletado
@@ -214128,6 +214138,7 @@ pfBS
 prwp
 pruebva
 prieba
+prescindiendo
 min
 mica
 movimiento
@@ -271072,6 +271083,7 @@ LUjb
 LWvR
 Lbzdnm
 Lrk
+Ligaduras
 links
 las
 listar
@@ -290069,6 +290081,10 @@ iboS
 irtx
 iDNk
 individuale
+incrementando
+integrabilidad
+incorporando
+importes
 Dependencia
 Dropbox
 Dataview
