@@ -31,8 +31,12 @@
         "Untitled 4.md",
         "Untitled 5.md",
         "Untitled 6.md",
-        "ETN607.md",
-        "paso607.md"
+        "ETN607-T02-P1-Ecuaciones de Lagrange.md",
+        "paso607.md",
+        "tema 1 nose.md",
+        "607_E1.md",
+        "EX1_607.md",
+        "Untitled 7.md"
       ]
     },
     "MOC": {
@@ -1736,7 +1740,10 @@
       "customOrder": [
         "Untitled-07-08-2026_16-58-24.png",
         "Untitled-07-08-2026_16-58-26.png",
-        "Untitled 5-24-08-2026_00-51-39.png"
+        "Untitled 5-24-08-2026_00-51-39.png",
+        "paso607-24-08-2026_17-16-06.png",
+        "paso607-24-08-2026_17-16-22.png",
+        "paso607-24-08-2026_17-16-32.png"
       ]
     },
     "_assets/Untitled-07-08-2026_16-58-24.png": {
@@ -5286,11 +5293,39 @@
       "isPinned": false,
       "isHidden": false
     },
-    "ETN607.md": {
+    "paso607.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "paso607.md": {
+    "tema 1 nose.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/paso607-24-08-2026_17-16-06.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/paso607-24-08-2026_17-16-22.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/paso607-24-08-2026_17-16-32.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "607_E1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "EX1_607.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled 7.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "ETN607-T02-P1-Ecuaciones de Lagrange.md": {
       "isPinned": false,
       "isHidden": false
     }

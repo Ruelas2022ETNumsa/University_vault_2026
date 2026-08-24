@@ -1,240 +1,154 @@
-%%< correcciones hechas: Corrección del subtítulo "sistema extricto" a "Sistema esférico" en la sección de Newton, formulación completa de sus ecuaciones diferenciales en 3D, incorporación de la sección 2.3 (Grados de libertad con esquema LaTeX de clasificación), sección 2.4 (Coordenadas generalizadas), sección 2.5 (Ecuaciones de restricción con esquema de clasificación temporal e integrable) y sección 2.6 (El Lagrangiano y las ecuaciones de Lagrange), deteniéndose inmediatamente antes de la sección 2.7 (Velocidad). %%
+### Ejercicio 1 — Resorte péndulo
 
-## 2.2 Ecuaciones de Lagrange (continuación)
+![[paso607-24-08-2026_17-16-06.png]]
 
-`````cornell
-::cue
-coordenadas esféricas · aceleración curvilínea · fuerzas de ligadura
-¿Cómo se definen la velocidad y la aceleración en componentes esféricas?
-¿Cuáles son las ecuaciones de movimiento de Newton en este sistema?
-Fórmula clave: $\vec{a} = (\ddot{r} - r\dot{\theta}^2 - r\dot{\phi}^2\operatorname{sen}^2\theta)\mathbf{e}_r + (r\ddot{\theta} + 2\dot{r}\dot{\theta} - r\dot{\phi}^2\operatorname{sen}\theta\cos\theta)\mathbf{e}_\theta + (r\ddot{\phi}\operatorname{sen}\theta + 2\dot{r}\dot{\phi}\operatorname{sen}\theta + 2r\dot{\theta}\dot{\phi}\cos\theta)\mathbf{e}_\phi$
-
-::note
-**c) Sistema esférico** %%<F- \vec{F} = m\vec{a} %%
-La posición de una partícula en coordenadas esféricas se define por una distancia y dos ángulos $(r, \theta, \phi)$:
-
-$$
-\vec{r} = r\mathbf{e}_r
-$$
-
-
-Derivando respecto al tiempo, se obtiene la velocidad curvilínea:
-
-$$
-\vec{v} = \dot{r}\mathbf{e}_r + r\dot{\theta}\mathbf{e}_\theta + r\dot{\phi}\operatorname{sen}\theta\mathbf{e}_\phi
-$$
-
-
-Derivando nuevamente, la aceleración total de la partícula resulta:
-
-$$
-\vec{a} = (\ddot{r} - r\dot{\theta}^2 - r\dot{\phi}^2\operatorname{sen}^2\theta)\mathbf{e}_r + (r\ddot{\theta} + 2\dot{r}\dot{\theta} - r\dot{\phi}^2\operatorname{sen}\theta\cos\theta)\mathbf{e}_\theta + (r\ddot{\phi}\operatorname{sen}\theta + 2\dot{r}\dot{\phi}\operatorname{sen}\theta + 2r\dot{\theta}\dot{\phi}\cos\theta)\mathbf{e}_\phi
-$$
-
-
-Por lo tanto, las ecuaciones de movimiento de Newton en componentes esféricas son:
-
-$$
-\Sigma F_r = m(\ddot{r} - r\dot{\theta}^2 - r\dot{\phi}^2\operatorname{sen}^2\theta)
-$$
-
-
-$$
-\Sigma F_\theta = m(r\ddot{\theta} + 2\dot{r}\dot{\theta} - r\dot{\phi}^2\operatorname{sen}\theta\cos\theta)
-$$
-
-
-$$
-\Sigma F_\phi = m(r\ddot{\phi}\operatorname{sen}\theta + 2\dot{r}\dot{\phi}\operatorname{sen}\theta + 2r\dot{\theta}\dot{\phi}\cos\theta)
-$$
-
-
-```ad-note
-title: Comentario sobre las fuerzas de ligadura
-collapse: closed
-Al igual que en el sistema cilíndrico, la formulación newtoniana exige incluir explícitamente las fuerzas de ligadura (tensiones, reacciones normales) que mantienen confinada a la partícula, incrementando enormemente la dificultad algebraica del sistema.
-```
-`````
-
->[!summary] Formulación de las ecuaciones de Newton en coordenadas esféricas, evidenciando la alta complejidad de sus componentes de aceleración.
+**Sistema:** Una masa $m$ cuelga de un resorte de constante $k$ y longitud natural $l_0$, fijado al techo. La masa puede oscilar (ángulo $\theta$ desde la vertical) y el resorte puede extenderse o comprimirse (longitud instantánea $r$). El sistema opera en el plano vertical — dos grados de libertad: $r$ y $\theta$.
 
 ---
 
-## 2.3 Grados de libertad $DOF$
+#### Paso 1 — Establecer coordenadas
 
-`````cornell
-::cue
-grados de libertad · coordenadas mínimas · restricciones del movimiento
-¿Qué define físicamente a un grado de libertad?
-¿Cómo afecta una ligadura al número de grados de libertad de un sistema?
-Fórmula clave: $\text{DOF} = 3N - k$
-
-::note
-**Definición**
-Los **Grados de Libertad $DOF$** corresponden al número de variables o coordenadas independientes mínimas necesarias para determinar de manera unívoca la posición y configuración física de un sistema en el espacio.
-
-Para un sistema constituido por $N$ partículas libres en tres dimensiones, el número de grados de libertad es de $3N$. Si sobre el sistema actúan $k$ ecuaciones de restricción independientes, el número de grados de libertad se reduce de manera directa:
-
+El eje $y$ apunta hacia abajo (dirección de la gravedad). Las coordenadas cartesianas en función de $(r, \theta)$ son:
 
 $$
-\text{DOF} = 3N - k
+x = r\sin\theta \qquad y = r\cos\theta
 $$
 
+Derivando para obtener las velocidades:
 
-**Esquema de clasificación física de sistemas comunes en 3D**:
 $$
-\substack{\displaystyle\text{Grados de Libertad}\\\displaystyle\text{(DOF) en 3D}}
-\begin{cases}
-\text{- Partícula libre}
-\begin{cases}
-\text{- N = 3}
-\end{cases} \\[4pt]
-\text{- Varilla rígida}
-\begin{cases}
-\text{- N = 5}
-\end{cases} \\[4pt]
-\text{- Cuerpo rígido}
-\begin{cases}
-\text{- N = 6}
-\end{cases}
-\end{cases}
-\quad \left| \quad
-\begin{array}{l}
-\text{3 traslaciones} \\
-\text{3 traslaciones + 2 rotaciones} \\
-\text{3 traslaciones + 3 rotaciones}
-\end{array}
-\right.
+\dot x = \dot r\sin\theta + r\dot\theta\cos\theta \qquad
+\dot y = \dot r\cos\theta - r\dot\theta\sin\theta
 $$
-
-![[pegar_imagen]]
-*Figura 2.1 · Grados de libertad para una varilla rígida libre en el espacio tridimensional.*
-
-```ad-note
-title: Comentario
-collapse: closed
-Para la varilla rígida, las 2 partículas tienen originalmente 6 coordenadas, pero la condición de rigidez representa una ecuación de restricción ($d = \text{constante}$), lo que reduce los grados de libertad a 5.
-```
-
-IMA | fuente: ETN607_T02.pdf | página: 1 | id: Figura 2.1 | posición: centro
-`````
-
->[!summary] Los grados de libertad definen la movilidad independiente de un sistema mecánico, calculados mediante la diferencia entre sus coordenadas totales y sus restricciones físicas.
 
 ---
 
-## 2.4 Coordenadas generalizadas
-
-`````cornell
-::cue
-coordenadas generalizadas · velocidades generalizadas · configuración del sistema
-¿Qué diferencia a las coordenadas generalizadas de las coordenadas cartesianas ordinarias?
-¿Cómo se definen las velocidades generalizadas?
-Fórmula clave: $q_i \rightarrow \text{coordenadas}, \quad \dot{q}_i \rightarrow \text{velocidades}$
-
-::note
-**Definición**
-Se denomina **coordenadas generalizadas** a cualquier conjunto de parámetros independientes $(q_1, q_2, \dots, q_n)$ que describen de forma completa y unívoca la configuración de un sistema físico de $n$ grados de libertad. 
-
-Estas coordenadas no requieren poseer dimensiones de longitud física (pueden ser ángulos, áreas, etc.). Las derivadas primeras respecto al tiempo de estas coordenadas se denominan **velocidades generalizadas**:
-
+#### Paso 2 — Energía cinética $T$
 
 $$
-\dot{q}_i = \dfrac{dq_i}{dt}
+T = \frac{1}{2}m(\dot x^2 + \dot y^2)
 $$
 
-
-**Ecuaciones de transformación**
-Relacionan las coordenadas rectangulares ordinarias de cada partícula $\vec{r}_i$ con las coordenadas generalizadas del sistema y el tiempo:
-
+Expandiendo $\dot x^2 + \dot y^2$ y simplificando (los términos cruzados se cancelan):
 
 $$
-\vec{r}_i = \vec{r}_i(q_1, q_2, \dots, q_n, t)
+\dot x^2 + \dot y^2 = \dot r^2 + r^2\dot\theta^2
 $$
 
-`````
+Por lo tanto:
 
->[!summary] Las coordenadas generalizadas describen la posición de un sistema con el número mínimo de parámetros independientes requeridos, prescindiendo del marco cartesiano rígido.
+$$
+T = \frac{1}{2}m\left(\dot r^2 + r^2\dot\theta^2\right)
+$$
+
+> Esta es la expresión estándar de la energía cinética en coordenadas polares planas.
 
 ---
 
-## 2.5 Ecuaciones de restricción
+#### Paso 3 — Energía potencial $V$
 
-`````cornell
-::cue
-ligaduras holónomas · ligaduras no holónomas · esclerónomas · reónomas
-¿Cómo se clasifican las restricciones según su integrabilidad y su dependencia temporal?
-¿Qué define a una restricción holónoma?
-Fórmula clave: $f(r_1, r_2, \dots, r_N, t) = 0$
+Hay dos fuentes de energía potencial:
 
-::note
-**Definición**
-Las restricciones (o ligaduras) son limitaciones físicas impuestas sobre la libre movilidad de las partículas de un sistema.
-
-**Clasificación de las Restricciones**: %%<C- Revisar ejemplos prácticos de ligaduras no holónomas %%
+- **Resorte** (elástica): $\dfrac{1}{2}k(r - l_0)^2$
+- **Gravedad** (con $y$ hacia abajo, $y = r\cos\theta$): $-mgy = -mgr\cos\theta$
 
 $$
-\substack{\displaystyle\text{Clasificación de}\\\displaystyle\text{Restricciones}}
-\begin{cases}
-\text{- Por su integrabilidad}
-\begin{cases}
-\text{- Holónomas: expresables como } f(\vec{r}_i, t) = 0 \\[4pt]
-\text{- No holónomas: diferenciales no integrables}
-\end{cases} \\[4pt]
-\text{- Por su dependencia temporal}
-\begin{cases}
-\text{- Esclerónomas: independientes del tiempo } f(\vec{r}_i) = 0 \\[4pt]
-\text{- Reónomas: dependen explícitamente del tiempo } f(\vec{r}_i, t) = 0
-\end{cases}
-\end{cases}
+V = \frac{1}{2}k(r-l_0)^2 - mgr\cos\theta
 $$
-
-
-```ad-note
-title: Ligaduras de rodadura
-collapse: closed
-La rodadura sin deslizamiento es el ejemplo típico de ligadura no holónoma, ya que sus ecuaciones diferenciales de restricción no pueden ser integradas directamente en coordenadas algebraicas.
-```
-`````
-
->[!summary] Las restricciones limitan el movimiento del sistema y se clasifican según su integrabilidad algebraica y su dependencia explícita del tiempo.
 
 ---
 
-## 2.6 El Lagrangiano y las Ecuaciones de Lagrange
-
-`````cornell
-::cue
-lagrangiano · energía cinética · energía potencial · ecuaciones de movimiento
-¿Cómo se define el Lagrangiano de un sistema mecánico?
-¿Cuáles son las ecuaciones de movimiento de Lagrange para sistemas conservativos?
-Fórmula clave: $L = T - V$, $\quad \dfrac{d}{dt}\left(\dfrac{\partial L}{\partial \dot{q}_i}\right) - \dfrac{\partial L}{\partial q_i} = 0$
-
-::note
-**Definición del Lagrangiano** %%<V- L = T - V %%
-Para un sistema conservativo, el **Lagrangiano ($L$)** es la función energética definida como la diferencia entre la energía cinética total ($T$) y la energía potencial total ($V$) del sistema:
-
+#### Paso 4 — Lagrangiano $L = T - V$
 
 $$
-L = T - V
+L = \frac{1}{2}m\left(\dot r^2 + r^2\dot\theta^2\right) - \frac{1}{2}k(r-l_0)^2 + mgr\cos\theta
 $$
 
+---
 
-**Ecuaciones de Lagrange**
-Para un sistema holónomo y conservativo de $n$ grados de libertad, las ecuaciones de movimiento independientes se expresan como:
+#### Paso 5 — Ecuación de Euler-Lagrange para $r$
 
+La ecuación de Euler-Lagrange es:
 
 $$
-\dfrac{d}{dt}\left(\dfrac{\partial L}{\partial \dot{q}_i}\right) - \dfrac{\partial L}{\partial q_i} = 0 \quad (i = 1, 2, \dots, n)
+\frac{d}{dt}\left(\frac{\partial L}{\partial\dot r}\right) - \frac{\partial L}{\partial r} = 0
 $$
 
+**Calculando cada término:**
 
-```ad-note
-title: Ventaja del método energético
-collapse: closed
-El método de Lagrange elimina de forma automática todas las fuerzas de restricción internas de carácter reactivo, permitiendo derivar las ecuaciones diferenciales de movimiento únicamente a partir de funciones escalares de energía.
-```
-`````
+$$
+\frac{\partial L}{\partial\dot r} = m\dot r
+\qquad\Rightarrow\qquad
+\frac{d}{dt}\left(\frac{\partial L}{\partial\dot r}\right) = m\ddot r
+$$
 
->[!summary] El Lagrangiano unifica la descripción energética del sistema, permitiendo derivar las ecuaciones de movimiento sin requerir el planteamiento vectorial de fuerzas de ligadura.
+$$
+\frac{\partial L}{\partial r} = mr\dot\theta^2 - k(r-l_0) + mg\cos\theta
+$$
 
+> El término $mr\dot\theta^2$ viene de derivar $\frac{1}{2}mr^2\dot\theta^2$ respecto a $r$. El término $-k(r-l_0)$ es la fuerza elástica. El término $mg\cos\theta$ es la componente de la gravedad en dirección radial.
+
+**Aplicando la ecuación:**
+
+$$
+m\ddot r - \left[mr\dot\theta^2 - k(r-l_0) + mg\cos\theta\right] = 0
+$$
+
+> [!important]
+> $$
+> \boxed{m(\ddot r - r\dot\theta^2) = -k(r-l_0) + mg\cos\theta}
+> $$
+
+**Lectura física:** el lado izquierdo es la aceleración radial neta (traslación menos la centrífuga); el lado derecho son las fuerzas en dirección $r$ — el resorte restituye hacia $l_0$ y la gravedad empuja radialmente hacia afuera cuando $\theta < 90°$.
+
+---
+
+#### Paso 6 — Ecuación de Euler-Lagrange para $\theta$
+
+$$
+\frac{d}{dt}\left(\frac{\partial L}{\partial\dot\theta}\right) - \frac{\partial L}{\partial\theta} = 0
+$$
+
+**Calculando cada término:**
+
+$$
+\frac{\partial L}{\partial\dot\theta} = mr^2\dot\theta
+\qquad\Rightarrow\qquad
+\frac{d}{dt}\left(mr^2\dot\theta\right) = m(2r\dot r\dot\theta + r^2\ddot\theta)
+$$
+
+> La derivada de $r^2\dot\theta$ respecto al tiempo requiere regla del producto: $2r\dot r\dot\theta + r^2\ddot\theta$.
+
+$$
+\frac{\partial L}{\partial\theta} = -mgr\sin\theta
+$$
+
+**Aplicando la ecuación:**
+
+$$
+m(2r\dot r\dot\theta + r^2\ddot\theta) + mgr\sin\theta = 0
+$$
+
+> [!important]
+> $$
+> \boxed{m(2r\dot r\dot\theta + r^2\ddot\theta) = -mgr\sin\theta}
+> $$
+
+---
+
+#### Paso 7 — Caso particular: péndulo simple ($r = l = \text{cte}$)
+
+Si el resorte no se extiende y la longitud es fija $r = l$, entonces $\dot r = 0$ y $\ddot r = 0$. La ecuación de $\theta$ se simplifica:
+
+$$
+m(0 + l^2\ddot\theta) = -mgl\sin\theta
+$$
+
+Dividiendo por $ml$:
+
+> [!important]
+> $$
+> \boxed{l\ddot\theta = -g\sin\theta}
+> $$
+
+> Este es el resultado clásico del péndulo simple. En el buffer figuraba $l^2\ddot\theta = -gl\sin\theta$ — ambas formas son equivalentes algebraicamente pero la forma canónica es $l\ddot\theta = -g\sin\theta$.

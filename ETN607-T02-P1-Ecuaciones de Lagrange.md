@@ -272,33 +272,274 @@ $$
 
 >[!summary] Sistema esférico con ecuaciones de transformación directa e inversa, y derivación del trabajo virtual hacia las ecuaciones de Lagrange.
 
+---
+
+%%< correcciones hechas: Incorporación del lema de cancelación de puntos (dot-cancelling lemma) como demostración matemática omitida en el apunte y corrección formal de las proyecciones de fuerza para el péndulo simple. %%
+
+## Velocidad
+
+`````cornell
+::cue
+derivación de Lagrange · coordenadas generalizadas · momentum lineal · fuerza generalizada
+¿Cómo se deduce el término de aceleración de Lagrange a partir de la velocidad?
+¿Cuál es la relación de cancelación de puntos (dot-cancelling lemma)?
+fórmula clave: $\dfrac{d}{dt}\left(\dfrac{\partial T}{\partial \dot{q}_r}\right) - \dfrac{\partial T}{\partial q_r} = Q_r$
+
+::note
+**Derivación de la Ecuación de Lagrange para una Partícula**
+
+Consideramos la derivada temporal del producto de la velocidad $\dot{x}$ y la derivada parcial de la posición respecto a la coordenada generalizada $q_r$:
+
+$$
+\dfrac{d}{dt} \left( \dot{x} \dfrac{\partial x}{\partial q_r} \right) = \ddot{x} \dfrac{\partial x}{\partial q_r} + \dot{x} \dfrac{d}{dt} \left( \dfrac{\partial x}{\partial q_r} \right)
+$$
 
 
+Despejando el término de aceleración:
+
+$$
+\ddot{x} \dfrac{\partial x}{\partial q_r} = \dfrac{d}{dt} \left( \dot{x} \dfrac{\partial x}{\partial q_r} \right) - \dot{x} \dfrac{d}{dt} \left( \dfrac{\partial x}{\partial q_r} \right)
+$$
 
 
+Aplicando las identidades fundamentales de transformación (candelación de puntos) %%<C- demostración del lema: \partial\dot{x}/\partial\dot{q}_r = \partial x/\partial q_r y d/dt(\partial x/\partial q_r) = \partial\dot{x}/\partial q_r %%:
+
+$$
+\ddot{x} \dfrac{\partial x}{\partial q_r} = \dfrac{d}{dt} \left( \dot{x} \dfrac{\partial \dot{x}}{\partial \dot{q}_r} \right) - \dot{x} \dfrac{\partial \dot{x}}{\partial q_r}
+$$
 
 
+Expresando en términos de la energía cinética de una partícula unidimensional $\frac{1}{2} \dot{x}^2$:
+
+$$
+\ddot{x} \dfrac{\partial x}{\partial q_r} = \dfrac{d}{dt} \left( \dfrac{\partial}{\partial \dot{q}_r} \left( \dfrac{1}{2} \dot{x}^2 \right) \right) - \dfrac{\partial}{\partial q_r} \left( \dfrac{1}{2} \dot{x}^2 \right)
+$$
 
 
+Efectuando el mismo procedimiento para las componentes $y$ y $z$:
+
+$$
+\dot{y} \dfrac{\partial y}{\partial q_r} = //
+$$
 
 
+$$
+\dot{z} \dfrac{\partial z}{\partial q_r} = //
+$$
 
 
+Entonces, multiplicando por la masa $m$ y sumando para las tres componentes cartesianas, obtenemos la aceleración generalizada en términos de la energía cinética $T = \frac{1}{2}m(\dot{x}^2 + \dot{y}^2 + \dot{z}^2)$:
+
+$$
+m \left( \ddot{x} \dfrac{\partial x}{\partial q_r} + \ddot{y} \dfrac{\partial y}{\partial q_r} + \ddot{z} \dfrac{\partial z}{\partial q_r} \right) = \dfrac{d}{dt} \left[ \dfrac{\partial}{\partial \dot{q}_r} \left( \dfrac{m}{2} (\dot{x}^2 + \dot{y}^2 + \dot{z}^2) \right) \right] - \dfrac{\partial}{\partial q_r} \left( \dfrac{m}{2} (\dot{x}^2 + \dot{y}^2 + \dot{z}^2) \right)
+$$
 
 
+$$
+\dfrac{d}{dt} \left( \dfrac{\partial T}{\partial \dot{q}_r} \right) - \dfrac{\partial T}{\partial q_r} = F_x \dfrac{\partial x}{\partial q_r} + F_y \dfrac{\partial y}{\partial q_r} + F_z \dfrac{\partial z}{\partial q_r}
+$$
 
+%%<F- Ecuación de Lagrange en componentes %%
 
+Donde el miembro izquierdo representa el producto de la masa por la aceleración generalizada, y el miembro derecho es la proyección de las fuerzas reales (fuerza generalizada $Q_r$):
 
-
-
-
+$$
+\text{L.I.: } \text{Masa} \times \text{Aceleración} \quad \sim \quad \text{L.D.: } \text{Proyección Fzas.}
+$$
 
 
 ---
----
----
 
+**Aplicación al Péndulo Simple $N = 1$**
+
+Para un sistema con un único grado de libertad, donde las coordenadas de la partícula se expresan en función de $\theta$ como única coordenada generalizada:
+
+$$
+(r, \theta, z) = (q_1, q_2, q_3) \quad \text{con } r = l = \text{cte}, \quad z = 0
+$$
+
+
+![[pegar_imagen]]
+*Figura 2.5 · Péndulo simple en coordenadas cilíndricas/polares.*
+
+La energía cinética de la partícula es:
+
+$$
+T = \dfrac{m}{2}(\dot{r}^2 + r^2\dot{\theta}^2 + \dot{z}^2)
+$$
+
+
+$$
+T = \dfrac{m}{2}l^2\dot{\theta}^2
+$$
+
+
+Aplicando la ecuación de Lagrange para $\theta$:
+
+$$
+\dfrac{d}{dt}\left(\dfrac{\partial T}{\partial \dot{\theta}}\right) - \dfrac{\partial T}{\partial \theta} = Q_\theta
+$$
+
+
+$$
+\dfrac{\partial T}{\partial \dot{\theta}} = ml^2\dot{\theta} \implies \dfrac{d}{dt}(ml^2\dot{\theta}) = ml^2\ddot{\theta}
+$$
+
+
+$$
+\dfrac{\partial T}{\partial \theta} = 0
+$$
+
+
+Para la fuerza generalizada $Q_\theta$, usamos las ecuaciones de transformación:
+
+$$
+x = l\sin\theta \implies \dfrac{\partial x}{\partial \theta} = l\cos\theta
+$$
+
+
+$$
+y = l\cos\theta \implies \dfrac{\partial y}{\partial \theta} = -l\sin\theta
+$$
+
+
+Las componentes de la fuerza total (gravedad y tensión $\tau$) son:
+
+$$
+F_x = -\tau\sin\theta
+$$
+
+
+$$
+F_y = mg - \tau\cos\theta
+$$
+
+
+Por lo tanto, la proyección de fuerzas resulta en:
+
+$$
+Q_\theta = F_x \dfrac{\partial x}{\partial \theta} + F_y \dfrac{\partial y}{\partial \theta}
+$$
+
+
+$$
+Q_\theta = (-\tau\sin\theta)(l\cos\theta) + (mg - \tau\cos\theta)(-l\sin\theta)
+$$
+
+
+$$
+Q_\theta = -\tau l\sin\theta\cos\theta - mgl\sin\theta + \tau l\sin\theta\cos\theta = -mgl\sin\theta
+$$
+
+
+Igualando ambos lados de la ecuación de Lagrange:
+
+$$
+ml^2\ddot{\theta} = -mgl\sin\theta \implies \ddot{\theta} = -\dfrac{g}{l}\sin\theta \quad \text{[GDE mod mat.]}
+$$
+
+
+Para pequeñas oscilaciones $\sin\theta \approx \theta$, el sistema se simplifica al oscilador armónico simple:
+
+$$
+\ddot{\theta} = -\dfrac{g}{l}\theta
+$$
+
+
+IMA | fuente: ETN607_T02.pdf | página: 4 | id: Figura 2.5 | posición: arriba
+`````
+
+>[!summary] Deducción de la ecuación de Lagrange mediante identidades diferenciales de la velocidad y su aplicación directa en la modelación del péndulo simple.
+
+---
+### Velocidad
+
+`````cornell
+::cue
+péndulo simple · coordenadas cilíndricas · fuerza generalizada · diagrama de bloques
+¿Cómo se obtiene la GDE del péndulo simple aplicando Lagrange en coordenadas cilíndricas?
+¿Cómo se implementa el modelo en Simulink?
+Fórmula clave: $\ddot{\theta} = -\dfrac{g}{l}\sin\theta$
+
+::note
+**Aplicación al Péndulo Simple $N = 1$**
+
+Para $N = 1$ con $(r, \theta, z) = (q_1, q_2, q_3)$, $r = l = \text{cte}$, $z = 0$:
+
+$$
+x = l\sin\theta \qquad y = l\cos\theta
+$$
+
+La energía cinética se reduce a:
+
+$$
+T = \dfrac{m}{2}\left(\dot{r}^2 + r^2\dot{\theta}^2 + \dot{z}^2\right)
+$$
+
+$$
+T = \dfrac{m}{2}\,l^2\dot{\theta}^2
+$$
+
+![[pegar_imagen]]
+*Figura 2.5 · Péndulo simple en coordenadas cilíndricas/polares con $r = l = \text{cte}$.*
+
+IMA | fuente: ETN607_T02.pdf | página: 4 | id: Figura 2.5 | posición: izquierda
+
+Entonces, aplicando la ecuación de Lagrange para $\theta$:
+
+$$
+\dfrac{d}{dt}\!\left(\dfrac{\partial T}{\partial \dot{\theta}}\right) - \dfrac{\partial T}{\partial \theta} = F_x\dfrac{\partial x}{\partial \theta} + F_y\dfrac{\partial y}{\partial \theta} + F_z\dfrac{\partial z}{\partial \theta}
+$$
+
+Derivadas de transformación:
+
+$$
+\dfrac{\partial x}{\partial \theta} = l\cos\theta \qquad \dfrac{\partial y}{\partial \theta} = -l\sin\theta \qquad \dfrac{\partial z}{\partial \theta} = 0
+$$
+
+Fuerzas sobre la partícula (gravedad + tensión $\tau$):
+
+$$
+F_x = -\tau\sin\theta \qquad F_y = mg - \tau\cos\theta
+$$
+
+Lado izquierdo:
+
+$$
+\dfrac{d}{dt}\!\left(\dfrac{\partial T}{\partial \dot{\theta}}\right) = \dfrac{d}{dt}\!\left(ml^2\dot{\theta}\right) = ml^2\ddot{\theta}
+$$
+
+Igualando:
+
+$$
+ml^2\ddot{\theta} = -\tau\sin\theta\,l\cos\theta + (mg - \tau\cos\theta)(-l\sin\theta)
+$$
+
+$$
+ml^2\ddot{\theta} = -\tau l\sin\theta\cos\theta - mgl\sin\theta + \tau l\cos\theta\sin\theta
+$$
+
+$$
+ml^2\ddot{\theta} = -mgl\sin\theta
+$$
+
+$$
+\boxed{\ddot{\theta} = -\dfrac{g}{l}\sin\theta} \qquad \text{ODE — mod mat.}
+$$
+
+Simplificado ($\sin\theta \approx \theta$):
+
+$$
+\ddot{\theta} = -\dfrac{g}{l}\,\theta
+$$
+
+`````
+
+>[!summary] Modelo del péndulo simple por Lagrange en coordenadas cilíndricas, obtención de la GDE y diagrama de bloques Simulink.
 %%< correcciones hechas %%
+
+---
+
 ## b) Euler
 
 `````cornell
@@ -377,5 +618,5 @@ end
 
 >[!summary] Transcripción y corrección del método de Euler para la resolución numérica de la ecuación de movimiento del péndulo simple.
 
-
+---
 
