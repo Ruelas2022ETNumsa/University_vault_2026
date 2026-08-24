@@ -34,9 +34,8 @@
         "ETN607-T02-P1-Ecuaciones de Lagrange.md",
         "paso607.md",
         "tema 1 nose.md",
-        "607_E1.md",
-        "EX1_607.md",
-        "Untitled 7.md"
+        "Untitled 7.md",
+        "Untitled 8 1.md"
       ]
     },
     "MOC": {
@@ -1741,7 +1740,7 @@
         "Untitled-07-08-2026_16-58-24.png",
         "Untitled-07-08-2026_16-58-26.png",
         "Untitled 5-24-08-2026_00-51-39.png",
-        "paso607-24-08-2026_17-16-06.png",
+        "P1-E1-607-24-08-2026_17-16-06.png",
         "paso607-24-08-2026_17-16-22.png",
         "paso607-24-08-2026_17-16-32.png"
       ]
@@ -3647,6 +3646,8 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "P1-E2-607.md",
+        "P1-E1-607.md",
         "ETN607-T01-complementos.md",
         "compelmentos para 607 T1.md",
         "ETN607-T01-P1-Conceptos generales 1.md",
@@ -5301,10 +5302,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_assets/paso607-24-08-2026_17-16-06.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_assets/paso607-24-08-2026_17-16-22.png": {
       "isPinned": false,
       "isHidden": false
@@ -5313,11 +5310,7 @@
       "isPinned": false,
       "isHidden": false
     },
-    "607_E1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "EX1_607.md": {
+    "ETN607-T02-P1-Ecuaciones de Lagrange.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -5325,7 +5318,19 @@
       "isPinned": false,
       "isHidden": false
     },
-    "ETN607-T02-P1-Ecuaciones de Lagrange.md": {
+    "_assets/P1-E1-607-24-08-2026_17-16-06.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Partial_1/P1-E1-607.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled 8 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Partial_1/P1-E2-607.md": {
       "isPinned": false,
       "isHidden": false
     }
