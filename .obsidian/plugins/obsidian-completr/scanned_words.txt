@@ -9021,6 +9021,7 @@ tPxq
 tBzZ
 tese
 transcribiendo
+torque
 ToDo
 Templater
 Text
@@ -64732,6 +64733,9 @@ gUnlpWi
 gCDe
 gVfc
 gobernada
+gravitacional
+gMrm
+gxve
 body
 beacon
 bat
@@ -72600,6 +72604,7 @@ bTXd
 byuuU
 bXzg
 bOoz
+bmdp
 scope
 status
 selector
@@ -130140,6 +130145,7 @@ comprimirse
 cuelga
 colgando
 contribuye
+ckHH
 updated
 un
 universo
@@ -140009,6 +140015,7 @@ uUuA
 uJYyn
 ujna
 unida
+uukq
 Galaxy
 Git
 Gr
@@ -167951,6 +167958,7 @@ Iqzp
 IIjl
 ICzC
 Ivoa
+IxbGN
 Funci
 File
 Fase
@@ -187188,6 +187196,7 @@ Exige
 Enlaces
 EnQxgs
 Expandiendo
+ENMk
 Obsidian
 OmniSearch
 Ocultar
@@ -205104,6 +205113,7 @@ ArTf
 AMuk
 AYGg
 AwFY
+AWaZj
 push
 pull
 para
@@ -214174,6 +214184,7 @@ prescindiendo
 proyecciones
 proyectando
 pitag
+pgAs
 min
 mica
 movimiento
@@ -251894,6 +251905,9 @@ edgs
 eOHn
 extricto
 extenderse
+ejerce
+expresada
+efectiva
 Motor
 Media
 Mantiene
@@ -317829,6 +317843,7 @@ HQNP
 HDFQq
 HghE
 Hdhc
+HOEe
 filtrar
 formato
 faltantes
@@ -326604,6 +326619,7 @@ fundamentar
 fijado
 fuga
 figuraba
+ffnX
 haya
 hace
 hacer
@@ -354991,6 +355007,7 @@ UvNz
 UGXu
 Uiyi
 UMEa
+USpM
 Nombre
 Notas
 No
@@ -373960,6 +373977,7 @@ oUafZ
 oILH
 oUyl
 oscilar
+oeiU
 junto
 json
 jer
@@ -402514,6 +402532,8 @@ yuWD
 yiXp
 ycnE
 yAQy
+ysfv
+yreU
 wikilinks
 when
 where
@@ -448323,6 +448343,7 @@ KSnC
 Kzev
 Kspw
 KlmQc
+KAwm
 Zonas
 Zoom
 Zona
@@ -486118,6 +486139,7 @@ XIlj
 äOg
 äfx
 äxz
+ävW
 öl
 öy
 öJk

@@ -1,5 +1,0 @@
-```ad-info
-collapse: open
-
-
-```

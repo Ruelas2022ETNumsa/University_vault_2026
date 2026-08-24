@@ -1,22 +1,58 @@
-# Prueba Document Comments
+##### Ej. Una masa $m$ se mueve sobre la curva $y = 4x^2$ bajo la acción de la gravedad. La única coordenada generalizada es $x$. Fuerzas: $F_x = 0$, $F_y = -mg$, $F_z = 0$. Obtener la GDE para $q_r = x$ mediante la ecuación de Lagrange.
 
-La fotosíntesis es el proceso por el cual las plantas convierten la luz solar en energía química almacenada.
+```tikz
+\usepackage{tikz}
+\begin{document}
 
-Este proceso ocurre <!--c:h4l0p-->principalmente<!--/c:h4l0p--> en los cloroplastos, donde la clorofila absorbe la radiación luminosa.
-<!--co:h4l0p by:alex at:2026-08-24T02:51:40.295Z status:open quote:"principalmente"
-me (2026-08-24T02:51:40.295Z): esto es una prueba
-claude (2026-08-24T03:10:00.000Z): marcado como resuelto — prueba de edición de estado desde filesystem
--->
+\begin{tikzpicture}[>=latex, scale=1.2]
 
-El producto final es <!--c:x9m2k-->glucosa<!--/c:x9m2k-->, que la planta utiliza como <!--c:dp0oi-->combustible <!--/c:dp0oi-->para crecer y reproducirse.
-<!--co:x9m2k by:claude at:2026-08-24T03:10:00.000Z status:resolved quote:"glucosa"
-claude (2026-08-24T03:10:00.000Z): prueba de claude — comentario creado directamente desde filesystem sin usar el plugin
--->
-<!--co:dp0oi by:alex at:2026-08-24T03:13:36.739Z status:resolved quote:"combustible"
-alex (2026-08-24T03:13:36.739Z): esto en un cpmentaroi
--->
+  % Ejes
+  \draw[->, thick, teal] (-2,0) -- (2,0)
+    node[right] {$x$};
 
-Las raíces absorben agua y %%> minerales %% del suelo, que luego son <!--c:spshn-->transportados<!--/c:spshn--> por el xilema hacia las hojas.
-<!--co:spshn by:alex at:2026-08-24T03:28:40.290Z status:open quote:"transportados"
-alex (2026-08-24T03:28:40.290Z): esto es una prueba
--->
+  \draw[->, thick, teal] (0,-0.5) -- (0,3.5)
+    node[above] {$y$};
+
+  % Trayectoria parabólica
+  \draw[
+    domain=-0.8:0.8,
+    smooth,
+    variable=\x,
+    thick,
+    teal
+  ]
+  plot ({\x},{4*\x*\x});
+
+  % Masa
+  \filldraw[orange] (0.5,1.0) circle (3pt)
+    node[above right, teal] {$m$};
+
+  % Fuerza gravitacional
+  \draw[->, thick, orange]
+    (0.5,1.0) -- (0.5,0.2)
+    node[below] {$-mg\hat{j}$};
+
+\end{tikzpicture}
+
+\end{document}
+```
+
+**Resolución**
+Se determinan las derivadas temporales y parciales de la energía cinética para el lado izquierdo de la ecuación de Lagrange, y se calculan las proyecciones de las fuerzas aplicadas en el lado derecho.
+
+
+$$
+\begin{array}{rcl}
+\dfrac{\partial T}{\partial \dot x} & = & m(1+64x^2)\dot x \\
+\dfrac{d}{dt}\left(\dfrac{\partial T}{\partial \dot x}\right) & = & m(1+64x^2)\ddot x + 128mx\dot x^2 \\
+\dfrac{\partial T}{\partial x} & = & 64mx\dot x^2 \\
+\text{LHS} = \dfrac{d}{dt}\left(\dfrac{\partial T}{\partial \dot x}\right) - \dfrac{\partial T}{\partial x} & = & m(1+64x^2)\ddot x + 64mx\dot x^2 \\
+\text{RHS} = F_x\dfrac{\partial x}{\partial x} + F_y\dfrac{\partial y}{\partial x} + F_z\dfrac{\partial z}{\partial x} & = & 0 \cdot (1) - mg \cdot (8x) + 0 \cdot (0) \\
+\text{RHS} & = & -8mgx \\
+m(1+64x^2)\ddot x + 64mx\dot x^2 & = & -8mgx \\
+(1+64x^2)\ddot x + 64x\dot x^2 & = & -8gx \\
+\therefore\quad \color{orange}{(1+64x^2)\ddot x + 64x\dot x^2 + 8gx = 0}
+\end{array}
+$$
+
+

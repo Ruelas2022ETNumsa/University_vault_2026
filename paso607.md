@@ -11,135 +11,32 @@
 > F_z\frac{\partial z}{\partial q_r}
 > $$
 
-## Ejercicios resueltos
+## Ejercicio 5
 
-### Ejercicio 3 *
 
-![[paso607-24-08-2026_17-16-32.png]]
+![[paso607-24-08-2026_19-03-54.png]]
 
-[figura 2.7]
-
+![[paso607-24-08-2026_19-04-13.png]]
 $$
-z=0
+\tan\alpha = \frac{1}{2}
 $$
 
 $$
-N=2\quad(r,\theta,z)
+\alpha = 26.56^\circ
 $$
 
 $$
-x=r\cos\theta
+14 = 9+9-2(3)(3)\cos\beta
 $$
 
 $$
-y=r\sin\theta
+\beta = 77.16^\circ
 $$
 
 $$
-N:\text{ Grados de libertad}
+53.3 + 51.5 - \theta = 90^\circ
 $$
 
 $$
-T=\frac{m}{2}\left(\dot r^2+r^2\dot\theta^2+\dot z^2\right)
-$$
-
-$$
-\frac{d}{dt}
-\left(
-\frac{\partial T}{\partial\dot r}
-\right)
--
-\frac{\partial T}{\partial r}
-=
-F_x\frac{\partial x}{\partial r}
-+
-F_y\frac{\partial y}{\partial r}
-+
-F_z\frac{\partial z}{\partial r}
-$$
-
-$$
-\frac{\partial x}{\partial r}=\cos\theta
-$$
-
-$$
-\frac{\partial y}{\partial r}=\sin\theta
-$$
-
-$$
-F_x=-F\cos\theta
-$$
-
-$$
-F_y=-F\sin\theta
-$$
-
-$$
-\frac{m}{2}2\ddot r
-$$
-
-$$
-\frac{m}{2}2\dot\theta^2r
-$$
-
-$$
-m\ddot r-mr\dot\theta^2
-=
--\frac{GMm}{r^2}
-\left(
-\cos^2\theta+\sin^2\theta
-\right)
-$$
-
-$$
-\boxed{
-\ddot r-r\dot\theta^2-\frac{GM}{r^2}=0
-}
-$$
-
-$$
-\frac{d}{dt}
-\left(
-\frac{\partial T}{\partial\dot\theta}
-\right)
--
-\frac{\partial T}{\partial\theta}
-=
-F_x\frac{\partial x}{\partial\theta}
-+
-F_y\frac{\partial y}{\partial\theta}
-$$
-
-$$
-\frac{\partial x}{\partial\theta}
-=
--r\sin\theta
-$$
-
-$$
-\frac{\partial y}{\partial\theta}
-=
-r\cos\theta
-$$
-
-$$
-F_x=-F\cos\theta
-$$
-
-$$
-F_y=-F\sin\theta
-$$
-
-$$
-\frac{m}{2}r^2 2\ddot\theta
-$$
-
-$$
-m(2r\dot r\dot\theta+r^2\ddot\theta)=0
-$$
-
-$$
-\boxed{
-m(2r\dot r\dot\theta+r^2\ddot\theta)=0
-}
+\theta = 14.8^\circ
 $$
