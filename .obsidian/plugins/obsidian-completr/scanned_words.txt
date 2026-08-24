@@ -8982,6 +8982,7 @@ textbf
 toprule
 textcolor
 thispagestyle
+transportados
 ToDo
 Templater
 Text
@@ -64496,6 +64497,7 @@ gimen
 generemos
 gruesa
 grisclaro
+glucosa
 body
 beacon
 bat
@@ -101288,6 +101290,9 @@ actualizarlo
 anexos
 arraystretch
 asignando
+alex
+absorben
+agua
 related
 recomendados
 ribbon
@@ -110768,6 +110773,8 @@ readme
 rule
 renewcommand
 recomendaron
+resolved
+reproducirse
 notes
 notas
 nuevas
@@ -129628,6 +129635,8 @@ comp
 cccccccc
 conv
 clearpage
+cloroplastos
+clorofila
 updated
 un
 universo
@@ -223648,6 +223657,7 @@ mbulo
 madurez
 moviendo
 midrule
+minerales
 YAML
 Ya
 You
@@ -278476,6 +278486,7 @@ linewidth
 lstlisting
 linspace
 lstinputlisting
+luminosa
 incluyendo
 im
 instalar
@@ -418938,6 +418949,7 @@ xqgA
 xSBc
 xoPK
 xlim
+xilema
 Wikilinks
 WHERE
 WebGL
