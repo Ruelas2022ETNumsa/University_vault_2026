@@ -1731,7 +1731,8 @@
         "ETN607-comp_apuntes_BCv4i.md",
         "ETN607-comp_indice_BCv4ii.md",
         "ETN607-transcription_Av6.md",
-        "legacy"
+        "legacy",
+        "ETN607-study.md"
       ]
     },
     "_assets": {
@@ -5433,6 +5434,10 @@
       "isHidden": false
     },
     "Semesters/Sem_04/ETN607/Partial_1/ETN607-T02-P1-Ecuaciones de Lagrange.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN607/ETN607-study.md": {
       "isPinned": false,
       "isHidden": false
     }
