@@ -46333,6 +46333,7 @@ desenvuelve
 deslizarse
 deshace
 directores
+detector
 Vault
 Verificar
 Variables
@@ -177216,6 +177217,7 @@ Fzas
 FBzV
 FTmD
 FOCO
+Fijo
 Estado
 Excalidraw
 EPUBs

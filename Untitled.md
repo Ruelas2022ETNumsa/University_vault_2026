@@ -1,0 +1,112 @@
+##### Ej. Una masa $m$ se mueve libremente en el plano $z=0$ bajo la acción exclusiva de la gravedad. Las coordenadas generalizadas son $r$ y $\theta$ (polares planas), con origen en el punto de lanzamiento. Las coordenadas cartesianas se relacionan como $x = r\cos\theta$, $y = r\sin\theta$. Fuerzas: $F_x = 0$, $F_y = -mg$, $F_z = 0$. Obtener las GDE para $q_r = r$ y $q_r = \theta$.
+
+```tikz
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathmorphing}
+\begin{document}
+\begin{tikzpicture}[>=stealth, scale=1.2]
+\definecolor{azul}{RGB}{20,75,90}
+\definecolor{naranja}{RGB}{240,140,20}
+\draw[->, thick, azul] (-0.3,0) -- (7,0) node[right] {x};
+\draw[->, thick, azul] (0,-0.2) -- (0,4.2) node[above] {y};
+\node[below left] at (0,0) {O};
+\draw[very thick, azul, domain=0:6.8, samples=100]
+    plot (\x,{0.22*\x*(6.8-\x)});
+\coordinate (P) at (2.65,3.05);
+\filldraw[draw=naranja, fill=orange!70, thick] (P) circle (0.13);
+\draw[thick, naranja] (0,0) -- (P);
+\node[azul] at (1.35,1.55) {r};
+\draw[naranja, thick] (1.15,0) arc (0:49:1.15);
+\node[naranja] at (1.18,0.43) {$\theta$};
+\draw[->, very thick, red] (2.65,3.05) -- (2.65,2.30);
+\node[red, right] at (2.75,2.65) {$mg$};
+\node[azul] at (6.0,3.85) {$z=0$};
+\end{tikzpicture}
+\end{document}
+```
+
+$$
+N = 2 \quad (r,\theta)
+$$
+
+Las coordenadas son:
+
+$$
+x = r\cos\theta \qquad y = r\sin\theta
+$$
+
+---
+
+**Energía cinética** — sistema en $z=0$, por lo tanto $\dot{z}=0$:
+
+$$
+T = \frac{m}{2}
+\left(
+\dot{r}^{\,2}
++
+r^2\dot{\theta}^{\,2}
++
+\dot{z}^{\,2}
+\right)
+\quad \xrightarrow{\,\dot{z}=0\,} \quad
+T = \frac{m}{2}\left(\dot{r}^{\,2} + r^2\dot{\theta}^{\,2}\right)
+$$
+
+---
+
+**Para $q_r = r$:**
+
+$$
+\frac{d}{dt}
+\left(
+\frac{\partial T}{\partial \dot{r}}
+\right)
+-
+\frac{\partial T}{\partial r}
+=
+F_x\frac{\partial x}{\partial r}
++
+F_y\frac{\partial y}{\partial r}
++
+F_z\frac{\partial z}{\partial r}
+$$
+_Lado izquierdo: $\frac{\partial T}{\partial \dot{r}} = \frac{m}{2}\cdot 2\dot{r} = m\dot{r} \;\Rightarrow\; \frac{d}{dt}(m\dot{r}) = m\ddot{r}$, y $\frac{\partial T}{\partial r} = \frac{m}{2}\cdot 2r\dot{\theta}^2 = mr\dot{\theta}^2$, por lo tanto $m\ddot{r} - mr\dot{\theta}^2$_
+_Lado derecho: $F_x\cos\theta + F_y\sin\theta = (0)\cos\theta + (-mg)\sin\theta = -mg\sin\theta$_
+
+$$
+m\ddot{r} - mr\dot{\theta}^{\,2} = -mg\sin\theta
+$$
+
+---
+
+**Para $q_r = \theta$:**
+
+$$
+\frac{d}{dt}
+\left(
+\frac{\partial T}{\partial \dot{\theta}}
+\right)
+-
+\frac{\partial T}{\partial \theta}
+=
+F_x\frac{\partial x}{\partial \theta}
++
+F_y\frac{\partial y}{\partial \theta}
++
+0
+$$
+
+_Lado derecho: $F_x(-r\sin\theta) + F_y(r\cos\theta) = (0)(-r\sin\theta) + (-mg)(r\cos\theta) = -mgr\cos\theta$_
+
+$$
+m
+\left(
+2r\dot{r}\dot{\theta}
++
+r^2\ddot{\theta}
+\right)
+=
+-mgr\cos\theta
+$$
+
+
