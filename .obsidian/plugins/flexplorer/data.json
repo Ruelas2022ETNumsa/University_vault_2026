@@ -23,7 +23,8 @@
         "Rubbish",
         "Borrar",
         "shared",
-        "README.md"
+        "README.md",
+        "ENU607.md"
       ]
     },
     "MOC": {
@@ -1732,7 +1733,9 @@
         "ETN607-comp_indice_BCv4ii.md",
         "ETN607-transcription_Av6.md",
         "legacy",
-        "ETN607-study.md"
+        "ETN607-study.md",
+        "ETN607-study-NLMv2.md",
+        "ETN607-ejercicio-detector.md"
       ]
     },
     "_assets": {
@@ -4723,11 +4726,11 @@
       "sortOrder": "custom",
       "customOrder": [
         "P1-E1-607.md",
-        "P1-E10-1-607.md",
+        "P1-E10-607.md",
+        "P1-E12-607.md",
         "P1-E11-607.md",
-        "P1-E10-2-607.md",
-        "P1-E3-607.md",
         "P1-E2-607.md",
+        "P1-E3-607.md",
         "P1-E4-607.md",
         "P1-E5-607.md",
         "P1-E6-607.md",
@@ -4749,18 +4752,6 @@
       "isHidden": false
     },
     "Semesters/Sem_04/ETN607/Partial_1/ejercicios P1/P1-E1-607.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semesters/Sem_04/ETN607/Partial_1/ejercicios P1/P1-E10-1-607.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semesters/Sem_04/ETN607/Partial_1/ejercicios P1/P1-E11-607.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semesters/Sem_04/ETN607/Partial_1/ejercicios P1/P1-E10-2-607.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -5438,6 +5429,30 @@
       "isHidden": false
     },
     "_app/notebooklm/prompts/ETN607/ETN607-study.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN607/ETN607-study-NLMv2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN607/ETN607-ejercicio-detector.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Partial_1/ejercicios P1/P1-E10-607.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Partial_1/ejercicios P1/P1-E12-607.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Partial_1/ejercicios P1/P1-E11-607.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "ENU607.md": {
       "isPinned": false,
       "isHidden": false
     }

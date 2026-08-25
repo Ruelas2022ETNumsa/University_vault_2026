@@ -45,9 +45,25 @@ Soluciones Taylor:
   Manual del instructor      → John R. Taylor-Instructor's Manual to accompany Classical Mechanics-2005.pdf
 
 Ejercicios resueltos del Parcial 1 (cargados como fuente):
-  P1-E1-607.md · P1-E2-607.md · P1-E3-607.md · P1-E4-607.md
-  P1-E5-607.md · P1-E6-607.md · P1-E7-607.md · P1-E8-607.md
-  P1-E9-607.md · P1-E10-1-607.md · P1-E10-2-607.md · P1-E11-607.md
+  P1-E1-607.md  · Resorte péndulo — coordenadas polares, 2 GDL
+  P1-E2-607.md  · Masa libre en el plano — cartesianas, 2 GDL
+  P1-E3-607.md  · Órbita gravitacional — coordenadas polares, 2 GDL
+  P1-E4-607.md  · Masa sobre parábola y=4x² — restricción, 1 GDL
+  P1-E5-607.md  · Brazo robótico dos eslabones — geometría 3D
+  P1-E6-607.md  · Masa sobre parábola y-1=(x-2)² — restricción, 1 GDL
+  P1-E7-607.md  · Masa en hilo enrollado en rueda — longitud variable, 1 GDL
+  P1-E8-607.md  · Masa sobre barra diagonal con resorte — restricción + resorte, 1 GDL
+  P1-E9-607.md  · Posición inicial por rotación y traslación — transformación de coordenadas
+  P1-E10-607.md · Energía cinética sobre semicircunferencia — solo T, 1 GDL
+  P1-E11-607.md · GDE sobre semicircunferencia con resorte — Lagrangiano, 1 GDL
+  P1-E12-607.md · Órbita gravitacional en cartesianas — 2 GDL, sin restricción
+
+Uso de los ejercicios resueltos:
+  - Consultar como referencia de nivel, estructura algebraica y formato de respuesta
+  - Si el enunciado recibido es similar a uno de estos → tomar ese ejercicio como modelo de desarrollo
+  - Si el enunciado es casi idéntico a uno cargado → indicarlo: "Este ejercicio es equivalente a P1-EX-607"
+    y resolver igual pero con los datos nuevos, sin copiar la resolución
+  - No reproducir resoluciones completas de los archivos — usarlos como guía de profundidad y estilo
 
 Qué usar por subtema:
   T1 teoría     → Taylor Cap.1 · Alonso & Finn Cap.1
