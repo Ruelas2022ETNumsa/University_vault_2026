@@ -33,7 +33,9 @@
         "Untitled 5.md",
         "Untitled 4.md",
         "Untitled 6.md",
-        "Untitled 7.md"
+        "Untitled 7.md",
+        "Untitled 8.md",
+        "Untitled 9.md"
       ]
     },
     "MOC": {
@@ -3638,6 +3640,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "P1-E9-607.md",
         "P1-E8-607.md",
         "P1-E6-607.md",
         "P1-E7-607.md",
@@ -5361,6 +5364,18 @@
       "isHidden": false
     },
     "Semesters/Sem_04/ETN607/Partial_1/P1-E8-607.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled 8.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled 9.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Partial_1/P1-E9-607.md": {
       "isPinned": false,
       "isHidden": false
     }

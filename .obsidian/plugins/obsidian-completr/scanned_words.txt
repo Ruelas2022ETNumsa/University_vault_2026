@@ -9023,6 +9023,9 @@ tese
 transcribiendo
 torque
 tangencia
+therefore
+transpuesta
+transposici
 ToDo
 Templater
 Text
@@ -46319,6 +46322,7 @@ dobla
 direccion
 desenvuelve
 deslizarse
+deshace
 Vault
 Verificar
 Variables
@@ -101692,6 +101696,7 @@ articulacion
 angulos
 alcanzar
 acopla
+articulada
 related
 recomendados
 ribbon
@@ -111218,6 +111223,7 @@ rodadura
 reactivo
 restituye
 rotado
+restringido
 notes
 notas
 nuevas
@@ -120123,6 +120129,7 @@ noma
 ndolos
 neta
 nculo
+negando
 created
 commit
 cada
@@ -130165,6 +130172,8 @@ contribuye
 ckHH
 calculos
 codo
+casual
+circula
 updated
 un
 universo
@@ -214205,6 +214214,7 @@ proyecciones
 proyectando
 pitag
 pgAs
+proyectarla
 min
 mica
 movimiento
@@ -290173,6 +290183,8 @@ importes
 isosceles
 inclina
 inextensible
+imponiendo
+invertirla
 Dependencia
 Dropbox
 Dataview
@@ -364518,6 +364530,7 @@ NzuZj
 NytB
 NaaR
 NuRe
+Notar
 originales
 observatory
 oficial
