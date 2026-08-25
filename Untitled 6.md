@@ -1,26 +1,98 @@
-##### Ej. Una masa m cuelga de un hilo inextensible de longitud inicial l enrollado en una rueda de radio R fija en el origen O. El sistema opera en el plano xy. La coordenada generalizada es θ. A medida que la rueda gira un ángulo θ, el hilo se desenvuelve y la longitud libre del hilo aumenta: d = l + θR. El punto de tangencia P se mueve sobre la rueda. Fuerzas: peso mg hacia abajo $+y$, tensión T a lo largo del hilo. Obtener la GDE para qr = θ mediante la ecuación alfa.
 
-**Resolución**
-Determinamos las velocidades cartesianas para formular la energía cinética y aplicamos la ecuación de Lagrange para obtener la ecuación de movimiento.
+```tikz
+\usepackage{tikz}
+
+\begin{document}
+
+\begin{tikzpicture}[>=latex, scale=0.55]
+
+% Ejes
+\draw[->, thick, teal] (-1,0) -- (7.5,0) node[right] {$x$};
+\draw[->, thick, teal] (0,0) -- (0,19) node[above] {$y$};
+
+% Trayectoria parabólica
+\draw[
+    domain=0.5:6.5,
+    smooth,
+    variable=\x,
+    thick,
+    teal
+]
+plot ({\x},{1+(\x-2)^2});
+
+% Masa en el punto (6,17)
+\filldraw[orange] (6,17) circle (5pt)
+    node[above right, teal] {$m$};
+
+% Fuerza gravitacional
+\draw[->, thick, orange]
+    (6,17) -- (6,14)
+    node[right] {$-mg\,\hat{j}$};
+
+% Vértice
+\filldraw[teal] (2,1) circle (2pt)
+    node[below right] {$(2,1)$};
+
+% Punto de referencia
+\draw[dashed, teal] (6,0) -- (6,17);
+\draw[dashed, teal] (0,17) -- (6,17);
+
+% Etiqueta de la curva
+\node[teal] at (4.8,8.5) {$y-1=(x-2)^2$};
+
+% Etiquetas de coordenadas
+\node[below, teal] at (6,0) {$6$};
+\node[left, teal] at (0,17) {$17$};
+
+\end{tikzpicture}
+
+\end{document}
+```
 
 
 $$
-\begin{array}{rcl}
-x & = & R\cos\theta + (l + \theta R)\sin\theta \\
-y & = & -R\sin\theta + (l + \theta R)\cos\theta \\
-\dot{x} & = & -R\dot{\theta}\sin\theta + R\dot{\theta}\sin\theta + (l + \theta R)\dot{\theta}\cos\theta\ =\ (l + \theta R)\dot{\theta}\cos\theta \\
-\dot{y} & = & -R\dot{\theta}\cos\theta + R\dot{\theta}\cos\theta - (l + \theta R)\dot{\theta}\sin\theta\ =\ -(l + \theta R)\dot{\theta}\sin\theta \\
-v^2 & = & \dot{x}^2 + \dot{y}^2\ =\ (l+\theta R)^2\dot{\theta}^2(\cos^2\theta + \sin^2\theta)\ =\ (l+\theta R)^2\dot{\theta}^2 \\
-T & = & \frac{1}{2}m v^2\ =\ \frac{1}{2}m(l+\theta R)^2\dot{\theta}^2 \\
-\frac{\partial T}{\partial \dot{\theta}} & = & m(l+\theta R)^2\dot{\theta} \\
-\frac{d}{dt}\left(\frac{\partial T}{\partial \dot{\theta}}\right) & = & m(l+\theta R)^2\ddot{\theta} + 2mR(l+\theta R)\dot{\theta}^2 \\
-\frac{\partial T}{\partial \theta} & = & mR(l+\theta R)\dot{\theta}^2 \\
-\text{L.I.} & = & \frac{d}{dt}\left(\frac{\partial T}{\partial \dot{\theta}}\right) - \frac{\partial T}{\partial \theta}\ =\ m(l+\theta R)^2\ddot{\theta} + mR(l+\theta R)\dot{\theta}^2 \\
-\frac{\partial y}{\partial \theta} & = & -R\cos\theta + R\cos\theta - (l+\theta R)\sin\theta\ =\ -(l+\theta R)\sin\theta \\
-Q_\theta & = & F_y \frac{\partial y}{\partial \theta}\ =\ -mg(l+\theta R)\sin\theta \\
-\text{Ecuación }\alpha & \rightarrow & m(l+\theta R)^2\ddot{\theta} + mR(l+\theta R)\dot{\theta}^2\ =\ -mg(l+\theta R)\sin\theta \\
-& \rightarrow & m(l+\theta R)\left[(l+\theta R)\ddot{\theta} + R\dot{\theta}^2\right]\ =\ -mg(l+\theta R)\sin\theta \\
-\therefore\quad & & \color{orange}{(l + \theta R)\ddot{\theta} + R\dot{\theta}^2 + g\sin\theta\ =\ 0}
-\end{array}
+y-1=(x-2)^2
 $$
 
+$$
+z=0
+$$
+
+$$
+(y-1)=k(x-2)^2
+$$
+
+$$
+17-1=k(6-2)^2
+$$
+
+$$
+\frac{16}{16}=k
+$$
+
+$$
+k=1
+$$
+
+$$
+\dot{y}=2(x-2)\dot{x}
+$$
+
+$$
+T=\frac{1}{2}m\left[\dot{x}^{\,2}+\left(2(x-2)\dot{x}\right)^2\right]
+=\frac{m}{2}\dot{x}^{\,2}\left[1+4(x-2)^2\right]
+$$
+
+$$
+\frac{d}{dt}\left(\frac{\partial T}{\partial\dot{x}}\right)-\frac{\partial T}{\partial x}
+=F_x\frac{\partial x}{\partial x}
++F_y\frac{\partial y}{\partial x}
++F_z\frac{\partial z}{\partial x}
+$$
+
+$$
+m\left\{\ddot{x}\left[1+4(x-2)^2\right]
++\left[8(x-2)\dot{x}^{\,2}\right]\right\}
+-\frac{m}{2}\dot{x}^{\,2}\left[8(x-2)\right]
+=-mg\,2(x-2)
+$$

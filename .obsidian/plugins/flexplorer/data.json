@@ -30,7 +30,9 @@
         "tema 1 nose607.md",
         "Untitled 2.md",
         "Untitled 3.md",
-        "Untitled 5.md"
+        "Untitled 5.md",
+        "Untitled 4.md",
+        "Untitled 6.md"
       ]
     },
     "MOC": {
@@ -1738,7 +1740,8 @@
         "paso607-24-08-2026_17-16-32.png",
         "paso607-24-08-2026_19-03-41.png",
         "P1-E5-607-24-08-2026_19-03-54.png",
-        "P1-E5-607-24-08-2026_19-04-13.png"
+        "P1-E5-607-24-08-2026_19-04-13.png",
+        "P1-E7-607-24-08-2026_21-00-28.png"
       ]
     },
     "_app/notebooklm/prompts/ETN607/ETN607-transcription-divisions.md": {
@@ -3634,6 +3637,8 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "P1-E6-607.md",
+        "P1-E7-607.md",
         "P1-E5-607.md",
         "P1-E4-607.md",
         "P1-E3-607.md",
@@ -5326,6 +5331,26 @@
       "isHidden": false
     },
     "Untitled 5.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled 4.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled 6.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/P1-E7-607-24-08-2026_21-00-28.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Partial_1/P1-E7-607.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Partial_1/P1-E6-607.md": {
       "isPinned": false,
       "isHidden": false
     }

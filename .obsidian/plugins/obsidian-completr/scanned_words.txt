@@ -9022,6 +9022,7 @@ tBzZ
 tese
 transcribiendo
 torque
+tangencia
 ToDo
 Templater
 Text
@@ -46316,6 +46317,7 @@ detallaron
 desglose
 dobla
 direccion
+desenvuelve
 Vault
 Verificar
 Variables
@@ -55228,6 +55230,7 @@ VMcsi
 Vbez
 VmTUc
 VuUg
+Velocidades
 galaxy
 gina
 genes
@@ -101687,6 +101690,7 @@ articulares
 articulacion
 angulos
 alcanzar
+acopla
 related
 recomendados
 ribbon
@@ -120117,6 +120121,7 @@ newtoniana
 noma
 ndolos
 neta
+nculo
 created
 commit
 cada
@@ -251930,6 +251935,7 @@ eslabon
 espaciales
 elbow
 eleva
+enrollado
 Motor
 Media
 Mantiene
@@ -290165,6 +290171,7 @@ incorporando
 importes
 isosceles
 inclina
+inextensible
 Dependencia
 Dropbox
 Dataview
@@ -326646,6 +326653,7 @@ fijado
 fuga
 figuraba
 ffnX
+formalismo
 haya
 hace
 hacer
