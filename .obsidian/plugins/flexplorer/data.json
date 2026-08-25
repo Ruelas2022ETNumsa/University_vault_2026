@@ -23,22 +23,7 @@
         "Rubbish",
         "Borrar",
         "shared",
-        "README.md",
-        "Untitled.md",
-        "Untitled 1.md",
-        "ETN607-T02-P1-Ecuaciones de Lagrange.md",
-        "tema 1 nose607.md",
-        "Untitled 2.md",
-        "Untitled 3.md",
-        "Untitled 5.md",
-        "Untitled 4.md",
-        "Untitled 6.md",
-        "Untitled 7.md",
-        "Untitled 11.md",
-        "Untitled 9.md",
-        "Untitled 8.md",
-        "Untitled 10.md",
-        "Untitled 12.md"
+        "README.md"
       ]
     },
     "MOC": {
@@ -632,7 +617,21 @@
         "zborrar903_3gemino.md",
         "zborrar903 2.md",
         "zborrar903 3.md",
-        "zborrar903.md"
+        "zborrar903.md",
+        "Untitled 4.md",
+        "Untitled 5.md",
+        "Untitled 6.md",
+        "Untitled 7.md",
+        "Untitled 8.md",
+        "Untitled 9.md",
+        "Untitled 10.md",
+        "Untitled 11.md",
+        "Untitled 12.md",
+        "Untitled.md",
+        "tema 1 nose607.md",
+        "Untitled 1.md",
+        "Untitled 2.md",
+        "Untitled 3.md"
       ]
     },
     "Borrar/zborrar903_3 otro.md": {
@@ -1829,10 +1828,10 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "Partial_1",
         "_library_ETN607.md",
         "Sin títuloasde342.md",
-        "tsk_ini_ETN607.md",
-        "Partial_1"
+        "tsk_ini_ETN607.md"
       ]
     },
     "Semesters/Sem_04/ETN607/_library_ETN607.md": {
@@ -3651,7 +3650,8 @@
         "ETN607-T01-P1-Conceptos generales 1.md",
         "ETN607-T01-ejercicios.md",
         "ejercicios tipo examen.md",
-        "ejercicios P1"
+        "ejercicios P1",
+        "ETN607-T02-P1-Ecuaciones de Lagrange.md"
       ]
     },
     "Semesters/Sem_04/ETN607/Partial_1/ETN607-T01-P1-Conceptos generales 1.md": {
@@ -3763,10 +3763,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Untitled.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_app/solve/marginalia_solve 1.md": {
       "isPinned": false,
       "isHidden": false
@@ -3811,10 +3807,6 @@
       "isHidden": false
     },
     "_app/notebooklm/prompts/ETN607/legacy/ETN607-transcription_BCv4.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Untitled 1.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -4704,27 +4696,11 @@
       "isPinned": false,
       "isHidden": false
     },
-    "ETN607-T02-P1-Ecuaciones de Lagrange.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_assets/P1-E1-607-24-08-2026_17-16-06.png": {
       "isPinned": false,
       "isHidden": false
     },
-    "Untitled 2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "tema 1 nose607.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_assets/paso607-24-08-2026_19-03-41.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Untitled 3.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -4736,43 +4712,7 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Untitled 5.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Untitled 4.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Untitled 6.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_assets/P1-E7-607-24-08-2026_21-00-28.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Untitled 7.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Untitled 11.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Untitled 9.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Untitled 8.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Untitled 10.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Untitled 12.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -5433,6 +5373,66 @@
       "isHidden": false
     },
     "Rubbish/2026-08-19/Par de Transformadas Discretas de Fourier $DFT$.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Borrar/Untitled 4.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Borrar/Untitled 5.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Borrar/Untitled 6.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Borrar/Untitled 7.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Borrar/Untitled 8.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Borrar/Untitled 9.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Borrar/Untitled 10.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Borrar/Untitled 11.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Borrar/Untitled 12.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Borrar/Untitled.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Borrar/tema 1 nose607.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Borrar/Untitled 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Borrar/Untitled 2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Borrar/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Partial_1/ETN607-T02-P1-Ecuaciones de Lagrange.md": {
       "isPinned": false,
       "isHidden": false
     }
