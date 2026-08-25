@@ -18821,6 +18821,8 @@ TunD
 Tzog
 TnrF
 Tanto
+TEMARIO
+TIKZ
 Sistema
 Sync
 Save
@@ -28775,6 +28777,7 @@ SagW
 SKRI
 Scaw
 SWId
+SICOS
 Plugins
 Pendientes
 Plugin
@@ -111231,6 +111234,8 @@ reactivo
 restituye
 rotado
 restringido
+respondas
+rechazar
 notes
 notas
 nuevas
@@ -177206,6 +177211,7 @@ FcMPc
 Fzas
 FBzV
 FTmD
+FOCO
 Estado
 Excalidraw
 EPUBs
@@ -290194,6 +290200,7 @@ inclina
 inextensible
 imponiendo
 invertirla
+instructor
 Dependencia
 Dropbox
 Dataview
@@ -310053,6 +310060,7 @@ RyMb
 RQGn
 RkkU
 Relacion
+Rectangulares
 Hider
 Hace
 Herramientas
