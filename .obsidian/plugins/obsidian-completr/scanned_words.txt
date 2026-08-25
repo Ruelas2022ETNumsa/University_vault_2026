@@ -9026,6 +9026,8 @@ tangencia
 therefore
 transpuesta
 transposici
+tira
+transponer
 ToDo
 Templater
 Text
@@ -18818,6 +18820,7 @@ TrWx
 TunD
 Tzog
 TnrF
+Tanto
 Sistema
 Sync
 Save
@@ -37534,6 +37537,8 @@ Pgcg
 PWHG
 PNwsss
 PuZx
+Planteando
+Pasando
 del
 date
 de
@@ -46323,6 +46328,7 @@ direccion
 desenvuelve
 deslizarse
 deshace
+directores
 Vault
 Verificar
 Variables
@@ -101697,6 +101703,7 @@ angulos
 alcanzar
 acopla
 articulada
+acople
 related
 recomendados
 ribbon
@@ -130174,6 +130181,7 @@ calculos
 codo
 casual
 circula
+contribuyen
 updated
 un
 universo
@@ -167987,6 +167995,7 @@ IIjl
 ICzC
 Ivoa
 IxbGN
+Invertida
 Funci
 File
 Fase
@@ -374027,6 +374036,8 @@ oUyl
 oscilar
 oeiU
 orienta
+orbital
+orbitando
 junto
 json
 jer

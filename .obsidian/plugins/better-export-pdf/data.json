@@ -12,19 +12,20 @@
   "isTimestamp": false,
   "enabledCss": true,
   "concurrency": "5",
+  "version": "2",
   "prevConfig": {
     "pageSize": "A4",
     "marginType": "1",
-    "showTitle": true,
+    "showTitle": false,
     "open": true,
-    "scale": 100,
+    "scale": 89,
     "landscape": false,
     "marginTop": "10",
     "marginBottom": "10",
     "marginLeft": "10",
     "marginRight": "10",
-    "displayHeader": true,
-    "displayFooter": true,
+    "displayHeader": false,
+    "displayFooter": false,
     "cssSnippet": "0"
   }
 }

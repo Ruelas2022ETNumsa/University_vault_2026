@@ -34,8 +34,11 @@
         "Untitled 4.md",
         "Untitled 6.md",
         "Untitled 7.md",
+        "Untitled 11.md",
+        "Untitled 9.md",
         "Untitled 8.md",
-        "Untitled 9.md"
+        "Untitled 10.md",
+        "Untitled 12.md"
       ]
     },
     "MOC": {
@@ -3640,6 +3643,9 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "P1-E11-607.md",
+        "P1-E10-2-607.md",
+        "P1-E10-1-607.md",
         "P1-E9-607.md",
         "P1-E8-607.md",
         "P1-E6-607.md",
@@ -3653,7 +3659,8 @@
         "compelmentos para 607 T1.md",
         "ETN607-T01-P1-Conceptos generales 1.md",
         "ETN607-T01-ejercicios.md",
-        "ejercicios tipo examen.md"
+        "ejercicios tipo examen.md",
+        "ejercicios P1"
       ]
     },
     "Semesters/Sem_04/ETN607/Partial_1/ETN607-T01-P1-Conceptos generales 1.md": {
@@ -5367,7 +5374,11 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Untitled 8.md": {
+    "Semesters/Sem_04/ETN607/Partial_1/P1-E9-607.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled 11.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -5375,9 +5386,35 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Semesters/Sem_04/ETN607/Partial_1/P1-E9-607.md": {
+    "Untitled 8.md": {
       "isPinned": false,
       "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Partial_1/P1-E10-1-607.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Partial_1/P1-E10-2-607.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled 10.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled 12.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Partial_1/P1-E11-607.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Partial_1/ejercicios P1": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [],
+      "sortOrder": "custom"
     }
   },
   "pinnedFiles": [

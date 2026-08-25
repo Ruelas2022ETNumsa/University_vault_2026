@@ -27,5 +27,6 @@
   "full-screen-cross-platform",
   "vscode-editor",
   "document-comments",
-  "side-notes"
+  "side-notes",
+  "better-export-pdf"
 ]
