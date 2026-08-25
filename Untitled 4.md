@@ -1,76 +1,203 @@
-##### Ej. Un brazo robótico de dos eslabones de igual longitud $l_1 = l_2 = 2$ está articulado en el origen $P_1 = (0,0,0)$. El extremo debe alcanzar el punto $P_2 = (1,1,1)$. Determinar: $1$ el ángulo $\alpha$ de rotación en el plano $xy$, $2$ el ángulo $\phi$ entre los dos eslabones, y $3$ el ángulo de elevación $\theta$ del primer eslabón.
 
 ```tikz
-\usepackage{tikz}
-\begin{document}
-\begin{tikzpicture}[scale=1.5, >=stealth]
-  % Ejes
-  \draw[->, thick, gray] (-0.5,0) -- (3,0) node[right, black] {Proyección $xy$ ($ON$)};
-  \draw[->, thick, gray] (0,-0.5) -- (0,2.5) node[above, black] {$z$};
-  
-  % Puntos
-  \coordinate (O) at (0,0);
-  \coordinate (P2) at (1.414, 1.0);
-  \coordinate (Aup) at (-0.334, 1.97);
-  
-  % Eslabones
-  \draw[line width=1.5pt, teal] (O) -- (Aup) node[midway, above left] {$l_1=2$};
-  \draw[line width=1.5pt, orange] (Aup) -- (P2) node[midway, above right] {$l_2=2$};
-  
-  % Línea OP2
-  \draw[dashed, black!60] (O) -- (P2);
-  
-  % Nodos
-  \filldraw[black] (O) circle (1.5pt) node[below left] {$O(0,0)$};
-  \filldraw[black] (P2) circle (1.5pt) node[right] {$P_2(\sqrt{2}, 1)$};
-  \filldraw[black] (Aup) circle (1.5pt) node[above] {$A$};
-  
-  % Ángulos
-  \draw[->, thin] (0.5,0) arc (0:35.26:0.5);
-  \node at (0.7,0.25) {$\psi$};
-  
-  \draw[->, thin] (0.4, 0.28) arc (35.26:99.6:0.5);
-  \node at (0.2, 0.6) {$\gamma$};
-  
-  \draw[->, thin] (0.3,0) arc (0:99.6:0.3);
-  \node at (0.1,0.4) [above right] {$\theta$};
+\begin{tikzpicture}[
+    >=stealth,
+    line cap=round,
+    line join=round,
+    scale=1.15
+]
+
+% -------------------------------------------------
+% Parámetros geométricos
+% -------------------------------------------------
+\def\R{2.0}
+\def\ang{35}
+
+% Centro de la circunferencia
+\coordinate (O) at (0,0);
+
+% Punto de tangencia
+\coordinate (P) at ({\R*cos(\ang)},{\R*sin(\ang)});
+
+% Dirección tangente (hacia abajo-derecha)
+\coordinate (T) at ({\R*cos(\ang)+2.7*sin(\ang)},
+                     {\R*sin(\ang)-2.7*cos(\ang)});
+
+% Punto de la masa
+\coordinate (M) at ({\R*cos(\ang)+3.5*sin(\ang)},
+                     {\R*sin(\ang)-3.5*cos(\ang)});
+
+% -------------------------------------------------
+% Circunferencia
+% -------------------------------------------------
+\draw[thick] (O) circle (\R);
+
+% -------------------------------------------------
+% Ejes coordenados
+% -------------------------------------------------
+\draw[->,thick,red] (O) -- (4.0,0)
+    node[right] {$x$};
+
+\draw[->,thick,red] (O) -- (0,-3.2)
+    node[below] {$y$};
+
+% Origen
+\node[red,left] at (O) {$O$};
+
+% -------------------------------------------------
+% Radio
+% -------------------------------------------------
+\draw[thick,teal] (O) -- (P)
+    node[midway,above left] {$R$};
+
+% -------------------------------------------------
+% Línea vertical auxiliar
+% -------------------------------------------------
+\draw[dashed,orange,thick]
+    (P) -- ({\R*cos(\ang)},-2.8);
+
+% Longitud l
+\draw[<->,orange,thick]
+    ({\R*cos(\ang)+0.18},0)
+    -- ({\R*cos(\ang)+0.18},-2.35)
+    node[midway,right] {$\ell$};
+
+% -------------------------------------------------
+% Ángulo theta en el centro
+% -------------------------------------------------
+\draw[->,teal,thick]
+    (0.65,0) arc[start angle=0,end angle=\ang,radius=0.65];
+
+\node[teal] at (0.72,0.25) {$\theta$};
+
+% -------------------------------------------------
+% Tangente / cuerda
+% -------------------------------------------------
+\draw[very thick,black]
+    (P) -- (M);
+
+% -------------------------------------------------
+% Longitud desarrollada theta R
+% -------------------------------------------------
+\draw[<->,blue,thick]
+    ({\R*cos(\ang)+0.12},{\R*sin(\ang)+0.12})
+    -- ({\R*cos(\ang)+1.75*sin(\ang)+0.12},
+        {\R*sin(\ang)-1.75*cos(\ang)+0.12})
+    node[midway,right] {$\theta R$};
+
+% -------------------------------------------------
+% Distancia total d = l + theta R
+% -------------------------------------------------
+\node[orange] at (2.9,-0.25)
+    {$d=\ell+\theta R$};
+
+% -------------------------------------------------
+% Ángulo theta respecto a la vertical
+% -------------------------------------------------
+\draw[->,teal,thick]
+    ({\R*cos(\ang)},{\R*sin(\ang)-0.65})
+    arc[start angle=90,end angle={90-\ang},radius=0.65];
+
+\node[teal] at ({\R*cos(\ang)+0.15},
+                {\R*sin(\ang)-0.95})
+    {$\theta$};
+
+% -------------------------------------------------
+% Masa
+% -------------------------------------------------
+\fill[orange] (M) circle (0.22);
+
+% -------------------------------------------------
+% Fuerza de tensión T
+% -------------------------------------------------
+\draw[->,red,very thick]
+    ({M}-0.05,-0.05)
+    -- ({M}-0.55,0.85)
+    node[left] {$T$};
+
+% -------------------------------------------------
+% Peso mg
+% -------------------------------------------------
+\draw[->,red,very thick]
+    (M) -- ++(0,-1.0)
+    node[below] {$mg$};
+
+% -------------------------------------------------
+% Pequeños puntos de referencia
+% -------------------------------------------------
+\fill[orange] (-1.85,0) circle (0.10);
+\fill[orange] ({\R*cos(\ang)},-2.8) circle (0.10);
+
+% -------------------------------------------------
+% Etiqueta del ejercicio
+% -------------------------------------------------
+\node[orange,font=\large] at (-1.8,3.0) {Ejercicio};
+
 \end{tikzpicture}
-\end{document}
 ```
 
-**Resolución**
-Determinamos los ángulos de rotación, de articulación intermedia y de elevación del brazo robótico mediante cinemática inversa y relaciones trigonométricas en el plano vertical.
-
-**Análisis Geométrico y Detalle del Paso 3:**
-En el plano vertical rotado un ángulo $\alpha$ respecto a los ejes de coordenadas espaciales, el origen $O$, la articulación del codo $A$ y el extremo $P_2$ forman el triángulo $\triangle OAP_2$. Dado que los eslabones tienen la misma longitud ($OA = AP_2 = 2$), el triángulo es **isósceles**, lo que implica que los ángulos basales opuestos a estos lados son idénticos: $\gamma = \angle AOP_2 = \angle OP_2A$. 
-
-La suma de los ángulos internos del triángulo exige que $2\gamma + \phi = 180^\circ$. Por lo tanto, el ángulo relativo $\gamma$ que separa el primer eslabón de la línea de mira directa $OP_2$ es $\gamma = (180^\circ - \phi)/2$. El ángulo de elevación final $\theta$ del primer eslabón respecto al plano horizontal de la base se compone de la elevación sobre la horizontal de la línea $OP_2$ (ángulo $\psi$) y la apertura interna $\gamma$. Dependiendo de la configuración cinemática seleccionada se tienen dos alternativas físicas:
-* **Configuración codo-arriba (*elbow-up*):** El eslabón se eleva por encima del vector de posición final, resultando en **$\theta = \psi + \gamma$**.
-* **Configuración codo-abajo (*elbow-down*):** El eslabón se inclina por debajo del vector de posición final, resultando en **$\theta = \psi - \gamma$**.
-* **Referencia complementaria:** Si la inclinación se calcula respecto al eje vertical normal, se obtiene la expresión complementaria corregida **$\theta_{\text{vert}} = 90^\circ - (\psi + \gamma)$**.
-
-
 $$
-\begin{array}{rcl}
-\text{1. Ángulo de rotación de la base } \alpha: && \\
-\tan\alpha & = & \displaystyle\frac{y}{x} = \frac{1}{1} = 1 \\
-\alpha & = & \arctan(1) \\
-\alpha & = & \color{orange}{45.00^\circ} \\
-\text{2. Ángulo entre eslabones } \phi \text{ (Ley de Cosenos):} && \\
-OP_2 & = & \sqrt{x^2+y^2+z^2} = \sqrt{1^2+1^2+1^2} = \sqrt{3} \\
-OP_2^2 & = & l_1^2 + l_2^2 - 2\,l_1\,l_2\cos\phi \\
-(\sqrt{3})^2 & = & 2^2 + 2^2 - 2(2)(2)\cos\phi \\
-3 & = & 4 + 4 - 8\cos\phi \\
-8\cos\phi & = & 5 \\
-\cos\phi & = & 0.625 \\
-\phi & = & \arccos(0.625) \\
-\phi & = & \color{orange}{51.32^\circ} \\
-\text{3. Elevación del primer eslabón } \theta \text{ (codo-arriba):} && \\
-\psi & = & \arcsin\left(\displaystyle\frac{z}{OP_2}\right) = \arcsin\left(\displaystyle\frac{1}{\sqrt{3}}\right) \approx 35.26^\circ \\
-\gamma & = & \displaystyle\frac{180^\circ - \phi}{2} = \frac{180^\circ - 51.32^\circ}{2} = 64.34^\circ \\
-\theta & = & \psi + \gamma \\
-\theta & = & 35.26^\circ + 64.34^\circ \\
-\therefore\quad \theta & = & \color{orange}{99.60^\circ \quad \text{[o bien, elbow-down: } -29.08^\circ\text{]}}
-\end{array}
+T = \frac{m}{2}(l+\theta R)^2\dot{\theta}^{\,2}
 $$
 
+$$
+T = \frac{m}{2}(\dot{x}^{\,2}+\dot{y}^{\,2})
+$$
+
+$$
+T = \frac{m}{2}\left(\dot{x}^{\,2}+64x^2\dot{x}^{\,2}\right)
+$$
+
+$$
+\frac{d}{dt}\left(\frac{\partial T}{\partial\dot{\theta}}\right)
+-\frac{\partial T}{\partial\theta}
+=
+F_x\frac{\partial x}{\partial\theta}
++
+F_y\frac{\partial y}{\partial\theta}
+$$
+
+$$
+F_y=-\left(l+\theta R\right)mg\sin\theta
+$$
+
+$$
+m\left[
+2(l+\theta R)R\dot{\theta}^{\,2}
++(l+\theta R)^2\ddot{\theta}
+\right]
+-\frac{m}{2}\dot{\theta}^{\,2}(l+\theta R)R
+$$
+
+$$
+\begin{cases}
+x=R\cos\theta+(l+\theta R)\sin\theta\\
+y=-R\sin\theta+(l+\theta R)\cos\theta
+\end{cases}
+$$
+
+$$
+\begin{cases}
+\dot{x}=-R\sin\theta\,\dot{\theta}
++R\sin\theta\,\dot{\theta}
++(l+\theta R)\cos\theta\,\dot{\theta}\\
+\dot{y}=-R\cos\theta\,\dot{\theta}
++R\cos\theta\,\dot{\theta}
+-(l+\theta R)\sin\theta\,\dot{\theta}
+\end{cases}
+$$
+
+$$
+m\left[
+(l+\theta R)R\dot{\theta}^{\,2}
++(l+\theta R)^2\ddot{\theta}
+\right]
+=
+-mg(l+\theta R)\sin\theta
+$$
+
+$$
+R\dot{\theta}^{\,2}+(l+\theta R)\ddot{\theta}
+=
+g\sin\theta
+$$

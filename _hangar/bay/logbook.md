@@ -23,6 +23,7 @@ date_updated: 2026-08-02
 | [[alx-rul.md]] |   ❌    |    🟡    | Cornell Marginalia → Galaxy                       |       | 18:53 |         |
 | [[standb.md]]  |   ✔    |    🟢    | —                                                 |   —   |   —   |    —    |
 | [[emergn.md]]  |   ✔    |    🟢    | —                                                 |   —   |   —   |    —    |
+|                |        |          |                                                   |       |       |         |
 
 Estados de estamina:
 🟡 active — sesión en curso
