@@ -252,10 +252,10 @@ Fuente: https://github.com/mguludag/Stallings-Computer-Org-and-Arch-Slides — p
 | 1    | Basic Concepts and Computer Evolution                     | T1           | ✅                               |
 | 2    | Performance Issues                                        | —            | ⚪️ Contextual                   |
 | 3    | A Top-Level View of Computer Function and Interconnection | T1, T2       | ✅                               |
-| 4    | Cache Memory                                              | T5           | ✅                               |
-| 5    | Internal Memory                                           | T5           | ✅                               |
+| 4    | Cache Memory                                              | T5, T8       | ✅                               |
+| 5    | Internal Memory                                           | T5, T8       | ✅                               |
 | 6    | External Memory                                           | —            | ⚪️ Secundario                   |
-| 7    | Input/Output                                              | T3, T4       | ✅                               |
+| 7    | Input/Output                                              | T3, T4, T9   | ✅                               |
 | 8    | Operating System Support                                  | —            | ⚪️ SO — no directo              |
 | 9    | Number Systems                                            | —            | ⚪️ Base matemática              |
 | 10   | Computer Arithmetic                                       | —            | ⚪️ Base matemática              |
@@ -265,8 +265,8 @@ Fuente: https://github.com/mguludag/Stallings-Computer-Org-and-Arch-Slides — p
 | 14   | Processor Structure and Function                          | T1           | ✅                               |
 | 15   | Reduced Instruction Set Computers (RISC)                  | T1           | ✅                               |
 | 16   | Instruction-Level Parallelism and Superscalar             | T2, T6       | ✅                               |
-| 17   | Parallel Processing                                       | T6           | ✅                               |
-| 18   | Multicore Computers                                       | T6           | ✅                               |
+| 17   | Parallel Processing                                       | T6, T10      | ✅                               |
+| 18   | Multicore Computers                                       | T6, T10      | ✅                               |
 | 19   | Control Unit Operation                                    | T1           | ✅                               |
 | 20   | Microprogrammed Control                                   | T1           | ✅                               |
 | 21   | Microinstruction Examples                                 | T1           | ✅                               |
@@ -285,6 +285,7 @@ Fuente: https://github.com/mguludag/Stallings-Computer-Org-and-Arch-Slides — p
 | Patterson & Hennessy — COD MIPS 6ª ed. | Usa MIPS — ejemplos no alineados con temario Intel |
 | Hill & Peterson — Switching Theory 2ª ed. | Redundante con la 3ª ed. |
 | Eijkhout — Introduction to High Performance Scientific Computing | HPC / computación científica — fuera del scope |
+| Hauck & DeHon — Reconfigurable Computing | FPGAs — fuera del scope del temario |
 | Deisenroth & Faisal — Mathematics for Machine Learning | Machine learning — fuera del scope |
 | Stallings — Solutions Manual Operating Systems 5ª ed. (2004) | SO puro — misma razón que OSTEP |
 | Stallings — Solutions Manual Data and Computer Communications 10ª ed. caps. 1–13 (2014) | Redes/telecomunicaciones puro — Protocol Architecture, LAN, WAN, Ethernet. Sin contacto real con ETN825 |

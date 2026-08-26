@@ -1,6 +1,6 @@
 ---
 galaxy_body: ship
-project: "Biblioteca ETN825"
+project: Biblioteca ETN825
 date: 2026-07-30
 status: in-orbit
 fleet: ETN825
@@ -9,10 +9,13 @@ blocked_by:
 
 ## Handoff
 
-**Última sesión:** 2026-08-26
-**Retomar desde:** (1) Analizar diapositivas Stallings COA 10ª ed. en PDF — evaluar calidad de extracción de texto y definir uso en sesión. (2) Actualizar tabla “qué usar por tema” y flujo de uso contra temario oficial (CAP. 1–6 + Segunda Parte).
-**Completado esta sesión:** Temario oficial 2026_1 recibido del docente e incorporado a la library (reemplaza autocompletado T1–T7); T8/T9/T10 reubicados como complementarios no evaluados; Temario 2021 eliminado (redundante); 5 libros nuevos conseguidos y registrados en stack (Pérez VHDL, Stallings OS 8ª, Silberschatz OS Concepts 10ª, Tanenbaum Distributed Systems 2ª, Hauck Reconfigurable Computing 1ª); Hill & Peterson 3ª ed. sin conseguir — cubierta por fotocopias del docente, se busca solo si se requiere en el futuro; reajuste 2026_2 iniciado y parcialmente ejecutado.
-**Próximo paso:** (1) Analizar diapositivas Stallings COA en PDF. (2) Actualizar tabla “qué usar por tema” y flujo de uso contra temario oficial.
+**Última sesión:** 2026-08-17
+**Retomar desde:** Diapositivas Stallings COA 10ª ed. (21 caps. en PDF) — evaluar calidad de extracción de texto y definir cómo usar en sesión.
+**Completado esta sesión:** Revisión completa de complementos (OSTEP, tesis Swanson, Solutions Manual OS y DCC — todos descartados); Mano CSA DK 2007 confirmado (539 pp.); fotocopias docente caps. 2,4,5,6 / 7 / 9,10,11,13 registradas; Hill & Peterson 3ª ed. removido de libros por conseguir; ETN825-Hill-Peterson-Resumen-Docente-ESP agregado a complementos (T1–T5); diapositivas Stallings COA 10ª ed. registradas en sección especial (15 caps. útiles de 21, no NotebookLM); **temario 2026_1 T1–T7 autocompletado con material del docente — library activado**.
+**Próximo paso:** (1) Confirmar temario oficial con el docente — especialmente T6 (TCP/IP vs multiprocesadores) y verificar subtemas T1–T7. (2) Analizar diapositivas Stallings COA en PDF.
+
+> [!warning] Temario T1–T7 autocompletado
+> Los subtemas de T1 a T7 fueron inferidos del material disponible del docente (Hill & Peterson 2ª ed. fotocopias + resumen docente ESP + Stallings COA 10ª ed.). **No son el temario oficial.** Deben ser confirmados con el docente antes de usarlos como referencia definitiva. T6 en particular tiene ambigüedad: el nombre dice TCP/IP pero el contenido disponible apunta a multiprocesadores.
 
 ---
 
@@ -31,9 +34,6 @@ Construir y mantener la biblioteca de libros y complementos para ETN825 (Arquite
 | 2026-07-30 | Congelar reajuste hasta tener temario 2026 completo | El temario 2026_1 es parcial (solo T8–T10 tienen subtemas); trabajar sobre él sería en vano |
 | 2026-07-30 | Mantener temario 2021 como referencia histórica | Permite comparar qué cambió entre semestres y conservar el material de AHPL/SIC |
 | 2026-07-30 | AHPL/SIC queda en el stack aunque no esté confirmado en 2026 | El docente mencionó AHPL explícitamente — se evalúa tras obtener temario completo |
-| 2026-08-26 | Temario 2021 eliminado de la library | Contenido idéntico al 2026_1 — sin valor diferencial |
-| 2026-08-26 | T8/T9/T10 reubicados como complementarios no evaluados | No forman parte del temario oficial 2026_1 — se mantienen como referencia opcional |
-| 2026-08-26 | Hill & Peterson 3ª ed. sin conseguir — no prioritario | Fotocopias del docente (2ª ed.) cubren el contenido necesario; se busca solo si se requiere |
 
 > [!note]- Descartadas
 > - Ediciones anteriores de libros repetidos (COD 3ª, 4ª; Quantitative 5ª) — redundantes con versiones más nuevas ya en el stack.
@@ -97,13 +97,11 @@ Restricciones:
 - [x] ~~Conseguir Hill & Peterson Digital Systems 3ª ed. en buena calidad~~ → **No conseguida. Reemplazada por fotocopias del docente (caps. 2,4,5,6 / 7 / 9,10,11,13 de la 2ª ed.) — aceptable como material base.**
 - [x] ~~Reevaluar `operating_systems_three_easy_pieces` contra temario 2026~~ → **Eliminado del stack — SO puro, fuera del scope.**
 - [x] ~~Reevaluar `extensiones_ahpl_compilador_msi_lsi` contra temario 2026~~ → **Eliminado del stack — excede nivel del temario.**
-- [x] Obtener temario completo 2026 del docente — recibido 2026-08-26
-- [x] Ejecutar reajuste 2026_2 — iniciado y parcialmente completado (temario, stack, libros nuevos)
-- [x] Conseguir libros pendientes — Pérez VHDL, Stallings OS, Silberschatz, Tanenbaum Distributed, Hauck Reconfigurable ✔️
+- [ ] Obtener temario completo 2026 del docente — especialmente confirmar T6 (TCP/IP vs multiprocesadores)
+- [ ] Ejecutar reajuste 2026_2 (ver flujo de pasos 2–12) — en pausa hasta temario oficial
 - [ ] Subir fotocopias del docente (caps. 2,4,5,6 / 7 / 9,10,11,13) a NotebookLM y evaluar calidad de extracción
 - [ ] Analizar diapositivas Stallings COA 10ª ed. en PDF — evaluar calidad de texto y definir uso en sesión
-- [ ] Actualizar tabla “qué usar por tema” contra temario oficial (CAP. 1–6 + Segunda Parte)
-- [ ] Actualizar flujo de uso contra temario oficial
+- [ ] Confirmar subtemas T1–T7 con el docente y actualizar temario si hay diferencias
 
 ---
 
@@ -111,14 +109,17 @@ Restricciones:
 
 | Libro | Prioridad | Razón |
 |---|---|---|
-| Hill, F.J. & Peterson, G.R. — Digital Systems: Hardware Organization & Design — 3ª ed. (1978) | 🔴 Baja | Muy difícil de conseguir — fotocopias del docente (2ª ed.) cubren el contenido necesario. Buscar solo si se requiere explícitamente. |
+| Pérez, S.A. — Diseño de Sistemas Digitales con VHDL — 1ª ed. — Thomson (2002) | 🟡 Media | Contexto comparativo AHPL vs VHDL moderno |
+| Stallings, W. — Operating Systems — 8ª ed. — Pearson (2015) | 🟡 Media | Contexto interrupciones (T3) y control de tiempos desde el SO |
+| Tanenbaum, A.S. & Van Steen, M. — Distributed Systems — 2ª ed. — Pearson (2007) | 🟢 Baja | Contexto centros de cómputo y multiprocesadores (T6) |
 
 ---
 
 ## Preguntas abiertas
 
 - ¿El docente maneja AHPL/SIC en ETN825 o solo en ETN821? (determina si el stack de AHPL se mantiene o se archiva)
-- ¿El libro Pérez VHDL tiene uso real en el temario o es solo referencia bibliográfica del docente?
+- ¿Cuáles son los subtemas de T1–T7 en el temario 2026? (necesario para reajuste completo)
+- ¿El libro Pérez — Diseño de Sistemas Digitales con VHDL sigue siendo relevante en 2026?
 
 ---
 

@@ -28797,6 +28797,8 @@ Sons
 SCHWARTZ
 STEEN
 Saddle
+Silberschatz
+Soto
 Plugins
 Pendientes
 Plugin
@@ -37572,6 +37574,8 @@ PATTERSON
 PEREZ
 Practice
 Press
+Perez
+Paradigms
 del
 date
 de
@@ -111282,6 +111286,7 @@ respondas
 rechazar
 reproducir
 restauradora
+reubicados
 notes
 notas
 nuevas
@@ -168060,6 +168065,7 @@ IxbGN
 Invertida
 Internet
 Interconexiones
+Internals
 Funci
 File
 Fase
@@ -177275,6 +177281,7 @@ Fijo
 Fifth
 FPGA
 FAISAL
+Fernandez
 Estado
 Excalidraw
 EPUBs
@@ -290299,6 +290306,7 @@ instructor
 indicarlo
 igualando
 intercambiando
+iniciado
 Dependencia
 Dropbox
 Dataview
