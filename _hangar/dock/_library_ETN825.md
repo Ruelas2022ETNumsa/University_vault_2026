@@ -7,8 +7,8 @@ related_notes:
   - "[[_config/_library-system]]"
 tags: [beacon, library, ETN825, infraestructura]
 date_created: 2026-07-29
-date_updated: 2026-08-17
-_last_edit: 2026-08-17 — ETN825-Hill-Peterson-Resumen-Docente-ESP agregado a complementos; fotocopias docente registradas como recibidas; Hill & Peterson 3ª ed. removido de libros por conseguir
+date_updated: 2026-08-26
+_last_edit: 2026-08-26 — Temario oficial incorporado; T8/T9/T10 movidos a complementarios (no evaluados); Temario 2021 eliminado (redundante con 2026_1)
 status: desarollo
 ---
 
@@ -22,67 +22,78 @@ Este archivo es tu referencia personal para saber qué libro usar en cada tema d
 
 ## Temario 2026_1 — Semestre más reciente
 
-> ⚠️ Subtemas T1–T7 completados con base en material disponible del docente (Hill & Peterson 2ª ed. fotocopias + resumen docente ESP + Stallings COA). Pendiente confirmación oficial del docente.
+> ✅ Temario oficial recibido del docente — 2026-08-26.
 
-> [!warning] Temario T1–T7 autocompletado — no oficial
-> Los subtemas de T1 a T7 fueron **inferidos** del material del docente disponible, no del temario oficial. El contenido probablemente es correcto pero puede diferir en orden, nomenclatura o alcance. **Confirmar con el docente antes de usarlo como referencia definitiva.** Punto crítico: T6 se llama "Introducción a la pila de protocolo TCP/IP" pero el material disponible apunta principalmente a multiprocesadores — verificar si TCP/IP es subtema o tema completo.
+### CAP. 1 — LENGUAJE DE PROGRAMACIÓN EN HARDWARE (HDL)
+- 1.1 Organización y Arquitectura del Computador SIC. (24 pasos).
 
-### T1 — Arquitectura de los procesadores de la familia Intel
-- Organización y arquitectura del computador: visión general
-- Evolución de la arquitectura Intel (8086 → x86-64)
-- Estructura interna del procesador: registros, ALU, unidad de control
-- Sets de instrucciones: características, formatos y modos de direccionamiento
-- Microprogramación y unidad de control microprogramada
-- Arquitecturas RISC vs CISC
-- Pipeline de instrucciones
+### CAP. 2 — COMUNICACIÓN ENTRE SISTEMAS
+- 2.1 Operaciones en Paralelo.
+- 2.2 Módulos Interactuantes.
+- 2.3 Sincronización.
+- 2.4 Interconexión de Sistemas.
+- 2.5 Interface de Impresora, Secuencia Iniciada por la Impresora.
+- 2.6 Comunicación Intersistemas, Respondiente y No-Respondiente.
+- 2.7 Comunicación entre un Módulo Master y Otro Arbitrario.
+- 2.8 Interface de Impresora, Secuencia Iniciada por la CPU.
 
-### T2 — Sistemas de computación para comunicaciones en paralelo
-- Operaciones en paralelo y convergencia de secuencias
-- Módulos interactuantes: secuencias de control paralelo y separadas
-- Sincronización entre módulos (mismo clock y distinto clock)
-- Interconexión de sistemas: líneas de control separadas y comunes (IOBUS, CSBUS)
-- Paralelismo a nivel de instrucción y superescalar
+### CAP. 3 — INTERRUPCIONES Y SISTEMA I/O
+- 3.1 Interrupciones.
+- 3.2 Secuencia de Interrupción.
+- 3.3 Operaciones Para Transferencia de Datos.
+- 3.4 Transferencia de Datos Mediante Programa.
+- 3.5 Flujograma Secuencia I/O.
+- 3.6 Descripción Secuencia AHPL por Programa.
+- 3.7 Transferencia de Datos Mediante Buffer.
+- 3.8 Flujograma Secuencia Buffer.
+- 3.9 Descripción Secuencia AHPL Buffer.
+- 3.10 Introducción Secuencia DMA.
 
-### T3 — Sistemas de computación para comunicación en serie
-- Comunicación intersistemas respondiente y no-respondiente
-- Handshake: parcialmente respondiente y completamente respondiente
-- Comunicación entre módulo Master y módulo arbitrario
-- Interface de impresora: secuencia iniciada por la impresora y por la CPU
-- Señales de control: ready, datavalid, accept, csrdy
+### CAP. 4 — INTERFACES Y PERIFÉRICOS
+- 4.1 Interface Genérica de Periféricos que se Conectan al Computador.
+- 4.2 Interface Simplificada.
+- 4.3 Interface de Unidad de Cinta.
 
-### T4 — Sistemas de interrupciones en un sistema de computación
-- Interrupciones: flags (INTR), registro de enmascaramiento (MR)
-- Secuencia de interrupción: prioridad por hardware PRI, codificador ADDR
-- Sistemas de interrupción vectorial y no-vectorial
-- Program Status Register (PSR) y Program Status Word (PSW)
-- Operaciones para transferencia de datos: programada, Buffer, DMA
-- Instrucciones I/O: INT, TST, IOT (ODn, IDn, ISn, OBn, IBn, OCn)
-- Flujograma secuencia I/O completo
+### CAP. 5 — ADMINISTRACIÓN DE MEMORIA PARA GRANDES SISTEMAS
+- 5.1 Introducción.
+- 5.2 Memoria Stack.
+- 5.3 Memoria Asociativa.
+- 5.4 Memoria Buffer (Caché).
+- 5.5 Memoria Virtual.
+- 5.6 Bancos de Memoria Múltiple.
+- 5.7 Bancos de Memoria Múltiple con Accesos Múltiples.
 
-### T5 — Control de tiempos en un sistema de computación
-- Transferencia de datos mediante Buffer: BWC, BIOR, BCR, BUFRDY
-- Flujograma y descripción AHPL de la secuencia Buffer
-- Acceso directo a memoria (DMA): ruta alternativa a memoria
-- Interfaces y periféricos: interface genérica SIC
-- Interface simplificada: respuesta a comandos ID e IS
-- Interface de lectora de cinta de papel: step, datatrue, forward, ONESHOTS
-- Reacción a comandos SIC: CSBUS, csrdy, accept
+### CAP. 6 — AVANCES EN LA TECNOLOGÍA DE LAS COMPUTADORAS
+- 6.1 Introducción.
+- 6.2 Desempeño.
+- 6.3 El Límite de la Potencia Disipada.
+- 6.4 De los Monoprocesadores a los Multiprocesadores.
 
-### T6 — Introducción a la pila de protocolo TCP/IP
-- Introducción a multiprocesadores: definición y motivación
-- Límite de la potencia disipada y transición a multiprocesadores
-- Arquitecturas multiprocesador: simétrica (SMP), asimétrica
-- Procesamiento paralelo y multicore
-- Contexto TCP/IP: pila de protocolos (consulta puntual)
+### SEGUNDA PARTE — PROCESADORES AVANZADOS
+- Investigación bibliográfica sobre últimos avances en organización y arquitectura.
+- Utilización de lenguajes de descripción de Hardware cuando sea necesario.
+- Exposición y debate en clases.
 
-### T7 — Centros de cómputo
-- Administración de memoria para sistemas grandes: introducción
-- Memoria Stack (LIFO): implementaciones por registros, RAM exclusiva, software
-- Memoria Asociativa (CAM): descriptor, ASSOC, lectura y escritura asociativa
-- Memoria Buffer (Caché): UC, AA, AM, políticas de acceso y reemplazo
-- Interface de memoria Buffer con RAM: Memory Control Module
-- Memoria Virtual: páginas, AROM, operación (fetch, execute, missing page, replace)
-- Bancos de memoria múltiple (traslapados) y con accesos múltiples (DMA)
+### SEGUNDA PARTE — COMPUTACIÓN RECONFIGURABLE
+- Estructura Computacional.
+- Arreglo de Interconexiones.
+- Configuración.
+- Arquitecturas de Computación Reconfigurable.
+- Integración a Sistemas de Computación Tradicionales.
+
+### SEGUNDA PARTE — ENTRADA SALIDA EN COMPUTADORES COMERCIALES (Stallings)
+- Dispositivos externos.
+- Módulos de E/S.
+- E/S programada.
+- E/S mediante interrupciones.
+- Acceso directo a memoria.
+- Canales y procesadores de E/S.
+
+---
+
+## Temas complementarios (no evaluados)
+
+> Temas inferidos en sesión anterior — no forman parte del temario oficial 2026_1 ni entran al examen. Se mantienen como referencia de contexto y profundización opcional.
 
 ### T8 — Diseño de sistemas de memoria
 - Memoria virtual y paginación
@@ -101,55 +112,6 @@ Este archivo es tu referencia personal para saber qué libro usar en cada tema d
 - Interconexión de sistemas multiprocesador: topologías, enrutamiento y latencia
 - Sincronización y coordinación en sistemas multiprocesador
 - Sistemas de memoria compartida y distribuida
-
----
-
-## Temario 2021
-
-### T1 — LENGUAJE DE PROGRAMACIÓN EN HARDWARE (HDL)
-- Organización y Arquitectura del Computador SIC. (24 pasos).
-
-### T2 — COMUNICACIÓN ENTRE SISTEMAS
-- Operaciones en Paralelo.
-- Módulos Interactuantes.
-- Sincronización.
-- Interconexión de Sistemas.
-- Interface de Impresora, Secuencia Iniciada por la Impresora.
-- Comunicación Intersistemas, Respondiente y No-Respondiente.
-- Comunicación entre un Módulo Master y Otro Arbitrario.
-- Interface de Impresora, Secuencia Iniciada por la CPU.
-
-### T3 — INTERRUPCIONES Y SISTEMA I/O
-- Interrupciones.
-- Secuencia de Interrupción.
-- Operaciones Para Transferencia de Datos.
-- Transferencia de Datos Mediante Programa.
-- Flujograma Secuencia I/O.
-- Descripción Secuencia AHPL por Programa.
-- Transferencia de Datos Mediante Buffer.
-- Flujograma Secuencia Buffer.
-- Descripción Secuencia AHPL Buffer.
-- Introducción Secuencia DMA.
-
-### T4 — INTERFACES Y PERIFÉRICOS
-- Interface Genérica de Periféricos que se Conectan al Computador.
-- Interface Simplificada.
-- Interface de Unidad de Cinta.
-
-### T5 — ADMINISTRACIÓN DE MEMORIA PARA GRANDES SISTEMAS
-- Introducción.
-- Memoria Stack.
-- Memoria Asociativa.
-- Memoria Buffer (Caché).
-- Memoria Virtual.
-- Bancos de Memoria Múltiple.
-- Bancos de Memoria Múltiple con Accesos Múltiples.
-
-### T6 — AVANCES EN LA TECNOLOGÍA DE LAS COMPUTADORAS
-- Introducción.
-- Desempeño.
-- El Límite de la Potencia Disipada.
-- De los Monoprocesadores a los Multiprocesadores.
 
 ---
 

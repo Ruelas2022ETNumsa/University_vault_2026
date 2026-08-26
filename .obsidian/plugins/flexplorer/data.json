@@ -23,10 +23,7 @@
         "Rubbish",
         "Borrar",
         "shared",
-        "README.md",
-        "ENU607.md",
-        "Untitled.md",
-        "Untitled 2.md"
+        "README.md"
       ]
     },
     "MOC": {
@@ -3641,6 +3638,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "Untitled.md",
         "ejercicios P1",
         "_library_ETN607.md",
         "ETN607-T01-P1-Conceptos generales 1.md",
@@ -4718,6 +4716,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "ENU607.md",
         "P1-E22-607.md",
         "P1-E23-607.md",
         "P1-E21-607.md",
@@ -5456,10 +5455,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "ENU607.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Semesters/Sem_04/ETN607/Partial_1/ejercicios P1/P1-E13-607.md": {
       "isPinned": false,
       "isHidden": false
@@ -5521,10 +5516,6 @@
       "isHidden": false
     },
     "_app/notebooklm/prompts/ETN607/ETN607-study-NLMv3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Untitled.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -5602,7 +5593,11 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Untitled 2.md": {
+    "Semesters/Sem_04/ETN607/Partial_1/ejercicios P1/ENU607.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Partial_1/Untitled.md": {
       "isPinned": false,
       "isHidden": false
     }
