@@ -18823,6 +18823,7 @@ TnrF
 Tanto
 TEMARIO
 TIKZ
+Transponer
 Sistema
 Sync
 Save
@@ -214236,6 +214237,7 @@ proyectando
 pitag
 pgAs
 proyectarla
+piso
 min
 mica
 movimiento
@@ -279596,6 +279598,7 @@ laborioso
 lema
 lemma
 lEkA
+lagrangiana
 incluyendo
 im
 instalar

@@ -107,7 +107,7 @@ $$
 \draw[thick, teal] (1.55,-3.0) -- (M);
 
 % Etiqueta r
-\node[teal] at (1.05,-3.25) {$r$};
+\node[teal] at (1,-3) {$r$};
 
 %------------------------------------------------
 % MASA
@@ -135,9 +135,9 @@ $$
 %------------------------------------------------
 
 \draw[->, teal, very thick]
-    (M) -- (1.25,-2.15);
+    (M) -- (1.25,-1.7);
 
-\node[teal] at (1.0,-1.95) {$k(r-l_0)$};
+\node[teal] at (0.8,-2) {$k(r-l_0)$};
 
 %------------------------------------------------
 % INDICACIÓN DEL EJE VERTICAL
@@ -153,6 +153,8 @@ $$
 
 ---
 ### Sol.
+
+_Verificación de $T$: $\dot{x} = \ell\dot{\theta}\cos\theta$, $\dot{y} = -\ell\dot{\theta}\sin\theta$ $\Rightarrow$ $\dot{x}^2+\dot{y}^2 = \ell^2\dot{\theta}^2(\cos^2\theta+\sin^2\theta) = \ell^2\dot{\theta}^2$, por tanto $T = \frac{m}{2}\ell^2\dot{\theta}^2$._
 
 $$
 T = \frac{m}{2}
@@ -226,6 +228,8 @@ mg\ell\sin\theta
 $$
 
 ### Operación auxiliar
+
+_$r$ se obtiene por ley de cosenos en el triángulo formado por $H$, $\ell$ y $r$. $\sin\alpha$ se obtiene por ley de senos en ese mismo triángulo. Ambos se usan para expandir $\sin\alpha\cos\theta + \cos\alpha\sin\theta = \sin(\alpha+\theta)$ y simplificar el lado derecho de la GDE._
 
 $$
 r^2=H^2+\ell^2-2H\ell\cos\theta
