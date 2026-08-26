@@ -1,0 +1,18 @@
+{
+  "propertiesInDocument": "source",
+  "alwaysUpdateLinks": true,
+  "promptDelete": false,
+  "attachmentFolderPath": "_assets",
+  "tabSize": 4,
+  "settingsPopoutWindow": false,
+  "showInlineTitle": true,
+  "showLineNumber": false,
+  "defaultViewMode": "preview",
+  "autoConvertHtml": false,
+  "mobilePullAction": "",
+  "readableLineLength": false,
+  "strictLineBreaks": false,
+  "foldHeading": true,
+  "foldIndent": true,
+  "showIndentGuide": true
+}

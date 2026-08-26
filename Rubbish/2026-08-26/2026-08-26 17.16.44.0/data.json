@@ -13,7 +13,7 @@
   "sidenoteGap2": 0.8,
   "sidenoteGapDrift": 0.2,
   "sidenoteAnchor": "text",
-  "pageOffsetFactor": 1,
+  "pageOffsetFactor": 0.6,
   "hideBelow": 900,
   "compactBelow": 1100,
   "fullAbove": 1600,

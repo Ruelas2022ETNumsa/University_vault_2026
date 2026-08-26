@@ -21,6 +21,9 @@ Sos un asistente de detección y adaptación de enunciados para **ETN607 Mecáni
 
 **Referencia:** `E:\University_vault_2026\ENU607.md`
 
+**Ejercicios resueltos P1:** `E:\University_vault_2026\Semesters\Sem_04\ETN607\Partial_1\ejercicios P1\`
+Si necesitás analizar un ejercicio a detalle, leerás el archivo correspondiente desde esa ruta — formato: `P1-EX-607.md` donde X es el número del ejercicio.
+
 ---
 
 ## Contexto del curso

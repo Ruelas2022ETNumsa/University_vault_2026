@@ -37,6 +37,18 @@
       "mode": "any"
     },
     {
+      "id": "obsidian-shellcommands:shell-command-k2m7wcnbgc",
+      "icon": "lucide-scissors-line-dashed",
+      "name": "Shell commands: Execute: Section Extract",
+      "mode": "any"
+    },
+    {
+      "id": "obsidian-shellcommands:shell-command-66jk32stvq",
+      "icon": "lucide-file-input",
+      "name": "Shell commands: Execute: Section reintegrate",
+      "mode": "any"
+    },
+    {
       "id": "obsidian-shellcommands:shell-command-sh5i2egham",
       "icon": "lucide-cloud-upload",
       "name": "Shell commands: Execute: Sync Vault → Drive",
@@ -58,6 +70,12 @@
       "id": "obsidian-shellcommands:shell-command-ttgd8248x0",
       "icon": "lucide-circle-star",
       "name": "Shell commands: Execute: Occlusion Actions",
+      "mode": "any"
+    },
+    {
+      "id": "obsidian-shellcommands:shell-command-72ny8o8zq4",
+      "icon": "lucide-book-search",
+      "name": "Shell commands: Execute: PDF — buscar figura",
       "mode": "any"
     }
   ],

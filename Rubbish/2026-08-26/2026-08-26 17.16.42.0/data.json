@@ -25,7 +25,7 @@
   "marginOffset": 10,
   "fontSize": "0.75em",
   "fontFamily": "inherit",
-  "adaptiveMode": true,
+  "adaptiveMode": false,
   "enableReadingView": true,
   "tags": [
     {

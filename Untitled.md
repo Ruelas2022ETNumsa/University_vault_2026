@@ -2,12 +2,15 @@ Subtema detectado: T2 — CONCEPTOS BÁSICOS II (Restricciones, energía cinéti
 
 ##### Ej. Una masa \(m\) desliza sin fricción sobre una barra diagonal que une el vértice inferior izquierdo \((0,0)\) con el vértice superior derecho \((L,L)\) de un cuadrado de lado \(L\). Un resorte de constante \(k\) y longitud natural \(\ell_0\) conecta la masa con el vértice inferior derecho \((L,0)\). Obtener la GDE para \(q = x\).
 
+Una masa \(m\) desliza sin fricción sobre una barra diagonal que une el vértice inferior izquierdo \((0,0)\) con el vértice superior derecho \((L,L)\) de un cuadrado de lado \(L\). Un resorte de constante \(k\) y longitud natural \(\ell_0\) conecta la masa con el vértice inferior derecho \((L,0)\). Obtener la GDE para \(q = x\).
+
 Este ejercicio es altamente similar en su estructura física y algebraica al ejercicio modelo **P1-E8-607** (pero con el resorte anclado en el vértice inferior derecho \((L,0)\) en lugar de \((0,H)\)).
 
 ```tikz
 \usepackage{tikz}
 \usetikzlibrary{decorations.pathmorphing}
 \begin{document}
+\begin{tikzpicture}
 \draw[gray, dashed] (0,0) rectangle (4,4);
 \draw[thick, teal] (0,0) -- (4,4) node[above right] {$(L,L)$};
 \draw[fill=teal] (2.4,2.4) circle (0.15) node[above left, teal] {$m$};
@@ -16,6 +19,7 @@ Este ejercicio es altamente similar en su estructura física y algebraica al eje
 \draw[fill=gray] (0,0) circle (0.05) node[below left] {$(0,0)$};
 \draw[->,thick,gray] (0,0) -- (4.5,0) node[right] {$x$};
 \draw[->,thick,gray] (0,0) -- (0,4.5) node[above] {$y$};
+\end{tikzpicture}
 \end{document}
 ```
 

@@ -16,18 +16,6 @@
     "claude": {
       "color": "#dc6937",
       "mode": "custom"
-    },
-    "me_$2026-08-24T02": {
-      "color": "#e54d2e",
-      "mode": "generated"
-    },
-    "claude_$2026-08-24T03": {
-      "color": "#46a758",
-      "mode": "generated"
-    },
-    "alex_$2026-08-24T03": {
-      "color": "#6e56cf",
-      "mode": "generated"
     }
   },
   "excludedAuthorColors": [

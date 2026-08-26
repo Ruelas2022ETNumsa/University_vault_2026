@@ -192,6 +192,7 @@ Si el ejercicio tiene geometría representable (sistema de coordenadas, cuerpo l
 Reglas TikZJax:
 - Bloque exacto: ```tikz (sin variantes)
 - \begin{document} y \end{document} siempre presentes
+- \begin{tikzpicture} y \end{tikzpicture} OBLIGATORIOS dentro de \begin{document} — sin ellos no renderiza
 - \documentclass NUNCA
 - Paquetes van antes de \begin{document}
 - Color principal: teal · Color secundario: orange
