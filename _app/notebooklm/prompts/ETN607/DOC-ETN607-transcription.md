@@ -137,5 +137,5 @@ Documentación del script: `_app/shellcommands/shellcmd_NBLM_fix.md`
 [[_app/notebooklm/guides/ETN607/ETN607_latex.md]]
 [[_app/notebooklm/guides/ETN607/ETN607_TikzJax.md]]
 [[_app/shellcommands/shellcmd_NBLM_fix.md]]
-[[Semesters/Sem_04/ETN607/_library_ETN607.md]]
+[[_library_ETN607]]
 %%

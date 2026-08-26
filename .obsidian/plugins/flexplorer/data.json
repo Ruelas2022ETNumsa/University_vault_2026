@@ -26,8 +26,7 @@
         "README.md",
         "ENU607.md",
         "paso NBLM.md",
-        "Untitled 1.md",
-        "P1-E22-607.md"
+        "Untitled 1.md"
       ]
     },
     "MOC": {
@@ -1836,14 +1835,9 @@
       "sortOrder": "custom",
       "customOrder": [
         "Partial_1",
-        "_library_ETN607.md",
         "Sin títuloasde342.md",
         "tsk_ini_ETN607.md"
       ]
-    },
-    "Semesters/Sem_04/ETN607/_library_ETN607.md": {
-      "isPinned": false,
-      "isHidden": false
     },
     "Semesters/Sem_01/MAT101/_library_MAT101.md": {
       "isPinned": false,
@@ -3652,13 +3646,14 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "ejercicios P1",
+        "_library_ETN607.md",
+        "ETN607-T01-P1-Conceptos generales 1.md",
+        "ETN607-T02-P1-Ecuaciones de Lagrange.md",
         "ETN607-T01-complementos.md",
         "compelmentos para 607 T1.md",
-        "ETN607-T01-P1-Conceptos generales 1.md",
         "ETN607-T01-ejercicios.md",
-        "ejercicios tipo examen.md",
-        "ejercicios P1",
-        "ETN607-T02-P1-Ecuaciones de Lagrange.md"
+        "ejercicios tipo examen.md"
       ]
     },
     "Semesters/Sem_04/ETN607/Partial_1/ETN607-T01-P1-Conceptos generales 1.md": {
@@ -4724,10 +4719,11 @@
       "isHidden": false
     },
     "Semesters/Sem_04/ETN607/Partial_1/ejercicios P1": {
-      "isPinned": false,
+      "isPinned": true,
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "P1-E22-607.md",
         "P1-E23-607.md",
         "P1-E21-607.md",
         "P1-E20-607.md",
@@ -5513,18 +5509,23 @@
       "isPinned": false,
       "isHidden": false
     },
-    "P1-E22-607.md": {
+    "Semesters/Sem_04/ETN607/Partial_1/ejercicios P1/P1-E23-607.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "Semesters/Sem_04/ETN607/Partial_1/ejercicios P1/P1-E23-607.md": {
+    "Semesters/Sem_04/ETN607/Partial_1/ejercicios P1/P1-E22-607.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Partial_1/_library_ETN607.md": {
       "isPinned": false,
       "isHidden": false
     }
   },
   "pinnedFiles": [
     "_hangar/template/tpl_ship.md",
-    "_app/_config/_galaxy-system.md"
+    "_app/_config/_galaxy-system.md",
+    "Semesters/Sem_04/ETN607/Partial_1/ejercicios P1"
   ],
   "showHidden": false,
   "newItemPlacement": "bottom",
