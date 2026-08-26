@@ -46335,6 +46335,8 @@ deslizarse
 deshace
 directores
 detector
+desciende
+decrece
 Vault
 Verificar
 Variables
@@ -101712,6 +101714,7 @@ alcanzar
 acopla
 articulada
 acople
+anclaje
 related
 recomendados
 ribbon
@@ -187249,6 +187252,7 @@ EnQxgs
 Expandiendo
 ENMk
 Elevacion
+Equivalentemente
 Obsidian
 OmniSearch
 Ocultar
@@ -214239,6 +214243,7 @@ pitag
 pgAs
 proyectarla
 piso
+proyectado
 min
 mica
 movimiento

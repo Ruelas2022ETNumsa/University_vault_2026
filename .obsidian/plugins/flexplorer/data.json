@@ -25,10 +25,11 @@
         "shared",
         "README.md",
         "ENU607.md",
-        "Untitled 3.md",
         "Untitled 4.md",
         "paso NBLM.md",
-        "Untitled.md"
+        "Untitled.md",
+        "ex1.md",
+        "ex2.md"
       ]
     },
     "MOC": {
@@ -4729,6 +4730,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "P1-E16-607.md",
         "P1-E15-607.md",
         "P1-E14-607.md",
         "P1-E13-607.md",
@@ -5463,10 +5465,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Untitled 4.md": {
       "isPinned": false,
       "isHidden": false
@@ -5488,6 +5486,18 @@
       "isHidden": false
     },
     "Semesters/Sem_04/ETN607/Partial_1/ejercicios P1/P1-E15-607.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Partial_1/ejercicios P1/P1-E16-607.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "ex1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "ex2.md": {
       "isPinned": false,
       "isHidden": false
     }
