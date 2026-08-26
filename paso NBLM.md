@@ -1,4 +1,4 @@
-##### Ej. Una masa \\(m\\) cuelga de un hilo inextensible de longitud \\(\ell\\) fija al techo. Un resorte de constante \\(k\\) y longitud natural \\(\ell_0\\) conecta la masa con un punto del piso ubicado directamente debajo del punto de suspensión, a una distancia vertical \\(H\\) del techo. El sistema opera en el plano \\(z=0\\). La única coordenada generalizada es \\(\theta\\) (ángulo de la cuerda con la vertical). Las coordenadas de la masa son \\(x = \ell\sin\theta\\), \\(y = \ell\cos\theta\\). La longitud del resorte en función de \\(\theta\\) es \\(r = \sqrt{H^2 + \ell^2 - 2H\ell\cos\theta}\\). Fuerzas: gravedad \\(mg\\) hacia abajo, resorte \\(k(r-\ell_0)\\) a lo largo de \\(r\\). Obtener la GDE para \\(q_r = \theta\\).
+##### Ej. Una masa $m$ cuelga de un hilo inextensible de longitud $\ell$ fija al techo. Un resorte de constante $k$ y longitud natural $\ell_0$ conecta la masa con un punto del piso ubicado directamente debajo del punto de suspensión, a una distancia vertical $H$ del techo. El sistema opera en el plano $z=0$. La única coordenada generalizada es $\theta$ (ángulo de la cuerda con la vertical). Las coordenadas de la masa son $x = \ell\sin\theta$, $y = \ell\cos\theta$. La longitud del resorte en función de $\theta$ es $r = \sqrt{H^2 + \ell^2 - 2H\ell\cos\theta}$. Fuerzas: gravedad $mg$ hacia abajo, resorte $k(r-\ell_0)$ a lo largo de $r$. Obtener la GDE para $q_r = \theta$.
 
 ```tikz
 \usepackage{tikz}
@@ -42,22 +42,24 @@
 ```
 
 **Resolución**
-Construir la función lagrangiana \\(L = T - V\\) considerando la energía cinética de la masa y el potencial combinado gravitatorio y elástico.
+Construir la función lagrangiana $L = T - V$ considerando la energía cinética de la masa y el potencial combinado gravitatorio y elástico.
 
-\\[
+
+$$
 \begin{array}{rcl}
-x & = & \ell\sin\theta \quad \Rightarrow \quad \dot{x} = \ell\dot{\theta}\cos\theta \\[6pt]
-y & = & \ell\cos\theta \quad \Rightarrow \quad \dot{y} = -\ell\dot{\theta}\sin\theta \\[6pt]
-T & = & \dfrac{1}{2}m\left(\dot{x}^2 + \dot{y}^2\right) = \dfrac{1}{2}m\ell^2\dot{\theta}^2 \\[10pt]
-V & = & -mgy + \dfrac{1}{2}k\left(r-\ell_0\right)^2 = -mg\ell\cos\theta + \dfrac{1}{2}k\left(r-\ell_0\right)^2 \\[10pt]
-L & = & T - V = \dfrac{1}{2}m\ell^2\dot{\theta}^2 + mg\ell\cos\theta - \dfrac{1}{2}k\left(r-\ell_0\right)^2 \\[10pt]
-\dfrac{\partial L}{\partial \dot{\theta}} & = & m\ell^2\dot{\theta} \quad \Rightarrow \quad \dfrac{d}{dt}\left(\dfrac{\partial L}{\partial \dot{\theta}}\right) = m\ell^2\ddot{\theta} \\[10pt]
-\dfrac{\partial L}{\partial \theta} & = & -mg\ell\sin\theta - k\left(r-\ell_0\right)\dfrac{\partial r}{\partial \theta} \\[10pt]
-r^2 & = & H^2 + \ell^2 - 2H\ell\cos\theta \quad \Rightarrow \quad 2r\dfrac{\partial r}{\partial \theta} = 2H\ell\sin\theta \\[10pt]
-\dfrac{\partial r}{\partial \theta} & = & \dfrac{H\ell\sin\theta}{r} \\[10pt]
-\dfrac{\partial L}{\partial \theta} & = & -mg\ell\sin\theta - k\left(1 - \dfrac{\ell_0}{r}\right)H\ell\sin\theta \\[10pt]
-\dfrac{d}{dt}\left(\dfrac{\partial L}{\partial \dot{\theta}}\right) - \dfrac{\partial L}{\partial \theta} & = & 0 \\[10pt]
-m\ell^2\ddot{\theta} + \left[ mg + kH\left(1 - \dfrac{\ell_0}{r}\right) \right] \ell\sin\theta & = & 0 \\[10pt]
+x & = & \ell\sin\theta \quad \Rightarrow \quad \dot{x} = \ell\dot{\theta}\cos\theta \\
+y & = & \ell\cos\theta \quad \Rightarrow \quad \dot{y} = -\ell\dot{\theta}\sin\theta \\
+T & = & \dfrac{1}{2}m\left(\dot{x}^2 + \dot{y}^2\right) = \dfrac{1}{2}m\ell^2\dot{\theta}^2 \\
+V & = & -mgy + \dfrac{1}{2}k\left(r-\ell_0\right)^2 = -mg\ell\cos\theta + \dfrac{1}{2}k\left(r-\ell_0\right)^2 \\
+L & = & T - V = \dfrac{1}{2}m\ell^2\dot{\theta}^2 + mg\ell\cos\theta - \dfrac{1}{2}k\left(r-\ell_0\right)^2 \\
+\dfrac{\partial L}{\partial \dot{\theta}} & = & m\ell^2\dot{\theta} \quad \Rightarrow \quad \dfrac{d}{dt}\left(\dfrac{\partial L}{\partial \dot{\theta}}\right) = m\ell^2\ddot{\theta} \\
+\dfrac{\partial L}{\partial \theta} & = & -mg\ell\sin\theta - k\left(r-\ell_0\right)\dfrac{\partial r}{\partial \theta} \\
+r^2 & = & H^2 + \ell^2 - 2H\ell\cos\theta \quad \Rightarrow \quad 2r\dfrac{\partial r}{\partial \theta} = 2H\ell\sin\theta \\
+\dfrac{\partial r}{\partial \theta} & = & \dfrac{H\ell\sin\theta}{r} \\
+\dfrac{\partial L}{\partial \theta} & = & -mg\ell\sin\theta - k\left(1 - \dfrac{\ell_0}{r}\right)H\ell\sin\theta \\
+\dfrac{d}{dt}\left(\dfrac{\partial L}{\partial \dot{\theta}}\right) - \dfrac{\partial L}{\partial \theta} & = & 0 \\
+m\ell^2\ddot{\theta} + \left[ mg + kH\left(1 - \dfrac{\ell_0}{r}\right) \right] \ell\sin\theta & = & 0 \\
 \therefore\quad \color{orange}{m\ell^2\ddot{\theta} + \left[ mg + kH\left(1 - \frac{\ell_0}{r}\right) \right] \ell\sin\theta = 0}
 \end{array}
-\\]
+$$
+
