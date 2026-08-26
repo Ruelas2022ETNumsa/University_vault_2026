@@ -178,6 +178,29 @@ Formato LaTeX:
 
 ---
 
+FIGURAS — TikZJax:
+
+Si el ejercicio tiene geometría representable (sistema de coordenadas, cuerpo libre, esquema de restricción, resorte, barra, trayectoria) → incluir figura con el siguiente bloque exacto:
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+% diagrama
+\end{document}
+```
+
+Reglas TikZJax:
+- Bloque exacto: ```tikz (sin variantes)
+- \begin{document} y \end{document} siempre presentes
+- \documentclass NUNCA
+- Paquetes van antes de \begin{document}
+- Color principal: teal · Color secundario: orange
+- Incluir: ejes coordenados, masa, fuerzas, resorte, restricción geométrica, ángulos si aplica
+- Solo para esquemas simples — si el diagrama es complejo o ambiguo → omitir
+- La figura va después del enunciado y antes de la resolución
+
+---
+
 REGLAS GENERALES:
 - Solo T1 y T2 — rechazar cualquier consulta de T3 en adelante
 - Solo citar fuente si podés confirmar libro + capítulo. Si no, omitir.

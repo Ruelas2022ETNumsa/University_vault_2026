@@ -24,9 +24,7 @@
         "Borrar",
         "shared",
         "README.md",
-        "ENU607.md",
-        "paso NBLM.md",
-        "Untitled 1.md"
+        "ENU607.md"
       ]
     },
     "MOC": {
@@ -1102,8 +1100,9 @@
         "_claude-setup.md",
         "_claude-close.md",
         "_claude-boot.md",
-        "_start_movil.md",
+        "_start_movilx.md",
         "_repaso_movil.md",
+        "_start_movil.md",
         "_plan_movil.md",
         "_start.md"
       ]
@@ -1700,19 +1699,11 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_skills/_start_movil.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_hangar/dock/tsk_movil_drive.md": {
       "isPinned": false,
       "isHidden": false
     },
     "_skills/_repaso_movil.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_skills/_plan_movil.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -1737,7 +1728,8 @@
         "legacy",
         "ETN607-study.md",
         "ETN607-study-NLMv2.md",
-        "ETN607-ejercicio-detector.md"
+        "ETN607-ejercicio-detector.md",
+        "ETN607-study-NLMv3.md"
       ]
     },
     "_assets": {
@@ -5465,10 +5457,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "paso NBLM.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Semesters/Sem_04/ETN607/Partial_1/ejercicios P1/P1-E13-607.md": {
       "isPinned": false,
       "isHidden": false
@@ -5482,10 +5470,6 @@
       "isHidden": false
     },
     "Semesters/Sem_04/ETN607/Partial_1/ejercicios P1/P1-E16-607.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Untitled 1.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -5518,6 +5502,22 @@
       "isHidden": false
     },
     "Semesters/Sem_04/ETN607/Partial_1/_library_ETN607.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_skills/_start_movilx.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_skills/_plan_movil.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_skills/_start_movil.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN607/ETN607-study-NLMv3.md": {
       "isPinned": false,
       "isHidden": false
     }

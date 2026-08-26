@@ -37545,6 +37545,7 @@ PuZx
 Planteando
 Pasando
 Parametrizaci
+Polares
 del
 date
 de
@@ -101719,6 +101720,7 @@ articulada
 acople
 anclaje
 aleja
+ambiguo
 related
 recomendados
 ribbon
@@ -205177,6 +205179,7 @@ AYGg
 AwFY
 AWaZj
 Auxiliares
+Adapt
 push
 pull
 para
@@ -300009,6 +300012,8 @@ DEAzQD
 Djoo
 Dificultades
 Determinamos
+Detector
+Discriminadores
 Remotely
 Raz
 Revisa
