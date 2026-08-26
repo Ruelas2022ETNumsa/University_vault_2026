@@ -14,10 +14,10 @@
   "concurrency": "5",
   "version": "2",
   "prevConfig": {
-    "pageSize": "A4",
-    "marginType": "1",
+    "pageSize": "Letter",
+    "marginType": "0",
     "showTitle": false,
-    "open": true,
+    "open": false,
     "scale": 89,
     "landscape": false,
     "marginTop": "10",
