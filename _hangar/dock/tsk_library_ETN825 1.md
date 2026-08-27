@@ -10,9 +10,9 @@ blocked_by:
 ## Handoff
 
 **Última sesión:** 2026-08-26
-**Retomar desde:** Continuar verificación de complementos pendientes en la tabla de Complementos.
-**Completado esta sesión:** 5 libros de redes descartados; Silberschatz descartado; Schwartz & Ben David registrado en descartados; stack actualizado con nombres exactos de PDF; nombres de archivos normalizados; fotocopias docente subidas a NotebookLM; stack cargado a NotebookLM salvo Langdon y Switching Theory 3ª ed. (en proceso con PDF24); Stallings OS confirmado solo en 2ª Parte E/S; complemento slide-introduccion_ahpl verificado contra PDF y descripción actualizada; `ahpl_diseno_sistemas_digitales` verificado contra PDF (31 pp.) — corrección aplicada (CLUNIT → UNIT: LOGIC/FULLADD/etc.) y nota NotebookLM agregada (número de página ✅, figuras etiquetadas ✅ Figura 1–28); sección ChatGPT de complementos integrada a tabla principal — sección separada eliminada.
-**Próximo paso:** (1) Resolver carga de Langdon y Switching Theory a NotebookLM (ver tareas abiertas). (2) Continuar verificación de complementos restantes.
+**Retomar desde:** Revisar complemento `ahpl_diseno_sistemas_digitales` — pasar el PDF y verificar descripción de ChatGPT contra el contenido real.
+**Completado esta sesión:** 5 libros de redes descartados; Silberschatz descartado; Schwartz & Ben David registrado en descartados; stack actualizado con nombres exactos de PDF; nombres de archivos normalizados; fotocopias docente subidas a NotebookLM; stack cargado a NotebookLM salvo Langdon y Switching Theory 3ª ed. (en proceso con PDF24); Stallings OS confirmado solo en 2ª Parte E/S; complemento slide-introduccion_ahpl verificado contra PDF y descripción actualizada.
+**Próximo paso:** (1) Verificar `ahpl_diseno_sistemas_digitales` — pasar PDF y revisar descripción. (2) Confirmar carga de Langdon y Switching Theory 3ª ed. a NotebookLM.
 
 ---
 
@@ -105,17 +105,16 @@ Restricciones:
 - [x] Conseguir libros pendientes — Pérez VHDL, Stallings OS, Silberschatz, Tanenbaum Distributed, Hauck Reconfigurable ✔️
 - [x] Cargar stack completo a NotebookLM — completado salvo 2 PDFs en espera (ver abajo).
 - [x] Subir fotocopias del docente (caps. 2,4,5,6 / 7 / 9,10,11,13) a NotebookLM y evaluar calidad de extracción → **Subidas correctamente.**
-- [ ] `Langdon - Computer Design.pdf` — ❌ falló carga a NotebookLM (PDF antiguo). En proceso: compresión + OCR con PDF24 (https://tools.pdf24.org/es/comprimir-pdf). Pendiente resultado.
-- [x] ~~`Hill Peterson - Switching Theory and Logical Design - 3ed.pdf`~~ → **❌ falló carga a NotebookLM (PDF de fotos). Reemplazada por 2ª ed. — `Hill Peterson - Switching Theory and Logical Design - 2ed.pdf` cargada exitosamente a NotebookLM.**
+- [ ] `Langdon - Computer Design.pdf` — pendiente de carga a NotebookLM, probable fallo (PDF antiguo).
+- [ ] `Hill Peterson - Switching Theory and Logical Design - 3ed.pdf` — pendiente de carga a NotebookLM, probable fallo (PDF de fotos). Si falla, subir `xoxo Hill Peterson - Switching Theory and Logical Design - 2ed.pdf`.
 - [x] ~~Analizar diapositivas Stallings COA 10ª ed. en PDF — evaluar calidad de texto y definir uso en sesión~~ → **No se suben a NotebookLM — son muchas diapositivas, se usan directamente en sesión como repaso rápido.**
 - [x] ~~Decidir destino de 5 libros huérfanos: Stallings DCC 10ª, Stallings Comunicaciones 6ª, Forouzan 5ª, Stevens TCP/IP 2ª, Tanenbaum Networks 5ª~~ → **Descartados — redes/protocolos, fuera del scope del temario 2026.**
 - [x] ~~Silberschatz OS Concepts 10ª~~ → **Descartado — Stallings OS ya cubre el rol SO para 2ª Parte E/S.**
 - [x] Normalizar nombres de PDFs en carpeta y actualizar library con nombres exactos
 - [x] ~~Registrar Schwartz & Ben David — Understanding Machine Learning — en libros descartados~~ → **Registrado — Machine Learning, fuera del scope del temario 2026.**
 - [x] ~~Evaluar si Stallings OS 8ª aplica también a T3 (interrupciones/DMA) y actualizar tabla si corresponde~~ → **No aplica a T3 — T3 es orientado a AHPL/hardware. Stallings OS queda solo en 2ª Parte E/S.**
-- [x] Actualizar tabla "qué usar por tema" contra temario oficial (T1–T6 + Segunda Parte)
+- [x] Actualizar tabla “qué usar por tema” contra temario oficial (T1–T6 + Segunda Parte)
 - [x] Actualizar flujo de uso contra temario oficial
-- [x] Integrar sección ChatGPT a tabla principal de Complementos — sección separada eliminada; `slide-introduccion_ahpl` y `ahpl_diseno_sistemas_digitales` integradas con veredictos y correcciones aplicadas.
 
 ---
 
