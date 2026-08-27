@@ -158,20 +158,20 @@ Archivos adicionales que no son libros completos pero aportan valor puntual a No
 
 ## Archivos divididos
 
-| Libro | PDF | Capítulos | Contenido | Temas |
+| Libro | PDF | Temas         | Contenido | Temas |
 |---|---|---|---|---|
-| Hill & Peterson — Digital Systems 2ª ed. | `825 Hill Peterson Digital Systems Hardware Organization Design 2-4-5-6.pdf` | 2, 4, 5, 6 | Registros, transferencias, AHPL básico, secuencia de control | T1 |
-| Hill & Peterson — Digital Systems 2ª ed. | `825 Hill Peterson Digital Systems Hardware Organization Design 7.pdf` | 7 | Computador SIC completo — los 24 pasos | T1 |
+| Hill & Peterson — Digital Systems 2ª ed. | `825 Hill Peterson Digital Systems Hardware Organization Design 2-4-5-6.pdf` | 2, 4, 5, 6    | Registros, transferencias, AHPL básico, secuencia de control | T1 |
+| Hill & Peterson — Digital Systems 2ª ed. | `825 Hill Peterson Digital Systems Hardware Organization Design 7.pdf` | 7             | Computador SIC completo — los 24 pasos | T1 |
 | Hill & Peterson — Digital Systems 2ª ed. | `825 Hill Peterson Digital Systems Hardware Organization Design 9-10-11-13.pdf` | 9, 10, 11, 13 | Comunicación entre módulos, interfaces, I/O, interrupciones | T2, T3, T4 |
 
-### Capítulos faltantes
+### Temas faltantes
 
-| Capítulo | Contenido | Relevancia | Cobertura alternativa |
-|---|---|---|---|
-| 1 | Introducción y fundamentos digitales | Baja | Complementos AHPL ya cubren la base |
-| 3 | Lógica combinacional en AHPL | Media | Cubierto parcialmente por los resúmenes de complementos |
-| 8 | Memoria | Alta — T5 | Stallings COA 11ª ed. |
-| 12 | Multiprocesadores / sistemas avanzados | Media — T6 | Stallings COA 11ª ed. + Hennessy & Patterson |
+| Tema | Contenido                              | Relevancia | Cobertura alternativa                                   |
+| ---- | -------------------------------------- | ---------- | ------------------------------------------------------- |
+| 1    | Introducción y fundamentos digitales   | Baja       | Complementos AHPL ya cubren la base                     |
+| 3    | Lógica combinacional en AHPL           | Media      | Cubierto parcialmente por los resúmenes de complementos |
+| 8    | Memoria                                | Alta — T5  | Stallings COA 11ª ed.                                   |
+| 12   | Multiprocesadores / sistemas avanzados | Media — T6 | Stallings COA 11ª ed. + Hennessy & Patterson            |
 
 ---
 
@@ -179,7 +179,7 @@ Archivos adicionales que no son libros completos pero aportan valor puntual a No
 
 | Tema | Primera opción | Segunda opción | Consulta puntual | Español |
 |---|---|---|---|---|
-| T1 — HDL / SIC / AHPL | Hill & Peterson Digital Systems 2ª ed. | Hill & Peterson Digital Systems 1ª ed. (1973) | Langdon Computer Design | — |
+| T1 — HDL / SIC / AHPL | Hill & Peterson Digital Systems 2ª ed. | Langdon Computer Design | Carter Schaum Computer Architecture | — |
 | T2 — Comunicación entre sistemas | Hill & Peterson Digital Systems 2ª ed. | Hamacher 6ª ed. | Stallings COA 11ª ed. | Stallings español 7ª ed. |
 | T3 — Interrupciones y sistema I/O | Hill & Peterson Digital Systems 2ª ed. | Stallings COA 11ª ed. | Mano CSA 3ª ed. | Stallings español 7ª ed. |
 | T4 — Interfaces y periféricos | Hill & Peterson Digital Systems 2ª ed. | Hamacher 6ª ed. | Mano CSA 3ª ed. | Stallings español 7ª ed. |
@@ -196,7 +196,7 @@ Archivos adicionales que no son libros completos pero aportan valor puntual a No
 ```
 Tema AHPL / SIC / HDL (T1)    → Hill & Peterson Digital Systems 2ª ed.
 No entiendo la notación        → Langdon Computer Design (segunda opinión RTL)
-Base lógica previa             → Hill & Peterson Switching Theory 3ª ed.
+Base lógica previa             → Hill & Peterson Switching Theory 2ª ed.
 
 Tema comunicación (T2)         → Hill & Peterson Digital Systems 2ª ed.
 Segunda opinión T2             → Hamacher 6ª ed.
@@ -227,7 +227,7 @@ VHDL (si el docente lo pide)   → Pérez, Soto, Fernández — Diseño Sist. Di
 
 Archivos convertidos a PDF desde formato de diapositivas. No se suben a NotebookLM. Se usan directamente en sesión como material de repaso rápido.
 
-### Stallings COA 10ª ed. (2016) — 21 capítulos en PDF
+### Stallings COA 10ª ed. (2016) — 21 temas en PDF
 
 Fuente: https://github.com/mguludag/Stallings-Computer-Org-and-Arch-Slides — pasadas por el docente, convertidas a PDF.
 
@@ -255,31 +255,31 @@ Fuente: https://github.com/mguludag/Stallings-Computer-Org-and-Arch-Slides — p
 | 20   | Microprogrammed Control                                   | T1           | ✅                               |
 | 21   | Microinstruction Examples                                 | T1           | ✅                               |
 
-> ⚠️ Caps. ✅ directamente útiles: 1, 3, 4, 5, 7, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21 (15 de 21). Caps. ⚪️ se consultan solo si el docente los menciona explícitamente.
+> ⚠️ Temas ✅ directamente útiles: 1, 3, 4, 5, 7, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21 (15 de 21). Temas ⚪️ se consultan solo si el docente los menciona explícitamente.
 
 ---
 
 ## Libros descartados
 
-| Libro | Razón |
+| Libro                                                                                                                       | Razón |
 |---|---|
-| Hennessy & Patterson — Quantitative Approach 5ª ed. | Redundante con la 6ª ed. que ya está en el stack |
-| Patterson & Hennessy — COD 3ª ed. | Redundante con la 5ª ed. |
-| Patterson & Hennessy — COD 4ª ed. | Redundante con la 5ª ed. |
-| Patterson & Hennessy — COD MIPS 6ª ed. | Usa MIPS — ejemplos no alineados con temario Intel |
-| Hill & Peterson — Switching Theory 3ª ed. | PDF de fotos — falló carga a NotebookLM. Reemplazada por 2ª ed. |
-| Eijkhout — Introduction to High Performance Scientific Computing | HPC / computación científica — fuera del scope |
-| Deisenroth & Faisal — Mathematics for Machine Learning | Machine learning — fuera del scope |
-| Stallings — Solutions Manual Operating Systems 5ª ed. (2004) | SO puro — misma razón que OSTEP |
-| Stallings — Solutions Manual Data and Computer Communications 10ª ed. caps. 1–13 (2014) | Redes/telecomunicaciones puro — Protocol Architecture, LAN, WAN, Ethernet. Sin contacto real con ETN825 |
-| Arpaci-Dusseau, R.H. & Arpaci-Dusseau, A.C. — Operating Systems: Three Easy Pieces (OSTEP) | SO puro — los temas de contacto (memoria virtual, DMA) están mejor cubiertos desde hardware por Stallings y Mano. Genera ruido en NotebookLM sin aportar valor diferencial para ETN825 |
+| Hennessy & Patterson — Quantitative Approach 5ª ed.                                                                         | Redundante con la 6ª ed. que ya está en el stack |
+| Patterson & Hennessy — COD 3ª ed.                                                                                           | Redundante con la 5ª ed. |
+| Patterson & Hennessy — COD 4ª ed.                                                                                           | Redundante con la 5ª ed. |
+| Patterson & Hennessy — COD MIPS 6ª ed.                                                                                      | Usa MIPS — ejemplos no alineados con temario Intel |
+| Hill & Peterson — Switching Theory 3ª ed.                                                                                   | PDF de fotos — falló carga a NotebookLM. Reemplazada por 2ª ed. |
+| Eijkhout — Introduction to High Performance Scientific Computing                                                            | HPC / computación científica — fuera del scope |
+| Deisenroth & Faisal — Mathematics for Machine Learning                                                                      | Machine learning — fuera del scope |
+| Stallings — Solutions Manual Operating Systems 5ª ed. (2004)                                                                | SO puro — misma razón que OSTEP |
+| Stallings — Solutions Manual Data and Computer Communications 10ª ed. temas 1–13 (2014)                                     | Redes/telecomunicaciones puro — Protocol Architecture, LAN, WAN, Ethernet. Sin contacto real con ETN825 |
+| Arpaci-Dusseau, R.H. & Arpaci-Dusseau, A.C. — Operating Systems: Three Easy Pieces (OSTEP)                                  | SO puro — los temas de contacto (memoria virtual, DMA) están mejor cubiertos desde hardware por Stallings y Mano. Genera ruido en NotebookLM sin aportar valor diferencial para ETN825 |
 | Swanson, R.E. — Extensions of AHPL and Optimization of the AHPL Compiler for MSI/LSI Design (tesis doctoral, U. of Arizona) | Investigación de posgrado sobre construcción del compilador AHPL y extensiones para síntesis en chips MSI/LSI — excede completamente el nivel del temario. ETN825 trabaja AHPL como herramienta de descripción, no como objeto de investigación |
-| Stallings, W. — Data and Computer Communications — 10ª ed. (2013) | Redes y protocolos de comunicación — fuera del scope del temario 2026. T2 cubre comunicación entre módulos de sistema, no protocolos de red |
-| Stallings, W. — Comunicaciones y Redes de Computadores — 6ª ed. | Redes y protocolos de comunicación — puente lingüístico del anterior; descartado junto a él |
-| Forouzan, B.A. — Data Communications and Networking — 5ª ed. (2013) | Redes y protocolos de comunicación — fuera del scope del temario 2026. T2 cubre comunicación entre módulos de sistema, no protocolos de red |
-| Stevens, W.R. & Fall, K.R. — TCP/IP Illustrated, Vol. 1: The Protocols — 2ª ed. (2011) | Redes y protocolos de comunicación — fuera del scope del temario 2026. T2 cubre comunicación entre módulos de sistema, no protocolos de red |
-| Tanenbaum, A.S. & Wetherall, D.J. — Computer Networks — 5ª ed. (2010) | Redes y protocolos de comunicación — fuera del scope del temario 2026. Para T6 ya cubre Tanenbaum Distributed Systems que sí aplica a multiprocesadores |
-| Schwartz, S. & Ben-David, S. — Understanding Machine Learning — Cambridge University Press | Machine Learning — fuera del scope del temario 2026 |
+| Stallings, W. — Data and Computer Communications — 10ª ed. (2013)                                                           | Redes y protocolos de comunicación — fuera del scope del temario 2026. T2 cubre comunicación entre módulos de sistema, no protocolos de red |
+| Stallings, W. — Comunicaciones y Redes de Computadores — 6ª ed.                                                             | Redes y protocolos de comunicación — puente lingüístico del anterior; descartado junto a él |
+| Forouzan, B.A. — Data Communications and Networking — 5ª ed. (2013)                                                         | Redes y protocolos de comunicación — fuera del scope del temario 2026. T2 cubre comunicación entre módulos de sistema, no protocolos de red |
+| Stevens, W.R. & Fall, K.R. — TCP/IP Illustrated, Vol. 1: The Protocols — 2ª ed. (2011)                                      | Redes y protocolos de comunicación — fuera del scope del temario 2026. T2 cubre comunicación entre módulos de sistema, no protocolos de red |
+| Tanenbaum, A.S. & Wetherall, D.J. — Computer Networks — 5ª ed. (2010)                                                       | Redes y protocolos de comunicación — fuera del scope del temario 2026. Para T6 ya cubre Tanenbaum Distributed Systems que sí aplica a multiprocesadores |
+| Schwartz, S. & Ben-David, S. — Understanding Machine Learning — Cambridge University Press                                  | Machine Learning — fuera del scope del temario 2026 |
 
 ---
 

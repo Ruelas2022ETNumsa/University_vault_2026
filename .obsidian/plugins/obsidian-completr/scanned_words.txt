@@ -18838,6 +18838,8 @@ Texas
 TANENBAUM
 Transfer
 TYPE
+Transferencias
+Teoria
 Sistema
 Sync
 Save
@@ -46391,6 +46393,7 @@ debate
 diamond
 desfasado
 destinos
+diseno
 Vault
 Verificar
 Variables
@@ -55305,6 +55308,7 @@ VmTUc
 VuUg
 Velocidades
 Verificada
+Vargas
 galaxy
 gina
 genes
@@ -130293,6 +130297,7 @@ coincida
 condicionado
 chequea
 complementados
+cond
 updated
 un
 universo
@@ -149466,6 +149471,7 @@ GzLX
 Gravedad
 Griegas
 Guias
+Garcia
 Convenci
 Creaci
 Commander
@@ -158186,6 +158192,7 @@ CONDICI
 COMPUESTA
 COMBINACIONAL
 COMMAND
+Condicionales
 Instalados
 Instalado
 Instalar
@@ -187390,6 +187397,7 @@ Eval
 EXPRESIONES
 ENTREGAR
 ESPERA
+Explicado
 Obsidian
 OmniSearch
 Ocultar
@@ -262466,6 +262474,8 @@ MfwfV
 MtXs
 MSIS
 Madrid
+ModuloAHPL
+ModificacionesAHPL
 Lectura
 LaTeX
 Linter

@@ -751,7 +751,8 @@
         "ETN806",
         "MAT101",
         "ETN607",
-        "ETN1015"
+        "ETN1015",
+        "ETN825"
       ]
     },
     "_app/notebooklm/prompts/ETN806": {
@@ -5636,6 +5637,18 @@
       "isHidden": false
     },
     "_app/notebooklm/guides/ETN825/ETN825_AHPL.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN825": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "ETN825-comp_indice_BCv1.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "_app/notebooklm/prompts/ETN825/ETN825-comp_indice_BCv1.md": {
       "isPinned": false,
       "isHidden": false
     }

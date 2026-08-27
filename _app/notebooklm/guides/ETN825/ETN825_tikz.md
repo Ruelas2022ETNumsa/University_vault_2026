@@ -19,7 +19,7 @@ status: activo
 
 # ⚡ GUÍA UNIFICADA DE TIKZJAX PARA OBSIDIAN (ETN825)
 
-> Plugin: `obsidian-tikzjax` — renderiza LaTeX/TikZ como SVG directamente en tus notas usando WebAssembly. Guía específica de Arquitectura de Computadores (ETN825). Para guía de notación AHPL ver `ETN825_AHPL.md`. Este documento está organizado en tres bloques: **Reglas de sintaxis (N1–N9)**, **Checklist (N10)**, y **Biblioteca de ejemplos por tipo ETN825 (N11–N14)**.
+> Plugin: `obsidian-tikzjax` — renderiza LaTeX/TikZ como SVG directamente en tus notas usando WebAssembly. Guía específica de Arquitectura de Computadores (ETN825). Para guía de notación AHPL ver `ETN825_AHPL.md`. Este documento está organizado en tres bloques: **Reglas de sintaxis (N1–N9)**, **Checklist (N10)**, y **Biblioteca de ejemplos por tipo ETN825 (N11–N15)**.
 
 ---
 
@@ -111,7 +111,7 @@ Reglas:
 
 | Tipo | Descripción | Entorno | Sección |
 |---|---|---|---|
-| Diagrama de flujo | Flujograma de secuencia AHPL — rombos de decisión, rectángulos de operación, saltos numerados | `tikzpicture` + `shapes.geometric` | N11 |
+| Diagrama de flujo | Flujograma de secuencia AHPL — rombos de decisión, rectángulos de operación, saltos numerados | `tikzpicture` + `shapes.geometric` | N11, N15 |
 | Diagrama de tiempo | Señales digitales (Clock, ready, datavalid, accept, SCN) con niveles alto/bajo y etiquetas | `tikzpicture` | N12 |
 | Caja negra | Módulo con registros internos, entradas/salidas, buses (IOBUS, CSBUS) | `tikzpicture` | N13 |
 | Paquete de bits | Formato de instrucción/registro — campos etiquetados con índices de bit | `tikzpicture` | N14 |
@@ -904,7 +904,7 @@ Antes de entregar un bloque TikZJax verificar:
 
 ---
 
-### N11 — DIAGRAMAS DE FLUJO ADICIONALES
+### N15. DIAGRAMAS DE FLUJO IOT — EJEMPLOS EXTENDIDOS
 
 #### Flujo IOT — bloque de decodificación (pasos 5–51)
 
