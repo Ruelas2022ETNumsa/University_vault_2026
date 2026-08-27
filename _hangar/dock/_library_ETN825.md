@@ -118,24 +118,23 @@ Este archivo es tu referencia personal para saber qué libro usar en cada tema d
 
 ## Stack completo
 
-| Libro | Rol | Idioma |
-|---|---|---|
-| Libro | Archivo PDF | Rol | Idioma |
-|---|---|---|---|
-| Hill & Peterson — Digital Systems 2ª ed. (fotocopias docente) | `825 Hill Peterson Digital Systems Hardware Organization Design 2-4-5-6.pdf` / `...7.pdf` / `...9-10-11-13.pdf` | AHPL principal — fuente primaria T1, T2, T3, T4 | Inglés |
-| Hill & Peterson — Switching Theory and Logical Design — 2ª ed. | `Hill Peterson - Switching Theory and Logical Design - 2ed.pdf` | Base previa a AHPL — fundamentos RTL. ⚠️ Reemplaza a 3ª ed. (PDF de fotos, falló en NotebookLM). | Inglés |
-| Stallings — Computer Organization and Architecture — 11ª ed. | `Stallings - Computer Organization and Architecture - 11ed.pdf` | Teoría principal — T1, T3, T4, T5, T6, 2ª Parte E/S | Inglés |
-| Stallings — Organización y Arquitectura de Computadores — 7ª ed. | `Stallings - Organización y Arquitectura de Computadores - 7ed.pdf` | Puente lingüístico Stallings COA | Español |
-| Hamacher — Computer Organization and Embedded Systems — 6ª ed. | `Hamacher - Computer Organization and Embedded Systems - 6ed.pdf` | Segunda opinión — T2, T3 | Inglés |
-| Hennessy Patterson — Computer Architecture Quantitative Approach — 6ª ed. | `Hennessy Patterson - Computer Architecture Quantitative Approach - 6ed.pdf` | Teoría rigurosa — T5, T6, 2ª Parte Procesadores | Inglés |
-| Patterson Hennessy — Computer Organization and Design — 5ª ed. | `cond. Patterson Hennessy - Computer Organization and Design - 5ed.pdf` | Puente didáctico entre Stallings y Quantitative | Inglés |
-| Carter — Schaum Computer Architecture | `Carter - Schaum Computer Architecture.pdf` | Problemas resueltos — T1, T3, T5 | Inglés |
-| Mano — Computer System Architecture — 3ª ed. | `Mano - Computer System Architecture.pdf` | Segunda opinión — T3, T4, T5, T6 | Inglés |
-| Langdon — Computer Design | `Langdon - Computer Design.pdf` | Complemento AHPL — segunda opinión RTL | Inglés |
-| Perez Soto — Diseño de sistemas digitales con VHDL | `Perez Soto - Diseño de sistemas digitales con VHDL.pdf` | VHDL — 2ª Parte HDL moderno vs AHPL | Español |
-| Stallings — Operating Systems — 8ª ed. | `Stallings - Operating Systems - 8ed.pdf` | Contexto SO — interrupciones y DMA — 2ª Parte E/S | Inglés |
-| Tanenbaum — Distributed Systems | `Tanenbaum - Distributed Systems.pdf` | Contexto distribuidos — T6 multiprocesadores | Inglés |
-| Hauck — Reconfigurable Computing | `Hauck - Reconfigurable Computing.pdf` | 2ª Parte Computación Reconfigurable | Inglés |
+| Libro                                                                     | Rol                                                                                                             | Idioma                                                                                           |         |
+| ------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | ------- |
+| Libro                                                                     | Archivo PDF                                                                                                     | Rol                                                                                              | Idioma  |
+| Hill & Peterson — Digital Systems 2ª ed. (fotocopias docente)             | `825 Hill Peterson Digital Systems Hardware Organization Design 2-4-5-6.pdf` / `...7.pdf` / `...9-10-11-13.pdf` | AHPL principal — fuente primaria T1, T2, T3, T4                                                  | Inglés  |
+| Hill & Peterson — Switching Theory and Logical Design — 2ª ed.            | `Hill Peterson - Switching Theory and Logical Design - 2ed.pdf`                                                 | Base previa a AHPL — fundamentos RTL. ⚠️ Reemplaza a 3ª ed. (PDF de fotos, falló en NotebookLM). | Inglés  |
+| Stallings — Computer Organization and Architecture — 11ª ed.              | `Stallings - Computer Organization and Architecture - 11ed.pdf`                                                 | Teoría principal — T1, T3, T4, T5, T6, 2ª Parte E/S                                              | Inglés  |
+| Stallings — Organización y Arquitectura de Computadores — 7ª ed.          | `Stallings - Organización y Arquitectura de Computadores - 7ed.pdf`                                             | Puente lingüístico Stallings COA                                                                 | Español |
+| Hamacher — Computer Organization and Embedded Systems — 6ª ed.            | `Hamacher - Computer Organization and Embedded Systems - 6ed.pdf`                                               | Segunda opinión — T2, T3                                                                         | Inglés  |
+| Hennessy Patterson — Computer Architecture Quantitative Approach — 6ª ed. | `Hennessy Patterson - Computer Architecture Quantitative Approach - 6ed.pdf`                                    | Teoría rigurosa — T5, T6, 2ª Parte Procesadores                                                  | Inglés  |
+| Patterson Hennessy — Computer Organization and Design — 5ª ed.            | `cond. Patterson Hennessy - Computer Organization and Design - 5ed.pdf`                                         | Puente didáctico entre Stallings y Quantitative                                                  | Inglés  |
+| Carter — Schaum Computer Architecture                                     | `Carter - Schaum Computer Architecture.pdf`                                                                     | Problemas resueltos — T1, T3, T5                                                                 | Inglés  |
+| Mano — Computer System Architecture — 3ª ed.                              | `Mano - Computer System Architecture.pdf`                                                                       | Segunda opinión — T3, T4, T5, T6                                                                 | Inglés  |
+| Langdon — Computer Design                                                 | `Langdon - Computer Design.pdf`                                                                                 | Complemento AHPL — segunda opinión RTL                                                           | Inglés  |
+| Perez Soto — Diseño de sistemas digitales con VHDL                        | `Perez Soto - Diseño de sistemas digitales con VHDL.pdf`                                                        | VHDL — 2ª Parte HDL moderno vs AHPL                                                              | Español |
+| Stallings — Operating Systems — 8ª ed.                                    | `Stallings - Operating Systems - 8ed.pdf`                                                                       | Contexto SO — interrupciones y DMA — 2ª Parte E/S                                                | Inglés  |
+| Tanenbaum — Distributed Systems                                           | `Tanenbaum - Distributed Systems.pdf`                                                                           | Contexto distribuidos — T6 multiprocesadores                                                     | Inglés  |
+| Hauck — Reconfigurable Computing                                          | `Hauck - Reconfigurable Computing.pdf`                                                                          | 2ª Parte Computación Reconfigurable                                                              | Inglés  |
 
 ---
 

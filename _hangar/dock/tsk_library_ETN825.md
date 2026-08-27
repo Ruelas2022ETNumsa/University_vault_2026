@@ -12,7 +12,7 @@ blocked_by:
 **Última sesión:** 2026-08-26
 **Retomar desde:** Continuar verificación de complementos pendientes en la tabla de Complementos.
 **Completado esta sesión:** 5 libros de redes descartados; Silberschatz descartado; Schwartz & Ben David registrado en descartados; stack actualizado con nombres exactos de PDF; nombres de archivos normalizados; fotocopias docente subidas a NotebookLM; stack cargado a NotebookLM salvo Langdon y Switching Theory 3ª ed. (en proceso con PDF24); Stallings OS confirmado solo en 2ª Parte E/S; complemento slide-introduccion_ahpl verificado contra PDF y descripción actualizada; `ahpl_diseno_sistemas_digitales` verificado contra PDF (31 pp.) — corrección aplicada (CLUNIT → UNIT: LOGIC/FULLADD/etc.) y nota NotebookLM agregada (número de página ✅, figuras etiquetadas ✅ Figura 1–28); sección ChatGPT de complementos integrada a tabla principal — sección separada eliminada.
-**Próximo paso:** (1) Resolver carga de Langdon y Switching Theory a NotebookLM (ver tareas abiertas). (2) Continuar verificación de complementos restantes.
+**Próximo paso:** (1) Resolver carga de Langdon a NotebookLM: OCR con PDF24 y reintentar. (2) Subir complementos a NotebookLM cuando estén listos. (3) Crear guias y prompt NotebookLM para ETN825 (ver sección dedicada en Tareas).
 
 ---
 
@@ -105,7 +105,7 @@ Restricciones:
 - [x] Conseguir libros pendientes — Pérez VHDL, Stallings OS, Silberschatz, Tanenbaum Distributed, Hauck Reconfigurable ✔️
 - [x] Cargar stack completo a NotebookLM — completado salvo 2 PDFs en espera (ver abajo).
 - [x] Subir fotocopias del docente (caps. 2,4,5,6 / 7 / 9,10,11,13) a NotebookLM y evaluar calidad de extracción → **Subidas correctamente.**
-- [ ] `Langdon - Computer Design.pdf` — ❌ falló carga a NotebookLM (PDF antiguo). En proceso: compresión + OCR con PDF24 (https://tools.pdf24.org/es/comprimir-pdf). Pendiente resultado.
+- [ ] `Langdon - Computer Design.pdf` — ❌ falló carga a NotebookLM (PDF antiguo, escaneo). Comprimido con PDF24 ✅ — archivo listo en `C:\Users\USUARIO\Downloads\825_2026\Langdon - Computer Designcomp`. Próximo paso: pasar por OCR (https://tools.pdf24.org/es/ocr-pdf) y luego intentar carga a NotebookLM.
 - [x] ~~`Hill Peterson - Switching Theory and Logical Design - 3ed.pdf`~~ → **❌ falló carga a NotebookLM (PDF de fotos). Reemplazada por 2ª ed. — `Hill Peterson - Switching Theory and Logical Design - 2ed.pdf` cargada exitosamente a NotebookLM.**
 - [x] ~~Analizar diapositivas Stallings COA 10ª ed. en PDF — evaluar calidad de texto y definir uso en sesión~~ → **No se suben a NotebookLM — son muchas diapositivas, se usan directamente en sesión como repaso rápido.**
 - [x] ~~Decidir destino de 5 libros huérfanos: Stallings DCC 10ª, Stallings Comunicaciones 6ª, Forouzan 5ª, Stevens TCP/IP 2ª, Tanenbaum Networks 5ª~~ → **Descartados — redes/protocolos, fuera del scope del temario 2026.**
@@ -116,6 +116,21 @@ Restricciones:
 - [x] Actualizar tabla "qué usar por tema" contra temario oficial (T1–T6 + Segunda Parte)
 - [x] Actualizar flujo de uso contra temario oficial
 - [x] Integrar sección ChatGPT a tabla principal de Complementos — sección separada eliminada; `slide-introduccion_ahpl` y `ahpl_diseno_sistemas_digitales` integradas con veredictos y correcciones aplicadas.
+
+---
+
+## Tareas — Creación de contenido NotebookLM
+
+> Guias y prompt para el notebook de ETN825. Referencia de formato: `E:\University_vault_2026\_app\notebooklm\guides\ETN607\` y `E:\University_vault_2026\_app\notebooklm\prompts\ETN607\`.
+
+### Guias
+
+- [ ] Crear `ETN825_AHPL.md` — guía de notación AHPL para NotebookLM. Cubre: operadores (`←`, `=`, `→`), estructura de módulos (MEMORY, INPUTS, OUTPUTS, BUSES, LABELS, ONE SHOTS), convención de operandos (escalares, vectores, matrices), sentencias (DEAD END, NO DELAY, SYN), bifurcaciones fijas y condicionales, pasos numerados, tabla de registros para ejercicios. Es la guía principal — equivalente a `ETN607_latex.md`.
+- [ ] Crear `ETN825_TikzJax.md` — guía TikZJax orientada a ETN825. Tipos de diagrama: flujo (principal), tiempo (señales CLK/SCN/transferencias), cajas negras (módulos con entradas/salidas), paquetes de bits (registros con campos etiquetados). Sin circuitos. Incluir biblioteca de ejemplos por tipo. Equivalente a `ETN607_TikzJax.md`.
+
+### Prompt
+
+- [ ] Crear `ETN825-comp-indice-BCv1.md` — prompt principal de complemento por índice. Basado en `ETN607-comp_indice_BCv4ii.md` con adaptaciones: jerarquía de fuentes (resumen docente primero, libros como profundización), formato de ejercicios AHPL (pasos numerados, tabla de registros) en lugar de algebraico, tipos de visual ETN825 (flujo, tiempo, caja negra, paquetes de bits), referencia a `_library_ETN825.md`, mensajes adaptados al temario T1–T6 + Segunda Parte.
 
 ---
 

@@ -42,6 +42,7 @@
         "template",
         "Sem_01",
         "Sem_04",
+        "Sem_07",
         "Sem_08",
         "Sem_09"
       ]
@@ -811,7 +812,8 @@
         "ETN806",
         "MAT101",
         "ETN607",
-        "ETN1015"
+        "ETN1015",
+        "ETN825"
       ]
     },
     "_app/notebooklm/guides/MAT101": {
@@ -5598,6 +5600,32 @@
       "isHidden": false
     },
     "Semesters/Sem_04/ETN607/Partial_1/Untitled.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/guides/ETN825": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "ETN825_tikz.md"
+      ]
+    },
+    "Semesters/Sem_07": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "ETN825"
+      ]
+    },
+    "Semesters/Sem_07/ETN825": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "_app/notebooklm/guides/ETN825/ETN825_tikz.md": {
       "isPinned": false,
       "isHidden": false
     }
