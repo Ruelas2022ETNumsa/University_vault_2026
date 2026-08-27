@@ -276,7 +276,7 @@ Antes de entregar un bloque TikZJax verificar:
 
 % Rombo 1
 \node[decision] (mri) at (0,-1.4) {MRI?};
-\node[font=\small, gray] at (-1.2,-1.4) {No};
+\node[font=\small, gray] at (-1.2,-1.4) {Nox};
 \node[font=\small, gray] at (0.2,-2.1) {Yes};
 
 % Salto Yes hacia (6)
@@ -1224,6 +1224,127 @@ Antes de entregar un bloque TikZJax verificar:
 ```
 
 ---
+
+---
+
+#### Flujo DMA/Buffer — secuencia completa (pasos 90–111)
+
+> Contexto para NotebookLM: flujograma del módulo de transferencia DMA con buffer. Entrada desde paso (2). Paso 90: bucle sobre `scan=1`. Paso 91: `CC←INC(CC)`. Pasos 92–95: fetch buffer word count a BWC. Pasos 95–96: fetch final buffer address a MD. Pasos 97–98: form current buffer address. Paso 99: bifurcación Input (1) / Output (0). Rama Output (100–102): fetch word from memory → transit via IOBUS, clear. Rama Input (103–106): obtain word via IOBUS → store, clear bus. Paso 107: buffer done? — Yes → 108 (`bufend=1`); No → 109 (`BUFRDY=1`) → 110–111 (store word count) → vuelve a (2). Fuente: Hill & Peterson Digital Systems 2ª ed., Fig. 11-13.
+
+```tikz
+\usetikzlibrary{shapes.geometric, arrows.meta, positioning, calc}
+\begin{document}
+\begin{tikzpicture}[
+    scale=0.82,
+    decision/.style={diamond, draw=gray, thick, aspect=2.4,
+                     inner sep=0pt, font=\small},
+    operation/.style={draw=teal, thick, minimum width=3.0cm,
+                      minimum height=0.7cm, font=\small, align=center},
+    terminal/.style={draw=orange, thick, minimum width=2.6cm,
+                     minimum height=0.7cm, font=\small, align=center},
+    jump/.style={circle, draw=gray, thick, inner sep=3pt, font=\small},
+    conn/.style={circle, draw=gray, fill=gray, inner sep=2pt}
+]
+
+% ---- ENTRADA ----
+\node[font=\small, above] (from2label) at (0,0.4) {From (2)};
+\draw[->, thick] (0,0.4) -- (0,0);
+
+% ---- PASO 90: rombo scan=1 ----
+\node[decision] (scan) at (0,-1.0) {\textit{scan}: 1};
+\node[font=\scriptsize, gray, left] at (-1.4,-0.4) {90};
+
+% Rama distinto → paso 91 (derecha)
+\node[operation] (op91) at (3.8,-1.0) {$CC \leftarrow INC(CC)$};
+\node[font=\scriptsize, gray] at (3.8,-0.3) {91};
+\draw[->, thick] (scan) -- node[above, font=\scriptsize]{$\neq$} (op91);
+% Bucle: 91 vuelve a scan por arriba
+\draw[->, thick] (op91.north) -- ++(0,0.7) -- ++(-3.8,0) -- (scan.north);
+
+% ---- PASOS 92–95: Fetch buffer word count a BWC ----
+\node[operation] (op9295) at (0,-3.0)
+    {Fetch buffer word count\\to \textit{BWC}};
+\node[font=\scriptsize, gray, left] at (-1.7,-3.0) {92--95};
+\draw[->, thick] (scan.south) -- (op9295.north);
+
+% ---- PASOS 95–96: Fetch final buffer address a MD ----
+\node[operation] (op9596) at (0,-4.9)
+    {Fetch final\\buffer address\\to \textit{MD}};
+\node[font=\scriptsize, gray, left] at (-1.7,-4.9) {95--96};
+\draw[->, thick] (op9295) -- (op9596);
+
+% ---- PASOS 97–98: Form current buffer address ----
+\node[operation] (op9798) at (0,-6.8)
+    {Form current\\buffer address};
+\node[font=\scriptsize, gray, left] at (-1.7,-6.8) {97--98};
+\draw[->, thick] (op9596) -- (op9798);
+
+% ---- PASO 99: rombo 1 or 0? ----
+\node[decision] (inout) at (0,-8.4) {1 or 0?};
+\node[font=\scriptsize, gray, left] at (-0.2,-7.7) {99};
+\node[font=\scriptsize, gray, left]  at (-0.3,-9.2) {Input};
+\node[font=\scriptsize, gray, right] at ( 0.3,-9.2) {Output};
+\draw[->, thick] (op9798) -- (inout);
+
+% ---- RAMA OUTPUT (derecha) ----
+\node[operation] (op100) at (3.4,-8.4)
+    {Fetch word\\from memory};
+\node[font=\scriptsize, gray] at (3.4,-7.7) {100};
+\draw[->, thick] (inout.east) -- node[above, font=\scriptsize]{0} (op100.west);
+
+\node[operation] (op101) at (3.4,-10.3)
+    {Transit via\\\textit{IOBUS} clear};
+\node[font=\scriptsize, gray, right] at (5.0,-10.3) {101--102};
+\draw[->, thick] (op100) -- (op101);
+
+% ---- RAMA INPUT (izquierda) ----
+\node[operation] (op103) at (-3.4,-8.4)
+    {Obtain word\\via \textit{IOBUS}};
+\node[font=\scriptsize, gray] at (-3.4,-7.7) {103--104};
+\draw[->, thick] (inout.west) -- node[above, font=\scriptsize]{1} (op103.east);
+
+\node[operation] (op105) at (-3.4,-10.3)
+    {Store,\\clear bus};
+\node[font=\scriptsize, gray, left] at (-5.0,-10.3) {105--106};
+\draw[->, thick] (op103) -- (op105);
+
+% ---- CONECTOR UNIÓN RAMAS ----
+\node[conn] (join) at (0,-12.0) {};
+\draw[thick] (op101.south) -- ++(0,-0.6) -| (join);
+\draw[thick] (op105.south) -- ++(0,-0.6) -| (join);
+\draw[->, thick] (join) -- ++(0,-0.4);
+
+% ---- PASO 107: Buffer done? ----
+\node[decision] (bufdone) at (0,-13.3) {Buffer\\done?};
+\node[font=\scriptsize, gray, left] at (-0.2,-12.5) {107};
+\draw[->, thick] (join) -- (bufdone);
+
+% ---- RAMA YES → 108: bufend=1 ----
+\node[terminal] (op108) at (-3.4,-13.3) {\textit{bufend} = 1};
+\node[font=\scriptsize, gray] at (-3.4,-12.6) {108};
+\draw[->, thick] (bufdone.west) -- node[above, font=\scriptsize]{Yes} (op108.east);
+
+% ---- RAMA NO → 109: BUFRDY=1 ----
+\node[terminal] (op109) at (3.4,-13.3) {\textit{BUFRDY} = 1};
+\node[font=\scriptsize, gray] at (3.4,-12.6) {109};
+\draw[->, thick] (bufdone.east) -- node[above, font=\scriptsize]{No} (op109.west);
+
+% 110–111: Store word count
+\node[operation] (op110) at (3.4,-15.0)
+    {Store\\word count};
+\node[font=\scriptsize, gray, right] at (5.0,-15.0) {110--111};
+\draw[->, thick] (op109) -- (op110);
+
+% ---- CONECTOR FINAL → (2) ----
+\node[conn] (join2) at (0,-16.6) {};
+\draw[thick] (op108.south) -- ++(0,-1.7) -| (join2);
+\draw[thick] (op110.south) -- ++(0,-0.9) -| (join2);
+\draw[->, thick] (join2) -- ++(0,-0.4);
+\node[font=\small, below] at (0,-17.1) {(2)};
+
+\end{tikzpicture}
+\end{document}
+```
 
 %%
 # galaxy-links

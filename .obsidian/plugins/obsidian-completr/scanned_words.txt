@@ -82509,6 +82509,7 @@ subrutina
 subpasos
 subpaso
 skip
+subido
 vault
 vil
 ver
@@ -149477,6 +149478,7 @@ Gravedad
 Griegas
 Guias
 Garcia
+Galvin
 Convenci
 Creaci
 Commander

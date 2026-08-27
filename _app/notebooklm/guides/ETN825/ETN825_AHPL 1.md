@@ -499,5 +499,5 @@ END
 %%
 # galaxy-links
 [[_app/notebooklm/guides/ETN825/ETN825_tikz.md]]
-[[_hangar/dock/_library_ETN825.md]]
+[[_library_ETN825]]
 %%

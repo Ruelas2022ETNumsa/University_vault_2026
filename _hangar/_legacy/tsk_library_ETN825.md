@@ -2,7 +2,7 @@
 galaxy_body: ship
 project: Biblioteca ETN825
 date: 2026-07-30
-status: in-orbit
+status: delivered
 fleet: ETN825
 blocked_by:
 ---
@@ -10,9 +10,10 @@ blocked_by:
 ## Handoff
 
 **Última sesión:** 2026-08-27
-**Retomar desde:** Subir ambos prompts a NotebookLM. Proyecto al 90%.
-**Completado esta sesión:** Guias ETN825_AHPL.md y ETN825_TikzJax.md creadas y revisadas (`E:\University_vault_2026\_app\notebooklm\guides\ETN825\`); prompt ETN825-comp_indice_BCv1.md creado y corregido (`E:\University_vault_2026\_app\notebooklm\prompts\ETN825\`) — referencias a caps/capítulos unificadas a temas, Langdon eliminado, ahpl_diseno_sistemas_digitales como segunda opción T1; prompt dividido en 2 archivos (`ETN825-comp_indice_BCv1i.md` T1–T3 y `ETN825-comp_indice_BCv1ii.md` T4–2ª Parte), ambos bajo el límite de 10000 caracteres; _library_ETN825.md corregida (Silberschatz registrado como descartado, Hamacher T4 agregado, typo status, fila duplicada stack, nota aclaratoria caps vs temas, Tanenbaum 2ª ed. especificada, Langdon marcado ❌ OCR falló 2 intentos — uso en sesión directa, ahpl_diseno_sistemas_digitales reemplaza Langdon en T1, Mano CSA como consulta puntual 2ª Parte E/S, Fernández confirmado como tercer autor VHDL, nombre 825-Hill-Peterson-Resumen-Docente-ESP corregido); stack cargado en NotebookLM completo excepto Langdon; 9 complementos subidos a NotebookLM; guías subidas a NotebookLM.
-**Próximo paso:** Subir `ETN825-comp_indice_BCv1i.md` y `ETN825-comp_indice_BCv1ii.md` a NotebookLM.
+**Retomar desde:** —
+**Completado esta sesión:** `ETN825-comp_indice_BCv1i.md` subido a NotebookLM correctamente. Proyecto entregado.
+**Próximo paso:** —
+**Preguntas de cierre:** Ver sección Preguntas abiertas.
 
 ---
 
@@ -119,9 +120,9 @@ Restricciones:
 - [x] Actualizar flujo de uso contra temario oficial
 - [x] Integrar sección ChatGPT a tabla principal de Complementos — sección separada eliminada; `slide-introduccion_ahpl` y `ahpl_diseno_sistemas_digitales` integradas con veredictos y correcciones aplicadas.
 - [x] Subir guías a NotebookLM — `ETN825_AHPL.md` (AHPL/LaTeX) y `ETN825_TikzJax.md` subidas correctamente.
-- [ ] Subir prompt a NotebookLM — prompt dividido en 2 archivos:
-  - `ETN825-comp_indice_BCv1i.md` (T1–T3) — bajo el límite ✅
-  - `ETN825-comp_indice_BCv1ii.md` (T4–2ª Parte) — bajo el límite ✅
+- [x] Subir prompt a NotebookLM — prompt dividido en 2 archivos:
+  - `ETN825-comp_indice_BCv1i.md` (T1–T3) — subido correctamente ✅
+  - `ETN825-comp_indice_BCv1ii.md` (T4–2ª Parte) — bajo el límite ✅ (pendiente subir)
 - [x] Subir complementos pendientes a NotebookLM — todos los 9 complementos subidos correctamente.
 
 ---

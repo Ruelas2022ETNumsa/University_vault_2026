@@ -23,7 +23,8 @@
         "Rubbish",
         "Borrar",
         "shared",
-        "README.md"
+        "README.md",
+        "Untitled.md"
       ]
     },
     "MOC": {
@@ -1424,8 +1425,6 @@
         "tsk_pendientes_sistema_galaxy.md",
         "tsk_script_extaction_integration.md",
         "_library_ETN505(i).md",
-        "_library_ETN825.md",
-        "tsk_library_ETN825.md",
         "tsk_operator_reload_display.md",
         "tsk_movil_drive.md",
         "tsk_vault-infra.md",
@@ -1436,19 +1435,11 @@
         "tsk_toggle-readable-line-length.md"
       ]
     },
-    "_hangar/dock/tsk_library_ETN825.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_hangar/dock/tsk_pdf_marginalia_pp.md": {
       "isPinned": false,
       "isHidden": false
     },
     "_hangar/dock/_library_ETN505(i).md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_hangar/dock/_library_ETN825.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -1499,6 +1490,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "tsk_library_ETN825.md",
         "logbook.md",
         "tsk_update-rclone.md",
         "tsk_snippet_templater.md",
@@ -5626,7 +5618,9 @@
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
-      "customOrder": []
+      "customOrder": [
+        "_library_ETN825.md"
+      ]
     },
     "_app/notebooklm/guides/ETN825/ETN825_tikz.md": {
       "isPinned": false,
@@ -5643,17 +5637,29 @@
     "_app/notebooklm/prompts/ETN825": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "ETN825-comp_indice_BCv1i.md",
         "ETN825-comp_indice_BCv1ii.md"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "_app/notebooklm/prompts/ETN825/ETN825-comp_indice_BCv1i.md": {
       "isPinned": false,
       "isHidden": false
     },
     "_app/notebooklm/prompts/ETN825/ETN825-comp_indice_BCv1ii.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/_legacy/tsk_library_ETN825.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_07/ETN825/_library_ETN825.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled.md": {
       "isPinned": false,
       "isHidden": false
     }

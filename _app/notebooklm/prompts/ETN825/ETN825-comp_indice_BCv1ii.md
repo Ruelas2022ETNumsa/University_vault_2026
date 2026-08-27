@@ -62,14 +62,14 @@ Para ejercicios AHPL — tabla de registros paso a paso:
 | 1 | ... | ... | ... |
 
 Para ejercicios de memoria o E/S — desarrollo numérico:
-$$
+\[
 \begin{array}{rcl}
 \text{paso 1} & = & \text{expresión} \\[4pt]
 \text{paso 2} & = & \text{expresión} \\[4pt]
 & \vdots & \\[4pt]
 \therefore\quad \color{orange}{\text{resultado}}
 \end{array}
-$$
+\]
 
 Reglas de resolución:
 - Para AHPL: mostrar cada paso de la secuencia con su número, la operación y el estado de registros
