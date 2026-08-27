@@ -258,7 +258,6 @@ Antes de entregar un bloque TikZJax verificar:
 #### Fragmento de flujo — secuencia con decisión y operación
 
 > Contexto para NotebookLM: usar como base para cualquier fragmento de flujograma AHPL. Patrón: entrada numerada → rombo de decisión → rama Yes (operación) → rama No (salto o continuación). Adaptar nodos y etiquetas según la secuencia real del apunte.
-
 ```tikz
 \usetikzlibrary{shapes.geometric, arrows.meta, positioning}
 \begin{document}
@@ -276,16 +275,12 @@ Antes de entregar un bloque TikZJax verificar:
 
 % Rombo 1
 \node[decision] (mri) at (0,-1.4) {MRI?};
-\node[font=\small, gray] at (-1.2,-1.4) {Nox};
-\node[font=\small, gray] at (0.2,-2.1) {Yes};
 
 % Salto Yes hacia (6)
 \node[jump] (n6) at (0,-2.8) {6};
 
 % Rombo 2 (rama No del primero)
 \node[decision] (opr) at (2.8,-1.4) {OPR?};
-\node[font=\small, gray] at (4.1,-1.4) {No};
-\node[font=\small, gray] at (2.8,-2.1) {Yes};
 
 % Salto Yes hacia (26)
 \node[jump] (n26) at (2.8,-2.8) {26};
@@ -303,7 +298,6 @@ Antes de entregar un bloque TikZJax verificar:
 \end{tikzpicture}
 \end{document}
 ```
-
 ---
 
 #### Fragmento de flujo — bucle con condición de salida
@@ -343,16 +337,16 @@ Antes de entregar un bloque TikZJax verificar:
 \draw[->, thick] (op77) -- (accept);
 \draw[->, thick] (accept) -- node[right, font=\small]{Yes} (n24b);
 
-% Bucle No de ready (vuelve al rombo)
-\draw[thick] (ready) -- node[above, font=\small]{No} ++(-1.8,0)
-    -- ++(0,1.5) -- (0,0 |- ready) ;
+% Bucle No de ready (vuelve a op75)
+\draw[thick] (ready.west) -- node[above, font=\small]{No} ++(-1.8,0)
+    -- ++(0,1.5) -- (op75.west);
 
-% Bucle No de accept (vuelve al rombo)
-\draw[thick] (accept) -- node[above, font=\small]{No} ++(1.8,0)
-    -- ++(0,1.5) -- (0,0 |- accept);
+% Bucle No de accept (vuelve a op77)
+\draw[thick] (accept.east) -- node[above, font=\small]{No} ++(1.8,0)
+    -- ++(0,1.6) -- (op77.east);
 
 % Etiquetas de paso
-\node[gray, font=\scriptsize] at (-2.2,-1.0) {76};
+\node[gray, font=\scriptsize] at (-2.2,-1.8) {76};
 \node[gray, font=\scriptsize] at (2.2,-4.3) {77};
 
 \end{tikzpicture}
