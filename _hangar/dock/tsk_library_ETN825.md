@@ -59,6 +59,8 @@ Restricciones:
 
 ## Sugerencias
 
+- Switching Theory 3ª ed. (Hill & Peterson) es PDF de fotos — puede fallar en NotebookLM. Si falla, usar 2ª ed. (PDF limpio, marcado con xoxo en carpeta).
+
 ---
 
 ## Flujo de pasos
