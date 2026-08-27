@@ -10,9 +10,9 @@ blocked_by:
 ## Handoff
 
 **Última sesión:** 2026-08-26
-**Retomar desde:** (1) Registrar Schwartz & Ben David en descartados. (2) Evaluar si Stallings OS 8ª aplica también a T3. (3) Analizar diapositivas Stallings COA en PDF.
-**Completado esta sesión:** 5 libros de redes descartados (Stallings DCC, Stallings Comunicaciones, Forouzan, Stevens TCP/IP, Tanenbaum Networks); Silberschatz descartado; stack y archivos divididos actualizados con nombres exactos de PDF; nombres de archivos normalizados; nota condicional Switching Theory 2ª/3ª ed. registrada en sugerencias.
-**Próximo paso:** (1) Registrar Schwartz & Ben David en descartados. (2) Evaluar si Stallings OS 8ª aplica también a T3. (3) Analizar diapositivas Stallings COA en PDF.
+**Retomar desde:** Confirmar si Langdon y Switching Theory 3ª ed. pasan en NotebookLM tras compresión con PDF24.
+**Completado esta sesión:** 5 libros de redes descartados; Silberschatz descartado; Schwartz & Ben David registrado en descartados; stack actualizado con nombres exactos de PDF; nombres de archivos normalizados; fotocopias docente subidas a NotebookLM; stack cargado a NotebookLM salvo Langdon y Switching Theory 3ª ed. (en proceso con PDF24); Stallings OS confirmado solo en 2ª Parte E/S.
+**Próximo paso:** (1) Confirmar carga de Langdon y Switching Theory 3ª ed. a NotebookLM. (2) Si Switching Theory 3ª falla, subir 2ª ed. (`xoxo Hill Peterson - Switching Theory and Logical Design - 2ed.pdf`).
 
 ---
 
@@ -103,8 +103,10 @@ Restricciones:
 - [x] Obtener temario completo 2026 del docente — recibido 2026-08-26
 - [x] Ejecutar reajuste 2026_2 — iniciado y parcialmente completado (temario, stack, libros nuevos)
 - [x] Conseguir libros pendientes — Pérez VHDL, Stallings OS, Silberschatz, Tanenbaum Distributed, Hauck Reconfigurable ✔️
-- [ ] Cargar stack completo a NotebookLM — en proceso. Avisar si algún PDF falla o requiere división.
-- [ ] Subir fotocopias del docente (caps. 2,4,5,6 / 7 / 9,10,11,13) a NotebookLM y evaluar calidad de extracción
+- [x] Cargar stack completo a NotebookLM — completado salvo 2 PDFs en espera (ver abajo).
+- [x] Subir fotocopias del docente (caps. 2,4,5,6 / 7 / 9,10,11,13) a NotebookLM y evaluar calidad de extracción → **Subidas correctamente.**
+- [ ] `Langdon - Computer Design.pdf` — pendiente de carga a NotebookLM, probable fallo (PDF antiguo).
+- [ ] `Hill Peterson - Switching Theory and Logical Design - 3ed.pdf` — pendiente de carga a NotebookLM, probable fallo (PDF de fotos). Si falla, subir `xoxo Hill Peterson - Switching Theory and Logical Design - 2ed.pdf`.
 - [x] ~~Analizar diapositivas Stallings COA 10ª ed. en PDF — evaluar calidad de texto y definir uso en sesión~~ → **No se suben a NotebookLM — son muchas diapositivas, se usan directamente en sesión como repaso rápido.**
 - [x] ~~Decidir destino de 5 libros huérfanos: Stallings DCC 10ª, Stallings Comunicaciones 6ª, Forouzan 5ª, Stevens TCP/IP 2ª, Tanenbaum Networks 5ª~~ → **Descartados — redes/protocolos, fuera del scope del temario 2026.**
 - [x] ~~Silberschatz OS Concepts 10ª~~ → **Descartado — Stallings OS ya cubre el rol SO para 2ª Parte E/S.**
