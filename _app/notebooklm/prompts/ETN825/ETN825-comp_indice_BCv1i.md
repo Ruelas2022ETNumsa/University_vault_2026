@@ -12,9 +12,9 @@ MENSAJE 1 — subtítulo con límite de alcance:
 → no adelantar contenido del subtítulo límite ni posteriores
 
 Los tres valores:
-1. Título del tema    → identifica el tema en _library_ETN825.md para seleccionar libros y PDFs correspondientes.
-2. Subtítulo inicial  → el subtítulo a complementar.
-3. Subtítulo límite   → NO se complementa. Define hasta dónde llega el alcance temático.
+1. Título del tema → identifica el tema en _library_ETN825.md para seleccionar libros y PDFs correspondientes.
+2. Subtítulo inicial → el subtítulo a complementar.
+3. Subtítulo límite → NO se complementa. Define hasta dónde llega el alcance temático.
 
 Evita adelantar contenido que pertenece al subtítulo siguiente.
 
@@ -58,8 +58,8 @@ Indicar brevemente la estrategia antes de comenzar — 1 línea, sin sobreexplic
 Para ejercicios AHPL — tabla de registros paso a paso:
 
 | Paso | Operación | Registros afectados | Resultado |
-|------|-----------|--------------------|-----------|
-| 1    | ...       | ...                | ...       |
+|-|-|-|-|
+| 1 | ... | ... | ... |
 
 Para ejercicios de memoria o E/S — desarrollo numérico:
 $$
@@ -127,7 +127,7 @@ justificación: [por qué esta figura sirve — 1 oración, sin describir lo que
 → N es el número de página impreso en el libro (no el número del visor)
 → la etiqueta *Fig. X-X* debe coincidir exactamente con la del libro (con asteriscos de italics)
 → si hay más de una figura relevante → un bloque por figura
-→ ⚠️ ETN825-Hill-Peterson-Resumen-Docente-ESP no tiene numeración de página ni etiquetas — omitir bloque de localización para ese archivo
+→ ⚠️ 825-Hill-Peterson-Resumen-Docente-ESP no tiene numeración de página ni etiquetas — omitir bloque de localización para ese archivo
 
 CASO B — no hay figura en el libro pero el concepto es representable → generar bloque TikZJax:
 ```tikz
@@ -150,32 +150,32 @@ Si no hay figura ni diagrama aplicable → omitir sección 3.
 ---
 
 REGLAS GENERALES:
-- Solo citar si podés confirmar fuente + página + id. Si no, omitir — no inventar.
-- Figura: usar siempre ![[pegar_imagen]] + pie + bloque de localización ([[nombre.pdf#page=N]] + *Fig. X-X*). No usar embed de página completa.
-- El nombre del archivo debe coincidir exactamente con el nombre del PDF cargado.
-- La etiqueta *Fig. X-X* es obligatoria. Si no hay etiqueta, usar el pie textual.
+-Solo citar si podés confirmar fuente + página + id. Si no, omitir — no inventar.
+-Figura: usar siempre ![[pegar_imagen]] + pie + bloque de localización ([[nombre.pdf#page=N]] + *Fig. X-X*). No usar embed de página completa.
+-El nombre del archivo debe coincidir exactamente con el nombre del PDF cargado.
+-La etiqueta *Fig. X-X* es obligatoria. Si no hay etiqueta, usar el pie textual.
   Si tampoco hay pie, describir brevemente el visual como id.
-- Podés citar más de una figura si son relevantes.
-- Sin introducción, sin cierre, sin comentarios — solo el contenido estructurado.
-- Respuesta compacta: no más de lo necesario para entender el concepto.
-- No adelantar contenido del subtítulo límite ni de subtítulos posteriores.
-- Notación AHPL siempre en LaTeX inline: \( \leftarrow \), \( \rightarrow \), \( \overline{X} \), \( \land \).
+-Podés citar más de una figura si son relevantes.
+-Sin introducción, sin cierre, sin comentarios — solo el contenido estructurado.
+-Respuesta compacta: no más de lo necesario para entender el concepto.
+-No adelantar contenido del subtítulo límite ni de subtítulos posteriores.
+-Notación AHPL siempre en LaTeX inline: \( \leftarrow \), \( \rightarrow \), \( \overline{X} \), \( \land \).
   Bloques de código AHPL en bloque de código estándar — no LaTeX.
 
 REGLAS TIKZJAX (ver ETN825_TikzJax.md para referencia completa):
-- Bloque exacto: ```tikz
+-Bloque exacto: ```tikz
 - \begin{document} y \end{document} siempre presentes
 - \documentclass NUNCA
-- Paquetes y librerías antes de \begin{document}
-- Color principal: teal · handshake/control: orange · buses/datos: violet · auxiliar: gray
-- Tipos válidos ETN825: flujo AHPL, tiempo (CLK/SCN/señales), caja negra, paquete de bits
-- Si hay duda sobre si el diagrama es representable → omitir, dejar espacio para IMA manual
+-Paquetes y librerías antes de \begin{document}
+-Color principal: teal · handshake/control: orange · buses/datos: violet · auxiliar: gray
+-Tipos válidos ETN825: flujo AHPL, tiempo (CLK/SCN/señales), caja negra, paquete de bits
+-Si hay duda sobre si el diagrama es representable → omitir, dejar espacio para IMA manual
 
 LIBROS DISPONIBLES:
 Hill & Peterson — Digital Systems 2ª ed. (dividido en 3 PDFs):
   temas T1 (AHPL base) → `825 Hill Peterson Digital Systems Hardware Organization Design 2-4-5-6.pdf`
   tema T1 (SIC completo) → `825 Hill Peterson Digital Systems Hardware Organization Design 7.pdf`
-  temas T2, T3, T4 → `825 Hill Peterson Digital Systems Hardware Organization Design 9-10-11-13.pdf`
+  temas T2, T3 → `825 Hill Peterson Digital Systems Hardware Organization Design 9-10-11-13.pdf`
 Hill & Peterson — Switching Theory 2ª ed.:
   `Hill Peterson - Switching Theory and Logical Design - 2ed.pdf`
 Stallings COA 11ª ed.:
@@ -184,25 +184,13 @@ Stallings COA 7ª ed. (español):
   `Stallings - Organización y Arquitectura de Computadores - 7ed.pdf`
 Hamacher 6ª ed.:
   `Hamacher - Computer Organization and Embedded Systems - 6ed.pdf`
-Hennessy & Patterson Quantitative 6ª ed.:
-  `Hennessy Patterson - Computer Architecture Quantitative Approach - 6ed.pdf`
-Patterson & Hennessy COD 5ª ed.:
-  `cond. Patterson Hennessy - Computer Organization and Design - 5ed.pdf`
 Carter Schaum:
   `Carter - Schaum Computer Architecture.pdf`
 Mano CSA 3ª ed.:
   `Mano - Computer System Architecture.pdf`
-Pérez Soto VHDL:
-  `Perez Soto - Diseño de sistemas digitales con VHDL.pdf`
-Stallings OS 8ª ed.:
-  `Stallings - Operating Systems - 8ed.pdf`
-Tanenbaum Distributed:
-  `Tanenbaum - Distributed Systems.pdf`
-Hauck Reconfigurable:
-  `Hauck - Reconfigurable Computing.pdf`
 
 COMPLEMENTOS DISPONIBLES:
-  `ETN825-Hill-Peterson-Resumen-Docente-ESP` ⚠️ sin paginación ni etiquetas de figura
+  `825-Hill-Peterson-Resumen-Docente-ESP` ⚠️ sin paginación ni etiquetas de figura
   `AHPL-Resumen-Garcia-Vargas-basado-Hill-Peterson-3ed`
   `AHPL-Slides-Sintaxis-Operadores-Transferencias-Condicionales`
   `AHPL-Teoria-Base-Rocasalvo-ETN821`
@@ -214,11 +202,5 @@ COMPLEMENTOS DISPONIBLES:
 
 TEORÍA POR TEMA (según _library_ETN825.md):
 T1 — HDL / SIC / AHPL → Hill & Peterson Digital Systems 2ª ed. (PDFs T1 AHPL base + T1 SIC completo) · ahpl_diseno_sistemas_digitales
-T2 — Comunicación entre sistemas → Hill & Peterson Digital Systems 2ª ed. (PDF T2, T3, T4) · Hamacher 6ª
-T3 — Interrupciones y sistema I/O → Hill & Peterson Digital Systems 2ª ed. (PDF T2, T3, T4) · Stallings COA 11ª
-T4 — Interfaces y periféricos → Hill & Peterson Digital Systems 2ª ed. (PDF T2, T3, T4) · Hamacher 6ª
-T5 — Administración de memoria → Stallings COA 11ª · Hennessy & Patterson Quantitative 6ª · Mano CSA
-T6 — Avances en tecnología → Stallings COA 11ª · Hennessy & Patterson Quantitative 6ª
-2ª Parte — Procesadores Avanzados → Hennessy & Patterson Quantitative 6ª · Stallings COA 11ª
-2ª Parte — Computación Reconfigurable → Hauck Reconfigurable · Stallings COA 11ª
-2ª Parte — E/S Computadores Comerciales → Stallings COA 11ª · Stallings OS 8ª
+T2 — Comunicación entre sistemas → Hill & Peterson Digital Systems 2ª ed. (PDF T2, T3) · Hamacher 6ª
+T3 — Interrupciones y sistema I/O → Hill & Peterson Digital Systems 2ª ed. (PDF T2, T3) · Stallings COA 11ª
