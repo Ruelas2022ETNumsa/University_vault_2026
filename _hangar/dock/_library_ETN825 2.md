@@ -120,22 +120,23 @@ Este archivo es tu referencia personal para saber qué libro usar en cada tema d
 
 | Libro | Rol | Idioma |
 |---|---|---|
-| Libro | Archivo PDF | Rol | Idioma |
-|---|---|---|---|
-| Hill & Peterson — Digital Systems 2ª ed. (fotocopias docente) | `825 Hill Peterson Digital Systems Hardware Organization Design 2-4-5-6.pdf` / `...7.pdf` / `...9-10-11-13.pdf` | AHPL principal — fuente primaria T1, T2, T3, T4 | Inglés |
-| Hill & Peterson — Switching Theory and Logical Design — 3ª ed. | `Hill Peterson - Switching Theory and Logical Design - 3ed.pdf` | Base previa a AHPL — fundamentos RTL | Inglés |
-| Stallings — Computer Organization and Architecture — 11ª ed. | `Stallings - Computer Organization and Architecture - 11ed.pdf` | Teoría principal — T1, T3, T4, T5, T6, 2ª Parte E/S | Inglés |
-| Stallings — Organización y Arquitectura de Computadores — 7ª ed. | `Stallings - Organización y Arquitectura de Computadores - 7ed.pdf` | Puente lingüístico Stallings COA | Español |
-| Hamacher — Computer Organization and Embedded Systems — 6ª ed. | `Hamacher - Computer Organization and Embedded Systems - 6ed.pdf` | Segunda opinión — T2, T3 | Inglés |
-| Hennessy Patterson — Computer Architecture Quantitative Approach — 6ª ed. | `Hennessy Patterson - Computer Architecture Quantitative Approach - 6ed.pdf` | Teoría rigurosa — T5, T6, 2ª Parte Procesadores | Inglés |
-| Patterson Hennessy — Computer Organization and Design — 5ª ed. | `cond. Patterson Hennessy - Computer Organization and Design - 5ed.pdf` | Puente didáctico entre Stallings y Quantitative | Inglés |
-| Carter — Schaum Computer Architecture | `Carter - Schaum Computer Architecture.pdf` | Problemas resueltos — T1, T3, T5 | Inglés |
-| Mano — Computer System Architecture — 3ª ed. | `Mano - Computer System Architecture.pdf` | Segunda opinión — T3, T4, T5, T6 | Inglés |
-| Langdon — Computer Design | `Langdon - Computer Design.pdf` | Complemento AHPL — segunda opinión RTL | Inglés |
-| Perez Soto — Diseño de sistemas digitales con VHDL | `Perez Soto - Diseño de sistemas digitales con VHDL.pdf` | VHDL — 2ª Parte HDL moderno vs AHPL | Español |
-| Stallings — Operating Systems — 8ª ed. | `Stallings - Operating Systems - 8ed.pdf` | Contexto SO — interrupciones y DMA — 2ª Parte E/S | Inglés |
-| Tanenbaum — Distributed Systems | `Tanenbaum - Distributed Systems.pdf` | Contexto distribuidos — T6 multiprocesadores | Inglés |
-| Hauck — Reconfigurable Computing | `Hauck - Reconfigurable Computing.pdf` | 2ª Parte Computación Reconfigurable | Inglés |
+| Hill, F.J. & Peterson, G.R. — Digital Systems: Hardware Organization and Design — 2ª ed. (1978) | AHPL principal — fuente primaria de T1, T2, T3, T4 | Inglés |
+| Hill, F.J. & Peterson, G.R. — Introduction to Switching Theory and Logical Design — 3ª ed. (1981) | Base previa a AHPL — fundamentos RTL | Inglés |
+| Stallings, W. — Computer Organization and Architecture: Designing for Performance — 11ª ed. (2019) | Teoría principal Bloque A — T1, T3, T4, T5, T6 | Inglés |
+| Stallings, W. — Organización y Arquitectura de Computadores — 7ª ed. (2007) | Puente lingüístico Bloque A | Español |
+| Hamacher, V.C. et al. — Computer Organization and Embedded Systems — 6ª ed. (2012) | Segunda opinión Bloque A — fuerte en T2, T3 | Inglés |
+| Hennessy, J.L. & Patterson, D.A. — Computer Architecture: A Quantitative Approach — 6ª ed. (2017) | Teoría rigurosa — T5, T6 | Inglés |
+| Patterson, D.A. & Hennessy, J.L. — Computer Organization and Design: The Hardware/Software Interface — 5ª ed. (2014) | Puente didáctico entre Stallings y Quantitative | Inglés |
+| Carter, N. — Schaum's Outline of Computer Architecture — 1ª ed. (2002) | Problemas resueltos — T1, T3, T5 | Inglés |
+| Mano, M.M. — Computer System Architecture — 3ª ed. (1993) — Adaptación india Dorling Kindersley 2007 (ISBN: 0131755633) | Segunda opinión — T3/T4 (Cap. 11: I/O, interrupciones, DMA, serial), T5 (Cap. 12: memoria, caché, virtual), T6 (Cap. 13: multiprocesadores) — PDF completo 539 pp. ✅ | Inglés |
+
+| Langdon, G.G. Jr. — Computer Design — 1ª ed. (1982) | Complemento AHPL — segunda opinión RTL | Inglés |
+| Hill, F.J. & Peterson, G.R. — Digital Systems: Hardware Organization and Design — 1ª ed. (1973) | Apoyo AHPL — primera formulación del lenguaje | Inglés |
+| Perez, Soto, Fernandez — Diseño de sistemas digitales con VHDL — 1ª ed. (2002) — Thomson | VHDL — Segunda Parte: contexto HDL moderno vs AHPL | Español |
+| Stallings, W. — Operating Systems Internals and Design Principles — 8ª ed. (2015) — Pearson | Contexto SO — interrupciones y DMA desde perspectiva de SO | Inglés |
+| Silberschatz, A. et al. — Operating System Concepts — 10ª ed. (2018) — Wiley | Consulta puntual SO — complemento a Stallings OS | Inglés |
+| Tanenbaum, A.S. & Van Steen, M. — Distributed Systems Principles and Paradigms — 2ª ed. (2007) — Pearson | Contexto sistemas distribuidos — T6 multiprocesadores | Inglés |
+| Hauck, S. & DeHon, A. — Reconfigurable Computing The Theory and Practice — 1ª ed. (2008) — Elsevier | Segunda Parte: Computación Reconfigurable | Inglés |
 
 ---
 
@@ -167,9 +168,9 @@ Archivos adicionales que no son libros completos pero aportan valor puntual a No
 
 | Libro | PDF | Capítulos | Contenido | Temas |
 |---|---|---|---|---|
-| Hill & Peterson — Digital Systems 2ª ed. | `825 Hill Peterson Digital Systems Hardware Organization Design 2-4-5-6.pdf` | 2, 4, 5, 6 | Registros, transferencias, AHPL básico, secuencia de control | T1 |
-| Hill & Peterson — Digital Systems 2ª ed. | `825 Hill Peterson Digital Systems Hardware Organization Design 7.pdf` | 7 | Computador SIC completo — los 24 pasos | T1 |
-| Hill & Peterson — Digital Systems 2ª ed. | `825 Hill Peterson Digital Systems Hardware Organization Design 9-10-11-13.pdf` | 9, 10, 11, 13 | Comunicación entre módulos, interfaces, I/O, interrupciones | T2, T3, T4 |
+| Hill & Peterson — Digital Systems 2ª ed. | PDF 1 | 2, 4, 5, 6 | Registros, transferencias, AHPL básico, secuencia de control | T1 |
+| Hill & Peterson — Digital Systems 2ª ed. | PDF 2 | 7 | Computador SIC completo — los 24 pasos | T1 |
+| Hill & Peterson — Digital Systems 2ª ed. | PDF 3 | 9, 10, 11, 13 | Comunicación entre módulos, interfaces, I/O, interrupciones | T2, T3, T4 |
 
 ### Capítulos faltantes
 
@@ -286,7 +287,6 @@ Fuente: https://github.com/mguludag/Stallings-Computer-Org-and-Arch-Slides — p
 | Forouzan, B.A. — Data Communications and Networking — 5ª ed. (2013) | Redes y protocolos de comunicación — fuera del scope del temario 2026. T2 cubre comunicación entre módulos de sistema, no protocolos de red |
 | Stevens, W.R. & Fall, K.R. — TCP/IP Illustrated, Vol. 1: The Protocols — 2ª ed. (2011) | Redes y protocolos de comunicación — fuera del scope del temario 2026. T2 cubre comunicación entre módulos de sistema, no protocolos de red |
 | Tanenbaum, A.S. & Wetherall, D.J. — Computer Networks — 5ª ed. (2010) | Redes y protocolos de comunicación — fuera del scope del temario 2026. Para T6 ya cubre Tanenbaum Distributed Systems que sí aplica a multiprocesadores |
-| Schwartz, S. & Ben-David, S. — Understanding Machine Learning — Cambridge University Press | Machine Learning — fuera del scope del temario 2026 |
 
 ---
 

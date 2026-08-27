@@ -10,9 +10,9 @@ blocked_by:
 ## Handoff
 
 **Última sesión:** 2026-08-26
-**Retomar desde:** Revisar stack completo — 5 libros huérfanos sin rol en temario actual (Stallings DCC, Stallings Comunicaciones, Forouzan, Stevens TCP/IP, Tanenbaum Networks) + Schwartz & Ben David nunca registrado en descartados + definir si Stallings OS y Silberschatz aplican a T3 además de 2ª Parte E/S. Luego analizar diapositivas Stallings COA en PDF.
-**Completado esta sesión:** Temario oficial 2026_1 recibido e incorporado; T8/T9/T10 reubicados como complementarios; Temario 2021 eliminado; 5 libros nuevos en stack; tabla “qué usar por tema” y flujo de uso reescritos contra temario oficial; limpieza general de library.
-**Próximo paso:** (1) Decidir destino de 5 libros huérfanos (descartados o rol en temario). (2) Registrar Schwartz & Ben David en descartados. (3) Evaluar si Stallings OS / Silberschatz aplican a T3. (4) Analizar diapositivas Stallings COA en PDF.
+**Retomar desde:** (1) Registrar Schwartz & Ben David en descartados. (2) Evaluar si Stallings OS 8ª aplica también a T3. (3) Analizar diapositivas Stallings COA en PDF.
+**Completado esta sesión:** 5 libros de redes descartados (Stallings DCC, Stallings Comunicaciones, Forouzan, Stevens TCP/IP, Tanenbaum Networks); Silberschatz descartado; stack y archivos divididos actualizados con nombres exactos de PDF; nombres de archivos normalizados; nota condicional Switching Theory 2ª/3ª ed. registrada en sugerencias.
+**Próximo paso:** (1) Registrar Schwartz & Ben David en descartados. (2) Evaluar si Stallings OS 8ª aplica también a T3. (3) Analizar diapositivas Stallings COA en PDF.
 
 ---
 
@@ -59,7 +59,8 @@ Restricciones:
 
 ## Sugerencias
 
-- Switching Theory 3ª ed. (Hill & Peterson) es PDF de fotos — puede fallar en NotebookLM. Si falla, usar 2ª ed. (PDF limpio, marcado con xoxo en carpeta).
+- Switching Theory 3ª ed. (Hill & Peterson) es PDF de fotos — puede fallar en NotebookLM. Si falla, usar 2ª ed. (`xoxo Hill Peterson - Switching Theory and Logical Design - 2ed.pdf`). Ambas en carpeta hasta probar.
+- Digital Systems 1ª ed. (Hill & Peterson, 1973) — descartada, no tiene rol de respaldo. Eliminar de carpeta (`xoxo Hill Peterson - Digital Systems Hardware Organization and Design - 1ed`).
 
 ---
 
@@ -102,11 +103,14 @@ Restricciones:
 - [x] Obtener temario completo 2026 del docente — recibido 2026-08-26
 - [x] Ejecutar reajuste 2026_2 — iniciado y parcialmente completado (temario, stack, libros nuevos)
 - [x] Conseguir libros pendientes — Pérez VHDL, Stallings OS, Silberschatz, Tanenbaum Distributed, Hauck Reconfigurable ✔️
+- [ ] Cargar stack completo a NotebookLM — en proceso. Avisar si algún PDF falla o requiere división.
 - [ ] Subir fotocopias del docente (caps. 2,4,5,6 / 7 / 9,10,11,13) a NotebookLM y evaluar calidad de extracción
-- [ ] Analizar diapositivas Stallings COA 10ª ed. en PDF — evaluar calidad de texto y definir uso en sesión
-- [ ] Decidir destino de 5 libros huérfanos: Stallings DCC 10ª, Stallings Comunicaciones 6ª, Forouzan 5ª, Stevens TCP/IP 2ª, Tanenbaum Networks 5ª — descartados o rol real en temario
-- [ ] Registrar Schwartz & Ben David — Understanding Machine Learning — en libros descartados
-- [ ] Evaluar si Stallings OS 8ª y Silberschatz OS Concepts 10ª aplican también a T3 (interrupciones/DMA) y actualizar tabla si corresponde
+- [x] ~~Analizar diapositivas Stallings COA 10ª ed. en PDF — evaluar calidad de texto y definir uso en sesión~~ → **No se suben a NotebookLM — son muchas diapositivas, se usan directamente en sesión como repaso rápido.**
+- [x] ~~Decidir destino de 5 libros huérfanos: Stallings DCC 10ª, Stallings Comunicaciones 6ª, Forouzan 5ª, Stevens TCP/IP 2ª, Tanenbaum Networks 5ª~~ → **Descartados — redes/protocolos, fuera del scope del temario 2026.**
+- [x] ~~Silberschatz OS Concepts 10ª~~ → **Descartado — Stallings OS ya cubre el rol SO para 2ª Parte E/S.**
+- [x] Normalizar nombres de PDFs en carpeta y actualizar library con nombres exactos
+- [x] ~~Registrar Schwartz & Ben David — Understanding Machine Learning — en libros descartados~~ → **Registrado — Machine Learning, fuera del scope del temario 2026.**
+- [x] ~~Evaluar si Stallings OS 8ª aplica también a T3 (interrupciones/DMA) y actualizar tabla si corresponde~~ → **No aplica a T3 — T3 es orientado a AHPL/hardware. Stallings OS queda solo en 2ª Parte E/S.**
 - [x] Actualizar tabla “qué usar por tema” contra temario oficial (T1–T6 + Segunda Parte)
 - [x] Actualizar flujo de uso contra temario oficial
 
