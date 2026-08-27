@@ -394,7 +394,7 @@ END
 | `4A.` | Envía señales `feed` y `print` a la impresora (combinacional, basado en CR). |
 | `5A.` | Paso nulo — sincronización de un ciclo. |
 | `6A.` | Bucle de espera: permanece mientras la impresora indica `wait=1`. |
-| `7A.` | Pone `first←0` y borra `busy*first̄`. Bifurca: si `first=1` vuelve a 3A, si no va a 8A. |
+| `7A.` | Pone \( first \leftarrow 0 \) y borra \( busy * \overline{first} \). Bifurca: si \( first = 1 \) vuelve a 3A, si no va a 8A. |
 | `8A.` | DEAD END — módulo detenido hasta nuevo llamado. |
 | `CHAR=CR` | Salida combinacional permanente: CHAR siempre refleja el contenido de CR. |
 
