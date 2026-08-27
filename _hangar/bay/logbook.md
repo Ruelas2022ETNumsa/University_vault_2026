@@ -18,7 +18,7 @@ date_updated: 2026-08-02
 |     Worker     | Status | Estamina | Proyecto activo                                   | Wake | Recarga |
 | :------------: | :----: | :------: | :------------------------------------------------ | :--: | :-----: |
 | [[alx_hot.md]] |   ❌    |    🟢    | Sistema consulta móvil via Drive MCP              |      |         |
-|  [[krajo.md]]  |   ❌    |    🟢    | Implementación física `_hangar/`                  |      |         |
+|  [[krajo.md]]  |   ❌    |    🔴    | Implementación física `_hangar/`                  |      |  18:50  |
 | [[alx_gml.md]] |   ❌    |    🔴    | Sistema de links, sync y organización de carpetas |      |  18:50  |
 | [[alxrul.md]]  |   ✔    |    🟢    | —                                                 |      |         |
 | [[alx-rul.md]] |   ❌    |    🟢    | Cornell Marginalia → Galaxy                       |      |         |

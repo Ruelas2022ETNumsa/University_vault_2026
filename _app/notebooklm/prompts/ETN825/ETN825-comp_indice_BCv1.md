@@ -12,7 +12,7 @@ MENSAJE 1 — subtítulo con límite de alcance:
 → no adelantar contenido del subtítulo límite ni posteriores
 
 Los tres valores:
-1. Título del tema    → identifica el tema en _library_ETN825.md para seleccionar libros y capítulos.
+1. Título del tema    → identifica el tema en _library_ETN825.md para seleccionar libros y PDFs correspondientes.
 2. Subtítulo inicial  → el subtítulo a complementar.
 3. Subtítulo límite   → NO se complementa. Define hasta dónde llega el alcance temático.
 
@@ -173,9 +173,9 @@ REGLAS TIKZJAX (ver ETN825_TikzJax.md para referencia completa):
 
 LIBROS DISPONIBLES:
 Hill & Peterson — Digital Systems 2ª ed. (dividido en 3 PDFs):
-  caps. 2,4,5,6 → `825 Hill Peterson Digital Systems Hardware Organization Design 2-4-5-6.pdf`
-  cap. 7 → `825 Hill Peterson Digital Systems Hardware Organization Design 7.pdf`
-  caps. 9,10,11,13 → `825 Hill Peterson Digital Systems Hardware Organization Design 9-10-11-13.pdf`
+  temas T1 (AHPL base) → `825 Hill Peterson Digital Systems Hardware Organization Design 2-4-5-6.pdf`
+  tema T1 (SIC completo) → `825 Hill Peterson Digital Systems Hardware Organization Design 7.pdf`
+  temas T2, T3, T4 → `825 Hill Peterson Digital Systems Hardware Organization Design 9-10-11-13.pdf`
 Hill & Peterson — Switching Theory 2ª ed.:
   `Hill Peterson - Switching Theory and Logical Design - 2ed.pdf`
 Stallings COA 11ª ed.:
@@ -215,10 +215,10 @@ COMPLEMENTOS DISPONIBLES:
   `ahpl_diseno_sistemas_digitales`
 
 TEORÍA POR TEMA (según _library_ETN825.md):
-T1 — HDL / SIC / AHPL → Hill & Peterson Digital Systems 2ª ed. (caps. 2,4,5,6,7) · Langdon
-T2 — Comunicación entre sistemas → Hill & Peterson Digital Systems 2ª ed. (caps. 9,10) · Hamacher 6ª
-T3 — Interrupciones y sistema I/O → Hill & Peterson Digital Systems 2ª ed. (caps. 11,13) · Stallings COA 11ª
-T4 — Interfaces y periféricos → Hill & Peterson Digital Systems 2ª ed. (caps. 9,10,11) · Hamacher 6ª
+T1 — HDL / SIC / AHPL → Hill & Peterson Digital Systems 2ª ed. (PDFs T1 AHPL base + T1 SIC completo) · Langdon
+T2 — Comunicación entre sistemas → Hill & Peterson Digital Systems 2ª ed. (PDF T2, T3, T4) · Hamacher 6ª
+T3 — Interrupciones y sistema I/O → Hill & Peterson Digital Systems 2ª ed. (PDF T2, T3, T4) · Stallings COA 11ª
+T4 — Interfaces y periféricos → Hill & Peterson Digital Systems 2ª ed. (PDF T2, T3, T4) · Hamacher 6ª
 T5 — Administración de memoria → Stallings COA 11ª · Hennessy & Patterson Quantitative 6ª · Mano CSA
 T6 — Avances en tecnología → Stallings COA 11ª · Hennessy & Patterson Quantitative 6ª
 2ª Parte — Procesadores Avanzados → Hennessy & Patterson Quantitative 6ª · Stallings COA 11ª

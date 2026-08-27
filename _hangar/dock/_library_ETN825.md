@@ -10,7 +10,7 @@ date_created: 2026-07-29
 date_updated: 2026-08-26
 _last_edit: 2026-08-26 — Temario oficial incorporado; T8/T9/T10 movidos a complementarios; Temario 2021 eliminado; 5 libros nuevos agregados al stack (Perez VHDL, Stallings OS, Silberschatz OS, Tanenbaum Distributed, Hauck Reconfigurable)
 _last_edit_2: 2026-08-26 — 5 libros de redes/telecomunicaciones descartados (Stallings DCC, Stallings Comunicaciones, Forouzan, Stevens TCP/IP, Tanenbaum Networks) — fuera del scope del temario 2026
-status: desarollo
+status: desarrollo
 ---
 
 # 📚 Biblioteca ETN825 — Guía de libros
@@ -118,14 +118,13 @@ Este archivo es tu referencia personal para saber qué libro usar en cada tema d
 
 ## Stack completo
 
-| Libro                                                                     | Rol                                                                                                             | Idioma                                                                                           |         |
-| ------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | ------- |
-| Libro                                                                     | Archivo PDF                                                                                                     | Rol                                                                                              | Idioma  |
+| Libro | Archivo PDF | Rol | Idioma |
+|---|---|---|---|
 | Hill & Peterson — Digital Systems 2ª ed. (fotocopias docente)             | `825 Hill Peterson Digital Systems Hardware Organization Design 2-4-5-6.pdf` / `...7.pdf` / `...9-10-11-13.pdf` | AHPL principal — fuente primaria T1, T2, T3, T4                                                  | Inglés  |
 | Hill & Peterson — Switching Theory and Logical Design — 2ª ed.            | `Hill Peterson - Switching Theory and Logical Design - 2ed.pdf`                                                 | Base previa a AHPL — fundamentos RTL. ⚠️ Reemplaza a 3ª ed. (PDF de fotos, falló en NotebookLM). | Inglés  |
 | Stallings — Computer Organization and Architecture — 11ª ed.              | `Stallings - Computer Organization and Architecture - 11ed.pdf`                                                 | Teoría principal — T1, T3, T4, T5, T6, 2ª Parte E/S                                              | Inglés  |
 | Stallings — Organización y Arquitectura de Computadores — 7ª ed.          | `Stallings - Organización y Arquitectura de Computadores - 7ed.pdf`                                             | Puente lingüístico Stallings COA                                                                 | Español |
-| Hamacher — Computer Organization and Embedded Systems — 6ª ed.            | `Hamacher - Computer Organization and Embedded Systems - 6ed.pdf`                                               | Segunda opinión — T2, T3                                                                         | Inglés  |
+| Hamacher — Computer Organization and Embedded Systems — 6ª ed.            | `Hamacher - Computer Organization and Embedded Systems - 6ed.pdf`                                               | Segunda opinión — T2, T3, T4                                                                     | Inglés  |
 | Hennessy Patterson — Computer Architecture Quantitative Approach — 6ª ed. | `Hennessy Patterson - Computer Architecture Quantitative Approach - 6ed.pdf`                                    | Teoría rigurosa — T5, T6, 2ª Parte Procesadores                                                  | Inglés  |
 | Patterson Hennessy — Computer Organization and Design — 5ª ed.            | `cond. Patterson Hennessy - Computer Organization and Design - 5ed.pdf`                                         | Puente didáctico entre Stallings y Quantitative                                                  | Inglés  |
 | Carter — Schaum Computer Architecture                                     | `Carter - Schaum Computer Architecture.pdf`                                                                     | Problemas resueltos — T1, T3, T5                                                                 | Inglés  |
@@ -158,15 +157,17 @@ Archivos adicionales que no son libros completos pero aportan valor puntual a No
 
 ## Archivos divididos
 
-| Libro | PDF | Temas         | Contenido | Temas |
+| Libro | PDF | Capítulos (H&P) | Contenido | Temas |
 |---|---|---|---|---|
 | Hill & Peterson — Digital Systems 2ª ed. | `825 Hill Peterson Digital Systems Hardware Organization Design 2-4-5-6.pdf` | 2, 4, 5, 6    | Registros, transferencias, AHPL básico, secuencia de control | T1 |
 | Hill & Peterson — Digital Systems 2ª ed. | `825 Hill Peterson Digital Systems Hardware Organization Design 7.pdf` | 7             | Computador SIC completo — los 24 pasos | T1 |
 | Hill & Peterson — Digital Systems 2ª ed. | `825 Hill Peterson Digital Systems Hardware Organization Design 9-10-11-13.pdf` | 9, 10, 11, 13 | Comunicación entre módulos, interfaces, I/O, interrupciones | T2, T3, T4 |
 
-### Temas faltantes
+> **Nota:** La columna "Capítulos" usa la numeración del libro físico (Hill & Peterson 2ª ed.) — no corresponde a los temas del temario ETN825. En el resto de este archivo y en el prompt, todo se organiza por temas (T1–T6 + 2ª Parte).
 
-| Tema | Contenido                              | Relevancia | Cobertura alternativa                                   |
+### Capítulos faltantes (H&P)
+
+| Capítulo (H&P) | Contenido                              | Relevancia | Cobertura alternativa                                   |
 | ---- | -------------------------------------- | ---------- | ------------------------------------------------------- |
 | 1    | Introducción y fundamentos digitales   | Baja       | Complementos AHPL ya cubren la base                     |
 | 3    | Lógica combinacional en AHPL           | Media      | Cubierto parcialmente por los resúmenes de complementos |
@@ -187,7 +188,7 @@ Archivos adicionales que no son libros completos pero aportan valor puntual a No
 | T6 — Avances en tecnología | Stallings COA 11ª ed. | Hennessy & Patterson Quantitative 6ª ed. | Tanenbaum Distributed Systems 2ª ed. | Stallings español 7ª ed. |
 | 2ª Parte — Procesadores Avanzados | Hennessy & Patterson Quantitative 6ª ed. | Stallings COA 11ª ed. | — | — |
 | 2ª Parte — Computación Reconfigurable | Hauck & DeHon Reconfigurable Computing 1ª ed. | Stallings COA 11ª ed. | — | — |
-| 2ª Parte — E/S Computadores Comerciales | Stallings COA 11ª ed. | Stallings OS 8ª ed. | Silberschatz OS Concepts 10ª ed. | Stallings español 7ª ed. |
+| 2ª Parte — E/S Computadores Comerciales | Stallings COA 11ª ed. | Stallings OS 8ª ed. | — | Stallings español 7ª ed. |
 
 ---
 
@@ -279,6 +280,7 @@ Fuente: https://github.com/mguludag/Stallings-Computer-Org-and-Arch-Slides — p
 | Forouzan, B.A. — Data Communications and Networking — 5ª ed. (2013)                                                         | Redes y protocolos de comunicación — fuera del scope del temario 2026. T2 cubre comunicación entre módulos de sistema, no protocolos de red |
 | Stevens, W.R. & Fall, K.R. — TCP/IP Illustrated, Vol. 1: The Protocols — 2ª ed. (2011)                                      | Redes y protocolos de comunicación — fuera del scope del temario 2026. T2 cubre comunicación entre módulos de sistema, no protocolos de red |
 | Tanenbaum, A.S. & Wetherall, D.J. — Computer Networks — 5ª ed. (2010)                                                       | Redes y protocolos de comunicación — fuera del scope del temario 2026. Para T6 ya cubre Tanenbaum Distributed Systems que sí aplica a multiprocesadores |
+| Silberschatz, A. & Galvin, P.B. — Operating System Concepts — 10ª ed. | Descartado — Stallings OS 8ª ed. ya cubre el rol SO para 2ª Parte E/S. |
 | Schwartz, S. & Ben-David, S. — Understanding Machine Learning — Cambridge University Press                                  | Machine Learning — fuera del scope del temario 2026 |
 
 ---

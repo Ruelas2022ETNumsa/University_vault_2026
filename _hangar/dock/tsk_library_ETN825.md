@@ -1,6 +1,6 @@
 ---
 galaxy_body: ship
-project: "Biblioteca ETN825"
+project: Biblioteca ETN825
 date: 2026-07-30
 status: in-orbit
 fleet: ETN825
@@ -9,10 +9,10 @@ blocked_by:
 
 ## Handoff
 
-**Última sesión:** 2026-08-26
-**Retomar desde:** Continuar verificación de complementos pendientes en la tabla de Complementos.
-**Completado esta sesión:** 5 libros de redes descartados; Silberschatz descartado; Schwartz & Ben David registrado en descartados; stack actualizado con nombres exactos de PDF; nombres de archivos normalizados; fotocopias docente subidas a NotebookLM; stack cargado a NotebookLM salvo Langdon y Switching Theory 3ª ed. (en proceso con PDF24); Stallings OS confirmado solo en 2ª Parte E/S; complemento slide-introduccion_ahpl verificado contra PDF y descripción actualizada; `ahpl_diseno_sistemas_digitales` verificado contra PDF (31 pp.) — corrección aplicada (CLUNIT → UNIT: LOGIC/FULLADD/etc.) y nota NotebookLM agregada (número de página ✅, figuras etiquetadas ✅ Figura 1–28); sección ChatGPT de complementos integrada a tabla principal — sección separada eliminada.
-**Próximo paso:** (1) Resolver carga de Langdon a NotebookLM: OCR con PDF24 y reintentar. (2) Subir complementos a NotebookLM cuando estén listos. (3) Crear guias y prompt NotebookLM para ETN825 (ver sección dedicada en Tareas).
+**Última sesión:** 2026-08-27
+**Retomar desde:** Subir Langdon a NotebookLM una vez termine el OCR con PDF24 (en proceso). Luego subir complementos pendientes.
+**Completado esta sesión:** Guias ETN825_AHPL.md y ETN825_TikzJax.md creadas y revisadas (`E:\University_vault_2026\_app\notebooklm\guides\ETN825\`); prompt ETN825-comp_indice_BCv1.md creado (`E:\University_vault_2026\_app\notebooklm\prompts\ETN825\`); _library_ETN825.md corregida (Switching Theory 3ª → 2ª ed. en flujo de uso; T1 segunda opción reemplazada; tabla Archivos divididos renombrada columna a Capítulos H&P; sección Capítulos faltantes H&P renombrada); ETN825_AHPL 1.md corregida (LaTeX unificado en texto corrido, fila 7A tabla N11); ETN825_tikz.md corregida (N11 duplicado renombrado a N15, tabla N3 y header actualizados). Proyecto al 90%.
+**Próximo paso:** (1) Langdon OCR en proceso con PDF24 — ⚠️ no finalizado, reintentar carga a NotebookLM cuando termine. (2) Subir complementos a NotebookLM. (3) Subir guias y prompt a NotebookLM.
 
 ---
 
@@ -125,12 +125,12 @@ Restricciones:
 
 ### Guias
 
-- [ ] Crear `ETN825_AHPL.md` — guía de notación AHPL para NotebookLM. Cubre: operadores (`←`, `=`, `→`), estructura de módulos (MEMORY, INPUTS, OUTPUTS, BUSES, LABELS, ONE SHOTS), convención de operandos (escalares, vectores, matrices), sentencias (DEAD END, NO DELAY, SYN), bifurcaciones fijas y condicionales, pasos numerados, tabla de registros para ejercicios. Es la guía principal — equivalente a `ETN607_latex.md`.
-- [ ] Crear `ETN825_TikzJax.md` — guía TikZJax orientada a ETN825. Tipos de diagrama: flujo (principal), tiempo (señales CLK/SCN/transferencias), cajas negras (módulos con entradas/salidas), paquetes de bits (registros con campos etiquetados). Sin circuitos. Incluir biblioteca de ejemplos por tipo. Equivalente a `ETN607_TikzJax.md`.
+- [x] Crear `ETN825_AHPL.md` — guía de notación AHPL para NotebookLM. Cubre: operadores (`←`, `=`, `→`), estructura de módulos (MEMORY, INPUTS, OUTPUTS, BUSES, LABELS, ONE SHOTS), convención de operandos (escalares, vectores, matrices), sentencias (DEAD END, NO DELAY, SYN), bifurcaciones fijas y condicionales, pasos numerados, tabla de registros para ejercicios. Es la guía principal — equivalente a `ETN607_latex.md`.
+- [x] Crear `ETN825_TikzJax.md` — guía TikZJax orientada a ETN825. Tipos de diagrama: flujo (principal), tiempo (señales CLK/SCN/transferencias), cajas negras (módulos con entradas/salidas), paquetes de bits (registros con campos etiquetados). Sin circuitos. Incluir biblioteca de ejemplos por tipo. Equivalente a `ETN607_TikzJax.md`.
 
 ### Prompt
 
-- [ ] Crear `ETN825-comp-indice-BCv1.md` — prompt principal de complemento por índice. Basado en `ETN607-comp_indice_BCv4ii.md` con adaptaciones: jerarquía de fuentes (resumen docente primero, libros como profundización), formato de ejercicios AHPL (pasos numerados, tabla de registros) en lugar de algebraico, tipos de visual ETN825 (flujo, tiempo, caja negra, paquetes de bits), referencia a `_library_ETN825.md`, mensajes adaptados al temario T1–T6 + Segunda Parte.
+- [x] Crear `ETN825-comp-indice-BCv1.md` — prompt principal de complemento por índice. Basado en `ETN607-comp_indice_BCv4ii.md` con adaptaciones: jerarquía de fuentes (resumen docente primero, libros como profundización), formato de ejercicios AHPL (pasos numerados, tabla de registros) en lugar de algebraico, tipos de visual ETN825 (flujo, tiempo, caja negra, paquetes de bits), referencia a `_library_ETN825.md`, mensajes adaptados al temario T1–T6 + Segunda Parte.
 
 ---
 
