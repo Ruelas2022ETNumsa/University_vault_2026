@@ -192,8 +192,6 @@ Carter Schaum:
   `Carter - Schaum Computer Architecture.pdf`
 Mano CSA 3ª ed.:
   `Mano - Computer System Architecture.pdf`
-Langdon:
-  `Langdon - Computer Design.pdf`
 Pérez Soto VHDL:
   `Perez Soto - Diseño de sistemas digitales con VHDL.pdf`
 Stallings OS 8ª ed.:
@@ -215,7 +213,7 @@ COMPLEMENTOS DISPONIBLES:
   `ahpl_diseno_sistemas_digitales`
 
 TEORÍA POR TEMA (según _library_ETN825.md):
-T1 — HDL / SIC / AHPL → Hill & Peterson Digital Systems 2ª ed. (PDFs T1 AHPL base + T1 SIC completo) · Langdon
+T1 — HDL / SIC / AHPL → Hill & Peterson Digital Systems 2ª ed. (PDFs T1 AHPL base + T1 SIC completo) · ahpl_diseno_sistemas_digitales
 T2 — Comunicación entre sistemas → Hill & Peterson Digital Systems 2ª ed. (PDF T2, T3, T4) · Hamacher 6ª
 T3 — Interrupciones y sistema I/O → Hill & Peterson Digital Systems 2ª ed. (PDF T2, T3, T4) · Stallings COA 11ª
 T4 — Interfaces y periféricos → Hill & Peterson Digital Systems 2ª ed. (PDF T2, T3, T4) · Hamacher 6ª

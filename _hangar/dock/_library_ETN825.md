@@ -10,6 +10,7 @@ date_created: 2026-07-29
 date_updated: 2026-08-26
 _last_edit: 2026-08-26 — Temario oficial incorporado; T8/T9/T10 movidos a complementarios; Temario 2021 eliminado; 5 libros nuevos agregados al stack (Perez VHDL, Stallings OS, Silberschatz OS, Tanenbaum Distributed, Hauck Reconfigurable)
 _last_edit_2: 2026-08-26 — 5 libros de redes/telecomunicaciones descartados (Stallings DCC, Stallings Comunicaciones, Forouzan, Stevens TCP/IP, Tanenbaum Networks) — fuera del scope del temario 2026
+_last_edit_3: 2026-08-27 — Silberschatz descartado registrado en library; Hamacher actualizado a T2/T3/T4; typo status corregido; fila duplicada stack eliminada; nota aclaratoria caps vs temas agregada; todos los libros del stack cargados en NotebookLM excepto Langdon (OCR falló 2 intentos — uso en sesión directa); Mano CSA agregado como consulta puntual 2ª Parte E/S; Tanenbaum 2ª ed. especificada; ahpl_diseno_sistemas_digitales reemplaza a Langdon como segunda opinión RTL en T1; Fernandez confirmado como tercer autor VHDL
 status: desarrollo
 ---
 
@@ -120,20 +121,20 @@ Este archivo es tu referencia personal para saber qué libro usar en cada tema d
 
 | Libro | Archivo PDF | Rol | Idioma |
 |---|---|---|---|
-| Hill & Peterson — Digital Systems 2ª ed. (fotocopias docente)             | `825 Hill Peterson Digital Systems Hardware Organization Design 2-4-5-6.pdf` / `...7.pdf` / `...9-10-11-13.pdf` | AHPL principal — fuente primaria T1, T2, T3, T4                                                  | Inglés  |
-| Hill & Peterson — Switching Theory and Logical Design — 2ª ed.            | `Hill Peterson - Switching Theory and Logical Design - 2ed.pdf`                                                 | Base previa a AHPL — fundamentos RTL. ⚠️ Reemplaza a 3ª ed. (PDF de fotos, falló en NotebookLM). | Inglés  |
-| Stallings — Computer Organization and Architecture — 11ª ed.              | `Stallings - Computer Organization and Architecture - 11ed.pdf`                                                 | Teoría principal — T1, T3, T4, T5, T6, 2ª Parte E/S                                              | Inglés  |
-| Stallings — Organización y Arquitectura de Computadores — 7ª ed.          | `Stallings - Organización y Arquitectura de Computadores - 7ed.pdf`                                             | Puente lingüístico Stallings COA                                                                 | Español |
-| Hamacher — Computer Organization and Embedded Systems — 6ª ed.            | `Hamacher - Computer Organization and Embedded Systems - 6ed.pdf`                                               | Segunda opinión — T2, T3, T4                                                                     | Inglés  |
-| Hennessy Patterson — Computer Architecture Quantitative Approach — 6ª ed. | `Hennessy Patterson - Computer Architecture Quantitative Approach - 6ed.pdf`                                    | Teoría rigurosa — T5, T6, 2ª Parte Procesadores                                                  | Inglés  |
-| Patterson Hennessy — Computer Organization and Design — 5ª ed.            | `cond. Patterson Hennessy - Computer Organization and Design - 5ed.pdf`                                         | Puente didáctico entre Stallings y Quantitative                                                  | Inglés  |
-| Carter — Schaum Computer Architecture                                     | `Carter - Schaum Computer Architecture.pdf`                                                                     | Problemas resueltos — T1, T3, T5                                                                 | Inglés  |
-| Mano — Computer System Architecture — 3ª ed.                              | `Mano - Computer System Architecture.pdf`                                                                       | Segunda opinión — T3, T4, T5, T6                                                                 | Inglés  |
-| Langdon — Computer Design                                                 | `Langdon - Computer Design.pdf`                                                                                 | Complemento AHPL — segunda opinión RTL                                                           | Inglés  |
-| Perez Soto — Diseño de sistemas digitales con VHDL                        | `Perez Soto - Diseño de sistemas digitales con VHDL.pdf`                                                        | VHDL — 2ª Parte HDL moderno vs AHPL                                                              | Español |
-| Stallings — Operating Systems — 8ª ed.                                    | `Stallings - Operating Systems - 8ed.pdf`                                                                       | Contexto SO — interrupciones y DMA — 2ª Parte E/S                                                | Inglés  |
-| Tanenbaum — Distributed Systems                                           | `Tanenbaum - Distributed Systems.pdf`                                                                           | Contexto distribuidos — T6 multiprocesadores                                                     | Inglés  |
-| Hauck — Reconfigurable Computing                                          | `Hauck - Reconfigurable Computing.pdf`                                                                          | 2ª Parte Computación Reconfigurable                                                              | Inglés  |
+| Hill & Peterson — Digital Systems 2ª ed. (fotocopias docente) | `825 Hill Peterson Digital Systems Hardware Organization Design 2-4-5-6.pdf` / `...7.pdf` / `...9-10-11-13.pdf` | AHPL principal — fuente primaria T1, T2, T3, T4 | Inglés |
+| Hill & Peterson — Switching Theory and Logical Design — 2ª ed. | `Hill Peterson - Switching Theory and Logical Design - 2ed.pdf` | Base previa a AHPL — fundamentos RTL. ⚠️ Reemplaza a 3ª ed. (PDF de fotos, falló en NotebookLM). | Inglés |
+| Stallings — Computer Organization and Architecture — 11ª ed. | `Stallings - Computer Organization and Architecture - 11ed.pdf` | Teoría principal — T1, T3, T4, T5, T6, 2ª Parte E/S | Inglés |
+| Stallings — Organización y Arquitectura de Computadores — 7ª ed. | `Stallings - Organización y Arquitectura de Computadores - 7ed.pdf` | Puente lingüístico Stallings COA | Español |
+| Hamacher — Computer Organization and Embedded Systems — 6ª ed. | `Hamacher - Computer Organization and Embedded Systems - 6ed.pdf` | Segunda opinión — T2, T3, T4 | Inglés |
+| Hennessy Patterson — Computer Architecture Quantitative Approach — 6ª ed. | `Hennessy Patterson - Computer Architecture Quantitative Approach - 6ed.pdf` | Teoría rigurosa — T5, T6, 2ª Parte Procesadores | Inglés |
+| Patterson Hennessy — Computer Organization and Design — 5ª ed. | `cond. Patterson Hennessy - Computer Organization and Design - 5ed.pdf` | Puente didáctico entre Stallings y Quantitative | Inglés |
+| Carter — Schaum Computer Architecture | `Carter - Schaum Computer Architecture.pdf` | Problemas resueltos — T1, T3, T5 | Inglés |
+| Mano — Computer System Architecture — 3ª ed. | `Mano - Computer System Architecture.pdf` | Segunda opinión — T3, T4, T5, T6 | Inglés |
+| Langdon — Computer Design | `Langdon - Computer Design.pdf` | Complemento AHPL — segunda opinión RTL. ❌ No cargado en NotebookLM — OCR falló (2 intentos). Uso en sesión directa únicamente. | Inglés |
+| Perez Soto — Diseño de sistemas digitales con VHDL | `Perez Soto - Diseño de sistemas digitales con VHDL.pdf` | VHDL — 2ª Parte HDL moderno vs AHPL | Español |
+| Stallings — Operating Systems — 8ª ed. | `Stallings - Operating Systems - 8ed.pdf` | Contexto SO — interrupciones y DMA — 2ª Parte E/S | Inglés |
+| Tanenbaum — Distributed Systems — 2ª ed. | `Tanenbaum - Distributed Systems.pdf` | Contexto distribuidos — T6 multiprocesadores | Inglés |
+| Hauck — Reconfigurable Computing | `Hauck - Reconfigurable Computing.pdf` | 2ª Parte Computación Reconfigurable | Inglés |
 
 ---
 
@@ -180,7 +181,7 @@ Archivos adicionales que no son libros completos pero aportan valor puntual a No
 
 | Tema | Primera opción | Segunda opción | Consulta puntual | Español |
 |---|---|---|---|---|
-| T1 — HDL / SIC / AHPL | Hill & Peterson Digital Systems 2ª ed. | Langdon Computer Design | Carter Schaum Computer Architecture | — |
+| T1 — HDL / SIC / AHPL | Hill & Peterson Digital Systems 2ª ed. | ahpl_diseno_sistemas_digitales | Carter Schaum Computer Architecture | — |
 | T2 — Comunicación entre sistemas | Hill & Peterson Digital Systems 2ª ed. | Hamacher 6ª ed. | Stallings COA 11ª ed. | Stallings español 7ª ed. |
 | T3 — Interrupciones y sistema I/O | Hill & Peterson Digital Systems 2ª ed. | Stallings COA 11ª ed. | Mano CSA 3ª ed. | Stallings español 7ª ed. |
 | T4 — Interfaces y periféricos | Hill & Peterson Digital Systems 2ª ed. | Hamacher 6ª ed. | Mano CSA 3ª ed. | Stallings español 7ª ed. |
@@ -188,7 +189,7 @@ Archivos adicionales que no son libros completos pero aportan valor puntual a No
 | T6 — Avances en tecnología | Stallings COA 11ª ed. | Hennessy & Patterson Quantitative 6ª ed. | Tanenbaum Distributed Systems 2ª ed. | Stallings español 7ª ed. |
 | 2ª Parte — Procesadores Avanzados | Hennessy & Patterson Quantitative 6ª ed. | Stallings COA 11ª ed. | — | — |
 | 2ª Parte — Computación Reconfigurable | Hauck & DeHon Reconfigurable Computing 1ª ed. | Stallings COA 11ª ed. | — | — |
-| 2ª Parte — E/S Computadores Comerciales | Stallings COA 11ª ed. | Stallings OS 8ª ed. | — | Stallings español 7ª ed. |
+| 2ª Parte — E/S Computadores Comerciales | Stallings COA 11ª ed. | Stallings OS 8ª ed. | Mano CSA 3ª ed. | Stallings español 7ª ed. |
 
 ---
 
@@ -196,7 +197,7 @@ Archivos adicionales que no son libros completos pero aportan valor puntual a No
 
 ```
 Tema AHPL / SIC / HDL (T1)    → Hill & Peterson Digital Systems 2ª ed.
-No entiendo la notación        → Langdon Computer Design (segunda opinión RTL)
+No entiendo la notación        → ahpl_diseno_sistemas_digitales (segunda opinión RTL)
 Base lógica previa             → Hill & Peterson Switching Theory 2ª ed.
 
 Tema comunicación (T2)         → Hill & Peterson Digital Systems 2ª ed.
@@ -219,7 +220,7 @@ Ejercicios resueltos           → Schaum's Computer Architecture
 2ª Parte — Reconfigurable      → Hauck & DeHon Reconfigurable Computing
 2ª Parte — E/S Comerciales     → Stallings COA 11ª ed. + Stallings OS 8ª ed.
 2ª Parte — Procesadores Avanz. → Hennessy & Patterson Quantitative 6ª ed.
-VHDL (si el docente lo pide)   → Pérez, Soto, Fernández — Diseño Sist. Digitales VHDL
+VHDL (si el docente lo pide)   → Pérez, Soto & Fernández — Diseño de Sistemas Digitales con VHDL
 ```
 
 ---

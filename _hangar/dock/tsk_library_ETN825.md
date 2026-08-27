@@ -10,9 +10,9 @@ blocked_by:
 ## Handoff
 
 **Última sesión:** 2026-08-27
-**Retomar desde:** Subir Langdon a NotebookLM una vez termine el OCR con PDF24 (en proceso). Luego subir complementos pendientes.
-**Completado esta sesión:** Guias ETN825_AHPL.md y ETN825_TikzJax.md creadas y revisadas (`E:\University_vault_2026\_app\notebooklm\guides\ETN825\`); prompt ETN825-comp_indice_BCv1.md creado (`E:\University_vault_2026\_app\notebooklm\prompts\ETN825\`); _library_ETN825.md corregida (Switching Theory 3ª → 2ª ed. en flujo de uso; T1 segunda opción reemplazada; tabla Archivos divididos renombrada columna a Capítulos H&P; sección Capítulos faltantes H&P renombrada); ETN825_AHPL 1.md corregida (LaTeX unificado en texto corrido, fila 7A tabla N11); ETN825_tikz.md corregida (N11 duplicado renombrado a N15, tabla N3 y header actualizados). Proyecto al 90%.
-**Próximo paso:** (1) Langdon OCR en proceso con PDF24 — ⚠️ no finalizado, reintentar carga a NotebookLM cuando termine. (2) Subir complementos a NotebookLM. (3) Subir guias y prompt a NotebookLM.
+**Retomar desde:** Subir guías y prompt a NotebookLM (pendiente). Subir complementos pendientes a NotebookLM.
+**Completado esta sesión:** Guias ETN825_AHPL.md y ETN825_TikzJax.md creadas y revisadas (`E:\University_vault_2026\_app\notebooklm\guides\ETN825\`); prompt ETN825-comp_indice_BCv1.md creado y corregido (`E:\University_vault_2026\_app\notebooklm\prompts\ETN825\`) — referencias a caps/capítulos unificadas a temas, Langdon eliminado, ahpl_diseno_sistemas_digitales como segunda opción T1; _library_ETN825.md corregida (Silberschatz registrado como descartado, Hamacher T4 agregado, typo status, fila duplicada stack, nota aclaratoria caps vs temas, Tanenbaum 2ª ed. especificada, Langdon marcado ❌ OCR falló 2 intentos — uso en sesión directa, ahpl_diseno_sistemas_digitales reemplaza Langdon en T1, Mano CSA como consulta puntual 2ª Parte E/S, Fernández confirmado como tercer autor VHDL). Stack cargado en NotebookLM completo excepto Langdon.
+**Próximo paso:** (1) Subir guías y prompt a NotebookLM. (2) Subir complementos pendientes a NotebookLM.
 
 ---
 
@@ -34,6 +34,8 @@ Construir y mantener la biblioteca de libros y complementos para ETN825 (Arquite
 | 2026-08-26 | Temario 2021 eliminado de la library | Contenido idéntico al 2026_1 — sin valor diferencial |
 | 2026-08-26 | T8/T9/T10 reubicados como complementarios no evaluados | No forman parte del temario oficial 2026_1 — se mantienen como referencia opcional |
 | 2026-08-26 | Hill & Peterson 3ª ed. sin conseguir — no prioritario | Fotocopias del docente (2ª ed.) cubren el contenido necesario; se busca solo si se requiere |
+| 2026-08-27 | Langdon descartado de NotebookLM | OCR falló 2 intentos (PDF24) — PDF de escaneo antiguo no recuperable. ahpl_diseno_sistemas_digitales reemplaza su rol como segunda opinión RTL en T1 |
+| 2026-08-27 | Silberschatz OS Concepts 10ª descartado | Stallings OS 8ª ya cubre el rol SO para 2ª Parte E/S — redundante |
 
 > [!note]- Descartadas
 > - Ediciones anteriores de libros repetidos (COD 3ª, 4ª; Quantitative 5ª) — redundantes con versiones más nuevas ya en el stack.
@@ -105,7 +107,7 @@ Restricciones:
 - [x] Conseguir libros pendientes — Pérez VHDL, Stallings OS, Silberschatz, Tanenbaum Distributed, Hauck Reconfigurable ✔️
 - [x] Cargar stack completo a NotebookLM — completado salvo 2 PDFs en espera (ver abajo).
 - [x] Subir fotocopias del docente (caps. 2,4,5,6 / 7 / 9,10,11,13) a NotebookLM y evaluar calidad de extracción → **Subidas correctamente.**
-- [ ] `Langdon - Computer Design.pdf` — ❌ falló carga a NotebookLM (PDF antiguo, escaneo). Comprimido con PDF24 ✅ — archivo listo en `C:\Users\USUARIO\Downloads\825_2026\Langdon - Computer Designcomp`. Próximo paso: pasar por OCR (https://tools.pdf24.org/es/ocr-pdf) y luego intentar carga a NotebookLM.
+- [x] ~~`Langdon - Computer Design.pdf`~~ → **❌ OCR falló 2 intentos (PDF24) — no cargable en NotebookLM. Descartado como fuente NotebookLM. Uso en sesión directa únicamente. ahpl_diseno_sistemas_digitales reemplaza su rol como segunda opinión RTL en T1.**
 - [x] ~~`Hill Peterson - Switching Theory and Logical Design - 3ed.pdf`~~ → **❌ falló carga a NotebookLM (PDF de fotos). Reemplazada por 2ª ed. — `Hill Peterson - Switching Theory and Logical Design - 2ed.pdf` cargada exitosamente a NotebookLM.**
 - [x] ~~Analizar diapositivas Stallings COA 10ª ed. en PDF — evaluar calidad de texto y definir uso en sesión~~ → **No se suben a NotebookLM — son muchas diapositivas, se usan directamente en sesión como repaso rápido.**
 - [x] ~~Decidir destino de 5 libros huérfanos: Stallings DCC 10ª, Stallings Comunicaciones 6ª, Forouzan 5ª, Stevens TCP/IP 2ª, Tanenbaum Networks 5ª~~ → **Descartados — redes/protocolos, fuera del scope del temario 2026.**
@@ -116,6 +118,9 @@ Restricciones:
 - [x] Actualizar tabla "qué usar por tema" contra temario oficial (T1–T6 + Segunda Parte)
 - [x] Actualizar flujo de uso contra temario oficial
 - [x] Integrar sección ChatGPT a tabla principal de Complementos — sección separada eliminada; `slide-introduccion_ahpl` y `ahpl_diseno_sistemas_digitales` integradas con veredictos y correcciones aplicadas.
+- [x] Subir guías a NotebookLM — `ETN825_AHPL.md` (AHPL/LaTeX) y `ETN825_TikzJax.md` subidas correctamente.
+- [ ] Subir prompt a NotebookLM — `ETN825-comp_indice_BCv1.md` listo en `E:\University_vault_2026\_app\notebooklm\prompts\ETN825\` — ⚠️ 11064 caracteres, máximo permitido es 10000 — requiere reducción antes de subir.
+- [ ] Subir complementos pendientes a NotebookLM
 
 ---
 

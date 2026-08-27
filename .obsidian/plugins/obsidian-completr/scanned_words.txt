@@ -111333,6 +111333,7 @@ rombos
 rombo
 retienen
 revisadas
+recuperable
 notes
 notas
 nuevas
@@ -120244,6 +120245,7 @@ negada
 numeran
 negadas
 negado
+ndez
 created
 commit
 cada
@@ -130299,6 +130301,7 @@ condicionado
 chequea
 complementados
 cond
+cargable
 updated
 un
 universo
@@ -140169,6 +140172,7 @@ uJYyn
 ujna
 unida
 uukq
+unificadas
 Galaxy
 Git
 Gr
@@ -177358,6 +177362,7 @@ FPGA
 FAISAL
 Fernandez
 Flujogramas
+Fern
 Estado
 Excalidraw
 EPUBs
