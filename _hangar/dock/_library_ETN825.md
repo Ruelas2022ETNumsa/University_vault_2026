@@ -188,53 +188,48 @@ Archivos adicionales que no son libros completos pero aportan valor puntual a No
 
 ## Qué usar por tema
 
-### Parcial 1 — AHPL y Comunicación (T1, T2)
-
 | Tema | Primera opción | Segunda opción | Consulta puntual | Español |
 |---|---|---|---|---|
 | T1 — HDL / SIC / AHPL | Hill & Peterson Digital Systems 2ª ed. | Hill & Peterson Digital Systems 1ª ed. (1973) | Langdon Computer Design | — |
 | T2 — Comunicación entre sistemas | Hill & Peterson Digital Systems 2ª ed. | Hamacher 6ª ed. | Stallings COA 11ª ed. | Stallings español 7ª ed. |
-
-### Parcial 2 — Interrupciones, I/O, Interfaces (T3, T4)
-
-| Tema | Primera opción | Segunda opción | Consulta puntual | Español |
-|---|---|---|---|---|
 | T3 — Interrupciones y sistema I/O | Hill & Peterson Digital Systems 2ª ed. | Stallings COA 11ª ed. | Mano CSA 3ª ed. | Stallings español 7ª ed. |
 | T4 — Interfaces y periféricos | Hill & Peterson Digital Systems 2ª ed. | Hamacher 6ª ed. | Mano CSA 3ª ed. | Stallings español 7ª ed. |
-
-### Parcial 3 — Memoria, Multiprocesadores, Avances (T5, T6)
-
-| Tema | Primera opción | Segunda opción | Consulta puntual | Español |
-|---|---|---|---|---|
 | T5 — Administración de memoria | Stallings COA 11ª ed. | Hennessy & Patterson Quantitative 6ª ed. | Mano CSA 3ª ed. | Stallings español 7ª ed. |
-| T6 — Avances / Multiprocesadores | Hennessy & Patterson Quantitative 6ª ed. | Stallings COA 11ª ed. | Tanenbaum Computer Networks 5ª ed. | Stallings español 7ª ed. |
-
-### Complemento Bloque B (T2 paralelo/serie — según avance del docente)
-
-| Tema | Primera opción | Segunda opción | Consulta puntual | Español |
-|---|---|---|---|---|
-| Comunicaciones paralelo/serie | Stallings DCC 10ª ed. | Forouzan 5ª ed. | — | Stallings Comunicaciones 6ª ed. |
-| TCP/IP (si el docente profundiza) | Stevens TCP/IP Illustrated Vol.1 2ª ed. | Tanenbaum Computer Networks 5ª ed. | — | — |
+| T6 — Avances en tecnología | Stallings COA 11ª ed. | Hennessy & Patterson Quantitative 6ª ed. | Tanenbaum Distributed Systems 2ª ed. | Stallings español 7ª ed. |
+| 2ª Parte — Procesadores Avanzados | Hennessy & Patterson Quantitative 6ª ed. | Stallings COA 11ª ed. | — | — |
+| 2ª Parte — Computación Reconfigurable | Hauck & DeHon Reconfigurable Computing 1ª ed. | Stallings COA 11ª ed. | — | — |
+| 2ª Parte — E/S Computadores Comerciales | Stallings COA 11ª ed. | Stallings OS 8ª ed. | Silberschatz OS Concepts 10ª ed. | Stallings español 7ª ed. |
 
 ---
 
 ## Flujo de uso
 
 ```
-Tema AHPL / SIC / HDL      → Hill & Peterson Digital Systems 2ª ed.
-No entiendo la notación    → Langdon Computer Design (segunda opinión RTL)
-Base lógica previa         → Hill & Peterson Switching Theory 3ª ed.
+Tema AHPL / SIC / HDL (T1)    → Hill & Peterson Digital Systems 2ª ed.
+No entiendo la notación        → Langdon Computer Design (segunda opinión RTL)
+Base lógica previa             → Hill & Peterson Switching Theory 3ª ed.
 
-Tema nuevo (arq. general)  → Stallings COA 11ª ed.
-No entiendo en inglés      → Stallings español 7ª ed.
-Segunda opinión arq.       → Hamacher 6ª ed.
-Quiero el fondo teórico    → Hennessy & Patterson Quantitative 6ª ed.
-Necesito paso a paso       → Patterson & Hennessy COD 5ª ed.
-Ejercicios resueltos       → Schaum's Computer Architecture
+Tema comunicación (T2)         → Hill & Peterson Digital Systems 2ª ed.
+Segunda opinión T2             → Hamacher 6ª ed.
 
-Tema comunicaciones        → Stallings DCC 10ª ed. o Forouzan 5ª ed.
-No entiendo en inglés (B)  → Stallings Comunicaciones 6ª ed. español
-Solo TCP/IP                → Stevens Vol.1 (consulta puntual)
+Tema I/O e interrupciones (T3) → Hill & Peterson Digital Systems 2ª ed.
+Tema interfaces (T4)           → Hill & Peterson Digital Systems 2ª ed.
+Segunda opinión T3/T4          → Stallings COA 11ª ed. o Hamacher 6ª ed.
+
+Tema memoria (T5)              → Stallings COA 11ª ed.
+Fondo teórico T5               → Hennessy & Patterson Quantitative 6ª ed.
+
+Tema avances/multiprocesadores (T6) → Stallings COA 11ª ed.
+Fondo teórico T6               → Hennessy & Patterson Quantitative 6ª ed.
+
+No entiendo en inglés          → Stallings español 7ª ed.
+Necesito paso a paso           → Patterson & Hennessy COD 5ª ed.
+Ejercicios resueltos           → Schaum's Computer Architecture
+
+2ª Parte — Reconfigurable      → Hauck & DeHon Reconfigurable Computing
+2ª Parte — E/S Comerciales     → Stallings COA 11ª ed. + Stallings OS 8ª ed.
+2ª Parte — Procesadores Avanz. → Hennessy & Patterson Quantitative 6ª ed.
+VHDL (si el docente lo pide)   → Pérez, Soto, Fernández — Diseño Sist. Digitales VHDL
 ```
 
 ---

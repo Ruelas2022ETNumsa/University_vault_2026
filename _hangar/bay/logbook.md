@@ -13,17 +13,17 @@ date_updated: 2026-08-02
 ---
 
 ## Panel de operaciones
-**2026/08/25**
+**2026/08/26**
 
-|     Worker     | Status | Estamina | Proyecto activo                                   | Wake  | Recarga |
-| :------------: | :----: | :------: | :------------------------------------------------ | :---: | :-----: |
-| [[alx_hot.md]] |   ❌    |    🟢    | Sistema consulta móvil via Drive MCP              |       |         |
-|  [[krajo.md]]  |   ❌    |    🔴    | Implementación física `_hangar/`                  | 21:30 | 2:30am  |
-| [[alx_gml.md]] |   ❌    |    🔴    | Sistema de links, sync y organización de carpetas | 22:10 | 3:00am  |
-| [[alxrul.md]]  |   ✔    |    🔴    | —                                                 | 18:00 |         |
-| [[alx-rul.md]] |   ❌    |    🔴    | Cornell Marginalia → Galaxy                       |       | 1:00am  |
-| [[standb.md]]  |   ✔    |    🟢    | —                                                 |   —   |    —    |
-| [[emergn.md]]  |   ✔    |    🟢    | —                                                 |   —   |    —    |
+|     Worker     | Status | Estamina | Proyecto activo                                   | Wake | Recarga |
+| :------------: | :----: | :------: | :------------------------------------------------ | :--: | :-----: |
+| [[alx_hot.md]] |   ❌    |    🔴    | Sistema consulta móvil via Drive MCP              |      |  23:20  |
+|  [[krajo.md]]  |   ❌    |    🟢    | Implementación física `_hangar/`                  |      |         |
+| [[alx_gml.md]] |   ❌    |    🟢    | Sistema de links, sync y organización de carpetas |      |         |
+| [[alxrul.md]]  |   ✔    |    🟢    | —                                                 |      |         |
+| [[alx-rul.md]] |   ❌    |    🟢    | Cornell Marginalia → Galaxy                       |      |         |
+| [[standb.md]]  |   ✔    |    🟢    | —                                                 |  —   |    —    |
+| [[emergn.md]]  |   ✔    |    🟢    | —                                                 |  —   |    —    |
 
 Estados de estamina:
 🟡 active — sesión en curso

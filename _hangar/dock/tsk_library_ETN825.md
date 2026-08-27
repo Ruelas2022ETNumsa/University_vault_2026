@@ -10,9 +10,9 @@ blocked_by:
 ## Handoff
 
 **Última sesión:** 2026-08-26
-**Retomar desde:** (1) Analizar diapositivas Stallings COA 10ª ed. en PDF — evaluar calidad de extracción de texto y definir uso en sesión. (2) Actualizar tabla “qué usar por tema” y flujo de uso contra temario oficial (CAP. 1–6 + Segunda Parte).
-**Completado esta sesión:** Temario oficial 2026_1 recibido del docente e incorporado a la library (reemplaza autocompletado T1–T7); T8/T9/T10 reubicados como complementarios no evaluados; Temario 2021 eliminado (redundante); 5 libros nuevos conseguidos y registrados en stack (Pérez VHDL, Stallings OS 8ª, Silberschatz OS Concepts 10ª, Tanenbaum Distributed Systems 2ª, Hauck Reconfigurable Computing 1ª); Hill & Peterson 3ª ed. sin conseguir — cubierta por fotocopias del docente, se busca solo si se requiere en el futuro; reajuste 2026_2 iniciado y parcialmente ejecutado.
-**Próximo paso:** (1) Analizar diapositivas Stallings COA en PDF. (2) Actualizar tabla “qué usar por tema” y flujo de uso contra temario oficial.
+**Retomar desde:** Revisar stack completo — 5 libros huérfanos sin rol en temario actual (Stallings DCC, Stallings Comunicaciones, Forouzan, Stevens TCP/IP, Tanenbaum Networks) + Schwartz & Ben David nunca registrado en descartados + definir si Stallings OS y Silberschatz aplican a T3 además de 2ª Parte E/S. Luego analizar diapositivas Stallings COA en PDF.
+**Completado esta sesión:** Temario oficial 2026_1 recibido e incorporado; T8/T9/T10 reubicados como complementarios; Temario 2021 eliminado; 5 libros nuevos en stack; tabla “qué usar por tema” y flujo de uso reescritos contra temario oficial; limpieza general de library.
+**Próximo paso:** (1) Decidir destino de 5 libros huérfanos (descartados o rol en temario). (2) Registrar Schwartz & Ben David en descartados. (3) Evaluar si Stallings OS / Silberschatz aplican a T3. (4) Analizar diapositivas Stallings COA en PDF.
 
 ---
 
@@ -102,8 +102,11 @@ Restricciones:
 - [x] Conseguir libros pendientes — Pérez VHDL, Stallings OS, Silberschatz, Tanenbaum Distributed, Hauck Reconfigurable ✔️
 - [ ] Subir fotocopias del docente (caps. 2,4,5,6 / 7 / 9,10,11,13) a NotebookLM y evaluar calidad de extracción
 - [ ] Analizar diapositivas Stallings COA 10ª ed. en PDF — evaluar calidad de texto y definir uso en sesión
-- [ ] Actualizar tabla “qué usar por tema” contra temario oficial (CAP. 1–6 + Segunda Parte)
-- [ ] Actualizar flujo de uso contra temario oficial
+- [ ] Decidir destino de 5 libros huérfanos: Stallings DCC 10ª, Stallings Comunicaciones 6ª, Forouzan 5ª, Stevens TCP/IP 2ª, Tanenbaum Networks 5ª — descartados o rol real en temario
+- [ ] Registrar Schwartz & Ben David — Understanding Machine Learning — en libros descartados
+- [ ] Evaluar si Stallings OS 8ª y Silberschatz OS Concepts 10ª aplican también a T3 (interrupciones/DMA) y actualizar tabla si corresponde
+- [x] Actualizar tabla “qué usar por tema” contra temario oficial (T1–T6 + Segunda Parte)
+- [x] Actualizar flujo de uso contra temario oficial
 
 ---
 
