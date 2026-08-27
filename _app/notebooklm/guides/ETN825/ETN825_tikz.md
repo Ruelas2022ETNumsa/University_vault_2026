@@ -766,6 +766,465 @@ Antes de entregar un bloque TikZJax verificar:
 
 ---
 
+#### Paquete de bits — instrucción TST
+
+> Contexto para NotebookLM: instrucción TST del SIC. Campos: OP (bits 0–5, valor `111100`), Test word (bits 6–17). La llave inferior agrupa bits 0–5 como OP. Usar como base para cualquier instrucción con campo OP de 6 bits seguido de un operando de 12 bits.
+
+```tikz
+\usepackage{amsmath}
+\begin{document}
+\begin{tikzpicture}[scale=1.0]
+
+% ---- FILA DE BITS ----
+% OP: bits 0-5 (6 celdas de 0.65 de ancho)
+\foreach \i/\v in {0/1, 1/1, 2/1, 3/1, 4/0, 5/0} {
+    \draw[thick] (\i*0.65, 0) rectangle (\i*0.65+0.65, 0.7);
+    \node[font=\small] at (\i*0.65+0.325, 0.35) {\v};
+}
+
+% Test word: bits 6-17 (bloque ancho)
+\draw[thick] (3.9, 0) rectangle (9.0, 0.7);
+\node[font=\small] at (6.45, 0.35) {Test word};
+
+% ---- ETIQUETA LABEL IZQUIERDA ----
+\node[font=\small, left] at (0, 0.35) {TST};
+
+% ---- ÍNDICES DE BIT ----
+\node[font=\scriptsize, gray] at (0,   0.9) {0};
+\node[font=\scriptsize, gray] at (3.9, 0.9) {6};
+\node[font=\scriptsize, gray] at (9.0, 0.9) {17};
+
+% ---- LLAVE OP (debajo de bits 0-5) ----
+\draw[thick] (0,-0.12) -- (0,-0.35) -- (1.95,-0.35);
+\draw[thick] (3.9,-0.12) -- (3.9,-0.35) -- (1.95,-0.35);
+\draw[thick] (1.95,-0.35) -- (1.95,-0.55);
+\node[font=\small] at (1.95,-0.8) {OP};
+
+\end{tikzpicture}
+\end{document}
+```
+
+---
+
+#### Paquete de bits — instrucción IOT con anotaciones de campo
+
+> Contexto para NotebookLM: instrucción IOT del SIC. Campos: OP (bits 0–5, valor `111101`), bits 6–8 de control (Command/Transfer, Status/Data, Command/Buffer), bit 9 (Input/Output), Device code **n** (bits 10–11), Control code (bits 12–17). Las llaves y flechas a la izquierda conectan los valores 1/0 con sus bits correspondientes. Es el diagrama más complejo de los tres — dividido en dos bloques: la fila de bits + índices, y las anotaciones.
+
+```tikz
+\usepackage{amsmath}
+\begin{document}
+\begin{tikzpicture}[scale=1.0]
+
+% ---- FILA DE BITS ----
+% OP: bits 0-5 (111101)
+\foreach \i/\v in {0/1, 1/1, 2/1, 3/1, 4/0, 5/1} {
+    \draw[thick] (\i*0.65, 0) rectangle (\i*0.65+0.65, 0.7);
+    \node[font=\small] at (\i*0.65+0.325, 0.35) {\v};
+}
+
+% Bits 6,7,8 — control individual
+\foreach \i in {6,7,8} {
+    \draw[thick] (\i*0.65, 0) rectangle (\i*0.65+0.65, 0.7);
+}
+
+% Bit 9 — Input/Output
+\draw[thick] (9*0.65, 0) rectangle (9*0.65+0.65, 0.7);
+
+% Bits 10-11 — Device code (n)
+\draw[thick] (10*0.65, 0) rectangle (10*0.65+0.65, 0.7);
+\draw[thick] (11*0.65, 0) rectangle (11*0.65+0.65, 0.7);
+
+% Bits 12-17 — Control code (bloque)
+\draw[thick] (12*0.65, 0) rectangle (12*0.65+1.4, 0.7);
+
+% ---- ETIQUETA LABEL IZQUIERDA ----
+\node[font=\small, left] at (0, 0.35) {IOT};
+
+% ---- ÍNDICES DE BIT ----
+\foreach \pos/\lbl in {
+    0/0, 3.9/6, 4.55/7, 5.2/8, 5.85/9, 6.5/10, 7.15/11, 7.8/12, 9.2/17
+} {
+    \node[font=\scriptsize, gray] at (\pos, 0.9) {\lbl};
+}
+
+% ---- ETIQUETAS DE CAMPO (sobre la fila) ----
+\node[font=\scriptsize, align=center] at (5.53, 1.35)
+    {Device};
+\node[font=\scriptsize, align=center] at (5.53, 1.1)
+    {code (\textbf{n})};
+\draw[gray, thin, ->] (5.53, 1.0) -- (6.825, 0.75);
+
+\node[font=\scriptsize] at (8.5, 1.35) {Control code};
+\draw[gray, thin] (7.8, 1.1) -- (7.8, 0.75);
+\draw[gray, thin] (9.2, 1.1) -- (9.2, 0.75);
+\draw[gray, thin] (7.8, 1.1) -- (9.2, 1.1);
+
+% ---- LLAVES Y ANOTACIONES IZQUIERDA (debajo) ----
+% Llave OP (bits 0-5)
+\draw[thick] (0,-0.12) -- (0,-0.32) -- (1.95,-0.32);
+\draw[thick] (3.9,-0.12) -- (3.9,-0.32) -- (1.95,-0.32);
+\draw[thick] (1.95,-0.32) -- (1.95,-0.52);
+\node[font=\small] at (1.95,-0.72) {OP};
+
+% Flecha y texto: bit 6 → 1=Command / 0=Transfer
+\draw[->, gray, thin] (-1.8,-1.4) -- (4.225,-0.1);
+\node[font=\scriptsize, align=left, anchor=east] at (-1.85,-1.3)
+    {$1 = $ Command};
+\node[font=\scriptsize, align=left, anchor=east] at (-1.85,-1.65)
+    {$0 = $ Transfer};
+% Llave izquierda agrupando las dos líneas
+\draw[thick] (-1.6,-1.2) -- (-1.35,-1.2) -- (-1.35,-1.75) -- (-1.6,-1.75);
+
+% Flecha y texto: bit 7 → 1=Status / 0=Data
+\draw[->, gray, thin] (-1.8,-2.4) -- (4.875,-0.1);
+\node[font=\scriptsize, align=left, anchor=east] at (-1.85,-2.3)
+    {$1 = $ Status};
+\node[font=\scriptsize, align=left, anchor=east] at (-1.85,-2.65)
+    {$0 = $ Data};
+\draw[thick] (-1.6,-2.2) -- (-1.35,-2.2) -- (-1.35,-2.75) -- (-1.6,-2.75);
+
+% Flecha y texto: bit 8 → 1=Command / 0=Buffer
+\draw[->, gray, thin] (-1.8,-3.4) -- (5.525,-0.1);
+\node[font=\scriptsize, align=left, anchor=east] at (-1.85,-3.3)
+    {$1 = $ Command};
+\node[font=\scriptsize, align=left, anchor=east] at (-1.85,-3.65)
+    {$0 = $ Buffer};
+\draw[thick] (-1.6,-3.2) -- (-1.35,-3.2) -- (-1.35,-3.75) -- (-1.6,-3.75);
+
+% Flecha y texto: bit 9 → 1=Input / 0=Output
+\draw[->, gray, thin] (6.175,-0.6) -- (6.175,-1.1);
+\node[font=\scriptsize, align=center] at (6.175,-1.35)
+    {$1 = $ Input};
+\node[font=\scriptsize, align=center] at (6.175,-1.7)
+    {$0 = $ Output};
+
+\end{tikzpicture}
+\end{document}
+```
+
+---
+
+### N11 — DIAGRAMAS DE FLUJO ADICIONALES
+
+#### Flujo IOT — bloque de decodificación (pasos 5–51)
+
+> Contexto para NotebookLM: bloque inicial del flujograma IOT. Desde el paso 4 (entrada), pasa por cuatro rombos de decisión en cadena: MRI (→6), OPR (→26), INT (→INT seq), TST (→TST seq). Si TST es No, continúa al paso 70. Este bloque es el tronco de decodificación de instrucciones OPR-extendidas del SIC.
+
+```tikz
+\usetikzlibrary{shapes.geometric, arrows.meta, positioning}
+\begin{document}
+\begin{tikzpicture}[
+    scale=0.88,
+    decision/.style={diamond, draw=gray, thick, aspect=2.4,
+                     inner sep=0pt, font=\small},
+    jump/.style={circle, draw=gray, thick, inner sep=2pt, font=\small},
+    subseq/.style={draw=gray, thick, rounded corners=4pt,
+                   minimum width=1.5cm, minimum height=0.6cm, font=\small}
+]
+
+% Entrada
+\node[jump] (n4) at (0,0) {4};
+
+% Rombo MRI
+\node[decision] (mri) at (2.2,0) {MRI?};
+\node[jump] (n6)  at (2.2,-1.5) {6};
+\node[font=\scriptsize, gray] at (2.2,-0.75) {Yes};
+
+% Número de paso 5
+\node[font=\scriptsize, gray] at (1.8, 0.35) {5};
+
+% Rombo OPR
+\node[decision] (opr) at (4.8,0) {OPR?};
+\node[jump] (n26) at (4.8,-1.5) {26};
+\node[font=\scriptsize, gray] at (4.8,-0.75) {Yes};
+\node[font=\scriptsize, gray] at (4.1, 0.35) {25};
+
+% Rombo INT
+\node[decision] (intd) at (7.4,0) {INT?};
+\node[subseq]   (intseq) at (7.4,-1.5) {INT\\seq};
+\node[font=\scriptsize, gray] at (7.4,-0.75) {Yes};
+\node[font=\scriptsize, gray] at (6.7, 0.35) {50};
+
+% Rombo TST
+\node[decision] (tst) at (10.0,0) {TST?};
+\node[subseq]   (tstseq) at (11.6,0) {TST\\seq};
+\node[font=\scriptsize, gray] at (10.8, 0.25) {Yes};
+\node[font=\scriptsize, gray] at (9.3, 0.35) {51};
+
+% Salida No de TST → paso 70
+\node[font=\scriptsize, gray] at (10.0,-0.75) {No};
+\node[jump] (n70) at (10.0,-1.5) {70};
+
+% Conexiones horizontales
+\draw[->, thick] (n4) -- (mri);
+\draw[->, thick] (mri) -- node[above, font=\scriptsize]{No} (opr);
+\draw[->, thick] (opr) -- node[above, font=\scriptsize]{No} (intd);
+\draw[->, thick] (intd) -- node[above, font=\scriptsize]{No} (tst);
+\draw[->, thick] (tst) -- (tstseq);
+
+% Salidas Yes (hacia abajo)
+\draw[->, thick] (mri)  -- (n6);
+\draw[->, thick] (opr)  -- (n26);
+\draw[->, thick] (intd) -- (intseq);
+\draw[->, thick] (tst)  -- (n70);
+
+\end{tikzpicture}
+\end{document}
+```
+
+---
+
+#### Flujo IOT — bloque TST/CSR y decodificación COMMAND (pasos 70–75)
+
+> Contexto para NotebookLM: bloque que sigue a la decodificación inicial cuando TST es No. Pasos 70–75: cargar CSR desde IR, poner CSBUS=CSR con csrdy=1, esperar accept (bucle), luego decidir COMMAND (→Transfer) y TYPE (Output→paso 75: MD←AC). Este bloque es la inicialización del canal CS antes de la transferencia.
+
+```tikz
+\usetikzlibrary{shapes.geometric, arrows.meta, calc}
+\begin{document}
+\begin{tikzpicture}[
+    scale=0.9,
+    decision/.style={diamond, draw=gray, thick, aspect=2.2,
+                     inner sep=1pt, font=\small},
+    operation/.style={draw=teal, thick, minimum width=3.2cm,
+                      minimum height=0.65cm, font=\small, align=center},
+    jump/.style={circle, draw=gray, thick, inner sep=2pt, font=\small}
+]
+
+% Entrada desde paso 70
+\node[jump] (n70in) at (0,0) {70};
+
+% Op 70: CSR ← IR_{8:17}
+\node[operation] (op70) at (0,-1.0)
+    {$CSR \leftarrow IR_{8:17}$};
+\node[font=\scriptsize, gray, left] at (-1.6,-1.0) {70};
+
+% Op 71: CSBUS=CSR / csrdy=1
+\node[operation] (op71) at (0,-2.2)
+    {$CSBUS = CSR$\\$csrdy \leftarrow 1$};
+\node[font=\scriptsize, gray, left] at (-1.6,-2.2) {71};
+
+% Rombo accept
+\node[decision] (acc) at (0,-3.6) {accept?};
+\node[font=\scriptsize, gray] at (0.2,-2.85) {0};
+\node[font=\scriptsize, gray] at (0.2,-4.25) {1};
+
+% Rombo COMMAND
+\node[decision] (cmd) at (0,-5.1) {COMMAND?};
+\node[font=\scriptsize, gray, left]  at (-0.1,-5.85) {No};
+\node[font=\scriptsize, gray, right] at (0.1,-5.85) {(Transfer)};
+
+% Rombo TYPE
+\node[decision] (typ) at (0,-6.5) {TYPE?};
+\node[font=\scriptsize, gray, left]  at (-1.5,-6.5) {Output};
+\node[font=\scriptsize, gray, right] at ( 1.0,-6.5) {Input};
+
+% Op 75: MD ← AC (Output)
+\node[operation] (op75) at (-2.2,-6.5)
+    {$MD \leftarrow AC$};
+\node[font=\scriptsize, gray, left] at (-3.8,-6.5) {75};
+
+% Salto Input → 78 (rama derecha)
+\node[jump] (n78) at (1.8,-6.5) {78};
+
+% Conexiones verticales principales
+\draw[->, thick] (n70in) -- (op70);
+\draw[->, thick] (op70)  -- (op71);
+\draw[->, thick] (op71)  -- (acc);
+\draw[->, thick] (acc)   -- node[right, font=\scriptsize]{1} (cmd);
+\draw[->, thick] (cmd)   -- (typ);
+\draw[->, thick] (typ)   -- (op75);
+\draw[->, thick] (typ)   -- (n78);
+
+% Bucle No de accept (vuelve al rombo)
+\draw[thick] (acc) -- node[above, font=\scriptsize]{0} ++(-1.6,0)
+    -- ++(0,1.45) -- (0,-2.15);
+
+% Salto COMMAND Yes → (72)
+\node[jump] (n72) at (2.2,-5.1) {72};
+\draw[->, thick] (cmd) -- node[above, font=\scriptsize]{Yes} (n72);
+
+\end{tikzpicture}
+\end{document}
+```
+
+---
+
+#### Flujo IOT — bloque Output (pasos 75–77)
+
+> Contexto para NotebookLM: rama Output del flujograma IOT. Paso 75: MD←AC. Paso 76: bucle de espera ready. Paso 77: IOBUS=MD / datavalid←1, luego esperar accept. Si accept=1 → volver a paso 24. Patrón típico de transferencia de salida hacia dispositivo.
+
+```tikz
+\usetikzlibrary{shapes.geometric, arrows.meta, calc}
+\begin{document}
+\begin{tikzpicture}[
+    scale=0.9,
+    decision/.style={diamond, draw=gray, thick, aspect=2.2,
+                     inner sep=1pt, font=\small},
+    operation/.style={draw=teal, thick, minimum width=3.2cm,
+                      minimum height=0.65cm, font=\small, align=center},
+    jump/.style={circle, draw=gray, thick, inner sep=2pt, font=\small}
+]
+
+% Op 75
+\node[operation] (op75) at (0,0) {$MD \leftarrow AC$};
+\node[font=\scriptsize, gray, left] at (-1.6,0) {75};
+
+% Rombo ready (bucle)
+\node[decision] (rdy) at (0,-1.4) {ready?};
+
+% Op 77: IOBUS=MD / datavalid←1
+\node[operation] (op77) at (0,-3.0)
+    {$IOBUS = MD$\\$datavalid \leftarrow 1$};
+\node[font=\scriptsize, gray, left] at (-1.6,-3.0) {77};
+
+% Rombo accept
+\node[decision] (acc) at (0,-4.5) {accept?};
+
+% Salto accept=1 → (24)
+\node[jump] (n24) at (0,-6.0) {24};
+
+% Conexiones
+\draw[->, thick] (op75) -- (rdy);
+\draw[->, thick] (rdy)  -- node[right, font=\scriptsize]{Yes} (op77);
+\draw[->, thick] (op77) -- (acc);
+\draw[->, thick] (acc)  -- node[right, font=\scriptsize]{Yes} (n24);
+
+% Bucle No de ready
+\draw[thick] (rdy) -- node[above, font=\scriptsize]{No} ++(-1.8,0)
+    -- ++(0,1.45) -- (0,0.05);
+
+% Bucle No de accept
+\draw[thick] (acc) -- node[above, font=\scriptsize]{No} ++(1.8,0)
+    -- ++(0,1.55) -- (0,-2.95);
+
+\end{tikzpicture}
+\end{document}
+```
+
+---
+
+#### Flujo IOT — bloque Input / BUFFER / DATA (pasos 72–84)
+
+> Contexto para NotebookLM: rama compleja del flujograma IOT. Desde paso 72 (COMMAND) y 73 (BUFFER). Rama Input (paso 78): espera ready=1, luego pregunta DATA: si Yes → MD←IOBUS / CSR←CSBUS, accept=1, luego chequea datavalid (bucle), DATA nuevamente, SKIP, PC←INC(PC). Si No → AC←MD (paso 82) y vuelve a 24. Patrón de transferencia de entrada con buffer y skip.
+
+```tikz
+\usetikzlibrary{shapes.geometric, arrows.meta, calc}
+\begin{document}
+\begin{tikzpicture}[
+    scale=0.82,
+    decision/.style={diamond, draw=gray, thick, aspect=2.2,
+                     inner sep=1pt, font=\small},
+    operation/.style={draw=teal, thick, minimum width=3.0cm,
+                      minimum height=0.65cm, font=\small, align=center},
+    jump/.style={circle, draw=gray, thick, inner sep=2pt, font=\small}
+]
+
+% Entradas
+\node[jump] (n72) at (-2, 0)  {72};
+\node[jump] (n73) at ( 2, 0)  {73};
+\node[jump] (n85) at ( 2, 1.2) {85};
+
+% Rombo COMMAND (72)
+\node[font=\scriptsize, gray, above] at (-2,0.5) {COMMAND};
+
+% Rombo BUFFER
+\node[font=\small, draw=gray, thick,
+      diamond, aspect=2.2, inner sep=1pt] (buf) at (0,-1.2) {BUFFER?};
+\draw[->, thick] (n72) -- (buf);
+\draw[->, thick] (n73) -- (buf);
+\draw[->, thick] (n85) -- (n73);
+
+% Salto BUFFER=Yes → (85) (vuelve arriba)
+\node[font=\scriptsize, gray, right] at (0.2,-0.5) {Yes};
+% flecha vuelve a n85
+\draw[->, thick] (buf) -- ++(1.8,0) node[right, font=\scriptsize]{Yes}
+    -- ++(0,2.5) -- (n85);
+
+% Op 78: ready=1 (Input, BUFFER=No)
+\node[operation] (op78) at (0,-2.8) {$ready \leftarrow 1$};
+\node[font=\scriptsize, gray, left] at (-1.6,-2.8) {78};
+\draw[->, thick] (buf) -- node[left, font=\scriptsize]{No (Input)} (op78);
+
+% Rombo datavalid (bucle espera)
+\node[font=\small, draw=gray, thick,
+      diamond, aspect=2.2, inner sep=1pt] (dvw) at (0,-4.2) {datavalid?};
+\draw[->, thick] (op78) -- (dvw);
+
+% Rombo DATA (79 rama)
+\node[font=\small, draw=gray, thick,
+      diamond, aspect=2.2, inner sep=1pt] (dat1) at (0,-5.8) {DATA?};
+\draw[->, thick] (dvw) -- node[right, font=\scriptsize]{Yes} (dat1);
+
+% Bucle No de datavalid → vuelve
+\draw[thick] (dvw) -- node[above, font=\scriptsize]{No} ++(-2.0,0)
+    -- ++(0,1.45) -- (0,-2.75);
+
+% Op 79 Yes: MD←IOBUS y CSR←CSBUS (simultáneo)
+\node[operation] (op79) at (-2.2,-7.4)
+    {$MD \leftarrow IOBUS$\\$CSR \leftarrow CSBUS$};
+\node[font=\scriptsize, gray, left] at (-3.8,-7.4) {79};
+\draw[->, thick] (dat1) -- node[left, font=\scriptsize]{Yes} (op79);
+
+% accept=1
+\node[operation] (accop) at (-2.2,-8.8) {$accept \leftarrow 1$};
+\draw[->, thick] (op79) -- (accop);
+
+% Rombo datavalid (80)
+\node[font=\small, draw=gray, thick,
+      diamond, aspect=2.2, inner sep=1pt] (dv80) at (-2.2,-10.2) {datavalid?};
+\draw[->, thick] (accop) -- (dv80);
+\node[font=\scriptsize, gray, left] at (-3.4,-10.2) {80};
+
+% Rombo DATA (81)
+\node[font=\small, draw=gray, thick,
+      diamond, aspect=2.2, inner sep=1pt] (dat81) at (-2.2,-11.6) {DATA?};
+\draw[->, thick] (dv80) -- node[right, font=\scriptsize]{No} (dat81);
+\node[font=\scriptsize, gray, left] at (-3.4,-11.6) {81};
+
+% Bucle Yes de dv80 → vuelve a op79
+\draw[thick] (dv80) -- node[above, font=\scriptsize]{Yes} ++(-2.0,0)
+    -- ++(0,2.9) -- (-2.2,-7.35);
+
+% Rombo SKIP (83)
+\node[font=\small, draw=gray, thick,
+      diamond, aspect=2.2, inner sep=1pt] (sk) at (-2.2,-13.0) {SKIP?};
+\draw[->, thick] (dat81) -- node[right, font=\scriptsize]{No} (sk);
+\node[font=\scriptsize, gray, left] at (-3.4,-13.0) {83};
+
+% Op 84: PC←INC(PC)
+\node[operation] (op84) at (-2.2,-14.4) {$PC \leftarrow INC(PC)$};
+\draw[->, thick] (sk) -- node[right, font=\scriptsize]{Yes} (op84);
+\node[font=\scriptsize, gray, left] at (-3.8,-14.4) {84};
+
+% Salida (24) desde 84
+\node[jump] (n24a) at (-2.2,-15.6) {24};
+\draw[->, thick] (op84) -- (n24a);
+
+% SKIP No también → (24)
+\node[jump] (n24b) at (0,-14.4) {24};
+\draw[->, thick] (sk) -- node[above, font=\scriptsize]{No} (n24b);
+
+% DATA 81 Yes → AC←MD (82)
+\node[operation] (op82) at (1.5,-11.6) {$AC \leftarrow MD$};
+\draw[->, thick] (dat81) -- node[above, font=\scriptsize]{Yes} (op82);
+\node[font=\scriptsize, gray, right] at (3.1,-11.6) {82};
+
+% AC←MD → (24)
+\node[jump] (n24c) at (1.5,-13.0) {24};
+\draw[->, thick] (op82) -- (n24c);
+
+% DATA 79 No → AC←MD también (rama corta)
+\node[operation] (op82b) at (2.2,-5.8) {$AC \leftarrow MD$};
+\draw[->, thick] (dat1) -- node[above, font=\scriptsize]{No} (op82b);
+\node[jump] (n24d) at (2.2,-7.2) {24};
+\draw[->, thick] (op82b) -- (n24d);
+
+\end{tikzpicture}
+\end{document}
+```
+
+---
+
 %%
 # galaxy-links
 [[_app/notebooklm/guides/ETN607/ETN607_TikzJax.md]]

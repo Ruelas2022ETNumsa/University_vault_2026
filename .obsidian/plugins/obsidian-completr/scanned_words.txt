@@ -9030,6 +9030,7 @@ tira
 transponer
 textit
 transacci
+tronco
 ToDo
 Templater
 Text
@@ -18835,6 +18836,8 @@ Thompson
 Third
 Texas
 TANENBAUM
+Transfer
+TYPE
 Sistema
 Sync
 Save
@@ -28803,6 +28806,11 @@ Silberschatz
 Soto
 Subidas
 SECUENCIA
+SALIDAS
+SIMULT
+SUBPASO
+SEQUENCE
+SKIP
 Plugins
 Pendientes
 Plugin
@@ -37580,6 +37588,10 @@ Practice
 Press
 Perez
 Paradigms
+Pone
+PATR
+PRODUCTO
+PERMANENTE
 del
 date
 de
@@ -46378,6 +46390,7 @@ discriminadores
 debate
 diamond
 desfasado
+destinos
 Vault
 Verificar
 Variables
@@ -72675,6 +72688,10 @@ bmdp
 brazo
 basales
 brico
+booleanas
+booleana
+bidireccionales
+bifurca
 scope
 status
 selector
@@ -82484,6 +82501,10 @@ ster
 sacado
 sincr
 salientes
+subrutina
+subpasos
+subpaso
+skip
 vault
 vil
 ver
@@ -101769,6 +101790,7 @@ ahpl
 arrows
 asynchronous
 anchos
+asignaci
 related
 recomendados
 ribbon
@@ -111305,6 +111327,7 @@ reescritos
 reintentar
 rombos
 rombo
+retienen
 notes
 notas
 nuevas
@@ -120212,6 +120235,10 @@ neta
 nculo
 negando
 normalizados
+negada
+numeran
+negadas
+negado
 created
 commit
 cada
@@ -130261,6 +130288,11 @@ contribuya
 computadoras
 corregidas
 construirlo
+combinacionales
+coincida
+condicionado
+chequea
+complementados
 updated
 un
 universo
@@ -158147,6 +158179,13 @@ Comprimido
 Clock
 CAJA
 CHAR
+COMBUSES
+Consume
+COMBINACIONALES
+CONDICI
+COMPUESTA
+COMBINACIONAL
+COMMAND
 Instalados
 Instalado
 Instalar
@@ -168093,6 +168132,7 @@ Invertida
 Internet
 Interconexiones
 Internals
+Incremento
 Funci
 File
 Fase
@@ -187344,6 +187384,12 @@ Exposici
 Elsevier
 EIJKHOUT
 Eighth
+Escalares
+ENTRADAS
+Eval
+EXPRESIONES
+ENTREGAR
+ESPERA
 Obsidian
 OmniSearch
 Ocultar
@@ -196322,6 +196368,9 @@ Obteniendo
 OStb
 OBLIGATORIOS
 ORGANIZACI
+OPERADORES
+Operadores
+OPERACI
 Auto
 Annotator
 Autocompletado
@@ -242152,6 +242201,11 @@ BIBLIOGRAF
 Boston
 Based
 BITS
+Bifurcaci
+Bifurca
+BUCLE
+BIFURCACI
+BUFFER
 en
 exacta
 escaneados
@@ -252096,6 +252150,9 @@ entran
 etiquetadas
 exitosamente
 enif
+efect
+enviado
+extendidas
 Motor
 Media
 Mantiene
@@ -271327,6 +271384,8 @@ Lrk
 Ligaduras
 LsRIO
 Long
+Language
+LTIPLE
 links
 las
 listar
@@ -279727,6 +279786,9 @@ lemma
 lEkA
 lagrangiana
 lenguajes
+leftarrow
+leftrightarrow
+land
 incluyendo
 im
 instalar
@@ -290345,6 +290407,9 @@ intercambiando
 iniciado
 introduccion
 intf
+incondicionalmente
+indefinido
+inicializaci
 Dependencia
 Dropbox
 Dataview
@@ -300130,6 +300195,10 @@ DEHON
 DEISENROTH
 DAVID
 DULO
+DECLARACIONES
+DECLARACI
+Device
+DIAGRAMAS
 Remotely
 Raz
 Revisa
@@ -310220,6 +310289,9 @@ River
 Rombo
 Rombos
 REGISTRO
+REGISTROS
+Retorno
+RETURN
 Hider
 Hace
 Herramientas
@@ -326846,6 +326918,7 @@ fuga
 figuraba
 ffnX
 formalismo
+flop
 haya
 hace
 hacer
@@ -364715,6 +364788,8 @@ NaaR
 NuRe
 Notar
 NEGRA
+NEAS
+NEGADAS
 originales
 observatory
 oficial
@@ -374213,6 +374288,7 @@ oeiU
 orienta
 orbital
 orbitando
+oplus
 junto
 json
 jer
