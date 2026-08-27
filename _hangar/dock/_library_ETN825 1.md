@@ -9,7 +9,6 @@ tags: [beacon, library, ETN825, infraestructura]
 date_created: 2026-07-29
 date_updated: 2026-08-26
 _last_edit: 2026-08-26 — Temario oficial incorporado; T8/T9/T10 movidos a complementarios; Temario 2021 eliminado; 5 libros nuevos agregados al stack (Perez VHDL, Stallings OS, Silberschatz OS, Tanenbaum Distributed, Hauck Reconfigurable)
-_last_edit_2: 2026-08-26 — 5 libros de redes/telecomunicaciones descartados (Stallings DCC, Stallings Comunicaciones, Forouzan, Stevens TCP/IP, Tanenbaum Networks) — fuera del scope del temario 2026
 status: desarollo
 ---
 
@@ -129,7 +128,11 @@ Este archivo es tu referencia personal para saber qué libro usar en cada tema d
 | Patterson, D.A. & Hennessy, J.L. — Computer Organization and Design: The Hardware/Software Interface — 5ª ed. (2014) | Puente didáctico entre Stallings y Quantitative | Inglés |
 | Carter, N. — Schaum's Outline of Computer Architecture — 1ª ed. (2002) | Problemas resueltos — T1, T3, T5 | Inglés |
 | Mano, M.M. — Computer System Architecture — 3ª ed. (1993) — Adaptación india Dorling Kindersley 2007 (ISBN: 0131755633) | Segunda opinión — T3/T4 (Cap. 11: I/O, interrupciones, DMA, serial), T5 (Cap. 12: memoria, caché, virtual), T6 (Cap. 13: multiprocesadores) — PDF completo 539 pp. ✅ | Inglés |
-
+| Stallings, W. — Data and Computer Communications — 10ª ed. (2013) | Teoría principal Bloque B — T2 paralelo/serie | Inglés |
+| Stallings, W. — Comunicaciones y Redes de Computadores — 6ª ed. | Puente lingüístico Bloque B | Español |
+| Forouzan, B.A. — Data Communications and Networking — 5ª ed. (2013) | Segunda opinión Bloque B — más didáctico | Inglés |
+| Stevens, W.R. & Fall, K.R. — TCP/IP Illustrated, Vol. 1: The Protocols — 2ª ed. (2011) | Complemento TCP/IP — consulta puntual | Inglés |
+| Tanenbaum, A.S. & Wetherall, D.J. — Computer Networks — 5ª ed. (2010) | Complemento redes — T6 multiprocesadores/dist. | Inglés |
 | Langdon, G.G. Jr. — Computer Design — 1ª ed. (1982) | Complemento AHPL — segunda opinión RTL | Inglés |
 | Hill, F.J. & Peterson, G.R. — Digital Systems: Hardware Organization and Design — 1ª ed. (1973) | Apoyo AHPL — primera formulación del lenguaje | Inglés |
 | Perez, Soto, Fernandez — Diseño de sistemas digitales con VHDL — 1ª ed. (2002) — Thomson | VHDL — Segunda Parte: contexto HDL moderno vs AHPL | Español |
@@ -282,11 +285,6 @@ Fuente: https://github.com/mguludag/Stallings-Computer-Org-and-Arch-Slides — p
 | Stallings — Solutions Manual Data and Computer Communications 10ª ed. caps. 1–13 (2014) | Redes/telecomunicaciones puro — Protocol Architecture, LAN, WAN, Ethernet. Sin contacto real con ETN825 |
 | Arpaci-Dusseau, R.H. & Arpaci-Dusseau, A.C. — Operating Systems: Three Easy Pieces (OSTEP) | SO puro — los temas de contacto (memoria virtual, DMA) están mejor cubiertos desde hardware por Stallings y Mano. Genera ruido en NotebookLM sin aportar valor diferencial para ETN825 |
 | Swanson, R.E. — Extensions of AHPL and Optimization of the AHPL Compiler for MSI/LSI Design (tesis doctoral, U. of Arizona) | Investigación de posgrado sobre construcción del compilador AHPL y extensiones para síntesis en chips MSI/LSI — excede completamente el nivel del temario. ETN825 trabaja AHPL como herramienta de descripción, no como objeto de investigación |
-| Stallings, W. — Data and Computer Communications — 10ª ed. (2013) | Redes y protocolos de comunicación — fuera del scope del temario 2026. T2 cubre comunicación entre módulos de sistema, no protocolos de red |
-| Stallings, W. — Comunicaciones y Redes de Computadores — 6ª ed. | Redes y protocolos de comunicación — puente lingüístico del anterior; descartado junto a él |
-| Forouzan, B.A. — Data Communications and Networking — 5ª ed. (2013) | Redes y protocolos de comunicación — fuera del scope del temario 2026. T2 cubre comunicación entre módulos de sistema, no protocolos de red |
-| Stevens, W.R. & Fall, K.R. — TCP/IP Illustrated, Vol. 1: The Protocols — 2ª ed. (2011) | Redes y protocolos de comunicación — fuera del scope del temario 2026. T2 cubre comunicación entre módulos de sistema, no protocolos de red |
-| Tanenbaum, A.S. & Wetherall, D.J. — Computer Networks — 5ª ed. (2010) | Redes y protocolos de comunicación — fuera del scope del temario 2026. Para T6 ya cubre Tanenbaum Distributed Systems que sí aplica a multiprocesadores |
 
 ---
 
