@@ -1103,9 +1103,9 @@
         "_claude-setup.md",
         "_claude-close.md",
         "_claude-boot.md",
-        "_start_movilx.md",
-        "_repaso_movil.md",
         "_start_movil.md",
+        "_repaso_movil.md",
+        "_start_movil607P1.md",
         "_plan_movil.md",
         "_start.md"
       ]
@@ -1163,7 +1163,8 @@
         "Constellations",
         "Observatory",
         "template",
-        "Scripts"
+        "Scripts",
+        "RENOMBRAR-27-08-2026 18.36.36.excalidraw.md"
       ]
     },
     "Excalidraw/Constellations": {
@@ -3563,7 +3564,8 @@
         "2026-08-15",
         "2026-08-16",
         "2026-08-19",
-        "2026-08-26"
+        "2026-08-26",
+        "draft.md"
       ]
     },
     "Rubbish/2026-08-12": {
@@ -5498,15 +5500,7 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_skills/_start_movilx.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_skills/_plan_movil.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_skills/_start_movil.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -5660,6 +5654,22 @@
       "isHidden": false
     },
     "Untitled.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Excalidraw/RENOMBRAR-27-08-2026 18.36.36.excalidraw.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_skills/_start_movil607P1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_skills/_start_movil.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/draft.md": {
       "isPinned": false,
       "isHidden": false
     }
