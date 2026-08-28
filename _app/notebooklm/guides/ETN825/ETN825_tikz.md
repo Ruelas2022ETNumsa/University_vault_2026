@@ -915,7 +915,7 @@ Antes de entregar un bloque TikZJax verificar:
 % Rombo MRI
 \node[decision] (mri) at (2.2,0) {MRI?};
 \node[jump] (n6)  at (2.2,-1.5) {6};
-\node[font=\scriptsize, gray] at (2.2,-0.75) {Yes};
+\node[font=\scriptsize, gray] at (2.55,-0.75) {Yes};
 
 % Número de paso 5
 \node[font=\scriptsize, gray] at (1.8, 0.35) {5};
@@ -923,23 +923,23 @@ Antes de entregar un bloque TikZJax verificar:
 % Rombo OPR
 \node[decision] (opr) at (4.8,0) {OPR?};
 \node[jump] (n26) at (4.8,-1.5) {26};
-\node[font=\scriptsize, gray] at (4.8,-0.75) {Yes};
+\node[font=\scriptsize, gray] at (5.15,-0.75) {Yes};
 \node[font=\scriptsize, gray] at (4.1, 0.35) {25};
 
 % Rombo INT
 \node[decision] (intd) at (7.4,0) {INT?};
 \node[subseq]   (intseq) at (7.4,-1.5) {INT\\seq};
-\node[font=\scriptsize, gray] at (7.4,-0.75) {Yes};
+\node[font=\scriptsize, gray] at (7.75,-0.75) {Yes};
 \node[font=\scriptsize, gray] at (6.7, 0.35) {50};
 
 % Rombo TST
 \node[decision] (tst) at (10.0,0) {TST?};
-\node[subseq]   (tstseq) at (11.6,0) {TST\\seq};
-\node[font=\scriptsize, gray] at (10.8, 0.25) {Yes};
+\node[subseq]   (tstseq) at (12.4,0) {TST\\seq};
+\node[font=\scriptsize, gray] at (11.2, 0.25) {Yes};
 \node[font=\scriptsize, gray] at (9.3, 0.35) {51};
 
 % Salida No de TST → paso 70
-\node[font=\scriptsize, gray] at (10.0,-0.75) {No};
+\node[font=\scriptsize, gray] at (10.35,-0.75) {No};
 \node[jump] (n70) at (10.0,-1.5) {70};
 
 % Conexiones horizontales
@@ -992,43 +992,45 @@ Antes de entregar un bloque TikZJax verificar:
 
 % Rombo accept
 \node[decision] (acc) at (0,-3.6) {accept?};
-\node[font=\scriptsize, gray] at (0.2,-2.85) {0};
-\node[font=\scriptsize, gray] at (0.2,-4.25) {1};
+\node[font=\scriptsize, gray, right] at (0.15,-2.95) {0};
+\node[font=\scriptsize, gray, right] at (0.15,-4.25) {1};
 
 % Rombo COMMAND
 \node[decision] (cmd) at (0,-5.1) {COMMAND?};
-\node[font=\scriptsize, gray, left]  at (-0.1,-5.85) {No};
-\node[font=\scriptsize, gray, right] at (0.1,-5.85) {(Transfer)};
 
-% Rombo TYPE
-\node[decision] (typ) at (0,-6.5) {TYPE?};
-\node[font=\scriptsize, gray, left]  at (-1.5,-6.5) {Output};
-\node[font=\scriptsize, gray, right] at ( 1.0,-6.5) {Input};
+% Rombo TYPE (centrado, más abajo)
+\node[decision] (typ) at (0,-7.0) {TYPE?};
+\node[font=\scriptsize, gray, left]  at (-0.3,-7.85) {Output};
+\node[font=\scriptsize, gray, right] at ( 0.3,-7.85) {Input};
 
-% Op 75: MD ← AC (Output)
-\node[operation] (op75) at (-2.2,-6.5)
+% Op 75: MD ← AC (Output, izquierda)
+\node[operation] (op75) at (-3.8,-7.0)
     {$MD \leftarrow AC$};
-\node[font=\scriptsize, gray, left] at (-3.8,-6.5) {75};
+\node[font=\scriptsize, gray, left] at (-5.4,-7.0) {75};
 
-% Salto Input → 78 (rama derecha)
-\node[jump] (n78) at (1.8,-6.5) {78};
+% Salto Input → 78 (derecha)
+\node[jump] (n78) at (2.5,-7.0) {78};
+
+% Salto COMMAND Yes → 72 (derecha)
+\node[jump] (n72) at (2.5,-5.1) {72};
 
 % Conexiones verticales principales
 \draw[->, thick] (n70in) -- (op70);
 \draw[->, thick] (op70)  -- (op71);
 \draw[->, thick] (op71)  -- (acc);
-\draw[->, thick] (acc)   -- node[right, font=\scriptsize]{1} (cmd);
-\draw[->, thick] (cmd)   -- (typ);
+\draw[->, thick] (acc)   -- (cmd);
+\draw[->, thick] (cmd)   -- node[right, font=\scriptsize]{No} ++(0,-0.5)
+                          -- node[right, font=\scriptsize]{(Transfer)} ++(0,-0.9)
+                          -- (typ);
 \draw[->, thick] (typ)   -- (op75);
 \draw[->, thick] (typ)   -- (n78);
 
-% Bucle No de accept (vuelve al rombo)
-\draw[thick] (acc) -- node[above, font=\scriptsize]{0} ++(-1.6,0)
-    -- ++(0,1.45) -- (0,-2.15);
+% Bucle 0 de accept (izquierda, vuelve arriba)
+\draw[thick] (acc.west) -- node[above, font=\scriptsize]{0} ++(-1.8,0)
+    -- ++(0,1.55) -- (op71.west);
 
-% Salto COMMAND Yes → (72)
-\node[jump] (n72) at (2.2,-5.1) {72};
-\draw[->, thick] (cmd) -- node[above, font=\scriptsize]{Yes} (n72);
+% COMMAND Yes → 72
+\draw[->, thick] (cmd.east) -- node[above, font=\scriptsize]{Yes} (n72);
 
 \end{tikzpicture}
 \end{document}
@@ -1054,7 +1056,7 @@ Antes de entregar un bloque TikZJax verificar:
 
 % Op 75
 \node[operation] (op75) at (0,0) {$MD \leftarrow AC$};
-\node[font=\scriptsize, gray, left] at (-1.6,0) {75};
+\node[font=\scriptsize, gray, left] at (-1.6,0.5) {75};
 
 % Rombo ready (bucle)
 \node[decision] (rdy) at (0,-1.4) {ready?};
@@ -1062,7 +1064,7 @@ Antes de entregar un bloque TikZJax verificar:
 % Op 77: IOBUS=MD / datavalid←1
 \node[operation] (op77) at (0,-3.0)
     {$IOBUS = MD$\\$datavalid \leftarrow 1$};
-\node[font=\scriptsize, gray, left] at (-1.6,-3.0) {77};
+\node[font=\scriptsize, gray, left] at (-1.8,-3.0) {77};
 
 % Rombo accept
 \node[decision] (acc) at (0,-4.5) {accept?};
@@ -1077,12 +1079,14 @@ Antes de entregar un bloque TikZJax verificar:
 \draw[->, thick] (acc)  -- node[right, font=\scriptsize]{Yes} (n24);
 
 % Bucle No de ready
-\draw[thick] (rdy) -- node[above, font=\scriptsize]{No} ++(-1.8,0)
-    -- ++(0,1.45) -- (0,0.05);
+\draw[thick,->] (rdy.west) -- ++(-1.8,0) coordinate (rdyleft)
+    -- ++(0,1.45) -- (-1.8,0.05);
+\node[font=\scriptsize, gray, above] at (-0.9,-1.4) {No};
 
 % Bucle No de accept
-\draw[thick] (acc) -- node[above, font=\scriptsize]{No} ++(1.8,0)
-    -- ++(0,1.55) -- (0,-2.95);
+\draw[thick,->] (acc.east) -- ++(1.8,0) coordinate (acright)
+    -- ++(0,1.55) -- (1.8,-2.95);
+\node[font=\scriptsize, gray, above] at (0.9,-4.5) {No};
 
 \end{tikzpicture}
 \end{document}
