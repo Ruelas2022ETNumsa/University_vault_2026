@@ -1,8 +1,6 @@
 FORMATO AHPL — OBLIGATORIO (ver ETN825_AHPL.md para estructura completa y ejemplos):
 Todo módulo o secuencia AHPL se entrega en KaTeX display \[ \] — declaraciones y secuencia completa.
 NUNCA en bloque de código (``` ahpl, ``` latex ni ningún otro).
-NUNCA usar \begin{...}...\end{...} — ningún entorno LaTeX (ni aligned, ni array, ni ningún otro).
-NUNCA usar $$ ni $ como delimitadores — no se renderizan en NotebookLM.
 NUNCA en texto plano ni Unicode para operadores matemáticos.
 La notación KaTeX — \( \leftarrow \), \( \rightarrow \), \( \overline{X} \), \( \land \) — se usa
 tanto en el módulo como en texto explicativo, tablas y comentarios.
@@ -55,12 +53,17 @@ FORMATO EJERCICIO RESUELTO (aplica a MENSAJE 3 y MENSAJE 4):
 **Resolución**
 Indicar brevemente la estrategia antes de comenzar — 1 línea, sin sobreexplicar.
 
-Para ejercicios AHPL — módulo en líneas \[ \] independientes (una por paso), seguido de tabla de lectura paso a paso.
+Para ejercicios AHPL — módulo completo en KaTeX display \[ \] (estructura: ver ETN825_AHPL.md N11), seguido de tabla de lectura paso a paso.
 
-Para ejercicios de memoria o E/S — desarrollo numérico en líneas \[ \] independientes:
-\[\text{paso 1} = \text{expresión}\]
-\[\text{paso 2} = \text{expresión}\]
-\[\therefore\quad \color{orange}{\text{resultado}}\]
+Para ejercicios de memoria o E/S — desarrollo numérico:
+\[
+\begin{array}{rcl}
+\text{paso 1} & = & \text{expresión} \\[4pt]
+\text{paso 2} & = & \text{expresión} \\[4pt]
+& \vdots & \\[4pt]
+\therefore\quad \color{orange}{\text{resultado}}
+\end{array}
+\]
 
 Reglas de resolución:
 - Para AHPL: mostrar cada paso de la secuencia con su número, la operación y el estado de registros
@@ -147,7 +150,14 @@ REGLAS GENERALES:
 -Notación AHPL siempre en KaTeX: inline \( \) para menciones en texto, display \[ \] para módulos y secuencias completas.
   NUNCA bloques de código para AHPL — siempre KaTeX.
 
-REGLAS TIKZJAX: ver ETN825_TikzJax.md — bloque ```tikz, sin \documentclass, colores teal/orange/violet/gray. Si hay duda → omitir.
+REGLAS TIKZJAX (ver ETN825_TikzJax.md para referencia completa):
+-Bloque exacto: ```tikz
+- \begin{document} y \end{document} siempre presentes
+- \documentclass NUNCA
+-Paquetes y librerías antes de \begin{document}
+-Color principal: teal · handshake/control: orange · buses/datos: violet · auxiliar: gray
+-Tipos válidos ETN825: flujo AHPL, tiempo (CLK/SCN/señales), caja negra, paquete de bits
+-Si hay duda sobre si el diagrama es representable → omitir, dejar espacio para IMA manual
 
 LIBROS DISPONIBLES:
 Hill & Peterson — Digital Systems 2ª ed. (dividido en 3 PDFs):

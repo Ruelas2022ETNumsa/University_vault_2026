@@ -1,7 +1,7 @@
 ---
 title: AHPL — Guía unificada para ETN825 (LaTeX NotebookLM)
 galaxy_body: beacon
-scope: yyvaultyy
+scope: xxvaultx
 tool: ahpl-notation
 audience:
   - usuario
@@ -60,17 +60,23 @@ Antes de escribir cualquier bloque AHPL, verificar en orden:
 
 Todo módulo AHPL tiene dos partes: **declaraciones** y **secuencia de control**. Sin declaraciones el módulo está incompleto.
 
-\[\textbf{MODULE: } \text{NOMBRE DEL MÓDULO}\]
-\[\textbf{MEMORY: } \langle\text{registros internos con tamaño}\rangle\]
-\[\textbf{OUTPUTS: } \langle\text{señales y registros de salida}\rangle\]
-\[\textbf{INPUTS: } \langle\text{señales de entrada}\rangle\]
-\[\textbf{COMBUSES: } \langle\text{buses combinacionales con tamaño}\rangle\]
-\[1.\; \langle\text{paso 1}\rangle\]
-\[2.\; \langle\text{paso 2}\rangle\]
-\[\quad\vdots\]
-\[N.\; \text{DEAD END} \quad (\text{o END SEQUENCE si retorna a otro módulo})\]
-\[\langle\text{expresiones combinacionales fuera de la secuencia}\rangle\]
-\[\textbf{END}\]
+\[
+\begin{aligned}
+&\textbf{MODULE: } \text{NOMBRE DEL MÓDULO} \\
+&\textbf{MEMORY: } \langle\text{registros internos con tamaño}\rangle \\
+&\textbf{OUTPUTS: } \langle\text{señales y registros de salida}\rangle \\
+&\textbf{INPUTS: } \langle\text{señales de entrada}\rangle \\
+&\textbf{COMBUSES: } \langle\text{buses combinacionales con tamaño}\rangle \\
+&\\
+&1.\; \langle\text{paso 1}\rangle \\
+&2.\; \langle\text{paso 2}\rangle \\
+&\quad\vdots \\
+&N.\; \text{DEAD END} \quad (\text{o END SEQUENCE si retorna a otro módulo}) \\
+&\\
+&\langle\text{expresiones combinacionales fuera de la secuencia}\rangle \\
+&\textbf{END}
+\end{aligned}
+\]
 
 Reglas:
 
@@ -252,11 +258,15 @@ Los pasos se numeran con enteros. Los subpasos usan letra sufijo.
 
 **Ejemplo de uso de etiquetas del módulo PRINTER INTERFACE:**
 
-\[\rightarrow (\overline{CSBUS_3},\; CSBUS_3 \land \overline{CSBUS_3},\; CSBUS_3)/(1,\; 1A,\; 3)\]
-\[\ldots\]
-\[1A.\; ready = 1;\; \rightarrow (\overline{datavalid})/(1A)\]
-\[2A.\; DR \leftarrow IOBUS;\; busy \leftarrow 1;\; accept = 1;\; first \leftarrow 1\]
-\[3A.\; CR \leftarrow (D_{10:17}!) * (first,\; \overline{first})\]
+\[
+\begin{aligned}
+&\rightarrow (\overline{CSBUS_3},\; CSBUS_3 \land \overline{CSBUS_3},\; CSBUS_3)/(1,\; 1A,\; 3) \\
+&\ldots \\
+&1A.\; ready = 1;\; \rightarrow (\overline{datavalid})/(1A) \\
+&2A.\; DR \leftarrow IOBUS;\; busy \leftarrow 1;\; accept = 1;\; first \leftarrow 1 \\
+&3A.\; CR \leftarrow (D_{10:17}!) * (first,\; \overline{first})
+\end{aligned}
+\]
 
 ---
 
@@ -264,9 +274,13 @@ Los pasos se numeran con enteros. Los subpasos usan letra sufijo.
 
 Algunas salidas se definen como expresiones combinacionales **después del END SEQUENCE**, antes del \( \textbf{END} \) del módulo. No son pasos — son definiciones permanentes.
 
-\[\text{END SEQUENCE}\]
-\[CHAR = CR\]
-\[\textbf{END}\]
+\[
+\begin{aligned}
+&\text{END SEQUENCE} \\
+&CHAR = CR \\
+&\textbf{END}
+\end{aligned}
+\]
 
 - \( CHAR = CR \) — la salida CHAR es siempre igual al contenido de CR (combinacional, no sincrónico).
 - Se usan para salidas que deben reflejar el estado actual del registro en todo momento.
@@ -322,26 +336,34 @@ Antes de escribir o completar un módulo, verificar:
 
 > Contexto para NotebookLM: módulo AHPL completo de la interface de impresora. Cubre el protocolo completo: espera de dirección en CSBUS, handshake con IOBUS (datavalid/accept), carga de DR, acumulación en CR con \( first \), envío a impresora (feed/print), y espera de \( wait \). Fuente: Hill & Peterson Digital Systems 2ª ed., material del docente ETN825.
 
-\[\textbf{MODULE: PRINTER INTERFACE}\]
-\[\textbf{MEMORY: } DR[18];\; CR[8];\; busy;\; first\]
-\[\textbf{OUTPUTS: } CHAR[8];\; print;\; feed\]
-\[\textbf{INPUTS: } wait;\; csrdy\]
-\[\textbf{COMBUSES: } IOBUS[18];\; CSBUS[12];\; ready;\; datavalid;\; accept\]
-\[1.\; \rightarrow (csrdy \land \overline{CSBUS_0} \land CSBUS_1 \land \overline{CSBUS_2})/(1)\]
-\[2.\; accept = 1;\; \rightarrow (\overline{CSBUS_3},\; \overline{CSBUS_3},\; CSBUS_3)/(1,\; 1A,\; 3)\]
-\[3.\; \rightarrow (\overline{ready})/(3)\]
-\[4.\; CSBUS_0 = busy;\; datavalid = 1;\; \rightarrow (\overline{accept},\; accept)/(4,\; 1)\]
-\[1A.\; ready = 1;\; \rightarrow (\overline{datavalid})/(1A)\]
-\[2A.\; DR \leftarrow IOBUS;\; busy \leftarrow 1;\; accept = 1;\; first \leftarrow 1\]
-\[3A.\; CR \leftarrow (D_{10:17}!) * (first,\; \overline{first})\]
-\[4A.\; feed = RETURN(CR);\; print = RETURN(CR)\]
-\[5A.\; \text{Null}\]
-\[6A.\; \rightarrow (wait)/(6A)\]
-\[7A.\; first \leftarrow 0;\; busy * \overline{first} \leftarrow 0;\; \rightarrow (first,\; \overline{first})/(3A,\; 8A)\]
-\[8A.\; \text{DEAD END}\]
-\[\text{END SEQUENCE}\]
-\[CHAR = CR\]
-\[\textbf{END}\]
+\[
+\begin{aligned}
+&\textbf{MODULE: PRINTER INTERFACE} \\
+&\textbf{MEMORY: } DR[18];\; CR[8];\; busy;\; first \\
+&\textbf{OUTPUTS: } CHAR[8];\; print;\; feed \\
+&\textbf{INPUTS: } wait;\; csrdy \\
+&\textbf{COMBUSES: } IOBUS[18];\; CSBUS[12];\; ready;\; datavalid;\; accept \\
+&\\
+&1.\; \rightarrow (csrdy \land \overline{CSBUS_0} \land CSBUS_1 \land \overline{CSBUS_2})/(1) \\
+&2.\; accept = 1;\; \rightarrow (\overline{CSBUS_3},\; \overline{CSBUS_3},\; CSBUS_3)/(1,\; 1A,\; 3) \\
+&\\
+&3.\; \rightarrow (\overline{ready})/(3) \\
+&4.\; CSBUS_0 = busy;\; datavalid = 1;\; \rightarrow (\overline{accept},\; accept)/(4,\; 1) \\
+&\\
+&1A.\; ready = 1;\; \rightarrow (\overline{datavalid})/(1A) \\
+&2A.\; DR \leftarrow IOBUS;\; busy \leftarrow 1;\; accept = 1;\; first \leftarrow 1 \\
+&3A.\; CR \leftarrow (D_{10:17}!) * (first,\; \overline{first}) \\
+&4A.\; feed = RETURN(CR);\; print = RETURN(CR) \\
+&5A.\; \text{Null} \\
+&6A.\; \rightarrow (wait)/(6A) \\
+&7A.\; first \leftarrow 0;\; busy * \overline{first} \leftarrow 0;\; \rightarrow (first,\; \overline{first})/(3A,\; 8A) \\
+&8A.\; \text{DEAD END} \\
+&\\
+&\text{END SEQUENCE} \\
+&CHAR = CR \\
+&\textbf{END}
+\end{aligned}
+\]
 
 #### Lectura paso a paso
 
@@ -367,14 +389,21 @@ Antes de escribir o completar un módulo, verificar:
 
 > Contexto para NotebookLM: patrón de polling. El módulo permanece en el mismo paso hasta que una señal cambia de estado.
 
-\[\text{Espera mientras la señal es 0 (sale cuando es 1):}\]
-\[N.\; \rightarrow (\overline{\text{señal}})/(N)\]
-\[\text{Espera mientras la señal es 1 (sale cuando es 0):}\]
-\[N.\; \rightarrow (\text{señal})/(N)\]
-\[\text{Ejemplo — esperar que } ready = 1:\]
-\[3.\; \rightarrow (\overline{ready})/(3)\]
-\[\text{Ejemplo — esperar que } wait = 0:\]
-\[6A.\; \rightarrow (wait)/(6A)\]
+\[
+\begin{aligned}
+&\text{Espera mientras la señal es 0 (sale cuando es 1):} \\
+&N.\; \rightarrow (\overline{se\tilde{n}al})/(N) \\
+&\\
+&\text{Espera mientras la señal es 1 (sale cuando es 0):} \\
+&N.\; \rightarrow (se\tilde{n}al)/(N) \\
+&\\
+&\text{Ejemplo — esperar que } ready = 1: \\
+&3.\; \rightarrow (\overline{ready})/(3) \\
+&\\
+&\text{Ejemplo — esperar que } wait = 0: \\
+&6A.\; \rightarrow (wait)/(6A)
+\end{aligned}
+\]
 
 ---
 
@@ -382,14 +411,21 @@ Antes de escribir o completar un módulo, verificar:
 
 > Contexto para NotebookLM: bifurcación a más de dos destinos según combinación de bits de un bus. Las condiciones son mutuamente excluyentes.
 
-\[\text{Formato general:}\]
-\[\rightarrow (\text{cond}_1,\; \text{cond}_2,\; \text{cond}_3)/(\text{dest}_1,\; \text{dest}_2,\; \text{dest}_3)\]
-\[\text{Ejemplo — decodificación por } CSBUS_3:\]
-\[\rightarrow (\overline{CSBUS_3},\; \overline{CSBUS_3},\; CSBUS_3)/(1,\; 1A,\; 3)\]
-\[\text{Ejemplo — decodificación de instrucción por } IR_0:\]
-\[\rightarrow (\overline{IR_0},\; IR_0)/(fetch,\; execute)\]
-\[\text{Ejemplo — bifurcación triple por } IR_{0:1}:\]
-\[\rightarrow (IR_0 \land \overline{IR_1},\; \overline{IR_0} \land IR_1,\; IR_0 \land IR_1)/(A,\; B,\; C)\]
+\[
+\begin{aligned}
+&\text{Formato general:} \\
+&\rightarrow (\text{cond}_1,\; \text{cond}_2,\; \text{cond}_3)/(\text{dest}_1,\; \text{dest}_2,\; \text{dest}_3) \\
+&\\
+&\text{Ejemplo — decodificación por } CSBUS_3: \\
+&\rightarrow (\overline{CSBUS_3},\; \overline{CSBUS_3},\; CSBUS_3)/(1,\; 1A,\; 3) \\
+&\\
+&\text{Ejemplo — decodificación de instrucción por } IR_0: \\
+&\rightarrow (\overline{IR_0},\; IR_0)/(fetch,\; execute) \\
+&\\
+&\text{Ejemplo — bifurcación triple por } IR_{0:1}: \\
+&\rightarrow (IR_0 \land \overline{IR_1},\; \overline{IR_0} \land IR_1,\; IR_0 \land IR_1)/(A,\; B,\; C)
+\end{aligned}
+\]
 
 > Regla: la suma lógica de todas las condiciones debe ser 1. Si ninguna se cumple, el comportamiento es indefinido.
 
@@ -399,15 +435,23 @@ Antes de escribir o completar un módulo, verificar:
 
 > Contexto para NotebookLM: el operador \( * \) (producto condicional) permite cargar un registro con uno de dos valores según una condición booleana, en un único paso sincrónico.
 
-\[\text{Formato:}\]
-\[REG \leftarrow (\text{expresión}!) * (cond,\; \overline{cond})\]
-\[\text{Interpretación:}\]
-\[\text{Si } cond = 1 \Rightarrow REG \leftarrow \text{expresión}\]
-\[\text{Si } cond = 0 \Rightarrow REG \leftarrow 0\]
-\[\text{Ejemplo del módulo PRINTER INTERFACE:}\]
-\[3A.\; CR \leftarrow (D_{10:17}!) * (first,\; \overline{first})\]
-\[\text{Si } first = 1 \Rightarrow CR \leftarrow \overline{D_{10:17}}\]
-\[\text{Si } first = 0 \Rightarrow CR \leftarrow 0\]
+\[
+\begin{aligned}
+&\text{Formato:} \\
+&REG \leftarrow (\text{expresión}!) * (cond,\; \overline{cond}) \\
+&\\
+&\text{Interpretación:} \\
+&\text{Si } cond = 1 \Rightarrow REG \leftarrow \text{expresión} \\
+&\text{Si } cond = 0 \Rightarrow REG \leftarrow 0 \\
+&\\
+&\text{Ejemplo del módulo PRINTER INTERFACE:} \\
+&3A.\; CR \leftarrow (D_{10:17}!) * (first,\; \overline{first}) \\
+&\\
+&\text{Interpretación:} \\
+&\text{Si } first = 1 \Rightarrow CR \leftarrow \overline{D_{10:17}} \\
+&\text{Si } first = 0 \Rightarrow CR \leftarrow 0
+\end{aligned}
+\]
 
 > El \( ! \) después de la expresión indica complemento lógico bit a bit de ese rango.
 
@@ -417,16 +461,25 @@ Antes de escribir o completar un módulo, verificar:
 
 > Contexto para NotebookLM: las expresiones después de \( \text{END SEQUENCE} \) y antes del \( \textbf{END} \) son salidas combinacionales que el módulo mantiene en todo momento, sin reloj.
 
-\[\text{Formato:}\]
-\[\text{END SEQUENCE}\]
-\[SALIDA = \text{expresión}\]
-\[\textbf{END}\]
-\[\text{Ejemplo — CHAR siempre refleja CR:}\]
-\[\text{END SEQUENCE}\]
-\[CHAR = CR\]
-\[\textbf{END}\]
-\[\text{Ejemplo con salida negada: } CHAR = \overline{CR}\]
-\[\text{Ejemplo con selección de bits: } CHAR = CR_{0:7}\]
+\[
+\begin{aligned}
+&\text{Formato:} \\
+&\text{END SEQUENCE} \\
+&SALIDA = \text{expresión} \\
+&\textbf{END} \\
+&\\
+&\text{Ejemplo — CHAR siempre refleja CR:} \\
+&\text{END SEQUENCE} \\
+&CHAR = CR \\
+&\textbf{END} \\
+&\\
+&\text{Ejemplo con salida negada:} \\
+&CHAR = \overline{CR} \\
+&\\
+&\text{Ejemplo con selección de bits:} \\
+&CHAR = CR_{0:7}
+\end{aligned}
+\]
 
 > Diferencia con transferencia en paso: \( CR \leftarrow valor \) ocurre una vez al borde de reloj. \( CHAR = CR \) es continuo — si CR cambia, CHAR cambia en el mismo instante.
 
@@ -438,23 +491,29 @@ Antes de escribir o completar un módulo, verificar:
 
 > Contexto para NotebookLM: módulo AHPL de un controlador de máquinas-herramienta con ROM de programa. Cubre: selección de secuencia desde SQR, direccionamiento de ROM con AR, carga de instrucción en PR, detección de fin de secuencia por reducción AND, control de flip-flop ss con producto condicional fuera de secuencia. Fuente: Hill & Peterson Digital Systems 2ª ed., material del docente ETN825.
 
-\[\textbf{MODULE: CONTROLADOR DE MÁQUINAS-HERRAMIENTA}\]
-\[\textbf{MEMORY: } ROM[1024,\,18];\; PR[18];\; AR[10];\; SQR[2];\; ss\]
-\[\textbf{INPUTS: } SEQ[2];\; start;\; stop\]
-\[\textbf{OUTPUTS: } OPR[18]\]
-\[1.\; SQR \leftarrow SEQ\]
-\[\quad\rightarrow (\overline{ss},\, ss)/(1,\,2)\]
-\[2.\; AR \leftarrow SQR_0,\, SQR_1,\, 8T0\]
-\[3.\; PR \leftarrow BUSFN(ROM;\, DCD(AR))\]
-\[4.\; AR \leftarrow INC(AR)\]
-\[\quad\rightarrow \bigl((\bigwedge\!/ AR_{2:9} \land ss),\;\overline{ss},\;\overline{(\bigwedge\!/ AR_{2:9} \land ss)}\bigr)/(5,\,6,\,3)\]
-\[5.\; ss \leftarrow 0\]
-\[6.\; PR \leftarrow 18T0\]
-\[\quad\rightarrow (1)\]
-\[\text{END SEQUENCE}\]
-\[ss * (start \lor stop) \leftarrow (1{!}0) * (start,\, stop)\]
-\[OPR = PR\]
-\[\textbf{END}\]
+\[
+\begin{aligned}
+&\textbf{MODULE: CONTROLADOR DE MÁQUINAS-HERRAMIENTA} \\
+&\textbf{MEMORY: } ROM[1024,\,18];\; PR[18];\; AR[10];\; SQR[2];\; ss \\
+&\textbf{INPUTS: } SEQ[2];\; start;\; stop \\
+&\textbf{OUTPUTS: } OPR[18] \\
+&\\
+&1.\; SQR \leftarrow SEQ \\
+&\quad\rightarrow (\overline{ss},\, ss)/(1,\,2) \\
+&2.\; AR \leftarrow SQR_0,\, SQR_1,\, 8T0 \\
+&3.\; PR \leftarrow BUSFN(ROM;\, DCD(AR)) \\
+&4.\; AR \leftarrow INC(AR) \\
+&\quad\rightarrow \bigl((\bigwedge\!/ AR_{2:9} \land ss),\;\overline{ss},\;\overline{(\bigwedge\!/ AR_{2:9} \land ss)}\bigr)/(5,\,6,\,3) \\
+&5.\; ss \leftarrow 0 \\
+&6.\; PR \leftarrow 18T0 \\
+&\quad\rightarrow (1) \\
+&\\
+&\text{END SEQUENCE} \\
+&ss * (start \lor stop) \leftarrow (1{!}0) * (start,\, stop) \\
+&OPR = PR \\
+&\textbf{END}
+\end{aligned}
+\]
 
 #### Lectura paso a paso
 

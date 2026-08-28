@@ -10,9 +10,9 @@ blocked_by:
 ## Handoff
 
 **Última sesión:** 2026-08-28
-**Retomar desde:** `E:\University_vault_2026\_app\notebooklm\guides\ETN825\ETN825_AHPL.md` — después de N16 (si hay más imágenes) o prueba en NotebookLM
-**Completado esta sesión:** diagnóstico, investigación web, ship, revisión de 3 imágenes (2 variantes de PRINTER INTERFACE descartadas), N16 CONTROLADOR DE MÁQUINAS-HERRAMIENTA agregado
-**Próximo paso:** re-prueba en NotebookLM con prompt corregido
+**Retomar desde:** `E:\University_vault_2026\_app\notebooklm\prompts\ETN825\ETN825-comp_indice_BCv1i.md` y `ETN825_AHPL.md` — nueva revisión
+**Completado esta sesión:** diagnóstico x2, investigación web x2, ship, imágenes revisadas, N16 agregado, prompt corregido (KaTeX + sin bloques), prompt comprimido (9852 chars), \begin{aligned} eliminado de guía y prompt, \begin{array} eliminado del prompt
+**Próximo paso:** ver PROBLEMA PENDIENTE abajo
 **Preguntas de cierre:** —
 
 ---
@@ -20,6 +20,53 @@ blocked_by:
 ## Resumen y objetivo
 
 Agregar una sección de ejemplos de pares pregunta→respuesta a la guía `ETN825_AHPL.md` para que NotebookLM genere código AHPL en KaTeX y no en texto plano. El problema es que NotebookLM entiende la notación pero no la produce en el formato correcto sin ejemplos concretos de imitación.
+
+## Problema pendiente — inicio próxima sesión
+
+**Síntoma:** NotebookLM sigue generando `$$\begin{aligned}...\end{aligned}$$` por su cuenta aunque la guía y el prompt no lo usan. El modelo lo hace por preentrenamiento — ignora las instrucciones de formato.
+
+**Lo descartado:** el problema no es la guía ni los delimitadores — ambos ya están corregidos. El modelo genera ese formato por defecto cuando produce AHPL.
+
+**Líneas de ataque para la próxima sesión:**
+1. Agregar prohibición explícita en el prompt: `NUNCA \begin{aligned}, NUNCA \begin{array}, NUNCA ningún entorno \begin{...}`
+2. Agregar en la sección `🤖 NOTEBOOKLM` de la guía la misma prohibición con ejemplo negativo explícito
+3. Evaluar si agregar un par pregunta→respuesta en la guía donde se muestre el output correcto (líneas \[ \] independientes) vs el incorrecto ($$\begin{aligned}$$)
+
+**Nota sobre delimitadores:** mantener `\[ \]` y `\( \)` — NO usar `$$`. La web no tiene documentación oficial de Google sobre este punto, pero la experiencia directa del usuario confirma que `$$` rompió el renderizado en versiones anteriores de NotebookLM. Hasta que haya evidencia contraria, `\[ \]` es el delimitador correcto.
+
+**Archivos a revisar:**
+- `E:\University_vault_2026\_app\notebooklm\prompts\ETN825\ETN825-comp_indice_BCv1i.md`
+- `E:\University_vault_2026\_app\notebooklm\guides\ETN825\ETN825_AHPL.md` — sección 🤖 NOTEBOOKLM
+
+---
+
+## Diagnóstico técnico — problema de renderizado
+
+**Causa raíz identificada:** `\begin{aligned}` genera un bloque multilinea que NotebookLM divide en múltiples nodos del DOM y no renderiza completo. El problema no son los delimitadores `\[ \]` sino el entorno `aligned`.
+
+**Solución:** reemplazar cada bloque `\[ \begin{aligned} ... \end{aligned} \]` por líneas `\[ \]` independientes — una por paso. Así cada línea es un nodo DOM separado que renderiza solo.
+
+**Delimitadores a mantener:** `\[ \]` para display, `\( \)` para inline — NO usar `$$` (falló en versiones anteriores de NotebookLM).
+
+**Ejemplo de conversión:**
+```
+❌ ANTES:
+\[ \begin{aligned}
+&\textbf{MODULE: PRINTER INTERFACE} \\
+&1.\; ready = 1 \\
+\end{aligned} \]
+
+✅ DESPUÉS:
+\[\textbf{MODULE: PRINTER INTERFACE}\]
+\[1.\; ready = 1\]
+```
+
+**Alcance del cambio:**
+- Guía `ETN825_AHPL.md` — todas las secciones N1–N16 que usen `\begin{aligned}`
+- Prompt `ETN825-comp_indice_BCv1i.md` — FORMATO EJERCICIO RESUELTO
+- Prompt: también bajar de 10231 a <10000 chars (faltan ~231 chars menos)
+
+---
 
 ## Decisiones
 
@@ -78,8 +125,16 @@ NotebookLM es un sistema RAG sobre Gemini — lee los fuentes y genera respuesta
 - [x] Prueba en NotebookLM — falló (entregó bloque de código)
 - [x] Diagnóstico: conflicto entre prompt y guía — prompt prohibía KaTeX explícitamente
 - [x] Corregir prompt `ETN825-comp_indice_BCv1i.md` — 3 secciones actualizadas a KaTeX
+- [x] Comprimir prompt — bajó a 10231 chars (límite 10000, faltan ~231 chars menos)
+- [x] Diagnóstico renderizado — causa: \begin{aligned} rompe DOM en NotebookLM
+- [x] Reemplazar \begin{aligned} por líneas \[ \] independientes en guía (N1–N16) — 9 bloques
+- [x] Reemplazar \begin{aligned} en prompt (FORMATO EJERCICIO RESUELTO)
+- [x] Terminar compresión del prompt — 9852 chars (✓ bajo 10000)
+- [x] Eliminar \begin{array} del prompt
+- [x] Re-prueba en NotebookLM — sigue fallando: modelo genera $$\begin{aligned}$$ por preentrenamiento
+- [ ] PRÓXIMA SESIÓN: agregar prohibición explícita \begin{} en prompt y guía (ver PROBLEMA PENDIENTE)
+- [ ] Evaluar par pregunta→respuesta con ejemplo correcto vs incorrecto
 - [ ] Re-prueba en NotebookLM
-- [ ] (Si falla) conversión de delimitadores + corrección
 
 ---
 
