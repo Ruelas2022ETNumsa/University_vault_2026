@@ -1,7 +1,7 @@
 ---
 title: AHPL — Guía unificada para ETN825 (LaTeX NotebookLM)
 galaxy_body: beacon
-scope: vaultx
+scope: xxvaultx
 tool: ahpl-notation
 audience:
   - usuario
@@ -482,6 +482,76 @@ Antes de escribir o completar un módulo, verificar:
 \]
 
 > Diferencia con transferencia en paso: \( CR \leftarrow valor \) ocurre una vez al borde de reloj. \( CHAR = CR \) es continuo — si CR cambia, CHAR cambia en el mismo instante.
+
+---
+
+---
+
+### N16. MÓDULO COMPLETO — CONTROLADOR DE MÁQUINAS-HERRAMIENTA
+
+> Contexto para NotebookLM: módulo AHPL de un controlador de máquinas-herramienta con ROM de programa. Cubre: selección de secuencia desde SQR, direccionamiento de ROM con AR, carga de instrucción en PR, detección de fin de secuencia por reducción AND, control de flip-flop ss con producto condicional fuera de secuencia. Fuente: Hill & Peterson Digital Systems 2ª ed., material del docente ETN825.
+
+\[
+\begin{aligned}
+&\textbf{MODULE: CONTROLADOR DE MÁQUINAS-HERRAMIENTA} \\
+&\textbf{MEMORY: } ROM[1024,\,18];\; PR[18];\; AR[10];\; SQR[2];\; ss \\
+&\textbf{INPUTS: } SEQ[2];\; start;\; stop \\
+&\textbf{OUTPUTS: } OPR[18] \\
+&\\
+&1.\; SQR \leftarrow SEQ \\
+&\quad\rightarrow (\overline{ss},\, ss)/(1,\,2) \\
+&2.\; AR \leftarrow SQR_0,\, SQR_1,\, 8T0 \\
+&3.\; PR \leftarrow BUSFN(ROM;\, DCD(AR)) \\
+&4.\; AR \leftarrow INC(AR) \\
+&\quad\rightarrow \bigl((\bigwedge\!/ AR_{2:9} \land ss),\;\overline{ss},\;\overline{(\bigwedge\!/ AR_{2:9} \land ss)}\bigr)/(5,\,6,\,3) \\
+&5.\; ss \leftarrow 0 \\
+&6.\; PR \leftarrow 18T0 \\
+&\quad\rightarrow (1) \\
+&\\
+&\text{END SEQUENCE} \\
+&ss * (start \lor stop) \leftarrow (1{!}0) * (start,\, stop) \\
+&OPR = PR \\
+&\textbf{END}
+\end{aligned}
+\]
+
+#### Lectura paso a paso
+
+| Paso | Qué hace |
+|---|---|
+| `1.` | Carga SQR con la secuencia seleccionada (SEQ). Bifurca: si ss=0 → vuelve a 1 (espera start), si ss=1 → va a 2. |
+| `2.` | Carga AR con la dirección base: bits altos = SQR₀,SQR₁ (selecciona bloque de 256), bits bajos = 8 ceros. |
+| `3.` | Lee ROM en la dirección AR y carga la instrucción en PR usando BUSFN con decodificador DCD. |
+| `4.` | Incrementa AR. Bifurca: si reducción AND de AR₂₋₉ = 1 y ss=1 → fin de secuencia (5), si ss=0 → reset (6), si no → sigue leyendo (3). |
+| `5.` | Pone ss=0 — fin del ciclo de ejecución. |
+| `6.` | Resetea PR a cero y vuelve al inicio (1). |
+| `ss*(start∨stop)` | Fuera de secuencia: producto condicional — si start=1 → ss←1 (activa máquina), si stop=1 → ss←0 (detiene). |
+| `OPR=PR` | Salida combinacional permanente: OPR siempre refleja el contenido de PR. |
+
+#### Patrones nuevos en este módulo
+
+**`ROM[1024, 18]`** — memoria declarada en MEMORY con dos parámetros: cantidad de palabras y ancho en bits.
+
+\[ \textbf{MEMORY: } ROM[1024,\,18] \]
+
+**`8T0` / `18T0`** — constante de N bits todos en cero.
+
+\[ AR \leftarrow SQR_0,\, SQR_1,\, 8T0 \quad \leftarrow \text{concatenación: 2 bits de SQR + 8 ceros} \]
+\[ PR \leftarrow 18T0 \quad \leftarrow \text{reset: 18 bits en cero} \]
+
+**`BUSFN(ROM; DCD(AR))`** — función de bus: selecciona la palabra de ROM apuntada por el decodificador de AR.
+
+\[ PR \leftarrow BUSFN(ROM;\, DCD(AR)) \]
+
+**`∧/REG_{i:j}`** — reducción AND: es 1 solo si todos los bits del rango son 1. Detecta fin de conteo.
+
+\[ \bigwedge\!/ AR_{2:9} = 1 \quad \Leftrightarrow \quad AR_{2:9} = 11111111_2 \]
+
+**Producto condicional fuera de secuencia** — permite actualizar un flip-flop desde señales externas de forma continua.
+
+\[ ss * (start \lor stop) \leftarrow (1{!}0) * (start,\, stop) \]
+
+> Si start=1 → ss←1 (arranca la máquina). Si stop=1 → ss←0 (detiene). El operador `!` indica complemento: `1!0` = NOT de `10` binario.
 
 ---
 
