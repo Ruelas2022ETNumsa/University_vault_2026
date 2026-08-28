@@ -65,9 +65,7 @@ Indicar brevemente la estrategia antes de comenzar — 1 línea, sin sobreexplic
 Para ejercicios AHPL — tabla de registros paso a paso:
 
 | Paso | Operación | Registros afectados | Resultado |
-| ---- | --------- | ------------------- | --------- |
-| 1    | ...       | ...                 | ...       |
-|      |           |                     |           |
+|-|-|-|-|
 
 Para ejercicios de memoria o E/S — desarrollo numérico:
 \[
@@ -119,20 +117,12 @@ Máximo 2 líneas.
 
 CASO A — figura en el libro:
 ![[pegar_imagen]]
-*[etiqueta de figura tal como aparece en el libro, ej: Fig. 9-4] · [descripción]*
-→ descripción:
-    · Si el libro tiene texto descriptivo → usarlo tal cual
-    · Si no hay texto → generar una línea máximo basada en lo que se ve
-      en la figura y el contexto del subtema. No inventar detalles técnicos.
-      Si la figura es ambigua → omitir descripción.
-→ agregar al pie el bloque de localización en este formato exacto (dos líneas):
+*Fig. X-X · descripción (texto del libro; si no hay → 1 línea del contexto; si es ambigua → omitir)*
 [[nombre del archivo PDF#page=N]]
 *Fig. X-X*
-justificación: [por qué esta figura sirve — 1 oración, sin describir lo que se ve]
-→ N es el número de página impreso en el libro (no el número del visor)
-→ la etiqueta *Fig. X-X* debe coincidir exactamente con la del libro (con asteriscos de italics)
-→ si hay más de una figura relevante → un bloque por figura
-→ ⚠️ 825-Hill-Peterson-Resumen-Docente-ESP no tiene numeración de página ni etiquetas — omitir bloque de localización para ese archivo
+justificación: [por qué sirve — 1 oración]
+⚠️ N = página impresa del libro. Más de una figura → un bloque por figura.
+⚠️ 825-Hill-Peterson-Resumen-Docente-ESP — omitir bloque de localización.
 
 CASO B — no hay figura en el libro pero el concepto es representable → generar bloque TikZJax:
 ```tikz
@@ -152,17 +142,12 @@ Si hay duda sobre la complejidad → omitir y dejar espacio para IMA manual.
 Si no hay figura ni diagrama aplicable → omitir sección 3.
 
 REGLAS GENERALES:
--Solo citar si podés confirmar fuente + página + id. Si no, omitir — no inventar.
--Figura: usar siempre ![[pegar_imagen]] + pie + bloque de localización ([[nombre.pdf#page=N]] + *Fig. X-X*). No usar embed de página completa.
--El nombre del archivo debe coincidir exactamente con el nombre del PDF cargado.
--La etiqueta *Fig. X-X* es obligatoria. Si no hay etiqueta, usar el pie textual.
-  Si tampoco hay pie, describir brevemente el visual como id.
--Podés citar más de una figura si son relevantes.
--Sin introducción, sin cierre, sin comentarios — solo el contenido estructurado.
--Respuesta compacta: no más de lo necesario para entender el concepto.
--No adelantar contenido del subtítulo límite ni de subtítulos posteriores.
--Notación AHPL siempre en LaTeX inline: \( \leftarrow \), \( \rightarrow \), \( \overline{X} \), \( \land \).
-  Bloques de código AHPL en bloque de código estándar — no LaTeX.
+-Solo citar si podés confirmar fuente + página + id. Si no → omitir.
+-Figura: ![[pegar_imagen]] + pie + [[nombre.pdf#page=N]] + *Fig. X-X*. Sin embed de página completa.
+-Nombre del PDF exacto. Etiqueta *Fig. X-X* obligatoria; si no hay → pie textual; si no hay → descripción breve.
+-Sin introducción, sin cierre, sin comentarios. Respuesta compacta.
+-No adelantar subtítulo límite ni posteriores.
+-Notación AHPL en LaTeX inline fuera del bloque de código: \( \leftarrow \), \( \rightarrow \), \( \overline{X} \), \( \land \).
 
 REGLAS TIKZJAX (ver ETN825_TikzJax.md para referencia completa):
 -Bloque exacto: ```tikz

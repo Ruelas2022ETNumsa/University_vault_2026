@@ -23,7 +23,9 @@
         "Rubbish",
         "Borrar",
         "shared",
-        "README.md"
+        "README.md",
+        "ETN825-T01.md",
+        "Untitled.md"
       ]
     },
     "MOC": {
@@ -277,10 +279,11 @@
         "PDF-601",
         "PDF-Electrónica analógica",
         "PDF-telefonia",
-        "BORRADOR OK OK ETN 825 2022.pdf",
         "PDF-1015",
+        "ETN-825",
         "ETN-607",
-        "ETN-505"
+        "ETN-505",
+        "BORRADOR OK OK ETN 825 2022.pdf"
       ]
     },
     "_templates": {
@@ -5624,7 +5627,8 @@
       "sortOrder": "custom",
       "customOrder": [
         "ETN825-comp_indice_BCv1i.md",
-        "ETN825-comp_indice_BCv1ii.md"
+        "ETN825-comp_indice_BCv1ii.md",
+        "ETN825-comp_indice_BCv2i.md"
       ]
     },
     "_app/notebooklm/prompts/ETN825/ETN825-comp_indice_BCv1i.md": {
@@ -5660,6 +5664,24 @@
       "isHidden": false
     },
     "_app/notebooklm/guides/ETN825/ETN825_AHPL.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "ETN825-T01.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/ETN-825": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "Untitled.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN825/ETN825-comp_indice_BCv2i.md": {
       "isPinned": false,
       "isHidden": false
     }
