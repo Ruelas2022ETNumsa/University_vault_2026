@@ -1,5 +1,5 @@
 ---
-title: AHPL — Guía unificada para ETN825
+title: AHPL — Guía unificada para ETN825 (LaTeX NotebookLM)
 galaxy_body: beacon
 scope: vault
 tool: ahpl-notation
@@ -19,7 +19,9 @@ status: activo
 
 # ⚡ GUÍA UNIFICADA DE NOTACIÓN AHPL (ETN825)
 
-> Guía de escritura y lectura de módulos AHPL (A Hardware Programming Language) para Arquitectura de Computadores (ETN825). Basada en Hill & Peterson — Digital Systems 2ª ed. y material del docente. Este documento está organizado en tres bloques: **Reglas de notación (N1–N9)**, **Checklist (N10)**, y **Biblioteca de ejemplos por tipo (N11–N14)**.
+> Guía de escritura y lectura de módulos AHPL (A Hardware Programming Language) para Arquitectura de Computadores (ETN825). Basada en Hill & Peterson — Digital Systems 2ª ed. y material del docente. Este documento está organizado en tres bloques: **Reglas de notación (N1–N9)**, **Checklist (N10)**, y **Biblioteca de ejemplos por tipo (N11–N15)**.
+>
+> **Nota de formato:** las expresiones AHPL usan LaTeX con `\( \)` para inline y `\[ \]` para display. Los bloques de código del módulo usan bloques de código estándar — LaTeX solo aplica a la notación matemática, no al código fuente AHPL.
 
 ---
 
@@ -31,9 +33,9 @@ Instrucciones para que NotebookLM escriba, complete o explique código AHPL corr
 
 - Formato de bloque: sección de declaraciones primero, luego pasos numerados.
 - Registros: mayúsculas (`DR`, `CR`, `AC`, `PC`, `MR`). Escalares: minúsculas (`busy`, `ready`, `first`).
-- Transferencia: `←` (asignación con reloj). Conexión de bus: `=` (sin reloj).
-- Bifurcación fija: `→ (D)`. Bifurcación condicional: `→ (f)/(D)` o `→ (f, f̄)/(D1, D2)`.
-- Condición negada: barra sobre la expresión (en texto plano usar `CSBUS_0̄` o indicar con `NOT(...)`).
+- Transferencia: \( \leftarrow \) (asignación con reloj). Conexión de bus: \( = \) (sin reloj).
+- Bifurcación fija: \( \rightarrow (D) \). Bifurcación condicional: \( \rightarrow (f)/(D) \) o \( \rightarrow (f,\, \bar{f})/(D_1, D_2) \).
+- Condición negada: barra sobre la expresión — \( \overline{X} \).
 - Paso nulo: `Null` — consume un ciclo de reloj sin operación.
 - Fin de secuencia: `DEAD END` o `END SEQUENCE`.
 
@@ -111,7 +113,7 @@ MEMORY: DR[18]; CR[8]; busy; first
 | `BUS[N]` | Bus de N bits, conexión combinacional | `IOBUS[18]`, `CSBUS[12]` |
 | Señal booleana en COMBUSES | Bus de 1 bit (señal de handshake) | `ready`, `datavalid`, `accept` |
 
-> **Diferencia clave:** `MEMORY` usa reloj — las transferencias `←` solo se efectúan al borde de reloj. `COMBUSES` es combinacional — las conexiones `=` son inmediatas y no retienen valor.
+> **Diferencia clave:** `MEMORY` usa reloj — las transferencias \( \leftarrow \) solo se efectúan al borde de reloj. `COMBUSES` es combinacional — las conexiones \( = \) son inmediatas y no retienen valor.
 
 ---
 
@@ -119,9 +121,9 @@ MEMORY: DR[18]; CR[8]; busy; first
 
 | Sección | Qué declara | Dirección |
 |---|---|---|
-| `INPUTS` | Señales que llegan de otros módulos o dispositivos | → hacia este módulo |
-| `OUTPUTS` | Señales o registros que salen hacia otros módulos | ← desde este módulo |
-| `COMBUSES` | Buses compartidos bidireccionales o señales de handshake | ↔ bidireccional |
+| `INPUTS` | Señales que llegan de otros módulos o dispositivos | \( \rightarrow \) hacia este módulo |
+| `OUTPUTS` | Señales o registros que salen hacia otros módulos | \( \leftarrow \) desde este módulo |
+| `COMBUSES` | Buses compartidos bidireccionales o señales de handshake | \( \leftrightarrow \) bidireccional |
 
 **Ejemplo del módulo PRINTER INTERFACE:**
 
@@ -148,36 +150,36 @@ COMBUSES: IOBUS[18]; CSBUS[12]; ready; datavalid; accept
 
 #### Transferencia y conexión
 
-| Operador | Nombre | Uso | Reloj |
+| Operador | LaTeX | Nombre | Reloj |
 |---|---|---|---|
-| `←` | Transferencia | `AC ← DR` — copia DR en AC al borde de reloj | Sí (sincrónico) |
-| `=` | Conexión de bus | `IBUS = AC` — conecta AC al bus | No (combinacional) |
-| `*` | Producto condicional | `CR ← (D₁₀:₁₇!) * (first, first̄)` | Sí |
+| \( \leftarrow \) | `\leftarrow` | Transferencia — \( AC \leftarrow DR \) copia DR en AC al borde de reloj | Sí |
+| \( = \) | `=` | Conexión de bus — \( IBUS = AC \) conecta AC al bus | No |
+| \( * \) | `*` | Producto condicional — \( CR \leftarrow (D_{10:17}!) * (first,\, \overline{first}) \) | Sí |
 
 #### Operadores lógicos
 
-| Símbolo | Operación | Alternativa texto | Ejemplo |
-|---|---|---|---|
-| `∧` | AND | `AND`, `&` | `csrdy ∧ CSBUS₀` |
-| `∨` | OR | `OR`, `+` | `busy ∨ first` |
-| `⊕` | XOR | `XOR`, `@` | `AC ⊕ DR` |
-| `¬` / barra | NOT | `NOT`, `!` al final del operando | `CSBUS̄₀`, `(accept)̄` |
+| Símbolo | LaTeX | Operación | Alternativa texto | Ejemplo |
+|---|---|---|---|---|
+| \( \land \) | `\land` | AND | `AND`, `&` | \( csrdy \land \overline{CSBUS_0} \) |
+| \( \lor \) | `\lor` | OR | `OR`, `+` | \( busy \lor first \) |
+| \( \oplus \) | `\oplus` | XOR | `XOR`, `@` | \( AC \oplus DR \) |
+| \( \overline{X} \) | `\overline{X}` | NOT | `NOT`, `!` al final | \( \overline{CSBUS_0} \), \( \overline{accept} \) |
 
 #### Selección de bits
 
-| Notación | Significado | Ejemplo |
-|---|---|---|
-| `REG[i]` | Bit i del registro | `IR[0]`, `CR[7]` |
-| `REG[i:j]` | Bits i a j | `IR[8:17]`, `D[10:17]` |
-| `REG[i:j]!` | Bits i a j, complementado | `D[10:17]!` — NOT de esa porción |
+| Notación | LaTeX | Significado | Ejemplo |
+|---|---|---|---|
+| \( REG_i \) | `REG_i` | Bit i del registro | \( IR_0 \), \( CR_7 \) |
+| \( REG_{i:j} \) | `REG_{i:j}` | Bits i a j | \( IR_{8:17} \), \( D_{10:17} \) |
+| \( REG_{i:j}! \) | `REG_{i:j}!` | Bits i a j, complementados | \( D_{10:17}! \) — NOT de esa porción |
 
 #### Operaciones aritméticas
 
-| Notación | Operación | Ejemplo |
-|---|---|---|
-| `INC(REG)` | Incremento | `PC ← INC(PC)` |
-| `ADD(A,B)` | Suma | `AC ← ADD(AC, DR)` |
-| `RETURN(REG)` | Retorno/complemento lógico | `feed = RETURN(CR)` |
+| Notación | LaTeX | Operación | Ejemplo |
+|---|---|---|---|
+| \( INC(REG) \) | `INC(REG)` | Incremento | \( PC \leftarrow INC(PC) \) |
+| \( ADD(A,B) \) | `ADD(A,B)` | Suma | \( AC \leftarrow ADD(AC, DR) \) |
+| \( RETURN(REG) \) | `RETURN(REG)` | Complemento lógico | \( feed = RETURN(CR) \) |
 
 ---
 
@@ -392,7 +394,7 @@ END
 | `4A.` | Envía señales `feed` y `print` a la impresora (combinacional, basado en CR). |
 | `5A.` | Paso nulo — sincronización de un ciclo. |
 | `6A.` | Bucle de espera: permanece mientras la impresora indica `wait=1`. |
-| `7A.` | Pone `first←0` y borra `busy*first̄`. Bifurca: si `first=1` vuelve a 3A, si no va a 8A. |
+| `7A.` | Pone \( first \leftarrow 0 \) y borra \( busy * \overline{first} \). Bifurca: si \( first = 1 \) vuelve a 3A, si no va a 8A. |
 | `8A.` | DEAD END — módulo detenido hasta nuevo llamado. |
 | `CHAR=CR` | Salida combinacional permanente: CHAR siempre refleja el contenido de CR. |
 

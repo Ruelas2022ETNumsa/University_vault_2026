@@ -23,8 +23,7 @@
         "Rubbish",
         "Borrar",
         "shared",
-        "README.md",
-        "Untitled.md"
+        "README.md"
       ]
     },
     "MOC": {
@@ -5596,7 +5595,6 @@
       "sortOrder": "custom",
       "customOrder": [
         "ETN825_tikz.md",
-        "ETN825_AHPL 1.md",
         "ETN825_AHPL.md"
       ]
     },
@@ -5617,14 +5615,6 @@
       ]
     },
     "_app/notebooklm/guides/ETN825/ETN825_tikz.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/guides/ETN825/ETN825_AHPL 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/guides/ETN825/ETN825_AHPL.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -5653,10 +5643,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Untitled.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Excalidraw/RENOMBRAR-27-08-2026 18.36.36.excalidraw.md": {
       "isPinned": false,
       "isHidden": false
@@ -5670,6 +5656,10 @@
       "isHidden": false
     },
     "Rubbish/draft.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/guides/ETN825/ETN825_AHPL.md": {
       "isPinned": false,
       "isHidden": false
     }

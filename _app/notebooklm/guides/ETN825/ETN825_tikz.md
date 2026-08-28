@@ -458,19 +458,19 @@ Antes de entregar un bloque TikZJax verificar:
 
 % Flechas de dependencia (causalidad entre transiciones)
 % ready sube → datavalid sube
-\draw[->, thick, gray]
+\draw[dashed,->,very thick, violet]
     (1.0,4.5) .. controls (1.4,3.8) and (1.8,3.2) .. (2.2,2.7);
 
 % datavalid sube → accept sube
-\draw[->, thick, gray]
+\draw[dashed,->,very thick, orange]
     (2.2,2.7) .. controls (2.7,2.0) and (3.0,1.4) .. (3.5,0.9);
 
 % accept sube → datavalid baja
-\draw[->, thick, gray]
+\draw[dashed,->,very thick, violet]
     (3.5,0.9) .. controls (4.2,1.6) and (5.0,2.2) .. (6.0,2.7);
 
 % datavalid baja → accept baja
-\draw[->, thick, gray]
+\draw[dashed,->,very thick, orange]
     (6.0,2.2) .. controls (6.3,1.5) and (6.6,1.0) .. (7.0,0.9);
 
 \end{tikzpicture}
@@ -1126,14 +1126,12 @@ Antes de entregar un bloque TikZJax verificar:
 \draw[->, thick] (n85) -- (n73);
 
 % Salto BUFFER=Yes → (85) (vuelve arriba)
-\node[font=\scriptsize, gray, right] at (0.2,-0.5) {Yes};
-% flecha vuelve a n85
-\draw[->, thick] (buf) -- ++(1.8,0) node[right, font=\scriptsize]{Yes}
-    -- ++(0,2.5) -- (n85);
+\draw[->, thick] (buf.east) -- ++(1.8,0) -- ++(0,2.4) -- (n85);
+\node[font=\scriptsize, gray, above] at (1.5,-1.8) {Yes};
 
 % Op 78: ready=1 (Input, BUFFER=No)
 \node[operation] (op78) at (0,-2.8) {$ready \leftarrow 1$};
-\node[font=\scriptsize, gray, left] at (-1.6,-2.8) {78};
+\node[font=\scriptsize, gray, left] at (-2.0,-2.5) {78};
 \draw[->, thick] (buf) -- node[left, font=\scriptsize]{No (Input)} (op78);
 
 % Rombo datavalid (bucle espera)
@@ -1147,13 +1145,13 @@ Antes de entregar un bloque TikZJax verificar:
 \draw[->, thick] (dvw) -- node[right, font=\scriptsize]{Yes} (dat1);
 
 % Bucle No de datavalid → vuelve
-\draw[thick] (dvw) -- node[above, font=\scriptsize]{No} ++(-2.0,0)
-    -- ++(0,1.45) -- (0,-2.75);
+\draw[thick,->] (dvw.west) -- ++(-2.0,0) -- ++(0,1.45) -- (-1.8,-2.75);
+\node[font=\scriptsize, gray, above] at (-1.4,-4.2) {No};
 
 % Op 79 Yes: MD←IOBUS y CSR←CSBUS (simultáneo)
 \node[operation] (op79) at (-2.2,-7.4)
     {$MD \leftarrow IOBUS$\\$CSR \leftarrow CSBUS$};
-\node[font=\scriptsize, gray, left] at (-3.8,-7.4) {79};
+\node[font=\scriptsize, gray, left] at (-4,-7.1) {79};
 \draw[->, thick] (dat1) -- node[left, font=\scriptsize]{Yes} (op79);
 
 % accept=1
@@ -1164,7 +1162,7 @@ Antes de entregar un bloque TikZJax verificar:
 \node[font=\small, draw=gray, thick,
       diamond, aspect=2.2, inner sep=1pt] (dv80) at (-2.2,-10.2) {datavalid?};
 \draw[->, thick] (accop) -- (dv80);
-\node[font=\scriptsize, gray, left] at (-3.4,-10.2) {80};
+\node[font=\scriptsize, gray, left] at (-3.4,-10.4) {80};
 
 % Rombo DATA (81)
 \node[font=\small, draw=gray, thick,
@@ -1173,8 +1171,18 @@ Antes de entregar un bloque TikZJax verificar:
 \node[font=\scriptsize, gray, left] at (-3.4,-11.6) {81};
 
 % Bucle Yes de dv80 → vuelve a op79
-\draw[thick] (dv80) -- node[above, font=\scriptsize]{Yes} ++(-2.0,0)
-    -- ++(0,2.9) -- (-2.2,-7.35);
+\draw[thick,->] (dv80.west) -- ++(-2.0,0) -- ++(0,2.9) -- (-4.0,-7.35);
+\node[font=\scriptsize, gray, above] at (-3.6,-10.2) {Yes};
+
+% AC←MD (82)
+\node[operation] (op82) at (3.0,-11.6) {$AC \leftarrow MD$};
+\node[font=\scriptsize, gray, right] at (4.8,-11.6) {82};
+\draw[->, thick] (dat1)  -- node[above left, font=\scriptsize]{No}  (op82);
+\draw[->, thick] (dat81) -- node[above, font=\scriptsize]{Yes} (op82);
+
+% AC←MD → (24)
+\node[jump] (n24c) at (3.0,-13.0) {24};
+\draw[->, thick] (op82) -- (n24c);
 
 % Rombo SKIP (83)
 \node[font=\small, draw=gray, thick,
@@ -1185,30 +1193,15 @@ Antes de entregar un bloque TikZJax verificar:
 % Op 84: PC←INC(PC)
 \node[operation] (op84) at (-2.2,-14.4) {$PC \leftarrow INC(PC)$};
 \draw[->, thick] (sk) -- node[right, font=\scriptsize]{Yes} (op84);
-\node[font=\scriptsize, gray, left] at (-3.8,-14.4) {84};
+\node[font=\scriptsize, gray, left] at (-4.2,-14.4) {84};
 
 % Salida (24) desde 84
 \node[jump] (n24a) at (-2.2,-15.6) {24};
 \draw[->, thick] (op84) -- (n24a);
 
-% SKIP No también → (24)
-\node[jump] (n24b) at (0,-14.4) {24};
-\draw[->, thick] (sk) -- node[above, font=\scriptsize]{No} (n24b);
+% SKIP No → mismo (24) que AC←MD
+\draw[->, thick] (sk) -- node[above, font=\scriptsize]{No} (n24c);
 
-% DATA 81 Yes → AC←MD (82)
-\node[operation] (op82) at (1.5,-11.6) {$AC \leftarrow MD$};
-\draw[->, thick] (dat81) -- node[above, font=\scriptsize]{Yes} (op82);
-\node[font=\scriptsize, gray, right] at (3.1,-11.6) {82};
-
-% AC←MD → (24)
-\node[jump] (n24c) at (1.5,-13.0) {24};
-\draw[->, thick] (op82) -- (n24c);
-
-% DATA 79 No → AC←MD también (rama corta)
-\node[operation] (op82b) at (2.2,-5.8) {$AC \leftarrow MD$};
-\draw[->, thick] (dat1) -- node[above, font=\scriptsize]{No} (op82b);
-\node[jump] (n24d) at (2.2,-7.2) {24};
-\draw[->, thick] (op82b) -- (n24d);
 
 \end{tikzpicture}
 \end{document}
@@ -1239,7 +1232,7 @@ Antes de entregar un bloque TikZJax verificar:
 
 % ---- ENTRADA ----
 \node[font=\small, above] (from2label) at (0,0.4) {From (2)};
-\draw[->, thick] (0,0.4) -- (0,0);
+\draw[->, thick] (0,0.4) -- (0,-0.59);
 
 % ---- PASO 90: rombo scan=1 ----
 \node[decision] (scan) at (0,-1.0) {\textit{scan}: 1};
@@ -1247,21 +1240,21 @@ Antes de entregar un bloque TikZJax verificar:
 
 % Rama distinto → paso 91 (derecha)
 \node[operation] (op91) at (3.8,-1.0) {$CC \leftarrow INC(CC)$};
-\node[font=\scriptsize, gray] at (3.8,-0.3) {91};
+\node[font=\scriptsize, gray] at (4.6,-0.3) {91};
 \draw[->, thick] (scan) -- node[above, font=\scriptsize]{$\neq$} (op91);
-% Bucle: 91 vuelve a scan por arriba
-\draw[->, thick] (op91.north) -- ++(0,0.7) -- ++(-3.8,0) -- (scan.north);
+% Bucle: 91 vuelve a scan por la izquierda (<)
+\draw[->, thick] (op91.east) -- ++(0.5,0) -- ++(0,1.0) -- ++(-6.15,0) -- (scan.north);
 
 % ---- PASOS 92–95: Fetch buffer word count a BWC ----
 \node[operation] (op9295) at (0,-3.0)
     {Fetch buffer word count\\to \textit{BWC}};
-\node[font=\scriptsize, gray, left] at (-1.7,-3.0) {92--95};
+\node[font=\scriptsize, gray, left] at (-2.1,-3.0) {92--95};
 \draw[->, thick] (scan.south) -- (op9295.north);
 
 % ---- PASOS 95–96: Fetch final buffer address a MD ----
 \node[operation] (op9596) at (0,-4.9)
     {Fetch final\\buffer address\\to \textit{MD}};
-\node[font=\scriptsize, gray, left] at (-1.7,-4.9) {95--96};
+\node[font=\scriptsize, gray, left] at (-2.1,-4.9) {95--96};
 \draw[->, thick] (op9295) -- (op9596);
 
 % ---- PASOS 97–98: Form current buffer address ----
@@ -1285,7 +1278,7 @@ Antes de entregar un bloque TikZJax verificar:
 
 \node[operation] (op101) at (3.4,-10.3)
     {Transit via\\\textit{IOBUS} clear};
-\node[font=\scriptsize, gray, right] at (5.0,-10.3) {101--102};
+\node[font=\scriptsize, gray, right] at (5.4,-10.3) {101--102};
 \draw[->, thick] (op100) -- (op101);
 
 % ---- RAMA INPUT (izquierda) ----
@@ -1296,14 +1289,14 @@ Antes de entregar un bloque TikZJax verificar:
 
 \node[operation] (op105) at (-3.4,-10.3)
     {Store,\\clear bus};
-\node[font=\scriptsize, gray, left] at (-5.0,-10.3) {105--106};
+\node[font=\scriptsize, gray, left] at (-5.4,-10.3) {105--106};
 \draw[->, thick] (op103) -- (op105);
 
 % ---- CONECTOR UNIÓN RAMAS ----
-\node[conn] (join) at (0,-12.0) {};
+\node[conn] (join) at (0,-11.45) {};
 \draw[thick] (op101.south) -- ++(0,-0.6) -| (join);
 \draw[thick] (op105.south) -- ++(0,-0.6) -| (join);
-\draw[->, thick] (join) -- ++(0,-0.4);
+\draw[thick] (join) -- ++(0,-0.4);
 
 % ---- PASO 107: Buffer done? ----
 \node[decision] (bufdone) at (0,-13.3) {Buffer\\done?};
@@ -1323,15 +1316,15 @@ Antes de entregar un bloque TikZJax verificar:
 % 110–111: Store word count
 \node[operation] (op110) at (3.4,-15.0)
     {Store\\word count};
-\node[font=\scriptsize, gray, right] at (5.0,-15.0) {110--111};
+\node[font=\scriptsize, gray, right] at (5.4,-15.0) {110--111};
 \draw[->, thick] (op109) -- (op110);
 
 % ---- CONECTOR FINAL → (2) ----
-\node[conn] (join2) at (0,-16.6) {};
-\draw[thick] (op108.south) -- ++(0,-1.7) -| (join2);
-\draw[thick] (op110.south) -- ++(0,-0.9) -| (join2);
-\draw[->, thick] (join2) -- ++(0,-0.4);
-\node[font=\small, below] at (0,-17.1) {(2)};
+\node[conn] (join2) at (0,-16.65) {};
+\draw[thick] (op108.south) -- ++(0,-2.9) -| (join2);
+\draw[thick] (op110.south) -- ++(0,-1.1) -| (join2);
+\draw[->, thick] (join2) -- ++(0,-1);
+\node[font=\small, below] at (0,-17.5) {(2)};
 
 \end{tikzpicture}
 \end{document}
