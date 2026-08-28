@@ -1333,5 +1333,5 @@ Antes de entregar un bloque TikZJax verificar:
 %%
 # galaxy-links
 [[_app/notebooklm/guides/ETN607/ETN607_TikzJax.md]]
-[[_app/notebooklm/guides/ETN825/ETN825_AHPL.md]]
+[[ETN825_AHPLv1]]
 %%

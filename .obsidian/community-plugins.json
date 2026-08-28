@@ -25,8 +25,8 @@
   "obsidian-desmos",
   "fix-math",
   "full-screen-cross-platform",
-  "vscode-editor",
   "document-comments",
   "side-notes",
-  "better-export-pdf"
+  "better-export-pdf",
+  "custom-syntax-highlights"
 ]

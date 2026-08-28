@@ -23,6 +23,10 @@
     {
       "extension": "m",
       "language": ""
+    },
+    {
+      "extension": "prompt",
+      "language": ""
     }
   ],
   "autoSwitchToReading": true
