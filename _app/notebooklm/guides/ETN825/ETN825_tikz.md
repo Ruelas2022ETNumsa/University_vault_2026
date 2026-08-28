@@ -797,91 +797,93 @@ Antes de entregar un bloque TikZJax verificar:
 
 ```tikz
 \usepackage{amsmath}
+\usepackage{xcolor}
+\definecolor{teal}{RGB}{0,160,160}
+\definecolor{orange}{RGB}{220,120,0}
+\definecolor{cyan}{RGB}{0,180,220}
+\definecolor{violet}{RGB}{150,80,200}
+\definecolor{brown}{RGB}{160,90,40}
+\definecolor{olive}{RGB}{130,160,0}
+\definecolor{devcolor}{RGB}{220,60,140}
 \begin{document}
 \begin{tikzpicture}[scale=1.0]
 
 % ---- FILA DE BITS ----
-% OP: bits 0-5 (111101)
+% Bits 0-5: OP con valores 1,1,1,1,0,1
 \foreach \i/\v in {0/1, 1/1, 2/1, 3/1, 4/0, 5/1} {
     \draw[thick] (\i*0.65, 0) rectangle (\i*0.65+0.65, 0.7);
     \node[font=\small] at (\i*0.65+0.325, 0.35) {\v};
 }
 
-% Bits 6,7,8 — control individual
+% Bits 6-8 — Device code (devcolor)
 \foreach \i in {6,7,8} {
-    \draw[thick] (\i*0.65, 0) rectangle (\i*0.65+0.65, 0.7);
+    \draw[thick, devcolor] (\i*0.65, 0) rectangle (\i*0.65+0.65, 0.7);
 }
 
-% Bit 9 — Input/Output
-\draw[thick] (9*0.65, 0) rectangle (9*0.65+0.65, 0.7);
+% Bits 9-11 — Control bits individuales
+% Bit 9 (cyan), Bit 10 (violet), Bit 11 (brown)
+\draw[thick, cyan]   (9*0.65, 0)  rectangle (9*0.65+0.65,  0.7);
+\draw[thick, violet] (10*0.65, 0) rectangle (10*0.65+0.65, 0.7);
+\draw[thick, olive]  (11*0.65, 0) rectangle (11*0.65+0.65, 0.7);
 
-% Bits 10-11 — Device code (n)
-\draw[thick] (10*0.65, 0) rectangle (10*0.65+0.65, 0.7);
-\draw[thick] (11*0.65, 0) rectangle (11*0.65+0.65, 0.7);
+% Bits 12-17 — Control code: bloque grande (orange)
+\draw[thick, orange] (12*0.65, 0) rectangle (18*0.65, 0.7);
 
-% Bits 12-17 — Control code (bloque)
-\draw[thick] (12*0.65, 0) rectangle (12*0.65+1.4, 0.7);
-
-% ---- ETIQUETA LABEL IZQUIERDA ----
+% ---- ETIQUETA IZQUIERDA ----
 \node[font=\small, left] at (0, 0.35) {IOT};
 
+% ---- ETIQUETA "OP" ARRIBA ----
+\draw[thin] (0, 0.85) -- (0, 1.0) -- (1.95, 1.0) -- (1.95, 1.1);
+\draw[thin] (3.9, 0.85) -- (3.9, 1.0) -- (1.95, 1.0);
+\node[font=\small] at (1.95, 1.3) {OP};
+
 % ---- ÍNDICES DE BIT ----
-\foreach \pos/\lbl in {
-    0/0, 3.9/6, 4.55/7, 5.2/8, 5.85/9, 6.5/10, 7.15/11, 7.8/12, 9.2/17
-} {
-    \node[font=\scriptsize, gray] at (\pos, 0.9) {\lbl};
+\foreach \i/\lbl in {0/0, 5/5, 6/6, 7/7, 8/8, 9/9, 10/10, 11/11, 12/12, 17/17} {
+    \node[font=\scriptsize] at (\i*0.65+0.325, -0.2) {\lbl};
 }
 
-% ---- ETIQUETAS DE CAMPO (sobre la fila) ----
-\node[font=\scriptsize, align=center] at (5.53, 1.35)
-    {Device};
-\node[font=\scriptsize, align=center] at (5.53, 1.1)
-    {code (\textbf{n})};
-\draw[gray, thin, ->] (5.53, 1.0) -- (6.825, 0.75);
+% ---- ETIQUETA "Device code (n)" — devcolor (pink/magenta) ----
+\node[font=\scriptsize, align=center, devcolor] at (7*0.65+0.325, 2.0) {Device\\code (\textbf{n})};
+\draw[devcolor, thin] (6*0.65, 0.85) -- (6*0.65, 1.5) -- (7*0.65+0.325, 1.5);
+\draw[devcolor, thin] (8*0.65+0.65, 0.85) -- (8*0.65+0.65, 1.5) -- (7*0.65+0.325, 1.5);
+\draw[devcolor, thin, ->] (7*0.65+0.325, 1.5) -- (7*0.65+0.325, 1.7);
 
-\node[font=\scriptsize] at (8.5, 1.35) {Control code};
-\draw[gray, thin] (7.8, 1.1) -- (7.8, 0.75);
-\draw[gray, thin] (9.2, 1.1) -- (9.2, 0.75);
-\draw[gray, thin] (7.8, 1.1) -- (9.2, 1.1);
+% ---- ETIQUETA "Control code" — orange ----
+\node[font=\scriptsize, orange] at (15*0.65, 2.0) {Control code};
+\draw[orange, thin] (12*0.65, 0.85) -- (12*0.65, 1.5) -- (15*0.65, 1.5);
+\draw[orange, thin] (18*0.65, 0.85) -- (18*0.65, 1.5) -- (15*0.65, 1.5);
 
-% ---- LLAVES Y ANOTACIONES IZQUIERDA (debajo) ----
-% Llave OP (bits 0-5)
-\draw[thick] (0,-0.12) -- (0,-0.32) -- (1.95,-0.32);
-\draw[thick] (3.9,-0.12) -- (3.9,-0.32) -- (1.95,-0.32);
-\draw[thick] (1.95,-0.32) -- (1.95,-0.52);
-\node[font=\small] at (1.95,-0.72) {OP};
+% ---- GRUPO A: Command/Transfer — cyan ----
+\node[font=\scriptsize, anchor=east, cyan] at (3.5, -1.5) {$1 =$ Command};
+\node[font=\scriptsize, anchor=east, cyan] at (3.5, -1.9) {$0 =$ Transfer};
+\draw[thick, cyan] (3.55, -1.3) -- (3.8, -1.3) -- (3.8, -2.1) -- (3.55, -2.1);
+\draw[->, cyan, thin] (3.8, -1.7) -- (9*0.65+0.325, -1.7) -- (9*0.65+0.325, 0);
 
-% Flecha y texto: bit 6 → 1=Command / 0=Transfer
-\draw[->, gray, thin] (-1.8,-1.4) -- (4.225,-0.1);
-\node[font=\scriptsize, align=left, anchor=east] at (-1.85,-1.3)
-    {$1 = $ Command};
-\node[font=\scriptsize, align=left, anchor=east] at (-1.85,-1.65)
-    {$0 = $ Transfer};
-% Llave izquierda agrupando las dos líneas
-\draw[thick] (-1.6,-1.2) -- (-1.35,-1.2) -- (-1.35,-1.75) -- (-1.6,-1.75);
+% ---- GRUPO B: Status/Data — violet ----
+\node[font=\scriptsize, anchor=east, violet] at (3.5, -2.7) {$1 =$ Status};
+\node[font=\scriptsize, anchor=east, violet] at (3.5, -3.1) {$0 =$ Data};
+\draw[thick, violet] (3.55, -2.5) -- (3.8, -2.5) -- (3.8, -3.3) -- (3.55, -3.3);
+\draw[->, violet, thin] (3.8, -2.9) -- (10*0.65+0.325, -2.9) -- (10*0.65+0.325, 0);
 
-% Flecha y texto: bit 7 → 1=Status / 0=Data
-\draw[->, gray, thin] (-1.8,-2.4) -- (4.875,-0.1);
-\node[font=\scriptsize, align=left, anchor=east] at (-1.85,-2.3)
-    {$1 = $ Status};
-\node[font=\scriptsize, align=left, anchor=east] at (-1.85,-2.65)
-    {$0 = $ Data};
-\draw[thick] (-1.6,-2.2) -- (-1.35,-2.2) -- (-1.35,-2.75) -- (-1.6,-2.75);
+% ---- GRUPO C: Command/Buffer — brown ----
+\node[font=\scriptsize, anchor=east, brown] at (3.5, -3.9) {$1 =$ Command};
+\node[font=\scriptsize, anchor=east, brown] at (3.5, -4.3) {$0 =$ Buffer};
+\draw[thick, brown] (3.55, -3.7) -- (3.8, -3.7) -- (3.8, -4.5) -- (3.55, -4.5);
+\draw[->, brown, thin] (3.8, -4.1) -- (10*0.65+0.325, -4.1) -- (10*0.65+0.325, 0);
 
-% Flecha y texto: bit 8 → 1=Command / 0=Buffer
-\draw[->, gray, thin] (-1.8,-3.4) -- (5.525,-0.1);
-\node[font=\scriptsize, align=left, anchor=east] at (-1.85,-3.3)
-    {$1 = $ Command};
-\node[font=\scriptsize, align=left, anchor=east] at (-1.85,-3.65)
-    {$0 = $ Buffer};
-\draw[thick] (-1.6,-3.2) -- (-1.35,-3.2) -- (-1.35,-3.75) -- (-1.6,-3.75);
+% ---- CONEXIONES ENTRE GRUPOS ----
+% De a-Command → c: llave [ (cyan)
+\draw[thick, cyan, ->] (1.5, -1.5) -- (0.5, -1.5) -- (0.5, -4.1) -- (1.3, -4.1);
+\draw[thick, violet] (1.9, -2.5) -- (1.65, -2.5) -- (1.65, -3.3) -- (1.9, -3.3);
 
-% Flecha y texto: bit 9 → 1=Input / 0=Output
-\draw[->, gray, thin] (6.175,-0.6) -- (6.175,-1.1);
-\node[font=\scriptsize, align=center] at (6.175,-1.35)
-    {$1 = $ Input};
-\node[font=\scriptsize, align=center] at (6.175,-1.7)
-    {$0 = $ Output};
+% De a-Transfer → b: llave [ (cyan)
+\draw[thick, cyan, ->] (1.5, -1.9) -- (1, -1.9) -- (1, -2.9) -- (1.5, -2.9);
+\draw[thick, brown] (1.6, -3.7) -- (1.4, -3.7) -- (1.4, -4.5) -- (1.6, -4.5);
+
+% ---- ANOTACIÓN: Input/Output — olive ----
+\draw[->, olive, thin] (11*0.65+0.325, -1.5) -- (11*0.65+0.325, 0);
+\node[font=\scriptsize, align=left, olive] at (11*0.65+0.325+0.5, -1.75) {$1 =$ Input};
+\node[font=\scriptsize, align=left, olive] at (11*0.65+0.325+0.5, -2.1)  {$0 =$ Output};
 
 \end{tikzpicture}
 \end{document}
