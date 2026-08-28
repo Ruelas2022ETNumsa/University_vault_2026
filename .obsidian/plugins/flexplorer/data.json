@@ -27,7 +27,9 @@
         "ETN825-T01.md",
         "Untitled.md",
         "Untitled 1.md",
-        "Untitled 2.md"
+        "Untitled 2.md",
+        "Untitled 4.md",
+        "Untitled 3.md"
       ]
     },
     "MOC": {
@@ -5818,6 +5820,14 @@
       "isHidden": false
     },
     "_PDF/ETN-825/Tanenbaum - Distributed Systems.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled 4.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled 3.md": {
       "isPinned": false,
       "isHidden": false
     }

@@ -1,7 +1,7 @@
 ---
 title: AHPL — Guía unificada para ETN825 (LaTeX NotebookLM)
 galaxy_body: beacon
-scope: vault
+scope: vaultx
 tool: ahpl-notation
 audience:
   - usuario
