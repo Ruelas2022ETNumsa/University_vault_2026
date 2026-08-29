@@ -1,6 +1,6 @@
 ---
 title: AHPL — Guía unificada para ETN825 (LaTeX NotebookLM)
-galaxy_body: 44beacon
+galaxy_body: 66beacon
 scope: devault
 tool: ahpl-notation
 audience:
@@ -505,10 +505,9 @@ END
 >
 > **Nota:** las expresiones fuera de secuencia pueden usar `←` (con reloj) o `=` (combinacional) según el tipo de operación. El ejemplo `ss * (start ∨ stop) ← (1!0) * (start, stop)` usa `←` porque `ss` es un registro (MEMORY).
 ---
-
 ### N16. PARES PREGUNTA→RESPUESTA — FORMATO DE IMITACIÓN
 
-> Contexto para NotebookLM: estos pares muestran exactamente cómo debe verse una respuesta correcta. Para cada pregunta: bloque de código con declaraciones completas (tamaños incluidos) y tabla de lectura con KaTeX inline. Imitar este formato en todas las respuestas que involucren módulos o secuencias AHPL.
+> Contexto para NotebookLM: estos pares muestran exactamente cómo debe verse una respuesta correcta. Para cada pregunta: tabla de declaraciones, luego bloque de código con declaraciones completas (tamaños incluidos), luego tabla de lectura con KaTeX inline. Imitar este formato en todas las respuestas que involucren módulos o secuencias AHPL.
 
 ---
 
@@ -538,7 +537,15 @@ Usar siempre estos tamaños cuando aparezcan estos registros. No inferir tamaño
 
 **Respuesta:**
 
-```AHPL
+| Identificador | Sección | Tamaño | Rol |
+|---|---|---|---|
+| `AC` | MEMORY | `[8]` | Registro destino — recibe el valor de DBUS al flanco de reloj |
+| `flag` | MEMORY | escalar | Flip-flop de control — se activa en el paso 2 |
+| `done` | OUTPUTS | escalar | Señal de salida combinacional — indica fin de secuencia |
+| `go` | INPUTS | escalar | Señal de disparo — habilita la transferencia cuando vale 1 |
+| `DBUS` | COMBUS | `[8]` | Bus de entrada — fuente del dato a cargar en AC |
+
+```
 MODULE: TEST
 MEMORY: AC[8]; flag
 OUTPUTS: done
@@ -568,7 +575,21 @@ END
 
 **Respuesta:**
 
-```AHPL
+| Identificador | Sección | Tamaño | Rol |
+|---|---|---|---|
+| `DR` | MEMORY | `[18]` | Registro de datos — captura el valor de IOBUS[18] en el paso 2 |
+| `CR` | MEMORY | `[8]` | Registro de carácter — acumula el byte extraído de DR |
+| `first` | MEMORY | escalar (JK) | Flip-flop de control — indica primera (1) o segunda (0) pasada |
+| `CHAR` | OUTPUTS | `[8]` | Salida de carácter a la impresora — refleja CR en todo momento |
+| `ready` | OUTPUTS | escalar | Señal de disponibilidad — activa en paso 1 mientras espera dato |
+| `accept` | OUTPUTS | escalar | Señal de aceptación — pulso de 1 ciclo en paso 2 |
+| `print` | OUTPUTS | escalar | Comando de impresión — activo si CR no es retorno de carro |
+| `feed` | OUTPUTS | escalar | Comando de avance — activo si CR es retorno de carro |
+| `datavalid` | INPUTS | escalar | Indica dato válido en IOBUS — habilita salida del bucle en paso 1 |
+| `wait` | INPUTS | escalar | Señal de espera de la impresora — mantiene el bucle en paso 6 |
+| `IOBUS` | COMBUS | `[18]` | Bus de datos del sistema — fuente del dato capturado en DR |
+
+```
 MODULE: PRINTER INTERFACE
 MEMORY: DR[18]; CR[8]; first(JK)
 OUTPUTS: CHAR[8]; ready; accept; print; feed
@@ -610,7 +631,7 @@ END
 
 **Respuesta:**
 
-```AHPL
+```
 % Caso A — espera mientras señal = 0 (sale cuando señal = 1):
 N. → (~señal)/(N)
 
@@ -635,7 +656,7 @@ N. → (señal)/(N)
 
 **Respuesta:**
 
-```AHPL
+```
 % Ejemplo 1 — condición en lado izquierdo (dos transferencias simultáneas):
 2. A * ~a ← B ; D * a ← C
 
@@ -647,6 +668,7 @@ D ← (A ! B ! C) * (f, g, h)
 |---|---|---|
 | 1 — destino condicionado | \( A * \overline{a} \leftarrow B \;;\; D * a \leftarrow C \) | Si \( a = 0 \): \( A \leftarrow B \). Si \( a = 1 \): \( D \leftarrow C \). Ambas en el mismo paso — simultáneas. |
 | 2 — origen seleccionado | \( D \leftarrow (A \mathop{!} B \mathop{!} C) * (f,\, g,\, h) \) | Si \( f = 1 \): \( D \leftarrow A \). Si \( g = 1 \): \( D \leftarrow B \). Si \( h = 1 \): \( D \leftarrow C \). Condiciones mutuamente excluyentes. El operador \( ! \) es row concatenate — no es NOT lógico. |
+
 %%
 # galaxy-links
 [[_app/notebooklm/guides/ETN825/ETN825_tikz.md]]

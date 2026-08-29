@@ -48392,6 +48392,7 @@ detener
 detectarse
 deserializar
 desempaquetar
+disparo
 Vault
 Verificar
 Variables
@@ -57772,6 +57773,7 @@ VBuU
 VmNq
 VxQSq
 VttNk
+Varios
 galaxy
 gina
 genes
@@ -164863,6 +164865,7 @@ Catenation
 Capturar
 Carriage
 Contin
+Citar
 Instalados
 Instalado
 Instalar
@@ -348762,6 +348765,7 @@ hbnu
 hbbccC
 habilitadoras
 handshaking
+habilita
 que
 quedan
 queda
