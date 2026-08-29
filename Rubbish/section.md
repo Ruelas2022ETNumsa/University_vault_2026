@@ -7,6 +7,23 @@ NUNCA KaTeX display \[ \] para módulos o secuencias AHPL — solo bloques de c�
 
 MEMORY/OUTPUTS/COMBUS: vectores SIEMPRE con tamaño. DR[18] no DR. CHAR[8] no CHAR.
 
+#### Registros (MEMORY)
+| Notación | Significado | Ejemplo |
+|-|-|-|
+| `REG[N]` | Registro de N bits | `DR[18]`, `CR[8]`, `IR[18]`, `AC[18]` |
+| `REG[N, M]` | Memoria de N palabras de M bits | `ROM[1024, 18]`, `RAM[256, 8]` |
+| `REG` (sin corchetes) | Flip-flop de 1 bit (escalar) | `busy`, `first`, `ready` |
+| Separador `;` | Separa elementos en la misma sección | `DR[18]; CR[8]; busy; first` |
+
+Tamaños estándar del SIC — usar SIEMPRE estos valores, no inferir:
+| Registro | Tamaño | Registro | Tamaño |
+|-|-|-|-|
+| `DR` | `[18]` | `MA` | `[12]` |
+| `IR` | `[18]` | `PC` | `[12]` |
+| `MD` | `[18]` | `CR` | `[8]` |
+| `AC` | `[18]` | `CHAR` | `[8]` |
+| `IOBUS` | `[18]` | | |
+
 TAREA:
 Dado un tema y un subtítulo del temario oficial de ETN825 (Arquitectura de Computadores),
 buscar en los libros fuente el complemento nivel B o C para ese subtítulo.
