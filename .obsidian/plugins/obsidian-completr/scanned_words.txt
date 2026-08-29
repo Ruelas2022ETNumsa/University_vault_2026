@@ -9385,6 +9385,7 @@ tBmY
 transferir
 transfiri
 transcrib
+tests
 ToDo
 Templater
 Text
@@ -19730,6 +19731,7 @@ Transfiere
 TRANSFERENCIA
 Transcrib
 Terminaci
+Tests
 Sistema
 Sync
 Save
@@ -48389,6 +48391,7 @@ desempaquetado
 detener
 detectarse
 deserializar
+desempaquetar
 Vault
 Verificar
 Variables
@@ -86223,6 +86226,7 @@ secuencialmente
 saliente
 singular
 single
+stripea
 vault
 vil
 ver
@@ -116224,6 +116228,10 @@ represented
 reflejen
 recursivamente
 reaccione
+recepci
+redactada
+renegociar
+renderiz
 notes
 notas
 nuevas
@@ -136085,6 +136093,7 @@ combinational
 carriage
 concede
 ciclando
+capturando
 updated
 un
 universo
@@ -164853,6 +164862,7 @@ Concatenaci
 Catenation
 Capturar
 Carriage
+Contin
 Instalados
 Instalado
 Instalar
@@ -175147,6 +175157,7 @@ Individual
 Identificadas
 IMITACI
 Imitar
+Introduce
 Funci
 File
 Fase
@@ -223028,6 +223039,9 @@ placed
 printed
 propagaci
 permanezca
+pegarla
+postergada
+postergado
 min
 mica
 movimiento
@@ -291025,6 +291039,8 @@ levantando
 levanta
 look
 labeled
+levante
+ltimas
 incluyendo
 im
 instalar
@@ -301989,6 +302005,8 @@ instruccional
 incrementado
 interacciones
 involucren
+infer
+inserci
 Dependencia
 Dropbox
 Dataview
@@ -330678,6 +330696,8 @@ Hfad
 HQMk
 Hnpn
 HSRI
+Hallazgos
+Hallazgo
 filtrar
 formato
 faltantes

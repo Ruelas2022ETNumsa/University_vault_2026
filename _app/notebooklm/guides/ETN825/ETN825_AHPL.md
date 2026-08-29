@@ -60,7 +60,7 @@ Antes de escribir cualquier bloque AHPL, verificar en orden:
 
 Todo módulo AHPL tiene dos partes: **declaraciones** y **secuencia de control**. Sin declaraciones el módulo está incompleto.
 
-```
+```AHPL
 MODULE: NOMBRE DEL MÓDULO
 MEMORY: <registros internos con tamaño>
 OUTPUTS: <señales y registros de salida>
@@ -85,12 +85,12 @@ Reglas:
 - `COMBUS:` — buses combinacionales (sin reloj, conexión directa). **Siempre con tamaño si son vectores:** `IOBUS[18]`, `CSBUS[12]`. Señales booleanas sin corchetes: `ready`, `datavalid`, `accept`.
 
 ❌ Incorrecto — falta tamaño en registro:
-```
+```AHPL
 MEMORY: DR; CR; busy
 ```
 
 ✅ Correcto:
-```
+```AHPL
 MEMORY: DR[18]; CR[8]; busy; first
 ```
 
@@ -128,7 +128,7 @@ MEMORY: DR[18]; CR[8]; busy; first
 
 **Ejemplo del módulo PRINTER INTERFACE:**
 
-```
+```AHPL
 OUTPUTS: CHAR[8]; ready; accept; print; feed
 INPUTS:  datavalid; wait
 COMBUS: IOBUS[18]
@@ -190,7 +190,7 @@ COMBUS: IOBUS[18]
 
 Ejecuta una o más acciones en un ciclo de reloj.
 
-```
+```AHPL
 4. CSBUS₀ = busy; datavalid = 1;
 ```
 
@@ -200,7 +200,7 @@ Ejecuta una o más acciones en un ciclo de reloj.
 
 Va incondicionalmente al paso indicado. No ejecuta operación.
 
-```
+```AHPL
 → (CSBUS₃, ~CSBUS₃, ~CSBUS₂)/(1, 1A, 3)
 ```
 
@@ -213,7 +213,7 @@ Formato: `→ (condición₁, condición₂, ...)/(destino₁, destino₂, ...)`
 
 Evalúa una condición y salta según el resultado.
 
-```
+```AHPL
 → (ready)/(3)
 → (datavalid)/(1A)
 → (first, ~first)/(3A, 8A)
@@ -227,13 +227,13 @@ Evalúa una condición y salta según el resultado.
 
 Consume un ciclo sin operación. Útil para sincronización.
 
-```
+```AHPL
 5A. Null
 ```
 
 #### Fin de secuencia
 
-```
+```AHPL
 DEAD END        ← el módulo se detiene, no retorna
 END SEQUENCE    ← la secuencia termina y puede reiniciarse o llamarse desde otro módulo
 ```
@@ -244,7 +244,7 @@ END SEQUENCE    ← la secuencia termina y puede reiniciarse o llamarse desde ot
 
 Varias transferencias en el mismo paso se ejecutan **todas al mismo tiempo** en el mismo ciclo de reloj.
 
-```
+```AHPL
 2. DR ← IOBUS; accept = 1; first ← 1
 ```
 
@@ -272,7 +272,7 @@ Los pasos se numeran con enteros. Los subpasos usan letra sufijo.
 
 **Ejemplo de uso de etiquetas — patrón genérico con bifurcación:**
 
-```
+```AHPL
 3.  → (modo, ~modo)/(3A, 3B)
 
 3A. REG ← IOBUS; flag ← 1
@@ -295,7 +295,7 @@ Los pasos se numeran con enteros. Los subpasos usan letra sufijo.
 
 Algunas salidas se definen como expresiones combinacionales **después del END SEQUENCE**, antes del `END` del módulo. No son pasos — son definiciones permanentes.
 
-```
+```AHPL
 END SEQUENCE
 CHAR = CR
 END
@@ -310,7 +310,7 @@ END
 
 Las condiciones de bifurcación pueden combinar señales con AND (`∧`) o usar señales negadas (barra).
 
-```
+```AHPL
 1. → (csrdy ∧ CSBUS̄₀ ∧ CSBUS₁ ∧ CSBUS̄₂)/(1)
 ```
 
@@ -357,7 +357,7 @@ Antes de escribir o completar un módulo, verificar:
 
 > Contexto para NotebookLM: módulo AHPL completo de la interface de impresora. Cubre el protocolo completo: handshake con IOBUS (datavalid/accept), carga de DR, acumulación en CR con `first`, envío a impresora (feed/print), y espera de `wait`. Fuente: Hill & Peterson Digital Systems 2ª ed., Example 9.3, p. 349-350.
 
-```
+```AHPL
 MODULE: PRINTER INTERFACE
 MEMORY: DR[18]; CR[8]; first(JK)
 OUTPUTS: CHAR[8]; ready; accept; print; feed
@@ -371,7 +371,7 @@ COMBUS: IOBUS[18]
 5. Null
 6. → (wait)/(6)
 7. first ← 0
-   → (first, ~first)/(3, 1)
+   → (first, ~first)/(3, 8)
 8. DEAD END
 END SEQUENCE
 CHAR = CR
@@ -400,7 +400,7 @@ END
 
 **Regla de lectura:** la condición dentro de `→ (cond)/(N)` es la condición de **retorno** — cuando es verdadera, vuelve al mismo paso. El módulo sale cuando esa condición es falsa y continúa al paso siguiente.
 
-```
+```AHPL
 % Espera mientras la señal es 0 (retorna si ~señal=1, sale cuando señal=1):
 N.  → (~señal)/(N)
 
@@ -422,7 +422,7 @@ N.  → (señal)/(N)
 
 > Contexto para NotebookLM: bifurcación a más de dos destinos según combinación de bits de un bus. Las condiciones son mutuamente excluyentes — exactamente una será verdadera. Se usa para decodificar campos de instrucción (IR), direcciones de dispositivo (CSBUS) o modos de operación.
 
-```
+```AHPL
 % Formato general:
 → (cond₁, cond₂, cond₃)/(dest₁, dest₂, dest₃)
 
@@ -444,7 +444,7 @@ N.  → (señal)/(N)
 
 > Contexto para NotebookLM: el operador `*` indica transferencia condicional — la operación solo se ejecuta si la señal de control asociada vale 1. Puede aparecer en el lado izquierdo (destino condicionado) o en el lado derecho (selección de origen). Fuente: Hill & Peterson Digital Systems 2ª ed., sección 4.7, p. 105.
 
-```
+```AHPL
 % Formato — condición en lado izquierdo:
 A * ~a ← B
 
@@ -477,7 +477,7 @@ D ← (A ! B ! C) * (f, g, h)
 
 > Contexto para NotebookLM: las expresiones después de `END SEQUENCE` y antes de `END` son salidas combinacionales que el módulo mantiene en todo momento, sin reloj. Se usan cuando una salida debe reflejar en tiempo real el contenido de un registro o una operación lógica sobre él. Pueden incluir transferencias condicionales con `*` y row catenation con `!`.
 
-```
+```AHPL
 % Formato básico:
 END SEQUENCE
 SALIDA = expresión
@@ -512,43 +512,6 @@ END
 
 ---
 
-#### Par 1 — módulo completo con declaraciones
-
-**Pregunta:** Escribí un módulo AHPL que espera la señal `go`, carga `AC[8]` desde `DBUS[8]` y termina en DEAD END.
-
-**Respuesta:**
-
-```
-MODULE: TEST
-MEMORY: AC[8]; flag
-OUTPUTS: done
-INPUTS: go
-COMBUS: DBUS[8]
-
-1. → (~go)/(1)
-2. AC ← DBUS; flag ← 1
-3. done = 1
-4. DEAD END
-END SEQUENCE
-END
-```
-
-| Paso | Operación | Condición | Estado resultante |
-|---|---|---|---|
-| `1.` | \( \rightarrow (\overline{go})/(1) \) | \( \overline{go} \) | Bucle de espera. Retorna mientras go = 0; sale al paso 2 cuando go = 1. |
-| `2.` | \( AC \leftarrow DBUS \); \( flag \leftarrow 1 \) | — | Transferencia síncrona al flanco de reloj. AC[8] se carga desde DBUS[8]; flag se pone en 1. Ambas simultáneas. |
-| `3.` | \( done = 1 \) | — | Conexión combinacional. La salida done se activa sin reloj durante este paso. |
-| `4.` | \( DEAD\ END \) | — | Fin de secuencia. El módulo se detiene. |
-
----
----
-
-### N16. PARES PREGUNTA→RESPUESTA — FORMATO DE IMITACIÓN
-
-> Contexto para NotebookLM: estos pares muestran exactamente cómo debe verse una respuesta correcta. Para cada pregunta: bloque de código con declaraciones completas (tamaños incluidos) y tabla de lectura con KaTeX inline. Imitar este formato en todas las respuestas que involucren módulos o secuencias AHPL.
-
----
-
 #### Tamaños estándar — registros de Hill & Peterson 2ª ed.
 
 Usar siempre estos tamaños cuando aparezcan estos registros. No inferir tamaños distintos.
@@ -575,7 +538,7 @@ Usar siempre estos tamaños cuando aparezcan estos registros. No inferir tamaño
 
 **Respuesta:**
 
-```
+```AHPL
 MODULE: TEST
 MEMORY: AC[8]; flag
 OUTPUTS: done
@@ -605,7 +568,7 @@ END
 
 **Respuesta:**
 
-```
+```AHPL
 MODULE: PRINTER INTERFACE
 MEMORY: DR[18]; CR[8]; first(JK)
 OUTPUTS: CHAR[8]; ready; accept; print; feed
@@ -647,7 +610,7 @@ END
 
 **Respuesta:**
 
-```
+```AHPL
 % Caso A — espera mientras señal = 0 (sale cuando señal = 1):
 N. → (~señal)/(N)
 
@@ -672,7 +635,7 @@ N. → (señal)/(N)
 
 **Respuesta:**
 
-```
+```AHPL
 % Ejemplo 1 — condición en lado izquierdo (dos transferencias simultáneas):
 2. A * ~a ← B ; D * a ← C
 

@@ -1,59 +1,56 @@
-## Módulo PRINTER INTERFACE (Example 9.3)
-
 ```ahpl
 MODULE: PRINTER INTERFACE
-MEMORY: DR; CR; first(JK)
-OUTPUTS: CHAR; ready; accept; print; feed
-INPUTS: datavalid; wait
-COMBUS: IOBUS
-
+  MEMORY: DR; CR; first(JK)
+  OUTPUTS: CHAR; ready; accept; print; feed
+  INPUTS: datavalid; wait
+  COMBUS: IOBUS
 1. ready = 1
    -> (~datavalid)/(1)
 2. DR <- IOBUS; accept = 1; first <- 1
-3. CR <- (DR[10:17] & first) | (DR[1:8] & ~first)
+3. CR <- (DR[10:17] & first) \/ (DR[1:8] & ~first)
 4. feed = RETURN(CR); print = RETURN(CR)
 5. Null
 6. -> (wait)/(6)
 7. first <- 0
    -> (first, ~first)/(3, 1)
+8. DEAD END
 END SEQUENCE
-CHAR = CR
+  CHAR = CR
 END
 ```
 
-| Paso        | Operación                                                                           | Condición                                          | Estado resultante                                                                                                                                                                                                                                  |
-| :---------- | :---------------------------------------------------------------------------------- | :------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `1.`        | \( ready = 1 \)                                                                     | \( \rightarrow (\overline{datavalid})/(1) \)       | **Espera activa de datos**. La interfaz anuncia disponibilidad mediante \( ready = 1 \). Se mantiene en bucle cerrado en el paso 1 mientras la línea de datos válidos permanezca desactivada (\( datavalid = 0 \)).                                |
-| `2.`        | \( DR \leftarrow IOBUS \) <br> \( accept = 1 \) <br> \( first \leftarrow 1 \)       | —                                                  | **Captura y sincronización**. El registro de datos \( DR \) captura los 18 bits del bus. Se envía un pulso de confirmación (\( accept = 1 \)) a la CPU durante un periodo de reloj. El flip-flop JK \( first \) se inicializa en 1.                |
-| `3.`        | \( CR \leftarrow (DR_{10:17} \land first) \lor (DR_{1:8} \land \overline{first}) \) | —                                                  | **Desempaquetado**. Si \( first = 1 \), el registro \( CR \) se carga con el carácter superior (\( DR_{10:17} \)). Si \( first = 0 \), se carga con el carácter inferior (\( DR_{1:8} \)).                                                         |
-| `4.`        | \( feed = RETURN(CR) \) <br> \( print = RETURN(CR) \)                               | —                                                  | **Activación del periférico**. La función combinacional \( RETURN(CR) \) evalúa si el carácter es un retorno de carro. Activa alternativamente \( feed \) o \( print \) según corresponda.                                                         |
-| `5.`        | \( Null \)                                                                          | —                                                  | **Sincronización de hardware**. Paso nulo de un periodo de reloj que concede un margen de tiempo seguro a la impresora para levantar la señal de ocupado (\( wait = 1 \)).                                                                         |
-| `6.`        | —                                                                                   | \( \rightarrow (wait)/(6) \)                       | **Polling de impresión**. El control queda en espera activa ciclando sobre el paso 6 mientras la línea \( wait \) esté en alto, indicando que la impresora está ejecutando la acción física.                                                       |
-| `7.`        | \( first \leftarrow 0 \)                                                            | \( \rightarrow (first, \overline{first})/(3, 1) \) | **Control de flujo por carácter**. Se borra el indicador \( first \). Basándose en su estado antes del flanco de reloj, si era 1, bifurca al paso 3 para procesar el segundo carácter; si era 0, regresa al paso 1 para esperar una nueva palabra. |
-| `CHAR = CR` | \( CHAR = CR \)                                                                     | —                                                  | **Salida combinacional permanente**. Expresión combinacional fuera de secuencia que asocia directamente la salida física \( CHAR \) al registro de caracteres \( CR \) de forma continua.                                                          |
-
-
+| Paso        | Operación                                                                           | Condición                                          | Estado resultante                                                                                                                                                                                                                                                                                   |
+| ----------- | ----------------------------------------------------------------------------------- | -------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `1.`        | \( ready = 1 \)                                                                     | \( \rightarrow (\overline{datavalid})/(1) \)       | Espera activa. \( ready = 1 \) indica disponibilidad de la interfaz. Bucle de espera mientras \( datavalid = 0 \); salta al paso 2 en el flanco de reloj cuando \( datavalid = 1 \).                                                                                                                |
+| `2.`        | \( DR \leftarrow IOBUS \); \( accept = 1 \); \( first \leftarrow 1 \)               | —                                                  | Captura simultánea de datos. El registro de datos de la interfaz \( DR \) se carga desde \( IOBUS \). Se afirma la línea de control \( accept = 1 \) para indicar la recepción. El flag \( first \) se inicializa en 1 para indicar que se procesa el primer carácter.                              |
+| `3.`        | \( CR \leftarrow (DR_{10:17} \land first) \lor (DR_{1:8} \land \overline{first}) \) | —                                                  | Desempaquetado del carácter. Si \( first = 1 \), el registro de caracteres de la impresora \( CR \) se carga con el primer carácter de los bits más significativos \( DR[10:17] \). Si \( first = 0 \), se carga con el segundo carácter \( DR[1:8] \).                                             |
+| `4.`        | \( feed = RETURN(CR) \); \( print = RETURN(CR) \)                                   | —                                                  | Evaluación lógica combinacional mediante la unidad combinacional externa \( RETURN(CR) \). Activa los comandos físicos \( feed \) (alimentar papel) o \( print \) (imprimir) según el código de carácter ASCII cargado en \( CR \).                                                                 |
+| `5.`        | \( Null \)                                                                          | —                                                  | Paso nulo de retardo. Introduce un ciclo de reloj de espera requerido para dar tiempo a que el periférico de impresión reaccione y levante su señal de ocupado \( wait = 1 \).                                                                                                                      |
+| `6.`        | —                                                                                   | \( \rightarrow (wait)/(6) \)                       | Bucle de espera (polling). El control permanece en espera en el paso 6 mientras la impresora esté ocupada ejecutando la impresión física y mantenga \( wait = 1 \). Continúa al paso 7 una vez completada la acción (\( wait = 0 \)).                                                               |
+| `7.`        | \( first \leftarrow 0 \)                                                            | \( \rightarrow (first, \overline{first})/(3, 1) \) | Control de secuencia. Se limpia el flip-flop \( first \leftarrow 0 \). Si \( first \) era originalmente 1, la bifurcación condicional regresa al paso 3 para procesar y desempaquetar el segundo carácter almacenado en \( DR[1:8] \). Si era 0, regresa al paso 1 para esperar un nuevo handshake. |
+| `8.`        | \( DEAD\ END \)                                                                     | —                                                  | Fin de secuencia que detiene el flujo de control del módulo hasta el siguiente inicio asíncrono.                                                                                                                                                                                                    |
+| `CHAR = CR` | \( CHAR = CR \)                                                                     | —                                                  | Expresión combinacional permanente fuera de la secuencia. La salida física de datos \( CHAR \) a la impresora refleja de manera continua el contenido del registro \( CR \) en todo momento.                                                                                                        |
 
 
 ---
 
-copiar con el puntero:
-Módulo PRINTER INTERFACE (Example 9.3)MODULE: PRINTER INTERFACE
-MEMORY: DR[1]; CR[2]; first(JK)
-OUTPUTS: CHAR[2]; ready; accept; print; feed
-INPUTS: datavalid; wait
-COMBUS: IOBUS[1]
+copia con cursor:
 
+MODULE: PRINTER INTERFACE
+  MEMORY: DR[1]; CR[2]; first(JK)
+  OUTPUTS: CHAR[2]; ready; accept; print; feed
+  INPUTS: datavalid; wait
+  COMBUS: IOBUS[1]
 1. ready = 1
    -> (~datavalid)/(1)
 2. DR <- IOBUS; accept = 1; first <- 1
-3. CR <- (DR[10:17] & first) | (DR[1:8] & ~first)
+3. CR <- (DR[10:17] & first) \/ (DR[1:8] & ~first)
 4. feed = RETURN(CR); print = RETURN(CR)
 5. Null
 6. -> (wait)/(6)
 7. first <- 0
    -> (first, ~first)/(3, 1)
+8. DEAD END
 END SEQUENCE
-CHAR = CR
+  CHAR = CR
 END
-PasoOperaciónCondiciónEstado resultante1.$ ready = 1 $$ \rightarrow (\overline{datavalid})/(1) $Espera activa de datos. La interfaz anuncia disponibilidad mediante $ ready = 1 $1. Se mantiene en bucle cerrado en el paso 1 mientras la línea de datos válidos permanezca desactivada ($ datavalid = 0 $)1.2.$ DR \leftarrow IOBUS $ <br> $ accept = 1 $ <br> $ first \leftarrow 1 $—Captura y sincronización. El registro de datos $ DR$2$ $ captura los 18 bits del bus1. Se envía un pulso de confirmación ($ accept = 1 $) a la CPU durante un periodo de reloj1. El flip-flop JK $ first $ se inicializa en 11.3.$ CR \leftarrow (DR_{10:17} \land first) \lor (DR_{1:8} \land \overline{first}) $—Desempaquetado. Si $ first = 1 $, el registro $ CR$3$ $ se carga con el carácter superior ($ DR_{10:17} $)1. Si $ first = 0 $, se carga con el carácter inferior ($ DR_{1:8} $)1.4.$ feed = RETURN(CR) $ <br> $ print = RETURN(CR) $—Activación del periférico. La función combinacional $ RETURN(CR) $ evalúa si el carácter es un retorno de carro1. Activa alternativamente $ feed $ o $ print $ según corresponda1.5.$ Null $—Sincronización de hardware. Paso nulo de un periodo de reloj que concede un margen de tiempo seguro a la impresora para levantar la señal de ocupado ($ wait = 1 $)1.6.—$ \rightarrow (wait)/(6) $Polling de impresión. El control queda en espera activa ciclando sobre el paso 6 mientras la línea $ wait $ esté en alto, indicando que la impresora está ejecutando la acción física1.7.$ first \leftarrow 0 $$ \rightarrow (first, \overline{first})/(3, 1) $Control de flujo por carácter. Se borra el indicador $ first $1. Basándose en su estado antes del flanco de reloj, si era 1, bifurca al paso 3 para procesar el segundo carácter1; si era 0, regresa al paso 1 para esperar una nueva palabra1.CHAR = CR$ CHAR = CR $—Salida combinacional permanente. Expresión combinacional fuera de secuencia que asocia directamente la salida física $ CHAR$3$ $ al registro de caracteres $ CR$3$ $ de forma continua1.

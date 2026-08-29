@@ -10,9 +10,9 @@ blocked_by:
 ## Handoff
 
 **Última sesión:** 2026-08-29
-**Retomar desde:** Fase 3 — pegar N16 en `ETN825_AHPL.md` con edit_file (después de N15, antes del bloque `%%`), re-subir a NotebookLM y re-probar con snippets H y G
-**Completado esta sesión:** diagnóstico completo; snippets de prueba creados en `notebooklm_question.md`; tests H y G ejecutados x2 (antes y después del fix del prompt); N16 redactada y corregida en `Rubbish\section.md`; hallazgo del bug del botón de copiar de NotebookLM documentado; tabla de tamaños estándar agregada a N16
-**Próximo paso:** escribir N16 en la guía con `edit_file` → re-subir guía → re-probar H y G capturando con puntero (no botón)
+**Retomar desde:** Fase 3 — re-subir `ETN825_AHPL.md` a NotebookLM y re-probar snippets H y G con puntero
+**Completado esta sesión:** N16 escrita en la guía con edit_file (Par 1–Par 4 + tabla de tamaños); N16 duplicado eliminado; N11 paso 7 corregido `(3,1)` → `(3,8)`
+**Próximo paso:** re-subir guía a NotebookLM → re-probar H y G capturando con puntero (no botón)
 **Preguntas de cierre:** —
 
 ---
@@ -118,7 +118,9 @@ N16 está lista. El único paso pendiente es escribirla en la guía y verificar 
 - [x] Redactar N16 en `Rubbish\section.md`
 - [x] Agregar tabla de tamaños estándar a N16
 - [x] Revisar y corregir formato de N16
-- [ ] Escribir N16 en `ETN825_AHPL.md` con `edit_file`
+- [x] Escribir N16 en `ETN825_AHPL.md` con `edit_file`
+- [x] Eliminar N16 duplicado
+- [x] Corregir N11 paso 7: `(3,1)` → `(3,8)`
 - [ ] Re-subir guía a NotebookLM
 - [ ] Re-prueba final — snippets H y G con puntero
 - [ ] Cerrar ship (status: delivered)

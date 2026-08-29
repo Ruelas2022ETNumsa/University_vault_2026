@@ -13,15 +13,15 @@ date_updated: 2026-08-02
 ---
 
 ## Panel de operaciones
-**2026/08/28**
+**2026/08/29**
 
 |     Worker     | Status | Estamina | Proyecto activo                                   | Wake | Recarga |
 | :------------: | :----: | :------: | :------------------------------------------------ | :--: | :-----: |
 | [[alx_hot.md]] |   ❌    |    🟢    | Sistema consulta móvil via Drive MCP              |      |         |
-|  [[krajo.md]]  |   ❌    |    🔴    | Implementación física `_hangar/`                  |      |  23:40  |
-| [[alx_gml.md]] |   ❌    |    🔴    | Sistema de links, sync y organización de carpetas |      |  24:40  |
-| [[alxrul.md]]  |   ✔    |    🔴    | —                                                 |      |  3:00   |
-| [[alx-rul.md]] |   ❌    |    🔴    | Cornell Marginalia → Galaxy                       |      |  4:00   |
+|  [[krajo.md]]  |   ❌    |    🔴    | Implementación física `_hangar/`                  |      |  20:40  |
+| [[alx_gml.md]] |   ❌    |    🟢    | Sistema de links, sync y organización de carpetas |      |         |
+| [[alxrul.md]]  |   ✔    |    🟢    | —                                                 |      |         |
+| [[alx-rul.md]] |   ❌    |    🟢    | Cornell Marginalia → Galaxy                       |      |         |
 | [[standb.md]]  |   ✔    |    🟢    | —                                                 |  —   |    —    |
 | [[emergn.md]]  |   ✔    |    🟢    | —                                                 |  —   |    —    |
 
