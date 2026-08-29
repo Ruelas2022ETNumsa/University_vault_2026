@@ -136,8 +136,40 @@ NotebookLM es un sistema RAG sobre Gemini — lee los fuentes y genera respuesta
 - [x] Formato final definido: bloque de código para AHPL + tabla con KaTeX inline para operadores
 - [x] Prompt `BCv1i` actualizado al formato final
 - [x] Guía `ETN825_AHPL.md` actualizada — tabla N11 con KaTeX inline
-- [ ] Cambiar `!` por `~` para negados en prompt y guía
+- [x] Investigación operadores AHPL — P1/P2/P3 consultados a ChatGPT + Gemini/NotebookLM
+- [ ] Corregir guía `ETN825_AHPL.md` — 5 puntos identificados (ver ## Correcciones pendientes)
 - [ ] Re-prueba en NotebookLM con formato final
+
+---
+
+## Correcciones pendientes — ETN825_AHPL.md
+
+Basadas en investigación P1/P2 (ChatGPT + Gemini, 2026-08-28). Fuente: Hill & Peterson 2ª ed. p. 112, 128-129.
+
+**Sobre el operador `!` (row concatenate):**
+- `!` NO es complemento de bits — es ROW CONCATENATE (encadenamiento de filas/vectores)
+- La concatenación de vectores simples usa coma: `X, Y`
+- El `!` construye una matriz/vector compuesto: `(A ! B)` = filas de A sobre filas de B
+
+**Sobre el NOT en texto plano:**
+- La notación canónica del libro es barra superior: `overline{X}`
+- En texto plano / bloques de código AHPL: `~` es sustitución tipográfica aceptada, no notación original
+- En tablas KaTeX: `\overline{X}` es la forma correcta
+
+**Sobre el paso 3A del módulo PRINTER INTERFACE (P3):**
+- Fuente: ChatGPT con foto del libro, p. 349, Example 9.3 (cap. 9)
+- Fuente: Gemini/NotebookLM, p. 350
+- El paso 3A real del libro es:
+  `CR ← (DR₁₀:₁₇ ∧ first) ∨ (DR₁:₈ ∧ ~first)`
+- NO usa operador `*` ni `!` — usa AND/OR lógico directamente
+- Lo que tenía la guía (`CR ← (D₁₀:₁₇!) * (first, ~first)`) es incorrecto en estructura y operadores
+
+**Puntos a corregir en la guía:**
+1. **N4 — tabla "Selección de bits"** — fila `REG_{i:j}!` dice "complementados" → incorrecto, es row concatenate
+2. **N4 — tabla "Transferencia y conexión"** — ejemplo `(D_{10:17}!) * (first, overline{first})` — estructura incorrecta, no es así en el libro
+3. **N7 — bloque código paso 3A** — `CR ← (D₁₀:₁₇!) * (first, ~first)` → debe ser `CR ← (DR₁₀:₁₇ ∧ first) ∨ (DR₁:₈ ∧ ~first)`
+4. **N11 — bloque código paso 3A** — ídem N7
+5. **N14 — bloque código y nota al pie** — `(expresión!) * (cond, cond̄)` y descripción "complemento lógico bit a bit" → estructura incorrecta, revisar con ejemplo real del libro
 
 ---
 
