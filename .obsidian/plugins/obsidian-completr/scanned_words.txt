@@ -9384,6 +9384,7 @@ tJWs
 tBmY
 transferir
 transfiri
+transcrib
 ToDo
 Templater
 Text
@@ -19726,6 +19727,8 @@ TWQE
 TKoA
 TaCi
 Transfiere
+TRANSFERENCIA
+Transcrib
 Sistema
 Sync
 Save
@@ -39104,6 +39107,7 @@ PgaY
 PHrp
 Polling
 Permanente
+Printer
 del
 date
 de
@@ -48373,6 +48377,7 @@ devault
 direccionable
 desea
 direccionada
+desincronizado
 Vault
 Verificar
 Variables
@@ -75947,6 +75952,7 @@ blicos
 banderas
 bifurcar
 bigvee
+branch
 scope
 status
 selector
@@ -86203,6 +86209,7 @@ secuenciador
 simplicidad
 secuencialmente
 saliente
+singular
 vault
 vil
 ver
@@ -106260,6 +106267,7 @@ aprende
 abstractas
 acuse
 alterando
+asignaciones
 related
 recomendados
 ribbon
@@ -136043,6 +136051,9 @@ comunicar
 captada
 consultados
 concatenate
+catenation
+concatena
+compendio
 updated
 un
 universo
@@ -164808,6 +164819,7 @@ Combinacional
 Complement
 CONCATENATE
 Concatenaci
+Catenation
 Instalados
 Instalado
 Instalar
@@ -175099,6 +175111,7 @@ ItnU
 Incrementa
 Interno
 Individual
+Identificadas
 Funci
 File
 Fase
@@ -195107,6 +195120,8 @@ ETEx
 Efect
 Estabilizaci
 Entreg
+Encadenamiento
+Espec
 Obsidian
 OmniSearch
 Ocultar
@@ -204456,6 +204471,7 @@ OdWm
 Owjs
 OWvM
 Operativa
+OPERADOR
 Auto
 Annotator
 Autocompletado
@@ -222965,6 +222981,7 @@ petici
 paralela
 pasando
 procediendo
+plural
 min
 mica
 movimiento
@@ -262307,6 +262324,7 @@ empaquetados
 emos
 explicativo
 efectivos
+especificados
 Motor
 Media
 Mantiene
@@ -282168,6 +282186,7 @@ LLll
 LGynN
 Liberaci
 Load
+Localizaci
 links
 las
 listar
@@ -312124,6 +312143,7 @@ Declaraci
 Direccionamiento
 Decodificador
 Deposit
+Definido
 Remotely
 Raz
 Revisa
@@ -339776,6 +339796,7 @@ fbab
 fnDs
 funcionaron
 fallando
+flashtest
 haya
 hace
 hacer

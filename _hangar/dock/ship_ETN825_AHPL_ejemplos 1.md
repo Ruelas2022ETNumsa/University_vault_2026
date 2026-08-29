@@ -21,13 +21,22 @@ blocked_by:
 
 Agregar una sección de ejemplos de pares pregunta→respuesta a la guía `ETN825_AHPL.md` para que NotebookLM genere código AHPL en KaTeX y no en texto plano. El problema es que NotebookLM entiende la notación pero no la produce en el formato correcto sin ejemplos concretos de imitación.
 
-## Estado actual al inicio de próxima sesión
+## Problema pendiente — inicio próxima sesión
 
-**Guía `ETN825_AHPL.md`** — completamente revisada y corregida. Todos los operadores, ejemplos y convenciones alineados con Hill & Peterson 2ª ed. confirmados vía Gemini+NotebookLM.
-**Prompt `BCv1i`** — actualizado al formato final (bloque de código + tabla KaTeX inline). 9852 chars.
-**Próximo paso único:** re-prueba en NotebookLM con el formato final — verificar que genera bloque de código AHPL + tabla KaTeX correctamente.
+**Síntoma:** NotebookLM sigue generando `$$\begin{aligned}...\end{aligned}$$` por su cuenta aunque la guía y el prompt no lo usan. El modelo lo hace por preentrenamiento — ignora las instrucciones de formato.
 
-> Si la prueba falla: activar Plan B — usuario corre plugin de conversión `\[ \]` → `$$` y se evalúa resultado.
+**Lo descartado:** el problema no es la guía ni los delimitadores — ambos ya están corregidos. El modelo genera ese formato por defecto cuando produce AHPL.
+
+**Líneas de ataque para la próxima sesión:**
+1. Agregar prohibición explícita en el prompt: `NUNCA \begin{aligned}, NUNCA \begin{array}, NUNCA ningún entorno \begin{...}`
+2. Agregar en la sección `🤖 NOTEBOOKLM` de la guía la misma prohibición con ejemplo negativo explícito
+3. Evaluar si agregar un par pregunta→respuesta en la guía donde se muestre el output correcto (líneas \[ \] independientes) vs el incorrecto ($$\begin{aligned}$$)
+
+**Nota sobre delimitadores:** mantener `\[ \]` y `\( \)` — NO usar `$$`. La web no tiene documentación oficial de Google sobre este punto, pero la experiencia directa del usuario confirma que `$$` rompió el renderizado en versiones anteriores de NotebookLM. Hasta que haya evidencia contraria, `\[ \]` es el delimitador correcto.
+
+**Archivos a revisar:**
+- `E:\University_vault_2026\_app\notebooklm\prompts\ETN825\ETN825-comp_indice_BCv1i.md`
+- `E:\University_vault_2026\_app\notebooklm\guides\ETN825\ETN825_AHPL.md` — sección 🤖 NOTEBOOKLM
 
 ---
 
@@ -228,7 +237,7 @@ Identificadas en revisión post-corrección (sesión 2026-08-28). Fuente: análi
 | 2 | N6 — ejemplo operaciones simultáneas | Usa `2A. DR ← IOBUS; busy ← 1; accept = 1; first ← 1` — subpaso y `busy` ya no existen en P5 | Actualizar a `2. DR ← IOBUS; accept = 1; first ← 1` | ✅ aplicado |
 | 3 | N7 — ejemplo etiquetas | Muestra módulo viejo con subpasos (`1A`, `2A`, `3A`) y `CSBUS` — P5 no tiene subpasos | Reemplazar ejemplo por uno representativo del P5 o patrón genérico | ✅ aplicado |
 | 4 | N9 — nota al pie convención `~` | Dice "en texto plano se indica con subíndice negado o `NOT(...)`" — contradice convención `~` establecida | Corregir nota según convención definida | ✅ aplicado |
-| 5 | N1 — estructura genérica | `COMBUSES:` en guía — confirmar forma canónica del libro | Preguntar a Gemini antes de editar | ✅ confirmado — `COMBUS:` (sin S) es el canónico del libro. Corregido en v3 |
+| 5 | N1 — estructura genérica | Dice `COMBUSES:` pero P5 usa `COMBUS:` (sin S) — confirmar forma canónica del libro | Preguntar a Gemini antes de editar | ✅ confirmado — `COMBUSES` es correcto, no requiere cambio |
 | 6 | N12 — ejemplos bucle | Usa `readȳ` y `6A. → (wait)/(6A)` con subpaso — P5 tiene `6. → (wait)/(6)` sin subpaso | Actualizar ejemplos al módulo P5 | ✅ aplicado |
 
 ---

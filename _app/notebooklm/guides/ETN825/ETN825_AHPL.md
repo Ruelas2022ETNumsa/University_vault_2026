@@ -65,7 +65,7 @@ MODULE: NOMBRE DEL MÓDULO
 MEMORY: <registros internos con tamaño>
 OUTPUTS: <señales y registros de salida>
 INPUTS: <señales de entrada>
-COMBUSES: <buses combinacionales con tamaño>
+COMBUS: <buses combinacionales con tamaño>
 
 1. <paso 1>
 2. <paso 2>
@@ -82,7 +82,7 @@ Reglas:
 - `MEMORY:` — registros que retienen valor entre ciclos de reloj (flip-flops). Siempre con tamaño entre corchetes si son vectores: `DR[18]`, `CR[8]`. Escalares sin corchetes: `busy`, `first`.
 - `OUTPUTS:` — señales o registros que salen del módulo. Si son buses de datos incluir tamaño: `CHAR[8]`. Señales booleanas sin corchetes: `print`, `feed`.
 - `INPUTS:` — señales que entran al módulo desde otros módulos o dispositivos: `wait`, `csrdy`.
-- `COMBUSES:` — buses combinacionales (sin reloj, conexión directa). Con tamaño y señales booleanas: `IOBUS[18]`, `CSBUS[12]`, `ready`, `datavalid`, `accept`.
+- `COMBUS:` — buses combinacionales (sin reloj, conexión directa). Con tamaño y señales booleanas: `IOBUS[18]`, `CSBUS[12]`, `ready`, `datavalid`, `accept`.
 
 ❌ Incorrecto — falta tamaño en registro:
 ```
@@ -106,14 +106,14 @@ MEMORY: DR[18]; CR[8]; busy; first
 | `REG` (sin corchetes) | Flip-flop de 1 bit (escalar) | `busy`, `first`, `ready` |
 | Separador `;` | Separa elementos en la misma sección | `DR[18]; CR[8]; busy; first` |
 
-#### Buses (COMBUSES)
+#### Buses (COMBUS)
 
 | Notación | Significado | Ejemplo |
 |---|---|---|
 | `BUS[N]` | Bus de N bits, conexión combinacional | `IOBUS[18]`, `CSBUS[12]` |
-| Señal booleana en COMBUSES | Bus de 1 bit (señal de handshake) | `ready`, `datavalid`, `accept` |
+| Señal booleana en COMBUS | Bus de 1 bit (señal de handshake) | `ready`, `datavalid`, `accept` |
 
-> **Diferencia clave:** `MEMORY` usa reloj — las transferencias \( \leftarrow \) solo se efectúan al borde de reloj. `COMBUSES` es combinacional — las conexiones \( = \) son inmediatas y no retienen valor.
+> **Diferencia clave:** `MEMORY` usa reloj — las transferencias \( \leftarrow \) solo se efectúan al borde de reloj. `COMBUS` es combinacional — las conexiones \( = \) son inmediatas y no retienen valor.
 
 ---
 
@@ -123,22 +123,22 @@ MEMORY: DR[18]; CR[8]; busy; first
 |---|---|---|
 | `INPUTS` | Señales que llegan de otros módulos o dispositivos | \( \rightarrow \) hacia este módulo |
 | `OUTPUTS` | Señales o registros que salen hacia otros módulos | \( \leftarrow \) desde este módulo |
-| `COMBUSES` | Buses compartidos bidireccionales o señales de handshake | \( \leftrightarrow \) bidireccional |
+| `COMBUS` | Buses compartidos bidireccionales o señales de handshake | \( \leftrightarrow \) bidireccional |
 
 **Ejemplo del módulo PRINTER INTERFACE:**
 
 ```
-OUTPUTS: CHAR[8]; print; feed
-INPUTS:  wait; csrdy
-COMBUSES: IOBUS[18]; CSBUS[12]; ready; datavalid; accept
+OUTPUTS: CHAR[8]; ready; accept; print; feed
+INPUTS:  datavalid; wait
+COMBUS: IOBUS[18]
 ```
 
 - `CHAR[8]` — los 8 bits del carácter enviado a la impresora (salida)
+- `ready`, `accept` — señales de handshake hacia el bus (salida)
 - `print`, `feed` — comandos booleanos a la impresora (salida)
+- `datavalid` — indica que hay dato válido en el bus (entrada)
 - `wait` — señal de espera de la impresora (entrada)
-- `csrdy` — canal CS listo, viene del sistema (entrada)
-- `IOBUS[18]`, `CSBUS[12]` — buses compartidos del sistema
-- `ready`, `datavalid`, `accept` — señales de handshake del protocolo de bus
+- `IOBUS[18]` — bus de datos compartido del sistema
 
 ---
 
@@ -243,12 +243,11 @@ END SEQUENCE    ← la secuencia termina y puede reiniciarse o llamarse desde ot
 Varias transferencias en el mismo paso se ejecutan **todas al mismo tiempo** en el mismo ciclo de reloj.
 
 ```
-2A. DR ← IOBUS; busy ← 1; accept = 1; first ← 1
+2. DR ← IOBUS; accept = 1; first ← 1
 ```
 
 Esto significa:
 - `DR ← IOBUS` — DR toma el valor de IOBUS
-- `busy ← 1` — busy se pone en 1
 - `accept = 1` — accept se activa (combinacional, inmediato)
 - `first ← 1` — first se pone en 1
 
@@ -269,16 +268,24 @@ Los pasos se numeran con enteros. Los subpasos usan letra sufijo.
 | `1B.` `2B.` | Subpaso B | Segunda rama (si hay) |
 | `(1)` `(1A)` en bifurcación | Destino | A qué paso/subpaso ir |
 
-**Ejemplo de uso de etiquetas del módulo PRINTER INTERFACE:**
+**Ejemplo de uso de etiquetas — patrón genérico con bifurcación:**
 
 ```
-→ (~CSBUS₃, ~CSBUS₃, CSBUS₃)/(1, 1A, 3)
-...
-1A. ready = 1;
-    → (~datavalid)/(1A)
-2A. DR ← IOBUS; busy ← 1; accept = 1; first ← 1
-3A. CR ← (DR₁₀:₁₇ ∧ first) ∨ (DR₁:₈ ∧ ~first)
+3.  → (modo, ~modo)/(3A, 3B)
+
+3A. REG ← IOBUS; flag ← 1
+    → (5)
+
+3B. REG ← 0; flag ← 0
+
+4.  ...
+5.  DEAD END
 ```
+
+- `3.` — paso principal que bifurca según `modo`
+- `3A.` — subpaso A (rama cuando `modo = 1`) — salta al paso 5 al terminar
+- `3B.` — subpaso B (rama cuando `modo = 0`) — continúa al paso 4
+- `(5)` en bifurcación — destino numérico; `(3A)` sería destino con letra sufijo
 
 ---
 
@@ -314,7 +321,7 @@ Interpretación:
 - Si la condición es **falsa** → va al paso `(1)` (bucle de espera).
 - Si es **verdadera** → continúa al paso 2.
 
-> En el libro, las barras se escriben sobre los símbolos. En texto plano, se indica con subíndice negado o con notación `NOT(...)`.
+> En el libro, las barras se escriben tipográficamente sobre los símbolos (barra superior). En los bloques de código de esta guía se usa `~` como prefijo — por ejemplo `~CSBUS₀` — como sustitución tipográfica aceptada. En tablas KaTeX se usa `\overline{X}`.
 
 ---
 
@@ -326,13 +333,13 @@ Interpretación:
 
 Antes de escribir o completar un módulo, verificar:
 
-- [ ] ¿El módulo tiene `MODULE:`, `MEMORY:`, `OUTPUTS:`, `INPUTS:`, `COMBUSES:`?
+- [ ] ¿El módulo tiene `MODULE:`, `MEMORY:`, `OUTPUTS:`, `INPUTS:`, `COMBUS:`?
 - [ ] ¿Los registros vectoriales tienen tamaño entre corchetes? (`DR[18]`, no `DR`)
 - [ ] ¿Las transferencias usan `←` y las conexiones de bus usan `=`?
 - [ ] ¿Las operaciones simultáneas están en el **mismo paso** separadas por `;`?
 - [ ] ¿Ningún registro destino aparece dos veces en el mismo paso?
 - [ ] ¿Las bifurcaciones tienen formato `→ (condición)/(destino)`?
-- [ ] ¿Las condiciones negadas están correctamente indicadas con barra o `NOT`?
+- [ ] ¿Las condiciones negadas usan `~` en bloques de código o `\overline{X}` en tablas KaTeX?
 - [ ] ¿Los subpasos están etiquetados con letra sufijo (`1A`, `2A`)?
 - [ ] ¿La secuencia termina con `DEAD END` o `END SEQUENCE`?
 - [ ] ¿Las salidas combinacionales permanentes están después del `END SEQUENCE` y antes del `END`?
@@ -346,34 +353,24 @@ Antes de escribir o completar un módulo, verificar:
 
 ### N11. MÓDULO COMPLETO — PRINTER INTERFACE
 
-> Contexto para NotebookLM: módulo AHPL completo de la interface de impresora. Cubre el protocolo completo: espera de dirección en CSBUS, handshake con IOBUS (datavalid/accept), carga de DR, acumulación en CR con `first`, envío a impresora (feed/print), y espera de `wait`. Fuente: Hill & Peterson Digital Systems 2ª ed., material del docente ETN825.
+> Contexto para NotebookLM: módulo AHPL completo de la interface de impresora. Cubre el protocolo completo: handshake con IOBUS (datavalid/accept), carga de DR, acumulación en CR con `first`, envío a impresora (feed/print), y espera de `wait`. Fuente: Hill & Peterson Digital Systems 2ª ed., Example 9.3, p. 349-350.
 
 ```
 MODULE: PRINTER INTERFACE
-MEMORY: DR[18]; CR[8]; busy; first
-OUTPUTS: CHAR[8]; print; feed
-INPUTS: wait; csrdy
-COMBUSES: IOBUS[18]; CSBUS[12]; ready; datavalid; accept
-
-1.  → (csrdy ∧ ~CSBUS₀ ∧ CSBUS₁ ∧ ~CSBUS₂)/(1)
-2.  accept = 1;
-    → (~CSBUS₃, ~CSBUS₃, CSBUS₃)/(1, 1A, 3)
-
-3.  → (readȳ)/(3)
-4.  CSBUS₀ = busy; datavalid = 1;
-    → (~accept, accept)/(4, 1)
-
-1A. ready = 1;
-    → (~datavalid)/(1A)
-2A. DR ← IOBUS; busy ← 1; accept = 1; first ← 1
-3A. CR ← (D₁₀:₁₇!) * (first, ~first)
-4A. feed = RETURN(CR); print = RETURN(CR);
-5A. Null
-6A. → (wait)/(6A)
-7A. first ← 0; busy * ~first ← 0
-    → (first, ~first)/(3A, 8A)
-8A. DEAD END
-
+MEMORY: DR[18]; CR[8]; first(JK)
+OUTPUTS: CHAR[8]; ready; accept; print; feed
+INPUTS: datavalid; wait
+COMBUS: IOBUS[18]
+1. ready = 1
+   → (~datavalid)/(1)
+2. DR ← IOBUS; accept = 1; first ← 1
+3. CR ← (DR₁₀:₁₇ ∧ first) ∨ (DR₁:₈ ∧ ~first)
+4. feed = RETURN(CR); print = RETURN(CR)
+5. Null
+6. → (wait)/(6)
+7. first ← 0
+   → (first, ~first)/(3, 8)
+8. DEAD END
 END SEQUENCE
 CHAR = CR
 END
@@ -383,38 +380,34 @@ END
 
 | Paso | Qué hace |
 |---|---|
-| `1.` | Bucle de espera: sale cuando \( csrdy = 1 \) y la dirección CSBUS coincide. |
-| `2.` | \( accept = 1 \) en el bus CS. Bifurca según \( CSBUS_3 \). |
-| `3.` | Espera mientras \( \overline{ready} \) — sale cuando \( ready = 1 \). |
-| `4.` | \( CSBUS_0 = busy \), \( datavalid = 1 \). Bucle hasta \( accept = 1 \). |
-| `1A.` | \( ready = 1 \). Espera mientras \( \overline{datavalid} \). |
-| `2A.` | \( DR \leftarrow IOBUS;\; busy \leftarrow 1;\; accept = 1;\; first \leftarrow 1 \) — todo simultáneo. |
-| `3A.` | \( CR \leftarrow (D_{10:17}!) * (first,\, \overline{first}) \). |
-| `4A.` | \( feed = RETURN(CR);\; print = RETURN(CR) \) — combinacional. |
-| `5A.` | Paso nulo — sincronización. |
-| `6A.` | Espera mientras \( wait = 1 \). |
-| `7A.` | \( first \leftarrow 0;\; busy * \overline{first} \leftarrow 0 \). Bifurca: \( first = 1 \rightarrow 3A \), si no \( \rightarrow 8A \). |
-| `8A.` | DEAD END. |
+| `1.` | `ready = 1`. Bucle de espera mientras `datavalid = 0` — sale cuando `datavalid = 1`. |
+| `2.` | \( DR \leftarrow IOBUS;\; accept = 1;\; first \leftarrow 1 \) — todo simultáneo. |
+| `3.` | \( CR \leftarrow (DR_{10:17} \land first) \lor (DR_{1:8} \land \overline{first}) \) — acumula carácter en CR. |
+| `4.` | \( feed = RETURN(CR);\; print = RETURN(CR) \) — envía señales a impresora. |
+| `5.` | Paso nulo — sincronización. |
+| `6.` | Bucle de espera mientras \( wait = 1 \) — sale cuando \( wait = 0 \). |
+| `7.` | \( first \leftarrow 0 \). Bifurca: \( first = 1 \rightarrow 3 \), \( first = 0 \rightarrow 8 \). |
+| `8.` | DEAD END. |
 | `CHAR = CR` | Salida combinacional permanente: \( CHAR = CR \) en todo momento. |
 
 ---
 
 ### N12. PATRÓN — BUCLE DE ESPERA CON SEÑAL
 
-> Contexto para NotebookLM: patrón de polling. El módulo permanece en el mismo paso hasta que una señal cambia de estado. Se usa para esperar `ready`, `datavalid`, `accept`, `wait`, `csrdy`. El paso bifurca hacia sí mismo mientras la condición sea falsa (o verdadera, según el sentido).
+> Contexto para NotebookLM: patrón de polling. El módulo permanece en el mismo paso hasta que una señal cambia de estado. Se usa para esperar `datavalid`, `wait`, `ready`, `accept`. El paso bifurca hacia sí mismo mientras la condición sea falsa (o verdadera, según el sentido).
 
 ```
 % Espera mientras la señal es 0 (sale cuando es 1):
-N.  → (señal̄)/(N)
+N.  → (~señal)/(N)
 
 % Espera mientras la señal es 1 (sale cuando es 0):
 N.  → (señal)/(N)
 
-% Ejemplo concreto — esperar que ready sea 1:
-3.  → (readȳ)/(3)
+% Ejemplo concreto — esperar que datavalid sea 1:
+1.  → (~datavalid)/(1)
 
 % Ejemplo concreto — esperar que wait sea 0:
-6A. → (wait)/(6A)
+6.  → (wait)/(6)
 ```
 
 ---
@@ -441,27 +434,36 @@ N.  → (señal)/(N)
 
 ---
 
-### N14. PATRÓN — OPERACIÓN CONDICIONAL CON PRODUCTO *
+### N14. PATRÓN — TRANSFERENCIA CONDICIONAL CON OPERADOR *
 
-> Contexto para NotebookLM: el operador `*` (producto condicional) permite cargar un registro con uno de dos valores según una condición booleana, en un único paso sincrónico.
+> Contexto para NotebookLM: el operador `*` indica transferencia condicional — la operación solo se ejecuta si la señal de control asociada vale 1. Puede aparecer en el lado izquierdo (destino condicionado) o en el lado derecho (selección de origen). Fuente: Hill & Peterson Digital Systems 2ª ed., sección 4.7, p. 105.
 
 ```
-% Formato:
-REG ← (expresión!) * (cond, cond̄)
+% Formato — condición en lado izquierdo:
+A * ~a ← B
 
 % Interpretación:
-% Si cond = 1 → REG ← expresión
-% Si cond = 0 → REG ← 0 (o retiene valor según contexto)
+% Si a = 0 (~a = 1) → A ← B
+% Si a = 1 (~a = 0) → no ocurre transferencia
 
-% Ejemplo del módulo PRINTER INTERFACE:
-3A. CR ← (D₁₀:₁₇!) * (first, first̄)
+% Dos transferencias condicionales simultáneas (p. 105):
+2. A * ~a ← B ; D * a ← C
 
 % Interpretación:
-% Si first = 1 → CR ← D[10:17] (NOT de los bits 10:17)
-% Si first = 0 → CR ← 0
+% Si a = 0 → A ← B
+% Si a = 1 → D ← C
+
+% Formato — selección de origen en lado derecho (row catenation):
+D ← (A ! B ! C) * (f, g, h)
+
+% Interpretación:
+% Si f = 1 → D ← A
+% Si g = 1 → D ← B
+% Si h = 1 → D ← C
+% Las condiciones f, g, h son mutuamente excluyentes
 ```
 
-> El `!` después de la expresión indica complemento lógico bit a bit de ese rango. En este ejemplo, `D₁₀:₁₇!` es el NOT de los bits 10 a 17 del bus de datos.
+> El operador `!` en `(A ! B ! C)` es row catenation — concatena registros para formar un vector compuesto. No es complemento lógico. El operador `*` relaciona ese vector con el vector de control `(f, g, h)` para seleccionar cuál transferir.
 
 ---
 
