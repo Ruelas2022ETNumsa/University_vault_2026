@@ -10,9 +10,9 @@ blocked_by:
 ## Handoff
 
 **Última sesión:** 2026-08-28
-**Retomar desde:** `E:\University_vault_2026\_app\notebooklm\prompts\ETN825\ETN825-comp_indice_BCv1i.md` y `ETN825_AHPL.md` — nueva revisión
-**Completado esta sesión:** diagnóstico x2, investigación web x2, ship, imágenes revisadas, N16 agregado, prompt corregido (KaTeX + sin bloques), prompt comprimido (9852 chars), \begin{aligned} eliminado de guía y prompt, \begin{array} eliminado del prompt
-**Próximo paso:** ver PROBLEMA PENDIENTE abajo
+**Retomar desde:** resultado estable — probar con negados `~` y evaluar output
+**Completado esta sesión:** diagnóstico x2, investigación web x2, ship, imágenes revisadas, N16 agregado, prompt corregido (KaTeX + sin bloques), prompt comprimido (9852 chars), \begin{aligned} eliminado de guía y prompt, \begin{array} eliminado del prompt, revisión completa de prompt y guía — formato final: bloque de código AHPL + tabla con KaTeX inline
+**Próximo paso:** cambiar `!` por `~` para negados en prompt y guía, luego re-prueba en NotebookLM
 **Preguntas de cierre:** —
 
 ---
@@ -132,9 +132,12 @@ NotebookLM es un sistema RAG sobre Gemini — lee los fuentes y genera respuesta
 - [x] Terminar compresión del prompt — 9852 chars (✓ bajo 10000)
 - [x] Eliminar \begin{array} del prompt
 - [x] Re-prueba en NotebookLM — sigue fallando: modelo genera $$\begin{aligned}$$ por preentrenamiento
-- [ ] PRÓXIMA SESIÓN: agregar prohibición explícita \begin{} en prompt y guía (ver PROBLEMA PENDIENTE)
-- [ ] Evaluar par pregunta→respuesta con ejemplo correcto vs incorrecto
-- [ ] Re-prueba en NotebookLM
+- [x] Revisión completa del enfoque — descartado KaTeX para bloques AHPL ($$ / \( \) / \[ \] no renderizaron de forma confiable)
+- [x] Formato final definido: bloque de código para AHPL + tabla con KaTeX inline para operadores
+- [x] Prompt `BCv1i` actualizado al formato final
+- [x] Guía `ETN825_AHPL.md` actualizada — tabla N11 con KaTeX inline
+- [ ] Cambiar `!` por `~` para negados en prompt y guía
+- [ ] Re-prueba en NotebookLM con formato final
 
 ---
 
