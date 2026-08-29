@@ -2,17 +2,17 @@
 galaxy_body: ship
 project: "ETN825 AHPL — Ejemplos para forzar output LaTeX en NotebookLM"
 date: 2026-08-28
-status: docked
+status: delivered
 fleet: ETN825
 blocked_by:
 ---
 
 ## Handoff
 
-**Última sesión:** 2026-08-28
-**Retomar desde:** guía completamente revisada y corregida (v1+v2+v3). Próximo paso: re-prueba en NotebookLM
-**Completado esta sesión:** diagnóstico x2, investigación web x2, ship, imágenes revisadas, N16 agregado, prompt corregido (KaTeX + sin bloques), prompt comprimido (9852 chars), \begin{aligned} eliminado de guía y prompt, \begin{array} eliminado del prompt, revisión completa de prompt y guía — formato final: bloque de código AHPL + tabla con KaTeX inline; correcciones N4/N7/N11/N14 aplicadas; revisión completa — 11 inconsistencias identificadas y corregidas; COMBUS confirmado y corregido en toda la guía
-**Próximo paso:** re-prueba en NotebookLM con formato final
+**Última sesión:** 2026-08-29
+**Retomar desde:** —
+**Completado esta sesión:** re-prueba NotebookLM (formato bloque de código correcto, contenido con errores); análisis de notación con 2 ejemplos del libro; correcciones N1/N2/N4/N11/N12/N15 aplicadas en guía; investigación RETURN() x5 (Gemini x3 + Perplexity + ChatGPT + web) — conclusión: no es primitiva AHPL, es combinational logic unit definida en el ejemplo; guía y prompt revisados — todo consistente
+**Próximo paso:** —
 **Preguntas de cierre:** —
 
 ---
@@ -146,7 +146,7 @@ NotebookLM es un sistema RAG sobre Gemini — lee los fuentes y genera respuesta
 - [x] Corrección guía N15 — agregar patrón con `*` fuera de secuencia: `ss * (start ∨ stop) ← (1!0) * (start, stop)` — aplicado en buffer
 - [x] Verificar y eliminar cualquier mención de `busy` en N11 (módulo PRINTER INTERFACE) — no había `busy`, N11 limpio
 - [x] Corregir N11 — paso 7: destino incorrecto `(3, 8)` → debe ser `(3, 1)` en bloque de código y tabla — aplicado en buffer
-- [x] Corrección guía N4 — clarificar `RETURN()`: investigación x4 (Gemini x3 + fuentes NotebookLM) — conclusión: no es operador estándar AHPL, actúa como look-up table combinacional en contexto E/S. `BUSFN` agregado. Pendiente confirmación web.
+- [x] Corrección guía N4 — clarificar `RETURN()`: investigación x4 (Gemini x3 + Perplexity + ChatGPT + web) — conclusión: no es operador estándar AHPL, es combinational logic unit definida en el ejemplo (detector booleano). `BUSFN` agregado como operador formal. Aplicado en guía.
 
 ---
 

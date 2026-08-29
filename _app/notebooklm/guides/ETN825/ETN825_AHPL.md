@@ -180,7 +180,7 @@ COMBUS: IOBUS[18]
 | \( INC(REG) \) | `INC(REG)` | Incremento | \( PC \leftarrow INC(PC) \) |
 | \( ADD(A,B) \) | `ADD(A,B)` | Suma | \( AC \leftarrow ADD(AC, DR) \) |
 | \( BUSFN(M;\ DCD(AR)) \) | `BUSFN(M; DCD(AR))` | Acceso a ROM/tabla combinacional — lee datos de memoria M direccionada por DCD(AR) | \( MD \leftarrow BUSFN(M;\ DCD(AR)) \) |
-| `RETURN(REG)` | `RETURN(REG)` | Función auxiliar mnemónica — no es operador estándar de AHPL. En interfaces E/S actúa como look-up table combinacional: traduce el código binario de REG a señales de control del periférico. Fuente: H&P 2ª ed. p. 305, Example 9.3 | \( feed = RETURN(CR) \) |
+| `RETURN(REG)` | `RETURN(REG)` | Combinational logic unit definida en el ejemplo — no es operador estándar de AHPL (no aparece en operador set, p. 118). En Example 9.3 actúa como detector booleano: evalúa si REG contiene un código específico y devuelve 1 bit. Equivalente estándar: `(CR = código)`. Ver: Using Combinational Logic Units, p. 128-132. | \( feed = RETURN(CR) \) |
 
 ---
 
