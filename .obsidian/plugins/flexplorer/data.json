@@ -26,7 +26,9 @@
         "README.md",
         "ETN825-T01.md",
         "Untitled.md",
-        "Untitled 1.md"
+        "notebooklm_question.md",
+        "h.md",
+        "g.md"
       ]
     },
     "MOC": {
@@ -1437,7 +1439,8 @@
         "latex-matlab-limpieza-comentarios.md",
         "tsk_toggle-readable-line-length.md",
         "ship_ETN825_AHPL_ejemplos.md",
-        "ship_ETN825_AHPL_ejemplos 1.md"
+        "ship_ETN825_AHPL_ejemplos 1.md",
+        "ship_ETN825_AHPL_N16.md"
       ]
     },
     "_hangar/dock/tsk_pdf_marginalia_pp.md": {
@@ -5867,7 +5870,19 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Untitled 1.md": {
+    "_hangar/dock/ship_ETN825_AHPL_N16.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "notebooklm_question.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "h.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "g.md": {
       "isPinned": false,
       "isHidden": false
     }

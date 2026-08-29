@@ -1,6 +1,6 @@
 ---
 title: AHPL — Guía unificada para ETN825 (LaTeX NotebookLM)
-galaxy_body: beacon
+galaxy_body: 22beacon
 scope: devault
 tool: ahpl-notation
 audience:

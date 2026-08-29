@@ -5,6 +5,8 @@ NUNCA usar $$ ni $ como delimitadores.
 NUNCA usar \begin{...}...\end{...} para bloques AHPL.
 NUNCA KaTeX display \[ \] para módulos o secuencias AHPL — solo bloques de código.
 
+MEMORY/OUTPUTS/COMBUS: vectores SIEMPRE con tamaño. DR[18] no DR. CHAR[8] no CHAR.
+
 TAREA:
 Dado un tema y un subtítulo del temario oficial de ETN825 (Arquitectura de Computadores),
 buscar en los libros fuente el complemento nivel B o C para ese subtítulo.
