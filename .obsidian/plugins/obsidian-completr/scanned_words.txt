@@ -75971,6 +75971,7 @@ bifurcar
 bigvee
 branch
 booleano
+bajada
 scope
 status
 selector
@@ -86230,6 +86231,7 @@ saliente
 singular
 single
 stripea
+suministra
 vault
 vil
 ver
@@ -106293,6 +106295,7 @@ adaptada
 alimentando
 anuncia
 alternativamente
+adaptemos
 related
 recomendados
 ribbon
@@ -312235,6 +312238,8 @@ Deposit
 Definido
 DBUS
 Desempaquetado
+Declaraciones
+Detiene
 Remotely
 Raz
 Revisa

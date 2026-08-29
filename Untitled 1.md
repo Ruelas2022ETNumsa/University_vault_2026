@@ -1,50 +1,64 @@
-### Tabla de Declaraciones
+### Módulo de Carga Sincrónica WAITER
+
+1. **Definición formal**  
+El lenguaje de descripción de hardware AHPL (*A Hardware Programming Language*) se basa en la premisa de que un sistema digital puede dividirse de manera óptima en una sección de control secuencial y otra sección que contiene los registros de datos y su lógica combinacional asociada. Cada instrucción o paso dentro de la secuencia de control representa un periodo de reloj maestro del sistema, en el cual se ejecutan transferencias sincrónicas hacia registros y conexiones a buses lógicos.
+
+2. **Idea clave**  
+La sincronización en AHPL está gobernada por reloj, lo que implica que las transferencias con el operador de asignación \( \leftarrow \) ocurren de forma síncrona en el flanco activo del reloj del sistema. Por el contrario, las conexiones representadas con el operador \( = \) son puramente combinacionales y no requieren el flanco del reloj para propagar su valor.
+
+3. **Diagrama de caja negra**
+
+```tikz
+\usetikzlibrary{shapes.geometric, arrows.meta}
+\begin{document}
+\node[draw, rectangle, minimum width=3.5cm, minimum height=2.2cm, line width=1pt] (mod) at (0,0) {\textbf{MODULE: WAITER}};
+\draw[<-] (mod.140) -- ++(-1.8,0) node[above, midway] {\( go \)};
+\draw[<-] (mod.200) -- ++(-1.8,0) node[below, midway] {\( DBUS \)};
+\draw[->] (mod.0) -- ++(1.8,0) node[above, midway] {\( ready \)};
+\end{document}
+```
+
+---
+
+##### Ej. Diseñar un módulo AHPL simple que espere una señal de inicio go, cargue un registro de almacenamiento AC con los datos de un bus de entrada DBUS, active una señal de salida ready y finalice su secuencia de control.
+
+**Resolución**  
+Se diseña una secuencia lineal que realiza un bucle de espera (*polling*) sobre la señal *go* y, tras su activación, transfiere los datos del bus de entrada al acumulador, finalizando en un estado de parada.
+
+1) Tabla de declaraciones:
 
 | Identificador | Sección | Tamaño | Rol |
-| :--- | :--- | :--- | :--- |
-| `AC` | MEMORY | `` | Registro de acumulación que almacena el dato recibido. |
-| `flag` | MEMORY | escalar | Flip-flop que se activa tras completar la carga. |
-| `done` | OUTPUTS | escalar | Señal de salida de finalización combinacional. |
-| `go` | INPUTS | escalar | Señal de entrada que actúa como habilitador del proceso. |
-| `DBUS` | COMBUS | `` | Bus combinacional que suministra el dato externo. |
+|---|---|---|---|
+| `AC` | MEMORY | `` | Registro acumulador de destino para almacenar el dato |
+| `go` | INPUTS | escalar | Señal de habilitación de inicio para comenzar la carga |
+| `DBUS` | INPUTS | `` | Líneas de datos de entrada desde las cuales se lee |
+| `ready` | OUTPUTS | escalar | Línea de salida que indica la finalización del proceso |
 
-### Código AHPL del Módulo
+2) Bloque de código:
 
-```ahpl
-MODULE: CARGAGO
-MEMORY: AC; flag
-INPUTS: go
-OUTPUTS: done
-COMBUS: DBUS
+```
+MODULE: WAITER
+INPUTS: go; DBUS
+OUTPUTS: ready
+MEMORY: AC
 
-1. -> (~go)/(1)
-2. AC <- DBUS; flag <- 1
-3. done = 1
+1. -> (~go) / (1)
+2. AC <- DBUS
+3. ready = 1
 4. DEAD END
+END SEQUENCE
 END
 ```
 
-### Tabla de Pasos
+3) Tabla de pasos:
 
 | Paso | Operación | Condición | Estado resultante |
-| :--- | :--- | :--- | :--- |
-| `1.` | \( \rightarrow (\overline{go})/(1) \) | \( \overline{go} \) | **Bucle de espera (polling)**. El control permanece retenido en el paso 1 mientras la señal de entrada sea igual a 0. |
-| `2.` | \( AC \leftarrow DBUS \) ; \( flag \leftarrow 1 \) | — | **Transferencia síncrona**. En el flanco de bajada del reloj, \( AC \) se carga con el valor actual del bus \( DBUS \) y el flip-flop \( flag \) se pone en 1. |
-| `3.` | \( done = 1 \) | — | **Conexión combinacional**. La salida \( done \) se mantiene activa en nivel alto durante este ciclo de reloj sin intervención del flip-flop. |
-| `4.` | \( DEAD\ END \) | — | **Término**. Detiene la secuencia del circuito de control. |
+|---|---|---|---|
+| `1.` | \( \rightarrow (1) \) | \( \overline{go} = 1 \) | Espera activa (*polling*) en el paso 1 mientras la señal sea baja. |
+| `2.` | \( AC \leftarrow DBUS \) | — | Carga sincrónica del dato de \( DBUS \) en el acumulador al flanco de reloj. |
+| `3.` | \( ready = 1 \) | — | Conexión combinacional directa que activa la señal \( ready \) durante este ciclo. |
+| `4.` | DEAD END | — | Terminación del flujo de control y parada del módulo. |
 
-💡 **Sugerencia:** ¿Te gustaría que adaptemos este módulo básico para realizar una transferencia condicional utilizando el operador asterisco (`*`) o para simular un protocolo de handshake?
 ---
-copia con el cursor y pegar:
 
-Tabla de declaraciones:IdentificadorSecciónTamañoRolACMEMORY7Registro acumulador interno de destinoDBUSINPUTS7Bus de entrada con el dato externogoINPUTSescalarSeñal de habilitación de la cargareadyOUTPUTSescalarSeñal de salida que indica que el dato ha sido cargadoBloque de código:MODULE: RECEPTOR
-MEMORY: AC[7]
-INPUTS: DBUS[7]; go
-OUTPUTS: ready
-
-1. ready = 0
-   -> (~go)/(1)
-2. AC <- DBUS; ready = 1
-   DEAD END
-END
-Tabla de pasos:PasoOperaciónCondiciónEstado resultante1.$ ready = 0 $$ \overline{go} = 1 $Realiza polling. Si $ go = 0 $, vuelve al paso 1 en el siguiente ciclo de reloj. Si $ go = 1 $, continúa al paso 2.2.$ AC \leftarrow DBUS $ <br> $ ready = 1 $—Carga el contenido de las líneas de entrada en el registro $ AC $, levanta la señal de listo y termina el proceso.💡 Siguiente paso sugerido: ¿Te gustaría ver cómo se modifica este código para realizar una transferencia bidireccional usando un bus combinacional (COMBUS) en lugar de entradas directas?
+⚡ ¿Te gustaría que modifiquemos este código para transformarlo en un sistema interactivo que implemente un protocolo de handshake completo de dos o tres líneas?
