@@ -1,7 +1,7 @@
 ---
 title: AHPL — Guía unificada para ETN825 (LaTeX NotebookLM)
 galaxy_body: beacon
-scope: yyvaultyy
+scope: devault
 tool: ahpl-notation
 audience:
   - usuario
@@ -21,23 +21,23 @@ status: activo
 
 > Guía de escritura y lectura de módulos AHPL (A Hardware Programming Language) para Arquitectura de Computadores (ETN825). Basada en Hill & Peterson — Digital Systems 2ª ed. y material del docente. Este documento está organizado en tres bloques: **Reglas de notación (N1–N9)**, **Checklist (N10)**, y **Biblioteca de ejemplos por tipo (N11–N15)**.
 >
-> **Nota de formato:** toda la notación AHPL usa KaTeX. Operadores, transferencias, señales y módulos completos se expresan en KaTeX inline \( \) o display \[ \]. No se usan bloques de código ni símbolos Unicode para notación matemática.
+> **Nota de formato:** las expresiones AHPL usan LaTeX con `\( \)` para inline y `\[ \]` para display. Los bloques de código del módulo usan bloques de código estándar — LaTeX solo aplica a la notación matemática, no al código fuente AHPL.
 
 ---
 
 # 🤖 SECCIÓN NOTEBOOKLM
 
-Instrucciones para que NotebookLM escriba, complete o explique código AHPL correctamente. Cuando el usuario pida un módulo o secuencia AHPL, responder en KaTeX display — no con bloques de código, no con texto plano, no con símbolos Unicode.
+Instrucciones para que NotebookLM escriba, complete o explique código AHPL correctamente. Cuando el usuario pida un módulo o secuencia AHPL, responder con el bloque de código — no con pseudocódigo ni descripción textual.
 
 ### Defaults — cuando el usuario no especifica
 
-- Formato: declaraciones primero, luego pasos numerados — todo en KaTeX display \[ \].
-- Registros: mayúsculas (\( DR \), \( CR \), \( AC \), \( PC \), \( MR \)). Escalares: minúsculas (\( busy \), \( ready \), \( first \)).
+- Formato de bloque: sección de declaraciones primero, luego pasos numerados.
+- Registros: mayúsculas (`DR`, `CR`, `AC`, `PC`, `MR`). Escalares: minúsculas (`busy`, `ready`, `first`).
 - Transferencia: \( \leftarrow \) (asignación con reloj). Conexión de bus: \( = \) (sin reloj).
-- Bifurcación fija: \( \rightarrow (D) \). Bifurcación condicional: \( \rightarrow (f)/(D) \) o \( \rightarrow (f,\, \overline{f})/(D_1, D_2) \).
-- Condición negada: barra superior — \( \overline{X} \). Nunca barra pegada al símbolo ni Unicode.
-- Paso nulo: \( \text{Null} \) — consume un ciclo de reloj sin operación.
-- Fin de secuencia: \( \text{DEAD END} \) o \( \text{END SEQUENCE} \).
+- Bifurcación fija: \( \rightarrow (D) \). Bifurcación condicional: \( \rightarrow (f)/(D) \) o \( \rightarrow (f,\, \bar{f})/(D_1, D_2) \).
+- Condición negada: barra sobre la expresión — \( \overline{X} \).
+- Paso nulo: `Null` — consume un ciclo de reloj sin operación.
+- Fin de secuencia: `DEAD END` o `END SEQUENCE`.
 
 ### Reglas base — siempre obligatorias
 
@@ -60,31 +60,39 @@ Antes de escribir cualquier bloque AHPL, verificar en orden:
 
 Todo módulo AHPL tiene dos partes: **declaraciones** y **secuencia de control**. Sin declaraciones el módulo está incompleto.
 
-\[\textbf{MODULE: } \text{NOMBRE DEL MÓDULO}\]
-\[\textbf{MEMORY: } \langle\text{registros internos con tamaño}\rangle\]
-\[\textbf{OUTPUTS: } \langle\text{señales y registros de salida}\rangle\]
-\[\textbf{INPUTS: } \langle\text{señales de entrada}\rangle\]
-\[\textbf{COMBUSES: } \langle\text{buses combinacionales con tamaño}\rangle\]
-\[1.\; \langle\text{paso 1}\rangle\]
-\[2.\; \langle\text{paso 2}\rangle\]
-\[\quad\vdots\]
-\[N.\; \text{DEAD END} \quad (\text{o END SEQUENCE si retorna a otro módulo})\]
-\[\langle\text{expresiones combinacionales fuera de la secuencia}\rangle\]
-\[\textbf{END}\]
+```
+MODULE: NOMBRE DEL MÓDULO
+MEMORY: <registros internos con tamaño>
+OUTPUTS: <señales y registros de salida>
+INPUTS: <señales de entrada>
+COMBUSES: <buses combinacionales con tamaño>
+
+1. <paso 1>
+2. <paso 2>
+   ...
+N. DEAD END   (o END SEQUENCE si retorna a otro módulo)
+
+<expresiones combinacionales fuera de la secuencia>
+END
+```
 
 Reglas:
 
-- \( \textbf{MODULE:} \) — nombre del módulo en mayúsculas, descriptivo.
-- \( \textbf{MEMORY:} \) — registros que retienen valor entre ciclos de reloj (flip-flops). Vectores con tamaño: \( DR[18] \), \( CR[8] \). Escalares sin corchetes: \( busy \), \( first \).
-- \( \textbf{OUTPUTS:} \) — señales o registros que salen del módulo. Con tamaño si son buses: \( CHAR[8] \). Booleanas sin corchetes: \( print \), \( feed \).
-- \( \textbf{INPUTS:} \) — señales que entran desde otros módulos o dispositivos: \( wait \), \( csrdy \).
-- \( \textbf{COMBUSES:} \) — buses combinacionales (sin reloj). Con tamaño y booleanas: \( IOBUS[18] \), \( CSBUS[12] \), \( ready \), \( datavalid \), \( accept \).
+- `MODULE:` — nombre del módulo en mayúsculas, descriptivo.
+- `MEMORY:` — registros que retienen valor entre ciclos de reloj (flip-flops). Siempre con tamaño entre corchetes si son vectores: `DR[18]`, `CR[8]`. Escalares sin corchetes: `busy`, `first`.
+- `OUTPUTS:` — señales o registros que salen del módulo. Si son buses de datos incluir tamaño: `CHAR[8]`. Señales booleanas sin corchetes: `print`, `feed`.
+- `INPUTS:` — señales que entran al módulo desde otros módulos o dispositivos: `wait`, `csrdy`.
+- `COMBUSES:` — buses combinacionales (sin reloj, conexión directa). Con tamaño y señales booleanas: `IOBUS[18]`, `CSBUS[12]`, `ready`, `datavalid`, `accept`.
 
 ❌ Incorrecto — falta tamaño en registro:
-\[ \textbf{MEMORY: } DR;\; CR;\; busy \]
+```
+MEMORY: DR; CR; busy
+```
 
 ✅ Correcto:
-\[ \textbf{MEMORY: } DR[18];\; CR[8];\; busy;\; first \]
+```
+MEMORY: DR[18]; CR[8]; busy; first
+```
 
 ---
 
@@ -181,43 +189,53 @@ COMBUSES: IOBUS[18]; CSBUS[12]; ready; datavalid; accept
 
 Ejecuta una o más acciones en un ciclo de reloj.
 
-\[ 4.\; CSBUS_0 = busy;\; datavalid = 1 \]
+```
+4. CSBUS₀ = busy; datavalid = 1;
+```
 
-> El punto y coma \( ; \) dentro de un paso separa **operaciones simultáneas** que ocurren en el mismo ciclo de reloj.
+> El punto y coma `;` dentro de un paso separa **operaciones simultáneas** que ocurren en el mismo ciclo de reloj.
 
 #### Paso de bifurcación fija
 
 Va incondicionalmente al paso indicado. No ejecuta operación.
 
-\[ \rightarrow (\overline{CSBUS_3},\; CSBUS_3 \land \overline{CSBUS_3},\; CSBUS_3)/(1,\; 1A,\; 3) \]
+```
+→ (CSBUS₃, CSBUS̄₃, CSBUS̄₂)/(1, 1A, 3)
+```
 
-Formato: \( \rightarrow (\text{cond}_1, \text{cond}_2, \ldots)/(\text{dest}_1, \text{dest}_2, \ldots) \)
+Formato: `→ (condición₁, condición₂, ...)/(destino₁, destino₂, ...)`
 
 - Las condiciones son mutuamente excluyentes.
-- Los destinos pueden ser números de paso (\( 1 \), \( 3 \)) o etiquetas (\( 1A \), \( 3A \)).
+- Los destinos pueden ser números de paso (`1`, `3`) o etiquetas (`1A`, `3`).
 
 #### Paso de bifurcación condicional
 
 Evalúa una condición y salta según el resultado.
 
-\[ \rightarrow (ready)/(3) \]
-\[ \rightarrow (datavalid)/(1A) \]
-\[ \rightarrow (first,\; \overline{first})/(3A,\; 8A) \]
+```
+→ (ready)/(3)
+→ (datavalid)/(1A)
+→ (first, first̄)/(3A, 8A)
+```
 
 - Si la condición es verdadera → va al destino indicado.
 - Si es falsa → continúa al siguiente paso numerado.
-- Con dos destinos: \( \rightarrow (f,\; \overline{f})/(D_{yes},\; D_{no}) \).
+- Con dos destinos: `→ (f, f̄)/(D_yes, D_no)` — el segundo destino es para la negación.
 
 #### Paso nulo
 
 Consume un ciclo sin operación. Útil para sincronización.
 
-\[ 5A.\; \text{Null} \]
+```
+5A. Null
+```
 
 #### Fin de secuencia
 
-\[ \text{DEAD END} \quad \leftarrow \text{el módulo se detiene, no retorna} \]
-\[ \text{END SEQUENCE} \quad \leftarrow \text{la secuencia termina y puede reiniciarse} \]
+```
+DEAD END        ← el módulo se detiene, no retorna
+END SEQUENCE    ← la secuencia termina y puede reiniciarse o llamarse desde otro módulo
+```
 
 ---
 
@@ -225,13 +243,15 @@ Consume un ciclo sin operación. Útil para sincronización.
 
 Varias transferencias en el mismo paso se ejecutan **todas al mismo tiempo** en el mismo ciclo de reloj.
 
-\[ 2A.\; DR \leftarrow IOBUS;\; busy \leftarrow 1;\; accept = 1;\; first \leftarrow 1 \]
+```
+2A. DR ← IOBUS; busy ← 1; accept = 1; first ← 1
+```
 
 Esto significa:
-- \( DR \leftarrow IOBUS \) — DR toma el valor de IOBUS
-- \( busy \leftarrow 1 \) — busy se pone en 1
-- \( accept = 1 \) — accept se activa (combinacional, inmediato)
-- \( first \leftarrow 1 \) — first se pone en 1
+- `DR ← IOBUS` — DR toma el valor de IOBUS
+- `busy ← 1` — busy se pone en 1
+- `accept = 1` — accept se activa (combinacional, inmediato)
+- `first ← 1` — first se pone en 1
 
 **Todos ocurren en el mismo borde de reloj.**
 
@@ -252,43 +272,50 @@ Los pasos se numeran con enteros. Los subpasos usan letra sufijo.
 
 **Ejemplo de uso de etiquetas del módulo PRINTER INTERFACE:**
 
-\[\rightarrow (\overline{CSBUS_3},\; CSBUS_3 \land \overline{CSBUS_3},\; CSBUS_3)/(1,\; 1A,\; 3)\]
-\[\ldots\]
-\[1A.\; ready = 1;\; \rightarrow (\overline{datavalid})/(1A)\]
-\[2A.\; DR \leftarrow IOBUS;\; busy \leftarrow 1;\; accept = 1;\; first \leftarrow 1\]
-\[3A.\; CR \leftarrow (D_{10:17}!) * (first,\; \overline{first})\]
+```
+→ (CSBUS₃, CSBUS̄₃, CSBUS̄₂)/(1, 1A, 3)
+...
+1A. ready = 1;
+    → (datavalid)/(1A)
+2A. DR ← IOBUS; busy ← 1; accept = 1; first ← 1
+3A. CR ← (D₁₀:₁₇!) * (first, first̄)
+```
 
 ---
 
 ### N8. EXPRESIONES COMBINACIONALES FUERA DE LA SECUENCIA
 
-Algunas salidas se definen como expresiones combinacionales **después del END SEQUENCE**, antes del \( \textbf{END} \) del módulo. No son pasos — son definiciones permanentes.
+Algunas salidas se definen como expresiones combinacionales **después del END SEQUENCE**, antes del `END` del módulo. No son pasos — son definiciones permanentes.
 
-\[\text{END SEQUENCE}\]
-\[CHAR = CR\]
-\[\textbf{END}\]
+```
+END SEQUENCE
+CHAR = CR
+END
+```
 
-- \( CHAR = CR \) — la salida CHAR es siempre igual al contenido de CR (combinacional, no sincrónico).
+- `CHAR = CR` — la salida CHAR es siempre igual al contenido de CR (combinacional, no sincrónico).
 - Se usan para salidas que deben reflejar el estado actual del registro en todo momento.
 
 ---
 
 ### N9. NOTACIÓN DE CONDICIÓN COMPUESTA Y SEÑALES NEGADAS
 
-Las condiciones de bifurcación pueden combinar señales con AND \( (\land) \) o usar señales negadas con barra superior.
+Las condiciones de bifurcación pueden combinar señales con AND (`∧`) o usar señales negadas (barra).
 
-\[ 1.\; \rightarrow (csrdy \land \overline{CSBUS_0} \land CSBUS_1 \land \overline{CSBUS_2})/(1) \]
+```
+1. → (csrdy ∧ CSBUS̄₀ ∧ CSBUS₁ ∧ CSBUS̄₂)/(1)
+```
 
 Interpretación:
-- \( csrdy \) — csrdy = 1
-- \( \overline{CSBUS_0} \) — bit 0 del CSBUS = 0 (negado)
-- \( CSBUS_1 \) — bit 1 del CSBUS = 1
-- \( \overline{CSBUS_2} \) — bit 2 del CSBUS = 0 (negado)
-- Toda la condición: \( csrdy \land \overline{CSBUS_0} \land CSBUS_1 \land \overline{CSBUS_2} \)
-- Si la condición es **falsa** → va al paso \( (1) \) (bucle de espera).
+- `csrdy` — csrdy = 1
+- `CSBUS̄₀` — bit 0 del CSBUS = 0 (negado)
+- `CSBUS₁` — bit 1 del CSBUS = 1
+- `CSBUS̄₂` — bit 2 del CSBUS = 0 (negado)
+- Toda la condición: `csrdy AND (NOT CSBUS₀) AND CSBUS₁ AND (NOT CSBUS₂)`
+- Si la condición es **falsa** → va al paso `(1)` (bucle de espera).
 - Si es **verdadera** → continúa al paso 2.
 
-> La barra superior \( \overline{X} \) es el único formato válido para el negado. No usar Unicode ni barra pegada al símbolo.
+> En el libro, las barras se escriben sobre los símbolos. En texto plano, se indica con subíndice negado o con notación `NOT(...)`.
 
 ---
 
@@ -300,17 +327,17 @@ Interpretación:
 
 Antes de escribir o completar un módulo, verificar:
 
-- [ ] ¿El módulo tiene \( \textbf{MODULE:} \), \( \textbf{MEMORY:} \), \( \textbf{OUTPUTS:} \), \( \textbf{INPUTS:} \), \( \textbf{COMBUSES:} \)?
-- [ ] ¿Los registros vectoriales tienen tamaño entre corchetes? (\( DR[18] \), no \( DR \))
-- [ ] ¿Las transferencias usan \( \leftarrow \) y las conexiones de bus usan \( = \)?
-- [ ] ¿Las operaciones simultáneas están en el **mismo paso** separadas por \( ; \)?
+- [ ] ¿El módulo tiene `MODULE:`, `MEMORY:`, `OUTPUTS:`, `INPUTS:`, `COMBUSES:`?
+- [ ] ¿Los registros vectoriales tienen tamaño entre corchetes? (`DR[18]`, no `DR`)
+- [ ] ¿Las transferencias usan `←` y las conexiones de bus usan `=`?
+- [ ] ¿Las operaciones simultáneas están en el **mismo paso** separadas por `;`?
 - [ ] ¿Ningún registro destino aparece dos veces en el mismo paso?
-- [ ] ¿Las bifurcaciones tienen formato \( \rightarrow (\text{condición})/(\text{destino}) \)?
-- [ ] ¿Las condiciones negadas usan \( \overline{X} \)? (sin Unicode, sin barra pegada)
-- [ ] ¿Los subpasos están etiquetados con letra sufijo (\( 1A \), \( 2A \))?
-- [ ] ¿La secuencia termina con \( \text{DEAD END} \) o \( \text{END SEQUENCE} \)?
-- [ ] ¿Las salidas combinacionales permanentes están después del \( \text{END SEQUENCE} \) y antes del \( \textbf{END} \)?
-- [ ] ¿Toda la notación está en KaTeX? (sin bloques de código, sin Unicode, sin texto plano para operadores)
+- [ ] ¿Las bifurcaciones tienen formato `→ (condición)/(destino)`?
+- [ ] ¿Las condiciones negadas están correctamente indicadas con barra o `NOT`?
+- [ ] ¿Los subpasos están etiquetados con letra sufijo (`1A`, `2A`)?
+- [ ] ¿La secuencia termina con `DEAD END` o `END SEQUENCE`?
+- [ ] ¿Las salidas combinacionales permanentes están después del `END SEQUENCE` y antes del `END`?
+- [ ] ¿El módulo tiene `END` al final?
 
 ---
 
@@ -320,179 +347,152 @@ Antes de escribir o completar un módulo, verificar:
 
 ### N11. MÓDULO COMPLETO — PRINTER INTERFACE
 
-> Contexto para NotebookLM: módulo AHPL completo de la interface de impresora. Cubre el protocolo completo: espera de dirección en CSBUS, handshake con IOBUS (datavalid/accept), carga de DR, acumulación en CR con \( first \), envío a impresora (feed/print), y espera de \( wait \). Fuente: Hill & Peterson Digital Systems 2ª ed., material del docente ETN825.
+> Contexto para NotebookLM: módulo AHPL completo de la interface de impresora. Cubre el protocolo completo: espera de dirección en CSBUS, handshake con IOBUS (datavalid/accept), carga de DR, acumulación en CR con `first`, envío a impresora (feed/print), y espera de `wait`. Fuente: Hill & Peterson Digital Systems 2ª ed., material del docente ETN825.
 
-\[\textbf{MODULE: PRINTER INTERFACE}\]
-\[\textbf{MEMORY: } DR[18];\; CR[8];\; busy;\; first\]
-\[\textbf{OUTPUTS: } CHAR[8];\; print;\; feed\]
-\[\textbf{INPUTS: } wait;\; csrdy\]
-\[\textbf{COMBUSES: } IOBUS[18];\; CSBUS[12];\; ready;\; datavalid;\; accept\]
-\[1.\; \rightarrow (csrdy \land \overline{CSBUS_0} \land CSBUS_1 \land \overline{CSBUS_2})/(1)\]
-\[2.\; accept = 1;\; \rightarrow (\overline{CSBUS_3},\; \overline{CSBUS_3},\; CSBUS_3)/(1,\; 1A,\; 3)\]
-\[3.\; \rightarrow (\overline{ready})/(3)\]
-\[4.\; CSBUS_0 = busy;\; datavalid = 1;\; \rightarrow (\overline{accept},\; accept)/(4,\; 1)\]
-\[1A.\; ready = 1;\; \rightarrow (\overline{datavalid})/(1A)\]
-\[2A.\; DR \leftarrow IOBUS;\; busy \leftarrow 1;\; accept = 1;\; first \leftarrow 1\]
-\[3A.\; CR \leftarrow (D_{10:17}!) * (first,\; \overline{first})\]
-\[4A.\; feed = RETURN(CR);\; print = RETURN(CR)\]
-\[5A.\; \text{Null}\]
-\[6A.\; \rightarrow (wait)/(6A)\]
-\[7A.\; first \leftarrow 0;\; busy * \overline{first} \leftarrow 0;\; \rightarrow (first,\; \overline{first})/(3A,\; 8A)\]
-\[8A.\; \text{DEAD END}\]
-\[\text{END SEQUENCE}\]
-\[CHAR = CR\]
-\[\textbf{END}\]
+```
+MODULE: PRINTER INTERFACE
+MEMORY: DR[18]; CR[8]; busy; first
+OUTPUTS: CHAR[8]; print; feed
+INPUTS: wait; csrdy
+COMBUSES: IOBUS[18]; CSBUS[12]; ready; datavalid; accept
+
+1.  → (csrdy ∧ CSBUS̄₀ ∧ CSBUS₁ ∧ CSBUS̄₂)/(1)
+2.  accept = 1;
+    → (CSBUS̄₃, CSBUS̄₃, CSBUS₃)/(1, 1A, 3)
+
+3.  → (readȳ)/(3)
+4.  CSBUS₀ = busy; datavalid = 1;
+    → (accept̄, accept)/(4, 1)
+
+1A. ready = 1;
+    → (datavalid̄)/(1A)
+2A. DR ← IOBUS; busy ← 1; accept = 1; first ← 1
+3A. CR ← (D₁₀:₁₇!) * (first, first̄)
+4A. feed = RETURN(CR); print = RETURN(CR);
+5A. Null
+6A. → (wait)/(6A)
+7A. first ← 0; busy * first̄ ← 0
+    → (first, first̄)/(3A, 8A)
+8A. DEAD END
+
+END SEQUENCE
+CHAR = CR
+END
+```
 
 #### Lectura paso a paso
 
 | Paso | Qué hace |
 |---|---|
-| `1.` | Bucle de espera: permanece en 1 mientras la condición de dirección CSBUS no coincida con esta interface (código `010` negado). Sale cuando csrdy=1 y la dirección es correcta. |
-| `2.` | Activa `accept=1` en el bus CS. Bifurca según bit 3 del CSBUS: si es 0 → vuelve a 1, si es 1 → va a 3 (Output) o 1A (Input). |
-| `3.` | Bucle de espera: permanece mientras `ready` sea 0. |
-| `4.` | Pone en CSBUS el estado `busy` y activa `datavalid=1`. Bucle hasta que `accept=1`. |
-| `1A.` | Activa `ready=1` en el bus IO y espera hasta que `datavalid=1`. |
-| `2A.` | Carga DR desde IOBUS, activa busy, accept, first — todo simultáneo. |
-| `3A.` | Carga CR con bits 10:17 del bus de datos, condicionado por `first`/`first̄`. |
-| `4A.` | Envía señales `feed` y `print` a la impresora (combinacional, basado en CR). |
-| `5A.` | Paso nulo — sincronización de un ciclo. |
-| `6A.` | Bucle de espera: permanece mientras la impresora indica `wait=1`. |
-| `7A.` | Pone \( first \leftarrow 0 \) y borra \( busy * \overline{first} \). Bifurca: si \( first = 1 \) vuelve a 3A, si no va a 8A. |
-| `8A.` | DEAD END — módulo detenido hasta nuevo llamado. |
-| `CHAR=CR` | Salida combinacional permanente: CHAR siempre refleja el contenido de CR. |
+| `1.` | Bucle de espera: sale cuando \( csrdy = 1 \) y la dirección CSBUS coincide. |
+| `2.` | \( accept = 1 \) en el bus CS. Bifurca según \( CSBUS_3 \). |
+| `3.` | Espera mientras \( \overline{ready} \) — sale cuando \( ready = 1 \). |
+| `4.` | \( CSBUS_0 = busy \), \( datavalid = 1 \). Bucle hasta \( accept = 1 \). |
+| `1A.` | \( ready = 1 \). Espera mientras \( \overline{datavalid} \). |
+| `2A.` | \( DR \leftarrow IOBUS;\; busy \leftarrow 1;\; accept = 1;\; first \leftarrow 1 \) — todo simultáneo. |
+| `3A.` | \( CR \leftarrow (D_{10:17}!) * (first,\, \overline{first}) \). |
+| `4A.` | \( feed = RETURN(CR);\; print = RETURN(CR) \) — combinacional. |
+| `5A.` | Paso nulo — sincronización. |
+| `6A.` | Espera mientras \( wait = 1 \). |
+| `7A.` | \( first \leftarrow 0;\; busy * \overline{first} \leftarrow 0 \). Bifurca: \( first = 1 \rightarrow 3A \), si no \( \rightarrow 8A \). |
+| `8A.` | DEAD END. |
+| `CHAR = CR` | Salida combinacional permanente: \( CHAR = CR \) en todo momento. |
 
 ---
 
 ### N12. PATRÓN — BUCLE DE ESPERA CON SEÑAL
 
-> Contexto para NotebookLM: patrón de polling. El módulo permanece en el mismo paso hasta que una señal cambia de estado.
+> Contexto para NotebookLM: patrón de polling. El módulo permanece en el mismo paso hasta que una señal cambia de estado. Se usa para esperar `ready`, `datavalid`, `accept`, `wait`, `csrdy`. El paso bifurca hacia sí mismo mientras la condición sea falsa (o verdadera, según el sentido).
 
-\[\text{Espera mientras la señal es 0 (sale cuando es 1):}\]
-\[N.\; \rightarrow (\overline{\text{señal}})/(N)\]
-\[\text{Espera mientras la señal es 1 (sale cuando es 0):}\]
-\[N.\; \rightarrow (\text{señal})/(N)\]
-\[\text{Ejemplo — esperar que } ready = 1:\]
-\[3.\; \rightarrow (\overline{ready})/(3)\]
-\[\text{Ejemplo — esperar que } wait = 0:\]
-\[6A.\; \rightarrow (wait)/(6A)\]
+```
+% Espera mientras la señal es 0 (sale cuando es 1):
+N.  → (señal̄)/(N)
+
+% Espera mientras la señal es 1 (sale cuando es 0):
+N.  → (señal)/(N)
+
+% Ejemplo concreto — esperar que ready sea 1:
+3.  → (readȳ)/(3)
+
+% Ejemplo concreto — esperar que wait sea 0:
+6A. → (wait)/(6A)
+```
 
 ---
 
 ### N13. PATRÓN — BIFURCACIÓN MÚLTIPLE POR BITS DE BUS
 
-> Contexto para NotebookLM: bifurcación a más de dos destinos según combinación de bits de un bus. Las condiciones son mutuamente excluyentes.
+> Contexto para NotebookLM: bifurcación a más de dos destinos según combinación de bits de un bus. Las condiciones son mutuamente excluyentes — exactamente una será verdadera. Se usa para decodificar campos de instrucción (IR), direcciones de dispositivo (CSBUS) o modos de operación.
 
-\[\text{Formato general:}\]
-\[\rightarrow (\text{cond}_1,\; \text{cond}_2,\; \text{cond}_3)/(\text{dest}_1,\; \text{dest}_2,\; \text{dest}_3)\]
-\[\text{Ejemplo — decodificación por } CSBUS_3:\]
-\[\rightarrow (\overline{CSBUS_3},\; \overline{CSBUS_3},\; CSBUS_3)/(1,\; 1A,\; 3)\]
-\[\text{Ejemplo — decodificación de instrucción por } IR_0:\]
-\[\rightarrow (\overline{IR_0},\; IR_0)/(fetch,\; execute)\]
-\[\text{Ejemplo — bifurcación triple por } IR_{0:1}:\]
-\[\rightarrow (IR_0 \land \overline{IR_1},\; \overline{IR_0} \land IR_1,\; IR_0 \land IR_1)/(A,\; B,\; C)\]
+```
+% Formato general:
+→ (cond₁, cond₂, cond₃)/(dest₁, dest₂, dest₃)
 
-> Regla: la suma lógica de todas las condiciones debe ser 1. Si ninguna se cumple, el comportamiento es indefinido.
+% Ejemplo — decodificación por bit 3 del CSBUS:
+→ (CSBUS̄₃, CSBUS̄₃, CSBUS₃)/(1, 1A, 3)
+
+% Ejemplo — decodificación de instrucción por IR[0]:
+→ (IR̄[0], IR[0])/(fetch, execute)
+
+% Ejemplo — bifurcación triple por IR[0:1]:
+→ (IR[0] ∧ IR̄[1],   IR̄[0] ∧ IR[1],   IR[0] ∧ IR[1])/(paso_A, paso_B, paso_C)
+```
+
+> **Regla:** la suma lógica de todas las condiciones debe ser 1 (una siempre se cumple). Si ninguna se cumple, el comportamiento es indefinido.
 
 ---
 
 ### N14. PATRÓN — OPERACIÓN CONDICIONAL CON PRODUCTO *
 
-> Contexto para NotebookLM: el operador \( * \) (producto condicional) permite cargar un registro con uno de dos valores según una condición booleana, en un único paso sincrónico.
+> Contexto para NotebookLM: el operador `*` (producto condicional) permite cargar un registro con uno de dos valores según una condición booleana, en un único paso sincrónico.
 
-\[\text{Formato:}\]
-\[REG \leftarrow (\text{expresión}!) * (cond,\; \overline{cond})\]
-\[\text{Interpretación:}\]
-\[\text{Si } cond = 1 \Rightarrow REG \leftarrow \text{expresión}\]
-\[\text{Si } cond = 0 \Rightarrow REG \leftarrow 0\]
-\[\text{Ejemplo del módulo PRINTER INTERFACE:}\]
-\[3A.\; CR \leftarrow (D_{10:17}!) * (first,\; \overline{first})\]
-\[\text{Si } first = 1 \Rightarrow CR \leftarrow \overline{D_{10:17}}\]
-\[\text{Si } first = 0 \Rightarrow CR \leftarrow 0\]
+```
+% Formato:
+REG ← (expresión!) * (cond, cond̄)
 
-> El \( ! \) después de la expresión indica complemento lógico bit a bit de ese rango.
+% Interpretación:
+% Si cond = 1 → REG ← expresión
+% Si cond = 0 → REG ← 0 (o retiene valor según contexto)
+
+% Ejemplo del módulo PRINTER INTERFACE:
+3A. CR ← (D₁₀:₁₇!) * (first, first̄)
+
+% Interpretación:
+% Si first = 1 → CR ← D[10:17] (NOT de los bits 10:17)
+% Si first = 0 → CR ← 0
+```
+
+> El `!` después de la expresión indica complemento lógico bit a bit de ese rango. En este ejemplo, `D₁₀:₁₇!` es el NOT de los bits 10 a 17 del bus de datos.
 
 ---
 
 ### N15. PATRÓN — SALIDA COMBINACIONAL PERMANENTE (fuera de secuencia)
 
-> Contexto para NotebookLM: las expresiones después de \( \text{END SEQUENCE} \) y antes del \( \textbf{END} \) son salidas combinacionales que el módulo mantiene en todo momento, sin reloj.
+> Contexto para NotebookLM: las expresiones después de `END SEQUENCE` y antes de `END` son salidas combinacionales que el módulo mantiene en todo momento, sin reloj. Se usan cuando una salida debe reflejar en tiempo real el contenido de un registro o una operación lógica sobre él.
 
-\[\text{Formato:}\]
-\[\text{END SEQUENCE}\]
-\[SALIDA = \text{expresión}\]
-\[\textbf{END}\]
-\[\text{Ejemplo — CHAR siempre refleja CR:}\]
-\[\text{END SEQUENCE}\]
-\[CHAR = CR\]
-\[\textbf{END}\]
-\[\text{Ejemplo con salida negada: } CHAR = \overline{CR}\]
-\[\text{Ejemplo con selección de bits: } CHAR = CR_{0:7}\]
+```
+% Formato:
+END SEQUENCE
+SALIDA = expresión
+END
 
-> Diferencia con transferencia en paso: \( CR \leftarrow valor \) ocurre una vez al borde de reloj. \( CHAR = CR \) es continuo — si CR cambia, CHAR cambia en el mismo instante.
+% Ejemplo — CHAR siempre refleja CR:
+END SEQUENCE
+CHAR = CR
+END
 
----
+% Ejemplo con operación lógica — salida negada:
+END SEQUENCE
+CHAR = NOT(CR)
+END
 
----
+% Ejemplo con selección de bits:
+END SEQUENCE
+CHAR = CR[0:7]
+END
+```
 
-### N16. MÓDULO COMPLETO — CONTROLADOR DE MÁQUINAS-HERRAMIENTA
-
-> Contexto para NotebookLM: módulo AHPL de un controlador de máquinas-herramienta con ROM de programa. Cubre: selección de secuencia desde SQR, direccionamiento de ROM con AR, carga de instrucción en PR, detección de fin de secuencia por reducción AND, control de flip-flop ss con producto condicional fuera de secuencia. Fuente: Hill & Peterson Digital Systems 2ª ed., material del docente ETN825.
-
-\[\textbf{MODULE: CONTROLADOR DE MÁQUINAS-HERRAMIENTA}\]
-\[\textbf{MEMORY: } ROM[1024,\,18];\; PR[18];\; AR[10];\; SQR[2];\; ss\]
-\[\textbf{INPUTS: } SEQ[2];\; start;\; stop\]
-\[\textbf{OUTPUTS: } OPR[18]\]
-\[1.\; SQR \leftarrow SEQ\]
-\[\quad\rightarrow (\overline{ss},\, ss)/(1,\,2)\]
-\[2.\; AR \leftarrow SQR_0,\, SQR_1,\, 8T0\]
-\[3.\; PR \leftarrow BUSFN(ROM;\, DCD(AR))\]
-\[4.\; AR \leftarrow INC(AR)\]
-\[\quad\rightarrow \bigl((\bigwedge\!/ AR_{2:9} \land ss),\;\overline{ss},\;\overline{(\bigwedge\!/ AR_{2:9} \land ss)}\bigr)/(5,\,6,\,3)\]
-\[5.\; ss \leftarrow 0\]
-\[6.\; PR \leftarrow 18T0\]
-\[\quad\rightarrow (1)\]
-\[\text{END SEQUENCE}\]
-\[ss * (start \lor stop) \leftarrow (1{!}0) * (start,\, stop)\]
-\[OPR = PR\]
-\[\textbf{END}\]
-
-#### Lectura paso a paso
-
-| Paso | Qué hace |
-|---|---|
-| `1.` | Carga SQR con la secuencia seleccionada (SEQ). Bifurca: si ss=0 → vuelve a 1 (espera start), si ss=1 → va a 2. |
-| `2.` | Carga AR con la dirección base: bits altos = SQR₀,SQR₁ (selecciona bloque de 256), bits bajos = 8 ceros. |
-| `3.` | Lee ROM en la dirección AR y carga la instrucción en PR usando BUSFN con decodificador DCD. |
-| `4.` | Incrementa AR. Bifurca: si reducción AND de AR₂₋₉ = 1 y ss=1 → fin de secuencia (5), si ss=0 → reset (6), si no → sigue leyendo (3). |
-| `5.` | Pone ss=0 — fin del ciclo de ejecución. |
-| `6.` | Resetea PR a cero y vuelve al inicio (1). |
-| `ss*(start∨stop)` | Fuera de secuencia: producto condicional — si start=1 → ss←1 (activa máquina), si stop=1 → ss←0 (detiene). |
-| `OPR=PR` | Salida combinacional permanente: OPR siempre refleja el contenido de PR. |
-
-#### Patrones nuevos en este módulo
-
-**`ROM[1024, 18]`** — memoria declarada en MEMORY con dos parámetros: cantidad de palabras y ancho en bits.
-
-\[ \textbf{MEMORY: } ROM[1024,\,18] \]
-
-**`8T0` / `18T0`** — constante de N bits todos en cero.
-
-\[ AR \leftarrow SQR_0,\, SQR_1,\, 8T0 \quad \leftarrow \text{concatenación: 2 bits de SQR + 8 ceros} \]
-\[ PR \leftarrow 18T0 \quad \leftarrow \text{reset: 18 bits en cero} \]
-
-**`BUSFN(ROM; DCD(AR))`** — función de bus: selecciona la palabra de ROM apuntada por el decodificador de AR.
-
-\[ PR \leftarrow BUSFN(ROM;\, DCD(AR)) \]
-
-**`∧/REG_{i:j}`** — reducción AND: es 1 solo si todos los bits del rango son 1. Detecta fin de conteo.
-
-\[ \bigwedge\!/ AR_{2:9} = 1 \quad \Leftrightarrow \quad AR_{2:9} = 11111111_2 \]
-
-**Producto condicional fuera de secuencia** — permite actualizar un flip-flop desde señales externas de forma continua.
-
-\[ ss * (start \lor stop) \leftarrow (1{!}0) * (start,\, stop) \]
-
-> Si start=1 → ss←1 (arranca la máquina). Si stop=1 → ss←0 (detiene). El operador `!` indica complemento: `1!0` = NOT de `10` binario.
+> **Diferencia con transferencia en paso:** `CR ← valor` ocurre una vez al borde de reloj. `CHAR = CR` es continuo — si CR cambia, CHAR cambia en el mismo instante.
 
 ---
 

@@ -1,9 +1,13 @@
 FORMATO AHPL — OBLIGATORIO (ver ETN825_AHPL.md para estructura completa y ejemplos):
-Todo módulo o secuencia AHPL se entrega en bloque de código estándar — texto plano con la notación del libro.
-La notación KaTeX — \( \leftarrow \), \( \rightarrow \), \( \overline{X} \), \( \land \) — se usa solo en menciones inline en texto y dentro de tablas.
-NUNCA usar $$ ni $ como delimitadores.
-NUNCA usar \begin{...}...\end{...} para bloques AHPL.
-NUNCA KaTeX display \[ \] para módulos o secuencias AHPL — solo bloques de código.
+Todo módulo o secuencia AHPL se entrega en KaTeX display \[ \] — declaraciones y secuencia completa.
+NUNCA en bloque de código (``` ahpl, ``` latex ni ningún otro).
+NUNCA usar \begin{...}...\end{...} — ningún entorno LaTeX (ni aligned, ni array, ni ningún otro).
+NUNCA usar $$ ni $ como delimitadores — no se renderizan en NotebookLM.
+NUNCA en texto plano ni Unicode para operadores matemáticos.
+La notación KaTeX — \( \leftarrow \), \( \rightarrow \), \( \overline{X} \), \( \land \) — se usa
+tanto en el módulo como en texto explicativo, tablas y comentarios.
+Siempre KaTeX. Nunca bloques de código.
+Entregá el módulo AHPL completo como bloque continuo, sin intercalar texto explicativo ni referencias entre los pasos.
 
 TAREA:
 Dado un tema y un subtítulo del temario oficial de ETN825 (Arquitectura de Computadores),
@@ -52,13 +56,7 @@ FORMATO EJERCICIO RESUELTO (aplica a MENSAJE 3 y MENSAJE 4):
 **Resolución**
 Indicar brevemente la estrategia antes de comenzar — 1 línea, sin sobreexplicar.
 
-Para ejercicios AHPL — bloque de código con el módulo completo, seguido de tabla de lectura paso a paso.
-Dentro de la tabla usar KaTeX inline para operadores y registros: \( \leftarrow \), \( = \), \( \rightarrow \), \( \overline{X} \), etc.
-
-| Paso | Operación | Condición | Estado resultante |
-|-|-|-|-|
-| `1.` | \( REG \leftarrow valor \) | — | descripción |
-| `1A.` | \( señal = 1 \) | \( \overline{ready} \) | descripción |
+Para ejercicios AHPL — módulo en líneas \[ \] independientes (una por paso), seguido de tabla de lectura paso a paso.
 
 Para ejercicios de memoria o E/S — desarrollo numérico en líneas \[ \] independientes:
 \[\text{paso 1} = \text{expresión}\]
@@ -147,8 +145,8 @@ REGLAS GENERALES:
 -Sin introducción, sin cierre, sin comentarios — solo el contenido estructurado.
 -Respuesta compacta: no más de lo necesario para entender el concepto.
 -No adelantar contenido del subtítulo límite ni de subtítulos posteriores.
--Notación AHPL: bloques de código para módulos y secuencias. KaTeX inline \( \) solo para menciones en texto y dentro de tablas.
-  NUNCA \[ \] ni \begin{...} para bloques AHPL.
+-Notación AHPL siempre en KaTeX: inline \( \) para menciones en texto, display \[ \] para módulos y secuencias completas.
+  NUNCA bloques de código para AHPL — siempre KaTeX.
 
 REGLAS TIKZJAX: ver ETN825_TikzJax.md — bloque ```tikz, sin \documentclass, colores teal/orange/violet/gray. Si hay duda → omitir.
 

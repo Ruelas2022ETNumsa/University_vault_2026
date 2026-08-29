@@ -39099,6 +39099,8 @@ PtBN
 PpMs
 PgaY
 PHrp
+Polling
+Permanente
 del
 date
 de
@@ -48362,6 +48364,8 @@ dQSl
 dirigir
 decodificador
 decodifica
+desempaqueta
+desocupada
 Vault
 Verificar
 Variables
@@ -116167,6 +116171,7 @@ reaccionar
 retenido
 realicemos
 redacta
+realizando
 notes
 notas
 nuevas
@@ -136011,6 +136016,7 @@ cVVu
 computa
 cargando
 corpus
+colocados
 updated
 un
 universo
@@ -164772,6 +164778,7 @@ CdsZ
 CiFg
 CONTROLADOR
 COMBUS
+Combinacional
 Instalados
 Instalado
 Instalar
@@ -175061,6 +175068,7 @@ IFrI
 Iaem
 ItnU
 Incrementa
+Interno
 Funci
 File
 Fase
@@ -195065,6 +195073,8 @@ EfaUG
 ENUF
 ETEx
 Efect
+Estabilizaci
+Entreg
 Obsidian
 OmniSearch
 Ocultar
@@ -213565,6 +213575,7 @@ Agem
 AzaBI
 ASMNN
 AYcJO
+Acuse
 push
 pull
 para
@@ -222914,6 +222925,7 @@ pRsT
 prNL
 preentrenamiento
 prohib
+predispone
 min
 mica
 movimiento
@@ -233610,6 +233622,7 @@ mrsg
 mPJw
 mDRP
 menciones
+modifiquemos
 YAML
 Ya
 You
@@ -272909,6 +272922,7 @@ MVEY
 MxOQP
 Mqri
 MIzv
+Multiplexaci
 Lectura
 LaTeX
 Linter
@@ -290889,6 +290903,7 @@ lagK
 ljad
 lxUW
 lpmw
+levantando
 incluyendo
 im
 instalar
@@ -301846,6 +301861,8 @@ iUsO
 iCco
 impresos
 imitaci
+imprimiendo
+intercalar
 Dependencia
 Dropbox
 Dataview
@@ -418780,6 +418797,7 @@ yyNm
 yQrm
 yEudJ
 yyvaultyy
+yzvaultyy
 wikilinks
 when
 where
