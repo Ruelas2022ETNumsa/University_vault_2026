@@ -1,10 +1,10 @@
 ---
 galaxy_body: ship
 project: ""
-date: 
+date:
 status: docked
-fleet:           # opcional — materia o contexto al que pertenece
-blocked_by:      # opcional — solo si status: delayed
+fleet:
+blocked_by:
 ---
 %%
 galaxy_body: ship → carrier si el proyecto escala (necesita carpeta propia y archivos extra)
