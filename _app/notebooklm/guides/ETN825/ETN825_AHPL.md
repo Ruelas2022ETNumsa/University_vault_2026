@@ -1,6 +1,6 @@
 ---
 title: AHPL — Guía unificada para ETN825 (LaTeX NotebookLM)
-galaxy_body: 22beacon
+galaxy_body: 44beacon
 scope: devault
 tool: ahpl-notation
 audience:
@@ -504,9 +504,186 @@ END
 > **Diferencia con transferencia en paso:** `CR ← valor` ocurre una vez al borde de reloj. `CHAR = CR` es continuo — si CR cambia, CHAR cambia en el mismo instante.
 >
 > **Nota:** las expresiones fuera de secuencia pueden usar `←` (con reloj) o `=` (combinacional) según el tipo de operación. El ejemplo `ss * (start ∨ stop) ← (1!0) * (start, stop)` usa `←` porque `ss` es un registro (MEMORY).
+---
+
+### N16. PARES PREGUNTA→RESPUESTA — FORMATO DE IMITACIÓN
+
+> Contexto para NotebookLM: estos pares muestran exactamente cómo debe verse una respuesta correcta. Para cada pregunta: bloque de código con declaraciones completas (tamaños incluidos) y tabla de lectura con KaTeX inline. Imitar este formato en todas las respuestas que involucren módulos o secuencias AHPL.
 
 ---
 
+#### Par 1 — módulo completo con declaraciones
+
+**Pregunta:** Escribí un módulo AHPL que espera la señal `go`, carga `AC[8]` desde `DBUS[8]` y termina en DEAD END.
+
+**Respuesta:**
+
+```
+MODULE: TEST
+MEMORY: AC[8]; flag
+OUTPUTS: done
+INPUTS: go
+COMBUS: DBUS[8]
+
+1. → (~go)/(1)
+2. AC ← DBUS; flag ← 1
+3. done = 1
+4. DEAD END
+END SEQUENCE
+END
+```
+
+| Paso | Operación | Condición | Estado resultante |
+|---|---|---|---|
+| `1.` | \( \rightarrow (\overline{go})/(1) \) | \( \overline{go} \) | Bucle de espera. Retorna mientras go = 0; sale al paso 2 cuando go = 1. |
+| `2.` | \( AC \leftarrow DBUS \); \( flag \leftarrow 1 \) | — | Transferencia síncrona al flanco de reloj. AC[8] se carga desde DBUS[8]; flag se pone en 1. Ambas simultáneas. |
+| `3.` | \( done = 1 \) | — | Conexión combinacional. La salida done se activa sin reloj durante este paso. |
+| `4.` | \( DEAD\ END \) | — | Fin de secuencia. El módulo se detiene. |
+
+---
+---
+
+### N16. PARES PREGUNTA→RESPUESTA — FORMATO DE IMITACIÓN
+
+> Contexto para NotebookLM: estos pares muestran exactamente cómo debe verse una respuesta correcta. Para cada pregunta: bloque de código con declaraciones completas (tamaños incluidos) y tabla de lectura con KaTeX inline. Imitar este formato en todas las respuestas que involucren módulos o secuencias AHPL.
+
+---
+
+#### Tamaños estándar — registros de Hill & Peterson 2ª ed.
+
+Usar siempre estos tamaños cuando aparezcan estos registros. No inferir tamaños distintos.
+
+| Registro | Tamaño | Módulo / contexto |
+|---|---|---|
+| `DR` | `DR[18]` | Registro de datos — bus IOBUS de 18 bits |
+| `CR` | `CR[8]` | Registro de carácter — 8 bits ASCII |
+| `IOBUS` | `IOBUS[18]` | Bus de interconexión del sistema |
+| `CHAR` | `CHAR[8]` | Salida de carácter a la impresora |
+| `AC` | `AC[18]` | Acumulador del SIC |
+| `PC` | `PC[12]` | Contador de programa del SIC |
+| `IR` | `IR[18]` | Registro de instrucción del SIC |
+| `MD` | `MD[18]` | Registro de datos de memoria del SIC |
+| `MA` | `MA[12]` | Registro de dirección de memoria del SIC |
+
+**Regla general:** los tamaños válidos para vectores son potencias de 2 — 8, 16, 32 — o el valor específico del libro (18 para el bus de Hill & Peterson, 12 para direcciones del SIC). Nunca usar `[1]` o `[2]` por defecto. Si el tamaño no está en esta tabla y no se indica, no inventar — usar el del libro o preguntar.
+
+---
+
+#### Par 1 — módulo completo con declaraciones
+
+**Pregunta:** Escribí un módulo AHPL que espera la señal `go`, carga `AC[8]` desde `DBUS[8]` y termina en DEAD END.
+
+**Respuesta:**
+
+```
+MODULE: TEST
+MEMORY: AC[8]; flag
+OUTPUTS: done
+INPUTS: go
+COMBUS: DBUS[8]
+
+1. → (~go)/(1)
+2. AC ← DBUS; flag ← 1
+3. done = 1
+4. DEAD END
+END SEQUENCE
+END
+```
+
+| Paso | Operación | Condición | Estado resultante |
+|---|---|---|---|
+| `1.` | \( \rightarrow (\overline{go})/(1) \) | \( \overline{go} \) | Bucle de espera. Retorna mientras \( go = 0 \); sale al paso 2 cuando \( go = 1 \). |
+| `2.` | \( AC \leftarrow DBUS \) ; \( flag \leftarrow 1 \) | — | Transferencia síncrona. \( AC[8] \) se carga desde \( DBUS[8] \). \( flag \) se pone en 1. Ambas simultáneas al flanco de reloj. |
+| `3.` | \( done = 1 \) | — | Conexión combinacional. La salida \( done \) se activa sin reloj durante este paso. |
+| `4.` | \( DEAD\ END \) | — | Fin de secuencia. El módulo se detiene. |
+
+---
+
+#### Par 2 — módulo PRINTER INTERFACE completo
+
+**Pregunta:** Transcribí el módulo PRINTER INTERFACE completo (Hill & Peterson 2ª ed., Example 9.3, p. 349-350) con declaraciones y tabla de lectura.
+
+**Respuesta:**
+
+```
+MODULE: PRINTER INTERFACE
+MEMORY: DR[18]; CR[8]; first(JK)
+OUTPUTS: CHAR[8]; ready; accept; print; feed
+INPUTS: datavalid; wait
+COMBUS: IOBUS[18]
+
+1. ready = 1
+   → (~datavalid)/(1)
+2. DR ← IOBUS; accept = 1; first ← 1
+3. CR ← (DR₁₀:₁₇ ∧ first) ∨ (DR₁:₈ ∧ ~first)
+4. feed = RETURN(CR); print = RETURN(CR)
+5. Null
+6. → (wait)/(6)
+7. first ← 0
+   → (first, ~first)/(3, 8)
+8. DEAD END
+END SEQUENCE
+CHAR = CR
+END
+```
+
+| Paso | Operación | Condición | Estado resultante |
+|---|---|---|---|
+| `1.` | \( ready = 1 \) | \( \rightarrow (\overline{datavalid})/(1) \) | Espera activa. \( ready = 1 \) indica disponibilidad. Bucle mientras \( datavalid = 0 \); sale cuando \( datavalid = 1 \). |
+| `2.` | \( DR \leftarrow IOBUS \) ; \( accept = 1 \) ; \( first \leftarrow 1 \) | — | Captura simultánea al flanco de reloj. \( DR[18] \) toma el valor de \( IOBUS[18] \). \( accept = 1 \) por un ciclo. \( first \) se inicializa en 1. |
+| `3.` | \( CR \leftarrow (DR_{10:17} \land first) \lor (DR_{1:8} \land \overline{first}) \) | — | Desempaquetado. Si \( first = 1 \): \( CR \leftarrow DR_{10:17} \). Si \( first = 0 \): \( CR \leftarrow DR_{1:8} \). |
+| `4.` | \( feed = RETURN(CR) \) ; \( print = RETURN(CR) \) | — | Evaluación combinacional. \( RETURN(CR) \) detecta si \( CR \) es retorno de carro — activa \( feed \) o \( print \) según corresponda. |
+| `5.` | \( Null \) | — | Paso nulo. Sincronización — da tiempo a la impresora para levantar \( wait \). |
+| `6.` | — | \( \rightarrow (wait)/(6) \) | Polling. Espera mientras \( wait = 1 \); sale cuando \( wait = 0 \). |
+| `7.` | \( first \leftarrow 0 \) | \( \rightarrow (first, \overline{first})/(3, 8) \) | Control de flujo. \( first \) se borra. Si \( first \) era 1 → paso 3 (segundo carácter). Si era 0 → paso 8 (fin). |
+| `8.` | \( DEAD\ END \) | — | Fin de secuencia. Módulo detenido. |
+| `CHAR = CR` | \( CHAR = CR \) | — | Salida combinacional permanente. \( CHAR[8] \) refleja \( CR[8] \) en todo momento, fuera de la secuencia. |
+
+---
+
+#### Par 3 — bucle de espera
+
+**Pregunta:** Mostrá el patrón AHPL de un bucle de espera: esperar mientras una señal vale 0, y esperar mientras una señal vale 1.
+
+**Respuesta:**
+
+```
+% Caso A — espera mientras señal = 0 (sale cuando señal = 1):
+N. → (~señal)/(N)
+
+% Caso B — espera mientras señal = 1 (sale cuando señal = 0):
+N. → (señal)/(N)
+
+% Ejemplos reales del módulo PRINTER INTERFACE:
+1. → (~datavalid)/(1)    % Caso A — sale cuando datavalid = 1
+2. → (wait)/(6)          % Caso B — sale cuando wait = 0
+```
+
+| Variante | Condición de retorno | Sale cuando | Paso en PRINTER INTERFACE |
+|---|---|---|---|
+| Caso A — espera en 0 | \( \overline{señal} = 1 \) | señal = 1 | Paso 1 — \( \overline{datavalid} \) |
+| Caso B — espera en 1 | \( wait = 1 \) | wait = 0 | Paso 6 — \( wait \) |
+
+---
+
+#### Par 4 — transferencia condicional con operador `*`
+
+**Pregunta:** Mostrá la transferencia condicional AHPL con operador `*` — dos ejemplos de Hill & Peterson cap. 4, p. 105.
+
+**Respuesta:**
+
+```
+% Ejemplo 1 — condición en lado izquierdo (dos transferencias simultáneas):
+2. A * ~a ← B ; D * a ← C
+
+% Ejemplo 2 — selección de origen con row concatenate (!):
+D ← (A ! B ! C) * (f, g, h)
+```
+
+| Ejemplo | Operación | Interpretación |
+|---|---|---|
+| 1 — destino condicionado | \( A * \overline{a} \leftarrow B \;;\; D * a \leftarrow C \) | Si \( a = 0 \): \( A \leftarrow B \). Si \( a = 1 \): \( D \leftarrow C \). Ambas en el mismo paso — simultáneas. |
+| 2 — origen seleccionado | \( D \leftarrow (A \mathop{!} B \mathop{!} C) * (f,\, g,\, h) \) | Si \( f = 1 \): \( D \leftarrow A \). Si \( g = 1 \): \( D \leftarrow B \). Si \( h = 1 \): \( D \leftarrow C \). Condiciones mutuamente excluyentes. El operador \( ! \) es row concatenate — no es NOT lógico. |
 %%
 # galaxy-links
 [[_app/notebooklm/guides/ETN825/ETN825_tikz.md]]
