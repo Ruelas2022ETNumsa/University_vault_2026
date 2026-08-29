@@ -139,7 +139,13 @@ NotebookLM es un sistema RAG sobre Gemini — lee los fuentes y genera respuesta
 - [x] Investigación operadores AHPL — P1/P2/P3 consultados a ChatGPT + Gemini/NotebookLM
 - [x] Corregir guía `ETN825_AHPL.md` — 6 inconsistencias adicionales identificadas en revisión (ver ## Correcciones pendientes v2) — todas aplicadas
 - [x] Corregir guía `ETN825_AHPL.md` — `COMBUSES` → `COMBUS` en 6 ocurrencias (🤖 NOTEBOOKLM, N1, N2, N3, N10) — confirmado por Gemini P8 — aplicado
-- [ ] Re-prueba en NotebookLM con formato final
+- [x] Re-prueba en NotebookLM con formato final — parcialmente exitoso (formato bloque de código correcto, sin \begin{aligned}; contenido con errores)
+- [x] Corrección guía N1/N2 — reforzar que vectores SIEMPRE llevan tamaño entre corchetes (NotebookLM omitió tamaños: `DR` en lugar de `DR[18]`, etc.) — aplicado en buffer
+- [x] Corrección guía N2/N3 — agregar nota: declaraciones con dos dimensiones son válidas, ej. `ROM[1024, 18]` — aplicado en buffer
+- [ ] Corrección guía N12 — aclarar sentido del bucle: espera mientras señal=0, sale cuando señal=1; ejemplo con `~señal` explícito
+- [ ] Corrección guía N4 — clarificar `RETURN()`: es complemento lógico, el libro lo muestra con barra sobre toda la expresión
+- [ ] Corrección guía N15 — agregar patrón con `*` fuera de secuencia: `ss * (start ∨ stop) ← (1!0) * (start, stop)`
+- [ ] Verificar y eliminar cualquier mención de `busy` en N11 (módulo PRINTER INTERFACE)
 
 ---
 

@@ -79,10 +79,10 @@ END
 Reglas:
 
 - `MODULE:` — nombre del módulo en mayúsculas, descriptivo.
-- `MEMORY:` — registros que retienen valor entre ciclos de reloj (flip-flops). Siempre con tamaño entre corchetes si son vectores: `DR[18]`, `CR[8]`. Escalares sin corchetes: `busy`, `first`.
+- `MEMORY:` — registros que retienen valor entre ciclos de reloj (flip-flops). **Siempre con tamaño entre corchetes si son vectores — nunca omitir:** `DR[18]`, `CR[8]`. ROMs y memorias usan dos dimensiones: `ROM[1024, 18]` (1024 palabras de 18 bits). Escalares sin corchetes: `busy`, `first`.
 - `OUTPUTS:` — señales o registros que salen del módulo. Si son buses de datos incluir tamaño: `CHAR[8]`. Señales booleanas sin corchetes: `print`, `feed`.
 - `INPUTS:` — señales que entran al módulo desde otros módulos o dispositivos: `wait`, `csrdy`.
-- `COMBUS:` — buses combinacionales (sin reloj, conexión directa). Con tamaño y señales booleanas: `IOBUS[18]`, `CSBUS[12]`, `ready`, `datavalid`, `accept`.
+- `COMBUS:` — buses combinacionales (sin reloj, conexión directa). **Siempre con tamaño si son vectores:** `IOBUS[18]`, `CSBUS[12]`. Señales booleanas sin corchetes: `ready`, `datavalid`, `accept`.
 
 ❌ Incorrecto — falta tamaño en registro:
 ```
@@ -103,6 +103,7 @@ MEMORY: DR[18]; CR[8]; busy; first
 | Notación | Significado | Ejemplo |
 |---|---|---|
 | `REG[N]` | Registro de N bits | `DR[18]`, `CR[8]`, `IR[18]`, `AC[18]` |
+| `REG[N, M]` | Memoria de N palabras de M bits | `ROM[1024, 18]`, `RAM[256, 8]` |
 | `REG` (sin corchetes) | Flip-flop de 1 bit (escalar) | `busy`, `first`, `ready` |
 | Separador `;` | Separa elementos en la misma sección | `DR[18]; CR[8]; busy; first` |
 

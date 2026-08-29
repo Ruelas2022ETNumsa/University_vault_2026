@@ -260,4 +260,4 @@ Identificadas en revisión final (sesión 2026-08-28). Fuente: confirmación Gem
 - Referencia: Hill & Peterson — Digital Systems 2ª ed.
 - NotebookLM LaTeX nativo: octubre 2025 (Chat, Flashcards, Quizzes)
 - Plugin de conversión de delimitadores: disponible en el entorno del usuario
-- Consultas a Gemini+NotebookLM (P1–P7 + sesión actual): `E:\University_vault_2026\Untitled.md`
+- Consultas a Gemini+NotebookLM con fuentes de library cargadas (P1–P9, todas las preguntas y respuestas de esta sesión): `E:\University_vault_2026\Untitled.md` — fuente primaria de verificación para operadores AHPL, módulo PRINTER INTERFACE, COMBUS, convención de negados.
