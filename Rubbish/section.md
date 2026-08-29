@@ -1,22 +1,35 @@
 
-### N12. PATRÓN — BUCLE DE ESPERA CON SEÑAL
+### N4. OPERADORES AHPL
 
-> Contexto para NotebookLM: patrón de polling. El módulo permanece en el mismo paso hasta que una señal cambia de estado. Se usa para esperar `datavalid`, `wait`, `ready`, `accept`. El paso bifurca hacia sí mismo mientras la condición de vuelta sea verdadera.
+#### Transferencia y conexión
 
-**Regla de lectura:** la condición dentro de `→ (cond)/(N)` es la condición de **retorno** — cuando es verdadera, vuelve al mismo paso. El módulo sale cuando esa condición es falsa y continúa al paso siguiente.
+| Operador | LaTeX | Nombre | Reloj |
+|---|---|---|---|
+| \( \leftarrow \) | `\leftarrow` | Transferencia — \( AC \leftarrow DR \) copia DR en AC al borde de reloj | Sí |
+| \( = \) | `=` | Conexión de bus — \( IBUS = AC \) conecta AC al bus | No |
+| \( * \) | `*` | Transferencia condicional — \( A * \overline{a} \leftarrow B \) (si \( a=0 \), transfiere B a A); \( D \leftarrow (A \mathop{!} B \mathop{!} C) * (f,\, g,\, h) \) (selecciona origen según control) | Sí |
 
-```
-% Espera mientras la señal es 0 (retorna si ~señal=1, sale cuando señal=1):
-N.  → (~señal)/(N)
+#### Operadores lógicos
 
-% Espera mientras la señal es 1 (retorna si señal=1, sale cuando señal=0):
-N.  → (señal)/(N)
+| Símbolo | LaTeX | Operación | Alternativa texto | Ejemplo |
+|---|---|---|---|---|
+| \( \land \) | `\land` | AND | `AND`, `&` | \( csrdy \land \overline{CSBUS_0} \) |
+| \( \lor \) | `\lor` | OR | `OR`, `+` | \( busy \lor first \) |
+| \( \oplus \) | `\oplus` | XOR | `XOR`, `@` | \( AC \oplus DR \) |
+| \( \overline{X} \) | `\overline{X}` | NOT | `NOT`, `~` prefijo | \( \overline{CSBUS_0} \), \( \overline{accept} \) |
 
-% Ejemplo concreto — esperar que datavalid sea 1:
-% retorna a (1) mientras datavalid=0; sale al paso 2 cuando datavalid=1
-1.  → (~datavalid)/(1)
+#### Selección de bits
 
-% Ejemplo concreto — esperar que wait sea 0:
-% retorna a (6) mientras wait=1; sale al paso 7 cuando wait=0
-6.  → (wait)/(6)
-```
+| Notación | LaTeX | Significado | Ejemplo |
+|---|---|---|---|
+| \( REG_i \) | `REG_i` | Bit i del registro | \( IR_0 \), \( CR_7 \) |
+| \( REG_{i:j} \) | `REG_{i:j}` | Bits i a j | \( IR_{8:17} \), \( D_{10:17} \) |
+
+#### Operaciones aritméticas
+
+| Notación | LaTeX | Operación | Ejemplo |
+|---|---|---|---|
+| \( INC(REG) \) | `INC(REG)` | Incremento | \( PC \leftarrow INC(PC) \) |
+| \( ADD(A,B) \) | `ADD(A,B)` | Suma | \( AC \leftarrow ADD(AC, DR) \) |
+| \( BUSFN(M;\ DCD(AR)) \) | `BUSFN(M; DCD(AR))` | Acceso a ROM/tabla combinacional — lee datos de memoria M direccionada por DCD(AR) | \( MD \leftarrow BUSFN(M;\ DCD(AR)) \) |
+| `RETURN(REG)` | `RETURN(REG)` | Combinational logic unit definida en el ejemplo — no es operador estándar de AHPL (no aparece en operador set, p. 118). En Example 9.3 actúa como detector booleano: evalúa si REG contiene un código específico y devuelve 1 bit. Equivalente estándar: `(CR = código)`. Ver: Using Combinational Logic Units, p. 128-132. | \( feed = RETURN(CR) \) |

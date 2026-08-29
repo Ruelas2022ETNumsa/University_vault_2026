@@ -142,10 +142,11 @@ NotebookLM es un sistema RAG sobre Gemini — lee los fuentes y genera respuesta
 - [x] Re-prueba en NotebookLM con formato final — parcialmente exitoso (formato bloque de código correcto, sin \begin{aligned}; contenido con errores)
 - [x] Corrección guía N1/N2 — reforzar que vectores SIEMPRE llevan tamaño entre corchetes (NotebookLM omitió tamaños: `DR` en lugar de `DR[18]`, etc.) — aplicado en buffer
 - [x] Corrección guía N2/N3 — agregar nota: declaraciones con dos dimensiones son válidas, ej. `ROM[1024, 18]` — aplicado en buffer
-- [ ] Corrección guía N12 — aclarar sentido del bucle: espera mientras señal=0, sale cuando señal=1; ejemplo con `~señal` explícito
-- [ ] Corrección guía N4 — clarificar `RETURN()`: es complemento lógico, el libro lo muestra con barra sobre toda la expresión
-- [ ] Corrección guía N15 — agregar patrón con `*` fuera de secuencia: `ss * (start ∨ stop) ← (1!0) * (start, stop)`
-- [ ] Verificar y eliminar cualquier mención de `busy` en N11 (módulo PRINTER INTERFACE)
+- [x] Corrección guía N12 — aclarar sentido del bucle: espera mientras señal=0, sale cuando señal=1; ejemplo con `~señal` explícito — aplicado en buffer
+- [x] Corrección guía N15 — agregar patrón con `*` fuera de secuencia: `ss * (start ∨ stop) ← (1!0) * (start, stop)` — aplicado en buffer
+- [x] Verificar y eliminar cualquier mención de `busy` en N11 (módulo PRINTER INTERFACE) — no había `busy`, N11 limpio
+- [x] Corregir N11 — paso 7: destino incorrecto `(3, 8)` → debe ser `(3, 1)` en bloque de código y tabla — aplicado en buffer
+- [x] Corrección guía N4 — clarificar `RETURN()`: investigación x4 (Gemini x3 + fuentes NotebookLM) — conclusión: no es operador estándar AHPL, actúa como look-up table combinacional en contexto E/S. `BUSFN` agregado. Pendiente confirmación web.
 
 ---
 

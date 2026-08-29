@@ -24,7 +24,9 @@
         "Borrar",
         "shared",
         "README.md",
-        "ETN825-T01.md"
+        "ETN825-T01.md",
+        "Untitled.md",
+        "Untitled 1.md"
       ]
     },
     "MOC": {
@@ -1434,7 +1436,8 @@
         "latex-overleaf-estructura-profesional.md",
         "latex-matlab-limpieza-comentarios.md",
         "tsk_toggle-readable-line-length.md",
-        "ship_ETN825_AHPL_ejemplos.md"
+        "ship_ETN825_AHPL_ejemplos.md",
+        "ship_ETN825_AHPL_ejemplos 1.md"
       ]
     },
     "_hangar/dock/tsk_pdf_marginalia_pp.md": {
@@ -5600,7 +5603,8 @@
         "ETN825_AHPL 2.md",
         "ETN825_AHPL 3.md",
         "ETN825_AHPL 4.md",
-        "ETN825_AHPL 5.md"
+        "ETN825_AHPL 5.md",
+        "ETN825_AHPL 6.md"
       ]
     },
     "Semesters/Sem_07": {
@@ -5848,6 +5852,22 @@
       "isHidden": false
     },
     "_hangar/_legacy/ship_library_ETN1015.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/guides/ETN825/ETN825_AHPL 6.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/dock/ship_ETN825_AHPL_ejemplos 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled 1.md": {
       "isPinned": false,
       "isHidden": false
     }

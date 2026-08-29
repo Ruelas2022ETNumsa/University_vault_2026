@@ -179,7 +179,8 @@ COMBUS: IOBUS[18]
 |---|---|---|---|
 | \( INC(REG) \) | `INC(REG)` | Incremento | \( PC \leftarrow INC(PC) \) |
 | \( ADD(A,B) \) | `ADD(A,B)` | Suma | \( AC \leftarrow ADD(AC, DR) \) |
-| \( RETURN(REG) \) | `RETURN(REG)` | Complemento lógico | \( feed = RETURN(CR) \) |
+| \( BUSFN(M;\ DCD(AR)) \) | `BUSFN(M; DCD(AR))` | Acceso a ROM/tabla combinacional — lee datos de memoria M direccionada por DCD(AR) | \( MD \leftarrow BUSFN(M;\ DCD(AR)) \) |
+| `RETURN(REG)` | `RETURN(REG)` | Función auxiliar mnemónica — no es operador estándar de AHPL. En interfaces E/S actúa como look-up table combinacional: traduce el código binario de REG a señales de control del periférico. Fuente: H&P 2ª ed. p. 305, Example 9.3 | \( feed = RETURN(CR) \) |
 
 ---
 
@@ -370,7 +371,7 @@ COMBUS: IOBUS[18]
 5. Null
 6. → (wait)/(6)
 7. first ← 0
-   → (first, ~first)/(3, 8)
+   → (first, ~first)/(3, 1)
 8. DEAD END
 END SEQUENCE
 CHAR = CR
@@ -387,7 +388,7 @@ END
 | `4.` | \( feed = RETURN(CR);\; print = RETURN(CR) \) — envía señales a impresora. |
 | `5.` | Paso nulo — sincronización. |
 | `6.` | Bucle de espera mientras \( wait = 1 \) — sale cuando \( wait = 0 \). |
-| `7.` | \( first \leftarrow 0 \). Bifurca: \( first = 1 \rightarrow 3 \), \( first = 0 \rightarrow 8 \). |
+| `7.` | \( first \leftarrow 0 \). Bifurca: \( first = 1 \rightarrow 3 \), \( first = 0 \rightarrow 1 \). |
 | `8.` | DEAD END. |
 | `CHAR = CR` | Salida combinacional permanente: \( CHAR = CR \) en todo momento. |
 
@@ -395,19 +396,23 @@ END
 
 ### N12. PATRÓN — BUCLE DE ESPERA CON SEÑAL
 
-> Contexto para NotebookLM: patrón de polling. El módulo permanece en el mismo paso hasta que una señal cambia de estado. Se usa para esperar `datavalid`, `wait`, `ready`, `accept`. El paso bifurca hacia sí mismo mientras la condición sea falsa (o verdadera, según el sentido).
+> Contexto para NotebookLM: patrón de polling. El módulo permanece en el mismo paso hasta que una señal cambia de estado. Se usa para esperar `datavalid`, `wait`, `ready`, `accept`. El paso bifurca hacia sí mismo mientras la condición de vuelta sea verdadera.
+
+**Regla de lectura:** la condición dentro de `→ (cond)/(N)` es la condición de **retorno** — cuando es verdadera, vuelve al mismo paso. El módulo sale cuando esa condición es falsa y continúa al paso siguiente.
 
 ```
-% Espera mientras la señal es 0 (sale cuando es 1):
+% Espera mientras la señal es 0 (retorna si ~señal=1, sale cuando señal=1):
 N.  → (~señal)/(N)
 
-% Espera mientras la señal es 1 (sale cuando es 0):
+% Espera mientras la señal es 1 (retorna si señal=1, sale cuando señal=0):
 N.  → (señal)/(N)
 
 % Ejemplo concreto — esperar que datavalid sea 1:
+% retorna a (1) mientras datavalid=0; sale al paso 2 cuando datavalid=1
 1.  → (~datavalid)/(1)
 
 % Ejemplo concreto — esperar que wait sea 0:
+% retorna a (6) mientras wait=1; sale al paso 7 cuando wait=0
 6.  → (wait)/(6)
 ```
 
@@ -470,10 +475,10 @@ D ← (A ! B ! C) * (f, g, h)
 
 ### N15. PATRÓN — SALIDA COMBINACIONAL PERMANENTE (fuera de secuencia)
 
-> Contexto para NotebookLM: las expresiones después de `END SEQUENCE` y antes de `END` son salidas combinacionales que el módulo mantiene en todo momento, sin reloj. Se usan cuando una salida debe reflejar en tiempo real el contenido de un registro o una operación lógica sobre él.
+> Contexto para NotebookLM: las expresiones después de `END SEQUENCE` y antes de `END` son salidas combinacionales que el módulo mantiene en todo momento, sin reloj. Se usan cuando una salida debe reflejar en tiempo real el contenido de un registro o una operación lógica sobre él. Pueden incluir transferencias condicionales con `*` y row catenation con `!`.
 
 ```
-% Formato:
+% Formato básico:
 END SEQUENCE
 SALIDA = expresión
 END
@@ -483,9 +488,11 @@ END SEQUENCE
 CHAR = CR
 END
 
-% Ejemplo con operación lógica — salida negada:
+% Ejemplo con transferencia condicional y row catenation (Hill & Peterson 2ª ed., Example 9.3):
+% ss toma el valor 1!0 (es decir, 1 o 0) condicionado por (start, stop)
 END SEQUENCE
-CHAR = NOT(CR)
+ss * (start ∨ stop) ← (1!0) * (start, stop)
+OPR = PR
 END
 
 % Ejemplo con selección de bits:
@@ -495,6 +502,8 @@ END
 ```
 
 > **Diferencia con transferencia en paso:** `CR ← valor` ocurre una vez al borde de reloj. `CHAR = CR` es continuo — si CR cambia, CHAR cambia en el mismo instante.
+>
+> **Nota:** las expresiones fuera de secuencia pueden usar `←` (con reloj) o `=` (combinacional) según el tipo de operación. El ejemplo `ss * (start ∨ stop) ← (1!0) * (start, stop)` usa `←` porque `ss` es un registro (MEMORY).
 
 ---
 

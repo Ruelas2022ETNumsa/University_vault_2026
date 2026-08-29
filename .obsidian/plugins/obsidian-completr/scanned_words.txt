@@ -48378,6 +48378,7 @@ direccionable
 desea
 direccionada
 desincronizado
+dimensiones
 Vault
 Verificar
 Variables
@@ -75953,6 +75954,7 @@ banderas
 bifurcar
 bigvee
 branch
+booleano
 scope
 status
 selector
@@ -233683,6 +233685,7 @@ menciones
 modifiquemos
 modificada
 mathop
+memorias
 YAML
 Ya
 You
@@ -369500,6 +369503,7 @@ Uicb
 UccWL
 UEQQ
 UlumG
+Units
 Nombre
 Notas
 No
