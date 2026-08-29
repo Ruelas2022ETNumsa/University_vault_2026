@@ -164,12 +164,65 @@ Basadas en investigación P1/P2 (ChatGPT + Gemini, 2026-08-28). Fuente: Hill & P
 - NO usa operador `*` ni `!` — usa AND/OR lógico directamente
 - Lo que tenía la guía (`CR ← (D₁₀:₁₇!) * (first, ~first)`) es incorrecto en estructura y operadores
 
+**Sobre el operador `*` (transferencia condicional) — P4:**
+- Fuente: Gemini (todas las fuentes cargadas), p. 105 cap. 4 sec. 4.7 + ChatGPT
+- El `*` SÍ existe en AHPL pero es distinto de `∧` — son operadores diferentes
+- Formas válidas según el libro:
+  - `DV ← OCLV * F` — transferencia condicionada por F
+  - `DM * F ← OCLV` — destino condicionado por F
+  - `D ← (A ! B ! C) * (f, g, h)` — selección condicional del origen con row concatenate
+  - `A * ~a ← B ; D * a ← C` — dos transferencias condicionales simultáneas (p. 105)
+- El paso 3A del PRINTER INTERFACE usa `∧`/`∨`, NO `*` — son mecanismos distintos
+- N14 debe mostrar un ejemplo real con `*` tomado de p. 105, no del paso 3A
+
+**Decisión de convención de notación — 2026-08-28:**
+- **Bloques de código AHPL:** `~` como prefijo para negados (sustitución tipográfica aceptada — Opción A)
+- **Tablas KaTeX:** `\overline{X}` para negados, notación matemática completa (Opción C)
+- **Concatenación de vectores simples:** coma — `X, Y`
+- **Row concatenate:** `!` — `A ! B`
+- **NOT canónico del libro:** barra superior tipográfica — se mantiene en tablas KaTeX, se sustituye por `~` en bloques de código
+- Esta convención aplica a toda la guía y al prompt
+
+**Módulo PRINTER INTERFACE completo — P5 (fuente: ChatGPT, Example 9.3 p. 349-350):**
+```
+MODULE: PRINTER INTERFACE
+MEMORY: DR[18]; CR[8]; first(JK)
+OUTPUTS: CHAR[8]; ready; accept; print; feed
+INPUTS: datavalid; wait
+COMBUS: IOBUS[18]
+1. ready = 1
+   → (~datavalid)/(1)
+2. DR ← IOBUS; accept = 1; first ← 1
+3. CR ← (DR₁₀:₁₇ ∧ first) ∨ (DR₁:₈ ∧ ~first)
+4. feed = RETURN(CR); print = RETURN(CR)
+5. Null
+6. → (wait)/(6)
+7. first ← 0
+   → (first, ~first)/(3, 8)
+8. DEAD END
+END SEQUENCE
+CHAR = CR
+END
+```
+
+**Paso 1 del PRINTER INTERFACE — P6:**
+- `1. → (csrdy ∧ ~CSBUS₀ ∧ CSBUS₁ ∧ ~CSBUS₂)/(1)`
+- El libro usa barra superior tipográfica para negados, NO `~`
+- El AND se representa con `∧`
+
+**Notación de negado en bloques de código — P7:**
+- El libro usa EXCLUSIVAMENTE barra superior en las secuencias numeradas
+- NUNCA usa `~` ni `NOT()` en el código AHPL
+- Ejemplos confirmados:
+  - p. 98: `→ ((Ā₀ ∨ ...), (Ā₀ ∨ ...))/(5,1)` — barra sobre cada término
+  - p. 177: `MD ← (AC ! (5T0, INC(PC))) * (IR₂, ~IR₂)` — barra sobre IR₂
+
 **Puntos a corregir en la guía:**
 1. **N4 — tabla "Selección de bits"** — fila `REG_{i:j}!` dice "complementados" → incorrecto, es row concatenate
 2. **N4 — tabla "Transferencia y conexión"** — ejemplo `(D_{10:17}!) * (first, overline{first})` — estructura incorrecta, no es así en el libro
 3. **N7 — bloque código paso 3A** — `CR ← (D₁₀:₁₇!) * (first, ~first)` → debe ser `CR ← (DR₁₀:₁₇ ∧ first) ∨ (DR₁:₈ ∧ ~first)`
 4. **N11 — bloque código paso 3A** — ídem N7
-5. **N14 — bloque código y nota al pie** — `(expresión!) * (cond, cond̄)` y descripción "complemento lógico bit a bit" → estructura incorrecta, revisar con ejemplo real del libro
+5. **N14 — bloque código y nota al pie** — reescribir con ejemplos reales de p. 105: `A * ~a ← B` y `D ← (A ! B ! C) * (f, g, h)`. Eliminar descripción "complemento lógico bit a bit"
 
 ---
 

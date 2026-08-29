@@ -154,7 +154,7 @@ COMBUSES: IOBUS[18]; CSBUS[12]; ready; datavalid; accept
 |---|---|---|---|
 | \( \leftarrow \) | `\leftarrow` | Transferencia — \( AC \leftarrow DR \) copia DR en AC al borde de reloj | Sí |
 | \( = \) | `=` | Conexión de bus — \( IBUS = AC \) conecta AC al bus | No |
-| \( * \) | `*` | Transferencia condicional — \( A * \overline{a} \leftarrow B \) (si \( a=0 \), transfiere B a A); \( D \leftarrow (A \mathop{!} B \mathop{!} C) * (f,\, g,\, h) \) (selecciona origen según control) | Sí |
+| \( * \) | `*` | Producto condicional — \( CR \leftarrow (D_{10:17}!) * (first,\, \overline{first}) \) | Sí |
 
 #### Operadores lógicos
 
@@ -171,6 +171,7 @@ COMBUSES: IOBUS[18]; CSBUS[12]; ready; datavalid; accept
 |---|---|---|---|
 | \( REG_i \) | `REG_i` | Bit i del registro | \( IR_0 \), \( CR_7 \) |
 | \( REG_{i:j} \) | `REG_{i:j}` | Bits i a j | \( IR_{8:17} \), \( D_{10:17} \) |
+| \( REG_{i:j}! \) | `REG_{i:j}!` | Bits i a j, complementados | \( D_{10:17}! \) — NOT de esa porción |
 
 #### Operaciones aritméticas
 
@@ -277,7 +278,7 @@ Los pasos se numeran con enteros. Los subpasos usan letra sufijo.
 1A. ready = 1;
     → (~datavalid)/(1A)
 2A. DR ← IOBUS; busy ← 1; accept = 1; first ← 1
-3A. CR ← (DR₁₀:₁₇ ∧ first) ∨ (DR₁:₈ ∧ ~first)
+3A. CR ← (D₁₀:₁₇!) * (first, ~first)
 ```
 
 ---

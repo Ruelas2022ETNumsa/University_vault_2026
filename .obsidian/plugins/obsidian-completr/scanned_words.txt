@@ -136041,6 +136041,8 @@ corpus
 colocados
 comunicar
 captada
+consultados
+concatenate
 updated
 un
 universo
@@ -164804,6 +164806,8 @@ CONTROLADOR
 COMBUS
 Combinacional
 Complement
+CONCATENATE
+Concatenaci
 Instalados
 Instalado
 Instalar
@@ -233659,6 +233663,7 @@ mDRP
 menciones
 modifiquemos
 modificada
+mathop
 YAML
 Ya
 You
@@ -251832,6 +251837,7 @@ BTUs
 BNsn
 Bbxe
 BtBq
+Basadas
 en
 exacta
 escaneados
