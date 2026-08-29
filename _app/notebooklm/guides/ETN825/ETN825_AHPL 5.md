@@ -163,7 +163,7 @@ COMBUSES: IOBUS[18]; CSBUS[12]; ready; datavalid; accept
 | \( \land \) | `\land` | AND | `AND`, `&` | \( csrdy \land \overline{CSBUS_0} \) |
 | \( \lor \) | `\lor` | OR | `OR`, `+` | \( busy \lor first \) |
 | \( \oplus \) | `\oplus` | XOR | `XOR`, `@` | \( AC \oplus DR \) |
-| \( \overline{X} \) | `\overline{X}` | NOT | `NOT`, `~` prefijo | \( \overline{CSBUS_0} \), \( \overline{accept} \) |
+| \( \overline{X} \) | `\overline{X}` | NOT | `NOT`, `!` al final | \( \overline{CSBUS_0} \), \( \overline{accept} \) |
 
 #### Selección de bits
 
@@ -200,7 +200,7 @@ Ejecuta una o más acciones en un ciclo de reloj.
 Va incondicionalmente al paso indicado. No ejecuta operación.
 
 ```
-→ (CSBUS₃, ~CSBUS₃, ~CSBUS₂)/(1, 1A, 3)
+→ (CSBUS₃, CSBUS̄₃, CSBUS̄₂)/(1, 1A, 3)
 ```
 
 Formato: `→ (condición₁, condición₂, ...)/(destino₁, destino₂, ...)`
@@ -215,12 +215,12 @@ Evalúa una condición y salta según el resultado.
 ```
 → (ready)/(3)
 → (datavalid)/(1A)
-→ (first, ~first)/(3A, 8A)
+→ (first, first̄)/(3A, 8A)
 ```
 
 - Si la condición es verdadera → va al destino indicado.
 - Si es falsa → continúa al siguiente paso numerado.
-- Con dos destinos: `→ (f, ~f)/(D_yes, D_no)` — el segundo destino es para la negación.
+- Con dos destinos: `→ (f, f̄)/(D_yes, D_no)` — el segundo destino es para la negación.
 
 #### Paso nulo
 
@@ -273,12 +273,12 @@ Los pasos se numeran con enteros. Los subpasos usan letra sufijo.
 **Ejemplo de uso de etiquetas del módulo PRINTER INTERFACE:**
 
 ```
-→ (~CSBUS₃, ~CSBUS₃, CSBUS₃)/(1, 1A, 3)
+→ (CSBUS₃, CSBUS̄₃, CSBUS̄₂)/(1, 1A, 3)
 ...
 1A. ready = 1;
-    → (~datavalid)/(1A)
+    → (datavalid)/(1A)
 2A. DR ← IOBUS; busy ← 1; accept = 1; first ← 1
-3A. CR ← (D₁₀:₁₇!) * (first, ~first)
+3A. CR ← (D₁₀:₁₇!) * (first, first̄)
 ```
 
 ---
@@ -356,23 +356,23 @@ OUTPUTS: CHAR[8]; print; feed
 INPUTS: wait; csrdy
 COMBUSES: IOBUS[18]; CSBUS[12]; ready; datavalid; accept
 
-1.  → (csrdy ∧ ~CSBUS₀ ∧ CSBUS₁ ∧ ~CSBUS₂)/(1)
+1.  → (csrdy ∧ CSBUS̄₀ ∧ CSBUS₁ ∧ CSBUS̄₂)/(1)
 2.  accept = 1;
-    → (~CSBUS₃, ~CSBUS₃, CSBUS₃)/(1, 1A, 3)
+    → (CSBUS̄₃, CSBUS̄₃, CSBUS₃)/(1, 1A, 3)
 
 3.  → (readȳ)/(3)
 4.  CSBUS₀ = busy; datavalid = 1;
-    → (~accept, accept)/(4, 1)
+    → (accept̄, accept)/(4, 1)
 
 1A. ready = 1;
-    → (~datavalid)/(1A)
+    → (datavalid̄)/(1A)
 2A. DR ← IOBUS; busy ← 1; accept = 1; first ← 1
-3A. CR ← (D₁₀:₁₇!) * (first, ~first)
+3A. CR ← (D₁₀:₁₇!) * (first, first̄)
 4A. feed = RETURN(CR); print = RETURN(CR);
 5A. Null
 6A. → (wait)/(6A)
-7A. first ← 0; busy * ~first ← 0
-    → (first, ~first)/(3A, 8A)
+7A. first ← 0; busy * first̄ ← 0
+    → (first, first̄)/(3A, 8A)
 8A. DEAD END
 
 END SEQUENCE

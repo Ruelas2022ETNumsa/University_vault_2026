@@ -24,12 +24,7 @@
         "Borrar",
         "shared",
         "README.md",
-        "ETN825-T01.md",
-        "Untitled.md",
-        "Untitled 1.md",
-        "Untitled 2.md",
-        "Untitled 4.md",
-        "Untitled 3.md"
+        "ETN825-T01.md"
       ]
     },
     "MOC": {
@@ -1435,11 +1430,11 @@
         "tsk_operator_reload_display.md",
         "tsk_movil_drive.md",
         "tsk_vault-infra.md",
-        "ship_library_ETN1015.md",
         "tsk_prompt_guides_1015.md",
         "latex-overleaf-estructura-profesional.md",
         "latex-matlab-limpieza-comentarios.md",
-        "tsk_toggle-readable-line-length.md"
+        "tsk_toggle-readable-line-length.md",
+        "ship_ETN825_AHPL_ejemplos.md"
       ]
     },
     "_hangar/dock/tsk_pdf_marginalia_pp.md": {
@@ -1497,6 +1492,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "ship_library_ETN1015.md",
         "tsk_library_ETN825.md",
         "logbook.md",
         "tsk_update-rclone.md",
@@ -2096,10 +2092,6 @@
       "isHidden": false
     },
     "_hangar/_legacy/tsk_fix-math-notebooklm.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_hangar/dock/ship_library_ETN1015.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -5603,7 +5595,12 @@
       "customOrder": [
         "ETN825_tikz.md",
         "ETN825_AHPLv1.md",
-        "ETN825_AHPL.md"
+        "ETN825_AHPL.md",
+        "ETN825_AHPL 1.md",
+        "ETN825_AHPL 2.md",
+        "ETN825_AHPL 3.md",
+        "ETN825_AHPL 4.md",
+        "ETN825_AHPL 5.md"
       ]
     },
     "Semesters/Sem_07": {
@@ -5633,7 +5630,10 @@
       "customOrder": [
         "ETN825-comp_indice_BCv1i.md",
         "ETN825-comp_indice_BCv1ii.md",
-        "ETN825-comp_indice_BCv2i.md"
+        "ETN825-comp_indice_BCv2i.md",
+        "ETN825-comp_indice_BCv1i 1.md",
+        "ETN825-comp_indice_BCv1i 2.md",
+        "ETN825-comp_indice_BCv1i 3.md"
       ]
     },
     "_app/notebooklm/prompts/ETN825/ETN825-comp_indice_BCv1i.md": {
@@ -5703,14 +5703,6 @@
         "Tanenbaum - Distributed Systems.pdf"
       ]
     },
-    "Untitled.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Untitled 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_app/notebooklm/prompts/ETN825/ETN825-comp_indice_BCv2i.md": {
       "isPinned": false,
       "isHidden": false
@@ -5720,10 +5712,6 @@
       "isHidden": false
     },
     "_app/notebooklm/guides/ETN825/ETN825_AHPL.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Untitled 2.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -5823,11 +5811,43 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Untitled 4.md": {
+    "_hangar/dock/ship_ETN825_AHPL_ejemplos.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "Untitled 3.md": {
+    "_app/notebooklm/prompts/ETN825/ETN825-comp_indice_BCv1i 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/guides/ETN825/ETN825_AHPL 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN825/ETN825-comp_indice_BCv1i 2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/guides/ETN825/ETN825_AHPL 2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/guides/ETN825/ETN825_AHPL 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN825/ETN825-comp_indice_BCv1i 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/guides/ETN825/ETN825_AHPL 4.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/guides/ETN825/ETN825_AHPL 5.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/_legacy/ship_library_ETN1015.md": {
       "isPinned": false,
       "isHidden": false
     }

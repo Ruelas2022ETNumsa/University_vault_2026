@@ -9383,6 +9383,7 @@ tyzk
 tJWs
 tBmY
 transferir
+transfiri
 ToDo
 Templater
 Text
@@ -19724,6 +19725,7 @@ TseD
 TWQE
 TKoA
 TaCi
+Transfiere
 Sistema
 Sync
 Save
@@ -30144,6 +30146,7 @@ SsWm
 Simult
 Simulaci
 SESI
+Subroutine
 Plugins
 Pendientes
 Plugin
@@ -48366,6 +48369,10 @@ decodificador
 decodifica
 desempaqueta
 desocupada
+devault
+direccionable
+desea
+direccionada
 Vault
 Verificar
 Variables
@@ -67656,6 +67663,8 @@ gWyd
 ggku
 gPUT
 gGCV
+gobernando
+guardando
 body
 beacon
 bat
@@ -75935,6 +75944,9 @@ btzS
 bigwedge
 bifurcando
 blicos
+banderas
+bifurcar
+bigvee
 scope
 status
 selector
@@ -86187,6 +86199,10 @@ sljv
 sRgG
 sPgW
 sMIcV
+secuenciador
+simplicidad
+secuencialmente
+saliente
 vault
 vil
 ver
@@ -106242,6 +106258,8 @@ alimentaci
 ataque
 aprende
 abstractas
+acuse
+alterando
 related
 recomendados
 ribbon
@@ -116172,6 +116190,9 @@ retenido
 realicemos
 redacta
 realizando
+renderizaron
+retornando
+rellenando
 notes
 notas
 nuevas
@@ -125481,6 +125502,7 @@ nFB
 ncronas
 ncronamente
 nicho
+negados
 created
 commit
 cada
@@ -136017,6 +136039,8 @@ computa
 cargando
 corpus
 colocados
+comunicar
+captada
 updated
 un
 universo
@@ -164779,6 +164803,7 @@ CiFg
 CONTROLADOR
 COMBUS
 Combinacional
+Complement
 Instalados
 Instalado
 Instalar
@@ -175069,6 +175094,7 @@ Iaem
 ItnU
 Incrementa
 Interno
+Individual
 Funci
 File
 Fase
@@ -184590,6 +184616,8 @@ FBr
 Ffvn
 Fihi
 FCIy
+Flag
+Fetch
 Estado
 Excalidraw
 EPUBs
@@ -204423,6 +204451,7 @@ OUvf
 OdWm
 Owjs
 OWvM
+Operativa
 Auto
 Annotator
 Autocompletado
@@ -213576,6 +213605,8 @@ AzaBI
 ASMNN
 AYcJO
 Acuse
+Almacena
+Accumulator
 push
 pull
 para
@@ -222926,6 +222957,10 @@ prNL
 preentrenamiento
 prohib
 predispone
+petici
+paralela
+pasando
+procediendo
 min
 mica
 movimiento
@@ -233623,6 +233658,7 @@ mPJw
 mDRP
 menciones
 modifiquemos
+modificada
 YAML
 Ya
 You
@@ -272923,6 +272959,7 @@ MxOQP
 Mqri
 MIzv
 Multiplexaci
+Modificaci
 Lectura
 LaTeX
 Linter
@@ -282123,6 +282160,8 @@ Lhet
 Lgib
 LLll
 LGynN
+Liberaci
+Load
 links
 las
 listar
@@ -290904,6 +290943,7 @@ ljad
 lxUW
 lpmw
 levantando
+levanta
 incluyendo
 im
 instalar
@@ -301863,6 +301903,9 @@ impresos
 imitaci
 imprimiendo
 intercalar
+incondicional
+instruccional
+incrementado
 Dependencia
 Dropbox
 Dataview
@@ -312071,6 +312114,10 @@ DusQ
 DCAv
 DDqx
 Diagn
+Declaraci
+Direccionamiento
+Decodificador
+Deposit
 Remotely
 Raz
 Revisa
@@ -322475,6 +322522,7 @@ Rxys
 RSuz
 ROTATOR
 Resetea
+Retiene
 Hider
 Hace
 Herramientas
@@ -389078,6 +389126,7 @@ oqvx
 oJrG
 ocsO
 octubre
+octal
 junto
 json
 jer

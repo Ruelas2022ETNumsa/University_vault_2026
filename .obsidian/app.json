@@ -6,7 +6,7 @@
   "tabSize": 4,
   "settingsPopoutWindow": false,
   "showInlineTitle": true,
-  "showLineNumber": false,
+  "showLineNumber": true,
   "defaultViewMode": "preview",
   "autoConvertHtml": false,
   "mobilePullAction": "",
