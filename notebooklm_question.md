@@ -42,7 +42,7 @@ cuál es la condición de retorno y cuál es la condición de salida.
 ## C — Bifurcación múltiple por bits
 
 ```
-Escribí una bifurcación AHPL que evalúa los bits IR[0] e IR[1]
+Escribí una bifurcación AHPL que evalúa los bits IR(0) e IR(1)
 y salta a tres destinos distintos según la combinación de bits.
 
 Mostrá el paso de bifurcación con formato → (condiciones)/(destinos)
@@ -124,10 +124,10 @@ Escribí el siguiente módulo AHPL exactamente como aparecería
 en un bloque de código estándar (texto plano con la notación del libro):
 
 MODULE: TEST
-MEMORY: AC[8]; flag
+MEMORY: AC(8); flag
 OUTPUTS: done
 INPUTS: go
-COMBUS: DBUS[8]
+COMBUS: DBUS(8)
 
 1. → (~go)/(1)
 2. AC ← DBUS; flag ← 1
@@ -159,5 +159,5 @@ Para cada respuesta capturada, anotar:
 - ¿Usó tabla con KaTeX inline para la lectura? (sí/no)
 - ¿Apareció `\begin{aligned}` o `$$`? (sí/no)
 - ¿Los operadores son correctos? (`←`, `=`, `~`, `∧`, `∨`, `!`, `*`)
-- ¿Las declaraciones tienen tamaño entre corchetes? (`DR[18]`, no `DR`)
+- ¿Las declaraciones tienen tamaño con paréntesis? (`DR(18)`, no `DR`)
 - Errores puntuales si los hay

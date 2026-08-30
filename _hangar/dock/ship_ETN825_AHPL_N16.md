@@ -62,6 +62,7 @@ La guía `ETN825_AHPL.md` tiene reglas de notación AHPL bien definidas (N1–N1
 | 5 | Gemini tiene acceso a las mismas fuentes del notebook | Comportamiento equivalente a NotebookLM — se puede usar indistintamente para tests |
 | 6 | `->` es equivalente a `→` en bloques de código | Sin impacto — NotebookLM entiende ambas formas sin error |
 | 7 | Notación `(N)` global resuelve el conflicto con NotebookLM | Output verificado: AC(8), DR(18), IOBUS(18) correctos en tabla y en código |
+| 8 | Snippet G: modelo usa indexación `DR[10:17]` (notación Python/Verilog) en bloque de código | Incorrecto — AHPL usa notación del libro; N16 debe tener par corregido con indexación correcta |
 
 ---
 

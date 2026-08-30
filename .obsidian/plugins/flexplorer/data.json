@@ -29,7 +29,10 @@
         "notebooklm_question.md",
         "h.md",
         "g.md",
-        "Untitled 1.md"
+        "Untitled.md",
+        "f.md",
+        "e.md",
+        "d.md"
       ]
     },
     "MOC": {
@@ -5610,7 +5613,8 @@
         "ETN825_AHPL 3.md",
         "ETN825_AHPL 4.md",
         "ETN825_AHPL 5.md",
-        "ETN825_AHPL 6.md"
+        "ETN825_AHPL 6.md",
+        "ETN825_AHPL 7.md"
       ]
     },
     "Semesters/Sem_07": {
@@ -5890,10 +5894,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Untitled 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_app/solve/notebooklm_solve.md": {
       "isPinned": false,
       "isHidden": false
@@ -5903,6 +5903,26 @@
       "isHidden": false
     },
     "respuestas de gemini+fuentes.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/guides/ETN825/ETN825_AHPL 7.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "f.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "e.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "d.md": {
       "isPinned": false,
       "isHidden": false
     }
