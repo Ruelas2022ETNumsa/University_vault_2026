@@ -10,9 +10,9 @@ blocked_by:
 ## Handoff
 
 **Última sesión:** 2026-08-29
-**Retomar desde:** Fase 3 — re-subir `ETN825_AHPL.md` a NotebookLM y re-probar snippets H y G con puntero
-**Completado esta sesión:** N16 escrita en la guía con edit_file (Par 1–Par 4 + tabla de tamaños); N16 duplicado eliminado; N11 paso 7 corregido `(3,1)` → `(3,8)`
-**Próximo paso:** re-subir guía a NotebookLM → re-probar H y G capturando con puntero (no botón)
+**Retomar desde:** OCR de PDFs faltantes → cargar como fuentes → verificar si mejora tamaños en tabla de declaraciones
+**Completado esta sesión:** tabla de notación de registros agregada al prompt (`section.md`); tabla de tamaños estándar del SIC agregada al prompt; OCR aplicado a `2-4-5-6.pdf` (ya cargado); prompt actualizado cargado en NotebookLM; la tabla de declaraciones ahora aparece primero (orden correcto) pero tamaños siguen vacíos en tabla
+**Próximo paso:** OCR a `7.pdf` y `9-10-11-13.pdf` → cargarlos en NotebookLM → re-probar
 **Preguntas de cierre:** —
 
 ---
@@ -121,7 +121,14 @@ N16 está lista. El único paso pendiente es escribirla en la guía y verificar 
 - [x] Escribir N16 en `ETN825_AHPL.md` con `edit_file`
 - [x] Eliminar N16 duplicado
 - [x] Corregir N11 paso 7: `(3,1)` → `(3,8)`
-- [ ] Re-subir guía a NotebookLM
+- [x] Re-subir guía a NotebookLM
+- [x] Agregar tabla de notación de registros al prompt
+- [x] Agregar tabla de tamaños estándar SIC al prompt
+- [x] OCR a `2-4-5-6.pdf` y cargar en NotebookLM
+- [ ] OCR a `7.pdf` → cargar en NotebookLM
+- [ ] OCR a `9-10-11-13.pdf` → cargar en NotebookLM
+- [ ] Verificar si tamaños en tabla de declaraciones se corrigen
+- [ ] Si no mejora → guía de ejemplos separada (ver pendientes)
 - [ ] Re-prueba final — snippets H y G con puntero
 - [ ] Cerrar ship (status: delivered)
 
@@ -129,8 +136,11 @@ N16 está lista. El único paso pendiente es escribirla en la guía y verificar 
 
 ## Preguntas abiertas
 
-- ¿Notación `()` para tamaños en declaraciones? — evaluar solo si N16 no resuelve el problema de tamaños
+- ¿Notación `()` para tamaños en declaraciones? — evaluar solo si OCR + guía de ejemplos no resuelven
 - ¿Agregar Par 5 con imagen de ejercicio real de la cátedra? — opcional, si el usuario trae material
+
+**Pendientes si OCR no resuelve el problema de tamaños en tabla:**
+- Guía de ejemplos separada en `E:\University_vault_2026\_app\notebooklm\guides\ETN825\` — ejemplos concretos de tabla de declaraciones con tamaños explícitos para que el modelo imite el patrón
 
 ---
 
