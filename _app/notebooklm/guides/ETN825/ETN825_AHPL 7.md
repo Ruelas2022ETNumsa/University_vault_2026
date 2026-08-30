@@ -79,12 +79,10 @@ END
 Reglas:
 
 - `MODULE:` — nombre del módulo en mayúsculas, descriptivo.
-- `MEMORY:` — registros que retienen valor entre ciclos de reloj (flip-flops). **Siempre con tamaño si son vectores — nunca omitir:** `DR[18]`, `CR[8]` (en bloques de código) · `DR(18)`, `CR(8)` (en tablas de declaraciones). ROMs y memorias usan dos dimensiones: `ROM[1024, 18]` (en código) · `ROM(1024, 18)` (en tablas). Escalares sin tamaño: `busy`, `first`.
-- `OUTPUTS:` — señales o registros que salen del módulo. Si son buses de datos incluir tamaño: `CHAR[8]` (en bloques de código) · `CHAR(8)` (en tablas). Señales booleanas sin tamaño: `print`, `feed`.
+- `MEMORY:` — registros que retienen valor entre ciclos de reloj (flip-flops). **Siempre con tamaño entre corchetes si son vectores — nunca omitir:** `DR[18]`, `CR[8]`. ROMs y memorias usan dos dimensiones: `ROM[1024, 18]` (1024 palabras de 18 bits). Escalares sin corchetes: `busy`, `first`.
+- `OUTPUTS:` — señales o registros que salen del módulo. Si son buses de datos incluir tamaño: `CHAR[8]`. Señales booleanas sin corchetes: `print`, `feed`.
 - `INPUTS:` — señales que entran al módulo desde otros módulos o dispositivos: `wait`, `csrdy`.
-- `COMBUS:` — buses combinacionales (sin reloj, conexión directa). **Siempre con tamaño si son vectores:** `IOBUS[18]`, `CSBUS[12]` (en bloques de código) · `IOBUS(18)`, `CSBUS(12)` (en tablas). Señales booleanas sin tamaño: `ready`, `datavalid`, `accept`.
-
-> **Regla de notación de tamaños:** `[N]` se usa **solo dentro de bloques de código AHPL** (ej: `DR[18]` en `MEMORY:`). `(N)` se usa **solo en tablas de declaraciones y prosa** fuera del código (ej: `DR(18)` en columna Tamaño). No mezclar.
+- `COMBUS:` — buses combinacionales (sin reloj, conexión directa). **Siempre con tamaño si son vectores:** `IOBUS[18]`, `CSBUS[12]`. Señales booleanas sin corchetes: `ready`, `datavalid`, `accept`.
 
 ❌ Incorrecto — falta tamaño en registro:
 ```AHPL
@@ -104,16 +102,16 @@ MEMORY: DR[18]; CR[8]; busy; first
 
 | Notación | Significado | Ejemplo |
 |---|---|---|
-| `REG[N]` (en código) · `REG(N)` (en tablas) | Registro de N bits | `DR[18]`, `CR[8]`, `IR[18]`, `AC[18]` (código) · `DR(18)`, `CR(8)` (tablas) |
-| `REG[N, M]` (en código) · `REG(N, M)` (en tablas) | Memoria de N palabras de M bits | `ROM[1024, 18]` (código) · `ROM(1024, 18)` (tablas) |
-| `REG` (sin tamaño) | Flip-flop de 1 bit (escalar) | `busy`, `first`, `ready` |
+| `REG[N]` | Registro de N bits | `DR[18]`, `CR[8]`, `IR[18]`, `AC[18]` |
+| `REG[N, M]` | Memoria de N palabras de M bits | `ROM[1024, 18]`, `RAM[256, 8]` |
+| `REG` (sin corchetes) | Flip-flop de 1 bit (escalar) | `busy`, `first`, `ready` |
 | Separador `;` | Separa elementos en la misma sección | `DR[18]; CR[8]; busy; first` |
 
 #### Buses (COMBUS)
 
 | Notación | Significado | Ejemplo |
 |---|---|---|
-| `BUS[N]` (en código) · `BUS(N)` (en tablas) | Bus de N bits, conexión combinacional | `IOBUS[18]`, `CSBUS[12]` (código) · `IOBUS(18)`, `CSBUS(12)` (tablas) |
+| `BUS[N]` | Bus de N bits, conexión combinacional | `IOBUS[18]`, `CSBUS[12]` |
 | Señal booleana en COMBUS | Bus de 1 bit (señal de handshake) | `ready`, `datavalid`, `accept` |
 
 > **Diferencia clave:** `MEMORY` usa reloj — las transferencias \( \leftarrow \) solo se efectúan al borde de reloj. `COMBUS` es combinacional — las conexiones \( = \) son inmediatas y no retienen valor.
@@ -136,12 +134,12 @@ INPUTS:  datavalid; wait
 COMBUS: IOBUS[18]
 ```
 
-- `CHAR(8)` — los 8 bits del carácter enviado a la impresora (salida)
+- `CHAR[8]` — los 8 bits del carácter enviado a la impresora (salida)
 - `ready`, `accept` — señales de handshake hacia el bus (salida)
 - `print`, `feed` — comandos booleanos a la impresora (salida)
 - `datavalid` — indica que hay dato válido en el bus (entrada)
 - `wait` — señal de espera de la impresora (entrada)
-- `IOBUS(18)` — bus de datos compartido del sistema
+- `IOBUS[18]` — bus de datos compartido del sistema
 
 ---
 
@@ -338,7 +336,7 @@ Interpretación:
 Antes de escribir o completar un módulo, verificar:
 
 - [ ] ¿El módulo tiene `MODULE:`, `MEMORY:`, `OUTPUTS:`, `INPUTS:`, `COMBUS:`?
-- [ ] ¿Los registros vectoriales tienen tamaño? En código: `DR[18]` (con corchetes). En tablas: `DR(18)` (con paréntesis). Nunca omitir.
+- [ ] ¿Los registros vectoriales tienen tamaño entre corchetes? (`DR[18]`, no `DR`)
 - [ ] ¿Las transferencias usan `←` y las conexiones de bus usan `=`?
 - [ ] ¿Las operaciones simultáneas están en el **mismo paso** separadas por `;`?
 - [ ] ¿Ningún registro destino aparece dos veces en el mismo paso?
@@ -565,7 +563,7 @@ END
 | Paso | Operación | Condición | Estado resultante |
 |---|---|---|---|
 | `1.` | \( \rightarrow (\overline{go})/(1) \) | \( \overline{go} \) | Bucle de espera. Retorna mientras \( go = 0 \); sale al paso 2 cuando \( go = 1 \). |
-| `2.` | \( AC \leftarrow DBUS \) ; \( flag \leftarrow 1 \) | — | Transferencia síncrona. \( AC(8) \) se carga desde \( DBUS(8) \). \( flag \) se pone en 1. Ambas simultáneas al flanco de reloj. |
+| `2.` | \( AC \leftarrow DBUS \) ; \( flag \leftarrow 1 \) | — | Transferencia síncrona. \( AC[8] \) se carga desde \( DBUS[8] \). \( flag \) se pone en 1. Ambas simultáneas al flanco de reloj. |
 | `3.` | \( done = 1 \) | — | Conexión combinacional. La salida \( done \) se activa sin reloj durante este paso. |
 | `4.` | \( DEAD\ END \) | — | Fin de secuencia. El módulo se detiene. |
 
@@ -616,14 +614,14 @@ END
 | Paso | Operación | Condición | Estado resultante |
 |---|---|---|---|
 | `1.` | \( ready = 1 \) | \( \rightarrow (\overline{datavalid})/(1) \) | Espera activa. \( ready = 1 \) indica disponibilidad. Bucle mientras \( datavalid = 0 \); sale cuando \( datavalid = 1 \). |
-| `2.` | \( DR \leftarrow IOBUS \) ; \( accept = 1 \) ; \( first \leftarrow 1 \) | — | Captura simultánea al flanco de reloj. \( DR(18) \) toma el valor de \( IOBUS(18) \). \( accept = 1 \) por un ciclo. \( first \) se inicializa en 1. |
+| `2.` | \( DR \leftarrow IOBUS \) ; \( accept = 1 \) ; \( first \leftarrow 1 \) | — | Captura simultánea al flanco de reloj. \( DR[18] \) toma el valor de \( IOBUS[18] \). \( accept = 1 \) por un ciclo. \( first \) se inicializa en 1. |
 | `3.` | \( CR \leftarrow (DR_{10:17} \land first) \lor (DR_{1:8} \land \overline{first}) \) | — | Desempaquetado. Si \( first = 1 \): \( CR \leftarrow DR_{10:17} \). Si \( first = 0 \): \( CR \leftarrow DR_{1:8} \). |
 | `4.` | \( feed = RETURN(CR) \) ; \( print = RETURN(CR) \) | — | Evaluación combinacional. \( RETURN(CR) \) detecta si \( CR \) es retorno de carro — activa \( feed \) o \( print \) según corresponda. |
 | `5.` | \( Null \) | — | Paso nulo. Sincronización — da tiempo a la impresora para levantar \( wait \). |
 | `6.` | — | \( \rightarrow (wait)/(6) \) | Polling. Espera mientras \( wait = 1 \); sale cuando \( wait = 0 \). |
 | `7.` | \( first \leftarrow 0 \) | \( \rightarrow (first, \overline{first})/(3, 8) \) | Control de flujo. \( first \) se borra. Si \( first \) era 1 → paso 3 (segundo carácter). Si era 0 → paso 8 (fin). |
 | `8.` | \( DEAD\ END \) | — | Fin de secuencia. Módulo detenido. |
-| `CHAR = CR` | \( CHAR = CR \) | — | Salida combinacional permanente. \( CHAR(8) \) refleja \( CR(8) \) en todo momento, fuera de la secuencia. |
+| `CHAR = CR` | \( CHAR = CR \) | — | Salida combinacional permanente. \( CHAR[8] \) refleja \( CR[8] \) en todo momento, fuera de la secuencia. |
 
 ---
 

@@ -25,7 +25,7 @@
         "shared",
         "README.md",
         "ETN825-T01.md",
-        "Untitled.md",
+        "respuestas de gemini+fuentes.md",
         "notebooklm_question.md",
         "h.md",
         "g.md",
@@ -5866,10 +5866,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Untitled.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_hangar/dock/ship_ETN825_AHPL_ejemplos 1.md": {
       "isPinned": false,
       "isHidden": false
@@ -5903,6 +5899,10 @@
       "isHidden": false
     },
     "Rubbish/promtpx.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "respuestas de gemini+fuentes.md": {
       "isPinned": false,
       "isHidden": false
     }
