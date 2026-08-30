@@ -1,70 +1,46 @@
-## Código AHPL de un Módulo Simple
+| Identificador | Sección | Tamaño | Rol |
+|---|---|---|---|
+| `DR` | MEMORY | `(18)` | Registro de datos que carga la palabra de 18 bits desde el bus `IOBUS` |
+| `CR` | MEMORY | `(8)` | Registro de caracteres que almacena el byte actual en proceso de impresión |
+| `first` | MEMORY | escalar (JK) | Flip-flop de control que indica si se está procesando el primer (1) o el segundo (0) carácter |
+| `CHAR` | OUTPUTS | `(8)` | Vector de salida que entrega el carácter ASCII directamente a la impresora |
+| `ready` | OUTPUTS | escalar | Señal de salida que indica al computador que la interfaz está lista para recibir datos |
+| `accept` | OUTPUTS | escalar | Señal de salida que indica al computador que el dato fue capturado en `DR` |
+| `print` | OUTPUTS | escalar | Comando síncrono que ordena a la impresora imprimir el carácter en `CHAR` |
+| `feed` | OUTPUTS | escalar | Comando síncrono que ordena a la impresora realizar un avance de línea |
+| `datavalid` | INPUTS | escalar | Señal de entrada que indica que el computador ha colocado un dato válido en el bus |
+| `wait` | INPUTS | escalar | Señal de entrada que indica que la impresora está ocupada procesando una operación |
+| `IOBUS` | COMBUS | `(18)` | Bus de comunicaciones del sistema digital, fuente de datos para `DR` |
 
-1. **Definición formal** — Un módulo en AHPL es una descripción estructural de hardware que se compone de una sección de declaraciones (donde se especifican de forma precisa los registros, buses y líneas de entrada/salida) y una secuencia de control constituida por transferencias sincronizadas por reloj y conexiones lógicas combinacionales en ciclos de tiempo individuales.
+```ahpl
+MODULE: PRINTER INTERFACE
+  MEMORY: DR(18); CR(8); first(JK)
+  OUTPUTS: CHAR(8); ready; accept; print; feed
+  INPUTS: datavalid; wait
+  COMBUS: IOBUS(18)
 
-2. **Idea clave** — La descripción procedimental de un módulo requiere que el diseñador posea un esquema mental claro del hardware antes de escribir la secuencia, puesto que cada asignación o conexión especifica directamente conexiones físicas reales de circuitos y registros.
-
-3. **Figura o diagrama**
-
-```tikz
-\usetikzlibrary{shapes.geometric, arrows.meta}
-\begin{document}
-\tikzset{
-    block/.style={draw, rectangle, minimum width=3cm, minimum height=1.5cm, text centered, draw=teal, fill=teal!10, line width=1pt},
-    line/.style={draw, -Latex, line width=1pt, draw=gray}
-}
-\begin{tikzpicture}[node distance = 2cm, auto]
-    % Módulo
-    \node [block] (module) {RECEPTOR\_SIMPLE};
-    
-    % Entradas
-    \path [line] (-3.5, 0.4) -- node[above, near start] {start} (module.west |- 0, 0.4);
-    \draw [line, double, double distance=2pt] (-3.5, -0.4) -- node[above, near start] {DATOS\_IN(8)} (module.west |- 0, -0.4);
-    
-    % Salidas
-    \path [line] (module.east |- 0, 0.4) -- node[above, near end] {ready} (3.5, 0.4);
-    \draw [line, double, double distance=2pt] (module.east |- 0, -0.4) -- node[above, near end] {AC(8)} (3.5, -0.4);
-\end{tikzpicture}
-\end{document}
-```
-*Fig. 1-1 · Diagrama de caja negra del módulo receptor simple.*
-
-4. **Desarrollo del módulo**
-
-##### Declaraciones
-
-| Identificador | Sección | Tamaño    | Rol                                                             |
-| ------------- | ------- | --------- | --------------------------------------------------------------- |
-| `AC`          | MEMORY  | `(8)`     | Registro acumulador para almacenar el dato entrante             |
-| `busy`        | MEMORY  | `escalar` | Registro de 1 bit que indica si el módulo está procesando datos |
-| `DATOS_IN`    | INPUTS  | `(8)`     | Líneas de entrada de datos de 8 bits                            |
-| `start`       | INPUTS  | `escalar` | Señal de inicio de recepción                                    |
-| `AC`          | OUTPUTS | `(8)`     | Salida paralela del registro acumulador                         |
-| `ready`       | OUTPUTS | `escalar` | Señal de salida que indica que el dato ha sido almacenado       |
-| `DBUS`        | COMBUS  | `(8)`     | Bus de datos de interconexión interna                           |
-
-##### Bloque de código
-
-```
-MODULE: RECEPTOR_SIMPLE
-MEMORY: AC(8); busy
-INPUTS: DATOS_IN(8); start
-OUTPUTS: AC(8); ready
-COMBUS: DBUS(8)
-
-1. DBUS = DATOS_IN; ready = 0; busy = 0
-   -> (~start)/(1)
-2. DBUS = DATOS_IN; busy = 1; AC <- DBUS
-3. ready = 1; busy = 0
-   -> (1)
+1. ready = 1
+   -> (~datavalid)/(1)
+2. DR <- IOBUS; accept = 1; first <- 1
+3. CR <- (DR(10:17) /\ first) \/ (DR(1:8) /\ ~first)
+4. feed = RETURN(CR); print = ~RETURN(CR)
+5. Null
+6. -> (wait)/(6)
+7. first <- 0
+   -> (first, ~first)/(3, 1)
 END SEQUENCE
+  CHAR = CR
 END
 ```
 
-##### Tabla de pasos
+| Paso | Operación | Condición | Estado resultante / Explicación |
+|---|---|---|---|
+| `1.` | \( ready = 1 \) | \( \rightarrow (\overline{datavalid})/(1) \) | **Espera activa de datos**. La interfaz establece su señal \( ready = 1 \) para indicar disponibilidad. Permanece en bucle en el paso 1 mientras la CPU mantenga \( datavalid = 0 \) (\( \overline{datavalid} \)); cuando se detecta un \( 1 \) lógico en dicha línea, el control avanza al paso 2. |
+| `2.` | \( DR \leftarrow IOBUS \) ; \( accept = 1 \) ; \( first \leftarrow 1 \) | — | **Captura y reconocimiento**. Al flanco de reloj positivo, el registro \( DR \) carga los 18 bits presentes en \( IOBUS \), se activa la salida combinacional \( accept = 1 \) durante un ciclo de reloj para notificar la recepción y se inicializa el flip-flop \( first \) en \( 1 \). |
+| `3.` | \( CR \leftarrow (DR_{10:17} \land first) \lor (DR_{1:8} \land \overline{first}) \) | — | **Desempaquetado de caracteres**. Si \( first = 1 \), el registro de caracteres \( CR \) toma la porción alta de la palabra (\( DR_{10:17} \)). Si \( first = 0 \), toma el byte inferior (\( DR_{1:8} \)). |
+| `4.` | \( feed = RETURN(CR) \) ; \( print = \overline{RETURN(CR)} \) | — | **Decodificación y comando combinacional**. La unidad combinacional \( RETURN(CR) \) evalúa el byte en \( CR \). Si es un retorno de carro, activa el avance \( feed = 1 \) y desactiva la impresión (\( print = 0 \)); si es un carácter ordinario, activa la impresión \( print = 1 \) y desactiva el avance. |
+| `5.` | \( Null \) | — | **Paso nulo de sincronización**. No altera registros durante este ciclo de reloj, otorgándole el tiempo necesario a la impresora para reaccionar al comando físico y levantar la señal de ocupado \( wait \). |
+| `6.` | — | \( \rightarrow (wait)/(6) \) | **Espera por procesamiento periférico**. El control de la secuencia se bloquea en un bucle cerrado en el paso 6 mientras la impresora mantenga la línea \( wait = 1 \). Sale al paso 7 una vez completada la impresión o el avance (\( wait = 0 \)). |
+| `7.` | \( first \leftarrow 0 \) | \( \rightarrow (first, \overline{first})/(3, 1) \) | **Control del bucle interno**. El flip-flop \( first \) se limpia en el borde de reloj. Al bifurcar, se evalúa su estado inmediatamente previo: si era \( 1 \), retorna al paso 3 para transferir el segundo carácter de \( DR \); si era \( 0 \), retorna al paso 1 para esperar una nueva palabra de datos. |
 
-| Paso | Operación                                                                | Condición                  | Estado resultante                                                                               |
-| ---- | ------------------------------------------------------------------------ | -------------------------- | ----------------------------------------------------------------------------------------------- |
-| `1.` | \( DBUS = DATOS\_IN \) <br> \( ready = 0 \) <br> \( busy = 0 \)          | \( \overline{start} = 1 \) | El módulo permanece en estado de reposo esperando la señal \( start = 1 \).                     |
-| `2.` | \( DBUS = DATOS\_IN \) <br> \( busy = 1 \) <br> \( AC \leftarrow DBUS \) | —                          | El dato en el bus se transfiere al acumulador \( AC \) en el flanco de reloj.                   |
-| `3.` | \( ready = 1 \) <br> \( busy = 0 \)                                      | —                          | Se activa la bandera \( ready \) y se retorna incondicionalmente al paso 1 para un nuevo ciclo. |
+🤖 ¿Te gustaría que analicemos cómo se modificaría esta secuencia de control si utilizáramos el protocolo de handshake asíncrono completamente respondiente descrito en el Example 9.4 del mismo libro?

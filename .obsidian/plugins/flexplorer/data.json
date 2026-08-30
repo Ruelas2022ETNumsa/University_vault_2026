@@ -32,7 +32,10 @@
         "Untitled.md",
         "f.md",
         "e.md",
-        "d.md"
+        "d.md",
+        "a.md",
+        "b.md",
+        "c.md"
       ]
     },
     "MOC": {
@@ -5923,6 +5926,18 @@
       "isHidden": false
     },
     "d.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "a.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "b.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "c.md": {
       "isPinned": false,
       "isHidden": false
     }

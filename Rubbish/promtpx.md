@@ -4,9 +4,9 @@ La notación KaTeX — \( \leftarrow \), \( \rightarrow \), \( \overline{X} \), 
 NUNCA usar $$ ni $ como delimitadores.
 NUNCA usar \begin{...}...\end{...} para bloques AHPL.
 NUNCA KaTeX display \[ \] para módulos o secuencias AHPL — solo bloques de código.
-
+Rangos de bits en texto plano: DR(10:17) — no DR[10:17] ni DR₁₀:₁₇. El : dentro del paréntesis indica rango; (N) sin : indica tamaño.
 MEMORY/OUTPUTS/COMBUS: vectores SIEMPRE con tamaño. DR(18) no DR. CHAR(8) no CHAR.
-
+NUNCA usar & como AND ni | como OR en bloques de código AHPL — usar /\ para AND y \/ para OR.
 #### Registros (MEMORY)
 | Notación | Significado | Ejemplo |
 |-|-|-|

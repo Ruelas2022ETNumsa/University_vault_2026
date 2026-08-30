@@ -63,6 +63,9 @@ La guía `ETN825_AHPL.md` tiene reglas de notación AHPL bien definidas (N1–N1
 | 6 | `->` es equivalente a `→` en bloques de código | Sin impacto — NotebookLM entiende ambas formas sin error |
 | 7 | Notación `(N)` global resuelve el conflicto con NotebookLM | Output verificado: AC(8), DR(18), IOBUS(18) correctos en tabla y en código |
 | 8 | Snippet G: modelo usa indexación `DR[10:17]` (notación Python/Verilog) en bloque de código | Incorrecto — AHPL usa notación del libro; N16 debe tener par corregido con indexación correcta |
+| 9 | Snippets A y B: modelo agrega `SEQUENCE` / `SEQUENCE:` al inicio del bloque — no es canónico del libro | Menor — el libro no usa esa palabra al inicio; los pasos van directo después de las declaraciones |
+| 10 | Snippet B: modelo genera bloque `tikz` para diagrama de flujo | Ruido — no renderiza en NotebookLM; ignorar al redactar N16 |
+| 11 | Snippet C: bloque de código usa `&` como AND y `~IR` sin índice | Incorrecto — AHPL usa `∧`; índices deben ser `IR(0)`, `IR(1)` con notación `(N)` |
 
 ---
 
@@ -77,6 +80,7 @@ La guía `ETN825_AHPL.md` tiene reglas de notación AHPL bien definidas (N1–N1
 | 2026-08-29 | Notación `(N)` global — en bloques de código, tablas y prosa | NotebookLM stripea `[]` — `(N)` evita el conflicto en todos los contextos |
 | 2026-08-29 | `->` y `→` son equivalentes — ambos aceptados | NotebookLM entiende ambas formas sin error — no corregir |
 | 2026-08-29 | Siguiente mejora: Par 5 en N16 con ejercicio real de la cátedra | Refuerza imitación con material concreto del curso |
+| 2026-08-30 | Notación de rango en texto plano: `DR(10:17)` — no `DR[10:17]` ni `DR_(10:17)` | `[]` stripea NotebookLM; `_(N)` es LaTeX a medias y ambiguo; `(N:M)` es consistente con `(N)` global y el `:` distingue rango de tamaño |
 
 > [!note]- Descartadas
 > - Generar N16 sin verificar contra NotebookLM — descartado; los pares deben reflejar outputs reales corregidos

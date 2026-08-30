@@ -1,6 +1,6 @@
 ---
 title: AHPL — Guía unificada para ETN825 (LaTeX NotebookLM)
-galaxy_body: 99beacon
+galaxy_body: 10beacon
 scope: trivault
 tool: ahpl-notation
 audience:
@@ -506,7 +506,9 @@ END
 > **Diferencia con transferencia en paso:** `CR ← valor` ocurre una vez al borde de reloj. `CHAR = CR` es continuo — si CR cambia, CHAR cambia en el mismo instante.
 >
 > **Nota:** las expresiones fuera de secuencia pueden usar `←` (con reloj) o `=` (combinacional) según el tipo de operación. El ejemplo `ss * (start ∨ stop) ← (1!0) * (start, stop)` usa `←` porque `ss` es un registro (MEMORY).
+
 ---
+
 ### N16. PARES PREGUNTA→RESPUESTA — FORMATO DE IMITACIÓN
 
 > Contexto para NotebookLM: estos pares muestran exactamente cómo debe verse una respuesta correcta. Para cada pregunta: tabla de declaraciones, luego bloque de código con declaraciones completas (tamaños incluidos), luego tabla de lectura con KaTeX inline. Imitar este formato en todas las respuestas que involucren módulos o secuencias AHPL.
@@ -554,8 +556,8 @@ OUTPUTS: done
 INPUTS: go
 COMBUS: DBUS(8)
 
-1. → (~go)/(1)
-2. AC ← DBUS; flag ← 1
+1. -> (~go)/(1)
+2. AC <- DBUS; flag <- 1
 3. done = 1
 4. DEAD END
 END SEQUENCE
@@ -599,14 +601,14 @@ INPUTS: datavalid; wait
 COMBUS: IOBUS(18)
 
 1. ready = 1
-   → (~datavalid)/(1)
-2. DR ← IOBUS; accept = 1; first ← 1
-3. CR ← (DR₁₀:₁₇ ∧ first) ∨ (DR₁:₈ ∧ ~first)
-4. feed = RETURN(CR); print = RETURN(CR)
+   -> (~datavalid)/(1)
+2. DR <- IOBUS; accept = 1; first <- 1
+3. CR <- (DR(10:17) /\ first) \/ (DR(1:8) /\ ~first)
+4. feed = RETURN(CR); print = ~RETURN(CR)
 5. Null
-6. → (wait)/(6)
-7. first ← 0
-   → (first, ~first)/(3, 8)
+6. -> (wait)/(6)
+7. first <- 0
+   -> (first, ~first)/(3, 8)
 8. DEAD END
 END SEQUENCE
 CHAR = CR
@@ -618,7 +620,7 @@ END
 | `1.` | \( ready = 1 \) | \( \rightarrow (\overline{datavalid})/(1) \) | Espera activa. \( ready = 1 \) indica disponibilidad. Bucle mientras \( datavalid = 0 \); sale cuando \( datavalid = 1 \). |
 | `2.` | \( DR \leftarrow IOBUS \) ; \( accept = 1 \) ; \( first \leftarrow 1 \) | — | Captura simultánea al flanco de reloj. \( DR(18) \) toma el valor de \( IOBUS(18) \). \( accept = 1 \) por un ciclo. \( first \) se inicializa en 1. |
 | `3.` | \( CR \leftarrow (DR_{10:17} \land first) \lor (DR_{1:8} \land \overline{first}) \) | — | Desempaquetado. Si \( first = 1 \): \( CR \leftarrow DR_{10:17} \). Si \( first = 0 \): \( CR \leftarrow DR_{1:8} \). |
-| `4.` | \( feed = RETURN(CR) \) ; \( print = RETURN(CR) \) | — | Evaluación combinacional. \( RETURN(CR) \) detecta si \( CR \) es retorno de carro — activa \( feed \) o \( print \) según corresponda. |
+| `4.` | \( feed = RETURN(CR) \) ; \( print = \overline{RETURN(CR)} \) | — | Evaluación combinacional. \( RETURN(CR) \) detecta si \( CR \) es retorno de carro — activa \( feed \) o \( print \) según corresponda. |
 | `5.` | \( Null \) | — | Paso nulo. Sincronización — da tiempo a la impresora para levantar \( wait \). |
 | `6.` | — | \( \rightarrow (wait)/(6) \) | Polling. Espera mientras \( wait = 1 \); sale cuando \( wait = 0 \). |
 | `7.` | \( first \leftarrow 0 \) | \( \rightarrow (first, \overline{first})/(3, 8) \) | Control de flujo. \( first \) se borra. Si \( first \) era 1 → paso 3 (segundo carácter). Si era 0 → paso 8 (fin). |
@@ -635,14 +637,14 @@ END
 
 ```
 % Caso A — espera mientras señal = 0 (sale cuando señal = 1):
-N. → (~señal)/(N)
+N. -> (~señal)/(N)
 
 % Caso B — espera mientras señal = 1 (sale cuando señal = 0):
-N. → (señal)/(N)
+N. -> (señal)/(N)
 
 % Ejemplos reales del módulo PRINTER INTERFACE:
-1. → (~datavalid)/(1)    % Caso A — sale cuando datavalid = 1
-2. → (wait)/(6)          % Caso B — sale cuando wait = 0
+1. -> (~datavalid)/(1)    % Caso A — sale cuando datavalid = 1
+2. -> (wait)/(6)          % Caso B — sale cuando wait = 0
 ```
 
 | Variante | Condición de retorno | Sale cuando | Paso en PRINTER INTERFACE |
@@ -660,10 +662,10 @@ N. → (señal)/(N)
 
 ```
 % Ejemplo 1 — condición en lado izquierdo (dos transferencias simultáneas):
-2. A * ~a ← B ; D * a ← C
+2. A * ~a <- B ; D * a <- C
 
 % Ejemplo 2 — selección de origen con row concatenate (!):
-D ← (A ! B ! C) * (f, g, h)
+D <- (A ! B ! C) * (f, g, h)
 ```
 
 | Ejemplo | Operación | Interpretación |

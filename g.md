@@ -1,44 +1,49 @@
+## Módulo PRINTER INTERFACE (Example 9.3)
+
 | Identificador | Sección | Tamaño | Rol |
-|---|---|---|---|
-| `DR` | MEMORY | `(18)` | Registro de datos de la interfaz — captura la palabra completa de 18 bits desde el `IOBUS` |
-| `CR` | MEMORY | `(8)` | Registro de carácter — almacena temporalmente el carácter de 8 bits extraído de `DR` para ser impreso |
-| `first` | MEMORY | `escalar` | Flip-flop de control (tipo JK) — indica si se procesa el primer byte (`1`) o el segundo byte (`0`) de la palabra |
-| `CHAR` | OUTPUTS | `(8)` | Vector de salida — líneas de datos que transmiten el carácter de 8 bits (`CR`) hacia la impresora |
-| `ready` | OUTPUTS | `escalar` | Señal de disponibilidad — se activa en el paso 1 indicando que la interfaz está lista para recibir una nueva palabra |
-| `accept` | OUTPUTS | `escalar` | Señal de aceptación — pulso de sincronización enviado a la CPU en el paso 2 al recibir los datos |
-| `print` | OUTPUTS | `escalar` | Comando de impresión — pulso que ordena imprimir el carácter en `CHAR` si este no es un retorno de carro |
-| `feed` | OUTPUTS | `escalar` | Comando de avance — pulso que ordena el avance de línea y retorno si el carácter en `CHAR` es un retorno de carro |
-| `datavalid` | INPUTS | `escalar` | Señal de datos válidos — entrada desde la CPU que indica que el dato en el bus es estable |
-| `wait` | INPUTS | `escalar` | Señal de espera de la impresora — entrada que se pone en `1` mientras la impresora realiza el ciclo de impresión física |
-| `IOBUS` | COMBUS | `(18)` | Bus de datos de entrada compartido — de donde la interfaz captura la palabra de datos de 18 bits |
+| :--- | :--- | :--- | :--- |
+| `DR` | MEMORY | `(18)` | Registro de datos — captura el valor de `IOBUS(18)` en el paso 2. |
+| `CR` | MEMORY | `(8)` | Registro de carácter — acumula el byte extraído de `DR`. |
+| `first` | MEMORY | escalar | Flip-flop de control (tipo JK) — indica primera (1) o segunda (0) pasada. |
+| `CHAR` | OUTPUTS | `(8)` | Salida de carácter a la impresora — refleja `CR` en todo momento. |
+| `ready` | OUTPUTS | escalar | Señal de disponibilidad — activa en paso 1 mientras espera dato. |
+| `accept` | OUTPUTS | escalar | Señal de aceptación — pulso de 1 ciclo en paso 2. |
+| `print` | OUTPUTS | escalar | Comando de impresión — activo si `CR` no es retorno de carro. |
+| `feed` | OUTPUTS | escalar | Comando de avance — activo si `CR` es retorno de carro. |
+| `datavalid` | INPUTS | escalar | Indica dato válido en `IOBUS` — habilita salida del bucle en paso 1. |
+| `wait` | INPUTS | escalar | Señal de espera de la impresora — mantiene el bucle en paso 6. |
+| `IOBUS` | COMBUS | `(18)` | Bus de datos del sistema — fuente del dato capturado en `DR`. |
 
 ```ahpl
 MODULE: PRINTER INTERFACE
-  MEMORY: DR(18); CR(8); first(JK)
-  OUTPUTS: CHAR(8); ready; accept; print; feed
-  INPUTS: datavalid; wait
-  COMBUS: IOBUS(18)
-  1. ready = 1
-     -> (~datavalid)/(1)
-  2. DR <- IOBUS; accept = 1; first <- 1
-  3. CR <- (DR[10:17] & first) v (DR[1:8] & ~first)
-  4. feed = RETURN(CR); print = ~RETURN(CR)
-  5. Null
-  6. -> (wait)/(6)
-  7. first <- 0
-     -> (first, ~first)/(3, 1)
+MEMORY: DR(18); CR(8); first
+OUTPUTS: CHAR(8); ready; accept; print; feed
+INPUTS: datavalid; wait
+COMBUS: IOBUS(18)
+
+1. ready = 1
+   → (~datavalid)/(1)
+2. DR ← IOBUS; accept = 1; first ← 1
+3. CR ← (DR(10:17) & first) | (DR(1:8) & ~first)
+4. feed = RETURN(CR); print = ~RETURN(CR)
+5. Null
+6. → (wait)/(6)
+7. first ← 0
+   → (first, ~first)/(3, 1)
+8. DEAD END
 END SEQUENCE
-  CHAR = CR
+CHAR = CR
 END
 ```
 
-| Paso        | Operación                                                                                               | Condición                                          | Estado resultante                                                                                                                                                   |
-| ----------- | ------------------------------------------------------------------------------------------------------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `1.`        | \( ready = 1 \)                                                                                         | \( \rightarrow (\overline{datavalid})/(1) \)       | Espera activa. \( ready = 1 \) indica disponibilidad. Bucle de espera mientras \( datavalid = 0 \); sale al paso 2 cuando \( datavalid = 1 \).                      |
-| `2.`        | \( DR \leftarrow IOBUS \); \( accept = 1 \); \( first \leftarrow 1 \)                                   | —                                                  | Captura simultánea de la palabra en \( DR(18) \) al flanco de reloj. La línea \( accept \) se activa por un ciclo y el control \( first \) se inicializa en 1.      |
-| `3.`        | \( CR \leftarrow (DR_{10:17} \land first) \lor (DR_{1:8} \land \overline{first}) \pmb{\text{ [sic]}} \) | —                                                  | Desempaquetado del carácter. Si \( first = 1 \) se extrae el byte alto de \( DR \); si \( first = 0 \) se extrae el byte bajo hacia \( CR(8) \).                    |
-| `4.`        | \( feed = RETURN(CR) \); \( print = \overline{RETURN(CR)} \)                                            | —                                                  | Evaluación combinacional. La lógica de \( RETURN(CR) \) detecta si es retorno de carro para direccionar el pulso a \( feed \) o a \( print \).                      |
-| `5.`        | \( Null \)                                                                                              | —                                                  | Paso nulo de sincronización. Otorga un ciclo de reloj extra para que la impresora reaccione y levante la línea de espera \( wait \).                                |
-| `6.`        | —                                                                                                       | \( \rightarrow (wait)/(6) \)                       | Polling (espera activa). El control de la interfaz permanece en el paso 6 mientras la línea \( wait = 1 \).                                                         |
-| `7.`        | \( first \leftarrow 0 \)                                                                                | \( \rightarrow (first, \overline{first})/(3, 1) \) | Control de flujo. Se borra \( first \). Si su estado previo era 1, bifurca al paso 3 para el segundo byte; si era 0, retorna al paso 1 a esperar una nueva palabra. |
-| `CHAR = CR` | \( CHAR = CR \)                                                                                         | —                                                  | Salida combinacional permanente fuera de la secuencia. La salida \( CHAR(8) \) refleja continuamente el estado de \( CR(8) \).                                      |
+| Paso        | Operación                                                                           | Condición                                          | Estado resultante / Explicación                                                                                                                                                                                                                                      |
+| :---------- | :---------------------------------------------------------------------------------- | :------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `1.`        | \( ready = 1 \)                                                                     | \( \rightarrow (\overline{datavalid})/(1) \)       | **Espera activa (Polling)**. Se mantiene la señal \( ready = 1 \) para indicar disponibilidad al CPU. Mientras \( datavalid = 0 \), el control permanece en este paso; al recibir \( datavalid = 1 \), avanza al paso 2.                                             |
+| `2.`        | \( DR \leftarrow IOBUS \); \( accept = 1 \); \( first \leftarrow 1 \)               | —                                                  | **Captura de datos e inicialización**. Al flanco de reloj, se carga la palabra completa de 18 bits de \( IOBUS \) en \( DR \), se genera un pulso de un ciclo en \( accept = 1 \) para confirmar la recepción al CPU, y se inicializa el flip-flop \( first \) en 1. |
+| `3.`        | \( CR \leftarrow (DR_{10:17} \land first) \lor (DR_{1:8} \land \overline{first}) \) | —                                                  | **Desempaquetado (Demultiplexación)**. Si \( first = 1 \), se transfiere el primer carácter \( DR_{10:17} \) a \( CR \). Si \( first = 0 \), se transfiere el segundo carácter \( DR_{1:8} \) a \( CR \).                                                            |
+| `4.`        | \( feed = RETURN(CR) \); \( print = \overline{RETURN(CR)} \)                        | —                                                  | **Activación de comandos**. La unidad combinacional \( RETURN(CR) \) evalúa el carácter en \( CR \). Si es retorno de carro, activa \( feed = 1 \). De lo contrario, activa la señal de impresión \( print = 1 \).                                                   |
+| `5.`        | \( Null \)                                                                          | —                                                  | **Retardo de sincronización**. Paso nulo de un ciclo de reloj para dar tiempo a que la impresora responda y establezca la señal \( wait \).                                                                                                                          |
+| `6.`        | —                                                                                   | \( \rightarrow (wait)/(6) \)                       | **Espera de finalización (Polling)**. Bucle de espera activa sobre la línea \( wait \). El control permanece retenido en este paso hasta que la impresora termine la operación física (\( wait = 0 \)).                                                              |
+| `7.`        | \( first \leftarrow 0 \)                                                            | \( \rightarrow (first, \overline{first})/(3, 1) \) | **Control de bucle**. Se borra el flip-flop \( first \). El estado del flip-flop se evalúa antes de la transición de reloj: si era 1, bifurca al paso 3 para procesar el segundo carácter; si era 0, retorna al paso 1 para esperar una nueva palabra de datos.      |
+| `8.`        | \( DEAD\ END \)                                                                     | —                                                  | **Fin de secuencia**. Detiene el secuenciador de control en un estado de parada.                                                                                                                                                                                     |
+| `CHAR = CR` | \( CHAR = CR \)                                                                     | —                                                  | **Salida combinacional permanente**. Conexión directa fuera de la secuencia de control: la salida \( CHAR(8) \) refleja continuamente el valor del registro \( CR(8) \) sin depender del reloj.                                                                      |
