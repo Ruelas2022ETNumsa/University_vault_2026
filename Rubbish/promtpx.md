@@ -10,9 +10,9 @@ MEMORY/OUTPUTS/COMBUS: vectores SIEMPRE con tamaño. DR(18) no DR. CHAR(8) no CH
 #### Registros (MEMORY)
 | Notación | Significado | Ejemplo |
 |-|-|-|
-| `REG[N]` | Registro de N bits | `DR(18)`, `CR(8)`, `IR(18)`, `AC(18)` |
-| `REG[N, M]` | Memoria de N palabras de M bits | `ROM(1024, 18)`, `RAM(256, 8)` |
-| `REG` (sin corchetes) | Flip-flop de 1 bit (escalar) | `busy`, `first`, `ready` |
+| `REG(N)` | Registro de N bits | `DR(18)`, `CR(8)`, `IR(18)`, `AC(18)` |
+| `REG(N, M)` | Memoria de N palabras de M bits | `ROM(1024, 18)`, `RAM(256, 8)` |
+| `REG` (sin tamaño) | Flip-flop de 1 bit (escalar) | `busy`, `first`, `ready` |
 | Separador `;` | Separa elementos en la misma sección | `DR(18); CR(8); busy; first` |
 
 Tamaños estándar del SIC — usar SIEMPRE estos valores, no inferir:

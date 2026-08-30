@@ -1,6 +1,6 @@
 ---
 title: AHPL — Guía unificada para ETN825 (LaTeX NotebookLM)
-galaxy_body: 66beacon
+galaxy_body: 88beacon
 scope: trivault
 tool: ahpl-notation
 audience:
@@ -79,12 +79,12 @@ END
 Reglas:
 
 - `MODULE:` — nombre del módulo en mayúsculas, descriptivo.
-- `MEMORY:` — registros que retienen valor entre ciclos de reloj (flip-flops). **Siempre con tamaño si son vectores — nunca omitir:** `DR[18]`, `CR[8]` (en bloques de código) · `DR(18)`, `CR(8)` (en tablas de declaraciones). ROMs y memorias usan dos dimensiones: `ROM[1024, 18]` (en código) · `ROM(1024, 18)` (en tablas). Escalares sin tamaño: `busy`, `first`.
-- `OUTPUTS:` — señales o registros que salen del módulo. Si son buses de datos incluir tamaño: `CHAR[8]` (en bloques de código) · `CHAR(8)` (en tablas). Señales booleanas sin tamaño: `print`, `feed`.
+- `MEMORY:` — registros que retienen valor entre ciclos de reloj (flip-flops). **Siempre con tamaño si son vectores — nunca omitir:** `DR(18)`, `CR(8)`. ROMs y memorias usan dos dimensiones: `ROM(1024, 18)`. Escalares sin tamaño: `busy`, `first`.
+- `OUTPUTS:` — señales o registros que salen del módulo. Si son buses de datos incluir tamaño: `CHAR(8)`. Señales booleanas sin tamaño: `print`, `feed`.
 - `INPUTS:` — señales que entran al módulo desde otros módulos o dispositivos: `wait`, `csrdy`.
-- `COMBUS:` — buses combinacionales (sin reloj, conexión directa). **Siempre con tamaño si son vectores:** `IOBUS[18]`, `CSBUS[12]` (en bloques de código) · `IOBUS(18)`, `CSBUS(12)` (en tablas). Señales booleanas sin tamaño: `ready`, `datavalid`, `accept`.
+- `COMBUS:` — buses combinacionales (sin reloj, conexión directa). **Siempre con tamaño si son vectores:** `IOBUS(18)`, `CSBUS(12)`. Señales booleanas sin tamaño: `ready`, `datavalid`, `accept`.
 
-> **Regla de notación de tamaños:** `[N]` se usa **solo dentro de bloques de código AHPL** (ej: `DR[18]` en `MEMORY:`). `(N)` se usa **solo en tablas de declaraciones y prosa** fuera del código (ej: `DR(18)` en columna Tamaño). No mezclar.
+> **Regla de notación de tamaños:** usar siempre `(N)` para tamaños de vectores — en bloques de código, tablas y prosa. Nunca `[N]` para tamaños.
 
 ❌ Incorrecto — falta tamaño en registro:
 ```AHPL
@@ -93,7 +93,7 @@ MEMORY: DR; CR; busy
 
 ✅ Correcto:
 ```AHPL
-MEMORY: DR[18]; CR[8]; busy; first
+MEMORY: DR(18); CR(8); busy; first
 ```
 
 ---
@@ -104,16 +104,16 @@ MEMORY: DR[18]; CR[8]; busy; first
 
 | Notación | Significado | Ejemplo |
 |---|---|---|
-| `REG[N]` (en código) · `REG(N)` (en tablas) | Registro de N bits | `DR[18]`, `CR[8]`, `IR[18]`, `AC[18]` (código) · `DR(18)`, `CR(8)` (tablas) |
-| `REG[N, M]` (en código) · `REG(N, M)` (en tablas) | Memoria de N palabras de M bits | `ROM[1024, 18]` (código) · `ROM(1024, 18)` (tablas) |
+| `REG(N)` | Registro de N bits | `DR(18)`, `CR(8)`, `IR(18)`, `AC(18)` |
+| `REG(N, M)` | Memoria de N palabras de M bits | `ROM(1024, 18)`, `RAM(256, 8)` |
 | `REG` (sin tamaño) | Flip-flop de 1 bit (escalar) | `busy`, `first`, `ready` |
-| Separador `;` | Separa elementos en la misma sección | `DR[18]; CR[8]; busy; first` |
+| Separador `;` | Separa elementos en la misma sección | `DR(18); CR(8); busy; first` |
 
 #### Buses (COMBUS)
 
 | Notación | Significado | Ejemplo |
 |---|---|---|
-| `BUS[N]` (en código) · `BUS(N)` (en tablas) | Bus de N bits, conexión combinacional | `IOBUS[18]`, `CSBUS[12]` (código) · `IOBUS(18)`, `CSBUS(12)` (tablas) |
+| `BUS(N)` | Bus de N bits, conexión combinacional | `IOBUS(18)`, `CSBUS(12)` |
 | Señal booleana en COMBUS | Bus de 1 bit (señal de handshake) | `ready`, `datavalid`, `accept` |
 
 > **Diferencia clave:** `MEMORY` usa reloj — las transferencias \( \leftarrow \) solo se efectúan al borde de reloj. `COMBUS` es combinacional — las conexiones \( = \) son inmediatas y no retienen valor.
@@ -131,9 +131,9 @@ MEMORY: DR[18]; CR[8]; busy; first
 **Ejemplo del módulo PRINTER INTERFACE:**
 
 ```AHPL
-OUTPUTS: CHAR[8]; ready; accept; print; feed
+OUTPUTS: CHAR(8); ready; accept; print; feed
 INPUTS:  datavalid; wait
-COMBUS: IOBUS[18]
+COMBUS: IOBUS(18)
 ```
 
 - `CHAR(8)` — los 8 bits del carácter enviado a la impresora (salida)
@@ -338,7 +338,7 @@ Interpretación:
 Antes de escribir o completar un módulo, verificar:
 
 - [ ] ¿El módulo tiene `MODULE:`, `MEMORY:`, `OUTPUTS:`, `INPUTS:`, `COMBUS:`?
-- [ ] ¿Los registros vectoriales tienen tamaño? En código: `DR[18]` (con corchetes). En tablas: `DR(18)` (con paréntesis). Nunca omitir.
+- [ ] ¿Los registros vectoriales tienen tamaño en `(N)`? `DR(18)` no `DR`. Nunca omitir.
 - [ ] ¿Las transferencias usan `←` y las conexiones de bus usan `=`?
 - [ ] ¿Las operaciones simultáneas están en el **mismo paso** separadas por `;`?
 - [ ] ¿Ningún registro destino aparece dos veces en el mismo paso?
@@ -361,10 +361,10 @@ Antes de escribir o completar un módulo, verificar:
 
 ```AHPL
 MODULE: PRINTER INTERFACE
-MEMORY: DR[18]; CR[8]; first(JK)
-OUTPUTS: CHAR[8]; ready; accept; print; feed
+MEMORY: DR(18); CR(8); first(JK)
+OUTPUTS: CHAR(8); ready; accept; print; feed
 INPUTS: datavalid; wait
-COMBUS: IOBUS[18]
+COMBUS: IOBUS(18)
 1. ready = 1
    → (~datavalid)/(1)
 2. DR ← IOBUS; accept = 1; first ← 1
@@ -535,7 +535,7 @@ Usar siempre estos tamaños cuando aparezcan estos registros. No inferir tamaño
 
 #### Par 1 — módulo completo con declaraciones
 
-**Pregunta:** Escribí un módulo AHPL que espera la señal `go`, carga `AC[8]` desde `DBUS[8]` y termina en DEAD END.
+**Pregunta:** Escribí un módulo AHPL que espera la señal `go`, carga `AC(8)` desde `DBUS(8)` y termina en DEAD END.
 
 **Respuesta:**
 
@@ -549,10 +549,10 @@ Usar siempre estos tamaños cuando aparezcan estos registros. No inferir tamaño
 
 ```
 MODULE: TEST
-MEMORY: AC[8]; flag
+MEMORY: AC(8); flag
 OUTPUTS: done
 INPUTS: go
-COMBUS: DBUS[8]
+COMBUS: DBUS(8)
 
 1. → (~go)/(1)
 2. AC ← DBUS; flag ← 1
@@ -579,7 +579,7 @@ END
 
 | Identificador | Sección | Tamaño | Rol |
 |---|---|---|---|
-| `DR` | MEMORY | `(18)` | Registro de datos — captura el valor de IOBUS[18] en el paso 2 |
+| `DR` | MEMORY | `(18)` | Registro de datos — captura el valor de IOBUS(18) en el paso 2 |
 | `CR` | MEMORY | `(8)` | Registro de carácter — acumula el byte extraído de DR |
 | `first` | MEMORY | escalar (JK) | Flip-flop de control — indica primera (1) o segunda (0) pasada |
 | `CHAR` | OUTPUTS | `(8)` | Salida de carácter a la impresora — refleja CR en todo momento |
@@ -593,10 +593,10 @@ END
 
 ```
 MODULE: PRINTER INTERFACE
-MEMORY: DR[18]; CR[8]; first(JK)
-OUTPUTS: CHAR[8]; ready; accept; print; feed
+MEMORY: DR(18); CR(8); first(JK)
+OUTPUTS: CHAR(8); ready; accept; print; feed
 INPUTS: datavalid; wait
-COMBUS: IOBUS[18]
+COMBUS: IOBUS(18)
 
 1. ready = 1
    → (~datavalid)/(1)

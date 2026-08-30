@@ -10,16 +10,16 @@ blocked_by:
 ## Handoff
 
 **Última sesión:** 2026-08-29
-**Retomar desde:** Corregir guía `ETN825_AHPL.md` — secciones N1, N2, N3, N10 y tablas de pasos de N16 con referencias `[N]` en prosa/KaTeX que deben ser `(N)`. Además aclarar explícitamente en N1/N2 que `[N]` es solo para bloques de código AHPL y `(N)` para tablas de declaraciones.
-**Completado esta sesión:** cambio `[N]` → `(N)` aplicado en `promtpx.md` y en tablas de N16 de la guía; prompt cargado en NotebookLM; resultado mejorado — tabla muestra `(18)` correctamente con el botón. Problema nuevo: el modelo usa `(N)` también dentro de los bloques de código AHPL (`MEMORY: AC(18)`) — eso es incorrecto, el código debe mantener `[N]`.
-**Próximo paso:** editar guía — N1, N2, N3, N10 y tablas de pasos de N16 para dejar `(N)` solo en tablas y `[N]` solo en bloques de código, con regla explícita que lo aclare
+**Retomar desde:** Crear Par 5 en N16 — ejercicio real de la cátedra como ejemplo de imitación.
+**Completado esta sesión:** notación `(N)` aplicada globalmente en guía y prompt — bloques de código incluidos. Verificado con output real de NotebookLM: tamaños correctos, formato correcto. `->` y `→` confirmados como equivalentes — ambos aceptados sin corrección.
+**Próximo paso:** agregar Par 5 a N16 con ejercicio real de la cátedra.
 **Preguntas de cierre:** —
 
 ---
 
 ## Resumen y objetivo
 
-La guía `ETN825_AHPL.md` tiene reglas de notación AHPL bien definidas (N1–N15) pero le faltaba una sección de ejemplos de pares pregunta→respuesta (N16). Sin esos ejemplos, NotebookLM genera tamaños incorrectos en declaraciones y otros errores de contenido. N16 está redactada y lista en `Rubbish\section.md` — falta pegarla en la guía y verificar.
+La guía `ETN825_AHPL.md` tiene reglas de notación AHPL bien definidas (N1–N15) y una sección de ejemplos de pares pregunta→respuesta (N16). El objetivo era que NotebookLM generara tamaños correctos en declaraciones y siguiera el formato de la guía. Verificado y confirmado con output real.
 
 ---
 
@@ -28,15 +28,15 @@ La guía `ETN825_AHPL.md` tiene reglas de notación AHPL bien definidas (N1–N1
 > Leer esto si se retoma en una sesión distinta — suficiente para arrancar sin re-explicar.
 
 **Archivos clave:**
-- `E:\University_vault_2026\_app\notebooklm\guides\ETN825\ETN825_AHPL.md` — guía principal — N16 va al final del BLOQUE D, después de N15, antes del bloque `%%`
-- `E:\University_vault_2026\Rubbish\section.md` — N16 lista para copiar/pegar o escribir con edit_file
-- `E:\University_vault_2026\notebooklm_question.md` — snippets H y G para re-probar después de subir la guía actualizada
-- `E:\University_vault_2026\_app\notebooklm\prompts\ETN825\ETN825-comp_indice_BCv1i.md` — prompt activo — ya tiene la línea de tamaños agregada (`MEMORY/OUTPUTS/COMBUS: vectores SIEMPRE con tamaño. DR[18] no DR. CHAR[8] no CHAR.`) — NO tocar
+- `E:\University_vault_2026\_app\notebooklm\guides\ETN825\ETN825_AHPL.md` — guía principal — Par 5 va al final de N16, antes del bloque `%%`
+- `E:\University_vault_2026\Rubbish\section.md` — scratchpad para borradores
+- `E:\University_vault_2026\notebooklm_question.md` — snippets H y G para re-probar
+- `E:\University_vault_2026\_app\notebooklm\prompts\ETN825\ETN825-comp_indice_BCv1i.md` — prompt activo
 
 **Estado al cierre de esta sesión:**
-- Guía `ETN825_AHPL.md` — N1–N15 corregidas (v3). N16 NO escrita todavía en la guía — está en `Rubbish\section.md`.
-- Prompt `BCv1i` — línea de tamaños agregada. Tamaño actual: ~9900 chars (bajo el límite de 10000).
-- N16 en `section.md` — versión final con: tabla de tamaños estándar + Par 1 (módulo TEST) + Par 2 (PRINTER INTERFACE) + Par 3 (bucle de espera) + Par 4 (operador `*`).
+- Guía `ETN825_AHPL.md` — N1–N16 completas y corregidas. Notación `(N)` global aplicada.
+- Prompt `promtpx.md` — tabla Notación unificada a `REG(N)`. Todo en `(N)`.
+- Output NotebookLM verificado — tamaños correctos, formato correcto.
 
 **Convenciones definidas (no renegociar):**
 - Bloques de código AHPL: `~` como prefijo para negados
@@ -45,7 +45,9 @@ La guía `ETN825_AHPL.md` tiene reglas de notación AHPL bien definidas (N1–N1
 - Delimitadores: `\( \)` inline — NO `$$`, NO `\[ \]` para bloques AHPL
 - NUNCA `\begin{aligned}`, NUNCA `\begin{array}`, NUNCA `$$`
 - `COMBUS:` (sin S) — canónico del libro
-- Tamaños: DR[18], CR[8], IOBUS[18], CHAR[8], AC[18], PC[12], IR[18], MD[18], MA[12]
+- Tamaños: `(N)` siempre — en bloques de código, tablas y prosa. Nunca `[N]` para tamaños.
+- Valores: DR(18), CR(8), IOBUS(18), CHAR(8), AC(18), PC(12), IR(18), MD(18), MA(12)
+- Bifurcación: `→` y `->` son equivalentes — ambos aceptados en bloques de código, no corregir
 
 ---
 
@@ -53,11 +55,13 @@ La guía `ETN825_AHPL.md` tiene reglas de notación AHPL bien definidas (N1–N1
 
 | # | Hallazgo | Impacto |
 |---|---|---|
-| 1 | El botón de copiar de NotebookLM stripea corchetes `[]` y su contenido | Los tamaños `DR[18]` se pierden al copiar con el botón — usar arrastre con puntero |
+| 1 | El botón de copiar de NotebookLM stripea corchetes `[]` y su contenido | Workaround permanente: capturar output con puntero, no con botón |
 | 2 | NotebookLM SÍ genera tamaños cuando tiene referencia — pero infiere `[1]` o `[2]` sin ella | N16 con tabla de tamaños estándar resuelve esto |
 | 3 | El error era del botón, no de la guía ni del prompt | Workaround permanente: capturar output con puntero, no con botón |
-| 4 | Prompt con línea de tamaños agregada no resolvió el problema solo | La guía (N16) es la pieza que falta — el prompt solo no alcanza para AHPL como lenguaje de nicho |
-| 5 | Gemini tiene acceso a las mismas fuentes del notebook (incluyendo el prompt si está cargado) | Comportamiento equivalente a NotebookLM — se puede usar indistintamente para tests |
+| 4 | Prompt con línea de tamaños agregada no resolvió el problema solo | La guía (N16) es la pieza que faltaba |
+| 5 | Gemini tiene acceso a las mismas fuentes del notebook | Comportamiento equivalente a NotebookLM — se puede usar indistintamente para tests |
+| 6 | `->` es equivalente a `→` en bloques de código | Sin impacto — NotebookLM entiende ambas formas sin error |
+| 7 | Notación `(N)` global resuelve el conflicto con NotebookLM | Output verificado: AC(8), DR(18), IOBUS(18) correctos en tabla y en código |
 
 ---
 
@@ -69,19 +73,20 @@ La guía `ETN825_AHPL.md` tiene reglas de notación AHPL bien definidas (N1–N1
 | 2026-08-28 | Delimitadores: `\( \)` inline — NO `$$` | `$$` rompió renderizado en versiones anteriores de NotebookLM |
 | 2026-08-29 | Tests con todo cargado — no quitar guía ni prompt | El comportamiento con todo presente es el que importa para el usuario final |
 | 2026-08-29 | Workaround botón: capturar output con puntero, no con botón de copiar | El botón stripea `[]` — bug confirmado empíricamente, sin fix disponible |
-| 2026-08-29 | Notación `()` para declaraciones — postergada | Requiere cambiar N1/N2 y el libro usa `[]`; evaluar después de verificar si N16 resuelve el problema |
-| 2026-08-29 | Tabla de tamaños estándar incluida en N16 | Modelo infería `[1]`/`[2]` sin referencia — tabla explícita lo corrige |
+| 2026-08-29 | Notación `(N)` global — en bloques de código, tablas y prosa | NotebookLM stripea `[]` — `(N)` evita el conflicto en todos los contextos |
+| 2026-08-29 | `->` y `→` son equivalentes — ambos aceptados | NotebookLM entiende ambas formas sin error — no corregir |
+| 2026-08-29 | Siguiente mejora: Par 5 en N16 con ejercicio real de la cátedra | Refuerza imitación con material concreto del curso |
 
 > [!note]- Descartadas
 > - Generar N16 sin verificar contra NotebookLM — descartado; los pares deben reflejar outputs reales corregidos
-> - Notación `()` para tamaños en declaraciones — postergada, no descartada
+> - Mantener `[N]` en bloques de código — descartado; NotebookLM stripea `[]` en todos los contextos
 > - Cambio inmediato de delimitadores `\[ \]` → `$$` — postergado; plugin disponible si hace falta
 
 ---
 
 ## Planificación
 
-N16 está lista. El único paso pendiente es escribirla en la guía y verificar que el output de NotebookLM mejora. Si los tamaños siguen incorrectos después de subir la guía actualizada → evaluar notación `()` para declaraciones como siguiente línea de ataque.
+N1–N16 completas y verificadas. El próximo paso es agregar Par 5 a N16 con un ejercicio real de la cátedra para reforzar la imitación del modelo.
 
 ---
 
@@ -89,19 +94,23 @@ N16 está lista. El único paso pendiente es escribirla en la guía y verificar 
 
 ### ✅ Fase 1 — obtener y analizar outputs (completada)
 - Snippets H y G ejecutados x2
-- Errores documentados: sin tamaños, tamaños incorrectos (`[1]`/`[2]`), bug del botón
+- Errores documentados: sin tamaños, tamaños incorrectos, bug del botón
 - N16 redactada con pares corregidos
 
-### ⬜ Fase 2 — escribir N16 en la guía
-1. Leer el final de `ETN825_AHPL.md` para confirmar posición de inserción (después de N15, antes de `%%`)
-2. Escribir N16 con `edit_file` — contenido en `Rubbish\section.md`
-3. Verificar que el archivo quedó bien con `read_text_file` (últimas 20 líneas)
+### ✅ Fase 2 — escribir N16 en la guía (completada)
+- Posición de inserción confirmada
+- N16 escrita con `edit_file`
+- Verificación OK
 
-### ⬜ Fase 3 — verificar
-4. Re-subir `ETN825_AHPL.md` actualizada a NotebookLM (reemplazar fuente anterior)
-5. Probar snippets H y G de `notebooklm_question.md` — capturar con puntero
-6. Verificar: ¿`DR[18]`, `CR[8]`, `IOBUS[18]` aparecen correctos?
-7. Si sí → ship delivered. Si no → evaluar notación `()` o agregar par adicional
+### ✅ Fase 3 — corregir notación (completada)
+- Notación `(N)` global aplicada en guía y prompt
+- Output verificado — tamaños correctos
+
+### ⬜ Fase 4 — reforzar N16 con Par 5
+1. Obtener ejercicio real de la cátedra
+2. Redactar Par 5 en `Rubbish\section.md`
+3. Insertar en N16 después de Par 4, antes de `%%`
+4. Re-subir guía y verificar
 
 ---
 
@@ -132,12 +141,15 @@ N16 está lista. El único paso pendiente es escribirla en la guía y verificar 
 - [x] Cambiar notación `[N]` → `(N)` en tablas de declaraciones del prompt (`promtpx.md`)
 - [x] Cambiar notación `[N]` → `(N)` en tablas de N16 de la guía (`ETN825_AHPL.md`)
 - [x] Cargar prompt actualizado en NotebookLM — resultado mejorado confirmado
-- [ ] Corregir guía: N1, N2, N3 — ejemplos en prosa/bullets que usan `[N]` → `(N)`
-- [ ] Corregir guía: N10 — checklist menciona `DR[18]` → actualizar a `DR(18)`
-- [ ] Corregir guía: N16 tablas de pasos — referencias KaTeX inline `AC[8]`, `DR[18]` etc. → `(N)`
-- [ ] Agregar regla explícita en N1/N2: `[N]` solo en bloques de código AHPL · `(N)` solo en tablas de declaraciones
-- [ ] Re-subir guía actualizada a NotebookLM y verificar que bloque de código vuelve a `[N]`
-- [ ] Si no mejora → guía de ejemplos separada (ver pendientes)
+- [x] Corregir guía: N1, N2, N3 — `(N)` global en prosa y bloques de código
+- [x] Corregir guía: N10 — checklist actualizado a `(N)`
+- [x] Corregir guía: N16 tablas de pasos — `(N)` en KaTeX inline
+- [x] Aplicar `(N)` global en bloques de código de N11, N16 Par 1 y Par 2
+- [x] Actualizar regla en N1: `(N)` siempre, en todos los contextos
+- [x] Actualizar prompt `promtpx.md`: tabla Notación unificada a `REG(N)`
+- [x] Verificar output NotebookLM — tamaños correctos confirmados
+- [ ] Crear Par 5 en N16 — ejercicio real de la cátedra como ejemplo de imitación
+- [ ] Re-subir guía actualizada a NotebookLM
 - [ ] Re-prueba final — snippets H y G con puntero
 - [ ] Cerrar ship (status: delivered)
 
@@ -145,18 +157,14 @@ N16 está lista. El único paso pendiente es escribirla en la guía y verificar 
 
 ## Preguntas abiertas
 
-- ¿Notación `()` para tamaños en declaraciones? — evaluar solo si OCR + guía de ejemplos no resuelven
-- ¿Agregar Par 5 con imagen de ejercicio real de la cátedra? — opcional, si el usuario trae material
-
-**Pendientes si OCR no resuelve el problema de tamaños en tabla:**
-- Guía de ejemplos separada en `E:\University_vault_2026\_app\notebooklm\guides\ETN825\` — ejemplos concretos de tabla de declaraciones con tamaños explícitos para que el modelo imite el patrón
+- ¿Ejercicio real de la cátedra disponible para Par 5? — traer en la próxima sesión
 
 ---
 
 ## Recursos
 
 - `E:\University_vault_2026\_app\notebooklm\guides\ETN825\ETN825_AHPL.md` — guía principal
-- `E:\University_vault_2026\Rubbish\section.md` — N16 lista para insertar
+- `E:\University_vault_2026\Rubbish\section.md` — scratchpad
 - `E:\University_vault_2026\notebooklm_question.md` — snippets de prueba H y G
 - `E:\University_vault_2026\_app\notebooklm\prompts\ETN825\ETN825-comp_indice_BCv1i.md` — prompt activo
 - `E:\University_vault_2026\_hangar\dock\ship_ETN825_AHPL_ejemplos 1.md` — historia completa de correcciones v1/v2/v3

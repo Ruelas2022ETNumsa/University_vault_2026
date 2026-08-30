@@ -21,7 +21,7 @@ date_updated: 2026-08-02
 |  [[krajo.md]]  |   ❌    |    🔴    | Implementación física `_hangar/`                  |      |  20:40  |
 | [[alx_gml.md]] |   ❌    |    🔴    | Sistema de links, sync y organización de carpetas |      |  22:40  |
 | [[alxrul.md]]  |   ✔    |    🔴    | —                                                 |      |  23:20  |
-| [[alx-rul.md]] |   ❌    |    🟢    | Cornell Marginalia → Galaxy                       |      |         |
+| [[alx-rul.md]] |   ❌    |    🔴    | Cornell Marginalia → Galaxy                       |      |  2:00   |
 | [[standb.md]]  |   ✔    |    🟢    | —                                                 |  —   |    —    |
 | [[emergn.md]]  |   ✔    |    🟢    | —                                                 |  —   |    —    |
 

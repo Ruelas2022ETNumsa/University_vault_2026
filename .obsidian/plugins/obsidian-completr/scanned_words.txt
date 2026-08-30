@@ -67688,6 +67688,7 @@ gPUT
 gGCV
 gobernando
 guardando
+gobernados
 body
 beacon
 bat
@@ -106299,6 +106300,7 @@ alternativamente
 adaptemos
 alucina
 aclare
+ador
 related
 recomendados
 ribbon
@@ -125556,6 +125558,7 @@ negados
 nCondici
 nEstado
 nTama
+ncronos
 created
 commit
 cada
@@ -136110,6 +136113,9 @@ concluy
 cargareadyOUTPUTSescalarSe
 cargadoBloque
 corrigen
+concretamente
+combinacionalmente
+constituida
 updated
 un
 universo
@@ -223064,6 +223070,9 @@ pegarla
 postergada
 postergado
 proveniente
+poderoso
+posea
+procesando
 min
 mica
 movimiento
@@ -262416,6 +262425,7 @@ extraen
 ejecutando
 externogoINPUTSescalarSe
 espere
+entrante
 Motor
 Media
 Mantiene
