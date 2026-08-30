@@ -36,7 +36,8 @@
         "b.md",
         "c.md",
         "825core.md",
-        "Untitled.md"
+        "Untitled.md",
+        "E2L2F.md"
       ]
     },
     "MOC": {
@@ -5945,7 +5946,8 @@
         "E1L2.md",
         "E2L2.md",
         "E1L2G.md",
-        "E2L2G.md"
+        "E2L2G.md",
+        "E2mat.m"
       ]
     },
     "Semesters/Sem_08/ETN1015/L2_1015/E1L2.md": {
@@ -5961,6 +5963,14 @@
       "isHidden": false
     },
     "Semesters/Sem_08/ETN1015/L2_1015/E2L2G.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_08/ETN1015/L2_1015/E2mat.m": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "E2L2F.md": {
       "isPinned": false,
       "isHidden": false
     }
