@@ -34,7 +34,8 @@
         "d.md",
         "a.md",
         "b.md",
-        "c.md"
+        "c.md",
+        "825core.md"
       ]
     },
     "MOC": {
@@ -5928,6 +5929,10 @@
       "isHidden": false
     },
     "c.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "825core.md": {
       "isPinned": false,
       "isHidden": false
     }
