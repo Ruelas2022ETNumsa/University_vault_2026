@@ -9390,6 +9390,7 @@ trivault
 transmiten
 tupla
 transiciona
+traslapan
 ToDo
 Templater
 Text
@@ -48408,6 +48409,8 @@ disyunci
 decodificados
 deteniendo
 datavalidINPUTSescalarIndica
+dicamente
+discretizado
 Vault
 Verificar
 Variables
@@ -86253,6 +86256,8 @@ solicitud
 siguiera
 scratchpad
 serializa
+subsiguiente
+scriptsize
 vault
 vil
 ver
@@ -106330,6 +106335,7 @@ afectando
 acceptOUTPUTSescalarSe
 antihorario
 antihoraria
+aliasing
 related
 recomendados
 ribbon
@@ -116278,6 +116284,8 @@ rellenarlo
 retrasando
 retroalimenta
 readyOUTPUTSescalarSe
+rellenada
+requeridas
 notes
 notas
 nuevas
@@ -164931,6 +164939,8 @@ CRMEMORY
 CHAROUTPUTS
 CONVOLUCI
 CIRCULAR
+Calcul
+Clockwise
 Instalados
 Instalado
 Instalar
@@ -175230,6 +175240,7 @@ IdentificadorSecci
 Indicador
 INTERFACEIdentificadorSecci
 IOBUSCOMBUS
+Indicadores
 Funci
 File
 Fase
@@ -195243,6 +195254,7 @@ Encadenamiento
 Espec
 Each
 Estructuralmente
+Efectuamos
 Obsidian
 OmniSearch
 Ocultar
@@ -262483,6 +262495,7 @@ ensambla
 excluyente
 especificadas
 establezca
+expresamos
 Motor
 Media
 Mantiene
@@ -302105,6 +302118,7 @@ inconsistencia
 inreq
 incrementada
 ilustrar
+instrumentos
 Dependencia
 Dropbox
 Dataview
@@ -312323,6 +312337,7 @@ Desempaquetado
 Declaraciones
 Detiene
 Demultiplexaci
+Dadas
 Remotely
 Raz
 Revisa
@@ -322735,6 +322750,7 @@ Ruido
 Refuerza
 Rangos
 Retardo
+Rotado
 Hider
 Hace
 Herramientas

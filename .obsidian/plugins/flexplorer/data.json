@@ -5943,7 +5943,9 @@
       "sortOrder": "custom",
       "customOrder": [
         "E1L2.md",
-        "E2L2.md"
+        "E2L2.md",
+        "E1L2G.md",
+        "E2L2G.md"
       ]
     },
     "Semesters/Sem_08/ETN1015/L2_1015/E1L2.md": {
@@ -5951,6 +5953,14 @@
       "isHidden": false
     },
     "Semesters/Sem_08/ETN1015/L2_1015/E2L2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_08/ETN1015/L2_1015/E1L2G.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_08/ETN1015/L2_1015/E2L2G.md": {
       "isPinned": false,
       "isHidden": false
     }

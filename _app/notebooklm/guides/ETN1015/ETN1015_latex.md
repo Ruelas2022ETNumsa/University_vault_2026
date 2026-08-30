@@ -499,3 +499,63 @@ H(z) = \mathbf{C}\,(z\mathbf{I} - \mathbf{A})^{-1}\mathbf{B} + \mathbf{D}
 # galaxy-links
 
 %%
+
+---
+
+## 19. Convolución circular
+
+Símbolo de convolución circular N-puntos:
+
+```latex
+\( x_3(m) = x_1(n) \circledast x_2(n) \)
+```
+
+Definición:
+
+```latex
+\[
+x_3(m) = \sum_{n=0}^{N-1} x_1(n)\, x_2((m-n)\bmod N), \quad m = 0, 1, \ldots, N-1
+\]
+```
+
+Matriz circulante — representación compacta:
+
+```latex
+\[
+\begin{pmatrix} x_3(0) \\ x_3(1) \\ \vdots \\ x_3(N-1) \end{pmatrix}
+=
+\begin{pmatrix}
+  x_1(0)   & x_1(N-1) & \cdots & x_1(1)   \\
+  x_1(1)   & x_1(0)   & \cdots & x_1(2)   \\
+  \vdots   & \vdots   & \ddots & \vdots   \\
+  x_1(N-1) & x_1(N-2) & \cdots & x_1(0)
+\end{pmatrix}
+\begin{pmatrix} x_2(0) \\ x_2(1) \\ \vdots \\ x_2(N-1) \end{pmatrix}
+\]
+```
+
+Ejemplo numérico — Palani Ej. 2.22, N=4:
+
+```latex
+\[
+\begin{pmatrix} x_3(0) \\ x_3(1) \\ x_3(2) \\ x_3(3) \end{pmatrix}
+=
+\begin{pmatrix}
+2 & 1 & 2 & 1 \\
+1 & 2 & 1 & 2 \\
+2 & 1 & 2 & 1 \\
+1 & 2 & 1 & 2
+\end{pmatrix}
+\begin{pmatrix} 1 \\ 2 \\ 3 \\ 4 \end{pmatrix}
+=
+\begin{pmatrix} 14 \\ 16 \\ 14 \\ 16 \end{pmatrix}
+\]
+```
+
+Relación con la DFT:
+
+```latex
+\[
+x_1(n) \circledast x_2(n) \xleftrightarrow{\text{DFT}} X_1[k]\cdot X_2[k]
+\]
+```

@@ -527,6 +527,55 @@ Antes de entregar un bloque TikZJax verificar:
 
 ---
 
+### N_CAP2_PALANI. CAP. 2 — DFT Y CONVOLUCIÓN CIRCULAR (PALANI)
+
+---
+
+#### Convolución circular — pasos del método gráfico (círculos concéntricos)
+
+> Contexto para NotebookLM: usar para ilustrar cada paso $m = 0, 1, 2, 3$ del método gráfico de Palani (Fig. 2.11). Para cada valor de $m$: el círculo exterior tiene $x_1(n)$ fijo en sentido antihorario; el círculo interior tiene $x_2(m-n)$ rotado $m$ posiciones en sentido antihorario. Se multiplican los valores alineados y se suman.
+
+> **Patrón por paso — indicar a NotebookLM:**
+> - $m=0$: $x_2(0-n)$ → círculo interior sin rotar → $x_3(0) = 2\times1 + 1\times4 + 2\times3 + 1\times2 = 14$
+> - $m=1$: $x_2(1-n)$ → rotación 1 posición antihoraria → $x_3(1) = 2\times2 + 1\times1 + 2\times4 + 1\times3 = 16$
+> - $m=2$: $x_2(2-n)$ → rotación 2 posiciones → $x_3(2) = 2\times3 + 1\times2 + 2\times1 + 1\times4 = 14$
+> - $m=3$: $x_2(3-n)$ → rotación 3 posiciones → $x_3(3) = 2\times4 + 1\times3 + 2\times2 + 1\times1 = 16$
+
+```tikz
+\usepackage{amsmath}
+\begin{document}
+\begin{tikzpicture}[scale=1.0]
+
+% --- m=0 ---
+% Círculo exterior (x1 fijo, antihorario desde arriba: 2,1,2,1)
+\draw[thick, teal] (0,0) circle (1.4);
+\node[teal] at (0, 1.6)  {$2$};   % n=0, arriba
+\node[teal] at (-1.6, 0) {$1$};   % n=1, izq
+\node[teal] at (0,-1.6)  {$2$};   % n=2, abajo
+\node[teal] at (1.6, 0)  {$1$};   % n=3, der
+
+% Círculo interior (x2 sin rotar, horario desde arriba: 1,4,3,2)
+\draw[thick, orange] (0,0) circle (0.8);
+\node[orange] at (0, 1.0)  {$1$};  % x2(0)
+\node[orange] at (-1.0, 0) {$4$};  % x2(3) — horario
+\node[orange] at (0,-1.0)  {$3$};  % x2(2)
+\node[orange] at (1.0, 0)  {$2$};  % x2(1)
+
+% Flecha de rotación
+\draw[->, thick, gray] (0.3,0.55) arc (60:300:0.6);
+
+% Etiqueta m y resultado
+\node[font=\small] at (0, 2.2)  {$m=0$};
+\node[font=\small, gray] at (0,-2.2) {$x_3(0)=2{\times}1+1{\times}4+2{\times}3+1{\times}2=14$};
+
+\end{tikzpicture}
+\end{document}
+```
+
+> **Nota para NotebookLM:** el bloque anterior muestra $m=0$ como plantilla. Para $m=1,2,3$ rotar los valores del círculo interior una posición más en cada paso, manteniendo el exterior fijo. Generar un bloque TikZ separado por cada valor de $m$ si el usuario pide el diagrama completo.
+
+---
+
 #### Sistema en paralelo
 
 > Contexto para NotebookLM: usar para representar dos sistemas LTI en paralelo con sumador. La función equivalente $H = H_1 + H_2$ se puede agregar como etiqueta.
