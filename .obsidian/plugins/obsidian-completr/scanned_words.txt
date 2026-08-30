@@ -9386,6 +9386,7 @@ transferir
 transfiri
 transcrib
 tests
+trivault
 ToDo
 Templater
 Text
@@ -136105,6 +136106,7 @@ capturando
 concluy
 cargareadyOUTPUTSescalarSe
 cargadoBloque
+corrigen
 updated
 un
 universo
@@ -164875,6 +164877,7 @@ Capturar
 Carriage
 Contin
 Citar
+CARGA
 Instalados
 Instalado
 Instalar
@@ -262408,6 +262411,7 @@ emisor
 extraen
 ejecutando
 externogoINPUTSescalarSe
+espere
 Motor
 Media
 Mantiene
@@ -302023,6 +302027,8 @@ interacciones
 involucren
 infer
 inserci
+intermediario
+imite
 Dependencia
 Dropbox
 Dataview
@@ -339897,6 +339903,7 @@ fnDs
 funcionaron
 fallando
 flashtest
+finalice
 haya
 hace
 hacer

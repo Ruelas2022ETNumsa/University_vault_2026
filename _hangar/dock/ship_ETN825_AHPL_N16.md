@@ -10,9 +10,9 @@ blocked_by:
 ## Handoff
 
 **Última sesión:** 2026-08-29
-**Retomar desde:** OCR de PDFs faltantes → cargar como fuentes → verificar si mejora tamaños en tabla de declaraciones
-**Completado esta sesión:** tabla de notación de registros agregada al prompt (`section.md`); tabla de tamaños estándar del SIC agregada al prompt; OCR aplicado a `2-4-5-6.pdf` (ya cargado); prompt actualizado cargado en NotebookLM; la tabla de declaraciones ahora aparece primero (orden correcto) pero tamaños siguen vacíos en tabla
-**Próximo paso:** OCR a `7.pdf` y `9-10-11-13.pdf` → cargarlos en NotebookLM → re-probar
+**Retomar desde:** Corregir guía `ETN825_AHPL.md` — secciones N1, N2, N3, N10 y tablas de pasos de N16 con referencias `[N]` en prosa/KaTeX que deben ser `(N)`. Además aclarar explícitamente en N1/N2 que `[N]` es solo para bloques de código AHPL y `(N)` para tablas de declaraciones.
+**Completado esta sesión:** cambio `[N]` → `(N)` aplicado en `promtpx.md` y en tablas de N16 de la guía; prompt cargado en NotebookLM; resultado mejorado — tabla muestra `(18)` correctamente con el botón. Problema nuevo: el modelo usa `(N)` también dentro de los bloques de código AHPL (`MEMORY: AC(18)`) — eso es incorrecto, el código debe mantener `[N]`.
+**Próximo paso:** editar guía — N1, N2, N3, N10 y tablas de pasos de N16 para dejar `(N)` solo en tablas y `[N]` solo en bloques de código, con regla explícita que lo aclare
 **Preguntas de cierre:** —
 
 ---
@@ -125,9 +125,18 @@ N16 está lista. El único paso pendiente es escribirla en la guía y verificar 
 - [x] Agregar tabla de notación de registros al prompt
 - [x] Agregar tabla de tamaños estándar SIC al prompt
 - [x] OCR a `2-4-5-6.pdf` y cargar en NotebookLM
-- [ ] OCR a `7.pdf` → cargar en NotebookLM
-- [ ] OCR a `9-10-11-13.pdf` → cargar en NotebookLM
-- [ ] Verificar si tamaños en tabla de declaraciones se corrigen
+- [x] OCR a `7.pdf` → cargar en NotebookLM
+- [x] OCR a `9-10-11-13.pdf` → cargar en NotebookLM
+- [x] Verificar si tamaños en tabla de declaraciones se corrigen (no — bug del botón confirmado)
+- [x] Documentar bug `[N]` en `notebooklm_solve.md`
+- [x] Cambiar notación `[N]` → `(N)` en tablas de declaraciones del prompt (`promtpx.md`)
+- [x] Cambiar notación `[N]` → `(N)` en tablas de N16 de la guía (`ETN825_AHPL.md`)
+- [x] Cargar prompt actualizado en NotebookLM — resultado mejorado confirmado
+- [ ] Corregir guía: N1, N2, N3 — ejemplos en prosa/bullets que usan `[N]` → `(N)`
+- [ ] Corregir guía: N10 — checklist menciona `DR[18]` → actualizar a `DR(18)`
+- [ ] Corregir guía: N16 tablas de pasos — referencias KaTeX inline `AC[8]`, `DR[18]` etc. → `(N)`
+- [ ] Agregar regla explícita en N1/N2: `[N]` solo en bloques de código AHPL · `(N)` solo en tablas de declaraciones
+- [ ] Re-subir guía actualizada a NotebookLM y verificar que bloque de código vuelve a `[N]`
 - [ ] Si no mejora → guía de ejemplos separada (ver pendientes)
 - [ ] Re-prueba final — snippets H y G con puntero
 - [ ] Cerrar ship (status: delivered)
