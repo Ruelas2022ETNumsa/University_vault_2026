@@ -38,7 +38,6 @@ FORMATO DE RESPUESTA — EXPLICACIÓN DE CONCEPTO:
 
 ## [N. Concepto]
 
-``````ad-note
 title: Complemento (Nivel B/C)
 
 1. Explicación intuitiva
@@ -83,7 +82,7 @@ Solo si el diagrama es claro y directo. Si hay duda → omitir.
 5. Ejercicios resueltos (solo nivel C)
 ##### Ej. [enunciado breve]
 [resolución en LaTeX con notación completa]
-``````
+
 
 FORMATO DE RESPUESTA — EJERCICIO RESUELTO:
 
