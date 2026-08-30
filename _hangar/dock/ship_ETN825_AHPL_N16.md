@@ -9,10 +9,10 @@ blocked_by:
 
 ## Handoff
 
-**Última sesión:** 2026-08-29
-**Retomar desde:** Crear Par 5 en N16 — ejercicio real de la cátedra como ejemplo de imitación.
-**Completado esta sesión:** notación `(N)` aplicada globalmente en guía y prompt — bloques de código incluidos. Verificado con output real de NotebookLM: tamaños correctos, formato correcto. `->` y `→` confirmados como equivalentes — ambos aceptados sin corrección.
-**Próximo paso:** agregar Par 5 a N16 con ejercicio real de la cátedra.
+**Última sesión:** 2026-08-30
+**Retomar desde:** Corregir guía `ETN825_AHPL.md` — N4 y N11.
+**Completado esta sesión:** Re-prueba final H y G con puntero — outputs correctos. Re-análisis de guía y prompt completado.
+**Próximo paso:** Editar guía — N4 (operadores lógicos) y N11 (PRINTER INTERFACE). Prompt no necesita cambios.
 **Preguntas de cierre:** —
 
 ---
@@ -65,7 +65,12 @@ La guía `ETN825_AHPL.md` tiene reglas de notación AHPL bien definidas (N1–N1
 | 8 | Snippet G: modelo usa indexación `DR[10:17]` (notación Python/Verilog) en bloque de código | Incorrecto — AHPL usa notación del libro; N16 debe tener par corregido con indexación correcta |
 | 9 | Snippets A y B: modelo agrega `SEQUENCE` / `SEQUENCE:` al inicio del bloque — no es canónico del libro | Menor — el libro no usa esa palabra al inicio; los pasos van directo después de las declaraciones |
 | 10 | Snippet B: modelo genera bloque `tikz` para diagrama de flujo | Ruido — no renderiza en NotebookLM; ignorar al redactar N16 |
-| 11 | Snippet C: bloque de código usa `&` como AND y `~IR` sin índice | Incorrecto — AHPL usa `∧`; índices deben ser `IR(0)`, `IR(1)` con notación `(N)` |
+| 11 | Snippet C: bloque de código usa `&` como AND y `~IR` sin índice | Incorrecto — AHPL usa `/\`; índices deben ser `IR(0)`, `IR(1)` con notación `(N)` |
+| 12 | Snippets G y Untitled: usan `&` y `\|` en bloque de código paso 3 | Resuelto — regla agregada al prompt: `/\` para AND, `\/` para OR |
+| 13 | Par 2 N16 tenía paso 8 DEAD END y bifurcación `(3,8)` — no existe en el libro | Corregido — el libro bifurca a `(3,1)`; no hay paso 8 |
+| 14 | Al copiar con puntero, NotebookLM serializa KaTeX con `$` en vez de `\( \)` | No es error del modelo ni de la guía — es comportamiento interno del portapapeles de NotebookLM; no corregir |
+| 15 | N4 guía: tabla de operadores lógicos dice `&` para AND y `+` para OR | Corregir a `/\` y `\/` — consistente con regla del prompt |
+| 16 | N11 guía: PRINTER INTERFACE tiene los mismos errores que N16 antes de corregir | Paso 3: `DR₁₀:₁₇` → `DR(10:17)`, `/\`, `\/`; paso 4: `print = RETURN` → `print = ~RETURN`; paso 7: `(3,8)` → `(3,1)`; paso 8 DEAD END: eliminar |
 
 ---
 
@@ -153,9 +158,13 @@ N1–N16 completas y verificadas. El próximo paso es agregar Par 5 a N16 con un
 - [x] Actualizar regla en N1: `(N)` siempre, en todos los contextos
 - [x] Actualizar prompt `promtpx.md`: tabla Notación unificada a `REG(N)`
 - [x] Verificar output NotebookLM — tamaños correctos confirmados
-- [ ] Crear Par 5 en N16 — ejercicio real de la cátedra como ejemplo de imitación
-- [ ] Re-subir guía actualizada a NotebookLM
-- [ ] Re-prueba final — snippets H y G con puntero
+- [x] Crear Par 5 en N16 — ejercicio real de la cátedra como ejemplo de imitación
+- [x] Re-subir guía actualizada a NotebookLM
+- [x] Re-prueba final — snippets H y G con puntero
+- [x] Re-análisis de guía y prompt — identificar correcciones pendientes
+- [ ] Corregir guía N4 — operadores lógicos: `&`/`+` → `/\`/`\/`
+- [ ] Corregir guía N11 — PRINTER INTERFACE: paso 3, 4, 7, eliminar paso 8
+- [ ] Re-subir guía corregida a NotebookLM
 - [ ] Cerrar ship (status: delivered)
 
 ---

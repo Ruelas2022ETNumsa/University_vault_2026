@@ -608,8 +608,7 @@ COMBUS: IOBUS(18)
 5. Null
 6. -> (wait)/(6)
 7. first <- 0
-   -> (first, ~first)/(3, 8)
-8. DEAD END
+   -> (first, ~first)/(3, 1)
 END SEQUENCE
 CHAR = CR
 END
@@ -623,8 +622,7 @@ END
 | `4.` | \( feed = RETURN(CR) \) ; \( print = \overline{RETURN(CR)} \) | — | Evaluación combinacional. \( RETURN(CR) \) detecta si \( CR \) es retorno de carro — activa \( feed \) o \( print \) según corresponda. |
 | `5.` | \( Null \) | — | Paso nulo. Sincronización — da tiempo a la impresora para levantar \( wait \). |
 | `6.` | — | \( \rightarrow (wait)/(6) \) | Polling. Espera mientras \( wait = 1 \); sale cuando \( wait = 0 \). |
-| `7.` | \( first \leftarrow 0 \) | \( \rightarrow (first, \overline{first})/(3, 8) \) | Control de flujo. \( first \) se borra. Si \( first \) era 1 → paso 3 (segundo carácter). Si era 0 → paso 8 (fin). |
-| `8.` | \( DEAD\ END \) | — | Fin de secuencia. Módulo detenido. |
+| `7.` | \( first \leftarrow 0 \) | \( \rightarrow (first, \overline{first})/(3, 1) \) | Control de flujo. \( first \) se borra. Si \( first \) era 1 → paso 3 (segundo carácter). Si era 0 → paso 1 (esperar nueva palabra). |
 | `CHAR = CR` | \( CHAR = CR \) | — | Salida combinacional permanente. \( CHAR(8) \) refleja \( CR(8) \) en todo momento, fuera de la secuencia. |
 
 ---

@@ -9389,6 +9389,7 @@ tests
 trivault
 transmiten
 tupla
+transiciona
 ToDo
 Templater
 Text
@@ -48404,6 +48405,7 @@ direccionar
 disyunci
 decodificados
 deteniendo
+datavalidINPUTSescalarIndica
 Vault
 Verificar
 Variables
@@ -106322,6 +106324,7 @@ aprecian
 apilamiento
 apilar
 afectando
+acceptOUTPUTSescalarSe
 related
 recomendados
 ribbon
@@ -116269,6 +116272,7 @@ recargados
 rellenarlo
 retrasando
 retroalimenta
+readyOUTPUTSescalarSe
 notes
 notas
 nuevas
@@ -164916,6 +164920,8 @@ Contin
 Citar
 CARGA
 Complete
+CRMEMORY
+CHAROUTPUTS
 Instalados
 Instalado
 Instalar
@@ -175213,6 +175219,8 @@ Imitar
 Introduce
 IdentificadorSecci
 Indicador
+INTERFACEIdentificadorSecci
+IOBUSCOMBUS
 Funci
 File
 Fase
@@ -223106,6 +223114,7 @@ procesando
 posicionando
 planteemos
 progresa
+printOUTPUTSescalarComando
 min
 mica
 movimiento
@@ -262463,6 +262472,7 @@ entrante
 ensambla
 excluyente
 especificadas
+establezca
 Motor
 Media
 Mantiene
@@ -312300,6 +312310,7 @@ DBUS
 Desempaquetado
 Declaraciones
 Detiene
+Demultiplexaci
 Remotely
 Raz
 Revisa
@@ -322711,6 +322722,7 @@ Resetting
 Ruido
 Refuerza
 Rangos
+Retardo
 Hider
 Hace
 Herramientas
@@ -339964,6 +339976,8 @@ fallando
 flashtest
 finalice
 finaliza
+firstMEMORYescalar
+feedOUTPUTSescalarComando
 haya
 hace
 hacer
@@ -389330,6 +389344,7 @@ ocupada
 oRolACMEMORY
 overbar
 outreq
+oRolDRMEMORY
 junto
 json
 jer
@@ -428745,6 +428760,7 @@ wxVHy
 wbUc
 wUUl
 wNEWS
+waitINPUTSescalarSe
 xima
 xeles
 xy
