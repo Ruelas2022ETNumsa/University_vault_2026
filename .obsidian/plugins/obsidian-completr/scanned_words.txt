@@ -86250,6 +86250,7 @@ suministra
 solicitud
 siguiera
 scratchpad
+serializa
 vault
 vil
 ver
@@ -389345,6 +389346,7 @@ oRolACMEMORY
 overbar
 outreq
 oRolDRMEMORY
+otorg
 junto
 json
 jer

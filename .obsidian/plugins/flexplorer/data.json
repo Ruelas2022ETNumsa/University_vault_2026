@@ -29,7 +29,6 @@
         "notebooklm_question.md",
         "h.md",
         "g.md",
-        "Untitled.md",
         "f.md",
         "e.md",
         "d.md",
@@ -5616,8 +5615,7 @@
         "ETN825_AHPL 3.md",
         "ETN825_AHPL 4.md",
         "ETN825_AHPL 5.md",
-        "ETN825_AHPL 6.md",
-        "ETN825_AHPL 7.md"
+        "ETN825_AHPL 6.md"
       ]
     },
     "Semesters/Sem_07": {
@@ -5906,14 +5904,6 @@
       "isHidden": false
     },
     "respuestas de gemini+fuentes.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/guides/ETN825/ETN825_AHPL 7.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Untitled.md": {
       "isPinned": false,
       "isHidden": false
     },
