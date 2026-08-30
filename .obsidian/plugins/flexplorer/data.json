@@ -35,7 +35,8 @@
         "a.md",
         "b.md",
         "c.md",
-        "825core.md"
+        "825core.md",
+        "Untitled.md"
       ]
     },
     "MOC": {
@@ -2041,8 +2042,7 @@
       "sortOrder": "custom",
       "customOrder": [
         "ETN1015-study.md",
-        "ETN1015-matlab.md",
-        "ETN1015-matlab 1.md"
+        "ETN1015-matlab.md"
       ]
     },
     "_app/notebooklm/prompts/ETN1015/ETN1015-study.md": {
@@ -2090,7 +2090,8 @@
         "Practica 1.md",
         "Practica 2.md",
         "Avance",
-        "L1_1015"
+        "L1_1015",
+        "L2_1015"
       ]
     },
     "Semesters/Sem_08/ETN1015/_library_ETN1015.md": {
@@ -3744,10 +3745,6 @@
       "isHidden": false
     },
     "_app/notebooklm/guides/ETN1015/ETN1015_octave.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/prompts/ETN1015/ETN1015-matlab 1.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -5933,6 +5930,27 @@
       "isHidden": false
     },
     "825core.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_08/ETN1015/L2_1015": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "E1L2.md",
+        "E2L2.md"
+      ]
+    },
+    "Semesters/Sem_08/ETN1015/L2_1015/E1L2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_08/ETN1015/L2_1015/E2L2.md": {
       "isPinned": false,
       "isHidden": false
     }

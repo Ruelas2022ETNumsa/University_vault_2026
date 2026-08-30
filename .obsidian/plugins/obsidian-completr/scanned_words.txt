@@ -19736,6 +19736,7 @@ TRANSFERENCIA
 Transcrib
 Terminaci
 Tests
+Tallos
 Sistema
 Sync
 Save
@@ -39120,6 +39121,7 @@ Permanente
 Printer
 PARES
 PasoOperaci
+PALANI
 del
 date
 de
@@ -106326,6 +106328,8 @@ apilamiento
 apilar
 afectando
 acceptOUTPUTSescalarSe
+antihorario
+antihoraria
 related
 recomendados
 ribbon
@@ -125588,6 +125592,7 @@ nCondici
 nEstado
 nTama
 ncronos
+ntricos
 created
 commit
 cada
@@ -136148,6 +136153,7 @@ constituida
 compiladores
 continuando
 conformar
+circulante
 updated
 un
 universo
@@ -164923,6 +164929,8 @@ CARGA
 Complete
 CRMEMORY
 CHAROUTPUTS
+CONVOLUCI
+CIRCULAR
 Instalados
 Instalado
 Instalar
@@ -233818,6 +233826,7 @@ mathop
 memorias
 menci
 multiplexor
+multiplican
 YAML
 Ya
 You
@@ -291123,6 +291132,7 @@ look
 labeled
 levante
 ltimas
+lazo
 incluyendo
 im
 instalar
@@ -302094,6 +302104,7 @@ imite
 inconsistencia
 inreq
 incrementada
+ilustrar
 Dependencia
 Dropbox
 Dataview
@@ -339979,6 +339990,7 @@ finalice
 finaliza
 firstMEMORYescalar
 feedOUTPUTSescalarComando
+feedback
 haya
 hace
 hacer
