@@ -164969,6 +164969,7 @@ CIRCULAR
 Calcul
 Clockwise
 Corresponde
+Conc
 Instalados
 Instalado
 Instalar
@@ -213793,6 +213794,7 @@ Accumulator
 Aplicado
 Apareci
 Avanza
+Avance
 push
 pull
 para
@@ -312381,6 +312383,7 @@ Declaraciones
 Detiene
 Demultiplexaci
 Dadas
+Disposici
 Remotely
 Raz
 Revisa
