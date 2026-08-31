@@ -163,8 +163,8 @@ COMBUS: IOBUS(18)
 
 | Símbolo | LaTeX | Operación | Alternativa texto | Ejemplo |
 |---|---|---|---|---|
-| \( \land \) | `\land` | AND | `AND`, `&` | \( csrdy \land \overline{CSBUS_0} \) |
-| \( \lor \) | `\lor` | OR | `OR`, `+` | \( busy \lor first \) |
+| \( \land \) | `\land` | AND | `AND`, `/\` | \( csrdy \land \overline{CSBUS_0} \) |
+| \( \lor \) | `\lor` | OR | `OR`, `\/` | \( busy \lor first \) |
 | \( \oplus \) | `\oplus` | XOR | `XOR`, `@` | \( AC \oplus DR \) |
 | \( \overline{X} \) | `\overline{X}` | NOT | `NOT`, `~` prefijo | \( \overline{CSBUS_0} \), \( \overline{accept} \) |
 
@@ -310,10 +310,10 @@ END
 
 ### N9. NOTACIÓN DE CONDICIÓN COMPUESTA Y SEÑALES NEGADAS
 
-Las condiciones de bifurcación pueden combinar señales con AND (`∧`) o usar señales negadas (barra).
+Las condiciones de bifurcación pueden combinar señales con AND (`/\`) o usar señales negadas (barra).
 
 ```AHPL
-1. → (csrdy ∧ CSBUS̄₀ ∧ CSBUS₁ ∧ CSBUS̄₂)/(1)
+1. → (csrdy /\ CSBUS̄₀ /\ CSBUS₁ /\ CSBUS̄₂)/(1)
 ```
 
 Interpretación:
@@ -368,13 +368,12 @@ COMBUS: IOBUS(18)
 1. ready = 1
    → (~datavalid)/(1)
 2. DR ← IOBUS; accept = 1; first ← 1
-3. CR ← (DR₁₀:₁₇ ∧ first) ∨ (DR₁:₈ ∧ ~first)
-4. feed = RETURN(CR); print = RETURN(CR)
+3. CR ← (DR(10:17) /\ first) \/ (DR(1:8) /\ ~first)
+4. feed = RETURN(CR); print = ~RETURN(CR)
 5. Null
 6. → (wait)/(6)
 7. first ← 0
-   → (first, ~first)/(3, 8)
-8. DEAD END
+   → (first, ~first)/(3, 1)
 END SEQUENCE
 CHAR = CR
 END
@@ -387,11 +386,10 @@ END
 | `1.` | `ready = 1`. Bucle de espera mientras `datavalid = 0` — sale cuando `datavalid = 1`. |
 | `2.` | \( DR \leftarrow IOBUS;\; accept = 1;\; first \leftarrow 1 \) — todo simultáneo. |
 | `3.` | \( CR \leftarrow (DR_{10:17} \land first) \lor (DR_{1:8} \land \overline{first}) \) — acumula carácter en CR. |
-| `4.` | \( feed = RETURN(CR);\; print = RETURN(CR) \) — envía señales a impresora. |
+| `4.` | \( feed = RETURN(CR);\; print = \overline{RETURN(CR)} \) — envía señales a impresora. |
 | `5.` | Paso nulo — sincronización. |
 | `6.` | Bucle de espera mientras \( wait = 1 \) — sale cuando \( wait = 0 \). |
 | `7.` | \( first \leftarrow 0 \). Bifurca: \( first = 1 \rightarrow 3 \), \( first = 0 \rightarrow 1 \). |
-| `8.` | DEAD END. |
 | `CHAR = CR` | Salida combinacional permanente: \( CHAR = CR \) en todo momento. |
 
 ---
@@ -431,11 +429,11 @@ N.  → (señal)/(N)
 % Ejemplo — decodificación por bit 3 del CSBUS:
 → (CSBUS̄₃, CSBUS̄₃, CSBUS₃)/(1, 1A, 3)
 
-% Ejemplo — decodificación de instrucción por IR[0]:
-→ (IR̄[0], IR[0])/(fetch, execute)
+% Ejemplo — decodificación de instrucción por IR(0):
+→ (~IR(0), IR(0))/(fetch, execute)
 
-% Ejemplo — bifurcación triple por IR[0:1]:
-→ (IR[0] ∧ IR̄[1],   IR̄[0] ∧ IR[1],   IR[0] ∧ IR[1])/(paso_A, paso_B, paso_C)
+% Ejemplo — bifurcación triple por IR(0:1):
+→ (IR(0) /\ ~IR(1),   ~IR(0) /\ IR(1),   IR(0) /\ IR(1))/(paso_A, paso_B, paso_C)
 ```
 
 > **Regla:** la suma lógica de todas las condiciones debe ser 1 (una siempre se cumple). Si ninguna se cumple, el comportamiento es indefinido.
@@ -493,7 +491,7 @@ END
 % Ejemplo con transferencia condicional y row catenation (Hill & Peterson 2ª ed., Example 9.3):
 % ss toma el valor 1!0 (es decir, 1 o 0) condicionado por (start, stop)
 END SEQUENCE
-ss * (start ∨ stop) ← (1!0) * (start, stop)
+ss * (start \/ stop) ← (1!0) * (start, stop)
 OPR = PR
 END
 
@@ -505,7 +503,7 @@ END
 
 > **Diferencia con transferencia en paso:** `CR ← valor` ocurre una vez al borde de reloj. `CHAR = CR` es continuo — si CR cambia, CHAR cambia en el mismo instante.
 >
-> **Nota:** las expresiones fuera de secuencia pueden usar `←` (con reloj) o `=` (combinacional) según el tipo de operación. El ejemplo `ss * (start ∨ stop) ← (1!0) * (start, stop)` usa `←` porque `ss` es un registro (MEMORY).
+> **Nota:** las expresiones fuera de secuencia pueden usar `←` (con reloj) o `=` (combinacional) según el tipo de operación. El ejemplo `ss * (start \/ stop) ← (1!0) * (start, stop)` usa `←` porque `ss` es un registro (MEMORY).
 
 ---
 
