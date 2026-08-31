@@ -29,3 +29,7 @@ xlim([-0.5, N-0.5]);
 ylim([0, max(x3)+2]);
 set(gca, 'XTick', m);  % Asegura que las etiquetas del eje x sean enteras
 grid on;
+for k = 1:N
+    text(m(k), x3(k)+1.2, num2str(x3(k)), ...
+        'HorizontalAlignment', 'center', 'FontSize', 10);
+end

@@ -45,18 +45,16 @@ para igualar $N = 5$, requerido por la convolución circular de $N$ puntos:
 \]
 
 \subsubsection*{Método gráfico — Círculos concéntricos (Palani Fig. 2.11)}
-
-\textbf{Círculo exterior} (teal, fijo): $x_1(n)$ en sentido \textbf{CCW}, $\Delta\theta = 72^\circ$ desde $0^\circ$.
-\textbf{Círculo interior} (naranja, móvil): $x_2(n)$ en sentido \textbf{CW} — emula la inversión $x_2(-n)$.
+\textbf{Círculo exterior} (teal, fijo): $x_1(n)$ con muestras uniformemente espaciadas en sentido antihorario.
+\textbf{Círculo interior} (naranja, móvil): $x_2(n)$ con muestras uniformemente espaciadas en sentido horario — emula la inversión $x_2(-n)$.
 Para cada $m$: multiplicar par a par los valores alineados radialmente y sumar.
-Para avanzar de $m$ a $m+1$: rotar el círculo interior $72^\circ$ en sentido CCW.
-
+Para avanzar de $m$ a $m+1$: rotar el círculo interior una muestra en sentido antihorario.
 % ·· Figura introductoria — disposición general ··
 \leavevmode\\[0.5em]
 \noindent
 \begin{minipage}[c]{0.52\textwidth}
     \centering
-    \begin{tikzpicture}[scale=1.2, >=stealth, every node/.style={font=\small}]
+    \begin{tikzpicture}[scale=1.4, >=stealth, every node/.style={font=\small}]
         \draw[thick, teal]   (0,0) circle (2.2cm);
         \draw[thick, orange] (0,0) circle (1.2cm);
         \foreach \angle in {0, 72, 144, 216, 288} {
@@ -70,45 +68,45 @@ Para avanzar de $m$ a $m+1$: rotar el círculo interior $72^\circ$ en sentido CC
         \foreach \angle in {0, 72, 144, 216, 288} {
             \fill[orange] (\angle:1.2cm) circle (3pt);
         }
-        % Etiquetas x1 — exterior CCW
-        \node[teal, anchor=west]       at (0:2.45cm)   {$x_1(0)=2$};
+        % Etiquetas x1 — exterior horario
+        \node[teal, anchor=west]       at (-5:2.20cm)   {$x_1(0)=2$};
         \node[teal, anchor=south west] at (72:2.45cm)  {$x_1(1)=1$};
         \node[teal, anchor=south east] at (144:2.45cm) {$x_1(2)=2$};
         \node[teal, anchor=north east] at (216:2.45cm) {$x_1(3)=1$};
         \node[teal, anchor=north west] at (288:2.45cm) {$x_1(4)=0$};
-        % Etiquetas x2 — interior CW
-        \node[orange, anchor=west]       at (0:1.38cm)   {$x_2(0)=1$};
+        % Etiquetas x2 — interior anti-horario
+        \node[orange, anchor=west]       at (15:1.38cm)   {$x_2(0)=1$};
         \node[orange, anchor=north west] at (288:1.38cm) {$x_2(1)=2$};
         \node[orange, anchor=north east] at (216:1.38cm) {$x_2(2)=3$};
-        \node[orange, anchor=south east] at (144:1.38cm) {$x_2(3)=4$};
+        \node[orange, anchor=south east] at (150:1.38cm) {$x_2(3)=4$};
         \node[orange, anchor=south west] at (72:1.38cm)  {$x_2(4)=5$};
         % Flechas de sentido
         \draw[->, teal,   thick] (2.2cm, 0) arc (0:30:2.2cm)
-            node[midway, above right, font=\scriptsize] {CCW};
+            node[midway, above right, font=\scriptsize] {anti-horario};
         \draw[->, orange, thick] (1.2cm, 0) arc (0:-30:1.2cm)
-            node[midway, below right, font=\scriptsize] {CW};
+            node[midway, below right, font=\scriptsize] {horario};
     \end{tikzpicture}
-    \captionof{figure}{Disposición inicial: $x_1(n)$ exterior CCW, $x_2(n)$ interior CW.}
+    \captionof{figure}{Disposición inicial: $x_1(n)$ exterior anti-horario, $x_2(n)$ interior horario.}
 \end{minipage}%
 \hfill
-\begin{minipage}[c]{0.44\textwidth}
+\begin{minipage}[c]{0.40\textwidth}
     \small
     Los valores de $x_1(n)$ permanecen fijos en el círculo exterior durante todo el cálculo.\\[0.5em]
     Los valores de $x_2(n)$ rotan en el círculo interior: para el paso $m$, el valor
-    $x_2(m)$ queda alineado con $x_1(0)$ en $0^\circ$.\\[0.5em]
-    La posición CW implica que, al alinear $x_2(m)$ con $x_1(0)$, los demás valores
-    quedan en orden $x_2(m{-}1),\,x_2(m{-}2),\dots$ siguiendo el sentido CCW exterior.
+    $x_2(m)$ queda alineado con $x_1(0)$.\\[0.5em]
+    La posición anti-horario implica que, al alinear $x_2(m)$ con $x_1(0)$, los demás valores
+    quedan en orden $x_2(m{-}1),\,x_2(m{-}2),\dots$ siguiendo el sentido horario exterior.
 \end{minipage}
 
 %************************************************************
 \newpage
 % ·· m = 0 ··
-\paragraph{Paso $m = 0$ — Sin rotación.}
+\paragraph{Paso $m = 0$ — Posición inicial.}
 \leavevmode\\[0.5em]
 \noindent
-\begin{minipage}[c]{0.45\textwidth}
+\begin{minipage}[c]{0.40\textwidth}
     \centering
-    \begin{tikzpicture}[scale=0.8, >=stealth, every node/.style={font=\small}]
+    \begin{tikzpicture}[scale=0.5, >=stealth, every node/.style={font=\small}]
         \draw[thick, teal]   (0,0) circle (2.2cm);
         \draw[thick, orange] (0,0) circle (1.2cm);
         
@@ -132,13 +130,12 @@ Para avanzar de $m$ a $m+1$: rotar el círculo interior $72^\circ$ en sentido CC
         \node[orange, anchor=south east] at (144:1.35cm) {$4$};
         \node[orange, anchor=south west] at (72:1.35cm)  {$5$};
     \end{tikzpicture}
-    \captionof{figure}{$m=0$: $x_2(0-n)$.}
+    %\captionof{figure}{$m=0$: $x_2(0-n)$.}
 \end{minipage}%
 \hfill
-\begin{minipage}[c]{0.50\textwidth}
+\begin{minipage}[c]{0.55\textwidth}
     \begin{align*}
-        x_3(0) &= (2{\cdot}1) + (1{\cdot}5) + (2{\cdot}4) \\
-               &\phantom{{}=} + (1{\cdot}3) + (0{\cdot}2) \\[4pt]
+        x_3(0) &= (2{\cdot}1) + (1{\cdot}5) + (2{\cdot}4) + (1{\cdot}3) + (0{\cdot}2) \\[4pt]
         x_3(0) &= 2 + 5 + 8 + 3 + 0 \\[4pt]
         x_3(0) &= \mathbf{18}
     \end{align*}
@@ -147,12 +144,12 @@ Para avanzar de $m$ a $m+1$: rotar el círculo interior $72^\circ$ en sentido CC
 \vspace{1em}
 %************************************************************
 % ·· m = 1 ··
-\paragraph{Paso $m = 1$ — Rotación de $72^\circ$ CCW.}
+\paragraph{Paso $m = 1$ — Primera rotación.}
 \leavevmode\\[0.5em]
 \noindent
-\begin{minipage}[c]{0.45\textwidth}
+\begin{minipage}[c]{0.40\textwidth}
     \centering
-    \begin{tikzpicture}[scale=0.8, >=stealth, every node/.style={font=\small}]
+    \begin{tikzpicture}[scale=0.5, >=stealth, every node/.style={font=\small}]
         \draw[thick, teal]   (0,0) circle (2.2cm);
         \draw[thick, orange] (0,0) circle (1.2cm);
         \draw[<-, gray, thick] (0.55cm,0) arc (0:-270:0.55cm);
@@ -172,13 +169,12 @@ Para avanzar de $m$ a $m+1$: rotar el círculo interior $72^\circ$ en sentido CC
         \node[orange, anchor=south east] at (144:1.35cm) {$5$};
         \node[orange, anchor=south west] at (72:1.35cm)  {$1$};
     \end{tikzpicture}
-    \captionof{figure}{$m=1$: $x_2(1-n)$.}
+    %\captionof{figure}{$m=1$: $x_2(1-n)$.}
 \end{minipage}%
 \hfill
-\begin{minipage}[c]{0.50\textwidth}
+\begin{minipage}[c]{0.55\textwidth}
     \begin{align*}
-        x_3(1) &= (2{\cdot}2) + (1{\cdot}1) + (2{\cdot}5) \\
-               &\phantom{{}=} + (1{\cdot}4) + (0{\cdot}3) \\[4pt]
+        x_3(1) &= (2{\cdot}2) + (1{\cdot}1) + (2{\cdot}5) + (1{\cdot}4) + (0{\cdot}3) \\[4pt]
         x_3(1) &= 4 + 1 + 10 + 4 + 0 \\[4pt]
         x_3(1) &= \mathbf{19}
     \end{align*}
@@ -186,12 +182,12 @@ Para avanzar de $m$ a $m+1$: rotar el círculo interior $72^\circ$ en sentido CC
 \vspace{1em}
 %************************************************************
 % ·· m = 2 ··
-\paragraph{Paso $m = 2$ — Rotación acumulada de $144^\circ$ CCW.}
+\paragraph{Paso $m = 2$ — Segunda rotación.}
 \leavevmode\\[0.5em]
 \noindent
-\begin{minipage}[c]{0.45\textwidth}
+\begin{minipage}[c]{0.40\textwidth}
     \centering
-    \begin{tikzpicture}[scale=0.8, >=stealth, every node/.style={font=\small}]
+    \begin{tikzpicture}[scale=0.5, >=stealth, every node/.style={font=\small}]
         \draw[thick, teal]   (0,0) circle (2.2cm);
         \draw[thick, orange] (0,0) circle (1.2cm);
         \draw[<-, gray, thick] (0.55cm,0) arc (0:-270:0.55cm);
@@ -211,28 +207,27 @@ Para avanzar de $m$ a $m+1$: rotar el círculo interior $72^\circ$ en sentido CC
         \node[orange, anchor=south east] at (144:1.35cm) {$1$};
         \node[orange, anchor=south west] at (72:1.35cm)  {$2$};
     \end{tikzpicture}
-    \captionof{figure}{$m=2$: $x_2(2-n)$.}
+    %\captionof{figure}{$m=2$: $x_2(2-n)$.}
 \end{minipage}%
 \hfill
-\begin{minipage}[c]{0.50\textwidth}
+\begin{minipage}[c]{0.55\textwidth}
     \begin{align*}
-        x_3(2) &= (2{\cdot}3) + (1{\cdot}2) + (2{\cdot}1) \\
-               &\phantom{{}=} + (1{\cdot}5) + (0{\cdot}4) \\[4pt]
+        x_3(2) &= (2{\cdot}3) + (1{\cdot}2) + (2{\cdot}1) + (1{\cdot}5) + (0{\cdot}4) \\[4pt]
         x_3(2) &= 6 + 2 + 2 + 5 + 0 \\[4pt]
         x_3(2) &= \mathbf{15}
     \end{align*}
 \end{minipage}
 
 \vspace{1em}
-\newpage
+
 %************************************************************
 % ·· m = 3 ··
-\paragraph{Paso $m = 3$ — Rotación acumulada de $216^\circ$ CCW.}
+\paragraph{Paso $m = 3$ — Tercera rotación.}
 \leavevmode\\[0.5em]
 \noindent
-\begin{minipage}[c]{0.45\textwidth}
+\begin{minipage}[c]{0.40\textwidth}
     \centering
-    \begin{tikzpicture}[scale=0.8, >=stealth, every node/.style={font=\small}]
+    \begin{tikzpicture}[scale=0.5, >=stealth, every node/.style={font=\small}]
         \draw[thick, teal]   (0,0) circle (2.2cm);
         \draw[thick, orange] (0,0) circle (1.2cm);
         \draw[<-, gray, thick] (0.55cm,0) arc (0:-270:0.55cm);
@@ -252,13 +247,12 @@ Para avanzar de $m$ a $m+1$: rotar el círculo interior $72^\circ$ en sentido CC
         \node[orange, anchor=south east] at (144:1.35cm) {$2$};
         \node[orange, anchor=south west] at (72:1.35cm)  {$3$};
     \end{tikzpicture}
-    \captionof{figure}{$m=3$: $x_2(3-n)$.}
+    %\captionof{figure}{$m=3$: $x_2(3-n)$.}
 \end{minipage}%
 \hfill
-\begin{minipage}[c]{0.50\textwidth}
+\begin{minipage}[c]{0.55\textwidth}
     \begin{align*}
-        x_3(3) &= (2{\cdot}4) + (1{\cdot}3) + (2{\cdot}2) \\
-               &\phantom{{}=} + (1{\cdot}1) + (0{\cdot}5) \\[4pt]
+        x_3(3) &= (2{\cdot}4) + (1{\cdot}3) + (2{\cdot}2) + (1{\cdot}1) + (0{\cdot}5) \\[4pt]
         x_3(3) &= 8 + 3 + 4 + 1 + 0 \\[4pt]
         x_3(3) &= \mathbf{16}
     \end{align*}
@@ -267,12 +261,12 @@ Para avanzar de $m$ a $m+1$: rotar el círculo interior $72^\circ$ en sentido CC
 \vspace{1em}
 %************************************************************
 % ·· m = 4 ··
-\paragraph{Paso $m = 4$ — Rotación acumulada de $288^\circ$ CCW.}
+\paragraph{Paso $m = 4$ — Cuarta rotación.}
 \leavevmode\\[0.5em]
 \noindent
-\begin{minipage}[c]{0.45\textwidth}
+\begin{minipage}[c]{0.40\textwidth}
     \centering
-    \begin{tikzpicture}[scale=0.8, >=stealth, every node/.style={font=\small}]
+    \begin{tikzpicture}[scale=0.5, >=stealth, every node/.style={font=\small}]
         \draw[thick, teal]   (0,0) circle (2.2cm);
         \draw[thick, orange] (0,0) circle (1.2cm);
         \draw[<-, gray, thick] (0.55cm,0) arc (0:-270:0.55cm);
@@ -292,13 +286,12 @@ Para avanzar de $m$ a $m+1$: rotar el círculo interior $72^\circ$ en sentido CC
         \node[orange, anchor=south east] at (144:1.35cm) {$3$};
         \node[orange, anchor=south west] at (72:1.35cm)  {$4$};
     \end{tikzpicture}
-    \captionof{figure}{$m=4$: $x_2(4-n)$.}
+    %\captionof{figure}{$m=4$: $x_2(4-n)$.}
 \end{minipage}%
 \hfill
-\begin{minipage}[c]{0.50\textwidth}
+\begin{minipage}[c]{0.55\textwidth}
     \begin{align*}
-        x_3(4) &= (2{\cdot}5) + (1{\cdot}4) + (2{\cdot}3) \\
-               &\phantom{{}=} + (1{\cdot}2) + (0{\cdot}1) \\[4pt]
+        x_3(4) &= (2{\cdot}5) + (1{\cdot}4) + (2{\cdot}3) + (1{\cdot}2) + (0{\cdot}1) \\[4pt]
         x_3(4) &= 10 + 4 + 6 + 2 + 0 \\[4pt]
         x_3(4) &= \mathbf{22}
     \end{align*}
@@ -335,16 +328,15 @@ $4$ & $2{\cdot}5 + 1{\cdot}4 + 2{\cdot}3 + 1{\cdot}2 + 0{\cdot}1$ & $\mathbf{22}
 \[
     \boxed{x_3(m) = \{18,\ 19,\ 15,\ 16,\ 22\}, \qquad m = 0,1,2,3,4}
 \]
-
 \begin{figure}[H]
     \centering
-    \rule{\linewidth}{0.4pt}\\[4pt]
-    {\small\itshape [Gráfica: $x_3(m)$ — diagrama de tallo, $m = 0,\dots,4$]}\\[4pt]
-    \rule{\linewidth}{0.4pt}
+    \includegraphics[width=1\linewidth]{Anexos/Lab2/image.png}
     \caption{Resultado de la convolución circular $x_3(m) = x_1(n) \circledcirc_5 x_2(n)$.}
 \end{figure}
 
 % ──────────────────────────────────────────────────────────────────────
+
+\newpage
 \subsection*{Código MATLAB}
 
 \lstinputlisting[style=matlab_dark,
