@@ -19738,6 +19738,7 @@ Transcrib
 Terminaci
 Tests
 Tallos
+Transponemos
 Sistema
 Sync
 Save
@@ -164970,6 +164971,7 @@ Calcul
 Clockwise
 Corresponde
 Conc
+Construimos
 Instalados
 Instalado
 Instalar
@@ -213795,6 +213797,7 @@ Aplicado
 Apareci
 Avanza
 Avance
+Asegura
 push
 pull
 para
@@ -389423,6 +389426,7 @@ overbar
 outreq
 oRolDRMEMORY
 otorg
+otimes
 junto
 json
 jer
@@ -505067,6 +505071,7 @@ XAEw
 XdUleT
 XucR
 XIMA
+XTick
 ßK
 ßH
 ßu
