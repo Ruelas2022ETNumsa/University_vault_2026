@@ -26,7 +26,8 @@ Basado en el Ejemplo 2.22 de S. Palani, considerar las siguientes secuencias:
 
 \[
     x_1(n) = \{2,\ 1,\ 2,\ 1\}, \quad n = 0,1,2,3
-    \qquad
+\]
+\[
     x_2(n) = \{1,\ 2,\ 3,\ 4,\ 5\}, \quad n = 0,1,2,3,4
 \]
 
@@ -41,8 +42,9 @@ Como $x_1(n)$ tiene 4 muestras y $x_2(n)$ tiene 5, se agrega un cero al final
 para igualar $N = 5$, requerido por la convolución circular de $N$ puntos:
 
 \[
-    x_1(n) \xrightarrow{\text{zero-pad}} \{2,\ 1,\ 2,\ 1,\ 0\}, \quad n = 0,1,2,3,4
+    x_1(n) = \{2,\ 1,\ 2,\ 1,\ \underset{\textcolor{orange}{\uparrow}\,\scriptsize\textcolor{orange}{\text{zero-pad}}}{0 \}  \quad , \quad  } n = 0,1,2,3,4
 \]
+
 
 \subsubsection*{Método gráfico — Círculos concéntricos (Palani Fig. 2.11)}
 \textbf{Círculo exterior} (teal, fijo): $x_1(n)$ con muestras uniformemente espaciadas en sentido antihorario.
