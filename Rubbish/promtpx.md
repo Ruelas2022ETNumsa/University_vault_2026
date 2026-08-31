@@ -7,6 +7,9 @@ NUNCA KaTeX display \[ \] para módulos o secuencias AHPL — solo bloques de c�
 Rangos de bits en texto plano: DR(10:17) — no DR[10:17] ni DR₁₀:₁₇. El : dentro del paréntesis indica rango; (N) sin : indica tamaño.
 MEMORY/OUTPUTS/COMBUS: vectores SIEMPRE con tamaño. DR(18) no DR. CHAR(8) no CHAR.
 NUNCA usar & como AND ni | como OR en bloques de código AHPL — usar /\ para AND y \/ para OR.
+~ como prefijo para negados en bloques de código AHPL — no barra superior ni NOT(). Ejemplo: ~first, ~CSBUS(3).
+En bifurcaciones múltiples → (cond1, cond2, cond3)/(dest1, dest2, dest3): una misma condición puede repetirse para lanzar dos secuencias paralelas simultáneas — no es error. Ejemplo: → (~CSBUS(3), ~CSBUS(3), CSBUS(3))/(1, 1A, 3).
+
 #### Registros (MEMORY)
 | Notación | Significado | Ejemplo |
 |-|-|-|

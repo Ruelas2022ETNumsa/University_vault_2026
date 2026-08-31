@@ -96463,6 +96463,7 @@ vuelva
 vspace
 verbatim
 very
+valga
 audience
 activo
 auto
@@ -116371,6 +116372,7 @@ redefin
 rotating
 rulecolor
 rounded
+repetida
 notes
 notas
 nuevas
@@ -136277,6 +136279,9 @@ calculadora
 cifrado
 converter
 compila
+cuatrivault
+concluido
+cargarse
 updated
 un
 universo
@@ -146588,6 +146593,7 @@ udNn
 uoPn
 uVJt
 unir
+usemos
 Galaxy
 Git
 Gr
@@ -184892,6 +184898,7 @@ Flag
 Fetch
 Following
 FontSize
+Finaliza
 Estado
 Excalidraw
 EPUBs
@@ -195387,6 +195394,7 @@ Extras
 Encabezados
 EXTRAS
 ESTILOS
+Especifica
 Obsidian
 OmniSearch
 Ocultar
@@ -213898,6 +213906,8 @@ Apareci
 Avanza
 Avance
 Asegura
+Asterisco
+Admiraci
 push
 pull
 para
@@ -223285,6 +223295,7 @@ pies
 port
 process
 programs
+propagar
 min
 mica
 movimiento
@@ -262661,6 +262672,7 @@ enumerate
 easylist
 enumitem
 east
+enable
 Motor
 Media
 Mantiene
@@ -302320,6 +302332,8 @@ itemsep
 inte
 inner
 indices
+interrumpiendo
+impacta
 Dependencia
 Dropbox
 Dataview

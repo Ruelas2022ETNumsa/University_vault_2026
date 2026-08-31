@@ -1,17 +1,19 @@
-```text
-5. → (~IR & ~IR, ~IR & IR, IR) / (10, 20, 30)
+```ahpl
+1. -> (~IR(0) /\ ~IR(1), ~IR(0) /\ IR(1), IR(0))/(5, 8, 12)
 ```
 
-| Paso | Operación | Condición | Estado resultante |
-|---|---|---|---|
-| `5.` | \( \rightarrow (\overline{IR}_0 \land \overline{IR}_1, \overline{IR}_0 \land IR_1, IR_0)/(10, 20, 30) \) | — | **Bifurcación de tres vías mutuamente excluyente** según el valor de los bits \( IR_0 \) e \( IR_1 \). |
+### **Explicación de las ramas y combinaciones**
 
-### **Activación de las ramas según la combinación de bits**
+Las tres condiciones especificadas en la bifurcación son **mutuamente excluyentes** y cubren la totalidad del espacio de estados de los dos bits evaluados:
 
-Las tres condiciones especificadas en la tupla son **mutuamente excluyentes** y su suma lógica es igual a **1**:
+1. **Primera rama (Destino `5`):** 
+   * **Condición:** \( \overline{IR}_{0} \land \overline{IR}_{1} \) (en el bloque de código: `~IR(0) /\ ~IR(1)`).
+   * **Combinación activa:** Se activa únicamente cuando **`IR(0) = 0` e `IR(1) = 0`** (combinación binaria **`00`**).
 
-*   **Combinación `00` (\( IR_0 = 0 \) e \( IR_1 = 0 \)):** Satisface la primera condición, \( \overline{IR}_0 \land \overline{IR}_1 \). El flujo de control salta al primer destino, que corresponde al **paso 10**.
-*   **Combinación `01` (\( IR_0 = 0 \) e \( IR_1 = 1 \)):** Satisface la segunda condición, \( \overline{IR}_0 \land IR_1 \). El flujo de control salta al segundo destino, que corresponde al **paso 20**.
-*   **Combinaciones `10` y `11` (\( IR_0 = 1 \)):** Satisface la tercera condición, \( IR_0 \), de manera independiente al estado del bit \( IR_1 \). El flujo de control salta al tercer destino, correspondiente al **paso 30**.
+2. **Segunda rama (Destino `8`):** 
+   * **Condición:** \( \overline{IR}_{0} \land IR_{1} \) (en el bloque de código: `~IR(0) /\ IR(1)`).
+   * **Combinación activa:** Se activa únicamente cuando **`IR(0) = 0` e `IR(1) = 1`** (combinación binaria **`01`**).
 
-💡 ¿Te gustaría ver cómo se realiza la síntesis física y la implementación de las ecuaciones de compuertas lógicas de control para este paso de bifurcación de tres vías?
+3. **Tercera rama (Destino `12`):** 
+   * **Condición:** \( IR_{0} \) (en el bloque de código: `IR(0)`).
+   * **Combinación activa:** Se activa cuando **`IR(0) = 1`**, sin importar el estado del bit `IR(1)`. Esto agrupa y resuelve de manera simplificada las combinaciones binarias **`10`** y **`11`**.

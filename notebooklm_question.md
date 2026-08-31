@@ -12,7 +12,7 @@
 Escribí un módulo AHPL completo para una interfaz simple.
 El módulo debe:
 - Esperar una señal de entrada llamada `start`
-- Cuando `start = 1`: cargar el registro `DR[8]` desde el bus `IOBUS[8]`
+- Cuando `start = 1`: cargar el registro `DR(8)` desde el bus `IOBUS(8)`
 - Activar la señal de salida `done` por un ciclo
 - Terminar en DEAD END
 
@@ -47,6 +47,7 @@ y salta a tres destinos distintos según la combinación de bits.
 
 Mostrá el paso de bifurcación con formato → (condiciones)/(destinos)
 donde las condiciones son mutuamente excluyentes.
+Usá `/\` para AND y `~` como prefijo para negados en el bloque de código.
 Después explicá qué combinación de bits activa cada rama.
 ```
 
