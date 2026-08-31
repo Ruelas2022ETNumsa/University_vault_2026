@@ -19756,6 +19756,8 @@ Terminaci
 Tests
 Tallos
 Transponemos
+TnsTools
+Taitava
 Sistema
 Sync
 Save
@@ -48444,6 +48446,8 @@ deseara
 distribuido
 derv
 database
+disparar
+disparen
 Vault
 Verificar
 Variables
@@ -86314,6 +86318,7 @@ simplificadas
 subprocess
 startstop
 south
+sononicola
 vault
 vil
 ver
@@ -136268,6 +136273,10 @@ centered
 corners
 cylinder
 ciclicamente
+calculadora
+cifrado
+converter
+compila
 updated
 un
 universo
@@ -165056,6 +165065,7 @@ CODIFICACI
 CAJAS
 CIRCUITIKZ
 COMANDOS
+Calculadora
 Instalados
 Instalado
 Instalar
@@ -223274,6 +223284,7 @@ personalizables
 pies
 port
 process
+programs
 min
 mica
 movimiento
@@ -273315,6 +273326,7 @@ Modific
 MBULO
 MULTI
 Modern
+MaksimirKurtov
 Lectura
 LaTeX
 Linter
@@ -282521,6 +282533,7 @@ Localizaci
 Listados
 LISTADOS
 Listado
+Luna
 links
 las
 listar
@@ -291325,6 +291338,7 @@ lineRed
 lineBlue
 lineGreen
 lineComent
+llamen
 incluyendo
 im
 instalar
@@ -312527,6 +312541,7 @@ Demultiplexaci
 Dadas
 Disposici
 DeclareGraphicsExtensions
+DOCX
 Remotely
 Raz
 Revisa
@@ -331015,6 +331030,7 @@ Hallazgo
 Halt
 Haciendo
 HorizontalAlignment
+Hackspire
 filtrar
 formato
 faltantes
@@ -379772,6 +379788,7 @@ NRwIu
 NaVAJkrV
 NUUNn
 Niega
+Nspire
 originales
 observatory
 oficial
@@ -399934,6 +399951,7 @@ junta
 junction
 jointi
 justify
+jsmorabito
 Qu
 Qui
 Quick
@@ -466859,6 +466877,7 @@ KzIz
 KOBl
 KxsO
 KgZq
+Kiritiop
 Zonas
 Zoom
 Zona
@@ -505235,6 +505254,7 @@ XdUleT
 XucR
 XIMA
 XTick
+XLSX
 ßK
 ßH
 ßu

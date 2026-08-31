@@ -1487,7 +1487,8 @@
       "customOrder": [
         "_ideas_1_mcp-reemplazo-github.md",
         "_ideas_1_apps_2brain.md",
-        "_ideas_0_shellcmd.md"
+        "_ideas_0_shellcmd.md",
+        "_ideas_1_ti-nspire-obsidian-workflow.md"
       ]
     },
     "_hangar/blueprint/_ideas_0_shellcmd.md": {
@@ -4002,7 +4003,8 @@
       "customOrder": [
         "C00-Caratula.tex",
         "Laboratorio1_1015.tex",
-        "Laboratorio2_1015.tex"
+        "Laboratorio2_1015.tex",
+        "Laboratorio2_1015v1.tex"
       ]
     },
     "Latex/ETN1015/Capitulos/C00-Caratula.tex": {
@@ -5977,6 +5979,14 @@
       "isHidden": false
     },
     "Latex/ETN1015/Anexos/Lab2/L2E1.m": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/ETN1015/Capitulos/Laboratorio2_1015v1.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/blueprint/_ideas_1_ti-nspire-obsidian-workflow.md": {
       "isPinned": false,
       "isHidden": false
     }
