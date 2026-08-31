@@ -9408,6 +9408,7 @@ terminator
 thick
 trapezium
 tikzlastnode
+traerlo
 ToDo
 Templater
 Text
@@ -30184,6 +30185,7 @@ Stepping
 Satisface
 Subfiguras
 Stealth
+Scratchpad
 Plugins
 Pendientes
 Plugin
@@ -195400,6 +195402,7 @@ Encabezados
 EXTRAS
 ESTILOS
 Especifica
+Entradas
 Obsidian
 OmniSearch
 Ocultar
@@ -302347,6 +302350,7 @@ impacta
 interconecta
 impresas
 inversores
+inventadas
 Dependencia
 Dropbox
 Dataview
@@ -340253,6 +340257,7 @@ framexleftmargin
 fullflexible
 fondos
 figurename
+fabricar
 haya
 hace
 hacer
@@ -379817,6 +379822,7 @@ NaVAJkrV
 NUUNn
 Niega
 Nspire
+Negados
 originales
 observatory
 oficial
@@ -447778,6 +447784,7 @@ WSLe
 WvcC
 WSvM
 WKAM
+Workarounds
 JavaScript
 JSON
 JERARQU

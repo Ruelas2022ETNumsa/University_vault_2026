@@ -318,9 +318,9 @@ Las condiciones de bifurcación pueden combinar señales con AND (`/\`) o usar s
 
 Interpretación:
 - `csrdy` — csrdy = 1
-- `CSBUS̄₀` — bit 0 del CSBUS = 0 (negado)
-- `CSBUS₁` — bit 1 del CSBUS = 1
-- `CSBUS̄₂` — bit 2 del CSBUS = 0 (negado)
+- `~CSBUS(0)` — bit 0 del CSBUS = 0 (negado)
+- `CSBUS(1)` — bit 1 del CSBUS = 1
+- `~CSBUS(2)` — bit 2 del CSBUS = 0 (negado)
 - Toda la condición: `csrdy AND (NOT CSBUS₀) AND CSBUS₁ AND (NOT CSBUS₂)`
 - Si la condición es **falsa** → va al paso `(1)` (bucle de espera).
 - Si es **verdadera** → continúa al paso 2.

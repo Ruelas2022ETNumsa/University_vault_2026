@@ -1,34 +1,20 @@
-En los bloques de código AHPL del libro de Hill & Peterson (*Digital Systems: Hardware Organization & Design*, 2ª ed.), el NOT de una señal **se escribe exclusivamente usando una barra superior (overbar) sobre el símbolo de la señal** (por ejemplo, \( \overline{X} \)).
+```ahpl
+2. MEMADBUS = PC; read = 1
+   → (~SYN(busy))/(2)
+3. null
+   → (SYN(busy))/(3)
+4. NO DELAY
+   OBUS = 0, DATAOUT;
+   IR ← OBUS(1:18)
+```
 
-**No se utiliza la tilde `~` ni la notación funcional `NOT()`** en las secuencias de control numeradas impresas del libro. El uso del prefijo `~` es únicamente una convención de sustitución tipográfica aceptada para transcribir el código a texto plano o markdown (como en compiladores y guías de sintaxis digitales).
 
-A continuación se presentan exactamente dos ejemplos reales extraídos de las secuencias de control numeradas del libro:
+### Detalles de funcionamiento de la secuencia modificada
 
----
+1. **Paso 2 (Petición de lectura):** Debido a la eliminación del registro `MA` en la CPU con memoria asíncrona, se conecta directamente el contador de programa al bus de direcciones de memoria (**`MEMADBUS = PC`**). Se levanta la señal de lectura (**`read = 1`**) y se realiza un bucle de espera activa (polling) hasta que la memoria responda activando su señal de ocupado (**`SYN(busy) = 1`**), lo que acusa recibo de la solicitud.
+2. **Paso 3 (Espera de ciclo):** Es un paso de espera pasiva (**`null`**) en el que el secuenciador permanece retenido mientras la memoria realiza su ciclo interno (**`SYN(busy) = 1`**). Una vez concluido el ciclo de lectura, la memoria coloca el dato en las líneas de salida y desactiva su bandera de ocupado, permitiendo al CPU salir del bucle.
+3. **Paso 4 (Captura directa sin retraso):** Se define como un paso de transferencia directa sin ciclo de reloj adicional (**`NO DELAY`**). Se conecta la línea de datos obtenida de la memoria al bus interno concatenando un cero de relleno (**`OBUS = 0, DATAOUT`**) y se captura directamente sobre el registro de instrucción (**`IR ← OBUS(1:18)`**) evitando el paso intermedio por el registro `MD`.
 
-### **Ejemplo 1: Página 248 (Capítulo 7, Sección 7.5)**
-En la secuencia de ejemplo utilizada para explicar el proceso de compilación del hardware, el paso 2 realiza una bifurcación condicional de tres vías evaluando los bits del registro \( A \):
-
-* **Representación tipográfica del libro físico:**
-  \( 2. \rightarrow (A_0 \land \overline{A}_1 \land \overline{A}_2)/(1) \)
-* **Transcripción estándar en texto plano:**
-  ```ahpl
-  2. -> (A0 /\ ~A1 /\ ~A2)/(1)
-  ```
-  *(Cita: Hill & Peterson 2ª ed., pág. 248)*
-
----
-
-### **Ejemplo 2: Página 291 (Capítulo 7, Sección 7.3)**
-En la sección donde se ilustra la mejora de circuitos y la simplificación de estructuras de control equivalentes, el paso 1 evalúa la señal de control \( a \) para decidir el salto:
-
-* **Representación tipográfica del libro físico:**
-  \( 1. \rightarrow (\overline{a}, a)/(2, 3) \)
-* **Transcripción estándar en texto plano:**
-  ```ahpl
-  1. -> (~a, a)/(2, 3)
-  ```
-  *(Cita: Hill & Peterson 2ª ed., pág. 291)*
-
----
-¿Te gustaría que analicemos la traducción de estas condiciones de bifurcación a compuertas lógicas (AND/OR e inversores) tal como se muestra en los diagramas de realización física del libro?
+[[825 Hill Peterson Digital Systems Hardware Organization Design 7.pdf#page=230]]
+*Fig. 7.8 · Instruction fetch control with asynchronous memory*
+justificación: Muestra el diagrama de tiempos y el esquema de control para la secuencia de búsqueda modificada utilizando un protocolo de handshake de dos líneas.
