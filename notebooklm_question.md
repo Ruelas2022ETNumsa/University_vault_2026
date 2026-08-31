@@ -86,17 +86,16 @@ donde aparezca el operador ! en una expresión real.
 
 ---
 
-## F — Verificación de convención de negado en bloques de código
+## F — Verificación secuencia asíncrona p. 230
 
 ```
-En los bloques de código AHPL del libro Hill & Peterson Digital Systems 2ª ed.
-(las secuencias numeradas, no el texto matemático),
-¿cómo se escribe el NOT de una señal?
+En Hill & Peterson Digital Systems 2ª ed., sección 7.3 (p. 230),
+se presenta una secuencia AHPL modificada del SIC para memoria asíncrona.
 
-¿Se usa tilde ~ como prefijo, barra superior sobre el símbolo, o NOT()?
-Mostrá exactamente 2 ejemplos de secuencias numeradas del libro
-con la señal negada dentro de una bifurcación → (cond)/(dest).
-Indicá la página de cada ejemplo.
+Transcribí exactamente los pasos 2, 3 y 4 de esa secuencia nueva
+(la columna "New sequence" de la comparación con la secuencia original).
+Incluí las bifurcaciones con SYN(busy) tal como aparecen en el libro.
+No interpretes ni reformatees — transcripción literal.
 ```
 
 ---
