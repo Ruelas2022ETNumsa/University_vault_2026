@@ -108,27 +108,24 @@ Para avanzar de $m$ a $m+1$: rotar el círculo interior $72^\circ$ en sentido CC
 \noindent
 \begin{minipage}[c]{0.45\textwidth}
     \centering
-    \begin{tikzpicture}[scale=1.1, >=stealth, every node/.style={font=\small}]
+    \begin{tikzpicture}[scale=0.8, >=stealth, every node/.style={font=\small}]
         \draw[thick, teal]   (0,0) circle (2.2cm);
         \draw[thick, orange] (0,0) circle (1.2cm);
+        
         \foreach \angle in {0, 72, 144, 216, 288} {
             \draw[dashed, gray!40] (\angle:1.2cm) -- (\angle:2.2cm);
         }
-        % Puntos exterior
         \foreach \angle in {0, 72, 144, 216, 288} {
             \fill[teal] (\angle:2.2cm) circle (3pt);
         }
-        % Puntos interior
         \foreach \angle in {0, 72, 144, 216, 288} {
             \fill[orange] (\angle:1.2cm) circle (3pt);
         }
-        % Valores x1 — solo números
         \node[teal, anchor=west]       at (0:2.35cm)   {$2$};
         \node[teal, anchor=south west] at (72:2.35cm)  {$1$};
         \node[teal, anchor=south east] at (144:2.35cm) {$2$};
         \node[teal, anchor=north east] at (216:2.35cm) {$1$};
         \node[teal, anchor=north west] at (288:2.35cm) {$0$};
-        % Valores x2 — m=0: x2(0) en 0°, x2(4) en 72° CW → 288° CCW
         \node[orange, anchor=west]       at (0:1.35cm)   {$1$};
         \node[orange, anchor=north west] at (288:1.35cm) {$2$};
         \node[orange, anchor=north east] at (216:1.35cm) {$3$};
@@ -139,16 +136,12 @@ Para avanzar de $m$ a $m+1$: rotar el círculo interior $72^\circ$ en sentido CC
 \end{minipage}%
 \hfill
 \begin{minipage}[c]{0.50\textwidth}
-    \[
-        x_3(0) = \begin{array}[t]{r@{\;}l}
-            & (2{\cdot}1) + (1{\cdot}5) \\
-            + & (2{\cdot}4) + (1{\cdot}3) \\
-            + & (0{\cdot}2)
-        \end{array}
-    \]
-    \[
-        = 2 + 5 + 8 + 3 + 0 = \mathbf{18}
-    \]
+    \begin{align*}
+        x_3(0) &= (2{\cdot}1) + (1{\cdot}5) + (2{\cdot}4) \\
+               &\phantom{{}=} + (1{\cdot}3) + (0{\cdot}2) \\[4pt]
+        x_3(0) &= 2 + 5 + 8 + 3 + 0 \\[4pt]
+        x_3(0) &= \mathbf{18}
+    \end{align*}
 \end{minipage}
 
 \vspace{1em}
@@ -159,9 +152,10 @@ Para avanzar de $m$ a $m+1$: rotar el círculo interior $72^\circ$ en sentido CC
 \noindent
 \begin{minipage}[c]{0.45\textwidth}
     \centering
-    \begin{tikzpicture}[scale=1.1, >=stealth, every node/.style={font=\small}]
+    \begin{tikzpicture}[scale=0.8, >=stealth, every node/.style={font=\small}]
         \draw[thick, teal]   (0,0) circle (2.2cm);
         \draw[thick, orange] (0,0) circle (1.2cm);
+        \draw[<-, gray, thick] (0.55cm,0) arc (0:-270:0.55cm);
         \foreach \angle in {0, 72, 144, 216, 288} {
             \draw[dashed, gray!40] (\angle:1.2cm) -- (\angle:2.2cm);
         }
@@ -172,7 +166,6 @@ Para avanzar de $m$ a $m+1$: rotar el círculo interior $72^\circ$ en sentido CC
         \node[teal, anchor=south east] at (144:2.35cm) {$2$};
         \node[teal, anchor=north east] at (216:2.35cm) {$1$};
         \node[teal, anchor=north west] at (288:2.35cm) {$0$};
-        % m=1: x2(1)=2 en 0°
         \node[orange, anchor=west]       at (0:1.35cm)   {$2$};
         \node[orange, anchor=north west] at (288:1.35cm) {$3$};
         \node[orange, anchor=north east] at (216:1.35cm) {$4$};
@@ -183,19 +176,14 @@ Para avanzar de $m$ a $m+1$: rotar el círculo interior $72^\circ$ en sentido CC
 \end{minipage}%
 \hfill
 \begin{minipage}[c]{0.50\textwidth}
-    \[
-        x_3(1) = \begin{array}[t]{r@{\;}l}
-            & (2{\cdot}2) + (1{\cdot}1) \\
-            + & (2{\cdot}5) + (1{\cdot}4) \\
-            + & (0{\cdot}3)
-        \end{array}
-    \]
-    \[
-        = 4 + 1 + 10 + 4 + 0 = \mathbf{19}
-    \]
+    \begin{align*}
+        x_3(1) &= (2{\cdot}2) + (1{\cdot}1) + (2{\cdot}5) \\
+               &\phantom{{}=} + (1{\cdot}4) + (0{\cdot}3) \\[4pt]
+        x_3(1) &= 4 + 1 + 10 + 4 + 0 \\[4pt]
+        x_3(1) &= \mathbf{19}
+    \end{align*}
 \end{minipage}
-
-\newpage
+\vspace{1em}
 %************************************************************
 % ·· m = 2 ··
 \paragraph{Paso $m = 2$ — Rotación acumulada de $144^\circ$ CCW.}
@@ -203,9 +191,10 @@ Para avanzar de $m$ a $m+1$: rotar el círculo interior $72^\circ$ en sentido CC
 \noindent
 \begin{minipage}[c]{0.45\textwidth}
     \centering
-    \begin{tikzpicture}[scale=1.1, >=stealth, every node/.style={font=\small}]
+    \begin{tikzpicture}[scale=0.8, >=stealth, every node/.style={font=\small}]
         \draw[thick, teal]   (0,0) circle (2.2cm);
         \draw[thick, orange] (0,0) circle (1.2cm);
+        \draw[<-, gray, thick] (0.55cm,0) arc (0:-270:0.55cm);
         \foreach \angle in {0, 72, 144, 216, 288} {
             \draw[dashed, gray!40] (\angle:1.2cm) -- (\angle:2.2cm);
         }
@@ -216,7 +205,6 @@ Para avanzar de $m$ a $m+1$: rotar el círculo interior $72^\circ$ en sentido CC
         \node[teal, anchor=south east] at (144:2.35cm) {$2$};
         \node[teal, anchor=north east] at (216:2.35cm) {$1$};
         \node[teal, anchor=north west] at (288:2.35cm) {$0$};
-        % m=2: x2(2)=3 en 0°
         \node[orange, anchor=west]       at (0:1.35cm)   {$3$};
         \node[orange, anchor=north west] at (288:1.35cm) {$4$};
         \node[orange, anchor=north east] at (216:1.35cm) {$5$};
@@ -227,19 +215,16 @@ Para avanzar de $m$ a $m+1$: rotar el círculo interior $72^\circ$ en sentido CC
 \end{minipage}%
 \hfill
 \begin{minipage}[c]{0.50\textwidth}
-    \[
-        x_3(2) = \begin{array}[t]{r@{\;}l}
-            & (2{\cdot}3) + (1{\cdot}2) \\
-            + & (2{\cdot}1) + (1{\cdot}5) \\
-            + & (0{\cdot}4)
-        \end{array}
-    \]
-    \[
-        = 6 + 2 + 2 + 5 + 0 = \mathbf{15}
-    \]
+    \begin{align*}
+        x_3(2) &= (2{\cdot}3) + (1{\cdot}2) + (2{\cdot}1) \\
+               &\phantom{{}=} + (1{\cdot}5) + (0{\cdot}4) \\[4pt]
+        x_3(2) &= 6 + 2 + 2 + 5 + 0 \\[4pt]
+        x_3(2) &= \mathbf{15}
+    \end{align*}
 \end{minipage}
 
 \vspace{1em}
+\newpage
 %************************************************************
 % ·· m = 3 ··
 \paragraph{Paso $m = 3$ — Rotación acumulada de $216^\circ$ CCW.}
@@ -247,9 +232,10 @@ Para avanzar de $m$ a $m+1$: rotar el círculo interior $72^\circ$ en sentido CC
 \noindent
 \begin{minipage}[c]{0.45\textwidth}
     \centering
-    \begin{tikzpicture}[scale=1.1, >=stealth, every node/.style={font=\small}]
+    \begin{tikzpicture}[scale=0.8, >=stealth, every node/.style={font=\small}]
         \draw[thick, teal]   (0,0) circle (2.2cm);
         \draw[thick, orange] (0,0) circle (1.2cm);
+        \draw[<-, gray, thick] (0.55cm,0) arc (0:-270:0.55cm);
         \foreach \angle in {0, 72, 144, 216, 288} {
             \draw[dashed, gray!40] (\angle:1.2cm) -- (\angle:2.2cm);
         }
@@ -260,7 +246,6 @@ Para avanzar de $m$ a $m+1$: rotar el círculo interior $72^\circ$ en sentido CC
         \node[teal, anchor=south east] at (144:2.35cm) {$2$};
         \node[teal, anchor=north east] at (216:2.35cm) {$1$};
         \node[teal, anchor=north west] at (288:2.35cm) {$0$};
-        % m=3: x2(3)=4 en 0°
         \node[orange, anchor=west]       at (0:1.35cm)   {$4$};
         \node[orange, anchor=north west] at (288:1.35cm) {$5$};
         \node[orange, anchor=north east] at (216:1.35cm) {$1$};
@@ -271,19 +256,15 @@ Para avanzar de $m$ a $m+1$: rotar el círculo interior $72^\circ$ en sentido CC
 \end{minipage}%
 \hfill
 \begin{minipage}[c]{0.50\textwidth}
-    \[
-        x_3(3) = \begin{array}[t]{r@{\;}l}
-            & (2{\cdot}4) + (1{\cdot}3) \\
-            + & (2{\cdot}2) + (1{\cdot}1) \\
-            + & (0{\cdot}5)
-        \end{array}
-    \]
-    \[
-        = 8 + 3 + 4 + 1 + 0 = \mathbf{16}
-    \]
+    \begin{align*}
+        x_3(3) &= (2{\cdot}4) + (1{\cdot}3) + (2{\cdot}2) \\
+               &\phantom{{}=} + (1{\cdot}1) + (0{\cdot}5) \\[4pt]
+        x_3(3) &= 8 + 3 + 4 + 1 + 0 \\[4pt]
+        x_3(3) &= \mathbf{16}
+    \end{align*}
 \end{minipage}
 
-\newpage
+\vspace{1em}
 %************************************************************
 % ·· m = 4 ··
 \paragraph{Paso $m = 4$ — Rotación acumulada de $288^\circ$ CCW.}
@@ -291,9 +272,10 @@ Para avanzar de $m$ a $m+1$: rotar el círculo interior $72^\circ$ en sentido CC
 \noindent
 \begin{minipage}[c]{0.45\textwidth}
     \centering
-    \begin{tikzpicture}[scale=1.1, >=stealth, every node/.style={font=\small}]
+    \begin{tikzpicture}[scale=0.8, >=stealth, every node/.style={font=\small}]
         \draw[thick, teal]   (0,0) circle (2.2cm);
         \draw[thick, orange] (0,0) circle (1.2cm);
+        \draw[<-, gray, thick] (0.55cm,0) arc (0:-270:0.55cm);
         \foreach \angle in {0, 72, 144, 216, 288} {
             \draw[dashed, gray!40] (\angle:1.2cm) -- (\angle:2.2cm);
         }
@@ -304,7 +286,6 @@ Para avanzar de $m$ a $m+1$: rotar el círculo interior $72^\circ$ en sentido CC
         \node[teal, anchor=south east] at (144:2.35cm) {$2$};
         \node[teal, anchor=north east] at (216:2.35cm) {$1$};
         \node[teal, anchor=north west] at (288:2.35cm) {$0$};
-        % m=4: x2(4)=5 en 0°
         \node[orange, anchor=west]       at (0:1.35cm)   {$5$};
         \node[orange, anchor=north west] at (288:1.35cm) {$1$};
         \node[orange, anchor=north east] at (216:1.35cm) {$2$};
@@ -315,16 +296,12 @@ Para avanzar de $m$ a $m+1$: rotar el círculo interior $72^\circ$ en sentido CC
 \end{minipage}%
 \hfill
 \begin{minipage}[c]{0.50\textwidth}
-    \[
-        x_3(4) = \begin{array}[t]{r@{\;}l}
-            & (2{\cdot}5) + (1{\cdot}4) \\
-            + & (2{\cdot}3) + (1{\cdot}2) \\
-            + & (0{\cdot}1)
-        \end{array}
-    \]
-    \[
-        = 10 + 4 + 6 + 2 + 0 = \mathbf{22}
-    \]
+    \begin{align*}
+        x_3(4) &= (2{\cdot}5) + (1{\cdot}4) + (2{\cdot}3) \\
+               &\phantom{{}=} + (1{\cdot}2) + (0{\cdot}1) \\[4pt]
+        x_3(4) &= 10 + 4 + 6 + 2 + 0 \\[4pt]
+        x_3(4) &= \mathbf{22}
+    \end{align*}
 \end{minipage}
 
 \vspace{1em}
