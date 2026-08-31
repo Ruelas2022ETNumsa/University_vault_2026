@@ -1,5 +1,5 @@
-% ETN1015 — Discrete and Fast Fourier Transforms (DFT and FFT)
-% Ejercicio: Convolución circular — Ej. 2.22 (Palani)
+% ETN1015 - Discrete and Fast Fourier Transforms (DFT and FFT)
+% Ejercicio: Convolucion circular - Ej. 2.22 (Palani)
 clear; clc; close all;
 
 % Secuencias de entrada
@@ -8,7 +8,7 @@ x2 = [1, 2, 3, 4, 5];
 N = 5;
 
 % Matriz circulante asociada a x2: cada columna n+1 contiene x2
-% desplazada cíclicamente n posiciones usando índices mod N
+% desplazada ciclicamente n posiciones usando indices mod N
 H = zeros(N, N);
 for n = 0:N-1
     H(:, n+1) = x2(mod((0:N-1) - n, N) + 1);
@@ -22,7 +22,7 @@ m = 0:N-1;
 figure(1);
 stem(m, x3, 'filled', 'LineWidth', 1.5, 'Color', [0.8500 0.3250 0.0980]);
 xlabel('m'); ylabel('x_3(m)');
-title('Convolución circular x_3(m) = x_1(n) \otimes_5 x_2(n)');
+title('Convolucion circular x_3(m) = x_1(n) \otimes_5 x_2(n)');
 xlim([-0.5, N-0.5]); ylim([0, max(x3)+2]);
 set(gca, 'XTick', m);
 grid on;
