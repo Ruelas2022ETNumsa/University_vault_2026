@@ -1,7 +1,7 @@
 ---
 title: AHPL — Guía unificada para ETN825 (LaTeX NotebookLM)
 galaxy_body: 10beacon
-scope: trivault
+scope: cuatrivault
 tool: ahpl-notation
 audience:
   - usuario
@@ -313,7 +313,7 @@ END
 Las condiciones de bifurcación pueden combinar señales con AND (`/\`) o usar señales negadas (barra).
 
 ```AHPL
-1. → (csrdy /\ CSBUS̄₀ /\ CSBUS₁ /\ CSBUS̄₂)/(1)
+1. → (csrdy /\ ~CSBUS(0) /\ CSBUS(1) /\ ~CSBUS(2))/(1)
 ```
 
 Interpretación:
@@ -420,23 +420,29 @@ N.  → (señal)/(N)
 
 ### N13. PATRÓN — BIFURCACIÓN MÚLTIPLE POR BITS DE BUS
 
-> Contexto para NotebookLM: bifurcación a más de dos destinos según combinación de bits de un bus. Las condiciones son mutuamente excluyentes — exactamente una será verdadera. Se usa para decodificar campos de instrucción (IR), direcciones de dispositivo (CSBUS) o modos de operación.
+> Contexto para NotebookLM: bifurcación a más de dos destinos según combinación de bits de un bus. Se usa para decodificar campos de instrucción (IR), direcciones de dispositivo (CSBUS) o modos de operación. Las condiciones pueden ser mutuamente excluyentes (una sola rama activa) o repetidas (bifurcación paralela — dos ramas activas simultáneamente).
 
 ```AHPL
 % Formato general:
 → (cond₁, cond₂, cond₃)/(dest₁, dest₂, dest₃)
 
-% Ejemplo — decodificación por bit 3 del CSBUS:
-→ (CSBUS̄₃, CSBUS̄₃, CSBUS₃)/(1, 1A, 3)
+% Ejemplo — bifurcación paralela por bit 3 del CSBUS (Hill & Peterson, Example 9.4, p. 350):
+% ~CSBUS(3) aparece DOS veces — lanza dos secuencias paralelas simultáneas:
+%   → (1)  : control vuelve al paso 1 para estar listo para otro comando
+%   → (1A) : simultáneamente inicia la secuencia de impresión
+% CSBUS(3) : si es status request, va al paso 3 (secuencia única)
+→ (~CSBUS(3), ~CSBUS(3), CSBUS(3))/(1, 1A, 3)
 
-% Ejemplo — decodificación de instrucción por IR(0):
+% Ejemplo — bifurcación excluyente por IR(0) (condiciones mutuamente excluyentes):
 → (~IR(0), IR(0))/(fetch, execute)
 
-% Ejemplo — bifurcación triple por IR(0:1):
+% Ejemplo — bifurcación triple por IR(0:1) (condiciones mutuamente excluyentes):
 → (IR(0) /\ ~IR(1),   ~IR(0) /\ IR(1),   IR(0) /\ IR(1))/(paso_A, paso_B, paso_C)
 ```
 
-> **Regla:** la suma lógica de todas las condiciones debe ser 1 (una siempre se cumple). Si ninguna se cumple, el comportamiento es indefinido.
+> **Regla — bifurcación excluyente:** la suma lógica de todas las condiciones debe ser 1 (exactamente una se cumple). Si ninguna se cumple, el comportamiento es indefinido.
+>
+> **Regla — bifurcación paralela:** una misma condición puede aparecer dos veces apuntando a destinos distintos. Ambas ramas se activan simultáneamente y corren en paralelo. Fuente: Hill & Peterson, Example 9.4, p. 350.
 
 ---
 
@@ -497,7 +503,7 @@ END
 
 % Ejemplo con selección de bits:
 END SEQUENCE
-CHAR = CR[0:7]
+CHAR = CR(0:7)
 END
 ```
 

@@ -2,17 +2,17 @@
 galaxy_body: ship
 project: "ETN825 AHPL — N16: ejemplos pregunta→respuesta para NotebookLM"
 date: 2026-08-29
-status: in-orbit
+status: delivered
 fleet: ETN825
 blocked_by:
 ---
 
 ## Handoff
 
-**Última sesión:** 2026-08-30
-**Retomar desde:** Corregir guía `ETN825_AHPL.md` — N4 y N11.
-**Completado esta sesión:** Re-prueba final H y G con puntero — outputs correctos. Re-análisis de guía y prompt completado.
-**Próximo paso:** Editar guía — N4 (operadores lógicos) y N11 (PRINTER INTERFACE). Prompt no necesita cambios.
+**Última sesión:** 2026-08-31
+**Retomar desde:** —
+**Completado esta sesión:** Guía re-subida a NotebookLM. Ship cerrado.
+**Próximo paso:** —
 **Preguntas de cierre:** —
 
 ---
@@ -85,7 +85,7 @@ La guía `ETN825_AHPL.md` tiene reglas de notación AHPL bien definidas (N1–N1
 | 2026-08-29 | Notación `(N)` global — en bloques de código, tablas y prosa | NotebookLM stripea `[]` — `(N)` evita el conflicto en todos los contextos |
 | 2026-08-29 | `->` y `→` son equivalentes — ambos aceptados | NotebookLM entiende ambas formas sin error — no corregir |
 | 2026-08-29 | Siguiente mejora: Par 5 en N16 con ejercicio real de la cátedra | Refuerza imitación con material concreto del curso |
-| 2026-08-30 | Notación de rango en texto plano: `DR(10:17)` — no `DR[10:17]` ni `DR_(10:17)` | `[]` stripea NotebookLM; `_(N)` es LaTeX a medias y ambiguo; `(N:M)` es consistente con `(N)` global y el `:` distingue rango de tamaño |
+| 2026-08-31 | Bifurcación paralela documentada en N13 — condición repetida es intencional | Confirmado con libro p. 350: `~CSBUS(3)` dos veces lanza dos secuencias simultáneas |
 
 > [!note]- Descartadas
 > - Generar N16 sin verificar contra NotebookLM — descartado; los pares deben reflejar outputs reales corregidos
@@ -162,10 +162,13 @@ N1–N16 completas y verificadas. El próximo paso es agregar Par 5 a N16 con un
 - [x] Re-subir guía actualizada a NotebookLM
 - [x] Re-prueba final — snippets H y G con puntero
 - [x] Re-análisis de guía y prompt — identificar correcciones pendientes
-- [ ] Corregir guía N4 — operadores lógicos: `&`/`+` → `/\`/`\/`
-- [ ] Corregir guía N11 — PRINTER INTERFACE: paso 3, 4, 7, eliminar paso 8
-- [ ] Re-subir guía corregida a NotebookLM
-- [ ] Cerrar ship (status: delivered)
+- [x] Corregir guía N4 — operadores lógicos: `&`/`+` → `/\`/`\/`
+- [x] Corregir guía N11 — PRINTER INTERFACE: paso 3, 4, 7, eliminar paso 8
+- [x] Corregir guía N9 — bloque de código: barra Unicode → `~` y notación `(N)`
+- [x] Corregir guía N13 — notación `~`, `(N)`, documentar bifurcación paralela
+- [x] Corregir guía N15 — `CR[0:7]` → `CR(0:7)`
+- [x] Re-subir guía corregida a NotebookLM
+- [x] Cerrar ship (status: delivered)
 
 ---
 
