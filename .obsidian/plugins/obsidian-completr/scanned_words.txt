@@ -9391,6 +9391,7 @@ transmiten
 tupla
 transiciona
 traslapan
+textwidth
 ToDo
 Templater
 Text
@@ -48419,6 +48420,7 @@ desbordar
 dispone
 disponer
 deseara
+distribuido
 Vault
 Verificar
 Variables
@@ -96409,6 +96411,7 @@ valer
 valen
 verificadas
 vuelva
+vspace
 audience
 activo
 auto
@@ -125623,6 +125626,7 @@ nTama
 ncronos
 ntricos
 ntrico
+noindent
 created
 commit
 cada
@@ -136190,6 +136194,7 @@ convencional
 circularmente
 completando
 coincidentes
+captionof
 updated
 un
 universo
@@ -233878,6 +233883,7 @@ memorias
 menci
 multiplexor
 multiplican
+minipage
 YAML
 Ya
 You
@@ -262540,6 +262546,7 @@ emula
 emparejando
 estructurando
 errata
+emulando
 Motor
 Media
 Mantiene
@@ -348943,6 +348950,7 @@ hbbccC
 habilitadoras
 handshaking
 habilita
+hfill
 que
 quedan
 queda

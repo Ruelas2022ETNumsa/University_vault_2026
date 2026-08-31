@@ -44,196 +44,290 @@ para igualar $N = 5$, requerido por la convolución circular de $N$ puntos:
     x_1(n) \xrightarrow{\text{zero-pad}} \{2,\ 1,\ 2,\ 1,\ 0\}, \quad n = 0,1,2,3,4
 \]
 
-\subsubsection*{Definición formal}
-
-Dadas dos secuencias discretas de longitud $N$, la convolución circular se define como:
-
-\[
-    x_3(m) = x_1(n) \circledcirc_N x_2(n)
-    = \sum_{n=0}^{N-1} x_1(n)\, x_2\!\left((m-n)_N\right),
-    \qquad m = 0, 1, \dots, N-1
-\]
-
-donde $(m-n)_N$ es la operación de índice módulo $N$, que mantiene los índices
-dentro del rango $[0,\, N-1]$.
-
 \subsubsection*{Método gráfico — Círculos concéntricos (Palani Fig. 2.11)}
 
-\paragraph{Reglas del método.}
-\begin{itemize}[leftmargin=1.5cm, itemsep=2pt]
-    \item \textbf{Círculo exterior} (fijo): $x_1(n)$ distribuido en sentido
-        \textbf{antihorario (CCW)} a intervalos de $\Delta\theta = 360^\circ/N = 72^\circ$,
-        comenzando en $0^\circ$.
-    \item \textbf{Círculo interior} (móvil): $x_2(n)$ colocado en sentido
-        \textbf{horario (CW)}, emulando la inversión temporal $x_2(-n)$
-        implícita en la definición.
-    \item \textbf{Cálculo de cada muestra:} se multiplican par a par los valores
-        alineados radialmente y se suman los productos.
-    \item \textbf{Avance temporal:} para pasar de $m$ a $m+1$, el círculo interior
-        rota $72^\circ$ en sentido CCW.
-\end{itemize}
+\textbf{Círculo exterior} (teal, fijo): $x_1(n)$ en sentido \textbf{CCW}, $\Delta\theta = 72^\circ$ desde $0^\circ$.
+\textbf{Círculo interior} (naranja, móvil): $x_2(n)$ en sentido \textbf{CW} — emula la inversión $x_2(-n)$.
+Para cada $m$: multiplicar par a par los valores alineados radialmente y sumar.
+Para avanzar de $m$ a $m+1$: rotar el círculo interior $72^\circ$ en sentido CCW.
 
+% ·· Figura introductoria — disposición general ··
+\leavevmode\\[0.5em]
+\noindent
+\begin{minipage}[c]{0.52\textwidth}
+    \centering
+    \begin{tikzpicture}[scale=1.2, >=stealth, every node/.style={font=\small}]
+        \draw[thick, teal]   (0,0) circle (2.2cm);
+        \draw[thick, orange] (0,0) circle (1.2cm);
+        \foreach \angle in {0, 72, 144, 216, 288} {
+            \draw[dashed, gray!40] (\angle:1.2cm) -- (\angle:2.2cm);
+        }
+        % Puntos en círculo exterior
+        \foreach \angle in {0, 72, 144, 216, 288} {
+            \fill[teal] (\angle:2.2cm) circle (3pt);
+        }
+        % Puntos en círculo interior
+        \foreach \angle in {0, 72, 144, 216, 288} {
+            \fill[orange] (\angle:1.2cm) circle (3pt);
+        }
+        % Etiquetas x1 — exterior CCW
+        \node[teal, anchor=west]       at (0:2.45cm)   {$x_1(0)=2$};
+        \node[teal, anchor=south west] at (72:2.45cm)  {$x_1(1)=1$};
+        \node[teal, anchor=south east] at (144:2.45cm) {$x_1(2)=2$};
+        \node[teal, anchor=north east] at (216:2.45cm) {$x_1(3)=1$};
+        \node[teal, anchor=north west] at (288:2.45cm) {$x_1(4)=0$};
+        % Etiquetas x2 — interior CW
+        \node[orange, anchor=west]       at (0:1.38cm)   {$x_2(0)=1$};
+        \node[orange, anchor=north west] at (288:1.38cm) {$x_2(1)=2$};
+        \node[orange, anchor=north east] at (216:1.38cm) {$x_2(2)=3$};
+        \node[orange, anchor=south east] at (144:1.38cm) {$x_2(3)=4$};
+        \node[orange, anchor=south west] at (72:1.38cm)  {$x_2(4)=5$};
+        % Flechas de sentido
+        \draw[->, teal,   thick] (2.2cm, 0) arc (0:30:2.2cm)
+            node[midway, above right, font=\scriptsize] {CCW};
+        \draw[->, orange, thick] (1.2cm, 0) arc (0:-30:1.2cm)
+            node[midway, below right, font=\scriptsize] {CW};
+    \end{tikzpicture}
+    \captionof{figure}{Disposición inicial: $x_1(n)$ exterior CCW, $x_2(n)$ interior CW.}
+\end{minipage}%
+\hfill
+\begin{minipage}[c]{0.44\textwidth}
+    \small
+    Los valores de $x_1(n)$ permanecen fijos en el círculo exterior durante todo el cálculo.\\[0.5em]
+    Los valores de $x_2(n)$ rotan en el círculo interior: para el paso $m$, el valor
+    $x_2(m)$ queda alineado con $x_1(0)$ en $0^\circ$.\\[0.5em]
+    La posición CW implica que, al alinear $x_2(m)$ con $x_1(0)$, los demás valores
+    quedan en orden $x_2(m{-}1),\,x_2(m{-}2),\dots$ siguiendo el sentido CCW exterior.
+\end{minipage}
+
+%************************************************************
+\newpage
 % ·· m = 0 ··
 \paragraph{Paso $m = 0$ — Sin rotación.}
-
-$x_2(0)$ alineado con $x_1(0)$ en $0^\circ$.
-
-\begin{figure}[H]
+\leavevmode\\[0.5em]
+\noindent
+\begin{minipage}[c]{0.45\textwidth}
     \centering
-    \begin{tikzpicture}[scale=1.8, >=stealth, every node/.style={font=\small}]
+    \begin{tikzpicture}[scale=1.1, >=stealth, every node/.style={font=\small}]
         \draw[thick, teal]   (0,0) circle (2.2cm);
         \draw[thick, orange] (0,0) circle (1.2cm);
         \foreach \angle in {0, 72, 144, 216, 288} {
             \draw[dashed, gray!40] (\angle:1.2cm) -- (\angle:2.2cm);
         }
-        % Círculo exterior — x1
-        \node[teal, anchor=west]       at (0:2.4cm)   {$x_1(0)=2$};
-        \node[teal, anchor=south west] at (72:2.4cm)  {$x_1(1)=1$};
-        \node[teal, anchor=south east] at (144:2.4cm) {$x_1(2)=2$};
-        \node[teal, anchor=north east] at (216:2.4cm) {$x_1(3)=1$};
-        \node[teal, anchor=north west] at (288:2.4cm) {$x_1(4)=0$};
-        % Círculo interior — x2 (m=0)
-        \node[orange, anchor=west]       at (0:1.35cm)   {$x_2(0)=1$};
-        \node[orange, anchor=north west] at (288:1.35cm) {$x_2(1)=2$};
-        \node[orange, anchor=north east] at (216:1.35cm) {$x_2(2)=3$};
-        \node[orange, anchor=south east] at (144:1.35cm) {$x_2(3)=4$};
-        \node[orange, anchor=south west] at (72:1.35cm)  {$x_2(4)=5$};
+        % Puntos exterior
+        \foreach \angle in {0, 72, 144, 216, 288} {
+            \fill[teal] (\angle:2.2cm) circle (3pt);
+        }
+        % Puntos interior
+        \foreach \angle in {0, 72, 144, 216, 288} {
+            \fill[orange] (\angle:1.2cm) circle (3pt);
+        }
+        % Valores x1 — solo números
+        \node[teal, anchor=west]       at (0:2.35cm)   {$2$};
+        \node[teal, anchor=south west] at (72:2.35cm)  {$1$};
+        \node[teal, anchor=south east] at (144:2.35cm) {$2$};
+        \node[teal, anchor=north east] at (216:2.35cm) {$1$};
+        \node[teal, anchor=north west] at (288:2.35cm) {$0$};
+        % Valores x2 — m=0: x2(0) en 0°, x2(4) en 72° CW → 288° CCW
+        \node[orange, anchor=west]       at (0:1.35cm)   {$1$};
+        \node[orange, anchor=north west] at (288:1.35cm) {$2$};
+        \node[orange, anchor=north east] at (216:1.35cm) {$3$};
+        \node[orange, anchor=south east] at (144:1.35cm) {$4$};
+        \node[orange, anchor=south west] at (72:1.35cm)  {$5$};
     \end{tikzpicture}
-    \caption{Círculos concéntricos para $m = 0$: sin rotación.}
-\end{figure}
+    \captionof{figure}{$m=0$: sin rotación. $x_2(0)=1$ alineado con $x_1(0)=2$.}
+\end{minipage}%
+\hfill
+\begin{minipage}[c]{0.50\textwidth}
+    \[
+        x_3(0) = \begin{array}[t]{r@{\;}l}
+            & (2{\cdot}1) + (1{\cdot}5) \\
+            + & (2{\cdot}4) + (1{\cdot}3) \\
+            + & (0{\cdot}2)
+        \end{array}
+    \]
+    \[
+        = 2 + 5 + 8 + 3 + 0 = \mathbf{18}
+    \]
+\end{minipage}
 
-\[
-    x_3(0) = (2{\cdot}1) + (1{\cdot}5) + (2{\cdot}4) + (1{\cdot}3) + (0{\cdot}2)
-           = 2 + 5 + 8 + 3 + 0 = \mathbf{18}
-\]
-
+\vspace{1em}
+%************************************************************
 % ·· m = 1 ··
-\paragraph{Paso $m = 1$ — Rotación de $72°$ CCW.}
-
-$x_2(1)$ queda alineado con $x_1(0)$.
-
-\begin{figure}[H]
+\paragraph{Paso $m = 1$ — Rotación de $72^\circ$ CCW.}
+\leavevmode\\[0.5em]
+\noindent
+\begin{minipage}[c]{0.45\textwidth}
     \centering
-    \begin{tikzpicture}[scale=1.8, >=stealth, every node/.style={font=\small}]
+    \begin{tikzpicture}[scale=1.1, >=stealth, every node/.style={font=\small}]
         \draw[thick, teal]   (0,0) circle (2.2cm);
         \draw[thick, orange] (0,0) circle (1.2cm);
         \foreach \angle in {0, 72, 144, 216, 288} {
             \draw[dashed, gray!40] (\angle:1.2cm) -- (\angle:2.2cm);
         }
-        \node[teal, anchor=west]       at (0:2.4cm)   {$x_1(0)=2$};
-        \node[teal, anchor=south west] at (72:2.4cm)  {$x_1(1)=1$};
-        \node[teal, anchor=south east] at (144:2.4cm) {$x_1(2)=2$};
-        \node[teal, anchor=north east] at (216:2.4cm) {$x_1(3)=1$};
-        \node[teal, anchor=north west] at (288:2.4cm) {$x_1(4)=0$};
-        \node[orange, anchor=west]       at (0:1.35cm)   {$x_2(1)=2$};
-        \node[orange, anchor=north west] at (288:1.35cm) {$x_2(2)=3$};
-        \node[orange, anchor=north east] at (216:1.35cm) {$x_2(3)=4$};
-        \node[orange, anchor=south east] at (144:1.35cm) {$x_2(4)=5$};
-        \node[orange, anchor=south west] at (72:1.35cm)  {$x_2(0)=1$};
+        \foreach \angle in {0, 72, 144, 216, 288} { \fill[teal]   (\angle:2.2cm) circle (3pt); }
+        \foreach \angle in {0, 72, 144, 216, 288} { \fill[orange] (\angle:1.2cm) circle (3pt); }
+        \node[teal, anchor=west]       at (0:2.35cm)   {$2$};
+        \node[teal, anchor=south west] at (72:2.35cm)  {$1$};
+        \node[teal, anchor=south east] at (144:2.35cm) {$2$};
+        \node[teal, anchor=north east] at (216:2.35cm) {$1$};
+        \node[teal, anchor=north west] at (288:2.35cm) {$0$};
+        % m=1: x2(1)=2 en 0°
+        \node[orange, anchor=west]       at (0:1.35cm)   {$2$};
+        \node[orange, anchor=north west] at (288:1.35cm) {$3$};
+        \node[orange, anchor=north east] at (216:1.35cm) {$4$};
+        \node[orange, anchor=south east] at (144:1.35cm) {$5$};
+        \node[orange, anchor=south west] at (72:1.35cm)  {$1$};
     \end{tikzpicture}
-    \caption{Círculos concéntricos para $m = 1$: rotación de $72^\circ$ CCW.}
-\end{figure}
+    \captionof{figure}{$m=1$: $72^\circ$ CCW. $x_2(1)=2$ alineado con $x_1(0)=2$.}
+\end{minipage}%
+\hfill
+\begin{minipage}[c]{0.50\textwidth}
+    \[
+        x_3(1) = \begin{array}[t]{r@{\;}l}
+            & (2{\cdot}2) + (1{\cdot}1) \\
+            + & (2{\cdot}5) + (1{\cdot}4) \\
+            + & (0{\cdot}3)
+        \end{array}
+    \]
+    \[
+        = 4 + 1 + 10 + 4 + 0 = \mathbf{19}
+    \]
+\end{minipage}
 
-\[
-    x_3(1) = (2{\cdot}2) + (1{\cdot}1) + (2{\cdot}5) + (1{\cdot}4) + (0{\cdot}3)
-           = 4 + 1 + 10 + 4 + 0 = \mathbf{19}
-\]
-
+\newpage
+%************************************************************
 % ·· m = 2 ··
-\paragraph{Paso $m = 2$ — Rotación acumulada de $144°$ CCW.}
-
-$x_2(2)$ queda alineado con $x_1(0)$.
-
-\begin{figure}[H]
+\paragraph{Paso $m = 2$ — Rotación acumulada de $144^\circ$ CCW.}
+\leavevmode\\[0.5em]
+\noindent
+\begin{minipage}[c]{0.45\textwidth}
     \centering
-    \begin{tikzpicture}[scale=1.8, >=stealth, every node/.style={font=\small}]
+    \begin{tikzpicture}[scale=1.1, >=stealth, every node/.style={font=\small}]
         \draw[thick, teal]   (0,0) circle (2.2cm);
         \draw[thick, orange] (0,0) circle (1.2cm);
         \foreach \angle in {0, 72, 144, 216, 288} {
             \draw[dashed, gray!40] (\angle:1.2cm) -- (\angle:2.2cm);
         }
-        \node[teal, anchor=west]       at (0:2.4cm)   {$x_1(0)=2$};
-        \node[teal, anchor=south west] at (72:2.4cm)  {$x_1(1)=1$};
-        \node[teal, anchor=south east] at (144:2.4cm) {$x_1(2)=2$};
-        \node[teal, anchor=north east] at (216:2.4cm) {$x_1(3)=1$};
-        \node[teal, anchor=north west] at (288:2.4cm) {$x_1(4)=0$};
-        \node[orange, anchor=west]       at (0:1.35cm)   {$x_2(2)=3$};
-        \node[orange, anchor=north west] at (288:1.35cm) {$x_2(3)=4$};
-        \node[orange, anchor=north east] at (216:1.35cm) {$x_2(4)=5$};
-        \node[orange, anchor=south east] at (144:1.35cm) {$x_2(0)=1$};
-        \node[orange, anchor=south west] at (72:1.35cm)  {$x_2(1)=2$};
+        \foreach \angle in {0, 72, 144, 216, 288} { \fill[teal]   (\angle:2.2cm) circle (3pt); }
+        \foreach \angle in {0, 72, 144, 216, 288} { \fill[orange] (\angle:1.2cm) circle (3pt); }
+        \node[teal, anchor=west]       at (0:2.35cm)   {$2$};
+        \node[teal, anchor=south west] at (72:2.35cm)  {$1$};
+        \node[teal, anchor=south east] at (144:2.35cm) {$2$};
+        \node[teal, anchor=north east] at (216:2.35cm) {$1$};
+        \node[teal, anchor=north west] at (288:2.35cm) {$0$};
+        % m=2: x2(2)=3 en 0°
+        \node[orange, anchor=west]       at (0:1.35cm)   {$3$};
+        \node[orange, anchor=north west] at (288:1.35cm) {$4$};
+        \node[orange, anchor=north east] at (216:1.35cm) {$5$};
+        \node[orange, anchor=south east] at (144:1.35cm) {$1$};
+        \node[orange, anchor=south west] at (72:1.35cm)  {$2$};
     \end{tikzpicture}
-    \caption{Círculos concéntricos para $m = 2$: rotación acumulada de $144^\circ$ CCW.}
-\end{figure}
+    \captionof{figure}{$m=2$: $144^\circ$ CCW. $x_2(2)=3$ alineado con $x_1(0)=2$.}
+\end{minipage}%
+\hfill
+\begin{minipage}[c]{0.50\textwidth}
+    \[
+        x_3(2) = \begin{array}[t]{r@{\;}l}
+            & (2{\cdot}3) + (1{\cdot}2) \\
+            + & (2{\cdot}1) + (1{\cdot}5) \\
+            + & (0{\cdot}4)
+        \end{array}
+    \]
+    \[
+        = 6 + 2 + 2 + 5 + 0 = \mathbf{15}
+    \]
+\end{minipage}
 
-\[
-    x_3(2) = (2{\cdot}3) + (1{\cdot}2) + (2{\cdot}1) + (1{\cdot}5) + (0{\cdot}4)
-           = 6 + 2 + 2 + 5 + 0 = \mathbf{15}
-\]
-
+\vspace{1em}
+%************************************************************
 % ·· m = 3 ··
-\paragraph{Paso $m = 3$ — Rotación acumulada de $216°$ CCW.}
-
-$x_2(3)$ queda alineado con $x_1(0)$.
-
-\begin{figure}[H]
+\paragraph{Paso $m = 3$ — Rotación acumulada de $216^\circ$ CCW.}
+\leavevmode\\[0.5em]
+\noindent
+\begin{minipage}[c]{0.45\textwidth}
     \centering
-    \begin{tikzpicture}[scale=1.8, >=stealth, every node/.style={font=\small}]
+    \begin{tikzpicture}[scale=1.1, >=stealth, every node/.style={font=\small}]
         \draw[thick, teal]   (0,0) circle (2.2cm);
         \draw[thick, orange] (0,0) circle (1.2cm);
         \foreach \angle in {0, 72, 144, 216, 288} {
             \draw[dashed, gray!40] (\angle:1.2cm) -- (\angle:2.2cm);
         }
-        \node[teal, anchor=west]       at (0:2.4cm)   {$x_1(0)=2$};
-        \node[teal, anchor=south west] at (72:2.4cm)  {$x_1(1)=1$};
-        \node[teal, anchor=south east] at (144:2.4cm) {$x_1(2)=2$};
-        \node[teal, anchor=north east] at (216:2.4cm) {$x_1(3)=1$};
-        \node[teal, anchor=north west] at (288:2.4cm) {$x_1(4)=0$};
-        \node[orange, anchor=west]       at (0:1.35cm)   {$x_2(3)=4$};
-        \node[orange, anchor=north west] at (288:1.35cm) {$x_2(4)=5$};
-        \node[orange, anchor=north east] at (216:1.35cm) {$x_2(0)=1$};
-        \node[orange, anchor=south east] at (144:1.35cm) {$x_2(1)=2$};
-        \node[orange, anchor=south west] at (72:1.35cm)  {$x_2(2)=3$};
+        \foreach \angle in {0, 72, 144, 216, 288} { \fill[teal]   (\angle:2.2cm) circle (3pt); }
+        \foreach \angle in {0, 72, 144, 216, 288} { \fill[orange] (\angle:1.2cm) circle (3pt); }
+        \node[teal, anchor=west]       at (0:2.35cm)   {$2$};
+        \node[teal, anchor=south west] at (72:2.35cm)  {$1$};
+        \node[teal, anchor=south east] at (144:2.35cm) {$2$};
+        \node[teal, anchor=north east] at (216:2.35cm) {$1$};
+        \node[teal, anchor=north west] at (288:2.35cm) {$0$};
+        % m=3: x2(3)=4 en 0°
+        \node[orange, anchor=west]       at (0:1.35cm)   {$4$};
+        \node[orange, anchor=north west] at (288:1.35cm) {$5$};
+        \node[orange, anchor=north east] at (216:1.35cm) {$1$};
+        \node[orange, anchor=south east] at (144:1.35cm) {$2$};
+        \node[orange, anchor=south west] at (72:1.35cm)  {$3$};
     \end{tikzpicture}
-    \caption{Círculos concéntricos para $m = 3$: rotación acumulada de $216^\circ$ CCW.}
-\end{figure}
+    \captionof{figure}{$m=3$: $216^\circ$ CCW. $x_2(3)=4$ alineado con $x_1(0)=2$.}
+\end{minipage}%
+\hfill
+\begin{minipage}[c]{0.50\textwidth}
+    \[
+        x_3(3) = \begin{array}[t]{r@{\;}l}
+            & (2{\cdot}4) + (1{\cdot}3) \\
+            + & (2{\cdot}2) + (1{\cdot}1) \\
+            + & (0{\cdot}5)
+        \end{array}
+    \]
+    \[
+        = 8 + 3 + 4 + 1 + 0 = \mathbf{16}
+    \]
+\end{minipage}
 
-\[
-    x_3(3) = (2{\cdot}4) + (1{\cdot}3) + (2{\cdot}2) + (1{\cdot}1) + (0{\cdot}5)
-           = 8 + 3 + 4 + 1 + 0 = \mathbf{16}
-\]
-
+\newpage
+%************************************************************
 % ·· m = 4 ··
-\paragraph{Paso $m = 4$ — Rotación acumulada de $288°$ CCW.}
-
-$x_2(4)$ queda alineado con $x_1(0)$.
-
-\begin{figure}[H]
+\paragraph{Paso $m = 4$ — Rotación acumulada de $288^\circ$ CCW.}
+\leavevmode\\[0.5em]
+\noindent
+\begin{minipage}[c]{0.45\textwidth}
     \centering
-    \begin{tikzpicture}[scale=1.8, >=stealth, every node/.style={font=\small}]
+    \begin{tikzpicture}[scale=1.1, >=stealth, every node/.style={font=\small}]
         \draw[thick, teal]   (0,0) circle (2.2cm);
         \draw[thick, orange] (0,0) circle (1.2cm);
         \foreach \angle in {0, 72, 144, 216, 288} {
             \draw[dashed, gray!40] (\angle:1.2cm) -- (\angle:2.2cm);
         }
-        \node[teal, anchor=west]       at (0:2.4cm)   {$x_1(0)=2$};
-        \node[teal, anchor=south west] at (72:2.4cm)  {$x_1(1)=1$};
-        \node[teal, anchor=south east] at (144:2.4cm) {$x_1(2)=2$};
-        \node[teal, anchor=north east] at (216:2.4cm) {$x_1(3)=1$};
-        \node[teal, anchor=north west] at (288:2.4cm) {$x_1(4)=0$};
-        \node[orange, anchor=west]       at (0:1.35cm)   {$x_2(4)=5$};
-        \node[orange, anchor=north west] at (288:1.35cm) {$x_2(0)=1$};
-        \node[orange, anchor=north east] at (216:1.35cm) {$x_2(1)=2$};
-        \node[orange, anchor=south east] at (144:1.35cm) {$x_2(2)=3$};
-        \node[orange, anchor=south west] at (72:1.35cm)  {$x_2(3)=4$};
+        \foreach \angle in {0, 72, 144, 216, 288} { \fill[teal]   (\angle:2.2cm) circle (3pt); }
+        \foreach \angle in {0, 72, 144, 216, 288} { \fill[orange] (\angle:1.2cm) circle (3pt); }
+        \node[teal, anchor=west]       at (0:2.35cm)   {$2$};
+        \node[teal, anchor=south west] at (72:2.35cm)  {$1$};
+        \node[teal, anchor=south east] at (144:2.35cm) {$2$};
+        \node[teal, anchor=north east] at (216:2.35cm) {$1$};
+        \node[teal, anchor=north west] at (288:2.35cm) {$0$};
+        % m=4: x2(4)=5 en 0°
+        \node[orange, anchor=west]       at (0:1.35cm)   {$5$};
+        \node[orange, anchor=north west] at (288:1.35cm) {$1$};
+        \node[orange, anchor=north east] at (216:1.35cm) {$2$};
+        \node[orange, anchor=south east] at (144:1.35cm) {$3$};
+        \node[orange, anchor=south west] at (72:1.35cm)  {$4$};
     \end{tikzpicture}
-    \caption{Círculos concéntricos para $m = 4$: rotación acumulada de $288^\circ$ CCW.}
-\end{figure}
+    \captionof{figure}{$m=4$: $288^\circ$ CCW. $x_2(4)=5$ alineado con $x_1(0)=2$.}
+\end{minipage}%
+\hfill
+\begin{minipage}[c]{0.50\textwidth}
+    \[
+        x_3(4) = \begin{array}[t]{r@{\;}l}
+            & (2{\cdot}5) + (1{\cdot}4) \\
+            + & (2{\cdot}3) + (1{\cdot}2) \\
+            + & (0{\cdot}1)
+        \end{array}
+    \]
+    \[
+        = 10 + 4 + 6 + 2 + 0 = \mathbf{22}
+    \]
+\end{minipage}
 
-\[
-    x_3(4) = (2{\cdot}5) + (1{\cdot}4) + (2{\cdot}3) + (1{\cdot}2) + (0{\cdot}1)
-           = 10 + 4 + 6 + 2 + 0 = \mathbf{22}
-\]
+\vspace{1em}
 
 % ──────────────────────────────────────────────────────────────────────
 \subsubsection*{Resultado final}
