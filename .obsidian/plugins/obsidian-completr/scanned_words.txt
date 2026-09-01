@@ -48507,6 +48507,7 @@ delays
 develop
 declare
 designers
+dumbbell
 Vault
 Verificar
 Variables
@@ -76117,6 +76118,9 @@ book
 branched
 busing
 branches
+binary
+bitos
+bado
 scope
 status
 selector
@@ -86433,6 +86437,7 @@ shot
 synchronized
 seen
 shots
+startDate
 vault
 vil
 ver
@@ -106549,6 +106554,7 @@ arbitrary
 addsyn
 among
 avoided
+accent
 related
 recomendados
 ribbon
@@ -116534,6 +116540,7 @@ reasons
 replaced
 reaches
 realization
+records
 notes
 notas
 nuevas
@@ -136490,6 +136497,9 @@ circuit
 counter
 cates
 costs
+ceps
+chevrons
+cardio
 updated
 un
 universo
@@ -165287,6 +165297,9 @@ Calculadora
 CSL
 CSLA
 Cnoice
+Curl
+Caminata
+Cardio
 Instalados
 Instalado
 Instalar
@@ -185118,6 +185131,7 @@ Following
 FontSize
 Finaliza
 FEig
+Fisico
 Estado
 Excalidraw
 EPUBs
@@ -195615,6 +195629,7 @@ EXTRAS
 ESTILOS
 Especifica
 Entradas
+Elevaciones
 Obsidian
 OmniSearch
 Ocultar
@@ -214140,6 +214155,7 @@ AOUT
 ADDCNT
 ADDNT
 AWADDCNT
+Abdominales
 push
 pull
 para
@@ -234273,6 +234289,7 @@ modifications
 much
 methods
 multiperiod
+managed
 YAML
 Ya
 You
@@ -252448,6 +252465,7 @@ Bbxe
 BtBq
 Basadas
 Because
+Banca
 en
 exacta
 escaneados
@@ -273633,6 +273651,9 @@ MEMADBUS
 Modifi
 Multiperiod
 MADDCNT
+Metrics
+Militar
+Martillo
 Lectura
 LaTeX
 Linter
@@ -282840,6 +282861,7 @@ Listados
 LISTADOS
 Listado
 Luna
+Laterales
 links
 las
 listar
@@ -312881,6 +312903,9 @@ DeclareGraphicsExtensions
 DOCX
 DATAOUT
 DATAIN
+Dominadas
+Descanso
+Domingo
 Remotely
 Raz
 Revisa
@@ -323296,6 +323321,7 @@ Retardo
 Rotado
 Rotando
 RGENES
+Rutina
 Hider
 Hace
 Herramientas
@@ -331371,6 +331397,7 @@ Haciendo
 HorizontalAlignment
 Hackspire
 However
+Habits
 filtrar
 formato
 faltantes
@@ -340572,6 +340599,8 @@ fully
 factors
 follows
 feel
+fitness
+footprints
 haya
 hace
 hacer
@@ -349465,6 +349494,7 @@ habilitador
 handle
 holds
 halfway
+habit
 que
 quedan
 queda
@@ -429390,6 +429420,7 @@ written
 words
 waits
 waiting
+weeklyTarget
 xima
 xeles
 xy
