@@ -8,7 +8,10 @@ tags:
 icon: chevrons-up
 startDate: 2026-08-31
 weeklyTarget: 1
-records: {}
+records:
+  2026-08-19: 1
+  2026-08-12: 1
+  2026-08-05: 1
 ---
 # Dominadas
 

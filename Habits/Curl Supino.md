@@ -8,7 +8,10 @@ tags:
 icon: dumbbell
 startDate: 2026-08-31
 weeklyTarget: 1
-records: {}
+records:
+  2026-08-31: 1
+  2026-08-16: 1
+  2026-08-03: 1
 ---
 # Curl Supino
 

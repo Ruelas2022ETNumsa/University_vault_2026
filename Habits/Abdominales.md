@@ -8,7 +8,9 @@ tags:
 icon: flame
 startDate: 2026-08-31
 weeklyTarget: 1
-records: {}
+records:
+  2026-08-30: 1
+  2026-08-23: 1
 ---
 # Abdominales
 

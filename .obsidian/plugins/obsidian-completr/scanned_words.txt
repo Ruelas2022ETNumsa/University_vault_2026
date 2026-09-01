@@ -30225,6 +30225,7 @@ Since
 Such
 Steps
 SHOT
+Supino
 Plugins
 Pendientes
 Plugin
@@ -39189,6 +39190,7 @@ PALANI
 PRESENTACI
 Posicionamiento
 PERSONALIZADOS
+Pecho
 del
 date
 de
@@ -48508,6 +48510,8 @@ develop
 declare
 designers
 dumbbell
+descanso
+deltoides
 Vault
 Verificar
 Variables
@@ -86438,6 +86442,7 @@ synchronized
 seen
 shots
 startDate
+sculo
 vault
 vil
 ver
@@ -116541,6 +116546,7 @@ replaced
 reaches
 realization
 records
+repeticiones
 notes
 notas
 nuevas
@@ -195630,6 +195636,7 @@ ESTILOS
 Especifica
 Entradas
 Elevaciones
+Espalda
 Obsidian
 OmniSearch
 Ocultar
@@ -234290,6 +234297,7 @@ much
 methods
 multiperiod
 managed
+mancuerna
 YAML
 Ya
 You
@@ -252466,6 +252474,7 @@ BtBq
 Basadas
 Because
 Banca
+Braquial
 en
 exacta
 escaneados
@@ -331398,6 +331407,7 @@ HorizontalAlignment
 Hackspire
 However
 Habits
+Hombros
 filtrar
 formato
 faltantes
@@ -496695,6 +496705,7 @@ kmtdf
 kuNr
 keywordstyle
 keepspaces
+kilos
 Xe
 Xm
 Xu

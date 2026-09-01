@@ -12,7 +12,7 @@ icon: footprints
 startDate: 2026-08-31
 weeklyTarget: 5
 records:
-  2026-08-31: 1
+  2026-08-31: 2
 ---
 # Caminata Facultad
 

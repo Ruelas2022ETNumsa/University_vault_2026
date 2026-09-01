@@ -21,22 +21,11 @@
         "Latex",
         "_assets",
         "Rubbish",
+        "Habits",
         "Borrar",
-        "shared",
-        "README.md",
         "ETN825-T01.md",
-        "respuestas de gemini+fuentes.md",
-        "notebooklm_question.md",
-        "h.md",
-        "g.md",
-        "f.md",
-        "e.md",
-        "d.md",
-        "a.md",
-        "b.md",
-        "c.md",
-        "825core.md",
-        "Untitled.md"
+        "shared",
+        "README.md"
       ]
     },
     "MOC": {
@@ -624,6 +613,8 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "notebooklm_question.md",
+        "respuestas de gemini+fuentes.md",
         "void 1.md",
         "wolfram alpha example.md",
         "zborrar903_3 otro.md",
@@ -5837,55 +5828,11 @@
       "isPinned": false,
       "isHidden": false
     },
-    "notebooklm_question.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "h.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "g.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_app/solve/notebooklm_solve.md": {
       "isPinned": false,
       "isHidden": false
     },
     "Rubbish/promtpx.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "respuestas de gemini+fuentes.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "f.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "e.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "d.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "a.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "b.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "c.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "825core.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -5937,11 +5884,72 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Untitled.md": {
+    "_app/notebooklm/prompts/ETN825/DOC_ETN825.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_app/notebooklm/prompts/ETN825/DOC_ETN825.md": {
+    "Habits": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Rutina Fisica.md",
+        "Curl Supino.md",
+        "Curl de Martillo.md",
+        "Extension de Triceps.md",
+        "Press de Banca.md",
+        "Press Militar.md",
+        "Elevaciones Laterales.md",
+        "Dominadas.md",
+        "Abdominales.md",
+        "Caminata Facultad.md"
+      ]
+    },
+    "Habits/Press Militar.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Habits/Dominadas.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Habits/Elevaciones Laterales.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Habits/Extension de Triceps.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Habits/Curl de Martillo.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Habits/Press de Banca.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Habits/Abdominales.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Habits/Caminata Facultad.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Habits/Curl Supino.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Habits/Rutina Fisica.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Borrar/respuestas de gemini+fuentes.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Borrar/notebooklm_question.md": {
       "isPinned": false,
       "isHidden": false
     }
