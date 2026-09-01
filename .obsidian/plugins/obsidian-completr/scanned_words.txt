@@ -165306,6 +165306,7 @@ Cnoice
 Curl
 Caminata
 Cardio
+Clara
 Instalados
 Instalado
 Instalar
