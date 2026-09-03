@@ -71,7 +71,8 @@
         "scripts",
         "solve",
         "_appnotes",
-        "_config"
+        "_config",
+        "Tars"
       ]
     },
     "_app/completr-words": {
@@ -5978,6 +5979,30 @@
       "isHidden": false
     },
     "Untitled.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/Tars": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "work",
+        "HP_Prime_guide.md",
+        "HP_Prime_guide 1.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "_app/Tars/HP_Prime_guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/Tars/work": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [],
+      "sortOrder": "custom"
+    },
+    "_app/Tars/HP_Prime_guide 1.md": {
       "isPinned": false,
       "isHidden": false
     }
