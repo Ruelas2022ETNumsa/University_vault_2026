@@ -1,0 +1,20 @@
+EXPORT KMH_CONV()
+BEGIN
+  LOCAL kmh, mph, fps, kts;
+  
+  INPUT(kmh, "Conversor de velocidad", "km/h:", "Ingrese velocidad en km/h:", 0);
+  
+  mph := kmh * 0.621371;
+  fps := kmh * 0.911344;
+  kts := kmh * 0.539957;
+  
+  PRINT();
+  PRINT("== CONVERSOR km/h ==");
+  PRINT("Entrada: " + kmh + " km/h");
+  PRINT("-------------------");
+  PRINT("Millas/h  : " + ROUND(mph, 4));
+  PRINT("Pies/s    : " + ROUND(fps, 4));
+  PRINT("Nudos     : " + ROUND(kts, 4));
+  PRINT("-------------------");
+  WAIT();
+END;

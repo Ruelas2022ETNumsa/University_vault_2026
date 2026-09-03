@@ -9441,6 +9441,8 @@ tars
 tapa
 trasera
 transfieren
+touch
+testear
 ToDo
 Templater
 Text
@@ -30233,6 +30235,7 @@ Such
 Steps
 SHOT
 Supino
+Spreadsheet
 Plugins
 Pendientes
 Plugin
@@ -39199,6 +39202,8 @@ Posicionamiento
 PERSONALIZADOS
 Pecho
 Parpadeo
+Planet
+Pies
 del
 date
 de
@@ -57910,6 +57915,7 @@ VttNk
 Varios
 Verilog
 VECTORIALES
+Vout
 galaxy
 gina
 genes
@@ -67836,6 +67842,7 @@ gate
 gating
 given
 generated
+generarlas
 body
 beacon
 bat
@@ -86464,6 +86471,7 @@ suban
 supervisor
 significando
 subsanar
+staging
 vault
 vil
 ver
@@ -106584,6 +106592,8 @@ accent
 apag
 agotada
 agot
+algoritmos
+adaptadas
 related
 recomendados
 ribbon
@@ -116575,6 +116585,7 @@ rmdir
 retroiluminaci
 reiniciarse
 renombr
+recursivas
 notes
 notas
 nuevas
@@ -125907,6 +125918,9 @@ noise
 ntegramente
 nombrada
 nacionales
+nano
+nodal
+numpy
 created
 commit
 cada
@@ -136540,6 +136554,7 @@ cardio
 corrigio
 comodidad
 contrase
+corte
 updated
 un
 universo
@@ -165347,6 +165362,8 @@ Contrase
 Configurable
 Connectivity
 CASE
+CONV
+CONVERSOR
 Instalados
 Instalado
 Instalar
@@ -175653,6 +175670,8 @@ Instead
 IADDCNT
 Interstellar
 Inconsistencia
+INPUT
+Ingrese
 Funci
 File
 Fase
@@ -205039,6 +205058,7 @@ Otorga
 OPERATIONS
 Obviously
 OBUs
+Originalmente
 Auto
 Annotator
 Autocompletado
@@ -223626,6 +223646,8 @@ pantallas
 predeterminado
 parpadea
 proyectamos
+pensadas
+planificaba
 min
 mica
 movimiento
@@ -234360,6 +234382,7 @@ mili
 micro
 mbrica
 muerta
+migradas
 YAML
 Ya
 You
@@ -252538,6 +252561,7 @@ Because
 Banca
 Braquial
 Bajos
+BEGIN
 en
 exacta
 escaneados
@@ -263055,6 +263079,7 @@ exclusion
 especificos
 electronica
 evaluaciones
+encoder
 Motor
 Media
 Mantiene
@@ -273732,6 +273757,7 @@ Metrics
 Militar
 Martillo
 MicroPython
+Millas
 Lectura
 LaTeX
 Linter
@@ -282940,6 +282966,8 @@ LISTADOS
 Listado
 Luna
 Laterales
+Llamadas
+LOCAL
 links
 las
 listar
@@ -291754,6 +291782,7 @@ levels
 later
 loaded
 llegando
+locus
 incluyendo
 im
 instalar
@@ -302762,6 +302791,8 @@ insignificante
 inal
 inalterada
 insalvables
+impedancia
+inicializar
 Dependencia
 Dropbox
 Dataview
@@ -323408,6 +323439,8 @@ Rotando
 RGENES
 Rutina
 Retirar
+Repositorios
+ROUND
 Hider
 Hace
 Herramientas
@@ -340692,6 +340725,7 @@ footprints
 firmware
 foros
 fasores
+factible
 haya
 hace
 hacer
@@ -380267,6 +380301,7 @@ Nspire
 Negados
 Normally
 Nederland
+Nudos
 originales
 observatory
 oficial

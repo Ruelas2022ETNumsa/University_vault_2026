@@ -27,6 +27,10 @@
     {
       "extension": "prompt",
       "language": ""
+    },
+    {
+      "extension": "hpprgm",
+      "language": ""
     }
   ],
   "autoSwitchToReading": true

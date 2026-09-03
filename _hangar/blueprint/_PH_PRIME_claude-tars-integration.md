@@ -67,8 +67,21 @@ date: 2026-09-03
 
 ---
 
+## Ideas migradas desde blueprint TI-Nspire
+
+> Originalmente pensadas para TI-Nspire CX II CAS — adaptadas a HP Prime G2. El flujo es más simple porque `.hpprgm` es texto plano, sin cifrado ni conversión intermedia.
+
+- [ ] **Flujo bidireccional vault ↔ calc** — en TI era `.md ↔ .tns` vía TnsTools + Luna (complejo). En HP Prime: Claude escribe `.hpprgm` directamente en `_app/Tars/work/` sin conversión. El flujo inverso (leer un programa desde la calc al vault) requiere exportar desde el Connectivity Kit.
+- [ ] **Botones en Obsidian con Shell Commands + Commander** — disparar la apertura de la carpeta `work/` o el Connectivity Kit directamente desde la paleta de Obsidian. Aplica igual que en el blueprint TI.
+- [ ] **Colección de programas de ingeniería de referencia** — equivalente al repo `sononicola/Ti-Nspire-CX-CAS-programs`. Para HP Prime: `Dipto9999/ECE_Analysis_Tools` (MNA, fasores, root locus). Revisar estructura para tomar convenciones.
+- [ ] **Carpeta staging en el vault** — `_app/Tars/work/` ya cumple el rol de carpeta intermedia que se planificaba como `_calculadora/` en el flujo TI. Está resuelto.
+- [ ] **Hojas de cálculo** — en TI existía como tipo nativo `.tns Spreadsheet`. En HP Prime no hay equivalente de archivo; se resuelve con la Spreadsheet App cargada con datos vía programa PPL, o matrices definidas en código.
+
+---
+
 ## A depurar
 
 - `.hpmat` y `.hplist` son formato binario con estructura documentada (TI-Planet wiki) — evaluar si construir un encoder Python simple o simplemente inicializar matrices desde PPL en la calc directamente
 - Python en HP Prime es "beta" según firmware 2.4 — testear estabilidad antes de depender de él para casos de uso críticos
 - El Connectivity Kit no siempre detecta archivos nuevos automáticamente — puede necesitar refresh manual o drag & drop
+- Shell Commands + Commander (plugins Obsidian) — evaluar si ya están instalados en el vault antes de planificar integración
