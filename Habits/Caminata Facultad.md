@@ -13,6 +13,9 @@ startDate: 2026-08-31
 weeklyTarget: 5
 records:
   2026-08-31: 2
+  2026-09-03: 1
+  2026-09-02: 2
+  2026-09-01: 1
 ---
 # Caminata Facultad
 
