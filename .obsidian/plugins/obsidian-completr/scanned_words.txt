@@ -39205,6 +39205,7 @@ Parpadeo
 Planet
 Pies
 PrimeComm
+Plancha
 del
 date
 de
@@ -175688,6 +175689,7 @@ Interstellar
 Inconsistencia
 INPUT
 Ingrese
+Isom
 Funci
 File
 Fase
@@ -349656,6 +349658,7 @@ hpmuseum
 hpprgm
 hplp
 hardcodear
+hammer
 que
 quedan
 queda

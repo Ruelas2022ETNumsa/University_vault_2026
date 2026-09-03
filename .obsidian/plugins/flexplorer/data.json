@@ -5892,7 +5892,6 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "Rutina Fisica.md",
         "Curl Supino.md",
         "Curl de Martillo.md",
         "Extension de Triceps.md",
@@ -5901,7 +5900,9 @@
         "Elevaciones Laterales.md",
         "Dominadas.md",
         "Abdominales.md",
-        "Caminata Facultad.md"
+        "Caminata Facultad.md",
+        "Plancha Isométrica.md",
+        "Rutina Fisica 1.md"
       ]
     },
     "Habits/Press Militar.md": {
@@ -5937,10 +5938,6 @@
       "isHidden": false
     },
     "Habits/Curl Supino.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Habits/Rutina Fisica.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -6019,6 +6016,14 @@
       "isHidden": false
     },
     "_app/Tars/tars-sync-shellcommands.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Habits/Plancha Isométrica.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Habits/Rutina Fisica 1.md": {
       "isPinned": false,
       "isHidden": false
     }
