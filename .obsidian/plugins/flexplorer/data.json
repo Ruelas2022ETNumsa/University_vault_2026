@@ -25,7 +25,9 @@
         "Borrar",
         "ETN825-T01.md",
         "shared",
-        "README.md"
+        "README.md",
+        "Untitled 1.md",
+        "Untitled.md"
       ]
     },
     "MOC": {
@@ -3571,7 +3573,8 @@
         "2026-08-19",
         "2026-08-26",
         "draft.md",
-        "promtpx.md"
+        "promtpx.md",
+        "2026-09-02"
       ]
     },
     "Rubbish/2026-08-12": {
@@ -5950,6 +5953,31 @@
       "isHidden": false
     },
     "Borrar/notebooklm_question.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-02": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "BORRADOR OK OK ETN 825 2022.pdf",
+        "S. Palani, D. Kalaiyarasi-Principles of Digital Signal Processing - 2nd Ed.pdf"
+      ]
+    },
+    "Rubbish/2026-09-02/BORRADOR OK OK ETN 825 2022.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-02/S. Palani, D. Kalaiyarasi-Principles of Digital Signal Processing - 2nd Ed.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled.md": {
       "isPinned": false,
       "isHidden": false
     }
