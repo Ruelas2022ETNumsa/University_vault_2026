@@ -9440,6 +9440,7 @@ they
 tars
 tapa
 trasera
+transfieren
 ToDo
 Templater
 Text
@@ -48524,6 +48525,8 @@ domine
 datastreamer
 desconectar
 destello
+desarrollan
+desconocido
 Vault
 Verificar
 Variables
@@ -86459,6 +86462,8 @@ sculo
 sufre
 suban
 supervisor
+significando
+subsanar
 vault
 vil
 ver
@@ -116569,6 +116574,7 @@ repeticiones
 rmdir
 retroiluminaci
 reiniciarse
+renombr
 notes
 notas
 nuevas
@@ -165340,6 +165346,7 @@ Cient
 Contrase
 Configurable
 Connectivity
+CASE
 Instalados
 Instalado
 Instalar
@@ -175645,6 +175652,7 @@ IEMADBUS
 Instead
 IADDCNT
 Interstellar
+Inconsistencia
 Funci
 File
 Fase
@@ -214206,6 +214214,7 @@ Abdominales
 Alineado
 Algebraico
 Aprender
+Asumiendo
 push
 pull
 para
@@ -223616,6 +223625,7 @@ puesta
 pantallas
 predeterminado
 parpadea
+proyectamos
 min
 mica
 movimiento
@@ -302750,6 +302760,8 @@ incrementing
 indi
 insignificante
 inal
+inalterada
+insalvables
 Dependencia
 Dropbox
 Dataview
@@ -349574,6 +349586,9 @@ handle
 holds
 halfway
 habit
+hpprogram
+hpnote
+hpvars
 que
 quedan
 queda
