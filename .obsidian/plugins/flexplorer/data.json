@@ -1481,8 +1481,7 @@
       "customOrder": [
         "_ideas_1_mcp-reemplazo-github.md",
         "_ideas_1_apps_2brain.md",
-        "_ideas_0_shellcmd.md",
-        "_PH_PRIME_claude-tars-integration.md"
+        "_ideas_0_shellcmd.md"
       ]
     },
     "_hangar/blueprint/_ideas_0_shellcmd.md": {
@@ -5984,9 +5983,11 @@
       "sortOrder": "custom",
       "customOrder": [
         "work",
+        "tars-sync-shellcommands.md",
         "HP_Prime_guide.md",
-        "HP_Prime_guide 1.md",
-        "blueprint_tars_wifi_esp32.md"
+        "blueprint_tars_wifi_esp32.md",
+        "_PH_PRIME_claude-tars-integration.md",
+        "HP_Prime_guide 2.md"
       ]
     },
     "_app/Tars/HP_Prime_guide.md": {
@@ -5997,17 +5998,27 @@
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
-      "customOrder": []
-    },
-    "_app/Tars/HP_Prime_guide 1.md": {
-      "isPinned": false,
-      "isHidden": false
+      "customOrder": [
+        "KMH_CONV.hpprgm"
+      ]
     },
     "_app/Tars/blueprint_tars_wifi_esp32.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_hangar/blueprint/_PH_PRIME_claude-tars-integration.md": {
+    "_app/Tars/work/KMH_CONV.hpprgm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/Tars/HP_Prime_guide 2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/Tars/_PH_PRIME_claude-tars-integration.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/Tars/tars-sync-shellcommands.md": {
       "isPinned": false,
       "isHidden": false
     }
