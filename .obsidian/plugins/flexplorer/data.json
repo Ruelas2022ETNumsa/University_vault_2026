@@ -5985,12 +5985,13 @@
     "_app/Tars": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "work",
         "HP_Prime_guide.md",
-        "HP_Prime_guide 1.md"
-      ],
-      "sortOrder": "custom"
+        "HP_Prime_guide 1.md",
+        "blueprint_tars_wifi_esp32.md"
+      ]
     },
     "_app/Tars/HP_Prime_guide.md": {
       "isPinned": false,
@@ -5999,10 +6000,14 @@
     "_app/Tars/work": {
       "isPinned": false,
       "isHidden": false,
-      "customOrder": [],
-      "sortOrder": "custom"
+      "sortOrder": "custom",
+      "customOrder": []
     },
     "_app/Tars/HP_Prime_guide 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/Tars/blueprint_tars_wifi_esp32.md": {
       "isPinned": false,
       "isHidden": false
     }
