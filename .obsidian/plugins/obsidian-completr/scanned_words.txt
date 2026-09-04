@@ -9444,6 +9444,8 @@ transfieren
 touch
 testear
 trackear
+tolerancia
+tolerancias
 ToDo
 Templater
 Text
@@ -19804,6 +19806,7 @@ TOur
 Traslaci
 TARS
 Textbook
+Tars
 Sistema
 Sync
 Save
@@ -30237,6 +30240,7 @@ Steps
 SHOT
 Supino
 Spreadsheet
+Specifications
 Plugins
 Pendientes
 Plugin
@@ -48538,6 +48542,7 @@ desconocido
 debrouxl
 dongle
 diaria
+decibeles
 Vault
 Verificar
 Variables
@@ -76154,6 +76159,7 @@ binary
 bitos
 bado
 bater
+bandas
 scope
 status
 selector
@@ -86482,6 +86488,7 @@ shifter
 sockets
 streaks
 streak
+simplificados
 vault
 vil
 ver
@@ -106609,6 +106616,7 @@ aula
 aparezca
 activity
 activarla
+atenuaci
 related
 recomendados
 ribbon
@@ -116604,6 +116612,8 @@ recursivas
 reverseado
 requiri
 radar
+rizo
+refrescar
 notes
 notas
 nuevas
@@ -136579,6 +136589,7 @@ calculadoras
 cablear
 compatibles
 contenga
+confirmacion
 updated
 un
 universo
@@ -146896,6 +146907,7 @@ units
 useful
 unequal
 useGroupColor
+ubicarse
 Galaxy
 Git
 Gr
@@ -165390,6 +165402,7 @@ CASE
 CONV
 CONVERSOR
 Carousel
+Calculadoras
 Instalados
 Instalado
 Instalar
@@ -185231,6 +185244,7 @@ Fundamento
 Flotante
 Firmware
 Fabricaci
+Frecuencias
 Estado
 Excalidraw
 EPUBs
@@ -195734,6 +195748,8 @@ Exponentes
 Enteros
 Emulador
 Estudiar
+Especificaciones
+ExecutionPolicy
 Obsidian
 OmniSearch
 Ocultar
@@ -214266,6 +214282,7 @@ Algebraico
 Aprender
 Asumiendo
 Arduino
+Atenuaci
 push
 pull
 para
@@ -252599,6 +252616,7 @@ Braquial
 Bajos
 BEGIN
 BORRAR
+Banda
 en
 exacta
 escaneados
@@ -263119,6 +263137,10 @@ evaluaciones
 encoder
 eried
 endpoints
+esperamos
+estrecha
+espanol
+exito
 Motor
 Media
 Mantiene
@@ -313064,6 +313086,7 @@ Descanso
 Domingo
 Documentada
 Desconectar
+Documents
 Remotely
 Raz
 Revisa
@@ -323485,6 +323508,7 @@ Repositorios
 ROUND
 Rust
 Registran
+Rizo
 Hider
 Hace
 Herramientas
@@ -359635,6 +359659,7 @@ qNEo
 qqjP
 qRtz
 qmence
+queremos
 University
 Usar
 Un
@@ -438657,6 +438682,7 @@ xabO
 xyuAW
 xxvaultx
 xleftmargin
+xcopy
 Wikilinks
 WHERE
 WebGL

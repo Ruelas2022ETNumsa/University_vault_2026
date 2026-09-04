@@ -8,14 +8,14 @@ Antes de construir cualquier filtro, es necesario definir exactamente qué "part
 ### 2. Definición formal
 El diseño de un filtro digital comienza con la definición de su respuesta en magnitud $|H(e^{j\omega})|$ a través de los siguientes parámetros fundamentales:
 
-*   **Banda de paso $[0, \omega_p]$:** Rango de frecuencias que el filtro permite pasar. Se define una tolerancia $\delta_1$ (o $\delta_p$) tal que $1 - \delta_1 \leq |H(e^{j\omega})| \leq 1 + \delta_1$.
-*   **Banda de supresión $[\omega_s, \pi]$:** Rango de frecuencias que deben ser eliminadas. Se define una tolerancia $\delta_2$ (o $\delta_s$) tal que $|H(e^{j\omega})| \leq \delta_2$.
+*   **Banda de paso $[0, \omega_p]$:** Rango de frecuencias que el filtro permite pasar. Se define una tolerancia $\delta_1$ $o $\delta_p$$ tal que $1 - \delta_1 \leq |H(e^{j\omega})| \leq 1 + \delta_1$.
+*   **Banda de supresión $[\omega_s, \pi]$:** Rango de frecuencias que deben ser eliminadas. Se define una tolerancia $\delta_2$ $o $\delta_s$$ tal que $|H(e^{j\omega})| \leq \delta_2$.
 *   **Frecuencias de borde:** $\omega_p$ es la frecuencia de borde de banda de paso y $\omega_s$ es la frecuencia de borde de banda de supresión.
 *   **Banda de transición:** El intervalo $(\omega_p, \omega_s)$ donde la respuesta cae de la banda de paso a la de supresión.
 
 En la práctica, estas especificaciones suelen expresarse en escala logarítmica (decibeles):
-*   **Rizo en banda de paso ($R_p$):** $R_p = -20 \log_{10} \left( \frac{1-\delta_1}{1+\delta_1} \right) \text{ dB}$.
-*   **Atenuación en banda de supresión ($A_s$):** $A_s = -20 \log_{10} \left( \frac{\delta_2}{1+\delta_1} \right) \text{ dB}$.
+*   **Rizo en banda de paso $$R_p$$:** $R_p = -20 \log_{10} \left( \frac{1-\delta_1}{1+\delta_1} \right) \text{ dB}$.
+*   **Atenuación en banda de supresión $$A_s$$:** $A_s = -20 \log_{10} \left( \frac{\delta_2}{1+\delta_1} \right) \text{ dB}$.
 
 ### 3. Figura o diagrama
 
@@ -29,20 +29,20 @@ width=400; height=350;
 \delta_2 = 0.15
 # Zonas de tolerancia
 # Banda de paso
-y = 1+\delta_1 | 0 \le x \le \omega_p | color:#629900
-y = 1-\delta_1 | 0 \le x \le \omega_p | color:#629900
+y = 1+\delta_1 | 0 \le x \le \omega_p | #629900
+y = 1-\delta_1 | 0 \le x \le \omega_p | #629900
 # Banda de supresión
-y = \delta_2 | \omega_s \le x \le 3.14 | color:#C1121F
+y = \delta_2 | \omega_s \le x \le 3.14 | #C1121F
 # Curva de respuesta ejemplo
-f(x) = (1-0.1\cos(10x)) / (1 + (x/1.1)^{8})
-f(x) | color:#005F73
+y = $1-0.1\cos(10x)$ / $1 + (x/1.1)^{8}$
+f(x) | #005F73
 ```
 %%IMA-SRC | fuente: Ingle & Proakis — Digital Signal Processing Using MATLAB — 3rd ed.pdf | página: 305 | id: Fig. 7.1 | posición: superior
 justificación: La figura ilustra los límites de tolerancia (rizo y atenuación) y las bandas críticas (paso, transición y supresión) en una respuesta de magnitud típica.%%
 
 ### 4. Preguntas de comprensión
 1. ¿Qué sucede con el orden del filtro (complejidad) si se requiere una banda de transición muy estrecha?
-2. ¿Por qué es necesario permitir un rizo ($\delta_1$) en la banda de paso en lugar de exigir una ganancia unitaria exacta?
+2. ¿Por qué es necesario permitir un rizo $$\delta_1$$ en la banda de paso en lugar de exigir una ganancia unitaria exacta?
 3. En términos de decibeles, ¿qué significa que un filtro tenga una atenuación de 60 dB en la banda de supresión en comparación con uno de 20 dB?
 
 ### 5. Ejercicios resueltos
@@ -96,15 +96,18 @@ $$
 Si un filtro pasa-bajo tiene una frecuencia de borde de banda de paso $\omega_p = 0.2\pi$ y una frecuencia de borde de banda de supresión $\omega_s = 0.3\pi$, calcule el ancho de la banda de transición y la frecuencia central de corte aproximada.
 
 **Resolución:**
-1. El ancho de la banda de transición ($\Delta\omega$) es la diferencia entre los bordes:
+1. El ancho de la banda de transición $$\Delta\omega$$ es la diferencia entre los bordes:
    
 $$
 \Delta\omega = \omega_s - \omega_p = 0.3\pi - 0.2\pi = 0.1\pi \text{ rad/muestra}
 $$
 
-2. La frecuencia de corte ($\omega_c$) suele ubicarse idealmente en el punto medio de la banda de transición para diseños simplificados:
+2. La frecuencia de corte $$\omega_c$$ suele ubicarse idealmente en el punto medio de la banda de transición para diseños simplificados:
    
 $$
 \omega_c = \frac{\omega_p + \omega_s}{2} = \frac{0.2\pi + 0.3\pi}{2} = 0.25\pi \text{ rad/muestra}
 $$
+
+
+
 
