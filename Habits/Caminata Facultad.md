@@ -9,6 +9,7 @@ tags:
   - fitness
   - cardio
 icon: footprints
+useGroupColor: true
 startDate: 2026-08-31
 weeklyTarget: 5
 records:

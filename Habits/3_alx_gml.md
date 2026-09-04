@@ -1,19 +1,18 @@
 ---
 habit: true
 type: binary
-color: "#E74C3C"
-group: Ejercicio
+color: "#9B59B6"
+group: Workers
 tags:
-  - fitness
-icon: flame
+  - workers
+icon: cpu
 useGroupColor: true
-startDate: 2026-08-31
-weeklyTarget: 1
+startDate: 2026-09-03
+weeklyTarget: 7
 records:
-  2026-08-30: 1
-  2026-08-23: 1
+  2026-09-03: 1
 ---
-# Abdominales
+# alx_gml
 
 This note is managed by the Habits plugin.
 

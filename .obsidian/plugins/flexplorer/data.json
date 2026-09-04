@@ -5892,6 +5892,10 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "Dashboard.md",
+        "Workers.md",
+        "Rutina Fisica.md",
+        "Abdominales.md",
         "Curl Supino.md",
         "Curl de Martillo.md",
         "Extension de Triceps.md",
@@ -5899,10 +5903,12 @@
         "Press Militar.md",
         "Elevaciones Laterales.md",
         "Dominadas.md",
-        "Abdominales.md",
         "Caminata Facultad.md",
-        "Plancha Isométrica.md",
-        "Rutina Fisica 1.md"
+        "1_alx_hot.md",
+        "2_krajo.md",
+        "3_alx_gml.md",
+        "4_alxrul.md",
+        "5_alx-rul.md"
       ]
     },
     "Habits/Press Militar.md": {
@@ -5926,10 +5932,6 @@
       "isHidden": false
     },
     "Habits/Press de Banca.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Habits/Abdominales.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -6019,11 +6021,39 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Habits/Plancha Isométrica.md": {
+    "Habits/Rutina Fisica.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "Habits/Rutina Fisica 1.md": {
+    "Habits/Abdominales.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Habits/Workers.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Habits/Dashboard.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Habits/1_alx_hot.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Habits/2_krajo.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Habits/3_alx_gml.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Habits/4_alxrul.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Habits/5_alx-rul.md": {
       "isPinned": false,
       "isHidden": false
     }

@@ -34,32 +34,20 @@
 
 ---
 
-## Dashboard — Marcar hábitos del día
-
-```habits
-```
-
----
-
-## 📊 Heatmap general
-
-```habits-heatmap
-```
-
----
-
 ## 📈 Métricas por ejercicio
 
 ### Curl Supino
 
 ```habit-metrics
 habit: Curl Supino
+view: month
 ```
 
 ### Curl de Martillo
 
 ```habit-metrics
 habit: Curl de Martillo
+view: month
 ```
 
 ### Extensión de Tríceps
@@ -72,34 +60,40 @@ habit: Extensión de Tríceps
 
 ```habit-metrics
 habit: Press de Banca
+view: month
 ```
 
 ### Press Militar
 
 ```habit-metrics
 habit: Press Militar
+view: month
 ```
 
 ### Elevaciones Laterales
 
 ```habit-metrics
 habit: Elevaciones Laterales
+view: month
 ```
 
 ### Dominadas
 
 ```habit-metrics
 habit: Dominadas
+view: month
 ```
 
 ### Abdominales
 
 ```habit-metrics
 habit: Abdominales
+view: month
 ```
 
 ### Caminata Facultad
 
 ```habit-metrics
 habit: Caminata Facultad
+view: month
 ```

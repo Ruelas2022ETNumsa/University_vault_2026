@@ -6,6 +6,7 @@ group: Ejercicio
 tags:
   - fitness
 icon: zap
+useGroupColor: true
 startDate: 2026-08-31
 weeklyTarget: 1
 records:

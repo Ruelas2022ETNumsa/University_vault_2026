@@ -1,14 +1,18 @@
 {
   "habitsFolder": "Habits",
-  "dashboardLayout": "carousel",
+  "dashboardLayout": "grid",
   "cardsPerView": 4,
-  "sortMode": "name",
+  "sortMode": "group",
   "manualOrder": [],
   "statusOrdering": true,
   "groupsEnabled": true,
   "tableGrouping": true,
   "groups": {},
-  "groupOrder": [],
+  "groupOrder": [
+    "Workers",
+    "Ejercicio",
+    "Cardio"
+  ],
   "mobileCardsPerView": 2,
   "followDailyNoteDate": true,
   "dailyNoteDateFormat": "YYYY-MM-DD",
