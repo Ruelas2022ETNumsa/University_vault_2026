@@ -27,7 +27,12 @@
         "shared",
         "README.md",
         "Untitled 1.md",
-        "Untitled.md"
+        "Untitled.md",
+        "Sin título 1.md",
+        "Sin título 3.md",
+        "Sin título 2.md",
+        "Sin título 4.md",
+        "Sin título.md"
       ]
     },
     "MOC": {
@@ -228,7 +233,8 @@
         "_skill-system.md",
         "_prompt-system.md",
         "_comments-system.md",
-        "_sidenotes-system.md"
+        "_sidenotes-system.md",
+        "_habits-system.md"
       ]
     },
     "_app/_config/_basic-memory-system.md": {
@@ -287,7 +293,11 @@
         "ETN-825",
         "ETN-607",
         "ETN-505",
-        "BORRADOR OK OK ETN 825 2022.pdf"
+        "BORRADOR OK OK ETN 825 2022.pdf",
+        "Connectivity_Kit_ESP_2016_08_29_1.pdf",
+        "Emulator_Help_ESP_2015_06_17_1.pdf",
+        "User_Guide_ESP_2018_01_12_1.pdf",
+        "Quick_Start_Guide_ESP_2017_11_20_1.pdf"
       ]
     },
     "_templates": {
@@ -6054,6 +6064,46 @@
       "isHidden": false
     },
     "Habits/5_alx-rul.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Sin título 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Sin título 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Sin título 2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Sin título 4.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Sin título.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/_config/_habits-system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/Connectivity_Kit_ESP_2016_08_29_1.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/Emulator_Help_ESP_2015_06_17_1.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/User_Guide_ESP_2018_01_12_1.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_PDF/Quick_Start_Guide_ESP_2017_11_20_1.pdf": {
       "isPinned": false,
       "isHidden": false
     }
