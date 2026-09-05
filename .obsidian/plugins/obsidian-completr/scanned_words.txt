@@ -39211,6 +39211,7 @@ Planet
 Pies
 PrimeComm
 Plancha
+Portar
 del
 date
 de
@@ -76160,6 +76161,7 @@ bitos
 bado
 bater
 bandas
+bash
 scope
 status
 selector
@@ -86489,6 +86491,7 @@ sockets
 streaks
 streak
 simplificados
+stdlib
 vault
 vil
 ver
@@ -106617,6 +106620,8 @@ aparezca
 activity
 activarla
 atenuaci
+arma
+analizarlo
 related
 recomendados
 ribbon
@@ -116614,6 +116619,8 @@ requiri
 radar
 rizo
 refrescar
+reconozca
+resave
 notes
 notas
 nuevas
@@ -125949,6 +125956,7 @@ nacionales
 nano
 nodal
 numpy
+named
 created
 commit
 cada
@@ -136590,6 +136598,9 @@ cablear
 compatibles
 contenga
 confirmacion
+compilada
+corrompe
+construya
 updated
 un
 universo
@@ -156458,6 +156469,7 @@ GTmt
 GQMj
 GvFQ
 GEFM
+Garantiza
 Convenci
 Creaci
 Commander
@@ -165403,6 +165415,7 @@ CONV
 CONVERSOR
 Carousel
 Calculadoras
+Check
 Instalados
 Instalado
 Instalar
@@ -214283,6 +214296,8 @@ Aprender
 Asumiendo
 Arduino
 Atenuaci
+Automatizar
+Aprovechable
 push
 pull
 para
@@ -302857,6 +302872,7 @@ inalterada
 insalvables
 impedancia
 inicializar
+inutilizable
 Dependencia
 Dropbox
 Dataview
@@ -505873,6 +505889,7 @@ XucR
 XIMA
 XTick
 XLSX
+Xprime
 ßK
 ßH
 ßu

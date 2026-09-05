@@ -3573,7 +3573,6 @@
         "section.md",
         "2026-08-20",
         "2026-08-24",
-        "2026-08-04",
         "2026-08-06",
         "2026-08-09",
         "2026-08-10",
@@ -4810,31 +4809,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-08-04": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "2026-08-04 17.43.30.0",
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-08-04/2026-08-04 17.43.30.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-08-04/2026-08-04 17.43.30.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-04/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Rubbish/2026-08-06": {
       "isPinned": false,
       "isHidden": false,
@@ -5996,7 +5970,8 @@
         "HP_Prime_guide.md",
         "blueprint_tars_wifi_esp32.md",
         "_PH_PRIME_claude-tars-integration.md",
-        "HP_Prime_guide 2.md"
+        "HP_Prime_guide 2.md",
+        "tars-hpprgm-conversion.md"
       ]
     },
     "_app/Tars/HP_Prime_guide.md": {
@@ -6008,7 +5983,8 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "KMH_CONV.hpprgm"
+        "KMH_CONV.hpprgm",
+        "tars_conversion"
       ]
     },
     "_app/Tars/blueprint_tars_wifi_esp32.md": {
@@ -6106,6 +6082,16 @@
     "_PDF/Quick_Start_Guide_ESP_2017_11_20_1.pdf": {
       "isPinned": false,
       "isHidden": false
+    },
+    "_app/Tars/tars-hpprgm-conversion.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/Tars/work/tars_conversion": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [],
+      "sortOrder": "custom"
     }
   },
   "pinnedFiles": [
