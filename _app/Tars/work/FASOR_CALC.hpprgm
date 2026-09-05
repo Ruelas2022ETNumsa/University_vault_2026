@@ -1,0 +1,97 @@
+EXPORT FASOR_CALC()
+BEGIN
+  LOCAL op, r1, x1, r2, x2, mag1, ang1, mag2, ang2;
+  LOCAL re_sum, im_sum, re_dif, im_dif;
+  LOCAL re_mul, im_mul, mag_mul, ang_mul;
+  LOCAL denom, re_div, im_div, mag_div, ang_div;
+  LOCAL freq, r, l, c, xl, xc, z_mag, z_ang;
+
+  CHOOSE(op, "Fasores",
+    "1. Suma A+B",
+    "2. Resta A-B",
+    "3. Multiplicacion",
+    "4. Division",
+    "5. Impedancia RLC serie"
+  );
+
+  // --- SUMA ---
+  IF op == 1 THEN
+    INPUT(r1, "Fasor A", "Re(A):", "Parte real A:", 0);
+    INPUT(x1, "Fasor A", "Im(A):", "Parte imag A:", 0);
+    INPUT(r2, "Fasor B", "Re(B):", "Parte real B:", 0);
+    INPUT(x2, "Fasor B", "Im(B):", "Parte imag B:", 0);
+    re_sum := r1 + r2;
+    im_sum := x1 + x2;
+    mag1 := sqrt(re_sum^2 + im_sum^2);
+    ang1 := atan2(im_sum, re_sum) * 180 / pi;
+    MSGBOX("A + B =\n" + re_sum + " + j" + im_sum + "\n|Z| = " + mag1 + "\nang = " + ang1 + " deg");
+    RETURN re_sum + x1*0;
+  END;
+
+  // --- RESTA ---
+  IF op == 2 THEN
+    INPUT(r1, "Fasor A", "Re(A):", "Parte real A:", 0);
+    INPUT(x1, "Fasor A", "Im(A):", "Parte imag A:", 0);
+    INPUT(r2, "Fasor B", "Re(B):", "Parte real B:", 0);
+    INPUT(x2, "Fasor B", "Im(B):", "Parte imag B:", 0);
+    re_dif := r1 - r2;
+    im_dif := x1 - x2;
+    mag1 := sqrt(re_dif^2 + im_dif^2);
+    ang1 := atan2(im_dif, re_dif) * 180 / pi;
+    MSGBOX("A - B =\n" + re_dif + " + j" + im_dif + "\n|Z| = " + mag1 + "\nang = " + ang1 + " deg");
+    RETURN re_dif;
+  END;
+
+  // --- MULTIPLICACION polar: mag*ang ---
+  IF op == 3 THEN
+    INPUT(mag1, "Fasor A polar", "Mag:", "Magnitud A:", 1);
+    INPUT(ang1, "Fasor A polar", "ang (deg):", "Angulo A (grados):", 0);
+    INPUT(mag2, "Fasor B polar", "Mag:", "Magnitud B:", 1);
+    INPUT(ang2, "Fasor B polar", "ang (deg):", "Angulo B (grados):", 0);
+    mag_mul := mag1 * mag2;
+    ang_mul := ang1 + ang2;
+    re_mul := mag_mul * cos(ang_mul * pi / 180);
+    im_mul := mag_mul * sin(ang_mul * pi / 180);
+    MSGBOX("A x B =\n|Z| = " + mag_mul + " / " + ang_mul + " deg\n= " + re_mul + " + j" + im_mul);
+    RETURN mag_mul;
+  END;
+
+  // --- DIVISION polar ---
+  IF op == 4 THEN
+    INPUT(mag1, "Fasor A polar", "Mag:", "Magnitud A:", 1);
+    INPUT(ang1, "Fasor A polar", "ang (deg):", "Angulo A (grados):", 0);
+    INPUT(mag2, "Fasor B polar", "Mag:", "Magnitud B:", 1);
+    INPUT(ang2, "Fasor B polar", "ang (deg):", "Angulo B (grados):", 0);
+    IF mag2 == 0 THEN
+      MSGBOX("Error: magnitud B no puede ser 0");
+      RETURN 0;
+    END;
+    mag_div := mag1 / mag2;
+    ang_div := ang1 - ang2;
+    re_div := mag_div * cos(ang_div * pi / 180);
+    im_div := mag_div * sin(ang_div * pi / 180);
+    MSGBOX("A / B =\n|Z| = " + mag_div + " / " + ang_div + " deg\n= " + re_div + " + j" + im_div);
+    RETURN mag_div;
+  END;
+
+  // --- IMPEDANCIA RLC SERIE ---
+  IF op == 5 THEN
+    INPUT(freq, "RLC Serie", "f (Hz):", "Frecuencia Hz:", 60);
+    INPUT(r, "RLC Serie", "R (ohm):", "Resistencia:", 0);
+    INPUT(l, "RLC Serie", "L (H):", "Inductancia H:", 0);
+    INPUT(c, "RLC Serie", "C (F):", "Capacitancia F:", 0);
+    xl := 2 * pi * freq * l;
+    IF c == 0 THEN
+      xc := 0;
+    ELSE
+      xc := 1 / (2 * pi * freq * c);
+    END;
+    re_sum := r;
+    im_sum := xl - xc;
+    z_mag := sqrt(r^2 + im_sum^2);
+    z_ang := atan2(im_sum, r) * 180 / pi;
+    MSGBOX("Z = " + r + " + j(" + xl + " - " + xc + ")\n= " + r + " + j" + im_sum + "\n|Z| = " + z_mag + " ohm\nang = " + z_ang + " deg\nXL = " + xl + "  XC = " + xc);
+    RETURN z_mag;
+  END;
+
+END;

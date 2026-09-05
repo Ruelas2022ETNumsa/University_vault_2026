@@ -12,7 +12,7 @@ tags:
   - ingenieria-electronica
   - tars
 date_created: 2026-09-02
-date_updated: 2026-09-02
+date_updated: 2026-09-03
 status: activo
 ---
 
@@ -152,11 +152,12 @@ El LED en el borde superior parpadea para que el supervisor lo vea a distancia.
 
 | Programa | Ruta configurada |
 |---|---|
-| HP Prime Virtual Calculator (CASE) | `E:\University_vault_2026\_app\Tars\work` |
-| HP Prime Connectivity Kit | `E:\University_vault_2026\_app\Tars\work` |
+| HP Prime Virtual Calculator (CASE) | `C:\Users\USUARIO\Documents\HP Prime` (default) |
+| HP Prime Connectivity Kit | `C:\Users\USUARIO\Documents\HP Connectivity Kit` (default) |
+| Claude (work) | `E:\University_vault_2026\_app\Tars\work` |
 
-> Aquí se guardan los programas (.hpprogram), notas (.hpnote) y variables (.hpvars)
-> que Claude genera y que luego se transfieren a TARS desde el Connectivity Kit.
+> Las apps usan sus rutas default. `work` es exclusivo para archivos que Claude crea.
+> El flujo es: Claude guarda en work → usuario arrastra con drag & drop a CASE o TARS en el Kit.
 
 ### Flujo de trabajo: Claude → TARS
 
@@ -234,7 +235,6 @@ la instalación. El firmware quedó instalado correctamente pero sin energía pa
 ## Pendiente
 
 - Configurar WiFi de TARS física
-- Cambiar carpeta de trabajo en Connectivity Kit a `E:\University_vault_2026\_app\Tars\work`
 - Aprender funciones CAS básicas para ingeniería electrónica:
   - Simplificación de expresiones
   - Derivadas e integrales
@@ -246,5 +246,5 @@ la instalación. El firmware quedó instalado correctamente pero sin energía pa
 
 %%
 # galaxy-links
-[[_app/Tars/HP_Prime_guide.md]]
+[[HP_Prime_guide]]
 %%

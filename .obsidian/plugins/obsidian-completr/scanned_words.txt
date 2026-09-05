@@ -19808,6 +19808,7 @@ TARS
 Textbook
 Tars
 Tomado
+THEN
 Sistema
 Sync
 Save
@@ -30242,6 +30243,7 @@ SHOT
 Supino
 Spreadsheet
 Specifications
+SERIE
 Plugins
 Pendientes
 Plugin
@@ -39214,6 +39216,8 @@ PrimeComm
 Plancha
 Portar
 PrimeUsbFile
+Paralelepipedo
+Piramide
 del
 date
 de
@@ -48547,6 +48551,7 @@ dongle
 diaria
 decibeles
 definieron
+denom
 Vault
 Verificar
 Variables
@@ -57931,6 +57936,7 @@ Varios
 Verilog
 VECTORIALES
 Vout
+Volumenes
 galaxy
 gina
 genes
@@ -125972,6 +125978,7 @@ nodal
 numpy
 named
 nevertheless
+nang
 created
 commit
 cada
@@ -165444,6 +165451,10 @@ Confirma
 Construido
 Convirtiendo
 Calculators
+CALC
+CHOOSE
+Cono
+Capacitancia
 Instalados
 Instalado
 Instalar
@@ -175753,6 +175764,8 @@ Inconsistencia
 INPUT
 Ingrese
 Isom
+IMPEDANCIA
+Inductancia
 Funci
 File
 Fase
@@ -185286,6 +185299,8 @@ Flotante
 Firmware
 Fabricaci
 Frecuencias
+FASOR
+Fasores
 Estado
 Excalidraw
 EPUBs
@@ -195792,6 +195807,8 @@ Estudiar
 Especificaciones
 ExecutionPolicy
 EXITOSO
+Esfera
+ELSE
 Obsidian
 OmniSearch
 Ocultar
@@ -273879,6 +273896,9 @@ Militar
 Martillo
 MicroPython
 Millas
+MSGBOX
+Multiplicacion
+MULTIPLICACION
 Lectura
 LaTeX
 Linter
@@ -283090,6 +283110,7 @@ Laterales
 Llamadas
 LOCAL
 Lucide
+Largo
 links
 las
 listar
@@ -302922,6 +302943,7 @@ initially
 isfile
 isdir
 identific
+imag
 Dependencia
 Dropbox
 Dataview
@@ -313153,6 +313175,8 @@ Documentada
 Desconectar
 Documents
 Devuelve
+Division
+DIVISION
 Remotely
 Raz
 Revisa
@@ -323577,6 +323601,7 @@ Registran
 Rizo
 Requisito
 Robustez
+RESTA
 Hider
 Hace
 Herramientas
@@ -340866,6 +340891,7 @@ fasores
 factible
 flame
 fakuivan
+freq
 haya
 hace
 hacer

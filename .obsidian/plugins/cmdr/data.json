@@ -59,6 +59,12 @@
       "icon": "lucide-circle-star",
       "name": "Shell commands: Execute: Occlusion Actions",
       "mode": "any"
+    },
+    {
+      "id": "obsidian-shellcommands:shell-command-lo8l9at7ku",
+      "icon": "lucide-calculator",
+      "name": "Shell commands: Execute: TARS: Sincronizar archivo",
+      "mode": "any"
     }
   ],
   "rightRibbon": [],

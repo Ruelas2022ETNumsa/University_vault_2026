@@ -5967,44 +5967,21 @@
       "sortOrder": "custom",
       "customOrder": [
         "work",
-        "tars-sync-shellcommands.md",
-        "HP_Prime_guide.md",
-        "blueprint_tars_wifi_esp32.md",
-        "_PH_PRIME_claude-tars-integration.md",
-        "HP_Prime_guide 2.md",
-        "tars-hpprgm-conversion.md"
+        "other"
       ]
-    },
-    "_app/Tars/HP_Prime_guide.md": {
-      "isPinned": false,
-      "isHidden": false
     },
     "_app/Tars/work": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "tars_conversion",
         "KMH_CONV.hpprgm",
-        "tars_conversion"
+        "VOL_CALC.hpprgm",
+        "FASOR_CALC.hpprgm"
       ]
     },
-    "_app/Tars/blueprint_tars_wifi_esp32.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_app/Tars/work/KMH_CONV.hpprgm": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/Tars/HP_Prime_guide 2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/Tars/_PH_PRIME_claude-tars-integration.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/Tars/tars-sync-shellcommands.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -6084,10 +6061,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_app/Tars/tars-hpprgm-conversion.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_app/Tars/work/tars_conversion": {
       "isPinned": false,
       "isHidden": false,
@@ -6126,6 +6099,46 @@
       "isHidden": false
     },
     "_skills/_doc_start_movil607P1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/Tars/work/VOL_CALC.hpprgm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/Tars/work/FASOR_CALC.hpprgm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/Tars/other": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "tars-sync-shellcommands.md",
+        "HP_Prime_guide.md",
+        "blueprint_tars_wifi_esp32.md",
+        "_PH_PRIME_claude-tars-integration.md",
+        "HP_Prime_guide 2.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "_app/Tars/other/HP_Prime_guide 2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/Tars/other/_PH_PRIME_claude-tars-integration.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/Tars/other/blueprint_tars_wifi_esp32.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/Tars/other/HP_Prime_guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/Tars/other/tars-sync-shellcommands.md": {
       "isPinned": false,
       "isHidden": false
     }

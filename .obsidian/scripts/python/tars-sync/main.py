@@ -1,33 +1,65 @@
 import sys
-import shutil
 import os
+import struct
 
-# Argumentos
-file_path = sys.argv[1]
-destino = sys.argv[2].strip().upper() if len(sys.argv) > 2 else "V"
 
-# Rutas destino
-RUTAS = {
-    "V": r"C:\Users\USUARIO\Documents\HP Prime\Calculators\Prime",
-    "F": r"C:\Users\USUARIO\Documents\HP Connectivity Kit\Calculadoras\TARS",
-}
+def build_hpprgm(nombre_programa, codigo_utf8):
+    nombre_utf16 = nombre_programa.encode('utf-16-le')
+    codigo_utf16 = codigo_utf8.encode('utf-16-le')
 
-# Validar destino
-if destino not in RUTAS:
-    print(f"Destino '{destino}' no reconocido. Usá V (CASE) o F (TARS).")
-    sys.exit(1)
+    # Tabla de exportados: 31 00 = función exportada + nombre + 00 00 00 00
+    tabla = bytes([0x31, 0x00]) + nombre_utf16 + bytes([0x00, 0x00, 0x00, 0x00])
 
-# Validar que el archivo existe
-if not os.path.isfile(file_path):
-    print(f"Archivo no encontrado: {file_path}")
-    sys.exit(1)
+    # Header blob
+    header_data = (
+        struct.pack('<H', 0)   # 0 variables exportadas
+        + struct.pack('<H', 0) # 0 views
+        + struct.pack('<H', 1) # 1 función exportada
+        + bytes(6)             # 6 bytes opcionales (ceros)
+        + tabla
+    )
+    header_blob = struct.pack('<I', len(header_data)) + header_data
 
-# Copiar
-carpeta_destino = RUTAS[destino]
-nombre_archivo = os.path.basename(file_path)
-destino_final = os.path.join(carpeta_destino, nombre_archivo)
+    # Source blob
+    source_data = codigo_utf16 + bytes([0x00, 0x00])
+    source_blob = struct.pack('<I', len(source_data)) + source_data
 
-shutil.copy2(file_path, destino_final)
+    return header_blob + source_blob
 
-nombre_calc = "CASE" if destino == "V" else "TARS"
-print(f"Copiado a {nombre_calc}: {nombre_archivo}")
+
+def main():
+    if len(sys.argv) < 2:
+        print("ERROR: se requiere la ruta del archivo como argumento.")
+        sys.exit(1)
+
+    file_path = sys.argv[1]
+
+    if not os.path.isfile(file_path):
+        print(f"ERROR: archivo no encontrado: {file_path}")
+        sys.exit(1)
+
+    with open(file_path, 'r', encoding='utf-8') as f:
+        codigo = f.read()
+
+    nombre = os.path.splitext(os.path.basename(file_path))[0]
+
+    binario = build_hpprgm(nombre, codigo)
+
+    # Ruta destino: carpeta HP Prime del usuario actual
+    user_documents = os.path.expanduser("~\\Documents")
+    destino_dir = os.path.join(user_documents, "HP Prime", "Calculators", "Prime")
+
+    if not os.path.isdir(destino_dir):
+        print(f"ERROR: carpeta destino no encontrada: {destino_dir}")
+        sys.exit(1)
+
+    destino = os.path.join(destino_dir, nombre + ".hpprgm")
+
+    with open(destino, 'wb') as f:
+        f.write(binario)
+
+    print(f"OK: {nombre}.hpprgm copiado a CASE")
+
+
+if __name__ == "__main__":
+    main()
