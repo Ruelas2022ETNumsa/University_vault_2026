@@ -6090,8 +6090,39 @@
     "_app/Tars/work/tars_conversion": {
       "isPinned": false,
       "isHidden": false,
-      "customOrder": [],
-      "sortOrder": "custom"
+      "sortOrder": "custom",
+      "customOrder": [
+        "conversion-opc_A.md",
+        "conversion-opc_B.md",
+        "conversion-opc_C.md",
+        "logbook.md",
+        "test_conversion.py",
+        "tsk_carrier.md"
+      ]
+    },
+    "_app/Tars/work/tars_conversion/conversion-opc_A.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/Tars/work/tars_conversion/conversion-opc_B.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/Tars/work/tars_conversion/conversion-opc_C.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/Tars/work/tars_conversion/logbook.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/Tars/work/tars_conversion/test_conversion.py": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/Tars/work/tars_conversion/tsk_carrier.md": {
+      "isPinned": false,
+      "isHidden": false
     }
   },
   "pinnedFiles": [

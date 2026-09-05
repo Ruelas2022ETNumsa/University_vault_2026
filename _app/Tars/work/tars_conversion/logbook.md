@@ -35,6 +35,7 @@ Carrier para resolver la conversión automática de archivos `.hpprgm` desde Obs
 ## Hitos
 
 - 2026-09-04 — investigación del formato `.hpprgm` completada, tres opciones documentadas
+- 2026-09-04 — Opción A validada: Python genera `.hpprgm` binario que CASE reconoce y ejecuta correctamente
 
 ---
 

@@ -167,9 +167,18 @@ if __name__ == "__main__":
 
 ### Resultados de prueba
 
-- [ ] Prueba 1 — `KMH_CONV.hpprgm` (programa existente con código real): pendiente
+- [x] Prueba 1 — `KMH_CONV.hpprgm` (programa existente con código real): **EXITOSO** — CASE lo reconoció y ejecutó correctamente. Output visible en terminal de CASE.
 - [ ] Prueba 2 — archivo nuevo nunca cargado en CASE: pendiente
 
 ### Veredicto
 
-Pendiente.
+**APROBADO (parcial)** — 2026-09-04. El binario generado por Python es reconocido y ejecutable por CASE sin pasos adicionales.
+
+> [!note] Contexto de la prueba
+> La prueba se realizó desde consola (PowerShell) pasando la ruta del archivo como argumento. El flujo final previsto es distinto: el script se activaría desde Obsidian vía Shell Commands + Commander, tomando el archivo activo con `{{file_path:absolute}}`. Esa integración es viable pero aún no probada.
+
+**Candidato para integración futura con Shell Commands + Commander.**
+Pendiente antes de cerrar:
+- [ ] Prueba 2 — archivo nuevo nunca cargado en CASE
+- [ ] Pruebas con otros tipos de contenido (variables exportadas, múltiples funciones)
+- [ ] Prueba end-to-end desde Obsidian vía Shell Commands

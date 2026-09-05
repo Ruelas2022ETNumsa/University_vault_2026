@@ -23,7 +23,7 @@ blocked_by:
 - [x] Relevar antecedentes (PrimeComm, Xprime, TI-Planet, fakuivan)
 - [x] Documentar opciones A, B y C
 - [x] Crear estructura del carrier
-- [ ] Probar Opción A — binario moderno desde Python
+- [x] Probar Opción A — binario moderno desde Python — **APROBADO 2026-09-04**
 - [ ] Probar Opción B — formato G1 (Xprime approach)
 - [ ] Probar Opción C — header real como plantilla
 - [ ] Integrar opción ganadora al script `tars-sync`
