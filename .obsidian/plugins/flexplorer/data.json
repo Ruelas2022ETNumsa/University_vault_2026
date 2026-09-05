@@ -5967,7 +5967,8 @@
       "sortOrder": "custom",
       "customOrder": [
         "work",
-        "other"
+        "other",
+        "hp_prime_g2_promgram_guide.md"
       ]
     },
     "_app/Tars/work": {
@@ -6139,6 +6140,10 @@
       "isHidden": false
     },
     "_app/Tars/other/tars-sync-shellcommands.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/Tars/hp_prime_g2_promgram_guide.md": {
       "isPinned": false,
       "isHidden": false
     }

@@ -443,10 +443,10 @@
     {
       "id": "lo8l9at7ku",
       "platform_specific_commands": {
-        "default": "python \"{{vault_path}}\\.obsidian\\scripts\\python\\tars-sync\\main.py\" \"{{file_path:absolute}}\" \"{{_destino}}\""
+        "default": "python \"{{vault_path}}\\.obsidian\\scripts\\python\\tars-sync\\main.py\" \"{{file_path:absolute}}\""
       },
       "shells": {},
-      "alias": "TARS: Sincronizar archivo",
+      "alias": "TARS — convertir a HP Prime",
       "icon": null,
       "confirm_execution": false,
       "ignore_error_codes": [],
@@ -476,11 +476,16 @@
       "preactions": [
         {
           "type": "prompt",
-          "enabled": true,
+          "enabled": false,
           "prompt_id": "h0fa6ww306"
         }
       ],
-      "variable_default_values": {}
+      "variable_default_values": {
+        "{{file_path}}": {
+          "type": "cancel-silently",
+          "value": ""
+        }
+      }
     }
   ],
   "prompts": [
