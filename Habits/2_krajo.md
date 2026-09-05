@@ -9,7 +9,8 @@ icon: cpu
 useGroupColor: true
 startDate: 2026-09-03
 weeklyTarget: 7
-records: {}
+records:
+  2026-09-05: 1
 ---
 # krajo
 

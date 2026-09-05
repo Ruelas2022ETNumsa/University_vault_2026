@@ -1,0 +1,102 @@
+EXPORT CIRC_DC()
+BEGIN
+  LOCAL op, r, v, i, r1, r2, vf, res;
+  LOCAL vin, rout;
+
+  CHOOSE(op, "Circuitos DC",
+    "1. Ley de Ohm",
+    "2. Resistencias serie",
+    "3. Resistencias paralelo",
+    "4. Divisor de tension",
+    "5. Divisor de corriente"
+  );
+
+  // --- LEY DE OHM ---
+  IF op == 1 THEN
+    LOCAL op2;
+    CHOOSE(op2, "Ley de Ohm — calcular",
+      "1. Voltaje (V=I*R)",
+      "2. Corriente (I=V/R)",
+      "3. Resistencia (R=V/I)"
+    );
+    IF op2 == 1 THEN
+      INPUT(i, "Voltaje", "I [mA]:", "Corriente en miliamperios:", 1);
+      INPUT(r, "Voltaje", "R [Ω]:", "Resistencia en Ohms:", 1);
+      res := (i / 1000) * r;
+      MSGBOX("V = I x R\nV = " + res + " [V]");
+      RETURN res;
+    END;
+    IF op2 == 2 THEN
+      INPUT(v, "Corriente", "V [V]:", "Voltaje en Volts:", 1);
+      INPUT(r, "Corriente", "R [Ω]:", "Resistencia en Ohms:", 1);
+      res := (v / r) * 1000;
+      MSGBOX("I = V / R\nI = " + res + " [mA]");
+      RETURN res;
+    END;
+    IF op2 == 3 THEN
+      INPUT(v, "Resistencia", "V [V]:", "Voltaje en Volts:", 1);
+      INPUT(i, "Resistencia", "I [mA]:", "Corriente en miliamperios:", 1);
+      IF i == 0 THEN
+        MSGBOX("Error: corriente no puede ser 0");
+        RETURN 0;
+      END;
+      res := v / (i / 1000);
+      MSGBOX("R = V / I\nR = " + res + " [Ω]");
+      RETURN res;
+    END;
+  END;
+
+  // --- RESISTENCIAS SERIE ---
+  IF op == 2 THEN
+    INPUT(r1, "Serie", "R1 [Ω]:", "Resistencia 1:", 0);
+    INPUT(r2, "Serie", "R2 [Ω]:", "Resistencia 2:", 0);
+    res := r1 + r2;
+    MSGBOX("Req serie = R1 + R2\nReq = " + res + " [Ω]");
+    RETURN res;
+  END;
+
+  // --- RESISTENCIAS PARALELO ---
+  IF op == 3 THEN
+    INPUT(r1, "Paralelo", "R1 [Ω]:", "Resistencia 1:", 1);
+    INPUT(r2, "Paralelo", "R2 [Ω]:", "Resistencia 2:", 1);
+    IF (r1 == 0) OR (r2 == 0) THEN
+      MSGBOX("Error: resistencia no puede ser 0");
+      RETURN 0;
+    END;
+    res := (r1 * r2) / (r1 + r2);
+    MSGBOX("Req = (R1*R2)/(R1+R2)\nReq = " + res + " [Ω]");
+    RETURN res;
+  END;
+
+  // --- DIVISOR DE TENSION ---
+  IF op == 4 THEN
+    INPUT(vin, "Div. Tension", "Vin [V]:", "Voltaje entrada:", 1);
+    INPUT(r1, "Div. Tension", "R1 [Ω]:", "Resistencia 1 (arriba):", 1);
+    INPUT(r2, "Div. Tension", "R2 [Ω]:", "Resistencia 2 (abajo):", 1);
+    IF (r1 + r2) == 0 THEN
+      MSGBOX("Error: suma de resistencias = 0");
+      RETURN 0;
+    END;
+    res := vin * r2 / (r1 + r2);
+    MSGBOX("Vout = Vin * R2/(R1+R2)\nVout = " + res + " [V]");
+    RETURN res;
+  END;
+
+  // --- DIVISOR DE CORRIENTE ---
+  IF op == 5 THEN
+    INPUT(i, "Div. Corriente", "Iin [mA]:", "Corriente total:", 1);
+    INPUT(r1, "Div. Corriente", "R1 [Ω]:", "Rama 1:", 1);
+    INPUT(r2, "Div. Corriente", "R2 [Ω]:", "Rama 2:", 1);
+    IF (r1 == 0) OR (r2 == 0) THEN
+      MSGBOX("Error: resistencia no puede ser 0");
+      RETURN 0;
+    END;
+    rout := (r1 * r2) / (r1 + r2);
+    LOCAL i1, i2;
+    i1 := i * r2 / (r1 + r2);
+    i2 := i * r1 / (r1 + r2);
+    MSGBOX("I1 = Iin*R2/(R1+R2)\nI1 = " + i1 + " [mA]\nI2 = " + i2 + " [mA]");
+    RETURN i1;
+  END;
+
+END;

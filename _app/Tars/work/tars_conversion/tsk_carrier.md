@@ -1,7 +1,7 @@
 ---
 galaxy_body: carrier
 project: "tars-hpprgm-conversion"
-date: 2026-09-04
+date: 2026-09-05
 status: docking
 fleet: tars
 blocked_by:
@@ -9,11 +9,11 @@ blocked_by:
 
 ## Handoff
 
-**Última sesión:** 2026-09-04
-**Retomar desde:** Prueba 2 Opción A — archivo nuevo nunca cargado en CASE
-**Completado esta sesión:** investigación del formato, documentación de opciones A/B/C, prueba 1 de Opción A exitosa (KMH_CONV corrió en CASE), B y C descartadas
-**Próximo paso:** crear un programa nuevo en Obsidian y verificar que la Opción A lo carga en CASE sin haberlo visto antes
-**Preguntas de cierre:** ninguna — camino claro, seguimos con Opción A hasta integración final en tars-sync
+**Última sesión:** 2026-09-05
+**Retomar desde:** Pruebas con programas más complejos (múltiples funciones exportadas)
+**Completado esta sesión:** CIRC_DC, TRIG_SOLV y CINEMAT actualizados con unidades en formato [unidades], corriente en mA en CIRC_DC, símbolo Ω confirmado compatible — los tres superaron pruebas en CASE
+**Próximo paso:** pruebas con múltiples funciones EXPORT (requiere actualizar script para N exportados) y gráficos
+**Preguntas de cierre:** ninguna
 
 ---
 
@@ -26,10 +26,14 @@ blocked_by:
 - [x] Probar Opción A — binario moderno desde Python — **APROBADO 2026-09-04**
 - [x] Documentar Opción B — descartada (incompleta, requiere paso manual)
 - [x] Documentar Opción C — descartada (depende de plantilla preexistente, menos autónoma que A)
-- [ ] Prueba 2 Opción A — archivo nuevo nunca cargado en CASE
-- [ ] Pruebas con programas más complejos (variables exportadas, múltiples funciones)
-- [ ] Prueba end-to-end desde Obsidian vía Shell Commands
-- [ ] Integrar Opción A al script `tars-sync`
+- [x] Prueba 1 del plan — función simple KMH_CONV — **SUPERADA 2026-09-04**
+- [x] Prueba 2 del plan — archivos nuevos (VOL_CALC, FASOR_CALC) cargados en CASE — **SUPERADA 2026-09-05**
+- [x] Prueba end-to-end desde Obsidian vía Shell Commands — **OPERATIVO 2026-09-05**
+- [x] Integrar Opción A al script `tars-sync` — **HECHO 2026-09-05**
+- [x] Actualizar CIRC_DC, TRIG_SOLV y CINEMAT — unidades [u], mA, Ω — **SUPERADO 2026-09-05**
+- [ ] Prueba 3 del plan — INPUT + MSGBOX + lógica de menú (ej. calculadora de préstamo)
+- [ ] Prueba 4 del plan — múltiples funciones EXPORT (requiere actualizar script para N exportados)
+- [ ] Prueba 5 del plan — gráficos básicos (RECT + TEXTOUT_P)
 
 ---
 

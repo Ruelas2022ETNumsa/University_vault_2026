@@ -1,0 +1,134 @@
+EXPORT CINEMAT()
+BEGIN
+  LOCAL op, v0, vf, a, t, d, res;
+
+  CHOOSE(op, "Cinematica",
+    "1. MRU — dist. y vel.",
+    "2. MRUV — vel. final",
+    "3. MRUV — distancia",
+    "4. MRUV — tiempo",
+    "5. Caida libre",
+    "6. Tiro vertical"
+  );
+
+  // --- MRU ---
+  IF op == 1 THEN
+    LOCAL op2;
+    CHOOSE(op2, "MRU — calcular",
+      "1. Distancia (d=v*t)",
+      "2. Velocidad (v=d/t)",
+      "3. Tiempo (t=d/v)"
+    );
+    IF op2 == 1 THEN
+      INPUT(v0, "MRU", "v [m/s]:", "Velocidad:", 1);
+      INPUT(t, "MRU", "t [s]:", "Tiempo:", 1);
+      res := v0 * t;
+      MSGBOX("d = v * t\nd = " + res + " [m]");
+      RETURN res;
+    END;
+    IF op2 == 2 THEN
+      INPUT(d, "MRU", "d [m]:", "Distancia:", 1);
+      INPUT(t, "MRU", "t [s]:", "Tiempo:", 1);
+      IF t == 0 THEN MSGBOX("Error: t = 0"); RETURN 0; END;
+      res := d / t;
+      MSGBOX("v = d / t\nv = " + res + " [m/s]");
+      RETURN res;
+    END;
+    IF op2 == 3 THEN
+      INPUT(d, "MRU", "d [m]:", "Distancia:", 1);
+      INPUT(v0, "MRU", "v [m/s]:", "Velocidad:", 1);
+      IF v0 == 0 THEN MSGBOX("Error: v = 0"); RETURN 0; END;
+      res := d / v0;
+      MSGBOX("t = d / v\nt = " + res + " [s]");
+      RETURN res;
+    END;
+  END;
+
+  // --- MRUV velocidad final ---
+  IF op == 2 THEN
+    INPUT(v0, "MRUV", "v0 [m/s]:", "Vel. inicial:", 0);
+    INPUT(a, "MRUV", "a [m/s²]:", "Aceleracion:", 1);
+    INPUT(t, "MRUV", "t [s]:", "Tiempo:", 1);
+    res := v0 + a * t;
+    MSGBOX("vf = v0 + a*t\nvf = " + res + " [m/s]");
+    RETURN res;
+  END;
+
+  // --- MRUV distancia ---
+  IF op == 3 THEN
+    INPUT(v0, "MRUV dist.", "v0 [m/s]:", "Vel. inicial:", 0);
+    INPUT(a, "MRUV dist.", "a [m/s²]:", "Aceleracion:", 1);
+    INPUT(t, "MRUV dist.", "t [s]:", "Tiempo:", 1);
+    res := v0 * t + 0.5 * a * t^2;
+    MSGBOX("d = v0*t + 0.5*a*t²\nd = " + res + " [m]");
+    RETURN res;
+  END;
+
+  // --- MRUV tiempo ---
+  IF op == 4 THEN
+    INPUT(v0, "MRUV tiempo", "v0 [m/s]:", "Vel. inicial:", 0);
+    INPUT(vf, "MRUV tiempo", "vf [m/s]:", "Vel. final:", 1);
+    INPUT(a, "MRUV tiempo", "a [m/s²]:", "Aceleracion:", 1);
+    IF a == 0 THEN MSGBOX("Error: aceleracion = 0"); RETURN 0; END;
+    res := (vf - v0) / a;
+    MSGBOX("t = (vf - v0) / a\nt = " + res + " [s]");
+    RETURN res;
+  END;
+
+  // --- CAIDA LIBRE ---
+  IF op == 5 THEN
+    LOCAL op2, g;
+    g := 9.81;
+    CHOOSE(op2, "Caida libre",
+      "1. Distancia caida",
+      "2. Velocidad al caer",
+      "3. Tiempo de caida"
+    );
+    IF op2 == 1 THEN
+      INPUT(t, "Caida libre", "t [s]:", "Tiempo:", 1);
+      res := 0.5 * g * t^2;
+      MSGBOX("d = 0.5*g*t²\nd = " + res + " [m]\n(g = 9.81 [m/s²])");
+      RETURN res;
+    END;
+    IF op2 == 2 THEN
+      INPUT(t, "Caida libre", "t [s]:", "Tiempo:", 1);
+      res := g * t;
+      MSGBOX("v = g*t\nv = " + res + " [m/s]");
+      RETURN res;
+    END;
+    IF op2 == 3 THEN
+      INPUT(d, "Caida libre", "d [m]:", "Distancia:", 1);
+      res := SQRT(2 * d / g);
+      MSGBOX("t = sqrt(2d/g)\nt = " + res + " [s]");
+      RETURN res;
+    END;
+  END;
+
+  // --- TIRO VERTICAL ---
+  IF op == 6 THEN
+    LOCAL op2, g, h;
+    g := 9.81;
+    CHOOSE(op2, "Tiro vertical",
+      "1. Altura maxima",
+      "2. Tiempo al maximo",
+      "3. Tiempo total vuelo"
+    );
+    INPUT(v0, "Tiro vertical", "v0 [m/s]:", "Vel. inicial hacia arriba:", 10);
+    IF op2 == 1 THEN
+      res := v0^2 / (2 * g);
+      MSGBOX("hmax = v0² / (2g)\nhmax = " + res + " [m]");
+      RETURN res;
+    END;
+    IF op2 == 2 THEN
+      res := v0 / g;
+      MSGBOX("t_max = v0 / g\nt_max = " + res + " [s]");
+      RETURN res;
+    END;
+    IF op2 == 3 THEN
+      res := 2 * v0 / g;
+      MSGBOX("t_total = 2*v0 / g\nt_total = " + res + " [s]");
+      RETURN res;
+    END;
+  END;
+
+END;

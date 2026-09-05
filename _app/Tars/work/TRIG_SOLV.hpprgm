@@ -1,0 +1,138 @@
+EXPORT TRIG_SOLV()
+BEGIN
+  LOCAL op, a, b, c, A, B, C, res;
+
+  CHOOSE(op, "Trigonometria",
+    "1. Triangulo rect. — lados",
+    "2. Triangulo rect. — angulo",
+    "3. Ley de senos",
+    "4. Ley de cosenos"
+  );
+
+  // --- TRIANGULO RECTANGULO — LADOS ---
+  IF op == 1 THEN
+    LOCAL op2;
+    CHOOSE(op2, "Calcular lado",
+      "1. Hipotenusa (dado catetos)",
+      "2. Cateto (dado hip. y cateto)"
+    );
+    IF op2 == 1 THEN
+      INPUT(a, "Hipotenusa", "a [u]:", "Cateto a:", 1);
+      INPUT(b, "Hipotenusa", "b [u]:", "Cateto b:", 1);
+      res := SQRT(a^2 + b^2);
+      MSGBOX("c = sqrt(a²+b²)\nc = " + res + " [u]");
+      RETURN res;
+    END;
+    IF op2 == 2 THEN
+      INPUT(c, "Cateto", "c [u] (hip):", "Hipotenusa:", 1);
+      INPUT(a, "Cateto", "a [u]:", "Cateto conocido:", 1);
+      IF c < a THEN
+        MSGBOX("Error: hipotenusa menor que cateto");
+        RETURN 0;
+      END;
+      res := SQRT(c^2 - a^2);
+      MSGBOX("b = sqrt(c²-a²)\nb = " + res + " [u]");
+      RETURN res;
+    END;
+  END;
+
+  // --- TRIANGULO RECTANGULO — ANGULO ---
+  IF op == 2 THEN
+    LOCAL op2;
+    CHOOSE(op2, "Dado el angulo",
+      "1. Cateto opuesto (SIN)",
+      "2. Cateto adyacente (COS)",
+      "3. Angulo desde catetos (ATAN)"
+    );
+    IF op2 == 1 THEN
+      INPUT(A, "Cateto opuesto", "ang [deg]:", "Angulo en grados:", 45);
+      INPUT(c, "Cateto opuesto", "hip [u]:", "Hipotenusa:", 1);
+      res := c * SIN(A * π / 180);
+      MSGBOX("op = hip * SIN(ang)\nop = " + res + " [u]");
+      RETURN res;
+    END;
+    IF op2 == 2 THEN
+      INPUT(A, "Cateto adyac.", "ang [deg]:", "Angulo en grados:", 45);
+      INPUT(c, "Cateto adyac.", "hip [u]:", "Hipotenusa:", 1);
+      res := c * COS(A * π / 180);
+      MSGBOX("ad = hip * COS(ang)\nad = " + res + " [u]");
+      RETURN res;
+    END;
+    IF op2 == 3 THEN
+      INPUT(a, "Angulo", "op [u]:", "Cateto opuesto:", 1);
+      INPUT(b, "Angulo", "ad [u]:", "Cateto adyacente:", 1);
+      IF b == 0 THEN
+        res := 90;
+      ELSE
+        res := ATAN(a / b) * 180 / π;
+      END;
+      MSGBOX("ang = ATAN(op/ad)\nang = " + res + " [deg]");
+      RETURN res;
+    END;
+  END;
+
+  // --- LEY DE SENOS ---
+  // a/sin(A) = b/sin(B) = c/sin(C)
+  IF op == 3 THEN
+    LOCAL op2;
+    CHOOSE(op2, "Ley de senos",
+      "1. Lado (dado lado y 2 angulos)",
+      "2. Angulo (dado 2 lados y 1 ang)"
+    );
+    IF op2 == 1 THEN
+      INPUT(a, "Ley senos", "a [u]:", "Lado conocido:", 1);
+      INPUT(A, "Ley senos", "A [deg]:", "Angulo opuesto a a:", 45);
+      INPUT(B, "Ley senos", "B [deg]:", "Angulo opuesto a b:", 45);
+      IF SIN(A * π / 180) == 0 THEN
+        MSGBOX("Error: angulo A = 0");
+        RETURN 0;
+      END;
+      res := a * SIN(B * π / 180) / SIN(A * π / 180);
+      MSGBOX("b = a*SIN(B)/SIN(A)\nb = " + res + " [u]");
+      RETURN res;
+    END;
+    IF op2 == 2 THEN
+      INPUT(a, "Ley senos", "a [u]:", "Lado a:", 1);
+      INPUT(b, "Ley senos", "b [u]:", "Lado b:", 1);
+      INPUT(A, "Ley senos", "A [deg]:", "Angulo opuesto a a:", 45);
+      IF (a == 0) OR (ABS(b * SIN(A * π / 180) / a) > 1) THEN
+        MSGBOX("Error: datos inconsistentes");
+        RETURN 0;
+      END;
+      res := ASIN(b * SIN(A * π / 180) / a) * 180 / π;
+      MSGBOX("B = ASIN(b*SIN(A)/a)\nB = " + res + " [deg]");
+      RETURN res;
+    END;
+  END;
+
+  // --- LEY DE COSENOS ---
+  // c² = a² + b² - 2ab*cos(C)
+  IF op == 4 THEN
+    LOCAL op2;
+    CHOOSE(op2, "Ley de cosenos",
+      "1. Lado (dado 2 lados y angulo)",
+      "2. Angulo (dado 3 lados)"
+    );
+    IF op2 == 1 THEN
+      INPUT(a, "Ley cosenos", "a [u]:", "Lado a:", 1);
+      INPUT(b, "Ley cosenos", "b [u]:", "Lado b:", 1);
+      INPUT(C, "Ley cosenos", "C [deg]:", "Angulo entre a y b:", 60);
+      res := SQRT(a^2 + b^2 - 2*a*b*COS(C * π / 180));
+      MSGBOX("c = sqrt(a²+b²-2ab*cos(C))\nc = " + res + " [u]");
+      RETURN res;
+    END;
+    IF op2 == 2 THEN
+      INPUT(a, "Ley cosenos", "a [u]:", "Lado a:", 1);
+      INPUT(b, "Ley cosenos", "b [u]:", "Lado b:", 1);
+      INPUT(c, "Ley cosenos", "c [u]:", "Lado c (opuesto al angulo):", 1);
+      IF (a == 0) OR (b == 0) THEN
+        MSGBOX("Error: lados no pueden ser 0");
+        RETURN 0;
+      END;
+      res := ACOS((a^2 + b^2 - c^2) / (2*a*b)) * 180 / π;
+      MSGBOX("C = ACOS((a²+b²-c²)/2ab)\nC = " + res + " [deg]");
+      RETURN res;
+    END;
+  END;
+
+END;

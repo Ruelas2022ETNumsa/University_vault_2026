@@ -2,7 +2,8 @@
 galaxy_body: logbook
 scope: tars-hpprgm-conversion
 status: on-track
-date_updated: 2026-09-04
+date_updated: 2026-09-05
+session: 2026-09-05-2
 ---
 
 ## Visión general
@@ -14,9 +15,9 @@ Carrier para resolver la conversión automática de archivos `.hpprgm` desde Obs
 ## Estado actual
 
 **Salud:** on-track
-**Resumen:** Opción A validada como camino principal. B descartada (incompleta), C descartada (depende de plantilla). Foco total en A hasta integración en tars-sync.
-**Último avance:** Prueba 1 exitosa — KMH_CONV generado por Python corrió correctamente en CASE.
-**Próximo hito:** Prueba 2 (archivo nuevo) + prueba end-to-end desde Obsidian.
+**Resumen:** CIRC_DC, TRIG_SOLV y CINEMAT cargados y probados en CASE. Unidades en formato [u] aplicadas. Corriente migrada a mA en CIRC_DC. Símbolo Ω confirmado compatible con CASE.
+**Último avance:** Los tres programas pasaron pruebas en CASE con las actualizaciones de formato de unidades y símbolo Ω.
+**Próximo hito:** Pruebas con múltiples funciones EXPORT y gráficos.
 
 ---
 
@@ -36,6 +37,10 @@ Carrier para resolver la conversión automática de archivos `.hpprgm` desde Obs
 
 - 2026-09-04 — investigación del formato `.hpprgm` completada, tres opciones documentadas
 - 2026-09-04 — Opción A validada: Python genera `.hpprgm` binario que CASE reconoce y ejecuta correctamente
+- 2026-09-05 — Prueba 2 superada: VOL_CALC y FASOR_CALC (generados por IA, nunca vistos por CASE) cargados y ejecutados correctamente
+- 2026-09-05 — Script actualizado para Obsidian: ruta dinámica con `os.path.expanduser()`, argumentos vía `{{file_path:absolute}}`, registrado en Shell Commands
+- 2026-09-05 — Guía de programación PPL documentada en `hp_prime_g2_promgram_guide.md`
+- 2026-09-05 — CIRC_DC, TRIG_SOLV y CINEMAT actualizados: unidades en formato [unidades], corriente en mA en CIRC_DC, símbolo Ω confirmado compatible con CASE — los tres programas superaron pruebas
 
 ---
 
@@ -55,6 +60,8 @@ Carrier para resolver la conversión automática de archivos `.hpprgm` desde Obs
 | 2026-09-04 | TARS física queda como drag and drop manual | No hay ruta de carpeta para calc física — requiere USB |
 | 2026-09-04 | Opción A como camino principal | Prueba 1 exitosa, autónoma, no depende de plantilla preexistente |
 | 2026-09-04 | Opciones B y C descartadas | B incompleta y requiere paso manual en CASE; C depende de plantilla preexistente |
+| 2026-09-05 | Script movido a `tars-sync\main.py` | Consolidación en carpeta de scripts de Obsidian |
+| 2026-09-05 | Ruta de usuario dinámica | `os.path.expanduser()` reemplaza el `C:\Users\USUARIO` hardcodeado |
 
 > [!note]- Descartadas
 > - xcopy directo a `Calculadoras\CASE` — CASE reemplaza el archivo con binario compilado al abrir

@@ -15,15 +15,15 @@ date_updated: 2026-08-02
 ## Panel de operaciones
 **2026/08/29**
 
-|     Worker     | Status | Estamina | Proyecto activo                                   | Wake | Recarga |
-| :------------: | :----: | :------: | :------------------------------------------------ | :--: | :-----: |
-| [[alx_hot]] |   ❌    |    🟢    | Sistema consulta móvil via Drive MCP              |      |         |
-|  [[krajo]]  |   ❌    |    🟢    | Implementación física `_hangar/`                  |      |         |
-| [[alx_gml]] |   ❌    |    🔴    | Sistema de links, sync y organización de carpetas |      |  21:20  |
-| [[alxrul]]  |   ✔    |    🟢    | —                                                 |      |         |
-| [[alx-rul]] |   ❌    |    🟢    | Cornell Marginalia → Galaxy                       |      |         |
-| [[standb.md]]  |   ✔    |    🟢    | —                                                 |  —   |    —    |
-| [[emergn.md]]  |   ✔    |    🟢    | —                                                 |  —   |    —    |
+|    Worker     | Status | Estamina | Proyecto activo                                   | Wake | Recarga |
+| :-----------: | :----: | :------: | :------------------------------------------------ | :--: | :-----: |
+|  [[alx_hot]]  |   ❌    |    🟢    | Sistema consulta móvil via Drive MCP              |      |         |
+|   [[krajo]]   |   ❌    |    🟢    | Implementación física `_hangar/`                  |      |  22:20  |
+|  [[alx_gml]]  |   ❌    |    🔴    | Sistema de links, sync y organización de carpetas |      |         |
+|  [[alxrul]]   |   ✔    |    🟢    | —                                                 |      |         |
+|  [[alx-rul]]  |   ❌    |    🟢    | Cornell Marginalia → Galaxy                       |      |         |
+| [[standb.md]] |   ✔    |    🟢    | —                                                 |  —   |    —    |
+| [[emergn.md]] |   ✔    |    🟢    | —                                                 |  —   |    —    |
 
 Estados de estamina:
 🟡 active — sesión en curso

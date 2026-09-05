@@ -3,7 +3,7 @@ galaxy_body: dropship
 carrier: "[[_app/Tars/work/tars_conversion/tsk_carrier.md]]"
 scope: opcion-A
 status: activo
-date: 2026-09-04
+date: 2026-09-05
 ---
 
 ## Proposito
@@ -142,16 +142,28 @@ def main():
     # Construir binario
     binario = build_hpprgm(nombre, codigo)
 
-    # Ruta destino
-    destino = os.path.join(
-        r"C:\Users\USUARIO\Documents\HP Prime\Calculators\Prime",
-        nombre + ".hpprgm"
-    )
+    if len(sys.argv) < 2:
+        print("ERROR: se requiere la ruta del archivo como argumento.")
+        sys.exit(1)
+
+    if not os.path.isfile(file_path):
+        print(f"ERROR: archivo no encontrado: {file_path}")
+        sys.exit(1)
+
+    # Ruta destino: carpeta HP Prime del usuario actual
+    user_documents = os.path.expanduser("~\\Documents")
+    destino_dir = os.path.join(user_documents, "HP Prime", "Calculators", "Prime")
+
+    if not os.path.isdir(destino_dir):
+        print(f"ERROR: carpeta destino no encontrada: {destino_dir}")
+        sys.exit(1)
+
+    destino = os.path.join(destino_dir, nombre + ".hpprgm")
 
     with open(destino, 'wb') as f:
         f.write(binario)
 
-    print(f"Copiado a CASE: {nombre}.hpprgm")
+    print(f"OK: {nombre}.hpprgm copiado a CASE")
 
 
 if __name__ == "__main__":
@@ -162,23 +174,27 @@ if __name__ == "__main__":
 
 - ✅ ¿Los blobs de variables son obligatorios? **No** — cyrille (HP) lo confirmó
 - ✅ ¿El source es siempre el último blob? **Sí**
-- ⬜ ¿El nombre en la tabla de exportados debe coincidir con el del `EXPORT NombrePrograma()`? Por verificar con prueba real
-- ⬜ ¿El fin de nombre es siempre `00 00 00 00` (4 bytes) o `00 00` (2 bytes)? La documentación de Hasse dice 4 bytes — verificar
+- ✅ ¿El nombre en la tabla de exportados debe coincidir con el del `EXPORT NombrePrograma()`? **Sí** — confirmado en prueba 2 (VOL_CALC, FASOR_CALC)
+- ✅ ¿El fin de nombre es siempre `00 00 00 00` (4 bytes) o `00 00` (2 bytes)? **4 bytes** — confirmado en prueba 2
 
 ### Resultados de prueba
 
-- [x] Prueba 1 — `KMH_CONV.hpprgm` (programa existente con código real): **EXITOSO** — CASE lo reconoció y ejecutó correctamente. Output visible en terminal de CASE.
-- [ ] Prueba 2 — archivo nuevo nunca cargado en CASE: pendiente
+| # | Tipo | Programas | Estado | Fecha |
+|---|------|-----------|--------|-------|
+| 1 | Función simple (1 EXPORT, sin vars globales) | KMH_CONV | ✅ EXITOSO | 2026-09-04 |
+| 2 | Archivo nuevo nunca visto por CASE (1 EXPORT, INPUT + MSGBOX) | VOL_CALC, FASOR_CALC | ✅ EXITOSO | 2026-09-05 |
+| 3 | INPUT + MSGBOX + lógica de menú (ej. calculadora de préstamo) | pendiente | ⬜ | — |
+| 4 | Múltiples funciones exportadas | pendiente | ⬜ | — |
+| 5 | Gráficos básicos (RECT + TEXTOUT\_P) | pendiente | ⬜ | — |
 
 ### Veredicto
 
-**APROBADO (parcial)** — 2026-09-04. El binario generado por Python es reconocido y ejecutable por CASE sin pasos adicionales.
+**APROBADO** — 2026-09-05. El binario generado por Python es reconocido y ejecutable por CASE sin pasos adicionales. La integración con Shell Commands de Obsidian está operativa.
 
-> [!note] Contexto de la prueba
-> La prueba se realizó desde consola (PowerShell) pasando la ruta del archivo como argumento. El flujo final previsto es distinto: el script se activaría desde Obsidian vía Shell Commands + Commander, tomando el archivo activo con `{{file_path:absolute}}`. Esa integración es viable pero aún no probada.
+> [!note] Integración con Obsidian
+> El script fue actualizado para recibir la ruta del archivo activo vía `{{file_path:absolute}}` (Shell Commands) y resolver la ruta del usuario con `os.path.expanduser()`. Registrado en Shell Commands con PowerShell 5, stdout Ignore, stderr Notification balloon.
+> Comando: `python "{{vault_path}}\.obsidian\scripts\python\tars-sync\main.py" "{{file_path:absolute}}"`
 
-**Candidato para integración futura con Shell Commands + Commander.**
-Pendiente antes de cerrar:
-- [ ] Prueba 2 — archivo nuevo nunca cargado en CASE
-- [ ] Pruebas con otros tipos de contenido (variables exportadas, múltiples funciones)
-- [ ] Prueba end-to-end desde Obsidian vía Shell Commands
+Pendiente:
+- [ ] Pruebas con programas más complejos (variables exportadas, múltiples funciones — requiere actualizar el script para N exportados)
+- [ ] Prueba end-to-end con gráficos (RECT, TEXTOUT_P)

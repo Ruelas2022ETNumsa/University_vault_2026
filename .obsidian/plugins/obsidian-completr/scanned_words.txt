@@ -9446,6 +9446,8 @@ testear
 trackear
 tolerancia
 tolerancias
+tutoriales
+tension
 ToDo
 Templater
 Text
@@ -19809,6 +19811,15 @@ Textbook
 Tars
 Tomado
 THEN
+TEXTOUT
+TENSION
+Tension
+TRIG
+Trigonometria
+Triangulo
+TRIANGULO
+Tiro
+TIRO
 Sistema
 Sync
 Save
@@ -30244,6 +30255,14 @@ Supino
 Spreadsheet
 Specifications
 SERIE
+Shore
+SCULAS
+Seno
+Subrutinas
+SUPERADA
+SOLV
+SQRT
+SENOS
 Plugins
 Pendientes
 Plugin
@@ -39218,6 +39237,9 @@ Portar
 PrimeUsbFile
 Paralelepipedo
 Piramide
+Piso
+PIXON
+PARALELO
 del
 date
 de
@@ -57937,6 +57959,9 @@ Verilog
 VECTORIALES
 Vout
 Volumenes
+Voltaje
+Volts
+VERTICAL
 galaxy
 gina
 genes
@@ -86507,6 +86532,8 @@ simplificados
 stdlib
 struct
 splitext
+superada
+stamo
 vault
 vil
 ver
@@ -96654,6 +96681,8 @@ very
 valga
 valid
 venga
+vistos
+vars
 audience
 activo
 auto
@@ -106640,6 +106669,9 @@ atenuaci
 arma
 analizarlo
 aprobada
+aumentan
+adyac
+aceleracion
 related
 recomendados
 ribbon
@@ -116641,6 +116673,7 @@ reconozca
 resave
 resaved
 reconoci
+recompilando
 notes
 notas
 nuevas
@@ -125979,6 +126012,9 @@ numpy
 named
 nevertheless
 nang
+nReq
+nVout
+nhmax
 created
 commit
 cada
@@ -136628,6 +136664,10 @@ compile
 cyrille
 compilado
 clasificados
+club
+compiladas
+codifican
+caida
 updated
 un
 universo
@@ -165455,6 +165495,17 @@ CALC
 CHOOSE
 Cono
 Capacitancia
+Consolidaci
+Coseno
+CIRC
+Corriente
+CORRIENTE
+Cateto
+COSENOS
+CINEMAT
+Cinematica
+Caida
+CAIDA
 Instalados
 Instalado
 Instalar
@@ -185301,6 +185352,7 @@ Fabricaci
 Frecuencias
 FASOR
 Fasores
+Foro
 Estado
 Excalidraw
 EPUBs
@@ -195809,6 +195861,7 @@ ExecutionPolicy
 EXITOSO
 Esfera
 ELSE
+Edward
 Obsidian
 OmniSearch
 Ocultar
@@ -205165,6 +205218,8 @@ Obviously
 OBUs
 Originalmente
 Omnimaga
+Objetos
+Ohms
 Auto
 Annotator
 Autocompletado
@@ -214349,6 +214404,15 @@ APROBADO
 Abri
 Asistir
 Adapta
+Asignaci
+Arcoseno
+Arcocoseno
+Amperios
+ANGULO
+ATAN
+ASIN
+ACOS
+Aceleracion
 push
 pull
 para
@@ -223769,6 +223833,7 @@ parsear
 pack
 preexistente
 proh
+programacion
 min
 mica
 movimiento
@@ -234510,6 +234575,8 @@ metrics
 modern
 mapeados
 matching
+maximo
+miliamperios
 YAML
 Ya
 You
@@ -263218,6 +263285,7 @@ espanol
 exito
 encode
 esperaba
+exitosos
 Motor
 Media
 Mantiene
@@ -273899,6 +273967,8 @@ Millas
 MSGBOX
 Multiplicacion
 MULTIPLICACION
+Museum
+MRUV
 Lectura
 LaTeX
 Linter
@@ -283111,6 +283181,9 @@ Llamadas
 LOCAL
 Lucide
 Largo
+Logaritmo
+LADOS
+LIBRE
 links
 las
 listar
@@ -302944,6 +303017,7 @@ isfile
 isdir
 identific
 imag
+inconsistentes
 Dependencia
 Dropbox
 Dataview
@@ -313177,6 +313251,7 @@ Documents
 Devuelve
 Division
 DIVISION
+Distinto
 Remotely
 Raz
 Revisa
@@ -323602,6 +323677,9 @@ Rizo
 Requisito
 Robustez
 RESTA
+REPEAT
+RESISTENCIAS
+RECTANGULO
 Hider
 Hace
 Herramientas
@@ -331682,6 +331760,7 @@ Hombros
 Horario
 Host
 Hasse
+Hipotenusa
 filtrar
 formato
 faltantes
@@ -349797,6 +349876,9 @@ hammer
 habits
 heatmap
 hagan
+hpprime
+hipotenusa
+hmax
 que
 quedan
 queda
@@ -370618,6 +370700,7 @@ UccWL
 UEQQ
 UlumG
 Units
+UNTIL
 Nombre
 Notas
 No
@@ -448465,6 +448548,7 @@ WebUSB
 Wessman
 WeeklyTarget
 Wiki
+WHILE
 JavaScript
 JSON
 JERARQU
