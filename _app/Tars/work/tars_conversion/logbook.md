@@ -14,9 +14,9 @@ Carrier para resolver la conversión automática de archivos `.hpprgm` desde Obs
 ## Estado actual
 
 **Salud:** on-track
-**Resumen:** fase de investigación completada, tres opciones documentadas, listas para probar.
-**Último avance:** se identificó la estructura binaria del `.hpprgm` y se encontraron antecedentes concretos (PrimeComm, Xprime, TI-Planet Wiki).
-**Próximo hito:** primera prueba exitosa con CASE cargando un archivo generado por Python.
+**Resumen:** Opción A validada como camino principal. B descartada (incompleta), C descartada (depende de plantilla). Foco total en A hasta integración en tars-sync.
+**Último avance:** Prueba 1 exitosa — KMH_CONV generado por Python corrió correctamente en CASE.
+**Próximo hito:** Prueba 2 (archivo nuevo) + prueba end-to-end desde Obsidian.
 
 ---
 
@@ -53,8 +53,11 @@ Carrier para resolver la conversión automática de archivos `.hpprgm` desde Obs
 | ----- | -------- | ------ |
 | 2026-09-04 | Destino: `HP Prime\Calculators\Prime` | Ruta confirmada — CASE la detecta al abrir |
 | 2026-09-04 | TARS física queda como drag and drop manual | No hay ruta de carpeta para calc física — requiere USB |
-| 2026-09-04 | Probar las tres opciones en orden A → B → C | A es la más completa, C es el fallback más seguro |
+| 2026-09-04 | Opción A como camino principal | Prueba 1 exitosa, autónoma, no depende de plantilla preexistente |
+| 2026-09-04 | Opciones B y C descartadas | B incompleta y requiere paso manual en CASE; C depende de plantilla preexistente |
 
 > [!note]- Descartadas
 > - xcopy directo a `Calculadoras\CASE` — CASE reemplaza el archivo con binario compilado al abrir
 > - copia simple UTF-8 a `HP Prime\Calculators\Prime` — CASE lo rechaza sin el header correcto
+> - Opción B (formato G1) — Xprime no es open source, requiere paso manual "Check" en CASE
+> - Opción C (plantilla binaria) — depende de que el programa ya exista en CASE, menos autónoma que A

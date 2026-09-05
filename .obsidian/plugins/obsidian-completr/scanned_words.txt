@@ -19807,6 +19807,7 @@ Traslaci
 TARS
 Textbook
 Tars
+Tomado
 Sistema
 Sync
 Save
@@ -48545,6 +48546,7 @@ debrouxl
 dongle
 diaria
 decibeles
+definieron
 Vault
 Verificar
 Variables
@@ -86497,6 +86499,8 @@ streaks
 streak
 simplificados
 stdlib
+struct
+splitext
 vault
 vil
 ver
@@ -136615,6 +136619,7 @@ calculator
 compile
 cyrille
 compilado
+clasificados
 updated
 un
 universo
@@ -146934,6 +146939,7 @@ unequal
 useGroupColor
 ubicarse
 unnamed
+usable
 Galaxy
 Git
 Gr
@@ -165434,6 +165440,9 @@ Calculadoras
 Check
 Cyrille
 Confirma
+Construido
+Convirtiendo
+Calculators
 Instalados
 Instalado
 Instalar
@@ -214318,6 +214327,9 @@ Atenuaci
 Automatizar
 Aprovechable
 APROBADO
+Abri
+Asistir
+Adapta
 push
 pull
 para
@@ -223734,6 +223746,10 @@ planificaba
 portable
 protocol
 porteable
+parsear
+pack
+preexistente
+proh
 min
 mica
 movimiento
@@ -234473,6 +234489,8 @@ mbrico
 mancuernas
 metrics
 modern
+mapeados
+matching
 YAML
 Ya
 You
@@ -252654,6 +252672,7 @@ Bajos
 BEGIN
 BORRAR
 Banda
+Binario
 en
 exacta
 escaneados
@@ -263178,6 +263197,8 @@ esperamos
 estrecha
 espanol
 exito
+encode
+esperaba
 Motor
 Media
 Mantiene
@@ -302896,6 +302917,9 @@ impedancia
 inicializar
 inutilizable
 initially
+isfile
+isdir
+identific
 Dependencia
 Dropbox
 Dataview
@@ -313126,6 +313150,7 @@ Domingo
 Documentada
 Desconectar
 Documents
+Devuelve
 Remotely
 Raz
 Revisa
@@ -323549,6 +323574,7 @@ Rust
 Registran
 Rizo
 Requisito
+Robustez
 Hider
 Hace
 Herramientas
@@ -349742,6 +349768,7 @@ hardcodear
 hammer
 habits
 heatmap
+hagan
 que
 quedan
 queda

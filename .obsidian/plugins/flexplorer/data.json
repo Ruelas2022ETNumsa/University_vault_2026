@@ -1125,7 +1125,8 @@
         "_repaso_movil.md",
         "_start_movil607P1.md",
         "_plan_movil.md",
-        "_start.md"
+        "_start.md",
+        "_doc_start_movil607P1.md"
       ]
     },
     "_skills/_claude-boot.md": {
@@ -6121,6 +6122,10 @@
       "isHidden": false
     },
     "_app/Tars/work/tars_conversion/tsk_carrier.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_skills/_doc_start_movil607P1.md": {
       "isPinned": false,
       "isHidden": false
     }
