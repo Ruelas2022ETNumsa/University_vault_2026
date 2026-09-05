@@ -455,7 +455,7 @@
       },
       "output_handlers": {
         "stdout": {
-          "handler": "ignore",
+          "handler": "notification",
           "convert_ansi_code": true
         },
         "stderr": {
@@ -473,7 +473,13 @@
       "events": {},
       "debounce": null,
       "command_palette_availability": "enabled",
-      "preactions": [],
+      "preactions": [
+        {
+          "type": "prompt",
+          "enabled": true,
+          "prompt_id": "h0fa6ww306"
+        }
+      ],
       "variable_default_values": {}
     }
   ],
@@ -594,6 +600,23 @@
         }
       ],
       "execute_button_text": "Buscar"
+    },
+    {
+      "id": "h0fa6ww306",
+      "title": "TARS Sync",
+      "description": "V = CASE (default) — F = TARS",
+      "preview_shell_command": false,
+      "fields": [
+        {
+          "type": "single-line-text",
+          "label": "Destino",
+          "description": "",
+          "default_value": "V",
+          "target_variable_id": "1xu5dxnkjb",
+          "required": true
+        }
+      ],
+      "execute_button_text": "Execute"
     }
   ],
   "builtin_variables": {},
@@ -640,6 +663,12 @@
     {
       "id": "gzehkv6qgb",
       "name": "nblm_ref",
+      "description": "",
+      "default_value": null
+    },
+    {
+      "id": "1xu5dxnkjb",
+      "name": "destino",
       "description": "",
       "default_value": null
     }

@@ -8,7 +8,7 @@ destino = sys.argv[2].strip().upper() if len(sys.argv) > 2 else "V"
 
 # Rutas destino
 RUTAS = {
-    "V": r"C:\Users\USUARIO\Documents\HP Connectivity Kit\Calculadoras\CASE",
+    "V": r"C:\Users\USUARIO\Documents\HP Prime\Calculators\Prime",
     "F": r"C:\Users\USUARIO\Documents\HP Connectivity Kit\Calculadoras\TARS",
 }
 
