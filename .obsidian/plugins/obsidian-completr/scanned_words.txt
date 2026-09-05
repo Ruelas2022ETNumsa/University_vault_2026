@@ -30263,6 +30263,7 @@ SUPERADA
 SOLV
 SQRT
 SENOS
+SENO
 Plugins
 Pendientes
 Plugin
@@ -39240,6 +39241,8 @@ Piramide
 Piso
 PIXON
 PARALELO
+Parabola
+PARABOLA
 del
 date
 de
@@ -96683,6 +96686,7 @@ valid
 venga
 vistos
 vars
+vmax
 audience
 activo
 auto
@@ -106672,6 +106676,9 @@ aprobada
 aumentan
 adyac
 aceleracion
+angR
+angLabel
+altmax
 related
 recomendados
 ribbon
@@ -165506,6 +165513,8 @@ CINEMAT
 Cinematica
 Caida
 CAIDA
+CHART
+Chart
 Instalados
 Instalado
 Instalar
@@ -185353,6 +185362,8 @@ Frecuencias
 FASOR
 Fasores
 Foro
+FLOOR
+FREEZE
 Estado
 Excalidraw
 EPUBs
@@ -223834,6 +223845,8 @@ pack
 preexistente
 proh
 programacion
+pixeles
+pequeno
 min
 mica
 movimiento
@@ -234577,6 +234590,7 @@ mapeados
 matching
 maximo
 miliamperios
+magLabel
 YAML
 Ya
 You
@@ -263286,6 +263300,7 @@ exito
 encode
 esperaba
 exitosos
+escX
 Motor
 Media
 Mantiene
@@ -283184,6 +283199,7 @@ Largo
 Logaritmo
 LADOS
 LIBRE
+Limitar
 links
 las
 listar
@@ -340971,6 +340987,7 @@ factible
 flame
 fakuivan
 freq
+frec
 haya
 hace
 hacer
@@ -420110,6 +420127,7 @@ yQrm
 yEudJ
 yyvaultyy
 yzvaultyy
+yant
 wikilinks
 when
 where
@@ -438865,6 +438883,7 @@ xyuAW
 xxvaultx
 xleftmargin
 xcopy
+xant
 Wikilinks
 WHERE
 WebGL

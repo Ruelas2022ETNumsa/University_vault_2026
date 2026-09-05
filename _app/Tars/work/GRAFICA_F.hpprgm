@@ -1,0 +1,69 @@
+EXPORT GRAFICA_F()
+BEGIN
+  LOCAL op, amp, frec, i, x, y, yp;
+  LOCAL cx, cy, escX, escY;
+
+  CHOOSE(op, "Grafica funcion",
+    "1. Seno",
+    "2. Parabola"
+  );
+
+  INPUT(amp, "Amplitud", "amp:", "Amplitud maxima:", 1);
+
+  IF op == 1 THEN
+    INPUT(frec, "Frecuencia", "frec:", "Frecuencia (ciclos en pantalla):", 1);
+  END;
+
+  // Limpiar pantalla
+  RECT();
+
+  // Centro de ejes
+  cx := 160;
+  cy := 120;
+
+  // Ejes
+  LINE_P(0, cy, 319, cy, RGB(180,180,180));
+  LINE_P(cx, 0, cx, 239, RGB(180,180,180));
+
+  // Etiquetas ejes
+  TEXTOUT_P("x", 305, cy-14, 2, RGB(120,120,120));
+  TEXTOUT_P("y", cx+4, 2, 2, RGB(120,120,120));
+  TEXTOUT_P("0", cx+3, cy+2, 2, RGB(120,120,120));
+
+  // escala Y: amp ocupa 100px
+  escY := 100 / amp;
+
+  // --- SENO ---
+  IF op == 1 THEN
+    TEXTOUT_P("y = amp*SEN(frec*x)", 4, 4, 2, RGB(0,0,180));
+    escX := (2 * π * frec) / 319;
+    FOR i FROM 0 TO 319 DO
+      x := i * escX;
+      y := amp * SIN(x);
+      yp := cy - FLOOR(y * escY);
+      IF yp < 0 THEN yp := 0; END;
+      IF yp > 239 THEN yp := 239; END;
+      PIXON_P(i, yp, RGB(0, 80, 200));
+    END;
+  END;
+
+  // --- PARABOLA ---
+  IF op == 2 THEN
+    TEXTOUT_P("y = amp * x^2", 4, 4, 2, RGB(180,0,0));
+    // x va de -3 a 3, mapeado a 0-319
+    FOR i FROM 0 TO 319 DO
+      x := (i - cx) / 50;
+      y := amp * x^2;
+      yp := cy - FLOOR(y * escY);
+      IF yp < 0 THEN yp := 0; END;
+      IF yp > 239 THEN yp := 239; END;
+      PIXON_P(i, yp, RGB(200, 0, 0));
+    END;
+  END;
+
+  // Marcas de escala Y
+  TEXTOUT_P("+" + amp, cx+4, cy - FLOOR(amp*escY) - 8, 1, RGB(80,80,80));
+  TEXTOUT_P("-" + amp, cx+4, cy + FLOOR(amp*escY), 1, RGB(80,80,80));
+
+  WAIT(0);
+END;

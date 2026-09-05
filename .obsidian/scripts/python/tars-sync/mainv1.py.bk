@@ -1,3 +1,11 @@
+# =============================================================================
+# mainv1.py.bk — Backup v1
+# Proyecto : tars-hpprgm-conversion
+# Fecha    : 2026-09-05
+# Version  : 1 — 1 funcion EXPORT hardcodeada
+# Estado   : backup — reemplazado por main.py v2 (N funciones EXPORT dinamico)
+# Notas    : soporta pruebas 1, 2, 3, 5. No soporta multiples EXPORT (prueba 4).
+# =============================================================================
 import sys
 import os
 import struct

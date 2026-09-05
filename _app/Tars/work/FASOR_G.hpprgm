@@ -1,0 +1,73 @@
+EXPORT FASOR_G()
+BEGIN
+  LOCAL mag, ang, angR, dx, dy;
+  LOCAL x1, y1, x2, y2, xp, yp;
+  LOCAL cx, cy, escala;
+  LOCAL angLabel, magLabel;
+
+  INPUT(mag, "Fasor", "mag:", "Magnitud del fasor:", 1);
+  INPUT(ang, "Fasor", "ang [deg]:", "Angulo en grados:", 0);
+
+  RECT();
+
+  cx := 160;
+  cy := 120;
+
+  // Ejes
+  LINE_P(10, cy, 310, cy, RGB(180,180,180));
+  LINE_P(cx, 10, cx, 230, RGB(180,180,180));
+
+  // Etiquetas ejes
+  TEXTOUT_P("+Re", 280, cy+4, 2, RGB(120,120,120));
+  TEXTOUT_P("+Im", cx+4, 12, 2, RGB(120,120,120));
+  TEXTOUT_P("-Re", 12, cy+4, 2, RGB(120,120,120));
+  TEXTOUT_P("-Im", cx+4, 218, 2, RGB(120,120,120));
+  TEXTOUT_P("0", cx+3, cy+3, 1, RGB(120,120,120));
+
+  // Escala: max magnitud ocupa 100px
+  escala := 100 / mag;
+
+  // Angulo en radianes
+  angR := ang * π / 180;
+
+  // Componentes
+  dx := mag * COS(angR);
+  dy := mag * SIN(angR);
+
+  // Coordenadas destino en pixeles
+  x2 := cx + FLOOR(dx * escala);
+  y2 := cy - FLOOR(dy * escala);  // Y invertido en pantalla
+
+  // Limitar a pantalla
+  IF x2 < 0 THEN x2 := 0; END;
+  IF x2 > 319 THEN x2 := 319; END;
+  IF y2 < 0 THEN y2 := 0; END;
+  IF y2 > 239 THEN y2 := 239; END;
+
+  // Vector principal
+  LINE_P(cx, cy, x2, y2, RGB(0, 0, 220));
+
+  // Punta del vector (circulo pequeno)
+  ARC_P(x2, y2, 4, 0, 360, RGB(0, 0, 220));
+
+  // Componente real (linea punteada horizontal)
+  LINE_P(cx, cy, x2, cy, RGB(200, 0, 0));
+  LINE_P(x2, cy, x2, y2, RGB(0, 160, 0));
+
+  // Arco de angulo (referencia)
+  IF mag > 0.1 THEN
+    ARC_P(cx, cy, 25, 0, ang, RGB(160, 100, 0));
+  END;
+
+  // Etiquetas
+  magLabel := "mag = " + mag;
+  angLabel := "ang = " + ang + " [deg]";
+  TEXTOUT_P(magLabel, 4, 4, 2, RGB(0, 0, 180));
+  TEXTOUT_P(angLabel, 4, 20, 2, RGB(0, 0, 180));
+
+  // Re e Im calculados
+  TEXTOUT_P("Re = " + FLOOR(dx*1000)/1000, 4, 210, 2, RGB(200,0,0));
+  TEXTOUT_P("Im = " + FLOOR(dy*1000)/1000, 4, 224, 2, RGB(0,160,0));
+
+  WAIT(0);
+END;

@@ -185,7 +185,7 @@ if __name__ == "__main__":
 | 2 | Archivo nuevo nunca visto por CASE (1 EXPORT, INPUT + MSGBOX) | VOL_CALC, FASOR_CALC | ✅ EXITOSO | 2026-09-05 |
 | 3 | INPUT + MSGBOX + lógica de menú (ej. calculadora de préstamo) | pendiente | ⬜ | — |
 | 4 | Múltiples funciones exportadas | pendiente | ⬜ | — |
-| 5 | Gráficos básicos (RECT + TEXTOUT\_P) | pendiente | ⬜ | — |
+| 5 | Gráficos: LINE_P, PIXON_P, ARC_P, TEXTOUT_P | GRAFICA_F, FASOR_G, BAR_CHART | ✅ EXITOSO | 2026-09-05 |
 
 ### Veredicto
 
@@ -196,5 +196,6 @@ if __name__ == "__main__":
 > Comando: `python "{{vault_path}}\.obsidian\scripts\python\tars-sync\main.py" "{{file_path:absolute}}"`
 
 Pendiente:
-- [ ] Pruebas con programas más complejos (variables exportadas, múltiples funciones — requiere actualizar el script para N exportados)
-- [ ] Prueba end-to-end con gráficos (RECT, TEXTOUT_P)
+- [ ] Pruebas con programas más complejos (múltiples funciones — requiere actualizar el script para N exportados)
+- [x] Prueba end-to-end con gráficos — **SUPERADA 2026-09-05** (GRAFICA_F, FASOR_G, BAR_CHART)
+- [x] `WAIT(0)` adoptado como estándar en programas gráficos — `FREEZE` descartado por cierre prematuro

@@ -1,0 +1,107 @@
+EXPORT BAR_CHART()
+BEGIN
+  LOCAL v1, v2, v3, v4, vmax;
+  LOCAL l1, l2, l3, l4;
+  LOCAL bx, bw, bh, by, esc;
+  LOCAL margen, base, altmax;
+
+  // Entrada de valores
+  INPUT({v1, v2, v3, v4},
+    "Valores",
+    {"V1:", "V2:", "V3:", "V4:"},
+    {"Valor 1", "Valor 2", "Valor 3", "Valor 4"},
+    {1, 2, 3, 4}
+  );
+
+  // Entrada de etiquetas
+  INPUT({l1, l2, l3, l4},
+    "Etiquetas",
+    {"L1:", "L2:", "L3:", "L4:"},
+    {"Label 1", "Label 2", "Label 3", "Label 4"},
+    {"A", "B", "C", "D"}
+  );
+
+  RECT();
+
+  margen := 30;
+  base := 210;       // y de la linea base
+  altmax := 160;     // altura maxima de barra en px
+  bw := 50;          // ancho de barra
+  // Posiciones X de cada barra
+  // 4 barras centradas en pantalla 320px
+
+  // Valor maximo para escala
+  vmax := v1;
+  IF v2 > vmax THEN vmax := v2; END;
+  IF v3 > vmax THEN vmax := v3; END;
+  IF v4 > vmax THEN vmax := v4; END;
+
+  IF vmax == 0 THEN
+    MSGBOX("Error: todos los valores son 0");
+    RETURN 0;
+  END;
+
+  esc := altmax / vmax;
+
+  // Eje horizontal
+  LINE_P(margen, base, 310, base, RGB(80,80,80));
+  // Eje vertical
+  LINE_P(margen, base - altmax - 10, margen, base, RGB(80,80,80));
+
+  // Titulo
+  TEXTOUT_P("Bar Chart", 110, 4, 3, RGB(40,40,40));
+
+  // Marca de escala max
+  TEXTOUT_P("" + vmax, 1, base - altmax - 8, 1, RGB(100,100,100));
+  TEXTOUT_P("0", 1, base - 8, 1, RGB(100,100,100));
+
+  // Colores de barras
+  LOCAL c1, c2, c3, c4;
+  c1 := RGB(0, 100, 200);
+  c2 := RGB(200, 60, 0);
+  c3 := RGB(0, 160, 60);
+  c4 := RGB(160, 0, 180);
+
+  // Barra 1
+  bh := FLOOR(v1 * esc);
+  bx := 45;
+  by := base - bh;
+  LOCAL j;
+  FOR j FROM bx TO bx+bw DO
+    LINE_P(j, by, j, base, c1);
+  END;
+  TEXTOUT_P("" + v1, bx+5, by-14, 1, RGB(0,0,0));
+  TEXTOUT_P(l1, bx+5, base+4, 1, RGB(0,0,0));
+
+  // Barra 2
+  bh := FLOOR(v2 * esc);
+  bx := 110;
+  by := base - bh;
+  FOR j FROM bx TO bx+bw DO
+    LINE_P(j, by, j, base, c2);
+  END;
+  TEXTOUT_P("" + v2, bx+5, by-14, 1, RGB(0,0,0));
+  TEXTOUT_P(l2, bx+5, base+4, 1, RGB(0,0,0));
+
+  // Barra 3
+  bh := FLOOR(v3 * esc);
+  bx := 175;
+  by := base - bh;
+  FOR j FROM bx TO bx+bw DO
+    LINE_P(j, by, j, base, c3);
+  END;
+  TEXTOUT_P("" + v3, bx+5, by-14, 1, RGB(0,0,0));
+  TEXTOUT_P(l3, bx+5, base+4, 1, RGB(0,0,0));
+
+  // Barra 4
+  bh := FLOOR(v4 * esc);
+  bx := 240;
+  by := base - bh;
+  FOR j FROM bx TO bx+bw DO
+    LINE_P(j, by, j, base, c4);
+  END;
+  TEXTOUT_P("" + v4, bx+5, by-14, 1, RGB(0,0,0));
+  TEXTOUT_P(l4, bx+5, base+4, 1, RGB(0,0,0));
+
+  FREEZE;
+END;

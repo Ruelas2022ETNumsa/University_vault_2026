@@ -3,7 +3,7 @@ galaxy_body: logbook
 scope: tars-hpprgm-conversion
 status: on-track
 date_updated: 2026-09-05
-session: 2026-09-05-2
+session: 2026-09-05-3
 ---
 
 ## Visión general
@@ -15,9 +15,9 @@ Carrier para resolver la conversión automática de archivos `.hpprgm` desde Obs
 ## Estado actual
 
 **Salud:** on-track
-**Resumen:** CIRC_DC, TRIG_SOLV y CINEMAT cargados y probados en CASE. Unidades en formato [u] aplicadas. Corriente migrada a mA en CIRC_DC. Símbolo Ω confirmado compatible con CASE.
-**Último avance:** Los tres programas pasaron pruebas en CASE con las actualizaciones de formato de unidades y símbolo Ω.
-**Próximo hito:** Pruebas con múltiples funciones EXPORT y gráficos.
+**Resumen:** Prueba 5 (gráficos) superada. GRAFICA_F, FASOR_G y BAR_CHART cargados y ejecutados correctamente en CASE. Pipeline Obsidian → CASE validado para programas con gráficos.
+**Último avance:** GRAFICA_F (función seno/parábola), FASOR_G (diagrama fasorial) y BAR_CHART (barras) operativos. WAIT(0) confirmado como reemplazo estable de FREEZE. Limitación de aliasing documentada para GRAFICA_F con frecuencias altas.
+**Próximo hito:** Prueba 4 — múltiples funciones EXPORT (requiere actualizar script para N exportados).
 
 ---
 
@@ -41,6 +41,7 @@ Carrier para resolver la conversión automática de archivos `.hpprgm` desde Obs
 - 2026-09-05 — Script actualizado para Obsidian: ruta dinámica con `os.path.expanduser()`, argumentos vía `{{file_path:absolute}}`, registrado en Shell Commands
 - 2026-09-05 — Guía de programación PPL documentada en `hp_prime_g2_promgram_guide.md`
 - 2026-09-05 — CIRC_DC, TRIG_SOLV y CINEMAT actualizados: unidades en formato [unidades], corriente en mA en CIRC_DC, símbolo Ω confirmado compatible con CASE — los tres programas superaron pruebas
+- 2026-09-05 — Prueba 5 superada: GRAFICA_F, FASOR_G y BAR_CHART ejecutados correctamente en CASE — gráficos con LINE_P, PIXON_P, ARC_P y TEXTOUT_P confirmados operativos
 
 ---
 
@@ -62,6 +63,8 @@ Carrier para resolver la conversión automática de archivos `.hpprgm` desde Obs
 | 2026-09-04 | Opciones B y C descartadas | B incompleta y requiere paso manual en CASE; C depende de plantilla preexistente |
 | 2026-09-05 | Script movido a `tars-sync\main.py` | Consolidación en carpeta de scripts de Obsidian |
 | 2026-09-05 | Ruta de usuario dinámica | `os.path.expanduser()` reemplaza el `C:\Users\USUARIO` hardcodeado |
+| 2026-09-05 | `WAIT(0)` en lugar de `FREEZE` | `FREEZE` cerraba la pantalla gráfica prematuramente — `WAIT(0)` es estable |
+| 2026-09-05 | Frecuencia útil en GRAFICA_F: 1–10 | Frecuencias altas producen aliasing (pantalla 319px) — documentado como limitación conocida |
 
 > [!note]- Descartadas
 > - xcopy directo a `Calculadoras\CASE` — CASE reemplaza el archivo con binario compilado al abrir
