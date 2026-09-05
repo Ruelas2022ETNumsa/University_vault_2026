@@ -9448,6 +9448,7 @@ tolerancia
 tolerancias
 tutoriales
 tension
+tasam
 ToDo
 Templater
 Text
@@ -30264,6 +30265,7 @@ SOLV
 SQRT
 SENOS
 SENO
+STAT
 Plugins
 Pendientes
 Plugin
@@ -39243,6 +39245,8 @@ PIXON
 PARALELO
 Parabola
 PARABOLA
+Prestamo
+Plazo
 del
 date
 de
@@ -48577,6 +48581,8 @@ diaria
 decibeles
 definieron
 denom
+desviacion
+desglosado
 Vault
 Verificar
 Variables
@@ -86537,6 +86543,7 @@ struct
 splitext
 superada
 stamo
+saldo
 vault
 vil
 ver
@@ -106679,6 +106686,9 @@ aceleracion
 angR
 angLabel
 altmax
+aritmetica
+amortizacion
+anual
 related
 recomendados
 ribbon
@@ -116681,6 +116691,7 @@ resave
 resaved
 reconoci
 recompilando
+regresion
 notes
 notas
 nuevas
@@ -126022,6 +126033,11 @@ nang
 nReq
 nVout
 nhmax
+nDesv
+nTasa
+nInteres
+nCapital
+nSaldo
 created
 commit
 cada
@@ -136675,6 +136691,9 @@ club
 compiladas
 codifican
 caida
+colineales
+correlacion
+capital
 updated
 un
 universo
@@ -165515,6 +165534,8 @@ Caida
 CAIDA
 CHART
 Chart
+Capital
+Cuota
 Instalados
 Instalado
 Instalar
@@ -185364,6 +185385,7 @@ Fasores
 Foro
 FLOOR
 FREEZE
+Finanzas
 Estado
 Excalidraw
 EPUBs
@@ -195873,6 +195895,7 @@ EXITOSO
 Esfera
 ELSE
 Edward
+Estadistica
 Obsidian
 OmniSearch
 Ocultar
@@ -214424,6 +214447,7 @@ ATAN
 ASIN
 ACOS
 Aceleracion
+AMORT
 push
 pull
 para
@@ -223847,6 +223871,7 @@ proh
 programacion
 pixeles
 pequeno
+prestamo
 min
 mica
 movimiento
@@ -234591,6 +234616,7 @@ matching
 maximo
 miliamperios
 magLabel
+mensual
 YAML
 Ya
 You
@@ -263301,6 +263327,7 @@ encode
 esperaba
 exitosos
 escX
+estandar
 Motor
 Media
 Mantiene
@@ -273984,6 +274011,7 @@ Multiplicacion
 MULTIPLICACION
 Museum
 MRUV
+MEDIA
 Lectura
 LaTeX
 Linter
@@ -303034,6 +303062,8 @@ isdir
 identific
 imag
 inconsistentes
+ingresa
+interes
 Dependencia
 Dropbox
 Dataview
@@ -313268,6 +313298,7 @@ Devuelve
 Division
 DIVISION
 Distinto
+Desviacion
 Remotely
 Raz
 Revisa
@@ -323696,6 +323727,8 @@ RESTA
 REPEAT
 RESISTENCIAS
 RECTANGULO
+REGLIN
+Regresion
 Hider
 Hace
 Herramientas
@@ -340988,6 +341021,7 @@ flame
 fakuivan
 freq
 frec
+frances
 haya
 hace
 hacer

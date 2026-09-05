@@ -184,7 +184,7 @@ if __name__ == "__main__":
 | 1 | Función simple (1 EXPORT, sin vars globales) | KMH_CONV | ✅ EXITOSO | 2026-09-04 |
 | 2 | Archivo nuevo nunca visto por CASE (1 EXPORT, INPUT + MSGBOX) | VOL_CALC, FASOR_CALC | ✅ EXITOSO | 2026-09-05 |
 | 3 | INPUT + MSGBOX + lógica de menú (ej. calculadora de préstamo) | pendiente | ⬜ | — |
-| 4 | Múltiples funciones exportadas | pendiente | ⬜ | — |
+| 4 | Múltiples funciones exportadas | STAT_FIN (MEDIA, REGLIN, AMORT) | ✅ EXITOSO | 2026-09-05 |
 | 5 | Gráficos: LINE_P, PIXON_P, ARC_P, TEXTOUT_P | GRAFICA_F, FASOR_G, BAR_CHART | ✅ EXITOSO | 2026-09-05 |
 
 ### Veredicto
@@ -199,3 +199,5 @@ Pendiente:
 - [ ] Pruebas con programas más complejos (múltiples funciones — requiere actualizar el script para N exportados)
 - [x] Prueba end-to-end con gráficos — **SUPERADA 2026-09-05** (GRAFICA_F, FASOR_G, BAR_CHART)
 - [x] `WAIT(0)` adoptado como estándar en programas gráficos — `FREEZE` descartado por cierre prematuro
+- [x] Prueba 4 — múltiples EXPORT: STAT_FIN (MEDIA, REGLIN, AMORT) — **SUPERADA 2026-09-05**
+- [x] main.py v2 validado contra todos los programas — **SIN ERRORES 2026-09-05**

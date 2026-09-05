@@ -1,0 +1,154 @@
+// STAT_FIN — Estadistica y Finanzas
+// EXPORT 1: MEDIA   — media aritmetica y desviacion estandar
+// EXPORT 2: REGLIN  — regresion lineal simple
+// EXPORT 3: AMORT   — amortizacion de prestamo (cuota mensual)
+
+// =============================================================================
+EXPORT MEDIA()
+BEGIN
+  LOCAL n, i, suma, media, desv, dif;
+  LOCAL v1, v2, v3, v4, v5, v6, v7;
+
+  INPUT(n, "Cantidad", "n:", "Cantidad de datos (max 7):", 3);
+
+  IF n < 2 OR n > 7 THEN
+    MSGBOX("Error: ingresa entre 2 y 7 datos");
+    RETURN 0;
+  END;
+
+  // Entrada de datos
+  v1 := 0; v2 := 0; v3 := 0; v4 := 0;
+  v5 := 0; v6 := 0; v7 := 0;
+
+  IF n >= 1 THEN INPUT(v1, "Datos", "x1:", "Dato 1:", 0); END;
+  IF n >= 2 THEN INPUT(v2, "Datos", "x2:", "Dato 2:", 0); END;
+  IF n >= 3 THEN INPUT(v3, "Datos", "x3:", "Dato 3:", 0); END;
+  IF n >= 4 THEN INPUT(v4, "Datos", "x4:", "Dato 4:", 0); END;
+  IF n >= 5 THEN INPUT(v5, "Datos", "x5:", "Dato 5:", 0); END;
+  IF n >= 6 THEN INPUT(v6, "Datos", "x6:", "Dato 6:", 0); END;
+  IF n >= 7 THEN INPUT(v7, "Datos", "x7:", "Dato 7:", 0); END;
+
+  // Media — suma solo los n datos ingresados
+  suma := 0;
+  IF n >= 1 THEN suma := suma + v1; END;
+  IF n >= 2 THEN suma := suma + v2; END;
+  IF n >= 3 THEN suma := suma + v3; END;
+  IF n >= 4 THEN suma := suma + v4; END;
+  IF n >= 5 THEN suma := suma + v5; END;
+  IF n >= 6 THEN suma := suma + v6; END;
+  IF n >= 7 THEN suma := suma + v7; END;
+  media := suma / n;
+
+  // Desviacion estandar muestral — solo los n datos ingresados
+  dif := 0;
+  IF n >= 1 THEN dif := dif + (v1-media)^2; END;
+  IF n >= 2 THEN dif := dif + (v2-media)^2; END;
+  IF n >= 3 THEN dif := dif + (v3-media)^2; END;
+  IF n >= 4 THEN dif := dif + (v4-media)^2; END;
+  IF n >= 5 THEN dif := dif + (v5-media)^2; END;
+  IF n >= 6 THEN dif := dif + (v6-media)^2; END;
+  IF n >= 7 THEN dif := dif + (v7-media)^2; END;
+
+  desv := SQRT(dif / (n - 1));
+
+  MSGBOX("Media = " + media + "\nDesv. est. = " + desv + "\nn = " + n);
+  RETURN media;
+END;
+
+// =============================================================================
+EXPORT REGLIN()
+BEGIN
+  LOCAL n, i, sx, sy, sxy, sx2;
+  LOCAL m, b, r, den;
+  LOCAL v1, v2, v3, v4, v5, v6, v7;
+  LOCAL w1, w2, w3, w4, w5, w6, w7;
+
+  INPUT(n, "Regresion lineal", "n:", "Cantidad de pares (max 7):", 3);
+
+  IF n < 2 OR n > 7 THEN
+    MSGBOX("Error: ingresa entre 2 y 7 pares");
+    RETURN 0;
+  END;
+
+  v1:=0; v2:=0; v3:=0; v4:=0; v5:=0; v6:=0; v7:=0;
+  w1:=0; w2:=0; w3:=0; w4:=0; w5:=0; w6:=0; w7:=0;
+
+  IF n >= 1 THEN INPUT({v1,w1}, "Par 1", {"x1:","y1:"}, {"x1","y1"}, {0,0}); END;
+  IF n >= 2 THEN INPUT({v2,w2}, "Par 2", {"x2:","y2:"}, {"x2","y2"}, {0,0}); END;
+  IF n >= 3 THEN INPUT({v3,w3}, "Par 3", {"x3:","y3:"}, {"x3","y3"}, {0,0}); END;
+  IF n >= 4 THEN INPUT({v4,w4}, "Par 4", {"x4:","y4:"}, {"x4","y4"}, {0,0}); END;
+  IF n >= 5 THEN INPUT({v5,w5}, "Par 5", {"x5:","y5:"}, {"x5","y5"}, {0,0}); END;
+  IF n >= 6 THEN INPUT({v6,w6}, "Par 6", {"x6:","y6:"}, {"x6","y6"}, {0,0}); END;
+  IF n >= 7 THEN INPUT({v7,w7}, "Par 7", {"x7:","y7:"}, {"x7","y7"}, {0,0}); END;
+
+  sx  := v1+v2+v3+v4+v5+v6+v7;
+  sy  := w1+w2+w3+w4+w5+w6+w7;
+  sxy := v1*w1+v2*w2+v3*w3+v4*w4+v5*w5+v6*w6+v7*w7;
+  sx2 := v1^2+v2^2+v3^2+v4^2+v5^2+v6^2+v7^2;
+
+  den := n*sx2 - sx^2;
+
+  IF den == 0 THEN
+    MSGBOX("Error: datos colineales verticales");
+    RETURN 0;
+  END;
+
+  m := (n*sxy - sx*sy) / den;
+  b := (sy - m*sx) / n;
+
+  // Coeficiente de correlacion r
+  LOCAL sdy, sdx;
+  sdx := SQRT((sx2 - sx^2/n) / (n-1));
+  LOCAL sy2;
+  sy2 := w1^2+w2^2+w3^2+w4^2+w5^2+w6^2+w7^2;
+  sdy := SQRT((sy2 - sy^2/n) / (n-1));
+
+  IF sdx == 0 OR sdy == 0 THEN
+    r := 0;
+  ELSE
+    r := m * sdx / sdy;
+  END;
+
+  MSGBOX("y = m*x + b\nm = " + m + "\nb = " + b + "\nr = " + r);
+  RETURN m;
+END;
+
+// =============================================================================
+EXPORT AMORT()
+BEGIN
+  LOCAL P, tasa, n, cuota, tasam;
+  LOCAL interes, capital, saldo;
+
+  INPUT(P, "Prestamo", "P [moneda]:", "Capital inicial:", 1000);
+  INPUT(tasa, "Prestamo", "TEA [%]:", "Tasa anual en porcentaje:", 10);
+  INPUT(n, "Prestamo", "n [meses]:", "Plazo en meses:", 12);
+
+  IF P <= 0 OR tasa <= 0 OR n <= 0 THEN
+    MSGBOX("Error: valores deben ser positivos");
+    RETURN 0;
+  END;
+
+  // Tasa mensual equivalente desde TEA
+  tasam := (1 + tasa/100)^(1/12) - 1;
+
+  // Cuota mensual (sistema frances)
+  IF tasam == 0 THEN
+    cuota := P / n;
+  ELSE
+    cuota := P * tasam * (1+tasam)^n / ((1+tasam)^n - 1);
+  END;
+
+  // Primer mes desglosado
+  interes := P * tasam;
+  capital := cuota - interes;
+  saldo   := P - capital;
+
+  MSGBOX("Cuota mensual = " + FLOOR(cuota*100)/100 + " [moneda]" +
+    "\nTasa mensual = " + FLOOR(tasam*10000)/100 + " [%]" +
+    "\n--- Mes 1 ---" +
+    "\nInteres = " + FLOOR(interes*100)/100 +
+    "\nCapital = " + FLOOR(capital*100)/100 +
+    "\nSaldo   = " + FLOOR(saldo*100)/100);
+
+  RETURN cuota;
+END;

@@ -3,7 +3,7 @@ galaxy_body: logbook
 scope: tars-hpprgm-conversion
 status: on-track
 date_updated: 2026-09-05
-session: 2026-09-05-3
+session: 2026-09-05-4
 ---
 
 ## Visión general
@@ -15,9 +15,9 @@ Carrier para resolver la conversión automática de archivos `.hpprgm` desde Obs
 ## Estado actual
 
 **Salud:** on-track
-**Resumen:** Prueba 5 (gráficos) superada. GRAFICA_F, FASOR_G y BAR_CHART cargados y ejecutados correctamente en CASE. Pipeline Obsidian → CASE validado para programas con gráficos.
-**Último avance:** GRAFICA_F (función seno/parábola), FASOR_G (diagrama fasorial) y BAR_CHART (barras) operativos. WAIT(0) confirmado como reemplazo estable de FREEZE. Limitación de aliasing documentada para GRAFICA_F con frecuencias altas.
-**Próximo hito:** Prueba 4 — múltiples funciones EXPORT (requiere actualizar script para N exportados).
+**Resumen:** Prueba 4 superada. STAT_FIN (3 EXPORT: MEDIA, REGLIN, AMORT) cargado y ejecutado en CASE. main.py v2 validado contra todos los programas del vault — ninguno con errores.
+**Último avance:** main.py v2 con detección dinámica de N funciones EXPORT confirmado operativo. Todos los programas existentes reprobados sin errores.
+**Próximo hito:** Prueba 3 — INPUT + MSGBOX + lógica de menú compleja.
 
 ---
 
@@ -42,6 +42,8 @@ Carrier para resolver la conversión automática de archivos `.hpprgm` desde Obs
 - 2026-09-05 — Guía de programación PPL documentada en `hp_prime_g2_promgram_guide.md`
 - 2026-09-05 — CIRC_DC, TRIG_SOLV y CINEMAT actualizados: unidades en formato [unidades], corriente en mA en CIRC_DC, símbolo Ω confirmado compatible con CASE — los tres programas superaron pruebas
 - 2026-09-05 — Prueba 5 superada: GRAFICA_F, FASOR_G y BAR_CHART ejecutados correctamente en CASE — gráficos con LINE_P, PIXON_P, ARC_P y TEXTOUT_P confirmados operativos
+- 2026-09-05 — Prueba 4 superada: STAT_FIN (MEDIA, REGLIN, AMORT — 3 EXPORT) cargado y ejecutado en CASE — main.py v2 con N EXPORT dinámico confirmado operativo
+- 2026-09-05 — main.py v2 validado contra todos los programas del vault — ninguno con errores
 
 ---
 
@@ -65,6 +67,7 @@ Carrier para resolver la conversión automática de archivos `.hpprgm` desde Obs
 | 2026-09-05 | Ruta de usuario dinámica | `os.path.expanduser()` reemplaza el `C:\Users\USUARIO` hardcodeado |
 | 2026-09-05 | `WAIT(0)` en lugar de `FREEZE` | `FREEZE` cerraba la pantalla gráfica prematuramente — `WAIT(0)` es estable |
 | 2026-09-05 | Frecuencia útil en GRAFICA_F: 1–10 | Frecuencias altas producen aliasing (pantalla 319px) — documentado como limitación conocida |
+| 2026-09-05 | main.py v2 como estándar | Detección dinámica de N EXPORT — backward compatible, validado contra todos los programas |
 
 > [!note]- Descartadas
 > - xcopy directo a `Calculadoras\CASE` — CASE reemplaza el archivo con binario compilado al abrir

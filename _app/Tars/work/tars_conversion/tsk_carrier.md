@@ -11,8 +11,8 @@ blocked_by:
 
 **Última sesión:** 2026-09-05
 **Retomar desde:** Pruebas con programas más complejos (múltiples funciones exportadas)
-**Completado esta sesión:** Prueba 5 superada — GRAFICA_F, FASOR_G y BAR_CHART ejecutados en CASE. WAIT(0) adoptado como estándar para programas gráficos. Limitación de aliasing en GRAFICA_F documentada.
-**Próximo paso:** Prueba 4 — múltiples funciones EXPORT (requiere actualizar main.py para N exportados)
+**Completado esta sesión:** Prueba 4 superada — STAT_FIN (MEDIA, REGLIN, AMORT) ejecutado en CASE. main.py v2 validado contra todos los programas del vault sin errores.
+**Próximo paso:** Prueba 3 — INPUT + MSGBOX + lógica de menú compleja
 **Preguntas de cierre:** ninguna
 
 ---
@@ -32,8 +32,9 @@ blocked_by:
 - [x] Integrar Opción A al script `tars-sync` — **HECHO 2026-09-05**
 - [x] Actualizar CIRC_DC, TRIG_SOLV y CINEMAT — unidades [u], mA, Ω — **SUPERADO 2026-09-05**
 - [x] Prueba 5 del plan — gráficos: GRAFICA_F, FASOR_G, BAR_CHART — **SUPERADA 2026-09-05**
+- [x] Prueba 4 del plan — múltiples EXPORT: STAT_FIN (MEDIA, REGLIN, AMORT) — **SUPERADA 2026-09-05**
+- [x] main.py v2 validado contra todos los programas del vault — **SIN ERRORES 2026-09-05**
 - [ ] Prueba 3 del plan — INPUT + MSGBOX + lógica de menú (ej. calculadora de préstamo)
-- [ ] Prueba 4 del plan — múltiples funciones EXPORT (requiere actualizar script para N exportados)
 
 ---
 
