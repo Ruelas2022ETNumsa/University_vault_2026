@@ -12,19 +12,19 @@
 
 **Justificación de la prioridad del DMA (Stallings)**
 
-Cuando el DMA y la CPU solicitan el bus simultáneamente, el árbitro de bus otorga prioridad al DMA para garantizar la transferencia en tiempo real. Esto se justifica porque los periféricos de alta velocidad no pueden detenerse — si el DMA no accede al bus cuando el dato está listo, el buffer del dispositivo se desborda (*buffer overrun*) y el dato se pierde. La CPU, en cambio, puede ceder el bus temporalmente sin perder información. Como las transferencias DMA son infrecuentes respecto a los accesos constantes de la CPU, el impacto en el rendimiento es mínimo.
+El DMA tiene prioridad superior sobre la CPU en el acceso al bus por dos razones fundamentales: los periféricos de alta velocidad operan en tiempo real y no pueden detenerse — si el DMA no accede al bus cuando el dato está listo, el buffer del dispositivo se desborda (*buffer overrun*) y el dato se pierde irremediablemente. La CPU, en cambio, puede pausarse durante un ciclo sin perder información ni alterar su estado interno. Como las transferencias DMA son infrecuentes respecto a los accesos constantes de la CPU, el impacto en el rendimiento global es mínimo.
 
 ---
 
 **Pasos de operación**
 
 1. El periférico activa `DREQ` indicando que tiene un dato listo.
-2. El DMA solicita el bus con `BR` / `HOLD`.
-3. La CPU termina el ciclo de bus actual y cede el control.
-4. La CPU libera el bus y confirma con `BG` / `HLDA`.
+2. El DMA solicita el bus al procesador con `BR` / `HOLD`.
+3. La CPU suspende en su siguiente punto de ruptura (antes de necesitar el bus).
+4. La CPU pone sus líneas en **alta impedancia** y responde con `BG` / `HLDA`.
 5. El DMA activa `DACK` — la transferencia comienza.
-6. El DMA transfiere un dato directamente entre periférico y RAM.
-7. El DMA desactiva `BR`, actualiza su dirección y contador, y devuelve el bus a la CPU.
+6. El DMA transfiere **un único dato** directamente entre periférico y RAM.
+7. El DMA desactiva `BR`, incrementa su dirección, decrementa el contador y devuelve el bus a la CPU.
 
 ```tikz
 \usetikzlibrary{shapes.geometric, arrows.meta, positioning}
@@ -57,14 +57,14 @@ Cuando el DMA y la CPU solicitan el bus simultáneamente, el árbitro de bus oto
 
 **Diferencia con una interrupción ordinaria**
 
-El robo de ciclo no requiere cambio de contexto ni ISR — la CPU cede el bus entre ciclos y reanuda inmediatamente.
+El robo de ciclo no requiere cambio de contexto, no guarda registros ni ejecuta ISR — la CPU simplemente se pausa un ciclo de bus y reanuda inmediatamente.
 
 | | Cycle Stealing (DMA) | Interrupción |
 |---|---|---|
 | Guarda contexto (registros, PC) | No | Sí |
 | Ejecuta ISR | No | Sí |
-| Duración de la pausa | 1 ciclo de bus por transferencia | Varios ciclos (save + ISR + restore) |
-| Momento de atención | Entre ciclos de bus | Al finalizar la instrucción en curso |
+| Duración de la pausa | 1 ciclo de bus | Varios ciclos (save + ISR + restore) |
+| Punto de ruptura | Antes de cualquier acceso al bus | Solo al finalizar la instrucción |
 | Impacto en rendimiento | Mínimo | Mayor |
 
 ```tikz
@@ -79,8 +79,8 @@ El robo de ciclo no requiere cambio de contexto ni ISR — la CPU cede el bus en
 }
 
 \node [left] at (0, 3) {CPU Bus Access};
-\draw [ultra thick, blue] (0, 3) -- (3, 3) node [midway, above] {Activo}
-                         -- (3, 2.2) -- (5, 2.2) node [midway, above, red] {Cede el bus}
+\draw [ultra thick, blue] (0, 3) -- (3, 3) node [midway, above] {Activo (Fetch/Exec)}
+                         -- (3, 2.2) -- (5, 2.2) node [midway, above, red] {Pausa (Alta Impedancia)}
                          -- (5, 3) -- (9, 3) node [midway, above] {Activo};
 
 \node [left] at (0, 1.5) {DMA Bus Request};
@@ -89,22 +89,22 @@ El robo de ciclo no requiere cambio de contexto ni ISR — la CPU cede el bus en
 
 \node [left] at (0, 0.5) {Bus Master};
 \draw [ultra thick, green!60!black] (0, 0.5) -- (3, 0.5) node [midway, below] {CPU}
-                                   -- (5, 0.5) node [midway, below, red] {DMA (ciclo robado)}
+                                   -- (5, 0.5) node [midway, below, red] {DMA (1 ciclo robado)}
                                    -- (9, 0.5) node [midway, below] {CPU};
 \end{tikzpicture}
 \end{document}
 ```
 
-*El DMA ocupa el bus durante un ciclo por transferencia — la CPU reanuda inmediatamente después.*
+*El DMA toma el bus por exactamente un ciclo — la CPU reanuda inmediatamente después.*
 
 ---
 
 **Contexto en el computador SIC (Hill & Peterson)**
 
-El DMA es la tercera alternativa de E/S del SIC — ruta directa a memoria sin usar registros de la CPU:
+El DMA es la tercera alternativa de E/S del SIC — una ruta directa a memoria que no usa los registros de la CPU. Las tres alternativas comparadas:
 
 - **Por Programa (T3.4):** la CPU controla activamente cada transferencia — sin paralelismo.
-- **Secuencia Buffer (T3.7–T3.9):** la CPU ejecuta los pasos 90–111 usando `BWC`, `CC`, `BIOR`, `IOBUS` y `MD`. Debe esperar a que la instrucción en curso finalice.
+- **Secuencia Buffer (T3.7–T3.9):** interrupción por hardware; la CPU ejecuta los pasos 90–111 usando `BWC`, `CC`, `BIOR`, `IOBUS` y `MD`. Debe esperar a que la instrucción en curso finalice.
 - **DMA (T3.10):** acceso asíncrono mediante puertos independientes (`MA0`, `MD0`, `ST0`, `DS0`) arbitrados por un **módulo de control de memoria** — sin intervención de la CPU.
 
 ```tikz
@@ -122,8 +122,8 @@ El DMA es la tercera alternativa de E/S del SIC — ruta directa a memoria sin u
 \node[phase, right=0.15cm of P4] (P5) {Almacenar\\resultado};
 \node[phase, right=0.15cm of P5] (P6) {Procesar\\interrupción};
 
-\node[lbl, fill=red!10, below=1cm of P2, xshift=0.9cm] (dma) {Puntos de atención DMA\\(entre ciclos de bus)};
-\node[lbl, fill=orange!15, below=1.8cm of P5, xshift=0.5cm] (intr) {Punto de atención interrupción\\(al finalizar la instrucción)};
+\node[lbl, fill=red!10, below=1cm of P2, xshift=0.9cm] (dma) {Puntos de ruptura DMA\\(antes de cualquier acceso al bus)};
+\node[lbl, fill=orange!15, below=1.8cm of P5, xshift=0.5cm] (intr) {Punto de ruptura interrupción\\(solo al finalizar la instrucción)};
 
 \path (P1.east) -- node(b1) {} (P2.west);
 \path (P2.east) -- node(b2) {} (P3.west);
@@ -142,4 +142,4 @@ El DMA es la tercera alternativa de E/S del SIC — ruta directa a memoria sin u
 \end{document}
 ```
 
-*El DMA atiende entre ciclos de bus — la interrupción solo al finalizar la instrucción.*
+*El DMA puede interrumpir el ciclo de instrucción en múltiples puntos — la interrupción solo al finalizar.*
