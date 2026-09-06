@@ -27,12 +27,9 @@
         "shared",
         "README.md",
         "Untitled 1.md",
-        "Untitled.md",
-        "Sin título 1.md",
         "Sin título 3.md",
         "Sin título 2.md",
-        "Sin título 4.md",
-        "Sin título.md"
+        "Sin título 4.md"
       ]
     },
     "MOC": {
@@ -3319,6 +3316,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "IIR and FIR Filters.md",
         "Transformada Discreta de Fourier $DFT$.md",
         "Par de Transformadas Discretas de Fourier $DFT$.md",
         "Factores de Giro (Twiddle Factors) para N=4, 6 y 8.md",
@@ -3653,6 +3651,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "ej_resuleto607.md",
         "Untitled.md",
         "ejercicios P1",
         "_library_ETN607.md",
@@ -5944,10 +5943,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Untitled.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_app/Tars": {
       "isPinned": false,
       "isHidden": false,
@@ -6017,10 +6012,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Sin título 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Sin título 3.md": {
       "isPinned": false,
       "isHidden": false
@@ -6030,10 +6021,6 @@
       "isHidden": false
     },
     "Sin título 4.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Sin título.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -6209,6 +6196,14 @@
       "isHidden": false
     },
     "_app/Tars/work/tars_python/tsk_carrier.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_08/ETN1015/Avance/IIR and FIR Filters.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Partial_1/ej_resuleto607.md": {
       "isPinned": false,
       "isHidden": false
     }

@@ -1,102 +1,83 @@
-# Transformación de Coordenadas — Rotación y Traslación
+## Prioridad del DMA sobre el acceso al bus de la CPU
 
-**Subtema:** Transformación de coordenadas (Rotación y Traslación)
+1. Definición formal — del libro fuente, sin parafrasear.
 
----
+* "En casi todos los sistemas que tienen módulos de DMA, el acceso del módulo de DMA a memoria principal tiene más prioridad que el acceso de la CPU a memoria principal".
+* "During DMA transfer, the CPU is idle and has no control of the memory buses. A DMA controller takes over the buses to manage the transfer directly between the I/O device and memory".
+* "For some devices, a delay in gaining access to the bus may lead to an error. Such devices must be given high priority".
 
-## Enunciado
+2. Idea clave — propiedad central no capturada por la definición.
 
-Una partícula sufre primero una **traslación** de vector $\vec{T} = (2, 1, -3)$ y luego una **rotación de 30°** alrededor del eje $z$, llegando al punto final $P_f = (2, 1, -1)$.
+La CPU es un dispositivo síncrono interno cuya marcha se puede pausar temporalmente sin perder información, mientras que los dispositivos de E/S rápidos operan en tiempo real y sufren pérdidas de datos irreversibles (*buffer overflow*) si el bus no se les concede de inmediato.
 
-**Hallar:** La posición inicial $P_0$ de la partícula.
+3. Figura o diagrama (si existe o aplica)
 
----
+```tikz
+\usetikzlibrary{shapes.geometric, arrows.meta, positioning}
+\begin{document}
+\begin{tikzpicture}[node distance=2cm, auto, >=Latex, thick,
+    block/.style={rectangle, draw, fill=blue!5, text width=3.2cm, text centered, minimum height=1.2cm, rounded corners}]
+    
+    \node [block] (cpu) {CPU};
+    \node [block, right=4cm of cpu] (dma) {Controlador DMA};
+    \node [block, below=2.5cm of cpu, xshift=3.6cm] (ram) {Memoria Principal (RAM)};
+    
+    % Líneas de control handshake para arbitraje
+    \draw [->, transform canvas={yshift=0.15cm}] (dma) -- node[above, scale=0.8] {BR (Bus Request)} (cpu);
+    \draw [<-, transform canvas={yshift=-0.15cm}] (dma) -- node[below, scale=0.8] {BG (Bus Grant)} (cpu);
+    
+    % Buses de datos, direcciones y control
+    \draw [double, <->] (cpu) -- node[left, scale=0.8, align=center] {Buses de Sistema\\(Alta Impedancia si BG=1)} (ram);
+    \draw [double, <->] (dma) -- node[right, scale=0.8, align=center] {Buses de Sistema\\(Activos si BG=1)} (ram);
+    
+\end{tikzpicture}
+\end{document}
+```
 
-## Estrategia de resolución
+4. Ejercicios resueltos (solo nivel C)
 
-Para encontrar $P_0$ se invierten las transformaciones en **orden inverso**:
+##### Ej. Ralentización del procesador por robo de ciclos de DMA
 
-$$P_f \xrightarrow{R_z^T(30°)} P_{int} \xrightarrow{-\vec{T}} P_0$$
+**Resolución**
+Determinación del impacto cuantitativo sobre el rendimiento de la CPU debido al robo de ciclos de bus por transferencias síncronas de un dispositivo de E/S.
 
-1. Deshacer la rotación aplicando $R_z^T(30°)$ sobre $P_f$
-2. Deshacer la traslación restando $\vec{T}$ al resultado
+**Datos del enunciado:**
+*   Velocidad de transmisión del periférico: $9600\text{ bps}$.
+*   Tasa de captación/ejecución del procesador: $1\text{ MIPS}$ (un millón de instrucciones por segundo).
+*   Se asume transmisión de caracteres estándar de $8\text{ bits}$ ($1\text{ byte}$ por transferencia) en modo robo de ciclo (*cycle stealing*).
 
-> **Fundamento:** Las matrices de rotación son ortogonales, por lo tanto $R^{-1} = R^T$
+**Paso 1:** Calcular la tasa de transferencias de caracteres por segundo hacia la memoria.
 
----
+$$
+\text{Tasa de caracteres} = \frac{\text{Velocidad de transmisión}}{\text{Bits por carácter}}
+$$
 
-## Paso 1 — Deshacer la rotación de 30° alrededor del eje z
 
-La inversa de $R_z(30°)$ es su transpuesta:
+$$
+\text{Tasa de caracteres} = \frac{9600\text{ bps}}{8\text{ bits}} = 1200\text{ caracteres/s}
+$$
 
-$$R_z^T(30°) = \begin{pmatrix} \cos 30° & \sin 30° & 0 \\ -\sin 30° & \cos 30° & 0 \\ 0 & 0 & 1 \end{pmatrix} = \begin{pmatrix} \dfrac{\sqrt{3}}{2} & \dfrac{1}{2} & 0 \\[6pt] -\dfrac{1}{2} & \dfrac{\sqrt{3}}{2} & 0 \\[6pt] 0 & 0 & 1 \end{pmatrix}$$
 
-Se aplica sobre $P_f = (2,\ 1,\ -1)$:
+**Paso 2:** Determinar la cantidad de ciclos de bus robados al procesador. Puesto que cada carácter transferido requiere un ciclo de bus exclusivo de memoria:
 
-$$\begin{bmatrix} x_{int} \\ y_{int} \\ z_{int} \end{bmatrix} = \begin{bmatrix} \dfrac{\sqrt{3}}{2} & \dfrac{1}{2} & 0 \\[6pt] -\dfrac{1}{2} & \dfrac{\sqrt{3}}{2} & 0 \\[6pt] 0 & 0 & 1 \end{bmatrix} \begin{bmatrix} 2 \\ 1 \\ -1 \end{bmatrix}$$
+$$
+\text{Ciclos robados por segundo} = 1200\text{ ciclos/s}
+$$
 
-**Componente x:**
 
-$$x_{int} = \frac{\sqrt{3}}{2}(2) + \frac{1}{2}(1) = \sqrt{3} + \frac{1}{2} = \frac{2\sqrt{3}+1}{2}$$
+**Paso 3:** Calcular la fracción de ralentización que experimenta el procesador respecto a su capacidad máxima de bus ($1,000,000\text{ ciclos/s}$):
 
-**Componente y:**
+$$
+\text{Ralentización} = \frac{\text{Ciclos robados por segundo}}{\text{Frecuencia de bus de la CPU}}
+$$
 
-$$y_{int} = -\frac{1}{2}(2) + \frac{\sqrt{3}}{2}(1) = -1 + \frac{\sqrt{3}}{2} = \frac{\sqrt{3}-2}{2}$$
 
-**Componente z:**
+$$
+\text{Ralentización} = \frac{1200}{1,000,000} = 0.0012
+$$
 
-$$z_{int} = -1$$
 
-**Punto intermedio (antes de la rotación, después de la traslación):**
+$$
+\therefore\quad \color{orange}{0.12\%}
+$$
 
-$$P_{int} = \left(\frac{2\sqrt{3}+1}{2},\ \frac{\sqrt{3}-2}{2},\ -1\right)$$
-
----
-
-## Paso 2 — Deshacer la traslación
-
-Se resta el vector de traslación $\vec{T} = (2, 1, -3)$:
-
-$$\begin{bmatrix} x_0 \\ y_0 \\ z_0 \end{bmatrix} = \begin{bmatrix} \dfrac{2\sqrt{3}+1}{2} \\ \dfrac{\sqrt{3}-2}{2} \\ -1 \end{bmatrix} - \begin{bmatrix} 2 \\ 1 \\ -3 \end{bmatrix}$$
-
-**Componente x:**
-
-$$x_0 = \frac{2\sqrt{3}+1}{2} - 2 = \frac{2\sqrt{3}+1-4}{2} = \frac{2\sqrt{3}-3}{2} = \sqrt{3} - \frac{3}{2}$$
-
-**Componente y:**
-
-$$y_0 = \frac{\sqrt{3}-2}{2} - 1 = \frac{\sqrt{3}-2-2}{2} = \frac{\sqrt{3}-4}{2}$$
-
-**Componente z:**
-
-$$z_0 = -1 - (-3) = -1 + 3 = 2$$
-
----
-
-## Resultado
-
-$$\boxed{P_0 = \left(\sqrt{3} - \frac{3}{2},\ \frac{\sqrt{3}-4}{2},\ 2\right)}$$
-
----
-
-## Verificación del proceso
-
-| Paso | Operación | Entrada | Salida |
-|------|-----------|---------|--------|
-| 1 (directo) | $+\vec{T} = (2,1,-3)$ | $P_0$ | $P_{int}$ |
-| 2 (directo) | $R_z(30°)$ | $P_{int}$ | $P_f = (2,1,-1)$ ✓ |
-| — | — | — | — |
-| 1 (inverso) | $R_z^T(30°)$ | $P_f = (2,1,-1)$ | $P_{int}$ |
-| 2 (inverso) | $-\vec{T}$ | $P_{int}$ | $P_0$ ✓ |
-
----
-
-## Notas clave
-
-- La rotación $R_z$ **no altera la componente z**, por eso el cambio en $z$ proviene íntegramente de la traslación: $z_0 = z_{int} - T_z = -1 - (-3) = 2$
-- La inversa de cualquier matriz de rotación es su **transpuesta** (propiedad de matrices ortogonales: $R^T R = I$)
-- El orden de inversión es **obligatoriamente inverso** al orden de aplicación
-
----
-
-*Tags: #transformaciones #rotación #traslación #álgebra-lineal #mecánica*
