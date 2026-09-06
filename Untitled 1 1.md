@@ -30,22 +30,22 @@ Cuando el DMA y la CPU solicitan el bus simultáneamente, el árbitro otorga pri
 \usetikzlibrary{shapes.geometric, arrows.meta, positioning}
 \begin{document}
 \begin{tikzpicture}[
-    node distance=1.5cm,
-    block/.style={rectangle, draw, fill=blue!5, text width=2.2cm, align=center, minimum height=1cm, rounded corners, font=\sffamily\scriptsize},
-    line/.style={draw, -{Stealth[scale=0.8]}, thick},
-    bus/.style={draw, {Stealth[scale=0.8]}-{Stealth[scale=0.8]}, ultra thick, gray}
+    node distance=2.5cm,
+    block/.style={rectangle, draw, fill=blue!5, text width=3.2cm, align=center, minimum height=1.4cm, rounded corners, font=\sffamily\small},
+    line/.style={draw, -{Stealth[scale=1.2]}, thick},
+    bus/.style={draw, {Stealth[scale=1.2]}-{Stealth[scale=1.2]}, ultra thick, gray}
 ]
     \node [block] (cpu) {CPU\\(Procesador)};
-    \node [block, right=3cm of cpu] (dma) {Controlador\\DMA};
-    \node [block, below=2cm of cpu] (ram) {Memoria Principal\\(RAM)};
-    \node [block, below=2cm of dma] (io) {Dispositivo E/S\\(Periférico)};
+    \node [block, right=5cm of cpu] (dma) {Controlador\\DMA};
+    \node [block, below=3.5cm of cpu] (ram) {Memoria Principal\\(RAM)};
+    \node [block, below=3.5cm of dma] (io) {Dispositivo E/S\\(Periférico)};
 
-    \draw [line, transform canvas={yshift=0.15cm}] (dma) -- node[above, font=\sffamily\tiny] {HRQ (HOLD Request)} (cpu);
-    \draw [line, transform canvas={yshift=-0.15cm}] (cpu) -- node[below, font=\sffamily\tiny] {HLDA (Hold Acknowledge)} (dma);
-    \draw [line, transform canvas={xshift=-0.15cm}] (io) -- node[left, font=\sffamily\tiny] {DREQ (Request)} (dma);
-    \draw [line, transform canvas={xshift=0.15cm}] (dma) -- node[right, font=\sffamily\tiny] {DACK (Acknowledge)} (io);
-    \draw [bus] (cpu) -- (ram) node[midway, left, black, font=\sffamily\tiny] {Buses de Sistema};
-    \draw [bus] (dma) -- (ram) node[midway, below left, black, font=\sffamily\tiny] {Acceso Directo};
+    \draw [line, transform canvas={yshift=0.2cm}] (dma) -- node[above, font=\sffamily\scriptsize] {P2: HRQ (HOLD Request)} (cpu);
+    \draw [line, transform canvas={yshift=-0.2cm}] (cpu) -- node[below, font=\sffamily\scriptsize] {P4: HLDA (Hold Acknowledge)} (dma);
+    \draw [line, transform canvas={xshift=-0.2cm}] (io) -- node[left, font=\sffamily\scriptsize] {P1: DREQ (Request)} (dma);
+    \draw [line, transform canvas={xshift=0.2cm}] (dma) -- node[right, font=\sffamily\scriptsize] {P5: DACK (Acknowledge)} (io);
+    \draw [bus] (cpu) -- (ram) node[midway, left, black, font=\sffamily\scriptsize] {P6: Acceso DMA};
+    \draw [bus] (dma) -- (ram) node[midway, below left, black, font=\sffamily\scriptsize] {P6: Transferencia Directa};
     \draw [bus] (io) -- (ram);
 \end{tikzpicture}
 \end{document}
