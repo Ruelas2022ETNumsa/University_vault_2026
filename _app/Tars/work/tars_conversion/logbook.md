@@ -1,9 +1,8 @@
 ---
 galaxy_body: logbook
 scope: tars-hpprgm-conversion
-status: closed
-date_updated: 2026-09-05-4
-session: 2026-09-05-4
+status: on-track
+date_updated: 2026-09-05
 ---
 
 ## Visión general
@@ -14,10 +13,10 @@ Carrier para resolver la conversión automática de archivos `.hpprgm` desde Obs
 
 ## Estado actual
 
-**Salud:** closed
-**Resumen:** Todas las pruebas del plan superadas. Carrier cerrado.
+**Salud:** on-track
+**Resumen:** Carrier completado. Todas las pruebas del plan superadas. Pipeline operativo desde Obsidian vía Shell Commands.
 **Último avance:** Prueba 3 superada — CIRC_DC, TRIG_SOLV, CINEMAT (CHOOSE anidado + INPUT + MSGBOX + validación). Numeración manual removida de CHOOSE en los tres programas. Regla documentada en guía PPL.
-**Próximo hito:** ninguno
+**Próximo hito:** ninguno — delivered
 
 ---
 
@@ -28,8 +27,8 @@ Carrier para resolver la conversión automática de archivos `.hpprgm` desde Obs
 | `logbook.md` | logbook | — | este archivo — README histórico del proyecto |
 | `tsk_carrier.md` | tsk | — | archivo de trabajo activo |
 | `conversion-opc_A.md` | dropship | activo | Opción A — binario moderno desde Python |
-| `conversion-opc_B.md` | dropship | activo | Opción B — formato G1 (Xprime approach) |
-| `conversion-opc_C.md` | dropship | activo | Opción C — header real como plantilla |
+| `conversion-opc_B.md` | dropship | descartado | Opción B — formato G1 (Xprime approach) |
+| `conversion-opc_C.md` | dropship | descartado | Opción C — header real como plantilla |
 
 ---
 
@@ -40,13 +39,13 @@ Carrier para resolver la conversión automática de archivos `.hpprgm` desde Obs
 - 2026-09-05 — Prueba 2 superada: VOL_CALC y FASOR_CALC (generados por IA, nunca vistos por CASE) cargados y ejecutados correctamente
 - 2026-09-05 — Script actualizado para Obsidian: ruta dinámica con `os.path.expanduser()`, argumentos vía `{{file_path:absolute}}`, registrado en Shell Commands
 - 2026-09-05 — Guía de programación PPL documentada en `hp_prime_g2_promgram_guide.md`
-- 2026-09-05 — CIRC_DC, TRIG_SOLV y CINEMAT actualizados: unidades en formato [unidades], corriente en mA en CIRC_DC, símbolo Ω confirmado compatible con CASE — los tres programas superaron pruebas
-- 2026-09-05 — Prueba 5 superada: GRAFICA_F, FASOR_G y BAR_CHART ejecutados correctamente en CASE — gráficos con LINE_P, PIXON_P, ARC_P y TEXTOUT_P confirmados operativos
-- 2026-09-05 — Prueba 4 superada: STAT_FIN (MEDIA, REGLIN, AMORT — 3 EXPORT) cargado y ejecutado en CASE — main.py v2 con N EXPORT dinámico confirmado operativo
+- 2026-09-05 — CIRC_DC, TRIG_SOLV y CINEMAT actualizados: unidades en formato [unidades], corriente en mA en CIRC_DC, símbolo Ω confirmado compatible con CASE
+- 2026-09-05 — Prueba 5 superada: GRAFICA_F, FASOR_G y BAR_CHART — gráficos con LINE_P, PIXON_P, ARC_P y TEXTOUT_P confirmados operativos
+- 2026-09-05 — Prueba 4 superada: STAT_FIN (MEDIA, REGLIN, AMORT — 3 EXPORT) — main.py v2 con N EXPORT dinámico confirmado operativo
 - 2026-09-05 — main.py v2 validado contra todos los programas del vault — ninguno con errores
-- 2026-09-05-4 — Prueba 3 superada: CIRC_DC, TRIG_SOLV, CINEMAT — CHOOSE anidado + INPUT + MSGBOX + validación de errores confirmados operativos
-- 2026-09-05-4 — Numeración manual removida de CHOOSE en CIRC_DC, TRIG_SOLV y CINEMAT — regla documentada en guía PPL
-- 2026-09-05-4 — Carrier cerrado: todas las pruebas del plan completadas
+- 2026-09-05-4 — Prueba 3 superada: CIRC_DC, TRIG_SOLV, CINEMAT — CHOOSE anidado + INPUT + MSGBOX + validación de errores
+- 2026-09-05-4 — Numeración manual removida de CHOOSE en los tres programas — regla documentada en guía PPL
+- 2026-09-05-4 — Carrier delivered: todas las pruebas del plan completadas
 
 ---
 

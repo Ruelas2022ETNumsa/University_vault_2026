@@ -5979,7 +5979,15 @@
         "tars_conversion",
         "KMH_CONV.hpprgm",
         "VOL_CALC.hpprgm",
-        "FASOR_CALC.hpprgm"
+        "FASOR_CALC.hpprgm",
+        "CIRC_DC.hpprgm",
+        "TRIG_SOLV.hpprgm",
+        "CINEMAT.hpprgm",
+        "GRAFICA_F.hpprgm",
+        "FASOR_G.hpprgm",
+        "BAR_CHART.hpprgm",
+        "STAT_FIN.hpprgm",
+        "tars_python"
       ]
     },
     "_app/Tars/work/KMH_CONV.hpprgm": {
@@ -6146,6 +6154,40 @@
     "_app/Tars/hp_prime_g2_promgram_guide.md": {
       "isPinned": false,
       "isHidden": false
+    },
+    "_app/Tars/work/CIRC_DC.hpprgm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/Tars/work/TRIG_SOLV.hpprgm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/Tars/work/CINEMAT.hpprgm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/Tars/work/GRAFICA_F.hpprgm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/Tars/work/FASOR_G.hpprgm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/Tars/work/BAR_CHART.hpprgm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/Tars/work/STAT_FIN.hpprgm": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/Tars/work/tars_python": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [],
+      "sortOrder": "custom"
     }
   },
   "pinnedFiles": [
