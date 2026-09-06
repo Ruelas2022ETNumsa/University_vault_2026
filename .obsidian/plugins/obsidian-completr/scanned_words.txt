@@ -9449,6 +9449,9 @@ tolerancias
 tutoriales
 tension
 tasam
+ticks
+textout
+toque
 ToDo
 Templater
 Text
@@ -39248,6 +39251,7 @@ Parabola
 PARABOLA
 Prestamo
 Plazo
+PYTHON
 del
 date
 de
@@ -67900,6 +67904,7 @@ given
 generated
 generarlas
 ganadora
+generator
 body
 beacon
 bat
@@ -76211,6 +76216,8 @@ becomes
 buscarlo
 blobs
 backward
+benchmark
+benchmarks
 scope
 status
 selector
@@ -86549,6 +86556,7 @@ saldo
 superaron
 superadas
 seleccionarlo
+scipy
 vault
 vil
 ver
@@ -136703,6 +136711,7 @@ colineales
 correlacion
 capital
 cerraba
+coords
 updated
 un
 universo
@@ -223883,6 +223892,10 @@ pequeno
 prestamo
 prematuro
 prematuramente
+pixon
+planificados
+pixel
+progresivas
 min
 mica
 movimiento
@@ -234628,6 +234641,9 @@ maximo
 miliamperios
 magLabel
 mensual
+msgbox
+matplotlib
+modernas
 YAML
 Ya
 You
@@ -252810,6 +252826,7 @@ BEGIN
 BORRAR
 Banda
 Binario
+BASICO
 en
 exacta
 escaneados
@@ -263339,6 +263356,8 @@ esperaba
 exitosos
 escX
 estandar
+expresiva
+expressions
 Motor
 Media
 Mantiene
@@ -274023,6 +274042,7 @@ MULTIPLICACION
 Museum
 MRUV
 MEDIA
+Mouse
 Lectura
 LaTeX
 Linter
@@ -283239,6 +283259,8 @@ Logaritmo
 LADOS
 LIBRE
 Limitar
+Lento
+LOOPS
 links
 las
 listar
@@ -292056,6 +292078,7 @@ llegando
 locus
 libhpcalcs
 loggear
+lentos
 incluyendo
 im
 instalar
@@ -303075,6 +303098,9 @@ imag
 inconsistentes
 ingresa
 interes
+intensivo
+indexan
+iterativa
 Dependencia
 Dropbox
 Dataview
@@ -313310,6 +313336,7 @@ Division
 DIVISION
 Distinto
 Desviacion
+Dropships
 Remotely
 Raz
 Revisa
@@ -341034,6 +341061,8 @@ fakuivan
 freq
 frec
 frances
+fillrect
+firmwares
 haya
 hace
 hacer
@@ -429878,6 +429907,7 @@ words
 waits
 waiting
 weeklyTarget
+walrus
 xima
 xeles
 xy

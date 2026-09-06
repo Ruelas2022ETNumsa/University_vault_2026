@@ -3574,7 +3574,6 @@
         "section.md",
         "2026-08-20",
         "2026-08-24",
-        "2026-08-06",
         "2026-08-09",
         "2026-08-10",
         "2026-08-13",
@@ -4807,18 +4806,6 @@
       "isHidden": false
     },
     "shared/P1-E1-607_merged.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-06": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-08-06/data.json": {
       "isPinned": false,
       "isHidden": false
     },
@@ -6122,14 +6109,14 @@
     "_app/Tars/other": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "tars-sync-shellcommands.md",
         "HP_Prime_guide.md",
         "blueprint_tars_wifi_esp32.md",
         "_PH_PRIME_claude-tars-integration.md",
         "HP_Prime_guide 2.md"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "_app/Tars/other/HP_Prime_guide 2.md": {
       "isPinned": false,
@@ -6186,8 +6173,44 @@
     "_app/Tars/work/tars_python": {
       "isPinned": false,
       "isHidden": false,
-      "customOrder": [],
-      "sortOrder": "custom"
+      "sortOrder": "custom",
+      "customOrder": [
+        "dropship-py1.md",
+        "dropship-py2.md",
+        "dropship-py3.md",
+        "dropship-py4.md",
+        "dropship-py5.md",
+        "logbook.md",
+        "tsk_carrier.md"
+      ]
+    },
+    "_app/Tars/work/tars_python/dropship-py1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/Tars/work/tars_python/dropship-py2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/Tars/work/tars_python/dropship-py3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/Tars/work/tars_python/dropship-py4.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/Tars/work/tars_python/dropship-py5.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/Tars/work/tars_python/logbook.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/Tars/work/tars_python/tsk_carrier.md": {
+      "isPinned": false,
+      "isHidden": false
     }
   },
   "pinnedFiles": [
