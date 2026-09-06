@@ -2,17 +2,17 @@
 galaxy_body: carrier
 project: "tars-hpprgm-conversion"
 date: 2026-09-05
-status: docking
+status: delivered
 fleet: tars
 blocked_by:
 ---
 
 ## Handoff
 
-**Última sesión:** 2026-09-05
-**Retomar desde:** Pruebas con programas más complejos (múltiples funciones exportadas)
-**Completado esta sesión:** Prueba 4 superada — STAT_FIN (MEDIA, REGLIN, AMORT) ejecutado en CASE. main.py v2 validado contra todos los programas del vault sin errores.
-**Próximo paso:** Prueba 3 — INPUT + MSGBOX + lógica de menú compleja
+**Última sesión:** 2026-09-05-4
+**Retomar desde:** —
+**Completado esta sesión:** Prueba 3 superada — CIRC_DC, TRIG_SOLV, CINEMAT (CHOOSE anidado + INPUT + MSGBOX + validación de errores) confirmados operativos. Numeración manual removida de todos los CHOOSE en los tres programas. Regla documentada en la guía. Carrier delivered.
+**Próximo paso:** ninguno — carrier completo
 **Preguntas de cierre:** ninguna
 
 ---
@@ -34,7 +34,9 @@ blocked_by:
 - [x] Prueba 5 del plan — gráficos: GRAFICA_F, FASOR_G, BAR_CHART — **SUPERADA 2026-09-05**
 - [x] Prueba 4 del plan — múltiples EXPORT: STAT_FIN (MEDIA, REGLIN, AMORT) — **SUPERADA 2026-09-05**
 - [x] main.py v2 validado contra todos los programas del vault — **SIN ERRORES 2026-09-05**
-- [ ] Prueba 3 del plan — INPUT + MSGBOX + lógica de menú (ej. calculadora de préstamo)
+- [x] Prueba 3 del plan — CHOOSE anidado + INPUT + MSGBOX + validación: CIRC_DC, TRIG_SOLV, CINEMAT — **SUPERADA 2026-09-05-4**
+- [x] Remover numeración manual de CHOOSE en CIRC_DC, TRIG_SOLV, CINEMAT — **HECHO 2026-09-05-4**
+- [x] Documentar regla CHOOSE sin numeración en guía PPL — **HECHO 2026-09-05-4**
 
 ---
 
@@ -45,5 +47,5 @@ blocked_by:
 | `logbook.md` | logbook | — | README histórico del proyecto |
 | `tsk_carrier.md` | tsk | — | este archivo — tareas activas |
 | `conversion-opc_A.md` | dropship | activo | Opción A — binario moderno desde Python |
-| `conversion-opc_B.md` | dropship | activo | Opción B — formato G1 (Xprime approach) |
-| `conversion-opc_C.md` | dropship | activo | Opción C — header real como plantilla |
+| `conversion-opc_B.md` | dropship | descartado | Opción B — formato G1 (Xprime approach) |
+| `conversion-opc_C.md` | dropship | descartado | Opción C — header real como plantilla |

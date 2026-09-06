@@ -1,23 +1,23 @@
 ---
 galaxy_body: logbook
 scope: tars-hpprgm-conversion
-status: on-track
-date_updated: 2026-09-05
+status: closed
+date_updated: 2026-09-05-4
 session: 2026-09-05-4
 ---
 
 ## Visión general
 
-Carrier para resolver la conversión automática de archivos `.hpprgm` desde Obsidian hacia CASE (HP Prime virtual) sin drag and drop manual. El problema central es que el formato `.hpprgm` es binario (header + UTF-16 LE) y un fuente guardado como texto plano UTF-8 no es reconocido por CASE. Se evalúan tres opciones de conversión, una por dropship, hasta encontrar la que funcione de forma confiable.
+Carrier para resolver la conversión automática de archivos `.hpprgm` desde Obsidian hacia CASE (HP Prime virtual) sin drag and drop manual. El problema central es que el formato `.hpprgm` es binario (header + UTF-16 LE) y un fuente guardado como texto plano UTF-8 no es reconocido por CASE. Se evaluaron tres opciones de conversión, una por dropship. La Opción A resultó operativa desde la primera prueba y es el camino definitivo.
 
 ---
 
 ## Estado actual
 
-**Salud:** on-track
-**Resumen:** Prueba 4 superada. STAT_FIN (3 EXPORT: MEDIA, REGLIN, AMORT) cargado y ejecutado en CASE. main.py v2 validado contra todos los programas del vault — ninguno con errores.
-**Último avance:** main.py v2 con detección dinámica de N funciones EXPORT confirmado operativo. Todos los programas existentes reprobados sin errores.
-**Próximo hito:** Prueba 3 — INPUT + MSGBOX + lógica de menú compleja.
+**Salud:** closed
+**Resumen:** Todas las pruebas del plan superadas. Carrier cerrado.
+**Último avance:** Prueba 3 superada — CIRC_DC, TRIG_SOLV, CINEMAT (CHOOSE anidado + INPUT + MSGBOX + validación). Numeración manual removida de CHOOSE en los tres programas. Regla documentada en guía PPL.
+**Próximo hito:** ninguno
 
 ---
 
@@ -44,6 +44,9 @@ Carrier para resolver la conversión automática de archivos `.hpprgm` desde Obs
 - 2026-09-05 — Prueba 5 superada: GRAFICA_F, FASOR_G y BAR_CHART ejecutados correctamente en CASE — gráficos con LINE_P, PIXON_P, ARC_P y TEXTOUT_P confirmados operativos
 - 2026-09-05 — Prueba 4 superada: STAT_FIN (MEDIA, REGLIN, AMORT — 3 EXPORT) cargado y ejecutado en CASE — main.py v2 con N EXPORT dinámico confirmado operativo
 - 2026-09-05 — main.py v2 validado contra todos los programas del vault — ninguno con errores
+- 2026-09-05-4 — Prueba 3 superada: CIRC_DC, TRIG_SOLV, CINEMAT — CHOOSE anidado + INPUT + MSGBOX + validación de errores confirmados operativos
+- 2026-09-05-4 — Numeración manual removida de CHOOSE en CIRC_DC, TRIG_SOLV y CINEMAT — regla documentada en guía PPL
+- 2026-09-05-4 — Carrier cerrado: todas las pruebas del plan completadas
 
 ---
 
@@ -68,6 +71,7 @@ Carrier para resolver la conversión automática de archivos `.hpprgm` desde Obs
 | 2026-09-05 | `WAIT(0)` en lugar de `FREEZE` | `FREEZE` cerraba la pantalla gráfica prematuramente — `WAIT(0)` es estable |
 | 2026-09-05 | Frecuencia útil en GRAFICA_F: 1–10 | Frecuencias altas producen aliasing (pantalla 319px) — documentado como limitación conocida |
 | 2026-09-05 | main.py v2 como estándar | Detección dinámica de N EXPORT — backward compatible, validado contra todos los programas |
+| 2026-09-05-4 | Sin numeración en strings de CHOOSE | La calculadora numera automáticamente — poner "1. Opcion" genera duplicación visual |
 
 > [!note]- Descartadas
 > - xcopy directo a `Calculadoras\CASE` — CASE reemplaza el archivo con binario compilado al abrir

@@ -4,8 +4,8 @@ BEGIN
   LOCAL cx, cy, escX, escY;
 
   CHOOSE(op, "Grafica funcion",
-    "1. Seno",
-    "2. Parabola"
+    "Seno",
+    "Parabola"
   );
 
   INPUT(amp, "Amplitud", "amp:", "Amplitud maxima:", 1);

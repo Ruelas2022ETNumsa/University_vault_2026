@@ -30266,6 +30266,7 @@ SQRT
 SENOS
 SENO
 STAT
+SUPERADO
 Plugins
 Pendientes
 Plugin
@@ -76209,6 +76210,7 @@ bash
 becomes
 buscarlo
 blobs
+backward
 scope
 status
 selector
@@ -86544,6 +86546,7 @@ splitext
 superada
 stamo
 saldo
+superaron
 vault
 vil
 ver
@@ -106689,6 +106692,7 @@ altmax
 aritmetica
 amortizacion
 anual
+altas
 related
 recomendados
 ribbon
@@ -116692,6 +116696,8 @@ resaved
 reconoci
 recompilando
 regresion
+reprobados
+removida
 notes
 notas
 nuevas
@@ -136694,6 +136700,7 @@ caida
 colineales
 correlacion
 capital
+cerraba
 updated
 un
 universo
@@ -223872,6 +223879,8 @@ programacion
 pixeles
 pequeno
 prestamo
+prematuro
+prematuramente
 min
 mica
 movimiento
@@ -323729,6 +323738,7 @@ RESISTENCIAS
 RECTANGULO
 REGLIN
 Regresion
+Remover
 Hider
 Hace
 Herramientas

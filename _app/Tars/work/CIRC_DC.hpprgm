@@ -4,20 +4,20 @@ BEGIN
   LOCAL vin, rout;
 
   CHOOSE(op, "Circuitos DC",
-    "1. Ley de Ohm",
-    "2. Resistencias serie",
-    "3. Resistencias paralelo",
-    "4. Divisor de tension",
-    "5. Divisor de corriente"
+    "Ley de Ohm",
+    "Resistencias serie",
+    "Resistencias paralelo",
+    "Divisor de tension",
+    "Divisor de corriente"
   );
 
   // --- LEY DE OHM ---
   IF op == 1 THEN
     LOCAL op2;
     CHOOSE(op2, "Ley de Ohm — calcular",
-      "1. Voltaje (V=I*R)",
-      "2. Corriente (I=V/R)",
-      "3. Resistencia (R=V/I)"
+      "Voltaje (V=I*R)",
+      "Corriente (I=V/R)",
+      "Resistencia (R=V/I)"
     );
     IF op2 == 1 THEN
       INPUT(i, "Voltaje", "I [mA]:", "Corriente en miliamperios:", 1);

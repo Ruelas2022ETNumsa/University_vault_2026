@@ -3,21 +3,21 @@ BEGIN
   LOCAL op, v0, vf, a, t, d, res;
 
   CHOOSE(op, "Cinematica",
-    "1. MRU — dist. y vel.",
-    "2. MRUV — vel. final",
-    "3. MRUV — distancia",
-    "4. MRUV — tiempo",
-    "5. Caida libre",
-    "6. Tiro vertical"
+    "MRU — dist. y vel.",
+    "MRUV — vel. final",
+    "MRUV — distancia",
+    "MRUV — tiempo",
+    "Caida libre",
+    "Tiro vertical"
   );
 
   // --- MRU ---
   IF op == 1 THEN
     LOCAL op2;
     CHOOSE(op2, "MRU — calcular",
-      "1. Distancia (d=v*t)",
-      "2. Velocidad (v=d/t)",
-      "3. Tiempo (t=d/v)"
+      "Distancia (d=v*t)",
+      "Velocidad (v=d/t)",
+      "Tiempo (t=d/v)"
     );
     IF op2 == 1 THEN
       INPUT(v0, "MRU", "v [m/s]:", "Velocidad:", 1);
@@ -80,9 +80,9 @@ BEGIN
     LOCAL op2, g;
     g := 9.81;
     CHOOSE(op2, "Caida libre",
-      "1. Distancia caida",
-      "2. Velocidad al caer",
-      "3. Tiempo de caida"
+      "Distancia caida",
+      "Velocidad al caer",
+      "Tiempo de caida"
     );
     IF op2 == 1 THEN
       INPUT(t, "Caida libre", "t [s]:", "Tiempo:", 1);
@@ -109,9 +109,9 @@ BEGIN
     LOCAL op2, g, h;
     g := 9.81;
     CHOOSE(op2, "Tiro vertical",
-      "1. Altura maxima",
-      "2. Tiempo al maximo",
-      "3. Tiempo total vuelo"
+      "Altura maxima",
+      "Tiempo al maximo",
+      "Tiempo total vuelo"
     );
     INPUT(v0, "Tiro vertical", "v0 [m/s]:", "Vel. inicial hacia arriba:", 10);
     IF op2 == 1 THEN

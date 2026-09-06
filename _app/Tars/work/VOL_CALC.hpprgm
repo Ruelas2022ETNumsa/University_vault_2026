@@ -3,12 +3,12 @@ BEGIN
   LOCAL op, r, h, a, b, c, v;
 
   CHOOSE(op, "Volumenes",
-    "1. Esfera",
-    "2. Cilindro",
-    "3. Cono",
-    "4. Cubo",
-    "5. Paralelepipedo",
-    "6. Piramide rect."
+    "Esfera",
+    "Cilindro",
+    "Cono",
+    "Cubo",
+    "Paralelepipedo",
+    "Piramide rect."
   );
 
   IF op == 1 THEN

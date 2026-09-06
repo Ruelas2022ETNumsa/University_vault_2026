@@ -3,18 +3,18 @@ BEGIN
   LOCAL op, a, b, c, A, B, C, res;
 
   CHOOSE(op, "Trigonometria",
-    "1. Triangulo rect. — lados",
-    "2. Triangulo rect. — angulo",
-    "3. Ley de senos",
-    "4. Ley de cosenos"
+    "Triangulo rect. — lados",
+    "Triangulo rect. — angulo",
+    "Ley de senos",
+    "Ley de cosenos"
   );
 
   // --- TRIANGULO RECTANGULO — LADOS ---
   IF op == 1 THEN
     LOCAL op2;
     CHOOSE(op2, "Calcular lado",
-      "1. Hipotenusa (dado catetos)",
-      "2. Cateto (dado hip. y cateto)"
+      "Hipotenusa (dado catetos)",
+      "Cateto (dado hip. y cateto)"
     );
     IF op2 == 1 THEN
       INPUT(a, "Hipotenusa", "a [u]:", "Cateto a:", 1);
@@ -40,9 +40,9 @@ BEGIN
   IF op == 2 THEN
     LOCAL op2;
     CHOOSE(op2, "Dado el angulo",
-      "1. Cateto opuesto (SIN)",
-      "2. Cateto adyacente (COS)",
-      "3. Angulo desde catetos (ATAN)"
+      "Cateto opuesto (SIN)",
+      "Cateto adyacente (COS)",
+      "Angulo desde catetos (ATAN)"
     );
     IF op2 == 1 THEN
       INPUT(A, "Cateto opuesto", "ang [deg]:", "Angulo en grados:", 45);
@@ -76,8 +76,8 @@ BEGIN
   IF op == 3 THEN
     LOCAL op2;
     CHOOSE(op2, "Ley de senos",
-      "1. Lado (dado lado y 2 angulos)",
-      "2. Angulo (dado 2 lados y 1 ang)"
+      "Lado (dado lado y 2 angulos)",
+      "Angulo (dado 2 lados y 1 ang)"
     );
     IF op2 == 1 THEN
       INPUT(a, "Ley senos", "a [u]:", "Lado conocido:", 1);
@@ -110,8 +110,8 @@ BEGIN
   IF op == 4 THEN
     LOCAL op2;
     CHOOSE(op2, "Ley de cosenos",
-      "1. Lado (dado 2 lados y angulo)",
-      "2. Angulo (dado 3 lados)"
+      "Lado (dado 2 lados y angulo)",
+      "Angulo (dado 3 lados)"
     );
     IF op2 == 1 THEN
       INPUT(a, "Ley cosenos", "a [u]:", "Lado a:", 1);

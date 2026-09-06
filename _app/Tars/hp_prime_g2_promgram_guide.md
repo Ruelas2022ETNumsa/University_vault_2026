@@ -4,7 +4,7 @@ galaxy_body: beacon
 scope: vault
 project: tars-hpprgm-conversion
 date_created: 2026-09-05
-date_updated: 2026-09-05
+date_updated: 2026-09-05-4
 status: activo
 tags:
   - beacon
@@ -121,11 +121,32 @@ END;
 
 ```
 CHOOSE(var, "Titulo",
-  "1. Opcion A",
-  "2. Opcion B",
-  "3. Opcion C"
+  "Opcion A",
+  "Opcion B",
+  "Opcion C"
 );
 // var toma valor 1, 2 o 3 según la selección
+```
+
+> ⚠️ **No incluir numeración manual en las opciones** (no `"1. Opcion A"`). La calculadora muestra automáticamente el número de cada ítem y permite seleccionarlo con el teclado numérico. Agregar el número en el string genera duplicación visual.
+
+> ℹ️ `CHOOSE` acepta hasta **14 opciones** — con 15 o más devuelve syntax error.
+
+CHOOSE anidado dentro de una rama funciona correctamente:
+
+```
+CHOOSE(op, "Categoria",
+  "Opcion A",
+  "Opcion B"
+);
+IF op == 1 THEN
+  LOCAL op2;
+  CHOOSE(op2, "Sub-opciones de A",
+    "Sub A1",
+    "Sub A2"
+  );
+  // ...
+END;
 ```
 
 ### INPUT — pedir valor al usuario
@@ -307,6 +328,7 @@ Antes de subir un programa generado por IA, verificar:
 - [ ] Nombres de variables cortos (eficiencia en binario UTF-16 LE)
 - [ ] Subrutinas declaradas antes del programa principal que las llama
 - [ ] Si hay múltiples `EXPORT`, el script Python de conversión necesita actualización (actualmente asume 1 función exportada)
+- [ ] Opciones de `CHOOSE` sin numeración manual — la calculadora numera automáticamente
 
 ---
 
@@ -316,8 +338,9 @@ Antes de subir un programa generado por IA, verificar:
 |-----------|--------|-------|
 | Funciones simples (1 `EXPORT`, sin vars globales) | ✅ Probado | KMH_CONV — exitoso 2026-09-04 |
 | CHOOSE + INPUT + MSGBOX (sin gráficos) | ✅ Probado | VOL_CALC, FASOR_CALC — exitosos 2026-09-05 |
-| Múltiples funciones `EXPORT` | ⬜ Pendiente | Requiere actualizar script Python |
-| Gráficos (RECT, PIXON, TEXTOUT_P) | ⬜ Pendiente | |
+| CHOOSE anidado + INPUT + MSGBOX + validación | ✅ Probado | CIRC_DC, TRIG_SOLV, CINEMAT — exitosos 2026-09-05 |
+| Múltiples funciones `EXPORT` | ✅ Probado | STAT_FIN (MEDIA, REGLIN, AMORT) — exitoso 2026-09-05 |
+| Gráficos (RECT, PIXON, TEXTOUT_P) | ✅ Probado | GRAFICA_F, FASOR_G, BAR_CHART — exitosos 2026-09-05 |
 | Python embebido (`#PYTHON ... #END`) | ⬜ Pendiente | Solo G2 |
 
 ---

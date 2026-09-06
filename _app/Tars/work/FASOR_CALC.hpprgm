@@ -8,11 +8,11 @@ BEGIN
   LOCAL freq, r, l, c, xl, xc, z_mag, z_ang;
 
   CHOOSE(op, "Fasores",
-    "1. Suma A+B",
-    "2. Resta A-B",
-    "3. Multiplicacion",
-    "4. Division",
-    "5. Impedancia RLC serie"
+    "Suma A+B",
+    "Resta A-B",
+    "Multiplicacion",
+    "Division",
+    "Impedancia RLC serie"
   );
 
   // --- SUMA ---
