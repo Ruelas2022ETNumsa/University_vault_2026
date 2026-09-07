@@ -1,7 +1,9 @@
 {
   "enabledCssSnippets": [
     "supercharged-links-gen",
-    "supercharged-links"
+    "supercharged-links",
+    "print",
+    "center"
   ],
   "baseFontSizeAction": true,
   "baseFontSize": 12,

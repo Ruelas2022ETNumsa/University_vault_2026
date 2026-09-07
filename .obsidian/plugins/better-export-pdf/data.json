@@ -14,8 +14,8 @@
   "concurrency": "5",
   "version": "2",
   "prevConfig": {
-    "pageSize": "Letter",
-    "marginType": "0",
+    "pageSize": "A4",
+    "marginType": "2",
     "showTitle": false,
     "open": false,
     "scale": 89,

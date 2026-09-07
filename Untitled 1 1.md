@@ -26,8 +26,7 @@ Cuando el DMA y la CPU solicitan el bus simultáneamente, el árbitro otorga pri
 6. El DMA transfiere un dato directamente entre periférico y RAM.
 7. El DMA desactiva `HRQ`, actualiza dirección y contador, devuelve el bus.
 
-
----
+<br>
 
 ```tikz
 \usetikzlibrary{shapes.geometric, arrows.meta, positioning, fit, backgrounds}
@@ -36,119 +35,84 @@ Cuando el DMA y la CPU solicitan el bus simultáneamente, el árbitro otorga pri
     font=\sffamily\small,
     box/.style={rectangle, draw, minimum width=2.2cm, minimum height=1.1cm, align=center, rounded corners=3pt},
     subbox/.style={rectangle, draw, minimum width=2.8cm, minimum height=0.9cm, align=center, rounded corners=2pt, font=\sffamily\scriptsize},
-    bus/.style={ultra thick},
     arr/.style={draw, -{Stealth[scale=1.0]}, thick}
 ]
 
-% === CAJAS PRINCIPALES (fila superior) ===
-\node[box, fill=blue!8,   draw=blue!60]   (cpu)  at (0,0)    {CPU};
-\node[box, fill=green!8,  draw=green!60]  (ram)  at (4,0)    {RAM};
-\node[box, fill=orange!8, draw=orange!60] (per)  at (12,0)   {Periférico};
+\node[box, fill=blue!15,   draw=blue!80]  (cpu) at (0,0)   {CPU};
+\node[box, fill=green!25,  draw=green!80] (ram) at (4.5,0) {RAM};
+\node[box, fill=orange!20, draw=orange!80](per) at (13,0)  {Periférico};
 
-% === BUSES VERTICALES desde cada caja ===
-% Bus CPU (azul)
-\draw[bus, blue!60]   (cpu.south) -- ++(0,-1.8) coordinate (cpu_bus_end);
-% Bus RAM (verde)
-\draw[bus, green!60]  (ram.south) -- ++(0,-1.8) coordinate (ram_bus_end);
-% Bus Periférico (naranja)
-\draw[bus, orange!60] (per.south) -- ++(0,-1.8) coordinate (per_bus_end);
+\draw[ultra thick, blue!70]   (cpu.south) -- ++(0,-8.2) coordinate (cpu_bot);
+\draw[ultra thick, green!70]  (ram.south) -- ++(0,-8.2) coordinate (ram_bot);
+\draw[ultra thick, orange!70] (per.south) -- ++(0,-8.2) coordinate (per_bot);
 
-% === CAJA SEGMENTADA: Controlador DMA ===
-% Subcajas internas
-\node[subbox, fill=gray!6, draw=gray!50] (cnt)  at (8, -1.0) {Contador\\de datos};
-\node[subbox, fill=gray!6, draw=gray!50] (reg)  at (8, -2.4) {Registro\\de datos};
-\node[subbox, fill=gray!6, draw=gray!50] (dir)  at (8, -3.8) {Registro de\\dirección};
-\node[subbox, fill=gray!6, draw=gray!50] (log)  at (8, -5.4) {Lógica\\de control};
+\node[subbox, fill=gray!10, draw=gray!60] (cnt) at (8.5,-1.2) {Contador\\de datos};
+\node[subbox, fill=gray!10, draw=gray!60] (reg) at (8.5,-2.8) {Registro\\de datos};
+\node[subbox, fill=gray!10, draw=gray!60] (dir) at (8.5,-4.4) {Registro de\\dirección};
+\node[subbox, fill=gray!10, draw=gray!60, minimum height=1.8cm] (log) at (8.5,-6.8)
+    {Lógica de control\\{\scriptsize(arbitraje de bus)}};
 
-% Caja exterior del controlador DMA (envuelve las subcajas)
 \begin{pgfonlayer}{background}
     \node[
         draw=gray!70, thick, dashed,
-        fill=gray!3,
+        fill=gray!5,
         rounded corners=6pt,
         fit=(cnt)(reg)(dir)(log),
         inner sep=10pt,
-        label={[font=\sffamily\scriptsize\bfseries, gray!70]above:Controlador DMA}
+        label={[font=\sffamily\scriptsize\bfseries, gray!80]above:Controlador DMA}
     ] (dma) {};
 \end{pgfonlayer}
 
-% === BUS SISTEMA HORIZONTAL (línea de bus compartida) ===
-% Bus de datos horizontal entre CPU bus, RAM bus y DMA
-\draw[bus, gray!50] (cpu_bus_end) -- ++(0,-0.3) coordinate (hbus_left);
-\draw[bus, gray!50] (ram_bus_end) -- ++(0,-0.3) coordinate (hbus_ram);
+\draw[arr, green!75]
+    (cnt.west) -- (cnt.west -| ram.south)
+    node[midway, above, font=\sffamily\scriptsize, green!80] {líneas de datos};
 
-% Línea horizontal del bus del sistema
-\draw[bus, gray!40] (hbus_left) -- (hbus_ram);
+\draw[arr, orange!80]
+    (per.south |- reg.east) -- (reg.east)
+    node[midway, above, font=\sffamily\scriptsize, orange!90] {P6a: dato periférico};
 
-% === CONEXIONES DMA ↔ subcajas ===
+\draw[arr, green!80]
+    (reg.west) -- (reg.west -| ram.south)
+    node[midway, below, font=\sffamily\scriptsize, green!90] {P6b: transf. directa};
 
-% Líneas de datos → Contador de datos y Registro de datos
-\draw[arr, blue!50] (hbus_ram) -- (hbus_ram |- cnt.west) -- (cnt.west)
-    node[midway, above, font=\sffamily\scriptsize, blue!70] {};
-\draw[arr, blue!50] (hbus_ram |- reg.west) -- (reg.west);
-\node[font=\sffamily\scriptsize, blue!60, left=0.15cm of cnt, yshift=0cm] {Líneas de datos};
+\draw[arr, green!80]
+    (dir.west) -- (dir.west -| ram.south)
+    node[midway, above, font=\sffamily\scriptsize, green!90] {P6c: dir. memoria};
 
-% Líneas de direcciones → Registro de dirección
-\draw[arr, green!60] (hbus_ram |- dir.west) -- (dir.west);
-\node[font=\sffamily\scriptsize, green!60, left=0.15cm of dir] {Líneas de dirección};
+\coordinate (p1_y) at (0, -6.2);
+\coordinate (p5_y) at (0, -7.4);
 
-% Periférico ↔ Lógica de control (señales de control)
-% Bus periférico baja hasta nivel de lógica de control
-\draw[bus, orange!60] (per.south) -- (per.south |- log.east);
+\draw[arr, orange!90]
+    (per.south |- p1_y) -- (log.east |- p1_y)
+    node[midway, above, font=\sffamily\scriptsize, orange!90] {P1: DREQ};
 
-% Señales individuales con flechas bidireccionales/unidireccionales
-\draw[arr, orange!70, {Stealth[scale=0.9]}-{Stealth[scale=0.9]}]
-    (per.south |- log.north) ++(-0.3,0.1) -- ++(-2.35,0)
-    node[midway, above, font=\sffamily\scriptsize] {DMA REQ / ACK};
+\draw[arr, orange!75]
+    (log.east |- p5_y) -- (per.south |- p5_y)
+    node[midway, below, font=\sffamily\scriptsize, orange!80] {P5: DACK};
 
-\draw[arr, orange!60]
-    (log.east) -- ++(1.2,0)
-    node[right, font=\sffamily\scriptsize] {INTR};
+\coordinate (p2_y) at (0, -6.4);
+\coordinate (p4_y) at (0, -7.2);
 
-\draw[arr, orange!50]
-    (log.east) ++(0,-0.25) -- ++(1.2,0) -- ++(0,-0.5)
-    node[below, font=\sffamily\scriptsize] {Read / Write};
+\draw[arr, blue!80]
+    (log.west |- p2_y) -- (cpu.south |- p2_y)
+    node[midway, above, font=\sffamily\scriptsize, blue!80] {P2: HRQ};
 
-% CPU ↔ Lógica de control (HOLD/HLDA)
-\draw[arr, blue!50, {Stealth[scale=0.9]}-{Stealth[scale=0.9]}]
-    (cpu_bus_end) ++(0,-0.5) -| (log.north)
-    node[near start, left, font=\sffamily\scriptsize, blue!60] {HRQ / HLDA};
+\draw[arr, blue!65]
+    (cpu.south |- p4_y) -- (log.west |- p4_y)
+    node[midway, below, font=\sffamily\scriptsize, blue!70] {P4: HLDA};
 
 \end{tikzpicture}
 \end{document}
 ```
 
+<br>
+
+*Señales de arbitraje entre CPU, controlador DMA, memoria y periférico.*
+<br>
 
 
 ---
-
-
-```tikz
-\usetikzlibrary{shapes.geometric, arrows.meta, positioning}
-\begin{document}
-\begin{tikzpicture}[
-    node distance=2.5cm,
-    block/.style={rectangle, draw, fill=blue!5, text width=3.2cm, align=center, minimum height=1.4cm, rounded corners, font=\sffamily\small},
-    line/.style={draw, -{Stealth[scale=1.2]}, thick},
-    bus/.style={draw, {Stealth[scale=1.2]}-{Stealth[scale=1.2]}, ultra thick, gray}
-]
-    \node [block] (cpu) {CPU\\(Procesador)};
-    \node [block, right=5cm of cpu] (dma) {Controlador\\DMA};
-    \node [block, below=3.5cm of cpu] (ram) {Memoria Principal\\(RAM)};
-    \node [block, below=3.5cm of dma] (io) {Dispositivo E/S\\(Periférico)};
-
-    \draw [line, transform canvas={yshift=0.2cm}] (dma) -- node[above, font=\sffamily\scriptsize] {P2: HRQ (HOLD Request)} (cpu);
-    \draw [line, transform canvas={yshift=-0.2cm}] (cpu) -- node[below, font=\sffamily\scriptsize] {P4: HLDA (Hold Acknowledge)} (dma);
-    \draw [line, transform canvas={xshift=-0.2cm}] (io) -- node[left, font=\sffamily\scriptsize] {P1: DREQ (Request)} (dma);
-    \draw [line, transform canvas={xshift=0.2cm}] (dma) -- node[right, font=\sffamily\scriptsize] {P5: DACK (Acknowledge)} (io);
-    \draw [bus] (cpu) -- (ram) node[midway, left, black, font=\sffamily\scriptsize] {P6: Acceso DMA};
-    \draw [bus] (dma) -- (ram) node[midway, below left, black, font=\sffamily\scriptsize] {P6: Transferencia Directa};
-    \draw [bus] (io) -- (ram);
-\end{tikzpicture}
-\end{document}
-```
-
-*Señales de arbitraje entre CPU, controlador DMA, memoria y periférico.*
+<br>
 
 ---
 
@@ -246,20 +210,40 @@ Cuando el DMA y la CPU solicitan el bus simultáneamente, el árbitro otorga pri
 
 ---
 
-**Contexto SIC (Hill & Peterson) — T3.10**
+**Contexto SIC (Hill & Peterson)**
 
 Hill & Peterson presentan tres métodos de E/S en progresión de eficiencia:
 
-| Método | Intervención CPU | Paralelismo |
-|---|---|---|
-| Por programa (T3.4) | Constante — sin paralelismo | Ninguno |
-| Secuencia Buffer (T3.7–T3.9) | Por bloque — overhead de ISR | Parcial |
-| DMA (T3.10) | Solo inicio/fin | Total |
+| Método           | Intervención CPU             | Paralelismo |
+| ---------------- | ---------------------------- | ----------- |
+| Por programa     | Constante — sin paralelismo  | Ninguno     |
+| Secuencia Buffer | Por bloque — overhead de ISR | Parcial     |
+| DMA              | Solo inicio/fin              | Total       |
 
 El DMA accede a memoria de forma autónoma mediante puertos propios (`MA0`, `MD0`, `ST0`, `DS0`), arbitrados por un **módulo de control de memoria** que resuelve conflictos cuando CPU y DMA acceden a la RAM simultáneamente — sin intervención de la CPU en cada dato transferido.
 
-![[SumatraPDF_UyeRe7a8vd.png]]
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+![[Untitled 1 1-06-09-2026_22-28-14.png|500]]
+
 *Fig. 7.12 · Puntos de ruptura para el DMA y las interrupciones en un ciclo de instrucción.*
-[[Stallings - Organización y Arquitectura de Computadores - 7ed.pdf#page=]]
 
 El DMA puede tomar el bus entre cualquier par de ciclos de bus (puntos de ruptura múltiples), mientras que una interrupción solo se atiende al finalizar la instrucción completa.
+
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br>
+
+
+
+---
