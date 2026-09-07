@@ -13706,8 +13706,7 @@
         "_start_movil.md",
         "ETN1015-matlab 1.md",
         "tsk_library_ETN825.md",
-        "_library_ETN825.md",
-        "2026-09-07 18.05.37.0"
+        "_library_ETN825.md"
       ]
     },
     "Rubbish/2026-09-07/2026-09-07 18.00.15.0": {
@@ -14471,18 +14470,6 @@
       "isHidden": false
     },
     "_PDF/ETN-825/Tanenbaum - Distributed Systems.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.05.37.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.05.37.0/data.json": {
       "isPinned": false,
       "isHidden": false
     }
