@@ -39,14 +39,7 @@
             },
             {
               "id": "padding",
-              "state": {
-                "value": [
-                  "50",
-                  "3",
-                  50,
-                  "3"
-                ]
-              }
+              "state": {}
             },
             {
               "id": "flip-x",
@@ -79,7 +72,7 @@
             {
               "id": "open-settings",
               "state": {
-                "value": 1788821144540
+                "value": 1788821092494
               }
             },
             {
@@ -204,14 +197,7 @@
             },
             {
               "id": "padding",
-              "state": {
-                "value": [
-                  "50",
-                  "3",
-                  50,
-                  "3"
-                ]
-              }
+              "state": {}
             },
             {
               "id": "flip-x",
@@ -244,7 +230,7 @@
             {
               "id": "open-settings",
               "state": {
-                "value": 1788821144540
+                "value": 1788821092494
               }
             },
             {
@@ -360,15 +346,7 @@
         "value": "35"
       },
       "open-settings": {
-        "value": 1788821144540
-      },
-      "padding": {
-        "value": [
-          "50",
-          "3",
-          50,
-          "3"
-        ]
+        "value": 1788821092494
       },
       "speed": {
         "value": "12"
@@ -392,13 +370,5 @@
   },
   "play": {
     "value": false
-  },
-  "padding": {
-    "value": [
-      "50",
-      "3",
-      50,
-      "3"
-    ]
   }
 }

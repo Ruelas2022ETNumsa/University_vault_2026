@@ -7,7 +7,9 @@
           "items": [
             {
               "id": "play",
-              "state": {}
+              "state": {
+                "value": true
+              }
             },
             {
               "id": "pin-note",
@@ -39,14 +41,7 @@
             },
             {
               "id": "padding",
-              "state": {
-                "value": [
-                  "50",
-                  "3",
-                  50,
-                  "3"
-                ]
-              }
+              "state": {}
             },
             {
               "id": "flip-x",
@@ -79,7 +74,7 @@
             {
               "id": "open-settings",
               "state": {
-                "value": 1788821144540
+                "value": 1788820339627
               }
             },
             {
@@ -172,7 +167,9 @@
           "items": [
             {
               "id": "play",
-              "state": {}
+              "state": {
+                "value": true
+              }
             },
             {
               "id": "pin-note",
@@ -204,14 +201,7 @@
             },
             {
               "id": "padding",
-              "state": {
-                "value": [
-                  "50",
-                  "3",
-                  50,
-                  "3"
-                ]
-              }
+              "state": {}
             },
             {
               "id": "flip-x",
@@ -244,7 +234,7 @@
             {
               "id": "open-settings",
               "state": {
-                "value": 1788821144540
+                "value": 1788820339627
               }
             },
             {
@@ -356,19 +346,14 @@
   },
   "control": {
     "plugins": {
+      "play": {
+        "value": true
+      },
       "font-size": {
         "value": "35"
       },
       "open-settings": {
-        "value": 1788821144540
-      },
-      "padding": {
-        "value": [
-          "50",
-          "3",
-          50,
-          "3"
-        ]
+        "value": 1788820339627
       },
       "speed": {
         "value": "12"
@@ -391,14 +376,6 @@
     "value": false
   },
   "play": {
-    "value": false
-  },
-  "padding": {
-    "value": [
-      "50",
-      "3",
-      50,
-      "3"
-    ]
+    "value": true
   }
 }

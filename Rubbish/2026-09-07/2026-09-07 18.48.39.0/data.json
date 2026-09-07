@@ -7,7 +7,9 @@
           "items": [
             {
               "id": "play",
-              "state": {}
+              "state": {
+                "value": true
+              }
             },
             {
               "id": "pin-note",
@@ -84,7 +86,9 @@
             },
             {
               "id": "fullscreen",
-              "state": {}
+              "state": {
+                "value": true
+              }
             }
           ]
         },
@@ -172,7 +176,9 @@
           "items": [
             {
               "id": "play",
-              "state": {}
+              "state": {
+                "value": true
+              }
             },
             {
               "id": "pin-note",
@@ -249,7 +255,9 @@
             },
             {
               "id": "fullscreen",
-              "state": {}
+              "state": {
+                "value": true
+              }
             }
           ]
         },
@@ -356,8 +364,14 @@
   },
   "control": {
     "plugins": {
+      "play": {
+        "value": true
+      },
       "font-size": {
         "value": "35"
+      },
+      "fullscreen": {
+        "value": true
       },
       "open-settings": {
         "value": 1788821144540
@@ -379,7 +393,7 @@
     "isEnabled": true
   },
   "fullscreen": {
-    "value": false
+    "value": true
   },
   "font-size": {
     "value": "35"
@@ -391,7 +405,7 @@
     "value": false
   },
   "play": {
-    "value": false
+    "value": true
   },
   "padding": {
     "value": [

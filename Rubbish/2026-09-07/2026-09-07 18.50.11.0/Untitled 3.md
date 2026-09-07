@@ -12,9 +12,8 @@
 
 **Sección 1 — Introducción y potencial global** ✂️ *[recortable]*
 Hace más de cien años, la humanidad logró por primera vez aprovechar el calor interno de la Tierra para producir electricidad.
-Actualmente, ya son 24 los países que generan energía eléctrica a partir de estas fuentes de calor subterráneo.
-Los países con mayor potencial son aquellos cercanos a los límites de las placas tectónicas, donde el calor está más próximo a la superficie.
-chile es uno de los paises
+Actualmente, ya son 24 los países que generan energía eléctrica a partir de estas fuentes de calor subterráneo. Los países con mayor potencial son aquellos cercanos a los límites de las placas tectónicas, donde el calor está más próximo a la superficie.
+
 ## Como podemos encender una bombilla con el calor de la tierra? (O como producir electricidad a partir de la energia geotermica)
 
 **Sección 2 — El origen del calor y la extracción del fluido**

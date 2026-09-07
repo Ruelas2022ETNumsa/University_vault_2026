@@ -8,14 +8,8 @@
 
 *"Antes de ver la diapositiva, veamos este video que nos da una idea visual de cómo funciona todo el proceso."*
 
-## como trabaja una planta geotermina 
-
 **Sección 1 — Introducción y potencial global** ✂️ *[recortable]*
-Hace más de cien años, la humanidad logró por primera vez aprovechar el calor interno de la Tierra para producir electricidad.
-Actualmente, ya son 24 los países que generan energía eléctrica a partir de estas fuentes de calor subterráneo.
-Los países con mayor potencial son aquellos cercanos a los límites de las placas tectónicas, donde el calor está más próximo a la superficie.
-chile es uno de los paises
-## Como podemos encender una bombilla con el calor de la tierra? (O como producir electricidad a partir de la energia geotermica)
+Hace más de cien años, la humanidad logró por primera vez aprovechar el calor interno de la Tierra para producir electricidad. Actualmente, ya son 24 los países que generan energía eléctrica a partir de estas fuentes de calor subterráneo. Los países con mayor potencial son aquellos cercanos a los límites de las placas tectónicas, donde el calor está más próximo a la superficie.
 
 **Sección 2 — El origen del calor y la extracción del fluido**
 El principio básico es el siguiente: a mayor profundidad bajo tierra, la temperatura aumenta de forma constante — por cada kilómetro de profundidad, la temperatura sube aproximadamente unos 25 grados centígrados. Este calor se extrae a través de tuberías por las que viajan fluidos subterráneos. El fluido caliente asciende hacia la superficie y, debido a que allí la presión es mucho menor, una parte se transforma en vapor.
@@ -28,6 +22,8 @@ El vapor, ahora completamente seco, es conducido a alta presión para impulsar u
 
 **Sección 5 — Sostenibilidad y ciclo cerrado**
 Por último, el vapor que pasó por la turbina se condensa y se bombea nuevamente al subsuelo mediante una bomba de reinyección. Este paso es fundamental — si los fluidos no se retornaran, la planta dejaría de funcionar. Así, la geotermia opera en un ciclo cerrado, limpio y renovable.
+
+---
 
 # Diapo 12 — ¿Cómo funciona la Energía Geotérmica?
 
@@ -49,9 +45,13 @@ Por último, el vapor que pasó por la turbina se condensa y se bombea nuevament
 
 *(8) **Reinyección** — el fluido regresa al subsuelo, cerrando el ciclo y manteniendo el reservorio activo."*
 
+---
+
 # Video previo Diapo 13
 
 *"A continuación veamos cómo funcionan los tres tipos de centrales geotérmicas que existen."*
+
+---
 
 **Sección 1 — Introducción** ✂️ *[recortable]*
 Para comenzar, es importante saber que existen tres tipos de plantas de energía geotérmica, y a continuación analizaremos cómo trabaja cada una de ellas.
@@ -64,6 +64,8 @@ El segundo tipo es la planta flash. Se utiliza cuando el agua geotérmica está 
 
 **Sección 4 — Planta de Ciclo Binario (Binary Cycle)**
 El tercer tipo es la planta de ciclo binario. Se aplica cuando el recurso está a temperaturas más bajas. El agua caliente pasa por un intercambiador de calor junto a un fluido secundario — como butano o pentano — que tiene un punto de ebullición mucho menor. Ese fluido secundario se vaporiza y mueve la turbina. Como el sistema requiere dos líquidos, el agua geotérmica y el fluido secundario, se le llama ciclo binario.
+
+---
 
 # Diapo 13 — Planta de Vapor Seco
 

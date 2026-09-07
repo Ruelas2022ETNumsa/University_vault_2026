@@ -84,7 +84,9 @@
             },
             {
               "id": "fullscreen",
-              "state": {}
+              "state": {
+                "value": true
+              }
             }
           ]
         },
@@ -249,7 +251,9 @@
             },
             {
               "id": "fullscreen",
-              "state": {}
+              "state": {
+                "value": true
+              }
             }
           ]
         },
@@ -359,6 +363,9 @@
       "font-size": {
         "value": "35"
       },
+      "fullscreen": {
+        "value": true
+      },
       "open-settings": {
         "value": 1788821144540
       },
@@ -379,7 +386,7 @@
     "isEnabled": true
   },
   "fullscreen": {
-    "value": false
+    "value": true
   },
   "font-size": {
     "value": "35"

@@ -11,18 +11,20 @@
             },
             {
               "id": "pin-note",
-              "state": {}
+              "state": {
+                "value": true
+              }
             },
             {
               "id": "speed",
               "state": {
-                "value": "12"
+                "value": "15"
               }
             },
             {
               "id": "font-size",
               "state": {
-                "value": "35"
+                "value": "40"
               }
             },
             {
@@ -39,14 +41,7 @@
             },
             {
               "id": "padding",
-              "state": {
-                "value": [
-                  "50",
-                  "3",
-                  50,
-                  "3"
-                ]
-              }
+              "state": {}
             },
             {
               "id": "flip-x",
@@ -78,13 +73,13 @@
             },
             {
               "id": "open-settings",
-              "state": {
-                "value": 1788821144540
-              }
+              "state": {}
             },
             {
               "id": "fullscreen",
-              "state": {}
+              "state": {
+                "value": true
+              }
             }
           ]
         },
@@ -176,18 +171,20 @@
             },
             {
               "id": "pin-note",
-              "state": {}
+              "state": {
+                "value": true
+              }
             },
             {
               "id": "speed",
               "state": {
-                "value": "12"
+                "value": "15"
               }
             },
             {
               "id": "font-size",
               "state": {
-                "value": "35"
+                "value": "40"
               }
             },
             {
@@ -204,14 +201,7 @@
             },
             {
               "id": "padding",
-              "state": {
-                "value": [
-                  "50",
-                  "3",
-                  50,
-                  "3"
-                ]
-              }
+              "state": {}
             },
             {
               "id": "flip-x",
@@ -243,13 +233,13 @@
             },
             {
               "id": "open-settings",
-              "state": {
-                "value": 1788821144540
-              }
+              "state": {}
             },
             {
               "id": "fullscreen",
-              "state": {}
+              "state": {
+                "value": true
+              }
             }
           ]
         },
@@ -340,14 +330,7 @@
       },
       {
         "id": "eyeline",
-        "state": {
-          "items": [
-            {
-              "top": 54.33,
-              "color": ""
-            }
-          ]
-        },
+        "state": {},
         "defaults": {
           "isOpen": false
         }
@@ -357,21 +340,16 @@
   "control": {
     "plugins": {
       "font-size": {
-        "value": "35"
+        "value": "40"
       },
-      "open-settings": {
-        "value": 1788821144540
-      },
-      "padding": {
-        "value": [
-          "50",
-          "3",
-          50,
-          "3"
-        ]
+      "fullscreen": {
+        "value": true
       },
       "speed": {
-        "value": "12"
+        "value": "15"
+      },
+      "pin-note": {
+        "value": true
       }
     }
   },
@@ -379,26 +357,15 @@
     "isEnabled": true
   },
   "fullscreen": {
-    "value": false
+    "value": true
   },
   "font-size": {
-    "value": "35"
+    "value": "40"
   },
   "speed": {
-    "value": "12"
+    "value": "15"
   },
   "pin-note": {
-    "value": false
-  },
-  "play": {
-    "value": false
-  },
-  "padding": {
-    "value": [
-      "50",
-      "3",
-      50,
-      "3"
-    ]
+    "value": true
   }
 }

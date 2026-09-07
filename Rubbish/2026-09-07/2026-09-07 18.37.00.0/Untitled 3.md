@@ -8,14 +8,8 @@
 
 *"Antes de ver la diapositiva, veamos este video que nos da una idea visual de cómo funciona todo el proceso."*
 
-## como trabaja una planta geotermina 
-
 **Sección 1 — Introducción y potencial global** ✂️ *[recortable]*
-Hace más de cien años, la humanidad logró por primera vez aprovechar el calor interno de la Tierra para producir electricidad.
-Actualmente, ya son 24 los países que generan energía eléctrica a partir de estas fuentes de calor subterráneo.
-Los países con mayor potencial son aquellos cercanos a los límites de las placas tectónicas, donde el calor está más próximo a la superficie.
-chile es uno de los paises
-## Como podemos encender una bombilla con el calor de la tierra? (O como producir electricidad a partir de la energia geotermica)
+Hace más de cien años, la humanidad logró por primera vez aprovechar el calor interno de la Tierra para producir electricidad. Actualmente, ya son 24 los países que generan energía eléctrica a partir de estas fuentes de calor subterráneo. Los países con mayor potencial son aquellos cercanos a los límites de las placas tectónicas, donde el calor está más próximo a la superficie.
 
 **Sección 2 — El origen del calor y la extracción del fluido**
 El principio básico es el siguiente: a mayor profundidad bajo tierra, la temperatura aumenta de forma constante — por cada kilómetro de profundidad, la temperatura sube aproximadamente unos 25 grados centígrados. Este calor se extrae a través de tuberías por las que viajan fluidos subterráneos. El fluido caliente asciende hacia la superficie y, debido a que allí la presión es mucho menor, una parte se transforma en vapor.

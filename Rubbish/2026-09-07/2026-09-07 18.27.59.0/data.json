@@ -7,11 +7,15 @@
           "items": [
             {
               "id": "play",
-              "state": {}
+              "state": {
+                "value": true
+              }
             },
             {
               "id": "pin-note",
-              "state": {}
+              "state": {
+                "value": true
+              }
             },
             {
               "id": "speed",
@@ -39,14 +43,7 @@
             },
             {
               "id": "padding",
-              "state": {
-                "value": [
-                  "50",
-                  "3",
-                  50,
-                  "3"
-                ]
-              }
+              "state": {}
             },
             {
               "id": "flip-x",
@@ -78,9 +75,7 @@
             },
             {
               "id": "open-settings",
-              "state": {
-                "value": 1788821144540
-              }
+              "state": {}
             },
             {
               "id": "fullscreen",
@@ -172,11 +167,15 @@
           "items": [
             {
               "id": "play",
-              "state": {}
+              "state": {
+                "value": true
+              }
             },
             {
               "id": "pin-note",
-              "state": {}
+              "state": {
+                "value": true
+              }
             },
             {
               "id": "speed",
@@ -204,14 +203,7 @@
             },
             {
               "id": "padding",
-              "state": {
-                "value": [
-                  "50",
-                  "3",
-                  50,
-                  "3"
-                ]
-              }
+              "state": {}
             },
             {
               "id": "flip-x",
@@ -243,9 +235,7 @@
             },
             {
               "id": "open-settings",
-              "state": {
-                "value": 1788821144540
-              }
+              "state": {}
             },
             {
               "id": "fullscreen",
@@ -356,22 +346,17 @@
   },
   "control": {
     "plugins": {
+      "play": {
+        "value": true
+      },
       "font-size": {
         "value": "35"
       },
-      "open-settings": {
-        "value": 1788821144540
-      },
-      "padding": {
-        "value": [
-          "50",
-          "3",
-          50,
-          "3"
-        ]
-      },
       "speed": {
         "value": "12"
+      },
+      "pin-note": {
+        "value": true
       }
     }
   },
@@ -388,17 +373,9 @@
     "value": "12"
   },
   "pin-note": {
-    "value": false
+    "value": true
   },
   "play": {
-    "value": false
-  },
-  "padding": {
-    "value": [
-      "50",
-      "3",
-      50,
-      "3"
-    ]
+    "value": true
   }
 }

@@ -71655,6 +71655,8 @@ gire
 girar
 gastos
 generadores
+geotermina
+geotermica
 body
 beacon
 bat
@@ -144244,6 +144246,7 @@ contamos
 cerrando
 calentamiento
 calefacci
+chile
 updated
 un
 universo
@@ -235697,6 +235700,7 @@ produciendo
 perforados
 palas
 placas
+paises
 min
 mica
 movimiento
@@ -277160,6 +277164,7 @@ encendamos
 especialistas
 edificios
 especies
+energia
 Motor
 Media
 Mantiene
