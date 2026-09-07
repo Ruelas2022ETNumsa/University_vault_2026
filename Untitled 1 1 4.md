@@ -151,18 +151,52 @@ Cuando el DMA y la CPU solicitan el bus simultáneamente, el árbitro otorga pri
 
 **Contexto SIC (Hill & Peterson) — T3.10**
 
-Hill & Peterson presentan tres métodos de E/S en progresión de eficiencia:
+El DMA es la tercera alternativa de E/S: ruta directa a memoria sin usar registros de la CPU.
 
-| Método | Intervención CPU | Paralelismo |
-|---|---|---|
-| Por programa (T3.4) | Constante — sin paralelismo | Ninguno |
-| Secuencia Buffer (T3.7–T3.9) | Por bloque — overhead de ISR | Parcial |
-| DMA (T3.10) | Solo inicio/fin | Total |
+- **Por Programa (T3.4):** CPU controla activamente cada transferencia — sin paralelismo.
+- **Secuencia Buffer (T3.7–T3.9):** CPU ejecuta pasos 90–111 con `BWC`, `CC`, `BIOR`, `IOBUS`, `MD`. Espera a que finalice la instrucción en curso.
+- **DMA (T3.10):** acceso asíncrono por puertos independientes (`MA0`, `MD0`, `ST0`, `DS0`) arbitrados por un **módulo de control de memoria** — sin intervención de la CPU.
 
-El DMA accede a memoria de forma autónoma mediante puertos propios (`MA0`, `MD0`, `ST0`, `DS0`), arbitrados por un **módulo de control de memoria** que resuelve conflictos cuando CPU y DMA acceden a la RAM simultáneamente — sin intervención de la CPU en cada dato transferido.
+```tikz
+\usetikzlibrary{shapes.geometric, arrows.meta, positioning, calc}
+\begin{document}
+\begin{tikzpicture}[
+    phase/.style={rectangle, draw=black, fill=blue!5, minimum width=2.1cm, minimum height=1.1cm, align=center, font=\tiny\sffamily},
+    lbl/.style={draw, rectangle, rounded corners, font=\tiny\sffamily, align=center}
+]
+\node[phase] (P1) {Captación\\instrucción};
+\node[phase, right=0.15cm of P1] (P2) {Decodificación\\instrucción};
+\node[phase, right=0.15cm of P2] (P3) {Captación\\operando};
+\node[phase, right=0.15cm of P3] (P4) {Ejecución\\instrucción};
+\node[phase, right=0.15cm of P4] (P5) {Almacenar\\resultado};
+\node[phase, right=0.15cm of P5] (P6) {Procesar\\interrupción};
 
-![[SumatraPDF_UyeRe7a8vd.png]]
+\node[lbl, fill=red!10, below=1cm of P2, xshift=0.9cm] (dma) {Puntos de atención DMA\\(entre ciclos de bus)};
+\node[lbl, fill=orange!15, below=1.8cm of P5, xshift=0.5cm] (intr) {Punto de atención interrupción\\(al finalizar la instrucción)};
+
+\path (P1.east) -- node(b1) {} (P2.west);
+\path (P2.east) -- node(b2) {} (P3.west);
+\path (P3.east) -- node(b3) {} (P4.west);
+\path (P4.east) -- node(b4) {} (P5.west);
+\path (P5.east) -- node(b5) {} (P6.west);
+
+\draw[-Stealth, red, thick] (dma.north) -- (b1.center);
+\draw[-Stealth, red, thick] (dma.north) -- (b2.center);
+\draw[-Stealth, red, thick] (dma.north) -- (b3.center);
+\draw[-Stealth, red, thick] (dma.north) -- (b4.center);
+\draw[-Stealth, orange!80!black, thick] (intr.north) -- (b5.center);
+
+\draw[thick, ->] ([yshift=-2.5cm]P1.west) -- ([yshift=-2.5cm]P6.east) node[right, font=\tiny\sffamily] {Tiempo};
+\end{tikzpicture}
+\end{document}
+```
+
+*El DMA atiende entre ciclos de bus — la interrupción solo al finalizar la instrucción.*
+
+---
+
+![[pegar_imagen]]
 *Fig. 7.12 · Puntos de ruptura para el DMA y las interrupciones en un ciclo de instrucción.*
 [[Stallings - Organización y Arquitectura de Computadores - 7ed.pdf#page=]]
-
-El DMA puede tomar el bus entre cualquier par de ciclos de bus (puntos de ruptura múltiples), mientras que una interrupción solo se atiende al finalizar la instrucción completa.
+*Fig. 7.12*
+justificación: Muestra en qué puntos del ciclo de instrucción el DMA puede tomar el bus (entre ciclos) versus dónde se atiende una interrupción (al finalizar la instrucción).
