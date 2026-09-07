@@ -1,4 +1,4 @@
-# Diapo 11 — Introducción
+# Diapo 11
 
 *"Buenas tardes. En esta parte de la exposición voy a cubrir tres puntos centrales: primero, cómo funciona la energía geotérmica paso a paso; segundo, los tres tipos de centrales que existen para convertir ese calor en electricidad; y tercero, los usos que tiene esta energía más allá de solo generar electricidad.*
 
@@ -33,7 +33,7 @@ Por último, el vapor que pasó por la turbina se condensa y se bombea nuevament
 
 ---
 
-# Diapo 12 — ¿Cómo funciona la Energía Geotérmica?
+# Diapo 12
 
 *"Como acabamos de ver en el video, el proceso geotérmico sigue una cadena bien definida. Repasémosla:*
 
@@ -58,22 +58,22 @@ Por último, el vapor que pasó por la turbina se condensa y se bombea nuevament
 # Video previo Diapo 13
 
 > 🎬 **Video:** *"Geothermal Power Plant"* — animaciones de los 3 tipos de centrales
-> ✂️ **[POSIBLE RECORTE]:** Si el tiempo es ajustado, la Sección 1 (intro) es omitible — la transición desde Diapo 12 ya contextualiza.
+> ✂️ **[POSIBLE RECORTE]:** Si el tiempo es ajustado, el Momento 1 (intro) es omitible — la transición desde Diapo 12 ya contextualiza.
 
 *"A continuación veamos cómo funcionan los tres tipos de centrales geotérmicas que existen."*
 
 ---
 
-**Sección 1 — Introducción** ✂️ *[recortable]*
+**Momento 1 — Introducción** ✂️ *[recortable]*
 Para comenzar, es importante saber que existen tres tipos de plantas de energía geotérmica, y a continuación analizaremos cómo trabaja cada una de ellas.
 
-**Sección 2 — Planta de Vapor Seco (Dry Steam)**
+**Momento 2 — Planta de Vapor Seco (Dry Steam)**
 El primer tipo es la planta de vapor seco. En este sistema el vapor se genera directamente desde el yacimiento geotérmico subterráneo — se extrae y se suministra directo a la turbina conectada a un generador. Después de mover la turbina, el vapor pasa por un condensador, vuelve a convertirse en agua y se reinyecta en la Tierra. Cabe destacar que los depósitos naturales de vapor seco son extremadamente raros.
 
-**Sección 3 — Planta de Vapor Flash (Flash Steam)**
+**Momento 3 — Planta de Vapor Flash (Flash Steam)**
 El segundo tipo es la planta flash. Se utiliza cuando el agua geotérmica está a temperaturas muy altas — por encima de los 350 grados Fahrenheit. A esta agua caliente la llamamos salmuera, y al reducir su presión en un contenedor especial, se convierte rápidamente en vapor. Ese vapor impulsa la turbina para generar electricidad, mientras que la salmuera restante se reinyecta en la Tierra.
 
-**Sección 4 — Planta de Ciclo Binario (Binary Cycle)**
+**Momento 4 — Planta de Ciclo Binario (Binary Cycle)**
 El tercer tipo es la planta de ciclo binario. Se aplica cuando el recurso está a temperaturas más bajas. El agua caliente pasa por un intercambiador de calor junto a un fluido secundario — como butano o pentano — que tiene un punto de ebullición mucho menor. Ese fluido secundario se vaporiza y mueve la turbina. Como el sistema requiere dos líquidos, el agua geotérmica y el fluido secundario, se le llama ciclo binario.
 
 ---
