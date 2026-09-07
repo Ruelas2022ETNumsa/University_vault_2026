@@ -26,6 +26,103 @@ Cuando el DMA y la CPU solicitan el bus simultáneamente, el árbitro otorga pri
 6. El DMA transfiere un dato directamente entre periférico y RAM.
 7. El DMA desactiva `HRQ`, actualiza dirección y contador, devuelve el bus.
 
+
+---
+
+```tikz
+\usetikzlibrary{shapes.geometric, arrows.meta, positioning, fit, backgrounds}
+\begin{document}
+\begin{tikzpicture}[
+    font=\sffamily\small,
+    box/.style={rectangle, draw, minimum width=2.2cm, minimum height=1.1cm, align=center, rounded corners=3pt},
+    subbox/.style={rectangle, draw, minimum width=2.8cm, minimum height=0.9cm, align=center, rounded corners=2pt, font=\sffamily\scriptsize},
+    bus/.style={ultra thick},
+    arr/.style={draw, -{Stealth[scale=1.0]}, thick}
+]
+
+% === CAJAS PRINCIPALES (fila superior) ===
+\node[box, fill=blue!8,   draw=blue!60]   (cpu)  at (0,0)    {CPU};
+\node[box, fill=green!8,  draw=green!60]  (ram)  at (4,0)    {RAM};
+\node[box, fill=orange!8, draw=orange!60] (per)  at (12,0)   {Periférico};
+
+% === BUSES VERTICALES desde cada caja ===
+% Bus CPU (azul)
+\draw[bus, blue!60]   (cpu.south) -- ++(0,-1.8) coordinate (cpu_bus_end);
+% Bus RAM (verde)
+\draw[bus, green!60]  (ram.south) -- ++(0,-1.8) coordinate (ram_bus_end);
+% Bus Periférico (naranja)
+\draw[bus, orange!60] (per.south) -- ++(0,-1.8) coordinate (per_bus_end);
+
+% === CAJA SEGMENTADA: Controlador DMA ===
+% Subcajas internas
+\node[subbox, fill=gray!6, draw=gray!50] (cnt)  at (8, -1.0) {Contador\\de datos};
+\node[subbox, fill=gray!6, draw=gray!50] (reg)  at (8, -2.4) {Registro\\de datos};
+\node[subbox, fill=gray!6, draw=gray!50] (dir)  at (8, -3.8) {Registro de\\dirección};
+\node[subbox, fill=gray!6, draw=gray!50] (log)  at (8, -5.4) {Lógica\\de control};
+
+% Caja exterior del controlador DMA (envuelve las subcajas)
+\begin{pgfonlayer}{background}
+    \node[
+        draw=gray!70, thick, dashed,
+        fill=gray!3,
+        rounded corners=6pt,
+        fit=(cnt)(reg)(dir)(log),
+        inner sep=10pt,
+        label={[font=\sffamily\scriptsize\bfseries, gray!70]above:Controlador DMA}
+    ] (dma) {};
+\end{pgfonlayer}
+
+% === BUS SISTEMA HORIZONTAL (línea de bus compartida) ===
+% Bus de datos horizontal entre CPU bus, RAM bus y DMA
+\draw[bus, gray!50] (cpu_bus_end) -- ++(0,-0.3) coordinate (hbus_left);
+\draw[bus, gray!50] (ram_bus_end) -- ++(0,-0.3) coordinate (hbus_ram);
+
+% Línea horizontal del bus del sistema
+\draw[bus, gray!40] (hbus_left) -- (hbus_ram);
+
+% === CONEXIONES DMA ↔ subcajas ===
+
+% Líneas de datos → Contador de datos y Registro de datos
+\draw[arr, blue!50] (hbus_ram) -- (hbus_ram |- cnt.west) -- (cnt.west)
+    node[midway, above, font=\sffamily\scriptsize, blue!70] {};
+\draw[arr, blue!50] (hbus_ram |- reg.west) -- (reg.west);
+\node[font=\sffamily\scriptsize, blue!60, left=0.15cm of cnt, yshift=0cm] {Líneas de datos};
+
+% Líneas de direcciones → Registro de dirección
+\draw[arr, green!60] (hbus_ram |- dir.west) -- (dir.west);
+\node[font=\sffamily\scriptsize, green!60, left=0.15cm of dir] {Líneas de dirección};
+
+% Periférico ↔ Lógica de control (señales de control)
+% Bus periférico baja hasta nivel de lógica de control
+\draw[bus, orange!60] (per.south) -- (per.south |- log.east);
+
+% Señales individuales con flechas bidireccionales/unidireccionales
+\draw[arr, orange!70, {Stealth[scale=0.9]}-{Stealth[scale=0.9]}]
+    (per.south |- log.north) ++(-0.3,0.1) -- ++(-2.35,0)
+    node[midway, above, font=\sffamily\scriptsize] {DMA REQ / ACK};
+
+\draw[arr, orange!60]
+    (log.east) -- ++(1.2,0)
+    node[right, font=\sffamily\scriptsize] {INTR};
+
+\draw[arr, orange!50]
+    (log.east) ++(0,-0.25) -- ++(1.2,0) -- ++(0,-0.5)
+    node[below, font=\sffamily\scriptsize] {Read / Write};
+
+% CPU ↔ Lógica de control (HOLD/HLDA)
+\draw[arr, blue!50, {Stealth[scale=0.9]}-{Stealth[scale=0.9]}]
+    (cpu_bus_end) ++(0,-0.5) -| (log.north)
+    node[near start, left, font=\sffamily\scriptsize, blue!60] {HRQ / HLDA};
+
+\end{tikzpicture}
+\end{document}
+```
+
+
+
+---
+
+
 ```tikz
 \usetikzlibrary{shapes.geometric, arrows.meta, positioning}
 \begin{document}
