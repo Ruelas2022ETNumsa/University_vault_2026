@@ -8,7 +8,7 @@
 
 *"Antes de ver la diapositiva, veamos este video que nos da una idea visual de cómo funciona todo el proceso."*
 
-## como trabaja una planta geotermina 
+## como trabaja una planta geotérmica 
 
 **Sección 1 — Introducción y potencial global** ✂️ *[recortable]*
 Hace más de cien años, la humanidad logró por primera vez aprovechar el calor interno de la Tierra para producir electricidad.
@@ -29,12 +29,12 @@ Este calor acumulado se extrae del subsuelo a través de tuberías por las que v
 **Sección 3 —proceso de Separación y secado**
 
 ~~Una vez en la superficie,~~ la planta cuenta con un separador, que recibe directamente esta mezcla de agua y vapor.
-Su función enviar el vapor a un secador, donde se eliminaran todos los rastros de humedad, además dirige el agua a una bomba  que la devuelve al subsuelo.
+Su función enviar el vapor a un secador, donde se eliminarán todos los rastros de humedad, además dirige el agua a una bomba que la devuelve al subsuelo.
 
 **Sección 4 — Generación de electricidad**
 
-el vapor seco, es conducido a alta presión para impulsar una turbina.
-Esta turbina está conectada directamente a un generador de corriente que, genera la energía eléctrica.
+el vapor seco es conducido a alta presión para impulsar una turbina.
+Esta turbina está conectada directamente a un generador de corriente que genera la energía eléctrica.
 
 **Sección 5 — Sostenibilidad y ciclo cerrado**
 
@@ -77,7 +77,7 @@ En este sistema el vapor se genera directamente desde el yacimiento geotérmico 
 
 El flujo de vapor hace que la turbina gire, lo que permite que el generador produzca energía eléctrica.
 
-Después de mover la turbina,, el vapor pasa por un condensador donde vuelve a convertirse en agua.
+Después de mover la turbina, el vapor pasa por un condensador donde vuelve a convertirse en agua.
 A este líquido lo llamamos condensado, y finalmente se reinyecta en la Tierra a través de un pozo de inyección.
 Los depósitos naturales de vapor seco son extremadamente raros en la naturaleza
 
@@ -88,12 +88,12 @@ Este método se utiliza cuando disponemos de agua calentada de forma geotérmica
 A esta agua caliente la llamamos salmuera, y es transferida a un contenedor especial donde se produce el vapor.
 Este vapor impulsa la turbina conectada al generador para producir electricidad, mientras que la salmuera restante o de desecho se reinyecta en la Tierra.
 
-Sección 4: Generación de electricidad Esto significa que el vapor, ahora completamente seco, es conducido a alta presión para impulsar una turbina
-. Esta turbina está conectada directamente a un generador de corriente que, al girar por la fuerza del vapor, genera la energía eléctrica que finalmente consumimos
-.
-
 **Sección 4 — Planta de Ciclo Binario (Binary Cycle)**
-El tercer tipo es la planta de ciclo binario. Se aplica cuando el recurso (geotermico) está a temperaturas más bajas (hasta 100 grados Fahrenheit). El agua caliente pasa por un intercambiador de calor junto a un fluido secundario (con un punto de ebullición mucho menor)— como butano o pentano(pentane hydrocarbon) — . Ese fluido secundario se vaporiza y mueve la turbina. Como el sistema requiere dos líquidos, el agua geotérmica y el fluido secundario, se le llama ciclo binario.
+El tercer tipo es la planta de ciclo binario. Se aplica cuando el recurso (geotérmico) está a temperaturas más bajas (hasta 100 grados Fahrenheit). El agua caliente pasa por un intercambiador de calor junto a un fluido secundario (con un punto de ebullición mucho menor)— como butano o pentano(pentane hydrocarbon) — . Ese fluido secundario se vaporiza y mueve la turbina.
+
+el vapor de la mezcla se enfría mediante un condensador el líquido se recicla; El agua recidual se inyecta de nuevo al subsuelo.
+
+Como el sistema requiere dos líquidos, el agua geotérmica y el fluido secundario, se le llama ciclo binario.
 
 # Diapo 13 — Planta de Vapor Seco
 
