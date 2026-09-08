@@ -2,19 +2,19 @@
 
 *"Buenas tardes. En esta parte de la exposición voy a cubrir tres puntos centrales: primero, cómo funciona la energía geotérmica paso a paso; segundo, los tres tipos de centrales que existen para convertir ese calor en electricidad; y tercero, los usos que tiene esta energía más allá de solo generar electricidad.*
 
-*Para entender todo esto, es importante recordar que la energía geotérmica aprovecha el calor que existe en el interior de la Tierra — ese calor que se concentra en el subsuelo y que, bajo las condiciones correctas, puede ser extraído y transformado en energía útil."*
+*Para entender todo esto, es importante tener presente que la energía geotérmica aprovecha el calor que existe en el interior de la Tierra — ese calor que se concentra en el subsuelo y que, bajo las condiciones correctas, puede ser extraído y transformado en energía útil."*
 
 # Video previo Diapo 12
 
-*"Antes de ver la diapositiva, veamos este video que nos da una idea visual de cómo funciona todo el proceso."*
+*"Antes de continuar, veamos un video que nos muestra visualmente cómo funciona todo el proceso."*
 
 ## como trabaja una planta geotérmica 
 
-**Sección 1 — Introducción y potencial global** ✂️ *[recortable]*
+**~~Sección 1 — Introducción y potencial global~~**
 Hace más de cien años, la humanidad logró por primera vez aprovechar el calor interno de la Tierra para producir electricidad.
 Actualmente, ya son 24 los países que generan energía eléctrica a partir de estas fuentes de calor subterráneo.
-Como podemos ver los países con mayor potencial para desarrollar la energía geotérmica son aquellos que se encuentran cerca de los límites de las placas tectónicas.
-Cabe destacar que Chile es el país con el mayor potencial geotérmico sin explotar de todo el planeta
+Los países con mayor potencial para desarrollar la energía geotérmica son aquellos que se encuentran cerca de los límites de las placas tectónicas.
+Chile, junto a la Cordillera de los Andes, concentra uno de los mayores potenciales geotérmicos sin explotar del planeta.
 
 ## Pero, ¿Cómo es posible que encendamos una bombilla utilizando el calor de la Tierra, o cómo se produce exactamente esta electricidad?
 
@@ -91,7 +91,7 @@ Este vapor impulsa la turbina conectada al generador para producir electricidad,
 **Sección 4 — Planta de Ciclo Binario (Binary Cycle)**
 El tercer tipo es la planta de ciclo binario. Se aplica cuando el recurso (geotérmico) está a temperaturas más bajas (hasta 100 grados Fahrenheit). El agua caliente pasa por un intercambiador de calor junto a un fluido secundario (con un punto de ebullición mucho menor)— como butano o pentano(pentane hydrocarbon) — . Ese fluido secundario se vaporiza y mueve la turbina.
 
-el vapor de la mezcla se enfría mediante un condensador el líquido se recicla; El agua recidual se inyecta de nuevo al subsuelo.
+el vapor de la mezcla se enfría mediante un condensador el líquido se recicla; El agua residual se inyecta de nuevo al subsuelo.
 
 Como el sistema requiere dos líquidos, el agua geotérmica y el fluido secundario, se le llama ciclo binario.
 
