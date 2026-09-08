@@ -22,25 +22,29 @@ Chile, junto a la Cordillera de los Andes, concentra uno de los mayores potencia
 
 ~~El principio básico es el siguiente:~~ 
 
-a mayor profundidad bajo tierra, la temperatura aumenta de forma constante, es decir, por cada kilómetro de profundidad la temperatura sube aproximadamente unos 25 grados centígrados.
-Este calor acumulado se extrae del subsuelo a través de tuberías por las que viajan fluidos subterráneos.
-~~A continuación,~~ el fluido caliente asciende hacia la superficie y, debido a que allí la presión es mucho menor que bajo tierra, una parte de este fluido se transforma en vapor.
+A mayor profundidad bajo tierra, la temperatura aumenta de forma constante, es decir, por cada kilómetro de profundidad la temperatura sube aproximadamente unos 25 grados centígrados.
+
+~~Este calor acumulado se extrae del subsuelo a través de tuberías por las que viajan fluidos subterráneos.~~
+
+El fluido geotérmico — agua caliente o vapor — se extrae a través de pozos hacia la superficie, transportando el calor desde el subsuelo.
+
+Una vez arriba, debido a que la presión es mucho menor que bajo tierra, una parte de este fluido se transforma en vapor.
+
+~~el fluido caliente asciende hacia la superficie y, debido a que allí la presión es mucho menor que bajo tierra, una parte de este fluido se transforma en vapor.~~
 
 **Sección 3 —proceso de Separación y secado**
 
-~~Una vez en la superficie,~~ la planta cuenta con un separador, que recibe directamente esta mezcla de agua y vapor.
-Su función enviar el vapor a un secador, donde se eliminarán todos los rastros de humedad, además dirige el agua a una bomba que la devuelve al subsuelo.
+~~En la superficie,~~ la planta cuenta con un separador, que recibe directamente esta mezcla de agua y vapor. Su función es enviar el vapor a un secador, donde se eliminarán todos los rastros de humedad, además dirige el agua a una bomba que la devuelve al subsuelo
 
 **Sección 4 — Generación de electricidad**
 
-el vapor seco es conducido a alta presión para impulsar una turbina.
-Esta turbina está conectada directamente a un generador de corriente que genera la energía eléctrica.
+el vapor seco es conducido a alta presión para impulsar una turbina. Esta turbina está conectada directamente a un generador de corriente que produce la energía eléctrica.
 
 **Sección 5 — Sostenibilidad y ciclo cerrado**
 
 ~~Por último,~~ el vapor que ya pasó por la turbina se condensa y se bombea nuevamente hacia el subsuelo mediante una bomba de reinyección, regresando el fluido de manera segura al reservorio original.
 Este paso es fundamental, ya que las plantas geotérmicas tienen la obligación de devolver los fluidos utilizados para poder mantener la presión interna del yacimiento.
-Si estos fluidos no se retornaran al subsuelo, la planta simplemente dejaría de funcionar.
+Si estos fluidos no se devolvieran al subsuelo, la planta simplemente dejaría de funcionar.
 Así, la geotermia opera en un ciclo cerrado, limpio y renovable.
 
 # Diapo 12 — ¿Cómo funciona la Energía Geotérmica?
@@ -53,31 +57,33 @@ Así, la geotermia opera en un ciclo cerrado, limpio y renovable.
 
 *(3) **Extracción** — el fluido, agua caliente o vapor, asciende a la superficie a través de los pozos.*
 
-*(4) **Conversión energética** — el calor del fluido se transfiere al sistema para iniciar la generación.*
+*(4) **Conversión energética** — el fluido caliente pasa por el separador, donde se obtiene vapor seco listo para la turbina.*
 
-*(5) **Turbina** — el vapor mueve las palas de la turbina a alta presión.*
+*(5) **Turbina** — el vapor a alta presión hace girar la turbina, convirtiendo energía térmica en mecánica.*
 
-*(6) **Generador** — la turbina acciona el generador que produce la electricidad.*
+*(6) **Generador** — la turbina acciona el generador, produciendo electricidad.*
 
 *(7) **Condensación** — el vapor se enfría y vuelve al estado líquido.*
 
 *(8) **Reinyección** — el fluido regresa al subsuelo, cerrando el ciclo y manteniendo el reservorio activo."*
 
+*"Este es el mismo proceso que opera hoy en la Planta Piloto de Laguna Colorada, aquí en Bolivia."*
+
 # Video previo Diapo 13
 
-*"A continuación veamos cómo funcionan los tres tipos de centrales geotérmicas que existen."*
+*"Veamos ahora cómo funcionan los tres tipos de centrales geotérmicas que existen."*
 
-**Sección 1 — Introducción** ✂️ *[recortable]*
-Para comenzar, es importante saber que existen tres tipos de plantas de energía geotérmica, y a continuación analizaremos cómo trabaja cada una de ellas.
+**Sección 1 — Introducción**
+Existen tres tipos de plantas de energía geotérmica, y analizaremos cómo funciona cada una de ellas.
 
 **Sección 2 — Planta de Vapor Seco (Dry Steam)**
 
-El primer tipo es la planta de vapor seco
+El primer tipo es la planta de vapor seco.
 En este sistema el vapor se genera directamente desde el yacimiento geotérmico subterráneo — se extrae y se suministra directo a la turbina conectada a un generador.
 
 El flujo de vapor hace que la turbina gire, lo que permite que el generador produzca energía eléctrica.
 
-Después de mover la turbina, el vapor pasa por un condensador donde vuelve a convertirse en agua.
+Después de hacer girar la turbina, el vapor pasa por un condensador donde vuelve a convertirse en agua.
 A este líquido lo llamamos condensado, y finalmente se reinyecta en la Tierra a través de un pozo de inyección.
 Los depósitos naturales de vapor seco son extremadamente raros en la naturaleza
 
@@ -86,7 +92,7 @@ Los depósitos naturales de vapor seco son extremadamente raros en la naturaleza
 El segundo tipo es la planta de vapor de destello, también conocida como planta 'flash'.
 Este método se utiliza cuando disponemos de agua calentada de forma geotérmica a una temperatura muy alta, específicamente por encima de los 350 grados Fahrenheit.
 A esta agua caliente la llamamos salmuera, y es transferida a un contenedor especial donde se produce el vapor.
-Este vapor impulsa la turbina conectada al generador para producir electricidad, mientras que la salmuera restante o de desecho se reinyecta en la Tierra.
+Este vapor ~~~impulsa la turbina conectada al generador para producir electricidad, mientras que la salmuera restante o de desecho se reinyecta en la Tierra.
 
 **Sección 4 — Planta de Ciclo Binario (Binary Cycle)**
 El tercer tipo es la planta de ciclo binario. Se aplica cuando el recurso (geotérmico) está a temperaturas más bajas (hasta 100 grados Fahrenheit). El agua caliente pasa por un intercambiador de calor junto a un fluido secundario (con un punto de ebullición mucho menor)— como butano o pentano(pentane hydrocarbon) — . Ese fluido secundario se vaporiza y mueve la turbina.
