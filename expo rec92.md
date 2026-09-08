@@ -13,7 +13,7 @@
 **Sección 1 — Introducción y potencial global** ✂️ *[recortable]*
 Hace más de cien años, la humanidad logró por primera vez aprovechar el calor interno de la Tierra para producir electricidad.
 Actualmente, ya son 24 los países que generan energía eléctrica a partir de estas fuentes de calor subterráneo.
-Como podemos ve los países con mayor potencial para desarrollar la energía geotérmica son aquellos que se encuentran cerca de los límites de las placas tectónicas.
+Como podemos ver los países con mayor potencial para desarrollar la energía geotérmica son aquellos que se encuentran cerca de los límites de las placas tectónicas.
 Cabe destacar que Chile es el país con el mayor potencial geotérmico sin explotar de todo el planeta
 
 ## Pero, ¿Cómo es posible que encendamos una bombilla utilizando el calor de la Tierra, o cómo se produce exactamente esta electricidad?
@@ -71,13 +71,29 @@ Así, la geotermia opera en un ciclo cerrado, limpio y renovable.
 Para comenzar, es importante saber que existen tres tipos de plantas de energía geotérmica, y a continuación analizaremos cómo trabaja cada una de ellas.
 
 **Sección 2 — Planta de Vapor Seco (Dry Steam)**
-El primer tipo es la planta de vapor seco. En este sistema el vapor se genera directamente desde el yacimiento geotérmico subterráneo — se extrae y se suministra directo a la turbina conectada a un generador. Después de mover la turbina, el vapor pasa por un condensador, vuelve a convertirse en agua y se reinyecta en la Tierra. Cabe destacar que los depósitos naturales de vapor seco son extremadamente raros.
+
+El primer tipo es la planta de vapor seco
+En este sistema el vapor se genera directamente desde el yacimiento geotérmico subterráneo — se extrae y se suministra directo a la turbina conectada a un generador.
+
+El flujo de vapor hace que la turbina gire, lo que permite que el generador produzca energía eléctrica.
+
+Después de mover la turbina,, el vapor pasa por un condensador donde vuelve a convertirse en agua.
+A este líquido lo llamamos condensado, y finalmente se reinyecta en la Tierra a través de un pozo de inyección.
+Los depósitos naturales de vapor seco son extremadamente raros en la naturaleza
 
 **Sección 3 — Planta de Vapor Flash (Flash Steam)**
-El segundo tipo es la planta flash. Se utiliza cuando el agua geotérmica está a temperaturas muy altas — por encima de los 350 grados Fahrenheit. A esta agua caliente la llamamos salmuera, y al reducir su presión en un contenedor especial, se convierte rápidamente en vapor. Ese vapor impulsa la turbina para generar electricidad, mientras que la salmuera restante se reinyecta en la Tierra.
+
+El segundo tipo es la planta de vapor de destello, también conocida como planta 'flash'.
+Este método se utiliza cuando disponemos de agua calentada de forma geotérmica a una temperatura muy alta, específicamente por encima de los 350 grados Fahrenheit.
+A esta agua caliente la llamamos salmuera, y es transferida a un contenedor especial donde se produce el vapor.
+Este vapor impulsa la turbina conectada al generador para producir electricidad, mientras que la salmuera restante o de desecho se reinyecta en la Tierra.
+
+Sección 4: Generación de electricidad Esto significa que el vapor, ahora completamente seco, es conducido a alta presión para impulsar una turbina
+. Esta turbina está conectada directamente a un generador de corriente que, al girar por la fuerza del vapor, genera la energía eléctrica que finalmente consumimos
+.
 
 **Sección 4 — Planta de Ciclo Binario (Binary Cycle)**
-El tercer tipo es la planta de ciclo binario. Se aplica cuando el recurso está a temperaturas más bajas. El agua caliente pasa por un intercambiador de calor junto a un fluido secundario — como butano o pentano — que tiene un punto de ebullición mucho menor. Ese fluido secundario se vaporiza y mueve la turbina. Como el sistema requiere dos líquidos, el agua geotérmica y el fluido secundario, se le llama ciclo binario.
+El tercer tipo es la planta de ciclo binario. Se aplica cuando el recurso (geotermico) está a temperaturas más bajas (hasta 100 grados Fahrenheit). El agua caliente pasa por un intercambiador de calor junto a un fluido secundario (con un punto de ebullición mucho menor)— como butano o pentano(pentane hydrocarbon) — . Ese fluido secundario se vaporiza y mueve la turbina. Como el sistema requiere dos líquidos, el agua geotérmica y el fluido secundario, se le llama ciclo binario.
 
 # Diapo 13 — Planta de Vapor Seco
 
