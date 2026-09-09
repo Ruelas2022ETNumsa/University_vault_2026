@@ -23,9 +23,7 @@
         "Rubbish",
         "Habits",
         "Borrar",
-        "shared",
-        "expo rec92.md",
-        "fin_REC92_expo.md"
+        "shared"
       ]
     },
     "MOC": {
@@ -3345,7 +3343,8 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "REC92"
+        "REC92",
+        "ETN1010"
       ]
     },
     "Semesters/Sem_09/REC92": {
@@ -3353,6 +3352,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "fin_REC92_expo.md",
         "tsk_update_REC92.md",
         "tsk_geo-bo.md",
         "geo-bo",
@@ -5798,10 +5798,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Rubbish/2026-09-07/expo rec92.md": {
       "isPinned": false,
       "isHidden": false
@@ -6012,10 +6008,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "fin_REC92_expo.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Rubbish/2026-09-08/expo rec92 1.md": {
       "isPinned": false,
       "isHidden": false
@@ -6105,13 +6097,8 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "data.json",
         "img903"
       ]
-    },
-    "Rubbish/2026-08-09/data.json": {
-      "isPinned": false,
-      "isHidden": false
     },
     "Rubbish/2026-08-09/img903": {
       "isPinned": false,
@@ -6125,253 +6112,7 @@
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
-      "customOrder": [
-        "Ca01a.png",
-        "Ca01e.png",
-        "Ca01d.png",
-        "Ca01b.png",
-        "Ca01c.png",
-        "Ca01f.png",
-        "Ca01g.png",
-        "Ca01h.png",
-        "Ca01hError.png",
-        "Ca01i.png",
-        "Ca01j.png",
-        "Ca01k.png",
-        "Ca01l.png",
-        "Ca01m.png",
-        "Ca01n.png",
-        "Ca01o.png",
-        "Ca01p.png",
-        "Ca01q.png",
-        "Ca01r.png",
-        "Ca01t.png",
-        "Ca01s.png",
-        "Ca01v.png",
-        "Ca01u.png",
-        "Ca01w.png",
-        "Ca01x.png",
-        "Ca01y.png",
-        "Ca01z.png",
-        "Ca01za.png",
-        "Ca01zb.png",
-        "Ca01zc.png",
-        "Ca01zd.png",
-        "Ca01ze.png",
-        "Ca01zf.png",
-        "Ca01zg.png",
-        "fonts0.asm",
-        "fonts1.asm",
-        "fonts2.asm",
-        "fonts3.asm",
-        "menu.asm",
-        "menu02.asm",
-        "menu01.asm",
-        "menu03.asm",
-        "mod13h1.asm",
-        "mod13h0.asm",
-        "mod04h0.asm",
-        "mod13h2.asm",
-        "mod13h3.asm",
-        "pila0.asm",
-        "unchar.asm"
-      ]
-    },
-    "Rubbish/2026-08-09/img903/Cap1/Ca01a.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/Ca01e.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/Ca01d.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/Ca01b.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/Ca01c.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/Ca01f.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/Ca01g.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/Ca01h.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/Ca01hError.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/Ca01i.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/Ca01j.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/Ca01k.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/Ca01l.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/Ca01m.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/Ca01n.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/Ca01o.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/Ca01p.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/Ca01q.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/Ca01r.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/Ca01t.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/Ca01s.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/Ca01v.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/Ca01u.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/Ca01w.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/Ca01x.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/Ca01y.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/Ca01z.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/Ca01za.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/Ca01zb.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/Ca01zc.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/Ca01zd.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/Ca01ze.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/Ca01zf.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/Ca01zg.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/fonts0.asm": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/fonts1.asm": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/fonts2.asm": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/fonts3.asm": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/menu.asm": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/menu02.asm": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/menu01.asm": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/menu03.asm": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/mod13h1.asm": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/mod13h0.asm": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/mod04h0.asm": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/mod13h2.asm": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/mod13h3.asm": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/pila0.asm": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-09/img903/Cap1/unchar.asm": {
-      "isPinned": false,
-      "isHidden": false
+      "customOrder": []
     },
     "Rubbish/2026-08-10": {
       "isPinned": false,
@@ -11440,6 +11181,22 @@
       ]
     },
     "Rubbish/2026-09-07/2026-09-07 23.58.02.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/REC92/fin_REC92_expo.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/ETN1010": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "INTRODUCCION A LA INTELIGENCIA ARTIFICIAL.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "Semesters/Sem_09/ETN1010/INTRODUCCION A LA INTELIGENCIA ARTIFICIAL.md": {
       "isPinned": false,
       "isHidden": false
     }
