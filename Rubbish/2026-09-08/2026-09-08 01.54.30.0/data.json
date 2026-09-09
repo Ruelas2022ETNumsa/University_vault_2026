@@ -7,13 +7,13 @@
           "items": [
             {
               "id": "play",
-              "state": {}
-            },
-            {
-              "id": "fullscreen",
               "state": {
                 "value": true
               }
+            },
+            {
+              "id": "fullscreen",
+              "state": {}
             },
             {
               "id": "pin-note",
@@ -177,7 +177,9 @@
           "items": [
             {
               "id": "play",
-              "state": {}
+              "state": {
+                "value": true
+              }
             },
             {
               "id": "pin-note",
@@ -256,9 +258,7 @@
             },
             {
               "id": "fullscreen",
-              "state": {
-                "value": true
-              }
+              "state": {}
             }
           ]
         },
@@ -366,11 +366,11 @@
   },
   "control": {
     "plugins": {
+      "play": {
+        "value": true
+      },
       "font-size": {
         "value": "30"
-      },
-      "fullscreen": {
-        "value": true
       },
       "line-height": {
         "value": "1"
@@ -395,7 +395,7 @@
     "isEnabled": true
   },
   "fullscreen": {
-    "value": true
+    "value": false
   },
   "font-size": {
     "value": "30"
@@ -407,7 +407,7 @@
     "value": false
   },
   "play": {
-    "value": false
+    "value": true
   },
   "padding": {
     "value": [
@@ -419,11 +419,5 @@
   },
   "line-height": {
     "value": "1"
-  },
-  "flip-x": {
-    "value": false
-  },
-  "flip-y": {
-    "value": false
   }
 }

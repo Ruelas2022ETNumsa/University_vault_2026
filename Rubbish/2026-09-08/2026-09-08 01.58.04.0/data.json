@@ -419,11 +419,5 @@
   },
   "line-height": {
     "value": "1"
-  },
-  "flip-x": {
-    "value": false
-  },
-  "flip-y": {
-    "value": false
   }
 }

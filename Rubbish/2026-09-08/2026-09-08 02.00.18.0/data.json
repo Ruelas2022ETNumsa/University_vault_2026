@@ -7,7 +7,9 @@
           "items": [
             {
               "id": "play",
-              "state": {}
+              "state": {
+                "value": true
+              }
             },
             {
               "id": "fullscreen",
@@ -177,7 +179,9 @@
           "items": [
             {
               "id": "play",
-              "state": {}
+              "state": {
+                "value": true
+              }
             },
             {
               "id": "pin-note",
@@ -366,6 +370,9 @@
   },
   "control": {
     "plugins": {
+      "play": {
+        "value": true
+      },
       "font-size": {
         "value": "30"
       },
@@ -407,7 +414,7 @@
     "value": false
   },
   "play": {
-    "value": false
+    "value": true
   },
   "padding": {
     "value": [
@@ -419,11 +426,5 @@
   },
   "line-height": {
     "value": "1"
-  },
-  "flip-x": {
-    "value": false
-  },
-  "flip-y": {
-    "value": false
   }
 }

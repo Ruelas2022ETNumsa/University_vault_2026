@@ -11,9 +11,7 @@
             },
             {
               "id": "fullscreen",
-              "state": {
-                "value": true
-              }
+              "state": {}
             },
             {
               "id": "pin-note",
@@ -256,9 +254,7 @@
             },
             {
               "id": "fullscreen",
-              "state": {
-                "value": true
-              }
+              "state": {}
             }
           ]
         },
@@ -369,9 +365,6 @@
       "font-size": {
         "value": "30"
       },
-      "fullscreen": {
-        "value": true
-      },
       "line-height": {
         "value": "1"
       },
@@ -395,7 +388,7 @@
     "isEnabled": true
   },
   "fullscreen": {
-    "value": true
+    "value": false
   },
   "font-size": {
     "value": "30"
@@ -419,11 +412,5 @@
   },
   "line-height": {
     "value": "1"
-  },
-  "flip-x": {
-    "value": false
-  },
-  "flip-y": {
-    "value": false
   }
 }

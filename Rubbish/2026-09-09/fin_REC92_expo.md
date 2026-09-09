@@ -1,11 +1,11 @@
 # Diapo 11 — Introducción
 
-*"Retomando lo que nos explicó Valeria sobre qué es la energía geotérmica, me corresponde ahora cubrir tres puntos centrales: 
+*"Retomando lo que nos explicó Valeria sobre qué es la energía geotérmica, me corresponde ahora cubrir tres puntos centrales:
 - primero, cómo funciona una central geotérmica paso a paso.
 - segundo, los tres tipos de centrales que existen para convertir ese calor en electricidad.
-- tercero, los usos que tiene esta energía más allá de solo generar electricidad.
+- tercero, los usos que tiene esta energía más allá de solo generar electricidad."*
 
-*Para entender todo esto, es importante tener presente que la energía geotérmica aprovecha el calor que existe en el interior de la Tierra — ese calor que se concentra en el subsuelo y que, bajo las condiciones correctas, puede ser extraído y transformado en energía útil."*
+*"Para entender todo esto, es importante tener presente que la energía geotérmica aprovecha el calor que existe en el interior de la Tierra — ese calor que se concentra en el subsuelo y que, bajo las condiciones correctas, puede ser extraído y transformado en energía útil."*
 
 # Video previo Diapo 12 (0.85x)
 
@@ -45,7 +45,7 @@ Así, la geotermia opera en un ciclo cerrado, limpio y renovable.
 
 # Diapo 12 — ¿Cómo funciona la Energía Geotérmica?
 
-*"resumiendo el proceso geotérmico sigue una cadena bien definida:*
+*"Resumiendo el proceso geotérmico, sigue una cadena bien definida:*
 
 *(1) **Exploración** — los especialistas estudian el subsuelo para identificar zonas con calor aprovechable.*
 
@@ -84,7 +84,7 @@ El flujo de vapor hace que la turbina gire, lo que permite que el generador prod
 ...espera...hasta 10
 Después de hacer girar la turbina, el vapor pasa por un condensador donde vuelve a convertirse en agua.
 ...espera...hasta 3
-A este líquido lo llamamos condensado, y finalmente se reinyecta en la Tierra a través de un pozo de inyección.
+este vapor ahora condensado a liquido, finalmente se reinyecta en la Tierra a través de un pozo de inyección.
 ...espera...hasta 5
 Los depósitos naturales de vapor seco son extremadamente raros en la naturaleza
 
@@ -112,9 +112,11 @@ Posteriormente, el vapor se enfría en un condensador para reciclar el fluido se
 
 Como el sistema opera con dos líquidos — el agua geotérmica y el fluido secundario — se le conoce como planta de ciclo binario.
 
+>puntos importantes: de los 3 topis de plantas
+
 # Diapo 13 — Planta de Vapor Seco
 
-*"Planta de vapor seco resumen:
+*"puntos importantes:
 
 -Usa vapor extraído directamente del reservorio, a temperaturas superiores a los 150°C.
 
@@ -128,9 +130,7 @@ Como el sistema opera con dos líquidos — el agua geotérmica y el fluido secu
 
 # Diapo 14 — Planta de Vapor Flash
 
-*"resumen del segundo tipo:
-
--Es la tecnología más común a nivel mundial.
+*"-Es la tecnología más común a nivel mundial.
 
 -Opera con agua a temperaturas superiores a 180°C.
 
@@ -142,15 +142,13 @@ Como el sistema opera con dos líquidos — el agua geotérmica y el fluido secu
 
 # Diapo 15 — Planta de Ciclo Binario
 
-*"Para resumir este tercer tipo:
-
--Opera con recursos a temperaturas más bajas — es el sistema más versátil de los tres.
+*"-Opera con recursos a temperaturas más bajas — es el sistema más versátil de los tres.
 
 -Su clave: usa un fluido secundario como butano o pentano que se vaporiza con menos calor, sin mezclar nunca el agua geotérmica con el fluido secundario.
 
 -Su ventaja principal: permite aprovechar recursos que los otros dos tipos no podrían usar.
 
-Y esto es directamente relevante para Bolivia — la Planta Piloto de Laguna Colorada de 5,6 MW, construida por Sacyr Industrial y Ormat, es precisamente una planta de ciclo binario.
+Y esto es directamente relevante para Bolivia — la Planta Piloto de Laguna Colorada de 5,6 MW, ~~construida por Sacyr Industrial y Ormat~~, es precisamente una planta de ciclo binario.
 
 Aprovecha fluido geotérmico extraído a 1.490 metros de profundidad a una temperatura de 170°C. Es además la planta geotérmica ubicada a mayor altitud en el mundo — a casi 5.000 metros sobre el nivel del mar.
 
@@ -160,7 +158,7 @@ Y no es el final — esta planta piloto es el paso previo a una planta de 100 MW
 
 # Diapo 16 — Usos de la Energía Geotérmica
 
-*"La energía geotérmica no se limita a generar electricidad — tiene aplicaciones en múltiples sectores:
+*"Tiene aplicaciones en múltiples sectores:
 
 -Generación eléctrica — el uso más conocido, para recursos de alta temperatura. Actualmente 35 países generan electricidad con geotermia.
 
@@ -182,4 +180,4 @@ Y no es el final — esta planta piloto es el paso previo a una planta de 100 MW
 
 *"En Bolivia, el uso de la geotermia está actualmente enfocado en la generación eléctrica — específicamente en Laguna Colorada — aunque el campo geotérmico de Apacheta ya muestra usos industriales y de calefacción local, abriendo la puerta a un aprovechamiento más amplio en el futuro."*
 
->Con esto concluye mi parte — hemos visto cómo funciona la planta de energia geotermica, los tres tipos de plantas y sus múltiples usos. Le cedo la palabra a mi compañero.
+>Con esto concluye mi parte — hemos visto cómo funciona la planta de energía geotérmica, los tres tipos de plantas y sus múltiples usos. Le cedo la palabra a mi compañero.
