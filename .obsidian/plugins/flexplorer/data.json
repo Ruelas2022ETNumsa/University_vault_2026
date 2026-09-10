@@ -11192,11 +11192,31 @@
       "isPinned": false,
       "isHidden": false,
       "customOrder": [
-        "INTRODUCCION A LA INTELIGENCIA ARTIFICIAL.md"
+        "INTRODUCCION A LA INTELIGENCIA ARTIFICIAL.md",
+        "AREA_DE_APLICACION_DE_LA_IA.md",
+        "FUNDAMENTOS_DE_LA_IA.md",
+        "_library_ETN1010.md",
+        "tareas.md"
       ],
       "sortOrder": "custom"
     },
     "Semesters/Sem_09/ETN1010/INTRODUCCION A LA INTELIGENCIA ARTIFICIAL.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/ETN1010/AREA_DE_APLICACION_DE_LA_IA.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/ETN1010/FUNDAMENTOS_DE_LA_IA.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/ETN1010/_library_ETN1010.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/ETN1010/tareas.md": {
       "isPinned": false,
       "isHidden": false
     }
