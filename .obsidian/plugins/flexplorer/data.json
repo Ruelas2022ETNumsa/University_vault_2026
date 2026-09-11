@@ -11191,14 +11191,19 @@
     "Semesters/Sem_09/ETN1010": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "INTRODUCCION A LA INTELIGENCIA ARTIFICIAL.md",
         "AREA_DE_APLICACION_DE_LA_IA.md",
         "FUNDAMENTOS_DE_LA_IA.md",
         "_library_ETN1010.md",
-        "tareas.md"
-      ],
-      "sortOrder": "custom"
+        "tareas.md",
+        "E1_FUNDAMENTOS_ETN1010.py",
+        "E1_AREA_ETN1010.py",
+        "E2_AREA_ETN1010.py",
+        "E2_FUNDAMENTOS_ETN1010.py",
+        "E3_AREA_ETN1010.py"
+      ]
     },
     "Semesters/Sem_09/ETN1010/INTRODUCCION A LA INTELIGENCIA ARTIFICIAL.md": {
       "isPinned": false,
@@ -11217,6 +11222,26 @@
       "isHidden": false
     },
     "Semesters/Sem_09/ETN1010/tareas.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/ETN1010/E1_FUNDAMENTOS_ETN1010.py": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/ETN1010/E1_AREA_ETN1010.py": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/ETN1010/E2_AREA_ETN1010.py": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/ETN1010/E2_FUNDAMENTOS_ETN1010.py": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/ETN1010/E3_AREA_ETN1010.py": {
       "isPinned": false,
       "isHidden": false
     }
