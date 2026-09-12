@@ -3579,7 +3579,6 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "2026-08-12",
         "2026-08-18",
         "tmp",
         "section.md",
@@ -3588,7 +3587,6 @@
         "2026-09-07",
         "2026-09-08",
         "2026-08-09",
-        "2026-08-10",
         "2026-08-13",
         "2026-08-15",
         "2026-08-16",
@@ -3599,22 +3597,6 @@
         "draft.md",
         "promtpx.md"
       ]
-    },
-    "Rubbish/2026-08-12": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json",
-        "2026-08-12 15.48.56.0",
-        "2026-08-12 15.49.03.0",
-        "2026-08-12 15.49.14.0",
-        "2026-08-12 15.49.20.0"
-      ]
-    },
-    "Rubbish/2026-08-12/data.json": {
-      "isPinned": false,
-      "isHidden": false
     },
     "Rubbish/2026-08-18": {
       "isPinned": false,
@@ -6113,71 +6095,6 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": []
-    },
-    "Rubbish/2026-08-10": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json",
-        "BORRADOR OK OK ETN 825 2022.pdf"
-      ]
-    },
-    "Rubbish/2026-08-10/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-10/BORRADOR OK OK ETN 825 2022.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-12/2026-08-12 15.48.56.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-08-12/2026-08-12 15.48.56.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-12/2026-08-12 15.49.03.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-08-12/2026-08-12 15.49.03.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-12/2026-08-12 15.49.14.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-08-12/2026-08-12 15.49.14.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-12/2026-08-12 15.49.20.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-08-12/2026-08-12 15.49.20.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
     },
     "Rubbish/2026-08-13": {
       "isPinned": false,
