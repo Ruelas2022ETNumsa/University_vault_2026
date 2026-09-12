@@ -48,18 +48,11 @@ Las preguntas válidas son:
 
 \begin{figure}[H]
     \centering
-    \rule{\linewidth}{0.4pt}\\[4pt]
-    {\small\itshape [Captura: respuestas exitosas con tilde]}\\[4pt]
-    \rule{\linewidth}{0.4pt}
-    \caption{Ejecución del chatbot — Ejercicio 1.}
+    \includegraphics[width=\linewidth]{Graficos/Lab1/E1_fun_001.png}
+    \caption{Ejecución del chatbot — se observan los fallos sin tilde y
+             las respuestas exitosas con tilde.}
+    \label{fig:e1_001}
 \end{figure}
-
-% ──────────────────────────────────────────────────────────────────────
-\subsection*{Código}
-
-\lstinputlisting[style=py_dark,
-    caption={Ejercicio 1 --- Chatbot b\'asico de IA},
-    label={lst:e1}]{Anexos/Lab1/E1_FUNDAMENTOS_ETN1010.py}
 
 % ══════════════════════════════════════════════════════════════════════
 \newpage
@@ -105,22 +98,57 @@ chatbot vuelve al diccionario base.
 
 \begin{figure}[H]
     \centering
-    \rule{\linewidth}{0.4pt}\\[4pt]
-    {\small\itshape [Captura: interfaz de widgets con respuesta exitosa]}\\[4pt]
-    \rule{\linewidth}{0.4pt}
-    \caption{Chatbot mejorado — respuesta con tolerancia ortográfica.}
+    \includegraphics[width=\linewidth]{Graficos/Lab1/E2_fun_001.png}
+    \caption{Vista del código en Google Colab — diccionario base y función
+             \texttt{guardar\_respuestas}.}
+    \label{fig:e2_001}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \rule{\linewidth}{0.4pt}\\[4pt]
-    {\small\itshape [Captura: panel de aprendizaje de nueva respuesta]}\\[4pt]
-    \rule{\linewidth}{0.4pt}
-    \caption{Chatbot mejorado — aprendizaje de nueva respuesta.}
+    \includegraphics[width=\linewidth]{Graficos/Lab1/E2_fun_002.png}
+    \caption{Tolerancia ortográfica — \texttt{que es la ia} (sin tilde)
+             devuelve la respuesta correcta.}
+    \label{fig:e2_002}
 \end{figure}
 
-% ──────────────────────────────────────────────────────────────────────
-\subsection*{Código}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{Graficos/Lab1/E2_fun_003.png}
+    \caption{Segunda prueba de tolerancia — \texttt{quien invento la ia}
+             (sin tilde ni acento) reconocida correctamente.}
+    \label{fig:e2_003}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{Graficos/Lab1/E2_fun_005.png}
+    \caption{Comando de salida — \texttt{adiós} con tilde cierra el procesamiento.}
+    \label{fig:e2_005}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{Graficos/Lab1/E2_fun_006.png}
+    \caption{Contenido del archivo \texttt{respuestas.json} tras la sesión —
+             se verifican las respuestas aprendidas persistidas.}
+    \label{fig:e2_006}
+\end{figure}
+
+% ══════════════════════════════════════════════════════════════════════
+\newpage
+\appendix
+\renewcommand{\thesection}{\Alph{section}}
+\section*{Apéndice — Códigos fuente}
+\addcontentsline{toc}{section}{Apéndice}
+
+\subsection*{Ejercicio 1 — Chatbot básico}
+
+\lstinputlisting[style=py_dark,
+    caption={Ejercicio 1 --- Chatbot b\'asico de IA},
+    label={lst:e1}]{Anexos/Lab1/E1_FUNDAMENTOS_ETN1010.py}
+
+\subsection*{Ejercicio 2 — Chatbot mejorado}
 
 \lstinputlisting[style=py_dark,
     caption={Ejercicio 2 --- Chatbot mejorado con \texttt{difflib} e \texttt{ipywidgets}},
