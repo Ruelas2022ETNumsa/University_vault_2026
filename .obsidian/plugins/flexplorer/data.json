@@ -11119,7 +11119,8 @@
         "E1_AREA_ETN1010.py",
         "E2_AREA_ETN1010.py",
         "E2_FUNDAMENTOS_ETN1010.py",
-        "E3_AREA_ETN1010.py"
+        "E3_AREA_ETN1010.py",
+        "e1 FUN.md"
       ]
     },
     "Semesters/Sem_09/ETN1010/INTRODUCCION A LA INTELIGENCIA ARTIFICIAL.md": {
@@ -11159,6 +11160,10 @@
       "isHidden": false
     },
     "Semesters/Sem_09/ETN1010/E3_AREA_ETN1010.py": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/ETN1010/e1 FUN.md": {
       "isPinned": false,
       "isHidden": false
     }
