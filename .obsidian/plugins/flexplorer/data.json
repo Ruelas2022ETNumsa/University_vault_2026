@@ -23,7 +23,8 @@
         "Rubbish",
         "Habits",
         "Borrar",
-        "shared"
+        "shared",
+        "Untitled.md"
       ]
     },
     "MOC": {
@@ -3837,7 +3838,8 @@
         "Graficos_legacy",
         "Preambulo",
         "ETN1015",
-        "README.md"
+        "README.md",
+        "ETN1010"
       ]
     },
     "Latex/Preambulo": {
@@ -3850,7 +3852,8 @@
         "EstiloSecciones.tex",
         "PaginaEstilo.tex",
         "Preambulo.tex",
-        "TikzEstilos.tex"
+        "TikzEstilos.tex",
+        "Preambulo 1.tex"
       ]
     },
     "Latex/README.md": {
@@ -11115,12 +11118,13 @@
         "FUNDAMENTOS_DE_LA_IA.md",
         "_library_ETN1010.md",
         "tareas.md",
-        "E1_FUNDAMENTOS_ETN1010.py",
         "E1_AREA_ETN1010.py",
         "E2_AREA_ETN1010.py",
-        "E2_FUNDAMENTOS_ETN1010.py",
         "E3_AREA_ETN1010.py",
-        "e1 FUN.md"
+        "e1 FUN.md",
+        "e2 FUN.md",
+        "e1 AREA.md",
+        "e2 AREA.md"
       ]
     },
     "Semesters/Sem_09/ETN1010/INTRODUCCION A LA INTELIGENCIA ARTIFICIAL.md": {
@@ -11143,10 +11147,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Semesters/Sem_09/ETN1010/E1_FUNDAMENTOS_ETN1010.py": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Semesters/Sem_09/ETN1010/E1_AREA_ETN1010.py": {
       "isPinned": false,
       "isHidden": false
@@ -11155,15 +11155,173 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Semesters/Sem_09/ETN1010/E2_FUNDAMENTOS_ETN1010.py": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Semesters/Sem_09/ETN1010/E3_AREA_ETN1010.py": {
       "isPinned": false,
       "isHidden": false
     },
     "Semesters/Sem_09/ETN1010/e1 FUN.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/ETN1010/e2 FUN.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/ETN1010/e1 AREA.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/ETN1010/e2 AREA.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/ETN1010": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "Anexos",
+        "Capitulos",
+        "Graficos",
+        "Main_Include.tex",
+        "README.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "Latex/ETN1010/Anexos": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "Lab4",
+        "Lab3",
+        "Lab1",
+        "Lab2",
+        "Lab5"
+      ],
+      "sortOrder": "custom"
+    },
+    "Latex/ETN1010/Capitulos": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "C00-Caratula.tex",
+        "Laboratorio1_1010.tex"
+      ],
+      "sortOrder": "custom"
+    },
+    "Latex/ETN1010/Graficos": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "Lab1",
+        "Lab2",
+        "Lab3",
+        "Lab4",
+        "img_caratula_fonfo.jpg",
+        "Lab5",
+        "logo_umsa.png"
+      ],
+      "sortOrder": "custom"
+    },
+    "Latex/ETN1010/Main_Include.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/ETN1010/README.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/ETN1010/Anexos/Lab4": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [],
+      "sortOrder": "custom"
+    },
+    "Latex/ETN1010/Anexos/Lab3": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [],
+      "sortOrder": "custom"
+    },
+    "Latex/ETN1010/Anexos/Lab1": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "E2_FUNDAMENTOS_ETN1010.py",
+        "E1_FUNDAMENTOS_ETN1010.py"
+      ],
+      "sortOrder": "custom"
+    },
+    "Latex/ETN1010/Anexos/Lab2": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [],
+      "sortOrder": "custom"
+    },
+    "Latex/ETN1010/Anexos/Lab5": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [],
+      "sortOrder": "custom"
+    },
+    "Latex/ETN1010/Capitulos/C00-Caratula.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/ETN1010/Graficos/Lab1": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [],
+      "sortOrder": "custom"
+    },
+    "Latex/ETN1010/Graficos/Lab2": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [],
+      "sortOrder": "custom"
+    },
+    "Latex/ETN1010/Graficos/Lab3": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [],
+      "sortOrder": "custom"
+    },
+    "Latex/ETN1010/Graficos/Lab4": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [],
+      "sortOrder": "custom"
+    },
+    "Latex/ETN1010/Graficos/img_caratula_fonfo.jpg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/ETN1010/Graficos/Lab5": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [],
+      "sortOrder": "custom"
+    },
+    "Latex/ETN1010/Graficos/logo_umsa.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/ETN1010/Capitulos/Laboratorio1_1010.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Preambulo/Preambulo 1.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/ETN1010/Anexos/Lab1/E1_FUNDAMENTOS_ETN1010.py": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/ETN1010/Anexos/Lab1/E2_FUNDAMENTOS_ETN1010.py": {
       "isPinned": false,
       "isHidden": false
     }

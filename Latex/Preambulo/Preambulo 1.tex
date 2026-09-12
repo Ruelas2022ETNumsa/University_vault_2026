@@ -9,7 +9,7 @@
 %   4. Tablas           — array, tabularx, multirow, longtable, booktabs
 %   5. Figuras          — graphicx, caption, subfigure, float, rotating
 %   6. Colores          — xcolor + paletas en Colores.tex
-%   7. Listados         — listings + estilos py_dark, asmstyle, miasm
+%   7. Listados         — listings + estilos matlab_dark, asmstyle, miasm
 %   8. Cajas            — tcolorbox
 %   9. TikZ             — tikz + librerías + estilos en TikzEstilos.tex
 %  10. Gráficas         — pgfplots, circuitikz
@@ -135,9 +135,9 @@
   tabsize=4
 }
 
-% ── Estilo Python (fondo azul pálido, bajo consumo de tinta) ────
-\lstdefinestyle{py_dark}{
-  language=Python,
+% ── Estilo MATLAB (fondo azul pálido, bajo consumo de tinta) ─
+\lstdefinestyle{matlab_dark}{
+  language=Matlab,
   captionpos=b,
   backgroundcolor=\color{bg_matlab},
   basicstyle=\ttfamily\small\color{black},
@@ -154,8 +154,7 @@
   tabsize=4,
   showstringspaces=false,
   xleftmargin=16pt,
-  framexleftmargin=16pt,
-  morekeywords={True,False,None,self,import,from,as,with,yield,lambda}
+  framexleftmargin=16pt
 }
 
 % ── Estilo ensamblador x86 ───────────────────────────────────

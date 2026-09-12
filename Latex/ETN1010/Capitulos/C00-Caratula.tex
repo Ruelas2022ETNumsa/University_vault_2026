@@ -1,0 +1,56 @@
+% ============================
+% CARÁTULA — C00-Caratula.tex
+% ============================
+%
+% CONTENIDO:
+%   1. Fondo        — suprime background solo en esta página
+%   2. Encabezado   — institución, logo, materia
+%   3. Cuerpo       — tema y nombre del autor
+%   4. Pie          — ciudad y fecha
+%   5. Reset        — limpia fondo global para páginas siguientes
+%
+% ============================
+
+% --- Suprimir fondo solo en la carátula ---
+\NoBgThispage
+\backgroundsetup{contents={}}
+% Página sin numeración
+\thispagestyle{empty}
+
+\begin{center}
+    % Encabezado institucional
+    \textbf{\Large Universidad Mayor de San Andrés}\\
+    \textbf{FACULTAD DE INGENIERÍA}\\
+    \textbf{Ingeniería Electrónica}\\[0.3cm]
+
+    % Logo centrado
+    \includegraphics[width=10cm]{Graficos/logo_umsa.png} \\[0.4cm]
+
+    % Materia
+    {\large Proyecto 1}\\[0.2cm]
+\end{center}
+
+\begin{flushleft}
+    \textbf{Tema:}\\[0.3cm]
+
+    \begin{center}
+        {\Large \textbf{Gestión de Investigación Exploratoria}}\\
+    \end{center}
+
+    \textbf{Nombre:}\\[0.3cm]
+    \begin{center}
+        {\Large Univ. Mijahel Alexander RUELAS MACHICADO}\\[1.4cm]
+    \end{center}
+\end{flushleft}
+
+\begin{center}
+    \textbf{La Paz – Bolivia}\\
+    \today
+\end{center}
+
+\clearpage
+\thispagestyle{empty} % Página en blanco tras la portada
+
+% --- Resetear fondo global para que no afecte al resto del documento ---
+\NoBgThispage
+\backgroundsetup{contents={}}

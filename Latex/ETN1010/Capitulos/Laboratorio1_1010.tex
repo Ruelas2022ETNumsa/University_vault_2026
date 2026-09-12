@@ -1,0 +1,129 @@
+\documentclass[../Main_Include.tex]{subfiles}
+\begin{document}
+\backgroundsetup{contents={}}  % suprime draft de background en compilación standalone
+% ============================
+% LABORATORIO 1 — Laboratorio1_1010.tex
+% ============================
+%
+% CONTENIDO:
+%   Sec. 1 — Ejercicio 1: Chatbot básico de IA
+%   Sec. 2 — Ejercicio 2: Chatbot mejorado con difflib
+%
+% DEPENDENCIAS (cargadas desde Main_Include.tex):
+%   Preambulo.tex       — paquetes, colores, estilos de código
+%   PaginaEstilo.tex    — lstset global
+%   EstiloSecciones.tex — \titleformat, fancyhdr
+%   Entornos.tex        — cuadropregunta
+%
+% ============================
+
+% --- Título del encabezado para este informe ---
+\newcommand{\tituloinforme}{Fundamentos de la Inteligencia Artificial — Laboratorio 1}
+
+% ══════════════════════════════════════════════════════════════════════
+\section{Ejercicio 1 — Chatbot básico de IA}
+
+Se implementó un chatbot en Python que responde preguntas básicas sobre IA
+mediante un diccionario de pares clave--respuesta. La entrada del usuario
+se convierte a minúsculas y se compara directamente con las claves definidas.
+
+% ──────────────────────────────────────────────────────────────────────
+\subsection*{Observaciones}
+
+El chatbot responde correctamente únicamente cuando la pregunta se escribe
+\textbf{con tilde}, tal como están definidas las claves del diccionario.
+Sin tilde la comparación falla y el programa devuelve
+\texttt{"No entiendo tu pregunta."}.
+
+Las preguntas válidas son:
+
+\begin{itemize}[leftmargin=1.5cm, itemsep=2pt]
+    \item \texttt{qué es la ia} → devuelve la definición de IA.
+    \item \texttt{quién inventó la ia} → devuelve la referencia a John McCarthy.
+    \item \texttt{adiós} → cierra el programa.
+\end{itemize}
+
+% ──────────────────────────────────────────────────────────────────────
+\subsection*{Capturas de pantalla}
+
+\begin{figure}[H]
+    \centering
+    \rule{\linewidth}{0.4pt}\\[4pt]
+    {\small\itshape [Captura: respuestas exitosas con tilde]}\\[4pt]
+    \rule{\linewidth}{0.4pt}
+    \caption{Ejecución del chatbot — Ejercicio 1.}
+\end{figure}
+
+% ──────────────────────────────────────────────────────────────────────
+\subsection*{Código}
+
+\lstinputlisting[style=py_dark,
+    caption={Ejercicio 1 --- Chatbot b\'asico de IA},
+    label={lst:e1}]{Anexos/Lab1/E1_FUNDAMENTOS_ETN1010.py}
+
+% ══════════════════════════════════════════════════════════════════════
+\newpage
+\section{Ejercicio 2 — Chatbot mejorado con \texttt{difflib}}
+
+Se amplió el chatbot incorporando la librería \texttt{difflib} para tolerancia
+ortográfica y una interfaz de widgets interactiva mediante \texttt{ipywidgets},
+diseñada para ejecutarse en Google Colab. El bot acepta preguntas con errores
+menores de escritura y permite al usuario enseñarle nuevas respuestas en tiempo
+de ejecución, que se persisten en un archivo \texttt{respuestas.json}.
+
+% ──────────────────────────────────────────────────────────────────────
+\subsection*{Observaciones}
+
+A diferencia del Ejercicio 1, la función \texttt{difflib.get\_close\_matches}
+permite reconocer preguntas sin tilde o con ortografía aproximada.
+Por ejemplo, \texttt{que es la ia} (sin tilde) devuelve la respuesta correcta.
+
+Las preguntas base del diccionario son:
+
+\begin{itemize}[leftmargin=1.5cm, itemsep=2pt]
+    \item \texttt{qué es la ia}
+    \item \texttt{quién inventó la ia}
+    \item \texttt{qué es machine learning}
+    \item \texttt{qué es deep learning}
+    \item \texttt{qué diferencia hay entre machine learning y deep learning}
+\end{itemize}
+
+\paragraph{Caso borde — entrada vacía.}
+Al presionar \emph{Enviar} sin texto, el panel de aprendizaje queda abierto
+sin posibilidad de cerrarlo, salvo ingresando y guardando una respuesta válida.
+
+\paragraph{Persistencia.}
+Las respuestas aprendidas se guardan en \texttt{respuestas.json} dentro del
+entorno de Colab. El archivo es volátil: al cerrar la sesión se elimina y el
+chatbot vuelve al diccionario base.
+
+\paragraph{Comando de salida.}
+\texttt{adiós} (con tilde) muestra \texttt{"¡Hasta luego!"} y detiene el procesamiento.
+
+% ──────────────────────────────────────────────────────────────────────
+\subsection*{Capturas de pantalla}
+
+\begin{figure}[H]
+    \centering
+    \rule{\linewidth}{0.4pt}\\[4pt]
+    {\small\itshape [Captura: interfaz de widgets con respuesta exitosa]}\\[4pt]
+    \rule{\linewidth}{0.4pt}
+    \caption{Chatbot mejorado — respuesta con tolerancia ortográfica.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \rule{\linewidth}{0.4pt}\\[4pt]
+    {\small\itshape [Captura: panel de aprendizaje de nueva respuesta]}\\[4pt]
+    \rule{\linewidth}{0.4pt}
+    \caption{Chatbot mejorado — aprendizaje de nueva respuesta.}
+\end{figure}
+
+% ──────────────────────────────────────────────────────────────────────
+\subsection*{Código}
+
+\lstinputlisting[style=py_dark,
+    caption={Ejercicio 2 --- Chatbot mejorado con \texttt{difflib} e \texttt{ipywidgets}},
+    label={lst:e2}]{Anexos/Lab1/E2_FUNDAMENTOS_ETN1010.py}
+
+\end{document}
