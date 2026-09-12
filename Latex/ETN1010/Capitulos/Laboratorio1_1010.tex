@@ -122,6 +122,14 @@ chatbot vuelve al diccionario base.
 
 \begin{figure}[H]
     \centering
+    \includegraphics[width=\linewidth]{Graficos/Lab1/E2_fun_004.png}
+    \caption{Pregunta desconocida — el bot no reconoce \texttt{adios} y despliega
+             el panel de aprendizaje para ingresar y guardar una nueva respuesta.}
+    \label{fig:e2_004}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
     \includegraphics[width=\linewidth]{Graficos/Lab1/E2_fun_005.png}
     \caption{Comando de salida — \texttt{adiós} con tilde cierra el procesamiento.}
     \label{fig:e2_005}
@@ -135,6 +143,57 @@ chatbot vuelve al diccionario base.
     \label{fig:e2_006}
 \end{figure}
 
+% ──────────────────────────────────────────────────────────────────────
+\newpage
+\subsection*{Verificación de persistencia}
+\vspace{0.5cm}
+Tras la sesión se inspeccionó el archivo \texttt{respuestas.json} ejecutando
+el siguiente comando en una celda de Colab:
+\vspace{0.3cm}
+\begin{lstlisting}[style=py_dark, label={lst:json_check}]
+import json
+with open("respuestas.json", "r", encoding="utf-8") as f:
+    print(json.dumps(json.load(f), ensure_ascii=False, indent=4))
+\end{lstlisting}
+
+\vspace{0.5cm}
+La salida obtenida fue:
+\vspace{0.3cm}
+\begin{tcolorbox}[
+    colback=bg_matlab,
+    colframe=azulprinc,
+    fontupper=\ttfamily\small,
+    boxrule=0.4pt,
+    left=6pt, right=6pt, top=4pt, bottom=4pt
+]
+\begin{verbatim}
+{
+    "qué es la ia": "La Inteligencia Artificial es la simulación
+                     de la inteligencia humana en computadoras.",
+    "quién inventó la ia": "El término 'IA' fue acuñado
+                            por John McCarthy en 1956.",
+    "qué es machine learning": "Machine Learning es un subconjunto
+                                de la IA que permite a las máquinas
+                                aprender a partir de datos sin ser
+                                programadas explícitamente.",
+    "qué es deep learning": "Deep Learning es un tipo de Machine
+                             Learning basado en redes neuronales
+                             profundas.",
+    "qué diferencia hay entre machine learning y deep learning":
+        "Machine Learning abarca diferentes técnicas de aprendizaje
+         automático, mientras que Deep Learning usa redes neuronales
+         profundas para procesar datos complejos.",
+    "adios": "chao, te cuidas",
+    "nos vemos": "bye",
+    "¡hasta luego!": "x"
+}
+\end{verbatim}
+\end{tcolorbox}
+
+Se verifica que las respuestas aprendidas durante la sesión ---
+\texttt{adios}, \texttt{nos vemos} y \texttt{¡hasta luego!} ---
+fueron correctamente persistidas en el archivo JSON.
+
 % ══════════════════════════════════════════════════════════════════════
 \newpage
 \appendix
@@ -147,6 +206,8 @@ chatbot vuelve al diccionario base.
 \lstinputlisting[style=py_dark,
     caption={Ejercicio 1 --- Chatbot b\'asico de IA},
     label={lst:e1}]{Anexos/Lab1/E1_FUNDAMENTOS_ETN1010.py}
+
+\newpage
 
 \subsection*{Ejercicio 2 — Chatbot mejorado}
 
