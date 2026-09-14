@@ -40,14 +40,14 @@
 
 ```habit-metrics
 habit: Curl Supino
-view: month
+view: history
 ```
 
 ### Curl de Martillo
 
 ```habit-metrics
 habit: Curl de Martillo
-view: month
+view: history
 ```
 
 ### Extensión de Tríceps
@@ -60,40 +60,40 @@ habit: Extensión de Tríceps
 
 ```habit-metrics
 habit: Press de Banca
-view: month
+view: history
 ```
 
 ### Press Militar
 
 ```habit-metrics
 habit: Press Militar
-view: month
+view: history
 ```
 
 ### Elevaciones Laterales
 
 ```habit-metrics
 habit: Elevaciones Laterales
-view: month
+view: history
 ```
 
 ### Dominadas
 
 ```habit-metrics
 habit: Dominadas
-view: month
+view: history
 ```
 
 ### Abdominales
 
 ```habit-metrics
 habit: Abdominales
-view: month
+view: history
 ```
 
 ### Caminata Facultad
 
 ```habit-metrics
 habit: Caminata Facultad
-view: month
+view: history
 ```
