@@ -1854,7 +1854,8 @@
       "customOrder": [
         "Partial_1",
         "Sin títuloasde342.md",
-        "tsk_ini_ETN607.md"
+        "tsk_ini_ETN607.md",
+        "Robotic_Arm_AI"
       ]
     },
     "Semesters/Sem_01/MAT101/_library_MAT101.md": {
@@ -11301,6 +11302,12 @@
     "Latex/ETN1010/Graficos/Lab1/E2_fun_006.png": {
       "isPinned": false,
       "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Robotic_Arm_AI": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [],
+      "sortOrder": "custom"
     }
   },
   "pinnedFiles": [
