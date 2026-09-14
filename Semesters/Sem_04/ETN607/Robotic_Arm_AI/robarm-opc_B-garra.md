@@ -1,66 +1,87 @@
 ---
 galaxy_body: dropship
 carrier: "[[Semesters/Sem_04/ETN607/Robotic_Arm_AI/tsk_carrier.md]]"
-scope: opcion-B
+scope: garra
 status: activo
 date: 2026-09-13
 ---
 
 ## Proposito
 
-Documenta el diseño de la garra de 3 dedos para reemplazar la pala original del Mould King Digger, usando exclusivamente piezas Technic disponibles en el set principal y los 2 sets adicionales.
+Documenta el diseño de la garra para el Robot Arm H25 modificado, usando exclusivamente piezas Technic del Core Set 45544 y la Expansion Set 45560.
 
 ---
 
 ## Contenido
 
-### Problema
+### Contexto
 
-El Mould King Digger trae pala de excavadora. Para un brazo robótico funcional se necesita una garra de 3 dedos capaz de tomar y soltar objetos.
+El Robot Arm H25 original incluye una garra de 2 lados (pinza simple) accionada por el Medium Motor en Port A. Esta garra ya es funcional para el MVP — puede tomar y soltar objetos de tamaño estándar (bloques LEGO, cubos pequeños).
 
-### Solución planteada: garra paralela de 3 dedos
+La expansión 45560 incluye piezas adicionales que permiten escalar la garra si se necesita mayor apertura o agarre de 3 puntos.
 
-Mecanismo de bielas accionado por 1 motor M. Los 3 dedos se abren y cierran simultáneamente en movimiento paralelo.
+---
+
+### Opción A — Pinza H25 original (recomendada para MVP)
+
+La garra original del H25 usa el Medium Motor con un mecanismo de clutch: cuando la garra cierra completamente o topa con el objeto, el motor desliza sin dañar el mecanismo. Esto elimina la necesidad de detectar límites por software.
 
 ```
-        [Motor M]
-            |
-       [engranaje]
-       /    |    \
-  [biela][biela][biela]
-    |      |      |
- [dedo1][dedo2][dedo3]
+[Medium Motor — Port A]
+        |
+   [engranaje]
+   /         \
+[dedo izq]  [dedo der]
 ```
 
 **Ventajas:**
-- Solo consume 1 motor (quedan 5 para el brazo)
-- Piezas Technic estándar: liftarms, pins, engranajes pequeños
-- Movimiento simple y confiable para demo
+- Ya está diseñada y probada en el H25
+- Clutch integrado → no necesita sensor de límite
+- 2 lados es suficiente para tomar objetos estándar en la demo
+- Libera tiempo de construcción para el resto del brazo
 
-### Piezas clave necesarias
+**Pendiente:**
+- [ ] Verificar apertura máxima de la pinza H25 vs tamaño del objeto de demo
+- [ ] Definir objeto estándar para la demo (recomendado: bloque LEGO 2x4 o cubo ~3cm)
 
-| Pieza Technic | Uso | Disponible en Digger |
-| ------------- | --- | -------------------- |
-| Liftarms 1x5 o 1x7 | dedos de la garra | Sí |
-| Pins 3L con bush | articulaciones | Sí |
-| Engranaje 8t o 16t | transmisión desde motor | Sí |
-| Beam 3x5 L-shape | base de la garra | Posiblemente en sets extra |
-| Conector perpendicular | unión dedos-biela | Sí |
+---
 
-### Consideraciones de diseño
+### Opción B — Garra de 3 dedos con piezas del 45560 (fase 2 o si la pinza no alcanza)
 
-- Los 3 dedos no necesitan ser totalmente independientes para el MVP — movimiento paralelo sincronizado es suficiente
-- La apertura máxima depende del largo de las bielas — ajustable con liftarms de diferente longitud
-- El motor M tiene torque suficiente para tomar objetos ligeros (bloques, pelotas pequeñas)
-- Punto de montaje: reemplaza directamente el bucket original en el extremo del boom
+Mecanismo de bielas accionado por el mismo Medium Motor (Port A). Los 3 dedos se abren y cierran simultáneamente en movimiento paralelo.
 
-### Pendiente definir
+```
+[Medium Motor — Port A]
+        |
+   [engranaje 16t]
+   /      |      \
+[biela] [biela] [biela]
+  |       |       |
+[dedo1] [dedo2] [dedo3]
+```
 
-- [ ] Boceto o referencia visual del mecanismo de bielas
+**Piezas clave del 45560 útiles para esta garra:**
+
+| Pieza Technic | Uso |
+| ------------- | --- |
+| Liftarms 1x7 | dedos de la garra |
+| Pins 3L con bush | articulaciones de los dedos |
+| Engranaje 16t | transmisión desde motor |
+| Beam 3x5 L-shape | base de montaje |
+| Conectores perpendiculares | unión dedos-biela |
+
+**Consideraciones:**
+- El clutch del motor M sigue funcionando como límite natural
+- Apertura máxima ajustable cambiando largo de bielas
+- Requiere más tiempo de construcción y prueba que la opción A
+
+**Pendiente:**
+- [ ] Boceto del mecanismo de bielas para 3 dedos
+- [ ] Verificar torque del Medium Motor con 3 dedos cargados
 - [ ] Largo óptimo de dedos (estimado: liftarms 1x7)
-- [ ] Ángulo de apertura máximo necesario según objetos a tomar
-- [ ] Prueba de torque del motor M con la garra montada
 
-### Alternativa simple (si las piezas no alcanzan)
+---
 
-Garra de 2 dedos (pinza) accionada por 1 motor — más fácil de construir, funciona igual para la demo. Requiere menos piezas y el mecanismo es más directo.
+### Decisión recomendada
+
+Empezar con la **Opción A (pinza H25 original)** para el MVP. Si el objeto de demo requiere agarre de 3 puntos o la pinza no tiene suficiente apertura, escalar a Opción B con piezas del 45560. No construir ambas en paralelo.

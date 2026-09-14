@@ -24,7 +24,8 @@
         "Habits",
         "Borrar",
         "shared",
-        "Untitled.md"
+        "Untitled.md",
+        "Untitled 1.md"
       ]
     },
     "MOC": {
@@ -11306,8 +11307,48 @@
     "Semesters/Sem_04/ETN607/Robotic_Arm_AI": {
       "isPinned": false,
       "isHidden": false,
-      "customOrder": [],
-      "sortOrder": "custom"
+      "sortOrder": "custom",
+      "customOrder": [
+        "blueprint.md",
+        "chronicle.md",
+        "logbook.md",
+        "robarm-opc_A-arquitectura.md",
+        "robarm-config.md",
+        "robarm-opc_B-garra.md",
+        "tsk_carrier.md"
+      ]
+    },
+    "Semesters/Sem_04/ETN607/Robotic_Arm_AI/blueprint.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Robotic_Arm_AI/chronicle.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Robotic_Arm_AI/logbook.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Robotic_Arm_AI/robarm-opc_A-arquitectura.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Robotic_Arm_AI/robarm-config.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Robotic_Arm_AI/robarm-opc_B-garra.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Robotic_Arm_AI/tsk_carrier.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled 1.md": {
+      "isPinned": false,
+      "isHidden": false
     }
   },
   "pinnedFiles": [

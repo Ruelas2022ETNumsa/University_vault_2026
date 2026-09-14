@@ -7,18 +7,20 @@ date_updated: 2026-09-13
 
 ## Visión general
 
-Brazo robótico construido con piezas Mould King Digger (compatible Technic), controlado por ESP32 vía Serial USB, con integración de IA gratuita (Gemini/Groq) como capa de interpretación de comandos en lenguaje natural. El sistema ejecuta skills predefinidas (saludo, trabajo de agarre) enviando JSON por Serial desde un servidor Python en PC. Proyecto académico para ETN607, Semestre 4.
+Brazo robótico construido sobre LEGO Mindstorms EV3 Education Core Set (45544) + Expansion Set (45560), controlado por el EV3 Brick vía cable USB, con integración de IA (Claude como orquestador + Gemini Flash como delegado de traducción rápida) como capa de interpretación de comandos en lenguaje natural. El sistema ejecuta skills predefinidas enviando JSON por Serial USB desde un servidor Python en PC. Proyecto académico para ETN607, Semestre 4.
 
-El criterio de éxito es: el brazo ejecuta al menos 2 skills funcionales controladas por lenguaje natural desde chat, sin costos de software, con un retraso total menor a 5 segundos.
+Punto de partida de construcción: Robot Arm H25 (modelo oficial del Core Set 45544), que usa 3 motores EV3 con encoder para base, codo y garra mediante mecanismos Technic. La expansión 45560 provee piezas estructurales adicionales para escalar el diseño.
+
+El criterio de éxito es: el brazo ejecuta al menos 2 skills funcionales controladas por lenguaje natural desde chat, con posición reproducible gracias a los encoders EV3, sin costos de software, con un retraso total menor a 5 segundos.
 
 ---
 
 ## Estado actual
 
 **Salud:** on-track
-**Resumen:** fase de diseño y decisiones técnicas completada. Hardware seleccionado, stack definido, arquitectura acordada.
-**Último avance:** selección completa de hardware y stack técnico en sesión inicial 2026-09-13.
-**Próximo hito:** diseño de garra 3 dedos + esquema de conexión electrónica.
+**Resumen:** hardware definitivo seleccionado tras reanálisis completo en sesión 2. Decisión revertida del Digger al EV3+expansión por razones técnicas de precisión y disponibilidad de componentes en Bolivia.
+**Último avance:** decisión de hardware cerrada, arquitectura de IA definida, stack técnico confirmado — 2026-09-13.
+**Próximo hito:** construir Robot Arm H25 base + planificar extensión con piezas de expansión.
 
 ---
 
@@ -30,25 +32,27 @@ El criterio de éxito es: el brazo ejecuta al menos 2 skills funcionales control
 | `tsk_carrier.md` | tsk | — | archivo de trabajo activo por sesión |
 | `chronicle.md` | chronicle | — | registro cronológico de sesiones y pruebas |
 | `robarm-config.md` | dropship | activo | configuración general de hardware y stack |
-| `robarm-opc_A-arquitectura.md` | dropship | activo | arquitectura software ESP32 + IA |
-| `robarm-opc_B-garra.md` | dropship | activo | diseño de garra 3 dedos con piezas Technic |
+| `robarm-opc_A-arquitectura.md` | dropship | activo | arquitectura software EV3 + IA |
+| `robarm-opc_B-garra.md` | dropship | activo | diseño de garra con piezas Technic del H25 |
+| `blueprint.md` | blueprint | evaluando | ideas y decisiones pendientes del proyecto |
 
 ---
 
 ## Hitos
 
-- 2026-09-13 — Decisión de hardware: Mould King Digger + 2 sets simples + ESP32
-- 2026-09-13 — Stack técnico definido: Serial USB + Gemini/Groq gratis + Python intermediario
-- 2026-09-13 — Sistema de skills con README como system prompt acordado
+- 2026-09-13 — Sesión 1: Decisión inicial de hardware: Mould King Digger + ESP32 (luego revertida)
+- 2026-09-13 — Sesión 2: Reanálisis completo — decisión revertida a EV3 Core 45544 + Expansion 45560
+- 2026-09-13 — Stack técnico definitivo: USB cable + Python + Claude/Gemini + JSON → EV3 Brick
+- 2026-09-13 — Punto de partida de construcción: Robot Arm H25 oficial del Core Set
 
 ---
 
 ## Riesgos y dependencias
 
-- Las piezas del Digger pueden no ser suficientes para garra 3 dedos → mitigado con 2 sets simples adicionales
-- Gemini/Groq API tier gratuito tiene límites de requests por minuto → aceptable para demo universitaria
+- EV3 + expansión encontrados en tienda Facebook — no en tiendas físicas; verificar disponibilidad antes de comprar
 - El docente podría pedir requisitos específicos no contemplados → pendiente consultar
-- Cámara web (Gemini Vision) no incluida en MVP → fase 2 si el tiempo lo permite
+- Cámara web (visión IA) no incluida en MVP → fase 2, viable sin cambios de hardware
+- Motores EV3 adicionales difíciles de conseguir en Bolivia → no necesarios, H25 usa 3 motores del Core Set
 
 ---
 
@@ -56,15 +60,24 @@ El criterio de éxito es: el brazo ejecuta al menos 2 skills funcionales control
 
 | Fecha | Decisión | Motivo |
 | ----- | -------- | ------ |
-| 2026-09-13 | Mould King Digger sobre LEGO Mindstorms | 500 Bs menos, 6 motores, integración ESP32 más simple |
-| 2026-09-13 | ESP32 como controlador | WiFi nativo, precio (~80 Bs), potencia suficiente |
-| 2026-09-13 | Serial USB en lugar de WiFi | Menor latencia, más confiable en demo, sin dependencia de red |
-| 2026-09-13 | Gemini/Groq API gratuita | Cero costo de software, tier gratuito suficiente para el proyecto |
-| 2026-09-13 | Skills como JSON predefinido | Elimina OTA (lento), respuesta en 2-5 seg, más confiable |
-| 2026-09-13 | FPGA Cyclone 5 descartado por ahora | Overkill para el alcance actual, agrega complejidad innecesaria |
-| 2026-09-13 | Garra 3 dedos en lugar de pala original | Requisito funcional del brazo robótico |
+| 2026-09-13 | **EV3 Core 45544 + Expansion 45560** sobre Mould King Digger | Ver nota de decisión abajo |
+| 2026-09-13 | USB cable (no WiFi) como canal de comunicación | Menor latencia, confiable en demo, sin dependencia de red |
+| 2026-09-13 | Claude como orquestador + Gemini Flash como delegado | Claude free para razonamiento y visión; Gemini para traducción rápida a JSON |
+| 2026-09-13 | Robot Arm H25 como base de construcción | Modelo oficial del Core Set, usa 3 motores EV3, código MicroPython ya existente |
+| 2026-09-13 | Muñeca como mecanismo pasivo (no motor extra) | El H25 demuestra que la muñeca se controla por biela/rack desde el codo — ahorra 1 motor |
+| 2026-09-13 | FPGA Cyclone 5 descartado | Overkill para el alcance actual |
+
+> [!note]- Por qué EV3+expansión y no el Digger
+> El Digger fue la decisión inicial (sesión 1) basada en precio (Bs 1800 vs 3000) y cantidad de motores (6 vs 3). Sin embargo, el reanálisis en sesión 2 reveló el problema central: los motores PF del Digger son DC sin encoder — el ESP32 controla por tiempo ("girar 500ms") sin saber la posición real del brazo. Esto hace que las skills sean no reproducibles y la integración con visión IA sea inviable sin agregar encoders externos por articulación (mayor costo + complejidad de montaje en Technic + firmware adicional).
+>
+> El EV3 resuelve esto de forma nativa: cada servomotor tiene encoder integrado, Python lee `motor.position` en grados reales, y el control es determinista. Además, el Robot Arm H25 demuestra que 3 motores son suficientes para un brazo funcional de 3 GDL + garra, porque la muñeca se implementa como mecanismo pasivo. El EV3 Brick tiene USB nativo con protocolo abierto, compatible con ev3dev y MicroPython. No se necesitan drivers L298N, level shifters, ni ESP32. La expansión 45560 aporta 853 piezas estructurales (engranajes, plataforma giratoria, beams) sin motores adicionales — suficiente para escalar el H25.
+>
+> En Bolivia, conseguir motores EV3 individuales o encoders externos es igual de difícil. La ventaja del EV3 es que todo lo necesario viene en los dos sets que ya están disponibles en una sola compra.
 
 > [!note]- Descartadas
-> - WiFi en ESP32 — descartado por latencia y dependencia de red en demo
-> - OTA firmware update — descartado por tiempo (30-60 seg) vs JSON Serial (ms)
-> - LEGO Mindstorms — descartado por costo y complejidad de integración ESP32
+> - Mould King Digger — descartado por motores sin encoder (precisión no reproducible sin hardware adicional)
+> - ESP32 como controlador principal — descartado (reemplazado por EV3 Brick que ya tiene USB + compute)
+> - WiFi — descartado, USB cable es suficiente y más confiable
+> - Drivers L298N — no necesarios con EV3
+> - Level shifters BSS138 — no necesarios con EV3
+> - FPGA Cyclone 5 — descartado por complejidad innecesaria
