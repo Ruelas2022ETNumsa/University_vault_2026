@@ -3588,7 +3588,6 @@
         "2026-09-07",
         "2026-09-08",
         "2026-08-09",
-        "2026-08-13",
         "2026-08-15",
         "2026-08-16",
         "2026-08-19",
@@ -6098,64 +6097,6 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": []
-    },
-    "Rubbish/2026-08-13": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "2026-08-13 19.45.21.0",
-        "2026-08-13 19.50.18.0",
-        "data.json",
-        "Notes_260609_234853.pdf",
-        "Structured Assembler Language For IBM Microcomputers.pdf",
-        "BORRADOR OK OK ETN 825 2022.pdf",
-        "ETN903 TEOcap1_260311_083759.pdf"
-      ]
-    },
-    "Rubbish/2026-08-13/2026-08-13 19.45.21.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-08-13/2026-08-13 19.45.21.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-13/2026-08-13 19.50.18.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-08-13/2026-08-13 19.50.18.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-13/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-13/Notes_260609_234853.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-13/Structured Assembler Language For IBM Microcomputers.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-13/BORRADOR OK OK ETN 825 2022.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-13/ETN903 TEOcap1_260311_083759.pdf": {
-      "isPinned": false,
-      "isHidden": false
     },
     "Rubbish/2026-08-15": {
       "isPinned": false,
@@ -11182,39 +11123,40 @@
     "Latex/ETN1010": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "Anexos",
         "Capitulos",
         "Graficos",
         "Main_Include.tex",
         "README.md"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "Latex/ETN1010/Anexos": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "Lab4",
         "Lab3",
         "Lab1",
         "Lab2",
         "Lab5"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "Latex/ETN1010/Capitulos": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "C00-Caratula.tex",
         "Laboratorio1_1010.tex"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "Latex/ETN1010/Graficos": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "Lab1",
         "Lab2",
@@ -11223,8 +11165,7 @@
         "img_caratula_fonfo.jpg",
         "Lab5",
         "logo_umsa.png"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "Latex/ETN1010/Main_Include.tex": {
       "isPinned": false,
@@ -11237,35 +11178,35 @@
     "Latex/ETN1010/Anexos/Lab4": {
       "isPinned": false,
       "isHidden": false,
-      "customOrder": [],
-      "sortOrder": "custom"
+      "sortOrder": "custom",
+      "customOrder": []
     },
     "Latex/ETN1010/Anexos/Lab3": {
       "isPinned": false,
       "isHidden": false,
-      "customOrder": [],
-      "sortOrder": "custom"
+      "sortOrder": "custom",
+      "customOrder": []
     },
     "Latex/ETN1010/Anexos/Lab1": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "E2_FUNDAMENTOS_ETN1010.py",
         "E1_FUNDAMENTOS_ETN1010.py"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "Latex/ETN1010/Anexos/Lab2": {
       "isPinned": false,
       "isHidden": false,
-      "customOrder": [],
-      "sortOrder": "custom"
+      "sortOrder": "custom",
+      "customOrder": []
     },
     "Latex/ETN1010/Anexos/Lab5": {
       "isPinned": false,
       "isHidden": false,
-      "customOrder": [],
-      "sortOrder": "custom"
+      "sortOrder": "custom",
+      "customOrder": []
     },
     "Latex/ETN1010/Capitulos/C00-Caratula.tex": {
       "isPinned": false,
@@ -11274,26 +11215,34 @@
     "Latex/ETN1010/Graficos/Lab1": {
       "isPinned": false,
       "isHidden": false,
-      "customOrder": [],
-      "sortOrder": "custom"
+      "sortOrder": "custom",
+      "customOrder": [
+        "E1_fun_001.png",
+        "E2_fun_002.png",
+        "E2_fun_003.png",
+        "E2_fun_001.png",
+        "E2_fun_004.png",
+        "E2_fun_005.png",
+        "E2_fun_006.png"
+      ]
     },
     "Latex/ETN1010/Graficos/Lab2": {
       "isPinned": false,
       "isHidden": false,
-      "customOrder": [],
-      "sortOrder": "custom"
+      "sortOrder": "custom",
+      "customOrder": []
     },
     "Latex/ETN1010/Graficos/Lab3": {
       "isPinned": false,
       "isHidden": false,
-      "customOrder": [],
-      "sortOrder": "custom"
+      "sortOrder": "custom",
+      "customOrder": []
     },
     "Latex/ETN1010/Graficos/Lab4": {
       "isPinned": false,
       "isHidden": false,
-      "customOrder": [],
-      "sortOrder": "custom"
+      "sortOrder": "custom",
+      "customOrder": []
     },
     "Latex/ETN1010/Graficos/img_caratula_fonfo.jpg": {
       "isPinned": false,
@@ -11302,8 +11251,8 @@
     "Latex/ETN1010/Graficos/Lab5": {
       "isPinned": false,
       "isHidden": false,
-      "customOrder": [],
-      "sortOrder": "custom"
+      "sortOrder": "custom",
+      "customOrder": []
     },
     "Latex/ETN1010/Graficos/logo_umsa.png": {
       "isPinned": false,
@@ -11322,6 +11271,34 @@
       "isHidden": false
     },
     "Latex/ETN1010/Anexos/Lab1/E2_FUNDAMENTOS_ETN1010.py": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/ETN1010/Graficos/Lab1/E1_fun_001.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/ETN1010/Graficos/Lab1/E2_fun_002.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/ETN1010/Graficos/Lab1/E2_fun_003.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/ETN1010/Graficos/Lab1/E2_fun_001.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/ETN1010/Graficos/Lab1/E2_fun_004.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/ETN1010/Graficos/Lab1/E2_fun_005.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/ETN1010/Graficos/Lab1/E2_fun_006.png": {
       "isPinned": false,
       "isHidden": false
     }
