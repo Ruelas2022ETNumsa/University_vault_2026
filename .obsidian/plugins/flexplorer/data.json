@@ -1130,12 +1130,13 @@
         "_claude-setup.md",
         "_claude-close.md",
         "_claude-boot.md",
-        "_start_movil.md",
+        "_start_movilxxx.md",
         "_repaso_movil.md",
         "_start_movil607P1.md",
         "_plan_movil.md",
         "_start.md",
-        "_doc_start_movil607P1.md"
+        "_doc_start_movil607P1.md",
+        "_start_movil.md"
       ]
     },
     "_skills/_claude-boot.md": {
@@ -4997,7 +4998,8 @@
         "ETN825-comp_indice_BCv1ii.md",
         "ETN825-comp_indice_BCv2i.md",
         "DOC_ETN825.md",
-        "ETN825-conceptos_BCv1.md"
+        "ETN825-conceptos_BCv1.md",
+        "ETN825-P1.md"
       ]
     },
     "_app/notebooklm/prompts/ETN825/ETN825-comp_indice_BCv1i.md": {
@@ -5021,10 +5023,6 @@
       "isHidden": false
     },
     "_skills/_start_movil607P1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_skills/_start_movil.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -11347,6 +11345,18 @@
       "isHidden": false
     },
     "Untitled 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN825/ETN825-P1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_skills/_start_movilxxx.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_skills/_start_movil.md": {
       "isPinned": false,
       "isHidden": false
     }
