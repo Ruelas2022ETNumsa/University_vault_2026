@@ -11059,8 +11059,6 @@
         "FUNDAMENTOS_DE_LA_IA.md",
         "_library_ETN1010.md",
         "tareas.md",
-        "E1_AREA_ETN1010.py",
-        "E2_AREA_ETN1010.py",
         "E3_AREA_ETN1010.py",
         "e1 FUN.md",
         "e2 FUN.md",
@@ -11085,14 +11083,6 @@
       "isHidden": false
     },
     "Semesters/Sem_09/ETN1010/tareas.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semesters/Sem_09/ETN1010/E1_AREA_ETN1010.py": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semesters/Sem_09/ETN1010/E2_AREA_ETN1010.py": {
       "isPinned": false,
       "isHidden": false
     },
@@ -11200,7 +11190,10 @@
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
-      "customOrder": []
+      "customOrder": [
+        "E2_AREA_ETN1010.py",
+        "E1_AREA_ETN1010.py"
+      ]
     },
     "Latex/ETN1010/Anexos/Lab5": {
       "isPinned": false,
@@ -11230,7 +11223,11 @@
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
-      "customOrder": []
+      "customOrder": [
+        "E1_are_001.png",
+        "E1_are_002.png",
+        "E2_are_001.png"
+      ]
     },
     "Latex/ETN1010/Graficos/Lab3": {
       "isPinned": false,
@@ -11357,6 +11354,26 @@
       "isHidden": false
     },
     "_skills/_start_movil.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/ETN1010/Graficos/Lab2/E1_are_001.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/ETN1010/Graficos/Lab2/E1_are_002.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/ETN1010/Graficos/Lab2/E2_are_001.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/ETN1010/Anexos/Lab2/E1_AREA_ETN1010.py": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/ETN1010/Anexos/Lab2/E2_AREA_ETN1010.py": {
       "isPinned": false,
       "isHidden": false
     }

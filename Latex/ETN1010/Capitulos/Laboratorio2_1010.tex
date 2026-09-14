@@ -1,0 +1,131 @@
+\documentclass[../Main_Include.tex]{subfiles}
+\begin{document}
+\backgroundsetup{contents={}}  % suprime draft de background en compilación standalone
+% ============================
+% LABORATORIO 2 — Laboratorio2_1010.tex
+% ============================
+%
+% CONTENIDO:
+%   Sec. 1 — Ejercicio 1: Carga y visualización del dataset Iris
+%   Sec. 2 — Ejercicio 2: Clasificación KNN sobre el dataset Iris
+%
+% DEPENDENCIAS (cargadas desde Main_Include.tex):
+%   Preambulo.tex       — paquetes, colores, estilos de código
+%   PaginaEstilo.tex    — lstset global
+%   EstiloSecciones.tex — \titleformat, fancyhdr
+%   Entornos.tex        — cuadropregunta
+%
+% ============================
+
+% --- Título del encabezado para este informe ---
+\newcommand{\tituloinforme}{Área de Aplicación de la Inteligencia Artificial — Laboratorio 2}
+
+% ══════════════════════════════════════════════════════════════════════
+\section{Ejercicio 1 — Carga y visualización del dataset Iris}
+
+Se implementó un programa en Python que carga el dataset Iris desde
+\texttt{scikit-learn}, lo convierte a un DataFrame de \texttt{pandas}
+y lo imprime completo en consola sin truncar ninguna fila.
+
+% ──────────────────────────────────────────────────────────────────────
+\subsection*{Observaciones}
+
+El dataset contiene 150 muestras × 5 columnas: las cuatro características
+físicas de cada flor (\texttt{sepal length}, \texttt{sepal width},
+\texttt{petal length}, \texttt{petal width}) y la columna \texttt{species},
+que codifica la especie como valor numérico: \texttt{0} = \emph{setosa},
+\texttt{1} = \emph{versicolor}, \texttt{2} = \emph{virginica}.
+
+La columna \texttt{species} muestra valores numéricos en lugar de nombres
+por decisión de diseño del ejercicio --- es más limpio visualmente y
+no se requiere un \texttt{.map()} adicional.
+
+El uso de \texttt{df.to\_string()} fuerza que \texttt{pandas} imprima
+las 150 filas completas; sin él, la salida se truncaría con \texttt{...}
+en el medio.
+
+% ──────────────────────────────────────────────────────────────────────
+\subsection*{Capturas de pantalla}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{Graficos/Lab2/E1_are_001.png}
+    \caption{Inicio de la ejecución --- filas 0 a 4, especie \emph{setosa} (species = 0).}
+    \label{fig:e1_are_001}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{Graficos/Lab2/E1_are_002.png}
+    \caption{Final de la ejecución --- filas 146 a 149, especie \emph{virginica} (species = 2).}
+    \label{fig:e1_are_002}
+\end{figure}
+
+% ══════════════════════════════════════════════════════════════════════
+\newpage
+\section{Ejercicio 2 — Clasificación KNN sobre el dataset Iris}
+
+Se implementó un clasificador KNN completo sobre el dataset Iris.
+El programa divide los datos en 80\% entrenamiento y 20\% prueba,
+entrena un modelo con $k=3$ vecinos, predice sobre el set de prueba
+y calcula el accuracy final.
+
+% ──────────────────────────────────────────────────────────────────────
+\subsection*{Observaciones}
+
+La salida del programa presenta cuatro bloques:
+
+\begin{itemize}[leftmargin=1.5cm, itemsep=2pt]
+    \item Primeras 5 filas del dataset con columnas \texttt{target} y
+          \texttt{species} (nombre de la especie).
+    \item Cantidad de muestras: \texttt{Training: 120, Test: 30}.
+    \item Comparación de las primeras 5 predicciones contra los valores
+          reales, con nombres de especie para ambas columnas.
+    \item Accuracy final del modelo.
+\end{itemize}
+
+\paragraph{Accuracy obtenido.}
+El resultado fue \textbf{100.00\%} --- es decir, las 30 muestras del set
+de prueba fueron clasificadas correctamente. Las notas del ejercicio
+mencionaban 96.67\% como valor típico con versiones anteriores de
+\texttt{scikit-learn}; la diferencia se debe a que la versión instalada
+(1.9.1) maneja el \texttt{random\_state=42} de forma ligeramente distinta.
+Ambos resultados son válidos.
+
+\paragraph{Parámetros del modelo.}
+\texttt{KNeighborsClassifier(n\_neighbors=3)} con
+\texttt{train\_test\_split(test\_size=0.2, random\_state=42)}.
+
+% ──────────────────────────────────────────────────────────────────────
+\subsection*{Capturas de pantalla}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{Graficos/Lab2/E2_are_001.png}
+    \caption{Salida completa del clasificador KNN --- dataset, muestras,
+             predicciones y accuracy 100.00\%.}
+    \label{fig:e2_are_001}
+\end{figure}
+
+% ══════════════════════════════════════════════════════════════════════
+\newpage
+\appendix
+\renewcommand{\thesection}{\Alph{section}}
+\section*{Apéndice — Códigos fuente}
+\addcontentsline{toc}{section}{Apéndice}
+
+\subsection*{Ejercicio 1 — Carga y visualización del dataset Iris}
+
+\lstinputlisting[style=py_dark,
+    caption={Ejercicio 1 --- Carga y visualizaci\'on del dataset Iris},
+    label={lst:e1_area}]{Anexos/Lab2/E1_AREA_ETN1010.py}
+
+\newpage
+
+\subsection*{Ejercicio 2 — Clasificación KNN}
+
+\lstinputlisting[style=py_dark,
+    caption={Ejercicio 2 --- Clasificaci\'on KNN sobre el dataset Iris},
+    label={lst:e2_area}]{Anexos/Lab2/E2_AREA_ETN1010.py}
+
+\end{document}
