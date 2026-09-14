@@ -55,3 +55,4 @@ fleet: Sem_04 / ETN607
 | `robarm-config.md` | dropship | activo | configuración general de hardware y stack |
 | `robarm-opc_A-arquitectura.md` | dropship | activo | arquitectura software ESP32 + IA |
 | `robarm-opc_B-garra.md` | dropship | activo | diseño de garra 3 dedos con piezas Technic |
+| `blueprint.md` | blueprint | evaluando | ideas y decisiones pendientes del proyecto |
