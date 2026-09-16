@@ -11140,7 +11140,8 @@
       "sortOrder": "custom",
       "customOrder": [
         "C00-Caratula.tex",
-        "Laboratorio1_1010.tex"
+        "Laboratorio1_1010.tex",
+        "Laboratorio2_1010.tex"
       ]
     },
     "Latex/ETN1010/Graficos": {
@@ -11374,6 +11375,10 @@
       "isHidden": false
     },
     "Latex/ETN1010/Anexos/Lab2/E2_AREA_ETN1010.py": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/ETN1010/Capitulos/Laboratorio2_1010.tex": {
       "isPinned": false,
       "isHidden": false
     }
