@@ -3591,8 +3591,6 @@
         "2026-09-07",
         "2026-09-08",
         "2026-08-09",
-        "2026-08-15",
-        "2026-08-16",
         "2026-08-19",
         "2026-08-26",
         "2026-09-02",
@@ -6097,58 +6095,6 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": []
-    },
-    "Rubbish/2026-08-15": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "scanned_words.txt",
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-08-15/scanned_words.txt": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-15/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-16": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "app.json",
-        "2026-08-16 15.46.00.0",
-        "data.json",
-        "Sin título 3.md"
-      ]
-    },
-    "Rubbish/2026-08-16/app.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-16/2026-08-16 15.46.00.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-08-16/2026-08-16 15.46.00.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-16/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-16/Sin título 3.md": {
-      "isPinned": false,
-      "isHidden": false
     },
     "Rubbish/2026-08-18/2026-08-18 23.39.47.0": {
       "isPinned": false,
