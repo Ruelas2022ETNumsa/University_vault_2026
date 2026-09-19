@@ -3583,7 +3583,6 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "2026-08-18",
         "tmp",
         "section.md",
         "2026-08-20",
@@ -3591,26 +3590,11 @@
         "2026-09-07",
         "2026-09-08",
         "2026-08-09",
-        "2026-08-19",
         "2026-08-26",
         "2026-09-02",
         "2026-09-09",
         "draft.md",
         "promtpx.md"
-      ]
-    },
-    "Rubbish/2026-08-18": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "2026-08-18 23.39.47.0",
-        "2026-08-18 23.35.59.0",
-        "data.json",
-        "README.md",
-        "_basic-memory-system.md",
-        "scilab-2026.1.0.bin.x64.exe",
-        "octave-11.3.0-w64-installer.exe"
       ]
     },
     "Rubbish/tmp": {
@@ -6095,98 +6079,6 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": []
-    },
-    "Rubbish/2026-08-18/2026-08-18 23.39.47.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "_basic-memory-system.md"
-      ]
-    },
-    "Rubbish/2026-08-18/2026-08-18 23.39.47.0/_basic-memory-system.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-18/2026-08-18 23.35.59.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "README.md"
-      ]
-    },
-    "Rubbish/2026-08-18/2026-08-18 23.35.59.0/README.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-18/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-18/README.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-18/_basic-memory-system.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-18/scilab-2026.1.0.bin.x64.exe": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-18/octave-11.3.0-w64-installer.exe": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-19": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "2026-08-19 15.29.49.0",
-        "2026-08-19 18.16.03.0",
-        "app.json",
-        "data.json",
-        "Par de Transformadas Discretas de Fourier $DFT$.md"
-      ]
-    },
-    "Rubbish/2026-08-19/2026-08-19 15.29.49.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-08-19/2026-08-19 15.29.49.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-19/2026-08-19 18.16.03.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-08-19/2026-08-19 18.16.03.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-19/app.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-19/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-19/Par de Transformadas Discretas de Fourier $DFT$.md": {
-      "isPinned": false,
-      "isHidden": false
     },
     "Rubbish/2026-08-26": {
       "isPinned": false,
