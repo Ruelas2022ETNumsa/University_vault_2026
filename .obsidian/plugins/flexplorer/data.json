@@ -24,8 +24,7 @@
         "Habits",
         "Borrar",
         "shared",
-        "Untitled.md",
-        "Untitled 1.md"
+        "Untitled.md"
       ]
     },
     "MOC": {
@@ -1854,6 +1853,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "_library_ETN607.md",
         "Partial_1",
         "Sin títuloasde342.md",
         "tsk_ini_ETN607.md",
@@ -3636,7 +3636,6 @@
         "ej_resuleto607.md",
         "Untitled.md",
         "ejercicios P1",
-        "_library_ETN607.md",
         "ETN607-T01-P1-Conceptos generales 1.md",
         "ETN607-T02-P1-Ecuaciones de Lagrange.md",
         "ETN607-T01-complementos.md",
@@ -4900,10 +4899,6 @@
       "isHidden": false
     },
     "Semesters/Sem_04/ETN607/Partial_1/ejercicios P1/P1-E22-607.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semesters/Sem_04/ETN607/Partial_1/_library_ETN607.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -11162,10 +11157,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Untitled 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_app/notebooklm/prompts/ETN825/ETN825-P1.md": {
       "isPinned": false,
       "isHidden": false
@@ -11199,6 +11190,10 @@
       "isHidden": false
     },
     "Latex/ETN1010/Capitulos/Laboratorio2_1010.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/_library_ETN607.md": {
       "isPinned": false,
       "isHidden": false
     }
