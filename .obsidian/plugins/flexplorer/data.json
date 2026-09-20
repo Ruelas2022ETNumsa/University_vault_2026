@@ -1747,15 +1747,13 @@
       "sortOrder": "custom",
       "customOrder": [
         "DOC-ETN607-transcription.md",
+        "DOC-ETN607-study.md",
         "ETN607-transcription-divisions.md",
         "ETN607-comp_apuntes_BCv4i.md",
         "ETN607-comp_indice_BCv4ii.md",
         "ETN607-transcription_Av6.md",
         "legacy",
-        "ETN607-study.md",
-        "ETN607-study-NLMv2.md",
-        "ETN607-ejercicio-detector.md",
-        "ETN607-study-NLMv3.md"
+        "ETN607-ejercicio-detector.md"
       ]
     },
     "_assets": {
@@ -1855,7 +1853,6 @@
       "customOrder": [
         "_library_ETN607.md",
         "Partial_1",
-        "Sin títuloasde342.md",
         "tsk_ini_ETN607.md",
         "Robotic_Arm_AI"
       ]
@@ -3676,10 +3673,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Semesters/Sem_04/ETN607/Sin títuloasde342.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Semesters/Sem_04/ETN607/Partial_1/ETN607-T01-ejercicios.md": {
       "isPinned": false,
       "isHidden": false
@@ -3741,6 +3734,9 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "ETN607-study.md",
+        "ETN607-study-NLMv3.md",
+        "ETN607-study-NLMv2.md",
         "ETN607-transcription_Av5.md",
         "ETN607-transcription_BCv4.md",
         "ETN607-transcription_BCv3.md",
@@ -4834,14 +4830,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_app/notebooklm/prompts/ETN607/ETN607-study.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/prompts/ETN607/ETN607-study-NLMv2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_app/notebooklm/prompts/ETN607/ETN607-ejercicio-detector.md": {
       "isPinned": false,
       "isHidden": false
@@ -4903,10 +4891,6 @@
       "isHidden": false
     },
     "_skills/_plan_movil.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/prompts/ETN607/ETN607-study-NLMv3.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -11194,6 +11178,22 @@
       "isHidden": false
     },
     "Semesters/Sem_04/ETN607/_library_ETN607.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN607/legacy/ETN607-study-NLMv2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN607/legacy/ETN607-study-NLMv3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN607/legacy/ETN607-study.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN607/DOC-ETN607-study.md": {
       "isPinned": false,
       "isHidden": false
     }
