@@ -1748,12 +1748,12 @@
       "customOrder": [
         "DOC-ETN607-transcription.md",
         "DOC-ETN607-study.md",
-        "ETN607-transcription-divisions.md",
         "ETN607-comp_apuntes_BCv4i.md",
         "ETN607-comp_indice_BCv4ii.md",
         "ETN607-transcription_Av6.md",
         "legacy",
-        "ETN607-ejercicio-detector.md"
+        "ETN607-ejercicio-detector.md",
+        "DOC-ETN607-transcription-divisions.md"
       ]
     },
     "_assets": {
@@ -1771,10 +1771,6 @@
         "P1-E7-607-24-08-2026_21-00-28.png",
         "Untitled 1 1-06-09-2026_22-28-14.png"
       ]
-    },
-    "_app/notebooklm/prompts/ETN607/ETN607-transcription-divisions.md": {
-      "isPinned": false,
-      "isHidden": false
     },
     "_hangar/_legacy/tsk_update-rclone.md": {
       "isPinned": false,
@@ -3734,6 +3730,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "ETN607-transcription-divisions.md",
         "ETN607-study.md",
         "ETN607-study-NLMv3.md",
         "ETN607-study-NLMv2.md",
@@ -11194,6 +11191,14 @@
       "isHidden": false
     },
     "_app/notebooklm/prompts/ETN607/DOC-ETN607-study.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN607/DOC-ETN607-transcription-divisions.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN607/legacy/ETN607-transcription-divisions.md": {
       "isPinned": false,
       "isHidden": false
     }
