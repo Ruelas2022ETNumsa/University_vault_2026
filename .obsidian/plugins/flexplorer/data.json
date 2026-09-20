@@ -3585,7 +3585,6 @@
       "customOrder": [
         "tmp",
         "section.md",
-        "2026-08-20",
         "2026-08-24",
         "2026-09-07",
         "2026-09-08",
@@ -3731,23 +3730,6 @@
       "isHidden": false
     },
     "_app/notebooklm/guides/ETN1015/ETN1015_octave.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-20": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "scanned_words.txt",
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-08-20/scanned_words.txt": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-08-20/data.json": {
       "isPinned": false,
       "isHidden": false
     },
