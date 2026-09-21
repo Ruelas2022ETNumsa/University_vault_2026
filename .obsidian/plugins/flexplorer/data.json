@@ -24,7 +24,6 @@
         "Habits",
         "Borrar",
         "shared",
-        "Untitled.md",
         "Untitled 1.md",
         "P2-E1-607.md",
         "P2-E2-607.md",
@@ -10855,6 +10854,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "python_contexto.md",
         "INTRODUCCION A LA INTELIGENCIA ARTIFICIAL.md",
         "AREA_DE_APLICACION_DE_LA_IA.md",
         "FUNDAMENTOS_DE_LA_IA.md",
@@ -10896,10 +10896,6 @@
       "isHidden": false
     },
     "Semesters/Sem_09/ETN1010/e2 FUN.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Untitled.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -11244,6 +11240,10 @@
       "isHidden": false
     },
     "Semesters/Sem_04/ETN607/Partial_1/_library_ETN607.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/ETN1010/python_contexto.md": {
       "isPinned": false,
       "isHidden": false
     }
