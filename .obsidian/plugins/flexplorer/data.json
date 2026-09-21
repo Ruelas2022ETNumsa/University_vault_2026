@@ -1856,7 +1856,6 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "_library_ETN607.md",
         "Partial_1",
         "tsk_ini_ETN607.md",
         "Robotic_Arm_AI"
@@ -3635,6 +3634,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "_library_ETN607.md",
         "ej_resuleto607.md",
         "Untitled.md",
         "ejercicios P1",
@@ -11179,10 +11179,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Semesters/Sem_04/ETN607/_library_ETN607.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_app/notebooklm/prompts/ETN607/legacy/ETN607-study-NLMv2.md": {
       "isPinned": false,
       "isHidden": false
@@ -11244,6 +11240,10 @@
       "isHidden": false
     },
     "Untitled 2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Partial_1/_library_ETN607.md": {
       "isPinned": false,
       "isHidden": false
     }
