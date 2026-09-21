@@ -25,7 +25,6 @@
         "Borrar",
         "shared",
         "Untitled 1.md",
-        "P2-E1-607.md",
         "P2-E2-607.md",
         "P2-E3-607.md",
         "P2-E4-607.md",
@@ -33,13 +32,15 @@
         "contexto607.md",
         "E1_NBLM.md",
         "E2_NBLM.md",
-        "E1_NBLM_CORREC.md",
-        "E1_TRASN.md",
+        "E3_NBLM.md",
         "pegar_imagen.md",
         "enunp2.md",
         "Untitled.md",
         "E1_F.md",
-        "E2_F.md"
+        "E2_F.md",
+        "P2-E1-607.md",
+        "E3_F.md",
+        "E4_NBLM.md"
       ]
     },
     "MOC": {
@@ -11213,10 +11214,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "P2-E1-607.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "P2-E2-607.md": {
       "isPinned": false,
       "isHidden": false
@@ -11257,10 +11254,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "E1_NBLM_CORREC.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "E2_NBLM.md": {
       "isPinned": false,
       "isHidden": false
@@ -11270,10 +11263,6 @@
       "isHidden": false
     },
     "_app/notebooklm/prompts/ETN607/legacy/DOC-ETN607-transcription-divisions.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "E1_TRASN.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -11294,6 +11283,22 @@
       "isHidden": false
     },
     "E2_F.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "P2-E1-607.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "E3_NBLM.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "E3_F.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "E4_NBLM.md": {
       "isPinned": false,
       "isHidden": false
     }

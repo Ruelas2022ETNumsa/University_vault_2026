@@ -54,8 +54,8 @@ Hallar la ecuación de movimiento de Lagrange del sistema (1 GDL: $x_1$).
     \draw[<->, maincolor] (2.5,-1.2) -- (5.5,-1.2) node[midway, below] {$B_1$};
     \draw[dotted] (5.5,0) -- (5.5,-1.4);
 
-    % Cota B2 — de pared a pared
-    \draw[<->, accentcolor] (0,-1.7) -- (7,-1.7) node[midway, below] {$B_2$};
+    % Cota B — de pared a pared
+    \draw[<->, accentcolor] (0,-1.7) -- (7,-1.7) node[midway, below] {$B$};
 
     % Coordenada y2 — vertical desde piso hasta base inferior de m2
     \draw[->, accentcolor, thick] (-0.7,0) -- (-0.7,1.5) node[midway, left] {$y_2$};
