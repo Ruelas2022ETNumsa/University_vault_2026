@@ -5,8 +5,8 @@ scope: vault
 audience: [usuario, claude]
 tags: [beacon, notebooklm, ETN607, infraestructura, prompts, study, ejercicios]
 date_created: 2026-09-20
-date_updated: 2026-09-20
-reviewed: 2026-09-20
+date_updated: 2026-09-21
+reviewed: 2026-09-21
 status: activo
 ---
 
@@ -20,26 +20,34 @@ Documentación del prompt de estudio y resolución de ejercicios para ETN607 (Me
 
 | Archivo | Rol | Estado |
 |---|---|---|
-| *(pendiente)* | Prompt de estudio + resolución — Parcial 2 | por crear |
+| `ETN607-study-P2v1.md` | Resolución de ejercicios T3–T4 + generación de figuras TikZJax | activo ✅ |
 
 > Los prompts de Parcial 1 (`ETN607-study.md`, `ETN607-study-NLMv2.md`, `ETN607-study-NLMv3.md`) son **legacy** — conservados como referencia en `legacy/`. No usar.
 
 ---
 
-## Para qué sirve este prompt
+## Para qué sirve `ETN607-study-P2v1`
 
-El prompt de study cubre dos funciones:
+Exclusivamente resolución de ejercicios T3–T4. No incluye consulta de concepto teórico.
 
-### Función 1 — Consulta de concepto puntual
-Dado un nombre de concepto o subtítulo del temario, NLM busca en los libros fuente y entrega un bloque con definición formal + complemento nivel B o C.
+**Mensajes disponibles:**
+- **M1 / Resolver** — resolución de enunciado propio ingresado directamente
+- **M2 / Enunciado** — recibe enunciado pulido desde Claude (detector P2) y lo resuelve
+- **M3 / Variante** — recibe variante de un ejercicio base (P2-E1 a P2-E5) y lo resuelve completo
 
-**Mensajes disponibles (todas las versiones):**
-- **M1 / Concepto** — consulta de un subtítulo del temario
-- **M2 / Resolver** — resolución de enunciado propio paso a paso
-- **M3 / Enunciado** *(desde v2)* — recibe enunciado pulido desde Claude y lo resuelve
+**Ejercicios de referencia cargados (P2):**
 
-### Función 2 — Resolución de ejercicios
-El prompt recibe un enunciado (propio o externo) y lo resuelve con desarrollo algebraico completo, sin saltear pasos. Usa los ejercicios resueltos del parcial como referencia de nivel y formato.
+| Archivo | Sistema | N | Coord. |
+|---|---|---|---|
+| `P2-E1-607.md` | Bloque horizontal + 2 masas colgantes + 2 resortes | 2 | x₁, y₃ |
+| `P2-E2-607.md` | Bloque en plano 60° + masa colgante | 1 | x₁ |
+| `P2-E3-607.md` | 3 masas + polea + 2 resortes | 2 | y₃, a |
+| `P2-E4-607.md` | Carro M + péndulo simple m | 2 | x, θ |
+| `P2-E5-607.md` | Péndulo doble (igual longitud ℓ) | 2 | θ, φ |
+
+**Procedimiento obligatorio:** Paso 0 (identificación) → Paso 1 (coord + GDL) → Paso 2 (T) → Paso 3 (V) → Paso 4 (Lagrange por cada qᵢ) → Paso 5 (EDOs encuadradas con `\boxed{}`)
+
+**Genera figura TikZJax** de cada sistema antes de la resolución.
 
 ---
 
@@ -101,28 +109,42 @@ Fuentes de ejercicios: Nelson Cap.11–13 · Wells Cap.1–2
 
 ---
 
-## Base para el prompt de Parcial 2
+## Alcance temático — Parcial 2
 
-### Punto de partida recomendado
-Fork de **v3** — es la versión más completa:
-- TikZJax con `\begin{tikzpicture}` obligatorio ✓
-- M3 para enunciados externos ✓
-- Lista de ejercicios de referencia con descripción ✓
+| Tema | Contenido |
+|---|---|
+| T3 — Lagrange para una partícula | Deducción · integración · marcos móviles · restricciones móviles |
+| T4 — Lagrange para sistema de partículas | Deducción · fuerzas generalizadas · marcos móviles · restricciones móviles |
 
-### Qué actualizar para Parcial 2
-- **Temario**: reemplazar T1–T2 por los temas del Parcial 2 (T3–T8 según corresponda)
-- **Fuentes**: actualizar según `_library_ETN607.md` para los nuevos temas
-- **Ejercicios de referencia**: cargar los ejercicios resueltos del Parcial 2
-- **Alcance**: actualizar la regla de rechazo (`Solo T1 y T2` → temas del P2)
-- **Nombre sugerido**: `ETN607-study-NLMv4.md` o `ETN607-study-P2v1.md`
+Fuentes de teoría: Taylor Cap.7 · Goldstein Cap.1–2
+Fuentes de ejercicios: Wells Cap.4–5 · Lim (sección Mechanics of a System)
+
+## Detector de ejercicio — P2
+
+Prompt para Claude (pre-NLM) que genera enunciados formales a partir de fotos o descripciones:
+
+| Archivo | Alcance | Estado |
+|---|---|---|
+| `ETN607-ejercicio-detector_P1.md` | T1–T2 | legacy |
+| `ETN607-ejercicio-detector_P2.md` | T3–T4 | activo ✅ |
+
+Flujo: foto/descripción → Claude (detector P2) → snippet `Enunciado: ...` → NLM (study-P2v1 M2)
 
 ---
 
 %%
 # galaxy-links
+[[ETN607-study-P2v1]]
+[[ETN607-ejercicio-detector_P2]]
+[[ETN607-ejercicio-detector_P1]]
 [[ETN607-study]]
 [[ETN607-study-NLMv2]]
 [[ETN607-study-NLMv3]]
 [[DOC-ETN607-transcription]]
 [[_library_ETN607]]
+[[P2-E1-607]]
+[[P2-E2-607]]
+[[P2-E3-607]]
+[[P2-E4-607]]
+[[P2-E5-607]]
 %%
