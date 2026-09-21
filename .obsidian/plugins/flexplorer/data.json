@@ -36,12 +36,9 @@
         "pegar_imagen.md",
         "enunp2.md",
         "Untitled.md",
-        "E1_F.md",
-        "E2_F.md",
         "P2-E1-607.md",
-        "E3_F.md",
         "E4_NBLM.md",
-        "E4_F.md"
+        "E5_NBLM.md"
       ]
     },
     "MOC": {
@@ -1868,7 +1865,8 @@
       "customOrder": [
         "Partial_1",
         "tsk_ini_ETN607.md",
-        "Robotic_Arm_AI"
+        "Robotic_Arm_AI",
+        "Partial_2"
       ]
     },
     "Semesters/Sem_01/MAT101/_library_MAT101.md": {
@@ -11279,14 +11277,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "E1_F.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "E2_F.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "P2-E1-607.md": {
       "isPinned": false,
       "isHidden": false
@@ -11295,15 +11285,51 @@
       "isPinned": false,
       "isHidden": false
     },
-    "E3_F.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "E4_NBLM.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "E4_F.md": {
+    "E5_NBLM.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Partial_2": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "ejercicios P2"
+      ],
+      "sortOrder": "custom"
+    },
+    "Semesters/Sem_04/ETN607/Partial_2/ejercicios P2": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "E5_F.md",
+        "E4_F.md",
+        "E3_F.md",
+        "E2_F.md",
+        "E1_F.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "Semesters/Sem_04/ETN607/Partial_2/ejercicios P2/E5_F.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Partial_2/ejercicios P2/E1_F.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Partial_2/ejercicios P2/E2_F.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Partial_2/ejercicios P2/E3_F.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Partial_2/ejercicios P2/E4_F.md": {
       "isPinned": false,
       "isHidden": false
     }

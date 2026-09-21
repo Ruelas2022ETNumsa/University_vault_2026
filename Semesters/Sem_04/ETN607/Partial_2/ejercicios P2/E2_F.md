@@ -1,6 +1,6 @@
-Un bloque-cuña de masa $m_1$ desliza sin fricción sobre una superficie horizontal, conectado a una pared fija mediante un resorte de constante $K$ y longitud natural $\ell_0$. Una segunda cuña de masa $m_2$ apoya sobre la cara inclinada a $60°$ de $m_1$ y está guiada verticalmente por una pared fija, de modo que solo puede desplazarse en dirección vertical. La restricción geométrica del contacto impone $\dot{y}_2 = -\dot{x}_1/\sqrt{3}$.
+Un bloque-cuña de masa $m_1$ y ancho $B_1$ desliza sin fricción sobre una superficie horizontal, conectado a la pared derecha mediante un resorte de constante $K$ y longitud natural $\ell_0$. La cara izquierda de $m_1$ está inclinada a $60°$ respecto a la horizontal. Una segunda cuña de masa $m_2$ apoya su cara inclinada sobre la de $m_1$ y está guiada verticalmente por la pared izquierda, de modo que solo puede desplazarse en dirección vertical. La distancia entre paredes es $B$ y la posición horizontal de $m_1$ medida desde la pared izquierda es $x_1$.
 
-Hallar la ecuación de movimiento de Lagrange del sistema (1 GDL: $x_1$).
+Hallar la ecuación de movimiento de Lagrange del sistema.
 
 ---
 
@@ -23,9 +23,6 @@ Hallar la ecuación de movimiento de Lagrange del sistema (1 GDL: $x_1$).
     \fill[pattern=north east lines] (7,0) rectangle (7.3,3);
     \draw[thick] (7,0) -- (7,3);
 
-    % m1 — trapecio: base ancha abajo, cara inclinada 60° a la izquierda, lado derecho vertical con resorte
-    % esquinas: (2.5,0) vértice inf-izq, (5.5,0) inf-der, (5.5,1.5) sup-der, (3.433,1.5) sup-izq
-    % la cara izq inclinada va de (2.5,0) a (3.433,1.5): tan60=1.5/(3.433-2.5)=1.5/0.933≈1.608 ≈ correcto con sqrt3
     \draw[fill=teal!10, draw=maincolor, thick] (2.5,0) -- (5.5,0) -- (5.5,1.5) -- (3.366,1.5) -- cycle;
     \node[maincolor] at (4.5,0.7) {$m_1$};
 
@@ -37,11 +34,6 @@ Hallar la ecuación de movimiento de Lagrange del sistema (1 GDL: $x_1$).
     \draw[thick, maincolor] (2.5,0) ++(0.5,0) arc (0:60:0.5);
     \node[maincolor] at (3.25,0.28) {$60^\circ$};
 
-    % m2 — mismo trapecio girado 180°, pegado a pared izquierda
-    % m1 girado 180°: cara inclinada queda a la derecha, lado izq vertical en x=0
-    % esquinas: (0,1.5) inf-izq, (2.134,1.5) inf-der (=ancho de m1 sup), (0,3.0) sup-izq, (0+B,3.0) sup-der
-    % ancho sup de m1 = 5.5-3.366=2.134, ancho inf de m1 = 5.5-2.5=3.0
-    % m2 girado: base ancha ARRIBA (ancho 3.0), base angosta ABAJO (ancho 2.134), cara inclinada a la derecha
     \draw[fill=orange!10, draw=accentcolor, thick] (0,1.5) -- (2.134,1.5) -- (3.0,3.0) -- (0,3.0) -- cycle;
     \node[accentcolor] at (1.0,2.3) {$m_2$};
 
@@ -66,39 +58,47 @@ Hallar la ecuación de movimiento de Lagrange del sistema (1 GDL: $x_1$).
 \end{document}
 ```
 
-> figura v4 — $m_1$ trapecio con cara inclinada 60° a la izquierda y resorte a la derecha; $m_2$ mismo trapecio girado 180° pegado a pared izquierda, cara inclinada a la derecha. Contacto en interfaz inclinada.
+> **Descripción de la figura:** $m_1$ (teal, trapecio) reposa sobre el piso con su cara derecha vertical conectada al resorte $K$ y su cara izquierda inclinada a $60°$. $m_2$ (naranja, trapecio invertido) está pegada a la pared izquierda y apoya su cara inclinada derecha sobre la de $m_1$; solo puede moverse verticalmente. La coordenada $x_1$ mide la posición horizontal del vértice inferior izquierdo de $m_1$ desde la pared izquierda. La coordenada $y_2$ mide la altura de la base inferior de $m_2$ desde el piso. Se indican las cotas $B_1$ (ancho de $m_1$) y $B$ (distancia entre paredes).
 
 ---
 
-## Coordenadas y restricciones
+## Resolución
 
-Coordenadas posibles: $x_1,\ y_2$
+### Coordenadas y GDL
 
-Restricción geométrica — contacto en interfaz a $60°$:
+Coordenadas posibles del sistema:
 
-$$\tan 60° = \sqrt{3} = \frac{y_2}{B_2 - x_1} \implies B_2 - x_1 = \frac{y_2}{\sqrt{3}} \cdot \sqrt{3} \implies y_2 = \frac{B_2 - x_1}{\sqrt{3}}$$
+$$N = (x_1,\ y_2)$$
 
-Derivando:
+Donde $x_1$ es la posición horizontal de $m_1$ e $y_2$ es la posición vertical de $m_2$.
+
+Restricción geométrica por contacto en la interfaz inclinada a $60°$:
+
+$$\tan 60° = \sqrt{3} = \frac{y_2}{B_2 - x_1} \implies y_2 = \frac{B_2 - x_1}{\sqrt{3}}$$
+
+Derivando con respecto al tiempo:
 
 $$\dot{y}_2 = -\frac{1}{\sqrt{3}}\,\dot{x}_1$$
 
-**GDL = 1** — coordenada independiente: $x_1$
+Número de grados de libertad:
+
+$$\text{GDL} = N - \text{restricciones} = 2 - 1 = 1$$
+
+Coordenada independiente seleccionada: $x_1$.
 
 ---
 
-## Energía cinética
+### Energía cinética
 
 $$T = \frac{1}{2} m_1 \dot{x}_1^2 + \frac{1}{2} m_2 \dot{y}_2^2$$
 
 Sustituyendo $\dot{y}_2 = -\dfrac{\dot{x}_1}{\sqrt{3}}$:
 
-$$T = \frac{1}{2} m_1 \dot{x}_1^2 + \frac{1}{2} m_2 \frac{\dot{x}_1^2}{3} = \frac{1}{2}\!\left(m_1 + \frac{m_2}{3}\right)\dot{x}_1^2$$
-
 $$\boxed{T = \frac{1}{2}\!\left(m_1 + \frac{m_2}{3}\right)\dot{x}_1^2}$$
 
 ---
 
-## Energía potencial
+### Energía potencial
 
 $$V = \frac{1}{2}K(B - B_1 - x_1 - \ell_0)^2 + m_2 g\, y_2$$
 
@@ -108,9 +108,9 @@ $$\boxed{V = \frac{1}{2}K(B - B_1 - x_1 - \ell_0)^2 + \frac{m_2 g}{\sqrt{3}}(B_2
 
 ---
 
-## Ecuación de Lagrange
+### Ecuación de Lagrange
 
-### Para $x_1$
+#### Para $x_1$
 
 $$\frac{d}{dt}\!\left(\frac{\partial T}{\partial \dot{x}_1}\right) = \left(m_1 + \frac{m_2}{3}\right)\ddot{x}_1, \qquad \frac{\partial T}{\partial x_1} = 0$$
 
@@ -118,6 +118,6 @@ $$-\frac{\partial V}{\partial x_1} = +K(B - B_1 - x_1 - \ell_0) + \frac{m_2 g}{\
 
 ---
 
-## EDO final
+### EDO final
 
 $$\boxed{\left(m_1 + \frac{m_2}{3}\right)\ddot{x}_1 = +K(B - B_1 - x_1 - \ell_0) + \frac{m_2 g}{\sqrt{3}}}$$

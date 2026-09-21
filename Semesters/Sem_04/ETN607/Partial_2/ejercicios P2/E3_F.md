@@ -77,9 +77,11 @@ Hallar las ecuaciones de movimiento de Lagrange del sistema (2 GDL: $y_3$, $a$).
 
 ---
 
-## Coordenadas y restricciones
+## Coordenadas y GDL
 
-Coordenadas posibles: $y_1,\ y_2,\ y_3$
+Coordenadas posibles del sistema:
+
+$$N = (y_1,\ y_2,\ y_3)$$
 
 Restricción — cable inextensible por polea 2:
 
@@ -87,7 +89,11 @@ $$H - y_2 + \pi R_2 + y_3 - y_2 = \ell \implies y_2 = \frac{1}{2}(H + \pi R_2 + 
 
 $$\dot{y}_2 = \frac{\dot{y}_3}{2}$$
 
-**GDL = 3 - 1 = 2** — coordenadas independientes: $y_3$ y $a$
+Número de grados de libertad:
+
+$$\text{GDL} = N - \text{restricciones} = 3 - 1 = 2$$
+
+Coordenadas independientes seleccionadas: $y_3$ y $a$
 
 Relación entre poleas:
 

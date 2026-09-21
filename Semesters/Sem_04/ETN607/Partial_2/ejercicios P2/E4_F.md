@@ -62,11 +62,17 @@ Hallar las ecuaciones de movimiento de Lagrange del sistema (2 GDL: $x$, $\theta
 
 ## Coordenadas y GDL
 
-Coordenadas generalizadas: $x$ (posición horizontal del carro) y $\theta$ (ángulo del péndulo respecto a la vertical)
+Coordenadas posibles del sistema:
 
-**GDL = 2** — sin restricciones adicionales
+$$N = (x,\ \theta)$$
 
-Posición de $m$:
+Sin restricciones adicionales — ambas coordenadas son independientes.
+
+Número de grados de libertad:
+
+$$\text{GDL} = 2 \quad \text{con coordenadas independientes } (x,\,\theta)$$
+
+Posición absoluta de $m$:
 
 $$x_2 = x + \ell\sin\theta \qquad y_2 = H + \ell\cos\theta$$
 
