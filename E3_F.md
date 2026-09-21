@@ -95,12 +95,8 @@ $$y_2 = y_1 + a \implies y_1 = y_2 - a = \frac{1}{2}(H + \pi R_2 + y_3 - \ell) -
 
 $$\dot{y}_1 = \frac{\dot{y}_3}{2} - \dot{a}$$
 
-> **Aux — expansión de $y_1$:**
-> La expresión $(y_1 - \ell_0)$ aparece en $V$ y en las EDOs. Sustituyendo $y_1$:
-> $$y_1 - \ell_0 = \frac{H + \pi R_2 + y_3 - \ell}{2} - a - \ell_0 = \frac{H}{2} + \frac{\pi R_2}{2} + \frac{y_3}{2} - \frac{\ell}{2} - a - \ell_0$$
-> Del mismo modo, $(H - y_1 + \pi R_1 + a - \ell_0')$ expandido:
-> $$H - y_1 + \pi R_1 + a - \ell_0' = \frac{H}{2} - \frac{\pi R_2}{2} - \frac{y_3}{2} + \frac{\ell}{2} + 2a + \pi R_1 - \ell_0'$$
-> Estas dos expansiones son lo que el docente escribió directamente en las EDOs — sin dejar $y_1$ como símbolo.
+> **Aux:** $y_1$ es cambio de variable — el docente lo expande directamente en las EDOs:
+> $y_1 - \ell_0 = \tfrac{H + \pi R_2 + y_3 - \ell}{2} - a - \ell_0$ · · · $H - y_1 + \pi R_1 + a - \ell_0' = \tfrac{H - \pi R_2 - y_3 + \ell}{2} + 2a + \pi R_1 - \ell_0'$
 
 ---
 

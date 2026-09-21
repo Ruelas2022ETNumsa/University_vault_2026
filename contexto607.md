@@ -3,111 +3,86 @@ title: "ETN607 — Contexto sesión P2"
 scope: vault
 tags: [ETN607, sesión, P2, notebooklm]
 date_updated: 2026-09-21
-hora_inicio: 12:20
-worker: alx_gml
+hora_inicio: 16:40
+worker: krajo
 ---
 
 # ETN607 — Contexto sesión P2
 
 ---
 
-## Estado al cierre de sesión (21-09-2026)
+## Estado al cierre de sesión (21-09-2026 · sesión 2)
 
 ### Completado hoy
 
-- Prompt de resolución `ETN607-study-P2v1.md` → revisado, corregido, listo
-- Prompt de transcripción `ETN607-transcription_Av7.md` → reescrito desde cero, simplificado para ejercicios únicamente
-- Enunciados P2 generados desde PDF → `enunp2.md`
-- E1 transcripto por docente → `P2-E1-607.md` (fuente de verdad)
-- E1 entregado por NBLM (M1 sin enunciado) → `E1_NBLM.md` — tenía errores
-- E1 corregido manualmente → `E1_NBLM_CORREC.md`
+- `E1_F.md` → generado, revisado, EDOs factorizadas, enunciado colocado por usuario ✅
+- `E2_F.md` → generado, figura v4 corregida (2 cuñas trapecio, $B_2 \to B$), desarrollo completo ✅
+- `E3_F.md` → generado, figura corregida ($m_3$ como masa puntual, ramal izq de $m_2$ al piso), nota auxiliar de expansión de $y_1$ ✅
+- `E4_F.md` → generado, péndulo invertido (hacia arriba), términos de corrección en EDO de $\theta$ mantenidos explícitos ✅
+- `E5_F.md` → **pendiente**
 
 ### Pendiente
 
-- Probar V7 con PDF de un solo ejercicio (E2–E5)
-- Armar E1_FINAL = transcripción + NBLM corregido + NBLM desde PDF
-- Decidir si se usan enunciados de `enunp2.md` como complemento en el prompt
+- Generar `E5_F.md` (falta fuente: `P2-E5-607.md` + `E5_NBLM.md`)
+- Revisar si los enunciados en cada `EX_F.md` son suficientes o hay que ajustarlos
+- Verificar figuras en Obsidian (E2 v4, E3, E4 péndulo invertido)
 
 ---
 
-## Archivos clave
+## Archivos EX_F generados esta sesión
+
+| Archivo | Ubicación | Estado |
+|---|---|---|
+| `E1_F.md` | `E:\University_vault_2026\` | ✅ completo |
+| `E2_F.md` | `E:\University_vault_2026\` | ✅ completo — figura v4, $B$ pared a pared |
+| `E3_F.md` | `E:\University_vault_2026\` | ✅ completo — $m_3$ puntual, GDL $(y_3, a)$ |
+| `E4_F.md` | `E:\University_vault_2026\` | ✅ completo — péndulo invertido, términos $\dot{x}\sin\theta\dot{\theta}$ explícitos |
+| `E5_F.md` | `E:\University_vault_2026\` | ⏳ pendiente |
+
+## Archivos fuente
 
 | Archivo | Ubicación | Rol |
 |---|---|---|
-| `P2-E1-607.md` | `E:\University_vault_2026\` | Transcripción docente E1 — fuente de verdad |
-| `P2-E2-607.md` … `P2-E5-607.md` | `E:\University_vault_2026\` | Transcripciones docente E2–E5 |
-| `enunp2.md` | `E:\University_vault_2026\` | Enunciados formales E1–E5 generados hoy |
-| `E1_NBLM.md` | `E:\University_vault_2026\` | Respuesta de NBLM con M1 — tiene errores de simplificación geométrica |
-| `E1_NBLM_CORREC.md` | `E:\University_vault_2026\` | E1_NBLM corregido manualmente — paso intermedio |
-| `ETN607-study-P2v1.md` | `E:\University_vault_2026\_app\notebooklm\prompts\ETN607\` | Prompt resolución T3–T4 — listo ✅ |
-| `ETN607-transcription_Av7.md` | `E:\University_vault_2026\_app\notebooklm\prompts\ETN607\` | Prompt transcripción ejercicios — listo ✅ |
+| `P2-E1-607.md` … `P2-E5-607.md` | `E:\University_vault_2026\` | Transcripciones docente — fuente de verdad |
+| `E1_NBLM.md` … `E4_NBLM.md` | `E:\University_vault_2026\` | Entregas de NBLM por ejercicio |
+| `ETN607-study-P2v1.md` | `E:\University_vault_2026\_app\notebooklm\prompts\ETN607\` | Prompt resolución T3–T4 ✅ |
+| `ETN607-transcription_Av7.md` | `E:\University_vault_2026\_app\notebooklm\prompts\ETN607\` | Prompt transcripción ejercicios ✅ |
 
 ---
 
 ## Prompts activos
 
-### ETN607-study-P2v1.md
-Prompt de resolución. NBLM recibe un enunciado y devuelve figura TikZJax + Paso 0→5 + EDOs con `\boxed{}`.
-
-Regla clave agregada hoy: `PROHIBIDO generar archivos en el Studio`.
-
-Mensaje a usar:
-```
-Resolver: [enunciado desde enunp2.md]
-```
-
 ### ETN607-transcription_Av7.md
-Prompt simplificado — solo ejercicios, sin Cornell, sin IMA, sin marginalia.
-
-NBLM recibe el PDF (un ejercicio por PDF), genera enunciado, TikZJax, transcribe con pasos comentados y corrige si hay errores.
+NBLM recibe PDF (un ejercicio por PDF) → genera enunciado + TikZJax + transcripción con pasos comentados.
 
 Mensaje a usar:
 ```
-De E1P2.pdf, muéstrame el ejercicio con la figura del bloque m1 con resorte K y dos masas colgantes m2 y m3
+De [EXP2.pdf], muéstrame el ejercicio con [descripción breve del sistema]
 ```
 
-Nombres de PDF definidos: `E1P2.pdf`, `E2P2.pdf`, … `E5P2.pdf`
+### ETN607-study-P2v1.md
+NBLM recibe enunciado → devuelve figura TikZJax + Paso 0→5 + EDOs con `\boxed{}`.
+Regla activa: `PROHIBIDO generar archivos en el Studio`.
 
----
-
-## Errores que cometió NBLM (registrar para mejorar prompt)
-
-### E1 — M1 (resolución directa)
-- **Omitió términos geométricos** en V: no incluyó $b_1/2$, $b_2/2$, $b_3/2$ ni $C_\rho$
-- **Agrupó incorrectamente** T en $(m_1+m_2)\dot{x}_1^2$ en lugar de mantener separados $m_1\dot{x}_1^2 + m_2\dot{x}_1^2$
-- **No expandió** la EDO de $y_3$ como hace el docente
-- **Generó archivo en Studio** — ya corregido con regla PROHIBIDO en el prompt
-
----
-
-## Flujo E_FINAL (pendiente ejecutar)
-
+Mensaje a usar:
 ```
-P2-EX.pdf
-    ↓ (Av7 — M transcripción)
-NBLM transcribe + TikZJax + pasos
-    ↓
-EX_NBLM_TRANSC.md
-    +
-PX-EX-607.md (transcripción docente)
-    +
-EX_NBLM_CORREC.md (corrección manual si aplica)
-    ↓
-EX_FINAL.md — ni tan explicativo ni tan crudo
+Resolver: [enunciado]
 ```
 
 ---
 
-## PDFs disponibles
+## Notas del método EX_F
 
-- `E1P2.pdf` — E1: bloque horizontal + 2 masas colgantes + 2 resortes ← ya probado con study-P2v1 (M1), falta probar con Av7
-- `e2_607xxx_260920_190447.pdf` — contiene E2, E3, E4, E5 juntos en un solo PDF → hay que separar por ejercicio antes de usar Av7
+- Fuentes: `PX-EX-607.md` (docente) + `EX_NBLM.md` → combinar lo mejor
+- Figura: preferir NBLM si es correcta; corregir encima sin borrar versiones anteriores
+- Notación: $x_1, y_2$… consistente, $C_0$ para constantes de integración
+- EDOs: factorizar cuando corresponda, pero **mantener términos de corrección explícitos** (caso E4: $-\dot{x}\sin\theta\dot{\theta} + \dot{x}\dot{\theta}\sin\theta$)
+- No simplificar pasos intermedios que el docente dejó explícitos
 
 ---
 
 ## Próximo paso
 
-1. Separar `e2_607xxx_260920_190447.pdf` en PDFs individuales: `E2P2.pdf`, `E3P2.pdf`, `E4P2.pdf`, `E5P2.pdf`
-2. Probar `ETN607-transcription_Av7.md` con `E1P2.pdf` primero
-3. Si funciona → repetir E2–E5
-4. Armar `E1_FINAL.md` como plantilla del formato final
+1. Generar `E5_F.md` — leer `P2-E5-607.md` + `E5_NBLM.md` y combinar
+2. Revisión final de figuras en Obsidian (E2 v4, E3, E4)
+3. Decidir si se agrega sección de linealización en E4 (el docente mencionó anular $\sin\theta$ para el informe)

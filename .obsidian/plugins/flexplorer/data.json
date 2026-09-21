@@ -40,7 +40,8 @@
         "E2_F.md",
         "P2-E1-607.md",
         "E3_F.md",
-        "E4_NBLM.md"
+        "E4_NBLM.md",
+        "E4_F.md"
       ]
     },
     "MOC": {
@@ -11299,6 +11300,10 @@
       "isHidden": false
     },
     "E4_NBLM.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "E4_F.md": {
       "isPinned": false,
       "isHidden": false
     }
