@@ -30,7 +30,10 @@
         "P2-E3-607.md",
         "P2-E4-607.md",
         "P2-E5-607.md",
-        "Untitled 2.md"
+        "contexto607.md",
+        "E1_NBLM.md",
+        "E2_NBLM.md",
+        "E1_NBLM_CORREC.md"
       ]
     },
     "MOC": {
@@ -11235,15 +11238,27 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Untitled 2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Semesters/Sem_04/ETN607/Partial_1/_library_ETN607.md": {
       "isPinned": false,
       "isHidden": false
     },
     "Semesters/Sem_09/ETN1010/python_contexto.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "contexto607.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "E1_NBLM.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "E1_NBLM_CORREC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "E2_NBLM.md": {
       "isPinned": false,
       "isHidden": false
     }
