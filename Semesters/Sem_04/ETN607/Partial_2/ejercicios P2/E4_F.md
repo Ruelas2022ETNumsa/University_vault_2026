@@ -1,6 +1,6 @@
-Un carro de masa $M$ rueda sin fricción sobre una superficie horizontal. Sobre el carro está articulado un péndulo simple de longitud $\ell$ con masa puntual $m$ en su extremo, que oscila en el plano vertical. El punto de articulación se encuentra a altura $H$ sobre el suelo.
+Un carro de masa $M$ rueda sin fricción sobre una superficie horizontal. Sobre el carro está articulado un péndulo simple de varilla rígida sin masa, longitud $\ell$ y masa puntual $m$ en su extremo, que oscila en el plano vertical. El punto de articulación del péndulo se encuentra a altura $H$ sobre el suelo. El péndulo puede adoptar posiciones tanto por debajo como por encima del pivote; el ángulo $\theta$ se mide desde la vertical hacia arriba.
 
-Hallar las ecuaciones de movimiento de Lagrange del sistema (2 GDL: $x$, $\theta$).
+Hallar las ecuaciones de movimiento de Lagrange del sistema.
 
 ---
 
@@ -58,9 +58,13 @@ Hallar las ecuaciones de movimiento de Lagrange del sistema (2 GDL: $x$, $\theta
 \end{document}
 ```
 
+> **Descripción de la figura:** El carro $M$ (teal, con ruedas) rueda sobre el piso. El pivote del péndulo está en la parte superior del carro a altura $H$. La varilla de longitud $\ell$ parte del pivote y lleva la masa $m$ (naranja) en su extremo; en la figura se muestra el péndulo en posición invertida (hacia arriba y a la derecha). El ángulo $\theta$ se mide desde la vertical hacia arriba hasta la varilla. La coordenada $x$ mide la posición horizontal del pivote desde la pared izquierda (origen).
+
 ---
 
-## Coordenadas y GDL
+## Resolución
+
+### Coordenadas y GDL
 
 Coordenadas posibles del sistema:
 
@@ -82,7 +86,7 @@ $$\dot{x}_2 = \dot{x} + \ell\cos\theta\,\dot{\theta} \qquad \dot{y}_2 = -\ell\si
 
 ---
 
-## Energía cinética
+### Energía cinética
 
 $$T_M = \frac{M}{2}\dot{x}^2$$
 
@@ -92,15 +96,15 @@ $$\boxed{T = \frac{M}{2}\dot{x}^2 + \frac{m}{2}\!\left(\dot{x}^2 + 2\dot{x}\ell\
 
 ---
 
-## Energía potencial
+### Energía potencial
 
 $$\boxed{V = mg(H + \ell\cos\theta)}$$
 
 ---
 
-## Ecuaciones de Lagrange
+### Ecuaciones de Lagrange
 
-### Para $x$
+#### Para $x$
 
 $$\frac{\partial T}{\partial \dot{x}} = (M+m)\dot{x} + m\ell\cos\theta\,\dot{\theta} \implies \frac{d}{dt}\!\left(\frac{\partial T}{\partial \dot{x}}\right) = (M+m)\ddot{x} + m\ell\cos\theta\,\ddot{\theta} - m\ell\sin\theta\,\dot{\theta}^2$$
 
@@ -108,23 +112,19 @@ $$\frac{\partial T}{\partial x} = 0 \qquad \frac{\partial V}{\partial x} = 0$$
 
 $$\boxed{(M+m)\ddot{x} + m\ell\cos\theta\,\ddot{\theta} - m\ell\sin\theta\,\dot{\theta}^2 = 0}$$
 
-### Para $\theta$
+#### Para $\theta$
 
 $$\frac{\partial T}{\partial \dot{\theta}} = m\ell\dot{x}\cos\theta + m\ell^2\dot{\theta} \implies \frac{d}{dt}\!\left(\frac{\partial T}{\partial \dot{\theta}}\right) = m\ell\ddot{x}\cos\theta - m\ell\dot{x}\sin\theta\,\dot{\theta} + m\ell^2\ddot{\theta}$$
 
 $$\frac{\partial T}{\partial \theta} = -m\ell\dot{x}\dot{\theta}\sin\theta \qquad -\frac{\partial V}{\partial \theta} = mg\ell\sin\theta$$
 
-Sustituyendo en Lagrange (los términos $-m\ell\dot{x}\sin\theta\,\dot{\theta}$ y $+m\ell\dot{x}\dot{\theta}\sin\theta$ se anulan en este ejercicio, pero se mantienen por consistencia con el método general):
-
-$$m\ell\ddot{x}\cos\theta - m\ell\dot{x}\sin\theta\,\dot{\theta} + m\ell^2\ddot{\theta} + m\ell\dot{x}\dot{\theta}\sin\theta = mg\ell\sin\theta$$
-
-Simplificando por $m\ell$:
+Sustituyendo (los términos $-m\ell\dot{x}\sin\theta\,\dot{\theta}$ y $+m\ell\dot{x}\dot{\theta}\sin\theta$ se anulan):
 
 $$\boxed{\ell\ddot{\theta} + \ddot{x}\cos\theta - \dot{x}\sin\theta\,\dot{\theta} + \dot{x}\dot{\theta}\sin\theta + g\sin\theta = 0}$$
 
 ---
 
-## EDOs finales
+### EDOs finales
 
 $$\boxed{(M+m)\ddot{x} + m\ell\cos\theta\,\ddot{\theta} - m\ell\sin\theta\,\dot{\theta}^2 = 0}$$
 

@@ -1,6 +1,6 @@
-Una polea de masa $m_1$ (sin inercia rotacional) está suspendida del techo mediante un resorte de constante $K$ y longitud natural $\ell_0$. Del ramal izquierdo de $m_1$ cuelga un resorte de constante $K'$ y longitud natural $\ell_0'$ fijo al piso. Del ramal derecho cuelga una segunda polea de masa $m_2$ (sin inercia rotacional) a una distancia $a$ de $m_1$. Un cable inextensible de longitud $\ell$ pasa por $m_2$ y del extremo inferior cuelga una masa puntual $m_3$. La altura total del sistema es $H$.
+Una polea de masa $m_1$ (sin inercia rotacional) está suspendida del techo mediante un resorte de constante $K$ y longitud natural $\ell_0$. Por el ramal izquierdo de $m_1$ pasa un cable que llega hasta el piso, donde está unido mediante un resorte de constante $K'$ y longitud natural $\ell_0'$. Por el ramal derecho de $m_1$ pasa un cable que sostiene a una segunda polea de masa $m_2$ (sin inercia rotacional), ubicada a una distancia $a$ por debajo de $m_1$. Por $m_2$ pasa un cable inextensible de longitud $\ell$: del ramal izquierdo el cable baja hasta el piso, y del ramal derecho cuelga una masa puntual $m_3$. La altura total del sistema es $H$.
 
-Hallar las ecuaciones de movimiento de Lagrange del sistema (2 GDL: $y_3$, $a$).
+Hallar las ecuaciones de movimiento de Lagrange del sistema.
 
 ---
 
@@ -75,9 +75,13 @@ Hallar las ecuaciones de movimiento de Lagrange del sistema (2 GDL: $y_3$, $a$).
 \end{document}
 ```
 
+> **Descripción de la figura:** El resorte $K$ conecta el techo con la polea $m_1$ (teal). Del ramal izquierdo de $m_1$ desciende un cable hasta el resorte $K'$ anclado al piso. Del ramal derecho de $m_1$ desciende un cable hasta la polea $m_2$ (naranja), separada de $m_1$ por la distancia $a$. Del ramal izquierdo de $m_2$ un cable baja hasta el piso (extremo fijo). Del ramal derecho cuelga la masa puntual $m_3$. Las coordenadas $y_1$, $y_2$, $y_3$ se miden desde el techo hacia abajo hasta cada masa. La cota $H$ es la altura total techo–piso.
+
 ---
 
-## Coordenadas y GDL
+## Resolución
+
+### Coordenadas y GDL
 
 Coordenadas posibles del sistema:
 
@@ -106,7 +110,7 @@ $$\dot{y}_1 = \frac{\dot{y}_3}{2} - \dot{a}$$
 
 ---
 
-## Energía cinética
+### Energía cinética
 
 $$T = \frac{m_1}{2}\dot{y}_1^2 + \frac{m_2}{2}\dot{y}_2^2 + \frac{m_3}{2}\dot{y}_3^2$$
 
@@ -116,7 +120,7 @@ $$\boxed{T = \frac{m_1}{2}\!\left(\frac{\dot{y}_3}{2} - \dot{a}\right)^{\!2} + \
 
 ---
 
-## Energía potencial
+### Energía potencial
 
 $$V = \frac{K}{2}(y_1 - \ell_0)^2 - m_1 g\, y_1 - m_2 g\, y_2 - m_3 g\, y_3 + \frac{K'}{2}(H - y_1 + \pi R_1 + a - \ell_0')^2$$
 
@@ -126,9 +130,9 @@ $$\boxed{V = \frac{K}{2}\!\left[\frac{H + \pi R_2 + y_3 - \ell}{2} - a - \ell_0\
 
 ---
 
-## Ecuaciones de Lagrange
+### Ecuaciones de Lagrange
 
-### Para $y_3$
+#### Para $y_3$
 
 $$\frac{\partial T}{\partial \dot{y}_3} = \frac{m_1}{2}\!\left(\frac{\dot{y}_3}{2} - \dot{a}\right) + \frac{m_2}{4}\dot{y}_3 + m_3\dot{y}_3 \implies \frac{d}{dt}\!\left(\frac{\partial T}{\partial \dot{y}_3}\right) = \left(\frac{m_1 + m_2 + 4m_3}{4}\right)\ddot{y}_3 - \frac{m_1}{2}\ddot{a}$$
 
@@ -136,7 +140,7 @@ $$-\frac{\partial V}{\partial y_3} = -\frac{K}{2}(y_1 - \ell_0) + \frac{m_1 g}{2
 
 $$\boxed{\left(\frac{m_1 + m_2 + 4m_3}{4}\right)\ddot{y}_3 - \frac{m_1}{2}\ddot{a} = -\frac{K}{2}(y_1 - \ell_0) + \frac{(m_1 + m_2)g}{2} + m_3 g + \frac{K'}{2}(H - y_1 + \pi R_1 + a - \ell_0')}$$
 
-### Para $a$
+#### Para $a$
 
 $$\frac{\partial T}{\partial \dot{a}} = -m_1\!\left(\frac{\dot{y}_3}{2} - \dot{a}\right) \implies \frac{d}{dt}\!\left(\frac{\partial T}{\partial \dot{a}}\right) = m_1\ddot{a} - \frac{m_1}{2}\ddot{y}_3$$
 
@@ -146,7 +150,7 @@ $$\boxed{m_1\ddot{a} - \frac{m_1}{2}\ddot{y}_3 = K(y_1 - \ell_0) - m_1 g - 2K'(H
 
 ---
 
-## EDOs finales
+### EDOs finales
 
 $$\boxed{\left(\frac{m_1 + m_2 + 4m_3}{4}\right)\ddot{y}_3 - \frac{m_1}{2}\ddot{a} = -\frac{K}{2}(y_1 - \ell_0) + \frac{(m_1 + m_2)g}{2} + m_3 g + \frac{K'}{2}(H - y_1 + \pi R_1 + a - \ell_0')}$$
 

@@ -1,6 +1,4 @@
-# E5_F
-
-Dos masas puntuales $m_1$ y $m_2$ forman un péndulo doble planar. Ambas varillas rígidas sin masa tienen la misma longitud $\ell$. $m_1$ está articulada al techo y forma ángulo $\theta$ con la vertical; $m_2$ está articulada al extremo inferior de la primera varilla y forma ángulo $\phi$ con la vertical.
+Dos masas puntuales $m_1$ y $m_2$ forman un péndulo doble planar. Ambas varillas son rígidas, sin masa y de igual longitud $\ell$. La primera varilla está articulada al techo y forma el ángulo $\theta$ con la vertical; la segunda varilla está articulada al extremo inferior de la primera y forma el ángulo $\phi$ con la vertical. El sistema oscila libremente bajo la acción de la gravedad.
 
 Hallar las ecuaciones de movimiento de Lagrange del sistema.
 
@@ -10,7 +8,6 @@ Hallar las ecuaciones de movimiento de Lagrange del sistema.
 \usetikzlibrary{patterns,decorations.pathmorphing}
 \begin{document}
 \begin{tikzpicture}[scale=1.1, >=latex]
-    % Colores
     \colorlet{maincolor}{teal}
     \colorlet{accentcolor}{orange}
 
@@ -46,61 +43,55 @@ Hallar las ecuaciones de movimiento de Lagrange del sistema.
 \end{document}
 ```
 
+> **Descripción de la figura:** La primera varilla (teal) parte del pivote fijo en el techo y lleva la masa $m_1$ en su extremo; el ángulo $\theta$ se mide desde la vertical hasta la primera varilla. La segunda varilla (naranja) parte de $m_1$ y lleva la masa $m_2$ en su extremo; el ángulo $\phi$ se mide desde la vertical (línea punteada que pasa por $m_1$) hasta la segunda varilla. Ambas varillas tienen la misma longitud $\ell$.
+
 ---
 
-**Paso 0 — Identificación**
-Sistema mecánico dinámico no lineal de dos grados de libertad correspondiente a un péndulo doble plano. Se compone de dos masas puntuales ($m_1$ y $m_2$) unidas secuencialmente por dos varillas rígidas inextensibles y sin masa de igual longitud $\ell$, oscilando libremente bajo la acción de la gravedad. Tema: Ecuaciones de Lagrange.
+## Resolución
 
-**Paso 1 — Coordenadas y GDL**
-Posiciones rectangulares de cada masa respecto al soporte articulado superior (origen $(0,0)$) tomando el eje $y$ orientado hacia abajo:
+### Coordenadas y GDL
 
-- Para la masa $m_1$:
+Posiciones rectangulares de cada masa respecto al soporte articulado superior (origen $(0,0)$), eje $y$ orientado hacia abajo:
+
+- Para $m_1$:
 
 $$x_1 = \ell\sin\theta \qquad y_1 = \ell\cos\theta$$
 
-- Para la masa $m_2$:
+- Para $m_2$:
 
 $$x_2 = \ell\sin\theta + \ell\sin\phi \qquad y_2 = \ell\cos\theta + \ell\cos\phi$$
 
-Derivadas temporales de las posiciones de $m_2$:
+Derivadas de $m_2$:
 
-$$\dot{x}_2 = \ell\cos\theta\,\dot{\theta} + \ell\cos\phi\,\dot{\phi}$$
+$$\dot{x}_2 = \ell\cos\theta\,\dot{\theta} + \ell\cos\phi\,\dot{\phi} \qquad \dot{y}_2 = -\ell\sin\theta\,\dot{\theta} - \ell\sin\phi\,\dot{\phi}$$
 
-$$\dot{y}_2 = -\ell\sin\theta\,\dot{\theta} - \ell\sin\phi\,\dot{\phi}$$
-
-Número de grados de libertad:
+Sin restricciones adicionales:
 
 $$\text{GDL} = 2 \quad \text{con coordenadas generalizadas } (\theta,\,\phi)$$
 
 ---
 
-**Paso 2 — Energía cinética**
+### Energía cinética
 
-Energía cinética de $m_1$:
+$$T_1 = \frac{1}{2}m_1\ell^2\dot{\theta}^2$$
 
-$$T_1 = \frac{1}{2}m_1\!\left(\dot{x}_1^2 + \dot{y}_1^2\right) = \frac{1}{2}m_1\ell^2\dot{\theta}^2$$
-
-Energía cinética de $m_2$:
-
-$$T_2 = \frac{1}{2}m_2\!\left(\dot{x}_2^2 + \dot{y}_2^2\right) = \frac{1}{2}m_2\ell^2\!\left[\dot{\theta}^2 + 2\dot{\theta}\dot{\phi}\cos(\theta-\phi) + \dot{\phi}^2\right]$$
-
-Energía cinética total:
+$$T_2 = \frac{1}{2}m_2\ell^2\!\left[\dot{\theta}^2 + 2\dot{\theta}\dot{\phi}\cos(\theta-\phi) + \dot{\phi}^2\right]$$
 
 $$\boxed{T = \frac{1}{2}m_1\ell^2\dot{\theta}^2 + \frac{1}{2}m_2\ell^2\!\left[\dot{\theta}^2 + 2\dot{\theta}\dot{\phi}\cos(\theta-\phi) + \dot{\phi}^2\right]}$$
 
 ---
 
-**Paso 3 — Energía potencial**
+### Energía potencial
 
-Tomando como referencia $y = 0$ en el soporte fijo superior con eje $y$ orientado hacia abajo — las masas tienen coordenada $y$ positiva y energía potencial negativa respecto al origen. Si el docente ubica la referencia por debajo del sistema, los signos se invierten pero las EDOs resultantes son idénticas.
+Referencia $y = 0$ en el techo, eje $y$ descendente — energía potencial negativa (masas por debajo del origen). El nivel de referencia no afecta las EDOs.
 
 $$\boxed{V = -m_1 g\ell\cos\theta - m_2 g\ell(\cos\theta + \cos\phi)}$$
 
 ---
 
-**Paso 4 — Ecuaciones de Lagrange**
+### Ecuaciones de Lagrange
 
-### Respecto de $\theta$
+#### Respecto de $\theta$
 
 $$\frac{d}{dt}\!\left(\frac{\partial T}{\partial \dot{\theta}}\right) - \frac{\partial T}{\partial \theta} = -\frac{\partial V}{\partial \theta}$$
 
@@ -108,15 +99,11 @@ $$\frac{\partial T}{\partial \dot{\theta}} = (m_1 + m_2)\ell^2\dot{\theta} + m_2
 
 $$\frac{d}{dt}\!\left(\frac{\partial T}{\partial \dot{\theta}}\right) = (m_1+m_2)\ell^2\ddot{\theta} + m_2\ell^2\ddot{\phi}\cos(\theta-\phi) - m_2\ell^2\dot{\phi}\sin(\theta-\phi)(\dot{\theta}-\dot{\phi})$$
 
-$$\frac{\partial T}{\partial \theta} = -m_2\ell^2\dot{\theta}\dot{\phi}\sin(\theta-\phi)$$
-
-$$-\frac{\partial V}{\partial \theta} = -(m_1+m_2)g\ell\sin\theta$$
-
-Sustituyendo y simplificando:
+$$\frac{\partial T}{\partial \theta} = -m_2\ell^2\dot{\theta}\dot{\phi}\sin(\theta-\phi) \qquad -\frac{\partial V}{\partial \theta} = -(m_1+m_2)g\ell\sin\theta$$
 
 $$\boxed{(m_1+m_2)\ell^2\ddot{\theta} + m_2\ell^2\ddot{\phi}\cos(\theta-\phi) + m_2\ell^2\dot{\phi}^2\sin(\theta-\phi) + (m_1+m_2)g\ell\sin\theta = 0}$$
 
-### Respecto de $\phi$
+#### Respecto de $\phi$
 
 $$\frac{d}{dt}\!\left(\frac{\partial T}{\partial \dot{\phi}}\right) - \frac{\partial T}{\partial \phi} = -\frac{\partial V}{\partial \phi}$$
 
@@ -124,17 +111,13 @@ $$\frac{\partial T}{\partial \dot{\phi}} = m_2\ell^2\dot{\phi} + m_2\ell^2\dot{\
 
 $$\frac{d}{dt}\!\left(\frac{\partial T}{\partial \dot{\phi}}\right) = m_2\ell^2\ddot{\phi} + m_2\ell^2\ddot{\theta}\cos(\theta-\phi) - m_2\ell^2\dot{\theta}\sin(\theta-\phi)(\dot{\theta}-\dot{\phi})$$
 
-$$\frac{\partial T}{\partial \phi} = m_2\ell^2\dot{\theta}\dot{\phi}\sin(\theta-\phi)$$
-
-$$-\frac{\partial V}{\partial \phi} = -m_2 g\ell\sin\phi$$
-
-Sustituyendo y simplificando:
+$$\frac{\partial T}{\partial \phi} = m_2\ell^2\dot{\theta}\dot{\phi}\sin(\theta-\phi) \qquad -\frac{\partial V}{\partial \phi} = -m_2 g\ell\sin\phi$$
 
 $$\boxed{m_2\ell^2\ddot{\phi} + m_2\ell^2\ddot{\theta}\cos(\theta-\phi) - m_2\ell^2\dot{\theta}^2\sin(\theta-\phi) + m_2 g\ell\sin\phi = 0}$$
 
 ---
 
-**Paso 5 — EDOs finales**
+### EDOs finales
 
 $$\boxed{(m_1+m_2)\ell^2\ddot{\theta} + m_2\ell^2\ddot{\phi}\cos(\theta-\phi) + m_2\ell^2\dot{\phi}^2\sin(\theta-\phi) + (m_1+m_2)g\ell\sin\theta = 0}$$
 
