@@ -1,268 +1,192 @@
-##### Ej. Un bloque de masa $m_1$ desliza sin fricción sobre una superficie horizontal. Está conectado a una pared fija izquierda mediante un resorte horizontal de constante $K$, longitud natural $\ell_0$ y ancho de bloque $b_1$. Un cable inextensible conecta $m_1$ con una masa $m_2$ que cuelga verticalmente. El cable pasa por una polea fija en el borde del bloque. La restricción del cable impone que la velocidad horizontal de $m_1$ es igual a la velocidad vertical de $m_2$. Debajo de $m_2$ hay un resorte de constante $K'$, longitud natural $\ell_0'$, que conecta $m_2$ con una tercera masa $m_3$ que cuelga libremente debajo.
+##### Ej. Sistema compuesto por un bloque $m_1$ en superficie horizontal con resorte $K$ y dos masas colgantes $m_2$ y $m_3$ conectadas por un resorte $K'$
 
 ```tikz
-\usepackage{tikz}
 \usetikzlibrary{patterns,decorations.pathmorphing}
 \begin{document}
-\begin{tikzpicture}[scale=0.9]
-  % Pared fija izquierda
-  \fill[gray!30] (-0.5,0) rectangle (0,2.5);
-  \draw[thick] (0,0) -- (0,2.5);
-  
-  % Superficie horizontal
-  \fill[gray!30] (0,-0.4) rectangle (6,0);
-  \draw[thick] (0,0) -- (6,0);
-  \draw[thick] (6,0) -- (6,-0.4);
+\begin{tikzpicture}[scale=1.0, >=latex]
+    % Definición de colores
+    \colorlet{maincolor}{teal}
+    \colorlet{accentcolor}{orange}
 
-  % Resorte K
-  \draw[orange, thick, decorate, decoration={coil,aspect=0.4,segment length=5pt,amplitude=6pt}] (0,1) -- (2,1);
-  \node[above, orange] at (1,1.2) {$K, \ell_0$};
+    % Pared izquierda
+    \fill[pattern=north east lines] (-0.5,0) rectangle (0,2);
+    \draw[thick] (0,0) -- (0,2);
 
-  % Bloque m1
-  \draw[fill=teal!30, teal!80!black, thick] (2,0.2) rectangle (3.5,1.8);
-  \node at (2.75,1) {$m_1$};
+    % Piso horizontal
+    \fill[pattern=north east lines] (0,-0.2) rectangle (5,0);
+    \draw[thick] (0,0) -- (5,0);
 
-  % Polea fija en el borde
-  \draw[fill=gray!50, thick] (6,1) circle (0.3);
-  \fill[black] (6,1) circle (0.05);
+    % Resorte K
+    \draw[decoration={aspect=0.3, segment length=2mm, amplitude=3mm, coil}, decorate, maincolor, thick] (0,1) -- (1.5,1);
+    \node[above, maincolor] at (0.75,1.2) {$K$};
 
-  % Cable inextensible
-  \draw[thick] (3.5,1) -- (6,1) -- (6,-1);
+    % Bloque m1
+    \draw[fill=teal!10, draw=maincolor, thick] (1.5,0.3) rectangle (2.8,1.7);
+    \node[maincolor] at (2.15,1.0) {$m_1$};
 
-  % Masa m2
-  \draw[fill=teal!30, teal!80!black, thick] (5.4,-1.8) rectangle (6.6,-1);
-  \node at (6,-1.4) {$m_2$};
+    % Polea
+    \draw[thick, fill=gray!20] (5,1) circle (0.3);
+    \fill (5,1) circle (0.05);
+    \draw[thick] (5,0) -- (5,1);
 
-  % Resorte K'
-  \draw[orange, thick, decorate, decoration={coil,aspect=0.4,segment length=5pt,amplitude=5pt}] (6,-1.8) -- (6,-3.2);
-  \node[right, orange] at (6.1,-2.5) {$K', \ell_0'$};
+    % Cable
+    \draw[thick] (2.8,1.3) -- (5,1.3);
+    \draw[thick] (5.3,1) -- (5.3,-1);
 
-  % Masa m3
-  \draw[fill=teal!30, teal!80!black, thick] (5.4,-4) rectangle (6.6,-3.2);
-  \node at (6,-3.6) {$m_3$};
+    % Bloque m2
+    \draw[fill=teal!10, draw=maincolor, thick] (4.8,-1.7) rectangle (5.8,-1);
+    \node[maincolor] at (5.3,-1.35) {$m_2$};
 
-  % Coordenadas
-  \draw[->, thick, gray] (0,2.1) -- (2.75,2.1) node[midway, above] {$x$};
-  \draw[dashed, gray] (2.75,1.8) -- (2.75,2.3);
-  \draw[->, thick, gray] (7.2,0) -- (7.2,-1.4) node[right] {$y_2 = x$};
-  \draw[->, thick, gray] (8.1,0) -- (8.1,-3.6) node[right] {$y_3$};
+    % Resorte K'
+    \draw[decoration={aspect=0.3, segment length=2mm, amplitude=2.5mm, coil}, decorate, accentcolor, thick] (5.3,-1.7) -- (5.3,-2.8);
+    \node[right, accentcolor] at (5.5,-2.25) {$K'$};
+
+    % Bloque m3
+    \draw[fill=orange!10, draw=accentcolor, thick] (4.8,-3.5) rectangle (5.8,-2.8);
+    \node[accentcolor] at (5.3,-3.15) {$m_3$};
+
+    % Coordenadas
+    \draw[->, maincolor, thick] (0,2.1) -- (2.15,2.1) node[midway, above] {$x_1$};
+    \draw[dotted] (2.15,1.7) -- (2.15,2.3);
+    \draw[dotted] (0,2) -- (0,2.3);
+
+    \draw[->, maincolor, thick] (6.5,1) -- (6.5,-1.35) node[midway, right] {$y_2$};
+    \draw[dotted] (5.8,-1.35) -- (6.7,-1.35);
+    \draw[dotted] (5,1) -- (6.7,1);
+
+    \draw[->, accentcolor, thick] (7.3,1) -- (7.3,-3.15) node[midway, right] {$y_3$};
+    \draw[dotted] (5.8,-3.15) -- (7.5,-3.15);
 \end{tikzpicture}
 \end{document}
 ```
 
-Un bloque de masa $m_1$ desliza sin fricción sobre una superficie horizontal. Está conectado a una pared fija izquierda mediante un resorte horizontal de constante $K$, longitud natural $\ell_0$ y ancho de bloque $b_1$.
+**Paso 0 — Identificación**
+Sistema mecánico translacional conservativo formado por tres masas ($m_1, m_2, m_3$) y dos resortes ($K, K'$). La masa $m_1$ se mueve horizontalmente en una superficie lisa acoplada a un resorte $K$, unida mediante un cable inextendible a la masa $m_2$. De la masa $m_2$ cuelga la masa $m_3$ mediante un resorte $K'$. Tema: Ecuaciones de Lagrange.
 
-Un cable inextensible conecta $m_1$ con una masa $m_2$ que cuelga verticalmente. El cable pasa por una polea fija en el borde del bloque. La restricción del cable impone que la velocidad horizontal de $m_1$ es igual a la velocidad vertical de $m_2$.
+**Paso 1 — Coordenadas y GDL**
+Coordenadas posibles del sistema:
 
-Debajo de $m_2$ hay un resorte de constante $K'$, longitud natural $\ell_0'$, que conecta $m_2$ con una tercera masa $m_3$ que cuelga libremente debajo.
-
-**Resolución**
-Se determinan las ecuaciones diferenciales de movimiento aplicando las ecuaciones de Lagrange para un sistema de partículas acopladas con dos grados de libertad.
-
-**Paso 0 — Identificación del sistema**
-- Tipo de sistema: T4 (sistema de tres partículas).
-- Cuerpos presentes: Masa $m_1$ (traslación horizontal), masa $m_2$ (traslación vertical acoplada por cable a $m_1$) y masa $m_3$ (traslación vertical acoplada por resorte a $m_2$).
-
-**Paso 1 — Coordenadas generalizadas y GDL**
-Coordenadas posibles iniciales:
 
 $$
-(x_1, y_2, y_3)
-$$
-
-donde $x_1$ es la posición horizontal de $m_1$, $y_2$ la posición vertical descendente de $m_2$ y $y_3$ la posición vertical descendente de $m_3$.
-
-Ecuación de restricción holónoma por el cable inextensible:
-
-$$
-\dot{y}_2 = \dot{x}_1 \implies y_2 = x_1 + C
+N = (x_1, y_2, y_3)
 $$
 
 
-Grados de libertad:
+Restricción por cable inextendible:
+
 
 $$
-N = (\text{coordenadas}) - (\text{restricciones}) = 3 - 1 = 2
+\text{Vel}_1 = \text{Vel}_2 \implies \dot{x}_1 = \dot{y}_2 \implies x_1 = y_2 + C_0
 $$
 
 
-Coordenadas independientes elegidas:
+Número de grados de libertad:
+
 
 $$
-q_1 = x, \quad q_2 = y_3
+\text{GDL} = N - \text{restricciones} = 3 - 1 = 2
 $$
 
-donde $x_1 = x$ e $y_2 = x$ (tomando como origen el nivel de la polea/superficie).
+
+Coordenadas independientes seleccionadas: $x_1$ e $y_3$.
 
 **Paso 2 — Energía cinética**
-Energías cinéticas de cada cuerpo:
-
-$$
-T_1 = \frac{1}{2} m_1 \dot{x}^2
-$$
+Energía cinética total del sistema expresada con las coordenadas iniciales:
 
 
 $$
-T_2 = \frac{1}{2} m_2 \dot{y}_2^2 = \frac{1}{2} m_2 \dot{x}^2
+T = \frac{1}{2} m_1 \dot{x}_1^2 + \frac{1}{2} m_2 \dot{y}_2^2 + \frac{1}{2} m_3 \dot{y}_3^2
 $$
 
 
-$$
-T_3 = \frac{1}{2} m_3 \dot{y}_3^2
-$$
-
-
-Energía cinética total del sistema:
-
-$$
-T = T_1 + T_2 + T_3
-$$
+Aplicando la restricción $\dot{y}_2 = \dot{x}_1$:
 
 
 $$
-T = \frac{1}{2} (m_1 + m_2) \dot{x}^2 + \frac{1}{2} m_3 \dot{y}_3^2
+T = \frac{1}{2} m_1 \dot{x}_1^2 + \frac{1}{2} m_2 \dot{x}_1^2 + \frac{1}{2} m_3 \dot{y}_3^2
 $$
 
 
 **Paso 3 — Energía potencial**
-Energía potencial gravitatoria tomando como nivel de referencia cero la superficie horizontal:
-
-$$
-V_{g1} = 0
-$$
+Energía potencial gravitatoria y elástica total del sistema:
 
 
 $$
-V_{g2} = -m_2 g x
+V = \frac{K}{2} \left(x_1 - \frac{b_1}{2} - l_0\right)^2 + m_1 g (0) - m_2 g y_2 - m_3 g y_3 + \frac{K'}{2} \left(y_3 - y_2 - \frac{b_2}{2} - \frac{b_3}{2} - l_0'\right)^2
 $$
 
 
-$$
-V_{g3} = -m_3 g y_3
-$$
-
-
-Energía potencial elástica de los dos resortes:
-
-$$
-V_{k1} = \frac{1}{2} K (x - \ell_0)^2
-$$
+Sustituyendo la relación de restricción $y_2 = x_1 - C_0$:
 
 
 $$
-V_{k2} = \frac{1}{2} K' (y_3 - x - \ell_0')^2
+V = \frac{K}{2} \left(x_1 - \frac{b_1}{2} - l_0\right)^2 - m_2 g (x_1 - C_0) - m_3 g y_3 + \frac{K'}{2} \left(y_3 - x_1 + C_0 - \frac{b_2}{2} - \frac{b_3}{2} - l_0'\right)^2
 $$
 
 
-Energía potencial total:
-
-$$
-V = \frac{1}{2} K (x - \ell_0)^2 + \frac{1}{2} K' (y_3 - x - \ell_0')^2 - m_2 g x - m_3 g y_3
-$$
-
-
-**Paso 4 — Lagrange respecto de $x$**
-Derivadas respecto a la velocidad generalizada $\dot{x}$:
-
-$$
-\frac{\partial T}{\partial \dot{x}} = (m_1 + m_2) \dot{x}
-$$
+**Paso 4 — Ecuaciones de Lagrange**
+Aplicando la ecuación de Lagrange para cada coordenada generalizada independiente:
 
 
 $$
-\frac{d}{dt}\left(\frac{\partial T}{\partial \dot{x}}\right) = (m_1 + m_2) \ddot{x}
+\frac{d}{dt}\left(\frac{\partial T}{\partial \dot{q}_r}\right) - \frac{\partial T}{\partial q_r} = -\frac{\partial V}{\partial q_r}
 $$
 
 
-Derivadas respecto a la coordenada generalizada $x$:
-
-$$
-\frac{\partial T}{\partial x} = 0
-$$
+1. Para la coordenada $x_1$:
 
 
 $$
-\frac{\partial V}{\partial x} = K (x - \ell_0) - K' (y_3 - x - \ell_0') - m_2 g
+\frac{d}{dt}\left(\frac{\partial T}{\partial \dot{x}_1}\right) = (m_1 + m_2) \ddot{x}_1, \quad \frac{\partial T}{\partial x_1} = 0
 $$
 
 
-Ecuación de Lagrange para $x$:
 
 $$
-\frac{d}{dt}\left(\frac{\partial T}{\partial \dot{x}}\right) - \frac{\partial T}{\partial x} = -\frac{\partial V}{\partial x}
-$$
-
-
-$$
-(m_1 + m_2) \ddot{x} - 0 = -\left[ K (x - \ell_0) - K' (y_3 - x - \ell_0') - m_2 g \right]
+-\frac{\partial V}{\partial x_1} = -K\left(x_1 - \frac{b_1}{2} - l_0\right) + m_2 g + K'\left(y_3 - x_1 + C_0 - \frac{b_2}{2} - \frac{b_3}{2} - l_0'\right)
 $$
 
 
-$$
-(m_1 + m_2) \ddot{x} + K (x - \ell_0) - K' (y_3 - x - \ell_0') = m_2 g
-$$
+Ecuación diferencial para $x_1$:
 
 
 $$
-(m_1 + m_2) \ddot{x} + (K + K') x - K' y_3 = K \ell_0 - K' \ell_0' + m_2 g
+m_1 \ddot{x}_1 + m_2 \ddot{x}_1 = -K\left(x_1 - \frac{b_1}{2} - l_0\right) + m_2 g + K'\left(y_3 - x_1 + C_0 - \frac{b_2}{2} - \frac{b_3}{2} - l_0'\right)
 $$
 
 
-**Paso 4 — Lagrange respecto de $y_3$**
-Derivadas respecto a la velocidad generalizada $\dot{y}_3$:
-
-$$
-\frac{\partial T}{\partial \dot{y}_3} = m_3 \dot{y}_3
-$$
+2. Para la coordenada $y_3$:
 
 
 $$
-\frac{d}{dt}\left(\frac{\partial T}{\partial \dot{y}_3}\right) = m_3 \ddot{y}_3
+\frac{d}{dt}\left(\frac{\partial T}{\partial \dot{y}_3}\right) = m_3 \ddot{y}_3, \quad \frac{\partial T}{\partial y_3} = 0
 $$
 
 
-Derivadas respecto a la coordenada generalizada $y_3$:
 
 $$
-\frac{\partial T}{\partial y_3} = 0
-$$
-
-
-$$
-\frac{\partial V}{\partial y_3} = K' (y_3 - x - \ell_0') - m_3 g
+-\frac{\partial V}{\partial y_3} = m_3 g - K'\left(y_3 - x_1 + C_0 - \frac{b_2}{2} - \frac{b_3}{2} - l_0'\right)
 $$
 
 
-Ecuación de Lagrange para $y_3$:
-
-$$
-\frac{d}{dt}\left(\frac{\partial T}{\partial \dot{y}_3}\right) - \frac{\partial T}{\partial y_3} = -\frac{\partial V}{\partial y_3}
-$$
+Ecuación diferencial para $y_3$:
 
 
 $$
-m_3 \ddot{y}_3 - 0 = -\left[ K' (y_3 - x - \ell_0') - m_3 g \right]
-$$
-
-
-$$
-m_3 \ddot{y}_3 + K' (y_3 - x - \ell_0') = m_3 g
-$$
-
-
-$$
-m_3 \ddot{y}_3 - K' x + K' y_3 = K' \ell_0' + m_3 g
+m_3 \ddot{y}_3 = -K'(y_3 - x_1) + m_3 g - K'\left(C_0 - \frac{b_2}{2} - \frac{b_3}{2} - l_0'\right)
 $$
 
 
 **Paso 5 — EDOs finales**
 
+
 $$
-\boxed{ (m_1 + m_2) \ddot{x} + (K + K') x - K' y_3 = K \ell_0 - K' \ell_0' + m_2 g }
+\boxed{m_1 \ddot{x}_1 + m_2 \ddot{x}_1 = -K\left(x_1 - \frac{b_1}{2} - l_0\right) + m_2 g + K'\left(y_3 - x_1 + C_0 - \frac{b_2}{2} - \frac{b_3}{2} - l_0'\right)}
 $$
 
 
+
 $$
-\boxed{ m_3 \ddot{y}_3 - K' x + K' y_3 = K' \ell_0' + m_3 g }
+\boxed{m_3 \ddot{y}_3 = -K'(y_3 - x_1) + m_3 g - K'\left(C_0 - \frac{b_2}{2} - \frac{b_3}{2} - l_0'\right)}
 $$
 

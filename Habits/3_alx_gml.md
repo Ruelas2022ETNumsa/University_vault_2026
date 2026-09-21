@@ -11,6 +11,7 @@ startDate: 2026-09-03
 weeklyTarget: 7
 records:
   2026-09-03: 1
+  2026-09-21: 1
 ---
 # alx_gml
 

@@ -34,7 +34,10 @@
         "E1_NBLM.md",
         "E2_NBLM.md",
         "E1_NBLM_CORREC.md",
-        "E1_TRASN.md"
+        "E1_TRASN.md",
+        "pegar_imagen.md",
+        "enunp2.md",
+        "Untitled.md"
       ]
     },
     "MOC": {
@@ -11269,6 +11272,18 @@
       "isHidden": false
     },
     "E1_TRASN.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "pegar_imagen.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "enunp2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled.md": {
       "isPinned": false,
       "isHidden": false
     }
