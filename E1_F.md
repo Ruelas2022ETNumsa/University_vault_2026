@@ -1,7 +1,8 @@
-# E1_F — Bloque horizontal + 2 masas colgantes + 2 resortes
+# E1_F (grados de libertad deben ser mejorados)
 
-**Tema:** T4 — Ecuaciones de Lagrange
-**Fuente:** P2-E1-607 + E1_NBLM
+Un bloque de masa $m_1$ desliza sin fricción sobre una superficie horizontal, conectado a una pared fija mediante un resorte de constante $K$, longitud natural $\ell_0$ y semiancho $b_1/2$. Un cable inextensible pasa por una polea fija en el borde y conecta $m_1$ con una masa $m_2$ que cuelga verticalmente, imponiendo $\dot{x}_1 = \dot{y}_2$. Debajo de $m_2$ cuelga una masa $m_3$ unida por un resorte de constante $K'$ y longitud natural $\ell_0'$. Los semianchos de $m_2$ y $m_3$ son $b_2/2$ y $b_3/2$ respectivamente.
+
+Hallar las ecuaciones de movimiento de Lagrange del sistema.
 
 ---
 

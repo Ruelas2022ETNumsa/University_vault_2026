@@ -37,7 +37,9 @@
         "E1_TRASN.md",
         "pegar_imagen.md",
         "enunp2.md",
-        "Untitled.md"
+        "Untitled.md",
+        "E1_F.md",
+        "E2_F.md"
       ]
     },
     "MOC": {
@@ -11284,6 +11286,14 @@
       "isHidden": false
     },
     "Untitled.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "E1_F.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "E2_F.md": {
       "isPinned": false,
       "isHidden": false
     }
