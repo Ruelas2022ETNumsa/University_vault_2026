@@ -3,33 +3,35 @@ title: "ETN607 — Contexto sesión P2"
 scope: vault
 tags: [ETN607, sesión, P2, notebooklm]
 date_updated: 2026-09-21
-hora_inicio: 16:40
-worker: krajo
+hora_inicio: 22:41
+worker: alx-rul
 ---
 
 # ETN607 — Contexto sesión P2
 
 ---
 
-## Estado al cierre de sesión (21-09-2026 · sesión 2)
+## Estado al cierre de sesión (21-09-2026 · sesión 3)
 
 ### Completado hoy
 
-- `E1_F.md` → generado, revisado, EDOs factorizadas, enunciado colocado por usuario ✅
-- `E2_F.md` → generado, figura v4 corregida (2 cuñas trapecio, $B_2 \to B$), desarrollo completo ✅
-- `E3_F.md` → generado, figura corregida ($m_3$ como masa puntual, ramal izq de $m_2$ al piso), nota auxiliar de expansión de $y_1$ ✅
-- `E4_F.md` → generado, péndulo invertido (hacia arriba), términos de corrección en EDO de $\theta$ mantenidos explícitos ✅
-- `E5_F.md` → **pendiente**
+- `E1_F.md` → `E5_F.md` → todos generados y completos ✅
+- Ejercicios complementarios (variantes) en curso — generados con NBLM
+- `E11.md` generado → figura v4 corregida, formato de pasos corregido ✅
+- Prompt `ETN607-comp_indice_BCv4ii.md` → mejorado y renombrado como `ETN607-comp_indice_BCv5ii.md` ✅
+  - Eliminados: Mensajes 1 y 2 (complementos B/C), callout `ad-note`, niveles B/C
+  - Conservados: Mensaje 3 (ejemplos similares, gatillo independiente), Mensaje 4 (uso principal)
+  - Regla de pasos actualizada: paso = secuencia con resultado esperado que el siguiente usa como input
 
 ### Pendiente
 
-- Generar `E5_F.md` (falta fuente: `P2-E5-607.md` + `E5_NBLM.md`)
-- Revisar si los enunciados en cada `EX_F.md` son suficientes o hay que ajustarlos
+- Continuar generando ejercicios complementarios (variantes) con NBLM usando `ETN607-comp_indice_BCv5ii.md`
 - Verificar figuras en Obsidian (E2 v4, E3, E4 péndulo invertido)
+- Decidir si se agrega sección de linealización en E4 (el docente mencionó anular $\sin\theta$ para el informe)
 
 ---
 
-## Archivos EX_F generados esta sesión
+## Archivos EX_F — estado final
 
 | Archivo | Ubicación | Estado |
 |---|---|---|
@@ -37,37 +39,37 @@ worker: krajo
 | `E2_F.md` | `E:\University_vault_2026\` | ✅ completo — figura v4, $B$ pared a pared |
 | `E3_F.md` | `E:\University_vault_2026\` | ✅ completo — $m_3$ puntual, GDL $(y_3, a)$ |
 | `E4_F.md` | `E:\University_vault_2026\` | ✅ completo — péndulo invertido, términos $\dot{x}\sin\theta\dot{\theta}$ explícitos |
-| `E5_F.md` | `E:\University_vault_2026\` | ⏳ pendiente |
+| `E5_F.md` | `E:\University_vault_2026\` | ✅ completo |
+
+## Ejercicios complementarios generados
+
+| Archivo | Ubicación | Estado |
+|---|---|---|
+| `E11.md` | `E:\University_vault_2026\Semesters\Sem_04\ETN607\Partial_2\ejercicios P2\` | ✅ completo — figura corregida, pasos corregidos |
+
+---
+
+## Prompt activo
+
+### ETN607-comp_indice_BCv5ii.md
+`E:\University_vault_2026\_app\notebooklm\prompts\ETN607\ETN607-comp_indice_BCv5ii.md`
+
+Mensajes disponibles:
+- **Mensaje 3** — `"[Tema] · [Subtítulo] · ejercicio"` → NBLM busca ejemplos similares en libros y los resuelve (gatillo independiente)
+- **Mensaje 4** — `"Resolver: [enunciado]"` → uso principal, resuelve enunciado propio consultando E1_F–E5_F como referencia de estilo
+
+Regla de pasos activa: paso = secuencia de acciones con un resultado concreto que el paso siguiente usa como input.
+
+---
 
 ## Archivos fuente
 
 | Archivo | Ubicación | Rol |
 |---|---|---|
 | `P2-E1-607.md` … `P2-E5-607.md` | `E:\University_vault_2026\` | Transcripciones docente — fuente de verdad |
-| `E1_NBLM.md` … `E4_NBLM.md` | `E:\University_vault_2026\` | Entregas de NBLM por ejercicio |
-| `ETN607-study-P2v1.md` | `E:\University_vault_2026\_app\notebooklm\prompts\ETN607\` | Prompt resolución T3–T4 ✅ |
+| `E1_NBLM.md` … `E5_NBLM.md` | `E:\University_vault_2026\` | Entregas de NBLM por ejercicio |
+| `ETN607-comp_indice_BCv5ii.md` | `E:\University_vault_2026\_app\notebooklm\prompts\ETN607\` | Prompt ejercicios complementarios — activo ✅ |
 | `ETN607-transcription_Av7.md` | `E:\University_vault_2026\_app\notebooklm\prompts\ETN607\` | Prompt transcripción ejercicios ✅ |
-
----
-
-## Prompts activos
-
-### ETN607-transcription_Av7.md
-NBLM recibe PDF (un ejercicio por PDF) → genera enunciado + TikZJax + transcripción con pasos comentados.
-
-Mensaje a usar:
-```
-De [EXP2.pdf], muéstrame el ejercicio con [descripción breve del sistema]
-```
-
-### ETN607-study-P2v1.md
-NBLM recibe enunciado → devuelve figura TikZJax + Paso 0→5 + EDOs con `\boxed{}`.
-Regla activa: `PROHIBIDO generar archivos en el Studio`.
-
-Mensaje a usar:
-```
-Resolver: [enunciado]
-```
 
 ---
 
@@ -83,6 +85,6 @@ Resolver: [enunciado]
 
 ## Próximo paso
 
-1. Generar `E5_F.md` — leer `P2-E5-607.md` + `E5_NBLM.md` y combinar
-2. Revisión final de figuras en Obsidian (E2 v4, E3, E4)
-3. Decidir si se agrega sección de linealización en E4 (el docente mencionó anular $\sin\theta$ para el informe)
+1. Continuar generando ejercicios complementarios con `ETN607-comp_indice_BCv5ii.md`
+2. Verificar figuras en Obsidian (E2 v4, E3, E4)
+3. Decidir linealización en E4

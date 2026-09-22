@@ -131,7 +131,7 @@ Documentación del script: `_app/shellcommands/shellcmd_NBLM_fix.md`
 [[ETN607-transcription_Av6]]
 [[ETN607-transcription_Av5]]
 [[ETN607-comp_apuntes_BCv4i]]
-[[ETN607-comp_indice_BCv4ii]]
+[[ETN607-comp_indice_BCv5ii]]
 [[ETN607-transcription_Av4]]
 [[ETN607-transcription]]
 [[_app/notebooklm/guides/ETN607/ETN607_latex.md]]

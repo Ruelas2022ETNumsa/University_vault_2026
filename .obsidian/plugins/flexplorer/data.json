@@ -1764,13 +1764,15 @@
         "DOC-ETN607-transcription.md",
         "DOC-ETN607-study.md",
         "ETN607-comp_apuntes_BCv4i.md",
-        "ETN607-comp_indice_BCv4ii.md",
+        "ETN607-comp_indice_BCv5ii.md",
         "ETN607-transcription_Av6.md",
         "legacy",
         "ETN607-ejercicio-detector_P1.md",
         "ETN607-study-P2v1.md",
         "ETN607-ejercicio-detector_P2.md",
-        "ETN607-transcription_Av7.md"
+        "ETN607-transcription_Av7.md",
+        "ETN607-comp_indice_BCv4ii 1.md",
+        "ETN607-comp_indice_BCv4ii 2.md"
       ]
     },
     "_assets": {
@@ -3792,10 +3794,6 @@
       "isHidden": false
     },
     "_app/notebooklm/prompts/ETN607/ETN607-transcription_Av6.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/prompts/ETN607/ETN607-comp_indice_BCv4ii.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -11313,8 +11311,7 @@
         "E2_F.md",
         "E1_F.md",
         "E10.md",
-        "E11.md",
-        "E11 1.md"
+        "E11.md"
       ]
     },
     "Semesters/Sem_04/ETN607/Partial_2/ejercicios P2/E5_F.md": {
@@ -11349,7 +11346,15 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Semesters/Sem_04/ETN607/Partial_2/ejercicios P2/E11 1.md": {
+    "_app/notebooklm/prompts/ETN607/ETN607-comp_indice_BCv4ii 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN607/ETN607-comp_indice_BCv4ii 2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN607/ETN607-comp_indice_BCv5ii.md": {
       "isPinned": false,
       "isHidden": false
     }
