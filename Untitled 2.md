@@ -1,4 +1,4 @@
-##### Ej. Tres poleas sin inercia rotacional $m_1$, $m_2$ y $m_3$ forman un sistema vertical en cadena. La polea $m_1$ está suspendida del techo mediante un resorte de constante $K$ y longitud natural $\ell_0$; su ramal izquierdo está conectado mediante un cable al piso (extremo fijo) y su ramal derecho sostiene a $m_2$. La polea $m_2$ cuelga del ramal derecho de $m_1$; su ramal izquierdo está conectado al piso mediante un cable (extremo fijo) y su ramal derecho sostiene a la polea $m_3$. La polea $m_3$ cuelga del ramal derecho de $m_2$; su ramal izquierdo está conectado al piso mediante un cable (extremo fijo) y su ramal derecho está conectado al piso mediante un resorte de constante $K'$ y longitud natural $\ell_0'$. La altura total del sistema es $H$. Las coordenadas $y_1$, $y_2$, $y_3$ se miden desde el techo hacia abajo hasta el centro de $m_1$, $m_2$ y $m_3$ respectivamente. La distancia $a$ se mide desde el centro de $m_1$ hasta el centro de $m_3$. Hallar las ecuaciones de movimiento de Lagrange del sistema.
+##### Ej. Tres poleas sin inercia rotacional $m_1$, $m_2$ y $m_3$ forman un sistema vertical en cadena. La polea $m_1$ está suspendida del techo mediante un resorte de constante $K$ y longitud natural $\ell_0$; su ramal izquierdo está conectado mediante un cable al piso (extremo fijo) y su ramal derecho sostiene a $m_2$. La polea $m_2$ cuelga del ramal derecho de $m_1$ a una distancia $a$ por debajo de ella; su ramal izquierdo está conectado al piso mediante un resorte de constante $K'$ y longitud natural $\ell_0'$, y su ramal derecho sostiene a la masa puntual $m_3$. La altura total del sistema es $H$. Las coordenadas $y_1$, $y_2$, $y_3$ se miden desde el techo hacia abajo hasta el centro de $m_1$, $m_2$ y $m_3$ respectivamente. Hallar las ecuaciones de movimiento de Lagrange del sistema.
 
 ```tikz
 \usetikzlibrary{patterns,decorations.pathmorphing}
@@ -8,283 +8,302 @@
     \colorlet{accentcolor}{orange}
 
     % Techo
-    \fill[pattern=north east lines] (-0.5,6.0) rectangle (5.0,6.3);
-    \draw[thick] (-0.5,6.0) -- (5.0,6.0);
+    \fill[pattern=north east lines] (-1,7.3) rectangle (5.5,7.6);
+    \draw[thick] (-1,7.3) -- (5.5,7.3);
 
     % Piso
-    \fill[pattern=north east lines] (-0.5,-0.3) rectangle (5.0,0);
-    \draw[thick] (-0.5,0) -- (5.0,0);
+    \fill[pattern=north east lines] (-1,-0.3) rectangle (5.5,0);
+    \draw[thick] (-1,0) -- (5.5,0);
 
-    % Resorte K — techo a polea 1
-    \draw[decoration={aspect=0.3, segment length=2mm, amplitude=2.5mm, coil}, decorate, maincolor, thick] (1.0,6.0) -- (1.0,4.8);
-    \node[left, maincolor] at (0.75,5.4) {$K$};
+    % Resorte K — techo a m1
+    \draw[decoration={aspect=0.3, segment length=2mm, amplitude=2.5mm, coil}, decorate, maincolor, thick] (1.0,7.3) -- (1.0,6.0);
+    \node[left, maincolor] at (0.75,6.65) {$K$};
 
-    % Polea 1 (m1)
-    \draw[thick, fill=teal!10, draw=maincolor] (1.0,4.5) circle (0.3);
-    \fill[maincolor] (1.0,4.5) circle (0.05);
-    \node[left, maincolor] at (0.55,4.5) {$m_1$};
+    % Polea m1 (teal)
+    \draw[thick, fill=teal!10, draw=maincolor] (1.0,5.7) circle (0.3);
+    \fill[maincolor] (1.0,5.7) circle (0.05);
+    \node[left, maincolor] at (0.5,5.7) {$m_1$};
 
-    % Cable 1 — ramal izquierdo al piso
-    \draw[thick, maincolor] (0.7,4.5) -- (0.7,0);
+    % Ramal izquierdo de m1 — cable fijo al piso
+    \draw[thick, maincolor] (0.7,5.7) -- (0.7,0);
 
-    % Cable 1 — ramal derecho a polea 2
-    \draw[thick, maincolor] (1.3,4.5) -- (1.3,3.0);
+    % Ramal derecho de m1 — cable baja a m2
+    \draw[thick, maincolor] (1.3,5.7) -- (1.3,3.7);
 
-    % Polea 2 (m2)
-    \draw[thick, fill=orange!10, draw=accentcolor] (1.3,2.7) circle (0.3);
-    \fill[accentcolor] (1.3,2.7) circle (0.05);
-    \node[left, accentcolor] at (0.85,2.7) {$m_2$};
+    % Polea m2 (accentcolor)
+    \draw[thick, fill=accentcolor!10, draw=accentcolor] (1.3,3.4) circle (0.3);
+    \fill[accentcolor] (1.3,3.4) circle (0.05);
+    \node[left, accentcolor] at (0.8,3.4) {$m_2$};
 
-    % Cable 2 — ramal izquierdo al piso
-    \draw[thick, accentcolor] (1.0,2.7) -- (1.0,0);
+    % Ramal izquierdo de m2 — resorte K' al piso
+    \draw[decoration={aspect=0.3, segment length=2mm, amplitude=2mm, coil}, decorate, accentcolor, thick] (1.0,3.4) -- (1.0,0);
+    \node[left, accentcolor] at (0.8,1.5) {$K'$};
 
-    % Cable 2 — ramal derecho a polea 3
-    \draw[thick, accentcolor] (1.6,2.7) -- (1.6,1.5);
+    % Ramal derecho de m2 — cuelga m3
+    \draw[thick, accentcolor] (1.6,3.4) -- (1.6,1.4);
+    \draw[thick, fill=accentcolor!30, draw=accentcolor] (1.6,1.4) circle (0.15);
+    \node[right, accentcolor] at (1.8,1.4) {$m_3$};
 
-    % Polea 3 (m3)
-    \draw[thick, fill=teal!10, draw=maincolor] (1.6,1.2) circle (0.3);
-    \fill[maincolor] (1.6,1.2) circle (0.05);
-    \node[left, maincolor] at (1.15,1.2) {$m_3$};
-
-    % Cable 3 — ramal izquierdo al piso
-    \draw[thick, maincolor] (1.3,1.2) -- (1.3,0);
-
-    % Cable 3 — ramal derecho al resorte K'
-    \draw[thick, maincolor] (1.9,1.2) -- (1.9,0.8);
-
-    % Resorte K' — al piso
-    \draw[decoration={aspect=0.3, segment length=2mm, amplitude=2mm, coil}, decorate, accentcolor, thick] (1.9,0.8) -- (1.9,0);
-    \node[right, accentcolor] at (2.0,0.4) {$K'$};
-
-    % Cota H — altura total
-    \draw[<->, red, thick] (-0.3,0) -- (-0.3,6.0) node[midway, left] {$H$};
+    % Cota H
+    \draw[<->, red, thick] (-0.5,0) -- (-0.5,7.3) node[midway, left] {$H$};
 
     % Coordenada y1 — techo a m1
-    \draw[->, maincolor, thick] (2.5,6.0) -- (2.5,4.5) node[midway, right] {$y_1$};
-    \draw[dotted] (1.0,4.5) -- (2.6,4.5);
-    \draw[dotted] (1.0,6.0) -- (2.6,6.0);
+    \draw[->, maincolor, thick] (2.8,7.3) -- (2.8,5.7) node[midway, right] {$y_1$};
+    \draw[dotted] (1.0,7.3) -- (2.9,7.3);
+    \draw[dotted] (1.0,5.7) -- (2.9,5.7);
 
     % Coordenada y2 — techo a m2
-    \draw[->, accentcolor, thick] (3.2,6.0) -- (3.2,2.7) node[midway, right] {$y_2$};
-    \draw[dotted] (1.3,2.7) -- (3.3,2.7);
+    \draw[->, accentcolor, thick] (3.5,7.3) -- (3.5,3.4) node[midway, right] {$y_2$};
+    \draw[dotted] (1.3,3.4) -- (3.6,3.4);
 
     % Coordenada y3 — techo a m3
-    \draw[->, maincolor, thick] (3.9,6.0) -- (3.9,1.2) node[midway, right] {$y_3$};
-    \draw[dotted] (1.6,1.2) -- (4.0,1.2);
+    \draw[->, maincolor, thick] (4.2,7.3) -- (4.2,1.4) node[midway, right] {$y_3$};
+    \draw[dotted] (1.6,1.4) -- (4.3,1.4);
 
-    % Cota a — distancia de m1 a m3
-    \draw[<->, maincolor, thick] (2.1,4.5) -- (2.1,1.2) node[midway, left] {$a$};
+    % Cota a — m1 a m2
+    \draw[<->, maincolor, thick] (2.1,5.7) -- (2.1,3.4) node[midway, right] {$a$};
+    \draw[dotted] (1.3,5.7) -- (2.2,5.7);
+    \draw[dotted] (1.3,3.4) -- (2.2,3.4);
 
 \end{tikzpicture}
 \end{document}
 ```
 
 **Resolución**
-Se determinan las relaciones de restricción cinemática asociadas a los cables inextensibles, se formulan las energías cinética y potencial en función de la coordenada independiente seleccionada y se aplica la ecuación de Euler-Lagrange.
+Se establecen las relaciones de ligadura cinemática para los cables del sistema, se construyen la energía cinética y potencial para determinar la función Lagrangiana, y se aplican las ecuaciones de Euler-Lagrange.
 
-**Paso 1 — Coordenadas, ecuaciones de restricción y grados de libertad**
+---
 
-Vector de coordenadas posibles del sistema:
+### Caso 1 — Sistema con ligaduras de cables anclados al piso (1 GDL)
 
-$$
-N = (y_1,\ y_2,\ y_3)
-$$
-
-
-Restricción cinemática del primer cable (asociado a $m_1$):
-
-$$
-(H - y_1) + \pi R_1 + (y_2 - y_1) = L_1 \implies y_2 - 2 y_1 = C_1
-$$
+**Paso 1 — Ligaduras cinemáticas y coordenadas generalizadas**
 
 
 $$
-y_2 = 2 y_1 + C_1 \implies \dot{y}_2 = 2 \dot{y}_1
+L_1 = (H - y_1) + \pi R_1 + (y_2 - y_1) = H + \pi R_1 + y_2 - 2y_1 = \text{cte}
 $$
 
 
-Restricción cinemática del segundo cable (asociado a $m_2$):
 
 $$
-(H - y_2) + \pi R_2 + (y_3 - y_2) = L_2 \implies y_3 - 2 y_2 = C_2
-$$
-
-
-$$
-y_3 = 2(2 y_1 + C_1) + C_2 = 4 y_1 + 2 C_1 + C_2 \implies \dot{y}_3 = 4 \dot{y}_1
+\dot{y}_1 = \dfrac{\dot{y}_2}{2}
 $$
 
 
-Relación cinemática para la cota de separación $a$:
 
 $$
-a = y_3 - y_1 = 3 y_1 + 2 C_1 + C_2 \implies \dot{a} = 3 \dot{y}_1
-$$
-
-
-Número de grados de libertad del sistema:
-
-$$
-\text{GDL} = N - \text{restricciones} = 3 - 2 = 1
+y_1 = \dfrac{y_2 - C_1}{2} \qquad \text{donde } C_1 = L_1 - H - \pi R_1
 $$
 
 
-Coordenada generalizada independiente seleccionada: $y_1$.
+
+$$
+L_2 = (H - y_2) + \pi R_2 + (y_3 - y_2) = H + \pi R_2 + y_3 - 2y_2 = \text{cte}
+$$
+
+
+
+$$
+\dot{y}_3 = 2\dot{y}_2
+$$
+
+
+
+$$
+y_3 = 2y_2 + C_2 \qquad \text{donde } C_2 = L_2 - H - \pi R_2
+$$
+
+
+
+$$
+\text{GDL} = 3 - 2 = 1 \implies q = y_2
+$$
+
 
 **Paso 2 — Energía cinética del sistema**
 
-Expresión de la energía cinética traslacional del sistema (poleas sin inercia rotacional):
 
 $$
-T = \frac{1}{2} m_1 \dot{y}_1^2 + \frac{1}{2} m_2 \dot{y}_2^2 + \frac{1}{2} m_3 \dot{y}_3^2
-$$
-
-
-Sustituyendo las relaciones de velocidad $\dot{y}_2 = 2 \dot{y}_1$ y $\dot{y}_3 = 4 \dot{y}_1$:
-
-$$
-T = \frac{1}{2} m_1 \dot{y}_1^2 + \frac{1}{2} m_2 (2 \dot{y}_1)^2 + \frac{1}{2} m_3 (4 \dot{y}_1)^2
+T = \dfrac{1}{2}m_1\dot{y}_1^2 + \dfrac{1}{2}m_2\dot{y}_2^2 + \dfrac{1}{2}m_3\dot{y}_3^2
 $$
 
 
-$$
-T = \frac{1}{2} m_1 \dot{y}_1^2 + \frac{1}{2} m_2 (4 \dot{y}_1^2) + \frac{1}{2} m_3 (16 \dot{y}_1^2)
-$$
-
 
 $$
-T = \frac{1}{2} (m_1 + 4 m_2 + 16 m_3) \dot{y}_1^2
+T = \dfrac{1}{2}m_1\left(\dfrac{\dot{y}_2}{2}\right)^{\!2} + \dfrac{1}{2}m_2\dot{y}_2^2 + \dfrac{1}{2}m_3\left(2\dot{y}_2\right)^{\!2}
 $$
 
 
-**Paso 3 — Energía potencial del sistema**
-
-Energía potencial gravitatoria (tomando el techo como origen de referencia y el sentido hacia abajo como positivo):
 
 $$
-V_g = - m_1 g y_1 - m_2 g y_2 - m_3 g y_3
+\boxed{T = \dfrac{1}{2}\left(\dfrac{m_1}{4} + m_2 + 4m_3\right)\dot{y}_2^2}
 $$
 
 
-$$
-V_g = - m_1 g y_1 - m_2 g (2 y_1 + C_1) - m_3 g (4 y_1 + 2 C_1 + C_2)
-$$
+**Paso 3 — Energía potencial total**
 
 
 $$
-V_g = - (m_1 + 2 m_2 + 4 m_3) g y_1 - \text{cte}
+V = V_g + V_K + V_{K'}
 $$
 
 
-Deformación y energía elástica del resorte $K$ (suspendido del techo):
 
 $$
-\Delta \ell_K = y_1 - R_1 - \ell_0 = y_1 - C_0
-$$
-
-
-$$
-V_K = \frac{1}{2} K (y_1 - C_0)^2
+V_g = -m_1 g y_1 - m_2 g y_2 - m_3 g y_3
 $$
 
 
-Deformación y energía elástica del resorte $K'$ (conectado al piso mediante el tercer cable):
 
 $$
-L_3 = (H - y_3) + \pi R_3 + \ell_{\text{ramal}}
-$$
-
-
-$$
-y_{s} = y_3 + \ell_{\text{ramal}} = 2 y_3 + L_3 - H - \pi R_3
+V_g = -\left(\dfrac{m_1}{2} + m_2 + 2m_3\right)g y_2 + \text{cte}
 $$
 
 
-$$
-\ell_{K'} = H - y_{s} = 2 H - L_3 + \pi R_3 - 2 y_3
-$$
-
 
 $$
-\Delta \ell_{K'} = \ell_{K'} - \ell_0' = C_0' - 2 y_3 \quad \text{con } C_0' = 2 H - L_3 + \pi R_3 - \ell_0'
-$$
-
-Sustituyendo $y_3 = 4 y_1 + 2 C_1 + C_2$:
-
-$$
-\Delta \ell_{K'} = C_0'' - 8 y_1 \quad \text{con } C_0'' = C_0' - 4 C_1 - 2 C_2
+V_K = \dfrac{1}{2}K\left(y_1 - \ell_0\right)^2 = \dfrac{1}{2}K\left(\dfrac{y_2 - C_1}{2} - \ell_0\right)^2
 $$
 
 
-$$
-V_{K'} = \frac{1}{2} K' (C_0'' - 8 y_1)^2
-$$
-
-
-Energía potencial total del sistema:
 
 $$
-V = \frac{1}{2} K (y_1 - C_0)^2 + \frac{1}{2} K' (C_0'' - 8 y_1)^2 - (m_1 + 2 m_2 + 4 m_3) g y_1
+V_{K'} = \dfrac{1}{2}K'\left(H - y_2 - \ell_0'\right)^2
 $$
 
 
-**Paso 4 — Ecuación de movimiento de Lagrange**
-
-Ecuación de Euler-Lagrange para la coordenada generalizada $y_1$:
 
 $$
-\frac{d}{dt}\!\left(\frac{\partial T}{\partial \dot{y}_1}\right) - \frac{\partial T}{\partial y_1} = -\frac{\partial V}{\partial y_1}
+\boxed{V = -\left(\dfrac{m_1}{2} + m_2 + 2m_3\right)g y_2 + \dfrac{1}{2}K\left(\dfrac{y_2 - C_1}{2} - \ell_0\right)^2 + \dfrac{1}{2}K'\left(H - y_2 - \ell_0'\right)^2}
 $$
 
 
-Evaluación de las derivadas de la energía cinética:
-
-$$
-\frac{\partial T}{\partial \dot{y}_1} = (m_1 + 4 m_2 + 16 m_3) \dot{y}_1
-$$
+**Paso 4 — Función Lagrangiana**
 
 
 $$
-\frac{d}{dt}\!\left(\frac{\partial T}{\partial \dot{y}_1}\right) = (m_1 + 4 m_2 + 16 m_3) \ddot{y}_1
+L = T - V
 $$
 
 
-$$
-\frac{\partial T}{\partial y_1} = 0
-$$
-
-
-Evaluación de la derivada de la energía potencial:
 
 $$
--\frac{\partial V}{\partial y_1} = - K (y_1 - C_0) - K' (C_0'' - 8 y_1)(-8) + (m_1 + 2 m_2 + 4 m_3) g
+L = \dfrac{1}{2}\left(\dfrac{m_1}{4} + m_2 + 4m_3\right)\dot{y}_2^2 + \left(\dfrac{m_1}{2} + m_2 + 2m_3\right)g y_2 - \dfrac{1}{2}K\left(\dfrac{y_2 - C_1}{2} - \ell_0\right)^2 - \dfrac{1}{2}K'\left(H - y_2 - \ell_0'\right)^2
 $$
 
 
-$$
--\frac{\partial V}{\partial y_1} = - K (y_1 - C_0) + 8 K' (C_0'' - 8 y_1) + (m_1 + 2 m_2 + 4 m_3) g
-$$
+**Paso 5 — Ecuación diferencial de movimiento**
 
 
-Sustituyendo los términos en la ecuación de Lagrange:
-
 $$
-(m_1 + 4 m_2 + 16 m_3) \ddot{y}_1 + K (y_1 - C_0) - 8 K' (C_0'' - 8 y_1) = (m_1 + 2 m_2 + 4 m_3) g
+\dfrac{d}{dt}\left(\dfrac{\partial L}{\partial \dot{y}_2}\right) - \dfrac{\partial L}{\partial y_2} = 0
 $$
 
 
-Expresando en términos de las deformaciones instantáneas de los resortes $\Delta \ell_K = y_1 - C_0$ y $\Delta \ell_{K'} = C_0' - 2 y_3$:
 
 $$
-\boxed{(m_1 + 4 m_2 + 16 m_3) \ddot{y}_1 + K \Delta \ell_K - 8 K' \Delta \ell_{K'} = (m_1 + 2 m_2 + 4 m_3) g}
-$$
-
-
-Alternativamente, en términos de la aceleración de la cota $a$ ($\ddot{y}_1 = \frac{1}{3}\ddot{a}$):
-
-$$
-\boxed{\frac{1}{3}(m_1 + 4 m_2 + 16 m_3) \ddot{a} + K \Delta \ell_K - 8 K' \Delta \ell_{K'} = (m_1 + 2 m_2 + 4 m_3) g}
+\dfrac{\partial L}{\partial \dot{y}_2} = \left(\dfrac{m_1}{4} + m_2 + 4m_3\right)\dot{y}_2
 $$
 
 
+
+$$
+\dfrac{d}{dt}\left(\dfrac{\partial L}{\partial \dot{y}_2}\right) = \left(\dfrac{m_1}{4} + m_2 + 4m_3\right)\ddot{y}_2
+$$
+
+
+
+$$
+\dfrac{\partial L}{\partial y_2} = \left(\dfrac{m_1}{2} + m_2 + 2m_3\right)g - \dfrac{1}{2}K\left(\dfrac{y_2 - C_1}{2} - \ell_0\right) + K'\left(H - y_2 - \ell_0'\right)
+$$
+
+
+
+$$
+\boxed{\left(\dfrac{m_1}{4} + m_2 + 4m_3\right)\ddot{y}_2 + \left(\dfrac{K}{8} + K'\right)y_2 = \left(\dfrac{m_1}{2} + m_2 + 2m_3\right)g + \dfrac{K}{4}\left(\dfrac{C_1}{2} + \ell_0\right) + K'(H - \ell_0')}
+$$
+
+
+---
+
+### Caso 2 — Sistema con coordenada $y_3$ independiente acoplada al resorte $K'$ (2 GDL)
+
+**Paso 1 — Coordenadas generalizadas y posición del extremo del resorte $K'$**
+
+
+$$
+q_1 = y_2, \qquad q_2 = y_3
+$$
+
+
+
+$$
+y_1 = \dfrac{y_2 - C_1}{2} \implies \dot{y}_1 = \dfrac{\dot{y}_2}{2}
+$$
+
+
+
+$$
+L_2 = (y_s - y_2) + \pi R_2 + (y_3 - y_2) = y_s + y_3 - 2y_2 + \pi R_2 = \text{cte} \implies y_s = 2y_2 - y_3 + C_2
+$$
+
+
+
+$$
+\text{GDL} = 2
+$$
+
+
+**Paso 2 — Energía cinética y potencial del sistema**
+
+
+$$
+T = \dfrac{1}{2}m_1\dot{y}_1^2 + \dfrac{1}{2}m_2\dot{y}_2^2 + \dfrac{1}{2}m_3\dot{y}_3^2 = \dfrac{1}{2}\left(\dfrac{m_1}{4} + m_2\right)\dot{y}_2^2 + \dfrac{1}{2}m_3\dot{y}_3^2
+$$
+
+
+
+$$
+V = -m_1 g y_1 - m_2 g y_2 - m_3 g y_3 + \dfrac{1}{2}K\left(y_1 - \ell_0\right)^2 + \dfrac{1}{2}K'\left(H - y_s - \ell_0'\right)^2
+$$
+
+
+
+$$
+V = -\left(\dfrac{m_1}{2} + m_2\right)g y_2 - m_3 g y_3 + \dfrac{1}{2}K\left(\dfrac{y_2 - C_1}{2} - \ell_0\right)^2 + \dfrac{1}{2}K'\left(H - 2y_2 + y_3 - C_2 - \ell_0'\right)^2
+$$
+
+
+**Paso 3 — Función Lagrangiana**
+
+
+$$
+L = \dfrac{1}{2}\left(\dfrac{m_1}{4} + m_2\right)\dot{y}_2^2 + \dfrac{1}{2}m_3\dot{y}_3^2 + \left(\dfrac{m_1}{2} + m_2\right)g y_2 + m_3 g y_3 - \dfrac{1}{2}K\left(\dfrac{y_2 - C_1}{2} - \ell_0\right)^2 - \dfrac{1}{2}K'\left(H - 2y_2 + y_3 - C_2 - \ell_0'\right)^2
+$$
+
+
+**Paso 4 — Ecuaciones diferenciales de movimiento acopladas**
+
+
+$$
+\dfrac{d}{dt}\left(\dfrac{\partial L}{\partial \dot{y}_2}\right) - \dfrac{\partial L}{\partial y_2} = 0
+$$
+
+
+
+$$
+\boxed{\left(\dfrac{m_1}{4} + m_2\right)\ddot{y}_2 + \left(\dfrac{K}{8} + 2K'\right)y_2 - K' y_3 = \left(\dfrac{m_1}{2} + m_2\right)g + \dfrac{K}{4}\left(\dfrac{C_1}{2} + \ell_0\right) + K'(H - C_2 - \ell_0')}
+$$
+
+
+
+$$
+\dfrac{d}{dt}\left(\dfrac{\partial L}{\partial \dot{y}_3}\right) - \dfrac{\partial L}{\partial y_3} = 0
+$$
+
+
+
+$$
+\boxed{m_3 \ddot{y}_3 + K' y_3 - 2K' y_2 = m_3 g - K'(H - C_2 - \ell_0')}
+$$
 

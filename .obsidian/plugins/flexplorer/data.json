@@ -38,8 +38,7 @@
         "Untitled.md",
         "P2-E1-607.md",
         "E4_NBLM.md",
-        "E5_NBLM.md",
-        "E11borrar.md"
+        "E5_NBLM.md"
       ]
     },
     "MOC": {
@@ -11311,7 +11310,8 @@
         "E2_F.md",
         "E1_F.md",
         "E10.md",
-        "E11.md"
+        "E11.md",
+        "E10 1.md"
       ]
     },
     "Semesters/Sem_04/ETN607/Partial_2/ejercicios P2/E5_F.md": {
@@ -11342,10 +11342,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "E11borrar.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_app/notebooklm/prompts/ETN607/ETN607-comp_indice_BCv4ii 1.md": {
       "isPinned": false,
       "isHidden": false
@@ -11355,6 +11351,10 @@
       "isHidden": false
     },
     "_app/notebooklm/prompts/ETN607/ETN607-comp_indice_BCv5ii.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Partial_2/ejercicios P2/E10 1.md": {
       "isPinned": false,
       "isHidden": false
     }
