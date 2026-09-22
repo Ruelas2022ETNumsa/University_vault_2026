@@ -45,7 +45,8 @@ MENSAJE 4 — resolución de enunciado propio:
 "Resolver: [enunciado]"
 → el usuario provee el enunciado completo
 → resolver con el mismo formato de EJERCICIO RESUELTO (ver abajo)
-→ no buscar en fuentes — trabajar con el enunciado dado
+→ ANTES de resolver: consultar los ejercicios fuente E1_F.md, E2_F.md, E3_F.md, E4_F.md, E5_F.md cargados en este notebook
+→ respetar su estilo, notación, nivel de detalle algebraico y convenciones (uso de $\pi R$ para recorrido de cable en polea, constantes $C_0$, $\ell_0$, etc.)
 → si el ejercicio requiere figura → TikZJax si es simple · IMA si es complejo
 
 FORMATO EJERCICIO RESUELTO (aplica a MENSAJE 3 y MENSAJE 4):
@@ -74,8 +75,9 @@ Reglas de resolución:
 ---
 
 SELECCIÓN DE FUENTES:
-Consultar _library_ETN607.md → sección "Qué usar por tema — Teoría" para identificar los libros y capítulos correspondientes al tema indicado.
-No usar conocimiento general. Solo los libros cargados en este notebook.
+Para MENSAJE 4 → fuente principal: ejercicios E1_F.md a E5_F.md (estilo y convenciones) + libros según tema.
+Para demás mensajes → consultar _library_ETN607.md → sección "Qué usar por tema — Teoría".
+No usar conocimiento general. Solo los documentos cargados en este notebook.
 
 ---
 

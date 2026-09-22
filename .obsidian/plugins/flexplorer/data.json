@@ -38,7 +38,8 @@
         "Untitled.md",
         "P2-E1-607.md",
         "E4_NBLM.md",
-        "E5_NBLM.md"
+        "E5_NBLM.md",
+        "E11borrar.md"
       ]
     },
     "MOC": {
@@ -11340,6 +11341,10 @@
       "isHidden": false
     },
     "Semesters/Sem_04/ETN607/Partial_2/ejercicios P2/E11.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "E11borrar.md": {
       "isPinned": false,
       "isHidden": false
     }
