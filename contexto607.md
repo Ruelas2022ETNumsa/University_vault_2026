@@ -22,6 +22,7 @@ worker: alx-rul
   - Eliminados: Mensajes 1 y 2 (complementos B/C), callout `ad-note`, niveles B/C
   - Conservados: Mensaje 3 (ejemplos similares, gatillo independiente), Mensaje 4 (uso principal)
   - Regla de pasos actualizada: paso = secuencia con resultado esperado que el siguiente usa como input
+- `E12.md` generado — variante de E11 con $m_4$ en ramal izquierdo de $m_1$ ✅
 
 ### Pendiente
 
@@ -46,6 +47,7 @@ worker: alx-rul
 | Archivo | Ubicación | Estado |
 |---|---|---|
 | `E11.md` | `E:\University_vault_2026\Semesters\Sem_04\ETN607\Partial_2\ejercicios P2\` | ✅ completo — figura corregida, pasos corregidos |
+| `E12.md` | `E:\University_vault_2026\Semesters\Sem_04\ETN607\Partial_2\ejercicios P2\` | ✅ enunciado + tikz — variante E11 con $m_4$ en ramal izq. de $m_1$ → 2 GDL, sistema acoplado |
 
 ---
 
@@ -80,6 +82,14 @@ Regla de pasos activa: paso = secuencia de acciones con un resultado concreto qu
 - Notación: $x_1, y_2$… consistente, $C_0$ para constantes de integración
 - EDOs: factorizar cuando corresponda, pero **mantener términos de corrección explícitos** (caso E4: $-\dot{x}\sin\theta\dot{\theta} + \dot{x}\dot{\theta}\sin\theta$)
 - No simplificar pasos intermedios que el docente dejó explícitos
+
+---
+
+## Notas del método — ejercicios complementarios (variantes)
+
+- Claude genera: **enunciado + tikz + descripción de figura** únicamente
+- La resolución la hace **NBLM** — Claude NO resuelve estos ejercicios
+- Flujo: Claude genera enunciado → usuario lo pasa a NBLM con Mensaje 4
 
 ---
 
