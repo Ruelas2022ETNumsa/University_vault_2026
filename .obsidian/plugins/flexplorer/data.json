@@ -11296,14 +11296,15 @@
     "Semesters/Sem_04/ETN607/Partial_2": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "ejercicios P2"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "Semesters/Sem_04/ETN607/Partial_2/ejercicios P2": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "E5_F.md",
         "E4_F.md",
@@ -11312,8 +11313,7 @@
         "E1_F.md",
         "E10.md",
         "E11.md"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "Semesters/Sem_04/ETN607/Partial_2/ejercicios P2/E5_F.md": {
       "isPinned": false,

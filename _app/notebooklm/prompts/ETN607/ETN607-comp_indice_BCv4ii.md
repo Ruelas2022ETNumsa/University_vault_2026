@@ -57,20 +57,18 @@ FORMATO EJERCICIO RESUELTO (aplica a MENSAJE 3 y MENSAJE 4):
 **Resolución**
 Indicar brevemente la estrategia antes de comenzar — 1 línea, sin sobreexplicar.
 
-$$
-\begin{array}{rcl}
-\text{paso 1} & = & \text{expresión} \\[4pt]
-\text{paso 2} & = & \text{expresión} \\[4pt]
-& \vdots & \\[4pt]
-\therefore\quad \color{orange}{\text{resultado}}
-\end{array}
-$$
+**Paso N — [nombre del paso]**
+
+$$\text{expresión}$$
 
 Reglas de resolución:
+- Cada paso va en su propio bloque `**Paso N — nombre**` seguido de la ecuación en `$$...$$` independiente
+- PROHIBIDO usar `\begin{array}` o `\begin{aligned}` — cada ecuación va en su propio bloque `$$`
 - No saltear pasos algebraicos — cada línea se deriva de la anterior
 - Indicar qué ley o propiedad se aplica solo si no es evidente
 - Preservar valor[unidad] y ∴ como convención
-- Si hay varios casos o componentes → resolverlos en bloques separados con array
+- Si hay varios casos o componentes → resolverlos en bloques separados, cada uno con su secuencia de pasos
+- Resultado final siempre en `$$\boxed{...}$$`
 - No agregar comentarios al final — la resolución habla por sí sola
 
 ---
