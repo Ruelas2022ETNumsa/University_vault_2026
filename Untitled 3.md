@@ -1,4 +1,4 @@
-##### Ej. Dos poleas sin inercia rotacional $m_1$ y $m_2$ forman un sistema vertical en cadena con dos resortes y una fuerza aplicada. La polea $m_1$ está suspendida del techo mediante un resorte de constante $K$ y longitud natural $\ell_0$ conectado a su centro; su ramal izquierdo sostiene a la polea $m_2$ por el centro mediante un cable, y su ramal derecho está conectado al piso mediante un resorte de constante $K'$ y longitud natural $\ell_0'$. La polea $m_2$ cuelga del ramal izquierdo de $m_1$; su ramal izquierdo está conectado al piso mediante un cable (extremo fijo) y su ramal derecho sostiene un punto de aplicación de fuerza $F$ mediante un cable. La altura total del sistema es $H$. Las coordenadas $y_1$, $y_2$, $y_3$ se miden desde el techo hacia abajo hasta el centro de $m_1$, el centro de $m_2$ y el punto de aplicación de $F$ respectivamente. La distancia $a$ se mide desde el centro de $m_2$ hacia abajo hasta el punto de aplicación de $F$. Hallar las ecuaciones de movimiento de Lagrange del sistema.
+##### Ej. Un bloque de masa $m_1$ desliza sin fricción sobre una superficie horizontal, conectado a una pared fija a su izquierda mediante un resorte de constante $K$ y longitud natural $\ell_0$. Un cable inextensible sale del lado derecho de $m_1$, pasa por una polea fija en el borde de la superficie y desciende verticalmente a lo largo de una pared vertical. La masa $m_2$ desciende rozando la pared vertical con coeficiente de amortiguamiento viscoso $c_2$; de su parte inferior cuelga, mediante un resorte de constante $K'$ y longitud natural $\ell_0'$, la masa $m_3$ que también roza la misma pared con coeficiente $c_3$. La altura total del sistema vertical es $H$. Las coordenadas $x_1$ (desde la pared izquierda hasta el centro de $m_1$), $y_2$ e $y_3$ (desde la polea hacia abajo hasta el centro de $m_2$ y $m_3$ respectivamente) describen la configuración del sistema. Hallar las ecuaciones de movimiento de Lagrange del sistema.
 
 ```tikz
 \usetikzlibrary{patterns,decorations.pathmorphing}
@@ -7,99 +7,83 @@
     \colorlet{maincolor}{teal}
     \colorlet{accentcolor}{orange}
 
-    % Techo
-    \fill[pattern=north east lines] (-1,7.3) rectangle (5.5,7.6);
-    \draw[thick] (-1,7.3) -- (5.5,7.3);
+    % Pared izquierda
+    \fill[pattern=north east lines] (-0.5,0) rectangle (0,2.2);
+    \draw[thick] (0,0) -- (0,2.2);
 
-    % Piso
-    \fill[pattern=north east lines] (-1,-0.3) rectangle (5.5,0);
-    \draw[thick] (-1,0) -- (5.5,0);
+    % Piso horizontal
+    \fill[pattern=north east lines] (0,-0.2) rectangle (5.0,0);
+    \draw[thick] (0,0) -- (5.0,0);
 
-    % Resorte K — techo a m1
-    \draw[decoration={aspect=0.3, segment length=2mm, amplitude=2.5mm, coil}, decorate, maincolor, thick] (1.2,7.3) -- (1.2,6.0);
-    \node[left, maincolor] at (0.95,6.65) {$K$};
+    % Pared vertical derecha
+    \fill[pattern=north east lines] (5.3,-4.2) rectangle (5.6,0);
+    \draw[thick] (5.0,0) -- (5.0,-4.2);
 
-    % Polea m1 (teal)
-    \draw[thick, fill=teal!10, draw=maincolor] (1.2,5.7) circle (0.3);
-    \fill[maincolor] (1.2,5.7) circle (0.05);
-    \node[left, maincolor] at (0.7,5.7) {$m_1$};
+    % Resorte K
+    \draw[decoration={aspect=0.3, segment length=2mm, amplitude=2.5mm, coil}, decorate, maincolor, thick] (0,1.0) -- (1.5,1.0);
+    \node[above, maincolor] at (0.75,1.15) {$K$};
 
-    % Ramal izquierdo de m1 — cable baja a m2
-    \draw[thick, maincolor] (0.9,5.7) -- (0.9,3.4);
+    % Bloque m1
+    \draw[fill=teal!10, draw=maincolor, thick] (1.5,0.3) rectangle (2.7,1.7);
+    \node[maincolor] at (2.1,1.0) {$m_1$};
 
-    % Ramal derecho de m1 — cable baja a resorte K'
-    \draw[thick, maincolor] (1.5,5.7) -- (1.5,2.0);
+    % Polea fija
+    \draw[thick, fill=gray!20] (5.0,1.0) circle (0.25);
+    \fill (5.0,1.0) circle (0.04);
+    \draw[thick] (5.0,0) -- (5.0,0.75);
 
-    % Resorte K' — cable de m1 al piso
-    \draw[decoration={aspect=0.3, segment length=2mm, amplitude=2mm, coil}, decorate, maincolor, thick] (1.5,2.0) -- (1.5,0);
-    \node[right, maincolor] at (1.7,1.0) {$K'$};
+    % Cable
+    \draw[thick] (2.7,1.25) -- (5.0,1.25);
+    \draw[thick] (5.25,1.0) -- (5.25,-1.0);
 
-    % Polea m2 (accentcolor)
-    \draw[thick, fill=accentcolor!10, draw=accentcolor] (0.9,3.4) circle (0.3);
-    \fill[accentcolor] (0.9,3.4) circle (0.05);
-    \node[left, accentcolor] at (0.4,3.4) {$m_2$};
+    % Bloque m2
+    \draw[fill=teal!10, draw=maincolor, thick] (5.0,-1.7) rectangle (5.8,-1.0);
+    \node[maincolor] at (5.4,-1.35) {$m_2$};
 
-    % Ramal izquierdo de m2 — cable fijo al piso
-    \draw[thick, accentcolor] (0.6,3.4) -- (0.6,0);
+    % Resorte K'
+    \draw[decoration={aspect=0.3, segment length=2mm, amplitude=2mm, coil}, decorate, accentcolor, thick] (5.4,-1.7) -- (5.4,-2.7);
+    \node[right, accentcolor] at (5.55,-2.2) {$K'$};
 
-    % Ramal derecho de m2 — cable desciende a la fuerza F
-    \draw[thick, accentcolor] (1.2,3.4) -- (1.2,1.2);
-    \draw[->, accentcolor, ultra thick] (1.2,1.2) -- (1.2,0.4) node[right, accentcolor] {$F$};
-    \fill[accentcolor] (1.2,1.2) circle (0.06);
+    % Bloque m3
+    \draw[fill=orange!10, draw=accentcolor, thick] (5.0,-3.4) rectangle (5.8,-2.7);
+    \node[accentcolor] at (5.4,-3.05) {$m_3$};
 
-    % Cota H — altura total
-    \draw[<->, red, thick] (-0.5,0) -- (-0.5,7.3) node[midway, left] {$H$};
+    % Coordenadas
+    \draw[->, maincolor, thick] (0,2.1) -- (2.1,2.1) node[midway, above] {$x_1$};
+    \draw[dotted] (2.1,1.7) -- (2.1,2.3);
+    \draw[dotted] (0,2.0) -- (0,2.3);
 
-    % Coordenada y1 — techo a m1
-    \draw[->, maincolor, thick] (2.8,7.3) -- (2.8,5.7) node[midway, right] {$y_1$};
-    \draw[dotted] (1.2,7.3) -- (2.9,7.3);
-    \draw[dotted] (1.2,5.7) -- (2.9,5.7);
+    \draw[->, maincolor, thick] (6.5,1.0) -- (6.5,-1.35) node[midway, right] {$y_2$};
+    \draw[dotted] (5.8,-1.35) -- (6.7,-1.35);
+    \draw[dotted] (5.0,1.0) -- (6.7,1.0);
 
-    % Coordenada y2 — techo a m2
-    \draw[->, accentcolor, thick] (3.5,7.3) -- (3.5,3.4) node[midway, right] {$y_2$};
-    \draw[dotted] (0.9,3.4) -- (3.6,3.4);
-
-    % Coordenada y3 — techo al punto F
-    \draw[->, accentcolor, thick] (4.2,7.3) -- (4.2,1.2) node[midway, right] {$y_3$};
-    \draw[dotted] (1.2,1.2) -- (4.3,1.2);
-
-    % Cota a — m2 al punto F
-    \draw[<->, accentcolor, thick] (2.1,3.4) -- (2.1,1.2) node[midway, right] {$a$};
-    \draw[dotted] (0.9,3.4) -- (2.2,3.4);
-    \draw[dotted] (1.2,1.2) -- (2.2,1.2);
+    \draw[->, accentcolor, thick] (7.3,1.0) -- (7.3,-3.05) node[midway, right] {$y_3$};
+    \draw[dotted] (5.8,-3.05) -- (7.5,-3.05);
 
 \end{tikzpicture}
 \end{document}
 ```
 
 **Resolución**
-Se emplean las coordenadas generalizadas $(y_2, a)$ indicadas para expresar las relaciones de ligadura cinemática, formular la energía cinética, la energía potencial y el trabajo virtual, y derivar las ecuaciones de Lagrange del sistema.
+Se establece la relación cinematica del cable inextensible para reducir los grados de libertad, se formulan la energía cinética, la energía potencial y la función de disipación de Rayleigh, y se aplican las ecuaciones de Euler-Lagrange.
 
----
-
-**Paso 1 — Relaciones cinemáticas y coordenadas generalizadas**
+**Paso 1 — Relación de ligadura entre las coordenadas del cable**
 
 
 $$
-\text{A partir de la cota } a = y_3 - y_2 \implies y_3 = y_2 + a \implies \dot{y}_3 = \dot{y}_2 + \dot{a}
+L_c = \left(d_p - x_1 - \dfrac{b_1}{2}\right) + \pi R + \left(y_2 - \dfrac{b_2}{2}\right) = \text{cte}
 $$
 
 
 
 $$
-\text{Según la ligadura del cable de la polea } m_1: \quad y_1 = y_2 + \frac{1}{2}a + C_1 \implies \dot{y}_1 = \dot{y}_2 + \frac{1}{2}\dot{a}
+y_2 - x_1 = C_0 \implies x_1 = y_2 - C_0
 $$
 
 
 
 $$
-\text{La posición del extremo superior del resorte } K' \text{ resulta } y_{s'} = y_2 + a + C_1'
-$$
-
-
-
-$$
-\text{Las coordenadas generalizadas seleccionadas son } (q_1, q_2) = (y_2, a)
+\dot{x}_1 = \dot{y}_2
 $$
 
 
@@ -107,55 +91,51 @@ $$
 
 
 $$
-T = \frac{1}{2}m_1\dot{y}_1^2 + \frac{1}{2}m_2\dot{y}_2^2
+T = \dfrac{1}{2}m_1 \dot{x}_1^2 + \dfrac{1}{2}m_2 \dot{y}_2^2 + \dfrac{1}{2}m_3 \dot{y}_3^2
 $$
 
 
 
 $$
-T = \frac{1}{2}m_1\left(\dot{y}_2 + \frac{1}{2}\dot{a}\right)^{\!2} + \frac{1}{2}m_2\dot{y}_2^2
+T = \dfrac{1}{2}(m_1 + m_2)\dot{y}_2^2 + \dfrac{1}{2}m_3 \dot{y}_3^2
+$$
+
+
+**Paso 3 — Energía potencial total del sistema**
+
+
+$$
+V_g = -m_2 g y_2 - m_3 g y_3
 $$
 
 
 
 $$
-\boxed{T = \frac{1}{2}(m_1 + m_2)\dot{y}_2^2 + \frac{1}{2}m_1\dot{y}_2\dot{a} + \frac{1}{8}m_1\dot{a}^2}
-$$
-
-
-**Paso 3 — Energía potencial total y fuerzas generalizadas**
-
-
-$$
-V_g = -m_1 g y_1 - m_2 g y_2 = -(m_1 + m_2)g y_2 - \frac{1}{2}m_1 g a - m_1 g C_1
+\Delta \ell_K = x_1 - \dfrac{b_1}{2} - \ell_0
 $$
 
 
 
 $$
-V_K = \frac{1}{2}K\left(y_2 + \frac{1}{2}a + C_1 - \ell_0\right)^{\!2}
+\Delta \ell_{K'} = y_3 - y_2 - \dfrac{b_2 + b_3}{2} - \ell_0'
 $$
 
 
 
 $$
-V_{K'} = \frac{1}{2}K'\left(H - y_2 - a - C_1' - \ell_0'\right)^{\!2}
+V = -m_2 g y_2 - m_3 g y_3 + \dfrac{1}{2}K\left(x_1 - \dfrac{b_1}{2} - \ell_0\right)^{\!2} + \dfrac{1}{2}K'\!\left(y_3 - y_2 - \dfrac{b_2 + b_3}{2} - \ell_0'\right)^{\!2}
 $$
 
 
-
-$$
-\boxed{V = -(m_1 + m_2)g y_2 - \frac{1}{2}m_1 g a + \frac{1}{2}K\left(y_2 + \frac{1}{2}a + C_1 - \ell_0\right)^{\!2} + \frac{1}{2}K'\left(H - y_2 - a - C_1' - \ell_0'\right)^{\!2}}
-$$
-
+**Paso 4 — Función de disipación de Rayleigh**
 
 
 $$
-\delta W = F \, \delta y_3 = F \, \delta y_2 + F \, \delta a \implies Q_{y_2} = F, \quad Q_a = F
+F_D = \dfrac{1}{2}c_2 \dot{y}_2^2 + \dfrac{1}{2}c_3 \dot{y}_3^2
 $$
 
 
-**Paso 4 — Función Lagrangiana del sistema**
+**Paso 5 — Función Lagrangiana del sistema**
 
 
 $$
@@ -165,58 +145,70 @@ $$
 
 
 $$
-\boxed{L = \frac{1}{2}(m_1 + m_2)\dot{y}_2^2 + \frac{1}{2}m_1\dot{y}_2\dot{a} + \frac{1}{8}m_1\dot{a}^2 + (m_1 + m_2)g y_2 + \frac{1}{2}m_1 g a - \frac{1}{2}K\left(y_2 + \frac{1}{2}a + C_1 - \ell_0\right)^{\!2} - \frac{1}{2}K'\left(H - y_2 - a - C_1' - \ell_0'\right)^{\!2}}
+L = \dfrac{1}{2}(m_1 + m_2)\dot{y}_2^2 + \dfrac{1}{2}m_3 \dot{y}_3^2 + m_2 g y_2 + m_3 g y_3 - \dfrac{1}{2}K\left(x_1 - \dfrac{b_1}{2} - \ell_0\right)^{\!2} - \dfrac{1}{2}K'\!\left(y_3 - y_2 - \dfrac{b_2 + b_3}{2} - \ell_0'\right)^{\!2}
 $$
 
 
-**Paso 5 — Ecuación diferencial para la coordenada $y_2$**
+**Paso 6 — Ecuación de movimiento para la coordenada $y_2$**
 
 
 $$
-\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{y}_2}\right) - \frac{\partial L}{\partial y_2} = Q_{y_2}
-$$
-
-
-
-$$
-\frac{\partial L}{\partial \dot{y}_2} = (m_1 + m_2)\dot{y}_2 + \frac{1}{2}m_1\dot{a} \implies \frac{d}{dt}\left(\frac{\partial L}{\partial \dot{y}_2}\right) = (m_1 + m_2)\ddot{y}_2 + \frac{1}{2}m_1\ddot{a}
+\dfrac{\partial L}{\partial \dot{y}_2} = (m_1 + m_2)\dot{y}_2 \implies \dfrac{d}{dt}\left(\dfrac{\partial L}{\partial \dot{y}_2}\right) = (m_1 + m_2)\ddot{y}_2
 $$
 
 
 
 $$
-\frac{\partial L}{\partial y_2} = (m_1 + m_2)g - K\left(y_2 + \frac{1}{2}a + C_1 - \ell_0\right) + K'\left(H - y_2 - a - C_1' - \ell_0'\right)
+\dfrac{\partial L}{\partial y_2} = m_2 g - K\left(x_1 - \dfrac{b_1}{2} - \ell_0\right) + K'\!\left(y_3 - y_2 - \dfrac{b_2 + b_3}{2} - \ell_0'\right)
 $$
 
 
 
 $$
-\boxed{(m_1 + m_2)\ddot{y}_2 + \frac{1}{2}m_1\ddot{a} + (K + K')y_2 + \left(\frac{1}{2}K + K'\right)a = (m_1 + m_2)g + F + K(\ell_0 - C_1) + K'(H - C_1' - \ell_0')}
-$$
-
-
-**Paso 6 — Ecuación diferencial para la coordenada $a$**
-
-
-$$
-\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{a}}\right) - \frac{\partial L}{\partial a} = Q_a
+\dfrac{\partial F_D}{\partial \dot{y}_2} = c_2 \dot{y}_2
 $$
 
 
 
 $$
-\frac{\partial L}{\partial \dot{a}} = \frac{1}{2}m_1\dot{y}_2 + \frac{1}{4}m_1\dot{a} \implies \frac{d}{dt}\left(\frac{\partial L}{\partial \dot{a}}\right) = \frac{1}{2}m_1\ddot{y}_2 + \frac{1}{4}m_1\ddot{a}
+\dfrac{d}{dt}\left(\dfrac{\partial L}{\partial \dot{y}_2}\right) - \dfrac{\partial L}{\partial y_2} + \dfrac{\partial F_D}{\partial \dot{y}_2} = 0
 $$
 
 
 
 $$
-\frac{\partial L}{\partial a} = \frac{1}{2}m_1 g - \frac{1}{2}K\left(y_2 + \frac{1}{2}a + C_1 - \ell_0\right) + K'\left(H - y_2 - a - C_1' - \ell_0'\right)
+\boxed{(m_1 + m_2)\ddot{y}_2 + c_2 \dot{y}_2 + K\left(x_1 - \dfrac{b_1}{2} - \ell_0\right) - K'\!\left(y_3 - y_2 - \dfrac{b_2 + b_3}{2} - \ell_0'\right) = m_2 g}
+$$
+
+
+**Paso 7 — Ecuación de movimiento para la coordenada $y_3$**
+
+
+$$
+\dfrac{\partial L}{\partial \dot{y}_3} = m_3 \dot{y}_3 \implies \dfrac{d}{dt}\left(\dfrac{\partial L}{\partial \dot{y}_3}\right) = m_3 \ddot{y}_3
 $$
 
 
 
 $$
-\boxed{\frac{1}{2}m_1\ddot{y}_2 + \frac{1}{4}m_1\ddot{a} + \left(\frac{1}{2}K + K'\right)y_2 + \left(\frac{1}{4}K + K'\right)a = \frac{1}{2}m_1 g + F + \frac{1}{2}K(\ell_0 - C_1) + K'(H - C_1' - \ell_0')}
+\dfrac{\partial L}{\partial y_3} = m_3 g - K'\!\left(y_3 - y_2 - \dfrac{b_2 + b_3}{2} - \ell_0'\right)
+$$
+
+
+
+$$
+\dfrac{\partial F_D}{\partial \dot{y}_3} = c_3 \dot{y}_3
+$$
+
+
+
+$$
+\dfrac{d}{dt}\left(\dfrac{\partial L}{\partial \dot{y}_3}\right) - \dfrac{\partial L}{\partial y_3} + \dfrac{\partial F_D}{\partial \dot{y}_3} = 0
+$$
+
+
+
+$$
+\boxed{m_3 \ddot{y}_3 + c_3 \dot{y}_3 + K'\!\left(y_3 - y_2 - \dfrac{b_2 + b_3}{2} - \ell_0'\right) = m_3 g}
 $$
 
