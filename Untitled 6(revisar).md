@@ -1,12 +1,10 @@
-**OJO**
-
 Dos poleas sin inercia rotacional $m_1$ y $m_2$ forman un sistema vertical en cadena con dos resortes y una fuerza aplicada. La polea $m_1$ está suspendida del techo mediante un resorte de constante $K$ y longitud natural $\ell_0$ conectado a su centro; su ramal izquierdo sostiene a la polea $m_2$ por el centro mediante un cable, y su ramal derecho está conectado al piso mediante un resorte de constante $K'$ y longitud natural $\ell_0'$. La polea $m_2$ cuelga del ramal izquierdo de $m_1$; su ramal izquierdo está conectado al piso mediante un cable (extremo fijo) y su ramal derecho sostiene un punto de aplicación de fuerza $F$ mediante un cable. La altura total del sistema es $H$. Las coordenadas $y_1$, $y_2$, $y_3$ se miden desde el techo hacia abajo hasta el centro de $m_1$, el centro de $m_2$ y el punto de aplicación de $F$ respectivamente. La distancia $a$ se mide desde el centro de $m_2$ hacia abajo hasta el punto de aplicación de $F$.
 
-Hallar las ecuaciones de movimiento de Lagrange del sistema.
+Hallar las ecuaciones de movimiento de Lagrange del sistema usando las coordenadas generalizadas $(y_1, a)$.
 
-> **Nota del docente:** Usar coordenadas generalizadas $(y_2, a)$. Las ligaduras cinemáticas dan:
-> $$\dot{y}_3 = \dot{y}_2 + \dot{a}$$
-> $$\dot{y}_1 = \dot{y}_2 + \tfrac{1}{2}\dot{a}$$
+> **Nota:** Las coordenadas $(y_3, a)$ no son resolubles directamente porque $y_3$ no puede expresarse de forma independiente. Se eligen $(y_1, a)$ como coordenadas generalizadas ($N = 3 - 1 = 2$ GDL, dado que el cable inextensible impone una ligadura). Las ligaduras cinemáticas del sistema de poleas dan:
+> $$y_2 = y_1 - \tfrac{1}{2}a \implies \dot{y}_2 = \dot{y}_1 - \tfrac{1}{2}\dot{a}$$
+> $$y_3 = y_2 + a = y_1 + \tfrac{1}{2}a \implies \dot{y}_3 = \dot{y}_1 + \tfrac{1}{2}\dot{a}$$
 
 ---
 
@@ -85,107 +83,51 @@ Hallar las ecuaciones de movimiento de Lagrange del sistema.
 > **Descripción de la figura:** El resorte $K$ (teal) conecta el techo con el centro de la polea $m_1$ (teal). Del ramal izquierdo de $m_1$ desciende un cable hasta el centro de la polea $m_2$ (naranja). Del ramal derecho de $m_1$ desciende un cable que conecta con el resorte $K'$ (teal) anclado al piso. Del ramal izquierdo de $m_2$ desciende un cable fijo al piso. Del ramal derecho de $m_2$ desciende un cable hasta el punto de aplicación de la fuerza $F$ (naranja, flecha hacia abajo). Las coordenadas $y_1$, $y_2$, $y_3$ se miden desde el techo hacia abajo hasta el centro de $m_1$, el centro de $m_2$ y el punto de $F$ respectivamente. La cota $a$ va desde el centro de $m_2$ hasta el punto de $F$. La cota $H$ es la altura total techo–piso (rojo).
 
 ---
-**Resolución**
-Se emplean las coordenadas generalizadas $(y_2, a)$ indicadas para expresar las relaciones de ligadura cinemática, formular la energía cinética, la energía potencial y el trabajo virtual, y derivar las ecuaciones de Lagrange del sistema.
 
----
+**Paso 1 — Energía cinética**
 
-**Paso 1 — Relaciones cinemáticas y coordenadas generalizadas**
+Cada masa contribuye con su energía cinética traslacional. Se sustituye $\dot{y}_2$ usando la ligadura:
 
-$$
-\text{A partir de la cota } a = y_3 - y_2 \implies y_3 = y_2 + a \implies \dot{y}_3 = \dot{y}_2 + \dot{a}
-$$
-$$
-\text{Según la ligadura del cable de la polea } m_1: \quad y_1 = y_2 + \frac{1}{2}a + C_1 \implies \dot{y}_1 = \dot{y}_2 + \frac{1}{2}\dot{a}
-$$
+$$T = \frac{1}{2}m_1\dot{y}_1^2 + \frac{1}{2}m_2\dot{y}_2^2 = \frac{1}{2}m_1\dot{y}_1^2 + \frac{1}{2}m_2\!\left(\dot{y}_1 - \frac{1}{2}\dot{a}\right)^{\!2}$$
 
-$$
-\text{La posición del extremo superior del resorte } K' \text{ resulta } y_{s'} = y_2 + a + C_1'
-$$
+Expandiendo:
 
-$$
-\text{Las coordenadas generalizadas seleccionadas son } (q_1, q_2) = (y_2, a)
-$$
+$$\boxed{T = \frac{1}{2}(m_1 + m_2)\dot{y}_1^2 - \frac{1}{2}m_2\dot{y}_1\dot{a} + \frac{1}{8}m_2\dot{a}^2}$$
 
-> **Nota:** $C_1$ y $C_1'$ son constantes que agrupan las longitudes fijas de cable y los términos $\pi R$ de cada polea (longitud de arco de contacto). No dependen del tiempo y se absorben en las condiciones iniciales.
+**Paso 2 — Energía potencial**
 
+Se define $\ell_K = y_1 - \ell_0$ como la deformación del resorte $K$. Para $K'$, su extremo superior está en el ramal derecho de $m_1$, cuya posición se obtiene de la ligadura de la polea $m_1$: si el ramal izquierdo baja $y_2$ y el ramal derecho sube simétricamente, la longitud del resorte $K'$ es $H - y_1 - \frac{1}{2}a + C$ donde $C$ agrupa las longitudes fijas de cable. Definiendo la deformación natural de $K'$ en términos de posición:
 
-**Paso 2 — Energía cinética del sistema**
+$$V_K = \frac{1}{2}K(y_1 - \ell_0)^2$$
 
-$$
-T = \frac{1}{2}m_1\dot{y}_1^2 + \frac{1}{2}m_2\dot{y}_2^2
-$$
+$$V_{K'} = \frac{1}{2}K'\!\left(H - \ell + \pi R_2 + a - y_1 - \ell_0'\right)^{\!2}$$
 
-$$
-T = \frac{1}{2}m_1\left(\dot{y}_2 + \frac{1}{2}\dot{a}\right)^{\!2} + \frac{1}{2}m_2\dot{y}_2^2
-$$
+La energía potencial gravitatoria (positiva hacia abajo, coordenadas desde el techo):
 
-$$
-\boxed{T = \frac{1}{2}(m_1 + m_2)\dot{y}_2^2 + \frac{1}{2}m_1\dot{y}_2\dot{a} + \frac{1}{8}m_1\dot{a}^2}
-$$
+$$V_g = -m_1 g y_1 - m_2 g y_2 = -m_1 g y_1 - m_2 g\!\left(y_1 - \frac{1}{2}a\right) = -(m_1+m_2)g y_1 + \frac{1}{2}m_2 g a$$
 
-**Paso 3 — Energía potencial total y fuerzas generalizadas**
-$$
-V_g = -m_1 g y_1 - m_2 g y_2 = -(m_1 + m_2)g y_2 - \frac{1}{2}m_1 g a - m_1 g C_1
-$$
+$$\boxed{V = \frac{1}{2}K(y_1-\ell_0)^2 + \frac{1}{2}K'\!\left(H - \ell + \pi R_2 + a - y_1 - \ell_0'\right)^{\!2} - (m_1+m_2)g y_1 + \frac{1}{2}m_2 g a}$$
 
-$$
-V_K = \frac{1}{2}K\left(y_2 + \frac{1}{2}a + C_1 - \ell_0\right)^{\!2}
-$$
-$$
-V_{K'} = \frac{1}{2}K'\left(H - y_2 - a - C_1' - \ell_0'\right)^{\!2}
-$$
+**Paso 3 — Fuerzas generalizadas**
 
-$$
-\boxed{V = -(m_1 + m_2)g y_2 - \frac{1}{2}m_1 g a + \frac{1}{2}K\left(y_2 + \frac{1}{2}a + C_1 - \ell_0\right)^{\!2} + \frac{1}{2}K'\left(H - y_2 - a - C_1' - \ell_0'\right)^{\!2}}
-$$
+La fuerza $F$ actúa sobre el punto $y_3 = y_1 + \frac{1}{2}a$. El trabajo virtual:
 
-$$
-\delta W = F \, \delta y_3 = F \, \delta y_2 + F \, \delta a \implies Q_{y_2} = F, \quad Q_a = F
-$$
+$$\delta W = F\,\delta y_3 = F\,\delta y_1 + \frac{1}{2}F\,\delta a$$
 
-**Paso 4 — Función Lagrangiana del sistema**
+$$Q_{y_1} = F \qquad Q_a = \frac{1}{2}F$$
 
-$$
-L = T - V
-$$
+**Paso 4 — Ecuación de Lagrange para $y_1$**
 
-$$
-\boxed{L = \frac{1}{2}(m_1 + m_2)\dot{y}_2^2 + \frac{1}{2}m_1\dot{y}_2\dot{a} + \frac{1}{8}m_1\dot{a}^2 + (m_1 + m_2)g y_2 + \frac{1}{2}m_1 g a - \frac{1}{2}K\left(y_2 + \frac{1}{2}a + C_1 - \ell_0\right)^{\!2} - \frac{1}{2}K'\left(H - y_2 - a - C_1' - \ell_0'\right)^{\!2}}
-$$
+$$\frac{\partial T}{\partial \dot{y}_1} = (m_1+m_2)\dot{y}_1 - \frac{1}{2}m_2\dot{a} \implies \frac{d}{dt}\!\left(\frac{\partial T}{\partial \dot{y}_1}\right) = (m_1+m_2)\ddot{y}_1 - \frac{1}{2}m_2\ddot{a}$$
 
-**Paso 5 — Ecuación diferencial para la coordenada $y_2$**
+$$\frac{\partial V}{\partial y_1} = K(y_1-\ell_0) - K'\!\left(H - \ell + \pi R_2 + a - y_1 - \ell_0'\right) - (m_1+m_2)g$$
 
-$$
-\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{y}_2}\right) - \frac{\partial L}{\partial y_2} = Q_{y_2}
-$$
+$$\boxed{(m_1+m_2)\ddot{y}_1 - \frac{1}{2}m_2\ddot{a} + K(y_1-\ell_0) - K'\!\left(H - \ell + \pi R_2 + a - y_1 - \ell_0'\right) - (m_1+m_2)g = F}$$
 
-$$
-\frac{\partial L}{\partial \dot{y}_2} = (m_1 + m_2)\dot{y}_2 + \frac{1}{2}m_1\dot{a} \implies \frac{d}{dt}\left(\frac{\partial L}{\partial \dot{y}_2}\right) = (m_1 + m_2)\ddot{y}_2 + \frac{1}{2}m_1\ddot{a}
-$$
+**Paso 5 — Ecuación de Lagrange para $a$**
 
-$$
-\frac{\partial L}{\partial y_2} = (m_1 + m_2)g - K\left(y_2 + \frac{1}{2}a + C_1 - \ell_0\right) + K'\left(H - y_2 - a - C_1' - \ell_0'\right)
-$$
+$$\frac{\partial T}{\partial \dot{a}} = -\frac{1}{2}m_2\dot{y}_1 + \frac{1}{4}m_2\dot{a} \implies \frac{d}{dt}\!\left(\frac{\partial T}{\partial \dot{a}}\right) = -\frac{1}{2}m_2\ddot{y}_1 + \frac{1}{4}m_2\ddot{a}$$
 
-$$
-\boxed{(m_1 + m_2)\ddot{y}_2 + \frac{1}{2}m_1\ddot{a} + (K + K')y_2 + \left(\frac{1}{2}K + K'\right)a = (m_1 + m_2)g + F + K(\ell_0 - C_1) + K'(H - C_1' - \ell_0')}
-$$
+$$\frac{\partial V}{\partial a} = K'\!\left(H - \ell + \pi R_2 + a - y_1 - \ell_0'\right) + \frac{1}{2}m_2 g$$
 
-**Paso 6 — Ecuación diferencial para la coordenada $a$**
-
-$$
-\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{a}}\right) - \frac{\partial L}{\partial a} = Q_a
-$$
-
-$$
-\frac{\partial L}{\partial \dot{a}} = \frac{1}{2}m_1\dot{y}_2 + \frac{1}{4}m_1\dot{a} \implies \frac{d}{dt}\left(\frac{\partial L}{\partial \dot{a}}\right) = \frac{1}{2}m_1\ddot{y}_2 + \frac{1}{4}m_1\ddot{a}
-$$
-
-$$
-\frac{\partial L}{\partial a} = \frac{1}{2}m_1 g - \frac{1}{2}K\left(y_2 + \frac{1}{2}a + C_1 - \ell_0\right) + K'\left(H - y_2 - a - C_1' - \ell_0'\right)
-$$
-
-$$
-\boxed{\frac{1}{2}m_1\ddot{y}_2 + \frac{1}{4}m_1\ddot{a} + \left(\frac{1}{2}K + K'\right)y_2 + \left(\frac{1}{4}K + K'\right)a = \frac{1}{2}m_1 g + F + \frac{1}{2}K(\ell_0 - C_1) + K'(H - C_1' - \ell_0')}
-$$
+$$\boxed{-\frac{1}{2}m_2\ddot{y}_1 + \frac{1}{4}m_2\ddot{a} - K'\!\left(H - \ell + \pi R_2 + a - y_1 - \ell_0'\right) - \frac{1}{2}m_2 g = \frac{1}{2}F}$$

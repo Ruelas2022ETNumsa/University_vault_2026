@@ -163,27 +163,9 @@
       "mode": "any"
     },
     {
-      "id": "graph:open-local",
-      "icon": "lucide-git-fork",
-      "name": "Graph view: Open local graph",
-      "mode": "any"
-    },
-    {
-      "id": "cornell-marginalia:cornell-focus-explorer",
-      "icon": "lucide-air-vent",
-      "name": "Cornell Marginalia: Open & Focus Marginalia Explorer",
-      "mode": "any"
-    },
-    {
       "id": "cornell-marginalia:cornell-open-sidebar-doodle",
       "icon": "lucide-palette",
       "name": "Cornell Marginalia: Open Sidebar Doodle Canvas",
-      "mode": "any"
-    },
-    {
-      "id": "cornell-marginalia:generate-flashcards-sr",
-      "icon": "lucide-layers-2",
-      "name": "Cornell Marginalia: Flashcards Generation (Spaced Repetition)",
       "mode": "any"
     },
     {

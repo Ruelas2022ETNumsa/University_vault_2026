@@ -1,5 +1,11 @@
 ##### Ej. Sistema masa-resorte-amortiguador de 1 GDL sometido a una fuerza externa $F$ (edo3.pdf)
 
+**Enunciado:**
+Un bloque de masa $M$ se desliza horizontalmente sin fricción sobre una superficie plana. Por su lado izquierdo está conectado en paralelo a un resorte de rigidez $K$ y un amortiguador viscoso de coeficiente $C$, ambos anclados a una pared rígida fija. Sobre el lado derecho del bloque actúa una fuerza externa $F$ dirigida hacia la derecha. Obtenga la ecuación de movimiento del sistema usando las ecuaciones de Lagrange.
+
+**Descripción de la figura:**
+El diagrama muestra un bloque de masa $M$ apoyado sobre una superficie horizontal sin fricción, con una pared rígida a su izquierda. Desde esa pared parten dos elementos en paralelo que se conectan al lado izquierdo del bloque: el resorte $K$ en la parte superior y el amortiguador $C$ en la parte inferior. Sobre el lado derecho del bloque actúa la fuerza externa $F$ apuntando hacia la derecha. La coordenada $x$ indica el desplazamiento horizontal del bloque medido desde su posición de equilibrio estático.
+
 ```tikz
 \usetikzlibrary{patterns,decorations.pathmorphing}
 \begin{document}
@@ -41,6 +47,8 @@
 \end{tikzpicture}
 \end{document}
 ```
+
+---
 
 **Paso 0 — Identificación**
 Sistema mecánico translacional de 1 grado de libertad (1 GDL) constituido por un bloque de masa $M$, acoplado en paralelo a un resorte de rigidez $K$ y un amortiguador viscoso de coeficiente $C$, sometido a una fuerza impulsora externa $F$.

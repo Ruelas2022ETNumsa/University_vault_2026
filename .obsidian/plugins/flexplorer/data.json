@@ -41,7 +41,10 @@
         "E5_NBLM.md",
         "Untitled 2.md",
         "Untitled 3.md",
-        "Untitled 4.md"
+        "Untitled 4(grafica).md",
+        "Untitled 5.md",
+        "Untitled 6(revisar).md",
+        "Untitled 7.md"
       ]
     },
     "MOC": {
@@ -11385,11 +11388,23 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Untitled 4.md": {
+    "_app/notebooklm/prompts/ETN607/legacy/ETN607-transcription_Av6.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "_app/notebooklm/prompts/ETN607/legacy/ETN607-transcription_Av6.md": {
+    "Untitled 5.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled 7.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled 4(grafica).md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled 6(revisar).md": {
       "isPinned": false,
       "isHidden": false
     }

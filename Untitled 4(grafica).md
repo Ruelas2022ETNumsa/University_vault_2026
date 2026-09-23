@@ -1,6 +1,10 @@
-%%< corrección: Se corrigió el elemento $2,1$ de la matriz de amortiguamiento C de -C_2 a -C_{12} por simetría de acoplamiento entre la masa 1 y la masa 2. %%
-
 ##### Ej. Sistema mecánico horizontal de tres masas acopladas por resortes, amortiguadores y fuerza externa aplicada en $m_2$
+
+**Enunciado:**
+Tres masas $m_1$, $m_2$ y $m_3$ se deslizan horizontalmente sin fricción sobre una superficie plana. La masa $m_1$ está conectada a la pared izquierda mediante el resorte $K_1$ y el amortiguador $C_1$ en paralelo. La masa $m_1$ y la masa $m_3$ están acopladas entre sí por el resorte $K_{13}$. La masa $m_1$ y la masa $m_2$ están acopladas por el amortiguador $C_{12}$. La masa $m_2$ está conectada a la pared izquierda mediante el resorte $K_2$, y está acoplada a la masa $m_3$ mediante el resorte $K_{23}$ y el amortiguador $C_{23}$ en paralelo; sobre $m_2$ actúa además una fuerza externa $F_2$ dirigida hacia la derecha. La masa $m_3$ está conectada a la pared derecha mediante el resorte $K_3$. Obtenga las ecuaciones de movimiento del sistema usando las ecuaciones de Lagrange y expréselas en forma matricial $M\ddot{x} + C\dot{x} + Kx = F$.
+
+**Descripción de la figura:**
+El diagrama muestra tres masas dispuestas horizontalmente entre dos paredes rígidas. La masa $m_1$ (bloque izquierdo) está suspendida entre la pared izquierda y los elementos que la acoplan al resto del sistema: hacia su izquierda se conectan en paralelo el resorte $K_1$ y el amortiguador $C_1$, ambos anclados a la pared izquierda; hacia su derecha, el resorte $K_{13}$ la comunica con $m_3$ y el amortiguador $C_{12}$ la comunica con $m_2$. La masa $m_2$ (bloque central-inferior) recibe por su izquierda el amortiguador $C_{12}$ proveniente de $m_1$ y el resorte $K_2$ anclado a la pared izquierda; por su derecha se conectan en paralelo el resorte $K_{23}$ y el amortiguador $C_{23}$, ambos hacia $m_3$, y sobre ella actúa la fuerza externa $F_2$ apuntando hacia la derecha. La masa $m_3$ (bloque derecho) recibe por su izquierda el resorte $K_{13}$ desde $m_1$, y el par $K_{23}$–$C_{23}$ desde $m_2$; por su derecha el resorte $K_3$ la conecta a la pared derecha.
 
 ```tikz
 \usetikzlibrary{patterns,decorations.pathmorphing}
@@ -82,6 +86,8 @@
 \end{tikzpicture}
 \end{document}
 ```
+
+---
 
 **Paso 0 — Identificación**
 Sistema mecánico translacional acoplado de 3 grados de libertad (3 GDL) con disipación viscosa, acoplamiento elástico y fuerza de excitación externa aplicada a la masa $m_2$.
