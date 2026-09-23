@@ -17,7 +17,7 @@ MENSAJE 3 — ejemplos similares del libro:
 MENSAJE 4 — resolución de enunciado propio:
 "Resolver: [enunciado]"
 → el usuario provee el enunciado completo
-→ ANTES de resolver: consultar E1_F.md, E2_F.md, E3_F.md, E4_F.md, E5_F.md cargados en este notebook
+→ ANTES de resolver: consultar E1_F.md, E2_F.md, E3_F.md, E4_F.md, E5_F.md,E6_F.md,E7_F.md ,E8_F.md , E9.md , E10.md , E11.md , E12.md cargados en este notebook
 → respetar su estilo, notación, nivel de detalle algebraico y convenciones
   (uso de $\pi R$ para recorrido de cable en polea, constantes $C_0$, $\ell_0$, etc.)
 → resolver con el formato de EJERCICIO RESUELTO (ver abajo)

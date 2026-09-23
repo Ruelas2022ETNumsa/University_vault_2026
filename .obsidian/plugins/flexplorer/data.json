@@ -23,26 +23,7 @@
         "Rubbish",
         "Habits",
         "Borrar",
-        "shared",
-        "Untitled 1.md",
-        "P2-E2-607.md",
-        "P2-E3-607.md",
-        "P2-E4-607.md",
-        "P2-E5-607.md",
-        "contexto607.md",
-        "E1_NBLM.md",
-        "E2_NBLM.md",
-        "E3_NBLM.md",
-        "pegar_imagen.md",
-        "enunp2.md",
-        "Untitled.md",
-        "P2-E1-607.md",
-        "E4_NBLM.md",
-        "E5_NBLM.md",
-        "Untitled 2.md",
-        "Untitled 3.md",
-        "Untitled 6(revisar).md",
-        "Untitled 5.md"
+        "shared"
       ]
     },
     "MOC": {
@@ -1153,7 +1134,7 @@
         "_plan_movil.md",
         "_start.md",
         "_doc_start_movil607P1.md",
-        "_start_movil.md"
+        "_start_movilyyy.md"
       ]
     },
     "_skills/_claude-boot.md": {
@@ -11157,10 +11138,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "_skills/_start_movil.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Latex/ETN1010/Graficos/Lab2/E1_are_001.png": {
       "isPinned": false,
       "isHidden": false
@@ -11205,27 +11182,7 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Untitled 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_app/notebooklm/prompts/ETN607/ETN607-study-P2v1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "P2-E2-607.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "P2-E3-607.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "P2-E4-607.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "P2-E5-607.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -11245,51 +11202,11 @@
       "isPinned": false,
       "isHidden": false
     },
-    "contexto607.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "E1_NBLM.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "E2_NBLM.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_app/notebooklm/prompts/ETN607/ETN607-transcription_Av7.md": {
       "isPinned": false,
       "isHidden": false
     },
     "_app/notebooklm/prompts/ETN607/legacy/DOC-ETN607-transcription-divisions.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "pegar_imagen.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "enunp2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Untitled.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "P2-E1-607.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "E3_NBLM.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "E4_NBLM.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "E5_NBLM.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -11317,7 +11234,7 @@
         "E10.md",
         "E11.md",
         "E12.md",
-        "E13 (revisar).md"
+        "E9.md"
       ]
     },
     "Semesters/Sem_04/ETN607/Partial_2/ejercicios P2/E5_F.md": {
@@ -11356,27 +11273,11 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Untitled 2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Semesters/Sem_04/ETN607/Partial_2/ejercicios P2/E12.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semesters/Sem_04/ETN607/Partial_2/ejercicios P2/E13 (revisar).md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_app/notebooklm/prompts/ETN607/legacy/ETN607-transcription_Av6.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Untitled 6(revisar).md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -11385,10 +11286,6 @@
       "isHidden": false
     },
     "Semesters/Sem_04/ETN607/Partial_2/ejercicios P2/E7_F.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Untitled 5.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -11405,6 +11302,14 @@
       "isHidden": false
     },
     "Semesters/Sem_04/ETN607/Partial_2/ejercicios P2/E1_F.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Partial_2/ejercicios P2/E9.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_skills/_start_movilyyy.md": {
       "isPinned": false,
       "isHidden": false
     }

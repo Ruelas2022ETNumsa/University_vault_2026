@@ -1,1 +1,0 @@
-Está listo. Enunciado correcto, figura correcta, resolución con formato limpio, 3 pasos con finalidad clara, 2 GDL bien planteados, EDOs acopladas en $\boxed{}$. E10 es fuente.
