@@ -6,84 +6,105 @@ Tres masas $m_1$, $m_2$ y $m_3$ se deslizan horizontalmente sin fricción sobre 
 **Descripción de la figura:**
 El diagrama muestra tres masas dispuestas horizontalmente entre dos paredes rígidas. La masa $m_1$ (bloque izquierdo) está suspendida entre la pared izquierda y los elementos que la acoplan al resto del sistema: hacia su izquierda se conectan en paralelo el resorte $K_1$ y el amortiguador $C_1$, ambos anclados a la pared izquierda; hacia su derecha, el resorte $K_{13}$ la comunica con $m_3$ y el amortiguador $C_{12}$ la comunica con $m_2$. La masa $m_2$ (bloque central-inferior) recibe por su izquierda el amortiguador $C_{12}$ proveniente de $m_1$ y el resorte $K_2$ anclado a la pared izquierda; por su derecha se conectan en paralelo el resorte $K_{23}$ y el amortiguador $C_{23}$, ambos hacia $m_3$, y sobre ella actúa la fuerza externa $F_2$ apuntando hacia la derecha. La masa $m_3$ (bloque derecho) recibe por su izquierda el resorte $K_{13}$ desde $m_1$, y el par $K_{23}$–$C_{23}$ desde $m_2$; por su derecha el resorte $K_3$ la conecta a la pared derecha.
 
+
 ```tikz
 \usetikzlibrary{patterns,decorations.pathmorphing}
+
 \begin{document}
+
 \begin{tikzpicture}[scale=1.0, >=latex]
-    \colorlet{maincolor}{teal}
-    \colorlet{accentcolor}{orange}
 
-    % Pared izquierda
-    \fill[pattern=north east lines] (-0.3,-0.5) rectangle (0,5.2);
-    \draw[thick] (0,-0.5) -- (0,5.2);
+% Definición de colores
+\colorlet{maincolor}{teal}
+\colorlet{accentcolor}{orange}
 
-    % Pared derecha
-    \fill[pattern=north east lines] (8.0,-0.5) rectangle (8.3,5.2);
-    \draw[thick] (8.0,-0.5) -- (8.0,5.2);
+% Pared izquierda
+\fill[pattern=north east lines] (-0.3,-0.5) rectangle (0,5.2);
+\draw[thick] (0,-0.5) -- (0,5.2);
 
-    % Masa 1 (teal)
-    \draw[fill=teal!10, draw=maincolor, thick] (2.0,2.8) rectangle (3.0,5.0);
-    \node[maincolor, font=\Large] at (2.5,3.9) {$1$};
+% Pared derecha
+\fill[pattern=north east lines] (8.0,-0.5) rectangle (8.3,5.2);
+\draw[thick] (8.0,-0.5) -- (8.0,5.2);
 
-    % Masa 2 (teal)
-    \draw[fill=teal!10, draw=maincolor, thick] (3.8,0.2) rectangle (4.8,2.6);
-    \node[maincolor, font=\Large] at (4.3,1.4) {$2$};
+% Masa 1
+\draw[fill=teal!10, draw=maincolor, thick]
+    (2.0,2.8) rectangle (3.0,5.0);
+\node[maincolor, font=\Large] at (2.5,3.9) {$1$};
 
-    % Masa 3 (orange)
-    \draw[fill=orange!10, draw=accentcolor, thick] (5.8,2.4) rectangle (6.8,5.0);
-    \node[accentcolor, font=\Large] at (6.3,3.7) {$3$};
+% Masa 2 (elevada)
+\draw[fill=teal!10, draw=maincolor, thick]
+    (3.8,1.2) rectangle (4.8,3.6);
+\node[maincolor, font=\Large] at (4.3,2.4) {$2$};
 
-    % Resorte K1 (Pared a Masa 1)
-    \draw[decoration={aspect=0.3, segment length=2mm, amplitude=2.5mm, coil}, decorate, maincolor, thick] (0,4.4) -- (2.0,4.4);
-    \node[above, maincolor] at (1.0,4.55) {$K_1$};
+% Masa 3
+\draw[fill=orange!10, draw=accentcolor, thick]
+    (5.8,2.4) rectangle (6.8,5.0);
+\node[accentcolor, font=\Large] at (6.3,3.7) {$3$};
 
-    % Amortiguador C1 (Pared a Masa 1)
-    \draw[thick, maincolor] (0,3.3) -- (0.6,3.3);
-    \draw[thick, maincolor] (0.6,3.0) -- (0.6,3.6);
-    \draw[thick, maincolor] (0.5,3.6) -- (1.2,3.6);
-    \draw[thick, maincolor] (0.5,3.0) -- (1.2,3.0);
-    \draw[thick, maincolor] (1.0,3.15) -- (1.0,3.45);
-    \draw[thick, maincolor] (1.0,3.3) -- (2.0,3.3);
-    \node[above, maincolor] at (1.0,3.6) {$C_1$};
+% Resorte K1 (Pared a Masa 1)
+\draw[decoration={aspect=0.3, segment length=2mm,
+    amplitude=2.5mm, coil}, decorate, maincolor, thick]
+    (0,4.4) -- (2.0,4.4);
+\node[above, maincolor] at (1.0,4.55) {$K_1$};
 
-    % Resorte K2 (Pared a Masa 2)
-    \draw[decoration={aspect=0.3, segment length=2mm, amplitude=2.5mm, coil}, decorate, maincolor, thick] (0,0.8) -- (3.8,0.8);
-    \node[above, maincolor] at (1.9,0.95) {$K_2$};
+% Amortiguador C1 (Pared a Masa 1)
+\draw[thick, maincolor] (0,3.3) -- (0.6,3.3);
+\draw[thick, maincolor] (0.6,3.0) -- (0.6,3.6);
+\draw[thick, maincolor] (0.5,3.6) -- (1.2,3.6);
+\draw[thick, maincolor] (0.5,3.0) -- (1.2,3.0);
+\draw[thick, maincolor] (1.0,3.15) -- (1.0,3.45);
+\draw[thick, maincolor] (1.0,3.3) -- (2.0,3.3);
+\node[above, maincolor] at (1.0,3.6) {$C_1$};
 
-    % Resorte K13 (Masa 1 a Masa 3)
-    \draw[decoration={aspect=0.3, segment length=2mm, amplitude=2.5mm, coil}, decorate, maincolor, thick] (3.0,4.4) -- (5.8,4.4);
-    \node[above, maincolor] at (4.4,4.55) {$K_{13}$};
+% Resorte K2 (Pared a Masa 2)
+\draw[decoration={aspect=0.3, segment length=2mm,
+    amplitude=2.5mm, coil}, decorate, maincolor, thick]
+    (0,1.8) -- (3.8,1.8);
+\node[above, maincolor] at (1.9,1.95) {$K_2$};
 
-    % Amortiguador C12 (Masa 1 a Masa 2)
-    \draw[thick, maincolor] (3.0,3.1) -- (3.3,3.1) -- (3.3,2.0) -- (3.5,2.0);
-    \draw[thick, maincolor] (3.5,1.7) -- (3.5,2.3);
-    \draw[thick, maincolor] (3.4,2.3) -- (3.7,2.3);
-    \draw[thick, maincolor] (3.4,1.7) -- (3.7,1.7);
-    \draw[thick, maincolor] (3.65,1.85) -- (3.65,2.15);
-    \draw[thick, maincolor] (3.65,2.0) -- (3.8,2.0);
-    \node[above, maincolor] at (3.4,2.3) {$C_{12}$};
+% Resorte K13 (Masa 1 a Masa 3)
+\draw[decoration={aspect=0.3, segment length=2mm,
+    amplitude=2.5mm, coil}, decorate, maincolor, thick]
+    (3.0,4.4) -- (5.8,4.4);
+\node[above, maincolor] at (4.4,4.55) {$K_{13}$};
 
-    % Resorte K23 (Masa 2 a Masa 3)
-    \draw[decoration={aspect=0.3, segment length=2mm, amplitude=2mm, coil}, decorate, maincolor, thick] (4.8,2.1) -- (5.8,2.1);
-    \node[above, maincolor] at (5.3,2.2) {$K_{23}$};
+% Amortiguador C12 (Masa 1 a Masa 2)
+\draw[thick, maincolor]
+    (3.0,3.1) -- (3.3,3.1) -- (3.3,2.6) -- (3.5,2.6);
+\draw[thick, maincolor] (3.5,2.3) -- (3.5,2.9);
+\draw[thick, maincolor] (3.4,2.9) -- (3.7,2.9);
+\draw[thick, maincolor] (3.4,2.3) -- (3.7,2.3);
+\draw[thick, maincolor] (3.65,2.45) -- (3.65,2.75);
+\draw[thick, maincolor] (3.65,2.6) -- (3.8,2.6);
+\node[above, maincolor] at (3.4,2.95) {$C_{12}$};
 
-    % Amortiguador C23 (Masa 2 a Masa 3)
-    \draw[thick, maincolor] (4.8,1.0) -- (5.1,1.0) -- (5.1,1.5) -- (5.3,1.5);
-    \draw[thick, maincolor] (5.3,1.2) -- (5.3,1.8);
-    \draw[thick, maincolor] (5.2,1.8) -- (5.6,1.8);
-    \draw[thick, maincolor] (5.2,1.2) -- (5.6,1.2);
-    \draw[thick, maincolor] (5.5,1.35) -- (5.5,1.65);
-    \draw[thick, maincolor] (5.5,1.5) -- (5.8,1.5);
-    \node[below, maincolor] at (5.3,1.2) {$C_{23}$};
+% Resorte K23 (Masa 2 a Masa 3)
+\draw[decoration={aspect=0.3, segment length=2mm,
+    amplitude=2mm, coil}, decorate, maincolor, thick]
+    (4.8,3.2) -- (5.8,3.2);
+\node[above, maincolor] at (5.3,3.35) {$K_{23}$};
 
-    % Resorte K3 (Masa 3 a Pared derecha)
-    \draw[decoration={aspect=0.3, segment length=2mm, amplitude=2.5mm, coil}, decorate, accentcolor, thick] (6.8,3.7) -- (8.0,3.7);
-    \node[above, accentcolor] at (7.4,3.85) {$K_3$};
+% Amortiguador C23 (Masa 2 a Masa 3)
+\draw[thick, maincolor] (4.8,2.5) -- (5.1,2.5);
+\draw[thick, maincolor] (5.1,2.2) -- (5.1,2.8);
+\draw[thick, maincolor] (5.1,2.8) -- (5.6,2.8);
+\draw[thick, maincolor] (5.1,2.2) -- (5.6,2.2);
+\draw[thick, maincolor] (5.6,2.35) -- (5.6,2.65);
+\draw[thick, maincolor] (5.6,2.5) -- (5.8,2.5);
+\node[below, maincolor] at (5.3,2.15) {$C_{23}$};
 
-    % Fuerza F2 (Roja)
-    \draw[->, red, ultra thick] (4.8,0.8) -- (5.6,0.8) node[right] {$F_2$};
+% Resorte K3 (Masa 3 a Pared derecha)
+\draw[decoration={aspect=0.3, segment length=2mm,
+    amplitude=2.5mm, coil}, decorate, accentcolor, thick]
+    (6.8,3.7) -- (8.0,3.7);
+\node[above, accentcolor] at (7.4,3.85) {$K_3$};
+
+% Fuerza F2
+\draw[->, red, ultra thick] (4.8,1.8) -- (5.6,1.8)
+    node[right] {$F_2$};
 
 \end{tikzpicture}
+
 \end{document}
 ```
 
