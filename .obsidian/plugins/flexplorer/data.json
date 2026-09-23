@@ -42,9 +42,10 @@
         "Untitled 2.md",
         "Untitled 3.md",
         "Untitled 6(revisar).md",
-        "Untitled 7.md",
+        "edo1.md",
         "Untitled 4.md",
-        "Untitled 5.md"
+        "Untitled 5.md",
+        "Untitled 6.md"
       ]
     },
     "MOC": {
@@ -1895,7 +1896,8 @@
       "customOrder": [
         "ETN607_TikzJax.md",
         "ETN607_latex.md",
-        "ETN607_TikzJax 1.md"
+        "ETN607_TikzJax 1.md",
+        "ETN607_TikzJax 2.md"
       ]
     },
     "_app/notebooklm/guides/ETN607/ETN607_TikzJax.md": {
@@ -11307,6 +11309,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "E8_F.md",
         "E7_F.md",
         "E6_F.md",
         "E5_F.md",
@@ -11390,10 +11393,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Untitled 7.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Untitled 6(revisar).md": {
       "isPinned": false,
       "isHidden": false
@@ -11415,6 +11414,22 @@
       "isHidden": false
     },
     "_app/notebooklm/guides/ETN607/ETN607_TikzJax 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/guides/ETN607/ETN607_TikzJax 2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "edo1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled 6.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Partial_2/ejercicios P2/E8_F.md": {
       "isPinned": false,
       "isHidden": false
     }
