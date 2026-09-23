@@ -1,7 +1,7 @@
 ##### Ej. Sistema de dos cuñas con pared inclinada, resorte y fuerza externa — 1 GDL
 
 **Enunciado:**
-Una cuña $m_1$ de forma trapezoidal (caras superior e inferior horizontales, cara izquierda inclinada a $60°$ y cara derecha vertical) queda suspendida entre una rampa fija inclinada a $60°$ y la cara superior inclinada a $45°$ de la cuña $m_2$. La cuña $m_2$ es un trapecio rectángulo que descansa sobre el piso horizontal: vértice inferior-izquierdo apoyado en el piso, cara superior inclinada a $45°$ sobre la que desliza $m_1$, cara derecha vertical conectada mediante un resorte de constante $K$ a la pared derecha fija, y cara inferior horizontal apoyada sobre el piso. Sobre $m_1$ actúa una fuerza externa $F$ dirigida verticalmente hacia abajo. El sistema desliza sin fricción y tiene 1 grado de libertad. Se definen $x_1$ como la distancia horizontal desde el origen (base de la rampa) al borde inferior-izquierdo de $m_1$, $x_2$ como la distancia horizontal desde el origen al vértice inferior-izquierdo de $m_2$, $y_1$ como la altura del borde inferior de $m_1$ sobre el piso, $y_2$ como la altura del punto de contacto entre $m_1$ y $m_2$ sobre el piso (función de $x_2$), $B_1$ el ancho horizontal de $m_1$, $B_2$ el ancho horizontal de $m_2$, y $d = x_2 - x_1$ la separación horizontal entre el borde inferior-derecho de $m_1$ y el vértice inferior-izquierdo de $m_2$. Hallar la ecuación de movimiento de Lagrange del sistema.
+Una cuña $m_1$ de forma trapezoidal (caras superior e inferior horizontales, cara izquierda inclinada a $60°$ y cara derecha vertical) queda suspendida entre una rampa fija inclinada a $60°$ y la cara superior inclinada a $45°$ de la cuña $m_2$. La cuña $m_2$ es un trapecio rectángulo que descansa sobre el piso horizontal: vértice inferior-izquierdo apoyado en el piso, cara superior inclinada a $45°$ sobre la que desliza $m_1$, cara derecha vertical conectada mediante un resorte de constante $K$ a la pared derecha fija, y cara inferior horizontal apoyada sobre el piso. Sobre $m_1$ actúa una fuerza externa $F$ dirigida verticalmente hacia abajo. El sistema desliza sin fricción y tiene 1 grado de libertad. Se definen $x_1$ como la distancia horizontal desde el origen (base de la rampa) al borde inferior-izquierdo de $m_1$, $x_2$ como la distancia horizontal desde el origen al vértice inferior-izquierdo de $m_2$, $y_1$ como la altura del borde inferior de $m_1$ sobre el piso, $y_2$ como la altura del punto de contacto entre $m_1$ y $m_2$ sobre el piso (función de $x_2$), $B_1$ el ancho horizontal de $m_1$, $B_2$ el ancho horizontal de $m_2$, y $d = B_1 - x_1 - x_2$ la separación horizontal entre el borde inferior-derecho de $m_1$ y el vértice inferior-izquierdo de $m_2$, donde $B_1$ se mide desde el origen hasta la proyección horizontal del borde inferior-derecho de $m_1$ en posición de referencia. Hallar la ecuación de movimiento de Lagrange del sistema.
 
 **Descripción de la figura:**
 La figura muestra el sistema en su configuración general con todas las cotas relevantes.
@@ -12,410 +12,339 @@ Bloque $m_1$: trapecio con cara superior horizontal, cara inferior horizontal, c
 
 Bloque $m_2$: trapecio rectángulo con vértice inferior-izquierdo apoyado en el piso, cara superior inclinada a $45°$ sobre la que desliza $m_1$, cara derecha vertical y cara inferior horizontal apoyada sobre el piso. El resorte $K$ conecta horizontalmente la cara derecha de $m_2$ con la pared derecha fija.
 
-Cotas indicadas en la figura: $y_1$ (flecha vertical roja, altura del borde inferior de $m_1$ sobre el piso, medida en el lado izquierdo), $y_2$ (flecha vertical verde, altura del punto de contacto $m_1$-$m_2$ sobre el piso, medida en el punto verde), $x_1$ (flecha horizontal roja, distancia del borde inferior-izquierdo de $m_1$ al origen), $x_2$ (flecha horizontal roja, distancia del vértice inferior-izquierdo de $m_2$ al origen), $d$ (flecha horizontal verde, separación $x_2 - x_1$ entre los bordes en contacto), $B_1$ (flecha horizontal violeta, ancho de $m_1$), $B_2$ (flecha horizontal violeta, ancho de $m_2$). Los ángulos $60°$ y $45°$ están marcados en la base de la rampa y en la base de la interfaz inclinada respectivamente.
+Cotas indicadas en la figura: $y_1$ (flecha vertical roja, altura del borde inferior de $m_1$ sobre el piso, medida en el lado izquierdo), $y_2$ (flecha vertical verde, altura del punto de contacto $m_1$-$m_2$ sobre el piso, medida en el punto verde), $x_1$ (flecha horizontal roja, distancia del borde inferior-izquierdo de $m_1$ al origen), $x_2$ (flecha horizontal roja, distancia del vértice inferior-izquierdo de $m_2$ al origen), $d$ (flecha horizontal verde, separación $d = B_1 - x_1 - x_2$ entre el borde inferior-derecho de $m_1$ y el vértice inferior-izquierdo de $m_2$; con $\tan 45° = y_1/d = 1$ resulta $y_2 = d$), $B_1$ (flecha horizontal violeta, ancho de $m_1$), $B_2$ (flecha horizontal violeta, ancho de $m_2$). Los ángulos $60°$ y $45°$ están marcados en la base de la rampa y en la base de la interfaz inclinada respectivamente.
 
-
----
-
-
-NBLM1:
-##### Ej. Una cuña $m_1$ de forma trapezoidal (caras superior e inferior horizontales, cara izquierda inclinada a $60°$ y cara derecha vertical) queda suspendida entre una rampa fija inclinada a $60°$ y la cara superior inclinada a $45°$ de la cuña $m_2$. La cuña $m_2$ es un trapecio rectángulo que descansa sobre el piso horizontal: vértice inferior-izquierdo apoyado en el piso, cara superior inclinada a $45°$ sobre la que desliza $m_1$, cara derecha vertical conectada mediante un resorte de constante $K$ a la pared derecha fija, y cara inferior horizontal apoyada sobre el piso. Sobre $m_1$ actúa una fuerza externa $F$ dirigida verticalmente hacia abajo. El sistema desliza sin fricción y tiene 1 grado de libertad. Se definen $x_1$ como la distancia horizontal desde el origen (base de la rampa) al borde inferior-izquierdo de $m_1$, $x_2$ como la distancia horizontal desde el origen al vértice inferior-izquierdo de $m_2$, $y_1$ como la altura del borde inferior de $m_1$ sobre el piso, $y_2$ como la altura del punto de contacto entre $m_1$ y $m_2$ sobre el piso (función de $x_2$), $B_1$ el ancho horizontal de $m_1$, $B_2$ el ancho horizontal de $m_2$, y $d = x_2 - x_1$ la separación horizontal entre el borde inferior-derecho de $m_1$ y el vértice inferior-izquierdo de $m_2$. Hallar la ecuación de movimiento de Lagrange del sistema.
-
-```tikz
-\usetikzlibrary{patterns}
-\begin{document}
-\begin{tikzpicture}[scale=1.1, >=latex]
-  % Suelo y pared derecha
-  \fill[pattern=north east lines] (-0.5,-0.3) rectangle (8,0);
-  \draw[thick] (-0.5,0) -- (8,0);
-
-  % Rampa 60 deg
-  \fill[pattern=north east lines] (-0.5,0) -- (2,4.33) -- (1.6,4.33) -- (-0.5,0.7) -- cycle;
-  \draw[thick] (0,0) -- (2,4.33);
-
-  % Pared derecha
-  \fill[pattern=north east lines] (7.5,0) rectangle (7.8,3);
-  \draw[thick] (7.5,0) -- (7.5,3);
-
-  % Angulos
-  \draw[teal, thick] (0.6,0) arc (0:60:0.6);
-  \node[teal] at (0.9,0.3) {\small $60^\circ$};
-
-  % Cuña m2 (trapecio rectángulo con cara 45 deg)
-  \draw[thick, fill=orange!15] (3.5,0) -- (6.0,2.5) -- (6.0,0) -- cycle;
-  \draw[orange, thick] (4.1,0) arc (0:45:0.6);
-  \node[orange] at (4.5,0.25) {\small $45^\circ$};
-  \node at (5.2,0.7) {$m_2$};
-
-  % Cuña m1
-  \draw[thick, fill=teal!20] (1.0,1.732) -- (2.5,1.732) -- (2.5,2.732) -- (1.577,2.732) -- cycle;
-  \node at (1.9,2.2) {$m_1$};
-
-  % Puntos de contacto
-  \fill[red] (1.0,1.732) circle (2pt);
-  \fill[teal] (2.5,1.732) circle (2pt);
-
-  % Fuerza F
-  \draw[->, very thick, red] (2.0,3.5) -- (2.0,2.732) node[above=8pt] {$F$};
-
-  % Resorte K
-  \draw[thick] (6.0,1.0) -- (6.2,1.0) -- (6.3,1.2) -- (6.5,0.8) -- (6.7,1.2) -- (6.9,0.8) -- (7.1,1.2) -- (7.3,0.8) -- (7.4,1.0) -- (7.5,1.0);
-  \node[above] at (6.75,1.2) {$K$};
-
-  % Cotas
-  \draw[dashed, gray] (1.0,0) -- (1.0,1.732);
-  \draw[dashed, gray] (2.5,0) -- (2.5,1.732);
-  \draw[dashed, gray] (3.5,0) -- (3.5,1.732);
-
-  \draw[<->, red] (0,-0.3) -- (1.0,-0.3) node[midway, below] {$x_1$};
-  \draw[<->, red] (0,-0.7) -- (3.5,-0.7) node[midway, below] {$x_2$};
-  \draw[<->, violet] (1.0,1.4) -- (2.5,1.4) node[midway, above] {$B_1$};
-  \draw[<->, red] (-0.3,0) -- (-0.3,1.732) node[midway, left] {$y_1$};
-\end{tikzpicture}
-\end{document}
-```
-
-**Resolución**
-Se formulan la cinética y potencial en función de la coordenada generalizada $x_1$ tras establecer la ligadura geométrica entre $x_1$ y $x_2$.
-
-**Paso 1 — Relación de restricción cinemática entre las coordenadas $x_1$ y $x_2$**
-
-
-$$
-y_1 = x_1 \tan 60^\circ = \sqrt{3} x_1
-$$
-
-
-
-$$
-\dot{y}_1 = \sqrt{3} \dot{x}_1
-$$
-
-
-
-$$
-y_2 = (x_1 + B_1 - x_2) \tan 45^\circ = x_1 + B_1 - x_2
-$$
-
-
-
-$$
-\sqrt{3} x_1 = x_1 + B_1 - x_2
-$$
-
-
-
-$$
-x_2 = (1 - \sqrt{3}) x_1 + B_1
-$$
-
-
-
-$$
-\dot{x}_2 = (1 - \sqrt{3}) \dot{x}_1
-$$
-
-
-**Paso 2 — Expresión de la energía cinética total $T$ del sistema**
-
-
-$$
-T_1 = \frac{1}{2} m_1 (\dot{x}_1^2 + \dot{y}_1^2) = \frac{1}{2} m_1 (\dot{x}_1^2 + 3 \dot{x}_1^2) = 2 m_1 \dot{x}_1^2
-$$
-
-
-
-$$
-T_2 = \frac{1}{2} m_2 \dot{x}_2^2 = \frac{1}{2} m_2 (1 - \sqrt{3})^2 \dot{x}_1^2 = \frac{1}{2} m_2 (4 - 2\sqrt{3}) \dot{x}_1^2 = (2 - \sqrt{3}) m_2 \dot{x}_1^2
-$$
-
-
-
-$$
-T = T_1 + T_2 = \left[ 2 m_1 + (2 - \sqrt{3}) m_2 \right] \dot{x}_1^2
-$$
-
-
-**Paso 3 — Expresión de la energía potencial total $V$ del sistema**
-
-
-$$
-V_{\text{ext}} = (m_1 g + F) y_1 = \sqrt{3} (m_1 g + F) x_1
-$$
-
-
-
-$$
-V_k = \frac{1}{2} K (x_2 - x_{2,0})^2 = \frac{1}{2} K \left[ (1 - \sqrt{3}) (x_1 - x_{1,0}) \right]^2 = \frac{1}{2} K (4 - 2\sqrt{3}) (x_1 - x_{1,0})^2
-$$
-
-
-
-$$
-V = \sqrt{3} (m_1 g + F) x_1 + (2 - \sqrt{3}) K (x_1 - x_{1,0})^2
-$$
-
-
-**Paso 4 — Función Lagrangiana $L = T - V$ del sistema**
-
-
-$$
-L = \left[ 2 m_1 + (2 - \sqrt{3}) m_2 \right] \dot{x}_1^2 - \sqrt{3} (m_1 g + F) x_1 - (2 - \sqrt{3}) K (x_1 - x_{1,0})^2
-$$
-
-
-**Paso 5 — Ecuación diferencial de movimiento de Lagrange**
-
-
-$$
-\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{x}_1} \right) - \frac{\partial L}{\partial x_1} = 0
-$$
-
-
-
-$$
-\frac{\partial L}{\partial \dot{x}_1} = 2 \left[ 2 m_1 + (2 - \sqrt{3}) m_2 \right] \dot{x}_1 = \left[ 4 m_1 + 2(2 - \sqrt{3}) m_2 \right] \dot{x}_1
-$$
-
-
-
-$$
-\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{x}_1} \right) = \left[ 4 m_1 + 2(2 - \sqrt{3}) m_2 \right] \ddot{x}_1
-$$
-
-
-
-$$
-\frac{\partial L}{\partial x_1} = -\sqrt{3} (m_1 g + F) - 2 (2 - \sqrt{3}) K (x_1 - x_{1,0}) = -\sqrt{3} (m_1 g + F) - (4 - 2\sqrt{3}) K (x_1 - x_{1,0})
-$$
-
-
-
-$$
-\left[ 4 m_1 + 2(2 - \sqrt{3}) m_2 \right] \ddot{x}_1 + (4 - 2\sqrt{3}) K (x_1 - x_{1,0}) + \sqrt{3} (m_1 g + F) = 0
-$$
-
-
-
-$$
-\boxed{\left[ 4 m_1 + 2(2 - \sqrt{3}) m_2 \right] \ddot{x}_1 + (4 - 2\sqrt{3}) K (x_1 - x_{1,0}) + \sqrt{3} (m_1 g + F) = 0}
-$$
-
-
----
-
-NBLM2:
-
-##### Ej. Una cuña $m_1$ de forma trapezoidal (caras superior e inferior horizontales, cara izquierda inclinada a $60°$ y cara derecha vertical) queda suspendida entre una rampa fija inclinada a $60°$ y la cara superior inclinada a $45°$ de la cuña $m_2$. La cuña $m_2$ es un trapecio rectángulo que descansa sobre el piso horizontal: vértice inferior-izquierdo apoyado en el piso, cara superior inclinada a $45°$ sobre la que desliza $m_1$, cara derecha vertical conectada mediante un resorte de constante $K$ a la pared derecha fija, y cara inferior horizontal apoyada sobre el piso. Sobre $m_1$ actúa una fuerza externa $F$ dirigida verticalmente hacia abajo. El sistema desliza sin fricción y tiene 1 grado de libertad. Se definen $x_1$ como la distancia horizontal desde el origen (base de la rampa) al borde inferior-izquierdo de $m_1$, $x_2$ como la distancia horizontal desde el origen al vértice inferior-izquierdo de $m_2$, $y_1$ como la altura del borde inferior de $m_1$ sobre el piso, $y_2$ como la altura del punto de contacto entre $m_1$ y $m_2$ sobre el piso (función de $x_2$), $B_1$ el ancho horizontal de $m_1$, $B_2$ el ancho horizontal de $m_2$, y $d = x_2 - x_1$ la separación horizontal entre el borde inferior-derecho de $m_1$ y el vértice inferior-izquierdo de $m_2$. Hallar la ecuación de movimiento de Lagrange del sistema.
 
 ```tikz
 \usetikzlibrary{patterns,decorations.pathmorphing}
+
 \begin{document}
+
 \begin{tikzpicture}[scale=1.1, >=latex]
-    \colorlet{maincolor}{teal}
-    \colorlet{accentcolor}{orange}
 
-    % Rampa fija izquierda (60 deg)
-    \fill[pattern=north east lines] (0,0) -- (2.6,4.503) -- (2.3,4.676) -- (-0.3,0) -- cycle;
-    \draw[thick] (0,0) -- (2.6,4.503);
+%================================================
+% PARED IZQUIERDA - 60°
+%================================================
+\fill[pattern=north east lines]
+(0,0)
+-- (-1.73,3)
+-- (-1.30,3)
+-- (0,0)
+-- cycle;
 
-    % Piso horizontal
-    \fill[pattern=north east lines] (-0.5,-0.3) rectangle (6.8,0);
-    \draw[thick] (-0.5,0) -- (6.8,0);
+\draw[thick]
+(0,0) -- (-1.73,3);
 
-    % Pared derecha vertical
-    \fill[pattern=north east lines] (6.8,0) rectangle (7.1,3.8);
-    \draw[thick] (6.8,0) -- (6.8,3.8);
+%================================================
+% PISO
+%================================================
+\fill[pattern=north east lines]
+(0,-0.3) rectangle (8.5,0);
 
-    % Bloque m2 (trapecio rectángulo naranja)
-    \draw[fill=orange!10, draw=accentcolor, thick] (0.8,0) -- (4.2,0) -- (4.2,3.4) -- cycle;
-    \node[accentcolor] at (2.8,1.0) {$m_2$};
+\draw[thick]
+(0,0) -- (8.5,0);
 
-    % Bloque m1 (trapecio teal)
-    \draw[fill=teal!10, draw=maincolor, thick] (1.366,2.366) -- (3.166,2.366) -- (3.166,3.366) -- (1.943,3.366) -- cycle;
-    \node[maincolor] at (2.4,2.866) {$m_1$};
+%================================================
+% BLOQUE 2
+%================================================
+\fill[white]
+(2.5,0)
+-- (5.5,3)
+-- (7.0,3)
+-- (7.0,0)
+-- cycle;
 
-    % Puntos de contacto
-    \fill[red] (1.366,2.366) circle (0.07);
-    \fill[green!70!black] (3.166,2.366) circle (0.07);
+\draw[thick]
+(2.5,0)
+-- (5.5,3)
+-- (7.0,3)
+-- (7.0,0)
+-- cycle;
 
-    % Fuerza F
-    \draw[->, red, ultra thick] (2.55,4.1) -- (2.55,3.366) node[midway, right] {$F$};
+\node at (5.5,1.3) {\Large 2};
 
-    % Resorte K
-    \draw[decoration={aspect=0.3, segment length=2mm, amplitude=2.5mm, coil}, decorate, maincolor, thick] (4.2,1.7) -- (6.8,1.7);
-    \node[above, maincolor] at (5.5,1.9) {$K$};
+%================================================
+% BLOQUE 1
+% SUSPENDIDO SOBRE EL PISO
+%================================================
+\fill[white]
+(-0.58,1.0)
+-- (3.50,1.0)
+-- (4.70,2.20)
+-- (-1.27,2.20)
+-- cycle;
 
-    % Ángulos
-    \draw[thick] (0.5,0) arc (0:60:0.5);
-    \node at (0.8,0.3) {$60^\circ$};
+\draw[thick]
+(-0.58,1.0)
+-- (3.50,1.0)
+-- (4.70,2.20)
+-- (-1.27,2.20)
+-- cycle;
 
-    \draw[thick] (1.4,0) arc (0:45:0.6);
-    \node at (1.8,0.25) {$45^\circ$};
+\node at (1.65,1.60) {\Large 1};
 
-    % Cotas x1, x2, d
-    \draw[->, maincolor, thick] (0,-0.5) -- (1.366,-0.5) node[midway, below] {$x_1$};
-    \draw[dotted] (0,0) -- (0,-0.7);
-    \draw[dotted] (1.366,2.366) -- (1.366,-0.7);
+%================================================
+% FUERZA SOBRE EL BLOQUE 1
+%================================================
+\draw[->, very thick]
+(1.65,3.2) -- (1.65,2.20);
 
-    \draw[->, maincolor, thick] (0,-1.1) -- (0.8,-1.1) node[midway, below] {$x_2$};
-    \draw[dotted] (0.8,0) -- (0.8,-1.3);
+%================================================
+% PUNTOS DE REFERENCIA
+%================================================
+\fill[red]
+(-0.58,1.0) circle (2pt);
 
-    \draw[<->, accentcolor, thick] (0.8,-0.5) -- (1.366,-0.5) node[midway, above=-2pt] {$d$};
+\fill[green!60!black]
+(3.50,1.0) circle (2pt);
 
-    % Cotas y1, y2
-    \draw[->, red, thick] (1.366,0) -- (1.366,2.366) node[midway, left] {$y_1$};
+%================================================
+% ÁNGULO DE LA PARED: 60°
+%================================================
+\draw[thick]
+(0,0) ++(180:0.55)
+arc (180:120:0.55);
 
-    \draw[->, green!70!black, thick] (3.166,0) -- (3.166,2.366) node[midway, right] {$y_2$};
-    \draw[dotted] (3.166,2.366) -- (3.166,0);
+\node at (-0.38,0.30) {$60^\circ$};
 
-    % Ancho B1, B2
-    \draw[<->, maincolor] (1.366,3.6) -- (3.166,3.6) node[midway, above] {$B_1$};
-    \draw[dotted] (1.366,3.366) -- (1.366,3.7);
-    \draw[dotted] (3.166,3.366) -- (3.166,3.7);
+%================================================
+% ÁNGULO DEL BLOQUE 2: 45°
+%================================================
+\draw[thick]
+(2.5,0) ++(0.55,0)
+arc (0:45:0.55);
 
-    \draw[<->, accentcolor] (0.8,-1.7) -- (4.2,-1.7) node[midway, below] {$B_2$};
-    \draw[dotted] (4.2,0) -- (4.2,-1.9);
+\node at (3.05,0.25) {$45^\circ$};
+
+%================================================
+% RESORTE
+%================================================
+\draw[
+    thick,
+    decorate,
+    decoration={
+        coil,
+        aspect=0.35,
+        segment length=5pt,
+        amplitude=5pt
+    }
+]
+(7.0,1.5) -- (8.5,1.5);
+
+%================================================
+% PARED DERECHA
+%================================================
+\fill[pattern=north east lines]
+(8.5,0) rectangle (8.8,3.0);
+
+\draw[thick]
+(8.5,0) -- (8.5,3.0);
+
+%================================================
+% ALTURA y_1
+% Desde el piso hasta el bloque 1
+%================================================
+\draw[red, <->, thick]
+(-2.0,0) -- (-2.0,1.0);
+
+\draw[red, dashed]
+(-2.0,1.0) -- (-0.58,1.0);
+
+\draw[red, dashed]
+(-2.0,0) -- (0,0);
+
+\node[red] at (-2.25,0.5) {$y_1$};
+
+%================================================
+% ALTURA y_2
+% Desde el piso hasta el punto del bloque 2
+%================================================
+\draw[green!60!black, <->, thick]
+(3.50,-0.05) -- (3.50,1.0);
+
+\draw[green!60!black, dashed]
+(3.50,1.0) -- (4.10,1.0);
+
+\node[green!60!black] at (3.75,0.5) {$y_2$};
+
+%================================================
+% DISTANCIA d
+%================================================
+\draw[green!60!black, <->, thick]
+(3.50,-0.55) -- (4.70,-0.55);
+
+\draw[green!60!black, dashed]
+(3.50,0) -- (3.50,-0.55);
+
+\draw[green!60!black, dashed]
+(4.70,1.0) -- (4.70,-0.55);
+
+\node[green!60!black] at (4.10,-0.75) {$d$};
+
+%================================================
+% x_1
+%================================================
+\draw[red, <->, thick]
+(-0.58,-0.55) -- (0,-0.55);
+
+\draw[red, dashed]
+(-0.58,1.0) -- (-0.58,-0.55);
+
+\node[red] at (-0.29,-0.75) {$x_1$};
+
+%================================================
+% x_2
+%================================================
+\draw[red, <->, thick]
+(0,-0.95) -- (2.5,-0.95);
+
+\draw[red, dashed]
+(2.5,0) -- (2.5,-0.95);
+
+\node[red] at (1.25,-1.15) {$x_2$};
+
+%================================================
+% B_1
+%================================================
+\draw[violet, <->, thick]
+(0,-0.40) -- (2.5,-0.40);
+
+\node[violet] at (1.25,-0.60) {$B_1$};
+
+%================================================
+% B_2
+%================================================
+\draw[violet, <->, thick]
+(2.5,-0.40) -- (4.5,-0.40);
+
+\draw[violet, dashed]
+(8.5,0) -- (8.5,-0.40);
+
+\node[violet] at (5.5,-0.60) {$B_2$};
 
 \end{tikzpicture}
+
 \end{document}
 ```
 
-**Resolución**
-Se establecen las restricciones geométricas de contacto, se formula el Lagrangiano del sistema en función de la coordenada generalizada $x_2$ y se obtiene la ecuación diferencial mediante la ecuación de Euler-Lagrange.
+---
 
-**Paso 1 — Ligaduras cinemáticas y relaciones entre coordenadas**
+**Solución:**
 
-Contacto del vértice inferior-izquierdo de $m_1$ sobre la rampa fija inclinada a $60°$:
+## 1. Relaciones geométricas de vínculo
 
-$$
-y_1 = x_1 \tan 60° = \sqrt{3} x_1
-$$
+El sistema tiene 2 cuerpos móviles pero las restricciones geométricas impuestas por las superficies de contacto reducen los grados de libertad a 1. Se elige $x_2$ como coordenada generalizada.
 
+**Vínculo de la rampa (60°):**
 
-Contacto del vértice inferior-derecho de $m_1$ sobre la superficie inclinada a $45°$ de $m_2$:
+La cara izquierda de $m_1$ desliza sobre la rampa fija inclinada a $60°$. La relación entre la altura de $m_1$ y su posición horizontal es:
 
-$$
-y_2 = y_1 = (x_1 + B_1 - x_2) \tan 45° = x_1 + B_1 - x_2
-$$
+$$\tan 60° = \frac{y_1}{x_1} \implies y_1 = x_1 \tan 60°$$
 
+**Vínculo de la interfaz $m_1$–$m_2$ (45°):**
 
-Igualación de las expresiones de la altura $y_1$:
+El punto de contacto entre el borde inferior-derecho de $m_1$ y la cara inclinada a $45°$ de $m_2$ impone:
 
-$$
-\sqrt{3} x_1 = x_1 + B_1 - x_2 \implies (\sqrt{3} - 1) x_1 = B_1 - x_2
-$$
+$$\tan 45° = \frac{y_2}{d} = \frac{y_1}{B_1 - x_1 - x_2}$$
 
+Como $\tan 45° = 1$:
 
+$$y_1 = d = B_1 - x_1 - x_2$$
 
-$$
-x_1 = \dfrac{\sqrt{3} + 1}{2} (B_1 - x_2)
-$$
+Igualando las dos expresiones de $y_1$:
 
+$$x_1 \tan 60° = B_1 - x_1 - x_2$$
 
+$$x_1 (\tan 60° + 1) = B_1 - x_2$$
 
-$$
-y_1 = \dfrac{3 + \sqrt{3}}{2} (B_1 - x_2)
-$$
+$$x_1 = \frac{B_1 - x_2}{1 + \tan 60°}$$
 
+Con $\tan 60° = \sqrt{3}$:
 
-Relación entre las velocidades del sistema:
+$$x_1 = \frac{B_1 - x_2}{1 + \sqrt{3}}$$
 
-$$
-\dot{x}_1 = -\dfrac{\sqrt{3} + 1}{2} \dot{x}_2
-$$
+Esta es la relación de vínculo que expresa $x_1$ en función de la coordenada generalizada $x_2$. Derivando:
 
+$$\dot{x}_1 = \frac{-\dot{x}_2}{1 + \sqrt{3}}$$
 
+Y para $y_1$:
 
-$$
-\dot{y}_1 = -\dfrac{3 + \sqrt{3}}{2} \dot{x}_2
-$$
+$$y_1 = x_1 \sqrt{3} = \frac{\sqrt{3}(B_1 - x_2)}{1 + \sqrt{3}}$$
 
+$$\dot{y}_1 = \frac{-\sqrt{3}\,\dot{x}_2}{1 + \sqrt{3}}$$
 
-**Paso 2 — Energía cinética del sistema**
+---
 
-Para la cuña $m_1$ en traslación 2D:
+## 2. Energía cinética
 
-$$
-v_{1x}^2 + v_{1y}^2 = \dot{x}_1^2 + (\sqrt{3}\dot{x}_1)^2 = 4 \dot{x}_1^2 = 4 \left( \dfrac{\sqrt{3} + 1}{2} \right)^{\!2} \dot{x}_2^2 = (4 + 2\sqrt{3}) \dot{x}_2^2 = 2(2 + \sqrt{3})\dot{x}_2^2
-$$
+$m_1$ se mueve en el plano con velocidades $\dot{x}_1$ e $\dot{y}_1$. $m_2$ solo se desplaza horizontalmente ($\dot{y}_2 = 0$ ya que su base está sobre el piso):
 
+$$T = \frac{m_1}{2}(\dot{x}_1^2 + \dot{y}_1^2) + \frac{m_2}{2}\dot{x}_2^2$$
 
+Sustituyendo $\dot{x}_1$ e $\dot{y}_1$ en función de $\dot{x}_2$:
 
-$$
-T_1 = \dfrac{1}{2} m_1 (v_{1x}^2 + v_{1y}^2) = (2 + \sqrt{3}) m_1 \dot{x}_2^2
-$$
+$$\dot{x}_1^2 + \dot{y}_1^2 = \frac{\dot{x}_2^2}{(1+\sqrt{3})^2} + \frac{3\,\dot{x}_2^2}{(1+\sqrt{3})^2} = \frac{(1+3)\,\dot{x}_2^2}{(1+\sqrt{3})^2} = \frac{4\,\dot{x}_2^2}{(1+\sqrt{3})^2}$$
 
+Entonces:
 
-Para la cuña $m_2$ en traslación horizontal:
+$$T = \frac{m_1}{2} \cdot \frac{4\,\dot{x}_2^2}{(1+\sqrt{3})^2} + \frac{m_2}{2}\dot{x}_2^2 = \frac{1}{2}\left[\frac{4m_1}{(1+\sqrt{3})^2} + m_2\right]\dot{x}_2^2$$
 
-$$
-T_2 = \dfrac{1}{2} m_2 \dot{x}_2^2
-$$
+Definiendo la masa efectiva:
 
+$$M^* = \frac{4m_1}{(1+\sqrt{3})^2} + m_2$$
 
-Energía cinética total $T$:
+$$T = \frac{1}{2}M^*\dot{x}_2^2$$
 
-$$
-T = \dfrac{1}{2} \left[ m_2 + 2(2 + \sqrt{3}) m_1 \right] \dot{x}_2^2 = \dfrac{1}{2} \left[ m_2 + (4 + 2\sqrt{3}) m_1 \right] \dot{x}_2^2
-$$
+---
 
+## 3. Energía potencial
 
-**Paso 3 — Energía potencial del sistema**
+Las contribuciones a la energía potencial son: el peso de $m_1$ (que varía con $y_1$), el peso de $m_2$ (constante, altura cero sobre el piso), y el resorte $K$ conectado a $m_2$.
 
-Potencial gravitatorio y fuerza externa constante $F$ actuando sobre $m_1$:
+Tomando el piso como referencia de altura:
 
-$$
-V_1 = (m_1 g + F) y_1 = \dfrac{3 + \sqrt{3}}{2} (m_1 g + F) (B_1 - x_2)
-$$
+$$V = m_1 g\, y_1 + \frac{1}{2}K\,(x_2 - x_{2,0})^2$$
 
+donde $x_{2,0}$ es la posición de equilibrio natural del resorte. Expresando en función de $x_2$:
 
-Potencial elástico del resorte $K$ sobre $m_2$:
+$$V = m_1 g \cdot \frac{\sqrt{3}(B_1 - x_2)}{1+\sqrt{3}} + \frac{1}{2}K\,(x_2 - x_{2,0})^2$$
 
-$$
-V_2 = \dfrac{1}{2} K (x_2 - x_0)^2
-$$
+---
 
+## 4. Lagrangiano y ecuación de movimiento
 
-Energía potencial total $V$:
+$$L = T - V = \frac{1}{2}M^*\dot{x}_2^2 - m_1 g \cdot \frac{\sqrt{3}(B_1 - x_2)}{1+\sqrt{3}} - \frac{1}{2}K(x_2 - x_{2,0})^2$$
 
-$$
-V = \dfrac{3 + \sqrt{3}}{2} (m_1 g + F) (B_1 - x_2) + \dfrac{1}{2} K (x_2 - x_0)^2
-$$
+Aplicando la ecuación de Lagrange para $q = x_2$:
 
+$$\frac{d}{dt}\frac{\partial L}{\partial \dot{x}_2} - \frac{\partial L}{\partial x_2} = Q_{x_2}$$
 
-**Paso 4 — Función Lagrangiana $L = T - V$**
+donde $Q_{x_2}$ es la fuerza generalizada asociada a la fuerza externa $F$.
 
+**Término cinético:**
 
-$$
-L = \dfrac{1}{2} \left[ m_2 + (4 + 2\sqrt{3}) m_1 \right] \dot{x}_2^2 - \dfrac{3 + \sqrt{3}}{2} (m_1 g + F) (B_1 - x_2) - \dfrac{1}{2} K (x_2 - x_0)^2
-$$
+$$\frac{d}{dt}\frac{\partial L}{\partial \dot{x}_2} = M^*\ddot{x}_2$$
 
+**Término potencial:**
 
-**Paso 5 — Ecuación de movimiento de Lagrange**
+$$\frac{\partial L}{\partial x_2} = \frac{m_1 g \sqrt{3}}{1+\sqrt{3}} - K(x_2 - x_{2,0})$$
 
-Ecuación de Euler-Lagrange respecto a $q = x_2$:
+**Fuerza generalizada $Q_{x_2}$:**
 
-$$
-\dfrac{d}{dt} \!\left( \dfrac{\partial L}{\partial \dot{x}_2} \right) - \dfrac{\partial L}{\partial x_2} = 0
-$$
+La fuerza $F$ actúa verticalmente hacia abajo sobre $m_1$. El trabajo virtual es:
 
+$$\delta W = -F\,\delta y_1 = -F \cdot \frac{-\sqrt{3}}{1+\sqrt{3}}\,\delta x_2 = \frac{F\sqrt{3}}{1+\sqrt{3}}\,\delta x_2$$
 
-Derivadas parciales de la función Lagrangiana:
+Por lo tanto:
 
-$$
-\dfrac{\partial L}{\partial \dot{x}_2} = \left[ m_2 + (4 + 2\sqrt{3}) m_1 \right] \dot{x}_2 \implies \dfrac{d}{dt} \!\left( \dfrac{\partial L}{\partial \dot{x}_2} \right) = \left[ m_2 + (4 + 2\sqrt{3}) m_1 \right] \ddot{x}_2
-$$
+$$Q_{x_2} = \frac{F\sqrt{3}}{1+\sqrt{3}}$$
 
+**Ecuación de movimiento:**
 
+$$M^*\ddot{x}_2 - \frac{m_1 g \sqrt{3}}{1+\sqrt{3}} + K(x_2 - x_{2,0}) = \frac{F\sqrt{3}}{1+\sqrt{3}}$$
 
-$$
-\dfrac{\partial L}{\partial x_2} = \dfrac{3 + \sqrt{3}}{2} (m_1 g + F) - K (x_2 - x_0)
-$$
+$$\boxed{M^*\ddot{x}_2 + K(x_2 - x_{2,0}) = \frac{\sqrt{3}}{1+\sqrt{3}}(m_1 g + F)}$$
 
+con $M^* = \dfrac{4m_1}{(1+\sqrt{3})^2} + m_2$.
 
-
-$$
-\boxed{\left[ m_2 + (4 + 2\sqrt{3}) m_1 \right] \ddot{x}_2 + K (x_2 - x_0) = \dfrac{3 + \sqrt{3}}{2} (m_1 g + F)}
-$$
-
+---
