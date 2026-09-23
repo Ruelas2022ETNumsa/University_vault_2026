@@ -40,7 +40,8 @@
         "E4_NBLM.md",
         "E5_NBLM.md",
         "Untitled 2.md",
-        "Untitled 3.md"
+        "Untitled 3.md",
+        "Untitled 4.md"
       ]
     },
     "MOC": {
@@ -1766,7 +1767,6 @@
         "DOC-ETN607-study.md",
         "ETN607-comp_apuntes_BCv4i.md",
         "ETN607-comp_indice_BCv5ii.md",
-        "ETN607-transcription_Av6.md",
         "legacy",
         "ETN607-ejercicio-detector_P1.md",
         "ETN607-study-P2v1.md",
@@ -3751,6 +3751,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "ETN607-transcription_Av6.md",
         "DOC-ETN607-transcription-divisions.md",
         "ETN607-transcription-divisions.md",
         "ETN607-study.md",
@@ -3791,10 +3792,6 @@
       "isHidden": false
     },
     "_app/notebooklm/prompts/ETN607/legacy/ETN607-transcription_BCv4.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/prompts/ETN607/ETN607-transcription_Av6.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -11385,6 +11382,14 @@
       "isHidden": false
     },
     "Semesters/Sem_04/ETN607/Partial_2/ejercicios P2/E1_F rev.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled 4.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN607/legacy/ETN607-transcription_Av6.md": {
       "isPinned": false,
       "isHidden": false
     }
