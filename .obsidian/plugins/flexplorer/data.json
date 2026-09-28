@@ -1776,7 +1776,9 @@
         "P1-E5-607-24-08-2026_19-03-54.png",
         "P1-E5-607-24-08-2026_19-04-13.png",
         "P1-E7-607-24-08-2026_21-00-28.png",
-        "Untitled 1 1-06-09-2026_22-28-14.png"
+        "Untitled 1 1-06-09-2026_22-28-14.png",
+        "er parcial ETN-1012 marzo 2022-28-09-2026_18-01-56.png",
+        "1er parcial ETN-1012 marzo 2022-28-09-2026_18-02-52.png"
       ]
     },
     "_hangar/_legacy/tsk_update-rclone.md": {
@@ -11285,8 +11287,27 @@
     "Semesters/Sem_09/ETN1012": {
       "isPinned": false,
       "isHidden": false,
-      "customOrder": [],
+      "customOrder": [
+        "1er parcial ETN-1012 marzo 2026.md",
+        "1er parcial ETN-1012 marzo 2022.md"
+      ],
       "sortOrder": "custom"
+    },
+    "_assets/er parcial ETN-1012 marzo 2022-28-09-2026_18-01-56.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/ETN1012/1er parcial ETN-1012 marzo 2026.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/ETN1012/1er parcial ETN-1012 marzo 2022.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/1er parcial ETN-1012 marzo 2022-28-09-2026_18-02-52.png": {
+      "isPinned": false,
+      "isHidden": false
     }
   },
   "pinnedFiles": [
