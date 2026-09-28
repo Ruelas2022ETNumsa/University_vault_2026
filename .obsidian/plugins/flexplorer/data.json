@@ -25,7 +25,8 @@
         "Borrar",
         "shared",
         "Untitled.md",
-        "resumen_wireshark_sesion.md"
+        "resumen_wireshark_sesion.md",
+        "Untitled 1.md"
       ]
     },
     "MOC": {
@@ -3349,7 +3350,8 @@
       "sortOrder": "custom",
       "customOrder": [
         "REC92",
-        "ETN1010"
+        "ETN1010",
+        "ETN1012"
       ]
     },
     "Semesters/Sem_09/REC92": {
@@ -11275,6 +11277,16 @@
     "Rubbish/promtpx.md": {
       "isPinned": false,
       "isHidden": false
+    },
+    "Untitled 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/ETN1012": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [],
+      "sortOrder": "custom"
     }
   },
   "pinnedFiles": [
