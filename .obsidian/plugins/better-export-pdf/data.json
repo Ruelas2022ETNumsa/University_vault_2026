@@ -15,10 +15,10 @@
   "version": "2",
   "prevConfig": {
     "pageSize": "A4",
-    "marginType": "2",
+    "marginType": "0",
     "showTitle": false,
     "open": false,
-    "scale": 89,
+    "scale": 0,
     "landscape": false,
     "marginTop": "10",
     "marginBottom": "10",

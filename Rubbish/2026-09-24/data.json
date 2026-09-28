@@ -24,8 +24,7 @@
         "Habits",
         "Borrar",
         "shared",
-        "Untitled.md",
-        "resumen_wireshark_sesion.md"
+        "Untitled.md"
       ]
     },
     "MOC": {
@@ -1136,9 +1135,7 @@
         "_plan_movil.md",
         "_start.md",
         "_doc_start_movil607P1.md",
-        "_start_movilyyy.md",
-        "_start_movil.md",
-        "_start_movil607P1 1 1.md"
+        "_start_movilyyy.md"
       ]
     },
     "_skills/_claude-boot.md": {
@@ -3586,12 +3583,13 @@
       "customOrder": [
         "tmp",
         "section.md",
+        "2026-08-24",
         "2026-09-07",
         "2026-09-08",
         "2026-08-09",
+        "2026-08-26",
         "2026-09-02",
         "2026-09-09",
-        "2026-09-24",
         "draft.md",
         "promtpx.md"
       ]
@@ -4717,6 +4715,18 @@
         "P1-E9-607.md"
       ]
     },
+    "Rubbish/2026-08-24": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-08-24/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
     "Semesters/Sem_04/ETN607/Partial_1/ejercicios P1/P1-E1-607.md": {
       "isPinned": false,
       "isHidden": false
@@ -5407,19 +5417,19 @@
         "scanned_words.txt",
         "2026-09-07 18.02.07.0",
         "2026-09-07 18.06.05.0",
-        "2026-09-07 18.08.42.0",
         "2026-09-07 18.08.53.0",
-        "2026-09-07 18.21.29.0",
-        "2026-09-07 18.21.23.0",
+        "2026-09-07 18.08.42.0",
         "2026-09-07 18.09.01.0",
-        "2026-09-07 18.21.41.0",
-        "2026-09-07 18.21.48.0",
+        "2026-09-07 18.21.23.0",
+        "2026-09-07 18.21.29.0",
         "2026-09-07 18.21.38.0",
+        "2026-09-07 18.21.41.0",
         "2026-09-07 18.21.53.0",
+        "2026-09-07 18.21.48.0",
         "2026-09-07 18.22.02.0",
+        "2026-09-07 18.22.12.0",
         "2026-09-07 18.22.17.0",
         "2026-09-07 18.22.29.0",
-        "2026-09-07 18.22.12.0",
         "2026-09-07 18.24.21.0",
         "2026-09-07 18.25.03.0",
         "2026-09-07 18.25.29.0",
@@ -5448,16 +5458,16 @@
         "2026-09-07 18.32.00.0",
         "2026-09-07 18.32.20.0",
         "2026-09-07 18.33.47.0",
-        "2026-09-07 18.33.55.0",
         "2026-09-07 18.33.57.0",
         "2026-09-07 18.34.24.0",
+        "2026-09-07 18.33.55.0",
         "2026-09-07 18.35.57.0",
         "2026-09-07 18.36.01.0",
         "2026-09-07 18.37.00.0",
         "2026-09-07 18.37.04.0",
         "2026-09-07 18.37.06.0",
-        "2026-09-07 18.37.10.0",
         "2026-09-07 18.37.13.0",
+        "2026-09-07 18.37.10.0",
         "2026-09-07 18.37.54.0",
         "2026-09-07 18.37.58.0",
         "2026-09-07 18.38.59.0",
@@ -5476,23 +5486,23 @@
         "2026-09-07 18.40.45.0",
         "2026-09-07 18.40.54.0",
         "2026-09-07 18.40.56.0",
-        "2026-09-07 18.40.58.0",
         "2026-09-07 18.41.00.0",
         "2026-09-07 18.41.03.0",
         "2026-09-07 18.44.49.0",
-        "2026-09-07 18.44.53.0",
         "2026-09-07 18.45.14.0",
+        "2026-09-07 18.44.53.0",
+        "2026-09-07 18.40.58.0",
         "2026-09-07 18.45.16.0",
         "2026-09-07 18.45.21.0",
-        "2026-09-07 18.45.23.0",
         "2026-09-07 18.45.44.0",
+        "2026-09-07 18.45.23.0",
         "2026-09-07 18.46.01.0",
         "2026-09-07 18.46.05.0",
         "2026-09-07 18.48.39.0",
         "2026-09-07 18.49.56.0",
         "2026-09-07 18.50.07.0",
-        "2026-09-07 18.50.11.0",
         "2026-09-07 18.50.15.0",
+        "2026-09-07 18.50.11.0",
         "2026-09-07 18.50.18.0",
         "2026-09-07 18.50.20.0",
         "2026-09-07 18.50.22.0",
@@ -5504,8 +5514,8 @@
         "2026-09-07 19.04.56.0",
         "2026-09-07 19.05.35.0",
         "2026-09-07 19.09.11.0",
-        "2026-09-07 19.13.07.0",
         "2026-09-07 19.15.49.0",
+        "2026-09-07 19.13.07.0",
         "2026-09-07 19.16.20.0",
         "2026-09-07 19.16.42.0",
         "2026-09-07 19.16.59.0",
@@ -5517,8 +5527,8 @@
         "2026-09-07 19.18.06.0",
         "2026-09-07 19.18.39.0",
         "2026-09-07 19.18.51.0",
-        "2026-09-07 19.19.52.0",
         "2026-09-07 19.19.54.0",
+        "2026-09-07 19.19.52.0",
         "2026-09-07 19.19.58.0",
         "2026-09-07 19.20.00.0",
         "2026-09-07 19.20.03.0",
@@ -5527,8 +5537,8 @@
         "2026-09-07 19.21.35.0",
         "2026-09-07 19.21.41.0",
         "2026-09-07 19.21.53.0",
-        "2026-09-07 19.22.41.0",
         "2026-09-07 19.22.44.0",
+        "2026-09-07 19.22.41.0",
         "2026-09-07 19.23.11.0",
         "2026-09-07 19.23.19.0",
         "2026-09-07 19.23.23.0",
@@ -5537,8 +5547,8 @@
         "2026-09-07 19.23.39.0",
         "2026-09-07 19.23.41.0",
         "2026-09-07 19.23.44.0",
-        "2026-09-07 19.23.46.0",
         "2026-09-07 19.23.51.0",
+        "2026-09-07 19.23.46.0",
         "2026-09-07 19.23.54.0",
         "2026-09-07 19.23.58.0",
         "2026-09-07 19.24.01.0",
@@ -5562,7 +5572,6 @@
         "2026-09-07 19.25.11.0",
         "2026-09-07 19.25.14.0",
         "2026-09-07 19.25.24.0",
-        "2026-09-07 19.25.28.0",
         "2026-09-07 19.25.46.0",
         "2026-09-07 19.25.56.0",
         "2026-09-07 19.25.58.0",
@@ -5570,6 +5579,7 @@
         "2026-09-07 19.26.15.0",
         "2026-09-07 19.26.17.0",
         "2026-09-07 19.26.19.0",
+        "2026-09-07 19.25.28.0",
         "2026-09-07 19.26.52.0",
         "2026-09-07 19.26.54.0",
         "2026-09-07 19.27.23.0",
@@ -5727,8 +5737,8 @@
         "2026-09-08 00.01.21.0",
         "2026-09-08 00.01.23.0",
         "2026-09-08 00.01.40.0",
-        "2026-09-08 00.01.46.0",
         "2026-09-08 00.02.32.0",
+        "2026-09-08 00.01.46.0",
         "2026-09-08 00.02.39.0",
         "2026-09-08 00.02.45.0",
         "2026-09-08 00.02.49.0",
@@ -5835,8 +5845,8 @@
         "2026-09-08 00.43.48.0",
         "2026-09-08 00.43.52.0",
         "2026-09-08 00.44.52.0",
-        "2026-09-08 00.45.18.0",
         "2026-09-08 00.46.02.0",
+        "2026-09-08 00.45.18.0",
         "2026-09-08 00.46.05.0",
         "2026-09-08 00.47.12.0",
         "2026-09-08 00.47.41.0",
@@ -5903,11 +5913,11 @@
         "2026-09-08 02.00.18.0",
         "2026-09-08 02.01.14.0",
         "2026-09-08 02.12.24.0",
-        "2026-09-08 02.13.19.0",
         "2026-09-08 02.13.22.0",
+        "2026-09-08 02.13.19.0",
         "2026-09-08 02.13.26.0",
-        "2026-09-08 02.13.31.0",
         "2026-09-08 02.14.00.0",
+        "2026-09-08 02.13.31.0",
         "2026-09-08 02.14.10.0",
         "2026-09-08 02.14.15.0",
         "fin_REC92_expo.md",
@@ -6002,499 +6012,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Semesters/Sem_09/REC92/fin_REC92_expo.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semesters/Sem_09/ETN1010": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "python_contexto.md",
-        "INTRODUCCION A LA INTELIGENCIA ARTIFICIAL.md",
-        "AREA_DE_APLICACION_DE_LA_IA.md",
-        "FUNDAMENTOS_DE_LA_IA.md",
-        "_library_ETN1010.md",
-        "tareas.md",
-        "E3_AREA_ETN1010.py",
-        "e1 FUN.md",
-        "e2 FUN.md",
-        "e1 AREA.md",
-        "e2 AREA.md"
-      ]
-    },
-    "Semesters/Sem_09/ETN1010/INTRODUCCION A LA INTELIGENCIA ARTIFICIAL.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semesters/Sem_09/ETN1010/AREA_DE_APLICACION_DE_LA_IA.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semesters/Sem_09/ETN1010/FUNDAMENTOS_DE_LA_IA.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semesters/Sem_09/ETN1010/_library_ETN1010.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semesters/Sem_09/ETN1010/tareas.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semesters/Sem_09/ETN1010/E3_AREA_ETN1010.py": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semesters/Sem_09/ETN1010/e1 FUN.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semesters/Sem_09/ETN1010/e2 FUN.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semesters/Sem_09/ETN1010/e1 AREA.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semesters/Sem_09/ETN1010/e2 AREA.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Latex/ETN1010": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Anexos",
-        "Capitulos",
-        "Graficos",
-        "Main_Include.tex",
-        "README.md"
-      ]
-    },
-    "Latex/ETN1010/Anexos": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Lab4",
-        "Lab3",
-        "Lab1",
-        "Lab2",
-        "Lab5"
-      ]
-    },
-    "Latex/ETN1010/Capitulos": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "C00-Caratula.tex",
-        "Laboratorio1_1010.tex",
-        "Laboratorio2_1010.tex"
-      ]
-    },
-    "Latex/ETN1010/Graficos": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Lab1",
-        "Lab2",
-        "Lab3",
-        "Lab4",
-        "img_caratula_fonfo.jpg",
-        "Lab5",
-        "logo_umsa.png"
-      ]
-    },
-    "Latex/ETN1010/Main_Include.tex": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Latex/ETN1010/README.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Latex/ETN1010/Anexos/Lab4": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": []
-    },
-    "Latex/ETN1010/Anexos/Lab3": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": []
-    },
-    "Latex/ETN1010/Anexos/Lab1": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "E2_FUNDAMENTOS_ETN1010.py",
-        "E1_FUNDAMENTOS_ETN1010.py"
-      ]
-    },
-    "Latex/ETN1010/Anexos/Lab2": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "E2_AREA_ETN1010.py",
-        "E1_AREA_ETN1010.py"
-      ]
-    },
-    "Latex/ETN1010/Anexos/Lab5": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": []
-    },
-    "Latex/ETN1010/Capitulos/C00-Caratula.tex": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Latex/ETN1010/Graficos/Lab1": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "E1_fun_001.png",
-        "E2_fun_002.png",
-        "E2_fun_003.png",
-        "E2_fun_001.png",
-        "E2_fun_004.png",
-        "E2_fun_005.png",
-        "E2_fun_006.png"
-      ]
-    },
-    "Latex/ETN1010/Graficos/Lab2": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "E1_are_001.png",
-        "E1_are_002.png",
-        "E2_are_001.png"
-      ]
-    },
-    "Latex/ETN1010/Graficos/Lab3": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": []
-    },
-    "Latex/ETN1010/Graficos/Lab4": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": []
-    },
-    "Latex/ETN1010/Graficos/img_caratula_fonfo.jpg": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Latex/ETN1010/Graficos/Lab5": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": []
-    },
-    "Latex/ETN1010/Graficos/logo_umsa.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Latex/ETN1010/Capitulos/Laboratorio1_1010.tex": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Latex/Preambulo/Preambulo 1.tex": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Latex/ETN1010/Anexos/Lab1/E1_FUNDAMENTOS_ETN1010.py": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Latex/ETN1010/Anexos/Lab1/E2_FUNDAMENTOS_ETN1010.py": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Latex/ETN1010/Graficos/Lab1/E1_fun_001.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Latex/ETN1010/Graficos/Lab1/E2_fun_002.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Latex/ETN1010/Graficos/Lab1/E2_fun_003.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Latex/ETN1010/Graficos/Lab1/E2_fun_001.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Latex/ETN1010/Graficos/Lab1/E2_fun_004.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Latex/ETN1010/Graficos/Lab1/E2_fun_005.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Latex/ETN1010/Graficos/Lab1/E2_fun_006.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semesters/Sem_04/ETN607/Robotic_Arm_AI": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "blueprint.md",
-        "chronicle.md",
-        "logbook.md",
-        "robarm-opc_A-arquitectura.md",
-        "robarm-config.md",
-        "robarm-opc_B-garra.md",
-        "tsk_carrier.md"
-      ]
-    },
-    "Semesters/Sem_04/ETN607/Robotic_Arm_AI/blueprint.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semesters/Sem_04/ETN607/Robotic_Arm_AI/chronicle.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semesters/Sem_04/ETN607/Robotic_Arm_AI/logbook.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semesters/Sem_04/ETN607/Robotic_Arm_AI/robarm-opc_A-arquitectura.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semesters/Sem_04/ETN607/Robotic_Arm_AI/robarm-config.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semesters/Sem_04/ETN607/Robotic_Arm_AI/robarm-opc_B-garra.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semesters/Sem_04/ETN607/Robotic_Arm_AI/tsk_carrier.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/prompts/ETN825/ETN825-P1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_skills/_start_movilxxx.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Latex/ETN1010/Graficos/Lab2/E1_are_001.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Latex/ETN1010/Graficos/Lab2/E1_are_002.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Latex/ETN1010/Graficos/Lab2/E2_are_001.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Latex/ETN1010/Anexos/Lab2/E1_AREA_ETN1010.py": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Latex/ETN1010/Anexos/Lab2/E2_AREA_ETN1010.py": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Latex/ETN1010/Capitulos/Laboratorio2_1010.tex": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/prompts/ETN607/legacy/ETN607-study-NLMv2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/prompts/ETN607/legacy/ETN607-study-NLMv3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/prompts/ETN607/legacy/ETN607-study.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/prompts/ETN607/DOC-ETN607-study.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/prompts/ETN607/legacy/ETN607-transcription-divisions.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/prompts/ETN607/ETN607-study-P2v1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/prompts/ETN607/ETN607-ejercicio-detector_P1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/prompts/ETN607/ETN607-ejercicio-detector_P2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semesters/Sem_04/ETN607/Partial_1/_library_ETN607.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semesters/Sem_09/ETN1010/python_contexto.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/prompts/ETN607/ETN607-transcription_Av7.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/prompts/ETN607/legacy/DOC-ETN607-transcription-divisions.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semesters/Sem_04/ETN607/Partial_2": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "ejercicios P2"
-      ]
-    },
-    "Semesters/Sem_04/ETN607/Partial_2/ejercicios P2": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "E8_F.md",
-        "E7_F.md",
-        "E6_F.md",
-        "E5_F.md",
-        "E4_F.md",
-        "E3_F.md",
-        "E2_F.md",
-        "E1_F.md",
-        "E10.md",
-        "E11.md",
-        "E12.md",
-        "E9.md"
-      ]
-    },
-    "Semesters/Sem_04/ETN607/Partial_2/ejercicios P2/E5_F.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semesters/Sem_04/ETN607/Partial_2/ejercicios P2/E2_F.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semesters/Sem_04/ETN607/Partial_2/ejercicios P2/E3_F.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semesters/Sem_04/ETN607/Partial_2/ejercicios P2/E4_F.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semesters/Sem_04/ETN607/Partial_2/ejercicios P2/E10.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semesters/Sem_04/ETN607/Partial_2/ejercicios P2/E11.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/prompts/ETN607/ETN607-comp_indice_BCv4ii 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/prompts/ETN607/ETN607-comp_indice_BCv4ii 2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/prompts/ETN607/ETN607-comp_indice_BCv5ii.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semesters/Sem_04/ETN607/Partial_2/ejercicios P2/E12.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/prompts/ETN607/legacy/ETN607-transcription_Av6.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semesters/Sem_04/ETN607/Partial_2/ejercicios P2/E6_F.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semesters/Sem_04/ETN607/Partial_2/ejercicios P2/E7_F.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/guides/ETN607/ETN607_TikzJax 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_app/notebooklm/guides/ETN607/ETN607_TikzJax 2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semesters/Sem_04/ETN607/Partial_2/ejercicios P2/E8_F.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semesters/Sem_04/ETN607/Partial_2/ejercicios P2/E1_F.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semesters/Sem_04/ETN607/Partial_2/ejercicios P2/E9.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_skills/_start_movilyyy.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Untitled.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_skills/_start_movil607P1 1 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_skills/_start_movil.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "resumen_wireshark_sesion.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Rubbish/2026-08-09": {
       "isPinned": false,
       "isHidden": false,
@@ -6517,6 +6034,80 @@
       "sortOrder": "custom",
       "customOrder": []
     },
+    "Rubbish/2026-08-26": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "2026-08-26 17.16.42.0",
+        "2026-08-26 17.16.42.1",
+        "2026-08-26 17.16.44.0",
+        "2026-08-26 17.16.44.1",
+        "app.json",
+        "data.json",
+        "Fig35a.tex"
+      ]
+    },
+    "Rubbish/2026-08-26/2026-08-26 17.16.42.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-08-26/2026-08-26 17.16.42.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-26/2026-08-26 17.16.42.1": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-08-26/2026-08-26 17.16.42.1/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-26/2026-08-26 17.16.44.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-08-26/2026-08-26 17.16.44.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-26/2026-08-26 17.16.44.1": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-08-26/2026-08-26 17.16.44.1/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-26/app.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-26/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-08-26/Fig35a.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
     "Rubbish/2026-09-02": {
       "isPinned": false,
       "isHidden": false,
@@ -6531,2423 +6122,6 @@
       "isHidden": false
     },
     "Rubbish/2026-09-02/S. Palani, D. Kalaiyarasi-Principles of Digital Signal Processing - 2nd Ed.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.02.07.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.02.07.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.06.05.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.06.05.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.08.42.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.08.42.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.08.53.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.08.53.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.21.29.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.21.29.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.21.23.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.21.23.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.09.01.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.09.01.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.21.41.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.21.41.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.21.48.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.21.48.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.21.38.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.21.38.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.21.53.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.21.53.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.22.02.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.22.02.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.22.17.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.22.17.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.22.29.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.22.29.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.22.12.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.22.12.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.24.21.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.24.21.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.25.03.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.25.03.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.25.29.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Untitled 3.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.25.29.0/Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.25.35.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Untitled 3.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.25.35.0/Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.25.42.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Untitled 3.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.25.42.0/Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.25.45.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Untitled 3.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.25.45.0/Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.25.55.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Untitled 3.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.25.55.0/Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.26.05.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Untitled 3.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.26.05.0/Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.26.08.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Untitled 3.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.26.08.0/Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.26.12.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Untitled 3.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.26.12.0/Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.26.21.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Untitled 3.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.26.21.0/Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.26.31.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Untitled 3.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.26.31.0/Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.26.40.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Untitled 3.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.26.40.0/Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.26.43.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Untitled 3.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.26.43.0/Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.26.47.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.26.47.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.26.59.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.26.59.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.27.08.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.27.08.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.27.53.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.27.53.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.27.59.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.27.59.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.28.22.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.28.22.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.29.01.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.29.01.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.29.13.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.29.13.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.29.54.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.29.54.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.30.27.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.30.27.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.30.53.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.30.53.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.32.00.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.32.00.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.32.20.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.32.20.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.33.47.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.33.47.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.33.55.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.33.55.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.33.57.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.33.57.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.34.24.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.34.24.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.35.57.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.35.57.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.36.01.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.36.01.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.37.00.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Untitled 3.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.37.00.0/Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.37.04.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Untitled 3.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.37.04.0/Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.37.06.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Untitled 3.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.37.06.0/Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.37.10.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Untitled 3.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.37.10.0/Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.37.13.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Untitled 3.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.37.13.0/Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.37.54.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Untitled 3.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.37.54.0/Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.37.58.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Untitled 3.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.37.58.0/Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.38.59.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Untitled 3.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.38.59.0/Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.39.08.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Untitled 3.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.39.08.0/Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.39.09.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Untitled 3.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.39.09.0/Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.39.11.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Untitled 3.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.39.11.0/Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.39.13.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Untitled 3.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.39.13.0/Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.39.16.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Untitled 3.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.39.16.0/Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.39.19.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Untitled 3.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.39.19.0/Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.39.21.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Untitled 3.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.39.21.0/Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.39.44.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Untitled 3.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.39.44.0/Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.40.14.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Untitled 3.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.40.14.0/Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.40.15.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Untitled 3.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.40.15.0/Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.40.18.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Untitled 3.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.40.18.0/Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.40.41.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Untitled 3.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.40.41.0/Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.40.45.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Untitled 3.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.40.45.0/Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.40.54.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Untitled 3.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.40.54.0/Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.40.56.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Untitled 3.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.40.56.0/Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.40.58.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Untitled 3.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.40.58.0/Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.41.00.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Untitled 3.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.41.00.0/Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.41.03.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Untitled 3.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.41.03.0/Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.44.49.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.44.49.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.44.53.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.44.53.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.45.14.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.45.14.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.45.16.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.45.16.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.45.21.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.45.21.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.45.23.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.45.23.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.45.44.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.45.44.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.46.01.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.46.01.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.46.05.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.46.05.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.48.39.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.48.39.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.49.56.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.49.56.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.50.07.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Untitled 3.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.50.07.0/Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.50.11.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Untitled 3.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.50.11.0/Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.50.15.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Untitled 3.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.50.15.0/Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.50.18.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Untitled 3.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.50.18.0/Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.50.20.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Untitled 3.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.50.20.0/Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.50.22.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Untitled 3.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.50.22.0/Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.04.08.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.04.08.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.04.21.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.04.21.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.04.27.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.04.27.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.04.30.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.04.30.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.04.45.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.04.45.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.04.56.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.04.56.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.05.35.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.05.35.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.09.11.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.09.11.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.13.07.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.13.07.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.15.49.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.15.49.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.16.20.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.16.20.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.16.42.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.16.42.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.16.59.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.16.59.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.17.25.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.17.25.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.17.35.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.17.35.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.17.39.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.17.39.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.17.45.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.17.45.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.17.50.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.17.50.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.18.06.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.18.06.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.18.39.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.18.39.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.18.51.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.18.51.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.19.52.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.19.52.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.19.54.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.19.54.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.19.58.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.19.58.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.20.00.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.20.00.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.20.03.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.20.03.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.20.58.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.20.58.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.21.31.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.21.31.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.21.35.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.21.35.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.21.41.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.21.41.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.21.53.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.21.53.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.22.41.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.22.41.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.22.44.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.22.44.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.23.11.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.23.11.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.23.19.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.23.19.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.23.23.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.23.23.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.23.26.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.23.26.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.23.33.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.23.33.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.23.39.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.23.39.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.23.41.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.23.41.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.23.44.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.23.44.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.23.46.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.23.46.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.23.51.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.23.51.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.23.54.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.23.54.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.23.58.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.23.58.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.24.01.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.24.01.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.24.03.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.24.03.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.24.07.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.24.07.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.24.10.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.24.10.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.24.16.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.24.16.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.24.19.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.24.19.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.24.23.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.24.23.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.24.25.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.24.25.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.24.29.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.24.29.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.24.36.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.24.36.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.24.38.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.24.38.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.24.42.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.24.42.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.24.44.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.24.44.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.24.49.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.24.49.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.24.55.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.24.55.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.24.58.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.24.58.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.25.07.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.25.07.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.25.10.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.25.10.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.25.11.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.25.11.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.25.14.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.25.14.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.25.24.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.25.24.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.25.28.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.25.28.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.25.46.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.25.46.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.25.56.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.25.56.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.25.58.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.25.58.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.26.00.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.26.00.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.26.15.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.26.15.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.26.17.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.26.17.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.26.19.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.26.19.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.26.52.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.26.52.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.26.54.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.26.54.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.27.23.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.27.23.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.27.43.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.27.43.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.28.57.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.28.57.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.29.10.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.29.10.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.29.26.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.29.26.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.29.35.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.29.35.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.29.45.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.29.45.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.34.21.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.34.21.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.34.40.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.34.40.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.35.22.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.35.22.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 23.38.59.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 23.38.59.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 23.39.15.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "scanned_words.txt",
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 23.39.15.0/scanned_words.txt": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 23.39.15.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 23.39.40.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 23.39.40.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 23.39.53.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 23.39.53.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 23.50.52.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 23.50.52.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 23.53.27.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 23.53.27.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 23.53.30.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 23.53.30.0/data.json": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 23.55.41.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 23.55.41.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 23.55.46.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 23.55.46.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 23.55.59.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 23.55.59.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 23.56.18.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 23.56.18.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 23.56.31.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 23.56.31.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 23.56.37.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 23.56.37.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 23.56.40.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 23.56.40.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 23.56.42.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 23.56.42.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 23.57.05.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 23.57.05.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 23.57.07.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 23.57.07.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 23.57.10.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 23.57.10.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 23.57.13.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 23.57.13.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 23.57.29.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 23.57.29.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 23.57.40.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 23.57.40.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 23.57.43.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 23.57.43.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 23.57.51.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 23.57.51.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-07/2026-09-07 23.58.02.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 23.58.02.0/expo rec92.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -8999,18 +6173,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-09-08/2026-09-08 00.01.46.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92 1.md"
-      ]
-    },
-    "Rubbish/2026-09-08/2026-09-08 00.01.46.0/expo rec92 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Rubbish/2026-09-08/2026-09-08 00.02.32.0": {
       "isPinned": false,
       "isHidden": false,
@@ -9020,6 +6182,18 @@
       ]
     },
     "Rubbish/2026-09-08/2026-09-08 00.02.32.0/expo rec92 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-08/2026-09-08 00.01.46.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92 1.md"
+      ]
+    },
+    "Rubbish/2026-09-08/2026-09-08 00.01.46.0/expo rec92 1.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -10295,18 +7469,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-09-08/2026-09-08 00.45.18.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92 1.md"
-      ]
-    },
-    "Rubbish/2026-09-08/2026-09-08 00.45.18.0/expo rec92 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Rubbish/2026-09-08/2026-09-08 00.46.02.0": {
       "isPinned": false,
       "isHidden": false,
@@ -10316,6 +7478,18 @@
       ]
     },
     "Rubbish/2026-09-08/2026-09-08 00.46.02.0/expo rec92 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-08/2026-09-08 00.45.18.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92 1.md"
+      ]
+    },
+    "Rubbish/2026-09-08/2026-09-08 00.45.18.0/expo rec92 1.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -11111,18 +8285,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-09-08/2026-09-08 02.13.19.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "fin_REC92_expo.md"
-      ]
-    },
-    "Rubbish/2026-09-08/2026-09-08 02.13.19.0/fin_REC92_expo.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Rubbish/2026-09-08/2026-09-08 02.13.22.0": {
       "isPinned": false,
       "isHidden": false,
@@ -11132,6 +8294,18 @@
       ]
     },
     "Rubbish/2026-09-08/2026-09-08 02.13.22.0/fin_REC92_expo.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-08/2026-09-08 02.13.19.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "fin_REC92_expo.md"
+      ]
+    },
+    "Rubbish/2026-09-08/2026-09-08 02.13.19.0/fin_REC92_expo.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -11147,18 +8321,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-09-08/2026-09-08 02.13.31.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "fin_REC92_expo.md"
-      ]
-    },
-    "Rubbish/2026-09-08/2026-09-08 02.13.31.0/fin_REC92_expo.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Rubbish/2026-09-08/2026-09-08 02.14.00.0": {
       "isPinned": false,
       "isHidden": false,
@@ -11168,6 +8330,18 @@
       ]
     },
     "Rubbish/2026-09-08/2026-09-08 02.14.00.0/fin_REC92_expo.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-08/2026-09-08 02.13.31.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "fin_REC92_expo.md"
+      ]
+    },
+    "Rubbish/2026-09-08/2026-09-08 02.13.31.0/fin_REC92_expo.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -11238,17 +8412,15 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-09-24": {
+    "Rubbish/draft.md": {
       "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "2026-09-24 14.35.14.0",
-        "data.json",
-        "scanned_words.txt"
-      ]
+      "isHidden": false
     },
-    "Rubbish/2026-09-24/2026-09-24 14.35.14.0": {
+    "Rubbish/promtpx.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.02.07.0": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
@@ -11256,23 +8428,2893 @@
         "data.json"
       ]
     },
-    "Rubbish/2026-09-24/2026-09-24 14.35.14.0/data.json": {
+    "Rubbish/2026-09-07/2026-09-07 18.02.07.0/data.json": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-09-24/data.json": {
+    "Rubbish/2026-09-07/2026-09-07 18.06.05.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.06.05.0/data.json": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/2026-09-24/scanned_words.txt": {
+    "Rubbish/2026-09-07/2026-09-07 18.08.53.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.08.53.0/data.json": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/draft.md": {
+    "Rubbish/2026-09-07/2026-09-07 18.08.42.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.08.42.0/data.json": {
       "isPinned": false,
       "isHidden": false
     },
-    "Rubbish/promtpx.md": {
+    "Rubbish/2026-09-07/2026-09-07 18.09.01.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.09.01.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.21.23.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.21.23.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.21.29.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.21.29.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.21.38.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.21.38.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.21.41.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.21.41.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.21.53.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.21.53.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.21.48.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.21.48.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.22.02.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.22.02.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.22.12.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.22.12.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.22.17.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.22.17.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.22.29.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.22.29.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.24.21.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.24.21.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.25.03.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.25.03.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.25.29.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 3.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.25.29.0/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.25.35.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 3.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.25.35.0/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.25.42.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 3.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.25.42.0/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.25.45.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 3.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.25.45.0/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.25.55.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 3.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.25.55.0/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.26.05.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 3.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.26.05.0/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.26.08.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 3.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.26.08.0/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.26.12.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 3.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.26.12.0/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.26.21.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 3.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.26.21.0/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.26.31.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 3.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.26.31.0/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.26.40.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 3.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.26.40.0/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.26.43.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 3.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.26.43.0/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.26.47.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.26.47.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.26.59.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.26.59.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.27.08.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.27.08.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.27.53.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.27.53.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.27.59.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.27.59.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.28.22.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.28.22.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.29.01.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.29.01.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.29.13.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.29.13.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.29.54.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.29.54.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.30.27.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.30.27.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.30.53.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.30.53.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.32.00.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.32.00.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.32.20.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.32.20.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.33.47.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.33.47.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.33.57.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.33.57.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.34.24.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.34.24.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.33.55.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.33.55.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.35.57.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.35.57.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.36.01.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.36.01.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.37.00.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 3.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.37.00.0/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.37.04.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 3.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.37.04.0/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.37.06.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 3.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.37.06.0/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.37.13.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 3.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.37.13.0/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.37.10.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 3.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.37.10.0/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.37.54.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 3.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.37.54.0/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.37.58.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 3.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.37.58.0/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.38.59.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 3.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.38.59.0/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.39.08.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 3.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.39.08.0/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.39.09.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 3.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.39.09.0/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.39.11.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 3.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.39.11.0/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.39.13.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 3.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.39.13.0/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.39.16.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 3.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.39.16.0/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.39.19.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 3.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.39.19.0/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.39.21.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 3.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.39.21.0/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.39.44.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 3.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.39.44.0/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.40.14.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 3.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.40.14.0/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.40.15.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 3.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.40.15.0/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.40.18.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 3.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.40.18.0/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.40.41.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 3.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.40.41.0/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.40.45.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 3.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.40.45.0/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.40.54.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 3.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.40.54.0/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.40.56.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 3.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.40.56.0/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.41.00.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 3.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.41.00.0/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.41.03.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 3.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.41.03.0/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.44.49.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.44.49.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.45.14.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.45.14.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.44.53.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.44.53.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.40.58.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 3.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.40.58.0/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.45.16.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.45.16.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.45.21.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.45.21.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.45.44.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.45.44.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.45.23.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.45.23.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.46.01.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.46.01.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.46.05.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.46.05.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.48.39.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.48.39.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.49.56.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.49.56.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.50.07.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 3.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.50.07.0/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.50.15.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 3.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.50.15.0/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.50.11.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 3.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.50.11.0/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.50.18.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 3.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.50.18.0/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.50.20.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 3.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.50.20.0/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.50.22.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 3.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.50.22.0/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.04.08.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.04.08.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.04.21.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.04.21.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.04.27.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.04.27.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.04.30.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.04.30.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.04.45.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.04.45.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.04.56.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.04.56.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.05.35.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.05.35.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.09.11.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.09.11.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.15.49.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.15.49.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.13.07.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.13.07.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.16.20.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.16.20.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.16.42.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.16.42.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.16.59.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.16.59.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.17.25.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.17.25.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.17.35.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.17.35.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.17.39.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.17.39.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.17.45.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.17.45.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.17.50.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.17.50.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.18.06.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.18.06.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.18.39.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.18.39.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.18.51.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.18.51.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.19.54.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.19.54.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.19.52.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.19.52.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.19.58.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.19.58.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.20.00.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.20.00.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.20.03.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.20.03.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.20.58.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.20.58.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.21.31.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.21.31.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.21.35.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.21.35.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.21.41.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.21.41.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.21.53.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.21.53.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.22.44.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.22.44.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.22.41.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.22.41.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.23.11.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.23.11.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.23.19.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.23.19.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.23.23.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.23.23.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.23.26.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.23.26.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.23.33.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.23.33.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.23.39.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.23.39.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.23.41.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.23.41.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.23.44.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.23.44.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.23.51.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.23.51.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.23.46.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.23.46.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.23.54.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.23.54.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.23.58.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.23.58.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.24.01.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.24.01.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.24.03.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.24.03.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.24.07.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.24.07.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.24.10.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.24.10.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.24.16.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.24.16.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.24.19.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.24.19.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.24.23.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.24.23.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.24.25.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.24.25.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.24.29.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.24.29.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.24.36.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.24.36.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.24.38.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.24.38.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.24.42.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.24.42.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.24.44.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.24.44.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.24.49.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.24.49.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.24.55.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.24.55.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.24.58.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.24.58.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.25.07.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.25.07.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.25.10.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.25.10.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.25.11.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.25.11.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.25.14.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.25.14.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.25.24.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.25.24.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.25.46.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.25.46.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.25.56.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.25.56.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.25.58.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.25.58.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.26.00.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.26.00.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.26.15.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.26.15.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.26.17.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.26.17.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.26.19.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.26.19.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.25.28.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.25.28.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.26.52.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.26.52.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.26.54.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.26.54.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.27.23.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.27.23.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.27.43.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.27.43.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.28.57.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.28.57.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.29.10.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.29.10.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.29.26.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.29.26.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.29.35.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.29.35.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.29.45.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.29.45.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.34.21.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.34.21.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.34.40.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.34.40.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.35.22.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.35.22.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.38.59.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.38.59.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.39.15.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json",
+        "scanned_words.txt"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.39.15.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.39.15.0/scanned_words.txt": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.39.40.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.39.40.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.39.53.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.39.53.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.50.52.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.50.52.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.53.27.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.53.27.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.53.30.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.53.30.0/data.json": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.55.41.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.55.41.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.55.46.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.55.46.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.55.59.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.55.59.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.56.18.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.56.18.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.56.31.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.56.31.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.56.37.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.56.37.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.56.40.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.56.40.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.56.42.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.56.42.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.57.05.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.57.05.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.57.07.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.57.07.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.57.10.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.57.10.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.57.13.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.57.13.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.57.29.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.57.29.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.57.40.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.57.40.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.57.43.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.57.43.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.57.51.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.57.51.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.58.02.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.58.02.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/REC92/fin_REC92_expo.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/ETN1010": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "python_contexto.md",
+        "INTRODUCCION A LA INTELIGENCIA ARTIFICIAL.md",
+        "AREA_DE_APLICACION_DE_LA_IA.md",
+        "FUNDAMENTOS_DE_LA_IA.md",
+        "_library_ETN1010.md",
+        "tareas.md",
+        "E3_AREA_ETN1010.py",
+        "e1 FUN.md",
+        "e2 FUN.md",
+        "e1 AREA.md",
+        "e2 AREA.md"
+      ]
+    },
+    "Semesters/Sem_09/ETN1010/INTRODUCCION A LA INTELIGENCIA ARTIFICIAL.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/ETN1010/AREA_DE_APLICACION_DE_LA_IA.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/ETN1010/FUNDAMENTOS_DE_LA_IA.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/ETN1010/_library_ETN1010.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/ETN1010/tareas.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/ETN1010/E3_AREA_ETN1010.py": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/ETN1010/e1 FUN.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/ETN1010/e2 FUN.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/ETN1010/e1 AREA.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/ETN1010/e2 AREA.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/ETN1010": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Anexos",
+        "Capitulos",
+        "Graficos",
+        "Main_Include.tex",
+        "README.md"
+      ]
+    },
+    "Latex/ETN1010/Anexos": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Lab4",
+        "Lab3",
+        "Lab1",
+        "Lab2",
+        "Lab5"
+      ]
+    },
+    "Latex/ETN1010/Capitulos": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "C00-Caratula.tex",
+        "Laboratorio1_1010.tex",
+        "Laboratorio2_1010.tex"
+      ]
+    },
+    "Latex/ETN1010/Graficos": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Lab1",
+        "Lab2",
+        "Lab3",
+        "Lab4",
+        "img_caratula_fonfo.jpg",
+        "Lab5",
+        "logo_umsa.png"
+      ]
+    },
+    "Latex/ETN1010/Main_Include.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/ETN1010/README.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/ETN1010/Anexos/Lab4": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "Latex/ETN1010/Anexos/Lab3": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "Latex/ETN1010/Anexos/Lab1": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "E2_FUNDAMENTOS_ETN1010.py",
+        "E1_FUNDAMENTOS_ETN1010.py"
+      ]
+    },
+    "Latex/ETN1010/Anexos/Lab2": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "E2_AREA_ETN1010.py",
+        "E1_AREA_ETN1010.py"
+      ]
+    },
+    "Latex/ETN1010/Anexos/Lab5": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "Latex/ETN1010/Capitulos/C00-Caratula.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/ETN1010/Graficos/Lab1": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "E1_fun_001.png",
+        "E2_fun_002.png",
+        "E2_fun_003.png",
+        "E2_fun_001.png",
+        "E2_fun_004.png",
+        "E2_fun_005.png",
+        "E2_fun_006.png"
+      ]
+    },
+    "Latex/ETN1010/Graficos/Lab2": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "E1_are_001.png",
+        "E1_are_002.png",
+        "E2_are_001.png"
+      ]
+    },
+    "Latex/ETN1010/Graficos/Lab3": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "Latex/ETN1010/Graficos/Lab4": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "Latex/ETN1010/Graficos/img_caratula_fonfo.jpg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/ETN1010/Graficos/Lab5": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "Latex/ETN1010/Graficos/logo_umsa.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/ETN1010/Capitulos/Laboratorio1_1010.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/Preambulo/Preambulo 1.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/ETN1010/Anexos/Lab1/E1_FUNDAMENTOS_ETN1010.py": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/ETN1010/Anexos/Lab1/E2_FUNDAMENTOS_ETN1010.py": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/ETN1010/Graficos/Lab1/E1_fun_001.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/ETN1010/Graficos/Lab1/E2_fun_002.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/ETN1010/Graficos/Lab1/E2_fun_003.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/ETN1010/Graficos/Lab1/E2_fun_001.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/ETN1010/Graficos/Lab1/E2_fun_004.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/ETN1010/Graficos/Lab1/E2_fun_005.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/ETN1010/Graficos/Lab1/E2_fun_006.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Robotic_Arm_AI": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "blueprint.md",
+        "chronicle.md",
+        "logbook.md",
+        "robarm-opc_A-arquitectura.md",
+        "robarm-config.md",
+        "robarm-opc_B-garra.md",
+        "tsk_carrier.md"
+      ]
+    },
+    "Semesters/Sem_04/ETN607/Robotic_Arm_AI/blueprint.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Robotic_Arm_AI/chronicle.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Robotic_Arm_AI/logbook.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Robotic_Arm_AI/robarm-opc_A-arquitectura.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Robotic_Arm_AI/robarm-config.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Robotic_Arm_AI/robarm-opc_B-garra.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Robotic_Arm_AI/tsk_carrier.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN825/ETN825-P1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_skills/_start_movilxxx.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/ETN1010/Graficos/Lab2/E1_are_001.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/ETN1010/Graficos/Lab2/E1_are_002.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/ETN1010/Graficos/Lab2/E2_are_001.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/ETN1010/Anexos/Lab2/E1_AREA_ETN1010.py": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/ETN1010/Anexos/Lab2/E2_AREA_ETN1010.py": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Latex/ETN1010/Capitulos/Laboratorio2_1010.tex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN607/legacy/ETN607-study-NLMv2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN607/legacy/ETN607-study-NLMv3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN607/legacy/ETN607-study.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN607/DOC-ETN607-study.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN607/legacy/ETN607-transcription-divisions.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN607/ETN607-study-P2v1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN607/ETN607-ejercicio-detector_P1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN607/ETN607-ejercicio-detector_P2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Partial_1/_library_ETN607.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/ETN1010/python_contexto.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN607/ETN607-transcription_Av7.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN607/legacy/DOC-ETN607-transcription-divisions.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Partial_2": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "ejercicios P2"
+      ]
+    },
+    "Semesters/Sem_04/ETN607/Partial_2/ejercicios P2": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "E8_F.md",
+        "E7_F.md",
+        "E6_F.md",
+        "E5_F.md",
+        "E4_F.md",
+        "E3_F.md",
+        "E2_F.md",
+        "E1_F.md",
+        "E10.md",
+        "E11.md",
+        "E12.md",
+        "E9.md"
+      ]
+    },
+    "Semesters/Sem_04/ETN607/Partial_2/ejercicios P2/E5_F.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Partial_2/ejercicios P2/E2_F.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Partial_2/ejercicios P2/E3_F.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Partial_2/ejercicios P2/E4_F.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Partial_2/ejercicios P2/E10.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Partial_2/ejercicios P2/E11.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN607/ETN607-comp_indice_BCv4ii 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN607/ETN607-comp_indice_BCv4ii 2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN607/ETN607-comp_indice_BCv5ii.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Partial_2/ejercicios P2/E12.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN607/legacy/ETN607-transcription_Av6.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Partial_2/ejercicios P2/E6_F.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Partial_2/ejercicios P2/E7_F.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/guides/ETN607/ETN607_TikzJax 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/guides/ETN607/ETN607_TikzJax 2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Partial_2/ejercicios P2/E8_F.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Partial_2/ejercicios P2/E1_F.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_04/ETN607/Partial_2/ejercicios P2/E9.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_skills/_start_movilyyy.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled.md": {
       "isPinned": false,
       "isHidden": false
     }

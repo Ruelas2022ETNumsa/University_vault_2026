@@ -4,8 +4,6 @@
 **Enunciado:**
 Un bloque de masa $m_1$ desliza sin fricción sobre una superficie horizontal, conectado a una pared fija a su izquierda mediante un resorte de constante $K$ y longitud natural $\ell_0$. Un cable inextensible sale del lado derecho de $m_1$, pasa por una polea fija en el borde de la superficie y desciende verticalmente por el lado derecho de la polea a lo largo de una pared vertical fija. La masa $m_2$ está conectada al cable y su cara izquierda roza la pared vertical; de su parte inferior cuelga, mediante un resorte de constante $K'$ y longitud natural $\ell_0'$, la masa $m_3$ cuya cara izquierda también roza la misma pared vertical. Se definen $x_1$ como la distancia horizontal desde la pared izquierda hasta el centro de $m_1$, $y_2$ como la distancia vertical desde el eje de la polea hasta el centro de $m_2$, e $y_3$ como la distancia vertical desde el eje de la polea hasta el centro de $m_3$. El sistema tiene 2 grados de libertad. Hallar las ecuaciones de movimiento de Lagrange del sistema.
 
----
-
 ```tikz
 \usetikzlibrary{patterns,decorations.pathmorphing}
 
@@ -81,19 +79,15 @@ Un bloque de masa $m_1$ desliza sin fricción sobre una superficie horizontal, c
 \end{document}
 ```
 
----
-
 **Descripción del sistema:**
 
 $m_1$ (teal) reposa sobre el piso horizontal y está conectada a la pared izquierda fija mediante el resorte $K$. Un cable inextensible parte horizontalmente del lado derecho de $m_1$, rodea la polea fija (apoyada en el piso por su soporte) y desciende verticalmente por el lado derecho de la misma. La pared vertical fija se ubica a la izquierda de $m_2$ y $m_3$: ambas tienen su cara izquierda en contacto con esta pared. El cable conecta directamente al techo de $m_2$. El resorte $K'$ une la base de $m_2$ con el techo de $m_3$. Las coordenadas $x_1$ (horizontal, desde la pared izquierda hasta el centro de $m_1$), $y_2$ e $y_3$ (verticales, desde el eje de la polea hacia abajo hasta el centro de $m_2$ y $m_3$ respectivamente) se indican con flechas.
 
 **Datos del sistema:** $m_1,\ m_2,\ m_3,\ K,\ K',\ \ell_0,\ \ell_0',\ b_1,\ b_2,\ b_3$ (alturas de bloques), $g$
 
----
+
 
 **Resolución**
-
----
 
 **Paso 1 — Ligadura cinemática**
 
@@ -103,8 +97,6 @@ $$\dot{x}_1 = \dot{y}_2 \implies x_1 = y_2 + C_0$$
 
 Coordenadas generalizadas independientes: $q_1 = x_1$, $q_2 = y_3$ $\quad(\text{GDL} = 2)$
 
----
-
 **Paso 2 — Energía cinética**
 
 $$T = \frac{1}{2}m_1\dot{x}_1^2 + \frac{1}{2}m_2\dot{y}_2^2 + \frac{1}{2}m_3\dot{y}_3^2$$
@@ -113,8 +105,6 @@ Aplicando $\dot{y}_2 = \dot{x}_1$:
 
 $$\boxed{T = \frac{1}{2}(m_1 + m_2)\dot{x}_1^2 + \frac{1}{2}m_3\dot{y}_3^2}$$
 
----
-
 **Paso 3 — Energía potencial**
 
 $$V = \frac{K}{2}\!\left(x_1 - \frac{b_1}{2} - \ell_0\right)^{\!2} - m_2 g\,y_2 - m_3 g\,y_3 + \frac{K'}{2}\!\left(y_3 - y_2 - \frac{b_2}{2} - \frac{b_3}{2} - \ell_0'\right)^{\!2}$$
@@ -122,8 +112,6 @@ $$V = \frac{K}{2}\!\left(x_1 - \frac{b_1}{2} - \ell_0\right)^{\!2} - m_2 g\,y_2 
 Sustituyendo $y_2 = x_1 - C_0$:
 
 $$\boxed{V = \frac{K}{2}\!\left(x_1 - \frac{b_1}{2} - \ell_0\right)^{\!2} - m_2 g\,(x_1 - C_0) - m_3 g\,y_3 + \frac{K'}{2}\!\left(y_3 - x_1 + C_0 - \frac{b_2}{2} - \frac{b_3}{2} - \ell_0'\right)^{\!2}}$$
-
----
 
 **Paso 4 — Ecuaciones de movimiento de Lagrange**
 
@@ -136,17 +124,11 @@ $$\boxed{(m_1 + m_2)\ddot{x}_1 = -K\!\left(x_1 - \frac{b_1}{2} - \ell_0\right) +
 #### Para $q_2 = y_3$
 
 $$\boxed{m_3\ddot{y}_3 = m_3 g - K'\!\left(y_3 - x_1 + C_0 - \frac{b_2}{2} - \frac{b_3}{2} - \ell_0'\right)}$$
-
----
----
-
-# Ej 2
+# Ej 2--
 
 Un bloque-cuña de masa $m_1$ y ancho $B_1$ desliza sin fricción sobre una superficie horizontal, conectado a la pared derecha mediante un resorte de constante $K$ y longitud natural $\ell_0$. La cara izquierda de $m_1$ está inclinada a $60°$ respecto a la horizontal. Una segunda cuña de masa $m_2$ apoya su cara inclinada sobre la de $m_1$ y está guiada verticalmente por la pared izquierda, de modo que solo puede desplazarse en dirección vertical. La distancia entre paredes es $B$ y la posición horizontal de $m_1$ medida desde la pared izquierda es $x_1$. En la resolución se emplea la constante $B_2$, definida como la proyección horizontal de la cara inclinada de $m_2$ sobre el piso (ancho horizontal de $m_2$ medido desde su vértice inferior-izquierdo hasta su vértice inferior-derecho); la restricción de contacto en la interfaz inclinada a $60°$ resulta $\tan 60° = y_2/(B_2 - x_1)$, tal como lo plantea el docente en la resolución de referencia.
 
 Hallar la ecuación de movimiento de Lagrange del sistema.
-
----
 
 ```tikz
 \usetikzlibrary{patterns,decorations.pathmorphing}
@@ -204,17 +186,13 @@ Hallar la ecuación de movimiento de Lagrange del sistema.
 
 > **Descripción de la figura:** $m_1$ (teal, trapecio) reposa sobre el piso con su cara derecha vertical conectada al resorte $K$ y su cara izquierda inclinada a $60°$. $m_2$ (naranja, trapecio invertido) está pegada a la pared izquierda y apoya su cara inclinada derecha sobre la de $m_1$; solo puede moverse verticalmente. La coordenada $x_1$ mide la posición horizontal del vértice inferior izquierdo de $m_1$ desde la pared izquierda. La coordenada $y_2$ mide la altura de la base inferior de $m_2$ desde el piso. Se indican las cotas $B_1$ (ancho de $m_1$) y $B$ (distancia entre paredes).
 
----
+
 
 ## Resolución
 
 ### Coordenadas y GDL
 
-Coordenadas posibles del sistema:
-
-$$N = (x_1,\ y_2)$$
-
-Donde $x_1$ es la posición horizontal de $m_1$ e $y_2$ es la posición vertical de $m_2$.
+Coordenadas posibles del sistema:$N = (x_1,\ y_2)$Donde $x_1$ es la posición horizontal de $m_1$ e $y_2$ es la posición vertical de $m_2$.
 
 Restricción geométrica por contacto en la interfaz inclinada a $60°$:
 
@@ -224,13 +202,9 @@ Derivando con respecto al tiempo:
 
 $$\dot{y}_2 = -\frac{1}{\sqrt{3}}\,\dot{x}_1$$
 
-Número de grados de libertad:
-
-$$\text{GDL} = N - \text{restricciones} = 2 - 1 = 1$$
+Número de grados de libertad:$\text{GDL} = N - \text{restricciones} = 2 - 1 = 1$
 
 Coordenada independiente seleccionada: $x_1$.
-
----
 
 ### Energía cinética
 
@@ -240,7 +214,7 @@ Sustituyendo $\dot{y}_2 = -\dfrac{\dot{x}_1}{\sqrt{3}}$:
 
 $$\boxed{T = \frac{1}{2}\!\left(m_1 + \frac{m_2}{3}\right)\dot{x}_1^2}$$
 
----
+
 
 ### Energía potencial
 
@@ -250,7 +224,7 @@ Sustituyendo $y_2 = \dfrac{B_2 - x_1}{\sqrt{3}}$:
 
 $$\boxed{V = \frac{1}{2}K(B - B_1 - x_1 - \ell_0)^2 + \frac{m_2 g}{\sqrt{3}}(B_2 - x_1)}$$
 
----
+
 
 ### Ecuación de Lagrange
 
@@ -260,14 +234,14 @@ $$\frac{d}{dt}\!\left(\frac{\partial T}{\partial \dot{x}_1}\right) = \left(m_1 +
 
 $$-\frac{\partial V}{\partial x_1} = +K(B - B_1 - x_1 - \ell_0) + \frac{m_2 g}{\sqrt{3}}$$
 
----
+
 
 ### EDO final
 
 $$\boxed{\left(m_1 + \frac{m_2}{3}\right)\ddot{x}_1 = +K(B - B_1 - x_1 - \ell_0) + \frac{m_2 g}{\sqrt{3}}}$$
 
----
----
+
+
 
 # Ej 3
 
@@ -275,7 +249,7 @@ Una polea de masa $m_1$ (sin inercia rotacional) está suspendida del techo medi
 
 Hallar las ecuaciones de movimiento de Lagrange del sistema.
 
----
+
 
 ```tikz
 \usetikzlibrary{patterns,decorations.pathmorphing}
@@ -350,15 +324,13 @@ Hallar las ecuaciones de movimiento de Lagrange del sistema.
 
 > **Descripción de la figura:** El resorte $K$ conecta el techo con la polea $m_1$ (teal). Del ramal izquierdo de $m_1$ desciende un cable hasta el resorte $K'$ anclado al piso. Del ramal derecho de $m_1$ desciende un cable hasta la polea $m_2$ (naranja), separada de $m_1$ por la distancia $a$. Del ramal izquierdo de $m_2$ un cable baja hasta el piso (extremo fijo). Del ramal derecho cuelga la masa puntual $m_3$. Las coordenadas $y_1$, $y_2$, $y_3$ se miden desde el techo hacia abajo hasta cada masa. La cota $H$ es la altura total techo–piso.
 
----
+
 
 ## Resolución
 
 ### Coordenadas y GDL
 
-Coordenadas posibles del sistema:
-
-$$N = (y_1,\ y_2,\ y_3)$$
+Coordenadas posibles del sistema:$N = (y_1,\ y_2,\ y_3)$
 
 Restricción — cable inextensible por polea 2:
 
@@ -366,9 +338,7 @@ $$H - y_2 + \pi R_2 + y_3 - y_2 = \ell \implies y_2 = \frac{1}{2}(H + \pi R_2 + 
 
 $$\dot{y}_2 = \frac{\dot{y}_3}{2}$$
 
-Número de grados de libertad:
-
-$$\text{GDL} = N - \text{restricciones} = 3 - 1 = 2$$
+Número de grados de libertad:$\text{GDL} = N - \text{restricciones} = 3 - 1 = 2$
 
 Coordenadas independientes seleccionadas: $y_3$ y $a$
 
@@ -381,7 +351,7 @@ $$\dot{y}_1 = \frac{\dot{y}_3}{2} - \dot{a}$$
 > **Aux:** $y_1$ es cambio de variable — el docente lo expande directamente en las EDOs:
 > $y_1 - \ell_0 = \tfrac{H + \pi R_2 + y_3 - \ell}{2} - a - \ell_0$ · · · $H - y_1 + \pi R_1 + a - \ell_0' = \tfrac{H - \pi R_2 - y_3 + \ell}{2} + 2a + \pi R_1 - \ell_0'$
 
----
+
 
 ### Energía cinética
 
@@ -391,7 +361,7 @@ Sustituyendo $\dot{y}_1 = \dfrac{\dot{y}_3}{2} - \dot{a}$ y $\dot{y}_2 = \dfrac{
 
 $$\boxed{T = \frac{m_1}{2}\!\left(\frac{\dot{y}_3}{2} - \dot{a}\right)^{\!2} + \frac{m_2}{2}\!\left(\frac{\dot{y}_3}{2}\right)^{\!2} + \frac{m_3}{2}\dot{y}_3^2}$$
 
----
+
 
 ### Energía potencial
 
@@ -401,7 +371,7 @@ Sustituyendo $y_1$ e $y_2$ en función de $y_3$ y $a$:
 
 $$\boxed{V = \frac{K}{2}\!\left[\frac{H + \pi R_2 + y_3 - \ell}{2} - a - \ell_0\right]^{\!2} - m_1 g\!\left(\frac{H + \pi R_2 + y_3 - \ell}{2} - a\right) - m_2 g\!\left(\frac{H + \pi R_2 + y_3 - \ell}{2}\right) - m_3 g\, y_3 + \frac{K'}{2}\!\left[\frac{H - \pi R_2 - y_3 + \ell}{2} + 2a + \pi R_1 - \ell_0'\right]^{\!2}}$$
 
----
+
 
 ### Ecuaciones de Lagrange
 
@@ -421,7 +391,7 @@ $$-\frac{\partial V}{\partial a} = K(y_1 - \ell_0) - m_1 g - 2K'(H - y_1 + \pi R
 
 $$\boxed{m_1\ddot{a} - \frac{m_1}{2}\ddot{y}_3 = K(y_1 - \ell_0) - m_1 g - 2K'(H - y_1 + \pi R_1 + a - \ell_0')}$$
 
----
+
 
 ### EDOs finales
 
@@ -429,15 +399,15 @@ $$\boxed{\left(\frac{m_1 + m_2 + 4m_3}{4}\right)\ddot{y}_3 - \frac{m_1}{2}\ddot{
 
 $$\boxed{m_1\ddot{a} - \frac{m_1}{2}\ddot{y}_3 = K(y_1 - \ell_0) - m_1 g - 2K'(H - y_1 + \pi R_1 + a - \ell_0')}$$
 
----
----
+
+
 # Ej 4
 
 Un carro de masa $M$ rueda sin fricción sobre una superficie horizontal. Sobre el carro está articulado un péndulo simple de varilla rígida sin masa, longitud $\ell$ y masa puntual $m$ en su extremo, que oscila en el plano vertical. El punto de articulación del péndulo se encuentra a altura $H$ sobre el suelo. El péndulo puede adoptar posiciones tanto por debajo como por encima del pivote; el ángulo $\theta$ se mide desde la vertical hacia arriba.
 
 Hallar las ecuaciones de movimiento de Lagrange del sistema.
 
----
+
 
 ```tikz
 \usetikzlibrary{patterns,decorations.pathmorphing}
@@ -495,21 +465,17 @@ Hallar las ecuaciones de movimiento de Lagrange del sistema.
 
 > **Descripción de la figura:** El carro $M$ (teal, con ruedas) rueda sobre el piso. El pivote del péndulo está en la parte superior del carro a altura $H$. La varilla de longitud $\ell$ parte del pivote y lleva la masa $m$ (naranja) en su extremo; en la figura se muestra el péndulo en posición invertida (hacia arriba y a la derecha). El ángulo $\theta$ se mide desde la vertical hacia arriba hasta la varilla. La coordenada $x$ mide la posición horizontal del pivote desde la pared izquierda (origen).
 
----
+
 
 ## Resolución
 
 ### Coordenadas y GDL
 
-Coordenadas posibles del sistema:
-
-$$N = (x,\ \theta)$$
+Coordenadas posibles del sistema:$N = (x,\ \theta)$
 
 Sin restricciones adicionales — ambas coordenadas son independientes.
 
-Número de grados de libertad:
-
-$$\text{GDL} = 2 \quad \text{con coordenadas independientes } (x,\,\theta)$$
+Número de grados de libertad:$\text{GDL} = 2 \quad \text{con coordenadas independientes } (x,\,\theta)$
 
 Posición absoluta de $m$:
 
@@ -519,7 +485,7 @@ Velocidades de $m$:
 
 $$\dot{x}_2 = \dot{x} + \ell\cos\theta\,\dot{\theta} \qquad \dot{y}_2 = -\ell\sin\theta\,\dot{\theta}$$
 
----
+
 
 ### Energía cinética
 
@@ -529,13 +495,13 @@ $$T_m = \frac{m}{2}(\dot{x}_2^2 + \dot{y}_2^2) = \frac{m}{2}\!\left(\dot{x}^2 + 
 
 $$\boxed{T = \frac{M}{2}\dot{x}^2 + \frac{m}{2}\!\left(\dot{x}^2 + 2\dot{x}\ell\cos\theta\,\dot{\theta} + \ell^2\dot{\theta}^2\right)}$$
 
----
+
 
 ### Energía potencial
 
 $$\boxed{V = mg(H + \ell\cos\theta)}$$
 
----
+
 
 ### Ecuaciones de Lagrange
 
@@ -557,7 +523,7 @@ Sustituyendo (los términos $-m\ell\dot{x}\sin\theta\,\dot{\theta}$ y $+m\ell\do
 
 $$\boxed{\ell\ddot{\theta} + \ddot{x}\cos\theta - \dot{x}\sin\theta\,\dot{\theta} + \dot{x}\dot{\theta}\sin\theta + g\sin\theta = 0}$$
 
----
+
 
 ### EDOs finales
 
@@ -565,8 +531,8 @@ $$\boxed{(M+m)\ddot{x} + m\ell\cos\theta\,\ddot{\theta} - m\ell\sin\theta\,\dot{
 
 $$\boxed{\ell\ddot{\theta} + \ddot{x}\cos\theta - \dot{x}\sin\theta\,\dot{\theta} + \dot{x}\dot{\theta}\sin\theta + g\sin\theta = 0}$$
 
----
----
+
+
 
 # Ej 5
 
@@ -574,7 +540,7 @@ Dos masas puntuales $m_1$ y $m_2$ forman un péndulo doble planar. Ambas varilla
 
 Hallar las ecuaciones de movimiento de Lagrange del sistema.
 
----
+
 
 ```tikz
 \usetikzlibrary{patterns,decorations.pathmorphing}
@@ -617,7 +583,7 @@ Hallar las ecuaciones de movimiento de Lagrange del sistema.
 
 > **Descripción de la figura:** La primera varilla (teal) parte del pivote fijo en el techo y lleva la masa $m_1$ en su extremo; el ángulo $\theta$ se mide desde la vertical hasta la primera varilla. La segunda varilla (naranja) parte de $m_1$ y lleva la masa $m_2$ en su extremo; el ángulo $\phi$ se mide desde la vertical (línea punteada que pasa por $m_1$) hasta la segunda varilla. Ambas varillas tienen la misma longitud $\ell$.
 
----
+
 
 ## Resolución
 
@@ -637,11 +603,7 @@ Derivadas de $m_2$:
 
 $$\dot{x}_2 = \ell\cos\theta\,\dot{\theta} + \ell\cos\phi\,\dot{\phi} \qquad \dot{y}_2 = -\ell\sin\theta\,\dot{\theta} - \ell\sin\phi\,\dot{\phi}$$
 
-Sin restricciones adicionales:
-
-$$\text{GDL} = 2 \quad \text{con coordenadas generalizadas } (\theta,\,\phi)$$
-
----
+Sin restricciones adicionales:$\text{GDL} = 2 \quad \text{con coordenadas generalizadas } (\theta,\,\phi)$
 
 ### Energía cinética
 
@@ -651,7 +613,7 @@ $$T_2 = \frac{1}{2}m_2\ell^2\!\left[\dot{\theta}^2 + 2\dot{\theta}\dot{\phi}\cos
 
 $$\boxed{T = \frac{1}{2}m_1\ell^2\dot{\theta}^2 + \frac{1}{2}m_2\ell^2\!\left[\dot{\theta}^2 + 2\dot{\theta}\dot{\phi}\cos(\theta-\phi) + \dot{\phi}^2\right]}$$
 
----
+
 
 ### Energía potencial
 
@@ -659,7 +621,7 @@ Referencia $y = 0$ en el techo, eje $y$ descendente — energía potencial negat
 
 $$\boxed{V = -m_1 g\ell\cos\theta - m_2 g\ell(\cos\theta + \cos\phi)}$$
 
----
+
 
 ### Ecuaciones de Lagrange
 
@@ -687,7 +649,7 @@ $$\frac{\partial T}{\partial \phi} = m_2\ell^2\dot{\theta}\dot{\phi}\sin(\theta-
 
 $$\boxed{m_2\ell^2\ddot{\phi} + m_2\ell^2\ddot{\theta}\cos(\theta-\phi) - m_2\ell^2\dot{\theta}^2\sin(\theta-\phi) + m_2 g\ell\sin\phi = 0}$$
 
----
+
 
 ### EDOs finales
 
@@ -695,8 +657,8 @@ $$\boxed{(m_1+m_2)\ell^2\ddot{\theta} + m_2\ell^2\ddot{\phi}\cos(\theta-\phi) + 
 
 $$\boxed{m_2\ell^2\ddot{\phi} + m_2\ell^2\ddot{\theta}\cos(\theta-\phi) - m_2\ell^2\dot{\theta}^2\sin(\theta-\phi) + m_2 g\ell\sin\phi = 0}$$
 
----
----
+
+
 
 # Ej 6
 
@@ -750,7 +712,7 @@ El diagrama muestra un bloque de masa $M$ apoyado sobre una superficie horizonta
 \end{document}
 ```
 
----
+
 
 **Paso 0 — Identificación**
 Sistema mecánico translacional de 1 grado de libertad (1 GDL) constituido por un bloque de masa $M$, acoplado en paralelo a un resorte de rigidez $K$ y un amortiguador viscoso de coeficiente $C$, sometido a una fuerza impulsora externa $F$.
@@ -861,8 +823,8 @@ $$
 \boxed{M\ddot{x} + C\dot{x} + Kx = F}
 $$
 
----
----
+
+
 
 # Ej 7
 
@@ -976,7 +938,7 @@ El diagrama muestra tres masas dispuestas horizontalmente entre dos paredes ríg
 \end{document}
 ```
 
----
+
 
 **Paso 0 — Identificación**
 Sistema mecánico translacional acoplado de 3 grados de libertad (3 GDL) con disipación viscosa, acoplamiento elástico y fuerza de excitación externa aplicada a la masa $m_2$.
@@ -1060,8 +1022,8 @@ $$
 \boxed{\begin{bmatrix} m_1 & 0 & 0 \\ 0 & m_2 & 0 \\ 0 & 0 & m_3 \end{bmatrix} \begin{bmatrix} \ddot{x}_1 \\ \ddot{x}_2 \\ \ddot{x}_3 \end{bmatrix} + \begin{bmatrix} C_1 + C_{12} & -C_{12} & 0 \\ -C_{12} & C_{12} + C_{23} & -C_{23} \\ 0 & -C_{23} & C_{23} \end{bmatrix} \begin{bmatrix} \dot{x}_1 \\ \dot{x}_2 \\ \dot{x}_3 \end{bmatrix} + \begin{bmatrix} K_1 + K_{13} & 0 & -K_{13} \\ 0 & K_2 + K_{23} & -K_{23} \\ -K_{13} & -K_{23} & K_3 + K_{13} + K_{23} \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} = \begin{bmatrix} 0 \\ F_2 \\ 0 \end{bmatrix}}
 $$
 
----
----
+
+
 
 # Ej 8
 
@@ -1157,7 +1119,7 @@ Una cuña $m_1$ de forma trapezoidal (caras superior e inferior horizontales, ca
 \end{document}
 ```
 
----
+
 
 **Solución:**
 
@@ -1197,7 +1159,7 @@ Derivando respecto al tiempo:
 
 $$\dot{x}_1 = \frac{-\dot{x}_2}{\sqrt{3}+1} \qquad \dot{y}_1 = \sqrt{3}\,\dot{x}_1 = \frac{-\sqrt{3}\,\dot{x}_2}{\sqrt{3}+1}$$
 
----
+
 
 ## 2. Energía cinética
 
@@ -1209,7 +1171,7 @@ $$\dot{x}_1^2 + \dot{y}_1^2 = \frac{\dot{x}_2^2 + 3\dot{x}_2^2}{(\sqrt{3}+1)^2} 
 
 $$\boxed{T = \frac{1}{2}M^*\dot{x}_2^2} \qquad M^* = \frac{4m_1}{(\sqrt{3}+1)^2} + m_2 = (4-2\sqrt{3})m_1 + m_2$$
 
----
+
 
 ## 3. Energía potencial
 
@@ -1217,7 +1179,7 @@ Solo entra el peso de $m_1$ (el resorte y el piso no hacen trabajo potencial gra
 
 $$V = m_1 g\,y_1 + \frac{1}{2}K(x_2-x_{2,0})^2 = \frac{m_1 g\sqrt{3}(B_1-x_2)}{\sqrt{3}+1} + \frac{1}{2}K(x_2-x_{2,0})^2$$
 
----
+
 
 ## 4. Fuerza generalizada de $F$
 
@@ -1231,7 +1193,7 @@ $$\delta W_F = -F\,\delta y_1 = \frac{F\sqrt{3}}{\sqrt{3}+1}\,\delta x_2 \implie
 
 > **Nota:** $F$ puede también incorporarse al potencial como $(m_1 g + F)\,y_1$ si se la trata como fuerza conservativa constante. Ambos enfoques dan el mismo resultado.
 
----
+
 
 ## 5. Ecuación de movimiento de Lagrange
 
@@ -1253,8 +1215,8 @@ con:
 
 $$M^* = \frac{4m_1}{(\sqrt{3}+1)^2} + m_2 = (4-2\sqrt{3})m_1 + m_2$$
 
----
----
+
+
 
 # Ej 9
 Dos poleas sin inercia rotacional $m_1$ y $m_2$ forman un sistema vertical en cadena con dos resortes y una fuerza aplicada. La polea $m_1$ está suspendida del techo mediante un resorte de constante $K$ y longitud natural $\ell_0$ conectado a su centro; su ramal izquierdo sostiene a la polea $m_2$ por el centro mediante un cable, y su ramal derecho está conectado al piso mediante un resorte de constante $K'$ y longitud natural $\ell_0'$. La polea $m_2$ cuelga del ramal izquierdo de $m_1$; su ramal izquierdo está conectado al piso mediante un cable (extremo fijo) y su ramal derecho sostiene un punto de aplicación de fuerza $F$ mediante un cable. La altura total del sistema es $H$. Las coordenadas $y_1$, $y_2$, $y_3$ se miden desde el techo hacia abajo hasta el centro de $m_1$, el centro de $m_2$ y el punto de aplicación de $F$ respectivamente. La distancia $a$ se mide desde el centro de $m_2$ hacia abajo hasta el punto de aplicación de $F$.
@@ -1265,7 +1227,7 @@ Hallar las ecuaciones de movimiento de Lagrange del sistema.
 > $$\dot{y}_3 = \dot{y}_2 + \dot{a}$$
 > $$\dot{y}_1 = \dot{y}_2 + \tfrac{1}{2}\dot{a}$$
 
----
+
 
 ```tikz
 \usetikzlibrary{patterns,decorations.pathmorphing}
@@ -1341,11 +1303,11 @@ Hallar las ecuaciones de movimiento de Lagrange del sistema.
 
 > **Descripción de la figura:** El resorte $K$ (teal) conecta el techo con el centro de la polea $m_1$ (teal). Del ramal izquierdo de $m_1$ desciende un cable hasta el centro de la polea $m_2$ (naranja). Del ramal derecho de $m_1$ desciende un cable que conecta con el resorte $K'$ (teal) anclado al piso. Del ramal izquierdo de $m_2$ desciende un cable fijo al piso. Del ramal derecho de $m_2$ desciende un cable hasta el punto de aplicación de la fuerza $F$ (naranja, flecha hacia abajo). Las coordenadas $y_1$, $y_2$, $y_3$ se miden desde el techo hacia abajo hasta el centro de $m_1$, el centro de $m_2$ y el punto de $F$ respectivamente. La cota $a$ va desde el centro de $m_2$ hasta el punto de $F$. La cota $H$ es la altura total techo–piso (rojo).
 
----
+
 **Resolución**
 Se emplean las coordenadas generalizadas $(y_1, a)$ indicadas por el docente para expresar las relaciones de ligadura cinemática, formular la energía cinética, la energía potencial y el trabajo virtual de $F$, y derivar las ecuaciones de Lagrange del sistema.
 
----
+
 
 **Paso 1 — Ligaduras cinemáticas y coordenadas generalizadas**
 
@@ -1375,7 +1337,7 @@ $$\boxed{q_1 = y_1, \quad q_2 = a \qquad (2 \text{ GDL})}$$
 
 $$\dot{y}_2 = \dot{a}, \qquad \dot{y}_{K'} = 2\dot{y}_1 - \dot{a}$$
 
----
+
 
 **Paso 2 — Energía cinética**
 
@@ -1385,7 +1347,7 @@ $$\boxed{T = \frac{m_1}{2}\dot{y}_1^2 + \frac{m_2}{2}\dot{a}^2}$$
 
 > El punto de aplicación de $F$ no tiene masa propia, por lo que no aporta término cinético.
 
----
+
 
 **Paso 3 — Energía potencial**
 
@@ -1401,7 +1363,7 @@ $$\boxed{V = \frac{K}{2}(y_1 - \ell_0)^2 + \frac{K'}{2}(2H + \pi R_2 + a - 2y_1 
 
 > La fuerza $F$ puede tratarse como fuerza generalizada no conservativa ($Q_a = 2F$ según el docente) o incorporarse al potencial como $-Fy_3 = -F(y_2 + a)$; ambos enfoques dan las mismas EDOs.
 
----
+
 
 **Paso 4 — Ecuaciones de Lagrange**
 
@@ -1424,15 +1386,15 @@ $$-\frac{\partial V}{\partial a} = -K'(2H + \pi R_2 + a - 2y_1 + \pi R_1 - \ell_
 El docente obtiene $Q_a = 2F$ al considerar el trabajo virtual de $F$ sobre $y_3 = y_2 + a$:
 
 $$\boxed{m_2\ddot{a} = -K'(2H + \pi R_2 + a - 2y_1 + \pi R_1 - \ell_0') + m_2 g + 2F}$$
----
----
+
+
 # Ej 10
 
 Tres poleas sin inercia rotacional $m_1$, $m_2$ y $m_3$ forman un sistema vertical en cadena. La polea $m_1$ está suspendida del techo mediante un resorte de constante $K$ y longitud natural $\ell_0$; su ramal izquierdo está conectado mediante un cable al piso (extremo fijo) y su ramal derecho sostiene a $m_2$. La polea $m_2$ cuelga del ramal derecho de $m_1$ a una distancia $a$ por debajo de ella; su ramal izquierdo está conectado al piso mediante un resorte de constante $K'$ y longitud natural $\ell_0'$, y su ramal derecho sostiene a la masa puntual $m_3$. La altura total del sistema es $H$. Las coordenadas $y_1$, $y_2$, $y_3$ se miden desde el techo hacia abajo hasta el centro de $m_1$, $m_2$ y $m_3$ respectivamente.
 
 Hallar las ecuaciones de movimiento de Lagrange del sistema.
 
----
+
 
 ```tikz
 \usetikzlibrary{patterns,decorations.pathmorphing}
@@ -1507,7 +1469,7 @@ Hallar las ecuaciones de movimiento de Lagrange del sistema.
 
 > **Descripción de la figura:** El resorte $K$ (teal) conecta el techo con la polea $m_1$ (teal). Del ramal izquierdo de $m_1$ desciende un cable fijo al piso. Del ramal derecho de $m_1$ desciende un cable hasta la polea $m_2$ (naranja), separada de $m_1$ por la distancia $a$. Del ramal izquierdo de $m_2$ desciende el resorte $K'$ (naranja) conectado al piso. Del ramal derecho de $m_2$ cuelga la masa puntual $m_3$ (naranja). Las coordenadas $y_1$, $y_2$, $y_3$ se miden desde el techo hacia abajo. La cota $H$ es la altura total techo–piso (rojo).
 
----
+
 
 **Resolución**
 Se establecen las ligaduras cinemáticas, se formula el Lagrangiano en función de las coordenadas generalizadas $y_2$ e $y_3$, y se aplican las ecuaciones de Euler-Lagrange.
@@ -1554,8 +1516,8 @@ $$
 \boxed{m_3\ddot{y}_3 + K'y_3 - 2K'y_2 = m_3 g - K'(H - C_2 - \ell_0')}
 $$
 
----
----
+
+
 
 # Ej 11
 
@@ -1563,7 +1525,7 @@ Tres poleas sin inercia rotacional $m_1$, $m_2$ y $m_3$ forman un sistema vertic
 
 Hallar las ecuaciones de movimiento de Lagrange del sistema.
 
----
+
 
 ```tikz
 \usetikzlibrary{patterns,decorations.pathmorphing}
@@ -1646,7 +1608,7 @@ Hallar las ecuaciones de movimiento de Lagrange del sistema.
 
 > **Descripción de la figura:** El resorte $K$ (teal) conecta el techo con la polea $m_1$ (teal). Del ramal izquierdo de $m_1$ desciende un cable fijo al piso. Del ramal derecho de $m_1$ desciende un cable hasta la polea $m_2$ (naranja). Del ramal izquierdo de $m_2$ desciende un cable fijo al piso. Del ramal derecho de $m_2$ desciende un cable hasta la polea $m_3$ (teal). Del ramal izquierdo de $m_3$ desciende un cable fijo al piso. Del ramal derecho de $m_3$ desciende el resorte $K'$ (naranja) conectado al piso. Las coordenadas $y_1$, $y_2$, $y_3$ se miden desde el techo hacia abajo hasta cada polea. La cota $a$ va desde el centro de $m_1$ hasta el centro de $m_3$. La cota $H$ es la altura total techo–piso (rojo).
 
----
+
 
 **Resolución**
 Se identifican las ligaduras cinemáticas, se formula el Lagrangiano en función de la coordenada generalizada $y_2$, y se aplica la ecuación de Euler-Lagrange.
@@ -1705,15 +1667,15 @@ $$
 \boxed{\left(\dfrac{m_1}{4} + m_2 + 4m_3\right)\ddot{y}_2 + \left(\dfrac{K}{4} + 4K'\right)y_2 = \left(\dfrac{m_1}{2} + m_2 + 2m_3\right)g + \dfrac{K\,\ell_0}{2} + 2K'\!\left(H - \pi R_3 - \ell_0'\right)}
 $$
 
----
----
+
+
 
 # Ej 12
 
 Cuatro poleas sin inercia rotacional $m_1$, $m_2$, $m_3$ y $m_4$ forman un sistema vertical en cadena. La polea $m_1$ está suspendida del techo mediante un resorte de constante $K$ y longitud natural $\ell_0$; su ramal izquierdo sostiene a la masa-polea $m_4$ mediante un cable y su ramal derecho sostiene a $m_2$. La polea $m_2$ cuelga del ramal derecho de $m_1$; su ramal izquierdo está conectado al piso mediante un cable (extremo fijo) y su ramal derecho sostiene a la polea $m_3$. La polea $m_3$ cuelga del ramal derecho de $m_2$; su ramal izquierdo está conectado al piso mediante un cable (extremo fijo) y su ramal derecho está conectado al piso mediante un resorte de constante $K'$ y longitud natural $\ell_0'$. La altura total del sistema es $H$. Las coordenadas $y_1$, $y_2$, $y_3$, $y_4$ se miden desde el techo hacia abajo hasta el centro de cada polea/masa respectivamente. La distancia $a$ se mide desde el centro de $m_1$ hasta el centro de $m_3$.
 Hallar las ecuaciones de movimiento de Lagrange del sistema.
 
----
+
 
 ```tikz
 \usetikzlibrary{patterns,decorations.pathmorphing}
@@ -1802,12 +1764,12 @@ Hallar las ecuaciones de movimiento de Lagrange del sistema.
 
 > **Descripción de la figura:** El resorte $K$ (teal) conecta el techo con la polea $m_1$ (teal). Del ramal izquierdo de $m_1$ desciende un cable que sostiene la masa $m_4$ (bloque teal). Del ramal derecho de $m_1$ desciende un cable hasta la polea $m_2$ (naranja). Del ramal izquierdo de $m_2$ desciende un cable fijo al piso. Del ramal derecho de $m_2$ desciende un cable hasta la polea $m_3$ (teal). Del ramal izquierdo de $m_3$ desciende un cable fijo al piso. Del ramal derecho de $m_3$ desciende el resorte $K'$ (naranja) conectado al piso. Las coordenadas $y_1$, $y_2$, $y_3$, $y_4$ se miden desde el techo hacia abajo hasta cada polea/masa. La cota $a$ va desde el centro de $m_1$ hasta el centro de $m_3$. La cota $H$ es la altura total techo–piso (rojo).
 
----
+
 
 **Resolución**
 Se determinan las ligaduras geométricas de los cables inextensibles, se formulan la energía cinética y la energía potencial para establecer la función Lagrangiana, y se derivan las ecuaciones de movimiento según la elección de coordenadas generalizadas.
 
----
+
 
 ### Caso 1 — Sistema con coordenadas generalizadas $(y_1, y_2)$ (2 GDL)
 
@@ -1951,7 +1913,7 @@ $$
 $$
 
 
----
+
 
 ### Caso 2 — Sistema en función de la cota $a$ y la coordenada $y_2$ (2 GDL)
 
@@ -2021,7 +1983,7 @@ $$
 $$
 
 
----
+
 
 ### Caso 3 — Sistema con cota $a$ constante (1 GDL)
 

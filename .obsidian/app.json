@@ -10,7 +10,7 @@
   "defaultViewMode": "preview",
   "autoConvertHtml": false,
   "mobilePullAction": "",
-  "readableLineLength": false,
+  "readableLineLength": true,
   "strictLineBreaks": false,
   "foldHeading": true,
   "foldIndent": true,

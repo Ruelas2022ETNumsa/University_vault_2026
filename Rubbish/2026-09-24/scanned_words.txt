@@ -9964,8 +9964,6 @@ tardes
 transformado
 transportando
 topis
-trapecio
-translacional
 ToDo
 Templater
 Text
@@ -31911,8 +31909,6 @@ SdcQ
 Seco
 Steam
 Sostenibilidad
-Sobreamortiguado
-Subamortiguado
 Plugins
 Pendientes
 Plugin
@@ -41275,8 +41271,6 @@ Plantas
 Plants
 Plant
 Piloto
-Poleas
-Polea
 del
 date
 de
@@ -51204,11 +51198,6 @@ descompresi
 devuelta
 diapositiva
 devolvieran
-disipaci
-dispuestas
-descansa
-derivando
-deslizantes
 Vault
 Verificar
 Variables
@@ -91381,9 +91370,6 @@ secador
 sencilla
 sectores
 sector
-suspendida
-sometido
-selas
 vault
 vil
 ver
@@ -102121,9 +102107,6 @@ verdaderamente
 veamos
 vaporiza
 viviendas
-varillas
-viscoso
-viscosa
 audience
 activo
 auto
@@ -112540,15 +112523,6 @@ aprovechan
 ascender
 abriendo
 amplio
-apoyada
-alturas
-apoyado
-acoplado
-amortiguadores
-acoplada
-arcos
-agrupando
-absorbidas
 related
 recomendados
 ribbon
@@ -123090,14 +123064,6 @@ residencial
 refrigeraci
 rastros
 resumiendo
-resortes
-roza
-reposa
-rodea
-rotacional
-ramal
-ruedas
-ramales
 notes
 notas
 nuevas
@@ -133003,7 +132969,6 @@ nOU
 nEiX
 nugKs
 nucleares
-nculos
 created
 commit
 cada
@@ -144298,8 +144263,6 @@ calefaccionan
 cultivos
 climas
 cedo
-conservativa
-colgante
 updated
 un
 universo
@@ -155214,7 +155177,6 @@ uzlyx
 ufYb
 uEox
 utilizarla
-unido
 Galaxy
 Git
 Gr
@@ -206362,7 +206324,6 @@ Empecemos
 Earth
 Exploraci
 Ecoticias
-Ensayo
 Obsidian
 OmniSearch
 Ocultar
@@ -225852,7 +225813,6 @@ Agua
 Agricultura
 Acuicultura
 Apacheta
-Amortiguamiento
 push
 pull
 para
@@ -235761,12 +235721,6 @@ placas
 paises
 potenciales
 puerta
-polea
-paredes
-poleas
-planar
-parten
-planteada
 min
 mica
 movimiento
@@ -277237,9 +277191,6 @@ eliminaran
 entendemos
 emisiones
 enfocado
-excitaci
-emplean
-estiramiento
 Motor
 Media
 Mantiene
@@ -298133,8 +298084,6 @@ LWcd
 Lcrl
 LZtz
 LRoe
-Ligadura
-Lagrangiana
 links
 las
 listar
@@ -318960,10 +318909,6 @@ industrial
 invernaderos
 industriales
 industria
-inclinada
-inercia
-impulsora
-invertible
 Dependencia
 Dropbox
 Dataview
@@ -340681,9 +340626,6 @@ Reinyecci
 Refrigeraci
 Retomando
 Resumiendo
-Respecto
-Rayleigh
-Relaciones
 Hider
 Hace
 Herramientas
@@ -358848,7 +358790,6 @@ faax
 fxwG
 fIny
 fluye
-formulan
 haya
 hace
 hacer
@@ -368158,7 +368099,6 @@ humanidad
 humedad
 hogares
 hemos
-holon
 que
 quedan
 queda

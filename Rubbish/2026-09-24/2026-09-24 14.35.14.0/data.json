@@ -11,7 +11,9 @@
             },
             {
               "id": "fullscreen",
-              "state": {}
+              "state": {
+                "value": true
+              }
             },
             {
               "id": "pin-note",
@@ -254,7 +256,9 @@
             },
             {
               "id": "fullscreen",
-              "state": {}
+              "state": {
+                "value": true
+              }
             }
           ]
         },
@@ -365,6 +369,9 @@
       "font-size": {
         "value": "30"
       },
+      "fullscreen": {
+        "value": true
+      },
       "line-height": {
         "value": "1"
       },
@@ -388,7 +395,7 @@
     "isEnabled": true
   },
   "fullscreen": {
-    "value": false
+    "value": true
   },
   "font-size": {
     "value": "30"
