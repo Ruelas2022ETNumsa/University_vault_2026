@@ -26,7 +26,8 @@
         "shared",
         "Untitled.md",
         "resumen_wireshark_sesion.md",
-        "Untitled 1.md"
+        "Untitled 1.md",
+        "Untitled 2.md"
       ]
     },
     "MOC": {
@@ -11287,11 +11288,12 @@
     "Semesters/Sem_09/ETN1012": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "1er parcial ETN-1012 marzo 2026.md",
-        "1er parcial ETN-1012 marzo 2022.md"
-      ],
-      "sortOrder": "custom"
+        "1er parcial ETN-1012 marzo 2022.md",
+        "1er parcial ETN-1012 marzo 2026 1.md"
+      ]
     },
     "_assets/er parcial ETN-1012 marzo 2022-28-09-2026_18-01-56.png": {
       "isPinned": false,
@@ -11306,6 +11308,14 @@
       "isHidden": false
     },
     "_assets/1er parcial ETN-1012 marzo 2022-28-09-2026_18-02-52.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/ETN1012/1er parcial ETN-1012 marzo 2026 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Untitled 2.md": {
       "isPinned": false,
       "isHidden": false
     }

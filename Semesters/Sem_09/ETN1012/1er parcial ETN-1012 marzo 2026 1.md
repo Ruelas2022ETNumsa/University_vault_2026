@@ -4,60 +4,58 @@ Si el código del país es 403 y el código de la ciudad es 33, para realizar un
 
 ---
 
-## 1 Planteamiento del Problema
-Se requiere establecer el procedimiento normado y la estructura de marcación para realizar
-una llamada internacional desde Bolivia hacia un destino extranjero, dados los siguientes datos
-técnicos de destino:
-- Código del país destino: 403
-- Código de la ciudad/área: 33
-## 2 Procedimiento Establecido (Plan de Numeración)
-De acuerdo con el Plan Fundamental de Numeración y los esquemas de enrutamiento de cen-
-trales en Bolivia, el formato estándar para cursar llamadas de Larga Distancia Internacional
-(LDI) requiere el uso de un prefijo de salida internacional, seguido del código de identificación
-del operador portador (carrier) elegido por el usuario, y finalmente los códigos de destino.
-La estructura general y lógica de marcación es la siguiente:
+## Solución
 
-00 + Id del Operador + Código de País + Código de Ciudad + Número de Abonado
+Se aplica el **Plan Fundamental de Numeración de 15 dígitos**. La llamada internacional saliente se arma así:
 
-Donde cada parámetro cumple una función en la sincronización y enrutamiento de la red:
-- 00: Es el prefijo de acceso estándar para llamadas internacionales salientes desde Bolivia.
-- Id del Operador: Es el código de dos dígitos (formato 1X) asignado a la empresa de tele-
-comunicaciones de larga distancia.
-- Código de País: Identificativo numérico asignado al país destino (para este caso, 403).
-- Código de Ciudad: Código de zona o ciudad destino (para este caso, 33).
-- Número de Abonado: La numeración del equipo terminal final.
+| Campo | Dígitos | Valor |
+| ----- | :-----: | ----- |
+| Acceso internacional | 2 | `00` |
+| Carrier (operador) | 2 | `10` (ej. ENTEL) |
+| Código de país | 3 | `403` |
+| Código de ciudad | 2 | `33` |
+| Número de abonado | 6 | `123456` (ej.) |
 
-## 3 Solución y Regla de Marcación Aplicada
-Aplicando los datos específicos proporcionados en el planteamiento, la secuencia exacta que el
-usuario debe marcar o enviar a la central de conmutación es:
+Check: 2 + 2 + 3 + 2 + 6 = **15 dígitos**.
 
-00 - 1X - 403 - 33 - [Número del Abonado]
+**Marcación:** `00 10 403 33 123456` → `001040333123456`
 
-Ejemplo Práctico de Enrutamiento
-Si el abonado que origina la llamada decide utilizar la red del operador ENTEL (cuyo código de
-portador es 10) y el número local de la persona en la ciudad destino es 1234567, la marcación
-integral a realizar será:
 
-00 10 403 33 1234567
+REFERENCIA (no es parte de la respuesta; fuentes de internet, verificar con las diapositivas)
 
-Tabla de Referencia: Códigos de Operadores de Larga Distancia
-Para reemplazar el valor 1X en la fórmula de marcación, el origen debe seleccionar una ruta
-válida mediante los siguientes códigos:
+Zona telefónica actual (Bolivia): 2 = La Paz, Oruro, Potosi | 3 = Santa Cruz, Beni, Pando | 4 = Cochabamba, Chuquisaca, Tarija
 
-| Operador (Carrier) | Código de Larga Distancia (1X) |
-| ------------------ | ------------------------------ |
-| ENTEL              | 10                             |
-| NUEVATEL (VIVA)    | 11                             |
-| TELECEL (TIGO)     | 12                             |
-| COTAS              | 13                             |
-| AXS Bolivia        | 17                             |
+Codigo de ciudad (2 digitos, plan anterior; las fuentes varian):
 
-## 4 Conclusión
-El procedimiento para cursar la llamada al exterior con los códigos dados consiste estrictamente
-en anteponer la secuencia de escape de salida internacional (00) y el selector de operador (1X),
-antes de ingresar los identificadores del país (403) y ciudad (33). Esta estructura garantiza que
-la central conmute correctamente los trenes de bits hacia la troncal internacional adecuada
+| Ciudad                  | Codigo                   |
+| ----------------------- | ------------------------ |
+| La Paz                  | 22                       |
+| Oruro                   | 52                       |
+| Potosi                  | 62                       |
+| Sucre                   | 64                       |
+| Cochabamba              | 44 (otra fuente: 42)     |
+| Tarija                  | 66                       |
+| Santa Cruz de la Sierra | 33 (es el del enunciado) |
+| Trinidad                | 46 (346 con zona 3)      |
+| Cobija                  | 842 (3 digitos)          |
 
+Codigo de carrier / portador (formato 1X o XY):
+
+| Operador        | Codigo |
+| --------------- | ------ |
+| Entel           | 10     |
+| AXS             | 11     |
+| COTAS           | 12     |
+| Boliviatel      | 13     |
+| Nuevatel (Viva) | 14     |
+| ITS             | 15     |
+| COTEL           | 16     |
+| Telecel (Tigo)  | 17     |
+| BossNet         | 20     |
+| Unete           | 21     |
+| Utecom          | 22     |
+
+Nota: asignaciones antiguas (anos 90) daban 11 = AES, 12 = Teledata, 13 = Boliviatel. Tigo marca hoy 0017 (00 + 17).
 
 # Ejercicio 2 2026
 
@@ -78,101 +76,75 @@ Con base de esta información: Determinar el número de canales que debe tener l
 
 ---
 
-## Dimensionamiento de Central de Tránsito (Desborde)
+## Solución
 
-### Resolución de Ejercicio Práctico
+**Método:** el desborde es tráfico "a ráfagas" (varianza mayor que la media), por eso no basta sumar medias: se suman **media y varianza** de ambos desbordes y se aplica el tráfico aleatorio equivalente (Wilkinson) con las aproximaciones de Rapp.
 
-## 1. Datos del Problema
-
-Una empresa de servicios de telefonía opera con cuatro centrales: tres centrales locales (A, B, C) y una central de tránsito (T). Las mediciones de la hora cargada arrojan los siguientes resultados:
-
-### Ruta Directa A → B
-
-- Tráfico total ofrecido ($A_{AB}$): 73 Erlangs
-- Porcentaje de desborde: 17.0%
-- Canales directos instalados ($N_{AB}$): 51 canales
-
-### Ruta Directa A → C
-
-- Tráfico total ofrecido ($A_{AC}$): 65 Erlangs
-- Porcentaje de desborde: 10.77%
-- Canales directos instalados ($N_{AC}$): 40 canales
-
-### Requisitos de Calidad de Servicio
-
-- Grado de servicio requerido (Probabilidad de Bloqueo): $B = 0.5\%$ (es decir, $E = 0.005$).
-
-> **Nota:** Se asume que el texto original "8+0,5%" corresponde a un error tipográfico de reconocimiento óptico (OCR) para "B=0,5%", estándar en el dimensionamiento Erlang B.
-
----
-
-## 2. Cálculo del Tráfico de Desborde
-
-En un esquema de enrutamiento alternativo, el tráfico que no encuentra canales libres en la ruta directa de alto uso rebalsa y es enviado por una ruta alternativa a través de la central de tránsito T.
-
-Procedemos a calcular el volumen de tráfico de desborde ($D$) para cada ruta:
-
-### Desborde de la ruta A-B ($D_{AB}$)
+### 1. Media del desborde
 
 $$
-D_{AB} = A_{AB} \times \left(\frac{\%\,\text{Desborde}}{100}\right)
+m_{AB} = 73 \times 0{,}179 = 13{,}067 \qquad m_{AC} = 65 \times 0{,}1077 = 7{,}0005
 $$
 
 $$
-D_{AB} = 73\ \text{Erl} \times 0.170 = 12.41\ \text{Erlangs}
+M = 13{,}067 + 7{,}0005 = 20{,}0675\ \text{Erl}
 $$
 
-### Desborde de la ruta A-C ($D_{AC}$)
+### 2. Varianza de cada desborde (Riordan)
 
 $$
-D_{AC} = A_{AC} \times \left(\frac{\%\,\text{Desborde}}{100}\right)
+v = m\left(1 - m + \frac{A}{C' + 1 - A + m}\right)
 $$
 
-$$
-D_{AC} = 65\ \text{Erl} \times 0.1077 = 7.0005\ \text{Erlangs} \approx 7.00\ \text{Erlangs}
-$$
-
----
-
-## 3. Tráfico Total Ofrecido a la Central de Tránsito
-
-La central de tránsito T tiene la función de absorber todo el tráfico que ha sido bloqueado en las rutas directas para poder completar las llamadas. El tráfico total ofrecido a la troncal de tránsito ($A_T$) es la suma algebraica de los desbordes:
+$C'$ = canales equivalentes que producen el bloqueo medido, es decir $E(A, C') = B$ (Erlang B): $C'_{AB} \approx 63{,}6$ (para $A=73$, $B=0{,}179$) y $C'_{AC} \approx 63{,}4$ (para $A=65$, $B=0{,}1077$).
 
 $$
-A_T = D_{AB} + D_{AC}
+v_{AB} = 13{,}067\left(1 - 13{,}067 + \frac{73}{63{,}6 + 1 - 73 + 13{,}067}\right) = 13{,}067\,(-12{,}067 + 15{,}642) = 46{,}71
 $$
 
 $$
-A_T = 12.41\ \text{Erl} + 7.00\ \text{Erl}
-= 19.41\ \text{Erlangs}
+v_{AC} = 7{,}0005\left(1 - 7{,}0005 + \frac{65}{63{,}4 + 1 - 65 + 7{,}0005}\right) = 7{,}0005\,(-6{,}0005 + 10{,}155) = 29{,}09
 $$
 
----
-
-## 4. Dimensionamiento de la Central de Tránsito
-
-Para determinar el número de canales o circuitos ($N_T$) necesarios hacia la central de tránsito, utilizamos el modelo de Erlang B, buscando que para un tráfico de $A = 19.41$ Erlangs, la probabilidad de bloqueo sea menor o igual a $0.005$.
-
-La fórmula teórica de Erlang B es:
-
 $$
-E(N,A) =
-\frac{\dfrac{A^N}{N!}}
-{\displaystyle\sum_{i=0}^{N}\frac{A^i}{i!}}
-\leq 0.005
+V = 46{,}71 + 29{,}09 = 75{,}80
 $$
 
-Evaluando en las tablas estándar de Erlang B para $A = 19.41$ Erl, buscamos la cantidad de canales $N$:
+### 3. Equivalente de Rapp
 
-- Para $N = 29$ canales → $E \approx 0.0084$ (Bloqueo del 0.84% - No cumple, es mayor a 0.5%).
-- Para $N = 30$ canales → $E \approx 0.0053$ (Bloqueo del 0.53% - No cumple, está ligeramente por encima).
-- Para $N = 31$ canales → $E \approx 0.0033$ (Bloqueo del 0.33% - Sí cumple, garantiza la descongestión exigida).
+$$
+z = \frac{V}{M} = \frac{75{,}80}{20{,}0675} = 3{,}777
+$$
 
----
+$$
+A^* = V + 3z(z-1) = 75{,}80 + 3(3{,}777)(2{,}777) = 75{,}80 + 31{,}47 = 107{,}27\ \text{Erl}
+$$
 
-## 5. Conclusión
+$$
+N^* = \frac{A^*(M+z)}{M+z-1} - M - 1 = 107{,}27\cdot\frac{23{,}845}{22{,}845} - 21{,}0675 = 111{,}96 - 21{,}07 = 90{,}89
+$$
 
-Para garantizar que las llamadas de desborde desde las centrales locales puedan completarse cumpliendo con el estricto grado de servicio del 0.5%, la central de tránsito T debe disponer de al menos **31 canales** para absorber eficientemente los **19.41 Erlangs** de tráfico acumulado.
+### 4. Canales de la central de tránsito T
+
+Pérdida objetivo sobre el desborde:
+
+$$
+E(A^*, N_{total}) = \frac{B\,M}{A^*} = \frac{0{,}005 \times 20{,}0675}{107{,}27} = 9{,}35\times10^{-4}
+$$
+
+Erlang B con $A^* = 107{,}27$: $N=136 \to 9{,}9\times10^{-4}$ (no cumple) y $N=137 \to 7{,}8\times10^{-4}$ (cumple), luego $N_{total} = 137$.
+
+$$
+N_T = N_{total} - N^* = 137 - 90{,}89 = 46{,}1
+$$
+
+**Resultado: T necesita 47 canales.**
+
+### Notas
+
+- Los datos no son consistentes con Erlang B: $E(73,51) = 32{,}7\%$ y $E(65,46) = 32{,}1\%$, no 17,9 % y 10,77 %. Por eso se toman los porcentajes medidos como dato y los 51 y 46 canales no intervienen.
+- El resultado es sensible al redondeo de $C'$: con decimales exactos salen $N_{total}=136$ y $N_T = 45{,}6$, es decir 46. Se toma 47 para garantizar el grado de servicio.
+- Otros métodos: sumar solo las medias y aplicar Erlang B a 20,07 Erl da 32 canales (ignora las ráfagas); usar 51 y 46 canales con Erlang B da ≈ 72. Confirmar cuál usa la cátedra.
 
 # Ejercicio 3 2026
 
