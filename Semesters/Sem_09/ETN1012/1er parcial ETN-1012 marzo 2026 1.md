@@ -6,20 +6,31 @@ Si el código del país es 403 y el código de la ciudad es 33, para realizar un
 
 ## Solución
 
-Se aplica el **Plan Fundamental de Numeración de 15 dígitos**. La llamada internacional saliente se arma así:
+Se aplica el **Plan Fundamental de Numeración de 15 dígitos**. Según el formulario, la llamada internacional saliente es:
 
-| Campo | Dígitos | Valor |
-| ----- | :-----: | ----- |
-| Acceso internacional | 2 | `00` |
-| Carrier (operador) | 2 | `10` (ej. ENTEL) |
-| Código de país | 3 | `403` |
-| Código de ciudad | 2 | `33` |
-| Número de abonado | 6 | `123456` (ej.) |
+$$
+00 + \text{Código Carrier} + \text{Código de País} + \text{Número de teléfono}
+$$
 
-Check: 2 + 2 + 3 + 2 + 6 = **15 dígitos**.
+donde el número de teléfono incluye el código de ciudad (dígitos 7 y 8) y el número de abonado (zona, central y usuario).
 
-**Marcación:** `00 10 403 33 123456` → `001040333123456`
+| Campo | Dígitos del plan | Cantidad | Valor |
+| ----- | :--------------: | :------: | ----- |
+| Acceso internacional | 14 y 15 | 2 | `00` |
+| Código del Carrier | 12 y 13 | 2 | `10` (supuesto: ENTEL) |
+| Código de país | 9, 10 y 11 | 3 | `403` |
+| Código de ciudad / región | 7 y 8 | 2 | `33` |
+| Zona | 6 | 1 | `1` (ej.) |
+| Central | 5 | 1 | `2` (ej.) |
+| Usuario | 1, 2, 3 y 4 | 4 | `3456` (ej.) |
 
+Check: 2 + 2 + 3 + 2 + 1 + 1 + 4 = **15 dígitos**.
+
+Supuestos: el enunciado no da el carrier ni el número de abonado; se toma ENTEL (`10`) y el abonado `123456` como ejemplo.
+
+**Marcación:** `00 10 403 33 1 2 3456` → `001040333123456`
+
+---
 
 REFERENCIA (no es parte de la respuesta; fuentes de internet, verificar con las diapositivas)
 
@@ -78,9 +89,15 @@ Con base de esta información: Determinar el número de canales que debe tener l
 
 ## Solución
 
-**Método:** el desborde es tráfico "a ráfagas" (varianza mayor que la media), por eso no basta sumar medias: se suman **media y varianza** de ambos desbordes y se aplica el tráfico aleatorio equivalente (Wilkinson) con las aproximaciones de Rapp.
+**Método:** el desborde es tráfico "a ráfagas" (varianza mayor que la media), por eso no basta sumar medias: se suman **media y varianza** de ambos desbordes (Wilkinson) y se aplican las aproximaciones de Rapp. Notación de las diapositivas: $A_i$ y $C_i$ = tráfico ofrecido y canales de la ruta directa $i$; $m_i$, $v_i$ = media y varianza de su desborde; $M$, $V$ = media y varianza combinadas; $A$ y $C$ (sin subíndice) = tráfico y canales equivalentes de Rapp; $N_{AT}$ = canales hacia la central de tránsito; $B_2$ = pérdida permitida en la ruta de tránsito.
 
 ### 1. Media del desborde
+
+$$
+m_i = A_i \cdot E(C_i, A_i)
+$$
+
+Aquí el porcentaje de desborde del enunciado es el dato de $E(C_i,A_i)$:
 
 $$
 m_{AB} = 73\ \text{Erlangs} \times 0{,}179 = 13{,}067\ \text{Erlangs}
@@ -91,18 +108,20 @@ m_{AC} = 65\ \text{Erlangs} \times 0{,}1077 = 7{,}0005\ \text{Erlangs}
 $$
 
 $$
-M = 13{,}067 + 7{,}0005 = 20{,}0675\ \text{Erlangs}
+M = \sum_{i=1}^{r} m_i = 13{,}067 + 7{,}0005 = 20{,}0675\ \text{Erlangs}
 $$
 
 ### 2. Varianza de cada desborde (Riordan)
 
 $$
-v = m\left(1 - m + \frac{A}{C' + 1 - A + m}\right)
+v_i = m_i\left(1 - m_i + \frac{A_i}{C_i + 1 - A_i + m_i}\right)
 $$
 
-Unidades: $m$ y $A$ en Erlangs; $v$ en $\text{Erlangs}^2$; $C'$ en canales.
+Unidades: $m_i$ y $A_i$ en Erlangs; $v_i$ en $\text{Erlangs}^2$; $C_i$ en canales.
 
-$C'$ = canales equivalentes que producen el bloqueo medido, es decir $E(A, C') = B$. Se obtiene con la recurrencia de Erlang B,
+**Aplicación literal con los canales del enunciado ($C_{AB}=51$, $C_{AC}=46$):** el denominador resulta negativo ($51 + 1 - 73 + 13{,}067 = -7{,}933$ y $46 + 1 - 65 + 7{,}0005 = -10{,}9995$) y se obtiene $v_{AB} \approx -277{,}9$, $v_{AC} \approx -83{,}4$, es decir $V \approx -361{,}3\ \text{Erlangs}^2$. Una varianza negativa no tiene sentido físico: los datos del enunciado no son coherentes con Erlang B ($E(73,51) = 32{,}7\%$ y $E(65,46) = 32{,}1\%$, no 17,9 % y 10,77 %).
+
+**Recurso usado para continuar (no está en el formulario):** se reemplaza $C_i$ por $C'_i$, los canales equivalentes que producen el bloqueo medido, es decir $E(A_i, C'_i) = B_i$. Se obtiene con la recurrencia de Erlang B,
 
 $$
 E(A,n) = \frac{A\,E(A,n-1)}{n + A\,E(A,n-1)}, \qquad E(A,0) = 1
@@ -110,13 +129,13 @@ $$
 
 y se interpola entre los dos valores enteros de $n$ que encierran el bloqueo medido:
 
-- Para $A = 73\ \text{Erlangs}$ y $B = 0{,}179$: $E(73;63) = 0{,}1855$ y $E(73;64) = 0{,}1746$, luego
+- Para $A_{AB} = 73\ \text{Erlangs}$ y $B = 0{,}179$: $E(73;63) = 0{,}1855$ y $E(73;64) = 0{,}1746$, luego
 
 $$
 C'_{AB} = 63 + \frac{0{,}1855 - 0{,}179}{0{,}1855 - 0{,}1746} = 63 + \frac{0{,}0065}{0{,}0109} = 63{,}60\ \text{canales}
 $$
 
-- Para $A = 65\ \text{Erlangs}$ y $B = 0{,}1077$: $E(65;63) = 0{,}1121$ y $E(65;64) = 0{,}1022$, luego
+- Para $A_{AC} = 65\ \text{Erlangs}$ y $B = 0{,}1077$: $E(65;63) = 0{,}1121$ y $E(65;64) = 0{,}1022$, luego
 
 $$
 C'_{AC} = 63 + \frac{0{,}1121 - 0{,}1077}{0{,}1121 - 0{,}1022} = 63 + \frac{0{,}0044}{0{,}0099} = 63{,}44\ \text{canales}
@@ -125,7 +144,7 @@ $$
 Desborde A→B, paso a paso:
 
 $$
-C'_{AB} + 1 - A + m_{AB} = 63{,}60 + 1 - 73 + 13{,}067 = 4{,}667 \qquad \frac{A}{4{,}667} = \frac{73}{4{,}667} = 15{,}6417
+C'_{AB} + 1 - A_{AB} + m_{AB} = 63{,}60 + 1 - 73 + 13{,}067 = 4{,}667 \qquad \frac{A_{AB}}{4{,}667} = \frac{73}{4{,}667} = 15{,}6417
 $$
 
 $$
@@ -139,7 +158,7 @@ $$
 Desborde A→C, paso a paso:
 
 $$
-C'_{AC} + 1 - A + m_{AC} = 63{,}44 + 1 - 65 + 7{,}0005 = 6{,}4405 \qquad \frac{A}{6{,}4405} = \frac{65}{6{,}4405} = 10{,}0924
+C'_{AC} + 1 - A_{AC} + m_{AC} = 63{,}44 + 1 - 65 + 7{,}0005 = 6{,}4405 \qquad \frac{A_{AC}}{6{,}4405} = \frac{65}{6{,}4405} = 10{,}0924
 $$
 
 $$
@@ -153,57 +172,63 @@ $$
 Las varianzas se suman:
 
 $$
-V = v_{AB} + v_{AC} = 46{,}71 + 28{,}65 = 75{,}36\ \text{Erlangs}^2
+V = \sum_{i=1}^{r} v_i = 46{,}71 + 28{,}65 = 75{,}36\ \text{Erlangs}^2
 $$
 
-### 3. Equivalente de Rapp
-
-Nota: en las diapositivas el tráfico y los canales equivalentes se escriben $A$ y $C$; aquí $A^*$ y $N^*$ para no confundirlos con el tráfico y los canales reales.
+### 3. Aproximaciones de Rapp ($A$ y $C$ equivalentes)
 
 Relación varianza/media:
 
 $$
-z = \frac{V}{M} = \frac{75{,}36}{20{,}0675} = 3{,}755 \quad \text{(sin unidad)}
+\frac{V}{M} = \frac{75{,}36}{20{,}0675} = 3{,}755 \quad \text{(sin unidad)}
 $$
 
-Tráfico equivalente (Rapp), primero el término $3z(z-1)$:
+Tráfico equivalente:
 
 $$
-3z(z-1) = 3\,(3{,}755)\,(2{,}755) = 11{,}265 \times 2{,}755 = 31{,}04
+A = V + 3\,\frac{V}{M}\left(\frac{V}{M} - 1\right)
 $$
 
-$$
-A^* = V + 3z(z-1) = 75{,}36 + 31{,}04 = 106{,}40\ \text{Erlangs}
-$$
-
-Canales equivalentes (Rapp), primero los términos: $M + z = 20{,}0675 + 3{,}755 = 23{,}8225$ y $M + z - 1 = 22{,}8225$.
+Primero el término $3\,\frac{V}{M}\left(\frac{V}{M}-1\right) = 3\,(3{,}755)\,(2{,}755) = 11{,}265 \times 2{,}755 = 31{,}04$:
 
 $$
-N^* = \frac{A^*(M+z)}{M+z-1} - (M+1) = 106{,}40 \times \frac{23{,}8225}{22{,}8225} - 21{,}0675 = 106{,}40 \times 1{,}0438 - 21{,}0675 = 111{,}06 - 21{,}07 = 89{,}99\ \text{canales}
+A = 75{,}36 + 31{,}04 = 106{,}40\ \text{Erlangs}
 $$
 
-### 4. Canales de la central de tránsito T
-
-Pérdida objetivo sobre el desborde, con $B_2 = 0{,}5\%$ (pérdida permitida en la ruta de tránsito):
+Canales equivalentes:
 
 $$
-E(A^*, N_{total}) = \frac{B_2\,M}{A^*} = \frac{0{,}005 \times 20{,}0675\ \text{Erlangs}}{106{,}40\ \text{Erlangs}} = \frac{0{,}1003}{106{,}40} = 9{,}43\times10^{-4}
+C = \frac{A\left(M + \frac{V}{M}\right)}{M + \frac{V}{M} - 1} - M - 1
 $$
 
-Se busca el menor $N$ que cumpla, evaluando Erlang B con $A^* = 106{,}40\ \text{Erlangs}$ (recurrencia o tabla): $N=135\ \text{canales} \to 9{,}98\times10^{-4}$ (no cumple, es mayor que $9{,}43\times10^{-4}$) y $N=136\ \text{canales} \to 7{,}8\times10^{-4}$ (cumple), luego $N_{total} = 136\ \text{canales}$.
+Primero los términos: $M + V/M = 20{,}0675 + 3{,}755 = 23{,}8225$ y $M + V/M - 1 = 22{,}8225$.
 
 $$
-N_T = N_{total} - N^* = 136\ \text{canales} - 89{,}99\ \text{canales} = 46{,}01\ \text{canales}
+C = 106{,}40 \times \frac{23{,}8225}{22{,}8225} - 20{,}0675 - 1 = 106{,}40 \times 1{,}0438 - 21{,}0675 = 111{,}06 - 21{,}07 = 89{,}99\ \text{canales}
 $$
 
-$N_T \approx 46{,}0$ canales; como debe ser entero y el valor supera ligeramente 46, se toman 47 canales por seguridad.
+### 4. Canales hacia la central de tránsito T ($N_{AT}$)
+
+Nuevo grado de pérdida sobre el desborde, con $B_2 = 0{,}5\%$:
+
+$$
+\text{nuevo } B = E(N_{AT} + C,\,A) = B_2\,\frac{M}{A} = \frac{0{,}005 \times 20{,}0675\ \text{Erlangs}}{106{,}40\ \text{Erlangs}} = \frac{0{,}1003}{106{,}40} = 9{,}43\times10^{-4}
+$$
+
+Con $A = 106{,}40\ \text{Erlangs}$ se busca el menor número de canales totales que cumpla (Erlang B, tabla o recurrencia): $N = 135\ \text{canales} \to 9{,}98\times10^{-4}$ (no cumple, es mayor que $9{,}43\times10^{-4}$) y $N = 136\ \text{canales} \to 7{,}8\times10^{-4}$ (cumple), luego $N_{AT} + C = 136\ \text{canales}$.
+
+$$
+N_{AT} = (N_{AT} + C) - C = 136\ \text{canales} - 89{,}99\ \text{canales} = 46{,}01\ \text{canales}
+$$
+
+$N_{AT} \approx 46{,}0$ canales; como debe ser entero y el valor supera ligeramente 46, se toman 47 canales por seguridad.
 
 **Resultado: T necesita 47 canales.**
 
 ### Notas
 
-- Los datos no son consistentes con Erlang B: $E(73,51) = 32{,}7\%$ y $E(65,46) = 32{,}1\%$, no 17,9 % y 10,77 %. Por eso se toman los porcentajes medidos como dato y los 51 y 46 canales no intervienen.
-- El resultado es sensible al redondeo de $C'$: con $C'$ redondeado a 63,6 y 63,4 sale $N_{total} = 137$ y $N_T = 46{,}1$; sin redondeos intermedios, $N_T = 45{,}6$. La respuesta queda entre 46 y 47 canales; se toma 47 para no quedar por debajo del grado de servicio.
+- La varianza de cada desborde no se puede obtener con el formulario tal cual (da negativa, ver paso 2); el uso de $C'_i$ es un recurso propio, no del formulario.
+- El resultado es sensible al redondeo de $C'$: con $C'$ redondeado a 63,6 y 63,4 sale $N_{AT} + C = 137$ y $N_{AT} = 46{,}1$; sin redondeos intermedios, $N_{AT} = 45{,}6$. La respuesta queda entre 46 y 47 canales; se toma 47 para no quedar por debajo del grado de servicio.
 - Otros métodos: sumar solo las medias y aplicar Erlang B a 20,07 Erlangs da 32 canales (ignora las ráfagas); usar 51 y 46 canales con Erlang B da ≈ 72. Confirmar cuál usa la cátedra.
 
 # Ejercicio 3 2026
@@ -223,20 +248,22 @@ Para la resolución del problema, utilizar las aproximaciones propuestas por Rap
 
 ## Solución
 
-**Método:** el grupo primario $E(A,50)$ deja desbordar una parte pequeña del tráfico, y ese desborde no es de Poisson. Se calculan su media $M$ y su varianza $V$ (Riordan) y se reemplaza por un sistema equivalente $(A^*, N^*)$ (en las diapositivas se escriben $A$ y $C$) con las aproximaciones de Rapp.
+**Método:** el grupo primario $E(A_1, C_1)$ deja desbordar una parte pequeña del tráfico, y ese desborde no es de Poisson. Se calculan su media $M$ y su varianza $V$ (Riordan) y se reemplaza por un sistema equivalente $(A, C)$ con las aproximaciones de Rapp.
 
-### Paso previo: tráfico ofrecido $A$
+**Notación de las diapositivas:** $A_1$ = tráfico ofrecido al grupo primario y $C_1 = 50$ = sus canales reales; $M$ y $V$ = media y varianza del desborde; $A$ y $C$ (sin subíndice) = tráfico y circuitos equivalentes de Rapp.
 
-Se busca $A$ tal que $E(A,50) = 0{,}001370$. Con la recurrencia de Erlang B,
+### Paso previo: tráfico ofrecido $A_1$
+
+Se busca $A_1$ tal que $E(C_1, A_1) = E(50, A_1) = 0{,}001370$ (tabla de Erlang B; aquí se calcula con la recurrencia como herramienta de cálculo):
 
 $$
 E(A,n) = \frac{A\,E(A,n-1)}{n + A\,E(A,n-1)}, \qquad E(A,0) = 1
 $$
 
-se evalúa $n = 50$ para dos valores de $A$ que encierran el bloqueo dado: $E(33{,}1;\,50) = 0{,}001362$ y $E(33{,}2;\,50) = 0{,}001433$. Interpolando:
+Se evalúa $n = 50$ para dos valores de $A$ que encierran el bloqueo dado: $E(33{,}1;\,50) = 0{,}001362$ y $E(33{,}2;\,50) = 0{,}001433$. Interpolando:
 
 $$
-A = 33{,}1 + 0{,}1\times\frac{0{,}001370 - 0{,}001362}{0{,}001433 - 0{,}001362} = 33{,}1 + 0{,}1\times\frac{0{,}000008}{0{,}000071} = 33{,}11\ \text{Erlangs}
+A_1 = 33{,}1 + 0{,}1\times\frac{0{,}001370 - 0{,}001362}{0{,}001433 - 0{,}001362} = 33{,}1 + 0{,}1\times\frac{0{,}000008}{0{,}000071} = 33{,}11\ \text{Erlangs}
 $$
 
 Comprobación: $E(33{,}11;\,50) = 0{,}001369 \approx 0{,}001370$.
@@ -246,7 +273,7 @@ Comprobación: $E(33{,}11;\,50) = 0{,}001369 \approx 0{,}001370$.
 Es el tráfico que desborda del grupo primario:
 
 $$
-M = A \cdot E(A,N) = 33{,}11\ \text{Erlangs} \times 0{,}001370 = 0{,}04536\ \text{Erlangs}
+M = A_1 \cdot E(C_1, A_1) = 33{,}11\ \text{Erlangs} \times 0{,}001370 = 0{,}04536\ \text{Erlangs}
 $$
 
 ### b) Varianza del tráfico ($V$)
@@ -254,53 +281,45 @@ $$
 Fórmula de Riordan:
 
 $$
-V = M\left(1 - M + \frac{A}{N + 1 - A + M}\right)
+V = M\left(1 - M + \frac{A_1}{C_1 + 1 - A_1 + M}\right)
 $$
 
 Paso a paso:
 
 $$
-N + 1 - A + M = 50 + 1 - 33{,}11 + 0{,}04536 = 17{,}93536 \qquad \frac{A}{17{,}93536} = \frac{33{,}11}{17{,}93536} = 1{,}8461
+C_1 + 1 - A_1 + M = 50 + 1 - 33{,}11 + 0{,}04536 = 17{,}93536 \qquad \frac{A_1}{17{,}93536} = \frac{33{,}11}{17{,}93536} = 1{,}8461
 $$
 
 $$
-z = 1 - M + 1{,}8461 = 1 - 0{,}04536 + 1{,}8461 = 2{,}8007 \quad \text{(relación varianza/media, sin unidad)}
+\frac{V}{M} = 1 - M + 1{,}8461 = 1 - 0{,}04536 + 1{,}8461 = 2{,}8007 \quad \text{(relación varianza/media, sin unidad)}
 $$
 
 $$
-V = M \times z = 0{,}04536\ \text{Erlangs} \times 2{,}8007 = 0{,}1270\ \text{Erlangs}^2
+V = M \times \frac{V}{M} = 0{,}04536\ \text{Erlangs} \times 2{,}8007 = 0{,}1270\ \text{Erlangs}^2
 $$
 
-### c) Intensidad de tráfico equivalente ($A^*$)
-
-Rapp:
+### c) Intensidad de tráfico del sistema ($A$, Rapp)
 
 $$
-A^* = V + 3z(z-1)
+A = V + 3\,\frac{V}{M}\left(\frac{V}{M} - 1\right)
 $$
 
-Primero el término $3z(z-1)$:
+Primero el término $3\,\frac{V}{M}\left(\frac{V}{M}-1\right) = 3\,(2{,}8007)\,(1{,}8007) = 8{,}4021 \times 1{,}8007 = 15{,}130$:
 
 $$
-3z(z-1) = 3\,(2{,}8007)\,(1{,}8007) = 8{,}4021 \times 1{,}8007 = 15{,}130
+A = 0{,}1270 + 15{,}130 = 15{,}257\ \text{Erlangs}
 $$
 
-$$
-A^* = 0{,}1270 + 15{,}130 = 15{,}257\ \text{Erlangs}
-$$
-
-### d) Circuitos parciales requeridos ($N^*$)
-
-Rapp:
+### d) Circuitos parciales requeridos ($C$, Rapp)
 
 $$
-N^* = \frac{A^*(M+z)}{M+z-1} - (M+1)
+C = \frac{A\left(M + \frac{V}{M}\right)}{M + \frac{V}{M} - 1} - M - 1
 $$
 
-Primero los términos: $M + z = 0{,}04536 + 2{,}8007 = 2{,}8461$ y $M + z - 1 = 1{,}8461$.
+Primero los términos: $M + V/M = 0{,}04536 + 2{,}8007 = 2{,}8461$ y $M + V/M - 1 = 1{,}8461$.
 
 $$
-N^* = 15{,}257 \times \frac{2{,}8461}{1{,}8461} - 1{,}04536 = 15{,}257 \times 1{,}5417 - 1{,}04536 = 23{,}521 - 1{,}045 = 22{,}48\ \text{circuitos}
+C = 15{,}257 \times \frac{2{,}8461}{1{,}8461} - 0{,}04536 - 1 = 15{,}257 \times 1{,}5417 - 1{,}045 = 23{,}521 - 1{,}045 = 22{,}48\ \text{circuitos}
 $$
 
 ### Resumen
@@ -309,10 +328,10 @@ $$
 |---|:---:|---:|---|
 | a) Media del tráfico (desborde) | $M$ | 0,0454 | Erlangs |
 | b) Varianza del tráfico | $V$ | 0,1270 | $\text{Erlangs}^2$ |
-| c) Intensidad de tráfico equivalente | $A^*$ | 15,26 | Erlangs |
-| d) Circuitos parciales requeridos | $N^*$ | 22,48 | circuitos |
+| c) Intensidad de tráfico (Rapp) | $A$ | 15,26 | Erlangs |
+| d) Circuitos parciales requeridos | $C$ | 22,48 | circuitos |
 
-Nota: $N^*$ no se redondea, se conserva con decimales para el cálculo posterior de la troncal común.
+Nota: $C$ no se redondea, se conserva con decimales para el cálculo posterior de la troncal común.
 
 # Ejercicio 4 2026
 
@@ -333,24 +352,32 @@ h) El número de llamadas rechazadas durante una hora.
 
 ## Solución
 
-**Modelo:** hay $F = 100$ fuentes (finitas), $N = 4$ canales y una tasa de llegada $\lambda = 3000\ \text{llamadas/hora}$. Con este mismo patrón de datos (fuentes, canales y $\lambda$), el ejemplo resuelto de las diapositivas usa **Engset**, por eso es el modelo principal. Erlang B (fuentes infinitas) se resuelve al final solo como comparación.
+**Modelo:** hay $F = 100$ fuentes (finitas), $N = 4$ canales y una tasa de llegada $\lambda = 3000\ \text{llamadas/hora}$. Con este mismo patrón de datos (fuentes, canales y $\lambda$), el ejemplo resuelto de las diapositivas usa **Engset**, por eso es el modelo de resolución.
 
-**Notación:** $F$ = número de fuentes; $N$ = número de canales; $\bar{t}$ = tiempo medio de ocupación ($5\ \text{s}$); $b$ = tráfico por fuente libre; $E$ = congestión en el tiempo; $B$ = congestión en las llamadas; $A$ = tráfico ofrecido; $A^l$ = tráfico cursado; $M$ = tráfico rechazado; $NLLP$ = número de llamadas perdidas por hora.
-
-### Modelo principal: Engset (100 fuentes)
+**Notación:** $F$ = número de fuentes; $N$ = número de canales; $\bar{t}$ = tiempo medio de ocupación ($5\ \text{s}$); $a$ = tasa generada por fuente libre; $b$ = tráfico por fuente libre; $E$ = congestión en el tiempo; $B$ = congestión en las llamadas; $A$ = tráfico ofrecido; $A^l$ = tráfico cursado; $M$ = tráfico rechazado; $NLLP$ = número de llamadas perdidas por hora.
 
 Definiciones: la congestión en el tiempo $E$ es la fracción del tiempo en que todos los canales están ocupados; la congestión en las llamadas $B$ es la fracción de intentos de llamada que encuentran todos los canales ocupados.
 
-Tráfico por fuente libre:
+Tasa por fuente y tráfico por fuente libre:
 
 $$
-b = \frac{\lambda}{F}\,\bar{t} = 30\ \frac{\text{llamadas}}{\text{hora}\cdot\text{fuente}} \times \frac{5}{3600}\ \text{hora} = 0{,}041667\ \frac{\text{Erlangs}}{\text{fuente}} = \frac{1}{24}
+a = \frac{\lambda}{F} = \frac{3000\ \text{llamadas/hora}}{100} = 30\ \frac{\text{llamadas}}{\text{hora}\cdot\text{fuente}} = \frac{30}{3600} = 0{,}008333\ \frac{\text{llamadas}}{\text{s}\cdot\text{fuente}}
+$$
+
+$$
+b = a\cdot\bar{t} = 0{,}008333\ \frac{\text{llamadas}}{\text{s}} \times 5\ \text{s} = 0{,}041667\ \frac{\text{Erlangs}}{\text{fuente}} = \frac{1}{24}
 $$
 
 **a) Expresión general:**
 
 $$
-P(j) = \frac{\binom{100}{j}\,b^j}{\displaystyle\sum_{k=0}^{4}\binom{100}{k}\,b^k}
+P(j) = \frac{\binom{F}{j}\,b^j}{\displaystyle\sum_{i=0}^{N}\binom{F}{i}\,b^i}
+$$
+
+Para $F = 100$, $N = 4$ y $b = 1/24$:
+
+$$
+P(j) = \frac{\binom{100}{j}\,b^j}{\displaystyle\sum_{i=0}^{4}\binom{100}{i}\,b^i}
 $$
 
 **b) Probabilidades de estado.** Cada coeficiente binomial sale de $\binom{n}{k} = \dfrac{n!}{k!\,(n-k)!}$; por ejemplo, $\binom{100}{4} = \dfrac{100 \cdot 99 \cdot 98 \cdot 97}{4!} = 3\,921\,225$. Con $b^j = (1/24)^j$:
@@ -379,7 +406,11 @@ $$
 
 **d) Congestión en las llamadas** (se calcula con $F-1 = 99$ fuentes, porque la fuente que origina la llamada no puede estar ocupada):
 
-| $j$ | $\binom{99}{j}$ | $\binom{99}{j}\,b^j$ |
+$$
+B = \frac{\binom{F-1}{N}\,b^N}{\displaystyle\sum_{J=0}^{N}\binom{F-1}{J}\,b^J}
+$$
+
+| $J$ | $\binom{99}{J}$ | $\binom{99}{J}\,b^J$ |
 |---:|---:|---:|
 | 0 | 1 | 1,0000 |
 | 1 | 99 | $99/24 = 4{,}1250$ |
@@ -392,19 +423,21 @@ $$
 $$
 
 $$
-B = \frac{\binom{99}{4}\,b^4}{\displaystyle\sum_{k=0}^{4}\binom{99}{k}\,b^k} = \frac{11{,}3461}{36{,}2391} = 0{,}3131 \quad (31{,}31\%)
+B = \frac{11{,}3461}{36{,}2391} = 0{,}3131 \quad (31{,}31\%)
 $$
+
+Se cumple $B < E$ ($0{,}3131 < 0{,}3171$), como corresponde a Engset.
 
 **f) Tráfico cursado** ($A^l$, canales ocupados en promedio):
 
 $$
-A^l = \sum_{j=0}^{4} j\,P(j) = 0(0{,}0268) + 1(0{,}1118) + 2(0{,}2305) + 3(0{,}3138) + 4(0{,}3171) = 0{,}1118 + 0{,}4611 + 0{,}9414 + 1{,}2682 = 2{,}7825\ \text{Erlangs}
-$$
-
-Verificación con la fórmula de las diapositivas:
-
-$$
 A^l = \frac{F\,b\,(1-B)}{1 + b\,(1-B)} = \frac{100 \times 0{,}041667 \times 0{,}6869}{1 + 0{,}041667 \times 0{,}6869} = \frac{2{,}8621}{1{,}0286} = 2{,}7825\ \text{Erlangs}
+$$
+
+Verificación con el promedio de canales ocupados:
+
+$$
+A^l = \sum_{j=0}^{4} j\,P(j) = 0(0{,}0268) + 1(0{,}1118) + 2(0{,}2305) + 3(0{,}3138) + 4(0{,}3171) = 0{,}1118 + 0{,}4611 + 0{,}9414 + 1{,}2682 = 2{,}7825\ \text{Erlangs}
 $$
 
 **e) Tráfico ofrecido** (se calcula después del cursado):
@@ -425,94 +458,20 @@ $$
 NLLP = \frac{M \times 3600}{\bar{t}} = \frac{1{,}2682\ \text{Erlangs} \times 3600\ \text{s/hora}}{5\ \text{s}} = 913{,}1\ \text{llamadas/hora}
 $$
 
-### Comparación: Erlang B (fuentes infinitas)
-
-Con fuentes infinitas (llegadas de Poisson) no interviene $F$.
-
-**e) Tráfico ofrecido:**
-
-$$
-A = \lambda\,\bar{t} = 3000\ \frac{\text{llamadas}}{\text{hora}} \times \frac{5\ \text{s}}{3600\ \text{s/hora}} = 4{,}1667\ \text{Erlangs}
-$$
-
-**a) Expresión general** (con $N = 4\ \text{canales}$), donde $D$ es el denominador:
-
-$$
-P(j) = \frac{A^j / j!}{D} \qquad D = \sum_{k=0}^{N} \frac{A^k}{k!}
-$$
-
-**b) Probabilidades de estado.** Términos $A^k/k!$ con $A = 4{,}1667$:
-
-$$
-D = \frac{4{,}1667^0}{0!} + \frac{4{,}1667^1}{1!} + \frac{4{,}1667^2}{2!} + \frac{4{,}1667^3}{3!} + \frac{4{,}1667^4}{4!}
-$$
-
-| $k$ | $A^k$ | $k!$ | $A^k/k!$ |
-|---:|---:|---:|---:|
-| 0 | 1 | 1 | 1,0000 |
-| 1 | 4,1667 | 1 | 4,1667 |
-| 2 | 17,3611 | 2 | 8,6806 |
-| 3 | 72,3380 | 6 | 12,0563 |
-| 4 | 301,4083 | 24 | 12,5587 |
-
-$$
-D = 1 + 4{,}1667 + 8{,}6806 + 12{,}0563 + 12{,}5587 = \mathbf{38{,}4622}
-$$
-
-$$
-P(0) = \frac{1}{38{,}4622} = 0{,}0260 \quad (2{,}60\%) \qquad P(1) = \frac{4{,}1667}{38{,}4622} = 0{,}1083 \quad (10{,}83\%)
-$$
-
-$$
-P(2) = \frac{8{,}6806}{38{,}4622} = 0{,}2257 \quad (22{,}57\%) \qquad P(3) = \frac{12{,}0563}{38{,}4622} = 0{,}3135 \quad (31{,}35\%)
-$$
-
-$$
-P(4) = \frac{12{,}5587}{38{,}4622} = 0{,}3265 \quad (32{,}65\%)
-$$
-
-**c) Congestión en el tiempo:**
-
-$$
-E = P(N) = P(4) = \mathbf{0{,}32652} \quad (\mathbf{32{,}652\%})
-$$
-
-**d) Congestión en las llamadas:** con llegadas de Poisson coincide con la del tiempo, $B = E = 0{,}3265$ (32,65 %).
-
-**f) Tráfico cursado:**
-
-$$
-A^l = A(1-B) = 4{,}1667\ \text{Erlangs} \times (1 - 0{,}32652) = 4{,}1667\ \text{Erlangs} \times 0{,}67348 = 2{,}8062\ \text{Erlangs}
-$$
-
-**g) Tráfico rechazado:**
-
-$$
-M = A - A^l = 4{,}1667\ \text{Erlangs} - 2{,}8062\ \text{Erlangs} = 1{,}3605\ \text{Erlangs}
-$$
-
-**h) Llamadas rechazadas en una hora:**
-
-$$
-NLLP = \frac{M \times 3600}{\bar{t}} = \frac{1{,}3605\ \text{Erlangs} \times 3600\ \text{s/hora}}{5\ \text{s}} = 979{,}56\ \text{llamadas/hora} \approx 980\ \text{llamadas/hora}
-$$
-
 ### Resumen
 
-| Ítem                         | Engset (principal) | Erlang B (comparación) |
-| ---------------------------- | -----------------: | ---------------------: |
-| $P(0)$                       |             2,68 % |                 2,60 % |
-| $P(1)$                       |            11,18 % |                10,83 % |
-| $P(2)$                       |            23,05 % |                22,57 % |
-| $P(3)$                       |            31,38 % |                31,35 % |
-| $P(4)$                       |            31,71 % |                32,65 % |
-| Congestión en el tiempo      |            31,71 % |                32,65 % |
-| Congestión en las llamadas   |            31,31 % |                32,65 % |
-| Tráfico ofrecido             |     4,0507 Erlangs |         4,1667 Erlangs |
-| Tráfico cursado              |     2,7825 Erlangs |         2,8062 Erlangs |
-| Tráfico rechazado            |     1,2682 Erlangs |         1,3605 Erlangs |
-| Llamadas rechazadas por hora |              913,1 |                 979,56 |
+| Ítem                         | Resultado (Engset) |
+| ---------------------------- | -----------------: |
+| $P(0)$                       |             2,68 % |
+| $P(1)$                       |            11,18 % |
+| $P(2)$                       |            23,05 % |
+| $P(3)$                       |            31,38 % |
+| $P(4)$                       |            31,71 % |
+| Congestión en el tiempo $E$  |            31,71 % |
+| Congestión en las llamadas $B$ |          31,31 % |
+| Tráfico ofrecido $A$         |     4,0507 Erlangs |
+| Tráfico cursado $A^l$        |     2,7825 Erlangs |
+| Tráfico rechazado $M$        |     1,2682 Erlangs |
+| Llamadas rechazadas por hora |              913,1 |
 
-Nota: según las diapositivas, el ejemplo resuelto con este mismo patrón de datos (fuentes, canales y $\lambda$) usa Engset; por eso las respuestas del ejercicio son las de Engset y Erlang B queda solo como comparación.
-
-
+Nota (comparación con Erlang B, fuentes infinitas): con $A = \lambda\,\bar{t} = 3000 \times 5/3600 = 4{,}1667\ \text{Erlangs}$ se obtiene $E = B = 32{,}65\%$, $A^l = 2{,}8062\ \text{Erlangs}$, $M = 1{,}3605\ \text{Erlangs}$ y $NLLP \approx 980\ \text{llamadas/hora}$. Como el ejemplo de las diapositivas con este patrón de datos usa Engset, las respuestas del ejercicio son las de Engset.
