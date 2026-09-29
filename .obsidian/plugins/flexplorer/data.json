@@ -23,11 +23,7 @@
         "Rubbish",
         "Habits",
         "Borrar",
-        "shared",
-        "Untitled.md",
-        "resumen_wireshark_sesion.md",
-        "Untitled 1.md",
-        "Untitled 2.md"
+        "shared"
       ]
     },
     "MOC": {
@@ -617,6 +613,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "resumen_wireshark_sesion.md",
         "notebooklm_question.md",
         "respuestas de gemini+fuentes.md",
         "void 1.md",
@@ -844,7 +841,8 @@
         "MAT101",
         "ETN607",
         "ETN1015",
-        "ETN825"
+        "ETN825",
+        "ETN1012"
       ]
     },
     "_app/notebooklm/guides/MAT101": {
@@ -6484,19 +6482,11 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Untitled.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "_skills/_start_movil607P1 1 1.md": {
       "isPinned": false,
       "isHidden": false
     },
     "_skills/_start_movil.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "resumen_wireshark_sesion.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -11281,35 +11271,24 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Untitled 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "Semesters/Sem_09/ETN1012": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "1er parcial ETN-1012 marzo 2026.md",
-        "1er parcial ETN-1012 marzo 2022.md",
+        "Formulario.md",
         "1er parcial ETN-1012 marzo 2026 1.md",
-        "1er parcial ETN-1012 marzo 2026 1 1.md",
-        "1er parcial ETN-1012 marzo 2026 1 2este erar.md"
+        "1er parcial ETN-1012 marzo 2022 1.md",
+        "no",
+        "Ejercicio 1 2026.md",
+        "Ejercicio 2 2026.md",
+        "Ejercicio 3 2026.md",
+        "Ejercicio 4 2026.md",
+        "Ejercicio 1 2022.md",
+        "Ejercicio 2 2022.md"
       ]
     },
     "_assets/er parcial ETN-1012 marzo 2022-28-09-2026_18-01-56.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semesters/Sem_09/ETN1012/1er parcial ETN-1012 marzo 2026.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Semesters/Sem_09/ETN1012/1er parcial ETN-1012 marzo 2022.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/1er parcial ETN-1012 marzo 2022-28-09-2026_18-02-52.png": {
       "isPinned": false,
       "isHidden": false
     },
@@ -11317,15 +11296,92 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Untitled 2.md": {
+    "Semesters/Sem_09/ETN1012/1er parcial ETN-1012 marzo 2022 1.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "Semesters/Sem_09/ETN1012/1er parcial ETN-1012 marzo 2026 1 1.md": {
+    "_app/notebooklm/guides/ETN1012": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "ETN1012_desmos.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "_app/notebooklm/guides/ETN1012/ETN1012_desmos.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "Semesters/Sem_09/ETN1012/1er parcial ETN-1012 marzo 2026 1 2este erar.md": {
+    "Borrar/resumen_wireshark_sesion.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/ETN1012/Formulario.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/ETN1012/no": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "1er parcial ETN-1012 marzo 2026 1 1.md",
+        "1er parcial ETN-1012 marzo 2026.md",
+        "1er parcial ETN-1012 marzo 2022.md",
+        "1er parcial ETN-1012 marzo 2026bk.md",
+        "1er parcial ETN-1012 marzo 2026 1 2este erar.md",
+        "1er parcial ETN-1012 marzo 2022bk.md"
+      ],
+      "sortOrder": "custom"
+    },
+    "Semesters/Sem_09/ETN1012/no/1er parcial ETN-1012 marzo 2022bk.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/ETN1012/no/1er parcial ETN-1012 marzo 2026 1 2este erar.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/ETN1012/no/1er parcial ETN-1012 marzo 2026bk.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/ETN1012/no/1er parcial ETN-1012 marzo 2022.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/1er parcial ETN-1012 marzo 2022-28-09-2026_18-02-52.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/ETN1012/no/1er parcial ETN-1012 marzo 2026.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/ETN1012/no/1er parcial ETN-1012 marzo 2026 1 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/ETN1012/Ejercicio 1 2026.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/ETN1012/Ejercicio 2 2026.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/ETN1012/Ejercicio 3 2026.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/ETN1012/Ejercicio 4 2026.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/ETN1012/Ejercicio 1 2022.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/ETN1012/Ejercicio 2 2022.md": {
       "isPinned": false,
       "isHidden": false
     }

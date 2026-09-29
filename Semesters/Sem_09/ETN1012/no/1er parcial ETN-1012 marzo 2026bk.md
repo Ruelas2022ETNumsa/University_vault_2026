@@ -34,7 +34,7 @@ Supuestos: el enunciado no da el carrier ni el número de abonado; se toma ENTEL
 
 REFERENCIA (no es parte de la respuesta; fuentes de internet, verificar con las diapositivas)
 
-Zona telefónica actual (Bolivia; ojo: no es el dígito 6 "zona" del plan de 15 dígitos del formulario, que es la zona dentro de la ciudad; el país del enunciado es 403, no Bolivia): 2 = La Paz, Oruro, Potosí | 3 = Santa Cruz, Beni, Pando | 4 = Cochabamba, Chuquisaca, Tarija
+Zona telefónica actual (Bolivia): 2 = La Paz, Oruro, Potosí | 3 = Santa Cruz, Beni, Pando | 4 = Cochabamba, Chuquisaca, Tarija
 
 Código de ciudad (2 dígitos, plan anterior; las fuentes varían):
 
@@ -46,7 +46,7 @@ Código de ciudad (2 dígitos, plan anterior; las fuentes varían):
 | Sucre                   | 64                       |
 | Cochabamba              | 44 (otra fuente: 42)     |
 | Tarija                  | 66                       |
-| Santa Cruz de la Sierra | 33 |
+| Santa Cruz de la Sierra | 33 (es el del enunciado) |
 | Trinidad                | 46 (346 con zona 3)      |
 | Cobija                  | 842 (3 dígitos)          |
 
@@ -129,50 +129,50 @@ $$
 
 y se interpola entre los dos valores enteros de $n$ que encierran el bloqueo medido:
 
-- Para $A_{AB} = 73\ \text{Erlangs}$ y $B = 0{,}179$: $E(73;63) = 0{,}18550$ y $E(73;64) = 0{,}17463$, luego
+- Para $A_{AB} = 73\ \text{Erlangs}$ y $B = 0{,}179$: $E(73;63) = 0{,}1855$ y $E(73;64) = 0{,}1746$, luego
 
 $$
-C'_{AB} = 63 + \frac{0{,}18550 - 0{,}17900}{0{,}18550 - 0{,}17463} = 63 + \frac{0{,}00650}{0{,}01087} = 63{,}598\ \text{canales}
+C'_{AB} = 63 + \frac{0{,}1855 - 0{,}179}{0{,}1855 - 0{,}1746} = 63 + \frac{0{,}0065}{0{,}0109} = 63{,}60\ \text{canales}
 $$
 
-- Para $A_{AC} = 65\ \text{Erlangs}$ y $B = 0{,}1077$: $E(65;63) = 0{,}11210$ y $E(65;64) = 0{,}10221$, luego
+- Para $A_{AC} = 65\ \text{Erlangs}$ y $B = 0{,}1077$: $E(65;63) = 0{,}1121$ y $E(65;64) = 0{,}1022$, luego
 
 $$
-C'_{AC} = 63 + \frac{0{,}11210 - 0{,}10770}{0{,}11210 - 0{,}10221} = 63 + \frac{0{,}00440}{0{,}00989} = 63{,}445\ \text{canales}
+C'_{AC} = 63 + \frac{0{,}1121 - 0{,}1077}{0{,}1121 - 0{,}1022} = 63 + \frac{0{,}0044}{0{,}0099} = 63{,}44\ \text{canales}
 $$
 
 Desborde A→B, paso a paso:
 
 $$
-C'_{AB} + 1 - A_{AB} + m_{AB} = 63{,}598 + 1 - 73 + 13{,}067 = 4{,}665 \qquad \frac{A_{AB}}{4{,}665} = \frac{73}{4{,}665} = 15{,}648
+C'_{AB} + 1 - A_{AB} + m_{AB} = 63{,}60 + 1 - 73 + 13{,}067 = 4{,}667 \qquad \frac{A_{AB}}{4{,}667} = \frac{73}{4{,}667} = 15{,}6417
 $$
 
 $$
-1 - m_{AB} + 15{,}648 = 1 - 13{,}067 + 15{,}648 = 3{,}581
+1 - m_{AB} + 15{,}6417 = 1 - 13{,}067 + 15{,}6417 = 3{,}5747
 $$
 
 $$
-v_{AB} = m_{AB} \times 3{,}581 = 13{,}067 \times 3{,}581 \approx 46{,}793\ \text{Erlangs}^2
+v_{AB} = m_{AB} \times 3{,}5747 = 13{,}067 \times 3{,}5747 = 46{,}71\ \text{Erlangs}^2
 $$
 
 Desborde A→C, paso a paso:
 
 $$
-C'_{AC} + 1 - A_{AC} + m_{AC} = 63{,}445 + 1 - 65 + 7{,}0005 = 6{,}4455 \qquad \frac{A_{AC}}{6{,}4455} = \frac{65}{6{,}4455} = 10{,}085
+C'_{AC} + 1 - A_{AC} + m_{AC} = 63{,}44 + 1 - 65 + 7{,}0005 = 6{,}4405 \qquad \frac{A_{AC}}{6{,}4405} = \frac{65}{6{,}4405} = 10{,}0924
 $$
 
 $$
-1 - m_{AC} + 10{,}085 = 1 - 7{,}0005 + 10{,}085 = 4{,}0845
+1 - m_{AC} + 10{,}0924 = 1 - 7{,}0005 + 10{,}0924 = 4{,}0919
 $$
 
 $$
-v_{AC} = m_{AC} \times 4{,}0845 = 7{,}0005 \times 4{,}0845 \approx 28{,}594\ \text{Erlangs}^2
+v_{AC} = m_{AC} \times 4{,}0919 = 7{,}0005 \times 4{,}0919 = 28{,}65\ \text{Erlangs}^2
 $$
 
 Las varianzas se suman:
 
 $$
-V = \sum_{i=1}^{r} v_i = 46{,}793 + 28{,}594 = 75{,}387\ \text{Erlangs}^2
+V = \sum_{i=1}^{r} v_i = 46{,}71 + 28{,}65 = 75{,}36\ \text{Erlangs}^2
 $$
 
 ### 3. Aproximaciones de Rapp ($A$ y $C$ equivalentes)
@@ -180,7 +180,7 @@ $$
 Relación varianza/media:
 
 $$
-\frac{V}{M} = \frac{75{,}387}{20{,}0675} = 3{,}757 \quad \text{(sin unidad)}
+\frac{V}{M} = \frac{75{,}36}{20{,}0675} = 3{,}755 \quad \text{(sin unidad)}
 $$
 
 Tráfico equivalente:
@@ -189,10 +189,10 @@ $$
 A = V + 3\,\frac{V}{M}\left(\frac{V}{M} - 1\right)
 $$
 
-Primero el término $3\,\frac{V}{M}\left(\frac{V}{M}-1\right) = 3\,(3{,}757)\,(2{,}757) = 11{,}271 \times 2{,}757 = 31{,}07$:
+Primero el término $3\,\frac{V}{M}\left(\frac{V}{M}-1\right) = 3\,(3{,}755)\,(2{,}755) = 11{,}265 \times 2{,}755 = 31{,}04$:
 
 $$
-A = 75{,}387 + 31{,}07 \approx 106{,}45\ \text{Erlangs}
+A = 75{,}36 + 31{,}04 = 106{,}40\ \text{Erlangs}
 $$
 
 Canales equivalentes:
@@ -201,10 +201,10 @@ $$
 C = \frac{A\left(M + \frac{V}{M}\right)}{M + \frac{V}{M} - 1} - M - 1
 $$
 
-Primero los términos: $M + V/M = 20{,}0675 + 3{,}757 = 23{,}8245$ y $M + V/M - 1 = 22{,}8245$.
+Primero los términos: $M + V/M = 20{,}0675 + 3{,}755 = 23{,}8225$ y $M + V/M - 1 = 22{,}8225$.
 
 $$
-C = 106{,}45 \times \frac{23{,}8245}{22{,}8245} - 20{,}0675 - 1 = 106{,}45 \times 1{,}04381 - 21{,}0675 = 111{,}12 - 21{,}07 = 90{,}05\ \text{canales}
+C = 106{,}40 \times \frac{23{,}8225}{22{,}8225} - 20{,}0675 - 1 = 106{,}40 \times 1{,}0438 - 21{,}0675 = 111{,}06 - 21{,}07 = 89{,}99\ \text{canales}
 $$
 
 ### 4. Canales hacia la central de tránsito T ($N_{AT}$)
@@ -212,23 +212,23 @@ $$
 Nuevo grado de pérdida sobre el desborde, con $B_2 = 0{,}5\%$:
 
 $$
-\text{nuevo } B = E(N_{AT} + C,\,A) = B_2\,\frac{M}{A} = \frac{0{,}005 \times 20{,}0675\ \text{Erlangs}}{106{,}45\ \text{Erlangs}} = \frac{0{,}1003}{106{,}45} = 9{,}43\times10^{-4}
+\text{nuevo } B = E(N_{AT} + C,\,A) = B_2\,\frac{M}{A} = \frac{0{,}005 \times 20{,}0675\ \text{Erlangs}}{106{,}40\ \text{Erlangs}} = \frac{0{,}1003}{106{,}40} = 9{,}43\times10^{-4}
 $$
 
-Con $A = 106{,}45\ \text{Erlangs}$ se busca el menor número de canales totales que cumpla (Erlang B, tabla o recurrencia): $N = 135\ \text{canales} \to 1{,}014\times10^{-3}$ (no cumple, es mayor que $9{,}43\times10^{-4}$) y $N = 136\ \text{canales} \to 7{,}93\times10^{-4}$ (cumple), luego $N_{AT} + C = 136\ \text{canales}$.
+Con $A = 106{,}40\ \text{Erlangs}$ se busca el menor número de canales totales que cumpla (Erlang B, tabla o recurrencia): $N = 135\ \text{canales} \to 9{,}98\times10^{-4}$ (no cumple, es mayor que $9{,}43\times10^{-4}$) y $N = 136\ \text{canales} \to 7{,}8\times10^{-4}$ (cumple), luego $N_{AT} + C = 136\ \text{canales}$.
 
 $$
-N_{AT} = (N_{AT} + C) - C = 136\ \text{canales} - 90{,}05\ \text{canales} = 45{,}95\ \text{canales}
+N_{AT} = (N_{AT} + C) - C = 136\ \text{canales} - 89{,}99\ \text{canales} = 46{,}01\ \text{canales}
 $$
 
-$N_{AT} = 45{,}95$ canales; como debe ser entero, se toman 46 canales.
+$N_{AT} \approx 46{,}0$ canales; como debe ser entero y el valor supera ligeramente 46, se toman 47 canales por seguridad.
 
-**Resultado: T necesita 46 canales.**
+**Resultado: T necesita 47 canales.**
 
 ### Notas
 
-- Se siguen las fórmulas del formulario (Riordan, Wilkinson, Rapp y $N_{AT}$). La varianza de cada desborde no se puede obtener con el formulario tal cual (da negativa, ver paso 2); el uso de $C'_i$ es un recurso propio, no del formulario. Es el mismo recurso que se usa en el ejercicio 6 del parcial 2022, que tiene los mismos datos.
-- Sensibilidad al redondeo: con $C'_{AB} = 63{,}60$ y $C'_{AC} = 63{,}44$ (dos decimales) sale $N_{AT} = 46{,}01$, que parecería pedir 47; sin redondeos intermedios sale $N_{AT} = 45{,}95$, así que la respuesta es 46 canales. Conviene arrastrar tres decimales en $C'$.
+- La varianza de cada desborde no se puede obtener con el formulario tal cual (da negativa, ver paso 2); el uso de $C'_i$ es un recurso propio, no del formulario.
+- El resultado es sensible al redondeo de $C'$: con $C'$ redondeado a 63,6 y 63,4 sale $N_{AT} + C = 137$ y $N_{AT} = 46{,}1$; sin redondeos intermedios, $N_{AT} = 45{,}6$. La respuesta queda entre 46 y 47 canales; se toma 47 para no quedar por debajo del grado de servicio.
 - Otros métodos: sumar solo las medias y aplicar Erlang B a 20,07 Erlangs da 32 canales (ignora las ráfagas); usar 51 y 46 canales con Erlang B da ≈ 72. Confirmar cuál usa la cátedra.
 
 # Ejercicio 3 2026

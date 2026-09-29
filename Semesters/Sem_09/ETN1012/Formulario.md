@@ -585,7 +585,3 @@ $$
   * **$M$ ("media del tráfico de desbordamiento"):** Es la sumatoria de las medias parciales de desborde ($M = \sum m_i$), que representa la cantidad promedio de tráfico que no cupo en los grupos directos y se ofrece al grupo de tránsito.
   * **$A$ ("intensidad de tráfico del sistema / tráfico equivalente"):** Corresponde algebraicamente al **$A^*$ teórico** de la literatura clásica de Rapp, pero **en las diapositivas de la materia se denota directamente con la letra $A$** (sin asterisco). Representa el tráfico poissoniano equivalente ofrecido a un grupo ficticio de $C$ (equivalente a $N^*$) canales que produciría el mismo desborde con media $M$ y varianza $V$.
 * **Cita de diapositivas:** *"5.2 FORMULAS DE ING.TRAFICO.pdf"* (Diapositivas 3 y 4 del tema Rapp).
-
----
-
-💡 **Sugerencia:** Si lo deseas, podemos repasar un caso práctico paso a paso aplicando la secuencia completa de Wilkinson y Rapp para dimensionar un haz hacia una central de tránsito.
