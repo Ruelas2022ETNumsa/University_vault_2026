@@ -1,132 +1,71 @@
-Para resolver este ejercicio de ingeniería de tráfico telefónico, aplicaremos las fórmulas de análisis y dimensionamiento presentes en las guías de la asignatura.
-
-En los temas abordados, cuando la tasa total de llegada de llamadas $\lambda$ se especifica como un valor constante e independiente del número de fuentes activas (en este caso 3000 llamadas/hora), el sistema se modela habitualmente con la **Distribución de Erlang B** (llegadas Poisson). No obstante, también desarrollaremos el **Modelo de Engset** (fuentes finitas $F = 100$) como enfoque comparativo.
+Para resolver este problema de dimensionamiento utilizando el **Modelo de Desborde y las Aproximaciones de Rapp**, seguimos un procedimiento analítico detallado basado en las fórmulas de ingeniería de tráfico telefónico.
 
 ---
 
-### **Datos del Problema**
-- **Número de canales de comunicación ($N$):** $4\text{ canales}$
-- **Número de fuentes de tráfico ($F$):** $100\text{ fuentes}$
-- **Tasa de llegada de llamadas ($\lambda$):** $3000\text{ llamadas/hora}$
-- **Tiempo medio de ocupación ($\bar{t}$):** $5\text{ segundos}$
+### **1. Determinación del Tráfico Ofrecido Original (\\(A\\))**
+
+A partir de la función de probabilidad de bloqueo de Erlang B, se nos especifica que:
+\\[E(A, 50) = 0,001370\\]
+
+Consultando la **Tabla 2 de Erlang B** para \\(N = 50\\) canales, encontramos que la intensidad de tráfico ofrecido original asociada a este nivel de bloqueo es:
+\\[A = 34,6\text{ Erlangs}\\]
 
 ---
 
-### **MODELO PRINCIPAL: Fórmula de Erlang B**
-*(Tasa total de llegada constante $\lambda$)*
+### **2. Resolución Paso a Paso**
 
-#### **e) Tráfico ofrecido al sistema (en Erlangs)**
-*(Se determina primero para construir la función de probabilidad $P(j)$)*:
+#### **a) Media del tráfico ofrecido / desbordado (\\(M\\))**
+La media del tráfico de desborde \\(M\\) que no logra ser atendido por el grupo primario de 50 circuitos está dada por la expresión:
+\\[M = A \cdot E(N, A)\\]
 
-$$
-A = \lambda \cdot \bar{t} = 3000 \frac{\text{llamadas}}{\text{hora}} \times \frac{1\text{ hora}}{3600\text{ s}} \times 5\text{ s} = \mathbf{4,1667\text{ Erlangs}} \quad \left(\frac{25}{6}\text{ Erl}\right)
-$$
-
-
-#### **a) Expresión general de la probabilidad de estado $P(j)$**
-La fórmula general de la probabilidad de estado $P(j)$ para Erlang B es:
-
-$$
-P(j) = \frac{\frac{A^j}{j!}}{\sum_{k=0}^{N} \frac{A^k}{k!}}
-$$
-
-
-Sustituyendo $A = 4,1667$ y $N = 4$, calculamos la suma del denominador ($D$):
-
-$$
-D = \frac{4,1667^0}{0!} + \frac{4,1667^1}{1!} + \frac{4,1667^2}{2!} + \frac{4,1667^3}{3!} + \frac{4,1667^4}{4!}
-$$
-
-
-$$
-D = 1 + 4,1667 + 8,6806 + 12,0563 + 12,5587 = \mathbf{38,4622}
-$$
-
-
-Por lo tanto, la **expresión general** es:
-
-$$
-P(j) = \frac{\frac{(4,1667)^j}{j!}}{38,4622}
-$$
-
-
-#### **b) Probabilidades de estado del sistema $P(0), P(1), P(2), P(3), P(4)$**
-- **$P(0)$:** \(\frac{1}{38,4622} = \mathbf{0,02600} \quad (\mathbf{2,600\%})\]
-- **$P(1)$:** \(\frac{4,1667}{38,4622} = \mathbf{0,10833} \quad (\mathbf{10,833\%})\]
-- **$P(2)$:** \(\frac{8,6806}{38,4622} = \mathbf{0,22569} \quad (\mathbf{22,569\%})\]
-- **$P(3)$:** \(\frac{12,0563}{38,4622} = \mathbf{0,31346} \quad (\mathbf{31,346\%})\]
-- **$P(4)$:** \(\frac{12,5587}{38,4622} = \mathbf{0,32652} \quad (\mathbf{32,652\%})\]
-
-#### **c) Congestión en el tiempo ($E$)**
-Es la probabilidad de que todos los canales ($N = 4$) estén ocupados:
-
-$$
-E = P(N) = P(4) = \mathbf{0,32652} \quad (\mathbf{32,652\%})
-$$
-
-
-#### **d) Congestión en las llamadas ($B$)**
-En el modelo Erlang B (proceso Poisson), la congestión en las llamadas coincide con la congestión en el tiempo:
-
-$$
-B = E = \mathbf{0,32652} \quad (\mathbf{32,652\%})
-$$
-
-
-#### **e) Tráfico ofrecido ($A$)**
-
-$$
-A = \mathbf{4,1667\text{ Erlangs}}
-$$
-
-
-#### **f) Tráfico cursado por el sistema ($A^l$)**
-
-$$
-A^l = A(1 - B) = 4,1667 \times (1 - 0,32652) = \mathbf{2,8062\text{ Erlangs}}
-$$
-
-
-#### **g) Tráfico rechazado ($M$)**
-
-$$
-M = A - A^l = A \cdot B = 4,1667 \times 0,32652 = \mathbf{1,3605\text{ Erlangs}}
-$$
-
-
-#### **h) Número de llamadas rechazadas durante una hora ($NLLP$)**
-
-$$
-NLLP = \frac{M \times 3600}{\bar{t}} = \frac{1,3605 \times 3600}{5} = \mathbf{979,56\text{ llamadas/hora}} \quad (\approx \mathbf{980\text{ llamadas}})
-$$
-
+Sustituyendo los valores conocidos:
+\\[M = 34,6 \times 0,001370 = 0,047402\text{ Erlangs}\\]
+\\[\mathbf{M \approx 0,0474\text{ Erl}}\\]
 
 ---
 
-### **MODELO ALTERNATIVO: Modelo de Engset**
-*(Considerando la restricción de fuentes finitas $F = 100$)*
+#### **b) Varianza del tráfico desbordado (\\(V\\))**
+La varianza del flujo de desborde se calcula empleando la fórmula de Riordan/Wilkinson:
+\\[V = M \left( 1 - M + \frac{A}{N + 1 - A + M} \right)\\]
 
-Si calculamos la tasa de llegada por fuente libre $a = \frac{\lambda}{F} = \frac{3000}{100} = 30\text{ llam/h/fuente} = \frac{1}{120}\text{ llam/s}$, el tráfico por fuente libre es $b = a \cdot \bar{t} = \frac{1}{120} \times 5 = \mathbf{0,041667\text{ Erlangs}}$.
-
-1. **Expresión general $P(j)$:** $P(j) = \frac{\binom{100}{j} (0,041667)^j}{\sum_{i=0}^4 \binom{100}{i} (0,041667)^i}$
-2. **Probabilidades de estado:**
-   - **$P(0)$:** **$0,02683$** $2,683%$
-   - **$P(1)$:** **$0,11178$** $11,178%$
-   - **$P(2)$:** **$0,23054$** $23,054%$
-   - **$P(3)$:** **$0,31379$** $31,379%$
-   - **$P(4)$:** **$0,31706$** $31,706%$
-3. **Congestión en el tiempo ($E$):** $E = P(4) = \mathbf{0,31706}\quad (\mathbf{31,706\%})$
-4. **Congestión en las llamadas ($B$):**
-   
-$$
-B = \frac{\binom{99}{4} (0,041667)^4}{\sum_{j=0}^4 \binom{99}{j} (0,041667)^j} = \mathbf{0,31309}\quad (\mathbf{31,309\%})
-$$
-
-5. **Tráfico cursado ($A^l$):** $A^l = \frac{F \cdot b (1 - B)}{1 + b(1 - B)} = \mathbf{2,7825\text{ Erlangs}}$
-6. **Tráfico ofrecido ($A$):** $A = \frac{A^l}{1 - B} = \mathbf{4,0507\text{ Erlangs}}$
-7. **Tráfico rechazado ($M$):** $M = A - A^l = \mathbf{1,2682\text{ Erlangs}}$
-8. **Llamadas rechazadas/hora ($NLLP$):** $NLLP = \frac{M \times 3600}{\bar{t}} = \mathbf{913,14\text{ llamadas/hora}}$
+Sustituyendo \\(A = 34,6\\), \\(N = 50\\) y \\(M = 0,0474\\):
+\\[V = 0,0474 \left( 1 - 0,0474 + \frac{34,6}{50 + 1 - 34,6 + 0,0474} \right)\\]
+\\[V = 0,0474 \left( 0,9526 + \frac{34,6}{16,4474} \right) = 0,0474 \times (0,9526 + 2,1037)\\]
+\\[V = 0,0474 \times 3,0563 = \mathbf{0,14487\text{ Erl}} \approx \mathbf{0,1453\text{ Erl}}\\]
 
 ---
 
-📊 ¿Te gustaría calcular la carga individual por canal $a(j)$ o el factor de mejoría de este sistema?
+#### **c) Intensidad de tráfico equivalente (\\(A^*\\))**
+Para caracterizar el flujo no poissoniano de desborde mediante un grupo equivalente, calculamos el factor de variabilidad (peakedness factor) \\(z = \frac{V}{M}\\) y aplicamos la **Fórmula de Rapp**:
+\\[z = \frac{V}{M} = \frac{0,1453}{0,0474} \approx 3,0619\\]
+\\[A^* = V + 3z(z - 1)\\]
+
+Sustituyendo \\(V = 0,1453\\) y \\(z = 3,06188\\):
+\\[A^* = 0,1453 + 3(3,06188)(3,06188 - 1)\\]
+\\[A^* = 0,1453 + 3(3,06188)(2,06188) = 0,1453 + 18,9397\\]
+\\[\mathbf{A^* \approx 19,085\text{ Erlangs}}\\]
+
+---
+
+#### **d) Número de circuitos parciales requeridos (\\(N^*\\) o \\(C^*\\))**
+Aplicando la segunda aproximación propuesta por **Rapp** para determinar los circuitos equivalentes \\(N^*\\):
+\\[N^* = \frac{A^*(M + z)}{M + z - 1} - M - 1\\]
+
+Sustituyendo \\(A^* = 19,085\\), \\(M = 0,0474\\) y \\(z = 3,06188\\):
+\\[N^* = \frac{19,085 \times (0,0474 + 3,06188)}{0,0474 + 3,06188 - 1} - 0,0474 - 1\\]
+\\[N^* = \frac{19,085 \times 3,10928}{2,10928} - 1,0474\\]
+\\[N^* = \frac{59,3406}{2,10928} - 1,0474 = 28,1331 - 1,0474\\]
+\\[\mathbf{N^* \approx 27,085\text{ circuitos}}\\]
+
+---
+
+### **Resumen de Resultados**
+
+| Parámetro | Símbolo | Valor Calculado | Unidad |
+| :--- | :---: | :---: | :---: |
+| **a) Media del tráfico de desborde** | \\(M\\) | **0,0474** | Erl |
+| **b) Varianza del tráfico** | \\(V\\) | **0,1453** | Erl |
+| **c) Intensidad de tráfico equivalente** | \\(A^*\\) | **19,085** | Erl |
+| **d) Circuitos parciales requeridos** | \\(N^*\\) | **27,085** | Canales / Circuitos |
+
+📞 ¿Te gustaría profundizar en el dimensionamiento de la ruta final que absorbería este tráfico equivalente o revisar otro caso de la guía?
