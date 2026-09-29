@@ -158,8 +158,6 @@ $$
 
 ### 3. Equivalente de Rapp
 
-Nota: en las diapositivas el tráfico y los canales equivalentes se escriben $A$ y $C$; aquí $A^*$ y $N^*$ para no confundirlos con el tráfico y los canales reales.
-
 Relación varianza/media:
 
 $$
@@ -184,10 +182,10 @@ $$
 
 ### 4. Canales de la central de tránsito T
 
-Pérdida objetivo sobre el desborde, con $B_2 = 0{,}5\%$ (pérdida permitida en la ruta de tránsito):
+Pérdida objetivo sobre el desborde:
 
 $$
-E(A^*, N_{total}) = \frac{B_2\,M}{A^*} = \frac{0{,}005 \times 20{,}0675\ \text{Erlangs}}{106{,}40\ \text{Erlangs}} = \frac{0{,}1003}{106{,}40} = 9{,}43\times10^{-4}
+E(A^*, N_{total}) = \frac{B\,M}{A^*} = \frac{0{,}005 \times 20{,}0675\ \text{Erlangs}}{106{,}40\ \text{Erlangs}} = \frac{0{,}1003}{106{,}40} = 9{,}43\times10^{-4}
 $$
 
 Se busca el menor $N$ que cumpla, evaluando Erlang B con $A^* = 106{,}40\ \text{Erlangs}$ (recurrencia o tabla): $N=135\ \text{canales} \to 9{,}98\times10^{-4}$ (no cumple, es mayor que $9{,}43\times10^{-4}$) y $N=136\ \text{canales} \to 7{,}8\times10^{-4}$ (cumple), luego $N_{total} = 136\ \text{canales}$.
@@ -223,7 +221,7 @@ Para la resolución del problema, utilizar las aproximaciones propuestas por Rap
 
 ## Solución
 
-**Método:** el grupo primario $E(A,50)$ deja desbordar una parte pequeña del tráfico, y ese desborde no es de Poisson. Se calculan su media $M$ y su varianza $V$ (Riordan) y se reemplaza por un sistema equivalente $(A^*, N^*)$ (en las diapositivas se escriben $A$ y $C$) con las aproximaciones de Rapp.
+**Método:** el grupo primario $E(A,50)$ deja desbordar una parte pequeña del tráfico, y ese desborde no es de Poisson. Se calculan su media $M$ y su varianza $V$ (Riordan) y se reemplaza por un sistema equivalente $(A^*, N^*)$ con las aproximaciones de Rapp.
 
 ### Paso previo: tráfico ofrecido $A$
 
@@ -314,6 +312,10 @@ $$
 
 Nota: $N^*$ no se redondea, se conserva con decimales para el cálculo posterior de la troncal común.
 
+
+
+
+
 # Ejercicio 4 2026
 
 Una red de telefonía pública dispone de 4 canales de comunicación y está conformada por 100 fuentes de tráfico. Durante el periodo de observación, se ha determinado que la tasa de llegada de llamadas es constante e igual a 3000 llamadas por hora, mientras que el tiempo medio de ocupación de cada llamada es de 5 segundos.
@@ -333,13 +335,81 @@ h) El número de llamadas rechazadas durante una hora.
 
 ## Solución
 
-**Modelo:** hay $F = 100$ fuentes (finitas), $N = 4$ canales y una tasa de llegada $\lambda = 3000\ \text{llamadas/hora}$. Con este mismo patrón de datos (fuentes, canales y $\lambda$), el ejemplo resuelto de las diapositivas usa **Engset**, por eso es el modelo principal. Erlang B (fuentes infinitas) se resuelve al final solo como comparación.
+**Modelo:** el enunciado da una tasa de llegada total constante ($\lambda = 3000\ \text{llamadas/hora}$), independiente de cuántas fuentes estén activas: llegadas de Poisson, por lo que se aplica **Erlang B** (modelo principal). Las 100 fuentes solo intervienen en Engset, que se resuelve al final como comparación.
 
-**Notación:** $F$ = número de fuentes; $N$ = número de canales; $\bar{t}$ = tiempo medio de ocupación ($5\ \text{s}$); $b$ = tráfico por fuente libre; $E$ = congestión en el tiempo; $B$ = congestión en las llamadas; $A$ = tráfico ofrecido; $A^l$ = tráfico cursado; $M$ = tráfico rechazado; $NLLP$ = número de llamadas perdidas por hora.
+### Modelo principal: Erlang B
 
-### Modelo principal: Engset (100 fuentes)
+**e) Tráfico ofrecido** (se calcula primero):
 
-Definiciones: la congestión en el tiempo $E$ es la fracción del tiempo en que todos los canales están ocupados; la congestión en las llamadas $B$ es la fracción de intentos de llamada que encuentran todos los canales ocupados.
+$$
+A = \lambda\,\bar{t} = 3000\ \frac{\text{llamadas}}{\text{hora}} \times \frac{5\ \text{s}}{3600\ \text{s/hora}} = 4{,}1667\ \text{Erlangs}
+$$
+
+**a) Expresión general** (con $N = 4\ \text{canales}$):
+
+$$
+P(j) = \frac{A^j / j!}{\displaystyle\sum_{k=0}^{N} A^k / k!}
+$$
+
+Términos $A^k/k!$ con $A = 4{,}1667$:
+
+$$
+D = \frac{4{,}1667^0}{0!} + \frac{4{,}1667^1}{1!} + \frac{4{,}1667^2}{2!} + \frac{4{,}1667^3}{3!} + \frac{4{,}1667^4}{4!}
+$$
+
+| $k$ | $A^k$ | $k!$ | $A^k/k!$ |
+|---:|---:|---:|---:|
+| 0 | 1 | 1 | 1,0000 |
+| 1 | 4,1667 | 1 | 4,1667 |
+| 2 | 17,3611 | 2 | 8,6806 |
+| 3 | 72,3380 | 6 | 12,0563 |
+| 4 | 301,4083 | 24 | 12,5587 |
+
+$$
+D = 1 + 4{,}1667 + 8{,}6806 + 12{,}0563 + 12{,}5587 = \mathbf{38{,}4622}
+$$
+
+**b) Probabilidades de estado:**
+
+$$
+P(0) = \frac{1}{38{,}4622} = 0{,}0260 \quad (2{,}60\%) \qquad P(1) = \frac{4{,}1667}{38{,}4622} = 0{,}1083 \quad (10{,}83\%)
+$$
+
+$$
+P(2) = \frac{8{,}6806}{38{,}4622} = 0{,}2257 \quad (22{,}57\%) \qquad P(3) = \frac{12{,}0563}{38{,}4622} = 0{,}3135 \quad (31{,}35\%)
+$$
+
+$$
+P(4) = \frac{12{,}5587}{38{,}4622} = 0{,}3265 \quad (32{,}65\%)
+$$
+
+**c) Congestión en el tiempo:**
+
+$$
+E = P(N) = P(4) = \mathbf{0{,}32652} \quad (\mathbf{32{,}652\%})
+$$
+
+**d) Congestión en las llamadas:** en Poisson coincide con la del tiempo, $B = E = 0{,}3265$ (32,65 %).
+
+**f) Tráfico cursado:**
+
+$$
+A' = A(1-B) = 4{,}1667\ \text{Erlangs} \times (1 - 0{,}32652) = 4{,}1667\ \text{Erlangs} \times 0{,}67348 = 2{,}8062\ \text{Erlangs}
+$$
+
+**g) Tráfico rechazado:**
+
+$$
+M = A \cdot B = 4{,}1667\ \text{Erlangs} \times 0{,}32652 = 1{,}3605\ \text{Erlangs}
+$$
+
+**h) Llamadas rechazadas en una hora:**
+
+$$
+NLLP = \frac{M \times 3600}{\bar{t}} = \frac{1{,}3605\ \text{Erlangs} \times 3600\ \text{s/hora}}{5\ \text{s}} = 979{,}56\ \text{llamadas/hora} \approx 980\ \text{llamadas/hora}
+$$
+
+### Modelo comparativo: Engset (100 fuentes)
 
 Tráfico por fuente libre:
 
@@ -347,13 +417,11 @@ $$
 b = \frac{\lambda}{F}\,\bar{t} = 30\ \frac{\text{llamadas}}{\text{hora}\cdot\text{fuente}} \times \frac{5}{3600}\ \text{hora} = 0{,}041667\ \frac{\text{Erlangs}}{\text{fuente}} = \frac{1}{24}
 $$
 
-**a) Expresión general:**
-
 $$
 P(j) = \frac{\binom{100}{j}\,b^j}{\displaystyle\sum_{k=0}^{4}\binom{100}{k}\,b^k}
 $$
 
-**b) Probabilidades de estado.** Cada coeficiente binomial sale de $\binom{n}{k} = \dfrac{n!}{k!\,(n-k)!}$; por ejemplo, $\binom{100}{4} = \dfrac{100 \cdot 99 \cdot 98 \cdot 97}{4!} = 3\,921\,225$. Con $b^j = (1/24)^j$:
+Cada coeficiente binomial sale de $\binom{n}{k} = \dfrac{n!}{k!\,(n-k)!}$; por ejemplo, $\binom{100}{4} = \dfrac{100 \cdot 99 \cdot 98 \cdot 97}{4!} = 3\,921\,225$. Con $b^j = (1/24)^j$:
 
 | $j$ | $\binom{100}{j}$ | $b^j$ | $\binom{100}{j}\,b^j$ |
 |---:|---:|---:|---:|
@@ -375,9 +443,9 @@ $$
 P(3) = \frac{11{,}6970}{37{,}2764} = 0{,}3138 \qquad P(4) = \frac{11{,}8189}{37{,}2764} = 0{,}3171
 $$
 
-**c) Congestión en el tiempo:** $E = P(N) = P(4) = 0{,}3171$ (31,71 %).
+**Congestión en el tiempo:** $E = P(4) = 0{,}3171$ (31,71 %).
 
-**d) Congestión en las llamadas** (se calcula con $F-1 = 99$ fuentes, porque la fuente que origina la llamada no puede estar ocupada):
+**Congestión en las llamadas** (se calcula con $F-1 = 99$ fuentes, porque la fuente que origina la llamada no puede estar ocupada):
 
 | $j$ | $\binom{99}{j}$ | $\binom{99}{j}\,b^j$ |
 |---:|---:|---:|
@@ -395,124 +463,46 @@ $$
 B = \frac{\binom{99}{4}\,b^4}{\displaystyle\sum_{k=0}^{4}\binom{99}{k}\,b^k} = \frac{11{,}3461}{36{,}2391} = 0{,}3131 \quad (31{,}31\%)
 $$
 
-**f) Tráfico cursado** ($A^l$, canales ocupados en promedio):
+**Tráfico cursado** (canales ocupados en promedio):
 
 $$
-A^l = \sum_{j=0}^{4} j\,P(j) = 0(0{,}0268) + 1(0{,}1118) + 2(0{,}2305) + 3(0{,}3138) + 4(0{,}3171) = 0{,}1118 + 0{,}4611 + 0{,}9414 + 1{,}2682 = 2{,}7825\ \text{Erlangs}
+A' = \sum_{j=0}^{4} j\,P(j) = 0(0{,}0268) + 1(0{,}1118) + 2(0{,}2305) + 3(0{,}3138) + 4(0{,}3171) = 0{,}1118 + 0{,}4611 + 0{,}9414 + 1{,}2682 = 2{,}7825\ \text{Erlangs}
 $$
 
-Verificación con la fórmula de las diapositivas:
+**Tráfico ofrecido:**
 
 $$
-A^l = \frac{F\,b\,(1-B)}{1 + b\,(1-B)} = \frac{100 \times 0{,}041667 \times 0{,}6869}{1 + 0{,}041667 \times 0{,}6869} = \frac{2{,}8621}{1{,}0286} = 2{,}7825\ \text{Erlangs}
+A = \frac{A'}{1-B} = \frac{2{,}7825\ \text{Erlangs}}{1 - 0{,}3131} = \frac{2{,}7825\ \text{Erlangs}}{0{,}6869} = 4{,}0507\ \text{Erlangs}
 $$
 
-**e) Tráfico ofrecido** (se calcula después del cursado):
+**Tráfico rechazado:**
 
 $$
-A = \frac{A^l}{1-B} = \frac{2{,}7825\ \text{Erlangs}}{1 - 0{,}3131} = \frac{2{,}7825\ \text{Erlangs}}{0{,}6869} = 4{,}0507\ \text{Erlangs}
+M = A - A' = 4{,}0507\ \text{Erlangs} - 2{,}7825\ \text{Erlangs} = 1{,}2682\ \text{Erlangs}
 $$
 
-**g) Tráfico rechazado:**
-
-$$
-M = A - A^l = 4{,}0507\ \text{Erlangs} - 2{,}7825\ \text{Erlangs} = 1{,}2682\ \text{Erlangs}
-$$
-
-**h) Llamadas rechazadas en una hora** ($NLLP$, número de llamadas perdidas):
+**Llamadas rechazadas en una hora:**
 
 $$
 NLLP = \frac{M \times 3600}{\bar{t}} = \frac{1{,}2682\ \text{Erlangs} \times 3600\ \text{s/hora}}{5\ \text{s}} = 913{,}1\ \text{llamadas/hora}
 $$
 
-### Comparación: Erlang B (fuentes infinitas)
-
-Con fuentes infinitas (llegadas de Poisson) no interviene $F$.
-
-**e) Tráfico ofrecido:**
-
-$$
-A = \lambda\,\bar{t} = 3000\ \frac{\text{llamadas}}{\text{hora}} \times \frac{5\ \text{s}}{3600\ \text{s/hora}} = 4{,}1667\ \text{Erlangs}
-$$
-
-**a) Expresión general** (con $N = 4\ \text{canales}$), donde $D$ es el denominador:
-
-$$
-P(j) = \frac{A^j / j!}{D} \qquad D = \sum_{k=0}^{N} \frac{A^k}{k!}
-$$
-
-**b) Probabilidades de estado.** Términos $A^k/k!$ con $A = 4{,}1667$:
-
-$$
-D = \frac{4{,}1667^0}{0!} + \frac{4{,}1667^1}{1!} + \frac{4{,}1667^2}{2!} + \frac{4{,}1667^3}{3!} + \frac{4{,}1667^4}{4!}
-$$
-
-| $k$ | $A^k$ | $k!$ | $A^k/k!$ |
-|---:|---:|---:|---:|
-| 0 | 1 | 1 | 1,0000 |
-| 1 | 4,1667 | 1 | 4,1667 |
-| 2 | 17,3611 | 2 | 8,6806 |
-| 3 | 72,3380 | 6 | 12,0563 |
-| 4 | 301,4083 | 24 | 12,5587 |
-
-$$
-D = 1 + 4{,}1667 + 8{,}6806 + 12{,}0563 + 12{,}5587 = \mathbf{38{,}4622}
-$$
-
-$$
-P(0) = \frac{1}{38{,}4622} = 0{,}0260 \quad (2{,}60\%) \qquad P(1) = \frac{4{,}1667}{38{,}4622} = 0{,}1083 \quad (10{,}83\%)
-$$
-
-$$
-P(2) = \frac{8{,}6806}{38{,}4622} = 0{,}2257 \quad (22{,}57\%) \qquad P(3) = \frac{12{,}0563}{38{,}4622} = 0{,}3135 \quad (31{,}35\%)
-$$
-
-$$
-P(4) = \frac{12{,}5587}{38{,}4622} = 0{,}3265 \quad (32{,}65\%)
-$$
-
-**c) Congestión en el tiempo:**
-
-$$
-E = P(N) = P(4) = \mathbf{0{,}32652} \quad (\mathbf{32{,}652\%})
-$$
-
-**d) Congestión en las llamadas:** con llegadas de Poisson coincide con la del tiempo, $B = E = 0{,}3265$ (32,65 %).
-
-**f) Tráfico cursado:**
-
-$$
-A^l = A(1-B) = 4{,}1667\ \text{Erlangs} \times (1 - 0{,}32652) = 4{,}1667\ \text{Erlangs} \times 0{,}67348 = 2{,}8062\ \text{Erlangs}
-$$
-
-**g) Tráfico rechazado:**
-
-$$
-M = A - A^l = 4{,}1667\ \text{Erlangs} - 2{,}8062\ \text{Erlangs} = 1{,}3605\ \text{Erlangs}
-$$
-
-**h) Llamadas rechazadas en una hora:**
-
-$$
-NLLP = \frac{M \times 3600}{\bar{t}} = \frac{1{,}3605\ \text{Erlangs} \times 3600\ \text{s/hora}}{5\ \text{s}} = 979{,}56\ \text{llamadas/hora} \approx 980\ \text{llamadas/hora}
-$$
-
 ### Resumen
 
-| Ítem                         | Engset (principal) | Erlang B (comparación) |
-| ---------------------------- | -----------------: | ---------------------: |
-| $P(0)$                       |             2,68 % |                 2,60 % |
-| $P(1)$                       |            11,18 % |                10,83 % |
-| $P(2)$                       |            23,05 % |                22,57 % |
-| $P(3)$                       |            31,38 % |                31,35 % |
-| $P(4)$                       |            31,71 % |                32,65 % |
-| Congestión en el tiempo      |            31,71 % |                32,65 % |
-| Congestión en las llamadas   |            31,31 % |                32,65 % |
-| Tráfico ofrecido             |     4,0507 Erlangs |         4,1667 Erlangs |
-| Tráfico cursado              |     2,7825 Erlangs |         2,8062 Erlangs |
-| Tráfico rechazado            |     1,2682 Erlangs |         1,3605 Erlangs |
-| Llamadas rechazadas por hora |              913,1 |                 979,56 |
+| Ítem                         | Erlang B (principal) | Engset (100 fuentes) |
+| ---------------------------- | -------------------: | -------------------: |
+| $P(0)$                       |               2,60 % |               2,68 % |
+| $P(1)$                       |              10,83 % |              11,18 % |
+| $P(2)$                       |              22,57 % |              23,05 % |
+| $P(3)$                       |              31,35 % |              31,38 % |
+| $P(4)$                       |              32,65 % |              31,71 % |
+| Congestión en el tiempo      |              32,65 % |              31,71 % |
+| Congestión en las llamadas   |              32,65 % |              31,31 % |
+| Tráfico ofrecido             |       4,1667 Erlangs |       4,0507 Erlangs |
+| Tráfico cursado              |       2,8062 Erlangs |       2,7825 Erlangs |
+| Tráfico rechazado            |       1,3605 Erlangs |       1,2682 Erlangs |
+| Llamadas rechazadas por hora |               979,56 |                913,1 |
 
-Nota: según las diapositivas, el ejemplo resuelto con este mismo patrón de datos (fuentes, canales y $\lambda$) usa Engset; por eso las respuestas del ejercicio son las de Engset y Erlang B queda solo como comparación.
+Nota: confirmar con la cátedra cuál de los dos modelos se usa. Con el enunciado tal cual (tasa constante) corresponde Erlang B; si las 100 fuentes son el dato clave, se usa Engset.
 
 
