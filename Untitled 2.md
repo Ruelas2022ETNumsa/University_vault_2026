@@ -1,155 +1,132 @@
-Para resolver este problema de dimensionamiento de una central de tránsito $T$, aplicamos la **Teoría del Gráfico Equivalente / Teoría del Equivalente Aleatorio de Wilkinson** y la **Fórmula de Rapp**.
+Para resolver este ejercicio de ingeniería de tráfico telefónico, aplicaremos las fórmulas de análisis y dimensionamiento presentes en las guías de la asignatura.
+
+En los temas abordados, cuando la tasa total de llegada de llamadas $\lambda$ se especifica como un valor constante e independiente del número de fuentes activas (en este caso 3000 llamadas/hora), el sistema se modela habitualmente con la **Distribución de Erlang B** (llegadas Poisson). No obstante, también desarrollaremos el **Modelo de Engset** (fuentes finitas $F = 100$) como enfoque comparativo.
 
 ---
 
-### **1. Identificación y Análisis de Datos Iniciales**
-
-De acuerdo con las mediciones en el periodo de observación:
-
-* **Ruta Directa $A \to B$:**
-  * Tráfico total ($A_{AB}$): **$73\text{ Erlangs}$**
-  * Porcentaje de desborde ($B_{AB}$): **$17,9\%$**
-  * Tráfico de desborde medio ($m_{AB}$):
-    
-$$
-m_{AB} = 73 \times 0,179 = \mathbf{13,0670\text{ Erlangs}}
-$$
-
-  * Canales directos instalados ($C_{AB}$): **$51\text{ canales}$**
-
-* **Ruta Directa $A \to C$:**
-  * Tráfico total ($A_{AC}$): **$65\text{ Erlangs}$**
-  * Porcentaje de desborde ($B_{AC}$): **$10,77\%$**
-  * Tráfico de desborde medio ($m_{AC}$):
-    
-$$
-m_{AC} = 65 \times 0,1077 = \mathbf{7,0005\text{ Erlangs}}
-$$
-
-  * Canales directos instalados ($C_{AC}$): **$46\text{ canales}$**
-
-* **Grado de Servicio Requerido ($B_2$):** **$B = 0,5\% = 0,005$** (Erlang B).
+### **Datos del Problema**
+- **Número de canales de comunicación ($N$):** $4\text{ canales}$
+- **Número de fuentes de tráfico ($F$):** $100\text{ fuentes}$
+- **Tasa de llegada de llamadas ($\lambda$):** $3000\text{ llamadas/hora}$
+- **Tiempo medio de ocupación ($\bar{t}$):** $5\text{ segundos}$
 
 ---
 
-### **2. Tráfico de Desborde Combinado (Media $M$ y Varianza $V$)**
+### **MODELO PRINCIPAL: Fórmula de Erlang B**
+*(Tasa total de llegada constante $\lambda$)*
 
-El tráfico de desborde que converge hacia la central de tránsito $T$ se caracteriza por la suma de las medias y varianzas de los flujos individuales:
-
-#### **a) Media combinada ($M$):**
-
-$$
-M = m_{AB} + m_{AC} = 13,0670 + 7,0005 = \mathbf{20,0675\text{ Erlangs}} \quad
-$$
-
-
-#### **b) Varianza combinada ($V$):**
-Utilizando la fórmula de Riordan/Wilkinson para la varianza del tráfico de desborde:
+#### **e) Tráfico ofrecido al sistema (en Erlangs)**
+*(Se determina primero para construir la función de probabilidad $P(j)$)*:
 
 $$
-v_i = m_i \left( 1 - m_i + \frac{A_i}{C_i' + 1 - A_i + m_i} \right) \quad
+A = \lambda \cdot \bar{t} = 3000 \frac{\text{llamadas}}{\text{hora}} \times \frac{1\text{ hora}}{3600\text{ s}} \times 5\text{ s} = \mathbf{4,1667\text{ Erlangs}} \quad \left(\frac{25}{6}\text{ Erl}\right)
 $$
 
 
-Donde $C_i'$ es el número equivalente de canales que genera el bloqueo medido $B_i$ para el tráfico $A_i$ mediante la fórmula de Erlang B ($E(C_i', A_i) = B_i$):
-* Para $A_1 = 73\text{ Erl}$ y $B_1 = 0,179 \implies C_{AB}' \approx 63,6\text{ canales}$.
-  
-$$
-v_{AB} = 13,0670 \left( 1 - 13,0670 + \frac{73}{63,6 + 1 - 73 + 13,0670} \right) = \mathbf{46,7111\text{ Erlangs}^2}
-$$
+#### **a) Expresión general de la probabilidad de estado $P(j)$**
+La fórmula general de la probabilidad de estado $P(j)$ para Erlang B es:
 
-* Para $A_2 = 65\text{ Erl}$ y $B_2 = 0,1077 \implies C_{AC}' \approx 63,4\text{ canales}$.
-  
 $$
-v_{AC} = 7,0005 \left( 1 - 7,0005 + \frac{65}{63,4 + 1 - 65 + 7,0005} \right) = \mathbf{29,0868\text{ Erlangs}^2}
+P(j) = \frac{\frac{A^j}{j!}}{\sum_{k=0}^{N} \frac{A^k}{k!}}
 $$
 
 
-Sumando ambas varianzas:
+Sustituyendo $A = 4,1667$ y $N = 4$, calculamos la suma del denominador ($D$):
 
 $$
-V = v_{AB} + v_{AC} = 46,7111 + 29,0868 = \mathbf{75,7979\text{ Erlangs}^2} \quad
+D = \frac{4,1667^0}{0!} + \frac{4,1667^1}{1!} + \frac{4,1667^2}{2!} + \frac{4,1667^3}{3!} + \frac{4,1667^4}{4!}
+$$
+
+
+$$
+D = 1 + 4,1667 + 8,6806 + 12,0563 + 12,5587 = \mathbf{38,4622}
+$$
+
+
+Por lo tanto, la **expresión general** es:
+
+$$
+P(j) = \frac{\frac{(4,1667)^j}{j!}}{38,4622}
+$$
+
+
+#### **b) Probabilidades de estado del sistema $P(0), P(1), P(2), P(3), P(4)$**
+- **$P(0)$:** \(\frac{1}{38,4622} = \mathbf{0,02600} \quad (\mathbf{2,600\%})\]
+- **$P(1)$:** \(\frac{4,1667}{38,4622} = \mathbf{0,10833} \quad (\mathbf{10,833\%})\]
+- **$P(2)$:** \(\frac{8,6806}{38,4622} = \mathbf{0,22569} \quad (\mathbf{22,569\%})\]
+- **$P(3)$:** \(\frac{12,0563}{38,4622} = \mathbf{0,31346} \quad (\mathbf{31,346\%})\]
+- **$P(4)$:** \(\frac{12,5587}{38,4622} = \mathbf{0,32652} \quad (\mathbf{32,652\%})\]
+
+#### **c) Congestión en el tiempo ($E$)**
+Es la probabilidad de que todos los canales ($N = 4$) estén ocupados:
+
+$$
+E = P(N) = P(4) = \mathbf{0,32652} \quad (\mathbf{32,652\%})
+$$
+
+
+#### **d) Congestión en las llamadas ($B$)**
+En el modelo Erlang B (proceso Poisson), la congestión en las llamadas coincide con la congestión en el tiempo:
+
+$$
+B = E = \mathbf{0,32652} \quad (\mathbf{32,652\%})
+$$
+
+
+#### **e) Tráfico ofrecido ($A$)**
+
+$$
+A = \mathbf{4,1667\text{ Erlangs}}
+$$
+
+
+#### **f) Tráfico cursado por el sistema ($A^l$)**
+
+$$
+A^l = A(1 - B) = 4,1667 \times (1 - 0,32652) = \mathbf{2,8062\text{ Erlangs}}
+$$
+
+
+#### **g) Tráfico rechazado ($M$)**
+
+$$
+M = A - A^l = A \cdot B = 4,1667 \times 0,32652 = \mathbf{1,3605\text{ Erlangs}}
+$$
+
+
+#### **h) Número de llamadas rechazadas durante una hora ($NLLP$)**
+
+$$
+NLLP = \frac{M \times 3600}{\bar{t}} = \frac{1,3605 \times 3600}{5} = \mathbf{979,56\text{ llamadas/hora}} \quad (\approx \mathbf{980\text{ llamadas}})
 $$
 
 
 ---
 
-### **3. Parámetros Equivalentes con la Fórmula de Rapp ($A_{eq}$ y $C_{eq}$)**
+### **MODELO ALTERNATIVO: Modelo de Engset**
+*(Considerando la restricción de fuentes finitas $F = 100$)*
 
-Calculamos el cociente de variabilidad ($z = \frac{V}{M}$):
+Si calculamos la tasa de llegada por fuente libre $a = \frac{\lambda}{F} = \frac{3000}{100} = 30\text{ llam/h/fuente} = \frac{1}{120}\text{ llam/s}$, el tráfico por fuente libre es $b = a \cdot \bar{t} = \frac{1}{120} \times 5 = \mathbf{0,041667\text{ Erlangs}}$.
 
-$$
-z = \frac{75,7979}{20,0675} \approx \mathbf{3,7771}
-$$
-
-
-Aplicamos las **fórmulas de Rapp** para hallar el tráfico y canales equivalentes:
-1. **Tráfico ofrecido equivalente ($A_{eq}$):**
+1. **Expresión general $P(j)$:** $P(j) = \frac{\binom{100}{j} (0,041667)^j}{\sum_{i=0}^4 \binom{100}{i} (0,041667)^i}$
+2. **Probabilidades de estado:**
+   - **$P(0)$:** **$0,02683$** $2,683%$
+   - **$P(1)$:** **$0,11178$** $11,178%$
+   - **$P(2)$:** **$0,23054$** $23,054%$
+   - **$P(3)$:** **$0,31379$** $31,379%$
+   - **$P(4)$:** **$0,31706$** $31,706%$
+3. **Congestión en el tiempo ($E$):** $E = P(4) = \mathbf{0,31706}\quad (\mathbf{31,706\%})$
+4. **Congestión en las llamadas ($B$):**
    
 $$
-A_{eq} = V + 3z(z - 1) \quad
+B = \frac{\binom{99}{4} (0,041667)^4}{\sum_{j=0}^4 \binom{99}{j} (0,041667)^j} = \mathbf{0,31309}\quad (\mathbf{31,309\%})
 $$
 
-   
-$$
-A_{eq} = 75,7979 + 3(3,7771)(3,7771 - 1) = \mathbf{107,2670\text{ Erlangs}}
-$$
-
-
-2. **Canales equivalentes ($C_{eq}$):**
-   
-$$
-C_{eq} = \frac{A_{eq}(M + z)}{M + z - 1} - M - 1 \quad
-$$
-
-   
-$$
-C_{eq} = \frac{107,2670(20,0675 + 3,7771)}{20,0675 + 3,7771 - 1} - 20,0675 - 1 = \mathbf{90,8950\text{ canales}}
-$$
-
+5. **Tráfico cursado ($A^l$):** $A^l = \frac{F \cdot b (1 - B)}{1 + b(1 - B)} = \mathbf{2,7825\text{ Erlangs}}$
+6. **Tráfico ofrecido ($A$):** $A = \frac{A^l}{1 - B} = \mathbf{4,0507\text{ Erlangs}}$
+7. **Tráfico rechazado ($M$):** $M = A - A^l = \mathbf{1,2682\text{ Erlangs}}$
+8. **Llamadas rechazadas/hora ($NLLP$):** $NLLP = \frac{M \times 3600}{\bar{t}} = \mathbf{913,14\text{ llamadas/hora}}$
 
 ---
 
-### **4. Dimensionamiento de los Canales de la Central de Tránsito ($N_{AT}$)**
-
-Para garantizar el grado de servicio $B_2 = 0,5\% = 0,005$, calculamos la pérdida equivalente objetivo $E(N_{total}, A_{eq})$:
-
-
-$$
-E(N_{total}, A_{eq}) = B_2 \cdot \frac{M}{A_{eq}} \quad
-$$
-
-
-$$
-E(N_{total}, A_{eq}) = 0,005 \times \frac{20,0675}{107,2670} = \mathbf{0,0009355} \quad (0,09355\%)
-$$
-
-
-Con $A_{eq} = 107,2670\text{ Erlangs}$ y $E = 0,0009355$, buscamos el número total de canales ($N_{total} = N_{AT} + C_{eq}$) mediante la fórmula/tabla de Erlang B:
-
-$$
-N_{total} = \mathbf{137\text{ canales}}
-$$
-
-
-Despejando los canales necesarios para la central de tránsito ($N_{AT}$):
-
-$$
-N_{AT} = N_{total} - C_{eq} \quad
-$$
-
-
-$$
-N_{AT} = 137 - 90,8950 = \mathbf{46,105\text{ canales}}
-$$
-
-
----
-
-### **Resultado Final**
-
-Para absorber el tráfico de desborde y garantizar el grado de servicio $B = 0,5\%$, la central de tránsito **T** debe disponer de **$47\text{ canales}$** (o $46\text{ canales}$ exactos en truncamiento).
-
-*(Nota: Si en tu materia calculan $m$ y $v$ usando la fórmula de Erlang B teórica pura directamente desde los 51 y 46 canales, el valor teórico puro resultante es de **$72\text{ canales}$**).*
-
-¿Te gustaría que elaboremos un diagrama del gráfico equivalente o una tabla comparativa de los pasos de cálculo?
+📊 ¿Te gustaría calcular la carga individual por canal $a(j)$ o el factor de mejoría de este sistema?

@@ -83,11 +83,15 @@ Con base de esta información: Determinar el número de canales que debe tener l
 ### 1. Media del desborde
 
 $$
-m_{AB} = 73 \times 0{,}179 = 13{,}067 \qquad m_{AC} = 65 \times 0{,}1077 = 7{,}0005
+m_{AB} = 73\ \text{Erlangs} \times 0{,}179 = 13{,}067\ \text{Erlangs}
 $$
 
 $$
-M = 13{,}067 + 7{,}0005 = 20{,}0675\ \text{Erl}
+m_{AC} = 65\ \text{Erlangs} \times 0{,}1077 = 7{,}0005\ \text{Erlangs}
+$$
+
+$$
+M = 13{,}067 + 7{,}0005 = 20{,}0675\ \text{Erlangs}
 $$
 
 ### 2. Varianza de cada desborde (Riordan)
@@ -96,32 +100,34 @@ $$
 v = m\left(1 - m + \frac{A}{C' + 1 - A + m}\right)
 $$
 
-$C'$ = canales equivalentes que producen el bloqueo medido, es decir $E(A, C') = B$ (Erlang B): $C'_{AB} \approx 63{,}6$ (para $A=73$, $B=0{,}179$) y $C'_{AC} \approx 63{,}4$ (para $A=65$, $B=0{,}1077$).
+Unidades: $m$ y $A$ en Erlangs; $v$ en $\text{Erlangs}^2$; $C'$ en canales.
+
+$C'$ = canales equivalentes que producen el bloqueo medido, es decir $E(A, C') = B$ (Erlang B): $C'_{AB} \approx 63{,}6\ \text{canales}$ (para $A=73\ \text{Erlangs}$, $B=0{,}179$) y $C'_{AC} \approx 63{,}4\ \text{canales}$ (para $A=65\ \text{Erlangs}$, $B=0{,}1077$).
 
 $$
-v_{AB} = 13{,}067\left(1 - 13{,}067 + \frac{73}{63{,}6 + 1 - 73 + 13{,}067}\right) = 13{,}067\,(-12{,}067 + 15{,}642) = 46{,}71
+v_{AB} = 13{,}067\left(1 - 13{,}067 + \frac{73}{63{,}6 + 1 - 73 + 13{,}067}\right) = 13{,}067\,(-12{,}067 + 15{,}642) = 46{,}71\ \text{Erlangs}^2
 $$
 
 $$
-v_{AC} = 7{,}0005\left(1 - 7{,}0005 + \frac{65}{63{,}4 + 1 - 65 + 7{,}0005}\right) = 7{,}0005\,(-6{,}0005 + 10{,}155) = 29{,}09
+v_{AC} = 7{,}0005\left(1 - 7{,}0005 + \frac{65}{63{,}4 + 1 - 65 + 7{,}0005}\right) = 7{,}0005\,(-6{,}0005 + 10{,}155) = 29{,}09\ \text{Erlangs}^2
 $$
 
 $$
-V = 46{,}71 + 29{,}09 = 75{,}80
+V = 46{,}71 + 29{,}09 = 75{,}80\ \text{Erlangs}^2
 $$
 
 ### 3. Equivalente de Rapp
 
 $$
-z = \frac{V}{M} = \frac{75{,}80}{20{,}0675} = 3{,}777
+z = \frac{V}{M} = \frac{75{,}80}{20{,}0675} = 3{,}777 \quad \text{(relación varianza/media, sin unidad)}
 $$
 
 $$
-A^* = V + 3z(z-1) = 75{,}80 + 3(3{,}777)(2{,}777) = 75{,}80 + 31{,}47 = 107{,}27\ \text{Erl}
+A^* = V + 3z(z-1) = 75{,}80 + 3(3{,}777)(2{,}777) = 75{,}80 + 31{,}47 = 107{,}27\ \text{Erlangs}
 $$
 
 $$
-N^* = \frac{A^*(M+z)}{M+z-1} - M - 1 = 107{,}27\cdot\frac{23{,}845}{22{,}845} - 21{,}0675 = 111{,}96 - 21{,}07 = 90{,}89
+N^* = \frac{A^*(M+z)}{M+z-1} - M - 1 = 107{,}27\cdot\frac{23{,}845}{22{,}845} - 21{,}0675 = 111{,}96 - 21{,}07 = 90{,}89\ \text{canales}
 $$
 
 ### 4. Canales de la central de tránsito T
@@ -129,13 +135,13 @@ $$
 Pérdida objetivo sobre el desborde:
 
 $$
-E(A^*, N_{total}) = \frac{B\,M}{A^*} = \frac{0{,}005 \times 20{,}0675}{107{,}27} = 9{,}35\times10^{-4}
+E(A^*, N_{total}) = \frac{B\,M}{A^*} = \frac{0{,}005 \times 20{,}0675\ \text{Erlangs}}{107{,}27\ \text{Erlangs}} = 9{,}35\times10^{-4}
 $$
 
-Erlang B con $A^* = 107{,}27$: $N=136 \to 9{,}9\times10^{-4}$ (no cumple) y $N=137 \to 7{,}8\times10^{-4}$ (cumple), luego $N_{total} = 137$.
+Erlang B con $A^* = 107{,}27\ \text{Erlangs}$: $N=136\ \text{canales} \to 9{,}9\times10^{-4}$ (no cumple) y $N=137\ \text{canales} \to 7{,}8\times10^{-4}$ (cumple), luego $N_{total} = 137\ \text{canales}$.
 
 $$
-N_T = N_{total} - N^* = 137 - 90{,}89 = 46{,}1
+N_T = N_{total} - N^* = 137\ \text{canales} - 90{,}89\ \text{canales} = 46{,}1\ \text{canales}
 $$
 
 **Resultado: T necesita 47 canales.**
@@ -144,9 +150,9 @@ $$
 
 - Los datos no son consistentes con Erlang B: $E(73,51) = 32{,}7\%$ y $E(65,46) = 32{,}1\%$, no 17,9 % y 10,77 %. Por eso se toman los porcentajes medidos como dato y los 51 y 46 canales no intervienen.
 - El resultado es sensible al redondeo de $C'$: con decimales exactos salen $N_{total}=136$ y $N_T = 45{,}6$, es decir 46. Se toma 47 para garantizar el grado de servicio.
-- Otros métodos: sumar solo las medias y aplicar Erlang B a 20,07 Erl da 32 canales (ignora las ráfagas); usar 51 y 46 canales con Erlang B da ≈ 72. Confirmar cuál usa la cátedra.
+- Otros métodos: sumar solo las medias y aplicar Erlang B a 20,07 Erlangs da 32 canales (ignora las ráfagas); usar 51 y 46 canales con Erlang B da ≈ 72. Confirmar cuál usa la cátedra.
 
-# Ejercicio 3 2026
+# Ejercicio 3 2026xxx
 
 Sea un sistema telefónico caracterizado por la función E(A,N), donde A representa el tráfico ofrecido en Erlangs y N el número de circuitos disponibles.
 
@@ -355,255 +361,139 @@ h) El número de llamadas rechazadas durante una hora.
 
 ---
 
-## Solución del Problema de Teoría de Colas — Modelo de Engset
+## Solución
 
-## 1. Introducción
+**Modelo:** el enunciado da una tasa de llegada total constante ($\lambda = 3000\ \text{llamadas/hora}$), independiente de cuántas fuentes estén activas: llegadas de Poisson, por lo que se aplica **Erlang B** (modelo principal). Las 100 fuentes solo intervienen en Engset, que se resuelve al final como comparación.
 
-En este documento se resuelve un problema de teoría de colas utilizando el modelo de Engset, que es adecuado para sistemas con un número finito de fuentes. Se analiza un sistema de telefonía con 100 fuentes y 4 canales.
+### Modelo principal: Erlang B
 
-## 2. Datos del Problema
-
-- Canales: $C = 4$
-- Fuentes: $N = 100$
-- Tasa de llegada total: $\lambda = 3000$ llamadas/hora
-- Tiempo medio de ocupación: $h = 5$ segundos
+**e) Tráfico ofrecido** (se calcula primero):
 
 $$
-h = \frac{5}{3600}\text{ hora}
+A = \lambda\,\bar{t} = 3000\ \frac{\text{llamadas}}{\text{hora}} \times \frac{5\ \text{s}}{3600\ \text{s/hora}} = 4{,}1667\ \text{Erlangs}
 $$
 
-## 3. Tráfico Ofrecido por Fuente
-
-La tasa de llegada por fuente es:
+**a) Expresión general** (con $N = 4\ \text{canales}$):
 
 $$
-\alpha = \frac{\lambda}{N}
+P(j) = \frac{A^j / j!}{\displaystyle\sum_{k=0}^{N} A^k / k!}
 $$
 
-$$
-\alpha = \frac{3000}{100}
-$$
+Términos $A^k/k!$ con $A = 4{,}1667$:
+
+| $k$ | $A^k/k!$ | Valor |
+|---:|---|---:|
+| 0 | $1$ | 1,0000 |
+| 1 | $4{,}1667$ | 4,1667 |
+| 2 | $4{,}1667^2/2!$ | 8,6806 |
+| 3 | $4{,}1667^3/3!$ | 12,0563 |
+| 4 | $4{,}1667^4/4!$ | 12,5587 |
 
 $$
-\alpha = 30\text{ llamadas/hora/fuente}
+\sum = 1 + 4{,}1667 + 8{,}6806 + 12{,}0563 + 12{,}5587 = 38{,}4622
 $$
 
-El tráfico ofrecido por fuente (en Erlangs):
+**b) Probabilidades de estado:**
 
 $$
-a = \alpha \cdot h
-$$
-
-$$
-a = 30 \times \frac{5}{3600}
+P(0) = \frac{1}{38{,}4622} = 0{,}0260 \quad (2{,}60\%) \qquad P(1) = \frac{4{,}1667}{38{,}4622} = 0{,}1083 \quad (10{,}83\%)
 $$
 
 $$
-a = \frac{150}{3600}
+P(2) = \frac{8{,}6806}{38{,}4622} = 0{,}2257 \quad (22{,}57\%) \qquad P(3) = \frac{12{,}0563}{38{,}4622} = 0{,}3135 \quad (31{,}35\%)
 $$
 
 $$
-a = \frac{1}{24}
+P(4) = \frac{12{,}5587}{38{,}4622} = 0{,}3265 \quad (32{,}65\%)
+$$
+
+**c) Congestión en el tiempo:** $E = P(4) = 0{,}3265$ (32,65 %).
+
+**d) Congestión en las llamadas:** en Poisson coincide con la del tiempo, $B = E = 0{,}3265$ (32,65 %).
+
+**f) Tráfico cursado:**
+
+$$
+A' = A(1-B) = 4{,}1667\ \text{Erlangs} \times (1 - 0{,}3265) = 2{,}8062\ \text{Erlangs}
+$$
+
+**g) Tráfico rechazado:**
+
+$$
+M = A \cdot B = 4{,}1667\ \text{Erlangs} \times 0{,}3265 = 1{,}3605\ \text{Erlangs}
+$$
+
+**h) Llamadas rechazadas en una hora:**
+
+$$
+NLLP = \frac{M \times 3600}{\bar{t}} = \frac{1{,}3605\ \text{Erlangs} \times 3600\ \text{s/hora}}{5\ \text{s}} = 979{,}56\ \text{llamadas/hora} \approx 980\ \text{llamadas/hora}
+$$
+
+### Modelo comparativo: Engset (100 fuentes)
+
+Tráfico por fuente libre:
+
+$$
+b = \frac{\lambda}{F}\,\bar{t} = 30\ \frac{\text{llamadas}}{\text{hora}\cdot\text{fuente}} \times \frac{5}{3600}\ \text{hora} = 0{,}041667\ \frac{\text{Erlangs}}{\text{fuente}} = \frac{1}{24}
 $$
 
 $$
-a \approx 0,04167\text{ Erl/fuente}
+P(j) = \frac{\binom{100}{j}\,b^j}{\displaystyle\sum_{k=0}^{4}\binom{100}{k}\,b^k}
 $$
 
-El tráfico total ofrecido:
+Términos $\binom{100}{j}\,b^j$: $1$; $4{,}1667$; $8{,}5938$; $11{,}6970$; $11{,}8189$, con suma $37{,}2764$.
 
 $$
-A = N \cdot a
+P(0) = 0{,}0268 \quad P(1) = 0{,}1118 \quad P(2) = 0{,}2305 \quad P(3) = 0{,}3138 \quad P(4) = 0{,}3171
 $$
 
-$$
-A = 100 \times \frac{1}{24}
-$$
+**Congestión en el tiempo:** $E = P(4) = 0{,}3171$ (31,71 %).
+
+**Congestión en las llamadas** (con $F-1 = 99$ fuentes; términos $1$; $4{,}125$; $8{,}4219$; $11{,}3461$; $11{,}3461$, suma $36{,}2391$):
 
 $$
-A = \frac{100}{24}
+B = \frac{\binom{99}{4}\,b^4}{\displaystyle\sum_{k=0}^{4}\binom{99}{k}\,b^k} = \frac{11{,}3461}{36{,}2391} = 0{,}3131 \quad (31{,}31\%)
 $$
 
-$$
-A \approx 4,1667\text{ Erl}
-$$
-
-## 4. Expresión General de $P(j)$ — Modelo de Engset
-
-Para fuentes finitas, la distribución de estados es binomial truncada:
+**Tráfico cursado** (canales ocupados en promedio):
 
 $$
-P(j) =
-\frac{
-\binom{N}{j}a^j
-}{
-\displaystyle\sum_{k=0}^{C}\binom{N}{k}a^k
-}
+A' = \sum_{j=0}^{4} j\,P(j) = 0{,}1118 + 0{,}4611 + 0{,}9414 + 1{,}2682 = 2{,}7825\ \text{Erlangs}
 $$
 
-$$
-j = 0,1,2,\ldots,C
-$$
-
-## 5. Cálculo de los Coeficientes
-
-**Cuadro 1: Cálculo de los términos para $P(j)$**
-
-| $j$ | $\binom{100}{j}$ | $a^j$ | Término |
-|---:|---:|---:|---:|
-| 0 | 1 | 1 | 1.000000 |
-| 1 | 100 | $\frac{1}{24}$ | 4.166667 |
-| 2 | 4950 | $\left(\frac{1}{24}\right)^2$ | 8.593750 |
-| 3 | 161700 | $\left(\frac{1}{24}\right)^3$ | 11.701389 |
-| 4 | 3921225 | $\left(\frac{1}{24}\right)^4$ | 11.953776 |
-
-Suma total:
+**Tráfico ofrecido:**
 
 $$
-\Sigma = 37,415582
-$$
-
-## 6. Probabilidades de Estado
-
-$$
-P(0) = \frac{1}{37,4156}
-$$
-
-$$
-P(0) = 0,02673 \approx 2,67\%
-$$
-
-$$
-P(1) = \frac{4,16667}{37,4156}
-$$
-
-$$
-P(1) = 0,11137 \approx 11,14\%
-$$
-
-$$
-P(2) = \frac{8,59375}{37,4156}
-$$
-
-$$
-P(2) = 0,22968 \approx 22,97\%
-$$
-
-$$
-P(3) = \frac{11,70139}{37,4156}
-$$
-
-$$
-P(3) = 0,31270 \approx 31,27\%
-$$
-
-$$
-P(4) = \frac{11,95378}{37,4156}
-$$
-
-$$
-P(4) = 0,31948 \approx 31,95\%
-$$
-
-## 7. Congestión en el Tiempo
-
-Es la probabilidad de que todos los canales estén ocupados:
-
-$$
-B_t = P(C) = P(4)
-$$
-
-$$
-B_t = 0,31948 \approx 31,95\%
-$$
-
-## 8. Congestión en las Llamadas
-
-En el modelo de Engset, la congestión en las llamadas se calcula usando la distribución con $N-1$ fuentes:
-
-$$
-B_c =
-\frac{
-\binom{N-1}{C}a^C
-}{
-\displaystyle\sum_{k=0}^{C}\binom{N-1}{k}a^k
-}
-$$
-
-Con $N-1=99$ fuentes:
-
-$$
-B_c =
-\frac{11,474843}{36,027100}
-$$
-
-$$
-B_c = 0,31848 \approx 31,85\%
-$$
-
-## 9. Tráfico Cursado y Rechazado
-
-**Tráfico cursado:**
-
-$$
-A_c = A\cdot(1-B_c)
-$$
-
-$$
-A_c = 4,1667\times0,68152
-$$
-
-$$
-A_c \approx 2,8397\text{ Erl}
+A = \frac{A'}{1-B} = \frac{2{,}7825\ \text{Erlangs}}{1 - 0{,}3131} = 4{,}0507\ \text{Erlangs}
 $$
 
 **Tráfico rechazado:**
 
 $$
-A_r = A\cdot B_c
+M = A - A' = 4{,}0507\ \text{Erlangs} - 2{,}7825\ \text{Erlangs} = 1{,}2682\ \text{Erlangs}
 $$
 
-$$
-A_r = 4,1667\times0,31848
-$$
+**Llamadas rechazadas en una hora:**
 
 $$
-A_r \approx 1,3270\text{ Erl}
+NLLP = \frac{M \times 3600}{\bar{t}} = \frac{1{,}2682\ \text{Erlangs} \times 3600\ \text{s/hora}}{5\ \text{s}} = 913{,}1\ \text{llamadas/hora}
 $$
 
-## 10. Llamadas Rechazadas por Hora
+### Resumen
 
-$$
-N_r = \lambda\cdot B_c
-$$
+| Ítem | Erlang B (principal) | Engset (100 fuentes) |
+|---|---:|---:|
+| $P(0)$ | 2,60 % | 2,68 % |
+| $P(1)$ | 10,83 % | 11,18 % |
+| $P(2)$ | 22,57 % | 23,05 % |
+| $P(3)$ | 31,35 % | 31,38 % |
+| $P(4)$ | 32,65 % | 31,71 % |
+| Congestión en el tiempo | 32,65 % | 31,71 % |
+| Congestión en las llamadas | 32,65 % | 31,31 % |
+| Tráfico ofrecido | 4,1667 Erlangs | 4,0507 Erlangs |
+| Tráfico cursado | 2,8062 Erlangs | 2,7825 Erlangs |
+| Tráfico rechazado | 1,3605 Erlangs | 1,2682 Erlangs |
+| Llamadas rechazadas por hora | 979,56 | 913,1 |
 
-$$
-N_r = 3000\times0,31848
-$$
-
-$$
-N_r \approx 955\text{ llamadas/hora}
-$$
-
-## 11. Resumen de Resultados
-
-**Cuadro 2: Resumen de resultados**
-
-| Ítem | Resultado |
-|---|---:|
-| $P(0)$ | 2.67 % |
-| $P(1)$ | 11.14 % |
-| $P(2)$ | 22.97 % |
-| $P(3)$ | 31.27 % |
-| $P(4)$ | 31.95 % |
-| Congestión en el tiempo ($B_t$) | 31.95 % |
-| Congestión en llamadas ($B_c$) | 31.85 % |
-| Tráfico ofrecido | 4.1667 Erl |
-| Tráfico cursado | 2.8397 Erl |
-| Tráfico rechazado | 1.3270 Erl |
-| Llamadas rechazadas/hora | 955 |
-
-## 12. Conclusión
-
-En este documento se resolvió el problema de teoría de colas utilizando el modelo de Engset, adecuado para sistemas con fuentes finitas. Se calcularon las probabilidades de estado, la congestión en el tiempo y en las llamadas, así como el tráfico cursado y rechazado.
+Nota: confirmar con la cátedra cuál de los dos modelos se usa. Con el enunciado tal cual (tasa constante) corresponde Erlang B; si las 100 fuentes son el dato clave, se usa Engset.
 
