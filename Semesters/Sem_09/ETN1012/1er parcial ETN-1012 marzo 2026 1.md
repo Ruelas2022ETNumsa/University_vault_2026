@@ -102,32 +102,82 @@ $$
 
 Unidades: $m$ y $A$ en Erlangs; $v$ en $\text{Erlangs}^2$; $C'$ en canales.
 
-$C'$ = canales equivalentes que producen el bloqueo medido, es decir $E(A, C') = B$ (Erlang B): $C'_{AB} \approx 63{,}6\ \text{canales}$ (para $A=73\ \text{Erlangs}$, $B=0{,}179$) y $C'_{AC} \approx 63{,}4\ \text{canales}$ (para $A=65\ \text{Erlangs}$, $B=0{,}1077$).
+$C'$ = canales equivalentes que producen el bloqueo medido, es decir $E(A, C') = B$. Se obtiene con la recurrencia de Erlang B,
 
 $$
-v_{AB} = 13{,}067\left(1 - 13{,}067 + \frac{73}{63{,}6 + 1 - 73 + 13{,}067}\right) = 13{,}067\,(-12{,}067 + 15{,}642) = 46{,}71\ \text{Erlangs}^2
+E(A,n) = \frac{A\,E(A,n-1)}{n + A\,E(A,n-1)}, \qquad E(A,0) = 1
+$$
+
+y se interpola entre los dos valores enteros de $n$ que encierran el bloqueo medido:
+
+- Para $A = 73\ \text{Erlangs}$ y $B = 0{,}179$: $E(73;63) = 0{,}1855$ y $E(73;64) = 0{,}1746$, luego
+
+$$
+C'_{AB} = 63 + \frac{0{,}1855 - 0{,}179}{0{,}1855 - 0{,}1746} = 63 + \frac{0{,}0065}{0{,}0109} = 63{,}60\ \text{canales}
+$$
+
+- Para $A = 65\ \text{Erlangs}$ y $B = 0{,}1077$: $E(65;63) = 0{,}1121$ y $E(65;64) = 0{,}1022$, luego
+
+$$
+C'_{AC} = 63 + \frac{0{,}1121 - 0{,}1077}{0{,}1121 - 0{,}1022} = 63 + \frac{0{,}0044}{0{,}0099} = 63{,}44\ \text{canales}
+$$
+
+Desborde A→B, paso a paso:
+
+$$
+C'_{AB} + 1 - A + m_{AB} = 63{,}60 + 1 - 73 + 13{,}067 = 4{,}667 \qquad \frac{A}{4{,}667} = \frac{73}{4{,}667} = 15{,}6417
 $$
 
 $$
-v_{AC} = 7{,}0005\left(1 - 7{,}0005 + \frac{65}{63{,}4 + 1 - 65 + 7{,}0005}\right) = 7{,}0005\,(-6{,}0005 + 10{,}155) = 29{,}09\ \text{Erlangs}^2
+1 - m_{AB} + 15{,}6417 = 1 - 13{,}067 + 15{,}6417 = 3{,}5747
 $$
 
 $$
-V = 46{,}71 + 29{,}09 = 75{,}80\ \text{Erlangs}^2
+v_{AB} = m_{AB} \times 3{,}5747 = 13{,}067 \times 3{,}5747 = 46{,}71\ \text{Erlangs}^2
+$$
+
+Desborde A→C, paso a paso:
+
+$$
+C'_{AC} + 1 - A + m_{AC} = 63{,}44 + 1 - 65 + 7{,}0005 = 6{,}4405 \qquad \frac{A}{6{,}4405} = \frac{65}{6{,}4405} = 10{,}0924
+$$
+
+$$
+1 - m_{AC} + 10{,}0924 = 1 - 7{,}0005 + 10{,}0924 = 4{,}0919
+$$
+
+$$
+v_{AC} = m_{AC} \times 4{,}0919 = 7{,}0005 \times 4{,}0919 = 28{,}65\ \text{Erlangs}^2
+$$
+
+Las varianzas se suman:
+
+$$
+V = v_{AB} + v_{AC} = 46{,}71 + 28{,}65 = 75{,}36\ \text{Erlangs}^2
 $$
 
 ### 3. Equivalente de Rapp
 
+Relación varianza/media:
+
 $$
-z = \frac{V}{M} = \frac{75{,}80}{20{,}0675} = 3{,}777 \quad \text{(relación varianza/media, sin unidad)}
+z = \frac{V}{M} = \frac{75{,}36}{20{,}0675} = 3{,}755 \quad \text{(sin unidad)}
+$$
+
+Tráfico equivalente (Rapp), primero el término $3z(z-1)$:
+
+$$
+3z(z-1) = 3\,(3{,}755)\,(2{,}755) = 11{,}265 \times 2{,}755 = 31{,}04
 $$
 
 $$
-A^* = V + 3z(z-1) = 75{,}80 + 3(3{,}777)(2{,}777) = 75{,}80 + 31{,}47 = 107{,}27\ \text{Erlangs}
+A^* = V + 3z(z-1) = 75{,}36 + 31{,}04 = 106{,}40\ \text{Erlangs}
 $$
 
+Canales equivalentes (Rapp), primero los términos: $M + z = 20{,}0675 + 3{,}755 = 23{,}8225$ y $M + z - 1 = 22{,}8225$.
+
 $$
-N^* = \frac{A^*(M+z)}{M+z-1} - M - 1 = 107{,}27\cdot\frac{23{,}845}{22{,}845} - 21{,}0675 = 111{,}96 - 21{,}07 = 90{,}89\ \text{canales}
+N^* = \frac{A^*(M+z)}{M+z-1} - (M+1) = 106{,}40 \times \frac{23{,}8225}{22{,}8225} - 21{,}0675 = 106{,}40 \times 1{,}0438 - 21{,}0675 = 111{,}06 - 21{,}07 = 89{,}99\ \text{canales}
 $$
 
 ### 4. Canales de la central de tránsito T
@@ -135,21 +185,23 @@ $$
 Pérdida objetivo sobre el desborde:
 
 $$
-E(A^*, N_{total}) = \frac{B\,M}{A^*} = \frac{0{,}005 \times 20{,}0675\ \text{Erlangs}}{107{,}27\ \text{Erlangs}} = 9{,}35\times10^{-4}
+E(A^*, N_{total}) = \frac{B\,M}{A^*} = \frac{0{,}005 \times 20{,}0675\ \text{Erlangs}}{106{,}40\ \text{Erlangs}} = \frac{0{,}1003}{106{,}40} = 9{,}43\times10^{-4}
 $$
 
-Erlang B con $A^* = 107{,}27\ \text{Erlangs}$: $N=136\ \text{canales} \to 9{,}9\times10^{-4}$ (no cumple) y $N=137\ \text{canales} \to 7{,}8\times10^{-4}$ (cumple), luego $N_{total} = 137\ \text{canales}$.
+Se busca el menor $N$ que cumpla, evaluando Erlang B con $A^* = 106{,}40\ \text{Erlangs}$ (recurrencia o tabla): $N=135\ \text{canales} \to 9{,}98\times10^{-4}$ (no cumple, es mayor que $9{,}43\times10^{-4}$) y $N=136\ \text{canales} \to 7{,}8\times10^{-4}$ (cumple), luego $N_{total} = 136\ \text{canales}$.
 
 $$
-N_T = N_{total} - N^* = 137\ \text{canales} - 90{,}89\ \text{canales} = 46{,}1\ \text{canales}
+N_T = N_{total} - N^* = 136\ \text{canales} - 89{,}99\ \text{canales} = 46{,}01\ \text{canales}
 $$
+
+Como $N_T$ debe ser entero y 46 canales no alcanzan (46,01 > 46), se redondea hacia arriba.
 
 **Resultado: T necesita 47 canales.**
 
 ### Notas
 
 - Los datos no son consistentes con Erlang B: $E(73,51) = 32{,}7\%$ y $E(65,46) = 32{,}1\%$, no 17,9 % y 10,77 %. Por eso se toman los porcentajes medidos como dato y los 51 y 46 canales no intervienen.
-- El resultado es sensible al redondeo de $C'$: con decimales exactos salen $N_{total}=136$ y $N_T = 45{,}6$, es decir 46. Se toma 47 para garantizar el grado de servicio.
+- El resultado es sensible al redondeo de $C'$: con $C'$ redondeado a 63,6 y 63,4 sale $N_{total} = 137$ y $N_T = 46{,}1$; sin redondeos intermedios, $N_T = 45{,}6$. La respuesta queda entre 46 y 47 canales; se toma 47 para no quedar por debajo del grado de servicio.
 - Otros métodos: sumar solo las medias y aplicar Erlang B a 20,07 Erlangs da 32 canales (ignora las ráfagas); usar 51 y 46 canales con Erlang B da ≈ 72. Confirmar cuál usa la cátedra.
 
 # Ejercicio 3 2026xxx
@@ -385,13 +437,13 @@ $$
 D = \frac{4,1667^0}{0!} + \frac{4,1667^1}{1!} + \frac{4,1667^2}{2!} + \frac{4,1667^3}{3!} + \frac{4,1667^4}{4!}
 $$
 
-| $k$ | $A^k/k!$ | Valor |
-|---:|---|---:|
-| 0 | $1$ | 1,0000 |
-| 1 | $4{,}1667$ | 4,1667 |
-| 2 | $4{,}1667^2/2!$ | 8,6806 |
-| 3 | $4{,}1667^3/3!$ | 12,0563 |
-| 4 | $4{,}1667^4/4!$ | 12,5587 |
+| $k$ | $A^k$ | $k!$ | $A^k/k!$ |
+|---:|---:|---:|---:|
+| 0 | 1 | 1 | 1,0000 |
+| 1 | 4,1667 | 1 | 4,1667 |
+| 2 | 17,3611 | 2 | 8,6806 |
+| 3 | 72,3380 | 6 | 12,0563 |
+| 4 | 301,4083 | 24 | 12,5587 |
 
 $$
 D = 1 + 4,1667 + 8,6806 + 12,0563 + 12,5587 = \mathbf{38,4622}
@@ -422,13 +474,13 @@ $$
 **f) Tráfico cursado:**
 
 $$
-A' = A(1-B) = 4{,}1667\ \text{Erlangs} \times (1 - 0{,}3265) = 2{,}8062\ \text{Erlangs}
+A' = A(1-B) = 4{,}1667\ \text{Erlangs} \times (1 - 0{,}32652) = 4{,}1667\ \text{Erlangs} \times 0{,}67348 = 2{,}8062\ \text{Erlangs}
 $$
 
 **g) Tráfico rechazado:**
 
 $$
-M = A \cdot B = 4{,}1667\ \text{Erlangs} \times 0{,}3265 = 1{,}3605\ \text{Erlangs}
+M = A \cdot B = 4{,}1667\ \text{Erlangs} \times 0{,}32652 = 1{,}3605\ \text{Erlangs}
 $$
 
 **h) Llamadas rechazadas en una hora:**
@@ -449,15 +501,43 @@ $$
 P(j) = \frac{\binom{100}{j}\,b^j}{\displaystyle\sum_{k=0}^{4}\binom{100}{k}\,b^k}
 $$
 
-Términos $\binom{100}{j}\,b^j$: $1$; $4{,}1667$; $8{,}5938$; $11{,}6970$; $11{,}8189$, con suma $37{,}2764$.
+Cada coeficiente binomial sale de $\binom{n}{k} = \dfrac{n!}{k!\,(n-k)!}$; por ejemplo, $\binom{100}{4} = \dfrac{100 \cdot 99 \cdot 98 \cdot 97}{4!} = 3\,921\,225$. Con $b^j = (1/24)^j$:
+
+| $j$ | $\binom{100}{j}$ | $b^j$ | $\binom{100}{j}\,b^j$ |
+|---:|---:|---:|---:|
+| 0 | 1 | 1 | 1,0000 |
+| 1 | 100 | $1/24$ | $100/24 = 4{,}1667$ |
+| 2 | 4950 | $1/576$ | $4950/576 = 8{,}5938$ |
+| 3 | 161 700 | $1/13\,824$ | $161\,700/13\,824 = 11{,}6970$ |
+| 4 | 3 921 225 | $1/331\,776$ | $3\,921\,225/331\,776 = 11{,}8189$ |
 
 $$
-P(0) = 0{,}0268 \quad P(1) = 0{,}1118 \quad P(2) = 0{,}2305 \quad P(3) = 0{,}3138 \quad P(4) = 0{,}3171
+\sum = 1 + 4{,}1667 + 8{,}5938 + 11{,}6970 + 11{,}8189 = 37{,}2764
+$$
+
+$$
+P(0) = \frac{1}{37{,}2764} = 0{,}0268 \qquad P(1) = \frac{4{,}1667}{37{,}2764} = 0{,}1118 \qquad P(2) = \frac{8{,}5938}{37{,}2764} = 0{,}2305
+$$
+
+$$
+P(3) = \frac{11{,}6970}{37{,}2764} = 0{,}3138 \qquad P(4) = \frac{11{,}8189}{37{,}2764} = 0{,}3171
 $$
 
 **Congestión en el tiempo:** $E = P(4) = 0{,}3171$ (31,71 %).
 
-**Congestión en las llamadas** (con $F-1 = 99$ fuentes; términos $1$; $4{,}125$; $8{,}4219$; $11{,}3461$; $11{,}3461$, suma $36{,}2391$):
+**Congestión en las llamadas** (se calcula con $F-1 = 99$ fuentes, porque la fuente que origina la llamada no puede estar ocupada):
+
+| $j$ | $\binom{99}{j}$ | $\binom{99}{j}\,b^j$ |
+|---:|---:|---:|
+| 0 | 1 | 1,0000 |
+| 1 | 99 | $99/24 = 4{,}1250$ |
+| 2 | 4851 | $4851/576 = 8{,}4219$ |
+| 3 | 156 849 | $156\,849/13\,824 = 11{,}3461$ |
+| 4 | 3 764 376 | $3\,764\,376/331\,776 = 11{,}3461$ |
+
+$$
+\sum = 1 + 4{,}125 + 8{,}4219 + 11{,}3461 + 11{,}3461 = 36{,}2391
+$$
 
 $$
 B = \frac{\binom{99}{4}\,b^4}{\displaystyle\sum_{k=0}^{4}\binom{99}{k}\,b^k} = \frac{11{,}3461}{36{,}2391} = 0{,}3131 \quad (31{,}31\%)
@@ -466,13 +546,13 @@ $$
 **Tráfico cursado** (canales ocupados en promedio):
 
 $$
-A' = \sum_{j=0}^{4} j\,P(j) = 0{,}1118 + 0{,}4611 + 0{,}9414 + 1{,}2682 = 2{,}7825\ \text{Erlangs}
+A' = \sum_{j=0}^{4} j\,P(j) = 0(0{,}0268) + 1(0{,}1118) + 2(0{,}2305) + 3(0{,}3138) + 4(0{,}3171) = 0{,}1118 + 0{,}4611 + 0{,}9414 + 1{,}2682 = 2{,}7825\ \text{Erlangs}
 $$
 
 **Tráfico ofrecido:**
 
 $$
-A = \frac{A'}{1-B} = \frac{2{,}7825\ \text{Erlangs}}{1 - 0{,}3131} = 4{,}0507\ \text{Erlangs}
+A = \frac{A'}{1-B} = \frac{2{,}7825\ \text{Erlangs}}{1 - 0{,}3131} = \frac{2{,}7825\ \text{Erlangs}}{0{,}6869} = 4{,}0507\ \text{Erlangs}
 $$
 
 **Tráfico rechazado:**
