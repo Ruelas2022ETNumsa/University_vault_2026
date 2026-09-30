@@ -59,7 +59,7 @@ Para lograr esto, los **contenidos básicos** que debe contemplar un plan de se�
 # Ejercicio 4 2022
 De la gráfica de circuitos de ocupación individual; dibujar la ocupación simultánea, calcular el tráfico cursado y calcular el congestionamiento en el tiempo. (20 puntos).
 
-![[1er parcial ETN-1012 marzo 2022-28-09-2026_18-02-52.png]]
+![[Ejercicio 4 2022-28-09-2026_18-02-52.png]]
 
 ---
 

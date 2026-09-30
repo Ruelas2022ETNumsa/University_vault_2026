@@ -779,7 +779,8 @@
         "MAT101",
         "ETN607",
         "ETN1015",
-        "ETN825"
+        "ETN825",
+        "ETN1012"
       ]
     },
     "_app/notebooklm/prompts/ETN806": {
@@ -1137,8 +1138,9 @@
         "_start.md",
         "_doc_start_movil607P1.md",
         "_start_movilyyy.md",
-        "_start_movil.md",
-        "_start_movil607P1 1 1.md"
+        "_start_movil607P2.md",
+        "_start_movil607P1 1 1.md",
+        "_start_movil.md"
       ]
     },
     "_skills/_claude-boot.md": {
@@ -1777,7 +1779,7 @@
         "P1-E7-607-24-08-2026_21-00-28.png",
         "Untitled 1 1-06-09-2026_22-28-14.png",
         "er parcial ETN-1012 marzo 2022-28-09-2026_18-01-56.png",
-        "1er parcial ETN-1012 marzo 2022-28-09-2026_18-02-52.png"
+        "Ejercicio 4 2022-28-09-2026_18-02-52.png"
       ]
     },
     "_hangar/_legacy/tsk_update-rclone.md": {
@@ -6483,10 +6485,6 @@
       "isHidden": false
     },
     "_skills/_start_movil607P1 1 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_skills/_start_movil.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -11285,7 +11283,11 @@
         "Ejercicio 3 2026.md",
         "Ejercicio 4 2026.md",
         "Ejercicio 1 2022.md",
-        "Ejercicio 2 2022.md"
+        "Ejercicio 2 2022.md",
+        "Ejercicio 3 2022.md",
+        "Ejercicio 4 2022.md",
+        "Ejercicio 5 2022.md",
+        "Ejercicio 6 2022.md"
       ]
     },
     "_assets/er parcial ETN-1012 marzo 2022-28-09-2026_18-01-56.png": {
@@ -11303,10 +11305,10 @@
     "_app/notebooklm/guides/ETN1012": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "ETN1012_desmos.md"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "_app/notebooklm/guides/ETN1012/ETN1012_desmos.md": {
       "isPinned": false,
@@ -11323,6 +11325,7 @@
     "Semesters/Sem_09/ETN1012/no": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "1er parcial ETN-1012 marzo 2026 1 1.md",
         "1er parcial ETN-1012 marzo 2026.md",
@@ -11330,8 +11333,7 @@
         "1er parcial ETN-1012 marzo 2026bk.md",
         "1er parcial ETN-1012 marzo 2026 1 2este erar.md",
         "1er parcial ETN-1012 marzo 2022bk.md"
-      ],
-      "sortOrder": "custom"
+      ]
     },
     "Semesters/Sem_09/ETN1012/no/1er parcial ETN-1012 marzo 2022bk.md": {
       "isPinned": false,
@@ -11346,10 +11348,6 @@
       "isHidden": false
     },
     "Semesters/Sem_09/ETN1012/no/1er parcial ETN-1012 marzo 2022.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "_assets/1er parcial ETN-1012 marzo 2022-28-09-2026_18-02-52.png": {
       "isPinned": false,
       "isHidden": false
     },
@@ -11382,6 +11380,46 @@
       "isHidden": false
     },
     "Semesters/Sem_09/ETN1012/Ejercicio 2 2022.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/ETN1012/Ejercicio 3 2022.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/ETN1012/Ejercicio 4 2022.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_assets/Ejercicio 4 2022-28-09-2026_18-02-52.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/ETN1012/Ejercicio 5 2022.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_09/ETN1012/Ejercicio 6 2022.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_app/notebooklm/prompts/ETN1012": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "ETN1012-resolver_v1.md"
+      ]
+    },
+    "_app/notebooklm/prompts/ETN1012/ETN1012-resolver_v1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_skills/_start_movil607P2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_skills/_start_movil.md": {
       "isPinned": false,
       "isHidden": false
     }

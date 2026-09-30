@@ -1,4 +1,3 @@
-
 # Ejercicio 2 2022
 Explicar el concepto del plan de numeración con un ejemplo para una llamada internacional a cualquier país de Bolivia. (10 puntos).
 
