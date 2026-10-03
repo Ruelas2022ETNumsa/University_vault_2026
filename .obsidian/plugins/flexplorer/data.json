@@ -1468,7 +1468,8 @@
         "tsk_toggle-readable-line-length.md",
         "ship_ETN825_AHPL_ejemplos.md",
         "ship_ETN825_AHPL_ejemplos 1.md",
-        "ship_ETN825_AHPL_N16.md"
+        "ship_ETN825_AHPL_N16.md",
+        "mantenimiento_brain_2_10_2026.md"
       ]
     },
     "_hangar/dock/tsk_pdf_marginalia_pp.md": {
@@ -3594,11 +3595,11 @@
         "2026-09-07",
         "2026-09-08",
         "2026-08-09",
-        "2026-09-02",
         "2026-09-09",
         "2026-09-24",
         "draft.md",
-        "promtpx.md"
+        "promtpx.md",
+        "update_claude_obsidian.md"
       ]
     },
     "Rubbish/tmp": {
@@ -6509,23 +6510,6 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": []
-    },
-    "Rubbish/2026-09-02": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "BORRADOR OK OK ETN 825 2022.pdf",
-        "S. Palani, D. Kalaiyarasi-Principles of Digital Signal Processing - 2nd Ed.pdf"
-      ]
-    },
-    "Rubbish/2026-09-02/BORRADOR OK OK ETN 825 2022.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Rubbish/2026-09-02/S. Palani, D. Kalaiyarasi-Principles of Digital Signal Processing - 2nd Ed.pdf": {
-      "isPinned": false,
-      "isHidden": false
     },
     "Rubbish/2026-09-07/2026-09-07 18.02.07.0": {
       "isPinned": false,
@@ -11420,6 +11404,14 @@
       "isHidden": false
     },
     "_skills/_start_movil.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/update_claude_obsidian.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "_hangar/dock/mantenimiento_brain_2_10_2026.md": {
       "isPinned": false,
       "isHidden": false
     }
