@@ -4610,10 +4610,10 @@
         "section.md",
         "2026-09-07",
         "2026-09-08",
-        "2026-10-04",
         "2026-08-09",
         "2026-09-09",
         "2026-09-24",
+        "2026-10-04",
         "draft.md",
         "promtpx.md",
         "update_claude_obsidian.md"
@@ -4637,7 +4637,7 @@
       "isPinned": false,
       "isHidden": false,
       "ctime": 1791168025834,
-      "mtime": 1791170716770
+      "mtime": 1791168025834
     },
     "_PDF/ETN-505": {
       "isPinned": false,
@@ -8393,315 +8393,6 @@
       "ctime": 1790384635527,
       "mtime": 1790384642635
     },
-    "Rubbish/2026-10-04": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "825-Hill-Peterson-Resumen-Docente-ESP.pdf",
-        "data.json",
-        "S. Palani, D. Kalaiyarasi-Principles of Digital Signal Processing - 2nd Ed.pdf",
-        "2026-10-04 23.25.50.0",
-        "2026-10-04 23.26.35.0",
-        "scanned_words.txt"
-      ]
-    },
-    "Rubbish/2026-10-04/825-Hill-Peterson-Resumen-Docente-ESP.pdf": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1787888914115,
-      "mtime": 1754931322100
-    },
-    "Rubbish/2026-10-04/S. Palani, D. Kalaiyarasi-Principles of Digital Signal Processing - 2nd Ed.pdf": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1787018168378,
-      "mtime": 1787837233000
-    },
-    "Rubbish/2026-10-04/data.json": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1781109169958,
-      "mtime": 1791169932250
-    },
-    "Semesters/Sem_07/ETN825/a.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791168791146
-    },
-    "Semesters/Sem_07/ETN825/b.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791167717908,
-      "mtime": 1791168241104
-    },
-    "Semesters/Sem_07/ETN825/codigo_base.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791165967644,
-      "mtime": 1791169286842
-    },
-    "Semesters/Sem_07/ETN825/aP.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168768364,
-      "mtime": 1791168938532
-    },
-    "Semesters/Sem_07/ETN825/bP.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168385717,
-      "mtime": 1791168385717
-    },
-    "Semesters/Sem_07/ETN825/explicacion.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791169898948,
-      "mtime": 1791169898948
-    },
-    "Semesters/Sem_07/ETN825/explicacionB.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791169980301,
-      "mtime": 1791169980301
-    },
-    "Semesters/Sem_09/ETN1012": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "no",
-        "1er parcial ETN-1012 marzo 2022 1.md",
-        "1er parcial ETN-1012 marzo 2026 1.md",
-        "Ejercicio 1 2022.md",
-        "Ejercicio 1 2026.md",
-        "Ejercicio 2 2022.md",
-        "Ejercicio 2 2026.md",
-        "Ejercicio 3 2022.md",
-        "Ejercicio 3 2026.md",
-        "Ejercicio 4 2022.md",
-        "Ejercicio 4 2026.md",
-        "Ejercicio 5 2022.md",
-        "Ejercicio 6 2022.md",
-        "Formulario.md"
-      ]
-    },
-    "Semesters/Sem_09/ETN1012/Ejercicio 1 2022.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1790650691949,
-      "mtime": 1790650827739
-    },
-    "Semesters/Sem_09/ETN1012/Ejercicio 2 2022.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1790650691949,
-      "mtime": 1790650851532
-    },
-    "Semesters/Sem_09/ETN1012/1er parcial ETN-1012 marzo 2022 1.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1790650358122,
-      "mtime": 1790650902491
-    },
-    "Semesters/Sem_09/ETN1012/Ejercicio 3 2022.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1790650691949,
-      "mtime": 1790650892956
-    },
-    "Semesters/Sem_09/ETN1012/1er parcial ETN-1012 marzo 2026 1.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1790650407522,
-      "mtime": 1790650407523
-    },
-    "Semesters/Sem_09/ETN1012/Ejercicio 1 2026.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1790650691949,
-      "mtime": 1790650695549
-    },
-    "Semesters/Sem_09/ETN1012/Ejercicio 4 2022.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1790650691949,
-      "mtime": 1790650904331
-    },
-    "Semesters/Sem_09/ETN1012/Ejercicio 5 2022.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1790650691949,
-      "mtime": 1790650925076
-    },
-    "Semesters/Sem_09/ETN1012/Ejercicio 2 2026.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1790650691949,
-      "mtime": 1790650738150
-    },
-    "Semesters/Sem_09/ETN1012/Formulario.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1790637064375,
-      "mtime": 1790650498673
-    },
-    "Semesters/Sem_09/ETN1012/Ejercicio 3 2026.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1790650691949,
-      "mtime": 1790650770817
-    },
-    "Semesters/Sem_09/ETN1012/no": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "1er parcial ETN-1012 marzo 2022.md",
-        "1er parcial ETN-1012 marzo 2022bk.md",
-        "1er parcial ETN-1012 marzo 2026.md",
-        "1er parcial ETN-1012 marzo 2026 1 1.md",
-        "1er parcial ETN-1012 marzo 2026 1 2este erar.md",
-        "1er parcial ETN-1012 marzo 2026bk.md"
-      ]
-    },
-    "Semesters/Sem_09/ETN1012/no/1er parcial ETN-1012 marzo 2022bk.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1790650219505,
-      "mtime": 1790650902518
-    },
-    "Semesters/Sem_09/ETN1012/no/1er parcial ETN-1012 marzo 2022.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1790632825584,
-      "mtime": 1790650902520
-    },
-    "Semesters/Sem_09/ETN1012/no/1er parcial ETN-1012 marzo 2026 1 1.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1790646857662,
-      "mtime": 1790646249437
-    },
-    "Semesters/Sem_09/ETN1012/no/1er parcial ETN-1012 marzo 2026.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1790633251117,
-      "mtime": 1790636708451
-    },
-    "Semesters/Sem_09/ETN1012/no/1er parcial ETN-1012 marzo 2026bk.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1790650228928,
-      "mtime": 1790648125438
-    },
-    "Semesters/Sem_09/ETN1012/no/1er parcial ETN-1012 marzo 2026 1 2este erar.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1790647754772,
-      "mtime": 1790646977913
-    },
-    "Semesters/Sem_09/ETN1012/Ejercicio 4 2026.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1790650691949,
-      "mtime": 1790650802503
-    },
-    "Semesters/Sem_09/ETN1012/Ejercicio 6 2022.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1790650691949,
-      "mtime": 1790650948454
-    },
-    "Sin título 1.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791163868342,
-      "mtime": 1789654215000
-    },
-    "Sin título 2.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791163868467,
-      "mtime": 1790097370000
-    },
-    "Sin título 3.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791163868071,
-      "mtime": 1790099613000
-    },
-    "Sin título 4.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791163868659,
-      "mtime": 1790100784000
-    },
-    "Sin título.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791163868659,
-      "mtime": 1788888506000
-    },
-    "_app/notebooklm/guides/ETN1012": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "ETN1012_desmos.md"
-      ]
-    },
-    "_app/notebooklm/guides/ETN1012/ETN1012_desmos.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1790649727342,
-      "mtime": 1790649727342
-    },
-    "_app/notebooklm/prompts/ETN1012": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "ETN1012-resolver_v1.md"
-      ]
-    },
-    "_app/notebooklm/prompts/ETN1012/ETN1012-resolver_v1.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1790651248438,
-      "mtime": 1790651248438
-    },
-    "_assets/Ejercicio 4 2022-28-09-2026_18-02-52.png": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1790632972741,
-      "mtime": 1790632972742
-    },
-    "_assets/er parcial ETN-1012 marzo 2022-28-09-2026_18-01-56.png": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1790632916909,
-      "mtime": 1790632916910
-    },
-    "_hangar/dock/mantenimiento_brain_2_10_2026.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1790960312524,
-      "mtime": 1790960312524
-    },
-    "_skills/_start_movil607P2.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1790274913555,
-      "mtime": 1790176603000
-    },
-    "de paso.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791167513145,
-      "mtime": 1791167513145
-    },
     "Rubbish/2026-08-09": {
       "isPinned": false,
       "isHidden": false,
@@ -8780,20 +8471,6 @@
       "ctime": 1788818722661,
       "mtime": 1788818922000
     },
-    "Rubbish/2026-09-07/2026-09-07 18.09.01.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.09.01.0/data.json": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1788818722661,
-      "mtime": 1788818932000
-    },
     "Rubbish/2026-09-07/2026-09-07 18.21.23.0": {
       "isPinned": false,
       "isHidden": false,
@@ -8807,6 +8484,20 @@
       "isHidden": false,
       "ctime": 1788818722661,
       "mtime": 1788818941000
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.09.01.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.09.01.0/data.json": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1788818722661,
+      "mtime": 1788818932000
     },
     "Rubbish/2026-09-07/2026-09-07 18.21.29.0": {
       "isPinned": false,
@@ -8878,20 +8569,6 @@
       "ctime": 1788818722661,
       "mtime": 1788819707000
     },
-    "Rubbish/2026-09-07/2026-09-07 18.22.02.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.22.02.0/data.json": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1788818722661,
-      "mtime": 1788819712000
-    },
     "Rubbish/2026-09-07/2026-09-07 18.22.12.0": {
       "isPinned": false,
       "isHidden": false,
@@ -8905,6 +8582,20 @@
       "isHidden": false,
       "ctime": 1788818722661,
       "mtime": 1788819721000
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.22.02.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.22.02.0/data.json": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1788818722661,
+      "mtime": 1788819712000
     },
     "Rubbish/2026-09-07/2026-09-07 18.22.17.0": {
       "isPinned": false,
@@ -9004,20 +8695,6 @@
       "ctime": 1788817175553,
       "mtime": 1788819934000
     },
-    "Rubbish/2026-09-07/2026-09-07 18.25.45.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Untitled 3.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.25.45.0/Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1788817175553,
-      "mtime": 1788819942000
-    },
     "Rubbish/2026-09-07/2026-09-07 18.25.55.0": {
       "isPinned": false,
       "isHidden": false,
@@ -9074,20 +8751,6 @@
       "ctime": 1788817175553,
       "mtime": 1788819968000
     },
-    "Rubbish/2026-09-07/2026-09-07 18.26.31.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Untitled 3.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.26.31.0/Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1788817175553,
-      "mtime": 1788819981000
-    },
     "Rubbish/2026-09-07/2026-09-07 18.26.21.0": {
       "isPinned": false,
       "isHidden": false,
@@ -9101,6 +8764,34 @@
       "isHidden": false,
       "ctime": 1788817175553,
       "mtime": 1788819972000
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.25.45.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 3.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.25.45.0/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1788817175553,
+      "mtime": 1788819942000
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.26.31.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 3.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.26.31.0/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1788817175553,
+      "mtime": 1788819981000
     },
     "Rubbish/2026-09-07/2026-09-07 18.26.40.0": {
       "isPinned": false,
@@ -9116,19 +8807,19 @@
       "ctime": 1788817175553,
       "mtime": 1788819991000
     },
-    "Rubbish/2026-09-07/2026-09-07 18.26.43.0": {
+    "Rubbish/2026-09-07/2026-09-07 18.26.59.0": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "Untitled 3.md"
+        "data.json"
       ]
     },
-    "Rubbish/2026-09-07/2026-09-07 18.26.43.0/Untitled 3.md": {
+    "Rubbish/2026-09-07/2026-09-07 18.26.59.0/data.json": {
       "isPinned": false,
       "isHidden": false,
-      "ctime": 1788817175553,
-      "mtime": 1788820000000
+      "ctime": 1788818722661,
+      "mtime": 1788820006000
     },
     "Rubbish/2026-09-07/2026-09-07 18.26.47.0": {
       "isPinned": false,
@@ -9144,20 +8835,6 @@
       "ctime": 1788818722661,
       "mtime": 1788819919000
     },
-    "Rubbish/2026-09-07/2026-09-07 18.26.59.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.26.59.0/data.json": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1788818722661,
-      "mtime": 1788820006000
-    },
     "Rubbish/2026-09-07/2026-09-07 18.27.08.0": {
       "isPinned": false,
       "isHidden": false,
@@ -9171,6 +8848,20 @@
       "isHidden": false,
       "ctime": 1788818722661,
       "mtime": 1788820018000
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.26.43.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 3.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.26.43.0/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1788817175553,
+      "mtime": 1788820000000
     },
     "Rubbish/2026-09-07/2026-09-07 18.27.53.0": {
       "isPinned": false,
@@ -9242,7 +8933,7 @@
       "ctime": 1788818722661,
       "mtime": 1788820141000
     },
-    "Rubbish/2026-09-07/2026-09-07 18.29.54.0": {
+    "Rubbish/2026-09-07/2026-09-07 18.30.27.0": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
@@ -9250,11 +8941,11 @@
         "data.json"
       ]
     },
-    "Rubbish/2026-09-07/2026-09-07 18.29.54.0/data.json": {
+    "Rubbish/2026-09-07/2026-09-07 18.30.27.0/data.json": {
       "isPinned": false,
       "isHidden": false,
-      "ctime": 1788818722661,
-      "mtime": 1788820154000
+      "ctime": 1781109169958,
+      "mtime": 1788818895000
     },
     "Rubbish/2026-09-07/2026-09-07 18.30.53.0": {
       "isPinned": false,
@@ -9270,34 +8961,6 @@
       "ctime": 1788818722661,
       "mtime": 1788820223000
     },
-    "Rubbish/2026-09-07/2026-09-07 18.30.27.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.30.27.0/data.json": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1781109169958,
-      "mtime": 1788818895000
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.32.20.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.32.20.0/data.json": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1788818722661,
-      "mtime": 1788820319000
-    },
     "Rubbish/2026-09-07/2026-09-07 18.32.00.0": {
       "isPinned": false,
       "isHidden": false,
@@ -9312,7 +8975,7 @@
       "ctime": 1788818722661,
       "mtime": 1788820294000
     },
-    "Rubbish/2026-09-07/2026-09-07 18.33.47.0": {
+    "Rubbish/2026-09-07/2026-09-07 18.32.20.0": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
@@ -9320,11 +8983,11 @@
         "data.json"
       ]
     },
-    "Rubbish/2026-09-07/2026-09-07 18.33.47.0/data.json": {
+    "Rubbish/2026-09-07/2026-09-07 18.32.20.0/data.json": {
       "isPinned": false,
       "isHidden": false,
       "ctime": 1788818722661,
-      "mtime": 1788820406000
+      "mtime": 1788820319000
     },
     "Rubbish/2026-09-07/2026-09-07 18.33.55.0": {
       "isPinned": false,
@@ -9354,6 +9017,20 @@
       "ctime": 1788818722661,
       "mtime": 1788820434000
     },
+    "Rubbish/2026-09-07/2026-09-07 18.29.54.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.29.54.0/data.json": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1788818722661,
+      "mtime": 1788820154000
+    },
     "Rubbish/2026-09-07/2026-09-07 18.34.24.0": {
       "isPinned": false,
       "isHidden": false,
@@ -9368,7 +9045,7 @@
       "ctime": 1788818722661,
       "mtime": 1788820437000
     },
-    "Rubbish/2026-09-07/2026-09-07 18.35.57.0": {
+    "Rubbish/2026-09-07/2026-09-07 18.33.47.0": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
@@ -9376,11 +9053,11 @@
         "data.json"
       ]
     },
-    "Rubbish/2026-09-07/2026-09-07 18.35.57.0/data.json": {
+    "Rubbish/2026-09-07/2026-09-07 18.33.47.0/data.json": {
       "isPinned": false,
       "isHidden": false,
       "ctime": 1788818722661,
-      "mtime": 1788820463000
+      "mtime": 1788820406000
     },
     "Rubbish/2026-09-07/2026-09-07 18.36.01.0": {
       "isPinned": false,
@@ -9396,20 +9073,6 @@
       "ctime": 1788818722661,
       "mtime": 1788820556000
     },
-    "Rubbish/2026-09-07/2026-09-07 18.37.00.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Untitled 3.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.37.00.0/Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1788817175553,
-      "mtime": 1788820003000
-    },
     "Rubbish/2026-09-07/2026-09-07 18.37.04.0": {
       "isPinned": false,
       "isHidden": false,
@@ -9423,6 +9086,20 @@
       "isHidden": false,
       "ctime": 1788817175553,
       "mtime": 1788820619000
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.35.57.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.35.57.0/data.json": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1788818722661,
+      "mtime": 1788820463000
     },
     "Rubbish/2026-09-07/2026-09-07 18.37.06.0": {
       "isPinned": false,
@@ -9438,20 +9115,6 @@
       "ctime": 1788817175553,
       "mtime": 1788820623000
     },
-    "Rubbish/2026-09-07/2026-09-07 18.37.10.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Untitled 3.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.37.10.0/Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1788817175553,
-      "mtime": 1788820626000
-    },
     "Rubbish/2026-09-07/2026-09-07 18.37.13.0": {
       "isPinned": false,
       "isHidden": false,
@@ -9465,6 +9128,20 @@
       "isHidden": false,
       "ctime": 1788817175553,
       "mtime": 1788820629000
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.37.10.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 3.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.37.10.0/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1788817175553,
+      "mtime": 1788820626000
     },
     "Rubbish/2026-09-07/2026-09-07 18.37.54.0": {
       "isPinned": false,
@@ -9508,6 +9185,20 @@
       "ctime": 1788817175553,
       "mtime": 1788820677000
     },
+    "Rubbish/2026-09-07/2026-09-07 18.37.00.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 3.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.37.00.0/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1788817175553,
+      "mtime": 1788820003000
+    },
     "Rubbish/2026-09-07/2026-09-07 18.39.09.0": {
       "isPinned": false,
       "isHidden": false,
@@ -9535,20 +9226,6 @@
       "isHidden": false,
       "ctime": 1788817175553,
       "mtime": 1788820738000
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.39.11.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Untitled 3.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.39.11.0/Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1788817175553,
-      "mtime": 1788820748000
     },
     "Rubbish/2026-09-07/2026-09-07 18.39.13.0": {
       "isPinned": false,
@@ -9578,6 +9255,20 @@
       "ctime": 1788817175553,
       "mtime": 1788820753000
     },
+    "Rubbish/2026-09-07/2026-09-07 18.39.11.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 3.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.39.11.0/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1788817175553,
+      "mtime": 1788820748000
+    },
     "Rubbish/2026-09-07/2026-09-07 18.39.19.0": {
       "isPinned": false,
       "isHidden": false,
@@ -9606,7 +9297,7 @@
       "ctime": 1788817175553,
       "mtime": 1788820758000
     },
-    "Rubbish/2026-09-07/2026-09-07 18.39.44.0": {
+    "Rubbish/2026-09-07/2026-09-07 18.40.14.0": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
@@ -9614,11 +9305,11 @@
         "Untitled 3.md"
       ]
     },
-    "Rubbish/2026-09-07/2026-09-07 18.39.44.0/Untitled 3.md": {
+    "Rubbish/2026-09-07/2026-09-07 18.40.14.0/Untitled 3.md": {
       "isPinned": false,
       "isHidden": false,
       "ctime": 1788817175553,
-      "mtime": 1788820761000
+      "mtime": 1788820783000
     },
     "Rubbish/2026-09-07/2026-09-07 18.40.15.0": {
       "isPinned": false,
@@ -9633,20 +9324,6 @@
       "isHidden": false,
       "ctime": 1788817175553,
       "mtime": 1788820813000
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.40.14.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Untitled 3.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.40.14.0/Untitled 3.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1788817175553,
-      "mtime": 1788820783000
     },
     "Rubbish/2026-09-07/2026-09-07 18.40.18.0": {
       "isPinned": false,
@@ -9774,6 +9451,20 @@
       "ctime": 1788818722661,
       "mtime": 1788820560000
     },
+    "Rubbish/2026-09-07/2026-09-07 18.39.44.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Untitled 3.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.39.44.0/Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1788817175553,
+      "mtime": 1788820761000
+    },
     "Rubbish/2026-09-07/2026-09-07 18.44.53.0": {
       "isPinned": false,
       "isHidden": false,
@@ -9900,20 +9591,6 @@
       "ctime": 1788818722661,
       "mtime": 1788821164000
     },
-    "Rubbish/2026-09-07/2026-09-07 18.49.56.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 18.49.56.0/data.json": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1788818722661,
-      "mtime": 1788821318000
-    },
     "Rubbish/2026-09-07/2026-09-07 18.50.07.0": {
       "isPinned": false,
       "isHidden": false,
@@ -9927,6 +9604,20 @@
       "isHidden": false,
       "ctime": 1788817175553,
       "mtime": 1788820862000
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.49.56.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 18.49.56.0/data.json": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1788818722661,
+      "mtime": 1788821318000
     },
     "Rubbish/2026-09-07/2026-09-07 18.50.11.0": {
       "isPinned": false,
@@ -10264,20 +9955,6 @@
       "ctime": 1788822224859,
       "mtime": 1788823070000
     },
-    "Rubbish/2026-09-07/2026-09-07 19.18.39.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92.md"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 19.18.39.0/expo rec92.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1788822224859,
-      "mtime": 1788823086000
-    },
     "Rubbish/2026-09-07/2026-09-07 19.18.51.0": {
       "isPinned": false,
       "isHidden": false,
@@ -10348,7 +10025,7 @@
       "ctime": 1788822224859,
       "mtime": 1788823198000
     },
-    "Rubbish/2026-09-07/2026-09-07 19.20.03.0": {
+    "Rubbish/2026-09-07/2026-09-07 19.18.39.0": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
@@ -10356,11 +10033,11 @@
         "expo rec92.md"
       ]
     },
-    "Rubbish/2026-09-07/2026-09-07 19.20.03.0/expo rec92.md": {
+    "Rubbish/2026-09-07/2026-09-07 19.18.39.0/expo rec92.md": {
       "isPinned": false,
       "isHidden": false,
       "ctime": 1788822224859,
-      "mtime": 1788823200000
+      "mtime": 1788823086000
     },
     "Rubbish/2026-09-07/2026-09-07 19.20.58.0": {
       "isPinned": false,
@@ -10389,6 +10066,20 @@
       "isHidden": false,
       "ctime": 1788822224859,
       "mtime": 1788823258000
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.20.03.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92.md"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 19.20.03.0/expo rec92.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1788822224859,
+      "mtime": 1788823200000
     },
     "Rubbish/2026-09-07/2026-09-07 19.21.35.0": {
       "isPinned": false,
@@ -11202,27 +10893,6 @@
       "ctime": 1788818722661,
       "mtime": 1788824079000
     },
-    "Rubbish/2026-09-07/2026-09-07 23.39.15.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json",
-        "scanned_words.txt"
-      ]
-    },
-    "Rubbish/2026-09-07/2026-09-07 23.39.15.0/data.json": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1781109169958,
-      "mtime": 1788838734000
-    },
-    "Rubbish/2026-09-07/2026-09-07 23.39.15.0/scanned_words.txt": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1780114193327,
-      "mtime": 1788838734000
-    },
     "Rubbish/2026-09-07/2026-09-07 23.38.59.0": {
       "isPinned": false,
       "isHidden": false,
@@ -11236,6 +10906,27 @@
       "isHidden": false,
       "ctime": 1781109169958,
       "mtime": 1788824232275
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.39.15.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json",
+        "scanned_words.txt"
+      ]
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.39.15.0/scanned_words.txt": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1780114193327,
+      "mtime": 1788838734000
+    },
+    "Rubbish/2026-09-07/2026-09-07 23.39.15.0/data.json": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1781109169958,
+      "mtime": 1788838734000
     },
     "Rubbish/2026-09-07/2026-09-07 23.39.40.0": {
       "isPinned": false,
@@ -11629,20 +11320,6 @@
       "ctime": 1788840026829,
       "mtime": 1788840105000
     },
-    "Rubbish/2026-09-08/2026-09-08 00.02.45.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92 1.md"
-      ]
-    },
-    "Rubbish/2026-09-08/2026-09-08 00.02.45.0/expo rec92 1.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1788840026829,
-      "mtime": 1788840157000
-    },
     "Rubbish/2026-09-08/2026-09-08 00.02.39.0": {
       "isPinned": false,
       "isHidden": false,
@@ -11656,6 +11333,20 @@
       "isHidden": false,
       "ctime": 1788840026829,
       "mtime": 1788840150000
+    },
+    "Rubbish/2026-09-08/2026-09-08 00.02.45.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92 1.md"
+      ]
+    },
+    "Rubbish/2026-09-08/2026-09-08 00.02.45.0/expo rec92 1.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1788840026829,
+      "mtime": 1788840157000
     },
     "Rubbish/2026-09-08/2026-09-08 00.02.49.0": {
       "isPinned": false,
@@ -11713,20 +11404,6 @@
       "ctime": 1788840026829,
       "mtime": 1788840173000
     },
-    "Rubbish/2026-09-08/2026-09-08 00.03.03.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92 1.md"
-      ]
-    },
-    "Rubbish/2026-09-08/2026-09-08 00.03.03.0/expo rec92 1.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1788840026829,
-      "mtime": 1788840176000
-    },
     "Rubbish/2026-09-08/2026-09-08 00.03.05.0": {
       "isPinned": false,
       "isHidden": false,
@@ -11740,6 +11417,20 @@
       "isHidden": false,
       "ctime": 1788840026829,
       "mtime": 1788840181000
+    },
+    "Rubbish/2026-09-08/2026-09-08 00.03.03.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92 1.md"
+      ]
+    },
+    "Rubbish/2026-09-08/2026-09-08 00.03.03.0/expo rec92 1.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1788840026829,
+      "mtime": 1788840176000
     },
     "Rubbish/2026-09-08/2026-09-08 00.03.14.0": {
       "isPinned": false,
@@ -11755,20 +11446,6 @@
       "ctime": 1788840026829,
       "mtime": 1788840190000
     },
-    "Rubbish/2026-09-08/2026-09-08 00.03.12.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92 1.md"
-      ]
-    },
-    "Rubbish/2026-09-08/2026-09-08 00.03.12.0/expo rec92 1.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1788840026829,
-      "mtime": 1788840183000
-    },
     "Rubbish/2026-09-08/2026-09-08 00.03.17.0": {
       "isPinned": false,
       "isHidden": false,
@@ -11782,6 +11459,20 @@
       "isHidden": false,
       "ctime": 1788840026829,
       "mtime": 1788840192000
+    },
+    "Rubbish/2026-09-08/2026-09-08 00.03.12.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92 1.md"
+      ]
+    },
+    "Rubbish/2026-09-08/2026-09-08 00.03.12.0/expo rec92 1.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1788840026829,
+      "mtime": 1788840183000
     },
     "Rubbish/2026-09-08/2026-09-08 00.03.22.0": {
       "isPinned": false,
@@ -11937,20 +11628,6 @@
       "ctime": 1788840026829,
       "mtime": 1788840231000
     },
-    "Rubbish/2026-09-08/2026-09-08 00.04.19.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92 1.md"
-      ]
-    },
-    "Rubbish/2026-09-08/2026-09-08 00.04.19.0/expo rec92 1.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1788840026829,
-      "mtime": 1788840255000
-    },
     "Rubbish/2026-09-08/2026-09-08 00.04.23.0": {
       "isPinned": false,
       "isHidden": false,
@@ -11978,20 +11655,6 @@
       "isHidden": false,
       "ctime": 1788840026829,
       "mtime": 1788840261000
-    },
-    "Rubbish/2026-09-08/2026-09-08 00.04.38.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92 1.md"
-      ]
-    },
-    "Rubbish/2026-09-08/2026-09-08 00.04.38.0/expo rec92 1.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1788840026829,
-      "mtime": 1788840269000
     },
     "Rubbish/2026-09-08/2026-09-08 00.04.46.0": {
       "isPinned": false,
@@ -12203,6 +11866,20 @@
       "ctime": 1788840026829,
       "mtime": 1788840360000
     },
+    "Rubbish/2026-09-08/2026-09-08 00.04.38.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92 1.md"
+      ]
+    },
+    "Rubbish/2026-09-08/2026-09-08 00.04.38.0/expo rec92 1.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1788840026829,
+      "mtime": 1788840269000
+    },
     "Rubbish/2026-09-08/2026-09-08 00.06.06.0": {
       "isPinned": false,
       "isHidden": false,
@@ -12216,20 +11893,6 @@
       "isHidden": false,
       "ctime": 1788840026829,
       "mtime": 1788840362000
-    },
-    "Rubbish/2026-09-08/2026-09-08 00.06.22.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92 1.md"
-      ]
-    },
-    "Rubbish/2026-09-08/2026-09-08 00.06.22.0/expo rec92 1.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1788840026829,
-      "mtime": 1788840367000
     },
     "Rubbish/2026-09-08/2026-09-08 00.06.09.0": {
       "isPinned": false,
@@ -12329,20 +11992,6 @@
       "ctime": 1788840026829,
       "mtime": 1788840505000
     },
-    "Rubbish/2026-09-08/2026-09-08 00.08.38.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-08/2026-09-08 00.08.38.0/data.json": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1788818722661,
-      "mtime": 1788840451000
-    },
     "Rubbish/2026-09-08/2026-09-08 00.08.32.0": {
       "isPinned": false,
       "isHidden": false,
@@ -12356,6 +12005,20 @@
       "isHidden": false,
       "ctime": 1788840026829,
       "mtime": 1788840507000
+    },
+    "Rubbish/2026-09-08/2026-09-08 00.08.38.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-08/2026-09-08 00.08.38.0/data.json": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1788818722661,
+      "mtime": 1788840451000
     },
     "Rubbish/2026-09-08/2026-09-08 00.09.01.0": {
       "isPinned": false,
@@ -12412,6 +12075,20 @@
       "isHidden": false,
       "ctime": 1788840026829,
       "mtime": 1788840510000
+    },
+    "Rubbish/2026-09-08/2026-09-08 00.06.22.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92 1.md"
+      ]
+    },
+    "Rubbish/2026-09-08/2026-09-08 00.06.22.0/expo rec92 1.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1788840026829,
+      "mtime": 1788840367000
     },
     "Rubbish/2026-09-08/2026-09-08 00.24.24.0": {
       "isPinned": false,
@@ -12637,6 +12314,20 @@
       "ctime": 1788818722661,
       "mtime": 1788841572000
     },
+    "Rubbish/2026-09-08/2026-09-08 00.27.01.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-08/2026-09-08 00.27.01.0/data.json": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1788818722661,
+      "mtime": 1788841587000
+    },
     "Rubbish/2026-09-08/2026-09-08 00.27.13.0": {
       "isPinned": false,
       "isHidden": false,
@@ -12651,19 +12342,19 @@
       "ctime": 1788818722661,
       "mtime": 1788841618000
     },
-    "Rubbish/2026-09-08/2026-09-08 00.27.01.0": {
+    "Rubbish/2026-09-08/2026-09-08 00.04.19.0": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "data.json"
+        "expo rec92 1.md"
       ]
     },
-    "Rubbish/2026-09-08/2026-09-08 00.27.01.0/data.json": {
+    "Rubbish/2026-09-08/2026-09-08 00.04.19.0/expo rec92 1.md": {
       "isPinned": false,
       "isHidden": false,
-      "ctime": 1788818722661,
-      "mtime": 1788841587000
+      "ctime": 1788840026829,
+      "mtime": 1788840255000
     },
     "Rubbish/2026-09-08/2026-09-08 00.28.23.0": {
       "isPinned": false,
@@ -12693,20 +12384,6 @@
       "ctime": 1788818722661,
       "mtime": 1788841700000
     },
-    "Rubbish/2026-09-08/2026-09-08 00.29.57.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-08/2026-09-08 00.29.57.0/data.json": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1788818722661,
-      "mtime": 1788841711000
-    },
     "Rubbish/2026-09-08/2026-09-08 00.30.25.0": {
       "isPinned": false,
       "isHidden": false,
@@ -12720,6 +12397,20 @@
       "isHidden": false,
       "ctime": 1788818722661,
       "mtime": 1788841794000
+    },
+    "Rubbish/2026-09-08/2026-09-08 00.29.57.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-08/2026-09-08 00.29.57.0/data.json": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1788818722661,
+      "mtime": 1788841711000
     },
     "Rubbish/2026-09-08/2026-09-08 00.30.42.0": {
       "isPinned": false,
@@ -12777,20 +12468,6 @@
       "ctime": 1788840026829,
       "mtime": 1788841873000
     },
-    "Rubbish/2026-09-08/2026-09-08 00.31.24.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92 1.md"
-      ]
-    },
-    "Rubbish/2026-09-08/2026-09-08 00.31.24.0/expo rec92 1.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1788840026829,
-      "mtime": 1788841880000
-    },
     "Rubbish/2026-09-08/2026-09-08 00.31.28.0": {
       "isPinned": false,
       "isHidden": false,
@@ -12804,6 +12481,20 @@
       "isHidden": false,
       "ctime": 1788840026829,
       "mtime": 1788841882000
+    },
+    "Rubbish/2026-09-08/2026-09-08 00.31.24.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92 1.md"
+      ]
+    },
+    "Rubbish/2026-09-08/2026-09-08 00.31.24.0/expo rec92 1.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1788840026829,
+      "mtime": 1788841880000
     },
     "Rubbish/2026-09-08/2026-09-08 00.31.32.0": {
       "isPinned": false,
@@ -12959,20 +12650,6 @@
       "ctime": 1788840026829,
       "mtime": 1788842429000
     },
-    "Rubbish/2026-09-08/2026-09-08 00.40.57.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92 1.md"
-      ]
-    },
-    "Rubbish/2026-09-08/2026-09-08 00.40.57.0/expo rec92 1.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1788840026829,
-      "mtime": 1788842447000
-    },
     "Rubbish/2026-09-08/2026-09-08 00.41.00.0": {
       "isPinned": false,
       "isHidden": false,
@@ -12987,7 +12664,7 @@
       "ctime": 1788840026829,
       "mtime": 1788842456000
     },
-    "Rubbish/2026-09-08/2026-09-08 00.41.26.0": {
+    "Rubbish/2026-09-08/2026-09-08 00.40.57.0": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
@@ -12995,11 +12672,11 @@
         "expo rec92 1.md"
       ]
     },
-    "Rubbish/2026-09-08/2026-09-08 00.41.26.0/expo rec92 1.md": {
+    "Rubbish/2026-09-08/2026-09-08 00.40.57.0/expo rec92 1.md": {
       "isPinned": false,
       "isHidden": false,
       "ctime": 1788840026829,
-      "mtime": 1788842458000
+      "mtime": 1788842447000
     },
     "Rubbish/2026-09-08/2026-09-08 00.41.49.0": {
       "isPinned": false,
@@ -13015,6 +12692,20 @@
       "ctime": 1788840026829,
       "mtime": 1788842484000
     },
+    "Rubbish/2026-09-08/2026-09-08 00.41.26.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92 1.md"
+      ]
+    },
+    "Rubbish/2026-09-08/2026-09-08 00.41.26.0/expo rec92 1.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1788840026829,
+      "mtime": 1788842458000
+    },
     "Rubbish/2026-09-08/2026-09-08 00.42.08.0": {
       "isPinned": false,
       "isHidden": false,
@@ -13028,6 +12719,20 @@
       "isHidden": false,
       "ctime": 1788840026829,
       "mtime": 1788842507000
+    },
+    "Rubbish/2026-09-08/2026-09-08 00.42.10.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92 1.md"
+      ]
+    },
+    "Rubbish/2026-09-08/2026-09-08 00.42.10.0/expo rec92 1.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1788840026829,
+      "mtime": 1788842526000
     },
     "Rubbish/2026-09-08/2026-09-08 00.42.16.0": {
       "isPinned": false,
@@ -13099,20 +12804,6 @@
       "ctime": 1788840026829,
       "mtime": 1788842631000
     },
-    "Rubbish/2026-09-08/2026-09-08 00.42.10.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92 1.md"
-      ]
-    },
-    "Rubbish/2026-09-08/2026-09-08 00.42.10.0/expo rec92 1.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1788840026829,
-      "mtime": 1788842526000
-    },
     "Rubbish/2026-09-08/2026-09-08 00.45.18.0": {
       "isPinned": false,
       "isHidden": false,
@@ -13141,20 +12832,6 @@
       "ctime": 1788840026829,
       "mtime": 1788842716000
     },
-    "Rubbish/2026-09-08/2026-09-08 00.46.05.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92 1.md"
-      ]
-    },
-    "Rubbish/2026-09-08/2026-09-08 00.46.05.0/expo rec92 1.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1788840026829,
-      "mtime": 1788842760000
-    },
     "Rubbish/2026-09-08/2026-09-08 00.47.12.0": {
       "isPinned": false,
       "isHidden": false,
@@ -13169,19 +12846,19 @@
       "ctime": 1788818722661,
       "mtime": 1788842385000
     },
-    "Rubbish/2026-09-08/2026-09-08 00.47.48.0": {
+    "Rubbish/2026-09-08/2026-09-08 00.46.05.0": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "data.json"
+        "expo rec92 1.md"
       ]
     },
-    "Rubbish/2026-09-08/2026-09-08 00.47.48.0/data.json": {
+    "Rubbish/2026-09-08/2026-09-08 00.46.05.0/expo rec92 1.md": {
       "isPinned": false,
       "isHidden": false,
-      "ctime": 1788818722661,
-      "mtime": 1788842859000
+      "ctime": 1788840026829,
+      "mtime": 1788842760000
     },
     "Rubbish/2026-09-08/2026-09-08 00.47.41.0": {
       "isPinned": false,
@@ -13196,6 +12873,20 @@
       "isHidden": false,
       "ctime": 1788818722661,
       "mtime": 1788842831000
+    },
+    "Rubbish/2026-09-08/2026-09-08 00.47.48.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-08/2026-09-08 00.47.48.0/data.json": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1788818722661,
+      "mtime": 1788842859000
     },
     "Rubbish/2026-09-08/2026-09-08 00.47.51.0": {
       "isPinned": false,
@@ -13225,20 +12916,6 @@
       "ctime": 1788818722661,
       "mtime": 1788842869000
     },
-    "Rubbish/2026-09-08/2026-09-08 00.47.57.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-08/2026-09-08 00.47.57.0/data.json": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1788818722661,
-      "mtime": 1788842872000
-    },
     "Rubbish/2026-09-08/2026-09-08 00.48.11.0": {
       "isPinned": false,
       "isHidden": false,
@@ -13252,6 +12929,20 @@
       "isHidden": false,
       "ctime": 1788818722661,
       "mtime": 1788842876000
+    },
+    "Rubbish/2026-09-08/2026-09-08 00.47.57.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-08/2026-09-08 00.47.57.0/data.json": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1788818722661,
+      "mtime": 1788842872000
     },
     "Rubbish/2026-09-08/2026-09-08 00.48.28.0": {
       "isPinned": false,
@@ -13435,6 +13126,20 @@
       "ctime": 1788818722661,
       "mtime": 1788843313000
     },
+    "Rubbish/2026-09-08/2026-09-08 00.56.43.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92 1.md"
+      ]
+    },
+    "Rubbish/2026-09-08/2026-09-08 00.56.43.0/expo rec92 1.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1788840026829,
+      "mtime": 1788843310000
+    },
     "Rubbish/2026-09-08/2026-09-08 00.56.17.0": {
       "isPinned": false,
       "isHidden": false,
@@ -13462,20 +13167,6 @@
       "isHidden": false,
       "ctime": 1788818722661,
       "mtime": 1788843374000
-    },
-    "Rubbish/2026-09-08/2026-09-08 00.56.43.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92 1.md"
-      ]
-    },
-    "Rubbish/2026-09-08/2026-09-08 00.56.43.0/expo rec92 1.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1788840026829,
-      "mtime": 1788843310000
     },
     "Rubbish/2026-09-08/2026-09-08 00.56.46.0": {
       "isPinned": false,
@@ -13519,20 +13210,6 @@
       "ctime": 1788818722661,
       "mtime": 1788843416000
     },
-    "Rubbish/2026-09-08/2026-09-08 01.07.18.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92 1.md"
-      ]
-    },
-    "Rubbish/2026-09-08/2026-09-08 01.07.18.0/expo rec92 1.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1788840026829,
-      "mtime": 1788843401000
-    },
     "Rubbish/2026-09-08/2026-09-08 01.07.14.0": {
       "isPinned": false,
       "isHidden": false,
@@ -13546,6 +13223,20 @@
       "isHidden": false,
       "ctime": 1788818722661,
       "mtime": 1788844022000
+    },
+    "Rubbish/2026-09-08/2026-09-08 01.07.18.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "expo rec92 1.md"
+      ]
+    },
+    "Rubbish/2026-09-08/2026-09-08 01.07.18.0/expo rec92 1.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1788840026829,
+      "mtime": 1788843401000
     },
     "Rubbish/2026-09-08/2026-09-08 01.07.21.0": {
       "isPinned": false,
@@ -13603,6 +13294,34 @@
       "ctime": 1788840026829,
       "mtime": 1788844046000
     },
+    "Rubbish/2026-09-08/2026-09-08 01.07.55.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-08/2026-09-08 01.07.55.0/data.json": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1788818722661,
+      "mtime": 1788844032000
+    },
+    "Rubbish/2026-09-08/2026-09-08 01.13.02.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-08/2026-09-08 01.13.02.0/data.json": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1788818722661,
+      "mtime": 1788844072000
+    },
     "Rubbish/2026-09-08/2026-09-08 01.25.41.0": {
       "isPinned": false,
       "isHidden": false,
@@ -13631,7 +13350,7 @@
       "ctime": 1788818722661,
       "mtime": 1788845138000
     },
-    "Rubbish/2026-09-08/2026-09-08 01.13.02.0": {
+    "Rubbish/2026-09-08/2026-09-08 01.26.25.0": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
@@ -13639,11 +13358,11 @@
         "data.json"
       ]
     },
-    "Rubbish/2026-09-08/2026-09-08 01.13.02.0/data.json": {
+    "Rubbish/2026-09-08/2026-09-08 01.26.25.0/data.json": {
       "isPinned": false,
       "isHidden": false,
       "ctime": 1788818722661,
-      "mtime": 1788844072000
+      "mtime": 1788845159000
     },
     "Rubbish/2026-09-08/2026-09-08 01.27.05.0": {
       "isPinned": false,
@@ -13659,7 +13378,7 @@
       "ctime": 1788818722661,
       "mtime": 1788845183000
     },
-    "Rubbish/2026-09-08/2026-09-08 01.26.25.0": {
+    "Rubbish/2026-09-08/2026-09-08 01.33.00.0": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
@@ -13667,11 +13386,11 @@
         "data.json"
       ]
     },
-    "Rubbish/2026-09-08/2026-09-08 01.26.25.0/data.json": {
+    "Rubbish/2026-09-08/2026-09-08 01.33.00.0/data.json": {
       "isPinned": false,
       "isHidden": false,
       "ctime": 1788818722661,
-      "mtime": 1788845159000
+      "mtime": 1788845575000
     },
     "Rubbish/2026-09-08/2026-09-08 01.32.58.0": {
       "isPinned": false,
@@ -13686,20 +13405,6 @@
       "isHidden": false,
       "ctime": 1788818722661,
       "mtime": 1788845223000
-    },
-    "Rubbish/2026-09-08/2026-09-08 01.33.00.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-08/2026-09-08 01.33.00.0/data.json": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1788818722661,
-      "mtime": 1788845575000
     },
     "Rubbish/2026-09-08/2026-09-08 01.33.29.0": {
       "isPinned": false,
@@ -13841,20 +13546,6 @@
       "ctime": 1788818722661,
       "mtime": 1788845820000
     },
-    "Rubbish/2026-09-08/2026-09-08 01.07.55.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-08/2026-09-08 01.07.55.0/data.json": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1788818722661,
-      "mtime": 1788844032000
-    },
     "Rubbish/2026-09-08/2026-09-08 01.37.28.0": {
       "isPinned": false,
       "isHidden": false,
@@ -13868,6 +13559,20 @@
       "isHidden": false,
       "ctime": 1788818722661,
       "mtime": 1788845838000
+    },
+    "Rubbish/2026-09-08/2026-09-08 01.42.06.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-09-08/2026-09-08 01.42.06.0/data.json": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1788818722661,
+      "mtime": 1788845846000
     },
     "Rubbish/2026-09-08/2026-09-08 01.42.22.0": {
       "isPinned": false,
@@ -13883,19 +13588,19 @@
       "ctime": 1788840026829,
       "mtime": 1788845837000
     },
-    "Rubbish/2026-09-08/2026-09-08 01.42.06.0": {
+    "Rubbish/2026-09-08/2026-09-08 01.42.29.0": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "data.json"
+        "expo rec92 1.md"
       ]
     },
-    "Rubbish/2026-09-08/2026-09-08 01.42.06.0/data.json": {
+    "Rubbish/2026-09-08/2026-09-08 01.42.29.0/expo rec92 1.md": {
       "isPinned": false,
       "isHidden": false,
-      "ctime": 1788818722661,
-      "mtime": 1788845846000
+      "ctime": 1788840026829,
+      "mtime": 1788846140000
     },
     "Rubbish/2026-09-08/2026-09-08 01.42.34.0": {
       "isPinned": false,
@@ -13924,20 +13629,6 @@
       "isHidden": false,
       "ctime": 1788840026829,
       "mtime": 1788846152000
-    },
-    "Rubbish/2026-09-08/2026-09-08 01.42.29.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "expo rec92 1.md"
-      ]
-    },
-    "Rubbish/2026-09-08/2026-09-08 01.42.29.0/expo rec92 1.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1788840026829,
-      "mtime": 1788846140000
     },
     "Rubbish/2026-09-08/2026-09-08 01.44.30.0": {
       "isPinned": false,
@@ -14065,6 +13756,20 @@
       "ctime": 1788818722661,
       "mtime": 1788847271000
     },
+    "Rubbish/2026-09-08/2026-09-08 02.13.19.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "fin_REC92_expo.md"
+      ]
+    },
+    "Rubbish/2026-09-08/2026-09-08 02.13.19.0/fin_REC92_expo.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1788846652433,
+      "mtime": 1788847995000
+    },
     "Rubbish/2026-09-08/2026-09-08 02.13.22.0": {
       "isPinned": false,
       "isHidden": false,
@@ -14121,20 +13826,6 @@
       "ctime": 1788846652433,
       "mtime": 1788848009000
     },
-    "Rubbish/2026-09-08/2026-09-08 02.14.10.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "fin_REC92_expo.md"
-      ]
-    },
-    "Rubbish/2026-09-08/2026-09-08 02.14.10.0/fin_REC92_expo.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1788846652433,
-      "mtime": 1788848038000
-    },
     "Rubbish/2026-09-08/2026-09-08 02.14.15.0": {
       "isPinned": false,
       "isHidden": false,
@@ -14149,6 +13840,20 @@
       "ctime": 1788846652433,
       "mtime": 1788848048000
     },
+    "Rubbish/2026-09-08/2026-09-08 02.14.10.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "fin_REC92_expo.md"
+      ]
+    },
+    "Rubbish/2026-09-08/2026-09-08 02.14.10.0/fin_REC92_expo.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1788846652433,
+      "mtime": 1788848038000
+    },
     "Rubbish/2026-09-08/fin_REC92_expo.md": {
       "isPinned": false,
       "isHidden": false,
@@ -14160,20 +13865,6 @@
       "isHidden": false,
       "ctime": 1780114193327,
       "mtime": 1788840026000
-    },
-    "Rubbish/2026-09-08/2026-09-08 02.13.19.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "fin_REC92_expo.md"
-      ]
-    },
-    "Rubbish/2026-09-08/2026-09-08 02.13.19.0/fin_REC92_expo.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1788846652433,
-      "mtime": 1788847995000
     },
     "Rubbish/2026-09-09": {
       "isPinned": false,
@@ -14254,45 +13945,33 @@
       "ctime": 1780114193327,
       "mtime": 1788892384000
     },
-    "Rubbish/2026-10-04/2026-10-04 23.25.50.0": {
+    "Rubbish/2026-10-04": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "data.json"
+        "825-Hill-Peterson-Resumen-Docente-ESP.pdf",
+        "data.json",
+        "S. Palani, D. Kalaiyarasi-Principles of Digital Signal Processing - 2nd Ed.pdf"
       ]
     },
-    "Rubbish/2026-10-04/2026-10-04 23.25.50.0/data.json": {
+    "Rubbish/2026-10-04/825-Hill-Peterson-Resumen-Docente-ESP.pdf": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1787888914115,
+      "mtime": 1754931322100
+    },
+    "Rubbish/2026-10-04/S. Palani, D. Kalaiyarasi-Principles of Digital Signal Processing - 2nd Ed.pdf": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1787018168378,
+      "mtime": 1787837233000
+    },
+    "Rubbish/2026-10-04/data.json": {
       "isPinned": false,
       "isHidden": false,
       "ctime": 1781109169958,
-      "mtime": 1791170288303
-    },
-    "Rubbish/2026-10-04/2026-10-04 23.26.35.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "scanned_words.txt"
-      ]
-    },
-    "Rubbish/2026-10-04/2026-10-04 23.26.35.0/scanned_words.txt": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1780114193327,
-      "mtime": 1791170752000
-    },
-    "Rubbish/2026-10-04/scanned_words.txt": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1780114193327,
-      "mtime": 1791170749000
-    },
-    "Rubbish/draft.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1787873236332,
-      "mtime": 1787873236332
+      "mtime": 1791169932250
     },
     "Rubbish/promtpx.md": {
       "isPinned": false,
@@ -14305,6 +13984,290 @@
       "isHidden": false,
       "ctime": 1790993910267,
       "mtime": 1790993910267
+    },
+    "Rubbish/draft.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1787873236332,
+      "mtime": 1787873236332
+    },
+    "Semesters/Sem_07/ETN825/a.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791168791146,
+      "mtime": 1791168791146
+    },
+    "Semesters/Sem_07/ETN825/b.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791167717908,
+      "mtime": 1791168241104
+    },
+    "Semesters/Sem_07/ETN825/codigo_base.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791165967644,
+      "mtime": 1791169286842
+    },
+    "Semesters/Sem_07/ETN825/aP.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791168768364,
+      "mtime": 1791168938532
+    },
+    "Semesters/Sem_07/ETN825/bP.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791168385717,
+      "mtime": 1791168385717
+    },
+    "Semesters/Sem_07/ETN825/explicacion.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791169898948,
+      "mtime": 1791169898948
+    },
+    "Semesters/Sem_07/ETN825/explicacionB.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791169980301,
+      "mtime": 1791169980301
+    },
+    "Semesters/Sem_09/ETN1012": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "no",
+        "1er parcial ETN-1012 marzo 2022 1.md",
+        "1er parcial ETN-1012 marzo 2026 1.md",
+        "Ejercicio 1 2022.md",
+        "Ejercicio 1 2026.md",
+        "Ejercicio 2 2022.md",
+        "Ejercicio 2 2026.md",
+        "Ejercicio 3 2022.md",
+        "Ejercicio 3 2026.md",
+        "Ejercicio 4 2022.md",
+        "Ejercicio 4 2026.md",
+        "Ejercicio 5 2022.md",
+        "Ejercicio 6 2022.md",
+        "Formulario.md"
+      ]
+    },
+    "Semesters/Sem_09/ETN1012/Ejercicio 1 2022.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1790650691949,
+      "mtime": 1790650827739
+    },
+    "Semesters/Sem_09/ETN1012/Ejercicio 2 2022.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1790650691949,
+      "mtime": 1790650851532
+    },
+    "Semesters/Sem_09/ETN1012/1er parcial ETN-1012 marzo 2022 1.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1790650358122,
+      "mtime": 1790650902491
+    },
+    "Semesters/Sem_09/ETN1012/Ejercicio 3 2022.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1790650691949,
+      "mtime": 1790650892956
+    },
+    "Semesters/Sem_09/ETN1012/1er parcial ETN-1012 marzo 2026 1.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1790650407522,
+      "mtime": 1790650407523
+    },
+    "Semesters/Sem_09/ETN1012/Ejercicio 1 2026.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1790650691949,
+      "mtime": 1790650695549
+    },
+    "Semesters/Sem_09/ETN1012/Ejercicio 4 2022.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1790650691949,
+      "mtime": 1790650904331
+    },
+    "Semesters/Sem_09/ETN1012/Ejercicio 5 2022.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1790650691949,
+      "mtime": 1790650925076
+    },
+    "Semesters/Sem_09/ETN1012/Ejercicio 2 2026.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1790650691949,
+      "mtime": 1790650738150
+    },
+    "Semesters/Sem_09/ETN1012/Formulario.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1790637064375,
+      "mtime": 1790650498673
+    },
+    "Semesters/Sem_09/ETN1012/Ejercicio 3 2026.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1790650691949,
+      "mtime": 1790650770817
+    },
+    "Semesters/Sem_09/ETN1012/no": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "1er parcial ETN-1012 marzo 2022.md",
+        "1er parcial ETN-1012 marzo 2022bk.md",
+        "1er parcial ETN-1012 marzo 2026.md",
+        "1er parcial ETN-1012 marzo 2026 1 1.md",
+        "1er parcial ETN-1012 marzo 2026 1 2este erar.md",
+        "1er parcial ETN-1012 marzo 2026bk.md"
+      ]
+    },
+    "Semesters/Sem_09/ETN1012/no/1er parcial ETN-1012 marzo 2022bk.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1790650219505,
+      "mtime": 1790650902518
+    },
+    "Semesters/Sem_09/ETN1012/no/1er parcial ETN-1012 marzo 2022.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1790632825584,
+      "mtime": 1790650902520
+    },
+    "Semesters/Sem_09/ETN1012/no/1er parcial ETN-1012 marzo 2026 1 1.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1790646857662,
+      "mtime": 1790646249437
+    },
+    "Semesters/Sem_09/ETN1012/no/1er parcial ETN-1012 marzo 2026.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1790633251117,
+      "mtime": 1790636708451
+    },
+    "Semesters/Sem_09/ETN1012/no/1er parcial ETN-1012 marzo 2026bk.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1790650228928,
+      "mtime": 1790648125438
+    },
+    "Semesters/Sem_09/ETN1012/no/1er parcial ETN-1012 marzo 2026 1 2este erar.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1790647754772,
+      "mtime": 1790646977913
+    },
+    "Semesters/Sem_09/ETN1012/Ejercicio 4 2026.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1790650691949,
+      "mtime": 1790650802503
+    },
+    "Semesters/Sem_09/ETN1012/Ejercicio 6 2022.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1790650691949,
+      "mtime": 1790650948454
+    },
+    "Sin título 1.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791163868342,
+      "mtime": 1789654215000
+    },
+    "Sin título 2.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791163868467,
+      "mtime": 1790097370000
+    },
+    "Sin título 3.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791163868071,
+      "mtime": 1790099613000
+    },
+    "Sin título 4.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791163868659,
+      "mtime": 1790100784000
+    },
+    "Sin título.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791163868659,
+      "mtime": 1788888506000
+    },
+    "_app/notebooklm/guides/ETN1012": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "ETN1012_desmos.md"
+      ]
+    },
+    "_app/notebooklm/guides/ETN1012/ETN1012_desmos.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1790649727342,
+      "mtime": 1790649727342
+    },
+    "_app/notebooklm/prompts/ETN1012": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "ETN1012-resolver_v1.md"
+      ]
+    },
+    "_app/notebooklm/prompts/ETN1012/ETN1012-resolver_v1.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1790651248438,
+      "mtime": 1790651248438
+    },
+    "_assets/Ejercicio 4 2022-28-09-2026_18-02-52.png": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1790632972741,
+      "mtime": 1790632972742
+    },
+    "_assets/er parcial ETN-1012 marzo 2022-28-09-2026_18-01-56.png": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1790632916909,
+      "mtime": 1790632916910
+    },
+    "_hangar/dock/mantenimiento_brain_2_10_2026.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1790960312524,
+      "mtime": 1790960312524
+    },
+    "_skills/_start_movil607P2.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1790274913555,
+      "mtime": 1790176603000
+    },
+    "de paso.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791167513145,
+      "mtime": 1791167513145
     }
   },
   "showHidden": false,

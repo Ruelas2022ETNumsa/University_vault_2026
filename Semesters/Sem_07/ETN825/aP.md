@@ -1,3 +1,5 @@
+## Nombre: Ruelas Machicado Mijahel Alexander
+
 # a) Modificar la interface para que reciba 1K de datos cada vez
 
 ---

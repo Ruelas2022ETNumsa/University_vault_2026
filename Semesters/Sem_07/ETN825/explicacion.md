@@ -1,104 +1,79 @@
-# Explicación del módulo INTERFACE 1K
+# A) Explicación del módulo INTERFACE 1K
+
+**Idea:** el módulo base recibía una palabra de 18 bits. Este recibe **1024 palabras** y las guarda en $BUFFER[1024,\,18]$, usando un contador $cnt[10]$ como dirección ($2^{10} = 1024$).
 
 ---
 
-## Idea general
+**1.** Espera hasta que $csrdy = 1$ y el código en $CSBUS_{0:2}$ sea $010$, la dirección de esta interface. Así ignora los comandos de otros dispositivos.
 
-El módulo base `PRINTER INTERFACE` recibía **una sola palabra** de 18 bits por `IOBUS` y la entregaba a la impresora. El inciso a) pide que la interface reciba **1K (1024) palabras** cada vez que la CPU lo ordena.
+**2.** Con $accept = 1$ confirma que recibió el comando. Según $CSBUS_3$ decide qué hacer: ir a recibir datos (1A) o responder el estado (3).
 
-Para lograrlo se agregan dos elementos al módulo base:
+**3.** Espera a que $ready = 1$ para poder responder a la CPU.
 
-- Una memoria interna $BUFFER[1024,\,18]$, que guarda las 1024 palabras recibidas.
-- Un contador $cnt[10]$, que indica en qué posición de $BUFFER$ se guarda la siguiente palabra. Tiene 10 bits porque $2^{10} = 1024$, justo la cantidad de posiciones.
+**4.** Pone $busy$ en $CSBUS_0$ con $datavalid = 1$ y espera el $accept$ de la CPU. Sirve para que la CPU sepa si la interface está ocupada antes de enviar datos.
 
-El módulo ya no tiene salidas hacia la impresora, porque su trabajo es solo **recibir y almacenar** el bloque.
+**1A.** Inicia la recepción: $cnt \leftarrow 0$ para empezar en la posición 0 de $BUFFER$ y $busy \leftarrow 1$ para avisar que está ocupada.
 
-La secuencia tiene tres partes:
+**2A.** Con $ready = 1$ avisa que puede recibir. Espera mientras $datavalid = 0$, o sea, hasta que la CPU ponga el dato en el bus.
 
-1. **Pasos 1 a 4:** atender los comandos de la CPU (selección y consulta de estado).
-2. **Pasos 1A a 5A:** recibir las 1024 palabras, una por una.
-3. **Pasos 6A y 7A:** cerrar la recepción.
+**3A.** Con el dato válido, lo captura ($DR \leftarrow IOBUS$) y lo guarda en $BUFFER$ en la posición que indica $cnt$ (el decodificador $DCD(cnt)$ elige una de las 1024). Con $accept = 1$ confirma la recepción.
 
----
+**4A.** Espera a que $datavalid$ baje a 0. Sin esto, volvería a 2A con el $datavalid$ anterior todavía en 1 y guardaría la misma palabra dos veces.
 
-## Declaraciones
+**5A.** Incrementa $cnt$ y revisa $\bigwedge / cnt$ (AND de sus 10 bits), que vale 1 solo si $cnt = 1023$. Como se evalúa antes del incremento, eso significa que la palabra recién guardada fue la 1024: va a 6A. Si no, vuelve a 2A por la siguiente.
 
-- $DR[18]$: registro de datos de 18 bits. Es el tamaño de una palabra, igual que $IOBUS$.
-- $BUFFER[1024,\,18]$: memoria de 1024 palabras de 18 bits, donde queda el bloque completo.
-- $cnt[10]$: contador que apunta a la posición actual de $BUFFER$.
-- $busy$: flip-flop que indica si la interface está ocupada recibiendo un bloque.
-- $csrdy$ (entrada): indica que hay un comando válido en $CSBUS$.
-- $IOBUS[18]$: bus por donde llegan los datos.
-- $CSBUS[12]$: bus de control, por donde la CPU selecciona el dispositivo y envía comandos.
-- $ready$, $datavalid$, $accept$: señales del protocolo de **handshake** (el "diálogo" entre emisor y receptor para transferir cada palabra sin perder datos).
+**6A.** $busy \leftarrow 0$: la recepción terminó y el bloque está completo.
+
+**7A.** `DEAD END`: fin de la secuencia.
 
 ---
 
-## Parte 1: atender comandos (pasos 1 a 4)
-
-Esta parte viene del módulo base y no cambia.
-
-**Paso 1: espera de selección.**
-La interface se queda en este paso, repitiéndolo, hasta que se cumplan dos cosas: $csrdy = 1$ (hay un comando en $CSBUS$) y los bits 0, 1 y 2 de $CSBUS$ valen $0,\ 1,\ 0$ (el código $010$, que es la dirección de esta interface). La barra sobre toda la expresión significa que mientras la condición **no** se cumpla, el módulo vuelve al paso 1. Esto sirve para que la interface ignore los comandos dirigidos a otros dispositivos.
-
-**Paso 2: aceptar el comando y decidir qué hacer.**
-Con $accept = 1$ se le confirma a la CPU que el comando fue recibido. Después, según el bit 3 de $CSBUS$, el módulo se bifurca hacia tres caminos posibles: volver al paso 1, ir al paso 1A (orden de transferir datos) o ir al paso 3 (consulta de estado).
-
-**Paso 3: esperar a que la CPU esté lista.**
-Si la CPU pidió el estado, la interface espera hasta que $ready = 1$. Se hace así para no responder antes de que la CPU pueda leer la respuesta.
-
-**Paso 4: responder el estado.**
-Se coloca $busy$ en $CSBUS_0$ y se activa $datavalid = 1$, es decir: "este dato es válido, léelo". El módulo se queda en este paso hasta que la CPU responde con $accept = 1$, y entonces vuelve al paso 1. La utilidad de esta consulta es que la CPU puede **preguntar si la interface está ocupada antes de enviar datos**, y así no interrumpe una recepción en curso.
+> **Nota:** la bifurcación del paso 2 se mantiene igual que en el libro. Representa tres caminos: ignorar, transferir o responder estado.
 
 ---
+## Aclaraciones
 
-## Parte 2: recibir el bloque de 1K (pasos 1A a 5A)
+**Cómo leer una línea del código**
 
-Esta parte es la que se modificó respecto al módulo base.
+- $\leftarrow$ es una **transferencia con reloj**: el valor se guarda en el registro cuando llega el pulso de reloj. Ejemplo: $cnt \leftarrow INC(cnt)$.
+- $=$ es una **conexión de bus sin reloj**: la señal vale eso mientras el módulo esté en ese paso, y vuelve a 0 al salir. Ejemplo: $accept = 1$.
+- El `;` separa acciones **simultáneas**: todas ocurren en el mismo ciclo de reloj. Por eso en 3A se captura, se guarda y se confirma "a la vez".
+- $\rightarrow (condición)/(destino)$ significa: si la condición es verdadera, salta al destino. Si es falsa, sigue con el paso siguiente.
+- Un paso que salta **a sí mismo** es una espera. Ejemplo: $\rightarrow (\overline{ready})/(3)$ se queda en 3 mientras $ready = 0$ y sale cuando $ready = 1$.
+- La barra sobre una señal ($\overline{ready}$) es su negación: vale 1 cuando la señal vale 0.
+- Con varias condiciones, $(c_1, c_2)/(d_1, d_2)$ se lee: si se cumple $c_1$ va a $d_1$, si se cumple $c_2$ va a $d_2$.
 
-**Paso 1A: inicializar la recepción.**
-Se hacen dos cosas a la vez, en el mismo ciclo de reloj:
+**Las tres señales del handshake**
 
-- $cnt \leftarrow 0,0,0,0,0,0,0,0,0,0$ pone el contador en cero. Así la primera palabra se guarda en la posición 0 de $BUFFER$.
-- $busy \leftarrow 1$ avisa que la interface está ocupada. Si la CPU consulta el estado durante la recepción, recibirá $busy = 1$.
+Sirven para que dos dispositivos se pasen un dato sin perderlo, aunque tengan velocidades distintas:
 
-**Paso 2A: avisar que se puede enviar.**
-Con $ready = 1$ la interface le dice a la CPU: "estoy lista para recibir una palabra". Se queda en este paso mientras $datavalid = 0$, es decir, mientras la CPU todavía no coloca el dato en el bus.
+- $ready$: la pone quien **recibe**. Dice "estoy listo".
+- $datavalid$: la pone quien **envía**. Dice "el dato en el bus es válido".
+- $accept$: la pone quien **recibe**. Dice "ya lo tomé".
 
-**Paso 3A: capturar y guardar la palabra.**
-Cuando $datavalid = 1$, el dato en $IOBUS$ es válido. En un solo paso:
+Los roles se invierten según la fase. En los pasos 1A a 5A la interface **recibe** datos de la CPU, así que ella pone $ready$ y $accept$. En el paso 4 la interface **envía** su estado, así que ella pone $datavalid$ y la CPU pone $accept$.
 
-- $DR \leftarrow IOBUS$ captura la palabra en el registro de datos.
-- $BUFFER * DCD(cnt) \leftarrow IOBUS$ la guarda en $BUFFER$. El decodificador $DCD(cnt)$ convierte el valor de $cnt$ (10 bits) en una sola línea activa entre 1024, y así selecciona exactamente **una posición** de memoria donde escribir.
-- $accept = 1$ le confirma a la CPU que la palabra fue recibida.
+**Dos ramas, un solo módulo**
 
-Todo va en el mismo paso porque el dato en $IOBUS$ solo está garantizado mientras $datavalid = 1$.
+Después del paso 2 el módulo sigue una de dos ramas:
 
-**Paso 4A: cerrar el handshake de esa palabra.**
-La interface espera a que la CPU baje $datavalid$ a 0. Este paso es necesario: si se volviera directo a 2A, $datavalid$ seguiría en 1 por la palabra anterior y la interface guardaría **la misma palabra otra vez**. Esperar a que baje asegura que la siguiente vez que $datavalid$ valga 1 sea por una palabra nueva.
+- La rama **sin letra** (3 y 4) responde la consulta de estado y vuelve a 1.
+- La rama **con letra A** (1A a 7A) recibe el bloque y termina en `DEAD END`.
 
-**Paso 5A: avanzar y decidir si terminó.**
-Se hacen dos cosas en el mismo paso:
+Las letras solo distinguen los pasos de la segunda rama. No indican un orden distinto de ejecución.
 
-- $cnt \leftarrow INC(cnt)$ incrementa el contador para apuntar a la siguiente posición.
-- La bifurcación usa $\bigwedge / cnt$, que es el AND de los 10 bits de $cnt$. Esa reducción vale 1 solo cuando todos los bits son 1, o sea $cnt = 1023$, la última posición.
+**Detalles de notación**
 
-Como la bifurcación evalúa $cnt$ **antes** del incremento, cuando vale 1023 significa que la palabra recién guardada fue la número 1024. Entonces el módulo salta a 6A. En cualquier otro caso vuelve a 2A para recibir la siguiente palabra. Al incrementarse desde 1023, el contador vuelve a 0 y queda listo para el siguiente bloque.
+- $cnt \leftarrow 0,0,0,0,0,0,0,0,0,0$ es una constante vectorial: 10 bits, uno por cada bit de $cnt$.
+- $BUFFER[1024,\,18]$ significa 1024 posiciones de 18 bits. Para escribir en una sola posición se usa $BUFFER * DCD(cnt)$. El decodificador $DCD$ convierte el número de 10 bits en una única línea activa entre 1024, y esa línea habilita la escritura solo en esa posición.
+- $\bigwedge / cnt$ es una reducción AND: junta los 10 bits con AND y da un solo bit. Vale 1 solo si los 10 bits son 1, es decir, $cnt = 1111111111_2 = 1023$.
+- $INC(cnt)$ suma 1. Desde 1023 vuelve a 0, así que el contador queda listo para un nuevo bloque.
 
----
+**Cosas que conviene tener claras**
 
-## Parte 3: cierre (pasos 6A y 7A)
-
-**Paso 6A: liberar la interface.**
-$busy \leftarrow 0$ indica que la recepción terminó y la interface ya no está ocupada. Si la CPU consulta el estado ahora, sabrá que el bloque completo ya está almacenado.
-
-**Paso 7A: fin.**
-`DEAD END` detiene la secuencia. El módulo queda esperando un nuevo reinicio. Después de `END SEQUENCE` el módulo cierra con `END`.
-
----
-
-## Resumen para la exposición
-
-El módulo trabaja como un ciclo de tres fases: **escuchar** al sistema (1 a 4), **recibir** 1024 palabras repitiendo el ciclo *esperar dato, guardar, confirmar, esperar que termine, avanzar* (2A a 5A), y **cerrar** liberando $busy$ (6A y 7A). El contador $cnt$ cumple dos funciones a la vez: es la dirección de escritura en $BUFFER$ y es el criterio de parada, porque su AND de reducción detecta la posición 1023.
-
-> **Nota:** la bifurcación del paso 2, $(\overline{CSBUS_3},\ \overline{CSBUS_3},\ CSBUS_3)/(1,\ 1A,\ 3)$, se mantiene tal como aparece en el módulo original del libro. Si preguntan por ella, lo importante es que representa tres caminos: ignorar el comando, iniciar una transferencia o responder el estado.
+- **La interface solo recibe y guarda.** No imprime ni procesa los datos. Si luego hay que imprimirlos, eso lo hace otro módulo o el programa SIC del inciso b).
+- **5A usa el valor antiguo de $cnt$.** En un mismo paso, la bifurcación lee los registros como estaban **antes** del reloj, y el incremento se guarda al final. Por eso se compara con 1023 y no con 0.
+- **$DR$ viene del módulo base.** Captura la palabra, pero $BUFFER$ la toma directo de $IOBUS$, así que $DR$ no se vuelve a leer. No afecta el funcionamiento.
+- **Cada registro destino aparece una sola vez por paso.** Por eso en 3A $DR$ y $BUFFER$ se cargan a la vez sin conflicto: son destinos distintos.
+- **Paso 2:** las dos primeras condiciones iguales son del libro. Si no las puedes explicar, di que se mantienen como en el módulo original y que representan tres caminos.
+ 
