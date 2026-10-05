@@ -4920,7 +4920,10 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "_library_ETN825.md"
+        "_library_ETN825.md",
+        "a.md",
+        "b.md",
+        "codigo_base.md"
       ]
     },
     "_app/notebooklm/guides/ETN825/ETN825_tikz.md": {
@@ -11455,6 +11458,18 @@
       "isHidden": false
     },
     "Sin título.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_07/ETN825/a.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_07/ETN825/b.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_07/ETN825/codigo_base.md": {
       "isPinned": false,
       "isHidden": false
     }
