@@ -23,7 +23,12 @@
         "Rubbish",
         "Habits",
         "Borrar",
-        "shared"
+        "shared",
+        "Sin título 1.md",
+        "Sin título 2.md",
+        "Sin título 3.md",
+        "Sin título 4.md",
+        "Sin título.md"
       ]
     },
     "MOC": {
@@ -3599,7 +3604,8 @@
         "2026-09-24",
         "draft.md",
         "promtpx.md",
-        "update_claude_obsidian.md"
+        "update_claude_obsidian.md",
+        "2026-10-04"
       ]
     },
     "Rubbish/tmp": {
@@ -11412,6 +11418,43 @@
       "isHidden": false
     },
     "_hangar/dock/mantenimiento_brain_2_10_2026.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-10-04": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "825-Hill-Peterson-Resumen-Docente-ESP.pdf",
+        "S. Palani, D. Kalaiyarasi-Principles of Digital Signal Processing - 2nd Ed.pdf"
+      ]
+    },
+    "Rubbish/2026-10-04/825-Hill-Peterson-Resumen-Docente-ESP.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Rubbish/2026-10-04/S. Palani, D. Kalaiyarasi-Principles of Digital Signal Processing - 2nd Ed.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Sin título 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Sin título 2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Sin título 3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Sin título 4.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Sin título.md": {
       "isPinned": false,
       "isHidden": false
     }
