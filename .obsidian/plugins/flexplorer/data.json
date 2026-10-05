@@ -28,7 +28,8 @@
         "Sin título 2.md",
         "Sin título 3.md",
         "Sin título 4.md",
-        "Sin título.md"
+        "Sin título.md",
+        "de paso.md"
       ]
     },
     "MOC": {
@@ -4923,7 +4924,8 @@
         "_library_ETN825.md",
         "a.md",
         "b.md",
-        "codigo_base.md"
+        "codigo_base.md",
+        "codigo_base 1.md"
       ]
     },
     "_app/notebooklm/guides/ETN825/ETN825_tikz.md": {
@@ -11470,6 +11472,14 @@
       "isHidden": false
     },
     "Semesters/Sem_07/ETN825/codigo_base.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_07/ETN825/codigo_base 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "de paso.md": {
       "isPinned": false,
       "isHidden": false
     }

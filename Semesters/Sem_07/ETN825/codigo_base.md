@@ -9,18 +9,18 @@
 | `feed`        | OUTPUTS | `escalar` | Señal de salida que activa el avance de papel o retorno de carro                 |
 | `wait`        | INPUTS  | `escalar` | Señal de entrada desde la impresora que indica que la mecánica está ocupada      |
 | `csrdy`       | INPUTS  | `escalar` | Señal de entrada que indica la presencia de un comando en `CSBUS`                |
-| `IOBUS`       | COMBUSES | `(18)`    | Bus de datos bidireccional del sistema                                           |
-| `CSBUS`       | COMBUSES | `(12)`    | Bus de control y selección de dispositivo                                        |
-| `ready`       | COMBUSES | `escalar` | Línea de control que indica disponibilidad para recibir/enviar datos             |
-| `datavalid`   | COMBUSES | `escalar` | Línea de control que valida la presencia de un dato en el bus                    |
-| `accept`      | COMBUSES | `escalar` | Línea de control de handshake que confirma la recepción del dato/comando         |
+| `IOBUS`       | COMBUS  | `(18)`    | Bus de datos bidireccional del sistema                                           |
+| `CSBUS`       | COMBUS  | `(12)`    | Bus de control y selección de dispositivo                                        |
+| `ready`       | COMBUS  | `escalar` | Línea de control que indica disponibilidad para recibir/enviar datos             |
+| `datavalid`   | COMBUS  | `escalar` | Línea de control que valida la presencia de un dato en el bus                    |
+| `accept`      | COMBUS  | `escalar` | Línea de control de handshake que confirma la recepción del dato/comando         |
 
 ```AHPL
 MODULE: PRINTER INTERFACE
 MEMORY: DR(18); CR(8); busy; first
 OUTPUTS: CHAR(8); print; feed
 INPUTS: wait; csrdy
-COMBUSES: IOBUS(18); CSBUS(12); ready; datavalid; accept
+COMBUS: IOBUS(18); CSBUS(12); ready; datavalid; accept
 
 1. -> ~(csrdy /\ ~CSBUS(0) /\ CSBUS(1) /\ ~CSBUS(2)) / (1)
 2. accept = 1;
