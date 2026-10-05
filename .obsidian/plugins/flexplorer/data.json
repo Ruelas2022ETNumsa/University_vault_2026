@@ -4925,7 +4925,9 @@
         "a.md",
         "b.md",
         "codigo_base.md",
-        "codigo_base 1.md"
+        "aP.md",
+        "bP.md",
+        "explicacion.md"
       ]
     },
     "_app/notebooklm/guides/ETN825/ETN825_tikz.md": {
@@ -11475,11 +11477,19 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Semesters/Sem_07/ETN825/codigo_base 1.md": {
+    "de paso.md": {
       "isPinned": false,
       "isHidden": false
     },
-    "de paso.md": {
+    "Semesters/Sem_07/ETN825/aP.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_07/ETN825/bP.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Semesters/Sem_07/ETN825/explicacion.md": {
       "isPinned": false,
       "isHidden": false
     }

@@ -26,13 +26,13 @@ COMBUS: IOBUS(18); CSBUS(12); ready; datavalid; accept
 2. accept = 1;
    -> (~CSBUS(3), ~CSBUS(3), CSBUS(3)) / (1, 1A, 3)
 3. -> (~ready) / (3)
-4. CSBUS(0) = busy; datavalid = 1
+4. CSBUS(0) = busy; datavalid = 1;
    -> (~accept, accept) / (4, 1)
 1A. ready = 1
     -> (~datavalid) / (1A)
 2A. DR <- IOBUS; busy <- 1; accept = 1; first <- 1
 3A. CR <- (DR(10:17) ! DR(1:8)) * (first, ~first)
-4A. feed = RETURN(CR); print = ~RETURN(CR)
+4A. feed = RETURN(CR); print = ~RETURN(CR);
 5A. Null
 6A. -> (wait) / (6A)
 7A. first <- 0; busy * ~first <- 0

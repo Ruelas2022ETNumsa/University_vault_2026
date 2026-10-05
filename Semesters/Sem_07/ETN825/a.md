@@ -27,7 +27,7 @@ COMBUS: IOBUS(18); CSBUS(12); ready; datavalid; accept
 3. -> (~ready) / (3)
 4. CSBUS(0) = busy; datavalid = 1
    -> (~accept, accept) / (4, 1)
-1A. cnt <- \0,0,0,0,0,0,0,0,0,0\; busy <- 1
+1A. cnt <- 0,0,0,0,0,0,0,0,0,0; busy <- 1
 2A. ready = 1
     -> (~datavalid) / (2A)
 3A. DR <- IOBUS; BUFFER * DCD(cnt) <- IOBUS; accept = 1
@@ -46,7 +46,7 @@ END
 | `2.`  | $accept = 1$                                                                     | $\rightarrow (\overline{CSBUS_{3}}, \overline{CSBUS_{3}}, CSBUS_{3}) / (1, 1A, 3)$                           | Confirma recepción del comando. Bifurca a `3.` si es solicitud de estatus ($CSBUS_{3} = 1$) o a `1.` y `1A.` si es comando de transferencia ($CSBUS_{3} = 0$).                 |
 | `3.`  | —                                                                                | $\rightarrow (\overline{ready}) / (3)$                                                                       | Espera activa de disponibilidad de la línea de control $ready$.                                                                                                                |
 | `4.`  | $CSBUS_{0} = busy$ ; $datavalid = 1$                                             | $\rightarrow (\overline{accept}, accept) / (4, 1)$                                                           | Coloca el flag $busy$ en $CSBUS_{0}$ y activa $datavalid = 1$. Retorna a `1.` tras recibir $accept = 1$.                                                                       |
-| `1A.` | $cnt \leftarrow \backslash 0,0,0,0,0,0,0,0,0,0 \backslash$ ; $busy \leftarrow 1$ | —                                                                                                            | Inicialización de la recepción del bloque. Borra el contador $cnt$ a cero y activa el flag $busy \leftarrow 1$.                                                                |
+| `1A.` | $cnt \leftarrow 0,0,0,0,0,0,0,0,0,0$ ; $busy \leftarrow 1$ | —                                                                                                            | Inicialización de la recepción del bloque. Borra el contador $cnt$ a cero y activa el flag $busy \leftarrow 1$.                                                                |
 | `2A.` | $ready = 1$                                                                      | $\rightarrow (\overline{datavalid}) / (2A)$                                                                  | Asigna $ready = 1$ para indicar disponibilidad para recibir una palabra. Bucle en `2A.` mientras $datavalid = 0$.                                                              |
 | `3A.` | $DR \leftarrow IOBUS$ ; $BUFFER * DCD(cnt) \leftarrow IOBUS$ ; $accept = 1$      | —                                                                                                            | Captura la palabra de 18 bits de $IOBUS$ en $DR$ y la almacena en la posición $cnt$ de $BUFFER(1024, 18)$. Emite $accept = 1$.                                                 |
 | `4A.` | —                                                                                | $\rightarrow (datavalid) / (4A)$                                                                             | Finalización del Handshake de la palabra. Espera activa mientras la CPU sostiene $datavalid = 1$.                                                                              |

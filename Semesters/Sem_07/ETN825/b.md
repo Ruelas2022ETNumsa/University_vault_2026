@@ -8,18 +8,12 @@
 Bucle de E/S programada: consulta de estatus con `IS2 01` (bit $busy$) y envío palabra a palabra con `OD2`.
 
 $$
-1024_{10} = 2000_8 \qquad -1024_{10} = 2^{18} - 1024_{10} = 776000_8 \qquad \text{Bloque: } 00200_8 \dots 02177_8
-$$
-
-$$
 N = 1024_{10} = 2000_8
 $$
-
 
 $$
 \text{Contador negativo} = 2^{18} - 1024_{10} = 776000_8
 $$
-
 
 $$
 \text{Dirección final} = 00200_8 + 2000_8 - 1 = 02177_8
