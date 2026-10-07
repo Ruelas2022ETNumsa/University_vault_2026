@@ -8077,7 +8077,8 @@
         "robarm-opc_A-arquitectura.md",
         "robarm-config.md",
         "robarm-opc_B-garra.md",
-        "tsk_carrier.md"
+        "tsk_carrier.md",
+        "robarm-compra.md"
       ]
     },
     "Semesters/Sem_04/ETN607/Robotic_Arm_AI/blueprint.md": {
@@ -14390,6 +14391,12 @@
       "isHidden": false,
       "ctime": 1791222241546,
       "mtime": 1791169980000
+    },
+    "Semesters/Sem_04/ETN607/Robotic_Arm_AI/robarm-compra.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791239032723,
+      "mtime": 1791239032723
     }
   },
   "showHidden": false,
