@@ -209,9 +209,9 @@ Partimos de las tablas que dejó la 3ra transmisión: SW1 = {MAC_F → 3, MAC_E 
 | Conmutación SW1 | Puerto | | Conmutación SW2 | Puerto |
 |---|---|---|---|---|
 | MAC_F | 3 | | MAC_F | 2 |
-| MAC_E | 4 | | MAC_E | 1 |
+| MAC_E | 4 ✓ | | MAC_E | 1 ✓ |
 | MAC_C | 2 | | MAC_C | 1 |
-| MAC_B | 1 | | MAC_A | 1 |
+| MAC_B | 1 ✓ | | MAC_A | 1 |
 | MAC_A | 1 | | MAC_H | 3 |
 | MAC_H | 3 | | | |
 

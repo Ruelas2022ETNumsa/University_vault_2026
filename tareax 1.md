@@ -101,7 +101,7 @@ Partimos de las tablas que dejó la 1ra transmisión: SW1 = {MAC_B → 1, MAC_F 
 | Conmutación SW1 | Puerto | | Conmutación SW2 | Puerto |
 |---|---|---|---|---|
 | MAC_B | 1 | | MAC_B | 3 |
-| MAC_F | 3 ✓ | | MAC_F | 1 |
+| MAC_F | 3 | | MAC_F | 1 |
 | MAC_H | 3 | | MAC_H | 1 |
 
 | ARP de H | MAC | | ARP de F | MAC |
@@ -152,7 +152,7 @@ Partimos de las tablas que dejó la 2da transmisión: SW1 = {MAC_B → 1, MAC_F 
 | Conmutación SW1 | Puerto | | Conmutación SW2 | Puerto |
 |---|---|---|---|---|
 | MAC_B | 1 | | MAC_B | 3 |
-| MAC_F | 3 ✓ | | MAC_F | 1 |
+| MAC_F | 3 | | MAC_F | 1 |
 | MAC_H | 3 | | MAC_H | 1 |
 | MAC_C | 2 | | MAC_C | 1 |
 | MAC_E | 4 | | | |
@@ -201,7 +201,7 @@ Partimos de las tablas que dejó la 3ra transmisión: SW1 = {MAC_B → 1, MAC_F 
 | Conmutación SW1 | Puerto | | Conmutación SW2 | Puerto |
 |---|---|---|---|---|
 | MAC_B | 1 | | MAC_B | 3 ✓ |
-| MAC_F | 3 ✓ | | MAC_F | 1 |
+| MAC_F | 3 | | MAC_F | 1 |
 | MAC_H | 3 | | MAC_H | 1 |
 | MAC_C | 2 | | MAC_C | 1 |
 | MAC_E | 4 | | MAC_A | 2 |
@@ -247,8 +247,8 @@ Partimos de las tablas que dejó la 3ra transmisión: SW1 = {MAC_B → 1, MAC_F 
 
 | Conmutación SW1 | Puerto | | Conmutación SW2 | Puerto |
 |---|---|---|---|---|
-| MAC_B | 1 | | MAC_B | 3 ✓ |
-| MAC_F | 3 ✓ | | MAC_F | 1 |
+| MAC_B | 1 | | MAC_B | 3 |
+| MAC_F | 3 | | MAC_F | 1 |
 | MAC_H | 3 | | MAC_H | 1 |
 | MAC_C | 2 | | MAC_C | 1 |
 | MAC_E | 4 | | MAC_A | 2 |
