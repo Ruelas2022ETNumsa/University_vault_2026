@@ -32,7 +32,9 @@
         "Sin título 4.md",
         "aP.pdf",
         "bP.pdf",
-        "interface_1k_diagrama_de_flujo_completo.png"
+        "interface_1k_diagrama_de_flujo_completo.png",
+        "tarea.md",
+        "ejemplo2.md"
       ]
     },
     "MOC": {
@@ -4312,7 +4314,8 @@
       "customOrder": [
         "REC92",
         "ETN1010",
-        "ETN1012"
+        "ETN1012",
+        "1050"
       ]
     },
     "Semesters/Sem_09/REC92": {
@@ -4641,7 +4644,7 @@
       "isPinned": false,
       "isHidden": false,
       "ctime": 1791168025834,
-      "mtime": 1791170716770
+      "mtime": 1791424338904
     },
     "_PDF/ETN-505": {
       "isPinned": false,
@@ -14396,7 +14399,27 @@
       "isPinned": false,
       "isHidden": false,
       "ctime": 1791239032723,
-      "mtime": 1791239032723
+      "mtime": 1791424106913
+    },
+    "Semesters/Sem_09/1050": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [],
+      "sortOrder": "custom",
+      "ctime": 1791425498505,
+      "mtime": 1791425498505
+    },
+    "tarea.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791425504325,
+      "mtime": 1791425641824
+    },
+    "ejemplo2.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791426059995,
+      "mtime": 1791426059995
     }
   },
   "showHidden": false,
