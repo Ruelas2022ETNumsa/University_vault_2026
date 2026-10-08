@@ -94,10 +94,10 @@ Fin de la ida.
 4. **SW1 recibe por el puerto 3.**
    - Aprende: anota `MAC_H → 3`.
    - Decide: MAC_F no está → inundación por 1, 2 y 4.
-5. **Puertos de salida de SW1.** Similar al paso 4 de A→B pero sin pasar a SW2:
-   - Puerto 1 → Hub → A y B descartan.
-   - Puerto 2 → C descarta.
-   - Puerto 4 → E descarta.
+5. **Puertos de salida de SW1** (inundó por 1, 2 y 4; el 3 es el de entrada y no se usa):
+   - Puerto 1 → Hub, que la repite: A y B ven que la MAC destino (F) no es la suya y descartan.
+   - Puerto 2 → C: la MAC destino no es la suya, descarta.
+   - Puerto 4 → E: la MAC destino no es la suya, descarta.
 
 ### Pasos: respuesta F → H
 
@@ -131,9 +131,11 @@ Fin de la ida.
    - Puerto 4 → E: es el destino, la procesa.
    - Puerto 1 → Hub → A y B descartan.
    - Puerto 3 → SW2: sigue el camino.
-4. **SW2 recibe por el puerto 1.** Similar al paso 5 de A→B:
-   - Aprende: anota `MAC_C → 1`.
-   - Decide: MAC_E no está → inundación por 2 y 3 → F y H descartan.
+4. **SW2 recibe por el puerto 1.**
+   - Aprende: MAC_C no está → anota `MAC_C → 1`.
+   - Decide: MAC_E no está → inundación por 2 y 3 (el 1 es el de entrada).
+   - Puerto 2 → F: la MAC destino no es la suya, descarta.
+   - Puerto 3 → H: la MAC destino no es la suya, descarta.
 
 ### Pasos: respuesta E → C
 
