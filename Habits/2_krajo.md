@@ -11,6 +11,7 @@ startDate: 2026-09-03
 weeklyTarget: 7
 records:
   2026-09-05: 1
+  2026-10-09: 1
 ---
 # krajo
 
