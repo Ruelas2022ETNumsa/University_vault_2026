@@ -35,6 +35,10 @@ Checklist previo a conseguir el hub. Repetir en PC de escritorio y laptop.
 | 11  | Aprender Python básico                      | Variables, `while`, `if`, funciones                 | ⬜ (una vez)       | n/a    |
 | 12  | Sincronizar archivos `.py` entre PC y laptop | Carpeta compartida o nube                          | ⬜                 | ⬜      |
 
+## Ver también
+- [[arm_pybricks-notas]]: conceptos, apps de LEGO, entorno PC
+- [[arm_hub-compra-checklist]]: revisión al comprar el hub
+
 ## Notas
 - En la PC, el comando `pip` solo falla (lanzador apunta a Python 3.11 inexistente). Usar siempre `python -m pip`.
 - En `where python` aparece un archivo `C:\Users\USUARIO\python` sin extensión. Sospechoso solo si hay comportamientos raros.
