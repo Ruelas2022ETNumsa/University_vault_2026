@@ -6390,6 +6390,9 @@
         "_library_ETN825.md",
         "a.md",
         "a_12_10_2026.md",
+        "a_12_10_2026 1.md",
+        "ejercicio_ahpl.md",
+        "a_12_10_2026 1 1 1.md",
         "aP.md",
         "b.md",
         "bP.md",
@@ -9527,7 +9530,25 @@
       "isPinned": false,
       "isHidden": false,
       "ctime": 1791168791146,
-      "mtime": 1791168791146
+      "mtime": 1791779434964
+    },
+    "Semesters/Sem_07/ETN825/a_12_10_2026 1.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791168791146,
+      "mtime": 1791781048980
+    },
+    "Semesters/Sem_07/ETN825/a_12_10_2026 1 1 1.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791168791146,
+      "mtime": 1791781944201
+    },
+    "Semesters/Sem_07/ETN825/ejercicio_ahpl.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791168791146,
+      "mtime": 1791781287269
     }
   },
   "showHidden": false,
