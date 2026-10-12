@@ -25,21 +25,11 @@
         "Borrar",
         "shared",
         "de paso.md",
-        "Sin título.md",
-        "Sin título 1.md",
-        "Sin título 2.md",
-        "Sin título 3.md",
-        "Sin título 4.md",
-        "aP.pdf",
-        "bP.pdf",
-        "interface_1k_diagrama_de_flujo_completo.png",
         "ejemplo2.md",
         "tarea.md",
         "tareax.md",
         "tareax 1.md",
-        "Sin título 5.md",
         "Sin título 6.md",
-        "Sin título 6 1.md",
         "Sin título 7.md"
       ]
     },
@@ -4649,7 +4639,7 @@
       "isPinned": false,
       "isHidden": false,
       "ctime": 1791168025834,
-      "mtime": 1791559916493
+      "mtime": 1791777360602
     },
     "_PDF/ETN-505": {
       "isPinned": false,
@@ -6399,6 +6389,7 @@
       "customOrder": [
         "_library_ETN825.md",
         "a.md",
+        "a_12_10_2026.md",
         "aP.md",
         "b.md",
         "bP.md",
@@ -8186,36 +8177,6 @@
       "ctime": 1790650691949,
       "mtime": 1790650948454
     },
-    "Sin título 1.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791163868342,
-      "mtime": 1789654215000
-    },
-    "Sin título 2.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791163868467,
-      "mtime": 1790097370000
-    },
-    "Sin título 3.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791163868071,
-      "mtime": 1790099613000
-    },
-    "Sin título 4.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791163868659,
-      "mtime": 1790100784000
-    },
-    "Sin título.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791163868659,
-      "mtime": 1788888506000
-    },
     "_app/notebooklm/guides/ETN1012": {
       "isPinned": false,
       "isHidden": false,
@@ -8273,24 +8234,6 @@
       "isHidden": false,
       "ctime": 1791167513145,
       "mtime": 1791167513145
-    },
-    "aP.pdf": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791212605280,
-      "mtime": 1791171491000
-    },
-    "bP.pdf": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791212605280,
-      "mtime": 1791171397000
-    },
-    "interface_1k_diagrama_de_flujo_completo.png": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791212605279,
-      "mtime": 1791172176000
     },
     "Rubbish/2026-10-05": {
       "isPinned": false,
@@ -8393,23 +8336,11 @@
       "ctime": 1791471905873,
       "mtime": 1791213062782
     },
-    "Sin título 6 1.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791474470081,
-      "mtime": 1791474069661
-    },
     "Sin título 6.md": {
       "isPinned": false,
       "isHidden": false,
       "ctime": 1791474568135,
       "mtime": 1791474568135
-    },
-    "Sin título 5.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791472944853,
-      "mtime": 1791472944854
     },
     "Rubbish/2026-08-09": {
       "isPinned": false,
@@ -9591,6 +9522,12 @@
       "isHidden": false,
       "ctime": 1791596935743,
       "mtime": 1791596935743
+    },
+    "Semesters/Sem_07/ETN825/a_12_10_2026.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791168791146,
+      "mtime": 1791168791146
     }
   },
   "showHidden": false,
