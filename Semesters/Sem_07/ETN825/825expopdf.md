@@ -1,28 +1,49 @@
+## Enunciado
+
+Diseñá en AHPL una interfaz de impresora con búfer de 1K palabras de 18 bits (dos caracteres ASCII por palabra). La interfaz debe:
+
+1. Recibir un bloque de palabras y guardarlo, hasta completar 1K palabras o hasta recibir 4 palabras vacías seguidas.
+2. Imprimir el bloque carácter por carácter, solo hasta la última palabra con texto, sin imprimir los espacios vacíos del final.
+3. Enviar el retorno de carro como avance de papel y esperar a que la impresora esté libre antes de cada carácter.
+4. No imprimir nada si el bloque no trae texto.
+
+<div class="break-page"></div>
+### Declaración de variables
+
+Registros, salidas, entradas y líneas de bus que usa la interfaz.
 
 | Identificador | Sección | Tamaño       | Rol                                                                                               |
 | ------------- | ------- | ------------ | ------------------------------------------------------------------------------------------------- |
-| `DR`          | MEMORY  | `(18)`       | Registro de datos que almacena la palabra recibida desde `IOBUS` o leída desde `BUFFER`           |
-| `CR`          | MEMORY  | `(8)`        | Registro de carácter que almacena el código ASCII a enviar a la impresora                         |
-| `BUFFER`      | MEMORY  | `(1024, 18)` | Memoria RAM interna de 1024 palabras de 18 bits para almacenar el bloque de datos                 |
-| `cnt`         | MEMORY  | `(10)`       | Contador y puntero de dirección de 10 bits ($2^{10} = 1024$) para indexar `BUFFER`                |
-| `limit`       | MEMORY  | `(10)`       | Registro de 10 bits que guarda la dirección siguiente a la última palabra no vacía recibida       |
-| `empty`       | MEMORY  | `(3)`        | Contador de 3 bits para registrar hasta 4 palabras vacías consecutivas                            |
+| `DR`          | MEMORY  | `[18]`       | Registro de datos que almacena la palabra recibida desde `IOBUS` o leída desde `BUFFER`           |
+| `CR`          | MEMORY  | `[8]`        | Registro de carácter que almacena el código ASCII a enviar a la impresora                         |
+| `BUFFER`      | MEMORY  | `[1024, 18]` | Memoria RAM interna de 1024 palabras de 18 bits para almacenar el bloque de datos                 |
+| `cnt`         | MEMORY  | `[10]`       | Contador y puntero de dirección de 10 bits ($2^{10} = 1024$) para indexar `BUFFER`                |
+| `limit`       | MEMORY  | `[10]`       | Registro de 10 bits que guarda la dirección siguiente a la última palabra no vacía recibida       |
+| `empty`       | MEMORY  | `[3]`        | Contador de 3 bits para registrar hasta 4 palabras vacías consecutivas                            |
 | `busy`        | MEMORY  | `escalar`    | Flip-flop de estado que indica si la interfaz está procesando la recepción o impresión del bloque |
 | `first`       | MEMORY  | `escalar`    | Flip-flop de control que selecciona el primer ($1$) o segundo ($0$) carácter ASCII en `DR`        |
 | `has_data`    | MEMORY  | `escalar`    | Flip-flop de estado que indica si se recibió al menos una palabra con texto útil no vacío         |
 | `end_print`   | MEMORY  | `escalar`    | Flip-flop de estado que indica la llegada a la dirección límite de impresión                      |
-| `CHAR`        | OUTPUTS | `(8)`        | Bus de salida combinacional conectado a `CR` hacia la impresora                                   |
+| `CHAR`        | OUTPUTS | `[8]`        | Bus de salida combinacional conectado a `CR` hacia la impresora                                   |
 | `print`       | OUTPUTS | `escalar`    | Señal de salida que activa la impresión de un carácter en la impresora                            |
 | `feed`        | OUTPUTS | `escalar`    | Señal de salida que activa el avance de papel o retorno de carro                                  |
 | `wait`        | INPUTS  | `escalar`    | Señal de entrada desde la impresora que indica que la mecánica está ocupada                       |
 | `csrdy`       | INPUTS  | `escalar`    | Señal de entrada que indica la presencia de un comando válido en `CSBUS`                          |
-| `IOBUS`       | COMBUS  | `(18)`       | Bus de datos bidireccional del sistema de 18 bits                                                 |
-| `CSBUS`       | COMBUS  | `(12)`       | Bus de control y selección de dispositivo de 12 bits                                              |
+| `IOBUS`       | COMBUS  | `[18]`       | Bus de datos bidireccional del sistema de 18 bits                                                 |
+| `CSBUS`       | COMBUS  | `[12]`       | Bus de control y selección de dispositivo de 12 bits                                              |
 | `ready`       | COMBUS  | `escalar`    | Línea de control que indica disponibilidad para recibir/enviar datos                              |
 | `datavalid`   | COMBUS  | `escalar`    | Línea de control que valida la presencia de un dato en el bus                                     |
 | `accept`      | COMBUS  | `escalar`    | Línea de control de handshake que confirma la recepción del dato/comando                          |
 
----
+<div class="break-page"></div>
+
+### Diagrama de flujo
+
+Funcionamiento de la interfaz en tres etapas: comando, recepción e impresión.
+
+#### Etapa 1: selección y comando (pasos 1 a 4)
+
+Espera la selección de la impresora y atiende la consulta de estatus o la orden de salida de datos.
 
 
 ```tikz
@@ -87,6 +108,10 @@
 \end{document}
 ```
 
+
+#### Etapa 2: recepción del bloque (pasos 1A a 8A)
+
+Guarda las palabras en el búfer hasta completar 1K palabras o recibir 4 palabras vacías seguidas.
 
 ```tikz
 \usetikzlibrary{shapes.geometric, arrows.meta, positioning, calc}
@@ -168,6 +193,11 @@
 \end{tikzpicture}
 \end{document}
 ```
+
+
+#### Etapa 3: impresión del bloque (pasos 1B a 12B)
+
+Imprime carácter por carácter hasta la última palabra con texto y libera la interfaz.
 
 ```tikz
 \usetikzlibrary{shapes.geometric, arrows.meta, positioning, calc}
@@ -259,13 +289,17 @@
 ```
 
 
----
+
+### Código AHPL
+
+Descripción en AHPL de la interfaz, paso a paso.
 
 $\text{MODULE: PRINTER INTERFACE 1K}$
-$\text{MEMORY: } DR(18);\ CR(8);\ BUFFER(1024, 18);\ cnt(10);\ limit(10);\ empty(3);\ busy;\ first;\ has\_data;\ end\_print$
-$\text{OUTPUTS: } CHAR(8);\ print;\ feed$
+$\text{MEMORY: } DR[18];\ CR[8];\ BUFFER[1024, 18];\ cnt[10];\ limit[10];$
+$\qquad empty[3];\ busy;\ first;\ has\_data;\ end\_print$
+$\text{OUTPUTS: } CHAR[8];\ print;\ feed$
 $\text{INPUTS: } wait;\ csrdy$
-$\text{COMBUS: } IOBUS(18);\ CSBUS(12);\ ready;\ datavalid;\ accept$
+$\text{COMBUS: } IOBUS[18];\ CSBUS[12];\ ready;\ datavalid;\ accept$
 
 $1.\ \rightarrow (\overline{csrdy \land \overline{CSBUS_{0}} \land CSBUS_{1} \land \overline{CSBUS_{2}}}) / (1)$
 $2.\ accept = 1$
@@ -273,20 +307,23 @@ $\qquad \rightarrow (\overline{CSBUS_{3}}, \overline{CSBUS_{3}}, CSBUS_{3}) / (1
 $3.\ \rightarrow (\overline{ready}) / (3)$
 $4.\ CSBUS_{0} = busy;\ datavalid = 1$
 $\qquad \rightarrow (\overline{accept}, accept) / (4, 1)$
-$1A.\ cnt \leftarrow \backslash 0,0,0,0,0,0,0,0,0,0 \backslash;\ empty \leftarrow \backslash 0,0,0 \backslash;\ limit \leftarrow \backslash 0,0,0,0,0,0,0,0,0,0 \backslash;\ has\_data \leftarrow 0;\ busy \leftarrow 1$
+
+$1A.\ cnt \leftarrow  0,0,0,0,0,0,0,0,0,0 ;\ empty \leftarrow  0,0,0 ;$
+$\qquad limit \leftarrow  0,0,0,0,0,0,0,0,0,0 ;\ has\_data \leftarrow 0;\ busy \leftarrow 1$
 $2A.\ ready = 1$
 $\qquad \rightarrow (\overline{datavalid}) / (2A)$
 $3A.\ DR \leftarrow IOBUS;\ BUFFER * DCD(cnt) \leftarrow IOBUS;\ accept = 1$
 $4A.\ accept = 1$
 $\qquad \rightarrow (datavalid) / (4A)$
 $5A.\ \rightarrow (\bigvee / DR_{10:17} \lor \bigvee / DR_{1:8}, \overline{\bigvee / DR_{10:17} \lor \bigvee / DR_{1:8}}) / (6A, 7A)$
-$6A.\ has\_data \leftarrow 1;\ limit \leftarrow INC(cnt);\ empty \leftarrow \backslash 0,0,0 \backslash$
+$6A.\ has\_data \leftarrow 1;\ limit \leftarrow INC(cnt);\ empty \leftarrow  0,0,0$
 $\qquad \rightarrow (8A)$
 $7A.\ empty \leftarrow INC(empty)$
 $\qquad \rightarrow (8A)$
 $8A.\ cnt \leftarrow INC(cnt)$
 $\qquad \rightarrow (empty_{0} \lor \bigwedge / cnt, \overline{empty_{0} \lor \bigwedge / cnt}) / (1B, 2A)$
-$1B.\ cnt \leftarrow \backslash 0,0,0,0,0,0,0,0,0,0 \backslash$
+
+$1B.\ cnt \leftarrow  0,0,0,0,0,0,0,0,0,0$
 $\qquad \rightarrow (\overline{has\_data}, has\_data) / (11B, 2B)$
 $2B.\ DR \leftarrow BUSFN(BUFFER; DCD(cnt));\ first \leftarrow 1$
 $3B.\ CR \leftarrow (DR_{10:17} ! DR_{1:8}) * (first, \overline{first})$
@@ -299,10 +336,17 @@ $8B.\ cnt \leftarrow INC(cnt)$
 $9B.\ end\_print \leftarrow \bigwedge / \overline{cnt \oplus limit}$
 $10B.\ \rightarrow (end\_print, \overline{end\_print}) / (11B, 2B)$
 $11B.\ busy \leftarrow 0$
+
 $12B.\ DEAD\ END$
 $\text{END SEQUENCE}$
 $CHAR = CR$
 $\text{END}$
+
+<div class="break-page"></div>
+
+### Descripción de los pasos
+
+Qué hace cada paso del código y a dónde salta.
 
 | Paso | Estado resultante |
 |-|-|

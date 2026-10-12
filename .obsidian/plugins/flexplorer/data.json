@@ -30,7 +30,10 @@
         "tareax.md",
         "tareax 1.md",
         "Sin título 6.md",
-        "Sin título 7.md"
+        "Sin título 7.md",
+        "Untitled.md",
+        "Untitled 2.md",
+        "Untitled 1.md"
       ]
     },
     "MOC": {
@@ -4639,7 +4642,7 @@
       "isPinned": false,
       "isHidden": false,
       "ctime": 1791168025834,
-      "mtime": 1791777360602
+      "mtime": 1791782918576
     },
     "_PDF/ETN-505": {
       "isPinned": false,
@@ -6392,7 +6395,8 @@
         "a_12_10_2026.md",
         "a_12_10_2026 1.md",
         "ejercicio_ahpl.md",
-        "a_12_10_2026 1 1 1.md",
+        "825expopdf.md",
+        "a_12_10_2026 1 1 1 1.md",
         "aP.md",
         "b.md",
         "bP.md",
@@ -6407,7 +6411,8 @@
         "a 3.md",
         "b 1.md",
         "bP 2.md",
-        "explicacionB 2.md"
+        "explicacionB 2.md",
+        "expo825.md"
       ]
     },
     "_app/notebooklm/guides/ETN825/ETN825_tikz.md": {
@@ -9538,17 +9543,47 @@
       "ctime": 1791168791146,
       "mtime": 1791781048980
     },
-    "Semesters/Sem_07/ETN825/a_12_10_2026 1 1 1.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791781944201
-    },
     "Semesters/Sem_07/ETN825/ejercicio_ahpl.md": {
       "isPinned": false,
       "isHidden": false,
       "ctime": 1791168791146,
       "mtime": 1791781287269
+    },
+    "Untitled.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791782678477,
+      "mtime": 1791785053224
+    },
+    "Untitled 1.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791782678477,
+      "mtime": 1791783944886
+    },
+    "Untitled 2.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791782678477,
+      "mtime": 1791784702233
+    },
+    "Semesters/Sem_07/ETN825/a_12_10_2026 1 1 1 1.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791168791146,
+      "mtime": 1791785102275
+    },
+    "Semesters/Sem_07/ETN825/825expopdf.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791168791146,
+      "mtime": 1791786782142
+    },
+    "Semesters/Sem_07/ETN825/expo825.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791786995668,
+      "mtime": 1791786995668
     }
   },
   "showHidden": false,
