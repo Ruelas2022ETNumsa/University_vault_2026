@@ -33,7 +33,8 @@
         "Sin título 7.md",
         "Untitled.md",
         "Untitled 2.md",
-        "Untitled 1.md"
+        "Untitled 1.md",
+        "Untitled 3.md"
       ]
     },
     "MOC": {
@@ -2232,7 +2233,8 @@
         "ETN607-ejercicio-detector_P2.md",
         "ETN607-transcription_Av7.md",
         "ETN607-comp_indice_BCv4ii 1.md",
-        "ETN607-comp_indice_BCv4ii 2.md"
+        "ETN607-comp_indice_BCv4ii 2.md",
+        "ex607P5.md"
       ]
     },
     "_assets": {
@@ -2351,7 +2353,8 @@
         "Partial_1",
         "tsk_ini_ETN607.md",
         "Robotic_Arm_AI",
-        "Partial_2"
+        "Partial_2",
+        "Partial_3"
       ]
     },
     "Semesters/Sem_01/MAT101/_library_MAT101.md": {
@@ -4642,7 +4645,7 @@
       "isPinned": false,
       "isHidden": false,
       "ctime": 1791168025834,
-      "mtime": 1791782918576
+      "mtime": 1791932547664
     },
     "_PDF/ETN-505": {
       "isPinned": false,
@@ -9594,6 +9597,55 @@
       "isHidden": false,
       "ctime": 1791471905873,
       "mtime": 1791213062782
+    },
+    "Untitled 3.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791933154775,
+      "mtime": 1791933259676
+    },
+    "_app/notebooklm/prompts/ETN607/ex607P5.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791932798955,
+      "mtime": 1791933076079
+    },
+    "Semesters/Sem_04/ETN607/Partial_3": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "ej1T5.md",
+        "ej2T5.md",
+        "ej3T5.md",
+        "ej4T5.md"
+      ],
+      "sortOrder": "custom",
+      "ctime": 1791933354243,
+      "mtime": 1791933354243
+    },
+    "Semesters/Sem_04/ETN607/Partial_3/ej1T5.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791933372597,
+      "mtime": 1791933501264
+    },
+    "Semesters/Sem_04/ETN607/Partial_3/ej2T5.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791933372597,
+      "mtime": 1791933685070
+    },
+    "Semesters/Sem_04/ETN607/Partial_3/ej3T5.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791933372597,
+      "mtime": 1791933792960
+    },
+    "Semesters/Sem_04/ETN607/Partial_3/ej4T5.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791933372597,
+      "mtime": 1791934222314
     }
   },
   "showHidden": false,
