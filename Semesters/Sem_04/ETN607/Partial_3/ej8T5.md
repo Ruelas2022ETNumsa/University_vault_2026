@@ -15,40 +15,32 @@ Un cilindro fijo de radio R tiene un hilo inextensible y sin masa enrollado en s
 
 **1. N y coordenada**
 
-Coordenadas $(x, y)$ con 1 restricción (hilo inextensible y tenso).
-
 $$
 N = 2 - 1 = 1, \qquad q = \theta
 $$
 
-**2. Posición y velocidad**
+**2. Posición y velocidad** (con $d = l + R\theta$)
 
-El punto de tangencia es $Q = (R\cos\theta,\, -R\sin\theta)$ y el tramo libre, de longitud $d = l + R\theta$, tiene dirección tangente $(\sin\theta,\, \cos\theta)$:
-
-$$
-x = R\cos\theta + (l + R\theta)\sin\theta, \qquad y = -R\sin\theta + (l + R\theta)\cos\theta
-$$
+Punto de tangencia $Q = (R\cos\theta,\,-R\sin\theta)$, tramo libre en la dirección $(\sin\theta,\ \cos\theta)$:
 
 $$
-\dot{x} = (l + R\theta)\cos\theta\,\dot{\theta}, \qquad \dot{y} = -(l + R\theta)\sin\theta\,\dot{\theta}
+x = R\cos\theta + d\sin\theta, \qquad y = -R\sin\theta + d\cos\theta
 $$
 
-(los términos $\pm R\dot\theta\sin\theta$ y $\pm R\dot\theta\cos\theta$ se cancelan)
-
 $$
-v^2 = (l + R\theta)^2\dot{\theta}^2
+\dot{x} = d\cos\theta\,\dot{\theta}, \qquad \dot{y} = -d\sin\theta\,\dot{\theta}, \qquad v = d\,|\dot{\theta}|
 $$
 
-**3. T, V**
+**3. T y V** ($y$ hacia abajo, $V = 0$ en $y = 0$)
 
 $$
-T = \frac{m}{2}(l + R\theta)^2\dot{\theta}^2, \qquad V = -mgy = mgR\sin\theta - mg(l + R\theta)\cos\theta
+T = \frac{1}{2}m\,d^2\dot{\theta}^2, \qquad V = -mgy = mgR\sin\theta - mg\,d\cos\theta
 $$
 
-**4. P** ($P = c\,v^{n+1}/(n+1)$)
+**4. P** ($P = \dfrac{c\,v^{n+1}}{n+1}$)
 
 $$
-P_{n=1} = \frac{c}{2}(l + R\theta)^2\dot{\theta}^2, \qquad P_{n=2} = \frac{c}{3}(l + R\theta)^3|\dot{\theta}|^3
+P_{n=1} = \frac{1}{2}c\,d^2\dot{\theta}^2, \qquad P_{n=2} = \frac{1}{3}c\,d^3|\dot{\theta}|^3
 $$
 
 **5. Lagrange**
@@ -57,40 +49,36 @@ $$
 \frac{d}{dt}\left(\frac{\partial T}{\partial \dot{\theta}}\right) - \frac{\partial T}{\partial \theta} = -\frac{\partial V}{\partial \theta} - \frac{\partial P}{\partial \dot{\theta}}
 $$
 
-$$
-\frac{d}{dt}\left(\frac{\partial T}{\partial \dot{\theta}}\right) = m(l + R\theta)^2\ddot{\theta} + 2mR(l + R\theta)\dot{\theta}^2, \qquad \frac{\partial T}{\partial \theta} = mR(l + R\theta)\dot{\theta}^2
-$$
+Derivadas:
 
 $$
-\frac{\partial V}{\partial \theta} = mg(l + R\theta)\sin\theta
+\frac{d}{dt}\left(\frac{\partial T}{\partial \dot{\theta}}\right) = m\,d^2\ddot{\theta} + 2mR\,d\,\dot{\theta}^2, \qquad \frac{\partial T}{\partial \theta} = mR\,d\,\dot{\theta}^2, \qquad \frac{\partial V}{\partial \theta} = mg\,d\sin\theta
 $$
 
 $$
-\frac{\partial P_{n=2}}{\partial \dot{\theta}} = c(l + R\theta)^3\dot{\theta}|\dot{\theta}|, \qquad \frac{\partial P_{n=1}}{\partial \dot{\theta}} = c(l + R\theta)^2\dot{\theta}
+\frac{\partial P_{n=2}}{\partial \dot{\theta}} = c\,d^3\dot{\theta}|\dot{\theta}|, \qquad \frac{\partial P_{n=1}}{\partial \dot{\theta}} = c\,d^2\dot{\theta}
 $$
 
-Dividiendo entre $m(l + R\theta)^2$:
+Sustituyendo ($n = 2$) y dividiendo entre $m\,d^2$:
 
 $$
-n = 2:\quad \ddot{\theta} = -\frac{R}{l + R\theta}\dot{\theta}^2 - \frac{g}{l + R\theta}\sin\theta - \frac{c}{m}(l + R\theta)\dot{\theta}|\dot{\theta}|
+m\,d^2\ddot{\theta} + mR\,d\,\dot{\theta}^2 + mg\,d\sin\theta + c\,d^3\dot{\theta}|\dot{\theta}| = 0
 $$
 
-**6. Para n = 1**
+Para $n = 1$, el término de fricción pasa a $\dfrac{c}{m}\dot{\theta}$.
 
-El último término pasa a ser $-\dfrac{c}{m}\dot{\theta}$.
+**6. Verificación**
 
-**7. Verificación**
-
-$[c] = \text{kg/m}$ para n = 2, y todos los términos quedan en rad/s². Con $c = 0$ se obtiene la ecuación del péndulo de evolvente: $(l + R\theta)\ddot\theta + R\dot\theta^2 + g\sin\theta = 0$.
+Con $c = 0$: $\ddot{\theta} + \dfrac{R}{d}\dot{\theta}^2 + \dfrac{g}{d}\sin\theta = 0$ (péndulo de evolvente conservativo). Dimensional: $[c] = \text{kg/m}$ y todos los términos quedan en rad/s².
 
 ---
 
 ### Resultado final
 
 $$
-\boxed{\;\ddot{\theta} = -\frac{R\,\dot{\theta}^2 + g\sin\theta}{l + R\theta} - \frac{c}{m}(l + R\theta)\dot{\theta}|\dot{\theta}|\;}\quad (n = 2)
+\boxed{\;n=2:\quad \ddot{\theta} = -\frac{R}{l+R\theta}\dot{\theta}^2 - \frac{g}{l+R\theta}\sin\theta - \frac{c}{m}(l+R\theta)\,\dot{\theta}|\dot{\theta}|\;}
 $$
 
 $$
-\boxed{\;\ddot{\theta} = -\frac{R\,\dot{\theta}^2 + g\sin\theta}{l + R\theta} - \frac{c}{m}\dot{\theta}\;}\quad (n = 1)
+\boxed{\;n=1:\quad \ddot{\theta} = -\frac{R}{l+R\theta}\dot{\theta}^2 - \frac{g}{l+R\theta}\sin\theta - \frac{c}{m}\,\dot{\theta}\;}
 $$
