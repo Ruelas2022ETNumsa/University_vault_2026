@@ -1435,8 +1435,8 @@
         "_start.md",
         "_doc_start_movil607P1.md",
         "_start_movilyyy.md",
+        "_start_movil1012p1.md",
         "_start_movil.md",
-        "_start_movil607P1 1 1.md",
         "_start_movil607P2.md"
       ]
     },
@@ -4645,7 +4645,7 @@
       "isPinned": false,
       "isHidden": false,
       "ctime": 1791168025834,
-      "mtime": 1791934484770
+      "mtime": 1791944432573
     },
     "_PDF/ETN-505": {
       "isPinned": false,
@@ -7930,18 +7930,6 @@
       "ctime": 1787721131873,
       "mtime": 1789357865750
     },
-    "_skills/_start_movil607P1 1 1.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1790274913555,
-      "mtime": 1787721221000
-    },
-    "_skills/_start_movil.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1790274913555,
-      "mtime": 1790651525273
-    },
     "Borrar/resumen_wireshark_sesion.md": {
       "isPinned": false,
       "isHidden": false,
@@ -9622,7 +9610,7 @@
         "ej6T5.md",
         "ej7T5.md",
         "ej8T5.md",
-        "tarea.m"
+        "full"
       ],
       "sortOrder": "custom",
       "ctime": 1791933354243,
@@ -9632,55 +9620,140 @@
       "isPinned": false,
       "isHidden": false,
       "ctime": 1791933372597,
-      "mtime": 1791933501264
+      "mtime": 1791935910273
     },
     "Semesters/Sem_04/ETN607/Partial_3/ej2T5.md": {
       "isPinned": false,
       "isHidden": false,
       "ctime": 1791933372597,
-      "mtime": 1791933685070
+      "mtime": 1791935960488
     },
     "Semesters/Sem_04/ETN607/Partial_3/ej3T5.md": {
       "isPinned": false,
       "isHidden": false,
       "ctime": 1791933372597,
-      "mtime": 1791933792960
+      "mtime": 1791940558253
     },
     "Semesters/Sem_04/ETN607/Partial_3/ej4T5.md": {
       "isPinned": false,
       "isHidden": false,
       "ctime": 1791933372597,
-      "mtime": 1791934246227
+      "mtime": 1791940673682
     },
     "Semesters/Sem_04/ETN607/Partial_3/ej5T5.md": {
       "isPinned": false,
       "isHidden": false,
       "ctime": 1791933372597,
-      "mtime": 1791934541871
+      "mtime": 1791940703678
     },
     "Semesters/Sem_04/ETN607/Partial_3/ej6T5.md": {
       "isPinned": false,
       "isHidden": false,
       "ctime": 1791933372597,
-      "mtime": 1791935160026
+      "mtime": 1791940738134
     },
     "Semesters/Sem_04/ETN607/Partial_3/ej7T5.md": {
       "isPinned": false,
       "isHidden": false,
       "ctime": 1791933372597,
-      "mtime": 1791935414044
-    },
-    "Semesters/Sem_04/ETN607/Partial_3/tarea.m": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791935468183,
-      "mtime": 1791935468183
+      "mtime": 1791940815742
     },
     "Semesters/Sem_04/ETN607/Partial_3/ej8T5.md": {
       "isPinned": false,
       "isHidden": false,
       "ctime": 1791933372597,
-      "mtime": 1791935414044
+      "mtime": 1791944741344
+    },
+    "Semesters/Sem_04/ETN607/Partial_3/full": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [
+        "ej2T5 1.md",
+        "ej3T5 1.md",
+        "ej4T5 1.md",
+        "ej5T5 1.md",
+        "ej6T5 1.md",
+        "ej7T5 1.md",
+        "ej7T5 2.md",
+        "ej8T5 1.md",
+        "tarea.m",
+        "ej1T5 1.md"
+      ],
+      "sortOrder": "custom",
+      "ctime": 1791944783480,
+      "mtime": 1791944783480
+    },
+    "Semesters/Sem_04/ETN607/Partial_3/full/ej2T5 1.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791944805534,
+      "mtime": 1791944805534
+    },
+    "Semesters/Sem_04/ETN607/Partial_3/full/ej3T5 1.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791944805890,
+      "mtime": 1791944805890
+    },
+    "Semesters/Sem_04/ETN607/Partial_3/full/ej4T5 1.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791944805901,
+      "mtime": 1791944805901
+    },
+    "Semesters/Sem_04/ETN607/Partial_3/full/ej5T5 1.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791944805921,
+      "mtime": 1791944805921
+    },
+    "Semesters/Sem_04/ETN607/Partial_3/full/ej6T5 1.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791944805936,
+      "mtime": 1791944805936
+    },
+    "Semesters/Sem_04/ETN607/Partial_3/full/ej7T5 1.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791944805947,
+      "mtime": 1791944805947
+    },
+    "Semesters/Sem_04/ETN607/Partial_3/full/ej7T5 2.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791944805956,
+      "mtime": 1791944805956
+    },
+    "Semesters/Sem_04/ETN607/Partial_3/full/ej8T5 1.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791944805964,
+      "mtime": 1791944805964
+    },
+    "Semesters/Sem_04/ETN607/Partial_3/full/tarea.m": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791944805972,
+      "mtime": 1791944805972
+    },
+    "Semesters/Sem_04/ETN607/Partial_3/full/ej1T5 1.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791944806014,
+      "mtime": 1791944806014
+    },
+    "_skills/_start_movil1012p1.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1790274913555,
+      "mtime": 1790651525273
+    },
+    "_skills/_start_movil.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1790274913555,
+      "mtime": 1791945417027
     }
   },
   "showHidden": false,
