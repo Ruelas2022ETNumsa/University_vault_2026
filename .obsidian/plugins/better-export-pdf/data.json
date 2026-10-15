@@ -14,7 +14,7 @@
   "concurrency": "5",
   "version": "2",
   "prevConfig": {
-    "pageSize": "A4",
+    "pageSize": "Legal",
     "marginType": "0",
     "showTitle": false,
     "open": false,
