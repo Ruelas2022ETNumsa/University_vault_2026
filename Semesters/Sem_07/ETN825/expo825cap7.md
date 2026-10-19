@@ -3,7 +3,7 @@
 
 | # | Subtítulo | Págs. | Figuras / tablas |
 |---|---|---|---|
-| 1 | Dispositivos externos | 3–6 | Fig. 7.1 (p.3), Fig. 7.2 (p.5) |
+| 1 | Dispositivos externos | 4–6 | Fig. 7.2 (p.5) |
 | 2 | Teclado/monitor e IRA | 6 | — |
 | 3 | Módulo de E/S: funciones y estructura | 3, 7–8 | Fig. 7.1 (p.3), Fig. 7.3 (p.8) |
 | 4 | E/S programada | 9–12 | Tabla 7.1 (p.10), Fig. 7.4 (p.12) |
@@ -29,357 +29,461 @@ La sección 14 incluye USB, FireWire, SCSI, Thunderbolt, InfiniBand, PCIe y SATA
 ![[CH07-COA10e.pdf#page=3&rect=124,35,585,529|CH07-COA10e, p.3]]
 *Fig. 7.1 · Modelo genérico de un módulo de E/S*
 
-justificación: Muestra la estructura conceptual de bloques y las interfaces de conexión del módulo de E/S con el bus del sistema y los periféricos externos.
+**Qué muestra (lámina p.3, solo figura, sin texto):**
+1. **Bus del sistema (System Bus):** arriba, con tres grupos de líneas: líneas de dirección (Address Lines), de datos (Data Lines) y de control (Control Lines).
+2. **Módulo de E/S (I/O Module):** bloque central, conectado a las tres líneas del bus.
+3. **Enlaces a dispositivos periféricos (Links to peripheral devices):** cuatro líneas que salen del módulo hacia abajo.
 
-**Qué muestra:**
-- El **módulo de E/S** (*I/O Module*) como bloque intermedio central de la arquitectura.
-- La interfaz hacia el **bus del sistema** (*System Bus*), compuesta por tres conjuntos de líneas de bus:
-  - **Líneas de dirección** (*Address Lines*).
-  - **Líneas de datos** (*Data Lines*).
-  - **Líneas de control** (*Control Lines*).
-- La interfaz hacia los **dispositivos periféricos**: enlaces específicos o dedicados (*Links to peripheral devices*).
+**Se completa con:** Stallings - Computer Organization and Architecture - 11ed.pdf *(según NotebookLM; verificar página y numeración en el PDF)*
+- **Por qué existe el módulo:** Según el libro, los periféricos no se conectan directo al bus por tres razones:
+  1. Variedad de periféricos, con modos de operación distintos.
+  2. Diferencia de velocidad entre periféricos y CPU/memoria, que exige almacenamiento temporal (*data buffering*).
+  3. Formatos de datos y tamaños de palabra distintos.
+- **Nombres según la complejidad del módulo:** si es primitivo y la CPU lo controla en detalle → controlador de dispositivo (*device controller*) o controlador de E/S. Si ejecuta sus propias instrucciones de E/S → canal de E/S (*I/O channel*) o procesador de E/S (*I/O processor*).
 
-**Cómo se lee:**
-- **Desde la CPU y Memoria:** El procesador coloca la dirección del dispositivo en las líneas de dirección para seleccionar el módulo/puerto de E/S, emite comandos mediante las líneas de control (lectura, escritura, prueba) y transfiere datos a través de las líneas de datos.
-- **A través del módulo de E/S:** El módulo intercepta las señales del bus del sistema, las decodifica, aplica la lógica de control interna, gestiona la temporización y efectúa el búfering de datos.
-- **Hacia/desde los periféricos:** El módulo transmite estas órdenes e intercambia datos y señales de estado con los periféricos externos mediante sus enlaces dedicados (*links*).
-
-**Se completa con:** Stallings - Computer Organization and Architecture - 11ed.pdf
-- **Cambio de numeración:** En la 11ª edición del libro, esta figura pasa a llamarse **Figure 8.1 Generic Model of an I/O Module** dentro del Capítulo 8 (*Input/Output*).
-- **Razones para no conectar periféricos directamente al bus del sistema:**
-  1. *Diversidad operativa:* Existe una gran variedad de periféricos con métodos de operación distintos; integrar la lógica de cada uno en la CPU sería impracticable.
-  2. *Disparidad de velocidad:* La velocidad de transferencia de los periféricos suele ser mucho más lenta (o en ciertos casos más rápida) que la de la memoria y la CPU, degradando la eficiencia del bus del sistema.
-  3. *Incompatibilidad de formatos:* Los periféricos utilizan formatos de datos y longitudes de palabra diferentes a los del computador.
-- **Niveles de complejidad del módulo:** La fuente aclara que este modelo abarca desde un controlador simple de dispositivo (*I/O controller* o *device controller*, común en microcomputadores) hasta un canal o procesador de E/S (*I/O channel* o *I/O processor*, común en mainframes) que ejecuta sus propios programas de E/S autonomamente.
-- **Apoyo complementario (Mano - Computer System Architecture.pdf):** En la obra de Mano, este esquema corresponde a la conexión del bus de E/S con módulos de interfaz (Fig. 11-1 p.388), donde cada interfaz decodifica la dirección enviada por el bus y supervisa al controlador del periférico.
-![[expo825cap7-18-10-2026_22-24-14.png]]
 ---
-### 1. Dispositivos externos (p.3–6)
+### 1. Dispositivos externos (p.4–6)
 
-**Subtítulo**
+**Mensaje 1**
 ```
 Subtítulo: Dispositivos externos
 ```
-
-## Dispositivos externos
-
-**Idea central:** Los dispositivos externos o periféricos permiten el intercambio de datos entre el entorno exterior y el computador a través de un enlace dedicado con un módulo de entrada/salida (E/S).
-
-**Según las diapositivas (p.4–6):**
-- **Definición y enlace de conexión:** Se conectan al computador mediante un enlace hacia el módulo de E/S, el cual sirve para intercambiar datos, señales de control y estado.
-- **Clasificación en tres categorías:**
-  - **Legibles por humanos (*human readable*):** Diseñados para interactuar con el usuario (ej. monitores/terminales VDT e impresoras).
-  - **Legibles por máquina (*machine readable*):** Diseñados para comunicarse con equipos o almacenamiento (ej. discos magnéticos, cintas, sensores y actuadores).
-  - **De comunicación (*communication*):** Orientados a comunicarse con dispositivos remotos, como una terminal, un dispositivo legible por máquina u otro computador.
-- **Estructura interna genérica (Fig. 7.2):** Se compone de una lógica de control (*control logic*), un búfer (*buffer*) para almacenamiento temporal de datos y un transductor (*transducer*).
-
-![[CH07-COA10e.pdf#page=5&rect=110,50,628,535|CH07-COA10e, p.5]]
-
-- **Ejemplo Teclado/Monitor:**
-  - La unidad básica de intercambio es el carácter mediante el código IRA (*International Reference Alphabet*), compuesto por 7 bits (128 caracteres).
-  - Los caracteres se clasifican en imprimibles (alfanuméricos y símbolos) y de control (como el retorno de carro).
-  - Al pulsar una tecla, el transductor del teclado convierte la señal eléctrica en el patrón de bits IRA enviado al módulo de E/S; en la salida, el módulo retransmite el código al monitor para su representación física.
-
-**Se completa con:** Stallings - Computer Organization and Architecture - 11ed.pdf
-- **Rol del transductor:** Transforma la energía eléctrica en otras formas de energía (magnética, óptica, mecánica) durante la salida, y viceversa durante la entrada.
-- **Tamaño del búfer:** Varía según el tipo de dispositivo; es de 8 a 16 bits en dispositivos seriales (como el teclado), mientras que en dispositivos orientados a bloques (como controladores de disco) el búfer es significativamente mayor.
-- **Mecanismo en unidades de disco (*disk drive*):** Contiene la electrónica para el brazo de lectura/escritura; en discos de cabeza fija el transductor convierte patrones magnéticos directamente a bits en el búfer, mientras que en discos de cabeza móvil la lógica de control gestiona además el desplazamiento radial del brazo.
-
-**Figuras de apoyo:**
-[[CH07-COA10e.pdf#page=5]]
-*Fig. 7.2 · Diagrama de bloques de un dispositivo externo*
-%%IMA-SRC | fuente: CH07-COA10e.pdf | página: 5 | id: Fig. 7.2 | posición: centro
-justificación: Permite visualizar la división interna del periférico entre lógica de control, búfer y transductor, así como la interfaz de señales con el módulo de E/S.%%
-
-**Dato para el docente:** El código IRA (*International Reference Alphabet*), anteriormente denominado IA5 y conocido en su versión estadounidense como ASCII, utiliza exactamente 7 bits de codificación para representar 128 caracteres (divididos en imprimibles y de control).
-
----
-
-**Concepto**
+**Mensaje 2**
 ```
 Concepto: Dispositivo periférico
 ```
-
-## Dispositivo periférico
-
-Según la diapositiva (p.4), un **dispositivo periférico** (*peripheral device*) es un dispositivo externo conectado a un módulo de E/S que proporciona un medio para intercambiar datos, señales de control y estado entre el computador y el entorno exterior.
-
-Se complementa con:
-- **Stallings - Computer Organization and Architecture - 11ed.pdf (Sección 8.1):** Explica que los periféricos no se conectan directamente al bus del sistema debido a la amplia variedad de métodos de operación, las severas diferencias de velocidad respecto a la CPU y memoria, y los distintos formatos o tamaños de palabra que emplean, haciendo necesaria la presencia del módulo de E/S como intermediario.
-- **Mano - Computer System Architecture.pdf (p.383):** Los define como dispositivos *on-line* (bajo control directo del sistema) capaces de transferir información a la memoria, y los clasifica en tres tipos: de entrada, de salida y de almacenamiento auxiliar.
-
-[[CH07-COA10e.pdf#page=5]]
-*Fig. 7.2 · Diagrama de bloques de un dispositivo externo*
-%%IMA-SRC | fuente: CH07-COA10e.pdf | página: 5 | id: Fig. 7.2 | posición: centro
-justificación: Muestra los bloques internos de un periférico (lógica de control, búfer y transductor) y sus líneas de conexión con el módulo de E/S.%%
-
----
-
-**Subtítulo + SIC**
+**Mensaje 3**
 ```
-Subtítulo SIC: Dispositivos externos
+Concepto SIC: Dispositivo periférico
+```
+**Mensaje 4**
+```
+"Figure 7.2 Block Diagram of an External Device" completa la explicación con las fuentes cargadas para el tema 7
 ```
 
 ## Dispositivos externos
 
-**Idea central:** Los dispositivos externos o periféricos permiten el intercambio de datos, señales de control y estado entre el entorno exterior y el computador a través de un módulo de entrada/salida (E/S).
+**Idea central:** Los dispositivos externos (periféricos) permiten el intercambio de datos entre el entorno exterior y el computador mediante enlaces conectados a un módulo de E/S.
 
-**Según las diapositivas (p.4–6):**
-- **Conexión e interfaz:** Se conectan al computador mediante un enlace hacia el módulo de E/S para transmitir información de control, datos y estado.
-- **Clasificación en tres categorías:**
-  - **Legibles por humanos (*human readable*):** Diseñados para interactuar con el usuario (ej. monitores VDT, impresoras).
-  - **Legibles por máquina (*machine readable*):** Diseñados para comunicarse con equipos o medios de almacenamiento (ej. discos magnéticos, cintas, sensores y actuadores).
-  - **De comunicación (*communication*):** Orientados a comunicarse con dispositivos remotos, como una terminal, un dispositivo legible por máquina u otro computador.
-- **Estructura interna (Fig. 7.2):** Integrada por la lógica de control (*control logic*), búfer de almacenamiento temporal (*buffer*) y transductor (*transducer*).
-- **Ejemplo Teclado/Monitor:**
-  - La unidad básica de intercambio es el carácter mediante el código IRA (*International Reference Alphabet*), compuesto por 7 bits (128 caracteres).
-  - Los caracteres se dividen en imprimibles (alfanuméricos y símbolos) y de control (como el retorno de carro).
-  - Al pulsar una tecla, el transductor del teclado convierte la acción en el patrón binario IRA enviado al módulo de E/S; en la salida, el módulo retransmite el código al monitor para su representación física.
+**Diapositivas (p.4–5):**
 
-**Se completa con:** Stallings - Computer Organization and Architecture - 11ed.pdf
-- **Rol del transductor:** Transforma la energía eléctrica en otras formas de energía (magnética, óptica, mecánica) durante la salida, y realiza la conversión inversa durante la entrada.
-- **Tamaño del búfer:** Varía según el dispositivo, siendo de pocos bits (8 a 16 bits) en periféricos orientados a caracteres y de mayor capacidad (sectores completos) en unidades de almacenamiento masivo.
+p.4
+* **Dispositivos externos**
+  * Proporcionan un medio para intercambiar datos entre el entorno externo y el computador
+  * Se conectan al computador mediante un enlace hacia un módulo de E/S
+    * El enlace se utiliza para intercambiar control, estado y datos entre el módulo de E/S y el dispositivo externo
+  * *Dispositivo periférico*
+    * Un dispositivo externo conectado a un módulo de E/S
+* **Tres categorías:**
+  * **Legibles por humanos (*Human readable*)**
+    * Adecuados para comunicarse con el usuario del computador
+    * Terminales de pantalla de video (*VDTs*), impresoras
+  * **Legibles por máquina (*Machine readable*)**
+    * Adecuados para comunicarse con equipos
+    * Sistemas de disco y cinta magnética, sensores y actuadores
+  * **Comunicación (*Communication*)**
+    * Adecuados para comunicarse con dispositivos remotos como una terminal, un dispositivo legible por máquina u otro computador
 
-**Figuras de apoyo:**
-[[CH07-COA10e.pdf#page=5]]
+p.5
+
+![[CH07-COA10e.pdf#page=5&rect=124,47,623,531|CH07-COA10e, p.5]]
+
 *Fig. 7.2 · Diagrama de bloques de un dispositivo externo*
-%%IMA-SRC | fuente: CH07-COA10e.pdf | página: 5 | id: Fig. 7.2 | posición: centro
-justificación: Muestra la división interna del periférico entre lógica de control, búfer y transductor, así como la interfaz de señales con el módulo de E/S.%%
+%%IMA-SRC | fuente: CH07-COA10e.pdf | página: 5 | id: Fig. 7.2 | posición: centro de la diapositiva
+justificación: Ilustra la estructura interna general de un periférico externo y sus señales de interfaz con el módulo de E/S y el entorno.%%
 
-**Dato para el docente:** El código IRA (*International Reference Alphabet*), equivalente a ASCII o IA5, utiliza exactamente 7 bits de codificación para representar 128 caracteres (divididos en imprimibles y de control).
+* **Qué muestra (la lámina p.5 solo trae la figura, sin texto):**
+  * **Señales de control desde el módulo de E/S (*Control signals from I/O module*):** entran a la lógica de control.
+  * **Señales de estado hacia el módulo de E/S (*Status signals to I/O module*):** salen de la lógica de control.
+  * **Bits de datos hacia y desde el módulo de E/S (*Data bits to and from I/O module*):** flecha en ambos sentidos con el buffer.
+  * **Tres bloques internos:** lógica de control (*Control logic*), buffer (*Buffer*) y transductor (*Transducer*). El buffer aparece como la parte superior del bloque del transductor.
+  * **Datos (propios del dispositivo) hacia y desde el entorno (*Data (device-unique) to and from environment*):** flecha en ambos sentidos con el transductor.
+* **Cómo se lee (solo lo que dibuja la figura):**
+  * El módulo de E/S envía control a la lógica de control y recibe de ella el estado.
+  * La lógica de control tiene una flecha hacia el buffer.
+  * Los bits de datos van y vienen entre el módulo de E/S y el buffer.
+  * El transductor es el bloque que se conecta con el entorno.
+
+**Se completa con:** Stallings - Computer Organization and Architecture - 11ed.pdf *(⚠ todo lo de abajo viene de NotebookLM: verificar página en el PDF)*
+* **Función de cada bloque:**
+  * Lógica de control: controla la operación del dispositivo según los comandos del módulo de E/S.
+  * Transductor: convierte entre señales eléctricas y la forma de energía propia del entorno.
+  * Buffer: guarda temporalmente los datos durante la transferencia.
+* **Capacidad del buffer:** 8 a 16 bits en dispositivos en serie; mucho mayor en dispositivos orientados a bloques, como controladores de disco.
+* **Enfoque funcional vs. estructural:** los discos y cintas son memoria en la jerarquía funcional, pero estructuralmente se comportan como dispositivos externos controlados por módulos de E/S.
+
+**Comparación con SIC:** *(⚠ verificar cada celda del SIC contra Hill & Peterson. AHPL, `IOBUS` y `CSBUS` no son relevantes para la exposición.)*
+
+| Aspecto | Cap. 7 (Stallings) | SIC (Hill & Peterson) |
+| - | - | - |
+| Clasificación de dispositivos | Tres categorías: legibles por humanos, legibles por máquina y de comunicación. | No aparece en las fuentes del SIC. |
+| Interfaz del periférico | El periférico contiene lógica de control, buffer y transductor, conectándose al módulo de E/S por un enlace dedicado. | ⚠ Cada periférico dispone de un módulo de interfaz explícito que lo adapta al bus de E/S. |
+| Temporización física | ⚠ (11ed, no de la lámina) La lógica de control y el buffer absorben las diferencias de velocidad del medio físico. | ⚠ Se diseñan generadores de pulso con tiempos explícitos (p. ej., 100 µs y 4 ms). |
+
+Conclusión: ⚠ pendiente de verificar contra Hill & Peterson. Lo que sí se sostiene: el Cap. 7 presenta un modelo conceptual del dispositivo externo; la comparación con el SIC depende de lo que confirmen sus fuentes.
 
 ---
 
-| Aspecto | Cap. 7 (Stallings) | SIC (Hill & Peterson) |
-|-|-|-|
-| Cómo se hace | Conexión al módulo de E/S mediante un enlace dedicado de datos, control y estado. | Conexión directa a los buses del sistema (`IOBUS` de 18 bits y `CSBUS` de 12 bits) mediante un módulo de interfaz específico. |
-| Quién controla | El módulo de E/S intermedio asume la interfaz con el bus del sistema, la temporización y el búfering. | La CPU controla la transferencia enviando comandos por el `CSBUS` y coordinando mediante un protocolo de *handshake* de 3 líneas (`ready`, `datavalid`, `accept`). |
+## Teclado/monitor e IRA
 
-**Conclusión:** En el Cap. 7 un módulo de E/S intermedio conecta el bus del sistema con los periféricos; en el SIC la CPU coordina la transferencia con el periférico mediante señales de handshake sobre `IOBUS` y `CSBUS`.
+**Idea central:** El teclado y el monitor son la forma más común de interacción usuario-computador, y el intercambio se hace carácter por carácter con el código IRA de 7 bits.
+
+**Diapositivas (p.6):**
+
+p.6
+* **Teclado/Monitor (*Keyboard/Monitor*)**
+  * La forma más común de interacción computador/usuario
+    * El usuario proporciona la entrada a través del teclado
+    * El monitor muestra los datos proporcionados por el computador
+  * **Alfabeto de Referencia Internacional (*International Reference Alphabet - IRA*)**
+    * La unidad básica de intercambio es el carácter
+      * Asociado a cada carácter hay un código
+      * Cada carácter en este código está representado por un código binario único de 7 bits
+        * Se pueden representar 128 caracteres diferentes
+    * Los caracteres son de dos tipos:
+      * **Imprimibles (*Printable*)**
+        * Caracteres alfabéticos, numéricos y especiales que se pueden imprimir en papel o mostrar en una pantalla
+      * **Control (*Control*)**
+        * Tienen que ver con el control de la impresión o visualización de caracteres
+          * Un ejemplo es el retorno de carro (*carriage return*)
+        * Otros caracteres de control están relacionados con procedimientos de comunicación
+  * **Códigos de teclado (*Keyboard Codes*)**
+    * Cuando el usuario presiona una tecla, genera una señal electrónica que es interpretada por el transductor en el teclado y traducida al patrón de bits del código IRA correspondiente
+    * Este patrón de bits se transmite al módulo de E/S en el computador
+    * En la salida, los caracteres en código IRA se transmiten al dispositivo externo desde el módulo de E/S
+    * El transductor interpreta el código y envía las señales electrónicas requeridas al dispositivo de salida, ya sea para mostrar el carácter indicado o realizar la función de control solicitada
+
+**Se completa con:** Stallings - Computer Organization and Architecture - 11ed.pdf *(⚠ verificar página en el PDF)*
+* **Normativa del código IRA:** definido en la Recomendación ITU-T T.50 (antes Alfabeto Internacional Nº 5, IA5). Su variante nacional en EE.UU. es ASCII (*American Standard Code for Information Interchange*).
+
+**Comparación con SIC:** *(⚠ verificar contra Hill & Peterson)*
+
+| Aspecto | Cap. 7 (Stallings) | SIC (Hill & Peterson) |
+| - | - | - |
+| Codificación de caracteres | IRA/ASCII de 7 bits (128 caracteres), con caracteres imprimibles y de control. | ⚠ Maneja caracteres como vectores (p. ej., ASCII o Hollerith de 12 bits) que pasan por el acumulador `AC` o por buffers. |
+
+Conclusión: ⚠ pendiente de verificar contra Hill & Peterson.
+
+
+
+---
 
 ### 2. Teclado/monitor e IRA (p.6)
 
-**Subtítulo**
+**Mensaje 1**
 ```
 Subtítulo: Teclado/monitor e IRA
 ```
-**Concepto**
+**Mensaje 2**
 ```
-Concepto: Código IRA
+Concepto: International Reference Alphabet (IRA)
 ```
-**Subtítulo + SIC**
+**Mensaje 3**
 ```
-Subtítulo SIC: Teclado/monitor e IRA
-```
-
-### 3. Módulo de E/S: funciones y estructura (p.3, 7–8)
-
-**Subtítulo**
-```
-Subtítulo: Módulo de E/S: funciones y estructura
-```
-**Concepto**
-```
-Concepto: Buffering de datos en el módulo de E/S
-```
-**Subtítulo + SIC**
-```
-Subtítulo SIC: Módulo de E/S: funciones y estructura
-```
-
-### 4. E/S programada (p.9–12)
-
-**Subtítulo**
-```
-Subtítulo: E/S programada
-```
-**Concepto**
-```
-Concepto: Las tres técnicas de E/S (Tabla 7.1)
-```
-**Subtítulo + SIC**
-```
-Subtítulo SIC: E/S programada
-```
-
-### 5. Comandos e instrucciones de E/S (p.11, 13)
-
-**Subtítulo**
-```
-Subtítulo: Comandos e instrucciones de E/S
-```
-**Concepto**
-```
-Concepto: Comando de E/S Test
-```
-**Subtítulo + SIC**
-```
-Subtítulo SIC: Comandos e instrucciones de E/S
-```
-
-### 6. Mapeo de E/S (p.14–15)
-
-**Subtítulo**
-```
-Subtítulo: Mapeo de E/S (mapeada vs aislada)
-```
-**Concepto**
-```
-Concepto: E/S mapeada en memoria vs E/S aislada
-```
-**Subtítulo + SIC**
-```
-Subtítulo SIC: Mapeo de E/S (mapeada vs aislada)
-```
-
-### 7. E/S por interrupciones (p.16–18)
-
-**Subtítulo**
-```
-Subtítulo: E/S por interrupciones
-```
-**Concepto**
-```
-Concepto: Procesamiento simple de una interrupción
-```
-**Subtítulo + SIC**
-```
-Subtítulo SIC: E/S por interrupciones
-```
-
-### 8. Problemas de diseño e identificación del dispositivo (p.19–20)
-
-**Subtítulo**
-```
-Subtítulo: Problemas de diseño e identificación del dispositivo
-```
-**Concepto**
-```
-Concepto: Interrupción vectorizada
-```
-**Subtítulo + SIC**
-```
-Subtítulo SIC: Problemas de diseño e identificación del dispositivo
-```
-
-### 9. Controladores 82C59A, 8255A y 82C55A (p.21–24)
-
-**Subtítulo**
-```
-Subtítulo: Controladores 82C59A, 8255A y 82C55A
-```
-**Concepto**
-```
-Concepto: Controlador de interrupciones 82C59A
-```
-**Subtítulo + SIC**
-```
-Subtítulo SIC: Controladores 82C59A, 8255A y 82C55A
-```
-
-### 10. DMA: limitaciones y funcionamiento (p.25–29)
-
-**Subtítulo**
-```
-Subtítulo: DMA: limitaciones y funcionamiento
-```
-**Concepto**
-```
-Concepto: Puntos de ruptura de DMA en el ciclo de instrucción
-```
-**Subtítulo + SIC**
-```
-Subtítulo SIC: DMA: limitaciones y funcionamiento
-```
-
-### 11. Controlador 8237A (p.30–31)
-
-**Subtítulo**
-```
-Subtítulo: Controlador 8237A (fly-by)
-```
-**Concepto**
-```
-Concepto: DMA fly-by
-```
-**Subtítulo + SIC**
-```
-Subtítulo SIC: Controlador 8237A (fly-by)
-```
-
-### 12. Direct Cache Access y DDIO (p.32–38)
-
-**Subtítulo**
-```
-Subtítulo: Direct Cache Access y DDIO
-```
-**Concepto**
-```
-Concepto: Direct Data I/O (DDIO)
-```
-**Subtítulo + SIC**
-```
-Subtítulo SIC: Direct Cache Access y DDIO
-```
-
-### 13. Evolución de la E/S y canales (p.39–40)
-
-**Subtítulo**
-```
-Subtítulo: Evolución de la E/S y canales
-```
-**Concepto**
-```
-Concepto: Canal de E/S selector y multiplexor
-```
-**Subtítulo + SIC**
-```
-Subtítulo SIC: Evolución de la E/S y canales
-```
-
-### 14. Interfaces y buses externos (p.41–48)
-
-**Subtítulo**
-```
-Subtítulo: Interfaces y buses externos
-```
-**Concepto**
-```
-Concepto: USB SuperSpeed
-```
-**Subtítulo + SIC**
-```
-Subtítulo SIC: Interfaces y buses externos
-```
-
-### 15. Caso IBM zEC12 (p.49–51)
-
-**Subtítulo**
-```
-Subtítulo: Caso IBM zEC12
-```
-**Concepto**
-```
-Concepto: Subsistema de canales del IBM zEC12
-```
-**Subtítulo + SIC**
-```
-Subtítulo SIC: Caso IBM zEC12
-```
-
-### 16. Resumen (p.52)
-
-**Subtítulo**
-```
-Subtítulo: Resumen
-```
-**Concepto**
-```
-Concepto: Evolución de la función de E/S
-```
-**Subtítulo + SIC**
-```
-Subtítulo SIC: Resumen
+Concepto SIC: International Reference Alphabet (IRA)
 ```
 
 ---
+
+### 3. Módulo de E/S (p.3, 7–8)
+
+**Mensaje 1**
+```
+Subtítulo: Módulo de E/S
+```
+**Mensaje 2**
+```
+Concepto: Data buffering
+```
+**Mensaje 3**
+```
+Concepto SIC: Data buffering
+```
+**Mensaje 4**
+```
+"Figure 7.3 Block Diagram of an I/O Module" completa la explicación con las fuentes cargadas para el tema 7
+```
+
+---
+
+### 4. E/S programada (p.9–12)
+
+**Mensaje 1**
+```
+Subtítulo: E/S programada
+```
+**Mensaje 2**
+```
+Concepto: Técnicas de E/S
+```
+**Mensaje 3**
+```
+Concepto SIC: Técnicas de E/S
+```
+**Mensaje 4**
+```
+"Table 7.1 I/O Techniques" completa la explicación con las fuentes cargadas para el tema 7
+```
+```
+"Figure 7.4 Three Techniques for Input of a Block of Data" completa la explicación con las fuentes cargadas para el tema 7
+```
+
+---
+
+### 5. Comandos e instrucciones de E/S (p.11, 13)
+
+**Mensaje 1**
+```
+Subtítulo: Comandos e instrucciones de E/S
+```
+**Mensaje 2**
+```
+Concepto: Comandos de E/S
+```
+**Mensaje 3**
+```
+Concepto SIC: Comandos de E/S
+```
+
+---
+
+### 6. Mapeo de E/S (p.14–15)
+
+**Mensaje 1**
+```
+Subtítulo: Mapeo de E/S
+```
+**Mensaje 2**
+```
+Concepto: Memory-mapped I/O
+```
+**Mensaje 3**
+```
+Concepto SIC: Memory-mapped I/O
+```
+**Mensaje 4**
+```
+"Figure 7.5 Memory-Mapped and Isolated I/O" completa la explicación con las fuentes cargadas para el tema 7
+```
+
+---
+
+### 7. E/S por interrupciones (p.16–18)
+
+**Mensaje 1**
+```
+Subtítulo: E/S por interrupciones
+```
+**Mensaje 2**
+```
+Concepto: Procesamiento de una interrupción
+```
+**Mensaje 3**
+```
+Concepto SIC: Procesamiento de una interrupción
+```
+**Mensaje 4**
+```
+"Figure 7.6 Simple Interrupt Processing" completa la explicación con las fuentes cargadas para el tema 7
+```
+```
+"Figure 7.7 Changes in Memory and Registers for an Interrupt" completa la explicación con las fuentes cargadas para el tema 7
+```
+
+---
+
+### 8. Diseño e identificación del dispositivo (p.19–20)
+
+**Mensaje 1**
+```
+Subtítulo: Diseño e identificación del dispositivo
+```
+**Mensaje 2**
+```
+Concepto: Vectored interrupt
+```
+**Mensaje 3**
+```
+Concepto SIC: Vectored interrupt
+```
+
+---
+
+### 9. Controladores 82C59A, 8255A, 82C55A (p.21–24)
+
+**Mensaje 1**
+```
+Subtítulo: Controladores 82C59A, 8255A, 82C55A
+```
+**Mensaje 2**
+```
+Concepto: Controlador de interrupciones 82C59A
+```
+**Mensaje 3**
+```
+Concepto SIC: Controlador de interrupciones 82C59A
+```
+**Mensaje 4**
+```
+"Figure 7.8 Use of the 82C59A Interrupt Controller" completa la explicación con las fuentes cargadas para el tema 7
+```
+```
+"Figure 7.9 The Intel 8255A Programmable Peripheral Interface" completa la explicación con las fuentes cargadas para el tema 7
+```
+```
+"Figure 7.10 The Intel 8255A Control Word" completa la explicación con las fuentes cargadas para el tema 7
+```
+```
+"Figure 7.11 Keyboard/Display Interface to 82C55A" completa la explicación con las fuentes cargadas para el tema 7
+```
+
+---
+
+### 10. DMA (p.25–29)
+
+**Mensaje 1**
+```
+Subtítulo: DMA
+```
+**Mensaje 2**
+```
+Concepto: DMA (Direct Memory Access)
+```
+**Mensaje 3**
+```
+Concepto SIC: DMA (Direct Memory Access)
+```
+**Mensaje 4**
+```
+"Figure 7.12 Typical DMA Block Diagram" completa la explicación con las fuentes cargadas para el tema 7
+```
+```
+"Figure 7.13 DMA and Interrupt Breakpoints During an Instruction Cycle" completa la explicación con las fuentes cargadas para el tema 7
+```
+```
+"Figure 7.14 Alternative DMA Configurations" completa la explicación con las fuentes cargadas para el tema 7
+```
+```
+"Figure 7.15 8237 DMA Usage of System Bus" completa la explicación con las fuentes cargadas para el tema 7
+```
+
+---
+
+### 11. Controlador 8237A (p.30–31)
+
+**Mensaje 1**
+```
+Subtítulo: Controlador 8237A
+```
+**Mensaje 2**
+```
+Concepto: Fly-by DMA
+```
+**Mensaje 3**
+```
+Concepto SIC: Fly-by DMA
+```
+**Mensaje 4**
+```
+"Table 7.2 Intel 8237A Registers" completa la explicación con las fuentes cargadas para el tema 7
+```
+
+---
+
+### 12. Direct Cache Access y DDIO (p.32–38)
+
+**Mensaje 1**
+```
+Subtítulo: Direct Cache Access y DDIO
+```
+**Mensaje 2**
+```
+Concepto: Direct Data I/O (DDIO)
+```
+**Mensaje 3**
+```
+Concepto SIC: Direct Data I/O (DDIO)
+```
+**Mensaje 4**
+```
+"Figure 7.16 Xeon E5-2600/4600 Chip Architecture" completa la explicación con las fuentes cargadas para el tema 7
+```
+```
+"Figure 7.17 Comparison of DMA and DDIO" completa la explicación con las fuentes cargadas para el tema 7
+```
+
+---
+
+### 13. Evolución de la E/S y canales (p.39–40)
+
+**Mensaje 1**
+```
+Subtítulo: Evolución de la E/S y canales
+```
+**Mensaje 2**
+```
+Concepto: Canal de E/S (I/O channel)
+```
+**Mensaje 3**
+```
+Concepto SIC: Canal de E/S (I/O channel)
+```
+**Mensaje 4**
+```
+"Figure 7.18 I/O Channel Architecture" completa la explicación con las fuentes cargadas para el tema 7
+```
+
+---
+
+### 14. Interfaces y buses externos (p.41–48)
+
+**Mensaje 1**
+```
+Subtítulo: Interfaces y buses externos
+```
+**Mensaje 2**
+```
+Concepto: Universal Serial Bus (USB)
+```
+**Mensaje 3**
+```
+Concepto SIC: Universal Serial Bus (USB)
+```
+
+---
+
+### 15. Caso IBM zEC12 (p.49–51)
+
+**Mensaje 1**
+```
+Subtítulo: Caso IBM zEC12
+```
+**Mensaje 2**
+```
+Concepto: Subsistema de canales (channel subsystem)
+```
+**Mensaje 3**
+```
+Concepto SIC: Subsistema de canales (channel subsystem)
+```
+**Mensaje 4**
+```
+"Figure 7.19 IBM EC12 I/O Channel Subsystem Structure" completa la explicación con las fuentes cargadas para el tema 7
+```
+```
+"Figure 7.20 IBM zEC12 I/O Frames-Front View" completa la explicación con las fuentes cargadas para el tema 7
+```
+```
+"Figure 7.21 IBM EC12 I/O System Structure" completa la explicación con las fuentes cargadas para el tema 7
+```
+
+---
+
+### 16. Resumen (p.52)
+
+*Nota: la lámina menciona "Disk drive" y "Characteristics of I/O channels", pero esas láminas no existen en el PDF.*
+
+**Mensaje 1**
+```
+Subtítulo: Resumen
+```
