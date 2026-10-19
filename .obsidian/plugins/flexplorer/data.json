@@ -4650,7 +4650,7 @@
       "isPinned": false,
       "isHidden": false,
       "ctime": 1791168025834,
-      "mtime": 1792035994972
+      "mtime": 1792373520799
     },
     "_PDF/ETN-505": {
       "isPinned": false,
@@ -6398,13 +6398,15 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "expo825cap7.md",
         "_library_ETN825.md",
         "ahpl_fin.md",
         "ahpl_fin final siuu.md",
         "00825expopdf.md",
         "SIC final siuu.md",
         "expo825.md",
-        "borrar"
+        "borrar",
+        "contexto_claude_expo825cap7.md"
       ]
     },
     "_app/notebooklm/guides/ETN825/ETN825_tikz.md": {
@@ -6423,7 +6425,8 @@
         "ETN825-comp_indice_BCv2i.md",
         "DOC_ETN825.md",
         "ETN825-conceptos_BCv1.md",
-        "ETN825-P1.md"
+        "ETN825-P1.md",
+        "ETN825-expo-cap7.md"
       ]
     },
     "_app/notebooklm/prompts/ETN825/ETN825-comp_indice_BCv1i.md": {
@@ -9817,6 +9820,24 @@
       "isHidden": false,
       "ctime": 1792373035324,
       "mtime": 1756955841010
+    },
+    "_app/notebooklm/prompts/ETN825/ETN825-expo-cap7.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1792373815511,
+      "mtime": 1792374289751
+    },
+    "Semesters/Sem_07/ETN825/expo825cap7.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1792374561045,
+      "mtime": 1792375007456
+    },
+    "Semesters/Sem_07/ETN825/contexto_claude_expo825cap7.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1792374961455,
+      "mtime": 1792374973654
     }
   },
   "showHidden": false,
