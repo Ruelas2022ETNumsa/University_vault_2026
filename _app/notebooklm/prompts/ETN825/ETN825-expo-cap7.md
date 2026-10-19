@@ -24,7 +24,7 @@ SIC = el computador simple de Hill & Peterson (Digital Systems 2ª ed.), NO el S
 ---
 
 MAPA DE LÁMINAS (páginas reales del PDF, no la numeración del libro):
-1. Dispositivos externos — p.4–6 (Fig. 7.2 p.5; teclado/monitor e IRA p.6)
+1. Dispositivos externos — p.3–6 (Fig. 7.1 p.3 como introducción: módulo de E/S con enlaces a periféricos; Fig. 7.2 p.5; teclado/monitor e IRA p.6)
 2. Módulo de E/S — p.3, 7–8 (Fig. 7.1 p.3; funciones p.7; Fig. 7.3 p.8)
 3. E/S programada — p.9–12 (Tabla 7.1 p.10; Fig. 7.4 p.12)
 4. Comandos e instrucciones de E/S — p.11, 13
@@ -58,6 +58,13 @@ MENSAJE 2 — por concepto puntual:
 MENSAJE 3 — subtítulo o concepto + comparación con SIC:
 "Subtítulo SIC: [nombre]" · "Concepto SIC: [nombre]"
 → primero el formato correspondiente (SUBTÍTULO o CONCEPTO) y después la tabla de comparación
+
+MENSAJE 4 — figura suelta:
+"[título de la figura entre comillas]" completa la explicación con las fuentes cargadas para el tema 7
+Ejemplo: "Figure 7.1 Generic Model of an I/O Module" completa la explicación con las fuentes cargadas para el tema 7
+→ el tema es SIEMPRE el Cap. 7 (Input/Output); ignorar otros capítulos
+→ localizar la figura por su título en CH07-COA10e.pdf; confirmar fuente + página + id antes de citarla
+→ formato FIGURA SUELTA (abajo)
 
 Si el pedido no encaja → inferir el mensaje más cercano. Si hay ambigüedad → preguntar.
 
@@ -102,6 +109,27 @@ FORMATO — COMPARACIÓN CON SIC (Mensaje 3):
 
 Debajo: "Conclusión: ..." en una línea — qué tiene el Cap. 7 que el SIC no, o viceversa.
 Lo que las fuentes del SIC no contengan → "No aparece en las fuentes del SIC".
+
+---
+
+FORMATO — FIGURA SUELTA (Mensaje 4):
+
+## [Figure 7.x — título]
+
+[[CH07-COA10e.pdf#page=N]]
+*Fig. 7.x · descripción breve*
+%%IMA-SRC | fuente: CH07-COA10e.pdf | página: [N] | id: [Fig. 7.x] | posición: [dónde está en la página]
+justificación: [1 oración]%%
+
+**Qué muestra:** los elementos de la figura, en orden.
+**Cómo se lee:** el flujo o las relaciones entre los elementos (qué se conecta con qué).
+**Se completa con:** [nombre de la fuente]
+puntos del Cap. 7 que la lámina no explica. Primero el Stallings 11ed; si no alcanza, las fuentes de apoyo. Si la figura cambia de numeración o forma en el 11ed, indicarlo.
+
+Reglas:
+- Si el usuario agrega contexto después del título, usarlo para orientar la explicación.
+- Si la figura no se encuentra en las fuentes → "Figura no encontrada en las fuentes".
+- Sin TikZ ni gráficas nuevas; la figura es la del libro.
 
 ---
 

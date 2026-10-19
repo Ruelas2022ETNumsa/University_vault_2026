@@ -3,7 +3,7 @@
 
 | # | Subtítulo | Págs. | Figuras / tablas |
 |---|---|---|---|
-| 1 | Dispositivos externos | 4–6 | Fig. 7.2 (p.5) |
+| 1 | Dispositivos externos | 3–6 | Fig. 7.1 (p.3), Fig. 7.2 (p.5) |
 | 2 | Teclado/monitor e IRA | 6 | — |
 | 3 | Módulo de E/S: funciones y estructura | 3, 7–8 | Fig. 7.1 (p.3), Fig. 7.3 (p.8) |
 | 4 | E/S programada | 9–12 | Tabla 7.1 (p.10), Fig. 7.4 (p.12) |
@@ -23,8 +23,38 @@
 La sección 14 incluye USB, FireWire, SCSI, Thunderbolt, InfiniBand, PCIe y SATA (p.46), Ethernet y Wi-Fi.
 
 ---
+### intro
+## Figure 7.1 — Generic Model of an I/O Module
 
-### 1. Dispositivos externos (p.4–6)
+![[CH07-COA10e.pdf#page=3&rect=124,35,585,529|CH07-COA10e, p.3]]
+*Fig. 7.1 · Modelo genérico de un módulo de E/S*
+
+justificación: Muestra la estructura conceptual de bloques y las interfaces de conexión del módulo de E/S con el bus del sistema y los periféricos externos.
+
+**Qué muestra:**
+- El **módulo de E/S** (*I/O Module*) como bloque intermedio central de la arquitectura.
+- La interfaz hacia el **bus del sistema** (*System Bus*), compuesta por tres conjuntos de líneas de bus:
+  - **Líneas de dirección** (*Address Lines*).
+  - **Líneas de datos** (*Data Lines*).
+  - **Líneas de control** (*Control Lines*).
+- La interfaz hacia los **dispositivos periféricos**: enlaces específicos o dedicados (*Links to peripheral devices*).
+
+**Cómo se lee:**
+- **Desde la CPU y Memoria:** El procesador coloca la dirección del dispositivo en las líneas de dirección para seleccionar el módulo/puerto de E/S, emite comandos mediante las líneas de control (lectura, escritura, prueba) y transfiere datos a través de las líneas de datos.
+- **A través del módulo de E/S:** El módulo intercepta las señales del bus del sistema, las decodifica, aplica la lógica de control interna, gestiona la temporización y efectúa el búfering de datos.
+- **Hacia/desde los periféricos:** El módulo transmite estas órdenes e intercambia datos y señales de estado con los periféricos externos mediante sus enlaces dedicados (*links*).
+
+**Se completa con:** Stallings - Computer Organization and Architecture - 11ed.pdf
+- **Cambio de numeración:** En la 11ª edición del libro, esta figura pasa a llamarse **Figure 8.1 Generic Model of an I/O Module** dentro del Capítulo 8 (*Input/Output*).
+- **Razones para no conectar periféricos directamente al bus del sistema:**
+  1. *Diversidad operativa:* Existe una gran variedad de periféricos con métodos de operación distintos; integrar la lógica de cada uno en la CPU sería impracticable.
+  2. *Disparidad de velocidad:* La velocidad de transferencia de los periféricos suele ser mucho más lenta (o en ciertos casos más rápida) que la de la memoria y la CPU, degradando la eficiencia del bus del sistema.
+  3. *Incompatibilidad de formatos:* Los periféricos utilizan formatos de datos y longitudes de palabra diferentes a los del computador.
+- **Niveles de complejidad del módulo:** La fuente aclara que este modelo abarca desde un controlador simple de dispositivo (*I/O controller* o *device controller*, común en microcomputadores) hasta un canal o procesador de E/S (*I/O channel* o *I/O processor*, común en mainframes) que ejecuta sus propios programas de E/S autonomamente.
+- **Apoyo complementario (Mano - Computer System Architecture.pdf):** En la obra de Mano, este esquema corresponde a la conexión del bus de E/S con módulos de interfaz (Fig. 11-1 p.388), donde cada interfaz decodifica la dirección enviada por el bus y supervisa al controlador del periférico.
+![[expo825cap7-18-10-2026_22-24-14.png]]
+---
+### 1. Dispositivos externos (p.3–6)
 
 **Subtítulo**
 ```
@@ -40,8 +70,11 @@ Subtítulo: Dispositivos externos
 - **Clasificación en tres categorías:**
   - **Legibles por humanos (*human readable*):** Diseñados para interactuar con el usuario (ej. monitores/terminales VDT e impresoras).
   - **Legibles por máquina (*machine readable*):** Diseñados para comunicarse con equipos o almacenamiento (ej. discos magnéticos, cintas, sensores y actuadores).
-  - **De comunicación (*communication*):** Orientados a conectar con dispositivos o computadores remotos (ej. módems).
+  - **De comunicación (*communication*):** Orientados a comunicarse con dispositivos remotos, como una terminal, un dispositivo legible por máquina u otro computador.
 - **Estructura interna genérica (Fig. 7.2):** Se compone de una lógica de control (*control logic*), un búfer (*buffer*) para almacenamiento temporal de datos y un transductor (*transducer*).
+
+![[CH07-COA10e.pdf#page=5&rect=110,50,628,535|CH07-COA10e, p.5]]
+
 - **Ejemplo Teclado/Monitor:**
   - La unidad básica de intercambio es el carácter mediante el código IRA (*International Reference Alphabet*), compuesto por 7 bits (128 caracteres).
   - Los caracteres se clasifican en imprimibles (alfanuméricos y símbolos) y de control (como el retorno de carro).
@@ -96,7 +129,7 @@ Subtítulo SIC: Dispositivos externos
 - **Clasificación en tres categorías:**
   - **Legibles por humanos (*human readable*):** Diseñados para interactuar con el usuario (ej. monitores VDT, impresoras).
   - **Legibles por máquina (*machine readable*):** Diseñados para comunicarse con equipos o medios de almacenamiento (ej. discos magnéticos, cintas, sensores y actuadores).
-  - **De comunicación (*communication*):** Orientados a conectar con computadores o dispositivos remotos (ej. módems).
+  - **De comunicación (*communication*):** Orientados a comunicarse con dispositivos remotos, como una terminal, un dispositivo legible por máquina u otro computador.
 - **Estructura interna (Fig. 7.2):** Integrada por la lógica de control (*control logic*), búfer de almacenamiento temporal (*buffer*) y transductor (*transducer*).
 - **Ejemplo Teclado/Monitor:**
   - La unidad básica de intercambio es el carácter mediante el código IRA (*International Reference Alphabet*), compuesto por 7 bits (128 caracteres).
@@ -113,7 +146,7 @@ Subtítulo SIC: Dispositivos externos
 %%IMA-SRC | fuente: CH07-COA10e.pdf | página: 5 | id: Fig. 7.2 | posición: centro
 justificación: Muestra la división interna del periférico entre lógica de control, búfer y transductor, así como la interfaz de señales con el módulo de E/S.%%
 
-**Dato para el docente:** El código IRA (*International Reference Alphabet*), equivalente a ASCII o IA5, utiliza exactamente 7 bits de codificación para representar 128 caracteres (divididos en 96 caracteres imprimibles y 32 de control).
+**Dato para el docente:** El código IRA (*International Reference Alphabet*), equivalente a ASCII o IA5, utiliza exactamente 7 bits de codificación para representar 128 caracteres (divididos en imprimibles y de control).
 
 ---
 
@@ -121,10 +154,8 @@ justificación: Muestra la división interna del periférico entre lógica de co
 |-|-|-|
 | Cómo se hace | Conexión al módulo de E/S mediante un enlace dedicado de datos, control y estado. | Conexión directa a los buses del sistema (`IOBUS` de 18 bits y `CSBUS` de 12 bits) mediante un módulo de interfaz específico. |
 | Quién controla | El módulo de E/S intermedio asume la interfaz con el bus del sistema, la temporización y el búfering. | La CPU controla la transferencia enviando comandos por el `CSBUS` y coordinando mediante un protocolo de *handshake* de 3 líneas (`ready`, `datavalid`, `accept`). |
-| Ventaja | Desacopla a la CPU de las características electromecánicas y diferencias de velocidad/formato de cada periférico mediante una abstracción genérica. | Permite una interconexión y sincronización directa en hardware descrita formalmente a nivel de transferencia de registros en AHPL. |
-| Limitación | Exige módulos, controladores o canales de E/S complejos para gestionar la abstracción. | Carece de un módulo de E/S genérico o estandarizado, requiriendo el diseño de una interfaz a medida para cada tipo de periférico. |
 
-**Conclusión:** El Cap. 7 de Stallings emplea módulos de E/S intermediarios estandarizados para abstraer la diversidad de periféricos frente a la CPU, mientras que el SIC de Hill & Peterson interconecta cada periférico a los buses del sistema mediante interfaces diseñadas a medida controladas directamente por señales explícitas de *handshaking*.
+**Conclusión:** En el Cap. 7 un módulo de E/S intermedio conecta el bus del sistema con los periféricos; en el SIC la CPU coordina la transferencia con el periférico mediante señales de handshake sobre `IOBUS` y `CSBUS`.
 
 ### 2. Teclado/monitor e IRA (p.6)
 
