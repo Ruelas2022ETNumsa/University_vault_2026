@@ -37,7 +37,9 @@
         "Untitled 3.md",
         "Untitled 4.md",
         "Untitled 5.md",
-        "Untitled 5 1.md"
+        "Untitled 5 1.md",
+        "Untitled 6.md",
+        "Untitled 7 1.md"
       ]
     },
     "MOC": {
@@ -4648,7 +4650,7 @@
       "isPinned": false,
       "isHidden": false,
       "ctime": 1791168025834,
-      "mtime": 1792032983296
+      "mtime": 1792035994972
     },
     "_PDF/ETN-505": {
       "isPinned": false,
@@ -6400,6 +6402,7 @@
         "ahpl_fin.md",
         "ahpl_fin final siuu.md",
         "00825expopdf.md",
+        "SIC final siuu.md",
         "expo825.md",
         "borrar"
       ]
@@ -6487,7 +6490,8 @@
         "Stallings - Organización y Arquitectura de Computadores - 7ed.pdf",
         "Stallings - Computer Organization and Architecture - 11ed.pdf",
         "Stallings - Operating Systems - 8ed.pdf",
-        "Tanenbaum - Distributed Systems.pdf"
+        "Tanenbaum - Distributed Systems.pdf",
+        "CH07-COA10e.pdf"
       ]
     },
     "_app/notebooklm/prompts/ETN825/ETN825-comp_indice_BCv2i.md": {
@@ -9788,7 +9792,31 @@
       "isPinned": false,
       "isHidden": false,
       "ctime": 1792033897709,
-      "mtime": 1792035317730
+      "mtime": 1792035544217
+    },
+    "Untitled 6.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1792035875016,
+      "mtime": 1792035882714
+    },
+    "Untitled 7 1.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1792036353449,
+      "mtime": 1792036356918
+    },
+    "Semesters/Sem_07/ETN825/SIC final siuu.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1792036353449,
+      "mtime": 1792036463613
+    },
+    "_PDF/ETN-825/CH07-COA10e.pdf": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1792373035324,
+      "mtime": 1756955841010
     }
   },
   "showHidden": false,
