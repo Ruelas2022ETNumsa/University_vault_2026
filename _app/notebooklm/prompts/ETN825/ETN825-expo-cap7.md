@@ -24,10 +24,10 @@ SIC = el computador simple de Hill & Peterson (Digital Systems 2ª ed.), NO el S
 ---
 
 MAPA DE LÁMINAS (páginas reales del PDF, no la numeración del libro):
-1. Dispositivos externos — p.4–6 (Fig. 7.2 p.5)
+1. Dispositivos externos — p.4–5 (Fig. 7.2 p.5)
 2. Teclado/monitor e IRA — p.6
 3. Módulo de E/S — p.3, 7–8 (Fig. 7.1 p.3; funciones p.7; Fig. 7.3 p.8)
-4. E/S programada — p.9–12 (Tabla 7.1 p.10; Fig. 7.4 p.12)
+4. E/S programada — p.9–10, 12 (Tabla 7.1 p.10; Fig. 7.4 p.12)
 5. Comandos e instrucciones de E/S — p.11, 13
 6. Mapeo de E/S — p.14–15 (Fig. 7.5 p.15)
 7. E/S por interrupciones — p.16–18 (Fig. 7.6 p.17; Fig. 7.7 p.18)
@@ -161,6 +161,8 @@ Reglas: \documentclass NUNCA se incluye · \begin{document} y \end{document} sie
 
 REGLAS GENERALES:
 - Diapositivas: traducir fiel, sin resumir. Todo lo demás (complementos, definiciones de otras fuentes): reformular, nunca copiar párrafos.
+- Cada "p.N" se traduce del texto de esa página del PDF. Si un contenido no está en esa página, va en "Se completa con" con su fuente, nunca como si fuera una lámina.
+- Figuras: "Qué muestra" y "Cómo se lee" describen solo lo que dibuja la figura, incluidas todas sus partes (a), (b), (c) y etiquetas. Lo demás va en "Se completa con".
 - Distinguir siempre qué viene de las diapositivas y qué viene de otra fuente.
 - Si el dato no está en ninguna fuente → "No encontrado en las fuentes", sin completar con conocimiento general.
 - Cifras (velocidades, número de dispositivos, años) tal cual la fuente.
