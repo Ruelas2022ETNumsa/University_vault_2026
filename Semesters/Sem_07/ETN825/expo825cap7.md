@@ -3,11 +3,12 @@
 
 | #   | Subtítulo                                            | Págs.    | Figuras / tablas                                                     |
 | --- | ---------------------------------------------------- | -------- | -------------------------------------------------------------------- |
+| 0   | Introducción: modelo genérico del módulo de E/S      | 3        | Fig. 7.1 (p.3)                                                       |
 | 1   | Dispositivos externos                                | 4–5      | Fig. 7.2 (p.5)                                                       |
 | 2   | Teclado/monitor e IRA                                | 6        | —                                                                    |
-| 3   | Módulo de E/S                                        | 3, 7–8   | Fig. 7.1 (p.3), Fig. 7.3 (p.8)                                       |
-| 4   | E/S programada                                       | 9–10, 12 | Tabla 7.1 (p.10), Fig. 7.4 (p.12)                                    |
-| 5   | Comandos e instrucciones de E/S                      | 11, 13   | —                                                                    |
+| 3   | Módulo de E/S                                        | 7–8      | Fig. 7.3 (p.8)                                                       |
+| 4   | E/S programada                                       | 9–10     | Tabla 7.1 (p.10)                                                     |
+| 5   | Comandos e instrucciones de E/S                      | 11–13    | Fig. 7.4 (p.12)                                                      |
 | 6   | Mapeo de E/S (mapeada vs aislada)                    | 14–15    | Fig. 7.5 (p.15)                                                      |
 | 7   | E/S por interrupciones                               | 16–18    | Fig. 7.6 (p.17), Fig. 7.7 (p.18)                                     |
 | 8   | Problemas de diseño e identificación del dispositivo | 19–20    | —                                                                    |
@@ -21,6 +22,49 @@
 | 16  | Resumen                                              | 52       | —                                                                    |
 
 La sección 14 incluye USB, FireWire, SCSI, Thunderbolt, InfiniBand, PCIe y SATA (p.46), Ethernet y Wi-Fi.
+
+**Orden de exposición (esta sesión):** 0 (p.3) → 1 (p.4–5) → 2 (p.6) → 3 (p.7–8) → 4 (p.9–10) → 5 (p.11–13). La sección 6 queda para otra sesión.
+
+---
+
+### 0. Introducción: modelo genérico del módulo de E/S (p.3)
+
+*Mensajes 1–3 de esta lámina: ver Sec. 3.*
+
+**Mensaje 4**
+```
+"Figure 7.1 Generic Model of an I/O Module" completa la explicación con las fuentes cargadas para el tema 7
+```
+
+#### Respuesta
+
+**Idea central:** El módulo de E/S es la interfaz entre el bus del sistema (líneas de dirección, datos y control) y los dispositivos periféricos.
+
+**Diapositivas (p.3):**
+
+p.3
+* **Módulo de E/S (*I/O Module*)**
+
+![[CH07-COA10e.pdf#page=3&rect=124,35,585,529|CH07-COA10e, p.3]]
+
+*Fig. 7.1 · Modelo genérico de un módulo de E/S*
+%%IMA-SRC | fuente: CH07-COA10e.pdf | página: 3 | id: Fig. 7.1 | posición: centro de la diapositiva
+justificación: Muestra el módulo de E/S entre las tres líneas del bus del sistema y los enlaces a los dispositivos periféricos.%%
+
+* **Qué muestra (la lámina p.3 solo trae la figura, sin texto):**
+  * **Bus del sistema (*System Bus*):** arriba, con líneas de dirección (*Address Lines*), de datos (*Data Lines*) y de control (*Control Lines*).
+  * **Módulo de E/S (*I/O Module*):** bloque central, conectado a las tres líneas del bus.
+  * **Enlaces a dispositivos periféricos (*Links to peripheral devices*):** cuatro líneas que salen del módulo hacia abajo.
+* **Cómo se lee (solo lo que dibuja la figura):** las tres líneas del bus bajan y entran al módulo; del lado opuesto, el módulo se conecta a los periféricos mediante varios enlaces. El módulo queda entre el bus del sistema y los dispositivos externos.
+
+**Se completa con (p.3):** Stallings - Computer Organization and Architecture - 11ed.pdf
+* **Numeración en el 11ed:** Sección 8.2 (*I/O Modules*). La figura es **Figure 8.1 Generic Model of an I/O Module**.
+* **Por qué existe el módulo:** los periféricos no se conectan directo al bus por tres razones:
+  1. Variedad de periféricos, con modos de operación distintos.
+  2. Diferencia de velocidad entre periféricos y CPU/memoria, que exige almacenamiento temporal (*data buffering*).
+  3. Formatos de datos y tamaños de palabra distintos.
+* **Nombres según la complejidad del módulo:** si es primitivo y la CPU lo controla en detalle → controlador de dispositivo (*device controller*) o controlador de E/S. Si ejecuta sus propias instrucciones de E/S → canal de E/S (*I/O channel*) o procesador de E/S (*I/O processor*).
+* **Función de las líneas del bus (Fig. 7.1):** dirección → direcciones enviadas por el procesador; datos → transferencia de datos; control → órdenes y señales de control.
 
 ---
 
@@ -161,7 +205,7 @@ p.6
 
 ---
 
-### 3. Módulo de E/S (p.3, 7–8)
+### 3. Módulo de E/S (p.7–8)
 
 **Mensaje 1**
 ```
@@ -177,9 +221,6 @@ Concepto SIC: Data buffering
 ```
 **Mensaje 4**
 ```
-"Figure 7.1 Generic Model of an I/O Module" completa la explicación con las fuentes cargadas para el tema 7
-```
-```
 "Figure 7.3 Block Diagram of an I/O Module" completa la explicación con las fuentes cargadas para el tema 7
 ```
 
@@ -187,22 +228,9 @@ Concepto SIC: Data buffering
 
 **Idea central:** El módulo de E/S es la interfaz intermedia entre el bus del sistema y los dispositivos externos; gestiona la transferencia de datos, el control, la temporización y el estado.
 
-**Diapositivas (p.3, 7–8):**
+**Diapositivas (p.7–8):**
 
-p.3
-* **Módulo de E/S (*I/O Module*)**
-
-![[CH07-COA10e.pdf#page=3&rect=124,35,585,529|CH07-COA10e, p.3]]
-
-*Fig. 7.1 · Modelo genérico de un módulo de E/S*
-%%IMA-SRC | fuente: CH07-COA10e.pdf | página: 3 | id: Fig. 7.1 | posición: centro de la diapositiva
-justificación: Muestra el módulo de E/S entre las tres líneas del bus del sistema y los enlaces a los dispositivos periféricos.%%
-
-* **Qué muestra (la lámina p.3 solo trae la figura, sin texto):**
-  * **Bus del sistema (*System Bus*):** arriba, con líneas de dirección (*Address Lines*), de datos (*Data Lines*) y de control (*Control Lines*).
-  * **Módulo de E/S (*I/O Module*):** bloque central, conectado a las tres líneas del bus.
-  * **Enlaces a dispositivos periféricos (*Links to peripheral devices*):** cuatro líneas que salen del módulo hacia abajo.
-* **Cómo se lee (solo lo que dibuja la figura):** las tres líneas del bus bajan y entran al módulo; del lado opuesto, el módulo se conecta a los periféricos mediante varios enlaces. El módulo queda entre el bus del sistema y los dispositivos externos.
+![[CH07-COA10e.pdf#page=7&rect=14,29,707,525|CH07-COA10e, p.7]]
 
 p.7
 * **Las funciones principales de un módulo de E/S se dividen en las siguientes categorías:**
@@ -216,6 +244,20 @@ p.7
     * Realiza la operación de almacenamiento temporal necesaria para equilibrar las velocidades del dispositivo y la memoria
   * **Detección de errores (*Error detection*)**
     * Detecta y reporta errores de transmisión
+
+**Se completa con (p.7):** Stallings - Computer Organization and Architecture - 11ed.pdf
+* **Secuencia paso a paso de control y temporización:**
+  1. El procesador solicita al módulo de E/S verificar el estado del dispositivo adjunto.
+  2. El módulo de E/S retorna el estado del dispositivo.
+  3. Si el dispositivo está listo para transferir, el procesador emite la orden de transferencia al módulo.
+  4. El módulo de E/S obtiene el dato del dispositivo periférico.
+  5. El módulo transfiere el dato al procesador mediante el bus de datos.
+* **Detalle de la comunicación con el procesador:**
+  * **Decodificación de comandos (*Command decoding*):** el módulo acepta e interpreta mandatos del bus (READ, WRITE, CONTROL, TEST; se explican en la p.11).
+  * **Reconocimiento de direcciones (*Address recognition*):** cada dispositivo conectado posee una dirección única que el módulo debe identificar en las líneas de dirección.
+* **Tipos de errores detectados:**
+  * Mal funcionamiento mecánico o eléctrico del periférico (p. ej., atascamiento de papel, sector defectuoso).
+  * Alteración no intencionada de bits durante la transmisión (comprobada mediante bits de paridad par o impar).
 
 p.8
 
@@ -237,31 +279,13 @@ justificación: Muestra la estructura interna del módulo de E/S y separa la int
   * La lógica de E/S conecta los registros con los bloques de interfaz de cada dispositivo.
   * Cada bloque de interfaz sale hacia su dispositivo con datos, estado y control.
 
-**Se completa con:** Stallings - Computer Organization and Architecture - 11ed.pdf
-* **Numeración en el 11ed:** Sección 8.2 (*I/O Modules*). Las figuras son **Figure 8.1 Generic Model of an I/O Module** y **Figure 8.3 Block Diagram of an I/O Module**.
-* **Por qué existe el módulo:** los periféricos no se conectan directo al bus por tres razones:
-  1. Variedad de periféricos, con modos de operación distintos.
-  2. Diferencia de velocidad entre periféricos y CPU/memoria, que exige almacenamiento temporal (*data buffering*).
-  3. Formatos de datos y tamaños de palabra distintos.
-* **Nombres según la complejidad del módulo:** si es primitivo y la CPU lo controla en detalle → controlador de dispositivo (*device controller*) o controlador de E/S. Si ejecuta sus propias instrucciones de E/S → canal de E/S (*I/O channel*) o procesador de E/S (*I/O processor*).
-* **Función de las líneas del bus (Fig. 7.1):** dirección → direcciones enviadas por el procesador; datos → transferencia de datos; control → órdenes y señales de control.
+**Se completa con (p.8):** Stallings - Computer Organization and Architecture - 11ed.pdf
+* **Numeración en el 11ed:** la figura es **Figure 8.3 Block Diagram of an I/O Module**.
 * **Función de los bloques internos (Fig. 7.3):**
   * Registros de datos: almacenan temporalmente los datos transferidos desde o hacia el procesador.
   * Registros de estado/control: contienen la condición del módulo o del periférico y aceptan comandos de control de la CPU.
   * Lógica de E/S: interpreta las líneas de dirección y control y gobierna la operación interna.
   * Lógica de interfaz del dispositivo: convierte las órdenes del bus en las señales específicas de cada enlace.
-* **Secuencia paso a paso de control y temporización:**
-  1. El procesador solicita al módulo de E/S verificar el estado del dispositivo adjunto.
-  2. El módulo de E/S retorna el estado del dispositivo.
-  3. Si el dispositivo está listo para transferir, el procesador emite la orden de transferencia al módulo.
-  4. El módulo de E/S obtiene el dato del dispositivo periférico.
-  5. El módulo transfiere el dato al procesador mediante el bus de datos.
-* **Detalle de la comunicación con el procesador:**
-  * **Decodificación de comandos (*Command decoding*):** el módulo acepta e interpreta mandatos del bus (READ, WRITE, CONTROL, TEST).
-  * **Reconocimiento de direcciones (*Address recognition*):** cada dispositivo conectado posee una dirección única que el módulo debe identificar en las líneas de dirección.
-* **Tipos de errores detectados:**
-  * Mal funcionamiento mecánico o eléctrico del periférico (p. ej., atascamiento de papel, sector defectuoso).
-  * Alteración no intencionada de bits durante la transmisión (comprobada mediante bits de paridad par o impar).
 
 **Comparación con SIC:**
 
@@ -276,11 +300,30 @@ Conclusión: Stallings presenta una arquitectura genérica e integrada de módul
 
 ---
 
-### 4. E/S programada (p.9–10, 12)
+### 4. E/S programada (p.9–10)
 
-**Idea central:** En la E/S programada, el procesador tiene el control directo de la operación de E/S y debe esperar hasta que la operación se complete.
+**Mensaje 1**
+```
+Subtítulo: E/S programada
+```
+**Mensaje 2**
+```
+Concepto: Técnicas de E/S
+```
+**Mensaje 3**
+```
+Concepto SIC: Técnicas de E/S
+```
+**Mensaje 4**
+```
+"Table 7.1 I/O Techniques" completa la explicación con las fuentes cargadas para el tema 7
+```
 
-**Diapositivas (p.9–10, 12):**
+#### Respuesta
+
+**Idea central:** Existen tres técnicas para las operaciones de E/S: programada, por interrupciones y acceso directo a memoria (DMA). En la E/S programada, el procesador tiene el control directo de la operación y debe esperar hasta que se complete.
+
+**Diapositivas (p.9–10):**
 
 p.9
 * **Tres técnicas son posibles para las operaciones de E/S:**
@@ -294,8 +337,17 @@ p.9
   * **Acceso directo a memoria (*Direct memory access - DMA*)**
     * El módulo de E/S y la memoria principal intercambian datos directamente sin la intervención del procesador
 
+**Se completa con (p.9):** Stallings - Computer Organization and Architecture - 11ed.pdf
+* **Visión general de la E/S programada (texto del libro, no está en las láminas):**
+  * Cuando el procesador encuentra una instrucción relacionada con E/S, la ejecuta emitiendo un comando al módulo de E/S correspondiente.
+  * El módulo realiza la acción y establece los bits apropiados en el registro de estado de E/S.
+  * El módulo no hace nada más para alertar al procesador; en particular, no lo interrumpe.
+  * Por eso el procesador debe comprobar periódicamente el estado del módulo hasta encontrar que la operación se completó.
+* **Impacto en el rendimiento:** los dispositivos de E/S operan a velocidades muy inferiores a las de la CPU y la memoria. La espera activa (*polling*) mantiene al procesador ejecutando instrucciones de prueba de estado y degrada el cómputo útil del sistema.
+
 p.10
-[[CH07-COA10e.pdf#page=10]]
+![[CH07-COA10e.pdf#page=10&rect=24,117,711,492|CH07-COA10e, p.10]]
+
 *Tabla 7.1 · Técnicas de E/S*
 %%IMA-SRC | fuente: CH07-COA10e.pdf | página: 10 | id: Tabla 7.1 | posición: centro de la diapositiva
 justificación: Clasifica las tres técnicas de E/S según si emplean interrupciones y si la transferencia hacia la memoria atraviesa el procesador.%%
@@ -310,8 +362,69 @@ justificación: Clasifica las tres técnicas de E/S según si emplean interrupci
     * Transferencia directa, sin interrupciones → celda vacía.
 * **Cómo se lee (solo lo que dibuja la tabla):** las filas indican si los datos pasan por el procesador; las columnas indican si se usan interrupciones.
 
+**Se completa con (p.10):** Stallings - Computer Organization and Architecture - 11ed.pdf
+* **Numeración en el 11ed:** Sección 8.3 (*Programmed I/O*). La tabla es **Table 8.1 I/O Techniques**.
+
+**Comparación con SIC:**
+
+| Aspecto | Cap. 7 (Stallings) | SIC (Hill & Peterson) |
+| - | - | - |
+| Cómo se hace | La CPU emite el comando de E/S al módulo y ejecuta un bucle de software leyendo el registro de estado hasta detectar que el dato está listo. | La CPU ejecuta instrucciones de la clase `IOT` (como `ISn` o `TST`), leyendo el registro `CSR` mediante el bus `CSBUS` en un bucle hasta verificar la condición. |
+| Quién controla | La CPU controla cada paso de la transferencia; lee el dato desde el módulo de E/S a un registro de la CPU y luego lo escribe en la memoria. | La CPU controla la transferencia completa ejecutando secuencias en AHPL que mueven el dato desde el bus `IOBUS` al acumulador `AC` o registro `MD`. |
+| Ventaja | (No está en las láminas) Hardware simple en el módulo de E/S y en la CPU; no necesita circuitos de interrupción ni de DMA. | Hardware de interfaz básico; no requiere controladores de interrupción priorizados ni lógica de concesión de bus DMA. |
+| Limitación | Desperdicio de tiempo del procesador cuando es más rápido que el módulo de E/S (lámina p.9); la CPU gasta ciclos comprobando el estado mientras el periférico responde. | Bloquea la secuencia de control de la CPU esperando la respuesta de las señales de *handshake* (`ready`, `datavalid`, `accept`) y el cambio de bits en `CSR`. |
+
+Conclusión: Stallings presenta la E/S programada como consulta del registro de estado por parte de la CPU, mientras que el SIC la implementa con instrucciones `IOT`/`TST` que prueban el registro `CSR` sobre los buses `IOBUS` y `CSBUS`.
+
+---
+
+### 5. Comandos e instrucciones de E/S (p.11–13)
+
+**Mensaje 1**
+```
+Subtítulo: Comandos e instrucciones de E/S
+```
+**Mensaje 2**
+```
+Concepto: Comandos de E/S
+```
+**Mensaje 3**
+```
+Concepto SIC: Comandos de E/S
+```
+**Mensaje 4**
+```
+"Figure 7.4 Three Techniques for Input of a Block of Data" completa la explicación con las fuentes cargadas para el tema 7
+```
+
+#### Respuesta
+
+**Idea central:** El procesador solicita operaciones de E/S emitiendo comandos específicos a los módulos de E/S mediante instrucciones que dependen del esquema de direccionamiento del sistema. La Fig. 7.4 muestra cómo se emite un comando de lectura en cada una de las tres técnicas.
+
+**Diapositivas (p.11–13):**
+
+p.11
+* **Comandos de E/S (*I/O Commands*)**
+  * Hay cuatro tipos de comandos de E/S que un módulo de E/S puede recibir cuando es direccionado por un procesador:
+    1. **Control (*Control*)**
+       * Se utiliza para activar un periférico y decirle qué hacer
+    2. **Prueba (*Test*)**
+       * Se utiliza para probar varias condiciones de estado asociadas con un módulo de E/S y sus periféricos
+    3. **Lectura (*Read*)**
+       * Hace que el módulo de E/S obtenga un elemento de datos del periférico y lo coloque en un buffer interno
+    4. **Escritura (*Write*)**
+       * Hace que el módulo de E/S tome un elemento de datos del bus de datos y posteriormente transmita ese elemento de datos al periférico
+
+**Se completa con (p.11):** Stallings - Computer Organization and Architecture - 11ed.pdf
+* **Secuencia de ejecución de los comandos en el módulo:**
+  * En un comando de lectura (**Read**), el módulo de E/S interactúa con el periférico para depositar el dato en su registro de datos interno; posteriormente, el procesador solicita el dato y el módulo lo coloca en el bus de datos.
+  * En un comando de control (**Control**), los parámetros transmitidos son específicos para cada periférico (por ejemplo, rebobinar una cinta magnética).
+* **Aporte de Mano - Computer System Architecture:**
+  * Clasifica las órdenes que recibe la interfaz en cuatro tipos: control, estado, salida de datos y entrada de datos (*control, status, data output, data input*), equivalentes a Control, Test, Write y Read de Stallings.
+
 p.12
-[[CH07-COA10e.pdf#page=12]]
+![[CH07-COA10e.pdf#page=12&rect=28,28,681,530|CH07-COA10e, p.12]]
+
 *Fig. 7.4 · Tres técnicas para la entrada de un bloque de datos: (a) E/S programada, (b) E/S mediante interrupciones, (c) acceso directo a memoria*
 %%IMA-SRC | fuente: CH07-COA10e.pdf | página: 12 | id: Fig. 7.4 | posición: centro de la diapositiva
 justificación: Compara en tres diagramas de flujo cómo se lee un bloque de datos con E/S programada, con interrupciones y con DMA.%%
@@ -338,83 +451,8 @@ justificación: Compara en tres diagramas de flujo cómo se lee un bloque de dat
   * En (b) después del comando la CPU sigue con otra cosa y la interrupción lleva al paso de leer estado; el bucle "¿Completado?" se repite por cada palabra.
   * En (c) se emite un solo comando para el bloque, la CPU hace otra cosa, y la interrupción lleva a leer el estado del módulo DMA y a la siguiente instrucción; no hay bucle por palabra.
 
-**Se completa con:** Stallings - Computer Organization and Architecture - 11ed.pdf
-* **Numeración en el 11ed:** Sección 8.3 (*Programmed I/O*). La tabla es **Table 8.1 I/O Techniques** y la figura es **Figure 8.4 Three Techniques for Input of a Block of Data**.
-* **Visión general de la E/S programada (texto del libro, no está en las láminas):**
-  * Cuando el procesador encuentra una instrucción relacionada con E/S, la ejecuta emitiendo un comando al módulo de E/S correspondiente.
-  * El módulo realiza la acción y establece los bits apropiados en el registro de estado de E/S.
-  * El módulo no hace nada más para alertar al procesador; en particular, no lo interrumpe.
-  * Por eso el procesador debe comprobar periódicamente el estado del módulo hasta encontrar que la operación se completó.
-* **Impacto en el rendimiento:** los dispositivos de E/S operan a velocidades muy inferiores a las de la CPU y la memoria. La espera activa (*polling*) mantiene al procesador ejecutando instrucciones de prueba de estado y degrada el cómputo útil del sistema.
-
-**Comparación con SIC:**
-
-| Aspecto | Cap. 7 (Stallings) | SIC (Hill & Peterson) |
-| - | - | - |
-| Cómo se hace | La CPU emite el comando de E/S al módulo y ejecuta un bucle de software leyendo el registro de estado hasta detectar que el dato está listo. | La CPU ejecuta instrucciones de la clase `IOT` (como `ISn` o `TST`), leyendo el registro `CSR` mediante el bus `CSBUS` en un bucle hasta verificar la condición. |
-| Quién controla | La CPU controla cada paso de la transferencia; lee el dato desde el módulo de E/S a un registro de la CPU y luego lo escribe en la memoria. | La CPU controla la transferencia completa ejecutando secuencias en AHPL que mueven el dato desde el bus `IOBUS` al acumulador `AC` o registro `MD`. |
-| Ventaja | (No está en las láminas) Hardware simple en el módulo de E/S y en la CPU; no necesita circuitos de interrupción ni de DMA. | Hardware de interfaz básico; no requiere controladores de interrupción priorizados ni lógica de concesión de bus DMA. |
-| Limitación | Desperdicio de tiempo del procesador cuando es más rápido que el módulo de E/S (lámina p.9); la CPU gasta ciclos comprobando el estado mientras el periférico responde. | Bloquea la secuencia de control de la CPU esperando la respuesta de las señales de *handshake* (`ready`, `datavalid`, `accept`) y el cambio de bits en `CSR`. |
-
-Conclusión: Stallings presenta la E/S programada como consulta del registro de estado por parte de la CPU, mientras que el SIC la implementa con instrucciones `IOT`/`TST` que prueban el registro `CSR` sobre los buses `IOBUS` y `CSBUS`.
-
-
-
-
-**Mensaje 1**
-```
-Subtítulo: E/S programada
-```
-**Mensaje 2**
-```
-Concepto: Técnicas de E/S
-```
-**Mensaje 3**
-```
-Concepto SIC: Técnicas de E/S
-```
-**Mensaje 4**
-```
-"Table 7.1 I/O Techniques" completa la explicación con las fuentes cargadas para el tema 7
-```
-```
-"Figure 7.4 Three Techniques for Input of a Block of Data" completa la explicación con las fuentes cargadas para el tema 7
-```
-
----
-
-### 5. Comandos e instrucciones de E/S (p.11, 13)
-
-**Mensaje 1**
-```
-Subtítulo: Comandos e instrucciones de E/S
-```
-**Mensaje 2**
-```
-Concepto: Comandos de E/S
-```
-**Mensaje 3**
-```
-Concepto SIC: Comandos de E/S
-```
-
-## Comandos e instrucciones de E/S
-
-**Idea central:** El procesador solicita operaciones de E/S emitiendo comandos específicos a los módulos de E/S mediante instrucciones que dependen del esquema de direccionamiento del sistema.
-
-**Diapositivas (p.11, 13):**
-
-p.11
-* **Comandos de E/S (*I/O Commands*)**
-  * Hay cuatro tipos de comandos de E/S que un módulo de E/S puede recibir cuando es direccionado por un procesador:
-    1. **Control (*Control*)**
-       * Se utiliza para activar un periférico y decirle qué hacer
-    2. **Prueba (*Test*)**
-       * Se utiliza para probar varias condiciones de estado asociadas con un módulo de E/S y sus periféricos
-    3. **Lectura (*Read*)**
-       * Hace que el módulo de E/S obtenga un elemento de datos del periférico y lo coloque en un buffer interno
-    4. **Escritura (*Write*)**
-       * Hace que el módulo de E/S tome un elemento de datos del bus de datos y posteriormente transmita ese elemento de datos al periférico
+**Se completa con (p.12):** Stallings - Computer Organization and Architecture - 11ed.pdf
+* **Numeración en el 11ed:** la figura es **Figure 8.4 Three Techniques for Input of a Block of Data**.
 
 p.13
 * **Instrucciones de E/S (*I/O Instructions*)**
@@ -426,13 +464,6 @@ p.13
   * **E/S mapeada en memoria (*Memory-mapped I/O*)**
     * Existe un único espacio de direcciones para las ubicaciones de memoria y los dispositivos de E/S
     * Se necesitan una sola línea de lectura y una sola línea de escritura en el bus
-
-**Se completa con:** Stallings - Computer Organization and Architecture - 11ed.pdf
-* **Secuencia de ejecución de los comandos en el módulo:**
-  * En un comando de lectura (**Read**), el módulo de E/S interactúa con el periférico para depositar el dato en su registro de datos interno; posteriormente, el procesador solicita el dato y el módulo lo coloca en el bus de datos.
-  * En un comando de control (**Control**), los parámetros transmitidos son específicos para cada periférico (por ejemplo, rebobinar una cinta magnética).
-* **Aporte de Mano - Computer System Architecture:**
-  * Clasifica las órdenes que recibe la interfaz en cuatro tipos: control, estado, salida de datos y entrada de datos (*control, status, data output, data input*), equivalentes a Control, Test, Write y Read de Stallings.
 
 **Comparación con SIC:**
 

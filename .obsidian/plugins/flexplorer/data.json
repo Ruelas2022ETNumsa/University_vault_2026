@@ -39,7 +39,8 @@
         "Untitled 5.md",
         "Untitled 5 1.md",
         "Untitled 6.md",
-        "Untitled 7 1.md"
+        "Untitled 7 1.md",
+        "Untitled 7.md"
       ]
     },
     "MOC": {
@@ -6427,7 +6428,8 @@
         "DOC_ETN825.md",
         "ETN825-conceptos_BCv1.md",
         "ETN825-P1.md",
-        "ETN825-expo-cap7.md"
+        "ETN825-expo-cap7.md",
+        "ETN825-expo-cap7 1.md"
       ]
     },
     "_app/notebooklm/prompts/ETN825/ETN825-comp_indice_BCv1i.md": {
@@ -9845,6 +9847,18 @@
       "isHidden": false,
       "ctime": 1792376654096,
       "mtime": 1792376654096
+    },
+    "Untitled 7.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1792380301050,
+      "mtime": 1792380301051
+    },
+    "_app/notebooklm/prompts/ETN825/ETN825-expo-cap7 1.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1792377473185,
+      "mtime": 1792375558473
     }
   },
   "showHidden": false,
