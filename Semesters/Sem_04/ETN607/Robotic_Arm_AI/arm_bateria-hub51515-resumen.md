@@ -17,11 +17,11 @@ Alimentar el hub del LEGO Robot Inventor 51515 (brazo robótico, estático) con 
 - El hub trae su propio cargador de 2 celdas (MP2639A, tipo boost desde 5 V USB), con protección de sobrevoltaje y pin de temperatura (NTC).
 
 ## Pines de la batería (medidos)
-| Cable | Función | Evidencia |
-|---|---|---|
-| Negro | + (potencia) | N+ / B− = 7.95 V |
-| Blanco | − (común) | idem |
-| Rojo | NTC (sensor de temperatura) | R-B = 12.9 kΩ en la batería, baja al calentar |
+| Cable  | Función                     | Evidencia                                     |
+| ------ | --------------------------- | --------------------------------------------- |
+| Negro  | + (potencia)                | N+ / B− = 7.95 V                              |
+| Blanco | − (común)                   | idem                                          |
+| Rojo   | NTC (sensor de temperatura) | R-B = 12.9 kΩ en la batería, baja al calentar |
 
 - El hub **no enciende los LEDs sin una resistencia ~10 kΩ entre Rojo y Blanco** (probado con USB). Confirmado empíricamente.
 - Pinout no verificado en documentación pública: se apoya solo en las mediciones.

@@ -45,7 +45,8 @@
         "Sin título 1.md",
         "Sin título 2.md",
         "Sin título 3.md",
-        "Sin título 4.md"
+        "Sin título 4.md",
+        "Untitled 8.md"
       ]
     },
     "MOC": {
@@ -4633,7 +4634,6 @@
         "2026-10-05",
         "2026-10-22",
         "2026-08-09",
-        "2026-09-24",
         "2026-10-09",
         "draft.md",
         "promtpx.md",
@@ -7646,7 +7646,8 @@
         "robarm-compra.md",
         "arm_hub-compra-checklist.md",
         "arm_pybricks-notas.md",
-        "arm_todo.md"
+        "arm_todo.md",
+        "arm_bateria-hub51515-resumen.md"
       ]
     },
     "Semesters/Sem_04/ETN607/Robotic_Arm_AI/blueprint.md": {
@@ -8791,42 +8792,6 @@
       "sortOrder": "custom",
       "customOrder": []
     },
-    "Rubbish/2026-09-24": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "2026-09-24 14.35.14.0",
-        "data.json",
-        "scanned_words.txt"
-      ]
-    },
-    "Rubbish/2026-09-24/2026-09-24 14.35.14.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-09-24/2026-09-24 14.35.14.0/data.json": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1788818722661,
-      "mtime": 1788995118609
-    },
-    "Rubbish/2026-09-24/scanned_words.txt": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1780114193327,
-      "mtime": 1788892384000
-    },
-    "Rubbish/2026-09-24/data.json": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1781109169958,
-      "mtime": 1790139400427
-    },
     "Rubbish/2026-10-04/2026-10-04 23.25.50.0": {
       "isPinned": false,
       "isHidden": false,
@@ -9953,6 +9918,18 @@
       "isHidden": false,
       "ctime": 1790993910267,
       "mtime": 1790993910267
+    },
+    "Semesters/Sem_04/ETN607/Robotic_Arm_AI/arm_bateria-hub51515-resumen.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1792877361411,
+      "mtime": 1792877361412
+    },
+    "Untitled 8.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1792864023577,
+      "mtime": 1792864023577
     }
   },
   "showHidden": false,
