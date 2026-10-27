@@ -7647,7 +7647,8 @@
         "arm_hub-compra-checklist.md",
         "arm_pybricks-notas.md",
         "arm_todo.md",
-        "arm_bateria-hub51515-resumen.md"
+        "arm_bateria-hub51515-resumen.md",
+        "arm_bateria-hub51515-resumen 1.md"
       ]
     },
     "Semesters/Sem_04/ETN607/Robotic_Arm_AI/blueprint.md": {
@@ -9930,6 +9931,12 @@
       "isHidden": false,
       "ctime": 1792864023577,
       "mtime": 1792864023577
+    },
+    "Semesters/Sem_04/ETN607/Robotic_Arm_AI/arm_bateria-hub51515-resumen 1.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1792970365179,
+      "mtime": 1792966372715
     }
   },
   "showHidden": false,
