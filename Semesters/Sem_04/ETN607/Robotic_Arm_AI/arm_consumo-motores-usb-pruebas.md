@@ -2,7 +2,7 @@
 tipo: resultados
 tema: consumo de motores y límite de alimentación por USB (hub 51515 sin batería, Pybricks)
 fecha: 2026-10-29
-estado: pruebas con 1, 2 y 3 motores hechas; pendiente 4 motores a baja velocidad y prueba con batería (SmallRig)
+estado: pruebas con 1 a 4 motores hechas; los 4 motores funcionaron a la vez con arranque suave (sin carga, ver Apéndice A); pendiente prueba con el brazo montado y con batería (SmallRig)
 relacionado: "[[arm_bateria-hub51515-resumen]]"
 ---
 
@@ -81,7 +81,79 @@ Con PC y con cargador, a **200 °/s** (la velocidad más baja probada): corrient
 - 8.4 V × ~0.3 A ≈ 2.5 W: consistente con un límite de ~500 mA a 5 V, pero es solo un cálculo orientativo.
 
 ## Pendiente
-- Prueba con **4 motores a velocidad baja** (probar por debajo de 200 °/s).
+- ~~Prueba con 4 motores a velocidad baja~~ → hecha, ver Apéndice A (falla con arranque normal; pasa con arranque suave y escalonado).
 - Medir con tester en serie la corriente real de entrada por USB.
 - Repetir las pruebas con el brazo montado (carga real) y **con la batería SmallRig 5297** cuando esté disponible: ahí el límite relevante pasa a ser la protección de 4 A.
-- Base con motor parado (hub encendido, sin motores) para restar el consumo propio del hub.
+- ~~Base con motor parado~~ → medida en las pausas del Apéndice A: ~92-105 mA con el hub encendido y los motores parados.
+- Registrar `motor.speed()` en la próxima prueba para comprobar que los motores alcanzan la velocidad ordenada (ver observación sobre la carga de -79 mNm en el Apéndice A).
+
+---
+
+## Apéndice A — 4 motores: de la falla al arranque suave (2026-10-29)
+
+### Programas usados
+| Archivo | Qué prueba |
+|---|---|
+| `medir_4motores_baja.py` | 4 motores a la vez a 100, 90, 80, 50 y 10 °/s, corte a 6500 mV |
+| `medir_4motores_escalonado.py` | arranque escalonado A, B, C, D cada 1 s a 100 °/s, corte a 5000 mV |
+| `medir_4motores_subida_bajada.py` | etapas A, AB, ABC, ABCD, BCD, CD, D con velocidad según motores activos |
+| `medir_4motores_suave.py` | igual que el anterior + aceleración limitada (400 °/s²), torque limitado (80 mNm), rampa de velocidad y pausa de 1 s entre etapas, corte a 5500 mV |
+
+### A) 4 motores a la vez, velocidad baja (corte 6500 mV)
+En todas las velocidades el voltaje ya estaba colapsado en la primera muestra y se cortó. Los motores no llegaron a funcionar ni un segundo.
+
+| Velocidad | mA | mV | Cargas A/B/C/D (mNm) |
+|---|---|---|---|
+| 100 °/s | 333 | 5750 | -7, -3, -4, -7 |
+| 90 °/s | 335 | 5738 | -5, -3, -5, -7 |
+| 80 °/s | 333 | 5740 | -8, -2, -3, -7 |
+| 50 °/s | 336 | 5747 | -9, -3, -6, -6 |
+| 10 °/s | 493 | 6355 | -37, -30, -39, -36 |
+
+La corriente y el voltaje casi no cambian entre 100 y 50 °/s: con 4 motores energizados a la vez el límite no depende de la velocidad.
+
+### B) Arranque escalonado cada 1 s, 100 °/s (corte 5000 mV)
+| Motores activos | mV | mA | Resultado |
+|---|---|---|---|
+| 1 (A) | 8401-8405 | 147-208 | estable |
+| 2 (AB) | 8402-8405 | 199-263 | estable |
+| 3 (ABC) | 7969 → 5843 | 393, 274, 265, 265 | voltaje cae durante el segundo |
+| 4 (ABCD) | 5452 → 5027 en 11 muestras (~2.75 s) | 331-434 | el hub se apagó solo, sin llegar al corte de 5000 mV |
+
+### C) Etapas con velocidad según motores activos (3 corridas)
+| Corrida | Etapa AB | Etapa ABC |
+|---|---|---|
+| 1 | 700 °/s: normal 2 muestras, colapso en la 3ª (7594 → 5018 mV, cargas -199); el hub se apagó | no llegó |
+| 2 | 600 °/s: pasó los 5 s (8201-8390 mV, máx 327 mA) | 200 °/s: corte en la 6ª muestra (5381 mV) |
+| 3 | 600 °/s: aguantó 18 muestras y colapsó al final (8009 y 7032 mV, cargas -160/-104) | 100 °/s: corte en la 3ª muestra (5476 mV) |
+
+En las corridas 2 y 3 el corte estaba entre ~5500 y ~5600 mV (deducido de los valores donde cortó y los de la muestra anterior). La etapa A (1 motor, 800 °/s) fue estable en las tres. Con arranque normal, la etapa AB a 600 °/s quedó en el borde: pasó una vez y falló otra.
+
+### D) Arranque suave: `medir_4motores_suave.py` (ACEL 400 °/s², TORQUE 80 mNm, corte 5500 mV, pausa 1 s)
+**Resultado: se completaron todas las etapas, el hub no se apagó y no se activó el corte. Los 4 motores funcionaron a la vez (observación visual del usuario).**
+
+| Etapa | Motores | Velocidad ordenada (°/s) | mV (mín-máx) | mA (rango) | Cargas (mNm) |
+|---|---|---|---|---|---|
+| A | 1 | 800 → 648 (5 s) | 8401-8410 | 149-176 | 0 a -17 al inicio; -79 fijo desde ~1.5 s |
+| AB | 2 | 600 → 447 (5 s) | 8389-8404 | 156-260 | 0 a -11 al inicio; -79 fijo desde ~1.5 s |
+| ABC | 3 | 200 → 123 (5 s) | 8347-8401 | 256-331 (máx en la 2ª muestra) | -19 a -1 |
+| ABCD | 4 | 100 (1 s) | 6236-8400 | 345-443 | -12 a -36 |
+| BCD | 3 | 120 → 180 (1 s) | 7944-8247 | 261-265 | -12 a 0 |
+| CD | 2 | 440 → 560 (1 s) | 8384-8393 | 208-235 | -16 a -3 |
+| D | 1 | 640 → 760 (1 s) | 8402-8407 | 162-171 | -15 a -4 |
+
+**Pausas de 1 s (motores parados):**
+- Corriente del hub encendido, sin motores: **~92-105 mA** (la primera lectura de cada pausa trae corriente residual de los motores que aún giran por inercia).
+- Tras ABCD (4 motores) el voltaje bajó a 5845 mV y se recuperó en 1 s: 5845 → 6658 → 7225 → 7608 mV. Tras las demás etapas el voltaje se mantuvo entre 8384 y 8409 mV.
+- Estimación por resta (corriente medida menos ~95 mA de base, no verificada): ~75 mA por motor en 1 y 2 motores, y ~55-60 mA por motor con 3 motores a baja velocidad.
+
+### Qué se logró y qué no
+- **Con arranque normal**, 3 motores a 200 °/s y 4 motores a cualquier velocidad fallaban. **Con arranque suave** pasaron ABC a 200 → 120 °/s durante 5 s y ABCD a 100 °/s durante 1 s, con el hub encendido hasta el final.
+- Se cambiaron cuatro cosas a la vez (aceleración limitada, torque limitado, rampa de velocidad y pausa entre etapas). No se puede decir cuál fue la que resolvió el problema.
+- La etapa de 4 motores solo duró 1 s y el voltaje bajó hasta 6236 mV (5845 mV en la primera lectura de la pausa). El margen frente al corte de 5500 mV es corto. **No hay datos de 4 motores sostenidos por más de ~1 s.**
+- Pruebas hechas con los motores **sin carga** (sin el brazo montado). La carga real aumentará el consumo.
+
+### Observaciones
+- **LED del botón del hub:** se pone **naranja** cuando el hub está por apagarse o detenerse por el voltaje de corte (observación del usuario, sin otra fuente).
+- **Carga de -79 mNm sostenida (a verificar):** en las etapas A y AB la carga estimada quedó clavada en -79 mNm a partir de ~1.5 s, casi igual al tope de torque de 80 mNm, mientras la corriente se mantuvo estable (171 mA y ~250 mA). Antes, con los mismos motores a 800 °/s, la carga era de -12 a -15 mNm. Posibles causas: el control está saturado en el tope o `motor.load()` informa el valor limitado. No lo sé. En el programa no se registró `motor.speed()`, así que no hay forma de confirmar que los motores alcanzaron la velocidad ordenada.
+- El hub sigue siendo el límite: por USB, con motores sin carga, se sostienen 3 motores a baja velocidad y 4 motores solo por ~1 s con arranque suave. El brazo completo sigue necesitando la batería.
