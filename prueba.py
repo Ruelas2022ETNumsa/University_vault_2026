@@ -1,37 +1,53 @@
 from pybricks.hubs import InventorHub
 from pybricks.pupdevices import Motor
 from pybricks.parameters import Port
-from pybricks.tools import wait
+from pybricks.tools import wait, StopWatch
 
 # ---- CONFIGURACION ----
-PUERTOS = [Port.A, Port.B]   # ej: [Port.A, Port.B, Port.C]
-VELOCIDAD = 800              # deg/s
-V_CORTE = 6500               # mV: si baja de esto, frena todo
+PUERTOS = [Port.A, Port.B, Port.C, Port.D]
+NOMBRES = ["A", "B", "C", "D"]
+VELOCIDAD = 100        # deg/s
+V_CORTE = 5000         # mV: si baja de esto, frena todo
+PASO_MS = 250          # cada cuanto mide
+ESPERA_MS = 1000       # tiempo entre arranque de un motor y el siguiente
+FINAL_MS = 5000        # tiempo con los 4 motores andando
 # -----------------------
 
 hub = InventorHub()
 motores = [Motor(p) for p in PUERTOS]
-print("Motores:", len(motores))
-print("vel, mV, mA, cargas (mNm)")
-print("")
-print(">>> CAMBIO A VELOCIDAD:", VELOCIDAD, "deg/s con", len(motores), "motores")
-hub.speaker.beep()
+activos = []
 
-for m in motores:
+
+def medir(duracion_ms, paso_ms):
+    """Imprime lineas hasta cumplir duracion_ms. Devuelve False si cae el voltaje."""
+    t = StopWatch()
+    while t.time() < duracion_ms:
+        v = hub.battery.voltage()
+        print(len(activos), v, hub.battery.current(), [m.load() for m in activos])
+        if v < V_CORTE:
+            return False
+        wait(paso_ms)
+    return True
+
+
+print("activos, mV, mA, cargas (mNm)")
+ok = True
+for nombre, m in zip(NOMBRES, motores):
+    activos.append(m)
     m.run(VELOCIDAD)
-wait(1000)  # aceleracion
-
-for i in range(10):  # 10 x 500 ms = 5 s
-    v = hub.battery.voltage()
-    print(VELOCIDAD, v, hub.battery.current(), [m.load() for m in motores])
-    if v < V_CORTE:
-        for m in motores:
-            m.stop()
-        print("!!! VOLTAJE BAJO (", v, "mV): DETENIDO")
+    print("")
+    print(">>> ARRANCA MOTOR", nombre, "->", len(activos), "activos a", VELOCIDAD, "deg/s")
+    hub.speaker.beep()
+    if len(activos) < len(motores):
+        ok = medir(ESPERA_MS, PASO_MS)
+    else:
+        ok = medir(FINAL_MS, PASO_MS)
+    if not ok:
         break
-    wait(500)
 
 for m in motores:
     m.stop()
-print("--- fin de", VELOCIDAD, "deg/s ---")
+
+if not ok:
+    print("!!! VOLTAJE BAJO: DETENIDO con", len(activos), "motores activos")
 print("FIN")
