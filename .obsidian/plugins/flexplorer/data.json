@@ -32,7 +32,9 @@
         "Sin título 7.md",
         "Untitled 3.md",
         "Untitled 4.md",
-        "prueba.py"
+        "prueba.py",
+        "python_arm",
+        "desktop.ini"
       ]
     },
     "MOC": {
@@ -262,7 +264,8 @@
         "_prompt-system.md",
         "_comments-system.md",
         "_sidenotes-system.md",
-        "_habits-system.md"
+        "_habits-system.md",
+        "_assets-section.tmp"
       ]
     },
     "_app/_config/_basic-memory-system.md": {
@@ -4619,11 +4622,10 @@
         "2026-10-04",
         "2026-10-05",
         "2026-10-22",
-        "2026-08-09",
-        "2026-10-09",
-        "draft.md",
-        "promtpx.md",
-        "update_claude_obsidian.md"
+        "2026-08-12",
+        "2026-10-08",
+        "2026-10-18",
+        "2026-10-30"
       ]
     },
     "Rubbish/tmp": {
@@ -4644,7 +4646,7 @@
       "isPinned": false,
       "isHidden": false,
       "ctime": 1791168025834,
-      "mtime": 1792373520799
+      "mtime": 1793397332044
     },
     "_PDF/ETN-505": {
       "isPinned": false,
@@ -7956,9 +7958,36 @@
         "825-Hill-Peterson-Resumen-Docente-ESP.pdf",
         "data.json",
         "S. Palani, D. Kalaiyarasi-Principles of Digital Signal Processing - 2nd Ed.pdf",
-        "2026-10-04 23.25.50.0",
-        "2026-10-04 23.26.35.0",
-        "scanned_words.txt"
+        "2026-10-04 23.18.09.0",
+        "2026-10-04 23.18.10.0",
+        "2026-10-04 23.18.11.0",
+        "2026-10-04 23.18.13.0",
+        "2026-10-04 23.18.14.0",
+        "2026-10-04 23.18.17.0",
+        "2026-10-04 23.18.19.0",
+        "2026-10-04 23.18.19.1",
+        "2026-10-04 23.18.20.0",
+        "2026-10-04 23.18.21.0",
+        "2026-10-04 23.18.23.0",
+        "2026-10-04 23.18.24.0",
+        "2026-10-04 23.18.25.0",
+        "2026-10-04 23.18.30.0",
+        "2026-10-04 23.18.33.0",
+        "2026-10-04 23.18.34.0",
+        "2026-10-04 23.18.34.1",
+        "2026-10-04 23.18.34.2",
+        "2026-10-04 23.18.34.3",
+        "2026-10-04 23.18.36.0",
+        "2026-10-04 23.18.36.1",
+        "2026-10-04 23.18.36.2",
+        "2026-10-04 23.18.37.0",
+        "2026-10-04 23.18.39.0",
+        "2026-10-04 23.27.47.0",
+        "5_alx-rul.md",
+        "main.js",
+        "manifest.json",
+        "styles.css",
+        "Untitled.md"
       ]
     },
     "Rubbish/2026-10-04/825-Hill-Peterson-Resumen-Docente-ESP.pdf": {
@@ -8184,10 +8213,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "bP.md",
-        "data.json",
-        "explicacionB.md",
-        "scanned_words.txt"
+        "aP.md"
       ]
     },
     "ejemplo2.md": {
@@ -8663,9 +8689,8 @@
       "sortOrder": "custom",
       "customOrder": [
         "data.json",
-        "2026-10-22 13.54.40.0",
-        "2026-10-22 13.54.40.1",
-        "scanned_words.txt"
+        "bookmarks.json",
+        "logbook.md"
       ]
     },
     "Rubbish/2026-10-22/data.json": {
@@ -8679,1155 +8704,6 @@
       "isHidden": false,
       "ctime": 1792677849902,
       "mtime": 1792677853603
-    },
-    "Rubbish/2026-08-09": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "img903"
-      ]
-    },
-    "Rubbish/2026-08-09/img903": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Cap1"
-      ]
-    },
-    "Rubbish/2026-08-09/img903/Cap1": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": []
-    },
-    "Rubbish/2026-10-04/2026-10-04 23.25.50.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-10-04/2026-10-04 23.25.50.0/data.json": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1781109169958,
-      "mtime": 1791170288303
-    },
-    "Rubbish/2026-10-04/2026-10-04 23.26.35.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "scanned_words.txt"
-      ]
-    },
-    "Rubbish/2026-10-04/2026-10-04 23.26.35.0/scanned_words.txt": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1780114193327,
-      "mtime": 1791170752000
-    },
-    "Rubbish/2026-10-04/scanned_words.txt": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1780114193327,
-      "mtime": 1791170749000
-    },
-    "Rubbish/2026-10-05/bP.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168385717,
-      "mtime": 1791168385717
-    },
-    "Rubbish/2026-10-05/data.json": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1781109169958,
-      "mtime": 1791170863764
-    },
-    "Rubbish/2026-10-05/explicacionB.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791169980301,
-      "mtime": 1791169980301
-    },
-    "Rubbish/2026-10-05/scanned_words.txt": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1780114193327,
-      "mtime": 1791170791000
-    },
-    "Rubbish/2026-10-09": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "2026-10-09 10.45.39.0",
-        "2026-10-09 10.46.36.0",
-        "2026-10-09 10.46.41.0",
-        "2026-10-09 10.46.46.0",
-        "2026-10-09 10.46.51.0",
-        "2026-10-09 10.46.56.0",
-        "2026-10-09 10.47.01.0",
-        "2026-10-09 10.47.06.0",
-        "2026-10-09 10.47.12.0",
-        "2026-10-09 10.47.16.0",
-        "2026-10-09 10.47.21.0",
-        "2026-10-09 10.47.26.0",
-        "2026-10-09 10.47.31.0",
-        "2026-10-09 10.47.36.0",
-        "2026-10-09 10.47.40.0",
-        "2026-10-09 10.47.45.0",
-        "2026-10-09 10.47.50.0",
-        "2026-10-09 10.47.54.0",
-        "2026-10-09 10.47.59.0",
-        "2026-10-09 10.48.03.0",
-        "2026-10-09 10.48.08.0",
-        "2026-10-09 10.48.13.0",
-        "2026-10-09 10.48.18.0",
-        "2026-10-09 10.48.23.0",
-        "2026-10-09 10.48.28.0",
-        "2026-10-09 10.48.32.0",
-        "2026-10-09 10.48.37.0",
-        "2026-10-09 10.48.41.0",
-        "2026-10-09 10.48.46.0",
-        "2026-10-09 10.48.51.0",
-        "2026-10-09 10.48.55.0",
-        "2026-10-09 10.49.00.0",
-        "2026-10-09 10.49.04.0",
-        "2026-10-09 10.49.08.0",
-        "2026-10-09 10.49.13.0",
-        "2026-10-09 10.49.18.0",
-        "2026-10-09 10.49.22.0",
-        "2026-10-09 10.49.26.0",
-        "2026-10-09 10.49.31.0",
-        "2026-10-09 10.49.35.0",
-        "2026-10-09 10.49.40.0",
-        "2026-10-09 10.49.50.0",
-        "2026-10-09 10.49.55.0",
-        "2026-10-09 10.50.00.0",
-        "2026-10-09 10.50.04.0",
-        "2026-10-09 10.50.09.0",
-        "2026-10-09 10.50.14.0",
-        "2026-10-09 10.50.18.0",
-        "2026-10-09 10.50.23.0",
-        "2026-10-09 10.50.28.0",
-        "2026-10-09 10.50.33.0",
-        "2026-10-09 10.50.37.0",
-        "2026-10-09 10.50.42.0",
-        "2026-10-09 10.50.47.0",
-        "2026-10-09 10.50.52.0",
-        "2026-10-09 10.50.56.0",
-        "2026-10-09 10.51.01.0",
-        "2026-10-09 10.51.05.0",
-        "2026-10-09 10.51.10.0",
-        "2026-10-09 10.51.14.0",
-        "2026-10-09 10.51.18.0",
-        "2026-10-09 10.51.23.0",
-        "2026-10-09 10.51.28.0",
-        "2026-10-09 10.51.42.0",
-        "2026-10-09 10.51.43.0",
-        "a.md",
-        "a 3.md",
-        "data.json",
-        "S. Palani, D. Kalaiyarasi-Principles of Digital Signal Processing - 2nd Ed.pdf",
-        "scanned_words.txt"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.45.39.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.45.39.0/data.json": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1783291449891,
-      "mtime": 1789159746868
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.46.36.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a 3.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.46.36.0/a 3.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791168791000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.46.41.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.46.41.0/a.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791474141000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.46.46.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a 3.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.46.46.0/a 3.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791168791000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.46.51.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.46.51.0/a.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791474141000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.46.56.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a 3.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.46.56.0/a 3.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791168791000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.47.01.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.47.01.0/a.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791474141000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.47.06.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a 3.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.47.06.0/a 3.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791168791000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.47.12.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.47.12.0/a.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791474141000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.47.16.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a 3.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.47.16.0/a 3.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791168791000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.47.21.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.47.21.0/a.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791474141000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.47.26.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a 3.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.47.26.0/a 3.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791168791000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.47.31.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.47.31.0/a.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791474141000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.47.36.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a 3.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.47.36.0/a 3.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791168791000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.47.40.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.47.40.0/a.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791474141000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.47.45.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a 3.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.47.45.0/a 3.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791168791000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.47.50.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.47.50.0/a.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791474141000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.47.54.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a 3.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.47.54.0/a 3.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791168791000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.47.59.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.47.59.0/a.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791474141000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.48.03.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a 3.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.48.03.0/a 3.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791168791000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.48.08.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.48.08.0/a.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791474141000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.48.13.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a 3.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.48.13.0/a 3.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791168791000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.48.18.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.48.18.0/a.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791474141000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.48.23.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a 3.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.48.23.0/a 3.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791168791000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.48.28.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.48.28.0/a.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791474141000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.48.32.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a 3.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.48.32.0/a 3.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791168791000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.48.37.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.48.37.0/a.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791474141000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.48.41.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a 3.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.48.41.0/a 3.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791168791000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.48.46.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.48.46.0/a.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791474141000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.48.51.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a 3.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.48.51.0/a 3.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791168791000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.48.55.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.48.55.0/a.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791474141000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.49.00.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a 3.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.49.00.0/a 3.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791168791000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.49.04.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.49.04.0/a.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791474141000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.49.08.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a 3.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.49.08.0/a 3.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791168791000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.49.13.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.49.13.0/a.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791474141000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.49.18.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a 3.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.49.18.0/a 3.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791168791000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.49.22.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.49.22.0/a.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791474141000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.49.26.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a 3.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.49.26.0/a 3.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791168791000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.49.31.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.49.31.0/a.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791474141000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.49.35.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a 3.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.49.35.0/a 3.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791168791000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.49.40.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.49.40.0/a.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791474141000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.49.50.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a 3.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.49.50.0/a 3.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791168791000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.49.55.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.49.55.0/a.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791474141000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.50.00.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a 3.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.50.00.0/a 3.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791168791000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.50.04.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.50.04.0/a.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791474141000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.50.09.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a 3.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.50.09.0/a 3.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791168791000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.50.14.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.50.14.0/a.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791474141000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.50.18.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a 3.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.50.18.0/a 3.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791168791000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.50.23.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.50.23.0/a.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791474141000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.50.28.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a 3.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.50.28.0/a 3.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791168791000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.50.33.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.50.33.0/a.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791474141000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.50.37.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a 3.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.50.37.0/a 3.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791168791000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.50.42.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.50.42.0/a.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791474141000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.50.47.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a 3.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.50.47.0/a 3.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791168791000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.50.52.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.50.52.0/a.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791474141000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.50.56.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a 3.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.50.56.0/a 3.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791168791000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.51.01.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.51.01.0/a.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791474141000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.51.05.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a 3.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.51.05.0/a 3.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791168791000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.51.10.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.51.10.0/a.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791474141000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.51.14.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a 3.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.51.14.0/a 3.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791168791000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.51.18.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.51.18.0/a.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791474141000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.51.23.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a 3.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.51.23.0/a 3.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791168791000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.51.28.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.51.28.0/a.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791474141000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.51.42.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a 3.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.51.42.0/a 3.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791168791000
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.51.43.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "a 3.md"
-      ]
-    },
-    "Rubbish/2026-10-09/2026-10-09 10.51.43.0/a 3.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791474141000
-    },
-    "Rubbish/2026-10-09/a 3.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791168791146
-    },
-    "Rubbish/2026-10-09/a.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168791146,
-      "mtime": 1791474141000
-    },
-    "Rubbish/2026-10-09/S. Palani, D. Kalaiyarasi-Principles of Digital Signal Processing - 2nd Ed.pdf": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1787018168378,
-      "mtime": 1790176924000
-    },
-    "Rubbish/2026-10-09/scanned_words.txt": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1780114193327,
-      "mtime": 1791213459000
-    },
-    "Rubbish/2026-10-09/data.json": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1781109169958,
-      "mtime": 1791426066328
-    },
-    "Rubbish/2026-10-22/2026-10-22 13.54.40.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-10-22/2026-10-22 13.54.40.0/data.json": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1781109169958,
-      "mtime": 1792622033047
-    },
-    "Rubbish/2026-10-22/2026-10-22 13.54.40.1": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-10-22/2026-10-22 13.54.40.1/data.json": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1783291449891,
-      "mtime": 1791471670000
-    },
-    "Rubbish/2026-10-22/scanned_words.txt": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1780114193327,
-      "mtime": 1791475904000
-    },
-    "Rubbish/draft.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1787873236332,
-      "mtime": 1787873236332
-    },
-    "Rubbish/promtpx.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1788059578784,
-      "mtime": 1788216286937
-    },
-    "Rubbish/update_claude_obsidian.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1790993910267,
-      "mtime": 1790993910267
     },
     "Semesters/Sem_04/ETN607/Robotic_Arm_AI/arm_bateria-hub51515-resumen.md": {
       "isPinned": false,
@@ -9882,6 +8758,880 @@
       "isHidden": false,
       "ctime": 1793313808447,
       "mtime": 1793316655328
+    },
+    "python_arm": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "motor_a.py",
+        "motor_a 1.py",
+        "motor_a_ir_a_cero.md"
+      ],
+      "ctime": 1793397348734,
+      "mtime": 1793397348734
+    },
+    "python_arm/motor_a 1.py": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1793397573891,
+      "mtime": 1793397391235
+    },
+    "python_arm/motor_a.py": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1793397628666,
+      "mtime": 1793397628666
+    },
+    "desktop.ini": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1781385033420,
+      "mtime": 1781385033422
+    },
+    "python_arm/motor_a_ir_a_cero.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1793397880346,
+      "mtime": 1793397880000
+    },
+    "Rubbish/2026-08-12": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "PDF-903",
+        "PDF-921",
+        "PDF-Microprocesadores"
+      ]
+    },
+    "Rubbish/2026-08-12/PDF-903": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "903_LIBRO_ING",
+        "img903",
+        "ING_PDF",
+        "intel"
+      ]
+    },
+    "Rubbish/2026-08-12/PDF-903/903_LIBRO_ING": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "Rubbish/2026-08-12/PDF-903/img903": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Cap1"
+      ]
+    },
+    "Rubbish/2026-08-12/PDF-903/img903/Cap1": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "Rubbish/2026-08-12/PDF-903/ING_PDF": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "Rubbish/2026-08-12/PDF-903/intel": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "Rubbish/2026-08-12/PDF-921": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "Rubbish/2026-08-12/PDF-Microprocesadores": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "lobrossss",
+        "Temas"
+      ]
+    },
+    "Rubbish/2026-08-12/PDF-Microprocesadores/lobrossss": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "Rubbish/2026-08-12/PDF-Microprocesadores/Temas": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.09.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "styles.css"
+      ]
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.09.0/styles.css": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1781384729038,
+      "mtime": 1785040746000
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.10.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "manifest.json"
+      ]
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.10.0/manifest.json": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1785184030361,
+      "mtime": 1785040745000
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.14.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "main.js"
+      ]
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.14.0/main.js": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1786229026903,
+      "mtime": 1785205592000
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.17.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "manifest.json"
+      ]
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.17.0/manifest.json": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1787016757113,
+      "mtime": 1786917225000
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.19.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "styles.css"
+      ]
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.19.0/styles.css": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1786229027230,
+      "mtime": 1786917263000
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.19.1": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "manifest.json",
+        "styles.css"
+      ]
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.19.1/manifest.json": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1787016757015,
+      "mtime": 1786917250000
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.19.1/styles.css": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1781384730354,
+      "mtime": 1786917227000
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.20.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "manifest.json"
+      ]
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.20.0/manifest.json": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1788818414681,
+      "mtime": 1788227406000
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.11.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "manifest.json"
+      ]
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.11.0/manifest.json": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1786229026903,
+      "mtime": 1785205592000
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.23.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "main.js",
+        "styles.css"
+      ]
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.23.0/main.js": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1788818418080,
+      "mtime": 1788227406000
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.23.0/styles.css": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1788818414682,
+      "mtime": 1788227407000
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.24.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "manifest.json",
+        "styles.css"
+      ]
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.24.0/styles.css": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1783627065923,
+      "mtime": 1781657365000
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.24.0/manifest.json": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1786229030261,
+      "mtime": 1785385292000
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.25.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "main.js",
+        "manifest.json"
+      ]
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.25.0/main.js": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1783627065923,
+      "mtime": 1781657365000
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.25.0/manifest.json": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1783627065923,
+      "mtime": 1781657365000
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.30.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "main.js"
+      ]
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.30.0/main.js": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1787016757007,
+      "mtime": 1786917263000
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.33.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "main.js"
+      ]
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.33.0/main.js": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1786229026406,
+      "mtime": 1785385292000
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.34.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "manifest.json"
+      ]
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.34.0/manifest.json": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1787595304957,
+      "mtime": 1787542950000
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.13.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json",
+        "main.js"
+      ]
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.13.0/data.json": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1790166567167,
+      "mtime": 1791170171698
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.13.0/main.js": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1785184030361,
+      "mtime": 1785040746000
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.34.1": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "manifest.json"
+      ]
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.34.1/manifest.json": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1785184030535,
+      "mtime": 1784513654000
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.34.3": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "styles.css"
+      ]
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.34.3/styles.css": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1787595304957,
+      "mtime": 1787542950000
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.34.2": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "manifest.json",
+        "styles.css"
+      ]
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.34.2/manifest.json": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1787016757211,
+      "mtime": 1786917227000
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.34.2/styles.css": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1787016757211,
+      "mtime": 1786917229000
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.36.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "main.js"
+      ]
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.36.0/main.js": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1787016759209,
+      "mtime": 1786917229000
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.36.2": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "main.js"
+      ]
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.36.2/main.js": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1787595304956,
+      "mtime": 1787542950000
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.37.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "manifest.json"
+      ]
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.37.0/manifest.json": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1787016757018,
+      "mtime": 1786917230000
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.39.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json",
+        "main.js"
+      ]
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.39.0/data.json": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1787595304551,
+      "mtime": 1791170168876
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.39.0/main.js": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1787016757018,
+      "mtime": 1786917230000
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.27.47.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.27.47.0/data.json": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791170290585,
+      "mtime": 1791170743663
+    },
+    "Rubbish/2026-10-04/5_alx-rul.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1788818408758,
+      "mtime": 1788724309000
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.21.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "main.js"
+      ]
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.21.0/main.js": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1787016759110,
+      "mtime": 1786917226000
+    },
+    "Rubbish/2026-10-04/main.js": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1787016759008,
+      "mtime": 1786917246000
+    },
+    "Rubbish/2026-10-04/manifest.json": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1787016757113,
+      "mtime": 1786917231000
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.36.1": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "main.js"
+      ]
+    },
+    "Rubbish/2026-10-04/2026-10-04 23.18.36.1/main.js": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1785184030535,
+      "mtime": 1784513655000
+    },
+    "Rubbish/2026-10-04/styles.css": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1787016759110,
+      "mtime": 1786917247000
+    },
+    "Rubbish/2026-10-04/Untitled.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1790166572547,
+      "mtime": 1790138255000
+    },
+    "Rubbish/2026-10-05/aP.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791170210384,
+      "mtime": 1791168938000
+    },
+    "Rubbish/2026-10-18": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "2026-10-18 17.41.09.0",
+        "_start_movil607P1 1 1.md",
+        "2_krajo.md",
+        "aP.pdf",
+        "bP.pdf",
+        "data.json",
+        "interface_1k_diagrama_de_flujo_completo.png",
+        "logbook.md",
+        "Sin título.md",
+        "Sin título 1.md",
+        "Sin título 2.md",
+        "Sin título 3.md",
+        "Sin título 4.md",
+        "Sin título 5.md",
+        "Sin título 6 1.md"
+      ]
+    },
+    "Rubbish/2026-10-18/2026-10-18 17.41.09.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-10-18/2026-10-18 17.41.09.0/data.json": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791170865132,
+      "mtime": 1791475375963
+    },
+    "Rubbish/2026-10-18/2_krajo.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1788818408756,
+      "mtime": 1788648125000
+    },
+    "Rubbish/2026-10-18/aP.pdf": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791212605280,
+      "mtime": 1791171491000
+    },
+    "Rubbish/2026-10-18/bP.pdf": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791212605280,
+      "mtime": 1791171397000
+    },
+    "Rubbish/2026-10-18/data.json": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1790166567065,
+      "mtime": 1791476447869
+    },
+    "Rubbish/2026-10-18/interface_1k_diagrama_de_flujo_completo.png": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791212605279,
+      "mtime": 1791172176000
+    },
+    "Rubbish/2026-10-18/Sin título 1.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791170209770,
+      "mtime": 1789654215000
+    },
+    "Rubbish/2026-10-18/Sin título 3.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791170209771,
+      "mtime": 1790099613000
+    },
+    "Rubbish/2026-10-18/Sin título 4.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791170209772,
+      "mtime": 1790100784000
+    },
+    "Rubbish/2026-10-18/logbook.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1790166576674,
+      "mtime": 1790044923000
+    },
+    "Rubbish/2026-10-18/Sin título 6 1.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791474470081,
+      "mtime": 1791474069661
+    },
+    "Rubbish/2026-10-18/Sin título.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791170209772,
+      "mtime": 1788888506000
+    },
+    "Rubbish/2026-10-18/_start_movil607P1 1 1.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1790176173187,
+      "mtime": 1787721221000
+    },
+    "Rubbish/2026-10-18/Sin título 2.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791170209771,
+      "mtime": 1790097370000
+    },
+    "Rubbish/2026-10-18/Sin título 5.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791476034144,
+      "mtime": 1791307706000
+    },
+    "Rubbish/2026-10-30": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "2026-10-30 17.50.02.0",
+        "2026-10-30 17.56.00.0",
+        "2026-10-30 18.02.31.0",
+        "data.json",
+        "de paso.md",
+        "motor_a.py",
+        "Sin título.md",
+        "Sin título 1.md",
+        "Sin título 2.md",
+        "Sin título 3.md",
+        "Sin título 4.md",
+        "Untitled.md",
+        "Untitled 1.md",
+        "Untitled 2.md",
+        "Untitled 5.md",
+        "Untitled 5 1.md",
+        "Untitled 6.md",
+        "Untitled 7.md",
+        "Untitled 7 1.md"
+      ]
+    },
+    "Rubbish/2026-10-30/2026-10-30 17.50.02.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-10-30/2026-10-30 17.50.02.0/data.json": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1792675974196,
+      "mtime": 1792679918852
+    },
+    "Rubbish/2026-10-30/2026-10-30 17.56.00.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-10-30/2026-10-30 17.56.00.0/data.json": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1793397000908,
+      "mtime": 1793396207000
+    },
+    "Rubbish/2026-10-30/2026-10-30 18.02.31.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-10-30/2026-10-30 18.02.31.0/data.json": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1793397359389,
+      "mtime": 1793397357000
+    },
+    "Rubbish/2026-10-30/data.json": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1792359668286,
+      "mtime": 1792678429312
+    },
+    "Rubbish/2026-10-30/de paso.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791170209770,
+      "mtime": 1791167513000
+    },
+    "Rubbish/2026-10-30/motor_a.py": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1793397391355,
+      "mtime": 1793397391000
+    },
+    "Rubbish/2026-10-30/Sin título 1.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1792676898978,
+      "mtime": 1792677010347
+    },
+    "Rubbish/2026-10-30/Sin título 2.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1792677247904,
+      "mtime": 1792677251115
+    },
+    "Rubbish/2026-10-30/Sin título 3.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1792679816874,
+      "mtime": 1792679836038
+    },
+    "Rubbish/2026-10-30/Sin título 4.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1792679819671,
+      "mtime": 1792679827015
+    },
+    "Rubbish/2026-10-30/Sin título.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1792676387316,
+      "mtime": 1792679936338
+    },
+    "Rubbish/2026-10-30/Untitled 1.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1792359663689,
+      "mtime": 1791783944000
+    },
+    "Rubbish/2026-10-30/Untitled 2.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1792359663690,
+      "mtime": 1791784702000
+    },
+    "Rubbish/2026-10-30/Untitled 5 1.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1792359663692,
+      "mtime": 1792034677000
+    },
+    "Rubbish/2026-10-30/Untitled 5.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1792359663712,
+      "mtime": 1792034861000
+    },
+    "Rubbish/2026-10-30/Untitled 6.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1792359663713,
+      "mtime": 1792035882000
+    },
+    "Rubbish/2026-10-30/Untitled 7 1.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1792359663715,
+      "mtime": 1792036356000
+    },
+    "Rubbish/2026-10-30/Untitled 7.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1792675968548,
+      "mtime": 1792380301000
+    },
+    "Rubbish/2026-10-30/Untitled.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1792359663715,
+      "mtime": 1791785053000
+    },
+    "Rubbish/2026-10-08": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "S. Palani, D. Kalaiyarasi-Principles of Digital Signal Processing - 2nd Ed.pdf",
+        "Sin título 5.md"
+      ]
+    },
+    "Rubbish/2026-10-08/S. Palani, D. Kalaiyarasi-Principles of Digital Signal Processing - 2nd Ed.pdf": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791170213013,
+      "mtime": 1790176924000
+    },
+    "Rubbish/2026-10-08/Sin título 5.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1791472944853,
+      "mtime": 1791472944854
+    },
+    "Rubbish/2026-10-22/bookmarks.json": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1781384728850,
+      "mtime": 1780635558000
+    },
+    "Rubbish/2026-10-22/logbook.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1792359663976,
+      "mtime": 1791566464000
+    },
+    "_app/_config/_assets-section.tmp": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1781384733037,
+      "mtime": 1779920740000
     }
   },
   "showHidden": false,
