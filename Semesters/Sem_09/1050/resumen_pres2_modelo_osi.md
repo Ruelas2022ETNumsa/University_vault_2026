@@ -1,8 +1,6 @@
 # Resumen: Presentación 2 · Modelo ISO-OSI
 
-> Fuente: Ing. M.Sc. Roberto Zambrana Flores. Resumen fiel a las diapositivas: no se agregó nada que ellas no digan, salvo la aclaración de términos propios del curso (al final). **La presentación no trae fórmulas.**
->
-> **Parte clave para el examen: la sección 4 (Encapsulamiento).**
+> Fuente: Ing. M.Sc. Roberto Zambrana Flores. Resumen fiel a las diapositivas: no se agregó nada que ellas no digan, salvo la aclaración de términos y siglas propios de esta presentación (en el texto y en la tabla final). **La presentación no trae fórmulas.**
 
 ---
 
@@ -69,11 +67,11 @@ graph TD
 
 ---
 
-## 4. Encapsulamiento (parte clave)
+## 4. Encapsulamiento
 
 ### 4.1 Concepto
 
-- Es el proceso de **incorporar un campo de control** a una **Unidad de Datos de Protocolo (UDP)**.
+- Es el proceso de **incorporar un campo de control** a una **Unidad de Datos de Protocolo (UDP)**. En esta presentación **UDP** es la sigla de *Unidad de Datos de Protocolo* (**PDU** en inglés); **no** es el protocolo UDP de transporte.
 - **Información de control:** dirección, control de errores, etc.
 - Cuando un protocolo de una **capa superior** envía datos a su **par** en otro nodo, los **entrega al protocolo de la capa inferior**.
   - El protocolo de la capa inferior **no sabe** si el nivel superior envía una imagen, un correo o una secuencia numérica.
@@ -94,7 +92,7 @@ graph TD
 ```
 
 - Los protocolos se estructuran **de forma jerárquica por capas**.
-- **Cada capa en TX recibe la UDP(N+1)** de su capa superior, **le agrega una cabecera (control)** y **entrega a su capa inferior la UDP(N)**.
+- **Cada capa en TX** (TX = transmisión) **recibe la UDP(N+1)** de su capa superior, **le agrega una cabecera (control)** y **entrega a su capa inferior la UDP(N)**.
 - **UDP de la capa N = control + Datos de capa N.** Los "Datos de capa N" son lo que llega de la capa N+1; la diapositiva los llama **DSU** (*Unidad de Datos de Servicio*) y los marca con asterisco.
 
 ### 4.3 Datos a través del modelo (emisor)
@@ -108,6 +106,8 @@ graph TD
 | Red (3) | **Paquetes** | **RH** |
 | Enlace (2) | **Tramas** | **EH** (y además una **cola**) |
 | Físico (1) | **bits** | — |
+
+> **Aclaración de siglas:** **AH, PH, SH, TH, RH y EH** son mnemónicos que usa **solo esta presentación** en sus figuras (no son nomenclatura estándar). La diapositiva no las define explícitamente: siguen la inicial de cada capa y se usan como cabeceras.
 
 - La aplicación entrega el mensaje a la capa 7 y este **va "bajando"** capa por capa, ganando una cabecera en cada una.
 - Solo el **enlace** agrega también una **cola** al final de la trama (en las figuras, `T2`).
@@ -125,6 +125,8 @@ graph TD
 ### 4.5 Ejemplo de la diapositiva: el mensaje "Tengo una idea."
 
 El usuario en el **Nodo A** envía "Tengo una idea." Los datos se encapsulan y **se registra a qué protocolo de la capa superior le pertenece la carga útil (payload)**.
+
+> **Aclaración de siglas:** **H2, H3, H4 y T2** son mnemónicos que usa **solo esta figura** (no son nomenclatura estándar). El número indica la capa (2 enlace, 3 red, 4 transporte); H2, H3 y H4 aparecen como cabeceras y T2 como la cola de enlace. La diapositiva no define las letras explícitamente.
 
 ```mermaid
 graph TD
@@ -167,7 +169,7 @@ El usuario en el **Nodo B** recibe "Tengo una idea." **subiendo** por las capas,
 
 ---
 
-## 5. Capas inferiores
+## 5. Capas inferiores: Física y Enlace de Datos
 
 ### Capa o nivel Físico
 
@@ -195,7 +197,9 @@ Lo que hace:
 - Garantiza **control de flujo** entre dos capas de enlace.
 - **Administra el enlace** (quién lo establece, quién hace uso del medio de transmisión común, etc.).
 
-### Capa o nivel de Red
+---
+
+## 6. Capa o nivel de Red
 
 - Una comunicación puede implicar **múltiples enlaces**, por lo que deben tomarse **decisiones de encaminamiento**.
 - Es responsable del **enrutamiento**, para conectar sistemas abiertos **no directamente conectados**, además del **direccionamiento lógico**.
@@ -204,20 +208,23 @@ Lo que hace:
 - Se ocupa de aceptar **segmentos** de la capa de transporte de la estación fuente, **crear paquetes** y encaminarlos por toda la ruta hasta la capa de transporte de la estación destino.
 - Es la capa más baja que se ocupa de la transmisión **extremo-extremo** y la más alta que se reproduce en los dispositivos de la subred.
 - Otra función importante: la **interconexión de redes heterogéneas**.
+- **Comunicación extremo a extremo** (figura de la diapositiva): los equipos de los extremos tienen las capas T, R, E y F; los nodos de la sub-red solo R, E y F. Entre las capas R hay una **comunicación virtual de capa de red** (línea punteada), aunque físicamente el camino pasa por las capas inferiores (E y F) de cada enlace.
 
 ---
 
-## 6. Capas superiores
+## 7. Capa o nivel de Transporte
 
-### Capa de Transporte
-
-- **Protocolo extremo a extremo**, concebido para realizar **transferencia fiable e2e**, ofreciendo una **calidad de servicio uniforme**.
+- **Protocolo extremo a extremo**, concebido para realizar **transferencia fiable e2e** (e2e = extremo a extremo, abreviatura de la diapositiva), ofreciendo una **calidad de servicio uniforme**.
 - **Asimila los mensajes de la capa de sesión**, los **divide en segmentos** si fuera necesario y los entrega a la capa de red, asegurando que lleguen **correctamente, en orden** y, si fuera necesario, **reensamblados** en el otro extremo.
 - Garantiza la **integridad y el orden** de la información transmitida.
 - Decide, según la aplicación, **qué servicios solicitará de la capa de red**.
 - Si se necesita un **gran caudal**, puede solicitar **múltiples conexiones de red**.
 - Si la conexión resulta **muy costosa**, puede **multiplexar varias conexiones** a través de una misma conexión de red.
 - Opera de **origen a destino** (extremo a extremo).
+
+---
+
+## 8. Capas o niveles de Sesión, Presentación y Aplicación
 
 ### Nivel de Sesión
 
@@ -253,9 +260,9 @@ Lo que hace:
 | **Cabecera / encabezamiento / header** | Información de control agregada **al inicio** del mensaje. |
 | **Cola** | Información de control agregada **al final** del mensaje (en el enlace). |
 | **Cuerpo del mensaje / payload / carga útil** | Los datos entregados por la capa superior, dentro del mensaje de la capa inferior. |
-| **AH, PH, SH, TH, RH, EH** | Cabeceras de aplicación, presentación, sesión, transporte, red y enlace. La diapositiva solo escribe las siglas, que siguen la inicial de cada capa. |
-| **H2, H3, H4, T2** | En el ejemplo de "Tengo una idea.": cabecera de enlace (2), de red (3) y de transporte (4); y **cola** de enlace (2). |
+| **AH, PH, SH, TH, RH, EH** | **Mnemónicos exclusivos de esta presentación** (no son nomenclatura estándar): cabeceras de aplicación, presentación, sesión, transporte, red y enlace. La diapositiva solo escribe las siglas, que siguen la inicial de cada capa. |
+| **H2, H3, H4, T2** | En el ejemplo de "Tengo una idea.": cabecera de enlace (2), de red (3) y de transporte (4); y **cola** de enlace (2). **Mnemónicos exclusivos de esta figura** (no estándar): el número es la capa y la diapositiva no define las letras explícitamente. |
 | **Llave de multiplexación** | Campo/dato que permite entregar el mensaje al **protocolo correcto dentro de una capa**. |
-| **TX / e2e** | TX = transmisión; e2e = extremo a extremo. |
+| **TX / e2e** | TX = transmisión; e2e = extremo a extremo. Abreviaturas propias de la diapositiva. |
 | **Sistemas abiertos** | Los sistemas que la capa de red conecta aunque no estén directamente conectados. |
 | **Subred (sub-red)** | La parte de la red formada por los nodos intermedios entre los extremos. |
