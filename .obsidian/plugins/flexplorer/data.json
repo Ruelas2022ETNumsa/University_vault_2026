@@ -24,29 +24,15 @@
         "Habits",
         "Borrar",
         "shared",
-        "de paso.md",
         "ejemplo2.md",
         "tarea.md",
         "tareax.md",
         "tareax 1.md",
         "Sin título 6.md",
         "Sin título 7.md",
-        "Untitled.md",
-        "Untitled 2.md",
-        "Untitled 1.md",
         "Untitled 3.md",
         "Untitled 4.md",
-        "Untitled 5.md",
-        "Untitled 5 1.md",
-        "Untitled 6.md",
-        "Untitled 7 1.md",
-        "Untitled 7.md",
-        "Sin título.md",
-        "Sin título 1.md",
-        "Sin título 2.md",
-        "Sin título 3.md",
-        "Sin título 4.md",
-        "Untitled 8.md"
+        "prueba.py"
       ]
     },
     "MOC": {
@@ -7648,7 +7634,9 @@
         "arm_pybricks-notas.md",
         "arm_todo.md",
         "arm_bateria-hub51515-resumen.md",
-        "arm_bateria-hub51515-resumen 1.md"
+        "arm_bateria-hub51515-resumen 1.md",
+        "arm_consumo-motores-usb-pruebas.md",
+        "arm_consumo-motores-usb-pruebas 1.md"
       ]
     },
     "Semesters/Sem_04/ETN607/Robotic_Arm_AI/blueprint.md": {
@@ -8191,12 +8179,6 @@
       "ctime": 1790274913555,
       "mtime": 1790176603000
     },
-    "de paso.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791167513145,
-      "mtime": 1791167513145
-    },
     "Rubbish/2026-10-05": {
       "isPinned": false,
       "isHidden": false,
@@ -8224,7 +8206,12 @@
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
-      "customOrder": []
+      "customOrder": [
+        "ejercicios_switch_arp.md",
+        "encapsulamiento_resumen_ejercicio.md",
+        "resumen_pres1_fundamentos_redes.md",
+        "resumen_pres2_modelo_osi.md"
+      ]
     },
     "tarea.md": {
       "isPinned": false,
@@ -8279,24 +8266,6 @@
       "isHidden": false,
       "ctime": 1791596935743,
       "mtime": 1791596935743
-    },
-    "Untitled.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791782678477,
-      "mtime": 1791785053224
-    },
-    "Untitled 1.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791782678477,
-      "mtime": 1791783944886
-    },
-    "Untitled 2.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791782678477,
-      "mtime": 1791784702233
     },
     "Semesters/Sem_07/ETN825/borrar": {
       "isPinned": false,
@@ -8640,35 +8609,11 @@
       "ctime": 1792033897709,
       "mtime": 1792034169362
     },
-    "Untitled 5.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1792034307950,
-      "mtime": 1792034861237
-    },
-    "Untitled 5 1.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1792034307950,
-      "mtime": 1792034677162
-    },
     "Semesters/Sem_07/ETN825/ahpl_fin final siuu.md": {
       "isPinned": false,
       "isHidden": false,
       "ctime": 1792033897709,
       "mtime": 1792035544217
-    },
-    "Untitled 6.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1792035875016,
-      "mtime": 1792035882714
-    },
-    "Untitled 7 1.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1792036353449,
-      "mtime": 1792036356918
     },
     "Semesters/Sem_07/ETN825/SIC final siuu.md": {
       "isPinned": false,
@@ -8706,12 +8651,6 @@
       "ctime": 1792376654096,
       "mtime": 1792376654096
     },
-    "Untitled 7.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1792380301050,
-      "mtime": 1792380301051
-    },
     "_app/notebooklm/prompts/ETN825/ETN825-expo-cap7 1.md": {
       "isPinned": false,
       "isHidden": false,
@@ -8735,41 +8674,11 @@
       "ctime": 1792359668544,
       "mtime": 1792036545000
     },
-    "Sin título.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1792676387325,
-      "mtime": 1792677053151
-    },
-    "Sin título 1.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1792676898985,
-      "mtime": 1792677010351
-    },
-    "Sin título 2.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1792677247942,
-      "mtime": 1792677251116
-    },
     "Semesters/Sem_07/ETN825/ejsic.md": {
       "isPinned": false,
       "isHidden": false,
       "ctime": 1792677849902,
       "mtime": 1792677853603
-    },
-    "Sin título 3.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1792679816874,
-      "mtime": 1792679836038
-    },
-    "Sin título 4.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1792679819671,
-      "mtime": 1792679827015
     },
     "Rubbish/2026-08-09": {
       "isPinned": false,
@@ -9926,17 +9835,53 @@
       "ctime": 1792877361411,
       "mtime": 1792877361412
     },
-    "Untitled 8.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1792864023577,
-      "mtime": 1792864023577
-    },
     "Semesters/Sem_04/ETN607/Robotic_Arm_AI/arm_bateria-hub51515-resumen 1.md": {
       "isPinned": false,
       "isHidden": false,
       "ctime": 1792970365179,
       "mtime": 1792966372715
+    },
+    "Semesters/Sem_04/ETN607/Robotic_Arm_AI/arm_consumo-motores-usb-pruebas 1.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1793316949148,
+      "mtime": 1793315060955
+    },
+    "Semesters/Sem_04/ETN607/Robotic_Arm_AI/arm_consumo-motores-usb-pruebas.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1793317007848,
+      "mtime": 1793317007848
+    },
+    "Semesters/Sem_09/1050/ejercicios_switch_arp.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1793317440953,
+      "mtime": 1793317440954
+    },
+    "Semesters/Sem_09/1050/resumen_pres1_fundamentos_redes.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1793323967668,
+      "mtime": 1793323967669
+    },
+    "Semesters/Sem_09/1050/resumen_pres2_modelo_osi.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1793325238058,
+      "mtime": 1793325238059
+    },
+    "Semesters/Sem_09/1050/encapsulamiento_resumen_ejercicio.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1793325355514,
+      "mtime": 1793325355514
+    },
+    "prueba.py": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1793313808447,
+      "mtime": 1793316655328
     }
   },
   "showHidden": false,
