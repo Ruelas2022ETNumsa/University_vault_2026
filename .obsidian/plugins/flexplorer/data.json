@@ -2354,7 +2354,8 @@
         "tsk_ini_ETN607.md",
         "Robotic_Arm_AI",
         "Partial_2",
-        "Partial_3"
+        "Partial_3",
+        "Partial_4"
       ]
     },
     "Semesters/Sem_01/MAT101/_library_MAT101.md": {
@@ -4646,7 +4647,7 @@
       "isPinned": false,
       "isHidden": false,
       "ctime": 1791168025834,
-      "mtime": 1793656560888
+      "mtime": 1793743947531
     },
     "_PDF/ETN-505": {
       "isPinned": false,
@@ -10117,6 +10118,14 @@
       "isHidden": false,
       "ctime": 1793674815590,
       "mtime": 1793674815590
+    },
+    "Semesters/Sem_04/ETN607/Partial_4": {
+      "isPinned": false,
+      "isHidden": false,
+      "customOrder": [],
+      "sortOrder": "custom",
+      "ctime": 1793744505523,
+      "mtime": 1793744505523
     }
   },
   "showHidden": false,
