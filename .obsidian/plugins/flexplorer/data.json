@@ -8755,7 +8755,22 @@
         "brazo_tomar_objetoESTEFUN.py",
         "brazo_tomar_y_dejar.py",
         "pru_1.py",
-        "cero.py"
+        "cero.py",
+        "agarrar.py",
+        "grados.py",
+        "ha.py",
+        "ha 1.py",
+        "inicio.py",
+        "ji.py",
+        "left.py",
+        "nao.py",
+        "paz.py",
+        "siu.py",
+        "siu2.py",
+        "soltar.py",
+        "take.py",
+        "take 1.py",
+        "uni.py"
       ],
       "ctime": 1793397348734,
       "mtime": 1793397348734
@@ -10012,6 +10027,96 @@
       "isHidden": false,
       "ctime": 1793663107024,
       "mtime": 1793663107024
+    },
+    "python_arm/agarrar.py": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1793671154618,
+      "mtime": 1793671154618
+    },
+    "python_arm/ha 1.py": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1793678507952,
+      "mtime": 1793678218335
+    },
+    "python_arm/grados.py": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1793672286373,
+      "mtime": 1793672286374
+    },
+    "python_arm/inicio.py": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1793671879800,
+      "mtime": 1793671879800
+    },
+    "python_arm/ji.py": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1793678888537,
+      "mtime": 1793678888538
+    },
+    "python_arm/ha.py": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1793678218335,
+      "mtime": 1793678218335
+    },
+    "python_arm/left.py": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1793672686340,
+      "mtime": 1793672686341
+    },
+    "python_arm/nao.py": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1793675854663,
+      "mtime": 1793675854663
+    },
+    "python_arm/paz.py": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1793677363905,
+      "mtime": 1793677363905
+    },
+    "python_arm/siu2.py": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1793675360388,
+      "mtime": 1793675360388
+    },
+    "python_arm/soltar.py": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1793671154916,
+      "mtime": 1793671154916
+    },
+    "python_arm/take 1.py": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1793676640023,
+      "mtime": 1793672686058
+    },
+    "python_arm/take.py": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1793672686058,
+      "mtime": 1793672686058
+    },
+    "python_arm/uni.py": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1793676932469,
+      "mtime": 1793676932470
+    },
+    "python_arm/siu.py": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1793674815590,
+      "mtime": 1793674815590
     }
   },
   "showHidden": false,
