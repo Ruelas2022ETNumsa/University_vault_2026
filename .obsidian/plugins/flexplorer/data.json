@@ -4646,7 +4646,7 @@
       "isPinned": false,
       "isHidden": false,
       "ctime": 1791168025834,
-      "mtime": 1793397332044
+      "mtime": 1793656560888
     },
     "_PDF/ETN-505": {
       "isPinned": false,
@@ -8749,7 +8749,13 @@
         "motor_a_angulo_manual 3.py",
         "motor_a_ir_a_cero.py",
         "motor_a_voltaje_manual.py",
-        "motor_a_voltaje_rampa.py"
+        "motor_a_voltaje_rampa.py",
+        "motor_a_angulo_voltaje.py",
+        "brazo_tomar_objeto.py",
+        "brazo_tomar_objetoESTEFUN.py",
+        "brazo_tomar_y_dejar.py",
+        "pru_1.py",
+        "cero.py"
       ],
       "ctime": 1793397348734,
       "mtime": 1793397348734
@@ -9970,6 +9976,42 @@
       "isHidden": false,
       "ctime": 1790993910267,
       "mtime": 1790993910267
+    },
+    "python_arm/motor_a_angulo_voltaje.py": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1793656924393,
+      "mtime": 1793656924393
+    },
+    "python_arm/brazo_tomar_objeto.py": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1793663107024,
+      "mtime": 1793663107024
+    },
+    "python_arm/brazo_tomar_y_dejar.py": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1793663357771,
+      "mtime": 1793663357771
+    },
+    "python_arm/pru_1.py": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1793669955715,
+      "mtime": 1793669955715
+    },
+    "python_arm/cero.py": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1793670195084,
+      "mtime": 1793670195084
+    },
+    "python_arm/brazo_tomar_objetoESTEFUN.py": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1793663107024,
+      "mtime": 1793663107024
     }
   },
   "showHidden": false,
