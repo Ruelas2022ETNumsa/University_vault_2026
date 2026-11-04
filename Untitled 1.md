@@ -1,112 +1,87 @@
-### 1. Mallas y tabla de inductancias y fuentes compartidas (circuito original)
+### 1. Cara exterior elegida y las 5 mallas
 
-El circuito posee **3 mallas independientes** ($N = 3$ grados de libertad):
-- **Malla 1:** Malla exterior/izquierda, formada por la fuente $E_1$ y $R_1$ en P–Q, el cable Q–D, la rama B–D ($L_{13}, E_{13}$), la rama A–B ($L_{12}$) y la rama principal P–A ($L_1$).
-- **Malla 2:** Triángulo superior del rombo (A–B–C–A), formado por $L_{12}$ (A–B), $C_{23}$ y $R_{23}$ (B–C) y $C_2$ (A–C).
-- **Malla 3:** Triángulo inferior del rombo (B–C–D–B), formado por $C_{23}$ y $R_{23}$ (B–C), $R_3$ (C–D) y $L_{13}, E_{13}$ (B–D).
+El circuito es conexo y tiene 8 nodos y 12 aristas, por lo que posee:
 
-**Tabla de inductancias y fuentes (circuito original):**
+$$
+\text{Grados de libertad } N = 12 - 8 + 1 = 5 \text{ mallas}
+$$
 
-| Elemento | Ubicación / Rama | Mallas que lo contienen | ¿Está compartido? |
-| :--- | :--- | :--- | :--- |
-| **$L_1$** | Rama principal (P–A) | Malla 1 | No |
-| **$E_1$** | Rama de la fuente (P–Q) | Malla 1 | No |
-| **$L_{12}$** | Lado izquierdo superior (A–B) | Malla 1 y Malla 2 | **Sí** |
-| **$L_{13}$** | Lado izquierdo inferior (B–D) | Malla 1 y Malla 3 | **Sí** |
-| **$E_{13}$** | Lado izquierdo inferior (B–D) | Malla 1 y Malla 3 | **Sí** |
 
-**Determinación:** Dado que $L_{12}$, $L_{13}$ y $E_{13}$ están compartidos entre la Malla 1 y las mallas del rombo, según la Regla 3, **SÍ SE DEBE GIRAR EL CIRCUITO** (reflejar el rombo de izquierda a derecha, manteniendo A arriba y D abajo).
+- **Cara exterior elegida:** Cara **EFGH** (al elegirla como cara exterior, no es una malla interior y sus elementos forman el perímetro exterior).
+- **Mallas (5 mallas interiores):**
+  - **Malla 1 (Cara ABCD - sin inductancia):** Aristas A–B ($R_{ab}$), B–C ($R_{bc}$), C–D ($R_{cd}$) y D–A ($R_{ad}$).
+  - **Malla 2 (Cara ABFE - sin inductancia):** Aristas A–B ($R_{ab}$), B–F ($C_{bf}$), F–E ($R_{ef}$) y E–A ($R_{ae}$).
+  - **Malla 3 (Cara BCGF - con inductancia $L_3$):** Aristas B–C ($R_{bc}$), C–G ($R_{cg}$), G–F ($L_3$) y F–B ($C_{bf}$).
+  - **Malla 4 (Cara CDHG - con inductancia $L_4$):** Aristas C–D ($R_{cd}$), D–H ($C_{dh}$), H–G ($L_4$) y G–C ($R_{cg}$).
+  - **Malla 5 (Cara DAEH - con inductancia $L_5$ y fuente $S$):** Aristas D–A ($R_{ad}$), A–E ($R_{ae}$), E–H ($L_5$ en serie con $S$) y H–D ($C_{dh}$).
 
 ---
 
-### 2. Descripción del circuito después de girar y revisión de compartidos
+### 2. Tabla de inductancias y fuentes y revisión de compartidos
 
-Al reflejar el rombo de izquierda a derecha (A arriba, D abajo):
-- El nodo A permanece arriba y D abajo. El vértice izquierdo que toca a la Malla 1 pasa a ser el nodo C y el vértice derecho exterior pasa a ser el nodo B.
-
-**Descripción de las ramas del circuito girado:**
-- **Circuito exterior (Malla 1):**
-  - Rama P–Q: Fuente $E_1$ en serie con la resistencia $R_1$.
-  - Rama P–A: Inductancia $L_1$.
-  - Rama Q–D: Cable.
-- **Lado izquierdo del rombo (toca a la Malla 1):**
-  - Rama A–C (arriba a la izquierda): Capacitor $C_2$.
-  - Rama C–D (abajo a la izquierda): Resistor $R_3$.
-- **Lado derecho del rombo (exterior a la derecha):**
-  - Rama A–B (arriba a la derecha): Inductancia $L_{12}$.
-  - Rama B–D (abajo a la derecha): Inductancia $L_{13}$ en serie con la fuente $E_{13}$ (junto a D).
-- **Rama central del rombo:**
-  - Rama C–B (horizontal central): Capacitor $C_{23}$ (lado C) en serie con resistor $R_{23}$ (lado B).
-
-**Tabla de inductancias y fuentes (circuito girado):**
-
-| Elemento | Ubicación / Rama | Mallas que lo contienen | ¿Está compartido? |
+| Elemento | Ubicación / Arista | Mallas que lo contienen | ¿Está compartido entre mallas? |
 | :--- | :--- | :--- | :--- |
-| **$L_1$** | Rama principal (P–A) | Malla 1 | No |
-| **$E_1$** | Rama P–Q | Malla 1 | No |
-| **$L_{12}$** | Rama A–B (derecha superior) | Malla 2 | No |
-| **$L_{13}$** | Rama B–D (derecha inferior) | Malla 3 | No |
-| **$E_{13}$** | Rama B–D (derecha inferior) | Malla 3 | No |
+| **$L_3$** | F–G | Solo Malla 3 | **No** |
+| **$L_4$** | G–H | Solo Malla 4 | **No** |
+| **$L_5$** | E–H | Solo Malla 5 | **No** |
+| **Fuente $S$** | E–H (en serie con $L_5$) | Solo Malla 5 | **No** |
 
-**Revisión:** En el circuito girado ninguna inductancia ni fuente está compartida entre dos mallas.
+*Conclusión:* Al elegir la cara **EFGH** como cara exterior, **ninguna inductancia ni fuente está compartida** entre mallas. No se requiere girar el cubo.
 
 ---
 
-### 3. Corrientes de cada elemento y verificación por nodo
+### 3. Corriente por cada uno de los 12 elementos
 
-Aplicando la Regla 4:
-- **Rama principal (P–A):** Corriente $i_1$ (de P hacia A).
-- **Lado izquierdo del rombo (toca a la Malla 1):**
-  - Rama A–C: Corriente $i_2$ (de A hacia C).
-  - Rama C–D: Corriente $i_3$ (de C hacia D).
+- **Elementos en una sola malla (perímetro exterior EFGH):**
+  1. **Resistor $R_{ef}$** (Arista E–F): Malla 2 $\rightarrow i_2$
+  2. **Inductancia $L_3$** (Arista F–G): Malla 3 $\rightarrow i_3$
+  3. **Inductancia $L_4$** (Arista G–H): Malla 4 $\rightarrow i_4$
+  4. **Inductancia $L_5$ y Fuente $S$** (Arista E–H): Malla 5 $\rightarrow i_5$
 
-**Cálculo del resto de corrientes por Ley de Corrientes de Kirchhoff $LCK$:**
-- **Nodo A:** Entra $i_1$, sale $i_2$ hacia C. Por la rama A–B sale $i_{AB} = i_1 - i_2$.
-- **Nodo C:** Entra $i_2$, sale $i_3$ hacia D. Por la rama central C–B sale $i_{CB} = i_2 - i_3$.
-- **Nodo B:** Entran $i_{AB} = i_1 - i_2$ e $i_{CB} = i_2 - i_3$. Por la rama B–D sale $i_{BD} = (i_1 - i_2) + (i_2 - i_3) = i_1 - i_3$.
-
-**Resumen de corrientes por elemento:**
-- **Fuente $E_1$ y Resistencia $R_1$:** Corriente $i_1$
-- **Inductancia $L_1$:** Corriente $i_1$
-- **Capacitor $C_2$:** Corriente $i_2$
-- **Resistor $R_3$:** Corriente $i_3$
-- **Inductancia $L_{12}$:** Corriente $i_1 - i_2$
-- **Capacitor $C_{23}$ y Resistor $R_{23}$ (serie):** Corriente $i_2 - i_3$
-- **Inductancia $L_{13}$ y Fuente $E_{13}$ (serie):** Corriente $i_1 - i_3$
-
-**Verificación en el Nodo D:**
-- Entran $i_3$ (por C–D) y $(i_1 - i_3)$ (por B–D).
-- Suma total que entra a D: $i_3 + (i_1 - i_3) = i_1$.
-- Coincide con la corriente $i_1$ que retorna por el cable Q–D hacia la fuente/resistencia $R_1$ ($i_{\text{entra}} = i_{\text{sale}} = i_1$).
+- **Elementos compartidos entre dos mallas:**
+  5. **Resistor $R_{ab}$** (Arista A–B): Compartido por Malla 1 y Malla 2 $\rightarrow i_1 - i_2$
+  6. **Resistor $R_{bc}$** (Arista B–C): Compartido por Malla 1 y Malla 3 $\rightarrow i_1 - i_3$
+  7. **Resistor $R_{cd}$** (Arista C–D): Compartido por Malla 1 y Malla 4 $\rightarrow i_1 - i_4$
+  8. **Resistor $R_{ad}$** (Arista D–A): Compartido por Malla 1 y Malla 5 $\rightarrow i_1 - i_5$
+  9. **Capacitor $C_{bf}$** (Arista B–F): Compartido por Malla 2 y Malla 3 $\rightarrow i_2 - i_3$
+  10. **Resistor $R_{cg}$** (Arista C–G): Compartido por Malla 3 y Malla 4 $\rightarrow i_3 - i_4$
+  11. **Capacitor $C_{dh}$** (Arista D–H): Compartido por Malla 4 y Malla 5 $\rightarrow i_4 - i_5$
+  12. **Resistor $R_{ae}$** (Arista A–E): Compartido por Malla 2 y Malla 5 $\rightarrow i_2 - i_5$
 
 ---
 
 ### 4. Sistema mecánico equivalente
 
-Aplicando la analogía de voltajes (inductancia = masa, fuente = fuerza, capacitor $C = \text{resorte } 1/C$, resistencia $R = \text{amortiguador } c$, corriente = velocidad):
+#### A. Cuerpos (masas) y Fuerzas
+- **Cuerpo 1 (Malla 1):** Masa simulada $m_1 = 0$, velocidad $v_1 = i_1$.
+- **Cuerpo 2 (Malla 2):** Masa simulada $m_2 = 0$, velocidad $v_2 = i_2$.
+- **Cuerpo 3 (Malla 3):** Masa real $m_3 = L_3$, velocidad $v_3 = i_3$.
+- **Cuerpo 4 (Malla 4):** Masa real $m_4 = L_4$, velocidad $v_4 = i_4$.
+- **Cuerpo 5 (Malla 5):** Masa real $m_5 = L_5$, velocidad $v_5 = i_5$.
+- **Fuerzas:** Fuerza $F_5 = S$ aplicada directamente sobre el **Cuerpo 5**.
 
-**Velocidad de cada cuerpo (3 masas):**
-- **Cuerpo 1 (masa $m_1 = L_1$):** Velocidad $v_1 = i_1$.
-- **Cuerpo 2 (masa $m_2 = L_{12}$):** Velocidad $v_2 = i_1 - i_2$.
-- **Cuerpo 3 (masa $m_3 = L_{13}$):** Velocidad $v_3 = i_1 - i_3$.
+#### B. Conexiones de cada elemento
 
-**Fuerzas aplicadas:**
-- **Fuerza $F_1 = E_1$:** Actúa sobre el **Cuerpo 1** (asociada a $i_1$).
-- **Fuerza $F_{13} = E_{13}$:** Actúa sobre el **Cuerpo 3** (asociada a $i_1 - i_3$).
+1. **A la pared fija ($v = 0$):**
+   - **Amortiguador $c_{ef} = R_{ef}$** (Arista E–F): Conectado entre la pared fija y el **Cuerpo 2** ($v_2$).
+   - **Masa $m_3 = L_3$** (Arista F–G): Masa del **Cuerpo 3** ($v_3$).
+   - **Masa $m_4 = L_4$** (Arista G–H): Masa del **Cuerpo 4** ($v_4$).
+   - **Masa $m_5 = L_5$** y **Fuerza $F_5 = S$** (Arista E–H): Masa del **Cuerpo 5** ($v_5$) con fuerza aplicada $F_5$.
 
-**Conexiones de cada cuerpo (Reglas 5 y 6):**
-- **Pared fija (referencia $v = 0$):**
-  - **Amortiguador $c_1 = R_1$:** Conectado entre la pared fija y el **Cuerpo 1** (lleva la corriente única $i_1 = v_1$).
-- **Cuerpo 1 ($m_1 = L_1$, velocidad $v_1$):**
-  - **A la izquierda:** Conectado a la pared fija mediante el amortiguador $c_1 = R_1$ y sujeto a la fuerza aplicada $F_1 = E_1$.
-  - **A la derecha hacia el Cuerpo 2:** Conectado al **Cuerpo 2** mediante el **resorte $k_2 = 1/C_2$** (lleva la corriente $i_2 = v_1 - v_2$).
-  - **A la derecha hacia el Cuerpo 3:** Conectado al **Cuerpo 3** mediante el **amortiguador $c_3 = R_3$** (lleva la corriente $i_3 = v_1 - v_3$).
-- **Cuerpo 2 ($m_2 = L_{12}$, velocidad $v_2$):**
-  - **A la izquierda (desde Cuerpo 1):** Conectado al **Cuerpo 1** mediante el **resorte $k_2 = 1/C_2$**.
-  - **A la derecha hacia el Cuerpo 3:** Conectado al **Cuerpo 3** mediante la combinación en paralelo (Regla 6) del **resorte $k_{23} = 1/C_{23}$** y el **amortiguador $c_{23} = R_{23}$** (llevan la corriente $i_2 - i_3 = v_3 - v_2$).
-- **Cuerpo 3 ($m_3 = L_{13}$, velocidad $v_3$):**
-  - **A la izquierda (desde Cuerpo 1):** Conectado al **Cuerpo 1** mediante el **amortiguador $c_3 = R_3$**.
-  - **A la izquierda (desde Cuerpo 2):** Conectado al **Cuerpo 2** mediante el conjunto en paralelo del **resorte $k_{23} = 1/C_{23}$** y el **amortiguador $c_{23} = R_{23}$**.
-  - **Fuerza aplicada:** Recibe la fuerza $F_{13} = E_{13}$ actuando sobre su masa.
+2. **Entre cuerpos:**
+   - **Amortiguador $c_{ab} = R_{ab}$** (Arista A–B): Entre **Cuerpo 1** y **Cuerpo 2** ($v_1 - v_2$).
+   - **Amortiguador $c_{bc} = R_{bc}$** (Arista B–C): Entre **Cuerpo 1** y **Cuerpo 3** ($v_1 - v_3$).
+   - **Amortiguador $c_{cd} = R_{cd}$** (Arista C–D): Entre **Cuerpo 1** y **Cuerpo 4** ($v_1 - v_4$).
+   - **Amortiguador $c_{ad} = R_{ad}$** (Arista D–A): Entre **Cuerpo 1** y **Cuerpo 5** ($v_1 - v_5$).
+   - **Resorte $k_{bf} = 1/C_{bf}$** (Arista B–F): Entre **Cuerpo 2** y **Cuerpo 3** ($v_2 - v_3$).
+   - **Amortiguador $c_{cg} = R_{cg}$** (Arista C–G): Entre **Cuerpo 3** y **Cuerpo 4** ($v_3 - v_4$).
+   - **Resorte $k_{dh} = 1/C_{dh}$** (Arista D–H): Entre **Cuerpo 4** y **Cuerpo 5** ($v_4 - v_5$).
+   - **Amortiguador $c_{ae} = R_{ae}$** (Arista A–E): Entre **Cuerpo 2** y **Cuerpo 5** ($v_2 - v_5$).
 
-⚙️ ¿Te gustaría que elabore el diagrama esquemático en TikZ del circuito girado o del sistema mecánico resultante?
+#### C. Verificación de las 12 aristas
+- **4 aristas exteriores (a pared / masas individuales):** E–F ($R_{ef}$), F–G ($L_3$), G–H ($L_4$), E–H ($L_5 + S$).
+- **4 aristas de la cara superior ABCD (entre Cuerpo 1 y Cuerpos 2, 3, 4, 5):** A–B ($R_{ab}$), B–C ($R_{bc}$), C–D ($R_{cd}$), D–A ($R_{ad}$).
+- **4 aristas verticales (entre masas adyacentes):** B–F ($C_{bf}$), C–G ($R_{cg}$), D–H ($C_{dh}$), A–E ($R_{ae}$).
+- **Total:** $4 + 4 + 4 = 12\text{ aristas representadas}$.
+
+⚙️ ¿Te gustaría que dibuje el diagrama esquemático en TikZ del circuito desplegado o del sistema mecánico de 5 cuerpos resultante?

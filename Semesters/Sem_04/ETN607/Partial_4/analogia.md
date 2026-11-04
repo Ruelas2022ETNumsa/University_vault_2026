@@ -1,12 +1,3 @@
----
-title: "Analogía electromecánica — T7"
-subject: ETN607
-topic: "T7 — Ecuaciones de Lagrange para circuitos eléctricos"
-source: "7_circuitos_eléctricosexpo.pdf — 7.4 Analogía (voltajes), 7.5 Ecuación de Lagrange y Hallar equivalencias"
-status: borrador
-tags: [ETN607, T7, analogia, circuitos, lagrange]
----
-
 # Analogía electromecánica (analogía de voltajes)
 
 Los sistemas mecánicos son equivalentes a los circuitos eléctricos. En esta analogía la **fuerza** corresponde a un **voltaje**, así que cada malla del circuito corresponde a un cuerpo del sistema mecánico. Las ecuaciones de Lagrange sirven para resolver ambos sistemas.
