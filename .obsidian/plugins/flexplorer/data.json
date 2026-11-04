@@ -10068,7 +10068,16 @@
         "E5P4f.md",
         "E6P4f.md",
         "E7P4f.md",
-        "E8P4f.md"
+        "E8P4f.md",
+        "E1P4imp.md",
+        "E2P4imp.md",
+        "E3P4imp.md",
+        "E4P4imp.md",
+        "E5P4imp.md",
+        "E6P4imp.md",
+        "E7P4imp.md",
+        "E8P4imp.md",
+        "reglasimp.md"
       ],
       "ctime": 1793744505523,
       "mtime": 1793744505523
@@ -10138,6 +10147,60 @@
       "isHidden": false,
       "ctime": 1793766441324,
       "mtime": 1793768184270
+    },
+    "Semesters/Sem_04/ETN607/Partial_4/E1P4imp.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1793805514575,
+      "mtime": 1793805514575
+    },
+    "Semesters/Sem_04/ETN607/Partial_4/E2P4imp.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1793805514875,
+      "mtime": 1793805514876
+    },
+    "Semesters/Sem_04/ETN607/Partial_4/E3P4imp.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1793805515177,
+      "mtime": 1793805515178
+    },
+    "Semesters/Sem_04/ETN607/Partial_4/E4P4imp.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1793805515474,
+      "mtime": 1793805515474
+    },
+    "Semesters/Sem_04/ETN607/Partial_4/E5P4imp.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1793804348036,
+      "mtime": 1793804348036
+    },
+    "Semesters/Sem_04/ETN607/Partial_4/E6P4imp.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1793804758493,
+      "mtime": 1793804758493
+    },
+    "Semesters/Sem_04/ETN607/Partial_4/E7P4imp.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1793804758818,
+      "mtime": 1793804758818
+    },
+    "Semesters/Sem_04/ETN607/Partial_4/E8P4imp.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1793804759121,
+      "mtime": 1793804759121
+    },
+    "Semesters/Sem_04/ETN607/Partial_4/reglasimp.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1793805514261,
+      "mtime": 1793805514261
     }
   },
   "showHidden": false,
