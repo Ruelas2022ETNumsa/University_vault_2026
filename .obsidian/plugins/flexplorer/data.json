@@ -4649,7 +4649,7 @@
       "isPinned": false,
       "isHidden": false,
       "ctime": 1791168025834,
-      "mtime": 1793759436024
+      "mtime": 1793764906836
     },
     "_PDF/ETN-505": {
       "isPinned": false,
@@ -10132,7 +10132,8 @@
         "E3P4f.md",
         "E4P4f.md",
         "E5P4f.md",
-        "E6P4f.md"
+        "E6P4f.md",
+        "E7P4f.md"
       ],
       "sortOrder": "custom",
       "ctime": 1793744505523,
@@ -10160,7 +10161,7 @@
       "isPinned": false,
       "isHidden": false,
       "ctime": 1793757670569,
-      "mtime": 1793763734833
+      "mtime": 1793765073447
     },
     "Semesters/Sem_04/ETN607/Partial_4/E1P4f.md": {
       "isPinned": false,
@@ -10197,6 +10198,12 @@
       "isHidden": false,
       "ctime": 1793763963837,
       "mtime": 1793764263948
+    },
+    "Semesters/Sem_04/ETN607/Partial_4/E7P4f.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1793765268824,
+      "mtime": 1793765268824
     }
   },
   "showHidden": false,

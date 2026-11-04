@@ -1,145 +1,188 @@
-### 1. Circuito original, giro y mallas del girado
+### 1. Grados de libertad $N$, ligadura y relación de velocidades
 
-* **Grados de libertad ($N$):**
-  * **Nodos:** 7 $A, B, C, D, E, F, G$.
-  * **Aristas:** 9 ($R_1, C_2, E, R_{23}, L_3, R_{13}, C_{13}, C_1$ y el cable F–E).
-  * $N = 9 - 7 + 1 = 3 \text{ mallas}$.
-
-* **Mallas del circuito original y tabla de compartidos:**
-  * Malla 1 (izquierda): A–B–G–E–F–A. Contiene $E$ y $L_3$.
-  * Malla 2 (derecha-superior): B–C–G–B. Contiene $E$.
-  * Malla 3 (derecha-inferior): G–C–D–E–G. Contiene $L_3$.
-
-  | Elemento | Ubicación | Mallas que lo contienen | ¿Está compartido? |
-  | :--- | :--- | :--- | :--- |
-  | **Fuente $E$** | B–G | Malla 1 y Malla 2 | **Sí** |
-  | **Inductancia $L_3$** | G–E | Malla 1 y Malla 3 | **Sí** |
-
-  **Determinación:** SÍ se debe girar el circuito porque la fuente $E$ y la inductancia $L_3$ están compartidas entre mallas.
-
-* **Cara exterior elegida para el circuito girado:**
-  * Se elige la cara **A–B–G–E–F–A** como nueva cara exterior.
-  * Al exteriorizarla, las aristas B–G (fuente $E$) y G–E (inductancia $L_3$) forman parte del perímetro exterior y pasan a pertenecer a una sola malla interior cada una.
-
-* **Las 3 mallas del circuito girado:**
-  * **Malla 1 (sin inductancia ni fuente – cuerpo simulado):** Malla interiorizada (A–B–C–D–E–F–A). Elementos: $R_1$ (A–B), $C_1$ (A–F), cable (F–E), $C_{12}$ (B–C, renombrado de $C_2$), $C_{13}$ (C–D) y $R_{13}$ (E–D).
-  * **Malla 2 (con Fuente $E$):** Triángulo superior (B–C–G–B). Elementos: Fuente $E$ (B–G), $C_{12}$ (B–C) y $R_{23}$ (G–C).
-  * **Malla 3 (con $L_3$):** Cuadrilátero inferior (G–C–D–E–G). Elementos: Inductancia $L_3$ (G–E), $R_{23}$ (G–C), $C_{13}$ (C–D) y $R_{13}$ (E–D).
-
-  **Tabla del circuito girado:**
-  | Elemento | Ubicación | Mallas que lo contienen | ¿Está compartido? |
-  | :--- | :--- | :--- | :--- |
-  | **Fuente $E$** | B–G | Solo Malla 2 | **No** |
-  | **Inductancia $L_3$** | G–E | Solo Malla 3 | **No** |
-
----
-
-### 2. Corriente por cada uno de los 8 elementos y comprobación con LKC
-
-Tomando corrientes de malla $i_1, i_2, i_3$ en sentido horario:
-
-1. **Resistor $R_1$** (A–B): $i_1$
-2. **Capacitor $C_1$** (A–F): $i_1$
-3. **Fuente $E$** (B–G): $i_2$
-4. **Inductancia $L_3$** (G–E): $i_3$
-5. **Capacitor $C_{12}$** (B–C): $i_1 - i_2$
-6. **Capacitor $C_{13}$** (C–D): $i_1 - i_3$
-7. **Resistor $R_{13}$** (E–D): $i_1 - i_3$
-8. **Resistor $R_{23}$** (G–C): $i_3 - i_2$
-
-**Comprobación con Ley de Corrientes de Kirchhoff $LKC$:**
-* **Nodo B:**  
-  Entra $i_1$ (por A–B). Salen $i_2$ (por B–G) e $(i_1 - i_2)$ (por B–C).  
+* **Número de grados de libertad:**  
   
 $$
-\sum i_{\text{entra}} - \sum i_{\text{sale}} = i_1 - \left[ i_2 + (i_1 - i_2) \right] = i_1 - i_1 = 0 \quad \checkmark
+\text{Cuerpos} = 3 \text{ (polea 1, polea 2, extremo 3)}, \qquad \text{Ligaduras} = 1 \text{ (cuerda de longitud } l\text{)}
 $$
 
-* **Nodo E:**  
-  Entra $i_1$ (por F–E). Salen $i_3$ (por E–G) e $(i_1 - i_3)$ (por E–D).  
   
 $$
-\sum i_{\text{entra}} - \sum i_{\text{sale}} = i_1 - \left[ i_3 + (i_1 - i_3) \right] = i_1 - i_1 = 0 \quad \checkmark
+N = 3 - 1 = 2 \quad \rightarrow \quad \text{Coordenadas generalizadas: } q_1 = y_2, \; q_2 = y_3
+$$
+
+
+* **Ecuación de ligadura de la cuerda:**  
+  La longitud total de la cuerda entre la polea 2, la polea 1 y el extremo 3 es:
+  
+$$
+l = (y_2 - y_1) + \pi R_1 + (y_3 - y_1) = y_2 + y_3 - 2y_1 + \pi R_1
+$$
+
+  Midiendo $y_1, y_2, y_3$ como desviaciones respecto al equilibrio:
+  
+$$
+y_2 + y_3 - 2y_1 = 0 \implies y_1 = \frac{1}{2}(y_2 + y_3)
+$$
+
+
+* **Relación de velocidades (derivada de la ligadura):**  
+  
+$$
+\dot{y}_1 = \frac{1}{2}(\dot{y}_2 + \dot{y}_3)
 $$
 
 
 ---
 
-### 3. Sistema mecánico equivalente
+### 2. Energías $T$, $V$ y $P$ en función de $y_2, y_3$ (con $m_3 = 0$)
 
-#### A. Cuerpos (masas) y Fuerzas
-* **Cuerpo 1 (Malla 1):** Masa simulada $m_1 = 0$, velocidad $v_1 = i_1$.
-* **Cuerpo 2 (Malla 2):** Masa simulada $m_2 = 0$, velocidad $v_2 = i_2$.
-* **Cuerpo 3 (Malla 3):** Masa real $m_3 = L_3$, velocidad $v_3 = i_3$.
-* **Fuerza:** Fuerza $F_2 = E$ aplicada sobre el **Cuerpo 2**.
-
-#### B. Conexiones de cada elemento
-1. **A la pared fija ($v = 0$):**
-   * **Amortiguador $c_1 = R_1$** y **Resorte $k_1 = 1/C_1$** en paralelo: Conectados entre el **Cuerpo 1** y la pared fija.
-   * **Fuerza $F_2 = E$:** Actúa sobre el **Cuerpo 2**.
-   * **Masa $m_3 = L_3$:** Masa del **Cuerpo 3**.
-2. **Entre cuerpos:**
-   * **Resorte $k_{12} = 1/C_{12}$:** Entre el **Cuerpo 1** y el **Cuerpo 2** (velocidad relativa $v_1 - v_2$).
-   * **Resorte $k_{13} = 1/C_{13}$** y **Amortiguador $c_{13} = R_{13}$** en paralelo: Entre el **Cuerpo 1** y el **Cuerpo 3** (velocidad relativa $v_1 - v_3$).
-   * **Amortiguador $c_{23} = R_{23}$:** Entre el **Cuerpo 2** y el **Cuerpo 3** (velocidad relativa $v_3 - v_2$).
-
-#### C. Verificación de representación (8 elementos)
-* **A pared / Masa / Fuerza:** $R_1$ (c1), $C_1$ (k1), $E$ (F2), $L_3$ (m3).
-* **Entre cuerpos:** $C_{12}$ (k12), $C_{13}$ (k13), $R_{13}$ (c13), $R_{23}$ (c23).
-* **Total:** $4 + 4 = 8\text{ elementos representados}$.
-
----
-
-### 4. Energías $T$, $V$ y $P$
-
-Definiendo $q_r = \int i_r\, dt$:
-
-* **Energía Cinética ($T$):**
+* **Energía Cinética ($T$):**  
   
 $$
-T = \frac{1}{2} L_3 i_3^2
+T = \frac{1}{2} m_1 \dot{y}_1^2 + \frac{1}{2} m_2 \dot{y}_2^2 + \frac{1}{2} m_3 \dot{y}_3^2
 $$
 
-
-* **Energía Potencial ($V$):**
+  Sustituyendo $\dot{y}_1 = \frac{1}{2}(\dot{y}_2 + \dot{y}_3)$ y $m_3 = 0$:
   
 $$
-V = \frac{1}{2 C_1} \left(\int i_1\, dt\right)^2 + \frac{1}{2 C_{12}} \left(\int i_1\, dt - \int i_2\, dt\right)^2 + \frac{1}{2 C_{13}} \left(\int i_1\, dt - \int i_3\, dt\right)^2 + E \int i_2\, dt
+T = \frac{1}{8} m_1 (\dot{y}_2 + \dot{y}_3)^2 + \frac{1}{2} m_2 \dot{y}_2^2
 $$
 
 
-* **Función de Disipación de Rayleigh ($P$):**
+* **Energía Potencial ($V$):**  
+  * Resorte $k$ (polea 1): estiramiento $y_1 = \frac{1}{2}(y_2 + y_3)$.
+  * Resorte $k'$ (polea 2): deformación $2y_2$.
   
 $$
-P = \frac{1}{2} R_1 i_1^2 + \frac{1}{2} R_{13} (i_1 - i_3)^2 + \frac{1}{2} R_{23} (i_3 - i_2)^2
+V = \frac{1}{2} k \left[\frac{1}{2}(y_2 + y_3)\right]^2 + \frac{1}{2} k' (2y_2)^2 = \frac{1}{8} k (y_2 + y_3)^2 + 2 k' y_2^2
+$$
+
+
+* **Función de Disipación de Rayleigh ($P$):**  
+  * Amortiguador $c_1$ (polea 1): actúa con velocidad $\dot{y}_1 = \frac{1}{2}(\dot{y}_2 + \dot{y}_3)$.
+  * Amortiguador $c_2$ (polea 2): actúa con velocidad $\dot{y}_2$.
+  
+$$
+P = \frac{1}{2} c_1 \left[\frac{1}{2}(\dot{y}_2 + \dot{y}_3)\right]^2 + \frac{1}{2} c_2 \dot{y}_2^2 = \frac{1}{8} c_1 (\dot{y}_2 + \dot{y}_3)^2 + \frac{1}{2} c_2 \dot{y}_2^2
 $$
 
 
 ---
 
-### 5. Las tres ecuaciones de Lagrange
+### 3. Fuerzas generalizadas $Q_2$ y $Q_3$
 
-Aplicando $\frac{d}{dt}\left(\frac{\partial T}{\partial i_r}\right) = -\frac{\partial V}{\partial q_r} - \frac{\partial P}{\partial i_r}$ con $q_r = \int i_r\, dt$:
-
-1. **Para $i_1$ (Malla 1):**
-   
+La fuerza externa $F(t)$ actúa sobre el extremo 3 en la dirección positiva de $y_3$:
+* **Para $q = y_2$:**  
+  
 $$
-(R_1 + R_{13}) i_1 - R_{13} i_3 + \left(\frac{1}{C_1} + \frac{1}{C_{12}} + \frac{1}{C_{13}}\right) \int i_1\, dt - \frac{1}{C_{12}} \int i_2\, dt - \frac{1}{C_{13}} \int i_3\, dt = 0
+Q_2 = F(t) \cdot \frac{\partial y_3}{\partial y_2} = 0
 $$
 
-
-2. **Para $i_2$ (Malla 2):**
-   
+* **Para $q = y_3$:**  
+  
 $$
-R_{23} i_2 - R_{23} i_3 - \frac{1}{C_{12}} \int i_1\, dt + \frac{1}{C_{12}} \int i_2\, dt = -E
+Q_3 = F(t) \cdot \frac{\partial y_3}{\partial y_3} = F(t)
 $$
 
 
-3. **Para $i_3$ (Malla 3):**
-   
+---
+
+### 4. Las dos ecuaciones de Lagrange
+
+#### A. Para la coordenada $y_2$:
+* **Derivadas:**
+  
 $$
-L_3 \frac{di_3}{dt} - R_{13} i_1 - R_{23} i_2 + (R_{13} + R_{23}) i_3 - \frac{1}{C_{13}} \int i_1\, dt + \frac{1}{C_{13}} \int i_3\, dt = 0
+\frac{\partial T}{\partial \dot{y}_2} = \frac{1}{4} m_1 (\dot{y}_2 + \dot{y}_3) + m_2 \dot{y}_2 \implies \frac{d}{dt}\left(\frac{\partial T}{\partial \dot{y}_2}\right) = \left(\frac{1}{4} m_1 + m_2\right) \ddot{y}_2 + \frac{1}{4} m_1 \ddot{y}_3
+$$
+
+  
+$$
+\frac{\partial T}{\partial y_2} = 0, \qquad \frac{\partial V}{\partial y_2} = \frac{1}{4} k (y_2 + y_3) + 4 k' y_2, \qquad \frac{\partial P}{\partial \dot{y}_2} = \frac{1}{4} c_1 (\dot{y}_2 + \dot{y}_3) + c_2 \dot{y}_2
 $$
 
 
-⚙️ ¿Quieres que elabore un diagrama en TikZ del circuito girado o del modelo mecánico de masas conectadas?
+* **EDO 1 final ordenada:**
+  
+$$
+\left(\frac{1}{4} m_1 + m_2\right) \ddot{y}_2 + \frac{1}{4} m_1 \ddot{y}_3 + \left(\frac{1}{4} c_1 + c_2\right) \dot{y}_2 + \frac{1}{4} c_1 \dot{y}_3 + \left(\frac{1}{4} k + 4 k'\right) y_2 + \frac{1}{4} k y_3 = 0
+$$
+
+  *(Expresada alternativamente agruando los términos compartidos: $m_2 \ddot{y}_2 + c_2 \dot{y}_2 + 4k' y_2 + \frac{1}{4} m_1 (\ddot{y}_2 + \ddot{y}_3) + \frac{1}{4} c_1 (\dot{y}_2 + \dot{y}_3) + \frac{1}{4} k (y_2 + y_3) = 0$).*
+
+#### B. Para la coordenada $y_3$:
+* **Derivadas:**
+  
+$$
+\frac{\partial T}{\partial \dot{y}_3} = \frac{1}{4} m_1 (\dot{y}_2 + \dot{y}_3) \implies \frac{d}{dt}\left(\frac{\partial T}{\partial \dot{y}_3}\right) = \frac{1}{4} m_1 (\ddot{y}_2 + \ddot{y}_3)
+$$
+
+  
+$$
+\frac{\partial T}{\partial y_3} = 0, \qquad \frac{\partial V}{\partial y_3} = \frac{1}{4} k (y_2 + y_3), \qquad \frac{\partial P}{\partial \dot{y}_3} = \frac{1}{4} c_1 (\dot{y}_2 + \dot{y}_3)
+$$
+
+
+* **EDO 2 final ordenada:**
+  
+$$
+\frac{1}{4} m_1 \ddot{y}_2 + \frac{1}{4} m_1 \ddot{y}_3 + \frac{1}{4} c_1 \dot{y}_2 + \frac{1}{4} c_1 \dot{y}_3 + \frac{1}{4} k y_2 + \frac{1}{4} k y_3 = F(t)
+$$
+
+  *(Expresada alternativamente: $\frac{1}{4} m_1 (\ddot{y}_2 + \ddot{y}_3) + \frac{1}{4} c_1 (\dot{y}_2 + \dot{y}_3) + \frac{1}{4} k (y_2 + y_3) = F(t)$).*
+
+---
+
+### 5. Circuito eléctrico equivalente
+
+* **Mallas y corrientes de malla (sentido horario):**
+  * **Malla 2:** Corriente $i_2 = \dot{y}_2$ (carga $q_2 = y_2$).
+  * **Malla 3:** Corriente $i_3 = -\dot{y}_3$ (carga $q_3 = -y_3$).
+  * **Rama compartida entre Malla 2 y Malla 3:** Lleva la diferencia de corrientes $i_2 - i_3 = \dot{y}_2 - (-\dot{y}_3) = \dot{y}_2 + \dot{y}_3$ (carga $q_2 - q_3 = y_2 + y_3$).
+
+* **Tabla de elementos del circuito:**
+
+| Ubicación | Elemento físico / Mecánico | Elemento eléctrico | Valor eléctrico |
+| :--- | :--- | :--- | :--- |
+| **Exclusivo de Malla 2** | Masa $m_2$ | Inductancia $L_2$ | $L_2 = m_2$ |
+| **Exclusivo de Malla 2** | Amortiguador $c_2$ | Resistencia $R_2$ | $R_2 = c_2$ |
+| **Exclusivo de Malla 2** | Resorte $4k'$ | Capacitor $C_2$ | $C_2 = \frac{1}{4k'}$ |
+| **Rama compartida (2–3)** | Masa $\frac{1}{4} m_1$ | Inductancia $L_{23}$ | $L_{23} = \frac{1}{4} m_1$ |
+| **Rama compartida (2–3)** | Amortiguador $\frac{1}{4} c_1$ | Resistencia $R_{23}$ | $R_{23} = \frac{1}{4} c_1$ |
+| **Rama compartida (2–3)** | Resorte $\frac{1}{4} k$ | Capacitor $C_{23}$ | $C_{23} = \frac{4}{k}$ |
+| **Exclusivo de Malla 3** | Fuerza $F(t)$ | Fuente de voltaje $E(t)$ | $E(t) = F(t)$ |
+
+* **Verificación de las ecuaciones de malla:**
+  * **Ecuación de Malla 2:**  
+    
+$$
+L_2 \ddot{q}_2 + R_2 \dot{q}_2 + \frac{1}{C_2} q_2 + L_{23}(\ddot{q}_2 - \ddot{q}_3) + R_{23}(\dot{q}_2 - \dot{q}_3) + \frac{1}{C_{23}}(q_2 - q_3) = 0
+$$
+
+    Sustituyendo $q_2 = y_2$ y $-q_3 = y_3$:
+    
+$$
+m_2 \ddot{y}_2 + c_2 \dot{y}_2 + 4k' y_2 + \frac{1}{4} m_1 (\ddot{y}_2 + \ddot{y}_3) + \frac{1}{4} c_1 (\dot{y}_2 + \dot{y}_3) + \frac{1}{4} k (y_2 + y_3) = 0 \quad \checkmark \text{ (reproduce EDO 1)}
+$$
+
+  * **Ecuación de Malla 3:**  
+    
+$$
+L_{23}(\ddot{q}_3 - \ddot{q}_2) + R_{23}(\dot{q}_3 - \dot{q}_2) + \frac{1}{C_{23}}(q_3 - q_2) = E(t)
+$$
+
+    Sustituyendo $q_3 - q_2 = -(y_2 + y_3)$:
+    
+$$
+-\frac{1}{4} m_1 (\ddot{y}_2 + \ddot{y}_3) - \frac{1}{4} c_1 (\dot{y}_2 + \dot{y}_3) - \frac{1}{4} k (y_2 + y_3) = -F(t)
+$$
+
+    Multiplicando por $-1$:
+    
+$$
+\frac{1}{4} m_1 (\ddot{y}_2 + \ddot{y}_3) + \frac{1}{4} c_1 (\dot{y}_2 + \dot{y}_3) + \frac{1}{4} k (y_2 + y_3) = F(t) \quad \checkmark \text{ (reproduce EDO 2)}
+$$
+
+
+⚙️ ¿Te gustaría que construya el diagrama esquemático en TikZ del sistema de poleas o del circuito eléctrico equivalente de dos mallas?
