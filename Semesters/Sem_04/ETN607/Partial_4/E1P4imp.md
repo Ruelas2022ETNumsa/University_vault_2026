@@ -8,20 +8,6 @@ Hallar el sistema mecánico equivalente del circuito, que tiene una resistencia 
 
 ---
 
-## Reglas
-
-1. **Analogía de voltajes:** inductancia = cuerpo (masa), fuente = fuerza, capacitor C = resorte 1/C, resistencia R = amortiguador, corriente = velocidad.
-2. **Grados de libertad:** número de mallas = N.
-3. **Compartidos:** una inductancia (cuerpo) o una fuente (fuerza) no puede estar compartida entre dos mallas. Solo se analizan inductancias y fuentes. Si alguna está compartida, se gira el circuito.
-4. **Corrientes:** se asignan i₁, i₂, i₃ a ramas independientes y el resto se obtiene con la ley de corrientes de Kirchhoff (LKC) en los nodos.
-5. **Conversión a mecánico:**
-   - La corriente por una inductancia es la velocidad de su cuerpo.
-   - Un elemento que lleva una sola corriente va entre su cuerpo y la pared fija.
-   - Un elemento que lleva la diferencia de dos corrientes va entre los dos cuerpos correspondientes.
-6. **Serie ↔ paralelo:** elementos en serie en el circuito pasan a paralelo en el sistema mecánico.
-
----
-
 ## Solución por pasos
 
 ### Paso 1. Análisis de inductancias y fuentes compartidas (circuito original)

@@ -8,19 +8,6 @@ Hallar el sistema mecánico equivalente del circuito eléctrico, que tiene forma
 
 ---
 
-## Reglas
-
-1. **Analogía de voltajes:** inductancia = cuerpo (masa), fuente = fuerza, capacitor C = resorte 1/C, resistencia R = amortiguador, corriente = velocidad.
-2. **Grados de libertad:** número de mallas = N. Para un circuito conexo, N = aristas − nodos + 1.
-3. **Cubo:** se dibuja plano eligiendo una de sus 6 caras como cara exterior. La cara exterior **no** es una malla; las otras 5 caras sí.
-4. **Compartidos:** una inductancia (cuerpo) o una fuente (fuerza) no puede estar compartida entre dos mallas. Solo se analizan inductancias y fuentes. Si alguna está compartida, se elige otra cara exterior (se gira el circuito).
-5. **Numeración:** las mallas con inductancia llevan el número de su inductancia (3, 4 y 5). Las mallas sin inductancia son 1 y 2. Una malla sin inductancia es un **cuerpo simulado** de masa 0, que se conecta igual que cualquier cuerpo.
-6. **Corrientes:** una corriente de malla por malla (i₁ a i₅). Un elemento en una sola malla lleva la corriente de esa malla. Un elemento compartido por dos mallas lleva la diferencia de sus corrientes.
-7. **Conversión a mecánico:** la corriente de una malla es la velocidad de su cuerpo. Un elemento en una sola malla va entre su cuerpo y la pared fija. Un elemento compartido va entre los dos cuerpos de sus mallas.
-8. **Serie ↔ paralelo:** elementos en serie en el circuito pasan a paralelo en el sistema mecánico.
-
----
-
 ## Solución por pasos
 
 ### Paso 1. Grados de libertad y cara exterior

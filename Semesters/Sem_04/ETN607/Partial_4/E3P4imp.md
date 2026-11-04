@@ -12,45 +12,6 @@ Datos: $H$ distancia techo–piso; $y_1$, $y_2$ medidos hacia abajo desde el tec
 
 ---
 
-## Reglas
-
-1. **Analogía de voltajes:** fuerza = fuente, masa $M$ = inductancia $L$, resorte $K$ = capacitor $1/C$, amortiguador $C$ = resistencia $R$, velocidad = corriente, posición = carga.
-2. **Grados de libertad:** $N$ = número de cuerpos − número de ligaduras. Cada ligadura relaciona las posiciones de los cuerpos.
-3. **Desviaciones:** $y_1$ e $y_2$ se miden como desviaciones respecto del equilibrio, así las constantes (longitudes naturales y $H$) se cancelan. La ligadura derivada da $\dot{y}_2$ en función de $\dot{y}_1$.
-4. **Energías** en función de la coordenada generalizada:
-
-$$
-T = \sum \frac{m}{2} v^2, \qquad V = \sum \frac{K}{2} (\text{deformación})^2, \qquad P = \sum \frac{C}{2} (\text{velocidad del amortiguador})^2
-$$
-
-   En $V$ la deformación de cada resorte se calcula con la longitud que lo estira. En $P$ se usa la velocidad en el extremo del amortiguador.
-
-5. **Ecuación de Lagrange:**
-
-$$
-\frac{d}{dt}\left(\frac{\partial T}{\partial \dot{q}}\right) - \frac{\partial T}{\partial q} = -\frac{\partial V}{\partial q} - \frac{\partial P}{\partial \dot{q}} + Q
-$$
-
-   Como $T$ no depende de $q$, desaparece $\partial T / \partial q$.
-
-6. **Fuerza generalizada:**
-
-$$
-Q = F \cdot \frac{\partial y_{\text{punto de aplicación}}}{\partial q}
-$$
-
-   Es positiva si $F$ empuja en el sentido en que crece la coordenada.
-
-7. **Conversión a circuito:** la EDO queda de la forma:
-
-$$
-(\text{coef.})\,\ddot{q} + (\text{coef.})\,\dot{q} + (\text{coef.})\,q = (\text{fuerza})
-$$
-
-   Cada coeficiente es un elemento de una sola malla en serie: el de $\ddot{q}$ es $L$, el de $\dot{q}$ es $R$, el de $q$ es $1/C$, y el miembro derecho es la fuente. La corriente de la malla es $\dot{q}$.
-
----
-
 ## Solución por pasos
 
 ### Paso 1. Grados de libertad, ligadura y velocidades

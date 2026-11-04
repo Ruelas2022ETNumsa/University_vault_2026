@@ -14,37 +14,6 @@ Datos: cara inclinada de la cuña a $60^\circ$; $x_1$ posición de la cuña (des
 
 ---
 
-## Reglas
-
-1. **Analogía de voltajes:** fuerza = fuente, masa $M$ = inductancia $L$, resorte $K$ = capacitor $1/C$, amortiguador $C$ = resistencia $R$, velocidad = corriente, posición = carga.
-2. **Grados de libertad:** $N$ = número de cuerpos − número de ligaduras. Cada ligadura relaciona las posiciones de los cuerpos.
-3. **Ligadura geométrica:** el contacto de la placa está en la horizontal $B_2$ y sobre la cara inclinada. De la tangente de $60^\circ$ sale $y_2$ en función de $x_1$. Se define la constante $a = \sqrt{3}\,B_2$ y se deriva para obtener $\dot{y}_2$ en función de $\dot{x}_1$.
-4. **Energías** en función de la coordenada generalizada, con posiciones absolutas (la gravedad y el resorte aportan términos constantes):
-
-$$
-T = \sum \frac{m}{2} v^2, \qquad V = \sum m g h + \sum \frac{K}{2} (\text{longitud} - l_0)^2, \qquad P = \sum \frac{C}{2} (\text{velocidad del amortiguador})^2
-$$
-
-   Para un amortiguador entre dos cuerpos se usa el cuadrado de la diferencia de velocidades. Las constantes aditivas de $V$ se eliminan al derivar.
-
-5. **Ecuación de Lagrange:**
-
-$$
-\frac{d}{dt}\left(\frac{\partial T}{\partial \dot{q}}\right) - \frac{\partial T}{\partial q} = -\frac{\partial V}{\partial q} - \frac{\partial P}{\partial \dot{q}} + Q
-$$
-
-   Como $T$ no depende de $q$, desaparece $\partial T / \partial q$. Aquí $Q = 0$.
-
-6. **Conversión a circuito:** la EDO se ordena como:
-
-$$
-(\text{coef.})\,\ddot{q} + (\text{coef.})\,\dot{q} + K\,q = (\text{constante})
-$$
-
-   El coeficiente de $\ddot{q}$ es $L$, el de $\dot{q}$ es $R$ y el de $q$ es $1/C$. Los términos que no dependen de $q$ ni de sus derivadas pasan al miembro derecho y forman una fuente constante $E$. La corriente de la malla es $\dot{q}$.
-
----
-
 ## Solución por pasos
 
 ### Paso 1. Grados de libertad, ligadura y velocidades
