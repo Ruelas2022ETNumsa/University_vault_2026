@@ -1,162 +1,145 @@
-### 1. Grados de libertad $N$, mallas y tabla de inductancias
+### 1. Circuito original, giro y mallas del girado
 
-* **Número de mallas (grados de libertad):**
-  
-$$
-\text{Aristas} = 6 \text{ (A–B, A–C, B–C, A–D, B–D, C–D)}, \qquad \text{Nodos} = 4
-$$
+* **Grados de libertad ($N$):**
+  * **Nodos:** 7 $A, B, C, D, E, F, G$.
+  * **Aristas:** 9 ($R_1, C_2, E, R_{23}, L_3, R_{13}, C_{13}, C_1$ y el cable F–E).
+  * $N = 9 - 7 + 1 = 3 \text{ mallas}$.
 
-  
-$$
-N = \text{aristas} - \text{nodos} + 1 = 6 - 4 + 1 = 3 \text{ mallas}
-$$
+* **Mallas del circuito original y tabla de compartidos:**
+  * Malla 1 (izquierda): A–B–G–E–F–A. Contiene $E$ y $L_3$.
+  * Malla 2 (derecha-superior): B–C–G–B. Contiene $E$.
+  * Malla 3 (derecha-inferior): G–C–D–E–G. Contiene $L_3$.
 
+  | Elemento | Ubicación | Mallas que lo contienen | ¿Está compartido? |
+  | :--- | :--- | :--- | :--- |
+  | **Fuente $E$** | B–G | Malla 1 y Malla 2 | **Sí** |
+  | **Inductancia $L_3$** | G–E | Malla 1 y Malla 3 | **Sí** |
 
-* **Descripción de las 3 mallas interiores (sentido horario):**
-  * **Malla 1 (sin inductancia – cuerpo simulado):** Malla superior izquierda (nodos A–B–D–A). Contiene a $R_1$ (A–B), $R_{13}$ (B–D) y $R_{12}$ (D–A).
-  * **Malla 2 (con $L_2$):** Malla superior derecha (nodos A–D–C–A). Contiene a $R_{12}$ (A–D), $C_{23}$ (D–C) y $L_2$ (C–A).
-  * **Malla 3 (con $L_3$):** Malla inferior (nodos B–C–D–B). Contiene a $L_3$ (B–C), $C_{23}$ (C–D) y $R_{13}$ (D–B).
+  **Determinación:** SÍ se debe girar el circuito porque la fuente $E$ y la inductancia $L_3$ están compartidas entre mallas.
 
-* **Tabla de inductancias:**
+* **Cara exterior elegida para el circuito girado:**
+  * Se elige la cara **A–B–G–E–F–A** como nueva cara exterior.
+  * Al exteriorizarla, las aristas B–G (fuente $E$) y G–E (inductancia $L_3$) forman parte del perímetro exterior y pasan a pertenecer a una sola malla interior cada una.
 
-| Elemento | Ubicación / Arista | Mallas que lo contienen | ¿Está compartido? |
-| :--- | :--- | :--- | :--- |
-| **$L_2$** | A–C (borde exterior derecho) | Solo Malla 2 | **No** |
-| **$L_3$** | B–C (borde exterior inferior) | Solo Malla 3 | **No** |
+* **Las 3 mallas del circuito girado:**
+  * **Malla 1 (sin inductancia ni fuente – cuerpo simulado):** Malla interiorizada (A–B–C–D–E–F–A). Elementos: $R_1$ (A–B), $C_1$ (A–F), cable (F–E), $C_{12}$ (B–C, renombrado de $C_2$), $C_{13}$ (C–D) y $R_{13}$ (E–D).
+  * **Malla 2 (con Fuente $E$):** Triángulo superior (B–C–G–B). Elementos: Fuente $E$ (B–G), $C_{12}$ (B–C) y $R_{23}$ (G–C).
+  * **Malla 3 (con $L_3$):** Cuadrilátero inferior (G–C–D–E–G). Elementos: Inductancia $L_3$ (G–E), $R_{23}$ (G–C), $C_{13}$ (C–D) y $R_{13}$ (E–D).
 
-*Conclusión:* Ninguna inductancia está compartida entre dos mallas. **No es necesario girar el circuito.**
+  **Tabla del circuito girado:**
+  | Elemento | Ubicación | Mallas que lo contienen | ¿Está compartido? |
+  | :--- | :--- | :--- | :--- |
+  | **Fuente $E$** | B–G | Solo Malla 2 | **No** |
+  | **Inductancia $L_3$** | G–E | Solo Malla 3 | **No** |
 
 ---
 
-### 2. Corrientes por cada elemento y verificación con LKC en el nodo D
+### 2. Corriente por cada uno de los 8 elementos y comprobación con LKC
 
-Asumiendo corrientes de malla $i_1, i_2, i_3$ en sentido horario:
+Tomando corrientes de malla $i_1, i_2, i_3$ en sentido horario:
 
-* **Elementos en una sola malla:**
-  1. **Resistor $R_1$** (A–B): $i_1$ (de A hacia B)
-  2. **Inductancia $L_2$** (A–C): $i_2$ (de C hacia A)
-  3. **Inductancia $L_3$** (B–C): $i_3$ (de B hacia C)
+1. **Resistor $R_1$** (A–B): $i_1$
+2. **Capacitor $C_1$** (A–F): $i_1$
+3. **Fuente $E$** (B–G): $i_2$
+4. **Inductancia $L_3$** (G–E): $i_3$
+5. **Capacitor $C_{12}$** (B–C): $i_1 - i_2$
+6. **Capacitor $C_{13}$** (C–D): $i_1 - i_3$
+7. **Resistor $R_{13}$** (E–D): $i_1 - i_3$
+8. **Resistor $R_{23}$** (G–C): $i_3 - i_2$
 
-* **Elementos compartidos (medidos hacia el nodo D):**
-  4. **Resistor $R_{12}$** (A–D): La Malla 2 va de A a D ($+i_2$) y la Malla 1 va de D a A ($-i_1$).  
-     
-$$
-i_{A\text{–}D} = i_2 - i_1
-$$
-
-  5. **Resistor $R_{13}$** (B–D): La Malla 1 va de B a D ($+i_1$) y la Malla 3 va de D a B ($-i_3$).  
-     
-$$
-i_{B\text{–}D} = i_1 - i_3
-$$
-
-  6. **Capacitor $C_{23}$** (C–D): La Malla 3 va de C a D ($+i_3$) y la Malla 2 va de D a C ($-i_2$).  
-     
-$$
-i_{C\text{–}D} = i_3 - i_2
-$$
-
-
-* **Comprobación con LKC en el nodo D:**
+**Comprobación con Ley de Corrientes de Kirchhoff $LKC$:**
+* **Nodo B:**  
+  Entra $i_1$ (por A–B). Salen $i_2$ (por B–G) e $(i_1 - i_2)$ (por B–C).  
   
 $$
-\sum i_{\text{hacia D}} = i_{A\text{–}D} + i_{B\text{–}D} + i_{C\text{–}D} = (i_2 - i_1) + (i_1 - i_3) + (i_3 - i_2) = 0
+\sum i_{\text{entra}} - \sum i_{\text{sale}} = i_1 - \left[ i_2 + (i_1 - i_2) \right] = i_1 - i_1 = 0 \quad \checkmark
 $$
 
-  *(Se verifica exactamente 0).*
+* **Nodo E:**  
+  Entra $i_1$ (por F–E). Salen $i_3$ (por E–G) e $(i_1 - i_3)$ (por E–D).  
+  
+$$
+\sum i_{\text{entra}} - \sum i_{\text{sale}} = i_1 - \left[ i_3 + (i_1 - i_3) \right] = i_1 - i_1 = 0 \quad \checkmark
+$$
+
 
 ---
 
 ### 3. Sistema mecánico equivalente
 
 #### A. Cuerpos (masas) y Fuerzas
-* **Cuerpo 1 (Malla 1):** Masa simulada $m_1 = 0$ (sin inductancia), velocidad $v_1 = i_1$.
-* **Cuerpo 2 (Malla 2):** Masa real $m_2 = L_2$, velocidad $v_2 = i_2$.
+* **Cuerpo 1 (Malla 1):** Masa simulada $m_1 = 0$, velocidad $v_1 = i_1$.
+* **Cuerpo 2 (Malla 2):** Masa simulada $m_2 = 0$, velocidad $v_2 = i_2$.
 * **Cuerpo 3 (Malla 3):** Masa real $m_3 = L_3$, velocidad $v_3 = i_3$.
-* **Fuerzas:** No existen fuentes en el circuito, por lo que $F_1 = F_2 = F_3 = 0$.
+* **Fuerza:** Fuerza $F_2 = E$ aplicada sobre el **Cuerpo 2**.
 
 #### B. Conexiones de cada elemento
 1. **A la pared fija ($v = 0$):**
-   * **Amortiguador $c_1 = R_1$:** Entre el **Cuerpo 1** y la pared fija (corriente $i_1$).
-   * **Masa $m_2 = L_2$:** Masa del **Cuerpo 2**.
+   * **Amortiguador $c_1 = R_1$** y **Resorte $k_1 = 1/C_1$** en paralelo: Conectados entre el **Cuerpo 1** y la pared fija.
+   * **Fuerza $F_2 = E$:** Actúa sobre el **Cuerpo 2**.
    * **Masa $m_3 = L_3$:** Masa del **Cuerpo 3**.
-
 2. **Entre cuerpos:**
-   * **Amortiguador $c_{12} = R_{12}$:** Entre **Cuerpo 1** y **Cuerpo 2** (velocidad relativa $v_1 - v_2$).
-   * **Amortiguador $c_{13} = R_{13}$:** Entre **Cuerpo 1** y **Cuerpo 3** (velocidad relativa $v_1 - v_3$).
-   * **Resorte $k_{23} = 1/C_{23}$:** Entre **Cuerpo 2** y **Cuerpo 3** (velocidad relativa $v_2 - v_3$).
+   * **Resorte $k_{12} = 1/C_{12}$:** Entre el **Cuerpo 1** y el **Cuerpo 2** (velocidad relativa $v_1 - v_2$).
+   * **Resorte $k_{13} = 1/C_{13}$** y **Amortiguador $c_{13} = R_{13}$** en paralelo: Entre el **Cuerpo 1** y el **Cuerpo 3** (velocidad relativa $v_1 - v_3$).
+   * **Amortiguador $c_{23} = R_{23}$:** Entre el **Cuerpo 2** y el **Cuerpo 3** (velocidad relativa $v_3 - v_2$).
 
-#### C. Verificación de representación (6 elementos)
-* 1 amortiguador a pared ($R_1$), 2 masas ($L_2, L_3$), 2 amortiguadores entre cuerpos ($R_{12}, R_{13}$) y 1 resorte entre cuerpos ($C_{23}$).  
-* **Total:** $1 + 2 + 2 + 1 = 6\text{ elementos representados}$.
+#### C. Verificación de representación (8 elementos)
+* **A pared / Masa / Fuerza:** $R_1$ (c1), $C_1$ (k1), $E$ (F2), $L_3$ (m3).
+* **Entre cuerpos:** $C_{12}$ (k12), $C_{13}$ (k13), $R_{13}$ (c13), $R_{23}$ (c23).
+* **Total:** $4 + 4 = 8\text{ elementos representados}$.
 
 ---
 
 ### 4. Energías $T$, $V$ y $P$
 
-Definiendo la carga de malla $q_r = \int i_r\, dt$:
+Definiendo $q_r = \int i_r\, dt$:
 
 * **Energía Cinética ($T$):**
   
 $$
-T = \frac{1}{2} L_2 i_2^2 + \frac{1}{2} L_3 i_3^2
+T = \frac{1}{2} L_3 i_3^2
 $$
 
 
 * **Energía Potencial ($V$):**
   
 $$
-V = \frac{1}{2 C_{23}} \left( \int i_2\, dt - \int i_3\, dt \right)^2 = \frac{1}{2 C_{23}} (q_2 - q_3)^2
+V = \frac{1}{2 C_1} \left(\int i_1\, dt\right)^2 + \frac{1}{2 C_{12}} \left(\int i_1\, dt - \int i_2\, dt\right)^2 + \frac{1}{2 C_{13}} \left(\int i_1\, dt - \int i_3\, dt\right)^2 + E \int i_2\, dt
 $$
 
 
 * **Función de Disipación de Rayleigh ($P$):**
   
 $$
-P = \frac{1}{2} R_1 i_1^2 + \frac{1}{2} R_{12} (i_1 - i_2)^2 + \frac{1}{2} R_{13} (i_1 - i_3)^2
+P = \frac{1}{2} R_1 i_1^2 + \frac{1}{2} R_{13} (i_1 - i_3)^2 + \frac{1}{2} R_{23} (i_3 - i_2)^2
 $$
 
 
 ---
 
-### 5. Ecuaciones de Lagrange
+### 5. Las tres ecuaciones de Lagrange
 
-Aplicando $\frac{d}{dt}\left(\frac{\partial T}{\partial i_r}\right) + \frac{\partial P}{\partial i_r} + \frac{\partial V}{\partial q_r} = 0$:
+Aplicando $\frac{d}{dt}\left(\frac{\partial T}{\partial i_r}\right) = -\frac{\partial V}{\partial q_r} - \frac{\partial P}{\partial i_r}$ con $q_r = \int i_r\, dt$:
 
 1. **Para $i_1$ (Malla 1):**
    
 $$
-\frac{d}{dt}(0) + \left[ R_1 i_1 + R_{12} (i_1 - i_2) + R_{13} (i_1 - i_3) \right] + 0 = 0
-$$
-
-   
-$$
-(R_1 + R_{12} + R_{13}) i_1 - R_{12} i_2 - R_{13} i_3 = 0
+(R_1 + R_{13}) i_1 - R_{13} i_3 + \left(\frac{1}{C_1} + \frac{1}{C_{12}} + \frac{1}{C_{13}}\right) \int i_1\, dt - \frac{1}{C_{12}} \int i_2\, dt - \frac{1}{C_{13}} \int i_3\, dt = 0
 $$
 
 
 2. **Para $i_2$ (Malla 2):**
    
 $$
-L_2 \frac{di_2}{dt} - R_{12} (i_1 - i_2) + \frac{1}{C_{23}} \left( \int i_2\, dt - \int i_3\, dt \right) = 0
-$$
-
-   
-$$
-L_2 \frac{di_2}{dt} - R_{12} i_1 + R_{12} i_2 + \frac{1}{C_{23}} \int i_2\, dt - \frac{1}{C_{23}} \int i_3\, dt = 0
+R_{23} i_2 - R_{23} i_3 - \frac{1}{C_{12}} \int i_1\, dt + \frac{1}{C_{12}} \int i_2\, dt = -E
 $$
 
 
 3. **Para $i_3$ (Malla 3):**
    
 $$
-L_3 \frac{di_3}{dt} - R_{13} (i_1 - i_3) - \frac{1}{C_{23}} \left( \int i_2\, dt - \int i_3\, dt \right) = 0
-$$
-
-   
-$$
-L_3 \frac{di_3}{dt} - R_{13} i_1 + R_{13} i_3 - \frac{1}{C_{23}} \int i_2\, dt + \frac{1}{C_{23}} \int i_3\, dt = 0
+L_3 \frac{di_3}{dt} - R_{13} i_1 - R_{23} i_2 + (R_{13} + R_{23}) i_3 - \frac{1}{C_{13}} \int i_1\, dt + \frac{1}{C_{13}} \int i_3\, dt = 0
 $$
 
 
-⚙️ ¿Deseas que genere el código TikZ para graficar el diagrama del circuito plano o el esquema de las masas conectadas?
+⚙️ ¿Quieres que elabore un diagrama en TikZ del circuito girado o del modelo mecánico de masas conectadas?
