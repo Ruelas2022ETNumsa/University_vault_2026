@@ -10129,7 +10129,9 @@
         "E1P4 1.md",
         "analogia.md",
         "E2P4f.md",
-        "E3P4f.md"
+        "E3P4f.md",
+        "E4P4f.md",
+        "E5P4f.md"
       ],
       "sortOrder": "custom",
       "ctime": 1793744505523,
@@ -10157,7 +10159,7 @@
       "isPinned": false,
       "isHidden": false,
       "ctime": 1793757670569,
-      "mtime": 1793761092329
+      "mtime": 1793762810892
     },
     "Semesters/Sem_04/ETN607/Partial_4/E1P4f.md": {
       "isPinned": false,
@@ -10176,6 +10178,18 @@
       "isHidden": false,
       "ctime": 1793761190094,
       "mtime": 1793761506333
+    },
+    "Semesters/Sem_04/ETN607/Partial_4/E4P4f.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1793762342388,
+      "mtime": 1793762342388
+    },
+    "Semesters/Sem_04/ETN607/Partial_4/E5P4f.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1793763015445,
+      "mtime": 1793763015445
     }
   },
   "showHidden": false,
