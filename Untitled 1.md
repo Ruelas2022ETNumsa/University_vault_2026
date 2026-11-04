@@ -1,87 +1,141 @@
-### 1. Cara exterior elegida y las 5 mallas
+### 1. Grados de libertad $N$, ligadura y relación de velocidades
 
-El circuito es conexo y tiene 8 nodos y 12 aristas, por lo que posee:
-
+* **Número de grados de libertad:**  
+  
 $$
-\text{Grados de libertad } N = 12 - 8 + 1 = 5 \text{ mallas}
+\text{Nodos/Cuerpos} = 2 \text{ (polea 1 y polea 2)}, \qquad \text{Ligaduras} = 1 \text{ (cuerda de longitud } l \text{)}
+$$
+
+  
+$$
+N = 2 - 1 = 1 \quad \rightarrow \quad \text{Coordenada generalizada: } q = y_1
 $$
 
 
-- **Cara exterior elegida:** Cara **EFGH** (al elegirla como cara exterior, no es una malla interior y sus elementos forman el perímetro exterior).
-- **Mallas (5 mallas interiores):**
-  - **Malla 1 (Cara ABCD - sin inductancia):** Aristas A–B ($R_{ab}$), B–C ($R_{bc}$), C–D ($R_{cd}$) y D–A ($R_{ad}$).
-  - **Malla 2 (Cara ABFE - sin inductancia):** Aristas A–B ($R_{ab}$), B–F ($C_{bf}$), F–E ($R_{ef}$) y E–A ($R_{ae}$).
-  - **Malla 3 (Cara BCGF - con inductancia $L_3$):** Aristas B–C ($R_{bc}$), C–G ($R_{cg}$), G–F ($L_3$) y F–B ($C_{bf}$).
-  - **Malla 4 (Cara CDHG - con inductancia $L_4$):** Aristas C–D ($R_{cd}$), D–H ($C_{dh}$), H–G ($L_4$) y G–C ($R_{cg}$).
-  - **Malla 5 (Cara DAEH - con inductancia $L_5$ y fuente $S$):** Aristas D–A ($R_{ad}$), A–E ($R_{ae}$), E–H ($L_5$ en serie con $S$) y H–D ($C_{dh}$).
+* **Ecuación de ligadura de la cuerda:**  
+  
+$$
+(H - y_1) + \pi R_1 + (y_2 - y_1) = l \implies H + \pi R_1 + y_2 - 2y_1 = l
+$$
+
+  Medida como desviación respecto al equilibrio (Regla 3):
+  
+$$
+y_2 - 2y_1 = 0 \implies y_2 = 2y_1
+$$
+
+
+* **Relación de velocidades (derivada de la ligadura):**  
+  
+$$
+\dot{y}_2 = 2\dot{y}_1
+$$
+
 
 ---
 
-### 2. Tabla de inductancias y fuentes y revisión de compartidos
+### 2. $T$, $V$ y $P$ en función de $y_1$ y $\dot{y}_1$
 
-| Elemento | Ubicación / Arista | Mallas que lo contienen | ¿Está compartido entre mallas? |
-| :--- | :--- | :--- | :--- |
-| **$L_3$** | F–G | Solo Malla 3 | **No** |
-| **$L_4$** | G–H | Solo Malla 4 | **No** |
-| **$L_5$** | E–H | Solo Malla 5 | **No** |
-| **Fuente $S$** | E–H (en serie con $L_5$) | Solo Malla 5 | **No** |
+* **Energía Cinética ($T$):**  
+  
+$$
+T = \frac{1}{2} m_1 \dot{y}_1^2 + \frac{1}{2} m_2 \dot{y}_2^2 = \frac{1}{2} m_1 \dot{y}_1^2 + \frac{1}{2} m_2 (2\dot{y}_1)^2 = \frac{1}{2} (m_1 + 4m_2) \dot{y}_1^2
+$$
 
-*Conclusión:* Al elegir la cara **EFGH** como cara exterior, **ninguna inductancia ni fuente está compartida** entre mallas. No se requiere girar el cubo.
 
----
+* **Energía Potencial ($V$):**  
+  * Resorte $k_1$: estiramiento $y_1$.  
+  * Resorte $k_2$: rodea la polea 2 y baja al piso en dos tramos de longitud $(H - y_2)$; al bajar la polea una distancia $y_2$, ambos tramos se acortan $y_2$, por lo que su deformación total es $2y_2 = 4y_1$.
+  
+$$
+V = \frac{1}{2} k_1 y_1^2 + \frac{1}{2} k_2 (2y_2)^2 = \frac{1}{2} k_1 y_1^2 + \frac{1}{2} k_2 (4y_1)^2 = \frac{1}{2} (k_1 + 16k_2) y_1^2
+$$
 
-### 3. Corriente por cada uno de los 12 elementos
 
-- **Elementos en una sola malla (perímetro exterior EFGH):**
-  1. **Resistor $R_{ef}$** (Arista E–F): Malla 2 $\rightarrow i_2$
-  2. **Inductancia $L_3$** (Arista F–G): Malla 3 $\rightarrow i_3$
-  3. **Inductancia $L_4$** (Arista G–H): Malla 4 $\rightarrow i_4$
-  4. **Inductancia $L_5$ y Fuente $S$** (Arista E–H): Malla 5 $\rightarrow i_5$
+* **Función de Disipación de Rayleigh ($P$):**  
+  * Amortiguador $c_1$: actúa con velocidad $\dot{y}_1$.  
+  * Amortiguador $c_2$: actúa con velocidad $\dot{y}_2 = 2\dot{y}_1$.
+  
+$$
+P = \frac{1}{2} c_1 \dot{y}_1^2 + \frac{1}{2} c_2 \dot{y}_2^2 = \frac{1}{2} c_1 \dot{y}_1^2 + \frac{1}{2} c_2 (2\dot{y}_1)^2 = \frac{1}{2} (c_1 + 4c_2) \dot{y}_1^2
+$$
 
-- **Elementos compartidos entre dos mallas:**
-  5. **Resistor $R_{ab}$** (Arista A–B): Compartido por Malla 1 y Malla 2 $\rightarrow i_1 - i_2$
-  6. **Resistor $R_{bc}$** (Arista B–C): Compartido por Malla 1 y Malla 3 $\rightarrow i_1 - i_3$
-  7. **Resistor $R_{cd}$** (Arista C–D): Compartido por Malla 1 y Malla 4 $\rightarrow i_1 - i_4$
-  8. **Resistor $R_{ad}$** (Arista D–A): Compartido por Malla 1 y Malla 5 $\rightarrow i_1 - i_5$
-  9. **Capacitor $C_{bf}$** (Arista B–F): Compartido por Malla 2 y Malla 3 $\rightarrow i_2 - i_3$
-  10. **Resistor $R_{cg}$** (Arista C–G): Compartido por Malla 3 y Malla 4 $\rightarrow i_3 - i_4$
-  11. **Capacitor $C_{dh}$** (Arista D–H): Compartido por Malla 4 y Malla 5 $\rightarrow i_4 - i_5$
-  12. **Resistor $R_{ae}$** (Arista A–E): Compartido por Malla 2 y Malla 5 $\rightarrow i_2 - i_5$
 
 ---
 
-### 4. Sistema mecánico equivalente
+### 3. Ecuación de Lagrange y EDO final
 
-#### A. Cuerpos (masas) y Fuerzas
-- **Cuerpo 1 (Malla 1):** Masa simulada $m_1 = 0$, velocidad $v_1 = i_1$.
-- **Cuerpo 2 (Malla 2):** Masa simulada $m_2 = 0$, velocidad $v_2 = i_2$.
-- **Cuerpo 3 (Malla 3):** Masa real $m_3 = L_3$, velocidad $v_3 = i_3$.
-- **Cuerpo 4 (Malla 4):** Masa real $m_4 = L_4$, velocidad $v_4 = i_4$.
-- **Cuerpo 5 (Malla 5):** Masa real $m_5 = L_5$, velocidad $v_5 = i_5$.
-- **Fuerzas:** Fuerza $F_5 = S$ aplicada directamente sobre el **Cuerpo 5**.
+* **Fuerza generalizada ($Q$):**  
+  Dado que $F(t)$ actúa sobre la polea 2 (en sentido positivo de $y_2$):
+  
+$$
+Q = F(t) \cdot \frac{\partial y_2}{\partial y_1} = F(t) \cdot 2 = 2 F(t)
+$$
 
-#### B. Conexiones de cada elemento
 
-1. **A la pared fija ($v = 0$):**
-   - **Amortiguador $c_{ef} = R_{ef}$** (Arista E–F): Conectado entre la pared fija y el **Cuerpo 2** ($v_2$).
-   - **Masa $m_3 = L_3$** (Arista F–G): Masa del **Cuerpo 3** ($v_3$).
-   - **Masa $m_4 = L_4$** (Arista G–H): Masa del **Cuerpo 4** ($v_4$).
-   - **Masa $m_5 = L_5$** y **Fuerza $F_5 = S$** (Arista E–H): Masa del **Cuerpo 5** ($v_5$) con fuerza aplicada $F_5$.
+* **Derivadas para la ecuación de Lagrange ($q = y_1$):**  
+  
+$$
+\frac{\partial T}{\partial \dot{y}_1} = (m_1 + 4m_2) \dot{y}_1 \implies \frac{d}{dt}\left(\frac{\partial T}{\partial \dot{y}_1}\right) = (m_1 + 4m_2) \ddot{y}_1
+$$
 
-2. **Entre cuerpos:**
-   - **Amortiguador $c_{ab} = R_{ab}$** (Arista A–B): Entre **Cuerpo 1** y **Cuerpo 2** ($v_1 - v_2$).
-   - **Amortiguador $c_{bc} = R_{bc}$** (Arista B–C): Entre **Cuerpo 1** y **Cuerpo 3** ($v_1 - v_3$).
-   - **Amortiguador $c_{cd} = R_{cd}$** (Arista C–D): Entre **Cuerpo 1** y **Cuerpo 4** ($v_1 - v_4$).
-   - **Amortiguador $c_{ad} = R_{ad}$** (Arista D–A): Entre **Cuerpo 1** y **Cuerpo 5** ($v_1 - v_5$).
-   - **Resorte $k_{bf} = 1/C_{bf}$** (Arista B–F): Entre **Cuerpo 2** y **Cuerpo 3** ($v_2 - v_3$).
-   - **Amortiguador $c_{cg} = R_{cg}$** (Arista C–G): Entre **Cuerpo 3** y **Cuerpo 4** ($v_3 - v_4$).
-   - **Resorte $k_{dh} = 1/C_{dh}$** (Arista D–H): Entre **Cuerpo 4** y **Cuerpo 5** ($v_4 - v_5$).
-   - **Amortiguador $c_{ae} = R_{ae}$** (Arista A–E): Entre **Cuerpo 2** y **Cuerpo 5** ($v_2 - v_5$).
+  
+$$
+\frac{\partial T}{\partial y_1} = 0, \qquad \frac{\partial V}{\partial y_1} = (k_1 + 16k_2) y_1, \qquad \frac{\partial P}{\partial \dot{y}_1} = (c_1 + 4c_2) \dot{y}_1
+$$
 
-#### C. Verificación de las 12 aristas
-- **4 aristas exteriores (a pared / masas individuales):** E–F ($R_{ef}$), F–G ($L_3$), G–H ($L_4$), E–H ($L_5 + S$).
-- **4 aristas de la cara superior ABCD (entre Cuerpo 1 y Cuerpos 2, 3, 4, 5):** A–B ($R_{ab}$), B–C ($R_{bc}$), C–D ($R_{cd}$), D–A ($R_{ad}$).
-- **4 aristas verticales (entre masas adyacentes):** B–F ($C_{bf}$), C–G ($R_{cg}$), D–H ($C_{dh}$), A–E ($R_{ae}$).
-- **Total:** $4 + 4 + 4 = 12\text{ aristas representadas}$.
 
-⚙️ ¿Te gustaría que dibuje el diagrama esquemático en TikZ del circuito desplegado o del sistema mecánico de 5 cuerpos resultante?
+* **Sustitución en Lagrange:**  
+  
+$$
+\frac{d}{dt}\left(\frac{\partial T}{\partial \dot{y}_1}\right) - \frac{\partial T}{\partial y_1} = -\frac{\partial V}{\partial y_1} - \frac{\partial P}{\partial \dot{y}_1} + Q
+$$
+
+  
+$$
+(m_1 + 4m_2) \ddot{y}_1 = -(k_1 + 16k_2) y_1 - (c_1 + 4c_2) \dot{y}_1 + 2F(t)
+$$
+
+
+* **EDO final ordenada:**  
+  
+$$
+(m_1 + 4m_2) \ddot{y}_1 + (c_1 + 4c_2) \dot{y}_1 + (k_1 + 16k_2) y_1 = 2F(t)
+$$
+
+
+---
+
+### 4. Circuito eléctrico equivalente
+
+Aplicando la analogía de voltajes e identificando los coeficientes con la forma $L \ddot{q} + R \dot{q} + \frac{1}{C} q = E(t)$:
+
+* **Malla:** Circuito de **una sola malla en serie**.
+* **Inductancia total ($L$):**  
+  
+$$
+L = m_1 + 4m_2
+$$
+
+* **Resistencia total ($R$):**  
+  
+$$
+R = c_1 + 4c_2
+$$
+
+* **Capacitancia total ($C$):**  
+  
+$$
+\frac{1}{C} = k_1 + 16k_2 \implies C = \frac{1}{k_1 + 16k_2}
+$$
+
+* **Fuente de voltaje ($E(t)$):**  
+  
+$$
+E(t) = 2F(t)
+$$
+
+* **Corriente de malla y sentido:**  
+  La corriente de la malla es $i(t) = \dot{y}_1$. El sentido de la corriente coincide con la polaridad de la fuente que impulsa el flujo de carga $q = y_1$ en sentido positivo.
+
+⚙️ ¿Deseas que elabore el esquema en TikZ del circuito $RLC$ equivalente o del diagrama de poleas?

@@ -46,13 +46,15 @@ N = 12 − 8 + 1 = **5 mallas**.
 
 **Mallas (las 5 caras restantes):**
 
-| Malla | Cara | Aristas y elementos | Inductancia |
-|---|---|---|---|
-| **1** | A-B-C-D | Rab, Rbc, Rcd, Rad | ninguna (simulada) |
-| **2** | A-B-F-E | Rab, Cbf, R_ef, Rae | ninguna (simulada) |
-| **3** | B-C-G-F | Rbc, Rcg, L3, Cbf | L3 |
-| **4** | C-D-H-G | Rcd, Cdh, L4, Rcg | L4 |
-| **5** | D-A-E-H | Rad, Rae, L5 con S, Cdh | L5 y S |
+| Malla | Cara | Aristas y elementos | Inductancia en la malla | Cuerpo en el mecánico |
+|---|---|---|---|---|
+| **1** | A-B-C-D | Rab, Rbc, Rcd, Rad | ninguna | **simulado L1** (masa 0) |
+| **2** | A-B-F-E | Rab, Cbf, R_ef, Rae | ninguna | **simulado L2** (masa 0) |
+| **3** | B-C-G-F | Rbc, Rcg, L3, Cbf | L3 | masa L3 |
+| **4** | C-D-H-G | Rcd, Cdh, L4, Rcg | L4 | masa L4 |
+| **5** | D-A-E-H | Rad, Rae, L5 con S, Cdh | L5 y S | masa L5 |
+
+Las mallas 1 y 2 no tienen inductancia en el circuito real, pero igual son grados de libertad. Por eso en el sistema mecánico aparecen como cuerpos simulados L1 y L2, de masa 0.
 
 ### Paso 2. Inductancias y fuentes compartidas
 
@@ -95,13 +97,15 @@ N = 12 − 8 + 1 = **5 mallas**.
 
 | Cuerpo | Malla | Masa | Velocidad |
 |---|---|---|---|
-| 1 | 1 (A-B-C-D) | 0 (simulado) | v₁ = i₁ |
-| 2 | 2 (A-B-F-E) | 0 (simulado) | v₂ = i₂ |
+| 1 (L1) | 1 (A-B-C-D) | 0 (simulado) | v₁ = i₁ |
+| 2 (L2) | 2 (A-B-F-E) | 0 (simulado) | v₂ = i₂ |
 | 3 | 3 (B-C-G-F) | L3 | v₃ = i₃ |
 | 4 | 4 (C-D-H-G) | L4 | v₄ = i₄ |
 | 5 | 5 (D-A-E-H) | L5 | v₅ = i₅ |
 
 **Fuerzas:** una sola, **F₅ = S**, aplicada sobre el cuerpo 5. L5 y S están en serie en el circuito y quedan en paralelo sobre el cuerpo 5.
+
+**Sentido de la fuerza:** lo fija la polaridad de la fuente respecto al sentido elegido para i₅. Si la fuente empuja la corriente en el sentido positivo de i₅, F₅ es positiva (empuja al cuerpo 5 en el sentido de v₅). Si la empuja en contra, F₅ = −S. El enunciado no da la polaridad de S, así que aquí solo se deja indicada F₅ = ±S sobre el cuerpo 5. Dibujarla a la izquierda o a la derecha del cuerpo no cambia nada, solo es una convención del dibujo.
 
 **Elementos y conexiones:**
 
