@@ -4620,7 +4620,6 @@
       "customOrder": [
         "tmp",
         "section.md",
-        "2026-10-04",
         "2026-10-05",
         "2026-10-22",
         "2026-10-30",
@@ -7953,37 +7952,6 @@
       "ctime": 1790384635527,
       "mtime": 1790384642635
     },
-    "Rubbish/2026-10-04": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "825-Hill-Peterson-Resumen-Docente-ESP.pdf",
-        "data.json",
-        "S. Palani, D. Kalaiyarasi-Principles of Digital Signal Processing - 2nd Ed.pdf",
-        "2026-10-04 23.25.50.0",
-        "2026-10-04 23.26.35.0",
-        "scanned_words.txt"
-      ]
-    },
-    "Rubbish/2026-10-04/825-Hill-Peterson-Resumen-Docente-ESP.pdf": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1787888914115,
-      "mtime": 1754931322100
-    },
-    "Rubbish/2026-10-04/S. Palani, D. Kalaiyarasi-Principles of Digital Signal Processing - 2nd Ed.pdf": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1787018168378,
-      "mtime": 1787837233000
-    },
-    "Rubbish/2026-10-04/data.json": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1781109169958,
-      "mtime": 1791169932250
-    },
     "Semesters/Sem_09/ETN1012": {
       "isPinned": false,
       "isHidden": false,
@@ -8867,40 +8835,6 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": []
-    },
-    "Rubbish/2026-10-04/2026-10-04 23.25.50.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-10-04/2026-10-04 23.25.50.0/data.json": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1781109169958,
-      "mtime": 1791170288303
-    },
-    "Rubbish/2026-10-04/2026-10-04 23.26.35.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "scanned_words.txt"
-      ]
-    },
-    "Rubbish/2026-10-04/2026-10-04 23.26.35.0/scanned_words.txt": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1780114193327,
-      "mtime": 1791170752000
-    },
-    "Rubbish/2026-10-04/scanned_words.txt": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1780114193327,
-      "mtime": 1791170749000
     },
     "Rubbish/2026-10-05/bP.md": {
       "isPinned": false,
@@ -10124,18 +10058,18 @@
     "Semesters/Sem_04/ETN607/Partial_4": {
       "isPinned": false,
       "isHidden": false,
+      "sortOrder": "custom",
       "customOrder": [
         "E1P4f.md",
-        "E1P4 1.md",
         "analogia.md",
         "E2P4f.md",
         "E3P4f.md",
         "E4P4f.md",
         "E5P4f.md",
         "E6P4f.md",
-        "E7P4f.md"
+        "E7P4f.md",
+        "E8P4f.md"
       ],
-      "sortOrder": "custom",
       "ctime": 1793744505523,
       "mtime": 1793744505523
     },
@@ -10144,12 +10078,6 @@
       "isHidden": false,
       "ctime": 1793747284559,
       "mtime": 1793759726644
-    },
-    "Semesters/Sem_04/ETN607/Partial_4/E1P4 1.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1793745018496,
-      "mtime": 1793757286416
     },
     "Untitled.md": {
       "isPinned": false,
@@ -10161,7 +10089,7 @@
       "isPinned": false,
       "isHidden": false,
       "ctime": 1793757670569,
-      "mtime": 1793765073447
+      "mtime": 1793766340094
     },
     "Semesters/Sem_04/ETN607/Partial_4/E1P4f.md": {
       "isPinned": false,
@@ -10204,6 +10132,12 @@
       "isHidden": false,
       "ctime": 1793765268824,
       "mtime": 1793765268824
+    },
+    "Semesters/Sem_04/ETN607/Partial_4/E8P4f.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1793766441324,
+      "mtime": 1793768184270
     }
   },
   "showHidden": false,

@@ -8,11 +8,10 @@ Dado el sistema mecánico de dos poleas, con el extremo libre de la cuerda carga
 
 - Techo fijo arriba y piso fijo abajo, a distancia $H$ del techo.
 - $y_1$, $y_2$, $y_3$: posiciones medidas hacia abajo desde el techo.
-- **Polea 1:** masa $m_1$, radio $R_1$, centro en $y_1$. Cuelga del techo por un resorte $k$ (longitud natural $l_0$) y tiene un amortiguador $c_1$ respecto al techo.
-- **Polea 2:** masa $m_2$, radio $R_2$, centro en $y_2$. Cuelga de la cuerda. Bajo ella hay dos líneas verticales hasta el piso:
-  - Un resorte $k'$ (longitud natural $l_0'$) que rodea la polea 2 (arco $\pi R_2$). Su longitud es $2H - 2y_2 + \pi R_2$.
-  - Un amortiguador $c_2$ entre la polea 2 y el piso, que actúa con la velocidad $\dot{y}_2$.
-- **Cuerda** de longitud $l$: sube desde la polea 2 hasta la polea 1, la rodea (arco $\pi R_1$) y baja hasta su extremo libre, en $y_3$.
+- **Polea 1:** masa $m_1$, radio $R_1$, centro en $y_1$. Cuelga del techo por un resorte $k$ (longitud natural $l_0$).
+- **Polea 2:** masa $m_2$, radio $R_2$, centro en $y_2$. Cuelga de la cuerda, unida a su centro. Bajo ella hay dos líneas verticales hasta el piso, ambas con símbolo de resorte. La hoja las trata como un solo resorte $k'$ (longitud natural $l_0'$) que rodea la polea 2 (arco $\pi R_2$), de longitud $2H - 2y_2 + \pi R_2$.
+- **Amortiguadores:** $c_1$ (polea 1, actúa con la velocidad $\dot{y}_1$) y $c_2$ (polea 2, actúa con $\dot{y}_2$). No están dibujados en la figura, pero la hoja los usa en $P$ y en el circuito.
+- **Cuerda** de longitud $l$: sube desde el centro de la polea 2 hasta la polea 1, la rodea (arco $\pi R_1$) y baja hasta su extremo libre, en $y_3$.
 - **Cuerpo 3:** el extremo libre de la cuerda, en $y_3$. Es un cuerpo ficticio de masa $m_3 = 0$ (se agrega para tener la coordenada $y_3$).
 - Fuerza $F(t)$ sobre el extremo libre, hacia abajo (mismo sentido en que crece $y_3$).
 - Los pesos se desprecian.
@@ -23,7 +22,7 @@ Dado el sistema mecánico de dos poleas, con el extremo libre de la cuerda carga
 > - **Nombres de los resortes:** en una línea de $V$ escribe $k_2$ y en la ecuación de $y_2$ escribe $2k$, pero se trata de $k$ (polea 1) y de $k'$ (bajo la polea 2), respectivamente.
 > - **Ecuaciones incompletas:** la ecuación de $y_2$ queda cortada con puntos suspensivos y la de $y_3$ no se rotula. Además tacha $m_3\ddot{y}_3$ sin desarrollar la masa ficticia.
 > - **Mallas:** numera las mallas 1 y 2 y dibuja la malla derecha antihoraria con $i = \dot{y}_3$. Aquí se numeran 2 y 3 (la malla de cada cuerpo) y todas van en sentido horario, con $i_3 = -\dot{y}_3$.
-> - **Dibujo:** solo dibuja un zigzag entre el techo y la polea 1. Se sigue la hoja, que usa $c_1$ en $P$.
+> - **Dibujo:** solo dibuja resortes (uno arriba y dos símbolos de resorte bajo la polea 2). Los amortiguadores $c_1$ y $c_2$ no están dibujados, aunque la hoja los usa en $P$ y en el circuito. Se sigue la hoja.
 
 ---
 
