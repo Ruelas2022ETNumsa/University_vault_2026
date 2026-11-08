@@ -4620,7 +4620,6 @@
       "customOrder": [
         "tmp",
         "section.md",
-        "2026-10-05",
         "2026-10-22",
         "2026-10-30",
         "2026-08-09",
@@ -8152,17 +8151,6 @@
       "ctime": 1790274913555,
       "mtime": 1790176603000
     },
-    "Rubbish/2026-10-05": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "bP.md",
-        "data.json",
-        "explicacionB.md",
-        "scanned_words.txt"
-      ]
-    },
     "ejemplo2.md": {
       "isPinned": false,
       "isHidden": false,
@@ -8835,30 +8823,6 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": []
-    },
-    "Rubbish/2026-10-05/bP.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791168385717,
-      "mtime": 1791168385717
-    },
-    "Rubbish/2026-10-05/data.json": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1781109169958,
-      "mtime": 1791170863764
-    },
-    "Rubbish/2026-10-05/explicacionB.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1791169980301,
-      "mtime": 1791169980301
-    },
-    "Rubbish/2026-10-05/scanned_words.txt": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1780114193327,
-      "mtime": 1791170791000
     },
     "Rubbish/2026-10-09": {
       "isPinned": false,
