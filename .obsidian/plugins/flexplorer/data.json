@@ -4624,6 +4624,8 @@
         "2026-10-30",
         "2026-11-08",
         "2026-08-09",
+        "2026-11-11",
+        "2026-11-12",
         "draft.md",
         "promtpx.md",
         "update_claude_obsidian.md"
@@ -8735,6 +8737,7 @@
         "ha3.py",
         "ha4.py",
         "ha5.py",
+        "ha5 bk oficial.py",
         "ha5 1.py",
         "propuesta.md",
         "puertos.py",
@@ -9113,62 +9116,68 @@
     "python_arm/detect_motor.py": {
       "isPinned": false,
       "isHidden": false,
-      "ctime": 1794173380669,
-      "mtime": 1794173377000
-    },
-    "python_arm/ha2.py": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1794174201236,
-      "mtime": 1794174198000
+      "ctime": 1794173377344,
+      "mtime": 1794173377344
     },
     "python_arm/ha3.py": {
       "isPinned": false,
       "isHidden": false,
-      "ctime": 1794174913590,
-      "mtime": 1794174910000
+      "ctime": 1794174910203,
+      "mtime": 1794174910203
+    },
+    "python_arm/ha2.py": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1794174198027,
+      "mtime": 1794174198027
     },
     "python_arm/ha4.py": {
       "isPinned": false,
       "isHidden": false,
-      "ctime": 1794176208574,
-      "mtime": 1794176205000
+      "ctime": 1794176205617,
+      "mtime": 1794176205617
     },
     "python_arm/ha5 1.py": {
       "isPinned": false,
       "isHidden": false,
-      "ctime": 1794177788342,
-      "mtime": 1794176679000
+      "ctime": 1794177785721,
+      "mtime": 1794176679113
     },
     "python_arm/ha5.py": {
       "isPinned": false,
       "isHidden": false,
-      "ctime": 1794176682018,
-      "mtime": 1794177839000
-    },
-    "python_arm/propuesta.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1794182822286,
-      "mtime": 1794182817000
+      "ctime": 1794177839777,
+      "mtime": 1794177839777
     },
     "python_arm/puertos.py": {
       "isPinned": false,
       "isHidden": false,
-      "ctime": 1794172956896,
-      "mtime": 1794172954000
+      "ctime": 1794172954647,
+      "mtime": 1794172954647
     },
     "python_arm/resumen_8_nov 1.md": {
       "isPinned": false,
       "isHidden": false,
-      "ctime": 1794182763312,
-      "mtime": 1794178037000
+      "ctime": 1794182762578,
+      "mtime": 1794178037980
     },
     "python_arm/resumen_8_nov.md": {
       "isPinned": false,
       "isHidden": false,
-      "ctime": 1794173770162,
-      "mtime": 1794182817000
+      "ctime": 1794182817677,
+      "mtime": 1794182817677
+    },
+    "python_arm/propuesta.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1794182817236,
+      "mtime": 1794182817238
+    },
+    "python_arm/ha5 bk oficial.py": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1794177839777,
+      "mtime": 1794177839777
     },
     "Rubbish/2026-08-09": {
       "isPinned": false,
@@ -9226,12 +9235,6 @@
       "ctime": 1780114193327,
       "mtime": 1791475904000
     },
-    "Rubbish/draft.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1787873236332,
-      "mtime": 1787873236332
-    },
     "Rubbish/2026-11-08/2026-11-08 17.40.01.0": {
       "isPinned": false,
       "isHidden": false,
@@ -9246,20 +9249,6 @@
       "ctime": 1780114193327,
       "mtime": 1794172831000
     },
-    "Rubbish/2026-11-08/2026-11-08 18.37.22.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "resumen_8_nov.md"
-      ]
-    },
-    "Rubbish/2026-11-08/2026-11-08 18.37.22.0/resumen_8_nov.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1794173770162,
-      "mtime": 1794174920000
-    },
     "Rubbish/2026-11-08/2026-11-08 18.37.24.0": {
       "isPinned": false,
       "isHidden": false,
@@ -9273,6 +9262,20 @@
       "isHidden": false,
       "ctime": 1794173770162,
       "mtime": 1794177438000
+    },
+    "Rubbish/2026-11-08/2026-11-08 18.37.22.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "resumen_8_nov.md"
+      ]
+    },
+    "Rubbish/2026-11-08/2026-11-08 18.37.22.0/resumen_8_nov.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1794173770162,
+      "mtime": 1794174920000
     },
     "Rubbish/2026-11-08/2026-11-08 18.43.11.0": {
       "isPinned": false,
@@ -9350,17 +9353,133 @@
       "ctime": 1794176682018,
       "mtime": 1794176679000
     },
+    "Rubbish/2026-11-08/scanned_words.txt": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1780114193327,
+      "mtime": 1794172724000
+    },
     "Rubbish/2026-11-08/resumen_8_nov.md": {
       "isPinned": false,
       "isHidden": false,
       "ctime": 1794173770162,
       "mtime": 1794173767000
     },
-    "Rubbish/2026-11-08/scanned_words.txt": {
+    "Rubbish/2026-11-11": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "2026-11-11 16.22.00.0",
+        "2026-11-11 16.22.36.0",
+        "2026-11-11 16.22.44.0",
+        "2026-11-11 16.23.18.0",
+        "2026-11-11 16.23.50.0",
+        "data.json",
+        "scanned_words.txt"
+      ]
+    },
+    "Rubbish/2026-11-11/2026-11-11 16.22.00.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "scanned_words.txt"
+      ]
+    },
+    "Rubbish/2026-11-11/2026-11-11 16.22.00.0/scanned_words.txt": {
       "isPinned": false,
       "isHidden": false,
       "ctime": 1780114193327,
-      "mtime": 1794172724000
+      "mtime": 1794428466000
+    },
+    "Rubbish/2026-11-11/2026-11-11 16.22.36.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "scanned_words.txt"
+      ]
+    },
+    "Rubbish/2026-11-11/2026-11-11 16.22.36.0/scanned_words.txt": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1780114193327,
+      "mtime": 1794428505000
+    },
+    "Rubbish/2026-11-11/2026-11-11 16.22.44.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "scanned_words.txt"
+      ]
+    },
+    "Rubbish/2026-11-11/2026-11-11 16.22.44.0/scanned_words.txt": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1780114193327,
+      "mtime": 1794428545000
+    },
+    "Rubbish/2026-11-11/2026-11-11 16.23.18.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "scanned_words.txt"
+      ]
+    },
+    "Rubbish/2026-11-11/2026-11-11 16.23.18.0/scanned_words.txt": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1780114193327,
+      "mtime": 1794428554000
+    },
+    "Rubbish/2026-11-11/2026-11-11 16.23.50.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "scanned_words.txt"
+      ]
+    },
+    "Rubbish/2026-11-11/2026-11-11 16.23.50.0/scanned_words.txt": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1780114193327,
+      "mtime": 1794428583000
+    },
+    "Rubbish/2026-11-11/data.json": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1781109169958,
+      "mtime": 1794335789305
+    },
+    "Rubbish/2026-11-11/scanned_words.txt": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1780114193327,
+      "mtime": 1794182763000
+    },
+    "Rubbish/2026-11-12": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-11-12/data.json": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1781109169958,
+      "mtime": 1794428466000
+    },
+    "Rubbish/draft.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1787873236332,
+      "mtime": 1787873236332
     },
     "Rubbish/promtpx.md": {
       "isPinned": false,
