@@ -35,7 +35,8 @@
         "prueba.py",
         "python_arm",
         "Untitled.md",
-        "Untitled 1.md"
+        "Untitled 1.md",
+        "resumen_brazo_robotico_15_nov.md"
       ]
     },
     "MOC": {
@@ -9609,6 +9610,12 @@
       "isHidden": false,
       "ctime": 1790993910267,
       "mtime": 1790993910267
+    },
+    "resumen_brazo_robotico_15_nov.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1794797983129,
+      "mtime": 1794798068387
     }
   },
   "showHidden": false,
