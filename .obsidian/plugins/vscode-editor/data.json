@@ -18,7 +18,7 @@
   "folding": true,
   "lineNumbers": true,
   "wordWrap": true,
-  "minimap": false,
+  "minimap": true,
   "semanticValidation": true,
   "syntaxValidation": true,
   "themeColor": "AUTO",
