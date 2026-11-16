@@ -31,9 +31,9 @@ hora = datetime.now().strftime("%H:%M")
 worker = sys.argv[1] if len(sys.argv) > 1 else ""
 
 texto = (
-    "Usá el MCP Filesystem y leé E:\\University_vault_2026\\_skills\\_start.md\n"
+    "Usá el MCP Filesystem y leé/ejecuta E:\\University_vault_2026\\_skills\\_start.md\n"
     f"Hora de inicio: {hora}\n"
-    f"worker: {worker}"
+    f"Activa la skill 2"
 )
 
 subprocess.run(
