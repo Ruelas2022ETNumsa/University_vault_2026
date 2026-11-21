@@ -140,12 +140,22 @@ Si el Bluetooth no funciona bien en la etapa 1, probar el cable UART.
 2. Definir la **justificación** (institución, escenario, impacto).
 3. Confirmar con el docente cómo debe aparecer la "Guía resumen del manual de publicaciones con normas APA". Por ahora quedó una guía breve al final de `informe.md`.
 4. Terminar el brazo (ver pendientes de `resumen_16.md`, sección 4).
-5. Comprobar cómo usar el ESP32 con Bluetooth (etapa 0 de la sección 6). Preguntar al usuario qué modelo de ESP32 tiene.
-6. Escribir y probar el código ESP32 → hub (etapa 1). Aún no se escribió nada.
+5. ~~Comprobar el ESP32 con Bluetooth (etapa 0)~~ Hecho el 21-nov: ESP32-WROOM-32 con MicroPython v1.29.0 y Bluetooth activo (sección 8).
+6. ~~Código ESP32 → hub (etapa 1)~~ Hecho el 21-nov (sección 8). Falta la etapa 2: mover un solo motor con botón de accionar, reutilizando `mover()` de `ha7.py` (ya vigila el voltaje y suelta el motor al llegar). Elegir primero la articulación de prueba.
 7. Decidir: botón de accionar o movimiento automático (sección 5.6).
 8. Decidir cómo se maneja el voltaje bajo en el modo remoto (sección 5.5).
 
-## 8. Fuentes del análisis
+## 8. Avances de la tarde del 21-nov (etapas 0 y 1)
+
+- **Respaldo del firmware original** del ESP32 (4 MB) y documentación en `esp32/firmware_original.md`.
+- **MicroPython v1.29.0** instalado con Thonny en el ESP32-WROOM-32 (chip ESP32-D0WD-V3, COM6). Bluetooth de bajo consumo comprobado.
+- `bleradio.py` copiado en `/lib` del ESP32 (8146 bytes).
+- **`ha8.py`** (base `ha7.py`, modo R: recibe y muestra, no mueve motores) y **`esp32/emisor_prueba.py`** (emite `(articulacion, angulo, id_orden)` cada 3 segundos).
+- **Resultado de la etapa 1: la comunicación ESP32 → hub funciona.** Según el usuario, los mensajes llegan casi al instante y al parecer todos; la matriz de luces del hub muestra la letra del puerto (F, D, A, B) y el brazo no se mueve, que es lo esperado en el modo R.
+- Revisado en la terminal de Pybricks (reporte del usuario): llegaron todos los mensajes y estaban correctos, y los valores fuera de rango (codo 200, garra 120) se recortaron a los límites de seguridad. **Etapa 1 cerrada.**
+- **Estado al terminar la sesión:** se queda en el inicio de la etapa 2 (mover un motor con botón de accionar). Sin decidir: con qué articulación empezar (se propuso la garra) y si el código nuevo va en `ha9.py` desde `ha8.py`.
+
+## 9. Fuentes del análisis
 
 - [Pybricks BLE broadcast/observe (commit en pybricks-api)](https://github.com/pybricks/pybricks-api/commit/3274cef849d91700905a56ec073cc2e3fb87f830)
 - [Formato de mensajes broadcast/observe](https://github.yxlr123.workers.dev/pybricks/technical-info/blob/master/pybricks-ble-broadcast-observe.md)
