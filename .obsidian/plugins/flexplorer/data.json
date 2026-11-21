@@ -4651,7 +4651,7 @@
       "isPinned": false,
       "isHidden": false,
       "ctime": 1791168025834,
-      "mtime": 1793764906836
+      "mtime": 1795266720326
     },
     "_PDF/ETN-505": {
       "isPinned": false,
@@ -8748,7 +8748,9 @@
         "ha6.py",
         "pendientes_brazo.md",
         "referencia.md",
-        "resumen_13_nov.md"
+        "resumen_13_nov.md",
+        "ha7.py",
+        "resumen_16.md"
       ],
       "ctime": 1793397348734,
       "mtime": 1793397348734
@@ -9616,6 +9618,18 @@
       "isHidden": false,
       "ctime": 1794797983129,
       "mtime": 1794798068387
+    },
+    "python_arm/resumen_16.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1794894434550,
+      "mtime": 1794894434555
+    },
+    "python_arm/ha7.py": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1794867988587,
+      "mtime": 1794867988587
     }
   },
   "showHidden": false,
