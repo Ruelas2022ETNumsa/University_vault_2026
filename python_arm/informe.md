@@ -5,9 +5,9 @@
 **Docente:** [pendiente]
 **Fecha:** [pendiente]
 
-> **Estado del borrador (21-nov-2026):** reorientado a la materia investigativa. El informe sustenta de forma teórica cómo integrar visión por computadora e inteligencia artificial (IA) al control de un brazo robótico educativo de 4 articulaciones, y usa como base un prototipo LEGO cuyo control remoto con ESP32 ya funciona (esa parte se entrega en otra materia). Tienen contenido las secciones 1 a 4. La sección 5 depende del cierre del informe. No se presentan resultados de IA sobre el brazo, porque no son necesarios en esta materia.
+> **Estado del borrador (21-nov-2026):** primer borrador completo (secciones 1 a 6). El informe sustenta de forma teórica cómo integrar visión por computadora e inteligencia artificial (IA) al control de un brazo robótico educativo de 4 articulaciones, y usa como base un prototipo LEGO cuyo control remoto con ESP32 ya funciona (esa parte se entrega en otra materia). No se presentan resultados de IA sobre el brazo, porque no son necesarios en esta materia. Falta pulir con consultas más detalladas y completar los datos marcados `[pendiente]`.
 >
-> **Citas y referencias (APA 7):** los datos de los antecedentes y del marco teórico salen del inventario y de las extracciones de NotebookLM, no de una lectura completa de cada PDF. Donde falta autor o año aparece `[pendiente]` o "s. f.". Antes de entregar hay que abrir cada fuente, confirmar autores, año, revista, cifras y ecuaciones. Copias anteriores de este archivo: `informe 1.md`, `informe 2.md` y `informe 3.md`.
+> **Citas y referencias (APA 7):** los datos salen del inventario y de las extracciones de NotebookLM, no de una lectura completa de cada PDF. Donde falta autor o año aparece `[pendiente]`, `[verificar]` o "s. f.". Antes de entregar hay que abrir cada fuente y confirmar autores, año, revista, cifras y ecuaciones. Copias anteriores de este archivo: `informe 1.md` a `informe 4.md`.
 
 ---
 
@@ -15,15 +15,15 @@
 
 ### 1.1 Antecedentes
 
-Los brazos robóticos que recogen un objeto y lo colocan en otro lugar (*pick and place*) son una de las aplicaciones más comunes de la robótica de manipulación. Para que el brazo sepa dónde está el objeto, un enfoque habitual es agregar una cámara y procesar la imagen. En proyectos de bajo costo, una solución frecuente es segmentar el color del objeto, obtener su centroide en la imagen y convertir esa posición en los ángulos de las articulaciones, ya sea con cinemática inversa o con calibraciones más simples (Autores [pendiente], 2026; Monirujjaman Khan et al., 2021).
+Los brazos robóticos que recogen un objeto y lo colocan en otro lugar (*pick and place*) son una de las aplicaciones más comunes de la robótica de manipulación. Para que el brazo sepa dónde está el objeto, un enfoque habitual es agregar una cámara y procesar la imagen. En proyectos de bajo costo, una solución frecuente es segmentar el color del objeto, obtener su centroide en la imagen y convertir esa posición en los ángulos de las articulaciones, ya sea con cinemática inversa o con calibraciones más simples (Autores [pendiente], 2026; Intisar et al., 2021).
 
 **Robótica educativa con LEGO y brazos de bajo costo.** LEGO Mindstorms se usa en cursos universitarios desde hace más de una década. Fernández Panadero et al. (2010) reportaron que el 98 % de los estudiantes dijo haber aumentado sus conocimientos en robótica tras una actividad con kits LEGO. Wu et al. (2014) usaron un brazo con pinza en un laboratorio de sistemas de control, y Gunardi y Jumadri (2020) coordinaron por Bluetooth una cinta transportadora y un brazo NXT con un sensor de color para clasificar tres colores. Con un enfoque similar, Markvicka et al. (2023) diseñaron un brazo de bajo costo (menos de 200 USD) y observaron un efecto favorable en el aprendizaje de cinemática y control. Ninguno de estos trabajos usa una cámara ni el hub Inventor 51515 con Pybricks.
 
 **Control remoto con ESP32 o desde el celular.** Tzompantzi Netzahual et al. (2019) controlaron un brazo didáctico de 4 GDL con un ESP32 y una aplicación Android, por Wi-Fi (servidor HTTP) y Bluetooth de bajo consumo (BLE), con respuesta en tiempo real hasta unos 40 m. Suhaeb y Risal (2024) alojaron un servidor web en el ESP32 y midieron tiempos de respuesta de 85 a 92 ms para comandos directos. Yilmaz et al. (2025) construyeron un brazo IoT de 4 GDL con ESP32, interfaz web guardada en la memoria flash y parada de emergencia por hardware. Lim et al. (2021) manejaron un brazo de 6 GDL desde el celular con la aplicación Blynk y un sensor de color, con hasta 90 % de acierto. Estos cuatro trabajos controlan o clasifican **sin visión por cámara**.
 
-**Visión por computadora e IA para clasificar y tomar objetos.** Mada Sanjaya et al. (2018) combinaron una webcam, Python y OpenCV con una red neuronal para resolver la cinemática inversa de un brazo de 5 GDL. Monirujjaman Khan et al. (2021) lograron 94,6 % de acierto al clasificar por forma con un brazo de 4 GDL y segmentación HSV, y Mohammed et al. (2023) reportaron 93,83 % de precisión con luz entre 5 y 7000 lux usando una Raspberry Pi y un Arduino. Monroy Moya et al. (2024) hicieron lo mismo con un brazo de 3 GDL (unos 155 USD) controlado solo por una Raspberry Pi 4. Dos tesis ecuatorianas automatizan brazos didácticos de 4 GDL: Aucapiña e Iza (2021) integraron un uArm Swift Pro con visión y una red entrenada, y reportaron 84 % de confiabilidad global; Llerena y Salazar (2022) usaron un Hiwonder xArm 1S con Raspberry Pi 4 y una interfaz operada a distancia por red. Rangarajan y Bianchini (2026) usaron un detector basado en aprendizaje profundo y compensaron la falta de articulación de muñeca de un brazo de 4 GDL con barridos laterales de reorientación (89,8 % de éxito).
+**Visión por computadora e IA para clasificar y tomar objetos.** Mada Sanjaya et al. (2018) combinaron una webcam, Python y OpenCV con una red neuronal para resolver la cinemática inversa de un brazo de 5 GDL. Intisar et al. (2021) lograron 94,6 % de acierto al clasificar por forma con un brazo de 4 GDL y segmentación HSV, y Mohammed et al. (2023) reportaron 93,83 % de precisión con luz entre 5 y 7000 lux usando una Raspberry Pi y un Arduino. Monroy Moya et al. (2024) hicieron lo mismo con un brazo de 3 GDL (unos 155 USD) controlado solo por una Raspberry Pi 4. Dos tesis ecuatorianas automatizan brazos didácticos de 4 GDL: Aucapiña e Iza (2019) integraron un uArm Swift Pro con visión y una red entrenada, y reportaron 84 % de confiabilidad global; Llerena y Salazar (2022) usaron un Hiwonder xArm 1S con Raspberry Pi 4 y una interfaz operada a distancia por red. Rangarajan y Bianchini (2026) usaron un detector basado en aprendizaje profundo y compensaron la falta de articulación de muñeca de un brazo de 4 GDL con barridos laterales de reorientación (89,8 % de éxito).
 
-Estos trabajos coinciden en tres limitaciones que también aplican a este proyecto: la **iluminación** altera la segmentación por color (Anusha et al., 2018; Monirujjaman Khan et al., 2021; Llerena y Salazar, 2022), la **calibración** entre cámara y brazo se desajusta con el tiempo (Rangarajan y Bianchini, 2026) y la **carga o alimentación** de los servos es limitada (Markvicka et al., 2023; Llerena y Salazar, 2022).
+Estos trabajos coinciden en tres limitaciones que también aplican a este proyecto: la **iluminación** altera la segmentación por color (Anusha et al., 2018; Intisar et al., 2021; Llerena y Salazar, 2022), la **calibración** entre cámara y brazo se desajusta con el tiempo (Rangarajan y Bianchini, 2026) y la **carga o alimentación** de los servos es limitada (Markvicka et al., 2023; Llerena y Salazar, 2022).
 
 **Plataformas LEGO con cámara.** Existen proyectos de brazos con el hub LEGO Inventor 51515 que siguen una pelota roja con una cámara web (LEGO Ideas, s. f.), y un proyecto oficial de Pybricks con un brazo LEGO SPIKE Prime y cámara que detecta objetos de colores para tomarlos (Pybricks, s. f.-a). Otros trabajos con LEGO delegan la visión a una computadora externa, porque la cámara del propio robot no tiene la potencia necesaria (Autor [pendiente], s. f.). Pybricks, un firmware alternativo en MicroPython para los hubs LEGO, ofrece además una función en versión beta llamada *smart sensors*, que permite usar la cámara de un teléfono como sensor conectado al hub (Pybricks, s. f.-b).
 
@@ -40,7 +40,7 @@ La Tabla 1 resume los antecedentes más cercanos y qué aporta cada uno.
 | Tzompantzi Netzahual et al. (2019): brazo de 4 GDL | No | ESP32, app Android, Wi-Fi y BLE | Mismo número de articulaciones y ESP32; este proyecto usa una página web y envía al hub por BLE. |
 | Suhaeb y Risal (2024): brazo con servidor web | No | ESP32 como servidor web (Wi-Fi) | Base de la idea de la página web en el ESP32. Reportan 85 a 92 ms de respuesta; aquí el retraso no se ha medido. |
 | Yilmaz et al. (2025): brazo IoT de 4 GDL | No | ESP32, interfaz web, parada de emergencia | Referencia para el botón de parada, pendiente en este proyecto. |
-| Monirujjaman Khan et al. (2021): brazo de 4 GDL | Webcam fija | PC con GUI, HSV y cinemática inversa | Mismo principio de segmentar por color; aquí se proponen tablas calibradas o una red neuronal en lugar de cinemática inversa. |
+| Intisar et al. (2021): brazo de 4 GDL | Webcam fija | PC con GUI, HSV y cinemática inversa | Mismo principio de segmentar por color; aquí se proponen tablas calibradas o una red neuronal en lugar de cinemática inversa. |
 | Mada Sanjaya et al. (2018): brazo de 5 GDL | Webcam | PC, Python y red neuronal (ANN), Arduino | Antecedente directo del uso de IA para pasar de la imagen a los ángulos. |
 | Llerena y Salazar (2022), tesis: xArm 1S de 4 GDL | Webcam | Raspberry Pi 4, OpenCV, GUI remota por red | Brazo didáctico de 4 GDL con visión; la visión corre en una Raspberry Pi y no en un celular. |
 | Rangarajan y Bianchini (2026): brazo de 4 GDL | Cenital | Detector de aprendizaje profundo y HSV | Muestra cómo la IA y la planificación compensan un brazo sin muñeca. |
@@ -131,9 +131,9 @@ Lo que se busca lograr con el informe y para qué servirá. Cada fila se apoya e
 
 #### 4.1.1 Conceptos básicos de manipuladores
 
-Un **robot manipulador** es, según la definición de la IFR y de la norma ISO que recogen Aucapiña e Iza (2021), una máquina automática, reprogramable y multifuncional con tres o más ejes, capaz de posicionar y orientar piezas, herramientas o dispositivos especiales. Un **brazo robótico** es una cadena de eslabones rígidos unidos por articulaciones, que mueve un elemento terminal (Llerena y Salazar, 2022).
+Un **robot manipulador** es, según la definición de la IFR y de la norma ISO que recogen Aucapiña e Iza (2019), una máquina automática, reprogramable y multifuncional con tres o más ejes, capaz de posicionar y orientar piezas, herramientas o dispositivos especiales. Un **brazo robótico** es una cadena de eslabones rígidos unidos por articulaciones, que mueve un elemento terminal (Llerena y Salazar, 2022).
 
-Los **grados de libertad (GDL)** son el número de parámetros independientes que hacen falta para fijar la posición y la orientación de ese elemento terminal (Llerena y Salazar, 2022). Cada **articulación** une dos eslabones consecutivos y permite su movimiento relativo; pueden ser revolutas, que giran y se miden en grados, o prismáticas, que se desplazan en línea recta (Llerena y Salazar, 2022). El **actuador** es el componente que genera el movimiento: en brazos de bajo costo suelen ser servomotores controlados por pulsos PWM (Tzompantzi Netzahual et al., 2019; Aucapiña e Iza, 2021) o servos de bus que reciben comandos digitales (Llerena y Salazar, 2022). El **efector final** es la herramienta acoplada al extremo del brazo que interactúa con el entorno; en las tareas de recoger y colocar es una garra o pinza (Aucapiña e Iza, 2021).
+Los **grados de libertad (GDL)** son el número de parámetros independientes que hacen falta para fijar la posición y la orientación de ese elemento terminal (Llerena y Salazar, 2022). Cada **articulación** une dos eslabones consecutivos y permite su movimiento relativo; pueden ser revolutas, que giran y se miden en grados, o prismáticas, que se desplazan en línea recta (Llerena y Salazar, 2022). El **actuador** es el componente que genera el movimiento: en brazos de bajo costo suelen ser servomotores controlados por pulsos PWM (Tzompantzi Netzahual et al., 2019; Aucapiña e Iza, 2019) o servos de bus que reciben comandos digitales (Llerena y Salazar, 2022). El **efector final** es la herramienta acoplada al extremo del brazo que interactúa con el entorno; en las tareas de recoger y colocar es una garra o pinza (Aucapiña e Iza, 2019).
 
 En este trabajo el brazo tiene cuatro articulaciones motorizadas: base, codo y muñeca mueven el brazo, y la garra funciona como efector final.
 
@@ -147,7 +147,7 @@ Pybricks también permite que un hub reciba mensajes de otro dispositivo por Blu
 
 La cinemática estudia el movimiento del manipulador sin considerar las fuerzas que lo producen (Llerena y Salazar, 2022). La **cinemática directa** calcula la posición del efector final a partir de los ángulos de las articulaciones y las longitudes de los eslabones, usualmente con matrices de transformación homogénea. La **cinemática inversa** hace el camino contrario: dada la posición que se quiere alcanzar, determina los ángulos que debe tomar cada articulación (Llerena y Salazar, 2022; Markvicka et al., 2023).
 
-El método más reportado para brazos de 3 a 5 GDL es el **geométrico** (Mohammed et al., 2023; Monroy Moya et al., 2024; Monirujjaman Khan et al., 2021). Para un objetivo en $(P_x, P_y)$ del plano de la mesa, el ángulo de la base se obtiene con:
+El método más reportado para brazos de 3 a 5 GDL es el **geométrico** (Mohammed et al., 2023; Monroy Moya et al., 2024; Intisar et al., 2021). Para un objetivo en $(P_x, P_y)$ del plano de la mesa, el ángulo de la base se obtiene con:
 
 $$\theta_1 = \arctan\left(\frac{P_y}{P_x}\right)$$
 
@@ -181,19 +181,19 @@ Las fuentes reportan problemas típicos y sus soluciones (Tabla 2). Con los moto
 
 #### 4.1.5 Detección de objetos por color
 
-El flujo que describen las fuentes tiene cuatro pasos. Primero, la imagen se convierte de RGB a **HSV**, porque en RGB la luz afecta a los tres canales a la vez, mientras que HSV separa el tono (H), la pureza del color (S) y el brillo (V), lo que hace la selección de color menos sensible a las variaciones moderadas de luz (Anusha et al., 2018; Mohammed et al., 2023; Monirujjaman Khan et al., 2021). Segundo, la **umbralización** define un rango inferior y superior de H, S y V para cada color: los píxeles dentro del rango pasan a 1 y el resto a 0, y los umbrales pueden fijarse a mano con controles deslizantes o calcularse a partir de la luz medida (Llerena y Salazar, 2022; Mohammed et al., 2023). Tercero, la **segmentación** limpia la máscara con erosión, dilatación y filtros de suavizado, y descarta regiones menores que un tamaño mínimo (Mada Sanjaya et al., 2018; Mohammed et al., 2023; Anusha et al., 2018). Cuarto, se extraen los **contornos** y se calcula el **centroide** de cada región, con momentos de imagen o promediando los píxeles (Anusha et al., 2018; Mohammed et al., 2023; Medel et al., s. f.).
+El flujo que describen las fuentes tiene cuatro pasos. Primero, la imagen se convierte de RGB a **HSV**, porque en RGB la luz afecta a los tres canales a la vez, mientras que HSV separa el tono (H), la pureza del color (S) y el brillo (V), lo que hace la selección de color menos sensible a las variaciones moderadas de luz (Anusha et al., 2018; Mohammed et al., 2023; Intisar et al., 2021). Segundo, la **umbralización** define un rango inferior y superior de H, S y V para cada color: los píxeles dentro del rango pasan a 1 y el resto a 0, y los umbrales pueden fijarse a mano con controles deslizantes o calcularse a partir de la luz medida (Llerena y Salazar, 2022; Mohammed et al., 2023). Tercero, la **segmentación** limpia la máscara con erosión, dilatación y filtros de suavizado, y descarta regiones menores que un tamaño mínimo (Mada Sanjaya et al., 2018; Mohammed et al., 2023; Anusha et al., 2018). Cuarto, se extraen los **contornos** y se calcula el **centroide** de cada región, con momentos de imagen o promediando los píxeles (Anusha et al., 2018; Mohammed et al., 2023; Medel et al., s. f.).
 
-Las fuentes reportan cinco problemas frecuentes: la variación de la iluminación y las sombras, que descalibra los umbrales (Monroy Moya et al., 2024; Monirujjaman Khan et al., 2021; Llerena y Salazar, 2022); los brillos sobre superficies reflectantes, que blanquean los píxeles (Aucapiña e Iza, 2021; Rangarajan y Bianchini, 2026); la confusión entre colores cercanos, como rojo con naranja o con tonos café (Lim et al., 2021; Rangarajan y Bianchini, 2026); el bajo contraste con el fondo, que impide cerrar el contorno (Monroy Moya et al., 2024); y los objetos muy próximos, que se unen en un solo contorno y dan un centroide erróneo (Monirujjaman Khan et al., 2021).
+Las fuentes reportan cinco problemas frecuentes: la variación de la iluminación y las sombras, que descalibra los umbrales (Monroy Moya et al., 2024; Intisar et al., 2021; Llerena y Salazar, 2022); los brillos sobre superficies reflectantes, que blanquean los píxeles (Aucapiña e Iza, 2019; Rangarajan y Bianchini, 2026); la confusión entre colores cercanos, como rojo con naranja o con tonos café (Lim et al., 2021; Rangarajan y Bianchini, 2026); el bajo contraste con el fondo, que impide cerrar el contorno (Monroy Moya et al., 2024); y los objetos muy próximos, que se unen en un solo contorno y dan un centroide erróneo (Intisar et al., 2021).
 
 #### 4.1.6 Calibración entre la cámara y el brazo
 
-Un píxel de la imagen no basta para ubicar el objeto en el espacio: define un rayo desde la cámara. Cuando los objetos reposan en una mesa plana, se intersecta ese rayo con el plano de trabajo, que se define con un marcador de referencia (ArUco), y se transforma el resultado al sistema de coordenadas del robot (Rangarajan y Bianchini, 2026). Una forma más sencilla es la **homografía**, una matriz de 3×3 que relaciona directamente los puntos de la imagen con los del plano real y se calcula a partir de pares de puntos conocidos (Anusha et al., 2018; Aucapiña e Iza, 2021). Con una cámara cenital fija se puede usar incluso un factor de escala entre una medida real conocida y su tamaño en píxeles (Aucapiña e Iza, 2021; Monirujjaman Khan et al., 2021).
+Un píxel de la imagen no basta para ubicar el objeto en el espacio: define un rayo desde la cámara. Cuando los objetos reposan en una mesa plana, se intersecta ese rayo con el plano de trabajo, que se define con un marcador de referencia (ArUco), y se transforma el resultado al sistema de coordenadas del robot (Rangarajan y Bianchini, 2026). Una forma más sencilla es la **homografía**, una matriz de 3×3 que relaciona directamente los puntos de la imagen con los del plano real y se calcula a partir de pares de puntos conocidos (Anusha et al., 2018; Aucapiña e Iza, 2019). Con una cámara cenital fija se puede usar incluso un factor de escala entre una medida real conocida y su tamaño en píxeles (Aucapiña e Iza, 2019; Intisar et al., 2021).
 
 Cuando la cámara va montada sobre el brazo o se mueve respecto a él, se recurre a la **calibración ojo-mano**, que resuelve ecuaciones del tipo $AX = ZB$ entre las transformaciones que observa la cámara y la pose del efector final (Enebuse et al., 2021; Tabb y Ahmad Yousef, 2017). Otra opción es construir empíricamente una **tabla de calibración** que asocia coordenadas de la imagen con los ángulos medidos de los servos al alcanzar cada punto, y entrenar con ella una red neuronal (Mada Sanjaya et al., 2018). Un método de tablas con interpolación lineal, sin red neuronal ni modelo geométrico, es el que usa este proyecto en su versión con cámara de celular; no se encontró en las fuentes revisadas, y el antecedente más cercano es la tabla de Mada Sanjaya et al. (2018).
 
 #### 4.1.7 Inteligencia artificial en el control de brazos
 
-Las fuentes muestran tres niveles de uso de la IA. **Visión clásica** (HSV, umbral y centroide), sin entrenamiento, que es la base de la mayoría de los trabajos (sección 4.1.5). **Redes neuronales para la cinemática inversa**: Mada Sanjaya et al. (2018) entrenaron una red con una capa oculta de 20 neuronas que recibe las coordenadas $(x, y)$ de la imagen y entrega los ángulos de cinco servos, con un error de 1,3 % entre los datos de calibración y la salida de la red. **Aprendizaje profundo para detectar y clasificar**: Aucapiña e Iza (2021) clasificaron piezas con un modelo MobileNet de TensorFlow (97,28 % en identificación y 38 a 50 ms de inferencia), y Rangarajan y Bianchini (2026) usaron YOLO11n-OBB para detectar la posición y el ángulo de un bolígrafo, con 89,8 % de éxito en la tarea completa.
+Las fuentes muestran tres niveles de uso de la IA. **Visión clásica** (HSV, umbral y centroide), sin entrenamiento, que es la base de la mayoría de los trabajos (sección 4.1.5). **Redes neuronales para la cinemática inversa**: Mada Sanjaya et al. (2018) entrenaron una red con una capa oculta de 20 neuronas que recibe las coordenadas $(x, y)$ de la imagen y entrega los ángulos de cinco servos, con un error de 1,3 % entre los datos de calibración y la salida de la red. **Aprendizaje profundo para detectar y clasificar**: Aucapiña e Iza (2019) clasificaron piezas con un modelo MobileNet de TensorFlow (97,28 % en identificación y 38 a 50 ms de inferencia), y Rangarajan y Bianchini (2026) usaron YOLO11n-OBB para detectar la posición y el ángulo de un bolígrafo, con 89,8 % de éxito en la tarea completa.
 
 La Tabla 3 resume esas opciones.
 
@@ -203,9 +203,9 @@ La Tabla 3 resume esas opciones.
 
 | Técnica | Qué necesita | Resultado reportado | Limitación reportada |
 | ------- | ------------ | ------------------- | -------------------- |
-| HSV, umbral y centroide, con cinemática inversa (Monirujjaman Khan et al., 2021; Mohammed et al., 2023) | Cámara, PC o Raspberry Pi, medidas del brazo | 94,6 % de acierto por forma; 93,83 % entre 5 y 7000 lux | Sensible a sombras y a colores parecidos |
+| HSV, umbral y centroide, con cinemática inversa (Intisar et al., 2021; Mohammed et al., 2023) | Cámara, PC o Raspberry Pi, medidas del brazo | 94,6 % de acierto por forma; 93,83 % entre 5 y 7000 lux | Sensible a sombras y a colores parecidos |
 | HSV con red neuronal para cinemática inversa (Mada Sanjaya et al., 2018) | Tabla de calibración y entrenamiento | 1,3 % de error entre calibración y salida | Hay que rehacer la tabla si cambia el montaje |
-| Detección con aprendizaje profundo (Aucapiña e Iza, 2021; Rangarajan y Bianchini, 2026) | Conjunto de imágenes y entrenamiento; equipo con más capacidad | 97,28 % de identificación (Aucapiña e Iza); 89,8 % de éxito total (Rangarajan y Bianchini) | Más datos y cómputo; sensible al deslumbramiento y a la deriva de calibración |
+| Detección con aprendizaje profundo (Aucapiña e Iza, 2019; Rangarajan y Bianchini, 2026) | Conjunto de imágenes y entrenamiento; equipo con más capacidad | 97,28 % de identificación (Aucapiña e Iza); 89,8 % de éxito total (Rangarajan y Bianchini) | Más datos y cómputo; sensible al deslumbramiento y a la deriva de calibración |
 
 *Nota.* Los resultados provienen de montajes y condiciones distintas, por lo que no son comparables de forma directa.
 
@@ -262,51 +262,79 @@ El prototipo base funciona como se describe en la sección 4.2. La integración 
 
 ### 5.1 Conclusiones
 
-[pendiente: se redactarán al cerrar el informe. Deben responder a los objetivos específicos 1 a 5 y no afirmar resultados de IA sobre el brazo.]
+1. **Antecedentes.** La literatura revisada muestra que los brazos de bajo costo con visión suelen segmentar por color en HSV y convertir la posición del objeto en ángulos con cinemática inversa, tablas o una red neuronal, con tasas de acierto reportadas entre 84 % y 94,6 % (Aucapiña e Iza, 2019; Rangarajan y Bianchini, 2026; Mohammed et al., 2023; Intisar et al., 2021). El control remoto con ESP32 se ha hecho por separado y sin cámara (Tzompantzi Netzahual et al., 2019; Suhaeb y Risal, 2024; Yilmaz et al., 2025). En las fuentes revisadas no aparece la combinación de hub LEGO con Pybricks, ESP32 y un módulo de visión externo, que es la brecha que este trabajo atiende.
+2. **Fundamentos.** Integrar visión y brazo exige tres piezas teóricas que las fuentes cubren bien: detectar el objeto (HSV, umbral y centroide), pasar de la imagen a la posición del brazo (homografía, calibración ojo-mano, tablas o red neuronal) y resolver los ángulos (cinemática inversa geométrica o aprendida). El control de posición de los motores del kit LEGO lo resuelve el firmware, por lo que el límite del prototipo es la alimentación y no el lazo de control.
+3. **Comparación de técnicas.** Para objetos de color definido y luz controlada, la visión clásica con HSV alcanza resultados comparables a los de técnicas más pesadas y no necesita entrenamiento. La IA aporta robustez ante formas irregulares y permite resolver la orientación (Rangarajan y Bianchini, 2026), pero exige datos, entrenamiento y más cómputo. Las fuentes coinciden en que la iluminación, la calibración y la carga útil son las limitaciones comunes.
+4. **Prototipo base.** El control remoto desde el celular con ESP32 funciona con el brazo real y respeta las restricciones de alimentación. Sus límites son que no hay canal de vuelta del hub, que el retraso no se midió y que solo se mueve una articulación por orden.
+5. **Propuesta.** Un módulo externo de visión e IA que envíe órdenes por las rutas web del ESP32 es una forma viable, por diseño, de integrar IA sin modificar el hub. Esta conclusión es de diseño: no se validó sobre el brazo.
 
-### 5.2 Recomendaciones
+### 5.2 Limitaciones y trabajo futuro que reporta la literatura
 
-[pendiente. Puntos ya identificados: medir el retraso del control remoto; añadir un canal de vuelta del hub al ESP32; agregar un botón de parada en la página (como en Yilmaz et al., 2025); definir qué hace el hub ante voltaje bajo sin la computadora; probar primero la visión clásica y evaluar después un detector de aprendizaje profundo.]
+La Tabla 4 resume lo que los trabajos revisados señalan como limitación y como línea futura, agrupado en las categorías que más se repiten.
+
+**Tabla 4**
+
+*Limitaciones y trabajo futuro reportados en la literatura*
+
+| Categoría | Limitación frecuente | Trabajo futuro reportado |
+| --------- | -------------------- | ------------------------ |
+| Precisión | El detector de bordes falla con piezas irregulares o reflectantes (Monroy Moya et al., 2024); agarres que resbalan (Rangarajan y Bianchini, 2026); el brazo sigue la rutina aunque el objeto se caiga (Intisar et al., 2021). | Detectores de aprendizaje profundo (Monroy Moya et al., 2024); control visual continuo (Rangarajan y Bianchini, 2026); sensores de presencia o fuerza en la pinza (Intisar et al., 2021). |
+| Velocidad | Ciclo de 27 s por objeto, lento para producción (Mohammed et al., 2023). | Cámaras con mayor resolución y tasa de cuadros (Medel et al., s. f.); control adaptativo de velocidad (Yilmaz et al., 2025). |
+| Costo | Los servos de bajo costo limitan la carga útil (Markvicka et al., 2023). | Diseños modulares abiertos sin perder precisión de los servos [pendiente: fuente verificada]. |
+| Iluminación | Sombras, parpadeo y brillos descalibran la segmentación (Intisar et al., 2021; Llerena y Salazar, 2022; Rangarajan y Bianchini, 2026). | Ajuste automático de umbrales (Medel et al., s. f.); redes convolucionales más robustas a la luz (Monroy Moya et al., 2024). |
+| Calibración | Deriva de hasta 8 mm entre sesiones al mover cámara o base (Rangarajan y Bianchini, 2026); holgura y desgaste de engranajes (Mohammed et al., 2023). | Reestimar los marcadores cuadro a cuadro (Rangarajan y Bianchini, 2026); calibración continua en línea (Enebuse et al., 2021). |
+| Uso educativo | Falta de programación previa en los estudiantes (Markvicka et al., 2023). | Módulos de aprendizaje asincrónico y coordinación entre teoría y taller (Markvicka et al., 2023; Fernández Panadero et al., 2010). |
+
+*Nota.* Elaboración propia a partir de las fuentes citadas. Verificar contra los trabajos completos.
+
+### 5.3 Recomendaciones
+
+1. **Empezar por la visión clásica.** Implementar primero la detección HSV de la pelota y el cubo con un marcador de referencia para calibrar, y evaluar después un detector de aprendizaje profundo (Rangarajan y Bianchini, 2026; Monroy Moya et al., 2024).
+2. **Controlar la luz y recalibrar.** Usar iluminación constante y repetir la calibración cuando se mueva la cámara o la base, porque son las fuentes de error más reportadas.
+3. **Medir antes de afirmar.** Medir el retraso entre la orden y el movimiento, y la tasa de éxito en un número fijo de repeticiones, para tener cifras propias comparables con las de la literatura.
+4. **Cerrar el lazo.** Añadir un canal de vuelta del hub al ESP32 para que el módulo de IA sepa cuándo terminó cada movimiento y dónde quedó el motor.
+5. **Seguridad.** Agregar un botón de parada en la página (como en Yilmaz et al., 2025) y definir qué hace el hub ante voltaje bajo cuando no hay computadora conectada.
+6. **Verificar el agarre.** Considerar un sensor que confirme que la garra sujetó el objeto antes de continuar la secuencia (Intisar et al., 2021).
 
 ---
 
 ## 6. Referencias bibliográficas e internet
 
-> Formato APA 7. Completar autores y años al leer los trabajos completos, y ordenar la lista alfabéticamente al terminar. Solo se listan las fuentes citadas en el texto. Las entradas marcadas [pendiente] vienen del inventario de NotebookLM y no se han verificado en el PDF.
+> Formato APA 7. Los datos de revista, volumen, páginas y DOI vienen de la lista que generó NotebookLM y no se han verificado en los PDF; las entradas con [verificar] tienen dudas conocidas. Solo se listan las fuentes citadas. La definición de la IFR (2016) y de la ISO (2012) se cita a través de Aucapiña e Iza (2019), por lo que no se listan por separado.
 
-Anusha, G., Ganavi, D., Revathi, H., Sahana, P., Sreenivas Rao, M. V., y Basavanna, M. (2018). *Robotic arm manipulation using shape and color based on visual servoing*. [revista pendiente].
+Anusha, G., Ganavi, D., Revathi, H., Sahana, P., Sreenivas Rao, M. V., y Basavanna, M. (2018). Robotic arm manipulation using shape and color based on visual servoing. *International Journal of Scientific Research in Computer Science, Engineering and Information Technology, 4*(6), 733-739.
 
-Aucapiña Garnica, N. F., e Iza Guanochanga, B. I. (2021). *Diseño e implementación de un sistema de visión artificial para la manipulación, ensamblaje y control de calidad de piezas...* [Tesis de grado, Universidad de las Fuerzas Armadas ESPE]. [enlace pendiente]
+Aucapiña Garnica, N. F., e Iza Guanochanga, B. I. (2019 [verificar]). *Diseño e implementación de un sistema de visión artificial para la manipulación, ensamblaje y control de calidad de piezas a través del uso de un brazo robótico para el laboratorio de mecatrónica* [Tesis de grado, Universidad de las Fuerzas Armadas ESPE]. [enlace pendiente]
 
 [Autor pendiente]. (s. f.). *LEGO con Raspberry Pi y OpenCV* [Proyecto]. Tampere University. https://joedavid-tuni.github.io/MR3/
 
 [Autores pendientes]. (2026). Low cost single camera robotic arm for vision guided pick and place. *Journal of Robotics and Control (JRC)*. https://journal.umy.ac.id/index.php/jrc/article/view/28524
 
-Eiammanussakul, T., y Sangveraphunsiri, V. (2018). A lower limb rehabilitation robot in sitting position with a review of training activities. *Journal of Healthcare Engineering*. [volumen pendiente].
+Eiammanussakul, T., y Sangveraphunsiri, V. (2018). A lower limb rehabilitation robot in sitting position with a review of training activities. *Journal of Healthcare Engineering, 2018*, 1-14.
 
-Enebuse, I., Foo, M., Kader Ibrahim, B. K. S. M., Ahmed, H., Supmak, F., y Eyobu, O. S. (2021). A comparative review of hand-eye calibration techniques for vision guided robots. *IEEE Access*. [volumen pendiente].
+Enebuse, I., Foo, M., Kader Ibrahim, B. K. S. M., Ahmed, H., Supmak, F., y Eyobu, O. S. (2021). A comparative review of hand-eye calibration techniques for vision guided robots. *IEEE Access, 9*, 113143-113154. https://doi.org/10.1109/ACCESS.2021.3104514
 
-Fernández Panadero, C., Villena Román, J., y Delgado Kloos, C. (2010). Impact of learning experiences using LEGO Mindstorms in engineering courses. [Actas de conferencia pendientes].
+Fernández Panadero, C., Villena Román, J., y Delgado Kloos, C. (2010). Impact of learning experiences using LEGO Mindstorms in engineering courses. [revista o actas pendientes].
 
-Gunardi, Y., y Jumadri, J. N. (2020). Design color sorting with conveyor and robot arm using Lego Mindstorm NXT. [revista pendiente].
+Gunardi, Y., y Jumadri, J. N. (2020). Design color sorting with conveyor and robot arm using Lego Mindstorm NXT. [revista pendiente: verificar nombre y volumen].
+
+Intisar, M., Khan, M. M., Islam, M. R., y Masud, M. (2021). Computer vision based robotic arm controlled using interactive GUI. *Intelligent Automation & Soft Computing, 27*(2), 533-550. https://doi.org/10.32604/iasc.2021.015482
 
 LEGO Ideas. (s. f.). *VISION* [Propuesta de proyecto]. https://ideas.lego.com/challenges/339f0029-37b3-4dad-9dd2-6bcec3b93349/application/1099c817-11f6-4d42-8224-381674d1c749
 
-Lim, W. J., Teoh, P. S., Abdul Ghani, N. M., y Abas, M. F. (2021). Automatic control of color sorting and pick/place of a 6-DOF robot arm. [revista pendiente].
+Lim, W. J., Teoh, P. S., Abdul Ghani, N. M., y Abas, M. F. (2021). Automatic control of color sorting and pick/place of a 6-DOF robot arm. *Journal Européen des Systèmes Automatisés, 54*(3), 435-443. https://doi.org/10.18280/jesa.540306
 
 Llerena Buenaño, A. S., y Salazar Villamar, M. J. (2022). *Automatización de un sistema identificador y posicionador de objetos a través de un brazo robótico mediante visión artificial con lenguaje Python* [Tesis de grado, Universidad Politécnica Salesiana, sede Guayaquil]. [enlace pendiente]
 
-Mada Sanjaya, W. S., Anggraeni, D., Nurasyidiek, M. Y. S., et al. (2018). Colored object sorting using 5 DoF robot arm based artificial neural network (ANN) method. *Journal of Physics: Conference Series, 1090*, 012070.
+Mada Sanjaya, W. S., Anggraeni, D., Munawwaroh, M., Nurasyidiek, M. Y. S., Rahayu, D. S., Samsudin, A., Santika, I. P., y Palupi, E. K. (2018). Colored object sorting using 5 DoF robot arm based artificial neural network (ANN) method. *Journal of Physics: Conference Series, 1090*, Artículo 012070. https://doi.org/10.1088/1742-6596/1090/1/012070
 
-Markvicka, E., Finnegan, J. D., Moomau, K., Sommers, A. S., Peteranetz, M. S., y Daher, T. A. (2023). Designing learning experiences with a low-cost robotic arm. [Actas ASEE pendientes].
+Markvicka, E., Finnegan, J. D., Moomau, K., Sommers, A. S., Peteranetz, M. S., y Daher, T. A. (2023). Designing learning experiences with a low-cost robotic arm. *2023 ASEE Annual Conference & Exposition*, Artículo 37271.
 
-Medel, K. G. G., Sevilla, A. J., y Perez, M. P. (s. f.). Major color detection in robot vision. [revista pendiente].
+Medel, K. G. G., Sevilla, A. J., y Perez, M. P. (s. f.). Major color detection in robot vision. [revista pendiente], 78-82.
 
-Mohammed, M. M., Al-Khafaji, M. M. H., y Abbas, T. F. (2023). Smart robot vision for a pick and place robotic system under different illumination conditions. [revista pendiente].
+Mohammed, M. M., Al-Khafaji, M. M. H., y Abbas, T. F. (2023). Smart robot vision for a pick and place robotic system under different illumination conditions. *Engineering and Technology Journal, 41*(6). https://doi.org/10.30684/etj.2023.135966.1292
 
-Monirujjaman Khan, M., Intisar, M., Islam, M. R., Nizamuddin, A. S., et al. (2021). Design and implementation of a robotic vision system operated using an interactive graphical user interface (GUI) application. [revista pendiente].
-
-Monroy Moya, D. F., Barrera Prieto, F., y Rojas Sarmiento, D. A. (2024). Computer vision implementation on Raspberry Pi 4 for a 3 DOF robotic arm in object classification by shape and color. [revista pendiente].
+Monroy Moya, D. F., Barrera Prieto, F., y Rojas Sarmiento, D. A. (2024 [verificar]). Computer vision implementation on Raspberry Pi 4 for a 3 DOF robotic arm in object classification by shape and color. *Ingeniería e Investigación, 46*(2), Artículo e118562. https://doi.org/10.15446/ing.investig.118562
 
 Pybricks. (s. f.-a). *Robotic arm with vision*. https://pybricks.com/project/robot-arm-camera-tracker/
 
@@ -318,17 +346,17 @@ Pybricks. (s. f.-d). *BLE broadcast/observe* [Registro de cambios del repositori
 
 Pybricks. (s. f.-e). *Mediciones con sniffer de broadcast y observe* [Discusión #2822]. https://github.com/orgs/pybricks/discussions/2822
 
-Rangarajan, A., y Bianchini, B. (2026). Vision-guided reorientation and color sorting of writing utensils using a low-cost 4-DoF arm. [revista pendiente].
+Rangarajan, A., y Bianchini, B. (2026). Vision-guided reorientation and color sorting of writing utensils using a low-cost 4-DoF arm. *American Journal of Student Research*. https://doi.org/10.70251/HYJR2348.467488
 
-Suhaeb, S., y Risal, A. (2024). Implementation of ESP32-based web host for control and monitoring of robotic arm. [revista pendiente].
+Suhaeb, S., y Risal, A. (2024). Implementation of ESP32-based web host for control and monitoring of robotic arm. *Journal of Embedded System Security and Intelligent System, 5*(3), 249-254.
 
-Tabb, A., y Ahmad Yousef, K. M. (2017). Solving the robot-world hand-eye(s) calibration problem with iterative methods. [revista pendiente].
+Tabb, A., y Ahmad Yousef, K. M. (2017). Solving the robot-world hand-eye(s) calibration problem with iterative methods. *Machine Vision and Applications, 28*(5-6), 569-590. https://doi.org/10.1007/s00138-017-0841-7
 
-Tzompantzi Netzahual, J. E., Nava Bautista, H., y Sánchez Hernández, M. J. (2019). Real time control of robotic arm using Bluetooth Low Energy & Wi-Fi with the module board ESP32 and Android application. [revista pendiente].
+Tzompantzi Netzahual, J. E., Nava Bautista, H., y Sánchez Hernández, M. J. (2019). Real time control of robotic arm using Bluetooth Low Energy & Wi-Fi with the module board ESP32 and Android application. *International Journal of Science and Research, 8*(8). [páginas pendientes]
 
-Wu, Y., de Vries, C., Ford, M., y Herrera, A. (2014). *Project report: Using Mindstorms in a control systems lab to impact next generation engineers* [Informe de proyecto]. [institución pendiente].
+Wu, Y., de Vries, C., Ford, M., y Herrera, A. (2014). *Project report: Using Mindstorms in a control systems lab to impact next generation engineers* [Informe de proyecto]. Penn State Erie, The Behrend College.
 
-Yilmaz, S., Akay, C., y Kaysi, F. (2025). Design and implementation of a low-cost IoT-based robotic arm for product feeding and sorting in manufacturing lines. *Electronics, 14*, 4801.
+Yilmaz, S., Akay, C., y Kaysi, F. (2025). Design and implementation of a low-cost IoT-based robotic arm for product feeding and sorting in manufacturing lines. *Electronics, 14*(24), Artículo 4801. https://doi.org/10.3390/electronics14244801
 
 ---
 
@@ -338,7 +366,7 @@ Yilmaz, S., Akay, C., y Kaysi, F. (2025). Design and implementation of a low-cos
 
 - **Cita en el texto:** autor y año entre paréntesis, por ejemplo (Pybricks, s. f.). Con dos autores se unen con "y"; con tres o más se usa "et al.".
 - **Sin fecha:** se escribe "s. f.". Si hay varias obras del mismo autor sin fecha, se distinguen con letras: s. f.-a, s. f.-b.
-- **Citado en otra fuente:** se indica el autor original y la fuente que lo recoge, por ejemplo (IFR, 2016, citado en Aucapiña e Iza, 2021).
+- **Citado en otra fuente:** se indica el autor original y la fuente que lo recoge, por ejemplo (IFR, 2016, citado en Aucapiña e Iza, 2019).
 - **Cita textual corta** (menos de 40 palabras): entre comillas, con autor, año y página.
 - **Lista de referencias:** en orden alfabético, con sangría francesa. Cada fuente citada debe estar en la lista y viceversa.
 - **Páginas web y documentos en línea:** autor, fecha, título en cursiva y enlace. Si hay DOI, se escribe como enlace (https://doi.org/...).

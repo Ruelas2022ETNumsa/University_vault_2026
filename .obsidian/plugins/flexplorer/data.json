@@ -4621,7 +4621,6 @@
       "customOrder": [
         "tmp",
         "section.md",
-        "2026-10-22",
         "2026-10-30",
         "2026-11-08",
         "2026-11-13",
@@ -8622,23 +8621,6 @@
       "ctime": 1792377473185,
       "mtime": 1792375558473
     },
-    "Rubbish/2026-10-22": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json",
-        "2026-10-22 13.54.40.0",
-        "2026-10-22 13.54.40.1",
-        "scanned_words.txt"
-      ]
-    },
-    "Rubbish/2026-10-22/data.json": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1792359668544,
-      "mtime": 1792036545000
-    },
     "Semesters/Sem_07/ETN825/ejsic.md": {
       "isPinned": false,
       "isHidden": false,
@@ -8750,7 +8732,18 @@
         "referencia.md",
         "resumen_13_nov.md",
         "ha7.py",
-        "resumen_16.md"
+        "resumen_16.md",
+        "esp32",
+        "ha8.py",
+        "ha9.py",
+        "informe.md",
+        "informe 1.md",
+        "informe 2.md",
+        "informe 2 1.md",
+        "informe 3.md",
+        "informe 4.md",
+        "resumen_21.md",
+        "resumen_21 1.md"
       ],
       "ctime": 1793397348734,
       "mtime": 1793397348734
@@ -9253,40 +9246,6 @@
       "sortOrder": "custom",
       "customOrder": []
     },
-    "Rubbish/2026-10-22/2026-10-22 13.54.40.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-10-22/2026-10-22 13.54.40.0/data.json": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1781109169958,
-      "mtime": 1792622033047
-    },
-    "Rubbish/2026-10-22/2026-10-22 13.54.40.1": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-10-22/2026-10-22 13.54.40.1/data.json": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1783291449891,
-      "mtime": 1791471670000
-    },
-    "Rubbish/2026-10-22/scanned_words.txt": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1780114193327,
-      "mtime": 1791475904000
-    },
     "Rubbish/2026-11-08/2026-11-08 17.40.01.0": {
       "isPinned": false,
       "isHidden": false,
@@ -9630,6 +9589,108 @@
       "isHidden": false,
       "ctime": 1794867988587,
       "mtime": 1794867988587
+    },
+    "python_arm/esp32": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "bleradio.py",
+        "emisor_prueba.py",
+        "firmware_original.md",
+        "respaldo_esp32_original.bin",
+        "web_control.py"
+      ]
+    },
+    "python_arm/esp32/bleradio.py": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1795302869135,
+      "mtime": 1795302869237
+    },
+    "python_arm/esp32/emisor_prueba.py": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1795303370761,
+      "mtime": 1795303370761
+    },
+    "python_arm/esp32/respaldo_esp32_original.bin": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1795302243477,
+      "mtime": 1795302243478
+    },
+    "python_arm/esp32/firmware_original.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1795302721784,
+      "mtime": 1795302721784
+    },
+    "python_arm/esp32/web_control.py": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1795307335702,
+      "mtime": 1795307335702
+    },
+    "python_arm/ha8.py": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1795296426091,
+      "mtime": 1795296426091
+    },
+    "python_arm/ha9.py": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1795307324238,
+      "mtime": 1795307324238
+    },
+    "python_arm/informe 1.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1795268201291,
+      "mtime": 1795268201291
+    },
+    "python_arm/informe 2 1.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1795315029013,
+      "mtime": 1795268232685
+    },
+    "python_arm/informe 2.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1795314875729,
+      "mtime": 1795268232685
+    },
+    "python_arm/informe 3.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1795315433184,
+      "mtime": 1795315146622
+    },
+    "python_arm/informe 4.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1795316054144,
+      "mtime": 1795315876221
+    },
+    "python_arm/informe.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1795316196458,
+      "mtime": 1795316196459
+    },
+    "python_arm/resumen_21 1.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1795310250522,
+      "mtime": 1795306892022
+    },
+    "python_arm/resumen_21.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1795310285357,
+      "mtime": 1795310285358
     }
   },
   "showHidden": false,
