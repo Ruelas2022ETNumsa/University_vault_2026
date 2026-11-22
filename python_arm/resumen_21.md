@@ -145,8 +145,9 @@ Si el Bluetooth no funciona bien en la etapa 1, probar el cable UART.
 7. ~~Decidir: botón de accionar o movimiento automático (sección 5.6).~~ Se implementó el botón de accionar (sección 9); el movimiento automático queda para después (etapa 5).
 8. Voltaje bajo en el modo remoto: por ahora `mover()` suelta el motor y pausa con `input()` (necesita la compu conectada). Decidir qué hacer sin compu (sección 9).
 9. Recalibrar los ángulos del brazo: hay motores que necesitan valores negativos. Al cambiar los límites, actualizar los tres lugares donde viven (sección 9.5).
-10. Autoarranque del ESP32: guardar `web_control.py` como `main.py` en el ESP32 (hoy solo corre desde Thonny con F5).
+10. ~~Autoarranque del ESP32~~ Hecho: `web_control.py` guardado como `main.py`; arranca solo con un cargador de 5 V (probado por el usuario, sección 9.6).
 11. Para después: etapa 5 (modo automático) y un botón de parada en la página.
+12. Probar en el hub el ajuste de `x` (aborta solo la tarea y el modo R sigue armado) y confirmar que ya no sale el traceback (sección 9.6).
 
 ## 8. Avances de la tarde del 21-nov (etapas 0 y 1)
 
@@ -192,7 +193,14 @@ celular → Wi-Fi (red propia del ESP32, página web) → ESP32 (`esp32/web_cont
 - Retraso: "mínimo" según el usuario. No se midió con números.
 - Falta calibración: hay motores que necesitan valores negativos y los ángulos se recalibrarán en otro momento.
 - Los límites viven en tres lugares que deben coincidir al recalibrar: `ARTICULACIONES` en `ha9.py` (fuente de verdad), `LIMITES` en `web_control.py` y `LIM` (JavaScript dentro de `PAGINA`, también en `web_control.py`).
-- `web_control.py` hoy se ejecuta desde Thonny (F5): el ESP32 no lo tiene guardado para arrancar solo (pendiente 10).
+- `web_control.py` se ejecutó primero desde Thonny (F5); después se guardó como `main.py` en el ESP32 (9.6).
+
+### 9.6 Ajustes posteriores
+
+- **Abortar con `x` en el modo R:** ahora aborta solo la tarea en curso. Los motores quedan sueltos, el hub imprime `TAREA ABORTADA (x)` y el modo sigue armado esperando otra orden. Antes se salía del modo R con un traceback ("line 993"). Causa probable, sin confirmar: `radio.close()` al terminar `remoto()`; la documentación de Pybricks muestra `close()` en `AppData` pero no en `BLERadio`. Se quitó ese `close()` y el `BLERadio` se crea una sola vez (`obtener_radio()`). `ha8.py` conserva ese `close()`. En el modo automático (A) `x` sigue volviendo al menú, a propósito. **Falta probarlo en el hub** (pendiente 12).
+- **Memoria de ángulos en la página:** el ESP32 guarda el último ángulo accionado de F, D, A y B (`estado["pos"]`). La página lo muestra en cada botón y, al elegir una articulación, el slider arranca en ese valor. Rutas nuevas: `/pos` y `/cero`; botón "Poner valores guardados en 0 (brazo en inicio)" para usar al rearmar el hub. Limitación: es lo *ordenado*, no lo alcanzado por el motor, porque no hay canal de vuelta del hub al ESP32; si se aborta un movimiento, el valor guardado difiere de la posición real.
+- **Autoarranque del ESP32:** `web_control.py` guardado como `main.py` en el ESP32 (Thonny: Guardar como > Dispositivo MicroPython). Con un cargador de 5 V arranca solo y aparece la red `BRAZO_LEGO` (probado por el usuario). Para editarlo se interrumpe con Stop o Ctrl+C y se vuelve a guardar como `main.py`; para quitarlo se elimina `main.py` del dispositivo. El ESP32 va en su propio cargador, separado del del brazo, que tiene la corriente limitada.
+- **Al recalibrar:** si cambian `LIMITES` o `LIM`, hay que volver a guardar `web_control.py` como `main.py` en el ESP32.
 
 ## 10. Fuentes del análisis
 
