@@ -12,7 +12,7 @@
 | Hardware | LEGO Inventor **51515** con Pybricks. |
 | Estilo de citas | **APA 7** en todo lo que se escriba. El texto del docente lo indica de forma implícita (la "Guía resumen del manual de publicaciones con normas APA"). Aún no es definitivo. |
 | Formato del informe | El esquema de la sección 2 (lo entregó el usuario). |
-| ESP32 + celular | Idea futura, no implementada. No entra como parte del sistema actual. Se analizó la viabilidad (sección 5). |
+| ESP32 + celular | Implementado y probado el 21-nov (sección 9): el celular controla el brazo por una página web del ESP32. |
 | ESP32 ↔ hub | La idea del usuario es por **Bluetooth**. Antes de seguir hay que comprobar cómo usar el Bluetooth del ESP32. |
 | Celular ↔ ESP32 | **Wi-Fi** directo. Se acepta el retraso como costo de controlar con sliders desde el celular. |
 
@@ -141,9 +141,12 @@ Si el Bluetooth no funciona bien en la etapa 1, probar el cable UART.
 3. Confirmar con el docente cómo debe aparecer la "Guía resumen del manual de publicaciones con normas APA". Por ahora quedó una guía breve al final de `informe.md`.
 4. Terminar el brazo (ver pendientes de `resumen_16.md`, sección 4).
 5. ~~Comprobar el ESP32 con Bluetooth (etapa 0)~~ Hecho el 21-nov: ESP32-WROOM-32 con MicroPython v1.29.0 y Bluetooth activo (sección 8).
-6. ~~Código ESP32 → hub (etapa 1)~~ Hecho el 21-nov (sección 8). Falta la etapa 2: mover un solo motor con botón de accionar, reutilizando `mover()` de `ha7.py` (ya vigila el voltaje y suelta el motor al llegar). Elegir primero la articulación de prueba.
-7. Decidir: botón de accionar o movimiento automático (sección 5.6).
-8. Decidir cómo se maneja el voltaje bajo en el modo remoto (sección 5.5).
+6. ~~Código ESP32 → hub (etapa 1)~~ Hecho el 21-nov (sección 8). ~~Etapa 2~~ Hecho (sección 9): `ha9.py` mueve una articulación por cada ACCIONAR reutilizando `mover()` de `ha7.py`; se habilitaron las cuatro articulaciones.
+7. ~~Decidir: botón de accionar o movimiento automático (sección 5.6).~~ Se implementó el botón de accionar (sección 9); el movimiento automático queda para después (etapa 5).
+8. Voltaje bajo en el modo remoto: por ahora `mover()` suelta el motor y pausa con `input()` (necesita la compu conectada). Decidir qué hacer sin compu (sección 9).
+9. Recalibrar los ángulos del brazo: hay motores que necesitan valores negativos. Al cambiar los límites, actualizar los tres lugares donde viven (sección 9.5).
+10. Autoarranque del ESP32: guardar `web_control.py` como `main.py` en el ESP32 (hoy solo corre desde Thonny con F5).
+11. Para después: etapa 5 (modo automático) y un botón de parada en la página.
 
 ## 8. Avances de la tarde del 21-nov (etapas 0 y 1)
 
@@ -155,7 +158,43 @@ Si el Bluetooth no funciona bien en la etapa 1, probar el cable UART.
 - Revisado en la terminal de Pybricks (reporte del usuario): llegaron todos los mensajes y estaban correctos, y los valores fuera de rango (codo 200, garra 120) se recortaron a los límites de seguridad. **Etapa 1 cerrada.**
 - **Estado al terminar la sesión:** se queda en el inicio de la etapa 2 (mover un motor con botón de accionar). Sin decidir: con qué articulación empezar (se propuso la garra) y si el código nuevo va en `ha9.py` desde `ha8.py`.
 
-## 9. Fuentes del análisis
+## 9. Avances posteriores del 21-nov (etapas 2 a 4)
+
+**Resultado:** el celular controla el brazo (probado por el usuario). Las etapas 2, 3 y 4 del plan se resolvieron juntas. El único punto abierto es la calibración de los ángulos (9.5).
+
+### 9.1 Arquitectura final
+
+celular → Wi-Fi (red propia del ESP32, página web) → ESP32 (`esp32/web_control.py`) → Bluetooth broadcast de Pybricks, canal 1, tupla `(articulacion, angulo, id_orden)` → hub (`ha9.py`, modo R) → motores.
+
+### 9.2 Elección de la interfaz del celular
+
+- Se buscaron apps gratis para Android: Droid Pad (F-Droid; UDP, TCP, WebSocket, MQTT y BLE), Dabble, y en iOS CCA Remote, DIYables Bluetooth STEM, BLE Controller y MicroBlue.
+- Se descartaron las apps Bluetooth. *(Inferencia, sin probar)*: el ESP32 usa su única emisión BLE para hablar con el hub y podría chocar con una app que exige un anuncio conectable.
+- Se eligió una **página web servida por el ESP32**: no requiere instalar nada y permite diseño propio. Droid Pad por Wi-Fi (UDP o TCP) queda como alternativa.
+
+### 9.3 `esp32/web_control.py` (archivo nuevo)
+
+- Red Wi-Fi propia `BRAZO_LEGO` (WPA2); la página está en `http://192.168.4.1`.
+- Página: botones Ninguna, F, D, A y B; slider con el rango de cada articulación; botón ACCIONAR (bloqueado si no hay articulación elegida). Rutas: `/s` (slider) y `/go` (ACCIONAR, sube `id_orden`).
+- Recorta el ángulo a `LIMITES` antes de emitir. Al arrancar emite con articulación -1, así el hub no mueve nada.
+- Crea un `bluetooth.BLE()` propio al usar `BLERadio`, para que no quede el escaneo continuo (podría estorbar al Wi-Fi). Por la lectura de `bleradio.py`: `broadcast()` llama a `gap_advertise` con intervalo de 40 ms y la emisión sigue hasta `broadcast(None)`.
+
+### 9.4 `ha9.py` (copia de `ha8.py`; `ha8.py` queda intacto)
+
+- Modo R: pide Enter, lleva el brazo a 0 con `llevar_a_cero()` (A → D → F → B), fija los ceros con `reiniciar_ceros()` y queda armado.
+- Cada orden nueva (cambia `id_orden` y la articulación no es -1) mueve UNA articulación con `mover()`, recortada a los límites de `ARTICULACIONES` (garra 0 a 90). Sin cambios: velocidad 200, umbral 5500 mV con pausa `g`/`x`, un solo motor energizado, motor suelto al llegar.
+- Las órdenes que llegan durante un movimiento se descartan (se avisa). Sin señal del ESP32 o con articulación -1 no se mueve nada.
+- Salir: botones izquierdo y derecho del hub a la vez.
+
+### 9.5 Resultados de la prueba (reporte del usuario)
+
+- La interfaz y el botón ACCIONAR se ven en el celular; la terminal de Pybricks muestra el ángulo enviado y el brazo se mueve.
+- Retraso: "mínimo" según el usuario. No se midió con números.
+- Falta calibración: hay motores que necesitan valores negativos y los ángulos se recalibrarán en otro momento.
+- Los límites viven en tres lugares que deben coincidir al recalibrar: `ARTICULACIONES` en `ha9.py` (fuente de verdad), `LIMITES` en `web_control.py` y `LIM` (JavaScript dentro de `PAGINA`, también en `web_control.py`).
+- `web_control.py` hoy se ejecuta desde Thonny (F5): el ESP32 no lo tiene guardado para arrancar solo (pendiente 10).
+
+## 10. Fuentes del análisis
 
 - [Pybricks BLE broadcast/observe (commit en pybricks-api)](https://github.com/pybricks/pybricks-api/commit/3274cef849d91700905a56ec073cc2e3fb87f830)
 - [Formato de mensajes broadcast/observe](https://github.yxlr123.workers.dev/pybricks/technical-info/blob/master/pybricks-ble-broadcast-observe.md)
