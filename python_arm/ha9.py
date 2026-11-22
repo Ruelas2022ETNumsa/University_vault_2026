@@ -862,6 +862,16 @@ def ejecutar_orden(articulacion, angulo):
     return ok
 
 
+RADIO = {"obj": None}
+
+
+def obtener_radio():
+    """Crea el BLERadio UNA sola vez y lo reutiliza si se vuelve a entrar al modo R."""
+    if RADIO["obj"] is None:
+        RADIO["obj"] = BLERadio(observe_channels=[CANAL_ESP32])
+    return RADIO["obj"]
+
+
 def remoto():
     print("=== REMOTO (ESP32) === MUEVE el brazo: una articulacion por cada ACCIONAR")
     if BLERadio is None:
@@ -883,7 +893,7 @@ def remoto():
     reiniciar_ceros()
     print("Ceros fijados. Modo remoto ARMADO: cada ACCIONAR mueve una articulacion.")
 
-    radio = BLERadio(observe_channels=[CANAL_ESP32])
+    radio = obtener_radio()
     ultimo = None       # ultimo mensaje ya procesado
     id_ref = None       # id_orden de referencia (cambia = orden nueva de ACCIONAR)
     con_senal = None    # None = sin estado | True | False
@@ -947,8 +957,7 @@ def remoto():
                                 ok = ejecutar_orden(articulacion, angulo)
                                 if not ok:
                                     detener_todo()
-                                    print("Abortado (x) tras voltaje bajo -> motores detenidos. Se sale del modo remoto.")
-                                    break
+                                    print("    TAREA ABORTADA (x): motores sueltos. El brazo sigue armado; manda otra orden.")
                                 # las ordenes que llegaron durante el movimiento se descartan:
                                 # el mensaje actual pasa a ser la nueva referencia
                                 despues = radio.observe(CANAL_ESP32)
@@ -960,10 +969,9 @@ def remoto():
                                     ultimo = despues
                                     pantalla(letra_articulacion(msg2[0]))
                                 t_impreso = reloj.time()
-                                print("    listo: motor suelto, esperando la siguiente orden")
+                                print("    motor suelto, esperando la siguiente orden")
             wait(PERIODO_REMOTO_MS)
     finally:
-        radio.close()
         detener_todo()
         pantalla("-")
     print("Remoto terminado. Mensajes mostrados: {} | ordenes ACCIONAR: {} | movimientos ejecutados: {}".format(

@@ -48,35 +48,38 @@ h1{font-size:20px;margin:0 0 12px 0}
 #go{width:100%;padding:26px 0;font-size:26px;border:none;border-radius:12px;background:#2e7d32;color:#fff}
 #go:disabled{background:#333;color:#777}
 #est{margin-top:14px;font-size:15px;color:#aaa;min-height:40px}
+#cero{margin-top:18px;width:100%;padding:12px 0;font-size:14px;border:1px solid #555;border-radius:8px;background:#222;color:#aaa}
+small{font-size:13px;color:#cfd8dc}
 </style></head><body>
 <h1>Brazo LEGO - control</h1>
 <div class="fila" id="fila">
 <button onclick="sel(-1)" id="b-1">Ninguna</button>
-<button onclick="sel(0)" id="b0">F base</button>
-<button onclick="sel(1)" id="b1">D codo</button>
-<button onclick="sel(2)" id="b2">A muneca</button>
-<button onclick="sel(3)" id="b3">B garra</button>
+<button onclick="sel(0)" id="b0">F base<br><small id="v0">0 deg</small></button>
+<button onclick="sel(1)" id="b1">D codo<br><small id="v1">0 deg</small></button>
+<button onclick="sel(2)" id="b2">A muneca<br><small id="v2">0 deg</small></button>
+<button onclick="sel(3)" id="b3">B garra<br><small id="v3">0 deg</small></button>
 </div>
 <input type="range" id="sl" min="0" max="0" value="0" disabled>
 <div id="val">0 deg</div>
 <button id="go" disabled onclick="enviar('go')">ACCIONAR</button>
 <div id="est">Elige una articulacion.</div>
+<button id="cero" onclick="cero()">Poner valores guardados en 0 (brazo en inicio)</button>
 <script>
 var LIM={0:[0,360],1:[-120,180],2:[0,190],3:[0,90]};
-var art=-1, ultimo=0;
+var art=-1, ultimo=0, pos={0:0,1:0,2:0,3:0};
 var sl=document.getElementById('sl'), val=document.getElementById('val');
 var est=document.getElementById('est'), go=document.getElementById('go');
 function enviar(ruta){
   fetch('/'+ruta+'?a='+art+'&v='+sl.value)
     .then(function(r){return r.text();})
-    .then(function(t){est.textContent=t;})
+    .then(function(t){est.textContent=t; if(ruta=='go'){cargar();}})
     .catch(function(){est.textContent='Sin conexion con el ESP32';});
 }
 function sel(n){
   art=n;
   for(var i=-1;i<=3;i++){document.getElementById('b'+i).className=(i==n)?'on':'';}
   if(n<0){sl.disabled=true;go.disabled=true;sl.min=0;sl.max=0;sl.value=0;}
-  else{sl.disabled=false;go.disabled=false;sl.min=LIM[n][0];sl.max=LIM[n][1];sl.value=0;}
+  else{sl.disabled=false;go.disabled=false;sl.min=LIM[n][0];sl.max=LIM[n][1];sl.value=pos[n];}
   val.textContent=sl.value+' deg';
   enviar('s');
 }
@@ -86,10 +89,26 @@ sl.oninput=function(){
   if(t-ultimo>150){ultimo=t;enviar('s');}
 };
 sl.onchange=function(){enviar('s');};
+function pintar(){
+  for(var i=0;i<4;i++){document.getElementById('v'+i).textContent=pos[i]+' deg';}
+}
+function cargar(){
+  fetch('/pos').then(function(r){return r.text();}).then(function(t){
+    var a=t.split(',');
+    for(var i=0;i<4;i++){pos[i]=parseInt(a[i]);}
+    pintar();
+    if(art>=0){sl.value=pos[art];val.textContent=sl.value+' deg';}
+  }).catch(function(){});
+}
+function cero(){
+  if(!confirm('Poner en 0 los valores guardados? Usalo solo si el brazo esta en inicio.')){return;}
+  fetch('/cero').then(function(){cargar();});
+}
+cargar();
 </script></body></html>
 """
 
-estado = {"art": -1, "ang": 0, "id": 0}
+estado = {"art": -1, "ang": 0, "id": 0, "pos": {0: 0, 1: 0, 2: 0, 3: 0}}
 
 # --- Wi-Fi propio (punto de acceso) ---
 ap = network.WLAN(network.AP_IF)
@@ -119,6 +138,11 @@ def parametros(query):
             k, v = par.split("=", 1)
             d[k] = v
     return d
+
+
+def posiciones():
+    """Ultimo angulo ORDENADO (accionado) de cada articulacion: 'f,d,a,b'. No es lectura del motor."""
+    return ",".join(str(estado["pos"][i]) for i in range(4))
 
 
 def atender(cl):
@@ -154,6 +178,7 @@ def atender(cl):
                 responder(cl, b"Elige una articulacion antes de accionar.")
                 return
             estado["id"] += 1
+            estado["pos"][art] = ang
             print("ACCIONAR orden #{} -> {} {} deg".format(estado["id"], NOMBRES[art], ang))
             texto = "Orden #{} enviada: {} {} deg".format(estado["id"], NOMBRES[art], ang)
         else:
@@ -162,6 +187,13 @@ def atender(cl):
             texto = "Listo: {} {} deg (falta ACCIONAR)".format(NOMBRES[art], ang)
         emitir()
         responder(cl, texto.encode())
+    elif ruta == "/pos":
+        responder(cl, posiciones().encode())
+    elif ruta == "/cero":
+        for k in estado["pos"]:
+            estado["pos"][k] = 0
+        print("Valores guardados de la pagina puestos en 0")
+        responder(cl, posiciones().encode())
     else:
         cl.sendall(b"HTTP/1.1 404 Not Found\r\nConnection: close\r\n\r\n")
 
