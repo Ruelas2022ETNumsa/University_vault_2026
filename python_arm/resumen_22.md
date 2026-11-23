@@ -1,6 +1,6 @@
 # Resumen 22 de noviembre de 2026: revisión y refinamiento de `informe.md`
 
-**Hora de inicio de sesión:** 18:39
+**Hora de inicio de sesión:** 18:39 (sesión 1) y 20:06 (sesión 2; los tokens se reestablecen a las 01:06)
 **Objetivo del día:** refinar el primer borrador completo del informe (`informe.md`, secciones 1 a 6) y dejarlo listo como trabajo investigativo. Se corrige por una lista de pendientes ordenada por prioridad, de a uno.
 
 ---
@@ -41,7 +41,7 @@ Informe universitario de una materia investigativa:
 - **No inventar datos.** Lo no verificado se marca `[verificar]`, `[pendiente]` o "s. f.".
 - Estilo de citas: **APA 7**, `(Autor, año)`. Aún no es definitivo; confirmar con el docente.
 - Antes de reescribir archivos grandes: avisar **"cambios masivos, bk necesario"** y esperar la copia de respaldo.
-- Respaldos del informe: `informe 1.md` a `informe 4.md`.
+- Respaldos del informe: `informe 1.md` a `informe 7.md` (el 5 y el 6 son el estado al inicio de la sesión 2; el 7 es posterior al lote 1). Antes de otro cambio masivo: `informe 8.md`.
 - Las preguntas pendientes para NotebookLM (A1 a A18), Perplexity (B1 a B10) y las tareas propias (C1 a C6) están en el contexto de sesión; se irán trayendo de a poco según la prioridad.
 
 ## 4. Decisión sobre "sustentar la implementación de IA"
@@ -100,9 +100,9 @@ La sección 3.2 dice que la materia "requiere sustentar la implementación de IA
 - [x] Lectura de `informe.md` y `resumen_21.md`.
 - [x] Revisión contra el esquema y lista de prioridades (sección 5).
 - [x] Decisión provisional sobre "sustentar" (sección 4).
-- [~] Prioridad 1, punto 1: cámara y módulo de IA. **Decidido: opción A (PC + ESP32)**; antecedentes encontrados (sección 8); falta reescribir Tabla 1, 4.1.6 y 4.3.
-- [ ] Prioridad 1, puntos 2 a 8.
-- [ ] Prioridades 2, 3 y 4.
+- [x] Prioridad 1, punto 1: cámara y módulo de IA. **Decidido: opción A (PC + ESP32)**; Tabla 1, 4.1.6 y 4.3 reescritas (sección 9).
+- [x] Prioridad 1, puntos 2 a 7 aplicados al informe (sección 9). El punto 8 (verificar contra los PDF, C1) sigue abierto.
+- [~] Prioridad 2 parcial (conciliación de fuentes, método de la revisión, definiciones de IA con cita pendiente, aforo y aprendizaje activo corregidos); quedan datos de institución, costo real y citas de PID e IA. Prioridad 3 y 4 sin hacer (sección 9).
 
 ## 8. Decisión: arquitectura de la propuesta = opción A (PC + ESP32)
 
@@ -118,9 +118,32 @@ La sección 3.2 dice que la materia "requiere sustentar la implementación de IA
 4. **Bera (2026, 1 de octubre).** *Computer-vision-based robotic arm*. Electronics For You (revista, no revisada por pares; parte del texto es de acceso con registro). Laptop, Raspberry Pi 5 o servidor GPU hacen la visión; el ESP32 hace el control en tiempo real; comunicación por Wi-Fi, Ethernet o serial (y ESP-NOW). **Video de la prueba de concepto:** https://www.youtube.com/watch?v=PHznMxfTjuo. Página: https://www.electronicsforu.com/electronics-projects/computer-vision-based-robotic-arm
 5. Por revisar (no verificados): *Development and experimental validation of an educational robotic platform with machine vision and web-based monitoring for automation teaching*, Future Internet, 18(6), 325 (https://www.mdpi.com/1999-5903/18/6/325); TeleopLab (arXiv 2509.05547), interfaz de celular para laboratorios remotos (posible apoyo de la afirmación de "aforo reducido" de 3.2).
 
-### Cambios que se harán en `informe.md` (con aviso "cambios masivos, bk necesario")
+### Cambios previstos en `informe.md` (HECHOS en la sesión 2, salvo las filas de Dang, Shah y Capaldi: se omitieron porque el usuario no tiene esas fuentes por ahora)
 
 - **Tabla 1:** fila de LEGO Ideas y Pybricks sin "aquí la cámara es un celular"; agregar filas de Dang et al. (2026), Shah y Arockia Doss (2026) y Capaldi (2024).
 - **4.1.6:** quitar el párrafo de "versión con cámara de celular" o pasarlo a una nota; el método de tablas con interpolación pasa a ser una opción de la PC.
 - **4.3:** una sola arquitectura (cámara en PC); aclarar la convivencia del Bluetooth del hub (solo emisión del ESP32; el hub conectado a la PC degrada `observe` según Pybricks, s. f.-e) `[pregunta abierta]`.
 - Referencias: agregar las fuentes nuevas en APA 7 una vez verificadas.
+
+## 9. Registro de la sesión 2 (20:06; skill 2 plan, worker `alx-rul`)
+
+**Herramientas.** NotebookLM se quedó sin tokens: se usa Gemini con el cuaderno `iaarm` (https://gemini.google.com/notebook/df4a68df-58fe-4c26-9070-2cfa24b4f409), que da menos metadatos (casi siempre sin autor ni año y con «Fuente N»). Pedirle siempre que identifique cada fuente por el nombre del archivo PDF; lo que salga de ahí se atribuye por inferencia y se marca `[verificar]`. Perplexity sigue para fuentes externas. Los cambios se hicieron con `edit_file` por lotes, cada uno tras un respaldo del usuario.
+
+**Lote 1 (respuestas S0 a S8 de NotebookLM; bk `informe 6.md`).**
+- Prioridad 1, puntos 1 a 7: arquitectura única (cámara USB en PC, Wi-Fi al ESP32, BLE de difusión al hub; celular solo manual); BLE medido solo con RSSI y 50 a 60 ms solo de Wi-Fi; conclusión 1 con 84 % a 97,28 % como métricas distintas; conclusión 3 sin «comparable»; sniffer con City Hub 4.1.0b2; brecha suavizada; tarea de pelota roja, base café y cubo descrita en 3.2.
+- Nuevo: 2.5 método de la revisión; 28 trabajos distintos en 29 archivos; límites de alimentación en 4.1.4; definiciones de IA en 4.1.7 (cita pendiente); Kumar en 4.1.8; 4.1.9 con la Tabla 4 (visión separada del control); limitaciones pasan a Tabla 5; retorno, alimentación secuencial y parada por pérdida de enlace en 4.3; prueba preliminar en 2.4 y 4.4; agarre y cerrar el lazo en 5.3; diseños abiertos (Narmadha y Markvicka) en la Tabla 5; cinco referencias nuevas (Kumar, Narmadha, Ntambara, Oliveira, Zuiev) y acrónimos DC-DC, RGB, RSSI, UART, MQTT.
+
+**Lote 2 (Perplexity A1, A2, A8; bk `informe 7.md`).**
+- A1: solo la página del proyecto de Pybricks *Robotic arm with vision* (SPIKE Prime, celular como *smart sensor*, objeto rojo; autor Laurens Valk sin confirmar). No confirma batería ni motores simultáneos. Se quitó la frase de los videos con batería de 1.1 y 4.3 (queda `[pendiente]`).
+- A2: sin tesis ni artículo arbitrado con la cadena completa. Cuatro proyectos abiertos con partes (Johnson 2026, osullivp 2021, GC-TO 2026, Anton's Mindstorms 2025) agregados a 1.1, Tabla 1, brecha, conclusión 1 y referencias. Verificar los README.
+- A8: sin medición publicada de latencia de un paquete BLE en broadcast de ESP32; Cho et al. (2014) como modelo y Vieira y Rizzetti (2025, 44 y 85 ms, sistema en sentido contrario) agregados a 4.1.8 con títulos pendientes.
+
+**Lote 3 (Gemini A3 a A7).**
+- A3 y A4: no hay definición de PID ni de IA en las fuentes; solo definiciones parciales de aprendizaje automático, red neuronal y detección de objetos sin autor. Quedan como `[cita pendiente]`.
+- A5: aforo limitado por pandemia en la UPS Guayaquil (Llerena y Salazar, 2022, por inferencia) y módulos limitados en la ESPE (Aucapiña e Iza, 2019). 3.2 y 3.3 corregidos; se quitó a Tzompantzi de esa afirmación.
+- A6: sin meta-análisis. 3.1 reescrito y 1.1 corregido (Markvicka: 36 estudiantes, sin diferencia significativa en notas).
+- A7: sin antecedente de tabla píxeles a ángulos con interpolación lineal; frase añadida en 4.1.6.
+
+**Discrepancias abiertas (C1).** Suhaeb 85 a 92 ms frente a 85 a 110 ms; año de Monroy Moya (2024, 2025 o 2026); las dos tesis se mezclaron en NotebookLM y Gemini; Intisar sin sensores de agarre en las fuentes; metadatos sin verificar de Ntambara, Zuiev, Oliveira, Wu, Cho, Vieira, Kumar, Gunardi, Fernández Panadero y Medel.
+
+**Pendientes.** (1) Perplexity: A3 (PID), A4 (definiciones de IA), A5 con *Benitez et al. (2020), HardwareX 8*, A6 (meta-análisis), metadatos B y opcionales; los prompts están en `contexto22.md`, sección A.6. (2) Usuario: C1 a C5, mirar el video o la página de Pybricks, verificar los README de los cuatro proyectos abiertos. (3) Prioridad 3 sin hacer: letras de Pybricks por título, material interno, figuras, formato de tablas, acrónimos y la frase repetida de *smart sensors* en 1.1. (4) Dang, Shah y Capaldi (N22 a N24) omitidos por falta de fuentes.

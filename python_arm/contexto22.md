@@ -4,13 +4,95 @@
 
 ---
 
+## A. ESTADO ACTUALIZADO (sesión 2 del 22-nov-2026). LEER ESTO PRIMERO; las secciones 0 a 10 de abajo son el traspaso original y quedan como histórico
+
+### A.1 Sesión y herramientas
+
+- Hora de inicio de la sesión 2: 20:06 (los tokens se reestablecen a las 01:06). Worker `alx-rul`. Skill 2 (plan); el operator se ignora. MCP verificado (write y edit sobre `Rubbish\section.md`) y `_hangar` listado.
+- NotebookLM se quedó sin tokens. Se usa **Gemini** con el cuaderno `iaarm` (https://gemini.google.com/notebook/df4a68df-58fe-4c26-9070-2cfa24b4f409), que tiene las mismas fuentes. Gemini da menos metadatos: casi siempre responde «autor y año: no está en las fuentes» y numera «Fuente 1, 2...». Cierre a agregar en cada prompt: «Identifica cada fuente por el nombre exacto del archivo PDF, no por Fuente N; si no ves autor o año, dilo». Lo que salga de Gemini se atribuye por inferencia y se marca `[verificar]`.
+- Perplexity sigue siendo la vía para fuentes externas.
+- `informe.md` se editó con `edit_file` por lotes (no se reescribió entero), siempre después de que el usuario creara el respaldo.
+
+### A.2 Respaldos del informe
+
+- `informe 5.md` y `informe 6.md`: estado al inicio de la sesión 2 (46,96 KB).
+- `informe 7.md` (58,40 KB): después del lote 1 y antes de los lotes 2 y 3.
+- `informe.md`: vigente (ya con los tres lotes). Antes de otro cambio masivo: pedir `informe 8.md`.
+
+### A.3 Lo hecho en `informe.md` (tres lotes)
+
+**Lote 1 (respuestas S0 a S8; bk 6).** Prioridad 1, puntos 1 a 7 aplicados:
+1. Arquitectura única = opción A. Tabla 1: fila de Pybricks pasa a ser referencia con prueba preliminar (pelota roja sobre base café, sin calibrar ni integrar) y fila VISION con la cámara en PC. 4.1.6: la tabla con interpolación lineal es una opción propuesta, no del proyecto. 4.3: cámara USB en PC, Figura 2 corregida, celular solo como interfaz manual, *smart sensors* descartado.
+2. 4.1.8: BLE solo se midió con RSSI (-47,8 dBm a 1 m; -88,7 dBm a unos 40 m); los 50 a 60 ms de Tzompantzi son solo Wi-Fi (Wireshark, desde un navegador, repeticiones no indicadas); ninguna fuente mide latencia de BLE.
+3. Conclusión 1: rango 84 % (confiabilidad global) a 97,28 % (identificación), no comparables.
+4. Conclusión 3: sin «comparable».
+5. Sniffer de Pybricks: City Hub, firmware 4.1.0b2, no el 51515 (4.1.2 y 4.3).
+6. «Brecha» suavizada en 1.1.
+7. La tarea (pelota roja sobre base café que se deposita en un cubo) se describe en 3.2.
+Contenido nuevo: 2.3 (28 trabajos distintos en 29 archivos) y 2.5 (método de la revisión); párrafo de límites de alimentación en 4.1.4 (Ntambara, Yilmaz, Lim); definiciones de IA en 4.1.7 (con `[cita pendiente]`); Kumar en 4.1.8 (38 / 62 / unos 120 ms de ida y vuelta); **4.1.9 nueva con la Tabla 4** (separación entre visión y control: Mohammed, Intisar, Mada Sanjaya, Aucapiña e Iza, Markvicka, Monroy Moya y la propuesta); la tabla de limitaciones pasó a **Tabla 5**; en 4.3 se agregaron canales de retorno (Suhaeb, Aucapiña e Iza, Yilmaz, Llerena y Salazar), alimentación secuencial (Ntambara; ninguna fuente mide el efecto en el tiempo de ciclo) y parada ante pérdida de enlace (Zuiev); 4.4 con la prueba preliminar; 5.3 con agarre (Monroy Moya, Oliveira) y cerrar el lazo; Tabla 5 con diseños abiertos (Narmadha et al., 2022, cap. 15 de Bansal et al., pp. 191-212; Markvicka). Referencias nuevas: Kumar, Narmadha, Ntambara, Oliveira, Zuiev. Acrónimos nuevos: DC-DC, RGB, RSSI, UART, MQTT.
+
+**Lote 2 (Perplexity A1, A2, A8; bk 7).**
+- A1: solo se halló la página del proyecto de Pybricks *Robotic arm with vision* (SPIKE Prime, celular como *smart sensor*, objeto rojo, la base gira hasta width > 8 y 70 < x < 80, actualizado el 23-mar-2026; autor Laurens Valk sin confirmar). No confirma batería ni motores simultáneos y no hay video equivalente con el 51515. Se quitó del informe la frase de videos con batería; queda `[pendiente: confirmar en el video]`. La referencia mantiene la letra s. f.-a.
+- A2: no hay tesis ni artículo arbitrado con la cadena completa. Proyectos abiertos: Wildlife Spotter Train (Johnson, 2026: ESP32-S3 como puente Wi-Fi a BLE hacia un City Hub con Pybricks y cámara MJPEG, sin visión), Lego51515BLEArduinoTensorFlow (osullivp, 2021), WRO-2026-GC-FTO (GC-TO, 2026) y HuskyLens con LMS-ESP32 (Anton's Mindstorms, 2025). Agregados en 1.1, Tabla 1 (dos filas), brecha, conclusión 1 y referencias. **Falta verificar los README** (GATT o difusión en Wildlife, función del ESP32 en WRO, placa y firmware en osullivp).
+- A8: no hay medición publicada de latencia de un paquete BLE en broadcast de ESP32 a otro dispositivo. Cho et al. (2014, *Sensors*, 15(1), DOI 10.3390/s150100059) es modelo de latencia de descubrimiento. Vieira y Rizzetti (2025, ERRC, DOI 10.5753/errc.2025.17688) dan 44 y 85 ms, pero con el ESP32 como receptor que publica por MQTT (latencia de sistema, sentido contrario). Souboura (2026) y Shih (2022) no se citaron. Agregado en 4.1.8 y referencias (títulos pendientes).
+
+**Lote 3 (Gemini A3 a A7).**
+- A3: la definición de PID y del término integral no está en las fuentes (solo PI y PD dentro de lazos en cascada). El `[cita pendiente]` de 4.1.4 sigue.
+- A4: hay definiciones parciales de aprendizaje automático, red neuronal y detección de objetos, sin autor identificado; la de IA no. Marca de 4.1.7 actualizada.
+- A5: UPS Guayaquil (atribuido a Llerena y Salazar, 2022): el aforo limitado por la pandemia obligó a dar prácticas en línea con brazos KUKA KR AGILUS; Aucapiña e Iza (2019): número limitado de módulos en la ESPE Latacunga. Corregidos 3.2 y 3.3 (se quitó a Tzompantzi, que no habla de aforo).
+- A6: no hay meta-análisis. 3.1 reescrito (se quitó «aprendizaje activo más efectivo»; holgura con Ntambara y Mohammed, fricción con Eiammanussakul). 1.1: Markvicka (36 estudiantes, calificaciones sin diferencia significativa entre tareas tradicionales y con brazo; encuesta n = 35, 78 %) en vez de «efecto favorable». Dato de holgura de Ntambara: repetibilidad angular 0,41 ± 0,23° y posicional 2,47 ± 0,58 mm (10 ciclos, 0,8 kg).
+- A7: ningún antecedente de tabla píxeles a ángulos con interpolación lineal; frase añadida en 4.1.6 con `[cita pendiente]`.
+
+### A.4 Datos de S0 a S8 que no deben perderse
+
+- S0: 29 archivos = 28 trabajos (la tesis de Aucapiña e Iza está como `ESPEL-MEC-0165-P.pdf` diapositivas y `T-ESPEL-MEC-0165.pdf` tesis). Sin metadatos: `2010S03C01.pdf`, `2402.17243v1.pdf`, `30-100-1-SP.pdf` (IJATEC-IRIS 2020, sin autores), `978-3-642-32527-4_17.pdf` (LEGO Mindstorms en ingeniería, sin autor), `P-00W-KW7.pdf` (efectores para cosecha), `s44430-026-00032-6.pdf` (Ntambara). Medel sin año. Penn State Erie 2014 sin autor personal. Dang, Shah y Capaldi no están cargados.
+- S4 (retorno): Suhaeb consulta `/get_values` cada segundo y recibe JSON; Aucapiña e Iza (uArm): serie bilateral, comandos `P2220` (coordenadas) y `P2232` (estado de pinza), `ok` tras cada `G0`; Yilmaz: IMU MPU6050 y finales de carrera; Llerena y Salazar: servos de bus LX-15D/LX-225 con ángulo, voltaje y temperatura; Monroy Moya: OLED e infrarrojos; Ntambara: lazo abierto.
+- S5 (agarre): Monroy Moya (infrarrojo en la pinza, implementado), Oliveira et al. 2021 (vacío, fibra óptica, fuerza; Lehnert 2017, Mu 2020, Rong 2021), Rangarajan y Bianchini (lazo abierto; fuerza de contacto como trabajo futuro), Aucapiña e Iza (cita a Campos 2016, táctil). Intisar no aparece.
+- S6 (visión y control separados): ver Tabla 4 del informe. Monroy Moya (2025 según S6) cita además a Intisar 2021, Abdullah-Al-Noman 2022, Lahoti 2021, Kumar 2021 y Cong 2021.
+- S7 (alimentación): Ntambara 12 V y 2 A, pico 1,92 A, caída 0,46 V, secuencial; Lim (caídas de 5 a 0 V con `Servo.h`, registros PWM); Yilmaz (relés, optoacopladores PC817, ACS712, fusible 4,2 A, tierra en estrella); Aucapiña e Iza (convertidor LM2596); Kumar (LiPo 7,4 V a 6 / 5 / 3,3 V). Ninguna mide el efecto del movimiento secuencial en el tiempo de ciclo.
+- S8: Bansal et al. (2022), cap. 15, Narmadha, Anbarasi Jebaselvi y Anitha, pp. 191-212, brazo de 4 GDL con corte láser y Arduino abierto, error menor a 1 %; Markvicka: kit abierto menor a 200 USD con MG996R, ATmega328 y PCA9685.
+
+### A.5 Discrepancias abiertas (resolver con los PDF, tarea C1)
+
+- Suhaeb: el informe dice 85 a 92 ms; S4 dice 85 a 110 ms con hasta 10 usuarios.
+- Monroy Moya: año 2024 (informe), 2025 (S4 y S5) o 2026 (S0).
+- NotebookLM y Gemini mezclaron las dos tesis (ESPE, uArm, Aucapiña e Iza; UPS, xArm 1S, Llerena y Salazar). Se usó la atribución del informe; confirmar.
+- Intisar: la limitación «sigue la rutina aunque el objeto se caiga» quedó `[verificar]` en la Tabla 5.
+- Atribuciones por inferencia (Gemini): «Fuente 1 = Llerena y Salazar» (aforo) y «Fuente 3 = Markvicka» (36 participantes).
+- Metadatos sin verificar: Ntambara (revista, volumen, DOI, iniciales), Zuiev (revista y páginas), Oliveira (autores y año), Wu (autores), Cho y Vieira (títulos), Kumar (páginas), Gunardi, Fernández Panadero y Medel (revista).
+
+### A.6 Pendientes
+
+**Prompts para Perplexity (aun no corridos).** Cierre común: «Para cada fuente dame autor(es), año, título, revista o editorial, DOI o URL, y página o sección. No inventes; si no puedes confirmar un dato, escribe no confirmado».
+- A3 (PID): libros, apuntes universitarios o revisiones que definan el control PID y el término integral y su efecto sobre el error en estado estacionario, de preferencia con servomotores o brazos educativos y acceso abierto.
+- A4 (definiciones): libro, survey u organismo reconocido que defina inteligencia artificial, aprendizaje automático, red neuronal artificial y detección de objetos en visión por computadora.
+- A5 (aforo y práctica a distancia): laboratorios remotos con brazos o robots educativos que mencionen el aforo o los equipos limitados, y buscar en especial *Benitez et al. (2020), Design of an affordable IoT open-source robot arm for online teaching of robotics courses during the pandemic contingency, HardwareX 8* (aparece citado dentro de una de las fuentes).
+- A6 (aprendizaje activo): meta-análisis o estudios con cifras de aprendizaje activo frente a pasivo en ingeniería o ciencias, y estudios de que los modelos físicos enseñan fricción u holgura.
+- B (metadatos): autores del JRC 2026 y del proyecto de Tampere; revista de Fernández Panadero 2010, Gunardi y Jumadri 2020 y Medel; autores de Wu et al. 2014 y de Oliveira et al. 2021; datos de Ntambara, Zuiev, Kumar y del año de Monroy Moya.
+- Opcionales: detectores livianos (YOLO nano, MobileNet), rojo contra café en HSV, comunicación de un solo sentido.
+
+**Tareas del usuario.** C1 (abrir los PDF y confirmar autores, año, revista, páginas); C2 (institución, carrera, asignatura); C3 (costo real del montaje); C4 (confirmar con el docente el formato de la guía APA); C5 (medir el retraso orden-movimiento, opcional); ver el video o la página del proyecto de Pybricks y anotar si los motores se mueven a la vez y con qué alimentación; verificar los README de los cuatro proyectos abiertos; completar títulos de Cho y Vieira.
+
+**Prioridad 3 (sin hacer).** Reordenar las letras de Pybricks por título (a = BLE broadcast, b = Mediciones, c = Motor, d = Robotic arm, e = Use your phone; hoy Robotic arm es s. f.-a); quitar material interno (bloque de estado, notas Verificar contra los trabajos completos, línea meta de 3.3 y fila Ambiental); figuras 1 y 2 como diagramas reales; formato APA 7 de tablas y figuras; acrónimos que sobran; la frase repetida de *smart sensors* en 1.1; «Autor pendiente» de Tampere y JRC.
+
+**Omitido por ahora.** N22 a N24 (Dang, Shah y Capaldi): el usuario no tiene esas fuentes, así que no se citan ni están en la Tabla 1.
+
+### A.7 Cómo retomar
+
+1. Leer `_start.md`, activar skill 2 (plan) y leer este archivo y `resumen_22.md`. Responder `ok` tras listar `_hangar`.
+2. Pedir al usuario las respuestas de A3 a A6, B, y lo que haya verificado en los PDF y README.
+3. Aplicar los cambios con `edit_file`, previo aviso «cambios masivos, bk necesario» y un respaldo `informe 8.md`.
+4. Luego prioridad 3 y actualizar el registro de `resumen_22.md`.
+
+---
+
 ## 0. Arranque de sesión (reglas del vault)
 
 - Leer `E:\University_vault_2026\_skills\_start.md` con el MCP Filesystem y seguir su flujo (verificación MCP con `write_file` y `edit_file` sobre `Rubbish\section.md`, selección de skill).
 - Skill usado: **2 = plan** (`_claude-plan.md`). El operator ya no importa: se ignora.
 - Hora de inicio de la sesión anterior: 18:39 (los tokens se reestablecen 5 horas después).
 - Antes de **reescribir archivos grandes** (como `informe.md`): avisar **"cambios masivos, bk necesario"** y esperar la copia de respaldo del usuario. Respaldos: `informe 1.md` a `informe 4.md`.
-- **No se ha modificado `informe.md` en esta sesión.** El usuario pidió expresamente no hacer cambios hasta tener todo cruzado.
+- [Histórico, ya superado: `informe.md` se modificó en la sesión 2, ver sección A.] El usuario pidió expresamente no hacer cambios hasta tener todo cruzado.
 - Idioma: español, directo. Si hay dudas, preguntar antes de escribir. Una pregunta por mensaje.
 
 ## 1. El proyecto en una frase
@@ -38,7 +120,7 @@ Perplexity (Deep Research, foco Académico) dio fuentes → se cargaron en Noteb
 
 Cámara USB/webcam en la **PC** → módulo de visión/IA en la PC (Python + OpenCV; luego un detector profundo) → Wi-Fi (HTTP, rutas `/s` y `/go` del ESP32) → ESP32 → BLE broadcast Pybricks → hub 51515 → motores. El celular queda como interfaz manual. Se descarta la cámara del celular conectada al hub (*smart sensors*) como parte de la propuesta.
 
-## 5. Revisión del borrador: lista de pendientes por prioridad
+## 5. Revisión del borrador: lista de pendientes por prioridad (HISTÓRICO: el estado actual de cada punto está en A.3 y A.6)
 
 ### Prioridad 1 (errores de fondo; se corrigen de a uno)
 
@@ -83,7 +165,7 @@ Verificadas leyendo el texto completo (Dang y Shah) o parcialmente (Capaldi, Ber
 
 La Tabla 1 se titula "Sending instructions in real time through Wi-Fi" (Sección 6): tiempos de respuesta HTTP de unos 50 a 60 ms (0,0499 a 0,0595 s) a 1, 10, 20, 30 y 40 m, con el ESP32 en modo punto de acceso (`192.168.4.1`). **Es solo Wi-Fi.** BLE se evaluó con RSSI (Figuras 9 y 10), no con latencia. Rango de latencia Wi-Fi reunido (métodos distintos, no comparables): Tzompantzi 50-60 ms; Suhaeb 85-92 ms; Kumar 38 a ~120 ms (ida y vuelta); Shah menos de 150 ms. Falta confirmar con S1 a S3 que ninguna de las fuentes mide latencia de BLE.
 
-## 9. Preguntas pendientes para NotebookLM (cuaderno con las 29 fuentes)
+## 9. Preguntas pendientes para NotebookLM (cuaderno con las 29 fuentes) (HISTÓRICO: S0 a S8 ya corridas y aplicadas; N22 a N24 omitidas; ver A.3 a A.6)
 
 Estado: el usuario junta las 26 + las 3 nuevas en un cuaderno. Orden: **S0 a S3 primero** (cierran el punto 2 de la prioridad 1). Al final de **cada** pregunta va este cierre (ya incluido abajo): *"Responde solo con lo que está en las fuentes. Indica fuente (autor, año) y página o sección. Si no está, escribe 'no está en las fuentes'. No inventes."* No nombrar secciones del informe (NotebookLM no las ve).
 
@@ -115,7 +197,7 @@ Estado: el usuario junta las 26 + las 3 nuevas en un cuaderno. Orden: **S0 a S3 
 
 **Ítems a abrir en los PDF (C1) de las fuentes nuevas:** Zuiev (revista, volumen, número, páginas), Kumar (páginas), Ntambara (revista, volumen, DOI), Dang (volumen, páginas, orden de nombres).
 
-## 10. Próximos pasos
+## 10. Próximos pasos (HISTÓRICO: ver A.7)
 
 1. Correr **S0 a S3** en el cuaderno con las 29 fuentes y traer las respuestas (cierra el punto 2 de la prioridad 1).
 2. Correr S4 a S8 (y N22 a N24 si se cargan Dang, Shah y Capaldi).
