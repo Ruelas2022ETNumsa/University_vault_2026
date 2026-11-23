@@ -27,6 +27,13 @@ Estos trabajos coinciden en tres limitaciones que también aplican a este proyec
 
 **Plataformas LEGO con cámara.** Existen proyectos de brazos con el hub LEGO Inventor 51515 que siguen una pelota roja con una cámara web (LEGO Ideas, s. f.), y un proyecto de Pybricks con un brazo LEGO SPIKE Prime que usa el celular como cámara (función *smart sensors*), busca un objeto rojo, gira la base hasta centrarlo y lo toma (Pybricks, s. f.-a). No se encontró un proyecto equivalente con el hub 51515 y cámara de celular. Otros trabajos con LEGO delegan la visión a una computadora externa, porque la cámara del propio robot no tiene la potencia necesaria (Autor [pendiente], s. f.). También hay proyectos abiertos que combinan partes de la arquitectura de este trabajo: un tren LEGO con hub Pybricks controlado por BLE desde un ESP32-S3 que sirve una página web y transmite video de una cámara, sin procesar la imagen (Johnson, 2026); un robot con hub 51515 que detecta y toma un objeto con visión TensorFlow y BLE, sin ESP32 confirmado (osullivp, 2021); un proyecto de la WRO 2026 con hub Inventor y Pybricks, un ESP32 y una cámara OpenMV que detecta bloques de color, sin que se documente la función del ESP32 (GC-TO, 2026); y un ESP32 como intermediario entre un módulo de visión (HuskyLens) y un hub SPIKE Prime (Anton's Mindstorms, 2025). Son repositorios y tutoriales, no literatura arbitrada, y se citan como antecedentes de implementación [verificar en cada README]. Pybricks, un firmware alternativo en MicroPython para los hubs LEGO, ofrece además una función en versión beta llamada *smart sensors*, que permite usar la cámara de un teléfono como sensor conectado al hub (Pybricks, s. f.-b).
 
+
+![[Pasted image 20261122233113.png]]
+
+https://pybricks.com/project/spike-prime/arm/camera-arm.jpg
+
+
+
 **Brecha que atiende este trabajo.** Los trabajos con ESP32 controlan el brazo desde el celular o el navegador, casi siempre sin cámara; los de visión e IA procesan la imagen en una PC o en una Raspberry Pi y envían los ángulos a un microcontrolador; y los de LEGO con cámara la conectan al propio hub o a una computadora. Dang et al. (2026) y Capaldi (2024) ya combinan una PC con visión de aprendizaje profundo y un ESP32 en plataformas educativas; Pybricks y LEGO Ideas muestran que se puede dar visión a un hub LEGO; y hay proyectos abiertos con el ESP32 como puente Wi-Fi a BLE hacia un hub Pybricks. Por eso la novedad que se plantea no es la cámara, ni la PC con visión, ni el puente por separado. En la literatura académica revisada no aparece una combinación de brazo de 4 GDL con hub LEGO Inventor 51515 y Pybricks, control remoto desde una página web servida por un ESP32 y un módulo de visión o IA externo que le envíe las órdenes; los proyectos abiertos encontrados tienen solo partes de esa cadena (Tabla 1), y no se halló una tesis ni un artículo arbitrado que la documente completa. Este informe investiga cómo se puede lograr esa integración con equipo de bajo costo.
 
 La Tabla 1 resume los antecedentes más cercanos y qué aporta cada uno.
@@ -232,6 +239,8 @@ El **BLE** fue diseñado para consumir menos energía que el Bluetooth clásico 
 #### 4.1.9 Separación entre la visión y el control de los motores
 
 En los trabajos revisados que usan una cámara, la imagen casi siempre se procesa en un equipo y los motores los mueve un microcontrolador distinto, al que se envían los ángulos (Tabla 4). Monroy Moya et al. (2024) son la excepción: concentran visión y control en una sola Raspberry Pi 4 para evitar latencias. En el resto el enlace es por cable (USB o serie), con tres excepciones inalámbricas: Aucapiña e Iza (2019) mencionan además Bluetooth para el uArm, Dang et al. (2026) ofrecen MQTT sobre Wi-Fi en su interfaz web (la ruta de visión sería por USB [verificar]) y Capaldi (2024) usa ESP-NOW entre la PC y el robot. Este proyecto mantendría la separación con un enlace inalámbrico, como Capaldi (2024), pero por Wi-Fi hasta el ESP32 y BLE de difusión hasta el hub: el módulo de visión enviaría las órdenes al ESP32 por Wi-Fi, que es la vía ya funcional del prototipo.
+
+![[informe-22-11-2026_23-50-25.png]]
 
 **Tabla 4**
 

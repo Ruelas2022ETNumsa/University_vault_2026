@@ -36,7 +36,13 @@
         "python_arm",
         "Untitled.md",
         "Untitled 1.md",
-        "resumen_brazo_robotico_15_nov.md"
+        "resumen_brazo_robotico_15_nov.md",
+        "Untitled 2.md",
+        "Untitled 5.md",
+        "Untitled 6.md",
+        "Untitled 7.md",
+        "Untitled 8.md",
+        "Untitled 9.md"
       ]
     },
     "MOC": {
@@ -2146,7 +2152,7 @@
       "isPinned": false,
       "isHidden": false,
       "ctime": 1786995074292,
-      "mtime": 1793759374334
+      "mtime": 1795404237832
     },
     "_hangar/template/tpl_dropship.md": {
       "isPinned": false,
@@ -2255,7 +2261,9 @@
         "Untitled 1 1-06-09-2026_22-28-14.png",
         "Ejercicio 4 2022-28-09-2026_18-02-52.png",
         "er parcial ETN-1012 marzo 2022-28-09-2026_18-01-56.png",
-        "expo825cap7-18-10-2026_22-24-14.png"
+        "expo825cap7-18-10-2026_22-24-14.png",
+        "Pasted image 20261122233113.png",
+        "informe-22-11-2026_23-50-25.png"
       ]
     },
     "_hangar/_legacy/tsk_update-rclone.md": {
@@ -4650,7 +4658,7 @@
       "isPinned": false,
       "isHidden": false,
       "ctime": 1791168025834,
-      "mtime": 1795266720326
+      "mtime": 1795404384840
     },
     "_PDF/ETN-505": {
       "isPinned": false,
@@ -8737,13 +8745,23 @@
         "ha8.py",
         "ha9.py",
         "informe.md",
+        "informe 9.md",
+        "informe 8.md",
+        "informe 7.md",
+        "informe 6.md",
+        "informe 5.md",
         "informe 1.md",
         "informe 2.md",
         "informe 2 1.md",
         "informe 3.md",
         "informe 4.md",
         "resumen_21.md",
-        "resumen_21 1.md"
+        "resumen_21 1.md",
+        "resumen_22.md",
+        "resumen_22 1.md",
+        "contexto22.md",
+        "bitacora_22.md",
+        "informe_img.md"
       ],
       "ctime": 1793397348734,
       "mtime": 1793397348734
@@ -9678,7 +9696,7 @@
       "isPinned": false,
       "isHidden": false,
       "ctime": 1795316196458,
-      "mtime": 1795316196459
+      "mtime": 1795405826829
     },
     "python_arm/resumen_21 1.md": {
       "isPinned": false,
@@ -9691,6 +9709,114 @@
       "isHidden": false,
       "ctime": 1795310285357,
       "mtime": 1795310285358
+    },
+    "python_arm/resumen_22.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1795388089574,
+      "mtime": 1795400687209
+    },
+    "python_arm/informe 5.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1795316196458,
+      "mtime": 1795316196459
+    },
+    "Untitled 2.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1795390157646,
+      "mtime": 1795390413956
+    },
+    "Untitled 5.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1795390989984,
+      "mtime": 1795391088625
+    },
+    "Untitled 6.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1795391188685,
+      "mtime": 1795391190948
+    },
+    "python_arm/contexto22.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1795391890428,
+      "mtime": 1795402350539
+    },
+    "Untitled 7.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1795392417279,
+      "mtime": 1795392619335
+    },
+    "Untitled 8.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1795392830414,
+      "mtime": 1795393091283
+    },
+    "python_arm/informe 6.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1795316196458,
+      "mtime": 1795316196459
+    },
+    "python_arm/informe 7.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1795316196458,
+      "mtime": 1795393382278
+    },
+    "Untitled 9.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1795396496734,
+      "mtime": 1795396681650
+    },
+    "python_arm/informe 8.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1795316196458,
+      "mtime": 1795396739549
+    },
+    "python_arm/informe 9.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1795316196458,
+      "mtime": 1795398146874
+    },
+    "python_arm/bitacora_22.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1795400362367,
+      "mtime": 1795400362367
+    },
+    "python_arm/resumen_22 1.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1795388089574,
+      "mtime": 1795396958531
+    },
+    "python_arm/informe_img.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1795404084378,
+      "mtime": 1795404084378
+    },
+    "_assets/Pasted image 20261122233113.png": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1795404673878,
+      "mtime": 1795404673878
+    },
+    "_assets/informe-22-11-2026_23-50-25.png": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1795405825554,
+      "mtime": 1795405825554
     }
   },
   "showHidden": false,
