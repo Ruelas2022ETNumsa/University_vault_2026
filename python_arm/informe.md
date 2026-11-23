@@ -32,7 +32,7 @@ Estos trabajos coinciden en tres limitaciones que también aplican a este proyec
 
 https://pybricks.com/project/spike-prime/arm/camera-arm.jpg
 
-
+![[informe-23-11-2026_00-10-13.png]]
 
 **Brecha que atiende este trabajo.** Los trabajos con ESP32 controlan el brazo desde el celular o el navegador, casi siempre sin cámara; los de visión e IA procesan la imagen en una PC o en una Raspberry Pi y envían los ángulos a un microcontrolador; y los de LEGO con cámara la conectan al propio hub o a una computadora. Dang et al. (2026) y Capaldi (2024) ya combinan una PC con visión de aprendizaje profundo y un ESP32 en plataformas educativas; Pybricks y LEGO Ideas muestran que se puede dar visión a un hub LEGO; y hay proyectos abiertos con el ESP32 como puente Wi-Fi a BLE hacia un hub Pybricks. Por eso la novedad que se plantea no es la cámara, ni la PC con visión, ni el puente por separado. En la literatura académica revisada no aparece una combinación de brazo de 4 GDL con hub LEGO Inventor 51515 y Pybricks, control remoto desde una página web servida por un ESP32 y un módulo de visión o IA externo que le envíe las órdenes; los proyectos abiertos encontrados tienen solo partes de esa cadena (Tabla 1), y no se halló una tesis ni un artículo arbitrado que la documente completa. Este informe investiga cómo se puede lograr esa integración con equipo de bajo costo.
 
@@ -202,11 +202,21 @@ Las fuentes reportan problemas típicos y sus soluciones (Tabla 2). Con los moto
 
 El flujo que describen las fuentes tiene cuatro pasos. Primero, la imagen se convierte de RGB a **HSV**, porque en RGB la luz afecta a los tres canales a la vez, mientras que HSV separa el tono (H), la pureza del color (S) y el brillo (V), lo que hace la selección de color menos sensible a las variaciones moderadas de luz (Anusha et al., 2018; Mohammed et al., 2023; Intisar et al., 2021). Segundo, la **umbralización** define un rango inferior y superior de H, S y V para cada color: los píxeles dentro del rango pasan a 1 y el resto a 0, y los umbrales pueden fijarse a mano con controles deslizantes o calcularse a partir de la luz medida (Llerena y Salazar, 2022; Mohammed et al., 2023). Tercero, la **segmentación** limpia la máscara con erosión, dilatación y filtros de suavizado, y descarta regiones menores que un tamaño mínimo (Mada Sanjaya et al., 2018; Mohammed et al., 2023; Anusha et al., 2018). Cuarto, se extraen los **contornos** y se calcula el **centroide** de cada región, con momentos de imagen o promediando los píxeles (Anusha et al., 2018; Mohammed et al., 2023; Medel et al., s. f.).
 
+![[informe-23-11-2026_00-00-28.png]]
+Figura N. Pasos de la detección de un objeto por color.
+Nota. Adaptado de «Colored object sorting using 5 DoF robot arm based artificial neural network (ANN) method» (Fig. 3), por W. S. Mada Sanjaya et al., 2018, Journal of Physics: Conference Series, 1090, 012070 (https://doi.org/10.1088/1742-6596/1090/1/012070). CC BY 3.0.
+
 Las fuentes reportan cinco problemas frecuentes: la variación de la iluminación y las sombras, que descalibra los umbrales (Monroy Moya et al., 2024; Intisar et al., 2021; Llerena y Salazar, 2022); los brillos sobre superficies reflectantes, que blanquean los píxeles (Aucapiña e Iza, 2019; Rangarajan y Bianchini, 2026); la confusión entre colores cercanos, como rojo con naranja o con tonos café (Lim et al., 2021; Rangarajan y Bianchini, 2026); el bajo contraste con el fondo, que impide cerrar el contorno (Monroy Moya et al., 2024); y los objetos muy próximos, que se unen en un solo contorno y dan un centroide erróneo (Intisar et al., 2021).
 
 #### 4.1.6 Calibración entre la cámara y el brazo
 
 Un píxel de la imagen no basta para ubicar el objeto en el espacio: define un rayo desde la cámara. Cuando los objetos reposan en una mesa plana, se intersecta ese rayo con el plano de trabajo, que se define con un marcador de referencia (ArUco), y se transforma el resultado al sistema de coordenadas del robot (Rangarajan y Bianchini, 2026). Una forma más sencilla es la **homografía**, una matriz de 3×3 que relaciona directamente los puntos de la imagen con los del plano real y se calcula a partir de pares de puntos conocidos (Anusha et al., 2018; Aucapiña e Iza, 2019). Con una cámara cenital fija se puede usar incluso un factor de escala entre una medida real conocida y su tamaño en píxeles (Aucapiña e Iza, 2019; Intisar et al., 2021).
+
+![[informe-23-11-2026_00-06-38.png]]
+Figura N. Montaje con cámara cenital y marcador ArUco para calibrar el brazo.
+Nota. Adaptado de «Vision-guided reorientation and color sorting of writing utensils using a low-cost 4-DoF arm» (Fig. 1), por A. Rangarajan y B. Bianchini, 2026, American Journal of Student Research, 4(6), 74-88 (https://doi.org/10.70251/HYJR2348.467488). CC BY 4.0.
+
+![[informe-23-11-2026_00-07-42.png]]
 
 Cuando la cámara va montada sobre el brazo o se mueve respecto a él, se recurre a la **calibración ojo-mano**, que resuelve ecuaciones del tipo $AX = ZB$ entre las transformaciones que observa la cámara y la pose del efector final (Enebuse et al., 2021; Tabb y Ahmad Yousef, 2017). Otra opción es construir empíricamente una **tabla de calibración** que asocia coordenadas de la imagen con los ángulos medidos de los servos al alcanzar cada punto, y entrenar con ella una red neuronal (Mada Sanjaya et al., 2018). Un método de tablas con interpolación lineal, sin red neuronal ni modelo geométrico, es una de las opciones que se propone para este proyecto (sección 4.3); no se encontró tal cual en las fuentes revisadas, y el antecedente más cercano es la tabla de Mada Sanjaya et al. (2018). Una búsqueda adicional en la web tampoco halló un trabajo que use una tabla con interpolación lineal de píxeles a ángulos; los más cercanos mapean la imagen a un plano de trabajo calibrado y luego resuelven la cinemática inversa [cita pendiente: no se identificó una fuente verificable].
 
@@ -234,13 +244,20 @@ La Tabla 3 resume esas opciones.
 
 El ESP32 es un sistema en chip de doble núcleo (160 a 240 MHz) que integra Wi-Fi 802.11 b/g/n y Bluetooth con BLE (Tzompantzi Netzahual et al., 2019). Puede crear su propia red Wi-Fi (modo punto de acceso), repartir direcciones en el rango 192.168.4.x y servir una interfaz web en el puerto 80 a la que el celular accede con un navegador, enviando peticiones HTTP que el ESP32 traduce en órdenes para el brazo (Tzompantzi Netzahual et al., 2019; Suhaeb y Risal, 2024). Suhaeb y Risal (2024) midieron entre 85 y 92 ms de respuesta para los botones de control y una reconexión automática en menos de 5 s. Tzompantzi Netzahual et al. (2019) midieron con Wireshark, desde un navegador, tiempos de respuesta HTTP de unos 50 a 60 ms a distancias de 1 a 40 m (sin indicar el número de repeticiones), y reportaron que si se envían instrucciones de forma simultánea la conexión se pierde unos 3 s y la aplicación muestra un aviso. Kumar et al. (2026), con un vehículo controlado por Wi-Fi, reportan una latencia de ida y vuelta de 38, 62 y unos 120 ms con señal fuerte, moderada y débil; es evidencia complementaria (revista de menor nivel y no es un brazo). Shah y Arockia Doss (2026) reportan menos de 150 ms entre la orden en la interfaz web y la actuación de los servos, con WebSockets sobre Wi-Fi, sin precisar cómo se midió. Capaldi (2024), con ESP-NOW (no Wi-Fi ni BLE) entre una PC y un hub VEX V5, midió 187 ms de ida y vuelta (desviación estándar de 57 ms), que incluye el tránsito por USB, los dos ESP32, la conversión a RS-485 y el procesamiento del hub, y una pérdida de paquetes menor a 1 % de 0 a 40 m y de 13,2 % a 60 m; recomienda 40 m o menos para control en lazo cerrado. Estas cifras usan métodos distintos y no son comparables entre sí.
 
+![[informe-23-11-2026_00-03-52.png]]
+Figura N. Interfaz web de control servida por un ESP32.
+Nota. Adaptado de «Development of service robot manipulator for pick and place applications in domestic environment» (Fig. 7), por R. Shah y A. S. Arockia Doss, 2026, EPJ Web of Conferences, 355, 01001 (https://doi.org/10.1051/epjconf/202635501001). CC BY 4.0.
+
 El **BLE** fue diseñado para consumir menos energía que el Bluetooth clásico (Tzompantzi Netzahual et al., 2019). En su uso habitual, un dispositivo anuncia un servicio y otro se conecta a él; el modo de **difusión** (*broadcast*) no requiere conexión y es el que usa Pybricks para enviar mensajes al hub (Pybricks, s. f.-d). Tzompantzi Netzahual et al. (2019) evaluaron BLE solo con la intensidad de señal (RSSI) de las balizas del ESP32: promedio de -47,8 dBm a 1 m y de -88,7 dBm a unos 40 m. Afirman que ambas tecnologías responden en tiempo real a menos de 40 m, pero sin cifras de latencia para BLE; los tiempos de 50 a 60 ms corresponden solo a Wi-Fi. Ninguna de las fuentes revisadas mide la latencia de BLE, ni en modo de difusión ni con conexión, por lo que el retraso del enlace del prototipo debe medirse (sección 4.3). Fuera de las fuentes cargadas, la latencia de BLE sin conexión depende del intervalo de anuncio, del ciclo de escaneo del receptor y de un retardo aleatorio de 0 a 10 ms entre anuncios (Cho et al., 2014 [verificar]; [cita pendiente: documentación de Espressif]). La única cifra con ESP32 que se encontró (44 y 85 ms) corresponde a un ESP32 que recibe anuncios y los publica por un protocolo de mensajería (MQTT): es una latencia de sistema y en sentido contrario al de este prototipo, por lo que no se toma como referencia (Vieira y Rizzetti, 2025 [verificar]).
 
 #### 4.1.9 Separación entre la visión y el control de los motores
 
 En los trabajos revisados que usan una cámara, la imagen casi siempre se procesa en un equipo y los motores los mueve un microcontrolador distinto, al que se envían los ángulos (Tabla 4). Monroy Moya et al. (2024) son la excepción: concentran visión y control en una sola Raspberry Pi 4 para evitar latencias. En el resto el enlace es por cable (USB o serie), con tres excepciones inalámbricas: Aucapiña e Iza (2019) mencionan además Bluetooth para el uArm, Dang et al. (2026) ofrecen MQTT sobre Wi-Fi en su interfaz web (la ruta de visión sería por USB [verificar]) y Capaldi (2024) usa ESP-NOW entre la PC y el robot. Este proyecto mantendría la separación con un enlace inalámbrico, como Capaldi (2024), pero por Wi-Fi hasta el ESP32 y BLE de difusión hasta el hub: el módulo de visión enviaría las órdenes al ESP32 por Wi-Fi, que es la vía ya funcional del prototipo.
 
-![[informe-22-11-2026_23-50-25.png]]
+![[informe-23-11-2026_00-12-18.png]]
+
+
+![[informe-22-11-2026_23-53-06.png]]
 
 **Tabla 4**
 

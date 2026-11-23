@@ -2263,7 +2263,15 @@
         "er parcial ETN-1012 marzo 2022-28-09-2026_18-01-56.png",
         "expo825cap7-18-10-2026_22-24-14.png",
         "Pasted image 20261122233113.png",
-        "informe-22-11-2026_23-50-25.png"
+        "informe-22-11-2026_23-50-25.png",
+        "informe-22-11-2026_23-52-02.png",
+        "informe-22-11-2026_23-53-06.png",
+        "informe-23-11-2026_00-00-28.png",
+        "informe-23-11-2026_00-03-52.png",
+        "informe-23-11-2026_00-06-38.png",
+        "informe-23-11-2026_00-07-42.png",
+        "informe-23-11-2026_00-10-13.png",
+        "informe-23-11-2026_00-12-18.png"
       ]
     },
     "_hangar/_legacy/tsk_update-rclone.md": {
@@ -9696,7 +9704,7 @@
       "isPinned": false,
       "isHidden": false,
       "ctime": 1795316196458,
-      "mtime": 1795405826829
+      "mtime": 1795407138669
     },
     "python_arm/resumen_21 1.md": {
       "isPinned": false,
@@ -9817,6 +9825,54 @@
       "isHidden": false,
       "ctime": 1795405825554,
       "mtime": 1795405825554
+    },
+    "_assets/informe-22-11-2026_23-52-02.png": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1795405922582,
+      "mtime": 1795405922582
+    },
+    "_assets/informe-22-11-2026_23-53-06.png": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1795405986429,
+      "mtime": 1795405986429
+    },
+    "_assets/informe-23-11-2026_00-00-28.png": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1795406428747,
+      "mtime": 1795406428747
+    },
+    "_assets/informe-23-11-2026_00-03-52.png": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1795406632774,
+      "mtime": 1795406632774
+    },
+    "_assets/informe-23-11-2026_00-06-38.png": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1795406798502,
+      "mtime": 1795406798502
+    },
+    "_assets/informe-23-11-2026_00-07-42.png": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1795406862174,
+      "mtime": 1795406862174
+    },
+    "_assets/informe-23-11-2026_00-10-13.png": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1795407013537,
+      "mtime": 1795407013537
+    },
+    "_assets/informe-23-11-2026_00-12-18.png": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1795407138063,
+      "mtime": 1795407138063
     }
   },
   "showHidden": false,
