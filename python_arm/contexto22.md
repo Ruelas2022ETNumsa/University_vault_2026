@@ -1,207 +1,133 @@
-# Contexto 22: continuar la sesión de refinamiento del informe (22-nov-2026)
+# Contexto 22: traspaso para continuar en un chat nuevo (22-nov-2026)
 
-**Cómo usar este archivo:** pegarlo o pedir que se lea al iniciar una sesión nueva, junto con `resumen_22.md` (registro de avance y decisiones). Este archivo es el traspaso: dónde estamos, qué se decidió, qué falta y qué preguntas hay que correr en NotebookLM.
+**Cómo usar este archivo:** pedir que se lea al iniciar el chat nuevo, junto con `resumen_22.md` (registro de avance y decisiones) y `bitacora_22.md` (lista viva de pendientes). Este archivo es el traspaso: cómo retomar, el estado real de `informe.md`, los datos de las fuentes que no deben perderse, las discrepancias abiertas y los prompts listos para pegar. Actualizado al cierre de la sesión 3 (la 1 fue a las 18:39; la 2, 20:06 con tokens a las 01:06; la 3, 21:43 con tokens a las 02:43).
 
 ---
 
-## A. ESTADO ACTUALIZADO (sesión 2 del 22-nov-2026). LEER ESTO PRIMERO; las secciones 0 a 10 de abajo son el traspaso original y quedan como histórico
+## 1. Cómo retomar
 
-### A.1 Sesión y herramientas
+1. Leer `E:\University_vault_2026\_skills\_start.md` con el MCP Filesystem, hacer la verificación MCP (`write_file` y `edit_file` sobre `E:\University_vault_2026\Rubbish\section.md`) y elegir la **skill 2 (plan)**. El operator se ignora. Tras listar `_hangar`, responder solo `ok`. El worker es el que indique el mensaje de apertura.
+2. Leer este archivo, `resumen_22.md` y `bitacora_22.md`.
+3. Preguntar al usuario qué trae: respuestas de la sección 7 (verificación en PDF y Perplexity) o resultados de sus tareas.
+4. Cada cambio masivo a `informe.md`: avisar **"cambios masivos, bk necesario"** y esperar el respaldo (siguiente: `informe 10.md`). Aplicar con `edit_file` por lotes, no reescribiendo el archivo. Una pregunta por mensaje, en español y directo.
+5. Al cerrar cada lote, actualizar `resumen_22.md` y marcar la bitácora.
 
-- Hora de inicio de la sesión 2: 20:06 (los tokens se reestablecen a las 01:06). Worker `alx-rul`. Skill 2 (plan); el operator se ignora. MCP verificado (write y edit sobre `Rubbish\section.md`) y `_hangar` listado.
-- NotebookLM se quedó sin tokens. Se usa **Gemini** con el cuaderno `iaarm` (https://gemini.google.com/notebook/df4a68df-58fe-4c26-9070-2cfa24b4f409), que tiene las mismas fuentes. Gemini da menos metadatos: casi siempre responde «autor y año: no está en las fuentes» y numera «Fuente 1, 2...». Cierre a agregar en cada prompt: «Identifica cada fuente por el nombre exacto del archivo PDF, no por Fuente N; si no ves autor o año, dilo». Lo que salga de Gemini se atribuye por inferencia y se marca `[verificar]`.
-- Perplexity sigue siendo la vía para fuentes externas.
-- `informe.md` se editó con `edit_file` por lotes (no se reescribió entero), siempre después de que el usuario creara el respaldo.
+**Herramientas.**
+- NotebookLM se quedó sin consultas el 22-nov. Alternativa: **Gemini** con el cuaderno `iaarm` (https://gemini.google.com/notebook/df4a68df-58fe-4c26-9070-2cfa24b4f409), con las mismas fuentes, pero con menos metadatos (suele responder «no está en las fuentes» para autor y año, y numera «Fuente N»). Cierre extra para Gemini: *«Identifica cada fuente por el nombre exacto del archivo PDF, no por Fuente N; si no ves autor o año, dilo»*. Lo que salga de Gemini se atribuye por inferencia y se marca `[verificar]`.
+- Perplexity (Deep Research, foco Académico) sigue siendo la vía para fuentes externas y metadatos.
+- Si `edit_file` falla con `EPERM` al renombrar un archivo temporal, otro programa (Obsidian, sincronización) tiene el archivo abierto: avisar con el mensaje de `_start.md` y reintentar tras cerrarlo.
 
-### A.2 Respaldos del informe
+**Respaldos del informe.** `informe 1.md` a `informe 9.md` (el 5 y el 6 son el estado al inicio de la sesión 2; el 7 es posterior al lote 1; el 9 es el estado justo antes del lote 4). `resumen_22 1.md` es el respaldo del resumen. `informe.md` es el vigente (lotes 1 a 4).
 
-- `informe 5.md` y `informe 6.md`: estado al inicio de la sesión 2 (46,96 KB).
-- `informe 7.md` (58,40 KB): después del lote 1 y antes de los lotes 2 y 3.
-- `informe.md`: vigente (ya con los tres lotes). Antes de otro cambio masivo: pedir `informe 8.md`.
+## 2. El proyecto
 
-### A.3 Lo hecho en `informe.md` (tres lotes)
+Informe universitario (materia investigativa), **puramente teórico y documental**: *Control de un brazo robótico educativo mediante visión por computadora e inteligencia artificial: revisión de antecedentes y propuesta de integración con un prototipo LEGO*. Archivo: `E:\University_vault_2026\python_arm\informe.md`.
 
-**Lote 1 (respuestas S0 a S8; bk 6).** Prioridad 1, puntos 1 a 7 aplicados:
-1. Arquitectura única = opción A. Tabla 1: fila de Pybricks pasa a ser referencia con prueba preliminar (pelota roja sobre base café, sin calibrar ni integrar) y fila VISION con la cámara en PC. 4.1.6: la tabla con interpolación lineal es una opción propuesta, no del proyecto. 4.3: cámara USB en PC, Figura 2 corregida, celular solo como interfaz manual, *smart sensors* descartado.
-2. 4.1.8: BLE solo se midió con RSSI (-47,8 dBm a 1 m; -88,7 dBm a unos 40 m); los 50 a 60 ms de Tzompantzi son solo Wi-Fi (Wireshark, desde un navegador, repeticiones no indicadas); ninguna fuente mide latencia de BLE.
-3. Conclusión 1: rango 84 % (confiabilidad global) a 97,28 % (identificación), no comparables.
-4. Conclusión 3: sin «comparable».
-5. Sniffer de Pybricks: City Hub, firmware 4.1.0b2, no el 51515 (4.1.2 y 4.3).
-6. «Brecha» suavizada en 1.1.
-7. La tarea (pelota roja sobre base café que se deposita en un cubo) se describe en 3.2.
-Contenido nuevo: 2.3 (28 trabajos distintos en 29 archivos) y 2.5 (método de la revisión); párrafo de límites de alimentación en 4.1.4 (Ntambara, Yilmaz, Lim); definiciones de IA en 4.1.7 (con `[cita pendiente]`); Kumar en 4.1.8 (38 / 62 / unos 120 ms de ida y vuelta); **4.1.9 nueva con la Tabla 4** (separación entre visión y control: Mohammed, Intisar, Mada Sanjaya, Aucapiña e Iza, Markvicka, Monroy Moya y la propuesta); la tabla de limitaciones pasó a **Tabla 5**; en 4.3 se agregaron canales de retorno (Suhaeb, Aucapiña e Iza, Yilmaz, Llerena y Salazar), alimentación secuencial (Ntambara; ninguna fuente mide el efecto en el tiempo de ciclo) y parada ante pérdida de enlace (Zuiev); 4.4 con la prueba preliminar; 5.3 con agarre (Monroy Moya, Oliveira) y cerrar el lazo; Tabla 5 con diseños abiertos (Narmadha et al., 2022, cap. 15 de Bansal et al., pp. 191-212; Markvicka). Referencias nuevas: Kumar, Narmadha, Ntambara, Oliveira, Zuiev. Acrónimos nuevos: DC-DC, RGB, RSSI, UART, MQTT.
+- **Prototipo real (otra materia, funciona):** celular → Wi-Fi (página web servida por el ESP32, red `BRAZO_LEGO`, `192.168.4.1`) → ESP32 (`esp32/web_control.py`, guardado como `main.py`) → BLE de difusión de Pybricks, canal 1, tupla `(articulación, ángulo, id_orden)` → hub LEGO Inventor 51515 (`ha9.py`) → motores. Un motor a la vez (solo USB de corriente limitada, sin batería); vigila el voltaje (pausa bajo 5500 mV); límites de ángulo en el hub; descarta órdenes durante un movimiento. El ESP32 recuerda el último ángulo *ordenado*. Rutas web: `/s`, `/go`, `/pos`, `/cero`. **No tiene visión.** Sin canal de vuelta hub → ESP32, retraso no medido, falta recalibrar ángulos negativos.
+- **Propuesta (no implementada):** cámara USB en la PC → módulo de visión e IA en la PC (Python y OpenCV; luego un detector profundo) → Wi-Fi (HTTP, rutas `/s` y `/go`) → ESP32 → BLE de difusión → hub 51515 → motores. El celular queda como interfaz manual; se descarta la cámara del celular con *smart sensors*.
+- **Prueba preliminar propia:** con la cámara del celular y Pybricks se detectó la pelota roja sobre una base café; sin calibrar ni integrar.
+- **Tarea de referencia:** tomar la pelota roja sobre la base café y depositarla en un cubo.
+- "Sustentar la implementación de IA" se interpreta como sustento teórico-documental (**a confirmar con el docente**); si el docente pide algo implementado, la prueba mínima sería detección HSV de la pelota y el cubo desde foto o video, con ángulos predichos por la tabla de calibración.
 
-**Lote 2 (Perplexity A1, A2, A8; bk 7).**
-- A1: solo se halló la página del proyecto de Pybricks *Robotic arm with vision* (SPIKE Prime, celular como *smart sensor*, objeto rojo, la base gira hasta width > 8 y 70 < x < 80, actualizado el 23-mar-2026; autor Laurens Valk sin confirmar). No confirma batería ni motores simultáneos y no hay video equivalente con el 51515. Se quitó del informe la frase de videos con batería; queda `[pendiente: confirmar en el video]`. La referencia mantiene la letra s. f.-a.
-- A2: no hay tesis ni artículo arbitrado con la cadena completa. Proyectos abiertos: Wildlife Spotter Train (Johnson, 2026: ESP32-S3 como puente Wi-Fi a BLE hacia un City Hub con Pybricks y cámara MJPEG, sin visión), Lego51515BLEArduinoTensorFlow (osullivp, 2021), WRO-2026-GC-FTO (GC-TO, 2026) y HuskyLens con LMS-ESP32 (Anton's Mindstorms, 2025). Agregados en 1.1, Tabla 1 (dos filas), brecha, conclusión 1 y referencias. **Falta verificar los README** (GATT o difusión en Wildlife, función del ESP32 en WRO, placa y firmware en osullivp).
-- A8: no hay medición publicada de latencia de un paquete BLE en broadcast de ESP32 a otro dispositivo. Cho et al. (2014, *Sensors*, 15(1), DOI 10.3390/s150100059) es modelo de latencia de descubrimiento. Vieira y Rizzetti (2025, ERRC, DOI 10.5753/errc.2025.17688) dan 44 y 85 ms, pero con el ESP32 como receptor que publica por MQTT (latencia de sistema, sentido contrario). Souboura (2026) y Shih (2022) no se citaron. Agregado en 4.1.8 y referencias (títulos pendientes).
+**Esquema del docente (respetar orden y títulos).** 1. Introducción y antecedentes (antecedentes y propósito general). 2. Objetivo (alcance o profundidad y limitaciones). 3. Justificación del proyecto (importancia para la institución, escenario, impacto científico, tecnológico, económico, social, ambiental; ¿para qué servirá?). 4. Desarrollo del proyecto (incluye el marco teórico). 5. Conclusiones y recomendaciones. 6. Referencias bibliográficas e internet. Al final: «Guía resumen del manual de publicaciones con normas APA» y anexo con lista de acrónimos. Citas APA 7, `(Autor, año)`; sin dato = «s. f.».
 
-**Lote 3 (Gemini A3 a A7).**
-- A3: la definición de PID y del término integral no está en las fuentes (solo PI y PD dentro de lazos en cascada). El `[cita pendiente]` de 4.1.4 sigue.
-- A4: hay definiciones parciales de aprendizaje automático, red neuronal y detección de objetos, sin autor identificado; la de IA no. Marca de 4.1.7 actualizada.
-- A5: UPS Guayaquil (atribuido a Llerena y Salazar, 2022): el aforo limitado por la pandemia obligó a dar prácticas en línea con brazos KUKA KR AGILUS; Aucapiña e Iza (2019): número limitado de módulos en la ESPE Latacunga. Corregidos 3.2 y 3.3 (se quitó a Tzompantzi, que no habla de aforo).
-- A6: no hay meta-análisis. 3.1 reescrito (se quitó «aprendizaje activo más efectivo»; holgura con Ntambara y Mohammed, fricción con Eiammanussakul). 1.1: Markvicka (36 estudiantes, calificaciones sin diferencia significativa entre tareas tradicionales y con brazo; encuesta n = 35, 78 %) en vez de «efecto favorable». Dato de holgura de Ntambara: repetibilidad angular 0,41 ± 0,23° y posicional 2,47 ± 0,58 mm (10 ciclos, 0,8 kg).
-- A7: ningún antecedente de tabla píxeles a ángulos con interpolación lineal; frase añadida en 4.1.6 con `[cita pendiente]`.
+**Reglas.** No inventar datos; lo no verificado se marca `[verificar]`, `[pendiente]`, `[cita pendiente]` o «s. f.». Verificar cada dato contra el PDF antes de entregar.
 
-### A.4 Datos de S0 a S8 que no deben perderse
+## 3. Estado de `informe.md` (con los lotes 1 a 4)
 
-- S0: 29 archivos = 28 trabajos (la tesis de Aucapiña e Iza está como `ESPEL-MEC-0165-P.pdf` diapositivas y `T-ESPEL-MEC-0165.pdf` tesis). Sin metadatos: `2010S03C01.pdf`, `2402.17243v1.pdf`, `30-100-1-SP.pdf` (IJATEC-IRIS 2020, sin autores), `978-3-642-32527-4_17.pdf` (LEGO Mindstorms en ingeniería, sin autor), `P-00W-KW7.pdf` (efectores para cosecha), `s44430-026-00032-6.pdf` (Ntambara). Medel sin año. Penn State Erie 2014 sin autor personal. Dang, Shah y Capaldi no están cargados.
-- S4 (retorno): Suhaeb consulta `/get_values` cada segundo y recibe JSON; Aucapiña e Iza (uArm): serie bilateral, comandos `P2220` (coordenadas) y `P2232` (estado de pinza), `ok` tras cada `G0`; Yilmaz: IMU MPU6050 y finales de carrera; Llerena y Salazar: servos de bus LX-15D/LX-225 con ángulo, voltaje y temperatura; Monroy Moya: OLED e infrarrojos; Ntambara: lazo abierto.
-- S5 (agarre): Monroy Moya (infrarrojo en la pinza, implementado), Oliveira et al. 2021 (vacío, fibra óptica, fuerza; Lehnert 2017, Mu 2020, Rong 2021), Rangarajan y Bianchini (lazo abierto; fuerza de contacto como trabajo futuro), Aucapiña e Iza (cita a Campos 2016, táctil). Intisar no aparece.
-- S6 (visión y control separados): ver Tabla 4 del informe. Monroy Moya (2025 según S6) cita además a Intisar 2021, Abdullah-Al-Noman 2022, Lahoti 2021, Kumar 2021 y Cong 2021.
-- S7 (alimentación): Ntambara 12 V y 2 A, pico 1,92 A, caída 0,46 V, secuencial; Lim (caídas de 5 a 0 V con `Servo.h`, registros PWM); Yilmaz (relés, optoacopladores PC817, ACS712, fusible 4,2 A, tierra en estrella); Aucapiña e Iza (convertidor LM2596); Kumar (LiPo 7,4 V a 6 / 5 / 3,3 V). Ninguna mide el efecto del movimiento secuencial en el tiempo de ciclo.
-- S8: Bansal et al. (2022), cap. 15, Narmadha, Anbarasi Jebaselvi y Anitha, pp. 191-212, brazo de 4 GDL con corte láser y Arduino abierto, error menor a 1 %; Markvicka: kit abierto menor a 200 USD con MG996R, ATmega328 y PCA9685.
+Estructura: 1 Introducción y antecedentes (1.1, 1.2; Tabla 1), 2 Objetivo (2.1 a 2.5), 3 Justificación (3.1 a 3.3), 4 Desarrollo (4.1.1 a 4.1.9 con Tablas 2, 3 y 4; 4.2 prototipo; 4.3 propuesta con Figura 2; 4.4 pruebas), 5 Conclusiones y recomendaciones (Tabla 5), 6 Referencias, guía APA y anexo de acrónimos.
 
-### A.5 Discrepancias abiertas (resolver con los PDF, tarea C1)
+- **Lote 1 (S0 a S8):** arquitectura única (PC con visión); BLE medido solo con RSSI y los 50 a 60 ms de Tzompantzi son solo Wi-Fi; conclusión 1 con 84 % (confiabilidad global) a 97,28 % (identificación), métricas no comparables; sniffer con City Hub 4.1.0b2; brecha suavizada; tarea descrita en 3.2; nuevos 2.3, 2.5, 4.1.9 y Tabla 4; límites de alimentación (Ntambara, Yilmaz, Lim); Kumar; canales de retorno, alimentación secuencial y parada por pérdida de enlace en 4.3; 5.3 con agarre y cerrar el lazo.
+- **Lote 2 (Perplexity A1, A2, A8):** solo la página de Pybricks *Robotic arm with vision* (SPIKE Prime; no confirma batería ni motores simultáneos); cuatro proyectos abiertos (Johnson 2026, osullivp 2021, GC-TO 2026, Anton's Mindstorms 2025) a verificar en sus README; sin medición publicada de latencia BLE de difusión con ESP32 (Cho 2014 modelo; Vieira y Rizzetti 2025 con 44 y 85 ms, sentido contrario).
+- **Lote 3 (Gemini A3 a A7):** PID y IA sin definición en las fuentes (`[cita pendiente]`); aforo (UPS Guayaquil y ESPE Latacunga); sin meta-análisis de aprendizaje activo (3.1 reescrito); Markvicka con 36 estudiantes y sin diferencia significativa; sin antecedente de tabla píxeles a ángulos con interpolación lineal.
+- **Lote 4 (N22 a N24, N24b, Gemini N22b; bk `informe 9.md`):** Dang, Capaldi y Shah integrados en 1.1, la brecha, las Tablas 1, 3 y 4, 4.1.4, 4.1.7, 4.1.8, 4.1.9, 4.3, las conclusiones 1, 3 y 5, la recomendación 4, 2.3 (31 trabajos en 32 archivos), 2.5, referencias y acrónimos (CPU, GPU, ESP-NOW, RS-485).
+- **Brecha vigente:** la novedad no es la cámara, ni la PC con visión, ni el puente por separado. Es la combinación hub LEGO 51515 con Pybricks + página web servida por un ESP32 + módulo de visión externo, que no se halló completa en la literatura revisada (búsqueda no sistemática).
+
+## 4. Datos de las fuentes que no deben perderse
+
+**Corpus.** 32 archivos = 31 trabajos distintos (la tesis de Aucapiña e Iza está como `ESPEL-MEC-0165-P.pdf` diapositivas y `T-ESPEL-MEC-0165.pdf` tesis). Sin metadatos: `2010S03C01.pdf`, `2402.17243v1.pdf`, `30-100-1-SP.pdf` (IJATEC-IRIS 2020, sin autores), `978-3-642-32527-4_17.pdf` (LEGO Mindstorms en ingeniería, sin autor), `P-00W-KW7.pdf` (efectores para cosecha), `s44430-026-00032-6.pdf` (Ntambara). Medel sin año; Penn State Erie 2014 sin autor personal. Siempre empezar una consulta nueva con la lista de fuentes cargadas (S0), porque las respuestas valen solo para lo cargado.
+
+**Dang et al. (2026)** (`1451-20922601093T.pdf`). Nueve autores en el orden de la portada: Dang Phuoc Thinh, Van Thi Ngoc Han, Nguyen Nghiep Thinh, Nguyen Vu Duc Huy, Tran Quang Thuan, Huynh Nhat Duy, Phi Thanh Dat, Vo Cong Hieu, Vo Duy Cong (correspondencia). *Development of an Educational Robotic Platform with Dual Control Interfaces and Intelligent Computer Vision-Based Interaction*. FME Transactions 54, 93-106, DOI 10.5937/fme2601093P; el número no aparece en el PDF. Abstract y 3.3: la interfaz web usa MQTT (órdenes publicadas al ESP32); sección 2 menciona Blynk (contradicción interna). YOLOv12 corre en una laptop solo con CPU (entrenamiento en Colab con GPU). Flujo: caja delimitadora, transformación calibrada 2D al robot, cinemática inversa, ESP32, PCA9685, servos MG996R. Según Gemini (inferencia): sin mAP, sin tiempo de inferencia, sin éxito ni ciclo (validación cualitativa), calibración solo mencionada, ruta de visión por USB. PDF: https://scindeks-clanci.ceon.rs/data/pdf/1451-2092/2026/1451-20922601093T.pdf
+
+**Capaldi (2024)** (`peerj-cs-10-1826.pdf`). Emma I. Capaldi. *A low-cost wireless extension for object detection and data logging for educational robotics using the ESP-NOW protocol*. PeerJ Computer Science, 10, e1826, DOI 10.7717/peerj-cs.1826 (revista y DOI vienen de Perplexity). VEX V5 + dos ESP32 (ESP-NOW) + RS-485; cámara OpenMV H7 por USB a una PC con YOLOv8 en Python. Pérdida de paquetes: 0 % a 0 m, 0,197 % a 10 m, 0,571 % a 20 m, 0,861 % a 30 m, 0,126 % a 40 m, 13,2 % a 60 m (recomienda 40 m o menos para lazo cerrado). Ida y vuelta 187 ms (DE 57 ms); la Tabla 2 tiene 11 segmentos y los segmentos 2 a 4 no estaban en los fragmentos cargados (los 1 y 11 son calculados, 29,8 ms cada uno). 30 pruebas de clasificación (10 por condición). Inferencia de YOLOv8: 62,8 ms (Ryzen 9 5950X), 52,1 ms (Apple M2), 8,41 ms (Quadro P2200). Experimento de PID con Kp, Ki, Kd y retorno del ángulo a 20 lecturas por segundo. https://peerj.com/articles/cs-1826
+
+**Shah y Arockia Doss (2026)** (`epjconf_staaar2026_01001.pdf`). *Development of Service Robot Manipulator for Pick and Place applications in Domestic Environment*. EPJ Web of Conferences, 355, 01001, DOI 10.1051/epjconf/202635501001 (de Perplexity). WebSockets con ESP32 (ESPAsyncWebServer), latencia menor a 150 ms sin método de medición (4.1 y 5.2.2), parada de emergencia en el navegador (5.2.3), YOLOv8-OBB y ROS/MoveIt solo en simulación (Gazebo y RViz); el brazo físico (MG996R) es manual. Video del modelo físico en la Fig. 6. https://www.epj-conferences.org/articles/epjconf/pdf/2026/11/epjconf_staaar2026_01001.pdf
+
+**Tzompantzi Netzahual et al. (2019).** Tabla 1 «Sending instructions in real time through Wi-Fi» (sección 6): 50 a 60 ms (0,0499 a 0,0595 s) a 1, 10, 20, 30 y 40 m, ESP32 como punto de acceso; solo Wi-Fi. BLE solo con RSSI (Figuras 9 y 10). Latencias Wi-Fi reunidas (métodos distintos, no comparables): Tzompantzi 50-60 ms; Suhaeb 85-92 ms; Kumar 38 a unos 120 ms (ida y vuelta); Shah menos de 150 ms; Capaldi 187 ms (ESP-NOW, ida y vuelta). Ninguna fuente mide latencia de BLE.
+
+**Retorno (S4).** Suhaeb consulta `/get_values` cada segundo y recibe JSON; Aucapiña e Iza (uArm): serie bilateral, comandos `P2220` (coordenadas) y `P2232` (estado de pinza), `ok` tras cada `G0`; Yilmaz: IMU MPU6050 y finales de carrera; Llerena y Salazar: servos de bus LX-15D/LX-225 con ángulo, voltaje y temperatura; Monroy Moya: OLED e infrarrojos; Ntambara: lazo abierto; Capaldi: ángulo a 20 lecturas por segundo por ESP-NOW.
+
+**Agarre (S5).** Monroy Moya (infrarrojo en la pinza, implementado); Oliveira et al. 2021 (vacío, fibra óptica, fuerza; Lehnert 2017, Mu 2020, Rong 2021); Rangarajan y Bianchini (lazo abierto; fuerza de contacto como trabajo futuro); Aucapiña e Iza (cita a Campos 2016, táctil). Intisar no aparece.
+
+**Visión y control separados (S6).** Ver Tabla 4. Monroy Moya cita además a Intisar 2021, Abdullah-Al-Noman 2022, Lahoti 2021, Kumar 2021 y Cong 2021.
+
+**Alimentación (S7).** Ntambara 12 V y 2 A, pico 1,92 A, caída 0,46 V, secuencial (holgura: repetibilidad angular 0,41 ± 0,23° y posicional 2,47 ± 0,58 mm, 10 ciclos, 0,8 kg); Lim (caídas de 5 a 0 V con `Servo.h`); Yilmaz (relés, PC817, ACS712, fusible 4,2 A, tierra en estrella); Aucapiña e Iza (LM2596); Kumar (LiPo 7,4 V a 6 / 5 / 3,3 V). Ninguna mide el efecto del movimiento secuencial en el tiempo de ciclo.
+
+**Diseños abiertos (S8).** Bansal et al. (2022), cap. 15, Narmadha, Anbarasi Jebaselvi y Anitha, pp. 191-212 (brazo de 4 GDL, corte láser y Arduino abierto, error menor a 1 %); Markvicka: kit abierto menor a 200 USD (MG996R, ATmega328, PCA9685).
+
+**Zuiev et al. (2024).** DOI 10.15587/2706-5448.2024.297339; revista *Technology Audit and Production Reserves*, 1(2(75)), 31-37 (sin verificar). Vehículo 4WD. Usable: parada forzada si no llegan paquetes (3.4), S.BUS de un solo sentido (3.1), retardos internos del ESP32 de microsegundos. **No usar** los «60-80 ms frente a 10-20 ms» como latencia inalámbrica (es conversión del receptor). No mide BLE.
+
+**Kumar et al. (2026).** DOI 10.14741/ijcet/v.16.1.4; páginas sin verificar (Perplexity dijo 16-19). Revista de nivel bajo; vehículo, no brazo. Latencia de ida y vuelta 38 / 62 / unos 120 ms con señal fuerte / moderada / débil; éxito 99,6 / 97,2 / 96,1 %. 30 m × 20 m medido; los «30-100 m» son un rango estimado. Solo Bluetooth clásico (HC-05 y HC-06).
+
+**Ntambara et al. (2026).** El primer autor es Ntambara (no Furaha). Revista, volumen y DOI sin verificar (Perplexity: *Discover Robotics*, 2, artículo 17, DOI 10.1007/s44430-026-00032-6). No afirma que el movimiento secuencial alargue el tiempo de ciclo.
+
+**No citadas.** Bera (2026, Electronics For You; video https://www.youtube.com/watch?v=PHznMxfTjuo), Future Internet 18(6), 325 y TeleopLab (arXiv 2509.05547).
+
+## 5. Discrepancias abiertas (resolver con los PDF)
 
 - Suhaeb: el informe dice 85 a 92 ms; S4 dice 85 a 110 ms con hasta 10 usuarios.
-- Monroy Moya: año 2024 (informe), 2025 (S4 y S5) o 2026 (S0).
-- NotebookLM y Gemini mezclaron las dos tesis (ESPE, uArm, Aucapiña e Iza; UPS, xArm 1S, Llerena y Salazar). Se usó la atribución del informe; confirmar.
-- Intisar: la limitación «sigue la rutina aunque el objeto se caiga» quedó `[verificar]` en la Tabla 5.
-- Atribuciones por inferencia (Gemini): «Fuente 1 = Llerena y Salazar» (aforo) y «Fuente 3 = Markvicka» (36 participantes).
-- Metadatos sin verificar: Ntambara (revista, volumen, DOI, iniciales), Zuiev (revista y páginas), Oliveira (autores y año), Wu (autores), Cho y Vieira (títulos), Kumar (páginas), Gunardi, Fernández Panadero y Medel (revista).
+- Monroy Moya: 2024 (referencia y casi todo el informe), 2025 (S4 y S5) o 2026 (1.1 y S0). Unificar.
+- Las dos tesis (ESPE con uArm, Aucapiña e Iza; UPS con xArm 1S, Llerena y Salazar) se mezclaron en NotebookLM y Gemini; el informe usa la atribución propia; confirmar.
+- Intisar: «sigue la rutina aunque el objeto se caiga» quedó `[verificar]` en la Tabla 5.
+- Atribuciones por inferencia (Gemini): aforo de la UPS (Llerena y Salazar, p. 4) y 36 participantes (Markvicka).
+- Dang: MQTT o Blynk; ruta de visión por USB (inferencia) y número del volumen; modelo de cámara.
+- Metadatos sin verificar: Ntambara, Zuiev, Oliveira (autores y año), Wu (autores), Cho y Vieira (títulos), Kumar (páginas), Gunardi, Fernández Panadero, Medel (revista), Capaldi y Shah (revista y DOI), orden de autores de Shah.
 
-### A.6 Pendientes
+## 6. Pendientes
 
-**Prompts para Perplexity (aun no corridos).** Cierre común: «Para cada fuente dame autor(es), año, título, revista o editorial, DOI o URL, y página o sección. No inventes; si no puedes confirmar un dato, escribe no confirmado».
-- A3 (PID): libros, apuntes universitarios o revisiones que definan el control PID y el término integral y su efecto sobre el error en estado estacionario, de preferencia con servomotores o brazos educativos y acceso abierto.
-- A4 (definiciones): libro, survey u organismo reconocido que defina inteligencia artificial, aprendizaje automático, red neuronal artificial y detección de objetos en visión por computadora.
-- A5 (aforo y práctica a distancia): laboratorios remotos con brazos o robots educativos que mencionen el aforo o los equipos limitados, y buscar en especial *Benitez et al. (2020), Design of an affordable IoT open-source robot arm for online teaching of robotics courses during the pandemic contingency, HardwareX 8* (aparece citado dentro de una de las fuentes).
-- A6 (aprendizaje activo): meta-análisis o estudios con cifras de aprendizaje activo frente a pasivo en ingeniería o ciencias, y estudios de que los modelos físicos enseñan fricción u holgura.
-- B (metadatos): autores del JRC 2026 y del proyecto de Tampere; revista de Fernández Panadero 2010, Gunardi y Jumadri 2020 y Medel; autores de Wu et al. 2014 y de Oliveira et al. 2021; datos de Ntambara, Zuiev, Kumar y del año de Monroy Moya.
-- Opcionales: detectores livianos (YOLO nano, MobileNet), rojo contra café en HSV, comunicación de un solo sentido.
+Lista completa y viva en `bitacora_22.md` (bloques A a F). Orden recomendado:
 
-**Tareas del usuario.** C1 (abrir los PDF y confirmar autores, año, revista, páginas); C2 (institución, carrera, asignatura); C3 (costo real del montaje); C4 (confirmar con el docente el formato de la guía APA); C5 (medir el retraso orden-movimiento, opcional); ver el video o la página del proyecto de Pybricks y anotar si los motores se mueven a la vez y con qué alimentación; verificar los README de los cuatro proyectos abiertos; completar títulos de Cho y Vieira.
+1. **Verificar en los PDF** (prompts V1 a V11, sección 7) y aplicar el resultado al informe con `informe 10.md`.
+2. **Perplexity** (A3 PID, A4 definiciones de IA, A5 aforo, A6 aprendizaje activo, metadatos B).
+3. **Tareas del usuario:** institución, carrera, asignatura, docente y fecha; costo real del montaje; confirmar con el docente el formato APA y qué significa «sustentar»; ver el video o la página de Pybricks (motores simultáneos y alimentación); verificar los README de los cuatro proyectos abiertos; opcional pero recomendado, medir el retraso orden-movimiento o hacer la prueba mínima de HSV para dar cifras propias al 4.4.
+4. **Prioridad 3 (formato y limpieza):** reordenar las letras de Pybricks por título (a = BLE broadcast, b = Mediciones, c = Motor, d = Robotic arm, e = Use your phone; hoy *Robotic arm* es s. f.-a); quitar material interno (bloque «Estado del borrador», notas «Verificar contra los trabajos completos», línea meta de 3.3 y fila «Ambiental»); figuras 1 y 2 como diagramas reales; formato APA 7 de tablas y figuras; acrónimos que sobran; frase repetida de *smart sensors* en 1.1; «Autor pendiente» de Tampere y JRC; compactar 1.1; aclarar cómo aplica la fórmula de 4.1.3 a un brazo sin hombro; aclarar en 2.3 cuántos de los 31 trabajos son PDF y cuántos proyectos web; sumar Dang y Capaldi a la Tabla 5 si aportan.
 
-**Prioridad 3 (sin hacer).** Reordenar las letras de Pybricks por título (a = BLE broadcast, b = Mediciones, c = Motor, d = Robotic arm, e = Use your phone; hoy Robotic arm es s. f.-a); quitar material interno (bloque de estado, notas Verificar contra los trabajos completos, línea meta de 3.3 y fila Ambiental); figuras 1 y 2 como diagramas reales; formato APA 7 de tablas y figuras; acrónimos que sobran; la frase repetida de *smart sensors* en 1.1; «Autor pendiente» de Tampere y JRC.
+## 7. Prompts listos para pegar
 
-**Omitido por ahora.** N22 a N24 (Dang, Shah y Capaldi): el usuario no tiene esas fuentes, así que no se citan ni están en la Tabla 1.
+**Cierre común (NotebookLM o Gemini), al final de cada pregunta:** *Responde solo con lo que está en las fuentes. Indica archivo PDF exacto (no «Fuente N»), autor, año y página o sección. Si no está, escribe 'no está en las fuentes'. No inventes.* No nombrar secciones del informe (el cuaderno no las ve).
 
-### A.7 Cómo retomar
+**V1 (Suhaeb).** Sobre Suhaeb y Risal (2024): ¿el tiempo de respuesta de los botones es de 85 a 92 ms o de 85 a 110 ms con hasta 10 usuarios? Copia el pasaje y la tabla, y dame revista, volumen, número, páginas y año.
 
-1. Leer `_start.md`, activar skill 2 (plan) y leer este archivo y `resumen_22.md`. Responder `ok` tras listar `_hangar`.
-2. Pedir al usuario las respuestas de A3 a A6, B, y lo que haya verificado en los PDF y README.
-3. Aplicar los cambios con `edit_file`, previo aviso «cambios masivos, bk necesario» y un respaldo `informe 8.md`.
-4. Luego prioridad 3 y actualizar el registro de `resumen_22.md`.
+**V2 (Monroy Moya).** Sobre el trabajo de Monroy Moya et al. (visión con Raspberry Pi 4 y brazo de 3 GDL): año, revista, volumen, número, fechas de recepción y publicación, y DOI.
 
----
+**V3 (tesis ESPE).** Sobre `T-ESPEL-MEC-0165.pdf` y `ESPEL-MEC-0165-P.pdf`: ¿son la misma tesis? Año y sede; brazo usado; página donde dice que el número limitado de módulos dificulta el aprendizaje; datos de 97,28 %, 84,28 %, 38 a 50 ms y el costo de 2075 USD, con página de cada uno.
 
-## 0. Arranque de sesión (reglas del vault)
+**V4 (tesis UPS).** Sobre la tesis con el Hiwonder xArm 1S (Llerena y Salazar): universidad, sede, año; copia el pasaje del aforo limitado por la pandemia y las prácticas virtuales con brazos KUKA, con su página.
 
-- Leer `E:\University_vault_2026\_skills\_start.md` con el MCP Filesystem y seguir su flujo (verificación MCP con `write_file` y `edit_file` sobre `Rubbish\section.md`, selección de skill).
-- Skill usado: **2 = plan** (`_claude-plan.md`). El operator ya no importa: se ignora.
-- Hora de inicio de la sesión anterior: 18:39 (los tokens se reestablecen 5 horas después).
-- Antes de **reescribir archivos grandes** (como `informe.md`): avisar **"cambios masivos, bk necesario"** y esperar la copia de respaldo del usuario. Respaldos: `informe 1.md` a `informe 4.md`.
-- [Histórico, ya superado: `informe.md` se modificó en la sesión 2, ver sección A.] El usuario pidió expresamente no hacer cambios hasta tener todo cruzado.
-- Idioma: español, directo. Si hay dudas, preguntar antes de escribir. Una pregunta por mensaje.
+**V5 (Intisar).** Sobre Intisar et al. (2021): título exacto, autores, revista, volumen, número, páginas y DOI; copia el pasaje donde dice que el brazo sigue la rutina aunque el objeto se caiga, si existe; confirma el costo de unos 80 USD y si menciona sensores de agarre.
 
-## 1. El proyecto en una frase
+**V6 (Markvicka).** Sobre Markvicka et al. (2023): confirma los 36 estudiantes, que las calificaciones no difirieron de forma significativa entre tareas tradicionales y con el brazo, la encuesta (n = 35, 78 %), los 30 000 USD de un brazo industrial y los 1000 USD de los kits, con sección de cada dato.
 
-Informe universitario (materia investigativa), **puramente teórico/documental**: "Control de un brazo robótico educativo mediante visión por computadora e IA: revisión de antecedentes y propuesta de integración con un prototipo LEGO". Archivo: `E:\University_vault_2026\python_arm\informe.md` (primer borrador completo, secciones 1 a 6, más guía APA y anexo de acrónimos).
+**V7 (sin metadatos).** Para `2010S03C01.pdf`, `2402.17243v1.pdf`, `30-100-1-SP.pdf`, `978-3-642-32527-4_17.pdf` y `P-00W-KW7.pdf`: autores, año, título, revista o editorial y DOI, según la primera página.
 
-- El **prototipo real NO tiene visión**: es control manual (`ha9.py`): celular → Wi-Fi (página web servida por el ESP32, red `BRAZO_LEGO`, `192.168.4.1`) → ESP32 → BLE broadcast de Pybricks → hub LEGO Inventor 51515 → motores. Funciona bien, un motor a la vez, y el ESP32 recuerda el último ángulo *ordenado* de cada articulación.
-- Limitaciones del prototipo: sin batería (solo USB de corriente limitada), por eso un motor por orden; sin canal de vuelta hub → ESP32; retraso "mínimo" pero no medido; falta recalibrar ángulos negativos.
-- La **IA y la visión son una PROPUESTA bien fundamentada**, no implementada. No se necesita parte práctica.
-- Prueba preliminar propia (no continuada por falta de tiempo): con la cámara del celular y Pybricks se probó que detecta la pelota roja sobre una base café; no se calibró ni se integró.
-- Los videos de brazos LEGO con Pybricks parecen mostrar seguimiento simultáneo de la pelota con todos los motores (con batería). El prototipo no puede hacerlo por la alimentación USB. **Falta el enlace del video para poder citarlo** (APA).
-- "Sustentar la implementación de IA" se interpreta (a confirmar con el docente) como sustento teórico: nombrar los trabajos (papers y tesis) en que se basa la propuesta y adjuntar los enlaces de sus videos.
+**V8 (Ntambara).** Sobre `s44430-026-00032-6.pdf`: revista, volumen, número o artículo, DOI, y nombres e iniciales de los cuatro autores en el orden de la portada.
 
-## 2. Esquema del docente (respetar orden y títulos)
+**V9 (varios).** Revista o editorial, páginas, año y autores que falten de: Zuiev et al., Kumar et al., Wu y colaboradores (Penn State Erie), Medel, Gunardi y Jumadri, y Fernández Panadero et al.
 
-1. Introducción y antecedentes (antecedentes y propósito general). 2. Objetivo (alcance o profundidad y limitaciones). 3. Justificación del proyecto (por qué es importante para la institución, escenario, impacto: científico, tecnológico, económico, social, ambiental; ¿para qué servirá?). 4. Desarrollo del proyecto (incluye el marco teórico). 5. Conclusiones y recomendaciones. 6. Referencias bibliográficas e internet. Al final: "Guía resumen del manual de publicaciones con normas APA" y anexo con lista de acrónimos. Citas: APA 7, `(Autor, año)`; sin dato = "s. f.".
+**V10 (Narmadha).** Capítulo 15 de Bansal et al. (2022): autores, título del capítulo, páginas exactas y DOI.
 
-## 3. Cómo trabajamos las fuentes
+**V11 (residuales de las tres fuentes nuevas).** (a) `1451-20922601093T.pdf` (Dang): número del volumen, modelo de la cámara y, si el texto lo dice, cómo llegan los ángulos al ESP32 en la tarea de visión. (b) `peerj-cs-10-1826.pdf` (Capaldi): revista, volumen y DOI; valores de los segmentos 2 a 4 de la Tabla 2; tamaño del modelo YOLOv8 usado. (c) `epjconf_staaar2026_01001.pdf` (Shah): autores en el orden de la portada, revista, DOI, y si el ESP32 actúa como punto de acceso Wi-Fi con una página de sliders.
 
-Perplexity (Deep Research, foco Académico) dio fuentes → se cargaron en NotebookLM (26 PDF) → NotebookLM extrajo datos por tema → se escribió el borrador. Ahora se **verifica cada dato contra el PDF** y se refina por prioridades. Regla: **no inventar datos**; lo no verificado se marca `[verificar]`, `[pendiente]` o "s. f.".
+**Cierre común (Perplexity):** *Para cada fuente dame autor(es), año, título, revista o editorial, DOI o URL, y página o sección. No inventes; si no puedes confirmar un dato, escribe no confirmado.*
 
-**Aviso de NotebookLM:** las respuestas valen solo para las fuentes que el cuaderno tiene cargadas. En una consulta se vio que el cuaderno solo tenía las 3 fuentes nuevas (Zuiev, Kumar, Ntambara) y no las 26 originales, por lo que sus "no está en las fuentes" no sirven para el corpus completo. **Siempre empezar con la pregunta S0 (lista de fuentes cargadas).**
+**P-A3 (PID).** Libros, apuntes universitarios o revisiones que definan el control PID y el término integral y su efecto sobre el error en estado estacionario, de preferencia con servomotores o brazos educativos y acceso abierto.
 
-## 4. Decisión tomada: arquitectura de la propuesta = opción A
+**P-A4 (definiciones).** Libro, survey u organismo reconocido que defina inteligencia artificial, aprendizaje automático, red neuronal artificial y detección de objetos en visión por computadora.
 
-Cámara USB/webcam en la **PC** → módulo de visión/IA en la PC (Python + OpenCV; luego un detector profundo) → Wi-Fi (HTTP, rutas `/s` y `/go` del ESP32) → ESP32 → BLE broadcast Pybricks → hub 51515 → motores. El celular queda como interfaz manual. Se descarta la cámara del celular conectada al hub (*smart sensors*) como parte de la propuesta.
+**P-A5 (aforo y práctica a distancia).** Laboratorios remotos con brazos o robots educativos que mencionen el aforo o los equipos limitados; buscar en especial *Benitez et al. (2020), Design of an affordable IoT open-source robot arm for online teaching of robotics courses during the pandemic contingency, HardwareX 8*.
 
-## 5. Revisión del borrador: lista de pendientes por prioridad (HISTÓRICO: el estado actual de cada punto está en A.3 y A.6)
+**P-A6 (aprendizaje activo).** Meta-análisis o estudios con cifras de aprendizaje activo frente a pasivo en ingeniería o ciencias, y estudios de que los modelos físicos enseñan fricción u holgura.
 
-### Prioridad 1 (errores de fondo; se corrigen de a uno)
+**P-B (metadatos).** Autores del JRC 2026 («Low cost single camera robotic arm for vision guided pick and place») y del proyecto de Tampere («LEGO con Raspberry Pi y OpenCV»); revista de Fernández Panadero 2010, Gunardi y Jumadri 2020 y Medel; autores de Wu et al. 2014 y de Oliveira et al. 2021; revista, volumen y DOI de Capaldi (2024) y de Shah y Arockia Doss (2026); títulos de Cho et al. (2014, DOI 10.3390/s150100059) y de Vieira y Rizzetti (2025, DOI 10.5753/errc.2025.17688).
 
-1. **Cámara/módulo de IA: "tres versiones".** Eran tres frases que afirman de más que el proyecto usa visión: (a) Tabla 1, fila Pybricks: "Base del proyecto: se adaptó el hub, los puertos, el color y el arranque"; (b) 4.1.6: "el que usa este proyecto en su versión con cámara de celular"; (c) 4.3: "tablas de calibración con interpolación (la del proyecto)". Corrección acordada: estado real = implementado (control manual) / prueba preliminar (detección roja sobre café, sin calibrar) / propuesta (visión en PC). Pendiente decidir y escribir. Borrador de la fila de Pybricks (solo en el chat, no escrito): "Referencia más cercana de visión en LEGO. En este proyecto solo se probó, de forma preliminar, la detección de color de la pelota roja sobre una base café; no se calibró ni se integró". El contraste de los videos (seguimiento simultáneo frente a un motor a la vez por alimentación) va en 1.1 ("Plataformas LEGO con cámara") y en las restricciones de 4.3, no en 4.1.6.
-2. **4.1.8 dice que no hay mediciones de latencia BLE en las fuentes.** Verificar con S1 a S3. Ya se sabe: la Tabla 1 de Tzompantzi es solo Wi-Fi; BLE se evaluó con RSSI (Figuras 9 y 10).
-3. **Conclusión 1:** rango de acierto "84 % a 94,6 %" contradice el 97,28 % de 4.1.7 y la Tabla 3; el 84 % es "confiabilidad global" (otra métrica).
-4. **Conclusión 3:** dice que la visión clásica es "comparable" a técnicas más pesadas, pero la Tabla 3 dice que las cifras no son comparables. Suavizar o quitar.
-5. **Sniffer (Pybricks, s. f.-e):** fue con un City Hub, firmware 4.1.0b2, no con el 51515; 4.3 lo generaliza a "unos 10 mensajes por segundo". Aclarar.
-6. **"Brecha" de 1.1 demasiado fuerte:** el proyecto de Pybricks con SPIKE Prime y cámara de celular, y *smart sensors*, ya usan el celular como cámara de un hub LEGO. La novedad real es la página web del ESP32 más un módulo de IA externo.
-7. **"La pelota y el cubo" aparecen en 4.3 y 5.3 sin presentar la tarea.** Describirla en 3.2 o 4.2.
-8. **Verificar contra los PDF (C1, A1 a A14).**
-
-### Prioridad 2: rigor investigativo y esquema
-
-Datos de institución, carrera y asignatura (cabecera, 3.1, 3.2); subsección de metodología de la revisión y conciliar "26 fuentes" con las 28 referencias listadas (las dos tesis ESPE pueden ser un mismo archivo duplicado); definir IA, aprendizaje automático, red neuronal y detección de objetos en 4.1.7; apoyos débiles (el PID de 4.1.4 se apoya en un robot de rehabilitación y falta cita para el término integral; Pybricks s. f.-b para decir que el 51515 corre Pybricks; "aprendizaje activo más efectivo" y "aforo reducido" de 3.1 y 3.2); costo real del montaje (C3) y fuente de "diseños modulares abiertos" (A18).
-
-### Prioridad 3: formato APA y limpieza
-
-Letras de Pybricks (s. f.-a a s. f.-e) según el orden alfabético del título (BLE broadcast, Mediciones, Motor, Robotic arm, Use your phone); fuentes sin autor con el título en la posición del autor (Tampere, JRC; ver B10); quitar material interno (bloque "Estado del borrador", notas "Verificar contra los trabajos completos", líneas meta de 3.3 y la fila "Ambiental: omitir"); figuras 1 y 2 como diagramas reales y formato APA 7 de tablas y figuras; confirmar con el docente el formato de la guía APA (C4); anexo de acrónimos (agregar RGB, DC-DC; revisar los que sobran).
-
-### Prioridad 4 (opcional)
-
-Medir el retraso orden-movimiento (C5); fuentes extra B4 a B9 (LEGO y BLE, comunicación de un solo sentido, detectores livianos, HSV con rojo y café).
-
-## 6. Fuentes nuevas encontradas para la opción A
-
-Verificadas leyendo el texto completo (Dang y Shah) o parcialmente (Capaldi, Bera). Confirmar volumen, páginas y orden de nombres en el PDF.
-
-- **Dang et al. (2026)**: Dang Phuoc Thinh, Van Thi Ngoc Han, Nguyen Nghiep Thinh, Nguyen Vu Duc Huy, Tran Quang Thuan, Huynh Nhat Duy, Phi Thanh Dat, Vo Cong Hieu, Vo Duy Cong (autor de correspondencia). *Development of an Educational Robotic Platform with Dual Control Interfaces and Intelligent Computer Vision-Based Interaction*. FME Transactions, 54(1), 93-106. DOI en el PDF: 10.5937/fme2601093P. Brazo de 4 GDL con ESP32; YOLOv12 en una laptop solo con CPU; ángulos enviados al controlador. La interfaz web aparece como MQTT en el resumen y como Blynk en la sección 2 (contradicción interna). PDF: https://scindeks-clanci.ceon.rs/data/pdf/1451-2092/2026/1451-20922601093T.pdf
-- **Shah y Arockia Doss (2026)**: *Development of Service Robot Manipulator for Pick and Place applications in Domestic Environment*. EPJ Web of Conferences, 355, 01001. DOI: 10.1051/epjconf/202635501001. ESP32 como punto de acceso con página de sliders, latencia menor a 150 ms, parada de emergencia en el navegador; YOLOv8-OBB y ROS/MoveIt **solo en simulación**. Video del modelo físico en la Fig. 6 (.mp4 dentro del artículo). PDF: https://www.epj-conferences.org/articles/epjconf/pdf/2026/11/epjconf_staaar2026_01001.pdf
-- **Capaldi (2024)**: Emma I. Capaldi. *A low-cost wireless extension for object detection and data logging for educational robotics using the ESP-NOW protocol*. PeerJ Computer Science, 10, e1826. DOI: 10.7717/peerj-cs.1826. Hub educativo VEX V5 + ESP32 + PC con visión (YOLOv8); mide distancia, tiempo de ida y vuelta y detección; incluye ajuste de PID. Es el análogo más cercano de la arquitectura; **conviene cargarlo en NotebookLM** (https://peerj.com/articles/cs-1826.pdf). Solo se vio el resumen.
-- **Bera (2026, 1 de octubre)**: *Computer-vision-based robotic arm*, Electronics For You (revista, no revisada por pares; parte del texto exige registro gratuito). Visión en laptop, Raspberry Pi 5 o servidor GPU y control en el ESP32 por Wi-Fi, Ethernet, serial o ESP-NOW. **Video de la prueba de concepto:** https://www.youtube.com/watch?v=PHznMxfTjuo
-- Por revisar (no verificados): Future Internet 18(6), 325 (https://www.mdpi.com/1999-5903/18/6/325); TeleopLab (arXiv 2509.05547).
-
-## 7. Tres fuentes de la segunda ronda de Perplexity (ya cargadas en NotebookLM)
-
-- **Zuiev, Krylova, Hapon y Honcharov (2024)**: *Research of microprocessor device and software for remote control of a robotic system*. DOI 10.15587/2706-5448.2024.297339. Perplexity dio la revista *Technology Audit and Production Reserves*, 1(2(75)), 31-37: **no verificado** (NotebookLM no lo encontró). Es un vehículo 4WD, no un brazo. Usable como apoyo: (a) parada forzada de motores si no llegan paquetes durante cierto tiempo, sin cifra del intervalo (Sec. 3.4); (b) S.BUS es de un solo sentido y se nombran protocolos con telemetría de retorno (CRSF, IBUS, FPort, MAVLink, DShot) (Sec. 3.1); (c) retardos internos del ESP32 de microsegundos (Tablas 2 y 3, a 160 MHz). **NO usar** los "60-80 ms frente a 10-20 ms" como latencia inalámbrica: es el retardo de conversión del receptor entre protocolos de radiocontrol. Las menciones a Wi-Fi y Bluetooth son cualitativas; no mide BLE.
-- **Kumar, Verma, Pal, Chaudhary y Tripathi (2026)**: *Wireless Robotic Navigation via IoT-Enabled Wi-Fi Communication*. International Journal of Current Engineering and Technology, 16(1). DOI 10.14741/ijcet/v.16.1.4. Páginas sin verificar (Perplexity dijo 16-19). Revista de nivel bajo: usar solo como evidencia complementaria. Vehículo, no brazo. Tabla 2: latencia de ida y vuelta 38 / 62 / unos 120 ms con señal fuerte / moderada / débil, y éxito de 99,6 / 97,2 / 96,1 %. Hardware: "ESP8266 o ESP32" (no precisan). Las "200 secuencias" son para la precisión direccional, no para la latencia. 30 m × 20 m fue medido; los "30-100 m" son un rango típico estimado. Solo menciona Bluetooth clásico (HC-05 y HC-06) con alcance menor a 10-15 m, sin BLE. STOP retira la corriente a los motores; no hay confirmación de vuelta.
-- **Ntambara, Furaha, Masengo y Niyigaba (2026)**: *Design and prototyping of a smart powered lifting robotic arm (SPLRA)*. **El primer autor es Ntambara, no Furaha** (Perplexity se equivocó). Identificador s44430-026-00032-6. Revista, volumen y DOI **sin verificar**: Perplexity dio *Discover Robotics*, 2, artículo 17, DOI 10.1007/s44430-026-00032-6, y NotebookLM no lo leyó (lo dedujo). Respalda la limitación de corriente: no opera los cuatro motores a la vez con su corriente máxima (Sec. 3); activa dos articulaciones durante el levantamiento; fuente de 12 V y 2 A; límite del driver A4988 con Vref; baja velocidad y activación secuencial (Sec. 3.5 y 3.8); corriente pico de 1,92 A y caída de 0,46 V. Comunicación celular + HC-06 (Bluetooth clásico) + UART en lazo abierto, sin retorno ni latencia medida. **No afirma** que el movimiento secuencial alargue el tiempo de ciclo; los 10 ensayos están a 135° (Tabla 5) y los tiempos de 2,6 a 4,0 s corresponden a otros ángulos.
-
-## 8. Resultados de NotebookLM hasta ahora sobre Tzompantzi (2019)
-
-La Tabla 1 se titula "Sending instructions in real time through Wi-Fi" (Sección 6): tiempos de respuesta HTTP de unos 50 a 60 ms (0,0499 a 0,0595 s) a 1, 10, 20, 30 y 40 m, con el ESP32 en modo punto de acceso (`192.168.4.1`). **Es solo Wi-Fi.** BLE se evaluó con RSSI (Figuras 9 y 10), no con latencia. Rango de latencia Wi-Fi reunido (métodos distintos, no comparables): Tzompantzi 50-60 ms; Suhaeb 85-92 ms; Kumar 38 a ~120 ms (ida y vuelta); Shah menos de 150 ms. Falta confirmar con S1 a S3 que ninguna de las fuentes mide latencia de BLE.
-
-## 9. Preguntas pendientes para NotebookLM (cuaderno con las 29 fuentes) (HISTÓRICO: S0 a S8 ya corridas y aplicadas; N22 a N24 omitidas; ver A.3 a A.6)
-
-Estado: el usuario junta las 26 + las 3 nuevas en un cuaderno. Orden: **S0 a S3 primero** (cierran el punto 2 de la prioridad 1). Al final de **cada** pregunta va este cierre (ya incluido abajo): *"Responde solo con lo que está en las fuentes. Indica fuente (autor, año) y página o sección. Si no está, escribe 'no está en las fuentes'. No inventes."* No nombrar secciones del informe (NotebookLM no las ve).
-
-**S0.** Lista todas las fuentes cargadas con autor(es), año y título, y dime cuántas son en total. Marca cuáles aparecen repetidas (por ejemplo, dos archivos de la misma tesis).
-
-**S1.** En Tzompantzi Netzahual et al. (2019), sección 6, Figuras 9 y 10: describe qué se midió con BLE (RSSI u otra cosa), a qué distancias, con qué valores y con qué dispositivo. Dime la distancia máxima probada para BLE y la distancia máxima probada para Wi-Fi.
-
-**S2.** En Tzompantzi Netzahual et al. (2019): (a) copia el pasaje donde afirma que la respuesta es en tiempo real hasta unos 40 m y dime para qué tecnología (Wi-Fi, BLE o ambas); (b) copia el pasaje sobre una interrupción de unos 3 segundos al enviar instrucciones por Wi-Fi de forma simultánea, con las condiciones; (c) explica cómo se midió el 'Response time' de la Tabla 1 (quién lo midió, desde qué dispositivo, cuántas repeticiones).
-
-**S3 (A15).** ¿Alguna fuente cargada mide la latencia (tiempo de respuesta o retardo) de BLE, ya sea en modo broadcast (sin conexión) o con conexión? Si una fuente mide solo RSSI o alcance, dilo aparte. Si ninguna mide latencia de BLE, escribe 'no está en las fuentes'.
-
-**S4 (A16).** ¿Qué fuentes proponen, implementan o evalúan un canal de retorno (realimentación) desde el robot hacia el dispositivo de control, como confirmación de posición o de fin de movimiento? Para cada fuente dime: autor, año, qué proponen, y si lo implementaron y evaluaron o solo lo mencionan.
-
-**S5 (A17).** ¿Qué fuentes mencionan sensores o verificación del agarre en la pinza (fuerza, presencia, táctil)? Para cada una dime qué proponen y si lo implementaron o solo lo sugieren como trabajo futuro.
-
-**S6.** ¿Qué fuentes separan el procesamiento de visión (en PC, Raspberry Pi u otro equipo) del control de los motores, que queda a cargo de un microcontrolador distinto (Arduino, ESP32 u otro)? Para cada una dime: autor, año, qué equipo hace la visión, qué microcontrolador mueve el brazo, y cómo se comunican (USB, serie, Wi-Fi, Bluetooth).
-
-**S7.** ¿Qué fuentes mencionan límites de alimentación o de corriente de los servos o motores, y cómo los resuelven (fuente externa, convertidor, limitar corriente, mover un motor a la vez)? Dime además si alguna reporta el efecto de mover las articulaciones de forma secuencial sobre el tiempo de ciclo o la velocidad.
-
-**S8 (A18).** ¿Alguna fuente propone diseños modulares abiertos para reducir costo sin perder precisión de los servos? Dime autor, año y sección. Si la fuente es Bansal et al. (2022), indica el capítulo exacto, sus autores y sus páginas.
-
-**Si se cargan Dang, Shah y Capaldi (N22 a N24):** (N22) Dang et al. (2026): lista completa de autores en el orden de la portada, volumen, número, páginas y DOI; ¿la interfaz web usa MQTT o Blynk? (copia los dos pasajes); confirma que YOLOv12 corre en una laptop solo con CPU y cómo llegan los ángulos al controlador. (N23) Shah y Arockia Doss (2026): confirma la latencia menor a 150 ms (cómo se midió), la parada de emergencia en el navegador y que YOLOv8-OBB y ROS/MoveIt se usaron solo en simulación; sección de cada dato. (N24) Capaldi (2024): copia los resultados de distancia y tiempo de ida y vuelta con unidades, el hub educativo usado y qué hace el experimento de ajuste de PID; sección de cada dato.
-
-**Preguntas originales aún no corridas** (están en el contexto de la sesión anterior; el usuario las trae de a poco): A1 (TSP_IASC_15482: título exacto, autores, revista, volumen, número, páginas, año y DOI; ¿"Computer Vision Based Robotic Arm Controlled Using Interactive GUI" o "Design and Implementation of a Robotic Vision System Operated Using an Interactive GUI Application"?), A2 (tesis ESPE: año y sede; ¿son la misma tesis?), A3 (Monroy Moya: año, revista, volumen, número, fechas, DOI), A5 (Gunardi y Jumadri: revista, volumen, número, páginas, año), A6 (Fernández Panadero: congreso o revista, páginas, año), A7 (Medel: año, revista, volumen, páginas), A8 (Eiammanussakul: ¿robot de rehabilitación?; control en cascada y fórmula del ángulo), A9 (Mohammed: 93,83 %, 97,11 %, 27 s y ecuaciones 3 a 11), A10 (Intisar: 94,6 % y limitaciones), A11 (Rangarajan y Bianchini: 89,8 %, deriva de 8 mm, 2,65 px, YOLO11n-OBB, 19 de 20 fallos), A12 (Markvicka: costos), A13 (tesis ESPE: 84 %, 97,28 %, 38 a 50 ms, MobileNet_0.5_224, 0,2 mm), A14 (Mada Sanjaya: 20 neuronas, 1,3 %, 5 servos, 467 × 624 px). Cada una con el cierre "Responde solo con lo que está en las fuentes...".
-
-**Perplexity pendiente:** B1 (autores reales del JRC 2026, del kit ASEE y de "LEGO con Raspberry Pi y OpenCV" de Tampere); B2 (PID en brazos educativos); B3 (LEGO SPIKE/51515/Pybricks en educación o investigación); B4 a B10 según prioridad. Se pidió una segunda ronda de 3 fuentes (ya hecha, ver sección 7). Falta un prompt para los **videos** de brazos LEGO con Pybricks (título, canal, año, enlace, hub, alimentación y si los motores se mueven a la vez o por turnos).
-
-**Tareas del usuario (C1 a C6):** abrir los PDF y confirmar autores, año, revista y páginas (C1); datos de institución, carrera y asignatura (C2); costo real del montaje (C3); confirmar con el docente el formato de la guía APA y si APA 7 es definitivo (C4); medir el retraso orden-movimiento (C5, opcional); decidir si hace falta prueba de concepto (C6: se asume que no; si el docente la pide, la prueba mínima sería detección HSV de la pelota y el cubo desde foto o video con ángulos predichos por la tabla de calibración).
-
-**Ítems a abrir en los PDF (C1) de las fuentes nuevas:** Zuiev (revista, volumen, número, páginas), Kumar (páginas), Ntambara (revista, volumen, DOI), Dang (volumen, páginas, orden de nombres).
-
-## 10. Próximos pasos (HISTÓRICO: ver A.7)
-
-1. Correr **S0 a S3** en el cuaderno con las 29 fuentes y traer las respuestas (cierra el punto 2 de la prioridad 1).
-2. Correr S4 a S8 (y N22 a N24 si se cargan Dang, Shah y Capaldi).
-3. Pedir a Perplexity los videos de brazos LEGO con Pybricks (o que el usuario pase los enlaces).
-4. Cruzar todo con `informe.md` y proponer los cambios de la prioridad 1, uno por uno, sin escribir todavía.
-5. Cuando haya acuerdo: avisar **"cambios masivos, bk necesario"**, esperar la copia de respaldo y recién entonces escribir.
-6. Seguir con las prioridades 2, 3 y 4; actualizar el registro de avance de `resumen_22.md`.
+**P-Opcionales.** Detectores livianos (YOLO nano, MobileNet), rojo contra café en HSV, comunicación de un solo sentido.
