@@ -1,6 +1,7 @@
 # Resumen 22 de noviembre de 2026: revisión y refinamiento de `informe.md`
 
-**Hora de inicio de sesión:** 18:39 (sesión 1) y 20:06 (sesión 2; los tokens se reestablecen a las 01:06)
+**Hora de inicio de sesión:** 18:39 (sesión 1), 20:06 (sesión 2; los tokens se reestablecen a las 01:06) y 21:43 (sesión 3, worker `alx_gml`; los tokens se reestablecen a las 02:43)
+**Bitácora de pendientes:** `bitacora_22.md` (estado vigente de lo que falta)
 **Objetivo del día:** refinar el primer borrador completo del informe (`informe.md`, secciones 1 a 6) y dejarlo listo como trabajo investigativo. Se corrige por una lista de pendientes ordenada por prioridad, de a uno.
 
 ---
@@ -41,8 +42,8 @@ Informe universitario de una materia investigativa:
 - **No inventar datos.** Lo no verificado se marca `[verificar]`, `[pendiente]` o "s. f.".
 - Estilo de citas: **APA 7**, `(Autor, año)`. Aún no es definitivo; confirmar con el docente.
 - Antes de reescribir archivos grandes: avisar **"cambios masivos, bk necesario"** y esperar la copia de respaldo.
-- Respaldos del informe: `informe 1.md` a `informe 7.md` (el 5 y el 6 son el estado al inicio de la sesión 2; el 7 es posterior al lote 1). Antes de otro cambio masivo: `informe 8.md`.
-- Las preguntas pendientes para NotebookLM (A1 a A18), Perplexity (B1 a B10) y las tareas propias (C1 a C6) están en el contexto de sesión; se irán trayendo de a poco según la prioridad.
+- Respaldos del informe: `informe 1.md` a `informe 9.md` (el 5 y el 6 son el estado al inicio de la sesión 2; el 7 es posterior al lote 1; el 9 es el estado justo antes del lote 4). Antes de otro cambio masivo: `informe 10.md`.
+- Las preguntas pendientes para NotebookLM (A1 a A18), Perplexity (B1 a B10) y las tareas propias (C1 a C6) están en el contexto de sesión; se irán trayendo de a poco según la prioridad. El estado vigente de lo que falta está en `bitacora_22.md`.
 
 ## 4. Decisión sobre "sustentar la implementación de IA"
 
@@ -103,6 +104,9 @@ La sección 3.2 dice que la materia "requiere sustentar la implementación de IA
 - [x] Prioridad 1, punto 1: cámara y módulo de IA. **Decidido: opción A (PC + ESP32)**; Tabla 1, 4.1.6 y 4.3 reescritas (sección 9).
 - [x] Prioridad 1, puntos 2 a 7 aplicados al informe (sección 9). El punto 8 (verificar contra los PDF, C1) sigue abierto.
 - [~] Prioridad 2 parcial (conciliación de fuentes, método de la revisión, definiciones de IA con cita pendiente, aforo y aprendizaje activo corregidos); quedan datos de institución, costo real y citas de PID e IA. Prioridad 3 y 4 sin hacer (sección 9).
+- [x] Lote 4: Dang, Capaldi y Shah integrados al informe, con la brecha reformulada (sección 9).
+- [x] Bitácora de pendientes creada: `bitacora_22.md`.
+- [ ] Verificación contra los PDF (C1), Perplexity A3 a A6 y B, prioridades 3 y 4, y prueba mínima para 4.4: ver `bitacora_22.md`.
 
 ## 8. Decisión: arquitectura de la propuesta = opción A (PC + ESP32)
 
@@ -112,13 +116,15 @@ La sección 3.2 dice que la materia "requiere sustentar la implementación de IA
 
 ### Antecedentes encontrados para la opción A (web, 22-nov) `[verificar contra el PDF]`
 
+**Estado (sesión 3):** Dang, Shah y Capaldi ya están cargados en NotebookLM, verificados en parte (N22 a N24) y citados en el informe (sección 9, lote 4). Bera y las dos fuentes "por revisar" no se citan.
+
 1. **Dang, Van, Nguyen, Nguyen, Tran, Huynh, Phi, Vo y Vo (2026)** (orden de nombres vietnamitas por confirmar; autor de correspondencia Vo Duy Cong). *Development of an educational robotic platform with dual control interfaces and intelligent computer vision-based interaction*. FME Transactions, 54(1), 93-106. DOI en el PDF: 10.5937/fme2601093P. Brazo de 4 GDL con ESP32, YOLOv12 corriendo en una laptop (solo CPU), ángulos enviados al controlador. Interfaz web (el resumen dice MQTT; la sección 2 dice Blynk: contradicción interna del artículo). PDF: https://scindeks-clanci.ceon.rs/data/pdf/1451-2092/2026/1451-20922601093T.pdf
 2. **Shah y Arockia Doss (2026).** *Development of service robot manipulator for pick and place applications in domestic environment*. EPJ Web of Conferences, 355, 01001. DOI: 10.1051/epjconf/202635501001. ESP32 como punto de acceso Wi-Fi con página de sliders (igual que el prototipo), latencia menor a 150 ms, parada de emergencia en el navegador, YOLOv8-OBB y ROS/MoveIt **en simulación**. Tiene un video del modelo físico (Fig. 6, archivo .mp4 dentro del artículo). PDF: https://www.epj-conferences.org/articles/epjconf/pdf/2026/11/epjconf_staaar2026_01001.pdf
 3. **Capaldi (2024).** *A low-cost wireless extension for object detection and data logging for educational robotics using the ESP-NOW protocol*. PeerJ Computer Science, 10, e1826. DOI: 10.7717/peerj-cs.1826. Robótica educativa (VEX V5) + ESP32 + PC con visión (YOLOv8); mide distancia, tiempo de ida y vuelta y detección; incluye ajuste de PID. Análogo directo de hub cerrado + ESP32 + PC. https://peerj.com/articles/cs-1826
 4. **Bera (2026, 1 de octubre).** *Computer-vision-based robotic arm*. Electronics For You (revista, no revisada por pares; parte del texto es de acceso con registro). Laptop, Raspberry Pi 5 o servidor GPU hacen la visión; el ESP32 hace el control en tiempo real; comunicación por Wi-Fi, Ethernet o serial (y ESP-NOW). **Video de la prueba de concepto:** https://www.youtube.com/watch?v=PHznMxfTjuo. Página: https://www.electronicsforu.com/electronics-projects/computer-vision-based-robotic-arm
 5. Por revisar (no verificados): *Development and experimental validation of an educational robotic platform with machine vision and web-based monitoring for automation teaching*, Future Internet, 18(6), 325 (https://www.mdpi.com/1999-5903/18/6/325); TeleopLab (arXiv 2509.05547), interfaz de celular para laboratorios remotos (posible apoyo de la afirmación de "aforo reducido" de 3.2).
 
-### Cambios previstos en `informe.md` (HECHOS en la sesión 2, salvo las filas de Dang, Shah y Capaldi: se omitieron porque el usuario no tiene esas fuentes por ahora)
+### Cambios previstos en `informe.md` (HECHOS: Tabla 1, 4.1.6 y 4.3 en la sesión 2; las filas de Dang, Shah y Capaldi en el lote 4 de la sesión 3, una vez cargadas las fuentes)
 
 - **Tabla 1:** fila de LEGO Ideas y Pybricks sin "aquí la cámara es un celular"; agregar filas de Dang et al. (2026), Shah y Arockia Doss (2026) y Capaldi (2024).
 - **4.1.6:** quitar el párrafo de "versión con cámara de celular" o pasarlo a una nota; el método de tablas con interpolación pasa a ser una opción de la PC.
@@ -146,4 +152,19 @@ La sección 3.2 dice que la materia "requiere sustentar la implementación de IA
 
 **Discrepancias abiertas (C1).** Suhaeb 85 a 92 ms frente a 85 a 110 ms; año de Monroy Moya (2024, 2025 o 2026); las dos tesis se mezclaron en NotebookLM y Gemini; Intisar sin sensores de agarre en las fuentes; metadatos sin verificar de Ntambara, Zuiev, Oliveira, Wu, Cho, Vieira, Kumar, Gunardi, Fernández Panadero y Medel.
 
-**Pendientes.** (1) Perplexity: A3 (PID), A4 (definiciones de IA), A5 con *Benitez et al. (2020), HardwareX 8*, A6 (meta-análisis), metadatos B y opcionales; los prompts están en `contexto22.md`, sección A.6. (2) Usuario: C1 a C5, mirar el video o la página de Pybricks, verificar los README de los cuatro proyectos abiertos. (3) Prioridad 3 sin hacer: letras de Pybricks por título, material interno, figuras, formato de tablas, acrónimos y la frase repetida de *smart sensors* en 1.1. (4) Dang, Shah y Capaldi (N22 a N24) omitidos por falta de fuentes.
+**Pendientes.** (1) Perplexity: A3 (PID), A4 (definiciones de IA), A5 con *Benitez et al. (2020), HardwareX 8*, A6 (meta-análisis), metadatos B y opcionales; los prompts están en `contexto22.md`, sección A.6. (2) Usuario: C1 a C5, mirar el video o la página de Pybricks, verificar los README de los cuatro proyectos abiertos. (3) Prioridad 3 sin hacer: letras de Pybricks por título, material interno, figuras, formato de tablas, acrónimos y la frase repetida de *smart sensors* en 1.1. (4) Dang, Shah y Capaldi: resuelto en el lote 4 (más abajo).
+
+**Lote 4 (sesión 3, worker `alx_gml`, inicio 21:43; NotebookLM N22 a N24 y N24b, Gemini N22b; bk `informe 9.md`).** NotebookLM llegó a su límite de consultas; N22b se corrió en Gemini (atribución por inferencia, `[verificar]`).
+- **Dang et al. (2026)** (`1451-20922601093T.pdf`): nueve autores en el orden de la portada; FME Transactions 54, pp. 93-106, DOI 10.5937/fme2601093P; el número no aparece en el PDF. MQTT en el Abstract y en 3.3 (las órdenes de la web llegan al ESP32 como mensajes MQTT); Blynk solo en la sección 2. YOLOv12 corre en una laptop solo con CPU (el entrenamiento fue en Colab con GPU). Flujo: caja delimitadora, transformación calibrada de 2D al espacio del robot, cinemática inversa, ESP32, PCA9685 y servos MG996R. Gemini: sin mAP, sin tiempo de inferencia, sin tasa de éxito ni tiempo de ciclo (validación cualitativa), calibración solo mencionada como "transformación calibrada"; ruta de visión por USB (inferencia, `[verificar]`).
+- **Capaldi (2024)** (`peerj-cs-10-1826.pdf`): VEX V5 con dos ESP32 (ESP-NOW) y RS-485; cámara OpenMV H7 por USB a una PC con YOLOv8 en Python. Pérdida de paquetes menor a 1 % de 0 a 40 m y 13,2 % a 60 m (recomienda 40 m o menos para lazo cerrado). Ida y vuelta de 187 ms (DE 57 ms); los segmentos 2 a 4 de la Tabla 2 no estaban en los fragmentos cargados, pero lo faltante cuadra con el total. 30 pruebas de clasificación (10 por condición). Inferencia de YOLOv8: 62,8 ms (Ryzen 9 5950X), 52,1 ms (Apple M2) y 8,41 ms (Quadro P2200). PID: interfaz con Kp, Ki y Kd y retorno del ángulo a 20 lecturas por segundo.
+- **Shah y Arockia Doss (2026)** (`epjconf_staaar2026_01001.pdf`): WebSockets con ESP32 (ESPAsyncWebServer), latencia menor a 150 ms sin método de medición, parada de emergencia en el navegador (5.2.3); YOLOv8-OBB y ROS/MoveIt solo en simulación (Gazebo y RViz); el brazo físico (MG996R) es manual.
+- **Cambios en `informe.md`:** 1.1 (visión con ESP32 y control remoto); brecha reformulada (la novedad no es la cámara, ni la PC con visión, ni el puente por separado, sino la combinación con el hub 51515 y Pybricks, la página del ESP32 y el módulo externo); Tablas 1, 3 y 4; 4.1.4 (PID de Capaldi), 4.1.7 (inferencia), 4.1.8 (187 ms, pérdida de paquetes, 150 ms) y 4.1.9; 4.3 (enlace inalámbrico y canal de vuelta); conclusiones 1, 3 y 5; recomendación 4; 2.3 (31 trabajos en 32 archivos) y 2.5 (Gemini); tres referencias y acrónimos CPU, GPU, ESP-NOW y RS-485.
+- **Siguen `[verificar]`:** número y apellidos de Dang, ruta de visión por USB, revista y DOI de Capaldi y Shah, orden de autores de Shah, tamaño del modelo YOLOv8 y modelo de cámara de Dang.
+
+## 10. Lo logrado hasta ahora (cierre parcial de la sesión 3)
+
+- `informe.md` incorpora los lotes 1 a 4: arquitectura única (PC con visión, Wi-Fi al ESP32, BLE de difusión al hub), correcciones de fondo de la prioridad 1, método de la revisión, límites de alimentación, separación entre visión y control (Tabla 4), antecedentes de proyectos abiertos y los tres trabajos nuevos (Dang, Capaldi, Shah).
+- La brecha se reformó con cautela: ya existen PC con visión y ESP32 en plataformas educativas, hubs LEGO con cámara y ESP32 como puente hacia Pybricks; no se halló la cadena completa.
+- Respaldos `informe 1.md` a `informe 9.md` y `resumen_22 1.md`; siguiente respaldo: `informe 10.md`.
+- Bitácora de pendientes en `bitacora_22.md` (verificación en los PDF, Perplexity, tareas del usuario, discrepancias y ediciones).
+- Lo más importante que falta: verificar los datos clave contra los PDF (C1: Suhaeb, Monroy Moya, las dos tesis, Intisar, Markvicka), cerrar los metadatos, datos de institución y costo, la prioridad 3 (formato y limpieza) y, si se puede, una prueba mínima o la medición del retraso para dar cifras propias al 4.4.
