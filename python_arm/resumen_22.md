@@ -164,7 +164,7 @@ La sección 3.2 dice que la materia "requiere sustentar la implementación de IA
 ## 10. Lo logrado hasta ahora (cierre parcial de la sesión 3)
 
 - `informe.md` incorpora los lotes 1 a 4: arquitectura única (PC con visión, Wi-Fi al ESP32, BLE de difusión al hub), correcciones de fondo de la prioridad 1, método de la revisión, límites de alimentación, separación entre visión y control (Tabla 4), antecedentes de proyectos abiertos y los tres trabajos nuevos (Dang, Capaldi, Shah).
-- La brecha se reformó con cautela: ya existen PC con visión y ESP32 en plataformas educativas, hubs LEGO con cámara y ESP32 como puente hacia Pybricks; no se halló la cadena completa.
+- La brecha se reformuló con cautela: ya existen PC con visión y ESP32 en plataformas educativas, hubs LEGO con cámara y ESP32 como puente hacia Pybricks; no se halló la cadena completa.
 - Respaldos `informe 1.md` a `informe 9.md` y `resumen_22 1.md`; siguiente respaldo: `informe 10.md`.
 - Bitácora de pendientes en `bitacora_22.md` (verificación en los PDF, Perplexity, tareas del usuario, discrepancias y ediciones).
 - Lo más importante que falta: verificar los datos clave contra los PDF (C1: Suhaeb, Monroy Moya, las dos tesis, Intisar, Markvicka), cerrar los metadatos, datos de institución y costo, la prioridad 3 (formato y limpieza) y, si se puede, una prueba mínima o la medición del retraso para dar cifras propias al 4.4.
