@@ -4640,6 +4640,7 @@
         "2026-10-30",
         "2026-11-08",
         "2026-11-13",
+        "2026-11-23",
         "2026-08-09",
         "2026-11-11",
         "2026-11-12",
@@ -9250,354 +9251,6 @@
       "ctime": 1794606717234,
       "mtime": 1794610413000
     },
-    "Rubbish/2026-08-09": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "img903"
-      ]
-    },
-    "Rubbish/2026-08-09/img903": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Cap1"
-      ]
-    },
-    "Rubbish/2026-08-09/img903/Cap1": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": []
-    },
-    "Rubbish/2026-11-08/2026-11-08 17.40.01.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "scanned_words.txt"
-      ]
-    },
-    "Rubbish/2026-11-08/2026-11-08 17.40.01.0/scanned_words.txt": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1780114193327,
-      "mtime": 1794172831000
-    },
-    "Rubbish/2026-11-08/2026-11-08 18.37.22.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "resumen_8_nov.md"
-      ]
-    },
-    "Rubbish/2026-11-08/2026-11-08 18.37.22.0/resumen_8_nov.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1794173770162,
-      "mtime": 1794174920000
-    },
-    "Rubbish/2026-11-08/2026-11-08 18.37.24.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "resumen_8_nov.md"
-      ]
-    },
-    "Rubbish/2026-11-08/2026-11-08 18.37.24.0/resumen_8_nov.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1794173770162,
-      "mtime": 1794177438000
-    },
-    "Rubbish/2026-11-08/2026-11-08 18.43.11.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "scanned_words.txt"
-      ]
-    },
-    "Rubbish/2026-11-08/2026-11-08 18.43.11.0/scanned_words.txt": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1780114193327,
-      "mtime": 1794174058000
-    },
-    "Rubbish/2026-11-08/2026-11-08 18.47.21.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "resumen_8_nov.md"
-      ]
-    },
-    "Rubbish/2026-11-08/2026-11-08 18.47.21.0/resumen_8_nov.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1794173770162,
-      "mtime": 1794177442000
-    },
-    "Rubbish/2026-11-08/2026-11-08 18.49.07.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "scanned_words.txt"
-      ]
-    },
-    "Rubbish/2026-11-08/2026-11-08 18.49.07.0/scanned_words.txt": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1780114193327,
-      "mtime": 1794177786000
-    },
-    "Rubbish/2026-11-08/2026-11-08 18.49.10.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "scanned_words.txt"
-      ]
-    },
-    "Rubbish/2026-11-08/2026-11-08 18.49.10.0/scanned_words.txt": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1780114193327,
-      "mtime": 1794178142000
-    },
-    "Rubbish/2026-11-08/2026-11-08 20.06.59.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "resumen_8_nov.md"
-      ]
-    },
-    "Rubbish/2026-11-08/2026-11-08 20.06.59.0/resumen_8_nov.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1794173770162,
-      "mtime": 1794178037000
-    },
-    "Rubbish/2026-11-08/ha5.py": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1794176682018,
-      "mtime": 1794176679000
-    },
-    "Rubbish/2026-11-08/resumen_8_nov.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1794173770162,
-      "mtime": 1794173767000
-    },
-    "Rubbish/2026-11-08/scanned_words.txt": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1780114193327,
-      "mtime": 1794172724000
-    },
-    "Rubbish/2026-11-11": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "2026-11-11 16.22.00.0",
-        "2026-11-11 16.22.36.0",
-        "2026-11-11 16.22.44.0",
-        "2026-11-11 16.23.18.0",
-        "2026-11-11 16.23.50.0",
-        "data.json",
-        "scanned_words.txt"
-      ]
-    },
-    "Rubbish/2026-11-11/2026-11-11 16.22.00.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "scanned_words.txt"
-      ]
-    },
-    "Rubbish/2026-11-11/2026-11-11 16.22.00.0/scanned_words.txt": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1780114193327,
-      "mtime": 1794428466000
-    },
-    "Rubbish/2026-11-11/2026-11-11 16.22.36.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "scanned_words.txt"
-      ]
-    },
-    "Rubbish/2026-11-11/2026-11-11 16.22.36.0/scanned_words.txt": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1780114193327,
-      "mtime": 1794428505000
-    },
-    "Rubbish/2026-11-11/2026-11-11 16.22.44.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "scanned_words.txt"
-      ]
-    },
-    "Rubbish/2026-11-11/2026-11-11 16.22.44.0/scanned_words.txt": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1780114193327,
-      "mtime": 1794428545000
-    },
-    "Rubbish/2026-11-11/2026-11-11 16.23.18.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "scanned_words.txt"
-      ]
-    },
-    "Rubbish/2026-11-11/2026-11-11 16.23.18.0/scanned_words.txt": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1780114193327,
-      "mtime": 1794428554000
-    },
-    "Rubbish/2026-11-11/2026-11-11 16.23.50.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "scanned_words.txt"
-      ]
-    },
-    "Rubbish/2026-11-11/2026-11-11 16.23.50.0/scanned_words.txt": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1780114193327,
-      "mtime": 1794428583000
-    },
-    "Rubbish/2026-11-11/data.json": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1781109169958,
-      "mtime": 1794335789305
-    },
-    "Rubbish/2026-11-11/scanned_words.txt": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1780114193327,
-      "mtime": 1794182763000
-    },
-    "Rubbish/2026-11-12": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "data.json"
-      ]
-    },
-    "Rubbish/2026-11-12/data.json": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1781109169958,
-      "mtime": 1794428466000
-    },
-    "Rubbish/2026-11-13/2026-11-13 18.09.41.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "ha6.py"
-      ]
-    },
-    "Rubbish/2026-11-13/2026-11-13 18.09.41.0/ha6.py": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1794606717209,
-      "mtime": 1794607420000
-    },
-    "Rubbish/2026-11-13/2026-11-13 18.09.48.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "resumen_13_nov.md"
-      ]
-    },
-    "Rubbish/2026-11-13/2026-11-13 18.09.48.0/resumen_13_nov.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1794606717234,
-      "mtime": 1794607420000
-    },
-    "Rubbish/2026-11-13/2026-11-13 18.53.38.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "resumen_13_nov.md"
-      ]
-    },
-    "Rubbish/2026-11-13/2026-11-13 18.53.38.0/resumen_13_nov.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1794606717234,
-      "mtime": 1794607785000
-    },
-    "Rubbish/2026-11-13/2026-11-13 18.53.40.0": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "ha6.py"
-      ]
-    },
-    "Rubbish/2026-11-13/2026-11-13 18.53.40.0/ha6.py": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1794606717209,
-      "mtime": 1794607776000
-    },
-    "Rubbish/2026-11-13/ha6.py": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1794606717209,
-      "mtime": 1794606712000
-    },
-    "Rubbish/2026-11-13/resumen_13_nov.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1794606717234,
-      "mtime": 1794606712000
-    },
-    "Rubbish/draft.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1787873236332,
-      "mtime": 1787873236332
-    },
-    "Rubbish/promtpx.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1788059578784,
-      "mtime": 1788216286937
-    },
-    "Rubbish/update_claude_obsidian.md": {
-      "isPinned": false,
-      "isHidden": false,
-      "ctime": 1790993910267,
-      "mtime": 1790993910267
-    },
     "resumen_brazo_robotico_15_nov.md": {
       "isPinned": false,
       "isHidden": false,
@@ -9873,6 +9526,375 @@
       "isHidden": false,
       "ctime": 1795407138063,
       "mtime": 1795407138063
+    },
+    "Rubbish/2026-11-23": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json",
+        "scanned_words.txt"
+      ]
+    },
+    "Rubbish/2026-11-23/data.json": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1795303740652,
+      "mtime": 1795266766000
+    },
+    "Rubbish/2026-08-09": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "img903"
+      ]
+    },
+    "Rubbish/2026-08-09/img903": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Cap1"
+      ]
+    },
+    "Rubbish/2026-08-09/img903/Cap1": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "Rubbish/2026-11-08/2026-11-08 17.40.01.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "scanned_words.txt"
+      ]
+    },
+    "Rubbish/2026-11-08/2026-11-08 17.40.01.0/scanned_words.txt": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1780114193327,
+      "mtime": 1794172831000
+    },
+    "Rubbish/2026-11-08/2026-11-08 18.37.22.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "resumen_8_nov.md"
+      ]
+    },
+    "Rubbish/2026-11-08/2026-11-08 18.37.22.0/resumen_8_nov.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1794173770162,
+      "mtime": 1794174920000
+    },
+    "Rubbish/2026-11-08/2026-11-08 18.37.24.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "resumen_8_nov.md"
+      ]
+    },
+    "Rubbish/2026-11-08/2026-11-08 18.37.24.0/resumen_8_nov.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1794173770162,
+      "mtime": 1794177438000
+    },
+    "Rubbish/2026-11-08/2026-11-08 18.43.11.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "scanned_words.txt"
+      ]
+    },
+    "Rubbish/2026-11-08/2026-11-08 18.43.11.0/scanned_words.txt": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1780114193327,
+      "mtime": 1794174058000
+    },
+    "Rubbish/2026-11-08/2026-11-08 18.47.21.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "resumen_8_nov.md"
+      ]
+    },
+    "Rubbish/2026-11-08/2026-11-08 18.47.21.0/resumen_8_nov.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1794173770162,
+      "mtime": 1794177442000
+    },
+    "Rubbish/2026-11-08/2026-11-08 18.49.07.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "scanned_words.txt"
+      ]
+    },
+    "Rubbish/2026-11-08/2026-11-08 18.49.07.0/scanned_words.txt": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1780114193327,
+      "mtime": 1794177786000
+    },
+    "Rubbish/2026-11-08/2026-11-08 18.49.10.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "scanned_words.txt"
+      ]
+    },
+    "Rubbish/2026-11-08/2026-11-08 18.49.10.0/scanned_words.txt": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1780114193327,
+      "mtime": 1794178142000
+    },
+    "Rubbish/2026-11-08/2026-11-08 20.06.59.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "resumen_8_nov.md"
+      ]
+    },
+    "Rubbish/2026-11-08/2026-11-08 20.06.59.0/resumen_8_nov.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1794173770162,
+      "mtime": 1794178037000
+    },
+    "Rubbish/2026-11-08/ha5.py": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1794176682018,
+      "mtime": 1794176679000
+    },
+    "Rubbish/2026-11-08/resumen_8_nov.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1794173770162,
+      "mtime": 1794173767000
+    },
+    "Rubbish/2026-11-08/scanned_words.txt": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1780114193327,
+      "mtime": 1794172724000
+    },
+    "Rubbish/2026-11-11": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "2026-11-11 16.22.00.0",
+        "2026-11-11 16.22.36.0",
+        "2026-11-11 16.22.44.0",
+        "2026-11-11 16.23.18.0",
+        "2026-11-11 16.23.50.0",
+        "data.json",
+        "scanned_words.txt"
+      ]
+    },
+    "Rubbish/2026-11-11/2026-11-11 16.22.00.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "scanned_words.txt"
+      ]
+    },
+    "Rubbish/2026-11-11/2026-11-11 16.22.00.0/scanned_words.txt": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1780114193327,
+      "mtime": 1794428466000
+    },
+    "Rubbish/2026-11-11/2026-11-11 16.22.44.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "scanned_words.txt"
+      ]
+    },
+    "Rubbish/2026-11-11/2026-11-11 16.22.44.0/scanned_words.txt": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1780114193327,
+      "mtime": 1794428545000
+    },
+    "Rubbish/2026-11-11/2026-11-11 16.22.36.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "scanned_words.txt"
+      ]
+    },
+    "Rubbish/2026-11-11/2026-11-11 16.22.36.0/scanned_words.txt": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1780114193327,
+      "mtime": 1794428505000
+    },
+    "Rubbish/2026-11-11/2026-11-11 16.23.18.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "scanned_words.txt"
+      ]
+    },
+    "Rubbish/2026-11-11/2026-11-11 16.23.18.0/scanned_words.txt": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1780114193327,
+      "mtime": 1794428554000
+    },
+    "Rubbish/2026-11-11/2026-11-11 16.23.50.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "scanned_words.txt"
+      ]
+    },
+    "Rubbish/2026-11-11/2026-11-11 16.23.50.0/scanned_words.txt": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1780114193327,
+      "mtime": 1794428583000
+    },
+    "Rubbish/2026-11-11/scanned_words.txt": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1780114193327,
+      "mtime": 1794182763000
+    },
+    "Rubbish/2026-11-11/data.json": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1781109169958,
+      "mtime": 1794335789305
+    },
+    "Rubbish/2026-11-13/2026-11-13 18.09.41.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "ha6.py"
+      ]
+    },
+    "Rubbish/2026-11-13/2026-11-13 18.09.41.0/ha6.py": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1794606717209,
+      "mtime": 1794607420000
+    },
+    "Rubbish/2026-11-13/2026-11-13 18.09.48.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "resumen_13_nov.md"
+      ]
+    },
+    "Rubbish/2026-11-13/2026-11-13 18.09.48.0/resumen_13_nov.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1794606717234,
+      "mtime": 1794607420000
+    },
+    "Rubbish/2026-11-13/2026-11-13 18.53.38.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "resumen_13_nov.md"
+      ]
+    },
+    "Rubbish/2026-11-13/2026-11-13 18.53.38.0/resumen_13_nov.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1794606717234,
+      "mtime": 1794607785000
+    },
+    "Rubbish/2026-11-13/2026-11-13 18.53.40.0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "ha6.py"
+      ]
+    },
+    "Rubbish/2026-11-13/2026-11-13 18.53.40.0/ha6.py": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1794606717209,
+      "mtime": 1794607776000
+    },
+    "Rubbish/2026-11-13/ha6.py": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1794606717209,
+      "mtime": 1794606712000
+    },
+    "Rubbish/2026-11-13/resumen_13_nov.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1794606717234,
+      "mtime": 1794606712000
+    },
+    "Rubbish/2026-11-12": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "data.json"
+      ]
+    },
+    "Rubbish/2026-11-12/data.json": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1781109169958,
+      "mtime": 1794428466000
+    },
+    "Rubbish/2026-11-23/scanned_words.txt": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1780114193327,
+      "mtime": 1794606086000
+    },
+    "Rubbish/draft.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1787873236332,
+      "mtime": 1787873236332
+    },
+    "Rubbish/promtpx.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1788059578784,
+      "mtime": 1788216286937
+    },
+    "Rubbish/update_claude_obsidian.md": {
+      "isPinned": false,
+      "isHidden": false,
+      "ctime": 1790993910267,
+      "mtime": 1790993910267
     }
   },
   "showHidden": false,

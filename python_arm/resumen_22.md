@@ -1,6 +1,6 @@
 # Resumen 22 de noviembre de 2026: revisión y refinamiento de `informe.md`
 
-**Hora de inicio de sesión:** 18:39 (sesión 1), 20:06 (sesión 2; los tokens se reestablecen a las 01:06) y 21:43 (sesión 3, worker `alx_gml`; los tokens se reestablecen a las 02:43)
+**Hora de inicio de sesión:** 18:39 (sesión 1), 20:06 (sesión 2; los tokens se reestablecen a las 01:06) y 21:43 (sesión 3, worker `alx_gml`; los tokens se reestablecen a las 02:43) y 23:25 (sesión 4, skill 2 plan, worker `alx_hot`; los tokens se reestablecen a las 04:25)
 **Bitácora de pendientes:** `bitacora_22.md` (estado vigente de lo que falta)
 **Objetivo del día:** refinar el primer borrador completo del informe (`informe.md`, secciones 1 a 6) y dejarlo listo como trabajo investigativo. Se corrige por una lista de pendientes ordenada por prioridad, de a uno.
 
@@ -168,3 +168,64 @@ La sección 3.2 dice que la materia "requiere sustentar la implementación de IA
 - Respaldos `informe 1.md` a `informe 9.md` y `resumen_22 1.md`; siguiente respaldo: `informe 10.md`.
 - Bitácora de pendientes en `bitacora_22.md` (verificación en los PDF, Perplexity, tareas del usuario, discrepancias y ediciones).
 - Lo más importante que falta: verificar los datos clave contra los PDF (C1: Suhaeb, Monroy Moya, las dos tesis, Intisar, Markvicka), cerrar los metadatos, datos de institución y costo, la prioridad 3 (formato y limpieza) y, si se puede, una prueba mínima o la medición del retraso para dar cifras propias al 4.4.
+
+---
+
+## 11. Registro de la sesión 4 (23-nov-2026; inicio 23:25; skill 2 plan; worker `alx_hot`): imágenes del informe
+
+**Alcance.** Solo se trabajó la parte de imágenes. Claude no editó `informe.md` en esta sesión: el usuario insertó a mano las imágenes provisionales. No se creó `informe 10.md`. Se leyó `informe_img.md` (propuesta de 19 fichas con ubicación, fuente y pie APA) y no se modificó. Se comprobó que los 19 párrafos de anclaje de `informe_img.md` siguen siendo texto vigente de `informe.md`.
+
+**Decisión del usuario al cierre:** por ahora no se aplica ninguno de los cambios señalados abajo; quedan como pendientes en `bitacora_22.md` (sección G y ediciones nuevas en A y E). Las imágenes quedan como provisionales: varias sin pie ni número.
+
+### 11.1 Núcleo de figuras propuesto (de `informe_img.md`)
+
+- **Núcleo (11):** fichas 2 (brecha), 3 (escena de la tarea), 4 (brazo rotulado), 9 (secuencia HSV), 13 (Capaldi, ida y vuelta y pérdida de paquetes), 15 (arquitecturas de Capaldi y Dang), 16a y 16b (prototipo base: diagrama y captura o foto), 17 (arquitectura propuesta), 18 (secuencia de la tarea) y 19 (prueba preliminar).
+- **Opcionales:** 6 (cinemática, redibujo de Mohammed), 7 (PID de Capaldi), 14 (RSSI de Tzompantzi), 10 (montaje ArUco), 12 (red neuronal y YOLO), 5 (modo difusión de Pybricks). **Descartar:** 1, 8 y 11 (dependen de páginas web o PDF con licencia poco clara o aportan poco). **Idea nueva (no está en el archivo):** una ficha 20 con un diagrama de flujo del método de la revisión en 2.5.
+- Las propias (3, 4, 16b, 19) salen de dos sesiones: una de fotos del montaje y una de capturas. Las fichas 9 y 19 dependen de la prueba mínima C-6.
+
+### 11.2 Fuentes de figuras verificadas en la web (23-nov)
+
+| Fuente | Figuras útiles | Licencia | Enlace |
+| ------ | -------------- | -------- | ------ |
+| Capaldi (2024), PeerJ CS 10:e1826 | Fig. 1A (cámara por USB a la PC y PC a VEX por ESP-NOW), Fig. 4A/B (camino del mensaje y osciloscopio), Tablas 2 y 3, Fig. 7B (detección YOLOv8), Fig. 14B (PID, objetivo de 45°) | CC BY 4.0 (PDF) | https://peerj.com/articles/cs-1826 ; copia: https://pmc.ncbi.nlm.nih.gov/articles/PMC10909231 |
+| Mada Sanjaya et al. (2018), JPCS 1090, 012070 | Fig. 3 (captura, HSV, binaria y objeto marcado); otra figura con coordenadas por color; tabla de calibración y red de 20 neuronas (números de figura sin verificar) | CC BY 3.0 | https://iopscience.iop.org/article/10.1088/1742-6596/1090/1/012070 |
+| Rangarajan y Bianchini (2026), AJSR 4(6), 74-88 | Fig. 1 (montaje con cámara cenital, ArUco y contenedores), Fig. 3 (pose del ArUco) | CC BY 4.0 (versión publicada; arXiv es el manuscrito aceptado) | https://arxiv.org/pdf/2608.15968 |
+| Shah y Arockia Doss (2026), EPJ Web Conf. 355, 01001 | Fig. 7 (interfaz web con sliders); Fig. 3 (flujo, solo simulación); Fig. 6 es un video `Physical Model.mp4` | CC BY 4.0 | https://www.epj-conferences.org/articles/epjconf/pdf/2026/11/epjconf_staaar2026_01001.pdf |
+| Mohammed et al. (2023), ETJ 41(6), 756-770 | Esquema geométrico y pasos HSV (números de figura sin verificar) | CC BY 4.0 | https://etj.uotechnology.edu.iq/article_176897_49464698aa46aa702ac4e4cd8207145d.pdf |
+| Dang et al. (2026), FME Transactions 54(1), 93-106 | Fig. 1 (arquitectura), 10 (web MQTT), 16, 20 (montaje), 21 y 22 (YOLOv12), 23 (detección) | **«All rights reserved»: no copiar; redibujar** | https://scindeks-clanci.ceon.rs/data/pdf/1451-2092/2026/1451-20922601093T.pdf |
+| Pybricks, *Robotic arm with vision* | Foto del brazo SPIKE con celular | Sin licencia clara; mejor solo cita con enlace | https://pybricks.com/project/robot-arm-camera-tracker/ ; imagen: https://pybricks.com/project/spike-prime/arm/camera-arm.jpg |
+| LEGO Ideas, *VISION* | Brazo con PC y webcam que sigue una pelota roja en 3D | Sin licencia clara; solo cita con enlace. El sitio bloquea mi acceso (no se pudo abrir) | https://ideas.lego.com/challenges/339f0029-37b3-4dad-9dd2-6bcec3b93349/application/1099c817-11f6-4d42-8224-381674d1c749 (el usuario pasó la variante `/entries/…`) |
+| Tzompantzi et al. (2019), IJSR 8(4) | Figs. 9 y 10 (RSSI frente a la distancia) | Sin verificar | https://www.ijsr.net/getabstract.php?paperid=ART20196990 (el PDF no se pudo abrir) |
+
+**Figuras elegidas con el usuario:** Capaldi Fig. 1A recortada (en la imagen del usuario la configuración A del pie está en el panel rotulado «c»; se recorta solo ese panel, sin letra); Mada Sanjaya Fig. 3 en 4.1.5; Rangarajan Fig. 1 en 4.1.6 (la Fig. 3 de Rangarajan es opcional junto a ella); Shah Fig. 7 en 4.1.8 (alternativa: 4.2 junto a la captura propia); Dang solo como redibujo propio en 4.1.9; VISION solo con enlace. De Mada Sanjaya se vio también una segunda figura (rojo, verde, azul con coordenadas), posible apoyo de 4.1.6.
+
+### 11.3 Hallazgos de la sesión que corrigen el informe (sin aplicar)
+
+- **Tzompantzi (2019):** es *IJSR* 8(4), abril de 2019, pp. 775-780, DOI 10.21275/ART20196990. El informe y la ficha 14 dicen `8(8)`.
+- **Capaldi (2024):** PeerJ Computer Science 10:e1826, DOI correcto, CC BY 4.0. La Tabla 2 completa: segmentos 2, 3 y 4 = 20,0, 2,01 y 1,56 ms; el resto cuadra con los 187 ms (n = 10, DE 57 ms; segmentos con n = 12; segmentos 1 y 11 calculados, 29,8 ms). El artículo no indica el tamaño del modelo YOLOv8 (116 imágenes, 50 épocas). Rango de inferencia en sus conclusiones: 10,8 a 64,4 ms. **Advertencia propia del artículo:** el Wi-Fi tiene demasiado retraso para control en tiempo real cuando la PC maneja el robot; la propuesta del informe usa Wi-Fi (HTTP) hasta el ESP32, así que conviene reconocerlo en 4.1.8 o en las limitaciones. Los valores de Kp, Ki y Kd de la ficha 7 no están en el texto: leerlos en la leyenda de la Fig. 14B.
+- **Dang et al. (2026):** los nueve autores y su orden coinciden con la referencia; número 1 confirmado (VOL. 54, No 1). La portada trae «Dang Phuoc Thinh» primero, pero el encabezado del PDF dice «D.P. Thinh et al.» y el resumen en serbio usa «Тин»: **decidir si se cita «Dang» o «Thinh»**. La visión corre en un portátil con webcam integrada o cámara USB externa; la interfaz de escritorio va por USB y la web por MQTT (resumen y 3.3; la sección 2 dice Blynk). Dato nuevo: reconocimiento de gestos con latencia típica menor a 200 ms. El modelo de la cámara no se indica.
+- **Shah y Arockia Doss (2026):** autores Ronit Shah y Arockia Selvakumar Arockia Doss, publicado el 3 de marzo de 2026, CC BY 4.0. Confirmados: punto de acceso «RobotArm», sliders, WebSockets, latencia menor a 150 ms sin método, parada de emergencia en el navegador y ROS/MoveIt solo en simulación. Dato nuevo para 4.1.7 o la Tabla 3: YOLOv8-OBB con 9086 imágenes anotadas, precisión 94,6 %, recall 92,1 % y mAP@0,5 de 95,3 %. Nota: los objetivos del artículo hablan de asistencia a pacientes y entornos hospitalarios aunque el título dice «domestic».
+- **Rangarajan y Bianchini (2026):** *American Journal of Student Research* 4(6), 74-88. Es una revista de estudiantes (primer autor de un colegio secundario). YOLO11n-OBB con 540 imágenes: precisión 0,968, recall 0,985, mAP50 0,981; inferencia de 46,4 ms por cuadro en una CPU Xeon de 2 núcleos sin GPU; 176 de 196 pruebas (89,8 %). Los autores advierten que la división de datos fue por imagen y no por utensilio, así que no se mide cómo detecta utensilios nuevos.
+- **Mohammed et al. (2023):** ETJ 41(6), 756-770, CC BY 4.0, 354 imágenes, 5 a 7000 lux, 93,83 %. La revista imprime el título corto *Smart Robot Vision for a Pick and Place Robotic System*; la referencia del informe agrega «under different illumination conditions»: revisar la primera página del PDF.
+- **Pybricks, *Robotic arm with vision*:** autor Laurens Valk, publicado el 23 de marzo de 2026 (resuelve el `[verificar]` de la referencia).
+
+### 11.4 Imágenes provisionales en `informe.md` (estado al revisar)
+
+Embeds de Obsidian (`![[…]]`); no pude ver su contenido, se asumió que son las correspondientes.
+
+| Sección | Imagen | Pie |
+| ------- | ------ | --- |
+| 1.1, tras «Plataformas LEGO con cámara» | `Pasted image 20261122233113.png` | No tiene |
+| 1.1 | Línea suelta con la URL de `camera-arm.jpg` (no es una imagen embebida) | No aplica: borrarla o descargar la foto y embeberla |
+| 1.1 | `informe-23-11-2026_00-10-13.png` | No tiene |
+| 4.1.5 | `informe-23-11-2026_00-00-28.png` (Mada Sanjaya, Fig. 3) | Sí, sin número ni formato APA |
+| 4.1.6 | `informe-23-11-2026_00-06-38.png` (Rangarajan, Fig. 1) | Sí, sin número ni formato APA |
+| 4.1.6 | `informe-23-11-2026_00-07-42.png` (entre los dos párrafos) | No tiene |
+| 4.1.8 | `informe-23-11-2026_00-03-52.png` (Shah, Fig. 7) | Sí, sin número ni formato APA |
+| 4.1.9 | `informe-23-11-2026_00-12-18.png` e `informe-22-11-2026_23-53-06.png`, seguidas | No tienen |
+
+**Problemas detectados:** cinco imágenes sin pie; los pies existentes son texto plano (el número debería ir en negrita y el título en cursiva, arriba de la figura, como las tablas) y dicen «Figura N»; ninguna figura nueva se cita en el texto (solo «Figura 1» en 4.2 y «Figura 2» en 4.3); la imagen sin pie de 4.1.6 debería ir después del segundo párrafo si es la tabla de calibración de Mada Sanjaya (o quedarse junto a la otra si es la Fig. 3 de Rangarajan); las dos de 4.1.9 conviene unirlas en una sola figura con paneles (a) y (b); la nota de Dang debe decir «redibujo propio». Las Figuras 1 y 2 de 4.2 y 4.3 siguen en ASCII. No aparecen aún las fichas 2, 3, 4, 16b, 18, 19 ni la 13 (Capaldi, Fig. 4 y Tabla 2).
+
+**Numeración sugerida cuando estén todas (por orden de aparición):** 1.1 (1 y 2), 3.2 (3), 4.1.1 (4), 4.1.5 (5), 4.1.6 (6 y 7), 4.1.8 (8 y 9), 4.1.9 (10), 4.2 (11 y 12), 4.3 (13 y 14), 4.4 (15). Hay que cambiar las citas del texto «Figura 1» y «Figura 2» por sus números nuevos. Si el informe se exporta con otra herramienta, convertir los embeds a `![](ruta)`; en Obsidian se puede fijar el tamaño con `![[archivo.png|500]]`.
+
+**Cierre de la sesión:** el usuario no hará ninguno de los cambios mencionados por ahora; todo quedó anotado en `bitacora_22.md`. Siguiente respaldo si se retoman las ediciones: `informe 10.md`.
